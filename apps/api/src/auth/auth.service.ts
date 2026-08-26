@@ -27,7 +27,9 @@ function toPublicUser(row: UserRow): PublicUser {
 export class AuthService {
   constructor(
     @Inject(DB) private readonly database: DbClient,
-    private readonly jwt: JwtService,
+    // Explicit @Inject instead of relying on design:paramtypes: tsx/esbuild
+    // does not emit decorator type metadata, and Nest DI must not depend on it.
+    @Inject(JwtService) private readonly jwt: JwtService,
   ) {}
 
   async register(dto: RegisterRequest): Promise<{ user: PublicUser; accessToken: string }> {

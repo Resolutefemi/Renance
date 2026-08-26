@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Inject, Post, UseGuards } from '@nestjs/common';
 import {
   loginRequestSchema,
   registerRequestSchema,
@@ -15,7 +15,8 @@ import { JwtAuthGuard } from './jwt-auth.guard';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly auth: AuthService) {}
+  // explicit token: survives esbuild/tsx (no emitDecoratorMetadata)
+  constructor(@Inject(AuthService) private readonly auth: AuthService) {}
 
   /** 201 + { user, accessToken }. Errors: 400 validation · 409 duplicate email */
   @Post('register')
