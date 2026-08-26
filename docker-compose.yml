@@ -1,0 +1,18 @@
+# Local infra helpers ONLY. The database is Neon (cloud), so this file
+# just provides Redis for Phase 3 queue/cache work.
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: renance-redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - renance-redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  renance-redis-data:
