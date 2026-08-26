@@ -23,9 +23,16 @@ typecheck green x4 workspaces · migration SQL generated (drizzle 0000).
 REMAINING FOR EXIT: apply migration against real Neon, live round-trip,
 repo pushed so CI sees it.
 
-### Gate 1.2 — Organizations + memberships  [next]
-orgs table + members join (roles: owner/admin/member) · create-org endpoint ·
-invite-by-email stub · tests. Scope guard: NO billing, NO custom role UI.
+### Gate 1.2 — Organizations + memberships  [CODE COMPLETE 2026-08-27]
+core.organizations (slug unique, type enum, created_by FK) · core.memberships
+(composite unique org+user, roles owner/admin/member, statuses
+active/invited/revoked, added_by audit FK) · migration 0001 APPLIED to live
+Neon (journal=2) · endpoints: POST /orgs (atomic owner membership tx),
+GET /orgs, GET /orgs/:id, GET /orgs/:id/members, POST /orgs/:id/members
+(direct-add invite stub) · contracts+slug rules tested · LIVE E2E 14/14:
+owner/member flow, 403 non-member + member-cannot-manage, 409 dup + slug.
+REMAINING FOR EXIT: repo push (this commit); fuller matrix tests land in 1.3.
+DEMO ACCOUNT: ariyooluwafemi487+demo1@gmail.com (founder-owned plus alias).
 
 ### Gate 1.3 — RBAC enforcement              [locked]
 RolesGuard + decorator pair · protect a stub resource route · matrix tests
