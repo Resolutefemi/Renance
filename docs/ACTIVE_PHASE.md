@@ -5,8 +5,8 @@ dates. Rule: do not open the next gate until this one's exit criteria pass.
 
 ## Phase 0 — Foundations                    [DRAINING]
 Exit criteria:
-- [ ] repo pushed to GitHub, CI green (typecheck + tests)   <- after first push
-- [ ] Neon project created by YOU; DATABASE_URL pasted into .env (local check: `pnpm db:migrate` succeeds)
+- [x] repo pushed to GitHub (github.com/Resolutefemi/Renance, private) — CI runs on first PR/push pair
+- [x] Neon project provisioned via agent API: id orange-fog-53847933, ep-snowy-base-axf83q3b; bootstrap + migration 0000 APPLIED, journal current
 - [x] apps/api health endpoint responds locally             <- verified in paired sandbox 2026-08-27
 - [ ] apps/web renders home page locally                    <- code present; your boot pending
 - [ ] mobile: flutter create done (empty shell acceptable)
