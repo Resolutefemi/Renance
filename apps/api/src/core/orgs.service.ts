@@ -21,11 +21,14 @@ import type {
   OrgMember,
   OrgRole,
   PublicOrg,
+  ReviewVerificationRequest,
   SetMemberRoleRequest,
   SettableRole,
+  VerificationState,
 } from '@renance/shared';
 import { DB } from '../db/db.module';
 import { canManageMembers, canRemoveMember, canSetRole } from './rbac';
+import { canReview, canSubmit } from './verification';
 
 function toPublicOrg(row: OrganizationRow): PublicOrg {
   return {
@@ -34,6 +37,7 @@ function toPublicOrg(row: OrganizationRow): PublicOrg {
     slug: row.slug,
     type: row.type,
     status: row.status,
+    verificationStatus: row.verificationStatus,
     createdAt: row.createdAt.toISOString(),
   };
 }
@@ -264,6 +268,76 @@ export class OrgsService {
     const user = userRows.at(0);
     if (!user) throw new NotFoundException('member user record missing');
     return toMemberDto(membership, user);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Gate 1.4 — verification lifecycle
+  // ---------------------------------------------------------------------------
+
+  /** Org owner/admin submits for review: draft|rejected -> pending (409 otherwise). */
+  async submitVerification(orgId: string, meId: string): Promise<PublicOrg> {
+    const actor = await this.requireActiveMembership(orgId, meId);
+    if (!canManageMembers(actor.role as OrgRole)) {
+      throw new ForbiddenException('owner or admin role required to submit for verification');
+    }
+    const org = await this.findById(orgId);
+    if (!org) throw new NotFoundException('organization not found');
+    const current = org.verificationStatus as VerificationState;
+    if (!canSubmit(current)) {
+      throw new ConflictException(`cannot submit from state '${current}'`);
+    }
+    const updated = await this.database.db
+      .update(organizations)
+      .set({
+        verificationStatus: 'pending',
+        verificationNote: null, // fresh review, old note cleared
+        reviewedAt: null,
+        reviewedById: null,
+        updatedAt: new Date(),
+      })
+      .where(eq(organizations.id, orgId))
+      .returning();
+    const row = updated.at(0);
+    if (!row) throw new ConflictException('could not submit verification');
+    return toPublicOrg(row);
+  }
+
+  /** Platform admin decides: pending -> verified|rejected (409 otherwise). */
+  async reviewVerification(
+    orgId: string,
+    reviewerId: string,
+    dto: ReviewVerificationRequest,
+  ): Promise<PublicOrg> {
+    const org = await this.findById(orgId);
+    if (!org) throw new NotFoundException('organization not found');
+    const current = org.verificationStatus as VerificationState;
+    if (!canReview(current)) {
+      throw new ConflictException(`cannot review from state '${current}' — org must be pending`);
+    }
+    const updated = await this.database.db
+      .update(organizations)
+      .set({
+        verificationStatus: dto.decision,
+        verificationNote: dto.note ?? null,
+        reviewedAt: new Date(),
+        reviewedById: reviewerId,
+        updatedAt: new Date(),
+      })
+      .where(eq(organizations.id, orgId))
+      .returning();
+    const row = updated.at(0);
+    if (!row) throw new ConflictException('could not record review');
+    return toPublicOrg(row);
+  }
+
+  /** Platform admin queue: every org awaiting review, oldest first. */
+  async listPendingOrgs(): Promise<PublicOrg[]> {
+    const rows = await this.database.db
+      .select()
+      .from(organizations)
+      .where(eq(organizations.verificationStatus, 'pending'))
+      .orderBy(organizations.createdAt);
+    return rows.map(toPublicOrg);
   }
 
   private async findById(orgId: string): Promise<OrganizationRow | undefined> {

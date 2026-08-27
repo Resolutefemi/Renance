@@ -47,13 +47,48 @@ Neon: all 4 ladder rungs incl. anon 401, member 403s, admin add/remove,
 owner-only powers, contract 400s, state restored after run.
 REMAINING FOR EXIT: repo push (this commit).
 
-### Gate 1.4 — Verification states           [locked]
-draft/pending/verified/rejected state machine doc + service + transition
-guards · admin review endpoints · full Phase 1 exit test suite.
+### Gate 1.4 — Verification states           [CODE COMPLETE 2026-08-27]
+organizations.verification_status enum + note/reviewed_at/reviewed_by
+(migration 0002 APPLIED, journal=3) · pure transition matrix 16-cell tested
+· POST /orgs/:orgId/verification/submit (owner/admin, state-guarded 409) ·
+AdminController /admin/orgs/pending + /admin/orgs/:id/verification behind
+AdminGuard (ADMIN_EMAILS env; refuse-closed when unset) · verified terminal
+in MVP · publicOrgSchema +verificationStatus · unit 79 green · LIVE E2E
+17/17 via run_gate_e2e.sh runner (sandbox background processes die between
+tool calls — foreground runner + log file is the reliable pattern).
 
-## Phase 2 — CBT MVP                        [locked]
-First real-user milestone (existing renancecbt users migrate here).
-Gate list comes from roadmap §Phase 2.
+### Gate 1.5 — Ownership transfer + leave    [locked]
+POST /orgs/:orgId/ownership (owner only, tx swap owner->admin/target->owner)
+· DELETE /orgs/:orgId/members/me (owner cannot leave -> 409) · tests+E2E.
+
+### Gate 1.6 — Account hygiene               [locked]
+PATCH /auth/me (displayName) · POST /auth/change-password (bcrypt verify
+current, strength-checked new) · tests+E2E.
+
+### Gate 1.7 — Phase 1 EXIT                  [locked]
+Consolidated E2E (gates 1.2-1.6) in one live boot · typecheck+tests green ·
+Phase 1 marked COMPLETE.
+
+### Gate 1.8 — CBT content pipeline          [locked]
+packages/cbt-content: cbt:build CLI normalising the 21 REAL bank formats
+(answer/answers/correct_letter, option/options, BOM, dupes) -> student-safe
+bundle.json + server key.json + report · ADR-0003 offline-first doctrine.
+
+### Gate 1.9 — CBT server core               [locked]
+cbt schema migration: bundles (payload jsonb NO answers + answer_key jsonb
+server-only + sha256 + version unique per org+code) & attempts · publish
+(org admin) / manifest / fetch-bundle endpoints, keys never in responses ·
+tests+E2E.
+
+### Gate 2.0 — CBT MVP milestone             [locked]
+POST attempts {answers} -> server grades vs key -> score+breakdown stored ·
+unique attempt per (bundle,user) · perfect/partial/duplicate E2E · Phase 2
+opened and milestone 2.0 declared.
+
+## Phase 2 — CBT MVP                        [ACTIVE at 2.0]
+First real-user milestone (existing renancecbt content migrates here).
+AFTER 2.0: assignments per student, timers/windows, offline sync protocol,
+Flutter+web exam UI, R2 for images.
 
 ## Phase 3 — Parallel modules               [locked]
 school(results/PIN/fees) → sme → skills → utilities → payroll, serialised,

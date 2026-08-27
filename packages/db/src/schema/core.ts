@@ -42,6 +42,13 @@ export const users = core.table(
 /** Coarse org classification. Module-specific profiles arrive with each module phase. */
 export const orgTypeEnum = core.enum('org_type', ['school', 'business', 'other']);
 export const orgStatusEnum = core.enum('org_status', ['active', 'suspended']);
+/** Org trust ladder (Gate 1.4): draft -> pending -> verified | rejected. */
+export const verificationStatusEnum = core.enum('verification_status', [
+  'draft',
+  'pending',
+  'verified',
+  'rejected',
+]);
 /** RBAC ladder for Gate 1.3 enforcement. owner > admin > member. */
 export const memberRoleEnum = core.enum('member_role', ['owner', 'admin', 'member']);
 /** 'invited' backs the invite-by-email stub; email delivery lands in a later gate. */
@@ -68,10 +75,23 @@ export const organizations = core.table(
     createdById: uuid('created_by_id')
       .notNull()
       .references(() => users.id),
+    // --- Gate 1.4: verification lifecycle ---------------------------------
+    verificationStatus: verificationStatusEnum('verification_status')
+      .notNull()
+      .default('draft'),
+    /** Platform-admin review note (why rejected / verified). Internal. */
+    verificationNote: text('verification_note'),
+    reviewedAt: timestamp('reviewed_at', { withTimezone: true }),
+    reviewedById: uuid('reviewed_by_id').references(() => users.id, {
+      onDelete: 'set null',
+    }),
     createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [index('organizations_created_at_idx').on(t.createdAt)],
+  (t) => [
+    index('organizations_created_at_idx').on(t.createdAt),
+    index('organizations_verification_status_idx').on(t.verificationStatus),
+  ],
 );
 
 /**
