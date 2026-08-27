@@ -57,6 +57,12 @@ export const setMemberRoleSchema = z.object({
 });
 export type SetMemberRoleRequest = z.infer<typeof setMemberRoleSchema>;
 
+/** Ownership transfer target (Gate 1.5) — must be an active member, checked server-side. */
+export const transferOwnershipSchema = z.object({
+  userId: uuidSchema,
+});
+export type TransferOwnershipRequest = z.infer<typeof transferOwnershipSchema>;
+
 export const publicOrgSchema = z.object({
   id: uuidSchema,
   name: z.string(),
