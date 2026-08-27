@@ -99,8 +99,8 @@ export class CbtService {
   /** Grade + record. One attempt per (bundle, user) in MVP. */
   async submitAttempt(
     orgId: string,
-    bundleId: string,
     meId: string,
+    bundleId: string,
     dto: SubmitAttemptRequest,
   ): Promise<AttemptResult> {
     await this.requireActiveMember(orgId, meId);
@@ -148,7 +148,7 @@ export class CbtService {
   }
 
   /** My result for a bundle (404 before attempting). */
-  async myAttempt(orgId: string, bundleId: string, meId: string): Promise<AttemptResult> {
+  async myAttempt(orgId: string, meId: string, bundleId: string): Promise<AttemptResult> {
     await this.requireActiveMember(orgId, meId);
     const rows = await this.database.db
       .select()
