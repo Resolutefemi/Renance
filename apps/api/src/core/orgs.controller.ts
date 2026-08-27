@@ -16,6 +16,7 @@ import {
   addMemberSchema,
   createOrgSchema,
   setMemberRoleSchema,
+  transferOwnershipSchema,
   type AddMemberRequest,
   type CreateOrgRequest,
   type JwtPayload,
@@ -24,6 +25,7 @@ import {
   type OrgRole,
   type PublicOrg,
   type SetMemberRoleRequest,
+  type TransferOwnershipRequest,
 } from '@renance/shared';
 import { ZodValidationPipe } from '../common/zod-validation.pipe';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
@@ -110,6 +112,29 @@ export class OrgsController {
     @Param('orgId', ParseUUIDPipe) orgId: string,
   ): Promise<PublicOrg> {
     return this.orgs.submitVerification(orgId, me.sub);
+  }
+
+  /** Owner hands the org to an active member. 200 new owner · 403 non-owner
+   *  · 404 target not active member · 409 self-transfer */
+  @Post(':orgId/ownership')
+  @HttpCode(HttpStatus.OK)
+  @UseGuards(OrgRolesGuard)
+  @RequireOrgRole('owner')
+  transferOwnership(
+    @CurrentUser() me: JwtPayload,
+    @Param('orgId', ParseUUIDPipe) orgId: string,
+    @Body(new ZodValidationPipe(transferOwnershipSchema)) dto: TransferOwnershipRequest,
+  ): Promise<OrgMember> {
+    return this.orgs.transferOwnership(orgId, me.sub, dto.userId);
+  }
+
+  /** Self-service leave / invite-decline. 204 · 404 not a member ·
+   *  409 owner must transfer first. Declared BEFORE :userId so 'me' is
+   *  never captured as a uuid. */
+  @Delete(':orgId/members/me')
+  @HttpCode(HttpStatus.NO_CONTENT)
+  leave(@CurrentUser() me: JwtPayload, @Param('orgId', ParseUUIDPipe) orgId: string): Promise<void> {
+    return this.orgs.leaveOrg(orgId, me.sub);
   }
 
   /** Owner removes admins/members · admin removes members only · nobody
