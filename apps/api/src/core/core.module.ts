@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AuthModule } from '../auth/auth.module';
+import { OrgRolesGuard } from './org-roles.guard';
 import { OrgsController } from './orgs.controller';
 import { OrgsService } from './orgs.service';
 
@@ -10,9 +11,9 @@ import { OrgsService } from './orgs.service';
  * through OrgsService, never by querying core tables itself.
  */
 @Module({
-  imports: [AuthModule], // facade: JwtService for the guard, AuthService when needed
+  imports: [AuthModule], // facade: JwtService for the guards, AuthService when needed
   controllers: [OrgsController],
-  providers: [OrgsService],
+  providers: [OrgsService, OrgRolesGuard],
   exports: [OrgsService],
 })
 export class CoreModule {}

@@ -43,6 +43,20 @@ export const addMemberSchema = z.object({
 });
 export type AddMemberRequest = z.infer<typeof addMemberSchema>;
 
+/**
+ * PATCH member role contract (Gate 1.3). Same doctrine as addMember:
+ * 'owner' is NOT a settable target — transfer is its own future operation,
+ * guarded with confirmation flows, never a casual one-field PATCH.
+ */
+export const SETTABLE_MEMBER_ROLES = ['admin', 'member'] as const;
+export const settableRoleSchema = z.enum(SETTABLE_MEMBER_ROLES);
+export type SettableRole = (typeof SETTABLE_MEMBER_ROLES)[number];
+
+export const setMemberRoleSchema = z.object({
+  role: settableRoleSchema,
+});
+export type SetMemberRoleRequest = z.infer<typeof setMemberRoleSchema>;
+
 export const publicOrgSchema = z.object({
   id: uuidSchema,
   name: z.string(),

@@ -21,9 +21,11 @@ import type {
   OrgMember,
   OrgRole,
   PublicOrg,
+  SetMemberRoleRequest,
+  SettableRole,
 } from '@renance/shared';
 import { DB } from '../db/db.module';
-import { canManageMembers } from './rbac';
+import { canManageMembers, canRemoveMember, canSetRole } from './rbac';
 
 function toPublicOrg(row: OrganizationRow): PublicOrg {
   return {
@@ -134,13 +136,12 @@ export class OrgsService {
     return rows.map((r) => toMemberDto(r.membership, { id: r.userId, email: r.email, displayName: r.displayName }));
   }
 
-  /** Owner/admin adds an EXISTING platform user directly (invite stub). */
+  /** Owner/admin adds an EXISTING platform user directly (invite stub).
+   *  Coarse gate ALSO enforced by OrgRolesGuard at the route; the service
+   *  re-checks so direct service reuse (future facades) stays safe. */
   async addMember(orgId: string, meId: string, dto: AddMemberRequest): Promise<OrgMember> {
-    const membership = await this.getMembership(orgId, meId);
-    if (!membership || membership.status !== 'active') {
-      throw new ForbiddenException('you are not an active member of this organization');
-    }
-    if (!canManageMembers(membership.role)) {
+    const actor = await this.requireActiveMembership(orgId, meId);
+    if (!canManageMembers(actor.role as OrgRole)) {
       throw new ForbiddenException('owner or admin role required');
     }
 
@@ -172,6 +173,97 @@ export class OrgsService {
     const created = createdRows.at(0);
     if (!created) throw new ConflictException('could not add member');
     return toMemberDto(created, target);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Gate 1.3 — RBAC enforcement: role changes + member removal
+  // ---------------------------------------------------------------------------
+
+  /**
+   * Change a member's role. Matrix in rbac.ts: owner/admin may set
+   * admin|member on any NON-owner target; member may not. Idempotent —
+   * setting the role a member already has returns 200 without writing.
+   */
+  async updateMemberRole(
+    orgId: string,
+    meId: string,
+    targetUserId: string,
+    dto: SetMemberRoleRequest,
+  ): Promise<OrgMember> {
+    const actor = await this.requireActiveMembership(orgId, meId);
+    const target = await this.getMembership(orgId, targetUserId);
+    if (!target) {
+      throw new NotFoundException('that user is not a member of this organization');
+    }
+
+    const actorRole = actor.role as OrgRole;
+    const targetRole = target.role as OrgRole;
+    if (!canSetRole(actorRole, targetRole, dto.role as SettableRole)) {
+      throw new ForbiddenException(
+        targetRole === 'owner'
+          ? 'the owner role can only change via ownership transfer (not built yet)'
+          : 'owner or admin role required to change member roles',
+      );
+    }
+
+    if (target.role === dto.role) return this.memberDtoFor(target); // idempotent no-op
+
+    const updatedRows = await this.database.db
+      .update(memberships)
+      .set({ role: dto.role, updatedAt: new Date() })
+      .where(eq(memberships.id, target.id))
+      .returning();
+    const updated = updatedRows.at(0);
+    if (!updated) throw new ConflictException('could not update member role');
+    return this.memberDtoFor(updated);
+  }
+
+  /**
+   * Remove a member. Matrix in rbac.ts: owner removes admins+members;
+   * admin removes members only; owners themselves are unremovable —
+   * ownership transfers first (future operation).
+   */
+  async removeMember(orgId: string, meId: string, targetUserId: string): Promise<void> {
+    const actor = await this.requireActiveMembership(orgId, meId);
+    const target = await this.getMembership(orgId, targetUserId);
+    if (!target) {
+      throw new NotFoundException('that user is not a member of this organization');
+    }
+
+    const actorRole = actor.role as OrgRole;
+    const targetRole = target.role as OrgRole;
+    if (!canRemoveMember(actorRole, targetRole)) {
+      throw new ForbiddenException(
+        targetRole === 'owner'
+          ? 'the owner cannot be removed — transfer ownership first (not built yet)'
+          : targetRole === 'admin'
+            ? 'only the owner can remove an admin'
+            : 'owner or admin role required to remove members',
+      );
+    }
+
+    await this.database.db.delete(memberships).where(eq(memberships.id, target.id));
+  }
+
+  /** Guard-clause helper: active membership or 403. */
+  private async requireActiveMembership(orgId: string, userId: string) {
+    const membership = await this.getMembership(orgId, userId);
+    if (!membership || membership.status !== 'active') {
+      throw new ForbiddenException('you are not an active member of this organization');
+    }
+    return membership;
+  }
+
+  /** Membership row + fresh user fields -> client DTO. */
+  private async memberDtoFor(membership: MembershipRow): Promise<OrgMember> {
+    const userRows = await this.database.db
+      .select({ id: users.id, email: users.email, displayName: users.displayName })
+      .from(users)
+      .where(eq(users.id, membership.userId))
+      .limit(1);
+    const user = userRows.at(0);
+    if (!user) throw new NotFoundException('member user record missing');
+    return toMemberDto(membership, user);
   }
 
   private async findById(orgId: string): Promise<OrganizationRow | undefined> {

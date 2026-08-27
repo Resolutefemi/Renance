@@ -1,18 +1,21 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   HttpCode,
   HttpStatus,
   Inject,
   Param,
   ParseUUIDPipe,
+  Patch,
   Post,
   UseGuards,
 } from '@nestjs/common';
 import {
   addMemberSchema,
   createOrgSchema,
+  setMemberRoleSchema,
   type AddMemberRequest,
   type CreateOrgRequest,
   type JwtPayload,
@@ -20,10 +23,13 @@ import {
   type OrgMember,
   type OrgRole,
   type PublicOrg,
+  type SetMemberRoleRequest,
 } from '@renance/shared';
 import { ZodValidationPipe } from '../common/zod-validation.pipe';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { CurrentUser } from '../auth/current-user.decorator';
+import { OrgRolesGuard } from './org-roles.guard';
+import { RequireOrgRole } from './require-org-role.decorator';
 import { OrgsService } from './orgs.service';
 
 @Controller('orgs')
@@ -63,14 +69,48 @@ export class OrgsController {
     return this.orgs.listMembers(orgId, me.sub);
   }
 
-  /** Owner/admin adds an existing user. 201 member · 403 non-manager · 404 no user · 409 already member */
+  /** Owner/admin adds an existing user. Guard: active + ≥admin.
+   *  201 member · 403 non-manager · 404 no user · 409 already member */
   @Post(':orgId/members')
   @HttpCode(HttpStatus.CREATED)
+  @UseGuards(OrgRolesGuard)
+  @RequireOrgRole('admin')
   add(
     @CurrentUser() me: JwtPayload,
     @Param('orgId', ParseUUIDPipe) orgId: string,
     @Body(new ZodValidationPipe(addMemberSchema)) dto: AddMemberRequest,
   ): Promise<OrgMember> {
     return this.orgs.addMember(orgId, me.sub, dto);
+  }
+
+  /** Owner/admin changes a member's role (never to/from owner — transfer is a
+   *  future op). Guard: ≥admin. Fine matrix (target-aware) in OrgsService.
+   *  200 updated · 400 role=owner rejected by contract · 403 member / target-owner
+   *  · 404 unknown org|member */
+  @Patch(':orgId/members/:userId')
+  @UseGuards(OrgRolesGuard)
+  @RequireOrgRole('admin')
+  updateRole(
+    @CurrentUser() me: JwtPayload,
+    @Param('orgId', ParseUUIDPipe) orgId: string,
+    @Param('userId', ParseUUIDPipe) userId: string,
+    @Body(new ZodValidationPipe(setMemberRoleSchema)) dto: SetMemberRoleRequest,
+  ): Promise<OrgMember> {
+    return this.orgs.updateMemberRole(orgId, me.sub, userId, dto);
+  }
+
+  /** Owner removes admins/members · admin removes members only · nobody
+   *  removes an owner. Guard: ≥admin, fine matrix in OrgsService. 204 ·
+   *  403 member / admin-vs-admin / owner-target · 404 unknown */
+  @Delete(':orgId/members/:userId')
+  @HttpCode(HttpStatus.NO_CONTENT)
+  @UseGuards(OrgRolesGuard)
+  @RequireOrgRole('admin')
+  remove(
+    @CurrentUser() me: JwtPayload,
+    @Param('orgId', ParseUUIDPipe) orgId: string,
+    @Param('userId', ParseUUIDPipe) userId: string,
+  ): Promise<void> {
+    return this.orgs.removeMember(orgId, me.sub, userId);
   }
 }

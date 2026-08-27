@@ -34,9 +34,18 @@ owner/member flow, 403 non-member + member-cannot-manage, 409 dup + slug.
 REMAINING FOR EXIT: repo push (this commit); fuller matrix tests land in 1.3.
 DEMO ACCOUNT: ariyooluwafemi487+demo1@gmail.com (founder-owned plus alias).
 
-### Gate 1.3 — RBAC enforcement              [locked]
-RolesGuard + decorator pair · protect a stub resource route · matrix tests
-(owner>admin>member>anon).
+### Gate 1.3 — RBAC enforcement              [CODE COMPLETE 2026-08-27]
+OrgRolesGuard + @RequireOrgRole() decorator (coarse gate: org exists ->
+active membership -> rank>=required, attaches membership to request) ·
+pure decision matrices in rbac.ts (hasAtLeast/canSetRole/canRemoveMember)
+· PATCH /orgs/:orgId/members/:userId (idempotent role change; owner
+targets untouchable, role=owner unassignable by contract) · DELETE member
+(owner removes admins+members, admin removes members only, owners never
+removable — transfer is a future op) · guard DI survives tsx via explicit
+@Inject · 54 api + 6 shared unit tests green · LIVE E2E 20/20 vs prod
+Neon: all 4 ladder rungs incl. anon 401, member 403s, admin add/remove,
+owner-only powers, contract 400s, state restored after run.
+REMAINING FOR EXIT: repo push (this commit).
 
 ### Gate 1.4 — Verification states           [locked]
 draft/pending/verified/rejected state machine doc + service + transition
