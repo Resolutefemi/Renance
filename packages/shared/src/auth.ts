@@ -29,6 +29,20 @@ export const loginRequestSchema = z.object({
 });
 export type LoginRequest = z.infer<typeof loginRequestSchema>;
 
+/** PATCH /auth/me (Gate 1.6) — profile fields a user may change themselves. */
+export const updateProfileSchema = z.object({
+  displayName: z.string().trim().min(2, 'name too short').max(80),
+});
+export type UpdateProfileRequest = z.infer<typeof updateProfileSchema>;
+
+/** POST /auth/change-password (Gate 1.6) — current proves ownership, new uses
+ *  the SAME strength floor as registration. */
+export const changePasswordSchema = z.object({
+  currentPassword: z.string().min(1, 'current password required'),
+  newPassword: passwordSchema,
+});
+export type ChangePasswordRequest = z.infer<typeof changePasswordSchema>;
+
 export const USER_STATUSES_PUBLIC = ['active', 'suspended'] as const;
 export const publicUserSchema = z.object({
   id: z.string().uuid(),

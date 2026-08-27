@@ -1,12 +1,26 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Inject, Post, UseGuards } from '@nestjs/common';
 import {
+  Body,
+  Controller,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Inject,
+  Patch,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
+import {
+  changePasswordSchema,
   loginRequestSchema,
   registerRequestSchema,
+  updateProfileSchema,
   type AuthResponse,
+  type ChangePasswordRequest,
   type JwtPayload,
   type LoginRequest,
   type PublicUser,
   type RegisterRequest,
+  type UpdateProfileRequest,
 } from '@renance/shared';
 import { ZodValidationPipe } from '../common/zod-validation.pipe';
 import { AuthService } from './auth.service';
@@ -38,5 +52,27 @@ export class AuthController {
   @UseGuards(JwtAuthGuard)
   me(@CurrentUser() user: JwtPayload): Promise<PublicUser> {
     return this.auth.me(user.sub);
+  }
+
+  /** Gate 1.6 — update own display name. 200 user · 401 no/invalid token · 400 validation */
+  @Patch('me')
+  @HttpCode(HttpStatus.OK)
+  @UseGuards(JwtAuthGuard)
+  updateMe(
+    @CurrentUser() user: JwtPayload,
+    @Body(new ZodValidationPipe(updateProfileSchema)) dto: UpdateProfileRequest,
+  ): Promise<PublicUser> {
+    return this.auth.updateProfile(user.sub, dto);
+  }
+
+  /** Gate 1.6 — change own password. 200 user · 401 wrong current · 400 weak new */
+  @Post('me/change-password')
+  @HttpCode(HttpStatus.OK)
+  @UseGuards(JwtAuthGuard)
+  changePassword(
+    @CurrentUser() user: JwtPayload,
+    @Body(new ZodValidationPipe(changePasswordSchema)) dto: ChangePasswordRequest,
+  ): Promise<PublicUser> {
+    return this.auth.changePassword(user.sub, dto);
   }
 }
