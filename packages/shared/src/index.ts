@@ -5,6 +5,7 @@ import { z } from 'zod';
 export * from './primitives';
 export * from './auth';
 export * from './orgs';
+export * from './cbt';
 
 /** Registry of business modules — mirrors db/sql schemas and api modules. */
 export const MODULE_REGISTRY = [
