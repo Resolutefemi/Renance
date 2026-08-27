@@ -91,12 +91,16 @@ manifest (meta only) · GET bundle (questions, zero key material — E2E
 leak-check asserts raw body clean) · membership via OrgsService facade
 (assertActiveMembership) · E2E 15/15 with REAL jamb biology bank.
 
-### Gate 2.0 — CBT MVP milestone             [locked]
-POST attempts {answers} -> server grades vs key -> score+breakdown stored ·
-unique attempt per (bundle,user) · perfect/partial/duplicate E2E · Phase 2
-opened and milestone 2.0 declared.
+### Gate 2.0 — CBT MVP milestone             [CODE COMPLETE 2026-08-27]
+POST /orgs/:orgId/bundles/:id/attempt -> PURE server-side grading
+(grading.ts: mcq letter case-insensitive, text vs accepted case-variants,
+unanswered distinct) -> attempt stored w/ score + responses jsonb ·
+unique (bundle,user) retake 409 · result reveal = answers + explanations
+AFTER grading only · GET my attempt rebuilds breakdown · E2E 17/17 incl.
+REAL 5/5 perfect run, 2/5 partial, cve105 text grading, retake guard ·
+MILESTONE 2.0 DECLARED.
 
-## Phase 2 — CBT MVP                        [ACTIVE at 2.0]
+## Phase 2 — CBT MVP                        [MILESTONE 2.0 REACHED 2026-08-27]
 First real-user milestone (existing renancecbt content migrates here).
 AFTER 2.0: assignments per student, timers/windows, offline sync protocol,
 Flutter+web exam UI, R2 for images.
