@@ -63,9 +63,21 @@ export const publicOrgSchema = z.object({
   slug: z.string(),
   type: orgTypeSchema,
   status: z.enum(['active', 'suspended']),
+  /** Org trust ladder (Gate 1.4) — visible to members on every org read. */
+  verificationStatus: z.enum(['draft', 'pending', 'verified', 'rejected']),
   createdAt: z.string().datetime(),
 });
 export type PublicOrg = z.infer<typeof publicOrgSchema>;
+
+/**
+ * Platform-admin review decision (Gate 1.4). 'pending' is NOT a decision —
+ * reviews move an org to verified|rejected only; note explains why.
+ */
+export const reviewVerificationSchema = z.object({
+  decision: z.enum(['verified', 'rejected']),
+  note: z.string().trim().max(500).optional(),
+});
+export type ReviewVerificationRequest = z.infer<typeof reviewVerificationSchema>;
 
 /** GET /orgs row: the org plus YOUR standing in it. */
 export const myOrgSchema = z.object({

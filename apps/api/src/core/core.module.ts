@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AuthModule } from '../auth/auth.module';
+import { AdminController } from './admin.controller';
 import { OrgRolesGuard } from './org-roles.guard';
 import { OrgsController } from './orgs.controller';
 import { OrgsService } from './orgs.service';
@@ -12,7 +13,7 @@ import { OrgsService } from './orgs.service';
  */
 @Module({
   imports: [AuthModule], // facade: JwtService for the guards, AuthService when needed
-  controllers: [OrgsController],
+  controllers: [OrgsController, AdminController],
   providers: [OrgsService, OrgRolesGuard],
   exports: [OrgsService],
 })

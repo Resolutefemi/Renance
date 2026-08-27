@@ -99,6 +99,19 @@ export class OrgsController {
     return this.orgs.updateMemberRole(orgId, me.sub, userId, dto);
   }
 
+  /** Org owner/admin submits for platform verification. 200 pending ·
+   *  403 member · 409 already pending/verified */
+  @Post(':orgId/verification/submit')
+  @HttpCode(HttpStatus.OK)
+  @UseGuards(OrgRolesGuard)
+  @RequireOrgRole('admin')
+  submitVerification(
+    @CurrentUser() me: JwtPayload,
+    @Param('orgId', ParseUUIDPipe) orgId: string,
+  ): Promise<PublicOrg> {
+    return this.orgs.submitVerification(orgId, me.sub);
+  }
+
   /** Owner removes admins/members · admin removes members only · nobody
    *  removes an owner. Guard: ≥admin, fine matrix in OrgsService. 204 ·
    *  403 member / admin-vs-admin / owner-target · 404 unknown */
