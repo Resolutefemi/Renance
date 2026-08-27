@@ -8,7 +8,13 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcryptjs';
 import { eq } from 'drizzle-orm';
 import { users, type Db as DbClient, type UserRow } from '@renance/db';
-import type { LoginRequest, PublicUser, RegisterRequest } from '@renance/shared';
+import type {
+  ChangePasswordRequest,
+  LoginRequest,
+  PublicUser,
+  RegisterRequest,
+  UpdateProfileRequest,
+} from '@renance/shared';
 import { DB } from '../db/db.module';
 
 const BCRYPT_COST = 12;
@@ -89,6 +95,41 @@ export class AuthService {
       .limit(1);
     if (!row) throw new UnauthorizedException(); // token valid, user vanished
     return toPublicUser(row);
+  }
+
+  /** Gate 1.6 — change own display name. */
+  async updateProfile(userId: string, dto: UpdateProfileRequest): Promise<PublicUser> {
+    const updated = await this.database.db
+      .update(users)
+      .set({ displayName: dto.displayName, updatedAt: new Date() })
+      .where(eq(users.id, userId))
+      .returning();
+    const row = updated.at(0);
+    if (!row) throw new UnauthorizedException(); // token valid, user vanished
+    return toPublicUser(row);
+  }
+
+  /** Gate 1.6 — change own password. Current must verify (401 otherwise);
+   *  new password re-hashed with the same bcrypt cost. Existing tokens stay
+   *  valid until expiry by design (12h window; revocation lands Phase 4). */
+  async changePassword(userId: string, dto: ChangePasswordRequest): Promise<PublicUser> {
+    const [row] = await this.database.db
+      .select()
+      .from(users)
+      .where(eq(users.id, userId))
+      .limit(1);
+    if (!row || !(await bcrypt.compare(dto.currentPassword, row.passwordHash))) {
+      throw new UnauthorizedException('current password is incorrect');
+    }
+    const passwordHash = await bcrypt.hash(dto.newPassword, 12);
+    const updated = await this.database.db
+      .update(users)
+      .set({ passwordHash, updatedAt: new Date() })
+      .where(eq(users.id, userId))
+      .returning();
+    const updatedRow = updated.at(0);
+    if (!updatedRow) throw new UnauthorizedException();
+    return toPublicUser(updatedRow);
   }
 
   private async findIdByEmail(email: string): Promise<string | undefined> {

@@ -64,9 +64,11 @@ the ONLY owner-creation path; target must be active member · DELETE
 409 transfer-first; declared before :userId route) · canTransferOwnership
 pure rule · LIVE E2E 18/18 incl. crown round-trip founder<->demo.
 
-### Gate 1.6 — Account hygiene               [locked]
-PATCH /auth/me (displayName) · POST /auth/change-password (bcrypt verify
-current, strength-checked new) · tests+E2E.
+### Gate 1.6 — Account hygiene               [CODE COMPLETE 2026-08-27]
+PATCH /auth/me (displayName) · POST /auth/me/change-password (bcrypt
+verify current 401, same strength floor as register, cost 12 re-hash;
+token stays valid til 12h expiry by design) · LIVE E2E 13/13 with full
+state restore. Founder can now rotate the temp password himself.
 
 ### Gate 1.7 — Phase 1 EXIT                  [locked]
 Consolidated E2E (gates 1.2-1.6) in one live boot · typecheck+tests green ·
