@@ -11,7 +11,7 @@ Exit criteria:
 - [ ] apps/web renders home page locally                    <- code present; your boot pending
 - [ ] mobile: flutter create done (empty shell acceptable)
 
-## Phase 1 — Thin Core Service              [ACTIVE]
+## Phase 1 — Thin Core Service              [COMPLETE 2026-08-27]
 identity/auth · multi-role · organizations · memberships · RBAC ·
 verification states. Serial gates:
 
@@ -70,9 +70,10 @@ verify current 401, same strength floor as register, cost 12 re-hash;
 token stays valid til 12h expiry by design) · LIVE E2E 13/13 with full
 state restore. Founder can now rotate the temp password himself.
 
-### Gate 1.7 — Phase 1 EXIT                  [locked]
-Consolidated E2E (gates 1.2-1.6) in one live boot · typecheck+tests green ·
-Phase 1 marked COMPLETE.
+### Gate 1.7 — Phase 1 EXIT                  [CODE COMPLETE 2026-08-27]
+e2e_phase1_exit.py: 40/40 consolidated assertions in one live boot (fresh
+epoch identities, state-tolerant) + unit 79/79 + typecheck 4/4. Every
+Phase 1 surface re-proven incl. founder regression on renance-hq.
 
 ### Gate 1.8 — CBT content pipeline          [locked]
 packages/cbt-content: cbt:build CLI normalising the 21 REAL bank formats
