@@ -83,11 +83,13 @@ dedupes, splits answers out · LIVE RUN over both legacy repos: 21 banks,
 reasoned in report · ADR-0003 accepted (bundle/key split, no keys to any
 client, server-side grading, device auto-cleanup, R2 ladder) · 8 spec tests.
 
-### Gate 1.9 — CBT server core               [locked]
-cbt schema migration: bundles (payload jsonb NO answers + answer_key jsonb
-server-only + sha256 + version unique per org+code) & attempts · publish
-(org admin) / manifest / fetch-bundle endpoints, keys never in responses ·
-tests+E2E.
+### Gate 1.9 — CBT server core               [CODE COMPLETE 2026-08-27]
+migration 0003: cbt.bundles (payload jsonb + answer_key jsonb SERVER-ONLY
++ sha256 + unique org+code+version) & cbt.attempts (unique bundle+user) ·
+POST publish (org admin, contract cross-checks key<->questions) · GET
+manifest (meta only) · GET bundle (questions, zero key material — E2E
+leak-check asserts raw body clean) · membership via OrgsService facade
+(assertActiveMembership) · E2E 15/15 with REAL jamb biology bank.
 
 ### Gate 2.0 — CBT MVP milestone             [locked]
 POST attempts {answers} -> server grades vs key -> score+breakdown stored ·

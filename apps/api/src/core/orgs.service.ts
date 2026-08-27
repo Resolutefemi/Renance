@@ -249,6 +249,13 @@ export class OrgsService {
     await this.database.db.delete(memberships).where(eq(memberships.id, target.id));
   }
 
+  /** Facade for other modules (CBT, school, ...): 403 unless active member.
+   *  Returns the membership row so callers can consult role/status locally
+   *  without ever querying core tables themselves (boundary contract). */
+  async assertActiveMembership(orgId: string, userId: string) {
+    return this.requireActiveMembership(orgId, userId);
+  }
+
   /** Guard-clause helper: active membership or 403. */
   private async requireActiveMembership(orgId: string, userId: string) {
     const membership = await this.getMembership(orgId, userId);

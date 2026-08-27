@@ -53,7 +53,8 @@ function extractOptions(q: Record<string, unknown>): RawOpts {
       if (typeof item === 'string') {
         // variant 7: bare string array — letters assigned by position (AMS101,
         // MTH101, STA111, CHE101, GST111, english.json, ...)
-        if (item.trim()) out[LETTERS[stringItems]] = item.trim();
+        const letter = LETTERS[stringItems];
+        if (letter && item.trim()) out[letter] = item.trim();
         stringItems++;
         continue;
       }
