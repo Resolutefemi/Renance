@@ -75,10 +75,13 @@ e2e_phase1_exit.py: 40/40 consolidated assertions in one live boot (fresh
 epoch identities, state-tolerant) + unit 79/79 + typecheck 4/4. Every
 Phase 1 surface re-proven incl. founder regression on renance-hq.
 
-### Gate 1.8 — CBT content pipeline          [locked]
-packages/cbt-content: cbt:build CLI normalising the 21 REAL bank formats
-(answer/answers/correct_letter, option/options, BOM, dupes) -> student-safe
-bundle.json + server key.json + report · ADR-0003 offline-first doctrine.
+### Gate 1.8 — CBT content pipeline          [CODE COMPLETE 2026-08-27]
+packages/cbt-content DONE: cbt:build CLI ingests ALL 7 real shapes (7th
+discovered: options as bare string array + text answers), strips BOM,
+dedupes, splits answers out · LIVE RUN over both legacy repos: 21 banks,
+7461 questions exam-ready (6663 mcq + 798 text), 0 failures, every drop
+reasoned in report · ADR-0003 accepted (bundle/key split, no keys to any
+client, server-side grading, device auto-cleanup, R2 ladder) · 8 spec tests.
 
 ### Gate 1.9 — CBT server core               [locked]
 cbt schema migration: bundles (payload jsonb NO answers + answer_key jsonb
