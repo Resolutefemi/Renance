@@ -27,7 +27,7 @@ import type {
   VerificationState,
 } from '@renance/shared';
 import { DB } from '../db/db.module';
-import { canManageMembers, canRemoveMember, canSetRole } from './rbac';
+import { canManageMembers, canRemoveMember, canSetRole, canTransferOwnership } from './rbac';
 import { canReview, canSubmit } from './verification';
 
 function toPublicOrg(row: OrganizationRow): PublicOrg {
@@ -338,6 +338,57 @@ export class OrgsService {
       .where(eq(organizations.verificationStatus, 'pending'))
       .orderBy(organizations.createdAt);
     return rows.map(toPublicOrg);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Gate 1.5 — ownership transfer + member leave
+  // ---------------------------------------------------------------------------
+
+  /**
+   * Owner hands the crown to an active member in ONE transaction:
+   * owner→admin, target→owner. The unremovable-owner rule's only escape.
+   */
+  async transferOwnership(orgId: string, meId: string, targetUserId: string): Promise<OrgMember> {
+    const actor = await this.requireActiveMembership(orgId, meId);
+    if (!canTransferOwnership(actor.role as OrgRole)) {
+      throw new ForbiddenException('only the owner can transfer ownership');
+    }
+    if (targetUserId === meId) {
+      throw new ConflictException('you already own this organization');
+    }
+    const target = await this.getMembership(orgId, targetUserId);
+    if (!target || target.status !== 'active') {
+      throw new NotFoundException('target must be an active member of this organization');
+    }
+
+    const promoted = await this.database.db.transaction(async (tx) => {
+      await tx
+        .update(memberships)
+        .set({ role: 'admin', updatedAt: new Date() })
+        .where(eq(memberships.id, actor.id));
+      const rows = await tx
+        .update(memberships)
+        .set({ role: 'owner', updatedAt: new Date() })
+        .where(eq(memberships.id, target.id))
+        .returning();
+      return rows.at(0);
+    });
+    if (!promoted) throw new ConflictException('could not transfer ownership');
+    return this.memberDtoFor(promoted);
+  }
+
+  /**
+   * Leave by self-service: DELETE /orgs/:orgId/members/me. Works for active
+   * and invited memberships (doubles as invite-decline). Owners must
+   * transfer first — an org can never be left ownerless.
+   */
+  async leaveOrg(orgId: string, meId: string): Promise<void> {
+    const membership = await this.getMembership(orgId, meId);
+    if (!membership) throw new NotFoundException('you are not a member of this organization');
+    if (membership.role === 'owner') {
+      throw new ConflictException('transfer ownership before leaving');
+    }
+    await this.database.db.delete(memberships).where(eq(memberships.id, membership.id));
   }
 
   private async findById(orgId: string): Promise<OrganizationRow | undefined> {

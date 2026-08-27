@@ -70,3 +70,12 @@ export function canRemoveMember(actor: OrgRole, target: OrgRole): boolean {
   if (actor === 'admin') return target === 'member';
   return false;
 }
+
+/**
+ * Ownership transfer (Gate 1.5) — the ONLY path that creates a new owner,
+ * replacing the unremovable-owner rule's escape hatch. Owner-only, and the
+ * target must be an existing active member (checked in the service).
+ */
+export function canTransferOwnership(actor: OrgRole): boolean {
+  return actor === 'owner';
+}

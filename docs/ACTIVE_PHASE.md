@@ -57,9 +57,12 @@ in MVP · publicOrgSchema +verificationStatus · unit 79 green · LIVE E2E
 17/17 via run_gate_e2e.sh runner (sandbox background processes die between
 tool calls — foreground runner + log file is the reliable pattern).
 
-### Gate 1.5 — Ownership transfer + leave    [locked]
-POST /orgs/:orgId/ownership (owner only, tx swap owner->admin/target->owner)
-· DELETE /orgs/:orgId/members/me (owner cannot leave -> 409) · tests+E2E.
+### Gate 1.5 — Ownership transfer + leave    [CODE COMPLETE 2026-08-27]
+POST /orgs/:orgId/ownership — single-tx swap (owner->admin, target->owner),
+the ONLY owner-creation path; target must be active member · DELETE
+/orgs/:orgId/members/me self-service leave/invite-decline (owner blocked
+409 transfer-first; declared before :userId route) · canTransferOwnership
+pure rule · LIVE E2E 18/18 incl. crown round-trip founder<->demo.
 
 ### Gate 1.6 — Account hygiene               [locked]
 PATCH /auth/me (displayName) · POST /auth/change-password (bcrypt verify
