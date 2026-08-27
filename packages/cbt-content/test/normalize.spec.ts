@@ -17,8 +17,8 @@ describe('cbt-content normalizeBank — real-world shape coverage', () => {
       'biology.json',
     );
     expect(bundle.code).toBe('biology');
-    expect(bundle.questions[0].options).toEqual({ A: 'Nucleus', B: 'Ribosome', C: 'Mitochondrion', D: 'Golgi apparatus' });
-    expect(key.answers[bundle.questions[0].id]).toMatchObject({ type: 'mcq', letter: 'C', explanation: 'Mitochondria produce ATP.' });
+    expect(bundle.questions[0]!.options).toEqual({ A: 'Nucleus', B: 'Ribosome', C: 'Mitochondrion', D: 'Golgi apparatus' });
+    expect(key.answers[bundle.questions[0]!.id]!).toMatchObject({ type: 'mcq', letter: 'C', explanation: 'Mitochondria produce ATP.' });
     // explanation must NEVER leak into the bundle
     expect(JSON.stringify(bundle)).not.toContain('ATP');
     expect(report.kept).toBe(1);
@@ -43,7 +43,7 @@ describe('cbt-content normalizeBank — real-world shape coverage', () => {
     );
     expect(bundle.code).toBe('sen101'); // _questions suffix stripped
     expect(bundle.title).toBe('Web Tech');
-    expect(key.answers['1']).toMatchObject({ letter: 'A' });
+    expect(key.answers['1']!).toMatchObject({ letter: 'A' });
   });
 
   it('BOM is stripped and file parses (english.json regression)', () => {
@@ -81,9 +81,9 @@ describe('cbt-content normalizeBank — real-world shape coverage', () => {
       'COS102_500.json',
     );
     expect(bundle.code).toBe('cos102');
-    expect(key.answers['1']).toMatchObject({ letter: 'B' });
-    expect(key.answers['2']).toMatchObject({ letter: 'B' }); // derived from correct flag
-    expect(bundle.questions[0].options).toEqual({ A: 'Faster hardware', B: 'Solving problems' });
+    expect(key.answers['1']!).toMatchObject({ letter: 'B' });
+    expect(key.answers['2']!).toMatchObject({ letter: 'B' }); // derived from correct flag
+    expect(bundle.questions[0]!.options).toEqual({ A: 'Faster hardware', B: 'Solving problems' });
   });
 
   it('shape 5: answers[] of accepted texts => text question (CVE105)', () => {
@@ -95,9 +95,9 @@ describe('cbt-content normalizeBank — real-world shape coverage', () => {
       }),
       'CVE105.json',
     );
-    expect(bundle.questions[0].type).toBe('text');
-    expect(bundle.questions[0].options).toBeUndefined();
-    expect(key.answers['1']).toMatchObject({ type: 'text', accepted: ['Science', 'science', 'SCIENCE'] });
+    expect(bundle.questions[0]!.type).toBe('text');
+    expect(bundle.questions[0]!.options).toBeUndefined();
+    expect(key.answers['1']!).toMatchObject({ type: 'text', accepted: ['Science', 'science', 'SCIENCE'] });
     expect(report.text).toBe(1);
   });
 
@@ -115,9 +115,9 @@ describe('cbt-content normalizeBank — real-world shape coverage', () => {
       ]),
       'MTH101.json',
     );
-    expect(bundle.questions[0].options).toEqual({ A: 'heat is gained', B: 'energy is lost', C: 'energy is gained', D: 'power is lost' });
-    expect(key.answers['1']).toMatchObject({ type: 'mcq', letter: 'B' });
-    expect(key.answers['2']).toMatchObject({ letter: 'C' });
+    expect(bundle.questions[0]!.options).toEqual({ A: 'heat is gained', B: 'energy is lost', C: 'energy is gained', D: 'power is lost' });
+    expect(key.answers['1']!).toMatchObject({ type: 'mcq', letter: 'B' });
+    expect(key.answers['2']!).toMatchObject({ letter: 'C' });
   });
 
   it('drops duplicates, empty stems, unanswerable; reassigns clashing ids', () => {
@@ -133,7 +133,7 @@ describe('cbt-content normalizeBank — real-world shape coverage', () => {
     );
     expect(bundle.questionCount).toBe(2);
     expect(report.dropped.map((d) => d.reason)).toEqual(['duplicate stem', 'empty stem', 'no answer material found']);
-    expect(bundle.questions[1].id).not.toBe('1');
+    expect(bundle.questions[1]!.id).not.toBe('1');
   });
 
   it('answer text that matches an option resolves to its letter', () => {
@@ -141,9 +141,7 @@ describe('cbt-content normalizeBank — real-world shape coverage', () => {
       JSON.stringify([{ question: 'Pick', option: { a: 'Alpha', b: 'Beta' }, answer: 'Beta' }]),
       'textans.json',
     );
-    expect(key.answers[bundle0(key)].type === 'mcq').toBe(true);
-    function bundle0(k: typeof key): string {
-      return Object.keys(k.answers)[0];
-    }
+    const firstId = Object.keys(key.answers)[0]!;
+    expect(key.answers[firstId]!.type === 'mcq').toBe(true);
   });
 });
