@@ -1,0 +1,288 @@
+/// Data models mirroring the Go study-api contract (apps/study-api).
+/// All parsing is defensive: the API may omit optional fields.
+library;
+
+class AppUser {
+  const AppUser({
+    required this.id,
+    required this.username,
+    required this.profileCompleted,
+  });
+
+  final String id;
+  final String username;
+  final bool profileCompleted;
+
+  factory AppUser.fromJson(Map<String, dynamic> j) => AppUser(
+        id: (j['id'] ?? '') as String,
+        username: (j['username'] ?? '') as String,
+        profileCompleted: (j['profileCompleted'] ?? false) as bool,
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'id': id,
+        'username': username,
+        'profileCompleted': profileCompleted,
+      };
+}
+
+class Profile {
+  const Profile({
+    required this.fullName,
+    required this.institution,
+    required this.gradeLevel,
+    required this.exams,
+    required this.completed,
+  });
+
+  final String fullName;
+  final String institution;
+  final String gradeLevel;
+  final List<String> exams;
+  final bool completed;
+
+  factory Profile.fromJson(Map<String, dynamic> j) => Profile(
+        fullName: (j['fullName'] ?? '') as String,
+        institution: (j['institution'] ?? '') as String,
+        gradeLevel: (j['gradeLevel'] ?? '') as String,
+        exams: ((j['exams'] as List<dynamic>?) ?? const [])
+            .map((e) => e.toString())
+            .toList(),
+        completed: (j['completed'] ?? false) as bool,
+      );
+}
+
+class MeResult {
+  const MeResult({required this.user, this.profile});
+  final AppUser user;
+  final Profile? profile;
+
+  factory MeResult.fromJson(Map<String, dynamic> j) => MeResult(
+        user: AppUser.fromJson((j['user'] as Map).cast<String, dynamic>()),
+        profile: j['profile'] == null
+            ? null
+            : Profile.fromJson((j['profile'] as Map).cast<String, dynamic>()),
+      );
+}
+
+class AuthTokens {
+  const AuthTokens({required this.token, required this.user});
+  final String token;
+  final AppUser user;
+}
+
+class ExamMeta {
+  const ExamMeta({
+    required this.code,
+    required this.title,
+    required this.questionCount,
+    required this.totalMarks,
+    required this.bundleSha256,
+    this.durationMinutes,
+    this.category = '',
+    this.body = '',
+    this.sizeBytes = 0,
+  });
+
+  final String code;
+  final String title;
+  final int questionCount;
+  final int totalMarks;
+  final int? durationMinutes;
+  final String category; // secondary | university | ...
+  final String body; // JAMB | WAEC | NECO | University Modules
+  final String bundleSha256;
+  final int sizeBytes;
+
+  factory ExamMeta.fromJson(Map<String, dynamic> j) => ExamMeta(
+        code: (j['code'] ?? '') as String,
+        title: (j['title'] ?? j['code'] ?? '') as String,
+        questionCount: (j['questionCount'] ?? 0) as int,
+        totalMarks: (j['totalMarks'] ?? 0) as int,
+        durationMinutes: j['durationMinutes'] as int?,
+        category: (j['category'] ?? '') as String,
+        body: (j['body'] ?? '') as String,
+        bundleSha256: (j['bundleSha256'] ?? '') as String,
+        sizeBytes: (j['sizeBytes'] ?? 0) as int,
+      );
+}
+
+class Manifest {
+  const Manifest({required this.version, required this.exams});
+  final String version;
+  final List<ExamMeta> exams;
+
+  factory Manifest.fromJson(Map<String, dynamic> j) => Manifest(
+        version: (j['version'] ?? '') as String,
+        exams: ((j['exams'] as List<dynamic>?) ?? const [])
+            .map((e) => ExamMeta.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}
+
+class BundleQuestion {
+  const BundleQuestion({
+    required this.id,
+    required this.type,
+    required this.stem,
+    required this.marks,
+    this.options = const {},
+    this.topic = '',
+    this.difficulty = '',
+  });
+
+  final String id;
+  final String type; // mcq | text
+  final String stem;
+  final Map<String, String> options; // letter -> text
+  final int marks;
+  final String topic;
+  final String difficulty;
+
+  factory BundleQuestion.fromJson(Map<String, dynamic> j) => BundleQuestion(
+        id: (j['id'] ?? '') as String,
+        type: (j['type'] ?? 'mcq') as String,
+        stem: (j['stem'] ?? '') as String,
+        marks: (j['marks'] ?? 1) as int,
+        options: ((j['options'] as Map<dynamic, dynamic>?) ?? const {})
+            .map((k, v) => MapEntry(k.toString(), v.toString())),
+        topic: (j['topic'] ?? '') as String,
+        difficulty: (j['difficulty'] ?? '') as String,
+      );
+}
+
+class Bundle {
+  const Bundle({
+    required this.code,
+    required this.title,
+    required this.version,
+    required this.questionCount,
+    required this.totalMarks,
+    required this.questions,
+    this.durationMinutes,
+    this.category = '',
+    this.body = '',
+  });
+
+  final String code;
+  final String title;
+  final int version;
+  final int questionCount;
+  final int totalMarks;
+  final int? durationMinutes;
+  final String category;
+  final String body;
+  final List<BundleQuestion> questions;
+
+  factory Bundle.fromJson(Map<String, dynamic> j) => Bundle(
+        code: (j['code'] ?? '') as String,
+        title: (j['title'] ?? '') as String,
+        version: (j['version'] ?? 1) as int,
+        questionCount: (j['questionCount'] ?? 0) as int,
+        totalMarks: (j['totalMarks'] ?? 0) as int,
+        durationMinutes: j['durationMinutes'] as int?,
+        category: (j['category'] ?? '') as String,
+        body: (j['body'] ?? '') as String,
+        questions: ((j['questions'] as List<dynamic>?) ?? const [])
+            .map((q) =>
+                BundleQuestion.fromJson((q as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'code': code,
+        'title': title,
+        'version': version,
+        'questionCount': questionCount,
+        'totalMarks': totalMarks,
+        if (durationMinutes != null) 'durationMinutes': durationMinutes,
+        if (category.isNotEmpty) 'category': category,
+        if (body.isNotEmpty) 'body': body,
+        'questions': questions
+            .map((q) => <String, dynamic>{
+                  'id': q.id,
+                  'type': q.type,
+                  'stem': q.stem,
+                  'marks': q.marks,
+                  if (q.options.isNotEmpty) 'options': q.options,
+                  if (q.topic.isNotEmpty) 'topic': q.topic,
+                  if (q.difficulty.isNotEmpty) 'difficulty': q.difficulty,
+                })
+            .toList(),
+      };
+}
+
+class TopicRow {
+  const TopicRow({required this.topic, required this.correct, required this.total});
+  final String topic;
+  final int correct;
+  final int total;
+
+  factory TopicRow.fromJson(Map<String, dynamic> j) => TopicRow(
+        topic: (j['topic'] ?? '') as String,
+        correct: (j['correct'] ?? 0) as int,
+        total: (j['total'] ?? 0) as int,
+      );
+}
+
+class ExamResult {
+  const ExamResult({required this.score, required this.total, required this.breakdown});
+  final int score;
+  final int total;
+  final List<TopicRow> breakdown;
+
+  factory ExamResult.fromJson(Map<String, dynamic> j) => ExamResult(
+        score: (j['score'] ?? 0) as int,
+        total: (j['total'] ?? 0) as int,
+        breakdown: ((j['breakdown'] as List<dynamic>?) ?? const [])
+            .map((r) => TopicRow.fromJson((r as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}
+
+class AttemptStarted {
+  const AttemptStarted({
+    required this.attemptId,
+    required this.code,
+    required this.status,
+    this.durationMinutes,
+    this.questionCount,
+  });
+
+  final String attemptId;
+  final String code;
+  final String status;
+  final int? durationMinutes;
+  final int? questionCount;
+
+  factory AttemptStarted.fromJson(Map<String, dynamic> j) => AttemptStarted(
+        attemptId: (j['attemptId'] ?? '') as String,
+        code: (j['code'] ?? '') as String,
+        status: (j['status'] ?? 'in_progress') as String,
+        durationMinutes: j['durationMinutes'] as int?,
+        questionCount: j['questionCount'] as int?,
+      );
+}
+
+class AttemptView {
+  const AttemptView({
+    required this.attemptId,
+    required this.code,
+    required this.status,
+    this.result,
+  });
+
+  final String attemptId;
+  final String code;
+  final String status; // in_progress | grading | graded | error
+  final ExamResult? result;
+
+  factory AttemptView.fromJson(Map<String, dynamic> j) => AttemptView(
+        attemptId: (j['attemptId'] ?? '') as String,
+        code: (j['code'] ?? '') as String,
+        status: (j['status'] ?? '') as String,
+        result: j['result'] == null
+            ? null
+            : ExamResult.fromJson((j['result'] as Map).cast<String, dynamic>()),
+      );
+}

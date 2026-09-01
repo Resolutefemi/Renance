@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T21:56:58+00:00",
+  "generatedAt": "2026-09-01T22:34:07+00:00",
   "version": "era2-g1",
   "exams": [
     {
@@ -8,8 +8,10 @@
       "questionCount": 15,
       "totalMarks": 15,
       "durationMinutes": 15,
-      "bundleSha256": "6301aa68e3cd81050142cadadf7c33d508a6c1da130f6fb0272608ad1fd6f0ac",
-      "sizeBytes": 5556
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0f2156f8e2b8ca7a90e8c91382def10db70fd922dc72f1bda484907f3a5d4c4a",
+      "sizeBytes": 5616
     },
     {
       "code": "jamb-biology-mock",
@@ -17,8 +19,10 @@
       "questionCount": 15,
       "totalMarks": 15,
       "durationMinutes": 15,
-      "bundleSha256": "435c4f31a31218eb2791ab4125b4dbea4b658a1af9f4e6eb296287ccef265e09",
-      "sizeBytes": 5269
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "50b5d2390933448c62f8684cec7be5bf367492f1d5d9ff6989eea46183407c17",
+      "sizeBytes": 5314
     },
     {
       "code": "jamb-english-mock",
@@ -26,8 +30,10 @@
       "questionCount": 20,
       "totalMarks": 20,
       "durationMinutes": 15,
-      "bundleSha256": "54fd8f7af415e539dc4d1d6c997adec6e105ec995a6fbcff0ec02a7d1b060b03",
-      "sizeBytes": 6893
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "d0a8e4d1d92ffe17acbad6e815380d34b0d9db75db47dcff7aa8ebbf2500f3bb",
+      "sizeBytes": 6938
     },
     {
       "code": "jamb-mathematics-mock",
@@ -35,8 +41,10 @@
       "questionCount": 15,
       "totalMarks": 15,
       "durationMinutes": 20,
-      "bundleSha256": "634ff017df3c279095283a08d37b2eab049310c7aff0828a96791475312be40b",
-      "sizeBytes": 4979
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "2061589f889ed92e499bf660f4a049757f793f7af72c3e91ff9ba85248987784",
+      "sizeBytes": 5024
     },
     {
       "code": "jamb-physics-mock",
@@ -44,8 +52,10 @@
       "questionCount": 15,
       "totalMarks": 15,
       "durationMinutes": 15,
-      "bundleSha256": "11fd4ada4c234119d276b4695ef5b9e1f9e83612e8005e09b44d64f781d1bab1",
-      "sizeBytes": 5277
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "f1aa3280dff3e4aca487bae53b076788590d1ed34869a183e1213b21db794a08",
+      "sizeBytes": 5322
     }
   ]
 }
