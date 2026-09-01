@@ -1,0 +1,61 @@
+'use client';
+
+import { clearSession, getToken } from './session';
+
+export const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE ?? 'http://localhost:3990';
+
+export class ApiError extends Error {
+  status: number;
+  code: string;
+
+  constructor(status: number, code: string, message: string) {
+    super(message);
+    this.status = status;
+    this.code = code;
+  }
+}
+
+interface Options {
+  method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
+  body?: unknown;
+  auth?: boolean;
+}
+
+export async function api<T>(path: string, opts: Options = {}): Promise<T> {
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+  };
+  if (opts.auth !== false) {
+    const token = getToken();
+    if (token) headers.Authorization = `Bearer ${token}`;
+  }
+  const res = await fetch(`${API_BASE}${path}`, {
+    method: opts.method ?? 'GET',
+    headers,
+    body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
+  });
+
+  if (res.status === 401 && opts.auth !== false) {
+    clearSession();
+    if (typeof window !== 'undefined' && !window.location.pathname.startsWith('/login')) {
+      window.location.href = '/login';
+    }
+    throw new ApiError(401, 'unauthorized', 'Session expired — sign in again.');
+  }
+
+  const text = await res.text();
+  let payload: unknown = null;
+  if (text) {
+    try {
+      payload = JSON.parse(text);
+    } catch {
+      payload = null;
+    }
+  }
+  if (!res.ok) {
+    const err = (payload as { error?: { code?: string; message?: string } } | null)?.error;
+    throw new ApiError(res.status, err?.code ?? 'error', err?.message ?? `Request failed (${res.status})`);
+  }
+  return payload as T;
+}

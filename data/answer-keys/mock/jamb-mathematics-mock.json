@@ -1,0 +1,80 @@
+{
+  "code": "jamb-mathematics-mock",
+  "answers": {
+    "jamb-mathematics-mock-0001": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "2x = 11 - 3 = 8, so x = 4."
+    },
+    "jamb-mathematics-mock-0002": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "When multiplying powers with the same base, add the indices: 2 + 3 = 5, giving 3^5."
+    },
+    "jamb-mathematics-mock-0003": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "10^3 = 1000, so the logarithm is 3."
+    },
+    "jamb-mathematics-mock-0004": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "5 − 6 + 2x = 1 gives 2x − 1 = 1, so x = 1."
+    },
+    "jamb-mathematics-mock-0005": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "y = 2(3) + 1 = 7."
+    },
+    "jamb-mathematics-mock-0006": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Slope = (6 − 2)/(3 − 1) = 4/2 = 2."
+    },
+    "jamb-mathematics-mock-0007": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Interior angles of any triangle in Euclidean geometry sum to 180 degrees."
+    },
+    "jamb-mathematics-mock-0008": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "I = PRT/100 = 20000 × 5 × 3 / 100 = ₦3,000."
+    },
+    "jamb-mathematics-mock-0009": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "The data is already ordered; the middle value (3rd of 5) is 9."
+    },
+    "jamb-mathematics-mock-0010": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "P(A') = 1 − P(A) = 1 − 0.3 = 0.7."
+    },
+    "jamb-mathematics-mock-0011": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Difference of two squares: x^2 − 9 = (x − 3)(x + 3)."
+    },
+    "jamb-mathematics-mock-0012": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Common difference 3, first term 2: Tn = 3n − 1 (check n = 1 gives 2)."
+    },
+    "jamb-mathematics-mock-0013": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A = πr² = (22/7) × 49 = 154 cm²."
+    },
+    "jamb-mathematics-mock-0014": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "0.15n = 45, so n = 45 / 0.15 = 300."
+    },
+    "jamb-mathematics-mock-0015": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "2x > 10, so x > 5."
+    }
+  }
+}

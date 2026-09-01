@@ -1,0 +1,24 @@
+{
+  "code": "cos101-university-mock",
+  "title": "COS101 — Introduction to Computing (University Modules)",
+  "body": "University Modules",
+  "category": "university",
+  "durationMinutes": 15,
+  "questions": [
+    { "topic": "Computer Fundamentals", "difficulty": "easy", "stem": "CPU stands for", "options": ["Central Processing Unit", "Computer Personal Unit", "Central Program Utility", "Control Processing Unit"], "answer": "A", "explanation": "The CPU (Central Processing Unit) executes program instructions." },
+    { "topic": "Data Representation", "difficulty": "easy", "stem": "One kilobyte is equal to how many bytes?", "options": ["1000", "1024", "512", "2048"], "answer": "B", "explanation": "In computing, 1 KB = 2^10 = 1024 bytes." },
+    { "topic": "Hardware", "difficulty": "easy", "stem": "Which of the following is an INPUT device?", "options": ["monitor", "printer", "keyboard", "speaker"], "answer": "C", "explanation": "A keyboard sends data into the computer; the others are output devices." },
+    { "topic": "Web", "difficulty": "easy", "stem": "HTML stands for", "options": ["HyperText Markup Language", "High Transfer Machine Language", "HyperTool Multi Language", "Home Text Marking Language"], "answer": "A", "explanation": "HTML (HyperText Markup Language) structures web pages." },
+    { "topic": "Data Representation", "difficulty": "medium", "stem": "The binary representation of decimal 5 is", "options": ["101", "110", "100", "111"], "answer": "A", "explanation": "5 = 4 + 1 = 2² + 2⁰ = 101 in binary." },
+    { "topic": "Memory", "difficulty": "medium", "stem": "RAM is described as ______ memory because its contents are lost when power is removed.", "options": ["volatile", "permanent", "secondary", "virtual"], "answer": "A", "explanation": "RAM is volatile storage; ROM is non-volatile." },
+    { "topic": "Software", "difficulty": "easy", "stem": "Which of the following is NOT an operating system?", "options": ["Windows", "Linux", "Excel", "macOS"], "answer": "C", "explanation": "Excel is application software (a spreadsheet), not an operating system." },
+    { "topic": "Software", "difficulty": "easy", "stem": "A set of instructions that tells a computer what to do is called a", "options": ["device", "program", "peripheral", "network"], "answer": "B", "explanation": "A program is a sequence of instructions executed by a computer." },
+    { "topic": "User Interface", "difficulty": "easy", "stem": "GUI stands for", "options": ["Graphical User Interface", "General Utility Interface", "Graphic Universal Internet", "Guided User Instruction"], "answer": "A", "explanation": "A GUI presents windows, icons and menus instead of text commands." },
+    { "topic": "Programming", "difficulty": "medium", "stem": "The only language a CPU can execute directly is", "options": ["Python", "machine language", "HTML", "Java"], "answer": "B", "explanation": "Machine language (binary) is executed natively; other languages are translated first." },
+    { "topic": "Web", "difficulty": "easy", "stem": "URL stands for", "options": ["Universal Resource Locator", "Uniform Resource Locator", "United Router Line", "Uniform Remote Link"], "answer": "B", "explanation": "A URL (Uniform Resource Locator) is a web address." },
+    { "topic": "Application Software", "difficulty": "easy", "stem": "Which of the following is an example of spreadsheet software?", "options": ["Microsoft Word", "Microsoft Excel", "Google Chrome", "Adobe Photoshop"], "answer": "B", "explanation": "Excel is a spreadsheet application for tabular data and calculation." },
+    { "topic": "Networking", "difficulty": "medium", "stem": "An IP address version that is 128 bits long is called", "options": ["IPv4", "IPv6", "MAC", "TCP"], "answer": "B", "explanation": "IPv6 addresses are 128 bits; IPv4 addresses are 32 bits." },
+    { "topic": "Databases", "difficulty": "easy", "stem": "Which of the following is a database management system?", "options": ["Oracle", "Chrome", "Python", "Linux"], "answer": "A", "explanation": "Oracle DBMS stores and manages structured data; the others are a browser, a language and an OS." },
+    { "topic": "Computer Fundamentals", "difficulty": "easy", "stem": "The component popularly described as the 'brain' of the computer is the", "options": ["hard disk", "CPU", "monitor", "keyboard"], "answer": "B", "explanation": "The CPU performs the processing — the 'brain' analogy." }
+  ]
+}

@@ -3,112 +3,102 @@
 Update this file at the END of every coding session. Completion gates, not
 dates. Rule: do not open the next gate until this one's exit criteria pass.
 
-## Phase 0 — Foundations                    [DRAINING]
-Exit criteria:
-- [x] repo pushed to GitHub (github.com/Resolutefemi/Renance, private) — CI runs on first PR/push pair
-- [x] Neon project provisioned via agent API: id orange-fog-53847933, ep-snowy-base-axf83q3b; bootstrap + migration 0000 APPLIED, journal current
-- [x] apps/api health endpoint responds locally             <- verified in paired sandbox 2026-08-27
-- [ ] apps/web renders home page locally                    <- code present; your boot pending
-- [ ] mobile: flutter create done (empty shell acceptable)
+---
 
-## Phase 1 — Thin Core Service              [COMPLETE 2026-08-27]
-identity/auth · multi-role · organizations · memberships · RBAC ·
-verification states. Serial gates:
+## ERA 1 — Thin Core Service (NestJS monolith)   [CLOSED 2026-09-02]
 
-### Gate 1.1 — Walking skeleton (auth)      [CODE COMPLETE 2026-08-27]
-core.users table (citext unique email, bcrypt cost 12, status enum) ·
-POST /auth/register · POST /auth/login · GET /auth/me (JWT HS256, 12h) ·
-ZodValidationPipe contracts in @renance/shared · 7 unit tests green ·
-typecheck green x4 workspaces · migration SQL generated (drizzle 0000).
-REMAINING FOR EXIT: apply migration against real Neon, live round-trip,
-repo pushed so CI sees it.
+Gates 1.1 → 2.0 shipped: auth/JWT, organizations+memberships, RBAC guard
+matrices, verification state machine, ownership transfer, change-password,
+cbt:build content pipeline (ADR-0003), publish/manifest/fetch, server-side
+grading + attempts. 79 unit + 40/40 consolidated E2E green at exit.
 
-### Gate 1.2 — Organizations + memberships  [CODE COMPLETE 2026-08-27]
-core.organizations (slug unique, type enum, created_by FK) · core.memberships
-(composite unique org+user, roles owner/admin/member, statuses
-active/invited/revoked, added_by audit FK) · migration 0001 APPLIED to live
-Neon (journal=2) · endpoints: POST /orgs (atomic owner membership tx),
-GET /orgs, GET /orgs/:id, GET /orgs/:id/members, POST /orgs/:id/members
-(direct-add invite stub) · contracts+slug rules tested · LIVE E2E 14/14:
-owner/member flow, 403 non-member + member-cannot-manage, 409 dup + slug.
-REMAINING FOR EXIT: repo push (this commit); fuller matrix tests land in 1.3.
-DEMO ACCOUNT: ariyooluwafemi487+demo1@gmail.com (founder-owned plus alias).
+**DISBANDED by founder decision (ADR-0004).** The multi-module monolith
+scope (school mgmt / SME / payroll verticals) moves to separate independent
+repositories. Code preserved read-only under `legacy/nestjs-monolith/`
+pending extraction. Neon `core.*`/`cbt.*` tables remain in place, untouched.
 
-### Gate 1.3 — RBAC enforcement              [CODE COMPLETE 2026-08-27]
-OrgRolesGuard + @RequireOrgRole() decorator (coarse gate: org exists ->
-active membership -> rank>=required, attaches membership to request) ·
-pure decision matrices in rbac.ts (hasAtLeast/canSetRole/canRemoveMember)
-· PATCH /orgs/:orgId/members/:userId (idempotent role change; owner
-targets untouchable, role=owner unassignable by contract) · DELETE member
-(owner removes admins+members, admin removes members only, owners never
-removable — transfer is a future op) · guard DI survives tsx via explicit
-@Inject · 54 api + 6 shared unit tests green · LIVE E2E 20/20 vs prod
-Neon: all 4 ladder rungs incl. anon 401, member 403s, admin add/remove,
-owner-only powers, contract 400s, state restored after run.
-REMAINING FOR EXIT: repo push (this commit).
+---
 
-### Gate 1.4 — Verification states           [CODE COMPLETE 2026-08-27]
-organizations.verification_status enum + note/reviewed_at/reviewed_by
-(migration 0002 APPLIED, journal=3) · pure transition matrix 16-cell tested
-· POST /orgs/:orgId/verification/submit (owner/admin, state-guarded 409) ·
-AdminController /admin/orgs/pending + /admin/orgs/:id/verification behind
-AdminGuard (ADMIN_EMAILS env; refuse-closed when unset) · verified terminal
-in MVP · publicOrgSchema +verificationStatus · unit 79 green · LIVE E2E
-17/17 via run_gate_e2e.sh runner (sandbox background processes die between
-tool calls — foreground runner + log file is the reliable pattern).
+## ERA 2 — Renance Study OS (Go backend)         [ACTIVE]
 
-### Gate 1.5 — Ownership transfer + leave    [CODE COMPLETE 2026-08-27]
-POST /orgs/:orgId/ownership — single-tx swap (owner->admin, target->owner),
-the ONLY owner-creation path; target must be active member · DELETE
-/orgs/:orgId/members/me self-service leave/invite-decline (owner blocked
-409 transfer-first; declared before :userId route) · canTransferOwnership
-pure rule · LIVE E2E 18/18 incl. crown round-trip founder<->demo.
+One repository, one product: the global student study operating system.
+Go service (`apps/study-api`) + Next.js web (`apps/web`) + Flutter shell
+(`apps/mobile`, G3). Every other business vertical lives in its own repo.
 
-### Gate 1.6 — Account hygiene               [CODE COMPLETE 2026-08-27]
-PATCH /auth/me (displayName) · POST /auth/me/change-password (bcrypt
-verify current 401, same strength floor as register, cost 12 re-hash;
-token stays valid til 12h expiry by design) · LIVE E2E 13/13 with full
-state restore. Founder can now rotate the temp password himself.
+Standing doctrine (carried from ERA 1, still law):
+- **ADR-0003 content split**: bundles (students) never contain answer
+  material; keys are server-only (DB or gitignored `data/answer-keys/`);
+  manifest carries sha256 fingerprints; explanations surface only AFTER grading.
+- **DDL**: structure changes land as ordered SQL migrations in
+  `apps/study-api/internal/store/migrations/` — never hand-ALTER prod.
+- **Offline-first**: phones download packs on demand, exam in airplane mode,
+  sync + server-side grading when back online. Web loads full packs online.
+- Mock sample questions are committed until the founder uploads the real
+  8,679-question banks (G2).
 
-### Gate 1.7 — Phase 1 EXIT                  [CODE COMPLETE 2026-08-27]
-e2e_phase1_exit.py: 40/40 consolidated assertions in one live boot (fresh
-epoch identities, state-tolerant) + unit 79/79 + typecheck 4/4. Every
-Phase 1 surface re-proven incl. founder regression on renance-hq.
+### Gate G1 — Go walking skeleton               [CODE COMPLETE 2026-09-02]
+- Go 1.27 service `apps/study-api`: stdlib mux (Go 1.22+ routing), pgx/v5
+  (simple protocol, pooler-safe), bcrypt cost 12, hand-rolled HS256 JWT (12h).
+- Minimal credential flow: POST /auth/register + /auth/login capture ONLY
+  username + password. Contextual profile arrives post-auth via
+  PUT /me/profile (full name, institution, grade level, active exams).
+- `study` schema (migration 0001): users, profiles, answer_keys, attempts,
+  attempt_answers, results, sync_jobs. Boot-time embedded-SQL migrator.
+- cbtdata loader: manifest sha256 verification at boot; refuses to serve a
+  bundle containing answer-material keys (recursive scan).
+- Goroutine CBT engine: buffered job channel + worker pool grades attempts
+  off-request-path (202 Accepted → poll). Retake allowed, resubmit rejected.
+- Background sync worker: profile completion kicks a per-user goroutine job
+  (study.sync_jobs progress rows) — the web silent-asset-sync pattern.
+- Mock packs: 5 banks / 80 questions under `data/`, built by
+  `tools/cbt-build/build.py` (ports ERA-1 normalize variants: BOM, 6 bank
+  shapes, answer-as-letter|text, options array|record|[{letter,text,correct}]).
+- Web: register/login (2 fields), non-dismissable onboarding modal, dashboard
+  with live sync strip, CBT player (timer, palette, flags), results breakdown;
+  Renance logomark animation replaces every spinner (Bybit-style states).
+- Tests: Go unit 15 green (jwt ×5, grading ×5, cbtdata ×5) + go vet clean;
+  live E2E 32/32 assertions (boot → register → onboarding → sync → manifest
+  → bundle doctrine → goroutine grading EXACT score → guards → retake).
+EXIT: green build + green E2E + pushed main.   [EXITED 2026-09-02]
 
-### Gate 1.8 — CBT content pipeline          [CODE COMPLETE 2026-08-27]
-packages/cbt-content DONE: cbt:build CLI ingests ALL 7 real shapes (7th
-discovered: options as bare string array + text answers), strips BOM,
-dedupes, splits answers out · LIVE RUN over both legacy repos: 21 banks,
-7461 questions exam-ready (6663 mcq + 798 text), 0 failures, every drop
-reasoned in report · ADR-0003 accepted (bundle/key split, no keys to any
-client, server-side grading, device auto-cleanup, R2 ladder) · 8 spec tests.
+### Gate G2 — Real content ingestion            [PENDING]
+Founder uploads real banks to `data/src/real/` (never committed). cbt-build
+adapters run over all 21 ERA-1-discovered shapes; keys seeded to Neon
+`study.answer_keys`; bundles pushed to R2/CDN with manifest versioning;
+retries + drift report. CLI bulk builder hardening (multi-threaded compile,
+randomize, push — the "CLI-Driven Bulk Test Builder" feature lands here).
 
-### Gate 1.9 — CBT server core               [CODE COMPLETE 2026-08-27]
-migration 0003: cbt.bundles (payload jsonb + answer_key jsonb SERVER-ONLY
-+ sha256 + unique org+code+version) & cbt.attempts (unique bundle+user) ·
-POST publish (org admin, contract cross-checks key<->questions) · GET
-manifest (meta only) · GET bundle (questions, zero key material — E2E
-leak-check asserts raw body clean) · membership via OrgsService facade
-(assertActiveMembership) · E2E 15/15 with REAL jamb biology bank.
+### Gate G3 — Flutter mobile shell              [PENDING]
+Register/login → profile modal → manifest → on-demand pack download into
+local SQLite → offline CBT (airplane mode) → sync queue → server grading.
+Logomark animation states during fetch/grade. Play Store binary.
 
-### Gate 2.0 — CBT MVP milestone             [CODE COMPLETE 2026-08-27]
-POST /orgs/:orgId/bundles/:id/attempt -> PURE server-side grading
-(grading.ts: mcq letter case-insensitive, text vs accepted case-variants,
-unanswered distinct) -> attempt stored w/ score + responses jsonb ·
-unique (bundle,user) retake 409 · result reveal = answers + explanations
-AFTER grading only · GET my attempt rebuilds breakdown · E2E 17/17 incl.
-REAL 5/5 perfect run, 2/5 partial, cve105 text grading, retake guard ·
-MILESTONE 2.0 DECLARED.
+### Gate G4 — Learning intelligence             [PENDING]
+Attempt event stream (dwell time, hesitation, revision loops) →
+micro-behavioral exam forensics + score prediction; spaced-repetition
+forgetting-curve scheduler for missed questions.
 
-## Phase 2 — CBT MVP                        [MILESTONE 2.0 REACHED 2026-08-27]
-First real-user milestone (existing renancecbt content migrates here).
-AFTER 2.0: assignments per student, timers/windows, offline sync protocol,
-Flutter+web exam UI, R2 for images.
+### Gate G5 — AI layer                          [PENDING]
+Socratic logic guide (no direct answers), dynamic regional analogies engine,
+automated MDX study transformer, vision-based script OCR grader.
 
-## Phase 3 — Parallel modules               [locked]
-school(results/PIN/fees) → sme → skills → utilities → payroll, serialised,
-each behind its own embarrassment-small MVP line.
+### Gate G6 — Live layer                        [PENDING]
+Goroutine WebSocket multiplayer mock arenas + global leaderboards,
+voice-first hands-free flashcards, in-browser polyglot sandboxes.
 
-## Phase 4 — Hardening                      [locked]
-verification flow polish · install-size optimisation · store submissions.
-refresh-token story revisit + FCM wiring land here or end of Phase 2.
+### Gate G7 — Ecosystem                         [PENDING]
+Sponsor & guardian read-only ROI portal, gamified deep-work streaks,
+posture/opt-in fatigue monitor, curriculum-to-career bridge,
+syllabus-to-university cross-mapping.
+
+### Research spikes (no gate commitment)
+Peer-to-peer Bluetooth mesh sync for low-connectivity regions;
+smart-contract credential stamping (Solidity/Vyper) for mock certificates;
+bandwidth-adaptive ultra-low-bitrate audio summaries.
+
+### Standing ops notes
+- Go toolchain in paired sandbox: `export PATH=/home/z/go-dist/go/bin:$PATH`.
+- Sandbox DNS allowlist blocks `api.neon.tech` — Neon connection URI must be
+  supplied by founder (Neon console → connection string) or run E2E against
+  userspace PostgreSQL locally; the service is DATABASE_URL-agnostic.
+- GitHub PAT rotation due at sprint end (standing security item).

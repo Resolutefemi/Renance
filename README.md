@@ -1,74 +1,62 @@
-# Renance Platform — Monorepo
+# Renance — the global student study OS
 
-Solo-built modular platform: education (CBT/School), commerce (SME/Skills),
-utilities and payroll on one core. Stack: TypeScript everywhere
-(NestJS api · Next.js web) + Flutter mobile + Neon Postgres
-(schema-per-module) + Redis + Cloudflare R2.
+One repository, one product. Students register with **username + password
+only**, tell us who they're studying for in a 30-second profile modal, and
+Renance silently syncs past questions, notes and syllabi to their device,
+then grades their mock exams server-side on a goroutine engine.
 
-Start here: `docs/ACTIVE_PHASE.md`, then `docs/architecture.md`.
+| Piece | Where | Status |
+|---|---|---|
+| Go study API (`apps/study-api`) | auth · profiles · pack manifest · goroutine CBT grading · background sync worker | **ACTIVE** |
+| Web app (`apps/web`) | onboarding · dashboard · CBT player · Renance logomark animation | **ACTIVE** |
+| Flutter shell (`apps/mobile`) | offline-first mobile client (packs into local SQLite) | G3 |
+| Legacy NestJS monolith (`legacy/nestjs-monolith/`) | ERA-1 code, frozen, pending extraction to vertical repos | read-only |
 
-## Quickstart (first day)
+Stack: Go 1.27 · pgx/v5 · Neon Postgres (`study` schema) · Next.js 15 ·
+Tailwind 4 · Python content pipeline.
+
+**Standing law — ADR-0003 content split:** question bundles never contain
+answer material; answer keys are server-only (`study.answer_keys` +
+gitignored `data/answer-keys/`); `data/manifest.json` carries sha256
+fingerprints verified at boot; explanations surface only after grading.
+
+## Quickstart
+
+Prereqs: Go 1.27+, Node 22+, pnpm 10, Python 3 (content rebuilds only).
 
 ```bash
-# 0) prerequisites: Node 22+, pnpm 10+ (corepack enable), Docker optional
-corepack enable
-
-# 1) install
+# 1) web deps
 pnpm install
 
-# 2) environment
-cp .env.example .env         # then paste your Neon DATABASE_URL values
+# 2) database — paste your Neon connection string (or any Postgres)
+export DATABASE_URL="postgresql://…/renance?sslmode=require"
 
-# 3) database schemas (Neon)
-bash scripts/db-bootstrap.sh # or paste db/sql/00_bootstrap_schemas.sql into the Neon SQL editor
+# 3) Go API on :3990 (migrates the study schema on first boot)
+pnpm api:dev
 
-# 4) local redis (optional now, needed Phase 3)
-docker compose up -d redis
-
-# 5) run everything
-pnpm dev                     # api -> http://localhost:3001, web -> http://localhost:3000
-
-# verify
-curl http://localhost:3001/api/v1/health
-curl -X POST http://localhost:3001/api/v1/auth/register \
-  -H 'content-type: application/json' \
-  -d '{"email":"you@example.com","password":"Passw0rd1","displayName":"You"}'
+# 4) web on :3000
+pnpm web:dev
 ```
 
-Mobile comes later: `apps/mobile/README.md`.
+Register → complete the profile modal → watch the sync strip fill →
+open a pack and sit the mock. That's the whole loop.
 
-## Daily loop
+## Content pipeline (mock now, real banks in G2)
 
 ```bash
-pnpm sync          # match GitHub before working   (= git-sync.sh)
-# ...code...
-git commit -am "feat(core): ..."
-pnpm sync --push   # publish at session end
+pnpm content:build      # data/src/mock/*.json → bundles + keys + manifest
+go -C apps/study-api test ./...
 ```
 
-Full protocol incl. AI-agent token handoff: `docs/git-workflow.md`.
+Source banks (with answers) live in `data/src/`; the build emits
+student-safe bundles to `data/questions/`, keys to
+`data/answer-keys/` (gitignored except the mock set), and fingerprints
+everything into `data/manifest.json`. When the real 8,679-question banks
+arrive they drop into `data/src/real/` (never committed) and the same
+command does the rest — adapters cover every shape found in the wild.
 
-## Layout
+## Docs
 
-| Path | Purpose |
-|------|---------|
-| `apps/api` | NestJS modular monolith (single deploy unit) |
-| `apps/web` | Next.js admin console |
-| `apps/mobile` | Flutter (created via `flutter create`) |
-| `packages/db` | Drizzle client + per-module pgSchema definitions |
-| `packages/shared` | zod contracts shared across TS surfaces |
-| `db/sql` | Neon bootstrap SQL (schemas live there, tables come from Drizzle) |
-| `docs` | architecture rules, git workflow, ADRs, active phase |
-| `scripts` | db-bootstrap · git-sync · new-module |
-
-## Commands
-
-| command | what it does |
-|---------|--------------|
-| `pnpm dev` | run api + web concurrently |
-| `pnpm typecheck` | strict types across every workspace |
-| `pnpm test` | vitest suites |
-| `pnpm db:bootstrap` | apply `db/sql/*.sql` to Neon |
-| `pnpm db:generate` | drizzle-kit: generate SQL migrations |
-| `pnpm db:migrate` | drizzle-kit: apply migrations |
-| `pnpm module:new <name>` | scaffold a future module (Phase 3+) |
+`docs/ACTIVE_PHASE.md` is the single source of progress. Decisions live in
+`docs/decisions/` (ADR-0003 content doctrine, ADR-0004 Go pivot). ERA-1
+history: `docs/ACTIVE_PHASE.md` header + `legacy/nestjs-monolith/`.

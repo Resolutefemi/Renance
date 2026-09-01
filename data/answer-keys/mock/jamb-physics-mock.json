@@ -1,0 +1,80 @@
+{
+  "code": "jamb-physics-mock",
+  "answers": {
+    "jamb-physics-mock-0001": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Force is measured in newtons (kg·m/s²)."
+    },
+    "jamb-physics-mock-0002": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "g ≈ 9.8 m/s² near the Earth's surface."
+    },
+    "jamb-physics-mock-0003": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A barometer measures atmospheric pressure."
+    },
+    "jamb-physics-mock-0004": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Constant velocity means no change in velocity, hence zero acceleration."
+    },
+    "jamb-physics-mock-0005": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Current is measured in amperes (A)."
+    },
+    "jamb-physics-mock-0006": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Ohm's law: I = V/R = 12/4 = 3 A."
+    },
+    "jamb-physics-mock-0007": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Sound is mechanical and needs a material medium; a vacuum has none."
+    },
+    "jamb-physics-mock-0008": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Power is measured in watts; 1 W = 1 J/s."
+    },
+    "jamb-physics-mock-0009": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Power = work done per unit time."
+    },
+    "jamb-physics-mock-0010": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "A concave mirror converges parallel rays to a focus."
+    },
+    "jamb-physics-mock-0011": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Density = mass/volume = 100/20 = 5 g/cm³."
+    },
+    "jamb-physics-mock-0012": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Velocity has both magnitude and direction; the others are scalars."
+    },
+    "jamb-physics-mock-0013": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A generator (dynamo) converts mechanical energy to electrical energy; a motor does the reverse."
+    },
+    "jamb-physics-mock-0014": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "W = F × d = 10 × 5 = 50 J."
+    },
+    "jamb-physics-mock-0015": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Refraction is caused by the change in the speed of light between media of different optical densities."
+    }
+  }
+}

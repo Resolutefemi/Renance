@@ -29,3 +29,12 @@ pubspec.lock
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+
+# study-api (Go)
+apps/study-api/study-api
+apps/study-api/bin/
+
+# CBT answer keys are SERVER-ONLY (ADR-0003). Mock keys are the sole
+# tracked exception — real bank keys must never enter the repo.
+data/answer-keys/*
+!data/answer-keys/mock/
