@@ -1,0 +1,24 @@
+{
+  "code": "jamb-physics-mock",
+  "title": "JAMB Physics — Practice Mock",
+  "body": "JAMB",
+  "category": "secondary",
+  "durationMinutes": 15,
+  "questions": [
+    { "topic": "Units", "difficulty": "easy", "stem": "The SI unit of force is the", "options": ["joule", "newton", "watt", "pascal"], "answer": "B", "explanation": "Force is measured in newtons (kg·m/s²)." },
+    { "topic": "Motion", "difficulty": "easy", "stem": "The acceleration of free fall near the Earth's surface is approximately", "options": ["6.8 m/s²", "9.8 m/s²", "12.5 m/s²", "98 m/s²"], "answer": "B", "explanation": "g ≈ 9.8 m/s² near the Earth's surface." },
+    { "topic": "Measurement", "difficulty": "easy", "stem": "The instrument used for measuring atmospheric pressure is the", "options": ["hygrometer", "barometer", "manometer", "ammeter"], "answer": "B", "explanation": "A barometer measures atmospheric pressure." },
+    { "topic": "Motion", "difficulty": "medium", "stem": "A body moving with constant velocity has an acceleration of", "options": ["zero", "constant but non-zero", "increasing", "decreasing"], "answer": "A", "explanation": "Constant velocity means no change in velocity, hence zero acceleration." },
+    { "topic": "Electricity", "difficulty": "easy", "stem": "The SI unit of electric current is the", "options": ["volt", "ohm", "ampere", "coulomb"], "answer": "C", "explanation": "Current is measured in amperes (A)." },
+    { "topic": "Electricity", "difficulty": "medium", "stem": "A resistor of 4 Ω is connected across a 12 V battery. Find the current.", "options": ["2 A", "3 A", "4 A", "48 A"], "answer": "B", "explanation": "Ohm's law: I = V/R = 12/4 = 3 A." },
+    { "topic": "Waves", "difficulty": "easy", "stem": "Sound CANNOT travel through", "options": ["water", "steel", "air", "a vacuum"], "answer": "D", "explanation": "Sound is mechanical and needs a material medium; a vacuum has none." },
+    { "topic": "Units", "difficulty": "easy", "stem": "The SI unit of power is the", "options": ["newton", "joule", "watt", "volt"], "answer": "C", "explanation": "Power is measured in watts; 1 W = 1 J/s." },
+    { "topic": "Energy", "difficulty": "easy", "stem": "Power is defined as the rate of doing", "options": ["work", "force", "momentum", "distance"], "answer": "A", "explanation": "Power = work done per unit time." },
+    { "topic": "Optics", "difficulty": "medium", "stem": "A converging mirror is also called", "options": ["a concave mirror", "a convex mirror", "a plane mirror", "a parabolic lens"], "answer": "A", "explanation": "A concave mirror converges parallel rays to a focus." },
+    { "topic": "Density", "difficulty": "easy", "stem": "A block of mass 100 g has volume 20 cm³. Find its density.", "options": ["0.2 g/cm³", "5 g/cm³", "50 g/cm³", "200 g/cm³"], "answer": "B", "explanation": "Density = mass/volume = 100/20 = 5 g/cm³." },
+    { "topic": "Vectors", "difficulty": "medium", "stem": "Which of the following is a vector quantity?", "options": ["speed", "mass", "velocity", "temperature"], "answer": "C", "explanation": "Velocity has both magnitude and direction; the others are scalars." },
+    { "topic": "Energy", "difficulty": "medium", "stem": "The device that converts mechanical energy into electrical energy is the", "options": ["electric motor", "generator", "transformer", "rheostat"], "answer": "B", "explanation": "A generator (dynamo) converts mechanical energy to electrical energy; a motor does the reverse." },
+    { "topic": "Work", "difficulty": "easy", "stem": "A force of 10 N moves a body through 5 m in the direction of the force. Find the work done.", "options": ["2 J", "15 J", "50 J", "500 J"], "answer": "C", "explanation": "W = F × d = 10 × 5 = 50 J." },
+    { "topic": "Optics", "difficulty": "medium", "stem": "Refraction of light occurs because light changes ______ when it passes between media.", "options": ["colour", "speed", "charge", "mass"], "answer": "B", "explanation": "Refraction is caused by the change in the speed of light between media of different optical densities." }
+  ]
+}

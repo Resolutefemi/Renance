@@ -9,3 +9,50 @@ body {
   color: #fafafa;
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
+
+/* ------------------------------------------------------------------ */
+/* Renance logomark animation (ADR: no generic spinners, ever).        */
+/* Bybit-style brand transition: the mark breathes while orbiting      */
+/* arc segments shift opacity — idle / busy / grading states.          */
+/* ------------------------------------------------------------------ */
+
+@keyframes renance-breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.94); opacity: 0.72; }
+}
+
+@keyframes renance-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes renance-arc-1 {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 0.15; }
+  66% { opacity: 0.45; }
+}
+
+@keyframes renance-arc-2 {
+  0%, 100% { opacity: 0.45; }
+  33% { opacity: 1; }
+  66% { opacity: 0.15; }
+}
+
+@keyframes renance-arc-3 {
+  0%, 100% { opacity: 0.15; }
+  33% { opacity: 0.45; }
+  66% { opacity: 1; }
+}
+
+@keyframes renance-rise {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.renance-breathe { animation: renance-breathe 1.8s ease-in-out infinite; }
+.renance-breathe-fast { animation: renance-breathe 0.9s ease-in-out infinite; }
+.renance-orbit { animation: renance-orbit 2.4s linear infinite; transform-origin: center; }
+.renance-arc-1 { animation: renance-arc-1 1.5s ease-in-out infinite; }
+.renance-arc-2 { animation: renance-arc-2 1.5s ease-in-out infinite; }
+.renance-arc-3 { animation: renance-arc-3 1.5s ease-in-out infinite; }
+.renance-rise { animation: renance-rise 0.45s ease-out both; }

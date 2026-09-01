@@ -7,19 +7,19 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://renance.vercel.app
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Renance — Modular platform for African education & commerce',
+    default: 'Renance — the global student study OS',
     template: '%s · Renance',
   },
   description:
-    'Renance is a modular platform for CBT exams, school results, SME tools, skills, utilities and payroll — one core, purpose-built for African businesses and schools.',
+    'Register in seconds, set your exams, and Renance syncs past questions, notes and syllabi to your device — then grades your mock exams server-side on a goroutine engine.',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     siteName: 'Renance',
     url: SITE_URL,
-    title: 'Renance — Modular platform for African education & commerce',
+    title: 'Renance — the global student study OS',
     description:
-      'CBT exams, school results, SME tools, skills, utilities and payroll on one modular platform.',
+      'Past questions, CBT mocks, spaced review and exam intelligence — purpose-built for JAMB, WAEC, NECO and university modules.',
   },
   twitter: { card: 'summary_large_image' },
 };

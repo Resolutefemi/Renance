@@ -1,0 +1,24 @@
+{
+  "code": "jamb-mathematics-mock",
+  "title": "JAMB Mathematics — Practice Mock",
+  "body": "JAMB",
+  "category": "secondary",
+  "durationMinutes": 20,
+  "questions": [
+    { "topic": "Algebra", "difficulty": "easy", "stem": "If 2x + 3 = 11, find x.", "options": ["3", "4", "5", "7"], "answer": "B", "explanation": "2x = 11 - 3 = 8, so x = 4." },
+    { "topic": "Indices", "difficulty": "easy", "stem": "Simplify 3^2 × 3^3.", "options": ["3^5", "3^6", "9^5", "3^1"], "answer": "A", "explanation": "When multiplying powers with the same base, add the indices: 2 + 3 = 5, giving 3^5." },
+    { "topic": "Logarithms", "difficulty": "easy", "stem": "Evaluate log base 10 of 1000.", "options": ["2", "3", "10", "100"], "answer": "B", "explanation": "10^3 = 1000, so the logarithm is 3." },
+    { "topic": "Algebra", "difficulty": "medium", "stem": "Solve: 5 − 2(3 − x) = 1", "options": ["x = 1", "x = 2", "x = -1", "x = 3"], "answer": "A", "explanation": "5 − 6 + 2x = 1 gives 2x − 1 = 1, so x = 1." },
+    { "topic": "Algebra", "difficulty": "easy", "stem": "If y = 2x + 1 and x = 3, find y.", "options": ["5", "6", "7", "8"], "answer": "C", "explanation": "y = 2(3) + 1 = 7." },
+    { "topic": "Coordinate Geometry", "difficulty": "medium", "stem": "Find the slope of the line through (1, 2) and (3, 6).", "options": ["1", "2", "3", "4"], "answer": "B", "explanation": "Slope = (6 − 2)/(3 − 1) = 4/2 = 2." },
+    { "topic": "Geometry", "difficulty": "easy", "stem": "The sum of the interior angles of a triangle is", "options": ["90°", "180°", "270°", "360°"], "answer": "B", "explanation": "Interior angles of any triangle in Euclidean geometry sum to 180 degrees." },
+    { "topic": "Commercial Arithmetic", "difficulty": "medium", "stem": "Find the simple interest on ₦20,000 at 5% per annum for 3 years.", "options": ["₦1,000", "₦2,000", "₦3,000", "₦6,000"], "answer": "C", "explanation": "I = PRT/100 = 20000 × 5 × 3 / 100 = ₦3,000." },
+    { "topic": "Statistics", "difficulty": "easy", "stem": "Find the median of 3, 7, 9, 11, 15.", "options": ["7", "9", "10", "11"], "answer": "B", "explanation": "The data is already ordered; the middle value (3rd of 5) is 9." },
+    { "topic": "Probability", "difficulty": "easy", "stem": "If P(A) = 0.3, find P(A').", "options": ["0.3", "0.7", "1.3", "0.5"], "answer": "B", "explanation": "P(A') = 1 − P(A) = 1 − 0.3 = 0.7." },
+    { "topic": "Algebra", "difficulty": "easy", "stem": "Factorize x^2 − 9.", "options": ["(x − 3)(x + 3)", "(x − 9)(x + 1)", "(x − 3)^2", "(x + 3)^2"], "answer": "A", "explanation": "Difference of two squares: x^2 − 9 = (x − 3)(x + 3)." },
+    { "topic": "Sequences", "difficulty": "medium", "stem": "Find the nth term of the sequence 2, 5, 8, 11, ...", "options": ["3n − 1", "3n + 1", "2n − 1", "n + 1"], "answer": "A", "explanation": "Common difference 3, first term 2: Tn = 3n − 1 (check n = 1 gives 2)." },
+    { "topic": "Mensuration", "difficulty": "medium", "stem": "Find the area of a circle of radius 7 cm (take π = 22/7).", "options": ["44 cm²", "154 cm²", "49 cm²", "616 cm²"], "answer": "B", "explanation": "A = πr² = (22/7) × 49 = 154 cm²." },
+    { "topic": "Percentages", "difficulty": "easy", "stem": "If 15% of a number is 45, find the number.", "options": ["250", "300", "350", "450"], "answer": "B", "explanation": "0.15n = 45, so n = 45 / 0.15 = 300." },
+    { "topic": "Inequalities", "difficulty": "easy", "stem": "Solve the inequality 2x − 4 > 6.", "options": ["x > 5", "x > 1", "x < 5", "x > 10"], "answer": "A", "explanation": "2x > 10, so x > 5." }
+  ]
+}

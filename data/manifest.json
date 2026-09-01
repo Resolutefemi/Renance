@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-09-01T21:56:58+00:00",
+  "version": "era2-g1",
+  "exams": [
+    {
+      "code": "cos101-university-mock",
+      "title": "COS101 — Introduction to Computing (University Modules)",
+      "questionCount": 15,
+      "totalMarks": 15,
+      "durationMinutes": 15,
+      "bundleSha256": "6301aa68e3cd81050142cadadf7c33d508a6c1da130f6fb0272608ad1fd6f0ac",
+      "sizeBytes": 5556
+    },
+    {
+      "code": "jamb-biology-mock",
+      "title": "JAMB Biology — Practice Mock",
+      "questionCount": 15,
+      "totalMarks": 15,
+      "durationMinutes": 15,
+      "bundleSha256": "435c4f31a31218eb2791ab4125b4dbea4b658a1af9f4e6eb296287ccef265e09",
+      "sizeBytes": 5269
+    },
+    {
+      "code": "jamb-english-mock",
+      "title": "JAMB English — Practice Mock",
+      "questionCount": 20,
+      "totalMarks": 20,
+      "durationMinutes": 15,
+      "bundleSha256": "54fd8f7af415e539dc4d1d6c997adec6e105ec995a6fbcff0ec02a7d1b060b03",
+      "sizeBytes": 6893
+    },
+    {
+      "code": "jamb-mathematics-mock",
+      "title": "JAMB Mathematics — Practice Mock",
+      "questionCount": 15,
+      "totalMarks": 15,
+      "durationMinutes": 20,
+      "bundleSha256": "634ff017df3c279095283a08d37b2eab049310c7aff0828a96791475312be40b",
+      "sizeBytes": 4979
+    },
+    {
+      "code": "jamb-physics-mock",
+      "title": "JAMB Physics — Practice Mock",
+      "questionCount": 15,
+      "totalMarks": 15,
+      "durationMinutes": 15,
+      "bundleSha256": "11fd4ada4c234119d276b4695ef5b9e1f9e83612e8005e09b44d64f781d1bab1",
+      "sizeBytes": 5277
+    }
+  ]
+}

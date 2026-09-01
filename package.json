@@ -11,11 +11,12 @@
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
-    "db:bootstrap": "bash scripts/db-bootstrap.sh",
-    "db:generate": "pnpm --filter @renance/db db:generate",
-    "db:migrate": "pnpm --filter @renance/db db:migrate",
     "sync": "bash scripts/git-sync.sh",
-    "module:new": "bash scripts/new-module.sh"
+    "api:dev": "bash scripts/study-api-dev.sh",
+    "api:test": "go -C apps/study-api test ./...",
+    "content:build": "python3 tools/cbt-build/build.py",
+    "web:dev": "pnpm --filter @renance/web dev",
+    "web:build": "pnpm --filter @renance/web build"
   },
   "devDependencies": {
     "prettier": "^3.4.2",
