@@ -9,11 +9,12 @@ then grades their mock exams server-side on a goroutine engine.
 |---|---|---|
 | Go study API (`apps/study-api`) | auth · profiles · pack manifest · goroutine CBT grading · background sync worker | **ACTIVE** |
 | Web app (`apps/web`) | onboarding · dashboard · CBT player · Renance logomark animation | **ACTIVE** |
-| Flutter shell (`apps/mobile`) | offline-first mobile client (packs into local SQLite) | G3 |
+| Flutter shell (`apps/mobile`) | offline-first mobile client (packs into local SQLite) | G3 — APK built in CI |
 | Legacy NestJS monolith (`legacy/nestjs-monolith/`) | ERA-1 code, frozen, pending extraction to vertical repos | read-only |
 
 Stack: Go 1.27 · pgx/v5 · Neon Postgres (`study` schema) · Next.js 15 ·
-Tailwind 4 · Python content pipeline.
+Tailwind 4 · Flutter 3.47/Dart 3.13 · Python content pipeline ·
+GitHub Actions (APK builds + GitHub Pages deploys).
 
 **Standing law — ADR-0003 content split:** question bundles never contain
 answer material; answer keys are server-only (`study.answer_keys` +
@@ -40,6 +41,32 @@ pnpm web:dev
 
 Register → complete the profile modal → watch the sync strip fill →
 open a pack and sit the mock. That's the whole loop.
+
+## View it — no local setup
+
+Both clients ship through GitHub Actions on every push to `main`.
+
+**Website (GitHub Pages):** https://resolutefemi.github.io/Renance/
+
+One-time enablement if Pages has never been used on the repo:
+`Settings → Pages → Build and deployment → Source: GitHub Actions`.
+The `web-deploy` workflow then publishes the static export on the next
+push (or re-run it from the Actions tab).
+
+**Android app (APK):** open the repo's **Actions** tab → pick the latest
+**mobile-apk (Android)** run → under **Artifacts** download
+**renance-android-apk** → sideload it on the phone (allow installs from
+that source). Pushing a tag like `v0.1.0` additionally attaches the APK
+to a GitHub Release.
+
+**Pointing both clients at a live API:** the website and APK read the API
+address from the repo variable `PUBLIC_API_BASE`
+(`Settings → Secrets and variables → Actions → Variables → New repository
+variable`). Set it to your deployed Go study API URL — it must be
+**https** for the Pages site (browsers block http from an https origin).
+Until then the site renders and the app defaults to the Android-emulator
+loopback (`http://10.0.2.2:3990`), which reaches a locally running
+`pnpm api:dev`.
 
 ## Content pipeline (mock now, real banks in G2)
 
