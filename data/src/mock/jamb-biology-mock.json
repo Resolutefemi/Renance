@@ -1,0 +1,24 @@
+{
+  "code": "jamb-biology-mock",
+  "title": "JAMB Biology — Practice Mock",
+  "body": "JAMB",
+  "category": "secondary",
+  "durationMinutes": 15,
+  "questions": [
+    { "topic": "Cell Biology", "difficulty": "easy", "stem": "Which organelle is called the powerhouse of the cell?", "options": ["nucleus", "mitochondrion", "ribosome", "vacuole"], "answer": "B", "explanation": "Mitochondria carry out respiration and release energy (ATP), hence 'powerhouse'." },
+    { "topic": "Cell Biology", "difficulty": "easy", "stem": "The basic unit of life is the", "options": ["tissue", "cell", "organ", "system"], "answer": "B", "explanation": "All living things are made of cells — the basic structural and functional unit." },
+    { "topic": "Photosynthesis", "difficulty": "easy", "stem": "The gas taken in by plants during photosynthesis is", "options": ["oxygen", "nitrogen", "carbon dioxide", "hydrogen"], "answer": "C", "explanation": "Photosynthesis uses carbon dioxide and water to make glucose, releasing oxygen." },
+    { "topic": "Photosynthesis", "difficulty": "easy", "stem": "The green pigment that traps light energy for photosynthesis is", "options": ["haemoglobin", "chlorophyll", "melanin", "carotene"], "answer": "B", "explanation": "Chlorophyll in chloroplasts absorbs light energy." },
+    { "topic": "Transport", "difficulty": "easy", "stem": "The blood cells that defend the body against infection are", "options": ["red blood cells", "white blood cells", "platelets", "plasma cells"], "answer": "B", "explanation": "White blood cells (leucocytes) fight pathogens." },
+    { "topic": "Genetics", "difficulty": "easy", "stem": "Gregor Mendel is regarded as the father of", "options": ["evolution", "genetics", "ecology", "microbiology"], "answer": "B", "explanation": "Mendel's pea experiments founded the science of genetics." },
+    { "topic": "Genetics", "difficulty": "medium", "stem": "The genotype of a person who actually suffers from sickle cell anaemia is", "options": ["AA", "AS", "SS", "AC"], "answer": "C", "explanation": "Only homozygous SS individuals express sickle cell disease; AS and AC are carriers." },
+    { "topic": "Digestion", "difficulty": "medium", "stem": "The organ that produces bile is the", "options": ["pancreas", "liver", "stomach", "kidney"], "answer": "B", "explanation": "The liver produces bile, which the gall bladder stores." },
+    { "topic": "Transport", "difficulty": "easy", "stem": "The human blood group regarded as the universal donor is", "options": ["A", "B", "AB", "O"], "answer": "D", "explanation": "Group O red cells carry no A or B antigens, so they can be given to any group." },
+    { "topic": "Plant Biology", "difficulty": "easy", "stem": "The loss of water vapour from the leaves of plants is called", "options": ["respiration", "transpiration", "translocation", "condensation"], "answer": "B", "explanation": "Transpiration is water loss mainly through the stomata of leaves." },
+    { "topic": "Respiration", "difficulty": "medium", "stem": "Insects breathe through external openings called", "options": ["lungs", "gills", "spiracles", "stomata"], "answer": "C", "explanation": "Air enters the insect tracheal system through spiracles." },
+    { "topic": "Skin", "difficulty": "easy", "stem": "The largest organ of the human body is the", "options": ["liver", "brain", "skin", "lungs"], "answer": "C", "explanation": "The skin covers the whole body and is the largest organ by area." },
+    { "topic": "Ecology", "difficulty": "medium", "stem": "Nitrogen-fixing bacteria are found in the root nodules of", "options": ["grasses", "legumes", "ferns", "conifers"], "answer": "B", "explanation": "Rhizobium lives symbiotically in the root nodules of leguminous plants." },
+    { "topic": "Classification", "difficulty": "easy", "stem": "Mushrooms belong to the kingdom", "options": ["Plantae", "Animalia", "Fungi", "Protista"], "answer": "C", "explanation": "Mushrooms are saprophytic fungi, not plants." },
+    { "topic": "Nutrition", "difficulty": "easy", "stem": "Deficiency of vitamin C in the human diet causes", "options": ["rickets", "scurvy", "night blindness", "beri-beri"], "answer": "B", "explanation": "Lack of vitamin C (ascorbic acid) causes scurvy — bleeding gums and poor wound healing." }
+  ]
+}

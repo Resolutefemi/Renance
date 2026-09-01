@@ -1,0 +1,290 @@
+{
+  "code": "jamb-english-mock",
+  "title": "JAMB English — Practice Mock",
+  "version": 1,
+  "questionCount": 20,
+  "totalMarks": 20,
+  "questions": [
+    {
+      "id": "jamb-english-mock-0001",
+      "type": "mcq",
+      "stem": "Choose the word most nearly OPPOSITE in meaning to: transparent",
+      "options": {
+        "A": "clear",
+        "B": "opaque",
+        "C": "bright",
+        "D": "thin"
+      },
+      "marks": 1,
+      "topic": "Antonyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0002",
+      "type": "mcq",
+      "stem": "Choose the word most nearly OPPOSITE in meaning to: scarce",
+      "options": {
+        "A": "rare",
+        "B": "plentiful",
+        "C": "costly",
+        "D": "weak"
+      },
+      "marks": 1,
+      "topic": "Antonyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0003",
+      "type": "mcq",
+      "stem": "Choose the word most nearly OPPOSITE in meaning to: optimistic",
+      "options": {
+        "A": "hopeful",
+        "B": "pessimistic",
+        "C": "cheerful",
+        "D": "realistic"
+      },
+      "marks": 1,
+      "topic": "Antonyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0004",
+      "type": "mcq",
+      "stem": "Choose the option nearest in meaning to: diligent",
+      "options": {
+        "A": "lazy",
+        "B": "hardworking",
+        "C": "rude",
+        "D": "wealthy"
+      },
+      "marks": 1,
+      "topic": "Synonyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0005",
+      "type": "mcq",
+      "stem": "Choose the option nearest in meaning to: commence",
+      "options": {
+        "A": "end",
+        "B": "begin",
+        "C": "delay",
+        "D": "cancel"
+      },
+      "marks": 1,
+      "topic": "Synonyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0006",
+      "type": "mcq",
+      "stem": "Choose the option nearest in meaning to: abundant",
+      "options": {
+        "A": "scarce",
+        "B": "plentiful",
+        "C": "little",
+        "D": "empty"
+      },
+      "marks": 1,
+      "topic": "Synonyms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0007",
+      "type": "mcq",
+      "stem": "Neither the teacher nor the students ______ present.",
+      "options": {
+        "A": "was",
+        "B": "were",
+        "C": "is",
+        "D": "be"
+      },
+      "marks": 1,
+      "topic": "Concord",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-english-mock-0008",
+      "type": "mcq",
+      "stem": "Bola, as well as her friends, ______ coming to the party.",
+      "options": {
+        "A": "are",
+        "B": "is",
+        "C": "were",
+        "D": "have"
+      },
+      "marks": 1,
+      "topic": "Concord",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-english-mock-0009",
+      "type": "mcq",
+      "stem": "He has been good ______ mathematics since primary school.",
+      "options": {
+        "A": "in",
+        "B": "at",
+        "C": "with",
+        "D": "for"
+      },
+      "marks": 1,
+      "topic": "Prepositions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0010",
+      "type": "mcq",
+      "stem": "The man was accused ______ theft.",
+      "options": {
+        "A": "for",
+        "B": "with",
+        "C": "of",
+        "D": "about"
+      },
+      "marks": 1,
+      "topic": "Prepositions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0011",
+      "type": "mcq",
+      "stem": "The thief was arrested ______ the police.",
+      "options": {
+        "A": "from",
+        "B": "by",
+        "C": "with",
+        "D": "through"
+      },
+      "marks": 1,
+      "topic": "Prepositions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0012",
+      "type": "mcq",
+      "stem": "She has been living in Lagos ______ 2019.",
+      "options": {
+        "A": "since",
+        "B": "for",
+        "C": "at",
+        "D": "from"
+      },
+      "marks": 1,
+      "topic": "Grammar",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0013",
+      "type": "mcq",
+      "stem": "After the failed deal, Chidi found himself in hot water. This means he was",
+      "options": {
+        "A": "taking a bath",
+        "B": "in trouble",
+        "C": "very angry",
+        "D": "feeling ill"
+      },
+      "marks": 1,
+      "topic": "Idioms",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-english-mock-0014",
+      "type": "mcq",
+      "stem": "Ada let the cat out of the bag. This means she",
+      "options": {
+        "A": "freed an animal",
+        "B": "revealed a secret",
+        "C": "told a lie",
+        "D": "lost her money"
+      },
+      "marks": 1,
+      "topic": "Idioms",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-english-mock-0015",
+      "type": "mcq",
+      "stem": "Choose the correctly spelt word.",
+      "options": {
+        "A": "acommodation",
+        "B": "accommodation",
+        "C": "accomodation",
+        "D": "acomodation"
+      },
+      "marks": 1,
+      "topic": "Spelling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0016",
+      "type": "mcq",
+      "stem": "Choose the correctly spelt word.",
+      "options": {
+        "A": "embarass",
+        "B": "embarrass",
+        "C": "embaress",
+        "D": "embarras"
+      },
+      "marks": 1,
+      "topic": "Spelling",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-english-mock-0017",
+      "type": "mcq",
+      "stem": "Choose the passive form of: The boy kicked the ball.",
+      "options": {
+        "A": "The ball kicked the boy.",
+        "B": "The ball was kicked by the boy.",
+        "C": "The ball is kicking the boy.",
+        "D": "The boy was kicked by the ball."
+      },
+      "marks": 1,
+      "topic": "Voice",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-english-mock-0018",
+      "type": "mcq",
+      "stem": "If I ______ rich, I would build a school in my village.",
+      "options": {
+        "A": "am",
+        "B": "was",
+        "C": "were",
+        "D": "be"
+      },
+      "marks": 1,
+      "topic": "Conditionals",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-english-mock-0019",
+      "type": "mcq",
+      "stem": "She asked me where I ______ from.",
+      "options": {
+        "A": "come",
+        "B": "came",
+        "C": "coming",
+        "D": "comes"
+      },
+      "marks": 1,
+      "topic": "Reported Speech",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-english-mock-0020",
+      "type": "mcq",
+      "stem": "Choose the word that rhymes with: book",
+      "options": {
+        "A": "bake",
+        "B": "look",
+        "C": "buck",
+        "D": "bark"
+      },
+      "marks": 1,
+      "topic": "Sounds",
+      "difficulty": "easy"
+    }
+  ],
+  "durationMinutes": 15
+}

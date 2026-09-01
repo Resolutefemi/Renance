@@ -1,0 +1,220 @@
+{
+  "code": "jamb-physics-mock",
+  "title": "JAMB Physics — Practice Mock",
+  "version": 1,
+  "questionCount": 15,
+  "totalMarks": 15,
+  "questions": [
+    {
+      "id": "jamb-physics-mock-0001",
+      "type": "mcq",
+      "stem": "The SI unit of force is the",
+      "options": {
+        "A": "joule",
+        "B": "newton",
+        "C": "watt",
+        "D": "pascal"
+      },
+      "marks": 1,
+      "topic": "Units",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0002",
+      "type": "mcq",
+      "stem": "The acceleration of free fall near the Earth's surface is approximately",
+      "options": {
+        "A": "6.8 m/s²",
+        "B": "9.8 m/s²",
+        "C": "12.5 m/s²",
+        "D": "98 m/s²"
+      },
+      "marks": 1,
+      "topic": "Motion",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0003",
+      "type": "mcq",
+      "stem": "The instrument used for measuring atmospheric pressure is the",
+      "options": {
+        "A": "hygrometer",
+        "B": "barometer",
+        "C": "manometer",
+        "D": "ammeter"
+      },
+      "marks": 1,
+      "topic": "Measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0004",
+      "type": "mcq",
+      "stem": "A body moving with constant velocity has an acceleration of",
+      "options": {
+        "A": "zero",
+        "B": "constant but non-zero",
+        "C": "increasing",
+        "D": "decreasing"
+      },
+      "marks": 1,
+      "topic": "Motion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-mock-0005",
+      "type": "mcq",
+      "stem": "The SI unit of electric current is the",
+      "options": {
+        "A": "volt",
+        "B": "ohm",
+        "C": "ampere",
+        "D": "coulomb"
+      },
+      "marks": 1,
+      "topic": "Electricity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0006",
+      "type": "mcq",
+      "stem": "A resistor of 4 Ω is connected across a 12 V battery. Find the current.",
+      "options": {
+        "A": "2 A",
+        "B": "3 A",
+        "C": "4 A",
+        "D": "48 A"
+      },
+      "marks": 1,
+      "topic": "Electricity",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-mock-0007",
+      "type": "mcq",
+      "stem": "Sound CANNOT travel through",
+      "options": {
+        "A": "water",
+        "B": "steel",
+        "C": "air",
+        "D": "a vacuum"
+      },
+      "marks": 1,
+      "topic": "Waves",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0008",
+      "type": "mcq",
+      "stem": "The SI unit of power is the",
+      "options": {
+        "A": "newton",
+        "B": "joule",
+        "C": "watt",
+        "D": "volt"
+      },
+      "marks": 1,
+      "topic": "Units",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0009",
+      "type": "mcq",
+      "stem": "Power is defined as the rate of doing",
+      "options": {
+        "A": "work",
+        "B": "force",
+        "C": "momentum",
+        "D": "distance"
+      },
+      "marks": 1,
+      "topic": "Energy",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0010",
+      "type": "mcq",
+      "stem": "A converging mirror is also called",
+      "options": {
+        "A": "a concave mirror",
+        "B": "a convex mirror",
+        "C": "a plane mirror",
+        "D": "a parabolic lens"
+      },
+      "marks": 1,
+      "topic": "Optics",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-mock-0011",
+      "type": "mcq",
+      "stem": "A block of mass 100 g has volume 20 cm³. Find its density.",
+      "options": {
+        "A": "0.2 g/cm³",
+        "B": "5 g/cm³",
+        "C": "50 g/cm³",
+        "D": "200 g/cm³"
+      },
+      "marks": 1,
+      "topic": "Density",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0012",
+      "type": "mcq",
+      "stem": "Which of the following is a vector quantity?",
+      "options": {
+        "A": "speed",
+        "B": "mass",
+        "C": "velocity",
+        "D": "temperature"
+      },
+      "marks": 1,
+      "topic": "Vectors",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-mock-0013",
+      "type": "mcq",
+      "stem": "The device that converts mechanical energy into electrical energy is the",
+      "options": {
+        "A": "electric motor",
+        "B": "generator",
+        "C": "transformer",
+        "D": "rheostat"
+      },
+      "marks": 1,
+      "topic": "Energy",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-mock-0014",
+      "type": "mcq",
+      "stem": "A force of 10 N moves a body through 5 m in the direction of the force. Find the work done.",
+      "options": {
+        "A": "2 J",
+        "B": "15 J",
+        "C": "50 J",
+        "D": "500 J"
+      },
+      "marks": 1,
+      "topic": "Work",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-mock-0015",
+      "type": "mcq",
+      "stem": "Refraction of light occurs because light changes ______ when it passes between media.",
+      "options": {
+        "A": "colour",
+        "B": "speed",
+        "C": "charge",
+        "D": "mass"
+      },
+      "marks": 1,
+      "topic": "Optics",
+      "difficulty": "medium"
+    }
+  ],
+  "durationMinutes": 15
+}

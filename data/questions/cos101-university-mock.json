@@ -1,0 +1,220 @@
+{
+  "code": "cos101-university-mock",
+  "title": "COS101 — Introduction to Computing (University Modules)",
+  "version": 1,
+  "questionCount": 15,
+  "totalMarks": 15,
+  "questions": [
+    {
+      "id": "cos101-university-mock-0001",
+      "type": "mcq",
+      "stem": "CPU stands for",
+      "options": {
+        "A": "Central Processing Unit",
+        "B": "Computer Personal Unit",
+        "C": "Central Program Utility",
+        "D": "Control Processing Unit"
+      },
+      "marks": 1,
+      "topic": "Computer Fundamentals",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0002",
+      "type": "mcq",
+      "stem": "One kilobyte is equal to how many bytes?",
+      "options": {
+        "A": "1000",
+        "B": "1024",
+        "C": "512",
+        "D": "2048"
+      },
+      "marks": 1,
+      "topic": "Data Representation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0003",
+      "type": "mcq",
+      "stem": "Which of the following is an INPUT device?",
+      "options": {
+        "A": "monitor",
+        "B": "printer",
+        "C": "keyboard",
+        "D": "speaker"
+      },
+      "marks": 1,
+      "topic": "Hardware",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0004",
+      "type": "mcq",
+      "stem": "HTML stands for",
+      "options": {
+        "A": "HyperText Markup Language",
+        "B": "High Transfer Machine Language",
+        "C": "HyperTool Multi Language",
+        "D": "Home Text Marking Language"
+      },
+      "marks": 1,
+      "topic": "Web",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0005",
+      "type": "mcq",
+      "stem": "The binary representation of decimal 5 is",
+      "options": {
+        "A": "101",
+        "B": "110",
+        "C": "100",
+        "D": "111"
+      },
+      "marks": 1,
+      "topic": "Data Representation",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cos101-university-mock-0006",
+      "type": "mcq",
+      "stem": "RAM is described as ______ memory because its contents are lost when power is removed.",
+      "options": {
+        "A": "volatile",
+        "B": "permanent",
+        "C": "secondary",
+        "D": "virtual"
+      },
+      "marks": 1,
+      "topic": "Memory",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cos101-university-mock-0007",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an operating system?",
+      "options": {
+        "A": "Windows",
+        "B": "Linux",
+        "C": "Excel",
+        "D": "macOS"
+      },
+      "marks": 1,
+      "topic": "Software",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0008",
+      "type": "mcq",
+      "stem": "A set of instructions that tells a computer what to do is called a",
+      "options": {
+        "A": "device",
+        "B": "program",
+        "C": "peripheral",
+        "D": "network"
+      },
+      "marks": 1,
+      "topic": "Software",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0009",
+      "type": "mcq",
+      "stem": "GUI stands for",
+      "options": {
+        "A": "Graphical User Interface",
+        "B": "General Utility Interface",
+        "C": "Graphic Universal Internet",
+        "D": "Guided User Instruction"
+      },
+      "marks": 1,
+      "topic": "User Interface",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0010",
+      "type": "mcq",
+      "stem": "The only language a CPU can execute directly is",
+      "options": {
+        "A": "Python",
+        "B": "machine language",
+        "C": "HTML",
+        "D": "Java"
+      },
+      "marks": 1,
+      "topic": "Programming",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cos101-university-mock-0011",
+      "type": "mcq",
+      "stem": "URL stands for",
+      "options": {
+        "A": "Universal Resource Locator",
+        "B": "Uniform Resource Locator",
+        "C": "United Router Line",
+        "D": "Uniform Remote Link"
+      },
+      "marks": 1,
+      "topic": "Web",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0012",
+      "type": "mcq",
+      "stem": "Which of the following is an example of spreadsheet software?",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Microsoft Excel",
+        "C": "Google Chrome",
+        "D": "Adobe Photoshop"
+      },
+      "marks": 1,
+      "topic": "Application Software",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0013",
+      "type": "mcq",
+      "stem": "An IP address version that is 128 bits long is called",
+      "options": {
+        "A": "IPv4",
+        "B": "IPv6",
+        "C": "MAC",
+        "D": "TCP"
+      },
+      "marks": 1,
+      "topic": "Networking",
+      "difficulty": "medium"
+    },
+    {
+      "id": "cos101-university-mock-0014",
+      "type": "mcq",
+      "stem": "Which of the following is a database management system?",
+      "options": {
+        "A": "Oracle",
+        "B": "Chrome",
+        "C": "Python",
+        "D": "Linux"
+      },
+      "marks": 1,
+      "topic": "Databases",
+      "difficulty": "easy"
+    },
+    {
+      "id": "cos101-university-mock-0015",
+      "type": "mcq",
+      "stem": "The component popularly described as the 'brain' of the computer is the",
+      "options": {
+        "A": "hard disk",
+        "B": "CPU",
+        "C": "monitor",
+        "D": "keyboard"
+      },
+      "marks": 1,
+      "topic": "Computer Fundamentals",
+      "difficulty": "easy"
+    }
+  ],
+  "durationMinutes": 15
+}

@@ -1,0 +1,220 @@
+{
+  "code": "jamb-biology-mock",
+  "title": "JAMB Biology — Practice Mock",
+  "version": 1,
+  "questionCount": 15,
+  "totalMarks": 15,
+  "questions": [
+    {
+      "id": "jamb-biology-mock-0001",
+      "type": "mcq",
+      "stem": "Which organelle is called the powerhouse of the cell?",
+      "options": {
+        "A": "nucleus",
+        "B": "mitochondrion",
+        "C": "ribosome",
+        "D": "vacuole"
+      },
+      "marks": 1,
+      "topic": "Cell Biology",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0002",
+      "type": "mcq",
+      "stem": "The basic unit of life is the",
+      "options": {
+        "A": "tissue",
+        "B": "cell",
+        "C": "organ",
+        "D": "system"
+      },
+      "marks": 1,
+      "topic": "Cell Biology",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0003",
+      "type": "mcq",
+      "stem": "The gas taken in by plants during photosynthesis is",
+      "options": {
+        "A": "oxygen",
+        "B": "nitrogen",
+        "C": "carbon dioxide",
+        "D": "hydrogen"
+      },
+      "marks": 1,
+      "topic": "Photosynthesis",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0004",
+      "type": "mcq",
+      "stem": "The green pigment that traps light energy for photosynthesis is",
+      "options": {
+        "A": "haemoglobin",
+        "B": "chlorophyll",
+        "C": "melanin",
+        "D": "carotene"
+      },
+      "marks": 1,
+      "topic": "Photosynthesis",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0005",
+      "type": "mcq",
+      "stem": "The blood cells that defend the body against infection are",
+      "options": {
+        "A": "red blood cells",
+        "B": "white blood cells",
+        "C": "platelets",
+        "D": "plasma cells"
+      },
+      "marks": 1,
+      "topic": "Transport",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0006",
+      "type": "mcq",
+      "stem": "Gregor Mendel is regarded as the father of",
+      "options": {
+        "A": "evolution",
+        "B": "genetics",
+        "C": "ecology",
+        "D": "microbiology"
+      },
+      "marks": 1,
+      "topic": "Genetics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0007",
+      "type": "mcq",
+      "stem": "The genotype of a person who actually suffers from sickle cell anaemia is",
+      "options": {
+        "A": "AA",
+        "B": "AS",
+        "C": "SS",
+        "D": "AC"
+      },
+      "marks": 1,
+      "topic": "Genetics",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-mock-0008",
+      "type": "mcq",
+      "stem": "The organ that produces bile is the",
+      "options": {
+        "A": "pancreas",
+        "B": "liver",
+        "C": "stomach",
+        "D": "kidney"
+      },
+      "marks": 1,
+      "topic": "Digestion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-mock-0009",
+      "type": "mcq",
+      "stem": "The human blood group regarded as the universal donor is",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "AB",
+        "D": "O"
+      },
+      "marks": 1,
+      "topic": "Transport",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0010",
+      "type": "mcq",
+      "stem": "The loss of water vapour from the leaves of plants is called",
+      "options": {
+        "A": "respiration",
+        "B": "transpiration",
+        "C": "translocation",
+        "D": "condensation"
+      },
+      "marks": 1,
+      "topic": "Plant Biology",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0011",
+      "type": "mcq",
+      "stem": "Insects breathe through external openings called",
+      "options": {
+        "A": "lungs",
+        "B": "gills",
+        "C": "spiracles",
+        "D": "stomata"
+      },
+      "marks": 1,
+      "topic": "Respiration",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-mock-0012",
+      "type": "mcq",
+      "stem": "The largest organ of the human body is the",
+      "options": {
+        "A": "liver",
+        "B": "brain",
+        "C": "skin",
+        "D": "lungs"
+      },
+      "marks": 1,
+      "topic": "Skin",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0013",
+      "type": "mcq",
+      "stem": "Nitrogen-fixing bacteria are found in the root nodules of",
+      "options": {
+        "A": "grasses",
+        "B": "legumes",
+        "C": "ferns",
+        "D": "conifers"
+      },
+      "marks": 1,
+      "topic": "Ecology",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-mock-0014",
+      "type": "mcq",
+      "stem": "Mushrooms belong to the kingdom",
+      "options": {
+        "A": "Plantae",
+        "B": "Animalia",
+        "C": "Fungi",
+        "D": "Protista"
+      },
+      "marks": 1,
+      "topic": "Classification",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-mock-0015",
+      "type": "mcq",
+      "stem": "Deficiency of vitamin C in the human diet causes",
+      "options": {
+        "A": "rickets",
+        "B": "scurvy",
+        "C": "night blindness",
+        "D": "beri-beri"
+      },
+      "marks": 1,
+      "topic": "Nutrition",
+      "difficulty": "easy"
+    }
+  ],
+  "durationMinutes": 15
+}

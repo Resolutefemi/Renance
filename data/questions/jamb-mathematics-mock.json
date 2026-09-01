@@ -1,0 +1,220 @@
+{
+  "code": "jamb-mathematics-mock",
+  "title": "JAMB Mathematics — Practice Mock",
+  "version": 1,
+  "questionCount": 15,
+  "totalMarks": 15,
+  "questions": [
+    {
+      "id": "jamb-mathematics-mock-0001",
+      "type": "mcq",
+      "stem": "If 2x + 3 = 11, find x.",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      },
+      "marks": 1,
+      "topic": "Algebra",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0002",
+      "type": "mcq",
+      "stem": "Simplify 3^2 × 3^3.",
+      "options": {
+        "A": "3^5",
+        "B": "3^6",
+        "C": "9^5",
+        "D": "3^1"
+      },
+      "marks": 1,
+      "topic": "Indices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0003",
+      "type": "mcq",
+      "stem": "Evaluate log base 10 of 1000.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "10",
+        "D": "100"
+      },
+      "marks": 1,
+      "topic": "Logarithms",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0004",
+      "type": "mcq",
+      "stem": "Solve: 5 − 2(3 − x) = 1",
+      "options": {
+        "A": "x = 1",
+        "B": "x = 2",
+        "C": "x = -1",
+        "D": "x = 3"
+      },
+      "marks": 1,
+      "topic": "Algebra",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-mathematics-mock-0005",
+      "type": "mcq",
+      "stem": "If y = 2x + 1 and x = 3, find y.",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1,
+      "topic": "Algebra",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0006",
+      "type": "mcq",
+      "stem": "Find the slope of the line through (1, 2) and (3, 6).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1,
+      "topic": "Coordinate Geometry",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-mathematics-mock-0007",
+      "type": "mcq",
+      "stem": "The sum of the interior angles of a triangle is",
+      "options": {
+        "A": "90°",
+        "B": "180°",
+        "C": "270°",
+        "D": "360°"
+      },
+      "marks": 1,
+      "topic": "Geometry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0008",
+      "type": "mcq",
+      "stem": "Find the simple interest on ₦20,000 at 5% per annum for 3 years.",
+      "options": {
+        "A": "₦1,000",
+        "B": "₦2,000",
+        "C": "₦3,000",
+        "D": "₦6,000"
+      },
+      "marks": 1,
+      "topic": "Commercial Arithmetic",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-mathematics-mock-0009",
+      "type": "mcq",
+      "stem": "Find the median of 3, 7, 9, 11, 15.",
+      "options": {
+        "A": "7",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "marks": 1,
+      "topic": "Statistics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0010",
+      "type": "mcq",
+      "stem": "If P(A) = 0.3, find P(A').",
+      "options": {
+        "A": "0.3",
+        "B": "0.7",
+        "C": "1.3",
+        "D": "0.5"
+      },
+      "marks": 1,
+      "topic": "Probability",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0011",
+      "type": "mcq",
+      "stem": "Factorize x^2 − 9.",
+      "options": {
+        "A": "(x − 3)(x + 3)",
+        "B": "(x − 9)(x + 1)",
+        "C": "(x − 3)^2",
+        "D": "(x + 3)^2"
+      },
+      "marks": 1,
+      "topic": "Algebra",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0012",
+      "type": "mcq",
+      "stem": "Find the nth term of the sequence 2, 5, 8, 11, ...",
+      "options": {
+        "A": "3n − 1",
+        "B": "3n + 1",
+        "C": "2n − 1",
+        "D": "n + 1"
+      },
+      "marks": 1,
+      "topic": "Sequences",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-mathematics-mock-0013",
+      "type": "mcq",
+      "stem": "Find the area of a circle of radius 7 cm (take π = 22/7).",
+      "options": {
+        "A": "44 cm²",
+        "B": "154 cm²",
+        "C": "49 cm²",
+        "D": "616 cm²"
+      },
+      "marks": 1,
+      "topic": "Mensuration",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-mathematics-mock-0014",
+      "type": "mcq",
+      "stem": "If 15% of a number is 45, find the number.",
+      "options": {
+        "A": "250",
+        "B": "300",
+        "C": "350",
+        "D": "450"
+      },
+      "marks": 1,
+      "topic": "Percentages",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-mathematics-mock-0015",
+      "type": "mcq",
+      "stem": "Solve the inequality 2x − 4 > 6.",
+      "options": {
+        "A": "x > 5",
+        "B": "x > 1",
+        "C": "x < 5",
+        "D": "x > 10"
+      },
+      "marks": 1,
+      "topic": "Inequalities",
+      "difficulty": "easy"
+    }
+  ],
+  "durationMinutes": 20
+}
