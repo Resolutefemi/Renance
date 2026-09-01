@@ -80,9 +80,18 @@ superseded by the username+password doctrine. flutter analyze 0 issues,
 flutter test 26/26 (models, MockClient API, sync filter, offline queue,
 exam state machine, widget smoke). Manifest now carries category/body so
 mobile downloads only what the student needs (Go structs + cbt-build
-extended; E2E re-verified 32/32).
-REMAINING FOR EXIT: founder device run (flutter run --dart-define=...) +
-release APK on a machine with the Android SDK.
+extended; E2E re-verified 32/32). AndroidManifest gained the INTERNET
+permission + cleartext allowance the release build was missing.
+EXIT VEHICLE (2026-09-02): `.github/workflows/mobile-apk.yml` builds the
+release APK in CI (analyze → test → `flutter build apk --release` with
+RENANCE_API_BASE dart-define → artifact `renance-android-apk`; `v*` tags
+attach the APK to GitHub Releases) — no local Android SDK needed.
+Remaining: founder sideloads the artifact and validates touch UX.
+WEB (2026-09-02): whole web app restyled to the founder's auth mockups
+(light M3 tokens via Tailwind 4 `@theme`, Inter/JetBrains Mono) and
+converted to a static export; `.github/workflows/web-deploy.yml` publishes
+it to GitHub Pages at https://resolutefemi.github.io/Renance/ with pack
+routes pinned from data/manifest.json at build time.
 
 ### Gate G4 — Learning intelligence             [PENDING]
 Attempt event stream (dwell time, hesitation, revision loops) →

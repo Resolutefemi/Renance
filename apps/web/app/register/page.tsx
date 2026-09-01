@@ -6,11 +6,13 @@ import { useRouter } from 'next/navigation';
 import { api, ApiError } from '@/lib/api';
 import { setSession } from '@/lib/session';
 import { RenanceMark } from '@/components/renance-logo';
+import { PersonIcon, LockIcon, EyeIcon } from '@/components/icons';
 
 export default function RegisterPage() {
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -36,66 +38,103 @@ export default function RegisterPage() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col justify-center px-6">
-      <div className="renance-rise">
-        <div className="mb-8 flex items-center gap-3">
-          <RenanceMark size={48} />
+    <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-surface-container px-4">
+      <div className="renance-rise flex w-full max-w-sm flex-col rounded-xl bg-surface-container-lowest p-6 shadow-md">
+        {/* Logo block — mockup: logo, headline, sub */}
+        <div className="mb-6 flex flex-col items-center gap-3 text-center">
+          <RenanceMark size={64} />
           <div>
-            <h1 className="text-xl font-semibold tracking-tight">Create your account</h1>
-            <p className="text-sm text-neutral-500">Two fields. That&apos;s the whole form.</p>
+            <h1 className="text-2xl font-semibold tracking-tight text-on-surface">
+              Create your account
+            </h1>
+            <p className="mt-1 text-sm text-on-surface-variant">
+              Join the global student study OS.
+            </p>
           </div>
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-4">
-          <label className="block">
-            <span className="mb-1.5 block text-sm text-neutral-400">Username</span>
-            <input
-              value={username}
-              onChange={(e) => setUsername(e.target.value.toLowerCase())}
-              autoComplete="username"
-              required
-              placeholder="lowercase letters, digits, _"
-              className="w-full rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-3 text-sm outline-none transition focus:border-emerald-500"
-            />
-          </label>
-          <label className="block">
-            <span className="mb-1.5 block text-sm text-neutral-400">Password</span>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              autoComplete="new-password"
-              required
-              minLength={8}
-              placeholder="at least 8 characters"
-              className="w-full rounded-lg border border-neutral-800 bg-neutral-900 px-4 py-3 text-sm outline-none transition focus:border-emerald-500"
-            />
-          </label>
+        <form onSubmit={onSubmit} className="flex flex-col gap-4">
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="username" className="text-sm text-on-surface">
+              Username
+            </label>
+            <div className="group relative flex items-center">
+              <PersonIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
+              <input
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                autoComplete="username"
+                required
+                minLength={3}
+                placeholder="yourusername"
+                className="h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="password" className="text-sm text-on-surface">
+              Password
+            </label>
+            <div className="group relative flex items-center">
+              <LockIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
+              <input
+                id="password"
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete="new-password"
+                required
+                minLength={6}
+                placeholder="••••••••"
+                className="h-12 w-full rounded-lg bg-surface-container pl-11 pr-12 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button
+                type="button"
+                aria-label="Toggle password visibility"
+                onClick={() => setShowPassword((s) => !s)}
+                className="absolute right-2 rounded-full p-2 text-on-surface-variant transition-colors hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <EyeIcon off={showPassword} className="h-5 w-5" />
+              </button>
+            </div>
+            <p className="text-xs text-on-surface-variant">
+              Just a username and password — we ask for details after you&apos;re in.
+            </p>
+          </div>
 
           {error && (
-            <p className="rounded-lg border border-red-900/60 bg-red-950/40 px-4 py-3 text-sm text-red-300">
+            <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
               {error}
             </p>
           )}
 
+          {/* Mockup: black pill button, press scale */}
           <button
             type="submit"
             disabled={busy}
-            className="flex w-full items-center justify-center gap-3 rounded-lg bg-emerald-500 px-4 py-3 text-sm font-semibold text-black transition hover:bg-emerald-400 disabled:opacity-60"
+            className="mt-1 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-on-primary transition-all hover:opacity-90 hover:shadow-md active:scale-[0.98] disabled:opacity-60"
           >
-            {busy && <RenanceMark size={22} state="busy" />}
-            {busy ? 'Creating…' : 'Start studying'}
+            {busy ? (
+              <>
+                <RenanceMark size={22} state="busy" />
+                Creating account…
+              </>
+            ) : (
+              'Create Account'
+            )}
           </button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-neutral-500">
+        <p className="mt-6 text-center text-sm text-on-surface-variant">
           Already have an account?{' '}
-          <Link href="/login" className="text-emerald-400 underline-offset-4 hover:underline">
-            Sign in
+          <Link
+            href="/login"
+            className="font-medium text-primary underline-offset-4 hover:underline"
+          >
+            Log In
           </Link>
-        </p>
-        <p className="mt-2 text-center text-xs text-neutral-600">
-          We&apos;ll ask about your exams and school right after — one quick modal.
         </p>
       </div>
     </main>

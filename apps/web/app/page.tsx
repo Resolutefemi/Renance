@@ -16,9 +16,11 @@ export default function Home() {
   }, [router]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6">
+    <main className="flex min-h-dvh flex-col items-center justify-center gap-6 bg-surface-container">
       <RenanceMark size={72} state="busy" />
-      <p className="text-sm text-neutral-500">the global student study OS</p>
+      <p className="font-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant">
+        the global student study OS
+      </p>
     </main>
   );
 }

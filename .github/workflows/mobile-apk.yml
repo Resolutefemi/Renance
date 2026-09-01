@@ -1,0 +1,65 @@
+name: mobile-apk (Android)
+
+# Builds the Renance APK on every push that touches the Flutter app.
+# Download the artifact from the run page (or a GitHub Release on tags).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/mobile/**'
+      - '.github/workflows/mobile-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.2
+          cache: true
+
+      - name: Resolve packages
+        working-directory: apps/mobile
+        run: flutter pub get
+
+      - name: Analyze
+        working-directory: apps/mobile
+        run: flutter analyze
+
+      - name: Test
+        working-directory: apps/mobile
+        run: flutter test
+
+      - name: Build release APK
+        working-directory: apps/mobile
+        # Point the app at the deployed study API by setting the PUBLIC_API_BASE
+        # repo variable (Settings → Secrets and variables → Actions → Variables).
+        # Unset, the APK defaults to the Android-emulator loopback host.
+        run: |
+          flutter build apk --release \
+            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'http://10.0.2.2:3990' }}
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: renance-android-apk
+          path: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Attach to GitHub Release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
