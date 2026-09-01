@@ -105,7 +105,7 @@ export function LogoActivityIndicator({
     <div className="flex items-center gap-3">
       <RenanceMark size={40} state={state} />
       {label && (
-        <span className="text-sm text-neutral-400">{label}</span>
+        <span className="text-sm text-on-surface-variant">{label}</span>
       )}
     </div>
   );

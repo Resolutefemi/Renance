@@ -5,6 +5,9 @@ import { clearSession, getToken } from './session';
 export const API_BASE =
   process.env.NEXT_PUBLIC_API_BASE ?? 'http://localhost:3990';
 
+// GitHub Pages serves the app under /<repo>/ — raw redirects must respect it.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export class ApiError extends Error {
   status: number;
   code: string;
@@ -38,8 +41,12 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
 
   if (res.status === 401 && opts.auth !== false) {
     clearSession();
-    if (typeof window !== 'undefined' && !window.location.pathname.startsWith('/login')) {
-      window.location.href = '/login';
+    if (typeof window !== 'undefined') {
+      const loginPath = `${BASE_PATH}/login`;
+      const here = window.location.pathname.replace(/\/+$/, '') || '/';
+      if (!here.endsWith(loginPath)) {
+        window.location.href = loginPath;
+      }
     }
     throw new ApiError(401, 'unauthorized', 'Session expired — sign in again.');
   }

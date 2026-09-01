@@ -1,8 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Release APK must reach the study API (debug/profile had this via the
+         default Flutter template; the main manifest did not). -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="Renance"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"

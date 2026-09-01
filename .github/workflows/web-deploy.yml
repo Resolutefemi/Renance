@@ -1,0 +1,73 @@
+name: web-deploy (GitHub Pages)
+
+# Builds the Next.js static export and publishes it to GitHub Pages:
+# https://<owner>.github.io/<repo>/
+#
+# One-time enablement: Settings → Pages → Source: "GitHub Actions"
+# (configure-pages attempts to flip this automatically; if the runner lacks
+# permission, enable it manually and re-run).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/web/**'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/web-deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: pnpm/action-setup@v4 # reads packageManager from package.json
+
+      - name: Install workspace dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static export
+        working-directory: apps/web
+        env:
+          # Project site → served under /<repo>/
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          # Set the PUBLIC_API_BASE repo variable to your deployed Go study API
+          # (must be https — browsers block http from an https Pages origin).
+          NEXT_PUBLIC_API_BASE: ${{ vars.PUBLIC_API_BASE || 'http://localhost:3990' }}
+          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: pnpm exec next build
+
+      - name: SPA fallback (unknown paths → home)
+        run: cp apps/web/out/index.html apps/web/out/404.html
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

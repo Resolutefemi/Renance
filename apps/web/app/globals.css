@@ -1,19 +1,71 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ */
+/* Renance design system — lifted 1:1 from the founder's auth mockups  */
+/* (upload/test.html + upload/test3.html): blue-tinted Material-3      */
+/* surfaces, ink #111c2d, black primary buttons, Inter type.           */
+/* Token names intentionally match the mockup's Tailwind config so     */
+/* markup reads the same on web and in the Flutter app theme.          */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* surfaces */
+  --color-background: #f9f9ff;
+  --color-surface: #f9f9ff;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-dim: #cfdaf2;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f3ff;
+  --color-surface-container: #e7eeff;
+  --color-surface-container-high: #dee8ff;
+  --color-surface-container-highest: #d8e3fb;
+  --color-surface-variant: #d8e3fb;
+
+  /* on-colors / ink */
+  --color-on-background: #111c2d;
+  --color-on-surface: #111c2d;
+  --color-on-surface-variant: #45464d;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-container: #7c839b;
+
+  /* primaries & secondaries */
+  --color-primary: #000000;
+  --color-primary-container: #131b2e;
+  --color-secondary: #505f76;
+  --color-secondary-container: #d0e1fb;
+  --color-on-secondary-container: #54647a;
+  --color-inverse-primary: #bec6e0;
+
+  /* outlines */
+  --color-outline: #76777d;
+  --color-outline-variant: #c6c6cd;
+
+  /* errors */
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* type — mockups load Inter + JetBrains Mono from Google Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  background: #0a0a0a;
-  color: #fafafa;
-  font-family: ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
 }
 
 /* ------------------------------------------------------------------ */
 /* Renance logomark animation (ADR: no generic spinners, ever).        */
-/* Bybit-style brand transition: the mark breathes while orbiting      */
-/* arc segments shift opacity — idle / busy / grading states.          */
+/* The mark breathes while orbiting arc segments shift opacities —     */
+/* idle / busy / grading states.                                       */
 /* ------------------------------------------------------------------ */
 
 @keyframes renance-breathe {
