@@ -68,10 +68,21 @@ adapters run over all 21 ERA-1-discovered shapes; keys seeded to Neon
 retries + drift report. CLI bulk builder hardening (multi-threaded compile,
 randomize, push — the "CLI-Driven Bulk Test Builder" feature lands here).
 
-### Gate G3 — Flutter mobile shell              [PENDING]
-Register/login → profile modal → manifest → on-demand pack download into
-local SQLite → offline CBT (airplane mode) → sync queue → server grading.
-Logomark animation states during fetch/grade. Play Store binary.
+### Gate G3 — Flutter mobile shell              [CODE COMPLETE 2026-09-02]
+apps/mobile (Flutter 3.47 / Dart 3.13): splash with CustomPainter logomark
+animation → 2-field register/login → non-dismissable profile sheet →
+need-based silent sync (profile exams decide WHAT downloads; sha-pinned
+packs in local SQLite) → offline CBT player (timer/palette/flags) →
+offline submissions queue in SQLite, flushed on resume/retry → server
+grading → results breakdown. Founder's auth mockup palette adopted
+(Material-3 light surfaces, black primary buttons); mockups' email field
+superseded by the username+password doctrine. flutter analyze 0 issues,
+flutter test 26/26 (models, MockClient API, sync filter, offline queue,
+exam state machine, widget smoke). Manifest now carries category/body so
+mobile downloads only what the student needs (Go structs + cbt-build
+extended; E2E re-verified 32/32).
+REMAINING FOR EXIT: founder device run (flutter run --dart-define=...) +
+release APK on a machine with the Android SDK.
 
 ### Gate G4 — Learning intelligence             [PENDING]
 Attempt event stream (dwell time, hesitation, revision loops) →

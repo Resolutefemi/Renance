@@ -209,6 +209,8 @@ def main() -> int:
                 "totalMarks": total_marks,
                 "questions": bundle_questions,
                 **({"durationMinutes": int(duration)} if duration else {}),
+                **({"category": str(data["category"])} if isinstance(data, dict) and data.get("category") else {}),
+                **({"body": str(data["body"])} if isinstance(data, dict) and data.get("body") else {}),
             }
             # doctrine guard: never emit forbidden keys into a bundle
             def check(node, where="bundle"):
@@ -241,6 +243,8 @@ def main() -> int:
             "code": b["code"], "title": b.get("title", b["code"]),
             "questionCount": b["questionCount"], "totalMarks": b.get("totalMarks", 0),
             **({"durationMinutes": b["durationMinutes"]} if b.get("durationMinutes") else {}),
+            **({"category": b["category"]} if b.get("category") else {}),
+            **({"body": b["body"]} if b.get("body") else {}),
             "bundleSha256": hashlib.sha256(raw).hexdigest(),
             "sizeBytes": len(raw),
         })
