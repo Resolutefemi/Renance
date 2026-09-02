@@ -77,8 +77,12 @@ Cloud Console → APIs & Services → Credentials, make sure the
 For the **Android** app, google_sign_in needs its own OAuth client
 (_type: Android_) with:
 
-- Package name: the `applicationId` from `apps/mobile/android/app/build.gradle.kts`
-- SHA-1: from `keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android`
+- Package name: `dev.renance.renance`
+- SHA-1: `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95`
+
+(The APK is signed with the committed `renance.keystore`, so this SHA-1 is
+stable across all CI builds. Verify any time with:
+`keytool -list -v -keystore apps/mobile/android/app/renance.keystore -alias renance -storepass renance-keystore`)
 
 The Android client does **not** need the API to know its client ID —
 google_sign_in takes `serverClientId` (the **web** client ID) and returns

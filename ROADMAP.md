@@ -24,17 +24,18 @@ external service/key/infra decision) · each row lists what unblocks it.
 | --- | --- | --- |
 | Render deploy | Apply the Blueprint → get `https://renance-api.onrender.com`. | You paste the Neon URI (docs/deploy.md §1). |
 | `PUBLIC_API_BASE` variable | Point web + APK at the Render URL, re-run deploys. | Render URL from the step above. |
-| Android OAuth client | Google Console → OAuth client (type **Android**) with package `com.renance.app` (confirm) + SHA-1. | **NEEDS INPUT** — the screenshot never arrived; send package name + SHA-1 (see §Keystore below). |
+| Android OAuth client | Google Console → OAuth client (type **Android**). | Values fixed and documented — package `dev.renance.renance`, SHA-1 `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95` (committed release keystore). Create the client, no code change needed. |
 
-### Keystore note (unblocks Android Google sign-in)
+### Keystore note (Android Google sign-in — RESOLVED)
 
 Google requires a **stable SHA-1** for the Android OAuth client. CI runners
 generate a fresh debug keystore on every build, so its SHA-1 rotates — that
-would silently break Google sign-in in CI-built APKs. Fix (planned next
-commit): generate one Renance release keystore, commit it to the repo with a
-documented password (acceptable pre-launch; rotate at Play Store launch),
-point `build.gradle.kts` at it, and register its SHA-1 once. One setup, then
-every CI APK keeps Google sign-in working forever.
+would silently break Google sign-in in CI-built APKs. **Fixed:** a dedicated
+release keystore is committed to the repo with a documented password
+(acceptable pre-launch; rotate before Play Store distribution), and
+`build.gradle.kts` signs every release APK with it. The SHA-1 is therefore
+permanent — register it once in Google Console and every future APK keeps
+Google sign-in working.
 
 ## G4+ feature board (the 19-item list)
 
