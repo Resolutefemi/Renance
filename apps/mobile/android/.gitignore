@@ -12,3 +12,9 @@ GeneratedPluginRegistrant.java
 key.properties
 **/*.keystore
 **/*.jks
+
+# Exception: Renance's MVP release key is committed ON PURPOSE — CI needs it
+# to sign reproducible APKs, and a stable SHA-1 is what the Google OAuth
+# "Android client" is registered against. Password is documented (and must
+# be rotated) before Play Store distribution. See ROADMAP.md keystore note.
+!app/renance.keystore
