@@ -160,6 +160,7 @@ Future<bool> _runGoogleSignIn(
   required void Function(String message) onError,
 }) async {
   final ApiClient api = context.read<ApiClient>();
+  final SessionStore session = context.read<SessionStore>();
   final GoogleSignInAccount? account =
       await GoogleSignIn(serverClientId: googleWebClientId).signIn();
   if (account == null) return false;
@@ -169,9 +170,6 @@ Future<bool> _runGoogleSignIn(
     onError('Google did not return an ID token — try again');
     return false;
   }
-  // Capture everything the continuation needs BEFORE the async gap, so no
-  // BuildContext is used after await without a mounted check.
-  final SessionStore session = context.read<SessionStore>();
   final AuthTokens res = await api.authWithGoogle(idToken);
   await session.save(res.token, res.user);
   if (!context.mounted) return true;
