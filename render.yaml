@@ -1,0 +1,30 @@
+# Render Blueprint — one-click deploy of the Renance study API (free plan).
+#
+# Render.com -> New + -> Blueprint -> pick Resolutefemi/Renance -> Apply.
+# You will be prompted for DATABASE_URL: paste the Neon POOLED connection
+# string (…pooler….neon.tech/…?sslmode=require). JWT_SECRET is generated
+# for you. GOOGLE_CLIENT_ID: paste the web OAuth client ID (optional until
+# Google sign-in is enabled).
+#
+# Free plan note: the service sleeps after ~15 min idle; the first request
+# wakes it in ~30-50s. Upgrade any time for always-on.
+
+services:
+  - type: web
+    name: renance-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./apps/study-api/Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: WEB_ORIGIN
+        value: https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000

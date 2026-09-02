@@ -11,7 +11,9 @@ import (
         "encoding/json"
         "errors"
         "fmt"
+        "net/url"
         "sort"
+        "strings"
         "time"
 
         "github.com/jackc/pgx/v5"
@@ -32,7 +34,7 @@ type Store struct {
 }
 
 func Connect(ctx context.Context, dsn string) (*Store, error) {
-        cfg, err := pgxpool.ParseConfig(dsn)
+        cfg, err := pgxpool.ParseConfig(normalizeDSN(dsn))
         if err != nil {
                 return nil, fmt.Errorf("store: parse dsn: %w", err)
         }
@@ -53,6 +55,22 @@ func Connect(ctx context.Context, dsn string) (*Store, error) {
 }
 
 func (s *Store) Close() { s.Pool.Close() }
+
+// normalizeDSN strips libpq parameters pgx has no support for. Neon's
+// console hands out URIs ending in channel_binding=require; without this
+// scrub pgxpool.ParseConfig would reject the whole URI.
+func normalizeDSN(dsn string) string {
+        u, err := url.Parse(strings.TrimSpace(dsn))
+        if err != nil {
+                return dsn // let ParseConfig produce the real error
+        }
+        q := u.Query()
+        if q.Get("channel_binding") != "" {
+                q.Del("channel_binding")
+                u.RawQuery = q.Encode()
+        }
+        return u.String()
+}
 
 // Migrate applies every not-yet-applied migration in filename order.
 func (s *Store) Migrate(ctx context.Context) error {
@@ -117,6 +135,8 @@ type User struct {
         Username     string    `json:"username"`
         CreatedAt    time.Time `json:"-"`
         PasswordHash string    `json:"-"`
+        GoogleSub    *string   `json:"-"`
+        Email        *string   `json:"-"`
 }
 
 func (s *Store) CreateUser(ctx context.Context, username, passwordHash string) (*User, error) {
@@ -136,12 +156,70 @@ func (s *Store) CreateUser(ctx context.Context, username, passwordHash string) (
         return u, nil
 }
 
+// UpsertGoogleUser returns the scholar linked to a Google account, creating
+// one on first sign-in. The seed username is derived from the Google email
+// and numbered (alice_2, alice_3, …) on collision. Google-only rows keep an
+// empty password_hash, which can never satisfy a bcrypt comparison.
+func (s *Store) UpsertGoogleUser(ctx context.Context, googleSub, email, seed string) (*User, error) {
+        u := &User{}
+        err := s.Pool.QueryRow(ctx, `
+                SELECT id, username, password_hash, created_at, google_sub, email
+                FROM study.users WHERE google_sub = $1`, googleSub,
+        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
+        if err == nil {
+                return u, nil
+        }
+        if !errors.Is(err, pgx.ErrNoRows) {
+                return nil, fmt.Errorf("store: google lookup: %w", err)
+        }
+
+        for attempt := 0; attempt < 8; attempt++ {
+                candidate := seed
+                if attempt > 0 {
+                        candidate = fmt.Sprintf("%s_%d", seed, attempt+1)
+                }
+                u = &User{Username: candidate}
+                err = s.Pool.QueryRow(ctx, `
+                        INSERT INTO study.users (username, password_hash, google_sub, email)
+                        VALUES ($1, '', $2, NULLIF($3, ''))
+                        RETURNING id, username, password_hash, created_at, google_sub, email`,
+                        candidate, googleSub, email,
+                ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
+                if err == nil {
+                        return u, nil
+                }
+                var pgErr *pgconn.PgError
+                if errors.As(err, &pgErr) && pgErr.Code == uniqueViolation {
+                        // Could be the username index OR a concurrent login with
+                        // the same google_sub winning the insert — re-check.
+                        if linked := s.googleBySub(ctx, googleSub); linked != nil {
+                                return linked, nil
+                        }
+                        continue
+                }
+                return nil, fmt.Errorf("store: create google user: %w", err)
+        }
+        return nil, fmt.Errorf("store: create google user: could not derive a free username from %q", seed)
+}
+
+func (s *Store) googleBySub(ctx context.Context, googleSub string) *User {
+        u := &User{}
+        err := s.Pool.QueryRow(ctx, `
+                SELECT id, username, password_hash, created_at, google_sub, email
+                FROM study.users WHERE google_sub = $1`, googleSub,
+        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
+        if err != nil {
+                return nil
+        }
+        return u
+}
+
 func (s *Store) UserByUsername(ctx context.Context, username string) (*User, error) {
         u := &User{Username: username}
         err := s.Pool.QueryRow(ctx, `
-                SELECT id, lower(username), password_hash, created_at
+                SELECT id, lower(username), password_hash, created_at, google_sub, email
                 FROM study.users WHERE lower(username) = lower($1)`, username,
-        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt)
+        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
         if errors.Is(err, pgx.ErrNoRows) {
                 return nil, nil
         }
@@ -154,9 +232,9 @@ func (s *Store) UserByUsername(ctx context.Context, username string) (*User, err
 func (s *Store) UserByID(ctx context.Context, id string) (*User, error) {
         u := &User{}
         err := s.Pool.QueryRow(ctx, `
-                SELECT id, username, password_hash, created_at
+                SELECT id, username, password_hash, created_at, google_sub, email
                 FROM study.users WHERE id = $1`, id,
-        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt)
+        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
         if errors.Is(err, pgx.ErrNoRows) {
                 return nil, nil
         }

@@ -24,6 +24,47 @@ jobs:
         working-directory: apps/study-api
         run: go test ./...
 
+  api-e2e:
+    name: Go study API (E2E on real Postgres)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: renance
+          POSTGRES_PASSWORD: renance
+          POSTGRES_DB: renance_e2e
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U renance -d renance_e2e"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      DATABASE_URL: postgres://renance:renance@localhost:5432/renance_e2e?sslmode=disable
+      JWT_SECRET: ci-e2e-secret-0123456789abcdef
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: apps/study-api/go.mod
+      - name: Build API binary
+        working-directory: apps/study-api
+        run: go build -o /tmp/study-api ./cmd/api
+      - name: Boot API (waits for /healthz db=ok)
+        run: |
+          /tmp/study-api &
+          for _ in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3990/healthz | grep -q '"db":"ok"'; then
+              echo "API healthy"; exit 0
+            fi
+            sleep 1
+          done
+          echo "API never became healthy"; exit 1
+      - name: E2E (register → login → profile → exam → grade)
+        run: bash scripts/api-e2e.sh http://127.0.0.1:3990
+
   web:
     name: Web (typecheck + static export build)
     runs-on: ubuntu-latest

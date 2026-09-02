@@ -52,9 +52,12 @@ jobs:
         # Point the app at the deployed study API via the PUBLIC_API_BASE repo
         # variable (Settings -> Secrets and variables -> Actions -> Variables).
         # Unset, the APK defaults to the Android-emulator loopback host.
+        # GOOGLE_WEB_CLIENT_ID (repo variable) is the `serverClientId` Google
+        # sign-in uses so ID tokens carry the API's expected audience.
         run: |
           flutter build apk --release \
-            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'http://10.0.2.2:3990' }}
+            --dart-define=RENANCE_API_BASE=${{ vars.PUBLIC_API_BASE || 'http://10.0.2.2:3990' }} \
+            --dart-define=GOOGLE_WEB_CLIENT_ID=${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
