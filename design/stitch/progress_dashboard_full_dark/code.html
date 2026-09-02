@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#111c2d;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-container":"#1b1b1b","on-surface-variant":"#A2AAB8","outline":"#7e7576","primary":"#F0F3FF","inverse-on-surface":"#ecf1ff","error-container":"#FFDAD6","on-secondary":"#ffffff","card":"#131B2E","on-background":"#F0F3FF","text-secondary":"#A2AAB8","surface-bright":"#17223B","outline-variant":"#cfc4c5","accent-emerald":"#10B981","primary-fixed-dim":"#c6c6c6","on-secondary-fixed-variant":"#3f465b","primary-fixed":"#e2e2e2","surface-variant":"#1A243A","inverse-surface":"#263143","on-surface":"#F0F3FF","secondary-fixed":"#dae2fc","error":"#BA1A1A","on-primary-fixed":"#1b1b1b","surface-container-low":"#17223B","outline-dark":"#76777D","surface-container":"#1A243A","on-tertiary-container":"#9466ff","selection-blue":"#D0E1FB","surface":"#111c2d","outline-light":"#C6C6CD","surface-container-lowest":"#111c2d","dark-text-secondary":"#A2AAB8","secondary-container":"#d8dff9","accent-violet":"#8B5CF6","surface-dim":"#cfdaf2","dark-text-primary":"#F0F3FF","surface-container-highest":"#1A243A","secondary-fixed-dim":"#bec6e0","on-primary-fixed-variant":"#474747","on-error-container":"#93000a","on-tertiary-fixed-variant":"#5516be","surface-container-high":"#1A243A","on-tertiary-fixed":"#23005c","dark-surface":"#131B2E","tertiary-container":"#23005c","on-error":"#ffffff","on-secondary-container":"#5a6278","on-primary-container":"#848484","accent-amber":"#F59E0B","tertiary-fixed":"#e9ddff","background":"#111c2d","inverse-primary":"#c6c6c6","on-primary":"#111c2d","secondary":"#565e74","on-tertiary":"#ffffff","on-secondary-fixed":"#131b2e","dark-surface-low":"#17223B","dark-card":"#1A243A","tertiary-fixed-dim":"#d0bcff","tertiary":"#000000","surface-tint":"#5e5e5e"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"sm":"8px","margin-mobile":"16px","unit":"4px","xl":"32px","md":"16px","margin-desktop":"32px","xs":"4px","gutter":"16px","lg":"24px"},"fontFamily":{"caption":["Inter"],"section-title":["Inter"],"display-md":["Inter"],"body-medium":["Inter"],"stat-number":["Inter"],"label-mono":["JetBrains Mono"],"body-base":["Inter"],"display-lg":["Inter"],"body-secondary":["Inter"]},"fontSize":{"caption":["13px",{"lineHeight":"18px","letterSpacing":"0","fontWeight":"400"}],"section-title":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-medium":["15px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"600"}],"stat-number":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-mono":["13px",{"lineHeight":"18px","letterSpacing":"0","fontWeight":"500"}],"body-base":["15px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"400"}],"display-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-secondary":["15px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"400"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-base text-on-surface"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.2)] border-b border-surface-container"><div class="h-14 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-xs"><span class="font-display-md text-primary tracking-tighter">Renance</span></div><div class="flex items-center gap-md"><div class="flex items-center gap-xs bg-surface-container-low px-sm py-xs rounded-full border border-outline-light/10"><span class="material-symbols-outlined text-[20px] text-accent-amber fill-accent-amber">local_fire_department</span><span class="font-body-medium text-on-surface">12</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WMIvyUNzP1CyqYxYgGaRPGP57edylyDRHQlFwFaHOEoOY_FaH7n9wy4qeAQZxhP-yov7DY32xc3z5_bLYZmcYFjy3JQAjad3QC2qOiESL8VH3niUujyjHLTURUo4aNvaUZz2uBqsPLHO60K89w4R9RwImizaU3A4msfFAmBkEOAl_Nz_IjGw8MHBU5ZCt2tHAr5-XQBW1u2R3XaWkECo0xhNFv093B5gQpZxHmA3oSMZzqYxOwZM0Mp-4cYSY12OXbVtgiW0XNnQ"/></div></div></header><main class="flex flex-col relative w-full pt-14 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile py-lg gap-lg text-dark-text-primary">
+<!-- Header / Title -->
+<div class="flex flex-col gap-unit">
+<h1 class="font-display-lg text-on-surface">Your Progress</h1>
+<p class="font-body-base text-dark-text-secondary">Track your mastery and study habits.</p>
+</div>
+<!-- Overview Stats Bento -->
+<div class="grid grid-cols-2 gap-sm">
+<div class="bg-dark-card border border-surface-container-high rounded-xl p-md flex flex-col justify-between aspect-square shadow-sm relative overflow-hidden">
+<div class="flex justify-between items-start z-10">
+<div class="bg-surface-container-low/20 p-sm rounded-full">
+<span class="material-symbols-outlined text-accent-emerald text-[24px]">target</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs z-10 mt-auto">
+<span class="font-stat-number text-[32px] text-on-surface">84%</span>
+<span class="font-body-medium text-dark-text-secondary text-[13px]">Overall Accuracy</span>
+</div>
+<!-- Decorative gradient blur -->
+<div class="absolute -bottom-8 -right-8 w-32 h-32 bg-accent-emerald/20 rounded-full blur-2xl"></div>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="bg-dark-card border border-surface-container-high rounded-xl p-md flex-1 shadow-sm flex flex-col justify-center gap-xs">
+<span class="font-body-medium text-dark-text-secondary text-[12px] uppercase tracking-wider">Current Streak</span>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-accent-amber fill-accent-amber text-[20px]">local_fire_department</span>
+<span class="font-display-md text-on-surface">12 Days</span>
+</div>
+</div>
+<div class="bg-dark-card border border-surface-container-high rounded-xl p-md flex-1 shadow-sm flex flex-col justify-center gap-xs">
+<span class="font-body-medium text-dark-text-secondary text-[12px] uppercase tracking-wider">Cards Reviewed</span>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-accent-violet text-[20px]">style</span>
+<span class="font-display-md text-on-surface">1,240</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Accuracy Trend Chart -->
+<div class="bg-dark-card border border-surface-container-high rounded-xl p-md flex flex-col gap-md shadow-sm">
+<div class="flex justify-between items-center">
+<h2 class="font-section-title text-on-surface">Accuracy Trend</h2>
+<select class="bg-transparent text-dark-text-secondary font-body-medium text-[13px] outline-none">
+<option class="bg-dark-card" value="7d">Last 7 Days</option>
+<option class="bg-dark-card" value="30d">Last 30 Days</option>
+</select>
+</div>
+<!-- SVG Chart Placeholder -->
+<div class="w-full h-32 relative flex items-end">
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<!-- Grid Lines -->
+<line stroke="#ffffff" stroke-opacity="0.1" stroke-width="0.5" x1="0" x2="100" y1="25" y2="25"></line>
+<line stroke="#ffffff" stroke-opacity="0.1" stroke-width="0.5" x1="0" x2="100" y1="50" y2="50"></line>
+<line stroke="#ffffff" stroke-opacity="0.1" stroke-width="0.5" x1="0" x2="100" y1="75" y2="75"></line>
+<!-- Line Chart -->
+<path d="M0,80 Q10,75 20,60 T40,50 T60,30 T80,40 T100,20" fill="none" stroke="#10B981" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<!-- Area Fill -->
+<path d="M0,80 Q10,75 20,60 T40,50 T60,30 T80,40 T100,20 L100,100 L0,100 Z" fill="url(#emeraldGradient)" opacity="0.4"></path>
+<defs>
+<lineargradient id="emeraldGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#10B981"></stop>
+<stop offset="100%" stop-color="#10B981" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Data Points & Tooltips (Interactive) -->
+<div class="absolute inset-0 flex justify-between items-end px-1 pb-1">
+<div class="w-2 h-2 rounded-full bg-accent-emerald shadow-[0_0_8px_rgba(16,185,129,0.8)] z-10" style="margin-bottom: 20%; transform: translateY(50%);"></div>
+<div class="w-2 h-2 rounded-full bg-accent-emerald shadow-[0_0_8px_rgba(16,185,129,0.8)] z-10" style="margin-bottom: 40%; transform: translateY(50%);"></div>
+<div class="w-2 h-2 rounded-full bg-accent-emerald shadow-[0_0_8px_rgba(16,185,129,0.8)] z-10" style="margin-bottom: 50%; transform: translateY(50%);"></div>
+<div class="w-2 h-2 rounded-full bg-accent-emerald shadow-[0_0_8px_rgba(16,185,129,0.8)] z-10" style="margin-bottom: 70%; transform: translateY(50%);"></div>
+<div class="w-2 h-2 rounded-full bg-accent-emerald shadow-[0_0_8px_rgba(16,185,129,0.8)] z-10" style="margin-bottom: 60%; transform: translateY(50%);"></div>
+<div class="w-2 h-2 rounded-full bg-surface shadow-[0_0_0_2px_#10B981] z-10" style="margin-bottom: 80%; transform: translateY(50%);">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] font-body-medium px-2 py-1 rounded shadow-md whitespace-nowrap">88%</div>
+</div>
+</div>
+</div>
+<div class="flex justify-between text-[10px] font-body-base text-dark-text-secondary mt-1">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Today</span>
+</div>
+</div>
+<!-- Subject Mastery -->
+<div class="flex flex-col gap-md">
+<h2 class="font-section-title text-on-surface">Subject Mastery</h2>
+<div class="bg-dark-card border border-surface-container-high rounded-xl p-md flex flex-col gap-md shadow-sm">
+<!-- Subject Item -->
+<div class="flex flex-col gap-unit">
+<div class="flex justify-between items-center">
+<span class="font-body-medium text-on-surface">Cellular Biology</span>
+<span class="font-label-mono text-dark-text-secondary text-[12px]">92%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-low/30 rounded-full overflow-hidden">
+<div class="h-full bg-accent-emerald rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<!-- Subject Item -->
+<div class="flex flex-col gap-unit">
+<div class="flex justify-between items-center">
+<span class="font-body-medium text-on-surface">Organic Chemistry</span>
+<span class="font-label-mono text-dark-text-secondary text-[12px]">68%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-low/30 rounded-full overflow-hidden flex">
+<div class="h-full bg-accent-emerald rounded-l-full" style="width: 40%;"></div>
+<div class="h-full bg-accent-amber" style="width: 28%;"></div>
+<!-- Remaining is background -->
+</div>
+</div>
+<!-- Subject Item -->
+<div class="flex flex-col gap-unit">
+<div class="flex justify-between items-center">
+<span class="font-body-medium text-on-surface">Physics 101</span>
+<span class="font-label-mono text-dark-text-secondary text-[12px]">45%</span>
+</div>
+<div class="w-full h-2 bg-surface-container-low/30 rounded-full overflow-hidden flex">
+<div class="h-full bg-accent-emerald rounded-l-full" style="width: 20%;"></div>
+<div class="h-full bg-accent-amber" style="width: 15%;"></div>
+<div class="h-full bg-error" style="width: 10%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacing for bottom nav -->
+<div class="h-20"></div>
+</div>
+<script>
+    // Ensure the Progress tab is active in the nav (simulate behavior since nav is external)
+    document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.querySelector('nav');
+        if (nav) {
+             const tabs = nav.querySelectorAll('a');
+             tabs.forEach(tab => {
+                 tab.classList.remove('text-primary');
+                 if(tab.dataset.path === 'progress') {
+                     // In dark mode context, we might want a different active color, but sticking to shell's logic if possible, or forcing it here:
+                     tab.classList.add('text-primary');
+                     tab.querySelector('span:not(.text-\\[10px\\])').style.fontVariationSettings = "'FILL' 1";
+                 }
+             });
+        }
+    });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pb-safe rounded-t-xl shadow-[0_-1px_8px_rgba(0,0,0,0.2)] border-t border-surface-container" data-active-classes="text-primary"><div class="flex justify-between items-center h-16 px-gutter"><a class="flex flex-col items-center justify-center gap-1 flex-1 text-on-surface-variant transition-colors" data-path="home" href="#"><span class="material-symbols-outlined">home</span><span class="text-[10px] font-body-medium">Home</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 text-on-surface-variant transition-colors" data-path="practice" href="#"><span class="material-symbols-outlined">edit_note</span><span class="text-[10px] font-body-medium">Practice</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 text-on-surface-variant transition-colors" data-path="review" href="#"><span class="material-symbols-outlined">history_edu</span><span class="text-[10px] font-body-medium">Review</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 flex-1 transition-colors text-primary" data-path="progress" href="#"><span class="material-symbols-outlined">leaderboard</span><span class="text-[10px] font-body-medium">Progress</span></a><a class="flex flex-col items-center justify-center gap-1 flex-1 text-on-surface-variant transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined">person</span><span class="text-[10px] font-body-medium">Profile</span></a></div></nav></body></html>
