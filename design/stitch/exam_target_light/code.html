@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#000000","surface-container-low":"#F0F3FF","dark-surface":"#131B2E","secondary-fixed":"#dae2fc","inverse-on-surface":"#ecf1ff","on-primary-fixed-variant":"#474747","on-surface-variant":"#4c4546","accent-amber":"#F59E0B","selection-blue":"#D0E1FB","background":"#F9F9FF","on-tertiary-container":"#9466ff","on-primary":"#ffffff","surface-container-lowest":"#ffffff","dark-surface-low":"#17223B","outline-variant":"#cfc4c5","on-tertiary-fixed":"#23005c","on-error":"#ffffff","inverse-surface":"#263143","surface-variant":"#d8e3fb","surface-tint":"#5e5e5e","accent-violet":"#8B5CF6","error-container":"#ffdad6","outline-dark":"#76777D","tertiary-fixed":"#e9ddff","dark-text-primary":"#F0F3FF","surface-container":"#E7EEFF","surface":"#f9f9ff","outline-light":"#C6C6CD","on-primary-container":"#848484","card":"#FFFFFF","surface-container-highest":"#d8e3fb","dark-card":"#1A243A","inverse-primary":"#c6c6c6","secondary":"#565e74","on-tertiary":"#ffffff","on-surface":"#111c2d","error":"#BA1A1A","on-secondary-fixed-variant":"#3f465b","on-primary-fixed":"#1b1b1b","text-secondary":"#45464D","primary-fixed-dim":"#c6c6c6","on-error-container":"#93000a","primary-fixed":"#e2e2e2","surface-bright":"#f9f9ff","tertiary-container":"#23005c","secondary-fixed-dim":"#bec6e0","accent-emerald":"#10B981","surface-container-high":"#dee8ff","on-secondary":"#ffffff","dark-text-secondary":"#A2AAB8","secondary-container":"#d8dff9","on-tertiary-fixed-variant":"#5516be","on-secondary-container":"#5a6278","tertiary-fixed-dim":"#d0bcff","primary-container":"#1b1b1b","primary":"#000000","surface-dim":"#cfdaf2","on-secondary-fixed":"#131b2e","on-background":"#111c2d","outline":"#7e7576"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-desktop":"32px",gutter:"16px","margin-mobile":"16px",lg:"24px",unit:"4px",xs:"4px",md:"16px",xl:"32px",sm:"8px"},fontFamily:{"section-title":["Inter"],"label-mono":["JetBrains Mono"],"display-lg":["Inter"],caption:["Inter"],"stat-number":["Inter"],"body-medium":["Inter"],"body-secondary":["Inter"],"body-base":["Inter"],"display-md":["Inter"]}}}}</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#F9F9FF;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-base text-on-surface flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-sm"><img alt="Logo" class="w-7 h-7 object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WMIvyUNzP1CyqYxYgGaRPGP57edylyDRHQlFwFaHOEoOY_FaH7n9wy4qeAQZxhP-yov7DY32xc3z5_bLYZmcYFjy3JQAjad3QC2qOiESL8VH3niUujyjHLTURUo4aNvaUZz2uBqsPLHO60K89w4R9RwImizaU3A4msfFAmBkEOAl_Nz_IjGw8MHBU5ZCt2tHAr5-XQBW1u2R3XaWkECo0xhNFv093B5gQpZxHmA3oSMZzqYxOwZM0Mp-4cYSY12OXbVtgiW0XNnQ"/><span class="font-display-md text-body-medium tracking-tight">Home Dashboard</span></div><div class="flex items-center gap-md"><div class="flex items-center gap-xs px-sm py-xs bg-surface-container-low rounded-full"><span class="material-symbols-outlined text-[18px] text-accent-amber">local_fire_department</span><span class="text-caption font-body-medium">12</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WMIvyUNzP1CyqYxYgGaRPGP57edylyDRHQlFwFaHOEoOY_FaH7n9wy4qeAQZxhP-yov7DY32xc3z5_bLYZmcYFjy3JQAjad3QC2qOiESL8VH3niUujyjHLTURUo4aNvaUZz2uBqsPLHO60K89w4R9RwImizaU3A4msfFAmBkEOAl_Nz_IjGw8MHBU5ZCt2tHAr5-XQBW1u2R3XaWkECo0xhNFv093B5gQpZxHmA3oSMZzqYxOwZM0Mp-4cYSY12OXbVtgiW0XNnQ"/></div></div></header><main class="flex flex-col relative w-full pt-14 pb-24 bg-surface"><div class="flex flex-col w-full relative min-h-full pb-32 px-margin-mobile">
+<div class="mt-xl mb-md">
+<h1 class="font-display-md text-display-md text-on-surface">What are you preparing for?</h1>
+<p class="font-body-secondary text-body-secondary text-on-surface-variant mt-sm">Select your target exam to customize your learning OS.</p>
+</div>
+<div class="flex flex-col gap-md" id="exam-list">
+<!-- JAMB UTME -->
+<div class="exam-card flex items-center gap-md p-md bg-card rounded-xl shadow-sm transition-all duration-200 cursor-pointer" data-selected="false">
+<div class="icon-container flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">JAMB UTME</span>
+<span class="font-caption text-caption text-text-secondary truncate">Nigerian university admissions</span>
+</div>
+</div>
+<!-- WAEC/WASSCE -->
+<div class="exam-card flex items-center gap-md p-md bg-card rounded-xl shadow-sm transition-all duration-200 cursor-pointer" data-selected="false">
+<div class="icon-container flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">WAEC/WASSCE</span>
+<span class="font-caption text-caption text-text-secondary truncate">West African senior school certificate</span>
+</div>
+</div>
+<!-- NECO -->
+<div class="exam-card flex items-center gap-md p-md bg-card rounded-xl shadow-sm transition-all duration-200 cursor-pointer" data-selected="false">
+<div class="icon-container flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">assignment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">NECO</span>
+<span class="font-caption text-caption text-text-secondary truncate">National examinations council</span>
+</div>
+</div>
+<!-- Post-UTME -->
+<div class="exam-card flex items-center gap-md p-md bg-card rounded-xl shadow-sm transition-all duration-200 cursor-pointer" data-selected="false">
+<div class="icon-container flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">Post-UTME</span>
+<span class="font-caption text-caption text-text-secondary truncate">University-specific screening</span>
+</div>
+</div>
+<!-- University Course -->
+<div class="exam-card flex items-center gap-md p-md bg-card rounded-xl shadow-sm transition-all duration-200 cursor-pointer" data-selected="false">
+<div class="icon-container flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">library_books</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">University course</span>
+<span class="font-caption text-caption text-text-secondary truncate">Undergraduate semester exams</span>
+</div>
+</div>
+<!-- Just practicing -->
+<div class="exam-card flex items-center gap-md p-md bg-card rounded-xl shadow-sm transition-all duration-200 cursor-pointer" data-selected="false">
+<div class="icon-container flex items-center justify-center w-12 h-12 rounded-full bg-surface-container-low text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-medium text-body-medium text-on-surface truncate">Just practicing</span>
+<span class="font-caption text-caption text-text-secondary truncate">General knowledge and skill building</span>
+</div>
+</div>
+</div>
+<!-- Pinned Action Button -->
+<div class="fixed bottom-[88px] left-0 right-0 px-margin-mobile z-40 pointer-events-none">
+<button class="w-full h-[52px] bg-primary text-on-primary font-body-medium text-body-medium rounded-lg flex items-center justify-center transition-all opacity-50 shadow-lg pointer-events-auto" disabled="" id="continue-btn">
+      Continue
+    </button>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.exam-card');
+    const continueBtn = document.getElementById('continue-btn');
+    
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        // Deselect all cards
+        cards.forEach(c => {
+          c.setAttribute('data-selected', 'false');
+          c.classList.remove('bg-selection-blue', 'shadow-[inset_0_0_0_2px_#111c2d]');
+          c.classList.add('bg-card', 'shadow-sm');
+          
+          const icon = c.querySelector('.icon-container');
+          icon.classList.remove('bg-surface', 'text-primary');
+          icon.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+
+        // Select clicked card
+        card.setAttribute('data-selected', 'true');
+        card.classList.remove('bg-card', 'shadow-sm');
+        card.classList.add('bg-selection-blue', 'shadow-[inset_0_0_0_2px_#111c2d]');
+        
+        const icon = card.querySelector('.icon-container');
+        icon.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        icon.classList.add('bg-surface', 'text-primary');
+
+        // Enable button
+        continueBtn.removeAttribute('disabled');
+        continueBtn.classList.remove('opacity-50');
+      });
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)] rounded-t-xl" data-active-classes="text-primary font-body-medium"><div class="flex justify-around items-center h-16 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center gap-xs transition-all text-primary font-body-medium" data-path="home-dashboard" href="#"><span class="material-symbols-outlined">home</span><span class="text-caption">Home</span></a><a class="flex flex-col items-center justify-center gap-xs text-on-surface-variant transition-all" data-path="practice-hub" href="#"><span class="material-symbols-outlined">edit_square</span><span class="text-caption">Practice</span></a><a class="flex flex-col items-center justify-center gap-xs text-on-surface-variant transition-all" data-path="review-center" href="#"><span class="material-symbols-outlined">rebase_edit</span><span class="text-caption">Review</span></a><a class="flex flex-col items-center justify-center gap-xs text-on-surface-variant transition-all" data-path="learning-progress" href="#"><span class="material-symbols-outlined">analytics</span><span class="text-caption">Progress</span></a><a class="flex flex-col items-center justify-center gap-xs text-on-surface-variant transition-all" data-path="user-profile" href="#"><span class="material-symbols-outlined">person_book</span><span class="text-caption">Profile</span></a></div></nav></body></html>

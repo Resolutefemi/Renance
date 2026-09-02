@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "accent-violet": "#8B5CF6", "surface-container": "#e7eeff", "on-tertiary": "#ffffff", "dark-surface": "#131B2E", "tertiary-fixed-dim": "#d0bcff", "on-surface": "#111c2d", "outline": "#7e7576", "surface-bright": "#f9f9ff", "on-secondary": "#ffffff", "surface": "#f9f9ff", "on-secondary-fixed-variant": "#3f465b", "error-container": "#ffdad6", "on-background": "#111c2d", "surface-container-lowest": "#ffffff", "surface-container-high": "#DEE8FF", "surface-variant": "#d8e3fb", "on-primary-container": "#848484", "error": "#BA1A1A", "inverse-primary": "#c6c6c6", "surface-dim": "#cfdaf2", "dark-card": "#1A243A", "primary-container": "#1b1b1b", "on-secondary-container": "#5a6278", "primary-fixed-dim": "#c6c6c6", "outline-variant": "#cfc4c5", "on-error": "#ffffff", "surface-tint": "#5e5e5e", "on-tertiary-fixed-variant": "#5516be", "tertiary-fixed": "#e9ddff", "tertiary": "#000000", "secondary-fixed-dim": "#bec6e0", "outline-light": "#C6C6CD", "on-primary-fixed": "#1b1b1b", "secondary-fixed": "#dae2fc", "text-secondary": "#45464D", "primary-fixed": "#e2e2e2", "on-tertiary-fixed": "#23005c", "dark-text-primary": "#F0F3FF", "secondary-container": "#d8dff9", "selection-blue": "#D0E1FB", "card": "#FFFFFF", "on-secondary-fixed": "#131b2e", "on-surface-variant": "#4c4546", "accent-emerald": "#10B981", "primary": "#000000", "surface-container-low": "#F0F3FF", "dark-text-secondary": "#A2AAB8", "inverse-on-surface": "#ecf1ff", "secondary": "#565e74", "surface-container-highest": "#d8e3fb", "outline-dark": "#76777D", "inverse-surface": "#263143", "on-tertiary-container": "#9466ff", "tertiary-container": "#23005c", "on-error-container": "#93000a", "background": "#F9F9FF", "dark-surface-low": "#17223B", "accent-amber": "#F59E0B", "on-primary-fixed-variant": "#474747", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "lg": "24px", "unit": "4px", "xs": "4px", "margin-desktop": "32px", "gutter": "16px", "xl": "32px", "margin-mobile": "16px", "sm": "8px", "md": "16px" }, "fontFamily": { "section-title": ["Inter"], "display-md": ["Inter"], "caption": ["Inter"], "body-secondary": ["Inter"], "label-mono": ["JetBrains Mono"], "body-base": ["Inter"], "display-lg": ["Inter"], "body-medium": ["Inter"], "stat-number": ["Inter"] }, "fontSize": { "section-title": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "caption": ["13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" }], "body-secondary": ["15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "label-mono": ["13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "500" }], "body-base": ["15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "display-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-medium": ["15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "600" }], "stat-number": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface min-h-screen flex flex-col font-body-base"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 flex items-center px-md gap-md"><button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container active:scale-95 transition-all text-on-surface" onclick="history.back()"><span class="material-symbols-outlined">arrow_back</span></button><h1 class="font-section-title text-on-surface">Session Detail</h1></div></header><main class="flex-1 pt-16 bg-surface-container-lowest"><div class="flex flex-col w-full pb-24">
+<!-- Header / Score Section -->
+<div class="relative w-full bg-dark-surface px-md pt-lg pb-xl flex flex-col items-center justify-center overflow-hidden">
+<!-- Geometric Confetti (Subtle, Animated) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" preserveaspectratio="none" viewbox="0 0 100 100">
+<style>
+            @keyframes drift {
+                0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+                20% { opacity: 0.8; }
+                80% { opacity: 0.8; }
+                100% { transform: translateY(-30px) rotate(90deg); opacity: 0; }
+            }
+            .confetti { fill: #8B5CF6; animation: drift 4s infinite linear; }
+            .confetti-2 { fill: #10B981; animation: drift 5s infinite linear; animation-delay: 1s; }
+            .confetti-3 { fill: #F59E0B; animation: drift 6s infinite linear; animation-delay: 2s; }
+        </style>
+<circle class="confetti" cx="20" cy="80" r="1.5"></circle>
+<rect class="confetti-2" height="3" width="3" x="70" y="90"></rect>
+<polygon class="confetti-3" points="40,90 42,86 44,90"></polygon>
+<circle class="confetti" cx="85" cy="70" r="1"></circle>
+<rect class="confetti-2" height="2" width="2" x="15" y="60"></rect>
+<polygon class="confetti-3" points="60,60 63,55 66,60"></polygon>
+</svg>
+<p class="font-label-mono text-dark-text-secondary uppercase tracking-widest text-xs mb-sm relative z-10">Diagnostic Complete</p>
+<div class="flex items-baseline gap-sm relative z-10">
+<span class="font-stat-number text-dark-text-primary text-6xl">68</span>
+<span class="font-stat-number text-dark-text-secondary text-2xl">%</span>
+</div>
+<div class="flex items-center gap-xs bg-surface-container-low/10 rounded-full px-3 py-1 mt-md relative z-10">
+<span class="material-symbols-outlined text-accent-emerald text-sm">trending_up</span>
+<span class="font-label-mono text-accent-emerald text-xs">+6 vs last attempt</span>
+</div>
+</div>
+<!-- Content Section -->
+<div class="px-md mt-6 flex flex-col gap-md">
+<!-- XP / Streak Card -->
+<div class="bg-card rounded-xl p-md shadow-[0px_1px_3px_0px_rgba(20,28,45,0.20)] flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-accent-amber/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-accent-amber" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<p class="font-body-medium text-on-surface">Experience Gained</p>
+<p class="font-caption text-text-secondary">Keep the momentum going</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-stat-number text-accent-amber text-lg">+85 XP</p>
+<p class="font-label-mono text-text-secondary text-[11px] flex items-center justify-end gap-1 mt-0.5">
+<span class="material-symbols-outlined text-accent-amber text-[14px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                Streak Day 12
+            </p>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-sm">
+<div class="bg-card rounded-xl p-md shadow-[0px_1px_3px_0px_rgba(20,28,45,0.20)] flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-1">timer</span>
+<span class="font-stat-number text-on-surface text-xl">42:15</span>
+<span class="font-caption text-text-secondary">Time Used</span>
+</div>
+<div class="bg-card rounded-xl p-md shadow-[0px_1px_3px_0px_rgba(20,28,45,0.20)] flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-secondary mb-1">target</span>
+<span class="font-stat-number text-on-surface text-xl">34/50</span>
+<span class="font-caption text-text-secondary">Correct Answers</span>
+</div>
+</div>
+<!-- Topic Breakdown -->
+<div class="bg-card rounded-xl p-md shadow-[0px_1px_3px_0px_rgba(20,28,45,0.20)] flex flex-col gap-md">
+<h3 class="font-section-title text-on-surface">Topic Breakdown</h3>
+<!-- Topic 1: Green -->
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-body-medium text-on-surface text-sm">Algebraic Foundations</span>
+<span class="font-label-mono text-text-secondary text-xs">92%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-accent-emerald h-full w-[92%] rounded-full"></div>
+</div>
+</div>
+<!-- Topic 2: Amber -->
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-body-medium text-on-surface text-sm">Data Analysis</span>
+<span class="font-label-mono text-text-secondary text-xs">65%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-accent-amber h-full w-[65%] rounded-full"></div>
+</div>
+</div>
+<!-- Topic 3: Red -->
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-body-medium text-on-surface text-sm">Advanced Geometry</span>
+<span class="font-label-mono text-text-secondary text-xs">38%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full w-[38%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons (Fixed Bottom) -->
+<div class="fixed bottom-0 left-0 right-0 p-md bg-gradient-to-t from-surface via-surface to-transparent z-40 pb-safe">
+<div class="flex flex-col gap-sm max-w-[640px] mx-auto">
+<button class="w-full h-[52px] bg-primary text-on-primary rounded-[10px] font-body-medium shadow-md flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+              Review Answers
+          </button>
+<button class="w-full h-[52px] bg-transparent text-on-surface rounded-[10px] font-body-medium shadow-sm flex items-center justify-center gap-2" style="box-shadow: inset 0 0 0 1px #C6C6CD;">
+              Retry Weak Topics
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div></main></body></html>

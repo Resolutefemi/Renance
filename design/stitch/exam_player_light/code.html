@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "accent-violet": "#8B5CF6", "surface-container": "#e7eeff", "on-tertiary": "#ffffff", "dark-surface": "#131B2E", "tertiary-fixed-dim": "#d0bcff", "on-surface": "#111c2d", "outline": "#7e7576", "surface-bright": "#f9f9ff", "on-secondary": "#ffffff", "surface": "#f9f9ff", "on-secondary-fixed-variant": "#3f465b", "error-container": "#ffdad6", "on-background": "#111c2d", "surface-container-lowest": "#ffffff", "surface-container-high": "#DEE8FF", "surface-variant": "#d8e3fb", "on-primary-container": "#848484", "error": "#BA1A1A", "inverse-primary": "#c6c6c6", "surface-dim": "#cfdaf2", "dark-card": "#1A243A", "primary-container": "#1b1b1b", "on-secondary-container": "#5a6278", "primary-fixed-dim": "#c6c6c6", "outline-variant": "#cfc4c5", "on-error": "#ffffff", "surface-tint": "#5e5e5e", "on-tertiary-fixed-variant": "#5516be", "tertiary-fixed": "#e9ddff", "tertiary": "#000000", "secondary-fixed-dim": "#bec6e0", "outline-light": "#C6C6CD", "on-primary-fixed": "#1b1b1b", "secondary-fixed": "#dae2fc", "text-secondary": "#45464D", "primary-fixed": "#e2e2e2", "on-tertiary-fixed": "#23005c", "dark-text-primary": "#F0F3FF", "secondary-container": "#d8dff9", "selection-blue": "#D0E1FB", "card": "#FFFFFF", "on-secondary-fixed": "#131b2e", "on-surface-variant": "#4c4546", "accent-emerald": "#10B981", "primary": "#000000", "surface-container-low": "#F0F3FF", "dark-text-secondary": "#A2AAB8", "inverse-on-surface": "#ecf1ff", "secondary": "#565e74", "surface-container-highest": "#d8e3fb", "outline-dark": "#76777D", "inverse-surface": "#263143", "on-tertiary-container": "#9466ff", "tertiary-container": "#23005c", "on-error-container": "#93000a", "background": "#F9F9FF", "dark-surface-low": "#17223B", "accent-amber": "#F59E0B", "on-primary-fixed-variant": "#474747", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "lg": "24px", "unit": "4px", "xs": "4px", "margin-desktop": "32px", "gutter": "16px", "xl": "32px", "margin-mobile": "16px", "sm": "8px", "md": "16px" }, "fontFamily": { "section-title": ["Inter"], "display-md": ["Inter"], "caption": ["Inter"], "body-secondary": ["Inter"], "label-mono": ["JetBrains Mono"], "body-base": ["Inter"], "display-lg": ["Inter"], "body-medium": ["Inter"], "stat-number": ["Inter"] }, "fontSize": { "section-title": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "caption": ["13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" }], "body-secondary": ["15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "label-mono": ["13px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "500" }], "body-base": ["15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "display-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-medium": ["15px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "600" }], "stat-number": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface min-h-screen flex flex-col font-body-base"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 flex items-center px-md gap-md"><button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container active:scale-95 transition-all text-on-surface" onclick="history.back()"><span class="material-symbols-outlined">arrow_back</span></button><h1 class="font-section-title text-on-surface">Active Quiz</h1></div></header><main class="flex-1 pt-16 bg-surface-container-lowest"><div class="flex flex-col w-full h-full relative">
+<!-- Exam Header (Sticky) -->
+<div class="sticky top-0 z-40 bg-dark-surface text-dark-text-primary px-md py-sm shadow-[0_1px_8px_rgba(0,0,0,0.1)] flex flex-col gap-sm">
+<div class="flex justify-between items-center w-full">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] opacity-70">assignment</span>
+<span class="font-label-mono text-[14px]">Q14 / 120</span>
+</div>
+<div class="flex items-center gap-xs bg-dark-card px-sm py-[2px] rounded-full text-accent-emerald">
+<span class="material-symbols-outlined text-[16px] animate-pulse">timer</span>
+<span class="font-label-mono text-[14px] font-bold" id="exam-timer">00:41:12</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-dark-card h-[4px] rounded-full overflow-hidden">
+<div class="bg-dark-text-primary h-full rounded-full transition-all duration-500 ease-out" style="width: 11.6%;"></div>
+</div>
+</div>
+<!-- Scrollable Question Area -->
+<div class="flex-1 overflow-y-auto px-md py-lg pb-[100px] flex flex-col gap-lg">
+<!-- Question Card -->
+<div class="bg-card rounded-[12px] p-lg shadow-[0_1px_3px_0px_rgba(20,28,45,0.20)]">
+<h2 class="font-display-md text-on-surface mb-md">
+        Which of the following cellular processes is most directly responsible for the initial cleavage of glucose during glycolysis?
+      </h2>
+<p class="font-body-base text-text-secondary">
+        Consider the sequence of enzymatic reactions in the cytoplasm and their respective energy requirements.
+      </p>
+</div>
+<!-- Options Stack -->
+<div class="flex flex-col gap-sm" id="option-group">
+<!-- Option A -->
+<button class="w-full flex items-center p-md bg-card rounded-[10px] shadow-[0_1px_3px_0px_rgba(20,28,45,0.20)] transition-all duration-200 hover:bg-surface-variant active:scale-[0.98] group text-left" onclick="selectOption(this)">
+<div class="w-10 h-10 flex-shrink-0 bg-surface-container rounded-[8px] flex items-center justify-center mr-md group-data-[selected=true]:bg-primary group-data-[selected=true]:text-on-primary transition-colors">
+<span class="font-label-mono text-[16px]">A</span>
+</div>
+<span class="font-body-base text-on-surface flex-1">Oxidative phosphorylation</span>
+</button>
+<!-- Option B (Selected) -->
+<button class="w-full flex items-center p-md bg-selection-blue rounded-[10px] shadow-[0_1px_3px_0px_rgba(20,28,45,0.20)] transition-all duration-200 active:scale-[0.98] group text-left ring-2 ring-primary ring-inset" data-selected="true" onclick="selectOption(this)">
+<div class="w-10 h-10 flex-shrink-0 bg-primary text-on-primary rounded-[8px] flex items-center justify-center mr-md transition-colors">
+<span class="font-label-mono text-[16px]">B</span>
+</div>
+<span class="font-body-base text-on-surface flex-1 font-semibold">Substrate-level phosphorylation via Hexokinase</span>
+</button>
+<!-- Option C -->
+<button class="w-full flex items-center p-md bg-card rounded-[10px] shadow-[0_1px_3px_0px_rgba(20,28,45,0.20)] transition-all duration-200 hover:bg-surface-variant active:scale-[0.98] group text-left" onclick="selectOption(this)">
+<div class="w-10 h-10 flex-shrink-0 bg-surface-container rounded-[8px] flex items-center justify-center mr-md group-data-[selected=true]:bg-primary group-data-[selected=true]:text-on-primary transition-colors">
+<span class="font-label-mono text-[16px]">C</span>
+</div>
+<span class="font-body-base text-on-surface flex-1">The Krebs Cycle</span>
+</button>
+<!-- Option D -->
+<button class="w-full flex items-center p-md bg-card rounded-[10px] shadow-[0_1px_3px_0px_rgba(20,28,45,0.20)] transition-all duration-200 hover:bg-surface-variant active:scale-[0.98] group text-left" onclick="selectOption(this)">
+<div class="w-10 h-10 flex-shrink-0 bg-surface-container rounded-[8px] flex items-center justify-center mr-md group-data-[selected=true]:bg-primary group-data-[selected=true]:text-on-primary transition-colors">
+<span class="font-label-mono text-[16px]">D</span>
+</div>
+<span class="font-body-base text-on-surface flex-1">Electron transport chain</span>
+</button>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/95 backdrop-blur-md pb-safe shadow-[0_-1px_12px_rgba(0,0,0,0.05)] z-40">
+<div class="flex items-center justify-between p-md gap-sm">
+<div class="flex gap-sm w-1/2">
+<button class="flex-1 h-[52px] flex items-center justify-center gap-xs rounded-[10px] text-on-surface ring-1 ring-outline-light hover:bg-surface-variant active:scale-95 transition-all" onclick="toggleFlag(this)">
+<span class="material-symbols-outlined text-[20px]" id="flag-icon">flag</span>
+<span class="font-body-medium">Flag</span>
+</button>
+<button class="flex-1 h-[52px] flex items-center justify-center gap-xs rounded-[10px] text-on-surface ring-1 ring-outline-light hover:bg-surface-variant active:scale-95 transition-all">
+<span class="font-body-medium">Skip</span>
+</button>
+</div>
+<button class="w-1/2 h-[52px] bg-primary text-on-primary rounded-[10px] flex items-center justify-center gap-xs font-body-medium hover:opacity-90 active:scale-95 transition-all shadow-md">
+<span>Next</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<script>
+    function selectOption(clickedBtn) {
+      const container = document.getElementById('option-group');
+      const buttons = container.querySelectorAll('button');
+      
+      buttons.forEach(btn => {
+        // Reset all
+        btn.removeAttribute('data-selected');
+        btn.classList.remove('bg-selection-blue', 'ring-2', 'ring-primary', 'ring-inset');
+        btn.classList.add('bg-card');
+        
+        const letterDiv = btn.querySelector('div');
+        letterDiv.classList.remove('bg-primary', 'text-on-primary');
+        letterDiv.classList.add('bg-surface-container');
+        
+        const textSpan = btn.querySelector('span.flex-1');
+        textSpan.classList.remove('font-semibold');
+      });
+
+      // Set active
+      clickedBtn.setAttribute('data-selected', 'true');
+      clickedBtn.classList.remove('bg-card');
+      clickedBtn.classList.add('bg-selection-blue', 'ring-2', 'ring-primary', 'ring-inset');
+      
+      const activeLetterDiv = clickedBtn.querySelector('div');
+      activeLetterDiv.classList.remove('bg-surface-container');
+      activeLetterDiv.classList.add('bg-primary', 'text-on-primary');
+      
+      const activeTextSpan = clickedBtn.querySelector('span.flex-1');
+      activeTextSpan.classList.add('font-semibold');
+    }
+
+    function toggleFlag(btn) {
+      const icon = btn.querySelector('#flag-icon');
+      if (icon.style.fontVariationSettings) {
+        icon.style.fontVariationSettings = '';
+        icon.classList.remove('text-accent-amber');
+        btn.classList.remove('bg-surface-container-high');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        icon.classList.add('text-accent-amber');
+        btn.classList.add('bg-surface-container-high');
+      }
+    }
+  </script>
+</div></main></body></html>
