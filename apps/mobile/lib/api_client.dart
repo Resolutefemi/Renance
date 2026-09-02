@@ -193,4 +193,13 @@ class ApiClient {
     final data = await _send('GET', '/attempts/$attemptId') as Map<dynamic, dynamic>;
     return AttemptView.fromJson(data.cast<String, dynamic>());
   }
+
+  // ----------------------------------------------------------- gamification
+
+  /// Streaks, XP and badge ledger. The server returns a zero state for a
+  /// scholar with no graded attempts — never a 404.
+  Future<GamificationSummary> gamification() async {
+    final data = await _send('GET', '/me/gamification') as Map<dynamic, dynamic>;
+    return GamificationSummary.fromJson(data.cast<String, dynamic>());
+  }
 }

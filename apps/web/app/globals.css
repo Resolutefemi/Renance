@@ -108,3 +108,39 @@ body {
 .renance-arc-2 { animation: renance-arc-2 1.5s ease-in-out infinite; }
 .renance-arc-3 { animation: renance-arc-3 1.5s ease-in-out infinite; }
 .renance-rise { animation: renance-rise 0.45s ease-out both; }
+
+/* ------------------------------------------------------------------ */
+/* Gamification hub accents (design/stitch screen library tokens)      */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-accent-amber: #f59e0b;
+  --color-accent-emerald: #10b981;
+  --color-accent-violet: #8b5cf6;
+  --color-selection-blue: #d0e1fb;
+  --color-inverse-surface: #263143;
+  --color-inverse-on-surface: #ecf1ff;
+  --color-amber-tint: #fff3d6;
+  --color-emerald-tint: #e8f5e9;
+  --color-violet-tint: #e9ddff;
+}
+
+/* Material Symbols ligatures — same icon system as the Stitch designs. */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+.material-symbols-outlined.fill-current {
+  font-variation-settings: 'FILL' 1;
+}
