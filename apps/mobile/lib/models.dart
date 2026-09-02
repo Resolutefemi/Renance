@@ -286,3 +286,81 @@ class AttemptView {
             : ExamResult.fromJson((j['result'] as Map).cast<String, dynamic>()),
       );
 }
+
+// ---------------------------------------------------------------- gamification
+
+/// One scholar's streak/XP summary — mirrors GET /me/gamification `state`.
+class StreakState {
+  StreakState({
+    required this.currentStreak,
+    required this.bestStreak,
+    required this.totalXp,
+    required this.totalCorrect,
+    required this.attempts,
+    required this.level,
+    this.lastActive,
+  });
+
+  final int currentStreak;
+  final int bestStreak;
+  final int totalXp;
+  final int totalCorrect;
+  final int attempts;
+  final int level;
+
+  /// YYYY-MM-DD (UTC) of the last graded attempt, if any.
+  final String? lastActive;
+
+  factory StreakState.fromJson(Map<String, dynamic> j) => StreakState(
+        currentStreak: (j['currentStreak'] ?? 0) as int,
+        bestStreak: (j['bestStreak'] ?? 0) as int,
+        totalXp: (j['totalXp'] ?? 0) as int,
+        totalCorrect: (j['totalCorrect'] ?? 0) as int,
+        attempts: (j['attempts'] ?? 0) as int,
+        level: (j['level'] ?? 1) as int,
+        lastActive: j['lastActive'] as String?,
+      );
+
+  /// XP earned inside the CURRENT level (500 XP per level, server rule).
+  int get xpIntoLevel => totalXp % 500;
+
+  /// XP still needed to reach the next level.
+  int get xpToNextLevel => 500 - xpIntoLevel;
+
+  /// 0.0..1.0 progress through the current level.
+  double get levelProgress => xpIntoLevel / 500;
+}
+
+/// One earned badge in the ledger.
+class Award {
+  Award({required this.code, required this.earnedAt});
+
+  final String code;
+  final DateTime earnedAt;
+
+  factory Award.fromJson(Map<String, dynamic> j) => Award(
+        code: (j['code'] ?? '') as String,
+        earnedAt:
+            DateTime.parse((j['earnedAt'] ?? '') as String).toUtc(),
+      );
+}
+
+/// Full gamification payload: `state` + `awards[]`.
+class GamificationSummary {
+  GamificationSummary({required this.state, required this.awards});
+
+  final StreakState state;
+  final List<Award> awards;
+
+  bool holds(String code) => awards.any((Award a) => a.code == code);
+
+  factory GamificationSummary.fromJson(Map<String, dynamic> j) =>
+      GamificationSummary(
+        state: StreakState.fromJson(
+            ((j['state'] ?? <String, dynamic>{}) as Map).cast<String, dynamic>()),
+        awards: ((j['awards'] ?? <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) =>
+                Award.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}

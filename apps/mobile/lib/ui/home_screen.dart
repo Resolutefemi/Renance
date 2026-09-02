@@ -11,6 +11,7 @@ import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'onboarding_sheet.dart';
+import 'progress_screen.dart';
 import 'exam_screen.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
@@ -116,6 +117,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ],
         ),
         actions: <Widget>[
+          IconButton(
+            tooltip: 'Your progress',
+            icon: const Icon(Icons.leaderboard, size: 22),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => const ProgressScreen(),
+                ),
+              );
+            },
+          ),
           IconButton(
             tooltip: 'Sign out',
             icon: const Icon(Icons.logout, size: 20),
