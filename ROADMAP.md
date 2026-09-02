@@ -46,8 +46,8 @@ need no external services — they ship fastest.
 
 | # | Feature | Plan sketch | Status |
 | --- | --- | --- | --- |
-| 1 | **CLI bulk test builder** (`tools/qbuild`) | Go CLI: YAML/CSV in → validated exam packs + answer keys out, `--check` lints, `--import` writes into `data/`. This is also the loader for your 8,679 real questions (G2). | **NEXT** — next coding session |
-| 2 | **Gamification** (streaks, XP, badges) | Migration 0003 (`study.streaks`, `study.awards`), events from grading pipeline, badges computed on grade. Pure Postgres + existing handlers. | NEXT |
+| 1 | **CLI bulk test builder** (`cmd/qbuild`) | Go CLI: YAML/CSV in → validated exam packs + answer keys out, `check` lints, `build` writes pack+key+manifest and boot-verifies with the real loader. Loader for the 8,679 real questions (G2). | **LIVE** (2026-09-03) |
+| 2 | **Gamification** (streaks, XP, badges) | Migration 0003 (`study.streaks`, `study.awards`), `ApplyGrade` wired into the grading worker (best-effort), `GET /me/gamification` (zero state on first launch), 8 badge codes, unit-tested pure rules. | **LIVE** (2026-09-03, backend + endpoint; app UI surfaces via gamification_hub designs) |
 | 3 | **Spaced repetition** | SM-2 scheduling on attempt topics; migration 0004 `study.review_queue`; nightly-friendly job endpoint; app + web "Review due today". | NEXT (after gamification schema) |
 | 4 | **Syllabus mapping** | Tag `data/questions/*.json` with syllabus nodes (WAEC/JAMB topic trees as static JSON); API exposes `/syllabus/{exam}`; results screen links weak topics. | NEXT |
 | 5 | **Adaptive UI** | Difficulty weighting from graded attempts already in DB; order question bundles by weak-topic-first. Pure server logic on existing tables. | NEXT |

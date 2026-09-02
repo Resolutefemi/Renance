@@ -6,6 +6,7 @@
 //	POST   /auth/register          {username, password}   ← THE ONLY FIELDS
 //	POST   /auth/login             {username, password}
 //	GET    /me
+//	GET    /me/gamification     -> streaks, XP, badges (zero state on first launch)
 //	PUT    /me/profile             {fullName, institution, gradeLevel, exams[]}
 //	GET    /manifest
 //	GET    /bundles/{code}
@@ -73,6 +74,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /auth/google", s.handleGoogleAuth)
 
 	mux.HandleFunc("GET /me", s.auth(s.handleMe))
+	mux.HandleFunc("GET /me/gamification", s.auth(s.handleGamification))
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
 	mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))
 	mux.HandleFunc("GET /bundles/{code}", s.auth(s.handleBundle))
