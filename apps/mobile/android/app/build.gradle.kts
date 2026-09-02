@@ -14,6 +14,19 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    signingConfigs {
+        // Fixed release key committed with the repo (public OSS MVP): keeps
+        // the SHA-1 fingerprint stable across CI runners, which is what the
+        // Google OAuth "Android client" is registered against. Rotate to a
+        // secret-managed keystore before Play Store distribution.
+        create("release") {
+            storeFile = file("renance.keystore")
+            storePassword = "renance-keystore"
+            keyAlias = "renance"
+            keyPassword = "renance-keystore"
+        }
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "dev.renance.renance"
@@ -31,9 +44,7 @@ android {
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 }

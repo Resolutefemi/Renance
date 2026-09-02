@@ -121,6 +121,19 @@ class ApiClient {
     );
   }
 
+  /// Exchanges a Google ID token (from google_sign_in) for a Renance
+  /// session — the server verifies it against Google's JWKS and issues
+  /// the same 12h JWT the credential flow returns.
+  Future<AuthTokens> authWithGoogle(String idToken) async {
+    final data = await _send('POST', '/auth/google',
+        body: <String, String>{'credential': idToken},
+        auth: false) as Map<dynamic, dynamic>;
+    return AuthTokens(
+      token: (data['token'] ?? '') as String,
+      user: AppUser.fromJson((data['user'] as Map).cast<String, dynamic>()),
+    );
+  }
+
   Future<MeResult> me() async {
     final data = await _send('GET', '/me') as Map<dynamic, dynamic>;
     return MeResult.fromJson(data.cast<String, dynamic>());

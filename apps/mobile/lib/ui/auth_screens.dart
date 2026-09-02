@@ -4,9 +4,11 @@
 library;
 
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 import '../api_client.dart';
+import '../config.dart';
 import '../models.dart';
 import '../controllers.dart';
 import '../storage.dart';
@@ -134,6 +136,46 @@ class _PasswordFieldState extends State<_PasswordField> {
   }
 }
 
+/// Google sign-in button — rendered only when GOOGLE_WEB_CLIENT_ID was
+/// baked at build time, mirroring the web app's graceful degradation.
+class _GoogleButton extends StatelessWidget {
+  const _GoogleButton({required this.onPressed});
+
+  final Future<void> Function() onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton.icon(
+      onPressed: onPressed,
+      icon: const Icon(Icons.language, size: 18),
+      label: const Text('Continue with Google'),
+    );
+  }
+}
+
+/// Runs the Google Identity Services flow and exchanges the ID token for a
+/// Renance session. Returns false when the user cancelled the sheet.
+Future<bool> _runGoogleSignIn(
+  BuildContext context, {
+  required void Function(String message) onError,
+}) async {
+  final ApiClient api = context.read<ApiClient>();
+  final GoogleSignInAccount? account =
+      await GoogleSignIn(serverClientId: googleWebClientId).signIn();
+  if (account == null) return false;
+  final String? idToken = account.authentication.idToken;
+  if (idToken == null) {
+    onError('Google did not return an ID token — try again');
+    return false;
+  }
+  final AuthTokens res = await api.authWithGoogle(idToken);
+  final SessionStore session = context.read<SessionStore>();
+  await session.save(res.token, res.user);
+  if (!context.mounted) return true;
+  await Navigator.of(context).pushReplacementNamed('/home');
+  return true;
+}
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -183,6 +225,28 @@ class _LoginScreenState extends State<LoginScreen> {
     sync.refreshPendingCount().ignore();
   }
 
+  Future<void> _signInWithGoogle() async {
+    if (_busy) return;
+    setState(() {
+      _busy = true;
+      _error = null;
+    });
+    final SyncController sync = context.read<SyncController>();
+    try {
+      await _runGoogleSignIn(context, onError: (message) {
+        if (mounted) setState(() => _error = message);
+      });
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
+    } on NetworkException catch (e) {
+      if (mounted) setState(() => _error = e.message);
+    } catch (_) {
+      if (mounted) setState(() => _error = 'Google sign-in failed — try again');
+    }
+    if (mounted) setState(() => _busy = false);
+    sync.refreshPendingCount().ignore();
+  }
+
   @override
   Widget build(BuildContext context) {
     return AuthScaffold(
@@ -223,6 +287,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 : const Icon(Icons.arrow_forward, size: 18),
             label: Text(_busy ? 'Signing in…' : 'Sign In'),
           ),
+          if (googleWebClientId.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 10),
+            _GoogleButton(onPressed: _busy ? null : _signInWithGoogle),
+          ],
         ],
       ),
       footer: Row(
@@ -297,6 +365,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
   }
 
+  Future<void> _signUpWithGoogle() async {
+    if (_busy) return;
+    setState(() {
+      _busy = true;
+      _error = null;
+    });
+    try {
+      await _runGoogleSignIn(context, onError: (message) {
+        if (mounted) setState(() => _error = message);
+      });
+    } on ApiException catch (e) {
+      if (mounted) setState(() => _error = e.message);
+    } on NetworkException catch (e) {
+      if (mounted) setState(() => _error = e.message);
+    } catch (_) {
+      if (mounted) setState(() => _error = 'Google sign-in failed — try again');
+    }
+    if (mounted) setState(() => _busy = false);
+  }
+
   @override
   Widget build(BuildContext context) {
     return AuthScaffold(
@@ -338,6 +426,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 : const Icon(Icons.arrow_forward, size: 18),
             label: Text(_busy ? 'Creating…' : 'Start studying'),
           ),
+          if (googleWebClientId.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 10),
+            _GoogleButton(onPressed: _busy ? null : _signUpWithGoogle),
+          ],
           const SizedBox(height: 10),
           const Text(
             "We'll ask about your school and exams right after — one quick modal.",

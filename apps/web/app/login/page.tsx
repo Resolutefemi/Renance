@@ -1,11 +1,12 @@
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useCallback, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { api, ApiError } from '@/lib/api';
+import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { setSession } from '@/lib/session';
 import { RenanceMark } from '@/components/renance-logo';
+import { GoogleSignIn } from '@/components/google-signin';
 import { PersonIcon, LockIcon, ArrowIcon, EyeIcon } from '@/components/icons';
 
 export default function LoginPage() {
@@ -15,6 +16,23 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+
+  // Stable identity for the GIS callback — never re-initialize mid-session.
+  const onGoogleCredential = useCallback(
+    async (credential: string) => {
+      setError(null);
+      setBusy(true);
+      try {
+        const res = await authWithGoogle(credential);
+        setSession(res.token, res.user);
+        router.replace('/dashboard');
+      } catch (err) {
+        setError(err instanceof ApiError ? err.message : 'Google sign-in failed — check the connection.');
+        setBusy(false);
+      }
+    },
+    [router],
+  );
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -123,6 +141,9 @@ export default function LoginPage() {
               </>
             )}
           </button>
+
+          {/* Google sign-in — hidden unless the client ID is baked in */}
+          <GoogleSignIn onCredential={onGoogleCredential} />
         </form>
 
         <p className="mt-10 text-center text-sm text-on-surface-variant">

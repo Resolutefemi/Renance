@@ -1,11 +1,12 @@
 'use client';
 
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { api, ApiError } from '@/lib/api';
+import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { setSession } from '@/lib/session';
 import { RenanceMark } from '@/components/renance-logo';
+import { GoogleSignIn } from '@/components/google-signin';
 import { PersonIcon, LockIcon, EyeIcon } from '@/components/icons';
 
 export default function RegisterPage() {
@@ -19,6 +20,23 @@ export default function RegisterPage() {
   useEffect(() => {
     document.title = 'Create your account · Renance';
   }, []);
+
+  // Stable identity for the GIS callback — never re-initialize mid-signup.
+  const onGoogleCredential = useCallback(
+    async (credential: string) => {
+      setError(null);
+      setBusy(true);
+      try {
+        const res = await authWithGoogle(credential);
+        setSession(res.token, res.user);
+        router.replace('/dashboard');
+      } catch (err) {
+        setError(err instanceof ApiError ? err.message : 'Google sign-in failed — check the connection.');
+        setBusy(false);
+      }
+    },
+    [router],
+  );
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -125,6 +143,9 @@ export default function RegisterPage() {
               'Create Account'
             )}
           </button>
+
+          {/* Google sign-up — hidden unless the client ID is baked in */}
+          <GoogleSignIn onCredential={onGoogleCredential} />
         </form>
 
         <p className="mt-6 text-center text-sm text-on-surface-variant">
