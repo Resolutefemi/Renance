@@ -56,8 +56,10 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         }
         // Google sign-in is OPTIONAL per deployment: unset GOOGLE_CLIENT_ID
         // keeps POST /auth/google cleanly disabled (503) with zero partial UI.
+        // The value may be a comma-separated list — the web OAuth client AND
+        // the Android client — and tokens minted for either are accepted.
         if cfg.GoogleClientID != "" {
-                s.google = googleid.New(cfg.GoogleClientID)
+                s.google = googleid.New(strings.Split(cfg.GoogleClientID, ",")...)
         }
         return s
 }

@@ -64,11 +64,14 @@ type jwksDoc struct {
         Keys []jwk `json:"keys"`
 }
 
-// Verifier caches Google's signing keys and checks tokens for one audience.
+// Verifier caches Google's signing keys and checks tokens against one or
+// more allowed audiences — the web OAuth client AND the Android client
+// (google_sign_in mints the ID token for whichever client initiated the
+// flow; accepting both keeps mobile sign-in working across client mixes).
 type Verifier struct {
-        clientID string
-        jwks     string
-        client   *http.Client
+        clientIDs map[string]struct{}
+        jwks      string
+        client    *http.Client
 
         mu        sync.Mutex
         keys      map[string]*rsa.PublicKey
@@ -76,16 +79,22 @@ type Verifier struct {
 }
 
 // New builds a Verifier against Google's production JWKS.
-func New(clientID string) *Verifier {
-        return NewWithJWKS(clientID, googleJWKS, http.DefaultClient)
+func New(clientIDs ...string) *Verifier {
+        return NewWithJWKS(clientIDs, googleJWKS, http.DefaultClient)
 }
 
 // NewWithJWKS exists for tests (httptest JWKS) and future region pinning.
-func NewWithJWKS(clientID, jwksURL string, client *http.Client) *Verifier {
+func NewWithJWKS(clientIDs []string, jwksURL string, client *http.Client) *Verifier {
         if client == nil {
                 client = http.DefaultClient
         }
-        return &Verifier{clientID: clientID, jwks: jwksURL, client: client}
+        ids := make(map[string]struct{}, len(clientIDs))
+        for _, id := range clientIDs {
+                if id = strings.TrimSpace(id); id != "" {
+                        ids[id] = struct{}{}
+                }
+        }
+        return &Verifier{clientIDs: ids, jwks: jwksURL, client: client}
 }
 
 // Verify signature-checks token against a cached (kid → key) table —
@@ -152,7 +161,7 @@ func (v *Verifier) Verify(ctx context.Context, token string) (*Claims, error) {
         }
         found := false
         for _, a := range c.audience {
-                if a == v.clientID {
+                if _, ok := v.clientIDs[a]; ok {
                         found = true
                         break
                 }

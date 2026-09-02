@@ -90,7 +90,7 @@ func idClaims(now time.Time, aud any) map[string]any {
 func TestVerifyHappyPath(t *testing.T) {
         k := newKeyMaterial(t, "kid-1")
         srv := jwksServer(t, k.jwkJSON)
-        v := NewWithJWKS("renance-client", srv.URL, srv.Client())
+        v := NewWithJWKS([]string{"renance-client"}, srv.URL, srv.Client())
 
         claims, err := v.Verify(context.Background(), k.sign(t, idClaims(time.Now(), "renance-client")))
         if err != nil {
@@ -104,7 +104,7 @@ func TestVerifyHappyPath(t *testing.T) {
 func TestVerifyWrongAudience(t *testing.T) {
         k := newKeyMaterial(t, "kid-1")
         srv := jwksServer(t, k.jwkJSON)
-        v := NewWithJWKS("renance-client", srv.URL, srv.Client())
+        v := NewWithJWKS([]string{"renance-client"}, srv.URL, srv.Client())
 
         _, err := v.Verify(context.Background(), k.sign(t, idClaims(time.Now(), "someone-else")))
         if err != ErrBadAudience {
@@ -112,10 +112,30 @@ func TestVerifyWrongAudience(t *testing.T) {
         }
 }
 
+// Real deployments register TWO clients (web + Android); a token minted
+// for either must be accepted, everything else rejected.
+func TestVerifyMultiAudience(t *testing.T) {
+        k := newKeyMaterial(t, "kid-1")
+        srv := jwksServer(t, k.jwkJSON)
+        v := NewWithJWKS([]string{"renance-web", " renance-android "}, srv.URL, srv.Client())
+
+        for _, aud := range []string{"renance-web", "renance-android"} {
+                if _, err := v.Verify(context.Background(), k.sign(t, idClaims(time.Now(), aud))); err != nil {
+                        t.Fatalf("verify aud %q: %v", aud, err)
+                }
+        }
+        if _, err := v.Verify(context.Background(), k.sign(t, idClaims(time.Now(), "renance-web,renance-android"))); err != ErrBadAudience {
+                t.Fatalf("comma-joined aud must not pass, got %v", err)
+        }
+        if _, err := v.Verify(context.Background(), k.sign(t, idClaims(time.Now(), "someone-else"))); err != ErrBadAudience {
+                t.Fatalf("want ErrBadAudience, got %v", err)
+        }
+}
+
 func TestVerifyExpired(t *testing.T) {
         k := newKeyMaterial(t, "kid-1")
         srv := jwksServer(t, k.jwkJSON)
-        v := NewWithJWKS("renance-client", srv.URL, srv.Client())
+        v := NewWithJWKS([]string{"renance-client"}, srv.URL, srv.Client())
 
         stale := idClaims(time.Now(), "renance-client")
         stale["exp"] = time.Now().Add(-time.Minute).Unix()
@@ -131,7 +151,7 @@ func TestVerifyBadSignature(t *testing.T) {
         // Attacker forges a token for the SAME kid but their own key; the
         // JWKS serves the honest key, so the signature must be rejected.
         srv := jwksServer(t, honest.jwkJSON)
-        v := NewWithJWKS("renance-client", srv.URL, srv.Client())
+        v := NewWithJWKS([]string{"renance-client"}, srv.URL, srv.Client())
 
         _, err := v.Verify(context.Background(), attacker.sign(t, idClaims(time.Now(), "renance-client")))
         if err != ErrBadSig {
@@ -151,7 +171,7 @@ func TestVerifyKeyRotationTriggersRefresh(t *testing.T) {
                 t.Fatalf("marshal: %v", err)
         }
         srv := jwksServer(t, old.jwkJSON, string(both))
-        v := NewWithJWKS("renance-client", srv.URL, srv.Client())
+        v := NewWithJWKS([]string{"renance-client"}, srv.URL, srv.Client())
 
         // Unknown kid → cache refresh → found in refreshed JWKS.
         if _, err := v.Verify(context.Background(), next.sign(t, idClaims(time.Now(), "renance-client"))); err != nil {
@@ -171,7 +191,7 @@ func jwkFrom(priv *rsa.PrivateKey, kid string) jwk {
 func TestVerifyIssuerLocked(t *testing.T) {
         k := newKeyMaterial(t, "kid-1")
         srv := jwksServer(t, k.jwkJSON)
-        v := NewWithJWKS("renance-client", srv.URL, srv.Client())
+        v := NewWithJWKS([]string{"renance-client"}, srv.URL, srv.Client())
 
         forged := idClaims(time.Now(), "renance-client")
         forged["iss"] = "https://evil.example/issuer"
