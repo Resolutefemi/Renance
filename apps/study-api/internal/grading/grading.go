@@ -23,6 +23,7 @@ type KeySource interface {
 
 type Job struct {
 	AttemptID string
+	UserID    string // owner of the attempt - feeds gamification after the grade
 	Code      string
 }
 
@@ -106,6 +107,19 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
 		e.log.Error("grading: write result", "err", err, "attempt", job.AttemptID)
 		_ = e.store.SetAttemptStatus(ctx, job.AttemptID, "error")
 		return
+	}
+	// Gamification is best-effort: a badge/streak failure must never
+	// turn a successfully graded attempt into an error.
+	if job.UserID != "" {
+		if out, err := e.store.ApplyGrade(ctx, job.UserID, result.Score, result.Total); err != nil {
+			e.log.Error("grading: gamification", "err", err, "attempt", job.AttemptID)
+		} else if len(out.NewAwards) > 0 {
+			codes := make([]string, 0, len(out.NewAwards))
+			for _, a := range out.NewAwards {
+				codes = append(codes, a.Code)
+			}
+			e.log.Info("badges awarded", "user", job.UserID, "codes", codes)
+		}
 	}
 	e.log.Info("graded", "worker", worker, "attempt", job.AttemptID,
 		"code", job.Code, "score", result.Score, "total", result.Total)
