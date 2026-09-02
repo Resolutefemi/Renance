@@ -3,13 +3,13 @@ name: web-deploy (GitHub Pages)
 # Builds the Next.js static export and publishes it to GitHub Pages:
 # https://<owner>.github.io/<repo>/
 #
-# One-time enablement: Settings → Pages → Source: "GitHub Actions"
-# (configure-pages attempts to flip this automatically; if the runner lacks
-# permission, enable it manually and re-run).
+# Pages source must be "GitHub Actions" (Settings -> Pages). Set the
+# PUBLIC_API_BASE repo variable to the deployed https study API.
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - 'apps/web/**'
       - 'pnpm-lock.yaml'
@@ -43,15 +43,14 @@ jobs:
       - name: Build static export
         working-directory: apps/web
         env:
-          # Project site → served under /<repo>/
+          # Project site -> served under /<repo>/
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
-          # Set the PUBLIC_API_BASE repo variable to your deployed Go study API
-          # (must be https — browsers block http from an https Pages origin).
+          # Must be https once set — browsers block http from an https origin.
           NEXT_PUBLIC_API_BASE: ${{ vars.PUBLIC_API_BASE || 'http://localhost:3990' }}
           NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: pnpm exec next build
 
-      - name: SPA fallback (unknown paths → home)
+      - name: SPA fallback (unknown paths -> home)
         run: cp apps/web/out/index.html apps/web/out/404.html
 
       - uses: actions/configure-pages@v5

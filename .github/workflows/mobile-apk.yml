@@ -1,11 +1,15 @@
 name: mobile-apk (Android)
 
 # Builds the Renance APK on every push that touches the Flutter app.
-# Download the artifact from the run page (or a GitHub Release on tags).
+# Get the APK three ways:
+#   1. Run page artifact (renance-android-apk) — downloads as a zip
+#   2. Rolling "latest" release below — raw .apk, no zip
+#   3. Tag a version (v*) — attached to a proper GitHub Release
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - 'apps/mobile/**'
       - '.github/workflows/mobile-apk.yml'
@@ -45,8 +49,8 @@ jobs:
 
       - name: Build release APK
         working-directory: apps/mobile
-        # Point the app at the deployed study API by setting the PUBLIC_API_BASE
-        # repo variable (Settings → Secrets and variables → Actions → Variables).
+        # Point the app at the deployed study API via the PUBLIC_API_BASE repo
+        # variable (Settings -> Secrets and variables -> Actions -> Variables).
         # Unset, the APK defaults to the Android-emulator loopback host.
         run: |
           flutter build apk --release \
@@ -57,6 +61,15 @@ jobs:
         with:
           name: renance-android-apk
           path: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Publish rolling latest release (raw APK, no zip)
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Android build
+          prerelease: true
+          files: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
 
       - name: Attach to GitHub Release (tag builds only)
         if: startsWith(github.ref, 'refs/tags/')
