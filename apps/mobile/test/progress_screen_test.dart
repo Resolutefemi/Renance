@@ -112,6 +112,11 @@ void main() {
       }),
     );
 
+    // The hub is a tall ListView — default 800x600 surface only builds the
+    // first rows (plus cacheExtent). Raise the surface so every section
+    // mounts for the finders below.
+    await tester.binding.setSurfaceSize(const Size(800, 2200));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
     await _pumpHub(tester, api);
 
     // Hero + pill + level.
