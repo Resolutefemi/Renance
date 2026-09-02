@@ -35,7 +35,11 @@ Future<void> _pumpHub(WidgetTester tester, ApiClient api) async {
       child: const MaterialApp(home: ProgressScreen()),
     ),
   );
-  await tester.pumpAndSettle();
+  // RenanceMark repeats forever (the founder's only-loader rule), so
+  // pumpAndSettle can never settle in this app — pump fixed steps instead.
+  await tester.pump(); // first frame: loader + load kicked off
+  await tester.pump(const Duration(milliseconds: 300)); // future resolves
+  await tester.pump(const Duration(milliseconds: 300)); // content rendered
 }
 
 void main() {
