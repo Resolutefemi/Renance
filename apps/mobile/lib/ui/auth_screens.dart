@@ -141,7 +141,7 @@ class _PasswordFieldState extends State<_PasswordField> {
 class _GoogleButton extends StatelessWidget {
   const _GoogleButton({required this.onPressed});
 
-  final Future<void> Function() onPressed;
+  final Future<void> Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -163,13 +163,16 @@ Future<bool> _runGoogleSignIn(
   final GoogleSignInAccount? account =
       await GoogleSignIn(serverClientId: googleWebClientId).signIn();
   if (account == null) return false;
-  final String? idToken = account.authentication.idToken;
+  final GoogleSignInAuthentication auth = await account.authentication;
+  final String? idToken = auth.idToken;
   if (idToken == null) {
     onError('Google did not return an ID token — try again');
     return false;
   }
-  final AuthTokens res = await api.authWithGoogle(idToken);
+  // Capture everything the continuation needs BEFORE the async gap, so no
+  // BuildContext is used after await without a mounted check.
   final SessionStore session = context.read<SessionStore>();
+  final AuthTokens res = await api.authWithGoogle(idToken);
   await session.save(res.token, res.user);
   if (!context.mounted) return true;
   await Navigator.of(context).pushReplacementNamed('/home');
