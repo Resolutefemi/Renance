@@ -18,7 +18,7 @@ type Config struct {
         JWTSecret      string
         DataDir        string // dir containing manifest.json + questions/ + answer-keys/
         WebOrigin      string // comma-separated CORS allowlist ("*" keeps dev open)
-        GoogleClientID string // Google Identity Services audience; "" disables Google sign-in
+        GoogleClientID string // Google OAuth audience(s), comma-separated (web + Android); "" disables Google sign-in
         GradeWorkers   int
         GradeQueue     int
 }
