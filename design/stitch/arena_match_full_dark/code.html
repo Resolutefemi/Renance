@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"accent-violet":"#8B5CF6","surface-container":"#E7EEFF","on-surface":"#111c2d","surface-bright":"#f9f9ff","error":"#BA1A1A","error-container":"#FFDAD6","selection-blue":"#D0E1FB","card":"#FFFFFF","primary":"#000000","on-primary":"#ffffff","text-secondary":"#45464D","outline-light":"#C6C6CD","outline-dark":"#76777D","surface-container-low":"#F0F3FF","surface-container-high":"#DEE8FF","accent-amber":"#F59E0B","accent-emerald":"#10B981","dark-surface":"#131B2E","dark-surface-low":"#17223B","dark-card":"#131B2E","dark-text-primary":"#F0F3FF","dark-text-secondary":"#A2AAB8","background":"#111C2D","surface":"#111C2D"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{unit:"4px","margin-mobile":"16px",xs:"4px",sm:"8px",md:"16px",lg:"24px",gutter:"16px"},fontFamily:{"display-md":["Inter"],"section-title":["Inter"],"body-base":["Inter"],"body-medium":["Inter"],"caption":["Inter"],"label-mono":["JetBrains Mono"],"stat-number":["Inter"]},fontWeight:{display:"700",section:"600"}}}}</script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/></head>
+
+<body class="bg-background font-body-base text-dark-text-primary antialiased">
+
+<!-- top bar: duel strip -->
+<header class="fixed top-0 w-full z-50 bg-[#111C2D]/95 backdrop-blur-xl pt-safe">
+  <div class="h-14 px-margin-mobile flex items-center justify-between gap-sm">
+    <button class="w-9 h-9 rounded-full flex items-center justify-center bg-white/5 border border-white/10">
+      <span class="material-symbols-outlined text-[20px] text-dark-text-primary">chevron_left</span>
+    </button>
+    <div class="flex items-center gap-sm flex-1 justify-center">
+      <div class="flex items-center gap-xs">
+        <div class="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center text-[11px] font-bold">Y</div>
+        <span class="font-caption font-semibold text-dark-text-primary">You</span>
+      </div>
+      <div class="font-stat-number text-[22px] font-bold tracking-tight text-white px-sm">3 — 2</div>
+      <div class="flex items-center gap-xs">
+        <span class="font-caption font-semibold text-dark-text-primary">Tunde</span>
+        <div class="w-8 h-8 rounded-full bg-accent-violet/25 text-accent-violet flex items-center justify-center text-[11px] font-bold ring-2 ring-accent-violet/40">T</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-1 bg-accent-amber/15 px-sm py-1 rounded-full">
+      <span class="material-symbols-outlined text-[16px] text-accent-amber">timer</span>
+      <span class="font-label-mono text-[12px] text-accent-amber font-medium">0:42</span>
+    </div>
+  </div>
+  <div class="px-margin-mobile pb-2 flex items-center gap-2">
+    <div class="flex-1 h-1 rounded-full bg-white/10 overflow-hidden">
+      <div class="h-full w-4/5 rounded-full bg-accent-emerald"></div>
+    </div>
+    <span class="font-caption text-dark-text-secondary">Q4/5</span>
+  </div>
+</header>
+
+<main class="relative pt-[76px] pb-28 min-h-screen bg-background">
+  <div class="px-margin-mobile flex flex-col gap-md">
+
+    <!-- question card -->
+    <div class="w-full rounded-xl bg-dark-card p-lg shadow-sm border border-white/10 flex flex-col gap-sm">
+      <div class="flex items-center justify-between">
+        <span class="px-sm py-1 rounded-full bg-white/5 font-caption text-dark-text-secondary">Biology</span>
+        <span class="font-label-mono text-[11px] text-dark-text-secondary">LIVE · first to 5</span>
+      </div>
+      <p class="font-section-title text-[17px] leading-snug text-white">Which organelle is known as the powerhouse of the cell?</p>
+    </div>
+
+    <!-- options -->
+    <div class="flex flex-col gap-sm">
+      <div class="rounded-xl border border-white/10 bg-dark-surface-low px-md py-sm flex items-center gap-sm">
+        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center font-caption font-semibold text-dark-text-secondary">A</div>
+        <span class="font-body-base flex-1 text-dark-text-primary">Ribosome</span>
+      </div>
+      <div class="rounded-xl border-2 border-accent-violet bg-accent-violet/15 px-md py-sm flex items-center gap-sm relative">
+        <div class="w-8 h-8 rounded-full bg-accent-violet text-white flex items-center justify-center font-caption font-semibold">B</div>
+        <span class="font-body-base font-semibold flex-1 text-white">Mitochondrion</span>
+        <div class="w-6 h-6 rounded-full bg-white/15 text-white flex items-center justify-center text-[10px] font-bold">Y</div>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-dark-surface-low px-md py-sm flex items-center gap-sm relative">
+        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center font-caption font-semibold text-dark-text-secondary">C</div>
+        <span class="font-body-base flex-1 text-dark-text-primary">Golgi apparatus</span>
+        <div class="w-6 h-6 rounded-full bg-accent-violet text-white flex items-center justify-center text-[10px] font-bold ring-2 ring-accent-violet/30 animate-pulse">T</div>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-dark-surface-low px-md py-sm flex items-center gap-sm">
+        <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center font-caption font-semibold text-dark-text-secondary">D</div>
+        <span class="font-body-base flex-1 text-dark-text-primary">Nucleolus</span>
+      </div>
+    </div>
+
+    <p class="font-caption text-dark-text-secondary text-center">Tunde answered in 4.1s — tap your answer to lock it</p>
+  </div>
+</main>
+
+<!-- lock-in bar -->
+<div class="fixed bottom-0 w-full z-50 bg-dark-card border-t border-white/10 rounded-t-xl px-margin-mobile pt-sm pb-safe">
+  <div class="pb-sm">
+    <div class="flex items-center justify-between mb-1">
+      <span class="font-caption font-semibold text-dark-text-primary">Answer locks in</span>
+      <span class="font-label-mono text-[12px] text-accent-amber">0:12</span>
+    </div>
+    <div class="h-1.5 rounded-full bg-white/10 overflow-hidden">
+      <div class="h-full w-1/3 rounded-full bg-accent-amber"></div>
+    </div>
+  </div>
+</div>
+
+</body></html>
