@@ -2,30 +2,46 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  quality:
+  api:
+    name: Go study API (vet + test)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-go@v5
         with:
-          version: 10
+          go-version-file: apps/study-api/go.mod
+      - name: Vet
+        working-directory: apps/study-api
+        run: go vet ./...
+      - name: Test
+        working-directory: apps/study-api
+        run: go test ./...
 
+  web:
+    name: Web (typecheck + static export build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
-
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Typecheck (all workspaces)
-        run: pnpm typecheck
-
-      - name: Tests
-        run: pnpm test
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        run: pnpm --filter @renance/web typecheck
+      - name: Build (Pages-like static export)
+        working-directory: apps/web
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_API_BASE: ${{ vars.PUBLIC_API_BASE || 'http://localhost:3990' }}
+          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: pnpm exec next build
