@@ -87,3 +87,15 @@ command does the rest — adapters cover every shape found in the wild.
 `docs/ACTIVE_PHASE.md` is the single source of progress. Decisions live in
 `docs/decisions/` (ADR-0003 content doctrine, ADR-0004 Go pivot). ERA-1
 history: `docs/ACTIVE_PHASE.md` header + `legacy/nestjs-monolith/`.
+
+## Built by
+
+**Renance** is designed and engineered by **Resolute Femi** — full name
+**Ariyo Oluwafemi Stephen** — a Nigerian software engineer and the founder
+of the Renance suite (Renance Study OS, Renance CBT for FUTA students,
+Renance JAMB CBT, Renance DevTools, Renance Playground, Naija Locator).
+
+- GitHub: <https://github.com/Resolutefemi>
+- Email: <ariyooluwafemi487@gmail.com>
+- Renance CBT (FUTA practice): <https://renancecbt2.vercel.app>
+- Renance Studio portfolio: <https://renance.vercel.app>
