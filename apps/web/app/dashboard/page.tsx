@@ -125,16 +125,24 @@ export default function DashboardPage() {
             </p>
           </div>
         </div>
-        <button
-          onClick={() => {
-            // JWT is stateless — clearing the session ends it client-side.
-            localStorage.clear();
-            router.replace('/login');
-          }}
-          className="rounded-lg border border-outline-variant px-3 py-1.5 text-xs text-on-surface-variant transition hover:border-outline hover:text-on-surface"
-        >
-          Sign out
-        </button>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/progress"
+            className="rounded-lg border border-outline-variant px-3 py-1.5 text-xs text-on-surface-variant transition hover:border-outline hover:text-on-surface"
+          >
+            Progress
+          </Link>
+          <button
+            onClick={() => {
+              // JWT is stateless — clearing the session ends it client-side.
+              localStorage.clear();
+              router.replace('/login');
+            }}
+            className="rounded-lg border border-outline-variant px-3 py-1.5 text-xs text-on-surface-variant transition hover:border-outline hover:text-on-surface"
+          >
+            Sign out
+          </button>
+        </div>
       </header>
 
       {/* silent asset-sync strip */}
