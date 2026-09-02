@@ -19,6 +19,22 @@ export class ApiError extends Error {
   }
 }
 
+export interface AuthResponse {
+  token: string;
+  user: { id: string; username: string; profileCompleted: boolean };
+}
+
+// Exchanges a Google ID token (from the GIS button) for a Renance session.
+// The backend verifies the token against Google's JWKS — no client secret
+// involved anywhere.
+export async function authWithGoogle(credential: string): Promise<AuthResponse> {
+  return api<AuthResponse>('/auth/google', {
+    method: 'POST',
+    body: { credential },
+    auth: false,
+  });
+}
+
 interface Options {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?: unknown;
