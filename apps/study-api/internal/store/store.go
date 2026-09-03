@@ -251,6 +251,7 @@ type Profile struct {
 	Institution string    `json:"institution"`
 	GradeLevel  string    `json:"gradeLevel"`
 	Exams       []string  `json:"exams"`
+	TargetYear  *int      `json:"targetYear,omitempty"`
 	Completed   bool      `json:"completed"`
 	UpdatedAt   time.Time `json:"-"`
 }
@@ -262,18 +263,19 @@ func (s *Store) UpsertProfile(ctx context.Context, userID string, p *Profile) (*
 	}
 	out := &Profile{}
 	err = s.Pool.QueryRow(ctx, `
-                INSERT INTO study.profiles (user_id, full_name, institution, grade_level, exams, completed, updated_at)
-                VALUES ($1, $2, $3, $4, $5::jsonb, true, now())
+                INSERT INTO study.profiles (user_id, full_name, institution, grade_level, exams, target_year, completed, updated_at)
+                VALUES ($1, $2, $3, $4, $5::jsonb, $6, true, now())
                 ON CONFLICT (user_id) DO UPDATE
                 SET full_name   = EXCLUDED.full_name,
                     institution = EXCLUDED.institution,
                     grade_level = EXCLUDED.grade_level,
                     exams       = EXCLUDED.exams,
+                    target_year = EXCLUDED.target_year,
                     completed   = true,
                     updated_at  = now()
-                RETURNING full_name, institution, grade_level, exams, completed, updated_at`,
-		userID, p.FullName, p.Institution, p.GradeLevel, string(examsJSON),
-	).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &out.Completed, &out.UpdatedAt)
+                RETURNING full_name, institution, grade_level, exams, target_year, completed, updated_at`,
+		userID, p.FullName, p.Institution, p.GradeLevel, string(examsJSON), p.TargetYear,
+	).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &out.TargetYear, &out.Completed, &out.UpdatedAt)
 	if err != nil {
 		return nil, fmt.Errorf("store: upsert profile: %w", err)
 	}
@@ -287,9 +289,9 @@ func (s *Store) ProfileByUser(ctx context.Context, userID string) (*Profile, err
 	var examsJSON []byte
 	p := &Profile{}
 	err := s.Pool.QueryRow(ctx, `
-                SELECT full_name, institution, grade_level, exams, completed, updated_at
+                SELECT full_name, institution, grade_level, exams, target_year, completed, updated_at
                 FROM study.profiles WHERE user_id = $1`, userID,
-	).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &p.Completed, &p.UpdatedAt)
+	).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &p.TargetYear, &p.Completed, &p.UpdatedAt)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return nil, nil
 	}
@@ -532,6 +534,72 @@ func (s *Store) ResultByAttempt(ctx context.Context, attemptID string) (*Result,
 		return nil, fmt.Errorf("store: unmarshal breakdown: %w", err)
 	}
 	return r, nil
+}
+
+// ----------------------------------------------------- attempt history
+
+// AttemptRow is one line of a student's paper history: the attempt joined
+// with its graded result (score/total stay null until the engine marks it).
+type AttemptRow struct {
+	ID          string     `json:"attemptId"`
+	Code        string     `json:"code"`
+	Status      string     `json:"status"`
+	StartedAt   time.Time  `json:"startedAt"`
+	SubmittedAt *time.Time `json:"submittedAt,omitempty"`
+	DurationMs  *int       `json:"durationMs,omitempty"`
+	Score       *int       `json:"score,omitempty"`
+	Total       *int       `json:"total,omitempty"`
+}
+
+// AttemptsByUser lists a scholar's papers, newest first, capped at limit.
+// Feeds the launcher's recent-activity feed and the review tab.
+func (s *Store) AttemptsByUser(ctx context.Context, userID string, limit int) ([]*AttemptRow, error) {
+	if limit <= 0 || limit > 200 {
+		limit = 50
+	}
+	rows, err := s.Pool.Query(ctx, `
+		SELECT a.id, a.code, a.status, a.started_at, a.submitted_at, a.duration_ms,
+		       r.score, r.total
+		FROM study.attempts a
+		LEFT JOIN study.results r ON r.attempt_id = a.id
+		WHERE a.user_id = $1
+		ORDER BY a.started_at DESC
+		LIMIT $2`, userID, limit)
+	if err != nil {
+		return nil, fmt.Errorf("store: attempts by user: %w", err)
+	}
+	defer rows.Close()
+	out := []*AttemptRow{}
+	for rows.Next() {
+		r := &AttemptRow{}
+		if err := rows.Scan(&r.ID, &r.Code, &r.Status, &r.StartedAt, &r.SubmittedAt,
+			&r.DurationMs, &r.Score, &r.Total); err != nil {
+			return nil, fmt.Errorf("store: scan attempt row: %w", err)
+		}
+		out = append(out, r)
+	}
+	return out, rows.Err()
+}
+
+// KeysForBank loads the sealed key rows of one pack. Used by the answer
+// review route: keys stay server-side; only post-grade explanations leave.
+func (s *Store) KeysForBank(ctx context.Context, code string) (map[string]KeyEntry, error) {
+	rows, err := s.Pool.Query(ctx, `
+		SELECT question_id, letter, explanation
+		FROM study.answer_keys WHERE code = $1`, code)
+	if err != nil {
+		return nil, fmt.Errorf("store: keys for bank: %w", err)
+	}
+	defer rows.Close()
+	out := map[string]KeyEntry{}
+	for rows.Next() {
+		var qid, letter, explanation string
+		if err := rows.Scan(&qid, &letter, &explanation); err != nil {
+			return nil, fmt.Errorf("store: scan key: %w", err)
+		}
+		out[qid] = KeyEntry{Letter: letter, Explanation: explanation}
+	}
+	return out, rows.Err()
 }
 
 // ------------------------------------------------------------ sync jobs
