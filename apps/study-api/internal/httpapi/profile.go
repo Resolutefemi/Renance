@@ -12,6 +12,7 @@ type profileRequest struct {
 	Institution string   `json:"institution"`
 	GradeLevel  string   `json:"gradeLevel"`
 	Exams       []string `json:"exams"`
+	TargetYear  *int     `json:"targetYear"`
 }
 
 // handleUpdateProfile is the contextual profile modal target: full name,
@@ -47,6 +48,10 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
 		fail(w, http.StatusBadRequest, "invalid_exams", "select between 1 and 4 active examinations")
 		return
 	}
+	if req.TargetYear != nil && (*req.TargetYear < 2000 || *req.TargetYear > 2100) {
+		fail(w, http.StatusBadRequest, "invalid_targetYear", "target year must be between 2000 and 2100")
+		return
+	}
 	seen := map[string]struct{}{}
 	for _, e := range req.Exams {
 		if _, dup := seen[e]; dup {
@@ -66,6 +71,7 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
 		Institution: req.Institution,
 		GradeLevel:  req.GradeLevel,
 		Exams:       req.Exams,
+		TargetYear:  req.TargetYear,
 		Completed:   true,
 	})
 	if err != nil {

@@ -94,4 +94,28 @@ done
 curl -fsS "$BASE/attempts/$AID" -H "Authorization: Bearer $TOKEN" \
   | jsonget "d['result']['score']" >/dev/null
 
+step "PUT /me/profile with targetYear -> stored"
+curl -fsS -X PUT "$BASE/me/profile" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d '{"fullName":"E2E Student","institution":"University of Lagos","gradeLevel":"SS3","exams":["JAMB"],"targetYear":2027}' \
+  | jsonget "d['profile']['targetYear']" | grep -q "2027"
+
+step "GET /me/attempts -> 1 graded paper"
+N=$(curl -fsS "$BASE/me/attempts" -H "Authorization: Bearer $TOKEN" \
+  | jsonget "len(d['attempts'])")
+[ "$N" -ge 1 ]
+curl -fsS "$BASE/me/attempts" -H "Authorization: Bearer $TOKEN" \
+  | jsonget "d['attempts'][0]['status']" | grep -q "graded"
+
+step "GET /me/attempts bad token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/me/attempts" -H "Authorization: Bearer nope")
+[ "$CODE" = "401" ]
+
+step "GET /attempts/$AID/review -> per-question detail unlocked"
+REV=$(curl -fsS "$BASE/attempts/$AID/review" -H "Authorization: Bearer $TOKEN")
+RQN=$(printf '%s' "$REV" | jsonget "len(d['questions'])")
+[ "$RQN" -ge 2 ]
+printf '%s' "$REV" | jsonget "d['questions'][0]['correct']" | grep -qE "^[A-H]$"
+printf '%s' "$REV" | jsonget "d['questions'][0]['stem']" >/dev/null
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"

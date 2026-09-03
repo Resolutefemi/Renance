@@ -6,13 +6,15 @@
 //	POST   /auth/register          {username, password}   ← THE ONLY FIELDS
 //	POST   /auth/login             {username, password}
 //	GET    /me
+//	GET    /me/attempts           -> paper history (newest first)
 //	GET    /me/gamification     -> streaks, XP, badges (zero state on first launch)
-//	PUT    /me/profile             {fullName, institution, gradeLevel, exams[]}
+//	PUT    /me/profile             {fullName, institution, gradeLevel, exams[], targetYear?}
 //	GET    /manifest
 //	GET    /bundles/{code}
 //	POST   /attempts               {code}
 //	POST   /attempts/{id}/submit   {answers:[{questionId, selected}], durationMs?}
 //	GET    /attempts/{id}
+//	GET    /attempts/{id}/review -> per-question review (graded attempts only)
 //	GET    /sync/status
 package httpapi
 
@@ -74,6 +76,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /auth/google", s.handleGoogleAuth)
 
 	mux.HandleFunc("GET /me", s.auth(s.handleMe))
+	mux.HandleFunc("GET /me/attempts", s.auth(s.handleListAttempts))
 	mux.HandleFunc("GET /me/gamification", s.auth(s.handleGamification))
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
 	mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))
@@ -82,6 +85,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("POST /attempts", s.auth(s.handleCreateAttempt))
 	mux.HandleFunc("POST /attempts/{id}/submit", s.auth(s.handleSubmitAttempt))
 	mux.HandleFunc("GET /attempts/{id}", s.auth(s.handleGetAttempt))
+	mux.HandleFunc("GET /attempts/{id}/review", s.auth(s.handleAttemptReview))
 	mux.HandleFunc("GET /sync/status", s.auth(s.handleSyncStatus))
 
 	return s.cors(mux)
