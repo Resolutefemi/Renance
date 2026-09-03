@@ -13,6 +13,7 @@ interface Profile {
   institution: string;
   gradeLevel: string;
   exams: string[];
+  targetYear?: number;
   completed: boolean;
 }
 
@@ -21,13 +22,41 @@ interface MeResponse {
   profile: Profile | null;
 }
 
+interface GamificationResponse {
+  state: { currentStreak: number; bestStreak: number; totalXp: number };
+}
+
+interface AttemptRow {
+  attemptId: string;
+  code: string;
+  status: string;
+  score?: number;
+  total?: number;
+  submittedAt?: string;
+}
+
 const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'University Modules'] as const;
 const GRADE_LEVELS = ['SS1', 'SS2', 'SS3', '100 Level', '200 Level', '300 Level', '400 Level', 'Postgraduate'];
+const TARGET_YEARS = [2026, 2027, 2028] as const;
+
+const TARGET_LABELS: Record<string, string> = {
+  JAMB: 'UTME',
+  WAEC: 'WASSCE',
+  NECO: 'NECO',
+  'University Modules': 'Semester',
+};
+
+function daysToTarget(year?: number): number | null {
+  if (!year) return null;
+  return Math.max(0, Math.floor((new Date(year, 4, 1).getTime() - Date.now()) / 86_400_000));
+}
 
 export default function DashboardPage() {
   const router = useRouter();
   const [me, setMe] = useState<MeResponse | null>(null);
   const [exams, setExams] = useState<ExamMeta[]>([]);
+  const [streak, setStreak] = useState(0);
+  const [attempts, setAttempts] = useState<AttemptRow[]>([]);
   const [needsProfile, setNeedsProfile] = useState(false);
   const [syncState, setSyncState] = useState<'idle' | 'syncing' | 'ready'>('idle');
   const [syncLabel, setSyncLabel] = useState('Preparing your study pack…');
@@ -44,6 +73,12 @@ export default function DashboardPage() {
         const meRes = await api<MeResponse>('/me');
         if (!alive) return;
         setMe(meRes);
+        api<GamificationResponse>('/me/gamification')
+          .then((g) => alive && setStreak(g.state.currentStreak))
+          .catch(() => {});
+        api<{ attempts: AttemptRow[] }>('/me/attempts')
+          .then((a) => alive && setAttempts(a.attempts))
+          .catch(() => {});
         if (!meRes.profile?.completed) {
           setNeedsProfile(true);
           return;
@@ -66,7 +101,7 @@ export default function DashboardPage() {
     try {
       const manifest = await fetchManifest();
       setExams(manifest.exams);
-      const [/* serverJob */] = await Promise.all([
+      await Promise.all([
         pollSyncJob(),
         prefetchAll(manifest, (done, total) =>
           setSyncLabel(`Downloading study packs… ${done}/${total}`),
@@ -81,13 +116,37 @@ export default function DashboardPage() {
   }
 
   async function pollSyncJob() {
-    // ride along until the server-side worker finishes (drives the strip)
     for (let i = 0; i < 60; i++) {
       const res = await api<{ job: { status: string; progress: number } | null }>('/sync/status');
       if (!res.job || res.job.status === 'done') return;
       await new Promise((r) => setTimeout(r, 700));
     }
   }
+
+  const targetTitle = useMemo(() => {
+    const p = me?.profile;
+    if (!p?.exams?.length) return 'Set your target';
+    const label = TARGET_LABELS[p.exams[0]] ?? p.exams[0];
+    return p.targetYear ? `${label} ${p.targetYear}` : label;
+  }, [me]);
+
+  const days = daysToTarget(me?.profile?.targetYear);
+
+  const coveragePct = useMemo(() => {
+    const gradedCodes = new Set(
+      attempts.filter((a) => a.status === 'graded' && a.score != null).map((a) => a.code),
+    );
+    const pool = attempts.length ? gradedCodes.size : exams.length || gradedCodes.size;
+    if (!pool) return 0;
+    return Math.min(100, Math.round((gradedCodes.size * 100) / pool));
+  }, [attempts, exams]);
+
+  const reviewDue = useMemo(
+    () => attempts.reduce((sum, a) => sum + (a.status === 'graded' && a.score != null && a.total ? a.total - a.score : 0), 0),
+    [attempts],
+  );
+
+  const recent = attempts[0] ?? null;
 
   if (!me) {
     return (
@@ -98,7 +157,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6">
+    <main className="min-h-dvh bg-surface-container-lowest pb-16">
       {needsProfile && (
         <ProfileModal
           username={me.user.username}
@@ -111,77 +170,203 @@ export default function DashboardPage() {
         />
       )}
 
-      <header className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <RenanceMark size={44} />
-          <div>
-            <h1 className="text-lg font-semibold tracking-tight text-on-surface">
-              {me.profile?.fullName ? `Welcome, ${me.profile.fullName.split(' ')[0]}` : `@${me.user.username}`}
-            </h1>
-            <p className="text-xs text-on-surface-variant">
-              {me.profile?.exams?.length
-                ? `studying for ${me.profile.exams.join(' · ')}`
-                : 'the global student study OS'}
-            </p>
+      {/* Brand header — fixed, blurred, hairline shadow (home_dashboard) */}
+      <header className="fixed top-0 z-50 w-full border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl">
+        <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
+          <div className="flex items-center gap-2">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-bold text-on-primary">
+              R
+            </div>
+            <span className="text-2xl font-bold tracking-tight text-on-surface">Renance</span>
           </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <Link
-            href="/progress"
-            className="rounded-lg border border-outline-variant px-3 py-1.5 text-xs text-on-surface-variant transition hover:border-outline hover:text-on-surface"
-          >
-            Progress
-          </Link>
-          <button
-            onClick={() => {
-              // JWT is stateless — clearing the session ends it client-side.
-              localStorage.clear();
-              router.replace('/login');
-            }}
-            className="rounded-lg border border-outline-variant px-3 py-1.5 text-xs text-on-surface-variant transition hover:border-outline hover:text-on-surface"
-          >
-            Sign out
-          </button>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1 rounded-full bg-surface-container px-2 py-1">
+              <span className="material-symbols-outlined fill-current text-[20px] text-accent-amber">local_fire_department</span>
+              <span className="font-mono text-[13px] text-on-surface">{streak}</span>
+            </div>
+            <div className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-xs font-semibold text-on-surface">
+              {(me.profile?.fullName || me.user.username || 'R').slice(0, 1).toUpperCase()}
+            </div>
+          </div>
         </div>
       </header>
 
-      {/* silent asset-sync strip */}
-      <section className="mt-6 flex items-center justify-between rounded-xl border border-outline-variant bg-surface-container-lowest px-5 py-4 shadow-sm">
-        {syncState === 'syncing' ? (
-          <LogoActivityIndicator state="busy" label={syncLabel} />
-        ) : (
-          <div className="flex items-center gap-3">
-            <RenanceMark size={36} />
-            <span className="text-sm text-on-surface-variant">{syncLabel}</span>
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-20 sm:px-6">
+        {/* Hero progress card ------------------------------------------- */}
+        <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
+          <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/5" />
+          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-accent-violet/5" />
+          <div className="relative z-10 flex items-start justify-between gap-4">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant">Next Target</p>
+              <h2 className="text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">{targetTitle}</h2>
+            </div>
+            <div className="text-right">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant">Countdown</p>
+              <p className="text-sm font-semibold text-accent-violet">
+                {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
+              </p>
+            </div>
           </div>
-        )}
-        {syncState === 'syncing' && (
-          <span className="text-xs text-outline">runs in background</span>
-        )}
-      </section>
+          <div className="relative z-10 flex flex-col gap-2">
+            <div className="flex justify-between font-mono text-xs text-on-surface-variant">
+              <span>Syllabus Completion</span>
+              <span className="font-semibold text-on-surface">{coveragePct}%</span>
+            </div>
+            <div className="h-2 w-full overflow-hidden rounded-full bg-surface-variant">
+              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${coveragePct}%` }} />
+            </div>
+          </div>
+          <Link
+            href={exams[0] ? `/exams/${exams[0].code}` : '#packs'}
+            className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-primary text-[15px] font-semibold text-on-primary transition-transform active:scale-[0.98]"
+          >
+            <span className="material-symbols-outlined text-[20px]">play_arrow</span>
+            Continue Practice
+          </Link>
+        </section>
 
-      {error && (
-        <p className="mt-4 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
-          {error}
-        </p>
-      )}
-
-      <h2 className="mt-10 font-mono text-xs font-medium uppercase tracking-[0.2em] text-on-surface-variant">
-        Your study packs
-      </h2>
-      <section className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {(exams.length ? exams : Array.from({ length: 3 }, () => null)).map((exam, i) =>
-          exam ? (
-            <ExamCard key={exam.code} exam={exam} ready={syncState !== 'syncing'} />
-          ) : (
-            <div
-              key={i}
-              className="h-40 animate-pulse rounded-xl border border-outline-variant/60 bg-surface-container-low"
-            />
-          ),
+        {syncState !== 'ready' && (
+          <section className="flex items-center justify-between rounded-xl border border-outline-variant/60 bg-surface-container-lowest px-5 py-4 shadow-sm">
+            <LogoActivityIndicator state="busy" label={syncLabel} />
+            <span className="text-xs text-outline">runs in background</span>
+          </section>
         )}
-      </section>
+
+        {error && (
+          <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
+        )}
+
+        {/* Launcher grids ------------------------------------------------ */}
+        <section className="mt-2">
+          <h3 className="text-sm text-on-surface-variant">Practice</h3>
+          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md">
+            <LauncherTile icon="description" label="Exams" href="#packs" />
+            <LauncherTile icon="history" label="Review Due" badge={reviewDue > 0 ? reviewDue : undefined} href="/progress" />
+            <LauncherTile icon="style" label="Flashcards" soon />
+            <LauncherTile icon="menu_book" label="Syllabus" soon />
+          </div>
+        </section>
+
+        <section className="mt-4">
+          <h3 className="text-sm text-on-surface-variant">Grow</h3>
+          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md">
+            <LauncherTile icon="trending_up" label="Progress" href="/progress" />
+            <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
+            <LauncherTile icon="smart_toy" label="Tutor" violet soon />
+            <LauncherTile icon="more_horiz" label="More" muted soon />
+          </div>
+        </section>
+
+        {/* Recent activity ------------------------------------------------ */}
+        {recent && (
+          <Link
+            href="/progress"
+            className="mt-6 mb-4 flex items-center gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition-colors hover:bg-surface-container-lowest"
+          >
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-error-container">
+              <span className="material-symbols-outlined text-[20px] text-error">science</span>
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-[15px] font-semibold text-on-surface">{recent.code}</p>
+              <p className="truncate text-[13px] text-on-surface-variant">
+                {recent.score != null && recent.total
+                  ? `Score: ${Math.round((recent.score * 100) / recent.total)}% · ${
+                      recent.score * 100 >= 7500 ? 'Strong work' : recent.score * 100 >= 5000 ? 'Keep pushing' : 'Focus needed'
+                    }`
+                  : recent.status}
+              </p>
+            </div>
+            <span className="material-symbols-outlined text-outline">chevron_right</span>
+          </Link>
+        )}
+
+        {/* Pack library ---------------------------------------------------- */}
+        <section id="packs" className="scroll-mt-24">
+          <h2 className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-on-surface-variant">
+            Your study packs
+          </h2>
+          <div className="mt-4 grid grid-cols-1 gap-4 pb-8 sm:grid-cols-2 lg:grid-cols-3">
+            {(exams.length ? exams : Array.from({ length: 3 }, () => null)).map((exam, i) =>
+              exam ? (
+                <ExamCard key={exam.code} exam={exam} ready={syncState !== 'syncing'} />
+              ) : (
+                <div
+                  key={i}
+                  className="h-40 animate-pulse rounded-xl border border-outline-variant/60 bg-surface-container-low"
+                />
+              ),
+            )}
+          </div>
+        </section>
+      </div>
     </main>
+  );
+}
+
+function LauncherTile({
+  icon,
+  label,
+  href,
+  badge,
+  amber,
+  violet,
+  muted,
+  soon,
+}: {
+  icon: string;
+  label: string;
+  href?: string;
+  badge?: number;
+  amber?: boolean;
+  violet?: boolean;
+  muted?: boolean;
+  soon?: boolean;
+}) {
+  const inner = (
+    <>
+      <div
+        className={`relative flex h-14 w-14 items-center justify-center rounded-[18px] transition-transform group-active:scale-95 ${
+          violet
+            ? 'bg-accent-violet text-white shadow-[0_2px_8px_0_rgba(139,92,246,0.25)]'
+            : muted
+              ? 'border border-outline-light/30 bg-surface-container text-on-surface-variant'
+              : 'bg-card text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]'
+        } ${violet ? 'overflow-hidden' : ''}`}
+      >
+        {violet && <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/20" />}
+        <span className={`material-symbols-outlined relative z-10 ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
+        {badge != null && (
+          <span className="absolute -right-1.5 -top-1.5 rounded-full bg-accent-emerald px-1.5 py-0.5 font-mono text-[10px] font-bold text-white shadow-sm">
+            {badge}
+          </span>
+        )}
+      </div>
+      <span
+        className={`w-full truncate text-center text-[11px] ${
+          violet ? 'font-semibold text-accent-violet' : 'text-on-surface-variant'
+        }`}
+      >
+        {label}
+      </span>
+    </>
+  );
+
+  if (soon) {
+    return (
+      <button
+        type="button"
+        title={`${label} — ships in an upcoming release`}
+        className="group flex flex-col items-center gap-2 opacity-70"
+      >
+        {inner}
+      </button>
+    );
+  }
+  return (
+    <Link href={href ?? '#'} className="group flex flex-col items-center gap-2">
+      {inner}
+    </Link>
   );
 }
 
@@ -189,17 +374,20 @@ function ExamCard({ exam, ready }: { exam: ExamMeta; ready: boolean }) {
   return (
     <Link
       href={`/exams/${exam.code}`}
-      className="group flex h-40 flex-col justify-between rounded-xl border border-outline-variant bg-surface-container-lowest p-5 shadow-sm transition hover:shadow-md"
+      className="group flex h-40 flex-col justify-between rounded-xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition hover:shadow-md"
     >
       <div>
         <div className="flex items-start justify-between gap-2">
-          <h3 className="font-medium leading-snug text-on-surface">{exam.title}</h3>
-          <span className="shrink-0 rounded-md bg-secondary-container px-2 py-0.5 text-[10px] font-medium text-on-secondary-container">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-surface-container-highest text-primary">
+            <span className="material-symbols-outlined fill-current text-[22px]">description</span>
+          </div>
+          <span className="shrink-0 rounded-md bg-surface-container px-2 py-0.5 font-mono text-[10px] text-on-surface">
             {exam.questionCount} Q
           </span>
         </div>
-        <p className="mt-1 text-xs text-on-surface-variant">
-          {exam.durationMinutes ? `${exam.durationMinutes} minutes` : 'untimed'} · {exam.totalMarks} marks
+        <h3 className="mt-2 text-[15px] font-semibold leading-snug text-on-surface">{exam.title}</h3>
+        <p className="mt-1 text-[13px] text-on-surface-variant">
+          {exam.durationMinutes ? `${exam.durationMinutes} min` : 'untimed'} · {exam.totalMarks} marks
         </p>
       </div>
       <div className="flex items-center justify-between">
@@ -228,13 +416,18 @@ function ProfileModal({
   const [fullName, setFullName] = useState('');
   const [institution, setInstitution] = useState('');
   const [gradeLevel, setGradeLevel] = useState('SS3');
+  const [targetYear, setTargetYear] = useState<number | null>(null);
   const [selected, setSelected] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const valid = useMemo(
-    () => fullName.trim().length >= 2 && institution.trim().length >= 2 && selected.length >= 1,
-    [fullName, institution, selected],
+    () =>
+      fullName.trim().length >= 2 &&
+      institution.trim().length >= 2 &&
+      selected.length >= 1 &&
+      targetYear != null,
+    [fullName, institution, selected, targetYear],
   );
 
   async function onSubmit(e: FormEvent) {
@@ -250,6 +443,7 @@ function ProfileModal({
           institution: institution.trim(),
           gradeLevel,
           exams: selected,
+          targetYear,
         },
       });
       onDone(res.profile);
@@ -260,25 +454,74 @@ function ProfileModal({
   }
 
   function toggleExam(exam: string) {
-    setSelected((cur) =>
-      cur.includes(exam) ? cur.filter((x) => x !== exam) : [...cur, exam],
-    );
+    setSelected(() => [exam]);
   }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-on-background/60 p-4 backdrop-blur-sm">
-      <div className="renance-rise w-full max-w-lg rounded-2xl bg-surface-container-lowest p-8 shadow-xl">
+      <div className="renance-rise max-h-[92dvh] w-full max-w-lg overflow-y-auto rounded-2xl bg-surface-container-lowest p-8 shadow-xl">
         <div className="mb-6 flex items-center gap-3">
           <RenanceMark size={44} state="busy" />
           <div>
-            <h2 className="font-semibold text-on-surface">Set up your desk, @{username}</h2>
+            <h2 className="font-semibold text-on-surface">What are you preparing for?</h2>
             <p className="text-xs text-on-surface-variant">
-              We use this to pull the right past questions and syllabus in the background.
+              Select your target exam to customize your learning OS, @{username}.
             </p>
           </div>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-5">
+          <div>
+            <span className="mb-2 block text-sm text-on-surface-variant">Target exam</span>
+            <div className="grid gap-2">
+              {EXAM_OPTIONS.map((exam) => {
+                const active = selected.includes(exam);
+                return (
+                  <button
+                    key={exam}
+                    type="button"
+                    onClick={() => toggleExam(exam)}
+                    className={`flex items-center gap-3 rounded-xl border p-3 text-left transition ${
+                      active
+                        ? 'border-primary bg-selection-blue ring-1 ring-primary'
+                        : 'border-outline-variant bg-card hover:border-outline'
+                    }`}
+                  >
+                    <div
+                      className={`flex h-9 w-9 items-center justify-center rounded-lg ${
+                        active ? 'bg-primary text-on-primary' : 'bg-surface-container text-on-surface'
+                      }`}
+                    >
+                      <span className="material-symbols-outlined text-[20px]">school</span>
+                    </div>
+                    <span className="flex-1 text-sm font-semibold text-on-surface">{exam}</span>
+                    {active && <span className="material-symbols-outlined text-primary">check_circle</span>}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <span className="mb-2 block text-sm text-on-surface-variant">Exam year</span>
+            <div className="flex gap-2">
+              {TARGET_YEARS.map((y) => (
+                <button
+                  key={y}
+                  type="button"
+                  onClick={() => setTargetYear(y)}
+                  className={`rounded-full px-4 py-1.5 font-mono text-sm transition ${
+                    targetYear === y
+                      ? 'border border-primary bg-selection-blue text-on-surface'
+                      : 'bg-surface-container-low text-on-surface-variant'
+                  }`}
+                >
+                  {y}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <label className="block">
             <span className="mb-1.5 block text-sm text-on-surface-variant">Full name</span>
             <input
@@ -323,30 +566,8 @@ function ProfileModal({
             </select>
           </label>
 
-          <div>
-            <span className="mb-2 block text-sm text-on-surface-variant">Active examinations</span>
-            <div className="flex flex-wrap gap-2">
-              {EXAM_OPTIONS.map((exam) => (
-                <button
-                  key={exam}
-                  type="button"
-                  onClick={() => toggleExam(exam)}
-                  className={`rounded-full border px-4 py-1.5 text-xs font-medium transition ${
-                    selected.includes(exam)
-                      ? 'border-primary bg-primary text-on-primary'
-                      : 'border-outline-variant text-on-surface-variant hover:border-outline'
-                  }`}
-                >
-                  {exam}
-                </button>
-              ))}
-            </div>
-          </div>
-
           {error && (
-            <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
-              {error}
-            </p>
+            <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
           )}
 
           <button

@@ -34,6 +34,14 @@ interface ResultPayload {
   breakdown: TopicRow[];
 }
 
+interface AttemptSummary {
+  attemptId: string;
+  code: string;
+  status: string;
+  score?: number;
+  total?: number;
+}
+
 type Phase = 'loading' | 'intro' | 'playing' | 'grading' | 'graded' | 'error';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -52,8 +60,20 @@ export default function ExamPage({ code }: { code: string }) {
   const [current, setCurrent] = useState(0);
   const [remaining, setRemaining] = useState<number | null>(null);
   const [result, setResult] = useState<ResultPayload | null>(null);
+  const [gam, setGam] = useState<{ state: { currentStreak: number; totalXp: number } } | null>(null);
+  const [allAttempts, setAllAttempts] = useState<AttemptSummary[] | null>(null);
   const startedAtRef = useRef<number>(0);
   const submittedRef = useRef(false);
+
+  useEffect(() => {
+    if (phase !== 'graded') return;
+    api<{ state: { currentStreak: number; totalXp: number } }>('/me/gamification')
+      .then(setGam)
+      .catch(() => {});
+    api<{ attempts: AttemptSummary[] }>('/me/attempts')
+      .then((a) => setAllAttempts(a.attempts))
+      .catch(() => {});
+  }, [phase]);
 
   useEffect(() => {
     let alive = true;
@@ -229,67 +249,134 @@ export default function ExamPage({ code }: { code: string }) {
 
   if (phase === 'graded' && result) {
     const pct = result.total > 0 ? Math.round((result.score / result.total) * 100) : 0;
+    const elapsedMs = startedAtRef.current ? Date.now() - startedAtRef.current : 0;
+    // delta vs the previous graded attempt on the same pack (real history)
+    const samePack = (allAttempts ?? []).filter(
+      (a) => a.status === 'graded' && a.code === bundle?.code && a.score != null,
+    );
+    let delta: number | null = null;
+    if (samePack.length >= 2 && bundle?.code) {
+      const prev = Math.round((samePack[1].score! * 100) / samePack[1].total!);
+      delta = pct - prev;
+    }
+    const xpEarned = result.score * 10; // XPPerCorrect = 10 (server rule)
     return (
-      <main className="mx-auto w-full max-w-2xl px-4 py-14 sm:px-6">
-        <div className="renance-rise rounded-2xl bg-surface-container-lowest p-8 text-center shadow-md">
-          <div className="mb-2 flex justify-center">
-            <RenanceMark size={44} />
-          </div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant">
-            {bundle?.title}
+      <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
+        {/* dark DIAGNOSTIC COMPLETE hero */}
+        <section className="renance-rise relative overflow-hidden rounded-xl bg-dark-surface px-6 py-8 text-center">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-dark-text-secondary">
+            Diagnostic Complete
           </p>
-          <p className="mt-4 text-6xl font-bold tracking-tight text-on-surface">
+          <p className="mt-2 text-6xl font-bold tracking-tight text-dark-text-primary">
             {pct}
-            <span className="text-2xl text-on-surface-variant">%</span>
+            <span className="text-2xl text-dark-text-secondary">%</span>
           </p>
-          <p className="mt-2 text-sm text-on-surface-variant">
-            {result.score} of {result.total} correct
-          </p>
-        </div>
+          {delta != null && (
+            <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1">
+              <span
+                className={`material-symbols-outlined text-sm ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
+              >
+                {delta >= 0 ? 'trending_up' : 'trending_down'}
+              </span>
+              <span
+                className={`font-mono text-xs ${delta >= 0 ? 'text-accent-emerald' : 'text-error'}`}
+              >
+                {delta >= 0 ? `+${delta}` : delta} vs last attempt
+              </span>
+            </div>
+          )}
+        </section>
 
-        <h2 className="mt-8 font-mono text-xs font-medium uppercase tracking-[0.2em] text-on-surface-variant">
-          Topic breakdown
-        </h2>
+        {/* XP / streak card */}
+        <section className="mt-4 flex items-center justify-between rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-amber/10">
+              <span className="material-symbols-outlined fill-current text-accent-amber">stars</span>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-on-surface">Experience Gained</p>
+              <p className="text-[13px] text-on-surface-variant">Keep the momentum going</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-lg font-bold text-accent-amber">+{xpEarned} XP</p>
+            <p className="flex items-center justify-end gap-1 font-mono text-[11px] text-on-surface-variant">
+              <span className="material-symbols-outlined fill-current text-[14px] text-accent-amber">
+                local_fire_department
+              </span>
+              Streak Day {gam?.state.currentStreak ?? 0}
+            </p>
+          </div>
+        </section>
+
+        {/* stats grid */}
+        <section className="mt-3 grid grid-cols-2 gap-3">
+          <div className="rounded-xl bg-card p-4 text-center shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+            <span className="material-symbols-outlined text-secondary">timer</span>
+            <p className="mt-1 text-xl font-bold text-on-surface">
+              {elapsedMs ? mmss(Math.round(elapsedMs / 1000)) : '--:--'}
+            </p>
+            <p className="text-[13px] text-on-surface-variant">Time Used</p>
+          </div>
+          <div className="rounded-xl bg-card p-4 text-center shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+            <span className="material-symbols-outlined text-secondary">track_changes</span>
+            <p className="mt-1 text-xl font-bold text-on-surface">
+              {result.score}/{result.total}
+            </p>
+            <p className="text-[13px] text-on-surface-variant">Correct Answers</p>
+          </div>
+        </section>
+
+        <h2 className="mt-6 text-lg font-semibold tracking-tight text-on-surface">Topic Breakdown</h2>
         <div className="mt-3 space-y-3">
+          {result.breakdown.length === 0 && (
+            <p className="rounded-xl bg-card p-4 text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+              No topic data on this paper — every question counted toward the overall score.
+            </p>
+          )}
           {result.breakdown.map((row) => {
             const rowPct = row.total > 0 ? Math.round((row.correct / row.total) * 100) : 0;
+            const bar = rowPct >= 80 ? 'bg-accent-emerald' : rowPct >= 50 ? 'bg-accent-amber' : 'bg-error';
             return (
               <div
                 key={row.topic}
-                className="rounded-xl border border-outline-variant bg-surface-container-lowest p-4 shadow-sm"
+                className="rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]"
               >
-                <div className="mb-2 flex items-center justify-between text-sm">
-                  <span className="text-on-surface">{row.topic}</span>
-                  <span className="text-on-surface-variant">
-                    {row.correct}/{row.total}
+                <div className="mb-2 flex items-baseline justify-between text-sm">
+                  <span className="font-semibold text-on-surface">{row.topic}</span>
+                  <span className="font-mono text-xs text-on-surface-variant">
+                    {rowPct}% · {row.correct}/{row.total}
                   </span>
                 </div>
-                <div className="h-2 overflow-hidden rounded-full bg-surface-container-high">
-                  <div
-                    className={`h-full rounded-full ${rowPct >= 50 ? 'bg-emerald-600' : 'bg-amber-500'}`}
-                    style={{ width: `${rowPct}%` }}
-                  />
+                <div className="h-2 overflow-hidden rounded-full bg-surface-container">
+                  <div className={`h-full rounded-full ${bar}`} style={{ width: `${rowPct}%` }} />
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="mt-8 flex gap-3">
+        <div className="mt-8 flex flex-col gap-2">
+          {attempt && (
+            <Link
+              href={`/review?attemptId=${attempt.attemptId}`}
+              className="flex h-[52px] w-full items-center justify-center rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+            >
+              Review Answers
+            </Link>
+          )}
           <button
             onClick={() => {
               setPhase('intro');
               setAttempt(null);
             }}
-            className="flex-1 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+            className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-transparent text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD] transition-all active:scale-[0.98]"
           >
-            Retake
+            Retry Weak Topics
+            <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </button>
-          <Link
-            href="/dashboard"
-            className="flex-1 rounded-lg border border-outline-variant px-4 py-3 text-center text-sm text-on-surface transition hover:border-outline"
-          >
-            Dashboard
+          <Link href="/dashboard" className="py-2 text-center text-sm text-on-surface-variant hover:text-on-surface">
+            Back to dashboard
           </Link>
         </div>
       </main>
