@@ -361,8 +361,9 @@ class ExamController extends ChangeNotifier {
 // ---------------------------------------------------------- student controller
 
 /// Everything the shell chrome and tab screens read: /me, gamification,
-/// paper history. One refresh() populates the launcher hero card, the
-/// streak pill, the review backlog and the profile stat strip.
+/// paper history, the SM-2 review queue. One refresh() populates the
+/// launcher hero card, the streak pill, the review backlog, the due badge
+/// and the profile stat strip.
 class StudentController extends ChangeNotifier {
   StudentController({required ApiClient api, required PackStore store})
       : _api = api,
@@ -373,6 +374,7 @@ class StudentController extends ChangeNotifier {
 
   MeResult? me;
   GamificationSummary? gamification;
+  ReviewSummary? review;
   List<AttemptRow> attempts = <AttemptRow>[];
   Set<String> downloaded = <String>{};
   bool loading = false;
@@ -428,9 +430,19 @@ class StudentController extends ChangeNotifier {
     return (gradedCodes.length * 100 ~/ relevant.length).clamp(0, 100);
   }
 
-  /// Total questions missed across graded papers — the Review tab's backlog.
+  /// Total questions missed across graded papers.
   int get questionsToReview =>
       attempts.fold(0, (sum, a) => sum + a.missed);
+
+  /// Topics the spaced-repetition engine says are due today (or overdue) —
+  /// the number behind the Review Due badge and the review hero card.
+  int get dueTopics => review?.stats.due ?? 0;
+
+  /// Due + overdue + upcoming rows, in server order (oldest due first).
+  List<ReviewItem> get queuePreview => <ReviewItem>[
+        ...review?.due ?? const <ReviewItem>[],
+        ...review?.upcoming ?? const <ReviewItem>[],
+      ];
 
   /// Questions answered today (daily quest progress, all packs).
   int get todayQuestions {
@@ -484,11 +496,13 @@ class StudentController extends ChangeNotifier {
         _api.gamification(),
         _api.attempts(),
         _store.downloadedCodes(),
+        _api.reviewQueue(),
       ]);
       me = results[0] as MeResult;
       gamification = results[1] as GamificationSummary;
       attempts = results[2] as List<AttemptRow>;
       downloaded = results[3] as Set<String>;
+      review = results[4] as ReviewSummary;
     } on ApiException catch (e) {
       error = e.message;
     } on NetworkException catch (e) {

@@ -1,10 +1,12 @@
 /// Review tab + answer review — Stitch review_queue_light and
 /// answer_review_light, adapted to real data.
 ///
-/// Tab: the amber "questions to retake" hero card (the student's real
-/// missed-question backlog) plus the recent papers list. Detail: the
-/// post-grade answer review — You Picked vs Correct Answer, per-question
-/// explanations from the sealed keys, Wrong / Skipped / All filters.
+/// Tab: the amber spaced-repetition hero (real SM-2 due count from
+/// GET /me/review, estimated time, Start Review) plus the Queue Preview
+/// (due/overdue/upcoming topic rows) and the recent papers list. Detail:
+/// the post-grade answer review — You Picked vs Correct Answer,
+/// per-question explanations from the sealed keys, Wrong / Skipped / All
+/// filters.
 library;
 
 import 'package:flutter/material.dart';
@@ -36,7 +38,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
         padding: EdgeInsets.fromLTRB(
             16, MediaQuery.paddingOf(context).top + 64 + 8, 16, 24),
         children: <Widget>[
-          _BacklogCard(
+          _ReviewQueueCard(
             student: student,
             onStart: () {
               final graded = papers.where((AttemptRow a) => a.isGraded);
@@ -47,6 +49,10 @@ class _ReviewScreenState extends State<ReviewScreen> {
               ));
             },
           ),
+          if (student.queuePreview.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 24),
+            const _QueuePreviewSection(),
+          ],
           const SizedBox(height: 20),
           const Text('Recent papers', style: RenanceText.sectionTitle),
           const SizedBox(height: 12),
@@ -88,27 +94,50 @@ class _ReviewScreenState extends State<ReviewScreen> {
   }
 }
 
-/// "N questions to retake" — the real backlog across graded papers.
-class _BacklogCard extends StatelessWidget {
-  const _BacklogCard({required this.student, required this.onStart});
+/// The amber spaced-repetition hero (review_queue_light): the real SM-2
+/// due count, estimated time, and Start Review — which opens the most
+/// recent marked paper until a dedicated review-session player ships.
+class _ReviewQueueCard extends StatelessWidget {
+  const _ReviewQueueCard({required this.student, required this.onStart});
 
   final StudentController student;
   final VoidCallback onStart;
 
   @override
   Widget build(BuildContext context) {
-    final int backlog = student.questionsToReview;
-    final bool hasWork = backlog > 0;
+    final ReviewSummary? queue = student.review;
+
+    // Queue still loading (or the call failed) — RenanceMark, never a
+    // spinner, per the founder's only-loader rule.
+    if (queue == null) {
+      return Container(
+        padding: const EdgeInsets.all(24),
+        decoration: _heroDecoration(),
+        child: Column(
+          children: <Widget>[
+            const RenanceMark(size: 40, busy: true),
+            const SizedBox(height: 12),
+            Text('Checking your review queue…',
+                style: RenanceText.bodySecondary),
+          ],
+        ),
+      );
+    }
+
+    final int due = queue.stats.due;
+    final bool hasWork = due > 0;
+    final String nextUp =
+        queue.upcoming.isEmpty ? '' : queue.upcoming.first.topic;
+    final String nextWhen = queue.upcoming.isEmpty
+        ? ''
+        : queue.upcoming.first.laterLabel;
+    final List<ReviewItem> overdue = queue.due
+        .where((ReviewItem it) => it.status(DateTime.now()) == 'overdue')
+        .toList(growable: false);
+
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: RenanceColors.amber.withValues(alpha: 0.10),
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const <BoxShadow>[
-          BoxShadow(
-              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
-        ],
-      ),
+      decoration: _heroDecoration(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -128,25 +157,41 @@ class _BacklogCard extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('$backlog',
+              Text('$due',
                   style: RenanceText.displayLg.copyWith(
-                      color: RenanceColors.amber, letterSpacing: -1)),
-              const SizedBox(width: 6),
+                      color: hasWork
+                          ? RenanceColors.amber
+                          : RenanceColors.emerald,
+                      letterSpacing: -1)),
+              const SizedBox(width: 8),
               Padding(
                 padding: const EdgeInsets.only(bottom: 6),
                 child: Text(
-                  hasWork ? 'questions to retake' : 'questions to retake — all clear',
+                  hasWork
+                      ? (overdue.isEmpty
+                          ? 'topics due today'
+                          : 'topics due · ${overdue.length} overdue')
+                      : 'all caught up',
                   style: RenanceText.bodyMedium
                       .copyWith(color: RenanceColors.textSecondary),
                 ),
               ),
             ],
           ),
+          const SizedBox(height: 4),
+          Text(
+            hasWork
+                ? 'Estimated time: ~${due * 2} minutes'
+                : (nextUp.isEmpty
+                    ? 'Grade a paper and its topics join your schedule.'
+                    : 'Next up: $nextUp $nextWhen'),
+            style: RenanceText.caption.copyWith(height: 1.4),
+          ),
           const SizedBox(height: 12),
           SizedBox(
             height: 44,
             child: FilledButton(
-              onPressed: hasWork ? onStart : null,
+              onPressed: onStart,
               style: FilledButton.styleFrom(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
@@ -154,8 +199,8 @@ class _BacklogCard extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text('Start Review',
-                      style: TextStyle(
+                  Text(hasWork ? 'Start Review' : 'Revise latest paper',
+                      style: const TextStyle(
                           fontSize: 14, fontWeight: FontWeight.w600)),
                   const SizedBox(width: 6),
                   const Icon(Icons.arrow_forward, size: 18),
@@ -163,6 +208,139 @@ class _BacklogCard extends StatelessWidget {
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+
+  BoxDecoration _heroDecoration() {
+    return BoxDecoration(
+      color: RenanceColors.amber.withValues(alpha: 0.10),
+      borderRadius: BorderRadius.circular(12),
+      boxShadow: const <BoxShadow>[
+        BoxShadow(
+            color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+      ],
+    );
+  }
+}
+
+/// "Queue Preview / Next up" (review_queue_light): due + upcoming topic
+/// rows with the design's Overdue / Due now / in-Nd status slot.
+class _QueuePreviewSection extends StatelessWidget {
+  const _QueuePreviewSection();
+
+  @override
+  Widget build(BuildContext context) {
+    final StudentController student = context.watch<StudentController>();
+    final List<ReviewItem> rows = student.queuePreview;
+    const int maxRows = 6;
+    final List<ReviewItem> shown =
+        rows.length > maxRows ? rows.sublist(0, maxRows) : rows;
+    final int hidden = rows.length - shown.length;
+    final DateTime now = DateTime.now();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            const Text('Queue Preview', style: RenanceText.sectionTitle),
+            Text('Next up', style: RenanceText.bodySecondary),
+          ],
+        ),
+        const SizedBox(height: 12),
+        ...shown.map((ReviewItem it) => Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: _QueueRow(item: it, now: now),
+            )),
+        if (hidden > 0)
+          Padding(
+            padding: const EdgeInsets.only(top: 2),
+            child: Text('+ $hidden more topics on the schedule',
+                style: RenanceText.caption),
+          ),
+      ],
+    );
+  }
+}
+
+/// One topic row: chip + status (Overdue red / Due now amber / in Nd).
+class _QueueRow extends StatelessWidget {
+  const _QueueRow({required this.item, required this.now});
+
+  final ReviewItem item;
+  final DateTime now;
+
+  @override
+  Widget build(BuildContext context) {
+    final String status = item.status(now);
+    final (Color tint, String label) = switch (status) {
+      'overdue' => (RenanceColors.error, 'Overdue'),
+      'due' => (RenanceColors.amber, 'Due now'),
+      _ => (RenanceColors.textSecondary, item.laterLabel),
+    };
+    final String subtitle = item.lastTotal > 0
+        ? 'last time ${item.lastCorrect}/${item.lastTotal} correct'
+        : 'new on the schedule';
+
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: RenanceColors.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Flexible(
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: RenanceColors.selectionBlue,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    item.topic,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: RenanceText.caption.copyWith(
+                        fontSize: 12, color: RenanceColors.ink),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  if (status != 'later')
+                    Container(
+                      width: 6,
+                      height: 6,
+                      decoration:
+                          BoxDecoration(color: tint, shape: BoxShape.circle),
+                    ),
+                  const SizedBox(width: 6),
+                  Text(label,
+                      style: RenanceText.bodyMedium.copyWith(
+                          color: tint,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 13)),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(subtitle, style: RenanceText.bodySecondary),
         ],
       ),
     );

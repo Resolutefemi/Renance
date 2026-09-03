@@ -217,6 +217,16 @@ class ApiClient {
         .toList();
   }
 
+  // --------------------------------------------------------- spaced repetition
+
+  /// The SM-2 review queue: topics due today + upcoming + stats. The
+  /// server returns empty lists for a scholar with no graded attempts —
+  /// never a 404.
+  Future<ReviewSummary> reviewQueue() async {
+    final data = await _send('GET', '/me/review') as Map<dynamic, dynamic>;
+    return ReviewSummary.fromJson(data.cast<String, dynamic>());
+  }
+
   /// Per-question review of a graded paper: picks, correct letters and
   /// the explanations stored with the sealed keys. 409 until graded.
   Future<AttemptReview> attemptReview(String attemptId) async {

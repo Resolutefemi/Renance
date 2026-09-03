@@ -490,3 +490,104 @@ class GamificationSummary {
             .toList(),
       );
 }
+
+// ------------------------------------------------------------ spaced repetition
+
+/// One queued topic of the SM-2 review queue (GET /me/review rows).
+class ReviewItem {
+  ReviewItem({
+    required this.topic,
+    required this.ease,
+    required this.intervalDays,
+    required this.repetitions,
+    required this.lapses,
+    required this.dueOn,
+    required this.lastCorrect,
+    required this.lastTotal,
+  });
+
+  final String topic;
+  final double ease;
+  final int intervalDays;
+  final int repetitions;
+  final int lapses;
+
+  /// YYYY-MM-DD (UTC) the topic comes due.
+  final String dueOn;
+  final int lastCorrect;
+  final int lastTotal;
+
+  /// Overdue / due / later — the preview status the design renders.
+  String status(DateTime now) {
+    final due = DateTime.tryParse(dueOn);
+    if (due == null) return 'due';
+    final today = DateTime(now.year, now.month, now.day);
+    final day = DateTime(due.year, due.month, due.day);
+    final days = today.difference(day).inDays;
+    if (days > 0) return 'overdue';
+    if (days == 0) return 'due';
+    return 'later';
+  }
+
+  /// "in 3d" / "in 2w" for upcoming rows (design's "In 2 hours" slot).
+  String get laterLabel {
+    if (intervalDays >= 14) return 'in ${intervalDays ~/ 7}w';
+    return 'in ${intervalDays}d';
+  }
+
+  factory ReviewItem.fromJson(Map<String, dynamic> j) => ReviewItem(
+        topic: (j['topic'] ?? '') as String,
+        ease: (j['ease'] as num?)?.toDouble() ?? 2.5,
+        intervalDays: (j['intervalDays'] ?? 0) as int,
+        repetitions: (j['repetitions'] ?? 0) as int,
+        lapses: (j['lapses'] ?? 0) as int,
+        dueOn: (j['dueOn'] ?? '') as String,
+        lastCorrect: (j['lastCorrect'] ?? 0) as int,
+        lastTotal: (j['lastTotal'] ?? 0) as int,
+      );
+}
+
+/// Review queue stats block (GET /me/review `stats`).
+class ReviewStats {
+  const ReviewStats({
+    required this.tracked,
+    required this.due,
+    required this.mature,
+    required this.learning,
+  });
+
+  final int tracked;
+  final int due;
+  final int mature;
+  final int learning;
+
+  factory ReviewStats.fromJson(Map<String, dynamic> j) => ReviewStats(
+        tracked: (j['tracked'] ?? 0) as int,
+        due: (j['due'] ?? 0) as int,
+        mature: (j['mature'] ?? 0) as int,
+        learning: (j['learning'] ?? 0) as int,
+      );
+}
+
+/// Full spaced-repetition payload: due + upcoming + stats.
+class ReviewSummary {
+  ReviewSummary({required this.due, required this.upcoming, required this.stats});
+
+  final List<ReviewItem> due;
+  final List<ReviewItem> upcoming;
+  final ReviewStats stats;
+
+  factory ReviewSummary.fromJson(Map<String, dynamic> j) => ReviewSummary(
+        due: ((j['due'] ?? <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) =>
+                ReviewItem.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+        upcoming: ((j['upcoming'] ?? <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) =>
+                ReviewItem.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+        stats:
+            ReviewStats.fromJson(((j['stats'] ?? <String, dynamic>{}) as Map)
+                .cast<String, dynamic>()),
+      );
+}

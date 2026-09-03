@@ -75,6 +75,38 @@ void main() {
               },
             ],
           },
+      '/me/review': () => <String, dynamic>{
+            'due': <dynamic>[
+              <String, dynamic>{
+                'topic': 'Organic Chemistry',
+                'ease': 1.9,
+                'intervalDays': 3,
+                'repetitions': 0,
+                'lapses': 2,
+                'dueOn': '2026-09-01',
+                'lastCorrect': 1,
+                'lastTotal': 4,
+              },
+            ],
+            'upcoming': <dynamic>[
+              <String, dynamic>{
+                'topic': 'Optics',
+                'ease': 2.6,
+                'intervalDays': 6,
+                'repetitions': 2,
+                'lapses': 0,
+                'dueOn': '2026-09-09',
+                'lastCorrect': 5,
+                'lastTotal': 5,
+              },
+            ],
+            'stats': <String, dynamic>{
+              'tracked': 2,
+              'due': 1,
+              'mature': 0,
+              'learning': 2,
+            },
+          },
     });
 
     final student = StudentController(api: api, store: MemoryPackStore());
@@ -94,6 +126,14 @@ void main() {
     expect(student.coveragePct, 100);
     // streak pill
     expect(student.gamification?.state.currentStreak, 4);
+    // spaced repetition: 1 topic due today, queue preview = due + upcoming
+    expect(student.dueTopics, 1);
+    expect(student.review?.stats.tracked, 2);
+    expect(student.queuePreview.length, 2);
+    expect(student.queuePreview.first.topic, 'Organic Chemistry');
+    expect(student.queuePreview.first.status(DateTime(2026, 9, 4)), 'overdue');
+    expect(student.queuePreview.last.status(DateTime(2026, 9, 4)), 'later');
+    expect(student.queuePreview.last.laterLabel, 'in 6d');
   });
 
   test('StudentController empty history yields zero state, never a crash',
@@ -125,6 +165,16 @@ void main() {
             'awards': <dynamic>[],
           },
       '/me/attempts': () => <String, dynamic>{'attempts': <dynamic>[]},
+      '/me/review': () => <String, dynamic>{
+            'due': <dynamic>[],
+            'upcoming': <dynamic>[],
+            'stats': <String, dynamic>{
+              'tracked': 0,
+              'due': 0,
+              'mature': 0,
+              'learning': 0,
+            },
+          },
     });
 
     final student = StudentController(api: api, store: MemoryPackStore());
@@ -135,6 +185,9 @@ void main() {
     expect(student.accuracyPct, 0);
     expect(student.coveragePct, 0);
     expect(student.daysToTarget, isNull);
+    // zero-state review queue: empty, never a crash
+    expect(student.dueTopics, 0);
+    expect(student.queuePreview, isEmpty);
   });
 }
 
