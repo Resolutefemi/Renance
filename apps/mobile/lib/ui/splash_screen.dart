@@ -1,5 +1,12 @@
-/// Splash: brand animation while the session is inspected, then route.
+/// Splash — the Stitch splash_screen_light screen, 1:1.
+///
+/// Three orbiting rings (#D0E1FB 3s, violet 4s reverse, emerald 5s) chase
+/// each other around the pulsing Renance mark; the wordmark sits below and
+/// the LEARN. PRACTICE. RISE. tagline anchors the bottom — while the
+/// session is inspected, then the route fires.
 library;
+
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future<void>.delayed(const Duration(milliseconds: 1400), _decide);
+    Future<void>.delayed(const Duration(milliseconds: 1600), _decide);
   }
 
   Future<void> _decide() async {
@@ -34,27 +41,33 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      backgroundColor: RenanceColors.background,
+      body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const RenanceMark(size: 84, busy: true),
-            const SizedBox(height: 20),
-            const Text(
-              'Renance',
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.w700,
-                color: RenanceColors.ink,
-                letterSpacing: -0.5,
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const _OrbitRings(),
+                    const SizedBox(height: 24),
+                    const Text('Renance', style: RenanceText.displayLg),
+                  ],
+                ),
               ),
             ),
-            const SizedBox(height: 6),
-            const Text(
-              'the global student study OS',
-              style: TextStyle(
-                color: RenanceColors.onSurfaceVariant,
-                fontSize: 13,
+            const Padding(
+              padding: EdgeInsets.only(bottom: 48),
+              child: Text(
+                'LEARN. PRACTICE. RISE.',
+                style: TextStyle(
+                  fontFamily: 'Inter',
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0.2 * 12,
+                  color: RenanceColors.secondary,
+                ),
               ),
             ),
           ],
@@ -62,4 +75,141 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
+}
+
+/// The three concentric arc rings from the Stitch splash, each spinning at
+/// its own speed/direction, with the mark pulsing in the middle.
+class _OrbitRings extends StatefulWidget {
+  const _OrbitRings();
+
+  @override
+  State<_OrbitRings> createState() => _OrbitRingsState();
+}
+
+class _OrbitRingsState extends State<_OrbitRings>
+    with TickerProviderStateMixin {
+  late final AnimationController _spin = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 4000),
+  )..repeat();
+
+  late final AnimationController _pulse = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1800),
+  )..repeat(reverse: true);
+
+  @override
+  void dispose() {
+    _spin.dispose();
+    _pulse.dispose();
+    super.dispose();
+  }
+
+  Animation<double> get _pulseView =>
+      Tween<double>(begin: 0, end: 1).animate(
+        CurvedAnimation(parent: _pulse, curve: Curves.easeInOut),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _spin,
+      builder: (BuildContext context, Widget? _) {
+        return SizedBox(
+          width: 96,
+          height: 96,
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              CustomPaint(
+                size: const Size(96, 96),
+                painter: _RingPainter(
+                  t: _spin.value,
+                  radius: 0.92,
+                  color: const Color(0xFFD0E1FB),
+                  strokeWidth: 1.5,
+                  sweep: 80 / 200,
+                  speed: 3 / 4,
+                  reverse: false,
+                ),
+              ),
+              CustomPaint(
+                size: const Size(96, 96),
+                painter: _RingPainter(
+                  t: _spin.value,
+                  radius: 0.76,
+                  color: RenanceColors.violet,
+                  strokeWidth: 1,
+                  sweep: 60 / 200,
+                  speed: 1,
+                  reverse: true,
+                ),
+              ),
+              CustomPaint(
+                size: const Size(96, 96),
+                painter: _RingPainter(
+                  t: _spin.value,
+                  radius: 0.60,
+                  color: RenanceColors.emerald,
+                  strokeWidth: 1.5,
+                  sweep: 40 / 200,
+                  speed: 4 / 5,
+                  reverse: false,
+                ),
+              ),
+              AnimatedBuilder(
+                animation: _pulseView,
+                builder: (_, __) => Transform.scale(
+                  scale: 1 + 0.10 * _pulseView.value,
+                  child: const RenanceMark(size: 48),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// One dashed arc on a circular orbit.
+class _RingPainter extends CustomPainter {
+  _RingPainter({
+    required this.t,
+    required this.radius,
+    required this.color,
+    required this.strokeWidth,
+    required this.sweep,
+    required this.speed,
+    required this.reverse,
+  });
+
+  final double t;
+  final double radius; // fraction of half the tile
+  final Color color;
+  final double strokeWidth;
+  final double sweep; // radians fraction of a full turn
+  final double speed; // rotations per controller cycle
+  final bool reverse;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final double phase = speed * (reverse ? -t : t);
+    final Offset center = Offset(size.width / 2, size.height / 2);
+    final Rect orbit = Rect.fromCircle(
+      center: center,
+      radius: radius * size.width / 2,
+    );
+    final Paint paint = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap = StrokeCap.round
+      ..color = color;
+    // Full circle track is invisible; only the moving arc paints.
+    canvas.drawArc(orbit, phase * 2 * math.pi, sweep * 2 * math.pi, false,
+        paint);
+  }
+
+  @override
+  bool shouldRepaint(_RingPainter oldDelegate) => oldDelegate.t != t;
 }

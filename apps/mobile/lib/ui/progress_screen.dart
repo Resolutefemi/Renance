@@ -115,7 +115,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                   Text(err,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                          color: RenanceColors.onSurfaceVariant)),
+                          color: RenanceColors.textSecondary)),
                   const SizedBox(height: 20),
                   FilledButton(onPressed: _load, child: const Text('Try again')),
                 ],
@@ -137,7 +137,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 1.2,
-                      color: RenanceColors.onSurfaceVariant,
+                      color: RenanceColors.textSecondary,
                     )),
                 const SizedBox(height: 12),
                 _BadgesGrid(summary: d),
@@ -148,7 +148,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
                         letterSpacing: 1.2,
-                        color: RenanceColors.onSurfaceVariant,
+                        color: RenanceColors.textSecondary,
                       )),
                   const SizedBox(height: 12),
                   ...d.awards.take(5).map(
@@ -234,13 +234,13 @@ class _StreakHero extends StatelessWidget {
                 const SizedBox(width: 6),
                 const Text('Days',
                     style: TextStyle(
-                        fontSize: 14, color: RenanceColors.onSurfaceVariant)),
+                        fontSize: 14, color: RenanceColors.textSecondary)),
               ],
             ),
             const SizedBox(height: 2),
             Text('Best Streak: ${state.bestStreak}',
                 style: const TextStyle(
-                    fontSize: 13, color: RenanceColors.onSurfaceVariant)),
+                    fontSize: 13, color: RenanceColors.textSecondary)),
             const SizedBox(height: 20),
             _WeekDots(state: state, now: DateTime.now()),
           ],
@@ -298,7 +298,7 @@ class _WeekDots extends StatelessWidget {
                     fontWeight: d.isToday ? FontWeight.w700 : FontWeight.w400,
                     color: d.isToday
                         ? RenanceColors.ink
-                        : RenanceColors.onSurfaceVariant,
+                        : RenanceColors.textSecondary,
                   )),
               const SizedBox(height: 6),
               _Dot(d: d),
@@ -343,7 +343,7 @@ class _Dot extends StatelessWidget {
             ? Colors.white
             : d.practiced
                 ? RenanceColors.amber
-                : RenanceColors.onSurfaceVariant,
+                : RenanceColors.textSecondary,
       ),
     );
   }
@@ -386,7 +386,7 @@ class _LevelCard extends StatelessWidget {
                         '${state.totalCorrect} correct · ${state.attempts} papers',
                         style: const TextStyle(
                             fontSize: 12,
-                            color: RenanceColors.onSurfaceVariant),
+                            color: RenanceColors.textSecondary),
                       ),
                     ],
                   ),
@@ -413,10 +413,10 @@ class _LevelCard extends StatelessWidget {
               children: <Widget>[
                 Text('${_comma(state.totalXp)} XP',
                     style: const TextStyle(
-                        fontSize: 11, color: RenanceColors.onSurfaceVariant)),
+                        fontSize: 11, color: RenanceColors.textSecondary)),
                 Text('${_comma(next)} XP',
                     style: const TextStyle(
-                        fontSize: 11, color: RenanceColors.onSurfaceVariant)),
+                        fontSize: 11, color: RenanceColors.textSecondary)),
               ],
             ),
             const SizedBox(height: 6),
@@ -506,7 +506,7 @@ class _BadgesGrid extends StatelessWidget {
                   : s.hint,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                  fontSize: 13, color: RenanceColors.onSurfaceVariant),
+                  fontSize: 13, color: RenanceColors.textSecondary),
             ),
             const SizedBox(height: 8),
           ],
@@ -553,7 +553,7 @@ class _BadgeTile extends StatelessWidget {
                         size: 30,
                         color: earned
                             ? spec.fg
-                            : RenanceColors.onSurfaceVariant),
+                            : RenanceColors.textSecondary),
                   ),
                   if (!earned)
                     Positioned.fill(
@@ -563,7 +563,7 @@ class _BadgeTile extends StatelessWidget {
                           color: RenanceColors.card.withValues(alpha: 0.55),
                         ),
                         child: const Icon(Icons.lock,
-                            size: 18, color: RenanceColors.onSurfaceVariant),
+                            size: 18, color: RenanceColors.textSecondary),
                       ),
                     ),
                   if (earned)
@@ -593,7 +593,7 @@ class _BadgeTile extends StatelessWidget {
                     letterSpacing: 0.8,
                     color: earned
                         ? RenanceColors.ink
-                        : RenanceColors.onSurfaceVariant,
+                        : RenanceColors.textSecondary,
                   )),
             ],
           ),
@@ -645,14 +645,14 @@ class _AwardRow extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                           fontSize: 12,
-                          color: RenanceColors.onSurfaceVariant)),
+                          color: RenanceColors.textSecondary)),
                 ],
               ),
             ),
             const SizedBox(width: 8),
             Text(_relativeAgo(award.earnedAt, DateTime.now()),
                 style: const TextStyle(
-                    fontSize: 11, color: RenanceColors.onSurfaceVariant)),
+                    fontSize: 11, color: RenanceColors.textSecondary)),
           ],
         ),
       ),

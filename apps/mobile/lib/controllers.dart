@@ -162,6 +162,7 @@ class ExamController extends ChangeNotifier {
   final Set<String> flags = <String>{};
 
   String? _attemptId;
+  int? _durationMs;
   DateTime _startedAt = DateTime.now();
   Timer? _timer;
   final Duration _pollDelay = const Duration(milliseconds: 1200);
@@ -275,6 +276,7 @@ class ExamController extends ChangeNotifier {
     }
     _timer?.cancel();
     final durationMs = DateTime.now().difference(_startedAt).inMilliseconds;
+    _durationMs = durationMs;
     phase = ExamPhase.grading;
     notifyListeners();
 
@@ -338,6 +340,11 @@ class ExamController extends ChangeNotifier {
     notifyListeners();
   }
 
+  String? get attemptId => _attemptId;
+
+  /// Wall-clock duration of the sitting (results screen "Time Used").
+  int? get durationMsUsed => _durationMs;
+
   void backToIntro() {
     _timer?.cancel();
     phase = bundle == null ? ExamPhase.loading : ExamPhase.intro;
@@ -348,5 +355,151 @@ class ExamController extends ChangeNotifier {
   void dispose() {
     _timer?.cancel();
     super.dispose();
+  }
+}
+
+// ---------------------------------------------------------- student controller
+
+/// Everything the shell chrome and tab screens read: /me, gamification,
+/// paper history. One refresh() populates the launcher hero card, the
+/// streak pill, the review backlog and the profile stat strip.
+class StudentController extends ChangeNotifier {
+  StudentController({required ApiClient api, required PackStore store})
+      : _api = api,
+        _store = store;
+
+  final ApiClient _api;
+  final PackStore _store;
+
+  MeResult? me;
+  GamificationSummary? gamification;
+  List<AttemptRow> attempts = <AttemptRow>[];
+  Set<String> downloaded = <String>{};
+  bool loading = false;
+  String? error;
+
+  bool get hasProfile => me?.profile?.completed ?? false;
+
+  /// "NEXT TARGET — UTME 2027" hero title from the onboarding pick.
+  String get targetTitle {
+    final p = me?.profile;
+    if (p == null || p.exams.isEmpty) return 'Set your target';
+    final String exam = p.exams.first;
+    final label = switch (exam) {
+      'JAMB' => 'UTME',
+      'WAEC' => 'WASSCE',
+      'NECO' => 'NECO',
+      'University Modules' => 'Semester',
+      _ => exam,
+    };
+    return p.targetYear != null ? '$label ${p.targetYear}' : label;
+  }
+
+  /// Exam-target chip copy on the profile screen ("JAMB 2027").
+  String get targetChip {
+    final p = me?.profile;
+    if (p == null || p.exams.isEmpty) return 'No target yet';
+    final exam = p.exams.first;
+    return p.targetYear != null ? '$exam ${p.targetYear}' : exam;
+  }
+
+  /// Days until the target exam. JAMB/UTME sits in late April, so May 1
+  /// of the target year is the planning estimate the hero card shows.
+  int? get daysToTarget {
+    final year = me?.profile?.targetYear;
+    if (year == null) return null;
+    final examDay = DateTime(year, 5, 1);
+    final now = DateTime.now();
+    return examDay.difference(now).inDays;
+  }
+
+  /// % of the student's packs with at least one graded attempt — the real
+  /// number behind the hero card's "Syllabus Completion" bar.
+  int get coveragePct {
+    final p = me?.profile;
+    if (p == null) return 0;
+    final gradedCodes = attempts.where((a) => a.isGraded).map((a) => a.code).toSet();
+    final relevant = attempts.isEmpty
+        ? <String>{
+            for (final e in downloaded) e,
+          }
+        : gradedCodes;
+    if (relevant.isEmpty) return 0;
+    return (gradedCodes.length * 100 ~/ relevant.length).clamp(0, 100);
+  }
+
+  /// Total questions missed across graded papers — the Review tab's backlog.
+  int get questionsToReview =>
+      attempts.fold(0, (sum, a) => sum + a.missed);
+
+  /// Questions answered today (daily quest progress, all packs).
+  int get todayQuestions {
+    final now = DateTime.now();
+    return attempts
+        .where((a) =>
+            a.submittedAt != null &&
+            a.submittedAt!.year == now.year &&
+            a.submittedAt!.month == now.month &&
+            a.submittedAt!.day == now.day)
+        .fold(0, (sum, a) => sum + (a.total ?? 0));
+  }
+
+  /// Overall accuracy across graded papers (profile stat strip).
+  int get accuracyPct {
+    int correct = 0, total = 0;
+    for (final a in attempts.where((a) => a.isGraded)) {
+      correct += a.score!;
+      total += a.total!;
+    }
+    if (total == 0) return 0;
+    return correct * 100 ~/ total;
+  }
+
+  /// The most recent paper, for the launcher's recent-activity card.
+  AttemptRow? get latestAttempt => attempts.isEmpty ? null : attempts.first;
+
+  /// Title of a pack code from the manifest cache (best effort).
+  String titleForCode(String code) {
+    for (final exam in _manifestTitles.entries) {
+      if (exam.key == code) return exam.value;
+    }
+    return code;
+  }
+
+  final Map<String, String> _manifestTitles = <String, String>{};
+
+  void cacheManifestTitles(List<ExamMeta> exams) {
+    for (final e in exams) {
+      _manifestTitles[e.code] = e.title;
+    }
+  }
+
+  Future<void> refresh() async {
+    loading = true;
+    error = null;
+    notifyListeners();
+    try {
+      final results = await Future.wait<dynamic>([
+        _api.me(),
+        _api.gamification(),
+        _api.attempts(),
+        _store.downloadedCodes(),
+      ]);
+      me = results[0] as MeResult;
+      gamification = results[1] as GamificationSummary;
+      attempts = results[2] as List<AttemptRow>;
+      downloaded = results[3] as Set<String>;
+    } on ApiException catch (e) {
+      error = e.message;
+    } on NetworkException catch (e) {
+      error = e.message;
+    }
+    loading = false;
+    notifyListeners();
+  }
+
+  Future<void> refreshDownloaded() async {
+    downloaded = await _store.downloadedCodes();
+    notifyListeners();
   }
 }

@@ -33,6 +33,7 @@ class Profile {
     required this.gradeLevel,
     required this.exams,
     required this.completed,
+    this.targetYear,
   });
 
   final String fullName;
@@ -41,6 +42,9 @@ class Profile {
   final List<String> exams;
   final bool completed;
 
+  /// Exam year picked at onboarding (drives the hero countdown).
+  final int? targetYear;
+
   factory Profile.fromJson(Map<String, dynamic> j) => Profile(
         fullName: (j['fullName'] ?? '') as String,
         institution: (j['institution'] ?? '') as String,
@@ -48,6 +52,7 @@ class Profile {
         exams: ((j['exams'] as List<dynamic>?) ?? const [])
             .map((e) => e.toString())
             .toList(),
+        targetYear: j['targetYear'] as int?,
         completed: (j['completed'] ?? false) as bool,
       );
 }
@@ -284,6 +289,127 @@ class AttemptView {
         result: j['result'] == null
             ? null
             : ExamResult.fromJson((j['result'] as Map).cast<String, dynamic>()),
+      );
+}
+
+// ---------------------------------------------------------- paper history
+
+/// One row of GET /me/attempts — the student's paper history.
+class AttemptRow {
+  AttemptRow({
+    required this.attemptId,
+    required this.code,
+    required this.status,
+    required this.startedAt,
+    this.submittedAt,
+    this.durationMs,
+    this.score,
+    this.total,
+  });
+
+  final String attemptId;
+  final String code;
+  final String status; // in_progress | grading | graded | error
+  final DateTime startedAt;
+  final DateTime? submittedAt;
+  final int? durationMs;
+  final int? score;
+  final int? total;
+
+  int? get pct {
+    if (score == null || total == null || total! == 0) return null;
+    return score! * 100 ~/ total!;
+  }
+
+  bool get isGraded => status == 'graded' && score != null && total != null;
+
+  /// Questions the student got wrong on this paper (review backlog).
+  int get missed => isGraded ? total! - score! : 0;
+
+  factory AttemptRow.fromJson(Map<String, dynamic> j) => AttemptRow(
+        attemptId: (j['attemptId'] ?? '') as String,
+        code: (j['code'] ?? '') as String,
+        status: (j['status'] ?? '') as String,
+        startedAt: DateTime.tryParse((j['startedAt'] ?? '') as String) ??
+            DateTime.now(),
+        submittedAt: j['submittedAt'] == null
+            ? null
+            : DateTime.tryParse(j['submittedAt'] as String),
+        durationMs: j['durationMs'] as int?,
+        score: j['score'] as int?,
+        total: j['total'] as int?,
+      );
+}
+
+/// One reviewed question of a graded paper (GET /attempts/{id}/review).
+class ReviewQuestion {
+  ReviewQuestion({
+    required this.questionId,
+    required this.stem,
+    required this.topic,
+    required this.options,
+    required this.selected,
+    required this.correct,
+    required this.explanation,
+    required this.correctly,
+  });
+
+  final String questionId;
+  final String stem;
+  final String topic;
+  final Map<String, String> options;
+  final String selected; // '' when skipped
+  final String correct;
+  final String explanation;
+  final bool correctly;
+
+  bool get isWrong => !correctly;
+
+  factory ReviewQuestion.fromJson(Map<String, dynamic> j) => ReviewQuestion(
+        questionId: (j['questionId'] ?? '') as String,
+        stem: (j['stem'] ?? '') as String,
+        topic: (j['topic'] ?? '') as String,
+        options: ((j['options'] as Map<dynamic, dynamic>?) ?? const {})
+            .map((k, v) => MapEntry(k.toString(), v.toString())),
+        selected: (j['selected'] ?? '') as String,
+        correct: (j['correct'] ?? '') as String,
+        explanation: (j['explanation'] ?? '') as String,
+        correctly: (j['correctly'] ?? false) as bool,
+      );
+}
+
+/// Full review payload for one graded paper.
+class AttemptReview {
+  AttemptReview({
+    required this.attemptId,
+    required this.code,
+    required this.title,
+    required this.questions,
+    this.score,
+    this.total,
+  });
+
+  final String attemptId;
+  final String code;
+  final String title;
+  final List<ReviewQuestion> questions;
+  final int? score;
+  final int? total;
+
+  int get wrongCount => questions.where((q) => q.isWrong).length;
+  int get skippedCount =>
+      questions.where((q) => q.selected.isEmpty).length;
+
+  factory AttemptReview.fromJson(Map<String, dynamic> j) => AttemptReview(
+        attemptId: (j['attemptId'] ?? '') as String,
+        code: (j['code'] ?? '') as String,
+        title: (j['title'] ?? '') as String,
+        score: j['score'] as int?,
+        total: j['total'] as int?,
+        questions: ((j['questions'] as List<dynamic>?) ?? const [])
+            .map((dynamic e) =>
+                ReviewQuestion.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
       );
 }
 

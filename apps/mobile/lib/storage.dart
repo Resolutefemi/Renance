@@ -94,6 +94,16 @@ abstract class PackStore {
   Future<void> savePack(Bundle bundle, String sha);
   Future<Bundle?> loadPack(String code, String sha);
   Future<Set<String>> downloadedCodes();
+
+  /// On-device footprint per pack code (bytes) for the storage meter.
+  Future<Map<String, int>> packSizes();
+
+  /// Removes one downloaded pack (Downloads screen swipe/delete).
+  Future<void> removePack(String code);
+
+  /// Drops every downloaded pack (Settings → storage).
+  Future<void> clearPacks();
+
   Future<void> queueSubmission(PendingSubmission submission);
   Future<List<PendingSubmission>> pendingSubmissions();
   Future<void> removeSubmission(String id);
@@ -175,6 +185,29 @@ class DbPackStore implements PackStore {
   }
 
   @override
+  Future<Map<String, int>> packSizes() async {
+    final db = await _open();
+    final rows = await db.query('packs',
+        columns: <String>['code', 'json']);
+    return <String, int>{
+      for (final r in rows)
+        r['code']! as String: (r['json']! as String).length,
+    };
+  }
+
+  @override
+  Future<void> removePack(String code) async {
+    final db = await _open();
+    await db.delete('packs', where: 'code = ?', whereArgs: <Object?>[code]);
+  }
+
+  @override
+  Future<void> clearPacks() async {
+    final db = await _open();
+    await db.delete('packs');
+  }
+
+  @override
   Future<void> queueSubmission(PendingSubmission submission) async {
     final db = await _open();
     await db.insert(
@@ -221,6 +254,17 @@ class MemoryPackStore implements PackStore {
 
   @override
   Future<Set<String>> downloadedCodes() async => _packs.keys.toSet();
+
+  @override
+  Future<Map<String, int>> packSizes() async => <String, int>{
+        for (final e in _packs.entries) e.key: e.value.title.length * 128,
+      };
+
+  @override
+  Future<void> removePack(String code) async => _packs.remove(code);
+
+  @override
+  Future<void> clearPacks() async => _packs.clear();
 
   @override
   Future<void> queueSubmission(PendingSubmission submission) async =>
