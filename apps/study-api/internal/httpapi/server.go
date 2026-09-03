@@ -8,6 +8,7 @@
 //	GET    /me
 //	GET    /me/attempts           -> paper history (newest first)
 //	GET    /me/gamification     -> streaks, XP, badges (zero state on first launch)
+//	GET    /me/review            -> spaced-repetition queue (due today + upcoming)
 //	PUT    /me/profile             {fullName, institution, gradeLevel, exams[], targetYear?}
 //	GET    /manifest
 //	GET    /bundles/{code}
@@ -78,6 +79,8 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /me", s.auth(s.handleMe))
 	mux.HandleFunc("GET /me/attempts", s.auth(s.handleListAttempts))
 	mux.HandleFunc("GET /me/gamification", s.auth(s.handleGamification))
+	mux.HandleFunc("GET /me/review", s.auth(s.handleReviewQueue))
+	mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
 	mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))
 	mux.HandleFunc("GET /bundles/{code}", s.auth(s.handleBundle))
