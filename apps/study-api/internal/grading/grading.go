@@ -121,6 +121,14 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
 			e.log.Info("badges awarded", "user", job.UserID, "codes", codes)
 		}
 	}
+	// Spaced repetition (ROADMAP #3) is best-effort too: a scheduling
+	// failure must never turn a successfully graded attempt into an
+	// error - the topic simply keeps its previous due date.
+	if job.UserID != "" {
+		if err := e.store.ScheduleReview(ctx, job.UserID, result.Breakdown); err != nil {
+			e.log.Error("grading: review schedule", "err", err, "attempt", job.AttemptID)
+		}
+	}
 	e.log.Info("graded", "worker", worker, "attempt", job.AttemptID,
 		"code", job.Code, "score", result.Score, "total", result.Total)
 }

@@ -118,4 +118,22 @@ RQN=$(printf '%s' "$REV" | jsonget "len(d['questions'])")
 printf '%s' "$REV" | jsonget "d['questions'][0]['correct']" | grep -qE "^[A-H]$"
 printf '%s' "$REV" | jsonget "d['questions'][0]['stem']" >/dev/null
 
+step "GET /me/review -> spaced-repetition queue populated by the grade"
+RV=$(curl -fsS "$BASE/me/review" -H "Authorization: Bearer $TOKEN")
+QTRACKED=$(printf '%s' "$RV" | jsonget "d['stats']['tracked']")
+[ "$QTRACKED" -ge 1 ]
+QQUEUED=$(printf '%s' "$RV" | jsonget "len(d['due']) + len(d['upcoming'])")
+[ "$QQUEUED" -ge 1 ]
+# fresh topic: SM-2 always schedules at least tomorrow, so it sits in upcoming
+printf '%s' "$RV" | jsonget "d['upcoming'][0]['topic']" >/dev/null
+printf '%s' "$RV" | jsonget "d['upcoming'][0]['dueOn']" | grep -qE "^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+
+step "GET /me/review without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/me/review")
+[ "$CODE" = "401" ]
+
+step "GET /internal/review/tick -> disabled without ADMIN_TOKEN (404)"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/internal/review/tick")
+[ "$CODE" = "404" ]
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"

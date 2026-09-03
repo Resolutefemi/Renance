@@ -19,6 +19,7 @@ type Config struct {
 	DataDir        string // dir containing manifest.json + questions/ + answer-keys/
 	WebOrigin      string // comma-separated CORS allowlist ("*" keeps dev open)
 	GoogleClientID string // Google OAuth audience(s), comma-separated (web + Android); "" disables Google sign-in
+	AdminToken     string // guards GET /internal/review/tick; "" keeps the route disabled (404)
 	GradeWorkers   int
 	GradeQueue     int
 }
@@ -31,6 +32,7 @@ func Load() (*Config, error) {
 		DataDir:        os.Getenv("DATA_DIR"),
 		WebOrigin:      envStr("WEB_ORIGIN", "*"),
 		GoogleClientID: strings.TrimSpace(os.Getenv("GOOGLE_CLIENT_ID")),
+		AdminToken:     strings.TrimSpace(os.Getenv("ADMIN_TOKEN")),
 		GradeWorkers:   envInt("GRADE_WORKERS", 8),
 		GradeQueue:     envInt("GRADE_QUEUE", 1024),
 	}
