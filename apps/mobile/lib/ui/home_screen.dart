@@ -157,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: HomeNav(
         active: _tab,
-        reviewBadge: student.questionsToReview,
+        reviewBadge: student.dueTopics,
         onTap: (int t) => setState(() => _tab = t),
       ),
     );
@@ -502,9 +502,7 @@ class _LauncherTab extends StatelessWidget {
                 child: LauncherTile(
                   icon: Icons.history,
                   label: 'Review Due',
-                  badge: student.questionsToReview > 0
-                      ? '${student.questionsToReview}'
-                      : null,
+                  badge: student.dueTopics > 0 ? '${student.dueTopics}' : null,
                   badgeColor: RenanceColors.emerald,
                   onTap: () => onGoTab(2),
                 ),
