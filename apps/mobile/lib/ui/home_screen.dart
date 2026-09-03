@@ -1,27 +1,29 @@
-/// Home: the silent asset-sync strip, the offline pack library, the
-/// pending-submission banner, and the contextual profile modal that must
-/// complete before anything else happens.
+/// Root shell + launcher home — the Stitch home_dashboard_jamb_light and
+/// more_features_sheet_light screens, 1:1.
+///
+/// Shell: 5-tab bottom nav (Home / Practice / Review / Progress / Profile).
+/// Launcher: brand header with streak pill, hero progress card (Next
+/// Target / Countdown / Syllabus Completion / Continue Practice), the
+/// Practice and Grow icon grids, and the recent-activity feed — all fed
+/// by real data (StudentController + SyncController).
 library;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
-import 'onboarding_sheet.dart';
-import 'progress_screen.dart';
+import 'downloads_screen.dart';
 import 'exam_screen.dart';
+import 'library_screen.dart';
+import 'onboarding_sheet.dart';
+import 'profile_screen.dart';
+import 'progress_screen.dart';
 import 'renance_logo.dart';
+import 'review_screen.dart';
+import 'settings_screen.dart';
 import 'theme.dart';
-
-const List<String> kExamOptions = <String>[
-  'JAMB',
-  'WAEC',
-  'NECO',
-  'University Modules',
-];
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,62 +32,61 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
-  MeResult? _me;
+class _HomeScreenState extends State<HomeScreen> {
+  int _tab = 0;
+  bool _bootstrapped = false;
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
-    Future<void>.microtask(_bootstrap);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _bootstrap());
   }
 
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed) {
-      context.read<SyncController>().retryPending();
-    }
-  }
-
-  Future<void> _bootstrap({bool force = false}) async {
-    final ApiClient api = context.read<ApiClient>();
-    final SessionStore session = context.read<SessionStore>();
+  Future<void> _bootstrap() async {
+    if (!mounted) return;
+    final StudentController student = context.read<StudentController>();
     final SyncController sync = context.read<SyncController>();
-    try {
-      final MeResult me = await api.me();
-      if (!mounted) return;
-      setState(() => _me = me);
-      if (me.profile == null || !me.profile!.completed) {
-        _showOnboarding();
-        return;
-      }
-      await sync.bootstrap(profileExams: me.profile!.exams);
-    } on ApiException catch (e) {
-      if (e.statusCode == 401) {
+    final SessionStore session = context.read<SessionStore>();
+    await student.refresh();
+    if (!mounted) return;
+    final MeResult? me = student.me;
+    if (me == null) {
+      // 401 handled inside refresh() via error; on network error stay and
+      // let the user pull-to-refresh.
+      if (student.error != null) {
         await session.clear();
         if (!mounted) return;
         await Navigator.of(context).pushReplacementNamed('/login');
         return;
       }
-      sync.surfaceFailure(e.message);
-    } on NetworkException catch (e) {
-      sync.surfaceFailure(e.message);
     }
+    if (!student.hasProfile) {
+      _showOnboarding();
+      return;
+    }
+    await _startSync(student, sync);
+  }
+
+  Future<void> _startSync(
+    StudentController student,
+    SyncController sync,
+  ) async {
+    final exams = student.me?.profile?.exams ?? const <String>[];
+    student.cacheManifestTitles(sync.exams);
+    if (sync.exams.isEmpty) {
+      await sync.bootstrap(profileExams: exams);
+      student.cacheManifestTitles(sync.exams);
+    }
+    await student.refreshDownloaded();
     if (mounted) {
-      setState(() {}); // rebuild after first sync cycle
+      setState(() => _bootstrapped = true);
     }
   }
 
   void _showOnboarding() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (!mounted) return;
-      showModalBottomSheet<void>(
+      final bool? completed = await showModalBottomSheet<bool>(
         context: context,
         isDismissible: false,
         enableDrag: false,
@@ -93,85 +94,328 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         backgroundColor: Colors.transparent,
         builder: (_) => const OnboardingSheet(),
       );
+      if (completed != true || !mounted) return;
+      final StudentController student = context.read<StudentController>();
+      final SyncController sync = context.read<SyncController>();
+      await student.refresh();
+      await _startSync(student, sync);
     });
+  }
+
+  void _openExam(BuildContext context, ExamMeta exam) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(builder: (_) => ExamScreen(exam: exam)),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    final StudentController student = context.watch<StudentController>();
     final SyncController sync = context.watch<SyncController>();
+    final bool firstSyncUnderway =
+        !_bootstrapped && sync.exams.isEmpty && sync.isSyncing;
+
+    final bodies = <Widget>[
+      _LauncherTab(
+        student: student,
+        sync: sync,
+        firstSyncUnderway: firstSyncUnderway,
+        onOpenExam: _openExam,
+        onGoTab: (int t) => setState(() => _tab = t),
+        onOnboarding: _showOnboarding,
+      ),
+      LibraryScreen(onOpenExam: _openExam),
+      const ReviewScreen(),
+      const ProgressScreen(),
+      ProfileScreen(onGoTab: (int t) => setState(() => _tab = t)),
+    ];
+
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            const RenanceMark(size: 34),
-            const SizedBox(width: 10),
-            Text(
-              _me?.profile?.fullName.isNotEmpty == true
-                  ? 'Hi, ${_me!.profile!.fullName.split(' ').first}'
-                  : 'Renance',
-              style: const TextStyle(
-                color: RenanceColors.ink,
-                fontWeight: FontWeight.w600,
-              ),
+      backgroundColor: RenanceColors.background,
+      body: Stack(
+        children: <Widget>[
+          // Body sits UNDER the header (which paints its own background).
+          Positioned.fill(
+            top: 0,
+            child: ColoredBox(
+              color: RenanceColors.card,
+              child: IndexedStack(index: _tab, children: bodies),
             ),
-          ],
-        ),
-        actions: <Widget>[
-          IconButton(
-            tooltip: 'Your progress',
-            icon: const Icon(Icons.leaderboard, size: 22),
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute<void>(
-                  builder: (_) => const ProgressScreen(),
-                ),
-              );
-            },
           ),
-          IconButton(
-            tooltip: 'Sign out',
-            icon: const Icon(Icons.logout, size: 20),
-            onPressed: () async {
-              await context.read<SessionStore>().clear();
-              if (!context.mounted) return;
-              await Navigator.of(context).pushReplacementNamed('/login');
-            },
+          // Brand header — bg-surface/80 + hairline shadow (Stitch header).
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: HomeHeader(
+              streak: student.gamification?.state.currentStreak ?? 0,
+              name: student.me?.profile?.fullName ?? '',
+              onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
+            ),
           ),
         ],
       ),
-      body: RefreshIndicator(
-        onRefresh: () => _bootstrap(force: true),
-        child: ListView(
-          physics: const AlwaysScrollableScrollPhysics(),
-          padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-          children: <Widget>[
-            _SyncStrip(sync: sync),
-            if (sync.pendingCount > 0) ...<Widget>[
-              const SizedBox(height: 12),
-              _PendingBanner(),
+      bottomNavigationBar: HomeNav(
+        active: _tab,
+        reviewBadge: student.questionsToReview,
+        onTap: (int t) => setState(() => _tab = t),
+      ),
+    );
+  }
+}
+
+// ----------------------------------------------------------------- header
+
+/// The fixed brand header: black R tile + wordmark, streak pill, avatar.
+class HomeHeader extends StatelessWidget {
+  const HomeHeader({
+    super.key,
+    required this.streak,
+    required this.name,
+    this.onBackPressed,
+  });
+
+  final int streak;
+  final String name;
+  final VoidCallback? onBackPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        color: RenanceColors.background,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            color: Color(0x0A000000),
+            blurRadius: 8,
+            offset: Offset(0, 1),
+          ),
+        ],
+      ),
+      padding: EdgeInsets.only(top: MediaQuery.paddingOf(context).top),
+      child: SizedBox(
+        height: 64,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Row(
+            children: <Widget>[
+              const _BrandMark(),
+              const Spacer(),
+              StreakPill(streak: streak),
+              const SizedBox(width: 16),
+              AvatarCircle(name: name, size: 32),
             ],
-            const SizedBox(height: 20),
-            const Text(
-              'YOUR STUDY PACKS',
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 1.2,
-                color: RenanceColors.onSurfaceVariant,
-              ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Black rounded square with the white R — matches the web header.
+class _BrandMark extends StatelessWidget {
+  const _BrandMark();
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        Container(
+          width: 32,
+          height: 32,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          alignment: Alignment.center,
+          child: const Text(
+            'R',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+              fontSize: 17,
             ),
-            const SizedBox(height: 12),
-            ...sync.exams.map((ExamMeta e) => Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: _PackCard(exam: e),
-                )),
-            if (sync.exams.isEmpty && !sync.isSyncing)
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 40),
-                child: Center(
-                  child: LogoActivityIndicator(
-                    label: 'Loading your library…',
-                    size: 34,
+          ),
+        ),
+        const SizedBox(width: 8),
+        const Text('Renance', style: RenanceText.displayMd),
+      ],
+    );
+  }
+}
+
+/// The amber-flame streak pill in the header.
+class StreakPill extends StatelessWidget {
+  const StreakPill({super.key, required this.streak});
+
+  final int streak;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      decoration: BoxDecoration(
+        color: RenanceColors.surfaceContainer,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          const Icon(Icons.local_fire_department,
+              size: 20, color: RenanceColors.amber),
+          const SizedBox(width: 4),
+          Text('$streak', style: RenanceText.labelMono),
+        ],
+      ),
+    );
+  }
+}
+
+/// Initials avatar with the outline ring from the designs.
+class AvatarCircle extends StatelessWidget {
+  const AvatarCircle({super.key, required this.name, this.size = 32});
+
+  final String name;
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    final String initials = name.trim().isEmpty
+        ? 'R'
+        : name.trim().split(RegExp(r'\s+')).map((w) => w[0]).take(2).join();
+    return Container(
+      width: size,
+      height: size,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: RenanceColors.surfaceContainerHigh,
+        border: Border.all(color: RenanceColors.outlineLight),
+      ),
+      child: Text(
+        initials.toUpperCase(),
+        style: TextStyle(
+          fontSize: size * 0.36,
+          fontWeight: FontWeight.w600,
+          color: RenanceColors.ink,
+        ),
+      ),
+    );
+  }
+}
+
+// ------------------------------------------------------------ bottom nav
+
+/// 5-tab nav: white/95, rounded top corners, active tab fills its icon and
+/// grows a 4px dot — the Stitch nav pattern.
+class HomeNav extends StatelessWidget {
+  const HomeNav({
+    super.key,
+    required this.active,
+    required this.reviewBadge,
+    required this.onTap,
+  });
+
+  final int active;
+  final int reviewBadge;
+  final ValueChanged<int> onTap;
+
+  static const _items = <(IconData, IconData, String)>[
+    (Icons.home_outlined, Icons.home, 'Home'),
+    (Icons.edit_note, Icons.edit_note, 'Practice'),
+    (Icons.history_edu, Icons.history_edu, 'Review'),
+    (Icons.leaderboard_outlined, Icons.leaderboard, 'Progress'),
+    (Icons.person_outline, Icons.person, 'Profile'),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final double bottomPad = MediaQuery.paddingOf(context).bottom;
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+            color: Color(0x0D000000),
+            blurRadius: 8,
+            offset: Offset(0, -1),
+          ),
+        ],
+      ),
+      padding: EdgeInsets.only(bottom: bottomPad),
+      child: SizedBox(
+        height: 64,
+        child: Row(
+          children: <Widget>[
+            for (var i = 0; i < _items.length; i++)
+              Expanded(
+                child: InkWell(
+                  onTap: () => onTap(i),
+                  borderRadius: BorderRadius.circular(12),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Stack(
+                        clipBehavior: Clip.none,
+                        children: <Widget>[
+                          Icon(
+                            i == active ? _items[i].$2 : _items[i].$1,
+                            size: 24,
+                            color: i == active
+                                ? Colors.black
+                                : RenanceColors.textSecondary,
+                          ),
+                          if (i == 2 && reviewBadge > 0)
+                            Positioned(
+                              top: -6,
+                              right: -8,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 1),
+                                decoration: BoxDecoration(
+                                  color: RenanceColors.emerald,
+                                  borderRadius: BorderRadius.circular(999),
+                                ),
+                                child: Text(
+                                  '$reviewBadge',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        _items[i].$3,
+                        style: TextStyle(
+                          fontFamily: 'Inter',
+                          fontSize: 12,
+                          height: 1.0,
+                          color: i == active
+                              ? Colors.black
+                              : RenanceColors.textSecondary,
+                          fontWeight:
+                              i == active ? FontWeight.w600 : FontWeight.w400,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Container(
+                        width: 4,
+                        height: 4,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: i == active
+                              ? Colors.black
+                              : Colors.transparent,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -182,62 +426,548 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 }
 
-class _SyncStrip extends StatelessWidget {
-  const _SyncStrip({required this.sync});
+// ------------------------------------------------------------ launcher tab
+
+class _LauncherTab extends StatelessWidget {
+  const _LauncherTab({
+    required this.student,
+    required this.sync,
+    required this.firstSyncUnderway,
+    required this.onOpenExam,
+    required this.onGoTab,
+    required this.onOnboarding,
+  });
+
+  final StudentController student;
   final SyncController sync;
+  final bool firstSyncUnderway;
+  final void Function(BuildContext, ExamMeta) onOpenExam;
+  final ValueChanged<int> onGoTab;
+  final VoidCallback onOnboarding;
+
+  void _soon(BuildContext context, String what) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('$what ships in an upcoming release — designed, queued, coming.')),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
+    final AttemptRow? recent = student.latestAttempt;
+    final int pending = sync.pendingCount;
+
+    return RefreshIndicator(
+      onRefresh: student.refresh,
+      child: ListView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        padding: EdgeInsets.fromLTRB(16, MediaQuery.paddingOf(context).top + 64 + 16, 16, 24),
+        children: <Widget>[
+          // Hero progress card -------------------------------------------
+          _HeroCard(
+            student: student,
+            onContinue: () {
+              final syncExams = sync.exams;
+              if (syncExams.isNotEmpty) {
+                onOpenExam(context, syncExams.first);
+              } else {
+                onGoTab(1); // library
+              }
+            },
+          ),
+          if (pending > 0) ...<Widget>[
+            const SizedBox(height: 12),
+            _PendingBanner(count: pending, onRetry: sync.retryPending),
+          ],
+          if (sync.phase == SyncPhase.error) ...<Widget>[
+            const SizedBox(height: 12),
+            _SyncErrorBanner(sync: sync),
+          ],
+          // Practice grid -------------------------------------------------
+          const SizedBox(height: 8),
+          Text('Practice',
+              style: RenanceText.sectionTitle
+                  .copyWith(color: RenanceColors.textSecondary, fontSize: 14)),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.description,
+                  label: 'Exams',
+                  onTap: () => onGoTab(1),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.history,
+                  label: 'Review Due',
+                  badge: student.questionsToReview > 0
+                      ? '${student.questionsToReview}'
+                      : null,
+                  badgeColor: RenanceColors.emerald,
+                  onTap: () => onGoTab(2),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.style,
+                  label: 'Flashcards',
+                  onTap: () => _soon(context, 'Voice flashcards'),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.menu_book,
+                  label: 'Syllabus',
+                  onTap: () => _soon(context, 'The syllabus map'),
+                ),
+              ),
+            ],
+          ),
+          // Grow grid -----------------------------------------------------
+          const SizedBox(height: 16),
+          Text('Grow',
+              style: RenanceText.sectionTitle
+                  .copyWith(color: RenanceColors.textSecondary, fontSize: 14)),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.trending_up,
+                  label: 'Progress',
+                  onTap: () => onGoTab(3),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.military_tech,
+                  iconColor: RenanceColors.amber,
+                  label: 'Badges',
+                  onTap: () => onGoTab(3),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.smart_toy,
+                  iconColor: Colors.white,
+                  highlight: true,
+                  label: 'Tutor',
+                  onTap: () => _soon(context, 'The AI tutor'),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.more_horiz,
+                  iconColor: RenanceColors.textSecondary,
+                  muted: true,
+                  label: 'More',
+                  onTap: () => showMoreSheet(context),
+                ),
+              ),
+            ],
+          ),
+          // Recent activity ------------------------------------------------
+          const SizedBox(height: 24),
+          if (firstSyncUnderway)
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 40),
+              child: Center(
+                child: LogoActivityIndicator(
+                    label: 'Syncing your packs…', size: 34),
+              ),
+            )
+          else if (recent != null)
+            _RecentActivityCard(
+              attempt: recent,
+              title: student.titleForCode(recent.code),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) =>
+                      ReviewDetailScreen(attemptId: recent.attemptId),
+                ));
+              },
+            )
+          else
+            _EmptyActivityCard(onTap: () => onGoTab(1)),
+          const SizedBox(height: 8),
+        ],
+      ),
+    );
+  }
+}
+
+// ------------------------------------------------------------------ hero
+
+/// Hero progress card — NEXT TARGET / countdown / syllabus completion bar
+/// / black Continue Practice button, with the two soft corner blobs.
+class _HeroCard extends StatelessWidget {
+  const _HeroCard({required this.student, required this.onContinue});
+
+  final StudentController student;
+  final VoidCallback onContinue;
+
+  @override
+  Widget build(BuildContext context) {
+    final int? days = student.daysToTarget;
+    final int coverage = student.coveragePct;
+    return Container(
+      margin: const EdgeInsets.only(top: 4),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: RenanceColors.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(color: Color(0x33141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Stack(
+          children: <Widget>[
+            // decorative blobs
+            Positioned(
+              top: -64,
+              right: -42,
+              child: Container(
+                width: 128,
+                height: 128,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.black.withValues(alpha: 0.05),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: -48,
+              left: -32,
+              child: Container(
+                width: 96,
+                height: 96,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: RenanceColors.violet.withValues(alpha: 0.05),
+                ),
+              ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          const Text('NEXT TARGET',
+                              style: RenanceText.overline),
+                          const SizedBox(height: 4),
+                          Text(student.targetTitle,
+                              style: RenanceText.displayMd),
+                        ],
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        const Text('COUNTDOWN', style: RenanceText.overline),
+                        const SizedBox(height: 4),
+                        Text(
+                          days == null
+                              ? 'Set a year'
+                              : days <= 0
+                                  ? 'This month'
+                                  : '$days Days',
+                          style: RenanceText.bodyMedium
+                              .copyWith(color: RenanceColors.violet),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text('Syllabus Completion',
+                        style: RenanceText.labelMono.copyWith(
+                            fontSize: 12, color: RenanceColors.textSecondary)),
+                    Text('$coverage%',
+                        style: RenanceText.labelMono.copyWith(
+                            fontSize: 12, fontWeight: FontWeight.w700)),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(999),
+                  child: LinearProgressIndicator(
+                    value: coverage / 100,
+                    minHeight: 8,
+                    backgroundColor: RenanceColors.surfaceVariant,
+                    valueColor:
+                        const AlwaysStoppedAnimation<Color>(Colors.black),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                SizedBox(
+                  height: 52,
+                  width: double.infinity,
+                  child: FilledButton.icon(
+                    onPressed: onContinue,
+                    style: FilledButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
+                    ),
+                    icon: const Icon(Icons.play_arrow, size: 20),
+                    label: const Text('Continue Practice',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w600)),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ----------------------------------------------------------------- tiles
+
+/// 56px rounded-[18px] launcher tile with the 11px caption underneath.
+class LauncherTile extends StatelessWidget {
+  const LauncherTile({
+    super.key,
+    required this.icon,
+    required this.label,
+    required this.onTap,
+    this.iconColor,
+    this.highlight = false,
+    this.muted = false,
+    this.badge,
+    this.badgeColor = RenanceColors.emerald,
+  });
+
+  final IconData icon;
+  final String label;
+  final VoidCallback onTap;
+  final Color? iconColor;
+  final bool highlight; // violet AI tile
+  final bool muted; // More tile: tinted bg + hairline border
+  final String? badge;
+  final Color badgeColor;
+
+  @override
+  Widget build(BuildContext context) {
+    final BoxDecoration box = highlight
+        ? BoxDecoration(
+            color: RenanceColors.violet,
+            borderRadius: BorderRadius.circular(18),
+            boxShadow: const <BoxShadow>[
+              BoxShadow(
+                  color: Color(0x408B5CF6), blurRadius: 8, offset: Offset(0, 2)),
+            ],
+          )
+        : muted
+            ? BoxDecoration(
+                color: RenanceColors.surfaceContainer,
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(
+                    color: RenanceColors.outlineLight.withValues(alpha: 0.3)),
+              )
+            : BoxDecoration(
+                color: RenanceColors.card,
+                borderRadius: BorderRadius.circular(18),
+                boxShadow: const <BoxShadow>[
+                  BoxShadow(
+                      color: Color(0x14141C2D),
+                      blurRadius: 3,
+                      offset: Offset(0, 1)),
+                ],
+              );
+
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Column(
+        children: <Widget>[
+          Stack(
+            clipBehavior: Clip.none,
+            children: <Widget>[
+              Container(
+                width: 56,
+                height: 56,
+                decoration: box,
+                child: highlight
+                    ? Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            colors: <Color>[
+                              Colors.transparent,
+                              Colors.white.withValues(alpha: 0.2),
+                            ],
+                          ),
+                        ),
+                        child: Icon(icon, size: 24, color: iconColor),
+                      )
+                    : Icon(icon,
+                        size: 24,
+                        color: iconColor ?? RenanceColors.ink),
+              ),
+              if (badge != null)
+                Positioned(
+                  top: -4,
+                  right: -4,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: badgeColor,
+                      borderRadius: BorderRadius.circular(999),
+                      boxShadow: const <BoxShadow>[
+                        BoxShadow(color: Color(0x1A000000), blurRadius: 2),
+                      ],
+                    ),
+                    child: Text(
+                      badge!,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: RenanceText.caption.copyWith(
+              fontSize: 11,
+              color: highlight ? RenanceColors.violet : RenanceColors.textSecondary,
+              fontWeight: highlight ? FontWeight.w600 : FontWeight.w400,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// -------------------------------------------------------- recent activity
+
+/// The most recent graded paper, in the design's mini-feed card.
+class _RecentActivityCard extends StatelessWidget {
+  const _RecentActivityCard({
+    required this.attempt,
+    required this.title,
+    required this.onTap,
+  });
+
+  final AttemptRow attempt;
+  final String title;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final int? pct = attempt.pct;
+    final String verdict = switch (pct) {
+      null => 'Not marked yet',
+      < 50 => 'Focus needed',
+      < 75 => 'Keep pushing',
+      _ => 'Strong work',
+    };
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
         padding: const EdgeInsets.all(16),
-        child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 300),
-          child: switch (sync.phase) {
-            SyncPhase.syncing => LogoActivityIndicator(
-                key: ValueKey<String>('sync-${sync.done}-${sync.message}'),
-                label: sync.message,
+        decoration: BoxDecoration(
+          color: RenanceColors.card,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: const <BoxShadow>[
+            BoxShadow(
+                color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+          ],
+        ),
+        child: Row(
+          children: <Widget>[
+            Container(
+              width: 40,
+              height: 40,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: RenanceColors.errorContainer,
               ),
-            SyncPhase.ready => Row(
-                key: const ValueKey<String>('ready'),
+              child: const Icon(Icons.science, size: 20, color: RenanceColors.error),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  const RenanceMark(size: 34),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      sync.message,
-                      style: const TextStyle(
-                        color: RenanceColors.onSurfaceVariant,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                  const Icon(Icons.offline_pin_outlined,
-                      size: 18, color: RenanceColors.emerald),
-                ],
-              ),
-            SyncPhase.error => Row(
-                key: const ValueKey<String>('error'),
-                children: <Widget>[
-                  const Icon(Icons.cloud_off_outlined,
-                      size: 20, color: RenanceColors.error),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      sync.message,
-                      style: const TextStyle(
-                        color: RenanceColors.error,
-                        fontSize: 13,
-                      ),
-                    ),
+                  Text(title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: RenanceText.bodyMedium),
+                  const SizedBox(height: 2),
+                  Text(
+                    pct == null
+                        ? verdict
+                        : 'Score: $pct% • $verdict',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: RenanceText.caption,
                   ),
                 ],
               ),
-            SyncPhase.idle => const LogoActivityIndicator(
-                key: ValueKey<String>('idle'),
-                label: 'Preparing your study pack…',
+            ),
+            const Icon(Icons.chevron_right, color: RenanceColors.outlineDark),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _EmptyActivityCard extends StatelessWidget {
+  const _EmptyActivityCard({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          color: RenanceColors.surfaceContainerLow,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Row(
+          children: <Widget>[
+            const RenanceMark(size: 36),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                'No papers yet — open a pack and run your first diagnostic.',
+                style: RenanceText.bodySecondary,
               ),
-          },
+            ),
+            const Icon(Icons.chevron_right, color: RenanceColors.outlineDark),
+          ],
         ),
       ),
     );
@@ -245,15 +975,20 @@ class _SyncStrip extends StatelessWidget {
 }
 
 class _PendingBanner extends StatelessWidget {
+  const _PendingBanner({required this.count, required this.onRetry});
+
+  final int count;
+  final Future<void> Function() onRetry;
+
   @override
   Widget build(BuildContext context) {
-    final SyncController sync = context.watch<SyncController>();
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         color: const Color(0xFFFFF7E6),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: RenanceColors.amber.withValues(alpha: 0.4)),
+        border:
+            Border.all(color: RenanceColors.amber.withValues(alpha: 0.4)),
       ),
       child: Row(
         children: <Widget>[
@@ -261,12 +996,12 @@ class _PendingBanner extends StatelessWidget {
           const SizedBox(width: 10),
           Expanded(
             child: Text(
-              '${sync.pendingCount} finished paper(s) waiting to sync',
-              style: const TextStyle(fontSize: 13, color: RenanceColors.ink),
+              '$count finished paper(s) waiting to sync',
+              style: RenanceText.caption.copyWith(color: RenanceColors.ink),
             ),
           ),
           TextButton(
-            onPressed: () => sync.retryPending(),
+            onPressed: () => onRetry(),
             child: const Text('Retry now'),
           ),
         ],
@@ -275,83 +1010,272 @@ class _PendingBanner extends StatelessWidget {
   }
 }
 
-class _PackCard extends StatelessWidget {
-  const _PackCard({required this.exam});
-  final ExamMeta exam;
-
-  @override
-  Widget build(BuildContext context) {
-    final SyncController sync = context.watch<SyncController>();
-    return Card(
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute<void>(
-              builder: (_) => ExamScreen(exam: exam),
-            ),
-          );
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      exam.title,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
-                        color: RenanceColors.ink,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      '${exam.questionCount} questions'
-                      '${exam.durationMinutes != null ? ' · ${exam.durationMinutes} min' : ''}'
-                      ' · ${exam.totalMarks} marks',
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: RenanceColors.onSurfaceVariant,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              _PackCardTrailing(sync: sync),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _PackCardTrailing extends StatelessWidget {
-  const _PackCardTrailing({required this.sync});
+class _SyncErrorBanner extends StatelessWidget {
+  const _SyncErrorBanner({required this.sync});
 
   final SyncController sync;
 
   @override
   Widget build(BuildContext context) {
-    final bool ready = sync.phase == SyncPhase.ready;
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        if (ready) ...<Widget>[
-          const Icon(Icons.offline_pin, size: 16, color: RenanceColors.emerald),
-          const SizedBox(width: 6),
-          const Text(
-            'Ready offline',
-            style: TextStyle(fontSize: 12, color: RenanceColors.emerald),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: RenanceColors.errorContainer,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        children: <Widget>[
+          const Icon(Icons.cloud_off_outlined,
+              size: 18, color: RenanceColors.error),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              sync.message,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: RenanceText.caption.copyWith(color: RenanceColors.error),
+            ),
           ),
-        ] else
-          const RenanceMark(size: 22, busy: true),
-        const SizedBox(width: 8),
-        const Icon(Icons.chevron_right, size: 20, color: RenanceColors.outline),
+        ],
+      ),
+    );
+  }
+}
+
+// -------------------------------------------------------------- more sheet
+
+/// The "All Features" bottom sheet — more_features_sheet_light, 1:1.
+Future<void> showMoreSheet(BuildContext context) {
+  return showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: Colors.transparent,
+    isScrollControlled: true,
+    builder: (BuildContext sheetContext) => Container(
+      decoration: const BoxDecoration(
+        color: RenanceColors.background,
+        borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+              color: Color(0x1F111C2D), blurRadius: 24, offset: Offset(0, -4)),
+        ],
+      ),
+      child: SafeArea(
+        top: false,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const SizedBox(height: 8),
+            Container(
+              width: 48,
+              height: 6,
+              decoration: BoxDecoration(
+                color: RenanceColors.outlineVariant,
+                borderRadius: BorderRadius.circular(999),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  const Text('All Features', style: RenanceText.sectionTitle),
+                  const SizedBox(height: 2),
+                  Text('Explore everything Renance has to offer',
+                      style: RenanceText.bodySecondary.copyWith(fontSize: 13)),
+                ],
+              ),
+            ),
+            Flexible(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                child: GridView.count(
+                  crossAxisCount: 4,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  mainAxisSpacing: 12,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: 0.92,
+                  children: <Widget>[
+                    _MoreTile(
+                      icon: Icons.download,
+                      label: 'Downloads',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                              builder: (_) => const DownloadsScreen()),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.wifi_off,
+                      label: 'Offline Share',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text(
+                                  'Offline share ships with peer packs in an upcoming release.')),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.workspace_premium,
+                      label: 'Certificates',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text(
+                                  'The certificate wallet is designed — it lands with the exam board.')),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.cases,
+                      label: 'Career Bridge',
+                      soon: true,
+                      soonColor: RenanceColors.violetDeep,
+                      onTap: () {},
+                    ),
+                    _MoreTile(
+                      icon: Icons.groups,
+                      label: 'Patron Portal',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text(
+                                  'Patron portal opens once sponsor accounts go live.')),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.smart_toy,
+                      label: 'AI Generator',
+                      soon: true,
+                      soonColor: RenanceColors.violet,
+                      onTap: () {},
+                    ),
+                    _MoreTile(
+                      icon: Icons.settings,
+                      label: 'Settings',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                              builder: (_) => const SettingsScreen()),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.help_center,
+                      label: 'Help',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        showLicensePage(
+                          context: context,
+                          applicationName: 'Renance',
+                          applicationLegalese: 'Learn. Practice. Rise.',
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+/// One square feature tile of the More sheet (Soon badge supported).
+class _MoreTile extends StatelessWidget {
+  const _MoreTile({
+    required this.icon,
+    required this.label,
+    required this.onTap,
+    this.soon = false,
+    this.soonColor = RenanceColors.violetDeep,
+  });
+
+  final IconData icon;
+  final String label;
+  final VoidCallback onTap;
+  final bool soon;
+  final Color soonColor;
+
+  @override
+  Widget build(BuildContext context) {
+    final Widget tile = Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        color: RenanceColors.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color(0x33141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            width: 40,
+            height: 40,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: RenanceColors.surfaceContainerLow,
+            ),
+            child: Icon(icon, size: 20, color: Colors.black),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: RenanceText.labelMono.copyWith(fontSize: 11),
+          ),
+        ],
+      ),
+    );
+
+    return Stack(
+      clipBehavior: Clip.none,
+      children: <Widget>[
+        Opacity(
+          opacity: soon ? 0.4 : 1,
+          child: InkWell(
+            onTap: soon ? null : onTap,
+            borderRadius: BorderRadius.circular(12),
+            child: tile,
+          ),
+        ),
+        if (soon)
+          Positioned(
+            top: -4,
+            right: -4,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                color: soonColor,
+                borderRadius: BorderRadius.circular(999),
+              ),
+              child: const Text(
+                'Soon',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 9,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: 'JetBrainsMono',
+                ),
+              ),
+            ),
+          ),
       ],
     );
   }

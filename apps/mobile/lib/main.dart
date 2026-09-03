@@ -23,8 +23,14 @@ Future<void> main() async {
     token: () => session.token,
   );
   final PackStore store = DbPackStore();
+  final ThemeController theme = ThemeController(prefs: prefs);
 
-  runApp(RenanceApp(api: api, session: session, store: store));
+  runApp(RenanceApp(
+    api: api,
+    session: session,
+    store: store,
+    theme: theme,
+  ));
 }
 
 class RenanceApp extends StatelessWidget {
@@ -33,11 +39,13 @@ class RenanceApp extends StatelessWidget {
     required this.api,
     required this.session,
     required this.store,
+    required this.theme,
   });
 
   final ApiClient api;
   final SessionStore session;
   final PackStore store;
+  final ThemeController theme;
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +54,10 @@ class RenanceApp extends StatelessWidget {
         Provider<ApiClient>.value(value: api),
         Provider<SessionStore>.value(value: session),
         Provider<PackStore>.value(value: store),
+        ChangeNotifierProvider<ThemeController>.value(value: theme),
+        ChangeNotifierProvider<StudentController>(
+          create: (_) => StudentController(api: api, store: store),
+        ),
         ChangeNotifierProvider<SyncController>(
           create: (_) => SyncController(api: api, store: store),
         ),
@@ -53,26 +65,31 @@ class RenanceApp extends StatelessWidget {
           create: (_) => ExamController(api: api, store: store),
         ),
       ],
-      child: MaterialApp(
-        title: 'Renance',
-        debugShowCheckedModeBanner: false,
-        theme: buildRenanceTheme(),
-        initialRoute: '/',
-        routes: <String, WidgetBuilder>{
-          '/': (_) => const SplashScreen(),
-          '/login': (_) => const LoginScreen(),
-          '/register': (_) => const RegisterScreen(),
-          '/home': (_) => const HomeScreen(),
-        },
-        onGenerateRoute: (RouteSettings settings) {
-          if (settings.name == '/exam') {
-            final ExamMeta exam = settings.arguments! as ExamMeta;
-            return MaterialPageRoute<void>(
-              builder: (_) => ExamScreen(exam: exam),
-            );
-          }
-          return null;
-        },
+      child: AnimatedBuilder(
+        animation: theme,
+        builder: (BuildContext context, Widget? _) => MaterialApp(
+          title: 'Renance',
+          debugShowCheckedModeBanner: false,
+          theme: buildRenanceTheme(),
+          darkTheme: buildRenanceDarkTheme(),
+          themeMode: theme.materialMode,
+          initialRoute: '/',
+          routes: <String, WidgetBuilder>{
+            '/': (_) => const SplashScreen(),
+            '/login': (_) => const LoginScreen(),
+            '/register': (_) => const RegisterScreen(),
+            '/home': (_) => const HomeScreen(),
+          },
+          onGenerateRoute: (RouteSettings settings) {
+            if (settings.name == '/exam') {
+              final ExamMeta exam = settings.arguments! as ExamMeta;
+              return MaterialPageRoute<void>(
+                builder: (_) => ExamScreen(exam: exam),
+              );
+            }
+            return null;
+          },
+        ),
       ),
     );
   }

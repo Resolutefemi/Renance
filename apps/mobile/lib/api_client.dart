@@ -144,12 +144,14 @@ class ApiClient {
     required String institution,
     required String gradeLevel,
     required List<String> exams,
+    int? targetYear,
   }) async {
     final data = await _send('PUT', '/me/profile', body: <String, dynamic>{
       'fullName': fullName,
       'institution': institution,
       'gradeLevel': gradeLevel,
       'exams': exams,
+      if (targetYear != null) 'targetYear': targetYear,
     }) as Map<dynamic, dynamic>;
     return Profile.fromJson((data['profile'] as Map).cast<String, dynamic>());
   }
@@ -201,5 +203,25 @@ class ApiClient {
   Future<GamificationSummary> gamification() async {
     final data = await _send('GET', '/me/gamification') as Map<dynamic, dynamic>;
     return GamificationSummary.fromJson(data.cast<String, dynamic>());
+  }
+
+  // ------------------------------------------------------------ paper history
+
+  /// The student's paper history, newest first. Feeds the launcher's
+  /// recent-activity card, the review tab and completion metrics.
+  Future<List<AttemptRow>> attempts() async {
+    final data = await _send('GET', '/me/attempts') as Map<dynamic, dynamic>;
+    return ((data['attempts'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            AttemptRow.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// Per-question review of a graded paper: picks, correct letters and
+  /// the explanations stored with the sealed keys. 409 until graded.
+  Future<AttemptReview> attemptReview(String attemptId) async {
+    final data =
+        await _send('GET', '/attempts/$attemptId/review') as Map<dynamic, dynamic>;
+    return AttemptReview.fromJson(data.cast<String, dynamic>());
   }
 }

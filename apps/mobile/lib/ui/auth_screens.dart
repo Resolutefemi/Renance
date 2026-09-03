@@ -56,7 +56,7 @@ class AuthScaffold extends StatelessWidget {
                   subtitle,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                    color: RenanceColors.onSurfaceVariant,
+                    color: RenanceColors.textSecondary,
                     fontSize: 14,
                   ),
                 ),
@@ -91,7 +91,7 @@ class _FieldLabel extends StatelessWidget {
         style: const TextStyle(
           fontSize: 13,
           fontWeight: FontWeight.w500,
-          color: RenanceColors.onSurfaceVariant,
+          color: RenanceColors.textSecondary,
         ),
       ),
     );
@@ -299,7 +299,7 @@ class _LoginScreenState extends State<LoginScreen> {
         children: <Widget>[
           const Text(
             "Don't have an account? ",
-            style: TextStyle(color: RenanceColors.onSurfaceVariant, fontSize: 14),
+            style: TextStyle(color: RenanceColors.textSecondary, fontSize: 14),
           ),
           GestureDetector(
             onTap: () =>
@@ -444,7 +444,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         children: <Widget>[
           const Text(
             'Already studying with us? ',
-            style: TextStyle(color: RenanceColors.onSurfaceVariant, fontSize: 14),
+            style: TextStyle(color: RenanceColors.textSecondary, fontSize: 14),
           ),
           GestureDetector(
             onTap: () => Navigator.of(context).pushReplacementNamed('/login'),

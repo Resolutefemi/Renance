@@ -151,7 +151,7 @@ class LogoActivityIndicator extends StatelessWidget {
             child: Text(
               label!,
               style: const TextStyle(
-                color: RenanceColors.onSurfaceVariant,
+                color: RenanceColors.textSecondary,
                 fontSize: 14,
               ),
             ),
