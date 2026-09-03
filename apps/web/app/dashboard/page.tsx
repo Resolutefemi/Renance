@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
 import { getToken, setStoredUser } from '@/lib/session';
 import { fetchManifest, prefetchAll, type ExamMeta } from '@/lib/exams';
+import { type ReviewSummary } from '@/lib/review';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 
 interface Profile {
@@ -57,6 +58,7 @@ export default function DashboardPage() {
   const [exams, setExams] = useState<ExamMeta[]>([]);
   const [streak, setStreak] = useState(0);
   const [attempts, setAttempts] = useState<AttemptRow[]>([]);
+  const [reviewDueCount, setReviewDueCount] = useState(0);
   const [needsProfile, setNeedsProfile] = useState(false);
   const [syncState, setSyncState] = useState<'idle' | 'syncing' | 'ready'>('idle');
   const [syncLabel, setSyncLabel] = useState('Preparing your study pack…');
@@ -75,6 +77,9 @@ export default function DashboardPage() {
         setMe(meRes);
         api<GamificationResponse>('/me/gamification')
           .then((g) => alive && setStreak(g.state.currentStreak))
+          .catch(() => {});
+        api<ReviewSummary>('/me/review')
+          .then((r) => alive && setReviewDueCount(r.stats.due))
           .catch(() => {});
         api<{ attempts: AttemptRow[] }>('/me/attempts')
           .then((a) => alive && setAttempts(a.attempts))
@@ -140,11 +145,6 @@ export default function DashboardPage() {
     if (!pool) return 0;
     return Math.min(100, Math.round((gradedCodes.size * 100) / pool));
   }, [attempts, exams]);
-
-  const reviewDue = useMemo(
-    () => attempts.reduce((sum, a) => sum + (a.status === 'graded' && a.score != null && a.total ? a.total - a.score : 0), 0),
-    [attempts],
-  );
 
   const recent = attempts[0] ?? null;
 
@@ -242,7 +242,7 @@ export default function DashboardPage() {
           <h3 className="text-sm text-on-surface-variant">Practice</h3>
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md">
             <LauncherTile icon="description" label="Exams" href="#packs" />
-            <LauncherTile icon="history" label="Review Due" badge={reviewDue > 0 ? reviewDue : undefined} href="/progress" />
+            <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
             <LauncherTile icon="style" label="Flashcards" soon />
             <LauncherTile icon="menu_book" label="Syllabus" soon />
           </div>
