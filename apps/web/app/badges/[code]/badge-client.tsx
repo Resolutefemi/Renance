@@ -138,7 +138,7 @@ export default function BadgeDetailClient({ code }: { code: string }) {
               <button
                 type="button"
                 onClick={() => router.push('/progress')}
-                className="flex items-center text-sm font-semibold text-violet-deep"
+                className="flex items-center text-sm font-semibold text-ink-deep"
               >
                 View all
                 <span className="material-symbols-outlined text-[18px]">chevron_right</span>

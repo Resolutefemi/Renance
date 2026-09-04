@@ -38,7 +38,7 @@ const List<SetupSubject> kSetupSubjects = <SetupSubject>[
       id: 'english',
       name: 'Use of English',
       letter: 'E',
-      color: RenanceColors.violet,
+      color: RenanceColors.ink,
       mandatory: true),
   SetupSubject(
       id: 'math',
@@ -129,7 +129,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                       Row(
                         children: <Widget>[
                           const Icon(Icons.timer,
-                              size: 24, color: RenanceColors.violet),
+                              size: 24, color: RenanceColors.ink),
                           const SizedBox(width: 10),
                           Expanded(
                             child: Text('Mock Exam Setup',

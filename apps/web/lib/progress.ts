@@ -70,8 +70,8 @@ export const BADGES: BadgeSpec[] = [
     code: 'perfect_paper',
     label: 'Flawless',
     icon: 'workspace_premium',
-    bgClass: 'bg-violet-tint',
-    fgClass: 'text-accent-violet',
+    bgClass: 'bg-ink-tint',
+    fgClass: 'text-accent-ink',
     hint: 'Score 100% on a full exam',
   },
   {
@@ -94,8 +94,8 @@ export const BADGES: BadgeSpec[] = [
     code: 'streak_30',
     label: 'Unstoppable',
     icon: 'rocket_launch',
-    bgClass: 'bg-violet-tint',
-    fgClass: 'text-accent-violet',
+    bgClass: 'bg-ink-tint',
+    fgClass: 'text-accent-ink',
     hint: 'Keep a 30-day streak',
   },
 ];

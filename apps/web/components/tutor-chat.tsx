@@ -87,11 +87,11 @@ export default function TutorChat({
   if (!active) return null;
 
   return (
-    <section className="mt-6 overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] ring-1 ring-[#8B5CF6]/25">
+    <section className="mt-6 overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] ring-1 ring-[#111c2d]/25">
       {/* header */}
-      <header className="flex items-center justify-between bg-[#8B5CF6]/10 px-5 py-4">
+      <header className="flex items-center justify-between bg-[#111c2d]/10 px-5 py-4">
         <div className="flex items-center gap-3">
-          <span className="material-symbols-outlined text-2xl text-[#7C3AED]">school</span>
+          <span className="material-symbols-outlined text-2xl text-[#111c2d]">school</span>
           <div>
             <h2 className="text-[15px] font-bold text-on-surface">Ask the Tutor</h2>
             <p className="text-xs text-on-surface-variant">
@@ -103,7 +103,7 @@ export default function TutorChat({
           <span
             className={`rounded-full px-3 py-1 text-[11px] font-semibold ${
               aiEnabled
-                ? 'bg-[#8B5CF6] text-white'
+                ? 'bg-[#111c2d] text-white'
                 : 'bg-surface-container-low text-on-surface-variant'
             }`}
           >
@@ -127,7 +127,7 @@ export default function TutorChat({
               }}
               className={`shrink-0 rounded-full px-3.5 py-1.5 font-mono text-xs transition ${
                 selected
-                  ? 'bg-[#8B5CF6] font-semibold text-white'
+                  ? 'bg-[#111c2d] font-semibold text-white'
                   : 'bg-surface-container-low text-on-surface-variant hover:text-on-surface'
               }`}
             >
@@ -165,7 +165,7 @@ export default function TutorChat({
             className={`max-w-[85%] rounded-xl px-4 py-2.5 text-[14px] leading-relaxed ${
               t.role === 'user'
                 ? 'ml-auto bg-primary text-on-primary'
-                : 'bg-[#8B5CF6]/10 text-on-surface'
+                : 'bg-[#111c2d]/10 text-on-surface'
             }`}
           >
             {t.content}
@@ -173,7 +173,7 @@ export default function TutorChat({
         ))}
         {busy && (
           <div className="flex items-center gap-2 text-xs text-on-surface-variant">
-            <span className="material-symbols-outlined animate-pulse text-[#7C3AED]">school</span>
+            <span className="material-symbols-outlined animate-pulse text-[#111c2d]">school</span>
             The tutor is thinking…
           </div>
         )}
@@ -193,12 +193,12 @@ export default function TutorChat({
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask why this answer is wrong…"
           maxLength={1000}
-          className="h-11 flex-1 rounded-lg bg-surface-container-low px-4 text-sm text-on-surface outline-none placeholder:text-on-surface-variant focus:ring-1 focus:ring-[#8B5CF6]"
+          className="h-11 flex-1 rounded-lg bg-surface-container-low px-4 text-sm text-on-surface outline-none placeholder:text-on-surface-variant focus:ring-1 focus:ring-[#111c2d]"
         />
         <button
           type="submit"
           disabled={busy || input.trim() === ''}
-          className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#8B5CF6] text-white transition hover:opacity-90 disabled:opacity-40"
+          className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#111c2d] text-white transition hover:opacity-90 disabled:opacity-40"
           aria-label="Send"
         >
           <span className="material-symbols-outlined text-[20px]">send</span>

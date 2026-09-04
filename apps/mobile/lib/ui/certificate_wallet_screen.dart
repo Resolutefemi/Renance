@@ -255,7 +255,7 @@ class CertificateWalletScreen extends StatelessWidget {
                       eyebrow: 'Milestone',
                       title: '10k Mastery',
                       icon: Icons.diamond_outlined,
-                      colors: <Color>[Color(0xFFE9DDFF), Color(0xFFF3EEFF)],
+                      colors: <Color>[Color(0xFFD8E3FB), Color(0xFFF0F3FF)],
                     ),
                   ),
                 ],
