@@ -244,7 +244,7 @@ export default function DashboardPage() {
             <LauncherTile icon="description" label="Exams" href="#packs" />
             <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
             <LauncherTile icon="style" label="Flashcards" soon />
-            <LauncherTile icon="menu_book" label="Syllabus" soon />
+            <LauncherTile icon="menu_book" label="Syllabus" href="/syllabus" />
           </div>
         </section>
 

@@ -19,8 +19,12 @@ func writeLib(t *testing.T, bundle map[string]any) string {
 	}
 	raw, _ := json.Marshal(bundle)
 	sum := sha256.Sum256(raw)
+	count := 0
+	if qs, ok := bundle["questions"].([]any); ok {
+		count = len(qs)
+	}
 	manifest := Manifest{Version: "test", Exams: []ExamMeta{{
-		Code: "test-bank", Title: "Test Bank", QuestionCount: 1,
+		Code: "test-bank", Title: "Test Bank", QuestionCount: count,
 		BundleSHA256: hex.EncodeToString(sum[:]),
 		SizeBytes:    int64(len(raw)),
 	}}}

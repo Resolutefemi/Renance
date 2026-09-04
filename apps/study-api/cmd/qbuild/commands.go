@@ -46,7 +46,7 @@ func cmdCheck(o buildOpts) int {
 			failed = true
 		}
 		// Full lint (including warnings from the rule set).
-		if printIssues(src, lintSpec(spec)) {
+		if printIssues(src, lintSpec(spec, syllabusTopicsFor(spec.Body))) {
 			failed = true
 		}
 	}
@@ -83,7 +83,7 @@ func cmdBuild(o buildOpts) int {
 		fmt.Fprintf(os.Stderr, "qbuild build: parse %s: %v\n", o.Inputs[0], err)
 		return 1
 	}
-	lintIssues := append(issues, lintSpec(spec)...)
+	lintIssues := append(issues, lintSpec(spec, syllabusTopicsFor(spec.Body))...)
 	fmt.Printf("%s: %d questions\n", spec.Source, len(spec.Questions))
 	if printIssues(spec.Source, lintIssues) {
 		fmt.Println("build: FAILED (fix errors above, or run `qbuild check` for details)")

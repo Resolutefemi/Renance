@@ -1,0 +1,42 @@
+{
+  "body": "WAEC",
+  "subjects": [
+    {
+      "subject": "Mathematics",
+      "sections": [
+        { "title": "Number & Numeration", "topics": ["Percentages", "Commercial Arithmetic", "Indices", "Logarithms", "Sequences"] },
+        { "title": "Algebra", "topics": ["Algebra", "Inequalities"] },
+        { "title": "Geometry & Mensuration", "topics": ["Geometry", "Coordinate Geometry", "Mensuration"] },
+        { "title": "Statistics & Probability", "topics": ["Statistics", "Probability"] }
+      ]
+    },
+    {
+      "subject": "English",
+      "sections": [
+        { "title": "Lexis", "topics": ["Synonyms", "Antonyms", "Idioms"] },
+        { "title": "Structure", "topics": ["Grammar", "Concord", "Prepositions", "Conditionals", "Voice", "Reported Speech"] },
+        { "title": "Spelling & Registers", "topics": ["Spelling"] },
+        { "title": "Oral Forms", "topics": ["Sounds"] }
+      ]
+    },
+    {
+      "subject": "Physics",
+      "sections": [
+        { "title": "Measurement & Units", "topics": ["Measurement", "Units", "Density", "Vectors"] },
+        { "title": "Mechanics", "topics": ["Motion", "Work", "Energy"] },
+        { "title": "Waves & Optics", "topics": ["Waves", "Optics"] },
+        { "title": "Electricity", "topics": ["Electricity"] }
+      ]
+    },
+    {
+      "subject": "Biology",
+      "sections": [
+        { "title": "Cell Biology", "topics": ["Cell Biology"] },
+        { "title": "Physiology of Living Things", "topics": ["Nutrition", "Photosynthesis", "Digestion", "Respiration", "Transport", "Skin"] },
+        { "title": "Reproduction & Heredity", "topics": ["Genetics"] },
+        { "title": "Ecology", "topics": ["Ecology"] },
+        { "title": "Classification & Diversity", "topics": ["Classification", "Plant Biology"] }
+      ]
+    }
+  ]
+}

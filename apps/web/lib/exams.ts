@@ -35,6 +35,8 @@ export interface Bundle {
   questionCount: number;
   totalMarks: number;
   durationMinutes?: number;
+  category?: string;
+  body?: string;
   questions: BundleQuestion[];
 }
 

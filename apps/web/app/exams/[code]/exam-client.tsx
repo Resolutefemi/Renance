@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
 import { fetchBundle, fetchManifest, type Bundle } from '@/lib/exams';
+import { bodySlug } from '@/lib/syllabus';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 
 interface ExamMetaLite {
@@ -20,6 +21,8 @@ interface AttemptResponse {
   startedAt: string;
   durationMinutes?: number | null;
   questionCount?: number;
+  adaptive?: boolean;
+  order?: string[] | null;
 }
 
 interface TopicRow {
@@ -62,6 +65,10 @@ export default function ExamPage({ code }: { code: string }) {
   const [result, setResult] = useState<ResultPayload | null>(null);
   const [gam, setGam] = useState<{ state: { currentStreak: number; totalXp: number } } | null>(null);
   const [allAttempts, setAllAttempts] = useState<AttemptSummary[] | null>(null);
+  // Smart order (ROADMAP #5): begin weak-topic-first by default; the
+  // intro toggle flips it back to the pack's natural exam order.
+  const [adaptive, setAdaptive] = useState(true);
+  const [smartApplied, setSmartApplied] = useState(false);
   const startedAtRef = useRef<number>(0);
   const submittedRef = useRef(false);
 
@@ -156,9 +163,23 @@ export default function ExamPage({ code }: { code: string }) {
     try {
       const res = await api<AttemptResponse>('/attempts', {
         method: 'POST',
-        body: { code: bundle.code },
+        body: { code: bundle.code, ...(adaptive ? { adaptive: true } : {}) },
       });
       setAttempt(res);
+      setSmartApplied(false);
+      // The server walked the pack weak-topic-first (ROADMAP #5):
+      // re-sequence the in-memory copy; the cached bundle stays intact.
+      if (adaptive && res.order?.length) {
+        const byId = new Map(bundle.questions.map((q) => [q.id, q]));
+        const ordered = res.order
+          .map((id) => byId.get(id))
+          .filter((q): q is NonNullable<typeof q> => Boolean(q));
+        for (const q of bundle.questions) {
+          if (!res.order.includes(q.id)) ordered.push(q);
+        }
+        setBundle({ ...bundle, questions: ordered });
+        setSmartApplied(true);
+      }
       setAnswers({});
       setFlags({});
       setCurrent(0);
@@ -219,9 +240,38 @@ export default function ExamPage({ code }: { code: string }) {
             <li>· Auto-submit when time runs out</li>
             <li>· Grading happens server-side — leave any time after submitting</li>
           </ul>
+          {/* Smart order (ROADMAP #5) */}
+          <div className="mx-auto mt-5 flex w-full max-w-xs items-center justify-between rounded-xl border border-outline-variant bg-surface-container-low px-4 py-2.5">
+            <div className="flex items-center gap-2 text-left">
+              <span
+                className={`material-symbols-outlined text-[18px] ${adaptive ? 'text-accent-violet' : 'text-outline-dark'}`}
+              >
+                auto_awesome
+              </span>
+              <span>
+                <span className="block text-[13px] font-medium text-on-surface">Smart order</span>
+                <span className="block text-[11px] text-on-surface-variant">
+                  {adaptive ? 'weak topics first · easy → hard' : "pack's natural exam order"}
+                </span>
+              </span>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked={adaptive}
+              onClick={() => setAdaptive((v) => !v)}
+              className={`relative h-6 w-11 shrink-0 rounded-full transition ${adaptive ? 'bg-primary' : 'bg-outline-light'}`}
+            >
+              <span
+                className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all ${
+                  adaptive ? 'left-[22px]' : 'left-0.5'
+                }`}
+              />
+            </button>
+          </div>
           <button
             onClick={startAttempt}
-            className="mt-8 w-full rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+            className="mt-6 w-full rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
           >
             Begin
           </button>
@@ -354,6 +404,35 @@ export default function ExamPage({ code }: { code: string }) {
               </div>
             );
           })}
+          {/* Weak-topic recap (ROADMAP #4): under 60% becomes a chip that
+              deep-links the syllabus map on this body. */}
+          {(() => {
+            const weak = result.breakdown
+              .filter((r) => r.total > 0 && r.correct / r.total < 0.6)
+              .sort((a, b) => a.correct / a.total - b.correct / b.total)
+              .slice(0, 4);
+            if (!weak.length) return null;
+            const slug = bodySlug(bundle?.body ?? '') || 'jamb';
+            return (
+              <div className="pt-2">
+                <h3 className="text-sm text-on-surface-variant">Focus next</h3>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {weak.map((row) => (
+                    <Link
+                      key={row.topic}
+                      href={`/syllabus?body=${encodeURIComponent(slug)}&topic=${encodeURIComponent(row.topic)}`}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-accent-amber/40 bg-accent-amber/10 px-3 py-1.5 font-mono text-xs text-on-surface transition hover:shadow-sm"
+                    >
+                      <span className="material-symbols-outlined text-[14px] text-accent-amber">
+                        local_fire_department
+                      </span>
+                      {row.topic} · {row.correct}/{row.total}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
 
         <div className="mt-8 flex flex-col gap-2">
@@ -367,6 +446,7 @@ export default function ExamPage({ code }: { code: string }) {
           )}
           <button
             onClick={() => {
+              setAdaptive(true); // Retry Weak Topics = a smart-order paper
               setPhase('intro');
               setAttempt(null);
             }}

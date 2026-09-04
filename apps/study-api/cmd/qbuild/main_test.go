@@ -15,7 +15,7 @@ func TestLintSpecRejectsBadAnswerLetter(t *testing.T) {
 		Options: map[string]string{"A": "3", "B": "4"},
 		Answer:  "C", // not among options
 	}}}
-	iss := lintSpec(s)
+	iss := lintSpec(s, nil)
 	if !hasError(iss) {
 		t.Fatalf("want error for answer not in options, got %v", iss)
 	}
@@ -27,7 +27,7 @@ func TestLintSpecRejectsBrokenLadder(t *testing.T) {
 		Options: map[string]string{"A": "1", "C": "2"}, // B missing
 		Answer:  "A",
 	}}}
-	if !hasError(lintSpec(s)) {
+	if !hasError(lintSpec(s, nil)) {
 		t.Fatal("want error for gap in option ladder")
 	}
 }
@@ -36,7 +36,7 @@ func TestLintSpecRejectsBadCode(t *testing.T) {
 	s := &Spec{Code: "X_Mock", Title: "X", Questions: []QSpec{{
 		Stem: "q", Options: map[string]string{"A": "1", "B": "2"}, Answer: "A",
 	}}}
-	if !hasError(lintSpec(s)) {
+	if !hasError(lintSpec(s, nil)) {
 		t.Fatal("want error for non-kebab code")
 	}
 }
@@ -46,7 +46,7 @@ func TestLintSpecWarnsOnMissingTopic(t *testing.T) {
 		Stem: "q", Options: map[string]string{"A": "1", "B": "2"}, Answer: "A",
 		Explanation: "because", Marks: 1,
 	}}}
-	iss := lintSpec(s)
+	iss := lintSpec(s, nil)
 	if hasError(iss) {
 		t.Fatalf("clean question must not error: %v", iss)
 	}
@@ -122,7 +122,7 @@ func TestBuildRoundTripBootsRealLoader(t *testing.T) {
 				Explanation: "three", Topic: "Numbers", Difficulty: "medium", Marks: 2},
 		},
 	}
-	if hasError(lintSpec(spec)) {
+	if hasError(lintSpec(spec, nil)) {
 		t.Fatal("fixture must lint clean")
 	}
 	pack, key, err := buildArtifacts(spec)

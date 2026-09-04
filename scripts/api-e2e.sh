@@ -136,4 +136,60 @@ step "GET /internal/review/tick -> disabled without ADMIN_TOKEN (404)"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/internal/review/tick")
 [ "$CODE" = "404" ]
 
+# --- ROADMAP #4: syllabus map (curriculum tree + mastery overlay) ---
+SYLBODY=$(printf '%s' "$BUN" | jsonget "d['body'].lower().replace(' ','-')")
+step "GET /syllabus/$SYLBODY -> tree with mastery overlay"
+SYL=$(curl -fsS "$BASE/syllabus/$SYLBODY" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$SYL" | jsonget "d['body']" >/dev/null
+NTOPICS=$(printf '%s' "$SYL" | jsonget "d['stats']['topics']")
+[ "$NTOPICS" -ge 1 ]
+LEARNING=$(printf '%s' "$SYL" | jsonget "len([t for s in d['subjects'] for sec in s['sections'] for t in sec['topics'] if t['status']=='learning'])")
+[ "$LEARNING" -ge 1 ]
+WEAK=$(printf '%s' "$SYL" | jsonget "len(d['weakest'])")
+[ "$WEAK" -ge 1 ]
+printf '%s' "$SYL" | jsonget "d['weakest'][0]['topic']" >/dev/null
+
+step "GET /syllabus/jamb by slug from any body -> 200 (tree exists)"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/syllabus/jamb" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "200" ]
+
+step "GET /syllabus/unknown-body -> 404"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/syllabus/nope-nope" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "404" ]
+
+step "GET /syllabus without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/syllabus/$SYLBODY")
+[ "$CODE" = "401" ]
+
+# --- ROADMAP #5: adaptive ordering (weak-topic-first question order) ---
+step "POST /attempts adaptive:true -> order covers the pack"
+ATT2=$(curl -fsS -X POST "$BASE/attempts" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$PACK\",\"adaptive\":true}")
+printf '%s' "$ATT2" | jsonget "d['adaptive']" | grep -q "True"
+ORDERN=$(printf '%s' "$ATT2" | jsonget "len(d['order'])")
+BUNDLEQ=$(printf '%s' "$BUN" | jsonget "len(d['questions'])")
+[ "$ORDERN" -eq "$BUNDLEQ" ]
+AID2=$(printf '%s' "$ATT2" | jsonget "d['attemptId']")
+
+step "adaptive attempt submits + grades like any paper"
+curl -fsS -X POST "$BASE/attempts/$AID2/submit" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"answers\":[{\"questionId\":\"$Q1\",\"selected\":\"A\"}],\"durationMs\":31000}" \
+  | jsonget "d['status']" | grep -q "grading"
+STATUS2="grading"
+for _ in $(seq 1 40); do
+  STATUS2=$(curl -fsS "$BASE/attempts/$AID2" -H "Authorization: Bearer $TOKEN" | jsonget "d['status']") || STATUS2="error"
+  [ "$STATUS2" = "graded" ] && break
+  sleep 0.5
+done
+[ "$STATUS2" = "graded" ]
+
+step "POST /attempts without adaptive -> order null (natural order)"
+ATT3=$(curl -fsS -X POST "$BASE/attempts" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$PACK\"}")
+printf '%s' "$ATT3" | jsonget "d['adaptive']" | grep -q "False"
+printf '%s' "$ATT3" | jsonget "d['order']" | grep -q "None"
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"
