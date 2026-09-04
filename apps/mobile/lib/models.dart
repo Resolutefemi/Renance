@@ -14,16 +14,16 @@ class AppUser {
   final bool profileCompleted;
 
   factory AppUser.fromJson(Map<String, dynamic> j) => AppUser(
-        id: (j['id'] ?? '') as String,
-        username: (j['username'] ?? '') as String,
-        profileCompleted: (j['profileCompleted'] ?? false) as bool,
-      );
+    id: (j['id'] ?? '') as String,
+    username: (j['username'] ?? '') as String,
+    profileCompleted: (j['profileCompleted'] ?? false) as bool,
+  );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'id': id,
-        'username': username,
-        'profileCompleted': profileCompleted,
-      };
+    'id': id,
+    'username': username,
+    'profileCompleted': profileCompleted,
+  };
 }
 
 class Profile {
@@ -46,15 +46,15 @@ class Profile {
   final int? targetYear;
 
   factory Profile.fromJson(Map<String, dynamic> j) => Profile(
-        fullName: (j['fullName'] ?? '') as String,
-        institution: (j['institution'] ?? '') as String,
-        gradeLevel: (j['gradeLevel'] ?? '') as String,
-        exams: ((j['exams'] as List<dynamic>?) ?? const [])
-            .map((e) => e.toString())
-            .toList(),
-        targetYear: j['targetYear'] as int?,
-        completed: (j['completed'] ?? false) as bool,
-      );
+    fullName: (j['fullName'] ?? '') as String,
+    institution: (j['institution'] ?? '') as String,
+    gradeLevel: (j['gradeLevel'] ?? '') as String,
+    exams: ((j['exams'] as List<dynamic>?) ?? const [])
+        .map((e) => e.toString())
+        .toList(),
+    targetYear: j['targetYear'] as int?,
+    completed: (j['completed'] ?? false) as bool,
+  );
 }
 
 class MeResult {
@@ -63,11 +63,11 @@ class MeResult {
   final Profile? profile;
 
   factory MeResult.fromJson(Map<String, dynamic> j) => MeResult(
-        user: AppUser.fromJson((j['user'] as Map).cast<String, dynamic>()),
-        profile: j['profile'] == null
-            ? null
-            : Profile.fromJson((j['profile'] as Map).cast<String, dynamic>()),
-      );
+    user: AppUser.fromJson((j['user'] as Map).cast<String, dynamic>()),
+    profile: j['profile'] == null
+        ? null
+        : Profile.fromJson((j['profile'] as Map).cast<String, dynamic>()),
+  );
 }
 
 class AuthTokens {
@@ -100,16 +100,16 @@ class ExamMeta {
   final int sizeBytes;
 
   factory ExamMeta.fromJson(Map<String, dynamic> j) => ExamMeta(
-        code: (j['code'] ?? '') as String,
-        title: (j['title'] ?? j['code'] ?? '') as String,
-        questionCount: (j['questionCount'] ?? 0) as int,
-        totalMarks: (j['totalMarks'] ?? 0) as int,
-        durationMinutes: j['durationMinutes'] as int?,
-        category: (j['category'] ?? '') as String,
-        body: (j['body'] ?? '') as String,
-        bundleSha256: (j['bundleSha256'] ?? '') as String,
-        sizeBytes: (j['sizeBytes'] ?? 0) as int,
-      );
+    code: (j['code'] ?? '') as String,
+    title: (j['title'] ?? j['code'] ?? '') as String,
+    questionCount: (j['questionCount'] ?? 0) as int,
+    totalMarks: (j['totalMarks'] ?? 0) as int,
+    durationMinutes: j['durationMinutes'] as int?,
+    category: (j['category'] ?? '') as String,
+    body: (j['body'] ?? '') as String,
+    bundleSha256: (j['bundleSha256'] ?? '') as String,
+    sizeBytes: (j['sizeBytes'] ?? 0) as int,
+  );
 }
 
 class Manifest {
@@ -118,11 +118,11 @@ class Manifest {
   final List<ExamMeta> exams;
 
   factory Manifest.fromJson(Map<String, dynamic> j) => Manifest(
-        version: (j['version'] ?? '') as String,
-        exams: ((j['exams'] as List<dynamic>?) ?? const [])
-            .map((e) => ExamMeta.fromJson((e as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    version: (j['version'] ?? '') as String,
+    exams: ((j['exams'] as List<dynamic>?) ?? const [])
+        .map((e) => ExamMeta.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+  );
 }
 
 class BundleQuestion {
@@ -145,15 +145,16 @@ class BundleQuestion {
   final String difficulty;
 
   factory BundleQuestion.fromJson(Map<String, dynamic> j) => BundleQuestion(
-        id: (j['id'] ?? '') as String,
-        type: (j['type'] ?? 'mcq') as String,
-        stem: (j['stem'] ?? '') as String,
-        marks: (j['marks'] ?? 1) as int,
-        options: ((j['options'] as Map<dynamic, dynamic>?) ?? const {})
-            .map((k, v) => MapEntry(k.toString(), v.toString())),
-        topic: (j['topic'] ?? '') as String,
-        difficulty: (j['difficulty'] ?? '') as String,
-      );
+    id: (j['id'] ?? '') as String,
+    type: (j['type'] ?? 'mcq') as String,
+    stem: (j['stem'] ?? '') as String,
+    marks: (j['marks'] ?? 1) as int,
+    options: ((j['options'] as Map<dynamic, dynamic>?) ?? const {}).map(
+      (k, v) => MapEntry(k.toString(), v.toString()),
+    ),
+    topic: (j['topic'] ?? '') as String,
+    difficulty: (j['difficulty'] ?? '') as String,
+  );
 }
 
 class Bundle {
@@ -180,28 +181,25 @@ class Bundle {
   final List<BundleQuestion> questions;
 
   factory Bundle.fromJson(Map<String, dynamic> j) => Bundle(
-        code: (j['code'] ?? '') as String,
-        title: (j['title'] ?? '') as String,
-        version: (j['version'] ?? 1) as int,
-        questionCount: (j['questionCount'] ?? 0) as int,
-        totalMarks: (j['totalMarks'] ?? 0) as int,
-        durationMinutes: j['durationMinutes'] as int?,
-        category: (j['category'] ?? '') as String,
-        body: (j['body'] ?? '') as String,
-        questions: ((j['questions'] as List<dynamic>?) ?? const [])
-            .map((q) =>
-                BundleQuestion.fromJson((q as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    code: (j['code'] ?? '') as String,
+    title: (j['title'] ?? '') as String,
+    version: (j['version'] ?? 1) as int,
+    questionCount: (j['questionCount'] ?? 0) as int,
+    totalMarks: (j['totalMarks'] ?? 0) as int,
+    durationMinutes: j['durationMinutes'] as int?,
+    category: (j['category'] ?? '') as String,
+    body: (j['body'] ?? '') as String,
+    questions: ((j['questions'] as List<dynamic>?) ?? const [])
+        .map((q) => BundleQuestion.fromJson((q as Map).cast<String, dynamic>()))
+        .toList(),
+  );
 
   /// A copy of this pack with its questions re-sequenced to the server's
   /// adaptive walk ([order]). Ids missing from the order keep their
   /// relative positions at the end, so a stale order can never strand a
   /// question. The cached pack itself is never mutated.
   Bundle withOrder(List<String> order) {
-    final byId = <String, BundleQuestion>{
-      for (final q in questions) q.id: q,
-    };
+    final byId = <String, BundleQuestion>{for (final q in questions) q.id: q};
     final ordered = <BundleQuestion>[];
     final used = <String>{};
     for (final id in order) {
@@ -225,43 +223,53 @@ class Bundle {
   }
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'code': code,
-        'title': title,
-        'version': version,
-        'questionCount': questionCount,
-        'totalMarks': totalMarks,
-        if (durationMinutes != null) 'durationMinutes': durationMinutes,
-        if (category.isNotEmpty) 'category': category,
-        if (body.isNotEmpty) 'body': body,
-        'questions': questions
-            .map((q) => <String, dynamic>{
-                  'id': q.id,
-                  'type': q.type,
-                  'stem': q.stem,
-                  'marks': q.marks,
-                  if (q.options.isNotEmpty) 'options': q.options,
-                  if (q.topic.isNotEmpty) 'topic': q.topic,
-                  if (q.difficulty.isNotEmpty) 'difficulty': q.difficulty,
-                })
-            .toList(),
-      };
+    'code': code,
+    'title': title,
+    'version': version,
+    'questionCount': questionCount,
+    'totalMarks': totalMarks,
+    if (durationMinutes != null) 'durationMinutes': durationMinutes,
+    if (category.isNotEmpty) 'category': category,
+    if (body.isNotEmpty) 'body': body,
+    'questions': questions
+        .map(
+          (q) => <String, dynamic>{
+            'id': q.id,
+            'type': q.type,
+            'stem': q.stem,
+            'marks': q.marks,
+            if (q.options.isNotEmpty) 'options': q.options,
+            if (q.topic.isNotEmpty) 'topic': q.topic,
+            if (q.difficulty.isNotEmpty) 'difficulty': q.difficulty,
+          },
+        )
+        .toList(),
+  };
 }
 
 class TopicRow {
-  const TopicRow({required this.topic, required this.correct, required this.total});
+  const TopicRow({
+    required this.topic,
+    required this.correct,
+    required this.total,
+  });
   final String topic;
   final int correct;
   final int total;
 
   factory TopicRow.fromJson(Map<String, dynamic> j) => TopicRow(
-        topic: (j['topic'] ?? '') as String,
-        correct: (j['correct'] ?? 0) as int,
-        total: (j['total'] ?? 0) as int,
-      );
+    topic: (j['topic'] ?? '') as String,
+    correct: (j['correct'] ?? 0) as int,
+    total: (j['total'] ?? 0) as int,
+  );
 }
 
 class ExamResult {
-  const ExamResult({required this.score, required this.total, required this.breakdown});
+  const ExamResult({
+    required this.score,
+    required this.total,
+    required this.breakdown,
+  });
   final int score;
   final int total;
   final List<TopicRow> breakdown;
@@ -269,24 +277,25 @@ class ExamResult {
   /// Topics the last paper exposed (accuracy < 60%) — the score report's
   /// weak-topic chips that deep-link into the syllabus map (ROADMAP #4).
   List<TopicRow> weakTopics({double threshold = 0.6}) {
-    final weak = breakdown
-        .where((r) => r.total > 0 && r.correct / r.total < threshold)
-        .toList()
-      ..sort((a, b) {
-        final fa = a.total == 0 ? 1.0 : a.correct / a.total;
-        final fb = b.total == 0 ? 1.0 : b.correct / b.total;
-        return fa.compareTo(fb);
-      });
+    final weak =
+        breakdown
+            .where((r) => r.total > 0 && r.correct / r.total < threshold)
+            .toList()
+          ..sort((a, b) {
+            final fa = a.total == 0 ? 1.0 : a.correct / a.total;
+            final fb = b.total == 0 ? 1.0 : b.correct / b.total;
+            return fa.compareTo(fb);
+          });
     return weak;
   }
 
   factory ExamResult.fromJson(Map<String, dynamic> j) => ExamResult(
-        score: (j['score'] ?? 0) as int,
-        total: (j['total'] ?? 0) as int,
-        breakdown: ((j['breakdown'] as List<dynamic>?) ?? const [])
-            .map((r) => TopicRow.fromJson((r as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    score: (j['score'] ?? 0) as int,
+    total: (j['total'] ?? 0) as int,
+    breakdown: ((j['breakdown'] as List<dynamic>?) ?? const [])
+        .map((r) => TopicRow.fromJson((r as Map).cast<String, dynamic>()))
+        .toList(),
+  );
 }
 
 class AttemptStarted {
@@ -314,16 +323,14 @@ class AttemptStarted {
   final List<String>? order;
 
   factory AttemptStarted.fromJson(Map<String, dynamic> j) => AttemptStarted(
-        attemptId: (j['attemptId'] ?? '') as String,
-        code: (j['code'] ?? '') as String,
-        status: (j['status'] ?? 'in_progress') as String,
-        durationMinutes: j['durationMinutes'] as int?,
-        questionCount: j['questionCount'] as int?,
-        adaptive: (j['adaptive'] ?? false) as bool,
-        order: (j['order'] as List<dynamic>?)
-            ?.map((e) => e.toString())
-            .toList(),
-      );
+    attemptId: (j['attemptId'] ?? '') as String,
+    code: (j['code'] ?? '') as String,
+    status: (j['status'] ?? 'in_progress') as String,
+    durationMinutes: j['durationMinutes'] as int?,
+    questionCount: j['questionCount'] as int?,
+    adaptive: (j['adaptive'] ?? false) as bool,
+    order: (j['order'] as List<dynamic>?)?.map((e) => e.toString()).toList(),
+  );
 }
 
 class AttemptView {
@@ -340,13 +347,13 @@ class AttemptView {
   final ExamResult? result;
 
   factory AttemptView.fromJson(Map<String, dynamic> j) => AttemptView(
-        attemptId: (j['attemptId'] ?? '') as String,
-        code: (j['code'] ?? '') as String,
-        status: (j['status'] ?? '') as String,
-        result: j['result'] == null
-            ? null
-            : ExamResult.fromJson((j['result'] as Map).cast<String, dynamic>()),
-      );
+    attemptId: (j['attemptId'] ?? '') as String,
+    code: (j['code'] ?? '') as String,
+    status: (j['status'] ?? '') as String,
+    result: j['result'] == null
+        ? null
+        : ExamResult.fromJson((j['result'] as Map).cast<String, dynamic>()),
+  );
 }
 
 // ---------------------------------------------------------- paper history
@@ -384,18 +391,18 @@ class AttemptRow {
   int get missed => isGraded ? total! - score! : 0;
 
   factory AttemptRow.fromJson(Map<String, dynamic> j) => AttemptRow(
-        attemptId: (j['attemptId'] ?? '') as String,
-        code: (j['code'] ?? '') as String,
-        status: (j['status'] ?? '') as String,
-        startedAt: DateTime.tryParse((j['startedAt'] ?? '') as String) ??
-            DateTime.now(),
-        submittedAt: j['submittedAt'] == null
-            ? null
-            : DateTime.tryParse(j['submittedAt'] as String),
-        durationMs: j['durationMs'] as int?,
-        score: j['score'] as int?,
-        total: j['total'] as int?,
-      );
+    attemptId: (j['attemptId'] ?? '') as String,
+    code: (j['code'] ?? '') as String,
+    status: (j['status'] ?? '') as String,
+    startedAt:
+        DateTime.tryParse((j['startedAt'] ?? '') as String) ?? DateTime.now(),
+    submittedAt: j['submittedAt'] == null
+        ? null
+        : DateTime.tryParse(j['submittedAt'] as String),
+    durationMs: j['durationMs'] as int?,
+    score: j['score'] as int?,
+    total: j['total'] as int?,
+  );
 }
 
 /// One reviewed question of a graded paper (GET /attempts/{id}/review).
@@ -423,16 +430,17 @@ class ReviewQuestion {
   bool get isWrong => !correctly;
 
   factory ReviewQuestion.fromJson(Map<String, dynamic> j) => ReviewQuestion(
-        questionId: (j['questionId'] ?? '') as String,
-        stem: (j['stem'] ?? '') as String,
-        topic: (j['topic'] ?? '') as String,
-        options: ((j['options'] as Map<dynamic, dynamic>?) ?? const {})
-            .map((k, v) => MapEntry(k.toString(), v.toString())),
-        selected: (j['selected'] ?? '') as String,
-        correct: (j['correct'] ?? '') as String,
-        explanation: (j['explanation'] ?? '') as String,
-        correctly: (j['correctly'] ?? false) as bool,
-      );
+    questionId: (j['questionId'] ?? '') as String,
+    stem: (j['stem'] ?? '') as String,
+    topic: (j['topic'] ?? '') as String,
+    options: ((j['options'] as Map<dynamic, dynamic>?) ?? const {}).map(
+      (k, v) => MapEntry(k.toString(), v.toString()),
+    ),
+    selected: (j['selected'] ?? '') as String,
+    correct: (j['correct'] ?? '') as String,
+    explanation: (j['explanation'] ?? '') as String,
+    correctly: (j['correctly'] ?? false) as bool,
+  );
 }
 
 /// Full review payload for one graded paper.
@@ -454,20 +462,21 @@ class AttemptReview {
   final int? total;
 
   int get wrongCount => questions.where((q) => q.isWrong).length;
-  int get skippedCount =>
-      questions.where((q) => q.selected.isEmpty).length;
+  int get skippedCount => questions.where((q) => q.selected.isEmpty).length;
 
   factory AttemptReview.fromJson(Map<String, dynamic> j) => AttemptReview(
-        attemptId: (j['attemptId'] ?? '') as String,
-        code: (j['code'] ?? '') as String,
-        title: (j['title'] ?? '') as String,
-        score: j['score'] as int?,
-        total: j['total'] as int?,
-        questions: ((j['questions'] as List<dynamic>?) ?? const [])
-            .map((dynamic e) =>
-                ReviewQuestion.fromJson((e as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    attemptId: (j['attemptId'] ?? '') as String,
+    code: (j['code'] ?? '') as String,
+    title: (j['title'] ?? '') as String,
+    score: j['score'] as int?,
+    total: j['total'] as int?,
+    questions: ((j['questions'] as List<dynamic>?) ?? const [])
+        .map(
+          (dynamic e) =>
+              ReviewQuestion.fromJson((e as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+  );
 }
 
 // ---------------------------------------------------------------- gamification
@@ -495,14 +504,14 @@ class StreakState {
   final String? lastActive;
 
   factory StreakState.fromJson(Map<String, dynamic> j) => StreakState(
-        currentStreak: (j['currentStreak'] ?? 0) as int,
-        bestStreak: (j['bestStreak'] ?? 0) as int,
-        totalXp: (j['totalXp'] ?? 0) as int,
-        totalCorrect: (j['totalCorrect'] ?? 0) as int,
-        attempts: (j['attempts'] ?? 0) as int,
-        level: (j['level'] ?? 1) as int,
-        lastActive: j['lastActive'] as String?,
-      );
+    currentStreak: (j['currentStreak'] ?? 0) as int,
+    bestStreak: (j['bestStreak'] ?? 0) as int,
+    totalXp: (j['totalXp'] ?? 0) as int,
+    totalCorrect: (j['totalCorrect'] ?? 0) as int,
+    attempts: (j['attempts'] ?? 0) as int,
+    level: (j['level'] ?? 1) as int,
+    lastActive: j['lastActive'] as String?,
+  );
 
   /// XP earned inside the CURRENT level (500 XP per level, server rule).
   int get xpIntoLevel => totalXp % 500;
@@ -522,10 +531,9 @@ class Award {
   final DateTime earnedAt;
 
   factory Award.fromJson(Map<String, dynamic> j) => Award(
-        code: (j['code'] ?? '') as String,
-        earnedAt:
-            DateTime.parse((j['earnedAt'] ?? '') as String).toUtc(),
-      );
+    code: (j['code'] ?? '') as String,
+    earnedAt: DateTime.parse((j['earnedAt'] ?? '') as String).toUtc(),
+  );
 }
 
 /// Full gamification payload: `state` + `awards[]`.
@@ -540,10 +548,12 @@ class GamificationSummary {
   factory GamificationSummary.fromJson(Map<String, dynamic> j) =>
       GamificationSummary(
         state: StreakState.fromJson(
-            ((j['state'] ?? <String, dynamic>{}) as Map).cast<String, dynamic>()),
+          ((j['state'] ?? <String, dynamic>{}) as Map).cast<String, dynamic>(),
+        ),
         awards: ((j['awards'] ?? <dynamic>[]) as List<dynamic>)
-            .map((dynamic e) =>
-                Award.fromJson((e as Map).cast<String, dynamic>()))
+            .map(
+              (dynamic e) => Award.fromJson((e as Map).cast<String, dynamic>()),
+            )
             .toList(),
       );
 }
@@ -593,15 +603,15 @@ class ReviewItem {
   }
 
   factory ReviewItem.fromJson(Map<String, dynamic> j) => ReviewItem(
-        topic: (j['topic'] ?? '') as String,
-        ease: (j['ease'] as num?)?.toDouble() ?? 2.5,
-        intervalDays: (j['intervalDays'] ?? 0) as int,
-        repetitions: (j['repetitions'] ?? 0) as int,
-        lapses: (j['lapses'] ?? 0) as int,
-        dueOn: (j['dueOn'] ?? '') as String,
-        lastCorrect: (j['lastCorrect'] ?? 0) as int,
-        lastTotal: (j['lastTotal'] ?? 0) as int,
-      );
+    topic: (j['topic'] ?? '') as String,
+    ease: (j['ease'] as num?)?.toDouble() ?? 2.5,
+    intervalDays: (j['intervalDays'] ?? 0) as int,
+    repetitions: (j['repetitions'] ?? 0) as int,
+    lapses: (j['lapses'] ?? 0) as int,
+    dueOn: (j['dueOn'] ?? '') as String,
+    lastCorrect: (j['lastCorrect'] ?? 0) as int,
+    lastTotal: (j['lastTotal'] ?? 0) as int,
+  );
 }
 
 /// Review queue stats block (GET /me/review `stats`).
@@ -619,34 +629,42 @@ class ReviewStats {
   final int learning;
 
   factory ReviewStats.fromJson(Map<String, dynamic> j) => ReviewStats(
-        tracked: (j['tracked'] ?? 0) as int,
-        due: (j['due'] ?? 0) as int,
-        mature: (j['mature'] ?? 0) as int,
-        learning: (j['learning'] ?? 0) as int,
-      );
+    tracked: (j['tracked'] ?? 0) as int,
+    due: (j['due'] ?? 0) as int,
+    mature: (j['mature'] ?? 0) as int,
+    learning: (j['learning'] ?? 0) as int,
+  );
 }
 
 /// Full spaced-repetition payload: due + upcoming + stats.
 class ReviewSummary {
-  ReviewSummary({required this.due, required this.upcoming, required this.stats});
+  ReviewSummary({
+    required this.due,
+    required this.upcoming,
+    required this.stats,
+  });
 
   final List<ReviewItem> due;
   final List<ReviewItem> upcoming;
   final ReviewStats stats;
 
   factory ReviewSummary.fromJson(Map<String, dynamic> j) => ReviewSummary(
-        due: ((j['due'] ?? <dynamic>[]) as List<dynamic>)
-            .map((dynamic e) =>
-                ReviewItem.fromJson((e as Map).cast<String, dynamic>()))
-            .toList(),
-        upcoming: ((j['upcoming'] ?? <dynamic>[]) as List<dynamic>)
-            .map((dynamic e) =>
-                ReviewItem.fromJson((e as Map).cast<String, dynamic>()))
-            .toList(),
-        stats:
-            ReviewStats.fromJson(((j['stats'] ?? <String, dynamic>{}) as Map)
-                .cast<String, dynamic>()),
-      );
+    due: ((j['due'] ?? <dynamic>[]) as List<dynamic>)
+        .map(
+          (dynamic e) =>
+              ReviewItem.fromJson((e as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+    upcoming: ((j['upcoming'] ?? <dynamic>[]) as List<dynamic>)
+        .map(
+          (dynamic e) =>
+              ReviewItem.fromJson((e as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+    stats: ReviewStats.fromJson(
+      ((j['stats'] ?? <String, dynamic>{}) as Map).cast<String, dynamic>(),
+    ),
+  );
 }
 
 // ------------------------------------------------------------- syllabus (4)
@@ -680,32 +698,36 @@ class SyllabusTopic {
   int get dot => status == 'mastered' ? 3 : (status == 'learning' ? 2 : 1);
 
   factory SyllabusTopic.fromJson(Map<String, dynamic> j) => SyllabusTopic(
-        topic: (j['topic'] ?? '') as String,
-        questions: (j['questions'] ?? 0) as int,
-        seen: (j['seen'] ?? false) as bool,
-        lastCorrect: (j['lastCorrect'] ?? 0) as int,
-        lastTotal: (j['lastTotal'] ?? 0) as int,
-        accuracy: ((j['accuracy'] ?? 0) as num).toDouble(),
-        status: (j['status'] ?? 'unseen') as String,
-        dueOn: (j['dueOn'] ?? '') as String,
-        weakness: ((j['weakness'] ?? 0) as num).toDouble(),
-      );
+    topic: (j['topic'] ?? '') as String,
+    questions: (j['questions'] ?? 0) as int,
+    seen: (j['seen'] ?? false) as bool,
+    lastCorrect: (j['lastCorrect'] ?? 0) as int,
+    lastTotal: (j['lastTotal'] ?? 0) as int,
+    accuracy: ((j['accuracy'] ?? 0) as num).toDouble(),
+    status: (j['status'] ?? 'unseen') as String,
+    dueOn: (j['dueOn'] ?? '') as String,
+    weakness: ((j['weakness'] ?? 0) as num).toDouble(),
+  );
 }
 
 class SyllabusSection {
-  const SyllabusSection({required this.title, required this.mastery, required this.topics});
+  const SyllabusSection({
+    required this.title,
+    required this.mastery,
+    required this.topics,
+  });
 
   final String title;
   final double mastery; // 0..1, drives the section percentage
   final List<SyllabusTopic> topics;
 
   factory SyllabusSection.fromJson(Map<String, dynamic> j) => SyllabusSection(
-        title: (j['title'] ?? '') as String,
-        mastery: ((j['mastery'] ?? 0) as num).toDouble(),
-        topics: ((j['topics'] as List<dynamic>?) ?? const [])
-            .map((t) => SyllabusTopic.fromJson((t as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    title: (j['title'] ?? '') as String,
+    mastery: ((j['mastery'] ?? 0) as num).toDouble(),
+    topics: ((j['topics'] as List<dynamic>?) ?? const [])
+        .map((t) => SyllabusTopic.fromJson((t as Map).cast<String, dynamic>()))
+        .toList(),
+  );
 }
 
 class SyllabusSubject {
@@ -715,11 +737,13 @@ class SyllabusSubject {
   final List<SyllabusSection> sections;
 
   factory SyllabusSubject.fromJson(Map<String, dynamic> j) => SyllabusSubject(
-        subject: (j['subject'] ?? '') as String,
-        sections: ((j['sections'] as List<dynamic>?) ?? const [])
-            .map((s) => SyllabusSection.fromJson((s as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    subject: (j['subject'] ?? '') as String,
+    sections: ((j['sections'] as List<dynamic>?) ?? const [])
+        .map(
+          (s) => SyllabusSection.fromJson((s as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+  );
 }
 
 class SyllabusTree {
@@ -736,16 +760,20 @@ class SyllabusTree {
   final List<SyllabusSubject> subjects;
 
   factory SyllabusTree.fromJson(Map<String, dynamic> j) => SyllabusTree(
-        body: (j['body'] ?? '') as String,
-        stats: SyllabusStats.fromJson(
-            ((j['stats'] ?? const <String, dynamic>{}) as Map).cast<String, dynamic>()),
-        weakest: ((j['weakest'] as List<dynamic>?) ?? const [])
-            .map((t) => SyllabusTopic.fromJson((t as Map).cast<String, dynamic>()))
-            .toList(),
-        subjects: ((j['subjects'] as List<dynamic>?) ?? const [])
-            .map((s) => SyllabusSubject.fromJson((s as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    body: (j['body'] ?? '') as String,
+    stats: SyllabusStats.fromJson(
+      ((j['stats'] ?? const <String, dynamic>{}) as Map)
+          .cast<String, dynamic>(),
+    ),
+    weakest: ((j['weakest'] as List<dynamic>?) ?? const [])
+        .map((t) => SyllabusTopic.fromJson((t as Map).cast<String, dynamic>()))
+        .toList(),
+    subjects: ((j['subjects'] as List<dynamic>?) ?? const [])
+        .map(
+          (s) => SyllabusSubject.fromJson((s as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+  );
 }
 
 class SyllabusStats {
@@ -764,12 +792,12 @@ class SyllabusStats {
   final int due;
 
   factory SyllabusStats.fromJson(Map<String, dynamic> j) => SyllabusStats(
-        topics: (j['topics'] ?? 0) as int,
-        mastered: (j['mastered'] ?? 0) as int,
-        learning: (j['learning'] ?? 0) as int,
-        unseen: (j['unseen'] ?? 0) as int,
-        due: (j['due'] ?? 0) as int,
-      );
+    topics: (j['topics'] ?? 0) as int,
+    mastered: (j['mastered'] ?? 0) as int,
+    learning: (j['learning'] ?? 0) as int,
+    unseen: (j['unseen'] ?? 0) as int,
+    due: (j['due'] ?? 0) as int,
+  );
 }
 
 // -------------------------------------------------------------- fatigue (6)
@@ -802,15 +830,15 @@ class FatigueSignal {
   );
 
   factory FatigueSignal.fromJson(Map<String, dynamic> j) => FatigueSignal(
-        level: (j['level'] ?? 'none') as String,
-        suggestBreak: (j['suggestBreak'] ?? false) as bool,
-        reasons: ((j['reasons'] as List<dynamic>?) ?? const <dynamic>[])
-            .map((e) => e.toString())
-            .toList(),
-        driftRatio: ((j['driftRatio'] ?? 0) as num).toDouble(),
-        medianFirst5Ms: (j['medianFirst5Ms'] ?? 0) as int,
-        medianLast5Ms: (j['medianLast5Ms'] ?? 0) as int,
-      );
+    level: (j['level'] ?? 'none') as String,
+    suggestBreak: (j['suggestBreak'] ?? false) as bool,
+    reasons: ((j['reasons'] as List<dynamic>?) ?? const <dynamic>[])
+        .map((e) => e.toString())
+        .toList(),
+    driftRatio: ((j['driftRatio'] ?? 0) as num).toDouble(),
+    medianFirst5Ms: (j['medianFirst5Ms'] ?? 0) as int,
+    medianLast5Ms: (j['medianLast5Ms'] ?? 0) as int,
+  );
 }
 
 /// Pure: median of ms samples (empty -> 0). Never mutates the input.
@@ -845,9 +873,10 @@ FatigueSignal assessFatigue(List<int> latenciesMs, double sessionMinutes) {
   var level = 'none';
   final reasons = <String>[];
 
-  final driftMild = latenciesMs.length >= _fatigueMinAnswers &&
-      ratio >= _fatigueDriftMild;
-  final driftHigh = latenciesMs.length >= _fatigueMinAnswers &&
+  final driftMild =
+      latenciesMs.length >= _fatigueMinAnswers && ratio >= _fatigueDriftMild;
+  final driftHigh =
+      latenciesMs.length >= _fatigueMinAnswers &&
       ratio >= _fatigueDriftHigh &&
       sessionMinutes >= _fatigueDriftFloorMinutes;
 
@@ -899,13 +928,13 @@ class FatigueState {
   final int sessionsToday;
 
   factory FatigueState.fromJson(Map<String, dynamic> j) => FatigueState(
-        level: (j['level'] ?? 'none') as String,
-        suggestBreak: (j['suggestBreak'] ?? false) as bool,
-        reason: (j['reason'] ?? '') as String,
-        minutesToday: ((j['minutesToday'] ?? 0) as num).toDouble(),
-        minutesLast3h: ((j['minutesLast3h'] ?? 0) as num).toDouble(),
-        sessionsToday: (j['sessionsToday'] ?? 0) as int,
-      );
+    level: (j['level'] ?? 'none') as String,
+    suggestBreak: (j['suggestBreak'] ?? false) as bool,
+    reason: (j['reason'] ?? '') as String,
+    minutesToday: ((j['minutesToday'] ?? 0) as num).toDouble(),
+    minutesLast3h: ((j['minutesLast3h'] ?? 0) as num).toDouble(),
+    sessionsToday: (j['sessionsToday'] ?? 0) as int,
+  );
 }
 
 // ---------------------------------------------------------- flashcards (7)
@@ -925,18 +954,18 @@ class FlashcardCard {
   final String hint;
 
   factory FlashcardCard.fromJson(Map<String, dynamic> j) => FlashcardCard(
-        id: (j['id'] ?? '') as String,
-        front: (j['front'] ?? '') as String,
-        back: (j['back'] ?? '') as String,
-        hint: (j['hint'] ?? '') as String,
-      );
+    id: (j['id'] ?? '') as String,
+    front: (j['front'] ?? '') as String,
+    back: (j['back'] ?? '') as String,
+    hint: (j['hint'] ?? '') as String,
+  );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'id': id,
-        'front': front,
-        'back': back,
-        if (hint.isNotEmpty) 'hint': hint,
-      };
+    'id': id,
+    'front': front,
+    'back': back,
+    if (hint.isNotEmpty) 'hint': hint,
+  };
 }
 
 /// Deck list row (GET /flashcards).
@@ -965,12 +994,12 @@ class FlashcardDeckMeta {
       );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'code': code,
-        'title': title,
-        'cardCount': cardCount,
-        if (subject.isNotEmpty) 'subject': subject,
-        if (body.isNotEmpty) 'body': body,
-      };
+    'code': code,
+    'title': title,
+    'cardCount': cardCount,
+    if (subject.isNotEmpty) 'subject': subject,
+    if (body.isNotEmpty) 'body': body,
+  };
 }
 
 /// Full deck with its cards (GET /flashcards/{code}).
@@ -992,25 +1021,27 @@ class FlashcardDeck {
   final List<FlashcardCard> cards;
 
   factory FlashcardDeck.fromJson(Map<String, dynamic> j) => FlashcardDeck(
-        code: (j['code'] ?? '') as String,
-        title: (j['title'] ?? '') as String,
-        cardCount: (j['cardCount'] ?? 0) as int,
-        subject: (j['subject'] ?? '') as String,
-        body: (j['body'] ?? '') as String,
-        cards: ((j['cards'] as List<dynamic>?) ?? const <dynamic>[])
-            .map((dynamic e) =>
-                FlashcardCard.fromJson((e as Map).cast<String, dynamic>()))
-            .toList(),
-      );
+    code: (j['code'] ?? '') as String,
+    title: (j['title'] ?? '') as String,
+    cardCount: (j['cardCount'] ?? 0) as int,
+    subject: (j['subject'] ?? '') as String,
+    body: (j['body'] ?? '') as String,
+    cards: ((j['cards'] as List<dynamic>?) ?? const <dynamic>[])
+        .map(
+          (dynamic e) =>
+              FlashcardCard.fromJson((e as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+  );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'code': code,
-        'title': title,
-        'cardCount': cardCount,
-        if (subject.isNotEmpty) 'subject': subject,
-        if (body.isNotEmpty) 'body': body,
-        'cards': cards.map((c) => c.toJson()).toList(),
-      };
+    'code': code,
+    'title': title,
+    'cardCount': cardCount,
+    if (subject.isNotEmpty) 'subject': subject,
+    if (body.isNotEmpty) 'body': body,
+    'cards': cards.map((c) => c.toJson()).toList(),
+  };
 }
 
 /// Leitner box intervals (days) per box — mirror of store.CardBoxIntervals.
@@ -1064,24 +1095,24 @@ class CardProgress {
   }
 
   factory CardProgress.fromJson(Map<String, dynamic> j) => CardProgress(
-        cardId: (j['cardId'] ?? '') as String,
-        deckCode: (j['deckCode'] ?? '') as String,
-        box: (j['box'] ?? 1) as int,
-        correct: (j['correct'] ?? 0) as int,
-        wrong: (j['wrong'] ?? 0) as int,
-        dueOn: (j['dueOn'] ?? '') as String,
-        lastGrade: (j['lastGrade'] ?? '') as String,
-      );
+    cardId: (j['cardId'] ?? '') as String,
+    deckCode: (j['deckCode'] ?? '') as String,
+    box: (j['box'] ?? 1) as int,
+    correct: (j['correct'] ?? 0) as int,
+    wrong: (j['wrong'] ?? 0) as int,
+    dueOn: (j['dueOn'] ?? '') as String,
+    lastGrade: (j['lastGrade'] ?? '') as String,
+  );
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'cardId': cardId,
-        'deckCode': deckCode,
-        'box': box,
-        'correct': correct,
-        'wrong': wrong,
-        'dueOn': dueOn,
-        'lastGrade': lastGrade,
-      };
+    'cardId': cardId,
+    'deckCode': deckCode,
+    'box': box,
+    'correct': correct,
+    'wrong': wrong,
+    'dueOn': dueOn,
+    'lastGrade': lastGrade,
+  };
 }
 
 /// One grade to send to POST /me/cards/progress.
@@ -1095,4 +1126,183 @@ class FlashcardGrade {
   final String cardId;
   final String deckCode;
   final String grade; // again | hard | good
+}
+
+// ------------------------------------------------------------------ lessons
+// ROADMAP #8 — mdx-built lesson bundles served from data/lessons and
+// cached offline exactly like packs and decks.
+
+/// One paragraph-level block. [type] is p / ul / ol / callout / h3; text
+/// carries inline markers (**bold**, *italic*, `code`) rendered by the
+/// app's inline renderer — never raw HTML.
+class LessonBlock {
+  LessonBlock({
+    required this.type,
+    this.text = '',
+    this.items = const <String>[],
+  });
+
+  final String type;
+  final String text;
+  final List<String> items;
+
+  factory LessonBlock.fromJson(Map<String, dynamic> j) => LessonBlock(
+    type: (j['type'] ?? 'p') as String,
+    text: (j['text'] ?? '') as String,
+    items: ((j['items'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => e as String)
+        .toList(),
+  );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'type': type,
+    if (text.isNotEmpty) 'text': text,
+    if (items.isNotEmpty) 'items': items,
+  };
+}
+
+class LessonSection {
+  LessonSection({required this.heading, required this.blocks});
+
+  final String heading;
+  final List<LessonBlock> blocks;
+
+  factory LessonSection.fromJson(Map<String, dynamic> j) => LessonSection(
+    heading: (j['heading'] ?? '') as String,
+    blocks: ((j['blocks'] ?? const <dynamic>[]) as List<dynamic>)
+        .map(
+          (dynamic e) =>
+              LessonBlock.fromJson((e as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+  );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'heading': heading,
+    'blocks': blocks.map((b) => b.toJson()).toList(),
+  };
+}
+
+/// List-view row (no sections attached).
+class LessonMeta {
+  LessonMeta({
+    required this.slug,
+    required this.title,
+    required this.minutes,
+    required this.summary,
+    this.subject = '',
+    this.body = '',
+    this.tags = const <String>[],
+  });
+
+  final String slug;
+  final String title;
+  final String subject;
+  final String body;
+  final List<String> tags;
+  final int minutes;
+  final String summary;
+
+  factory LessonMeta.fromJson(Map<String, dynamic> j) => LessonMeta(
+    slug: (j['slug'] ?? '') as String,
+    title: (j['title'] ?? '') as String,
+    subject: (j['subject'] ?? '') as String,
+    body: (j['body'] ?? '') as String,
+    tags: ((j['tags'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => e as String)
+        .toList(),
+    minutes: (j['minutes'] ?? 0) as int,
+    summary: (j['summary'] ?? '') as String,
+  );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'slug': slug,
+    'title': title,
+    'subject': subject,
+    'body': body,
+    'tags': tags,
+    'minutes': minutes,
+    'summary': summary,
+  };
+}
+
+/// Full lesson with sections.
+class Lesson {
+  Lesson({
+    required this.slug,
+    required this.title,
+    required this.minutes,
+    required this.summary,
+    required this.sections,
+    this.subject = '',
+    this.body = '',
+    this.tags = const <String>[],
+  });
+
+  final String slug;
+  final String title;
+  final String subject;
+  final String body;
+  final List<String> tags;
+  final int minutes;
+  final String summary;
+  final List<LessonSection> sections;
+
+  factory Lesson.fromJson(Map<String, dynamic> j) => Lesson(
+    slug: (j['slug'] ?? '') as String,
+    title: (j['title'] ?? '') as String,
+    subject: (j['subject'] ?? '') as String,
+    body: (j['body'] ?? '') as String,
+    tags: ((j['tags'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => e as String)
+        .toList(),
+    minutes: (j['minutes'] ?? 0) as int,
+    summary: (j['summary'] ?? '') as String,
+    sections: ((j['sections'] ?? const <dynamic>[]) as List<dynamic>)
+        .map(
+          (dynamic e) =>
+              LessonSection.fromJson((e as Map).cast<String, dynamic>()),
+        )
+        .toList(),
+  );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'slug': slug,
+    'title': title,
+    'subject': subject,
+    'body': body,
+    'tags': tags,
+    'minutes': minutes,
+    'summary': summary,
+    'sections': sections.map((s) => s.toJson()).toList(),
+  };
+}
+
+// -------------------------------------------------------------------- tutor
+// ROADMAP #9 — Socratic chat anchored to a graded attempt + question.
+
+/// One conversation turn as the client stores it.
+class TutorTurn {
+  TutorTurn({required this.role, required this.content});
+
+  final String role; // 'user' | 'assistant'
+  final String content;
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'role': role,
+    'content': content,
+  };
+}
+
+/// The tutor's reply plus the mode that produced it ('ai' | 'hint').
+class TutorReply {
+  TutorReply({required this.text, required this.mode});
+
+  final String text;
+  final String mode;
+
+  factory TutorReply.fromJson(Map<String, dynamic> j) => TutorReply(
+    text: (j['reply'] ?? '') as String,
+    mode: (j['mode'] ?? 'hint') as String,
+  );
 }

@@ -156,7 +156,7 @@ export default function FlashcardsPage() {
 
   if (!deck) {
     return (
-      <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6">
+      <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6 lg:max-w-5xl">
         <header className="flex items-center justify-between">
           <h1 className="text-xl font-semibold tracking-tight text-on-surface">Flashcards</h1>
           {speechSupported() && (
@@ -183,7 +183,7 @@ export default function FlashcardsPage() {
           </p>
         )}
         {phase === 'ready' && decks.length > 0 && (
-          <div className="mt-6 space-y-2.5">
+          <div className="mt-6 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
             {decks.map((d) => (
               <button
                 key={d.code}

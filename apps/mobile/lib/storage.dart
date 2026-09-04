@@ -67,24 +67,26 @@ class PendingSubmission {
   final DateTime createdAt;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'id': id,
-        'code': code,
-        'attemptId': attemptId,
-        'answers': answers,
-        'durationMs': durationMs,
-        'createdAt': createdAt.millisecondsSinceEpoch,
-      };
+    'id': id,
+    'code': code,
+    'attemptId': attemptId,
+    'answers': answers,
+    'durationMs': durationMs,
+    'createdAt': createdAt.millisecondsSinceEpoch,
+  };
 
   factory PendingSubmission.fromJson(Map<String, dynamic> j) =>
       PendingSubmission(
         id: (j['id'] ?? '') as String,
         code: (j['code'] ?? '') as String,
         attemptId: (j['attemptId'] ?? '') as String,
-        answers: ((j['answers'] as Map<dynamic, dynamic>?) ?? const {})
-            .map((k, v) => MapEntry(k.toString(), v.toString())),
+        answers: ((j['answers'] as Map<dynamic, dynamic>?) ?? const {}).map(
+          (k, v) => MapEntry(k.toString(), v.toString()),
+        ),
         durationMs: (j['durationMs'] ?? 0) as int,
         createdAt: DateTime.fromMillisecondsSinceEpoch(
-            (j['createdAt'] ?? 0) as int),
+          (j['createdAt'] ?? 0) as int,
+        ),
       );
 }
 
@@ -105,22 +107,22 @@ class PendingCardGrade {
   final DateTime createdAt;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'id': id,
-        'cardId': cardId,
-        'deckCode': deckCode,
-        'grade': grade,
-        'createdAt': createdAt.millisecondsSinceEpoch,
-      };
+    'id': id,
+    'cardId': cardId,
+    'deckCode': deckCode,
+    'grade': grade,
+    'createdAt': createdAt.millisecondsSinceEpoch,
+  };
 
-  factory PendingCardGrade.fromJson(Map<String, dynamic> j) =>
-      PendingCardGrade(
-        id: (j['id'] ?? '') as String,
-        cardId: (j['cardId'] ?? '') as String,
-        deckCode: (j['deckCode'] ?? '') as String,
-        grade: (j['grade'] ?? '') as String,
-        createdAt: DateTime.fromMillisecondsSinceEpoch(
-            (j['createdAt'] ?? 0) as int),
-      );
+  factory PendingCardGrade.fromJson(Map<String, dynamic> j) => PendingCardGrade(
+    id: (j['id'] ?? '') as String,
+    cardId: (j['cardId'] ?? '') as String,
+    deckCode: (j['deckCode'] ?? '') as String,
+    grade: (j['grade'] ?? '') as String,
+    createdAt: DateTime.fromMillisecondsSinceEpoch(
+      (j['createdAt'] ?? 0) as int,
+    ),
+  );
 }
 
 // --------------------------------------------------------------- pack store
@@ -161,6 +163,13 @@ abstract class PackStore {
   Future<void> queueCardGrade(PendingCardGrade grade);
   Future<List<PendingCardGrade>> pendingCardGrades();
   Future<void> removeCardGrade(String id);
+
+  /// Lesson cache (ROADMAP #8) - metas for the list, full bundles for
+  /// the reader, so lessons stay readable with zero connectivity.
+  Future<void> saveLessonMetas(List<LessonMeta> lessons);
+  Future<List<LessonMeta>> cachedLessonMetas();
+  Future<void> saveLesson(Lesson lesson);
+  Future<Lesson?> loadLesson(String slug);
 }
 
 /// Production implementation backed by sqflite.
@@ -178,6 +187,15 @@ class DbPackStore implements PackStore {
     _db = db;
     return db;
   }
+
+  static const _lessonTables = [
+    '''
+    CREATE TABLE lessons (
+      slug TEXT PRIMARY KEY,
+      json TEXT NOT NULL,
+      updated_at INTEGER NOT NULL
+    )''',
+  ];
 
   static const _cardTables = [
     '''
@@ -202,10 +220,10 @@ class DbPackStore implements PackStore {
   ];
 
   static Future<Database> _defaultOpen() async => openDatabase(
-        p.join(await getDatabasesPath(), 'renance.db'),
-        version: 2,
-        onCreate: (db, version) async {
-          await db.execute('''
+    p.join(await getDatabasesPath(), 'renance.db'),
+    version: 3,
+    onCreate: (db, version) async {
+      await db.execute('''
             CREATE TABLE packs (
               code TEXT PRIMARY KEY,
               sha TEXT NOT NULL,
@@ -213,51 +231,58 @@ class DbPackStore implements PackStore {
               json TEXT NOT NULL,
               downloaded_at INTEGER NOT NULL
             )''');
-          await db.execute('''
+      await db.execute('''
             CREATE TABLE pending_submissions (
               attempt_id TEXT PRIMARY KEY,
               code TEXT NOT NULL,
               payload TEXT NOT NULL,
               created_at INTEGER NOT NULL
             )''');
-          for (final ddl in _cardTables) {
-            await db.execute(ddl);
-          }
-        },
-        onUpgrade: (db, oldVersion, newVersion) async {
-          if (oldVersion < 2) {
-            for (final ddl in _cardTables) {
-              await db.execute(ddl);
-            }
-          }
-        },
-      );
+      for (final ddl in _cardTables) {
+        await db.execute(ddl);
+      }
+    },
+    onUpgrade: (db, oldVersion, newVersion) async {
+      if (oldVersion < 2) {
+        for (final ddl in _cardTables) {
+          await db.execute(ddl);
+        }
+      }
+      if (oldVersion < 3) {
+        for (final ddl in _lessonTables) {
+          await db.execute(ddl);
+        }
+      }
+    },
+  );
 
   @override
   Future<void> savePack(Bundle bundle, String sha) async {
     final db = await _open();
-    await db.insert(
-      'packs',
-      <String, Object?>{
-        'code': bundle.code,
-        'sha': sha,
-        'title': bundle.title,
-        'json': jsonEncode(bundle.toJson()),
-        'downloaded_at': DateTime.now().millisecondsSinceEpoch,
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
+    await db.insert('packs', <String, Object?>{
+      'code': bundle.code,
+      'sha': sha,
+      'title': bundle.title,
+      'json': jsonEncode(bundle.toJson()),
+      'downloaded_at': DateTime.now().millisecondsSinceEpoch,
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
   Future<Bundle?> loadPack(String code, String sha) async {
     final db = await _open();
-    final rows = await db.query('packs',
-        where: 'code = ? AND sha = ?', whereArgs: <Object?>[code, sha], limit: 1);
+    final rows = await db.query(
+      'packs',
+      where: 'code = ? AND sha = ?',
+      whereArgs: <Object?>[code, sha],
+      limit: 1,
+    );
     if (rows.isEmpty) return null;
     try {
       return Bundle.fromJson(
-          (jsonDecode(rows.first['json']! as String) as Map).cast<String, dynamic>());
+        (jsonDecode(rows.first['json']! as String) as Map)
+            .cast<String, dynamic>(),
+      );
     } on FormatException {
       return null;
     }
@@ -273,11 +298,9 @@ class DbPackStore implements PackStore {
   @override
   Future<Map<String, int>> packSizes() async {
     final db = await _open();
-    final rows = await db.query('packs',
-        columns: <String>['code', 'json']);
+    final rows = await db.query('packs', columns: <String>['code', 'json']);
     return <String, int>{
-      for (final r in rows)
-        r['code']! as String: (r['json']! as String).length,
+      for (final r in rows) r['code']! as String: (r['json']! as String).length,
     };
   }
 
@@ -296,33 +319,39 @@ class DbPackStore implements PackStore {
   @override
   Future<void> queueSubmission(PendingSubmission submission) async {
     final db = await _open();
-    await db.insert(
-      'pending_submissions',
-      <String, Object?>{
-        'attempt_id': submission.attemptId,
-        'code': submission.code,
-        'payload': jsonEncode(submission.toJson()),
-        'created_at': submission.createdAt.millisecondsSinceEpoch,
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
+    await db.insert('pending_submissions', <String, Object?>{
+      'attempt_id': submission.attemptId,
+      'code': submission.code,
+      'payload': jsonEncode(submission.toJson()),
+      'created_at': submission.createdAt.millisecondsSinceEpoch,
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
   Future<List<PendingSubmission>> pendingSubmissions() async {
     final db = await _open();
-    final rows = await db.query('pending_submissions', orderBy: 'created_at ASC');
+    final rows = await db.query(
+      'pending_submissions',
+      orderBy: 'created_at ASC',
+    );
     return rows
-        .map((r) => PendingSubmission.fromJson(
-            (jsonDecode(r['payload']! as String) as Map).cast<String, dynamic>()))
+        .map(
+          (r) => PendingSubmission.fromJson(
+            (jsonDecode(r['payload']! as String) as Map)
+                .cast<String, dynamic>(),
+          ),
+        )
         .toList();
   }
 
   @override
   Future<void> removeSubmission(String id) async {
     final db = await _open();
-    await db
-        .delete('pending_submissions', where: 'attempt_id = ?', whereArgs: <Object?>[id]);
+    await db.delete(
+      'pending_submissions',
+      where: 'attempt_id = ?',
+      whereArgs: <Object?>[id],
+    );
   }
 
   @override
@@ -331,15 +360,11 @@ class DbPackStore implements PackStore {
     final batch = db.batch();
     final now = DateTime.now().millisecondsSinceEpoch;
     for (final d in decks) {
-      batch.insert(
-        'flashcard_decks',
-        <String, Object?>{
-          'code': d.code,
-          'json': jsonEncode(d.toJson()),
-          'updated_at': now,
-        },
-        conflictAlgorithm: ConflictAlgorithm.replace,
-      );
+      batch.insert('flashcard_decks', <String, Object?>{
+        'code': d.code,
+        'json': jsonEncode(d.toJson()),
+        'updated_at': now,
+      }, conflictAlgorithm: ConflictAlgorithm.replace);
     }
     await batch.commit(noResult: true);
   }
@@ -349,34 +374,39 @@ class DbPackStore implements PackStore {
     final db = await _open();
     final rows = await db.query('flashcard_decks', orderBy: 'code ASC');
     return rows
-        .map((r) => FlashcardDeckMeta.fromJson(
-            (jsonDecode(r['json']! as String) as Map).cast<String, dynamic>()))
+        .map(
+          (r) => FlashcardDeckMeta.fromJson(
+            (jsonDecode(r['json']! as String) as Map).cast<String, dynamic>(),
+          ),
+        )
         .toList();
   }
 
   @override
   Future<void> saveDeck(FlashcardDeck deck) async {
     final db = await _open();
-    await db.insert(
-      'flashcard_decks',
-      <String, Object?>{
-        'code': deck.code,
-        'json': jsonEncode(deck.toJson()),
-        'updated_at': DateTime.now().millisecondsSinceEpoch,
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
+    await db.insert('flashcard_decks', <String, Object?>{
+      'code': deck.code,
+      'json': jsonEncode(deck.toJson()),
+      'updated_at': DateTime.now().millisecondsSinceEpoch,
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
   Future<FlashcardDeck?> loadDeck(String code) async {
     final db = await _open();
-    final rows = await db.query('flashcard_decks',
-        where: 'code = ?', whereArgs: <Object?>[code], limit: 1);
+    final rows = await db.query(
+      'flashcard_decks',
+      where: 'code = ?',
+      whereArgs: <Object?>[code],
+      limit: 1,
+    );
     if (rows.isEmpty) return null;
     try {
       return FlashcardDeck.fromJson(
-          (jsonDecode(rows.first['json']! as String) as Map).cast<String, dynamic>());
+        (jsonDecode(rows.first['json']! as String) as Map)
+            .cast<String, dynamic>(),
+      );
     } on FormatException {
       return null;
     }
@@ -388,15 +418,11 @@ class DbPackStore implements PackStore {
     final batch = db.batch();
     final now = DateTime.now().millisecondsSinceEpoch;
     for (final r in rows) {
-      batch.insert(
-        'card_progress_cache',
-        <String, Object?>{
-          'card_id': r.cardId,
-          'payload': jsonEncode(r.toJson()),
-          'updated_at': now,
-        },
-        conflictAlgorithm: ConflictAlgorithm.replace,
-      );
+      batch.insert('card_progress_cache', <String, Object?>{
+        'card_id': r.cardId,
+        'payload': jsonEncode(r.toJson()),
+        'updated_at': now,
+      }, conflictAlgorithm: ConflictAlgorithm.replace);
     }
     await batch.commit(noResult: true);
   }
@@ -406,42 +432,120 @@ class DbPackStore implements PackStore {
     final db = await _open();
     final rows = await db.query('card_progress_cache');
     return rows
-        .map((r) => CardProgress.fromJson(
-            (jsonDecode(r['payload']! as String) as Map).cast<String, dynamic>()))
+        .map(
+          (r) => CardProgress.fromJson(
+            (jsonDecode(r['payload']! as String) as Map)
+                .cast<String, dynamic>(),
+          ),
+        )
         .toList();
   }
 
   @override
   Future<void> queueCardGrade(PendingCardGrade grade) async {
     final db = await _open();
-    await db.insert(
-      'pending_card_grades',
-      <String, Object?>{
-        'id': grade.id,
-        'card_id': grade.cardId,
-        'payload': jsonEncode(grade.toJson()),
-        'created_at': grade.createdAt.millisecondsSinceEpoch,
-      },
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
+    await db.insert('pending_card_grades', <String, Object?>{
+      'id': grade.id,
+      'card_id': grade.cardId,
+      'payload': jsonEncode(grade.toJson()),
+      'created_at': grade.createdAt.millisecondsSinceEpoch,
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
   Future<List<PendingCardGrade>> pendingCardGrades() async {
     final db = await _open();
-    final rows =
-        await db.query('pending_card_grades', orderBy: 'created_at ASC');
+    final rows = await db.query(
+      'pending_card_grades',
+      orderBy: 'created_at ASC',
+    );
     return rows
-        .map((r) => PendingCardGrade.fromJson(
-            (jsonDecode(r['payload']! as String) as Map).cast<String, dynamic>()))
+        .map(
+          (r) => PendingCardGrade.fromJson(
+            (jsonDecode(r['payload']! as String) as Map)
+                .cast<String, dynamic>(),
+          ),
+        )
         .toList();
   }
 
   @override
   Future<void> removeCardGrade(String id) async {
     final db = await _open();
-    await db.delete('pending_card_grades',
-        where: 'id = ?', whereArgs: <Object?>[id]);
+    await db.delete(
+      'pending_card_grades',
+      where: 'id = ?',
+      whereArgs: <Object?>[id],
+    );
+  }
+  // Lesson cache (ROADMAP #8) ---------------------------------------------
+
+  @override
+  Future<void> saveLessonMetas(List<LessonMeta> lessons) async {
+    final db = await _open();
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final batch = db.batch();
+    for (final l in lessons) {
+      batch.insert('lessons', <String, Object?>{
+        'slug': l.slug,
+        'json': jsonEncode(l.toJson()),
+        'updated_at': now,
+      }, conflictAlgorithm: ConflictAlgorithm.replace);
+    }
+    await batch.commit(noResult: true);
+  }
+
+  @override
+  Future<List<LessonMeta>> cachedLessonMetas() async {
+    final db = await _open();
+    final rows = await db.query(
+      'lessons',
+      columns: <String>['json'],
+      orderBy: 'slug ASC',
+    );
+    final out = <LessonMeta>[];
+    for (final r in rows) {
+      try {
+        out.add(
+          LessonMeta.fromJson(
+            (jsonDecode(r['json']! as String) as Map).cast<String, dynamic>(),
+          ),
+        );
+      } on FormatException {
+        continue;
+      }
+    }
+    return out;
+  }
+
+  @override
+  Future<void> saveLesson(Lesson lesson) async {
+    final db = await _open();
+    await db.insert('lessons', <String, Object?>{
+      'slug': lesson.slug,
+      'json': jsonEncode(lesson.toJson()),
+      'updated_at': DateTime.now().millisecondsSinceEpoch,
+    }, conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  @override
+  Future<Lesson?> loadLesson(String slug) async {
+    final db = await _open();
+    final rows = await db.query(
+      'lessons',
+      where: 'slug = ?',
+      whereArgs: <Object?>[slug],
+      limit: 1,
+    );
+    if (rows.isEmpty) return null;
+    try {
+      return Lesson.fromJson(
+        (jsonDecode(rows.first['json']! as String) as Map)
+            .cast<String, dynamic>(),
+      );
+    } on FormatException {
+      return null;
+    }
   }
 }
 
@@ -449,6 +553,7 @@ class DbPackStore implements PackStore {
 class MemoryPackStore implements PackStore {
   final Map<String, Bundle> _packs = <String, Bundle>{};
   final Map<String, PendingSubmission> _pending = <String, PendingSubmission>{};
+  final Map<String, Lesson> _lessons = <String, Lesson>{};
 
   @override
   Future<void> savePack(Bundle bundle, String sha) async =>
@@ -462,8 +567,8 @@ class MemoryPackStore implements PackStore {
 
   @override
   Future<Map<String, int>> packSizes() async => <String, int>{
-        for (final e in _packs.entries) e.key: e.value.title.length * 128,
-      };
+    for (final e in _packs.entries) e.key: e.value.title.length * 128,
+  };
 
   @override
   Future<void> removePack(String code) async => _packs.remove(code);
@@ -502,20 +607,20 @@ class MemoryPackStore implements PackStore {
   }
 
   @override
-  Future<List<FlashcardDeckMeta>> cachedDeckMetas() async =>
-      _decks.values
-          .map((d) => FlashcardDeckMeta(
-                code: d.code,
-                title: d.title,
-                cardCount: d.cardCount,
-                subject: d.subject,
-                body: d.body,
-              ))
-          .toList();
+  Future<List<FlashcardDeckMeta>> cachedDeckMetas() async => _decks.values
+      .map(
+        (d) => FlashcardDeckMeta(
+          code: d.code,
+          title: d.title,
+          cardCount: d.cardCount,
+          subject: d.subject,
+          body: d.body,
+        ),
+      )
+      .toList();
 
   @override
-  Future<void> saveDeck(FlashcardDeck deck) async =>
-      _decks[deck.code] = deck;
+  Future<void> saveDeck(FlashcardDeck deck) async => _decks[deck.code] = deck;
 
   @override
   Future<FlashcardDeck?> loadDeck(String code) async => _decks[code];
@@ -541,4 +646,44 @@ class MemoryPackStore implements PackStore {
 
   @override
   Future<void> removeCardGrade(String id) async => _pendingGrades.remove(id);
+
+  // Lesson cache (ROADMAP #8) ---------------------------------------------
+
+  @override
+  Future<void> saveLessonMetas(List<LessonMeta> lessons) async {
+    for (final l in lessons) {
+      _lessons[l.slug] = Lesson(
+        slug: l.slug,
+        title: l.title,
+        subject: l.subject,
+        body: l.body,
+        tags: l.tags,
+        minutes: l.minutes,
+        summary: l.summary,
+        sections: const <LessonSection>[],
+      );
+    }
+  }
+
+  @override
+  Future<List<LessonMeta>> cachedLessonMetas() async => _lessons.values
+      .map(
+        (l) => LessonMeta(
+          slug: l.slug,
+          title: l.title,
+          subject: l.subject,
+          body: l.body,
+          tags: l.tags,
+          minutes: l.minutes,
+          summary: l.summary,
+        ),
+      )
+      .toList();
+
+  @override
+  Future<void> saveLesson(Lesson lesson) async =>
+      _lessons[lesson.slug] = lesson;
+
+  @override
+  Future<Lesson?> loadLesson(String slug) async => _lessons[slug];
 }

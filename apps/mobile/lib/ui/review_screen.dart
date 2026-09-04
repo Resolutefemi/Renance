@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../api_client.dart';
+import 'tutor_screen.dart';
 import '../controllers.dart';
 import '../models.dart';
 import 'renance_logo.dart';
@@ -36,17 +37,23 @@ class _ReviewScreenState extends State<ReviewScreen> {
       child: ListView(
         physics: const AlwaysScrollableScrollPhysics(),
         padding: EdgeInsets.fromLTRB(
-            16, MediaQuery.paddingOf(context).top + 64 + 8, 16, 24),
+          16,
+          MediaQuery.paddingOf(context).top + 64 + 8,
+          16,
+          24,
+        ),
         children: <Widget>[
           _ReviewQueueCard(
             student: student,
             onStart: () {
               final graded = papers.where((AttemptRow a) => a.isGraded);
               if (graded.isEmpty) return;
-              Navigator.of(context).push(MaterialPageRoute<void>(
-                builder: (_) =>
-                    ReviewDetailScreen(attemptId: graded.first.attemptId),
-              ));
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) =>
+                      ReviewDetailScreen(attemptId: graded.first.attemptId),
+                ),
+              );
             },
           ),
           if (student.queuePreview.isNotEmpty) ...<Widget>[
@@ -73,21 +80,25 @@ class _ReviewScreenState extends State<ReviewScreen> {
               ),
             )
           else
-            ...papers.map((AttemptRow a) => Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: _PaperCard(
-                    attempt: a,
-                    title: student.titleForCode(a.code),
-                    onTap: a.isGraded
-                        ? () {
-                            Navigator.of(context).push(MaterialPageRoute<void>(
+            ...papers.map(
+              (AttemptRow a) => Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: _PaperCard(
+                  attempt: a,
+                  title: student.titleForCode(a.code),
+                  onTap: a.isGraded
+                      ? () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute<void>(
                               builder: (_) =>
                                   ReviewDetailScreen(attemptId: a.attemptId),
-                            ));
-                          }
-                        : null,
-                  ),
-                )),
+                            ),
+                          );
+                        }
+                      : null,
+                ),
+              ),
+            ),
         ],
       ),
     );
@@ -117,8 +128,10 @@ class _ReviewQueueCard extends StatelessWidget {
           children: <Widget>[
             const RenanceMark(size: 40, busy: true),
             const SizedBox(height: 12),
-            Text('Checking your review queue…',
-                style: RenanceText.bodySecondary),
+            Text(
+              'Checking your review queue…',
+              style: RenanceText.bodySecondary,
+            ),
           ],
         ),
       );
@@ -126,8 +139,9 @@ class _ReviewQueueCard extends StatelessWidget {
 
     final int due = queue.stats.due;
     final bool hasWork = due > 0;
-    final String nextUp =
-        queue.upcoming.isEmpty ? '' : queue.upcoming.first.topic;
+    final String nextUp = queue.upcoming.isEmpty
+        ? ''
+        : queue.upcoming.first.topic;
     final String nextWhen = queue.upcoming.isEmpty
         ? ''
         : queue.upcoming.first.laterLabel;
@@ -143,37 +157,45 @@ class _ReviewQueueCard extends StatelessWidget {
         children: <Widget>[
           Row(
             children: <Widget>[
-              const Icon(Icons.local_fire_department,
-                  size: 18, color: RenanceColors.amber),
+              const Icon(
+                Icons.local_fire_department,
+                size: 18,
+                color: RenanceColors.amber,
+              ),
               const SizedBox(width: 6),
-              Text('REVIEW QUEUE',
-                  style: RenanceText.labelMono.copyWith(
-                      color: RenanceColors.amber,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: -0.2)),
+              Text(
+                'REVIEW QUEUE',
+                style: RenanceText.labelMono.copyWith(
+                  color: RenanceColors.amber,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: -0.2,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 8),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('$due',
-                  style: RenanceText.displayLg.copyWith(
-                      color: hasWork
-                          ? RenanceColors.amber
-                          : RenanceColors.emerald,
-                      letterSpacing: -1)),
+              Text(
+                '$due',
+                style: RenanceText.displayLg.copyWith(
+                  color: hasWork ? RenanceColors.amber : RenanceColors.emerald,
+                  letterSpacing: -1,
+                ),
+              ),
               const SizedBox(width: 8),
               Padding(
                 padding: const EdgeInsets.only(bottom: 6),
                 child: Text(
                   hasWork
                       ? (overdue.isEmpty
-                          ? 'topics due today'
-                          : 'topics due · ${overdue.length} overdue')
+                            ? 'topics due today'
+                            : 'topics due · ${overdue.length} overdue')
                       : 'all caught up',
-                  style: RenanceText.bodyMedium
-                      .copyWith(color: RenanceColors.textSecondary),
+                  style: RenanceText.bodyMedium.copyWith(
+                    color: RenanceColors.textSecondary,
+                  ),
                 ),
               ),
             ],
@@ -183,8 +205,8 @@ class _ReviewQueueCard extends StatelessWidget {
             hasWork
                 ? 'Estimated time: ~${due * 2} minutes'
                 : (nextUp.isEmpty
-                    ? 'Grade a paper and its topics join your schedule.'
-                    : 'Next up: $nextUp $nextWhen'),
+                      ? 'Grade a paper and its topics join your schedule.'
+                      : 'Next up: $nextUp $nextWhen'),
             style: RenanceText.caption.copyWith(height: 1.4),
           ),
           const SizedBox(height: 12),
@@ -194,14 +216,19 @@ class _ReviewQueueCard extends StatelessWidget {
               onPressed: onStart,
               style: FilledButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(hasWork ? 'Start Review' : 'Revise latest paper',
-                      style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.w600)),
+                  Text(
+                    hasWork ? 'Start Review' : 'Revise latest paper',
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                   const SizedBox(width: 6),
                   const Icon(Icons.arrow_forward, size: 18),
                 ],
@@ -219,7 +246,10 @@ class _ReviewQueueCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       boxShadow: const <BoxShadow>[
         BoxShadow(
-            color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+          color: Color(0x14141C2D),
+          blurRadius: 3,
+          offset: Offset(0, 1),
+        ),
       ],
     );
   }
@@ -235,8 +265,9 @@ class _QueuePreviewSection extends StatelessWidget {
     final StudentController student = context.watch<StudentController>();
     final List<ReviewItem> rows = student.queuePreview;
     const int maxRows = 6;
-    final List<ReviewItem> shown =
-        rows.length > maxRows ? rows.sublist(0, maxRows) : rows;
+    final List<ReviewItem> shown = rows.length > maxRows
+        ? rows.sublist(0, maxRows)
+        : rows;
     final int hidden = rows.length - shown.length;
     final DateTime now = DateTime.now();
 
@@ -251,15 +282,19 @@ class _QueuePreviewSection extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 12),
-        ...shown.map((ReviewItem it) => Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: _QueueRow(item: it, now: now),
-            )),
+        ...shown.map(
+          (ReviewItem it) => Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: _QueueRow(item: it, now: now),
+          ),
+        ),
         if (hidden > 0)
           Padding(
             padding: const EdgeInsets.only(top: 2),
-            child: Text('+ $hidden more topics on the schedule',
-                style: RenanceText.caption),
+            child: Text(
+              '+ $hidden more topics on the schedule',
+              style: RenanceText.caption,
+            ),
           ),
       ],
     );
@@ -292,7 +327,10 @@ class _QueueRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
-              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+            color: Color(0x14141C2D),
+            blurRadius: 3,
+            offset: Offset(0, 1),
+          ),
         ],
       ),
       child: Column(
@@ -303,8 +341,10 @@ class _QueueRow extends StatelessWidget {
             children: <Widget>[
               Flexible(
                 child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 4,
+                  ),
                   decoration: BoxDecoration(
                     color: RenanceColors.selectionBlue,
                     borderRadius: BorderRadius.circular(999),
@@ -314,7 +354,9 @@ class _QueueRow extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: RenanceText.caption.copyWith(
-                        fontSize: 12, color: RenanceColors.ink),
+                      fontSize: 12,
+                      color: RenanceColors.ink,
+                    ),
                   ),
                 ),
               ),
@@ -326,15 +368,20 @@ class _QueueRow extends StatelessWidget {
                     Container(
                       width: 6,
                       height: 6,
-                      decoration:
-                          BoxDecoration(color: tint, shape: BoxShape.circle),
+                      decoration: BoxDecoration(
+                        color: tint,
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   const SizedBox(width: 6),
-                  Text(label,
-                      style: RenanceText.bodyMedium.copyWith(
-                          color: tint,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 13)),
+                  Text(
+                    label,
+                    style: RenanceText.bodyMedium.copyWith(
+                      color: tint,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                    ),
+                  ),
                 ],
               ),
             ],
@@ -365,10 +412,10 @@ class _PaperCard extends StatelessWidget {
     final Color pctColor = pct == null
         ? RenanceColors.textSecondary
         : pct >= 75
-            ? RenanceColors.emerald
-            : pct >= 50
-                ? RenanceColors.amber
-                : RenanceColors.error;
+        ? RenanceColors.emerald
+        : pct >= 50
+        ? RenanceColors.amber
+        : RenanceColors.error;
     final String when = _relative(attempt.submittedAt ?? attempt.startedAt);
 
     return InkWell(
@@ -381,7 +428,10 @@ class _PaperCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
-                color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+              color: Color(0x14141C2D),
+              blurRadius: 3,
+              offset: Offset(0, 1),
+            ),
           ],
         ),
         child: Row(
@@ -390,10 +440,12 @@ class _PaperCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(title,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: RenanceText.bodyMedium),
+                  Text(
+                    title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: RenanceText.bodyMedium,
+                  ),
                   const SizedBox(height: 2),
                   Text(
                     attempt.isGraded
@@ -480,99 +532,125 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
         titleSpacing: 0,
         title: review == null
             ? const Text('Review')
-            : Text('Review · ${review.wrongCount} wrong',
-                style: RenanceText.sectionTitle),
+            : Text(
+                'Review · ${review.wrongCount} wrong',
+                style: RenanceText.sectionTitle,
+              ),
       ),
       body: review == null
           ? Center(
               child: _error == null
-                  ? const LogoActivityIndicator(label: 'Opening the marked paper…')
+                  ? const LogoActivityIndicator(
+                      label: 'Opening the marked paper…',
+                    )
                   : Padding(
                       padding: const EdgeInsets.all(32),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          Text(_error!,
-                              textAlign: TextAlign.center,
-                              style: RenanceText.bodySecondary),
+                          Text(
+                            _error!,
+                            textAlign: TextAlign.center,
+                            style: RenanceText.bodySecondary,
+                          ),
                           const SizedBox(height: 16),
                           OutlinedButton(
-                              onPressed: _load, child: const Text('Retry')),
+                            onPressed: _load,
+                            child: const Text('Retry'),
+                          ),
                         ],
                       ),
                     ),
             )
-          : Builder(builder: (BuildContext context) {
-              final List<ReviewQuestion> questions = review.questions
-                  .where((ReviewQuestion q) => switch (_filter) {
-                        _ReviewFilter.wrong => q.isWrong && q.selected.isNotEmpty,
+          : Builder(
+              builder: (BuildContext context) {
+                final List<ReviewQuestion> questions = review.questions
+                    .where(
+                      (ReviewQuestion q) => switch (_filter) {
+                        _ReviewFilter.wrong =>
+                          q.isWrong && q.selected.isNotEmpty,
                         _ReviewFilter.skipped => q.selected.isEmpty,
                         _ReviewFilter.all => true,
-                      })
-                  .toList(growable: false);
-              final int wrongCount = review.wrongCount;
-              final int skippedCount = review.skippedCount;
+                      },
+                    )
+                    .toList(growable: false);
+                final int wrongCount = review.wrongCount;
+                final int skippedCount = review.skippedCount;
 
-              return ListView(
-                padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                children: <Widget>[
-                  Text(student.titleForCode(review.code),
-                      style: RenanceText.bodySecondary),
-                  const SizedBox(height: 12),
-                  Row(
-                    children: <Widget>[
-                      _FilterChip('Wrong ($wrongCount)',
-                          _filter == _ReviewFilter.wrong, () {
-                        setState(() => _filter = _ReviewFilter.wrong);
-                      }),
-                      const SizedBox(width: 8),
-                      _FilterChip('Skipped ($skippedCount)',
-                          _filter == _ReviewFilter.skipped, () {
-                        setState(() => _filter = _ReviewFilter.skipped);
-                      }),
-                      const SizedBox(width: 8),
-                      _FilterChip('All (${review.questions.length})',
-                          _filter == _ReviewFilter.all, () {
-                        setState(() => _filter = _ReviewFilter.all);
-                      }),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-                  if (questions.isEmpty)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 40),
-                      child: Center(
-                        child: Text(
-                          switch (_filter) {
+                return ListView(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                  children: <Widget>[
+                    Text(
+                      student.titleForCode(review.code),
+                      style: RenanceText.bodySecondary,
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: <Widget>[
+                        _FilterChip(
+                          'Wrong ($wrongCount)',
+                          _filter == _ReviewFilter.wrong,
+                          () {
+                            setState(() => _filter = _ReviewFilter.wrong);
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        _FilterChip(
+                          'Skipped ($skippedCount)',
+                          _filter == _ReviewFilter.skipped,
+                          () {
+                            setState(() => _filter = _ReviewFilter.skipped);
+                          },
+                        ),
+                        const SizedBox(width: 8),
+                        _FilterChip(
+                          'All (${review.questions.length})',
+                          _filter == _ReviewFilter.all,
+                          () {
+                            setState(() => _filter = _ReviewFilter.all);
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    if (questions.isEmpty)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 40),
+                        child: Center(
+                          child: Text(switch (_filter) {
                             _ReviewFilter.wrong =>
                               'Nothing wrong here — flawless paper.',
                             _ReviewFilter.skipped => 'No skipped questions.',
                             _ReviewFilter.all => 'No questions.',
-                          },
-                          style: RenanceText.bodySecondary,
+                          }, style: RenanceText.bodySecondary),
                         ),
-                      ),
-                    )
-                  else
-                    ...questions.asMap().entries.map(
-                          (MapEntry<int, ReviewQuestion> e) => Padding(
-                            padding: const EdgeInsets.only(bottom: 16),
-                            child: _ReviewCard(
-                              index: review.questions.indexOf(e.value) + 1,
-                              question: e.value,
-                              onAskTutor: () {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                      content: Text(
-                                          'The AI tutor joins when the model key lands.')),
-                                );
-                              },
-                            ),
+                      )
+                    else
+                      ...questions.asMap().entries.map(
+                        (MapEntry<int, ReviewQuestion> e) => Padding(
+                          padding: const EdgeInsets.only(bottom: 16),
+                          child: _ReviewCard(
+                            index: review.questions.indexOf(e.value) + 1,
+                            question: e.value,
+                            onAskTutor: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute<void>(
+                                  builder: (_) => TutorChatScreen(
+                                    attemptId: widget.attemptId,
+                                    paperCode: review.code,
+                                    questions: review.questions,
+                                    initialQuestionId: e.value.questionId,
+                                  ),
+                                ),
+                              );
+                            },
                           ),
                         ),
-                ],
-              );
-            }),
+                      ),
+                  ],
+                );
+              },
+            ),
     );
   }
 }
@@ -634,7 +712,10 @@ class _ReviewCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
-              color: Color(0x33141C2D), blurRadius: 3, offset: Offset(0, 1)),
+            color: Color(0x33141C2D),
+            blurRadius: 3,
+            offset: Offset(0, 1),
+          ),
         ],
       ),
       child: Column(
@@ -648,7 +729,9 @@ class _ReviewCard extends StatelessWidget {
                 Flexible(
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 8, vertical: 2),
+                      horizontal: 8,
+                      vertical: 2,
+                    ),
                     decoration: BoxDecoration(
                       color: RenanceColors.surfaceContainerLow,
                       borderRadius: BorderRadius.circular(999),
@@ -665,8 +748,10 @@ class _ReviewCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Text(question.stem,
-              style: RenanceText.bodyBase.copyWith(height: 1.45)),
+          Text(
+            question.stem,
+            style: RenanceText.bodyBase.copyWith(height: 1.45),
+          ),
           const SizedBox(height: 14),
           if (pickedWrong) ...<Widget>[
             _AnswerBlock(
@@ -680,9 +765,10 @@ class _ReviewCard extends StatelessWidget {
           if (question.selected.isEmpty)
             Padding(
               padding: const EdgeInsets.only(bottom: 10),
-              child: Text('Skipped — you left this one blank.',
-                  style: RenanceText.caption
-                      .copyWith(color: RenanceColors.amber)),
+              child: Text(
+                'Skipped — you left this one blank.',
+                style: RenanceText.caption.copyWith(color: RenanceColors.amber),
+              ),
             ),
           _AnswerBlock(
             letter: question.correct,
@@ -716,13 +802,18 @@ class _ReviewCard extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  const Icon(Icons.smart_toy,
-                      size: 16, color: RenanceColors.violet),
+                  const Icon(
+                    Icons.smart_toy,
+                    size: 16,
+                    color: RenanceColors.violet,
+                  ),
                   const SizedBox(width: 6),
                   Text(
                     'Ask AI Tutor why ${question.correct} is right',
-                    style: RenanceText.labelMono
-                        .copyWith(fontSize: 12, color: RenanceColors.violet),
+                    style: RenanceText.labelMono.copyWith(
+                      fontSize: 12,
+                      color: RenanceColors.violet,
+                    ),
                   ),
                 ],
               ),
@@ -751,8 +842,9 @@ class _AnswerBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color tone = correct ? RenanceColors.emerald : RenanceColors.error;
-    final Color toneBg =
-        correct ? const Color(0xFFE7F8F1) : RenanceColors.errorContainer;
+    final Color toneBg = correct
+        ? const Color(0xFFE7F8F1)
+        : RenanceColors.errorContainer;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -764,21 +856,29 @@ class _AnswerBlock extends StatelessWidget {
             color: toneBg,
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Text(letter,
-              style: RenanceText.labelMono
-                  .copyWith(fontSize: 15, color: tone, fontWeight: FontWeight.w700)),
+          child: Text(
+            letter,
+            style: RenanceText.labelMono.copyWith(
+              fontSize: 15,
+              color: tone,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
         ),
         const SizedBox(width: 10),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(label,
-                  style: RenanceText.labelMono
-                      .copyWith(fontSize: 11, color: tone)),
+              Text(
+                label,
+                style: RenanceText.labelMono.copyWith(
+                  fontSize: 11,
+                  color: tone,
+                ),
+              ),
               const SizedBox(height: 2),
-              Text(text,
-                  style: RenanceText.bodyBase.copyWith(height: 1.4)),
+              Text(text, style: RenanceText.bodyBase.copyWith(height: 1.4)),
             ],
           ),
         ),
