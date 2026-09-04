@@ -336,12 +336,15 @@ curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "Cache-Control: no-store"
 curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "Content-Security-Policy: default-src"
 
 step "auth flood -> 429 once the per-IP burst is exhausted"
-LAST=000
-for _ in $(seq 1 40); do
-  LAST=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/auth/register" \
+# Deterministic: capacity is burst(40) + ~1 refill token over the whole
+# flow, so with 5 pre-flood spends at least 24 of these 60 must 429.
+# (Asserting on the LAST code alone was CI-timing flaky.)
+CODES=$(for _ in $(seq 1 60); do
+  curl -s -o /dev/null -w '%{http_code}\n' -X POST "$BASE/auth/register" \
     -H 'Content-Type: application/json' \
-    -d '{"username":"x","password":"short"}')
-done
-[ "$LAST" = "429" ]
+    -d '{"username":"x","password":"short"}'
+done)
+N429=$(printf '%s\n' "$CODES" | grep -c '^429$')
+[ "$N429" -ge 10 ]
 
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"
