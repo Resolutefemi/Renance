@@ -14,7 +14,11 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'ai_generator_screen.dart';
 import 'arena_lobby_screen.dart';
+import 'career_bridge_screen.dart';
+import 'offline_share_screen.dart';
+import 'patron_portal_screen.dart';
 import 'downloads_screen.dart';
 import 'study_plan_screen.dart';
 import 'flashcards_screen.dart';
@@ -1563,15 +1567,49 @@ Future<void> showMoreSheet(
                       },
                     ),
                     _MoreTile(
+                      icon: Icons.laptop_mac_outlined,
+                      label: 'Career Bridge',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const CareerBridgeScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.auto_awesome,
+                      label: 'AI Generator',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const AiGeneratorScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.volunteer_activism_outlined,
+                      label: 'Patron Portal',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const PatronPortalScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
                       icon: Icons.wifi_off,
                       label: 'Offline Share',
                       onTap: () {
                         Navigator.of(sheetContext).pop();
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                              'Offline share ships with peer packs in an upcoming release.',
-                            ),
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const OfflineShareScreen(),
                           ),
                         );
                       },
