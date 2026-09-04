@@ -19,6 +19,7 @@ import {
   type SyllabusTree,
 } from '@/lib/syllabus';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
+import PageBar from '@/components/page-bar';
 
 const DOT = {
   mastered: 'bg-accent-emerald',
@@ -105,13 +106,15 @@ function SyllabusInner() {
   const pct = tree ? masteryPct(tree) : 0;
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6 lg:max-w-4xl">
-      <header className="flex items-center justify-between">
+    <main className="min-h-dvh bg-surface-container-lowest pb-16">
+      <PageBar title="Syllabus" />
+      <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6 lg:max-w-4xl">
+      <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold tracking-tight text-on-surface">Syllabus</h1>
         <Link href="/dashboard" className="text-sm text-on-surface-variant hover:text-on-surface">
           Dashboard
         </Link>
-      </header>
+      </div>
 
       {/* Body pills */}
       <div className="mt-4 flex flex-wrap gap-2">
@@ -247,6 +250,7 @@ function SyllabusInner() {
           </div>
         </>
       )}
+      </div>
     </main>
   );
 }

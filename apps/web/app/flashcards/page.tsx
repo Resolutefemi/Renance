@@ -25,6 +25,7 @@ import {
 } from '@/lib/flashcards';
 import { speak, speechSupported, stopSpeaking } from '@/lib/speech';
 import { LogoActivityIndicator } from '@/components/renance-logo';
+import PageBar from '@/components/page-bar';
 
 type Phase = 'loading' | 'ready' | 'error';
 
@@ -156,8 +157,10 @@ export default function FlashcardsPage() {
 
   if (!deck) {
     return (
-      <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6 lg:max-w-5xl">
-        <header className="flex items-center justify-between">
+      <main className="min-h-dvh bg-surface-container-lowest pb-16">
+        <PageBar title="Flashcards" />
+        <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6 lg:max-w-5xl">
+        <div className="flex items-center justify-between">
           <h1 className="text-xl font-semibold tracking-tight text-on-surface">Flashcards</h1>
           {speechSupported() && (
             <span className="flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1 text-xs text-on-surface-variant">
@@ -165,7 +168,7 @@ export default function FlashcardsPage() {
               voice ready
             </span>
           )}
-        </header>
+        </div>
 
         {phase === 'loading' && (
           <div className="mt-16 flex justify-center">
@@ -210,6 +213,7 @@ export default function FlashcardsPage() {
         >
           ← back to dashboard
         </Link>
+        </div>
       </main>
     );
   }
@@ -227,7 +231,7 @@ export default function FlashcardsPage() {
           }}
           className="flex items-center gap-2 text-sm text-on-surface-variant transition hover:text-on-surface"
         >
-          <span className="material-symbols-outlined text-[20px]">headphones</span>
+          <span className="material-symbols-outlined text-[20px]">arrow_back</span>
           <span className="max-w-[180px] truncate">{deck.title}</span>
         </button>
         <div className="flex items-center gap-2">

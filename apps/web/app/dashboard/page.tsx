@@ -8,6 +8,7 @@ import { getToken, setStoredUser } from '@/lib/session';
 import { fetchManifest, prefetchAll, type ExamMeta } from '@/lib/exams';
 import { type ReviewSummary } from '@/lib/review';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
+import BottomNav from '@/components/bottom-nav';
 
 interface Profile {
   fullName: string;
@@ -63,6 +64,7 @@ export default function DashboardPage() {
   const [syncState, setSyncState] = useState<'idle' | 'syncing' | 'ready'>('idle');
   const [syncLabel, setSyncLabel] = useState('Preparing your study pack…');
   const [error, setError] = useState<string | null>(null);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   useEffect(() => {
     if (!getToken()) {
@@ -157,7 +159,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-16">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
       {needsProfile && (
         <ProfileModal
           username={me.user.username}
@@ -170,15 +172,20 @@ export default function DashboardPage() {
         />
       )}
 
-      {/* Brand header: fixed, blurred, hairline shadow (home_dashboard) */}
+      {/* Brand header: fixed, blurred, hairline shadow (home_dashboard).
+          Founder rule: the logo and the avatar are both clickable. */}
       <header className="fixed top-0 z-50 w-full border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
-          <div className="flex items-center gap-2">
+          <Link
+            href="/dashboard"
+            aria-label="Renance home"
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
+          >
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-bold text-on-primary">
               R
             </div>
             <span className="text-2xl font-bold tracking-tight text-on-surface">Renance</span>
-          </div>
+          </Link>
           <div className="flex items-center gap-4">
             <Link
               href="/search"
@@ -191,9 +198,14 @@ export default function DashboardPage() {
               <span className="material-symbols-outlined fill-current text-[20px] text-accent-amber">local_fire_department</span>
               <span className="font-mono text-[13px] text-on-surface">{streak}</span>
             </div>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-xs font-semibold text-on-surface">
+            <Link
+              href="/profile"
+              aria-label="Your profile"
+              title="Your profile"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-xs font-semibold text-on-surface transition hover:ring-2 hover:ring-primary"
+            >
               {(me.profile?.fullName || me.user.username || 'R').slice(0, 1).toUpperCase()}
-            </div>
+            </Link>
           </div>
         </div>
       </header>
@@ -244,26 +256,28 @@ export default function DashboardPage() {
           <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
         )}
 
-        {/* Launcher grids ------------------------------------------------ */}
-        <section className="mt-2">
-          <h3 className="text-sm text-on-surface-variant">Practice</h3>
-          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md">
-            <LauncherTile icon="description" label="Exams" href="#packs" />
-            <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
-            <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
-            <LauncherTile icon="menu_book" label="Syllabus" href="/syllabus" />
-          </div>
-        </section>
+        {/* Launcher grids: one Stitch pair on phones, side by side on PC --- */}
+        <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+          <section className="mt-2">
+            <h3 className="text-sm text-on-surface-variant">Practice</h3>
+            <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+              <LauncherTile icon="description" label="Exams" href="#packs" />
+              <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
+              <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
+              <LauncherTile icon="menu_book" label="Syllabus" href="/syllabus" />
+            </div>
+          </section>
 
-        <section className="mt-4">
-          <h3 className="text-sm text-on-surface-variant">Grow</h3>
-          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md">
-            <LauncherTile icon="trending_up" label="Progress" href="/progress" />
-            <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
-            <LauncherTile icon="smart_toy" label="Tutor" violet soon />
-            <LauncherTile icon="more_horiz" label="More" muted soon />
-          </div>
-        </section>
+          <section className="mt-4 lg:mt-2">
+            <h3 className="text-sm text-on-surface-variant">Grow</h3>
+            <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+              <LauncherTile icon="trending_up" label="Progress" href="/progress" />
+              <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
+              <LauncherTile icon="smart_toy" label="Tutor" violet soon />
+              <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
+            </div>
+          </section>
+        </div>
 
         {/* Recent activity ------------------------------------------------ */}
         {recent && (
@@ -307,7 +321,61 @@ export default function DashboardPage() {
           </div>
         </section>
       </div>
+
+      {/* More sheet: the launcher's jump table (more_features_sheet_light) */}
+      {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
+
+      <BottomNav />
     </main>
+  );
+}
+
+/** Small bottom sheet listing the destinations that live beyond the grid. */
+function MoreSheet({ onClose }: { onClose: () => void }) {
+  const items = [
+    { icon: 'history_edu', label: 'Review center', href: '/review' },
+    { icon: 'auto_stories', label: 'Lessons', href: '/lessons' },
+    { icon: 'person', label: 'Profile', href: '/profile' },
+    { icon: 'workspace_premium', label: 'Certificates', href: '/certificates' },
+    { icon: 'menu_book', label: 'Subjects', href: '/subjects' },
+    { icon: 'help', label: 'Help & FAQ', href: '/faq' },
+  ] as const;
+  return (
+    <div
+      className="fixed inset-0 z-[60] flex items-end justify-center bg-on-background/60 backdrop-blur-sm sm:items-center"
+      onClick={onClose}
+      role="presentation"
+    >
+      <div
+        className="renance-rise w-full max-w-md rounded-t-2xl bg-surface-container-lowest p-5 shadow-xl sm:rounded-2xl"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-label="More features"
+      >
+        <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-outline-variant sm:hidden" />
+        <h3 className="mb-3 text-lg font-semibold text-on-surface">More</h3>
+        <div className="grid grid-cols-2 gap-2">
+          {items.map((it) => (
+            <Link
+              key={it.label}
+              href={it.href}
+              onClick={onClose}
+              className="flex items-center gap-3 rounded-xl border border-outline-variant/50 bg-card p-3 transition hover:border-outline hover:bg-surface-container-low"
+            >
+              <span className="material-symbols-outlined text-[22px] text-on-surface">{it.icon}</span>
+              <span className="text-sm font-medium text-on-surface">{it.label}</span>
+            </Link>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          className="mt-4 h-12 w-full rounded-lg bg-primary text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
+        >
+          Close
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -320,6 +388,7 @@ function LauncherTile({
   violet,
   muted,
   soon,
+  onMore,
 }: {
   icon: string;
   label: string;
@@ -329,6 +398,7 @@ function LauncherTile({
   violet?: boolean;
   muted?: boolean;
   soon?: boolean;
+  onMore?: () => void;
 }) {
   const inner = (
     <>
@@ -359,11 +429,12 @@ function LauncherTile({
     </>
   );
 
-  if (soon) {
+  if (soon || onMore) {
     return (
       <button
         type="button"
-        title={`${label}: ships in an upcoming release`}
+        title={onMore ? `${label} features` : `${label}: ships in an upcoming release`}
+        onClick={onMore}
         className="group flex flex-col items-center gap-2 opacity-70"
       >
         {inner}

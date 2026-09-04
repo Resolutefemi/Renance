@@ -75,18 +75,27 @@ export default async function LessonPage({
   const others = loadLessons().filter((l) => l.slug !== les.slug).slice(0, 3);
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-20 pt-10 sm:px-6 lg:max-w-3xl">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-20 pt-6 sm:px-6 lg:max-w-3xl">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <nav className="font-mono text-xs text-on-surface-variant">
-        <Link href="/lessons/" className="hover:text-on-surface">
-          Lessons
+      <div className="flex items-center gap-1">
+        <Link
+          href="/lessons/"
+          aria-label="Go back to lessons"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container"
+        >
+          <span className="material-symbols-outlined text-[22px]">arrow_back</span>
         </Link>
-        <span className="mx-1.5">/</span>
-        <span className="text-on-surface">{les.slug}</span>
-      </nav>
+        <nav className="font-mono text-xs text-on-surface-variant">
+          <Link href="/lessons/" className="hover:text-on-surface">
+            Lessons
+          </Link>
+          <span className="mx-1.5">/</span>
+          <span className="text-on-surface">{les.slug}</span>
+        </nav>
+      </div>
 
       <header className="mt-4">
         <div className="flex flex-wrap items-center gap-2">
