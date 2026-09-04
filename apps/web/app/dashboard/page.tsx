@@ -352,6 +352,10 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
   const items = [
     { icon: 'event_note', label: 'Study Plan', href: '/study-plan' },
     { icon: 'sports_esports', label: 'Arena', href: '/arena' },
+    { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
+    { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },
+    { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
+    { icon: 'wifi_off', label: 'Offline Share', href: '/offline-share' },
     { icon: 'history_edu', label: 'Review center', href: '/review' },
     { icon: 'auto_stories', label: 'Lessons', href: '/lessons' },
     { icon: 'person', label: 'Profile', href: '/profile' },
