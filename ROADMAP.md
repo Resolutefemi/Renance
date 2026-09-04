@@ -1,6 +1,6 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-04 (after the fatigue + voice flashcards session).
+Last updated: 2026-09-04 (#8 lessons pipeline + #9 Socratic tutor + security hardening).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an

@@ -105,7 +105,7 @@ function SyllabusInner() {
   const pct = tree ? masteryPct(tree) : 0;
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6">
+    <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6 lg:max-w-4xl">
       <header className="flex items-center justify-between">
         <h1 className="text-2xl font-bold tracking-tight text-on-surface">Syllabus</h1>
         <Link href="/dashboard" className="text-sm text-on-surface-variant hover:text-on-surface">

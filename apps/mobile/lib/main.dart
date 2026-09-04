@@ -25,12 +25,7 @@ Future<void> main() async {
   final PackStore store = DbPackStore();
   final ThemeController theme = ThemeController(prefs: prefs);
 
-  runApp(RenanceApp(
-    api: api,
-    session: session,
-    store: store,
-    theme: theme,
-  ));
+  runApp(RenanceApp(api: api, session: session, store: store, theme: theme));
 }
 
 class RenanceApp extends StatelessWidget {
@@ -63,6 +58,9 @@ class RenanceApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<ExamController>(
           create: (_) => ExamController(api: api, store: store),
+        ),
+        ChangeNotifierProvider<LessonsController>(
+          create: (_) => LessonsController(api: api, store: store),
         ),
         ChangeNotifierProvider<FlashcardsController>(
           create: (_) => FlashcardsController(api: api, store: store),

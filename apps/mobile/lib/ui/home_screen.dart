@@ -16,6 +16,8 @@ import '../models.dart';
 import '../storage.dart';
 import 'downloads_screen.dart';
 import 'flashcards_screen.dart';
+import 'lessons_screen.dart';
+import 'tutor_screen.dart';
 import 'exam_screen.dart';
 import 'library_screen.dart';
 import 'onboarding_sheet.dart';
@@ -105,9 +107,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _openExam(BuildContext context, ExamMeta exam) {
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(builder: (_) => ExamScreen(exam: exam)),
-    );
+    Navigator.of(context)
+        .push(MaterialPageRoute<void>(builder: (_) => ExamScreen(exam: exam)));
   }
 
   @override
@@ -132,35 +133,206 @@ class _HomeScreenState extends State<HomeScreen> {
       ProfileScreen(onGoTab: (int t) => setState(() => _tab = t)),
     ];
 
-    return Scaffold(
-      backgroundColor: RenanceColors.background,
-      body: Stack(
-        children: <Widget>[
-          // Body sits UNDER the header (which paints its own background).
-          Positioned.fill(
-            top: 0,
-            child: ColoredBox(
-              color: RenanceColors.card,
-              child: IndexedStack(index: _tab, children: bodies),
-            ),
+    final Widget shellBody = Stack(
+      children: <Widget>[
+        // Body sits UNDER the header (which paints its own background).
+        Positioned.fill(
+          top: 0,
+          child: ColoredBox(
+            color: RenanceColors.card,
+            child: IndexedStack(index: _tab, children: bodies),
           ),
-          // Brand header — bg-surface/80 + hairline shadow (Stitch header).
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: HomeHeader(
-              streak: student.gamification?.state.currentStreak ?? 0,
-              name: student.me?.profile?.fullName ?? '',
-              onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
-            ),
+        ),
+        // Brand header — bg-surface/80 + hairline shadow (Stitch header).
+        Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          child: HomeHeader(
+            streak: student.gamification?.state.currentStreak ?? 0,
+            name: student.me?.profile?.fullName ?? '',
+            onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
           ),
-        ],
-      ),
-      bottomNavigationBar: HomeNav(
-        active: _tab,
-        reviewBadge: student.dueTopics,
-        onTap: (int t) => setState(() => _tab = t),
+        ),
+      ],
+    );
+
+    // Adaptive shell (founder directive: the app runs on phones AND
+    // desktops). Narrow form factors keep the Stitch bottom nav; at
+    // >=1000 logical pixels a side rail replaces it and the content is
+    // centred at reading width, the way a real desktop app behaves.
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        final bool wide = constraints.maxWidth >= 1000;
+        if (!wide) {
+          return Scaffold(
+            backgroundColor: RenanceColors.background,
+            body: shellBody,
+            bottomNavigationBar: HomeNav(
+              active: _tab,
+              reviewBadge: student.dueTopics,
+              onTap: (int t) => setState(() => _tab = t),
+            ),
+          );
+        }
+        return Scaffold(
+          backgroundColor: RenanceColors.background,
+          body: Row(
+            children: <Widget>[
+              _WideRail(
+                active: _tab,
+                reviewBadge: student.dueTopics,
+                onTap: (int t) => setState(() => _tab = t),
+              ),
+              const VerticalDivider(
+                width: 1,
+                thickness: 1,
+                color: RenanceColors.outlineVariant,
+              ),
+              Expanded(
+                child: Center(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 920),
+                    child: shellBody,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// Desktop navigation rail: same five destinations as HomeNav, drawn as
+/// a vertical Stitch-style launcher with the brand mark on top.
+class _WideRail extends StatelessWidget {
+  const _WideRail({
+    required this.active,
+    required this.reviewBadge,
+    required this.onTap,
+  });
+
+  final int active;
+  final int reviewBadge;
+  final ValueChanged<int> onTap;
+
+  static const _items = <(IconData, IconData, String)>[
+    (Icons.home_outlined, Icons.home, 'Home'),
+    (Icons.edit_note, Icons.edit_note, 'Practice'),
+    (Icons.history_edu, Icons.history_edu, 'Review'),
+    (Icons.leaderboard_outlined, Icons.leaderboard, 'Progress'),
+    (Icons.person_outline, Icons.person, 'Profile'),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 108,
+      color: Colors.white,
+      child: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            const SizedBox(height: 16),
+            Container(
+              width: 36,
+              height: 36,
+              decoration: BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.circular(9),
+              ),
+              alignment: Alignment.center,
+              child: const Text(
+                'R',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+            const SizedBox(height: 28),
+            for (var i = 0; i < _items.length; i++)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: InkWell(
+                  onTap: () => onTap(i),
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    width: 92,
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    decoration: BoxDecoration(
+                      color: i == active
+                          ? RenanceColors.surfaceContainerLow
+                          : Colors.transparent,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        Stack(
+                          clipBehavior: Clip.none,
+                          children: <Widget>[
+                            Icon(
+                              i == active ? _items[i].$2 : _items[i].$1,
+                              size: 24,
+                              color: i == active
+                                  ? Colors.black
+                                  : RenanceColors.textSecondary,
+                            ),
+                            if (i == 2 && reviewBadge > 0)
+                              Positioned(
+                                top: -5,
+                                right: -7,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 5,
+                                    vertical: 1,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: RenanceColors.emerald,
+                                    borderRadius: BorderRadius.circular(999),
+                                  ),
+                                  child: Text(
+                                    '$reviewBadge',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          _items[i].$3,
+                          style: TextStyle(
+                            fontFamily: 'Inter',
+                            fontSize: 12,
+                            color: i == active
+                                ? Colors.black
+                                : RenanceColors.textSecondary,
+                            fontWeight: i == active
+                                ? FontWeight.w600
+                                : FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            const Spacer(),
+            Text(
+              'Renance',
+              style: RenanceText.labelMono.copyWith(fontSize: 10),
+            ),
+            const SizedBox(height: 12),
+          ],
+        ),
       ),
     );
   }
@@ -264,8 +436,11 @@ class StreakPill extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const Icon(Icons.local_fire_department,
-              size: 20, color: RenanceColors.amber),
+          const Icon(
+            Icons.local_fire_department,
+            size: 20,
+            color: RenanceColors.amber,
+          ),
           const SizedBox(width: 4),
           Text('$streak', style: RenanceText.labelMono),
         ],
@@ -375,7 +550,9 @@ class HomeNav extends StatelessWidget {
                               right: -8,
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 1),
+                                  horizontal: 5,
+                                  vertical: 1,
+                                ),
                                 decoration: BoxDecoration(
                                   color: RenanceColors.emerald,
                                   borderRadius: BorderRadius.circular(999),
@@ -402,8 +579,9 @@ class HomeNav extends StatelessWidget {
                           color: i == active
                               ? Colors.black
                               : RenanceColors.textSecondary,
-                          fontWeight:
-                              i == active ? FontWeight.w600 : FontWeight.w400,
+                          fontWeight: i == active
+                              ? FontWeight.w600
+                              : FontWeight.w400,
                         ),
                       ),
                       const SizedBox(height: 2),
@@ -447,12 +625,6 @@ class _LauncherTab extends StatelessWidget {
   final ValueChanged<int> onGoTab;
   final VoidCallback onOnboarding;
 
-  void _soon(BuildContext context, String what) {
-    ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('$what ships in an upcoming release — designed, queued, coming.')),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -463,7 +635,12 @@ class _LauncherTab extends StatelessWidget {
       onRefresh: student.refresh,
       child: ListView(
         physics: const AlwaysScrollableScrollPhysics(),
-        padding: EdgeInsets.fromLTRB(16, MediaQuery.paddingOf(context).top + 64 + 16, 16, 24),
+        padding: EdgeInsets.fromLTRB(
+          16,
+          MediaQuery.paddingOf(context).top + 64 + 16,
+          16,
+          24,
+        ),
         children: <Widget>[
           // Hero progress card -------------------------------------------
           _HeroCard(
@@ -491,9 +668,13 @@ class _LauncherTab extends StatelessWidget {
           ],
           // Practice grid -------------------------------------------------
           const SizedBox(height: 8),
-          Text('Practice',
-              style: RenanceText.sectionTitle
-                  .copyWith(color: RenanceColors.textSecondary, fontSize: 14)),
+          Text(
+            'Practice',
+            style: RenanceText.sectionTitle.copyWith(
+              color: RenanceColors.textSecondary,
+              fontSize: 14,
+            ),
+          ),
           const SizedBox(height: 12),
           Row(
             children: <Widget>[
@@ -519,7 +700,8 @@ class _LauncherTab extends StatelessWidget {
                   label: 'Flashcards',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const FlashcardsScreen()),
+                      builder: (_) => const FlashcardsScreen(),
+                    ),
                   ),
                 ),
               ),
@@ -529,7 +711,8 @@ class _LauncherTab extends StatelessWidget {
                   label: 'Syllabus',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                        builder: (_) => const SyllabusScreen()),
+                      builder: (_) => const SyllabusScreen(),
+                    ),
                   ),
                 ),
               ),
@@ -537,9 +720,13 @@ class _LauncherTab extends StatelessWidget {
           ),
           // Grow grid -----------------------------------------------------
           const SizedBox(height: 16),
-          Text('Grow',
-              style: RenanceText.sectionTitle
-                  .copyWith(color: RenanceColors.textSecondary, fontSize: 14)),
+          Text(
+            'Grow',
+            style: RenanceText.sectionTitle.copyWith(
+              color: RenanceColors.textSecondary,
+              fontSize: 14,
+            ),
+          ),
           const SizedBox(height: 12),
           Row(
             children: <Widget>[
@@ -564,7 +751,11 @@ class _LauncherTab extends StatelessWidget {
                   iconColor: Colors.white,
                   highlight: true,
                   label: 'Tutor',
-                  onTap: () => _soon(context, 'The AI tutor'),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const TutorEntryScreen(),
+                    ),
+                  ),
                 ),
               ),
               Expanded(
@@ -585,7 +776,9 @@ class _LauncherTab extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 40),
               child: Center(
                 child: LogoActivityIndicator(
-                    label: 'Syncing your packs…', size: 34),
+                  label: 'Syncing your packs…',
+                  size: 34,
+                ),
               ),
             )
           else if (recent != null)
@@ -593,10 +786,12 @@ class _LauncherTab extends StatelessWidget {
               attempt: recent,
               title: student.titleForCode(recent.code),
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute<void>(
-                  builder: (_) =>
-                      ReviewDetailScreen(attemptId: recent.attemptId),
-                ));
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) =>
+                        ReviewDetailScreen(attemptId: recent.attemptId),
+                  ),
+                );
               },
             )
           else
@@ -629,7 +824,11 @@ class _HeroCard extends StatelessWidget {
         color: RenanceColors.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
-          BoxShadow(color: Color(0x33141C2D), blurRadius: 3, offset: Offset(0, 1)),
+          BoxShadow(
+            color: Color(0x33141C2D),
+            blurRadius: 3,
+            offset: Offset(0, 1),
+          ),
         ],
       ),
       child: ClipRRect(
@@ -671,11 +870,15 @@ class _HeroCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          const Text('NEXT TARGET',
-                              style: RenanceText.overline),
+                          const Text(
+                            'NEXT TARGET',
+                            style: RenanceText.overline,
+                          ),
                           const SizedBox(height: 4),
-                          Text(student.targetTitle,
-                              style: RenanceText.displayMd),
+                          Text(
+                            student.targetTitle,
+                            style: RenanceText.displayMd,
+                          ),
                         ],
                       ),
                     ),
@@ -688,10 +891,11 @@ class _HeroCard extends StatelessWidget {
                           days == null
                               ? 'Set a year'
                               : days <= 0
-                                  ? 'This month'
-                                  : '$days Days',
-                          style: RenanceText.bodyMedium
-                              .copyWith(color: RenanceColors.violet),
+                              ? 'This month'
+                              : '$days Days',
+                          style: RenanceText.bodyMedium.copyWith(
+                            color: RenanceColors.violet,
+                          ),
                         ),
                       ],
                     ),
@@ -701,12 +905,20 @@ class _HeroCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text('Syllabus Completion',
-                        style: RenanceText.labelMono.copyWith(
-                            fontSize: 12, color: RenanceColors.textSecondary)),
-                    Text('$coverage%',
-                        style: RenanceText.labelMono.copyWith(
-                            fontSize: 12, fontWeight: FontWeight.w700)),
+                    Text(
+                      'Syllabus Completion',
+                      style: RenanceText.labelMono.copyWith(
+                        fontSize: 12,
+                        color: RenanceColors.textSecondary,
+                      ),
+                    ),
+                    Text(
+                      '$coverage%',
+                      style: RenanceText.labelMono.copyWith(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 8),
@@ -716,8 +928,9 @@ class _HeroCard extends StatelessWidget {
                     value: coverage / 100,
                     minHeight: 8,
                     backgroundColor: RenanceColors.surfaceVariant,
-                    valueColor:
-                        const AlwaysStoppedAnimation<Color>(Colors.black),
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      Colors.black,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -728,12 +941,17 @@ class _HeroCard extends StatelessWidget {
                     onPressed: onContinue,
                     style: FilledButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                     ),
                     icon: const Icon(Icons.play_arrow, size: 20),
-                    label: const Text('Continue Practice',
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w600)),
+                    label: const Text(
+                      'Continue Practice',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -778,26 +996,31 @@ class LauncherTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(18),
             boxShadow: const <BoxShadow>[
               BoxShadow(
-                  color: Color(0x408B5CF6), blurRadius: 8, offset: Offset(0, 2)),
+                color: Color(0x408B5CF6),
+                blurRadius: 8,
+                offset: Offset(0, 2),
+              ),
             ],
           )
         : muted
-            ? BoxDecoration(
-                color: RenanceColors.surfaceContainer,
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(
-                    color: RenanceColors.outlineLight.withValues(alpha: 0.3)),
-              )
-            : BoxDecoration(
-                color: RenanceColors.card,
-                borderRadius: BorderRadius.circular(18),
-                boxShadow: const <BoxShadow>[
-                  BoxShadow(
-                      color: Color(0x14141C2D),
-                      blurRadius: 3,
-                      offset: Offset(0, 1)),
-                ],
-              );
+        ? BoxDecoration(
+            color: RenanceColors.surfaceContainer,
+            borderRadius: BorderRadius.circular(18),
+            border: Border.all(
+              color: RenanceColors.outlineLight.withValues(alpha: 0.3),
+            ),
+          )
+        : BoxDecoration(
+            color: RenanceColors.card,
+            borderRadius: BorderRadius.circular(18),
+            boxShadow: const <BoxShadow>[
+              BoxShadow(
+                color: Color(0x14141C2D),
+                blurRadius: 3,
+                offset: Offset(0, 1),
+              ),
+            ],
+          );
 
     return InkWell(
       onTap: onTap,
@@ -827,9 +1050,11 @@ class LauncherTile extends StatelessWidget {
                         ),
                         child: Icon(icon, size: 24, color: iconColor),
                       )
-                    : Icon(icon,
+                    : Icon(
+                        icon,
                         size: 24,
-                        color: iconColor ?? RenanceColors.ink),
+                        color: iconColor ?? RenanceColors.ink,
+                      ),
               ),
               if (badge != null)
                 Positioned(
@@ -837,7 +1062,9 @@ class LauncherTile extends StatelessWidget {
                   right: -4,
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 6, vertical: 2),
+                      horizontal: 6,
+                      vertical: 2,
+                    ),
                     decoration: BoxDecoration(
                       color: badgeColor,
                       borderRadius: BorderRadius.circular(999),
@@ -864,7 +1091,9 @@ class LauncherTile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: RenanceText.caption.copyWith(
               fontSize: 11,
-              color: highlight ? RenanceColors.violet : RenanceColors.textSecondary,
+              color: highlight
+                  ? RenanceColors.violet
+                  : RenanceColors.textSecondary,
               fontWeight: highlight ? FontWeight.w600 : FontWeight.w400,
             ),
           ),
@@ -907,7 +1136,10 @@ class _RecentActivityCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
-                color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+              color: Color(0x14141C2D),
+              blurRadius: 3,
+              offset: Offset(0, 1),
+            ),
           ],
         ),
         child: Row(
@@ -919,22 +1151,26 @@ class _RecentActivityCard extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: RenanceColors.errorContainer,
               ),
-              child: const Icon(Icons.science, size: 20, color: RenanceColors.error),
+              child: const Icon(
+                Icons.science,
+                size: 20,
+                color: RenanceColors.error,
+              ),
             ),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(title,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: RenanceText.bodyMedium),
+                  Text(
+                    title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: RenanceText.bodyMedium,
+                  ),
                   const SizedBox(height: 2),
                   Text(
-                    pct == null
-                        ? verdict
-                        : 'Score: $pct% • $verdict',
+                    pct == null ? verdict : 'Score: $pct% • $verdict',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: RenanceText.caption,
@@ -997,8 +1233,7 @@ class _PendingBanner extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xFFFFF7E6),
         borderRadius: BorderRadius.circular(12),
-        border:
-            Border.all(color: RenanceColors.amber.withValues(alpha: 0.4)),
+        border: Border.all(color: RenanceColors.amber.withValues(alpha: 0.4)),
       ),
       child: Row(
         children: <Widget>[
@@ -1035,8 +1270,11 @@ class _SyncErrorBanner extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          const Icon(Icons.cloud_off_outlined,
-              size: 18, color: RenanceColors.error),
+          const Icon(
+            Icons.cloud_off_outlined,
+            size: 18,
+            color: RenanceColors.error,
+          ),
           const SizedBox(width: 10),
           Expanded(
             child: Text(
@@ -1066,7 +1304,10 @@ Future<void> showMoreSheet(BuildContext context) {
         borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
         boxShadow: <BoxShadow>[
           BoxShadow(
-              color: Color(0x1F111C2D), blurRadius: 24, offset: Offset(0, -4)),
+            color: Color(0x1F111C2D),
+            blurRadius: 24,
+            offset: Offset(0, -4),
+          ),
         ],
       ),
       child: SafeArea(
@@ -1090,8 +1331,10 @@ Future<void> showMoreSheet(BuildContext context) {
                 children: <Widget>[
                   const Text('All Features', style: RenanceText.sectionTitle),
                   const SizedBox(height: 2),
-                  Text('Explore everything Renance has to offer',
-                      style: RenanceText.bodySecondary.copyWith(fontSize: 13)),
+                  Text(
+                    'Explore everything Renance has to offer',
+                    style: RenanceText.bodySecondary.copyWith(fontSize: 13),
+                  ),
                 ],
               ),
             ),
@@ -1113,7 +1356,20 @@ Future<void> showMoreSheet(BuildContext context) {
                         Navigator.of(sheetContext).pop();
                         Navigator.of(context).push(
                           MaterialPageRoute<void>(
-                              builder: (_) => const DownloadsScreen()),
+                            builder: (_) => const DownloadsScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.menu_book,
+                      label: 'Lessons',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const LessonsScreen(),
+                          ),
                         );
                       },
                     ),
@@ -1124,8 +1380,10 @@ Future<void> showMoreSheet(BuildContext context) {
                         Navigator.of(sheetContext).pop();
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                              content: Text(
-                                  'Offline share ships with peer packs in an upcoming release.')),
+                            content: Text(
+                              'Offline share ships with peer packs in an upcoming release.',
+                            ),
+                          ),
                         );
                       },
                     ),
@@ -1136,8 +1394,10 @@ Future<void> showMoreSheet(BuildContext context) {
                         Navigator.of(sheetContext).pop();
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                              content: Text(
-                                  'The certificate wallet is designed — it lands with the exam board.')),
+                            content: Text(
+                              'The certificate wallet is designed — it lands with the exam board.',
+                            ),
+                          ),
                         );
                       },
                     ),
@@ -1155,8 +1415,10 @@ Future<void> showMoreSheet(BuildContext context) {
                         Navigator.of(sheetContext).pop();
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
-                              content: Text(
-                                  'Patron portal opens once sponsor accounts go live.')),
+                            content: Text(
+                              'Patron portal opens once sponsor accounts go live.',
+                            ),
+                          ),
                         );
                       },
                     ),
@@ -1174,7 +1436,8 @@ Future<void> showMoreSheet(BuildContext context) {
                         Navigator.of(sheetContext).pop();
                         Navigator.of(context).push(
                           MaterialPageRoute<void>(
-                              builder: (_) => const SettingsScreen()),
+                            builder: (_) => const SettingsScreen(),
+                          ),
                         );
                       },
                     ),
@@ -1220,22 +1483,28 @@ class _FatigueBanner extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          const Icon(Icons.self_improvement,
-              size: 22, color: RenanceColors.violet),
+          const Icon(
+            Icons.self_improvement,
+            size: 22,
+            color: RenanceColors.violet,
+          ),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text('Time for a short break?',
-                    style: RenanceText.bodyMedium.copyWith(fontSize: 14)),
+                Text(
+                  'Time for a short break?',
+                  style: RenanceText.bodyMedium.copyWith(fontSize: 14),
+                ),
                 const SizedBox(height: 2),
                 Text(
                   state.reason.isNotEmpty
                       ? state.reason
                       : 'You have been studying a while today.',
-                  style: RenanceText.caption
-                      .copyWith(color: RenanceColors.textSecondary),
+                  style: RenanceText.caption.copyWith(
+                    color: RenanceColors.textSecondary,
+                  ),
                 ),
               ],
             ),
@@ -1271,7 +1540,10 @@ class _MoreTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
-              color: Color(0x33141C2D), blurRadius: 3, offset: Offset(0, 1)),
+            color: Color(0x33141C2D),
+            blurRadius: 3,
+            offset: Offset(0, 1),
+          ),
         ],
       ),
       child: Column(

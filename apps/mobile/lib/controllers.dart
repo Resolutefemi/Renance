@@ -21,8 +21,8 @@ enum SyncPhase { idle, syncing, ready, error }
 /// sha256 decides WHETHER a local copy is current, and nothing blocks the UI.
 class SyncController extends ChangeNotifier {
   SyncController({required ApiClient api, required PackStore store})
-      : _api = api,
-        _store = store;
+    : _api = api,
+      _store = store;
 
   final ApiClient _api;
   final PackStore _store;
@@ -89,8 +89,11 @@ class SyncController extends ChangeNotifier {
   List<ExamMeta> _neededFor(List<String> profileExams) {
     if (profileExams.isEmpty) return exams;
     final wanted = exams
-        .where((e) =>
-            profileExams.contains(e.body) || profileExams.contains(e.category))
+        .where(
+          (e) =>
+              profileExams.contains(e.body) ||
+              profileExams.contains(e.category),
+        )
         .toList(growable: false);
     return wanted.isEmpty ? exams : wanted;
   }
@@ -148,9 +151,9 @@ class ExamController extends ChangeNotifier {
     required ApiClient api,
     required PackStore store,
     DateTime Function()? clock,
-  })  : _api = api,
-        _store = store,
-        _clock = clock ?? DateTime.now;
+  }) : _api = api,
+       _store = store,
+       _clock = clock ?? DateTime.now;
 
   final ApiClient _api;
   final PackStore _store;
@@ -198,8 +201,8 @@ class ExamController extends ChangeNotifier {
 
   BundleQuestion? get current =>
       bundle == null || index >= bundle!.questions.length
-          ? null
-          : bundle!.questions[index];
+      ? null
+      : bundle!.questions[index];
 
   int get answeredCount => answers.length;
 
@@ -246,8 +249,10 @@ class ExamController extends ChangeNotifier {
     if (bundle == null) return;
     appliedAdaptive = false;
     try {
-      final started =
-          await _api.createAttempt(bundle!.code, adaptive: adaptive);
+      final started = await _api.createAttempt(
+        bundle!.code,
+        adaptive: adaptive,
+      );
       _attemptId = started.attemptId;
       // The server walked the pack weak-topic-first (ROADMAP #5):
       // re-sequence the in-memory copy so the player, the navigator and
@@ -382,14 +387,16 @@ class ExamController extends ChangeNotifier {
   }
 
   Future<void> _queueOffline(int durationMs) async {
-    await _store.queueSubmission(PendingSubmission(
-      id: _attemptId!,
-      code: bundle!.code,
-      attemptId: _attemptId!,
-      answers: Map.of(answers),
-      durationMs: durationMs,
-      createdAt: DateTime.now(),
-    ));
+    await _store.queueSubmission(
+      PendingSubmission(
+        id: _attemptId!,
+        code: bundle!.code,
+        attemptId: _attemptId!,
+        answers: Map.of(answers),
+        durationMs: durationMs,
+        createdAt: DateTime.now(),
+      ),
+    );
     phase = ExamPhase.queued;
     notifyListeners();
   }
@@ -438,7 +445,8 @@ class ExamController extends ChangeNotifier {
         await Future<void>.delayed(_pollDelay);
       } on NetworkException {
         await _queueOffline(
-            DateTime.now().difference(_startedAt).inMilliseconds);
+          DateTime.now().difference(_startedAt).inMilliseconds,
+        );
         return;
       }
     }
@@ -473,8 +481,8 @@ class ExamController extends ChangeNotifier {
 /// and the profile stat strip.
 class StudentController extends ChangeNotifier {
   StudentController({required ApiClient api, required PackStore store})
-      : _api = api,
-        _store = store;
+    : _api = api,
+      _store = store;
 
   final ApiClient _api;
 
@@ -532,19 +540,19 @@ class StudentController extends ChangeNotifier {
   int get coveragePct {
     final p = me?.profile;
     if (p == null) return 0;
-    final gradedCodes = attempts.where((a) => a.isGraded).map((a) => a.code).toSet();
+    final gradedCodes = attempts
+        .where((a) => a.isGraded)
+        .map((a) => a.code)
+        .toSet();
     final relevant = attempts.isEmpty
-        ? <String>{
-            for (final e in downloaded) e,
-          }
+        ? <String>{for (final e in downloaded) e}
         : gradedCodes;
     if (relevant.isEmpty) return 0;
     return (gradedCodes.length * 100 ~/ relevant.length).clamp(0, 100);
   }
 
   /// Total questions missed across graded papers.
-  int get questionsToReview =>
-      attempts.fold(0, (sum, a) => sum + a.missed);
+  int get questionsToReview => attempts.fold(0, (sum, a) => sum + a.missed);
 
   /// Topics the spaced-repetition engine says are due today (or overdue) —
   /// the number behind the Review Due badge and the review hero card.
@@ -552,19 +560,21 @@ class StudentController extends ChangeNotifier {
 
   /// Due + overdue + upcoming rows, in server order (oldest due first).
   List<ReviewItem> get queuePreview => <ReviewItem>[
-        ...review?.due ?? const <ReviewItem>[],
-        ...review?.upcoming ?? const <ReviewItem>[],
-      ];
+    ...review?.due ?? const <ReviewItem>[],
+    ...review?.upcoming ?? const <ReviewItem>[],
+  ];
 
   /// Questions answered today (daily quest progress, all packs).
   int get todayQuestions {
     final now = DateTime.now();
     return attempts
-        .where((a) =>
-            a.submittedAt != null &&
-            a.submittedAt!.year == now.year &&
-            a.submittedAt!.month == now.month &&
-            a.submittedAt!.day == now.day)
+        .where(
+          (a) =>
+              a.submittedAt != null &&
+              a.submittedAt!.year == now.year &&
+              a.submittedAt!.month == now.month &&
+              a.submittedAt!.day == now.day,
+        )
         .fold(0, (sum, a) => sum + (a.total ?? 0));
   }
 
@@ -646,10 +656,10 @@ class FlashcardsController extends ChangeNotifier {
     required PackStore store,
     SpeechEngine? speech,
     DateTime Function()? clock,
-  })  : _api = api,
-        _store = store,
-        speech = speech ?? FlutterTtsEngine(),
-        _clock = clock ?? DateTime.now;
+  }) : _api = api,
+       _store = store,
+       speech = speech ?? FlutterTtsEngine(),
+       _clock = clock ?? DateTime.now;
 
   final ApiClient _api;
   final PackStore _store;
@@ -674,8 +684,7 @@ class FlashcardsController extends ChangeNotifier {
       deck == null || index >= deck!.cards.length ? null : deck!.cards[index];
 
   /// Cards sitting in box 3+ (seen and mostly recalled).
-  int get knownCount =>
-      progress.values.where((p) => p.box >= 3).length;
+  int get knownCount => progress.values.where((p) => p.box >= 3).length;
 
   /// True after the last card was graded — the completed state.
   bool get isDeckDone => deck != null && index >= deck!.cards.length;
@@ -803,8 +812,11 @@ class FlashcardsController extends ChangeNotifier {
     final baseBox = prev?.box ?? 1;
     final newBox = nextCardBox(baseBox, g);
     final now = _clock().toUtc();
-    final due = DateTime.utc(now.year, now.month, now.day)
-        .add(Duration(days: cardIntervalDays(newBox)));
+    final due = DateTime.utc(
+      now.year,
+      now.month,
+      now.day,
+    ).add(Duration(days: cardIntervalDays(newBox)));
     final updated = CardProgress(
       cardId: card.id,
       deckCode: deckCode,
@@ -832,13 +844,15 @@ class FlashcardsController extends ChangeNotifier {
     } on ApiException catch (_) {
       // Permanent server decision — the local Leitner state stands.
     } on NetworkException catch (_) {
-      await _store.queueCardGrade(PendingCardGrade(
-        id: 'g-${card.id}-${now.millisecondsSinceEpoch}',
-        cardId: card.id,
-        deckCode: deckCode,
-        grade: g,
-        createdAt: _clock(),
-      ));
+      await _store.queueCardGrade(
+        PendingCardGrade(
+          id: 'g-${card.id}-${now.millisecondsSinceEpoch}',
+          cardId: card.id,
+          deckCode: deckCode,
+          grade: g,
+          createdAt: _clock(),
+        ),
+      );
       gradesPending = true;
       notifyListeners();
     }
@@ -852,7 +866,10 @@ class FlashcardsController extends ChangeNotifier {
       try {
         final rows = await _api.gradeCards(<FlashcardGrade>[
           FlashcardGrade(
-              cardId: item.cardId, deckCode: item.deckCode, grade: item.grade),
+            cardId: item.cardId,
+            deckCode: item.deckCode,
+            grade: item.grade,
+          ),
         ]);
         await _store.removeCardGrade(item.id);
         for (final r in rows) {
@@ -872,7 +889,9 @@ class FlashcardsController extends ChangeNotifier {
 
   Future<void> _speakCurrent() async {
     if (!voiceOn || deck == null) return;
-    await speech.speak(revealed ? (current?.back ?? '') : (current?.front ?? ''));
+    await speech.speak(
+      revealed ? (current?.back ?? '') : (current?.front ?? ''),
+    );
   }
 
   /// Voice on/off — turning it on re-reads the current side.
@@ -907,5 +926,130 @@ class FlashcardsController extends ChangeNotifier {
     speech.stop();
     speech.dispose();
     super.dispose();
+  }
+}
+
+// --------------------------------------------------------- lessons controller
+
+enum LessonsPhase { idle, loading, ready, error }
+
+/// Lesson library state (ROADMAP #8): fetches the list from the API,
+/// caches metas for offline reuse, and loads single bundles with a
+/// cache fallback so saved lessons stay readable with zero connectivity.
+class LessonsController extends ChangeNotifier {
+  LessonsController({required ApiClient api, required PackStore store})
+    : _api = api,
+      _store = store;
+
+  final ApiClient _api;
+  final PackStore _store;
+
+  LessonsPhase phase = LessonsPhase.idle;
+  List<LessonMeta> lessons = <LessonMeta>[];
+  String error = '';
+
+  Future<void> load({bool force = false}) async {
+    if (phase == LessonsPhase.loading) return;
+    if (!force && lessons.isNotEmpty) return;
+    phase = LessonsPhase.loading;
+    notifyListeners();
+    try {
+      lessons = await _api.lessons();
+      phase = LessonsPhase.ready;
+      error = '';
+      // best-effort cache: metas keep the list browsable offline
+      try {
+        await _store.saveLessonMetas(lessons);
+      } on Exception {
+        // cache failure must never break the online path
+      }
+    } on NetworkException {
+      // offline: fall back to the cached library
+      lessons = await _store.cachedLessonMetas();
+      if (lessons.isEmpty) {
+        phase = LessonsPhase.error;
+        error = 'No connection and no saved lessons yet — reconnect once to download the library.';
+      } else {
+        phase = LessonsPhase.ready;
+        error = 'Offline — showing your saved lessons.';
+      }
+    } on ApiException catch (e) {
+      phase = LessonsPhase.error;
+      error = e.message;
+    }
+    notifyListeners();
+  }
+
+  /// One full lesson: online fetch first, cache fallback, and every
+  /// successful fetch refreshes the cache.
+  Future<Lesson?> loadLesson(String slug) async {
+    try {
+      final Lesson les = await _api.lesson(slug);
+      try {
+        await _store.saveLesson(les);
+      } on Exception {
+        // ignore cache write failures
+      }
+      return les;
+    } on NetworkException {
+      return _store.loadLesson(slug);
+    } on ApiException {
+      return _store.loadLesson(slug);
+    }
+  }
+}
+
+// ---------------------------------------------------------- tutor controller
+
+enum TutorPhase { idle, thinking, ready, error }
+
+/// One Socratic conversation (ROADMAP #9): anchored to a graded attempt
+/// + question, it holds the visible turns and the mode badge from the
+/// last reply ('ai' | 'hint'). Provider outages and rate limits surface
+/// as an error row — the conversation itself is never lost.
+class TutorController extends ChangeNotifier {
+  TutorController({
+    required ApiClient api,
+    required this.attemptId,
+    required this.questionId,
+  }) : _api = api;
+
+  final ApiClient _api;
+  final String attemptId;
+  final String questionId;
+
+  final List<TutorTurn> turns = <TutorTurn>[];
+  TutorPhase phase = TutorPhase.idle;
+  String mode = 'hint';
+  String error = '';
+
+  bool get aiEnabled => mode == 'ai';
+
+  Future<void> send(String content) async {
+    final String text = content.trim();
+    if (text.isEmpty || phase == TutorPhase.thinking) return;
+    turns.add(TutorTurn(role: 'user', content: text));
+    phase = TutorPhase.thinking;
+    error = '';
+    notifyListeners();
+    try {
+      final TutorReply reply = await _api.tutorChat(
+        attemptId: attemptId,
+        questionId: questionId,
+        messages: List<TutorTurn>.of(turns),
+      );
+      turns.add(TutorTurn(role: 'assistant', content: reply.text));
+      mode = reply.mode;
+      phase = TutorPhase.ready;
+    } on ApiException catch (e) {
+      phase = TutorPhase.error;
+      error = e.statusCode == 429
+          ? 'The tutor is cooling down — retry in a few seconds.'
+          : e.message;
+    } on NetworkException {
+      phase = TutorPhase.error;
+      error = 'No connection — the tutor needs the server to coach.';
+    }
+    notifyListeners();
   }
 }
