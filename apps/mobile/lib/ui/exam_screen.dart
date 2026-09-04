@@ -404,39 +404,13 @@ class _Player extends StatelessWidget {
     showModalBottomSheet<void>(
       context: context,
       backgroundColor: RenanceColors.background,
+      isScrollControlled: true,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
-      builder: (BuildContext sheetContext) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              const Text('Question Navigator', style: RenanceText.sectionTitle),
-              const SizedBox(height: 12),
-              Flexible(
-                child: SingleChildScrollView(
-                  child: Wrap(
-                    spacing: 6,
-                    runSpacing: 6,
-                    children: <Widget>[
-                      for (var i = 0;
-                          i < (controller.bundle?.questionCount ?? 0);
-                          i++)
-                        _PaletteDot(
-                          index: i,
-                          controller: controller,
-                          question: controller.bundle!.questions[i],
-                        ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+      builder: (BuildContext sheetContext) => _NavigatorSheet(
+        controller: controller,
+        onClose: () => Navigator.of(sheetContext).pop(),
       ),
     );
   }
@@ -716,63 +690,666 @@ class _OptionTile extends StatelessWidget {
 
 /// Navigator square: answered = blue fill, flagged = amber ring,
 /// current = black ring.
-class _PaletteDot extends StatelessWidget {
-  const _PaletteDot({
-    required this.index,
-    required this.controller,
-    required this.question,
-  });
+// ------------------------------------------------------------- navigator
 
-  final int index;
+/// Filter chips of the Stitch question_navigator_light sheet.
+enum _NavFilter { all, flagged, skipped, unseen }
+
+/// The full question_navigator_light bottom sheet: title + circular close,
+/// count chips (All / Flagged / Skipped / Unseen), a 5-column tile grid with
+/// the four paper states, the legend row and the black Resume Exam button.
+class _NavigatorSheet extends StatefulWidget {
+  const _NavigatorSheet({required this.controller, required this.onClose});
+
   final ExamController controller;
-  final BundleQuestion question;
+  final VoidCallback onClose;
+
+  @override
+  State<_NavigatorSheet> createState() => _NavigatorSheetState();
+}
+
+class _NavigatorSheetState extends State<_NavigatorSheet> {
+  _NavFilter _filter = _NavFilter.all;
 
   @override
   Widget build(BuildContext context) {
-    final bool answered = controller.answers.containsKey(question.id);
-    final bool flagged = controller.flags.contains(question.id);
-    final bool current = controller.index == index;
+    final ExamController controller = widget.controller;
+    final Bundle? bundle = controller.bundle;
+    if (bundle == null) return const SizedBox.shrink();
 
-    BorderSide side = const BorderSide(color: RenanceColors.outlineVariant);
-    Color? fill;
-    Color fg = RenanceColors.textSecondary;
-    if (current) {
-      side = const BorderSide(color: Colors.black, width: 1.6);
-      fg = Colors.black;
-    } else if (flagged) {
-      side = const BorderSide(color: RenanceColors.amber, width: 1.4);
-      fg = RenanceColors.amber;
-    } else if (answered) {
-      fill = RenanceColors.selectionBlue;
-      fg = RenanceColors.ink;
-    }
+    bool answered(int i) =>
+        controller.answers.containsKey(bundle.questions[i].id);
+    bool flagged(int i) => controller.flags.contains(bundle.questions[i].id);
+    bool skipped(int i) =>
+        controller.visited.contains(bundle.questions[i].id) && !answered(i);
+    bool unseen(int i) => !controller.visited.contains(bundle.questions[i].id);
 
+    final int flaggedCount = flaggedIndices(bundle, controller).length;
+    final int skippedCount = <int>[
+      for (var i = 0; i < bundle.questionCount; i++)
+        if (skipped(i)) i,
+    ].length;
+    final int unseenCount = <int>[
+      for (var i = 0; i < bundle.questionCount; i++)
+        if (unseen(i)) i,
+    ].length;
+
+    final Map<_NavFilter, List<int>> lists = <_NavFilter, List<int>>{
+      _NavFilter.all: <int>[
+        for (var i = 0; i < bundle.questionCount; i++) i,
+      ],
+      _NavFilter.flagged: flaggedIndices(bundle, controller),
+      _NavFilter.skipped: <int>[
+        for (var i = 0; i < bundle.questionCount; i++)
+          if (skipped(i)) i,
+      ],
+      _NavFilter.unseen: <int>[
+        for (var i = 0; i < bundle.questionCount; i++)
+          if (unseen(i)) i,
+      ],
+    };
+    final Map<_NavFilter, String> labels = <_NavFilter, String>{
+      _NavFilter.all: 'All (${bundle.questionCount})',
+      _NavFilter.flagged: 'Flagged ($flaggedCount)',
+      _NavFilter.skipped: 'Skipped ($skippedCount)',
+      _NavFilter.unseen: 'Unseen ($unseenCount)',
+    };
+    final List<int> shown = lists[_filter]!;
+
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        maxHeight: MediaQuery.of(context).size.height * 0.86,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 20, 16, 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            // title + circular close -------------------------------------
+            Row(
+              children: <Widget>[
+                const Expanded(
+                  child: Text('Question Navigator',
+                      style: RenanceText.sectionTitle),
+                ),
+                InkWell(
+                  onTap: widget.onClose,
+                  customBorder: const CircleBorder(),
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: const BoxDecoration(
+                      color: RenanceColors.surfaceContainerLow,
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(Icons.close,
+                        size: 20, color: RenanceColors.ink),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            // count chips ------------------------------------------------
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              clipBehavior: Clip.none,
+              child: Row(
+                children: <Widget>[
+                  for (final _NavFilter f in _NavFilter.values) ...<Widget>[
+                    if (f != _NavFilter.values.first) const SizedBox(width: 8),
+                    _NavChip(
+                      label: labels[f]!,
+                      selected: _filter == f,
+                      onTap: () => setState(() => _filter = f),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(height: 16),
+            // state grid -------------------------------------------------
+            Flexible(
+              child: shown.isEmpty
+                  ? const Center(
+                      child: Text('Nothing here yet.',
+                          style: RenanceText.caption),
+                    )
+                  : GridView.builder(
+                      padding: const EdgeInsets.only(bottom: 4),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 5,
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12,
+                        childAspectRatio: 0.98,
+                      ),
+                      itemCount: shown.length,
+                      itemBuilder: (BuildContext context, int k) =>
+                          _NavTile(
+                        index: shown[k],
+                        answered: answered(shown[k]),
+                        flagged: flagged(shown[k]),
+                        skipped: skipped(shown[k]),
+                        unseen: unseen(shown[k]),
+                        onTap: () {
+                          controller.goTo(shown[k]);
+                          widget.onClose();
+                        },
+                      ),
+                    ),
+            ),
+            const SizedBox(height: 12),
+            // legend -----------------------------------------------------
+            const Wrap(
+              spacing: 16,
+              runSpacing: 8,
+              children: <Widget>[
+                _NavLegendItem(state: _NavLegendState.answered),
+                _NavLegendItem(state: _NavLegendState.flagged),
+                _NavLegendItem(state: _NavLegendState.skipped),
+                _NavLegendItem(state: _NavLegendState.unseen),
+              ],
+            ),
+            const SizedBox(height: 16),
+            // Resume Exam ------------------------------------------------
+            SizedBox(
+              width: double.infinity,
+              height: 52,
+              child: FilledButton(
+                onPressed: widget.onClose,
+                child: const Text('Resume Exam',
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+List<int> flaggedIndices(Bundle bundle, ExamController controller) => <int>[
+      for (var i = 0; i < bundle.questionCount; i++)
+        if (controller.flags.contains(bundle.questions[i].id)) i,
+    ];
+
+class _NavChip extends StatelessWidget {
+  const _NavChip(
+      {required this.label, required this.selected, required this.onTap});
+
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        controller.goTo(index);
-        Navigator.of(context).pop();
-      },
-      borderRadius: BorderRadius.circular(8),
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(999),
       child: Container(
-        width: 34,
-        height: 34,
-        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
-          color: fill ?? Colors.white,
-          borderRadius: BorderRadius.circular(8),
-          border: Border.fromBorderSide(side),
+          color: selected
+              ? RenanceColors.selectionBlue
+              : RenanceColors.surfaceContainerLow,
+          borderRadius: BorderRadius.circular(999),
         ),
         child: Text(
-          '${index + 1}',
+          label,
           style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
-            color: fg,
+            fontSize: 14,
+            fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
+            color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
           ),
         ),
       ),
     );
   }
+}
+
+/// One grid tile: black answered, amber-ringed + dotted flagged, gray
+/// skipped, hairline unseen.
+class _NavTile extends StatelessWidget {
+  const _NavTile({
+    required this.index,
+    required this.answered,
+    required this.flagged,
+    required this.skipped,
+    required this.unseen,
+    required this.onTap,
+  });
+
+  final int index;
+  final bool answered;
+  final bool flagged;
+  final bool skipped;
+  final bool unseen;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    Color fill = Colors.white;
+    Color fg = RenanceColors.textSecondary;
+    Border border = Border.all(color: RenanceColors.outlineVariant, width: 1);
+    if (skipped) {
+      fill = RenanceColors.surfaceContainerLow;
+      border = Border.all(color: RenanceColors.surfaceContainerLow, width: 1);
+    }
+    if (answered) {
+      fill = Colors.black;
+      fg = Colors.white;
+      border = Border.all(color: Colors.black, width: 1);
+    }
+    if (flagged) {
+      border = Border.all(color: RenanceColors.amber, width: 2);
+      if (!answered) fg = RenanceColors.ink;
+    }
+
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        decoration: BoxDecoration(
+          color: fill,
+          borderRadius: BorderRadius.circular(12),
+          border: border,
+        ),
+        child: Stack(
+          children: <Widget>[
+            Center(
+              child: Text(
+                '${index + 1}',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: fg,
+                ),
+              ),
+            ),
+            if (flagged)
+              Positioned(
+                top: 6,
+                right: 6,
+                child: Container(
+                  width: 7,
+                  height: 7,
+                  decoration: const BoxDecoration(
+                    color: RenanceColors.amber,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+enum _NavLegendState { answered, flagged, skipped, unseen }
+
+class _NavLegendItem extends StatelessWidget {
+  const _NavLegendItem({required this.state});
+
+  final _NavLegendState state;
+
+  @override
+  Widget build(BuildContext context) {
+    final Widget swatch;
+    switch (state) {
+      case _NavLegendState.answered:
+        swatch = Container(
+            decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(3),
+        ));
+      case _NavLegendState.flagged:
+        swatch = Stack(
+          clipBehavior: Clip.none,
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(3),
+                border: Border.all(color: RenanceColors.amber, width: 1.5),
+              ),
+            ),
+            Positioned(top: -2, right: -2, child: _amberDot()),
+          ],
+        );
+      case _NavLegendState.skipped:
+        swatch = Container(
+            decoration: BoxDecoration(
+          color: RenanceColors.surfaceContainerLow,
+          borderRadius: BorderRadius.circular(3),
+        ));
+      case _NavLegendState.unseen:
+        swatch = Container(
+            decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(3),
+          border: Border.all(color: RenanceColors.outlineVariant),
+        ));
+    }
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        SizedBox(width: 13, height: 13, child: swatch),
+        const SizedBox(width: 6),
+        Text(
+          switch (state) {
+            _NavLegendState.answered => 'Answered',
+            _NavLegendState.flagged => 'Flagged',
+            _NavLegendState.skipped => 'Skipped',
+            _NavLegendState.unseen => 'Unseen',
+          },
+          style: const TextStyle(
+              fontSize: 13, color: RenanceColors.textSecondary),
+        ),
+      ],
+    );
+  }
+}
+
+Widget _amberDot() => Container(
+      width: 6,
+      height: 6,
+      decoration: const BoxDecoration(
+        color: RenanceColors.amber,
+        shape: BoxShape.circle,
+      ),
+    );
+
+// ---------------------------------------------------- recovery (results)
+
+/// The Stitch results_recovery_light screen: the score report's low-score
+/// variant (pct below 50). Rose hero with the red progress ring, the
+/// "focus on the gaps" copy, the XP pill, the Topics to Review card and
+/// the Review answers / Retry weak topics actions.
+class _RecoveryView extends StatelessWidget {
+  const _RecoveryView({
+    required this.controller,
+    required this.result,
+    required this.pct,
+    required this.xpEarned,
+  });
+
+  final ExamController controller;
+  final ExamResult result;
+  final int pct;
+  final int xpEarned;
+
+  @override
+  Widget build(BuildContext context) {
+    final List<TopicRow> weak = result.breakdown
+        .where((TopicRow r) => r.total > 0 && r.correct / r.total < 0.8)
+        .toList()
+      ..sort((TopicRow a, TopicRow b) =>
+          (a.correct / a.total).compareTo(b.correct / b.total));
+
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+            children: <Widget>[
+              // rose hero -------------------------------------------------
+              Container(
+                padding: const EdgeInsets.fromLTRB(24, 28, 24, 28),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFDF3F2),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(
+                      width: 128,
+                      height: 128,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: <Widget>[
+                          CustomPaint(
+                            size: const Size(128, 128),
+                            painter: _RecoveryRing(pct: pct),
+                          ),
+                          Text(
+                            '$pct%',
+                            style: RenanceText.statNumber.copyWith(
+                              fontSize: 26,
+                              color: RenanceColors.error,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Text(
+                      'The review list below is where the points are.',
+                      textAlign: TextAlign.center,
+                      style: RenanceText.bodyMedium.copyWith(
+                        fontSize: 19,
+                        height: 27 / 19,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      "Don't sweat it. Focus on the gaps.",
+                      textAlign: TextAlign.center,
+                      style: RenanceText.bodySecondary,
+                    ),
+                    const SizedBox(height: 20),
+                    // XP pill -------------------------------------------------
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 18, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: RenanceColors.surfaceContainer,
+                        borderRadius: BorderRadius.circular(999),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          const Icon(Icons.stars,
+                              size: 18, color: RenanceColors.ink),
+                          const SizedBox(width: 8),
+                          Text('+$xpEarned',
+                              style: RenanceText.bodyMedium.copyWith(
+                                color: RenanceColors.ink,
+                              )),
+                          const SizedBox(width: 8),
+                          const Text('XP Earned',
+                              style: RenanceText.bodySecondary),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 28),
+              // Topics to Review ------------------------------------------
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text('Topics to Review',
+                    style: RenanceText.sectionTitle),
+              ),
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: RenanceColors.card,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: const <BoxShadow>[
+                    BoxShadow(
+                        color: Color(0x33141C2D),
+                        blurRadius: 3,
+                        offset: Offset(0, 1)),
+                  ],
+                ),
+                child: Column(
+                  children: <Widget>[
+                    if (weak.isEmpty)
+                      const Text(
+                        'Nothing critical here, the review list has every '
+                        'question from this paper.',
+                        style: RenanceText.caption,
+                      )
+                    else
+                      ...List<Widget>.generate(weak.length, (int i) {
+                        final TopicRow row = weak[i];
+                        final double frac =
+                            row.total == 0 ? 0 : row.correct / row.total;
+                        final Color bar = frac < 0.5
+                            ? RenanceColors.error
+                            : RenanceColors.amber;
+                        return Padding(
+                          padding: EdgeInsets.only(
+                              bottom: i == weak.length - 1 ? 0 : 20),
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Expanded(
+                                    child: Text(row.topic,
+                                        style: RenanceText.bodyMedium),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Text('${row.correct}/${row.total} pts',
+                                      style: RenanceText.bodyMedium.copyWith(
+                                        fontSize: 14,
+                                        color: bar,
+                                      )),
+                                ],
+                              ),
+                              const SizedBox(height: 8),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(999),
+                                child: LinearProgressIndicator(
+                                  value: frac,
+                                  minHeight: 6,
+                                  backgroundColor:
+                                      RenanceColors.surfaceContainer,
+                                  valueColor:
+                                      AlwaysStoppedAnimation<Color>(bar),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        // actions --------------------------------------------------------
+        Container(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: <Color>[
+                Color(0x00FFFFFF),
+                Color(0xFFFFFFFF),
+              ],
+            ),
+          ),
+          child: SafeArea(
+            minimum: const EdgeInsets.only(bottom: 16),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                SizedBox(
+                  width: double.infinity,
+                  height: 52,
+                  child: FilledButton(
+                    style: FilledButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: controller.attemptId == null
+                        ? null
+                        : () {
+                            Navigator.of(context).push(MaterialPageRoute<void>(
+                              builder: (_) => ReviewDetailScreen(
+                                  attemptId: controller.attemptId!),
+                            ));
+                          },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Text('Review answers',
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.w600)),
+                        SizedBox(width: 8),
+                        Icon(Icons.arrow_forward, size: 18),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                SizedBox(
+                  width: double.infinity,
+                  height: 52,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: () => controller.load(controller.meta!),
+                    child: const Text('Retry weak topics',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w600)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/// Ring of the recovery hero: light-blue track, red arc from the top.
+class _RecoveryRing extends CustomPainter {
+  const _RecoveryRing({required this.pct});
+
+  final int pct;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final Offset c = size.center(Offset.zero);
+    final double r = size.width / 2 - 6;
+    final Paint track = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 10
+      ..strokeCap = StrokeCap.round
+      ..color = RenanceColors.surfaceContainer;
+    canvas.drawCircle(c, r, track);
+
+    final Rect arc = Rect.fromCircle(center: c, radius: r);
+    final Paint value = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 10
+      ..strokeCap = StrokeCap.round
+      ..color = RenanceColors.error;
+    canvas.drawArc(
+      arc,
+      -math.pi / 2,
+      2 * math.pi * (pct / 100),
+      false,
+      value,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_RecoveryRing oldDelegate) => oldDelegate.pct != pct;
 }
 
 // ------------------------------------------------------------------ queued
@@ -863,6 +1440,16 @@ class _ResultState extends State<_Result> {
     final int xpEarned = result.score * 10; // XPPerCorrect = 10 (server rule)
     final int streak = student.gamification?.state.currentStreak ?? 0;
     final int durationMs = widget.controller.durationMsUsed ?? 0;
+
+    // results_recovery_light: the low-score variant of the score report.
+    if (pct < 50) {
+      return _RecoveryView(
+        controller: widget.controller,
+        result: result,
+        pct: pct,
+        xpEarned: xpEarned,
+      );
+    }
 
     return Column(
       children: <Widget>[

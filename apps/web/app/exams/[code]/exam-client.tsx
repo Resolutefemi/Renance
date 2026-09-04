@@ -69,6 +69,9 @@ export default function ExamPage({ code }: { code: string }) {
   const [attempt, setAttempt] = useState<AttemptResponse | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [flags, setFlags] = useState<Record<string, boolean>>({});
+  const [visited, setVisited] = useState<Record<string, boolean>>({});
+  const [navOpen, setNavOpen] = useState(false);
+  const [navFilter, setNavFilter] = useState<'all' | 'flagged' | 'skipped' | 'unseen'>('all');
   const [current, setCurrent] = useState(0);
   const [remaining, setRemaining] = useState<number | null>(null);
   const [result, setResult] = useState<ResultPayload | null>(null);
@@ -234,6 +237,8 @@ export default function ExamPage({ code }: { code: string }) {
       }
       setAnswers({});
       setFlags({});
+      setVisited(bundle ? { [bundle.questions[0].id]: true } : {});
+      setNavFilter('all');
       setCurrent(0);
       setResult(null);
       submittedRef.current = false;
@@ -274,6 +279,10 @@ export default function ExamPage({ code }: { code: string }) {
   /** Question navigation resets the per-question latency clock. */
   const goTo = (i: number) => {
     setCurrent(i);
+    setVisited((v) => {
+      const q = bundle?.questions[i];
+      return q && !v[q.id] ? { ...v, [q.id]: true } : v;
+    });
     shownAtRef.current = Date.now();
   };
 
@@ -403,6 +412,96 @@ export default function ExamPage({ code }: { code: string }) {
       delta = pct - prev;
     }
     const xpEarned = result.score * 10; // XPPerCorrect = 10 (server rule)
+
+    // results_recovery_light: the low-score variant of the score report.
+    if (pct < 50) {
+      const weak = [...result.breakdown]
+        .filter((r) => r.total > 0 && r.correct / r.total < 0.8)
+        .sort((a, b) => a.correct / a.total - b.correct / b.total);
+      const C = 2 * Math.PI * 52;
+      return (
+        <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
+          <section className="renance-rise rounded-xl bg-[#FDF3F2] px-6 py-8 text-center">
+            <div className="relative mx-auto h-32 w-32">
+              <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90" aria-hidden>
+                <circle cx="60" cy="60" r="52" fill="none" stroke="#E7EEFF" strokeWidth="10" />
+                <circle
+                  cx="60" cy="60" r="52" fill="none" stroke="#BA1A1A" strokeWidth="10"
+                  strokeLinecap="round"
+                  strokeDasharray={`${(pct / 100) * C} ${C}`}
+                />
+              </svg>
+              <p className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-error">
+                {pct}%
+              </p>
+            </div>
+            <h1 className="mx-auto mt-5 max-w-sm text-xl font-semibold leading-snug tracking-tight text-on-surface">
+              The review list below is where the points are.
+            </h1>
+            <p className="mt-2 text-[15px] text-on-surface-variant">
+              Don&apos;t sweat it. Focus on the gaps.
+            </p>
+            <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-surface-container px-4 py-2">
+              <span className="material-symbols-outlined fill-current text-[18px] text-accent-ink">stars</span>
+              <span className="text-sm font-semibold text-on-surface">+{xpEarned}</span>
+              <span className="text-sm text-on-surface-variant">XP Earned</span>
+            </div>
+          </section>
+
+          <h2 className="mt-7 text-lg font-semibold tracking-tight text-on-surface">Topics to Review</h2>
+          <div className="mt-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
+            {weak.length === 0 && (
+              <p className="text-[13px] text-on-surface-variant">
+                Nothing critical here, the review list has every question from this paper.
+              </p>
+            )}
+            {weak.map((row) => {
+              const frac = row.total > 0 ? row.correct / row.total : 0;
+              const bar = frac < 0.5 ? 'bg-error' : 'bg-accent-amber';
+              return (
+                <div key={row.topic} className="py-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[15px] font-semibold text-on-surface">{row.topic}</span>
+                    <span className={`text-sm font-semibold ${bar.replace('bg-', 'text-')}`}>
+                      {row.correct}/{row.total} pts
+                    </span>
+                  </div>
+                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-container">
+                    <div className={`h-full rounded-full ${bar}`} style={{ width: `${frac * 100}%` }} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 flex flex-col gap-2">
+            {attempt && (
+              <Link
+                href={`/review?attemptId=${attempt.attemptId}`}
+                className="flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+              >
+                Review answers
+                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </Link>
+            )}
+            <button
+              onClick={() => {
+                setAdaptive(true);
+                setPhase('intro');
+                setAttempt(null);
+              }}
+              className="flex h-[52px] w-full items-center justify-center rounded-[10px] bg-transparent text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD] transition-all active:scale-[0.98]"
+            >
+              Retry weak topics
+            </button>
+            <Link href="/dashboard" className="py-2 text-center text-sm text-on-surface-variant hover:text-on-surface">
+              Back to dashboard
+            </Link>
+          </div>
+        </main>
+      );
+    }
+
     return (
       <main className="mx-auto w-full max-w-2xl px-4 pb-16 sm:px-6">
         {/* dark DIAGNOSTIC COMPLETE hero */}
@@ -558,6 +657,37 @@ export default function ExamPage({ code }: { code: string }) {
 
   if (!bundle || !question) return null;
 
+  /* ------------------------------------------------- navigator bookkeeping */
+
+  const navIsAnswered = (id: string) => Boolean(answers[id]);
+  const navIsFlagged = (id: string) => Boolean(flags[id]);
+  const navIsVisited = (id: string) => Boolean(visited[id]);
+  const navIndices = bundle.questions.map((q, i) => ({ q, i }));
+  const navCounts = {
+    all: navIndices.length,
+    flagged: navIndices.filter((x) => navIsFlagged(x.q.id)).length,
+    skipped: navIndices.filter((x) => navIsVisited(x.q.id) && !navIsAnswered(x.q.id)).length,
+    unseen: navIndices.filter((x) => !navIsVisited(x.q.id)).length,
+  };
+  const navShown = navIndices.filter(({ q }) =>
+    navFilter === 'all'
+      ? true
+      : navFilter === 'flagged'
+        ? navIsFlagged(q.id)
+        : navFilter === 'skipped'
+          ? navIsVisited(q.id) && !navIsAnswered(q.id)
+          : !navIsVisited(q.id),
+  );
+  const navTileClass = (id: string) => {
+    const answered = navIsAnswered(id);
+    const flagged = navIsFlagged(id);
+    if (answered && flagged) return 'border-2 border-accent-amber bg-primary text-on-primary';
+    if (answered) return 'bg-primary text-on-primary';
+    if (flagged) return 'border-2 border-accent-amber bg-card text-on-surface';
+    if (navIsVisited(id)) return 'border border-surface-container bg-surface-container text-on-surface-variant';
+    return 'border border-outline-variant/60 bg-card text-on-surface-variant';
+  };
+
   /* ----------------------------------------------------------- playing */
 
   return (
@@ -570,13 +700,22 @@ export default function ExamPage({ code }: { code: string }) {
       />
       <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6">
       <header className="flex items-center justify-between">
-        <Link
-          href="/dashboard"
-          aria-label="Leave exam"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container"
-        >
-          <span className="material-symbols-outlined text-[22px]">arrow_back</span>
-        </Link>
+        <div className="flex items-center gap-1">
+          <Link
+            href="/dashboard"
+            aria-label="Leave exam"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container"
+          >
+            <span className="material-symbols-outlined text-[22px]">arrow_back</span>
+          </Link>
+          <button
+            onClick={() => setNavOpen(true)}
+            aria-label="Question navigator"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container"
+          >
+            <span className="material-symbols-outlined text-[22px]">grid_view</span>
+          </button>
+        </div>
         <div
           className={`rounded-lg border px-4 py-1.5 font-mono text-sm ${
             breakLeft > 0
@@ -593,32 +732,6 @@ export default function ExamPage({ code }: { code: string }) {
               : mmss(0)}
         </div>
       </header>
-
-      {/* palette */}
-      <div className="mt-6 flex flex-wrap gap-1.5">
-        {bundle.questions.map((q, i) => {
-          const isAnswered = Boolean(answers[q.id]);
-          const isFlagged = flags[q.id];
-          const isCurrent = i === current;
-          return (
-            <button
-              key={q.id}
-              onClick={() => goTo(i)}
-              className={`h-8 w-8 rounded-md border text-xs transition ${
-                isCurrent
-                  ? 'border-primary bg-primary text-on-primary ring-2 ring-primary ring-offset-2 ring-offset-background'
-                  : isFlagged
-                    ? 'border-amber-500 text-amber-600'
-                    : isAnswered
-                      ? 'border-outline bg-secondary-container text-on-surface'
-                      : 'border-outline-variant text-on-surface-variant'
-              }`}
-            >
-              {i + 1}
-            </button>
-          );
-        })}
-      </div>
 
       {/* question card */}
       <div className="mt-6 rounded-2xl border border-outline-variant bg-surface-container-lowest p-7 shadow-sm">
@@ -702,6 +815,97 @@ export default function ExamPage({ code }: { code: string }) {
         {answeredCount}/{bundle.questionCount} answered
       </p>
       </main>
+
+      {/* question_navigator_light sheet */}
+      {navOpen && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center">
+          <button
+            aria-label="Close navigator"
+            onClick={() => setNavOpen(false)}
+            className="absolute inset-0 bg-[#111c2d]/40"
+          />
+          <div className="relative max-h-[88dvh] w-full overflow-y-auto rounded-t-3xl bg-background p-4 pb-6 shadow-2xl sm:p-6">
+            <div className="flex items-center justify-between">
+              <h2 className="text-lg font-semibold tracking-tight text-on-surface">
+                Question Navigator
+              </h2>
+              <button
+                onClick={() => setNavOpen(false)}
+                aria-label="Close"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-surface-container-low text-on-surface"
+              >
+                <span className="material-symbols-outlined text-[20px]">close</span>
+              </button>
+            </div>
+
+            <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
+              {(['all', 'flagged', 'skipped', 'unseen'] as const).map((f) => (
+                <button
+                  key={f}
+                  onClick={() => setNavFilter(f)}
+                  className={`whitespace-nowrap rounded-full px-4 py-2.5 text-sm transition ${
+                    navFilter === f
+                      ? 'bg-selection-blue font-semibold text-on-surface'
+                      : 'bg-surface-container-low font-medium text-on-surface-variant'
+                  }`}
+                >
+                  {f === 'all'
+                    ? `All (${navCounts.all})`
+                    : `${f[0].toUpperCase()}${f.slice(1)} (${navCounts[f]})`}
+                </button>
+              ))}
+            </div>
+
+            <div className="mt-4 grid grid-cols-5 gap-3">
+              {navShown.length === 0 && (
+                <p className="col-span-5 py-8 text-center text-[13px] text-on-surface-variant">
+                  Nothing here yet.
+                </p>
+              )}
+              {navShown.map(({ q, i }) => (
+                <button
+                  key={q.id}
+                  onClick={() => {
+                    goTo(i);
+                    setNavOpen(false);
+                  }}
+                  className={`relative flex h-14 items-center justify-center rounded-xl text-base font-semibold transition ${navTileClass(q.id)}`}
+                >
+                  {i + 1}
+                  {navIsFlagged(q.id) && (
+                    <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-accent-amber" />
+                  )}
+                </button>
+              ))}
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-[13px] text-on-surface-variant">
+              <span className="flex items-center gap-1.5">
+                <span className="h-3 w-3 rounded-[3px] bg-primary" /> Answered
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="relative h-3 w-3 rounded-[3px] border-[1.5px] border-accent-amber bg-card">
+                  <span className="absolute -right-0.5 -top-0.5 h-1 w-1 rounded-full bg-accent-amber" />
+                </span>
+                Flagged
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-3 w-3 rounded-[3px] bg-surface-container" /> Skipped
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-3 w-3 rounded-[3px] border border-outline-variant bg-card" /> Unseen
+              </span>
+            </div>
+
+            <button
+              onClick={() => setNavOpen(false)}
+              className="mt-5 flex h-[52px] w-full items-center justify-center rounded-[10px] bg-primary text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
+            >
+              Resume Exam
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
