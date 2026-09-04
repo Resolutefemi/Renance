@@ -1,6 +1,6 @@
 /// Splash, the Stitch splash_screen_light screen, 1:1.
 ///
-/// Three orbiting rings (#D0E1FB 3s, violet 4s reverse, emerald 5s) chase
+/// Three orbiting rings (#D0E1FB 3s, ink 4s reverse, emerald 5s) chase
 /// each other around the pulsing Renance mark; the wordmark sits below and
 /// the LEARN. PRACTICE. RISE. tagline anchors the bottom. The route fires
 /// as soon as a short brand beat has elapsed: no work is done here, so the
@@ -151,7 +151,7 @@ class _OrbitRingsState extends State<_OrbitRings>
                 painter: _RingPainter(
                   t: _spin.value,
                   radius: 0.76,
-                  color: RenanceColors.violet,
+                  color: RenanceColors.ink,
                   strokeWidth: 1,
                   sweep: 60 / 200,
                   speed: 1,

@@ -1,7 +1,7 @@
 /// Voice flashcards (ROADMAP #7), the Stitch voice_flashcards_light.
 ///
 /// Deck grid → the player: white card stage with the front in display-lg,
-/// the answer in emerald on reveal, the violet play pill with the
+/// the answer in emerald on reveal, the ink play pill with the
 /// waveform bars, and Reveal → Again / Hard / Good. TTS reads the front
 /// when a card appears and the back when revealed; voice is optional and
 /// everything works offline from the pack store.
@@ -129,7 +129,7 @@ class _DeckTile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: const Icon(Icons.headphones,
-                  size: 22, color: RenanceColors.violet),
+                  size: 22, color: RenanceColors.ink),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -201,7 +201,7 @@ class _CardPlayer extends StatelessWidget {
                 controller.voiceOn ? Icons.volume_up : Icons.volume_off,
                 size: 22,
                 color: controller.voiceOn
-                    ? RenanceColors.violet
+                    ? RenanceColors.ink
                     : RenanceColors.textSecondary,
               ),
             ),
@@ -247,7 +247,7 @@ class _CardStage extends StatelessWidget {
                     minHeight: 4,
                     backgroundColor: RenanceColors.surfaceContainer,
                     valueColor: const AlwaysStoppedAnimation<Color>(
-                        RenanceColors.violet),
+                        RenanceColors.ink),
                   ),
                 ),
               ),
@@ -370,7 +370,7 @@ class _CardStage extends StatelessWidget {
   }
 }
 
-/// The violet play pill with the animated waveform bars (design's
+/// The ink play pill with the animated waveform bars (design's
 /// #audio-playback): tap re-reads the visible side aloud.
 class _VoicePill extends StatelessWidget {
   const _VoicePill({required this.label, required this.onPlay});
@@ -396,7 +396,7 @@ class _VoicePill extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: const BoxDecoration(
-                color: RenanceColors.violet,
+                color: RenanceColors.ink,
                 shape: BoxShape.circle,
               ),
               child: const Icon(Icons.play_arrow,

@@ -366,12 +366,12 @@ class _MockExamCard extends StatelessWidget {
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
-                  color: RenanceColors.violet.withValues(alpha: 0.16),
+                  color: Colors.white.withValues(alpha: 0.14),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 alignment: Alignment.center,
                 child: const Icon(Icons.timer,
-                    size: 22, color: RenanceColors.violet),
+                    size: 22, color: Colors.white),
               ),
               const SizedBox(width: 14),
               Expanded(

@@ -220,7 +220,7 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
       child: Row(
         children: <Widget>[
           Icon(Icons.auto_awesome,
-              size: 18, color: on ? RenanceColors.violet : RenanceColors.outlineDark),
+              size: 18, color: on ? RenanceColors.ink : RenanceColors.outlineDark),
           const SizedBox(width: 8),
           Expanded(
             child: Column(
@@ -309,7 +309,7 @@ class _ExamHeader extends StatelessWidget {
                   builder: (BuildContext pillContext) {
                     final bool breaking = controller.breakSecondsLeft > 0;
                     final Color pillColor = breaking
-                        ? RenanceColors.violet
+                        ? RenanceColors.ink
                         : RenanceColors.emerald;
                     return Row(
                       children: <Widget>[
@@ -1253,7 +1253,7 @@ class _ScoreHeroState extends State<_ScoreHero>
   }
 }
 
-/// Six tiny particles drifting upward, violet, emerald, amber.
+/// Six tiny particles drifting upward, ink, emerald, amber.
 class _ConfettiPainter extends CustomPainter {
   _ConfettiPainter({required this.t});
 
@@ -1271,7 +1271,7 @@ class _ConfettiPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final List<Color> colors = <Color>[
-      RenanceColors.violet,
+      RenanceColors.ink,
       RenanceColors.emerald,
       RenanceColors.amber,
     ];

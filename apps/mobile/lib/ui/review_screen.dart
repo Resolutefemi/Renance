@@ -805,14 +805,14 @@ class _ReviewCard extends StatelessWidget {
                   const Icon(
                     Icons.smart_toy,
                     size: 16,
-                    color: RenanceColors.violet,
+                    color: RenanceColors.ink,
                   ),
                   const SizedBox(width: 6),
                   Text(
                     'Ask AI Tutor why ${question.correct} is right',
                     style: RenanceText.labelMono.copyWith(
                       fontSize: 12,
-                      color: RenanceColors.violet,
+                      color: RenanceColors.ink,
                     ),
                   ),
                 ],

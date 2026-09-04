@@ -161,7 +161,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                 color: RenanceColors.surfaceContainer,
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
-                                    color: Color(0x1A23005C),
+                                    color: Color(0x14111C2D),
                                     blurRadius: 24,
                                     offset: Offset(0, 4),
                                   ),
@@ -380,9 +380,9 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                               Text('View all',
                                   style: RenanceText.bodyMedium.copyWith(
                                       fontSize: 14,
-                                      color: RenanceColors.violetDeep)),
+                                      color: RenanceColors.ink)),
                               const Icon(Icons.chevron_right,
-                                  size: 18, color: RenanceColors.violetDeep),
+                                  size: 18, color: RenanceColors.ink),
                             ],
                           ),
                         ],

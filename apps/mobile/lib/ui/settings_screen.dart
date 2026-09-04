@@ -76,9 +76,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               leading: CircleAvatar(
                 radius: 16,
-                backgroundColor: const Color(0xFFE9DDFF),
+                backgroundColor: const Color(0xFFE7EEFF),
                 child: Icon(Icons.flag,
-                    size: 18, color: RenanceColors.violetDeep),
+                    size: 18, color: RenanceColors.ink),
               ),
               title: const Text('Daily Goal', style: RenanceText.bodyBase),
               trailing: Row(

@@ -3,7 +3,7 @@
 /**
  * Flashcards (ROADMAP #7): the Stitch voice_flashcards_light on the web.
  * Deck list → the player: white card stage, front in display type, answer
- * in emerald on reveal, the violet play pill with waveform bars, and
+ * in emerald on reveal, the ink play pill with waveform bars, and
  * Reveal → Again / Hard / Good. The browser's speech synthesis reads the
  * visible side; progress rides the same Leitner state as the app.
  */
@@ -164,7 +164,7 @@ export default function FlashcardsPage() {
           <h1 className="text-xl font-semibold tracking-tight text-on-surface">Flashcards</h1>
           {speechSupported() && (
             <span className="flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1 text-xs text-on-surface-variant">
-              <span className="material-symbols-outlined text-[16px] text-accent-violet">headphones</span>
+              <span className="material-symbols-outlined text-[16px] text-accent-ink">headphones</span>
               voice ready
             </span>
           )}
@@ -194,7 +194,7 @@ export default function FlashcardsPage() {
                 className="flex w-full items-center gap-4 rounded-xl bg-card p-4 text-left shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
               >
                 <span className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-surface-container-low">
-                  <span className="material-symbols-outlined text-[22px] text-accent-violet">headphones</span>
+                  <span className="material-symbols-outlined text-[22px] text-accent-ink">headphones</span>
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-[15px] font-semibold text-on-surface">{d.title}</span>
@@ -241,7 +241,7 @@ export default function FlashcardsPage() {
             className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-surface-container"
           >
             <span
-              className={`material-symbols-outlined text-[22px] ${voiceOn ? 'text-accent-violet' : 'text-outline-dark'}`}
+              className={`material-symbols-outlined text-[22px] ${voiceOn ? 'text-accent-ink' : 'text-outline-dark'}`}
             >
               {voiceOn ? 'volume_up' : 'volume_off'}
             </span>
@@ -255,7 +255,7 @@ export default function FlashcardsPage() {
 
       <div className="h-1 overflow-hidden rounded-full bg-surface-container">
         <div
-          className="h-full rounded-full bg-accent-violet transition-all"
+          className="h-full rounded-full bg-accent-ink transition-all"
           style={{ width: `${(index / Math.max(deck.cardCount, 1)) * 100}%` }}
         />
       </div>
@@ -322,7 +322,7 @@ export default function FlashcardsPage() {
               role="button"
               aria-label="Read aloud"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-violet text-white shadow-[0_1px_3px_0_rgba(20,28,45,0.12)]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-ink text-white shadow-[0_1px_3px_0_rgba(20,28,45,0.12)]">
                 <span className="material-symbols-outlined fill-current text-[22px]">play_arrow</span>
               </span>
               <span className="flex h-6 items-end gap-[3px]">

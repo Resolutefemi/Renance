@@ -1,6 +1,6 @@
 /// Profile tab, the Stitch profile_light screen, 1:1.
 ///
-/// Header card: 80px avatar with the violet Lvl badge, display-md name,
+/// Header card: 80px avatar with the ink Lvl badge, display-md name,
 /// @username + target chip, and the XP / Streak / Accuracy stat strip.
 /// Then the content and system menu groups and the red sign-out card.
 library;
@@ -74,7 +74,7 @@ class ProfileScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 8, vertical: 2),
                           decoration: BoxDecoration(
-                            color: RenanceColors.violet,
+                            color: RenanceColors.ink,
                             borderRadius: BorderRadius.circular(999),
                             border: Border.all(color: Colors.white, width: 2),
                           ),
@@ -144,7 +144,7 @@ class ProfileScreen extends StatelessWidget {
                           value: xp >= 1000
                               ? '${(xp / 1000).toStringAsFixed(1)}k'
                               : '$xp',
-                          color: RenanceColors.violet),
+                          color: RenanceColors.ink),
                     ),
                     const _Divider(),
                     Expanded(
@@ -185,13 +185,13 @@ class ProfileScreen extends StatelessWidget {
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
             icon: Icons.auto_stories,
-            tint: RenanceColors.violet,
+            tint: RenanceColors.ink,
             label: 'My Packs',
             onTap: () => onGoTab(1),
           ),
           _MenuItem(
             icon: Icons.download,
-            tint: RenanceColors.violet,
+            tint: RenanceColors.ink,
             label: 'Downloads',
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
@@ -200,7 +200,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           _MenuItem(
             icon: Icons.workspace_premium,
-            tint: RenanceColors.violet,
+            tint: RenanceColors.ink,
             label: 'Certificates',
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
@@ -362,7 +362,7 @@ class _FocusCard extends StatelessWidget {
   }
 }
 
-/// One stat of the strip (XP violet / flame streak / accuracy emerald).
+/// One stat of the strip (XP ink / flame streak / accuracy emerald).
 class _Stat extends StatelessWidget {
   const _Stat({
     required this.label,

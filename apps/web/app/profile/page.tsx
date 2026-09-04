@@ -167,7 +167,7 @@ export default function ProfilePage() {
                 <div className="flex h-20 w-20 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-2xl font-semibold text-on-surface">
                   {name.slice(0, 1).toUpperCase()}
                 </div>
-                <div className="absolute -bottom-1 -right-1 flex items-center justify-center rounded-full border-2 border-card bg-accent-violet px-2 py-0.5 font-mono text-[11px] text-white shadow-sm">
+                <div className="absolute -bottom-1 -right-1 flex items-center justify-center rounded-full border-2 border-card bg-accent-ink px-2 py-0.5 font-mono text-[11px] text-white shadow-sm">
                   Lvl {level}
                 </div>
               </div>
@@ -186,7 +186,7 @@ export default function ProfilePage() {
             <div className="mt-1 flex items-center justify-between rounded-lg bg-surface-container p-2">
               <div className="flex flex-1 flex-col items-center">
                 <span className="text-[13px] text-text-secondary">XP</span>
-                <span className="text-2xl font-bold tracking-tight text-accent-violet">
+                <span className="text-2xl font-bold tracking-tight text-accent-ink">
                   {xpLabel(state?.totalXp ?? 0)}
                 </span>
               </div>
@@ -324,11 +324,11 @@ export default function ProfilePage() {
 
           {/* Menu group: content ------------------------------------------- */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-            <MenuLink icon="auto_stories" tint="text-accent-violet" label="My Packs" href="/dashboard#packs" />
+            <MenuLink icon="auto_stories" tint="text-accent-ink" label="My Packs" href="/dashboard#packs" />
             <MenuDivider />
-            <MenuLink icon="download" tint="text-accent-violet" label="Downloads" href="/dashboard#packs" />
+            <MenuLink icon="download" tint="text-accent-ink" label="Downloads" href="/dashboard#packs" />
             <MenuDivider />
-            <MenuLink icon="workspace_premium" tint="text-accent-violet" label="Certificates" href="/certificates" />
+            <MenuLink icon="workspace_premium" tint="text-accent-ink" label="Certificates" href="/certificates" />
           </section>
 
           {/* Menu group: system -------------------------------------------- */}

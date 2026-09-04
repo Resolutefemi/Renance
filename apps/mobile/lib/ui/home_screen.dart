@@ -987,7 +987,7 @@ class _HeroCard extends StatelessWidget {
                 height: 96,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: RenanceColors.violet.withValues(alpha: 0.05),
+                  color: RenanceColors.ink.withValues(alpha: 0.05),
                 ),
               ),
             ),
@@ -1025,7 +1025,7 @@ class _HeroCard extends StatelessWidget {
                               ? 'This month'
                               : '$days Days',
                           style: RenanceText.bodyMedium.copyWith(
-                            color: RenanceColors.violet,
+                            color: RenanceColors.ink,
                           ),
                         ),
                       ],
@@ -1114,7 +1114,7 @@ class LauncherTile extends StatelessWidget {
   final String label;
   final VoidCallback onTap;
   final Color? iconColor;
-  final bool highlight; // violet AI tile
+  final bool highlight; // ink AI tile
   final bool muted; // More tile: tinted bg + hairline border
   final String? badge;
   final Color badgeColor;
@@ -1123,11 +1123,11 @@ class LauncherTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final BoxDecoration box = highlight
         ? BoxDecoration(
-            color: RenanceColors.violet,
+            color: RenanceColors.ink,
             borderRadius: BorderRadius.circular(18),
             boxShadow: const <BoxShadow>[
               BoxShadow(
-                color: Color(0x408B5CF6),
+                color: Color(0x3D111C2D),
                 blurRadius: 8,
                 offset: Offset(0, 2),
               ),
@@ -1223,7 +1223,7 @@ class LauncherTile extends StatelessWidget {
             style: RenanceText.caption.copyWith(
               fontSize: 11,
               color: highlight
-                  ? RenanceColors.violet
+                  ? RenanceColors.ink
                   : RenanceColors.textSecondary,
               fontWeight: highlight ? FontWeight.w600 : FontWeight.w400,
             ),
@@ -1568,7 +1568,7 @@ Future<void> showMoreSheet(
                       icon: Icons.cases,
                       label: 'Career Bridge',
                       soon: true,
-                      soonColor: RenanceColors.violetDeep,
+                      soonColor: RenanceColors.ink,
                       onTap: () {},
                     ),
                     _MoreTile(
@@ -1589,7 +1589,7 @@ Future<void> showMoreSheet(
                       icon: Icons.smart_toy,
                       label: 'AI Generator',
                       soon: true,
-                      soonColor: RenanceColors.violet,
+                      soonColor: RenanceColors.ink,
                       onTap: () {},
                     ),
                     _MoreTile(
@@ -1649,7 +1649,7 @@ class _FatigueBanner extends StatelessWidget {
           const Icon(
             Icons.self_improvement,
             size: 22,
-            color: RenanceColors.violet,
+            color: RenanceColors.ink,
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -1684,7 +1684,7 @@ class _MoreTile extends StatelessWidget {
     required this.label,
     required this.onTap,
     this.soon = false,
-    this.soonColor = RenanceColors.violetDeep,
+    this.soonColor = RenanceColors.ink,
   });
 
   final IconData icon;

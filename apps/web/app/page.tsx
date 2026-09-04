@@ -100,7 +100,7 @@ export default function Landing() {
                 key={f.title}
                 className="rounded-xl bg-card p-6 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]"
               >
-                <span className="material-symbols-outlined text-3xl text-[#7C3AED]">{f.icon}</span>
+                <span className="material-symbols-outlined text-3xl text-[#111c2d]">{f.icon}</span>
                 <h3 className="mt-3 text-[15px] font-bold text-on-surface">{f.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-on-surface-variant">{f.body}</p>
               </article>
