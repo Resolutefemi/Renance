@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 
+import { SITE_URL } from '@/lib/site-url';
+
 // required for output: 'export'
 export const dynamic = 'force-static';
 
@@ -9,8 +11,7 @@ export const dynamic = 'force-static';
  * Rules reference: docs/seo-checklist.md
  */
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://resolutefemi.github.io/Renance';
+  const siteUrl = SITE_URL;
   return {
     rules: [
       {

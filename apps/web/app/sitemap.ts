@@ -11,7 +11,7 @@ export const dynamic = 'force-static';
  */
 import { loadLessons } from '@/lib/site-data';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://resolutefemi.github.io/Renance';
+import { SITE_URL } from '@/lib/site-url';
 
 const PUBLIC_ROUTES: Array<{ path: string; priority: number; freq: 'daily' | 'weekly' | 'monthly' }> = [
   { path: '/', priority: 1.0, freq: 'weekly' },

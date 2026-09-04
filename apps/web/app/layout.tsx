@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import './globals.css';
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://resolutefemi.github.io/Renance';
+import { SITE_URL } from '@/lib/site-url';
 
 const FOUNDER = {
   '@type': 'Person',
