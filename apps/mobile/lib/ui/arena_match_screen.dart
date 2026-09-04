@@ -121,7 +121,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -136,7 +136,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
                         icon: const Icon(Icons.chevron_left, size: 24),
-                        color: RenanceColors.ink,
+                        color: context.ink,
                       ),
                       const SizedBox(width: 4),
                       Container(
@@ -154,19 +154,19 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                       const SizedBox(width: 8),
                       Text('You',
                           style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
-                      const Spacer(),
+                      Spacer(),
                       Text('$_you  —  $_rival',
                           style: RenanceText.displayMd.copyWith(fontSize: 22)),
-                      const Spacer(),
+                      Spacer(),
                       Text('Tunde',
                           style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
-                      const SizedBox(width: 8),
+                      SizedBox(width: 8),
                       Container(
                         width: 34,
                         height: 34,
                         alignment: Alignment.center,
-                        decoration: const BoxDecoration(
-                            color: RenanceColors.secondary,
+                        decoration: BoxDecoration(
+                            color: context.secondary,
                             shape: BoxShape.circle),
                         child: const Text('T',
                             style: TextStyle(
@@ -200,7 +200,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
                 // round rail ----------------------------------------------
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -213,9 +213,9 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                             value: (_index + 1) / _kMatchQuestions.length,
                             minHeight: 6,
                             backgroundColor:
-                                RenanceColors.surfaceContainerHigh,
-                            valueColor: const AlwaysStoppedAnimation<Color>(
-                                RenanceColors.ink),
+                                context.cardHigh,
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                                context.ink),
                           ),
                         ),
                       ),
@@ -232,7 +232,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                       Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: RenanceColors.card,
+                          color: context.card,
                           borderRadius: BorderRadius.circular(16),
                           boxShadow: const <BoxShadow>[
                             BoxShadow(
@@ -250,7 +250,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 14, vertical: 8),
                                   decoration: BoxDecoration(
-                                    color: RenanceColors.selectionBlue,
+                                    color: context.selectionBlue,
                                     borderRadius: BorderRadius.circular(999),
                                   ),
                                   child: Text(_q.topic,
@@ -262,7 +262,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                     style: RenanceText.labelMono.copyWith(
                                         fontSize: 11,
                                         color:
-                                            RenanceColors.textSecondary)),
+                                            context.textSecondary)),
                               ],
                             ),
                             const SizedBox(height: 14),
@@ -287,13 +287,13 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                               padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                 color: mine
-                                    ? RenanceColors.selectionBlue
-                                    : RenanceColors.card,
+                                    ? context.selectionBlue
+                                    : context.card,
                                 borderRadius: BorderRadius.circular(14),
                                 border: Border.all(
                                   color: mine
-                                      ? RenanceColors.ink
-                                      : RenanceColors.outlineLight,
+                                      ? context.ink
+                                      : context.outlineLight,
                                   width: mine ? 2 : 1,
                                 ),
                               ),
@@ -306,7 +306,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                     decoration: BoxDecoration(
                                       color: mine
                                           ? Colors.black
-                                          : RenanceColors.surfaceContainerLow,
+                                          : context.cardLow,
                                       shape: BoxShape.circle,
                                     ),
                                     child: Text(
@@ -316,7 +316,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                           fontWeight: FontWeight.w700,
                                           color: mine
                                               ? Colors.white
-                                              : RenanceColors.ink),
+                                              : context.ink),
                                     ),
                                   ),
                                   const SizedBox(width: 12),
@@ -348,8 +348,8 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                       width: 28,
                                       height: 28,
                                       alignment: Alignment.center,
-                                      decoration: const BoxDecoration(
-                                          color: RenanceColors.secondary,
+                                      decoration: BoxDecoration(
+                                          color: context.secondary,
                                           shape: BoxShape.circle),
                                       child: const Text('T',
                                           style: TextStyle(
@@ -369,14 +369,14 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                             ? 'Tap your answer to lock it'
                             : _rivalNote,
                         textAlign: TextAlign.center,
-                        style: RenanceText.bodySecondary,
+                        style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                       ),
                     ],
                   ),
                 ),
                 // Answer locks in ----------------------------------------
                 Container(
-                  color: RenanceColors.card,
+                  color: context.card,
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -401,7 +401,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                         child: LinearProgressIndicator(
                           value: _lockLeft / 12,
                           minHeight: 6,
-                          backgroundColor: RenanceColors.surfaceContainerHigh,
+                          backgroundColor: context.cardHigh,
                           valueColor: const AlwaysStoppedAnimation<Color>(
                               RenanceColors.amber),
                         ),

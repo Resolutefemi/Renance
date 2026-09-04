@@ -19,7 +19,7 @@ class ArenaLobbyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -33,7 +33,7 @@ class ArenaLobbyScreen extends StatelessWidget {
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
                       icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                      color: RenanceColors.ink,
+                      color: context.ink,
                     ),
                     const SizedBox(width: 4),
                     const Text('Arena', style: RenanceText.sectionTitle),
@@ -75,7 +75,7 @@ class ArenaLobbyScreen extends StatelessWidget {
                         child: FilledButton(
                           style: FilledButton.styleFrom(
                             backgroundColor: Colors.white,
-                            foregroundColor: RenanceColors.ink,
+                            foregroundColor: context.ink,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12)),
                           ),
@@ -100,15 +100,15 @@ class ArenaLobbyScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: 28),
                 // Game Modes ----------------------------------------------
-                const Align(
+                Align(
                   alignment: Alignment.centerLeft,
                   child: Text('Game Modes', style: RenanceText.sectionTitle),
                 ),
-                const SizedBox(height: 14),
+                SizedBox(height: 14),
                 Row(
-                  children: const <Widget>[
+                  children: <Widget>[
                     Expanded(
                       child: _ModeCard(
                         icon: Icons.timer_outlined,
@@ -124,7 +124,7 @@ class ArenaLobbyScreen extends StatelessWidget {
                       child: _ModeCard(
                         icon: Icons.bolt,
                         iconBg: Color(0xFFE7EEFF),
-                        iconColor: RenanceColors.ink,
+                        iconColor: context.ink,
                         deco: Color(0xFFE7EEFF),
                         title: 'Blitz',
                         subtitle: '60 secs',
@@ -140,7 +140,7 @@ class ArenaLobbyScreen extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: RenanceColors.card,
+                      color: context.card,
                       borderRadius: BorderRadius.circular(16),
                       boxShadow: const <BoxShadow>[
                         BoxShadow(
@@ -162,7 +162,7 @@ class ArenaLobbyScreen extends StatelessWidget {
                               size: 26, color: RenanceColors.emerald),
                         ),
                         const SizedBox(width: 14),
-                        const Expanded(
+                        Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -170,46 +170,46 @@ class ArenaLobbyScreen extends StatelessWidget {
                                   style: RenanceText.bodyMedium),
                               SizedBox(height: 2),
                               Text('Ends in 4h 12m',
-                                  style: RenanceText.bodySecondary),
+                                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
                             ],
                           ),
                         ),
-                        const Icon(Icons.chevron_right,
-                            size: 24, color: RenanceColors.textSecondary),
+                        Icon(Icons.chevron_right,
+                            size: 24, color: context.textSecondary),
                       ],
                     ),
                   ),
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: 28),
                 // Global Rank ---------------------------------------------
                 Row(
                   children: <Widget>[
-                    const Expanded(
+                    Expanded(
                       child: Text('Global Rank', style: RenanceText.sectionTitle),
                     ),
                     InkWell(
                       onTap: () {},
                       borderRadius: BorderRadius.circular(8),
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.all(4),
                         child: Text('View All',
                             style: TextStyle(
                               fontFamily: 'Inter',
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
-                              color: RenanceColors.ink,
+                              color: context.ink,
                             )),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 14),
+                SizedBox(height: 14),
                 Container(
                   clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
-                    color: RenanceColors.card,
+                    color: context.card,
                     borderRadius: BorderRadius.circular(16),
-                    boxShadow: const <BoxShadow>[
+                    boxShadow: <BoxShadow>[
                       BoxShadow(
                           color: Color(0x14141C2D),
                           blurRadius: 6,
@@ -217,11 +217,11 @@ class ArenaLobbyScreen extends StatelessWidget {
                     ],
                   ),
                   child: Column(
-                    children: const <Widget>[
+                    children: <Widget>[
                       _RankRow(rank: '1', name: 'Alex Chen', points: '2,450'),
-                      Divider(height: 1, color: RenanceColors.outlineLight),
+                      Divider(height: 1, color: context.outlineLight),
                       _RankRow(rank: '2', name: 'Sam Rivera', points: '2,390'),
-                      Divider(height: 1, color: RenanceColors.outlineLight),
+                      Divider(height: 1, color: context.outlineLight),
                       _RankRow(
                           rank: '214',
                           name: 'You',
@@ -263,7 +263,7 @@ class _ModeCard extends StatelessWidget {
       height: 170,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(16),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -297,7 +297,7 @@ class _ModeCard extends StatelessWidget {
                 Text(title,
                     style: RenanceText.bodyMedium.copyWith(fontSize: 18)),
                 const SizedBox(height: 2),
-                Text(subtitle, style: RenanceText.bodySecondary),
+                Text(subtitle, style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
               ],
             ),
           ),
@@ -331,7 +331,7 @@ class _RankRow extends StatelessWidget {
             Container(
               width: 4,
               height: 64,
-              color: RenanceColors.ink,
+              color: context.ink,
             ),
           SizedBox(
             width: you ? 44 : 48,
@@ -349,8 +349,8 @@ class _RankRow extends StatelessWidget {
             padding: const EdgeInsets.all(6),
             child: you
                 ? Image.asset('assets/brand/renance_mark.png')
-                : const Icon(Icons.person_outline,
-                    size: 22, color: RenanceColors.textSecondary),
+                : Icon(Icons.person_outline,
+                    size: 22, color: context.textSecondary),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -365,7 +365,7 @@ class _RankRow extends StatelessWidget {
                 fontFamily: 'Inter',
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
-                color: you ? RenanceColors.ink : RenanceColors.emerald,
+                color: you ? context.ink : RenanceColors.emerald,
               ),
             ),
           ),

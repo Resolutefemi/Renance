@@ -45,10 +45,10 @@ class _TutorEntryScreenState extends State<TutorEntryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
         title: const Text('Ask the Tutor'),
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
         elevation: 0,
         scrolledUnderElevation: 0,
       ),
@@ -61,7 +61,7 @@ class _TutorEntryScreenState extends State<TutorEntryScreen> {
                 child: Text(
                   _error,
                   textAlign: TextAlign.center,
-                  style: RenanceText.bodySecondary.copyWith(fontSize: 13),
+                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13),
                 ),
               ),
             )
@@ -72,16 +72,16 @@ class _TutorEntryScreenState extends State<TutorEntryScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const Icon(
+                    Icon(
                       Icons.smart_toy,
                       size: 40,
-                      color: RenanceColors.ink,
+                      color: context.ink,
                     ),
                     const SizedBox(height: 14),
                     Text(
                       'The tutor coaches on papers you have already taken.\nFinish your first mock and come back.',
                       textAlign: TextAlign.center,
-                      style: RenanceText.bodySecondary.copyWith(
+                      style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, 
                         fontSize: 13.5,
                         height: 1.5,
                       ),
@@ -97,7 +97,7 @@ class _TutorEntryScreenState extends State<TutorEntryScreen> {
                   padding: const EdgeInsets.only(bottom: 12, left: 4),
                   child: Text(
                     'Which paper should we work through?',
-                    style: RenanceText.bodySecondary.copyWith(fontSize: 13),
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13),
                   ),
                 ),
                 ..._papers.map(
@@ -121,7 +121,7 @@ class _PaperRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final int? pct = paper.pct;
     return Material(
-      color: RenanceColors.card,
+      color: context.card,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
@@ -134,14 +134,14 @@ class _PaperRow extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: RenanceColors.outlineVariant, width: 0.6),
+            border: Border.all(color: context.outlineVariant, width: 0.6),
           ),
           child: Row(
             children: <Widget>[
-              const Icon(
+              Icon(
                 Icons.smart_toy,
                 size: 20,
-                color: RenanceColors.ink,
+                color: context.ink,
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -157,10 +157,10 @@ class _PaperRow extends StatelessWidget {
                 style: RenanceText.labelMono.copyWith(fontSize: 12),
               ),
               const SizedBox(width: 4),
-              const Icon(
+              Icon(
                 Icons.chevron_right,
                 size: 18,
-                color: RenanceColors.textSecondary,
+                color: context.textSecondary,
               ),
             ],
           ),
@@ -210,14 +210,14 @@ class _TutorQuestionsScreenState extends State<TutorQuestionsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
         title: Text(
           widget.paper.code,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
         elevation: 0,
         scrolledUnderElevation: 0,
       ),
@@ -230,7 +230,7 @@ class _TutorQuestionsScreenState extends State<TutorQuestionsScreen> {
                 child: Text(
                   _error,
                   textAlign: TextAlign.center,
-                  style: RenanceText.bodySecondary.copyWith(fontSize: 13),
+                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13),
                 ),
               ),
             )
@@ -241,7 +241,7 @@ class _TutorQuestionsScreenState extends State<TutorQuestionsScreen> {
                   padding: const EdgeInsets.only(bottom: 12, left: 4),
                   child: Text(
                     'Which question is bothering you?',
-                    style: RenanceText.bodySecondary.copyWith(fontSize: 13),
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13),
                   ),
                 ),
                 ..._review!.questions.asMap().entries.map(
@@ -284,7 +284,7 @@ class _QuestionRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool wrong = question.selected.isNotEmpty && !question.correctly;
     return Material(
-      color: RenanceColors.card,
+      color: context.card,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
@@ -293,7 +293,7 @@ class _QuestionRow extends StatelessWidget {
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: RenanceColors.outlineVariant, width: 0.6),
+            border: Border.all(color: context.outlineVariant, width: 0.6),
           ),
           child: Row(
             children: <Widget>[
@@ -303,9 +303,9 @@ class _QuestionRow extends StatelessWidget {
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: question.selected.isEmpty
-                      ? RenanceColors.surfaceContainerLow
+                      ? context.cardLow
                       : wrong
-                      ? RenanceColors.errorContainer
+                      ? context.errorContainer
                       : const Color(0xFFE8F5E9),
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -313,7 +313,7 @@ class _QuestionRow extends StatelessWidget {
                   '$index',
                   style: RenanceText.labelMono.copyWith(
                     fontSize: 13,
-                    color: wrong ? RenanceColors.error : RenanceColors.ink,
+                    color: wrong ? context.error : context.ink,
                   ),
                 ),
               ),
@@ -329,10 +329,10 @@ class _QuestionRow extends StatelessWidget {
                   ),
                 ),
               ),
-              const Icon(
+              Icon(
                 Icons.chevron_right,
                 size: 18,
-                color: RenanceColors.textSecondary,
+                color: context.textSecondary,
               ),
             ],
           ),
@@ -440,7 +440,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
     final List<TutorTurn> turns = _history[_qid] ?? <TutorTurn>[];
     final String mode = _modes[_qid] ?? 'hint';
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -448,11 +448,11 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
             const Text('Ask the Tutor'),
             Text(
               widget.paperCode,
-              style: RenanceText.caption.copyWith(fontSize: 11),
+              style: RenanceText.caption.copyWith(color: context.textSecondary, fontSize: 11),
             ),
           ],
         ),
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
         elevation: 0,
         scrolledUnderElevation: 0,
       ),
@@ -473,12 +473,12 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                       selected: widget.questions[i].questionId == _qid,
                       onSelected: (_) =>
                           setState(() => _qid = widget.questions[i].questionId),
-                      selectedColor: RenanceColors.ink,
+                      selectedColor: context.ink,
                       labelStyle: TextStyle(
                         fontSize: 12,
                         color: widget.questions[i].questionId == _qid
                             ? Colors.white
-                            : RenanceColors.textSecondary,
+                            : context.textSecondary,
                       ),
                       showCheckmark: false,
                       visualDensity: VisualDensity.compact,
@@ -493,7 +493,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
             padding: const EdgeInsets.all(12),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: RenanceColors.surfaceContainerLow,
+              color: context.cardLow,
               borderRadius: BorderRadius.circular(10),
             ),
             child: Column(
@@ -560,18 +560,18 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                       const SizedBox(width: 8),
                       Text(
                         'The tutor is thinking…',
-                        style: RenanceText.caption.copyWith(fontSize: 12),
+                        style: RenanceText.caption.copyWith(color: context.textSecondary, fontSize: 12),
                       ),
                     ],
                   ),
                 if (_error != null)
                   Padding(
-                    padding: const EdgeInsets.only(top: 8),
+                    padding: EdgeInsets.only(top: 8),
                     child: Text(
                       _error!,
-                      style: RenanceText.caption.copyWith(
+                      style: RenanceText.caption.copyWith( 
                         fontSize: 12,
-                        color: RenanceColors.error,
+                         color: context.error,
                       ),
                     ),
                   ),
@@ -584,18 +584,18 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
             child: Column(
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     children: <Widget>[
                       Container(
-                        padding: const EdgeInsets.symmetric(
+                        padding: EdgeInsets.symmetric(
                           horizontal: 8,
                           vertical: 3,
                         ),
                         decoration: BoxDecoration(
                           color: mode == 'ai'
-                              ? RenanceColors.ink
-                              : RenanceColors.surfaceContainerLow,
+                              ? context.ink
+                              : context.cardLow,
                           borderRadius: BorderRadius.circular(999),
                         ),
                         child: Text(
@@ -605,14 +605,14 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                             fontWeight: FontWeight.w600,
                             color: mode == 'ai'
                                 ? Colors.white
-                                : RenanceColors.textSecondary,
+                                : context.textSecondary,
                           ),
                         ),
                       ),
                       const Spacer(),
                       Text(
                         'Socratic mode, guided first',
-                        style: RenanceText.caption.copyWith(fontSize: 11),
+                        style: RenanceText.caption.copyWith(color: context.textSecondary, fontSize: 11),
                       ),
                     ],
                   ),
@@ -624,10 +624,10 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: RenanceColors.card,
+                    color: context.card,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: RenanceColors.outlineVariant,
+                      color: context.outlineVariant,
                       width: 0.6,
                     ),
                   ),
@@ -649,10 +649,10 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                       ),
                       IconButton(
                         onPressed: _busy ? null : () => _send(_input.text),
-                        icon: const Icon(
+                        icon: Icon(
                           Icons.send,
                           size: 20,
-                          color: RenanceColors.ink,
+                          color: context.ink,
                         ),
                       ),
                     ],
@@ -683,7 +683,7 @@ class _Bubble extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         constraints: const BoxConstraints(maxWidth: 340),
         decoration: BoxDecoration(
-          color: user ? RenanceColors.ink : const Color(0x14111C2D),
+          color: user ? context.ink : const Color(0x14111C2D),
           borderRadius: BorderRadius.circular(14),
         ),
         child: Text(
@@ -691,7 +691,7 @@ class _Bubble extends StatelessWidget {
           style: RenanceText.bodyBase.copyWith(
             fontSize: 13.5,
             height: 1.45,
-            color: user ? Colors.white : RenanceColors.ink,
+            color: user ? Colors.white : context.ink,
           ),
         ),
       ),

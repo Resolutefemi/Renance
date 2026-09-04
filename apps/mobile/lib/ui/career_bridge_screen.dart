@@ -28,7 +28,7 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -41,7 +41,7 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
                       icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                      color: RenanceColors.ink,
+                      color: context.ink,
                     ),
                     const SizedBox(width: 4),
                     const Text('Career Bridge',
@@ -70,21 +70,21 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                     children: <Widget>[
                       Text('Career Bridge',
                           style: RenanceText.overline.copyWith(
-                              color: RenanceColors.textSecondary)),
+                              color: context.textSecondary)),
                       const Spacer(),
-                      const Text(
+                      Text(
                         'Where can Biology take you?',
                         style: TextStyle(
                           fontFamily: 'Inter',
                           fontSize: 24,
                           height: 32 / 24,
                           fontWeight: FontWeight.w700,
-                          color: RenanceColors.ink,
+                          color: context.ink,
                         ),
                       ),
                       const SizedBox(height: 8),
-                      const Text('Explore pathways and funding',
-                          style: RenanceText.bodySecondary),
+                      Text('Explore pathways and funding',
+                          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
                     ],
                   ),
                 ),
@@ -95,13 +95,13 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                   child: Text('Scholarships open now',
                       style: RenanceText.sectionTitle),
                 ),
-                const SizedBox(height: 14),
+                SizedBox(height: 14),
                 Container(
                   clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
-                    color: RenanceColors.card,
+                    color: context.card,
                     borderRadius: BorderRadius.circular(16),
-                    boxShadow: const <BoxShadow>[
+                    boxShadow: <BoxShadow>[
                       BoxShadow(
                           color: Color(0x14141C2D),
                           blurRadius: 6,
@@ -109,20 +109,20 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                     ],
                   ),
                   child: Column(
-                    children: const <Widget>[
+                    children: <Widget>[
                       _ScholarshipRow(
                         icon: Icons.school_outlined,
                         title: 'National STEM Grant',
                         meta: 'Closes in 12 days • \$5,000',
                         urgent: true,
                       ),
-                      Divider(height: 1, color: RenanceColors.outlineLight),
+                      Divider(height: 1, color: context.outlineLight),
                       _ScholarshipRow(
                         icon: Icons.biotech_outlined,
                         title: 'Future Biotech Leaders',
                         meta: 'Nov 15 Deadline • Full Tuition',
                       ),
-                      Divider(height: 1, color: RenanceColors.outlineLight),
+                      Divider(height: 1, color: context.outlineLight),
                       _ScholarshipRow(
                         icon: Icons.eco_outlined,
                         title: 'Conservation Initiative',
@@ -142,7 +142,7 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: RenanceColors.card,
+                    color: context.card,
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: const <BoxShadow>[
                       BoxShadow(
@@ -155,17 +155,17 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                     children: <Widget>[
                       Container(
                         padding:
-                            const EdgeInsets.symmetric(horizontal: 16),
+                            EdgeInsets.symmetric(horizontal: 16),
                         decoration: BoxDecoration(
-                          color: RenanceColors.surfaceContainerLow,
+                          color: context.cardLow,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: const TextField(
+                        child: TextField(
                           decoration: InputDecoration(
                             hintText:
                                 'Search degrees (e.g. B.Sc Marine Biology)',
                             icon: Icon(Icons.search,
-                                color: RenanceColors.textSecondary),
+                                color: context.textSecondary),
                             border: InputBorder.none,
                             filled: false,
                           ),
@@ -222,11 +222,11 @@ class _ScholarshipRow extends StatelessWidget {
             Container(
               width: 48,
               height: 48,
-              decoration: const BoxDecoration(
-                color: RenanceColors.surfaceContainerHigh,
+              decoration: BoxDecoration(
+                color: context.cardHigh,
                 shape: BoxShape.circle,
               ),
-              child: Icon(icon, size: 24, color: RenanceColors.ink),
+              child: Icon(icon, size: 24, color: context.ink),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -242,33 +242,33 @@ class _ScholarshipRow extends StatelessWidget {
                                 .copyWith(fontSize: 17)),
                       ),
                       if (urgent) ...<Widget>[
-                        const SizedBox(width: 8),
+                        SizedBox(width: 8),
                         Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 4),
                           decoration: BoxDecoration(
-                            color: RenanceColors.errorContainer,
+                            color: context.errorContainer,
                             borderRadius: BorderRadius.circular(999),
                           ),
-                          child: const Text('URGENT',
+                          child: Text('URGENT',
                               style: TextStyle(
                                 fontFamily: 'Inter',
                                 fontSize: 12,
                                 fontWeight: FontWeight.w700,
                                 letterSpacing: 0.5,
-                                color: RenanceColors.error,
+                                color: context.error,
                               )),
                         ),
                       ],
                     ],
                   ),
                   const SizedBox(height: 4),
-                  Text(meta, style: RenanceText.bodySecondary),
+                  Text(meta, style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right,
-                size: 24, color: RenanceColors.textSecondary),
+            Icon(Icons.chevron_right,
+                size: 24, color: context.textSecondary),
           ],
         ),
       ),

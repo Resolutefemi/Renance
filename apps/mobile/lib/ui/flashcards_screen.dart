@@ -38,37 +38,37 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
       return _CardPlayer(controller: c);
     }
     return Scaffold(
-      backgroundColor: RenanceColors.surfaceContainerLowest,
+      backgroundColor: context.cardLowest,
       appBar: AppBar(
-        backgroundColor: RenanceColors.surfaceContainerLowest,
+        backgroundColor: context.cardLowest,
         title: const Text('Flashcards', style: RenanceText.sectionTitle),
         titleSpacing: 0,
       ),
       body: switch (c.phase) {
-        CardsPhase.loading => const Center(
-            child: Text('Loading decks…', style: RenanceText.bodySecondary)),
+        CardsPhase.loading => Center(
+            child: Text('Loading decks…', style: RenanceText.bodySecondary.copyWith(color: context.textSecondary))),
         CardsPhase.error => Center(
             child: Padding(
               padding: const EdgeInsets.all(32),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  const Icon(Icons.wifi_off,
-                      size: 40, color: RenanceColors.textSecondary),
+                  Icon(Icons.wifi_off,
+                      size: 40, color: context.textSecondary),
                   const SizedBox(height: 12),
                   Text(c.error ?? 'Could not reach Renance servers',
                       textAlign: TextAlign.center,
-                      style: RenanceText.bodySecondary),
+                      style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
                 ],
               ),
             ),
           ),
-        CardsPhase.ready when c.decks.isEmpty => const Center(
+        CardsPhase.ready when c.decks.isEmpty => Center(
             child: Padding(
               padding: EdgeInsets.all(32),
               child: Text('No decks yet, they ship with your packs.',
                   textAlign: TextAlign.center,
-                  style: RenanceText.bodySecondary),
+                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
             ),
           ),
         CardsPhase.ready => _DeckGrid(controller: c),
@@ -112,7 +112,7 @@ class _DeckTile extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: RenanceColors.card,
+          color: context.card,
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -125,11 +125,11 @@ class _DeckTile extends StatelessWidget {
               width: 44,
               height: 44,
               decoration: BoxDecoration(
-                color: RenanceColors.surfaceContainerLow,
+                color: context.cardLow,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: const Icon(Icons.headphones,
-                  size: 22, color: RenanceColors.ink),
+              child: Icon(Icons.headphones,
+                  size: 22, color: context.ink),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -144,14 +144,14 @@ class _DeckTile extends StatelessWidget {
                   Text(
                     '${meta.cardCount} cards'
                     '${meta.subject.isEmpty ? '' : ' · ${meta.subject}'}',
-                    style: RenanceText.caption
-                        .copyWith(color: RenanceColors.textSecondary),
+                    style: RenanceText.caption.copyWith(color: context.textSecondary)
+                        .copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right,
-                size: 22, color: RenanceColors.outlineLight),
+            Icon(Icons.chevron_right,
+                size: 22, color: context.outlineLight),
           ],
         ),
       ),
@@ -175,20 +175,20 @@ class _CardPlayer extends StatelessWidget {
         if (didPop) controller.closeDeck();
       },
       child: Scaffold(
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
         appBar: AppBar(
-          backgroundColor: RenanceColors.background,
+          backgroundColor: context.pageBg,
           title: Row(
             children: <Widget>[
-              const Icon(Icons.headphones,
-                  size: 20, color: RenanceColors.textSecondary),
+              Icon(Icons.headphones,
+                  size: 20, color: context.textSecondary),
               const SizedBox(width: 8),
               Flexible(
                 child: Text(
                   controller.deck?.title ?? 'Flashcards',
                   overflow: TextOverflow.ellipsis,
                   style: RenanceText.bodyMedium
-                      .copyWith(color: RenanceColors.textSecondary),
+                      .copyWith(color: context.textSecondary),
                 ),
               ),
             ],
@@ -201,8 +201,8 @@ class _CardPlayer extends StatelessWidget {
                 controller.voiceOn ? Icons.volume_up : Icons.volume_off,
                 size: 22,
                 color: controller.voiceOn
-                    ? RenanceColors.ink
-                    : RenanceColors.textSecondary,
+                    ? context.ink
+                    : context.textSecondary,
               ),
             ),
             const SizedBox(width: 4),
@@ -245,9 +245,9 @@ class _CardStage extends StatelessWidget {
                         ? 0
                         : controller.index / deck.cardCount,
                     minHeight: 4,
-                    backgroundColor: RenanceColors.surfaceContainer,
-                    valueColor: const AlwaysStoppedAnimation<Color>(
-                        RenanceColors.ink),
+                    backgroundColor: context.surfaceContainer,
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                        context.ink),
                   ),
                 ),
               ),
@@ -269,7 +269,7 @@ class _CardStage extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: RenanceColors.card,
+                  color: context.card,
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: const <BoxShadow>[
                     BoxShadow(
@@ -298,7 +298,7 @@ class _CardStage extends StatelessWidget {
                                       style: RenanceText.labelMono.copyWith(
                                           fontSize: 12,
                                           color:
-                                              RenanceColors.textSecondary)),
+                                              context.textSecondary)),
                                 ],
                               ],
                             )
@@ -331,22 +331,22 @@ class _CardStage extends StatelessWidget {
                     Expanded(
                         child: _GradeButton(
                             label: 'Again',
-                            bg: RenanceColors.errorContainer,
-                            fg: RenanceColors.error,
+                            bg: context.errorContainer,
+                            fg: context.error,
                             onTap: () => controller.grade('again'))),
                     const SizedBox(width: 8),
                     Expanded(
                         child: _GradeButton(
                             label: 'Hard',
-                            bg: RenanceColors.secondaryContainer,
-                            fg: RenanceColors.ink,
+                            bg: context.secondaryContainer,
+                            fg: context.ink,
                             onTap: () => controller.grade('hard'))),
                     const SizedBox(width: 8),
                     Expanded(
                         child: _GradeButton(
                             label: 'Good',
-                            bg: RenanceColors.surfaceContainerHigh,
-                            fg: RenanceColors.ink,
+                            bg: context.cardHigh,
+                            fg: context.ink,
                             onTap: () => controller.grade('good'))),
                   ],
                 )
@@ -386,7 +386,7 @@ class _VoicePill extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.fromLTRB(8, 8, 24, 8),
         decoration: BoxDecoration(
-          color: RenanceColors.surfaceContainerLow,
+          color: context.cardLow,
           borderRadius: BorderRadius.circular(999),
         ),
         child: Row(
@@ -395,8 +395,8 @@ class _VoicePill extends StatelessWidget {
             Container(
               width: 48,
               height: 48,
-              decoration: const BoxDecoration(
-                color: RenanceColors.ink,
+              decoration: BoxDecoration(
+                color: context.ink,
                 shape: BoxShape.circle,
               ),
               child: const Icon(Icons.play_arrow,
@@ -445,7 +445,7 @@ class _WaveformState extends State<_Waveform>
               height: 24 * _heights[i],
               margin: const EdgeInsets.symmetric(horizontal: 2),
               decoration: BoxDecoration(
-                color: RenanceColors.selectionBlue,
+                color: context.selectionBlue,
                 borderRadius: BorderRadius.circular(999),
               ),
               transformAlignment: Alignment.center,
@@ -522,7 +522,7 @@ class _DeckComplete extends StatelessWidget {
               'You ran $total cards · ${controller.knownCount} known '
               '(box 3+). They will resurface on their Leitner schedule.',
               textAlign: TextAlign.center,
-              style: RenanceText.bodySecondary.copyWith(height: 1.5),
+              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.5),
             ),
             const SizedBox(height: 24),
             SizedBox(

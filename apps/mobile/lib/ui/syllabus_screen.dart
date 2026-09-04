@@ -99,7 +99,7 @@ class _SyllabusScreenState extends State<SyllabusScreen> {
   Widget build(BuildContext context) {
     final tree = _tree;
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -209,7 +209,7 @@ class _HeaderCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -223,7 +223,7 @@ class _HeaderCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text('COURSE SYLLABUS', style: RenanceText.overline),
+                Text('COURSE SYLLABUS', style: RenanceText.overline.copyWith(color: context.textSecondary)),
                 const SizedBox(height: 4),
                 Text(tree.body, style: RenanceText.displayMd),
                 const SizedBox(height: 10),
@@ -233,17 +233,17 @@ class _HeaderCard extends StatelessWidget {
                   '${tree.stats.learning} learning · '
                   '${tree.stats.unseen} unseen',
                   style: RenanceText.caption.copyWith(
-                      color: RenanceColors.textSecondary, height: 1.4),
+                      color: context.textSecondary, height: 1.4),
                 ),
                 const SizedBox(height: 10),
-                const Row(
+                Row(
                   children: <Widget>[
                     _LegendDot(color: RenanceColors.emerald, label: 'Mastered'),
                     SizedBox(width: 12),
                     _LegendDot(color: RenanceColors.amber, label: 'Learning'),
                     SizedBox(width: 12),
                     _LegendDot(
-                        color: RenanceColors.surfaceVariant, label: 'Unseen'),
+                        color: context.surfaceVariant, label: 'Unseen'),
                   ],
                 ),
               ],
@@ -275,8 +275,8 @@ class _LegendDot extends StatelessWidget {
         ),
         const SizedBox(width: 4),
         Text(label,
-            style: RenanceText.caption
-                .copyWith(color: RenanceColors.textSecondary, fontSize: 11)),
+            style: RenanceText.caption.copyWith(color: context.textSecondary)
+                .copyWith(color: context.textSecondary, fontSize: 11)),
       ],
     );
   }
@@ -303,7 +303,7 @@ class _MasteryRing extends StatelessWidget {
               value: pct / 100,
               strokeWidth: 5,
               strokeCap: StrokeCap.round,
-              backgroundColor: RenanceColors.surfaceVariant,
+              backgroundColor: context.surfaceVariant,
               valueColor:
                   const AlwaysStoppedAnimation<Color>(RenanceColors.emerald),
             ),
@@ -333,7 +333,7 @@ class _FocusNext extends StatelessWidget {
       children: <Widget>[
         Text('Focus next',
             style: RenanceText.sectionTitle.copyWith(
-                color: RenanceColors.textSecondary, fontSize: 14)),
+                color: context.textSecondary, fontSize: 14)),
         const SizedBox(height: 8),
         Wrap(
           spacing: 8,
@@ -428,11 +428,11 @@ class _SectionCard extends StatelessWidget {
   final String? highlight;
   final VoidCallback onToggle;
 
-  Color get _pctColor {
+  Color _pctColor(BuildContext context) {
     final int p = (section.mastery * 100).round();
     if (p >= 70) return RenanceColors.emerald;
     if (p > 0) return RenanceColors.amber;
-    return RenanceColors.textSecondary;
+    return context.textSecondary;
   }
 
   @override
@@ -440,7 +440,7 @@ class _SectionCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -461,13 +461,13 @@ class _SectionCard extends StatelessWidget {
                     height: 32,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: RenanceColors.surfaceContainer,
+                      color: context.surfaceContainer,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text('$index',
                         style: RenanceText.labelMono.copyWith(fontSize: 13)),
                   ),
-                  const SizedBox(width: 10),
+                  SizedBox(width: 10),
                   Expanded(
                     child: Text(section.title,
                         overflow: TextOverflow.ellipsis,
@@ -475,13 +475,13 @@ class _SectionCard extends StatelessWidget {
                   ),
                   Text('${(section.mastery * 100).round()}%',
                       style: RenanceText.labelMono
-                          .copyWith(fontSize: 12, color: _pctColor)),
-                  const SizedBox(width: 6),
+                          .copyWith(fontSize: 12, color: _pctColor(context))),
+                  SizedBox(width: 6),
                   AnimatedRotation(
                     turns: open ? 0.5 : 0,
                     duration: const Duration(milliseconds: 200),
-                    child: const Icon(Icons.expand_more,
-                        size: 20, color: RenanceColors.outlineDark),
+                    child: Icon(Icons.expand_more,
+                        size: 20, color: context.outlineDark),
                   ),
                 ],
               ),
@@ -516,14 +516,14 @@ class _TopicRow extends StatelessWidget {
   final SyllabusTopic topic;
   final bool highlight;
 
-  Color get _dotColor {
+  Color _dotColor(BuildContext context) {
     switch (topic.status) {
       case 'mastered':
         return RenanceColors.emerald;
       case 'learning':
         return RenanceColors.amber;
       default:
-        return RenanceColors.surfaceVariant;
+        return context.surfaceVariant;
     }
   }
 
@@ -531,9 +531,9 @@ class _TopicRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.all(10),
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: RenanceColors.background,
+        color: context.pageBg,
         borderRadius: BorderRadius.circular(8),
         border: highlight
             ? Border.all(color: RenanceColors.amber, width: 1.4)
@@ -553,17 +553,17 @@ class _TopicRow extends StatelessWidget {
                 Container(
                   width: 6,
                   height: 6,
-                  margin: const EdgeInsets.only(left: 4),
+                  margin: EdgeInsets.only(left: 4),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: i < topic.dot
-                        ? _dotColor
-                        : RenanceColors.surfaceVariant,
+                        ? _dotColor(context)
+                        : context.surfaceVariant,
                   ),
                 ),
             ],
           ),
-          const SizedBox(height: 6),
+          SizedBox(height: 6),
           Row(
             children: <Widget>[
               Text(
@@ -571,7 +571,7 @@ class _TopicRow extends StatelessWidget {
                     ? '${topic.questions} questions · last ${topic.lastCorrect}/${topic.lastTotal}'
                     : '${topic.questions} questions · not tried yet',
                 style: RenanceText.caption.copyWith(
-                    fontSize: 11, color: RenanceColors.textSecondary),
+                    fontSize: 11, color: context.textSecondary),
               ),
               const Spacer(),
               SizedBox(
@@ -582,7 +582,7 @@ class _TopicRow extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: topic.accuracy,
                     minHeight: 6,
-                    backgroundColor: RenanceColors.surfaceVariant,
+                    backgroundColor: context.surfaceVariant,
                     valueColor: AlwaysStoppedAnimation<Color>(
                         topic.status == 'mastered'
                             ? RenanceColors.emerald
@@ -619,16 +619,16 @@ class _BodyPill extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         decoration: BoxDecoration(
-          color: active ? Colors.black : RenanceColors.card,
+          color: active ? Colors.black : context.card,
           borderRadius: BorderRadius.circular(999),
           border: Border.all(
-              color: active ? Colors.black : RenanceColors.outlineLight),
+              color: active ? Colors.black : context.outlineLight),
         ),
         child: Text(
           label,
           style: RenanceText.labelMono.copyWith(
             fontSize: 12,
-            color: active ? Colors.white : RenanceColors.textSecondary,
+            color: active ? Colors.white : context.textSecondary,
           ),
         ),
       ),
@@ -650,13 +650,13 @@ class _ErrorPane extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const Icon(Icons.menu_book_outlined,
-                size: 40, color: RenanceColors.outlineLight),
+            Icon(Icons.menu_book_outlined,
+                size: 40, color: context.outlineLight),
             const SizedBox(height: 12),
             Text(
               message,
               textAlign: TextAlign.center,
-              style: RenanceText.bodySecondary.copyWith(height: 1.4),
+              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.4),
             ),
             const SizedBox(height: 16),
             OutlinedButton(onPressed: onRetry, child: const Text('Try again')),

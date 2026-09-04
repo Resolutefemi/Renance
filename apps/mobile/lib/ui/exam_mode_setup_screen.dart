@@ -33,7 +33,7 @@ class SetupSubject {
   final bool mandatory;
 }
 
-const List<SetupSubject> kSetupSubjects = <SetupSubject>[
+List<SetupSubject> kSetupSubjects = <SetupSubject>[
   SetupSubject(
       id: 'english',
       name: 'Use of English',
@@ -112,7 +112,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -128,8 +128,8 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                       // Header Area -------------------------------------
                       Row(
                         children: <Widget>[
-                          const Icon(Icons.timer,
-                              size: 24, color: RenanceColors.ink),
+                          Icon(Icons.timer,
+                              size: 24, color: context.ink),
                           const SizedBox(width: 10),
                           Expanded(
                             child: Text('Mock Exam Setup',
@@ -141,7 +141,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                       Text(
                         'Configure your testing environment to match official JAMB conditions.',
                         style: RenanceText.bodyBase
-                            .copyWith(color: RenanceColors.textSecondary),
+                            .copyWith(color: context.textSecondary),
                       ),
                       const SizedBox(height: 20),
                       // Exam Format card --------------------------------
@@ -155,7 +155,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                               selected: _standard,
                               onTap: () => setState(() => _standard = true),
                               title: 'Standard UTME Mock',
-                              titleColor: RenanceColors.ink,
+                              titleColor: context.ink,
                               chips: const <(IconData, String)>[
                                 (Icons.schedule, '2 Hours'),
                                 (Icons.menu_book, '4 Subjects'),
@@ -166,7 +166,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                               selected: !_standard,
                               onTap: () => setState(() => _standard = false),
                               title: 'Custom Practice',
-                              titleColor: RenanceColors.textSecondary,
+                              titleColor: context.textSecondary,
                               caption: 'Choose specific topics and time limits.',
                             ),
                           ],
@@ -190,7 +190,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 8, vertical: 4),
                                     decoration: BoxDecoration(
-                                      color: RenanceColors.surfaceContainer,
+                                      color: context.surfaceContainer,
                                       borderRadius: BorderRadius.circular(999),
                                     ),
                                     child: Row(
@@ -202,13 +202,13 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                                               : 'English + $_electiveCount',
                                           style: RenanceText.labelMono.copyWith(
                                             fontSize: 11,
-                                            color: RenanceColors.textSecondary,
+                                            color: context.textSecondary,
                                           ),
                                         ),
                                         const SizedBox(width: 2),
-                                        const Icon(Icons.edit,
+                                        Icon(Icons.edit,
                                             size: 12,
-                                            color: RenanceColors.textSecondary),
+                                            color: context.textSecondary),
                                       ],
                                     ),
                                   ),
@@ -235,20 +235,20 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: RenanceColors.surfaceContainerHigh,
+                          color: context.cardHigh,
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            const Icon(Icons.info_outline,
-                                size: 18, color: RenanceColors.outlineDark),
+                            Icon(Icons.info_outline,
+                                size: 18, color: context.outlineDark),
                             const SizedBox(width: 8),
                             Expanded(
                               child: Text(
                                 'This environment simulates official JAMB timing and rules. Pausing is disabled once the mock begins.',
-                                style: RenanceText.caption
-                                    .copyWith(color: RenanceColors.textSecondary),
+                                style: RenanceText.caption.copyWith(color: context.textSecondary)
+                                    .copyWith(color: context.textSecondary),
                               ),
                             ),
                           ],
@@ -292,7 +292,7 @@ class _Card extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -322,7 +322,7 @@ class _BackBar extends StatelessWidget {
           IconButton(
             onPressed: onBack,
             icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-            color: RenanceColors.ink,
+            color: context.ink,
           ),
         ],
       ),
@@ -359,8 +359,8 @@ class _FormatRow extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue.withValues(alpha: 0.2)
-              : RenanceColors.surfaceContainerLow,
+              ? context.selectionBlue.withValues(alpha: 0.2)
+              : context.cardLow,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
@@ -371,7 +371,7 @@ class _FormatRow extends StatelessWidget {
                   ? Icons.radio_button_checked
                   : Icons.radio_button_unchecked,
               size: 22,
-              color: selected ? RenanceColors.ink : RenanceColors.outline,
+              color: selected ? context.ink : context.outline,
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -383,8 +383,8 @@ class _FormatRow extends StatelessWidget {
                   if (caption != null) ...<Widget>[
                     const SizedBox(height: 2),
                     Text(caption!,
-                        style: RenanceText.caption
-                            .copyWith(color: RenanceColors.textSecondary)),
+                        style: RenanceText.caption.copyWith(color: context.textSecondary)
+                            .copyWith(color: context.textSecondary)),
                   ],
                   if (chips != null) ...<Widget>[
                     const SizedBox(height: 8),
@@ -397,19 +397,19 @@ class _FormatRow extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
-                              color: RenanceColors.surfaceContainerLow,
+                              color: context.cardLow,
                               borderRadius: BorderRadius.circular(4),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Icon(icon,
-                                    size: 14, color: RenanceColors.textSecondary),
+                                    size: 14, color: context.textSecondary),
                                 const SizedBox(width: 4),
                                 Text(label,
                                     style: RenanceText.labelMono.copyWith(
                                         fontSize: 11,
-                                        color: RenanceColors.textSecondary)),
+                                        color: context.textSecondary)),
                               ],
                             ),
                           ),
@@ -445,14 +445,14 @@ class _SubjectRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool mandatory = subject.mandatory;
     return Container(
-      padding: const EdgeInsets.all(8),
+      padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: mandatory
-            ? RenanceColors.surfaceContainerLow.withValues(alpha: 0.5)
+            ? context.cardLow.withValues(alpha: 0.5)
             : Colors.transparent,
         border: Border.all(
           color: mandatory
-              ? RenanceColors.outlineVariant.withValues(alpha: 0.3)
+              ? context.outlineVariant.withValues(alpha: 0.3)
               : Colors.transparent,
         ),
         borderRadius: BorderRadius.circular(8),
@@ -472,12 +472,12 @@ class _SubjectRow extends StatelessWidget {
               style: RenanceText.displayMd.copyWith(
                 fontSize: 16,
                 color: subject.id == 'biology'
-                    ? RenanceColors.secondary
+                    ? context.secondary
                     : subject.color,
               ),
             ),
           ),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -486,7 +486,7 @@ class _SubjectRow extends StatelessWidget {
                 if (mandatory)
                   Text('Mandatory',
                       style: RenanceText.caption.copyWith(
-                          fontSize: 11, color: RenanceColors.textSecondary)),
+                          fontSize: 11, color: context.textSecondary)),
               ],
             ),
           ),
@@ -494,7 +494,7 @@ class _SubjectRow extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: RenanceColors.surfaceContainer,
+              color: context.surfaceContainer,
               borderRadius: BorderRadius.circular(4),
             ),
             child: DropdownButtonHideUnderline(
@@ -507,15 +507,15 @@ class _SubjectRow extends StatelessWidget {
                       child: Text(y,
                           style: RenanceText.labelMono.copyWith(
                               fontSize: 12,
-                              color: RenanceColors.textSecondary)),
+                              color: context.textSecondary)),
                     ),
                 ],
                 onChanged: (String? v) {
                   if (v != null) onYear(v);
                 },
-                icon: const Icon(Icons.arrow_drop_down,
-                    size: 16, color: RenanceColors.outline),
-                dropdownColor: RenanceColors.card,
+                icon: Icon(Icons.arrow_drop_down,
+                    size: 16, color: context.outline),
+                dropdownColor: context.card,
               ),
             ),
           ),

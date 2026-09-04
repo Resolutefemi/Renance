@@ -138,6 +138,8 @@ export default function DashboardPage() {
   }, [me]);
 
   const days = daysToTarget(me?.profile?.targetYear);
+  const isJamb = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('JAMB');
+  const isUniversity = (me?.profile?.exams?.[0] ?? '').includes('University');
 
   const coveragePct = useMemo(() => {
     const gradedCodes = new Set(
@@ -211,40 +213,6 @@ export default function DashboardPage() {
       </header>
 
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-20 sm:px-6">
-        {/* Hero progress card ------------------------------------------- */}
-        <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
-          <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/5" />
-          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-accent-ink/5" />
-          <div className="relative z-10 flex items-start justify-between gap-4">
-            <div>
-              <p className="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant">Next Target</p>
-              <h2 className="text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">{targetTitle}</h2>
-            </div>
-            <div className="text-right">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant">Countdown</p>
-              <p className="text-sm font-semibold text-accent-ink">
-                {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
-              </p>
-            </div>
-          </div>
-          <div className="relative z-10 flex flex-col gap-2">
-            <div className="flex justify-between font-mono text-xs text-on-surface-variant">
-              <span>Syllabus Completion</span>
-              <span className="font-semibold text-on-surface">{coveragePct}%</span>
-            </div>
-            <div className="h-2 w-full overflow-hidden rounded-full bg-surface-variant">
-              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${coveragePct}%` }} />
-            </div>
-          </div>
-          <Link
-            href={exams[0] ? `/exams/${exams[0].code}` : '#packs'}
-            className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-primary text-[15px] font-semibold text-on-primary transition-transform active:scale-[0.98]"
-          >
-            <span className="material-symbols-outlined text-[20px]">play_arrow</span>
-            Continue Practice
-          </Link>
-        </section>
-
         {syncState !== 'ready' && (
           <section className="flex items-center justify-between rounded-xl border border-outline-variant/60 bg-surface-container-lowest px-5 py-4 shadow-sm">
             <LogoActivityIndicator state="busy" label={syncLabel} />
@@ -256,13 +224,57 @@ export default function DashboardPage() {
           <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
         )}
 
-        {/* Mock exam simulator banner (exam_mode_setup_light entry) ------ */}
+        {isUniversity ? (
+          <UniversityHome />
+        ) : (
+        <>
+        {/* Hero progress card. Uses the hero token scope so Mixed tier
+            flips it to the dark #111C2D band (home_dashboard_mixed_mode). */}
+        <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
+          <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/5" />
+          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-on-hero/5" />
+          <div className="relative z-10 flex items-start justify-between gap-4">
+            <div>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-hero-muted">Next Target</p>
+              <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">{targetTitle}</h2>
+            </div>
+            <div className="text-right">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-hero-muted">Countdown</p>
+              <p className="text-sm font-semibold text-on-hero">
+                {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
+              </p>
+            </div>
+          </div>
+          <div className="relative z-10 flex flex-col gap-2">
+            <div className="flex justify-between font-mono text-xs text-hero-muted">
+              <span>Syllabus Completion</span>
+              <span className="font-semibold text-on-hero">{coveragePct}%</span>
+            </div>
+            <div className="h-2 w-full overflow-hidden rounded-full bg-hero-track">
+              <div className="h-full rounded-full bg-hero-cta transition-all" style={{ width: `${coveragePct}%` }} />
+            </div>
+          </div>
+          <Link
+            href={exams[0] ? `/exams/${exams[0].code}` : '/packs'}
+            className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
+          >
+            <span className="material-symbols-outlined text-[20px]">play_arrow</span>
+            Continue Practice
+          </Link>
+        </section>
+
+
+
+        {/* Mock exam simulator banner (exam_mode_setup_light entry).
+            JAMBites only: official UTME conditions are not a WAEC, NECO
+            or University Modules product. ------------------------------ */}
+        {isJamb && (
         <Link
           href="/exams/setup"
           className="flex items-center gap-3 rounded-xl bg-dark-surface p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
         >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-accent-ink/15">
-            <span className="material-symbols-outlined text-[22px] text-accent-ink">timer</span>
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-dark-text-primary/15">
+            <span className="material-symbols-outlined text-[22px] text-dark-text-primary">timer</span>
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-[15px] font-semibold text-dark-text-primary">Mock Exam Setup</p>
@@ -272,16 +284,17 @@ export default function DashboardPage() {
           </div>
           <span className="material-symbols-outlined text-[20px] text-dark-text-secondary">arrow_forward</span>
         </Link>
+        )}
 
         {/* Launcher grids: one Stitch pair on phones, side by side on PC --- */}
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           <section className="mt-2">
             <h3 className="text-sm text-on-surface-variant">Practice</h3>
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-              <LauncherTile icon="description" label="Exams" href="#packs" />
+              <LauncherTile icon="description" label="Exams" href={isJamb ? '/exams/setup' : '/packs'} />
+              <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
               <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
               <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
-              <LauncherTile icon="menu_book" label="Syllabus" href="/syllabus" />
             </div>
           </section>
 
@@ -295,6 +308,9 @@ export default function DashboardPage() {
             </div>
           </section>
         </div>
+
+        </>
+        )}
 
         {/* Recent activity ------------------------------------------------ */}
         {recent && (
@@ -319,24 +335,7 @@ export default function DashboardPage() {
           </Link>
         )}
 
-        {/* Pack library ---------------------------------------------------- */}
-        <section id="packs" className="scroll-mt-24">
-          <h2 className="mt-4 font-mono text-xs font-medium uppercase tracking-[0.2em] text-on-surface-variant">
-            Your study packs
-          </h2>
-          <div className="mt-4 grid grid-cols-1 gap-4 pb-8 sm:grid-cols-2 lg:grid-cols-3">
-            {(exams.length ? exams : Array.from({ length: 3 }, () => null)).map((exam, i) =>
-              exam ? (
-                <ExamCard key={exam.code} exam={exam} ready={syncState !== 'syncing'} />
-              ) : (
-                <div
-                  key={i}
-                  className="h-40 animate-pulse rounded-xl border border-outline-variant/60 bg-surface-container-low"
-                />
-              ),
-            )}
-          </div>
-        </section>
+        {/* Question Pack lives on /packs; the old home pack cards are gone. */}
       </div>
 
       {/* More sheet: the launcher's jump table (more_features_sheet_light) */}
@@ -348,6 +347,101 @@ export default function DashboardPage() {
 }
 
 /** Small bottom sheet listing the destinations that live beyond the grid. */
+
+/* ----------------------------------------------------------------- */
+/* University home (university_home_dashboard_light): tertiary students */
+/* get the In-Progress course hero, the Active Courses chips and the    */
+/* university Practice / Grow grids. No Mock Exam Setup here, it is a   */
+/* JAMBite product only.                                                */
+/* ----------------------------------------------------------------- */
+
+function UniversityHome() {
+  return (
+    <>
+      {/* Active course hero card ------------------------------------- */}
+      <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
+        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/10" />
+        <div className="relative z-10 flex items-center justify-between gap-4">
+          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+            In Progress
+          </p>
+          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-1 font-mono text-[11px] text-on-hero">
+            <span className="material-symbols-outlined text-[14px]">sync</span>
+            Synced
+          </span>
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">COS101</h2>
+          <p className="mt-1 text-[15px] font-semibold text-hero-muted">Introduction to Computing</p>
+        </div>
+        <div className="relative z-10 flex flex-col gap-2">
+          <div className="flex items-end justify-between">
+            <span className="text-[13px] text-hero-muted">Semester Progress</span>
+            <span className="font-mono text-xs font-bold text-on-hero">Week 6 of 12</span>
+          </div>
+          <div className="h-2 w-full overflow-hidden rounded-full bg-hero-track">
+            <div className="h-full w-1/2 rounded-full bg-hero-cta" />
+          </div>
+        </div>
+        <Link
+          href="/lessons"
+          className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
+        >
+          <span className="material-symbols-outlined fill-current text-[20px]">play_circle</span>
+          Resume lecture notes
+        </Link>
+      </section>
+
+      {/* Course chips row --------------------------------------------- */}
+      <section className="mt-2">
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-semibold text-on-surface">Active Courses</h3>
+          <Link href="/syllabus" className="p-2 text-[13px] text-on-surface-variant hover:opacity-70">
+            View all
+          </Link>
+        </div>
+        <div className="no-scrollbar -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 pt-2">
+          {['COS101', 'MTH102', 'PHY101', 'GST101'].map((c) => (
+            <Link
+              key={c}
+              href="/syllabus"
+              className={`whitespace-nowrap rounded-full px-6 py-2 text-sm transition ${
+                c === 'PHY101'
+                  ? 'scale-105 bg-selection-blue font-semibold text-on-surface shadow-sm'
+                  : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-variant'
+              }`}
+            >
+              {c}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* University Practice / Grow grids ------------------------------ */}
+      <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+        <section className="mt-2">
+          <h3 className="text-sm text-on-surface-variant">Practice</h3>
+          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <LauncherTile icon="quiz" label="Quizzes" href="/packs" />
+            <LauncherTile icon="history_edu" label="Review" href="/review" />
+            <LauncherTile icon="style" label="Cards" href="/flashcards" />
+            <LauncherTile icon="library_books" label="Outline" href="/syllabus" />
+          </div>
+        </section>
+        <section className="mt-4 lg:mt-2">
+          <h3 className="text-sm text-on-surface-variant">Grow</h3>
+          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <LauncherTile icon="timeline" label="CGPA" href="/progress" />
+            <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
+            <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
+            <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+
 function MoreSheet({ onClose }: { onClose: () => void }) {
   const items = [
     { icon: 'event_note', label: 'Study Plan', href: '/study-plan' },
@@ -356,11 +450,15 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },
     { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
     { icon: 'wifi_off', label: 'Offline Share', href: '/offline-share' },
+    { icon: 'emoji_events', label: 'Awards Hub', href: '/progress' },
+    { icon: 'insights', label: 'Progress report', href: '/progress-report' },
     { icon: 'history_edu', label: 'Review center', href: '/review' },
     { icon: 'auto_stories', label: 'Lessons', href: '/lessons' },
     { icon: 'person', label: 'Profile', href: '/profile' },
     { icon: 'workspace_premium', label: 'Certificates', href: '/certificates' },
+    { icon: 'menu_book', label: 'Syllabus map', href: '/syllabus' },
     { icon: 'menu_book', label: 'Subjects', href: '/subjects' },
+    { icon: 'settings', label: 'Settings', href: '/settings' },
     { icon: 'help', label: 'Help & FAQ', href: '/faq' },
   ] as const;
   return (

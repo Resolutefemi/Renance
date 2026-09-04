@@ -17,7 +17,7 @@ class PatronPortalScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -30,7 +30,7 @@ class PatronPortalScreen extends StatelessWidget {
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
                       icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                      color: RenanceColors.ink,
+                      color: context.ink,
                     ),
                     const SizedBox(width: 4),
                     const Text('Patron Portal',
@@ -87,7 +87,7 @@ class PatronPortalScreen extends StatelessWidget {
                               child: FilledButton(
                                 style: FilledButton.styleFrom(
                                   backgroundColor: Colors.white,
-                                  foregroundColor: RenanceColors.ink,
+                                  foregroundColor: context.ink,
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
                                           BorderRadius.circular(12)),
@@ -137,18 +137,18 @@ class PatronPortalScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: 28),
                 // Student Stories -------------------------------------------
                 Row(
                   children: <Widget>[
-                    const Expanded(
+                    Expanded(
                       child: Text('Student Stories',
                           style: RenanceText.sectionTitle),
                     ),
                     InkWell(
                       onTap: () {},
                       borderRadius: BorderRadius.circular(8),
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.all(4),
                         child: Row(
                           children: <Widget>[
@@ -157,10 +157,10 @@ class PatronPortalScreen extends StatelessWidget {
                                     fontFamily: 'Inter',
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: RenanceColors.ink)),
+                                    color: context.ink)),
                             SizedBox(width: 4),
                             Icon(Icons.arrow_forward,
-                                size: 15, color: RenanceColors.ink),
+                                size: 15, color: context.ink),
                           ],
                         ),
                       ),
@@ -206,14 +206,14 @@ class PatronPortalScreen extends StatelessWidget {
                       style: RenanceText.sectionTitle),
                 ),
                 const SizedBox(height: 14),
-                const _NeedCard(
+                _NeedCard(
                   tag: 'Exam Fee',
                   amount: '₦21,500',
                   title: 'WAEC Registration',
                   subtitle: 'For 5 students in Lagos',
                   raised: '₦8,500 raised',
                   progress: 0.40,
-                  progressColor: RenanceColors.ink,
+                  progressColor: context.ink,
                 ),
                 const SizedBox(height: 12),
                 const _NeedCard(
@@ -225,11 +225,11 @@ class PatronPortalScreen extends StatelessWidget {
                   progress: 0.80,
                   progressColor: RenanceColors.emerald,
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: 28),
                 // Transparency Ledger --------------------------------------
                 Row(
                   children: <Widget>[
-                    const Expanded(
+                    Expanded(
                       child: Text('Transparency Ledger',
                           style: RenanceText.sectionTitle),
                     ),
@@ -237,25 +237,25 @@ class PatronPortalScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: RenanceColors.selectionBlue,
+                        color: context.selectionBlue,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: const Text('Verified',
+                      child: Text('Verified',
                           style: TextStyle(
                               fontFamily: 'Inter',
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
-                              color: RenanceColors.ink)),
+                              color: context.ink)),
                     ),
                   ],
                 ),
-                const SizedBox(height: 14),
+                SizedBox(height: 14),
                 Container(
                   clipBehavior: Clip.antiAlias,
                   decoration: BoxDecoration(
-                    color: RenanceColors.card,
+                    color: context.card,
                     borderRadius: BorderRadius.circular(16),
-                    boxShadow: const <BoxShadow>[
+                    boxShadow: <BoxShadow>[
                       BoxShadow(
                           color: Color(0x14141C2D),
                           blurRadius: 6,
@@ -263,14 +263,14 @@ class PatronPortalScreen extends StatelessWidget {
                     ],
                   ),
                   child: Column(
-                    children: const <Widget>[
+                    children: <Widget>[
                       _LedgerRow(
                         icon: Icons.account_balance_outlined,
                         title: 'Disbursed to JAMB Board',
                         date: 'Oct 12, 2023',
                         amount: '-₦14,200',
                       ),
-                      Divider(height: 1, color: RenanceColors.outlineLight),
+                      Divider(height: 1, color: context.outlineLight),
                       _LedgerRow(
                         icon: Icons.savings_outlined,
                         title: 'Your Contribution',
@@ -278,7 +278,7 @@ class PatronPortalScreen extends StatelessWidget {
                         amount: '+₦50,000',
                         positive: true,
                       ),
-                      Divider(height: 1, color: RenanceColors.outlineLight),
+                      Divider(height: 1, color: context.outlineLight),
                       _LedgerRow(
                         icon: Icons.menu_book_outlined,
                         title: 'Textbook Supplier Payment',
@@ -288,26 +288,26 @@ class PatronPortalScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: 16),
                 Center(
                   child: InkWell(
                     onTap: () => _snack(context,
                         'The PDF ledger export ships with the funding rail.'),
                     borderRadius: BorderRadius.circular(10),
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.all(10),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           Icon(Icons.download_outlined,
-                              size: 18, color: RenanceColors.ink),
+                              size: 18, color: context.ink),
                           SizedBox(width: 8),
                           Text('Download Full Ledger (PDF)',
                               style: TextStyle(
                                   fontFamily: 'Inter',
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
-                                  color: RenanceColors.ink)),
+                                  color: context.ink)),
                         ],
                       ),
                     ),
@@ -348,7 +348,7 @@ class _StoryCard extends StatelessWidget {
       width: 280,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(16),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -392,13 +392,13 @@ class _StoryCard extends StatelessWidget {
                                 : RenanceColors.amber,
                           ),
                         ),
-                        const SizedBox(width: 6),
+                        SizedBox(width: 6),
                         Text(status,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontFamily: 'Inter',
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
-                              color: RenanceColors.ink,
+                              color: context.ink,
                             )),
                       ],
                     ),
@@ -417,7 +417,7 @@ class _StoryCard extends StatelessWidget {
                 Text(quote,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: RenanceText.bodySecondary.copyWith(
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, 
                         fontSize: 13, height: 19 / 13)),
               ],
             ),
@@ -452,7 +452,7 @@ class _NeedCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(16),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -468,10 +468,10 @@ class _NeedCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: RenanceColors.surfaceContainerLow,
+                  color: context.cardLow,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text(tag, style: RenanceText.caption),
+                child: Text(tag, style: RenanceText.caption.copyWith(color: context.textSecondary)),
               ),
               const Spacer(),
               Text(amount,
@@ -481,7 +481,7 @@ class _NeedCard extends StatelessWidget {
           const SizedBox(height: 10),
           Text(title, style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
           const SizedBox(height: 2),
-          Text(subtitle, style: RenanceText.bodySecondary),
+          Text(subtitle, style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
           const SizedBox(height: 14),
           Row(
             children: <Widget>[
@@ -491,7 +491,7 @@ class _NeedCard extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: progress,
                     minHeight: 8,
-                    backgroundColor: RenanceColors.surfaceContainerHigh,
+                    backgroundColor: context.cardHigh,
                     valueColor: AlwaysStoppedAnimation<Color>(progressColor),
                   ),
                 ),
@@ -551,11 +551,11 @@ class _LedgerRow extends StatelessWidget {
           Container(
             width: 44,
             height: 44,
-            decoration: const BoxDecoration(
-              color: RenanceColors.surfaceContainerLow,
+            decoration: BoxDecoration(
+              color: context.cardLow,
               shape: BoxShape.circle,
             ),
-            child: Icon(icon, size: 20, color: RenanceColors.ink),
+            child: Icon(icon, size: 20, color: context.ink),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -564,7 +564,7 @@ class _LedgerRow extends StatelessWidget {
               children: <Widget>[
                 Text(title, style: RenanceText.bodyMedium),
                 const SizedBox(height: 2),
-                Text(date, style: RenanceText.caption),
+                Text(date, style: RenanceText.caption.copyWith(color: context.textSecondary)),
               ],
             ),
           ),
@@ -574,7 +574,7 @@ class _LedgerRow extends StatelessWidget {
               fontFamily: 'Inter',
               fontSize: 15,
               fontWeight: FontWeight.w700,
-              color: positive ? RenanceColors.emerald : RenanceColors.ink,
+              color: positive ? RenanceColors.emerald : context.ink,
             ),
           ),
         ],

@@ -110,7 +110,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
     final double fill = target <= 0 ? 0 : current / target;
 
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -125,7 +125,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
                         icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                        color: RenanceColors.ink,
+                        color: context.ink,
                       ),
                     ],
                   ),
@@ -146,8 +146,10 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                 opacity: 0.3,
                                 child: RotationTransition(
                                   turns: _spin,
-                                  child: const CustomPaint(
-                                    painter: _OrbitPainter(),
+                                  child: CustomPaint(
+                                    painter: _OrbitPainter(
+                                      outerColor: context.surfaceVariant,
+                                      innerColor: context.surfaceContainer),
                                     size: Size(240, 240),
                                   ),
                                 ),
@@ -156,9 +158,9 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                             Container(
                               width: 192,
                               height: 192,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: RenanceColors.surfaceContainer,
+                                color: context.surfaceContainer,
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
                                     color: Color(0x14111C2D),
@@ -175,7 +177,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       border: Border.all(
-                                        color: RenanceColors.surfaceVariant,
+                                        color: context.surfaceVariant,
                                       ),
                                     ),
                                   ),
@@ -184,7 +186,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                     size: 96,
                                     color: widget.spec.earned
                                         ? widget.spec.fg
-                                        : RenanceColors.outlineLight,
+                                        : context.outlineLight,
                                     shadows: const <Shadow>[
                                       Shadow(
                                         blurRadius: 24,
@@ -206,14 +208,14 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
-                              color: RenanceColors.secondaryContainer,
+                              color: context.secondaryContainer,
                               borderRadius: BorderRadius.circular(999),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
-                                const Icon(Icons.star,
-                                    size: 16, color: RenanceColors.secondary),
+                                Icon(Icons.star,
+                                    size: 16, color: context.secondary),
                                 const SizedBox(width: 4),
                                 Text(
                                   widget.spec.earned
@@ -223,7 +225,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                     fontSize: 11,
                                     fontWeight: FontWeight.w700,
                                     letterSpacing: 1.2,
-                                    color: RenanceColors.secondary,
+                                    color: context.secondary,
                                   ),
                                 ),
                               ],
@@ -236,7 +238,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                           Text(
                             widget.spec.hint,
                             textAlign: TextAlign.center,
-                            style: RenanceText.bodySecondary,
+                            style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                           ),
                         ],
                       ),
@@ -245,7 +247,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: RenanceColors.card,
+                          color: context.card,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: const <BoxShadow>[
                             BoxShadow(
@@ -278,7 +280,7 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
                                         letterSpacing: 1.2,
-                                        color: RenanceColors.textSecondary,
+                                        color: context.textSecondary,
                                       ),
                                     ),
                                     const SizedBox(height: 4),
@@ -361,8 +363,8 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                             Text(
                               "Keep it up, you're closer than you think!",
                               textAlign: TextAlign.center,
-                              style: RenanceText.caption
-                                  .copyWith(color: RenanceColors.textSecondary),
+                              style: RenanceText.caption.copyWith(color: context.textSecondary)
+                                  .copyWith(color: context.textSecondary),
                             ),
                           ],
                         ),
@@ -380,9 +382,9 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                               Text('View all',
                                   style: RenanceText.bodyMedium.copyWith(
                                       fontSize: 14,
-                                      color: RenanceColors.ink)),
-                              const Icon(Icons.chevron_right,
-                                  size: 18, color: RenanceColors.ink),
+                                      color: context.ink)),
+                              Icon(Icons.chevron_right,
+                                  size: 18, color: context.ink),
                             ],
                           ),
                         ],
@@ -445,7 +447,10 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
 
 /// Two dashed orbit rings (r=118/90 of the 240 box), the Stitch SVG.
 class _OrbitPainter extends CustomPainter {
-  const _OrbitPainter();
+  const _OrbitPainter({required this.outerColor, required this.innerColor});
+
+  final Color outerColor;
+  final Color innerColor;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -453,11 +458,11 @@ class _OrbitPainter extends CustomPainter {
     final Paint outer = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2
-      ..color = RenanceColors.surfaceVariant;
+      ..color = outerColor;
     final Paint inner = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 4
-      ..color = RenanceColors.surfaceContainer;
+      ..color = innerColor;
 
     _dashedCircle(canvas, c, 118, outer, const [10, 15]);
     _dashedCircle(canvas, c, 90, inner, const [20, 10]);
@@ -502,7 +507,7 @@ class _RelatedBadgeCard extends StatelessWidget {
         width: 144,
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: RenanceColors.card,
+          color: context.card,
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -524,14 +529,14 @@ class _RelatedBadgeCard extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: earned
-                        ? RenanceColors.surfaceContainerLow
-                        : RenanceColors.surfaceContainerLowest,
+                        ? context.cardLow
+                        : context.cardLowest,
                   ),
                   alignment: Alignment.center,
                   child: Icon(
                     spec.icon,
                     size: 32,
-                    color: earned ? spec.fg : RenanceColors.outlineLight,
+                    color: earned ? spec.fg : context.outlineLight,
                   ),
                 ),
                 if (!earned)
@@ -539,31 +544,31 @@ class _RelatedBadgeCard extends StatelessWidget {
                     right: -6,
                     bottom: -6,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(
+                      padding: EdgeInsets.symmetric(
                           horizontal: 8, vertical: 2),
                       decoration: BoxDecoration(
-                        color: RenanceColors.surfaceContainer,
+                        color: context.surfaceContainer,
                         borderRadius: BorderRadius.circular(999),
                         border: Border.all(color: Colors.white),
                       ),
-                      child: const Icon(Icons.lock,
-                          size: 14, color: RenanceColors.textSecondary),
+                      child: Icon(Icons.lock,
+                          size: 14, color: context.textSecondary),
                     ),
                   ),
               ],
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(
               spec.label,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: RenanceText.bodyMedium.copyWith(
                 color: earned
-                    ? RenanceColors.ink
-                    : RenanceColors.outlineDark,
+                    ? context.ink
+                    : context.outlineDark,
               ),
             ),
-            const SizedBox(height: 2),
+            SizedBox(height: 2),
             Text(
               spec.hint,
               maxLines: 2,
@@ -572,8 +577,8 @@ class _RelatedBadgeCard extends StatelessWidget {
               style: RenanceText.caption.copyWith(
                 fontSize: 11,
                 color: earned
-                    ? RenanceColors.textSecondary
-                    : RenanceColors.outlineLight,
+                    ? context.textSecondary
+                    : context.outlineLight,
               ),
             ),
           ],

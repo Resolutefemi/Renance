@@ -113,7 +113,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       feed.add(FeedItem(
         key: 'lesson-${lesson.slug}',
         icon: Icons.menu_book,
-        tint: RenanceColors.ink,
+        tint: context.ink,
         title: lesson.title,
         body: lesson.summary.isEmpty
             ? '${lesson.minutes} min read'
@@ -132,15 +132,15 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     return feed;
   }
 
-  static (String, IconData, Color) _awardLabel(String code) => switch (code) {
-        'first_blood' => ('First Blood', Icons.flag, RenanceColors.ink),
-        'xp_500' => ('Scholar', Icons.school, RenanceColors.ink),
+  (String, IconData, Color) _awardLabel(String code) => switch (code) {
+        'first_blood' => ('First Blood', Icons.flag, context.ink),
+        'xp_500' => ('Scholar', Icons.school, context.ink),
         'xp_2000' => ('Champion', Icons.military_tech, RenanceColors.amber),
         'century' => ('Century', Icons.emoji_events, RenanceColors.emerald),
         'perfect_paper' => (
             'Flawless',
             Icons.workspace_premium,
-            RenanceColors.ink
+            context.ink
           ),
         'streak_3' => (
             'Warming Up',
@@ -155,9 +155,9 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         'streak_30' => (
             'Unstoppable',
             Icons.rocket_launch,
-            RenanceColors.ink
+            context.ink
           ),
-        _ => ('Badge', Icons.emoji_events, RenanceColors.ink),
+        _ => ('Badge', Icons.emoji_events, context.ink),
       };
 
   static String _awardHint(String code) => switch (code) {
@@ -188,7 +188,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     final List<FeedItem> feed = _buildFeed(context);
 
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -203,7 +203,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
                         icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                        color: RenanceColors.ink,
+                        color: context.ink,
                       ),
                       const SizedBox(width: 4),
                       Text('Notifications', style: RenanceText.sectionTitle),
@@ -212,7 +212,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                 ),
                 Expanded(
                   child: feed.isEmpty
-                      ? const _AllCaughtUp()
+                      ? _AllCaughtUp()
                       : ListView.separated(
                           padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
                           itemCount: feed.length,
@@ -249,8 +249,8 @@ class _AllCaughtUp extends StatelessWidget {
           Container(
             width: 56,
             height: 56,
-            decoration: const BoxDecoration(
-              color: RenanceColors.surfaceContainerHigh,
+            decoration: BoxDecoration(
+              color: context.cardHigh,
               shape: BoxShape.circle,
             ),
             child: const Icon(Icons.done_all,
@@ -261,7 +261,7 @@ class _AllCaughtUp extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
             'Reviews, badges and fresh lessons will land here.',
-            style: RenanceText.bodySecondary,
+            style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
             textAlign: TextAlign.center,
           ),
         ],
@@ -293,7 +293,7 @@ class _FeedRow extends StatelessWidget {
                 width: 38,
                 height: 38,
                 decoration: BoxDecoration(
-                  color: RenanceColors.surfaceContainerLow,
+                  color: context.cardLow,
                   shape: BoxShape.circle,
                 ),
                 child: Icon(item.icon, size: 19, color: item.tint),
@@ -317,7 +317,7 @@ class _FeedRow extends StatelessWidget {
                           const SizedBox(width: 8),
                           Text(
                             item.time,
-                            style: RenanceText.caption.copyWith(fontSize: 11),
+                            style: RenanceText.caption.copyWith(color: context.textSecondary, fontSize: 11),
                           ),
                         ],
                       ],
@@ -325,7 +325,7 @@ class _FeedRow extends StatelessWidget {
                     const SizedBox(height: 3),
                     Text(
                       item.body,
-                      style: RenanceText.caption,
+                      style: RenanceText.caption.copyWith(color: context.textSecondary),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),

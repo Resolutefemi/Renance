@@ -539,6 +539,15 @@ class StudentController extends ChangeNotifier {
   bool get hasProfile => me?.profile?.completed ?? false;
 
   /// "NEXT TARGET, UTME 2027" hero title from the onboarding pick.
+  /// Mock Exam Setup is a JAMBite product: this gates it everywhere.
+  bool get isJambFocus =>
+      (me?.profile?.exams.firstOrNull?.toUpperCase() ?? '').contains('JAMB');
+
+  /// Tertiary students get the university home (Stitch
+  /// university_home_dashboard_light) instead of the JAMB launcher.
+  bool get isTertiaryFocus =>
+      (me?.profile?.exams.firstOrNull ?? '').contains('University');
+
   String get targetTitle {
     final p = me?.profile;
     if (p == null || p.exams.isEmpty) return 'Set your target';

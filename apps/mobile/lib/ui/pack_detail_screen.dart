@@ -104,7 +104,7 @@ class _PackDetailScreenState extends State<PackDetailScreen> {
         sync.isSyncing && !downloaded && sync.phase == SyncPhase.syncing;
 
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -175,7 +175,7 @@ class _Header extends StatelessWidget {
         IconButton(
           onPressed: onBack,
           icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-          color: RenanceColors.ink,
+          color: context.ink,
         ),
         const SizedBox(width: 4),
         _SubjectIcon(exam: exam),
@@ -197,7 +197,7 @@ class _Header extends StatelessWidget {
                   if (exam.category.isNotEmpty) exam.category,
                 ].join(' · '),
                 style: RenanceText.labelMono.copyWith(
-                  color: RenanceColors.textSecondary,
+                  color: context.textSecondary,
                 ),
               ),
             ],
@@ -229,10 +229,10 @@ class _SubjectIcon extends StatelessWidget {
       width: 48,
       height: 48,
       decoration: BoxDecoration(
-        color: RenanceColors.surfaceContainerHigh,
+        color: context.cardHigh,
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Icon(icon, color: RenanceColors.ink, size: 24),
+      child: Icon(icon, color: context.ink, size: 24),
     );
   }
 }
@@ -278,7 +278,7 @@ class _StatsGrid extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: RenanceText.labelMono.copyWith(
                       fontSize: 10,
-                      color: RenanceColors.textSecondary,
+                      color: context.textSecondary,
                     ),
                   ),
                 ],
@@ -324,14 +324,14 @@ class _OfflineCard extends StatelessWidget {
                 Icons.cloud_download_outlined,
                 'Not on this device yet',
                 'Tap download to keep this pack available without data.',
-                RenanceColors.textSecondary,
+                context.textSecondary,
               );
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: RenanceColors.surfaceContainerLow,
+        color: context.cardLow,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: RenanceColors.outlineLight),
+        border: Border.all(color: context.outlineLight),
       ),
       child: Row(
         children: <Widget>[
@@ -353,7 +353,7 @@ class _OfflineCard extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   body,
-                  style: RenanceText.caption,
+                  style: RenanceText.caption.copyWith(color: context.textSecondary),
                 ),
               ],
             ),
@@ -362,7 +362,7 @@ class _OfflineCard extends StatelessWidget {
             TextButton(
               onPressed: onDownload,
               style: TextButton.styleFrom(
-                foregroundColor: RenanceColors.ink,
+                foregroundColor: context.ink,
                 textStyle: RenanceText.bodyMedium,
               ),
               child: const Text('Download'),
@@ -421,9 +421,9 @@ class _TopicCoverage extends StatelessWidget {
                           ? 0
                           : (topics[i].$2 / total).clamp(0.0, 1.0),
                       minHeight: 5,
-                      backgroundColor: RenanceColors.surfaceContainerHigh,
+                      backgroundColor: context.cardHigh,
                       valueColor: AlwaysStoppedAnimation<Color>(
-                        RenanceColors.ink,
+                        context.ink,
                       ),
                     ),
                   ),
@@ -445,7 +445,7 @@ class _TopicCoverage extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: Text(
                 '+${topics.length - 8} more topics on the syllabus map',
-                style: RenanceText.caption,
+                style: RenanceText.caption.copyWith(color: context.textSecondary),
               ),
             ),
         ],

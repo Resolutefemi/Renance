@@ -47,7 +47,7 @@ function PracticeSettingsInner() {
     if (pack) {
       router.push(`/exams/${encodeURIComponent(pack)}?${overrides.toString()}`);
     } else {
-      router.push('/dashboard#packs');
+      router.push('/packs');
     }
   }
 
