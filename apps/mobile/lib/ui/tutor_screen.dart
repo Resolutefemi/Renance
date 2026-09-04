@@ -75,7 +75,7 @@ class _TutorEntryScreenState extends State<TutorEntryScreen> {
                     const Icon(
                       Icons.smart_toy,
                       size: 40,
-                      color: RenanceColors.violet,
+                      color: RenanceColors.ink,
                     ),
                     const SizedBox(height: 14),
                     Text(
@@ -141,7 +141,7 @@ class _PaperRow extends StatelessWidget {
               const Icon(
                 Icons.smart_toy,
                 size: 20,
-                color: RenanceColors.violet,
+                color: RenanceColors.ink,
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -473,7 +473,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                       selected: widget.questions[i].questionId == _qid,
                       onSelected: (_) =>
                           setState(() => _qid = widget.questions[i].questionId),
-                      selectedColor: RenanceColors.violet,
+                      selectedColor: RenanceColors.ink,
                       labelStyle: TextStyle(
                         fontSize: 12,
                         color: widget.questions[i].questionId == _qid
@@ -594,7 +594,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                         ),
                         decoration: BoxDecoration(
                           color: mode == 'ai'
-                              ? RenanceColors.violet
+                              ? RenanceColors.ink
                               : RenanceColors.surfaceContainerLow,
                           borderRadius: BorderRadius.circular(999),
                         ),
@@ -652,7 +652,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                         icon: const Icon(
                           Icons.send,
                           size: 20,
-                          color: RenanceColors.violet,
+                          color: RenanceColors.ink,
                         ),
                       ),
                     ],
@@ -683,7 +683,7 @@ class _Bubble extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         constraints: const BoxConstraints(maxWidth: 340),
         decoration: BoxDecoration(
-          color: user ? RenanceColors.ink : const Color(0x1A8B5CF6),
+          color: user ? RenanceColors.ink : const Color(0x14111C2D),
           borderRadius: BorderRadius.circular(14),
         ),
         child: Text(

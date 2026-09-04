@@ -113,7 +113,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       feed.add(FeedItem(
         key: 'lesson-${lesson.slug}',
         icon: Icons.menu_book,
-        tint: RenanceColors.violet,
+        tint: RenanceColors.ink,
         title: lesson.title,
         body: lesson.summary.isEmpty
             ? '${lesson.minutes} min read'
@@ -140,7 +140,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         'perfect_paper' => (
             'Flawless',
             Icons.workspace_premium,
-            RenanceColors.violet
+            RenanceColors.ink
           ),
         'streak_3' => (
             'Warming Up',
@@ -155,7 +155,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         'streak_30' => (
             'Unstoppable',
             Icons.rocket_launch,
-            RenanceColors.violet
+            RenanceColors.ink
           ),
         _ => ('Badge', Icons.emoji_events, RenanceColors.ink),
       };

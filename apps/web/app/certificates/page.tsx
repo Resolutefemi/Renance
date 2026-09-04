@@ -33,7 +33,7 @@ const MILESTONES: ReadonlyArray<{
   locked?: boolean;
 }> = [
   { eyebrow: 'Level 6', title: 'Consistency 50', icon: 'shield', art: 'from-[#E7EEFF] to-[#F0F3FF]' },
-  { eyebrow: 'Milestone', title: '10k Mastery', icon: 'diamond', art: 'from-[#E9DDFF] to-[#F3EEFF]' },
+  { eyebrow: 'Milestone', title: '10k Mastery', icon: 'diamond', art: 'from-[#D8E3FB] to-[#F0F3FF]' },
   { eyebrow: 'Foundation', title: 'First 100 XP', icon: 'menu_book', art: 'from-[#DAE2FC] to-[#EEF2FF]' },
   { eyebrow: 'Exam board', title: 'Distinction', icon: 'workspace_premium', art: 'from-[#D0E1FB] to-[#EDF3FF]', locked: true },
 ];

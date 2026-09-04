@@ -337,7 +337,7 @@ export default function ExamPage({ code }: { code: string }) {
           <div className="mx-auto mt-5 flex w-full max-w-xs items-center justify-between rounded-xl border border-outline-variant bg-surface-container-low px-4 py-2.5">
             <div className="flex items-center gap-2 text-left">
               <span
-                className={`material-symbols-outlined text-[18px] ${adaptive ? 'text-accent-violet' : 'text-outline-dark'}`}
+                className={`material-symbols-outlined text-[18px] ${adaptive ? 'text-accent-ink' : 'text-outline-dark'}`}
               >
                 auto_awesome
               </span>
@@ -580,7 +580,7 @@ export default function ExamPage({ code }: { code: string }) {
         <div
           className={`rounded-lg border px-4 py-1.5 font-mono text-sm ${
             breakLeft > 0
-              ? 'border-accent-violet text-accent-violet'
+              ? 'border-accent-ink text-accent-ink'
               : remaining !== null && remaining < 60
                 ? 'border-error bg-error-container text-on-error-container'
                 : 'border-outline-variant text-on-surface'

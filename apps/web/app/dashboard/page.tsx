@@ -214,7 +214,7 @@ export default function DashboardPage() {
         {/* Hero progress card ------------------------------------------- */}
         <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
           <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/5" />
-          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-accent-violet/5" />
+          <div className="absolute -bottom-14 -left-12 h-28 w-28 rounded-full bg-accent-ink/5" />
           <div className="relative z-10 flex items-start justify-between gap-4">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant">Next Target</p>
@@ -222,7 +222,7 @@ export default function DashboardPage() {
             </div>
             <div className="text-right">
               <p className="font-mono text-[11px] uppercase tracking-wider text-on-surface-variant">Countdown</p>
-              <p className="text-sm font-semibold text-accent-violet">
+              <p className="text-sm font-semibold text-accent-ink">
                 {days == null ? 'Set a year' : days <= 0 ? 'This month' : `${days} Days`}
               </p>
             </div>
@@ -261,8 +261,8 @@ export default function DashboardPage() {
           href="/exams/setup"
           className="flex items-center gap-3 rounded-xl bg-dark-surface p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
         >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-accent-violet/15">
-            <span className="material-symbols-outlined text-[22px] text-accent-violet">timer</span>
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-accent-ink/15">
+            <span className="material-symbols-outlined text-[22px] text-accent-ink">timer</span>
           </div>
           <div className="min-w-0 flex-1">
             <p className="text-[15px] font-semibold text-dark-text-primary">Mock Exam Setup</p>
@@ -290,7 +290,7 @@ export default function DashboardPage() {
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="trending_up" label="Progress" href="/progress" />
               <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
-              <LauncherTile icon="smart_toy" label="Tutor" violet soon />
+              <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
               <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
             </div>
           </section>
@@ -402,7 +402,7 @@ function LauncherTile({
   href,
   badge,
   amber,
-  violet,
+  inverse,
   muted,
   soon,
   onMore,
@@ -412,7 +412,7 @@ function LauncherTile({
   href?: string;
   badge?: number;
   amber?: boolean;
-  violet?: boolean;
+  inverse?: boolean;
   muted?: boolean;
   soon?: boolean;
   onMore?: () => void;
@@ -421,14 +421,14 @@ function LauncherTile({
     <>
       <div
         className={`relative flex h-14 w-14 items-center justify-center rounded-[18px] transition-transform group-active:scale-95 ${
-          violet
-            ? 'bg-accent-violet text-white shadow-[0_2px_8px_0_rgba(139,92,246,0.25)]'
+          inverse
+            ? 'bg-accent-ink text-white shadow-[0_2px_8px_0_rgba(17,28,45,0.25)]'
             : muted
               ? 'border border-outline-light/30 bg-surface-container text-on-surface-variant'
               : 'bg-card text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]'
-        } ${violet ? 'overflow-hidden' : ''}`}
+        } ${inverse ? 'overflow-hidden' : ''}`}
       >
-        {violet && <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/20" />}
+        {inverse && <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/20" />}
         <span className={`material-symbols-outlined relative z-10 ${amber ? 'text-accent-amber' : ''}`}>{icon}</span>
         {badge != null && (
           <span className="absolute -right-1.5 -top-1.5 rounded-full bg-accent-emerald px-1.5 py-0.5 font-mono text-[10px] font-bold text-white shadow-sm">
@@ -438,7 +438,7 @@ function LauncherTile({
       </div>
       <span
         className={`w-full truncate text-center text-[11px] ${
-          violet ? 'font-semibold text-accent-violet' : 'text-on-surface-variant'
+          inverse ? 'font-semibold text-accent-ink' : 'text-on-surface-variant'
         }`}
       >
         {label}

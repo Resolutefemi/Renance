@@ -129,8 +129,8 @@ body {
 @theme {
   --color-accent-amber: #f59e0b;
   --color-accent-emerald: #10b981;
-  --color-accent-violet: #8b5cf6;
-  --color-violet-deep: #23005c;
+  --color-accent-ink: #111c2d;
+  --color-ink-deep: #131b2e;
   --color-dark-surface: #131b2e;
   --color-dark-surface-low: #17223b;
   --color-dark-text-primary: #f0f3ff;
@@ -140,7 +140,7 @@ body {
   --color-inverse-on-surface: #ecf1ff;
   --color-amber-tint: #fff3d6;
   --color-emerald-tint: #e8f5e9;
-  --color-violet-tint: #e9ddff;
+  --color-ink-tint: #e7eeff;
 }
 
 /* Material Symbols ligatures — same icon system as the Stitch designs. */

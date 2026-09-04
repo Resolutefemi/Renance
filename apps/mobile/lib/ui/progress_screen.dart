@@ -16,7 +16,7 @@ import 'theme.dart';
 // Pastel badge tints from the design library (badge_detail_light).
 const Color _kBlueTint = Color(0xFFD0E1FB); // selection-blue
 const Color _kEmeraldTint = Color(0xFFE8F5E9);
-const Color _kVioletTint = Color(0xFFE9DDFF); // tertiary-fixed
+const Color _kBadgeTint = Color(0xFFE7EEFF); // surface-container
 const Color _kAmberTint = Color(0xFFFFF3D6); // amber/20 on white
 
 /// One row of the badge catalog. Colors: circle background / foreground.
@@ -42,13 +42,13 @@ const List<_BadgeSpec> _kBadgeCatalog = <_BadgeSpec>[
   _BadgeSpec('century', 'Century', Icons.emoji_events, _kEmeraldTint,
       RenanceColors.emerald, 'Answer 100 questions correctly'),
   _BadgeSpec('perfect_paper', 'Flawless', Icons.workspace_premium,
-      _kVioletTint, RenanceColors.violet, 'Score 100% on a full exam'),
+      _kBadgeTint, RenanceColors.ink, 'Score 100% on a full exam'),
   _BadgeSpec('streak_7', 'On Fire', Icons.local_fire_department, _kAmberTint,
       RenanceColors.amber, 'Keep a 7-day streak'),
   _BadgeSpec('xp_2000', 'Champion', Icons.military_tech, _kAmberTint,
       RenanceColors.amber, 'Earn 2,000 XP'),
-  _BadgeSpec('streak_30', 'Unstoppable', Icons.rocket_launch, _kVioletTint,
-      RenanceColors.violet, 'Keep a 30-day streak'),
+  _BadgeSpec('streak_30', 'Unstoppable', Icons.rocket_launch, _kBadgeTint,
+      RenanceColors.ink, 'Keep a 30-day streak'),
 ];
 
 class ProgressScreen extends StatefulWidget {

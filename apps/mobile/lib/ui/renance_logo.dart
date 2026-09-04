@@ -1,22 +1,31 @@
 /// The Renance logomark, the ONLY progress visual in the product.
 /// Founder rule: standard circular progress indicators are replaced by a
-/// custom vectorized animation of the logomark, pulsing and shifting
-/// opacities during fetching/processing (Bybit-style brand transition).
+/// custom animation of the logomark, pulsing and shifting opacities during
+/// fetching/processing (Bybit-style brand transition).
 ///
-/// Drawn natively with CustomPainter so it stays crisp on every density.
+/// The mark itself is the official Stitch brand sheet extraction
+/// (design/stitch/screen.png, R cut out with a transparent background by
+/// scripts/make_brand.py). Two tones ship: the ink navy original for light
+/// surfaces and a white cut for dark containers (`onDark: true`).
 library;
 
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import 'theme.dart';
-
 class RenanceMark extends StatefulWidget {
-  const RenanceMark({super.key, this.size = 44, this.busy = false});
+  const RenanceMark({
+    super.key,
+    this.size = 44,
+    this.busy = false,
+    this.onDark = false,
+  });
 
   final double size;
   final bool busy;
+
+  /// Set when the mark sits on a dark container so the white cut is used.
+  final bool onDark;
 
   @override
   State<RenanceMark> createState() => _RenanceMarkState();
@@ -43,11 +52,30 @@ class _RenanceMarkState extends State<RenanceMark>
         final double t = _controller.value;
         final double amplitude = widget.busy ? 0.06 : 0.03;
         final double scale = 1 - amplitude * math.sin(t * 2 * math.pi);
-        return Transform.scale(
-          scale: scale,
-          child: CustomPaint(
-            size: Size(widget.size, widget.size),
-            painter: _MarkPainter(t: t, busy: widget.busy),
+        return SizedBox(
+          width: widget.size,
+          height: widget.size,
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              if (widget.busy)
+                CustomPaint(
+                  size: Size(widget.size, widget.size),
+                  painter: _OrbitPainter(t: t),
+                ),
+              Transform.scale(
+                scale: scale,
+                child: Image.asset(
+                  widget.onDark
+                      ? 'assets/brand/renance_mark_white.png'
+                      : 'assets/brand/renance_mark.png',
+                  width: widget.size * 0.86,
+                  height: widget.size * 0.86,
+                  filterQuality: FilterQuality.medium,
+                  semanticLabel: 'Renance',
+                ),
+              ),
+            ],
           ),
         );
       },
@@ -55,75 +83,35 @@ class _RenanceMarkState extends State<RenanceMark>
   }
 }
 
-class _MarkPainter extends CustomPainter {
-  _MarkPainter({required this.t, required this.busy});
+/// Three emerald orbit arcs chasing each other, opacity phase-shifted.
+class _OrbitPainter extends CustomPainter {
+  _OrbitPainter({required this.t});
 
   final double t;
-  final bool busy;
 
   @override
   void paint(Canvas canvas, Size size) {
     canvas.scale(size.width / 64, size.height / 64);
-
-    if (busy) {
-      // three orbit arcs chasing each other, opacity phase-shifted
-      final Rect orbit = Rect.fromCircle(
-        center: const Offset(32, 32),
-        radius: 30,
-      );
-      for (var i = 0; i < 3; i++) {
-        final double phase = (t - i / 3.0) % 1.0;
-        final double opacity = 0.15 + 0.85 * math.sin(phase * 2 * math.pi).abs();
-        final Paint arcPaint = Paint()
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 2.6
-          ..strokeCap = StrokeCap.round
-          ..color = RenanceColors.emerald.withValues(alpha: opacity);
-        canvas.drawArc(orbit, i * 2 * math.pi / 3 - math.pi / 2, 0.9, false, arcPaint);
-      }
-    }
-
-    // gradient tile
-    final Rect tile = Rect.fromLTWH(2, 2, 60, 60);
-    final Paint tilePaint = Paint()
-      ..shader = const LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: <Color>[Color(0xFF8B5CF6), Color(0xFF10B981)],
-      ).createShader(tile);
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(tile, const Radius.circular(16)),
-      tilePaint,
+    const Color emerald = Color(0xFF10B981);
+    final Rect orbit = Rect.fromCircle(
+      center: const Offset(32, 32),
+      radius: 30,
     );
-
-    // the R (matches the web SVG geometry: M22 47 V17 H34 a9.5 0 0 1 0 19 H22 M35 36 L47 47)
-    final Path rPath = Path()
-      ..moveTo(22, 47)
-      ..lineTo(22, 17)
-      ..lineTo(34, 17)
-      ..arcToPoint(
-        const Offset(34, 36),
-        radius: const Radius.circular(9.5),
-        clockwise: true,
-      )
-      ..lineTo(22, 36);
-    final Path legPath = Path()
-      ..moveTo(35, 36)
-      ..lineTo(47, 47);
-
-    final Paint stroke = Paint()
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 6
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round
-      ..color = Colors.white;
-    canvas.drawPath(rPath, stroke);
-    canvas.drawPath(legPath, stroke);
+    for (var i = 0; i < 3; i++) {
+      final double phase = (t - i / 3.0) % 1.0;
+      final double opacity = 0.15 + 0.85 * math.sin(phase * 2 * math.pi).abs();
+      final Paint arcPaint = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.6
+        ..strokeCap = StrokeCap.round
+        ..color = emerald.withValues(alpha: opacity);
+      canvas.drawArc(
+          orbit, i * 2 * math.pi / 3 - math.pi / 2, 0.9, false, arcPaint);
+    }
   }
 
   @override
-  bool shouldRepaint(_MarkPainter oldDelegate) =>
-      oldDelegate.t != t || oldDelegate.busy != busy;
+  bool shouldRepaint(_OrbitPainter oldDelegate) => oldDelegate.t != t;
 }
 
 /// Mark + label row used wherever a spinner would have gone.
@@ -133,25 +121,27 @@ class LogoActivityIndicator extends StatelessWidget {
     this.label,
     this.size = 40,
     this.busy = true,
+    this.onDark = false,
   });
 
   final String? label;
   final double size;
   final bool busy;
+  final bool onDark;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        RenanceMark(size: size, busy: busy),
+        RenanceMark(size: size, busy: busy, onDark: onDark),
         if (label != null) ...<Widget>[
           const SizedBox(width: 12),
           Flexible(
             child: Text(
               label!,
               style: const TextStyle(
-                color: RenanceColors.textSecondary,
+                color: Color(0xFF45464D),
                 fontSize: 14,
               ),
             ),

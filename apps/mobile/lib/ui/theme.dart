@@ -34,8 +34,6 @@ class RenanceColors {
   static const Color errorContainer = Color(0xFFFFDAD6);
 
   // Accents
-  static const Color violet = Color(0xFF8B5CF6);
-  static const Color violetDeep = Color(0xFF23005C);
   static const Color emerald = Color(0xFF10B981);
   static const Color amber = Color(0xFFF59E0B);
 

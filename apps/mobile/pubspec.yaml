@@ -24,6 +24,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/brand/renance_mark.png
+    - assets/brand/renance_mark_white.png
   fonts:
     - family: Inter
       fonts:

@@ -33,8 +33,8 @@ const SUBJECTS: Subject[] = [
     id: 'english',
     name: 'Use of English',
     letter: 'E',
-    letterClass: 'text-accent-violet',
-    avatarClass: 'bg-accent-violet/10',
+    letterClass: 'text-accent-ink',
+    avatarClass: 'bg-accent-ink/10',
     mandatory: true,
   },
   {
@@ -76,7 +76,7 @@ export default function ExamSetupPage() {
           {/* Header Area */}
           <div className="flex flex-col gap-2 pb-4 pt-6">
             <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-[24px] text-accent-violet">timer</span>
+              <span className="material-symbols-outlined text-[24px] text-accent-ink">timer</span>
               <h1 className="text-[28px] font-bold leading-9 tracking-[-0.02em] text-on-surface">
                 Mock Exam Setup
               </h1>
