@@ -501,7 +501,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
               children: <Widget>[
                 if (q.topic.isNotEmpty)
                   Text(
-                    'Topic: ${q.topic}',
+                    q.topic,
                     style: RenanceText.labelMono.copyWith(fontSize: 11),
                   ),
                 const SizedBox(height: 4),
@@ -511,6 +511,21 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                     fontSize: 13,
                     height: 1.45,
                   ),
+                ),
+                // ai_tutor_light 1:1: the picked-vs-correct comparison.
+                const SizedBox(height: 10),
+                _PickedCorrectRow(
+                  label:
+                      'You picked ${q.selected.isEmpty ? 'nothing' : q.selected}: ${q.selected.isEmpty ? 'you skipped this one' : (q.options[q.selected] ?? '')}',
+                  good: false,
+                  dim: q.selected.isEmpty,
+                ),
+                const SizedBox(height: 6),
+                _PickedCorrectRow(
+                  label:
+                      'Correct: ${q.correct}: ${q.options[q.correct] ?? ''}',
+                  good: true,
+                  dim: false,
                 ),
               ],
             ),
@@ -534,9 +549,9 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                     runSpacing: 8,
                     children: <Widget>[
                       for (final String s in const <String>[
-                        'Why is my answer wrong?',
-                        'Give me a hint without the answer',
-                        'Explain the topic simply',
+                        'Give me a hint',
+                        'Explain simply',
+                        'Show the rule',
                       ])
                         ActionChip(
                           label: Text(s, style: const TextStyle(fontSize: 12)),
@@ -663,6 +678,48 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// One row of the picked/correct comparison (ai_tutor_light).
+class _PickedCorrectRow extends StatelessWidget {
+  const _PickedCorrectRow({
+    required this.label,
+    required this.good,
+    required this.dim,
+  });
+
+  final String label;
+  final bool good;
+  final bool dim;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Icon(
+          good ? Icons.check_circle : (dim ? Icons.circle_outlined : Icons.cancel),
+          size: 16,
+          color: dim
+              ? context.textSecondary
+              : good
+                  ? RenanceColors.emerald
+                  : context.error,
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            label,
+            style: RenanceText.bodyBase.copyWith(
+              fontSize: 13,
+              height: 1.4,
+              color: dim ? context.textSecondary : context.ink,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

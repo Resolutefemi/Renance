@@ -281,7 +281,7 @@ class _WideRail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 108,
-      color: Colors.white,
+      color: context.card,
       child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -329,7 +329,7 @@ class _WideRail extends StatelessWidget {
                               i == active ? _items[i].$2 : _items[i].$1,
                               size: 24,
                               color: i == active
-                                  ? Colors.black
+                                  ? context.ink
                                   : context.textSecondary,
                             ),
                             if (i == 2 && reviewBadge > 0)
@@ -364,7 +364,7 @@ class _WideRail extends StatelessWidget {
                             fontFamily: 'Inter',
                             fontSize: 12,
                             color: i == active
-                                ? Colors.black
+                                ? context.ink
                                 : context.textSecondary,
                             fontWeight: i == active
                                 ? FontWeight.w600
@@ -659,7 +659,7 @@ class HomeNav extends StatelessWidget {
     final double bottomPad = MediaQuery.paddingOf(context).bottom;
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.card,
         borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -689,7 +689,7 @@ class HomeNav extends StatelessWidget {
                             i == active ? _items[i].$2 : _items[i].$1,
                             size: 24,
                             color: i == active
-                                ? Colors.black
+                                ? context.ink
                                 : context.textSecondary,
                           ),
                           if (i == 2 && reviewBadge > 0)
@@ -725,7 +725,7 @@ class HomeNav extends StatelessWidget {
                           fontSize: 12,
                           height: 1.0,
                           color: i == active
-                              ? Colors.black
+                              ? context.ink
                               : context.textSecondary,
                           fontWeight: i == active
                               ? FontWeight.w600
@@ -739,7 +739,7 @@ class HomeNav extends StatelessWidget {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: i == active
-                              ? Colors.black
+                              ? context.ink
                               : Colors.transparent,
                         ),
                       ),

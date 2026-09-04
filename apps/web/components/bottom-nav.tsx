@@ -22,7 +22,7 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 rounded-t-xl bg-white/90 shadow-[0_-1px_8px_rgba(0,0,0,0.04)] backdrop-blur-xl md:hidden">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 rounded-t-xl bg-card/90 shadow-[0_-1px_8px_rgba(0,0,0,0.04)] backdrop-blur-xl md:hidden">
       <div className="flex h-16 items-center justify-between px-4">
         {TABS.map((tab) => {
           const active = tab.match != null && pathname === tab.match;
