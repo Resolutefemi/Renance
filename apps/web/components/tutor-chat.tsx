@@ -26,9 +26,9 @@ interface Turn {
 }
 
 const SUGGESTIONS = [
-  'Why is my answer wrong?',
-  'Give me a hint without the answer',
-  'Explain the topic simply',
+  'Give me a hint',
+  'Explain simply',
+  'Show the rule',
 ];
 
 export default function TutorChat({
