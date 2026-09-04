@@ -11,7 +11,7 @@ import { renderInline } from '@/lib/inline';
 
 export const dynamic = 'force-static';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://resolutefemi.github.io/Renance';
+import { SITE_URL } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Lessons — exam-ready study notes for JAMB, WAEC & NECO',
