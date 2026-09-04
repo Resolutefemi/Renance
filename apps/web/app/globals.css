@@ -109,6 +109,12 @@ body {
   50% { transform: scaleY(1); }
 }
 
+/* Badge detail progress rail shine (badge_detail_light). */
+@keyframes renance-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 .renance-breathe { animation: renance-breathe 1.8s ease-in-out infinite; }
 .renance-breathe-fast { animation: renance-breathe 0.9s ease-in-out infinite; }
 .renance-orbit { animation: renance-orbit 2.4s linear infinite; transform-origin: center; }
