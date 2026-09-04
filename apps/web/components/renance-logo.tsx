@@ -1,11 +1,11 @@
 'use client';
 
 /**
- * Renance logomark — the ONLY loading/progress visual in the product.
+ * Renance logomark, the ONLY loading/progress visual in the product.
  * (Founder spec: "Standard circular progress indicators are completely
  * replaced with a custom vectorized animation of the Renance logomark,
  * pulsing and shifting opacities dynamically during background fetching
- * or data processing states." — Bybit-style brand transition.)
+ * or data processing states.", Bybit-style brand transition.)
  *
  * states:
  *  - idle    : the mark breathes softly
@@ -30,7 +30,7 @@ export function RenanceMark({
       className="relative inline-flex items-center justify-center align-middle"
       style={{ width: size, height: size }}
     >
-      {/* orbit arcs — only while busy */}
+      {/* orbit arcs, only while busy */}
       {state !== 'idle' && (
         <svg
           viewBox="0 0 64 64"

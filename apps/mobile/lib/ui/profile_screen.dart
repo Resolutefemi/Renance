@@ -1,4 +1,4 @@
-/// Profile tab — the Stitch profile_light screen, 1:1.
+/// Profile tab, the Stitch profile_light screen, 1:1.
 ///
 /// Header card: 80px avatar with the violet Lvl badge, display-md name,
 /// @username + target chip, and the XP / Streak / Accuracy stat strip.
@@ -183,7 +183,7 @@ class ProfileScreen extends StatelessWidget {
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                   content: Text(
-                      'The certificate wallet is designed — it lands with the exam board.')));
+                      'The certificate wallet is designed, it lands with the exam board.')));
             },
           ),
         ]),

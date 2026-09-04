@@ -5,7 +5,7 @@ import { loadLesson, loadLessons } from '@/lib/site-data';
 import { renderInline } from '@/lib/inline';
 
 /**
- * /lessons/[slug] — one lesson, baked at build time from the committed
+ * /lessons/[slug]: one lesson, baked at build time from the committed
  * data/lessons bundle. Each page ships Article structured data so Google
  * can surface it as study content.
  */
@@ -26,7 +26,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const les = loadLesson(slug);
   if (!les) return { title: 'Lesson not found' };
-  const title = `${les.title} — ${les.subject ?? 'study'} lesson`;
+  const title = `${les.title} | ${les.subject ?? 'study'} lesson`;
   return {
     title,
     description: les.summary,

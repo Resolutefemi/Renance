@@ -8,7 +8,7 @@ import ExamClient from './exam-client';
  * Static export (`output: 'export'`) requires every dynamic route to be
  * pinned at build time, so pack URLs are generated from the committed
  * data/manifest.json. Adding a pack ships in the same commit as its
- * manifest entry and the Pages rebuild — the sets can never drift.
+ * manifest entry and the Pages rebuild, so the sets can never drift.
  */
 
 function manifestCodes(): string[] {

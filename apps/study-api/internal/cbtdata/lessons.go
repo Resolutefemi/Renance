@@ -1,4 +1,4 @@
-// Lessons (ROADMAP #8) — mdx-built study lessons served like exam packs:
+// Lessons (ROADMAP #8), mdx-built study lessons served like exam packs:
 // data/lessons/{slug}.json, loaded and validated at boot.
 //
 // Lessons are authored prose (no answer material by construction), so the
@@ -24,7 +24,7 @@ var lessonSlugRE = regexp.MustCompile(`^[a-z0-9]+(-[a-z0-9]+)*$`)
 // "p" (paragraph), "ul" (bullet list), "ol" (numbered list), "callout"
 // (key-point quote) or "h3" (sub-heading). Text and items carry
 // lightweight inline markers (**bold**, *italic*, `code`) that clients
-// render with their own inline renderer — never raw HTML.
+// render with their own inline renderer, never raw HTML.
 type Block struct {
 	Type  string   `json:"type"`
 	Text  string   `json:"text,omitempty"`
@@ -62,7 +62,7 @@ type LessonMeta struct {
 	Summary string   `json:"summary"`
 }
 
-// loadLessons scans dataDir/lessons/*.json. The directory is optional —
+// loadLessons scans dataDir/lessons/*.json. The directory is optional ,
 // an install with no lessons boots fine and serves an empty list, but a
 // lesson that IS present must be fully valid.
 func (l *Library) loadLessons(dataDir string) error {

@@ -3,7 +3,7 @@
 // Design: the DB row is the single source of truth; the pure helpers below
 // (NextStreak, BadgesFor) carry all rules so they are unit-testable without
 // a database. ApplyGrade applies them transactionally on every graded
-// attempt — called from the grading engine, never from the request path.
+// attempt, called from the grading engine, never from the request path.
 package store
 
 import (
@@ -59,7 +59,7 @@ func NextStreak(current int, lastActive, today time.Time) int {
 	}
 }
 
-// LevelFor: a light curve — 500 XP per level, never below 1.
+// LevelFor: a light curve, 500 XP per level, never below 1.
 func LevelFor(totalXP int) int {
 	if totalXP < 0 {
 		totalXP = 0
@@ -111,7 +111,7 @@ func (s *Store) ApplyGrade(ctx context.Context, userID string, lastScore, lastTo
 		if !errors.Is(err, pgx.ErrNoRows) {
 			return nil, err
 		}
-		// First ever grade — zeroed state.
+		// First ever grade, zeroed state.
 		current, best, xp, correct, attempts = 0, 0, 0, 0, 0
 	}
 

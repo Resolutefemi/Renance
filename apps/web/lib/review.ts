@@ -27,7 +27,7 @@ export interface ReviewSummary {
   stats: ReviewStats;
 }
 
-/** Overdue / due / later — the preview status the design renders. */
+/** Overdue / due / later, the preview status the design renders. */
 export function reviewStatus(item: ReviewItem, now = new Date()): 'overdue' | 'due' | 'later' {
   const due = new Date(`${item.dueOn}T00:00:00Z`);
   if (Number.isNaN(due.getTime())) return 'due';

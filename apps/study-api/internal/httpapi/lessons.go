@@ -1,7 +1,7 @@
 // Lesson endpoints (ROADMAP #8).
 //
-// GET /lessons        — lesson list (meta only, list views + SEO cards)
-// GET /lessons/{slug} — one lesson with full sections
+// GET /lessons       , lesson list (meta only, list views + SEO cards)
+// GET /lessons/{slug}, one lesson with full sections
 package httpapi
 
 import (

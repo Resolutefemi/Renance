@@ -1,4 +1,4 @@
-/// Progress — the gamification hub (design: gamification_hub_light).
+/// Progress, the gamification hub (design: gamification_hub_light).
 /// Streak hero with a live 7-day dot row, level card with XP progress,
 /// the 8-badge grid (earned vs locked) and the recent-awards ledger.
 /// Data: GET /me/gamification; RenanceMark is the only loader.
@@ -29,7 +29,7 @@ class _BadgeSpec {
   final String hint;
 }
 
-/// Mirrors the server's BadgesFor codes — keep in sync with
+/// Mirrors the server's BadgesFor codes, keep in sync with
 /// apps/study-api/internal/store/gamification.go.
 const List<_BadgeSpec> _kBadgeCatalog = <_BadgeSpec>[
   _BadgeSpec('first_blood', 'First Blood', Icons.flag, _kBlueTint,

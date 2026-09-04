@@ -1,5 +1,5 @@
 // Syllabus map (ROADMAP #4): the curriculum tree annotated with the one
-// truth the product trusts — the student's own SM-2 memory state.
+// truth the product trusts, the student's own SM-2 memory state.
 //
 // GET /syllabus/{body} walks data/syllabus/<slug>.json and overlays, per
 // topic: how many questions the packs carry, the last paper's accuracy,
@@ -18,7 +18,7 @@ import (
 )
 
 // syllabusTopic is one node of the map. Accuracy is deliberately the
-// LAST paper's accuracy — fresh and honest — not a lifetime average the
+// LAST paper's accuracy, fresh and honest, not a lifetime average the
 // student can dilute.
 type syllabusTopic struct {
 	Topic       string  `json:"topic"`

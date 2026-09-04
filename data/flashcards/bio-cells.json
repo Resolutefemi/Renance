@@ -1,11 +1,11 @@
 {
   "code": "bio-cells",
-  "title": "Biology — The Cell",
+  "title": "Biology | The Cell",
   "subject": "Biology",
   "body": "JAMB",
   "cards": [
-    { "id": "bio-cells-001", "front": "What is the powerhouse of the cell?", "back": "The mitochondrion — it releases energy from glucose during respiration.", "hint": "Think energy release" },
-    { "id": "bio-cells-002", "front": "Which organelle controls all activities of the cell?", "back": "The nucleus — it houses the chromosomes and directs cell activity.", "hint": "Control centre" },
+    { "id": "bio-cells-001", "front": "What is the powerhouse of the cell?", "back": "The mitochondrion: it releases energy from glucose during respiration.", "hint": "Think energy release" },
+    { "id": "bio-cells-002", "front": "Which organelle controls all activities of the cell?", "back": "The nucleus: it houses the chromosomes and directs cell activity.", "hint": "Control centre" },
     { "id": "bio-cells-003", "front": "Define osmosis.", "back": "The movement of water molecules from a region of higher water potential to a region of lower water potential through a semi-permeable membrane.", "hint": "Water, membrane" },
     { "id": "bio-cells-004", "front": "Define diffusion.", "back": "The movement of particles from a region of higher concentration to a region of lower concentration until they are evenly spread.", "hint": "Concentration gradient" },
     { "id": "bio-cells-005", "front": "Which organelle is the site of protein synthesis?", "back": "The ribosome.", "hint": "Smallest organelle" },
@@ -13,7 +13,7 @@
     { "id": "bio-cells-007", "front": "State the word equation for photosynthesis.", "back": "Carbon dioxide + water, in the presence of light and chlorophyll, produce glucose and oxygen.", "hint": "Two raw materials, two products" },
     { "id": "bio-cells-008", "front": "What is the difference between plant and animal cell walls?", "back": "Plant cells have a rigid cellulose cell wall outside the membrane; animal cells have no cell wall.", "hint": "Only one kingdom has them" },
     { "id": "bio-cells-009", "front": "What process divides one cell nucleus into two identical nuclei?", "back": "Mitosis.", "hint": "Growth and repair" },
-    { "id": "bio-cells-010", "front": "Which cell structure controls what enters and leaves the cell?", "back": "The cell (plasma) membrane — it is partially permeable.", "hint": "Gatekeeper" },
+    { "id": "bio-cells-010", "front": "Which cell structure controls what enters and leaves the cell?", "back": "The cell (plasma) membrane: it is partially permeable.", "hint": "Gatekeeper" },
     { "id": "bio-cells-011", "front": "What is respiration?", "back": "The oxidation of food (glucose) in cells to release energy, carbon dioxide and water.", "hint": "Every living cell, all the time" },
     { "id": "bio-cells-012", "front": "Name the organelle that stores water and dissolved substances in plant cells.", "back": "The sap vacuole.", "hint": "Keeps cells firm" }
   ]

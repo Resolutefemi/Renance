@@ -170,7 +170,7 @@ export default function DashboardPage() {
         />
       )}
 
-      {/* Brand header — fixed, blurred, hairline shadow (home_dashboard) */}
+      {/* Brand header: fixed, blurred, hairline shadow (home_dashboard) */}
       <header className="fixed top-0 z-50 w-full border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
           <div className="flex items-center gap-2">
@@ -180,6 +180,13 @@ export default function DashboardPage() {
             <span className="text-2xl font-bold tracking-tight text-on-surface">Renance</span>
           </div>
           <div className="flex items-center gap-4">
+            <Link
+              href="/search"
+              aria-label="Search"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container text-on-surface transition hover:bg-surface-container-high"
+            >
+              <span className="material-symbols-outlined text-[18px]">search</span>
+            </Link>
             <div className="flex items-center gap-1 rounded-full bg-surface-container px-2 py-1">
               <span className="material-symbols-outlined fill-current text-[20px] text-accent-amber">local_fire_department</span>
               <span className="font-mono text-[13px] text-on-surface">{streak}</span>
@@ -356,7 +363,7 @@ function LauncherTile({
     return (
       <button
         type="button"
-        title={`${label} — ships in an upcoming release`}
+        title={`${label}: ships in an upcoming release`}
         className="group flex flex-col items-center gap-2 opacity-70"
       >
         {inner}
@@ -403,7 +410,7 @@ function ExamCard({ exam, ready }: { exam: ExamMeta; ready: boolean }) {
 }
 
 /* ----------------------------------------------------------------- */
-/* Contextual profile modal — first thing after auth, non-dismissable */
+/* Contextual profile modal: first thing after auth, non-dismissable */
 /* ----------------------------------------------------------------- */
 
 function ProfileModal({
@@ -576,7 +583,7 @@ function ProfileModal({
             className="flex w-full items-center justify-center gap-3 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
           >
             {busy && <RenanceMark size={22} state="busy" />}
-            {busy ? 'Saving…' : 'Done — start syncing'}
+            {busy ? 'Saving…' : 'Done, start syncing'}
           </button>
         </form>
       </div>

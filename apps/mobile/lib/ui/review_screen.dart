@@ -1,10 +1,10 @@
-/// Review tab + answer review — Stitch review_queue_light and
+/// Review tab + answer review, Stitch review_queue_light and
 /// answer_review_light, adapted to real data.
 ///
 /// Tab: the amber spaced-repetition hero (real SM-2 due count from
 /// GET /me/review, estimated time, Start Review) plus the Queue Preview
 /// (due/overdue/upcoming topic rows) and the recent papers list. Detail:
-/// the post-grade answer review — You Picked vs Correct Answer,
+/// the post-grade answer review, You Picked vs Correct Answer,
 /// per-question explanations from the sealed keys, Wrong / Skipped / All
 /// filters.
 library;
@@ -71,7 +71,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                   const RenanceMark(size: 44),
                   const SizedBox(height: 12),
                   Text(
-                    'No papers yet — every paper you finish lands here '
+                    'No papers yet, every paper you finish lands here '
                     'with its wrong answers for review.',
                     textAlign: TextAlign.center,
                     style: RenanceText.bodySecondary,
@@ -106,7 +106,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
 }
 
 /// The amber spaced-repetition hero (review_queue_light): the real SM-2
-/// due count, estimated time, and Start Review — which opens the most
+/// due count, estimated time, and Start Review, which opens the most
 /// recent marked paper until a dedicated review-session player ships.
 class _ReviewQueueCard extends StatelessWidget {
   const _ReviewQueueCard({required this.student, required this.onStart});
@@ -118,7 +118,7 @@ class _ReviewQueueCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final ReviewSummary? queue = student.review;
 
-    // Queue still loading (or the call failed) — RenanceMark, never a
+    // Queue still loading (or the call failed), RenanceMark, never a
     // spinner, per the founder's only-loader rule.
     if (queue == null) {
       return Container(
@@ -457,7 +457,7 @@ class _PaperCard extends StatelessWidget {
               ),
             ),
             Text(
-              pct == null ? '—' : '$pct%',
+              pct == null ? '-' : '$pct%',
               style: RenanceText.statNumber.copyWith(color: pctColor),
             ),
             const SizedBox(width: 4),
@@ -619,7 +619,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                         child: Center(
                           child: Text(switch (_filter) {
                             _ReviewFilter.wrong =>
-                              'Nothing wrong here — flawless paper.',
+                              'Nothing wrong here, flawless paper.',
                             _ReviewFilter.skipped => 'No skipped questions.',
                             _ReviewFilter.all => 'No questions.',
                           }, style: RenanceText.bodySecondary),
@@ -766,7 +766,7 @@ class _ReviewCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 10),
               child: Text(
-                'Skipped — you left this one blank.',
+                'Skipped, you left this one blank.',
                 style: RenanceText.caption.copyWith(color: RenanceColors.amber),
               ),
             ),

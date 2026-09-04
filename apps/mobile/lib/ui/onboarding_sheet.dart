@@ -1,7 +1,7 @@
-/// Onboarding — the Stitch onboarding_light + exam_target_light flow.
+/// Onboarding, the Stitch onboarding_light + exam_target_light flow.
 ///
 /// Step 1: "Your exam, your plan" intro carousel page.
-/// Step 2: "What are you preparing for?" — the target list (JAMB UTME /
+/// Step 2: "What are you preparing for?", the target list (JAMB UTME /
 ///         WAEC / NECO / University course) + exam year chips.
 /// Step 3: the scholar's details (name / institution / level) the server
 ///         requires, then the profile lands and the silent sync kicks.
@@ -360,7 +360,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
             Expanded(
               child: FilledButton(
                 onPressed: (_detailsValid && !_busy) ? _submit : null,
-                child: Text(_busy ? 'Saving…' : 'Done — start syncing'),
+                child: Text(_busy ? 'Saving…' : 'Done, start syncing'),
               ),
             ),
           ],

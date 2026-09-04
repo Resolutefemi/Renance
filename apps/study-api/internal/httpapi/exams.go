@@ -9,7 +9,7 @@ func (s *Server) handleManifest(w http.ResponseWriter, r *http.Request) {
 }
 
 // handleBundle serves one student-safe bundle. Answer keys never route
-// through here — cbtdata already refused to boot if any leaked on disk.
+// through here, cbtdata already refused to boot if any leaked on disk.
 func (s *Server) handleBundle(w http.ResponseWriter, r *http.Request) {
 	code := r.PathValue("code")
 	bundle, ok := s.lib.Bundle(code)

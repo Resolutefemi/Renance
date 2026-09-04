@@ -191,7 +191,7 @@ func (s *Store) UpsertGoogleUser(ctx context.Context, googleSub, email, seed str
 		var pgErr *pgconn.PgError
 		if errors.As(err, &pgErr) && pgErr.Code == uniqueViolation {
 			// Could be the username index OR a concurrent login with
-			// the same google_sub winning the insert — re-check.
+			// the same google_sub winning the insert, re-check.
 			if linked := s.googleBySub(ctx, googleSub); linked != nil {
 				return linked, nil
 			}

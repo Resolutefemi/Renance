@@ -1,12 +1,12 @@
 // Flashcard endpoints (ROADMAP #7).
 //
-// GET  /flashcards            — deck list (meta only)
-// GET  /flashcards/{code}     — one deck with its cards (server-held
+// GET  /flashcards           , deck list (meta only)
+// GET  /flashcards/{code}    , one deck with its cards (server-held
 //
 //	content, same doctrine as bundles)
 //
-// GET  /me/cards/progress     — the student's Leitner state
-// POST /me/cards/progress     — batch grade, updated rows back
+// GET  /me/cards/progress    , the student's Leitner state
+// POST /me/cards/progress    , batch grade, updated rows back
 package httpapi
 
 import (

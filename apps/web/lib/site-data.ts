@@ -4,7 +4,7 @@ import path from 'node:path';
 /**
  * Build-time access to the committed data/ directory (same walk-up rule
  * as the exam route's manifestCodes). Static export bakes whatever the
- * commit contains — content and site can never drift between builds.
+ * commit contains, content and site can never drift between builds.
  */
 
 export interface LessonBlock {

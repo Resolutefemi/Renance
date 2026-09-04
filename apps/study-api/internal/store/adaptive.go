@@ -1,7 +1,7 @@
 // Adaptive ordering (ROADMAP #5): weak-topic-first question order.
 //
 // The insight the whole feature rides on: the review queue (ROADMAP #3)
-// already maintains a per-topic memory model — SM-2 ease, lapses, the
+// already maintains a per-topic memory model, SM-2 ease, lapses, the
 // last paper's accuracy and the due date. This file turns that signal
 // into an ordering with ONE pure, unit-tested rule (AdaptiveOrder); the
 // store method below it only reads the state the rule needs, and the
@@ -28,7 +28,7 @@ import (
 // mastered ones (weakness ~0).
 const UnseenWeakness = 1.25
 
-// OrderItem is the minimal question view the ordering rule needs —
+// OrderItem is the minimal question view the ordering rule needs ,
 // no dependency on cbtdata keeps the store layer self-contained.
 type OrderItem struct {
 	QuestionID string
@@ -48,10 +48,10 @@ type TopicState struct {
 // Weakness scores one SEEN topic (a review_queue row exists). Higher =
 // more urgent:
 //
-//	ease deficit (2.5 floor)  0..1.2   — the SM-2 memory strength
-//	+ (1 - lastAccuracy) * 2  0..2     — how the last paper went
-//	+ 0.5 * min(lapses, 4)    0..2     — repeated forgetting history
-//	+ 0.75 if due/overdue     0/0.75   — the queue says it's time
+//	ease deficit (2.5 floor)  0..1.2  , the SM-2 memory strength
+//	+ (1 - lastAccuracy) * 2  0..2    , how the last paper went
+//	+ 0.5 * min(lapses, 4)    0..2    , repeated forgetting history
+//	+ 0.75 if due/overdue     0/0.75  , the queue says it's time
 func Weakness(st TopicState, today time.Time) float64 {
 	acc := 1.0
 	if st.LastTotal > 0 {
@@ -74,7 +74,7 @@ func Weakness(st TopicState, today time.Time) float64 {
 }
 
 // AdaptiveOrder returns the question ids in weak-topic-first order.
-// Pure: same inputs, same paper — grading, review and forensics all
+// Pure: same inputs, same paper, grading, review and forensics all
 // replay the exact sequence. Unanswered/unknown topics keep stable
 // relative order (sort.SliceStable + original index as final key).
 func AdaptiveOrder(items []OrderItem, state map[string]TopicState, today time.Time) []string {

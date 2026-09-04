@@ -11,7 +11,7 @@ import 'package:http/http.dart' as http;
 import 'models.dart';
 
 /// The server answered with a defined error (400/401/404/409/...).
-/// Treat as a PERMANENT decision — retrying will not help.
+/// Treat as a PERMANENT decision, retrying will not help.
 class ApiException implements Exception {
   ApiException(this.statusCode, this.code, this.message);
   final int statusCode;
@@ -23,7 +23,7 @@ class ApiException implements Exception {
 }
 
 /// No usable path to the server (offline, timeout, refused).
-/// Treat as TRANSIENT — queue work and retry when connectivity returns.
+/// Treat as TRANSIENT, queue work and retry when connectivity returns.
 class NetworkException implements Exception {
   NetworkException(this.message);
   final String message;
@@ -77,7 +77,7 @@ class ApiClient {
     } on http.ClientException catch (e) {
       throw NetworkException('Renance servers unreachable (${e.message})');
     } on TimeoutException {
-      throw NetworkException('Renance servers timed out — try again');
+      throw NetworkException('Renance servers timed out, try again');
     }
     final dynamic decoded;
     if (res.body.isEmpty) {
@@ -135,7 +135,7 @@ class ApiClient {
   }
 
   /// Exchanges a Google ID token (from google_sign_in) for a Renance
-  /// session — the server verifies it against Google's JWKS and issues
+  /// session, the server verifies it against Google's JWKS and issues
   /// the same 12h JWT the credential flow returns.
   Future<AuthTokens> authWithGoogle(String idToken) async {
     final data = await _send(
@@ -233,7 +233,7 @@ class ApiClient {
   // ----------------------------------------------------------- gamification
 
   /// Streaks, XP and badge ledger. The server returns a zero state for a
-  /// scholar with no graded attempts — never a 404.
+  /// scholar with no graded attempts, never a 404.
   Future<GamificationSummary> gamification() async {
     final data =
         await _send('GET', '/me/gamification') as Map<dynamic, dynamic>;
@@ -257,7 +257,7 @@ class ApiClient {
   // --------------------------------------------------------- spaced repetition
 
   /// The SM-2 review queue: topics due today + upcoming + stats. The
-  /// server returns empty lists for a scholar with no graded attempts —
+  /// server returns empty lists for a scholar with no graded attempts ,
   /// never a 404.
   Future<ReviewSummary> reviewQueue() async {
     final data = await _send('GET', '/me/review') as Map<dynamic, dynamic>;
@@ -288,7 +288,7 @@ class ApiClient {
   // ---------------------------------------------------------------- fatigue
 
   /// Logs one sitting's telemetry (ROADMAP #6) and returns the server's
-  /// fatigue signal — the same pure rule the app mirrors locally.
+  /// fatigue signal, the same pure rule the app mirrors locally.
   Future<FatigueSignal> logSession({
     required String startedAt,
     String? endedAt,

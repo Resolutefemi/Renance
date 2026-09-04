@@ -1,4 +1,4 @@
-/// Downloads — the Stitch downloads_light screen, adapted to real data.
+/// Downloads, the Stitch downloads_light screen, adapted to real data.
 ///
 /// Storage meter for the on-device pack library (real byte sizes from the
 /// PackStore), the silent-sync status card, and the downloaded pack list
@@ -89,7 +89,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                   const SizedBox(height: 8),
                   Text(
                     'Download a pack from the Practice tab and it lives\n'
-                    'here — ready with zero network.',
+                    'here, ready with zero network.',
                     textAlign: TextAlign.center,
                     style: RenanceText.bodySecondary,
                   ),
@@ -160,7 +160,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                             const SizedBox(height: 2),
                             Text(
                               'Your packs download automatically when the '
-                              'app opens — you are never without study '
+                              'app opens, you are never without study '
                               'materials, even offline.',
                               style: RenanceText.caption.copyWith(height: 1.4),
                             ),

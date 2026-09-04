@@ -21,7 +21,7 @@ export default function RegisterPage() {
     document.title = 'Create your account · Renance';
   }, []);
 
-  // Stable identity for the GIS callback — never re-initialize mid-signup.
+  // Stable identity for the GIS callback, never re-initialize mid-signup.
   const onGoogleCredential = useCallback(
     async (credential: string) => {
       setError(null);
@@ -31,7 +31,7 @@ export default function RegisterPage() {
         setSession(res.token, res.user);
         router.replace('/dashboard');
       } catch (err) {
-        setError(err instanceof ApiError ? err.message : 'Google sign-in failed — check the connection.');
+        setError(err instanceof ApiError ? err.message : 'Google sign-in failed, check the connection.');
         setBusy(false);
       }
     },
@@ -50,7 +50,7 @@ export default function RegisterPage() {
       setSession(res.token, res.user);
       router.replace('/dashboard');
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'Network error — is the study API running?');
+      setError(err instanceof ApiError ? err.message : 'Network error, is the study API running?');
       setBusy(false);
     }
   }
@@ -58,7 +58,7 @@ export default function RegisterPage() {
   return (
     <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-surface-container px-4">
       <div className="renance-rise flex w-full max-w-sm flex-col rounded-xl bg-surface-container-lowest p-6 shadow-md">
-        {/* Logo block — mockup: logo, headline, sub */}
+        {/* Logo block, mockup: logo, headline, sub */}
         <div className="mb-6 flex flex-col items-center gap-3 text-center">
           <RenanceMark size={64} />
           <div>
@@ -118,7 +118,7 @@ export default function RegisterPage() {
               </button>
             </div>
             <p className="text-xs text-on-surface-variant">
-              Just a username and password — we ask for details after you&apos;re in.
+              Just a username and password, we ask for details after you&apos;re in.
             </p>
           </div>
 
@@ -144,7 +144,7 @@ export default function RegisterPage() {
             )}
           </button>
 
-          {/* Google sign-up — hidden unless the client ID is baked in */}
+          {/* Google sign-up, hidden unless the client ID is baked in */}
           <GoogleSignIn onCredential={onGoogleCredential} />
         </form>
 

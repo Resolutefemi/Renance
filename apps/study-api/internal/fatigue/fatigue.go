@@ -1,17 +1,17 @@
-// Package fatigue (ROADMAP #6) — the pure, unit-testable fatigue signal.
+// Package fatigue (ROADMAP #6), the pure, unit-testable fatigue signal.
 //
 // The client tracks per-answer latencies and the session wall clock; the
 // server re-computes THE SAME signal from the raw numbers it receives, so
 // app, web and API always agree on what "your pace is dipping" means.
-// No PII exists anywhere in the pipeline — only timing.
+// No PII exists anywhere in the pipeline, only timing.
 //
 // The rule set is deliberately small and explainable:
 //
-//	drift   — the median of the last five answers vs the first five.
+//	drift  , the median of the last five answers vs the first five.
 //	          A 1.8x slowdown is "mild"; 2.6x is "high" once the sitting
 //	          is long enough (>= 30 min) to be a real fatigue curve.
-//	length  — 50 minutes of sitting is "mild", 75 is "high".
-//	samples — fewer than MinAnswers answers says nothing about drift.
+//	length , 50 minutes of sitting is "mild", 75 is "high".
+//	samples, fewer than MinAnswers answers says nothing about drift.
 package fatigue
 
 import "sort"
@@ -34,7 +34,7 @@ const (
 
 // Signal is the fatigue assessment of one sitting. Level is
 // "none" | "mild" | "high"; SuggestBreak is true whenever Level is not
-// "none" — the cue both clients render as the gentle "Take 5" card.
+// "none", the cue both clients render as the gentle "Take 5" card.
 type Signal struct {
 	Level        string   `json:"level"`
 	SuggestBreak bool     `json:"suggestBreak"`

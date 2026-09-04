@@ -1,7 +1,7 @@
 package main
 
 // Lint rules: a Spec is buildable only when zero "error" issues remain.
-// "warn" issues never block a build — they surface judgment calls.
+// "warn" issues never block a build, they surface judgment calls.
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ var codeRe = regexp.MustCompile(`^[a-z0-9]+(-[a-z0-9]+)*$`)
 
 // lintSpec validates one Spec. syllabus is the body's topic set
 // (nil when no tree is shipped): when present, every non-empty topic
-// must be a node of that tree — the same join cbtdata enforces at boot.
+// must be a node of that tree, the same join cbtdata enforces at boot.
 func lintSpec(s *Spec, syllabus map[string]struct{}) []Issue {
 	var iss []Issue
 	err := func(where, format string, a ...any) {

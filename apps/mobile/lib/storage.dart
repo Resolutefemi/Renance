@@ -159,7 +159,7 @@ abstract class PackStore {
   Future<void> saveCardProgress(List<CardProgress> rows);
   Future<List<CardProgress>> loadCardProgress();
 
-  /// Offline grades queue — flushed FIFO by SyncController.retryPending.
+  /// Offline grades queue, flushed FIFO by SyncController.retryPending.
   Future<void> queueCardGrade(PendingCardGrade grade);
   Future<List<PendingCardGrade>> pendingCardGrades();
   Future<void> removeCardGrade(String id);

@@ -1,10 +1,10 @@
 {
   "code": "cos-computing",
-  "title": "Computing — COS101 Basics",
+  "title": "Computing | COS101 Basics",
   "subject": "Computer Science",
   "body": "University Modules",
   "cards": [
-    { "id": "cos-101-001", "front": "What does CPU stand for?", "back": "Central Processing Unit — the hardware that executes program instructions.", "hint": "The brain of the computer" },
+    { "id": "cos-101-001", "front": "What does CPU stand for?", "back": "Central Processing Unit: the hardware that executes program instructions.", "hint": "The brain of the computer" },
     { "id": "cos-101-002", "front": "Difference between RAM and ROM?", "back": "RAM is volatile read-write working memory that loses content when power is off; ROM is non-volatile read-only memory holding permanent start-up instructions.", "hint": "One forgets, one remembers" },
     { "id": "cos-101-003", "front": "What is an algorithm?", "back": "A finite, ordered set of unambiguous steps for solving a problem.", "hint": "Recipe for a computer" },
     { "id": "cos-101-004", "front": "Convert binary 1011 to decimal.", "back": "11 (8 + 0 + 2 + 1).", "hint": "Powers of two" },
@@ -14,7 +14,7 @@
     { "id": "cos-101-008", "front": "One kilobyte equals how many bytes?", "back": "1024 bytes (2 to the power 10).", "hint": "Binary counting" },
     { "id": "cos-101-009", "front": "Name the two main parts of the CPU.", "back": "The Arithmetic and Logic Unit (ALU) and the Control Unit (CU).", "hint": "Maths and traffic control" },
     { "id": "cos-101-010", "front": "What is a high-level programming language?", "back": "A language close to human English (like Python or Java) that must be translated to machine code before a computer runs it.", "hint": "Not 0s and 1s" },
-    { "id": "cos-101-011", "front": "What does an operating system do?", "back": "It manages hardware resources and provides services to application programs — memory, files, processes and input/output.", "hint": "The manager" },
+    { "id": "cos-101-011", "front": "What does an operating system do?", "back": "It manages hardware resources and provides services to application programs: memory, files, processes and input/output.", "hint": "The manager" },
     { "id": "cos-101-012", "front": "Difference between hardware and software?", "back": "Hardware is the physical equipment you can touch; software is the set of instructions that runs on it.", "hint": "Body versus mind" }
   ]
 }

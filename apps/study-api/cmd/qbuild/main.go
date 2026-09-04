@@ -12,7 +12,7 @@
 //	data/src/<keysub>/<file>              provenance copy of the source
 //	data/manifest.json                    sha256 fingerprint of every pack
 //
-// build always ends with cbtdata.Load(outdir) — the REAL boot loader — so a
+// build always ends with cbtdata.Load(outdir), the REAL boot loader, so a
 // pack that would refuse to boot can never reach a commit.
 package main
 

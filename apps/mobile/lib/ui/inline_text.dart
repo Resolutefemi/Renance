@@ -4,7 +4,7 @@ import 'theme.dart';
 
 /// Renders the lesson inline markers into styled spans:
 /// **bold**, *italic*, `code`. Lessons are linted HTML-free at build
-/// time, so this renderer is the only styling path — no injection
+/// time, so this renderer is the only styling path, no injection
 /// surface exists anywhere in the pipeline.
 List<InlineSpan> buildInlineSpans(
   BuildContext context,

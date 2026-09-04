@@ -1,4 +1,4 @@
-/// Voice flashcards (ROADMAP #7) — the speech engine behind "reads card
+/// Voice flashcards (ROADMAP #7), the speech engine behind "reads card
 /// fronts/backs aloud". Flutter TTS uses the platform's on-device speech
 /// synthesis: no recording, no microphone permission, works offline.
 ///
@@ -25,7 +25,7 @@ abstract class SpeechEngine {
 
 /// Production engine backed by the flutter_tts plugin (on-device TTS).
 /// Every call is defensive: a platform without a TTS service must never
-/// crash the player — voice is an enhancement, never a hard requirement.
+/// crash the player, voice is an enhancement, never a hard requirement.
 class FlutterTtsEngine implements SpeechEngine {
   FlutterTtsEngine() {
     _configure();
@@ -41,7 +41,7 @@ class FlutterTtsEngine implements SpeechEngine {
       await _tts.setPitch(1.0);
       await _tts.awaitSpeakCompletion(false);
     } catch (_) {
-      // Unsupported platform — [supported] stays true but every call is
+      // Unsupported platform, [supported] stays true but every call is
       // a no-op; the player still works with text only.
     }
   }
@@ -57,7 +57,7 @@ class FlutterTtsEngine implements SpeechEngine {
       await _tts.stop();
       await _tts.speak(t);
     } catch (_) {
-      // Voice unavailable — silent fallback to the visual card.
+      // Voice unavailable, silent fallback to the visual card.
     }
   }
 

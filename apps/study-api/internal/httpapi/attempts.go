@@ -170,7 +170,7 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if !s.engine.Enqueue(grading.Job{AttemptID: attemptID, UserID: uid, Code: attempt.Code}) {
-		// Queue saturated — fail loud rather than strand the attempt.
+		// Queue saturated, fail loud rather than strand the attempt.
 		_ = s.store.SetAttemptStatus(r.Context(), attemptID, "error")
 		fail(w, http.StatusServiceUnavailable, "grading_busy",
 			"grading queue is saturated, try again shortly")

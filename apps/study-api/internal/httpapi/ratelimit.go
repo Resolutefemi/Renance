@@ -10,7 +10,7 @@
 // The limiter is an in-memory token bucket keyed by (class, subject):
 // auth routes are throttled per client IP plus one global bucket so a
 // distributed flood still hits a wall; the tutor is throttled per user.
-// It needs no shared state — single-binary deployment, per Render spec.
+// It needs no shared state, single-binary deployment, per Render spec.
 package httpapi
 
 import (
@@ -89,7 +89,7 @@ func (l *rateLimiter) sweepLocked(now time.Time) {
 // clientIP resolves the calling IP behind Render's proxy. The proxy sets
 // X-Forwarded-For; the first hop is the client. Direct connections fall
 // back to RemoteAddr. Spoofed XFF only rotates a key the attacker
-// already owns — the global auth bucket still caps total flood pressure.
+// already owns, the global auth bucket still caps total flood pressure.
 func clientIP(r *http.Request) string {
 	if xff := r.Header.Get("X-Forwarded-For"); xff != "" {
 		if i := strings.IndexByte(xff, ','); i >= 0 {

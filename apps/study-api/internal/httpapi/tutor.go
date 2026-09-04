@@ -1,14 +1,14 @@
 // Tutor endpoints (ROADMAP #9).
 //
-// GET  /tutor/status          — {aiEnabled} so clients badge the mode
-// POST /attempts/{id}/tutor   — Socratic chat anchored to one graded
+// GET  /tutor/status         , {aiEnabled} so clients badge the mode
+// POST /attempts/{id}/tutor  , Socratic chat anchored to one graded
 //
 //	attempt + question (AI mode when a
 //	provider key is configured, deterministic
 //	hint mode otherwise)
 //
 // Anchoring doctrine: the attempt must exist, belong to the caller and be
-// GRADED before any tutor traffic — the coach is post-review by design,
+// GRADED before any tutor traffic, the coach is post-review by design,
 // exactly like the answer-review endpoint.
 package httpapi
 

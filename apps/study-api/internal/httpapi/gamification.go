@@ -11,7 +11,7 @@ import (
 
 // handleGamification serves GET /me/gamification: the caller's streak/XP
 // state plus the full badge ledger. A scholar with no graded attempts yet
-// has no streaks row — they get a zero state (level 1), never a 404, so
+// has no streaks row, they get a zero state (level 1), never a 404, so
 // the mobile hub screen can render on first launch.
 func (s *Server) handleGamification(w http.ResponseWriter, r *http.Request) {
 	uid, err := userIDFrom(r)
