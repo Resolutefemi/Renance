@@ -350,6 +350,8 @@ export default function DashboardPage() {
 /** Small bottom sheet listing the destinations that live beyond the grid. */
 function MoreSheet({ onClose }: { onClose: () => void }) {
   const items = [
+    { icon: 'event_note', label: 'Study Plan', href: '/study-plan' },
+    { icon: 'sports_esports', label: 'Arena', href: '/arena' },
     { icon: 'history_edu', label: 'Review center', href: '/review' },
     { icon: 'auto_stories', label: 'Lessons', href: '/lessons' },
     { icon: 'person', label: 'Profile', href: '/profile' },

@@ -14,7 +14,9 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'arena_lobby_screen.dart';
 import 'downloads_screen.dart';
+import 'study_plan_screen.dart';
 import 'flashcards_screen.dart';
 import 'lessons_screen.dart';
 import 'notifications_screen.dart';
@@ -1532,6 +1534,30 @@ Future<void> showMoreSheet(
                         Navigator.of(context).push(
                           MaterialPageRoute<void>(
                             builder: (_) => const LessonsScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.event_note_outlined,
+                      label: 'Study Plan',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const StudyPlanScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.sports_esports_outlined,
+                      label: 'Arena',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const ArenaLobbyScreen(),
                           ),
                         );
                       },
