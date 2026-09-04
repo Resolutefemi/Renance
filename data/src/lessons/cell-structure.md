@@ -20,7 +20,7 @@ arise only from existing cells.
 - Schwann and Schleiden extended the idea to all living things
 - Virchow showed that cells come only from pre-existing cells
 
-> Key point: examiners love the cell theory statement — learn all three parts as one sentence each.
+> Key point: examiners love the cell theory statement, so learn all three parts as one sentence each.
 
 ## Organelles and their jobs
 
@@ -41,14 +41,14 @@ Plant cells carry a rigid **cellulose cell wall**, chloroplasts and a large
 sap vacuole; animal cells have none of these three. That trio is the cleanest
 way to answer any "state two differences" question.
 
-> Key point: cell wall, chloroplasts, large vacuole — present in plants, absent in animals.
+> Key point: cell wall, chloroplasts, large vacuole are present in plants and absent in animals.
 
 ## Levels of organisation
 
 Cells specialise, then cooperate. Similar cells form a **tissue**, different
 tissues form an **organ**, organs working together form a **system**, and all
 the systems together make the **organism**. In the exam, trace the ladder in
-order — a common trap is jumping from cell straight to organ.
+order; a common trap is jumping from cell straight to organ.
 
 - Cell -> muscle cell; tissue -> muscle tissue; organ -> heart; system -> circulatory system
 - Amoeba and Chlamydomonas are unicellular: one cell does every job

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Progress — the gamification hub (design: gamification_hub_light /
+ * Progress, the gamification hub (design: gamification_hub_light /
  * gamification_hub_full_dark). Streak hero with 7-day dots, level card with
  * XP progress, badge grid (earned vs locked) and the recent-awards ledger.
  */
@@ -234,7 +234,7 @@ export default function ProgressPage() {
 
 function DayCircle({ dot }: { dot: ReturnType<typeof weekDots>[number] }) {
   if (dot.isToday && !dot.practiced) {
-    // today, not yet practiced — amber ring pending
+    // today, not yet practiced, amber ring pending
     return <div className="h-8 w-8 rounded-full border-2 border-accent-amber" />;
   }
   const solid = dot.isToday && dot.practiced;

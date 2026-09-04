@@ -1,6 +1,6 @@
 {
   "code": "cos101-university-mock",
-  "title": "COS101 — Introduction to Computing (University Modules)",
+  "title": "COS101 | Introduction to Computing",
   "body": "University Modules",
   "category": "university",
   "durationMinutes": 15,
@@ -19,6 +19,6 @@
     { "topic": "Application Software", "difficulty": "easy", "stem": "Which of the following is an example of spreadsheet software?", "options": ["Microsoft Word", "Microsoft Excel", "Google Chrome", "Adobe Photoshop"], "answer": "B", "explanation": "Excel is a spreadsheet application for tabular data and calculation." },
     { "topic": "Networking", "difficulty": "medium", "stem": "An IP address version that is 128 bits long is called", "options": ["IPv4", "IPv6", "MAC", "TCP"], "answer": "B", "explanation": "IPv6 addresses are 128 bits; IPv4 addresses are 32 bits." },
     { "topic": "Databases", "difficulty": "easy", "stem": "Which of the following is a database management system?", "options": ["Oracle", "Chrome", "Python", "Linux"], "answer": "A", "explanation": "Oracle DBMS stores and manages structured data; the others are a browser, a language and an OS." },
-    { "topic": "Computer Fundamentals", "difficulty": "easy", "stem": "The component popularly described as the 'brain' of the computer is the", "options": ["hard disk", "CPU", "monitor", "keyboard"], "answer": "B", "explanation": "The CPU performs the processing — the 'brain' analogy." }
+    { "topic": "Computer Fundamentals", "difficulty": "easy", "stem": "The component popularly described as the 'brain' of the computer is the", "options": ["hard disk", "CPU", "monitor", "keyboard"], "answer": "B", "explanation": "The CPU performs the processing, hence the 'brain' analogy." }
   ]
 }

@@ -65,7 +65,7 @@ type jwksDoc struct {
 }
 
 // Verifier caches Google's signing keys and checks tokens against one or
-// more allowed audiences — the web OAuth client AND the Android client
+// more allowed audiences, the web OAuth client AND the Android client
 // (google_sign_in mints the ID token for whichever client initiated the
 // flow; accepting both keeps mobile sign-in working across client mixes).
 type Verifier struct {
@@ -97,9 +97,9 @@ func NewWithJWKS(clientIDs []string, jwksURL string, client *http.Client) *Verif
 	return &Verifier{clientIDs: ids, jwks: jwksURL, client: client}
 }
 
-// Verify signature-checks token against a cached (kid → key) table —
+// Verify signature-checks token against a cached (kid → key) table ,
 // refreshing once on an unknown kid so Google key rotations never lock
-// sign-ins — then validates expiry, audience and issuer.
+// sign-ins, then validates expiry, audience and issuer.
 func (v *Verifier) Verify(ctx context.Context, token string) (*Claims, error) {
 	parts := strings.Split(token, ".")
 	if len(parts) != 3 || parts[0] == "" || parts[1] == "" || parts[2] == "" {
@@ -176,7 +176,7 @@ func (v *Verifier) Verify(ctx context.Context, token string) (*Claims, error) {
 }
 
 // key returns the cached public key for kid. On a miss it pulls a fresh
-// JWKS — and pulls ONCE MORE if the kid is still unknown, so a mid-rotation
+// JWKS, and pulls ONCE MORE if the kid is still unknown, so a mid-rotation
 // race (new token, JWKS endpoint still serving the old key set) can never
 // 401 a legitimate sign-in.
 func (v *Verifier) key(ctx context.Context, kid string) (*rsa.PublicKey, error) {
@@ -199,7 +199,7 @@ func (v *Verifier) key(ctx context.Context, kid string) (*rsa.PublicKey, error) 
 	if k, ok := v.swap(fresh)[kid]; ok {
 		return k, nil
 	}
-	// Still unknown right after a refresh — one retry, then give up.
+	// Still unknown right after a refresh, one retry, then give up.
 	fresh, err = v.fetch(ctx)
 	if err != nil {
 		return nil, err

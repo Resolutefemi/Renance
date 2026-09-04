@@ -1,11 +1,13 @@
-/// Splash — the Stitch splash_screen_light screen, 1:1.
+/// Splash, the Stitch splash_screen_light screen, 1:1.
 ///
 /// Three orbiting rings (#D0E1FB 3s, violet 4s reverse, emerald 5s) chase
 /// each other around the pulsing Renance mark; the wordmark sits below and
-/// the LEARN. PRACTICE. RISE. tagline anchors the bottom — while the
-/// session is inspected, then the route fires.
+/// the LEARN. PRACTICE. RISE. tagline anchors the bottom. The route fires
+/// as soon as a short brand beat has elapsed: no work is done here, so the
+/// app reaches the home screen in well under a second on a warm start.
 library;
 
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -23,16 +25,27 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  /// Minimum brand beat. Deliberately short: the splash is a signature, not
+  /// a loading screen, and every real initialization happens after the
+  /// first home frame (silent sync runs in the background).
+  static const Duration _brandBeat = Duration(milliseconds: 650);
+
   @override
   void initState() {
     super.initState();
-    Future<void>.delayed(const Duration(milliseconds: 1600), _decide);
+    unawaited(_decide());
   }
 
   Future<void> _decide() async {
+    final Stopwatch elapsed = Stopwatch()..start();
     if (!mounted) return;
     final SessionStore session = context.read<SessionStore>();
     final bool hasToken = (session.token ?? '').isNotEmpty;
+    final int remaining =
+        _brandBeat.inMilliseconds - elapsed.elapsedMilliseconds;
+    if (remaining > 0) {
+      await Future<void>.delayed(Duration(milliseconds: remaining));
+    }
     if (!mounted) return;
     await Navigator.of(context)
         .pushReplacementNamed(hasToken ? '/home' : '/login');

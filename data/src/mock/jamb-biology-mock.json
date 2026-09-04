@@ -1,12 +1,12 @@
 {
   "code": "jamb-biology-mock",
-  "title": "JAMB Biology — Practice Mock",
+  "title": "JAMB Biology | Practice Mock",
   "body": "JAMB",
   "category": "secondary",
   "durationMinutes": 15,
   "questions": [
     { "topic": "Cell Biology", "difficulty": "easy", "stem": "Which organelle is called the powerhouse of the cell?", "options": ["nucleus", "mitochondrion", "ribosome", "vacuole"], "answer": "B", "explanation": "Mitochondria carry out respiration and release energy (ATP), hence 'powerhouse'." },
-    { "topic": "Cell Biology", "difficulty": "easy", "stem": "The basic unit of life is the", "options": ["tissue", "cell", "organ", "system"], "answer": "B", "explanation": "All living things are made of cells — the basic structural and functional unit." },
+    { "topic": "Cell Biology", "difficulty": "easy", "stem": "The basic unit of life is the", "options": ["tissue", "cell", "organ", "system"], "answer": "B", "explanation": "All living things are made of cells, the basic structural and functional unit." },
     { "topic": "Photosynthesis", "difficulty": "easy", "stem": "The gas taken in by plants during photosynthesis is", "options": ["oxygen", "nitrogen", "carbon dioxide", "hydrogen"], "answer": "C", "explanation": "Photosynthesis uses carbon dioxide and water to make glucose, releasing oxygen." },
     { "topic": "Photosynthesis", "difficulty": "easy", "stem": "The green pigment that traps light energy for photosynthesis is", "options": ["haemoglobin", "chlorophyll", "melanin", "carotene"], "answer": "B", "explanation": "Chlorophyll in chloroplasts absorbs light energy." },
     { "topic": "Transport", "difficulty": "easy", "stem": "The blood cells that defend the body against infection are", "options": ["red blood cells", "white blood cells", "platelets", "plasma cells"], "answer": "B", "explanation": "White blood cells (leucocytes) fight pathogens." },
@@ -19,6 +19,6 @@
     { "topic": "Skin", "difficulty": "easy", "stem": "The largest organ of the human body is the", "options": ["liver", "brain", "skin", "lungs"], "answer": "C", "explanation": "The skin covers the whole body and is the largest organ by area." },
     { "topic": "Ecology", "difficulty": "medium", "stem": "Nitrogen-fixing bacteria are found in the root nodules of", "options": ["grasses", "legumes", "ferns", "conifers"], "answer": "B", "explanation": "Rhizobium lives symbiotically in the root nodules of leguminous plants." },
     { "topic": "Classification", "difficulty": "easy", "stem": "Mushrooms belong to the kingdom", "options": ["Plantae", "Animalia", "Fungi", "Protista"], "answer": "C", "explanation": "Mushrooms are saprophytic fungi, not plants." },
-    { "topic": "Nutrition", "difficulty": "easy", "stem": "Deficiency of vitamin C in the human diet causes", "options": ["rickets", "scurvy", "night blindness", "beri-beri"], "answer": "B", "explanation": "Lack of vitamin C (ascorbic acid) causes scurvy — bleeding gums and poor wound healing." }
+    { "topic": "Nutrition", "difficulty": "easy", "stem": "Deficiency of vitamin C in the human diet causes", "options": ["rickets", "scurvy", "night blindness", "beri-beri"], "answer": "B", "explanation": "Lack of vitamin C (ascorbic acid) causes scurvy, marked by bleeding gums and poor wound healing." }
   ]
 }

@@ -6,7 +6,7 @@ import '../models.dart';
 import 'theme.dart';
 
 /// Tutor entry (ROADMAP #9): pick a graded paper, then a question, then
-/// chat. The Socratic tutor only coaches on GRADED attempts — the same
+/// chat. The Socratic tutor only coaches on GRADED attempts, the same
 /// doctrine the API enforces.
 class TutorEntryScreen extends StatefulWidget {
   const TutorEntryScreen({super.key});
@@ -526,7 +526,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                     role: 'assistant',
                     text:
                         'I have your question and your answer in front of me. '
-                        'Ask me anything — I coach with questions first, answers last.',
+                        'Ask me anything, I coach with questions first and answers last.',
                   ),
                   const SizedBox(height: 8),
                   Wrap(
@@ -611,7 +611,7 @@ class _TutorChatScreenState extends State<TutorChatScreen> {
                       ),
                       const Spacer(),
                       Text(
-                        'Socratic mode — guided first',
+                        'Socratic mode, guided first',
                         style: RenanceText.caption.copyWith(fontSize: 11),
                       ),
                     ],

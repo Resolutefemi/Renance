@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Syllabus (Stitch syllabus_map_light — ROADMAP #4): the curriculum tree
+ * Syllabus (Stitch syllabus_map_light, ROADMAP #4): the curriculum tree
  * of one exam body overlaid with the student's mastery state.
  *   /syllabus                → default body (first pill)
  *   /syllabus?body=jamb      → deep link (score-report weak chips land here)
@@ -164,7 +164,7 @@ function SyllabusInner() {
             <Ring pct={pct} />
           </section>
 
-          {/* Focus next — the server's weakest topics */}
+          {/* Focus next, the server's weakest topics */}
           {tree.weakest.length > 0 && (
             <section className="mt-6">
               <h3 className="text-sm text-on-surface-variant">Focus next</h3>

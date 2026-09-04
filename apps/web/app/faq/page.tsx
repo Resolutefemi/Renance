@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 /**
- * /faq — the public answers page. Doubles as FAQPage structured data so
+ * /faq, the public answers page. Doubles as FAQPage structured data so
  * the questions can win rich results in search.
  */
 
@@ -13,7 +13,7 @@ import { SITE_URL } from '@/lib/site-url';
 const QA: Array<{ q: string; a: string }> = [
   {
     q: 'What is Renance?',
-    a: 'Renance is a study OS for students — mock CBT exams that are graded server-side, a spaced-repetition review plan built from every paper you take, voice flashcards, exam-focused lessons and a Socratic tutor that coaches you through the questions you got wrong. It works on Android, iOS, Windows, macOS and the web.',
+    a: 'Renance is a study OS for students: mock CBT exams that are graded server-side, a spaced-repetition review plan built from every paper you take, voice flashcards, exam-focused lessons and a Socratic tutor that coaches you through the questions you got wrong. It works on Android, iOS, Windows, macOS and the web.',
   },
   {
     q: 'Who builds Renance?',
@@ -25,7 +25,7 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'How does grading work?',
-    a: 'When you submit a paper, the Renance API grades it on the server with the same answer keys used to publish the questions — no browser tricks, no self-marking. Results, streaks, XP and badges follow immediately, and wrong topics enter your spaced-repetition queue automatically.',
+    a: 'When you submit a paper, the Renance API grades it on the server with the same answer keys used to publish the questions, no browser tricks, no self-marking. Results, streaks, XP and badges follow immediately, and wrong topics enter your spaced-repetition queue automatically.',
   },
   {
     q: 'Can I study offline?',
@@ -41,18 +41,18 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'How does the tutor work?',
-    a: 'On any graded paper, tap "Ask the Tutor" on a question. The tutor coaches Socratically — it guides you to the reasoning instead of handing you the answer, using the question, your pick and the official explanation.',
+    a: 'On any graded paper, tap "Ask the Tutor" on a question. The tutor coaches Socratically: it guides you to the reasoning instead of handing you the answer, using the question, your pick and the official explanation.',
   },
 ];
 
 export const metadata: Metadata = {
-  title: 'FAQ — Renance study OS',
+  title: 'FAQ | Renance study OS',
   description:
-    'How Renance works: free server-graded mock exams, spaced repetition, offline study, voice flashcards and the Socratic tutor — for JAMB, WAEC, NECO and university students.',
+    'How Renance works: free server-graded mock exams, spaced repetition, offline study, voice flashcards and the Socratic tutor, for JAMB, WAEC, NECO and university students.',
   alternates: { canonical: '/faq/' },
   openGraph: {
     title: 'FAQ · Renance study OS',
-    description: 'How Renance works — grading, offline study, review queue, tutor and pricing.',
+    description: 'How Renance works: grading, offline study, review queue, tutor and pricing.',
     url: `${SITE_URL}/faq/`,
   },
 };

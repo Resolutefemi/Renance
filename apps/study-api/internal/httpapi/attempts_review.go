@@ -7,7 +7,7 @@ import (
 	"renance.dev/study-api/internal/store"
 )
 
-// handleListAttempts serves GET /me/attempts — the student's paper
+// handleListAttempts serves GET /me/attempts, the student's paper
 // history (newest first). It feeds the launcher's recent-activity card,
 // the review tab, and every "syllabus completion"-style metric the UI
 // derives from real graded work instead of invented numbers.
@@ -43,7 +43,7 @@ type reviewQuestion struct {
 	Correctly   bool              `json:"correctly"`
 }
 
-// handleAttemptReview serves GET /attempts/{id}/review — per-question
+// handleAttemptReview serves GET /attempts/{id}/review, per-question
 // detail for a GRADED attempt owned by the requester. Before grading this
 // is a 409: answer material never leaves while a paper is still open
 // (ADR-0003 doctrine, review edition).

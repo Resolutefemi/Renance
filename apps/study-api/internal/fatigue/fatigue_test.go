@@ -27,7 +27,7 @@ func TestMedian(t *testing.T) {
 	}
 }
 
-// Median must never mutate its input — callers log the raw recording.
+// Median must never mutate its input, callers log the raw recording.
 func TestMedianDoesNotMutate(t *testing.T) {
 	in := []int64{9, 1, 5}
 	_ = Median(in)
@@ -75,7 +75,7 @@ func TestAssessDriftHighOnLongSitting(t *testing.T) {
 }
 
 func TestAssessDriftNeedsLengthFloor(t *testing.T) {
-	// Heavy drift inside a SHORT sitting stays mild — a fast dash is not fatigue.
+	// Heavy drift inside a SHORT sitting stays mild, a fast dash is not fatigue.
 	lat := append(steady(5, 5000), steady(5, 25000)...)
 	got := Assess(lat, 10)
 	if got.Level != "mild" {

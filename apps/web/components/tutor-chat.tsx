@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * TutorChat (ROADMAP #9) — "Ask the Tutor" panel on the answer-review
+ * TutorChat (ROADMAP #9), "Ask the Tutor" panel on the answer-review
  * page. Anchored to one graded attempt + one question; the server
  * answers in AI mode when a provider key is configured and in
  * deterministic technique-hint mode otherwise (badge shows which).

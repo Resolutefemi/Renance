@@ -1,9 +1,9 @@
 // Fatigue endpoints (ROADMAP #6).
 //
-// POST /me/sessions — one sitting's telemetry in, fatigue signal out.
+// POST /me/sessions, one sitting's telemetry in, fatigue signal out.
 // The server re-computes the signal from the raw latencies with the same
 // pure package the clients mirror, so nobody can disagree about a nudge.
-// Logging is best-effort: a storage failure still returns the signal —
+// Logging is best-effort: a storage failure still returns the signal ,
 // telemetry must never break a study session.
 package httpapi
 
@@ -88,7 +88,7 @@ func (s *Server) handleLogSession(w http.ResponseWriter, r *http.Request) {
 		SuggestedBreak: sig.SuggestBreak,
 	})
 	if err != nil {
-		// Telemetry is never load-bearing — log and continue.
+		// Telemetry is never load-bearing, log and continue.
 		s.log.Error("session log failed", "err", err)
 	}
 	writeJSON(w, http.StatusCreated, map[string]any{"fatigue": sig})

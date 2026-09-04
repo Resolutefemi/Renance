@@ -136,7 +136,7 @@ class _PasswordFieldState extends State<_PasswordField> {
   }
 }
 
-/// Google sign-in button — rendered only when GOOGLE_WEB_CLIENT_ID was
+/// Google sign-in button, rendered only when GOOGLE_WEB_CLIENT_ID was
 /// baked at build time, mirroring the web app's graceful degradation.
 class _GoogleButton extends StatelessWidget {
   const _GoogleButton({required this.onPressed});
@@ -167,7 +167,7 @@ Future<bool> _runGoogleSignIn(
   final GoogleSignInAuthentication auth = await account.authentication;
   final String? idToken = auth.idToken;
   if (idToken == null) {
-    onError('Google did not return an ID token — try again');
+    onError('Google did not return an ID token, try again');
     return false;
   }
   final AuthTokens res = await api.authWithGoogle(idToken);
@@ -242,7 +242,7 @@ class _LoginScreenState extends State<LoginScreen> {
     } on NetworkException catch (e) {
       if (mounted) setState(() => _error = e.message);
     } catch (_) {
-      if (mounted) setState(() => _error = 'Google sign-in failed — try again');
+      if (mounted) setState(() => _error = 'Google sign-in failed, try again');
     }
     if (mounted) setState(() => _busy = false);
     sync.refreshPendingCount().ignore();
@@ -381,7 +381,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     } on NetworkException catch (e) {
       if (mounted) setState(() => _error = e.message);
     } catch (_) {
-      if (mounted) setState(() => _error = 'Google sign-in failed — try again');
+      if (mounted) setState(() => _error = 'Google sign-in failed, try again');
     }
     if (mounted) setState(() => _busy = false);
   }
@@ -433,7 +433,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ],
           const SizedBox(height: 10),
           const Text(
-            "We'll ask about your school and exams right after — one quick modal.",
+            "We'll ask about your school and exams right after, in one quick modal.",
             textAlign: TextAlign.center,
             style: TextStyle(color: RenanceColors.outline, fontSize: 12),
           ),

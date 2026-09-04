@@ -1,4 +1,4 @@
-// Flashcards (ROADMAP #7) — curated front/back decks served like exam
+// Flashcards (ROADMAP #7), curated front/back decks served like exam
 // packs: data/flashcards/{code}.json, loaded and validated at boot.
 //
 // Flashcards carry their answers by design (the back IS the point), so
@@ -45,7 +45,7 @@ type FlashcardMeta struct {
 }
 
 // loadFlashcards scans dataDir/flashcards/*.json. The directory is
-// optional — an install with no decks boots fine and serves an empty
+// optional, an install with no decks boots fine and serves an empty
 // list, but a deck that IS present must be fully valid.
 func (l *Library) loadFlashcards(dataDir string) error {
 	dir := filepath.Join(dataDir, "flashcards")

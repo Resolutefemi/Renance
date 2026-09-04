@@ -1,9 +1,9 @@
-/// Fatigue nudge (ROADMAP #6) — the Stitch fatigue_nudge_light overlay.
+/// Fatigue nudge (ROADMAP #6), the Stitch fatigue_nudge_light overlay.
 ///
 /// A soft veil over the exam with the RenanceMark anchor and a gentle
 /// card: "Your pace is dipping", one Take 5 button (pauses the exam clock
 /// for five minutes) and a quiet "Keep going" dismissal. Presentation
-/// only — every decision lives in ExamController's pure signal.
+/// only, every decision lives in ExamController's pure signal.
 library;
 
 import 'dart:ui' show ImageFilter;

@@ -1,6 +1,6 @@
 // Package config loads service configuration from the environment.
 //
-// ERA-2 law (ADR-0004): the service is DATABASE_URL-agnostic — point it at
+// ERA-2 law (ADR-0004): the service is DATABASE_URL-agnostic, point it at
 // Neon in production, userspace Postgres in the paired sandbox.
 package config
 

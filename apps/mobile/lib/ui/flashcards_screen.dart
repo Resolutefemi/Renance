@@ -1,4 +1,4 @@
-/// Voice flashcards (ROADMAP #7) — the Stitch voice_flashcards_light.
+/// Voice flashcards (ROADMAP #7), the Stitch voice_flashcards_light.
 ///
 /// Deck grid → the player: white card stage with the front in display-lg,
 /// the answer in emerald on reveal, the violet play pill with the
@@ -66,7 +66,7 @@ class _FlashcardsScreenState extends State<FlashcardsScreen> {
         CardsPhase.ready when c.decks.isEmpty => const Center(
             child: Padding(
               padding: EdgeInsets.all(32),
-              child: Text('No decks yet — they ship with your packs.',
+              child: Text('No decks yet, they ship with your packs.',
                   textAlign: TextAlign.center,
                   style: RenanceText.bodySecondary),
             ),
@@ -460,7 +460,7 @@ class _WaveformState extends State<_Waveform>
     );
   }
 
-  /// Sine phase offset per bar — the CSS staggered animation, ported.
+  /// Sine phase offset per bar, the CSS staggered animation, ported.
   double _wave(double t, int i) =>
       0.5 + 0.5 * (2 * 3.14159 * (t * 1.0 + i * 0.2));
 }

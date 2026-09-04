@@ -6,7 +6,7 @@ import { RenanceMark } from '@/components/renance-logo';
 
 /**
  * The public landing page. This is the front door for search engines and
- * the SEO battle for the name "Renance" — everything above the fold is
+ * the SEO battle for the name "Renance", everything above the fold is
  * static HTML with structured data in the root layout.
  */
 
@@ -23,7 +23,7 @@ const FEATURES = [
   {
     icon: 'fact_check',
     title: 'Server-graded CBT papers',
-    body: 'Every mock is marked on the server with the sealed answer keys — the same doctrine real exam bodies use. No browser tricks, no self-marking.',
+    body: 'Every mock is marked on the server with the sealed answer keys, the same doctrine real exam bodies use. No browser tricks, no self-marking.',
   },
   {
     icon: 'event_repeat',
@@ -33,17 +33,17 @@ const FEATURES = [
   {
     icon: 'record_voice_over',
     title: 'Voice flashcards',
-    body: 'Decks that read themselves aloud on your phone — drill while walking, cooking or commuting. Leitner-boxed so hard cards come back sooner.',
+    body: 'Decks that read themselves aloud on your phone, drill while walking, cooking or commuting. Leitner-boxed so hard cards come back sooner.',
   },
   {
     icon: 'school',
     title: 'A tutor that teaches technique',
-    body: 'Stuck on a question you got wrong? Ask the tutor. It coaches Socratically — guiding questions first, never just handing over the letter.',
+    body: 'Stuck on a question you got wrong? Ask the tutor. It coaches Socratically: guiding questions first, never just handing over the letter.',
   },
   {
     icon: 'battery_saver',
     title: 'Fatigue-aware sessions',
-    body: 'Rence notices when your answer pace collapses and nudges you to take five — because tired practice teaches the wrong lessons.',
+    body: 'Rence notices when your answer pace collapses and nudges you to take five, because tired practice teaches the wrong lessons.',
   },
   {
     icon: 'cloud_off',
@@ -71,7 +71,7 @@ export default function Landing() {
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
             Mock CBT papers graded on the server, a review queue that plans itself,
-            voice flashcards and an exam-technique tutor — built for JAMB, WAEC,
+            voice flashcards and an exam-technique tutor, built for JAMB, WAEC,
             NECO and university students. Free, on Android, iOS, Windows, macOS
             and the web.
           </p>
@@ -115,7 +115,7 @@ export default function Landing() {
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/70">
             Every paper, flashcard deck and lesson is tagged to the official topic
-            tree — so the app always knows what you know, what you missed, and
+            tree, so the app always knows what you know, what you missed, and
             what to drill next.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5">

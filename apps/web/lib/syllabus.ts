@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Syllabus map types (ROADMAP #4) — mirrors GET /syllabus/{body}: the
+ * Syllabus map types (ROADMAP #4), mirrors GET /syllabus/{body}: the
  * curriculum tree of one exam body overlaid with the student's own SM-2
  * mastery state (the same signal that powers the review queue and the
  * adaptive ordering).
@@ -45,7 +45,7 @@ export interface SyllabusTree {
   subjects: SyllabusSubject[];
 }
 
-/** Bodies with shipped trees — the body pills on the map. */
+/** Bodies with shipped trees, the body pills on the map. */
 export const SYLLABUS_BODIES: Array<{ slug: string; label: string }> = [
   { slug: 'jamb', label: 'JAMB' },
   { slug: 'waec', label: 'WAEC' },

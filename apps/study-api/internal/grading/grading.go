@@ -3,7 +3,7 @@
 //
 // Handlers flip an attempt to 'grading' and return 202 immediately; the
 // engine owns everything after that. A stalled or panic-ing grade job can
-// never wedge an HTTP handler — and one slow bank never delays another.
+// never wedge an HTTP handler, and one slow bank never delays another.
 package grading
 
 import (

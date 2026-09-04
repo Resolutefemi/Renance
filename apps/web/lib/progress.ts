@@ -1,5 +1,5 @@
 /**
- * Gamification hub data layer — mirrors GET /me/gamification.
+ * Gamification hub data layer, mirrors GET /me/gamification.
  * Badge catalog mirrors apps/study-api/internal/store/gamification.go
  * (BadgesFor codes) and the Flutter catalog in lib/ui/progress_screen.dart.
  */

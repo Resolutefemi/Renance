@@ -8,7 +8,7 @@ import (
 
 // handleReviewQueue serves GET /me/review: the caller's spaced-repetition
 // queue split into due-today vs upcoming, plus the stats the hero cards
-// and badges read. A scholar with no graded topics yet has no rows — they
+// and badges read. A scholar with no graded topics yet has no rows, they
 // get an empty queue, never a 404, so first launch renders cleanly.
 func (s *Server) handleReviewQueue(w http.ResponseWriter, r *http.Request) {
 	uid, err := userIDFrom(r)
@@ -25,7 +25,7 @@ func (s *Server) handleReviewQueue(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, sum)
 }
 
-// handleReviewTick serves GET /internal/review/tick — the nightly-friendly
+// handleReviewTick serves GET /internal/review/tick, the nightly-friendly
 // maintenance probe. DISABLED (404) unless ADMIN_TOKEN is configured; with
 // it set, callers must echo the token in the X-Admin-Token header. It is
 // read-only and idempotent: queue-wide counters plus a server timestamp,

@@ -5,7 +5,7 @@ import { clearSession, getToken } from './session';
 export const API_BASE =
   process.env.NEXT_PUBLIC_API_BASE ?? 'http://localhost:3990';
 
-// GitHub Pages serves the app under /<repo>/ — raw redirects must respect it.
+// GitHub Pages serves the app under /<repo>/, raw redirects must respect it.
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 export class ApiError extends Error {
@@ -25,7 +25,7 @@ export interface AuthResponse {
 }
 
 // Exchanges a Google ID token (from the GIS button) for a Renance session.
-// The backend verifies the token against Google's JWKS — no client secret
+// The backend verifies the token against Google's JWKS, no client secret
 // involved anywhere.
 export async function authWithGoogle(credential: string): Promise<AuthResponse> {
   return api<AuthResponse>('/auth/google', {
@@ -64,7 +64,7 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
         window.location.href = loginPath;
       }
     }
-    throw new ApiError(401, 'unauthorized', 'Session expired — sign in again.');
+    throw new ApiError(401, 'unauthorized', 'Session expired, sign in again.');
   }
 
   const text = await res.text();

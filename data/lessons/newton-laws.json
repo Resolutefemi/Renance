@@ -9,8 +9,8 @@
     "motion"
   ],
   "minutes": 8,
-  "summary": "Inertia, F=ma and action-reaction — the three laws with the calculations JAMB actually asks.",
-  "contentSha256": "1b396d89bc2f15c8aff06a91257ba48da3ad81f719affc498801e6a4ae541e6d",
+  "summary": "Inertia, F=ma and action-reaction, with the calculations JAMB actually asks.",
+  "contentSha256": "c233a20059d909346b83eaa09b4810d3e5ef95ad385420d8ee70e3967c414ee1",
   "sections": [
     {
       "heading": "First law: inertia",
@@ -22,14 +22,14 @@
         {
           "type": "ul",
           "items": [
-            "Passengers lurch forward when a bus brakes — their bodies keep the original motion",
+            "Passengers lurch forward when a bus brakes because their bodies keep the original motion",
             "A dusting cloth removes dust because the cloth moves while the dust resists",
             "Seat belts exist to supply the external force your body needs in a crash"
           ]
         },
         {
           "type": "callout",
-          "text": "Key point: no change of motion happens without an external force — \"constant velocity\" means the forces balance to zero."
+          "text": "Key point: no change of motion happens without an external force, so \"constant velocity\" means the forces balance to zero."
         }
       ]
     },
@@ -54,7 +54,7 @@
         },
         {
           "type": "p",
-          "text": "A 2 kg mass pushed with 10 N against friction of 2 N accelerates at (10 - 2) / 2 = 4 m/s². Examiners hide the second force — friction, tension or weight — so always subtract before you divide."
+          "text": "A 2 kg mass pushed with 10 N against friction of 2 N accelerates at (10 - 2) / 2 = 4 m/s². Examiners hide the second force (friction, tension or weight), so always subtract before you divide."
         },
         {
           "type": "callout",
@@ -67,7 +67,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "For every action there is an equal and opposite reaction — equal in size, opposite in direction, acting on **different bodies**. That last phrase is the trap: because the two forces act on different objects, they never cancel each other."
+          "text": "For every action there is an equal and opposite reaction: equal in size, opposite in direction, acting on **different bodies**. That last phrase is the trap: because the two forces act on different objects, they never cancel each other."
         },
         {
           "type": "ul",
@@ -84,7 +84,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "Momentum is mass times velocity, and the second law can be rewritten as \"force equals rate of change of momentum\". In collisions where no external force acts, total momentum is **conserved** — the bookkeeping that makes crash and explosion questions solvable."
+          "text": "Momentum is mass times velocity, and the second law can be rewritten as \"force equals rate of change of momentum\". In collisions where no external force acts, total momentum is **conserved**, the bookkeeping that makes crash and explosion questions solvable."
         },
         {
           "type": "ul",

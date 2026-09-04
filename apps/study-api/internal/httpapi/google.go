@@ -6,7 +6,7 @@ import (
 )
 
 // Google Identity Services sign-in: web and Android clients obtain a Google
-// ID token and POST it here, receiving a first-class Renance JWT in return —
+// ID token and POST it here, receiving a first-class Renance JWT in return ,
 // one session shape for every client. The Google client SECRET is never
 // needed anywhere in Renance; this endpoint verifies public-client tokens
 // against Google's JWKS.

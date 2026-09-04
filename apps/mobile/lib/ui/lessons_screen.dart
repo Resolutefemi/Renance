@@ -6,7 +6,7 @@ import '../models.dart';
 import 'theme.dart';
 import 'inline_text.dart';
 
-/// Lessons library (ROADMAP #8) — mdx-built reading, cached offline like
+/// Lessons library (ROADMAP #8), mdx-built reading, cached offline like
 /// packs and decks. List view: subject chip, title, summary, read time.
 class LessonsScreen extends StatefulWidget {
   const LessonsScreen({super.key});
@@ -43,7 +43,7 @@ class _LessonsScreenState extends State<LessonsScreen> {
             return _MessageCard(
               message: lessons.error.isNotEmpty
                   ? lessons.error
-                  : 'Lessons are being typeset — pull to refresh shortly.',
+                  : 'Lessons are being typeset, pull to refresh shortly.',
             );
           }
           return RefreshIndicator(
@@ -230,13 +230,13 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
           ? const Center(child: CircularProgressIndicator())
           : _lesson == null
           ? const _MessageCard(
-              message: 'This lesson is not saved on your device yet — reconnect and open it once.',
+              message: 'This lesson is not saved on your device yet. Reconnect and open it once.',
             )
           : ListView(
               padding: const EdgeInsets.fromLTRB(20, 4, 20, 32),
               children: <Widget>[
                 if (_offline) ...<Widget>[
-                  const _OfflineNote('Offline — reading your saved copy.'),
+                  const _OfflineNote('Offline, reading your saved copy.'),
                   const SizedBox(height: 12),
                 ],
                 Row(
@@ -330,7 +330,7 @@ class _Block extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: const Color(0x1AF59E0B), // amber @10% — key-point tone
+            color: const Color(0x1AF59E0B), // amber @10%, key-point tone
             borderRadius: BorderRadius.circular(10),
             border: const Border(
               left: BorderSide(color: RenanceColors.amber, width: 3),
