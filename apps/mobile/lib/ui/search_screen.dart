@@ -258,7 +258,7 @@ class _SearchScreenState extends State<SearchScreen> {
     final int total = groups.values.fold<int>(0, (int n, List<SearchHit> l) => n + l.length);
 
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -335,9 +335,9 @@ class _SearchBar extends StatelessWidget {
           IconButton(
             onPressed: () => Navigator.of(context).pop(),
             icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-            color: RenanceColors.ink,
+            color: context.ink,
           ),
-          const SizedBox(width: 4),
+          SizedBox(width: 4),
           Expanded(
             child: TextField(
               controller: controller,
@@ -348,9 +348,9 @@ class _SearchBar extends StatelessWidget {
               style: RenanceText.bodyBase,
               decoration: InputDecoration(
                 hintText: 'Search packs, lessons, decks, topics',
-                hintStyle: RenanceText.bodySecondary,
-                prefixIcon: const Icon(Icons.search,
-                    color: RenanceColors.textSecondary),
+                hintStyle: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
+                prefixIcon: Icon(Icons.search,
+                    color: context.textSecondary),
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),
@@ -395,7 +395,7 @@ class _EmptyQuery extends StatelessWidget {
           indexFailed
               ? 'Only what is already on this device is searchable right now. Reconnect once to index everything.'
               : 'Find a practice pack, a lesson, a flashcard deck or any syllabus topic. Try "cells", "essay" or "Newton".',
-          style: RenanceText.bodySecondary,
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
         ),
       ],
     );
@@ -413,14 +413,14 @@ class _NoResults extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const Icon(Icons.search_off,
-                size: 40, color: RenanceColors.outlineLight),
+            Icon(Icons.search_off,
+                size: 40, color: context.outlineLight),
             const SizedBox(height: 12),
             Text('Nothing matches yet', style: RenanceText.sectionTitle),
             const SizedBox(height: 6),
             Text(
               'Check the spelling or try a shorter word.',
-              style: RenanceText.bodySecondary,
+              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
               textAlign: TextAlign.center,
             ),
           ],
@@ -444,7 +444,7 @@ class _ShelfHeader extends StatelessWidget {
       padding: const EdgeInsets.only(top: 14, bottom: 6),
       child: Row(
         children: <Widget>[
-          Text(label, style: RenanceText.overline),
+          Text(label, style: RenanceText.overline.copyWith(color: context.textSecondary)),
           const Spacer(),
           Text('$count', style: RenanceText.labelMono),
         ],
@@ -477,10 +477,10 @@ class _HitRow extends StatelessWidget {
                   width: 38,
                   height: 38,
                   decoration: BoxDecoration(
-                    color: RenanceColors.surfaceContainerHigh,
+                    color: context.cardHigh,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Icon(hit.icon, size: 20, color: RenanceColors.ink),
+                  child: Icon(hit.icon, size: 20, color: context.ink),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -497,7 +497,7 @@ class _HitRow extends StatelessWidget {
                         const SizedBox(height: 2),
                         Text(
                           hit.subtitle,
-                          style: RenanceText.caption,
+                          style: RenanceText.caption.copyWith(color: context.textSecondary),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -505,8 +505,8 @@ class _HitRow extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Icon(Icons.chevron_right,
-                    color: RenanceColors.outlineLight),
+                Icon(Icons.chevron_right,
+                    color: context.outlineLight),
               ],
             ),
           ),

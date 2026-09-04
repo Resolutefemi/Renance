@@ -54,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -70,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(bottom: 48),
               child: Text(
                 'LEARN. PRACTICE. RISE.',
@@ -79,7 +79,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
                   letterSpacing: 0.2 * 12,
-                  color: RenanceColors.secondary,
+                  color: context.secondary,
                 ),
               ),
             ),
@@ -151,7 +151,7 @@ class _OrbitRingsState extends State<_OrbitRings>
                 painter: _RingPainter(
                   t: _spin.value,
                   radius: 0.76,
-                  color: RenanceColors.ink,
+                  color: context.ink,
                   strokeWidth: 1,
                   sweep: 60 / 200,
                   speed: 1,

@@ -72,10 +72,10 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         _sizes.values.fold(0, (int sum, int b) => sum + b);
 
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
         title: const Text('Downloads', style: RenanceText.sectionTitle),
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
       ),
       body: downloaded.isEmpty
           ? Center(
@@ -91,7 +91,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                     'Download a pack from the Practice tab and it lives\n'
                     'here, ready with zero network.',
                     textAlign: TextAlign.center,
-                    style: RenanceText.bodySecondary,
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
@@ -101,30 +101,30 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
               children: <Widget>[
                 // Storage --------------------------------------------------
                 Text('Storage', style: RenanceText.sectionTitle),
-                const SizedBox(height: 4),
+                SizedBox(height: 4),
                 Text('${_fmtBytes(totalBytes)} of packs on this device',
-                    style: RenanceText.caption),
-                const SizedBox(height: 12),
+                    style: RenanceText.caption.copyWith(color: context.textSecondary)),
+                SizedBox(height: 12),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(999),
                   child: LinearProgressIndicator(
                     value: totalBytes == 0 ? 0 : 0.08,
                     minHeight: 10,
-                    backgroundColor: RenanceColors.surfaceContainer,
-                    valueColor: const AlwaysStoppedAnimation<Color>(
-                        RenanceColors.ink),
+                    backgroundColor: context.surfaceContainer,
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                        context.ink),
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 Row(
                   children: <Widget>[
                     Container(width: 8, height: 8, decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.black)),
+                    SizedBox(width: 6),
+                    Text('Offline Packs', style: RenanceText.caption.copyWith(color: context.textSecondary)),
+                    SizedBox(width: 16),
+                    Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: context.surfaceContainer)),
                     const SizedBox(width: 6),
-                    Text('Offline Packs', style: RenanceText.caption),
-                    const SizedBox(width: 16),
-                    Container(width: 8, height: 8, decoration: const BoxDecoration(shape: BoxShape.circle, color: RenanceColors.surfaceContainer)),
-                    const SizedBox(width: 6),
-                    Text('Free space', style: RenanceText.caption),
+                    Text('Free space', style: RenanceText.caption.copyWith(color: context.textSecondary)),
                   ],
                 ),
                 // Silent sync ----------------------------------------------
@@ -132,7 +132,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: RenanceColors.card,
+                    color: context.card,
                     borderRadius: BorderRadius.circular(12),
                     boxShadow: const <BoxShadow>[
                       BoxShadow(
@@ -146,7 +146,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                     children: <Widget>[
                       CircleAvatar(
                         radius: 18,
-                        backgroundColor: RenanceColors.selectionBlue,
+                        backgroundColor: context.selectionBlue,
                         child: const Icon(Icons.bolt,
                             size: 20, color: Colors.black),
                       ),
@@ -162,7 +162,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                               'Your packs download automatically when the '
                               'app opens, you are never without study '
                               'materials, even offline.',
-                              style: RenanceText.caption.copyWith(height: 1.4),
+                              style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.4),
                             ),
                             const SizedBox(height: 8),
                             Text('Status: Active',
@@ -186,7 +186,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                     child: Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: RenanceColors.card,
+                        color: context.card,
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: const <BoxShadow>[
                           BoxShadow(
@@ -201,11 +201,11 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                             width: 40,
                             height: 40,
                             decoration: BoxDecoration(
-                              color: RenanceColors.surfaceContainerHigh,
+                              color: context.cardHigh,
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Icon(_iconFor(_titleFor(code)),
-                                size: 22, color: RenanceColors.ink),
+                                size: 22, color: context.ink),
                           ),
                           const SizedBox(width: 12),
                           Expanded(
@@ -217,22 +217,22 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                                     overflow: TextOverflow.ellipsis,
                                     style: RenanceText.bodyMedium),
                                 Text(_fmtBytes(size),
-                                    style: RenanceText.caption),
+                                    style: RenanceText.caption.copyWith(color: context.textSecondary)),
                               ],
                             ),
                           ),
-                          const SizedBox(width: 8),
-                          const Icon(Icons.check_circle,
+                          SizedBox(width: 8),
+                          Icon(Icons.check_circle,
                               size: 18, color: RenanceColors.emerald),
-                          const SizedBox(width: 4),
+                          SizedBox(width: 4),
                           Text('Downloaded',
                               style: RenanceText.labelMono.copyWith(
                                   fontSize: 11,
                                   color: RenanceColors.emerald)),
                           IconButton(
                             tooltip: 'Delete pack',
-                            icon: const Icon(Icons.delete_outline,
-                                size: 20, color: RenanceColors.error),
+                            icon: Icon(Icons.delete_outline,
+                                size: 20, color: context.error),
                             onPressed: () async {
                               final PackStore store = context.read<PackStore>();
                               final StudentController student =

@@ -34,7 +34,7 @@ List<InlineSpan> buildInlineSpans(
           style: style.copyWith(
             fontFamily: 'JetBrains Mono',
             fontSize: (style.fontSize ?? 14) * 0.92,
-            background: Paint()..color = RenanceColors.surfaceContainerLow,
+            background: Paint()..color = context.cardLow,
           ),
         ),
       );

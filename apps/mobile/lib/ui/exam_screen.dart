@@ -62,9 +62,9 @@ class _ExamScreenState extends State<ExamScreen> {
   Widget build(BuildContext context) {
     final ExamController c = context.watch<ExamController>();
     return Scaffold(
-      backgroundColor: RenanceColors.surfaceContainerLowest,
+      backgroundColor: context.cardLowest,
       appBar: AppBar(
-        backgroundColor: RenanceColors.surfaceContainerLowest,
+        backgroundColor: context.cardLowest,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, size: 22),
           onPressed: () => Navigator.of(context).maybePop(),
@@ -84,7 +84,7 @@ class _ExamScreenState extends State<ExamScreen> {
             onKeepGoing: c.keepGoing,
             child: _Player(controller: c, mmss: _mmss),
           ),
-        ExamPhase.grading => const Center(
+        ExamPhase.grading => Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
@@ -96,7 +96,7 @@ class _ExamScreenState extends State<ExamScreen> {
                 Text(
                   'the engine is comparing your picks against the sealed key',
                   style: TextStyle(
-                      fontSize: 12, color: RenanceColors.textSecondary),
+                      fontSize: 12, color: context.textSecondary),
                 ),
               ],
             ),
@@ -138,7 +138,7 @@ class _Intro extends StatelessWidget {
               '${bundle.questionCount} questions · '
               '${bundle.durationMinutes ?? 30} minutes · '
               '${bundle.totalMarks} marks',
-              style: RenanceText.bodySecondary,
+              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
             ),
             const SizedBox(height: 24),
             Card(
@@ -185,7 +185,7 @@ class _Rule extends StatelessWidget {
           Expanded(
             child: Text(
               text,
-              style: RenanceText.caption.copyWith(height: 1.4),
+              style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.4),
             ),
           ),
         ],
@@ -213,14 +213,14 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
       decoration: BoxDecoration(
-        color: RenanceColors.surfaceContainerLow,
+        color: context.cardLow,
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: RenanceColors.outlineLight),
+        border: Border.all(color: context.outlineLight),
       ),
       child: Row(
         children: <Widget>[
           Icon(Icons.auto_awesome,
-              size: 18, color: on ? RenanceColors.ink : RenanceColors.outlineDark),
+              size: 18, color: on ? context.ink : context.outlineDark),
           const SizedBox(width: 8),
           Expanded(
             child: Column(
@@ -232,8 +232,8 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
                   on
                       ? 'Weak topics come first, easy before hard'
                       : 'The pack\'s natural exam order',
-                  style: RenanceText.caption
-                      .copyWith(fontSize: 11, color: RenanceColors.textSecondary),
+                  style: RenanceText.caption.copyWith(color: context.textSecondary)
+                      .copyWith(fontSize: 11, color: context.textSecondary),
                 ),
               ],
             ),
@@ -309,7 +309,7 @@ class _ExamHeader extends StatelessWidget {
                   builder: (BuildContext pillContext) {
                     final bool breaking = controller.breakSecondsLeft > 0;
                     final Color pillColor = breaking
-                        ? RenanceColors.ink
+                        ? context.ink
                         : RenanceColors.emerald;
                     return Row(
                       children: <Widget>[
@@ -403,7 +403,7 @@ class _Player extends StatelessWidget {
   void _openNavigator(BuildContext context, ExamController controller) {
     showModalBottomSheet<void>(
       context: context,
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       isScrollControlled: true,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
@@ -442,7 +442,7 @@ class _Player extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: RenanceColors.card,
+                  color: context.card,
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: const <BoxShadow>[
                     BoxShadow(
@@ -459,7 +459,7 @@ class _Player extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 8, vertical: 2),
                         decoration: BoxDecoration(
-                          color: RenanceColors.surfaceContainerLow,
+                          color: context.cardLow,
                           borderRadius: BorderRadius.circular(999),
                         ),
                         child: Text(
@@ -521,11 +521,11 @@ class _Player extends StatelessWidget {
                         side: BorderSide(
                           color: flagged
                               ? RenanceColors.amber
-                              : RenanceColors.outlineLight,
+                              : context.outlineLight,
                           width: flagged ? 1.6 : 1,
                         ),
                         backgroundColor: flagged
-                            ? RenanceColors.surfaceContainerHigh
+                            ? context.cardHigh
                             : Colors.transparent,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
@@ -538,10 +538,10 @@ class _Player extends StatelessWidget {
                             size: 20,
                             color: flagged
                                 ? RenanceColors.amber
-                                : RenanceColors.ink,
+                                : context.ink,
                           ),
-                          const SizedBox(width: 8),
-                          const Text('Flag',
+                          SizedBox(width: 8),
+                          Text('Flag',
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w600)),
@@ -550,7 +550,7 @@ class _Player extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(width: 8),
+                SizedBox(width: 8),
                 Expanded(
                   flex: 1,
                   child: SizedBox(
@@ -558,8 +558,8 @@ class _Player extends StatelessWidget {
                     child: OutlinedButton(
                       onPressed: controller.next,
                       style: OutlinedButton.styleFrom(
-                        side: const BorderSide(
-                            color: RenanceColors.outlineLight),
+                        side: BorderSide(
+                            color: context.outlineLight),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                       ),
@@ -635,8 +635,8 @@ class _OptionTile extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue
-              : RenanceColors.card,
+              ? context.selectionBlue
+              : context.card,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
             color: selected ? Colors.black : Colors.transparent,
@@ -660,14 +660,14 @@ class _OptionTile extends StatelessWidget {
               decoration: BoxDecoration(
                 color: selected
                     ? Colors.black
-                    : RenanceColors.surfaceContainer,
+                    : context.surfaceContainer,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text(
                 letter,
                 style: RenanceText.labelMono.copyWith(
                   fontSize: 16,
-                  color: selected ? Colors.white : RenanceColors.ink,
+                  color: selected ? Colors.white : context.ink,
                 ),
               ),
             ),
@@ -769,7 +769,7 @@ class _NavigatorSheetState extends State<_NavigatorSheet> {
             // title + circular close -------------------------------------
             Row(
               children: <Widget>[
-                const Expanded(
+                Expanded(
                   child: Text('Question Navigator',
                       style: RenanceText.sectionTitle),
                 ),
@@ -779,12 +779,12 @@ class _NavigatorSheetState extends State<_NavigatorSheet> {
                   child: Container(
                     width: 40,
                     height: 40,
-                    decoration: const BoxDecoration(
-                      color: RenanceColors.surfaceContainerLow,
+                    decoration: BoxDecoration(
+                      color: context.cardLow,
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(Icons.close,
-                        size: 20, color: RenanceColors.ink),
+                    child: Icon(Icons.close,
+                        size: 20, color: context.ink),
                   ),
                 ),
               ],
@@ -811,9 +811,9 @@ class _NavigatorSheetState extends State<_NavigatorSheet> {
             // state grid -------------------------------------------------
             Flexible(
               child: shown.isEmpty
-                  ? const Center(
+                  ? Center(
                       child: Text('Nothing here yet.',
-                          style: RenanceText.caption),
+                          style: RenanceText.caption.copyWith(color: context.textSecondary)),
                     )
                   : GridView.builder(
                       padding: const EdgeInsets.only(bottom: 4),
@@ -892,8 +892,8 @@ class _NavChip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue
-              : RenanceColors.surfaceContainerLow,
+              ? context.selectionBlue
+              : context.cardLow,
           borderRadius: BorderRadius.circular(999),
         ),
         child: Text(
@@ -901,7 +901,7 @@ class _NavChip extends StatelessWidget {
           style: TextStyle(
             fontSize: 14,
             fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
-            color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
+            color: selected ? context.ink : context.textSecondary,
           ),
         ),
       ),
@@ -931,11 +931,11 @@ class _NavTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color fill = Colors.white;
-    Color fg = RenanceColors.textSecondary;
-    Border border = Border.all(color: RenanceColors.outlineVariant, width: 1);
+    Color fg = context.textSecondary;
+    Border border = Border.all(color: context.outlineVariant, width: 1);
     if (skipped) {
-      fill = RenanceColors.surfaceContainerLow;
-      border = Border.all(color: RenanceColors.surfaceContainerLow, width: 1);
+      fill = context.cardLow;
+      border = Border.all(color: context.cardLow, width: 1);
     }
     if (answered) {
       fill = Colors.black;
@@ -944,7 +944,7 @@ class _NavTile extends StatelessWidget {
     }
     if (flagged) {
       border = Border.all(color: RenanceColors.amber, width: 2);
-      if (!answered) fg = RenanceColors.ink;
+      if (!answered) fg = context.ink;
     }
 
     return InkWell(
@@ -1022,7 +1022,7 @@ class _NavLegendItem extends StatelessWidget {
       case _NavLegendState.skipped:
         swatch = Container(
             decoration: BoxDecoration(
-          color: RenanceColors.surfaceContainerLow,
+          color: context.cardLow,
           borderRadius: BorderRadius.circular(3),
         ));
       case _NavLegendState.unseen:
@@ -1030,14 +1030,14 @@ class _NavLegendItem extends StatelessWidget {
             decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(3),
-          border: Border.all(color: RenanceColors.outlineVariant),
+          border: Border.all(color: context.outlineVariant),
         ));
     }
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
         SizedBox(width: 13, height: 13, child: swatch),
-        const SizedBox(width: 6),
+        SizedBox(width: 6),
         Text(
           switch (state) {
             _NavLegendState.answered => 'Answered',
@@ -1045,8 +1045,8 @@ class _NavLegendItem extends StatelessWidget {
             _NavLegendState.skipped => 'Skipped',
             _NavLegendState.unseen => 'Unseen',
           },
-          style: const TextStyle(
-              fontSize: 13, color: RenanceColors.textSecondary),
+          style: TextStyle(
+              fontSize: 13, color: context.textSecondary),
         ),
       ],
     );
@@ -1112,13 +1112,16 @@ class _RecoveryView extends StatelessWidget {
                         children: <Widget>[
                           CustomPaint(
                             size: const Size(128, 128),
-                            painter: _RecoveryRing(pct: pct),
+                            painter: _RecoveryRing(
+                              pct: pct,
+                              trackColor: context.surfaceContainer,
+                              valueColor: context.error),
                           ),
                           Text(
                             '$pct%',
                             style: RenanceText.statNumber.copyWith(
                               fontSize: 26,
-                              color: RenanceColors.error,
+                              color: context.error,
                             ),
                           ),
                         ],
@@ -1134,10 +1137,10 @@ class _RecoveryView extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
+                    Text(
                       "Don't sweat it. Focus on the gaps.",
                       textAlign: TextAlign.center,
-                      style: RenanceText.bodySecondary,
+                      style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                     ),
                     const SizedBox(height: 20),
                     // XP pill -------------------------------------------------
@@ -1145,22 +1148,22 @@ class _RecoveryView extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 18, vertical: 10),
                       decoration: BoxDecoration(
-                        color: RenanceColors.surfaceContainer,
+                        color: context.surfaceContainer,
                         borderRadius: BorderRadius.circular(999),
                       ),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          const Icon(Icons.stars,
-                              size: 18, color: RenanceColors.ink),
+                          Icon(Icons.stars,
+                              size: 18, color: context.ink),
                           const SizedBox(width: 8),
                           Text('+$xpEarned',
                               style: RenanceText.bodyMedium.copyWith(
-                                color: RenanceColors.ink,
+                                color: context.ink,
                               )),
                           const SizedBox(width: 8),
-                          const Text('XP Earned',
-                              style: RenanceText.bodySecondary),
+                          Text('XP Earned',
+                              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
                         ],
                       ),
                     ),
@@ -1178,7 +1181,7 @@ class _RecoveryView extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: RenanceColors.card,
+                  color: context.card,
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: const <BoxShadow>[
                     BoxShadow(
@@ -1190,10 +1193,10 @@ class _RecoveryView extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     if (weak.isEmpty)
-                      const Text(
+                      Text(
                         'Nothing critical here, the review list has every '
                         'question from this paper.',
-                        style: RenanceText.caption,
+                        style: RenanceText.caption.copyWith(color: context.textSecondary),
                       )
                     else
                       ...List<Widget>.generate(weak.length, (int i) {
@@ -1201,7 +1204,7 @@ class _RecoveryView extends StatelessWidget {
                         final double frac =
                             row.total == 0 ? 0 : row.correct / row.total;
                         final Color bar = frac < 0.5
-                            ? RenanceColors.error
+                            ? context.error
                             : RenanceColors.amber;
                         return Padding(
                           padding: EdgeInsets.only(
@@ -1231,7 +1234,7 @@ class _RecoveryView extends StatelessWidget {
                                   value: frac,
                                   minHeight: 6,
                                   backgroundColor:
-                                      RenanceColors.surfaceContainer,
+                                      context.surfaceContainer,
                                   valueColor:
                                       AlwaysStoppedAnimation<Color>(bar),
                                 ),
@@ -1318,9 +1321,11 @@ class _RecoveryView extends StatelessWidget {
 
 /// Ring of the recovery hero: light-blue track, red arc from the top.
 class _RecoveryRing extends CustomPainter {
-  const _RecoveryRing({required this.pct});
+  const _RecoveryRing({required this.pct, required this.trackColor, required this.valueColor});
 
   final int pct;
+  final Color trackColor;
+  final Color valueColor;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -1330,7 +1335,7 @@ class _RecoveryRing extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 10
       ..strokeCap = StrokeCap.round
-      ..color = RenanceColors.surfaceContainer;
+      ..color = trackColor;
     canvas.drawCircle(c, r, track);
 
     final Rect arc = Rect.fromCircle(center: c, radius: r);
@@ -1338,7 +1343,7 @@ class _RecoveryRing extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 10
       ..strokeCap = StrokeCap.round
-      ..color = RenanceColors.error;
+      ..color = valueColor;
     canvas.drawArc(
       arc,
       -math.pi / 2,
@@ -1372,7 +1377,7 @@ class _Queued extends StatelessWidget {
               "You're offline. Your paper is stored locally and will be "
               'sent for marking automatically when you reconnect.',
               textAlign: TextAlign.center,
-              style: RenanceText.bodySecondary.copyWith(height: 1.5),
+              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.5),
             ),
             const SizedBox(height: 24),
             FilledButton(
@@ -1467,7 +1472,7 @@ class _ResultState extends State<_Result> {
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        color: RenanceColors.card,
+                        color: context.card,
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: const <BoxShadow>[
                           BoxShadow(
@@ -1497,7 +1502,7 @@ class _ResultState extends State<_Result> {
                                     style: RenanceText.bodyMedium),
                                 const SizedBox(height: 2),
                                 Text('Keep the momentum going',
-                                    style: RenanceText.caption),
+                                    style: RenanceText.caption.copyWith(color: context.textSecondary)),
                               ],
                             ),
                           ),
@@ -1550,7 +1555,7 @@ class _ResultState extends State<_Result> {
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        color: RenanceColors.card,
+                        color: context.card,
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: const <BoxShadow>[
                           BoxShadow(
@@ -1569,7 +1574,7 @@ class _ResultState extends State<_Result> {
                             Text(
                               'No topic data on this paper, every question '
                               'counted toward the overall score.',
-                              style: RenanceText.caption.copyWith(height: 1.4),
+                              style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.4),
                             )
                           else
                             ...result.breakdown.map((TopicRow row) {
@@ -1581,7 +1586,7 @@ class _ResultState extends State<_Result> {
                                   ? RenanceColors.emerald
                                   : tpct >= 50
                                       ? RenanceColors.amber
-                                      : RenanceColors.error;
+                                      : context.error;
                               return Padding(
                                 padding: const EdgeInsets.only(bottom: 12),
                                 child: Column(
@@ -1757,7 +1762,7 @@ class _ScoreHeroState extends State<_ScoreHero>
                 // confetti field
                 Positioned.fill(
                   child: CustomPaint(
-                    painter: _ConfettiPainter(t: _drift.value),
+                    painter: _ConfettiPainter(t: _drift.value, baseColor: context.ink),
                   ),
                 ),
                 Column(
@@ -1812,7 +1817,7 @@ class _ScoreHeroState extends State<_ScoreHero>
                               size: 14,
                               color: widget.delta! >= 0
                                   ? RenanceColors.emerald
-                                  : RenanceColors.error,
+                                  : context.error,
                             ),
                             const SizedBox(width: 6),
                             Text(
@@ -1823,7 +1828,7 @@ class _ScoreHeroState extends State<_ScoreHero>
                                 fontSize: 12,
                                 color: widget.delta! >= 0
                                     ? RenanceColors.emerald
-                                    : RenanceColors.error,
+                                    : context.error,
                               ),
                             ),
                           ],
@@ -1842,9 +1847,10 @@ class _ScoreHeroState extends State<_ScoreHero>
 
 /// Six tiny particles drifting upward, ink, emerald, amber.
 class _ConfettiPainter extends CustomPainter {
-  _ConfettiPainter({required this.t});
+  _ConfettiPainter({required this.t, required this.baseColor});
 
   final double t;
+  final Color baseColor;
 
   static const List<(double, double, int)> _seeds = <(double, double, int)>[
     (0.18, 0.78, 0), // x, y, color class
@@ -1858,7 +1864,7 @@ class _ConfettiPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final List<Color> colors = <Color>[
-      RenanceColors.ink,
+      baseColor,
       RenanceColors.emerald,
       RenanceColors.amber,
     ];
@@ -1994,7 +2000,7 @@ class _StatBox extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -2003,12 +2009,12 @@ class _StatBox extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          Icon(icon, size: 22, color: RenanceColors.textSecondary),
+          Icon(icon, size: 22, color: context.textSecondary),
           const SizedBox(height: 4),
           Text(value,
               style: RenanceText.statNumber.copyWith(fontSize: 20)),
           const SizedBox(height: 2),
-          Text(label, style: RenanceText.caption),
+          Text(label, style: RenanceText.caption.copyWith(color: context.textSecondary)),
         ],
       ),
     );
@@ -2030,14 +2036,14 @@ class _ErrorView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const Icon(Icons.error_outline,
-                size: 40, color: RenanceColors.error),
+            Icon(Icons.error_outline,
+                size: 40, color: context.error),
             const SizedBox(height: 12),
             Text(
               controller.error ?? 'Something went wrong.',
               textAlign: TextAlign.center,
               style: RenanceText.bodySecondary.copyWith(
-                  color: RenanceColors.error, height: 1.5),
+                  color: context.error, height: 1.5),
             ),
             const SizedBox(height: 20),
             OutlinedButton(

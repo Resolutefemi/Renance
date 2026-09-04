@@ -55,21 +55,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final ThemeController theme = context.watch<ThemeController>();
 
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
         title: const Text('Settings', style: RenanceText.sectionTitle),
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
       ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 32),
         children: <Widget>[
           // Appearance -----------------------------------------------------
-          const Text('APPEARANCE', style: RenanceText.overline),
+          Text('APPEARANCE', style: RenanceText.overline.copyWith(color: context.textSecondary)),
           const SizedBox(height: 8),
           _AppearanceSwitch(mode: theme.mode, onPick: theme.setMode),
           // Learning -------------------------------------------------------
           const SizedBox(height: 24),
-          const Text('LEARNING', style: RenanceText.overline),
+          Text('LEARNING', style: RenanceText.overline.copyWith(color: context.textSecondary)),
           const SizedBox(height: 8),
           _CardGroup(children: <Widget>[
             ListTile(
@@ -78,16 +78,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 radius: 16,
                 backgroundColor: const Color(0xFFE7EEFF),
                 child: Icon(Icons.flag,
-                    size: 18, color: RenanceColors.ink),
+                    size: 18, color: context.ink),
               ),
               title: const Text('Daily Goal', style: RenanceText.bodyBase),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Text('$_dailyGoal mins',
-                      style: RenanceText.bodySecondary),
-                  const Icon(Icons.chevron_right,
-                      color: RenanceColors.outlineLight),
+                      style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
+                  Icon(Icons.chevron_right,
+                      color: context.outlineLight),
                 ],
               ),
               onTap: () async {
@@ -115,14 +115,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
             SwitchListTile(
               secondary: CircleAvatar(
                 radius: 16,
-                backgroundColor: RenanceColors.secondaryContainer,
+                backgroundColor: context.secondaryContainer,
                 child: Icon(Icons.notifications_active,
-                    size: 18, color: RenanceColors.ink),
+                    size: 18, color: context.ink),
               ),
               title: const Text('Study Reminders', style: RenanceText.bodyBase),
               subtitle: Text(
                 _reminders ? 'Daily at 8:00 PM' : 'Off',
-                style: RenanceText.caption,
+                style: RenanceText.caption.copyWith(color: context.textSecondary),
               ),
               value: _reminders,
               activeThumbColor: Colors.black,
@@ -136,7 +136,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ]),
           // Data & Offline -------------------------------------------------
           const SizedBox(height: 24),
-          const Text('DATA & OFFLINE', style: RenanceText.overline),
+          Text('DATA & OFFLINE', style: RenanceText.overline.copyWith(color: context.textSecondary)),
           const SizedBox(height: 8),
           _CardGroup(children: <Widget>[
             Padding(
@@ -160,17 +160,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: LinearProgressIndicator(
                       value: _packBytes == 0 ? 0 : 0.12,
                       minHeight: 8,
-                      backgroundColor: RenanceColors.surfaceContainer,
+                      backgroundColor: context.surfaceContainer,
                       valueColor: const AlwaysStoppedAnimation<Color>(
                           RenanceColors.emerald),
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                   Text(
                     'Packs live on this device so you can practice with '
                     'zero network. Clearing them frees space; they '
                     're-download on the next sync.',
-                    style: RenanceText.caption.copyWith(height: 1.4),
+                    style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.4),
                   ),
                 ],
               ),
@@ -179,9 +179,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               leading: CircleAvatar(
                 radius: 16,
-                backgroundColor: RenanceColors.errorContainer,
-                child: const Icon(Icons.delete_outline,
-                    size: 18, color: RenanceColors.error),
+                backgroundColor: context.errorContainer,
+                child: Icon(Icons.delete_outline,
+                    size: 18, color: context.error),
               ),
               title: const Text('Clear offline packs',
                   style: RenanceText.bodyBase),
@@ -221,7 +221,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ]),
           // About ----------------------------------------------------------
           const SizedBox(height: 24),
-          const Text('ABOUT', style: RenanceText.overline),
+          Text('ABOUT', style: RenanceText.overline.copyWith(color: context.textSecondary)),
           const SizedBox(height: 8),
           _CardGroup(children: <Widget>[
             ListTile(
@@ -265,7 +265,7 @@ class _AppearanceSwitch extends StatelessWidget {
           height: 56,
           padding: const EdgeInsets.all(4),
           decoration: BoxDecoration(
-            color: RenanceColors.card,
+            color: context.card,
             borderRadius: BorderRadius.circular(12),
             boxShadow: const <BoxShadow>[
               BoxShadow(
@@ -285,7 +285,7 @@ class _AppearanceSwitch extends StatelessWidget {
                 width: (w - 8) / 3 - 4,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: RenanceColors.selectionBlue,
+                    color: context.selectionBlue,
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
@@ -304,16 +304,16 @@ class _AppearanceSwitch extends StatelessWidget {
                                 o.$2,
                                 size: 20,
                                 color: o.$1 == mode
-                                    ? RenanceColors.ink
-                                    : RenanceColors.textSecondary,
+                                    ? context.ink
+                                    : context.textSecondary,
                               ),
                               const SizedBox(width: 8),
                               Text(
                                 o.$3,
                                 style: RenanceText.bodyMedium.copyWith(
                                   color: o.$1 == mode
-                                      ? RenanceColors.ink
-                                      : RenanceColors.textSecondary,
+                                      ? context.ink
+                                      : context.textSecondary,
                                 ),
                               ),
                             ],
@@ -340,7 +340,7 @@ class _CardGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -351,7 +351,7 @@ class _CardGroup extends StatelessWidget {
         children: <Widget>[
           for (var i = 0; i < children.length; i++) ...<Widget>[
             if (i > 0)
-              Container(height: 1, color: RenanceColors.surfaceContainer),
+              Container(height: 1, color: context.surfaceContainer),
             children[i],
           ],
         ],

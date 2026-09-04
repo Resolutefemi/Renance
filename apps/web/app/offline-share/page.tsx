@@ -52,7 +52,7 @@ export default function OfflineSharePage() {
         {[100, 186, 272].map((d) => (
           <span
             key={d}
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D8E3FB]"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-surface-variant"
             style={{ width: d, height: d }}
           />
         ))}

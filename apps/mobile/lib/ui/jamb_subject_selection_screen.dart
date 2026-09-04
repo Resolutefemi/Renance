@@ -120,7 +120,7 @@ class _JambSubjectSelectionScreenState
     final double progress = _selected.length / _maxSelections;
 
     return Scaffold(
-      backgroundColor: RenanceColors.surfaceContainerLowest,
+      backgroundColor: context.cardLowest,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -150,7 +150,7 @@ class _JambSubjectSelectionScreenState
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: RenanceColors.surfaceContainer,
+                          color: context.surfaceContainer,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: const <BoxShadow>[
                             BoxShadow(
@@ -176,7 +176,7 @@ class _JambSubjectSelectionScreenState
                                         'JAMB REQUIREMENTS',
                                         style: RenanceText.overline.copyWith(
                                           color:
-                                              RenanceColors.textSecondary,
+                                              context.textSecondary,
                                         ),
                                       ),
                                       const SizedBox(height: 4),
@@ -191,7 +191,7 @@ class _JambSubjectSelectionScreenState
                                                   .copyWith(
                                                 fontSize: 20,
                                                 color: full
-                                                    ? RenanceColors.ink
+                                                    ? context.ink
                                                     : RenanceColors.emerald,
                                               ),
                                             ),
@@ -207,16 +207,16 @@ class _JambSubjectSelectionScreenState
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 12, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: RenanceColors.surfaceVariant,
+                                    color: context.surfaceVariant,
                                     borderRadius:
                                         BorderRadius.circular(999),
                                   ),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: <Widget>[
-                                      const Icon(Icons.info_outline,
+                                      Icon(Icons.info_outline,
                                           size: 14,
-                                          color: RenanceColors.textSecondary),
+                                          color: context.textSecondary),
                                       const SizedBox(width: 6),
                                       Text('English mandatory',
                                           style: RenanceText.labelMono
@@ -237,14 +237,14 @@ class _JambSubjectSelectionScreenState
                                 child: Stack(
                                   children: <Widget>[
                                     ColoredBox(
-                                      color: RenanceColors.surfaceVariant,
+                                      color: context.surfaceVariant,
                                       child: const SizedBox.expand(),
                                     ),
                                     FractionallySizedBox(
                                       widthFactor: progress,
                                       child: ColoredBox(
                                         color: full
-                                            ? RenanceColors.ink
+                                            ? context.ink
                                             : RenanceColors.emerald,
                                         child: const SizedBox.expand(),
                                       ),
@@ -266,7 +266,7 @@ class _JambSubjectSelectionScreenState
                                 style: RenanceText.sectionTitle),
                             Text('Tap to select',
                                 style: RenanceText.caption.copyWith(
-                                    color: RenanceColors.textSecondary)),
+                                    color: context.textSecondary)),
                           ],
                         ),
                       ),
@@ -305,16 +305,16 @@ class _RoundBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: RenanceColors.surfaceContainer,
+      color: context.surfaceContainer,
       shape: const CircleBorder(),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: onBack,
-        child: const SizedBox(
+        child: SizedBox(
           width: 40,
           height: 40,
           child: Icon(Icons.arrow_back,
-              size: 20, color: RenanceColors.ink),
+              size: 20, color: context.ink),
         ),
       ),
     );
@@ -341,15 +341,15 @@ class _SubjectTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool mandatory = subject.mandatory;
     final Color tileColor = mandatory
-        ? RenanceColors.ink
+        ? context.ink
         : selected
             ? RenanceColors.emerald
-            : RenanceColors.surfaceContainer;
+            : context.surfaceContainer;
     final Color tileIconColor = (mandatory || selected)
         ? Colors.white
-        : RenanceColors.textSecondary;
+        : context.textSecondary;
     final Color borderColor = mandatory
-        ? RenanceColors.ink
+        ? context.ink
         : selected
             ? RenanceColors.emerald
             : Colors.transparent;
@@ -358,8 +358,8 @@ class _SubjectTile extends StatelessWidget {
       opacity: dimmed ? 0.5 : 1,
       child: Material(
         color: selected || mandatory
-            ? RenanceColors.surfaceContainer
-            : RenanceColors.card,
+            ? context.surfaceContainer
+            : context.card,
         borderRadius: BorderRadius.circular(12),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -390,7 +390,7 @@ class _SubjectTile extends StatelessWidget {
                     children: <Widget>[
                       Text(subject.name,
                           style: RenanceText.bodyMedium.copyWith(
-                              fontSize: 16, color: RenanceColors.ink)),
+                              fontSize: 16, color: context.ink)),
                       const SizedBox(height: 2),
                       Row(
                         children: <Widget>[
@@ -406,7 +406,7 @@ class _SubjectTile extends StatelessWidget {
                             const SizedBox(width: 6),
                             Text('Mandatory',
                                 style: RenanceText.caption.copyWith(
-                                    color: RenanceColors.textSecondary)),
+                                    color: context.textSecondary)),
                           ] else ...<Widget>[
                             for (int i = 0; i < subject.total; i++)
                               Container(
@@ -418,7 +418,7 @@ class _SubjectTile extends StatelessWidget {
                                       ? (subject.amberBar
                                           ? RenanceColors.amber
                                           : RenanceColors.emerald)
-                                      : RenanceColors.surfaceVariant,
+                                      : context.surfaceVariant,
                                   borderRadius: BorderRadius.circular(1),
                                 ),
                               ),
@@ -426,7 +426,7 @@ class _SubjectTile extends StatelessWidget {
                             Text(
                               '${(subject.covered / subject.total * 100).round()}% Syllabus',
                               style: RenanceText.caption.copyWith(
-                                  color: RenanceColors.textSecondary),
+                                  color: context.textSecondary),
                             ),
                           ],
                         ],
@@ -463,11 +463,11 @@ class _CheckCircle extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: filled
-            ? (black ? RenanceColors.ink : RenanceColors.emerald)
+            ? (black ? context.ink : RenanceColors.emerald)
             : Colors.transparent,
         border: filled
             ? null
-            : Border.all(color: RenanceColors.outlineLight),
+            : Border.all(color: context.outlineLight),
       ),
       alignment: Alignment.center,
       child: filled

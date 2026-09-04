@@ -55,7 +55,7 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -70,7 +70,7 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                       IconButton(
                         onPressed: () => Navigator.of(context).pop(),
                         icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                        color: RenanceColors.ink,
+                        color: context.ink,
                       ),
                       const SizedBox(width: 4),
                       const Text('Generate practice',
@@ -78,11 +78,11 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                     ],
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.fromLTRB(16, 8, 16, 0),
                   child: Text(
                     'AI-powered question generation tailored to your needs.',
-                    style: RenanceText.bodySecondary,
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                   ),
                 ),
                 Expanded(
@@ -93,7 +93,7 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                       Container(
                         padding: const EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          color: RenanceColors.card,
+                          color: context.card,
                           borderRadius: BorderRadius.circular(16),
                           boxShadow: const <BoxShadow>[
                             BoxShadow(
@@ -105,10 +105,10 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            const Row(
+                            Row(
                               children: <Widget>[
                                 Icon(Icons.category_outlined,
-                                    size: 20, color: RenanceColors.ink),
+                                    size: 20, color: context.ink),
                                 SizedBox(width: 10),
                                 Text('Select Topic',
                                     style: RenanceText.sectionTitle),
@@ -132,10 +132,10 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                               ],
                             ),
                             const SizedBox(height: 22),
-                            const Row(
+                            Row(
                               children: <Widget>[
                                 Icon(Icons.bar_chart,
-                                    size: 20, color: RenanceColors.ink),
+                                    size: 20, color: context.ink),
                                 SizedBox(width: 10),
                                 Text('Difficulty',
                                     style: RenanceText.sectionTitle),
@@ -145,7 +145,7 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                             Container(
                               padding: const EdgeInsets.all(4),
                               decoration: BoxDecoration(
-                                color: RenanceColors.surfaceContainerLow,
+                                color: context.cardLow,
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Row(
@@ -185,10 +185,10 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                               ),
                             ),
                             const SizedBox(height: 22),
-                            const Row(
+                            Row(
                               children: <Widget>[
                                 Icon(Icons.format_list_numbered,
-                                    size: 20, color: RenanceColors.ink),
+                                    size: 20, color: context.ink),
                                 SizedBox(width: 10),
                                 Text('Question Count',
                                     style: RenanceText.sectionTitle),
@@ -198,7 +198,7 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                             Container(
                               padding: const EdgeInsets.all(8),
                               decoration: BoxDecoration(
-                                color: RenanceColors.surfaceContainerLow,
+                                color: context.cardLow,
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Row(
@@ -261,11 +261,11 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 6),
                             decoration: BoxDecoration(
-                              color: RenanceColors.surfaceContainerLow,
+                              color: context.cardLow,
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Text('${_generated.length} Pending',
-                                style: RenanceText.caption),
+                                style: RenanceText.caption.copyWith(color: context.textSecondary)),
                           ),
                         ],
                       ),
@@ -300,8 +300,8 @@ class _TopicChip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue
-              : RenanceColors.surfaceContainerLow,
+              ? context.selectionBlue
+              : context.cardLow,
           borderRadius: BorderRadius.circular(999),
         ),
         child: Text(
@@ -310,7 +310,7 @@ class _TopicChip extends StatelessWidget {
             fontFamily: 'Inter',
             fontSize: 15,
             fontWeight: selected ? FontWeight.w600 : FontWeight.w400,
-            color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
+            color: selected ? context.ink : context.textSecondary,
           ),
         ),
       ),
@@ -336,7 +336,7 @@ class _StepButton extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Icon(icon, size: 22, color: RenanceColors.ink),
+        child: Icon(icon, size: 22, color: context.ink),
       ),
     );
   }
@@ -353,7 +353,7 @@ class _GeneratedCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(14),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -373,13 +373,13 @@ class _GeneratedCard extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
-                        color: RenanceColors.surfaceContainerLow,
+                        color: context.cardLow,
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: const Row(
+                      child: Row(
                         children: <Widget>[
                           Icon(Icons.smart_toy_outlined,
-                              size: 13, color: RenanceColors.ink),
+                              size: 13, color: context.ink),
                           SizedBox(width: 5),
                           Text('AI GENERATED',
                               style: TextStyle(
@@ -387,15 +387,15 @@ class _GeneratedCard extends StatelessWidget {
                                   fontSize: 10,
                                   fontWeight: FontWeight.w500,
                                   letterSpacing: 0.8,
-                                  color: RenanceColors.ink)),
+                                  color: context.ink)),
                         ],
                       ),
                     ),
-                    const SizedBox(width: 10),
-                    Text(item.difficulty, style: RenanceText.caption),
+                    SizedBox(width: 10),
+                    Text(item.difficulty, style: RenanceText.caption.copyWith(color: context.textSecondary)),
                   ],
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10),
                 Text(
                   item.stem.replaceAll('\n', ' '),
                   style: RenanceText.bodyMedium.copyWith(
@@ -404,12 +404,12 @@ class _GeneratedCard extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(width: 12),
+          SizedBox(width: 12),
           Container(
             width: 40,
             height: 40,
-            decoration: const BoxDecoration(
-              color: RenanceColors.surfaceContainerLow,
+            decoration: BoxDecoration(
+              color: context.cardLow,
               shape: BoxShape.circle,
             ),
             child: const Icon(Icons.check, size: 20, color: RenanceColors.emerald),

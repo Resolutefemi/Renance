@@ -45,9 +45,9 @@ class CertificateWalletScreen extends StatelessWidget {
         '${months[now.month - 1]} ${now.day}, ${now.year}';
 
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
         elevation: 0,
         title: Text('Digital Wallet',
             style: RenanceText.sectionTitle.copyWith(fontSize: 18)),
@@ -64,14 +64,14 @@ class CertificateWalletScreen extends StatelessWidget {
                   Text('Digital Wallet', style: RenanceText.sectionTitle),
                   const SizedBox(width: 6),
                   Text('· 1 of 4 certificates',
-                      style: RenanceText.caption),
+                      style: RenanceText.caption.copyWith(color: context.textSecondary)),
                 ],
               ),
               const SizedBox(height: 12),
               // Featured certificate card ---------------------------------
               Container(
                 decoration: BoxDecoration(
-                  color: RenanceColors.card,
+                  color: context.card,
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: const <BoxShadow>[
                     BoxShadow(
@@ -119,7 +119,7 @@ class CertificateWalletScreen extends StatelessWidget {
                                           style: RenanceText.displayLg
                                               .copyWith(
                                                   color:
-                                                      RenanceColors.ink)),
+                                                      context.ink)),
                                     ],
                                   ),
                                 ),
@@ -197,21 +197,21 @@ class CertificateWalletScreen extends StatelessWidget {
                           showDialog<void>(
                             context: context,
                             builder: (BuildContext ctx) => AlertDialog(
-                              backgroundColor: RenanceColors.card,
+                              backgroundColor: context.card,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12)),
                               title: Row(
                                 children: <Widget>[
-                                  const Icon(Icons.verified,
+                                  Icon(Icons.verified,
                                       color: RenanceColors.emerald),
-                                  const SizedBox(width: 8),
+                                  SizedBox(width: 8),
                                   Text('Verified',
                                       style: RenanceText.sectionTitle),
                                 ],
                               ),
                               content: Text(
                                 'Level $level certificate for $name.\nID: $id',
-                                style: RenanceText.bodySecondary,
+                                style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                               ),
                               actions: <Widget>[
                                 TextButton(
@@ -223,8 +223,8 @@ class CertificateWalletScreen extends StatelessWidget {
                           );
                         },
                         style: OutlinedButton.styleFrom(
-                          side: const BorderSide(
-                              color: RenanceColors.outlineLight),
+                          side: BorderSide(
+                              color: context.outlineLight),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
                         ),
@@ -287,7 +287,7 @@ class CertificateWalletScreen extends StatelessWidget {
               Text(
                 'Distinction certificates are issued when your exam board '
                 'results are verified on Renance.',
-                style: RenanceText.caption.copyWith(height: 1.5),
+                style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.5),
               ),
             ],
           ),
@@ -318,20 +318,20 @@ class _CertRow extends StatelessWidget {
       decoration: BoxDecoration(
         border: last
             ? null
-            : const Border(
-                bottom: BorderSide(color: RenanceColors.surfaceContainerHigh)),
+            : Border(
+                bottom: BorderSide(color: context.cardHigh)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          Text(label, style: RenanceText.caption),
+          Text(label, style: RenanceText.caption.copyWith(color: context.textSecondary)),
           Flexible(
             child: Text(
               value,
               overflow: TextOverflow.ellipsis,
               style: mono
-                  ? RenanceText.labelMono.copyWith(color: RenanceColors.ink)
+                  ? RenanceText.labelMono.copyWith(color: context.ink)
                   : RenanceText.bodyMedium,
             ),
           ),
@@ -361,7 +361,7 @@ class _ArchiveCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(8),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -385,15 +385,15 @@ class _ArchiveCard extends StatelessWidget {
               child: Icon(icon,
                   size: 40,
                   color: locked
-                      ? RenanceColors.textSecondary
-                      : RenanceColors.ink),
+                      ? context.textSecondary
+                      : context.ink),
             ),
           ),
           const SizedBox(height: 10),
           Text(eyebrow,
               style: RenanceText.labelMono.copyWith(
                 fontSize: 11,
-                color: RenanceColors.textSecondary,
+                color: context.textSecondary,
               )),
           const SizedBox(height: 2),
           Text(title,

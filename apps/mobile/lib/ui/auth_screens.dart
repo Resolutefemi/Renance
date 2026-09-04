@@ -40,23 +40,23 @@ class AuthScaffold extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
             child: Column(
               children: <Widget>[
-                const RenanceMark(size: 72),
-                const SizedBox(height: 16),
+                RenanceMark(size: 72),
+                SizedBox(height: 16),
                 Text(
                   title,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
-                    color: RenanceColors.ink,
+                    color: context.ink,
                   ),
                 ),
-                const SizedBox(height: 6),
+                SizedBox(height: 6),
                 Text(
                   subtitle,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: RenanceColors.textSecondary,
+                  style: TextStyle(
+                    color: context.textSecondary,
                     fontSize: 14,
                   ),
                 ),
@@ -67,7 +67,7 @@ class AuthScaffold extends StatelessWidget {
                     child: form,
                   ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: 24),
                 footer,
               ],
             ),
@@ -88,10 +88,10 @@ class _FieldLabel extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 6),
       child: Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 13,
           fontWeight: FontWeight.w500,
-          color: RenanceColors.textSecondary,
+          color: context.textSecondary,
         ),
       ),
     );
@@ -266,14 +266,14 @@ class _LoginScreenState extends State<LoginScreen> {
               hintText: 'your username',
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           _FieldLabel('Password'),
           _PasswordField(controller: _password, onSubmitted: _submit),
           if (_error != null) ...<Widget>[
-            const SizedBox(height: 14),
+            SizedBox(height: 14),
             Text(
               _error!,
-              style: const TextStyle(color: RenanceColors.error, fontSize: 13),
+              style: TextStyle(color: context.error, fontSize: 13),
             ),
           ],
           const SizedBox(height: 20),
@@ -289,7 +289,7 @@ class _LoginScreenState extends State<LoginScreen> {
             label: Text(_busy ? 'Signing in…' : 'Sign In'),
           ),
           if (googleWebClientId.isNotEmpty) ...<Widget>[
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             _GoogleButton(onPressed: _busy ? null : _signInWithGoogle),
           ],
         ],
@@ -297,17 +297,17 @@ class _LoginScreenState extends State<LoginScreen> {
       footer: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text(
+          Text(
             "Don't have an account? ",
-            style: TextStyle(color: RenanceColors.textSecondary, fontSize: 14),
+            style: TextStyle(color: context.textSecondary, fontSize: 14),
           ),
           GestureDetector(
             onTap: () =>
                 Navigator.of(context).pushReplacementNamed('/register'),
-            child: const Text(
+            child: Text(
               'Sign up',
               style: TextStyle(
-                color: RenanceColors.ink,
+                color: context.ink,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
               ),
@@ -405,14 +405,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
               hintText: 'lowercase letters, digits, _',
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           _FieldLabel('Password'),
           _PasswordField(controller: _password, onSubmitted: _submit),
           if (_error != null) ...<Widget>[
-            const SizedBox(height: 14),
+            SizedBox(height: 14),
             Text(
               _error!,
-              style: const TextStyle(color: RenanceColors.error, fontSize: 13),
+              style: TextStyle(color: context.error, fontSize: 13),
             ),
           ],
           const SizedBox(height: 20),
@@ -428,30 +428,30 @@ class _RegisterScreenState extends State<RegisterScreen> {
             label: Text(_busy ? 'Creating…' : 'Start studying'),
           ),
           if (googleWebClientId.isNotEmpty) ...<Widget>[
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             _GoogleButton(onPressed: _busy ? null : _signUpWithGoogle),
           ],
-          const SizedBox(height: 10),
-          const Text(
+          SizedBox(height: 10),
+          Text(
             "We'll ask about your school and exams right after, in one quick modal.",
             textAlign: TextAlign.center,
-            style: TextStyle(color: RenanceColors.outline, fontSize: 12),
+            style: TextStyle(color: context.outline, fontSize: 12),
           ),
         ],
       ),
       footer: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text(
+          Text(
             'Already studying with us? ',
-            style: TextStyle(color: RenanceColors.textSecondary, fontSize: 14),
+            style: TextStyle(color: context.textSecondary, fontSize: 14),
           ),
           GestureDetector(
             onTap: () => Navigator.of(context).pushReplacementNamed('/login'),
-            child: const Text(
+            child: Text(
               'Sign in',
               style: TextStyle(
-                color: RenanceColors.ink,
+                color: context.ink,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
               ),

@@ -74,6 +74,11 @@ class RenanceApp extends StatelessWidget {
           theme: buildRenanceTheme(),
           darkTheme: buildRenanceDarkTheme(),
           themeMode: theme.materialMode,
+          builder: (BuildContext context, Widget? child) =>
+              RenanceModeScope(
+                mode: theme.mode,
+                child: child ?? const SizedBox.shrink(),
+              ),
           initialRoute: '/',
           routes: <String, WidgetBuilder>{
             '/': (_) => const SplashScreen(),

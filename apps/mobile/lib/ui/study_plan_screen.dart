@@ -33,7 +33,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -47,7 +47,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                     IconButton(
                       onPressed: () => Navigator.of(context).pop(),
                       icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                      color: RenanceColors.ink,
+                      color: context.ink,
                     ),
                     const SizedBox(width: 4),
                     const Text('Study Plan', style: RenanceText.sectionTitle),
@@ -58,7 +58,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                 Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: RenanceColors.card,
+                    color: context.card,
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: const <BoxShadow>[
                       BoxShadow(
@@ -73,19 +73,19 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          const Expanded(
+                          Expanded(
                             child: Text("TODAY'S PLAN",
-                                style: RenanceText.overline),
+                                style: RenanceText.overline.copyWith(color: context.textSecondary)),
                           ),
                           Container(
                             width: 44,
                             height: 44,
-                            decoration: const BoxDecoration(
-                              color: RenanceColors.surfaceContainerLow,
+                            decoration: BoxDecoration(
+                              color: context.cardLow,
                               shape: BoxShape.circle,
                             ),
-                            child: const Icon(Icons.edit_outlined,
-                                size: 20, color: RenanceColors.ink),
+                            child: Icon(Icons.edit_outlined,
+                                size: 20, color: context.ink),
                           ),
                         ],
                       ),
@@ -102,10 +102,10 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                         focus: 'High focus',
                       ),
                       const SizedBox(height: 10),
-                      const _PlanRow(
+                      _PlanRow(
                         icon: Icons.style_outlined,
                         iconBg: Color(0xFFE7EEFF),
-                        iconColor: RenanceColors.ink,
+                        iconColor: context.ink,
                         title: 'Review Cards',
                         meta: '12 min',
                         focus: 'Medium focus',
@@ -143,7 +143,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                     ],
                   ],
                 ),
-                const SizedBox(height: 28),
+                SizedBox(height: 28),
                 // Fatigue Insight -----------------------------------------
                 Container(
                   padding: const EdgeInsets.all(20),
@@ -157,15 +157,15 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                       Container(
                         width: 44,
                         height: 44,
-                        decoration: const BoxDecoration(
-                          color: RenanceColors.card,
+                        decoration: BoxDecoration(
+                          color: context.card,
                           shape: BoxShape.circle,
                         ),
-                        child: const Icon(Icons.lightbulb_outlined,
-                            size: 22, color: RenanceColors.ink),
+                        child: Icon(Icons.lightbulb_outlined,
+                            size: 22, color: context.ink),
                       ),
                       const SizedBox(width: 16),
-                      const Expanded(
+                      Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -180,7 +180,7 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                                 fontFamily: 'Inter',
                                 fontSize: 15,
                                 height: 24 / 15,
-                                color: RenanceColors.textSecondary,
+                                color: context.textSecondary,
                               ),
                             ),
                           ],
@@ -240,8 +240,8 @@ class _PlanRow extends StatelessWidget {
                           width: 3.5,
                           height: 3.5,
                           margin: const EdgeInsets.symmetric(horizontal: 2),
-                          decoration: const BoxDecoration(
-                            color: RenanceColors.outlineLight,
+                          decoration: BoxDecoration(
+                            color: context.outlineLight,
                             shape: BoxShape.circle,
                           ),
                         ),
@@ -268,12 +268,12 @@ class _PlanRow extends StatelessWidget {
                 Text(title, style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
                 const SizedBox(height: 2),
                 Text('$meta • $focus',
-                    style: RenanceText.bodySecondary.copyWith(fontSize: 15)),
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 15)),
               ],
             ),
           ),
-          const Icon(Icons.play_arrow_rounded,
-              size: 26, color: RenanceColors.ink),
+          Icon(Icons.play_arrow_rounded,
+              size: 26, color: context.ink),
         ],
       ),
     );
@@ -304,8 +304,8 @@ class _EnergyChip extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 12),
           decoration: BoxDecoration(
             color: selected
-                ? RenanceColors.selectionBlue
-                : RenanceColors.surfaceContainerLow,
+                ? context.selectionBlue
+                : context.cardLow,
             borderRadius: BorderRadius.circular(999),
           ),
           child: Row(
@@ -313,7 +313,7 @@ class _EnergyChip extends StatelessWidget {
             children: <Widget>[
               Icon(icon,
                   size: 18,
-                  color: selected ? RenanceColors.ink : RenanceColors.textSecondary),
+                  color: selected ? context.ink : context.textSecondary),
               const SizedBox(width: 6),
               Flexible(
                 child: Text(
@@ -323,7 +323,7 @@ class _EnergyChip extends StatelessWidget {
                     fontFamily: 'Inter',
                     fontSize: 15,
                     fontWeight: selected ? FontWeight.w600 : FontWeight.w400,
-                    color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
+                    color: selected ? context.ink : context.textSecondary,
                   ),
                 ),
               ),

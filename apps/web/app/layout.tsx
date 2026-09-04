@@ -112,10 +112,15 @@ export const metadata: Metadata = {
   },
 };
 
+/* Appearance bootstrap: applied before first paint so the chosen tier
+   (light / mixed / dark, persisted in localStorage) never flashes. */
+const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='mixed'&&t!=='dark')t='light';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light';}})();`;
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         {/* Founder mockups load Inter + JetBrains Mono, kept as runtime
             links so `next build` stays hermetic (no font fetch at build). */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

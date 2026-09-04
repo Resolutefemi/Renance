@@ -822,7 +822,7 @@ export default function ExamPage({ code }: { code: string }) {
           <button
             aria-label="Close navigator"
             onClick={() => setNavOpen(false)}
-            className="absolute inset-0 bg-[#111c2d]/40"
+            className="absolute inset-0 bg-accent-ink/40"
           />
           <div className="relative max-h-[88dvh] w-full overflow-y-auto rounded-t-3xl bg-background p-4 pb-6 shadow-2xl sm:p-6">
             <div className="flex items-center justify-between">
