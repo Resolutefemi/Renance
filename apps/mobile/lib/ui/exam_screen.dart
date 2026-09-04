@@ -1,11 +1,11 @@
-/// The CBT player — Stitch exam_player_light + score_report_light.
+/// The CBT player, Stitch exam_player_light + score_report_light.
 ///
 /// Playing: dark header card (Q counter, pulsing timer pill, 4px progress
 /// rail), white question card with display-md stem, the letter-box option
 /// stack, and the Flag / Skip / Next bottom bar. Results: the dark
 /// DIAGNOSTIC COMPLETE hero with drifting confetti, the XP + streak card,
 /// time/correct stats and the topic breakdown with real thresholds.
-/// All state lives in ExamController — this file is presentation only.
+/// All state lives in ExamController, this file is presentation only.
 library;
 
 import 'dart:math' as math;
@@ -135,7 +135,7 @@ class _Intro extends StatelessWidget {
                   children: const <Widget>[
                     _Rule('Timer starts the moment you begin'),
                     _Rule('Auto-submits when time runs out'),
-                    _Rule('Works offline — submissions sync when you reconnect'),
+                    _Rule('Works offline, submissions sync when you reconnect'),
                     _Rule('Grading happens server-side, keys stay sealed'),
                   ],
                 ),
@@ -181,7 +181,7 @@ class _Rule extends StatelessWidget {
 }
 
 /// Smart Order (ROADMAP #5): begin the paper weak-topic-first, ranked
-/// from this student's own review state. Default on for practice — flip
+/// from this student's own review state. Default on for practice, flip
 /// off to answer in the pack's natural exam order.
 class _SmartOrderToggle extends StatefulWidget {
   const _SmartOrderToggle({required this.controller});
@@ -365,7 +365,7 @@ class _Player extends StatelessWidget {
         content: Text(
           unanswered == 0
               ? 'All questions answered. Ready to send for marking?'
-              : '$unanswered question(s) unanswered — they will be marked wrong.',
+              : '$unanswered question(s) unanswered, they will be marked wrong.',
         ),
         actions: <Widget>[
           TextButton(
@@ -795,7 +795,7 @@ class _Queued extends StatelessWidget {
 
 // ------------------------------------------------------------------ result
 
-/// The graded state — score_report_light: dark hero with drifting
+/// The graded state, score_report_light: dark hero with drifting
 /// confetti, DIAGNOSTIC COMPLETE, the big stat, delta pill, XP card,
 /// stats grid and topic breakdown.
 class _Result extends StatefulWidget {
@@ -964,7 +964,7 @@ class _ResultState extends State<_Result> {
                           const SizedBox(height: 12),
                           if (result.breakdown.isEmpty)
                             Text(
-                              'No topic data on this paper — every question '
+                              'No topic data on this paper, every question '
                               'counted toward the overall score.',
                               style: RenanceText.caption.copyWith(height: 1.4),
                             )
@@ -1237,7 +1237,7 @@ class _ScoreHeroState extends State<_ScoreHero>
   }
 }
 
-/// Six tiny particles drifting upward — violet, emerald, amber.
+/// Six tiny particles drifting upward, violet, emerald, amber.
 class _ConfettiPainter extends CustomPainter {
   _ConfettiPainter({required this.t});
 
@@ -1315,7 +1315,7 @@ extension on Rect {
 }
 
 /// Time Used / Correct Answers stat box.
-/// Weak topics from the graded paper — tap opens the syllabus map on
+/// Weak topics from the graded paper, tap opens the syllabus map on
 /// this body (the mastery overlay shows exactly where the topic stands).
 class _WeakTopicChips extends StatelessWidget {
   const _WeakTopicChips({required this.weak, required this.body});

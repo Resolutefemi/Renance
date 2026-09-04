@@ -1,6 +1,6 @@
 // Spaced repetition (ROADMAP #3): SM-2 scheduling over attempt topics.
 //
-// The same design law as gamification.go applies — every rule lives in
+// The same design law as gamification.go applies, every rule lives in
 // pure, unit-testable functions (QualityFor, NextSM2); the store methods
 // only persist their output. The grading engine calls ScheduleReview once
 // per graded attempt, and GET /me/review serves the due-today view.
@@ -19,7 +19,7 @@ import (
 const (
 	// InitialEase is the ease factor every new topic starts at.
 	InitialEase = 2.5
-	// MinEase is the floor — a memory that keeps failing never drops below it.
+	// MinEase is the floor, a memory that keeps failing never drops below it.
 	MinEase = 1.3
 	// MaxInterval caps a single interval at a year.
 	MaxInterval = 365
@@ -118,7 +118,7 @@ type ReviewItem struct {
 	LastTotal    int     `json:"lastTotal"`
 }
 
-// Due, Overdue or neither — the preview status the UIs render.
+// Due, Overdue or neither, the preview status the UIs render.
 func (it ReviewItem) Status(today time.Time) string {
 	due, err := time.Parse("2006-01-02", it.DueOn)
 	if err != nil {
@@ -213,7 +213,7 @@ func (s *Store) ScheduleReview(ctx context.Context, userID string, breakdown []T
 }
 
 // ReviewByUser returns the full queue split into due / upcoming plus stats.
-// A scholar with no graded topics yet simply gets empty lists — never 404.
+// A scholar with no graded topics yet simply gets empty lists, never 404.
 func (s *Store) ReviewByUser(ctx context.Context, userID string) (*ReviewSummary, error) {
 	rows, err := s.Pool.Query(ctx, `
                 SELECT topic, ease, interval_days, repetitions, lapses, due_on, last_correct, last_total
@@ -258,7 +258,7 @@ type ReviewHealth struct {
 	DueToday int `json:"dueToday"`
 }
 
-// ReviewHealth tallies the whole queue. Idempotent, read-only — the cron
+// ReviewHealth tallies the whole queue. Idempotent, read-only, the cron
 // endpoint's job is monitoring (and doubling as a keep-warm ping target).
 func (s *Store) ReviewHealth(ctx context.Context) (*ReviewHealth, error) {
 	h := &ReviewHealth{}

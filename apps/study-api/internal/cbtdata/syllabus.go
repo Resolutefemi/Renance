@@ -1,7 +1,7 @@
 // Syllabus trees (ROADMAP #4): the curriculum spine that gives every
 // question's topic a home. One static JSON per exam body lives in
 // data/syllabus/<slug>.json; Load() reads them at boot and ENFORCES the
-// join — when a tree exists for a bundle's body, every non-empty topic
+// join, when a tree exists for a bundle's body, every non-empty topic
 // on its questions must be a node of that tree. A typo'd topic refuses
 // the boot loudly (same doctrine as the sha256 and answer-leak checks):
 // silent orphans would poison the syllabus map, the review queue and
@@ -20,7 +20,7 @@ import (
 
 // SyllabusSection groups topics the way the brochure does ("Algebra",
 // "Number & Numeration", ...). Topics are exact match keys against
-// Question.Topic — one source of truth, no aliasing.
+// Question.Topic, one source of truth, no aliasing.
 type SyllabusSection struct {
 	Title  string   `json:"title"`
 	Topics []string `json:"topics"`
@@ -80,7 +80,7 @@ func (l *Library) loadSyllabi(dataDir string) error {
 	entries, err := os.ReadDir(dir)
 	if err != nil {
 		if os.IsNotExist(err) {
-			return nil // no trees shipped yet — validation becomes a no-op
+			return nil // no trees shipped yet, validation becomes a no-op
 		}
 		return fmt.Errorf("cbtdata: read syllabus dir: %w", err)
 	}
@@ -116,7 +116,7 @@ func (l *Library) loadSyllabi(dataDir string) error {
 
 // validateTopics enforces the join: bundle topics must live in their
 // body's tree whenever that tree exists. Bundles without a body (test
-// fixtures) and bodies without a tree are left alone — qbuild lint and
+// fixtures) and bodies without a tree are left alone, qbuild lint and
 // the syllabus endpoint surface those as warnings/404 instead.
 func (l *Library) validateTopics() error {
 	for _, ex := range l.manifest.Exams {
@@ -167,7 +167,7 @@ func (l *Library) SyllabusBodies() []string {
 }
 
 // TopicCounts counts the questions per topic across every bundle of one
-// body — the "42 Questions" column of the syllabus map. Empty topics
+// body, the "42 Questions" column of the syllabus map. Empty topics
 // bucket into "General". Bodies without packs return an empty map.
 func (l *Library) TopicCounts(body string) map[string]int {
 	counts := map[string]int{}

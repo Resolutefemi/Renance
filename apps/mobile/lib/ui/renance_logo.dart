@@ -1,4 +1,4 @@
-/// The Renance logomark — the ONLY progress visual in the product.
+/// The Renance logomark, the ONLY progress visual in the product.
 /// Founder rule: standard circular progress indicators are replaced by a
 /// custom vectorized animation of the logomark, pulsing and shifting
 /// opacities during fetching/processing (Bybit-style brand transition).

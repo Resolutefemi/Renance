@@ -1,4 +1,4 @@
-/// Practice tab — the Stitch practice_library_light screen, 1:1.
+/// Practice tab, the Stitch practice_library_light screen, 1:1.
 ///
 /// Filter chips (All / Downloaded / In progress / Completed), the amber
 /// Daily Quest card (real progress: questions answered today), and the
@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import 'pack_detail_screen.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
 
@@ -135,7 +136,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 child: Text(
                   switch (_filter) {
                     _LibraryFilter.downloaded =>
-                      'Nothing downloaded yet — tap the arrow on any pack.',
+                      'Nothing downloaded yet, tap the arrow on any pack.',
                     _LibraryFilter.inProgress =>
                       'Nothing downloading right now.',
                     _LibraryFilter.completed =>
@@ -168,7 +169,15 @@ class _LibraryScreenState extends State<LibraryScreen> {
                       .any((AttemptRow a) => a.isGraded && a.code == exam.code),
                   downloading: sync.isSyncing &&
                       !downloaded.contains(exam.code),
-                  onTap: () => widget.onOpenExam(context, exam),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => PackDetailScreen(
+                        exam: exam,
+                        // Start hands straight back to the shell's fast path.
+                        onStart: widget.onOpenExam,
+                      ),
+                    ),
+                  ),
                   onDownload: () => sync.downloadExam(exam),
                 );
               },

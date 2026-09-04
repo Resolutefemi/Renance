@@ -1,10 +1,10 @@
-/// Root shell + launcher home — the Stitch home_dashboard_jamb_light and
+/// Root shell + launcher home, the Stitch home_dashboard_jamb_light and
 /// more_features_sheet_light screens, 1:1.
 ///
 /// Shell: 5-tab bottom nav (Home / Practice / Review / Progress / Profile).
 /// Launcher: brand header with streak pill, hero progress card (Next
 /// Target / Countdown / Syllabus Completion / Continue Practice), the
-/// Practice and Grow icon grids, and the recent-activity feed — all fed
+/// Practice and Grow icon grids, and the recent-activity feed, all fed
 /// by real data (StudentController + SyncController).
 library;
 
@@ -17,6 +17,8 @@ import '../storage.dart';
 import 'downloads_screen.dart';
 import 'flashcards_screen.dart';
 import 'lessons_screen.dart';
+import 'notifications_screen.dart';
+import 'search_screen.dart';
 import 'tutor_screen.dart';
 import 'exam_screen.dart';
 import 'library_screen.dart';
@@ -143,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: IndexedStack(index: _tab, children: bodies),
           ),
         ),
-        // Brand header — bg-surface/80 + hairline shadow (Stitch header).
+        // Brand header, bg-surface/80 + hairline shadow (Stitch header).
         Positioned(
           top: 0,
           left: 0,
@@ -152,6 +154,17 @@ class _HomeScreenState extends State<HomeScreen> {
             streak: student.gamification?.state.currentStreak ?? 0,
             name: student.me?.profile?.fullName ?? '',
             onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
+            onSearch: () => Navigator.of(context).push<void>(
+              MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
+            ),
+            onNotifications: () => Navigator.of(context).push<void>(
+              MaterialPageRoute<void>(
+                builder: (_) => NotificationsScreen(
+                  onGoTab: (int t) => setState(() => _tab = t),
+                ),
+              ),
+            ),
+            alert: student.dueTopics > 0,
           ),
         ),
       ],
@@ -347,11 +360,19 @@ class HomeHeader extends StatelessWidget {
     required this.streak,
     required this.name,
     this.onBackPressed,
+    this.onSearch,
+    this.onNotifications,
+    this.alert = false,
   });
 
   final int streak;
   final String name;
   final VoidCallback? onBackPressed;
+  final VoidCallback? onSearch;
+  final VoidCallback? onNotifications;
+
+  /// Emerald dot on the bell when something needs attention (review due).
+  final bool alert;
 
   @override
   Widget build(BuildContext context) {
@@ -375,6 +396,20 @@ class HomeHeader extends StatelessWidget {
             children: <Widget>[
               const _BrandMark(),
               const Spacer(),
+              if (onSearch != null)
+                _HeaderIcon(
+                  icon: Icons.search,
+                  onTap: onSearch,
+                ),
+              if (onNotifications != null) ...<Widget>[
+                const SizedBox(width: 2),
+                _HeaderIcon(
+                  icon: Icons.notifications_none,
+                  onTap: onNotifications,
+                  alert: alert,
+                ),
+              ],
+              const SizedBox(width: 6),
               StreakPill(streak: streak),
               const SizedBox(width: 16),
               AvatarCircle(name: name, size: 32),
@@ -386,7 +421,7 @@ class HomeHeader extends StatelessWidget {
   }
 }
 
-/// Black rounded square with the white R — matches the web header.
+/// Black rounded square with the white R, matches the web header.
 class _BrandMark extends StatelessWidget {
   const _BrandMark();
 
@@ -414,6 +449,53 @@ class _BrandMark extends StatelessWidget {
         ),
         const SizedBox(width: 8),
         const Text('Renance', style: RenanceText.displayMd),
+      ],
+    );
+  }
+}
+
+/// One round icon button in the header (search, bell) with the optional
+/// emerald attention dot.
+class _HeaderIcon extends StatelessWidget {
+  const _HeaderIcon({
+    required this.icon,
+    required this.onTap,
+    this.alert = false,
+  });
+
+  final IconData icon;
+  final VoidCallback? onTap;
+  final bool alert;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      clipBehavior: Clip.none,
+      children: <Widget>[
+        IconButton(
+          onPressed: onTap,
+          icon: Icon(icon, size: 22),
+          color: RenanceColors.ink,
+          visualDensity: VisualDensity.compact,
+          tooltip: icon == Icons.search
+              ? 'Search'
+              : 'Notifications',
+        ),
+        if (alert)
+          const Positioned(
+            top: 6,
+            right: 6,
+            child: SizedBox(
+              width: 8,
+              height: 8,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  color: RenanceColors.emerald,
+                  shape: BoxShape.circle,
+                ),
+              ),
+            ),
+          ),
       ],
     );
   }
@@ -485,7 +567,7 @@ class AvatarCircle extends StatelessWidget {
 // ------------------------------------------------------------ bottom nav
 
 /// 5-tab nav: white/95, rounded top corners, active tab fills its icon and
-/// grows a 4px dot — the Stitch nav pattern.
+/// grows a 4px dot, the Stitch nav pattern.
 class HomeNav extends StatelessWidget {
   const HomeNav({
     super.key,
@@ -764,7 +846,7 @@ class _LauncherTab extends StatelessWidget {
                   iconColor: RenanceColors.textSecondary,
                   muted: true,
                   label: 'More',
-                  onTap: () => showMoreSheet(context),
+                  onTap: () => showMoreSheet(context, onGoTab: onGoTab),
                 ),
               ),
             ],
@@ -805,7 +887,7 @@ class _LauncherTab extends StatelessWidget {
 
 // ------------------------------------------------------------------ hero
 
-/// Hero progress card — NEXT TARGET / countdown / syllabus completion bar
+/// Hero progress card, NEXT TARGET / countdown / syllabus completion bar
 /// / black Continue Practice button, with the two soft corner blobs.
 class _HeroCard extends StatelessWidget {
   const _HeroCard({required this.student, required this.onContinue});
@@ -1208,7 +1290,7 @@ class _EmptyActivityCard extends StatelessWidget {
             const SizedBox(width: 12),
             Expanded(
               child: Text(
-                'No papers yet — open a pack and run your first diagnostic.',
+                'No papers yet. Open a pack and run your first diagnostic.',
                 style: RenanceText.bodySecondary,
               ),
             ),
@@ -1292,8 +1374,14 @@ class _SyncErrorBanner extends StatelessWidget {
 
 // -------------------------------------------------------------- more sheet
 
-/// The "All Features" bottom sheet — more_features_sheet_light, 1:1.
-Future<void> showMoreSheet(BuildContext context) {
+/// The "All Features" bottom sheet, more_features_sheet_light, 1:1.
+///
+/// [onGoTab] routes feed rows back into the shell's tabs when the caller
+/// lives inside the shell (launcher); null keeps notifications self-contained.
+Future<void> showMoreSheet(
+  BuildContext context, {
+  void Function(int tab)? onGoTab,
+}) {
   return showModalBottomSheet<void>(
     context: context,
     backgroundColor: Colors.transparent,
@@ -1350,6 +1438,32 @@ Future<void> showMoreSheet(BuildContext context) {
                   childAspectRatio: 0.92,
                   children: <Widget>[
                     _MoreTile(
+                      icon: Icons.search,
+                      label: 'Search',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const SearchScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.notifications_none,
+                      label: 'Notifications',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => NotificationsScreen(
+                              onGoTab: onGoTab,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
                       icon: Icons.download,
                       label: 'Downloads',
                       onTap: () {
@@ -1395,7 +1509,7 @@ Future<void> showMoreSheet(BuildContext context) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text(
-                              'The certificate wallet is designed — it lands with the exam board.',
+                              'The certificate wallet is designed, it lands with the exam board.',
                             ),
                           ),
                         );
@@ -1465,7 +1579,7 @@ Future<void> showMoreSheet(BuildContext context) {
 }
 
 /// One square feature tile of the More sheet (Soon badge supported).
-/// Gentle take-a-break banner (ROADMAP #6) — appears after the student's
+/// Gentle take-a-break banner (ROADMAP #6), appears after the student's
 /// recent sittings trip the server's fatigue thresholds.
 class _FatigueBanner extends StatelessWidget {
   const _FatigueBanner({required this.state});

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { loadSyllabi } from '@/lib/site-data';
 
 /**
- * /subjects — the public syllabus index: every exam body we support, its
+ * /subjects, the public syllabus index: every exam body we support, its
  * subjects and topic counts. This is the crawlable directory that tells
  * search engines (and students) exactly what Renance covers.
  */
@@ -13,9 +13,9 @@ export const dynamic = 'force-static';
 import { SITE_URL } from '@/lib/site-url';
 
 export const metadata: Metadata = {
-  title: 'Subjects & syllabus coverage — JAMB, WAEC, NECO & university modules',
+  title: 'Subjects & syllabus coverage | JAMB, WAEC, NECO & university modules',
   description:
-    'Every subject and topic Renance covers for JAMB, WAEC, NECO and university modules — browse the syllabus trees, then practise each topic with server-graded CBT papers in the Renance app.',
+    'Every subject and topic Renance covers for JAMB, WAEC, NECO and university modules. Browse the syllabus trees, then practise each topic with server-graded CBT papers in the Renance app.',
   alternates: { canonical: '/subjects/' },
   openGraph: {
     title: 'Subjects & syllabus coverage · Renance',
@@ -39,7 +39,7 @@ export default function SubjectsPage() {
         <p className="mt-3 text-[15px] leading-relaxed text-on-surface-variant">
           Renance maps every mock paper to the official syllabus, topic by topic.
           Practise a paper and the app shows exactly which syllabus topics your
-          answers touched — and which ones need another pass.
+          answers touched, and which ones need another pass.
         </p>
       </header>
 

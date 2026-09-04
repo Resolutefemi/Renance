@@ -4,9 +4,9 @@ import { loadLessons } from '@/lib/site-data';
 import { renderInline } from '@/lib/inline';
 
 /**
- * /lessons — the public lesson library (ROADMAP #8). Fully static:
+ * /lessons, the public lesson library (ROADMAP #8). Fully static:
  * content comes from data/lessons/*.json at build time, so every lesson
- * is crawlable, cacheable and free to serve — the SEO backbone.
+ * is crawlable, cacheable and free to serve: the SEO backbone.
  */
 
 export const dynamic = 'force-static';
@@ -14,12 +14,12 @@ export const dynamic = 'force-static';
 import { SITE_URL } from '@/lib/site-url';
 
 export const metadata: Metadata = {
-  title: 'Lessons — exam-ready study notes for JAMB, WAEC & NECO',
+  title: 'Lessons | exam-ready study notes for JAMB, WAEC & NECO',
   description:
-    'Free, exam-focused lessons from Renance: biology, physics, English and more — written for Nigerian students preparing JAMB, WAEC and NECO, with the key points examiners actually test.',
+    'Free, exam-focused lessons from Renance: biology, physics, English and more, written for Nigerian students preparing JAMB, WAEC and NECO, with the key points examiners actually test.',
   alternates: { canonical: '/lessons/' },
   openGraph: {
-    title: 'Lessons — exam-ready study notes for JAMB, WAEC & NECO · Renance',
+    title: 'Lessons | exam-ready study notes for JAMB, WAEC & NECO · Renance',
     description:
       'Free, exam-focused lessons written for Nigerian students preparing JAMB, WAEC and NECO.',
     url: `${SITE_URL}/lessons/`,
@@ -76,7 +76,7 @@ export default function LessonsIndex() {
         ))}
         {lessons.length === 0 && (
           <p className="col-span-full rounded-xl bg-card p-8 text-center text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-            Lessons are being typeset — check back shortly.
+            Lessons are being typeset, check back shortly.
           </p>
         )}
       </div>
@@ -84,7 +84,7 @@ export default function LessonsIndex() {
       <footer className="mt-12 rounded-xl bg-surface-container-low p-6 text-center">
         <p className="text-sm text-on-surface-variant">
           Renance turns reading into marks: mock CBT papers, spaced review and an
-          exam-technique tutor — free for students.
+          exam-technique tutor, free for students.
         </p>
         <Link
           href="/register/"

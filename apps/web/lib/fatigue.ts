@@ -1,5 +1,5 @@
 /**
- * Fatigue (ROADMAP #6) — the pure rule, mirrored from the Go package
+ * Fatigue (ROADMAP #6), the pure rule, mirrored from the Go package
  * (apps/study-api/internal/fatigue) so app, web and API always agree on
  * what "your pace is dipping" means. No PII beyond timing.
  */

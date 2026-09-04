@@ -46,10 +46,10 @@ cannot name the topic sentence, the paragraph has no job.
 - Tense drift: pick past or present for narration and hold it to the end
 - Subject-verb disagreement: "the boys were", not "the boys was"
 - Ambiguous pronouns: every "he", "she" and "it" must point at one clear noun
-- Spelling of small words: "receive", "accommodation", "government", "alright is not accepted — use all right"
+- Spelling of small words: "receive", "accommodation", "government", "alright is not accepted, use all right"
 - Punctuation: a comma splice joins two full sentences with only a comma
 
-> Key point: reserve five minutes at the end to hunt these five errors — it is the cheapest mark you will ever buy.
+> Key point: reserve five minutes at the end to hunt these five errors. It is the cheapest mark you will ever buy.
 
 ## Practice loop
 

@@ -1,4 +1,4 @@
-/// Settings — the Stitch settings_light screen, 1:1.
+/// Settings, the Stitch settings_light screen, 1:1.
 ///
 /// Appearance: the Light / Mixed / Dark segmented control with the sliding
 /// selection pill, wired to ThemeController (real theme switching).

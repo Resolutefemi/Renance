@@ -1,4 +1,4 @@
-// Command mdx (ROADMAP #8) — the lesson content pipeline.
+// Command mdx (ROADMAP #8), the lesson content pipeline.
 //
 //	mdx check   lint every lesson source under -src (no files written)
 //	mdx build   parse every source and write data/lessons/{slug}.json

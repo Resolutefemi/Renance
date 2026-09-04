@@ -76,8 +76,8 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
 	}
 	// Google sign-in is OPTIONAL per deployment: unset GOOGLE_CLIENT_ID
 	// keeps POST /auth/google cleanly disabled (503) with zero partial UI.
-	// The value may be a comma-separated list — the web OAuth client AND
-	// the Android client — and tokens minted for either are accepted.
+	// The value may be a comma-separated list, the web OAuth client AND
+	// the Android client, and tokens minted for either are accepted.
 	if cfg.GoogleClientID != "" {
 		s.google = googleid.New(strings.Split(cfg.GoogleClientID, ",")...)
 	}
@@ -158,7 +158,7 @@ func (s *Server) auth(next http.HandlerFunc) http.HandlerFunc {
 	}
 }
 
-// cors resolves Access-Control-Allow-Origin from WEB_ORIGIN — a
+// cors resolves Access-Control-Allow-Origin from WEB_ORIGIN, a
 // comma-separated allowlist (e.g. "https://resolutefemi.github.io,
 // http://localhost:3000"). "*" keeps the wide-open dev default. Native
 // Flutter clients need no CORS at all; unmatched origins simply get no ACAO

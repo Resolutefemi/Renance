@@ -1,4 +1,4 @@
-// Package tutor (ROADMAP #9) — the Socratic AI tutor anchored to graded
+// Package tutor (ROADMAP #9), the Socratic AI tutor anchored to graded
 // attempts.
 //
 // Two modes, one interface:
@@ -41,7 +41,7 @@ type Message struct {
 }
 
 // AttemptContext is everything the tutor knows about the question being
-// discussed. Picked and Correct are post-grade material — the review
+// discussed. Picked and Correct are post-grade material, the review
 // screen already shows them, so there is no leak here.
 type AttemptContext struct {
 	ExamTitle   string
@@ -67,7 +67,7 @@ type Provider interface {
 }
 
 // Tutor is the mode-aware front of the feature. A nil Provider keeps the
-// product fully functional in hint mode — no key, no crash, no dead UI.
+// product fully functional in hint mode, no key, no crash, no dead UI.
 type Tutor struct {
 	Provider  Provider
 	MaxTokens int
@@ -136,7 +136,7 @@ func SystemPrompt(ac AttemptContext) string {
 
 // Hint is the deterministic coaching ladder. turn is zero-based over the
 // user's asks in this conversation; it cycles after the last rung. Hints
-// deliberately never name the correct letter — they teach the technique
+// deliberately never name the correct letter, they teach the technique
 // that finds it.
 func Hint(ac AttemptContext, turn int) string {
 	topic := ac.Topic

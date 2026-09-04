@@ -1,9 +1,9 @@
 'use client';
 
 /**
- * Fatigue nudge (ROADMAP #6) — the Stitch fatigue_nudge_light overlay:
+ * Fatigue nudge (ROADMAP #6), the Stitch fatigue_nudge_light overlay:
  * a soft veil, the RenanceMark anchor, and a gentle card with Take 5 /
- * Keep going. Presentation only — the caller owns every decision.
+ * Keep going. Presentation only, the caller owns every decision.
  */
 
 import { RenanceMark } from '@/components/renance-logo';

@@ -17,7 +17,7 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
-  // Stable identity for the GIS callback — never re-initialize mid-session.
+  // Stable identity for the GIS callback, never re-initialize mid-session.
   const onGoogleCredential = useCallback(
     async (credential: string) => {
       setError(null);
@@ -27,7 +27,7 @@ export default function LoginPage() {
         setSession(res.token, res.user);
         router.replace('/dashboard');
       } catch (err) {
-        setError(err instanceof ApiError ? err.message : 'Google sign-in failed — check the connection.');
+        setError(err instanceof ApiError ? err.message : 'Google sign-in failed, check the connection.');
         setBusy(false);
       }
     },
@@ -46,7 +46,7 @@ export default function LoginPage() {
       setSession(res.token, res.user);
       router.replace('/dashboard');
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'Network error — is the study API running?');
+      setError(err instanceof ApiError ? err.message : 'Network error, is the study API running?');
       setBusy(false);
     }
   }
@@ -54,7 +54,7 @@ export default function LoginPage() {
   return (
     <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-surface-container px-4">
       <div className="flex w-full max-w-sm flex-col items-center">
-        {/* Logo block — mockup: logo, h1, subtitle, centered */}
+        {/* Logo block, mockup: logo, h1, subtitle, centered */}
         <div className="mb-10 flex flex-col items-center">
           <div className="mb-4">
             <RenanceMark size={64} />
@@ -67,7 +67,7 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Card — mockup: surface-container-lowest, rounded-xl, shadow-sm */}
+        {/* Card, mockup: surface-container-lowest, rounded-xl, shadow-sm */}
         <form
           onSubmit={onSubmit}
           className="flex w-full flex-col gap-4 rounded-xl bg-surface-container-lowest p-6 shadow-sm"
@@ -142,7 +142,7 @@ export default function LoginPage() {
             )}
           </button>
 
-          {/* Google sign-in — hidden unless the client ID is baked in */}
+          {/* Google sign-in, hidden unless the client ID is baked in */}
           <GoogleSignIn onCredential={onGoogleCredential} />
         </form>
 

@@ -1,5 +1,5 @@
 /**
- * Flashcards (ROADMAP #7) — types, fetchers and the pure Leitner rule,
+ * Flashcards (ROADMAP #7), types, fetchers and the pure Leitner rule,
  * mirrored from the Go store so the web shuffles on the same schedule
  * as the app.
  */
@@ -40,10 +40,10 @@ export interface FlashcardGrade {
   grade: 'again' | 'hard' | 'good';
 }
 
-/** Leitner box intervals (days) per box — mirror of store.CardBoxIntervals. */
+/** Leitner box intervals (days) per box, mirror of store.CardBoxIntervals. */
 export const CARD_BOX_INTERVALS = [0, 0, 1, 2, 4, 7]; // index 0 unused
 
-/** Pure Leitner rule — mirror of store.NextCardBox. */
+/** Pure Leitner rule, mirror of store.NextCardBox. */
 export function nextCardBox(box: number, grade: string): number {
   switch (grade) {
     case 'again':
@@ -55,7 +55,7 @@ export function nextCardBox(box: number, grade: string): number {
   }
 }
 
-/** Pure interval lookup — mirror of store.CardIntervalDays. */
+/** Pure interval lookup, mirror of store.CardIntervalDays. */
 export function cardIntervalDays(box: number): number {
   const b = box < 1 ? 1 : box > 5 ? 5 : box;
   return CARD_BOX_INTERVALS[b];

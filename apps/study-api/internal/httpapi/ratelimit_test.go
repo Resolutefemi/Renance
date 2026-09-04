@@ -52,7 +52,7 @@ func TestRateLimiterSweepsIdleBuckets(t *testing.T) {
 	l.now = func() time.Time { return now }
 	l.allow("ephemeral")
 	now = now.Add(31 * time.Minute)
-	l.allow("trigger-sweep") // crosses the 8192 threshold? no — force via size guard
+	l.allow("trigger-sweep") // crosses the 8192 threshold? no, force via size guard
 	// sweep only runs above 8192 buckets; call it directly for the test
 	l.mu.Lock()
 	l.sweepLocked(l.now())

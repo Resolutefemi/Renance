@@ -4,7 +4,7 @@
 // localized pack set (past questions, notes, syllabus) for them without
 // blocking any request. In G2/G3 this worker graduates from simulating the
 // pull (per-pack progress rows) to actually pushing manifests/bundles to
-// object storage and mobile push targets. One job per user at a time —
+// object storage and mobile push targets. One job per user at a time ,
 // re-kicks while running are no-ops.
 package syncer
 

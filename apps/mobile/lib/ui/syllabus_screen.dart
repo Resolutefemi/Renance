@@ -7,7 +7,7 @@ import '../controllers.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
 
-/// The syllabus map (Stitch syllabus_map_light — ROADMAP #4): the
+/// The syllabus map (Stitch syllabus_map_light, ROADMAP #4): the
 /// curriculum tree of one exam body overlaid with the student's own
 /// SM-2 mastery state. Header card carries the mastery ring + legend;
 /// sections expand into topic rows with mastery dots and accuracy bars;
@@ -193,7 +193,7 @@ class _HeaderCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Ring = covered ground: mastered weighs full, learning weighs its
-    // accuracy. Unseen contributes nothing — honest, never inflated.
+    // accuracy. Unseen contributes nothing, honest, never inflated.
     final double learningSum = tree.subjects.fold<double>(0, (sum, s) {
       for (final sec in s.sections) {
         for (final t in sec.topics) {
@@ -318,7 +318,7 @@ class _MasteryRing extends StatelessWidget {
 
 // -------------------------------------------------------------- focus next
 
-/// "Focus next" — the server's weakest topics as amber chips. Tap expands
+/// "Focus next", the server's weakest topics as amber chips. Tap expands
 /// the section that holds the topic and highlights the row.
 class _FocusNext extends StatelessWidget {
   const _FocusNext({required this.topics, required this.onTap});
@@ -509,7 +509,7 @@ class _SectionCard extends StatelessWidget {
 }
 
 /// One topic row: name + question count on the left, three mastery dots
-/// and an accuracy bar on the right — exactly the design's anatomy.
+/// and an accuracy bar on the right, exactly the design's anatomy.
 class _TopicRow extends StatelessWidget {
   const _TopicRow({required this.topic, required this.highlight});
 

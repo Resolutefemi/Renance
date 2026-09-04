@@ -157,7 +157,7 @@ export default function ExamPage({ code }: { code: string }) {
           return;
         }
         if (res.status === 'error') {
-          throw new Error('Grading hit an error — our team sees it too. Try again.');
+          throw new Error('Grading hit an error, our team sees it too. Try again.');
         }
         await new Promise((r) => setTimeout(r, 1000));
       }
@@ -174,7 +174,7 @@ export default function ExamPage({ code }: { code: string }) {
     const totalSec = (bundle?.durationMinutes ?? 30) * 60;
     const tick = () => {
       // "Take 5": the break runs its own countdown and the exam clock is
-      // paused for it — that is the whole point of the break.
+      // paused for it, that is the whole point of the break.
       if (breakLeftRef.current > 0) {
         breakLeftRef.current -= 1;
         setBreakLeft(breakLeftRef.current);
@@ -314,7 +314,7 @@ export default function ExamPage({ code }: { code: string }) {
           <ul className="mx-auto mt-6 max-w-xs space-y-1.5 text-left text-xs text-on-surface-variant">
             <li>· Timer starts the moment you begin</li>
             <li>· Auto-submit when time runs out</li>
-            <li>· Grading happens server-side — leave any time after submitting</li>
+            <li>· Grading happens server-side: leave any time after submitting</li>
           </ul>
           {/* Smart order (ROADMAP #5) */}
           <div className="mx-auto mt-5 flex w-full max-w-xs items-center justify-between rounded-xl border border-outline-variant bg-surface-container-low px-4 py-2.5">
@@ -440,7 +440,7 @@ export default function ExamPage({ code }: { code: string }) {
           <div className="rounded-xl bg-card p-4 text-center shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
             <span className="material-symbols-outlined text-secondary">timer</span>
             <p className="mt-1 text-xl font-bold text-on-surface">
-              {elapsedMs ? mmss(Math.round(elapsedMs / 1000)) : '--:--'}
+              {elapsedMs ? mmss(Math.round(elapsedMs / 1000)) : mmss(0)}
             </p>
             <p className="text-[13px] text-on-surface-variant">Time Used</p>
           </div>
@@ -457,7 +457,7 @@ export default function ExamPage({ code }: { code: string }) {
         <div className="mt-3 space-y-3">
           {result.breakdown.length === 0 && (
             <p className="rounded-xl bg-card p-4 text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-              No topic data on this paper — every question counted toward the overall score.
+              No topic data on this paper, every question counted toward the overall score.
             </p>
           )}
           {result.breakdown.map((row) => {
@@ -572,7 +572,7 @@ export default function ExamPage({ code }: { code: string }) {
             ? `break ${mmss(breakLeft)}`
             : remaining !== null
               ? mmss(remaining)
-              : '--:--'}
+              : mmss(0)}
         </div>
       </header>
 
@@ -663,7 +663,7 @@ export default function ExamPage({ code }: { code: string }) {
             onClick={() => {
               if (answeredCount < bundle.questionCount) {
                 const left = bundle.questionCount - answeredCount;
-                if (!window.confirm(`${left} unanswered — submit anyway?`)) return;
+                if (!window.confirm(`${left} unanswered. Submit anyway?`)) return;
               }
               void submit();
             }}

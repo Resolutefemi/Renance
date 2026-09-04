@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Flashcards (ROADMAP #7) — the Stitch voice_flashcards_light on the web.
+ * Flashcards (ROADMAP #7): the Stitch voice_flashcards_light on the web.
  * Deck list → the player: white card stage, front in display type, answer
  * in emerald on reveal, the violet play pill with waveform bars, and
  * Reveal → Again / Hard / Good. The browser's speech synthesis reads the
@@ -61,7 +61,7 @@ export default function FlashcardsPage() {
         if (!alive) return;
         setProgress(Object.fromEntries(rows.map((r) => [r.cardId, r])));
       } catch {
-        // progress is decorative here — the deck still works
+        // progress is decorative here, the deck still works
       }
     })();
     return () => {
@@ -137,7 +137,7 @@ export default function FlashcardsPage() {
           return next;
         });
       } catch {
-        // Offline or rejected — the optimistic state stands; a reload
+        // Offline or rejected, the optimistic state stands; a reload
         // re-syncs from the server like every other surface.
       }
     },
@@ -179,7 +179,7 @@ export default function FlashcardsPage() {
         )}
         {phase === 'ready' && decks.length === 0 && (
           <p className="mt-10 rounded-xl bg-card p-6 text-center text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-            No decks yet — they ship with your packs.
+            No decks yet, they ship with your packs.
           </p>
         )}
         {phase === 'ready' && decks.length > 0 && (

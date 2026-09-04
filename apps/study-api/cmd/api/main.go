@@ -1,4 +1,4 @@
-// Renance study-api — ERA-2 walking skeleton entrypoint.
+// Renance study-api, ERA-2 walking skeleton entrypoint.
 //
 // Boot order: config → content library (doctrine enforcement) → store +
 // migrations → key cache + seed → grading engine → HTTP server.
@@ -107,7 +107,7 @@ func main() {
 	_ = httpServer.Shutdown(shutdownCtx)
 }
 
-// seedKeysIfPresent upserts keys from <dataDir>/answer-keys/**.json —
+// seedKeysIfPresent upserts keys from <dataDir>/answer-keys/**.json ,
 // server-only files (gitignored except the mock set, per ADR-0003).
 // Subdirectories organize key generations (mock/, real/, ...).
 func seedKeysIfPresent(st *store.Store, dataDir string, log *slog.Logger) error {

@@ -14,7 +14,7 @@
 //
 // Inline markers (**bold**, *italic*, `code`) are preserved as-is; the
 // apps render them with their own inline renderers. Raw HTML is
-// REJECTED at lint time — lesson text never becomes markup, so no
+// REJECTED at lint time, lesson text never becomes markup, so no
 // injection surface exists anywhere downstream.
 package lessonmd
 

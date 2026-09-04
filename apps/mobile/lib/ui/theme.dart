@@ -1,4 +1,4 @@
-/// Renance design system — the Stitch export as Flutter tokens.
+/// Renance design system, the Stitch export as Flutter tokens.
 ///
 /// Light tier comes from the founder's auth mockups and every Stitch
 /// screen's tailwind config: blue-tinted M3 surfaces (#f9f9ff / #e7eeff),
@@ -154,7 +154,7 @@ ThemeData buildRenanceDarkTheme() {
 }
 
 // ---------------------------------------------------------------------------
-// Stitch type scale — 1:1 from the export's fontSize config.
+// Stitch type scale, 1:1 from the export's fontSize config.
 // display-lg 28/36 -2% w700 · display-md 24/32 -1% w700 · section-title
 // 18/24 -1% w600 · stat-number 24/28 -2% w700 · body-medium 15/22 w600 ·
 // body-base 15/22 w400 · caption 13/18 w400 · label-mono 13/18 w500 (mono).

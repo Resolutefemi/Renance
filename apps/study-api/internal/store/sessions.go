@@ -1,6 +1,6 @@
 // Fatigue telemetry (ROADMAP #6): server-side log of study sittings.
 //
-// The same design law as review.go — the rules live in the pure fatigue
+// The same design law as review.go, the rules live in the pure fatigue
 // package; these methods only persist what the rules computed. Clients
 // POST one row per sitting (best-effort); GET /me/fatigue aggregates the
 // recent window for the home-screen "take a break" banner.
@@ -58,9 +58,9 @@ type FatigueState struct {
 // Three explainable thresholds (mirror of the pure rules, applied to the
 // log instead of one sitting):
 //
-//	high — a high-fatigue sitting ended less than 30 min ago, OR
+//	high, a high-fatigue sitting ended less than 30 min ago, OR
 //	       45+ study minutes inside the last 3 hours;
-//	mild — 90+ study minutes today with nothing heavier triggered.
+//	mild, 90+ study minutes today with nothing heavier triggered.
 func (s *Store) FatigueNow(ctx context.Context, userID string) (*FatigueState, error) {
 	rows, err := s.Pool.Query(ctx, `
 		SELECT duration_ms, fatigue_level, suggested_break, ended_at

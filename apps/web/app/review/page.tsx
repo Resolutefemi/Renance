@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Review — two faces (Stitch review_queue_light + answer_review_light):
+ * Review, two faces (Stitch review_queue_light + answer_review_light):
  *   /review                     → the spaced-repetition queue (default)
  *   /review?attemptId=<id>      → one graded paper's answer review
  */
@@ -167,7 +167,7 @@ function ReviewInner() {
       <div className="mt-5 space-y-4">
         {visible.length === 0 && (
           <p className="rounded-xl bg-card p-6 text-center text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-            {filter === 'wrong' ? 'Nothing wrong here — flawless paper.' : filter === 'skipped' ? 'No skipped questions.' : 'No questions.'}
+            {filter === 'wrong' ? 'Nothing wrong here, flawless paper.' : filter === 'skipped' ? 'No skipped questions.' : 'No questions.'}
           </p>
         )}
         {visible.map((q) => {
@@ -197,7 +197,7 @@ function ReviewInner() {
                 />
               )}
               {!q.selected && (
-                <p className="mt-3 text-[13px] text-accent-amber">Skipped — you left this one blank.</p>
+                <p className="mt-3 text-[13px] text-accent-amber">Skipped, you left this one blank.</p>
               )}
               <div className="mt-3">
                 <AnswerBlock
@@ -297,7 +297,7 @@ function ReviewQueue() {
           {hasWork
             ? `Estimated time: ~${due * 2} minutes`
             : latestGraded
-              ? 'Nothing scheduled — grade a paper and its topics join the plan.'
+              ? 'Nothing scheduled, grade a paper and its topics join the plan.'
               : 'Grade your first paper and its topics join the plan.'}
         </p>
         {latestGraded && (
@@ -351,7 +351,7 @@ function ReviewQueue() {
                         : a.status}
                     </span>
                   </span>
-                  <span className="font-mono text-sm text-on-surface-variant">{pct == null ? '—' : `${pct}%`}</span>
+                  <span className="font-mono text-sm text-on-surface-variant">{pct == null ? '-' : `${pct}%`}</span>
                 </Link>
               );
             })}

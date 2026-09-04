@@ -1,4 +1,4 @@
-// e2eclean deletes the throwaway users created by scripts/api-e2e.sh —
+// e2eclean deletes the throwaway users created by scripts/api-e2e.sh ,
 // used after running the E2E against a REAL database (Neon) so test
 // scholars never linger. CASCADE drops their profiles/attempts/results.
 //

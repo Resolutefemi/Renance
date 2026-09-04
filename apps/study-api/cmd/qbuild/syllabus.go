@@ -2,7 +2,7 @@ package main
 
 // The syllabus bridge for lint: qbuild runs from arbitrary working
 // directories, so the tree is discovered by walking up from the working
-// directory to the nearest <root>/data/syllabus/<slug>.json — the same
+// directory to the nearest <root>/data/syllabus/<slug>.json, the same
 // layout instinct as cbtdata.FindDataDir. This keeps `qbuild check`
 // behaving identically from apps/study-api, cmd/qbuild (go test CWD), or
 // a bare checkout.
@@ -17,7 +17,7 @@ import (
 )
 
 // syllabusTopicsFor returns the topic set of body's syllabus tree, or nil
-// when no tree is shipped for that body (lint then skips the join rule —
+// when no tree is shipped for that body (lint then skips the join rule ,
 // the boot-time loader still refuses unknown topics once a tree exists).
 func syllabusTopicsFor(body string) map[string]struct{} {
 	if body == "" {

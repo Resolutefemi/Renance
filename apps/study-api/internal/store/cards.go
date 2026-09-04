@@ -1,6 +1,6 @@
 // Flashcard progress (ROADMAP #7): Leitner boxes over card ids.
 //
-// Boxes 1..5 with fixed intervals — simple, explainable, and identical on
+// Boxes 1..5 with fixed intervals, simple, explainable, and identical on
 // every client because the rule is pure and mirrored verbatim in the app
 // and on the web page. "again" resets to box 1 (due immediately),
 // "hard" holds the box (due tomorrow), "good" climbs one box.
@@ -12,7 +12,7 @@ import (
 )
 
 // CardBoxIntervals are the review gaps (days) per box. Box 1 is due
-// immediately — the card just failed or is brand new.
+// immediately, the card just failed or is brand new.
 var CardBoxIntervals = [6]int{0, 0, 1, 2, 4, 7} // index 0 unused
 
 // NextCardBox is the pure Leitner update rule.
@@ -65,7 +65,7 @@ type CardGrade struct {
 
 // GradeCards applies a batch of grades in one transaction and returns the
 // updated rows in input order. Unknown cards start from box 1 (new card).
-// Card ids are client-held strings — no FK by design: progress for a deck
+// Card ids are client-held strings, no FK by design: progress for a deck
 // that later rotates out of the content library simply fades unused.
 func (s *Store) GradeCards(ctx context.Context, userID string, grades []CardGrade) ([]CardProgress, error) {
 	out := make([]CardProgress, 0, len(grades))

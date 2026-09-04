@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
  * Single source of truth for public routes. New public pages MUST register
  * here (reviewer checklist item in docs/seo-checklist.md). Lesson slugs
  * come from the committed data/lessons bundles so new content ships in
- * the same commit as its sitemap entry — the sets can never drift.
+ * the same commit as its sitemap entry, so the sets can never drift.
  */
 import { loadLessons } from '@/lib/site-data';
 

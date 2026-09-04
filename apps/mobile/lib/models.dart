@@ -274,7 +274,7 @@ class ExamResult {
   final int total;
   final List<TopicRow> breakdown;
 
-  /// Topics the last paper exposed (accuracy < 60%) — the score report's
+  /// Topics the last paper exposed (accuracy < 60%), the score report's
   /// weak-topic chips that deep-link into the syllabus map (ROADMAP #4).
   List<TopicRow> weakTopics({double threshold = 0.6}) {
     final weak =
@@ -358,7 +358,7 @@ class AttemptView {
 
 // ---------------------------------------------------------- paper history
 
-/// One row of GET /me/attempts — the student's paper history.
+/// One row of GET /me/attempts, the student's paper history.
 class AttemptRow {
   AttemptRow({
     required this.attemptId,
@@ -481,7 +481,7 @@ class AttemptReview {
 
 // ---------------------------------------------------------------- gamification
 
-/// One scholar's streak/XP summary — mirrors GET /me/gamification `state`.
+/// One scholar's streak/XP summary, mirrors GET /me/gamification `state`.
 class StreakState {
   StreakState({
     required this.currentStreak,
@@ -584,7 +584,7 @@ class ReviewItem {
   final int lastCorrect;
   final int lastTotal;
 
-  /// Overdue / due / later — the preview status the design renders.
+  /// Overdue / due / later, the preview status the design renders.
   String status(DateTime now) {
     final due = DateTime.tryParse(dueOn);
     if (due == null) return 'due';
@@ -802,7 +802,7 @@ class SyllabusStats {
 
 // -------------------------------------------------------------- fatigue (6)
 
-/// The fatigue signal for one sitting — mirror of the API's pure rule
+/// The fatigue signal for one sitting, mirror of the API's pure rule
 /// (apps/study-api/internal/fatigue). Ported verbatim so the app, the web
 /// page and the server always agree on what "your pace is dipping" means.
 class FatigueSignal {
@@ -909,7 +909,7 @@ FatigueSignal assessFatigue(List<int> latenciesMs, double sessionMinutes) {
   );
 }
 
-/// GET /me/fatigue — the current advisory for home-screen banners.
+/// GET /me/fatigue, the current advisory for home-screen banners.
 class FatigueState {
   const FatigueState({
     required this.level,
@@ -1044,11 +1044,11 @@ class FlashcardDeck {
   };
 }
 
-/// Leitner box intervals (days) per box — mirror of store.CardBoxIntervals.
+/// Leitner box intervals (days) per box, mirror of store.CardBoxIntervals.
 /// Index 0 is unused; box 1 is due immediately.
 const List<int> cardBoxIntervals = <int>[0, 0, 1, 2, 4, 7];
 
-/// Pure Leitner rule — mirror of store.NextCardBox.
+/// Pure Leitner rule, mirror of store.NextCardBox.
 int nextCardBox(int box, String grade) {
   switch (grade) {
     case 'again':
@@ -1060,7 +1060,7 @@ int nextCardBox(int box, String grade) {
   }
 }
 
-/// Pure interval lookup — mirror of store.CardIntervalDays.
+/// Pure interval lookup, mirror of store.CardIntervalDays.
 int cardIntervalDays(int box) {
   final b = box < 1 ? 1 : (box > 5 ? 5 : box);
   return cardBoxIntervals[b];
@@ -1129,12 +1129,12 @@ class FlashcardGrade {
 }
 
 // ------------------------------------------------------------------ lessons
-// ROADMAP #8 — mdx-built lesson bundles served from data/lessons and
+// ROADMAP #8, mdx-built lesson bundles served from data/lessons and
 // cached offline exactly like packs and decks.
 
 /// One paragraph-level block. [type] is p / ul / ol / callout / h3; text
 /// carries inline markers (**bold**, *italic*, `code`) rendered by the
-/// app's inline renderer — never raw HTML.
+/// app's inline renderer, never raw HTML.
 class LessonBlock {
   LessonBlock({
     required this.type,
@@ -1279,7 +1279,7 @@ class Lesson {
 }
 
 // -------------------------------------------------------------------- tutor
-// ROADMAP #9 — Socratic chat anchored to a graded attempt + question.
+// ROADMAP #9, Socratic chat anchored to a graded attempt + question.
 
 /// One conversation turn as the client stores it.
 class TutorTurn {

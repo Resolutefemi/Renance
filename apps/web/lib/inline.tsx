@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 /**
  * Renders the lesson inline markers (**bold**, *italic*, `code`) into
  * React nodes. Lesson text is linted HTML-free at build time, so this
- * renderer is the ONLY styling path — there is no HTML injection
+ * renderer is the ONLY styling path, there is no HTML injection
  * surface anywhere in the lessons pipeline.
  */
 export function renderInline(text: string): ReactNode[] {
