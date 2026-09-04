@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../models.dart';
+import 'badge_detail_screen.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
 
@@ -474,42 +475,36 @@ class _BadgesGrid extends StatelessWidget {
 
   void _showDetail(
       BuildContext sheetCtx, _BadgeSpec s, bool earned, List<Award> awards) {
-    showModalBottomSheet<void>(
-      context: sheetCtx,
-      backgroundColor: RenanceColors.card,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      ),
-      builder: (_) => Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Container(
-              width: 64,
-              height: 64,
-              decoration: BoxDecoration(shape: BoxShape.circle, color: s.bg),
-              child: Icon(s.icon, size: 34, color: s.fg),
-            ),
-            const SizedBox(height: 12),
-            Text(s.label,
-                style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                    color: RenanceColors.ink)),
-            const SizedBox(height: 4),
-            Text(
-              earned
-                  ? (awards.isEmpty
-                      ? 'Earned'
-                      : 'Earned ${_relativeAgo(awards.first.earnedAt, DateTime.now())}')
-                  : s.hint,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  fontSize: 13, color: RenanceColors.textSecondary),
-            ),
-            const SizedBox(height: 8),
-          ],
+    // Full Stitch badge_detail_light screen (replaces the old sheet).
+    Navigator.of(sheetCtx).push<void>(
+      MaterialPageRoute<void>(
+        builder: (_) => BadgeDetailScreen(
+          spec: BadgeSpec(
+            code: s.code,
+            label: s.label,
+            icon: s.icon,
+            bg: s.bg,
+            fg: s.fg,
+            hint: earned && awards.isNotEmpty
+                ? 'Earned ${_relativeAgo(awards.first.earnedAt, DateTime.now())}'
+                : s.hint,
+            earned: earned,
+          ),
+          related: <BadgeSpec>[
+            for (final _BadgeSpec r in _kBadgeCatalog)
+              if (r.code != s.code)
+                BadgeSpec(
+                  code: r.code,
+                  label: r.label,
+                  icon: r.icon,
+                  bg: r.bg,
+                  fg: r.fg,
+                  hint: r.hint,
+                  earned: summary.holds(r.code),
+                ),
+          ].take(3).toList(),
+          currentStreak: summary.state.currentStreak,
+          totalXp: summary.state.totalXp,
         ),
       ),
     );
