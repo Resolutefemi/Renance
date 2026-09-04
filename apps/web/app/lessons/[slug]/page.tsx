@@ -12,7 +12,7 @@ import { renderInline } from '@/lib/inline';
 
 export const dynamic = 'force-static';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://resolutefemi.github.io/Renance';
+import { SITE_URL } from '@/lib/site-url';
 
 export function generateStaticParams() {
   return loadLessons().map((l) => ({ slug: l.slug }));

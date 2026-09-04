@@ -10,7 +10,7 @@ import { loadSyllabi } from '@/lib/site-data';
 
 export const dynamic = 'force-static';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://resolutefemi.github.io/Renance';
+import { SITE_URL } from '@/lib/site-url';
 
 export const metadata: Metadata = {
   title: 'Subjects & syllabus coverage — JAMB, WAEC, NECO & university modules',
