@@ -132,7 +132,14 @@ class _HomeScreenState extends State<HomeScreen> {
       LibraryScreen(onOpenExam: _openExam),
       const ReviewScreen(),
       const ProgressScreen(),
-      ProfileScreen(onGoTab: (int t) => setState(() => _tab = t)),
+      ProfileScreen(
+        onGoTab: (int t) => setState(() => _tab = t),
+        onFocusChanged: () async {
+          final StudentController fresh = context.read<StudentController>();
+          final SyncController freshSync = context.read<SyncController>();
+          await _startSync(fresh, freshSync);
+        },
+      ),
     ];
 
     final Widget shellBody = Stack(
@@ -153,6 +160,8 @@ class _HomeScreenState extends State<HomeScreen> {
           child: HomeHeader(
             streak: student.gamification?.state.currentStreak ?? 0,
             name: student.me?.profile?.fullName ?? '',
+            onBrand: () => setState(() => _tab = 0),
+            onAvatar: () => setState(() => _tab = 4),
             onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
             onSearch: () => Navigator.of(context).push<void>(
               MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
@@ -354,11 +363,15 @@ class _WideRail extends StatelessWidget {
 // ----------------------------------------------------------------- header
 
 /// The fixed brand header: black R tile + wordmark, streak pill, avatar.
+/// The brand mark jumps back to Home and the avatar opens Profile, the
+/// founder's navigation rule for the top bar.
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
     super.key,
     required this.streak,
     required this.name,
+    this.onBrand,
+    this.onAvatar,
     this.onBackPressed,
     this.onSearch,
     this.onNotifications,
@@ -367,6 +380,8 @@ class HomeHeader extends StatelessWidget {
 
   final int streak;
   final String name;
+  final VoidCallback? onBrand;
+  final VoidCallback? onAvatar;
   final VoidCallback? onBackPressed;
   final VoidCallback? onSearch;
   final VoidCallback? onNotifications;
@@ -394,7 +409,7 @@ class HomeHeader extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             children: <Widget>[
-              const _BrandMark(),
+              _Tappable(onTap: onBrand, child: const _BrandMark()),
               const Spacer(),
               if (onSearch != null)
                 _HeaderIcon(
@@ -412,11 +427,33 @@ class HomeHeader extends StatelessWidget {
               const SizedBox(width: 6),
               StreakPill(streak: streak),
               const SizedBox(width: 16),
-              AvatarCircle(name: name, size: 32),
+              _Tappable(
+                onTap: onAvatar,
+                child: AvatarCircle(name: name, size: 32),
+              ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Pointer-cursor tap wrapper used for header affordances so the brand
+/// mark and avatar feel clickable on desktop too.
+class _Tappable extends StatelessWidget {
+  const _Tappable({required this.child, this.onTap});
+
+  final Widget child;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      cursor: onTap == null
+          ? MouseCursor.defer
+          : SystemMouseCursors.click,
+      child: GestureDetector(onTap: onTap, child: child),
     );
   }
 }

@@ -11,15 +11,25 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'certificate_wallet_screen.dart';
 import 'downloads_screen.dart';
+import 'focus_sheet.dart';
 import 'home_screen.dart' show AvatarCircle;
 import 'settings_screen.dart';
 import 'theme.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key, required this.onGoTab});
+  const ProfileScreen({
+    super.key,
+    required this.onGoTab,
+    this.onFocusChanged,
+  });
 
   final ValueChanged<int> onGoTab;
+
+  /// Fired after the scholar switches their learning focus so the shell
+  /// can re-sync packs for the new target exam.
+  final VoidCallback? onFocusChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -159,6 +169,18 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 16),
+        // Learning focus: switch between JAMB / WAEC / NECO / tertiary.
+        _FocusCard(
+          chip: student.targetChip,
+          onSwitch: () async {
+            final StudentController fresh = context.read<StudentController>();
+            final bool changed = await FocusSheet.show(context);
+            if (!changed) return;
+            await fresh.refresh();
+            onFocusChanged?.call();
+          },
+        ),
+        const SizedBox(height: 16),
         // Menu group: content --------------------------------------------
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
@@ -181,9 +203,8 @@ class ProfileScreen extends StatelessWidget {
             tint: RenanceColors.violet,
             label: 'Certificates',
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                  content: Text(
-                      'The certificate wallet is designed, it lands with the exam board.')));
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const CertificateWalletScreen()));
             },
           ),
         ]),
@@ -263,6 +284,80 @@ class ProfileScreen extends StatelessWidget {
         ),
         const SizedBox(height: 24),
       ],
+    );
+  }
+}
+
+/// Learning-focus card: shows the current target chip and opens the
+/// focus sheet (exam_target_light) on tap.
+class _FocusCard extends StatelessWidget {
+  const _FocusCard({required this.chip, required this.onSwitch});
+
+  final String chip;
+  final VoidCallback onSwitch;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: RenanceColors.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onSwitch,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: <Widget>[
+              Container(
+                width: 40,
+                height: 40,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: RenanceColors.selectionBlue,
+                ),
+                child: const Icon(Icons.track_changes,
+                    size: 22, color: RenanceColors.ink),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text('Learning focus', style: RenanceText.bodyMedium),
+                    const SizedBox(height: 2),
+                    Text(
+                      'Preparing for $chip. Tap to switch.',
+                      style: RenanceText.caption,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                decoration: BoxDecoration(
+                  color: RenanceColors.selectionBlue,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+                child: Text(chip,
+                    style:
+                        RenanceText.labelMono.copyWith(fontSize: 12)),
+              ),
+              const SizedBox(width: 8),
+              const Icon(Icons.swap_horiz,
+                  color: RenanceColors.outlineLight),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

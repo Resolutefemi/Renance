@@ -19,6 +19,8 @@ import {
 } from '@/lib/review';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import TutorChat from '@/components/tutor-chat';
+import PageBar from '@/components/page-bar';
+import BottomNav from '@/components/bottom-nav';
 
 interface ReviewQuestion {
   questionId: string;
@@ -122,8 +124,10 @@ function ReviewInner() {
   );
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6">
-      <header className="flex items-center justify-between">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+      <PageBar title={`Review · ${review.title || review.code}`} />
+      <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6">
+      <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-on-surface">
             Review · {wrongCount} wrong
@@ -136,7 +140,7 @@ function ReviewInner() {
         <Link href="/review" className="text-sm text-on-surface-variant hover:text-on-surface">
           Queue
         </Link>
-      </header>
+      </div>
 
       <div className="mt-6 flex flex-wrap gap-2">
         {(
@@ -217,6 +221,8 @@ function ReviewInner() {
           );
         })}
       </div>
+      </div>
+      <BottomNav />
     </main>
   );
 }
@@ -276,13 +282,15 @@ function ReviewQueue() {
   const latestGraded = attempts.find((a) => a.status === 'graded');
 
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6">
-      <header className="flex items-center justify-between">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+      <PageBar title="Review" />
+      <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6">
+      <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold tracking-tight text-on-surface">Review</h1>
         <Link href="/dashboard" className="text-sm text-on-surface-variant hover:text-on-surface">
           Dashboard
         </Link>
-      </header>
+      </div>
 
       {/* amber hero (review_queue_light) */}
       <section className="mt-6 rounded-xl bg-accent-amber/10 p-6 text-center shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
@@ -358,6 +366,8 @@ function ReviewQueue() {
           </div>
         </section>
       )}
+      </div>
+      <BottomNav />
     </main>
   );
 }

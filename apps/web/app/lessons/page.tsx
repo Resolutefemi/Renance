@@ -29,7 +29,14 @@ export const metadata: Metadata = {
 export default function LessonsIndex() {
   const lessons = loadLessons();
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 pb-20 pt-10 sm:px-6">
+    <main className="mx-auto w-full max-w-5xl px-4 pb-20 pt-6 sm:px-6">
+      <Link
+        href="/dashboard/"
+        aria-label="Go back"
+        className="mb-2 inline-flex h-10 w-10 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container"
+      >
+        <span className="material-symbols-outlined text-[22px]">arrow_back</span>
+      </Link>
       <header className="max-w-2xl">
         <p className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
           Renance Lessons
