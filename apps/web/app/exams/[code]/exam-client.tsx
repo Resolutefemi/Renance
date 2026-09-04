@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { api } from '@/lib/api';
 import { fetchBundle, fetchManifest, type Bundle } from '@/lib/exams';
 import { bodySlug } from '@/lib/syllabus';
@@ -53,6 +53,13 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
 export default function ExamPage({ code }: { code: string }) {
   const router = useRouter();
+
+  // Practice Settings overrides (?timer=15|30|60, ?timer=0 = No timer).
+  const searchParams = useSearchParams();
+  const timerParam = searchParams.get('timer');
+  const untimed = timerParam === '0';
+  const timerOverride =
+    timerParam && timerParam !== '0' ? Math.max(1, Number(timerParam) || 0) : null;
 
   const [phase, setPhase] = useState<Phase>('loading');
   const [bundle, setBundle] = useState<Bundle | null>(null);
@@ -171,7 +178,12 @@ export default function ExamPage({ code }: { code: string }) {
   // countdown
   useEffect(() => {
     if (phase !== 'playing' || !attempt) return;
-    const totalSec = (bundle?.durationMinutes ?? 30) * 60;
+    const totalSec =
+      timerOverride != null
+        ? timerOverride * 60
+        : untimed
+          ? 0
+          : (bundle?.durationMinutes ?? 30) * 60;
     const tick = () => {
       // "Take 5": the break runs its own countdown and the exam clock is
       // paused for it, that is the whole point of the break.
@@ -184,6 +196,11 @@ export default function ExamPage({ code }: { code: string }) {
       const elapsed = Math.floor(
         (Date.now() - startedAtRef.current - pausedMsRef.current) / 1000,
       );
+      // Untimed practice runs a count-up clock and never auto-submits.
+      if (untimed) {
+        setRemaining(elapsed);
+        return;
+      }
       const left = totalSec - elapsed;
       setRemaining(Math.max(left, 0));
       if (left <= 0) void submit();
@@ -191,7 +208,7 @@ export default function ExamPage({ code }: { code: string }) {
     tick();
     const id = setInterval(tick, 1000);
     return () => clearInterval(id);
-  }, [phase, attempt, bundle, submit]);
+  }, [phase, attempt, bundle, submit, untimed, timerOverride]);
 
   async function startAttempt() {
     if (!bundle) return;

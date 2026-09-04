@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { Suspense } from 'react';
 import ExamClient from './exam-client';
 
 /**
@@ -44,5 +45,11 @@ export default async function ExamRoute({
   params: Promise<{ code: string }>;
 }) {
   const { code } = await params;
-  return <ExamClient code={code} />;
+  // Suspense boundary: the client reads ?timer= overrides (Practice
+  // Settings) via useSearchParams, which requires one under export.
+  return (
+    <Suspense fallback={null}>
+      <ExamClient code={code} />
+    </Suspense>
+  );
 }

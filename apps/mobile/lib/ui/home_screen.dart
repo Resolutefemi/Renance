@@ -108,9 +108,21 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  void _openExam(BuildContext context, ExamMeta exam) {
-    Navigator.of(context)
-        .push(MaterialPageRoute<void>(builder: (_) => ExamScreen(exam: exam)));
+  void _openExam(
+    BuildContext context,
+    ExamMeta exam, {
+    int? durationOverrideMinutes,
+    bool untimed = false,
+  }) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => ExamScreen(
+          exam: exam,
+          durationOverrideMinutes: durationOverrideMinutes,
+          untimed: untimed,
+        ),
+      ),
+    );
   }
 
   @override

@@ -23,9 +23,19 @@ import 'syllabus_screen.dart';
 import 'theme.dart';
 
 class ExamScreen extends StatefulWidget {
-  const ExamScreen({super.key, required this.exam});
+  const ExamScreen({
+    super.key,
+    required this.exam,
+    this.durationOverrideMinutes,
+    this.untimed = false,
+  });
 
   final ExamMeta exam;
+
+  /// Practice Settings overrides (Stitch practice_mode_setup): a chosen
+  /// timer replaces the pack duration; untimed runs a count-up clock.
+  final int? durationOverrideMinutes;
+  final bool untimed;
 
   @override
   State<ExamScreen> createState() => _ExamScreenState();
@@ -37,7 +47,11 @@ class _ExamScreenState extends State<ExamScreen> {
     super.initState();
     Future<void>.microtask(() {
       if (!mounted) return;
-      context.read<ExamController>().load(widget.exam);
+      context.read<ExamController>().load(
+            widget.exam,
+            durationOverrideMinutes: widget.durationOverrideMinutes,
+            untimed: widget.untimed,
+          );
     });
   }
 
@@ -310,7 +324,9 @@ class _ExamHeader extends StatelessWidget {
                         Text(
                           breaking
                               ? mmss(controller.breakSecondsLeft)
-                              : mmss(controller.secondsRemaining),
+                              : controller.untimed
+                                  ? mmss(controller.elapsedSeconds)
+                                  : mmss(controller.secondsRemaining),
                           style: RenanceText.labelMono.copyWith(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,

@@ -256,6 +256,23 @@ export default function DashboardPage() {
           <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
         )}
 
+        {/* Mock exam simulator banner (exam_mode_setup_light entry) ------ */}
+        <Link
+          href="/exams/setup"
+          className="flex items-center gap-3 rounded-xl bg-dark-surface p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
+        >
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-accent-violet/15">
+            <span className="material-symbols-outlined text-[22px] text-accent-violet">timer</span>
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-[15px] font-semibold text-dark-text-primary">Mock Exam Setup</p>
+            <p className="truncate text-[13px] text-dark-text-secondary">
+              Official JAMB conditions, 2 hours, 4 subjects
+            </p>
+          </div>
+          <span className="material-symbols-outlined text-[20px] text-dark-text-secondary">arrow_forward</span>
+        </Link>
+
         {/* Launcher grids: one Stitch pair on phones, side by side on PC --- */}
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           <section className="mt-2">
@@ -451,7 +468,7 @@ function LauncherTile({
 function ExamCard({ exam, ready }: { exam: ExamMeta; ready: boolean }) {
   return (
     <Link
-      href={`/exams/${exam.code}`}
+      href={`/exams/practice?pack=${encodeURIComponent(exam.code)}`}
       className="group flex h-40 flex-col justify-between rounded-xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition hover:shadow-md"
     >
       <div>
