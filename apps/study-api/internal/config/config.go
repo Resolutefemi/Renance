@@ -22,6 +22,17 @@ type Config struct {
 	AdminToken     string // guards GET /internal/review/tick; "" keeps the route disabled (404)
 	GradeWorkers   int
 	GradeQueue     int
+
+	// ROADMAP #9 Socratic tutor: empty AIAPIKey keeps hint-only mode.
+	AIAPIKey    string
+	AIBaseURL   string
+	AIModel     string
+	AIMaxTokens int
+
+	// Abuse walls (security hardening).
+	AuthPerMin       int
+	AuthGlobalPerMin int
+	TutorPerMin      int
 }
 
 func Load() (*Config, error) {
@@ -35,6 +46,15 @@ func Load() (*Config, error) {
 		AdminToken:     strings.TrimSpace(os.Getenv("ADMIN_TOKEN")),
 		GradeWorkers:   envInt("GRADE_WORKERS", 8),
 		GradeQueue:     envInt("GRADE_QUEUE", 1024),
+
+		AIAPIKey:    strings.TrimSpace(os.Getenv("AI_API_KEY")),
+		AIBaseURL:   envStr("AI_BASE_URL", "https://api.openai.com/v1"),
+		AIModel:     envStr("AI_MODEL", "gpt-4o-mini"),
+		AIMaxTokens: envInt("AI_MAX_TOKENS", 320),
+
+		AuthPerMin:       envInt("AUTH_PER_MIN", 20),
+		AuthGlobalPerMin: envInt("AUTH_GLOBAL_PER_MIN", 300),
+		TutorPerMin:      envInt("TUTOR_PER_MIN", 12),
 	}
 	if c.DatabaseURL == "" {
 		return nil, errors.New("config: DATABASE_URL is required (Neon console → connection string, or a local Postgres)")

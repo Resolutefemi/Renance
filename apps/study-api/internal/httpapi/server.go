@@ -15,6 +15,10 @@
 //	POST   /me/cards/progress    -> batch-grade flashcards
 //	GET    /flashcards           -> deck list
 //	GET    /flashcards/{code}    -> one deck with cards
+//	GET    /lessons              -> lesson list (ROADMAP #8)
+//	GET    /lessons/{slug}       -> one lesson with sections
+//	GET    /tutor/status         -> {aiEnabled} (ROADMAP #9)
+//	POST   /attempts/{id}/tutor  -> Socratic chat on a graded attempt
 //	PUT    /me/profile             {fullName, institution, gradeLevel, exams[], targetYear?}
 //	GET    /manifest
 //	GET    /bundles/{code}
@@ -39,6 +43,7 @@ import (
 	"renance.dev/study-api/internal/grading"
 	"renance.dev/study-api/internal/jwtx"
 	"renance.dev/study-api/internal/store"
+	"renance.dev/study-api/internal/tutor"
 )
 
 type Server struct {
@@ -50,6 +55,11 @@ type Server struct {
 	syncer  syncerKicker
 	google  *googleid.Verifier
 	allowed map[string]struct{}
+
+	tutor      *tutor.Tutor
+	limiter    *rateLimiter
+	authIP     *rateLimiter
+	authGlobal *rateLimiter
 }
 
 // syncerKicker is the narrow interface the handlers need from the syncer.
@@ -71,6 +81,15 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
 	if cfg.GoogleClientID != "" {
 		s.google = googleid.New(strings.Split(cfg.GoogleClientID, ",")...)
 	}
+	// The tutor ALWAYS exists; an empty AI_API_KEY just leaves its
+	// provider nil, which switches Reply() into deterministic hint mode.
+	s.tutor = &tutor.Tutor{MaxTokens: cfg.AIMaxTokens, Log: log}
+	if cfg.AIAPIKey != "" {
+		s.tutor.Provider = &tutor.OpenAICompat{BaseURL: cfg.AIBaseURL, APIKey: cfg.AIAPIKey, Model: cfg.AIModel}
+	}
+	s.limiter = newRateLimiter(cfg.TutorPerMin, cfg.TutorPerMin)
+	s.authIP = newRateLimiter(cfg.AuthPerMin, cfg.AuthPerMin*2)
+	s.authGlobal = newRateLimiter(cfg.AuthGlobalPerMin, cfg.AuthGlobalPerMin)
 	return s
 }
 
@@ -78,9 +97,9 @@ func (s *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("GET /healthz", s.handleHealth)
-	mux.HandleFunc("POST /auth/register", s.handleRegister)
-	mux.HandleFunc("POST /auth/login", s.handleLogin)
-	mux.HandleFunc("POST /auth/google", s.handleGoogleAuth)
+	mux.HandleFunc("POST /auth/register", s.authLimit(s.handleRegister))
+	mux.HandleFunc("POST /auth/login", s.authLimit(s.handleLogin))
+	mux.HandleFunc("POST /auth/google", s.authLimit(s.handleGoogleAuth))
 
 	mux.HandleFunc("GET /me", s.auth(s.handleMe))
 	mux.HandleFunc("GET /me/attempts", s.auth(s.handleListAttempts))
@@ -93,6 +112,9 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /syllabus/{body}", s.auth(s.handleSyllabus))
 	mux.HandleFunc("GET /flashcards", s.auth(s.handleFlashcardDecks))
 	mux.HandleFunc("GET /flashcards/{code}", s.auth(s.handleFlashcardDeck))
+	mux.HandleFunc("GET /lessons", s.auth(s.handleLessons))
+	mux.HandleFunc("GET /lessons/{slug}", s.auth(s.handleLesson))
+	mux.HandleFunc("GET /tutor/status", s.auth(s.handleTutorStatus))
 	mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
 	mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))
@@ -100,11 +122,12 @@ func (s *Server) Handler() http.Handler {
 
 	mux.HandleFunc("POST /attempts", s.auth(s.handleCreateAttempt))
 	mux.HandleFunc("POST /attempts/{id}/submit", s.auth(s.handleSubmitAttempt))
+	mux.HandleFunc("POST /attempts/{id}/tutor", s.auth(s.handleAttemptTutor))
 	mux.HandleFunc("GET /attempts/{id}", s.auth(s.handleGetAttempt))
 	mux.HandleFunc("GET /attempts/{id}/review", s.auth(s.handleAttemptReview))
 	mux.HandleFunc("GET /sync/status", s.auth(s.handleSyncStatus))
 
-	return s.cors(mux)
+	return s.securityHeaders(s.cors(mux))
 }
 
 // ------------------------------------------------------------------ glue

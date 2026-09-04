@@ -15,6 +15,7 @@
   --color-surface-bright: #f9f9ff;
   --color-surface-dim: #cfdaf2;
   --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff; /* card surface used app-wide (was silently transparent) */
   --color-surface-container-low: #f0f3ff;
   --color-surface-container: #e7eeff;
   --color-surface-container-high: #dee8ff;

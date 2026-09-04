@@ -18,6 +18,7 @@ import {
   type ReviewSummary,
 } from '@/lib/review';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
+import TutorChat from '@/components/tutor-chat';
 
 interface ReviewQuestion {
   questionId: string;
@@ -158,6 +159,10 @@ function ReviewInner() {
           </button>
         ))}
       </div>
+
+      {(wrongCount > 0 || skippedCount > 0) && (
+        <TutorChat attemptId={review.attemptId} questions={review.questions} />
+      )}
 
       <div className="mt-5 space-y-4">
         {visible.length === 0 && (

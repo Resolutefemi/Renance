@@ -16,6 +16,17 @@ import (
 // username + password. Scholar attributes arrive later via the profile modal.
 var usernameRE = regexp.MustCompile(`^[a-z0-9_]{3,24}$`)
 
+// dummyHash equalizes the login timing channel: without it, a missing
+// username returns immediately while a wrong password burns ~250ms of
+// bcrypt - letting an attacker enumerate usernames by clock alone.
+var dummyHash = func() []byte {
+	h, err := bcrypt.GenerateFromPassword([]byte("renance-timing-equalizer"), 12)
+	if err != nil {
+		panic("auth: dummy bcrypt hash: " + err.Error())
+	}
+	return h
+}()
+
 type credentials struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
@@ -74,8 +85,15 @@ func (s *Server) handleLogin(w http.ResponseWriter, r *http.Request) {
 		fail(w, http.StatusInternalServerError, "internal", "could not log in")
 		return
 	}
-	// Generic error whether the user is missing or the password is wrong.
-	if u == nil || bcrypt.CompareHashAndPassword([]byte(u.PasswordHash), []byte(req.Password)) != nil {
+	// Generic error whether the user is missing or the password is
+	// wrong - and a real bcrypt compare runs in BOTH branches so the
+	// response time cannot reveal which usernames exist.
+	if u == nil {
+		_ = bcrypt.CompareHashAndPassword(dummyHash, []byte(req.Password))
+		fail(w, http.StatusUnauthorized, "invalid_credentials", "invalid username or password")
+		return
+	}
+	if bcrypt.CompareHashAndPassword([]byte(u.PasswordHash), []byte(req.Password)) != nil {
 		fail(w, http.StatusUnauthorized, "invalid_credentials", "invalid username or password")
 		return
 	}

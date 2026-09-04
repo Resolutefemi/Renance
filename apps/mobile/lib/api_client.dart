@@ -37,11 +37,11 @@ class ApiClient {
     required String baseUrl,
     http.Client? client,
     String? Function()? token,
-  })  : _base = baseUrl.endsWith('/')
-            ? baseUrl.substring(0, baseUrl.length - 1)
-            : baseUrl,
-        _client = client ?? http.Client(),
-        _token = token;
+  }) : _base = baseUrl.endsWith('/')
+           ? baseUrl.substring(0, baseUrl.length - 1)
+           : baseUrl,
+       _client = client ?? http.Client(),
+       _token = token;
 
   final String _base;
   final http.Client _client;
@@ -65,9 +65,11 @@ class ApiClient {
     final http.Response res;
     try {
       final http.StreamedResponse streamed = await _client
-          .send(http.Request(method, uri)
-            ..headers.addAll(_headers())
-            ..body = body == null ? '' : jsonEncode(body))
+          .send(
+            http.Request(method, uri)
+              ..headers.addAll(_headers())
+              ..body = body == null ? '' : jsonEncode(body),
+          )
           .timeout(const Duration(seconds: 20));
       res = await http.Response.fromStream(streamed);
     } on SocketException catch (e) {
@@ -84,12 +86,17 @@ class ApiClient {
       try {
         decoded = jsonDecode(utf8.decode(res.bodyBytes));
       } on FormatException {
-        throw ApiException(res.statusCode, 'bad_response',
-            'Server sent something we could not read');
+        throw ApiException(
+          res.statusCode,
+          'bad_response',
+          'Server sent something we could not read',
+        );
       }
     }
     if (res.statusCode >= 400) {
-      final err = (decoded as Map<dynamic, dynamic>?)?['error'] as Map<dynamic, dynamic>?;
+      final err =
+          (decoded as Map<dynamic, dynamic>?)?['error']
+              as Map<dynamic, dynamic>?;
       throw ApiException(
         res.statusCode,
         (err?['code'] ?? 'error').toString(),
@@ -102,9 +109,12 @@ class ApiClient {
   // ------------------------------------------------------------------ auth
 
   Future<AuthTokens> register(String username, String password) async {
-    final data = await _send('POST', '/auth/register',
-        body: <String, String>{'username': username, 'password': password},
-        auth: false) as Map<dynamic, dynamic>;
+    final data = await _send(
+      'POST',
+      '/auth/register',
+      body: <String, String>{'username': username, 'password': password},
+      auth: false,
+    ) as Map<dynamic, dynamic>;
     return AuthTokens(
       token: (data['token'] ?? '') as String,
       user: AppUser.fromJson((data['user'] as Map).cast<String, dynamic>()),
@@ -112,9 +122,12 @@ class ApiClient {
   }
 
   Future<AuthTokens> login(String username, String password) async {
-    final data = await _send('POST', '/auth/login',
-        body: <String, String>{'username': username, 'password': password},
-        auth: false) as Map<dynamic, dynamic>;
+    final data = await _send(
+      'POST',
+      '/auth/login',
+      body: <String, String>{'username': username, 'password': password},
+      auth: false,
+    ) as Map<dynamic, dynamic>;
     return AuthTokens(
       token: (data['token'] ?? '') as String,
       user: AppUser.fromJson((data['user'] as Map).cast<String, dynamic>()),
@@ -125,9 +138,12 @@ class ApiClient {
   /// session — the server verifies it against Google's JWKS and issues
   /// the same 12h JWT the credential flow returns.
   Future<AuthTokens> authWithGoogle(String idToken) async {
-    final data = await _send('POST', '/auth/google',
-        body: <String, String>{'credential': idToken},
-        auth: false) as Map<dynamic, dynamic>;
+    final data = await _send(
+      'POST',
+      '/auth/google',
+      body: <String, String>{'credential': idToken},
+      auth: false,
+    ) as Map<dynamic, dynamic>;
     return AuthTokens(
       token: (data['token'] ?? '') as String,
       user: AppUser.fromJson((data['user'] as Map).cast<String, dynamic>()),
@@ -146,13 +162,17 @@ class ApiClient {
     required List<String> exams,
     int? targetYear,
   }) async {
-    final data = await _send('PUT', '/me/profile', body: <String, dynamic>{
-      'fullName': fullName,
-      'institution': institution,
-      'gradeLevel': gradeLevel,
-      'exams': exams,
-      if (targetYear != null) 'targetYear': targetYear,
-    }) as Map<dynamic, dynamic>;
+    final data = await _send(
+      'PUT',
+      '/me/profile',
+      body: <String, dynamic>{
+        'fullName': fullName,
+        'institution': institution,
+        'gradeLevel': gradeLevel,
+        'exams': exams,
+        if (targetYear != null) 'targetYear': targetYear,
+      },
+    ) as Map<dynamic, dynamic>;
     return Profile.fromJson((data['profile'] as Map).cast<String, dynamic>());
   }
 
@@ -172,12 +192,15 @@ class ApiClient {
 
   /// Starts an attempt. [adaptive] asks the server to rank the paper
   /// weak-topic-first from the student's own review state (ROADMAP #5).
-  Future<AttemptStarted> createAttempt(String code, {bool adaptive = false}) async {
-    final data = await _send('POST', '/attempts',
-        body: <String, dynamic>{
-          'code': code,
-          if (adaptive) 'adaptive': true,
-        }) as Map<dynamic, dynamic>;
+  Future<AttemptStarted> createAttempt(
+    String code, {
+    bool adaptive = false,
+  }) async {
+    final data = await _send(
+      'POST',
+      '/attempts',
+      body: <String, dynamic>{'code': code, if (adaptive) 'adaptive': true},
+    ) as Map<dynamic, dynamic>;
     return AttemptStarted.fromJson(data.cast<String, dynamic>());
   }
 
@@ -187,17 +210,23 @@ class ApiClient {
     Map<String, String> answers,
     int durationMs,
   ) async {
-    await _send('POST', '/attempts/$attemptId/submit', body: <String, dynamic>{
-      'answers': answers.entries
-          .map((e) =>
-              <String, String>{'questionId': e.key, 'selected': e.value})
-          .toList(),
-      'durationMs': durationMs,
-    });
+    await _send(
+      'POST',
+      '/attempts/$attemptId/submit',
+      body: <String, dynamic>{
+        'answers': answers.entries
+            .map(
+              (e) => <String, String>{'questionId': e.key, 'selected': e.value},
+            )
+            .toList(),
+        'durationMs': durationMs,
+      },
+    );
   }
 
   Future<AttemptView> attempt(String attemptId) async {
-    final data = await _send('GET', '/attempts/$attemptId') as Map<dynamic, dynamic>;
+    final data =
+        await _send('GET', '/attempts/$attemptId') as Map<dynamic, dynamic>;
     return AttemptView.fromJson(data.cast<String, dynamic>());
   }
 
@@ -206,7 +235,8 @@ class ApiClient {
   /// Streaks, XP and badge ledger. The server returns a zero state for a
   /// scholar with no graded attempts — never a 404.
   Future<GamificationSummary> gamification() async {
-    final data = await _send('GET', '/me/gamification') as Map<dynamic, dynamic>;
+    final data =
+        await _send('GET', '/me/gamification') as Map<dynamic, dynamic>;
     return GamificationSummary.fromJson(data.cast<String, dynamic>());
   }
 
@@ -217,8 +247,10 @@ class ApiClient {
   Future<List<AttemptRow>> attempts() async {
     final data = await _send('GET', '/me/attempts') as Map<dynamic, dynamic>;
     return ((data['attempts'] ?? const <dynamic>[]) as List<dynamic>)
-        .map((dynamic e) =>
-            AttemptRow.fromJson((e as Map).cast<String, dynamic>()))
+        .map(
+          (dynamic e) =>
+              AttemptRow.fromJson((e as Map).cast<String, dynamic>()),
+        )
         .toList();
   }
 
@@ -235,8 +267,10 @@ class ApiClient {
   /// Per-question review of a graded paper: picks, correct letters and
   /// the explanations stored with the sealed keys. 409 until graded.
   Future<AttemptReview> attemptReview(String attemptId) async {
-    final data =
-        await _send('GET', '/attempts/$attemptId/review') as Map<dynamic, dynamic>;
+    final data = await _send(
+      'GET',
+      '/attempts/$attemptId/review',
+    ) as Map<dynamic, dynamic>;
     return AttemptReview.fromJson(data.cast<String, dynamic>());
   }
 
@@ -263,17 +297,22 @@ class ApiClient {
     int? durationMs,
     List<int> latenciesMs = const <int>[],
   }) async {
-    final data = await _send('POST', '/me/sessions', body: <String, dynamic>{
-      'startedAt': startedAt,
-      if (endedAt != null) 'endedAt': endedAt,
-      if (attemptId != null && attemptId.isNotEmpty) 'attemptId': attemptId,
-      if (code != null && code.isNotEmpty) 'code': code,
-      if (durationMs != null) 'durationMs': durationMs,
-      'latenciesMs': latenciesMs,
-    }) as Map<dynamic, dynamic>;
+    final data = await _send(
+      'POST',
+      '/me/sessions',
+      body: <String, dynamic>{
+        'startedAt': startedAt,
+        if (endedAt != null) 'endedAt': endedAt,
+        if (attemptId != null && attemptId.isNotEmpty) 'attemptId': attemptId,
+        if (code != null && code.isNotEmpty) 'code': code,
+        if (durationMs != null) 'durationMs': durationMs,
+        'latenciesMs': latenciesMs,
+      },
+    ) as Map<dynamic, dynamic>;
     return FatigueSignal.fromJson(
-        ((data['fatigue'] ?? const <String, dynamic>{}) as Map)
-            .cast<String, dynamic>());
+      ((data['fatigue'] ?? const <String, dynamic>{}) as Map)
+          .cast<String, dynamic>(),
+    );
   }
 
   /// The current take-a-break advisory (home banner state).
@@ -288,8 +327,10 @@ class ApiClient {
   Future<List<FlashcardDeckMeta>> flashcardDecks() async {
     final data = await _send('GET', '/flashcards') as Map<dynamic, dynamic>;
     return ((data['decks'] ?? const <dynamic>[]) as List<dynamic>)
-        .map((dynamic e) =>
-            FlashcardDeckMeta.fromJson((e as Map).cast<String, dynamic>()))
+        .map(
+          (dynamic e) =>
+              FlashcardDeckMeta.fromJson((e as Map).cast<String, dynamic>()),
+        )
         .toList();
   }
 
@@ -305,27 +346,81 @@ class ApiClient {
     final data =
         await _send('GET', '/me/cards/progress') as Map<dynamic, dynamic>;
     return ((data['progress'] ?? const <dynamic>[]) as List<dynamic>)
-        .map((dynamic e) =>
-            CardProgress.fromJson((e as Map).cast<String, dynamic>()))
+        .map(
+          (dynamic e) =>
+              CardProgress.fromJson((e as Map).cast<String, dynamic>()),
+        )
         .toList();
   }
 
+  // ---------------------------------------------------------------- lessons
+
+  /// Lesson list (meta only, ROADMAP #8).
+  Future<List<LessonMeta>> lessons() async {
+    final data = await _send('GET', '/lessons') as Map<dynamic, dynamic>;
+    return ((data['lessons'] ?? const <dynamic>[]) as List<dynamic>)
+        .map(
+          (dynamic e) =>
+              LessonMeta.fromJson((e as Map).cast<String, dynamic>()),
+        )
+        .toList();
+  }
+
+  /// One lesson with its full sections.
+  Future<Lesson> lesson(String slug) async {
+    final data = await _send('GET', '/lessons/$slug') as Map<dynamic, dynamic>;
+    return Lesson.fromJson(data.cast<String, dynamic>());
+  }
+
+  // ------------------------------------------------------------------- tutor
+
+  /// Whether an AI provider key is configured server-side. Without one,
+  /// the tutor runs in deterministic technique-hint mode (ROADMAP #9).
+  Future<bool> tutorAiEnabled() async {
+    final data = await _send('GET', '/tutor/status') as Map<dynamic, dynamic>;
+    return (data['aiEnabled'] ?? false) as bool;
+  }
+
+  /// One Socratic exchange anchored to a graded attempt + question. The
+  /// server checks ownership and graded status before answering.
+  Future<TutorReply> tutorChat({
+    required String attemptId,
+    required String questionId,
+    required List<TutorTurn> messages,
+  }) async {
+    final data = await _send(
+      'POST',
+      '/attempts/$attemptId/tutor',
+      body: <String, dynamic>{
+        'questionId': questionId,
+        'messages': messages.map((m) => m.toJson()).toList(),
+      },
+    ) as Map<dynamic, dynamic>;
+    return TutorReply.fromJson(data.cast<String, dynamic>());
+  }
+
   /// Batch-grades flashcards; returns the updated rows in input order.
-  Future<List<CardProgress>> gradeCards(
-      List<FlashcardGrade> grades) async {
-    final data = await _send('POST', '/me/cards/progress',
-        body: <String, dynamic>{
-          'grades': grades
-              .map((g) => <String, dynamic>{
-                    'cardId': g.cardId,
-                    'deckCode': g.deckCode,
-                    'grade': g.grade,
-                  })
-              .toList(),
-        }) as Map<dynamic, dynamic>;
+  Future<List<CardProgress>> gradeCards(List<FlashcardGrade> grades) async {
+    final data = await _send(
+      'POST',
+      '/me/cards/progress',
+      body: <String, dynamic>{
+        'grades': grades
+            .map(
+              (g) => <String, dynamic>{
+                'cardId': g.cardId,
+                'deckCode': g.deckCode,
+                'grade': g.grade,
+              },
+            )
+            .toList(),
+      },
+    ) as Map<dynamic, dynamic>;
     return ((data['progress'] ?? const <dynamic>[]) as List<dynamic>)
-        .map((dynamic e) =>
-            CardProgress.fromJson((e as Map).cast<String, dynamic>()))
+        .map(
+          (dynamic e) =>
+              CardProgress.fromJson((e as Map).cast<String, dynamic>()),
+        )
         .toList();
   }
 }

@@ -260,4 +260,88 @@ step "GET /flashcards without token -> 401"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/flashcards")
 [ "$CODE" = "401" ]
 
+# --- ROADMAP #8: lessons (mdx-built content bundles) ---
+step "GET /lessons -> mdx-built lessons present"
+LS=$(curl -fsS "$BASE/lessons" -H "Authorization: Bearer $TOKEN")
+LCOUNT=$(printf '%s' "$LS" | jsonget "len(d['lessons'])")
+[ "$LCOUNT" -ge 1 ]
+LSLUG=$(printf '%s' "$LS" | jsonget "d['lessons'][0]['slug']")
+printf '%s' "$LS" | jsonget "d['lessons'][0]['summary']" >/dev/null
+
+step "GET /lessons/$LSLUG -> sections with typed blocks"
+L1=$(curl -fsS "$BASE/lessons/$LSLUG" -H "Authorization: Bearer $TOKEN")
+SN=$(printf '%s' "$L1" | jsonget "len(d['sections'])")
+[ "$SN" -ge 1 ]
+printf '%s' "$L1" | jsonget "d['sections'][0]['heading']" >/dev/null
+printf '%s' "$L1" | jsonget "d['sections'][0]['blocks'][0]['type']" >/dev/null
+
+step "GET /lessons/nope -> 404"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/lessons/nope" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "404" ]
+
+step "GET /lessons without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/lessons")
+[ "$CODE" = "401" ]
+
+# --- ROADMAP #9: Socratic tutor (hint mode without an AI key) ---
+step "GET /tutor/status -> aiEnabled false (no key configured)"
+TS=$(curl -fsS "$BASE/tutor/status" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$TS" | jsonget "d['aiEnabled']" | grep -q "False"
+
+step "POST /attempts/$AID/tutor -> hint-mode coaching"
+T1=$(curl -fsS -X POST "$BASE/attempts/$AID/tutor" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"questionId\":\"$Q1\",\"messages\":[{\"role\":\"user\",\"content\":\"Why is my answer wrong?\"}]}")
+printf '%s' "$T1" | jsonget "d['mode']" | grep -q "hint"
+printf '%s' "$T1" | jsonget "d['reply']" >/dev/null
+
+step "tutor second turn -> ladder advances"
+T2=$(curl -fsS -X POST "$BASE/attempts/$AID/tutor" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"questionId\":\"$Q1\",\"messages\":[{\"role\":\"user\",\"content\":\"Still stuck\"},{\"role\":\"assistant\",\"content\":\"hint1\"},{\"role\":\"user\",\"content\":\"More help?\"}]}")
+printf '%s' "$T2" | jsonget "d['mode']" | grep -q "hint"
+
+step "tutor on ungraded attempt -> 409"
+ATT4=$(curl -fsS -X POST "$BASE/attempts" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$PACK\"}")
+AID4=$(printf '%s' "$ATT4" | jsonget "d['attemptId']")
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/attempts/$AID4/tutor" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"questionId\":\"$Q1\",\"messages\":[{\"role\":\"user\",\"content\":\"help\"}]}")
+[ "$CODE" = "409" ]
+
+step "tutor with unknown question -> 404"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/attempts/$AID/tutor" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"questionId\":\"nope\",\"messages\":[{\"role\":\"user\",\"content\":\"help\"}]}")
+[ "$CODE" = "404" ]
+
+step "tutor with empty messages -> 400"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/attempts/$AID/tutor" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"questionId\":\"$Q1\",\"messages\":[]}")
+[ "$CODE" = "400" ]
+
+step "tutor without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/attempts/$AID/tutor" \
+  -H 'Content-Type: application/json' -d '{"questionId":"x","messages":[{"role":"user","content":"hi"}]}')
+[ "$CODE" = "401" ]
+
+# --- security hardening ---
+step "security headers on every response"
+curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "X-Content-Type-Options: nosniff"
+curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "X-Frame-Options: DENY"
+curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "Cache-Control: no-store"
+curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "Content-Security-Policy: default-src"
+
+step "auth flood -> 429 once the per-IP burst is exhausted"
+LAST=000
+for _ in $(seq 1 40); do
+  LAST=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/auth/register" \
+    -H 'Content-Type: application/json' \
+    -d '{"username":"x","password":"short"}')
+done
+[ "$LAST" = "429" ]
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"
