@@ -1,0 +1,15 @@
+{
+  "body": "University Modules",
+  "subjects": [
+    {
+      "subject": "Introduction to Computing",
+      "sections": [
+        { "title": "Computing Fundamentals", "topics": ["Computer Fundamentals", "Software", "Application Software", "User Interface"] },
+        { "title": "Hardware & Memory", "topics": ["Hardware", "Memory"] },
+        { "title": "Data & Information", "topics": ["Data Representation", "Databases"] },
+        { "title": "Networks & Web", "topics": ["Networking", "Web"] },
+        { "title": "Programming", "topics": ["Programming"] }
+      ]
+    }
+  ]
+}

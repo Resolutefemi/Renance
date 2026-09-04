@@ -18,6 +18,7 @@ import '../controllers.dart';
 import '../models.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
 import 'renance_logo.dart';
+import 'syllabus_screen.dart';
 import 'theme.dart';
 
 class ExamScreen extends StatefulWidget {
@@ -133,7 +134,9 @@ class _Intro extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 16),
+            _SmartOrderToggle(controller: controller),
+            const SizedBox(height: 16),
             FilledButton(
               onPressed: () => controller.begin(),
               child: const Text('Begin'),
@@ -163,6 +166,60 @@ class _Rule extends StatelessWidget {
               text,
               style: RenanceText.caption.copyWith(height: 1.4),
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Smart Order (ROADMAP #5): begin the paper weak-topic-first, ranked
+/// from this student's own review state. Default on for practice — flip
+/// off to answer in the pack's natural exam order.
+class _SmartOrderToggle extends StatefulWidget {
+  const _SmartOrderToggle({required this.controller});
+
+  final ExamController controller;
+
+  @override
+  State<_SmartOrderToggle> createState() => _SmartOrderToggleState();
+}
+
+class _SmartOrderToggleState extends State<_SmartOrderToggle> {
+  @override
+  Widget build(BuildContext context) {
+    final bool on = widget.controller.adaptive;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+      decoration: BoxDecoration(
+        color: RenanceColors.surfaceContainerLow,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: RenanceColors.outlineLight),
+      ),
+      child: Row(
+        children: <Widget>[
+          Icon(Icons.auto_awesome,
+              size: 18, color: on ? RenanceColors.violet : RenanceColors.outlineDark),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('Smart order',
+                    style: RenanceText.bodyMedium.copyWith(fontSize: 13)),
+                Text(
+                  on
+                      ? 'Weak topics come first, easy before hard'
+                      : 'The pack\'s natural exam order',
+                  style: RenanceText.caption
+                      .copyWith(fontSize: 11, color: RenanceColors.textSecondary),
+                ),
+              ],
+            ),
+          ),
+          Switch(
+            value: on,
+            onChanged: (bool v) => setState(() => widget.controller.adaptive = v),
           ),
         ],
       ),
@@ -942,6 +999,15 @@ class _ResultState extends State<_Result> {
                                 ),
                               );
                             }),
+                          // Weak-topic recap (ROADMAP #4): every topic under
+                          // 60% becomes a chip deep-linking the syllabus map.
+                          if (result.weakTopics().isNotEmpty) ...<Widget>[
+                            const SizedBox(height: 4),
+                            _WeakTopicChips(
+                              weak: result.weakTopics(),
+                              body: widget.controller.bundle?.body ?? '',
+                            ),
+                          ],
                         ],
                       ),
                     ),
@@ -1226,6 +1292,66 @@ extension on Rect {
 }
 
 /// Time Used / Correct Answers stat box.
+/// Weak topics from the graded paper — tap opens the syllabus map on
+/// this body (the mastery overlay shows exactly where the topic stands).
+class _WeakTopicChips extends StatelessWidget {
+  const _WeakTopicChips({required this.weak, required this.body});
+
+  final List<TopicRow> weak;
+  final String body;
+
+  @override
+  Widget build(BuildContext context) {
+    final String slug = body.toLowerCase().replaceAll(' ', '-');
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const SizedBox(height: 12),
+        Text('Focus next', style: RenanceText.sectionTitle.copyWith(fontSize: 13)),
+        const SizedBox(height: 8),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: <Widget>[
+            for (final row in weak.take(4))
+              InkWell(
+                borderRadius: BorderRadius.circular(999),
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute<void>(
+                    builder: (_) => SyllabusScreen(
+                        initialBody:
+                            slug.isEmpty ? 'jamb' : slug),
+                  ));
+                },
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                  decoration: BoxDecoration(
+                    color: RenanceColors.amber.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(999),
+                    border: Border.all(
+                        color: RenanceColors.amber.withValues(alpha: 0.4)),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const Icon(Icons.local_fire_department,
+                          size: 14, color: RenanceColors.amber),
+                      const SizedBox(width: 4),
+                      Text('${row.topic} · ${row.correct}/${row.total}',
+                          style:
+                              RenanceText.labelMono.copyWith(fontSize: 12)),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
 class _StatBox extends StatelessWidget {
   const _StatBox({
     required this.icon,

@@ -33,6 +33,7 @@ Map<String, dynamic> fixtureBundle() => <String, dynamic>{
     };
 
 void main() {
+  mainSyllabusBlock();
   group('Bundle parsing', () {
     test('parses full bundle with optional fields', () {
       final Bundle b = Bundle.fromJson(fixtureBundle());
@@ -122,6 +123,105 @@ void main() {
       expect(back.attemptId, 'a-1');
       expect(back.answers, p.answers);
       expect(back.durationMs, 95000);
+    });
+  });
+}
+
+// ---------------------------------------------------- syllabus + adaptive (4, 5)
+
+void mainSyllabusBlock() {
+  group('Bundle adaptive walk (ROADMAP #5)', () {
+    Bundle pack() => Bundle.fromJson(<String, dynamic>{
+          'code': 'p', 'title': 'P', 'version': 1,
+          'questionCount': 3, 'totalMarks': 3,
+          'questions': <dynamic>[
+            <String, dynamic>{'id': 'q1', 'type': 'mcq', 'stem': 'a', 'marks': 1, 'topic': 'Algebra'},
+            <String, dynamic>{'id': 'q2', 'type': 'mcq', 'stem': 'b', 'marks': 1, 'topic': 'Geometry'},
+            <String, dynamic>{'id': 'q3', 'type': 'mcq', 'stem': 'c', 'marks': 1, 'topic': 'Algebra'},
+          ],
+        });
+
+    test('withOrder re-sequences without mutating the source pack', () {
+      final Bundle source = pack();
+      final Bundle walked = source.withOrder(<String>['q2', 'q3', 'q1']);
+      expect(walked.questions.map((q) => q.id).toList(), <String>['q2', 'q3', 'q1']);
+      // The cached pack keeps its natural order.
+      expect(source.questions.map((q) => q.id).toList(), <String>['q1', 'q2', 'q3']);
+    });
+
+    test('withOrder appends ids missing from a stale order', () {
+      final walked = pack().withOrder(<String>['q2']);
+      expect(walked.questions.map((q) => q.id).toList(), <String>['q2', 'q1', 'q3']);
+      expect(walked.questionCount, 3);
+    });
+
+    test('AttemptStarted parses the adaptive payload', () {
+      final started = AttemptStarted.fromJson(<String, dynamic>{
+        'attemptId': 'a1', 'code': 'p', 'status': 'in_progress',
+        'adaptive': true, 'order': <dynamic>['q2', 'q1'],
+      });
+      expect(started.adaptive, isTrue);
+      expect(started.order, <String>['q2', 'q1']);
+
+      final plain = AttemptStarted.fromJson(<String, dynamic>{
+        'attemptId': 'a2', 'code': 'p', 'status': 'in_progress',
+      });
+      expect(plain.adaptive, isFalse);
+      expect(plain.order, isNull);
+    });
+  });
+
+  group('ExamResult weak topics (ROADMAP #4 deep links)', () {
+    test('returns sub-60% topics, worst first', () {
+      final result = ExamResult.fromJson(<String, dynamic>{
+        'score': 2, 'total': 6,
+        'breakdown': <dynamic>[
+          <String, dynamic>{'topic': 'Strong', 'correct': 5, 'total': 5},
+          <String, dynamic>{'topic': 'Awful', 'correct': 0, 'total': 4},
+          <String, dynamic>{'topic': 'Shaky', 'correct': 1, 'total': 2},
+        ],
+      });
+      final weak = result.weakTopics();
+      expect(weak.map((r) => r.topic).toList(), <String>['Awful', 'Shaky']);
+    });
+  });
+
+  group('Syllabus tree parsing (ROADMAP #4)', () {
+    test('parses the mastery overlay payload', () {
+      final tree = SyllabusTree.fromJson(<String, dynamic>{
+        'body': 'JAMB',
+        'stats': <String, dynamic>{'topics': 2, 'mastered': 1, 'learning': 1, 'unseen': 0, 'due': 0},
+        'weakest': <dynamic>[
+          <String, dynamic>{
+            'topic': 'Logarithms', 'questions': 1, 'seen': true,
+            'lastCorrect': 0, 'lastTotal': 1, 'accuracy': 0.0,
+            'status': 'learning', 'weakness': 5.0,
+          },
+        ],
+        'subjects': <dynamic>[
+          <String, dynamic>{
+            'subject': 'Mathematics',
+            'sections': <dynamic>[
+              <String, dynamic>{
+                'title': 'Algebra', 'mastery': 0.5,
+                'topics': <dynamic>[
+                  <String, dynamic>{
+                    'topic': 'Algebra', 'questions': 4, 'seen': true,
+                    'lastCorrect': 2, 'lastTotal': 4, 'accuracy': 0.5,
+                    'status': 'learning', 'dueOn': '2026-09-05', 'weakness': 1.9,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      });
+      expect(tree.body, 'JAMB');
+      expect(tree.stats.mastered, 1);
+      expect(tree.weakest.single.topic, 'Logarithms');
+      final topic = tree.subjects.single.sections.single.topics.single;
+      expect(topic.dot, 2); // learning -> two lit dots
+      expect(topic.status, 'learning');
     });
   });
 }

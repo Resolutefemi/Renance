@@ -194,6 +194,36 @@ class Bundle {
             .toList(),
       );
 
+  /// A copy of this pack with its questions re-sequenced to the server's
+  /// adaptive walk ([order]). Ids missing from the order keep their
+  /// relative positions at the end, so a stale order can never strand a
+  /// question. The cached pack itself is never mutated.
+  Bundle withOrder(List<String> order) {
+    final byId = <String, BundleQuestion>{
+      for (final q in questions) q.id: q,
+    };
+    final ordered = <BundleQuestion>[];
+    final used = <String>{};
+    for (final id in order) {
+      final q = byId[id];
+      if (q != null && used.add(id)) ordered.add(q);
+    }
+    for (final q in questions) {
+      if (!used.contains(q.id)) ordered.add(q);
+    }
+    return Bundle(
+      code: code,
+      title: title,
+      version: version,
+      questionCount: questionCount,
+      totalMarks: totalMarks,
+      durationMinutes: durationMinutes,
+      category: category,
+      body: body,
+      questions: ordered,
+    );
+  }
+
   Map<String, dynamic> toJson() => <String, dynamic>{
         'code': code,
         'title': title,
@@ -236,6 +266,20 @@ class ExamResult {
   final int total;
   final List<TopicRow> breakdown;
 
+  /// Topics the last paper exposed (accuracy < 60%) — the score report's
+  /// weak-topic chips that deep-link into the syllabus map (ROADMAP #4).
+  List<TopicRow> weakTopics({double threshold = 0.6}) {
+    final weak = breakdown
+        .where((r) => r.total > 0 && r.correct / r.total < threshold)
+        .toList()
+      ..sort((a, b) {
+        final fa = a.total == 0 ? 1.0 : a.correct / a.total;
+        final fb = b.total == 0 ? 1.0 : b.correct / b.total;
+        return fa.compareTo(fb);
+      });
+    return weak;
+  }
+
   factory ExamResult.fromJson(Map<String, dynamic> j) => ExamResult(
         score: (j['score'] ?? 0) as int,
         total: (j['total'] ?? 0) as int,
@@ -252,6 +296,8 @@ class AttemptStarted {
     required this.status,
     this.durationMinutes,
     this.questionCount,
+    this.adaptive = false,
+    this.order,
   });
 
   final String attemptId;
@@ -260,12 +306,23 @@ class AttemptStarted {
   final int? durationMinutes;
   final int? questionCount;
 
+  /// True when the server ranked this paper weak-topic-first (ROADMAP #5).
+  final bool adaptive;
+
+  /// The question-id walk to answer in; null keeps the pack's natural
+  /// order (pre-adaptive attempts and non-adaptive papers).
+  final List<String>? order;
+
   factory AttemptStarted.fromJson(Map<String, dynamic> j) => AttemptStarted(
         attemptId: (j['attemptId'] ?? '') as String,
         code: (j['code'] ?? '') as String,
         status: (j['status'] ?? 'in_progress') as String,
         durationMinutes: j['durationMinutes'] as int?,
         questionCount: j['questionCount'] as int?,
+        adaptive: (j['adaptive'] ?? false) as bool,
+        order: (j['order'] as List<dynamic>?)
+            ?.map((e) => e.toString())
+            .toList(),
       );
 }
 
@@ -589,5 +646,128 @@ class ReviewSummary {
         stats:
             ReviewStats.fromJson(((j['stats'] ?? <String, dynamic>{}) as Map)
                 .cast<String, dynamic>()),
+      );
+}
+
+// ------------------------------------------------------------- syllabus (4)
+
+/// One topic node of the syllabus map, overlaid with the student's own
+/// SM-2 mastery state served by GET /syllabus/{body}.
+class SyllabusTopic {
+  const SyllabusTopic({
+    required this.topic,
+    required this.questions,
+    required this.seen,
+    required this.lastCorrect,
+    required this.lastTotal,
+    required this.accuracy,
+    required this.status,
+    required this.dueOn,
+    required this.weakness,
+  });
+
+  final String topic;
+  final int questions;
+  final bool seen;
+  final int lastCorrect;
+  final int lastTotal;
+  final double accuracy; // last paper's accuracy, 0 when unseen
+  final String status; // unseen | learning | mastered
+  final String dueOn; // YYYY-MM-DD, '' when unseen
+  final double weakness; // the adaptive-ordering score
+
+  /// The three mastery dots of the design: mastered / learning / unseen.
+  int get dot => status == 'mastered' ? 3 : (status == 'learning' ? 2 : 1);
+
+  factory SyllabusTopic.fromJson(Map<String, dynamic> j) => SyllabusTopic(
+        topic: (j['topic'] ?? '') as String,
+        questions: (j['questions'] ?? 0) as int,
+        seen: (j['seen'] ?? false) as bool,
+        lastCorrect: (j['lastCorrect'] ?? 0) as int,
+        lastTotal: (j['lastTotal'] ?? 0) as int,
+        accuracy: ((j['accuracy'] ?? 0) as num).toDouble(),
+        status: (j['status'] ?? 'unseen') as String,
+        dueOn: (j['dueOn'] ?? '') as String,
+        weakness: ((j['weakness'] ?? 0) as num).toDouble(),
+      );
+}
+
+class SyllabusSection {
+  const SyllabusSection({required this.title, required this.mastery, required this.topics});
+
+  final String title;
+  final double mastery; // 0..1, drives the section percentage
+  final List<SyllabusTopic> topics;
+
+  factory SyllabusSection.fromJson(Map<String, dynamic> j) => SyllabusSection(
+        title: (j['title'] ?? '') as String,
+        mastery: ((j['mastery'] ?? 0) as num).toDouble(),
+        topics: ((j['topics'] as List<dynamic>?) ?? const [])
+            .map((t) => SyllabusTopic.fromJson((t as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}
+
+class SyllabusSubject {
+  const SyllabusSubject({required this.subject, required this.sections});
+
+  final String subject;
+  final List<SyllabusSection> sections;
+
+  factory SyllabusSubject.fromJson(Map<String, dynamic> j) => SyllabusSubject(
+        subject: (j['subject'] ?? '') as String,
+        sections: ((j['sections'] as List<dynamic>?) ?? const [])
+            .map((s) => SyllabusSection.fromJson((s as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}
+
+class SyllabusTree {
+  const SyllabusTree({
+    required this.body,
+    required this.stats,
+    required this.weakest,
+    required this.subjects,
+  });
+
+  final String body;
+  final SyllabusStats stats;
+  final List<SyllabusTopic> weakest; // focus-next chips, worst first
+  final List<SyllabusSubject> subjects;
+
+  factory SyllabusTree.fromJson(Map<String, dynamic> j) => SyllabusTree(
+        body: (j['body'] ?? '') as String,
+        stats: SyllabusStats.fromJson(
+            ((j['stats'] ?? const <String, dynamic>{}) as Map).cast<String, dynamic>()),
+        weakest: ((j['weakest'] as List<dynamic>?) ?? const [])
+            .map((t) => SyllabusTopic.fromJson((t as Map).cast<String, dynamic>()))
+            .toList(),
+        subjects: ((j['subjects'] as List<dynamic>?) ?? const [])
+            .map((s) => SyllabusSubject.fromJson((s as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}
+
+class SyllabusStats {
+  const SyllabusStats({
+    this.topics = 0,
+    this.mastered = 0,
+    this.learning = 0,
+    this.unseen = 0,
+    this.due = 0,
+  });
+
+  final int topics;
+  final int mastered;
+  final int learning;
+  final int unseen;
+  final int due;
+
+  factory SyllabusStats.fromJson(Map<String, dynamic> j) => SyllabusStats(
+        topics: (j['topics'] ?? 0) as int,
+        mastered: (j['mastered'] ?? 0) as int,
+        learning: (j['learning'] ?? 0) as int,
+        unseen: (j['unseen'] ?? 0) as int,
+        due: (j['due'] ?? 0) as int,
       );
 }

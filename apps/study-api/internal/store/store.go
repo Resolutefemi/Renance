@@ -370,12 +370,15 @@ type Picked struct {
 	Selected   string
 }
 
-func (s *Store) CreateAttempt(ctx context.Context, userID, code string) (*Attempt, error) {
+// CreateAttempt opens an attempt. order (possibly nil) is the
+// adaptive weak-topic-first question sequence for this paper; adaptive
+// records whether the student asked for it, for history and telemetry.
+func (s *Store) CreateAttempt(ctx context.Context, userID, code string, order []string, adaptive bool) (*Attempt, error) {
 	a := &Attempt{UserID: userID, Code: code, Status: "in_progress"}
 	err := s.Pool.QueryRow(ctx, `
-                INSERT INTO study.attempts (user_id, code)
-                VALUES ($1, $2)
-                RETURNING id, status, started_at`, userID, code,
+                INSERT INTO study.attempts (user_id, code, question_order, adaptive)
+                VALUES ($1, $2, $3, $4)
+                RETURNING id, status, started_at`, userID, code, order, adaptive,
 	).Scan(&a.ID, &a.Status, &a.StartedAt)
 	if err != nil {
 		return nil, fmt.Errorf("store: create attempt: %w", err)

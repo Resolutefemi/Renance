@@ -73,6 +73,7 @@ type Manifest struct {
 type Library struct {
 	manifest Manifest
 	bundles  map[string]*Bundle
+	syllabi  map[string]*Syllabus
 }
 
 // Load reads dataDir/manifest.json and verifies every referenced bundle.
@@ -116,6 +117,12 @@ func Load(dataDir string) (*Library, error) {
 				ex.QuestionCount, b.QuestionCount, ex.Code)
 		}
 		lib.bundles[ex.Code] = &b
+	}
+	if err := lib.loadSyllabi(dataDir); err != nil {
+		return nil, err
+	}
+	if err := lib.validateTopics(); err != nil {
+		return nil, err
 	}
 	return lib, nil
 }

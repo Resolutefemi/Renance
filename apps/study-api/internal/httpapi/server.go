@@ -80,6 +80,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /me/attempts", s.auth(s.handleListAttempts))
 	mux.HandleFunc("GET /me/gamification", s.auth(s.handleGamification))
 	mux.HandleFunc("GET /me/review", s.auth(s.handleReviewQueue))
+	mux.HandleFunc("GET /syllabus/{body}", s.auth(s.handleSyllabus))
 	mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
 	mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))

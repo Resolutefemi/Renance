@@ -1,15 +1,18 @@
 package httpapi
 
 import (
+	"context"
 	"net/http"
 	"time"
 
+	"renance.dev/study-api/internal/cbtdata"
 	"renance.dev/study-api/internal/grading"
 	"renance.dev/study-api/internal/store"
 )
 
 type createAttemptRequest struct {
-	Code string `json:"code"`
+	Code     string `json:"code"`
+	Adaptive bool   `json:"adaptive,omitempty"`
 }
 
 func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
@@ -27,7 +30,13 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
 		fail(w, http.StatusNotFound, "unknown_pack", "no study pack with code "+req.Code)
 		return
 	}
-	attempt, err := s.store.CreateAttempt(r.Context(), uid, req.Code)
+	// Adaptive ordering (ROADMAP #5): rank the pack's topics by the
+	// student's own SM-2 weakness (review_queue) and persist the walk.
+	var order []string
+	if req.Adaptive {
+		order = s.adaptiveOrder(r.Context(), uid, bundle)
+	}
+	attempt, err := s.store.CreateAttempt(r.Context(), uid, req.Code, order, req.Adaptive)
 	if err != nil {
 		s.log.Error("create attempt failed", "err", err)
 		fail(w, http.StatusInternalServerError, "internal", "could not start attempt")
@@ -40,7 +49,39 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
 		"startedAt":       attempt.StartedAt.UTC().Format(time.RFC3339Nano),
 		"durationMinutes": bundle.DurationMinutes,
 		"questionCount":   bundle.QuestionCount,
+		"adaptive":        req.Adaptive,
+		"order":           order,
 	})
+}
+
+// adaptiveOrder computes the weak-topic-first question sequence for a
+// bundle from the user's review state. A state-load failure degrades
+// gracefully to unseen-first ordering: adaptive is an enhancement,
+// never a hard gate on starting a paper.
+func (s *Server) adaptiveOrder(ctx context.Context, uid string, bundle *cbtdata.Bundle) []string {
+	topics := make([]string, 0, len(bundle.Questions))
+	seen := map[string]struct{}{}
+	for _, q := range bundle.Questions {
+		t := q.Topic
+		if t == "" {
+			t = "General"
+		}
+		if _, dup := seen[t]; dup {
+			continue
+		}
+		seen[t] = struct{}{}
+		topics = append(topics, t)
+	}
+	state, err := s.store.ReviewStates(ctx, uid, topics)
+	if err != nil {
+		s.log.Error("adaptive: review state", "err", err)
+		state = map[string]store.TopicState{}
+	}
+	items := make([]store.OrderItem, len(bundle.Questions))
+	for i, q := range bundle.Questions {
+		items[i] = store.OrderItem{QuestionID: q.ID, Topic: q.Topic, Difficulty: q.Difficulty}
+	}
+	return store.AdaptiveOrder(items, state, time.Now().UTC().Truncate(24*time.Hour))
 }
 
 type submitRequest struct {
