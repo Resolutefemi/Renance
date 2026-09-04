@@ -21,6 +21,8 @@ import {
   type GamificationSummary,
 } from '@/lib/progress';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
+import PageBar from '@/components/page-bar';
+import BottomNav from '@/components/bottom-nav';
 
 export default function ProgressPage() {
   const router = useRouter();
@@ -75,9 +77,11 @@ export default function ProgressPage() {
   const dots = weekDots(s);
 
   return (
-    <main className="mx-auto w-full max-w-xl px-4 pb-16 pt-8 sm:px-6">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+      <PageBar title="Progress" />
+      <div className="mx-auto w-full max-w-xl px-4 pt-6 sm:px-6">
       {/* header */}
-      <header className="flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <RenanceMark size={40} />
           <h1 className="text-lg font-semibold tracking-tight text-on-surface">
@@ -98,7 +102,7 @@ export default function ProgressPage() {
         >
           Back to desk
         </Link>
-      </header>
+      </div>
 
       {/* streak hero */}
       <section className="mt-6 rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-[0_1px_3px_rgba(20,28,45,0.10)]">
@@ -228,6 +232,8 @@ export default function ProgressPage() {
           </div>
         </>
       )}
+      </div>
+      <BottomNav />
     </main>
   );
 }

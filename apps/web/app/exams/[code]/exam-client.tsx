@@ -555,9 +555,10 @@ export default function ExamPage({ code }: { code: string }) {
       <header className="flex items-center justify-between">
         <Link
           href="/dashboard"
-          className="flex items-center gap-2 text-sm text-on-surface-variant transition hover:text-on-surface"
+          aria-label="Leave exam"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container"
         >
-          <RenanceMark size={28} /> <span>leave</span>
+          <span className="material-symbols-outlined text-[22px]">arrow_back</span>
         </Link>
         <div
           className={`rounded-lg border px-4 py-1.5 font-mono text-sm ${
