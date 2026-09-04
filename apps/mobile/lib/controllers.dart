@@ -199,6 +199,10 @@ class ExamController extends ChangeNotifier {
   final Map<String, String> answers = <String, String>{};
   final Set<String> flags = <String>{};
 
+  /// Questions the student has actually seen (drives the navigator's
+  /// Skipped vs Unseen split).
+  final Set<String> visited = <String>{};
+
   String? _attemptId;
   int? _durationMs;
   DateTime _startedAt = DateTime.now();
@@ -252,6 +256,7 @@ class ExamController extends ChangeNotifier {
     index = 0;
     answers.clear();
     flags.clear();
+    visited.clear();
     latenciesMs.clear();
     signal = FatigueSignal.none;
     nudgeVisible = false;
@@ -265,6 +270,8 @@ class ExamController extends ChangeNotifier {
   Future<void> begin() async {
     if (bundle == null) return;
     appliedAdaptive = false;
+    visited.clear();
+    visited.add(bundle!.questions.first.id);
     try {
       final started = await _api.createAttempt(
         bundle!.code,
@@ -376,6 +383,7 @@ class ExamController extends ChangeNotifier {
   void goTo(int i) {
     if (bundle == null) return;
     index = i.clamp(0, bundle!.questions.length - 1);
+    visited.add(bundle!.questions[index].id);
     _shownAt = _clock();
     notifyListeners();
   }
