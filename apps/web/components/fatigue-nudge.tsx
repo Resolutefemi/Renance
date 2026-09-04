@@ -22,7 +22,7 @@ export function FatigueNudgeOverlay({
   if (!visible) return null;
   const reason = reasons.length > 0 ? reasons[0] : 'Your pace is dipping';
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/90 px-6 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background/90 px-6 backdrop-blur-sm">
       <div className="w-full max-w-[340px] rounded-xl bg-card p-6 text-center shadow-xl shadow-on-surface/5">
         <div className="mb-6 flex justify-center">
           <RenanceMark size={64} />
