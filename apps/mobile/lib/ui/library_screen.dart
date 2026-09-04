@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import 'exam_mode_setup_screen.dart';
 import 'pack_detail_screen.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
@@ -17,7 +18,12 @@ import 'theme.dart';
 class LibraryScreen extends StatefulWidget {
   const LibraryScreen({super.key, required this.onOpenExam});
 
-  final void Function(BuildContext, ExamMeta) onOpenExam;
+  final void Function(
+    BuildContext,
+    ExamMeta, {
+    int? durationOverrideMinutes,
+    bool untimed,
+  }) onOpenExam;
 
   @override
   State<LibraryScreen> createState() => _LibraryScreenState();
@@ -94,6 +100,19 @@ class _LibraryScreenState extends State<LibraryScreen> {
           // Daily quest ----------------------------------------------------
           const SizedBox(height: 12),
           _DailyQuestCard(done: today, goal: 20),
+          // Mock exam simulator entry --------------------------------------
+          const SizedBox(height: 12),
+          _MockExamCard(
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) => ExamModeSetupScreen(
+                  exams: exams,
+                  downloaded: downloaded,
+                  onBegin: widget.onOpenExam,
+                ),
+              ),
+            ),
+          ),
           // Packs grid -----------------------------------------------------
           const SizedBox(height: 16),
           Row(
@@ -317,6 +336,63 @@ class _DailyQuestCard extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------- mock exam card
+
+/// Black simulator launcher on the Practice tab: opens the Stitch
+/// exam_mode_setup_light flow (format, subjects, years, then the run).
+class _MockExamCard extends StatelessWidget {
+  const _MockExamCard({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: RenanceColors.darkSurface,
+      borderRadius: BorderRadius.circular(12),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: <Widget>[
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: RenanceColors.violet.withValues(alpha: 0.16),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                alignment: Alignment.center,
+                child: const Icon(Icons.timer,
+                    size: 22, color: RenanceColors.violet),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text('Mock Exam Setup',
+                        style: RenanceText.bodyMedium
+                            .copyWith(color: RenanceColors.darkTextPrimary)),
+                    const SizedBox(height: 2),
+                    Text('Official JAMB conditions, 2 hours, 4 subjects',
+                        style: RenanceText.caption
+                            .copyWith(color: RenanceColors.darkTextSecondary)),
+                  ],
+                ),
+              ),
+              const Icon(Icons.arrow_forward,
+                  size: 20, color: RenanceColors.darkTextSecondary),
+            ],
+          ),
+        ),
       ),
     );
   }

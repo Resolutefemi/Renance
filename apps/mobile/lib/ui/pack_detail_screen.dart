@@ -15,6 +15,7 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import 'practice_setup_screen.dart';
 import 'theme.dart';
 
 class PackDetailScreen extends StatefulWidget {
@@ -25,7 +26,15 @@ class PackDetailScreen extends StatefulWidget {
   });
 
   final ExamMeta exam;
-  final void Function(BuildContext context, ExamMeta exam) onStart;
+
+  /// Start hands over to the shell's exam opener, carrying the Practice
+  /// Settings overrides (chosen timer or the untimed count-up mode).
+  final void Function(
+    BuildContext context,
+    ExamMeta exam, {
+    int? durationOverrideMinutes,
+    bool untimed,
+  }) onStart;
 
   @override
   State<PackDetailScreen> createState() => _PackDetailScreenState();
@@ -66,6 +75,23 @@ class _PackDetailScreenState extends State<PackDetailScreen> {
     if (bytes <= 0) return 'synced over the air';
     if (bytes < 1024 * 1024) return '${(bytes / 1024).round()} KB';
     return '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
+  }
+
+  /// The Stitch flow: the pack's Start button opens Practice Settings
+  /// (year, count, timer, toggles); Start Practice then launches the
+  /// player with those overrides. Dismissing settings keeps the pack.
+  Future<void> _startWithSettings(ExamMeta exam) async {
+    final PracticeSetupResult? cfg = await Navigator.of(context)
+        .push<PracticeSetupResult>(MaterialPageRoute<PracticeSetupResult>(
+      builder: (_) => const PracticeSetupScreen(),
+    ));
+    if (cfg == null || !mounted) return;
+    widget.onStart(
+      context,
+      exam,
+      durationOverrideMinutes: cfg.timerMinutes,
+      untimed: cfg.timerMinutes == null,
+    );
   }
 
   @override
@@ -123,7 +149,7 @@ class _PackDetailScreenState extends State<PackDetailScreen> {
                 ],
                 _PrimaryButton(
                   label: downloaded ? 'Start practice' : 'Download & practice',
-                  onPressed: () => widget.onStart(context, exam),
+                  onPressed: () => _startWithSettings(exam),
                 ),
               ],
             ),
