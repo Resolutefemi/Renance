@@ -38,44 +38,48 @@ class RenanceColors {
   static const Color amber = Color(0xFFF59E0B);
 
   // Dark tier (Stitch full-dark screens)
-  static const Color darkSurface = Color(0xFF131B2E);
-  static const Color darkSurfaceLow = Color(0xFF17223B);
-  static const Color darkCard = Color(0xFF1A243A);
+  static const Color darkPage = Color(0xFF111C2D); // full-dark page ground
+  static const Color darkSurface = Color(0xFF131B2E); // dark chrome container
+  static const Color darkSurfaceLow = Color(0xFF17223B); // wells / tracks
+  static const Color darkCard = Color(0xFF1C2638); // elevated dark card
   static const Color darkTextPrimary = Color(0xFFF0F3FF);
   static const Color darkTextSecondary = Color(0xFFA2AAB8);
-  static const Color darkBg = Color(0xFF1B1B1B);
-  static const Color darkMuted = Color(0xFFA2AAB8);
+  static const Color darkMuted = Color(0xFF8A94A6);
+  static const Color darkOutline = Color(0xFF3A4661);
+  static const Color darkError = Color(0xFFFFB4AB);
+  static const Color darkErrorContainer = Color(0xFF93000A);
+  static const Color onDarkErrorContainer = Color(0xFFFFDAD6);
 }
 
 /// The full-dark ThemeData (Settings → Appearance → Dark).
 ThemeData buildRenanceDarkTheme() {
   const scheme = ColorScheme.dark(
     primary: Colors.white,
-    onPrimary: Color(0xFF111C2D),
-    primaryContainer: RenanceColors.darkSurfaceLow,
+    onPrimary: RenanceColors.darkPage,
+    primaryContainer: RenanceColors.darkSurface,
     onPrimaryContainer: RenanceColors.darkTextPrimary,
     secondary: RenanceColors.darkTextSecondary,
     onSecondary: RenanceColors.darkTextPrimary,
     secondaryContainer: RenanceColors.darkSurface,
     onSecondaryContainer: RenanceColors.darkTextPrimary,
-    surface: RenanceColors.darkSurface,
+    surface: RenanceColors.darkPage,
     onSurface: RenanceColors.darkTextPrimary,
     surfaceContainerHighest: RenanceColors.darkCard,
     onSurfaceVariant: RenanceColors.darkTextSecondary,
     outline: RenanceColors.darkTextSecondary,
-    outlineVariant: Color(0xFF3A4661),
-    error: Color(0xFFFFB4AB),
+    outlineVariant: RenanceColors.darkOutline,
+    error: RenanceColors.darkError,
     onError: Color(0xFF690005),
-    errorContainer: Color(0xFF93000A),
+    errorContainer: RenanceColors.darkErrorContainer,
     onErrorContainer: Color(0xFFFFDAD6),
   );
 
   return ThemeData(
     useMaterial3: true,
     colorScheme: scheme,
-    scaffoldBackgroundColor: RenanceColors.darkSurface,
+    scaffoldBackgroundColor: RenanceColors.darkPage,
     appBarTheme: const AppBarTheme(
-      backgroundColor: RenanceColors.darkSurface,
+      backgroundColor: RenanceColors.darkPage,
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       centerTitle: false,
@@ -87,7 +91,7 @@ ThemeData buildRenanceDarkTheme() {
       systemOverlayStyle: SystemUiOverlayStyle.light,
     ),
     cardTheme: const CardThemeData(
-      color: RenanceColors.darkSurfaceLow,
+      color: RenanceColors.darkCard,
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       margin: EdgeInsets.zero,
@@ -97,7 +101,7 @@ ThemeData buildRenanceDarkTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: RenanceColors.darkSurfaceLow,
+      fillColor: RenanceColors.darkCard,
       hintStyle: const TextStyle(color: RenanceColors.darkTextSecondary),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       border: OutlineInputBorder(
@@ -115,13 +119,13 @@ ThemeData buildRenanceDarkTheme() {
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: Color(0xFFFFB4AB), width: 1.2),
+        borderSide: const BorderSide(color: RenanceColors.darkError, width: 1.2),
       ),
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
         backgroundColor: Colors.white,
-        foregroundColor: RenanceColors.darkSurface,
+        foregroundColor: RenanceColors.darkPage,
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
@@ -130,15 +134,15 @@ ThemeData buildRenanceDarkTheme() {
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         foregroundColor: RenanceColors.darkTextPrimary,
-        side: const BorderSide(color: Color(0xFF3A4661)),
+        side: const BorderSide(color: RenanceColors.darkOutline),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       ),
     ),
     chipTheme: ChipThemeData(
-      backgroundColor: RenanceColors.darkSurfaceLow,
+      backgroundColor: RenanceColors.darkSurface,
       selectedColor: RenanceColors.darkCard,
-      side: const BorderSide(color: Color(0xFF3A4661)),
+      side: const BorderSide(color: RenanceColors.darkOutline),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       labelStyle: const TextStyle(
           color: RenanceColors.darkTextPrimary, fontSize: 13),
@@ -168,7 +172,6 @@ class RenanceText {
     height: 36 / 28,
     letterSpacing: -0.02 * 28,
     fontWeight: FontWeight.w700,
-    color: RenanceColors.ink,
   );
   static const TextStyle displayMd = TextStyle(
     fontFamily: _fontFamily,
@@ -176,7 +179,6 @@ class RenanceText {
     height: 32 / 24,
     letterSpacing: -0.01 * 24,
     fontWeight: FontWeight.w700,
-    color: RenanceColors.ink,
   );
   static const TextStyle sectionTitle = TextStyle(
     fontFamily: _fontFamily,
@@ -184,7 +186,6 @@ class RenanceText {
     height: 24 / 18,
     letterSpacing: -0.01 * 18,
     fontWeight: FontWeight.w600,
-    color: RenanceColors.ink,
   );
   static const TextStyle statNumber = TextStyle(
     fontFamily: _fontFamily,
@@ -192,42 +193,36 @@ class RenanceText {
     height: 28 / 24,
     letterSpacing: -0.02 * 24,
     fontWeight: FontWeight.w700,
-    color: RenanceColors.ink,
   );
   static const TextStyle bodyMedium = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 15,
     height: 22 / 15,
     fontWeight: FontWeight.w600,
-    color: RenanceColors.ink,
   );
   static const TextStyle bodyBase = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 15,
     height: 22 / 15,
     fontWeight: FontWeight.w400,
-    color: RenanceColors.ink,
   );
   static const TextStyle bodySecondary = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 15,
     height: 22 / 15,
     fontWeight: FontWeight.w400,
-    color: RenanceColors.textSecondary,
   );
   static const TextStyle caption = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 13,
     height: 18 / 13,
     fontWeight: FontWeight.w400,
-    color: RenanceColors.textSecondary,
   );
   static const TextStyle labelMono = TextStyle(
     fontFamily: _monoFamily,
     fontSize: 13,
     height: 18 / 13,
     fontWeight: FontWeight.w500,
-    color: RenanceColors.ink,
   );
 
   /// 11px uppercase tracking-wider label (hero-card "NEXT TARGET").
@@ -237,7 +232,6 @@ class RenanceText {
     height: 16 / 11,
     letterSpacing: 1.2,
     fontWeight: FontWeight.w500,
-    color: RenanceColors.textSecondary,
   );
 }
 
@@ -392,4 +386,130 @@ class ThemeController extends ChangeNotifier {
     });
     notifyListeners();
   }
+}
+
+// ---------------------------------------------------------------------
+// Mode scope + theme-aware tokens
+// ---------------------------------------------------------------------
+
+/// Exposes the active Appearance tier to every screen so surfaces can
+/// resolve their colors per tier without touching ThemeController.
+class RenanceModeScope extends InheritedWidget {
+  const RenanceModeScope({
+    super.key,
+    required this.mode,
+    required super.child,
+  });
+
+  final RenanceThemeMode mode;
+
+  static RenanceThemeMode of(BuildContext context) {
+    final RenanceModeScope? scope =
+        context.dependOnInheritedWidgetOfExactType<RenanceModeScope>();
+    return scope?.mode ?? RenanceThemeMode.light;
+  }
+
+  @override
+  bool updateShouldNotify(RenanceModeScope oldWidget) =>
+      oldWidget.mode != mode;
+}
+
+/// Theme-aware design tokens. Every screen resolves colors through
+/// these getters so the Light, Mixed and Full-dark tiers all fall out
+/// of the same markup:
+///
+///  * Light  — #F9F9FF page, white cards, ink text.
+///  * Mixed  — light page, dark #111C2D hero/chrome (the exam player
+///             treatment), light cards everywhere else.
+///  * Dark   — #111C2D page throughout, #1C2638 cards, #F0F3FF text.
+extension RenanceScheme on BuildContext {
+  RenanceThemeMode get renanceMode => RenanceModeScope.of(this);
+  bool get isDarkTier => renanceMode == RenanceThemeMode.dark;
+  bool get isMixedTier => renanceMode == RenanceThemeMode.mixed;
+
+  /// Surfaces that carry the dark chrome in mixed AND full dark.
+  bool get darkChrome => isDarkTier || isMixedTier;
+
+  // Page ground ------------------------------------------------------
+  Color get pageBg =>
+      isDarkTier ? RenanceColors.darkPage : RenanceColors.background;
+
+  // Cards --------------------------------------------------------------
+  Color get card =>
+      isDarkTier ? RenanceColors.darkCard : RenanceColors.card;
+  Color get cardLowest => isDarkTier
+      ? RenanceColors.darkCard
+      : RenanceColors.surfaceContainerLowest;
+  Color get cardLow => isDarkTier
+      ? RenanceColors.darkSurface
+      : RenanceColors.surfaceContainerLow;
+  Color get cardHigh => isDarkTier
+      ? RenanceColors.darkSurfaceLow
+      : RenanceColors.surfaceContainerHigh;
+  Color get cardHighest => isDarkTier
+      ? RenanceColors.darkSurfaceLow
+      : RenanceColors.surfaceVariant;
+  Color get surfaceContainer => isDarkTier
+      ? RenanceColors.darkCard
+      : RenanceColors.surfaceContainer;
+  Color get surfaceVariant => isDarkTier
+      ? RenanceColors.darkSurfaceLow
+      : RenanceColors.surfaceVariant;
+  Color get selectionBlue => isDarkTier
+      ? RenanceColors.darkSurfaceLow
+      : RenanceColors.selectionBlue;
+  Color get secondaryContainer => isDarkTier
+      ? RenanceColors.darkSurface
+      : RenanceColors.secondaryContainer;
+
+  // Hero / chrome: the big dark surface (same ink ground in every tier,
+  // per the light, mixed and full-dark home designs).
+  Color get heroGround => RenanceColors.darkPage;
+  Color get heroCard => isDarkTier
+      ? RenanceColors.darkCard
+      : (isMixedTier ? RenanceColors.darkPage : RenanceColors.card);
+  Color get onHeroCard => isDarkTier
+      ? RenanceColors.darkTextPrimary
+      : (isMixedTier ? Colors.white : RenanceColors.ink);
+  Color get heroMuted => isDarkTier
+      ? RenanceColors.darkTextSecondary
+      : (isMixedTier ? const Color(0xFFB9C2D4) : RenanceColors.textSecondary);
+  Color get heroTrack => isDarkTier || isMixedTier
+      ? RenanceColors.darkSurfaceLow
+      : RenanceColors.surfaceVariant;
+
+  // Ink / text ---------------------------------------------------------
+  Color get ink =>
+      isDarkTier ? RenanceColors.darkTextPrimary : RenanceColors.ink;
+  Color get textSecondary => isDarkTier
+      ? RenanceColors.darkTextSecondary
+      : RenanceColors.textSecondary;
+  Color get secondary => isDarkTier
+      ? RenanceColors.darkTextSecondary
+      : RenanceColors.secondary;
+  Color get textMuted =>
+      isDarkTier ? RenanceColors.darkMuted : RenanceColors.outline;
+
+  // Outlines -----------------------------------------------------------
+  Color get outline =>
+      isDarkTier ? RenanceColors.darkTextSecondary : RenanceColors.outline;
+  Color get outlineDark => isDarkTier
+      ? RenanceColors.darkTextSecondary
+      : RenanceColors.outlineDark;
+  Color get outlineLight => isDarkTier
+      ? RenanceColors.darkOutline
+      : RenanceColors.outlineLight;
+  Color get outlineVariant => isDarkTier
+      ? RenanceColors.darkOutline
+      : RenanceColors.outlineVariant;
+
+  // Errors -------------------------------------------------------------
+  Color get error =>
+      isDarkTier ? RenanceColors.darkError : RenanceColors.error;
+  Color get errorContainer => isDarkTier
+      ? RenanceColors.darkErrorContainer
+      : RenanceColors.errorContainer;
+  Color get onErrorContainer => isDarkTier
+      ? const Color(0xFFFFDAD6)
+      : RenanceColors.onDarkErrorContainer;
 }

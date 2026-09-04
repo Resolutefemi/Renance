@@ -57,7 +57,7 @@ class FatigueNudgeOverlay extends StatelessWidget {
                           padding: const EdgeInsets.all(24),
                           constraints: const BoxConstraints(maxWidth: 340),
                           decoration: BoxDecoration(
-                            color: RenanceColors.card,
+                            color: context.card,
                             borderRadius: BorderRadius.circular(12),
                             boxShadow: const <BoxShadow>[
                               BoxShadow(
@@ -79,9 +79,9 @@ class FatigueNudgeOverlay extends StatelessWidget {
                                 'your streak and helps you retain what '
                                 'you\'ve learned.',
                                 textAlign: TextAlign.center,
-                                style: RenanceText.bodySecondary.copyWith(
+                                style: RenanceText.bodySecondary.copyWith( 
                                   height: 1.5,
-                                  color: RenanceColors.textSecondary,
+                                   color: context.textSecondary,
                                 ),
                               ),
                               const SizedBox(height: 24),
@@ -109,7 +109,7 @@ class FatigueNudgeOverlay extends StatelessWidget {
                                   child: Text('Keep going',
                                       style: RenanceText.bodyBase.copyWith(
                                           color:
-                                              RenanceColors.textSecondary)),
+                                              context.textSecondary)),
                                 ),
                               ),
                             ],

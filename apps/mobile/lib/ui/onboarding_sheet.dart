@@ -104,8 +104,8 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
       padding:
           EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
       child: Container(
-        decoration: const BoxDecoration(
-          color: RenanceColors.background,
+        decoration: BoxDecoration(
+          color: context.pageBg,
           borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -122,7 +122,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                 width: 48,
                 height: 6,
                 decoration: BoxDecoration(
-                  color: RenanceColors.outlineVariant,
+                  color: context.outlineVariant,
                   borderRadius: BorderRadius.circular(999),
                 ),
               ),
@@ -156,7 +156,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
         Text(
           "Pick what you're preparing for and the whole app reshapes "
           'around it.',
-          style: RenanceText.bodySecondary.copyWith(height: 1.45),
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.45),
         ),
         const SizedBox(height: 24),
         SizedBox(
@@ -180,7 +180,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
             style: RenanceText.displayMd),
         const SizedBox(height: 8),
         Text('Select your target exam to customize your learning OS.',
-            style: RenanceText.bodySecondary),
+            style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
         const SizedBox(height: 20),
         ..._targets.map((_TargetOption t) {
           final bool selected = _targetExam == t.server;
@@ -193,13 +193,13 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
                   color: selected
-                      ? RenanceColors.selectionBlue
-                      : RenanceColors.card,
+                      ? context.selectionBlue
+                      : context.card,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: selected
                         ? Colors.black
-                        : RenanceColors.outlineLight,
+                        : context.outlineLight,
                     width: selected ? 1.6 : 1,
                   ),
                   boxShadow: selected
@@ -219,14 +219,14 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                       decoration: BoxDecoration(
                         color: selected
                             ? Colors.black
-                            : RenanceColors.surfaceContainer,
+                            : context.surfaceContainer,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Icon(t.icon,
                           size: 22,
                           color: selected
                               ? Colors.white
-                              : RenanceColors.ink),
+                              : context.ink),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -238,7 +238,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                                   fontWeight: FontWeight.w600)),
                           const SizedBox(height: 2),
                           Text(t.subtitle,
-                              style: RenanceText.caption),
+                              style: RenanceText.caption.copyWith(color: context.textSecondary)),
                         ],
                       ),
                     ),
@@ -252,7 +252,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
           );
         }),
         const SizedBox(height: 8),
-        Text('EXAM YEAR', style: RenanceText.overline),
+        Text('EXAM YEAR', style: RenanceText.overline.copyWith(color: context.textSecondary)),
         const SizedBox(height: 8),
         Row(
           children: <Widget>[
@@ -299,7 +299,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
         Text(
           'Tell us who is studying so results, streaks and badges carry '
           'your name.',
-          style: RenanceText.bodySecondary.copyWith(height: 1.45),
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.45),
         ),
         const SizedBox(height: 20),
         const Text('Full name', style: RenanceText.labelMono),
@@ -347,7 +347,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
           const SizedBox(height: 14),
           Text(_error!,
               style:
-                  RenanceText.caption.copyWith(color: RenanceColors.error)),
+                  RenanceText.caption.copyWith(color: context.error)),
         ],
         const SizedBox(height: 24),
         Row(
@@ -404,8 +404,8 @@ class _YearChip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue
-              : RenanceColors.surfaceContainerLow,
+              ? context.selectionBlue
+              : context.cardLow,
           borderRadius: BorderRadius.circular(999),
           border: Border.all(
             color: selected ? Colors.black : Colors.transparent,
@@ -415,7 +415,7 @@ class _YearChip extends StatelessWidget {
         child: Text(
           '$year',
           style: RenanceText.labelMono.copyWith(
-            color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
+            color: selected ? context.ink : context.textSecondary,
           ),
         ),
       ),

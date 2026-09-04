@@ -52,7 +52,7 @@ class ProfileScreen extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: RenanceColors.card,
+            color: context.card,
             borderRadius: BorderRadius.circular(12),
             boxShadow: const <BoxShadow>[
               BoxShadow(
@@ -74,7 +74,7 @@ class ProfileScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 8, vertical: 2),
                           decoration: BoxDecoration(
-                            color: RenanceColors.ink,
+                            color: context.ink,
                             borderRadius: BorderRadius.circular(999),
                             border: Border.all(color: Colors.white, width: 2),
                           ),
@@ -105,14 +105,14 @@ class ProfileScreen extends StatelessWidget {
                               child: Text('@$username',
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
-                                  style: RenanceText.bodySecondary),
+                                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
                             ),
                             const SizedBox(width: 8),
                             Container(
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 8, vertical: 2),
                               decoration: BoxDecoration(
-                                color: RenanceColors.selectionBlue,
+                                color: context.selectionBlue,
                                 borderRadius: BorderRadius.circular(999),
                               ),
                               child: Text(
@@ -133,7 +133,7 @@ class ProfileScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: RenanceColors.surfaceContainer,
+                  color: context.surfaceContainer,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Row(
@@ -144,14 +144,14 @@ class ProfileScreen extends StatelessWidget {
                           value: xp >= 1000
                               ? '${(xp / 1000).toStringAsFixed(1)}k'
                               : '$xp',
-                          color: RenanceColors.ink),
+                          color: context.ink),
                     ),
                     const _Divider(),
                     Expanded(
                       child: _Stat(
                         label: 'Streak',
                         value: '${gam?.state.currentStreak ?? 0}',
-                        color: RenanceColors.ink,
+                        color: context.ink,
                         flame: true,
                       ),
                     ),
@@ -185,13 +185,13 @@ class ProfileScreen extends StatelessWidget {
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
             icon: Icons.auto_stories,
-            tint: RenanceColors.ink,
+            tint: context.ink,
             label: 'My Packs',
             onTap: () => onGoTab(1),
           ),
           _MenuItem(
             icon: Icons.download,
-            tint: RenanceColors.ink,
+            tint: context.ink,
             label: 'Downloads',
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
@@ -200,7 +200,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           _MenuItem(
             icon: Icons.workspace_premium,
-            tint: RenanceColors.ink,
+            tint: context.ink,
             label: 'Certificates',
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
@@ -213,7 +213,7 @@ class ProfileScreen extends StatelessWidget {
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
             icon: Icons.settings,
-            tint: RenanceColors.textSecondary,
+            tint: context.textSecondary,
             label: 'Settings',
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
@@ -222,13 +222,13 @@ class ProfileScreen extends StatelessWidget {
           ),
           _MenuItem(
             icon: Icons.history_edu,
-            tint: RenanceColors.textSecondary,
+            tint: context.textSecondary,
             label: 'My papers',
             onTap: () => onGoTab(2),
           ),
           _MenuItem(
             icon: Icons.help,
-            tint: RenanceColors.textSecondary,
+            tint: context.textSecondary,
             label: 'Help & Support',
             onTap: () {
               showLicensePage(
@@ -243,7 +243,7 @@ class ProfileScreen extends StatelessWidget {
         // Sign out --------------------------------------------------------
         Container(
           decoration: BoxDecoration(
-            color: RenanceColors.card,
+            color: context.card,
             borderRadius: BorderRadius.circular(12),
             boxShadow: const <BoxShadow>[
               BoxShadow(
@@ -264,17 +264,17 @@ class ProfileScreen extends StatelessWidget {
                   Container(
                     width: 40,
                     height: 40,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: RenanceColors.errorContainer,
+                      color: context.errorContainer,
                     ),
                     child:
-                        const Icon(Icons.logout, color: RenanceColors.error),
+                        Icon(Icons.logout, color: context.error),
                   ),
                   const SizedBox(width: 16),
-                  const Text('Sign Out',
+                  Text('Sign Out',
                       style: TextStyle(
-                          color: RenanceColors.error,
+                          color: context.error,
                           fontSize: 15,
                           fontWeight: FontWeight.w600)),
                 ],
@@ -300,7 +300,7 @@ class _FocusCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -317,12 +317,12 @@ class _FocusCard extends StatelessWidget {
               Container(
                 width: 40,
                 height: 40,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: RenanceColors.selectionBlue,
+                  color: context.selectionBlue,
                 ),
-                child: const Icon(Icons.track_changes,
-                    size: 22, color: RenanceColors.ink),
+                child: Icon(Icons.track_changes,
+                    size: 22, color: context.ink),
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -333,7 +333,7 @@ class _FocusCard extends StatelessWidget {
                     const SizedBox(height: 2),
                     Text(
                       'Preparing for $chip. Tap to switch.',
-                      style: RenanceText.caption,
+                      style: RenanceText.caption.copyWith(color: context.textSecondary),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -344,7 +344,7 @@ class _FocusCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                 decoration: BoxDecoration(
-                  color: RenanceColors.selectionBlue,
+                  color: context.selectionBlue,
                   borderRadius: BorderRadius.circular(999),
                 ),
                 child: Text(chip,
@@ -352,8 +352,8 @@ class _FocusCard extends StatelessWidget {
                         RenanceText.labelMono.copyWith(fontSize: 12)),
               ),
               const SizedBox(width: 8),
-              const Icon(Icons.swap_horiz,
-                  color: RenanceColors.outlineLight),
+              Icon(Icons.swap_horiz,
+                  color: context.outlineLight),
             ],
           ),
         ),
@@ -380,7 +380,7 @@ class _Stat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Text(label, style: RenanceText.caption),
+        Text(label, style: RenanceText.caption.copyWith(color: context.textSecondary)),
         const SizedBox(height: 2),
         flame
             ? Row(
@@ -406,7 +406,7 @@ class _Divider extends StatelessWidget {
     return Container(
       width: 1,
       height: 32,
-      color: RenanceColors.outlineLight.withValues(alpha: 0.3),
+      color: context.outlineLight.withValues(alpha: 0.3),
     );
   }
 }
@@ -434,7 +434,7 @@ class _MenuGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -445,7 +445,7 @@ class _MenuGroup extends StatelessWidget {
         children: <Widget>[
           for (var i = 0; i < items.length; i++) ...<Widget>[
             if (i > 0)
-              Container(height: 1, color: RenanceColors.surfaceContainerHigh),
+              Container(height: 1, color: context.cardHigh),
             InkWell(
               onTap: items[i].onTap,
               child: Padding(
@@ -455,9 +455,9 @@ class _MenuGroup extends StatelessWidget {
                     Container(
                       width: 40,
                       height: 40,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: RenanceColors.surfaceContainer,
+                        color: context.surfaceContainer,
                       ),
                       child: Icon(items[i].icon, size: 22, color: items[i].tint),
                     ),
@@ -465,8 +465,8 @@ class _MenuGroup extends StatelessWidget {
                     Expanded(
                       child: Text(items[i].label, style: RenanceText.bodyMedium),
                     ),
-                    const Icon(Icons.chevron_right,
-                        color: RenanceColors.outlineLight),
+                    Icon(Icons.chevron_right,
+                        color: context.outlineLight),
                   ],
                 ),
               ),

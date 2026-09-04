@@ -35,7 +35,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -51,7 +51,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                         onPressed: () => Navigator.of(context).pop(),
                         icon:
                             const Icon(Icons.arrow_back_ios_new, size: 20),
-                        color: RenanceColors.ink,
+                        color: context.ink,
                       ),
                       const SizedBox(width: 4),
                       const Text('Offline Share',
@@ -59,11 +59,11 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                     ],
                   ),
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.fromLTRB(16, 8, 16, 0),
                   child: Text(
                     'Share study packs without an internet connection.',
-                    style: RenanceText.bodySecondary,
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -98,7 +98,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                     builder: (BuildContext context, Widget? _) {
                       return CustomPaint(
                         size: Size.infinite,
-                        painter: _RadarPainter(t: _radar.value),
+                        painter: _RadarPainter(t: _radar.value, dotColor: context.ink),
                         child: Center(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -107,8 +107,8 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                 width: 84,
                                 height: 84,
                                 padding: const EdgeInsets.all(22),
-                                decoration: const BoxDecoration(
-                                  color: RenanceColors.card,
+                                decoration: BoxDecoration(
+                                  color: context.card,
                                   shape: BoxShape.circle,
                                   boxShadow: <BoxShadow>[
                                     BoxShadow(
@@ -120,10 +120,10 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                 child: Image.asset(
                                     'assets/brand/renance_mark.png'),
                               ),
-                              const SizedBox(height: 18),
-                              const Text(
+                              SizedBox(height: 18),
+                              Text(
                                 'Looking for nearby Renance phones...',
-                                style: RenanceText.bodySecondary,
+                                style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                               ),
                             ],
                           ),
@@ -134,8 +134,8 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                 ),
                 // devices sheet ---------------------------------------------
                 Container(
-                  decoration: const BoxDecoration(
-                    color: RenanceColors.card,
+                  decoration: BoxDecoration(
+                    color: context.card,
                     borderRadius:
                         BorderRadius.vertical(top: Radius.circular(24)),
                   ),
@@ -148,19 +148,19 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                           width: 44,
                           height: 5,
                           decoration: BoxDecoration(
-                            color: RenanceColors.surfaceContainerHigh,
+                            color: context.cardHigh,
                             borderRadius: BorderRadius.circular(999),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 14),
-                      const Text('Devices Found',
+                      SizedBox(height: 14),
+                      Text('Devices Found',
                           style: RenanceText.sectionTitle),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12),
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: RenanceColors.surfaceContainerLow,
+                          color: context.cardLow,
                           borderRadius: BorderRadius.circular(14),
                         ),
                         child: Row(
@@ -168,15 +168,15 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                             Container(
                               width: 44,
                               height: 44,
-                              decoration: const BoxDecoration(
-                                color: RenanceColors.surfaceContainerHigh,
+                              decoration: BoxDecoration(
+                                color: context.cardHigh,
                                 shape: BoxShape.circle,
                               ),
-                              child: const Icon(Icons.smartphone_outlined,
-                                  size: 22, color: RenanceColors.ink),
+                              child: Icon(Icons.smartphone_outlined,
+                                  size: 22, color: context.ink),
                             ),
                             const SizedBox(width: 12),
-                            const Expanded(
+                            Expanded(
                               child: Column(
                                 crossAxisAlignment:
                                     CrossAxisAlignment.start,
@@ -185,7 +185,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                       style: RenanceText.bodyMedium),
                                   SizedBox(height: 2),
                                   Text('Ready to connect',
-                                      style: RenanceText.caption),
+                                      style: RenanceText.caption.copyWith(color: context.textSecondary)),
                                 ],
                               ),
                             ),
@@ -243,7 +243,7 @@ class _ActionCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 24),
         decoration: BoxDecoration(
-          color: RenanceColors.card,
+          color: context.card,
           borderRadius: BorderRadius.circular(16),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -255,11 +255,11 @@ class _ActionCard extends StatelessWidget {
             Container(
               width: 56,
               height: 56,
-              decoration: const BoxDecoration(
-                color: RenanceColors.surfaceContainerLow,
+              decoration: BoxDecoration(
+                color: context.cardLow,
                 shape: BoxShape.circle,
               ),
-              child: Icon(icon, size: 26, color: RenanceColors.ink),
+              child: Icon(icon, size: 26, color: context.ink),
             ),
             const SizedBox(height: 14),
             Text(label, style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
@@ -272,9 +272,10 @@ class _ActionCard extends StatelessWidget {
 
 /// Concentric rings + one orbiting ink dot (the design's dot, re-toned).
 class _RadarPainter extends CustomPainter {
-  _RadarPainter({required this.t});
+  _RadarPainter({required this.t, required this.dotColor});
 
   final double t;
+  final Color dotColor;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -288,7 +289,7 @@ class _RadarPainter extends CustomPainter {
     }
     final double angle = t * 2 * math.pi;
     final double rr = size.shortestSide * 0.30;
-    final Paint dot = Paint()..color = RenanceColors.ink;
+    final Paint dot = Paint()..color = dotColor;
     canvas.drawCircle(
       c + Offset(math.cos(angle) * rr, math.sin(angle) * rr),
       7,

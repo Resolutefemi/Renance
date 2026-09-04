@@ -74,7 +74,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                     'No papers yet, every paper you finish lands here '
                     'with its wrong answers for review.',
                     textAlign: TextAlign.center,
-                    style: RenanceText.bodySecondary,
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
@@ -130,7 +130,7 @@ class _ReviewQueueCard extends StatelessWidget {
             const SizedBox(height: 12),
             Text(
               'Checking your review queue…',
-              style: RenanceText.bodySecondary,
+              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
             ),
           ],
         ),
@@ -194,7 +194,7 @@ class _ReviewQueueCard extends StatelessWidget {
                             : 'topics due · ${overdue.length} overdue')
                       : 'all caught up',
                   style: RenanceText.bodyMedium.copyWith(
-                    color: RenanceColors.textSecondary,
+                    color: context.textSecondary,
                   ),
                 ),
               ),
@@ -207,7 +207,7 @@ class _ReviewQueueCard extends StatelessWidget {
                 : (nextUp.isEmpty
                       ? 'Grade a paper and its topics join your schedule.'
                       : 'Next up: $nextUp $nextWhen'),
-            style: RenanceText.caption.copyWith(height: 1.4),
+            style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.4),
           ),
           const SizedBox(height: 12),
           SizedBox(
@@ -278,7 +278,7 @@ class _QueuePreviewSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             const Text('Queue Preview', style: RenanceText.sectionTitle),
-            Text('Next up', style: RenanceText.bodySecondary),
+            Text('Next up', style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
           ],
         ),
         const SizedBox(height: 12),
@@ -293,7 +293,7 @@ class _QueuePreviewSection extends StatelessWidget {
             padding: const EdgeInsets.only(top: 2),
             child: Text(
               '+ $hidden more topics on the schedule',
-              style: RenanceText.caption,
+              style: RenanceText.caption.copyWith(color: context.textSecondary),
             ),
           ),
       ],
@@ -312,9 +312,9 @@ class _QueueRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final String status = item.status(now);
     final (Color tint, String label) = switch (status) {
-      'overdue' => (RenanceColors.error, 'Overdue'),
+      'overdue' => (context.error, 'Overdue'),
       'due' => (RenanceColors.amber, 'Due now'),
-      _ => (RenanceColors.textSecondary, item.laterLabel),
+      _ => (context.textSecondary, item.laterLabel),
     };
     final String subtitle = item.lastTotal > 0
         ? 'last time ${item.lastCorrect}/${item.lastTotal} correct'
@@ -323,7 +323,7 @@ class _QueueRow extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -346,16 +346,16 @@ class _QueueRow extends StatelessWidget {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: RenanceColors.selectionBlue,
+                    color: context.selectionBlue,
                     borderRadius: BorderRadius.circular(999),
                   ),
                   child: Text(
                     item.topic,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: RenanceText.caption.copyWith(
+                    style: RenanceText.caption.copyWith( 
                       fontSize: 12,
-                      color: RenanceColors.ink,
+                       color: context.ink,
                     ),
                   ),
                 ),
@@ -387,7 +387,7 @@ class _QueueRow extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Text(subtitle, style: RenanceText.bodySecondary),
+          Text(subtitle, style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
         ],
       ),
     );
@@ -410,12 +410,12 @@ class _PaperCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final int? pct = attempt.pct;
     final Color pctColor = pct == null
-        ? RenanceColors.textSecondary
+        ? context.textSecondary
         : pct >= 75
         ? RenanceColors.emerald
         : pct >= 50
         ? RenanceColors.amber
-        : RenanceColors.error;
+        : context.error;
     final String when = _relative(attempt.submittedAt ?? attempt.startedAt);
 
     return InkWell(
@@ -424,7 +424,7 @@ class _PaperCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: RenanceColors.card,
+          color: context.card,
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -451,7 +451,7 @@ class _PaperCard extends StatelessWidget {
                     attempt.isGraded
                         ? '$when · ${attempt.score}/${attempt.total} correct'
                         : '$when · ${attempt.status}',
-                    style: RenanceText.caption,
+                    style: RenanceText.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
@@ -461,7 +461,7 @@ class _PaperCard extends StatelessWidget {
               style: RenanceText.statNumber.copyWith(color: pctColor),
             ),
             const SizedBox(width: 4),
-            const Icon(Icons.chevron_right, color: RenanceColors.outlineDark),
+            Icon(Icons.chevron_right, color: context.outlineDark),
           ],
         ),
       ),
@@ -526,9 +526,9 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
     final AttemptReview? review = _review;
 
     return Scaffold(
-      backgroundColor: RenanceColors.card,
+      backgroundColor: context.card,
       appBar: AppBar(
-        backgroundColor: RenanceColors.card,
+        backgroundColor: context.card,
         titleSpacing: 0,
         title: review == null
             ? const Text('Review')
@@ -551,7 +551,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                           Text(
                             _error!,
                             textAlign: TextAlign.center,
-                            style: RenanceText.bodySecondary,
+                            style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                           ),
                           const SizedBox(height: 16),
                           OutlinedButton(
@@ -582,7 +582,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                   children: <Widget>[
                     Text(
                       student.titleForCode(review.code),
-                      style: RenanceText.bodySecondary,
+                      style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                     ),
                     const SizedBox(height: 12),
                     Row(
@@ -622,7 +622,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                               'Nothing wrong here, flawless paper.',
                             _ReviewFilter.skipped => 'No skipped questions.',
                             _ReviewFilter.all => 'No questions.',
-                          }, style: RenanceText.bodySecondary),
+                          }, style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
                         ),
                       )
                     else
@@ -671,15 +671,15 @@ class _FilterChip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue
-              : RenanceColors.surfaceContainerLow,
+              ? context.selectionBlue
+              : context.cardLow,
           borderRadius: BorderRadius.circular(999),
         ),
         child: Text(
           label,
           style: RenanceText.labelMono.copyWith(
             fontSize: 12,
-            color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
+            color: selected ? context.ink : context.textSecondary,
           ),
         ),
       ),
@@ -708,7 +708,7 @@ class _ReviewCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -733,14 +733,14 @@ class _ReviewCard extends StatelessWidget {
                       vertical: 2,
                     ),
                     decoration: BoxDecoration(
-                      color: RenanceColors.surfaceContainerLow,
+                      color: context.cardLow,
                       borderRadius: BorderRadius.circular(999),
                     ),
                     child: Text(
                       question.topic,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: RenanceText.caption.copyWith(fontSize: 11),
+                      style: RenanceText.caption.copyWith(color: context.textSecondary, fontSize: 11),
                     ),
                   ),
                 ),
@@ -782,14 +782,14 @@ class _ReviewCard extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: RenanceColors.surfaceContainerLow,
+                color: context.cardLow,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(
                 question.explanation,
                 maxLines: 4,
                 overflow: TextOverflow.ellipsis,
-                style: RenanceText.caption.copyWith(height: 1.5),
+                style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.5),
               ),
             ),
           ],
@@ -802,17 +802,17 @@ class _ReviewCard extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  const Icon(
+                  Icon(
                     Icons.smart_toy,
                     size: 16,
-                    color: RenanceColors.ink,
+                    color: context.ink,
                   ),
                   const SizedBox(width: 6),
                   Text(
                     'Ask AI Tutor why ${question.correct} is right',
                     style: RenanceText.labelMono.copyWith(
                       fontSize: 12,
-                      color: RenanceColors.ink,
+                      color: context.ink,
                     ),
                   ),
                 ],
@@ -841,10 +841,10 @@ class _AnswerBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color tone = correct ? RenanceColors.emerald : RenanceColors.error;
+    final Color tone = correct ? RenanceColors.emerald : context.error;
     final Color toneBg = correct
         ? const Color(0xFFE7F8F1)
-        : RenanceColors.errorContainer;
+        : context.errorContainer;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[

@@ -100,19 +100,21 @@ class _LibraryScreenState extends State<LibraryScreen> {
           // Daily quest ----------------------------------------------------
           const SizedBox(height: 12),
           _DailyQuestCard(done: today, goal: 20),
-          // Mock exam simulator entry --------------------------------------
-          const SizedBox(height: 12),
-          _MockExamCard(
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute<void>(
-                builder: (_) => ExamModeSetupScreen(
-                  exams: exams,
-                  downloaded: downloaded,
-                  onBegin: widget.onOpenExam,
+          // Mock exam simulator entry (JAMBites only) ----------------------
+          if (student.isJambFocus) ...<Widget>[
+            const SizedBox(height: 12),
+            _MockExamCard(
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => ExamModeSetupScreen(
+                    exams: exams,
+                    downloaded: downloaded,
+                    onBegin: widget.onOpenExam,
+                  ),
                 ),
               ),
             ),
-          ),
+          ],
           // Packs grid -----------------------------------------------------
           const SizedBox(height: 16),
           Row(
@@ -162,7 +164,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                       'No graded papers yet. Run a pack to unlock review.',
                     _LibraryFilter.all => 'No packs yet.',
                   },
-                  style: RenanceText.bodySecondary,
+                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -226,8 +228,8 @@ class _Chip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue
-              : RenanceColors.surfaceContainerLow,
+              ? context.selectionBlue
+              : context.cardLow,
           borderRadius: BorderRadius.circular(999),
         ),
         alignment: Alignment.center,
@@ -235,7 +237,7 @@ class _Chip extends StatelessWidget {
           label,
           style: RenanceText.bodyMedium.copyWith(
             fontSize: 13,
-            color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
+            color: selected ? context.ink : context.textSecondary,
           ),
         ),
       ),
@@ -289,7 +291,7 @@ class _DailyQuestCard extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   'Complete 20 practice questions across any subject.',
-                  style: RenanceText.caption.copyWith(height: 1.35),
+                  style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.35),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -309,7 +311,7 @@ class _DailyQuestCard extends StatelessWidget {
                           color: RenanceColors.amber, letterSpacing: -1)),
                   Text(' / $goal',
                       style: RenanceText.bodyMedium
-                          .copyWith(color: RenanceColors.textSecondary)),
+                          .copyWith(color: context.textSecondary)),
                 ],
               ),
               const SizedBox(height: 6),
@@ -383,7 +385,7 @@ class _MockExamCard extends StatelessWidget {
                             .copyWith(color: RenanceColors.darkTextPrimary)),
                     const SizedBox(height: 2),
                     Text('Official JAMB conditions, 2 hours, 4 subjects',
-                        style: RenanceText.caption
+                        style: RenanceText.caption.copyWith(color: context.textSecondary)
                             .copyWith(color: RenanceColors.darkTextSecondary)),
                   ],
                 ),
@@ -430,7 +432,7 @@ class _PackCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: RenanceColors.card,
+          color: context.card,
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -447,10 +449,10 @@ class _PackCard extends StatelessWidget {
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
-                    color: RenanceColors.surfaceContainerHigh,
+                    color: context.cardHigh,
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Icon(icon, size: 22, color: RenanceColors.ink),
+                  child: Icon(icon, size: 22, color: context.ink),
                 ),
                 const Spacer(),
                 SizedBox(
@@ -476,12 +478,12 @@ class _PackCard extends StatelessWidget {
                               onTap: onDownload,
                               borderRadius: BorderRadius.circular(999),
                               child: Container(
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  color: RenanceColors.surfaceContainerLow,
+                                  color: context.cardLow,
                                 ),
-                                child: const Icon(Icons.download,
-                                    size: 16, color: RenanceColors.textSecondary),
+                                child: Icon(Icons.download,
+                                    size: 16, color: context.textSecondary),
                               ),
                             ),
                 ),
@@ -498,7 +500,7 @@ class _PackCard extends StatelessWidget {
             Text(
               '${exam.questionCount} Q'
               '${exam.durationMinutes != null ? ' · ${exam.durationMinutes} min' : ''}',
-              style: RenanceText.caption,
+              style: RenanceText.caption.copyWith(color: context.textSecondary),
             ),
             const SizedBox(height: 8),
             ClipRRect(
@@ -506,7 +508,7 @@ class _PackCard extends StatelessWidget {
               child: LinearProgressIndicator(
                 value: progress,
                 minHeight: 3,
-                backgroundColor: RenanceColors.surfaceVariant,
+                backgroundColor: context.surfaceVariant,
                 valueColor: AlwaysStoppedAnimation<Color>(railColor),
               ),
             ),

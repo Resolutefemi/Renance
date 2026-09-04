@@ -100,7 +100,7 @@ export default function Landing() {
                 key={f.title}
                 className="rounded-xl bg-card p-6 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]"
               >
-                <span className="material-symbols-outlined text-3xl text-[#111c2d]">{f.icon}</span>
+                <span className="material-symbols-outlined text-3xl text-accent-ink">{f.icon}</span>
                 <h3 className="mt-3 text-[15px] font-bold text-on-surface">{f.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-on-surface-variant">{f.body}</p>
               </article>
@@ -130,7 +130,7 @@ export default function Landing() {
           </div>
           <Link
             href="/subjects/"
-            className="mt-6 inline-block text-sm font-semibold text-[#C4B5FD] underline underline-offset-4 hover:text-white"
+            className="mt-6 inline-block text-sm font-semibold text-dark-text-primary underline underline-offset-4 hover:text-white"
           >
             See the full subject coverage →
           </Link>

@@ -26,10 +26,10 @@ class _LessonsScreenState extends State<LessonsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
         title: const Text('Lessons'),
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
         elevation: 0,
         scrolledUnderElevation: 0,
       ),
@@ -81,7 +81,7 @@ class _LessonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: RenanceColors.card,
+      color: context.card,
       borderRadius: BorderRadius.circular(12),
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
@@ -95,7 +95,7 @@ class _LessonCard extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: RenanceColors.outlineVariant, width: 0.6),
+            border: Border.all(color: context.outlineVariant, width: 0.6),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,7 +117,7 @@ class _LessonCard extends StatelessWidget {
               const SizedBox(height: 6),
               InlineText(
                 meta.summary,
-                style: RenanceText.bodySecondary.copyWith(
+                style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, 
                   fontSize: 13,
                   height: 1.45,
                 ),
@@ -125,10 +125,10 @@ class _LessonCard extends StatelessWidget {
               const SizedBox(height: 10),
               Row(
                 children: <Widget>[
-                  const Icon(
+                  Icon(
                     Icons.schedule,
                     size: 13,
-                    color: RenanceColors.textSecondary,
+                    color: context.textSecondary,
                   ),
                   const SizedBox(width: 4),
                   Text(
@@ -136,10 +136,10 @@ class _LessonCard extends StatelessWidget {
                     style: RenanceText.labelMono.copyWith(fontSize: 11),
                   ),
                   const Spacer(),
-                  const Icon(
+                  Icon(
                     Icons.arrow_forward,
                     size: 16,
-                    color: RenanceColors.textSecondary,
+                    color: context.textSecondary,
                   ),
                 ],
               ),
@@ -163,13 +163,13 @@ class _Chip extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
       decoration: BoxDecoration(
         color: filled
-            ? RenanceColors.selectionBlue
-            : RenanceColors.surfaceContainerLow,
+            ? context.selectionBlue
+            : context.cardLow,
         borderRadius: BorderRadius.circular(999),
       ),
       child: Text(
         label,
-        style: RenanceText.caption.copyWith(
+        style: RenanceText.caption.copyWith(color: context.textSecondary, 
           fontSize: 11,
           fontWeight: filled ? FontWeight.w600 : FontWeight.w400,
         ),
@@ -219,10 +219,10 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       appBar: AppBar(
         title: Text(widget.title, maxLines: 1, overflow: TextOverflow.ellipsis),
-        backgroundColor: RenanceColors.background,
+        backgroundColor: context.pageBg,
         elevation: 0,
         scrolledUnderElevation: 0,
       ),
@@ -247,10 +247,10 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
                       const SizedBox(width: 6),
                     if (_lesson!.body.isNotEmpty) _Chip(label: _lesson!.body),
                     const Spacer(),
-                    const Icon(
+                    Icon(
                       Icons.schedule,
                       size: 13,
-                      color: RenanceColors.textSecondary,
+                      color: context.textSecondary,
                     ),
                     const SizedBox(width: 4),
                     Text(
@@ -267,7 +267,7 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
                 const SizedBox(height: 6),
                 InlineText(
                   _lesson!.summary,
-                  style: RenanceText.bodySecondary.copyWith(
+                  style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, 
                     fontSize: 14,
                     height: 1.5,
                   ),
@@ -398,21 +398,21 @@ class _OfflineNote extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: RenanceColors.surfaceContainerLow,
+        color: context.cardLow,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
         children: <Widget>[
-          const Icon(
+          Icon(
             Icons.cloud_off,
             size: 15,
-            color: RenanceColors.textSecondary,
+            color: context.textSecondary,
           ),
           const SizedBox(width: 8),
           Expanded(
             child: Text(
               message,
-              style: RenanceText.caption.copyWith(fontSize: 12),
+              style: RenanceText.caption.copyWith(color: context.textSecondary, fontSize: 12),
             ),
           ),
         ],
@@ -434,7 +434,7 @@ class _MessageCard extends StatelessWidget {
         child: Text(
           message,
           textAlign: TextAlign.center,
-          style: RenanceText.bodySecondary.copyWith(fontSize: 13, height: 1.5),
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13, height: 1.5),
         ),
       ),
     );

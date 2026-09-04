@@ -27,14 +27,18 @@ import 'notifications_screen.dart';
 import 'search_screen.dart';
 import 'tutor_screen.dart';
 import 'exam_screen.dart';
+import 'exam_mode_setup_screen.dart';
 import 'library_screen.dart';
+import 'gamification_hub_screen.dart';
 import 'onboarding_sheet.dart';
+import 'progress_dashboard_screen.dart';
 import 'profile_screen.dart';
 import 'progress_screen.dart';
 import 'renance_logo.dart';
 import 'review_screen.dart';
 import 'syllabus_screen.dart';
 import 'settings_screen.dart';
+import 'university_home_screen.dart';
 import 'theme.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -139,14 +143,21 @@ class _HomeScreenState extends State<HomeScreen> {
         !_bootstrapped && sync.exams.isEmpty && sync.isSyncing;
 
     final bodies = <Widget>[
-      _LauncherTab(
-        student: student,
-        sync: sync,
-        firstSyncUnderway: firstSyncUnderway,
-        onOpenExam: _openExam,
-        onGoTab: (int t) => setState(() => _tab = t),
-        onOnboarding: _showOnboarding,
-      ),
+      if (student.isTertiaryFocus)
+        UniversityHomeTab(
+          student: student,
+          sync: sync,
+          onGoTab: (int t) => setState(() => _tab = t),
+        )
+      else
+        _LauncherTab(
+          student: student,
+          sync: sync,
+          firstSyncUnderway: firstSyncUnderway,
+          onOpenExam: _openExam,
+          onGoTab: (int t) => setState(() => _tab = t),
+          onOnboarding: _showOnboarding,
+        ),
       LibraryScreen(onOpenExam: _openExam),
       const ReviewScreen(),
       const ProgressScreen(),
@@ -166,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Positioned.fill(
           top: 0,
           child: ColoredBox(
-            color: RenanceColors.card,
+            color: context.card,
             child: IndexedStack(index: _tab, children: bodies),
           ),
         ),
@@ -206,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
         final bool wide = constraints.maxWidth >= 1000;
         if (!wide) {
           return Scaffold(
-            backgroundColor: RenanceColors.background,
+            backgroundColor: context.pageBg,
             body: shellBody,
             bottomNavigationBar: HomeNav(
               active: _tab,
@@ -216,7 +227,7 @@ class _HomeScreenState extends State<HomeScreen> {
           );
         }
         return Scaffold(
-          backgroundColor: RenanceColors.background,
+          backgroundColor: context.pageBg,
           body: Row(
             children: <Widget>[
               _WideRail(
@@ -224,10 +235,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 reviewBadge: student.dueTopics,
                 onTap: (int t) => setState(() => _tab = t),
               ),
-              const VerticalDivider(
+              VerticalDivider(
                 width: 1,
                 thickness: 1,
-                color: RenanceColors.outlineVariant,
+                color: context.outlineVariant,
               ),
               Expanded(
                 child: Center(
@@ -305,7 +316,7 @@ class _WideRail extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     decoration: BoxDecoration(
                       color: i == active
-                          ? RenanceColors.surfaceContainerLow
+                          ? context.cardLow
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -319,7 +330,7 @@ class _WideRail extends StatelessWidget {
                               size: 24,
                               color: i == active
                                   ? Colors.black
-                                  : RenanceColors.textSecondary,
+                                  : context.textSecondary,
                             ),
                             if (i == 2 && reviewBadge > 0)
                               Positioned(
@@ -354,7 +365,7 @@ class _WideRail extends StatelessWidget {
                             fontSize: 12,
                             color: i == active
                                 ? Colors.black
-                                : RenanceColors.textSecondary,
+                                : context.textSecondary,
                             fontWeight: i == active
                                 ? FontWeight.w600
                                 : FontWeight.w400,
@@ -410,8 +421,8 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: RenanceColors.background,
+      decoration: BoxDecoration(
+        color: context.pageBg,
         boxShadow: <BoxShadow>[
           BoxShadow(
             color: Color(0x0A000000),
@@ -530,7 +541,7 @@ class _HeaderIcon extends StatelessWidget {
         IconButton(
           onPressed: onTap,
           icon: Icon(icon, size: 22),
-          color: RenanceColors.ink,
+          color: context.ink,
           visualDensity: VisualDensity.compact,
           tooltip: icon == Icons.search
               ? 'Search'
@@ -567,7 +578,7 @@ class StreakPill extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: RenanceColors.surfaceContainer,
+        color: context.surfaceContainer,
         borderRadius: BorderRadius.circular(999),
       ),
       child: Row(
@@ -604,15 +615,15 @@ class AvatarCircle extends StatelessWidget {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: RenanceColors.surfaceContainerHigh,
-        border: Border.all(color: RenanceColors.outlineLight),
+        color: context.cardHigh,
+        border: Border.all(color: context.outlineLight),
       ),
       child: Text(
         initials.toUpperCase(),
         style: TextStyle(
           fontSize: size * 0.36,
           fontWeight: FontWeight.w600,
-          color: RenanceColors.ink,
+          color: context.ink,
         ),
       ),
     );
@@ -679,7 +690,7 @@ class HomeNav extends StatelessWidget {
                             size: 24,
                             color: i == active
                                 ? Colors.black
-                                : RenanceColors.textSecondary,
+                                : context.textSecondary,
                           ),
                           if (i == 2 && reviewBadge > 0)
                             Positioned(
@@ -715,7 +726,7 @@ class HomeNav extends StatelessWidget {
                           height: 1.0,
                           color: i == active
                               ? Colors.black
-                              : RenanceColors.textSecondary,
+                              : context.textSecondary,
                           fontWeight: i == active
                               ? FontWeight.w600
                               : FontWeight.w400,
@@ -808,7 +819,7 @@ class _LauncherTab extends StatelessWidget {
           Text(
             'Practice',
             style: RenanceText.sectionTitle.copyWith(
-              color: RenanceColors.textSecondary,
+              color: context.textSecondary,
               fontSize: 14,
             ),
           ),
@@ -819,6 +830,29 @@ class _LauncherTab extends StatelessWidget {
                 child: LauncherTile(
                   icon: Icons.description,
                   label: 'Exams',
+                  onTap: () {
+                    // Mock Exam Setup is the Exams content for JAMBites
+                    // only; every other focus goes straight to the packs.
+                    if (student.isJambFocus) {
+                      Navigator.of(context).push(
+                        MaterialPageRoute<void>(
+                          builder: (_) => ExamModeSetupScreen(
+                            exams: sync.exams,
+                            downloaded: student.downloaded,
+                            onBegin: onOpenExam,
+                          ),
+                        ),
+                      );
+                    } else {
+                      onGoTab(1); // question packs live in the library
+                    }
+                  },
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.inventory_2,
+                  label: 'Question Pack',
                   onTap: () => onGoTab(1),
                 ),
               ),
@@ -842,17 +876,6 @@ class _LauncherTab extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.menu_book,
-                  label: 'Syllabus',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const SyllabusScreen(),
-                    ),
-                  ),
-                ),
-              ),
             ],
           ),
           // Grow grid -----------------------------------------------------
@@ -860,7 +883,7 @@ class _LauncherTab extends StatelessWidget {
           Text(
             'Grow',
             style: RenanceText.sectionTitle.copyWith(
-              color: RenanceColors.textSecondary,
+              color: context.textSecondary,
               fontSize: 14,
             ),
           ),
@@ -898,7 +921,7 @@ class _LauncherTab extends StatelessWidget {
               Expanded(
                 child: LauncherTile(
                   icon: Icons.more_horiz,
-                  iconColor: RenanceColors.textSecondary,
+                  iconColor: context.textSecondary,
                   muted: true,
                   label: 'More',
                   onTap: () => showMoreSheet(context, onGoTab: onGoTab),
@@ -958,7 +981,8 @@ class _HeroCard extends StatelessWidget {
       margin: const EdgeInsets.only(top: 4),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        // Light: white card. Mixed: the dark hero band. Dark: darkCard.
+        color: context.heroCard,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -993,7 +1017,7 @@ class _HeroCard extends StatelessWidget {
                 height: 96,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: RenanceColors.ink.withValues(alpha: 0.05),
+                  color: context.ink.withValues(alpha: 0.05),
                 ),
               ),
             ),
@@ -1007,14 +1031,14 @@ class _HeroCard extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          const Text(
+                          Text(
                             'NEXT TARGET',
-                            style: RenanceText.overline,
+                            style: RenanceText.overline.copyWith(color: context.heroMuted),
                           ),
                           const SizedBox(height: 4),
                           Text(
                             student.targetTitle,
-                            style: RenanceText.displayMd,
+                            style: RenanceText.displayMd.copyWith(color: context.onHeroCard),
                           ),
                         ],
                       ),
@@ -1022,7 +1046,7 @@ class _HeroCard extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
-                        const Text('COUNTDOWN', style: RenanceText.overline),
+                        Text('COUNTDOWN', style: RenanceText.overline.copyWith(color: context.heroMuted)),
                         const SizedBox(height: 4),
                         Text(
                           days == null
@@ -1031,7 +1055,7 @@ class _HeroCard extends StatelessWidget {
                               ? 'This month'
                               : '$days Days',
                           style: RenanceText.bodyMedium.copyWith(
-                            color: RenanceColors.ink,
+                            color: context.onHeroCard,
                           ),
                         ),
                       ],
@@ -1046,7 +1070,7 @@ class _HeroCard extends StatelessWidget {
                       'Syllabus Completion',
                       style: RenanceText.labelMono.copyWith(
                         fontSize: 12,
-                        color: RenanceColors.textSecondary,
+                        color: context.heroMuted,
                       ),
                     ),
                     Text(
@@ -1054,6 +1078,7 @@ class _HeroCard extends StatelessWidget {
                       style: RenanceText.labelMono.copyWith(
                         fontSize: 12,
                         fontWeight: FontWeight.w700,
+                        color: context.onHeroCard,
                       ),
                     ),
                   ],
@@ -1064,9 +1089,11 @@ class _HeroCard extends StatelessWidget {
                   child: LinearProgressIndicator(
                     value: coverage / 100,
                     minHeight: 8,
-                    backgroundColor: RenanceColors.surfaceVariant,
-                    valueColor: const AlwaysStoppedAnimation<Color>(
-                      Colors.black,
+                    backgroundColor: context.heroTrack,
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                      context.onHeroCard == RenanceColors.darkTextPrimary
+                          ? Colors.white
+                          : Colors.black,
                     ),
                   ),
                 ),
@@ -1076,10 +1103,17 @@ class _HeroCard extends StatelessWidget {
                   width: double.infinity,
                   child: FilledButton.icon(
                     onPressed: onContinue,
+                    // White button on the dark hero in mixed/dark tiers,
+                    // the black primary button on light.
                     style: FilledButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
+                      backgroundColor: context.darkChrome
+                          ? Colors.white
+                          : null,
+                      foregroundColor:
+                          context.darkChrome ? RenanceColors.ink : null,
                     ),
                     icon: const Icon(Icons.play_arrow, size: 20),
                     label: const Text(
@@ -1129,7 +1163,7 @@ class LauncherTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final BoxDecoration box = highlight
         ? BoxDecoration(
-            color: RenanceColors.ink,
+            color: context.ink,
             borderRadius: BorderRadius.circular(18),
             boxShadow: const <BoxShadow>[
               BoxShadow(
@@ -1141,14 +1175,14 @@ class LauncherTile extends StatelessWidget {
           )
         : muted
         ? BoxDecoration(
-            color: RenanceColors.surfaceContainer,
+            color: context.surfaceContainer,
             borderRadius: BorderRadius.circular(18),
             border: Border.all(
-              color: RenanceColors.outlineLight.withValues(alpha: 0.3),
+              color: context.outlineLight.withValues(alpha: 0.3),
             ),
           )
         : BoxDecoration(
-            color: RenanceColors.card,
+            color: context.card,
             borderRadius: BorderRadius.circular(18),
             boxShadow: const <BoxShadow>[
               BoxShadow(
@@ -1190,7 +1224,7 @@ class LauncherTile extends StatelessWidget {
                     : Icon(
                         icon,
                         size: 24,
-                        color: iconColor ?? RenanceColors.ink,
+                        color: iconColor ?? context.ink,
                       ),
               ),
               if (badge != null)
@@ -1205,13 +1239,13 @@ class LauncherTile extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: badgeColor,
                       borderRadius: BorderRadius.circular(999),
-                      boxShadow: const <BoxShadow>[
+                      boxShadow: <BoxShadow>[
                         BoxShadow(color: Color(0x1A000000), blurRadius: 2),
                       ],
                     ),
                     child: Text(
                       badge!,
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.white,
                         fontSize: 10,
                         fontWeight: FontWeight.w700,
@@ -1221,7 +1255,7 @@ class LauncherTile extends StatelessWidget {
                 ),
             ],
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Text(
             label,
             maxLines: 1,
@@ -1229,8 +1263,8 @@ class LauncherTile extends StatelessWidget {
             style: RenanceText.caption.copyWith(
               fontSize: 11,
               color: highlight
-                  ? RenanceColors.ink
-                  : RenanceColors.textSecondary,
+                  ? context.ink
+                  : context.textSecondary,
               fontWeight: highlight ? FontWeight.w600 : FontWeight.w400,
             ),
           ),
@@ -1269,7 +1303,7 @@ class _RecentActivityCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: RenanceColors.card,
+          color: context.card,
           borderRadius: BorderRadius.circular(12),
           boxShadow: const <BoxShadow>[
             BoxShadow(
@@ -1284,14 +1318,14 @@ class _RecentActivityCard extends StatelessWidget {
             Container(
               width: 40,
               height: 40,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: RenanceColors.errorContainer,
+                color: context.errorContainer,
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.science,
                 size: 20,
-                color: RenanceColors.error,
+                color: context.error,
               ),
             ),
             const SizedBox(width: 12),
@@ -1310,12 +1344,12 @@ class _RecentActivityCard extends StatelessWidget {
                     pct == null ? verdict : 'Score: $pct% • $verdict',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: RenanceText.caption,
+                    style: RenanceText.caption.copyWith(color: context.textSecondary),
                   ),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right, color: RenanceColors.outlineDark),
+            Icon(Icons.chevron_right, color: context.outlineDark),
           ],
         ),
       ),
@@ -1336,7 +1370,7 @@ class _EmptyActivityCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: RenanceColors.surfaceContainerLow,
+          color: context.cardLow,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -1346,10 +1380,10 @@ class _EmptyActivityCard extends StatelessWidget {
             Expanded(
               child: Text(
                 'No papers yet. Open a pack and run your first diagnostic.',
-                style: RenanceText.bodySecondary,
+                style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
               ),
             ),
-            const Icon(Icons.chevron_right, color: RenanceColors.outlineDark),
+            Icon(Icons.chevron_right, color: context.outlineDark),
           ],
         ),
       ),
@@ -1379,7 +1413,7 @@ class _PendingBanner extends StatelessWidget {
           Expanded(
             child: Text(
               '$count finished paper(s) waiting to sync',
-              style: RenanceText.caption.copyWith(color: RenanceColors.ink),
+              style: RenanceText.caption.copyWith(color: context.ink),
             ),
           ),
           TextButton(
@@ -1402,15 +1436,15 @@ class _SyncErrorBanner extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
-        color: RenanceColors.errorContainer,
+        color: context.errorContainer,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
         children: <Widget>[
-          const Icon(
+          Icon(
             Icons.cloud_off_outlined,
             size: 18,
-            color: RenanceColors.error,
+            color: context.error,
           ),
           const SizedBox(width: 10),
           Expanded(
@@ -1418,7 +1452,7 @@ class _SyncErrorBanner extends StatelessWidget {
               sync.message,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: RenanceText.caption.copyWith(color: RenanceColors.error),
+              style: RenanceText.caption.copyWith(color: context.error),
             ),
           ),
         ],
@@ -1442,8 +1476,8 @@ Future<void> showMoreSheet(
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
     builder: (BuildContext sheetContext) => Container(
-      decoration: const BoxDecoration(
-        color: RenanceColors.background,
+      decoration: BoxDecoration(
+        color: context.pageBg,
         borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
         boxShadow: <BoxShadow>[
           BoxShadow(
@@ -1463,7 +1497,7 @@ Future<void> showMoreSheet(
               width: 48,
               height: 6,
               decoration: BoxDecoration(
-                color: RenanceColors.outlineVariant,
+                color: context.outlineVariant,
                 borderRadius: BorderRadius.circular(999),
               ),
             ),
@@ -1476,7 +1510,7 @@ Future<void> showMoreSheet(
                   const SizedBox(height: 2),
                   Text(
                     'Explore everything Renance has to offer',
-                    style: RenanceText.bodySecondary.copyWith(fontSize: 13),
+                    style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 13),
                   ),
                 ],
               ),
@@ -1632,7 +1666,7 @@ Future<void> showMoreSheet(
                       icon: Icons.cases,
                       label: 'Career Bridge',
                       soon: true,
-                      soonColor: RenanceColors.ink,
+                      soonColor: context.ink,
                       onTap: () {},
                     ),
                     _MoreTile(
@@ -1650,10 +1684,46 @@ Future<void> showMoreSheet(
                       },
                     ),
                     _MoreTile(
+                      icon: Icons.emoji_events,
+                      label: 'Awards Hub',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const GamificationHubScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.insights,
+                      label: 'Progress Report',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const ProgressDashboardScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.menu_book,
+                      label: 'Syllabus',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const SyllabusScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
                       icon: Icons.smart_toy,
                       label: 'AI Generator',
                       soon: true,
-                      soonColor: RenanceColors.ink,
+                      soonColor: context.ink,
                       onTap: () {},
                     ),
                     _MoreTile(
@@ -1704,16 +1774,16 @@ class _FatigueBanner extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: RenanceColors.surfaceContainerLow,
+        color: context.cardLow,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: RenanceColors.selectionBlue),
+        border: Border.all(color: context.selectionBlue),
       ),
       child: Row(
         children: <Widget>[
-          const Icon(
+          Icon(
             Icons.self_improvement,
             size: 22,
-            color: RenanceColors.ink,
+            color: context.ink,
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -1730,7 +1800,7 @@ class _FatigueBanner extends StatelessWidget {
                       ? state.reason
                       : 'You have been studying a while today.',
                   style: RenanceText.caption.copyWith(
-                    color: RenanceColors.textSecondary,
+                    color: context.textSecondary,
                   ),
                 ),
               ],
@@ -1748,14 +1818,14 @@ class _MoreTile extends StatelessWidget {
     required this.label,
     required this.onTap,
     this.soon = false,
-    this.soonColor = RenanceColors.ink,
+    this.soonColor,
   });
 
   final IconData icon;
   final String label;
   final VoidCallback onTap;
   final bool soon;
-  final Color soonColor;
+  final Color? soonColor;
 
   @override
   Widget build(BuildContext context) {
@@ -1763,7 +1833,7 @@ class _MoreTile extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: RenanceColors.card,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -1779,9 +1849,9 @@ class _MoreTile extends StatelessWidget {
           Container(
             width: 40,
             height: 40,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: RenanceColors.surfaceContainerLow,
+              color: context.cardLow,
             ),
             child: Icon(icon, size: 20, color: Colors.black),
           ),
@@ -1815,7 +1885,7 @@ class _MoreTile extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               decoration: BoxDecoration(
-                color: soonColor,
+                color: soonColor ?? context.ink,
                 borderRadius: BorderRadius.circular(999),
               ),
               child: const Text(

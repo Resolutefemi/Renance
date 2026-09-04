@@ -66,7 +66,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: RenanceColors.background,
+      backgroundColor: context.pageBg,
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -82,7 +82,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                         onPressed: () => Navigator.of(context).pop(),
                         icon:
                             const Icon(Icons.arrow_back_ios_new, size: 20),
-                        color: RenanceColors.ink,
+                        color: context.ink,
                       ),
                     ],
                   ),
@@ -96,7 +96,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                       const SizedBox(height: 6),
                       Text('Configure your JAMB practice session.',
                           style: RenanceText.bodyMedium
-                              .copyWith(color: RenanceColors.textSecondary)),
+                              .copyWith(color: context.textSecondary)),
                       const SizedBox(height: 24),
                       // Past Question Year ------------------------------
                       _Card(
@@ -105,8 +105,8 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                const Icon(Icons.history,
-                                    size: 22, color: RenanceColors.outlineLight),
+                                Icon(Icons.history,
+                                    size: 22, color: context.outlineLight),
                                 const SizedBox(width: 12),
                                 Text('Past Question Year',
                                     style: RenanceText.sectionTitle),
@@ -149,9 +149,9 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                const Icon(Icons.format_list_numbered,
+                                Icon(Icons.format_list_numbered,
                                     size: 22,
-                                    color: RenanceColors.outlineLight),
+                                    color: context.outlineLight),
                                 const SizedBox(width: 12),
                                 Text('Question Count',
                                     style: RenanceText.sectionTitle),
@@ -218,8 +218,8 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                           children: <Widget>[
                             Row(
                               children: <Widget>[
-                                const Icon(Icons.timer,
-                                    size: 22, color: RenanceColors.outlineLight),
+                                Icon(Icons.timer,
+                                    size: 22, color: context.outlineLight),
                                 const SizedBox(width: 12),
                                 Text('Timer', style: RenanceText.sectionTitle),
                               ],
@@ -258,7 +258,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                       // Toggles ------------------------------------------
                       Container(
                         padding: const EdgeInsets.all(8),
-                        decoration: _cardDecoration,
+                        decoration: _cardDecoration(context),
                         child: Column(
                           children: <Widget>[
                             _ToggleRow(
@@ -350,8 +350,8 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
   }
 }
 
-final BoxDecoration _cardDecoration = BoxDecoration(
-  color: RenanceColors.card,
+BoxDecoration _cardDecoration(BuildContext context) => BoxDecoration(
+  color: context.card,
   borderRadius: BorderRadius.circular(12),
   boxShadow: const <BoxShadow>[
     BoxShadow(
@@ -372,7 +372,7 @@ class _Card extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
-      decoration: _cardDecoration,
+      decoration: _cardDecoration(context),
       child: child,
     );
   }
@@ -388,7 +388,7 @@ class _RoundStep extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: RenanceColors.surfaceContainerLow,
+      color: context.cardLow,
       shape: const CircleBorder(),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -396,7 +396,7 @@ class _RoundStep extends StatelessWidget {
         child: SizedBox(
           width: 48,
           height: 48,
-          child: Icon(icon, size: 22, color: RenanceColors.ink),
+          child: Icon(icon, size: 22, color: context.ink),
         ),
       ),
     );
@@ -420,8 +420,8 @@ class _GridChoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: selected
-          ? RenanceColors.selectionBlue
-          : RenanceColors.surfaceContainerLow,
+          ? context.selectionBlue
+          : context.cardLow,
       borderRadius: BorderRadius.circular(8),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -431,12 +431,12 @@ class _GridChoice extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: selected ? RenanceColors.ink : Colors.transparent,
+              color: selected ? context.ink : Colors.transparent,
               width: 2,
             ),
           ),
           child: Text(label,
-              style: RenanceText.bodyMedium.copyWith(color: RenanceColors.ink)),
+              style: RenanceText.bodyMedium.copyWith(color: context.ink)),
         ),
       ),
     );
@@ -459,8 +459,8 @@ class _PresetButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: selected
-          ? RenanceColors.selectionBlue
-          : RenanceColors.surfaceContainerLow,
+          ? context.selectionBlue
+          : context.cardLow,
       borderRadius: BorderRadius.circular(6),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
@@ -471,8 +471,8 @@ class _PresetButton extends StatelessWidget {
           child: Text(
             label,
             style: selected
-                ? RenanceText.bodyMedium.copyWith(color: RenanceColors.ink)
-                : RenanceText.bodyBase.copyWith(color: RenanceColors.ink),
+                ? RenanceText.bodyMedium.copyWith(color: context.ink)
+                : RenanceText.bodyBase.copyWith(color: context.ink),
           ),
         ),
       ),
@@ -504,12 +504,12 @@ class _ToggleRow extends StatelessWidget {
       decoration: BoxDecoration(
         border: first
             ? null
-            : const Border(
-                top: BorderSide(color: RenanceColors.surfaceContainerLow)),
+            : Border(
+                top: BorderSide(color: context.cardLow)),
       ),
       child: Row(
         children: <Widget>[
-          Icon(icon, size: 22, color: RenanceColors.textSecondary),
+          Icon(icon, size: 22, color: context.textSecondary),
           const SizedBox(width: 12),
           Expanded(
             child: Text(label, style: RenanceText.bodyMedium),
@@ -522,8 +522,8 @@ class _ToggleRow extends StatelessWidget {
               height: 24,
               decoration: BoxDecoration(
                 color: value
-                    ? RenanceColors.ink
-                    : RenanceColors.surfaceContainerHigh,
+                    ? context.ink
+                    : context.cardHigh,
                 borderRadius: BorderRadius.circular(999),
               ),
               child: AnimatedAlign(
@@ -537,8 +537,8 @@ class _ToggleRow extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: value
-                        ? RenanceColors.card
-                        : RenanceColors.textSecondary,
+                        ? context.card
+                        : context.textSecondary,
                   ),
                 ),
               ),

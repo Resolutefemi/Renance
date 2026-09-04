@@ -118,8 +118,8 @@ class _FocusSheetState extends State<FocusSheet> {
           EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
       child: Container(
         constraints: const BoxConstraints(maxHeight: 720),
-        decoration: const BoxDecoration(
-          color: RenanceColors.background,
+        decoration: BoxDecoration(
+          color: context.pageBg,
           borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -136,7 +136,7 @@ class _FocusSheetState extends State<FocusSheet> {
                 width: 48,
                 height: 6,
                 decoration: BoxDecoration(
-                  color: RenanceColors.outlineVariant,
+                  color: context.outlineVariant,
                   borderRadius: BorderRadius.circular(999),
                 ),
               ),
@@ -152,12 +152,12 @@ class _FocusSheetState extends State<FocusSheet> {
                       Text(
                         'Switch your target exam and the whole app reshapes '
                         'around it. Your papers and XP stay put.',
-                        style: RenanceText.bodySecondary.copyWith(height: 1.45),
+                        style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, height: 1.45),
                       ),
                       const SizedBox(height: 20),
                       ..._options.map(_buildOption),
                       const SizedBox(height: 16),
-                      const Text('EXAM YEAR', style: RenanceText.overline),
+                      Text('EXAM YEAR', style: RenanceText.overline.copyWith(color: context.textSecondary)),
                       const SizedBox(height: 8),
                       Row(
                         children: <Widget>[
@@ -174,8 +174,8 @@ class _FocusSheetState extends State<FocusSheet> {
                       if (_error != null) ...<Widget>[
                         const SizedBox(height: 14),
                         Text(_error!,
-                            style: RenanceText.caption
-                                .copyWith(color: RenanceColors.error)),
+                            style: RenanceText.caption.copyWith(color: context.textSecondary)
+                                .copyWith(color: context.error)),
                       ],
                       const SizedBox(height: 20),
                     ],
@@ -217,10 +217,10 @@ class _FocusSheetState extends State<FocusSheet> {
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             color:
-                selected ? RenanceColors.selectionBlue : RenanceColors.card,
+                selected ? context.selectionBlue : context.card,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: selected ? Colors.black : RenanceColors.outlineLight,
+              color: selected ? Colors.black : context.outlineLight,
               width: selected ? 1.6 : 1,
             ),
             boxShadow: selected
@@ -240,12 +240,12 @@ class _FocusSheetState extends State<FocusSheet> {
                 decoration: BoxDecoration(
                   color: selected
                       ? Colors.black
-                      : RenanceColors.surfaceContainerLow,
+                      : context.cardLow,
                   shape: BoxShape.circle,
                 ),
                 child: Icon(t.icon,
                     size: 22,
-                    color: selected ? Colors.white : RenanceColors.ink),
+                    color: selected ? Colors.white : context.ink),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -256,7 +256,7 @@ class _FocusSheetState extends State<FocusSheet> {
                         style: RenanceText.bodyMedium
                             .copyWith(fontWeight: FontWeight.w600)),
                     const SizedBox(height: 2),
-                    Text(t.subtitle, style: RenanceText.caption),
+                    Text(t.subtitle, style: RenanceText.caption.copyWith(color: context.textSecondary)),
                   ],
                 ),
               ),
@@ -305,8 +305,8 @@ class _YearChip extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
           color: selected
-              ? RenanceColors.selectionBlue
-              : RenanceColors.surfaceContainerLow,
+              ? context.selectionBlue
+              : context.cardLow,
           borderRadius: BorderRadius.circular(999),
           border: Border.all(
             color: selected ? Colors.black : Colors.transparent,
@@ -316,7 +316,7 @@ class _YearChip extends StatelessWidget {
         child: Text(
           '$year',
           style: RenanceText.labelMono.copyWith(
-            color: selected ? RenanceColors.ink : RenanceColors.textSecondary,
+            color: selected ? context.ink : context.textSecondary,
           ),
         ),
       ),

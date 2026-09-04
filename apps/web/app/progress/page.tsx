@@ -87,6 +87,13 @@ export default function ProgressPage() {
           <h1 className="text-lg font-semibold tracking-tight text-on-surface">
             Progress
           </h1>
+          <Link
+            href="/progress-report"
+            aria-label="Progress report"
+            className="ml-auto flex h-10 w-10 items-center justify-center rounded-full bg-surface-container-low text-on-surface transition hover:bg-surface-variant"
+          >
+            <span className="material-symbols-outlined text-[20px]">insights</span>
+          </Link>
           {s.currentStreak > 0 && (
             <span className="flex items-center gap-1 rounded-full bg-surface-container-low px-2.5 py-1 text-xs font-bold text-on-surface">
               <span className="material-symbols-outlined fill-current text-[16px] text-accent-amber">

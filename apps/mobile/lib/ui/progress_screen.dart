@@ -10,6 +10,8 @@ import 'package:provider/provider.dart';
 import '../api_client.dart';
 import '../models.dart';
 import 'badge_detail_screen.dart';
+import 'gamification_hub_screen.dart';
+import 'progress_dashboard_screen.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
 
@@ -21,7 +23,7 @@ const Color _kAmberTint = Color(0xFFFFF3D6); // amber/20 on white
 
 /// One row of the badge catalog. Colors: circle background / foreground.
 class _BadgeSpec {
-  const _BadgeSpec(this.code, this.label, this.icon, this.bg, this.fg, this.hint);
+  _BadgeSpec(this.code, this.label, this.icon, this.bg, this.fg, this.hint);
   final String code;
   final String label;
   final IconData icon;
@@ -32,10 +34,11 @@ class _BadgeSpec {
 
 /// Mirrors the server's BadgesFor codes, keep in sync with
 /// apps/study-api/internal/store/gamification.go.
-const List<_BadgeSpec> _kBadgeCatalog = <_BadgeSpec>[
+List<_BadgeSpec> _kBadgeCatalog = <_BadgeSpec>[
   _BadgeSpec('first_blood', 'First Blood', Icons.flag, _kBlueTint,
       RenanceColors.ink, 'Complete your first exam'),
-  _BadgeSpec('xp_500', 'Scholar', Icons.school, _kBlueTint, RenanceColors.ink,
+  _BadgeSpec('xp_500', 'Scholar', Icons.school, _kBlueTint,
+      RenanceColors.ink,
       'Earn 500 XP'),
   _BadgeSpec('streak_3', 'Warming Up', Icons.local_fire_department,
       _kAmberTint, RenanceColors.amber, 'Keep a 3-day streak'),
@@ -92,13 +95,31 @@ class _ProgressScreenState extends State<ProgressScreen> {
           children: <Widget>[
             const RenanceMark(size: 34),
             const SizedBox(width: 10),
-            const Text('Progress', style: TextStyle(fontWeight: FontWeight.w600)),
+            Text('Progress', style: TextStyle(fontWeight: FontWeight.w600)),
             if (data != null && data.state.currentStreak > 0) ...<Widget>[
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               _StreakPill(count: data.state.currentStreak),
             ],
           ],
         ),
+        actions: <Widget>[
+          IconButton(
+            tooltip: 'Progress report',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                  builder: (_) => const ProgressDashboardScreen()),
+            ),
+            icon: const Icon(Icons.insights),
+          ),
+          IconButton(
+            tooltip: 'Awards hub',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                  builder: (_) => const GamificationHubScreen()),
+            ),
+            icon: const Icon(Icons.emoji_events_outlined),
+          ),
+        ],
       ),
       body: switch ((data, _error)) {
         (null, null) => const Center(
@@ -110,13 +131,13 @@ class _ProgressScreenState extends State<ProgressScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  const Icon(Icons.cloud_off_outlined,
-                      size: 36, color: RenanceColors.error),
-                  const SizedBox(height: 12),
+                  Icon(Icons.cloud_off_outlined,
+                      size: 36, color: context.error),
+                  SizedBox(height: 12),
                   Text(err,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          color: RenanceColors.textSecondary)),
+                      style: TextStyle(
+                          color: context.textSecondary)),
                   const SizedBox(height: 20),
                   FilledButton(onPressed: _load, child: const Text('Try again')),
                 ],
@@ -133,23 +154,23 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 const SizedBox(height: 16),
                 _LevelCard(state: d.state),
                 const SizedBox(height: 24),
-                const Text('BADGES',
+                Text('BADGES',
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 1.2,
-                      color: RenanceColors.textSecondary,
+                      color: context.textSecondary,
                     )),
                 const SizedBox(height: 12),
                 _BadgesGrid(summary: d),
                 const SizedBox(height: 24),
                 if (d.awards.isNotEmpty) ...<Widget>[
-                  const Text('RECENT AWARDS',
+                  Text('RECENT AWARDS',
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
                         letterSpacing: 1.2,
-                        color: RenanceColors.textSecondary,
+                        color: context.textSecondary,
                       )),
                   const SizedBox(height: 12),
                   ...d.awards.take(5).map(
@@ -178,18 +199,18 @@ class _StreakPill extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
-        color: RenanceColors.surfaceContainerLow,
+        color: context.cardLow,
         borderRadius: BorderRadius.circular(999),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const Icon(Icons.local_fire_department,
+          Icon(Icons.local_fire_department,
               size: 16, color: RenanceColors.amber),
-          const SizedBox(width: 4),
+          SizedBox(width: 4),
           Text('$count',
-              style: const TextStyle(
-                  fontSize: 13, fontWeight: FontWeight.w700, color: RenanceColors.ink)),
+              style: TextStyle(
+                  fontSize: 13, fontWeight: FontWeight.w700, color: context.ink)),
         ],
       ),
     );
@@ -210,38 +231,38 @@ class _StreakHero extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const Icon(Icons.local_fire_department,
+                Icon(Icons.local_fire_department,
                     size: 22, color: RenanceColors.amber),
-                const SizedBox(width: 6),
+                SizedBox(width: 6),
                 Text('Current Streak',
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: RenanceColors.ink.withValues(alpha: 0.9),
+                      color: context.ink.withValues(alpha: 0.9),
                     )),
               ],
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.baseline,
               textBaseline: TextBaseline.alphabetic,
               children: <Widget>[
                 Text('${state.currentStreak}',
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: 44,
                         fontWeight: FontWeight.w700,
-                        color: RenanceColors.ink)),
-                const SizedBox(width: 6),
-                const Text('Days',
+                        color: context.ink)),
+                SizedBox(width: 6),
+                Text('Days',
                     style: TextStyle(
-                        fontSize: 14, color: RenanceColors.textSecondary)),
+                        fontSize: 14, color: context.textSecondary)),
               ],
             ),
-            const SizedBox(height: 2),
+            SizedBox(height: 2),
             Text('Best Streak: ${state.bestStreak}',
-                style: const TextStyle(
-                    fontSize: 13, color: RenanceColors.textSecondary)),
+                style: TextStyle(
+                    fontSize: 13, color: context.textSecondary)),
             const SizedBox(height: 20),
             _WeekDots(state: state, now: DateTime.now()),
           ],
@@ -298,8 +319,8 @@ class _WeekDots extends StatelessWidget {
                     fontSize: 11,
                     fontWeight: d.isToday ? FontWeight.w700 : FontWeight.w400,
                     color: d.isToday
-                        ? RenanceColors.ink
-                        : RenanceColors.textSecondary,
+                        ? context.ink
+                        : context.textSecondary,
                   )),
               const SizedBox(height: 6),
               _Dot(d: d),
@@ -335,7 +356,7 @@ class _Dot extends StatelessWidget {
         shape: BoxShape.circle,
         color: d.practiced
             ? (solidToday ? RenanceColors.amber : _kAmberTint)
-            : RenanceColors.surfaceContainerHigh,
+            : context.cardHigh,
       ),
       child: Icon(
         solidToday ? Icons.local_fire_department : Icons.check,
@@ -344,7 +365,7 @@ class _Dot extends StatelessWidget {
             ? Colors.white
             : d.practiced
                 ? RenanceColors.amber
-                : RenanceColors.textSecondary,
+                : context.textSecondary,
       ),
     );
   }
@@ -373,21 +394,21 @@ class _LevelCard extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text('Level ${state.level}',
-                              style: const TextStyle(
+                              style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700,
-                                  color: RenanceColors.ink)),
-                          const SizedBox(width: 6),
-                          const Icon(Icons.verified,
+                                  color: context.ink)),
+                          SizedBox(width: 6),
+                          Icon(Icons.verified,
                               size: 18, color: RenanceColors.emerald),
                         ],
                       ),
-                      const SizedBox(height: 2),
+                      SizedBox(height: 2),
                       Text(
                         '${state.totalCorrect} correct · ${state.attempts} papers',
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontSize: 12,
-                            color: RenanceColors.textSecondary),
+                            color: context.textSecondary),
                       ),
                     ],
                   ),
@@ -395,9 +416,9 @@ class _LevelCard extends StatelessWidget {
                 Container(
                   width: 48,
                   height: 48,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: RenanceColors.ink,
+                    color: context.ink,
                   ),
                   alignment: Alignment.center,
                   child: Text('${state.level}',
@@ -408,16 +429,16 @@ class _LevelCard extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text('${_comma(state.totalXp)} XP',
-                    style: const TextStyle(
-                        fontSize: 11, color: RenanceColors.textSecondary)),
+                    style: TextStyle(
+                        fontSize: 11, color: context.textSecondary)),
                 Text('${_comma(next)} XP',
-                    style: const TextStyle(
-                        fontSize: 11, color: RenanceColors.textSecondary)),
+                    style: TextStyle(
+                        fontSize: 11, color: context.textSecondary)),
               ],
             ),
             const SizedBox(height: 6),
@@ -426,9 +447,9 @@ class _LevelCard extends StatelessWidget {
               child: LinearProgressIndicator(
                 value: state.levelProgress, // always 0..1 by construction (xpIntoLevel/500)
                 minHeight: 8,
-                backgroundColor: RenanceColors.surfaceContainerHigh,
+                backgroundColor: context.cardHigh,
                 valueColor:
-                    const AlwaysStoppedAnimation<Color>(RenanceColors.ink),
+                    AlwaysStoppedAnimation<Color>(context.ink),
               ),
             ),
           ],
@@ -542,23 +563,23 @@ class _BadgeTile extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: earned
                           ? spec.bg
-                          : RenanceColors.surfaceContainerHigh,
+                          : context.cardHigh,
                     ),
                     child: Icon(spec.icon,
                         size: 30,
                         color: earned
                             ? spec.fg
-                            : RenanceColors.textSecondary),
+                            : context.textSecondary),
                   ),
                   if (!earned)
                     Positioned.fill(
                       child: Container(
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: RenanceColors.card.withValues(alpha: 0.55),
+                          color: context.card.withValues(alpha: 0.55),
                         ),
-                        child: const Icon(Icons.lock,
-                            size: 18, color: RenanceColors.textSecondary),
+                        child: Icon(Icons.lock,
+                            size: 18, color: context.textSecondary),
                       ),
                     ),
                   if (earned)
@@ -568,9 +589,9 @@ class _BadgeTile extends StatelessWidget {
                       child: Container(
                         width: 18,
                         height: 18,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: RenanceColors.card,
+                          color: context.card,
                         ),
                         child: const Icon(Icons.check_circle,
                             size: 16, color: RenanceColors.emerald),
@@ -587,8 +608,8 @@ class _BadgeTile extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.8,
                     color: earned
-                        ? RenanceColors.ink
-                        : RenanceColors.textSecondary,
+                        ? context.ink
+                        : context.textSecondary,
                   )),
             ],
           ),
@@ -608,8 +629,8 @@ class _AwardRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final _BadgeSpec spec = _kBadgeCatalog.firstWhere(
       (_BadgeSpec s) => s.code == award.code,
-      orElse: () => const _BadgeSpec('unknown', 'Badge', Icons.emoji_events,
-          _kBlueTint, RenanceColors.ink, 'A Renance badge'),
+      orElse: () => _BadgeSpec('unknown', 'Badge', Icons.emoji_events,
+          _kBlueTint, context.ink, 'A Renance badge'),
     );
     return Card(
       child: Padding(
@@ -622,7 +643,7 @@ class _AwardRow extends StatelessWidget {
               decoration: BoxDecoration(shape: BoxShape.circle, color: spec.bg),
               child: Icon(spec.icon, size: 20, color: spec.fg),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -630,24 +651,24 @@ class _AwardRow extends StatelessWidget {
                   Text('${spec.label} Badge Earned',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w600,
-                          color: RenanceColors.ink)),
-                  const SizedBox(height: 2),
+                          color: context.ink)),
+                  SizedBox(height: 2),
                   Text(spec.hint,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 12,
-                          color: RenanceColors.textSecondary)),
+                          color: context.textSecondary)),
                 ],
               ),
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: 8),
             Text(_relativeAgo(award.earnedAt, DateTime.now()),
-                style: const TextStyle(
-                    fontSize: 11, color: RenanceColors.textSecondary)),
+                style: TextStyle(
+                    fontSize: 11, color: context.textSecondary)),
           ],
         ),
       ),
