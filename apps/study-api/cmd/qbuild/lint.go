@@ -8,6 +8,8 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+
+	"renance.dev/study-api/internal/cbtdata"
 )
 
 type Issue struct {
@@ -18,7 +20,10 @@ type Issue struct {
 
 var codeRe = regexp.MustCompile(`^[a-z0-9]+(-[a-z0-9]+)*$`)
 
-func lintSpec(s *Spec) []Issue {
+// lintSpec validates one Spec. syllabus is the body's topic set
+// (nil when no tree is shipped): when present, every non-empty topic
+// must be a node of that tree — the same join cbtdata enforces at boot.
+func lintSpec(s *Spec, syllabus map[string]struct{}) []Issue {
 	var iss []Issue
 	err := func(where, format string, a ...any) {
 		iss = append(iss, Issue{Level: "error", Where: where, Msg: fmt.Sprintf(format, a...)})
@@ -93,6 +98,10 @@ func lintSpec(s *Spec) []Issue {
 		}
 		if q.Topic == "" {
 			warn(where, "no topic — results screens group weak topics by it")
+		} else if syllabus != nil {
+			if _, ok := syllabus[q.Topic]; !ok {
+				err(where, "topic %q is not in the %s syllabus tree (data/syllabus/%s.json)", q.Topic, s.Body, cbtdata.Slug(s.Body))
+			}
 		}
 		if q.Explanation == "" {
 			warn(where, "no explanation in the key — review mode is thinner without it")

@@ -46,10 +46,19 @@ class FakeApi extends ApiClient {
     );
   }
 
+  bool lastAdaptive = false;
+
   @override
-  Future<AttemptStarted> createAttempt(String code) async =>
-      const AttemptStarted(
-          attemptId: 'a-1', code: 'pack', status: 'in_progress');
+  Future<AttemptStarted> createAttempt(String code, {bool adaptive = false}) async {
+    lastAdaptive = adaptive;
+    return AttemptStarted(
+      attemptId: 'a-1',
+      code: 'pack',
+      status: 'in_progress',
+      adaptive: adaptive,
+      order: adaptive ? const <String>['q2', 'q1'] : null,
+    );
+  }
 
   @override
   Future<void> submit(
@@ -97,6 +106,7 @@ Bundle bundleFor(String code) => Bundle(
     );
 
 void main() {
+  mainAdaptiveBlock();
   group('SyncController — need-based downloads', () {
     test('downloads only packs matching profile exams', () async {
       final FakeApi api = FakeApi()
@@ -307,4 +317,39 @@ class _FailingManifestApi extends ApiClient {
 
   @override
   Future<Manifest> manifest() async => throw NetworkException('no route');
+}
+
+// -------------------------------------------------- adaptive begin (ROADMAP #5)
+
+void mainAdaptiveBlock() {
+  group('ExamController adaptive begin', () {
+    test('applies the server walk to the in-memory bundle only', () async {
+      final api = FakeApi();
+      final MemoryPackStore store = MemoryPackStore();
+      final c = ExamController(api: api, store: store);
+      await c.load(meta('pack', 'JAMB'));
+      expect(c.bundle!.questions.map((q) => q.id).toList(), <String>['q1', 'q2']);
+
+      c.adaptive = true;
+      await c.begin();
+
+      expect(api.lastAdaptive, isTrue);
+      expect(c.appliedAdaptive, isTrue);
+      expect(c.bundle!.questions.map((q) => q.id).toList(), <String>['q2', 'q1']);
+      expect(c.phase, ExamPhase.playing);
+    });
+
+    test('non-adaptive begin keeps the natural order', () async {
+      final api = FakeApi();
+      final MemoryPackStore store = MemoryPackStore();
+      final c = ExamController(api: api, store: store);
+      await c.load(meta('pack', 'JAMB'));
+
+      await c.begin();
+
+      expect(api.lastAdaptive, isFalse);
+      expect(c.appliedAdaptive, isFalse);
+      expect(c.bundle!.questions.map((q) => q.id).toList(), <String>['q1', 'q2']);
+    });
+  });
 }

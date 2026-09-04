@@ -22,6 +22,7 @@ import 'profile_screen.dart';
 import 'progress_screen.dart';
 import 'renance_logo.dart';
 import 'review_screen.dart';
+import 'syllabus_screen.dart';
 import 'settings_screen.dart';
 import 'theme.dart';
 
@@ -518,7 +519,10 @@ class _LauncherTab extends StatelessWidget {
                 child: LauncherTile(
                   icon: Icons.menu_book,
                   label: 'Syllabus',
-                  onTap: () => _soon(context, 'The syllabus map'),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const SyllabusScreen()),
+                  ),
                 ),
               ),
             ],

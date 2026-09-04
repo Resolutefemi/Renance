@@ -1,6 +1,6 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-02 (after the auth + deploy sprint, commit `e1aff61`).
+Last updated: 2026-09-04 (after the syllabus + adaptive session).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -49,8 +49,8 @@ need no external services — they ship fastest.
 | 1 | **CLI bulk test builder** (`cmd/qbuild`) | Go CLI: YAML/CSV in → validated exam packs + answer keys out, `check` lints, `build` writes pack+key+manifest and boot-verifies with the real loader. Loader for the 8,679 real questions (G2). | **LIVE** (2026-09-03) |
 | 2 | **Gamification** (streaks, XP, badges) | Migration 0003 (`study.streaks`, `study.awards`), `ApplyGrade` wired into the grading worker (best-effort), `GET /me/gamification` (zero state on first launch), 8 badge codes, unit-tested pure rules. | **LIVE** (2026-09-03, backend + endpoint; app UI surfaces via gamification_hub designs) |
 | 3 | **Spaced repetition** | SM-2 scheduling on attempt topics; migration 0005 `study.review_queue`; nightly-friendly job endpoint; app + web "Review due today". | **LIVE** (2026-09-03 — migration 0005, pure SM-2 with tests, grading-worker wiring, `GET /me/review` + admin tick, app review tab hero/queue preview + web /review queue landing) |
-| 4 | **Syllabus mapping** | Tag `data/questions/*.json` with syllabus nodes (WAEC/JAMB topic trees as static JSON); API exposes `/syllabus/{exam}`; results screen links weak topics. | NEXT |
-| 5 | **Adaptive UI** | Difficulty weighting from graded attempts already in DB; order question bundles by weak-topic-first. Pure server logic on existing tables. | NEXT |
+| 4 | **Syllabus mapping** | `data/syllabus/{jamb,waec,university-modules}.json` topic trees; boot-validated against every pack topic (cbtdata refuses unknown tags); `GET /syllabus/{body}` overlays the student's SM-2 mastery per topic; score report weak-topic chips + syllabus map screens (app + web). | **LIVE** (2026-09-04) |
+| 5 | **Adaptive UI** | `POST /attempts {adaptive:true}` ranks the pack weak-topic-first from the review queue's SM-2 state (ease, lapses, last accuracy, due-ness) — pure `store.AdaptiveOrder`, persisted on `attempts.question_order` (migration 0006); mobile Smart-order toggle + web switch; qbuild lint rejects topics outside the syllabus tree. | **LIVE** (2026-09-04) |
 | 6 | **Fatigue monitoring** | Client-side session telemetry (answer latency drift, session length) → gentle "take a break" nudge + server-side `study.sessions` log. No PII beyond timing. | NEXT |
 | 7 | **Voice flashcards** | Flutter TTS reads card fronts/backs; recording-free (no mic permission needed); works offline. Mobile-first. | NEXT |
 | 8 | **MDX conversion** | `tools/mdx`: rich lesson content pipeline → static content bundles served by the API like exam packs. Pure Go. | NEXT |

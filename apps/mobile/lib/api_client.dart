@@ -170,9 +170,14 @@ class ApiClient {
 
   // -------------------------------------------------------------- attempts
 
-  Future<AttemptStarted> createAttempt(String code) async {
+  /// Starts an attempt. [adaptive] asks the server to rank the paper
+  /// weak-topic-first from the student's own review state (ROADMAP #5).
+  Future<AttemptStarted> createAttempt(String code, {bool adaptive = false}) async {
     final data = await _send('POST', '/attempts',
-        body: <String, String>{'code': code}) as Map<dynamic, dynamic>;
+        body: <String, dynamic>{
+          'code': code,
+          if (adaptive) 'adaptive': true,
+        }) as Map<dynamic, dynamic>;
     return AttemptStarted.fromJson(data.cast<String, dynamic>());
   }
 
@@ -233,5 +238,16 @@ class ApiClient {
     final data =
         await _send('GET', '/attempts/$attemptId/review') as Map<dynamic, dynamic>;
     return AttemptReview.fromJson(data.cast<String, dynamic>());
+  }
+
+  // ---------------------------------------------------------------- syllabus
+
+  /// The syllabus map for one exam body ("jamb", "university-modules"…):
+  /// the curriculum tree overlaid with the student's mastery state. 404
+  /// for bodies with no shipped tree.
+  Future<SyllabusTree> syllabus(String bodySlug) async {
+    final data =
+        await _send('GET', '/syllabus/$bodySlug') as Map<dynamic, dynamic>;
+    return SyllabusTree.fromJson(data.cast<String, dynamic>());
   }
 }

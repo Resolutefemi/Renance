@@ -156,6 +156,13 @@ class ExamController extends ChangeNotifier {
   ExamResult? result;
   String? error;
 
+  /// When true, BEGIN asks the server for a weak-topic-first paper
+  /// (ROADMAP #5). Offline starts keep the pack's natural order.
+  bool adaptive = false;
+
+  /// Set after a successful adaptive begin — the intro/results UI reads it.
+  bool appliedAdaptive = false;
+
   int index = 0;
   int secondsRemaining = 0;
   final Map<String, String> answers = <String, String>{};
@@ -213,10 +220,19 @@ class ExamController extends ChangeNotifier {
 
   Future<void> begin() async {
     if (bundle == null) return;
+    appliedAdaptive = false;
     try {
       final started =
-          await _api.createAttempt(bundle!.code);
+          await _api.createAttempt(bundle!.code, adaptive: adaptive);
       _attemptId = started.attemptId;
+      // The server walked the pack weak-topic-first (ROADMAP #5):
+      // re-sequence the in-memory copy so the player, the navigator and
+      // the paper history all follow exactly that order. The cached pack
+      // on disk is untouched.
+      if (adaptive && started.order != null && started.order!.isNotEmpty) {
+        bundle = bundle!.withOrder(started.order!);
+        appliedAdaptive = true;
+      }
     } on ApiException catch (e) {
       error = e.message;
       phase = ExamPhase.error;
@@ -370,6 +386,10 @@ class StudentController extends ChangeNotifier {
         _store = store;
 
   final ApiClient _api;
+
+  /// Public read for screens that need one-off API calls outside the
+  /// controller's cached state (e.g. the syllabus map).
+  ApiClient? get api => _api;
   final PackStore _store;
 
   MeResult? me;
