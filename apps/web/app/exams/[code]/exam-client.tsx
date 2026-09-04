@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
 import { fetchBundle, fetchManifest, type Bundle } from '@/lib/exams';
 import { bodySlug } from '@/lib/syllabus';
+import { assessFatigue, FATIGUE_NONE, type FatigueSignal } from '@/lib/fatigue';
+import { FatigueNudgeOverlay } from '@/components/fatigue-nudge';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 
 interface ExamMetaLite {
@@ -71,6 +73,17 @@ export default function ExamPage({ code }: { code: string }) {
   const [smartApplied, setSmartApplied] = useState(false);
   const startedAtRef = useRef<number>(0);
   const submittedRef = useRef(false);
+  // Fatigue telemetry (ROADMAP #6): per-answer latencies, the running
+  // signal, the nudge state and the 5-minute break it can trigger.
+  // No PII beyond timing leaves the browser.
+  const latenciesRef = useRef<number[]>([]);
+  const shownAtRef = useRef<number>(0);
+  const pausedMsRef = useRef(0);
+  const breakLeftRef = useRef(0);
+  const nudgeDismissedRef = useRef(false);
+  const [breakLeft, setBreakLeft] = useState(0);
+  const [fatigue, setFatigue] = useState<FatigueSignal>(FATIGUE_NONE);
+  const [nudgeVisible, setNudgeVisible] = useState(false);
 
   useEffect(() => {
     if (phase !== 'graded') return;
@@ -108,6 +121,18 @@ export default function ExamPage({ code }: { code: string }) {
   const submit = useCallback(async () => {
     if (!attempt || submittedRef.current) return;
     submittedRef.current = true;
+    // Fire-and-forget telemetry (ROADMAP #6): the server re-computes the
+    // same pure signal from the raw latencies and logs the sitting.
+    void api('/me/sessions', {
+      method: 'POST',
+      body: {
+        attemptId: attempt.attemptId,
+        code: attempt.code,
+        startedAt: attempt.startedAt,
+        durationMs: Math.round(Date.now() - startedAtRef.current - pausedMsRef.current),
+        latenciesMs: [...latenciesRef.current],
+      },
+    }).catch(() => {});
     setPhase('grading');
     try {
       const payload = {
@@ -148,7 +173,17 @@ export default function ExamPage({ code }: { code: string }) {
     if (phase !== 'playing' || !attempt) return;
     const totalSec = (bundle?.durationMinutes ?? 30) * 60;
     const tick = () => {
-      const elapsed = Math.floor((Date.now() - startedAtRef.current) / 1000);
+      // "Take 5": the break runs its own countdown and the exam clock is
+      // paused for it — that is the whole point of the break.
+      if (breakLeftRef.current > 0) {
+        breakLeftRef.current -= 1;
+        setBreakLeft(breakLeftRef.current);
+        pausedMsRef.current += 1000;
+        return;
+      }
+      const elapsed = Math.floor(
+        (Date.now() - startedAtRef.current - pausedMsRef.current) / 1000,
+      );
       const left = totalSec - elapsed;
       setRemaining(Math.max(left, 0));
       if (left <= 0) void submit();
@@ -186,6 +221,14 @@ export default function ExamPage({ code }: { code: string }) {
       setResult(null);
       submittedRef.current = false;
       startedAtRef.current = Date.now();
+      shownAtRef.current = Date.now();
+      latenciesRef.current = [];
+      pausedMsRef.current = 0;
+      breakLeftRef.current = 0;
+      setBreakLeft(0);
+      nudgeDismissedRef.current = false;
+      setNudgeVisible(false);
+      setFatigue(FATIGUE_NONE);
       setPhase('playing');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not start attempt');
@@ -196,6 +239,39 @@ export default function ExamPage({ code }: { code: string }) {
   const question = bundle?.questions[current];
   const answeredCount = useMemo(() => Object.keys(answers).length, [answers]);
   const mmss = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+
+  /** Records an answer: latency telemetry + fatigue assessment first. */
+  const pick = (questionId: string, letter: string) => {
+    if (!answers[questionId]) {
+      const latencies = [...latenciesRef.current, Date.now() - shownAtRef.current];
+      latenciesRef.current = latencies;
+      const minutes =
+        (Date.now() - startedAtRef.current - pausedMsRef.current) / 60000;
+      const sig = assessFatigue(latencies, minutes);
+      setFatigue(sig);
+      if (sig.suggestBreak && !nudgeDismissedRef.current) setNudgeVisible(true);
+    }
+    setAnswers((a) => ({ ...a, [questionId]: letter }));
+  };
+
+  /** Question navigation resets the per-question latency clock. */
+  const goTo = (i: number) => {
+    setCurrent(i);
+    shownAtRef.current = Date.now();
+  };
+
+  const takeBreak = () => {
+    breakLeftRef.current = 300;
+    setBreakLeft(300);
+    setNudgeVisible(false);
+    nudgeDismissedRef.current = true;
+    shownAtRef.current = Date.now(); // the break is not answer time
+  };
+
+  const keepGoing = () => {
+    setNudgeVisible(false);
+    nudgeDismissedRef.current = true;
+  };
 
   /* ------------------------------------------------------------- views */
 
@@ -468,7 +544,14 @@ export default function ExamPage({ code }: { code: string }) {
   /* ----------------------------------------------------------- playing */
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6">
+    <>
+      <FatigueNudgeOverlay
+        visible={nudgeVisible}
+        reasons={fatigue.reasons}
+        onTakeBreak={takeBreak}
+        onKeepGoing={keepGoing}
+      />
+      <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6">
       <header className="flex items-center justify-between">
         <Link
           href="/dashboard"
@@ -478,12 +561,18 @@ export default function ExamPage({ code }: { code: string }) {
         </Link>
         <div
           className={`rounded-lg border px-4 py-1.5 font-mono text-sm ${
-            remaining !== null && remaining < 60
-              ? 'border-error bg-error-container text-on-error-container'
-              : 'border-outline-variant text-on-surface'
+            breakLeft > 0
+              ? 'border-accent-violet text-accent-violet'
+              : remaining !== null && remaining < 60
+                ? 'border-error bg-error-container text-on-error-container'
+                : 'border-outline-variant text-on-surface'
           }`}
         >
-          {remaining !== null ? mmss(remaining) : '--:--'}
+          {breakLeft > 0
+            ? `break ${mmss(breakLeft)}`
+            : remaining !== null
+              ? mmss(remaining)
+              : '--:--'}
         </div>
       </header>
 
@@ -496,7 +585,7 @@ export default function ExamPage({ code }: { code: string }) {
           return (
             <button
               key={q.id}
-              onClick={() => setCurrent(i)}
+              onClick={() => goTo(i)}
               className={`h-8 w-8 rounded-md border text-xs transition ${
                 isCurrent
                   ? 'border-primary bg-primary text-on-primary ring-2 ring-primary ring-offset-2 ring-offset-background'
@@ -538,7 +627,7 @@ export default function ExamPage({ code }: { code: string }) {
             return (
               <button
                 key={letter}
-                onClick={() => setAnswers((a) => ({ ...a, [question.id]: letter }))}
+                onClick={() => pick(question.id, letter)}
                 className={`flex w-full items-start gap-3 rounded-xl border px-4 py-3 text-left text-sm transition ${
                   selected
                     ? 'border-primary bg-secondary-container'
@@ -563,7 +652,7 @@ export default function ExamPage({ code }: { code: string }) {
 
       <footer className="mt-6 flex items-center justify-between">
         <button
-          onClick={() => setCurrent((c) => Math.max(0, c - 1))}
+          onClick={() => goTo(Math.max(0, current - 1))}
           disabled={current === 0}
           className="rounded-lg border border-outline-variant px-4 py-2 text-sm text-on-surface transition hover:border-outline disabled:opacity-40"
         >
@@ -584,7 +673,7 @@ export default function ExamPage({ code }: { code: string }) {
           </button>
         ) : (
           <button
-            onClick={() => setCurrent((c) => Math.min(bundle.questionCount - 1, c + 1))}
+            onClick={() => goTo(Math.min(bundle.questionCount - 1, current + 1))}
             className="rounded-lg bg-secondary-container px-5 py-2 text-sm text-on-surface transition hover:bg-surface-container-highest"
           >
             Next →
@@ -594,7 +683,8 @@ export default function ExamPage({ code }: { code: string }) {
       <p className="mt-3 text-center text-xs text-outline">
         {answeredCount}/{bundle.questionCount} answered
       </p>
-    </main>
+      </main>
+    </>
   );
 }
 

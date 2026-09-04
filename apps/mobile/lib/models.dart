@@ -771,3 +771,328 @@ class SyllabusStats {
         due: (j['due'] ?? 0) as int,
       );
 }
+
+// -------------------------------------------------------------- fatigue (6)
+
+/// The fatigue signal for one sitting — mirror of the API's pure rule
+/// (apps/study-api/internal/fatigue). Ported verbatim so the app, the web
+/// page and the server always agree on what "your pace is dipping" means.
+class FatigueSignal {
+  const FatigueSignal({
+    required this.level,
+    required this.suggestBreak,
+    required this.reasons,
+    required this.driftRatio,
+    this.medianFirst5Ms = 0,
+    this.medianLast5Ms = 0,
+  });
+
+  final String level; // none | mild | high
+  final bool suggestBreak;
+  final List<String> reasons;
+  final double driftRatio;
+  final int medianFirst5Ms;
+  final int medianLast5Ms;
+
+  static const FatigueSignal none = FatigueSignal(
+    level: 'none',
+    suggestBreak: false,
+    reasons: <String>[],
+    driftRatio: 0,
+  );
+
+  factory FatigueSignal.fromJson(Map<String, dynamic> j) => FatigueSignal(
+        level: (j['level'] ?? 'none') as String,
+        suggestBreak: (j['suggestBreak'] ?? false) as bool,
+        reasons: ((j['reasons'] as List<dynamic>?) ?? const <dynamic>[])
+            .map((e) => e.toString())
+            .toList(),
+        driftRatio: ((j['driftRatio'] ?? 0) as num).toDouble(),
+        medianFirst5Ms: (j['medianFirst5Ms'] ?? 0) as int,
+        medianLast5Ms: (j['medianLast5Ms'] ?? 0) as int,
+      );
+}
+
+/// Pure: median of ms samples (empty -> 0). Never mutates the input.
+int medianOf(List<int> xs) {
+  if (xs.isEmpty) return 0;
+  final s = List<int>.of(xs)..sort();
+  final mid = s.length ~/ 2;
+  return s.length.isOdd ? s[mid] : ((s[mid - 1] + s[mid]) ~/ 2);
+}
+
+const int _fatigueMinAnswers = 8;
+const double _fatigueDriftMild = 1.8;
+const double _fatigueDriftHigh = 2.6;
+const double _fatigueDriftFloorMinutes = 30.0;
+const double _fatigueMildMinutes = 50.0;
+const double _fatigueHighMinutes = 75.0;
+const double _fatigueComboMinutes = 40.0;
+
+/// Pure port of the server's fatigue.Assess (ROADMAP #6): the same
+/// thresholds, the same escalation ladder, zero platform dependencies.
+FatigueSignal assessFatigue(List<int> latenciesMs, double sessionMinutes) {
+  final first = latenciesMs.length > 5
+      ? latenciesMs.sublist(0, 5)
+      : List<int>.of(latenciesMs);
+  final last = latenciesMs.length > 5
+      ? latenciesMs.sublist(latenciesMs.length - 5)
+      : List<int>.of(latenciesMs);
+  final mFirst = medianOf(first);
+  final mLast = medianOf(last);
+  final ratio = mFirst > 0 ? mLast / mFirst : 0.0;
+
+  var level = 'none';
+  final reasons = <String>[];
+
+  final driftMild = latenciesMs.length >= _fatigueMinAnswers &&
+      ratio >= _fatigueDriftMild;
+  final driftHigh = latenciesMs.length >= _fatigueMinAnswers &&
+      ratio >= _fatigueDriftHigh &&
+      sessionMinutes >= _fatigueDriftFloorMinutes;
+
+  if (driftHigh) {
+    level = 'high';
+    reasons.add('Answers are taking much longer than they did at the start');
+  } else if (driftMild && sessionMinutes >= _fatigueComboMinutes) {
+    level = 'high';
+    reasons.add('Your pace is dipping and this has been a long sitting');
+  } else if (driftMild) {
+    level = 'mild';
+    reasons.add('Your pace is dipping');
+  }
+
+  if (sessionMinutes >= _fatigueHighMinutes) {
+    level = 'high';
+    reasons.add('This has been a long session');
+  } else if (sessionMinutes >= _fatigueMildMinutes && level == 'none') {
+    level = 'mild';
+    reasons.add('This has been a long session');
+  }
+
+  return FatigueSignal(
+    level: level,
+    suggestBreak: level != 'none',
+    reasons: reasons,
+    driftRatio: ratio,
+    medianFirst5Ms: mFirst,
+    medianLast5Ms: mLast,
+  );
+}
+
+/// GET /me/fatigue — the current advisory for home-screen banners.
+class FatigueState {
+  const FatigueState({
+    required this.level,
+    required this.suggestBreak,
+    required this.minutesToday,
+    required this.minutesLast3h,
+    required this.sessionsToday,
+    this.reason = '',
+  });
+
+  final String level; // none | mild | high
+  final bool suggestBreak;
+  final String reason;
+  final double minutesToday;
+  final double minutesLast3h;
+  final int sessionsToday;
+
+  factory FatigueState.fromJson(Map<String, dynamic> j) => FatigueState(
+        level: (j['level'] ?? 'none') as String,
+        suggestBreak: (j['suggestBreak'] ?? false) as bool,
+        reason: (j['reason'] ?? '') as String,
+        minutesToday: ((j['minutesToday'] ?? 0) as num).toDouble(),
+        minutesLast3h: ((j['minutesLast3h'] ?? 0) as num).toDouble(),
+        sessionsToday: (j['sessionsToday'] ?? 0) as int,
+      );
+}
+
+// ---------------------------------------------------------- flashcards (7)
+
+/// One flashcard (GET /flashcards/{code} row).
+class FlashcardCard {
+  const FlashcardCard({
+    required this.id,
+    required this.front,
+    required this.back,
+    this.hint = '',
+  });
+
+  final String id;
+  final String front;
+  final String back;
+  final String hint;
+
+  factory FlashcardCard.fromJson(Map<String, dynamic> j) => FlashcardCard(
+        id: (j['id'] ?? '') as String,
+        front: (j['front'] ?? '') as String,
+        back: (j['back'] ?? '') as String,
+        hint: (j['hint'] ?? '') as String,
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'id': id,
+        'front': front,
+        'back': back,
+        if (hint.isNotEmpty) 'hint': hint,
+      };
+}
+
+/// Deck list row (GET /flashcards).
+class FlashcardDeckMeta {
+  const FlashcardDeckMeta({
+    required this.code,
+    required this.title,
+    required this.cardCount,
+    this.subject = '',
+    this.body = '',
+  });
+
+  final String code;
+  final String title;
+  final int cardCount;
+  final String subject;
+  final String body;
+
+  factory FlashcardDeckMeta.fromJson(Map<String, dynamic> j) =>
+      FlashcardDeckMeta(
+        code: (j['code'] ?? '') as String,
+        title: (j['title'] ?? j['code'] ?? '') as String,
+        cardCount: (j['cardCount'] ?? 0) as int,
+        subject: (j['subject'] ?? '') as String,
+        body: (j['body'] ?? '') as String,
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'code': code,
+        'title': title,
+        'cardCount': cardCount,
+        if (subject.isNotEmpty) 'subject': subject,
+        if (body.isNotEmpty) 'body': body,
+      };
+}
+
+/// Full deck with its cards (GET /flashcards/{code}).
+class FlashcardDeck {
+  const FlashcardDeck({
+    required this.code,
+    required this.title,
+    required this.cardCount,
+    required this.cards,
+    this.subject = '',
+    this.body = '',
+  });
+
+  final String code;
+  final String title;
+  final int cardCount;
+  final String subject;
+  final String body;
+  final List<FlashcardCard> cards;
+
+  factory FlashcardDeck.fromJson(Map<String, dynamic> j) => FlashcardDeck(
+        code: (j['code'] ?? '') as String,
+        title: (j['title'] ?? '') as String,
+        cardCount: (j['cardCount'] ?? 0) as int,
+        subject: (j['subject'] ?? '') as String,
+        body: (j['body'] ?? '') as String,
+        cards: ((j['cards'] as List<dynamic>?) ?? const <dynamic>[])
+            .map((dynamic e) =>
+                FlashcardCard.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'code': code,
+        'title': title,
+        'cardCount': cardCount,
+        if (subject.isNotEmpty) 'subject': subject,
+        if (body.isNotEmpty) 'body': body,
+        'cards': cards.map((c) => c.toJson()).toList(),
+      };
+}
+
+/// Leitner box intervals (days) per box — mirror of store.CardBoxIntervals.
+/// Index 0 is unused; box 1 is due immediately.
+const List<int> cardBoxIntervals = <int>[0, 0, 1, 2, 4, 7];
+
+/// Pure Leitner rule — mirror of store.NextCardBox.
+int nextCardBox(int box, String grade) {
+  switch (grade) {
+    case 'again':
+      return 1;
+    case 'good':
+      return box >= 5 ? 5 : box + 1;
+    default: // 'hard' and unknown grades hold position
+      return box < 1 ? 1 : box;
+  }
+}
+
+/// Pure interval lookup — mirror of store.CardIntervalDays.
+int cardIntervalDays(int box) {
+  final b = box < 1 ? 1 : (box > 5 ? 5 : box);
+  return cardBoxIntervals[b];
+}
+
+/// One card's study state (GET/POST /me/cards/progress rows).
+class CardProgress {
+  const CardProgress({
+    required this.cardId,
+    required this.deckCode,
+    required this.box,
+    required this.correct,
+    required this.wrong,
+    required this.dueOn,
+    this.lastGrade = '',
+  });
+
+  final String cardId;
+  final String deckCode;
+  final int box;
+  final int correct;
+  final int wrong;
+  final String dueOn; // YYYY-MM-DD (UTC)
+  final String lastGrade; // again | hard | good
+
+  bool get isDue {
+    final due = DateTime.tryParse(dueOn);
+    if (due == null) return true;
+    final now = DateTime.now().toUtc();
+    final today = DateTime.utc(now.year, now.month, now.day);
+    return !due.isAfter(today);
+  }
+
+  factory CardProgress.fromJson(Map<String, dynamic> j) => CardProgress(
+        cardId: (j['cardId'] ?? '') as String,
+        deckCode: (j['deckCode'] ?? '') as String,
+        box: (j['box'] ?? 1) as int,
+        correct: (j['correct'] ?? 0) as int,
+        wrong: (j['wrong'] ?? 0) as int,
+        dueOn: (j['dueOn'] ?? '') as String,
+        lastGrade: (j['lastGrade'] ?? '') as String,
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'cardId': cardId,
+        'deckCode': deckCode,
+        'box': box,
+        'correct': correct,
+        'wrong': wrong,
+        'dueOn': dueOn,
+        'lastGrade': lastGrade,
+      };
+}
+
+/// One grade to send to POST /me/cards/progress.
+class FlashcardGrade {
+  const FlashcardGrade({
+    required this.cardId,
+    required this.deckCode,
+    required this.grade,
+  });
+
+  final String cardId;
+  final String deckCode;
+  final String grade; // again | hard | good
+}

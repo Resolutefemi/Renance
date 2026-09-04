@@ -102,6 +102,12 @@ body {
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* Flashcard voice pill waveform (ROADMAP #7, voice_flashcards_light). */
+@keyframes renance-wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
 .renance-breathe { animation: renance-breathe 1.8s ease-in-out infinite; }
 .renance-breathe-fast { animation: renance-breathe 0.9s ease-in-out infinite; }
 .renance-orbit { animation: renance-orbit 2.4s linear infinite; transform-origin: center; }

@@ -192,4 +192,72 @@ ATT3=$(curl -fsS -X POST "$BASE/attempts" \
 printf '%s' "$ATT3" | jsonget "d['adaptive']" | grep -q "False"
 printf '%s' "$ATT3" | jsonget "d['order']" | grep -q "None"
 
+# --- ROADMAP #6: fatigue telemetry ---
+NOW=$(python3 -c "import datetime;print(datetime.datetime.now(datetime.timezone.utc).isoformat())")
+step "POST /me/sessions -> fatigue signal computed"
+SESS=$(curl -fsS -X POST "$BASE/me/sessions" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$PACK\",\"startedAt\":\"$NOW\",\"endedAt\":\"$NOW\",\"durationMs\":120000,\"latenciesMs\":[8000,8000,8000,8000,8000,20000,20000,20000,20000,20000]}")
+printf '%s' "$SESS" | jsonget "d['fatigue']['level']" | grep -q "mild"
+printf '%s' "$SESS" | jsonget "d['fatigue']['suggestBreak']" | grep -q "True"
+
+step "POST /me/sessions bad startedAt -> 400"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/me/sessions" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d '{"startedAt":"not-a-time"}')
+[ "$CODE" = "400" ]
+
+step "GET /me/fatigue -> advisory state"
+curl -fsS "$BASE/me/fatigue" -H "Authorization: Bearer $TOKEN" \
+  | jsonget "d['level']" | grep -qE "none|mild|high"
+
+step "GET /me/fatigue without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/me/fatigue")
+[ "$CODE" = "401" ]
+
+# --- ROADMAP #7: voice flashcards ---
+step "GET /flashcards -> starter decks present"
+FC=$(curl -fsS "$BASE/flashcards" -H "Authorization: Bearer $TOKEN")
+DCOUNT=$(printf '%s' "$FC" | jsonget "len(d['decks'])")
+[ "$DCOUNT" -ge 1 ]
+DECK=$(printf '%s' "$FC" | jsonget "d['decks'][0]['code']")
+
+step "GET /flashcards/$DECK -> cards with fronts and backs"
+DK=$(curl -fsS "$BASE/flashcards/$DECK" -H "Authorization: Bearer $TOKEN")
+CN=$(printf '%s' "$DK" | jsonget "len(d['cards'])")
+[ "$CN" -ge 1 ]
+printf '%s' "$DK" | jsonget "d['cards'][0]['front']" >/dev/null
+printf '%s' "$DK" | jsonget "d['cards'][0]['back']" >/dev/null
+
+step "GET /flashcards/nope -> 404"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/flashcards/nope" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "404" ]
+
+step "POST /me/cards/progress -> Leitner box climbs"
+CARD=$(printf '%s' "$DK" | jsonget "d['cards'][0]['id']")
+curl -fsS -X POST "$BASE/me/cards/progress" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"grades\":[{\"cardId\":\"$CARD\",\"deckCode\":\"$DECK\",\"grade\":\"good\"}]}" \
+  | jsonget "d['progress'][0]['box']" | grep -q "2"
+
+step "POST /me/cards/progress again -> box resets to 1"
+curl -fsS -X POST "$BASE/me/cards/progress" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"grades\":[{\"cardId\":\"$CARD\",\"grade\":\"again\"}]}" \
+  | jsonget "d['progress'][0]['box']" | grep -q "1"
+
+step "POST /me/cards/progress invalid grade -> 400"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/me/cards/progress" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"grades\":[{\"cardId\":\"$CARD\",\"grade\":\"maybe\"}]}")
+[ "$CODE" = "400" ]
+
+step "GET /me/cards/progress -> rows persisted"
+curl -fsS "$BASE/me/cards/progress" -H "Authorization: Bearer $TOKEN" \
+  | jsonget "d['progress'][0]['lastGrade']" | grep -q "again"
+
+step "GET /flashcards without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/flashcards")
+[ "$CODE" = "401" ]
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"

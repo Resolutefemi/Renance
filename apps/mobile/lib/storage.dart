@@ -88,6 +88,41 @@ class PendingSubmission {
       );
 }
 
+/// A flashcard grade waiting to reach the server (offline queue entry).
+class PendingCardGrade {
+  const PendingCardGrade({
+    required this.id,
+    required this.cardId,
+    required this.deckCode,
+    required this.grade,
+    required this.createdAt,
+  });
+
+  final String id; // unique queue key
+  final String cardId;
+  final String deckCode;
+  final String grade; // again | hard | good
+  final DateTime createdAt;
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'id': id,
+        'cardId': cardId,
+        'deckCode': deckCode,
+        'grade': grade,
+        'createdAt': createdAt.millisecondsSinceEpoch,
+      };
+
+  factory PendingCardGrade.fromJson(Map<String, dynamic> j) =>
+      PendingCardGrade(
+        id: (j['id'] ?? '') as String,
+        cardId: (j['cardId'] ?? '') as String,
+        deckCode: (j['deckCode'] ?? '') as String,
+        grade: (j['grade'] ?? '') as String,
+        createdAt: DateTime.fromMillisecondsSinceEpoch(
+            (j['createdAt'] ?? 0) as int),
+      );
+}
+
 // --------------------------------------------------------------- pack store
 
 abstract class PackStore {
@@ -107,6 +142,25 @@ abstract class PackStore {
   Future<void> queueSubmission(PendingSubmission submission);
   Future<List<PendingSubmission>> pendingSubmissions();
   Future<void> removeSubmission(String id);
+
+  // ---- flashcards (ROADMAP #7): offline deck cache + progress + queue ----
+
+  /// Caches the deck list for offline browsing.
+  Future<void> saveDeckMetas(List<FlashcardDeckMeta> decks);
+  Future<List<FlashcardDeckMeta>> cachedDeckMetas();
+
+  /// Caches one full deck (cards included) for offline voice study.
+  Future<void> saveDeck(FlashcardDeck deck);
+  Future<FlashcardDeck?> loadDeck(String code);
+
+  /// Local mirror of the server's Leitner state (optimistic UI + offline).
+  Future<void> saveCardProgress(List<CardProgress> rows);
+  Future<List<CardProgress>> loadCardProgress();
+
+  /// Offline grades queue — flushed FIFO by SyncController.retryPending.
+  Future<void> queueCardGrade(PendingCardGrade grade);
+  Future<List<PendingCardGrade>> pendingCardGrades();
+  Future<void> removeCardGrade(String id);
 }
 
 /// Production implementation backed by sqflite.
@@ -125,9 +179,31 @@ class DbPackStore implements PackStore {
     return db;
   }
 
+  static const _cardTables = [
+    '''
+    CREATE TABLE flashcard_decks (
+      code TEXT PRIMARY KEY,
+      json TEXT NOT NULL,
+      updated_at INTEGER NOT NULL
+    )''',
+    '''
+    CREATE TABLE card_progress_cache (
+      card_id TEXT PRIMARY KEY,
+      payload TEXT NOT NULL,
+      updated_at INTEGER NOT NULL
+    )''',
+    '''
+    CREATE TABLE pending_card_grades (
+      id TEXT PRIMARY KEY,
+      card_id TEXT NOT NULL,
+      payload TEXT NOT NULL,
+      created_at INTEGER NOT NULL
+    )''',
+  ];
+
   static Future<Database> _defaultOpen() async => openDatabase(
         p.join(await getDatabasesPath(), 'renance.db'),
-        version: 1,
+        version: 2,
         onCreate: (db, version) async {
           await db.execute('''
             CREATE TABLE packs (
@@ -144,6 +220,16 @@ class DbPackStore implements PackStore {
               payload TEXT NOT NULL,
               created_at INTEGER NOT NULL
             )''');
+          for (final ddl in _cardTables) {
+            await db.execute(ddl);
+          }
+        },
+        onUpgrade: (db, oldVersion, newVersion) async {
+          if (oldVersion < 2) {
+            for (final ddl in _cardTables) {
+              await db.execute(ddl);
+            }
+          }
         },
       );
 
@@ -238,6 +324,125 @@ class DbPackStore implements PackStore {
     await db
         .delete('pending_submissions', where: 'attempt_id = ?', whereArgs: <Object?>[id]);
   }
+
+  @override
+  Future<void> saveDeckMetas(List<FlashcardDeckMeta> decks) async {
+    final db = await _open();
+    final batch = db.batch();
+    final now = DateTime.now().millisecondsSinceEpoch;
+    for (final d in decks) {
+      batch.insert(
+        'flashcard_decks',
+        <String, Object?>{
+          'code': d.code,
+          'json': jsonEncode(d.toJson()),
+          'updated_at': now,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
+    }
+    await batch.commit(noResult: true);
+  }
+
+  @override
+  Future<List<FlashcardDeckMeta>> cachedDeckMetas() async {
+    final db = await _open();
+    final rows = await db.query('flashcard_decks', orderBy: 'code ASC');
+    return rows
+        .map((r) => FlashcardDeckMeta.fromJson(
+            (jsonDecode(r['json']! as String) as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  @override
+  Future<void> saveDeck(FlashcardDeck deck) async {
+    final db = await _open();
+    await db.insert(
+      'flashcard_decks',
+      <String, Object?>{
+        'code': deck.code,
+        'json': jsonEncode(deck.toJson()),
+        'updated_at': DateTime.now().millisecondsSinceEpoch,
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  @override
+  Future<FlashcardDeck?> loadDeck(String code) async {
+    final db = await _open();
+    final rows = await db.query('flashcard_decks',
+        where: 'code = ?', whereArgs: <Object?>[code], limit: 1);
+    if (rows.isEmpty) return null;
+    try {
+      return FlashcardDeck.fromJson(
+          (jsonDecode(rows.first['json']! as String) as Map).cast<String, dynamic>());
+    } on FormatException {
+      return null;
+    }
+  }
+
+  @override
+  Future<void> saveCardProgress(List<CardProgress> rows) async {
+    final db = await _open();
+    final batch = db.batch();
+    final now = DateTime.now().millisecondsSinceEpoch;
+    for (final r in rows) {
+      batch.insert(
+        'card_progress_cache',
+        <String, Object?>{
+          'card_id': r.cardId,
+          'payload': jsonEncode(r.toJson()),
+          'updated_at': now,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
+    }
+    await batch.commit(noResult: true);
+  }
+
+  @override
+  Future<List<CardProgress>> loadCardProgress() async {
+    final db = await _open();
+    final rows = await db.query('card_progress_cache');
+    return rows
+        .map((r) => CardProgress.fromJson(
+            (jsonDecode(r['payload']! as String) as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  @override
+  Future<void> queueCardGrade(PendingCardGrade grade) async {
+    final db = await _open();
+    await db.insert(
+      'pending_card_grades',
+      <String, Object?>{
+        'id': grade.id,
+        'card_id': grade.cardId,
+        'payload': jsonEncode(grade.toJson()),
+        'created_at': grade.createdAt.millisecondsSinceEpoch,
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  @override
+  Future<List<PendingCardGrade>> pendingCardGrades() async {
+    final db = await _open();
+    final rows =
+        await db.query('pending_card_grades', orderBy: 'created_at ASC');
+    return rows
+        .map((r) => PendingCardGrade.fromJson(
+            (jsonDecode(r['payload']! as String) as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  @override
+  Future<void> removeCardGrade(String id) async {
+    final db = await _open();
+    await db.delete('pending_card_grades',
+        where: 'id = ?', whereArgs: <Object?>[id]);
+  }
 }
 
 /// In-memory double for widget/controller tests.
@@ -276,4 +481,64 @@ class MemoryPackStore implements PackStore {
 
   @override
   Future<void> removeSubmission(String id) async => _pending.remove(id);
+
+  final Map<String, FlashcardDeck> _decks = <String, FlashcardDeck>{};
+  final Map<String, CardProgress> _cardProgress = <String, CardProgress>{};
+  final Map<String, PendingCardGrade> _pendingGrades =
+      <String, PendingCardGrade>{};
+
+  @override
+  Future<void> saveDeckMetas(List<FlashcardDeckMeta> decks) async {
+    for (final d in decks) {
+      _decks[d.code] = FlashcardDeck(
+        code: d.code,
+        title: d.title,
+        cardCount: d.cardCount,
+        subject: d.subject,
+        body: d.body,
+        cards: const <FlashcardCard>[],
+      );
+    }
+  }
+
+  @override
+  Future<List<FlashcardDeckMeta>> cachedDeckMetas() async =>
+      _decks.values
+          .map((d) => FlashcardDeckMeta(
+                code: d.code,
+                title: d.title,
+                cardCount: d.cardCount,
+                subject: d.subject,
+                body: d.body,
+              ))
+          .toList();
+
+  @override
+  Future<void> saveDeck(FlashcardDeck deck) async =>
+      _decks[deck.code] = deck;
+
+  @override
+  Future<FlashcardDeck?> loadDeck(String code) async => _decks[code];
+
+  @override
+  Future<void> saveCardProgress(List<CardProgress> rows) async {
+    for (final r in rows) {
+      _cardProgress[r.cardId] = r;
+    }
+  }
+
+  @override
+  Future<List<CardProgress>> loadCardProgress() async =>
+      _cardProgress.values.toList();
+
+  @override
+  Future<void> queueCardGrade(PendingCardGrade grade) async =>
+      _pendingGrades[grade.id] = grade;
+
+  @override
+  Future<List<PendingCardGrade>> pendingCardGrades() async =>
+      _pendingGrades.values.toList();
+
+  @override
+  Future<void> removeCardGrade(String id) async => _pendingGrades.remove(id);
 }

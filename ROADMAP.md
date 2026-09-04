@@ -1,6 +1,6 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-04 (after the syllabus + adaptive session).
+Last updated: 2026-09-04 (after the fatigue + voice flashcards session).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -51,8 +51,8 @@ need no external services — they ship fastest.
 | 3 | **Spaced repetition** | SM-2 scheduling on attempt topics; migration 0005 `study.review_queue`; nightly-friendly job endpoint; app + web "Review due today". | **LIVE** (2026-09-03 — migration 0005, pure SM-2 with tests, grading-worker wiring, `GET /me/review` + admin tick, app review tab hero/queue preview + web /review queue landing) |
 | 4 | **Syllabus mapping** | `data/syllabus/{jamb,waec,university-modules}.json` topic trees; boot-validated against every pack topic (cbtdata refuses unknown tags); `GET /syllabus/{body}` overlays the student's SM-2 mastery per topic; score report weak-topic chips + syllabus map screens (app + web). | **LIVE** (2026-09-04) |
 | 5 | **Adaptive UI** | `POST /attempts {adaptive:true}` ranks the pack weak-topic-first from the review queue's SM-2 state (ease, lapses, last accuracy, due-ness) — pure `store.AdaptiveOrder`, persisted on `attempts.question_order` (migration 0006); mobile Smart-order toggle + web switch; qbuild lint rejects topics outside the syllabus tree. | **LIVE** (2026-09-04) |
-| 6 | **Fatigue monitoring** | Client-side session telemetry (answer latency drift, session length) → gentle "take a break" nudge + server-side `study.sessions` log. No PII beyond timing. | NEXT |
-| 7 | **Voice flashcards** | Flutter TTS reads card fronts/backs; recording-free (no mic permission needed); works offline. Mobile-first. | NEXT |
+| 6 | **Fatigue monitoring** | Pure `fatigue.Assess` (latency drift + sitting length) mirrored in Dart + TS; `POST /me/sessions` re-computes and logs to `study.sessions` (migration 0007), `GET /me/fatigue` powers the home banner; exam players show the fatigue_nudge overlay (Take 5 pauses the clock) and fire-and-forget telemetry. | **LIVE** (2026-09-04) |
+| 7 | **Voice flashcards** | `data/flashcards/*.json` decks boot-validated in cbtdata; `GET /flashcards[/code]`, `POST /me/cards/progress` Leitner boxes (pure, mirrored on all clients) + `study.card_progress` (0007); app player with flutter_tts + offline deck cache + pending-grade queue; web player with speechSynthesis. | **LIVE** (2026-09-04) |
 | 8 | **MDX conversion** | `tools/mdx`: rich lesson content pipeline → static content bundles served by the API like exam packs. Pure Go. | NEXT |
 
 ### Class B — Needs an AI provider key (one key unblocks five features)

@@ -250,4 +250,82 @@ class ApiClient {
         await _send('GET', '/syllabus/$bodySlug') as Map<dynamic, dynamic>;
     return SyllabusTree.fromJson(data.cast<String, dynamic>());
   }
+
+  // ---------------------------------------------------------------- fatigue
+
+  /// Logs one sitting's telemetry (ROADMAP #6) and returns the server's
+  /// fatigue signal — the same pure rule the app mirrors locally.
+  Future<FatigueSignal> logSession({
+    required String startedAt,
+    String? endedAt,
+    String? attemptId,
+    String? code,
+    int? durationMs,
+    List<int> latenciesMs = const <int>[],
+  }) async {
+    final data = await _send('POST', '/me/sessions', body: <String, dynamic>{
+      'startedAt': startedAt,
+      if (endedAt != null) 'endedAt': endedAt,
+      if (attemptId != null && attemptId.isNotEmpty) 'attemptId': attemptId,
+      if (code != null && code.isNotEmpty) 'code': code,
+      if (durationMs != null) 'durationMs': durationMs,
+      'latenciesMs': latenciesMs,
+    }) as Map<dynamic, dynamic>;
+    return FatigueSignal.fromJson(
+        ((data['fatigue'] ?? const <String, dynamic>{}) as Map)
+            .cast<String, dynamic>());
+  }
+
+  /// The current take-a-break advisory (home banner state).
+  Future<FatigueState> fatigue() async {
+    final data = await _send('GET', '/me/fatigue') as Map<dynamic, dynamic>;
+    return FatigueState.fromJson(data.cast<String, dynamic>());
+  }
+
+  // ------------------------------------------------------------- flashcards
+
+  /// Deck list (meta only, no cards).
+  Future<List<FlashcardDeckMeta>> flashcardDecks() async {
+    final data = await _send('GET', '/flashcards') as Map<dynamic, dynamic>;
+    return ((data['decks'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            FlashcardDeckMeta.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// One deck with its full card stack.
+  Future<FlashcardDeck> flashcardDeck(String code) async {
+    final data =
+        await _send('GET', '/flashcards/$code') as Map<dynamic, dynamic>;
+    return FlashcardDeck.fromJson(data.cast<String, dynamic>());
+  }
+
+  /// The student's Leitner state for every card they have touched.
+  Future<List<CardProgress>> cardProgress() async {
+    final data =
+        await _send('GET', '/me/cards/progress') as Map<dynamic, dynamic>;
+    return ((data['progress'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            CardProgress.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// Batch-grades flashcards; returns the updated rows in input order.
+  Future<List<CardProgress>> gradeCards(
+      List<FlashcardGrade> grades) async {
+    final data = await _send('POST', '/me/cards/progress',
+        body: <String, dynamic>{
+          'grades': grades
+              .map((g) => <String, dynamic>{
+                    'cardId': g.cardId,
+                    'deckCode': g.deckCode,
+                    'grade': g.grade,
+                  })
+              .toList(),
+        }) as Map<dynamic, dynamic>;
+    return ((data['progress'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            CardProgress.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
 }
