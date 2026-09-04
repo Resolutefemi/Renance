@@ -15,6 +15,7 @@ import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
 import 'downloads_screen.dart';
+import 'flashcards_screen.dart';
 import 'exam_screen.dart';
 import 'library_screen.dart';
 import 'onboarding_sheet.dart';
@@ -484,6 +485,10 @@ class _LauncherTab extends StatelessWidget {
             const SizedBox(height: 12),
             _SyncErrorBanner(sync: sync),
           ],
+          if (student.fatigue?.suggestBreak ?? false) ...<Widget>[
+            const SizedBox(height: 12),
+            _FatigueBanner(state: student.fatigue!),
+          ],
           // Practice grid -------------------------------------------------
           const SizedBox(height: 8),
           Text('Practice',
@@ -512,7 +517,10 @@ class _LauncherTab extends StatelessWidget {
                 child: LauncherTile(
                   icon: Icons.style,
                   label: 'Flashcards',
-                  onTap: () => _soon(context, 'Voice flashcards'),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const FlashcardsScreen()),
+                  ),
                 ),
               ),
               Expanded(
@@ -1194,6 +1202,50 @@ Future<void> showMoreSheet(BuildContext context) {
 }
 
 /// One square feature tile of the More sheet (Soon badge supported).
+/// Gentle take-a-break banner (ROADMAP #6) — appears after the student's
+/// recent sittings trip the server's fatigue thresholds.
+class _FatigueBanner extends StatelessWidget {
+  const _FatigueBanner({required this.state});
+
+  final FatigueState state;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: RenanceColors.surfaceContainerLow,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: RenanceColors.selectionBlue),
+      ),
+      child: Row(
+        children: <Widget>[
+          const Icon(Icons.self_improvement,
+              size: 22, color: RenanceColors.violet),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('Time for a short break?',
+                    style: RenanceText.bodyMedium.copyWith(fontSize: 14)),
+                const SizedBox(height: 2),
+                Text(
+                  state.reason.isNotEmpty
+                      ? state.reason
+                      : 'You have been studying a while today.',
+                  style: RenanceText.caption
+                      .copyWith(color: RenanceColors.textSecondary),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _MoreTile extends StatelessWidget {
   const _MoreTile({
     required this.icon,

@@ -16,6 +16,7 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import 'fatigue_nudge.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
 import 'renance_logo.dart';
 import 'syllabus_screen.dart';
@@ -62,7 +63,13 @@ class _ExamScreenState extends State<ExamScreen> {
             child: LogoActivityIndicator(label: 'Opening pack…'),
           ),
         ExamPhase.intro => _Intro(controller: c),
-        ExamPhase.playing => _Player(controller: c, mmss: _mmss),
+        ExamPhase.playing => FatigueNudgeOverlay(
+            visible: c.nudgeVisible,
+            reasons: c.signal.reasons,
+            onTakeBreak: c.takeBreak,
+            onKeepGoing: c.keepGoing,
+            child: _Player(controller: c, mmss: _mmss),
+          ),
         ExamPhase.grading => const Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -284,22 +291,38 @@ class _ExamHeader extends StatelessWidget {
                   color: RenanceColors.darkSurfaceLow,
                   borderRadius: BorderRadius.circular(999),
                 ),
-                child: Row(
-                  children: <Widget>[
-                    const Icon(Icons.timer, size: 16, color: RenanceColors.emerald),
-                    const SizedBox(width: 4),
-                    Text(
-                      mmss(controller.secondsRemaining),
-                      style: RenanceText.labelMono.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: RenanceColors.emerald,
-                        fontFeatures: const <FontFeature>[
-                          FontFeature.tabularFigures()
-                        ],
-                      ),
-                    ),
-                  ],
+                child: Builder(
+                  builder: (BuildContext pillContext) {
+                    final bool breaking = controller.breakSecondsLeft > 0;
+                    final Color pillColor = breaking
+                        ? RenanceColors.violet
+                        : RenanceColors.emerald;
+                    return Row(
+                      children: <Widget>[
+                        Icon(
+                          breaking
+                              ? Icons.self_improvement
+                              : Icons.timer,
+                          size: 16,
+                          color: pillColor,
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          breaking
+                              ? mmss(controller.breakSecondsLeft)
+                              : mmss(controller.secondsRemaining),
+                          style: RenanceText.labelMono.copyWith(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                            color: pillColor,
+                            fontFeatures: const <FontFeature>[
+                              FontFeature.tabularFigures()
+                            ],
+                          ),
+                        ),
+                      ],
+                    );
+                  },
                 ),
               ),
             ],

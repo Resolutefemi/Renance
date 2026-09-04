@@ -243,7 +243,7 @@ export default function DashboardPage() {
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md">
             <LauncherTile icon="description" label="Exams" href="#packs" />
             <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
-            <LauncherTile icon="style" label="Flashcards" soon />
+            <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
             <LauncherTile icon="menu_book" label="Syllabus" href="/syllabus" />
           </div>
         </section>

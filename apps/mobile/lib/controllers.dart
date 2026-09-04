@@ -10,6 +10,7 @@ import 'package:flutter/foundation.dart';
 import 'api_client.dart';
 import 'models.dart';
 import 'storage.dart';
+import 'tts.dart';
 
 // ------------------------------------------------------------ sync controller
 
@@ -143,12 +144,29 @@ enum ExamPhase { loading, intro, playing, grading, queued, graded, error }
 /// The CBT player state machine. Offline submissions are queued in the
 /// PackStore and SyncController.retryPending() flushes them later.
 class ExamController extends ChangeNotifier {
-  ExamController({required ApiClient api, required PackStore store})
-      : _api = api,
-        _store = store;
+  ExamController({
+    required ApiClient api,
+    required PackStore store,
+    DateTime Function()? clock,
+  })  : _api = api,
+        _store = store,
+        _clock = clock ?? DateTime.now;
 
   final ApiClient _api;
   final PackStore _store;
+
+  /// Injectable wall clock (tests drive it deterministically).
+  final DateTime Function() _clock;
+
+  /// Fatigue telemetry (ROADMAP #6): per-answer latencies in answer
+  /// order, the running signal, the nudge overlay state and the 5-minute
+  /// break the nudge offers. No PII beyond timing leaves the device.
+  final List<int> latenciesMs = <int>[];
+  DateTime _shownAt = DateTime.now();
+  FatigueSignal signal = FatigueSignal.none;
+  bool nudgeVisible = false;
+  bool nudgeDismissed = false;
+  int breakSecondsLeft = 0;
 
   ExamPhase phase = ExamPhase.loading;
   ExamMeta? meta;
@@ -214,6 +232,12 @@ class ExamController extends ChangeNotifier {
     index = 0;
     answers.clear();
     flags.clear();
+    latenciesMs.clear();
+    signal = FatigueSignal.none;
+    nudgeVisible = false;
+    nudgeDismissed = false;
+    breakSecondsLeft = 0;
+    _shownAt = _clock();
     phase = ExamPhase.intro;
     notifyListeners();
   }
@@ -245,7 +269,8 @@ class ExamController extends ChangeNotifier {
       error = null;
     }
     secondsRemaining = (bundle!.durationMinutes ?? 30) * 60;
-    _startedAt = DateTime.now();
+    _startedAt = _clock();
+    _shownAt = _clock();
     phase = ExamPhase.playing;
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: 1), (_) => tick());
@@ -256,6 +281,13 @@ class ExamController extends ChangeNotifier {
   /// tests can drive the clock deterministically.
   Future<void> tick() async {
     if (phase != ExamPhase.playing) return;
+    // "Take 5": the break runs on its own countdown and the exam clock
+    // is paused for it — that is the whole point of the break.
+    if (breakSecondsLeft > 0) {
+      breakSecondsLeft -= 1;
+      notifyListeners();
+      return;
+    }
     if (secondsRemaining > 0) {
       secondsRemaining -= 1;
       notifyListeners();
@@ -266,7 +298,38 @@ class ExamController extends ChangeNotifier {
   }
 
   void select(String questionId, String letter) {
+    if (!answers.containsKey(questionId)) {
+      latenciesMs.add(_clock().difference(_shownAt).inMilliseconds);
+      _assessFatigue();
+    }
     answers[questionId] = letter;
+    notifyListeners();
+  }
+
+  /// Wall-clock minutes since the sitting began.
+  double get elapsedMinutes =>
+      _clock().difference(_startedAt).inMilliseconds / 60000.0;
+
+  void _assessFatigue() {
+    signal = assessFatigue(List<int>.of(latenciesMs), elapsedMinutes);
+    if (signal.suggestBreak && !nudgeDismissed) {
+      nudgeVisible = true;
+    }
+  }
+
+  /// The nudge's "Take 5": pause the exam clock for five minutes.
+  void takeBreak() {
+    breakSecondsLeft = 300;
+    nudgeVisible = false;
+    nudgeDismissed = true;
+    _shownAt = _clock(); // the break is not answer time
+    notifyListeners();
+  }
+
+  /// The nudge's "Keep going": quiet for the rest of the sitting.
+  void keepGoing() {
+    nudgeVisible = false;
+    nudgeDismissed = true;
     notifyListeners();
   }
 
@@ -280,6 +343,7 @@ class ExamController extends ChangeNotifier {
   void goTo(int i) {
     if (bundle == null) return;
     index = i.clamp(0, bundle!.questions.length - 1);
+    _shownAt = _clock();
     notifyListeners();
   }
 
@@ -291,9 +355,11 @@ class ExamController extends ChangeNotifier {
       return;
     }
     _timer?.cancel();
-    final durationMs = DateTime.now().difference(_startedAt).inMilliseconds;
+    final durationMs = _clock().difference(_startedAt).inMilliseconds;
     _durationMs = durationMs;
     phase = ExamPhase.grading;
+    signal = assessFatigue(List<int>.of(latenciesMs), durationMs / 60000.0);
+    _reportSession(durationMs);
     notifyListeners();
 
     // Paper answered but attempt row never reached the server (user went
@@ -326,6 +392,31 @@ class ExamController extends ChangeNotifier {
     ));
     phase = ExamPhase.queued;
     notifyListeners();
+  }
+
+  /// Best-effort telemetry POST (ROADMAP #6). Never awaited by the exam
+  /// flow and never surfaces errors: offline sittings simply skip it.
+  void _reportSession(int durationMs) {
+    final id = _attemptId ?? '';
+    if (id.startsWith('offline-')) return; // server unreachable this sitting
+    final latencies = List<int>.of(latenciesMs);
+    final started = _startedAt.toUtc().toIso8601String();
+    final code = bundle?.code ?? '';
+    unawaited(() async {
+      try {
+        await _api.logSession(
+          startedAt: started,
+          attemptId: id,
+          code: code,
+          durationMs: durationMs,
+          latenciesMs: latencies,
+        );
+      } on ApiException catch (_) {
+        // Permanent server decision — telemetry is dropped, not queued.
+      } on NetworkException catch (_) {
+        // Transient — telemetry is dropped, not queued (never load-bearing).
+      }
+    }());
   }
 
   Future<void> _poll() async {
@@ -395,6 +486,7 @@ class StudentController extends ChangeNotifier {
   MeResult? me;
   GamificationSummary? gamification;
   ReviewSummary? review;
+  FatigueState? fatigue;
   List<AttemptRow> attempts = <AttemptRow>[];
   Set<String> downloaded = <String>{};
   bool loading = false;
@@ -517,12 +609,14 @@ class StudentController extends ChangeNotifier {
         _api.attempts(),
         _store.downloadedCodes(),
         _api.reviewQueue(),
+        _api.fatigue(),
       ]);
       me = results[0] as MeResult;
       gamification = results[1] as GamificationSummary;
       attempts = results[2] as List<AttemptRow>;
       downloaded = results[3] as Set<String>;
       review = results[4] as ReviewSummary;
+      fatigue = results[5] as FatigueState;
     } on ApiException catch (e) {
       error = e.message;
     } on NetworkException catch (e) {
@@ -535,5 +629,283 @@ class StudentController extends ChangeNotifier {
   Future<void> refreshDownloaded() async {
     downloaded = await _store.downloadedCodes();
     notifyListeners();
+  }
+}
+
+// ------------------------------------------------------ flashcards controller
+
+enum CardsPhase { loading, ready, error }
+
+/// Voice flashcards (ROADMAP #7): deck list, offline-cached decks, the
+/// Leitner box state and the on-device speech engine. Decks come from the
+/// API like exam packs, cache into the same local store, and progress
+/// syncs with an offline queue — the exact pattern of exam submissions.
+class FlashcardsController extends ChangeNotifier {
+  FlashcardsController({
+    required ApiClient api,
+    required PackStore store,
+    SpeechEngine? speech,
+    DateTime Function()? clock,
+  })  : _api = api,
+        _store = store,
+        speech = speech ?? FlutterTtsEngine(),
+        _clock = clock ?? DateTime.now;
+
+  final ApiClient _api;
+  final PackStore _store;
+
+  /// The voice behind "reads card fronts/backs aloud" — injected so tests
+  /// run with a fake and no platform channels.
+  final SpeechEngine speech;
+  final DateTime Function() _clock;
+
+  CardsPhase phase = CardsPhase.loading;
+  List<FlashcardDeckMeta> decks = <FlashcardDeckMeta>[];
+  FlashcardDeck? deck;
+  Map<String, CardProgress> progress = <String, CardProgress>{};
+
+  int index = 0;
+  bool revealed = false;
+  bool voiceOn = true;
+  bool gradesPending = false;
+  String? error;
+
+  FlashcardCard? get current =>
+      deck == null || index >= deck!.cards.length ? null : deck!.cards[index];
+
+  /// Cards sitting in box 3+ (seen and mostly recalled).
+  int get knownCount =>
+      progress.values.where((p) => p.box >= 3).length;
+
+  /// True after the last card was graded — the completed state.
+  bool get isDeckDone => deck != null && index >= deck!.cards.length;
+
+  Future<void> loadDecks() async {
+    phase = CardsPhase.loading;
+    error = null;
+    notifyListeners();
+    // Offline-first: paint the cache immediately, then refresh quietly.
+    try {
+      decks = await _store.cachedDeckMetas();
+      if (decks.isNotEmpty) {
+        phase = CardsPhase.ready;
+        notifyListeners();
+      }
+    } catch (_) {
+      // Corrupt cache rows — the refresh below replaces them anyway.
+    }
+    unawaited(retryPendingGrades());
+    try {
+      decks = await _api.flashcardDecks();
+      await _store.saveDeckMetas(decks);
+      phase = CardsPhase.ready;
+    } on ApiException catch (e) {
+      if (decks.isEmpty) {
+        phase = CardsPhase.error;
+        error = e.message;
+      } else {
+        phase = CardsPhase.ready;
+      }
+    } on NetworkException catch (e) {
+      if (decks.isEmpty) {
+        phase = CardsPhase.error;
+        error = e.message;
+      } else {
+        phase = CardsPhase.ready;
+      }
+    }
+    notifyListeners();
+  }
+
+  Future<void> openDeck(String code) async {
+    phase = CardsPhase.loading;
+    error = null;
+    notifyListeners();
+    final cached = await _store.loadDeck(code);
+    if (cached != null && cached.cards.isNotEmpty) {
+      deck = cached;
+    } else {
+      try {
+        deck = await _api.flashcardDeck(code);
+        await _store.saveDeck(deck!);
+      } on ApiException catch (e) {
+        error = e.message;
+        phase = CardsPhase.error;
+        notifyListeners();
+        return;
+      } on NetworkException catch (e) {
+        error = e.message;
+        phase = CardsPhase.error;
+        notifyListeners();
+        return;
+      }
+    }
+    final rows = await _store.loadCardProgress();
+    progress = <String, CardProgress>{for (final r in rows) r.cardId: r};
+    index = 0;
+    revealed = false;
+    phase = CardsPhase.ready;
+    notifyListeners();
+    unawaited(_refreshProgress());
+    unawaited(_speakCurrent());
+  }
+
+  Future<void> _refreshProgress() async {
+    try {
+      final rows = await _api.cardProgress();
+      // MERGE, never replace: local-only rows (offline grades still in the
+      // queue) must survive the refresh, server rows win on conflict.
+      progress = <String, CardProgress>{
+        ...progress,
+        for (final r in rows) r.cardId: r,
+      };
+      await _store.saveCardProgress(rows);
+      notifyListeners();
+    } on ApiException catch (_) {
+      // Server said no — local state keeps working.
+    } on NetworkException catch (_) {
+      // Offline — local state keeps working.
+    }
+  }
+
+  /// Flip the card; the back is spoken on reveal.
+  void flip() {
+    revealed = !revealed;
+    notifyListeners();
+    if (revealed && voiceOn) {
+      unawaited(speech.speak(current?.back ?? ''));
+    }
+  }
+
+  void next() {
+    if (deck == null) return;
+    if (index < deck!.cards.length) index++;
+    revealed = false;
+    notifyListeners();
+    unawaited(_speakCurrent());
+  }
+
+  void previous() {
+    if (deck == null || index == 0) return;
+    index--;
+    revealed = false;
+    notifyListeners();
+    unawaited(_speakCurrent());
+  }
+
+  /// Grades the current card (again | hard | good), applies the pure
+  /// Leitner rule optimistically, advances, then syncs (or queues offline).
+  Future<void> grade(String g) async {
+    final card = current;
+    if (card == null || deck == null) return;
+    final deckCode = deck!.code;
+    final prev = progress[card.id];
+    final baseBox = prev?.box ?? 1;
+    final newBox = nextCardBox(baseBox, g);
+    final now = _clock().toUtc();
+    final due = DateTime.utc(now.year, now.month, now.day)
+        .add(Duration(days: cardIntervalDays(newBox)));
+    final updated = CardProgress(
+      cardId: card.id,
+      deckCode: deckCode,
+      box: newBox,
+      correct: (prev?.correct ?? 0) + (g == 'again' ? 0 : 1),
+      wrong: (prev?.wrong ?? 0) + (g == 'again' ? 1 : 0),
+      dueOn: due.toIso8601String().substring(0, 10),
+      lastGrade: g,
+    );
+    progress[card.id] = updated;
+    await _store.saveCardProgress(<CardProgress>[updated]);
+    notifyListeners();
+    // Every grade advances — the design's Again/Hard/Good all move on.
+    next();
+
+    final grade = FlashcardGrade(cardId: card.id, deckCode: deckCode, grade: g);
+    try {
+      final rows = await _api.gradeCards(<FlashcardGrade>[grade]);
+      for (final r in rows) {
+        progress[r.cardId] = r;
+      }
+      await _store.saveCardProgress(rows);
+      gradesPending = (await _store.pendingCardGrades()).isNotEmpty;
+      notifyListeners();
+    } on ApiException catch (_) {
+      // Permanent server decision — the local Leitner state stands.
+    } on NetworkException catch (_) {
+      await _store.queueCardGrade(PendingCardGrade(
+        id: 'g-${card.id}-${now.millisecondsSinceEpoch}',
+        cardId: card.id,
+        deckCode: deckCode,
+        grade: g,
+        createdAt: _clock(),
+      ));
+      gradesPending = true;
+      notifyListeners();
+    }
+  }
+
+  /// Flush queued card grades, FIFO. Network failures keep entries;
+  /// permanent server decisions clear them.
+  Future<void> retryPendingGrades() async {
+    final pending = await _store.pendingCardGrades();
+    for (final item in pending) {
+      try {
+        final rows = await _api.gradeCards(<FlashcardGrade>[
+          FlashcardGrade(
+              cardId: item.cardId, deckCode: item.deckCode, grade: item.grade),
+        ]);
+        await _store.removeCardGrade(item.id);
+        for (final r in rows) {
+          progress[r.cardId] = r;
+        }
+        await _store.saveCardProgress(rows);
+      } on ApiException catch (_) {
+        await _store.removeCardGrade(item.id);
+        break;
+      } on NetworkException catch (_) {
+        break; // still offline — try again later
+      }
+    }
+    gradesPending = (await _store.pendingCardGrades()).isNotEmpty;
+    notifyListeners();
+  }
+
+  Future<void> _speakCurrent() async {
+    if (!voiceOn || deck == null) return;
+    await speech.speak(revealed ? (current?.back ?? '') : (current?.front ?? ''));
+  }
+
+  /// Voice on/off — turning it on re-reads the current side.
+  void toggleVoice() {
+    voiceOn = !voiceOn;
+    if (!voiceOn) {
+      unawaited(speech.stop());
+    } else {
+      unawaited(_speakCurrent());
+    }
+    notifyListeners();
+  }
+
+  void closeDeck() {
+    unawaited(speech.stop());
+    deck = null;
+    index = 0;
+    revealed = false;
+    notifyListeners();
+  }
+
+  /// Back to card one (the deck-complete screen's "Run it again").
+  void restartDeck() {
+    index = 0;
+    revealed = false;
+    notifyListeners();
+    unawaited(_speakCurrent());
+  }
+
+  @override
+  void dispose() {
+    speech.stop();
+    speech.dispose();
+    super.dispose();
   }
 }
