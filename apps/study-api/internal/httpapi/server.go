@@ -9,6 +9,12 @@
 //	GET    /me/attempts           -> paper history (newest first)
 //	GET    /me/gamification     -> streaks, XP, badges (zero state on first launch)
 //	GET    /me/review            -> spaced-repetition queue (due today + upcoming)
+//	GET    /me/fatigue           -> current take-a-break advisory (ROADMAP #6)
+//	POST   /me/sessions          -> log one sitting's telemetry, signal out
+//	GET    /me/cards/progress    -> flashcard Leitner state
+//	POST   /me/cards/progress    -> batch-grade flashcards
+//	GET    /flashcards           -> deck list
+//	GET    /flashcards/{code}    -> one deck with cards
 //	PUT    /me/profile             {fullName, institution, gradeLevel, exams[], targetYear?}
 //	GET    /manifest
 //	GET    /bundles/{code}
@@ -80,7 +86,13 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /me/attempts", s.auth(s.handleListAttempts))
 	mux.HandleFunc("GET /me/gamification", s.auth(s.handleGamification))
 	mux.HandleFunc("GET /me/review", s.auth(s.handleReviewQueue))
+	mux.HandleFunc("GET /me/fatigue", s.auth(s.handleFatigue))
+	mux.HandleFunc("POST /me/sessions", s.auth(s.handleLogSession))
+	mux.HandleFunc("GET /me/cards/progress", s.auth(s.handleCardProgress))
+	mux.HandleFunc("POST /me/cards/progress", s.auth(s.handleGradeCards))
 	mux.HandleFunc("GET /syllabus/{body}", s.auth(s.handleSyllabus))
+	mux.HandleFunc("GET /flashcards", s.auth(s.handleFlashcardDecks))
+	mux.HandleFunc("GET /flashcards/{code}", s.auth(s.handleFlashcardDeck))
 	mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
 	mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))

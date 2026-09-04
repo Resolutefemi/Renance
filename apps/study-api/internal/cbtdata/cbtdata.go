@@ -71,9 +71,11 @@ type Manifest struct {
 }
 
 type Library struct {
-	manifest Manifest
-	bundles  map[string]*Bundle
-	syllabi  map[string]*Syllabus
+	manifest  Manifest
+	bundles   map[string]*Bundle
+	syllabi   map[string]*Syllabus
+	decks     map[string]*Deck
+	deckOrder []string
 }
 
 // Load reads dataDir/manifest.json and verifies every referenced bundle.
@@ -86,7 +88,7 @@ func Load(dataDir string) (*Library, error) {
 	if err := json.Unmarshal(raw, &m); err != nil {
 		return nil, fmt.Errorf("cbtdata: parse manifest: %w", err)
 	}
-	lib := &Library{manifest: m, bundles: map[string]*Bundle{}}
+	lib := &Library{manifest: m, bundles: map[string]*Bundle{}, decks: map[string]*Deck{}}
 	for _, ex := range m.Exams {
 		path := filepath.Join(dataDir, "questions", ex.Code+".json")
 		bundleRaw, err := os.ReadFile(path)
@@ -122,6 +124,9 @@ func Load(dataDir string) (*Library, error) {
 		return nil, err
 	}
 	if err := lib.validateTopics(); err != nil {
+		return nil, err
+	}
+	if err := lib.loadFlashcards(dataDir); err != nil {
 		return nil, err
 	}
 	return lib, nil

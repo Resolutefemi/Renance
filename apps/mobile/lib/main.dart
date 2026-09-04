@@ -64,6 +64,9 @@ class RenanceApp extends StatelessWidget {
         ChangeNotifierProvider<ExamController>(
           create: (_) => ExamController(api: api, store: store),
         ),
+        ChangeNotifierProvider<FlashcardsController>(
+          create: (_) => FlashcardsController(api: api, store: store),
+        ),
       ],
       child: AnimatedBuilder(
         animation: theme,

@@ -48,6 +48,10 @@ class FakeApi extends ApiClient {
 
   bool lastAdaptive = false;
 
+  // Fatigue telemetry (ROADMAP #6) captures.
+  int logSessionCalls = 0;
+  final List<int> loggedLatencies = <int>[];
+
   @override
   Future<AttemptStarted> createAttempt(String code, {bool adaptive = false}) async {
     lastAdaptive = adaptive;
@@ -76,6 +80,29 @@ class FakeApi extends ApiClient {
     return const AttemptView(
         attemptId: 'a-1', code: 'pack', status: 'grading');
   }
+
+  @override
+  Future<FatigueSignal> logSession({
+    required String startedAt,
+    String? endedAt,
+    String? attemptId,
+    String? code,
+    int? durationMs,
+    List<int> latenciesMs = const <int>[],
+  }) async {
+    logSessionCalls += 1;
+    loggedLatencies.addAll(latenciesMs);
+    return FatigueSignal.none;
+  }
+
+  @override
+  Future<FatigueState> fatigue() async => const FatigueState(
+        level: 'none',
+        suggestBreak: false,
+        minutesToday: 0,
+        minutesLast3h: 0,
+        sessionsToday: 0,
+      );
 }
 
 ExamMeta meta(String code, String body) => ExamMeta(
@@ -107,6 +134,7 @@ Bundle bundleFor(String code) => Bundle(
 
 void main() {
   mainAdaptiveBlock();
+  mainFatigueBlock();
   group('SyncController — need-based downloads', () {
     test('downloads only packs matching profile exams', () async {
       final FakeApi api = FakeApi()
@@ -353,3 +381,131 @@ void mainAdaptiveBlock() {
     });
   });
 }
+
+// -------------------------------------------------- fatigue telemetry (6)
+
+void mainFatigueBlock() {
+  group('ExamController — fatigue telemetry (ROADMAP #6)', () {
+    test('selects record latencies, the nudge fires on drift, break pauses the clock',
+        () async {
+      DateTime t = DateTime(2026, 9, 4, 10);
+      final api = FakeApi();
+      final store = MemoryPackStore();
+      final b = tenQuestionBundle('pack');
+      await store.savePack(b, 'sha-pack');
+      final ExamController exam = ExamController(
+        api: api,
+        store: store,
+        clock: () => t,
+      );
+
+      await exam.load(tenQuestionMeta('pack'));
+      expect(exam.phase, ExamPhase.intro);
+      await exam.begin();
+      expect(exam.phase, ExamPhase.playing);
+
+      // Five quick answers (8s each), then three slow ones (20s each):
+      // after the 8th answer the drift is 20/8 = 2.5x -> mild nudge.
+      for (var i = 1; i <= 5; i++) {
+        t = t.add(const Duration(seconds: 8));
+        exam.select('q$i', 'A');
+      }
+      expect(exam.nudgeVisible, isFalse); // only 5 samples — not enough
+      for (var i = 6; i <= 8; i++) {
+        t = t.add(const Duration(seconds: 20));
+        exam.select('q$i', 'A');
+      }
+      expect(exam.latenciesMs, hasLength(8));
+      expect(exam.signal.level, 'mild');
+      expect(exam.nudgeVisible, isTrue);
+      final int secondsBeforeBreak = exam.secondsRemaining;
+
+      // Take 5 pauses the exam clock on its own countdown.
+      exam.takeBreak();
+      expect(exam.breakSecondsLeft, 300);
+      expect(exam.nudgeVisible, isFalse);
+      await exam.tick();
+      expect(exam.breakSecondsLeft, 299);
+      expect(exam.secondsRemaining, secondsBeforeBreak);
+      exam.breakSecondsLeft = 1;
+      await exam.tick();
+      expect(exam.breakSecondsLeft, 0);
+      await exam.tick(); // back to exam time
+      expect(exam.secondsRemaining, secondsBeforeBreak - 1);
+
+      // Keep going dismisses for the rest of the sitting.
+      expect(exam.nudgeDismissed, isTrue); // takeBreak already dismissed
+      exam.keepGoing();
+      expect(exam.nudgeVisible, isFalse);
+      exam.dispose();
+    });
+
+    test('submit posts the telemetry once (fire-and-forget)', () async {
+      DateTime t = DateTime(2026, 9, 4, 10);
+      final api = FakeApi()
+        ..attemptResult = const AttemptView(
+            attemptId: 'a-1',
+            code: 'pack',
+            status: 'graded',
+            result: ExamResult(score: 2, total: 2, breakdown: <TopicRow>[]));
+      final store = MemoryPackStore();
+      await store.savePack(bundleFor('pack'), 'sha-pack');
+      final ExamController exam = ExamController(
+        api: api,
+        store: store,
+        clock: () => t,
+      );
+
+      await exam.load(meta('pack', 'JAMB'));
+      await exam.begin();
+      t = t.add(const Duration(seconds: 9));
+      exam.select('q1', 'A');
+      exam.next(); // advancing resets the per-question shown-at clock
+      t = t.add(const Duration(seconds: 11));
+      exam.select('q2', 'B');
+      t = t.add(const Duration(seconds: 30));
+      await exam.submit();
+      // Let the unawaited telemetry POST land.
+      await Future<void>.delayed(Duration.zero);
+      await Future<void>.delayed(Duration.zero);
+
+      expect(exam.phase, ExamPhase.graded);
+      expect(api.logSessionCalls, 1);
+      expect(api.loggedLatencies, <int>[9000, 11000]);
+      exam.dispose();
+    });
+  });
+}
+
+/// Bundle with [n] questions so telemetry tests can record real drift.
+Bundle tenQuestionBundle(String code) {
+  final questions = <BundleQuestion>[
+    for (var i = 1; i <= 10; i++)
+      BundleQuestion(
+        id: 'q$i',
+        type: 'mcq',
+        stem: 'q$i?',
+        marks: 1,
+        options: const <String, String>{'A': 'x', 'B': 'y'},
+      ),
+  ];
+  return Bundle(
+    code: code,
+    title: code,
+    version: 1,
+    questionCount: 10,
+    totalMarks: 10,
+    durationMinutes: 60,
+    questions: questions,
+  );
+}
+
+ExamMeta tenQuestionMeta(String code) => ExamMeta(
+      code: code,
+      title: code,
+      questionCount: 10,
+      totalMarks: 10,
+      bundleSha256: 'sha-$code',
+      body: 'JAMB',
+      sizeBytes: 10,
+    );

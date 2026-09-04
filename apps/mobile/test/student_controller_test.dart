@@ -107,6 +107,13 @@ void main() {
               'learning': 2,
             },
           },
+      '/me/fatigue': () => <String, dynamic>{
+            'level': 'none',
+            'suggestBreak': false,
+            'minutesToday': 0,
+            'minutesLast3h': 0,
+            'sessionsToday': 0,
+          },
     });
 
     final student = StudentController(api: api, store: MemoryPackStore());
@@ -174,6 +181,13 @@ void main() {
               'mature': 0,
               'learning': 0,
             },
+          },
+      '/me/fatigue': () => <String, dynamic>{
+            'level': 'none',
+            'suggestBreak': false,
+            'minutesToday': 0,
+            'minutesLast3h': 0,
+            'sessionsToday': 0,
           },
     });
 
