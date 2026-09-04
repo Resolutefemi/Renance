@@ -269,8 +269,9 @@ function DayCircle({ dot }: { dot: ReturnType<typeof weekDots>[number] }) {
 
 function BadgeTile({ badge, earned }: { badge: BadgeSpec; earned: boolean }) {
   return (
-    <div
-      className={`rounded-xl bg-surface-container-lowest p-3 text-center shadow-[0_1px_3px_rgba(20,28,45,0.10)] ${
+    <Link
+      href={`/badges/${badge.code}`}
+      className={`rounded-xl bg-surface-container-lowest p-3 text-center shadow-[0_1px_3px_rgba(20,28,45,0.10)] transition hover:shadow-md ${
         earned ? '' : 'opacity-50 grayscale'
       }`}
       title={earned ? badge.label : badge.hint}
@@ -308,6 +309,6 @@ function BadgeTile({ badge, earned }: { badge: BadgeSpec; earned: boolean }) {
       >
         {badge.label}
       </p>
-    </div>
+    </Link>
   );
 }
