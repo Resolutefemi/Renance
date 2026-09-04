@@ -217,9 +217,18 @@ class _SearchScreenState extends State<SearchScreen> {
         nav.push<void>(MaterialPageRoute<void>(
           builder: (_) => PackDetailScreen(
             exam: exam,
-            onStart: (BuildContext ctx, ExamMeta meta) {
+            onStart: (
+              BuildContext ctx,
+              ExamMeta meta, {
+              int? durationOverrideMinutes,
+              bool untimed = false,
+            }) {
               Navigator.of(ctx).push<void>(MaterialPageRoute<void>(
-                builder: (_) => ExamScreen(exam: meta),
+                builder: (_) => ExamScreen(
+                  exam: meta,
+                  durationOverrideMinutes: durationOverrideMinutes,
+                  untimed: untimed,
+                ),
               ));
             },
           ),

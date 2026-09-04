@@ -186,6 +186,16 @@ class ExamController extends ChangeNotifier {
 
   int index = 0;
   int secondsRemaining = 0;
+
+  /// Practice Settings overrides (Stitch practice_mode_setup): a chosen
+  /// timer replaces the pack's own duration; untimed runs the paper
+  /// with a count-up clock instead of a countdown.
+  int? durationOverrideMinutes;
+  bool untimed = false;
+
+  /// Count-up clock seconds for untimed practice runs.
+  int elapsedSeconds = 0;
+
   final Map<String, String> answers = <String, String>{};
   final Set<String> flags = <String>{};
 
@@ -206,8 +216,15 @@ class ExamController extends ChangeNotifier {
 
   int get answeredCount => answers.length;
 
-  Future<void> load(ExamMeta examMeta) async {
+  Future<void> load(
+    ExamMeta examMeta, {
+    int? durationOverrideMinutes,
+    bool untimed = false,
+  }) async {
     meta = examMeta;
+    this.durationOverrideMinutes = durationOverrideMinutes;
+    this.untimed = untimed;
+    elapsedSeconds = 0;
     phase = ExamPhase.loading;
     error = null;
     result = null;
@@ -273,7 +290,13 @@ class ExamController extends ChangeNotifier {
       _attemptId = 'offline-${DateTime.now().millisecondsSinceEpoch}';
       error = null;
     }
-    secondsRemaining = (bundle!.durationMinutes ?? 30) * 60;
+    if (untimed) {
+      secondsRemaining = 0;
+    } else if ((durationOverrideMinutes ?? 0) > 0) {
+      secondsRemaining = durationOverrideMinutes! * 60;
+    } else {
+      secondsRemaining = (bundle!.durationMinutes ?? 30) * 60;
+    }
     _startedAt = _clock();
     _shownAt = _clock();
     phase = ExamPhase.playing;
@@ -290,6 +313,11 @@ class ExamController extends ChangeNotifier {
     // is paused for it, that is the whole point of the break.
     if (breakSecondsLeft > 0) {
       breakSecondsLeft -= 1;
+      notifyListeners();
+      return;
+    }
+    if (untimed) {
+      elapsedSeconds += 1;
       notifyListeners();
       return;
     }
