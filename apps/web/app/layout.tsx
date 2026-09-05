@@ -116,9 +116,13 @@ export const metadata: Metadata = {
    (light / mixed / dark, persisted in localStorage) never flashes. */
 const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='mixed'&&t!=='dark')t='light';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light';}})();`;
 
+/* suppressHydrationWarning: the inline theme bootstrap writes data-theme
+   onto <html> before React hydrates, so the DOM attribute never matches
+   the server render by design. Without this flag the mismatch can break
+   hydration and leave client pages stuck. */
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         {/* Founder mockups load Inter + JetBrains Mono, kept as runtime
