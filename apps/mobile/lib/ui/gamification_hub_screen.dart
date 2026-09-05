@@ -419,11 +419,11 @@ class _LevelCard extends StatelessWidget {
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: context.ink,
+                  color: context.inverseChip,
                 ),
                 child: Text('${state.level}',
                     style: RenanceText.statNumber.copyWith(
-                        color: Colors.white, fontSize: 18)),
+                        color: context.onInverseChip, fontSize: 18)),
               ),
             ],
           ),

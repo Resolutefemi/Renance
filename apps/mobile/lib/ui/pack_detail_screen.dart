@@ -249,7 +249,7 @@ class _StatsGrid extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -339,7 +339,7 @@ class _OfflineCard extends StatelessWidget {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: context.card,
               shape: BoxShape.circle,
             ),
             child: Icon(icon, size: 20, color: tint),
@@ -386,7 +386,7 @@ class _TopicCoverage extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: context.card,
         borderRadius: BorderRadius.circular(12),
         boxShadow: const <BoxShadow>[
           BoxShadow(
@@ -491,8 +491,8 @@ class _PrimaryButton extends StatelessWidget {
         child: FilledButton(
           onPressed: onPressed,
           style: FilledButton.styleFrom(
-            backgroundColor: Colors.black,
-            foregroundColor: Colors.white,
+            backgroundColor: context.inverseChip,
+            foregroundColor: context.onInverseChip,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),

@@ -75,7 +75,10 @@ class ArenaLobbyScreen extends StatelessWidget {
                         child: FilledButton(
                           style: FilledButton.styleFrom(
                             backgroundColor: Colors.white,
-                            foregroundColor: context.ink,
+                            // The hero card is dark in every tier, so the
+                            // on-color stays the fixed ink (context.ink
+                            // would turn white in the dark tier).
+                            foregroundColor: RenanceColors.ink,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12)),
                           ),
@@ -91,6 +94,7 @@ class ArenaLobbyScreen extends StatelessWidget {
                               SizedBox(width: 8),
                               Text('Find a Match',
                                   style: TextStyle(
+                                      fontFamily: 'Inter',
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600)),
                             ],
@@ -324,7 +328,11 @@ class _RankRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: you ? const Color(0xFFEEF1FB) : null,
+      color: you
+          ? (context.isDarkTier
+              ? RenanceColors.darkSurfaceLow
+              : const Color(0xFFEEF1FB))
+          : null,
       child: Row(
         children: <Widget>[
           if (you)
@@ -343,7 +351,7 @@ class _RankRow extends StatelessWidget {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: you ? Colors.white : const Color(0xFFEEF1FB),
+              color: you ? Colors.white : context.cardHigh,
               shape: BoxShape.circle,
             ),
             padding: const EdgeInsets.all(6),

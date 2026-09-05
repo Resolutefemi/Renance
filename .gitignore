@@ -38,3 +38,6 @@ apps/study-api/bin/
 # tracked exception — real bank keys must never enter the repo.
 data/answer-keys/*
 !data/answer-keys/mock/
+
+# theme-flip golden renders (regenerable via --update-goldens)
+apps/mobile/test/goldens/

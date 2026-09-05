@@ -148,7 +148,9 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                 Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFE4EAFB),
+                    color: context.isDarkTier
+                        ? RenanceColors.darkSurface
+                        : const Color(0xFFE4EAFB),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Row(
@@ -170,7 +172,8 @@ class _StudyPlanScreenState extends State<StudyPlanScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text('Fatigue Insight',
-                                style: RenanceText.bodyMedium),
+                                style: RenanceText.bodyMedium
+                                    .copyWith(color: context.ink)),
                             SizedBox(height: 8),
                             Text(
                               "You usually fade after ~25 min in the "
@@ -222,7 +225,9 @@ class _PlanRow extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
       decoration: BoxDecoration(
-        color: const Color(0xFFEEF1FB),
+        color: context.isDarkTier
+            ? RenanceColors.darkSurfaceLow
+            : const Color(0xFFEEF1FB),
         borderRadius: BorderRadius.circular(14),
       ),
       child: Row(
@@ -265,7 +270,9 @@ class _PlanRow extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(title, style: RenanceText.bodyMedium.copyWith(fontSize: 17)),
+                Text(title,
+                    style: RenanceText.bodyMedium
+                        .copyWith(fontSize: 17, color: context.ink)),
                 const SizedBox(height: 2),
                 Text('$meta • $focus',
                     style: RenanceText.bodySecondary.copyWith(color: context.textSecondary, fontSize: 15)),

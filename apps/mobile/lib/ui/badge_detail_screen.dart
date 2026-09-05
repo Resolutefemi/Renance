@@ -60,7 +60,7 @@ class BadgeDetailScreen extends StatefulWidget {
 }
 
 class _BadgeDetailScreenState extends State<BadgeDetailScreen>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   late final AnimationController _spin = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 20),

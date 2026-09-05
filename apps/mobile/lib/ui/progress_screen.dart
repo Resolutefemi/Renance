@@ -418,14 +418,14 @@ class _LevelCard extends StatelessWidget {
                   height: 48,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: context.ink,
+                    color: context.inverseChip,
                   ),
                   alignment: Alignment.center,
                   child: Text('${state.level}',
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
-                          color: Colors.white)),
+                          color: context.onInverseChip)),
                 ),
               ],
             ),

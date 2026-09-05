@@ -18,14 +18,16 @@ class RenanceMark extends StatefulWidget {
     super.key,
     this.size = 44,
     this.busy = false,
-    this.onDark = false,
+    this.onDark,
   });
 
   final double size;
   final bool busy;
 
-  /// Set when the mark sits on a dark container so the white cut is used.
-  final bool onDark;
+  /// Set when the mark sits on a known container color so the white cut
+  /// is used. Left null it resolves from the active Appearance tier, so
+  /// dark pages automatically get the light mark.
+  final bool? onDark;
 
   @override
   State<RenanceMark> createState() => _RenanceMarkState();
@@ -46,6 +48,10 @@ class _RenanceMarkState extends State<RenanceMark>
 
   @override
   Widget build(BuildContext context) {
+    // Explicit wins; otherwise the tier decides (dark pages need the
+    // white cut, light pages the ink mark).
+    final bool onDarkSurface =
+        widget.onDark ?? Theme.of(context).colorScheme.brightness == Brightness.dark;
     return AnimatedBuilder(
       animation: _controller,
       builder: (BuildContext context, Widget? _) {
@@ -66,7 +72,7 @@ class _RenanceMarkState extends State<RenanceMark>
               Transform.scale(
                 scale: scale,
                 child: Image.asset(
-                  widget.onDark
+                  onDarkSurface
                       ? 'assets/brand/renance_mark_white.png'
                       : 'assets/brand/renance_mark.png',
                   width: widget.size * 0.86,

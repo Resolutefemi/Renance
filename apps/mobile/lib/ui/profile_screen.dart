@@ -74,15 +74,16 @@ class ProfileScreen extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 8, vertical: 2),
                           decoration: BoxDecoration(
-                            color: context.ink,
+                            color: context.inverseChip,
                             borderRadius: BorderRadius.circular(999),
-                            border: Border.all(color: Colors.white, width: 2),
+                            border: Border.all(
+                                color: context.card, width: 2),
                           ),
                           child: Text(
                             'Lvl $level',
                             style: RenanceText.labelMono.copyWith(
                               fontSize: 11,
-                              color: Colors.white,
+                              color: context.onInverseChip,
                             ),
                           ),
                         ),

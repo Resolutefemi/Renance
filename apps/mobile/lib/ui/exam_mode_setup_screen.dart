@@ -552,7 +552,7 @@ class _BeginBar extends StatelessWidget {
           height: 52,
           child: DecoratedBox(
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: context.inverseChip,
               borderRadius: BorderRadius.circular(10),
               boxShadow: const <BoxShadow>[
                 BoxShadow(
@@ -565,7 +565,7 @@ class _BeginBar extends StatelessWidget {
             child: TextButton(
               onPressed: onBegin,
               style: TextButton.styleFrom(
-                foregroundColor: Colors.white,
+                foregroundColor: context.onInverseChip,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
               ),
@@ -573,7 +573,8 @@ class _BeginBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text('Begin Mock Exam',
-                      style: RenanceText.bodyMedium.copyWith(color: Colors.white)),
+                      style: RenanceText.bodyMedium
+                          .copyWith(color: context.onInverseChip)),
                   const SizedBox(width: 8),
                   const Icon(Icons.arrow_forward, size: 20),
                 ],

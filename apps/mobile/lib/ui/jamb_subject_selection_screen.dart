@@ -508,7 +508,7 @@ class _StartBar extends StatelessWidget {
             opacity: enabled ? 1 : 0.4,
             child: DecoratedBox(
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: context.inverseChip,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: enabled
                     ? const <BoxShadow>[
@@ -523,9 +523,9 @@ class _StartBar extends StatelessWidget {
               child: TextButton(
                 onPressed: enabled ? onStart : null,
                 style: TextButton.styleFrom(
-                  foregroundColor: Colors.white,
+                  foregroundColor: context.onInverseChip,
                   disabledForegroundColor:
-                      Colors.white.withValues(alpha: 0.5),
+                      context.onInverseChip.withValues(alpha: 0.5),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                 ),
@@ -536,7 +536,7 @@ class _StartBar extends StatelessWidget {
                     const SizedBox(width: 8),
                     Text('Start Mock Exam',
                         style: RenanceText.bodyMedium
-                            .copyWith(color: Colors.white)),
+                            .copyWith(color: context.onInverseChip)),
                   ],
                 ),
               ),
