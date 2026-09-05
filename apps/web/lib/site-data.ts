@@ -96,3 +96,57 @@ export function loadSyllabi(): SyllabusFile[] {
   }
   return out.sort((a, b) => a.body.localeCompare(b.body));
 }
+
+// ------------------------------------------------------- career (18)
+
+export interface CareerScholarship {
+  id: string;
+  name: string;
+  provider: string;
+  level: string; // undergraduate | postgraduate | both
+  coverage: string;
+  window: string;
+  tags: string[];
+  url: string;
+  eligibility: string;
+}
+
+export interface CareerPath {
+  id: string;
+  course: string;
+  field: string;
+  blurb: string;
+  cutoff: string;
+  subjects: string[];
+  universities: string[];
+  topics: string[];
+}
+
+export interface CareerData {
+  scholarships: CareerScholarship[];
+  paths: CareerPath[];
+}
+
+/**
+ * The curated career bridge (ROADMAP #18), baked from data/career/*.json
+ * at build time, exactly what GET /career serves the app. Null when the
+ * install carries no career data.
+ */
+export function loadCareer(): CareerData | null {
+  const base = dataDir();
+  if (!base) return null;
+  try {
+    const scholarships = JSON.parse(
+      readFileSync(path.join(base, 'career', 'scholarships.json'), 'utf8'),
+    ) as { scholarships?: CareerScholarship[] };
+    const paths = JSON.parse(
+      readFileSync(path.join(base, 'career', 'paths.json'), 'utf8'),
+    ) as { paths?: CareerPath[] };
+    return {
+      scholarships: scholarships.scholarships ?? [],
+      paths: paths.paths ?? [],
+    };
+  } catch {
+    return null;
+  }
+}

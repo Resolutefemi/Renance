@@ -525,6 +525,10 @@ class StudentController extends ChangeNotifier {
   /// Public read for screens that need one-off API calls outside the
   /// controller's cached state (e.g. the syllabus map).
   ApiClient? get api => _api;
+
+  /// Public read for screens that need the pack store directly (the
+  /// offline-share export path loads a cached bundle by code).
+  PackStore get store => _store;
   final PackStore _store;
 
   MeResult? me;

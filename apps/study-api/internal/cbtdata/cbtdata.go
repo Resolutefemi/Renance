@@ -71,13 +71,15 @@ type Manifest struct {
 }
 
 type Library struct {
-	manifest    Manifest
-	bundles     map[string]*Bundle
-	syllabi     map[string]*Syllabus
-	decks       map[string]*Deck
-	deckOrder   []string
-	lessons     map[string]*Lesson
-	lessonOrder []string
+	manifest     Manifest
+	bundles      map[string]*Bundle
+	syllabi      map[string]*Syllabus
+	decks        map[string]*Deck
+	deckOrder    []string
+	lessons      map[string]*Lesson
+	lessonOrder  []string
+	scholarships []Scholarship
+	paths        []CareerPath
 }
 
 // Load reads dataDir/manifest.json and verifies every referenced bundle.
@@ -132,6 +134,9 @@ func Load(dataDir string) (*Library, error) {
 		return nil, err
 	}
 	if err := lib.loadLessons(dataDir); err != nil {
+		return nil, err
+	}
+	if err := lib.loadCareer(dataDir); err != nil {
 		return nil, err
 	}
 	return lib, nil

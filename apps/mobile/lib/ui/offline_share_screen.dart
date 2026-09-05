@@ -1,15 +1,29 @@
 /// Offline share, the Stitch offline_share_light screen, 1:1.
 ///
 /// Send Pack / Receive cards, the nearby-phone radar (the R mark at the
-/// center with sweeping rings) and the Devices Found sheet row. Static
-/// friendly: discovery is simulated locally, Connect shows a snackbar
-/// until the peer channel ships.
+/// center with sweeping rings) and the Devices Found sheet row.
+///
+/// The FILE slice of ROADMAP #16 is real: a downloaded pack is a sealed
+/// questions-only bundle, so Send Pack writes it to a .renance-pack.json
+/// file and hands it to the OS share sheet (Bluetooth, Xender, ShareIT,
+/// Nearby, any offline pipe students already use), and Receive imports a
+/// picked file through the same strict validation the API boot applies.
+/// The radar and the peer sheet stay the Stitch design; a true
+/// phone-to-phone channel is the later slice.
 library;
 
+import 'dart:convert';
+import 'dart:io';
 import 'dart:math' as math;
 
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
+import '../controllers.dart';
+import '../models.dart';
+import '../pack_share.dart';
 import 'theme.dart';
 
 class OfflineShareScreen extends StatefulWidget {
@@ -75,8 +89,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                         child: _ActionCard(
                           icon: Icons.arrow_upward,
                           label: 'Send Pack',
-                          onTap: () => _snack(context,
-                              'Pick a pack to send when a device connects.'),
+                          onTap: () => _sendFlow(context),
                         ),
                       ),
                       const SizedBox(width: 12),
@@ -84,8 +97,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                         child: _ActionCard(
                           icon: Icons.arrow_downward,
                           label: 'Receive',
-                          onTap: () => _snack(context,
-                              'Stay on this screen to receive a pack.'),
+                          onTap: () => _receiveFlow(context),
                         ),
                       ),
                     ],
@@ -203,7 +215,7 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                   // children unbounded, so pin a real min.
                                   minimumSize: const Size(96, 44),
                                 ),
-                                onPressed: () => _snack(context,
+                                onPressed: () => _snack(
                                     'Peer transfer ships in an upcoming release.'),
                                 child: const Text('Connect',
                                     style: TextStyle(
@@ -225,10 +237,154 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
     );
   }
 
-  void _snack(BuildContext context, String message) {
+  void _snack(String message) {
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(message)),
     );
+  }
+
+  // ------------------------------------------------------- file slice (16)
+
+  /// Send Pack: pick one of the packs on this phone, write it to a
+  /// .renance-pack.json file and open the OS share sheet. The sheet is
+  /// the transport; Bluetooth, Xender, ShareIT and Nearby all appear.
+  Future<void> _sendFlow(BuildContext context) async {
+    final StudentController student = context.read<StudentController>();
+    final SyncController sync = context.read<SyncController>();
+    final List<ExamMeta> onDevice = <ExamMeta>[
+      for (final ExamMeta e in sync.exams)
+        if (student.downloaded.contains(e.code)) e,
+    ];
+    if (onDevice.isEmpty) {
+      _snack(
+          'Download a pack in your Library first, then send it from here.');
+      return;
+    }
+    final ExamMeta? picked = await showModalBottomSheet<ExamMeta>(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (BuildContext sheetContext) => Container(
+        decoration: BoxDecoration(
+          color: sheetContext.pageBg,
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(24)),
+        ),
+        padding: const EdgeInsets.fromLTRB(16, 10, 16, 20),
+        child: SafeArea(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Center(
+                child: Container(
+                  width: 44,
+                  height: 5,
+                  decoration: BoxDecoration(
+                    color: sheetContext.cardHigh,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 14),
+              const Text('Send a pack', style: RenanceText.sectionTitle),
+              const SizedBox(height: 4),
+              Text(
+                'They receive every question, offline, no data needed.',
+                style: RenanceText.bodySecondary
+                    .copyWith(color: sheetContext.textSecondary),
+              ),
+              const SizedBox(height: 10),
+              Flexible(
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: onDevice.length,
+                  itemBuilder: (BuildContext _, int i) => ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    leading: Container(
+                      width: 44,
+                      height: 44,
+                      decoration: BoxDecoration(
+                        color: sheetContext.cardHigh,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(Icons.folder_outlined,
+                          size: 22, color: sheetContext.ink),
+                    ),
+                    title: Text(
+                      student.titleForCode(onDevice[i].code),
+                      overflow: TextOverflow.ellipsis,
+                      style: RenanceText.bodyMedium,
+                    ),
+                    subtitle: Text(
+                      '${onDevice[i].questionCount} questions',
+                      style: RenanceText.caption
+                          .copyWith(color: sheetContext.textSecondary),
+                    ),
+                    trailing: Icon(Icons.chevron_right,
+                        size: 24, color: sheetContext.textSecondary),
+                    onTap: () => Navigator.of(sheetContext).pop(onDevice[i]),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (picked == null || !mounted) return;
+
+    try {
+      final Bundle? bundle =
+          await student.store.loadPackByCode(picked.code);
+      if (!mounted) return;
+      if (bundle == null) {
+        _snack( 'That pack is no longer on this device.');
+        return;
+      }
+      final File file = File(
+        '${Directory.systemTemp.path}/${sharedPackFileName(bundle)}',
+      );
+      await file.writeAsString(encodeSharedPack(bundle), flush: true);
+      await Share.shareXFiles(
+        <XFile>[XFile(file.path)],
+        text: 'Renance pack: ${bundle.title}',
+        subject: bundle.title,
+      );
+    } on IOException {
+      if (mounted) _snack( 'Could not write the pack file.');
+    }
+  }
+
+  /// Receive: pick a shared pack file, run it through the strict
+  /// validation, store it, refresh the Library badge.
+  Future<void> _receiveFlow(BuildContext context) async {
+    final StudentController student = context.read<StudentController>();
+    final FilePickerResult? result = await FilePicker.platform.pickFiles(
+      type: FileType.custom,
+      allowedExtensions: <String>['json'],
+      withData: true,
+    );
+    if (result == null || result.files.isEmpty || !mounted) return;
+    final PlatformFile picked = result.files.single;
+    if (picked.bytes == null) {
+      _snack( 'Could not read that file.');
+      return;
+    }
+
+    try {
+      final Bundle bundle =
+          decodeSharedPack(utf8.decode(picked.bytes!));
+      await student.store.savePack(bundle, packSha(bundle));
+      await student.refreshDownloaded();
+      if (!mounted) return;
+      _snack( '${bundle.title} imported. It is in your Library.');
+    } on PackShareException catch (e) {
+      _snack( e.message);
+    } on FormatException {
+      _snack( 'That file is not valid JSON.');
+    } on IOException {
+      _snack( 'Could not store the pack on this device.');
+    }
   }
 }
 

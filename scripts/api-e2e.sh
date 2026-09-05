@@ -283,6 +283,19 @@ step "GET /lessons without token -> 401"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/lessons")
 [ "$CODE" = "401" ]
 
+step "GET /career -> curated scholarships + course paths (ROADMAP #18)"
+CR=$(curl -fsS "$BASE/career" -H "Authorization: Bearer $TOKEN")
+SCOUNT=$(printf '%s' "$CR" | jsonget "len(d['scholarships'])")
+[ "$SCOUNT" -ge 5 ]
+PCOUNT=$(printf '%s' "$CR" | jsonget "len(d['paths'])")
+[ "$PCOUNT" -ge 8 ]
+printf '%s' "$CR" | jsonget "d['scholarships'][0]['window']" >/dev/null
+printf '%s' "$CR" | jsonget "d['paths'][0]['topics'][0]" >/dev/null
+
+step "GET /career without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/career")
+[ "$CODE" = "401" ]
+
 # --- ROADMAP #9: Socratic tutor (hint mode without an AI key) ---
 step "GET /tutor/status -> aiEnabled false (no key configured)"
 TS=$(curl -fsS "$BASE/tutor/status" -H "Authorization: Bearer $TOKEN")

@@ -1,8 +1,9 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-05 (study-plan screens on app + web now read the live
-backends: SM-2 due count #3, weakest syllabus subject #4, /me/fatigue #6,
-Leitner cards due #7; #8 lessons pipeline flipped LIVE).
+Last updated: 2026-09-05 (career bridge #18 shipped end-to-end with a curated
+Nigerian scholarship + JAMB course-path catalogue; offline share #16 shipped
+its real file slice; study-plan screens read the live backends; #8 flipped
+LIVE).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -73,9 +74,9 @@ need no external services — they ship fastest.
 | --- | --- | --- | --- |
 | 14 | **Multiplayer arena** | Live head-to-head quizzes. Render supports WebSockets; needs a presence layer (in-process hub first, Redis later) + matchmaker tables. | **NEEDS DEP** — decide always-on Render plan vs. separate WS host when we ship it |
 | 15 | **Code sandbox** | Students run small code challenges. Needs an isolated runner (Firecracker/Nscale-style or a SaaS like Piston) — never run untrusted code in the study-api container. | NEEDS DEP — sandbox provider choice |
-| 16 | **Bluetooth mesh** (offline sharing) | Flutter + `nearby_connections`-style plugin: share question packs between phones offline. No server work; platform permissions + testing matrix. | NEXT (mobile slice) — schedule after APK pipeline is stable |
+| 16 | **Bluetooth mesh** (offline sharing) | A pack is a sealed questions-only bundle, so the offline slice ships as FILES: Send Pack writes `{code}.renance-pack.json` and opens the OS share sheet (Bluetooth, Xender, ShareIT, Nearby, any pipe students already use); Receive imports through the same strict validation the API boot applies (counts, marks, ids, thin MCQs) and keeps a sha256 integrity key. Pure `pack_share` codec, unit-tested. The phone-to-phone radio channel (nearby_connections) is a later slice once device testing is possible. | **LIVE** (2026-09-05, file slice) |
 | 17 | **Smart-contract certificates** | Achievement certificates minted on a testnet (Base/Scroll sepolia), wallet optional. Needs testnet RPC + contract + wallet UX decisions. | NEEDS DEP — testnet choice; park until core learning loop is deep |
-| 18 | **Career bridge** | Scholarships/jamb-path content + partner links; mostly content + curation UI. | NEXT after syllabus mapping (reuses topic graph) |
+| 18 | **Career bridge** | `data/career/{scholarships,paths}.json`: curated catalogue (9 real Nigerian scholarship programs with honest windows + official domains, 13 JAMB course paths with subject combinations, typical competitive aggregates and universities); boot-validated join, every path topic must exist in a syllabus tree; `GET /career` (E2E-asserted); app screen reads it live and opens provider pages; web `/career-bridge/` bakes the same files, public with SEO metadata + sitemap. | **LIVE** (2026-09-05) |
 | 19 | **Patron portal** | Sponsors fund exam fees/data for students. Needs payments (Paystack for NG first) + ledger tables + privacy boundary design. | **NEEDS DEP** — payment provider account |
 
 ## Explicitly parked (your call, already agreed)
