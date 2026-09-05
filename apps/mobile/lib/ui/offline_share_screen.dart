@@ -12,11 +12,10 @@
 /// phone-to-phone channel is the later slice.
 library;
 
-import 'dart:convert';
 import 'dart:io';
 import 'dart:math' as math;
 
-import 'package:file_picker/file_picker.dart';
+import 'package:file_selector/file_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
@@ -359,31 +358,24 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
   /// validation, store it, refresh the Library badge.
   Future<void> _receiveFlow(BuildContext context) async {
     final StudentController student = context.read<StudentController>();
-    final FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: <String>['json'],
-      withData: true,
+    final XFile? file = await openFile(
+      acceptedTypeGroups: <XTypeGroup>[
+        const XTypeGroup(label: 'Renance pack', extensions: <String>['json']),
+      ],
     );
-    if (result == null || result.files.isEmpty || !mounted) return;
-    final PlatformFile picked = result.files.single;
-    if (picked.bytes == null) {
-      _snack( 'Could not read that file.');
-      return;
-    }
+    if (file == null || !mounted) return;
 
     try {
-      final Bundle bundle =
-          decodeSharedPack(utf8.decode(picked.bytes!));
+      final Bundle bundle = decodeSharedPack(await file.readAsString());
       await student.store.savePack(bundle, packSha(bundle));
       await student.refreshDownloaded();
-      if (!mounted) return;
-      _snack( '${bundle.title} imported. It is in your Library.');
+      _snack('${bundle.title} imported. It is in your Library.');
     } on PackShareException catch (e) {
-      _snack( e.message);
+      _snack(e.message);
     } on FormatException {
-      _snack( 'That file is not valid JSON.');
-    } on IOException {
-      _snack( 'Could not store the pack on this device.');
+      _snack('That file is not valid JSON.');
+    } on FileSystemException {
+      _snack('Could not store the pack on this device.');
     }
   }
 }
