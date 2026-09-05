@@ -85,6 +85,9 @@ class MemPackStore extends PackStore {
   Future<Bundle?> loadPack(String code, String sha) async => packs[code];
 
   @override
+  Future<Bundle?> loadPackByCode(String code) async => packs[code];
+
+  @override
   Future<Set<String>> downloadedCodes() async => packs.keys.toSet();
 
   @override

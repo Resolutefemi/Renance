@@ -130,6 +130,11 @@ class PendingCardGrade {
 abstract class PackStore {
   Future<void> savePack(Bundle bundle, String sha);
   Future<Bundle?> loadPack(String code, String sha);
+
+  /// One downloaded pack by code, whatever sha it was stored with. The
+  /// offline-share export path needs the bundle back without knowing the
+  /// manifest digest the sending phone originally used.
+  Future<Bundle?> loadPackByCode(String code);
   Future<Set<String>> downloadedCodes();
 
   /// On-device footprint per pack code (bytes) for the storage meter.
@@ -275,6 +280,26 @@ class DbPackStore implements PackStore {
       'packs',
       where: 'code = ? AND sha = ?',
       whereArgs: <Object?>[code, sha],
+      limit: 1,
+    );
+    if (rows.isEmpty) return null;
+    try {
+      return Bundle.fromJson(
+        (jsonDecode(rows.first['json']! as String) as Map)
+            .cast<String, dynamic>(),
+      );
+    } on FormatException {
+      return null;
+    }
+  }
+
+  @override
+  Future<Bundle?> loadPackByCode(String code) async {
+    final db = await _open();
+    final rows = await db.query(
+      'packs',
+      where: 'code = ?',
+      whereArgs: <Object?>[code],
       limit: 1,
     );
     if (rows.isEmpty) return null;
@@ -561,6 +586,9 @@ class MemoryPackStore implements PackStore {
 
   @override
   Future<Bundle?> loadPack(String code, String sha) async => _packs[code];
+
+  @override
+  Future<Bundle?> loadPackByCode(String code) async => _packs[code];
 
   @override
   Future<Set<String>> downloadedCodes() async => _packs.keys.toSet();

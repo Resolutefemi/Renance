@@ -372,6 +372,15 @@ class ApiClient {
     return Lesson.fromJson(data.cast<String, dynamic>());
   }
 
+  // ------------------------------------------------------------------ career
+
+  /// The curated career bridge (ROADMAP #18): scholarships + course
+  /// paths, committed data boot-validated server-side, safe to cache.
+  Future<CareerData> career() async {
+    final data = await _send('GET', '/career') as Map<dynamic, dynamic>;
+    return CareerData.fromJson(data.cast<String, dynamic>());
+  }
+
   // ------------------------------------------------------------------- tutor
 
   /// Whether an AI provider key is configured server-side. Without one,

@@ -17,6 +17,7 @@
 //	GET    /flashcards/{code}    -> one deck with cards
 //	GET    /lessons              -> lesson list (ROADMAP #8)
 //	GET    /lessons/{slug}       -> one lesson with sections
+//	GET    /career               -> curated scholarships + course paths (ROADMAP #18)
 //	GET    /tutor/status         -> {aiEnabled} (ROADMAP #9)
 //	POST   /attempts/{id}/tutor  -> Socratic chat on a graded attempt
 //	PUT    /me/profile             {fullName, institution, gradeLevel, exams[], targetYear?}
@@ -114,6 +115,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /flashcards/{code}", s.auth(s.handleFlashcardDeck))
 	mux.HandleFunc("GET /lessons", s.auth(s.handleLessons))
 	mux.HandleFunc("GET /lessons/{slug}", s.auth(s.handleLesson))
+	mux.HandleFunc("GET /career", s.auth(s.handleCareer))
 	mux.HandleFunc("GET /tutor/status", s.auth(s.handleTutorStatus))
 	mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
