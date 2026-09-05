@@ -5,8 +5,12 @@
 // three tiers can be flipped through side by side and anything that
 // reads wrong in a tier can be flagged.
 //
-// Run: flutter test test/theme_flip_golden_test.dart --update-goldens
+// Opt-in: RENANCE_GOLDENS=1 flutter test test/theme_flip_golden_test.dart
+//   --update-goldens
+// Skipped in normal runs (and in CI) because golden renders depend on
+// local fonts and are regenerated artifacts, not committed baselines.
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -537,6 +541,10 @@ const List<String> kScreens = <String>[
 ];
 
 void main() {
+  // Golden generation is a local audit tool, not a CI gate.
+  if (Platform.environment['RENANCE_GOLDENS'] != '1') {
+    return;
+  }
   for (final String name in kScreens) {
     testWidgets(
       'tier flip: $name',
