@@ -280,10 +280,12 @@ class _LoginScreenState extends State<LoginScreen> {
           FilledButton.icon(
             onPressed: _busy ? null : _submit,
             icon: _busy
-                ? const SizedBox(
-                    width: 16,
-                    height: 16,
-                    child: RenanceMark(size: 16, busy: true),
+                ? RenanceMark(
+                    size: 16,
+                    busy: true,
+                    // The CTA ground is black in light and white in dark,
+                    // so the mark cut inverts with the tier.
+                    onDark: Theme.of(context).brightness == Brightness.light,
                   )
                 : const Icon(Icons.arrow_forward, size: 18),
             label: Text(_busy ? 'Signing in…' : 'Sign In'),
@@ -419,10 +421,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
           FilledButton.icon(
             onPressed: _busy ? null : _submit,
             icon: _busy
-                ? const SizedBox(
-                    width: 16,
-                    height: 16,
-                    child: RenanceMark(size: 16, busy: true),
+                ? RenanceMark(
+                    size: 16,
+                    busy: true,
+                    // The CTA ground is black in light and white in dark,
+                    // so the mark cut inverts with the tier.
+                    onDark: Theme.of(context).brightness == Brightness.light,
                   )
                 : const Icon(Icons.arrow_forward, size: 18),
             label: Text(_busy ? 'Creating…' : 'Start studying'),

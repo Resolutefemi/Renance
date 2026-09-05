@@ -54,7 +54,11 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     super.initState();
     // Lessons load lazily so the "fresh lessons" shelf has content even on
     // a first visit; failure is silent because the feed works without it.
-    context.read<LessonsController>().load();
+    // Deferred one frame: load() notifies listeners and notifying during
+    // this first build would throw.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) context.read<LessonsController>().load();
+    });
   }
 
   List<FeedItem> _buildFeed(BuildContext context) {

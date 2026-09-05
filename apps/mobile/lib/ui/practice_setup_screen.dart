@@ -309,7 +309,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                       height: 52,
                       child: DecoratedBox(
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: context.inverseChip,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: const <BoxShadow>[
                             BoxShadow(
@@ -322,7 +322,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                         child: TextButton(
                           onPressed: _finish,
                           style: TextButton.styleFrom(
-                            foregroundColor: Colors.white,
+                            foregroundColor: context.onInverseChip,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)),
                           ),
@@ -333,7 +333,7 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                               const SizedBox(width: 8),
                               Text('Start Practice',
                                   style: RenanceText.bodyMedium
-                                      .copyWith(color: Colors.white)),
+                                      .copyWith(color: context.onInverseChip)),
                             ],
                           ),
                         ),

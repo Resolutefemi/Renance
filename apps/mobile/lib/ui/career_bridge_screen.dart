@@ -55,22 +55,32 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: <Color>[
-                        Color(0xFFEAF1FE),
-                        Color(0xFFD8E3FB),
-                        Color(0xFFC7D9F7),
-                      ],
-                    ),
+                    gradient: context.isDarkTier
+                        ? const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: <Color>[
+                              RenanceColors.darkSurface,
+                              RenanceColors.darkSurfaceLow,
+                              Color(0xFF223252),
+                            ],
+                          )
+                        : const LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: <Color>[
+                              Color(0xFFEAF1FE),
+                              Color(0xFFD8E3FB),
+                              Color(0xFFC7D9F7),
+                            ],
+                          ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text('Career Bridge',
-                          style: RenanceText.overline.copyWith(
-                              color: context.textSecondary)),
+                          style: RenanceText.overline
+                              .copyWith(color: context.textSecondary)),
                       const Spacer(),
                       Text(
                         'Where can Biology take you?',
@@ -84,7 +94,8 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                       ),
                       const SizedBox(height: 8),
                       Text('Explore pathways and funding',
-                          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
+                          style: RenanceText.bodySecondary
+                              .copyWith(color: context.textSecondary)),
                     ],
                   ),
                 ),
@@ -154,8 +165,7 @@ class _CareerBridgeScreenState extends State<CareerBridgeScreen> {
                   child: Column(
                     children: <Widget>[
                       Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 16),
+                        padding: EdgeInsets.symmetric(horizontal: 16),
                         decoration: BoxDecoration(
                           color: context.cardLow,
                           borderRadius: BorderRadius.circular(12),
@@ -238,8 +248,8 @@ class _ScholarshipRow extends StatelessWidget {
                       Expanded(
                         child: Text(title,
                             overflow: TextOverflow.ellipsis,
-                            style: RenanceText.bodyMedium
-                                .copyWith(fontSize: 17)),
+                            style:
+                                RenanceText.bodyMedium.copyWith(fontSize: 17)),
                       ),
                       if (urgent) ...<Widget>[
                         SizedBox(width: 8),
@@ -263,12 +273,13 @@ class _ScholarshipRow extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 4),
-                  Text(meta, style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
+                  Text(meta,
+                      style: RenanceText.bodySecondary
+                          .copyWith(color: context.textSecondary)),
                 ],
               ),
             ),
-            Icon(Icons.chevron_right,
-                size: 24, color: context.textSecondary),
+            Icon(Icons.chevron_right, size: 24, color: context.textSecondary),
           ],
         ),
       ),
