@@ -1306,3 +1306,113 @@ class TutorReply {
     mode: (j['mode'] ?? 'hint') as String,
   );
 }
+
+// --------------------------------------------------------- career (18)
+
+/// One curated funding opportunity (GET /career row). The window line is
+/// honest by construction ("Typically opens mid-year", never a countdown
+/// the backend cannot know), url points at the provider's official domain.
+class CareerScholarship {
+  const CareerScholarship({
+    required this.id,
+    required this.name,
+    required this.provider,
+    required this.level,
+    required this.coverage,
+    required this.window,
+    required this.tags,
+    required this.url,
+    required this.eligibility,
+  });
+
+  final String id;
+  final String name;
+  final String provider;
+  final String level; // undergraduate | postgraduate | both
+  final String coverage;
+  final String window;
+  final List<String> tags;
+  final String url;
+  final String eligibility;
+
+  factory CareerScholarship.fromJson(Map<String, dynamic> j) =>
+      CareerScholarship(
+        id: (j['id'] ?? '') as String,
+        name: (j['name'] ?? '') as String,
+        provider: (j['provider'] ?? '') as String,
+        level: (j['level'] ?? 'undergraduate') as String,
+        coverage: (j['coverage'] ?? '') as String,
+        window: (j['window'] ?? '') as String,
+        tags: ((j['tags'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => e as String)
+            .toList(),
+        url: (j['url'] ?? '') as String,
+        eligibility: (j['eligibility'] ?? '') as String,
+      );
+}
+
+/// One course destination (GET /career row): the JAMB subject
+/// combination, the typical competitive aggregate, example universities
+/// and the syllabus topics that decide admission.
+class CareerPath {
+  const CareerPath({
+    required this.id,
+    required this.course,
+    required this.field,
+    required this.blurb,
+    required this.cutoff,
+    required this.subjects,
+    required this.universities,
+    required this.topics,
+  });
+
+  final String id;
+  final String course;
+  final String field;
+  final String blurb;
+  final String cutoff;
+  final List<String> subjects;
+  final List<String> universities;
+  final List<String> topics;
+
+  factory CareerPath.fromJson(Map<String, dynamic> j) => CareerPath(
+    id: (j['id'] ?? '') as String,
+    course: (j['course'] ?? '') as String,
+    field: (j['field'] ?? '') as String,
+    blurb: (j['blurb'] ?? '') as String,
+    cutoff: (j['cutoff'] ?? '') as String,
+    subjects: ((j['subjects'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => e as String)
+        .toList(),
+    universities: ((j['universities'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => e as String)
+        .toList(),
+    topics: ((j['topics'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => e as String)
+        .toList(),
+  );
+}
+
+/// The GET /career payload: both curated lists, server order.
+class CareerData {
+  const CareerData({
+    required this.scholarships,
+    required this.paths,
+  });
+
+  final List<CareerScholarship> scholarships;
+  final List<CareerPath> paths;
+
+  factory CareerData.fromJson(Map<String, dynamic> j) => CareerData(
+    scholarships: ((j['scholarships'] ?? const <dynamic>[]) as List<dynamic>)
+        .map(
+          (dynamic e) => CareerScholarship.fromJson(
+            (e as Map).cast<String, dynamic>(),
+          ),
+        )
+        .toList(),
+    paths: ((j['paths'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => CareerPath.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+  );
+}
