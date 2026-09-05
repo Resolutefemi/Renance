@@ -265,26 +265,9 @@ export default function DashboardPage() {
 
 
 
-        {/* Mock exam simulator banner (exam_mode_setup_light entry).
-            JAMBites only: official UTME conditions are not a WAEC, NECO
-            or University Modules product. ------------------------------ */}
-        {isJamb && (
-        <Link
-          href="/exams/setup"
-          className="flex items-center gap-3 rounded-xl bg-dark-surface p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
-        >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-dark-text-primary/15">
-            <span className="material-symbols-outlined text-[22px] text-dark-text-primary">timer</span>
-          </div>
-          <div className="min-w-0 flex-1">
-            <p className="text-[15px] font-semibold text-dark-text-primary">Mock Exam Setup</p>
-            <p className="truncate text-[13px] text-dark-text-secondary">
-              Official JAMB conditions, 2 hours, 4 subjects
-            </p>
-          </div>
-          <span className="material-symbols-outlined text-[20px] text-dark-text-secondary">arrow_forward</span>
-        </Link>
-        )}
+        {/* The standalone Mock Exam Setup banner is retired: the JAMBite
+            entry point lives in the Exams tile below, which opens
+            /exams/setup (JAMB-only by design). */}
 
         {/* Launcher grids: one Stitch pair on phones, side by side on PC --- */}
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">

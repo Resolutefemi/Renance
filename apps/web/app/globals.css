@@ -51,17 +51,21 @@
   /* type — mockups load Inter + JetBrains Mono from Google Fonts */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
-}
 
-:root {
-  color-scheme: light;
-  /* Hero scope: the dashboard progress band. Light tier = white card. */
+  /* Hero scope (the dashboard progress band). These MUST live inside
+     @theme: Tailwind 4 only emits utilities for variables declared here,
+     so bg-hero / bg-hero-cta / text-on-hero-cta silently no-op from a
+     plain :root block. Light tier = white band, black CTA (as before). */
   --color-hero: #ffffff;
   --color-on-hero: #111c2d;
   --color-hero-muted: #45464d;
   --color-hero-track: #d8e3fb;
   --color-hero-cta: #000000;
   --color-on-hero-cta: #ffffff;
+}
+
+:root {
+  color-scheme: light;
 }
 
 /* ------------------------------------------------------------------ */
