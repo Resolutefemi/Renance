@@ -2,22 +2,33 @@
 
 /**
  * Study plan, the Stitch study_plan_light screen.
- * TODAY'S PLAN card with the three focus blocks, the Current Energy Level
- * selector (local state) and the Fatigue Insight card. Static-friendly:
- * the plan is the Stitch copy and the play rows route into the shelves
- * that already exist.
+ * The design stays 1:1; the VALUES go live when the student is signed in,
+ * mirroring the app's study_plan_screen.dart derivation (lib/study-plan.ts):
+ * the practice block names the weakest syllabus subject (#4), the review
+ * block estimates from the SM-2 due count (#3), the voice block from the
+ * Leitner cards due today (#7), and the Fatigue Insight card reads
+ * /me/fatigue (#6). Signed out, or when a call fails, the exact Stitch
+ * copy stands, so the page is never a hole.
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import { api } from '@/lib/api';
+import { getToken } from '@/lib/session';
+import { fetchCardProgress } from '@/lib/flashcards';
+import type { SyllabusTree } from '@/lib/syllabus';
+import type { ReviewSummary } from '@/lib/review';
+import {
+  cardsDueToday,
+  deriveStudyPlanValues,
+  type FatigueState,
+  type StudyPlanValues,
+} from '@/lib/study-plan';
 
-const PLAN = [
-  { icon: 'science', iconBg: 'bg-emerald-tint', iconColor: 'text-accent-emerald', title: 'Biology Practice', meta: '15 min', focus: 'High focus', href: '/dashboard#packs' },
-  { icon: 'style', iconBg: 'bg-surface-container-high', iconColor: 'text-accent-ink', title: 'Review Cards', meta: '12 min', focus: 'Medium focus', href: '/review' },
-  { icon: 'mic', iconBg: 'bg-amber-tint', iconColor: 'text-accent-amber', title: 'Voice Flashcards', meta: '15 min', focus: 'Low focus', href: '/flashcards' },
-] as const;
+/** The signed-out render: the design mock, exactly as Stitch wrote it. */
+const STITCH: StudyPlanValues = deriveStudyPlanValues({ signedIn: false });
 
 const ENERGIES = [
   { label: 'Sharp', icon: 'bolt' },
@@ -25,9 +36,93 @@ const ENERGIES = [
   { label: 'Tired', icon: 'battery_1_bar' },
 ] as const;
 
+interface MeResponse {
+  user: { id: string; username: string; profileCompleted: boolean };
+  profile: { completed?: boolean; exams?: string[]; targetYear?: number } | null;
+}
+
+/** "University Modules" -> "university-modules", matching cbtdata.Slug. */
+function bodySlugOf(me: MeResponse | null): string {
+  const exam = me?.profile?.exams?.[0] ?? '';
+  if (exam.includes('WAEC')) return 'waec';
+  if (exam.includes('University')) return 'university-modules';
+  return 'jamb';
+}
+
+/** The subject that owns the map's weakest topic, null when unmapped. */
+function weakestSubjectOf(tree: SyllabusTree | null): string | null {
+  if (!tree || tree.weakest.length === 0) return null;
+  const topic = tree.weakest[0].topic;
+  for (const s of tree.subjects) {
+    for (const sec of s.sections) {
+      if (sec.topics.some((t) => t.topic === topic)) return s.subject;
+    }
+  }
+  return null;
+}
+
 export default function StudyPlanPage() {
   const router = useRouter();
   const [energy, setEnergy] = useState(0);
+  const [plan, setPlan] = useState<StudyPlanValues>(STITCH);
+
+  useEffect(() => {
+    if (!getToken()) return; // signed out: the design copy stands
+    let alive = true;
+    (async () => {
+      const me = await api<MeResponse>('/me').catch(() => null);
+      if (!alive || !me) return;
+      const [review, fatigue, progress, tree] = await Promise.all([
+        api<ReviewSummary>('/me/review').catch(() => null),
+        api<FatigueState>('/me/fatigue').catch(() => null),
+        fetchCardProgress().catch(() => null),
+        api<SyllabusTree>(`/syllabus/${bodySlugOf(me)}`).catch(() => null),
+      ]);
+      if (!alive) return;
+      setPlan(
+        deriveStudyPlanValues({
+          signedIn: true,
+          dueTopics: review ? review.stats.due : null,
+          cardsDue: cardsDueToday(progress),
+          weakestSubject: weakestSubjectOf(tree),
+          fatigue,
+        }),
+      );
+    })();
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  const rows = [
+    {
+      icon: 'science',
+      iconBg: 'bg-emerald-tint',
+      iconColor: 'text-accent-emerald',
+      title: plan.practiceTitle,
+      meta: `${plan.practiceMinutes} min`,
+      focus: 'High focus',
+      href: '/dashboard#packs',
+    },
+    {
+      icon: 'style',
+      iconBg: 'bg-surface-container-high',
+      iconColor: 'text-accent-ink',
+      title: 'Review Cards',
+      meta: `${plan.reviewMinutes} min`,
+      focus: 'Medium focus',
+      href: '/review',
+    },
+    {
+      icon: 'mic',
+      iconBg: 'bg-amber-tint',
+      iconColor: 'text-accent-amber',
+      title: 'Voice Flashcards',
+      meta: `${plan.cardsMinutes} min`,
+      focus: 'Low focus',
+      href: '/flashcards',
+    },
+  ] as const;
 
   return (
     <main className="mx-auto w-full max-w-2xl px-4 pb-28 sm:px-6">
@@ -49,11 +144,11 @@ export default function StudyPlanPage() {
           </button>
         </div>
         <p className="mt-1 text-2xl font-bold tracking-tight text-on-surface">
-          42 min remaining
+          {plan.totalMinutes} min remaining
         </p>
 
         <div className="mt-4 space-y-2.5">
-          {PLAN.map((row) => (
+          {rows.map((row) => (
             <button
               key={row.title}
               onClick={() => router.push(row.href)}
@@ -104,8 +199,7 @@ export default function StudyPlanPage() {
         <div>
           <p className="text-[15px] font-semibold text-on-surface">Fatigue Insight</p>
           <p className="mt-2 text-[15px] leading-6 text-on-surface-variant">
-            You usually fade after ~25 min in the evening. We&apos;ve placed your
-            heaviest topics (Biology) first to maximize retention.
+            {plan.insight}
           </p>
         </div>
       </section>
