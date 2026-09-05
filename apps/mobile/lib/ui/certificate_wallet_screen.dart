@@ -385,8 +385,13 @@ class _ArchiveCard extends StatelessWidget {
               child: Icon(icon,
                   size: 40,
                   color: locked
+                      // The plate stays a light "paper" swatch in every
+                      // tier, so the unlocked icon keeps the fixed ink in
+                      // dark instead of the tier's white on-color.
                       ? context.textSecondary
-                      : context.ink),
+                      : context.isDarkTier
+                          ? RenanceColors.ink
+                          : context.ink),
             ),
           ),
           const SizedBox(height: 10),

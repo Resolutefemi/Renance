@@ -76,7 +76,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               leading: CircleAvatar(
                 radius: 16,
-                backgroundColor: const Color(0xFFE7EEFF),
+                backgroundColor: context.selectionBlue,
                 child: Icon(Icons.flag,
                     size: 18, color: context.ink),
               ),
@@ -338,23 +338,30 @@ class _CardGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // The shadow lives on the outer Container; the group color belongs on
+    // a Material so the ListTiles inside paint (and ink) on a Material
+    // surface instead of tripping the DecoratedBox-background assert.
     return Container(
-      decoration: BoxDecoration(
-        color: context.card,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const <BoxShadow>[
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        boxShadow: <BoxShadow>[
           BoxShadow(
               color: Color(0x0F141C2D), blurRadius: 3, offset: Offset(0, 1)),
         ],
       ),
-      child: Column(
-        children: <Widget>[
-          for (var i = 0; i < children.length; i++) ...<Widget>[
-            if (i > 0)
-              Container(height: 1, color: context.surfaceContainer),
-            children[i],
+      child: Material(
+        color: context.card,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        clipBehavior: Clip.antiAlias,
+        child: Column(
+          children: <Widget>[
+            for (var i = 0; i < children.length; i++) ...<Widget>[
+              if (i > 0)
+                Container(height: 1, color: context.surfaceContainer),
+              children[i],
+            ],
           ],
-        ],
+        ),
       ),
     );
   }

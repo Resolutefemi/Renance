@@ -74,10 +74,21 @@ ThemeData buildRenanceDarkTheme() {
     onErrorContainer: Color(0xFFFFDAD6),
   );
 
-  return ThemeData(
+  final base = ThemeData(
     useMaterial3: true,
     colorScheme: scheme,
     scaffoldBackgroundColor: RenanceColors.darkPage,
+  );
+
+  // The light tier applies the brand text theme; the dark tier must do
+  // the same or every theme-styled Text falls back to the platform font
+  // (Roboto / SF) and the Inter type scale silently disappears in dark.
+  return base.copyWith(
+    textTheme: base.textTheme.apply(
+      fontFamily: 'Inter',
+      bodyColor: RenanceColors.darkTextPrimary,
+      displayColor: RenanceColors.darkTextPrimary,
+    ),
     appBarTheme: const AppBarTheme(
       backgroundColor: RenanceColors.darkPage,
       surfaceTintColor: Colors.transparent,
@@ -128,7 +139,10 @@ ThemeData buildRenanceDarkTheme() {
         foregroundColor: RenanceColors.darkPage,
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+        // styleFrom textStyle replaces labelLarge wholesale, so the family
+        // must be restated or the CTA label falls back to the platform font.
+        textStyle: const TextStyle(
+            fontFamily: 'Inter', fontSize: 15, fontWeight: FontWeight.w600),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -145,7 +159,9 @@ ThemeData buildRenanceDarkTheme() {
       side: const BorderSide(color: RenanceColors.darkOutline),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       labelStyle: const TextStyle(
-          color: RenanceColors.darkTextPrimary, fontSize: 13),
+          fontFamily: 'Inter',
+          color: RenanceColors.darkTextPrimary,
+          fontSize: 13),
     ),
     snackBarTheme: const SnackBarThemeData(
       backgroundColor: RenanceColors.darkTextPrimary,
@@ -319,7 +335,8 @@ ThemeData buildRenanceTheme() {
         foregroundColor: Colors.white,
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+        textStyle: const TextStyle(
+            fontFamily: 'Inter', fontSize: 15, fontWeight: FontWeight.w600),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -335,7 +352,8 @@ ThemeData buildRenanceTheme() {
       selectedColor: RenanceColors.selectionBlue,
       side: const BorderSide(color: RenanceColors.outlineLight),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      labelStyle: const TextStyle(color: RenanceColors.ink, fontSize: 13),
+      labelStyle: const TextStyle(
+          fontFamily: 'Inter', color: RenanceColors.ink, fontSize: 13),
     ),
     snackBarTheme: const SnackBarThemeData(
       backgroundColor: RenanceColors.ink,
@@ -512,4 +530,12 @@ extension RenanceScheme on BuildContext {
   Color get onErrorContainer => isDarkTier
       ? const Color(0xFFFFDAD6)
       : RenanceColors.onDarkErrorContainer;
+
+  // The "ink bubble" treatment (level bubbles, Lvl chips, solid CTAs):
+  // a black chip in light, a white chip in dark, each with its own
+  // on-color so the label never disappears with the ground.
+  Color get inverseChip =>
+      isDarkTier ? RenanceColors.darkTextPrimary : RenanceColors.ink;
+  Color get onInverseChip =>
+      isDarkTier ? RenanceColors.darkPage : Colors.white;
 }

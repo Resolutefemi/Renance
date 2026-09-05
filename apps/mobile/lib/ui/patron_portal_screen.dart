@@ -87,7 +87,9 @@ class PatronPortalScreen extends StatelessWidget {
                               child: FilledButton(
                                 style: FilledButton.styleFrom(
                                   backgroundColor: Colors.white,
-                                  foregroundColor: context.ink,
+                                  // The patron hero is dark in every tier;
+                                  // keep the fixed ink on-color.
+                                  foregroundColor: RenanceColors.ink,
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
                                           BorderRadius.circular(12)),
@@ -96,6 +98,7 @@ class PatronPortalScreen extends StatelessWidget {
                                     'Payments ship with the funding rail.'),
                                 child: const Text('+ Add Funds',
                                     style: TextStyle(
+                                        fontFamily: 'Inter',
                                         fontSize: 14,
                                         fontWeight: FontWeight.w600)),
                               ),
@@ -398,7 +401,10 @@ class _StoryCard extends StatelessWidget {
                               fontFamily: 'Inter',
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
-                              color: context.ink,
+                              // The chip pill is white in every tier (it
+                              // sits on the photo tile), so the label
+                              // keeps the fixed ink.
+                              color: RenanceColors.ink,
                             )),
                       ],
                     ),

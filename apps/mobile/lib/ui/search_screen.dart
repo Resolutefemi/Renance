@@ -98,7 +98,11 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
     super.initState();
-    _buildIndex();
+    // Building the index notifies the lessons/cards controllers; defer it
+    // one frame so nothing calls notifyListeners during this build.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _buildIndex();
+    });
   }
 
   @override

@@ -198,6 +198,10 @@ class _OfflineShareScreenState extends State<OfflineShareScreen>
                                           BorderRadius.circular(12)),
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 20),
+                                  // The theme's minimum width is infinite
+                                  // (full-width buttons); this Row measures
+                                  // children unbounded, so pin a real min.
+                                  minimumSize: const Size(96, 44),
                                 ),
                                 onPressed: () => _snack(context,
                                     'Peer transfer ships in an upcoming release.'),

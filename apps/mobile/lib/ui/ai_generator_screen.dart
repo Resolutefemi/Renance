@@ -162,7 +162,7 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                                               .symmetric(vertical: 12),
                                           decoration: BoxDecoration(
                                             color: _difficulty == i
-                                                ? Colors.white
+                                                ? context.inverseChip
                                                 : Colors.transparent,
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -176,6 +176,9 @@ class _AiGeneratorScreenState extends State<AiGeneratorScreen> {
                                                   _difficulty == i
                                                       ? FontWeight.w600
                                                       : FontWeight.w400,
+                                              color: _difficulty == i
+                                                  ? context.onInverseChip
+                                                  : null,
                                             ),
                                           ),
                                         ),
@@ -333,7 +336,7 @@ class _StepButton extends StatelessWidget {
         width: 52,
         height: 52,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: context.card,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Icon(icon, size: 22, color: context.ink),
