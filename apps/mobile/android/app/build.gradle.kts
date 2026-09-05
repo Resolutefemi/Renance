@@ -6,7 +6,10 @@ plugins {
 
 android {
     namespace = "dev.renance.renance"
-    compileSdk = flutter.compileSdkVersion
+    // file_picker pulls flutter_plugin_android_lifecycle 2.0.28+, which
+    // requires compiling against Android API 36; Flutter 3.47's default
+    // is 34. compileSdk is compile-time only, runtime targets stay put.
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
