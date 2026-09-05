@@ -1,6 +1,8 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-04 (#8 lessons pipeline + #9 Socratic tutor + security hardening).
+Last updated: 2026-09-05 (study-plan screens on app + web now read the live
+backends: SM-2 due count #3, weakest syllabus subject #4, /me/fatigue #6,
+Leitner cards due #7; #8 lessons pipeline flipped LIVE).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -53,7 +55,7 @@ need no external services — they ship fastest.
 | 5 | **Adaptive UI** | `POST /attempts {adaptive:true}` ranks the pack weak-topic-first from the review queue's SM-2 state (ease, lapses, last accuracy, due-ness) — pure `store.AdaptiveOrder`, persisted on `attempts.question_order` (migration 0006); mobile Smart-order toggle + web switch; qbuild lint rejects topics outside the syllabus tree. | **LIVE** (2026-09-04) |
 | 6 | **Fatigue monitoring** | Pure `fatigue.Assess` (latency drift + sitting length) mirrored in Dart + TS; `POST /me/sessions` re-computes and logs to `study.sessions` (migration 0007), `GET /me/fatigue` powers the home banner; exam players show the fatigue_nudge overlay (Take 5 pauses the clock) and fire-and-forget telemetry. | **LIVE** (2026-09-04) |
 | 7 | **Voice flashcards** | `data/flashcards/*.json` decks boot-validated in cbtdata; `GET /flashcards[/code]`, `POST /me/cards/progress` Leitner boxes (pure, mirrored on all clients) + `study.card_progress` (0007); app player with flutter_tts + offline deck cache + pending-grade queue; web player with speechSynthesis. | **LIVE** (2026-09-04) |
-| 8 | **MDX conversion** | `tools/mdx`: rich lesson content pipeline → static content bundles served by the API like exam packs. Pure Go. | NEXT |
+| 8 | **MDX conversion** | `cmd/mdx`: rich lesson content → validated JSON bundles under `data/lessons`, boot-loaded into the API like exam packs (`GET /lessons`, `GET /lessons/{slug}`), rendered by the app player (offline cache) and the web reader (static export for SEO). Pure Go. | **LIVE** (2026-09-04) |
 
 ### Class B — Needs an AI provider key (one key unblocks five features)
 

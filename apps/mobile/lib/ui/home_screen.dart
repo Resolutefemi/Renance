@@ -1583,7 +1583,9 @@ Future<void> showMoreSheet(
                         Navigator.of(sheetContext).pop();
                         Navigator.of(context).push(
                           MaterialPageRoute<void>(
-                            builder: (_) => const StudyPlanScreen(),
+                            builder: (_) => StudyPlanScreen(
+                              onGoTab: onGoTab,
+                            ),
                           ),
                         );
                       },
