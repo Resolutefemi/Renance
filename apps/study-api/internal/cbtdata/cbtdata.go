@@ -16,6 +16,7 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 )
 
@@ -147,6 +148,46 @@ func (l *Library) Manifest() Manifest { return l.manifest }
 func (l *Library) Bundle(code string) (*Bundle, bool) {
 	b, ok := l.bundles[code]
 	return b, ok
+}
+
+// BundlesByBody returns every loaded bundle whose exam body matches
+// (case-insensitive), sorted by code — the daily challenge's rotation
+// pool for that body (ROADMAP #20). The canonical spelling of the body
+// is the first bundle's own Body field.
+func (l *Library) BundlesByBody(body string) []*Bundle {
+	want := strings.ToLower(strings.TrimSpace(body))
+	if want == "" {
+		return nil
+	}
+	var out []*Bundle
+	for _, b := range l.bundles {
+		if strings.ToLower(b.Body) == want {
+			out = append(out, b)
+		}
+	}
+	sort.Slice(out, func(i, j int) bool { return out[i].Code < out[j].Code })
+	return out
+}
+
+// Bodies lists the distinct exam bodies across loaded bundles, sorted —
+// the friendly "try one of these" list for an unknown-body request.
+func (l *Library) Bodies() []string {
+	seen := map[string]string{} // lower -> canonical
+	for _, b := range l.bundles {
+		if b.Body == "" {
+			continue
+		}
+		key := strings.ToLower(b.Body)
+		if _, dup := seen[key]; !dup {
+			seen[key] = b.Body
+		}
+	}
+	out := make([]string, 0, len(seen))
+	for _, canonical := range seen {
+		out = append(out, canonical)
+	}
+	sort.Strings(out)
+	return out
 }
 
 // Question finds one question inside the bundle by id.

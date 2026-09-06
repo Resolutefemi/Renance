@@ -23,6 +23,8 @@
 //	GET    /arena/history        -> the caller's recent matches
 //	GET    /tutor/status         -> {aiEnabled} (ROADMAP #9)
 //	POST   /attempts/{id}/tutor  -> Socratic chat on a graded attempt
+//	GET    /daily/{body}        -> today's deterministic challenge (ROADMAP #20)
+//	GET    /daily/{body}/leaderboard?day= -> one day's board + caller's rank
 //	PUT    /me/profile             {fullName, institution, gradeLevel, exams[], targetYear?}
 //	GET    /manifest
 //	GET    /bundles/{code}
@@ -151,6 +153,8 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /arena/history", s.auth(s.handleArenaHistory))
 	mux.HandleFunc("GET /leaderboard/arena", s.auth(s.handleArenaLeaderboard))
 	mux.HandleFunc("GET /leaderboard/xp", s.auth(s.handleStudyLeaderboard))
+	mux.HandleFunc("GET /daily/{body}", s.auth(s.handleDaily))
+	mux.HandleFunc("GET /daily/{body}/leaderboard", s.auth(s.handleDailyLeaderboard))
 	mux.HandleFunc("GET /tutor/status", s.auth(s.handleTutorStatus))
 	mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
 	mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
