@@ -348,6 +348,10 @@ curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "X-Frame-Options: DENY"
 curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "Cache-Control: no-store"
 curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "Content-Security-Policy: default-src"
 
+# --- ROADMAP #14: multiplayer arena over WebSockets ---
+step "arena ws e2e (two students, full live match)"
+(cd "$(dirname "$0")/../apps/study-api" && go run ./cmd/arena-e2e "$BASE")
+
 step "auth flood -> 429 once the per-IP burst is exhausted"
 # Deterministic: capacity is burst(40) + ~1 refill token over the whole
 # flow, so with 5 pre-flood spends at least 24 of these 60 must 429.
