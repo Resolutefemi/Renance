@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { loadLesson, loadLessons } from '@/lib/site-data';
 import { renderInline } from '@/lib/inline';
+import { ListenSummary } from '@/components/listen-summary';
+import { composeSpokenSummary } from '@/lib/audio-summary';
 
 /**
  * /lessons/[slug]: one lesson, baked at build time from the committed
@@ -117,6 +119,9 @@ export default async function LessonPage({
         <p className="mt-3 text-[15px] leading-relaxed text-on-surface-variant">
           {renderInline(les.summary)}
         </p>
+        <div className="mt-4">
+          <ListenSummary script={composeSpokenSummary(les)} />
+        </div>
       </header>
 
       <article className="mt-8 space-y-8">

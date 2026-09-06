@@ -197,6 +197,7 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
   Lesson? _lesson;
   bool _loading = true;
   bool _offline = false;
+  LessonNarrator? _narrator;
 
   @override
   void initState() {
@@ -214,6 +215,22 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
             lessons.error.isNotEmpty;
       });
     });
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Captured early so dispose can silence the narrator without looking
+    // up ancestors in an already-unmounted tree.
+    _narrator ??= context.read<LessonNarrator>();
+  }
+
+  @override
+  void dispose() {
+    // Audio summaries (#11): leaving the reader never leaves a voice
+    // talking into the void.
+    _narrator?.stopSilently();
+    super.dispose();
   }
 
   @override
@@ -272,11 +289,61 @@ class _LessonReaderScreenState extends State<LessonReaderScreen> {
                     height: 1.5,
                   ),
                 ),
+                const SizedBox(height: 14),
+                _ListenPill(lesson: _lesson!),
                 const SizedBox(height: 20),
                 for (var i = 0; i < _lesson!.sections.length; i++)
                   _Section(index: i + 1, section: _lesson!.sections[i]),
               ],
             ),
+    );
+  }
+}
+
+/// Audio summaries (#11): on-device narration of the lesson's spoken
+/// summary, composed from the bundle itself so it works offline. Tap to
+/// listen, tap again to stop.
+class _ListenPill extends StatelessWidget {
+  const _ListenPill({required this.lesson});
+
+  final Lesson lesson;
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<LessonNarrator>(
+      builder: (BuildContext context, LessonNarrator narrator, _) {
+        final bool active = narrator.playing && narrator.slug == lesson.slug;
+        return Material(
+          color: active ? context.selectionBlue : context.cardLow,
+          borderRadius: BorderRadius.circular(999),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(999),
+            onTap: () => narrator.toggle(lesson),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Icon(
+                    active ? Icons.stop : Icons.volume_up,
+                    size: 16,
+                    color: context.textSecondary,
+                  ),
+                  const SizedBox(width: 7),
+                  Text(
+                    active ? 'Stop summary' : 'Listen to summary',
+                    style: RenanceText.labelMono.copyWith(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: context.textSecondary,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

@@ -8,6 +8,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 
 import 'api_client.dart';
+import 'audio_summary.dart';
 import 'models.dart';
 import 'storage.dart';
 import 'tts.dart';
@@ -688,6 +689,63 @@ class StudentController extends ChangeNotifier {
   Future<void> refreshDownloaded() async {
     downloaded = await _store.downloadedCodes();
     notifyListeners();
+  }
+}
+
+// ------------------------------------------------------ lesson narrator
+
+/// Audio summaries (ROADMAP #11): narrates a lesson's spoken summary with
+/// the on-device speech engine, the same engine family as the voice
+/// flashcards. Simple on/off state — the toggle re-taps as stop, and the
+/// reader screen silences playback when it leaves. The engine is injected
+/// so tests run with a fake and zero platform channels.
+class LessonNarrator extends ChangeNotifier {
+  LessonNarrator({SpeechEngine? speech})
+    : speech = speech ?? FlutterTtsEngine();
+
+  final SpeechEngine speech;
+
+  String _slug = '';
+
+  /// Whether a summary is (nominally) being narrated right now. On-device
+  /// engines expose no completion callback through [SpeechEngine], so a
+  /// finished script keeps this true until the student re-taps — the same
+  /// honesty trade the flashcard pill makes.
+  bool get playing => _slug.isNotEmpty;
+
+  /// Slug of the lesson currently being narrated.
+  String get slug => _slug;
+
+  void toggle(Lesson lesson) {
+    if (playing && _slug == lesson.slug) {
+      stop();
+      return;
+    }
+    _slug = lesson.slug;
+    notifyListeners();
+    unawaited(speech.speak(composeSpokenSummary(lesson)));
+  }
+
+  void stop() {
+    if (!playing) return;
+    _slug = '';
+    unawaited(speech.stop());
+    notifyListeners();
+  }
+
+  /// Stops playback without notifying, for screen-dispose teardown where
+  /// the listening widgets are already being torn down.
+  void stopSilently() {
+    if (!playing) return;
+    _slug = '';
+    unawaited(speech.stop());
+  }
+
+  @override
+  void dispose() {
+    speech.stop();
+    speech.dispose();
+    super.dispose();
   }
 }
 
