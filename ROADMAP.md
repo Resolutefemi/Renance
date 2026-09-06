@@ -1,9 +1,9 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-05 (career bridge #18 shipped end-to-end with a curated
-Nigerian scholarship + JAMB course-path catalogue; offline share #16 shipped
-its real file slice; study-plan screens read the live backends; #8 flipped
-LIVE).
+Last updated: 2026-09-06 (audio summaries #11 shipped its on-device TTS
+slice — deterministic spoken-summary composer mirrored on app + web,
+zero external deps; commit history across all repos now uniformly
+authored by Resolute Femi).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -64,7 +64,7 @@ need no external services — they ship fastest.
 | --- | --- | --- | --- |
 | 9 | **Socratic AI tutor** | "Why is this wrong?" chat anchored to the graded attempt. API proxies the provider; prompt embeds the question + picked answer + key. | **NEEDS DEP** — AI API key (OpenAI / Gemini / OpenRouter). Cheapest first slice: hint-only mode with capped tokens. |
 | 10 | **Analogy engine** | Local-context analogies for hard concepts (generated per topic, cached in `study.analogies` so we pay once, not per student). | NEEDS DEP — same key |
-| 11 | **Audio summaries** | Topic summaries → TTS. Either provider TTS or on-device TTS first, AI narration later. | NEEDS DEP — TTS provider (or ship on-device TTS slice first) |
+| 11 | **Audio summaries** | Topic summaries → TTS. On-device slice LIVE: deterministic spoken-summary composer built from the lesson bundle itself (title, syllabus line, read time, summary, heading walk, key-point callouts — mirrored Dart `audio_summary.dart` + TS `audio-summary.ts`, capped at 2,400 chars for engine long-text safety), narrated by the app reader's Listen pill (`LessonNarrator`, stops on screen exit) and the web reader's speechSynthesis button — offline, no provider. AI narration of full lessons later needs provider TTS. | **LIVE** (2026-09-06, on-device slice) |
 | 12 | **OCR grading** ("scan & mark") | Photo of handwritten working → marks. Vision model required; start with printed MCQ bubble sheets (deterministic CV) before handwriting. | NEEDS DEP — vision API; biggest build of the AI class |
 | 13 | **Adaptive exam generation** (AI flavor) | AI generates fresh practice items per weak topic, tagged + human-reviewable before release. | NEEDS DEP — same key; gated behind review queue |
 
