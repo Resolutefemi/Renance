@@ -384,6 +384,118 @@ step "GET /leaderboard/xp without token -> 401"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/xp")
 [ "$CODE" = "401" ]
 
+# --- ROADMAP #20: deterministic daily challenge ---
+step "GET /daily/JAMB -> today's deterministic challenge"
+D1=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$D1" | jsonget "d['day']" | grep -qE "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+DCODE=$(printf '%s' "$D1" | jsonget "d['code']")
+printf '%s' "$DCODE" | grep -q "^jamb-"
+printf '%s' "$D1" | jsonget "d['body']" | grep -q "JAMB"
+DN=$(printf '%s' "$D1" | jsonget "len(d['questions'])")
+[ "$DN" -ge 1 ] && [ "$DN" -le 10 ]
+printf '%s' "$D1" | jsonget "d['myResult']" | grep -q "None"
+
+step "GET /daily/JAMB -> byte-identical on refetch (pure function of day+body)"
+D2=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")
+[ "$D1" = "$D2" ]
+
+step "GET /daily/University%20Modules -> the single cos101 pack serves whole"
+UM=$(curl -fsS "$BASE/daily/University%20Modules" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$UM" | jsonget "d['code']" | grep -q "cos101-university-mock"
+
+step "GET /daily/WAEC -> 404 unknown_body (no packs carry that body)"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/WAEC" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "404" ]
+
+step "GET /daily/JAMB without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/JAMB")
+[ "$CODE" = "401" ]
+
+step "POST /attempts daily:true on a non-challenge JAMB pack -> 409"
+OTHER=$(printf '%s' "$MAN" | python3 -c "import json,sys;m=json.load(sys.stdin);print([e['code'] for e in m['exams'] if e.get('body')=='JAMB' and e['code']!='$DCODE'][0])")
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/attempts" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$OTHER\",\"daily\":true}")
+[ "$CODE" = "409" ]
+
+step "POST /attempts daily:true -> attempt pinned to today's challenge"
+DATT=$(curl -fsS -X POST "$BASE/attempts" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$DCODE\",\"daily\":true}")
+DAID=$(printf '%s' "$DATT" | jsonget "d['attemptId']")
+printf '%s' "$DATT" | jsonget "d['daily']" | grep -q "True"
+[ "$(printf '%s' "$DATT" | jsonget "len(d['order'])")" -eq "$DN" ]
+
+step "daily submit with an out-of-selection question -> 400 not_in_daily"
+DBUN=$(curl -fsS "$BASE/bundles/$DCODE" -H "Authorization: Bearer $TOKEN")
+DIDS=$(printf '%s' "$D1" | jsonget "','.join(q['id'] for q in d['questions'])")
+OUTQ=$(printf '%s' "$DBUN" | DIDS="$DIDS" python3 -c "
+import json,os,sys
+d=json.load(sys.stdin)
+daily=set(os.environ['DIDS'].split(','))
+rest=[q['id'] for q in d['questions'] if q['id'] not in daily]
+print(rest[0] if rest else '')")
+[ -n "$OUTQ" ]
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE/attempts/$DAID/submit" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"answers\":[{\"questionId\":\"$OUTQ\",\"selected\":\"A\"}]}")
+[ "$CODE" = "400" ]
+
+step "submit the daily challenge -> graded"
+DANSWERS=$(printf '%s' "$D1" | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+print(json.dumps([{'questionId':q['id'],'selected':sorted(q.get('options',{}))[0]} for q in d['questions'] if q.get('options')]))")
+curl -fsS -X POST "$BASE/attempts/$DAID/submit" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"answers\":$DANSWERS,\"durationMs\":45000}" \
+  | jsonget "d['status']" | grep -q "grading"
+STATUSD="grading"
+for _ in $(seq 1 40); do
+  STATUSD=$(curl -fsS "$BASE/attempts/$DAID" -H "Authorization: Bearer $TOKEN" | jsonget "d['status']") || STATUSD="error"
+  [ "$STATUSD" = "graded" ] && break
+  sleep 0.5
+done
+[ "$STATUSD" = "graded" ]
+
+step "GET /daily/JAMB -> myResult seated with challenge-sized total"
+DR=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$DR" | jsonget "d['myResult']['attemptId']" | grep -q "$DAID"
+[ "$(printf '%s' "$DR" | jsonget "d['myResult']['total']")" -eq "$DN" ]
+
+step "GET /daily/JAMB/leaderboard -> caller ranked on today's board"
+DLB=$(curl -fsS "$BASE/daily/JAMB/leaderboard" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$DLB" | jsonget "d['code']" | grep -q "$DCODE"
+printf '%s' "$DLB" | jsonget "d['me']['rank']" | grep -qE "^[0-9]+$"
+[ "$(printf '%s' "$DLB" | jsonget "len(d['entries'])")" -ge 1 ]
+
+step "GET /daily/JAMB/leaderboard?day=not-a-day -> 400"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/JAMB/leaderboard?day=nope" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "400" ]
+
+step "replay the daily -> seat unchanged (first graded submission wins)"
+DATT2=$(curl -fsS -X POST "$BASE/attempts" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$DCODE\",\"daily\":true}")
+DAID2=$(printf '%s' "$DATT2" | jsonget "d['attemptId']")
+curl -fsS -X POST "$BASE/attempts/$DAID2/submit" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"answers\":$DANSWERS,\"durationMs\":30000}" \
+  | jsonget "d['status']" | grep -q "grading"
+STATUSD2="grading"
+for _ in $(seq 1 40); do
+  STATUSD2=$(curl -fsS "$BASE/attempts/$DAID2" -H "Authorization: Bearer $TOKEN" | jsonget "d['status']") || STATUSD2="error"
+  [ "$STATUSD2" = "graded" ] && break
+  sleep 0.5
+done
+[ "$STATUSD2" = "graded" ]
+DR2=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$DR2" | jsonget "d['myResult']['attemptId']" | grep -q "$DAID"
+
+step "GET /daily/JAMB/leaderboard without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/JAMB/leaderboard")
+[ "$CODE" = "401" ]
+
 step "auth flood -> 429 once the per-IP burst is exhausted"
 # The auth bucket is AUTH_PER_MIN*2 = 40 tokens per client IP. The flood is
 # fired CONCURRENTLY and pins a single X-Forwarded-For hop so all 60 hits

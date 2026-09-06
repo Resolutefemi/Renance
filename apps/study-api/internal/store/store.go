@@ -363,6 +363,9 @@ type Attempt struct {
 	StartedAt   time.Time  `json:"startedAt"`
 	SubmittedAt *time.Time `json:"submittedAt,omitempty"`
 	DurationMs  *int       `json:"-"`
+	// DailyDay is set when the attempt is the ROADMAP #20 daily
+	// challenge for that UTC day (NULL for ordinary papers).
+	DailyDay *time.Time `json:"-"`
 }
 
 type Picked struct {
@@ -371,14 +374,17 @@ type Picked struct {
 }
 
 // CreateAttempt opens an attempt. order (possibly nil) is the
-// adaptive weak-topic-first question sequence for this paper; adaptive
-// records whether the student asked for it, for history and telemetry.
-func (s *Store) CreateAttempt(ctx context.Context, userID, code string, order []string, adaptive bool) (*Attempt, error) {
+// question sequence for this paper — the adaptive weak-topic-first walk
+// (ROADMAP #5) or the daily challenge's seeded selection (ROADMAP #20);
+// adaptive records whether the student asked for it, for history and
+// telemetry. dailyDay (possibly nil) marks the attempt as that day's
+// challenge.
+func (s *Store) CreateAttempt(ctx context.Context, userID, code string, order []string, adaptive bool, dailyDay *time.Time) (*Attempt, error) {
 	a := &Attempt{UserID: userID, Code: code, Status: "in_progress"}
 	err := s.Pool.QueryRow(ctx, `
-                INSERT INTO study.attempts (user_id, code, question_order, adaptive)
-                VALUES ($1, $2, $3, $4)
-                RETURNING id, status, started_at`, userID, code, order, adaptive,
+                INSERT INTO study.attempts (user_id, code, question_order, adaptive, daily_day)
+                VALUES ($1, $2, $3, $4, $5)
+                RETURNING id, status, started_at`, userID, code, order, adaptive, dailyDay,
 	).Scan(&a.ID, &a.Status, &a.StartedAt)
 	if err != nil {
 		return nil, fmt.Errorf("store: create attempt: %w", err)
@@ -435,17 +441,18 @@ func (s *Store) AttemptByID(ctx context.Context, attemptID, userID string) (*Att
 	a := &Attempt{}
 	var submitted *time.Time
 	var duration *int
+	var dailyDay *time.Time
 	err := s.Pool.QueryRow(ctx, `
-                SELECT id, user_id, code, status, started_at, submitted_at, duration_ms
+                SELECT id, user_id, code, status, started_at, submitted_at, duration_ms, daily_day
                 FROM study.attempts WHERE id = $1 AND user_id = $2`, attemptID, userID,
-	).Scan(&a.ID, &a.UserID, &a.Code, &a.Status, &a.StartedAt, &submitted, &duration)
+	).Scan(&a.ID, &a.UserID, &a.Code, &a.Status, &a.StartedAt, &submitted, &duration, &dailyDay)
 	if errors.Is(err, pgx.ErrNoRows) {
 		return nil, nil
 	}
 	if err != nil {
 		return nil, fmt.Errorf("store: attempt by id: %w", err)
 	}
-	a.SubmittedAt, a.DurationMs = submitted, duration
+	a.SubmittedAt, a.DurationMs, a.DailyDay = submitted, duration, dailyDay
 	return a, nil
 }
 
@@ -561,13 +568,13 @@ func (s *Store) AttemptsByUser(ctx context.Context, userID string, limit int) ([
 		limit = 50
 	}
 	rows, err := s.Pool.Query(ctx, `
-		SELECT a.id, a.code, a.status, a.started_at, a.submitted_at, a.duration_ms,
-		       r.score, r.total
-		FROM study.attempts a
-		LEFT JOIN study.results r ON r.attempt_id = a.id
-		WHERE a.user_id = $1
-		ORDER BY a.started_at DESC
-		LIMIT $2`, userID, limit)
+                SELECT a.id, a.code, a.status, a.started_at, a.submitted_at, a.duration_ms,
+                       r.score, r.total
+                FROM study.attempts a
+                LEFT JOIN study.results r ON r.attempt_id = a.id
+                WHERE a.user_id = $1
+                ORDER BY a.started_at DESC
+                LIMIT $2`, userID, limit)
 	if err != nil {
 		return nil, fmt.Errorf("store: attempts by user: %w", err)
 	}
@@ -588,8 +595,8 @@ func (s *Store) AttemptsByUser(ctx context.Context, userID string, limit int) ([
 // review route: keys stay server-side; only post-grade explanations leave.
 func (s *Store) KeysForBank(ctx context.Context, code string) (map[string]KeyEntry, error) {
 	rows, err := s.Pool.Query(ctx, `
-		SELECT question_id, letter, explanation
-		FROM study.answer_keys WHERE code = $1`, code)
+                SELECT question_id, letter, explanation
+                FROM study.answer_keys WHERE code = $1`, code)
 	if err != nil {
 		return nil, fmt.Errorf("store: keys for bank: %w", err)
 	}

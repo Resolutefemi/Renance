@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"renance.dev/study-api/internal/cbtdata"
+	"renance.dev/study-api/internal/daily"
 	"renance.dev/study-api/internal/grading"
 	"renance.dev/study-api/internal/store"
 )
@@ -13,6 +14,7 @@ import (
 type createAttemptRequest struct {
 	Code     string `json:"code"`
 	Adaptive bool   `json:"adaptive,omitempty"`
+	Daily    bool   `json:"daily,omitempty"`
 }
 
 func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
@@ -30,19 +32,44 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
 		fail(w, http.StatusNotFound, "unknown_pack", "no study pack with code "+req.Code)
 		return
 	}
+	// Daily challenge (ROADMAP #20): the server, not the client, decides
+	// which pack and which question order carry today's challenge. The
+	// order is persisted on the attempt, so grading, review and history
+	// all see exactly the sprint the student played.
+	var order []string
+	var dailyDay *time.Time
+	if req.Daily {
+		if bundle.Body == "" {
+			fail(w, http.StatusBadRequest, "daily_unsupported",
+				"pack "+req.Code+" has no exam body and cannot carry a daily challenge")
+			return
+		}
+		pool := s.dailyPool(bundle.Body)
+		day := todayUTC()
+		want := dailyPack(day, pool)
+		if want.Code != req.Code {
+			fail(w, http.StatusConflict, "daily_mismatch",
+				"today's "+bundle.Body+" challenge is "+want.Code+", not "+req.Code)
+			return
+		}
+		order = daily.QuestionIDs(day, bundle.Body, daily.IDs(bundle))
+		dd, _ := time.Parse("2006-01-02", day)
+		dailyDay = &dd
+	}
 	// Adaptive ordering (ROADMAP #5): rank the pack's topics by the
 	// student's own SM-2 weakness (review_queue) and persist the walk.
-	var order []string
-	if req.Adaptive {
+	// A daily sprint pins its own deterministic order, so adaptive
+	// never applies there.
+	if !req.Daily && req.Adaptive {
 		order = s.adaptiveOrder(r.Context(), uid, bundle)
 	}
-	attempt, err := s.store.CreateAttempt(r.Context(), uid, req.Code, order, req.Adaptive)
+	attempt, err := s.store.CreateAttempt(r.Context(), uid, req.Code, order, req.Adaptive, dailyDay)
 	if err != nil {
 		s.log.Error("create attempt failed", "err", err)
 		fail(w, http.StatusInternalServerError, "internal", "could not start attempt")
 		return
 	}
-	writeJSON(w, http.StatusCreated, map[string]any{
+	resp := map[string]any{
 		"attemptId":       attempt.ID,
 		"code":            attempt.Code,
 		"status":          attempt.Status,
@@ -51,7 +78,12 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
 		"questionCount":   bundle.QuestionCount,
 		"adaptive":        req.Adaptive,
 		"order":           order,
-	})
+	}
+	if req.Daily {
+		resp["daily"] = true
+		resp["day"] = dailyDay.Format("2006-01-02")
+	}
+	writeJSON(w, http.StatusCreated, resp)
 }
 
 // adaptiveOrder computes the weak-topic-first question sequence for a
@@ -131,6 +163,17 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
 			"submitted more answers than questions in the pack")
 		return
 	}
+	// Daily fairness guard (ROADMAP #20): a daily attempt may only
+	// answer THAT day's seeded selection — every student worldwide
+	// races over exactly the same 10 questions, so nobody can pad their
+	// board score with the pack's remaining questions.
+	var dailyAllowed map[string]struct{}
+	if attempt.DailyDay != nil && bundle.Body != "" {
+		dailyAllowed = map[string]struct{}{}
+		for _, id := range daily.QuestionIDs(attempt.DailyDay.UTC().Format("2006-01-02"), bundle.Body, daily.IDs(bundle)) {
+			dailyAllowed[id] = struct{}{}
+		}
+	}
 	picks := make([]store.Picked, 0, len(req.Answers))
 	seen := map[string]struct{}{}
 	for _, a := range req.Answers {
@@ -149,6 +192,13 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
 			fail(w, http.StatusBadRequest, "invalid_choice",
 				"selection for "+a.QuestionID+" is not one of the options")
 			return
+		}
+		if dailyAllowed != nil {
+			if _, inDay := dailyAllowed[a.QuestionID]; !inDay {
+				fail(w, http.StatusBadRequest, "not_in_daily",
+					"question "+a.QuestionID+" is not part of this day's challenge")
+				return
+			}
 		}
 		picks = append(picks, store.Picked{QuestionID: a.QuestionID, Selected: a.Selected})
 	}
@@ -169,7 +219,13 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if !s.engine.Enqueue(grading.Job{AttemptID: attemptID, UserID: uid, Code: attempt.Code}) {
+	if !s.engine.Enqueue(grading.Job{
+		AttemptID:  attemptID,
+		UserID:     uid,
+		Code:       attempt.Code,
+		DailyDay:   dailyDayString(attempt.DailyDay),
+		DurationMs: attempt.DurationMs,
+	}) {
 		// Queue saturated, fail loud rather than strand the attempt.
 		_ = s.store.SetAttemptStatus(r.Context(), attemptID, "error")
 		fail(w, http.StatusServiceUnavailable, "grading_busy",

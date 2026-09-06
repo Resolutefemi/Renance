@@ -13,6 +13,7 @@ import (
 	"sync"
 
 	"renance.dev/study-api/internal/cbtdata"
+	"renance.dev/study-api/internal/daily"
 	"renance.dev/study-api/internal/store"
 )
 
@@ -25,6 +26,11 @@ type Job struct {
 	AttemptID string
 	UserID    string // owner of the attempt - feeds gamification after the grade
 	Code      string
+	// DailyDay is "2006-01-02" when the attempt is that day's daily
+	// challenge (ROADMAP #20); empty for ordinary papers. DurationMs
+	// rides along so the daily seat can show the honest sitting time.
+	DailyDay   string
+	DurationMs *int
 }
 
 type Engine struct {
@@ -127,6 +133,18 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
 	if job.UserID != "" {
 		if err := e.store.ScheduleReview(ctx, job.UserID, result.Breakdown); err != nil {
 			e.log.Error("grading: review schedule", "err", err, "attempt", job.AttemptID)
+		}
+	}
+	// Daily challenge ledger (ROADMAP #20) is best-effort like the rest:
+	// the board can miss one seat; a graded paper must never fail for
+	// it. Score is already fair (the submit handler pinned answers to
+	// the day's selection), but Total is the PACK's size — the seat
+	// records the challenge's real size so "7/10" means 7 of 10.
+	if job.DailyDay != "" && job.UserID != "" && bundle.Body != "" {
+		challengeTotal := len(daily.QuestionIDs(job.DailyDay, bundle.Body, daily.IDs(bundle)))
+		if _, err := e.store.RecordDailyResult(ctx, job.DailyDay, bundle.Body, job.UserID,
+			job.AttemptID, job.Code, result.Score, challengeTotal, job.DurationMs); err != nil {
+			e.log.Error("grading: daily ledger", "err", err, "attempt", job.AttemptID)
 		}
 	}
 	e.log.Info("graded", "worker", worker, "attempt", job.AttemptID,

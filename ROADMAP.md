@@ -1,12 +1,12 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-07 (leaderboards shipped: GET /leaderboard/arena
-— week/all — and GET /leaderboard/xp give every student the global top
-25 plus their own absolute rank, pure aggregates over the existing
-arena + gamification tables. Production verified the same day: the
-Render Blueprint is applied and https://renance-api.onrender.com
-answers /healthz with db:ok — the full student-flow E2E, arena
-included, ran green against the live API.)
+Last updated: 2026-09-07 (daily challenge shipped: GET /daily/{body} +
+GET /daily/{body}/leaderboard?day= give every exam body one
+deterministic 10-question sprint per UTC day with a fair first-wins
+board — pure internal/daily, migration 0009, replay = practice. Same
+day: leaderboards LIVE, production https://renance-api.onrender.com
+answers /healthz with db:ok and the full student-flow E2E ran green
+against the live API.)
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -80,6 +80,7 @@ need no external services — they ship fastest.
 | 16 | **Bluetooth mesh** (offline sharing) | A pack is a sealed questions-only bundle, so the offline slice ships as FILES: Send Pack writes `{code}.renance-pack.json` and opens the OS share sheet (Bluetooth, Xender, ShareIT, Nearby, any pipe students already use); Receive imports through the same strict validation the API boot applies (counts, marks, ids, thin MCQs) and keeps a sha256 integrity key. Pure `pack_share` codec, unit-tested. The phone-to-phone radio channel (nearby_connections) is a later slice once device testing is possible. | **LIVE** (2026-09-05, file slice) |
 | 17 | **Smart-contract certificates** | Achievement certificates minted on a testnet (Base/Scroll sepolia), wallet optional. Needs testnet RPC + contract + wallet UX decisions. | NEEDS DEP — testnet choice; park until core learning loop is deep |
 | 18 | **Career bridge** | `data/career/{scholarships,paths}.json`: curated catalogue (9 real Nigerian scholarship programs with honest windows + official domains, 13 JAMB course paths with subject combinations, typical competitive aggregates and universities); boot-validated join, every path topic must exist in a syllabus tree; `GET /career` (E2E-asserted); app screen reads it live and opens provider pages; web `/career-bridge/` bakes the same files, public with SEO metadata + sitemap. | **LIVE** (2026-09-05) |
+| 20 | **Daily challenge** | One deterministic 10-question sprint per exam body per UTC day: pure `internal/daily` (splitmix64 seeded by SHA-256 of day+body — no state, no scheduler, same questions worldwide) picks the pack and play order; `GET /daily/{body}` serves the sprint, the student plays it through the ordinary `POST /attempts {daily:true}` pipeline (submit rejects out-of-selection answers, so the race stays fair); first graded submission owns the `study.daily_results` seat (0009), replays stay practice; `GET /daily/{body}/leaderboard?day=` shows the top 25 plus the caller's absolute rank. | **LIVE** (2026-09-07) |
 | 19 | **Patron portal** | Sponsors fund exam fees/data for students. Needs payments (Paystack for NG first) + ledger tables + privacy boundary design. | **NEEDS DEP** — payment provider account |
 
 ## Explicitly parked (your call, already agreed)
