@@ -186,17 +186,31 @@ func main() {
 		if resp.StatusCode != 200 {
 			fatal("history %s -> %d", who, resp.StatusCode)
 		}
-		var out struct {
-			Matches []struct {
-				MatchID string `json:"matchId"`
-				Score   int    `json:"score"`
-			} `json:"matches"`
-		}
-		_ = json.NewDecoder(resp.Body).Decode(&out)
 		found := false
-		for _, m := range out.Matches {
-			if m.MatchID == oa.MatchID {
-				found = true
+		// The write landed before "over" was sent, but give the pooler a
+		// beat of slack anyway: a few short retries, then fail loudly.
+		for attempt := 0; attempt < 8 && !found; attempt++ {
+			if attempt > 0 {
+				time.Sleep(300 * time.Millisecond)
+				req, _ = http.NewRequest("GET", baseURL+"/arena/history", nil)
+				req.Header.Set("Authorization", "Bearer "+token)
+				resp, err = http.DefaultClient.Do(req)
+				if err != nil {
+					fatal("history %s: %v", who, err)
+				}
+			}
+			var out struct {
+				Matches []struct {
+					MatchID string `json:"matchId"`
+					Score   int    `json:"score"`
+				} `json:"matches"`
+			}
+			_ = json.NewDecoder(resp.Body).Decode(&out)
+			resp.Body.Close()
+			for _, m := range out.Matches {
+				if m.MatchID == oa.MatchID {
+					found = true
+				}
 			}
 		}
 		if !found {
