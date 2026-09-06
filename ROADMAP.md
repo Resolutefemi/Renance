@@ -1,9 +1,10 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-06 (audio summaries #11 shipped its on-device TTS
-slice — deterministic spoken-summary composer mirrored on app + web,
-zero external deps; commit history across all repos now uniformly
-authored by Resolute Femi).
+Last updated: 2026-09-06 (multiplayer arena #14 shipped its in-process
+hub slice — live 1v1 WebSocket quiz with matchmaking, scoring, forfeit
+and a house bot, persisted outcomes + history; audio summaries #11
+shipped its on-device TTS slice; commit history across all repos now
+uniformly authored by Resolute Femi).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -72,7 +73,7 @@ need no external services — they ship fastest.
 
 | # | Feature | Plan sketch | Status |
 | --- | --- | --- | --- |
-| 14 | **Multiplayer arena** | Live head-to-head quizzes. Render supports WebSockets; needs a presence layer (in-process hub first, Redis later) + matchmaker tables. | **NEEDS DEP** — decide always-on Render plan vs. separate WS host when we ship it |
+| 14 | **Multiplayer arena** | Live head-to-head quizzes. In-process hub slice LIVE: `GET /arena/ws` (JWT via `?token=`), FIFO matchmaking per exam body with in-memory presence (disconnect = forfeit, single-session per user), per-question deadlines + marks scoring, house bot fills solo queues after `ARENA_BOT_WAIT_SECONDS`, outcomes persisted to `arena.matches`/`arena.participants` (best-effort, migration 0008) + `GET /arena/history` + `GET /arena/status`; E2E probe `cmd/arena-e2e` runs two real students in CI. Redis/multi-host presence layer is the next slice when scale asks. | **LIVE** (2026-09-06, in-process hub slice) |
 | 15 | **Code sandbox** | Students run small code challenges. Needs an isolated runner (Firecracker/Nscale-style or a SaaS like Piston) — never run untrusted code in the study-api container. | NEEDS DEP — sandbox provider choice |
 | 16 | **Bluetooth mesh** (offline sharing) | A pack is a sealed questions-only bundle, so the offline slice ships as FILES: Send Pack writes `{code}.renance-pack.json` and opens the OS share sheet (Bluetooth, Xender, ShareIT, Nearby, any pipe students already use); Receive imports through the same strict validation the API boot applies (counts, marks, ids, thin MCQs) and keeps a sha256 integrity key. Pure `pack_share` codec, unit-tested. The phone-to-phone radio channel (nearby_connections) is a later slice once device testing is possible. | **LIVE** (2026-09-05, file slice) |
 | 17 | **Smart-contract certificates** | Achievement certificates minted on a testnet (Base/Scroll sepolia), wallet optional. Needs testnet RPC + contract + wallet UX decisions. | NEEDS DEP — testnet choice; park until core learning loop is deep |

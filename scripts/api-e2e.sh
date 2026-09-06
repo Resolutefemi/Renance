@@ -360,4 +360,9 @@ done)
 N429=$(printf '%s\n' "$CODES" | grep -c '^429$')
 [ "$N429" -ge 10 ]
 
+
+# --- ROADMAP #14: multiplayer arena over WebSockets ---
+step "arena ws e2e (two students, full live match)"
+(cd "$(dirname "$0")/../apps/study-api" && go run ./cmd/arena-e2e "$BASE")
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"
