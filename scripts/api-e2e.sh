@@ -352,6 +352,38 @@ curl -fsS -D - -o /dev/null "$BASE/healthz" | grep -qi "Content-Security-Policy:
 step "arena ws e2e (two students, full live match)"
 (cd "$(dirname "$0")/../apps/study-api" && go run ./cmd/arena-e2e "$BASE")
 
+# --- ROADMAP #14 slice: leaderboards over arena + study data ---
+step "GET /leaderboard/arena -> the two arena students ranked, caller has no rank yet"
+LB=$(curl -fsS "$BASE/leaderboard/arena?period=all" -H "Authorization: Bearer $TOKEN")
+[ "$(printf '%s' "$LB" | jsonget "len(d['entries'])")" -ge 2 ]
+printf '%s' "$LB" | jsonget "d['entries'][0]['username']" >/dev/null
+# The arena e2e students pick one RANDOM shared letter per question, so the
+# top entry's points are only shape-checked (they can legitimately be 0).
+printf '%s' "$LB" | jsonget "d['entries'][0]['points']" | grep -qE "^[0-9]+$"
+printf '%s' "$LB" | jsonget "d['me']" | grep -q "None"
+
+step "GET /leaderboard/arena default period -> week board"
+curl -fsS "$BASE/leaderboard/arena" -H "Authorization: Bearer $TOKEN" \
+  | jsonget "d['period']" | grep -q "week"
+
+step "GET /leaderboard/arena bad period -> 400"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/arena?period=month" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "400" ]
+
+step "GET /leaderboard/arena without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/arena")
+[ "$CODE" = "401" ]
+
+step "GET /leaderboard/xp -> caller ranked after their graded papers"
+XB=$(curl -fsS "$BASE/leaderboard/xp" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$XB" | jsonget "d['me']['rank']" | grep -qE "^[0-9]+$"
+[ "$(printf '%s' "$XB" | jsonget "d['me']['attempts']")" -ge 1 ]
+[ "$(printf '%s' "$XB" | jsonget "len(d['entries'])")" -ge 1 ]
+
+step "GET /leaderboard/xp without token -> 401"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/leaderboard/xp")
+[ "$CODE" = "401" ]
+
 step "auth flood -> 429 once the per-IP burst is exhausted"
 # The auth bucket is AUTH_PER_MIN*2 = 40 tokens per client IP. The flood is
 # fired CONCURRENTLY and pins a single X-Forwarded-For hop so all 60 hits
