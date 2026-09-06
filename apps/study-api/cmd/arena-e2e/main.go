@@ -113,8 +113,10 @@ func main() {
 	}
 	stamp := time.Now().UnixMilli()
 	fmt.Println("▸ arena e2e: register two students")
-	tokA := register(baseURL, fmt.Sprintf("arenaa%d", stamp))
-	tokB := register(baseURL, fmt.Sprintf("arenab%d", stamp))
+	// e2e-prefixed usernames: one `e2eclean -prefix e2e` pass purges both
+	// the api-e2e.sh student and these two, even against the REAL database.
+	tokA := register(baseURL, fmt.Sprintf("e2eara%d", stamp))
+	tokB := register(baseURL, fmt.Sprintf("e2earb%d", stamp))
 
 	wsBase := "ws" + strings.TrimPrefix(baseURL, "http") + "/arena/ws"
 	dial := func(token string) *websocket.Conn {

@@ -30,6 +30,13 @@ Android APK ────────┘        (this guide)
 
 ## 1. Create the API service on Render
 
+> **Done & verified (2026-09-07):** the Blueprint is applied and the live
+> service answers `https://renance-api.onrender.com/healthz` with
+> `{"db":"ok"}`. `scripts/api-e2e.sh` runs green against production end to
+> end (auth → profile → exam → grading → review → syllabus → adaptive →
+> fatigue → flashcards → lessons → career → tutor → arena → rate limit).
+> The steps below remain as the re-creation runbook.
+
 1. Push this branch to GitHub (already done if CI is green).
 2. Render dashboard → **New +** → **Blueprint** → pick the
    `Resolutefemi/Renance` repo. Render reads `render.yaml` at the repo root
@@ -130,5 +137,10 @@ CI runs the same script against a disposable Postgres 16 on every push.
 - **Rotating the Neon password:** reset it in the Neon console, then update
   `DATABASE_URL` on Render and restart. Old sessions survive (JWTs are
   self-contained); only new DB connections need the new URI.
+- **Production smoke test:** `bash scripts/api-e2e.sh
+  https://renance-api.onrender.com` — the same E2E CI runs, pointed at the
+  live service. It creates throwaway users prefixed `e2e` (including the
+  two arena students) so one `e2eclean -prefix e2e` pass (with
+  `DATABASE_URL` set) purges every one of them.
 - **Test-data hygiene:** `go run ./cmd/e2eclean -prefix e2e` (with
   `DATABASE_URL` set) deletes every throwaway user created by E2E runs.
