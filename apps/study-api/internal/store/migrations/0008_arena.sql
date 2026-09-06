@@ -27,7 +27,7 @@ CREATE INDEX IF NOT EXISTS arena_matches_finished_idx
   ON arena.matches (finished_at DESC);
 
 CREATE TABLE IF NOT EXISTS arena.participants (
-  match_id    uuid        NOT NULL REFERENCES arena.matches(id) ON DELETE CASCADE,
+  match_id    text        NOT NULL REFERENCES arena.matches(id) ON DELETE CASCADE,
   user_id     uuid        REFERENCES study.users(id) ON DELETE CASCADE,
   username    text        NOT NULL DEFAULT '',
   score       integer     NOT NULL DEFAULT 0,
