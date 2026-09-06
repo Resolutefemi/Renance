@@ -8,6 +8,8 @@
 -- sees the outcome, written best-effort after the last question, so a DB
 -- hiccup can never break a live match.
 
+CREATE SCHEMA IF NOT EXISTS arena;
+
 CREATE TABLE IF NOT EXISTS arena.matches (
   id             text        PRIMARY KEY,
   code           text        NOT NULL,
