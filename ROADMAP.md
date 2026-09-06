@@ -1,10 +1,11 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-06 (multiplayer arena #14 shipped its in-process
-hub slice — live 1v1 WebSocket quiz with matchmaking, scoring, forfeit
-and a house bot, persisted outcomes + history; audio summaries #11
-shipped its on-device TTS slice; commit history across all repos now
-uniformly authored by Resolute Femi).
+Last updated: 2026-09-07 (production verified: the Render Blueprint is
+applied and https://renance-api.onrender.com answers /healthz with
+db:ok — the full student-flow E2E, arena included, ran green against
+the live API, so web + APK now talk to a real backend. Multiplayer
+arena #14 shipped its in-process hub slice; audio summaries #11 its
+on-device TTS slice; all commit history is authored by Resolute Femi).
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -24,10 +25,10 @@ external service/key/infra decision) · each row lists what unblocks it.
 
 ## Immediate (this week, no code needed)
 
-| Item | What it is | Blocker |
+| Item | What it is | Status |
 | --- | --- | --- |
-| Render deploy | Apply the Blueprint → get `https://renance-api.onrender.com`. | You paste the Neon URI (docs/deploy.md §1). |
-| `PUBLIC_API_BASE` variable | Point web + APK at the Render URL, re-run deploys. | Render URL from the step above. |
+| Render deploy | Blueprint applied → `https://renance-api.onrender.com`. Neon pooled URI set on the service; `/healthz` answers `{"db":"ok"}` and the full `scripts/api-e2e.sh` E2E ran green against production (2026-09-07). `render.yaml` now ships both Google client IDs so a re-apply never prompts for them. | **LIVE** |
+| `PUBLIC_API_BASE` variable | Set to the Render URL (2026-09-02); web-deploy + mobile-apk bakes it, so the Pages site and the APK point students at the real backend. | **LIVE** |
 | Android OAuth client | Google Console → OAuth client (type **Android**). | Values fixed and documented — package `dev.renance.renance`, SHA-1 `6E:A1:3C:4A:0C:70:4E:28:1A:77:00:3A:4B:F4:9A:7A:25:5B:F0:95` (committed release keystore). Create the client, no code change needed. |
 
 ### Keystore note (Android Google sign-in — RESOLVED)

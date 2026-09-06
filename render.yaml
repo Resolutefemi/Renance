@@ -1,10 +1,15 @@
 # Render Blueprint — one-click deploy of the Renance study API (free plan).
 #
 # Render.com -> New + -> Blueprint -> pick Resolutefemi/Renance -> Apply.
-# You will be prompted for DATABASE_URL: paste the Neon POOLED connection
-# string (…pooler….neon.tech/…?sslmode=require). JWT_SECRET is generated
-# for you. GOOGLE_CLIENT_ID: paste the web OAuth client ID (optional until
-# Google sign-in is enabled).
+# DATABASE_URL is the only value you are asked for: paste the Neon POOLED
+# connection string (…pooler….neon.tech/…?sslmode=require). Everything else
+# is filled in — JWT_SECRET is generated for you and GOOGLE_CLIENT_ID ships
+# with both public OAuth client IDs (web + Android), so Google sign-in works
+# on the first boot.
+#
+# VERIFIED 2026-09-07: the live service at https://renance-api.onrender.com
+# answers /healthz {"db":"ok"} and the full student-flow E2E
+# (scripts/api-e2e.sh) passes against it end to end.
 #
 # Free plan note: the service sleeps after ~15 min idle; the first request
 # wakes it in ~30-50s. Upgrade any time for always-on.
@@ -25,6 +30,6 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: GOOGLE_CLIENT_ID
-        sync: false
+        value: 850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com,850087098854-5rj3vig6fpm4k2jie4najsoq6tpcdm6f.apps.googleusercontent.com
       - key: WEB_ORIGIN
         value: https://resolutefemi.github.io,http://localhost:3000,http://127.0.0.1:3000

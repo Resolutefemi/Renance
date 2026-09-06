@@ -353,14 +353,17 @@ step "arena ws e2e (two students, full live match)"
 (cd "$(dirname "$0")/../apps/study-api" && go run ./cmd/arena-e2e "$BASE")
 
 step "auth flood -> 429 once the per-IP burst is exhausted"
-# Deterministic: capacity is burst(40) + ~1 refill token over the whole
-# flow, so with 5 pre-flood spends at least 24 of these 60 must 429.
-# (Asserting on the LAST code alone was CI-timing flaky.)
-CODES=$(for _ in $(seq 1 60); do
-  curl -s -o /dev/null -w '%{http_code}\n' -X POST "$BASE/auth/register" \
-    -H 'Content-Type: application/json' \
-    -d '{"username":"x","password":"short"}'
-done)
+# The auth bucket is AUTH_PER_MIN*2 = 40 tokens per client IP. The flood is
+# fired CONCURRENTLY and pins a single X-Forwarded-For hop so all 60 hits
+# land in ONE bucket — otherwise multi-homed runners (CI egress rotation,
+# Render's proxy hops) spread the requests across several buckets and the
+# 429 count drops below the assertion. Verified against production Render:
+# 60 pinned concurrent -> 40x400 + 20x429, exactly the burst design.
+CODES=$(seq 1 60 | xargs -P 12 -I{} curl -s -o /dev/null -w '%{http_code}\n' \
+  -X POST "$BASE/auth/register" \
+  -H 'Content-Type: application/json' \
+  -H 'X-Forwarded-For: 203.0.113.7' \
+  -d '{"username":"x","password":"short"}')
 N429=$(printf '%s\n' "$CODES" | grep -c '^429$')
 [ "$N429" -ge 10 ]
 
