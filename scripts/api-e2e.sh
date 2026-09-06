@@ -459,9 +459,20 @@ done
 [ "$STATUSD" = "graded" ]
 
 step "GET /daily/JAMB -> myResult seated with challenge-sized total"
-DR=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")
-printf '%s' "$DR" | jsonget "d['myResult']['attemptId']" | grep -q "$DAID"
-[ "$(printf '%s' "$DR" | jsonget "d['myResult']['total']")" -eq "$DN" ]
+# The seat is written best-effort by the grading worker AFTER the attempt
+# flips to graded (gamification and review ride the same async tail), so
+# give it a short window instead of racing the worker on a remote DB.
+MYATTEMPT=""
+for _ in $(seq 1 20); do
+  MYATTEMPT=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN" \
+    | jsonget "d['myResult']['attemptId'] if d['myResult'] else ''") || true
+  [ -n "$MYATTEMPT" ] && break
+  sleep 0.5
+done
+[ -n "$MYATTEMPT" ]
+printf '%s' "$MYATTEMPT" | grep -q "$DAID"
+DRTOTAL=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN" | jsonget "d['myResult']['total']")
+[ "$DRTOTAL" -eq "$DN" ]
 
 step "GET /daily/JAMB/leaderboard -> caller ranked on today's board"
 DLB=$(curl -fsS "$BASE/daily/JAMB/leaderboard" -H "Authorization: Bearer $TOKEN")
