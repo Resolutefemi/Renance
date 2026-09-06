@@ -21,19 +21,19 @@ void main() {
       LessonSection(
         heading: 'The cell is the unit of life',
         blocks: <LessonBlock>[
-          const LessonBlock(
+          LessonBlock(
             type: 'p',
             text: 'Every living thing is built from cells.',
           ),
-          const LessonBlock(
+          LessonBlock(
             type: 'callout',
             text: 'Key point: examiners love the cell theory, learn **all three** parts.',
           ),
         ],
       ),
-      const LessonSection(
+      LessonSection(
         heading: 'Organelles and their jobs',
-        blocks: <LessonBlock>[],
+        blocks: const <LessonBlock>[],
       ),
     ],
   );
