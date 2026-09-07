@@ -3,17 +3,6 @@
   "version": "era2-g1",
   "exams": [
     {
-      "code": "cos101-university-mock",
-      "title": "COS101 | Introduction to Computing",
-      "questionCount": 15,
-      "totalMarks": 15,
-      "durationMinutes": 15,
-      "category": "university",
-      "body": "University Modules",
-      "bundleSha256": "2f29860ecc46c7cf3f43e3885d37c3ef45d61aa9fbfe589eb0acd8b913765df8",
-      "sizeBytes": 5593
-    },
-    {
       "code": "jamb-biology-mock",
       "title": "JAMB Biology | Practice Mock",
       "questionCount": 15,
@@ -56,6 +45,78 @@
       "body": "JAMB",
       "bundleSha256": "6021ca736d252c592f2a695bd6324e9fbb62a743577dde31df5b9625aa012568",
       "sizeBytes": 5320
+    },
+    {
+      "code": "jamb-english-bank",
+      "title": "JAMB Use of English | Past Questions Bank",
+      "questionCount": 360,
+      "totalMarks": 360,
+      "category": "secondary",
+      "bundleSha256": "d1409da288492edc08bc9d666ecb46ff6616c19af415f690e6ca838d016e78b6",
+      "sizeBytes": 130549
+    },
+    {
+      "code": "jamb-mathematics-bank",
+      "title": "JAMB Mathematics | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "category": "secondary",
+      "bundleSha256": "69b7ad49b165b606eaf415845c521bdd7993734cdc77617616495d0e0d1a7d2e",
+      "sizeBytes": 84662
+    },
+    {
+      "code": "jamb-physics-bank",
+      "title": "JAMB Physics | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "category": "secondary",
+      "bundleSha256": "51b8c1c154f7e580bdb7cfa678cc7e628ae3016a0a31c394d81b9c0a491b179a",
+      "sizeBytes": 102204
+    },
+    {
+      "code": "jamb-chemistry-bank",
+      "title": "JAMB Chemistry | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "category": "secondary",
+      "bundleSha256": "8c67ce4dcdf608a5e2329646ac78decce25ad30c0a6e325069435f05431aa2ad",
+      "sizeBytes": 105157
+    },
+    {
+      "code": "jamb-biology-bank",
+      "title": "JAMB Biology | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "category": "secondary",
+      "bundleSha256": "b911cc0ad1d2908113b63edb18f3d538af87f805dd64a44c2931475349f617ab",
+      "sizeBytes": 109326
+    },
+    {
+      "code": "jamb-economics-bank",
+      "title": "JAMB Economics | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "category": "secondary",
+      "bundleSha256": "e5f8832f185b978303a099300625427f774aa030be0d3cd9421617f3574cf96d",
+      "sizeBytes": 109947
+    },
+    {
+      "code": "jamb-government-bank",
+      "title": "JAMB Government | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "category": "secondary",
+      "bundleSha256": "b4e93667f84b846f21503bd3a5b45c31df01acc2d7fde7f3e1799870cb582067",
+      "sizeBytes": 114755
+    },
+    {
+      "code": "jamb-geography-bank",
+      "title": "JAMB Geography | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "category": "secondary",
+      "bundleSha256": "88e0cd3df744450410aec5a8abf4602a2479ec8e3f447c6c0a265f7e3845cc3e",
+      "sizeBytes": 109446
     }
   ]
 }

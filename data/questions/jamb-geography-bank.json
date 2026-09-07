@@ -1,0 +1,3652 @@
+{
+  "code": "jamb-geography-bank",
+  "title": "JAMB Geography | Past Questions Bank",
+  "version": 1,
+  "questionCount": 260,
+  "totalMarks": 260,
+  "questions": [
+    {
+      "id": "jamb-geography-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following is best defined as the movement of people from one geographical area to another involving permanent or temporary residence or settlement?",
+      "options": {
+        "A": "Transportation",
+        "B": "Civilization",
+        "C": "Migration",
+        "D": "urbanization"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0002",
+      "type": "mcq",
+      "stem": "Use the information on country Y below to answer the question that follows:\nLand area = 200,000km\n2\nPopulation = 10,000,000.\nCalculate the population density of country Y",
+      "options": {
+        "A": "50 persons per km\n2",
+        "B": "2000 persons per km\n2",
+        "C": "200 persons per km\n2",
+        "D": "20 persons per km\n2"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0003",
+      "type": "mcq",
+      "stem": "The birth rate of a country can be increased through the following except?",
+      "options": {
+        "A": "Encouragement of early marriages",
+        "B": "Encouragement of less work hours",
+        "C": "Encouragement of polygamy",
+        "D": "legislation against abortion"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0004",
+      "type": "mcq",
+      "stem": "Which of the following zones is the least industrialized in Nigeria?",
+      "options": {
+        "A": "Lokoja-Ajaokuta",
+        "B": "Lagos-Ikeja",
+        "C": "Porthacourt-Aba",
+        "D": "Kaduna-Zaria"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0005",
+      "type": "mcq",
+      "stem": "The following are advantages of overpopulation except?",
+      "options": {
+        "A": "Quick information dissemination",
+        "B": "Socialization",
+        "C": "Large labour",
+        "D": "Insufficient food"
+      },
+      "marks": 1,
+      "topic": "World Population",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0006",
+      "type": "mcq",
+      "stem": "The following are areas of lowlands in Nigeria except?",
+      "options": {
+        "A": "The Chad Basin",
+        "B": "The Eastern Scarpland",
+        "C": "The Coaster plain",
+        "D": "The Niger-Benue trough"
+      },
+      "marks": 1,
+      "topic": "PLATEAUX / LOW LANDS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0007",
+      "type": "mcq",
+      "stem": "The wind which blows across the Atlantic Ocean towards the coast of Nigeria and is responsible for rainy season is known as?",
+      "options": {
+        "A": "Equatorial Easterlies",
+        "B": "Land and sea breeze",
+        "C": "Tropical continental airmass",
+        "D": "Tropical maritime airmass"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0008",
+      "type": "mcq",
+      "stem": "Which of the following is not a major river basin in Nigeria?",
+      "options": {
+        "A": "The Cross River Basin",
+        "B": "The Niger Basin",
+        "C": "The South Atlantic Basin",
+        "D": "The Sokoto Basin"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0009",
+      "type": "mcq",
+      "stem": "Tin-mining activities in Nigeria are the main causes of environmental degradation on the?",
+      "options": {
+        "A": "Westen Highlands",
+        "B": "Eastern Highlands",
+        "C": "Jos Plateau",
+        "D": "Obudu Plateau"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0010",
+      "type": "mcq",
+      "stem": "The high cost of lumbering operations in tropical forest is mainly due to?",
+      "options": {
+        "A": "Shortage of labour",
+        "B": "Absence of many rivers",
+        "C": "Absence of pure stands of trees",
+        "D": "low quality of available timber"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0011",
+      "type": "mcq",
+      "stem": "The outer structure of the earth is made up of the following except?",
+      "options": {
+        "A": "Mesosphere",
+        "B": "Atmosphere",
+        "C": "Biosphere",
+        "D": "Hydrosphere"
+      },
+      "marks": 1,
+      "topic": "THE EARTH’S STRUCTURE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0012",
+      "type": "mcq",
+      "stem": "If the scale of a map is 2cm to 1km, what is the ground distance if the distance between two towns on the map is 20cm?",
+      "options": {
+        "A": "5km",
+        "B": "2.5km",
+        "C": "10km",
+        "D": "20km"
+      },
+      "marks": 1,
+      "topic": "Map Distance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0013",
+      "type": "mcq",
+      "stem": "The correct arrangement of the layers of the earth crust from the surface to the interior is?",
+      "options": {
+        "A": "sial, mantle, sima, core",
+        "B": "sima, sial, core, mantle",
+        "C": "core, mantle, sima and sial",
+        "D": "sial, sima, mantle and core"
+      },
+      "marks": 1,
+      "topic": "THE EARTH’S STRUCTURE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0014",
+      "type": "mcq",
+      "stem": "Which of the following is an importance of the atmosphere to living organisms?",
+      "options": {
+        "A": "It provides water for industrial uses",
+        "B": "It provides oxygen for animals and plants for respiration",
+        "C": "It provides shelter in form of timber for man",
+        "D": "It aids transportation through construction of roads and railways"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0015",
+      "type": "mcq",
+      "stem": "Which of the following farming activity best describes the rearing of only animals like cattle, sheep and goat mainly in the savanna belt of the north?",
+      "options": {
+        "A": "Mixed farming",
+        "B": "Animal farming",
+        "C": "Pastoral farming",
+        "D": "Intensive farming"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0016",
+      "type": "mcq",
+      "stem": "If the scale of two maps are (a;1:100,000 and b;1:400,000) what is the ground distance if the distance between two towns on the maps is 10cm?",
+      "options": {
+        "A": "10km, 40km",
+        "B": "5km, 20km",
+        "C": "2.5km, 10km",
+        "D": "20km, 80km"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0017",
+      "type": "mcq",
+      "stem": "Which of the following is a reason for the high volume of trade between Nigeria and developed countries?",
+      "options": {
+        "A": "similarity of products",
+        "B": "low level of technology",
+        "C": "colonial ties",
+        "D": "presence of trade unions"
+      },
+      "marks": 1,
+      "topic": "Trade",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0018",
+      "type": "mcq",
+      "stem": "The following are seaports used in the North Atlantic sea route except?",
+      "options": {
+        "A": "Lagos-Antwerp",
+        "B": "Lagos-Montreal",
+        "C": "Lagos-Southampton",
+        "D": "Lagos-Rotterdam"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0019",
+      "type": "mcq",
+      "stem": "_______ is the condition of the lower atmosphere of a place over a short period?",
+      "options": {
+        "A": "climate",
+        "B": "weather",
+        "C": "cloud",
+        "D": "Humidity"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0020",
+      "type": "mcq",
+      "stem": "_______ is defined as the total surrounding or medium of any organism in a given area?",
+      "options": {
+        "A": "Biotic component",
+        "B": "Abiotic component",
+        "C": "Environment",
+        "D": "Ecosystem"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0021",
+      "type": "mcq",
+      "stem": "The type of water left in the soil after excess water has been drained off, following heavy rainfall is known as?",
+      "options": {
+        "A": "Field capacity",
+        "B": "capillary water",
+        "C": "gravitational water",
+        "D": "hygroscopic water"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0022",
+      "type": "mcq",
+      "stem": "Where the salinity of an ocean is high;",
+      "options": {
+        "A": "the ocean water is dense and flows at the ocean surface towards a low salinity area",
+        "B": "the ocean water is dense and creeps at the bottom of the ocean towards low salinity areas",
+        "C": "the ocean water is light and flows at the area surface towards a high salinity area",
+        "D": "the ocean water is light and flows at the ocean surface towards a low salinity area"
+      },
+      "marks": 1,
+      "topic": "Climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0023",
+      "type": "mcq",
+      "stem": "Which of the following processes leads to the loss of carbon from the air?",
+      "options": {
+        "A": "combustion",
+        "B": "respiration",
+        "C": "putrifaction",
+        "D": "photosynthesis"
+      },
+      "marks": 1,
+      "topic": "Environmental Resources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0024",
+      "type": "mcq",
+      "stem": "In a combined maximum and minimum thermometer, the difference between the hottest and coldest daily temperature for that day gives the?",
+      "options": {
+        "A": "Diurnal range of temperature",
+        "B": "Mean daily temperature",
+        "C": "Minimum daily temperature",
+        "D": "Maximum daily temperature"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0025",
+      "type": "mcq",
+      "stem": "On maps, lines drawn to join all places in the ocean having equal degree of salinity are called?",
+      "options": {
+        "A": "isohalines",
+        "B": "isobars",
+        "C": "isosalines",
+        "D": "isossal"
+      },
+      "marks": 1,
+      "topic": "Map Reading",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0026",
+      "type": "mcq",
+      "stem": "The lowest partin the soil profile is known as?",
+      "options": {
+        "A": "top soil",
+        "B": "sub soil",
+        "C": "parent materials",
+        "D": "bedrock"
+      },
+      "marks": 1,
+      "topic": "THE EARTH’S STRUCTURE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0027",
+      "type": "mcq",
+      "stem": "Which of the following is not a graphical representation of statistical data?",
+      "options": {
+        "A": "Choropleth map",
+        "B": "Dot map",
+        "C": "Shaded map",
+        "D": "Star graph"
+      },
+      "marks": 1,
+      "topic": "World Population",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0028",
+      "type": "mcq",
+      "stem": "Which of the following is a vegetation characteristics of the Tropical rainforest?",
+      "options": {
+        "A": "Trees are not in pure stand",
+        "B": "Tough, small, leathery, hairy leaves to guard against excessive transpiration",
+        "C": "Trees are conical in shape",
+        "D": "there is high undergrowth"
+      },
+      "marks": 1,
+      "topic": "Climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0029",
+      "type": "mcq",
+      "stem": "Which of the following is a problem of landlocked countries?",
+      "options": {
+        "A": "Security of goods",
+        "B": "Political stability",
+        "C": "Low freight cost",
+        "D": "Political dependence"
+      },
+      "marks": 1,
+      "topic": "Geography of Nigeria",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0030",
+      "type": "mcq",
+      "stem": "One of the following is not a problem involved in harnessing solar energy?",
+      "options": {
+        "A": "Poor technological know-how",
+        "B": "Adequacy of capital",
+        "C": "Unreliability",
+        "D": "Fear of competition with established energy sources"
+      },
+      "marks": 1,
+      "topic": "Renewable and Non-Renewable Resources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0031",
+      "type": "mcq",
+      "stem": "One of the following surveying instruments is used to set out lines at right angles to the main chain line?",
+      "options": {
+        "A": "Optical square",
+        "B": "Station pegs",
+        "C": "Offset staff",
+        "D": "Steel Band"
+      },
+      "marks": 1,
+      "topic": "Surveying",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0032",
+      "type": "mcq",
+      "stem": "________is the failure of the end point of a closed traverse to fall exactly on the point of origin of the transverse?",
+      "options": {
+        "A": "Error of compass",
+        "B": "Traverse error",
+        "C": "Error of closure",
+        "D": "Field error"
+      },
+      "marks": 1,
+      "topic": "Mapwork/Reading",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0033",
+      "type": "mcq",
+      "stem": "Which of the following is a way of controlling soil erosion?",
+      "options": {
+        "A": "Overgrazing",
+        "B": "Contour ploughing",
+        "C": "Deforestation",
+        "D": "Bush burning"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0034",
+      "type": "mcq",
+      "stem": "The soil gains nitrogen through one of the following except?",
+      "options": {
+        "A": "Denitrification",
+        "B": "Application of organic manure",
+        "C": "Electrical discharge",
+        "D": "Symbiotic nitrogen fixation"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following is an effect of the earth's revolution?",
+      "options": {
+        "A": "Day and night",
+        "B": "It determines a year",
+        "C": "Dawn and Twilight",
+        "D": "Apparent Sunrise and sunset"
+      },
+      "marks": 1,
+      "topic": "Earth’s Sphericity, Rotation and Revolution",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0036",
+      "type": "mcq",
+      "stem": "What is the process of lowering and leveling of the earth surface by gradual breaking and wearing away of such earth's surfaces?",
+      "options": {
+        "A": "Weathering",
+        "B": "Denudation",
+        "C": "Relief",
+        "D": "Mass wasting"
+      },
+      "marks": 1,
+      "topic": "Denudational Process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0037",
+      "type": "mcq",
+      "stem": "__________ is a highland area which seperates the headstreams of rivers flowing in different directions but rising from the same mountainous source?",
+      "options": {
+        "A": "Flood plain",
+        "B": "Cuesta",
+        "C": "Watershed",
+        "D": "Plateau"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0038",
+      "type": "mcq",
+      "stem": "___________ is a layer of very fine wind-deposited sand and silt?",
+      "options": {
+        "A": "loess",
+        "B": "seif",
+        "C": "barchan",
+        "D": "Bajada"
+      },
+      "marks": 1,
+      "topic": "Action of Winds",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0039",
+      "type": "mcq",
+      "stem": "An important mineral deposit in south Africa which has attracted a large number of white settler is?",
+      "options": {
+        "A": "Iron in Durban",
+        "B": "Copper in Cape Town",
+        "C": "Gold in Witwatersrand",
+        "D": "Aluminium in Johannessburg"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0040",
+      "type": "mcq",
+      "stem": "Which of the following gives the correct full meaning of G.I.S?",
+      "options": {
+        "A": "Geographic Internet Solution",
+        "B": "Geographic Internet System",
+        "C": "Geographic Information Spread",
+        "D": "Geographic Information System"
+      },
+      "marks": 1,
+      "topic": "Basic concepts of geographic information system (GIS)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0041",
+      "type": "mcq",
+      "stem": "The human activity that can improve composition of the atmosphere is",
+      "options": {
+        "A": "Use of chemicals",
+        "B": "Land reclamation",
+        "C": "Mining and Construction works",
+        "D": "Cutting down of trees"
+      },
+      "marks": 1,
+      "topic": "Environmental Conservation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0042",
+      "type": "mcq",
+      "stem": "The following are volcanic mountains except",
+      "options": {
+        "A": "Cotopaxi of Ecuador",
+        "B": "Midcrop of Sumatra",
+        "C": "Fuji of Japan",
+        "D": "Monadnock of USA"
+      },
+      "marks": 1,
+      "topic": "Volcanicity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0043",
+      "type": "mcq",
+      "stem": "These are landforms producing agent except",
+      "options": {
+        "A": "waves",
+        "B": "rivers",
+        "C": "storms",
+        "D": "glaciers"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0044",
+      "type": "mcq",
+      "stem": "Which of the following is a sedimentary rock.",
+      "options": {
+        "A": "Graphite",
+        "B": "shale",
+        "C": "marble",
+        "D": "schist"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0045",
+      "type": "mcq",
+      "stem": "The benefits of international trade to developing nations include the following except",
+      "options": {
+        "A": "Encourages specialisation in production",
+        "B": "Encourages healthy competition",
+        "C": "Strains international trade relation",
+        "D": "Enables nations to move from subsistence to mechanized economy"
+      },
+      "marks": 1,
+      "topic": "Trade",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0046",
+      "type": "mcq",
+      "stem": "Use the map below to answer this question above\nWhat is the feature labelled K on the map is",
+      "options": {
+        "A": "river sokoto",
+        "B": "lake chad",
+        "C": "lake kainji",
+        "D": "river zamfara"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0047",
+      "type": "mcq",
+      "stem": "Use the map below to answer this question above\nThe feature marked Y on the map is?",
+      "options": {
+        "A": "obon hill",
+        "B": "obudu plateau",
+        "C": "alantika mountain",
+        "D": "mandara mountain"
+      },
+      "marks": 1,
+      "topic": "Map Reading",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0048",
+      "type": "mcq",
+      "stem": "The function performed by urban to the rural settlement in supply of",
+      "options": {
+        "A": "Industrial raw materials",
+        "B": "medicinal herbs",
+        "C": "food",
+        "D": "maufactured goods"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0049",
+      "type": "mcq",
+      "stem": "Which of the following is not caused by the earth's rotation?",
+      "options": {
+        "A": "Day and night",
+        "B": "Seasonal changes",
+        "C": "Deflection of winds",
+        "D": "Deflection of ocean currents"
+      },
+      "marks": 1,
+      "topic": "Earth’s Sphericity, Rotation and Revolution",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0050",
+      "type": "mcq",
+      "stem": "The following are responsible for the concentration of industries in eastern United States of America except",
+      "options": {
+        "A": "Large market",
+        "B": "Natural resources",
+        "C": "Inadequate capital",
+        "D": "High technology"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0051",
+      "type": "mcq",
+      "stem": "The outer structure of the earth is made up of the following except?",
+      "options": {
+        "A": "mesosphere",
+        "B": "atmosphere",
+        "C": "biosphere",
+        "D": "Hydrosphere"
+      },
+      "marks": 1,
+      "topic": "THE EARTH’S STRUCTURE",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0052",
+      "type": "mcq",
+      "stem": "_______ is the condition of the lower atmosphere of a place over a short period",
+      "options": {
+        "A": "climate",
+        "B": "weather",
+        "C": "cloud",
+        "D": "humidity"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0053",
+      "type": "mcq",
+      "stem": "Which of the following processes leads to the loss of carbon from the air",
+      "options": {
+        "A": "combustion",
+        "B": "combustion",
+        "C": "putrifaction",
+        "D": "photosynthesis"
+      },
+      "marks": 1,
+      "topic": "Environmental Resources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0054",
+      "type": "mcq",
+      "stem": "The type of water left in the soil after excess water has been drained off, following heavy rainfall is known as",
+      "options": {
+        "A": "Field capacity",
+        "B": "Field capacity",
+        "C": "gravitational water",
+        "D": "hygroscopic water"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0055",
+      "type": "mcq",
+      "stem": "The part labelled X in the soil profile above is known as",
+      "options": {
+        "A": "top soil",
+        "B": "sub soil",
+        "C": "parent materials",
+        "D": "bedrock"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0056",
+      "type": "mcq",
+      "stem": "What is the process of lowering and levelling of the earth surface by gradual breaking and wearing away of such earth's surfaces.",
+      "options": {
+        "A": "Weathering",
+        "B": "Denudation",
+        "C": "Relief",
+        "D": "Mass wasting"
+      },
+      "marks": 1,
+      "topic": "Denudational Process",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following is a problem of landlocked countries?",
+      "options": {
+        "A": "security of goods",
+        "B": "political stability",
+        "C": "low freight cost",
+        "D": "political independence"
+      },
+      "marks": 1,
+      "topic": "Geography of Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0058",
+      "type": "mcq",
+      "stem": "The following are the importance of highland in Nigeria except",
+      "options": {
+        "A": "occupy good land",
+        "B": "settlement sites",
+        "C": "source of minerals",
+        "D": "source of rivers"
+      },
+      "marks": 1,
+      "topic": "PLATEAUX / LOW LANDS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0059",
+      "type": "mcq",
+      "stem": "In Nigeria, which of the following vegetation zones is best known for timber exploitation?",
+      "options": {
+        "A": "Fresh water swamp forest",
+        "B": "Guinea savannah",
+        "C": "Montane vegetation",
+        "D": "Rain forest"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0060",
+      "type": "mcq",
+      "stem": "Sparse population in the middle belt of Nigeria can not be attributed to",
+      "options": {
+        "A": "Absence of major industries",
+        "B": "Absence of major minerals",
+        "C": "Poor soil",
+        "D": "Slave trade"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0061",
+      "type": "mcq",
+      "stem": "Which of the following tourist centres is wrongly paired?",
+      "options": {
+        "A": "Eiffel Tower - Germany",
+        "B": "Pyramids - Egypt",
+        "C": "The colosseum - Italy",
+        "D": "Victoria falls - Zambia"
+      },
+      "marks": 1,
+      "topic": "Tourism (World)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0062",
+      "type": "mcq",
+      "stem": "The state in Nigeria with the highest population density is",
+      "options": {
+        "A": "Anambra",
+        "B": "Bayelsa",
+        "C": "Ogun",
+        "D": "Niger"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0063",
+      "type": "mcq",
+      "stem": "Geo-referencing in GIS is referred to as",
+      "options": {
+        "A": "Assigning spatials location to a data",
+        "B": "Data acquisition",
+        "C": "Data Management",
+        "D": "Manipulation and analysis"
+      },
+      "marks": 1,
+      "topic": "Basic concepts of geographic information system (GIS)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0064",
+      "type": "mcq",
+      "stem": "A device for transferring information from analogue map into computer for further manipulation is",
+      "options": {
+        "A": "Aerial photograph",
+        "B": "Digitizer",
+        "C": "Global positioning system",
+        "D": "Plotter"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0065",
+      "type": "mcq",
+      "stem": "The system of agriculture referred to as \"Land rotation\" is",
+      "options": {
+        "A": "Bush fallow",
+        "B": "Crop rotation",
+        "C": "Mixed farming",
+        "D": "Shifting cultivation"
+      },
+      "marks": 1,
+      "topic": "Past Questions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0066",
+      "type": "mcq",
+      "stem": "These are areas of crude oil production in Nigeria except",
+      "options": {
+        "A": "Afam",
+        "B": "Egbema",
+        "C": "Oloibiri",
+        "D": "Ughelli"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0067",
+      "type": "mcq",
+      "stem": "River regime is best described as the",
+      "options": {
+        "A": "rate at which a river flows",
+        "B": "seasonal variation in the volume of water in a river",
+        "C": "period a river overflows its banks",
+        "D": "amount of load a river carries"
+      },
+      "marks": 1,
+      "topic": "Stages of River Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0068",
+      "type": "mcq",
+      "stem": "Jos plateau is an example of a",
+      "options": {
+        "A": "Volcanic plateau",
+        "B": "Dissected plateau",
+        "C": "Tectonic plateau",
+        "D": "Bassalt Plateau"
+      },
+      "marks": 1,
+      "topic": "PLATEAUX / LOW LANDS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0069",
+      "type": "mcq",
+      "stem": "One of the features of wind deposition is",
+      "options": {
+        "A": "a barchan",
+        "B": "a ventifact",
+        "C": "an inselberg",
+        "D": "a messa"
+      },
+      "marks": 1,
+      "topic": "Action of Winds",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0070",
+      "type": "mcq",
+      "stem": "Which of the following rocks is organically formed?",
+      "options": {
+        "A": "Gypsum",
+        "B": "Coal",
+        "C": "Grit",
+        "D": "shale"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following is not a factor that favours industrial concentration in Western Nigeria?",
+      "options": {
+        "A": "Availability of raw materials",
+        "B": "Closeness to major importing and exporting ports",
+        "C": "Creativity of people in the area",
+        "D": "Good road network"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0072",
+      "type": "mcq",
+      "stem": "A line joining all points of equal salinity is an",
+      "options": {
+        "A": "isopalh",
+        "B": "isopleth",
+        "C": "isohaline",
+        "D": "isobar"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0073",
+      "type": "mcq",
+      "stem": "Tropical savanna vegetation is characterized by",
+      "options": {
+        "A": "drought - resistant trees",
+        "B": "trees with broad leaves and fleshy bark",
+        "C": "palm trees and thorny scrub",
+        "D": "scattered every green trees"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0074",
+      "type": "mcq",
+      "stem": "An example of a coastline of emergence is",
+      "options": {
+        "A": "a raised beach",
+        "B": "an estuarian coast",
+        "C": "a dalmatian coast",
+        "D": "a ria coast"
+      },
+      "marks": 1,
+      "topic": "Geo-Political issues (Land Reclamation)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0075",
+      "type": "mcq",
+      "stem": "Which of the following is associated with savanna vegetation",
+      "options": {
+        "A": "Shallow - rooted trees",
+        "B": "Trees that grow throughout the year",
+        "C": "Scrub",
+        "D": "Dense vegetation"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0076",
+      "type": "mcq",
+      "stem": "Which of the following statements is true of the North Atlantic Sea route?",
+      "options": {
+        "A": "It is the busiest sea route",
+        "B": "It links Nigeria with Europe",
+        "C": "Goods carried on the route include grains",
+        "D": "It links North America with Europe"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0077",
+      "type": "mcq",
+      "stem": "Exports from Mali are most likely to pass through the Sea port at",
+      "options": {
+        "A": "Lagos",
+        "B": "Dakar",
+        "C": "Banjul",
+        "D": "Abidjan"
+      },
+      "marks": 1,
+      "topic": "Trade",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0078",
+      "type": "mcq",
+      "stem": "A major percentage of the world's exports of citrus fruits is from the",
+      "options": {
+        "A": "Tropical region",
+        "B": "Cool temperate region",
+        "C": "Polar region",
+        "D": "Mediterranean region"
+      },
+      "marks": 1,
+      "topic": "Trade",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0079",
+      "type": "mcq",
+      "stem": "Nigeria's major export commodity is",
+      "options": {
+        "A": "Coal",
+        "B": "Cocoa",
+        "C": "Cotton",
+        "D": "Petroleum"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0080",
+      "type": "mcq",
+      "stem": "The coastal regions of Sierra leonne record an annual rainfall of over",
+      "options": {
+        "A": "3,000 mm",
+        "B": "4,000 mm",
+        "C": "5,000 mm",
+        "D": "6,500 mm"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0081",
+      "type": "mcq",
+      "stem": "A settlement located where two rivers meet is called a",
+      "options": {
+        "A": "nucleated settlement",
+        "B": "confluence town",
+        "C": "linear settlement",
+        "D": "nodal town"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0082",
+      "type": "mcq",
+      "stem": "Kossou Dam is located on River",
+      "options": {
+        "A": "Volta",
+        "B": "Bandama",
+        "C": "Ginene",
+        "D": "Nile"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0083",
+      "type": "mcq",
+      "stem": "Which of the following has the highest salinity",
+      "options": {
+        "A": "South Atlantic",
+        "B": "Dead Sea",
+        "C": "Red Sea",
+        "D": "Mediterranean Sea"
+      },
+      "marks": 1,
+      "topic": "Environmental Resources",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0084",
+      "type": "mcq",
+      "stem": "The dam which is not used in the gezira is the",
+      "options": {
+        "A": "A swan",
+        "B": "Sennar",
+        "C": "Roseires",
+        "D": "Jebel Azula"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0085",
+      "type": "mcq",
+      "stem": "Which statement is not true of the middle belt in Nigeria?",
+      "options": {
+        "A": "The soil is not productive",
+        "B": "mineral resources can be found in it",
+        "C": "the population is sparse",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "topic": "GEOEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0086",
+      "type": "mcq",
+      "stem": "Which of the following zones is the least industrialized in Nigeria?",
+      "options": {
+        "A": "Lokoja - Ajaokuta",
+        "B": "Lagos - Ikeja",
+        "C": "Port harcourt - Aba",
+        "D": "Abeokuta - Ibadan"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0087",
+      "type": "mcq",
+      "stem": "Which of the following towns is not a precolonial town",
+      "options": {
+        "A": "Ilorin",
+        "B": "Bida",
+        "C": "Enugu",
+        "D": "Ibadan"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0088",
+      "type": "mcq",
+      "stem": "Which of the following lakes owes its origin mainly to faulting?",
+      "options": {
+        "A": "Lake Chad",
+        "B": "Lake Superior",
+        "C": "Lake Malawi",
+        "D": "Lake Victoria"
+      },
+      "marks": 1,
+      "topic": "Earth Internal Process (Earth’s Quakes)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0089",
+      "type": "mcq",
+      "stem": "In the desert region the most prominent agent of erosion is",
+      "options": {
+        "A": "Thunder storms",
+        "B": "Rain fall",
+        "C": "Rivers",
+        "D": "Wind"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0090",
+      "type": "mcq",
+      "stem": "Which of the following is not an element of climate?",
+      "options": {
+        "A": "Attitude",
+        "B": "Temperature",
+        "C": "Air pressure",
+        "D": "Precipitation"
+      },
+      "marks": 1,
+      "topic": "Climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0091",
+      "type": "mcq",
+      "stem": "Nigeria is located between longitudes",
+      "options": {
+        "A": "3°E and 15°E",
+        "B": "2°E and 15°E",
+        "C": "1°E and 10°E",
+        "D": "3°E and 10°E"
+      },
+      "marks": 1,
+      "topic": "Latitudes and Longitudes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0092",
+      "type": "mcq",
+      "stem": "The tourist centre of Ogbunike care is located near",
+      "options": {
+        "A": "Kainji in Niger state",
+        "B": "Yankari in Bauchi state",
+        "C": "Ikeja in Lagos state",
+        "D": "Onitsha in Anambra state"
+      },
+      "marks": 1,
+      "topic": "Tourism (World)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0093",
+      "type": "mcq",
+      "stem": "Which of the following is not a sea route?",
+      "options": {
+        "A": "London - moscow - Baghdad",
+        "B": "London - Capetown - melbourne",
+        "C": "New york - London - Rotterdam",
+        "D": "Sydney - Suez - London"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0094",
+      "type": "mcq",
+      "stem": "One of the disadvantages of water transport is that it",
+      "options": {
+        "A": "causes atmospheric pollution",
+        "B": "is used for carrying agricultural commodities only",
+        "C": "is not flexible",
+        "D": "cannot carry bulky goods"
+      },
+      "marks": 1,
+      "topic": "Transportation"
+    },
+    {
+      "id": "jamb-geography-bank-0095",
+      "type": "mcq",
+      "stem": "Cement factory is usually located near",
+      "options": {
+        "A": "Source of capital",
+        "B": "Source of labour",
+        "C": "Source of raw material",
+        "D": "The market"
+      },
+      "marks": 1,
+      "topic": "Industry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the following countries is located in North Africa.",
+      "options": {
+        "A": "Zaire",
+        "B": "Ruwanda",
+        "C": "Namibia",
+        "D": "Algeria"
+      },
+      "marks": 1,
+      "topic": "Introduction to Geography",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0097",
+      "type": "mcq",
+      "stem": "The best solution to the rapid depletion of forest resources in West Africa is to",
+      "options": {
+        "A": "reserve hectares of land for plantations",
+        "B": "Introduce forest conservation techniques",
+        "C": "Import wood from other countries",
+        "D": "Employ more forest guards"
+      },
+      "marks": 1,
+      "topic": "Environmental Conservation",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0098",
+      "type": "mcq",
+      "stem": "The following are advantages of overpopulation except",
+      "options": {
+        "A": "Quick information dissemination",
+        "B": "Effective planning",
+        "C": "Large labour",
+        "D": "Insufficient food"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0099",
+      "type": "mcq",
+      "stem": "Which of the following is best defined as the movement of people from one geographical area to another involving permanent or temporary residence or settlement",
+      "options": {
+        "A": "Transportation",
+        "B": "Networking",
+        "C": "Migration",
+        "D": "Urbanization"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0100",
+      "type": "mcq",
+      "stem": "Use the information on country Y below to answer the question that follows:\nLand area = 200,000km\n2\nPopulation = 10,000,000.\ncalculate the population density of country Y",
+      "options": {
+        "A": "50 persons per km\n2",
+        "B": "0.02 persons per km\n2",
+        "C": "200 persons per km\n2",
+        "D": "20 persons per km\n2"
+      },
+      "marks": 1,
+      "topic": "Past Questions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0101",
+      "type": "mcq",
+      "stem": "The birth rate of a country can be increased through the following except",
+      "options": {
+        "A": "Encouragement of early marriages",
+        "B": "Inadequate health services",
+        "C": "Encouragement of polygamy",
+        "D": "Legislation against abortion"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0102",
+      "type": "mcq",
+      "stem": "The following are areas of lowlands in Nigeria except in Nigeria",
+      "options": {
+        "A": "The Chad Basin",
+        "B": "The Eastern Scarpland",
+        "C": "The Coaster plain",
+        "D": "The Niger-Benue trough"
+      },
+      "marks": 1,
+      "topic": "PLATEAUX / LOW LANDS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0103",
+      "type": "mcq",
+      "stem": "Tin-mining activities in Nigeria are the main causes of environmental degradation on the?",
+      "options": {
+        "A": "Western Highlands",
+        "B": "Eastern Highlands",
+        "C": "Jos Plateau",
+        "D": "Obudu Plateau"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0104",
+      "type": "mcq",
+      "stem": "Which of the following processes leads to the loss of carbon from the air",
+      "options": {
+        "A": "combustion",
+        "B": "respiration",
+        "C": "putrefaction",
+        "D": "photosynthesis"
+      },
+      "marks": 1,
+      "topic": "Environmental Conservation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0105",
+      "type": "mcq",
+      "stem": "The part labeled X in the soil profile is known as",
+      "options": {
+        "A": "top soil",
+        "B": "sub soil",
+        "C": "parent materials",
+        "D": "bedrock"
+      },
+      "marks": 1,
+      "topic": "THE EARTH’S STRUCTURE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0106",
+      "type": "mcq",
+      "stem": "Which of the following statistical mapping techniques is most suitable for showing the spatial distribution of cattle in the different northern states of Nigeria?",
+      "options": {
+        "A": "Dot map",
+        "B": "Isopleth",
+        "C": "Pie graph",
+        "D": "Proportion circle"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0107",
+      "type": "mcq",
+      "stem": "Plants in the savannah are adapted mainly to alternating periods of high and low?",
+      "options": {
+        "A": "Light intensities",
+        "B": "Water supply",
+        "C": "Temperatures",
+        "D": "Soil salinity"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0108",
+      "type": "mcq",
+      "stem": "The prosperity of Kenya depends on the cultivation of",
+      "options": {
+        "A": "coffee, sisal and rice",
+        "B": "coffee, cocoa and rice",
+        "C": "coffee, rubber and maize",
+        "D": "coffee, maize and sisal"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0109",
+      "type": "mcq",
+      "stem": "Which of the following is not an example of mineral resources?",
+      "options": {
+        "A": "Latex",
+        "B": "Zinc",
+        "C": "Coal",
+        "D": "Tin"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0110",
+      "type": "mcq",
+      "stem": "Arrange the following scales in ascending order: 1:50,000, 1:200,000, 1:200, 1:300,000",
+      "options": {
+        "A": "1:200,1:50,000,1:200,000, 1:300,000",
+        "B": "1:300,000,1:200,000,1:50,000,1:200",
+        "C": "1:50,000, 1:200,000,1:300,000, 1:200",
+        "D": "1:300,000, 1:200, 1:50,000, 1:200,000"
+      },
+      "marks": 1,
+      "topic": "Map Distance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0111",
+      "type": "mcq",
+      "stem": "Which of the following is not a precaution to be taken when making a compass traverse?",
+      "options": {
+        "A": "The bearing should not be observed from a position close to strongly magnetic materials",
+        "B": "The 'back' bearing should be taken from the other end of the line and should differ from the 'on'/'forward' bearing by exactly 180\no",
+        "C": "All magnetic materials should be removed from the body and pockets of the reader before the bearing is taken",
+        "D": "The compass must be held vertically so that the edge of the card does not rub against the top of the compass"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0112",
+      "type": "mcq",
+      "stem": "One of the following is not a sequence of denudation",
+      "options": {
+        "A": "Erosion",
+        "B": "Transportation",
+        "C": "Decomposition",
+        "D": "Deposition"
+      },
+      "marks": 1,
+      "topic": "Denudational Process",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0113",
+      "type": "mcq",
+      "stem": "Which of the following is not an importance of Geographic Information System(G.I.S)",
+      "options": {
+        "A": "Urban and regional planning",
+        "B": "Resource management",
+        "C": "funds mismanagement",
+        "D": "Dam site location"
+      },
+      "marks": 1,
+      "topic": "Basic concepts of geographic information system (GIS)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0114",
+      "type": "mcq",
+      "stem": "________ are projection of highlands into low grounds i.e the v-shape points to the low land?",
+      "options": {
+        "A": "Valleys",
+        "B": "Ridges",
+        "C": "Spurs",
+        "D": "Gorger"
+      },
+      "marks": 1,
+      "topic": "PLATEAUX / LOW LANDS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0115",
+      "type": "mcq",
+      "stem": "Which of the following activities does not control soil erosion",
+      "options": {
+        "A": "contour ploughing",
+        "B": "deforestation",
+        "C": "covercropping",
+        "D": "afforestation"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0116",
+      "type": "mcq",
+      "stem": "Which of the following food chains is impossible?",
+      "options": {
+        "A": "Grass→sheep→man",
+        "B": "Grass→Toad→grasshopper→rat",
+        "C": "Grass→grashopper→toad→snake",
+        "D": "Diatoms→euglena→water fleas"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0117",
+      "type": "mcq",
+      "stem": "What is the longitude of a town Y whose local time is 12:00 noon when Greenwich mean time is 6:00pm",
+      "options": {
+        "A": "90\no\nW",
+        "B": "180\no\nE",
+        "C": "150\no\nW",
+        "D": "80\no\nE"
+      },
+      "marks": 1,
+      "topic": "Latitudes and Longitudes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0118",
+      "type": "mcq",
+      "stem": "_______ is a large mass of igneous mound with a dome-shaped upper surface and a level base?",
+      "options": {
+        "A": "Laccolith",
+        "B": "Lopolith",
+        "C": "Phacolith",
+        "D": "Batholith"
+      },
+      "marks": 1,
+      "topic": "Volcanicity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0119",
+      "type": "mcq",
+      "stem": "The instrument used in measuring the intensity of an earthquake is known as?",
+      "options": {
+        "A": "Earthometer",
+        "B": "Ritcher's Scale",
+        "C": "Seismograph",
+        "D": "Shock Wave"
+      },
+      "marks": 1,
+      "topic": "Earth Internal Process (Earth’s Quakes)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0120",
+      "type": "mcq",
+      "stem": "_________ is formed when two corries cut back opposite sides of the same mountain, resulting in a knife-edged ridge",
+      "options": {
+        "A": "Cirque",
+        "B": "Pyramidal Peak",
+        "C": "Striation",
+        "D": "Arete"
+      },
+      "marks": 1,
+      "topic": "Glacier action",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0121",
+      "type": "mcq",
+      "stem": "One of the following is not a favourable condition for siting a settlement",
+      "options": {
+        "A": "Adequate water supply",
+        "B": "Land for building",
+        "C": "Defence",
+        "D": "Infertility of soil"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0122",
+      "type": "mcq",
+      "stem": "The name given to two or more towns/cities which have grown to merge with one another is?",
+      "options": {
+        "A": "Hamlet",
+        "B": "Homestead",
+        "C": "Conurbation",
+        "D": "Megapolis"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0123",
+      "type": "mcq",
+      "stem": "Which of the following is not a measure of environmental control?",
+      "options": {
+        "A": "Preservation",
+        "B": "Stabilization",
+        "C": "Degradation",
+        "D": "Afforestation"
+      },
+      "marks": 1,
+      "topic": "Environmental Problems",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0124",
+      "type": "mcq",
+      "stem": "Interdependence within the ecosystem can best be interpreted to mean that components of the ecosystem",
+      "options": {
+        "A": "pray on one another",
+        "B": "harm one another",
+        "C": "regulate one another",
+        "D": "interact with one another"
+      },
+      "marks": 1,
+      "topic": "Environmental Resources",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0125",
+      "type": "mcq",
+      "stem": "Which of the following statements is right?",
+      "options": {
+        "A": "In West Africa, colonial masters encouraged plantation agriculture",
+        "B": "In West Africa, plantation are on fertile lowlands",
+        "C": "In East Africa, management of plantations is less efficient than in West Africa,",
+        "D": "In East Africa, uniformity of climate has made for limited variety of crops"
+      },
+      "marks": 1,
+      "topic": "Introduction to Geography",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0126",
+      "type": "mcq",
+      "stem": "Which of the following is not a problem of the Economic Community of West Africa States(ECOWAS)?",
+      "options": {
+        "A": "Trade liberalization",
+        "B": "Language Barrier",
+        "C": "Political Instability",
+        "D": "Differences in political ideology"
+      },
+      "marks": 1,
+      "topic": "Economic Community of West African States (ECOWAS)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0127",
+      "type": "mcq",
+      "stem": "Which of the following important fruits is produced in North-West Africa?",
+      "options": {
+        "A": "Pineapples",
+        "B": "Tangerines",
+        "C": "Pears",
+        "D": "Vine"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0128",
+      "type": "mcq",
+      "stem": "Which of the following is not a proof of the earth's sphericity?",
+      "options": {
+        "A": "The circular horizon",
+        "B": "deflection of winds",
+        "C": "ship's visibilty",
+        "D": "circumnavigation of the earth"
+      },
+      "marks": 1,
+      "topic": "Earth’s Sphericity, Rotation and Revolution",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0129",
+      "type": "mcq",
+      "stem": "Which of the following types of rock is a source of energy?",
+      "options": {
+        "A": "Sandstone",
+        "B": "Coal",
+        "C": "Granite",
+        "D": "Graphite"
+      },
+      "marks": 1,
+      "topic": "Renewable and Non-Renewable Resources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0130",
+      "type": "mcq",
+      "stem": "_______ transport is the slowest and the cheapest means of transort",
+      "options": {
+        "A": "Air",
+        "B": "Water",
+        "C": "Rail",
+        "D": "Pipeline"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0131",
+      "type": "mcq",
+      "stem": "Which of the following is a limitation of rail transport in developing countries?",
+      "options": {
+        "A": "Lack of technical know-how",
+        "B": "low cost of construction",
+        "C": "It is too fast",
+        "D": "low cost of maintenance"
+      },
+      "marks": 1,
+      "topic": "Transportation in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0132",
+      "type": "mcq",
+      "stem": "One of the following is the most important major ocean(shipping) route",
+      "options": {
+        "A": "The Panama canal route",
+        "B": "The north pacific route",
+        "C": "The trans-pacific route",
+        "D": "The north atlantic route"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0133",
+      "type": "mcq",
+      "stem": "Which of the following is a problem of world transportation?",
+      "options": {
+        "A": "Lack of soil erosion",
+        "B": "Absence of many rivers",
+        "C": "Absence of marshy areas",
+        "D": "poor visibility"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0134",
+      "type": "mcq",
+      "stem": "________ is formed from the combination of several local government areas",
+      "options": {
+        "A": "State",
+        "B": "Town",
+        "C": "Village",
+        "D": "Megapolis"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0135",
+      "type": "mcq",
+      "stem": "The relative dryness of the Horn Africa is due to",
+      "options": {
+        "A": "The dominance of cold currents in the region",
+        "B": "The shape and direction of the shoreline",
+        "C": "Its closeness to the high ranges of east africa",
+        "D": "The distance from the belt of tropical cyclones"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0136",
+      "type": "mcq",
+      "stem": "It takes mecury how many days to complete its orbit?",
+      "options": {
+        "A": "365",
+        "B": "88",
+        "C": "225",
+        "D": "84"
+      },
+      "marks": 1,
+      "topic": "The solar system",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0137",
+      "type": "mcq",
+      "stem": "All except one are functions of a village",
+      "options": {
+        "A": "Lumbering function",
+        "B": "Small-scale shopping",
+        "C": "Mining function",
+        "D": "Religious function"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0138",
+      "type": "mcq",
+      "stem": "One of the following is not a vegetation belt in lagos state",
+      "options": {
+        "A": "The rainforest",
+        "B": "The fresh water swamp",
+        "C": "The savannah",
+        "D": "The coaster mangrove"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0139",
+      "type": "mcq",
+      "stem": "The development of a climax vegetation in the savannah belt of Nigeria is disturbed mainly by",
+      "options": {
+        "A": "Lumbering",
+        "B": "Mining",
+        "C": "Animal grazing",
+        "D": "Bush burning"
+      },
+      "marks": 1,
+      "topic": "Savannah Belt of Nigeria",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0140",
+      "type": "mcq",
+      "stem": "______ is a collection of building with people living them",
+      "options": {
+        "A": "Houses",
+        "B": "Town",
+        "C": "Settlement",
+        "D": "Land"
+      },
+      "marks": 1,
+      "topic": "Introduction to Geography",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0141",
+      "type": "mcq",
+      "stem": "Lines joining places of equal sunshine hours on a map are called?",
+      "options": {
+        "A": "Isobars",
+        "B": "Isotherms",
+        "C": "Isohytes",
+        "D": "Isohels"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0142",
+      "type": "mcq",
+      "stem": "All except one is a disadvantage of compass traversing",
+      "options": {
+        "A": "lack of technical experts",
+        "B": "Its uses are complex",
+        "C": "It can be used to survey a large area",
+        "D": "The instrument used are expensive"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0143",
+      "type": "mcq",
+      "stem": "When the traverse connects two stations, whose positions are known, what type of traverse is this?",
+      "options": {
+        "A": "closed traverse",
+        "B": "open traverse",
+        "C": "station traverse",
+        "D": "leg traverse"
+      },
+      "marks": 1,
+      "topic": "Map Distance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0144",
+      "type": "mcq",
+      "stem": "______ is a surveying instrument used for measuring the angles of ground slopes",
+      "options": {
+        "A": "The optical square",
+        "B": "The watkin's clinometer",
+        "C": "The offset staff",
+        "D": "The gunter's chain"
+      },
+      "marks": 1,
+      "topic": "Introduction to Geography",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0145",
+      "type": "mcq",
+      "stem": "The following are seaports used in the North Atlantic sea route except",
+      "options": {
+        "A": "Lagos-Hamburg",
+        "B": "Lagos-New york",
+        "C": "Lagos-Rotterdam",
+        "D": "Lagos-Southampton"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0146",
+      "type": "mcq",
+      "stem": "The most suitable statistical diagram to show spatial distribution of production is the",
+      "options": {
+        "A": "dot map",
+        "B": "pie chart",
+        "C": "divided circle",
+        "D": "line graph"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0147",
+      "type": "mcq",
+      "stem": "The variable which is both a control and an element of weather and climate is",
+      "options": {
+        "A": "Temperature",
+        "B": "Rainfall",
+        "C": "Air mass",
+        "D": "Wind"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0148",
+      "type": "mcq",
+      "stem": "The most densely populated city which is also the capital of a country in Africa is",
+      "options": {
+        "A": "Abuja",
+        "B": "Dakar",
+        "C": "Cairo",
+        "D": "Cape Town"
+      },
+      "marks": 1,
+      "topic": "World Population",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0149",
+      "type": "mcq",
+      "stem": "A country well known for the production of Copper in Africa is",
+      "options": {
+        "A": "Zambia",
+        "B": "Republic of Benin",
+        "C": "Ghana",
+        "D": "Egypt"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0150",
+      "type": "mcq",
+      "stem": "The areas in Nigeria where temperate crops may be grown include",
+      "options": {
+        "A": "Jos Plateau and Mambilla Plateau",
+        "B": "Mandara Mountains and Biu Plateau",
+        "C": "Oban Hills and Yoruba Highlands",
+        "D": "Apata Hills and Effon Ridge"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0151",
+      "type": "mcq",
+      "stem": "The most capital-intensive sector of Nigeria economy to day is",
+      "options": {
+        "A": "Transportation",
+        "B": "Trading",
+        "C": "Agriculture",
+        "D": "Mining"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0152",
+      "type": "mcq",
+      "stem": "Examples of fold mountains in Africa are",
+      "options": {
+        "A": "Cape Ranges and Atlas Mountains",
+        "B": "Drakensberg Mountains and Mount Cameroun",
+        "C": "Atlas Mountains and Mount Kenya",
+        "D": "Mount Kilimanjaro and Atlas Mountains"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0153",
+      "type": "mcq",
+      "stem": "A good example of cuesta landscape in Nigeria is",
+      "options": {
+        "A": "North Central Highlands",
+        "B": "Biu plateau",
+        "C": "Yoruba Hills",
+        "D": "Udi hills"
+      },
+      "marks": 1,
+      "topic": "Karst (Limestone)",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0154",
+      "type": "mcq",
+      "stem": "The prairies of North America are",
+      "options": {
+        "A": "montane grasslands",
+        "B": "temperate grasslands",
+        "C": "tropical grasslands",
+        "D": "savannah"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0155",
+      "type": "mcq",
+      "stem": "Lakes kivu and Malawi are related in that they",
+      "options": {
+        "A": "lie in the Northern hemisphere",
+        "B": "attract a large number of tourists",
+        "C": "are rift valley lakes",
+        "D": "are crater lakes"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0156",
+      "type": "mcq",
+      "stem": "Automobile Industries that are essentially assembly plants are found in",
+      "options": {
+        "A": "North East USA",
+        "B": "South Africa",
+        "C": "West Africa",
+        "D": "Western Europe"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0157",
+      "type": "mcq",
+      "stem": "Nigeria recently entered into trade agreements in petroleum products and gas with",
+      "options": {
+        "A": "most countries of North Africa",
+        "B": "all West African countries",
+        "C": "all African countries",
+        "D": "some West African countries"
+      },
+      "marks": 1,
+      "topic": "Trade",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0158",
+      "type": "mcq",
+      "stem": "The group of hardwoods that are suitable for railway sleepers in Nigeria is",
+      "options": {
+        "A": "pine, fir and mahogamy",
+        "B": "mahogamy, obeche and iroko",
+        "C": "gmelina, teak and spruce",
+        "D": "obeche, mahogamy and pine"
+      },
+      "marks": 1,
+      "topic": "Resources of Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0159",
+      "type": "mcq",
+      "stem": "The sex ratio of any population may be affected by",
+      "options": {
+        "A": "mortality",
+        "B": "migration",
+        "C": "morbidity",
+        "D": "fertility"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0160",
+      "type": "mcq",
+      "stem": "An igneous rock with distinct grains of mica, fieldspar and quartz is",
+      "options": {
+        "A": "schist",
+        "B": "basalt",
+        "C": "granite",
+        "D": "rhyolite"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0161",
+      "type": "mcq",
+      "stem": "An example of a landform produced by glaciation is",
+      "options": {
+        "A": "horizon",
+        "B": "an ox-bow lake",
+        "C": "a cirque",
+        "D": "a sand-dune"
+      },
+      "marks": 1,
+      "topic": "Glacier action",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0162",
+      "type": "mcq",
+      "stem": "The Stevenson's screen is raised about one meter above the ground in order to avoid",
+      "options": {
+        "A": "the influence of strong winds",
+        "B": "the heat from the ground",
+        "C": "the effects of nearby trees",
+        "D": "rain drops entering it"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0163",
+      "type": "mcq",
+      "stem": "In surveying, it is best dealt with by",
+      "options": {
+        "A": "using abney level",
+        "B": "removing them",
+        "C": "laying offsets",
+        "D": "avoiding them"
+      },
+      "marks": 1,
+      "topic": "Map Reading",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0164",
+      "type": "mcq",
+      "stem": "The merging together of a number of urban settlements will produce a",
+      "options": {
+        "A": "Suburb",
+        "B": "Nucleated settlement",
+        "C": "Linear settlement",
+        "D": "Conurbation"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0165",
+      "type": "mcq",
+      "stem": "The world leading producer of cocoa is",
+      "options": {
+        "A": "Nigeria",
+        "B": "Ecuador",
+        "C": "Ghana",
+        "D": "Brazil"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0166",
+      "type": "mcq",
+      "stem": "Which of the following pairs of cities have both seaport and international airport?",
+      "options": {
+        "A": "Kampala and Mombasa",
+        "B": "Lagos and San Francisco",
+        "C": "Rio de Janeiro and Johannesburg",
+        "D": "New York and Warri"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0167",
+      "type": "mcq",
+      "stem": "The process by which organic matter is decomposed and synthesized to form part of the soil is known as",
+      "options": {
+        "A": "mineralization",
+        "B": "nitrification",
+        "C": "humification",
+        "D": "laterization"
+      },
+      "marks": 1,
+      "topic": "Environmental Resources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0168",
+      "type": "mcq",
+      "stem": "If the standard time of a country is GMT + 1hr, which longitude's local time is adopted by the country?",
+      "options": {
+        "A": "15°W",
+        "B": "60°W",
+        "C": "15°E",
+        "D": "60°E"
+      },
+      "marks": 1,
+      "topic": "Longitudes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0169",
+      "type": "mcq",
+      "stem": "The highest category of rural settlement is the",
+      "options": {
+        "A": "Homestead",
+        "B": "Hut",
+        "C": "Hamlet",
+        "D": "Village"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0170",
+      "type": "mcq",
+      "stem": "The most common greenhouse gas in the atmosphere is",
+      "options": {
+        "A": "hydrogen bromide",
+        "B": "carbon (iv) oxide",
+        "C": "chlorofluorocarbon",
+        "D": "carbon (ii) oxide"
+      },
+      "marks": 1,
+      "topic": "Climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0171",
+      "type": "mcq",
+      "stem": "British foreign investments are concentrated in",
+      "options": {
+        "A": "Commonwealth countries",
+        "B": "Developed countries",
+        "C": "ECOWAS Countries",
+        "D": "EU Countries"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0172",
+      "type": "mcq",
+      "stem": "Urban and Rural Settlements are differentiated by their",
+      "options": {
+        "A": "population",
+        "B": "population and function",
+        "C": "function only",
+        "D": "function and location"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0173",
+      "type": "mcq",
+      "stem": "The Ruhr coalfield is located in",
+      "options": {
+        "A": "Canada",
+        "B": "Russia",
+        "C": "Germany",
+        "D": "USA"
+      },
+      "marks": 1,
+      "topic": "Industry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0174",
+      "type": "mcq",
+      "stem": "The exploitation of timber in equatorial Africa causes",
+      "options": {
+        "A": "environmental pollution",
+        "B": "less rainfall run-off",
+        "C": "soil erosion",
+        "D": "high cost of foreign products"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0175",
+      "type": "mcq",
+      "stem": "Soil texture is determined primarily by",
+      "options": {
+        "A": "particle sizes",
+        "B": "profile horizons",
+        "C": "major components",
+        "D": "nutrient status"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0176",
+      "type": "mcq",
+      "stem": "A desert country which has high population density supported by irrigation is",
+      "options": {
+        "A": "Sudan",
+        "B": "Egypt",
+        "C": "Kuwait",
+        "D": "Namibia"
+      },
+      "marks": 1,
+      "topic": "Introduction to Geography",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0177",
+      "type": "mcq",
+      "stem": "The speed and capacity of a train are influenced by the",
+      "options": {
+        "A": "the edge of the railway line",
+        "B": "length of the railway line",
+        "C": "width of the railway gauge",
+        "D": "depth of the railway line"
+      },
+      "marks": 1,
+      "topic": "Transportation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0178",
+      "type": "mcq",
+      "stem": "Which of the following factors may lead to an area being densely populated?",
+      "options": {
+        "A": "Rugged mountains",
+        "B": "High plateaux",
+        "C": "Active volcanoes",
+        "D": "Lowland plains"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0179",
+      "type": "mcq",
+      "stem": "An example of argillaceous rock is",
+      "options": {
+        "A": "chalk",
+        "B": "shale",
+        "C": "graphite",
+        "D": "coat"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0180",
+      "type": "mcq",
+      "stem": "A weather element controlled mainly by latitude is",
+      "options": {
+        "A": "cloud cover",
+        "B": "rainfall",
+        "C": "temperature",
+        "D": "humidity"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0181",
+      "type": "mcq",
+      "stem": "A poor settlement on the edge of a city is known as",
+      "options": {
+        "A": "ghetto",
+        "B": "shanty town",
+        "C": "slum",
+        "D": "new town"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0182",
+      "type": "mcq",
+      "stem": "In surveying, the prismatic compass is used to",
+      "options": {
+        "A": "measure accurately, height of points",
+        "B": "obtain bearings of features",
+        "C": "measure horizontal distances",
+        "D": "measure the inclination of features"
+      },
+      "marks": 1,
+      "topic": "Surveying",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0183",
+      "type": "mcq",
+      "stem": "If M is due west of station N, the bearing of M from N is",
+      "options": {
+        "A": "180°",
+        "B": "270°",
+        "C": "90°",
+        "D": "360°"
+      },
+      "marks": 1,
+      "topic": "Latitudes and Longitudes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0184",
+      "type": "mcq",
+      "stem": "Textile Industry 7.2°\nPetroleum Industry 172.8°\nIron and Steel Industry 115.2°\nCosmetics Industry 43.2°\nAutomobile Industry 21.6°\nThe table above shows the employment distribution in a town with the share of the different industries depicted in degrees of a pie chart. The total number of workers in the town is 25,000.\nWhat is the total number of workers in the petroleum industry?",
+      "options": {
+        "A": "25,000",
+        "B": "12,000",
+        "C": "3,000",
+        "D": "10,000"
+      },
+      "marks": 1,
+      "topic": "Past Questions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0185",
+      "type": "mcq",
+      "stem": "Textile Industry 7.2°\nPetroleum Industry 172.8°\nIron and Steel Industry 115.2°\nCosmetics Industry 43.2°\nAutomobile Industry 21.6°\nThe table above shows the employment distribution in a town with the share of the different industries depicted in degrees of a pie chart. The total number of workers in the town is 25,000.\nThe proportion of workers in the iron and steel industry, in relation to the number off workers in the town is",
+      "options": {
+        "A": "0.32",
+        "B": "0.06",
+        "C": "0.12",
+        "D": "0.26"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0186",
+      "type": "mcq",
+      "stem": "The annual rainfall along the coast is less than expected in the equitorial region because of the",
+      "options": {
+        "A": "presence of a cold current",
+        "B": "configuration of the coastline",
+        "C": "high altitude of the area",
+        "D": "subsidence of air masses"
+      },
+      "marks": 1,
+      "topic": "The Environment :Weather and climate",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0187",
+      "type": "mcq",
+      "stem": "Kano is a major population centre in Nigeria because its",
+      "options": {
+        "A": "Early religious and economic significance",
+        "B": "Conducive climate for groundnut production",
+        "C": "Early industrial development",
+        "D": "Large population of Hausa-speaking indigenes"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0188",
+      "type": "mcq",
+      "stem": "The Sudd region has been highly valued for its",
+      "options": {
+        "A": "large scale irrigation",
+        "B": "mineral deposits",
+        "C": "fishing industry",
+        "D": "biodiversity"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0189",
+      "type": "mcq",
+      "stem": "The ferralitic soils in West Africa are mostly found in the",
+      "options": {
+        "A": "Swampy coastline",
+        "B": "Forest belt",
+        "C": "Desert Environment",
+        "D": "Savanna belt"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0190",
+      "type": "mcq",
+      "stem": "A common feature of forcados, Bonny and Eket in the Niger delta is that they are",
+      "options": {
+        "A": "Very important fishing ports",
+        "B": "Terminal for oil companies",
+        "C": "Important for natural gas exports",
+        "D": "Export processing zones"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0191",
+      "type": "mcq",
+      "stem": "The Nigerian town which owed much of their growth in the 20th century to the development of the railway include",
+      "options": {
+        "A": "Lagos, Minna, Nnewi and Gusau",
+        "B": "Lagos, Lokoja, Gusau, Umuahia",
+        "C": "Osogbo, Minna, Owerri and Jos",
+        "D": "Enugu, Jos, Kaduna, Minna"
+      },
+      "marks": 1,
+      "topic": "Transportation in Nigeria",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0192",
+      "type": "mcq",
+      "stem": "Sugar Plantations in Africa are most highly developed in the lowlands of",
+      "options": {
+        "A": "the Guinea Coast and Mozambique",
+        "B": "the mediterranean seaboard and the Guinea coast",
+        "C": "Mozambique and Natal",
+        "D": "Natal and Lower Nile"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0193",
+      "type": "mcq",
+      "stem": "The Harbel Plantation in Liberia is noted for large-scale production of",
+      "options": {
+        "A": "oil palm",
+        "B": "rubber",
+        "C": "cocoa",
+        "D": "coffee"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0194",
+      "type": "mcq",
+      "stem": "J F M A M J J A S O N D\nTemp (°C) 27 28 28 28 27 26 25 26 26 26 27 28\nRainfall (mm) 32.5 52.5 132.5 225.0 270.0 370.5 385.0 295.0 427.5 427.5 110.0 110.0\nThe regime of the rainfall pattern is",
+      "options": {
+        "A": "rainfall throughout the year with single maximum",
+        "B": "seasonal rainfall with single maximum",
+        "C": "seasonal rainfall with double maxima",
+        "D": "rainfall throughout the year with double maxima"
+      },
+      "marks": 1,
+      "topic": "Past Questions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0195",
+      "type": "mcq",
+      "stem": "J F M A M J J A S O N D\nTemp (°C) 27 28 28 28 27 26 25 26 26 26 27 28\nRainfall (mm) 32.5 52.5 132.5 225.0 270.0 370.5 385.0 295.0 427.5 427.5 110.0 110.0\nThe climatic data above is likely to be that of",
+      "options": {
+        "A": "Lokoja",
+        "B": "Ibadan",
+        "C": "Kaduna",
+        "D": "Warri"
+      },
+      "marks": 1,
+      "topic": "Past Questions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0196",
+      "type": "mcq",
+      "stem": "Some of the solid minerals found in Nigeria are",
+      "options": {
+        "A": "marble, tin and columbite",
+        "B": "tin, diamond and bauxite",
+        "C": "tin, iron ore and diamond",
+        "D": "uranium, lead and iron ore"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0197",
+      "type": "mcq",
+      "stem": "The obudu plateau of the cross River Basin is economically noted for",
+      "options": {
+        "A": "exploitation of forest resources",
+        "B": "tea and coffee plantations",
+        "C": "cattle ranching and tourism",
+        "D": "generation of hydroelectricity"
+      },
+      "marks": 1,
+      "topic": "OEGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0198",
+      "type": "mcq",
+      "stem": "Which of the following regions has the least population density?",
+      "options": {
+        "A": "North-West Europe",
+        "B": "Eurasian Tundra",
+        "C": "The Nile Valley",
+        "D": "North-East USA"
+      },
+      "marks": 1,
+      "topic": "World population",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0199",
+      "type": "mcq",
+      "stem": "Dairying is an agricultural practices that is most prevalent",
+      "options": {
+        "A": "in lowlands and river valleys",
+        "B": "in extensive and undulating regions",
+        "C": "in hot and humid regions",
+        "D": "around large cities in industrial societies"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0200",
+      "type": "mcq",
+      "stem": "The catalyst in the economic development of Japan is its",
+      "options": {
+        "A": "extensive coastlines conductive to shipping",
+        "B": "fertile soils suitable for agriculture",
+        "C": "abundant mineral deposits",
+        "D": "large pool of skilled manpower"
+      },
+      "marks": 1,
+      "topic": "Industry",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0201",
+      "type": "mcq",
+      "stem": "Migration can contribute to solving the problems of rural areas by",
+      "options": {
+        "A": "promoting industrialization in the receiving areas",
+        "B": "redistributing population from high to low density area",
+        "C": "creating job opportunities in the source areas",
+        "D": "making rural populations less homogeneous at the source region"
+      },
+      "marks": 1,
+      "topic": "Population of Nigeria",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0202",
+      "type": "mcq",
+      "stem": "In river transport, the problem of irregular levels of water can be overcome by",
+      "options": {
+        "A": "controlling the current",
+        "B": "building locks and canals",
+        "C": "changing the direction of flow",
+        "D": "clearing the river of water weeds"
+      },
+      "marks": 1,
+      "topic": "Transportation in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0203",
+      "type": "mcq",
+      "stem": "The pair of countries where conurbation is most highly developed is",
+      "options": {
+        "A": "Japan and china",
+        "B": "Argentina and Australia",
+        "C": "USA and England",
+        "D": "France and Germany"
+      },
+      "marks": 1,
+      "topic": "Settlement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0204",
+      "type": "mcq",
+      "stem": "Which of the following is most influential in the location of textile and footwear industries?",
+      "options": {
+        "A": "Low interest rate",
+        "B": "Raw materials",
+        "C": "Energy supply",
+        "D": "Abundant cheap labor"
+      },
+      "marks": 1,
+      "topic": "Industry",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0205",
+      "type": "mcq",
+      "stem": "What is the birth rate of a country with a total population of 150,000,000 and registered births of 3,000,000 in a given year?",
+      "options": {
+        "A": "3%",
+        "B": "2%",
+        "C": "1%",
+        "D": "4%"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0206",
+      "type": "mcq",
+      "stem": "The most important factor that can aid the decentralization of industries in a country is the availability of",
+      "options": {
+        "A": "mobile capital",
+        "B": "local raw materials",
+        "C": "efficient inland transport",
+        "D": "alternative energy sources"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0207",
+      "type": "mcq",
+      "stem": "A government policy which is likely to encourage massive importation of goods into a country is the",
+      "options": {
+        "A": "reduction in travel allowance",
+        "B": "increase in wages",
+        "C": "relaxation of currency control",
+        "D": "increase in imports tariffs"
+      },
+      "marks": 1,
+      "topic": "Trade",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0208",
+      "type": "mcq",
+      "stem": "A population with low births and death rates presents",
+      "options": {
+        "A": "a broad-based population pyramid",
+        "B": "a young dependent population structure",
+        "C": "an equal male-female population structure",
+        "D": "an inverted population pyramid"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0209",
+      "type": "mcq",
+      "stem": "The best way to prevent a watershed from degradation is through",
+      "options": {
+        "A": "forest reservation",
+        "B": "fuel wood extraction",
+        "C": "inter-basin transfer",
+        "D": "crop production"
+      },
+      "marks": 1,
+      "topic": "Environmental Conservation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0210",
+      "type": "mcq",
+      "stem": "Which of these statements is true warm ocean currents?",
+      "options": {
+        "A": "They flow from the equator to the equator",
+        "B": "They flow from the equator to the poles",
+        "C": "They flow from lower to higher latitudes",
+        "D": "They flow from the higher to the lower latitudes"
+      },
+      "marks": 1,
+      "topic": "Ocean Currents",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0211",
+      "type": "mcq",
+      "stem": "The eucalyptus is to the Australian woodland as the teak is to the",
+      "options": {
+        "A": "Mediterranean woodland",
+        "B": "Equatorial forest",
+        "C": "Brazillian forest",
+        "D": "Monsoon forest"
+      },
+      "marks": 1,
+      "topic": "Introduction to Geography",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0212",
+      "type": "mcq",
+      "stem": "An example of a non-renewable resource is",
+      "options": {
+        "A": "Vegetation",
+        "B": "Soil",
+        "C": "Mineral",
+        "D": "Water"
+      },
+      "marks": 1,
+      "topic": "Renewable and Non-Renewable Resources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0213",
+      "type": "mcq",
+      "stem": "The South Pole is in darkness from",
+      "options": {
+        "A": "December 22nd of a year to June 21st of the next",
+        "B": "March 21st to September 22nd of the same year",
+        "C": "Sept. 22nd of a year to March 21st of next",
+        "D": "June 21st to December 22nd of the same year"
+      },
+      "marks": 1,
+      "topic": "Earth’s Sphericity, Rotation and Revolution",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0214",
+      "type": "mcq",
+      "stem": "The best technique to prevent soil erosion in a humid, gently sloping area is to adopt",
+      "options": {
+        "A": "contour ridging",
+        "B": "terrace cultivation",
+        "C": "intercropping",
+        "D": "wind breakers"
+      },
+      "marks": 1,
+      "topic": "Environmental Conservation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0215",
+      "type": "mcq",
+      "stem": "An example of a rock formed by wood subjected to pressure and heat is",
+      "options": {
+        "A": "sandstone",
+        "B": "lignite",
+        "C": "biotite",
+        "D": "granite"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0216",
+      "type": "mcq",
+      "stem": "A climate that is wet for up to 10 months with a single peak, an annual rainfall of 3000mm and a mean monthly temperature of at least 26° is",
+      "options": {
+        "A": "Tropical humid (Af)",
+        "B": "Tropical monsoon (Am)",
+        "C": "Tropical wet and dry (Aw)",
+        "D": "Warm humid subtropical (ca)"
+      },
+      "marks": 1,
+      "topic": "Climate",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0217",
+      "type": "mcq",
+      "stem": "The rocks of the basement complex are generally referred to as",
+      "options": {
+        "A": "younger granite",
+        "B": "older granite",
+        "C": "sedimentary formations",
+        "D": "volcanic rocks"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0218",
+      "type": "mcq",
+      "stem": "The survival of an organism in a natural ecosystem depends largely on",
+      "options": {
+        "A": "its usefulness to human development",
+        "B": "environmental adjustments to suit it",
+        "C": "its adaptation to prevailing conditions",
+        "D": "its importance to other organisms"
+      },
+      "marks": 1,
+      "topic": "Environmental Resources",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0219",
+      "type": "mcq",
+      "stem": "A river that enters the sea at a gently inclined costal plain where tidal waves are weak will most likely develop into a",
+      "options": {
+        "A": "lagoon",
+        "B": "knickpoint",
+        "C": "delta",
+        "D": "platform"
+      },
+      "marks": 1,
+      "topic": "Stages of River Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0220",
+      "type": "mcq",
+      "stem": "Which is simplest method of rapid distance measurement in surveying?",
+      "options": {
+        "A": "Tape measurement",
+        "B": "Compass measurement",
+        "C": "Pacing I",
+        "D": "Chaining"
+      },
+      "marks": 1,
+      "topic": "Map Distance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0221",
+      "type": "mcq",
+      "stem": "The highest lands in Nigeria are found on the",
+      "options": {
+        "A": "Mambilla Plateau",
+        "B": "Western Highland",
+        "C": "Oban Hills",
+        "D": "North Central Plateau"
+      },
+      "marks": 1,
+      "topic": "PLATEAUX / LOW LANDS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0222",
+      "type": "mcq",
+      "stem": "Use the information given in the chart and answer the question. If the total population of the city is 500,000 what is the population of ward 4?",
+      "options": {
+        "A": "75,000",
+        "B": "125,000",
+        "C": "100,000",
+        "D": "150,000"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0223",
+      "type": "mcq",
+      "stem": "Use the information given in the chart and answer the question. An alternative graphic method that can be used to depict the same information is the",
+      "options": {
+        "A": "Divided rectangle",
+        "B": "Chloropleth",
+        "C": "Dot map",
+        "D": "Proportional circle"
+      },
+      "marks": 1,
+      "topic": "Map Distance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0224",
+      "type": "mcq",
+      "stem": "Study the map and answer the question. The area covered by the map is approximately",
+      "options": {
+        "A": "125km\n2",
+        "B": "100km\n2",
+        "C": "95km\n2",
+        "D": "115km\n2"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0225",
+      "type": "mcq",
+      "stem": "Study the map and answer the question. The bearing of Jata from Adaba is approximately",
+      "options": {
+        "A": "29°",
+        "B": "170°",
+        "C": "21°",
+        "D": "25°"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0226",
+      "type": "mcq",
+      "stem": "Study the map and answer the question. Intervisibility is possible between the points marked X and Y because the intervening slope is",
+      "options": {
+        "A": "Convex",
+        "B": "Rectilinear",
+        "C": "Convexo-concave",
+        "D": "Steep slope"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0227",
+      "type": "mcq",
+      "stem": "Study the map and answer the question. The land-form feature at the centre of the map can best be described as",
+      "options": {
+        "A": "A flood plain",
+        "B": "An erosional",
+        "C": "An outwash plain",
+        "D": "A deltaic plain"
+      },
+      "marks": 1,
+      "topic": "Map Reading",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0228",
+      "type": "mcq",
+      "stem": "Study the map and answer the question. Given that the area show on the map is in Northern Nigeria, which of the following crop combinations would best be cultivated in the area that is liable to flooding",
+      "options": {
+        "A": "Banana, rice and cassava",
+        "B": "Cassava, rice and yam",
+        "C": "Sugar-cane, rice and cassava",
+        "D": "Sugar-cane, rice and bananas"
+      },
+      "marks": 1,
+      "topic": "AGRICULTURE IN NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0229",
+      "type": "mcq",
+      "stem": "How were the major mountain belts of the world produced?",
+      "options": {
+        "A": "by weathering",
+        "B": "by wind erosion",
+        "C": "by folding",
+        "D": "by river deposition"
+      },
+      "marks": 1,
+      "topic": "Earth Internal Process (Earth’s Quakes)",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0230",
+      "type": "mcq",
+      "stem": "Along which latitude will be the day time be longest on Christmas day?",
+      "options": {
+        "A": "0°",
+        "B": "45°S",
+        "C": "45°N",
+        "D": "30°N"
+      },
+      "marks": 1,
+      "topic": "Earth’s Sphericity, Rotation and Revolution",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0231",
+      "type": "mcq",
+      "stem": "What commodity is associated with OPEC?",
+      "options": {
+        "A": "Coffee",
+        "B": "Iron and Steel",
+        "C": "Vegetable oil",
+        "D": "Mineral oil"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0232",
+      "type": "mcq",
+      "stem": "Which of the following rocks is composed of the skeletons of microscopic sea plants and animals?",
+      "options": {
+        "A": "Chalk",
+        "B": "Granite",
+        "C": "Sandstone",
+        "D": "Slate"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0233",
+      "type": "mcq",
+      "stem": "Dodoma is to Tanzania as ______ to Nigeria",
+      "options": {
+        "A": "Abuja",
+        "B": "Warri",
+        "C": "Lagos",
+        "D": "Port Harcourt"
+      },
+      "marks": 1,
+      "topic": "GEOGRAPHY OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0234",
+      "type": "mcq",
+      "stem": "Study the table given which shows the mean climatic conditions of station Q and answer the questions.\nMonth J F M A M J J A S O N D\nTemp(°C) -11 -9 4 3 12 17 19 17 11 4 -2 -8\nPrecipitation(mm) 28 23 30 38 48 51 71 74 56 36 41 41\nThe annual temperature range at the station is",
+      "options": {
+        "A": "20°C",
+        "B": "30°C",
+        "C": "40°C",
+        "D": "10°C"
+      },
+      "marks": 1,
+      "topic": "Past Questions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0235",
+      "type": "mcq",
+      "stem": "Study the table given which shows the mean climatic conditions of station Q and answer the questions.\nMonth J F M A M J J A S O N D\nTemp(°C) -11 -9 4 3 12 17 19 17 11 4 -2 -8\nPrecipitation(mm) 28 23 30 38 48 51 71 74 56 36 41 41\nWhat type of climate has the station?",
+      "options": {
+        "A": "Cool temperate",
+        "B": "Warm temperate",
+        "C": "Mediterranean",
+        "D": "Cold temperate"
+      },
+      "marks": 1,
+      "topic": "Climate",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0236",
+      "type": "mcq",
+      "stem": "Which of the following countries has the least potential for the production of steel?",
+      "options": {
+        "A": "India",
+        "B": "Cuba",
+        "C": "Japan",
+        "D": "Germany"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0237",
+      "type": "mcq",
+      "stem": "In which of the following countries is cotton growing under irrigation the mainstay of the agricultural economy?",
+      "options": {
+        "A": "Zimbabwe",
+        "B": "Sudan",
+        "C": "Mali",
+        "D": "Ghana"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0238",
+      "type": "mcq",
+      "stem": "Use the map below to answer the question. The most important minerals found in the area marked X are",
+      "options": {
+        "A": "Lead and Zinc",
+        "B": "Tin and columbite",
+        "C": "Galena and Tantalite",
+        "D": "Iron ore and thorium"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0239",
+      "type": "mcq",
+      "stem": "Use the map below to answer the question. The major environmental problems associated with the area marked Y is",
+      "options": {
+        "A": "Insect pest",
+        "B": "Gully erosion",
+        "C": "Oil pollution",
+        "D": "Drought"
+      },
+      "marks": 1,
+      "topic": "Environmental Problems",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0240",
+      "type": "mcq",
+      "stem": "The most extensive vegetation type in the area marked Z is the",
+      "options": {
+        "A": "Mangrove swamp",
+        "B": "Coastal thicket",
+        "C": "Fresh water swam",
+        "D": "Guinea savannah"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0241",
+      "type": "mcq",
+      "stem": "A broad-based population pyramid is composed mainly",
+      "options": {
+        "A": "active inhabitants",
+        "B": "old dependants",
+        "C": "young dependants",
+        "D": "more females than males"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0242",
+      "type": "mcq",
+      "stem": "Fluid basic lava flow is likely to give rise to a volcanic_____________",
+      "options": {
+        "A": "cinder",
+        "B": "saddle reef",
+        "C": "shield",
+        "D": "gap"
+      },
+      "marks": 1,
+      "topic": "Volcanicity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0243",
+      "type": "mcq",
+      "stem": "In which of the following rock types is petroleum mainly found?",
+      "options": {
+        "A": "Metamorphic",
+        "B": "Plutonic",
+        "C": "Igneous",
+        "D": "Volcanic",
+        "E": "Sedimentary"
+      },
+      "marks": 1,
+      "topic": "Rocks",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0244",
+      "type": "mcq",
+      "stem": "One basic mineral that is common to Sokoto, Ewekoro, Calabar and Nkalagu is",
+      "options": {
+        "A": "Gypsum",
+        "B": "Coal",
+        "C": "Marble",
+        "D": "Iron-Ore",
+        "E": "Limestone"
+      },
+      "marks": 1,
+      "topic": "RESOURCES OF NIGERIA",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0245",
+      "type": "mcq",
+      "stem": "Lake Kivu and Malawi are related in that they_________",
+      "options": {
+        "A": "Lie in the Northern Hemisphere",
+        "B": "crater lakes",
+        "C": "Attract a large number of tourists",
+        "D": "Are rift valley lakes"
+      },
+      "marks": 1,
+      "topic": "Lakes",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-geography-bank-0246",
+      "type": "mcq",
+      "stem": "Use the diagram below to answer the question. The feature marked X in the diagram is a",
+      "options": {
+        "A": "Spit",
+        "B": "Stack",
+        "C": "Beach",
+        "D": "Wedge",
+        "E": "Cliff"
+      },
+      "marks": 1,
+      "topic": "Stages of River Development",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0247",
+      "type": "mcq",
+      "stem": "Use the diagram below to answer the question. The feature is one of the landforms associated with",
+      "options": {
+        "A": "River erosion",
+        "B": "Wind deposition",
+        "C": "Wave erosion",
+        "D": "River deposition"
+      },
+      "marks": 1,
+      "topic": "Earth’s External Processes and Land Form Development",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-geography-bank-0248",
+      "type": "mcq",
+      "stem": "If the distance between two places on a map is 2cm, while the distance on land is 4km, the scale of the map is",
+      "options": {
+        "A": "1:100,000",
+        "B": "1:200,000",
+        "C": "1:50,000",
+        "D": "1:150,000"
+      },
+      "marks": 1,
+      "topic": "Map Distance",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0249",
+      "type": "mcq",
+      "stem": "Soil conservation can be achieved through___________-",
+      "options": {
+        "A": "Monoculture",
+        "B": "Mechanization",
+        "C": "Strip-cropping",
+        "D": "Floriculture"
+      },
+      "marks": 1,
+      "topic": "Environmental Conservation",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0250",
+      "type": "mcq",
+      "stem": "The oldest system of agriculture in Nigeria which now survives only in very remote areas is",
+      "options": {
+        "A": "Bush fallowing",
+        "B": "mixed farming",
+        "C": "Shifting cultivation",
+        "D": "Market gardening"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0251",
+      "type": "mcq",
+      "stem": "Which of these hazard would most like result directly from deforestation?",
+      "options": {
+        "A": "soil erosion",
+        "B": "mass wasting",
+        "C": "drought",
+        "D": "water pollution"
+      },
+      "marks": 1,
+      "topic": "Environmental Problems",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0252",
+      "type": "mcq",
+      "stem": "The dominant foreign exchange earner of Senegal is",
+      "options": {
+        "A": "tourism",
+        "B": "groundnut",
+        "C": "fish",
+        "D": "iron-ore"
+      },
+      "marks": 1,
+      "topic": "Industry",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0253",
+      "type": "mcq",
+      "stem": "The two most important factors which account for the pattern of population distribution in West Africa are",
+      "options": {
+        "A": "Economic prosperity and regional migration",
+        "B": "Economic prosperity and favourable physical conditions",
+        "C": "Favourable physical conditions and human inertia",
+        "D": "Historical antecedence and regional migration"
+      },
+      "marks": 1,
+      "topic": "POPULATION OF NIGERIA",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0254",
+      "type": "mcq",
+      "stem": "A desert country which has a high population density supported by irrigation is___________",
+      "options": {
+        "A": "Niger",
+        "B": "Egypt",
+        "C": "Sudan",
+        "D": "Kuwait"
+      },
+      "marks": 1,
+      "topic": "Population of Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0255",
+      "type": "mcq",
+      "stem": "The greatest volcanic regions of Africa are found in",
+      "options": {
+        "A": "The maghrib",
+        "B": "Kenya and Tanzania",
+        "C": "The camerouns",
+        "D": "Sudan and Ethiopia"
+      },
+      "marks": 1,
+      "topic": "Volcanicity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0256",
+      "type": "mcq",
+      "stem": "A type of land-form that is associated with large scale orogeny is a",
+      "options": {
+        "A": "Fold mountain",
+        "B": "Residual mountain",
+        "C": "Block mountain",
+        "D": "Volcanic mountain"
+      },
+      "marks": 1,
+      "topic": "Plate tectonics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0257",
+      "type": "mcq",
+      "stem": "If the time in New York (75°W) is 5.00pm, The time in Nigeria(15°E) will be",
+      "options": {
+        "A": "9.00pm",
+        "B": "9.00pm",
+        "C": "11.00pm",
+        "D": "11.00am"
+      },
+      "marks": 1,
+      "topic": "Latitudes and Longitudes",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0258",
+      "type": "mcq",
+      "stem": "One of the leading industrial nations of the world ranking second in manufacturing output after the USA is__________",
+      "options": {
+        "A": "Germany",
+        "B": "Britain",
+        "C": "Japan",
+        "D": "Russia"
+      },
+      "marks": 1,
+      "topic": "Industry in Nigeria",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0259",
+      "type": "mcq",
+      "stem": "An instrument used for setting out right angle in surveying a parcel of land is",
+      "options": {
+        "A": "Measuring rod",
+        "B": "Abney level",
+        "C": "A ranging pole",
+        "D": "Theodolite",
+        "E": "An optical squarer"
+      },
+      "marks": 1,
+      "topic": "MAPWORK/READING",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-geography-bank-0260",
+      "type": "mcq",
+      "stem": "The lack of access to food in some parts of the world emanates from",
+      "options": {
+        "A": "Educational inequality",
+        "B": "Poor transport system",
+        "C": "Economic inequality",
+        "D": "Low development of natural resources"
+      },
+      "marks": 1,
+      "topic": "Agriculture in Nigeria",
+      "difficulty": "hard"
+    }
+  ]
+}

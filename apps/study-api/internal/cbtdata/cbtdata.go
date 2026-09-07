@@ -18,6 +18,7 @@ import (
 	"path/filepath"
 	"sort"
 	"strings"
+	"sync"
 )
 
 var ErrAnswerLeak = errors.New("cbtdata: answer material found in student bundle")
@@ -51,6 +52,10 @@ type Bundle struct {
 	Category        string     `json:"category,omitempty"` // secondary | university | …
 	Body            string     `json:"body,omitempty"`     // JAMB | WAEC | NECO | University Modules
 	Questions       []Question `json:"questions"`
+	// Sections groups a paper's questions under exam subjects. Static
+	// packs leave it empty; composite UTME mock papers (paper.go) fill
+	// it so the client can render subject tabs like the real CBT player.
+	Sections []PaperSection `json:"sections,omitempty"`
 }
 
 type ExamMeta struct {
@@ -72,6 +77,9 @@ type Manifest struct {
 }
 
 type Library struct {
+	// mu guards bundles against the runtime composite-paper registration;
+	// everything else is written once at boot and only read after.
+	mu           sync.RWMutex
 	manifest     Manifest
 	bundles      map[string]*Bundle
 	syllabi      map[string]*Syllabus
@@ -146,8 +154,19 @@ func Load(dataDir string) (*Library, error) {
 func (l *Library) Manifest() Manifest { return l.manifest }
 
 func (l *Library) Bundle(code string) (*Bundle, bool) {
+	l.mu.RLock()
+	defer l.mu.RUnlock()
 	b, ok := l.bundles[code]
 	return b, ok
+}
+
+// RegisterPaper installs a runtime-composed bundle (composite UTME mock
+// papers) so bundle fetches, attempts, grading and review all resolve
+// it like any static pack. Composites never enter the manifest.
+func (l *Library) RegisterPaper(b *Bundle) {
+	l.mu.Lock()
+	defer l.mu.Unlock()
+	l.bundles[b.Code] = b
 }
 
 // BundlesByBody returns every loaded bundle whose exam body matches
@@ -160,11 +179,19 @@ func (l *Library) BundlesByBody(body string) []*Bundle {
 		return nil
 	}
 	var out []*Bundle
+	l.mu.RLock()
 	for _, b := range l.bundles {
+		// Composite mock papers carry a body but never join rotation
+		// pools: the daily challenge and the arena draw from the static
+		// library only.
+		if IsMockPaperCode(b.Code) {
+			continue
+		}
 		if strings.ToLower(b.Body) == want {
 			out = append(out, b)
 		}
 	}
+	l.mu.RUnlock()
 	sort.Slice(out, func(i, j int) bool { return out[i].Code < out[j].Code })
 	return out
 }

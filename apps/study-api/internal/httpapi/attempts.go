@@ -27,7 +27,7 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
 	if !decodeJSON(w, r, &req) {
 		return
 	}
-	bundle, ok := s.lib.Bundle(req.Code)
+	bundle, ok := s.ensurePaperRequest(r, req.Code)
 	if !ok {
 		fail(w, http.StatusNotFound, "unknown_pack", "no study pack with code "+req.Code)
 		return
@@ -148,7 +148,9 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
 			"attempt is "+attempt.Status+" and cannot be resubmitted")
 		return
 	}
-	bundle, ok := s.lib.Bundle(attempt.Code)
+	// A restart between start and submit would drop a composed mock
+	// paper from memory; the deterministic compose brings it back.
+	bundle, ok := s.ensurePaperRequest(r, attempt.Code)
 	if !ok {
 		fail(w, http.StatusInternalServerError, "internal", "pack vanished mid-attempt")
 		return

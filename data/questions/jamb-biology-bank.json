@@ -1,0 +1,3597 @@
+{
+  "code": "jamb-biology-bank",
+  "title": "JAMB Biology | Past Questions Bank",
+  "version": 1,
+  "questionCount": 260,
+  "totalMarks": 260,
+  "questions": [
+    {
+      "id": "jamb-biology-bank-0001",
+      "type": "mcq",
+      "stem": "Which organelle is called the powerhouse of the cell?",
+      "options": {
+        "A": "nucleus",
+        "B": "mitochondrion",
+        "C": "ribosome",
+        "D": "vacuole"
+      },
+      "marks": 1,
+      "topic": "Cell Biology",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0002",
+      "type": "mcq",
+      "stem": "The basic unit of life is the",
+      "options": {
+        "A": "tissue",
+        "B": "cell",
+        "C": "organ",
+        "D": "system"
+      },
+      "marks": 1,
+      "topic": "Cell Biology",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0003",
+      "type": "mcq",
+      "stem": "The gas taken in by plants during photosynthesis is",
+      "options": {
+        "A": "oxygen",
+        "B": "nitrogen",
+        "C": "carbon dioxide",
+        "D": "hydrogen"
+      },
+      "marks": 1,
+      "topic": "Photosynthesis",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0004",
+      "type": "mcq",
+      "stem": "The green pigment that traps light energy for photosynthesis is",
+      "options": {
+        "A": "haemoglobin",
+        "B": "chlorophyll",
+        "C": "melanin",
+        "D": "carotene"
+      },
+      "marks": 1,
+      "topic": "Photosynthesis",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0005",
+      "type": "mcq",
+      "stem": "The blood cells that defend the body against infection are",
+      "options": {
+        "A": "red blood cells",
+        "B": "white blood cells",
+        "C": "platelets",
+        "D": "plasma cells"
+      },
+      "marks": 1,
+      "topic": "Transport",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0006",
+      "type": "mcq",
+      "stem": "Gregor Mendel is regarded as the father of",
+      "options": {
+        "A": "evolution",
+        "B": "genetics",
+        "C": "ecology",
+        "D": "microbiology"
+      },
+      "marks": 1,
+      "topic": "Genetics",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0007",
+      "type": "mcq",
+      "stem": "The genotype of a person who actually suffers from sickle cell anaemia is",
+      "options": {
+        "A": "AA",
+        "B": "AS",
+        "C": "SS",
+        "D": "AC"
+      },
+      "marks": 1,
+      "topic": "Genetics",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0008",
+      "type": "mcq",
+      "stem": "The organ that produces bile is the",
+      "options": {
+        "A": "pancreas",
+        "B": "liver",
+        "C": "stomach",
+        "D": "kidney"
+      },
+      "marks": 1,
+      "topic": "Digestion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0009",
+      "type": "mcq",
+      "stem": "The human blood group regarded as the universal donor is",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "AB",
+        "D": "O"
+      },
+      "marks": 1,
+      "topic": "Transport",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0010",
+      "type": "mcq",
+      "stem": "The loss of water vapour from the leaves of plants is called",
+      "options": {
+        "A": "respiration",
+        "B": "transpiration",
+        "C": "translocation",
+        "D": "condensation"
+      },
+      "marks": 1,
+      "topic": "Plant Biology",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0011",
+      "type": "mcq",
+      "stem": "Insects breathe through external openings called",
+      "options": {
+        "A": "lungs",
+        "B": "gills",
+        "C": "spiracles",
+        "D": "stomata"
+      },
+      "marks": 1,
+      "topic": "Respiration",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0012",
+      "type": "mcq",
+      "stem": "The largest organ of the human body is the",
+      "options": {
+        "A": "liver",
+        "B": "brain",
+        "C": "skin",
+        "D": "lungs"
+      },
+      "marks": 1,
+      "topic": "Skin",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0013",
+      "type": "mcq",
+      "stem": "Nitrogen-fixing bacteria are found in the root nodules of",
+      "options": {
+        "A": "grasses",
+        "B": "legumes",
+        "C": "ferns",
+        "D": "conifers"
+      },
+      "marks": 1,
+      "topic": "Ecology",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0014",
+      "type": "mcq",
+      "stem": "Mushrooms belong to the kingdom",
+      "options": {
+        "A": "Plantae",
+        "B": "Animalia",
+        "C": "Fungi",
+        "D": "Protista"
+      },
+      "marks": 1,
+      "topic": "Classification",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0015",
+      "type": "mcq",
+      "stem": "Deficiency of vitamin C in the human diet causes",
+      "options": {
+        "A": "rickets",
+        "B": "scurvy",
+        "C": "night blindness",
+        "D": "beri-beri"
+      },
+      "marks": 1,
+      "topic": "Nutrition",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0016",
+      "type": "mcq",
+      "stem": "Which organelle is known as the 'powerhouse of the cell'?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0017",
+      "type": "mcq",
+      "stem": "The process by which plants make food using sunlight is called:",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0018",
+      "type": "mcq",
+      "stem": "Which blood group is the universal donor?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0019",
+      "type": "mcq",
+      "stem": "The basic structural and functional unit of the kidney is the:",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0020",
+      "type": "mcq",
+      "stem": "Which of the following vitamins is produced in the skin on exposure to sunlight?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0021",
+      "type": "mcq",
+      "stem": "Use the cell diagram above. Which structure is responsible for energy production in the cell?",
+      "options": {
+        "A": "Nucleus",
+        "B": "Mitochondria",
+        "C": "Golgi Apparatus",
+        "D": "Cell Membrane"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0022",
+      "type": "mcq",
+      "stem": "Which organelle controls the activities of the cell?",
+      "options": {
+        "A": "Mitochondria",
+        "B": "Nucleus",
+        "C": "Ribosome",
+        "D": "Endoplasmic reticulum"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0023",
+      "type": "mcq",
+      "stem": "In the same cell diagram, what is the function of the Golgi Apparatus?",
+      "options": {
+        "A": "Protein synthesis",
+        "B": "Energy production",
+        "C": "Processing and packaging of proteins",
+        "D": "Cell division"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following is true about plant cells but not animal cells?",
+      "options": {
+        "A": "They have mitochondria",
+        "B": "They have cell walls",
+        "C": "They have nuclei",
+        "D": "They have ribosomes"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0025",
+      "type": "mcq",
+      "stem": "Based on the cell structure shown in the image file, identify the organelle responsible for protein synthesis.",
+      "options": {
+        "A": "Mitochondria",
+        "B": "Ribosome",
+        "C": "Nucleus",
+        "D": "Golgi apparatus"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0026",
+      "type": "mcq",
+      "stem": "Which Biology Question Paper Type is given to you?",
+      "options": {
+        "A": "Type A",
+        "B": "Type B",
+        "C": "Type C",
+        "D": "Type D"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0027",
+      "type": "mcq",
+      "stem": "Which of the following characterizes a mature plant cell?",
+      "options": {
+        "A": "the cytoplasm fills up the entire cell space",
+        "B": "the nucleus is pushed to the centre of the cell",
+        "C": "the cell wall is made up of cellulose",
+        "D": "the nucleus is small and irregular in shape"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0028",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a function of the nucleus of a cell?",
+      "options": {
+        "A": "it controls the life processes of the cell",
+        "B": "it translates genetic information for the manufacture of proteins",
+        "C": "it stores and carries hereditary information",
+        "D": "it is a reservoir of energy for the cell"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0029",
+      "type": "mcq",
+      "stem": "The dominant phase in the life cycle of a fern is the",
+      "options": {
+        "A": "gametophyte",
+        "B": "prothallus",
+        "C": "sporophyte",
+        "D": "antheridium"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0030",
+      "type": "mcq",
+      "stem": "Parental care is exhibited by",
+      "options": {
+        "A": "toads",
+        "B": "snails",
+        "C": "earthworms",
+        "D": "birds"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0031",
+      "type": "mcq",
+      "stem": "Which of the following groups of cells is devoid of true nuclei?",
+      "options": {
+        "A": "algae",
+        "B": "monera",
+        "C": "fungi",
+        "D": "viruses"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0032",
+      "type": "mcq",
+      "stem": "The main function of the feathers covering the part labelled I is to",
+      "options": {
+        "A": "prevent ectoparasites from attacking the animal",
+        "B": "generate heat to keep the animal warm",
+        "C": "provide some power for flight",
+        "D": "serve as insulator to maintain body heat"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0033",
+      "type": "mcq",
+      "stem": "Which of the following is true of the transverse section of a dicot stem?",
+      "options": {
+        "A": "the epidermis is completely encircled by the cortex",
+        "B": "the xylem is more interiorly located than the phloem",
+        "C": "the cambium lies between the cortex and the vascular bundles",
+        "D": "the vascular bundles are randomly scattered within the cortex"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0034",
+      "type": "mcq",
+      "stem": "Which of the following is lacking in the diet of a person with kwashiorkor?",
+      "options": {
+        "A": "vitamins",
+        "B": "proteins",
+        "C": "carbohydrates",
+        "D": "fats"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0035",
+      "type": "mcq",
+      "stem": "When the mixture of a food substance and Benedict’s solution was warmed, the solution changed from blue to brick‑red. This indicates the presence of",
+      "options": {
+        "A": "reducing sugar",
+        "B": "fatty acid",
+        "C": "sucrose",
+        "D": "amino acid"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0036",
+      "type": "mcq",
+      "stem": "The primary structure responsible for pumping blood for circulation through the mammalian circulatory system is the",
+      "options": {
+        "A": "veins",
+        "B": "right auricle",
+        "C": "arteries",
+        "D": "left ventricle"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0037",
+      "type": "mcq",
+      "stem": "Circulation of blood to all parts of the body except the lungs is through",
+      "options": {
+        "A": "the pulmonary artery",
+        "B": "systemic circulation",
+        "C": "the lymphatic system",
+        "D": "pulmonary circulation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0038",
+      "type": "mcq",
+      "stem": "Yeast respires anaerobically to convert simple sugar to carbon (IV) oxide and",
+      "options": {
+        "A": "alcohol",
+        "B": "acid",
+        "C": "oxygen",
+        "D": "water"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0039",
+      "type": "mcq",
+      "stem": "The sheet of muscle that separates the thoracic and the abdominal cavities is the",
+      "options": {
+        "A": "diaphragm",
+        "B": "intercostal muscle",
+        "C": "pleural membrane",
+        "D": "pericardium"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0040",
+      "type": "mcq",
+      "stem": "The oily substance that lubricates the mammalian hair to keep it flexible and water‑repellent is secreted by the",
+      "options": {
+        "A": "sweat glands",
+        "B": "sebaceous glands",
+        "C": "fatty cells",
+        "D": "granular layer"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0041",
+      "type": "mcq",
+      "stem": "The outer layer of the kidney where the Bowman’s capsules are found is the",
+      "options": {
+        "A": "cortex",
+        "B": "pelvis",
+        "C": "medulla",
+        "D": "pyramid"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0042",
+      "type": "mcq",
+      "stem": "Which of the following stimuli is likely to elicit a nastic response in an organism?",
+      "options": {
+        "A": "touch",
+        "B": "light intensity",
+        "C": "chemical substances",
+        "D": "gravity"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0043",
+      "type": "mcq",
+      "stem": "In the male reproductive system of a mammal, sperm is stored in the",
+      "options": {
+        "A": "vas deferens",
+        "B": "urethra",
+        "C": "epididymis",
+        "D": "seminiferous tubules"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0044",
+      "type": "mcq",
+      "stem": "Chemosynthetic organisms are capable of manufacturing their food from simple inorganic substances through the process of",
+      "options": {
+        "A": "oxidation",
+        "B": "denitrification",
+        "C": "reduction",
+        "D": "phosphorylation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0045",
+      "type": "mcq",
+      "stem": "The part of the human gut that has an acidic content is the",
+      "options": {
+        "A": "stomach",
+        "B": "duodenum",
+        "C": "ileum",
+        "D": "colon"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0046",
+      "type": "mcq",
+      "stem": "I. Stomata → Spirogyra\nII. Alveoli → Earthworm\nIII. Malpighian tubule → Mammal\nIV. Contractile vacuole → Protozoa.\nWhich of the above structures is correctly matched with the organism in which it is found?",
+      "options": {
+        "A": "III",
+        "B": "II",
+        "C": "I",
+        "D": "IV"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0047",
+      "type": "mcq",
+      "stem": "A food chain always begins with a",
+      "options": {
+        "A": "consumer",
+        "B": "decomposer",
+        "C": "producer",
+        "D": "primary consumer"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0048",
+      "type": "mcq",
+      "stem": "Mycorrhizae promote plant growth by",
+      "options": {
+        "A": "absorbing inorganic ions from the soil",
+        "B": "protecting it from infection",
+        "C": "helping it to utilize atmospheric nitrogen",
+        "D": "serving as a growth regulator"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0049",
+      "type": "mcq",
+      "stem": "The barrier between maternal and foetal blood is the",
+      "options": {
+        "A": "placenta",
+        "B": "liver",
+        "C": "umbilical cord",
+        "D": "uterine wall"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0050",
+      "type": "mcq",
+      "stem": "The blood component that has the greatest affinity for oxygen is the",
+      "options": {
+        "A": "lymphocytes",
+        "B": "leucocytes",
+        "C": "erythrocytes",
+        "D": "thrombocytes"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0051",
+      "type": "mcq",
+      "stem": "Which of the following organisms is mainly found in the marine habitat?",
+      "options": {
+        "A": "Achatina",
+        "B": "Tilapia",
+        "C": "Dog fish",
+        "D": "Tortoise"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0052",
+      "type": "mcq",
+      "stem": "The two halves of the pelvic girdle are joined together at the",
+      "options": {
+        "A": "pubic symphysis",
+        "B": "ilium",
+        "C": "pubis",
+        "D": "obturator foramen"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0053",
+      "type": "mcq",
+      "stem": "I. Adoption of appropriate nocturnal habits\nII. Burrowing\nIII. Adjusting their internal body temperature\nIV. Possession of many sweat pores.\nWhich of the above are ways in which desert animals adapt to extreme heat of the environment?",
+      "options": {
+        "A": "I and IV only",
+        "B": "II and III only",
+        "C": "I and II only",
+        "D": "I, II and III only"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0054",
+      "type": "mcq",
+      "stem": "Low annual rainfall, sparse vegetation, high diurnal temperatures and cold nights are characteristic features of the",
+      "options": {
+        "A": "tropical rainforest",
+        "B": "desert",
+        "C": "montane forest",
+        "D": "Guinea savanna"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0055",
+      "type": "mcq",
+      "stem": "The activity of an organism which affects the survival of another organism in the same habitat constitutes",
+      "options": {
+        "A": "an edaphic factor",
+        "B": "an abiotic factor",
+        "C": "a biotic factor",
+        "D": "a physiographic factor"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0056",
+      "type": "mcq",
+      "stem": "The average number of individuals of a species per unit area of the habitat is the",
+      "options": {
+        "A": "population density",
+        "B": "population frequency",
+        "C": "population size",
+        "D": "population distribution"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0057",
+      "type": "mcq",
+      "stem": "The vector for yellow fever is the",
+      "options": {
+        "A": "Aedes mosquito",
+        "B": "Anopheles mosquito",
+        "C": "tsetse fly",
+        "D": "blackfly"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0058",
+      "type": "mcq",
+      "stem": "The loss of soil through erosion can be reduced by",
+      "options": {
+        "A": "watering",
+        "B": "crop rotation",
+        "C": "manuring",
+        "D": "irrigation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0059",
+      "type": "mcq",
+      "stem": "The protozoan Plasmodium falciparum is transmitted by",
+      "options": {
+        "A": "female Anopheles mosquitoes",
+        "B": "female Aedes mosquitoes",
+        "C": "female Culex mosquitoes",
+        "D": "female blackfly"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0060",
+      "type": "mcq",
+      "stem": "A dilute solution of phenylthiocarbamide tastes bitter to some people and is tasteless to others. This is an example of",
+      "options": {
+        "A": "taste‑bud variation",
+        "B": "discontinuous variation",
+        "C": "morphological variation",
+        "D": "continuous variation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0061",
+      "type": "mcq",
+      "stem": "Thyroxine and adrenalin are examples of hormones which control",
+      "options": {
+        "A": "blood grouping",
+        "B": "tongue rolling",
+        "C": "behavioural patterns",
+        "D": "colour variation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0062",
+      "type": "mcq",
+      "stem": "A pair of genes that control a trait is referred to as",
+      "options": {
+        "A": "an allele",
+        "B": "recessive",
+        "C": "dominant",
+        "D": "a hybrid"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0063",
+      "type": "mcq",
+      "stem": "The chromosome number of a cell before and after the process of meiosis is conventionally represented as",
+      "options": {
+        "A": "2n → 2n",
+        "B": "n → n",
+        "C": "n → 2n",
+        "D": "2n → n"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0064",
+      "type": "mcq",
+      "stem": "If both parents are heterozygous for a trait, the probability that an offspring will be recessive for that trait is",
+      "options": {
+        "A": "3/4",
+        "B": "1/2",
+        "C": "1/4",
+        "D": "1"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0065",
+      "type": "mcq",
+      "stem": "At what stage in the life history of a mammal is the sex of an individual set?",
+      "options": {
+        "A": "at adolescence",
+        "B": "at puberty",
+        "C": "at birth",
+        "D": "at conception"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0066",
+      "type": "mcq",
+      "stem": "The main distinguishing features between the soldier termite and other members of the caste are the",
+      "options": {
+        "A": "presence of wings, possession of a small head and large thorax",
+        "B": "presence of wings, possession of a large thorax and a small head",
+        "C": "absence of wings, possession of strong mandibles and a large head",
+        "D": "absence of wings, possession of big head and the absence of mandible"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0067",
+      "type": "mcq",
+      "stem": "The flippers of a whale and the fins of a fish are examples of",
+      "options": {
+        "A": "divergent evolution",
+        "B": "coevolution",
+        "C": "continuous variation",
+        "D": "convergent evolution"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-biology-bank-0068",
+      "type": "mcq",
+      "stem": "Which of the following is the most inclusive level of classification in the Linnaean system?",
+      "options": {
+        "A": "Kingdom",
+        "B": "Domain",
+        "C": "Class",
+        "D": "Phylum"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0069",
+      "type": "mcq",
+      "stem": "Which of the following is a method of asexual reproduction in plants?",
+      "options": {
+        "A": "Pollination",
+        "B": "Vegetative propagation",
+        "C": "Seed dispersal",
+        "D": "Fertilization"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0070",
+      "type": "mcq",
+      "stem": "Which of the following is the primary organ involved in gas exchange during respiration in humans?",
+      "options": {
+        "A": "Diaphragm",
+        "B": "Bronchi",
+        "C": "Lungs",
+        "D": "Trachea"
+      },
+      "marks": 1,
+      "topic": "RESPIRATORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following statements about the heart is true?",
+      "options": {
+        "A": "The heart is responsible for the production of red blood cells",
+        "B": "The heart pumps oxygenated blood to the lungs",
+        "C": "The heart receives blood from the kidneys and filters waste products",
+        "D": "The heart is a muscular organ that contracts to circulate blood throughout the body"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0072",
+      "type": "mcq",
+      "stem": "Which of the following characteristics is typical of the phylum Arthropoda?",
+      "options": {
+        "A": "Radial symmetry",
+        "B": "Closed circulatory system",
+        "C": "Endoskeleton made of bones",
+        "D": "Presence of a segmented body"
+      },
+      "marks": 1,
+      "topic": "TISSUE AND SUPPORTING SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0073",
+      "type": "mcq",
+      "stem": "Which process in the nutrient cycle converts atmospheric nitrogen into a form that plants can utilize?",
+      "options": {
+        "A": "Denitrification",
+        "B": "Nitrogen fixation",
+        "C": "Ammonification",
+        "D": "Nitrification"
+      },
+      "marks": 1,
+      "topic": "NUTRIENT CYCLING IN NATURE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0074",
+      "type": "mcq",
+      "stem": "Most fishes do not sink in water because of the presences of:",
+      "options": {
+        "A": "II. air bladder",
+        "B": "IV. air in spongy bones",
+        "C": "II and III are correct",
+        "D": "I and II are correct"
+      },
+      "marks": 1,
+      "topic": "AQUATIC HABITAT",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0075",
+      "type": "mcq",
+      "stem": "A biome characterized by hot summer, warm winter and treeless vegetation is",
+      "options": {
+        "A": "Steppe grasslands",
+        "B": "Temperate deserts",
+        "C": "Savannah grassland",
+        "D": "Tropical deserts"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0076",
+      "type": "mcq",
+      "stem": "Which of the following describes the inheritance of traits from parents to offspring?",
+      "options": {
+        "A": "Adaptation",
+        "B": "Evolution",
+        "C": "Natural selection",
+        "D": "Genetics"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0077",
+      "type": "mcq",
+      "stem": "Which processes are involved in nutrient cycling in a functioning ecosystem?",
+      "options": {
+        "A": "Erosion, weathering, and sedimentation",
+        "B": "Decomposition, evaporation, and precipitation",
+        "C": "Nitrogen fixation, denitrification, and ammonification",
+        "D": "Respiration, photosynthesis, and transpiration"
+      },
+      "marks": 1,
+      "topic": "FUNCTIONING ECOSYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0078",
+      "type": "mcq",
+      "stem": "Which of the following eye defects is caused by the inability of the eye to focus light on the retina?",
+      "options": {
+        "A": "Glaucoma",
+        "B": "Myopia",
+        "C": "Cataracts",
+        "D": "Astigmatism"
+      },
+      "marks": 1,
+      "topic": "SENSE ORGANS",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0079",
+      "type": "mcq",
+      "stem": "Which of the following is the correct classification of carbohydrates?",
+      "options": {
+        "A": "Lipid",
+        "B": "Phytonutrient",
+        "C": "Macronutrient",
+        "D": "Micronutrient"
+      },
+      "marks": 1,
+      "topic": "NUTRITION IN ANIMALS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0080",
+      "type": "mcq",
+      "stem": "Which organs are part of the alimentary canal in the human digestive system?",
+      "options": {
+        "A": "Salivary glands, tongue, and pharynx",
+        "B": "Large intestine, appendix, and rectum",
+        "C": "Stomach, liver, and gallbladder",
+        "D": "Oesophagus, pancreas, and small intestine"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0081",
+      "type": "mcq",
+      "stem": "Which of the following statements about viruses is true?",
+      "options": {
+        "A": "Viruses can reproduce outside of a host cell",
+        "B": "Viruses require a host cell to replicate",
+        "C": "Viruses possess a cellular structure",
+        "D": "Viruses are living organisms"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0082",
+      "type": "mcq",
+      "stem": "What is the definition of population ecology?",
+      "options": {
+        "A": "The study of interactions between organisms and their physical environment",
+        "B": "The study of evolutionary processes and their effects on populations",
+        "C": "The study of interactions between different populations in an ecosystem",
+        "D": "The study of the distribution and abundance of individuals within a species"
+      },
+      "marks": 1,
+      "topic": "POPULATION ECOLOGY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0083",
+      "type": "mcq",
+      "stem": "Which of the following represents the correct hierarchical organization of life from the smallest to the largest scale?",
+      "options": {
+        "A": "Organs, tissues, cells, organisms, populations, communities, ecosystems",
+        "B": "Cells, organs, tissues, organisms, populations, communities, ecosystems",
+        "C": "Tissues, organs, cells, organisms, populations, communities, ecosystems",
+        "D": "Cells, tissues, organs, organisms, populations, communities, ecosystems"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0084",
+      "type": "mcq",
+      "stem": "Which of the following soil types becomes less fertile due to the intense leaching caused by tropical rains?",
+      "options": {
+        "A": "Yellow soil",
+        "B": "Laterite soil",
+        "C": "Red soils",
+        "D": "Black soil"
+      },
+      "marks": 1,
+      "topic": "NUTRIENT CYCLING IN NATURE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0085",
+      "type": "mcq",
+      "stem": "Which of the following factors primarily affects the distribution of organisms in an ecosystem",
+      "options": {
+        "A": "Wind speed",
+        "B": "Soil pH",
+        "C": "Temperature",
+        "D": "Day length"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0086",
+      "type": "mcq",
+      "stem": "Which of the following statements is true regarding cell growth?",
+      "options": {
+        "A": "Cell growth is solely influenced by external factors",
+        "B": "Cell growth is a continuous process throughout the life of a cell",
+        "C": "Cell growth involves an increase in the number of organelles within a cell",
+        "D": "Cell growth occurs by cell division"
+      },
+      "marks": 1,
+      "topic": "CELL GROWTH",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-biology-bank-0087",
+      "type": "mcq",
+      "stem": "The term cell was given by",
+      "options": {
+        "A": "Robert Hooke",
+        "B": "Schwann",
+        "C": "De Bary",
+        "D": "Tatum"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0088",
+      "type": "mcq",
+      "stem": "Which of the following statements is true regarding the urinary tubule in the excretory system?",
+      "options": {
+        "A": "The urinary tubule is responsible for the production of urine",
+        "B": "The urinary tubule regulates the water and electrolyte balance in the body",
+        "C": "The urinary tubule connects the kidneys to the bladder",
+        "D": "The urinary tubule is the site of filtration of blood"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0089",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an abiotic ecological factor?",
+      "options": {
+        "A": "Temperature",
+        "B": "Competition",
+        "C": "Predation",
+        "D": "Symbiosis"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0090",
+      "type": "mcq",
+      "stem": "Which type of reproduction involves the fusion of gametes from two parents?",
+      "options": {
+        "A": "Sexual reproduction",
+        "B": "Asexual reproduction",
+        "C": "Binary fission",
+        "D": "Budding"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM AND REPRODUCTION IN HUMAN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0091",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic feature of Kingdom Plantae?",
+      "options": {
+        "A": "Presence of chloroplasts",
+        "B": "Ability to perform photosynthesis",
+        "C": "Lack of cell walls",
+        "D": "Heterotrophic mode of nutrition"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0092",
+      "type": "mcq",
+      "stem": "Which of the following best describes the concept of trophic levels in a functioning ecosystem?",
+      "options": {
+        "A": "The levels of ecological interactions within an ecosystem",
+        "B": "The levels of energy flow within an ecosystem",
+        "C": "The levels of nutrient cycling within an ecosystem",
+        "D": "The levels of biological diversity within an ecosystem"
+      },
+      "marks": 1,
+      "topic": "FUNCTIONING ECOSYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0093",
+      "type": "mcq",
+      "stem": "Which of the following statements is true regarding sexual reproduction in organisms?",
+      "options": {
+        "A": "It involves the fusion of gametes from two parents, resulting in offspring with genetic variation",
+        "B": "It involves the production of offspring through a single parent, resulting in genetically identical offspring",
+        "C": "It is a form of asexual reproduction where offspring are produced without the involvement of gametes",
+        "D": "It does not involve the formation of gametes or the fusion of reproductive cells"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM AND REPRODUCTION IN HUMAN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0094",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a method of reproduction in animals?",
+      "options": {
+        "A": "Asexual reproduction",
+        "B": "Budding",
+        "C": "Sexual reproduction",
+        "D": "Sporulation"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM AND REPRODUCTION IN HUMAN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0095",
+      "type": "mcq",
+      "stem": "Which of the following are components of the skeletal system in humans?",
+      "options": {
+        "A": "Cartilage and blood vessels",
+        "B": "Ligaments and tendons",
+        "C": "Muscles and nerves",
+        "D": "Bones and joints"
+      },
+      "marks": 1,
+      "topic": "VERTEBRATE SKELETON",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the following is an example of conserving resources in an ecosystem?",
+      "options": {
+        "A": "Excessive use of chemical fertilizers in agriculture",
+        "B": "Introducing invasive species to an ecosystem",
+        "C": "Implementing sustainable fishing practices",
+        "D": "Cutting down trees for timber production"
+      },
+      "marks": 1,
+      "topic": "CONSERVATION OF NATURAL RESOURCES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0097",
+      "type": "mcq",
+      "stem": "Which of the following statements is true regarding sex-linked traits?",
+      "options": {
+        "A": "Sex-linked traits are located on the sex chromosomes",
+        "B": "Sex-linked traits are inherited only from the mother",
+        "C": "Sex-linked traits are more commonly observed in females",
+        "D": "Sex-linked traits are not influenced by hormonal factors"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0098",
+      "type": "mcq",
+      "stem": "What is autotrophic nutrition?",
+      "options": {
+        "A": "Nutrition in which organisms obtain food by breaking down complex organic compounds.",
+        "B": "Nutrition in which organisms obtain food from other organisms",
+        "C": "Nutrition in which organisms obtain food by consuming both plants and animals",
+        "D": "Nutrition in which organisms produce their own food using energy from the sun or inorganic substances"
+      },
+      "marks": 1,
+      "topic": "NUTRITION IN ANIMALS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0099",
+      "type": "mcq",
+      "stem": "Which of the following is a plant hormone responsible for promoting cell elongation and growth?",
+      "options": {
+        "A": "Abscisic acid",
+        "B": "Gibberellins",
+        "C": "Ethylene",
+        "D": "Cytokinins"
+      },
+      "marks": 1,
+      "topic": "PLANT HORMONES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0100",
+      "type": "mcq",
+      "stem": "The membrane around the vacuole is known as",
+      "options": {
+        "A": "Elaioplast",
+        "B": "Amyloplast",
+        "C": "Tonoplast",
+        "D": "Cytoplast"
+      },
+      "marks": 1,
+      "topic": "CELL STRUCTURE AND FUNCTIONS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0101",
+      "type": "mcq",
+      "stem": "Germination is the process in which a seed",
+      "options": {
+        "A": "Begins to photosynthesize",
+        "B": "Develops into a mature plant",
+        "C": "Absorbs nutrients from the soil",
+        "D": "Breaks dormancy and starts to grow"
+      },
+      "marks": 1,
+      "topic": "DEVELOPMENT OF SEEDS AND FRUITS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0102",
+      "type": "mcq",
+      "stem": "Which of the following is evidence of evolution?",
+      "options": {
+        "A": "Homologous structures in different species",
+        "B": "Similarities in embryonic development",
+        "C": "Fossils of extinct organisms",
+        "D": "All of the above."
+      },
+      "marks": 1,
+      "topic": "EVOLUTION",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0103",
+      "type": "mcq",
+      "stem": "What is the term used to describe the maximum number of individuals of a species that an environment can support indefinitely?",
+      "options": {
+        "A": "Ecological niche",
+        "B": "Limiting factor",
+        "C": "Carrying capacity",
+        "D": "Density-dependent factor"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0104",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about the kingdom Fungi?",
+      "options": {
+        "A": "Fungi obtain nutrients by absorbing organic matter",
+        "B": "Fungi are photosynthetic organisms",
+        "C": "Fungi are multicellular organisms",
+        "D": "Fungi reproduce through the formation of seeds"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0105",
+      "type": "mcq",
+      "stem": "Which of the following statements best describes courtship behaviors in animals?",
+      "options": {
+        "A": "Courtship behaviors are solely performed by males to establish dominance within a social group",
+        "B": "Courtship behaviors involve displays and rituals performed by both males and females to attract a mate",
+        "C": "Courtship behaviors are primarily performed by females to attract males for mating",
+        "D": "Courtship behaviors are aggressive interactions between males competing for a female mate"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM IN BIRD AND MAMMALS.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0106",
+      "type": "mcq",
+      "stem": "Which of the following represents an example of ecological management and conservation through a biological association?",
+      "options": {
+        "A": "Construction of a dam for hydroelectric power",
+        "B": "Introduction of an invasive species for pest control",
+        "C": "Clear-cutting of a forest for timber extraction",
+        "D": "Establishment of marine protected areas"
+      },
+      "marks": 1,
+      "topic": "ECOLOGICAL MANAGEMENT: TOLERANCE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0107",
+      "type": "mcq",
+      "stem": "Which of the following statements best describes the role of competition in the process of adaptation?",
+      "options": {
+        "A": "Competition leads to the selection of individuals with favorable traits for survival and reproduction",
+        "B": "Competition ensures equal distribution of resources among individuals in a population",
+        "C": "Competition leads to the development of new traits and adaptations in a population",
+        "D": "Competition reduces the need for adaptations as individuals coexist peacefully"
+      },
+      "marks": 1,
+      "topic": "EVOLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0108",
+      "type": "mcq",
+      "stem": "Which of the following processes is involved in the reproduction of developing organisms?",
+      "options": {
+        "A": "Budding",
+        "B": "Germination",
+        "C": "Fertilization",
+        "D": "Pollination"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM AND REPRODUCTION IN HUMAN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0109",
+      "type": "mcq",
+      "stem": "Which of the following is a primary source of pollution in aquatic ecosystems?",
+      "options": {
+        "A": "Soil erosion",
+        "B": "Industrial discharge",
+        "C": "Air pollution",
+        "D": "Deforestation"
+      },
+      "marks": 1,
+      "topic": "POLLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0110",
+      "type": "mcq",
+      "stem": "The alternate form of a gene is",
+      "options": {
+        "A": "Alternate type",
+        "B": "Dominant character",
+        "C": "Recessive character",
+        "D": "Allele"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0111",
+      "type": "mcq",
+      "stem": "Which gland is responsible for producing the hormone insulin?",
+      "options": {
+        "A": "Thyroid gland",
+        "B": "Pituitary gland",
+        "C": "Pancreas",
+        "D": "Adrenal gland"
+      },
+      "marks": 1,
+      "topic": "REGULATION OF INTERNAL ENVIRONMENT CONTINUES ENDOCRIN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0112",
+      "type": "mcq",
+      "stem": "Viviparity refers to the reproductive strategy in which",
+      "options": {
+        "A": "Offspring are produced by internal fertilization",
+        "B": "Offspring are produced by external fertilization",
+        "C": "Offspring develop and are nourished inside the female\\'s body",
+        "D": "Offspring develop and are nourished outside the female\\'s body"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM IN BIRD AND MAMMALS.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0113",
+      "type": "mcq",
+      "stem": "What are the primary products of photosynthesis?",
+      "options": {
+        "A": "Carbon dioxide and water",
+        "B": "Glucose and oxygen",
+        "C": "Glucose and carbon dioxide",
+        "D": "Oxygen and water"
+      },
+      "marks": 1,
+      "topic": "PLANT HORMONES",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-biology-bank-0114",
+      "type": "mcq",
+      "stem": "Which of the following best describes a natural habitat in ecology?",
+      "options": {
+        "A": "An area where organisms naturally live and interact with their surroundings",
+        "B": "A human-created environment for wildlife conservation",
+        "C": "A controlled laboratory setting for ecological experiments",
+        "D": "A protected area for endangered species"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0115",
+      "type": "mcq",
+      "stem": "Which of the following statements best describes pollination in plants?",
+      "options": {
+        "A": "Pollination is the process of transferring pollen from the stigma to the anther of a flower",
+        "B": "Pollination is the process of transferring pollen from the anther to the stigma of a flower",
+        "C": "Pollination is the process of releasing pollen into the air for dispersal",
+        "D": "Pollination is the process of seed formation within a flower"
+      },
+      "marks": 1,
+      "topic": "POLLINATION IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0116",
+      "type": "mcq",
+      "stem": "Behavioral adaptation for dealing with a hot climate could include",
+      "options": {
+        "A": "Hibernating during the hottest part of the day",
+        "B": "Large scales on the back of a lizard",
+        "C": "Feeding during the hottest part of the day",
+        "D": "A small kidney to conserve water"
+      },
+      "marks": 1,
+      "topic": "ECOLOGICAL MANAGEMENT: TOLERANCE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0117",
+      "type": "mcq",
+      "stem": "The theory of evolution can be defined as",
+      "options": {
+        "A": "The belief that all species were created in their current form",
+        "B": "The hypothesis that organisms strive to improve themselves over generations",
+        "C": "The idea that species change over time through natural processes",
+        "D": "The concept that evolution occurs through a series of sudden and dramatic changes"
+      },
+      "marks": 1,
+      "topic": "EVOLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0118",
+      "type": "mcq",
+      "stem": "Which of the following mechanisms is responsible for providing support in plants?",
+      "options": {
+        "A": "Muscles and bones",
+        "B": "Exoskeleton",
+        "C": "Endocrine system",
+        "D": "Cell walls and turgor pressure"
+      },
+      "marks": 1,
+      "topic": "SUPPORTING TISSUE IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0119",
+      "type": "mcq",
+      "stem": "Metamorphosis is a biological process that involves",
+      "options": {
+        "A": "The growth and development of an organism from a zygote to an adult",
+        "B": "The change in form and structure during the life cycle of certain organisms",
+        "C": "The regeneration of lost body parts in an organism",
+        "D": "The transformation of an organism from an adult stage to a larval stage"
+      },
+      "marks": 1,
+      "topic": "TISSUE AND SUPPORTING SYSTEM",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-biology-bank-0120",
+      "type": "mcq",
+      "stem": "Which of the following plant tissues is responsible for transporting water and nutrients from the roots to the rest of the plant?",
+      "options": {
+        "A": "Mesophyll",
+        "B": "Xylem",
+        "C": "Epidermis",
+        "D": "Phloem"
+      },
+      "marks": 1,
+      "topic": "SUPPORTING TISSUE IN PLANTS",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-biology-bank-0121",
+      "type": "mcq",
+      "stem": "Which of the following organs is primarily responsible for excretion in humans?",
+      "options": {
+        "A": "Liver",
+        "B": "Pancreas",
+        "C": "Kidneys",
+        "D": "Lungs"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0122",
+      "type": "mcq",
+      "stem": "Which of the following best describes physiological variation in biology?",
+      "options": {
+        "A": "Variations in the physiological processes and functions of organisms",
+        "B": "Differences in physical characteristics and appearance within a population",
+        "C": "Differences in behavior and social interactions among individuals",
+        "D": "Variations in the genetic makeup of individuals within a species"
+      },
+      "marks": 1,
+      "topic": "VARIATION IN POPULATION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0123",
+      "type": "mcq",
+      "stem": "Which of the following is a male reproductive organ in humans?",
+      "options": {
+        "A": "Uterus",
+        "B": "Ovary",
+        "C": "Testis",
+        "D": "Fallopian tube"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM AND REPRODUCTION IN HUMAN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0124",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of cells related to irritability?",
+      "options": {
+        "A": "Ability to respond to stimuli",
+        "B": "Ability to synthesize proteins",
+        "C": "Ability to generate energy",
+        "D": "Ability to replicate DNA"
+      },
+      "marks": 1,
+      "topic": "NERVOUS COORDINATION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0125",
+      "type": "mcq",
+      "stem": "What is the tissue responsible for transporting water and minerals from the roots to the rest of the plant?",
+      "options": {
+        "A": "Xylem",
+        "B": "Epidermis",
+        "C": "Parenchyma",
+        "D": "Phloem"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0126",
+      "type": "mcq",
+      "stem": "Which of the following blood vessels carries oxygenated blood away from the heart?",
+      "options": {
+        "A": "Arteries",
+        "B": "Venules",
+        "C": "Capillaries",
+        "D": "Veins"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0127",
+      "type": "mcq",
+      "stem": "Which of the following is an evolutionary trend commonly observed in organisms?",
+      "options": {
+        "A": "Decreased complexity over time",
+        "B": "Increased dependence on external resources",
+        "C": "Increased genetic diversity within populations",
+        "D": "Decreased adaptation to the environment"
+      },
+      "marks": 1,
+      "topic": "EVOLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0128",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a behavioral adaptation for survival in animals?",
+      "options": {
+        "A": "Sharp teeth",
+        "B": "Migration",
+        "C": "Wings",
+        "D": "Camouflage"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0129",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a microorganism in action as a disease vector?",
+      "options": {
+        "A": "Fungi decomposing dead plant material",
+        "B": "Mosquito transmitting malaria",
+        "C": "Bacteria causing food poisoning",
+        "D": "Algae producing oxygen through photosynthesis"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-biology-bank-0130",
+      "type": "mcq",
+      "stem": "Which component of blood is responsible for carrying oxygen to the body tissues?",
+      "options": {
+        "A": "Platelets",
+        "B": "White blood cells",
+        "C": "Red blood cells",
+        "D": "Plasma"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0131",
+      "type": "mcq",
+      "stem": "Which of the following is an example of physiological variation in organisms?",
+      "options": {
+        "A": "Variation in blood pressure among individuals",
+        "B": "Variation in beak shape among finches",
+        "C": "Differences in fur color in rabbits",
+        "D": "Variation in leaf shape in plants"
+      },
+      "marks": 1,
+      "topic": "VARIATION IN POPULATION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0132",
+      "type": "mcq",
+      "stem": "What is the primary source of variation in a population?",
+      "options": {
+        "A": "Gene flow",
+        "B": "Mutation",
+        "C": "Natural selection",
+        "D": "Genetic drift"
+      },
+      "marks": 1,
+      "topic": "VARIATION IN POPULATION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0133",
+      "type": "mcq",
+      "stem": "Which of the following traits is not visible in a person with Down syndrome?",
+      "options": {
+        "A": "Short neck",
+        "B": "High muscle tone",
+        "C": "Small stature",
+        "D": "Slant eyes"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0134",
+      "type": "mcq",
+      "stem": "Which of the following is an example of an adaptation for survival in social insects?",
+      "options": {
+        "A": "Migration to warmer climates",
+        "B": "Production of venom for defense",
+        "C": "Formation of complex caste systems",
+        "D": "Hibernation during winter months"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0135",
+      "type": "mcq",
+      "stem": "The natural place of an organism or community is known as",
+      "options": {
+        "A": "Niche",
+        "B": "Habit",
+        "C": "Biome",
+        "D": "Habitat"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0136",
+      "type": "mcq",
+      "stem": "Which of the following functions is performed by the skin to help maintain homeostasis in the human body?",
+      "options": {
+        "A": "Regulation of body temperature",
+        "B": "Filtration of blood",
+        "C": "Production of hormones",
+        "D": "Digestion of food"
+      },
+      "marks": 1,
+      "topic": "THE SKIN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0137",
+      "type": "mcq",
+      "stem": "sources of air pollutants are?",
+      "options": {
+        "A": "industrial chimneys, burning fossil oils and river dams",
+        "B": "sulphurdioxide, acid rain and pesticides",
+        "C": "sulphur dioxide, vehicle exhausts, and aerosols",
+        "D": "sewage,smoke and old vehicles"
+      },
+      "marks": 1,
+      "topic": "POLLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0138",
+      "type": "mcq",
+      "stem": "The body of a snail is divided into head?",
+      "options": {
+        "A": "thorax and abdomen",
+        "B": "visceral mass and abdomen",
+        "C": "thorax and foot",
+        "D": "visceral mass and foot"
+      },
+      "marks": 1,
+      "topic": "TISSUE AND SUPPORTING SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0139",
+      "type": "mcq",
+      "stem": "An adaptation for defense in animals is?",
+      "options": {
+        "A": "croaking of a male toad",
+        "B": "basking in lizard",
+        "C": "spines in porcupine fish",
+        "D": "huddling together of penguins"
+      },
+      "marks": 1,
+      "topic": "SUPPORTING TISSUE IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0140",
+      "type": "mcq",
+      "stem": "The movement of Euglena towards the source of light is a?",
+      "options": {
+        "A": "tropic movement",
+        "B": "tactic movement",
+        "C": "nastic movement",
+        "D": "kinetic movement"
+      },
+      "marks": 1,
+      "topic": "PHOTOTROPISM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0141",
+      "type": "mcq",
+      "stem": "During mitosis, the stage at which chromosomes lines up around the equator is?",
+      "options": {
+        "A": "telophase",
+        "B": "metasphase",
+        "C": "anaphase",
+        "D": "prophase"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0142",
+      "type": "mcq",
+      "stem": "The waste product of insects is?",
+      "options": {
+        "A": "uric acid",
+        "B": "urine",
+        "C": "Mucilage",
+        "D": "sweat"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0143",
+      "type": "mcq",
+      "stem": "Succession that occurs on an abandoned farm land is?",
+      "options": {
+        "A": "tertiary",
+        "B": "secondary",
+        "C": "primary",
+        "D": "climax"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0144",
+      "type": "mcq",
+      "stem": "In Nigeria, Southern Guinea Savanna is found in?",
+      "options": {
+        "A": "Borno and Sokoto",
+        "B": "Kogi and Kwara",
+        "C": "Kaduna and Cross River",
+        "D": "Kano and Niger"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0145",
+      "type": "mcq",
+      "stem": "Which of the following is associated with the dark stage of photosynthesis?",
+      "options": {
+        "A": "Assimilation of Carbon(IV)oxide",
+        "B": "Photophosphorylation",
+        "C": "Photolysis",
+        "D": "Excitation of chlorophyll"
+      },
+      "marks": 1,
+      "topic": "PLANT HORMONES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0146",
+      "type": "mcq",
+      "stem": "The part of mammalian skin that excretes metabolic wastes is?",
+      "options": {
+        "A": "sweat gland",
+        "B": "horny layer",
+        "C": "Malpighian layer",
+        "D": "sebaceous gland"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0147",
+      "type": "mcq",
+      "stem": "The feeding relationship that exists between a tick and a cow is?",
+      "options": {
+        "A": "parasitism",
+        "B": "mechanism",
+        "C": "saprophytism",
+        "D": "commensalism"
+      },
+      "marks": 1,
+      "topic": "TROPHIC LEVELS",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0148",
+      "type": "mcq",
+      "stem": "The type of fruit that is formed from a single flower having several free carpels is?",
+      "options": {
+        "A": "indehiscent fruit",
+        "B": "aggregate fruit",
+        "C": "simple fruit",
+        "D": "fleshy fruit"
+      },
+      "marks": 1,
+      "topic": "DEVELOPMENT OF SEEDS AND FRUITS",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-biology-bank-0149",
+      "type": "mcq",
+      "stem": "The part that performs urinogenital function in the male reproductive system is the?",
+      "options": {
+        "A": "seminal vesacle",
+        "B": "epididymis",
+        "C": "urethra",
+        "D": "ureter"
+      },
+      "marks": 1,
+      "topic": "Past Questions",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0150",
+      "type": "mcq",
+      "stem": "The components of blood in man are?",
+      "options": {
+        "A": "red blood cells, white blood cells, plasma and water",
+        "B": "red blood cells, white blood cells, and plasma",
+        "C": "red blood cells, white blood cells, and platelets",
+        "D": "red blood cells, white blood cells, plasma and platelets"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0151",
+      "type": "mcq",
+      "stem": "The development of big muscles by a wrestler is an example of?",
+      "options": {
+        "A": "acquired characteristics",
+        "B": "inherited characteristics",
+        "C": "mutation",
+        "D": "atrophication"
+      },
+      "marks": 1,
+      "topic": "MUSCULAR SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0152",
+      "type": "mcq",
+      "stem": "Lack of nucleus is a feature in?",
+      "options": {
+        "A": "osteocyte",
+        "B": "neurone",
+        "C": "erythrocyte",
+        "D": "leucocyte"
+      },
+      "marks": 1,
+      "topic": "CELL",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0153",
+      "type": "mcq",
+      "stem": "A universal recipient of blood belongs to blood group?",
+      "options": {
+        "A": "O",
+        "B": "AB",
+        "C": "B",
+        "D": "A"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0154",
+      "type": "mcq",
+      "stem": "An example of arboreal animal is?",
+      "options": {
+        "A": "squirrels",
+        "B": "duck",
+        "C": "pig",
+        "D": "rat"
+      },
+      "marks": 1,
+      "topic": "TERRESTRIAL HABITAT",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0155",
+      "type": "mcq",
+      "stem": "The movement of sugars from the leaf to other parts of plant is?",
+      "options": {
+        "A": "guttation",
+        "B": "transpiration",
+        "C": "transportation",
+        "D": "translocation"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0156",
+      "type": "mcq",
+      "stem": "Gaseous exchange in annelids is more advanced and efficient compared to flatworms because?",
+      "options": {
+        "A": "the cells of their epidermis have no blood capillaries",
+        "B": "they have well developed respiratory structures",
+        "C": "their cylindrical shape gives high surface area to volume ratio",
+        "D": "their surface area to volume ratio is very low"
+      },
+      "marks": 1,
+      "topic": "RESPIRATORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0157",
+      "type": "mcq",
+      "stem": "The structure that joins the two strands of a chromosome together is the?",
+      "options": {
+        "A": "spindle",
+        "B": "cellulose",
+        "C": "centromere",
+        "D": "chromatid"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0158",
+      "type": "mcq",
+      "stem": "When a colour blind woman marries a normal man, what is the probability of their son being colour blind?",
+      "options": {
+        "A": "25%",
+        "B": "100%",
+        "C": "50%",
+        "D": "0%"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0159",
+      "type": "mcq",
+      "stem": "The correct pathway for blood flow from the heart to the tissues of mammals is?",
+      "options": {
+        "A": "heart-arteriole-artery-tissues",
+        "B": "heart-artery-arteriole-tissues",
+        "C": "heart-vein-venule-tissues",
+        "D": "heart-venule-vein-tissues"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0160",
+      "type": "mcq",
+      "stem": "Tall trees with buttress roots and evergreen leaves are characteristics features of?",
+      "options": {
+        "A": "temperate grass land",
+        "B": "Southern Guinea Savanna",
+        "C": "tropical rain forests",
+        "D": "Northern Guinea savanna"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0161",
+      "type": "mcq",
+      "stem": "The genes crossing over occurs during?",
+      "options": {
+        "A": "fertilization",
+        "B": "mutation",
+        "C": "mitosis",
+        "D": "meiosis"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0162",
+      "type": "mcq",
+      "stem": "In genetic counseling, a man with hemoglobin formation HbA HbS is most preferred to marry a woman of?",
+      "options": {
+        "A": "HbA HbA",
+        "B": "HbC HbH",
+        "C": "HbM HbF",
+        "D": "HbS HbS"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0163",
+      "type": "mcq",
+      "stem": "An ecological instrument used to measure wind direction is?",
+      "options": {
+        "A": "Secchi disc",
+        "B": "wind vane",
+        "C": "anemometer",
+        "D": "slope gauge"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0164",
+      "type": "mcq",
+      "stem": "The growth of mucor on a piece of bread is?",
+      "options": {
+        "A": "scavenging",
+        "B": "commensalism",
+        "C": "autotrophism",
+        "D": "saprophytism"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0165",
+      "type": "mcq",
+      "stem": "Conversion of atmosphere carbon into chemical bond energy occurs during the process of?",
+      "options": {
+        "A": "transpiration",
+        "B": "photosynthesis",
+        "C": "digestion",
+        "D": "respiration"
+      },
+      "marks": 1,
+      "topic": "ENERGY TRANSFORMATION IN NATURE",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0166",
+      "type": "mcq",
+      "stem": "The display of male agama lizard is to?",
+      "options": {
+        "A": "scare predators",
+        "B": "regulate body temperature",
+        "C": "attract female for mate",
+        "D": "give invite to intruders"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM IN FISH AND REPTILES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0167",
+      "type": "mcq",
+      "stem": "The end product of the digestion of carbohydrate is?",
+      "options": {
+        "A": "amino acid",
+        "B": "glycerol",
+        "C": "glucose",
+        "D": "sucrose"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0168",
+      "type": "mcq",
+      "stem": "The sum total of all observable features of an organism is?",
+      "options": {
+        "A": "phenotype",
+        "B": "heterozygous",
+        "C": "genotype",
+        "D": "homozygous"
+      },
+      "marks": 1,
+      "topic": "MORPHOLOGY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0169",
+      "type": "mcq",
+      "stem": "Pentadactyl plan of the fore limbs of frog, bird, horse, whale and man is a proof of?",
+      "options": {
+        "A": "spontaneous generation",
+        "B": "evolution",
+        "C": "locomotion",
+        "D": "creation"
+      },
+      "marks": 1,
+      "topic": "VERTEBRATE SKELETON",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0170",
+      "type": "mcq",
+      "stem": "The under secretion of thyroxine in children results in?",
+      "options": {
+        "A": "goitre",
+        "B": "gigantism",
+        "C": "kwashiorkor",
+        "D": "cretinism"
+      },
+      "marks": 1,
+      "topic": "REGULATION OF INTERNAL ENVIRONMENT CONTINUES ENDOCRIN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0171",
+      "type": "mcq",
+      "stem": "Petaloid sepals serve the function of?",
+      "options": {
+        "A": "carrying out photosynthesis",
+        "B": "attracting pollinating agents to a flower",
+        "C": "retaining pollen grains in the corolla tubes",
+        "D": "protecting the inner floral parts of the flower"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0172",
+      "type": "mcq",
+      "stem": "The system of classification in which there are seven hierarchies from kingdom to species was introduced by?",
+      "options": {
+        "A": "Felix Dujardin",
+        "B": "Carolus Linneus",
+        "C": "Theodore Schwann",
+        "D": "Charles Darwin"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0173",
+      "type": "mcq",
+      "stem": "An adaptive feature of camel to the desert is?",
+      "options": {
+        "A": "ability to increase sweat production",
+        "B": "ability to pass high amount of urine",
+        "C": "ability to tolerate low degree of dehydration",
+        "D": "ability to tolerate high degree of dehydration"
+      },
+      "marks": 1,
+      "topic": "NUTRITION IN ANIMALS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0174",
+      "type": "mcq",
+      "stem": "The part labelled II is?",
+      "options": {
+        "A": "pellicle",
+        "B": "cytoplasmic connections",
+        "C": "flagella",
+        "D": "cells"
+      },
+      "marks": 1,
+      "topic": "VERTEBRATE SKELETON",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0175",
+      "type": "mcq",
+      "stem": "The organism above is?",
+      "options": {
+        "A": "chlamydomonas",
+        "B": "algae",
+        "C": "volvox",
+        "D": "euglena"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0176",
+      "type": "mcq",
+      "stem": "The beak structure of the organism is best adapted for?",
+      "options": {
+        "A": "pecking grass",
+        "B": "killing and picking fish",
+        "C": "pecking woods",
+        "D": "sucking nectars"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0177",
+      "type": "mcq",
+      "stem": "One of the functions of water in seed germination is to?",
+      "options": {
+        "A": "dilute the embryo",
+        "B": "make the soil wet and soft",
+        "C": "activate the enzymes",
+        "D": "promote aerobic respiration"
+      },
+      "marks": 1,
+      "topic": "DEVELOPMENT OF SEEDS AND FRUITS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0178",
+      "type": "mcq",
+      "stem": "One of the functions of the xylem is?",
+      "options": {
+        "A": "strengthening the stem",
+        "B": "manufacturing food",
+        "C": "reducing loss of water",
+        "D": "conducting manufactured food"
+      },
+      "marks": 1,
+      "topic": "SUPPORTING TISSUE IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0179",
+      "type": "mcq",
+      "stem": "Which of the statements below is not characteristic of wind-pollinated flowers?",
+      "options": {
+        "A": "Stigmas are usually large and feathery",
+        "B": "Nectary is usually absent",
+        "C": "The pollen grains have rough spiny surfaces",
+        "D": "The flowers are not scented."
+      },
+      "marks": 1,
+      "topic": "POLLINATION IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0180",
+      "type": "mcq",
+      "stem": "Some of the features of an animal are scales, teeth, nares, and backbone. The animal is likely to be a?",
+      "options": {
+        "A": "toad",
+        "B": "bird",
+        "C": "lizard",
+        "D": "rat"
+      },
+      "marks": 1,
+      "topic": "VERTEBRATE SKELETON",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0181",
+      "type": "mcq",
+      "stem": "Choose the sequence which represents the correct order of organisms in a food chain",
+      "options": {
+        "A": "Grass, snake, toad, grasshopper, hawk",
+        "B": "Grass, grasshopper, toad, snake, hawk",
+        "C": "Grass, grasshopper, snake, toad, hawk.",
+        "D": "Grass, snake, grasshopper, toad, hawk"
+      },
+      "marks": 1,
+      "topic": "TROPHIC LEVELS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0182",
+      "type": "mcq",
+      "stem": "Flatworms and roundworms are said to be invertebrates because?",
+      "options": {
+        "A": "they are small animals",
+        "B": "they can live inside the vertebrates",
+        "C": "some of them are unicellular",
+        "D": "they have no backbones"
+      },
+      "marks": 1,
+      "topic": "INVERTEBRATES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0183",
+      "type": "mcq",
+      "stem": "When a Spirogyra cell is immersed in a salt solution more concentrated than its cell sap, it?",
+      "options": {
+        "A": "remains unchanged",
+        "B": "takes tip water and burst",
+        "C": "absorbs a little water",
+        "D": "loses water and shrivels"
+      },
+      "marks": 1,
+      "topic": "EFFECTS OF AGRICULTURAL ACTIVITTIES ON ECOLOGICAL SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0184",
+      "type": "mcq",
+      "stem": "Which of the following is NOT regarded as a pollutant on land or in the air?",
+      "options": {
+        "A": "Smoke",
+        "B": "Nitrogen",
+        "C": "Noise",
+        "D": "Sulphur dioxide"
+      },
+      "marks": 1,
+      "topic": "POLLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0185",
+      "type": "mcq",
+      "stem": "The initial volume of water poured into a bag of dry soil was 50ml and the amount that drained through was 35mI. The percentage water content of the fully soaked soil is therefore?",
+      "options": {
+        "A": "46.7",
+        "B": "25.0",
+        "C": "20.0",
+        "D": "30.0"
+      },
+      "marks": 1,
+      "topic": "RELEVANCE OF BIOLOGY TO AGRICULTURE.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0186",
+      "type": "mcq",
+      "stem": "When the original king and queen of termites die, they are replaced by",
+      "options": {
+        "A": "the king and queen of another colony",
+        "B": "some adult reproductives from the same colony",
+        "C": "some adult workers which are specially fed to breed",
+        "D": "developing nymphs nurtured as secondary reproductives"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF INVERTEBRATES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0187",
+      "type": "mcq",
+      "stem": "In demonstrating the importance of mineral elements in plants, the culture bottle must be darkened to?",
+      "options": {
+        "A": "prevent algal growth in culture solution",
+        "B": "allow root growth",
+        "C": "prevent breakdown of mineral elements",
+        "D": "prevents photosynthesis in the root"
+      },
+      "marks": 1,
+      "topic": "NUTRITION IN ANIMALS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0188",
+      "type": "mcq",
+      "stem": "In the mammalian respiratory system. exchange of gases occurs in the?",
+      "options": {
+        "A": "lungs",
+        "B": "bronchi",
+        "C": "bronchioles",
+        "D": "alveoli"
+      },
+      "marks": 1,
+      "topic": "RESPIRATORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0189",
+      "type": "mcq",
+      "stem": "Aged erythrocytes are destroyed in the?",
+      "options": {
+        "A": "pancreas",
+        "B": "liver",
+        "C": "lymph nodes",
+        "D": "kidney"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0190",
+      "type": "mcq",
+      "stem": "The villus in the small intestine is significant because it?",
+      "options": {
+        "A": "increases the surface area for absorption",
+        "B": "increases the surface area for digestion",
+        "C": "assists in mixing digested food",
+        "D": "assists in filtering undigested food"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0191",
+      "type": "mcq",
+      "stem": "Which of the following food substances will produce a brick-red colour when warmed with Benedict's solution?",
+      "options": {
+        "A": "Glucose",
+        "B": "Starch",
+        "C": "Egg White",
+        "D": "Maltose"
+      },
+      "marks": 1,
+      "topic": "PRACTICAL ON FOOD TEST",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0192",
+      "type": "mcq",
+      "stem": "The blood vessel which carries blood from the alimentary canal to the liver is the?",
+      "options": {
+        "A": "hepatic artery",
+        "B": "hepatic vein",
+        "C": "hepatic portal vein",
+        "D": "mesenteric artery"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0193",
+      "type": "mcq",
+      "stem": "Which of the following is TRUE of the process of conjugation in Paramecium?",
+      "options": {
+        "A": "Micronucleus disintegrates",
+        "B": "Each ex-conjugant divides only once",
+        "C": "Macro nucleus undergoes division",
+        "D": "Each micronucleus divides twice"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0194",
+      "type": "mcq",
+      "stem": "People who suck petrol with their mouths run the risk of increasing in their blood the concentration of",
+      "options": {
+        "A": "iron",
+        "B": "lead",
+        "C": "calcium",
+        "D": "magnesium"
+      },
+      "marks": 1,
+      "topic": "POLLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0195",
+      "type": "mcq",
+      "stem": "Which of the following is a measure for the control of bilharzia?",
+      "options": {
+        "A": "Cutting low bushes around homes",
+        "B": "Application of molluscicides in water bodies",
+        "C": "Screening windows and doors with mosquito nets",
+        "D": "Application of herbicides in water bodies"
+      },
+      "marks": 1,
+      "topic": "AQUATIC HABITAT",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0196",
+      "type": "mcq",
+      "stem": "The appendicular skeleton is composed of the pectoral girdle?",
+      "options": {
+        "A": "pelvic girdle, fore and hind limbs",
+        "B": "pelvic girdle and fore limbs",
+        "C": "lumbar vertebrae and pelvic girdle",
+        "D": "lumbar vertebrae, fore and hind limbs"
+      },
+      "marks": 1,
+      "topic": "VERTEBRATE SKELETON",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0197",
+      "type": "mcq",
+      "stem": "A freshwater plant such as water lily can solve the problem of buoyancy by the possession of?",
+      "options": {
+        "A": "aerenchyma tissues",
+        "B": "dissected leaves",
+        "C": "thin cell walls of the epidermis",
+        "D": "water-repelling epidermis"
+      },
+      "marks": 1,
+      "topic": "SUPPORTING TISSUE IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0198",
+      "type": "mcq",
+      "stem": "The correct sequence for the perception of smell in mammals is?",
+      "options": {
+        "A": "chemicals --> olfactory nerve endings --> brain",
+        "B": "dissolved chemicals --> nasal sensory cells --> brain",
+        "C": "chemicals --> mucus membrane sensory cells --> brain",
+        "D": "dissolved chemicals --> sensory cells --> olfactory nerve --> brain"
+      },
+      "marks": 1,
+      "topic": "SENSE ORGANS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0199",
+      "type": "mcq",
+      "stem": "I. High birth rate and high immigration rate",
+      "options": {
+        "A": "III. Low mortality rate and low emigration rate",
+        "B": "Which combination of the above can cause rapid over-crowding in climax biotic communities and human settlements?",
+        "C": "II and III",
+        "D": "I and III"
+      },
+      "marks": 1,
+      "topic": "POPULATION GROWTH & FOOD SUPPLY.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0200",
+      "type": "mcq",
+      "stem": "The number of plant species obtained from a population study of a garden is as follows: Guinea grass (15), Ipomoea spp (5), Sida spp (7) and Imperata spp (23)",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "marks": 1,
+      "topic": "POPULATION STUDIES BY SAMPLING METHOD",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0201",
+      "type": "mcq",
+      "stem": "When a marine fish was taken from the ocean and put in a tank of fresh water, it died after a short period because?",
+      "options": {
+        "A": "the tank was too small compared to the large-ocean",
+        "B": "the body cells of the fish swelled and burst as a result of the hypotonic fresh water",
+        "C": "the body cells of the fish shrank as their sap was hypertonic to the freshwater",
+        "D": "there was no food in the tank, so the fish starved"
+      },
+      "marks": 1,
+      "topic": "AQUATIC HABITAT",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0202",
+      "type": "mcq",
+      "stem": "If a DNA strand has a base sequence TCA, its complementary strand must be?",
+      "options": {
+        "A": "ATG",
+        "B": "TAG",
+        "C": "GAT",
+        "D": "AGT"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0203",
+      "type": "mcq",
+      "stem": "The two key cations involved in the action potential of nervous transmissions are?",
+      "options": {
+        "A": "Na+ and Fe2+",
+        "B": "Mg2+ and K+",
+        "C": "Na+ and K+",
+        "D": "Fe2+ and Mg2+"
+      },
+      "marks": 1,
+      "topic": "NERVOUS COORDINATION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0204",
+      "type": "mcq",
+      "stem": "I. Rattus rattus. Il. Agama agama III. Bufo regularis IV. Tilapia zillii",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "hard"
+    },
+    {
+      "id": "jamb-biology-bank-0205",
+      "type": "mcq",
+      "stem": "Which of the following produces both hormones and enzymes?",
+      "options": {
+        "A": "Ileum",
+        "B": "Pancreas",
+        "C": "Gall bladder",
+        "D": "Kidney"
+      },
+      "marks": 1,
+      "topic": "PLANT HORMONES",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0206",
+      "type": "mcq",
+      "stem": "The correct sequence of the movement of urea during urine formation is?",
+      "options": {
+        "A": "glomerulus ---> Bowman's capsule -> convoluted tubule ---> Henle's loop -> collecting- tubule",
+        "B": "glomerulus -> Bowman's capsule -> convoluted tubule -> Henle's loop -> convoluted tubule -> collecting tubule",
+        "C": "convoluted tubule -> glomerulus --> Nettle's loop -> Bowman's capsule->collecting tubule",
+        "D": "convoluted tubule -> Bowman's capsule -> Henle's loop -7> glomerulus -> collecting tubule"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0207",
+      "type": "mcq",
+      "stem": "The order of passage of food in the digestive system is",
+      "options": {
+        "A": "ileum --> caecum ->large intestine -> rectum",
+        "B": "ileum --> colon --> caecum -> rectum",
+        "C": "large intestine --> ileum -> caecum -> rectum",
+        "D": "colon -> caecum -> ileum -> rectum"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0208",
+      "type": "mcq",
+      "stem": "Mass of a crucible = 10g,",
+      "options": {
+        "A": "Mass of a crucible and soil after heating = 18g",
+        "B": "A",
+        "C": "B",
+        "D": "C"
+      },
+      "marks": 1,
+      "topic": "PRACTICAL ON FOOD TEST",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0209",
+      "type": "mcq",
+      "stem": "I. Stomata --> Spirogyra",
+      "options": {
+        "A": "III. Malpighian tubule -> Mammal",
+        "B": "Which of the above structures is correctly matched with the organisms in which it is found?",
+        "C": "II",
+        "D": "I"
+      },
+      "marks": 1,
+      "topic": "SUPPORTING TISSUE IN PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0210",
+      "type": "mcq",
+      "stem": "The sequence of the one-way gaseous exchange mechanism in a fish is?",
+      "options": {
+        "A": "mouth --> operculum -> gills",
+        "B": "mouth -> gills > operculum",
+        "C": "operculum > gills -> mouth",
+        "D": "gills -> operculum --> mouth"
+      },
+      "marks": 1,
+      "topic": "RESPIRATORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0211",
+      "type": "mcq",
+      "stem": "Which of the following is true in blood transfusion.?",
+      "options": {
+        "A": "A person of blood group AB can donate blood only to another person of blood group AB",
+        "B": "Persons of blood groups A and B can donate or receive blood from each other",
+        "C": "A person of blood group AB can receive blood only from persons of blood group A or B",
+        "D": "A person of blood group O can donate only to a person of blood group O"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0212",
+      "type": "mcq",
+      "stem": "The plants that grow in deserts or very dry areas are referred to as?",
+      "options": {
+        "A": "hydrophytes",
+        "B": "epiphytes",
+        "C": "xerophytes",
+        "D": "mesophytes"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0213",
+      "type": "mcq",
+      "stem": "The most abundant group of organisms in the animal kingdom?",
+      "options": {
+        "A": "Mammalia",
+        "B": "Aves",
+        "C": "Insecta",
+        "D": "Annelida"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0214",
+      "type": "mcq",
+      "stem": "The movement of part of a plant in response to external stimulus of no particular direction is?",
+      "options": {
+        "A": "taxism",
+        "B": "tropism",
+        "C": "haptotropic movement",
+        "D": "nastic movement"
+      },
+      "marks": 1,
+      "topic": "TISSUE AND SUPPORTING SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0215",
+      "type": "mcq",
+      "stem": "The mutation theory of organic evolution was propounded by?",
+      "options": {
+        "A": "Gregor Mendel",
+        "B": "Hugo de Vries",
+        "C": "Jean Lamarck",
+        "D": "Charles Darwin"
+      },
+      "marks": 1,
+      "topic": "EVOLUTION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0216",
+      "type": "mcq",
+      "stem": "Blood circulation in a mammal is said to be double because?",
+      "options": {
+        "A": "it passes twice through the heart in a complete circuit",
+        "B": "it moves in both arteries and veins",
+        "C": "it circulates in both the heart and other organs",
+        "D": "the heart contains auricles and ventricles"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0217",
+      "type": "mcq",
+      "stem": "The hormone which regulates the amount of glucose in the blood us called?",
+      "options": {
+        "A": "Adrenalin",
+        "B": "Auxin",
+        "C": "Insulin",
+        "D": "Thyroxine"
+      },
+      "marks": 1,
+      "topic": "PLANT HORMONES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0218",
+      "type": "mcq",
+      "stem": "Deamination occurs in the?",
+      "options": {
+        "A": "Kidney",
+        "B": "Pancreas",
+        "C": "Spleen",
+        "D": "Liver"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0219",
+      "type": "mcq",
+      "stem": "In an agricultural ecosystem, the biotic component consist of",
+      "options": {
+        "A": "crops, pests and beneficial insects",
+        "B": "crops, temperature and humidity",
+        "C": "pests, beneficial insects and water",
+        "D": "crops, water and soil"
+      },
+      "marks": 1,
+      "topic": "FUNCTIONING ECOSYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0220",
+      "type": "mcq",
+      "stem": "Epiphytes growing on the branches of trees provide an example of the relationship known as?",
+      "options": {
+        "A": "parasitism",
+        "B": "commensalism",
+        "C": "saprophytism",
+        "D": "holophytism"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0221",
+      "type": "mcq",
+      "stem": "The hypha of rhizopus is said to be non-septate because it",
+      "options": {
+        "A": "does not contain chloropyll",
+        "B": "has no cross wall",
+        "C": "is vacuoled",
+        "D": "stores oil globus"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0222",
+      "type": "mcq",
+      "stem": "The function of ribosome in cells is",
+      "options": {
+        "A": "protein synthesis",
+        "B": "starch synthesis",
+        "C": "transport of material",
+        "D": "lipid storage"
+      },
+      "marks": 1,
+      "topic": "CELL BIOLOGY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0223",
+      "type": "mcq",
+      "stem": "In which of the following does external fertilization take place?",
+      "options": {
+        "A": "toad",
+        "B": "lizard",
+        "C": "bird",
+        "D": "cockroach"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM IN FISH AND REPTILES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0224",
+      "type": "mcq",
+      "stem": "The villus in the small intestine is significant because",
+      "options": {
+        "A": "Increases the surface area for absorption",
+        "B": "increases the surface area for digestion",
+        "C": "assists in mixing digested food",
+        "D": "assists in filtering undigested food"
+      },
+      "marks": 1,
+      "topic": "DIGESTIVE SYSTEM",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0225",
+      "type": "mcq",
+      "stem": "The butterfly is of great economic importance because",
+      "options": {
+        "A": "of it's use in scientific studies",
+        "B": "it sucks nectar from flowers",
+        "C": "it adds to the beauty of the environment",
+        "D": "it pollinates flowers of crops and other plants"
+      },
+      "marks": 1,
+      "topic": "RELEVANCE OF BIOLOGY TO AGRICULTURE.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0226",
+      "type": "mcq",
+      "stem": "The bright colours of the comb and feathers in the peacock are for?",
+      "options": {
+        "A": "sex differentiation",
+        "B": "beauty",
+        "C": "courtship",
+        "D": "defence"
+      },
+      "marks": 1,
+      "topic": "CLASSIFICATION OF PLANTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0227",
+      "type": "mcq",
+      "stem": "What is the term used to describe biotic and abiotic factors in the environment of the organism?",
+      "options": {
+        "A": "habitat",
+        "B": "biome",
+        "C": "ecosystem",
+        "D": "ecological niche"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0228",
+      "type": "mcq",
+      "stem": "Which of the following instruments is NOT used in measuring abiotic factors in any habitat?",
+      "options": {
+        "A": "microscope",
+        "B": "A. windvane",
+        "C": "B. thermometer",
+        "D": "C. hygrometer"
+      },
+      "marks": 1,
+      "topic": "AQUATIC HABITAT",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0229",
+      "type": "mcq",
+      "stem": "The smallest living organisms which share the characteristics of both living and non-living matter are",
+      "options": {
+        "A": "bacteria",
+        "B": "fungi",
+        "C": "viruses",
+        "D": "protozoa"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0230",
+      "type": "mcq",
+      "stem": "The process by which a red blood cell placed in distilled water absorbs water until it burst and realease it's content into the surrounding is known as",
+      "options": {
+        "A": "osmosis",
+        "B": "plasmolysis",
+        "C": "turgidity",
+        "D": "hemolysis"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0231",
+      "type": "mcq",
+      "stem": "Which of the following waste products in plants is excreted through the stomata and lenticles?",
+      "options": {
+        "A": "carbon dioxide",
+        "B": "alkaloids",
+        "C": "tannins",
+        "D": "anthoocyanins"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0232",
+      "type": "mcq",
+      "stem": "Use the diagram to answer the questionThe vertebra illustrated is",
+      "options": {
+        "A": "lumber",
+        "B": "thoracic",
+        "C": "caudal",
+        "D": "cervical"
+      },
+      "marks": 1,
+      "topic": "VERTEBRATE SKELETON",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0233",
+      "type": "mcq",
+      "stem": "Use the diagram to answer the questionThe neural arch is labelled",
+      "options": {
+        "A": "i",
+        "B": "ii",
+        "C": "iii",
+        "D": "iv"
+      },
+      "marks": 1,
+      "topic": "VERTEBRATE SKELETON",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0234",
+      "type": "mcq",
+      "stem": "The excretory structure in the earthworm is the",
+      "options": {
+        "A": "malphighian tubule",
+        "B": "flame cell",
+        "C": "nephridium",
+        "D": "kidney"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0235",
+      "type": "mcq",
+      "stem": "In which of the following vertebrates does the skin function as a respiratory surface",
+      "options": {
+        "A": "rat",
+        "B": "lizard",
+        "C": "fish",
+        "D": "frog"
+      },
+      "marks": 1,
+      "topic": "RESPIRATORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0236",
+      "type": "mcq",
+      "stem": "The process of walking is under the control of the part of the brain called",
+      "options": {
+        "A": "optic lobe",
+        "B": "olfactory lobe",
+        "C": "cerebellum",
+        "D": "medulla oblongata"
+      },
+      "marks": 1,
+      "topic": "NERVOUS COORDINATION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0237",
+      "type": "mcq",
+      "stem": "The ability of the eyes to focus on both near and distance objects is termed",
+      "options": {
+        "A": "image formation",
+        "B": "refraction",
+        "C": "hypermetropia",
+        "D": "accommodation"
+      },
+      "marks": 1,
+      "topic": "SENSE ORGANS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0238",
+      "type": "mcq",
+      "stem": "A group pf organism of different species living in a particular area is described as a",
+      "options": {
+        "A": "colony",
+        "B": "community",
+        "C": "population",
+        "D": "niche"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0239",
+      "type": "mcq",
+      "stem": "The biological association that contributes directly to succession in a community is",
+      "options": {
+        "A": "competition",
+        "B": "predation",
+        "C": "parasitism",
+        "D": "commensalism"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0240",
+      "type": "mcq",
+      "stem": "Floating microscopic heterotrophs are mostly grouped as",
+      "options": {
+        "A": "phytoplankton",
+        "B": "zooplankton",
+        "C": "microbes",
+        "D": "nekton"
+      },
+      "marks": 1,
+      "topic": "TROPHIC LEVELS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0241",
+      "type": "mcq",
+      "stem": "Vaccination is carried out in order to",
+      "options": {
+        "A": "check the production of poison",
+        "B": "increase the activities of white blood cells",
+        "C": "increase the number of red blood cells",
+        "D": "stimulate the production of anti-bodies"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM AND REPRODUCTION IN HUMAN",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0242",
+      "type": "mcq",
+      "stem": "For growth to occur in organisms, the rate of",
+      "options": {
+        "A": "anabolism must exceed that of catabolism",
+        "B": "catabolism must exceed that of anabolism",
+        "C": "food storage must be low",
+        "D": "food storage must be high"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0243",
+      "type": "mcq",
+      "stem": "The probability of a baby being a boy or a girl depends on the contribution of the",
+      "options": {
+        "A": "father's sex cells",
+        "B": "father's stomatic chromosome",
+        "C": "mother's sex cell",
+        "D": "mother's X-chromosome"
+      },
+      "marks": 1,
+      "topic": "REPRODUCTIVE SYSTEM IN BIRD AND MAMMALS.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0244",
+      "type": "mcq",
+      "stem": "Both recesssive and dominant characters are found",
+      "options": {
+        "A": "on different chromosome in the cell",
+        "B": "at the same logus of a homologous chromosome",
+        "C": "at a different loci of a homologous chromosome",
+        "D": "on the same chromatid in a chromosome"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0245",
+      "type": "mcq",
+      "stem": "In a popu;ation of living things, the parameters of size, height, weight and colours are examoles of",
+      "options": {
+        "A": "continuous variation",
+        "B": "non-heritable variation",
+        "C": "discontinuous variation",
+        "D": "physiological variation"
+      },
+      "marks": 1,
+      "topic": "POPULATION STUDIES BY SAMPLING METHOD",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0246",
+      "type": "mcq",
+      "stem": "Use the diagram to answer the question.The process of water loss and intake indicated by the arrows labelled i and ii are respectively",
+      "options": {
+        "A": "evaporation and osmosis",
+        "B": "exhalation and osmosis",
+        "C": "osmosis and diffusion",
+        "D": "urination and diffusion"
+      },
+      "marks": 1,
+      "topic": "EXCRETORY SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0247",
+      "type": "mcq",
+      "stem": "The noticeable adaptation of the animal to it's aquatic habitat is the possession of",
+      "options": {
+        "A": "webbed digits",
+        "B": "four limb",
+        "C": "wide mouth",
+        "D": "large eyes"
+      },
+      "marks": 1,
+      "topic": "AQUATIC HABITAT",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0248",
+      "type": "mcq",
+      "stem": "Paternity disputes can most accurately be resolved through the use of",
+      "options": {
+        "A": "blood group typing",
+        "B": "finger printing",
+        "C": "tongue rolling",
+        "D": "DNA Analysis"
+      },
+      "marks": 1,
+      "topic": "BIOLOGY OF HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0249",
+      "type": "mcq",
+      "stem": "Use the table below to answer the question.High relative humidity will be expected in Zones",
+      "options": {
+        "A": "ii and iv",
+        "B": "ii and iii",
+        "C": "i and iii",
+        "D": "i and iv"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0250",
+      "type": "mcq",
+      "stem": "Use the table to answer the question.Which of the zones is likely to be a desert?",
+      "options": {
+        "A": "i",
+        "B": "ii",
+        "C": "iii",
+        "D": "iv"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0251",
+      "type": "mcq",
+      "stem": "When bacteria swim from cold to warm regions, this is known as",
+      "options": {
+        "A": "positive phototaxis",
+        "B": "negative phototaxis",
+        "C": "positive thermotaxis",
+        "D": "negative chemotaxis"
+      },
+      "marks": 1,
+      "topic": "MICRO ORGANISMS AROUND US",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-biology-bank-0252",
+      "type": "mcq",
+      "stem": "The only caste in the termite colony whose members can feed themselves are the",
+      "options": {
+        "A": "workers",
+        "B": "reproductives",
+        "C": "soldiers",
+        "D": "nymphs"
+      },
+      "marks": 1,
+      "topic": "TERRESTRIAL HABITAT",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0253",
+      "type": "mcq",
+      "stem": "Which of the following os the best explanation for a child who is phenotypically short and born of two tall parents",
+      "options": {
+        "A": "both parent possess genes for shortness",
+        "B": "the father possess a gene for shortness",
+        "C": "nature makes the child short",
+        "D": "None of the above"
+      },
+      "marks": 1,
+      "topic": "HEREDITY",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0254",
+      "type": "mcq",
+      "stem": "Which of the following vertebrates has the most simple structured heart",
+      "options": {
+        "A": "reptile",
+        "B": "fish",
+        "C": "mammal",
+        "D": "Amphibian"
+      },
+      "marks": 1,
+      "topic": "TRANSPORT SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0255",
+      "type": "mcq",
+      "stem": "Use the diagram to answer the question.The type of protective adaption exhibited by the animal is",
+      "options": {
+        "A": "disruptive colouration",
+        "B": "flash colouration",
+        "C": "countershading colouration",
+        "D": "warning colouration"
+      },
+      "marks": 1,
+      "topic": "PROTECTIVE ADAPTATION",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0256",
+      "type": "mcq",
+      "stem": "Use the diagram to answer the question.The structure labelled i is",
+      "options": {
+        "A": "photosensitive",
+        "B": "radiosensitive",
+        "C": "chemoreceptive",
+        "D": "tactile"
+      },
+      "marks": 1,
+      "topic": "TISSUE AND SUPPORTING SYSTEM",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0257",
+      "type": "mcq",
+      "stem": "Which of the following is a behavioural adaptation that protects prey from predators?",
+      "options": {
+        "A": "Hibernation",
+        "B": "Shedding of leaves",
+        "C": "Secreting irritating fluid",
+        "D": "Dormancy"
+      },
+      "marks": 1,
+      "topic": "BASIC ECOLOGICAL CONCEPTS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0258",
+      "type": "mcq",
+      "stem": "The period of inactivity seen in some animals during long period of heat or drought is",
+      "options": {
+        "A": "Migration",
+        "B": "Aestivation",
+        "C": "Hibernation",
+        "D": "Adaptation"
+      },
+      "marks": 1,
+      "topic": "ANIMAL ADAPTATIONS",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0259",
+      "type": "mcq",
+      "stem": "The insect trapping movements of the leaves of the venus fly trap is a behavioural adaptation for",
+      "options": {
+        "A": "support",
+        "B": "surviving adverse weather conditions",
+        "C": "obtaining food",
+        "D": "dormancy"
+      },
+      "marks": 1,
+      "topic": "PLANT HORMONES",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-biology-bank-0260",
+      "type": "mcq",
+      "stem": "Animals are said to gregarious when",
+      "options": {
+        "A": "they survive adverse conditions of cold weather",
+        "B": "they transmit information from one individual to another",
+        "C": "they are of the same species moving together in a group",
+        "D": "they give an alarm to alert others to show the normal protective behaviour of the group when danger threatens"
+      },
+      "marks": 1,
+      "topic": "POPULATION STUDIES BY SAMPLING METHOD",
+      "difficulty": "easy"
+    }
+  ]
+}

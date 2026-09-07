@@ -523,4 +523,68 @@ N429=$(printf '%s\n' "$CODES" | grep -c '^429$')
 [ "$N429" -ge 10 ]
 
 
+
+# ----------------------------------------------------------------------
+# Composite UTME mock papers: begin -> compose -> play -> grade -> review
+# ----------------------------------------------------------------------
+
+MOCKCODE="jamb-mock-english-biology-mathematics-physics"
+
+step "GET /bundles/$MOCKCODE -> composite paper composed with sections"
+MOCKBUNDLE=$(curl -fsS "$BASE/bundles/$MOCKCODE" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$MOCKBUNDLE" | jsonget "d['body']" | grep -q "JAMB"
+[ "$(printf '%s' "$MOCKBUNDLE" | jsonget "d['durationMinutes']")" = "120" ]
+[ "$(printf '%s' "$MOCKBUNDLE" | jsonget "len(d['sections'])")" = "4" ]
+printf '%s' "$MOCKBUNDLE" | jsonget "d['sections'][0]['subject']" | grep -q "Use of English"
+MQN=$(printf '%s' "$MOCKBUNDLE" | jsonget "d['questionCount']")
+[ "$MQN" -gt 0 ]
+
+step "composed bundle never carries answer material"
+printf '%s' "$MOCKBUNDLE" | grep -qv '"answer'
+printf '%s' "$MOCKBUNDLE" | grep -qv '"correct'
+printf '%s' "$MOCKBUNDLE" | grep -qvi '"explanation'
+
+step "deterministic compose: refetch serves the identical walk"
+MOCKBUNDLE2=$(curl -fsS "$BASE/bundles/$MOCKCODE" -H "Authorization: Bearer $TOKEN")
+[ "$(printf '%s' "$MOCKBUNDLE" | jsonget "[q['id'] for q in d['questions']]")" = "$(printf '%s' "$MOCKBUNDLE2" | jsonget "[q['id'] for q in d['questions']]")" ]
+
+step "non-canonical mock code -> 404"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/bundles/jamb-mock-english-physics-mathematics-biology" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "404" ]
+
+step "unknown-subject mock code -> 404"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/bundles/jamb-mock-english-french-geography-physics" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "404" ]
+
+step "POST /attempts for the mock paper -> seated with the composed pack"
+MATT=$(curl -fsS -X POST "$BASE/attempts" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"code\":\"$MOCKCODE\"}")
+MAID=$(printf '%s' "$MATT" | jsonget "d['attemptId']")
+[ "$(printf '%s' "$MATT" | jsonget "d['questionCount']")" = "$MQN" ]
+[ "$(printf '%s' "$MATT" | jsonget "d['durationMinutes']")" = "120" ]
+
+step "submit one answer per subject -> grading"
+MANSWERS=$(printf '%s' "$MOCKBUNDLE" | jsonget "json.dumps([{'questionId': d['sections'][i]['questionIds'][0], 'selected': 'A'} for i in range(4)])")
+curl -fsS -X POST "$BASE/attempts/$MAID/submit" \
+  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
+  -d "{\"answers\":$MANSWERS,\"durationMs\":60000}" \
+  | jsonget "d['status']" | grep -q "grading"
+STATUSM="grading"
+for _ in $(seq 1 40); do
+  STATUSM=$(curl -fsS "$BASE/attempts/$MAID" -H "Authorization: Bearer $TOKEN" | jsonget "d['status']") || STATUSM="error"
+  [ "$STATUSM" = "graded" ] && break
+  sleep 0.5
+done
+[ "$STATUSM" = "graded" ]
+
+step "graded mock result: per-subject breakdown rows"
+MRES=$(curl -fsS "$BASE/attempts/$MAID" -H "Authorization: Bearer $TOKEN")
+[ "$(printf '%s' "$MRES" | jsonget "len(d['result']['breakdown'])")" -ge 4 ]
+[ "$(printf '%s' "$MRES" | jsonget "d['result']['total']")" = "$MQN" ]
+
+step "review the mock attempt -> paper title carries the subject mix"
+MREV=$(curl -fsS "$BASE/attempts/$MAID/review" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$MREV" | jsonget "d['title']" | grep -q "Use of English"
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"

@@ -12,7 +12,9 @@ func (s *Server) handleManifest(w http.ResponseWriter, r *http.Request) {
 // through here, cbtdata already refused to boot if any leaked on disk.
 func (s *Server) handleBundle(w http.ResponseWriter, r *http.Request) {
 	code := r.PathValue("code")
-	bundle, ok := s.lib.Bundle(code)
+	// Mock papers compose on first fetch (deterministic from the code),
+	// so a resumed or reviewed sitting always finds its bundle again.
+	bundle, ok := s.ensurePaperRequest(r, code)
 	if !ok {
 		fail(w, http.StatusNotFound, "unknown_pack", "no study pack with code "+code)
 		return

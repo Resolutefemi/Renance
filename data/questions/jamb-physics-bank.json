@@ -1,0 +1,3404 @@
+{
+  "code": "jamb-physics-bank",
+  "title": "JAMB Physics | Past Questions Bank",
+  "version": 1,
+  "questionCount": 260,
+  "totalMarks": 260,
+  "questions": [
+    {
+      "id": "jamb-physics-bank-0001",
+      "type": "mcq",
+      "stem": "The SI unit of force is the",
+      "options": {
+        "A": "joule",
+        "B": "newton",
+        "C": "watt",
+        "D": "pascal"
+      },
+      "marks": 1,
+      "topic": "Units",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0002",
+      "type": "mcq",
+      "stem": "The acceleration of free fall near the Earth's surface is approximately",
+      "options": {
+        "A": "6.8 m/s²",
+        "B": "9.8 m/s²",
+        "C": "12.5 m/s²",
+        "D": "98 m/s²"
+      },
+      "marks": 1,
+      "topic": "Motion",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0003",
+      "type": "mcq",
+      "stem": "The instrument used for measuring atmospheric pressure is the",
+      "options": {
+        "A": "hygrometer",
+        "B": "barometer",
+        "C": "manometer",
+        "D": "ammeter"
+      },
+      "marks": 1,
+      "topic": "Measurement",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0004",
+      "type": "mcq",
+      "stem": "A body moving with constant velocity has an acceleration of",
+      "options": {
+        "A": "zero",
+        "B": "constant but non-zero",
+        "C": "increasing",
+        "D": "decreasing"
+      },
+      "marks": 1,
+      "topic": "Motion",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-bank-0005",
+      "type": "mcq",
+      "stem": "The SI unit of electric current is the",
+      "options": {
+        "A": "volt",
+        "B": "ohm",
+        "C": "ampere",
+        "D": "coulomb"
+      },
+      "marks": 1,
+      "topic": "Electricity",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0006",
+      "type": "mcq",
+      "stem": "A resistor of 4 Ω is connected across a 12 V battery. Find the current.",
+      "options": {
+        "A": "2 A",
+        "B": "3 A",
+        "C": "4 A",
+        "D": "48 A"
+      },
+      "marks": 1,
+      "topic": "Electricity",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-bank-0007",
+      "type": "mcq",
+      "stem": "Sound CANNOT travel through",
+      "options": {
+        "A": "water",
+        "B": "steel",
+        "C": "air",
+        "D": "a vacuum"
+      },
+      "marks": 1,
+      "topic": "Waves",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0008",
+      "type": "mcq",
+      "stem": "The SI unit of power is the",
+      "options": {
+        "A": "newton",
+        "B": "joule",
+        "C": "watt",
+        "D": "volt"
+      },
+      "marks": 1,
+      "topic": "Units",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0009",
+      "type": "mcq",
+      "stem": "Power is defined as the rate of doing",
+      "options": {
+        "A": "work",
+        "B": "force",
+        "C": "momentum",
+        "D": "distance"
+      },
+      "marks": 1,
+      "topic": "Energy",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0010",
+      "type": "mcq",
+      "stem": "A converging mirror is also called",
+      "options": {
+        "A": "a concave mirror",
+        "B": "a convex mirror",
+        "C": "a plane mirror",
+        "D": "a parabolic lens"
+      },
+      "marks": 1,
+      "topic": "Optics",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-bank-0011",
+      "type": "mcq",
+      "stem": "A block of mass 100 g has volume 20 cm³. Find its density.",
+      "options": {
+        "A": "0.2 g/cm³",
+        "B": "5 g/cm³",
+        "C": "50 g/cm³",
+        "D": "200 g/cm³"
+      },
+      "marks": 1,
+      "topic": "Density",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0012",
+      "type": "mcq",
+      "stem": "Which of the following is a vector quantity?",
+      "options": {
+        "A": "speed",
+        "B": "mass",
+        "C": "velocity",
+        "D": "temperature"
+      },
+      "marks": 1,
+      "topic": "Vectors",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-bank-0013",
+      "type": "mcq",
+      "stem": "The device that converts mechanical energy into electrical energy is the",
+      "options": {
+        "A": "electric motor",
+        "B": "generator",
+        "C": "transformer",
+        "D": "rheostat"
+      },
+      "marks": 1,
+      "topic": "Energy",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-bank-0014",
+      "type": "mcq",
+      "stem": "A force of 10 N moves a body through 5 m in the direction of the force. Find the work done.",
+      "options": {
+        "A": "2 J",
+        "B": "15 J",
+        "C": "50 J",
+        "D": "500 J"
+      },
+      "marks": 1,
+      "topic": "Work",
+      "difficulty": "easy"
+    },
+    {
+      "id": "jamb-physics-bank-0015",
+      "type": "mcq",
+      "stem": "Refraction of light occurs because light changes ______ when it passes between media.",
+      "options": {
+        "A": "colour",
+        "B": "speed",
+        "C": "charge",
+        "D": "mass"
+      },
+      "marks": 1,
+      "topic": "Optics",
+      "difficulty": "medium"
+    },
+    {
+      "id": "jamb-physics-bank-0016",
+      "type": "mcq",
+      "stem": "Two cars moving in the same direction have speeds of 100 kmh⁻¹ and 130 kmh⁻¹. What is the velocity of the faster car as measured by an observer in the slower car?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0017",
+      "type": "mcq",
+      "stem": "The diagram above shows a velocity-time graph. The statement that is true about this motion is that, the car",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0018",
+      "type": "mcq",
+      "stem": "A stone and a feather dropped from the same height above the earth surface. Ignoring air resistance, which of the following is correct?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0019",
+      "type": "mcq",
+      "stem": "A car moves with an initial velocity of 25 ms⁻¹ and reaches a velocity of 45 ms⁻¹ in 10s. What is the acceleration of the car?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0020",
+      "type": "mcq",
+      "stem": "An object is weighed at different locations on the earth. What will be the right observation?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0021",
+      "type": "mcq",
+      "stem": "The diagram above represents balls in an undulating surface. Which of the following option represents positions of stable equilibrium?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0022",
+      "type": "mcq",
+      "stem": "A bob of weight 0.1N hangs from a massless string of length 50cm. A variable horizontal force which increases from zero is applied to pull the bob until the string makes an angle of 60° with the vertical. The work done is",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0023",
+      "type": "mcq",
+      "stem": "The surfaces of conveyor belts are made rough so as to",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0024",
+      "type": "mcq",
+      "stem": "A machine of velocity ratio 6 requires an effort of 400N to raise a load of 800N through 1m. Find the efficiency of the machine.",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0025",
+      "type": "mcq",
+      "stem": "If a wire 30cm long is extended to 30.5cm by a force of 300N. Find the strain energy of the wire.",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0026",
+      "type": "mcq",
+      "stem": "In a hydraulic press, the pump piston exerts a pressure of 100 Pa on the liquid. What force is exerted in the second piston of cross-sectional area 3 m²?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0027",
+      "type": "mcq",
+      "stem": "The accurate measurement of the relative density of a substance in its powered form is done with a beam balance and",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0028",
+      "type": "mcq",
+      "stem": "A hydrometer is an instrument used in measuring",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0029",
+      "type": "mcq",
+      "stem": "One special advantage of alcohol water over mercury as a thermometric liquid is its",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0030",
+      "type": "mcq",
+      "stem": "Two metals P and Q of lengths l1 and l2 are heated through the same temperature difference. If the ratio of the linear expansivities of P to Q is 2:3 and the ratio of their lengths is 3:4. What is the ratio of increase in lengths of P to Q?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0031",
+      "type": "mcq",
+      "stem": "The density of a certain oil on frying becomes 0.4 kgm⁻³ with a volume of 20 m³. What will be its initial volume when its initial density is 0.8 kgm⁻³ assuming no loss of oil due to spillage?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0032",
+      "type": "mcq",
+      "stem": "Heat is radiated by all hot objects in the form of",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0033",
+      "type": "mcq",
+      "stem": "If a container is filled with ice to the brim, what happens to the level of water when the ice completely melts?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0034",
+      "type": "mcq",
+      "stem": "The small droplet of water that forms on the grass in the early hours of the morning is",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0035",
+      "type": "mcq",
+      "stem": "A vapour is said to be saturated when",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0036",
+      "type": "mcq",
+      "stem": "The pressure of one mole of an ideal gas of volume 10⁻² m³ at a temperature of 27°C is [Molar gas constant = 8.3 J mol⁻¹ K⁻¹]",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0037",
+      "type": "mcq",
+      "stem": "Which of the following has no effect on radiation?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0038",
+      "type": "mcq",
+      "stem": "The wavelength of a wave travelling with a velocity of 420 ms⁻¹ is 42 m. What is its period?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0039",
+      "type": "mcq",
+      "stem": "The sound of an electric bell dies down slowly when air is slowly pumped out from a bottle because",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0040",
+      "type": "mcq",
+      "stem": "During a thunderstorm, the sound is heard over a long time. This phenomenon is referred to as",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0041",
+      "type": "mcq",
+      "stem": "The velocity of sound in air at 16°C is 340 ms⁻¹. What will it be when the pressure is doubled and its temperature raised to 127°C?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0042",
+      "type": "mcq",
+      "stem": "In comparing the camera and the human eye, the film of the camera functions as the",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0043",
+      "type": "mcq",
+      "stem": "An object 4 cm high is placed 15 cm from a concave mirror of focal length 5 cm. The size of the image is",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0044",
+      "type": "mcq",
+      "stem": "An object is embedded in a block of ice, 10 cm below the plane surface. If the refractive index of the ice is 1.50, the apparent depth of the object below the surface is",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0045",
+      "type": "mcq",
+      "stem": "Which of the following is used for the correction of short-sightedness?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0046",
+      "type": "mcq",
+      "stem": "Dispersion occurs when white light passes through a glass prism because of the",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0047",
+      "type": "mcq",
+      "stem": "When a positively charged rod is brought nearer the cap of a positively charged electroscope, the leaves divergence will.",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0048",
+      "type": "mcq",
+      "stem": "Three capacitors of capacitance, 2µF, 4µF and 8µF are connected in parallel and a p.d of 6V is maintained across each capacitor, the total energy stored is",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0049",
+      "type": "mcq",
+      "stem": "A cell of emf 12V and internal resistance 4Ω is connected to an external resistor of resistance 2 Ω. Find the current flow.",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0050",
+      "type": "mcq",
+      "stem": "Three 4Ω resistors connected in parallel have 3 potential difference of 16V applied across them. What is the total current in the circuit",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0051",
+      "type": "mcq",
+      "stem": "In the diagram above, a 200 W bulb is lighted by a 240 V a.c mains supply. If 1kWh is sold at N40, the cost of keeping the bulb lighted for a day is.",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0052",
+      "type": "mcq",
+      "stem": "Power supply is transmitted at a very high voltage and low current in order to",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0053",
+      "type": "mcq",
+      "stem": "A galvanometer with full-scale deflection of 10mA is to be converted to a voltmeter with full-scale deflection of 5 V. If a series resistance of 498Ω is used for the conversion, the resistance of the galvanometer is",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0054",
+      "type": "mcq",
+      "stem": "In alternating current circuit at resonance, the angle of lead or lag is",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0055",
+      "type": "mcq",
+      "stem": "In Faraday’s law of electrolysis, a graph of mass deposited against the quantity of electricity is plotted. The slope of the graph gives",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0056",
+      "type": "mcq",
+      "stem": "Transistors are used for the",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following is a pure semiconductor?",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0058",
+      "type": "mcq",
+      "stem": "The use of lenses is NOT applicable in the",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0059",
+      "type": "mcq",
+      "stem": "Dispersion of white light is the ability of white light to",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0060",
+      "type": "mcq",
+      "stem": "A newly charged 12V accumulator can easily start a car whereas eight new dry cells in series with an effective e.m.f. of 12V cannot start the same car because",
+      "options": {
+        "A": "a",
+        "B": "b",
+        "C": "c",
+        "D": "d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0061",
+      "type": "mcq",
+      "stem": "A man walks 1 km due east and then 1km due north. His displacement is _____",
+      "options": {
+        "A": "√2km N 45° E",
+        "B": "1km N 30°E",
+        "C": "1km N 15° E",
+        "D": "√2 km N 60° E"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0062",
+      "type": "mcq",
+      "stem": "The density of 400cm³ of palm oil was 0.9g before frying. If the density of the oil was 0.6g after frying, assuming no loss of oil to spilling, its new volume was",
+      "options": {
+        "A": "360cm³",
+        "B": "600cm³",
+        "C": "240cm³",
+        "D": "800cm³"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0063",
+      "type": "mcq",
+      "stem": "Which of the following is true of an electrical charge?",
+      "options": {
+        "A": "Positive charge means deficit electrons",
+        "B": "Negative charge means excess of electrons",
+        "C": "Electric current means movement of electrons",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0064",
+      "type": "mcq",
+      "stem": "Natural radioactivity consists of the emission of -------.",
+      "options": {
+        "A": "α-particles and β-rays",
+        "B": "α-particles and X-rays",
+        "C": "α-particles, β-rays and g-rays",
+        "D": "γ-rays and X-rays"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following does NOT describe the image formed by a plane mirror?",
+      "options": {
+        "A": "Erect",
+        "B": "Laterally inverted",
+        "C": "Same distance from mirror as object",
+        "D": "Magnified"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0066",
+      "type": "mcq",
+      "stem": "What is the resultant resistance of the circuit given above?",
+      "options": {
+        "A": "8Ω",
+        "B": "11Ω",
+        "C": "4Ω",
+        "D": "3.6Ω"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0067",
+      "type": "mcq",
+      "stem": "Which of the following best describes the energy changes which take place when a steam engine drives a generator which lights a lamp?",
+      "options": {
+        "A": "Heat → Light → Sound → Kinetic",
+        "B": "Heat → Kinetic → Electricity → Heat and Light",
+        "C": "Kinetic → Light → Heat → Electricity",
+        "D": "Electricity → Kinetic → Heat → Light"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0068",
+      "type": "mcq",
+      "stem": "Cathode rays are _____",
+      "options": {
+        "A": "High-energy electromagnetic waves",
+        "B": "protons",
+        "C": "neutrons",
+        "D": "streams of electrons"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0069",
+      "type": "mcq",
+      "stem": "A narrow beam of white light can be split into different colours by a glass prism. The correct explanation is that",
+      "options": {
+        "A": "white light is an electromagnetic wave",
+        "B": "the prism has all the colours of the white light",
+        "C": "different colours of white light travel with different speeds in glass",
+        "D": "white light has undergone total internal reflection in the prism."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0070",
+      "type": "mcq",
+      "stem": "What type of reaction is represented by the following scheme? ²₁X + ²₁Y arrow ³₂Z + ¹₀n + text{energy}",
+      "options": {
+        "A": "Fusion reaction",
+        "B": "Fission reaction",
+        "C": "Chain reaction",
+        "D": "Radioactive decay"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0071",
+      "type": "mcq",
+      "stem": "The amount of heat needed to raise the temperature of 10kg of copper by 1K is its _____",
+      "options": {
+        "A": "specific heat capacity",
+        "B": "latent heat",
+        "C": "heat capacity",
+        "D": "internal energy"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0072",
+      "type": "mcq",
+      "stem": "The electrochemical equivalent of silver 0.0012g/C/ of 36.0g of silver is to be deposited by electrolysis on a surface by passing a steady current for 5.0 minutes, the current must be",
+      "options": {
+        "A": "6000A",
+        "B": "100A",
+        "C": "10A",
+        "D": "1A"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0073",
+      "type": "mcq",
+      "stem": "Shadows and eclipses result from the",
+      "options": {
+        "A": "refraction of light",
+        "B": "reflection of light.",
+        "C": "defraction of light",
+        "D": "rectilinear propagation of light"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0074",
+      "type": "mcq",
+      "stem": "Which of the following obeys Ohm’s Law?",
+      "options": {
+        "A": "All metals",
+        "B": "Diode only",
+        "C": "All electrolytes",
+        "D": "Glass"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0075",
+      "type": "mcq",
+      "stem": "Which of the following statements are TRUE OF ISOTOPES?\nI. Isotopes of an element have the same chemical properties because they have the same number of electrons\nII. Isotopes of elements are normally separated using physical properties\nIII. Isotopes of an element has the same number of protons in their nuclei.",
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0076",
+      "type": "mcq",
+      "stem": "In the diagram above, the hanging mass m is adjusted until m is on the verge of sliding. The coefficient of static friction between mass m and the table is",
+      "options": {
+        "A": "(m₂)/(m₁)",
+        "B": "(m₁ g)/(m₂)",
+        "C": "(m₂)/(m₁)",
+        "D": "(m₂ g)/(m₁)"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0077",
+      "type": "mcq",
+      "stem": "Which of the following may be used to explain a mirage?\nI. Layers of air near the road surface have varying refractive indices in hot weather\nII. Road surfaces sometimes become good reflectors in hot weather.\nIII. Light from the sky can be reflected upwards after coming close to and the road surface.",
+      "options": {
+        "A": "I and III only",
+        "B": "II and III only",
+        "C": "II only",
+        "D": "I, II and III"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0078",
+      "type": "mcq",
+      "stem": "In the diagram below, if the atmosphere pressure is 760mm, the pressure in the chamber G is",
+      "options": {
+        "A": "660mm",
+        "B": "830mm",
+        "C": "690mm",
+        "D": "860mm"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0079",
+      "type": "mcq",
+      "stem": "Which of the following has the lowest internal resistance when new?",
+      "options": {
+        "A": "Leclanche cell",
+        "B": "Daniel cell",
+        "C": "Torch battery",
+        "D": "Accumulator"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0080",
+      "type": "mcq",
+      "stem": "The pitch of an acoustic device can be increased by",
+      "options": {
+        "A": "decreasing the loudness",
+        "B": "increasing the amplitude",
+        "C": "increasing the frequency",
+        "D": "decreasing the intensity."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0081",
+      "type": "mcq",
+      "stem": "One of the features of the fission process is that",
+      "options": {
+        "A": "it leads to chain reaction",
+        "B": "its products are not radioactive",
+        "C": "neutrons are not released.",
+        "D": "the sum of the masses of the reactants equals the sum of the masses of the products."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0082",
+      "type": "mcq",
+      "stem": "The linear expansivity of brass is 2 × 10⁻⁵C⁻¹. If the volume of a piece of brass is 15.00cm³ at 0°C, what is the volume at 100°C?",
+      "options": {
+        "A": "16.03cm³",
+        "B": "15.09cm³",
+        "C": "16.00cm³",
+        "D": "15.03cm³"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0083",
+      "type": "mcq",
+      "stem": "A lead bullet of mass 0.05kg is fired with a velocity of 200ms⁻¹ into a lead block of mass 0.95kg. Given that the lead block can move freely, the final kinetic energy after impact is",
+      "options": {
+        "A": "150 J",
+        "B": "100 J",
+        "C": "50 J",
+        "D": "200 J"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0084",
+      "type": "mcq",
+      "stem": "In a series R-L-C circuit at resonance, the voltages across the resistor and the inductor are 20V and 40V respectively. What is the voltage across the capacitor?",
+      "options": {
+        "A": "30 V",
+        "B": "70 V",
+        "C": "50 V",
+        "D": "40 V"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0085",
+      "type": "mcq",
+      "stem": "If the fraction of the atoms of a radioactive material left after 120 years is 1/64, what is the half-life of the material?",
+      "options": {
+        "A": "20 years",
+        "B": "10 years",
+        "C": "2 years",
+        "D": "24 years"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0086",
+      "type": "mcq",
+      "stem": "In the diagram below, which of the simple pendula will resonate with P when set into oscillation?",
+      "options": {
+        "A": "U",
+        "B": "T",
+        "C": "R and T",
+        "D": "Q and R"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0087",
+      "type": "mcq",
+      "stem": "The time rate of loss of heat by a body is proportional to the",
+      "options": {
+        "A": "temperature of its surroundings",
+        "B": "temperature of the body",
+        "C": "difference in temperature between the body and its surroundings",
+        "D": "ratio of the temperature of the body to that of its surroundings."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0088",
+      "type": "mcq",
+      "stem": "A positive charged rod X is brought near an uncharged metal sphere Y and is then touched by a finger with X still in place. When the finger is removed, the result is that Y has",
+      "options": {
+        "A": "no charge and a zero potential",
+        "B": "a positive charge and a zero potential.",
+        "C": "a negative charge and a positive potential.",
+        "D": "a negative charge and a negative potential."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0089",
+      "type": "mcq",
+      "stem": "Electrical appliances in homes are normally earthed so that",
+      "options": {
+        "A": "a person touching the appliances is safe from electric shock.",
+        "B": "both the a.c. and d.c. sources can be used.",
+        "C": "the appliances are maintained at a higher p.d. than the earth.",
+        "D": "the appliances are maintained at a lower p.d. than the earth."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0090",
+      "type": "mcq",
+      "stem": "The process whereby a liquid turns spontaneously into vapour is called",
+      "options": {
+        "A": "regelation",
+        "B": "evaporation",
+        "C": "boiling",
+        "D": "sublimation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0091",
+      "type": "mcq",
+      "stem": "Which of the following diagrams represents correctly an n-p-n transistor?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0092",
+      "type": "mcq",
+      "stem": "The differences observed in solids, liquids and gases may be accounted for by",
+      "options": {
+        "A": "their relative masses.",
+        "B": "their melting points.",
+        "C": "the spacing and forces acting between the molecules.",
+        "D": "the different molecules in each of them."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0093",
+      "type": "mcq",
+      "stem": "Convex mirrors are used as driving mirrors because images formed are",
+      "options": {
+        "A": "erect, virtual and diminished",
+        "B": "erect, real and diminished",
+        "C": "erect, virtual and magnified",
+        "D": "inverted, virtual and diminished."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0094",
+      "type": "mcq",
+      "stem": "Musical instruments playing the same note can be distinguished from one another owing to the differences in their",
+      "options": {
+        "A": "quality.",
+        "B": "pitch.",
+        "C": "intensity",
+        "D": "loudness"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0095",
+      "type": "mcq",
+      "stem": "In the diagram above, if the south-poles of two magnets stroke a steel bar, the polarities at T and V will respectively be",
+      "options": {
+        "A": "north and south.",
+        "B": "south and south.",
+        "C": "north and north.",
+        "D": "south and north."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0096",
+      "type": "mcq",
+      "stem": "In homes, electrical appliances and lamps are connected in parallel because",
+      "options": {
+        "A": "less current will be used",
+        "B": "less voltage will be used",
+        "C": "parallel connection does not heat up the wires",
+        "D": "series connection uses high voltage"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0097",
+      "type": "mcq",
+      "stem": "An object moves in a circular path of radius 0.5m with a speed of 1ms⁻¹. What is its angular velocity?",
+      "options": {
+        "A": "8rads⁻¹",
+        "B": "4rads⁻¹",
+        "C": "1rads⁻¹",
+        "D": "2rads⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0098",
+      "type": "mcq",
+      "stem": "What effort will a machine of efficiency 90% apply to lift a load of 180N if its efforts arm is twice as long as its load arm?",
+      "options": {
+        "A": "100N",
+        "B": "90N",
+        "C": "80N",
+        "D": "120N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0099",
+      "type": "mcq",
+      "stem": "Calculate the effective capacitance of the circuit above.",
+      "options": {
+        "A": "4µf",
+        "B": "3 µf",
+        "C": "2 µf",
+        "D": "1 µf."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0100",
+      "type": "mcq",
+      "stem": "The focal length of a concave mirror is 2.0 cm. If an object is placed 8.0 cm from it, the image is at",
+      "options": {
+        "A": "2.7 m",
+        "B": "2.3 m",
+        "C": "2.5 m",
+        "D": "2.0 m"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0101",
+      "type": "mcq",
+      "stem": "PHCN measures its electrical energy in",
+      "options": {
+        "A": "Wh",
+        "B": "kWh",
+        "C": "J",
+        "D": "W"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0102",
+      "type": "mcq",
+      "stem": "The resultant of two forces is 50 N. If the forces are perpendicular to each other and one of them makes an angle 30° with the resultant. Find its magnitude.",
+      "options": {
+        "A": "100.0 N",
+        "B": "57.7 N",
+        "C": "25.0 N",
+        "D": "43.3 N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0103",
+      "type": "mcq",
+      "stem": "A piece of radioactive material contains 1000 atoms. If its half-life is 20 seconds, the time taken for 125 atoms to remain is",
+      "options": {
+        "A": "20 seconds",
+        "B": "40 seconds",
+        "C": "60 seconds",
+        "D": "80 seconds"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0104",
+      "type": "mcq",
+      "stem": "The correct expression for the potential at a point, distance r from a charge q, in an electric field is",
+      "options": {
+        "A": "(q)/(4πvarepsilon₀ r)",
+        "B": "(q²)/(4πvarepsilon₀ r²)",
+        "C": "(q)/(4πvarepsilon₀ r²)",
+        "D": "(q²)/(4πvarepsilon₀ r)"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0105",
+      "type": "mcq",
+      "stem": "A typical transistor characteristic is represented as",
+      "options": {
+        "A": "Graph A",
+        "B": "Graph B",
+        "C": "Graph C",
+        "D": "Graph D"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0106",
+      "type": "mcq",
+      "stem": "In a discharge tube, most of the gas is pumped out so that electricity is conducted at",
+      "options": {
+        "A": "steady voltage",
+        "B": "high pressure",
+        "C": "low pressure",
+        "D": "low voltage"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0107",
+      "type": "mcq",
+      "stem": "I. Moon\nII. Sun\nIII. Street light\nIV. Stars\nWhich of the above is a natural source of light?",
+      "options": {
+        "A": "I, II and IV only",
+        "B": "I, II and III only",
+        "C": "III and IV only",
+        "D": "II and IV only"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0108",
+      "type": "mcq",
+      "stem": "An object placed at the bottom of a well full of clear water appears closer to the surface due to",
+      "options": {
+        "A": "refraction",
+        "B": "reflection",
+        "C": "an inverter",
+        "D": "a magnifier"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0109",
+      "type": "mcq",
+      "stem": "A boy drags a bag of rice along a smooth horizontal floor with a force of 2 N applied at an angle of 60° to the flow. The work done after a distance of 3 m is",
+      "options": {
+        "A": "6 J",
+        "B": "4 J",
+        "C": "5 J",
+        "D": "3 J"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0110",
+      "type": "mcq",
+      "stem": "The spheres of masses 5.0 kg and 10.0 kg are 0.3 m apart. Calculate the force of attraction between them.",
+      "options": {
+        "A": "3.57× 10⁻² N",
+        "B": "3.71× 10⁻² N",
+        "C": "4.00× 10⁻² N",
+        "D": "3.50× 10⁻² N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0111",
+      "type": "mcq",
+      "stem": "When very hot water is poured into two identical thin and thick glass tumblers in equal volumes, the thick one cracks because",
+      "options": {
+        "A": "of the even expansion of glass",
+        "B": "glass is a good conductor of heat",
+        "C": "glass is a crystal",
+        "D": "of the uneven expansion of glass"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0112",
+      "type": "mcq",
+      "stem": "The diagram above represents the stress-strain for a typical metal rod. What does X represent?",
+      "options": {
+        "A": "Yield point",
+        "B": "Breaking point",
+        "C": "Elastic limit",
+        "D": "Proportional limit"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0113",
+      "type": "mcq",
+      "stem": "Transverse waves can be distinguished from longitudinal waves using the characteristic of",
+      "options": {
+        "A": "diffraction",
+        "B": "reflection",
+        "C": "polarization",
+        "D": "refraction"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0114",
+      "type": "mcq",
+      "stem": "Which of the following pairs of light rays shows the widest separation in the spectrum of white light?",
+      "options": {
+        "A": "Green and yellow",
+        "B": "Blue and red",
+        "C": "Indigo and violet",
+        "D": "Orange and red"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0115",
+      "type": "mcq",
+      "stem": "Which of the following graphs shows the correct vector diagram for the circuit above?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0116",
+      "type": "mcq",
+      "stem": "A transistor functions mainly as a",
+      "options": {
+        "A": "switch and an amplifier",
+        "B": "rectifier and an amplifier",
+        "C": "charge storer and a switch",
+        "D": "charge storer and an amplifier"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0117",
+      "type": "mcq",
+      "stem": "A thin wire with heavy weights attached to both ends is hung over a block of ice resting on two supports. If the wire cuts through the ice while the block remains solid behind the wire, the process is called",
+      "options": {
+        "A": "fusion",
+        "B": "sublimation",
+        "C": "regelation",
+        "D": "condensation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0118",
+      "type": "mcq",
+      "stem": "The inner diameter of a small test tube can be measured accurately using a",
+      "options": {
+        "A": "micrometer screw gauge",
+        "B": "pair of Vernier calipers",
+        "C": "metre rule",
+        "D": "pair of dividers"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0119",
+      "type": "mcq",
+      "stem": "A platinum resistance thermometer records 3.0 Ω at 0°C and 8.0 Ω at 100°C. If it records 6.0 Ω in a certain environment, the temperature of the medium is",
+      "options": {
+        "A": "60°C",
+        "B": "80°C",
+        "C": "50°C",
+        "D": "30°C"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0120",
+      "type": "mcq",
+      "stem": "Which of the following is the dimension of pressure?",
+      "options": {
+        "A": "ML²T⁻³",
+        "B": "MLT⁻²",
+        "C": "ML⁻²T⁻²",
+        "D": "ML⁻³"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0121",
+      "type": "mcq",
+      "stem": "A capacitor 8 µF, is charged to a potential difference of 100 V. The energy stored by the capacitor is",
+      "options": {
+        "A": "1.0× 10⁴ J",
+        "B": "4.0× 10⁻² J",
+        "C": "1.25× 10 J",
+        "D": "8.0× 10 J"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0122",
+      "type": "mcq",
+      "stem": "Which of the following statements correctly describe(s) cathode rays?\nI. They consist of tiny particles carrying negative electric charges\nII. They are deflected in a magnetic field but not in an electric field.\nIII. They consist of fast-moving neutrons and deflected in an electric field.",
+      "options": {
+        "A": "I only",
+        "B": "III only",
+        "C": "I and II only",
+        "D": "II and III only"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0123",
+      "type": "mcq",
+      "stem": "A concave mirror has a radius of curvature of 36 cm. At what distance from the mirror should an object be placed to give a real image three times the size of the object?",
+      "options": {
+        "A": "12 cm",
+        "B": "24 cm",
+        "C": "48 cm",
+        "D": "108 cm"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0124",
+      "type": "mcq",
+      "stem": "The net capacitance in the circuit shown above is",
+      "options": {
+        "A": "8.0 µF",
+        "B": "6.0 µF",
+        "C": "2.0 µF",
+        "D": "4.0 µF"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0125",
+      "type": "mcq",
+      "stem": "A sonometer wire of length 100 cm under a tension of 10 N, has a frequency of 250 Hz. Keeping the length of the wire constant, the tension is adjusted to produce a new frequency of 350 Hz. The new tension is",
+      "options": {
+        "A": "5.1 N",
+        "B": "19.6 N",
+        "C": "14.0 N",
+        "D": "7.1 N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0126",
+      "type": "mcq",
+      "stem": "In a sound wave in air, the adjacent rarefactions and compressions are separated by a distance of 17 cm. If the velocity of the sound wave is 340 m s⁻¹. Determine the frequency.",
+      "options": {
+        "A": "10 Hz",
+        "B": "20 Hz",
+        "C": "5780 Hz",
+        "D": "1000 Hz"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0127",
+      "type": "mcq",
+      "stem": "A note is called an octave of another note when",
+      "options": {
+        "A": "the notes have the same fundamental frequency",
+        "B": "its frequency is half of the first note",
+        "C": "its frequency is twice that of the first note",
+        "D": "its periodic time is twice that of the first note"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0128",
+      "type": "mcq",
+      "stem": "Which of the following is in a neutral equilibrium?",
+      "options": {
+        "A": "A heavy weight suspended on a string",
+        "B": "The beam of a balance in use",
+        "C": "A heavy-based table lamp",
+        "D": "A cone resting on its slant edge"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0129",
+      "type": "mcq",
+      "stem": "A convex mirror is used as a driving mirror because\nI. Its image is erect\nII. It has a large field of view\nIII. It has a long focal length.\nIdentify the CORRECT statement(s).",
+      "options": {
+        "A": "I and III only",
+        "B": "I and II only",
+        "C": "II and III only",
+        "D": "I, II and III only"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0130",
+      "type": "mcq",
+      "stem": "What is the cost of running five 50W lamps and four 100W lamps for 10 hours if electrical energy costs 2 kobo per kWh?",
+      "options": {
+        "A": "N 0.13",
+        "B": "N 0.65",
+        "C": "N 3.90",
+        "D": "N 39.00"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0131",
+      "type": "mcq",
+      "stem": "The specific latent heat of vaporization of a substance is always",
+      "options": {
+        "A": "less than its specific latent heat of fusion",
+        "B": "equal to its specific latent heat of fusion",
+        "C": "greater than its specific latent heat of fusion",
+        "D": "all of the above depending on the nature of the substance"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0132",
+      "type": "mcq",
+      "stem": "A hydrometer is an instrument for measuring the",
+      "options": {
+        "A": "depth of water in a vessel",
+        "B": "relative humidity of the air",
+        "C": "relative density of a liquid by finding the apparent loss in weight",
+        "D": "relative density of a liquid by the method of flotation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0133",
+      "type": "mcq",
+      "stem": "A transformer has 300 turns of wire in the primary coil and 30 turns in the secondary coil. If the input voltage is 100 volts, the output voltage is",
+      "options": {
+        "A": "10 volts",
+        "B": "5 volts",
+        "C": "15 volts",
+        "D": "20 volts"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0134",
+      "type": "mcq",
+      "stem": "The activity of a radioactive substance depends on",
+      "options": {
+        "A": "temperature and purity",
+        "B": "purity and age",
+        "C": "temperature and age",
+        "D": "age, purity and temperature"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0135",
+      "type": "mcq",
+      "stem": "The speed of light in air is 3× 10⁸ m s⁻¹. If the refractive index of light from air-to-water is (4)/(3), then which of the following is the correct value of the speed of light in water?",
+      "options": {
+        "A": "4× 10⁸ m s⁻¹",
+        "B": "2.23× 10⁸ m s⁻¹",
+        "C": "2.25× 10⁸ m s⁻¹",
+        "D": "(4)/(9)× 10⁸ m s⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0136",
+      "type": "mcq",
+      "stem": "A magnet is moved through a coil of wire. The e.m.f. produced in the wire depends on",
+      "options": {
+        "A": "the number of turns in the coil",
+        "B": "the strength of magnet",
+        "C": "the speed at which the magnet is moved",
+        "D": "all of the above"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0137",
+      "type": "mcq",
+      "stem": "A charge of one coulomb liberated 0.0033 g of copper in an electrolytic process. How long will it take a current of 2 A to liberate 1.98 g of copper in such a process?",
+      "options": {
+        "A": "30 minutes",
+        "B": "5 minutes",
+        "C": "50 minutes",
+        "D": "60 minutes"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0138",
+      "type": "mcq",
+      "stem": "What is the least possible error encountered when taking measurement with a meter rule?",
+      "options": {
+        "A": "0.5 mm",
+        "B": "1.0 mm",
+        "C": "0.2 mm",
+        "D": "0.1 mm"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0139",
+      "type": "mcq",
+      "stem": "The electromotive force in the secondary winding is",
+      "options": {
+        "A": "stabilizing",
+        "B": "reducing",
+        "C": "increasing",
+        "D": "varying"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0140",
+      "type": "mcq",
+      "stem": "If a pump is capable of lifting 5000 kg of water through a vertical height of 60 in 15 mins, the power of the pump is",
+      "options": {
+        "A": "3.3× 10³ J s⁻¹",
+        "B": "2.5× 10⁴ J s⁻¹",
+        "C": "2.5× 10⁵ J s⁻¹",
+        "D": "3.3× 10² J s⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0141",
+      "type": "mcq",
+      "stem": "Calculate the temperature change when 500 J of heat is supplied to 100 g of water.",
+      "options": {
+        "A": "12.1°C",
+        "B": "2.1°C",
+        "C": "1.2°C",
+        "D": "0.1°C"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0142",
+      "type": "mcq",
+      "stem": "Which of the following particles CANNOT be deflected by both electric and magnetic fields?",
+      "options": {
+        "A": "Gamma rays",
+        "B": "Alpha particles",
+        "C": "Wave particles",
+        "D": "Beta particles"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0143",
+      "type": "mcq",
+      "stem": "Under which of the following conditions do gasses conduct electricity?",
+      "options": {
+        "A": "High pressure and low p.d",
+        "B": "Low pressure and high p.d",
+        "C": "Low pressure and low p.d",
+        "D": "High pressure and high p.d"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0144",
+      "type": "mcq",
+      "stem": "Dispersion occurs when white light passes through a glass prism because of the",
+      "options": {
+        "A": "defects in the glass",
+        "B": "high density of the glass",
+        "C": "different speeds of the colour in the glass",
+        "D": "different hidden colours in the glass"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0145",
+      "type": "mcq",
+      "stem": "Calculate the e.m.f of the cell in the above circuit if its internal resistance is negligible.",
+      "options": {
+        "A": "12 V",
+        "B": "36 V",
+        "C": "2 V",
+        "D": "8 V"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0146",
+      "type": "mcq",
+      "stem": "An object of mass 80 kg is pulled on a horizontal rough ground by a force of 500 N. Find the coefficient of static friction. [g≈ 10 m s⁻²]",
+      "options": {
+        "A": "0.6",
+        "B": "0.4",
+        "C": "1.0",
+        "D": "0.8"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0147",
+      "type": "mcq",
+      "stem": "The diagram above shows plank RS pivoted at its centre of gravity O and is in equilibrium with the weights P and Q. If a weight 2P is added to P, the plank will be in equilibrium again by",
+      "options": {
+        "A": "moving P nearer to O",
+        "B": "moving Q nearer to O",
+        "C": "adding a weight Q to Q",
+        "D": "moving P further away from O"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0148",
+      "type": "mcq",
+      "stem": "A glass plate 0.9 cm thick has a refractive index of 1.50. How long does it take for a pulse of light to pass through the plate? [c=3.0× 10⁸ m s⁻¹]",
+      "options": {
+        "A": "3.0× 10⁻¹⁰ s",
+        "B": "4.5× 10⁻¹¹ s",
+        "C": "3.0× 10⁻¹¹ s",
+        "D": "4.5× 10⁻¹⁰ s"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0149",
+      "type": "mcq",
+      "stem": "The main purpose of the transformer in an a.c radio set is to",
+      "options": {
+        "A": "increase power to the radio",
+        "B": "convert energy from a.c. to d.c",
+        "C": "step up the voltage",
+        "D": "step down the voltage"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0150",
+      "type": "mcq",
+      "stem": "²³⁵₉₂U + ¹₀n arrow ¹⁴⁴₅₆Ba + ⁹⁰₃₆Kr + 2X. In the reaction above, X is",
+      "options": {
+        "A": "electron",
+        "B": "neutron",
+        "C": "neutrino",
+        "D": "proton"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0151",
+      "type": "mcq",
+      "stem": "To protect a material from the influence of an external magnetic field, the material should be kept in a",
+      "options": {
+        "A": "soft iron ring",
+        "B": "loop of copper wire",
+        "C": "triangular zinc ring",
+        "D": "square steel ring"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0152",
+      "type": "mcq",
+      "stem": "The refractive index of the medium M in the diagram above is",
+      "options": {
+        "A": "frac{2}{√(3)}",
+        "B": "√(3)",
+        "C": "frac{1}{√(3)}",
+        "D": "sqrt[3]{3}"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0153",
+      "type": "mcq",
+      "stem": "Thermal equilibrium between two objects exists when",
+      "options": {
+        "A": "the heat capacities of both objects are the same",
+        "B": "the quantity of heat in both objects are the same",
+        "C": "the temperature of both objects are equal",
+        "D": "one object loses heat continuously to the other"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0154",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of stationary waves?",
+      "options": {
+        "A": "The antinode is a point of minimum displacement.",
+        "B": "The distance between two successive nodes is one wavelength.",
+        "C": "They can be transverse or longitudinal",
+        "D": "They are formed by two identical waves travelling in opposite directions."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0155",
+      "type": "mcq",
+      "stem": "In the series a.c circuit shown below, the p.d across the inductor is 8 V r.m.s. The effective voltage is",
+      "options": {
+        "A": "10 V",
+        "B": "2 V",
+        "C": "14 V",
+        "D": "48 V"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0156",
+      "type": "mcq",
+      "stem": "In a closed organ pipe producing a musical note, an antinode will always be produced at",
+      "options": {
+        "A": "the closed end",
+        "B": "the middle",
+        "C": "the open end",
+        "D": "all the parts of between the ends of the pipe"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0157",
+      "type": "mcq",
+      "stem": "What happens when a certain quantity of pure ice is completely changed to water at 0°C?",
+      "options": {
+        "A": "Latent heat is absorbed, the mass decreases and the volume increases.",
+        "B": "latent heat is absorbed, the mass remains constant and the volume decreases.",
+        "C": "latent heat is given out, the mass increases and the volume remains constant.",
+        "D": "latent heat is given out, the mass remains constant and the volume decreases."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0158",
+      "type": "mcq",
+      "stem": "In the diagram above, P, Q and R are vectors. Which of the following options gives the correct relationship between the vectors?",
+      "options": {
+        "A": "P = Q + R",
+        "B": "P = Q − R",
+        "C": "P = R − Q",
+        "D": "P + Q + R = 0"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0159",
+      "type": "mcq",
+      "stem": "If two parallel conductors carry currents flowing in the same direction, the conductors will",
+      "options": {
+        "A": "repel each other",
+        "B": "attract each other",
+        "C": "both move in the same direction",
+        "D": "have no effect on each other"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0160",
+      "type": "mcq",
+      "stem": "Which of the following correctly explain(s) why a green leaf appears green in a bright daylight?\nI. It absorbs only the green component of sunlight\nII. It absorbs all colours in sunlight except green\nIII. It reflects only the green component of sunlight",
+      "options": {
+        "A": "I only",
+        "B": "II and III only",
+        "C": "I and II only",
+        "D": "II only"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0161",
+      "type": "mcq",
+      "stem": "Which of the following factors has no effect on the e.m.f of a primary cell?",
+      "options": {
+        "A": "nature of plate",
+        "B": "size of the cell",
+        "C": "temperature",
+        "D": "nature of the electrolyte"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0162",
+      "type": "mcq",
+      "stem": "When the bottom tip of a vibrating tuning fork is held in contact with a wooden box, a louder sound is heard. This phenomenon is known as",
+      "options": {
+        "A": "beats",
+        "B": "echoing",
+        "C": "reverberation",
+        "D": "resonance"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0163",
+      "type": "mcq",
+      "stem": "A particle of mass M which at rest splits up into two. If the mass and the velocity of one of the particles are m and v respectively, calculate the velocity of the second particle",
+      "options": {
+        "A": "(mv)/(M)",
+        "B": "(mv)/(M-m)",
+        "C": "(mv)/(M+m)",
+        "D": "(mv)/(M-m)"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0164",
+      "type": "mcq",
+      "stem": "The electrochemical equivalent of silver is 0.0012 g/C. If 36.0 g of silver is to be deposited by electrolysis on a surface by passing a steady current for 5.0 minutes, the current must be",
+      "options": {
+        "A": "6000 A",
+        "B": "100 A",
+        "C": "10 A",
+        "D": "1.0 A"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0165",
+      "type": "mcq",
+      "stem": "The principle of operation of an induction coil is based on __",
+      "options": {
+        "A": "Ohm’s",
+        "B": "ampere’s law",
+        "C": "faraday’s law",
+        "D": "coulomb’s law"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0166",
+      "type": "mcq",
+      "stem": "A radioactive sample initially contains N atoms. After three half-lives the number of atoms that have disintegrated is",
+      "options": {
+        "A": "(7N)/(8)",
+        "B": "(3N)/(8)",
+        "C": "(5N)/(8)",
+        "D": "(N)/(8)"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0167",
+      "type": "mcq",
+      "stem": "Mercury is suitable as a barometric fluid because it",
+      "options": {
+        "A": "expands uniformly",
+        "B": "is several times denser than water",
+        "C": "is opaque",
+        "D": "is a good conductor of heat"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0168",
+      "type": "mcq",
+      "stem": "Which of the following features is NOT a characteristic of natural radioactivity?",
+      "options": {
+        "A": "radioactivity is a nuclear phenomenon",
+        "B": "radioactivity is exhibited only by the element of mass number greater than 206",
+        "C": "The radioactivity of an element is affected by electric and magnetic fields in the surroundings.",
+        "D": "Radioactive substances emit three types of radiations α-rays, β-rays and γ-rays."
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0169",
+      "type": "mcq",
+      "stem": "Which of the following is a correct explanation of the INERTIA of a body?",
+      "options": {
+        "A": "Reluctance to start moving at rest and its reluctance to stop moving once it has begun move",
+        "B": "Reluctance to stop moving",
+        "C": "Readiness to start moving",
+        "D": "Reluctance to start moving and its readiness to stop moving once it has begun to move"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0170",
+      "type": "mcq",
+      "stem": "The point beyond which a stretched spring does not return to its original length is called the",
+      "options": {
+        "A": "breaking point",
+        "B": "spring constant",
+        "C": "elastic limit",
+        "D": "elasticity point"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0171",
+      "type": "mcq",
+      "stem": "Which of the following statements is applicable to a real image formed by a concave mirror?\nI. It can be observed on a screen\nII. It is always inverted and in front of the mirror\nIII. It only seems to exist\nIV. It is formed by the actual converging of rays of light",
+      "options": {
+        "A": "I, II and III only",
+        "B": "I, II and IV only",
+        "C": "I and III only",
+        "D": "I and II only"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0172",
+      "type": "mcq",
+      "stem": "Which of the following does not cause a reduction of the surface tension of water?",
+      "options": {
+        "A": "soap solution",
+        "B": "detergent",
+        "C": "alcohol",
+        "D": "grease"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0173",
+      "type": "mcq",
+      "stem": "In what range of temperature is the expansion of water anomalous?",
+      "options": {
+        "A": "+208°C to +212°C",
+        "B": "-80°C to -76°C",
+        "C": "0°C to 4°C",
+        "D": "-4°C to 0°C"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0174",
+      "type": "mcq",
+      "stem": "A piece of rubber 10 cm long stretches 6 mm when a load of 100 N is hung from it. What is the strain?",
+      "options": {
+        "A": "6× 10⁻³",
+        "B": "6",
+        "C": "60",
+        "D": "6.0× 10⁻³"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0175",
+      "type": "mcq",
+      "stem": "The diagram above shows the lens arrangement in",
+      "options": {
+        "A": "a compound microscope",
+        "B": "a binocular",
+        "C": "an astronomical telescope",
+        "D": "a periscope"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0176",
+      "type": "mcq",
+      "stem": "A body of mass 6 kg rests on an inclined plane. The normal reaction R and the limiting frictional force is F as shown in the diagram (Fig. 2). If F is 30 N and g = 10 m s⁻², then the angle of inclination θ is",
+      "options": {
+        "A": "15°",
+        "B": "60°",
+        "C": "45°",
+        "D": "30°"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0177",
+      "type": "mcq",
+      "stem": "The speed of light in air is 3.0× 10⁸ text{m s}⁻¹. Its speed in glass having index of refraction of 1.65 is",
+      "options": {
+        "A": "1.82× 10⁸ text{m s}⁻¹",
+        "B": "3.00× 10⁸ text{m s}⁻¹",
+        "C": "4.95× 10⁸ text{m s}⁻¹",
+        "D": "1.65× 10⁸ text{m s}⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0178",
+      "type": "mcq",
+      "stem": "Longitudinal waves do not exhibit",
+      "options": {
+        "A": "refraction",
+        "B": "polarization",
+        "C": "diffraction",
+        "D": "reflection"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0179",
+      "type": "mcq",
+      "stem": "A device that converts sound energy into electrical energy is",
+      "options": {
+        "A": "the horn of a motor car",
+        "B": "the telephone earpiece",
+        "C": "a loudspeaker",
+        "D": "a microphone"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0180",
+      "type": "mcq",
+      "stem": "A good calorimeter should be of",
+      "options": {
+        "A": "low specific heat capacity and low heat conductivity",
+        "B": "high specific heat capacity and low heat conductivity",
+        "C": "high specific heat capacity and low heat conductivity",
+        "D": "low specific heat capacity and high heat conductivity"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0181",
+      "type": "mcq",
+      "stem": "Which of the following is most strongly deflected by a magnetic field?",
+      "options": {
+        "A": "β-particles",
+        "B": "γ-particles",
+        "C": "γ-rays",
+        "D": "x-rays"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0182",
+      "type": "mcq",
+      "stem": "If a beaker is filled with water, it is observed that the surface of the water is not horizontal at the glass-water interface. This behaviour is due to",
+      "options": {
+        "A": "friction",
+        "B": "surface tension",
+        "C": "viscosity",
+        "D": "evaporation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0183",
+      "type": "mcq",
+      "stem": "A dynamo primarily conducts",
+      "options": {
+        "A": "potential energy into kinetic energy",
+        "B": "electrical energy into kinetic energy",
+        "C": "mechanical energy into electrical energy",
+        "D": "kinetic energy into potential energy"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0184",
+      "type": "mcq",
+      "stem": "In which of the following diagrams is the length of the tube equal to one wavelength?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0185",
+      "type": "mcq",
+      "stem": "A calibrated potentiometer is used to measure the e.m.f. of a cell because the",
+      "options": {
+        "A": "internal resistance of a cell is small compared with that of the potentiometer",
+        "B": "potentiometer takes no current from the cell",
+        "C": "potentiometer has a linear scale",
+        "D": "resistance of the potentiometer is less than that of a voltmeter"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0186",
+      "type": "mcq",
+      "stem": "Which of the following is a vector?",
+      "options": {
+        "A": "Electric charge",
+        "B": "Electric potential difference",
+        "C": "Electric field",
+        "D": "Electrical capacitance"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0187",
+      "type": "mcq",
+      "stem": "The photocell works on the principle of the",
+      "options": {
+        "A": "voltaic cell",
+        "B": "photographic plate",
+        "C": "emission of protons by incident electrons",
+        "D": "emission of electrons by incident radiation"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0188",
+      "type": "mcq",
+      "stem": "When an atom loses or gains a charge, it becomes",
+      "options": {
+        "A": "an ion",
+        "B": "an electron",
+        "C": "a neutron",
+        "D": "a proton"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0189",
+      "type": "mcq",
+      "stem": "Which of the following characteristics of a wave is used in the measurement of the depth of the sea?",
+      "options": {
+        "A": "Diffraction",
+        "B": "Reflection",
+        "C": "Refraction",
+        "D": "Interference"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0190",
+      "type": "mcq",
+      "stem": "Which of the following are produced after a nuclear fusion process?\nI. One heavy nucleus\nII. Neutrons\nIII. Protons\nIV. Energy",
+      "options": {
+        "A": "I and II",
+        "B": "II and III",
+        "C": "I and IV",
+        "D": "II and IV"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0191",
+      "type": "mcq",
+      "stem": "Two similar kettles containing equal masses of boiling water are placed on a table. If the surface of one is highly polished and the surface of the other is covered with soot, which of the following observations is correct?",
+      "options": {
+        "A": "The two kettles will cool down at the same rate",
+        "B": "The polished kettle cools down more quickly by conduction",
+        "C": "The kettle covered with soot cools down more quickly because it is a good radiator of heat",
+        "D": "The kettle covered with soot cools down more quickly by the process of heat convection"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0192",
+      "type": "mcq",
+      "stem": "Total eclipse of the sun occurs when the",
+      "options": {
+        "A": "moon is between the sun and the earth",
+        "B": "sun is between the moon and the earth",
+        "C": "the earth is between the moon and the sun",
+        "D": "ozone layer is threatened"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0193",
+      "type": "mcq",
+      "stem": "Which of the following pairs of colours gives the widest separation in the spectrum of white light?",
+      "options": {
+        "A": "Green and yellow",
+        "B": "Red and violet",
+        "C": "Red and indigo",
+        "D": "Yellow and violet"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0194",
+      "type": "mcq",
+      "stem": "Which of the following with respect to a body performing simple harmonic motion are in phase?",
+      "options": {
+        "A": "Displacement and velocity of the body",
+        "B": "Displacement and force on the body",
+        "C": "Velocity and acceleration of the body",
+        "D": "Force acting on the body and the acceleration"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0195",
+      "type": "mcq",
+      "stem": "A solid weighs 10.0 N in air, 6.0 N when fully immersed in water and 7.0 N when fully immersed in a certain liquid X. Calculate the relative density of the liquid.",
+      "options": {
+        "A": "3/4",
+        "B": "4/3",
+        "C": "5/3",
+        "D": "7/10"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0196",
+      "type": "mcq",
+      "stem": "The process of energy production in the sun is",
+      "options": {
+        "A": "nuclear fission",
+        "B": "nuclear fusion",
+        "C": "electron collision",
+        "D": "radioactivity decay"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0197",
+      "type": "mcq",
+      "stem": "If the uncertainty in the measurement of the position of a particle is 5× 10⁻¹⁰ m, the uncertainty in the momentum of the particle is",
+      "options": {
+        "A": "1.32× 10⁻²⁴ N s",
+        "B": "3.30× 10⁻⁴⁴ N s",
+        "C": "1.32× 10⁻⁴⁴ N s",
+        "D": "3.30× 10⁻²⁴ N s"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0198",
+      "type": "mcq",
+      "stem": "The change in volume when 450 kg of ice is completely melted is [density of ice = 900 kg m⁻³, density of water = 1000 kg m⁻³]",
+      "options": {
+        "A": "0.50 m",
+        "B": "0.45 m³",
+        "C": "4.50 m³",
+        "D": "0.05 m³"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0199",
+      "type": "mcq",
+      "stem": "The process through which free electrons leave the hot surface of hot metal is known as",
+      "options": {
+        "A": "photo emission",
+        "B": "thermionic emission",
+        "C": "photon emission",
+        "D": "electron emission"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0200",
+      "type": "mcq",
+      "stem": "The production of pure spectrum could easily be achieved using a",
+      "options": {
+        "A": "Triangular prism only",
+        "B": "Triangular prism with two concave lens",
+        "C": "Glass prism with a pin",
+        "D": "Triangular prism with two convex lens"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0201",
+      "type": "mcq",
+      "stem": "A short chain is something attached to the back of a petrol tanker to",
+      "options": {
+        "A": "Conduct excess charges to the earth",
+        "B": "Ensure the balancing of the tanker",
+        "C": "Caution the driver when over speeding",
+        "D": "Generate more friction"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0202",
+      "type": "mcq",
+      "stem": "A perfect emitter or absorber of radiant energy is a",
+      "options": {
+        "A": "white body",
+        "B": "red body",
+        "C": "conductor",
+        "D": "black body"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0203",
+      "type": "mcq",
+      "stem": "If a pump is capable of lifting 5000 kg of water through a vertical height of 60 m in 50 mins, the power of the pump is",
+      "options": {
+        "A": "2.5× 10⁵ J s⁻¹",
+        "B": "3.3× 10³ J s⁻¹",
+        "C": "2.5× 10⁴ J s⁻¹",
+        "D": "3.3× 10² J s⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0204",
+      "type": "mcq",
+      "stem": "The distance between two successive crest of a wave is 15 cm and the velocity is 300 m s⁻¹. Calculate the frequency.",
+      "options": {
+        "A": "4.5× 10⁵ Hz",
+        "B": "4.5× 10² Hz",
+        "C": "2.0× 10³ Hz",
+        "D": "2.0× 10² Hz"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0205",
+      "type": "mcq",
+      "stem": "An electric lamp marked 240 V, 60 Watts is left to operate for an hour. How much energy is generated by the filament?",
+      "options": {
+        "A": "3.86× 10⁵ J",
+        "B": "2.16× 10⁵ J",
+        "C": "1.80× 10⁴ J",
+        "D": "3.56× 10⁵ J"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0206",
+      "type": "mcq",
+      "stem": "In comparing the camera and human eye, the film of the camera functions as the",
+      "options": {
+        "A": "Iris",
+        "B": "Pupil",
+        "C": "Retina",
+        "D": "Cornea"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0207",
+      "type": "mcq",
+      "stem": "Which question paper type of physics is given to you",
+      "options": {
+        "A": "Type F",
+        "B": "Type E",
+        "C": "Type L",
+        "D": "Type S"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0208",
+      "type": "mcq",
+      "stem": "A quantity which requires magnitude and direction to be specified is",
+      "options": {
+        "A": "Temperature",
+        "B": "Distance",
+        "C": "Displacement",
+        "D": "Mass"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0209",
+      "type": "mcq",
+      "stem": "I. Electrical potential\nII. Torque\nIII. Kinetic Energy\nIV. Momentum.\nWhich of the quantities listed are vectors?",
+      "options": {
+        "A": "II and IV",
+        "B": "I and II",
+        "C": "I and III",
+        "D": "II and III"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0210",
+      "type": "mcq",
+      "stem": "Which type of motion do the wheels of a moving car undergo?",
+      "options": {
+        "A": "Vibratory and translational motion",
+        "B": "Random and translational motion",
+        "C": "Rotational and oscillatory motion",
+        "D": "Translational and rotational motion"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0211",
+      "type": "mcq",
+      "stem": "From the diagram below, the region of zero acceleration is",
+      "options": {
+        "A": "MN",
+        "B": "NS",
+        "C": "SP",
+        "D": "PQ"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0212",
+      "type": "mcq",
+      "stem": "A car accelerates uniformly from rest at 3 m s⁻²; its velocity after traveling a distance of 24 m is",
+      "options": {
+        "A": "12 m s⁻¹",
+        "B": "144 m s⁻¹",
+        "C": "72 m s⁻¹",
+        "D": "36 m s⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0213",
+      "type": "mcq",
+      "stem": "Calculate the escape velocity of a satellite launched from the earth's surface if the radius of the earth is 6.4× 10⁶ m",
+      "options": {
+        "A": "25.3 km s⁻¹",
+        "B": "4.2 km s⁻¹",
+        "C": "4.0 km s⁻¹",
+        "D": "11.3 km s⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0214",
+      "type": "mcq",
+      "stem": "One of the conditions necessary for an object to be in equilibrium when acted upon by a number of parallel forces is that the vector sum of the forces is",
+      "options": {
+        "A": "Average",
+        "B": "Zero",
+        "C": "Negative",
+        "D": "Positive"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0215",
+      "type": "mcq",
+      "stem": "What happens when three coplanar non-parallel forces are in equilibrium?",
+      "options": {
+        "A": "Their lines of action are parallel.",
+        "B": "They are represented in magnitude only",
+        "C": "They are represented in direction only",
+        "D": "Their lines of action meet at a point"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0216",
+      "type": "mcq",
+      "stem": "An object of mass 20 kg is released from a height of 10 m above the ground level. The kinetic energy of the object just before it hits the ground is",
+      "options": {
+        "A": "200 J",
+        "B": "4000 J",
+        "C": "2000 J",
+        "D": "500 J"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0217",
+      "type": "mcq",
+      "stem": "The energy in the nucleus of atoms produce heat which can be used to generate",
+      "options": {
+        "A": "Kinetic energy",
+        "B": "Mechanical energy",
+        "C": "Electrical energy",
+        "D": "Potential energy"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0218",
+      "type": "mcq",
+      "stem": "A machine whose efficiency is 75% is used to lift a load of 1000 N. Calculate the effort put in to the machine if it has a velocity ratio of 4.",
+      "options": {
+        "A": "343.32 N",
+        "B": "233.33 N",
+        "C": "333.33 N",
+        "D": "334.33 N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0219",
+      "type": "mcq",
+      "stem": "A wheel and an axle is used to raise a load whose weight is 800 N when an effort of 250 N is applied. If the radii of the wheel and axle are 800 mm and 200 mm respectively, the efficiency of the machine is",
+      "options": {
+        "A": "90%",
+        "B": "80%",
+        "C": "85%",
+        "D": "87%"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0220",
+      "type": "mcq",
+      "stem": "A force of 500 N is applied to a steel wire of cross-sectional area 0.2 m², the tensile stress is",
+      "options": {
+        "A": "2.5× 10⁴ text{N m}⁻²",
+        "B": "1.0× 10² text{N m}⁻²",
+        "C": "1.0× 10³ text{N m}⁻²",
+        "D": "2.5× 10³ text{N m}⁻²"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0221",
+      "type": "mcq",
+      "stem": "From the diagram above, the point that represent the elastic limit is",
+      "options": {
+        "A": "Q",
+        "B": "R",
+        "C": "S",
+        "D": "T"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0222",
+      "type": "mcq",
+      "stem": "The small droplet of water that forms on the grass in early hours of the morning is",
+      "options": {
+        "A": "hail",
+        "B": "mist",
+        "C": "dew",
+        "D": "fog"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0223",
+      "type": "mcq",
+      "stem": "What is the equivalent of 20 K in Celsius scale?",
+      "options": {
+        "A": "293 °C",
+        "B": "68 °C",
+        "C": "360 °C",
+        "D": "-253 °C"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0224",
+      "type": "mcq",
+      "stem": "A glass bottle of initial volume 2× 10⁴ text{cm}³ is heated from 20°C to 50°C. If the linear expansively of the glass is 9× 10⁻⁶ K⁻¹, the volume of the bottle at 50°C is",
+      "options": {
+        "A": "20016.2 cm³",
+        "B": "20005.4 cm³",
+        "C": "20008.1 cm³",
+        "D": "20013.5 cm³"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0225",
+      "type": "mcq",
+      "stem": "The equation P^aV^bT^c = text{constant} reduces to Charles Law if",
+      "options": {
+        "A": "a=1, b=1 and c=0",
+        "B": "a=1, b=0 and c=-1",
+        "C": "a=0, b=1 and c=1",
+        "D": "a=0, b=1 and c=-1"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0226",
+      "type": "mcq",
+      "stem": "The quantity of heat needed to raise the temperature of a body by 1 K is the body's",
+      "options": {
+        "A": "Heat capacity",
+        "B": "Internal energy",
+        "C": "Specific heat capacity",
+        "D": "Latent heat of fusion"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0227",
+      "type": "mcq",
+      "stem": "The melting point of a substance is equivalent to its",
+      "options": {
+        "A": "Vapour pressure",
+        "B": "solidification temperature",
+        "C": "liquidification temperature",
+        "D": "solidification pressures"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0228",
+      "type": "mcq",
+      "stem": "The temperature at which the water vapor present in the air is just sufficient to saturate air is",
+      "options": {
+        "A": "Boiling point",
+        "B": "Ice point",
+        "C": "Saturation point",
+        "D": "Dew point"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0229",
+      "type": "mcq",
+      "stem": "Heat transfer by convection in a liquid is due to the",
+      "options": {
+        "A": "latent heat of vaporization of the liquid",
+        "B": "increased vibration of the molecules of the liquid about their mean position",
+        "C": "variation of density of the liquid",
+        "D": "expansion of the liquid as it is heated"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0230",
+      "type": "mcq",
+      "stem": "The distance between two successive crests of a wave is 15 cm and the velocity 300 m s⁻¹. Calculate the frequency.",
+      "options": {
+        "A": "2.0× 10² Hz",
+        "B": "4.5× 10³ Hz",
+        "C": "2.0× 10³ Hz",
+        "D": "4.5× 10² Hz"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0231",
+      "type": "mcq",
+      "stem": "A boy receives the echo of his clap reflected by a nearby hill 0.8 s later. How far is he from the hill?",
+      "options": {
+        "A": "528 m",
+        "B": "66 m",
+        "C": "136 m",
+        "D": "264 m"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0232",
+      "type": "mcq",
+      "stem": "An object is placed 10 m from a pinhole camera of length 25 cm. Calculate the linear magnification.",
+      "options": {
+        "A": "2.5× 10⁻²",
+        "B": "2.5× 10⁻¹",
+        "C": "2.5× 10¹",
+        "D": "2.5× 10²"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0233",
+      "type": "mcq",
+      "stem": "In a compound microscope, the objective and the eye piece focal lengths are",
+      "options": {
+        "A": "Long",
+        "B": "Short",
+        "C": "The same",
+        "D": "At infinity"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0234",
+      "type": "mcq",
+      "stem": "When a telescope is in normal use, the final image is at",
+      "options": {
+        "A": "The focus",
+        "B": "The radius of curvature",
+        "C": "The near point",
+        "D": "Infinity"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0235",
+      "type": "mcq",
+      "stem": "When a negatively charged rod is brought near the cap of a charged gold leaf electroscope which has positive charges, the leaf",
+      "options": {
+        "A": "Collapses",
+        "B": "Collapses and diverges again",
+        "C": "Diverges",
+        "D": "Remains the same"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0236",
+      "type": "mcq",
+      "stem": "What charge is stored in a 0.1 F capacitor when a 10 V supply is connected across it?",
+      "options": {
+        "A": "1 C",
+        "B": "5 C",
+        "C": "4 C",
+        "D": "2 C"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0237",
+      "type": "mcq",
+      "stem": "The maximum power transfer occurs in a cell when the external resistance is",
+      "options": {
+        "A": "Twice the internal resistance of the cell",
+        "B": "The same as the internal resistance of the cell",
+        "C": "Greater than the internal resistance of the cell",
+        "D": "Less than the internal resistance of the cell"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0238",
+      "type": "mcq",
+      "stem": "If a metal wire 4 m long and crosssectional area 0.8 mm2 has a resistance of 60 Ω, find the resistivity of the wire",
+      "options": {
+        "A": "5.3× 10⁻⁷ Ω m",
+        "B": "3.0× 10⁻⁵ Ω m",
+        "C": "1.2× 10⁻⁶ Ω m",
+        "D": "3.2× 10⁻⁶ Ω m"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0239",
+      "type": "mcq",
+      "stem": "A circuit has a resistance of 200 Ω. The resistance of the circuit can be reduced to 120 Ω when",
+      "options": {
+        "A": "A 300 Ω resistor is connected to it in parallel",
+        "B": "An 80 Ω resistor is connected to it in series",
+        "C": "A 150 Ω resistor is connected to it in parallel",
+        "D": "A 240 Ω resistor is connected to it in series"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0240",
+      "type": "mcq",
+      "stem": "What is the best method of demagnetizing a steel bar magnet?",
+      "options": {
+        "A": "Hammering",
+        "B": "Heating it",
+        "C": "Rough handling it",
+        "D": "Solenoid method"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0241",
+      "type": "mcq",
+      "stem": "The magnitude of the angle of dip at the equator is",
+      "options": {
+        "A": "360°",
+        "B": "0°",
+        "C": "90°",
+        "D": "180°"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0242",
+      "type": "mcq",
+      "stem": "What type of reaction is represented by the equation ²₁X + ²₁X arrow ³₂X + ¹₀n + text{energy}?",
+      "options": {
+        "A": "Ionization",
+        "B": "Fusion",
+        "C": "Fission",
+        "D": "Chain"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0243",
+      "type": "mcq",
+      "stem": "When an atom undergoes a beta decay, the atomic number of the nucleus",
+      "options": {
+        "A": "Remains unchanged",
+        "B": "Decreases by one",
+        "C": "Increases by one",
+        "D": "Becomes zero"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0244",
+      "type": "mcq",
+      "stem": "Calculate the mass of the copper deposited during electrolysis when a current of 4 A passes through a copper salt for 2 hours. [ece of Copper z=3.3× 10⁻⁷ text{kg C}⁻¹]",
+      "options": {
+        "A": "2.9× 10⁵ kg",
+        "B": "9.5× 10⁻⁷ kg",
+        "C": "9.5× 10⁻³ kg",
+        "D": "2.9× 10⁻⁴ kg"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0245",
+      "type": "mcq",
+      "stem": "Which gas produces a pink coloured light in a discharge tube?",
+      "options": {
+        "A": "Mercury",
+        "B": "Argon",
+        "C": "Air",
+        "D": "Neon"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0246",
+      "type": "mcq",
+      "stem": "When ²¹⁰₈₂text{Pb} decays to ²⁰⁶₈₀text{Pb}, it emits",
+      "options": {
+        "A": "two alpha and two beta particles",
+        "B": "an alpha particle",
+        "C": "one beta particle",
+        "D": "one alpha and one beta particle"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0247",
+      "type": "mcq",
+      "stem": "In a common emitter configuration, the output voltage is through the",
+      "options": {
+        "A": "Resistor",
+        "B": "Base",
+        "C": "Collector",
+        "D": "Emitter"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0248",
+      "type": "mcq",
+      "stem": "Which of the graph below shows the characteristic of an i-v transistor?",
+      "options": {
+        "A": "Graph A",
+        "B": "Graph B",
+        "C": "Graph C",
+        "D": "Graph D"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0249",
+      "type": "mcq",
+      "stem": "Which Question Paper Type of Physics is given to you?",
+      "options": {
+        "A": "Type D",
+        "B": "Type I",
+        "C": "Type B",
+        "D": "Type U"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0250",
+      "type": "mcq",
+      "stem": "When a brick is taken from the earth’s surface to the moon, its mass",
+      "options": {
+        "A": "remains constant",
+        "B": "reduces",
+        "C": "increases",
+        "D": "becomes zero"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0251",
+      "type": "mcq",
+      "stem": "The resultant of two forces is 50 N. If the forces are perpendicular to each other and one of them makes an angle of 30° with the resultant, find its magnitude.",
+      "options": {
+        "A": "100.0 N",
+        "B": "57.7 N",
+        "C": "43.3 N",
+        "D": "25.0 N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0252",
+      "type": "mcq",
+      "stem": "The pair of physical quantities that are scalar only are",
+      "options": {
+        "A": "volume and area",
+        "B": "moment and momentum",
+        "C": "length and displacement",
+        "D": "impulse and time"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0253",
+      "type": "mcq",
+      "stem": "A simple pendulum of length 0.4 m has a period of 2 s. What is the period a similar pendulum of length 0.8 m at the same place?",
+      "options": {
+        "A": "8 s",
+        "B": "4 s",
+        "C": "2√(2) s",
+        "D": "√(2) s"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0254",
+      "type": "mcq",
+      "stem": "A train with an initial velocity of 20 m s⁻¹ is subjected to a uniform deceleration of 2 m s⁻². The time required to bring the train to a complete halt is",
+      "options": {
+        "A": "5 s",
+        "B": "10 s",
+        "C": "20 s",
+        "D": "40 s"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0255",
+      "type": "mcq",
+      "stem": "Calculate the apparent weight loss of a man weighing 70 kg in an elevator moving downwards with an acceleration of 1.5 m s⁻². [g≈ 10 m s⁻²]",
+      "options": {
+        "A": "686 N",
+        "B": "595 N",
+        "C": "581 N",
+        "D": "1105 N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0256",
+      "type": "mcq",
+      "stem": "A piece of cork floats in a liquid. What fraction of its volume will be immersed in the liquid? [Density of the cork = 0.25× 10³ kg m⁻³; density of the liquid = 1.25× 10³ kg m⁻³]",
+      "options": {
+        "A": "0.8",
+        "B": "0.5",
+        "C": "0.2",
+        "D": "0.1"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0257",
+      "type": "mcq",
+      "stem": "An object is moving with a velocity of 5 m s⁻¹. At what height must a similar body be situated to have a potential energy equal in value with kinetic energy of the moving body?",
+      "options": {
+        "A": "25.0 m",
+        "B": "20.0 m",
+        "C": "1.3 m",
+        "D": "1.0 m"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0258",
+      "type": "mcq",
+      "stem": "If a pump is capable of lifting 5000 kg of water through a vertical height of 60 m in 15 min, the power of the pump is",
+      "options": {
+        "A": "2.5× 10⁵ J s⁻¹",
+        "B": "2.5× 10⁴ J s⁻¹",
+        "C": "3.3× 10³ J s⁻¹",
+        "D": "3.3× 10² J s⁻¹"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0259",
+      "type": "mcq",
+      "stem": "The coefficient of friction between two perfectly smooth surface is",
+      "options": {
+        "A": "infinity",
+        "B": "one",
+        "C": "half",
+        "D": "zero"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    },
+    {
+      "id": "jamb-physics-bank-0260",
+      "type": "mcq",
+      "stem": "What effort will a machine of efficiency 90% apply to lift a load of 180 N if its effort arm is twice as long as its load arm?",
+      "options": {
+        "A": "80 N",
+        "B": "90 N",
+        "C": "100 N",
+        "D": "120 N"
+      },
+      "marks": 1,
+      "topic": "Past Questions"
+    }
+  ]
+}
