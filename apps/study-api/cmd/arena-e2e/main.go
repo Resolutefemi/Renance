@@ -1,7 +1,9 @@
 // Arena E2E probe (ROADMAP #14): two students queue over real
 // WebSockets, get matched, play a full head-to-head match with random
-// picks, and both read their match history afterwards. Exit 0 only if
-// every phase lands.
+// picks, and both read their match history afterwards. A second phase
+// exercises private rooms: A hosts, a stray code is rejected, B joins
+// by code, they play a full match and both read it in their history.
+// Exit 0 only if every phase lands.
 //
 // Usage: go run ./cmd/arena-e2e [BASE_URL]  (default http://127.0.0.1:3990)
 package main
@@ -106,6 +108,120 @@ func readUntil(conn *websocket.Conn, kinds ...string) frame {
 	}
 }
 
+// readAny reads one frame of any kind, including error frames.
+func readAny(conn *websocket.Conn) frame {
+	_ = conn.SetReadDeadline(time.Now().Add(deadline))
+	var f frame
+	if err := conn.ReadJSON(&f); err != nil {
+		fatal("read: %v", err)
+	}
+	return f
+}
+
+// playMatch drives a running match (both sockets already saw
+// "matched") question by question with random picks, then returns the
+// caller's "over" frame after checking both sides agree.
+func playMatch(a, b *websocket.Conn, questions int) frame {
+	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
+	for i := 0; i < questions; i++ {
+		qa := readUntil(a, "question")
+		readUntil(b, "question")
+		if qa.Index != i || qa.Question == nil {
+			fatal("question frame wrong: %+v", qa)
+		}
+		letters := make([]string, 0, len(qa.Question.Options))
+		for l := range qa.Question.Options {
+			letters = append(letters, l)
+		}
+		pick := letters[rnd.Intn(len(letters))]
+		_ = a.WriteJSON(map[string]any{"type": "answer", "index": i, "letter": pick})
+		_ = b.WriteJSON(map[string]any{"type": "answer", "index": i, "letter": pick})
+		readUntil(a, "result")
+		readUntil(b, "result")
+	}
+	oa := readUntil(a, "over")
+	ob := readUntil(b, "over")
+	if oa.Scores == nil || len(oa.Scores) != 2 {
+		fatal("over frame scores wrong: %+v", oa)
+	}
+	if oa.MatchID != ob.MatchID {
+		fatal("over frames disagree on match id")
+	}
+	return oa
+}
+
+// These lobby helpers retry once-per-300ms on in_match: the hub clears
+// the previous match's state right after the "over" frame is written,
+// so a fast client can race the teardown by a few microseconds.
+
+// hostRoom hosts a private JAMB room and returns its code.
+func hostRoom(c *websocket.Conn) string {
+	for attempt := 0; ; attempt++ {
+		if err := c.WriteJSON(map[string]string{"type": "host", "body": "JAMB"}); err != nil {
+			fatal("host: %v", err)
+		}
+		f := readAny(c)
+		switch f.Type {
+		case "hosted":
+			if len(f.Code) != 6 {
+				fatal("room code %q is not 6 characters", f.Code)
+			}
+			return f.Code
+		case "error":
+			if f.ErrCode == "in_match" && attempt < 20 {
+				time.Sleep(300 * time.Millisecond)
+				continue
+			}
+			fatal("host refused: %s", f.ErrCode)
+		default:
+			fatal("unexpected frame while hosting: %s", f.Type)
+		}
+	}
+}
+
+// joinRoom joins a private room by code and returns the joiner's
+// "matched" frame (it consumes it, so main must not read it again).
+func joinRoom(c *websocket.Conn, code string) frame {
+	for attempt := 0; ; attempt++ {
+		if err := c.WriteJSON(map[string]string{"type": "join", "code": code}); err != nil {
+			fatal("join: %v", err)
+		}
+		f := readAny(c)
+		switch f.Type {
+		case "matched":
+			return f
+		case "error":
+			if f.ErrCode == "in_match" && attempt < 20 {
+				time.Sleep(300 * time.Millisecond)
+				continue
+			}
+			fatal("join refused: %s", f.ErrCode)
+		default:
+			fatal("unexpected frame while joining: %s", f.Type)
+		}
+	}
+}
+
+// joinExpectErr joins and requires an error frame with [wantErr]
+// (in_match during teardown is retried, anything else fails).
+func joinExpectErr(c *websocket.Conn, code, wantErr string) {
+	for attempt := 0; ; attempt++ {
+		_ = c.WriteJSON(map[string]string{"type": "join", "code": code})
+		f := readAny(c)
+		if f.Type == "error" {
+			if f.ErrCode == wantErr {
+				return
+			}
+			if f.ErrCode == "in_match" && attempt < 20 {
+				time.Sleep(300 * time.Millisecond)
+				continue
+			}
+			fatal("join error = %s, want %s", f.ErrCode, wantErr)
+		}
+		fatal("join expected an error frame, got %s", f.Type)
+	}
+}
+
 func main() {
 	baseURL := base
 	if len(os.Args) > 1 {
@@ -148,36 +264,11 @@ func main() {
 	}
 	fmt.Printf("▸ matched on %s (%d questions)\n", ma.Code, ma.Questions)
 
-	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
-	for i := 0; i < ma.Questions; i++ {
-		qa := readUntil(a, "question")
-		readUntil(b, "question")
-		if qa.Index != i || qa.Question == nil {
-			fatal("question frame wrong: %+v", qa)
-		}
-		letters := make([]string, 0, len(qa.Question.Options))
-		for l := range qa.Question.Options {
-			letters = append(letters, l)
-		}
-		pick := letters[rnd.Intn(len(letters))]
-		_ = a.WriteJSON(map[string]any{"type": "answer", "index": i, "letter": pick})
-		_ = b.WriteJSON(map[string]any{"type": "answer", "index": i, "letter": pick})
-		readUntil(a, "result")
-		readUntil(b, "result")
-	}
-
-	oa := readUntil(a, "over")
-	ob := readUntil(b, "over")
-	if oa.Scores == nil || len(oa.Scores) != 2 {
-		fatal("over frame scores wrong: %+v", oa)
-	}
+	oa := playMatch(a, b, ma.Questions)
 	fmt.Printf("▸ match over — winner %q scores %v\n", oa.Winner, oa.Scores)
-	if oa.MatchID != ob.MatchID {
-		fatal("over frames disagree on match id")
-	}
 
 	fmt.Println("▸ history for both students")
-	expectHistory := func(token, who string) {
+	expectHistory := func(token, who, matchID string) {
 		req, _ := http.NewRequest("GET", baseURL+"/arena/history", nil)
 		req.Header.Set("Authorization", "Bearer "+token)
 		resp, err := http.DefaultClient.Do(req)
@@ -210,17 +301,31 @@ func main() {
 			_ = json.NewDecoder(resp.Body).Decode(&out)
 			resp.Body.Close()
 			for _, m := range out.Matches {
-				if m.MatchID == oa.MatchID {
+				if m.MatchID == matchID {
 					found = true
 				}
 			}
 		}
 		if !found {
-			fatal("%s history missing match %s", who, oa.MatchID)
+			fatal("%s history missing match %s", who, matchID)
 		}
 	}
-	expectHistory(tokA, "A")
-	expectHistory(tokB, "B")
+	expectHistory(tokA, "A", oa.MatchID)
+	expectHistory(tokB, "B", oa.MatchID)
+
+	fmt.Println("▸ private room: A hosts, stray code rejected, B joins by code")
+	code := hostRoom(a)
+	joinExpectErr(b, "ZZZZZZ", "unknown_room")
+	fmt.Printf("▸ room %s open — stray joins rejected\n", code)
+	ma2 := readUntil(a, "matched")
+	mb2 := joinRoom(b, code)
+	if ma2.MatchID == "" || ma2.MatchID != mb2.MatchID {
+		fatal("private match ids differ: %q vs %q", ma2.MatchID, mb2.MatchID)
+	}
+	oa2 := playMatch(a, b, ma2.Questions)
+	fmt.Printf("▸ private match over — winner %q scores %v\n", oa2.Winner, oa2.Scores)
+	expectHistory(tokA, "A(private)", ma2.MatchID)
+	expectHistory(tokB, "B(private)", ma2.MatchID)
 
 	fmt.Println("ARENA E2E OK")
 }

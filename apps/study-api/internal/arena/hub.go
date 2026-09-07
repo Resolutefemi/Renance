@@ -17,6 +17,7 @@ type Config struct {
 	IntroCountdown     time.Duration // matched -> first question
 	BotWait            time.Duration // solo queuer waits this long, then the bot plays
 	BotSkill           float64       // 0..1, chance the bot's roll lands correct
+	RoomTTL            time.Duration // private room lifetime, host connected or not
 }
 
 // DefaultConfig matches the shipped defaults (ARENA_* env overrides).
@@ -27,6 +28,7 @@ func DefaultConfig() Config {
 		IntroCountdown:     3 * time.Second,
 		BotWait:            20 * time.Second,
 		BotSkill:           0.6,
+		RoomTTL:            15 * time.Minute,
 	}
 }
 
@@ -61,7 +63,8 @@ type Hub struct {
 	queues  map[string][]*Player // bucket -> FIFO of waiting players
 	players map[string]*Player   // userID -> live session
 	matches map[string]*liveMatch
-	wg      sync.WaitGroup // bot timers + match goroutines
+	rooms   map[string]*room // private room code -> waiting lobby
+	wg      sync.WaitGroup   // bot timers + match goroutines
 
 	stopCh   chan struct{}
 	stopOnce sync.Once
@@ -85,6 +88,9 @@ func NewHub(cfg Config, packs PackSource, sink MatchSink, log *slog.Logger) *Hub
 	if cfg.BotSkill < 0 || cfg.BotSkill > 1 {
 		cfg.BotSkill = 0.6
 	}
+	if cfg.RoomTTL <= 0 {
+		cfg.RoomTTL = 15 * time.Minute
+	}
 	return &Hub{
 		cfg: cfg, packs: packs, sink: sink, log: log,
 		clock:   RealClock(),
@@ -92,6 +98,7 @@ func NewHub(cfg Config, packs PackSource, sink MatchSink, log *slog.Logger) *Hub
 		queues:  map[string][]*Player{},
 		players: map[string]*Player{},
 		matches: map[string]*liveMatch{},
+		rooms:   map[string]*room{},
 		stopCh:  make(chan struct{}),
 	}
 }
@@ -119,6 +126,9 @@ func (h *Hub) Attach(p *Player, peer Peer) {
 		}
 		h.removeFromBucketLocked(old, old.bucket)
 		old.inBag = false
+		if old.hosting != nil {
+			h.deleteRoomLocked(old.hosting)
+		}
 		old.Send(Outbound{Type: OutError, ErrCode: ErrReplaced, ErrMsg: "signed in elsewhere"})
 		if op := old.currentPeer(); op != nil {
 			op.Close()
@@ -157,6 +167,9 @@ func (h *Hub) Detach(p *Player) {
 	m := p.match
 	p.inBag = false
 	h.removeFromBucketLocked(p, p.bucket)
+	if p.hosting != nil {
+		h.deleteRoomLocked(p.hosting)
+	}
 	h.mu.Unlock()
 
 	if m != nil {
@@ -193,6 +206,11 @@ func (h *Hub) Queue(p *Player, body string) {
 		p.Send(Outbound{Type: OutError, ErrCode: ErrAlreadyQueued, ErrMsg: "you are already in the queue"})
 		return
 	}
+	if p.hosting != nil {
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutError, ErrCode: ErrAlreadyHost, ErrMsg: "cancel your room before queueing publicly"})
+		return
+	}
 	bucket := body
 	if bucket == "" {
 		bucket = anyBucket
@@ -211,12 +229,19 @@ func (h *Hub) Queue(p *Player, body string) {
 	h.tryPair(bucket)
 }
 
-// Cancel pulls [p] out of the matchmaking queue.
+// Cancel pulls [p] out of the matchmaking queue, or closes the private
+// room [p] hosts. A plain queue wait keeps its existing reply contract.
 func (h *Hub) Cancel(p *Player) {
 	h.mu.Lock()
+	if r := p.hosting; r != nil {
+		h.deleteRoomLocked(r)
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutCancelled})
+		return
+	}
 	if !p.inBag {
 		h.mu.Unlock()
-		return // not queued; nothing to undo
+		return // neither queued nor hosting; nothing to undo
 	}
 	h.removeFromBucketLocked(p, p.bucket)
 	p.inBag = false
@@ -361,14 +386,16 @@ func (h *Hub) matchDone(matchID string) {
 
 // Status is the observability surface behind GET /arena/status.
 type Status struct {
-	Waiting map[string]int `json:"waiting"`
-	Live    int            `json:"liveMatches"`
+	Waiting      map[string]int `json:"waiting"`
+	Live         int            `json:"liveMatches"`
+	PrivateRooms int            `json:"privateRooms"`
 }
 
 func (h *Hub) Status() Status {
 	h.mu.Lock()
 	defer h.mu.Unlock()
-	out := Status{Waiting: map[string]int{}}
+	h.sweepRoomsLocked(h.clock.Now())
+	out := Status{Waiting: map[string]int{}, PrivateRooms: len(h.rooms)}
 	for bucket, q := range h.queues {
 		if len(q) > 0 {
 			out.Waiting[bucket] = len(q)
@@ -392,6 +419,7 @@ func (h *Hub) Stop() {
 	}
 	h.players = map[string]*Player{}
 	h.queues = map[string][]*Player{}
+	h.rooms = map[string]*room{}
 	matches := make([]*liveMatch, 0, len(h.matches))
 	for _, m := range h.matches {
 		matches = append(matches, m)

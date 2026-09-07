@@ -32,10 +32,11 @@ type Player struct {
 
 	peer Peer
 
-	mu     sync.Mutex
-	inBag  bool   // sitting in a matchmaking queue
-	bucket string // queue key, ""-normalized; only meaningful while inBag
-	match  *liveMatch
+	mu      sync.Mutex
+	inBag   bool   // sitting in a matchmaking queue
+	bucket  string // queue key, ""-normalized; only meaningful while inBag
+	match   *liveMatch
+	hosting *room // private room this session hosts (nil = none)
 }
 
 func (p *Player) Send(o Outbound) {

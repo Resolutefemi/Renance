@@ -62,6 +62,10 @@ func (sh *SocketHandler) Serve(p *Player, w http.ResponseWriter, r *http.Request
 			sh.Hub.Queue(p, in.Body)
 		case InCancel:
 			sh.Hub.Cancel(p)
+		case InHost:
+			sh.Hub.Host(p, in.Body)
+		case InJoin:
+			sh.Hub.JoinRoom(p, in.Code)
 		case InAnswer:
 			sh.Hub.Answer(p, in.Index, strings.ToUpper(strings.TrimSpace(in.Letter)))
 		default:

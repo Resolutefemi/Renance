@@ -11,22 +11,23 @@ package arena
 
 // Inbound is one client → arena message (JSON on the socket).
 type Inbound struct {
-	Type   string `json:"type"`             // "queue" | "cancel" | "answer"
-	Body   string `json:"body,omitempty"`   // queue: JAMB | WAEC | NECO | University Modules | "" = any
+	Type   string `json:"type"`             // "queue" | "cancel" | "answer" | "host" | "join"
+	Body   string `json:"body,omitempty"`   // queue/host: JAMB | WAEC | NECO | University Modules | "" = any
 	Index  int    `json:"index,omitempty"`  // answer: 0-based question index
 	Letter string `json:"letter,omitempty"` // answer: chosen option letter
+	Code   string `json:"code,omitempty"`   // join: the private room code
 }
 
 // Outbound is one arena → client message (JSON on the socket).
 type Outbound struct {
-	Type string `json:"type"` // queued | cancelled | matched | question | result | over | error
+	Type string `json:"type"` // queued | hosted | cancelled | matched | question | result | over | error
 
 	// matched / over
 	MatchID   string         `json:"matchId,omitempty"`
 	Winner    string         `json:"winner,omitempty"` // userID; "" = draw/aborted
 	Scores    map[string]int `json:"scores,omitempty"`
 	Opponent  string         `json:"opponent,omitempty"` // username (bot matches: "Renance Bot")
-	Code      string         `json:"code,omitempty"`     // pack both players got
+	Code      string         `json:"code,omitempty"`     // pack both players got; on "hosted" frames: the room code
 	Body      string         `json:"body,omitempty"`
 	Questions int            `json:"questionCount,omitempty"`
 	Seconds   int            `json:"secondsPerQuestion,omitempty"`
@@ -59,11 +60,14 @@ const (
 	InQueue  = "queue"
 	InCancel = "cancel"
 	InAnswer = "answer"
+	InHost   = "host"
+	InJoin   = "join"
 )
 
 // Outbound message type constants.
 const (
 	OutQueued    = "queued"
+	OutHosted    = "hosted"
 	OutCancelled = "cancelled"
 	OutMatched   = "matched"
 	OutQuestion  = "question"
@@ -74,12 +78,15 @@ const (
 
 // Error codes carried on OutErrCode.
 const (
-	ErrAlreadyQueued = "already_queued"
-	ErrInMatch       = "in_match"
-	ErrNoPack        = "no_pack_available"
-	ErrUnknownBody   = "unknown_body"
-	ErrLate          = "late_answer"
-	ErrReplaced      = "replaced"
-	ErrShuttingDown  = "shutting_down"
-	ErrBadMessage    = "bad_message"
+	ErrAlreadyQueued   = "already_queued"
+	ErrInMatch         = "in_match"
+	ErrNoPack          = "no_pack_available"
+	ErrUnknownBody     = "unknown_body"
+	ErrUnknownRoom     = "unknown_room"
+	ErrAlreadyHost     = "already_hosting"
+	ErrRoomUnavailable = "room_unavailable"
+	ErrLate            = "late_answer"
+	ErrReplaced        = "replaced"
+	ErrShuttingDown    = "shutting_down"
+	ErrBadMessage      = "bad_message"
 )

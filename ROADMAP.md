@@ -1,12 +1,12 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-07 (daily challenge shipped: GET /daily/{body} +
-GET /daily/{body}/leaderboard?day= give every exam body one
-deterministic 10-question sprint per UTC day with a fair first-wins
-board — pure internal/daily, migration 0009, replay = practice. Same
-day: leaderboards LIVE, production https://renance-api.onrender.com
-answers /healthz with db:ok and the full student-flow E2E ran green
-against the live API.)
+Last updated: 2026-09-07 (private arena rooms shipped: "host"/"join"
+on the arena socket mint a shareable 6-character room code — the first
+join consumes the room and starts the match, no public queue, no house
+bot, rooms die with the host's session or ARENA_ROOM_TTL_SECONDS.
+Same day: daily challenge + leaderboards LIVE, production
+https://renance-api.onrender.com answers /healthz with db:ok and the
+full student-flow E2E ran green against the live API.)
 
 Status legend: **LIVE** (in main, verified) · **NEXT** (designed, no blockers) ·
 **NEEDS INPUT** (blocked on a decision/asset) · **NEEDS DEP** (needs an
@@ -75,7 +75,7 @@ need no external services — they ship fastest.
 
 | # | Feature | Plan sketch | Status |
 | --- | --- | --- | --- |
-| 14 | **Multiplayer arena** | Live head-to-head quizzes. In-process hub slice LIVE: `GET /arena/ws` (JWT via `?token=`), FIFO matchmaking per exam body with in-memory presence (disconnect = forfeit, single-session per user), per-question deadlines + marks scoring, house bot fills solo queues after `ARENA_BOT_WAIT_SECONDS`, outcomes persisted to `arena.matches`/`arena.participants` (best-effort, migration 0008) + `GET /arena/history` + `GET /arena/status`; E2E probe `cmd/arena-e2e` runs two real students in CI. Leaderboards slice LIVE: `GET /leaderboard/arena?period=week\|all` + `GET /leaderboard/xp` — global top 25 plus the caller's absolute rank, bots excluded, deterministic tie-breaks, no new tables (pure aggregates over 0003 + 0008). Redis/multi-host presence layer is the next slice when scale asks. | **LIVE** (2026-09-06 hub, 2026-09-07 leaderboards) |
+| 14 | **Multiplayer arena** | Live head-to-head quizzes. In-process hub slice LIVE: `GET /arena/ws` (JWT via `?token=`), FIFO matchmaking per exam body with in-memory presence (disconnect = forfeit, single-session per user), per-question deadlines + marks scoring, house bot fills solo queues after `ARENA_BOT_WAIT_SECONDS`, outcomes persisted to `arena.matches`/`arena.participants` (best-effort, migration 0008) + `GET /arena/history` + `GET /arena/status`; E2E probe `cmd/arena-e2e` runs two real students in CI. Leaderboards slice LIVE: `GET /leaderboard/arena?period=week\|all` + `GET /leaderboard/xp` — global top 25 plus the caller's absolute rank, bots excluded, deterministic tie-breaks, no new tables (pure aggregates over 0003 + 0008). Private rooms slice LIVE: `host`/`join` on the arena socket mint a crypto-random 6-character code (ambiguous glyphs dropped), scoped to one exam body; the FIRST join consumes the room and starts the match directly — no public queue exposure, no house bot; a room dies with the host's session (disconnect or replaced sign-in) or after `ARENA_ROOM_TTL_SECONDS`; outcomes persist identically so history and leaderboards stay true. Redis/multi-host presence layer is the next slice when scale asks. | **LIVE** (2026-09-06 hub, 2026-09-07 leaderboards + private rooms) |
 | 15 | **Code sandbox** | Students run small code challenges. Needs an isolated runner (Firecracker/Nscale-style or a SaaS like Piston) — never run untrusted code in the study-api container. | NEEDS DEP — sandbox provider choice |
 | 16 | **Bluetooth mesh** (offline sharing) | A pack is a sealed questions-only bundle, so the offline slice ships as FILES: Send Pack writes `{code}.renance-pack.json` and opens the OS share sheet (Bluetooth, Xender, ShareIT, Nearby, any pipe students already use); Receive imports through the same strict validation the API boot applies (counts, marks, ids, thin MCQs) and keeps a sha256 integrity key. Pure `pack_share` codec, unit-tested. The phone-to-phone radio channel (nearby_connections) is a later slice once device testing is possible. | **LIVE** (2026-09-05, file slice) |
 | 17 | **Smart-contract certificates** | Achievement certificates minted on a testnet (Base/Scroll sepolia), wallet optional. Needs testnet RPC + contract + wallet UX decisions. | NEEDS DEP — testnet choice; park until core learning loop is deep |
