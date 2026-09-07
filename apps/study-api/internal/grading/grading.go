@@ -217,3 +217,12 @@ func (c *StaticKeyCache) Replace(keys map[string]map[string]store.KeyEntry) {
 	defer c.mu.Unlock()
 	c.keys = keys
 }
+
+// Put installs one bank's key at runtime (composite UTME mock papers
+// get their sealed key assembled from the banks' keys at composition
+// time). Part of KeySource consumers that need to grow the cache.
+func (c *StaticKeyCache) Put(code string, keys map[string]store.KeyEntry) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.keys[code] = keys
+}

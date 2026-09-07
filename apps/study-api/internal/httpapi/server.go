@@ -42,6 +42,7 @@ import (
 	"log/slog"
 	"net/http"
 	"strings"
+	"sync"
 	"time"
 
 	"renance.dev/study-api/internal/arena"
@@ -64,6 +65,12 @@ type Server struct {
 	google  *googleid.Verifier
 	allowed map[string]struct{}
 
+	// keys resolves sealed answer keys; mock papers also grow it at
+	// runtime via the Put hook (see paper.go).
+	keys grading.KeySource
+	// mockMu serializes composite mock-paper composition.
+	mockMu sync.Mutex
+
 	// ROADMAP #14: the in-process arena hub. nil keeps every /arena
 	// route on a clean 503 (e.g. unit tests that skip it).
 	arena     *arena.Hub
@@ -82,7 +89,7 @@ type syncerKicker interface {
 
 func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtdata.Library, eng *grading.Engine, sync syncerKicker, keys grading.KeySource) *Server {
 	s := &Server{
-		cfg: cfg, log: log, store: st, lib: lib, engine: eng, syncer: sync,
+		cfg: cfg, log: log, store: st, lib: lib, engine: eng, syncer: sync, keys: keys,
 		allowed: map[string]struct{}{
 			"JAMB": {}, "WAEC": {}, "NECO": {}, "University Modules": {},
 		},

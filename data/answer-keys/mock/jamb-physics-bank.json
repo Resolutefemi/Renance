@@ -1,0 +1,1305 @@
+{
+  "code": "jamb-physics-bank",
+  "answers": {
+    "jamb-physics-bank-0001": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Force is measured in newtons (kg·m/s²)."
+    },
+    "jamb-physics-bank-0002": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "g ≈ 9.8 m/s² near the Earth's surface."
+    },
+    "jamb-physics-bank-0003": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A barometer measures atmospheric pressure."
+    },
+    "jamb-physics-bank-0004": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Constant velocity means no change in velocity, hence zero acceleration."
+    },
+    "jamb-physics-bank-0005": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Current is measured in amperes (A)."
+    },
+    "jamb-physics-bank-0006": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Ohm's law: I = V/R = 12/4 = 3 A."
+    },
+    "jamb-physics-bank-0007": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Sound is mechanical and needs a material medium; a vacuum has none."
+    },
+    "jamb-physics-bank-0008": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Power is measured in watts; 1 W = 1 J/s."
+    },
+    "jamb-physics-bank-0009": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Power = work done per unit time."
+    },
+    "jamb-physics-bank-0010": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "A concave mirror converges parallel rays to a focus."
+    },
+    "jamb-physics-bank-0011": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Density = mass/volume = 100/20 = 5 g/cm³."
+    },
+    "jamb-physics-bank-0012": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Velocity has both magnitude and direction; the others are scalars."
+    },
+    "jamb-physics-bank-0013": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A generator (dynamo) converts mechanical energy to electrical energy; a motor does the reverse."
+    },
+    "jamb-physics-bank-0014": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "W = F × d = 10 × 5 = 50 J."
+    },
+    "jamb-physics-bank-0015": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Refraction is caused by the change in the speed of light between media of different optical densities."
+    },
+    "jamb-physics-bank-0016": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "When two objects move in the same direction, the relative velocity is the difference in their speeds: 130 km/h - 100 km/h = 30 km/h."
+    },
+    "jamb-physics-bank-0017": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "On a velocity-time graph, a horizontal line (like segment FG) represents constant velocity. Since velocity is not changing, the acceleration is zero."
+    },
+    "jamb-physics-bank-0018": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "In a vacuum (no air resistance), all objects fall with the same acceleration due to gravity (g), regardless of their mass."
+    },
+    "jamb-physics-bank-0019": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Acceleration (a) = (v - u) / t = (45 - 25) / 10 = 20 / 10 = 2 ms⁻²."
+    },
+    "jamb-physics-bank-0020": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Mass is the amount of matter in an object and is constant. Weight depends on gravity (W = mg), which varies slightly at different locations on Earth."
+    },
+    "jamb-physics-bank-0021": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Stable equilibrium occurs at the potential energy minima, which are the lowest points (valleys) of the surface."
+    },
+    "jamb-physics-bank-0022": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Vertical height (h) = L(1 - cosθ) = 0.5(1 - cos60°) = 0.25m. Work Done = PE gain = mgh = (Weight) * h = 0.1 * 0.25 = 0.025 J."
+    },
+    "jamb-physics-bank-0023": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Rough surfaces increase the coefficient of friction, providing the necessary grip to move loads without slipping."
+    },
+    "jamb-physics-bank-0024": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "MA = Load/Effort = 800/400 = 2. Efficiency = (MA/VR) * 100 = (2/6) * 100 = 33.3%."
+    },
+    "jamb-physics-bank-0025": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Extension (e) = 30.5 - 30 = 0.5cm = 0.005m. Strain Energy = 1/2 * F * e = 0.5 * 300 * 0.005 = 0.75 J."
+    },
+    "jamb-physics-bank-0026": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "According to Pascal's Law, pressure is transmitted equally. Force = Pressure * Area = 100 * 3 = 300 N."
+    },
+    "jamb-physics-bank-0027": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A density bottle is used for accurate measurements of relative density for liquids and powders."
+    },
+    "jamb-physics-bank-0028": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Hydrometers are designed to measure the density or specific gravity of liquids based on the concept of buoyancy."
+    },
+    "jamb-physics-bank-0029": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Alcohol has a much lower freezing point (-115°C) than mercury (-39°C), making it suitable for measuring very cold temperatures."
+    },
+    "jamb-physics-bank-0030": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "ΔL = αLΔθ. Ratio = (α1/α2) * (L1/L2) = (2/3) * (3/4) = 6/12 = 1/2."
+    },
+    "jamb-physics-bank-0031": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Mass is constant. ρ1V1 = ρ2V2 -> 0.8 * V1 = 0.4 * 20 -> V1 = 8 / 0.8 = 10 m³."
+    },
+    "jamb-physics-bank-0032": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Thermal radiation from objects at common temperatures occurs primarily in the infrared part of the electromagnetic spectrum."
+    },
+    "jamb-physics-bank-0033": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "According to Archimedes' principle, the ice displaces a weight of water equal to its own weight. When it melts, it turns into that exact volume of water, so the level remains unchanged."
+    },
+    "jamb-physics-bank-0034": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Dew is moisture that condenses from the air onto cool surfaces when the temperature drops to the dew point."
+    },
+    "jamb-physics-bank-0035": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Saturation occurs when the rate of evaporation equals the rate of condensation in a closed system."
+    },
+    "jamb-physics-bank-0036": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "P = nRT/V = (1 * 8.3 * 300) / 0.01 = 2490 / 0.01 = 249,000 = 2.49 x 10⁵ Nm⁻²."
+    },
+    "jamb-physics-bank-0037": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Radiation depends on the surface temperature, area, and emissivity (nature of surface), but is independent of the bulk density of the material."
+    },
+    "jamb-physics-bank-0038": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "f = v / λ = 420 / 42 = 10 Hz. Period (T) = 1/f = 1/10 = 0.1 s."
+    },
+    "jamb-physics-bank-0039": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Sound is a mechanical wave and requires a medium (like air) to propagate. As air is removed, there is less medium to carry the vibration."
+    },
+    "jamb-physics-bank-0040": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Reverberation is the collection of reflected sounds from the surfaces in an enclosure or surrounding environment."
+    },
+    "jamb-physics-bank-0041": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Velocity of sound is independent of pressure. v ∝ √T. v2 = v1 * √(T2/T1) = 340 * √(400/289) = 340 * (20/17) = 400 ms⁻¹."
+    },
+    "jamb-physics-bank-0042": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Both the camera film and the retina are the light-sensitive surfaces where the image is captured or formed."
+    },
+    "jamb-physics-bank-0043": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "1/v = 1/f - 1/u = 1/5 - 1/15 = 2/15 -> v = 7.5. Magnification (m) = v/u = 7.5/15 = 0.5. Image size = 0.5 * 4 = 2 cm."
+    },
+    "jamb-physics-bank-0044": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Apparent depth = Real depth / n = 10 / 1.5 = 6.67 cm."
+    },
+    "jamb-physics-bank-0045": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Short-sightedness (myopia) is corrected using a diverging or concave lens to push the image back onto the retina."
+    },
+    "jamb-physics-bank-0046": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Different colors of light travel at different speeds in glass, leading to different refractive indices for each color."
+    },
+    "jamb-physics-bank-0047": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "The positive rod repels more positive charges from the cap down to the leaves, increasing the repulsive force between them."
+    },
+    "jamb-physics-bank-0048": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Total C = 2+4+8 = 14µF. Energy = 1/2 * C * V² = 0.5 * 14x10⁻⁶ * 36 = 2.52 x 10⁻⁴ J."
+    },
+    "jamb-physics-bank-0049": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "I = E / (R + r) = 12 / (2 + 4) = 12 / 6 = 2 A."
+    },
+    "jamb-physics-bank-0050": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "1/Rt = 1/4 + 1/4 + 1/4 = 3/4 -> Rt = 4/3 Ω. I = V / Rt = 16 / (4/3) = 12 A."
+    },
+    "jamb-physics-bank-0051": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Energy = Power * time = 0.2kW * 24h = 4.8 kWh. Cost = 4.8 * 40 = N192."
+    },
+    "jamb-physics-bank-0052": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Power loss in cables is I²R. Reducing current (I) by increasing voltage drastically reduces heat energy loss."
+    },
+    "jamb-physics-bank-0053": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "V = Ig(Rg + R). 5 = 0.01(Rg + 498) -> 500 = Rg + 498 -> Rg = 2 Ω."
+    },
+    "jamb-physics-bank-0054": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "At resonance, the circuit is purely resistive, meaning the voltage and current are in phase (0°)."
+    },
+    "jamb-physics-bank-0055": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "m = zQ. Therefore, the slope (m/Q) equals z, the electrochemical equivalent."
+    },
+    "jamb-physics-bank-0056": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "One of the primary functions of a transistor is to act as an amplifier of electrical signals."
+    },
+    "jamb-physics-bank-0057": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Silicon and Germanium are the most common intrinsic (pure) semiconductors."
+    },
+    "jamb-physics-bank-0058": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "A simple periscope typically uses two plane mirrors at a 45-degree angle. While advanced perisopes use prisms and lenses, the standard periscope model taught in basic physics is lens-free."
+    },
+    "jamb-physics-bank-0059": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Dispersion occurs when white light passes through a prism and splits into its constituent spectrum (red, orange, yellow, green, blue, indigo, violet) due to different wavelengths refracting at different angles."
+    },
+    "jamb-physics-bank-0060": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Starting a car requires a very high current. Dry cells have a high internal resistance compared to an accumulator, which limits their current capacity despite having the same total EMF."
+    },
+    "jamb-physics-bank-0061": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "The displacement is the vector sum of the two movements.\nMagnitude: R = √(1² + 1²) = √(2) text{km}.\nDirection: tan θ = frac{text{Opposite}}{text{Adjacent}} = (1)/(1) = 1.\nθ = tan⁻¹(1) = 45^circ.\nThe direction is North 45° East."
+    },
+    "jamb-physics-bank-0062": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "First, calculate the mass of the oil: Mass = Density × Volume = 0.9 × 400 = 360 g.\nAssuming mass remains constant, the new volume is V = (Mass)/(New Density) = (360)/(0.6) = 600 cm³."
+    },
+    "jamb-physics-bank-0063": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "All the statements are generally true in electrostatics and current electricity. A positive charge is created by the removal of electrons (deficit), a negative charge by the addition of electrons (excess), and current in metallic conductors is the flow of electrons."
+    },
+    "jamb-physics-bank-0064": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Natural radioactivity involves the spontaneous emission of alpha (α) particles, beta (β) particles, and gamma (γ) rays."
+    },
+    "jamb-physics-bank-0065": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Images formed by plane mirrors are the same size as the object (magnification = 1). They are not magnified."
+    },
+    "jamb-physics-bank-0066": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "The two 2Ω resistors are in parallel: R_p = (2 × 2)/(2 + 2) = (4)/(4) = 1 Ω.\nThis combination is in series with the 3Ω and 4Ω resistors: Rtotal = 3 + 1 + 4 = 8 Ω."
+    },
+    "jamb-physics-bank-0067": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Steam engine converts Heat to Kinetic energy. Generator converts Kinetic to Electrical energy. Lamp converts Electrical energy to Heat and Light."
+    },
+    "jamb-physics-bank-0068": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Cathode rays are beams of fast-moving electrons."
+    },
+    "jamb-physics-bank-0069": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Dispersion occurs because the refractive index of glass is different for different wavelengths (colors) of light. Since n = c/v, different colors travel at different speeds in the glass, causing them to refract by different amounts."
+    },
+    "jamb-physics-bank-0070": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Two light nuclei (deuterium isotopes) combine to form a heavier nucleus (Helium-3) and a neutron. This process is nuclear fusion."
+    },
+    "jamb-physics-bank-0071": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Specific heat capacity is for 1 kg. The heat required for the *entire* mass of a body (10kg in this case) is its Heat Capacity (or thermal capacity)."
+    },
+    "jamb-physics-bank-0072": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Mass m = ZIt.\n36.0 = 0.0012 × I × (5 × 60)\n36 = 0.0012 × I × 300\n36 = 0.36I\nI = 36 / 0.36 = 100 A."
+    },
+    "jamb-physics-bank-0073": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Shadows and eclipses are formed because light travels in straight lines (rectilinear propagation), and cannot bend around opaque obstacles (at macroscopic scales)."
+    },
+    "jamb-physics-bank-0074": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Ohm's law applies to ohmic conductors, which are primarily metals held at a constant physical condition (temperature)."
+    },
+    "jamb-physics-bank-0075": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Isotopes have the same atomic number (protons) and electron configuration, so their chemical properties are identical (I & III). They have different masses, so they are separated by physical methods like centrifugation or diffusion (II). All statements are true."
+    },
+    "jamb-physics-bank-0076": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "At the verge of sliding, the tension T = m₂ g equals the limiting frictional force F_s.\nF_s = μ R = μ m₁ g.\nSo, m₂ g = μ m₁ g.\nμ = (m₂)/(m₁). Note: Options A and C are identical in the source image, so A is valid."
+    },
+    "jamb-physics-bank-0077": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Mirages are caused by the refraction of light through layers of air with different densities (and refractive indices) due to heat (I), leading to Total Internal Reflection which reflects the sky upwards (III). The road surface itself does not become a reflector."
+    },
+    "jamb-physics-bank-0078": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "The liquid level on the open side is higher (10 units) than on the gas side (3 units), meaning the gas pressure is higher than atmospheric pressure.\nAssuming the labels '10m' and '3m' correspond to a scale in cm (common typo in diagrams vs mm answers), the height difference h = 10 - 3 = 7 cm = 70 mm.\nPgas = Patm + h = 760 mm + 70 mm = 830 mm."
+    },
+    "jamb-physics-bank-0079": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Accumulators (like lead-acid batteries) are designed to deliver very high currents (e.g., for starting engines), which requires them to have very low internal resistance compared to dry cells or Leclanche cells."
+    },
+    "jamb-physics-bank-0080": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Pitch is the subjective perception of the frequency of a sound. Increasing frequency increases the pitch."
+    },
+    "jamb-physics-bank-0081": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Nuclear fission releases neutrons which can strike other nuclei, causing further fission events, leading to a chain reaction. The products are usually radioactive, neutrons *are* released, and mass is converted to energy (so mass is not conserved)."
+    },
+    "jamb-physics-bank-0082": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Volume expansivity γ = 3α = 3 × 2 × 10⁻⁵ = 6 × 10⁻⁵ K⁻¹.\nVnew = V₀(1 + γ Δ θ)\nVnew = 15(1 + 6 × 10⁻⁵ imes 100)\nVnew = 15(1 + 0.006) = 15(1.006) = 15.09 cm³."
+    },
+    "jamb-physics-bank-0083": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Conservation of momentum (inelastic collision):\nm₁ u₁ = (m₁ + m₂)v\n0.05 × 200 = (0.05 + 0.95)v\n10 = 1.0v Rightarrow v = 10 m/s.\nFinal K.E. = (1)/(2)(m₁+m₂)v² = 0.5 × 1.0 × 10² = 50 J."
+    },
+    "jamb-physics-bank-0084": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "At resonance in a series R-L-C circuit, the inductive reactance equals the capacitive reactance (X_L = X_C). Consequently, the voltage across the inductor equals the voltage across the capacitor (V_L = V_C). Since V_L = 40V, V_C is also 40V."
+    },
+    "jamb-physics-bank-0085": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Remaining fraction = 1/64 = (1/2)⁶. This represents 6 half-lives.\nTotal time = 120 years.\n6 × T₁/₂ = 120\nT₁/₂ = 20 years."
+    },
+    "jamb-physics-bank-0086": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Resonance occurs between pendulums of the same effective length. Visually, pendulum T has the same length as pendulum P."
+    },
+    "jamb-physics-bank-0087": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "According to Newton's Law of Cooling, the rate of heat loss is proportional to the temperature difference between the body and its surroundings."
+    },
+    "jamb-physics-bank-0088": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Induction: Rod X (+) attracts electrons in Y to the near side. Earthing (finger) allows electrons to flow from the ground onto Y to neutralize the repelled positive charge on the far side. When finger is removed, Y has excess electrons (Negative charge). The potential of a negatively charged body is negative relative to earth."
+    },
+    "jamb-physics-bank-0089": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Earthing connects the metal casing of appliances to the ground. If a fault causes the live wire to touch the casing, the large current flows to the earth (blowing the fuse) rather than through a person touching the appliance, preventing electric shock."
+    },
+    "jamb-physics-bank-0090": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Evaporation is the spontaneous process where liquid molecules at the surface gain enough energy to escape as vapor at any temperature."
+    },
+    "jamb-physics-bank-0091": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "In an NPN transistor symbol, the arrow on the emitter leg points OUTward (NPN = Not Pointing iN). Diagram D shows the standard symbol with the arrow pointing out."
+    },
+    "jamb-physics-bank-0092": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "The kinetic theory of matter explains the states of matter based on the intermolecular forces and the spacing between molecules (tightly packed/strong forces in solids, loose/weak in gases)."
+    },
+    "jamb-physics-bank-0093": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Convex mirrors always form virtual, erect, and diminished images. This property allows them to provide a wider field of view for drivers."
+    },
+    "jamb-physics-bank-0094": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "The quality (or timbre) of a sound depends on the number and relative intensities of overtones produced. This allows us to distinguish between different instruments playing the same note (pitch) and loudness."
+    },
+    "jamb-physics-bank-0095": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "In the method of magnetization by divided touch, the end of the bar where the stroking magnet *leaves* acquires the polarity opposite to that of the stroking pole. Here, South poles stroke outwards towards T and V. Therefore, both T and V will acquire North polarity."
+    },
+    "jamb-physics-bank-0096": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Appliances are connected in parallel so they all operate at the same rated mains voltage (e.g., 220V) and can be switched independently. The options provided are unusual. Option D is the most plausible by elimination: if connected in series, the voltage required to run all appliances simultaneously would need to be extremely high (sum of all voltages), or conversely, the available voltage would be split, leaving them underpowered."
+    },
+    "jamb-physics-bank-0097": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Angular velocity ω = v/r.\nω = 1 / 0.5 = 2 rads⁻¹."
+    },
+    "jamb-physics-bank-0098": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Velocity Ratio (V.R.) = Effort Distance / Load Distance = 2.\nEfficiency = (M.A. / V.R.) × 100\n90 = (M.A. / 2) × 100 Rightarrow 0.9 = M.A. / 2 Rightarrow M.A. = 1.8.\nM.A. = Load / Effort\n1.8 = 180 / Effort\nEffort = 180 / 1.8 = 100 N."
+    },
+    "jamb-physics-bank-0099": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "The circuit consists of three 2µF capacitors in parallel (on the left side ladder rungs), which act as a single block of 2+2+2 = 6μ F. This block is in series with the top 2µF capacitor and the bottom 3µF capacitor.\nfrac{1}{Ceq} = (1)/(6) + (1)/(2) + (1)/(3).\nLCM = 6: (1 + 3 + 2)/(6) = (6)/(6) = 1.\nCeq = 1μ F."
+    },
+    "jamb-physics-bank-0100": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Using the mirror formula (1)/(f) = (1)/(u) + (1)/(v): with f = 2.0 and u = 8.0, we get (1)/(v) = (1)/(2) - (1)/(8) = (3)/(8). Thus, v = (8)/(3) ≈ 2.67 units. The numerical value 2.7 matches option A, although there is a unit discrepancy (labeled 'm' instead of 'cm'). Assuming the inputs were in meters or the option unit is a typo, A is the intended answer."
+    },
+    "jamb-physics-bank-0101": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Utility companies measure electrical energy consumption in kilowatt-hours (kWh)."
+    },
+    "jamb-physics-bank-0102": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "The component of the resultant R along the direction of the force F making angle θ is F = R cos θ. Here, F = 50 cos 30^circ = 50 × 0.866 = 43.3 N."
+    },
+    "jamb-physics-bank-0103": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "The number of atoms halves every 20s: 1000 → 500 (20s) → 250 (40s) → 125 (60s). It takes 3 half-lives, so 60 seconds."
+    },
+    "jamb-physics-bank-0104": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Electric potential V due to a point charge q is given by V = (q)/(4πvarepsilon₀ r)."
+    },
+    "jamb-physics-bank-0105": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Transistor collector characteristic curves typically show current increasing with voltage initially (saturation) and then flattening out to a nearly constant value (active region). Graph D represents this behavior."
+    },
+    "jamb-physics-bank-0106": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Conduction in gases typically requires low pressure to increase the mean free path of ions/electrons, allowing them to gain sufficient energy from the electric field to cause ionization."
+    },
+    "jamb-physics-bank-0107": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "The Sun (II) and Stars (IV) produce their own light (luminous natural sources). The Moon (I) reflects sunlight, and street lights (III) are artificial."
+    },
+    "jamb-physics-bank-0108": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Light rays from the object bend away from the normal as they move from water to air, creating a virtual image at a shallower apparent depth. This is due to refraction."
+    },
+    "jamb-physics-bank-0109": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Work done W = F s cos θ = 2 × 3 × cos 60^circ = 6 × 0.5 = 3 J."
+    },
+    "jamb-physics-bank-0110": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Using Newton's Law of Gravitation F = G (m₁ m₂)/(r²) with G ≈ 6.67 × 10⁻¹¹, m₁=5, m₂=10, r=0.3: F ≈ 3.70 × 10⁻⁸ N. The options are in the order of 10⁻², suggesting a large error in the question's parameters or units (e.g., if G were not involved or masses were much larger). However, the digits '3.71' in option B closely match the calculated digits '3.70', making it the intended answer despite the power-of-ten discrepancy."
+    },
+    "jamb-physics-bank-0111": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Glass is a poor conductor of heat. In a thick tumbler, the inner surface expands significantly before the heat reaches the outer surface, creating uneven expansion and stress that causes cracking."
+    },
+    "jamb-physics-bank-0112": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "On a typical stress-strain curve, the point at the very end where the material fails/fractures is the breaking point."
+    },
+    "jamb-physics-bank-0113": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Polarization restricts vibrations to a specific plane, which is possible only for transverse waves. Longitudinal waves oscillate along the direction of propagation and cannot be polarized."
+    },
+    "jamb-physics-bank-0114": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "The visible spectrum follows the order ROYGBIV. Red and Blue are further apart in wavelength (and refractive index) than the adjacent pairs listed in other options, resulting in wider separation."
+    },
+    "jamb-physics-bank-0115": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "For a series R-L circuit, the voltage across the resistor (V_R) is in phase with the current, while the voltage across the inductor (V_L) leads the current by 90°. The vector diagram A correctly shows V_R horizontally and V_L vertically upwards."
+    },
+    "jamb-physics-bank-0116": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "The two primary applications of transistors in electronics are as electronic switches and as amplifiers."
+    },
+    "jamb-physics-bank-0117": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Regelation is the phenomenon of melting under pressure (lowering melting point) and refreezing when the pressure is reduced."
+    },
+    "jamb-physics-bank-0118": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Vernier calipers are equipped with internal jaws specifically designed to measure internal diameters."
+    },
+    "jamb-physics-bank-0119": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Using linear interpolation: T = frac{R_T - R₀}{R₁₀₀ - R₀} × 100. Substituting values: T = (6.0 - 3.0)/(8.0 - 3.0) × 100 = (3)/(5) × 100 = 60^circtext{C}."
+    },
+    "jamb-physics-bank-0120": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Pressure is Force/Area. Dimensions are [MLT⁻²] / [L²] = ML⁻¹T⁻². Option C is ML⁻²T⁻², which contains a typo (L⁻² instead of L⁻¹), but it is the standard intended answer for this common question variation."
+    },
+    "jamb-physics-bank-0121": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Energy E = (1)/(2)CV² = 0.5 × 8× 10⁻⁶ × (100)² = 4× 10⁻⁶ × 10⁴ = 4.0 × 10⁻² J."
+    },
+    "jamb-physics-bank-0122": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Cathode rays are streams of electrons (negatively charged particles). They are deflected by both electric and magnetic fields. Therefore, only statement I is correct."
+    },
+    "jamb-physics-bank-0123": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Focal length f = R/2 = 18 cm. For a real image with magnification 3, v = 3u. Mirror formula: (1)/(u) + (1)/(3u) = (1)/(18) Rightarrow (4)/(3u) = (1)/(18) Rightarrow 3u = 72 Rightarrow u = 24 cm."
+    },
+    "jamb-physics-bank-0124": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "The two 2 µF capacitors are in parallel, giving 2+2=4 μ F. This combination is in series with the 4 µF capacitor. The equivalent capacitance is (4 × 4) / (4 + 4) = 16 / 8 = 2.0 μ F."
+    },
+    "jamb-physics-bank-0125": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Frequency f propto √(T). So, T₂ = T₁ ((f₂)/(f₁))² = 10 × ((350)/(250))² = 10 × (1.4)² = 10 × 1.96 = 19.6 N."
+    },
+    "jamb-physics-bank-0126": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Distance between adjacent compression and rarefaction is λ/2. So, λ/2 = 0.17 m Rightarrow λ = 0.34 m. Frequency f = v/λ = 340 / 0.34 = 1000 Hz."
+    },
+    "jamb-physics-bank-0127": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "A musical note is an octave higher than another if its frequency is exactly twice that of the first note."
+    },
+    "jamb-physics-bank-0128": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A cone resting on its slant edge is in neutral equilibrium because if it is rolled, the height of its center of gravity remains constant."
+    },
+    "jamb-physics-bank-0129": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Convex mirrors are used in vehicles because they form an upright (erect) image and provide a wide field of view. Statement III is incorrect as the focal length is not the primary reason for this application."
+    },
+    "jamb-physics-bank-0130": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Total power P = (5 × 50) + (4 × 100) = 250 + 400 = 650 W = 0.65 kW. Energy E = 0.65 × 10 = 6.5 kWh. Cost = 6.5 × 2 kobo = 13 kobo. In Naira, 13 kobo is N 0.13."
+    },
+    "jamb-physics-bank-0131": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "The specific latent heat of vaporization is typically much greater than that of fusion because completely separating molecules into the gas phase requires more energy than partially overcoming forces to melt a solid."
+    },
+    "jamb-physics-bank-0132": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A hydrometer measures the specific gravity (relative density) of liquids based on the principle of flotation (Archimedes' principle)."
+    },
+    "jamb-physics-bank-0133": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Using the transformer equation V_s/V_p = N_s/N_p: V_s = V_p × (N_s/N_p) = 100 × (30/300) = 100 × 0.1 = 10 V."
+    },
+    "jamb-physics-bank-0134": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Radioactive activity is independent of physical conditions like temperature. It depends on the quantity of radioactive material present. 'Age' determines how much material remains due to decay, and 'purity' relates to the concentration/amount of the radioactive isotope. Thus, purity and age are the relevant factors among the choices."
+    },
+    "jamb-physics-bank-0135": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Speed in medium v = c/n = (3 × 10⁸) / (4/3) = 3 × 10⁸ × (3/4) = 2.25 × 10⁸ m s⁻¹."
+    },
+    "jamb-physics-bank-0136": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "According to Faraday's Law, the induced EMF is proportional to the rate of change of magnetic flux (N (dPhi)/(dt)). This depends on the number of turns (N), the strength of the magnet (determining Phi), and the speed of motion (determining dt)."
+    },
+    "jamb-physics-bank-0137": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "The electrochemical equivalent z = 0.0033 g/C. Mass m = zIt. So, 1.98 = 0.0033 × 2 × t. t = 1.98 / 0.0066 = 300 s. Converting to minutes: 300/60 = 5 minutes."
+    },
+    "jamb-physics-bank-0138": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "A metre rule has a smallest division of 1 mm. The least possible reading error is half the smallest division: ± 0.5 text{mm}."
+    },
+    "jamb-physics-bank-0139": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A transformer operates on alternating magnetic flux, so the induced emf in the secondary is alternating with time (i.e., varying)."
+    },
+    "jamb-physics-bank-0140": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Work done W=mgh. Taking g≈ 10 m s⁻²: W=5000× 10× 60=3.0× 10⁶ J. Time t=15 min=900 s. Power P=W/t=(3.0× 10⁶)/(900)=3.33× 10³ W≈ 3.3× 10³ J s⁻¹."
+    },
+    "jamb-physics-bank-0141": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Using Δ T=(Q)/(mc) with m=0.1 kg, c=4200 J kg⁻¹K⁻¹: Δ T=(500)/(0.1× 4200)=1.19 K≈ 1.2circC."
+    },
+    "jamb-physics-bank-0142": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Gamma rays are uncharged electromagnetic radiation, so they are not deflected by electric or magnetic fields."
+    },
+    "jamb-physics-bank-0143": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Gas conduction requires ionization, which is achieved most readily at low pressure with sufficiently high potential difference."
+    },
+    "jamb-physics-bank-0144": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Different wavelengths travel at different speeds (different refractive indices) in glass, causing different refractions and hence dispersion."
+    },
+    "jamb-physics-bank-0145": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "The 3Ω and 6Ω resistors are in parallel: frac{1}{Req}=(1)/(3)+(1)/(6)=(1)/(2)Rightarrow Req=2 Ω. Total current is 4.0 A, so E=IReq=4× 2=8 V."
+    },
+    "jamb-physics-bank-0146": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "At limiting equilibrium, frictional force F_f = μ_s N. On a horizontal surface, N=mg=80× 10=800 N. If the pulling force is just balanced by maximum static friction, 500=μ_s× 800Rightarrow μ_s=(500)/(800)=0.625. This is closest to 0.6 (A), not 0.4. Since only one answer is expected but no option equals 0.625, the nearest option is A."
+    },
+    "jamb-physics-bank-0147": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Initial equilibrium implies moments about O balance: P d_P = Q d_Q. Adding 2P makes left moment larger; to restore balance, reduce the left moment by reducing its lever arm, i.e., move P nearer to O."
+    },
+    "jamb-physics-bank-0148": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Speed in glass v=(c)/(n)=(3.0× 10⁸)/(1.5)=2.0× 10⁸ m s⁻¹. Thickness d=0.9 cm=9.0× 10⁻³ m. Time t=(d)/(v)=frac{9.0× 10⁻³}{2.0× 10⁸}=4.5× 10⁻¹¹ s. This matches option B, not A."
+    },
+    "jamb-physics-bank-0149": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "In an a.c. radio set, the transformer is used to reduce the mains voltage to a lower value suitable for the circuit."
+    },
+    "jamb-physics-bank-0150": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Conserve mass number: left 235+1=236. Right 144+90=234, so 2 units missing → two neutrons, hence X is a neutron."
+    },
+    "jamb-physics-bank-0151": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Soft iron provides magnetic shielding by offering a low-reluctance path for magnetic field lines."
+    },
+    "jamb-physics-bank-0152": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "From the diagram, the angle to the normal in air is 60° and in medium M is 30°. Using Snell’s law with air n≈ 1: n_M = (sin 60^circ)/(sin 30^circ)=frac{√(3)/2}{1/2}=√(3). That would be option B, but the diagram labels are ambiguous (both 60° markings are visible). If instead the refracted angle is 60° in M and incident is 30° in air, then n_M=(sin 30^circ)/(sin 60^circ)=frac{1/2}{√(3)/2}=frac{1}{√(3)} (option C). Because the angle labels are not unambiguous in the upload, a unique choice cannot be made."
+    },
+    "jamb-physics-bank-0153": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Thermal equilibrium means no net heat flow, which occurs when both objects have the same temperature."
+    },
+    "jamb-physics-bank-0154": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Stationary waves are produced by superposition of two waves of equal frequency and amplitude travelling in opposite directions."
+    },
+    "jamb-physics-bank-0155": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "From the diagram, V_L=8 V and V_R=6 V. In a series RL circuit, V=√(V_R²+V_L²)=√(6²+8²)=√(100)=10 V."
+    },
+    "jamb-physics-bank-0156": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "In a closed pipe, the closed end is a displacement node and the open end is a displacement antinode."
+    },
+    "jamb-physics-bank-0157": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Melting absorbs latent heat; mass remains the same. Ice has larger volume than water for the same mass, so volume decreases on melting."
+    },
+    "jamb-physics-bank-0158": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "The vectors are arranged head-to-tail in a closed triangle, so their vector sum is zero: vec P+vec Q+vec R=0."
+    },
+    "jamb-physics-bank-0159": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Parallel currents in the same direction attract due to the magnetic force between the conductors."
+    },
+    "jamb-physics-bank-0160": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A leaf appears green because it reflects green light and absorbs most other colours; thus II and III are correct, I is false."
+    },
+    "jamb-physics-bank-0161": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Cell emf depends on electrode materials, electrolyte, and temperature, but not on the physical size of the cell (size affects internal resistance/capacity)."
+    },
+    "jamb-physics-bank-0162": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "The box resonates with the tuning fork frequency, increasing amplitude and loudness."
+    },
+    "jamb-physics-bank-0163": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Initial momentum is zero. After splitting, momenta are equal and opposite: mv = (M-m)u. So u=(mv)/(M-m)."
+    },
+    "jamb-physics-bank-0164": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Use m=zIt. Given m=36.0 g, z=0.0012 g/C, t=5.0 min=300 s. I=(m)/(zt)=(36.0)/(0.0012× 300)=(36.0)/(0.36)=100 A."
+    },
+    "jamb-physics-bank-0165": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Induction coils work by electromagnetic induction (Faraday’s law)."
+    },
+    "jamb-physics-bank-0166": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Remaining after 3 half-lives: N(tfrac{1}{2})³=tfrac{N}{8}. Disintegrated: N-tfrac{N}{8}=tfrac{7N}{8}."
+    },
+    "jamb-physics-bank-0167": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "High density makes the barometer column short and practical."
+    },
+    "jamb-physics-bank-0168": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Radioactivity is not affected by external electric/magnetic fields (though fields can deflect charged radiation after emission)."
+    },
+    "jamb-physics-bank-0169": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Inertia is resistance to changes in state of motion: reluctance to start moving and to stop once moving."
+    },
+    "jamb-physics-bank-0170": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Beyond the elastic limit, deformation becomes permanent and the spring does not return to original length."
+    },
+    "jamb-physics-bank-0171": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A real image can be formed on a screen (I), is inverted and in front of the mirror (II), and results from actual convergence of rays (IV). III describes virtual images."
+    },
+    "jamb-physics-bank-0172": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Soap, detergents, and alcohol reduce water surface tension. Grease does not act as a surfactant in water to reduce its surface tension."
+    },
+    "jamb-physics-bank-0173": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Water shows anomalous expansion between 0°C and 4°C (it contracts when heated from 0°C to 4°C)."
+    },
+    "jamb-physics-bank-0174": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Strain =(Δ L)/(L)=frac{6 text{mm}}{10 text{cm}}=frac{0.6 text{cm}}{10 text{cm}}=0.06. The correct strain is 0.06, which is not among the options shown; the listed 6.0× 10⁻³ equals 0.006. Therefore, there is a mismatch between the data and options in the image."
+    },
+    "jamb-physics-bank-0175": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "The diagram shows an objective lens forming an intermediate image and an eyepiece lens producing a final image for viewing—typical of an astronomical telescope setup."
+    },
+    "jamb-physics-bank-0176": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "At rest, component of weight down the plane is balanced by friction: mgsinθ = F. Here mg=6× 10=60 N. So 60sinθ = 30Rightarrow sinθ=tfrac{1}{2}Rightarrow θ=30^circ."
+    },
+    "jamb-physics-bank-0177": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Refractive index n=(c)/(v)Rightarrow v=(c)/(n)=(3.0× 10⁸)/(1.65)=1.818× 10⁸ text{m s}⁻¹≈ 1.82× 10⁸ text{m s}⁻¹."
+    },
+    "jamb-physics-bank-0178": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Polarization is a property of transverse waves; longitudinal waves cannot be polarized."
+    },
+    "jamb-physics-bank-0179": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A microphone converts sound vibrations into electrical signals."
+    },
+    "jamb-physics-bank-0180": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "A calorimeter should absorb little heat itself (low heat capacity) and reduce heat exchange with surroundings (poor conductor)."
+    },
+    "jamb-physics-bank-0181": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "β-particles are charged (electrons/positrons) with small mass, so they are strongly deflected. γ-rays and X-rays are uncharged electromagnetic waves and are not deflected."
+    },
+    "jamb-physics-bank-0182": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "The curved meniscus results from surface tension and adhesion between water and glass."
+    },
+    "jamb-physics-bank-0183": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "A dynamo (generator) converts mechanical energy to electrical energy by electromagnetic induction."
+    },
+    "jamb-physics-bank-0184": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A tube length equals one wavelength when the standing-wave pattern contains one complete cycle along the tube (two loops). Diagram D shows two loops filling the tube, corresponding to L=λ."
+    },
+    "jamb-physics-bank-0185": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "At balance point, a potentiometer measures emf without drawing current from the cell, avoiding internal resistance errors."
+    },
+    "jamb-physics-bank-0186": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Electric field has both magnitude and direction; the others are scalars."
+    },
+    "jamb-physics-bank-0187": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A photocell is based on the photoelectric effect: emission of electrons due to incident light."
+    },
+    "jamb-physics-bank-0188": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Loss or gain of electrons produces a charged atom (ion)."
+    },
+    "jamb-physics-bank-0189": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Echo sounding uses reflection of sound waves from the seabed."
+    },
+    "jamb-physics-bank-0190": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Fusion combines light nuclei to form a heavier nucleus and releases energy. Neutrons/protons may or may not appear depending on the reaction, but the general outcomes are a heavier nucleus and energy."
+    },
+    "jamb-physics-bank-0191": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "A dull black surface (soot) is a better emitter of thermal radiation than a polished surface, so it cools faster by radiation."
+    },
+    "jamb-physics-bank-0192": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "A solar eclipse occurs when the moon comes between the sun and the earth."
+    },
+    "jamb-physics-bank-0193": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Red deviates least and violet most, giving maximum separation."
+    },
+    "jamb-physics-bank-0194": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "In SHM, F=ma and both are proportional to -x, so force and acceleration are in phase. Displacement is 180° out of phase with acceleration/force, and velocity is 90° out of phase with displacement."
+    },
+    "jamb-physics-bank-0195": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Upthrust in water = 10 − 6 = 4 N. Upthrust in liquid X = 10 − 7 = 3 N. Relative density =frac{ρ_X}{rhowater}=frac{text{upthrust in X}}{text{upthrust in water}}=(3)/(4)."
+    },
+    "jamb-physics-bank-0196": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "The sun produces energy mainly by nuclear fusion of hydrogen into helium."
+    },
+    "jamb-physics-bank-0197": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Heisenberg: Δ x Δ p ge (h)/(4π). Using h=6.6× 10⁻³⁴ J s: Δ p ≈ frac{6.6× 10⁻³⁴}{4π× 5× 10⁻¹⁰}≈ 1.05× 10⁻²⁵ N s. None matches exactly; if the paper uses Δ xΔ p ≈ (h)/(2π), then Δ p≈ frac{6.6× 10⁻³⁴}{2π× 5× 10⁻¹⁰}≈ 2.1× 10⁻²⁵ N s. Options are 10⁻²⁴; closest is D (3.30×10⁻²⁴) but the numerical mismatch suggests either different constants/rounding were intended."
+    },
+    "jamb-physics-bank-0198": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Volume of ice: V_i=(450)/(900)=0.50 m³. Volume of water: V_w=(450)/(1000)=0.45 m³. Change Δ V=V_i-V_w=0.05 m³. That matches option D, not B."
+    },
+    "jamb-physics-bank-0199": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Emission of electrons from a heated metal surface is thermionic emission."
+    },
+    "jamb-physics-bank-0200": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A pure spectrum is produced by using a collimator (convex lens) to form a parallel beam into the prism and a convex lens (telescope) to focus/observe the spectrum; hence prism with two convex lenses."
+    },
+    "jamb-physics-bank-0201": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "The chain grounds the tanker to discharge static electricity, preventing sparks."
+    },
+    "jamb-physics-bank-0202": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A black body is an ideal absorber and emitter."
+    },
+    "jamb-physics-bank-0203": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Work W=mgh=5000× 10× 60=3.0× 10⁶ J. Time t=50 min=3000 s. Power P=(3.0× 10⁶)/(3000)=1.0× 10³ W. None of the options matches 1000 W; option B (3.3×10³) and D (3.3×10²) are not equal. This indicates an inconsistency between the printed data and options."
+    },
+    "jamb-physics-bank-0204": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Wavelength λ=15 cm=0.15 m. Frequency f=(v)/(λ)=(300)/(0.15)=2000 Hz=2.0× 10³ Hz."
+    },
+    "jamb-physics-bank-0205": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Energy E=Pt. P=60 W, t=1 h=3600 s. E=60× 3600=216000 J=2.16× 10⁵ J. That matches option B, not D."
+    },
+    "jamb-physics-bank-0206": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "The retina is the light-sensitive surface of the eye; camera film/sensor plays the same role."
+    },
+    "jamb-physics-bank-0207": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "The header shows \"PAPER TYPE: F\"."
+    },
+    "jamb-physics-bank-0208": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Displacement is a vector quantity (magnitude + direction)."
+    },
+    "jamb-physics-bank-0209": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Torque and momentum are vectors. Electrical potential and kinetic energy are scalars."
+    },
+    "jamb-physics-bank-0210": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A rolling wheel rotates about its axle while the car moves forward (translation)."
+    },
+    "jamb-physics-bank-0211": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Acceleration is the slope of a velocity–time graph. Zero acceleration corresponds to a horizontal segment; NS is horizontal."
+    },
+    "jamb-physics-bank-0212": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Use v²=u²+2as. From rest u=0: v²=2(3)(24)=144Rightarrow v=12 text{m s}⁻¹."
+    },
+    "jamb-physics-bank-0213": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Escape velocity v_e=√(2gR). Using g≈ 10 text{m s}⁻², R=6.4× 10⁶ m: v_e=√(2× 10× 6.4× 10⁶)=√(1.28× 10⁸)≈ 1.13× 10⁴ text{m s}⁻¹=11.3 text{km s}⁻¹."
+    },
+    "jamb-physics-bank-0214": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "For translational equilibrium, the resultant (vector sum) of forces must be zero."
+    },
+    "jamb-physics-bank-0215": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "For three coplanar non-parallel forces to be in equilibrium, their lines of action must be concurrent (meet at one point)."
+    },
+    "jamb-physics-bank-0216": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Ignoring air resistance, loss of PE becomes KE: KE=mgh=20× 10× 10=2000 J."
+    },
+    "jamb-physics-bank-0217": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Nuclear energy produces heat that drives turbines to generate electrical energy."
+    },
+    "jamb-physics-bank-0218": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Efficiency η=(MA)/(VR). So MA=η VR=0.75× 4=3. Since MA=(L)/(E), effort E=(L)/(MA)=(1000)/(3)=333.33 N."
+    },
+    "jamb-physics-bank-0219": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Mechanical advantage MA=(800)/(250)=3.2. Velocity ratio VR=(800)/(200)=4. Efficiency η=(MA)/(VR)× 100=(3.2)/(4)× 100=80%."
+    },
+    "jamb-physics-bank-0220": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Stress σ=(F)/(A)=(500)/(0.2)=2500 text{N m}⁻²=2.5× 10³ text{N m}⁻²."
+    },
+    "jamb-physics-bank-0221": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Elastic limit is the point beyond which deformation is no longer fully elastic (end of Hooke’s law/elastic region). On the typical curve shown, this corresponds to point R."
+    },
+    "jamb-physics-bank-0222": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Dew forms by condensation of water vapour on cool grass surfaces."
+    },
+    "jamb-physics-bank-0223": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Convert: circC = K - 273. So 20-273=-253 circC."
+    },
+    "jamb-physics-bank-0224": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Volume expansivity β≈ 3α=3(9× 10⁻⁶)=2.7× 10⁻⁵ K⁻¹. Δ T=30 K. Δ V=β VΔ T = (2.7× 10⁻⁵)(2× 10⁴)(30)=16.2 text{cm}³. New volume =20000+16.2=20016.2 text{cm}³."
+    },
+    "jamb-physics-bank-0225": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Charles’ law: (V)/(T)=text{constant} at constant pressure. This corresponds to P⁰V¹T⁻¹=text{constant}, i.e., a=0, b=1, c=-1."
+    },
+    "jamb-physics-bank-0226": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Heat capacity is the heat required to raise the temperature of the whole body by 1 K."
+    },
+    "jamb-physics-bank-0227": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "For a pure substance, melting point equals freezing (solidification) point."
+    },
+    "jamb-physics-bank-0228": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Dew point is the temperature at which air becomes saturated with water vapour."
+    },
+    "jamb-physics-bank-0229": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Convection currents arise because heating changes density; less dense (warmer) fluid rises and denser (cooler) fluid sinks."
+    },
+    "jamb-physics-bank-0230": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Wavelength λ=15 cm=0.15 m. Frequency f=(v)/(λ)=(300)/(0.15)=2000 Hz=2.0× 10³ Hz."
+    },
+    "jamb-physics-bank-0231": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Echo time is for to-and-fro travel. Using v≈ 330 m s⁻¹: distance d=(vt)/(2)=(330× 0.8)/(2)=132 m. Closest option is C (136 m), not D. (Options suggest a different speed; if v=660 m s⁻¹ then 264 m. With standard sound speed, C is the closest.)"
+    },
+    "jamb-physics-bank-0232": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Magnification m=(v)/(u). Here v=25 cm=0.25 m, u=10 m. m=0.25/10=0.025=2.5× 10⁻²."
+    },
+    "jamb-physics-bank-0233": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "A compound microscope uses a short focal length objective and a short focal length eyepiece to achieve large magnification; thus “short” best describes them."
+    },
+    "jamb-physics-bank-0234": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "In normal adjustment, an astronomical telescope forms the final image at infinity for relaxed viewing."
+    },
+    "jamb-physics-bank-0235": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "A negative rod induces electrons to move toward the cap, reducing positive charge on the leaf and decreasing divergence (collapse)."
+    },
+    "jamb-physics-bank-0236": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Charge Q=CV=0.1× 10=1 C."
+    },
+    "jamb-physics-bank-0237": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Maximum power transfer theorem: maximum power is delivered when Rexternal=rinternal."
+    },
+    "jamb-physics-bank-0238": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Resistivity ρ=(RA)/(L). Area A=0.8 text{mm}²=0.8× 10⁻⁶ m². ρ=frac{60× 0.8× 10⁻⁶}{4}=12× 10⁻⁶=1.2× 10⁻⁵ Ω m. None matches exactly; closest is B (3.0×10⁻⁵) or D (3.2×10⁻⁶) but neither equals 1.2×10⁻⁵. This indicates an inconsistency between the given values and options."
+    },
+    "jamb-physics-bank-0239": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Parallel reduces resistance: Req=(200R)/(200+R)=120. Solve: 120(200+R)=200RRightarrow 24000+120R=200RRightarrow 24000=80RRightarrow R=300 Ω."
+    },
+    "jamb-physics-bank-0240": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Best method is using an alternating current in a solenoid and gradually reducing the current (AC demagnetization)."
+    },
+    "jamb-physics-bank-0241": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "At the magnetic equator, Earth’s field is horizontal, so dip angle is 0°."
+    },
+    "jamb-physics-bank-0242": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Two light nuclei combine to form a heavier nucleus with energy released: nuclear fusion."
+    },
+    "jamb-physics-bank-0243": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "In β^- decay, a neutron turns into a proton, so atomic number increases by 1."
+    },
+    "jamb-physics-bank-0244": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Charge Q=It=4× (2× 3600)=28800 C. Mass m=zQ=(3.3× 10⁻⁷)(28800)=9.504× 10⁻³ kg. This matches option C, not D."
+    },
+    "jamb-physics-bank-0245": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Neon gives a characteristic reddish/pink glow in discharge tubes (neon lamps)."
+    },
+    "jamb-physics-bank-0246": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Mass number drops 210→206 (−4) and atomic number drops 82→80 (−2), which corresponds to alpha emission."
+    },
+    "jamb-physics-bank-0247": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "In a common-emitter amplifier, the output is taken from the collector circuit (collector relative to emitter)."
+    },
+    "jamb-physics-bank-0248": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "A transistor output characteristic typically rises with voltage and then tends toward saturation (levels off). Among the shown plots, graph D best matches that shape."
+    },
+    "jamb-physics-bank-0249": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "The header in the image clearly states \"PAPER TYPE: D\"."
+    },
+    "jamb-physics-bank-0250": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Mass is independent of location; only weight changes with the gravitational field."
+    },
+    "jamb-physics-bank-0251": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Let the force be F and resultant be R. If F makes angle 30° with R, then F = Rcos 30^circ. So F = 50×frac{√(3)}{2} ≈ 43.3 N."
+    },
+    "jamb-physics-bank-0252": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Volume and area are scalars. Moment (torque), momentum, displacement and impulse are vectors."
+    },
+    "jamb-physics-bank-0253": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "For a pendulum, Tpropto √(L). So T₂=T₁√((0.8)/(0.4))=2√(2) s."
+    },
+    "jamb-physics-bank-0254": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Use v=u+at. With v=0, u=20, a=-2: 0=20-2tRightarrow t=10 s."
+    },
+    "jamb-physics-bank-0255": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Apparent weight (normal reaction) is N=m(g-a)=70(10-1.5)=595 N. (The printed phrase “apparent weight loss” conflicts with the options; the computed apparent weight matches option B.)"
+    },
+    "jamb-physics-bank-0256": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "For floating equilibrium: fraction immersed =rhocork/rholiquid=(0.25× 10³)/(1.25× 10³)=0.2."
+    },
+    "jamb-physics-bank-0257": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Set mgh = tfrac12 mv²Rightarrow h=(v²)/(2g)=(25)/(20)=1.25 m≈ 1.3 m."
+    },
+    "jamb-physics-bank-0258": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Work W=mgh=5000× 10× 60=3.0× 10⁶ J. Time t=15 min=900 s. Power P=W/t=3.0× 10⁶/900≈ 3.3× 10³ W."
+    },
+    "jamb-physics-bank-0259": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Perfectly smooth implies no friction, so coefficient is 0."
+    },
+    "jamb-physics-bank-0260": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Velocity ratio VR=2. Efficiency η=(MA)/(VR)Rightarrow MA=η VR=0.9× 2=1.8. Effort E=(L)/(MA)=(180)/(1.8)=100 N."
+    }
+  }
+}

@@ -69,7 +69,7 @@ func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
 			"answers unlock after the attempt is graded (current: "+attempt.Status+")")
 		return
 	}
-	bundle, ok := s.lib.Bundle(attempt.Code)
+	bundle, ok := s.ensurePaperRequest(r, attempt.Code)
 	if !ok {
 		fail(w, http.StatusInternalServerError, "internal", "pack no longer available")
 		return
