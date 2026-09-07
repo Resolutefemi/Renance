@@ -36,6 +36,7 @@ type reviewQuestion struct {
 	QuestionID  string            `json:"questionId"`
 	Stem        string            `json:"stem"`
 	Topic       string            `json:"topic,omitempty"`
+	Year        int               `json:"year,omitempty"`
 	Options     map[string]string `json:"options,omitempty"`
 	Selected    string            `json:"selected,omitempty"`
 	Correct     string            `json:"correct"`
@@ -101,6 +102,7 @@ func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
 			QuestionID:  q.ID,
 			Stem:        q.Stem,
 			Topic:       q.Topic,
+			Year:        q.Year,
 			Options:     q.Options,
 			Selected:    chosen[q.ID],
 			Correct:     key.Letter,

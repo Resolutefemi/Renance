@@ -1,7 +1,15 @@
 {
-  "generatedAt": "2026-09-04T19:57:45+00:00",
+  "generatedAt": "2026-09-07T19:56:08Z",
   "version": "era2-g1",
   "exams": [
+    {
+      "code": "jamb-biology-bank",
+      "title": "JAMB Biology | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "bundleSha256": "35a885026eada93fcb630085c4a327a4a4208026065757d8e35a6deb1b2837e5",
+      "sizeBytes": 114045
+    },
     {
       "code": "jamb-biology-mock",
       "title": "JAMB Biology | Practice Mock",
@@ -12,6 +20,30 @@
       "body": "JAMB",
       "bundleSha256": "39a93fe42a122a5ef0f252989260e34d56f5e9f29370a5e77f0749e2670bd103",
       "sizeBytes": 5312
+    },
+    {
+      "code": "jamb-chemistry-bank",
+      "title": "JAMB Chemistry | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "bundleSha256": "dae0610202e3333910782512edb8c38a131ed50c2762d854979ba018a61faf60",
+      "sizeBytes": 110296
+    },
+    {
+      "code": "jamb-economics-bank",
+      "title": "JAMB Economics | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "bundleSha256": "9d588bd888258faaafcb11c6d5c08c971a4a2cdb537a99d6d7919f112dba3895",
+      "sizeBytes": 115146
+    },
+    {
+      "code": "jamb-english-bank",
+      "title": "JAMB Use of English | Past Questions Bank",
+      "questionCount": 360,
+      "totalMarks": 360,
+      "bundleSha256": "fcf18acff33d31a42a1a4098f0c657ad71de1860ee303f6c80ba1e11ccdc41fd",
+      "sizeBytes": 137268
     },
     {
       "code": "jamb-english-mock",
@@ -25,6 +57,30 @@
       "sizeBytes": 6936
     },
     {
+      "code": "jamb-geography-bank",
+      "title": "JAMB Geography | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "bundleSha256": "780609ad2eae6b07d3b425a290fd952b4e81fe13dc5b43487e2add77b72f8f70",
+      "sizeBytes": 109445
+    },
+    {
+      "code": "jamb-government-bank",
+      "title": "JAMB Government | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "bundleSha256": "b69984d9a5ab456d241483505cc0b8880856aa23e783a65106d2bf8f2af196bd",
+      "sizeBytes": 114754
+    },
+    {
+      "code": "jamb-mathematics-bank",
+      "title": "JAMB Mathematics | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "bundleSha256": "3a46a82a5f242c266c3cab3e831bd5150767c29e04065312f0215e489c98c068",
+      "sizeBytes": 85401
+    },
+    {
       "code": "jamb-mathematics-mock",
       "title": "JAMB Mathematics | Practice Mock",
       "questionCount": 15,
@@ -34,6 +90,14 @@
       "body": "JAMB",
       "bundleSha256": "25894e225732d2cc29bf5fdf3e9941bb6aa7d957ac0786d3c61710b7e6be4625",
       "sizeBytes": 5022
+    },
+    {
+      "code": "jamb-physics-bank",
+      "title": "JAMB Physics | Past Questions Bank",
+      "questionCount": 260,
+      "totalMarks": 260,
+      "bundleSha256": "73c261f260a1353e3b0b43f52e1a1ea1111739e4c59a0ee8f3f9b35ad3d81c24",
+      "sizeBytes": 107143
     },
     {
       "code": "jamb-physics-mock",
@@ -47,76 +111,34 @@
       "sizeBytes": 5320
     },
     {
-      "code": "jamb-english-bank",
-      "title": "JAMB Use of English | Past Questions Bank",
-      "questionCount": 360,
-      "totalMarks": 360,
+      "code": "waec-biology-bank",
+      "title": "WAEC Biology | Past Questions Bank",
+      "questionCount": 742,
+      "totalMarks": 742,
       "category": "secondary",
-      "bundleSha256": "d1409da288492edc08bc9d666ecb46ff6616c19af415f690e6ca838d016e78b6",
-      "sizeBytes": 130549
+      "body": "WAEC",
+      "bundleSha256": "802062594c27b2797d76b57e92b49515186578276546a74c10fa641bffe65a1f",
+      "sizeBytes": 321433
     },
     {
-      "code": "jamb-mathematics-bank",
-      "title": "JAMB Mathematics | Past Questions Bank",
-      "questionCount": 260,
-      "totalMarks": 260,
+      "code": "waec-english-bank",
+      "title": "WAEC English | Lexis \u0026 Structure Bank",
+      "questionCount": 1800,
+      "totalMarks": 1800,
       "category": "secondary",
-      "bundleSha256": "69b7ad49b165b606eaf415845c521bdd7993734cdc77617616495d0e0d1a7d2e",
-      "sizeBytes": 84662
+      "body": "WAEC",
+      "bundleSha256": "c0fa0af5fa6261f543e474592e98fd672030266d09f9e0d4e12af6085b31b9c2",
+      "sizeBytes": 709546
     },
     {
-      "code": "jamb-physics-bank",
-      "title": "JAMB Physics | Past Questions Bank",
-      "questionCount": 260,
-      "totalMarks": 260,
+      "code": "waec-english-reading-bank",
+      "title": "WAEC English | Comprehension \u0026 Summary Bank",
+      "questionCount": 45,
+      "totalMarks": 45,
       "category": "secondary",
-      "bundleSha256": "51b8c1c154f7e580bdb7cfa678cc7e628ae3016a0a31c394d81b9c0a491b179a",
-      "sizeBytes": 102204
-    },
-    {
-      "code": "jamb-chemistry-bank",
-      "title": "JAMB Chemistry | Past Questions Bank",
-      "questionCount": 260,
-      "totalMarks": 260,
-      "category": "secondary",
-      "bundleSha256": "8c67ce4dcdf608a5e2329646ac78decce25ad30c0a6e325069435f05431aa2ad",
-      "sizeBytes": 105157
-    },
-    {
-      "code": "jamb-biology-bank",
-      "title": "JAMB Biology | Past Questions Bank",
-      "questionCount": 260,
-      "totalMarks": 260,
-      "category": "secondary",
-      "bundleSha256": "b911cc0ad1d2908113b63edb18f3d538af87f805dd64a44c2931475349f617ab",
-      "sizeBytes": 109326
-    },
-    {
-      "code": "jamb-economics-bank",
-      "title": "JAMB Economics | Past Questions Bank",
-      "questionCount": 260,
-      "totalMarks": 260,
-      "category": "secondary",
-      "bundleSha256": "e5f8832f185b978303a099300625427f774aa030be0d3cd9421617f3574cf96d",
-      "sizeBytes": 109947
-    },
-    {
-      "code": "jamb-government-bank",
-      "title": "JAMB Government | Past Questions Bank",
-      "questionCount": 260,
-      "totalMarks": 260,
-      "category": "secondary",
-      "bundleSha256": "b4e93667f84b846f21503bd3a5b45c31df01acc2d7fde7f3e1799870cb582067",
-      "sizeBytes": 114755
-    },
-    {
-      "code": "jamb-geography-bank",
-      "title": "JAMB Geography | Past Questions Bank",
-      "questionCount": 260,
-      "totalMarks": 260,
-      "category": "secondary",
-      "bundleSha256": "88e0cd3df744450410aec5a8abf4602a2479ec8e3f447c6c0a265f7e3845cc3e",
-      "sizeBytes": 109446
+      "body": "WAEC",
+      "bundleSha256": "7f5433786bb3366dc768a6d8c64092ab2b7b7b9a1f577e7b5e19306240c0f48a",
+      "sizeBytes": 49725
     }
   ]
 }

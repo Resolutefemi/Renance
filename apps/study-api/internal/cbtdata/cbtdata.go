@@ -40,6 +40,7 @@ type Question struct {
 	Marks      int               `json:"marks"`
 	Topic      string            `json:"topic,omitempty"`
 	Difficulty string            `json:"difficulty,omitempty"`
+	Year       int               `json:"year,omitempty"` // exam year of the past question, 0 when unknown
 }
 
 type Bundle struct {

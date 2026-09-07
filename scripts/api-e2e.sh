@@ -407,8 +407,13 @@ step "GET /daily/jamb (lowercase) -> canonical JAMB challenge serves whole"
 UMLC=$(curl -fsS "$BASE/daily/jamb" -H "Authorization: Bearer $TOKEN")
 printf '%s' "$UMLC" | jsonget "d['body']" | grep -q "JAMB"
 
-step "GET /daily/WAEC -> 404 unknown_body (no packs carry that body)"
-CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/WAEC" -H "Authorization: Bearer $TOKEN")
+step "GET /daily/WAEC -> 200 now that WAEC banks carry that body"
+WAEC=$(curl -fsS "$BASE/daily/WAEC" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$WAEC" | jsonget "d['body']" | grep -q "WAEC"
+printf '%s' "$WAEC" | jsonget "len(d['questions'])" | grep -qx "10"
+
+step "GET /daily/NECO -> 404 unknown_body (NECO packs not published yet)"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/NECO" -H "Authorization: Bearer $TOKEN")
 [ "$CODE" = "404" ]
 
 step "GET /daily/JAMB without token -> 401"
