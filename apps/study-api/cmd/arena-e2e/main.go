@@ -317,8 +317,8 @@ func main() {
 	code := hostRoom(a)
 	joinExpectErr(b, "ZZZZZZ", "unknown_room")
 	fmt.Printf("▸ room %s open — stray joins rejected\n", code)
+	mb2 := joinRoom(b, code) // the join starts the match
 	ma2 := readUntil(a, "matched")
-	mb2 := joinRoom(b, code)
 	if ma2.MatchID == "" || ma2.MatchID != mb2.MatchID {
 		fatal("private match ids differ: %q vs %q", ma2.MatchID, mb2.MatchID)
 	}
