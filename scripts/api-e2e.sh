@@ -137,7 +137,9 @@ CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/internal/review/tick")
 [ "$CODE" = "404" ]
 
 # --- ROADMAP #4: syllabus map (curriculum tree + mastery overlay) ---
-SYLBODY=$(printf '%s' "$BUN" | jsonget "d['body'].lower().replace(' ','-')")
+# Derive the body from the first manifest pack that carries one (banks
+# without a body are skipped) so manifest re-ordering can never break it.
+SYLBODY=$(printf '%s' "$MAN" | jsonget "[e['body'] for e in d['exams'] if e.get('body')][0].lower().replace(' ','-')")
 step "GET /syllabus/$SYLBODY -> tree with mastery overlay"
 SYL=$(curl -fsS "$BASE/syllabus/$SYLBODY" -H "Authorization: Bearer $TOKEN")
 printf '%s' "$SYL" | jsonget "d['body']" >/dev/null
