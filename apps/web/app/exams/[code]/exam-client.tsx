@@ -1056,6 +1056,9 @@ export default function ExamPage({ code }: { code: string }) {
                 {question.topic && (
                   <span className="truncate text-[11px] font-medium text-on-surface-variant">
                     {question.topic}
+                    {question.year ? (
+                      <span className="ml-1.5 font-mono text-[10px] text-outline">{question.year}</span>
+                    ) : null}
                   </span>
                 )}
               </span>

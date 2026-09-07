@@ -302,8 +302,8 @@ export default function DashboardPage() {
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="description" label="Exams" href={isJamb ? '/exams/setup' : '/packs'} />
               <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
+              <LauncherTile icon="local_library" label="Study" href="/study" />
               <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
-              <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
             </div>
           </section>
 
@@ -326,8 +326,8 @@ export default function DashboardPage() {
             <h3 className="text-sm text-on-surface-variant">Learn</h3>
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="auto_stories" label="Lessons" href="/lessons" />
+              <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
               <LauncherTile icon="trending_up" label="Progress" href="/progress" />
-              <LauncherTile icon="military_tech" label="Badges" href="/progress" />
               <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
             </div>
           </section>
@@ -470,7 +470,7 @@ function UniversityHome({ onMore }: { onMore: () => void }) {
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="quiz" label="Quizzes" href="/packs" />
             <LauncherTile icon="history_edu" label="Review" href="/review" />
-            <LauncherTile icon="style" label="Cards" href="/flashcards" />
+            <LauncherTile icon="local_library" label="Study" href="/study" />
             <LauncherTile icon="library_books" label="Outline" href="/syllabus" />
           </div>
         </section>
@@ -505,6 +505,7 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
   // Progress, Badges, Certificates, Progress Report, Syllabus) live on
   // the home grids, so only the occasional tools remain in here.
   const items = [
+    { icon: 'military_tech', label: 'Badges', href: '/progress' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },
     { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
