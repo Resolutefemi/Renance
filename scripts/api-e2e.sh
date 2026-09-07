@@ -119,8 +119,15 @@ printf '%s' "$REV" | jsonget "d['questions'][0]['correct']" | grep -qE "^[A-H]$"
 printf '%s' "$REV" | jsonget "d['questions'][0]['stem']" >/dev/null
 
 step "GET /me/review -> spaced-repetition queue populated by the grade"
-RV=$(curl -fsS "$BASE/me/review" -H "Authorization: Bearer $TOKEN")
-QTRACKED=$(printf '%s' "$RV" | jsonget "d['stats']['tracked']")
+# The grading engine seats review topics a few round-trips after the
+# result lands; on a remote DB that trails the graded flag, so poll.
+RV=""
+for _ in $(seq 1 20); do
+  RV=$(curl -fsS "$BASE/me/review" -H "Authorization: Bearer $TOKEN")
+  QTRACKED=$(printf '%s' "$RV" | jsonget "d['stats']['tracked']")
+  [ "$QTRACKED" -ge 1 ] && break
+  sleep 1
+done
 [ "$QTRACKED" -ge 1 ]
 QQUEUED=$(printf '%s' "$RV" | jsonget "len(d['due']) + len(d['upcoming'])")
 [ "$QQUEUED" -ge 1 ]
