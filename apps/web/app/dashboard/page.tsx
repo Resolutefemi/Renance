@@ -7,7 +7,8 @@ import { api } from '@/lib/api';
 import { getToken, setStoredUser } from '@/lib/session';
 import { fetchManifest, prefetchAll, type ExamMeta } from '@/lib/exams';
 import { type ReviewSummary } from '@/lib/review';
-import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
+import { RenanceMark } from '@/components/renance-logo';
+import { loadActiveExam, type ActiveExam } from '@/lib/active-exam';
 import BottomNav from '@/components/bottom-nav';
 
 interface Profile {
@@ -61,10 +62,23 @@ export default function DashboardPage() {
   const [attempts, setAttempts] = useState<AttemptRow[]>([]);
   const [reviewDueCount, setReviewDueCount] = useState(0);
   const [needsProfile, setNeedsProfile] = useState(false);
-  const [syncState, setSyncState] = useState<'idle' | 'syncing' | 'ready'>('idle');
-  const [syncLabel, setSyncLabel] = useState('Preparing your study pack…');
   const [error, setError] = useState<string | null>(null);
   const [moreOpen, setMoreOpen] = useState(false);
+  // The paper the student paused and left, if any (drives Continue Exam).
+  const [activeExam, setActiveExam] = useState<ActiveExam | null>(null);
+
+  useEffect(() => {
+    const read = () => setActiveExam(loadActiveExam());
+    read();
+    // Retire/refresh the Continue card when the tab regains focus or
+    // another tab's exam client updates the snapshot.
+    window.addEventListener('focus', read);
+    window.addEventListener('storage', read);
+    return () => {
+      window.removeEventListener('focus', read);
+      window.removeEventListener('storage', read);
+    };
+  }, []);
 
   useEffect(() => {
     if (!getToken()) {
@@ -101,23 +115,14 @@ export default function DashboardPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router]);
 
-  /** Silent background asset sync: server job + client prefetch, in parallel. */
+  /** Silent background asset sync: server job + client prefetch, in
+      parallel. No banner — the desk is ready long before it is asked for. */
   async function startSyncFlow() {
-    setSyncState('syncing');
-    setSyncLabel('Syncing past questions, notes and syllabi…');
     try {
       const manifest = await fetchManifest();
       setExams(manifest.exams);
-      await Promise.all([
-        pollSyncJob(),
-        prefetchAll(manifest, (done, total) =>
-          setSyncLabel(`Downloading study packs… ${done}/${total}`),
-        ),
-      ]);
-      setSyncState('ready');
-      setSyncLabel(`${manifest.exams.length} packs ready on this device`);
+      await Promise.all([pollSyncJob(), prefetchAll(manifest)]);
     } catch (err) {
-      setSyncState('idle');
       setError(err instanceof Error ? err.message : 'Sync failed');
     }
   }
@@ -151,11 +156,14 @@ export default function DashboardPage() {
   }, [attempts, exams]);
 
   const recent = attempts[0] ?? null;
+  const recentPct =
+    recent?.score != null && recent?.total ? Math.round((recent.score * 100) / recent.total) : null;
+  const pausedExamAnswers = activeExam ? Object.keys(activeExam.answers).length : 0;
 
   if (!me) {
     return (
       <main className="flex min-h-dvh items-center justify-center bg-background">
-        <LogoActivityIndicator state="busy" label="Loading your desk…" />
+        <RenanceMark size={44} state="busy" />
       </main>
     );
   }
@@ -213,19 +221,12 @@ export default function DashboardPage() {
       </header>
 
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-20 sm:px-6">
-        {syncState !== 'ready' && (
-          <section className="flex items-center justify-between rounded-xl border border-outline-variant/60 bg-surface-container-lowest px-5 py-4 shadow-sm">
-            <LogoActivityIndicator state="busy" label={syncLabel} />
-            <span className="text-xs text-outline">runs in background</span>
-          </section>
-        )}
-
         {error && (
           <p className="rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
         )}
 
         {isUniversity ? (
-          <UniversityHome />
+          <UniversityHome onMore={() => setMoreOpen(true)} />
         ) : (
         <>
         {/* Hero progress card. Uses the hero token scope so Mixed tier
@@ -254,13 +255,25 @@ export default function DashboardPage() {
               <div className="h-full rounded-full bg-hero-cta transition-all" style={{ width: `${coveragePct}%` }} />
             </div>
           </div>
-          <Link
-            href={exams[0] ? `/exams/${exams[0].code}` : '/packs'}
-            className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
-          >
-            <span className="material-symbols-outlined text-[20px]">play_arrow</span>
-            Continue Practice
-          </Link>
+          {/* Continue Exam only exists when a paper was paused and left;
+              otherwise the desk offers a way in, never a fake resume. */}
+          {activeExam ? (
+            <Link
+              href={`/exams/${activeExam.code}?resume=1`}
+              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
+            >
+              <span className="material-symbols-outlined text-[20px]">play_arrow</span>
+              Continue Exam · {pausedExamAnswers}/{Math.max(activeExam.questionCount, pausedExamAnswers)}
+            </Link>
+          ) : (
+            <Link
+              href={isJamb ? '/exams/setup' : exams[0] ? `/exams/${exams[0].code}` : '/packs'}
+              className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
+            >
+              <span className="material-symbols-outlined text-[20px]">play_arrow</span>
+              {isJamb ? 'Start Mock Exam' : 'Start Practice'}
+            </Link>
+          )}
         </section>
 
 
@@ -269,7 +282,8 @@ export default function DashboardPage() {
             entry point lives in the Exams tile below, which opens
             /exams/setup (JAMB-only by design). */}
 
-        {/* Launcher grids: one Stitch pair on phones, side by side on PC --- */}
+        {/* Launcher grids: the daily drivers live on the desk, the rest in
+            the More sheet. One Stitch pair on phones, side by side on PC. */}
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           <section className="mt-2">
             <h3 className="text-sm text-on-surface-variant">Practice</h3>
@@ -282,15 +296,26 @@ export default function DashboardPage() {
           </section>
 
           <section className="mt-4 lg:mt-2">
-            <h3 className="text-sm text-on-surface-variant">Grow</h3>
+            <h3 className="text-sm text-on-surface-variant">Compete & Plan</h3>
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+              <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+              <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
+              <LauncherTile icon="auto_stories" label="Lessons" href="/lessons" />
               <LauncherTile icon="trending_up" label="Progress" href="/progress" />
-              <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
-              <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
-              <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
             </div>
           </section>
         </div>
+
+        {/* Rewards & More: shared by both personas, full width. */}
+        <section className="mt-4">
+          <h3 className="text-sm text-on-surface-variant">Rewards & More</h3>
+          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
+            <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
+            <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
+            <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
+          </div>
+        </section>
 
         </>
         )}
@@ -298,20 +323,30 @@ export default function DashboardPage() {
         {/* Recent activity ------------------------------------------------ */}
         {recent && (
           <Link
-            href="/progress"
+            href={recent.status === 'in_progress' ? `/exams/${recent.code}?resume=1` : '/progress'}
             className="mt-6 mb-4 flex items-center gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition-colors hover:bg-surface-container-lowest"
           >
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-error-container">
-              <span className="material-symbols-outlined text-[20px] text-error">science</span>
+            <div
+              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
+                recent.status === 'in_progress' ? 'bg-accent-amber/15' : 'bg-error-container'
+              }`}
+            >
+              <span
+                className={`material-symbols-outlined text-[20px] ${
+                  recent.status === 'in_progress' ? 'text-accent-amber' : 'text-error'
+                }`}
+              >
+                {recent.status === 'in_progress' ? 'pause_circle' : 'science'}
+              </span>
             </div>
             <div className="min-w-0 flex-1">
               <p className="truncate text-[15px] font-semibold text-on-surface">{recent.code}</p>
               <p className="truncate text-[13px] text-on-surface-variant">
-                {recent.score != null && recent.total
-                  ? `Score: ${Math.round((recent.score * 100) / recent.total)}% · ${
-                      recent.score * 100 >= 7500 ? 'Strong work' : recent.score * 100 >= 5000 ? 'Keep pushing' : 'Focus needed'
-                    }`
-                  : recent.status}
+                {recent.status === 'in_progress'
+                  ? 'Paused paper — your seat is saved, continue anytime'
+                  : recentPct != null
+                    ? `Score: ${recentPct}% · ${recentPct >= 75 ? 'Strong work' : recentPct >= 50 ? 'Keep pushing' : 'Focus needed'}`
+                    : recent.status}
               </p>
             </div>
             <span className="material-symbols-outlined text-outline">chevron_right</span>
@@ -321,7 +356,8 @@ export default function DashboardPage() {
         {/* Question Pack lives on /packs; the old home pack cards are gone. */}
       </div>
 
-      {/* More sheet: the launcher's jump table (more_features_sheet_light) */}
+      {/* More sheet: only the less-used tools live here now — everything a
+          student touches daily sits on the home grid (more_features_sheet_light). */}
       {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
 
       <BottomNav />
@@ -338,7 +374,7 @@ export default function DashboardPage() {
 /* JAMBite product only.                                                */
 /* ----------------------------------------------------------------- */
 
-function UniversityHome() {
+function UniversityHome({ onMore }: { onMore: () => void }) {
   return (
     <>
       {/* Active course hero card ------------------------------------- */}
@@ -414,33 +450,42 @@ function UniversityHome() {
         <section className="mt-4 lg:mt-2">
           <h3 className="text-sm text-on-surface-variant">Grow</h3>
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="timeline" label="CGPA" href="/progress" />
-            <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
-            <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
+            <LauncherTile icon="auto_stories" label="Lessons" href="/lessons" />
             <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+            <LauncherTile icon="timeline" label="CGPA" href="/progress" />
+            <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
           </div>
         </section>
       </div>
+
+      {/* Rewards & More: shared with the JAMBite desk. */}
+      <section className="mt-4">
+        <h3 className="text-sm text-on-surface-variant">Rewards & More</h3>
+        <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+          <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
+          <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
+          <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
+          <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
+        </div>
+      </section>
     </>
   );
 }
 
 function MoreSheet({ onClose }: { onClose: () => void }) {
+  // The rest of the drawer, by design: the daily drivers (Exams, Packs,
+  // Review, Flashcards, Arena, Study Plan, Lessons, Progress, Badges,
+  // Certificates) live on the home grid, so only the occasional tools
+  // remain in here.
   const items = [
-    { icon: 'event_note', label: 'Study Plan', href: '/study-plan' },
-    { icon: 'sports_esports', label: 'Arena', href: '/arena' },
+    { icon: 'insights', label: 'Progress report', href: '/progress-report' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },
     { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
     { icon: 'wifi_off', label: 'Offline Share', href: '/offline-share' },
-    { icon: 'emoji_events', label: 'Awards Hub', href: '/progress' },
-    { icon: 'insights', label: 'Progress report', href: '/progress-report' },
-    { icon: 'history_edu', label: 'Review center', href: '/review' },
-    { icon: 'auto_stories', label: 'Lessons', href: '/lessons' },
-    { icon: 'person', label: 'Profile', href: '/profile' },
-    { icon: 'workspace_premium', label: 'Certificates', href: '/certificates' },
     { icon: 'menu_book', label: 'Syllabus map', href: '/syllabus' },
     { icon: 'menu_book', label: 'Subjects', href: '/subjects' },
+    { icon: 'person', label: 'Profile', href: '/profile' },
     { icon: 'settings', label: 'Settings', href: '/settings' },
     { icon: 'help', label: 'Help & FAQ', href: '/faq' },
   ] as const;
@@ -457,7 +502,8 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
         aria-label="More features"
       >
         <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-outline-variant sm:hidden" />
-        <h3 className="mb-3 text-lg font-semibold text-on-surface">More</h3>
+        <h3 className="mb-1 text-lg font-semibold text-on-surface">More</h3>
+        <p className="mb-3 text-xs text-on-surface-variant">Less-used tools — your daily drivers are on the home grid.</p>
         <div className="grid grid-cols-2 gap-2">
           {items.map((it) => (
             <Link

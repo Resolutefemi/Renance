@@ -12,7 +12,8 @@ import { usePathname } from 'next/navigation';
 
 const TABS = [
   { icon: 'home', label: 'Home', href: '/dashboard', match: '/dashboard' },
-  { icon: 'edit_note', label: 'Practice', href: '/dashboard#packs', match: null },
+  // /packs: the old /dashboard#packs anchor died with the home pack cards.
+  { icon: 'edit_note', label: 'Practice', href: '/packs', match: null },
   { icon: 'history_edu', label: 'Review', href: '/review', match: '/review' },
   { icon: 'leaderboard', label: 'Progress', href: '/progress', match: '/progress' },
   { icon: 'person', label: 'Profile', href: '/profile', match: '/profile' },
