@@ -18,7 +18,7 @@
 //	GET    /lessons              -> lesson list (ROADMAP #8)
 //	GET    /lessons/{slug}       -> one lesson with sections
 //	GET    /career               -> curated scholarships + course paths (ROADMAP #18)
-//	GET    /arena/ws             -> live 1v1 quiz socket (?token=, ROADMAP #14)
+//	GET    /arena/ws             -> live 1v1 quiz socket (?token=, ROADMAP #14); "host"/"join" open private room-code lobbies
 //	GET    /arena/status         -> lobby state (waiting buckets, live matches)
 //	GET    /arena/history        -> the caller's recent matches
 //	GET    /tutor/status         -> {aiEnabled} (ROADMAP #9)
@@ -123,6 +123,7 @@ func arenaConfig(cfg *config.Config) arena.Config {
 		IntroCountdown:     time.Duration(cfg.ArenaIntroSeconds) * time.Second,
 		BotWait:            time.Duration(cfg.ArenaBotWaitSeconds) * time.Second,
 		BotSkill:           cfg.ArenaBotSkill,
+		RoomTTL:            time.Duration(cfg.ArenaRoomTTLSeconds) * time.Second,
 	}
 }
 
