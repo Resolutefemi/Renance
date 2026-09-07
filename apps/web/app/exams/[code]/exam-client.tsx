@@ -3,8 +3,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
 import { fetchBundle, fetchManifest, type Bundle } from '@/lib/exams';
+import { clearActiveExam, loadActiveExam, saveActiveExam, type ActiveExam } from '@/lib/active-exam';
 import { bodySlug } from '@/lib/syllabus';
 import { assessFatigue, FATIGUE_NONE, type FatigueSignal } from '@/lib/fatigue';
 import { FatigueNudgeOverlay } from '@/components/fatigue-nudge';
@@ -55,11 +56,14 @@ export default function ExamPage({ code }: { code: string }) {
   const router = useRouter();
 
   // Practice Settings overrides (?timer=15|30|60, ?timer=0 = No timer).
+  // State (not consts) so a resumed paper can restore the timer the
+  // sitting was started with — the resume deep link carries no ?timer.
   const searchParams = useSearchParams();
   const timerParam = searchParams.get('timer');
-  const untimed = timerParam === '0';
-  const timerOverride =
-    timerParam && timerParam !== '0' ? Math.max(1, Number(timerParam) || 0) : null;
+  const [untimed, setUntimed] = useState(timerParam === '0');
+  const [timerOverride, setTimerOverride] = useState<number | null>(
+    timerParam && timerParam !== '0' ? Math.max(1, Number(timerParam) || 0) : null,
+  );
 
   const [phase, setPhase] = useState<Phase>('loading');
   const [bundle, setBundle] = useState<Bundle | null>(null);
@@ -94,6 +98,8 @@ export default function ExamPage({ code }: { code: string }) {
   const [breakLeft, setBreakLeft] = useState(0);
   const [fatigue, setFatigue] = useState<FatigueSignal>(FATIGUE_NONE);
   const [nudgeVisible, setNudgeVisible] = useState(false);
+  // Pause & resume: the sitting the student walked away from, if any.
+  const [paused, setPaused] = useState<ActiveExam | null>(null);
 
   useEffect(() => {
     if (phase !== 'graded') return;
@@ -116,6 +122,16 @@ export default function ExamPage({ code }: { code: string }) {
         if (!alive) return;
         setMeta(exam);
         setBundle(b);
+        // Coming back for a paused paper (dashboard deep link) resumes
+        // straight into the sitting; otherwise surface the resume card.
+        const snap = loadActiveExam();
+        if (snap && snap.code === code) {
+          setPaused(snap);
+          if (searchParams.get('resume') === '1') {
+            resumeAttempt(snap, b);
+            return;
+          }
+        }
         setPhase('intro');
       } catch (err) {
         if (!alive) return;
@@ -123,10 +139,83 @@ export default function ExamPage({ code }: { code: string }) {
         setPhase('error');
       }
     })();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     return () => {
       alive = false;
     };
   }, [code]);
+
+  /** Rebuild a paused sitting: same picks, same walk, honest clock. */
+  function resumeAttempt(snap: ActiveExam, b: Bundle) {
+    let ordered = b;
+    if (snap.order?.length) {
+      const byId = new Map(b.questions.map((q) => [q.id, q]));
+      const seq = snap.order
+        .map((id) => byId.get(id))
+        .filter((q): q is NonNullable<typeof q> => Boolean(q));
+      for (const q of b.questions) {
+        if (!snap.order.includes(q.id)) seq.push(q);
+      }
+      ordered = { ...b, questions: seq };
+    }
+    setBundle(ordered);
+    setAttempt({
+      attemptId: snap.attemptId,
+      code: snap.code,
+      status: 'in_progress',
+      startedAt: new Date(snap.startedAt).toISOString(),
+      durationMinutes: b.durationMinutes ?? null,
+      questionCount: b.questionCount,
+      adaptive: snap.adaptive,
+      order: snap.order,
+    });
+    setAnswers(snap.answers ?? {});
+    setFlags(snap.flags ?? {});
+    setVisited(snap.visited ?? {});
+    setCurrent(Math.min(snap.current ?? 0, Math.max(b.questionCount - 1, 0)));
+    setAdaptive(snap.adaptive);
+    setUntimed(snap.untimed);
+    setTimerOverride(snap.timerMinutes);
+    submittedRef.current = false;
+    startedAtRef.current = snap.startedAt; // the clock never paused with you
+    pausedMsRef.current = snap.pausedMs ?? 0;
+    shownAtRef.current = Date.now();
+    latenciesRef.current = [];
+    breakLeftRef.current = 0;
+    setBreakLeft(0);
+    nudgeDismissedRef.current = false;
+    setNudgeVisible(false);
+    setFatigue(FATIGUE_NONE);
+    setSmartApplied(Boolean(snap.order?.length));
+    setNavFilter('all');
+    setNavOpen(false);
+    setResult(null);
+    setPaused(null);
+    setPhase('playing');
+  }
+
+  // Leaving mid-paper is a pause, not a loss: every change lands in the
+  // snapshot, so the dashboard can offer the exact seat back.
+  useEffect(() => {
+    if (phase !== 'playing' || !attempt) return;
+    saveActiveExam({
+      attemptId: attempt.attemptId,
+      code: attempt.code,
+      title: bundle?.title ?? attempt.code,
+      questionCount: bundle?.questionCount ?? 0,
+      startedAt: startedAtRef.current,
+      pausedMs: pausedMsRef.current,
+      answers,
+      flags,
+      visited,
+      current,
+      order: attempt.order ?? null,
+      adaptive: attempt.adaptive ?? false,
+      untimed,
+      timerMinutes: timerOverride,
+      savedAt: Date.now(),
+    });
+  }, [phase, attempt, bundle, answers, flags, visited, current, breakLeft, untimed, timerOverride]);
 
   const submit = useCallback(async () => {
     if (!attempt || submittedRef.current) return;
@@ -156,6 +245,8 @@ export default function ExamPage({ code }: { code: string }) {
         method: 'POST',
         body: payload,
       });
+      // Submitted: the pause snapshot has served its purpose.
+      clearActiveExam();
       // poll until the goroutine engine finishes grading
       for (let i = 0; i < 120; i++) {
         const res = await api<AttemptResponse & { result?: ResultPayload }>(
@@ -173,6 +264,8 @@ export default function ExamPage({ code }: { code: string }) {
       }
       throw new Error('Grading is taking unusually long.');
     } catch (err) {
+      // Closed elsewhere (e.g. resubmit guard): the pause is dead too.
+      if (err instanceof ApiError && err.code === 'already_submitted') clearActiveExam();
       setError(err instanceof Error ? err.message : 'Submission failed');
       setPhase('error');
     }
@@ -215,6 +308,9 @@ export default function ExamPage({ code }: { code: string }) {
 
   async function startAttempt() {
     if (!bundle) return;
+    // One paper at a time (JAMB style): a fresh start retires any pause.
+    clearActiveExam();
+    setPaused(null);
     try {
       const res = await api<AttemptResponse>('/attempts', {
         method: 'POST',
@@ -326,6 +422,15 @@ export default function ExamPage({ code }: { code: string }) {
   }
 
   if (phase === 'intro' && bundle) {
+    // Time left on the paused paper, if it was timed (JAMB-fair clock).
+    const pausedLeftSec =
+      paused && !paused.untimed
+        ? Math.max(
+            (paused.timerMinutes ?? bundle.durationMinutes ?? 30) * 60 -
+              Math.floor((Date.now() - paused.startedAt - (paused.pausedMs ?? 0)) / 1000),
+            0,
+          )
+        : null;
     return (
       <Centered>
         <div className="renance-rise w-full max-w-lg rounded-2xl bg-surface-container-lowest p-8 text-center shadow-md">
@@ -342,6 +447,39 @@ export default function ExamPage({ code }: { code: string }) {
             <li>· Auto-submit when time runs out</li>
             <li>· Grading happens server-side: leave any time after submitting</li>
           </ul>
+          {/* Paused paper card: only shows when the student left mid-sitting */}
+          {paused && (
+            <div className="mx-auto mt-5 w-full max-w-xs rounded-xl border border-accent-amber/50 bg-accent-amber/10 px-4 py-3 text-left">
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-[13px] font-semibold text-on-surface">Paused paper found</p>
+                <span className="shrink-0 rounded-full bg-accent-amber/20 px-2 py-0.5 font-mono text-[10px] text-on-surface">
+                  {Object.keys(paused.answers ?? {}).length}/{paused.questionCount} answered
+                </span>
+              </div>
+              <p className="mt-1 text-[11px] text-on-surface-variant">
+                {pausedLeftSec == null
+                  ? 'Untimed paper · your clock continues where it stopped'
+                  : pausedLeftSec <= 0
+                    ? 'Time is up — resuming submits the paper for marking'
+                    : `Time left on this paper: ${mmss(pausedLeftSec)}`}
+              </p>
+              <button
+                onClick={() => resumeAttempt(paused, bundle)}
+                className="mt-2.5 w-full rounded-lg bg-primary px-3 py-2 text-[13px] font-semibold text-on-primary transition active:scale-[0.98]"
+              >
+                Resume Exam
+              </button>
+              <button
+                onClick={() => {
+                  clearActiveExam();
+                  setPaused(null);
+                }}
+                className="mt-1.5 w-full text-[11px] text-on-surface-variant underline-offset-2 hover:underline"
+              >
+                Discard and start fresh
+              </button>
+            </div>
+          )}
           {/* Smart order (ROADMAP #5) */}
           <div className="mx-auto mt-5 flex w-full max-w-xs items-center justify-between rounded-xl border border-outline-variant bg-surface-container-low px-4 py-2.5">
             <div className="flex items-center gap-2 text-left">
@@ -375,7 +513,7 @@ export default function ExamPage({ code }: { code: string }) {
             onClick={startAttempt}
             className="mt-6 w-full rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-on-primary transition-all hover:shadow-md active:scale-[0.98]"
           >
-            Begin
+            {paused ? 'Start a fresh paper instead' : 'Begin'}
           </button>
           <Link
             href="/dashboard"
