@@ -399,9 +399,13 @@ step "GET /daily/JAMB -> byte-identical on refetch (pure function of day+body)"
 D2=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")
 [ "$D1" = "$D2" ]
 
-step "GET /daily/University%20Modules -> the single cos101 pack serves whole"
-UM=$(curl -fsS "$BASE/daily/University%20Modules" -H "Authorization: Bearer $TOKEN")
-printf '%s' "$UM" | jsonget "d['code']" | grep -q "cos101-university-mock"
+step "GET /daily/University%20Modules -> 404 unknown_body (cos101 retired, no packs carry that body)"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/University%20Modules" -H "Authorization: Bearer $TOKEN")
+[ "$CODE" = "404" ]
+
+step "GET /daily/jamb (lowercase) -> canonical JAMB challenge serves whole"
+UMLC=$(curl -fsS "$BASE/daily/jamb" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$UMLC" | jsonget "d['body']" | grep -q "JAMB"
 
 step "GET /daily/WAEC -> 404 unknown_body (no packs carry that body)"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/WAEC" -H "Authorization: Bearer $TOKEN")
@@ -539,10 +543,21 @@ printf '%s' "$MOCKBUNDLE" | jsonget "d['sections'][0]['subject']" | grep -q "Use
 MQN=$(printf '%s' "$MOCKBUNDLE" | jsonget "d['questionCount']")
 [ "$MQN" -gt 0 ]
 
-step "composed bundle never carries answer material"
-printf '%s' "$MOCKBUNDLE" | grep -qv '"answer'
-printf '%s' "$MOCKBUNDLE" | grep -qv '"correct'
-printf '%s' "$MOCKBUNDLE" | grep -qvi '"explanation'
+step "composed bundle never carries answer-material KEYS (ADR-0003)"
+printf '%s' "$MOCKBUNDLE" | python3 -c "
+import json,sys
+def keys(o):
+    if isinstance(o,dict):
+        for k,v in o.items():
+            yield str(k).lower()
+            yield from keys(v)
+    elif isinstance(o,list):
+        for v in o: yield from keys(v)
+b=json.load(sys.stdin)
+forbidden={'answer','answers','answer_key','answerkey','correct','correct_answer','correctletter','correct_letter','correctoption','correct_option','explanation','explanations','iscorrect','is_correct'}
+bad=[k for k in keys(b) if k in forbidden]
+assert not bad, f'answer-material keys leaked: {bad}'
+"
 
 step "deterministic compose: refetch serves the identical walk"
 MOCKBUNDLE2=$(curl -fsS "$BASE/bundles/$MOCKCODE" -H "Authorization: Bearer $TOKEN")
