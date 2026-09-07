@@ -232,3 +232,11 @@ body {
 .material-symbols-outlined.fill-current {
   font-variation-settings: 'FILL' 1;
 }
+
+/* Chip rails scroll horizontally without a visible scrollbar. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
