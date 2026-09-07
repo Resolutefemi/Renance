@@ -35,8 +35,42 @@ function manifestCodes(): string[] {
   return [];
 }
 
+/**
+ * Composite UTME mock papers are served from /exams/<paper-code>, so
+ * every canonical combination (Use of English + 3 electives) must exist
+ * at build time too. The code shape mirrors lib/exams.ts mockPaperCode:
+ * english first, electives sorted. New banks ship in the same commit as
+ * their slug here.
+ */
+const MOCK_ELECTIVES = [
+  'biology',
+  'chemistry',
+  'economics',
+  'geography',
+  'government',
+  'mathematics',
+  'physics',
+];
+
+function mockPaperCodes(): string[] {
+  const codes: string[] = [];
+  const pick = (start: number, chosen: string[]) => {
+    if (chosen.length === 3) {
+      codes.push(`jamb-mock-english-${[...chosen].sort().join('-')}`);
+      return;
+    }
+    for (let i = start; i < MOCK_ELECTIVES.length; i++) {
+      chosen.push(MOCK_ELECTIVES[i]);
+      pick(i + 1, chosen);
+      chosen.pop();
+    }
+  };
+  pick(0, []);
+  return codes;
+}
+
 export function generateStaticParams() {
-  return manifestCodes().map((code) => ({ code }));
+  return [...manifestCodes(), ...mockPaperCodes()].map((code) => ({ code }));
 }
 
 export default async function ExamRoute({

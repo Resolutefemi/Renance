@@ -38,6 +38,12 @@ interface AttemptRow {
   submittedAt?: string;
 }
 
+interface DailyTileInfo {
+  code: string;
+  day: string;
+  myResult?: { score: number; total: number } | null;
+}
+
 const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'University Modules'] as const;
 const GRADE_LEVELS = ['SS1', 'SS2', 'SS3', '100 Level', '200 Level', '300 Level', '400 Level', 'Postgraduate'];
 const TARGET_YEARS = [2026, 2027, 2028] as const;
@@ -64,6 +70,9 @@ export default function DashboardPage() {
   const [needsProfile, setNeedsProfile] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [moreOpen, setMoreOpen] = useState(false);
+  // Today's daily challenge (JAMB desk): the tile deep-links into the
+  // sprint, or into the setup when the API has no challenge for us.
+  const [daily, setDaily] = useState<DailyTileInfo | null>(null);
   // The paper the student paused and left, if any (drives Continue Exam).
   const [activeExam, setActiveExam] = useState<ActiveExam | null>(null);
 
@@ -100,6 +109,9 @@ export default function DashboardPage() {
         api<{ attempts: AttemptRow[] }>('/me/attempts')
           .then((a) => alive && setAttempts(a.attempts))
           .catch(() => {});
+        api<DailyTileInfo>('/daily/jamb')
+          .then((d) => alive && setDaily(d))
+          .catch(() => {}); // tile falls back to the setup screen
         if (!meRes.profile?.completed) {
           setNeedsProfile(true);
           return;
@@ -296,22 +308,37 @@ export default function DashboardPage() {
           </section>
 
           <section className="mt-4 lg:mt-2">
-            <h3 className="text-sm text-on-surface-variant">Compete & Plan</h3>
+            <h3 className="text-sm text-on-surface-variant">Compete</h3>
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+              <LauncherTile
+                icon="event_repeat"
+                label="Daily Challenge"
+                amber
+                href={daily ? `/exams/${daily.code}?daily=1` : '/exams/setup'}
+              />
+              <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
               <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
+            </div>
+          </section>
+
+          <section className="mt-4 lg:mt-0">
+            <h3 className="text-sm text-on-surface-variant">Learn</h3>
+            <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="auto_stories" label="Lessons" href="/lessons" />
               <LauncherTile icon="trending_up" label="Progress" href="/progress" />
+              <LauncherTile icon="military_tech" label="Badges" href="/progress" />
+              <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
             </div>
           </section>
         </div>
 
-        {/* Rewards & More: shared by both personas, full width. */}
+        {/* Tools: the occasional utilities, with More holding the rest. */}
         <section className="mt-4">
-          <h3 className="text-sm text-on-surface-variant">Rewards & More</h3>
+          <h3 className="text-sm text-on-surface-variant">Tools</h3>
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
-            <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
+            <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
+            <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
             <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
             <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
           </div>
@@ -390,8 +417,8 @@ function UniversityHome({ onMore }: { onMore: () => void }) {
           </span>
         </div>
         <div className="relative z-10">
-          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">COS101</h2>
-          <p className="mt-1 text-[15px] font-semibold text-hero-muted">Introduction to Computing</p>
+          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">MTH102</h2>
+          <p className="mt-1 text-[15px] font-semibold text-hero-muted">Elementary Mathematics II</p>
         </div>
         <div className="relative z-10 flex flex-col gap-2">
           <div className="flex items-end justify-between">
@@ -420,7 +447,7 @@ function UniversityHome({ onMore }: { onMore: () => void }) {
           </Link>
         </div>
         <div className="no-scrollbar -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 pt-2">
-          {['COS101', 'MTH102', 'PHY101', 'GST101'].map((c) => (
+          {['MTH101', 'MTH102', 'PHY101', 'GST101'].map((c) => (
             <Link
               key={c}
               href="/syllabus"
@@ -458,12 +485,12 @@ function UniversityHome({ onMore }: { onMore: () => void }) {
         </section>
       </div>
 
-      {/* Rewards & More: shared with the JAMBite desk. */}
+      {/* Tools: shared with the JAMBite desk. */}
       <section className="mt-4">
-        <h3 className="text-sm text-on-surface-variant">Rewards & More</h3>
+        <h3 className="text-sm text-on-surface-variant">Tools</h3>
         <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-          <LauncherTile icon="military_tech" label="Badges" amber href="/progress" />
-          <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
+          <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
+          <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
           <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
           <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
         </div>
@@ -474,16 +501,14 @@ function UniversityHome({ onMore }: { onMore: () => void }) {
 
 function MoreSheet({ onClose }: { onClose: () => void }) {
   // The rest of the drawer, by design: the daily drivers (Exams, Packs,
-  // Review, Flashcards, Arena, Study Plan, Lessons, Progress, Badges,
-  // Certificates) live on the home grid, so only the occasional tools
-  // remain in here.
+  // Review, Flashcards, Arena, Daily, Leaderboard, Study Plan, Lessons,
+  // Progress, Badges, Certificates, Progress Report, Syllabus) live on
+  // the home grids, so only the occasional tools remain in here.
   const items = [
-    { icon: 'insights', label: 'Progress report', href: '/progress-report' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },
     { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
     { icon: 'wifi_off', label: 'Offline Share', href: '/offline-share' },
-    { icon: 'menu_book', label: 'Syllabus map', href: '/syllabus' },
     { icon: 'menu_book', label: 'Subjects', href: '/subjects' },
     { icon: 'person', label: 'Profile', href: '/profile' },
     { icon: 'settings', label: 'Settings', href: '/settings' },
