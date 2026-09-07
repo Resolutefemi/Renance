@@ -10,6 +10,8 @@ export interface ExamMeta {
   durationMinutes?: number;
   bundleSha256: string;
   sizeBytes: number;
+  /** Exam body this pack serves: JAMB | WAEC | NECO | University Modules. */
+  body?: string;
 }
 
 export interface Manifest {
@@ -26,6 +28,8 @@ export interface BundleQuestion {
   marks: number;
   topic?: string;
   difficulty?: string;
+  /** Exam year the past question was drawn from (banks carry it when known). */
+  year?: number;
 }
 
 export interface BundleSection {

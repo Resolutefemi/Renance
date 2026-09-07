@@ -10,7 +10,7 @@
  * Practice Settings flow (/exams/practice?pack=code).
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
@@ -33,6 +33,26 @@ export default function PacksPage() {
       alive = false;
     };
   }, []);
+
+  // Group the manifest by exam body (manifest order preserved inside each
+  // group): JAMB mocks + banks, the WAEC banks, then everything else.
+  const groups = useMemo(() => {
+    if (!exams) return [];
+    const order: string[] = [];
+    const byBody = new Map<string, ExamMeta[]>();
+    for (const e of exams) {
+      const body = e.body ?? 'University Modules';
+      if (!byBody.has(body)) {
+        byBody.set(body, []);
+        order.push(body);
+      }
+      byBody.get(body)!.push(e);
+    }
+    const rank = (b: string) => (b === 'JAMB' ? 0 : b === 'WAEC' ? 1 : b === 'NECO' ? 2 : 3);
+    return order
+      .map((body) => ({ body, packs: byBody.get(body)! }))
+      .sort((a, b) => rank(a.body) - rank(b.body));
+  }, [exams]);
 
   return (
     <main className="min-h-dvh bg-surface pb-28 md:pb-16">
@@ -65,35 +85,44 @@ export default function PacksPage() {
         )}
 
         {exams && exams.length > 0 && (
-          <ul className="mt-6 flex flex-col gap-3">
-            {exams.map((exam) => (
-              <li key={exam.code}>
-                <a
-                  href={`/exams/practice?pack=${encodeURIComponent(exam.code)}`}
-                  className="flex items-center gap-4 rounded-[12px] bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition hover:shadow-md"
-                >
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-surface-container-high text-on-surface">
-                    <span className="material-symbols-outlined fill-current text-[24px]">
-                      inventory_2
-                    </span>
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-[15px] font-semibold text-on-surface">
-                      {exam.title}
-                    </p>
-                    <p className="mt-0.5 font-mono text-[12px] text-on-surface-variant">
-                      {exam.questionCount} Q
-                      {exam.durationMinutes ? ` · ${exam.durationMinutes} min` : ''} ·{' '}
-                      {exam.totalMarks} marks
-                    </p>
-                  </div>
-                  <span className="material-symbols-outlined text-[20px] text-outline">
-                    chevron_right
-                  </span>
-                </a>
-              </li>
+          <div className="mt-6 flex flex-col gap-6">
+            {groups.map((group) => (
+              <section key={group.body}>
+                <h2 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
+                  {group.body} · {group.packs.reduce((n, p) => n + p.questionCount, 0)} questions
+                </h2>
+                <ul className="mt-3 flex flex-col gap-3">
+                  {group.packs.map((exam) => (
+                    <li key={exam.code}>
+                      <a
+                        href={`/exams/practice?pack=${encodeURIComponent(exam.code)}`}
+                        className="flex items-center gap-4 rounded-[12px] bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition hover:shadow-md"
+                      >
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[12px] bg-surface-container-high text-on-surface">
+                          <span className="material-symbols-outlined fill-current text-[24px]">
+                            inventory_2
+                          </span>
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-[15px] font-semibold text-on-surface">
+                            {exam.title}
+                          </p>
+                          <p className="mt-0.5 font-mono text-[12px] text-on-surface-variant">
+                            {exam.questionCount} Q
+                            {exam.durationMinutes ? ` · ${exam.durationMinutes} min` : ''} ·{' '}
+                            {exam.totalMarks} marks
+                          </p>
+                        </div>
+                        <span className="material-symbols-outlined text-[20px] text-outline">
+                          chevron_right
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             ))}
-          </ul>
+          </div>
         )}
       </div>
 

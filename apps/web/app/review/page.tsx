@@ -26,6 +26,7 @@ interface ReviewQuestion {
   questionId: string;
   stem: string;
   topic?: string;
+  year?: number;
   options?: Record<string, string>;
   selected?: string;
   correct: string;
@@ -187,6 +188,7 @@ function ReviewInner() {
                 {q.topic && (
                   <span className="rounded-full bg-surface-container-low px-2 py-0.5 text-[11px] text-on-surface-variant">
                     {q.topic}
+                    {q.year ? <span className="ml-1 font-mono text-[10px] text-outline">{q.year}</span> : null}
                   </span>
                 )}
               </div>
