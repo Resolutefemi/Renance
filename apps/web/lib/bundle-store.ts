@@ -98,6 +98,23 @@ export async function idbClearBundles(): Promise<void> {
   });
 }
 
+/** Remove one cached bundle (the Downloads page per-pack delete). */
+export async function idbDeleteBundle(key: string): Promise<void> {
+  const db = await openDB();
+  if (!db) return;
+  await new Promise<void>((resolve) => {
+    try {
+      const tx = db.transaction(STORE, 'readwrite');
+      tx.objectStore(STORE).delete(key);
+      tx.oncomplete = () => resolve();
+      tx.onabort = () => resolve();
+      tx.onerror = () => resolve();
+    } catch {
+      resolve();
+    }
+  });
+}
+
 /**
  * One-time migration: every bundle the old localStorage cache managed
  * to store moves into IndexedDB and the localStorage key is deleted.

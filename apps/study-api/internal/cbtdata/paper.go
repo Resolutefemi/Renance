@@ -89,13 +89,14 @@ var subjectTitles = map[string]string{
         "marketing":               "Marketing",
 }
 
-// bankSlugs lists every subject that ships a bank pack (jamb-<slug>-bank
-// in the manifest), sorted for determinism.
-func (l *Library) bankSlugs() []string {
+// bankSlugs lists every subject that ships a bank pack for one exam body
+// (<body>-<slug>-bank in the manifest), sorted for determinism.
+func (l *Library) bankSlugs(body string) []string {
         slugs := []string{}
+        prefix := body + "-"
         for _, ex := range l.manifest.Exams {
-                if strings.HasPrefix(ex.Code, "jamb-") && strings.HasSuffix(ex.Code, "-bank") {
-                        slugs = append(slugs, strings.TrimSuffix(strings.TrimPrefix(ex.Code, "jamb-"), "-bank"))
+                if strings.HasPrefix(ex.Code, prefix) && strings.HasSuffix(ex.Code, "-bank") {
+                        slugs = append(slugs, strings.TrimSuffix(strings.TrimPrefix(ex.Code, prefix), "-bank"))
                 }
         }
         sortStrings(slugs)
@@ -110,7 +111,7 @@ func (l *Library) MockPaperSubjects(code string) ([]string, bool) {
                 return nil, false
         }
         dict := map[string]struct{}{}
-        for _, s := range l.bankSlugs() {
+        for _, s := range l.bankSlugs(BodyJamb) {
                 dict[s] = struct{}{}
         }
         spec, err := ParsePaperCode(code, dict)
@@ -312,10 +313,14 @@ func minInt(a, b int) int {
 
 // ComposePaper builds the composite bundle for a parsed mock/custom
 // spec from the subject banks. Deterministic per code + bank data.
+// The custom family is body-aware: a waec-custom-/neco-custom- spec
+// composes from THAT body's banks (waec-<slug>-bank, …) and ships the
+// body label; the English comprehension/novel split is JAMB-only.
 func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
         if spec.Family != PaperFamilyMock && spec.Family != PaperFamilyCustom {
                 return nil, fmt.Errorf("cbtdata: ComposePaper handles mock/custom only, got %q", spec.Family)
         }
+        body := spec.BodyName() // jamb | waec | neco
         subjects := spec.Subjects
         rng := paperRNG(spec.Encode())
 
@@ -341,7 +346,7 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                 Code:      spec.Encode(),
                 Version:   1,
                 Category:  "secondary",
-                Body:      "JAMB",
+                Body:      strings.ToUpper(body),
                 Sections:  make([]PaperSection, 0, len(subjects)),
                 Questions: []Question{},
         }
@@ -349,7 +354,13 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
         for i, slug := range subjects {
                 bank, ok := banks[slug]
                 if !ok || bank == nil {
-                        return nil, fmt.Errorf("cbtdata: paper %q needs bank jamb-%s-bank, which is not loaded", paper.Code, slug)
+                        return nil, fmt.Errorf("cbtdata: paper %q needs bank %s-%s-bank, which is not loaded", paper.Code, body, slug)
+                }
+                // Body isolation: a waec-custom paper must be built from waec
+                // shelves only — a slug that happens to exist in another body's
+                // bank list is not interchangeable.
+                if want := body + "-" + slug + "-bank"; bank.Code != want {
+                        return nil, fmt.Errorf("cbtdata: paper %q needs bank %s, got %s", paper.Code, want, bank.Code)
                 }
                 titles = append(titles, SubjectTitle(slug))
                 year := 0
@@ -368,9 +379,13 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                         take = share[slug]
                 }
 
+                // The comprehension/novel English split only means something in
+                // the JAMB English bank; every other bank (and every WAEC/NECO
+                // subject, English included) walks the plain seeded pool.
+                useEnglishSplit := slug == "english" && body == BodyJamb
                 var section []Question
                 var err error
-                if slug == "english" {
+                if useEnglishSplit {
                         section, err = englishSplit(pool, &rng, take, spec.Comp, spec.CompN, spec.Novel)
                         if err != nil {
                                 return nil, fmt.Errorf("cbtdata: paper %q english section: %w", paper.Code, err)
@@ -404,7 +419,14 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
         paper.QuestionCount = len(paper.Questions)
         label := "UTME Mock"
         if spec.Family == PaperFamilyCustom {
-                label = "Custom Practice"
+                switch body {
+                case BodyWaec:
+                        label = "WASSCE Practice"
+                case BodyNeco:
+                        label = "NECO Practice"
+                default:
+                        label = "Custom Practice"
+                }
         }
         paper.Title = label + " · " + strings.Join(titles, " + ")
         if paper.QuestionCount == 0 {

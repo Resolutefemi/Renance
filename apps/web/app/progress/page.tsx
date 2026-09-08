@@ -23,7 +23,7 @@ import {
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import TopNav from '@/components/top-nav';
+import SideNav from '@/components/side-nav';
 
 export default function ProgressPage() {
   const router = useRouter();
@@ -78,7 +78,7 @@ export default function ProgressPage() {
   const dots = weekDots(s);
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
       <PageBar title="Progress" />
       <div className="mx-auto w-full max-w-xl px-4 pt-6 sm:px-6">
       {/* header */}
@@ -241,7 +241,7 @@ export default function ProgressPage() {
         </>
       )}
       </div>
-      <TopNav />
+      <SideNav />
       <BottomNav />
     </main>
   );

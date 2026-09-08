@@ -108,6 +108,31 @@ google_sign_in takes `serverClientId` (the **web** client ID) and returns
 an ID token whose `aud` matches what the API verifies. The API's secret is
 never used anywhere; the whole flow is public-client.
 
+### Troubleshooting: `Error 401: invalid_client` (flowName=GeneralOAuthFlow)
+
+Google shows this exact page — listing the project's web and Android
+client IDs — when the **web** client cannot serve the origin the button
+was clicked on. The web client ID baked into the bundle is correct; the
+fix lives entirely in Google Cloud Console → APIs & Services:
+
+1. **Credentials → the Web application client → Authorized JavaScript
+   origins** must contain the EXACT origin (scheme + host, no path):
+   `https://resolutefemi.github.io` and `http://localhost:3000`. A missing
+   or typo'd origin is the #1 cause. Save, then wait ~5 minutes for the
+   change to propagate.
+2. **OAuth consent screen** (Google Auth Platform → Audience): Brand
+   (app name, support email) configured and Publishing status set to
+   **In production** — a brand-less or testing-only project rejects
+   GeneralOAuthFlow requests with invalid_client too.
+3. The client must be type **Web application** (not Desktop/Android) —
+   GSI only speaks to web clients from a browser.
+4. After saving, hard-refresh the site (Ctrl+Shift+R) — GSI caches client
+   config per session.
+
+The sign-in button itself now carries a "Google sign-in showing an
+error?" disclosure that renders the current page origin so anyone hitting
+this can self-diagnose.
+
 ## 4. Local development
 
 ```bash

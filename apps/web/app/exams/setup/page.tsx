@@ -14,17 +14,19 @@
  * stay honest.
  */
 
-import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { Suspense, useEffect, useMemo, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import { api } from '@/lib/api';
 import {
+  buildBodyCustomCode,
   buildCustomCode,
   buildMockCode,
   examHref,
   fetchManifest,
   migrateBundleCache,
+  subjectName,
   UTME_ELECTIVES,
   type Manifest,
 } from '@/lib/exams';
@@ -64,7 +66,339 @@ interface AttemptResponse {
   questionCount?: number;
 }
 
+/**
+ * Setup dispatch: /exams/setup is the JAMB UTME desk; /exams/setup?body=waec
+ * and ?body=neco open the same customise mode over that body's past-
+ * question banks (subject chips, per-subject years, count, timer).
+ * useSearchParams needs a Suspense boundary under static export.
+ */
 export default function ExamSetupPage() {
+  return (
+    <Suspense fallback={null}>
+      <SetupRouter />
+    </Suspense>
+  );
+}
+
+function SetupRouter() {
+  const params = useSearchParams();
+  const body = params.get('body');
+  if (body === 'waec' || body === 'neco') return <BodyCustomSetup body={body} />;
+  return <ExamSetupInner />;
+}
+
+/**
+ * WAEC / NECO customise mode — the JAMB custom-practice experience over
+ * that body's banks. Composes a server-side paper (waec-custom-… /
+ * neco-custom-…): subjects + per-subject years + question count + timer,
+ * so grading, review and resume stay deterministic exactly like JAMB.
+ */
+function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
+  const router = useRouter();
+  const label = body === 'waec' ? 'WASSCE' : 'NECO';
+  const [subjects, setSubjects] = useState<Array<{ id: string; name: string; count: number }> | null>(null);
+  const [years, setYears] = useState<Record<string, number[]>>({});
+  const [selected, setSelected] = useState<Set<string>>(new Set());
+  const [yearFor, setYearFor] = useState<Record<string, number | null>>({});
+  const [count, setCount] = useState(40);
+  const [minutes, setMinutes] = useState<number | ''>('');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    migrateBundleCache();
+    let alive = true;
+    fetchManifest()
+      .then((m: Manifest) => {
+        if (!alive) return;
+        const list: Array<{ id: string; name: string; count: number }> = [];
+        const ymap: Record<string, number[]> = {};
+        const hit = new RegExp(`^${body}-(.+)-bank$`);
+        for (const e of m.exams) {
+          const match = hit.exec(e.code);
+          if (!match) continue;
+          list.push({ id: match[1], name: subjectName(match[1]), count: e.questionCount });
+          if (e.years?.length) ymap[match[1]] = e.years;
+        }
+        list.sort((a, b) => a.name.localeCompare(b.name));
+        setSubjects(list);
+        setYears(ymap);
+        // A sensible opening hand: English + Mathematics where the body ships them.
+        const ids = new Set(list.map((s) => s.id));
+        const opening = ['english', 'mathematics'].filter((s) => ids.has(s));
+        setSelected(new Set(opening.length ? opening : list.slice(0, 2).map((s) => s.id)));
+      })
+      .catch(() => {
+        if (alive) setError('Could not reach Renance servers. Check your connection and try again.');
+      });
+    return () => {
+      alive = false;
+    };
+  }, [body]);
+
+  function toggle(id: string) {
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        if (next.size > 1) next.delete(id); // always keep one subject
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  }
+
+  async function seat(code: string, title: string) {
+    setBusy(true);
+    setError(null);
+    try {
+      const res = await api<AttemptResponse>('/attempts', { method: 'POST', body: { code } });
+      saveActiveExam({
+        attemptId: res.attemptId,
+        code: res.code,
+        title,
+        questionCount: res.questionCount ?? 0,
+        startedAt: Date.now(),
+        pausedMs: 0,
+        answers: {},
+        flags: {},
+        visited: {},
+        current: 0,
+        order: null,
+        adaptive: false,
+        untimed: typeof minutes !== 'number' || minutes <= 0,
+        timerMinutes: typeof minutes === 'number' && minutes > 0 ? minutes : null,
+        savedAt: Date.now(),
+      });
+      router.push(examHref(res.code, { resume: '1' }));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Could not start the paper');
+      setBusy(false);
+    }
+  }
+
+  function begin() {
+    if (!selected.size || busy) return;
+    // Per-subject years only when at least one subject pins a year.
+    const subs = [...selected].sort();
+    const yearsSpec = subs.map((s) => yearFor[s] ?? null);
+    const anyPinned = yearsSpec.some((y) => y != null);
+    const code = buildBodyCustomCode(body, subs, {
+      count,
+      year: anyPinned ? yearsSpec : null,
+      timer: typeof minutes === 'number' && minutes > 0 ? minutes : 0,
+    });
+    void seat(code, `${label} Practice`);
+  }
+
+  return (
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+      <PageBar title={`${label} Practice Setup`} />
+
+      <div className="mx-auto flex w-full max-w-5xl flex-col px-4 sm:px-6">
+        <div className="mx-auto w-full max-w-2xl">
+          {/* Header Area */}
+          <div className="flex flex-col gap-2 pb-4 pt-6">
+            <div className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-[24px] text-accent-ink">timer</span>
+              <h1 className="text-[28px] font-bold leading-9 tracking-[-0.02em] text-on-surface">
+                {label} Practice Setup
+              </h1>
+            </div>
+            <p className="text-[15px] text-on-surface-variant">
+              Compose a paper from real {label} past questions — pick your subjects,
+              pin years, set the length and the clock.
+            </p>
+          </div>
+
+          {/* Subject Selection */}
+          <section className="flex flex-col gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <div className="flex items-center justify-between">
+              <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">
+                Subjects
+              </h2>
+              <span className="flex items-center rounded-full bg-surface-container px-2.5 py-1 font-mono text-[11px] text-on-surface-variant">
+                {selected.size} picked
+              </span>
+            </div>
+            {!subjects ? (
+              <p className="py-6 text-center text-[14px] text-on-surface-variant">Loading subjects…</p>
+            ) : (
+              <div className="flex flex-wrap gap-2">
+                {subjects.map((s) => {
+                  const on = selected.has(s.id);
+                  return (
+                    <button
+                      key={s.id}
+                      type="button"
+                      aria-pressed={on}
+                      onClick={() => toggle(s.id)}
+                      className={`rounded-full px-3 py-1.5 text-[13px] transition ${
+                        on
+                          ? 'bg-primary font-semibold text-on-primary shadow-sm'
+                          : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-variant'
+                      }`}
+                    >
+                      {s.name}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </section>
+
+          {/* Per-subject past-question year rows (Random by default) */}
+          {selected.size > 0 && (
+            <section className="mt-4 flex flex-col gap-2 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+              <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">
+                Past Question Years
+              </h2>
+              {[...selected].map((slug) => {
+                const pool = years[slug] ?? [];
+                const year = yearFor[slug] ?? null;
+                return (
+                  <div key={slug} className="flex flex-col gap-1 border-b border-outline-variant/30 py-2 last:border-none">
+                    <span className="text-[13px] font-semibold text-on-surface">{subjectName(slug)}</span>
+                    {pool.length === 0 ? (
+                      <span className="text-[12px] text-on-surface-variant">Random — this subject ships without year tags.</span>
+                    ) : (
+                      <div className="no-scrollbar flex items-center gap-2">
+                        <span className="material-symbols-outlined text-[16px] text-outline">history</span>
+                        <div className="no-scrollbar flex flex-1 gap-1.5 overflow-x-auto">
+                          <YearChip
+                            label="Random"
+                            selected={year == null}
+                            onClick={() => setYearFor((p) => ({ ...p, [slug]: null }))}
+                          />
+                          {[...pool].reverse().map((y) => (
+                            <YearChip
+                              key={y}
+                              label={String(y)}
+                              selected={year === y}
+                              onClick={() => setYearFor((p) => ({ ...p, [slug]: y }))}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </section>
+          )}
+
+          {/* Question count */}
+          <section className="mt-4 flex flex-col gap-4 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">
+              Question Count
+            </h2>
+            <div className="flex items-center justify-between">
+              <StepperButton icon="remove" label="Fewer questions" onClick={() => setCount((c) => Math.max(5, c - 5))} />
+              <span className="font-mono text-[26px] font-bold text-on-surface">{count}</span>
+              <StepperButton icon="add" label="More questions" onClick={() => setCount((c) => Math.min(200, c + 5))} />
+            </div>
+            <div className="flex gap-2">
+              {[10, 20, 40, 60].map((p) => (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => setCount(p)}
+                  className={`flex-1 rounded-md py-2 text-center text-[14px] transition-colors ${
+                    count === p
+                      ? 'bg-selection-blue font-semibold text-on-surface'
+                      : 'bg-surface-container-low text-on-surface hover:bg-surface-variant'
+                  }`}
+                >
+                  {p}
+                </button>
+              ))}
+            </div>
+          </section>
+
+          {/* Timer */}
+          <section className="mt-4 flex flex-col gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">Time</h2>
+            <div className="flex items-center justify-between px-1">
+              <span className="text-[14px] text-on-surface-variant">Minutes (leave empty for untimed)</span>
+              <input
+                type="number"
+                inputMode="numeric"
+                min={1}
+                max={300}
+                value={minutes}
+                onChange={(e) => {
+                  const v = e.target.value === '' ? '' : Math.max(1, Math.min(300, Number(e.target.value)));
+                  setMinutes(v);
+                }}
+                placeholder="—"
+                className="w-24 rounded-lg border border-outline-variant bg-surface-container-low px-3 py-2 text-center font-mono text-[15px] text-on-surface outline-none focus:border-primary"
+              />
+            </div>
+            <div className="flex gap-2">
+              {[15, 30, 60, 120].map((p) => (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => setMinutes(p)}
+                  className={`flex-1 rounded-md py-2 text-center text-[14px] transition-colors ${
+                    minutes === p
+                      ? 'bg-selection-blue font-semibold text-on-surface'
+                      : 'bg-surface-container-low text-on-surface hover:bg-surface-variant'
+                  }`}
+                >
+                  {p}m
+                </button>
+              ))}
+            </div>
+          </section>
+
+          {/* Info notice */}
+          <div className="mb-2 mt-4 flex items-start gap-2 rounded-lg bg-surface-container-high p-3">
+            <span className="material-symbols-outlined mt-0.5 text-[18px] text-outline">info</span>
+            <p className="text-[13px] leading-[18px] text-on-surface-variant">
+              Every paper is composed server-side from the real {label} past-question banks —
+              the same questions, deterministically seated, graded on the Renance engine.
+              Answers lock once picked; leaving mid-paper keeps your seat.
+            </p>
+          </div>
+
+          {error && (
+            <p className="mt-3 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">{error}</p>
+          )}
+        </div>
+      </div>
+
+      {/* Sticky Bottom Action */}
+      <div className="fixed bottom-16 inset-x-0 z-30 bg-gradient-to-t from-surface via-surface/90 to-transparent p-4 pb-6 md:bottom-4">
+        <div className="mx-auto w-full max-w-2xl">
+          <button
+            type="button"
+            onClick={begin}
+            disabled={busy || selected.size === 0}
+            className={`flex h-[52px] w-full items-center justify-center gap-2 rounded-[10px] text-[15px] font-semibold transition-all ${
+              busy || selected.size === 0
+                ? 'cursor-not-allowed bg-primary/40 text-on-primary/50'
+                : 'bg-primary text-on-primary shadow-md active:scale-[0.98]'
+            }`}
+          >
+            {busy ? (
+              'Seating your paper…'
+            ) : (
+              <>
+                Begin {label} Practice
+                <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </>
+            )}
+          </button>
+        </div>
+      </div>
+
+      <BottomNav />
+    </main>
+  );
+}
+
+function ExamSetupInner() {
   const router = useRouter();
   const [standard, setStandard] = useState(true);
   // English is mandatory and locked on (JAMB rules); the Stitch initial
