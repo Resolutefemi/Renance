@@ -88,6 +88,7 @@ export default function Landing() {
   const jambExams = byBody('JAMB');
   const waecExams = byBody('WAEC');
   const necoExams = byBody('NECO');
+  const uniExams = exams.filter((e) => e.category === 'university');
   const sum = (list: typeof exams) => list.reduce((s, e) => s + (e.questionCount ?? 0), 0);
 
   return (
@@ -166,11 +167,12 @@ export default function Landing() {
                 See full subject coverage →
               </Link>
             </div>
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978–2025 · all subjects · novel included' },
                 { body: 'WAEC', count: sum(waecExams), packs: waecExams.length, note: 'objectives + theory with model answers' },
                 { body: 'NECO', count: sum(necoExams), packs: necoExams.length, note: 'objectives + theory packs' },
+                { body: 'University', count: sum(uniExams), packs: uniExams.length, note: 'per-school course banks — FUTA first, more landing' },
               ].map((b) => (
                 <div key={b.body} className="rounded-xl bg-white/5 p-5 ring-1 ring-white/10">
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">{b.body}</p>

@@ -279,8 +279,12 @@ export function buildBodyCustomCode(
 }
 
 export interface PickOptions {
-  /** Subset size (default 40). */
+  /** Subset size (default 40; contiguous slices default 50). */
   count: number;
+  /** 1-based start of a CONTIGUOUS slice — the university portals'
+   *  Part chunks (from=51, n=50 serves Q51–Q100 in original order).
+   *  Omitted = seeded shuffle of the whole pool. */
+  from?: number;
   /** Particular exam year, or null for random. */
   year?: number | null;
   /** Timer minutes; 0/undefined = the base pack's own timing. */
@@ -289,13 +293,15 @@ export interface PickOptions {
 
 /**
  * Canonical practice-subset code: carves `count` questions out of one
- * static manifest pack (optionally pinned to one year), so practice
- * sessions and their grading stay server-composed and resumable.
+ * static manifest pack (optionally pinned to one year, optionally a
+ * contiguous slice via `from`), so practice sessions and their grading
+ * stay server-composed and resumable.
  */
 export function buildPickCode(base: string, opts: PickOptions): string {
   const parts: string[] = [];
   const y = yearsParam(opts.year ?? null);
   if (y) parts.push(`y=${y}`);
+  if (opts.from != null && opts.from > 0) parts.push(`from=${Math.min(opts.from, 100000)}`);
   if (opts.count > 0) parts.push(`n=${Math.min(opts.count, 500)}`);
   if (opts.timer != null && opts.timer > 0) parts.push(`t=${opts.timer}`);
   return `jamb-pick-${base}${joinParams(parts)}`;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T21:19:32Z",
+  "generatedAt": "2026-09-09T00:00:00Z",
   "version": "myschool-merge-1",
   "exams": [
     {
@@ -1119,6 +1119,376 @@
       ],
       "bundleSha256": "a68d9165a4d9b21dfb86244887c9ced6f3b01afb3742aa24420533829345029a",
       "sizeBytes": 142491
+    },
+    {
+      "code": "uni-futa-ams101-bank",
+      "title": "FUTA AMS 101 | Course Question Bank",
+      "questionCount": 599,
+      "totalMarks": 599,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f130f58e34521b69a26dc3546dc8ee0785c6827b2a5e86a0c384710a68ac4c41",
+      "sizeBytes": 167238
+    },
+    {
+      "code": "uni-futa-bio101-bank",
+      "title": "FUTA BIO 101 | Course Question Bank",
+      "questionCount": 302,
+      "totalMarks": 302,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2b22b36c8388398dd4f9c599ec73d25cb519128ed0d2007cb21f39c04f4d2a79",
+      "sizeBytes": 72226
+    },
+    {
+      "code": "uni-futa-bio102-bank",
+      "title": "FUTA BIO 102 | Course Question Bank",
+      "questionCount": 309,
+      "totalMarks": 309,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ca2a69463b58b5794c3c826e1790c3ca8527d3398971debd8c143950068f92eb",
+      "sizeBytes": 77198
+    },
+    {
+      "code": "uni-futa-bio104-bank",
+      "title": "FUTA BIO 104 | Course Question Bank",
+      "questionCount": 57,
+      "totalMarks": 57,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d3c7fc50dae94f62ae1f8aba8315cb65576aa1353cf6a237bbc9e75d0fd2531f",
+      "sizeBytes": 11158
+    },
+    {
+      "code": "uni-futa-bit112-bank",
+      "title": "FUTA BIT 112 | Course Question Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a5ab2b9c3986cbe4e87bd573a5b77c3c6733c9352bb40d6ea82280c78c2b2cf6",
+      "sizeBytes": 74990
+    },
+    {
+      "code": "uni-futa-bit122-bank",
+      "title": "FUTA BIT 122 | Course Question Bank",
+      "questionCount": 390,
+      "totalMarks": 390,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4d4dbedbb46d6ca9b694bfc7ff49fa25eed60cc83d5da9b08724300f1d40bfb2",
+      "sizeBytes": 137904
+    },
+    {
+      "code": "uni-futa-che101-bank",
+      "title": "FUTA CHE 101 | Course Question Bank",
+      "questionCount": 300,
+      "totalMarks": 300,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "970de4f8430d2464fd5e5bb297cdd1c8389b0df711d6a4b2b16d602167ffb5f6",
+      "sizeBytes": 80284
+    },
+    {
+      "code": "uni-futa-che102-bank",
+      "title": "FUTA CHE 102 | Course Question Bank",
+      "questionCount": 180,
+      "totalMarks": 180,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "25d2f0d185cb430f6219f39e715caa5c3990a30e05a3db7a81e7193a72f58155",
+      "sizeBytes": 40604
+    },
+    {
+      "code": "uni-futa-che103-bank",
+      "title": "FUTA CHE 103 | Course Question Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f7541e92401a886a3f6a5805568e7a3e22efbeb1aeffb25ad0aff57b7a13088d",
+      "sizeBytes": 71834
+    },
+    {
+      "code": "uni-futa-che104-bank",
+      "title": "FUTA CHE 104 | Course Question Bank",
+      "questionCount": 97,
+      "totalMarks": 97,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9acbad24a583c85014f7a08da8eff45a632eadaa693681c72665c674e2155698",
+      "sizeBytes": 19591
+    },
+    {
+      "code": "uni-futa-cos101-bank",
+      "title": "FUTA COS 101 | Course Question Bank",
+      "questionCount": 1006,
+      "totalMarks": 1006,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "dbf8765aa747b10d15f21914cf01064e7b80124ac51b986813d966b178014750",
+      "sizeBytes": 225048
+    },
+    {
+      "code": "uni-futa-cos102-bank",
+      "title": "FUTA COS 102 | Course Question Bank",
+      "questionCount": 500,
+      "totalMarks": 500,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "056439da19a8785d082f7ea834b7e7bb36a9302a89f203648af6a51c554203ed",
+      "sizeBytes": 157328
+    },
+    {
+      "code": "uni-futa-dts104-bank",
+      "title": "FUTA DTS 104 | Course Question Bank",
+      "questionCount": 100,
+      "totalMarks": 100,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "02297e468feec032f0b53cc80e6039fe1c8eacc41cac619b6123b2b6020ae4a5",
+      "sizeBytes": 21020
+    },
+    {
+      "code": "uni-futa-fcys102-bank",
+      "title": "FUTA FCYS 102 | Course Question Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "875b0b4dad85f7d26dc87cb8ae257e99af6804baac12c527f1507da16414268f",
+      "sizeBytes": 2233
+    },
+    {
+      "code": "uni-futa-fcys104-bank",
+      "title": "FUTA FCYS 104 | Course Question Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "91811defcac949f36536211824c9ccbb845846b062bdaad8f7985ced22e6392e",
+      "sizeBytes": 2141
+    },
+    {
+      "code": "uni-futa-fcys106-bank",
+      "title": "FUTA FCYS 106 | Course Question Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d038653576e9e8db1a1c7ececf40550c1f35b35690c0cf5c3a8806432463820d",
+      "sizeBytes": 2965
+    },
+    {
+      "code": "uni-futa-fcys110-bank",
+      "title": "FUTA FCYS 110 | Course Question Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "24286a2a432843009b41ff71541aa3e24f040c8caa245194a664f06edd97befb",
+      "sizeBytes": 2914
+    },
+    {
+      "code": "uni-futa-fgns102-bank",
+      "title": "FUTA FGNS 102 | Course Question Bank",
+      "questionCount": 133,
+      "totalMarks": 133,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "259d7cf8f8c990e7aff950dc2187d3ef4c4d762015aaaa9ac11de7742d3a65c2",
+      "sizeBytes": 65150
+    },
+    {
+      "code": "uni-futa-fift102-bank",
+      "title": "FUTA FIFT 102 | Course Question Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "21e640ec1019f029237d44e832c9de14ff4744ddcdf918c5e237dc8e2525c879",
+      "sizeBytes": 2674
+    },
+    {
+      "code": "uni-futa-fift104-bank",
+      "title": "FUTA FIFT 104 | Course Question Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "10922b82e48eb4dc5b78905c54b12a53e053365bc74b659591a0aa1ee144aa1e",
+      "sizeBytes": 3112
+    },
+    {
+      "code": "uni-futa-fift106-bank",
+      "title": "FUTA FIFT 106 | Course Question Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b90a328647ab3db2ea2a2dc4d6ef66da03589fc4996c2ec739775e9964660667",
+      "sizeBytes": 3238
+    },
+    {
+      "code": "uni-futa-fmee102-bank",
+      "title": "FUTA FMEE 102 | Course Question Bank",
+      "questionCount": 716,
+      "totalMarks": 716,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d89677129fb6a62ddcaae45bd099276a2622485ffb51925b7f629eb0a8ab716b",
+      "sizeBytes": 174821
+    },
+    {
+      "code": "uni-futa-fsen102-bank",
+      "title": "FUTA FSEN 102 | Course Question Bank",
+      "questionCount": 222,
+      "totalMarks": 222,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5f0747b0c737b810fd936de84b5d8a753b0196f9d7771f850683d7a03ff6fa43",
+      "sizeBytes": 44760
+    },
+    {
+      "code": "uni-futa-fsen104-bank",
+      "title": "FUTA FSEN 104 | Course Question Bank",
+      "questionCount": 450,
+      "totalMarks": 450,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5eeec8d456d37fce74081aadbe52d45ffb64bb156bc39e3c9df8fc85685d8bf7",
+      "sizeBytes": 111903
+    },
+    {
+      "code": "uni-futa-fsen106-bank",
+      "title": "FUTA FSEN 106 | Course Question Bank",
+      "questionCount": 250,
+      "totalMarks": 250,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ec1cb2eb8f03ff504d774362cc3c942d596bceb59e3dabecd10d0e0a3ceb9ec1",
+      "sizeBytes": 69057
+    },
+    {
+      "code": "uni-futa-gns103-bank",
+      "title": "FUTA GNS 103 | Course Question Bank",
+      "questionCount": 725,
+      "totalMarks": 725,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "592c44a0bfa255ceb8c4c8ad8f6779010c59c97669b7361872ed9c1e73587ee6",
+      "sizeBytes": 167517
+    },
+    {
+      "code": "uni-futa-gns106-bank",
+      "title": "FUTA GNS 106 | Course Question Bank",
+      "questionCount": 160,
+      "totalMarks": 160,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4b1a5d0150cc52ef673d1a3e37c263bb47b28ae47d77e556bfac5daa2f75f105",
+      "sizeBytes": 36782
+    },
+    {
+      "code": "uni-futa-gst111-bank",
+      "title": "FUTA GST 111 | Course Question Bank",
+      "questionCount": 582,
+      "totalMarks": 582,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "940b7a54848552b506f6e6cd0187d41dc18901d6ae27de88c6ef14e2f44eac34",
+      "sizeBytes": 153703
+    },
+    {
+      "code": "uni-futa-gst112-bank",
+      "title": "FUTA GST 112 | Course Question Bank",
+      "questionCount": 160,
+      "totalMarks": 160,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b610b276bfc273c2da66cb1ce75bec11c4e7b55a97393438ce706d51e808f757",
+      "sizeBytes": 44870
+    },
+    {
+      "code": "uni-futa-mth101-bank",
+      "title": "FUTA MTH 101 | Course Question Bank",
+      "questionCount": 417,
+      "totalMarks": 417,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "98446de6b783dfd26569d4fc64e0e8193e40810ac953fcb91ed9e6b0d879d96e",
+      "sizeBytes": 86198
+    },
+    {
+      "code": "uni-futa-mth102-bank",
+      "title": "FUTA MTH 102 | Course Question Bank",
+      "questionCount": 20,
+      "totalMarks": 20,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6a814a90291413f26b892f6ffaa61bd5bb176711e8d5c0f8872aee7a85cd644d",
+      "sizeBytes": 3866
+    },
+    {
+      "code": "uni-futa-mts102-bank",
+      "title": "FUTA MTS 102 | Course Question Bank",
+      "questionCount": 121,
+      "totalMarks": 121,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c8ec2b59acfd25e99bd9ed74839466b60d6e7188b61e06e234e036944c74ebc2",
+      "sizeBytes": 23222
+    },
+    {
+      "code": "uni-futa-phy101-bank",
+      "title": "FUTA PHY 101 | Course Question Bank",
+      "questionCount": 589,
+      "totalMarks": 589,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7cca05060a890d0c74b72989d4bb91bef5e459b6f4792f8f9f21a76f872d87fb",
+      "sizeBytes": 125228
+    },
+    {
+      "code": "uni-futa-phy102-bank",
+      "title": "FUTA PHY 102 | Course Question Bank",
+      "questionCount": 117,
+      "totalMarks": 117,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "fa25dd83a914cbcef87e2231ac9aa63344afeaed11690ddd76e3ac444858947d",
+      "sizeBytes": 28181
+    },
+    {
+      "code": "uni-futa-phy103-bank",
+      "title": "FUTA PHY 103 | Course Question Bank",
+      "questionCount": 122,
+      "totalMarks": 122,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8050a1cc45a01b30018eff8d9777bbe83943ab60eb28d1f9dd461e41a5b3ab71",
+      "sizeBytes": 31953
+    },
+    {
+      "code": "uni-futa-sen101-bank",
+      "title": "FUTA SEN 101 | Course Question Bank",
+      "questionCount": 600,
+      "totalMarks": 600,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4626afbf4a5a3dceffa633374798040e8762bb57ca3930ac3ce59da50e2c6592",
+      "sizeBytes": 124492
+    },
+    {
+      "code": "uni-futa-sta111-bank",
+      "title": "FUTA STA 111 | Course Question Bank",
+      "questionCount": 633,
+      "totalMarks": 633,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "10c2078b45d28f448a6aa3d16cfd070ecf7cf33def67e03618e2076e21876074",
+      "sizeBytes": 122399
     },
     {
       "code": "waec-accounting-bank",

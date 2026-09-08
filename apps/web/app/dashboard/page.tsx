@@ -10,6 +10,14 @@ import { type ReviewSummary } from '@/lib/review';
 import { RenanceMark } from '@/components/renance-logo';
 import { loadActiveExam, type ActiveExam } from '@/lib/active-exam';
 import { refreshNotifications, subscribeNotifications, unreadCount } from '@/lib/notifications';
+import {
+  SCHOOLS,
+  clientCatalog,
+  findSchoolByName,
+  liveCourses,
+  resolveSchoolSlug,
+  storedSchoolSlug,
+} from '@/lib/university';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 
@@ -175,15 +183,15 @@ export default function DashboardPage() {
   const isWaec = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('WAEC');
   const isNeco = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('NECO');
   // Every exam body gets a real customise desk now — JAMB's Mock Setup,
-  // and the same subject/year/count/timer mode over WAEC/NECO banks.
-  // Only University Modules fall back to the pack list.
+  // the same subject/year/count/timer mode over WAEC/NECO banks, and
+  // the university desk's per-school course grid.
   const setupHref = isJamb
     ? '/exams/setup'
     : isWaec
       ? '/exams/setup?body=waec'
       : isNeco
         ? '/exams/setup?body=neco'
-        : '/packs';
+        : '/university';
 
   const coveragePct = useMemo(() => {
     const gradedCodes = new Set(
@@ -298,7 +306,7 @@ export default function DashboardPage() {
         )}
 
         {isUniversity ? (
-          <UniversityHome onMore={() => setMoreOpen(true)} />
+          <UniversityHome onMore={() => setMoreOpen(true)} profile={me.profile} />
         ) : (
         <>
         {/* Hero progress card. Uses the hero token scope so Mixed tier
@@ -456,103 +464,128 @@ export default function DashboardPage() {
 /** Small bottom sheet listing the destinations that live beyond the grid. */
 
 /* ----------------------------------------------------------------- */
-/* University home (university_home_dashboard_light): tertiary students */
-/* get the In-Progress course hero, the Active Courses chips and the    */
-/* university Practice / Grow grids. No Mock Exam Setup here, it is a   */
-/* JAMBite product only.                                                */
+/* University home (university_home_dashboard): tertiary students get  */
+/* a course-based desk with its OWN icon set — Courses where the       */
+/* JAMBite desk says Subjects/Exams, CGPA, Lecture Notes… The desk is  */
+/* school-aware: content is wrapped per school, interface is one.      */
 /* ----------------------------------------------------------------- */
 
-function UniversityHome({ onMore }: { onMore: () => void }) {
+function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Profile | null }) {
+  // The student's school: stored pick → profile institution match → FUTA.
+  const [schoolSlug, setSchoolSlug] = useState<string | null>(null);
+  useEffect(() => {
+    const stored = storedSchoolSlug();
+    if (stored) {
+      setSchoolSlug(stored);
+      return;
+    }
+    const matched = profile?.institution ? findSchoolByName(profile.institution) : null;
+    setSchoolSlug(matched?.slug ?? null);
+  }, [profile]);
+
+  const slug = schoolSlug ?? resolveSchoolSlug();
+  const school = SCHOOLS.find((s) => s.slug === slug) ?? null;
+  const catalog = clientCatalog(slug);
+  const courses = liveCourses(catalog);
+
   return (
     <>
-      {/* Active course hero card ------------------------------------- */}
+      {/* School hero card ---------------------------------------------- */}
       <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
         <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/10" />
         <div className="relative z-10 flex items-center justify-between gap-4">
           <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
-            In Progress
+            University Desk
           </p>
           <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-1 font-mono text-[11px] text-on-hero">
-            <span className="material-symbols-outlined text-[14px]">sync</span>
-            Synced
+            <span className="material-symbols-outlined text-[14px]">school</span>
+            {school?.short ?? 'FUTA'}
           </span>
         </div>
         <div className="relative z-10">
-          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">MTH102</h2>
-          <p className="mt-1 text-[15px] font-semibold text-hero-muted">Elementary Mathematics II</p>
+          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">
+            {school?.name ?? 'Your school'}
+          </h2>
+          <p className="mt-1 text-[15px] font-semibold text-hero-muted">
+            {catalog
+              ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions`
+              : 'Course content lands as it is harvested'}
+          </p>
         </div>
-        <div className="relative z-10 flex flex-col gap-2">
-          <div className="flex items-end justify-between">
-            <span className="text-[13px] text-hero-muted">Semester Progress</span>
-            <span className="font-mono text-xs font-bold text-on-hero">Week 6 of 12</span>
-          </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-hero-track">
-            <div className="h-full w-1/2 rounded-full bg-hero-cta" />
-          </div>
-        </div>
-        <Link
-          href="/lessons"
-          className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
-        >
-          <span className="material-symbols-outlined fill-current text-[20px]">play_circle</span>
-          Resume lecture notes
-        </Link>
-      </section>
-
-      {/* Course chips row --------------------------------------------- */}
-      <section className="mt-2">
-        <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-on-surface">Active Courses</h3>
-          <Link href="/syllabus" className="p-2 text-[13px] text-on-surface-variant hover:opacity-70">
-            View all
+        <div className="relative z-10 flex flex-col gap-2 sm:flex-row">
+          <Link
+            href={`/university/${slug}`}
+            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
+          >
+            <span className="material-symbols-outlined text-[20px]">menu_book</span>
+            Open courses
+          </Link>
+          <Link
+            href="/university"
+            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-on-hero/15 text-[15px] font-semibold text-on-hero transition-transform active:scale-[0.98]"
+          >
+            <span className="material-symbols-outlined text-[20px]">swap_horiz</span>
+            Change school
           </Link>
         </div>
-        <div className="no-scrollbar -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 pt-2">
-          {['MTH101', 'MTH102', 'PHY101', 'GST101'].map((c) => (
-            <Link
-              key={c}
-              href="/syllabus"
-              className={`whitespace-nowrap rounded-full px-6 py-2 text-sm transition ${
-                c === 'PHY101'
-                  ? 'scale-105 bg-selection-blue font-semibold text-on-surface shadow-sm'
-                  : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-variant'
-              }`}
-            >
-              {c}
-            </Link>
-          ))}
-        </div>
       </section>
 
-      {/* University Practice / Grow grids ------------------------------ */}
+      {/* Active courses chips ------------------------------------------- */}
+      {courses.length > 0 && (
+        <section className="mt-2">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-on-surface">Active Courses</h3>
+            <Link href={`/university/${slug}`} className="p-2 text-[13px] text-on-surface-variant hover:opacity-70">
+              View all
+            </Link>
+          </div>
+          <div className="no-scrollbar -mx-4 flex items-center gap-2 overflow-x-auto px-4 pb-1 pt-2">
+            {courses.slice(0, 8).map((c, i) => (
+              <Link
+                key={c.slug}
+                href={`/university/${slug}/${c.slug}`}
+                className={`whitespace-nowrap rounded-full px-6 py-2 text-sm transition ${
+                  i === 0
+                    ? 'scale-105 bg-selection-blue font-semibold text-on-surface shadow-sm'
+                    : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-variant'
+                }`}
+              >
+                {c.code}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* University Study / Grow grids — the university desk's OWN icons */}
       <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <section className="mt-2">
-          <h3 className="text-sm text-on-surface-variant">Practice</h3>
+          <h3 className="text-sm text-on-surface-variant">Study</h3>
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="quiz" label="Quizzes" href="/packs" />
-            <LauncherTile icon="history_edu" label="Review" href="/review" />
-            <LauncherTile icon="local_library" label="Study" href="/study" />
-            <LauncherTile icon="library_books" label="Outline" href="/syllabus" />
+            <LauncherTile icon="assignment" label="Courses" href={`/university/${slug}`} />
+            <LauncherTile icon="fact_check" label="Quizzes" href="/packs" />
+            <LauncherTile icon="rate_review" label="Review" href="/review" />
+            <LauncherTile icon="import_contacts" label="Notes" href="/lessons" />
           </div>
         </section>
         <section className="mt-4 lg:mt-2">
           <h3 className="text-sm text-on-surface-variant">Grow</h3>
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="auto_stories" label="Lessons" href="/lessons" />
+            <LauncherTile icon="calculate" label="CGPA" href="/progress" />
             <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
-            <LauncherTile icon="timeline" label="CGPA" href="/progress" />
             <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
+            <LauncherTile icon="psychology" label="Flashcards" href="/flashcards" />
           </div>
         </section>
       </div>
 
-      {/* Tools: shared with the JAMBite desk. */}
+      {/* Tools: shared with the other desks. */}
       <section className="mt-4">
         <h3 className="text-sm text-on-surface-variant">Tools</h3>
         <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
           <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
-          <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
           <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
+          <LauncherTile icon="download" label="Downloads" href="/downloads" />
           <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
         </div>
       </section>
@@ -861,12 +894,11 @@ function ProfileModal({
               className="w-full rounded-lg bg-surface-container px-4 py-2.5 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
             />
             <datalist id="institutions">
-              <option value="University of Ibadan" />
-              <option value="University of Lagos" />
-              <option value="Obafemi Awolowo University" />
-              <option value="Federal University of Technology, Akure" />
-              <option value="University of Ilorin" />
-              <option value="Ahmadu Bello University" />
+              {SCHOOLS.filter((s) => s.live || s.type === 'university')
+                .slice(0, 200)
+                .map((s) => (
+                  <option key={s.slug} value={s.name} />
+                ))}
             </datalist>
           </label>
 

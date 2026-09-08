@@ -1,0 +1,437 @@
+{
+  "school": "futa",
+  "name": "Federal University of Technology, Akure",
+  "short": "FUTA",
+  "courses": [
+    {
+      "slug": "ams101",
+      "code": "AMS 101",
+      "title": null,
+      "semester": 1,
+      "icon": "functions",
+      "bank": "uni-futa-ams101-bank",
+      "questionCount": 599,
+      "pdf": null
+    },
+    {
+      "slug": "bio101",
+      "code": "BIO 101",
+      "title": null,
+      "semester": 1,
+      "icon": "biotech",
+      "bank": "uni-futa-bio101-bank",
+      "questionCount": 302,
+      "pdf": null
+    },
+    {
+      "slug": "che101",
+      "code": "CHE 101",
+      "title": null,
+      "semester": 1,
+      "icon": "science",
+      "bank": "uni-futa-che101-bank",
+      "questionCount": 300,
+      "pdf": null
+    },
+    {
+      "slug": "che103",
+      "code": "CHE 103",
+      "title": null,
+      "semester": 1,
+      "icon": "experiment",
+      "bank": "uni-futa-che103-bank",
+      "questionCount": 206,
+      "pdf": null
+    },
+    {
+      "slug": "cos101",
+      "code": "COS 101",
+      "title": "Introduction to Computing",
+      "semester": 1,
+      "icon": "computer",
+      "bank": "uni-futa-cos101-bank",
+      "questionCount": 1006,
+      "pdf": "/pdfs/futa/cos101.pdf"
+    },
+    {
+      "slug": "cve105",
+      "code": "CVE 105",
+      "title": null,
+      "semester": 1,
+      "icon": "engineering",
+      "bank": null,
+      "questionCount": 0,
+      "pdf": null
+    },
+    {
+      "slug": "gns103",
+      "code": "GNS 103",
+      "title": "Information Literacy",
+      "semester": 1,
+      "icon": "local_library",
+      "bank": "uni-futa-gns103-bank",
+      "questionCount": 725,
+      "pdf": "/pdfs/futa/gns103.pdf"
+    },
+    {
+      "slug": "gst111",
+      "code": "GST 111",
+      "title": null,
+      "semester": 1,
+      "icon": "menu_book",
+      "bank": "uni-futa-gst111-bank",
+      "questionCount": 582,
+      "pdf": null
+    },
+    {
+      "slug": "mth101",
+      "code": "MTH 101",
+      "title": null,
+      "semester": 1,
+      "icon": "calculate",
+      "bank": "uni-futa-mth101-bank",
+      "questionCount": 417,
+      "pdf": "/pdfs/futa/mth101.pdf"
+    },
+    {
+      "slug": "phy101",
+      "code": "PHY 101",
+      "title": null,
+      "semester": 1,
+      "icon": "rocket_launch",
+      "bank": "uni-futa-phy101-bank",
+      "questionCount": 589,
+      "pdf": null
+    },
+    {
+      "slug": "phy103",
+      "code": "PHY 103",
+      "title": null,
+      "semester": 1,
+      "icon": "speed",
+      "bank": "uni-futa-phy103-bank",
+      "questionCount": 122,
+      "pdf": null
+    },
+    {
+      "slug": "sen101",
+      "code": "SEN 101",
+      "title": "Web Technologies",
+      "semester": 1,
+      "icon": "web",
+      "bank": "uni-futa-sen101-bank",
+      "questionCount": 600,
+      "pdf": null
+    },
+    {
+      "slug": "sta111",
+      "code": "STA 111",
+      "title": "Descriptive Statistics I",
+      "semester": 1,
+      "icon": "query_stats",
+      "bank": "uni-futa-sta111-bank",
+      "questionCount": 633,
+      "pdf": null
+    },
+    {
+      "slug": "mee101",
+      "code": "MEE 101",
+      "title": null,
+      "semester": 1,
+      "icon": "settings",
+      "bank": null,
+      "questionCount": 0,
+      "pdf": null
+    },
+    {
+      "slug": "ams102",
+      "code": "AMS 102",
+      "title": null,
+      "semester": 2,
+      "icon": "functions",
+      "bank": null,
+      "questionCount": 0,
+      "pdf": null
+    },
+    {
+      "slug": "ams104",
+      "code": "AMS 104",
+      "title": null,
+      "semester": 2,
+      "icon": "agriculture",
+      "bank": null,
+      "questionCount": 0,
+      "pdf": null
+    },
+    {
+      "slug": "bio102",
+      "code": "BIO 102",
+      "title": null,
+      "semester": 2,
+      "icon": "biotech",
+      "bank": "uni-futa-bio102-bank",
+      "questionCount": 309,
+      "pdf": null
+    },
+    {
+      "slug": "bio104",
+      "code": "BIO 104",
+      "title": null,
+      "semester": 2,
+      "icon": "genetics",
+      "bank": "uni-futa-bio104-bank",
+      "questionCount": 57,
+      "pdf": null
+    },
+    {
+      "slug": "bit112",
+      "code": "BIT 112",
+      "title": null,
+      "semester": 2,
+      "icon": "storage",
+      "bank": "uni-futa-bit112-bank",
+      "questionCount": 211,
+      "pdf": null
+    },
+    {
+      "slug": "bit122",
+      "code": "BIT 122",
+      "title": null,
+      "semester": 2,
+      "icon": "dns",
+      "bank": "uni-futa-bit122-bank",
+      "questionCount": 390,
+      "pdf": null
+    },
+    {
+      "slug": "che102",
+      "code": "CHE 102",
+      "title": null,
+      "semester": 2,
+      "icon": "science",
+      "bank": "uni-futa-che102-bank",
+      "questionCount": 180,
+      "pdf": null
+    },
+    {
+      "slug": "che104",
+      "code": "CHE 104",
+      "title": null,
+      "semester": 2,
+      "icon": "experiment",
+      "bank": "uni-futa-che104-bank",
+      "questionCount": 97,
+      "pdf": null
+    },
+    {
+      "slug": "cos102",
+      "code": "COS 102",
+      "title": null,
+      "semester": 2,
+      "icon": "code_blocks",
+      "bank": "uni-futa-cos102-bank",
+      "questionCount": 500,
+      "pdf": null
+    },
+    {
+      "slug": "dts104",
+      "code": "DTS 104",
+      "title": "Introduction to Python Programming",
+      "semester": 2,
+      "icon": "terminal",
+      "bank": "uni-futa-dts104-bank",
+      "questionCount": 100,
+      "pdf": "/pdfs/futa/dts104.pdf"
+    },
+    {
+      "slug": "fbit126",
+      "code": "FBIT 126",
+      "title": null,
+      "semester": 2,
+      "icon": "device_hub",
+      "bank": null,
+      "questionCount": 0,
+      "pdf": null
+    },
+    {
+      "slug": "fcys102",
+      "code": "FCYS 102",
+      "title": null,
+      "semester": 2,
+      "icon": "security",
+      "bank": "uni-futa-fcys102-bank",
+      "questionCount": 10,
+      "pdf": null
+    },
+    {
+      "slug": "fcys104",
+      "code": "FCYS 104",
+      "title": null,
+      "semester": 2,
+      "icon": "shield_lock",
+      "bank": "uni-futa-fcys104-bank",
+      "questionCount": 10,
+      "pdf": null
+    },
+    {
+      "slug": "fcys106",
+      "code": "FCYS 106",
+      "title": null,
+      "semester": 2,
+      "icon": "vpn_key",
+      "bank": "uni-futa-fcys106-bank",
+      "questionCount": 10,
+      "pdf": null
+    },
+    {
+      "slug": "fcys110",
+      "code": "FCYS 110",
+      "title": null,
+      "semester": 2,
+      "icon": "gpp_maybe",
+      "bank": "uni-futa-fcys110-bank",
+      "questionCount": 10,
+      "pdf": null
+    },
+    {
+      "slug": "fent124",
+      "code": "FENT 124",
+      "title": null,
+      "semester": 2,
+      "icon": "lightbulb",
+      "bank": null,
+      "questionCount": 0,
+      "pdf": null
+    },
+    {
+      "slug": "fgns102",
+      "code": "FGNS 102",
+      "title": null,
+      "semester": 2,
+      "icon": "local_library",
+      "bank": "uni-futa-fgns102-bank",
+      "questionCount": 133,
+      "pdf": null
+    },
+    {
+      "slug": "fift102",
+      "code": "FIFT 102",
+      "title": null,
+      "semester": 2,
+      "icon": "precision_manufacturing",
+      "bank": "uni-futa-fift102-bank",
+      "questionCount": 10,
+      "pdf": null
+    },
+    {
+      "slug": "fift104",
+      "code": "FIFT 104",
+      "title": null,
+      "semester": 2,
+      "icon": "conveyor_belt",
+      "bank": "uni-futa-fift104-bank",
+      "questionCount": 10,
+      "pdf": null
+    },
+    {
+      "slug": "fift106",
+      "code": "FIFT 106",
+      "title": null,
+      "semester": 2,
+      "icon": "water_drop",
+      "bank": "uni-futa-fift106-bank",
+      "questionCount": 10,
+      "pdf": null
+    },
+    {
+      "slug": "fmee102",
+      "code": "FMEE 102",
+      "title": null,
+      "semester": 2,
+      "icon": "settings",
+      "bank": "uni-futa-fmee102-bank",
+      "questionCount": 716,
+      "pdf": null
+    },
+    {
+      "slug": "fsen102",
+      "code": "FSEN 102",
+      "title": "Assembly Programming (8086)",
+      "semester": 2,
+      "icon": "memory",
+      "bank": "uni-futa-fsen102-bank",
+      "questionCount": 222,
+      "pdf": "/pdfs/futa/fsen102.pdf"
+    },
+    {
+      "slug": "fsen104",
+      "code": "FSEN 104",
+      "title": null,
+      "semester": 2,
+      "icon": "integration_instructions",
+      "bank": "uni-futa-fsen104-bank",
+      "questionCount": 450,
+      "pdf": "/pdfs/futa/fsen104.pdf"
+    },
+    {
+      "slug": "fsen106",
+      "code": "FSEN 106",
+      "title": "Requirements Engineering",
+      "semester": 2,
+      "icon": "checklist",
+      "bank": "uni-futa-fsen106-bank",
+      "questionCount": 250,
+      "pdf": "/pdfs/futa/fsen106.pdf"
+    },
+    {
+      "slug": "gns106",
+      "code": "GNS 106",
+      "title": null,
+      "semester": 2,
+      "icon": "menu_book",
+      "bank": "uni-futa-gns106-bank",
+      "questionCount": 160,
+      "pdf": null
+    },
+    {
+      "slug": "gst112",
+      "code": "GST 112",
+      "title": null,
+      "semester": 2,
+      "icon": "translate",
+      "bank": "uni-futa-gst112-bank",
+      "questionCount": 160,
+      "pdf": null
+    },
+    {
+      "slug": "mth102",
+      "code": "MTH 102",
+      "title": null,
+      "semester": 2,
+      "icon": "calculate",
+      "bank": "uni-futa-mth102-bank",
+      "questionCount": 20,
+      "pdf": null
+    },
+    {
+      "slug": "mts102",
+      "code": "MTS 102",
+      "title": null,
+      "semester": 2,
+      "icon": "query_stats",
+      "bank": "uni-futa-mts102-bank",
+      "questionCount": 121,
+      "pdf": null
+    },
+    {
+      "slug": "phy102",
+      "code": "PHY 102",
+      "title": null,
+      "semester": 2,
+      "icon": "bolt",
+      "bank": "uni-futa-phy102-bank",
+      "questionCount": 117,
+      "pdf": null
+    }
+  ]
+}
