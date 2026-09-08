@@ -1,9 +1,9 @@
 {
   "code": "jamb-physics-bank",
   "title": "JAMB Physics | Past Questions Bank",
-  "version": 2,
-  "questionCount": 2816,
-  "totalMarks": 2816,
+  "version": 3,
+  "questionCount": 2761,
+  "totalMarks": 2761,
   "questions": [
     {
       "id": "jamb-physics-bank-0061",
@@ -383,19 +383,6 @@
       "year": 2018
     },
     {
-      "id": "jamb-physics-bank-0091",
-      "type": "mcq",
-      "stem": "Which of the following diagrams represents correctly an n-p-n transistor?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2018
-    },
-    {
       "id": "jamb-physics-bank-0092",
       "type": "mcq",
       "stem": "The differences observed in solids, liquids and gases may be accounted for by",
@@ -695,19 +682,6 @@
       "year": 2017
     },
     {
-      "id": "jamb-physics-bank-0115",
-      "type": "mcq",
-      "stem": "Which of the following graphs shows the correct vector diagram for the circuit above?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2017
-    },
-    {
       "id": "jamb-physics-bank-0116",
       "type": "mcq",
       "stem": "A transistor functions mainly as a",
@@ -992,19 +966,6 @@
       },
       "marks": 1,
       "year": 2017
-    },
-    {
-      "id": "jamb-physics-bank-0046",
-      "type": "mcq",
-      "stem": "Dispersion occurs when white light passes through a glass prism because of the",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2016
     },
     {
       "id": "jamb-physics-bank-0138",
@@ -1600,19 +1561,6 @@
         "B": "electrical energy into kinetic energy",
         "C": "mechanical energy into electrical energy",
         "D": "kinetic energy into potential energy"
-      },
-      "marks": 1,
-      "year": 2015
-    },
-    {
-      "id": "jamb-physics-bank-0184",
-      "type": "mcq",
-      "stem": "In which of the following diagrams is the length of the tube equal to one wavelength?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
       },
       "marks": 1,
       "year": 2015
@@ -2604,578 +2552,6 @@
       },
       "marks": 1,
       "year": 2013
-    },
-    {
-      "id": "jamb-physics-bank-0058",
-      "type": "mcq",
-      "stem": "The use of lenses is NOT applicable in the",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2012
-    },
-    {
-      "id": "jamb-physics-bank-0059",
-      "type": "mcq",
-      "stem": "Dispersion of white light is the ability of white light to",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2012
-    },
-    {
-      "id": "jamb-physics-bank-0060",
-      "type": "mcq",
-      "stem": "A newly charged 12V accumulator can easily start a car whereas eight new dry cells in series with an effective e.m.f. of 12V cannot start the same car because",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2012
-    },
-    {
-      "id": "jamb-physics-bank-0016",
-      "type": "mcq",
-      "stem": "Two cars moving in the same direction have speeds of 100 kmh⁻¹ and 130 kmh⁻¹. What is the velocity of the faster car as measured by an observer in the slower car?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0017",
-      "type": "mcq",
-      "stem": "The diagram above shows a velocity-time graph. The statement that is true about this motion is that, the car",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0018",
-      "type": "mcq",
-      "stem": "A stone and a feather dropped from the same height above the earth surface. Ignoring air resistance, which of the following is correct?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0019",
-      "type": "mcq",
-      "stem": "A car moves with an initial velocity of 25 ms⁻¹ and reaches a velocity of 45 ms⁻¹ in 10s. What is the acceleration of the car?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0020",
-      "type": "mcq",
-      "stem": "An object is weighed at different locations on the earth. What will be the right observation?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0021",
-      "type": "mcq",
-      "stem": "The diagram above represents balls in an undulating surface. Which of the following option represents positions of stable equilibrium?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0022",
-      "type": "mcq",
-      "stem": "A bob of weight 0.1N hangs from a massless string of length 50cm. A variable horizontal force which increases from zero is applied to pull the bob until the string makes an angle of 60° with the vertical. The work done is",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0023",
-      "type": "mcq",
-      "stem": "The surfaces of conveyor belts are made rough so as to",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0024",
-      "type": "mcq",
-      "stem": "A machine of velocity ratio 6 requires an effort of 400N to raise a load of 800N through 1m. Find the efficiency of the machine.",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0025",
-      "type": "mcq",
-      "stem": "If a wire 30cm long is extended to 30.5cm by a force of 300N. Find the strain energy of the wire.",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0026",
-      "type": "mcq",
-      "stem": "In a hydraulic press, the pump piston exerts a pressure of 100 Pa on the liquid. What force is exerted in the second piston of cross-sectional area 3 m²?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0027",
-      "type": "mcq",
-      "stem": "The accurate measurement of the relative density of a substance in its powered form is done with a beam balance and",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0028",
-      "type": "mcq",
-      "stem": "A hydrometer is an instrument used in measuring",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0029",
-      "type": "mcq",
-      "stem": "One special advantage of alcohol water over mercury as a thermometric liquid is its",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0030",
-      "type": "mcq",
-      "stem": "Two metals P and Q of lengths l1 and l2 are heated through the same temperature difference. If the ratio of the linear expansivities of P to Q is 2:3 and the ratio of their lengths is 3:4. What is the ratio of increase in lengths of P to Q?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0031",
-      "type": "mcq",
-      "stem": "The density of a certain oil on frying becomes 0.4 kgm⁻³ with a volume of 20 m³. What will be its initial volume when its initial density is 0.8 kgm⁻³ assuming no loss of oil due to spillage?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0032",
-      "type": "mcq",
-      "stem": "Heat is radiated by all hot objects in the form of",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0033",
-      "type": "mcq",
-      "stem": "If a container is filled with ice to the brim, what happens to the level of water when the ice completely melts?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0034",
-      "type": "mcq",
-      "stem": "The small droplet of water that forms on the grass in the early hours of the morning is",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0035",
-      "type": "mcq",
-      "stem": "A vapour is said to be saturated when",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0036",
-      "type": "mcq",
-      "stem": "The pressure of one mole of an ideal gas of volume 10⁻² m³ at a temperature of 27°C is [Molar gas constant = 8.3 J mol⁻¹ K⁻¹]",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0037",
-      "type": "mcq",
-      "stem": "Which of the following has no effect on radiation?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0038",
-      "type": "mcq",
-      "stem": "The wavelength of a wave travelling with a velocity of 420 ms⁻¹ is 42 m. What is its period?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0039",
-      "type": "mcq",
-      "stem": "The sound of an electric bell dies down slowly when air is slowly pumped out from a bottle because",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0040",
-      "type": "mcq",
-      "stem": "During a thunderstorm, the sound is heard over a long time. This phenomenon is referred to as",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0041",
-      "type": "mcq",
-      "stem": "The velocity of sound in air at 16°C is 340 ms⁻¹. What will it be when the pressure is doubled and its temperature raised to 127°C?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0042",
-      "type": "mcq",
-      "stem": "In comparing the camera and the human eye, the film of the camera functions as the",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0043",
-      "type": "mcq",
-      "stem": "An object 4 cm high is placed 15 cm from a concave mirror of focal length 5 cm. The size of the image is",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0044",
-      "type": "mcq",
-      "stem": "An object is embedded in a block of ice, 10 cm below the plane surface. If the refractive index of the ice is 1.50, the apparent depth of the object below the surface is",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0045",
-      "type": "mcq",
-      "stem": "Which of the following is used for the correction of short-sightedness?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0047",
-      "type": "mcq",
-      "stem": "When a positively charged rod is brought nearer the cap of a positively charged electroscope, the leaves divergence will.",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0048",
-      "type": "mcq",
-      "stem": "Three capacitors of capacitance, 2µF, 4µF and 8µF are connected in parallel and a p.d of 6V is maintained across each capacitor, the total energy stored is",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0049",
-      "type": "mcq",
-      "stem": "A cell of emf 12V and internal resistance 4Ω is connected to an external resistor of resistance 2 Ω. Find the current flow.",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0050",
-      "type": "mcq",
-      "stem": "Three 4Ω resistors connected in parallel have 3 potential difference of 16V applied across them. What is the total current in the circuit",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0051",
-      "type": "mcq",
-      "stem": "In the diagram above, a 200 W bulb is lighted by a 240 V a.c mains supply. If 1kWh is sold at N40, the cost of keeping the bulb lighted for a day is.",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0052",
-      "type": "mcq",
-      "stem": "Power supply is transmitted at a very high voltage and low current in order to",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0053",
-      "type": "mcq",
-      "stem": "A galvanometer with full-scale deflection of 10mA is to be converted to a voltmeter with full-scale deflection of 5 V. If a series resistance of 498Ω is used for the conversion, the resistance of the galvanometer is",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0054",
-      "type": "mcq",
-      "stem": "In alternating current circuit at resonance, the angle of lead or lag is",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0055",
-      "type": "mcq",
-      "stem": "In Faraday’s law of electrolysis, a graph of mass deposited against the quantity of electricity is plotted. The slope of the graph gives",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0056",
-      "type": "mcq",
-      "stem": "Transistors are used for the",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
-    },
-    {
-      "id": "jamb-physics-bank-0057",
-      "type": "mcq",
-      "stem": "Which of the following is a pure semiconductor?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2010
     },
     {
       "id": "jamb-physics-bank-0001",
@@ -17425,19 +16801,6 @@
       "year": 2001
     },
     {
-      "id": "jamb-physics-bank-1325",
-      "type": "mcq",
-      "stem": "Which of the following graphs correctly represents the variation of mass of a given material deposited with time for constant current in Faraday's Law of Electrolysis?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2001
-    },
-    {
       "id": "jamb-physics-bank-1326",
       "type": "mcq",
       "stem": "Which of the following metals will provide the greatest shield against ionizing radiation",
@@ -19689,19 +19052,6 @@
       "year": 2005
     },
     {
-      "id": "jamb-physics-bank-1500",
-      "type": "mcq",
-      "stem": "In the photoelectric effect, which of the following graphs correctly represents the graph of stopping potential Vo against frequency,f, of incident light?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2005
-    },
-    {
       "id": "jamb-physics-bank-1501",
       "type": "mcq",
       "stem": "Marching soldiers crossing a suspension bridge are usually advised to break their steps to avoid damaging the bridge owing to",
@@ -20602,33 +19952,6 @@
       },
       "marks": 1,
       "year": 2006
-    },
-    {
-      "id": "jamb-physics-bank-1570",
-      "type": "mcq",
-      "stem": "Use the diagram above to answer the question below. Which of the following diagrams represents the magnetic field of two isolated unlike poles",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2006
-    },
-    {
-      "id": "jamb-physics-bank-1571",
-      "type": "mcq",
-      "stem": "Use the figures above to answer the question below Which of the following diagrams represents correctly an n-p-n transistor?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2006,
-      "image": "/qimages/0818635332d8876ff3a3.png"
     },
     {
       "id": "jamb-physics-bank-1572",
@@ -22587,20 +21910,6 @@
       },
       "marks": 1,
       "year": 2009
-    },
-    {
-      "id": "jamb-physics-bank-1722",
-      "type": "mcq",
-      "stem": "which of the diagrams above shows the position at which a small ball-bearing is in neutral equilibrium?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2009,
-      "image": "/qimages/b460080f476e11dcd7a2.jpg"
     },
     {
       "id": "jamb-physics-bank-1723",
@@ -26459,19 +25768,6 @@
       "year": 2016
     },
     {
-      "id": "jamb-physics-bank-2020",
-      "type": "mcq",
-      "stem": "In the diagram above, which of the following velocity-time graphs shows uniform acceleration of a body from rest?",
-      "options": {
-        "A": "C",
-        "B": "D",
-        "C": "B",
-        "D": "A"
-      },
-      "marks": 1,
-      "year": 2016
-    },
-    {
       "id": "jamb-physics-bank-2021",
       "type": "mcq",
       "stem": "Myopic defects in the human eye can be corrected through the use of a",
@@ -28999,19 +28295,6 @@
         "B": "Free atoms",
         "C": "Free molecules",
         "D": "Free solids"
-      },
-      "marks": 1,
-      "year": 2019
-    },
-    {
-      "id": "jamb-physics-bank-2216",
-      "type": "mcq",
-      "stem": "In which of the points labelled A, B, C, D and E on the conductor shown would electric charge tend to concentrate most",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "E"
       },
       "marks": 1,
       "year": 2019

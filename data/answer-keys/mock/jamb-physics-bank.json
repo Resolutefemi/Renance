@@ -146,11 +146,6 @@
       "letter": "B",
       "explanation": "Evaporation is the spontaneous process where liquid molecules at the surface gain enough energy to escape as vapor at any temperature."
     },
-    "jamb-physics-bank-0091": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "In an NPN transistor symbol, the arrow on the emitter leg points OUTward (NPN = Not Pointing iN). Diagram D shows the standard symbol with the arrow pointing out."
-    },
     "jamb-physics-bank-0092": {
       "type": "mcq",
       "letter": "C",
@@ -266,11 +261,6 @@
       "letter": "B",
       "explanation": "The visible spectrum follows the order ROYGBIV. Red and Blue are further apart in wavelength (and refractive index) than the adjacent pairs listed in other options, resulting in wider separation."
     },
-    "jamb-physics-bank-0115": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "For a series R-L circuit, the voltage across the resistor (V_R) is in phase with the current, while the voltage across the inductor (V_L) leads the current by 90°. The vector diagram A correctly shows V_R horizontally and V_L vertically upwards."
-    },
     "jamb-physics-bank-0116": {
       "type": "mcq",
       "letter": "A",
@@ -380,11 +370,6 @@
       "type": "mcq",
       "letter": "B",
       "explanation": "The electrochemical equivalent z = 0.0033 g/C. Mass m = zIt. So, 1.98 = 0.0033 × 2 × t. t = 1.98 / 0.0066 = 300 s. Converting to minutes: 300/60 = 5 minutes."
-    },
-    "jamb-physics-bank-0046": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Different colors of light travel at different speeds in glass, leading to different refractive indices for each color."
     },
     "jamb-physics-bank-0138": {
       "type": "mcq",
@@ -615,11 +600,6 @@
       "type": "mcq",
       "letter": "C",
       "explanation": "A dynamo (generator) converts mechanical energy to electrical energy by electromagnetic induction."
-    },
-    "jamb-physics-bank-0184": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "A tube length equals one wavelength when the standing-wave pattern contains one complete cycle along the tube (two loops). Diagram D shows two loops filling the tube, corresponding to L=λ."
     },
     "jamb-physics-bank-0185": {
       "type": "mcq",
@@ -1005,226 +985,6 @@
       "type": "mcq",
       "letter": "C",
       "explanation": "Velocity ratio VR=2. Efficiency η=(MA)/(VR)Rightarrow MA=η VR=0.9× 2=1.8. Effort E=(L)/(MA)=(180)/(1.8)=100 N."
-    },
-    "jamb-physics-bank-0058": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "A simple periscope typically uses two plane mirrors at a 45-degree angle. While advanced perisopes use prisms and lenses, the standard periscope model taught in basic physics is lens-free."
-    },
-    "jamb-physics-bank-0059": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "Dispersion occurs when white light passes through a prism and splits into its constituent spectrum (red, orange, yellow, green, blue, indigo, violet) due to different wavelengths refracting at different angles."
-    },
-    "jamb-physics-bank-0060": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "Starting a car requires a very high current. Dry cells have a high internal resistance compared to an accumulator, which limits their current capacity despite having the same total EMF."
-    },
-    "jamb-physics-bank-0016": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "When two objects move in the same direction, the relative velocity is the difference in their speeds: 130 km/h - 100 km/h = 30 km/h."
-    },
-    "jamb-physics-bank-0017": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "On a velocity-time graph, a horizontal line (like segment FG) represents constant velocity. Since velocity is not changing, the acceleration is zero."
-    },
-    "jamb-physics-bank-0018": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "In a vacuum (no air resistance), all objects fall with the same acceleration due to gravity (g), regardless of their mass."
-    },
-    "jamb-physics-bank-0019": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "Acceleration (a) = (v - u) / t = (45 - 25) / 10 = 20 / 10 = 2 ms⁻²."
-    },
-    "jamb-physics-bank-0020": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "Mass is the amount of matter in an object and is constant. Weight depends on gravity (W = mg), which varies slightly at different locations on Earth."
-    },
-    "jamb-physics-bank-0021": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "Stable equilibrium occurs at the potential energy minima, which are the lowest points (valleys) of the surface."
-    },
-    "jamb-physics-bank-0022": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "Vertical height (h) = L(1 - cosθ) = 0.5(1 - cos60°) = 0.25m. Work Done = PE gain = mgh = (Weight) * h = 0.1 * 0.25 = 0.025 J."
-    },
-    "jamb-physics-bank-0023": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Rough surfaces increase the coefficient of friction, providing the necessary grip to move loads without slipping."
-    },
-    "jamb-physics-bank-0024": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "MA = Load/Effort = 800/400 = 2. Efficiency = (MA/VR) * 100 = (2/6) * 100 = 33.3%."
-    },
-    "jamb-physics-bank-0025": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "Extension (e) = 30.5 - 30 = 0.5cm = 0.005m. Strain Energy = 1/2 * F * e = 0.5 * 300 * 0.005 = 0.75 J."
-    },
-    "jamb-physics-bank-0026": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "According to Pascal's Law, pressure is transmitted equally. Force = Pressure * Area = 100 * 3 = 300 N."
-    },
-    "jamb-physics-bank-0027": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "A density bottle is used for accurate measurements of relative density for liquids and powders."
-    },
-    "jamb-physics-bank-0028": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Hydrometers are designed to measure the density or specific gravity of liquids based on the concept of buoyancy."
-    },
-    "jamb-physics-bank-0029": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Alcohol has a much lower freezing point (-115°C) than mercury (-39°C), making it suitable for measuring very cold temperatures."
-    },
-    "jamb-physics-bank-0030": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "ΔL = αLΔθ. Ratio = (α1/α2) * (L1/L2) = (2/3) * (3/4) = 6/12 = 1/2."
-    },
-    "jamb-physics-bank-0031": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Mass is constant. ρ1V1 = ρ2V2 -> 0.8 * V1 = 0.4 * 20 -> V1 = 8 / 0.8 = 10 m³."
-    },
-    "jamb-physics-bank-0032": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "Thermal radiation from objects at common temperatures occurs primarily in the infrared part of the electromagnetic spectrum."
-    },
-    "jamb-physics-bank-0033": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "According to Archimedes' principle, the ice displaces a weight of water equal to its own weight. When it melts, it turns into that exact volume of water, so the level remains unchanged."
-    },
-    "jamb-physics-bank-0034": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Dew is moisture that condenses from the air onto cool surfaces when the temperature drops to the dew point."
-    },
-    "jamb-physics-bank-0035": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "Saturation occurs when the rate of evaporation equals the rate of condensation in a closed system."
-    },
-    "jamb-physics-bank-0036": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "P = nRT/V = (1 * 8.3 * 300) / 0.01 = 2490 / 0.01 = 249,000 = 2.49 x 10⁵ Nm⁻²."
-    },
-    "jamb-physics-bank-0037": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Radiation depends on the surface temperature, area, and emissivity (nature of surface), but is independent of the bulk density of the material."
-    },
-    "jamb-physics-bank-0038": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "f = v / λ = 420 / 42 = 10 Hz. Period (T) = 1/f = 1/10 = 0.1 s."
-    },
-    "jamb-physics-bank-0039": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "Sound is a mechanical wave and requires a medium (like air) to propagate. As air is removed, there is less medium to carry the vibration."
-    },
-    "jamb-physics-bank-0040": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "Reverberation is the collection of reflected sounds from the surfaces in an enclosure or surrounding environment."
-    },
-    "jamb-physics-bank-0041": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "Velocity of sound is independent of pressure. v ∝ √T. v2 = v1 * √(T2/T1) = 340 * √(400/289) = 340 * (20/17) = 400 ms⁻¹."
-    },
-    "jamb-physics-bank-0042": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "Both the camera film and the retina are the light-sensitive surfaces where the image is captured or formed."
-    },
-    "jamb-physics-bank-0043": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "1/v = 1/f - 1/u = 1/5 - 1/15 = 2/15 -> v = 7.5. Magnification (m) = v/u = 7.5/15 = 0.5. Image size = 0.5 * 4 = 2 cm."
-    },
-    "jamb-physics-bank-0044": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Apparent depth = Real depth / n = 10 / 1.5 = 6.67 cm."
-    },
-    "jamb-physics-bank-0045": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Short-sightedness (myopia) is corrected using a diverging or concave lens to push the image back onto the retina."
-    },
-    "jamb-physics-bank-0047": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "The positive rod repels more positive charges from the cap down to the leaves, increasing the repulsive force between them."
-    },
-    "jamb-physics-bank-0048": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "Total C = 2+4+8 = 14µF. Energy = 1/2 * C * V² = 0.5 * 14x10⁻⁶ * 36 = 2.52 x 10⁻⁴ J."
-    },
-    "jamb-physics-bank-0049": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "I = E / (R + r) = 12 / (2 + 4) = 12 / 6 = 2 A."
-    },
-    "jamb-physics-bank-0050": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "1/Rt = 1/4 + 1/4 + 1/4 = 3/4 -> Rt = 4/3 Ω. I = V / Rt = 16 / (4/3) = 12 A."
-    },
-    "jamb-physics-bank-0051": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Energy = Power * time = 0.2kW * 24h = 4.8 kWh. Cost = 4.8 * 40 = N192."
-    },
-    "jamb-physics-bank-0052": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "Power loss in cables is I²R. Reducing current (I) by increasing voltage drastically reduces heat energy loss."
-    },
-    "jamb-physics-bank-0053": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "V = Ig(Rg + R). 5 = 0.01(Rg + 498) -> 500 = Rg + 498 -> Rg = 2 Ω."
-    },
-    "jamb-physics-bank-0054": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "At resonance, the circuit is purely resistive, meaning the voltage and current are in phase (0°)."
-    },
-    "jamb-physics-bank-0055": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "m = zQ. Therefore, the slope (m/Q) equals z, the electrochemical equivalent."
-    },
-    "jamb-physics-bank-0056": {
-      "type": "mcq",
-      "letter": "C",
-      "explanation": "One of the primary functions of a transistor is to act as an amplifier of electrical signals."
-    },
-    "jamb-physics-bank-0057": {
-      "type": "mcq",
-      "letter": "A",
-      "explanation": "Silicon and Germanium are the most common intrinsic (pure) semiconductors."
     },
     "jamb-physics-bank-0001": {
       "type": "mcq",
@@ -5515,10 +5275,6 @@
       "type": "mcq",
       "letter": "A"
     },
-    "jamb-physics-bank-1325": {
-      "type": "mcq",
-      "letter": "A"
-    },
     "jamb-physics-bank-1326": {
       "type": "mcq",
       "letter": "D"
@@ -6246,10 +6002,6 @@
       "type": "mcq",
       "letter": "D"
     },
-    "jamb-physics-bank-1500": {
-      "type": "mcq",
-      "letter": "D"
-    },
     "jamb-physics-bank-1501": {
       "type": "mcq",
       "letter": "B",
@@ -6605,17 +6357,6 @@
       "letter": "B",
       "explanation": "<p>In a closed tube, the fundamental note occurs when the length of the tube l = \\(\\frac{&lambda;}{4}\\),<br />\r\nthe first overtone occurs when the length of the tube l = \\(\\frac{3 \\lambda}{4}\\)<br />\r\n&lambda; = \\(\\frac{4l}{3}\\)&nbsp;= \\(\\frac{ 4 \\times 33}{3}\\)&nbsp;= 44 cm</p>",
       "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=1255"
-    },
-    "jamb-physics-bank-1570": {
-      "type": "mcq",
-      "letter": "D"
-    },
-    "jamb-physics-bank-1571": {
-      "type": "mcq",
-      "letter": "B",
-      "explanation": "<p>.</p>",
-      "answer_image": "/qimages/90e173e929b6a4798652.png",
-      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=3028"
     },
     "jamb-physics-bank-1572": {
       "type": "mcq",
@@ -7335,12 +7076,6 @@
     "jamb-physics-bank-1721": {
       "type": "mcq",
       "letter": "B"
-    },
-    "jamb-physics-bank-1722": {
-      "type": "mcq",
-      "letter": "D",
-      "explanation": "<p>Neutral Equilibrium: If the body neither returns to its original position nor increases its displacement further, it will simply adopt its new position.</p>\r\n\r\n<p><strong>Examples of neutral equilibrium</strong></p>\r\n\r\n<ul>\r\n\t<li>Ball moving on the ground.</li>\r\n\t<li>Motion of sphere.</li>\r\n\t<li>A roller.</li>\r\n\t<li>A pencil lying horizontally.</li>\r\n\t<li>An egg lying horizontally on a flat surface.</li>\r\n</ul>",
-      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1834"
     },
     "jamb-physics-bank-1723": {
       "type": "mcq",
@@ -8720,10 +8455,6 @@
       "type": "mcq",
       "letter": "B"
     },
-    "jamb-physics-bank-2020": {
-      "type": "mcq",
-      "letter": "C"
-    },
     "jamb-physics-bank-2021": {
       "type": "mcq",
       "letter": "B"
@@ -9503,10 +9234,6 @@
     "jamb-physics-bank-2215": {
       "type": "mcq",
       "letter": "A"
-    },
-    "jamb-physics-bank-2216": {
-      "type": "mcq",
-      "letter": "D"
     },
     "jamb-physics-bank-2217": {
       "type": "mcq",

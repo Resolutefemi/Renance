@@ -57,7 +57,7 @@ void main() {
             'attempts': <dynamic>[
               <String, dynamic>{
                 'attemptId': 'a2',
-                'code': 'jamb-biology-mock',
+                'code': 'jamb-biology-bank',
                 'status': 'graded',
                 'startedAt': '2026-09-03T10:00:00Z',
                 'submittedAt': '2026-09-03T10:40:00Z',
@@ -66,7 +66,7 @@ void main() {
               },
               <String, dynamic>{
                 'attemptId': 'a1',
-                'code': 'jamb-mathematics-mock',
+                'code': 'jamb-mathematics-bank',
                 'status': 'graded',
                 'startedAt': '2026-09-02T10:00:00Z',
                 'submittedAt': '2026-09-02T10:30:00Z',

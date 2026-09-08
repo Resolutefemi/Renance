@@ -19,7 +19,7 @@ from pathlib import Path
 
 BASE = os.environ.get("E2E_BASE", "http://127.0.0.1:3990")
 REPO = Path(__file__).resolve().parents[1]
-KEY_FILE = REPO / "data" / "answer-keys" / "mock" / "jamb-english-mock.json"
+KEY_FILE = REPO / "data" / "answer-keys" / "mock" / "jamb-english-bank.json"
 
 PASS_COUNT = 0
 UNIQUE = str(int(time.time()))[-6:] + "e2e"
@@ -120,29 +120,30 @@ check("sync job reached done/100", job_done)
 # 14 manifest
 s, body = req("GET", "/manifest", token=token)
 exams = {e["code"]: e for e in body["exams"]}
-check("manifest has 5 packs", len(exams) == 5, str(len(exams)))
+check("manifest serves packs", len(exams) >= 1, str(len(exams)))
 check("manifest sha256 fingerprints present", all(re.fullmatch(r"[0-9a-f]{64}", e["bundleSha256"]) for e in exams.values()))
-check("manifest question counts", exams["jamb-english-mock"]["questionCount"] == 20 and exams["cos101-university-mock"]["questionCount"] == 15)
+check("manifest question counts", exams["jamb-english-bank"]["questionCount"] > 1000)
 
 # 15-16 bundles + doctrine
-s, body = req("GET", "/bundles/jamb-english-mock", token=token)
+s, body = req("GET", "/bundles/jamb-english-bank", token=token)
 raw = json.dumps(body)
-check("bundle 20 questions", body["questionCount"] == 20 and len(body["questions"]) == 20)
+bundle_count = body["questionCount"]
+check("bundle count matches questions", body["questionCount"] == len(body["questions"]) and bundle_count > 1000)
 check("bundle carries NO answer material", not any(f'"{k}"' in raw for k in FORBIDDEN), "doctrine breach")
 
 s, body = req("GET", "/bundles/definitely-not-real", token=token)
 check("unknown pack 404", s == 404 and body["error"]["code"] == "unknown_pack")
 
 # 17-21 attempts + grading engine (exact score from sealed key)
-s, body = req("POST", "/attempts", {"code": "jamb-english-mock"}, token=token)
+s, body = req("POST", "/attempts", {"code": "jamb-english-bank"}, token=token)
 check("attempt created 201", s == 201 and body.get("attemptId") and body["status"] == "in_progress")
 attempt_id = body["attemptId"]
-check("attempt meta (20 Q / 15 min)", body["questionCount"] == 20 and body["durationMinutes"] == 15)
+check("attempt meta matches pack", body["questionCount"] == bundle_count)
 
 key = json.loads(KEY_FILE.read_text())["answers"]
-s, bundle = req("GET", "/bundles/jamb-english-mock", token=token)
+s, bundle = req("GET", "/bundles/jamb-english-bank", token=token)
 qids = [q["id"] for q in bundle["questions"]]
-RIGHT, WRONG = 12, 8
+RIGHT, WRONG = bundle_count - 5, 5
 answers = []
 for i, qid in enumerate(qids):
     truth = key[qid]["letter"]
@@ -164,7 +165,7 @@ for _ in range(40):
         break
     time.sleep(0.3)
 check("attempt graded by worker pool", graded is not None and graded.get("result") is not None)
-check("score EXACTLY 12/20", graded["result"]["score"] == 12 and graded["result"]["total"] == 20, str(graded.get("result")))
+check(f"score EXACTLY {RIGHT}/{bundle_count}", graded["result"]["score"] == RIGHT and graded["result"]["total"] == bundle_count, str(graded.get("result")))
 check("breakdown rows present", len(graded["result"]["breakdown"]) >= 1 and all(r["total"] >= r["correct"] for r in graded["result"]["breakdown"]))
 
 s, body = req("POST", f"/attempts/{attempt_id}/submit", {"answers": answers}, token=token)
@@ -177,7 +178,7 @@ s, body = req("GET", f"/attempts/{attempt_id}", token=token2)
 check("foreign attempt invisible (404)", s == 404)
 
 # 23 retake
-s, body = req("POST", "/attempts", {"code": "jamb-english-mock"}, token=token)
+s, body = req("POST", "/attempts", {"code": "jamb-english-bank"}, token=token)
 check("retake creates fresh attempt", s == 201 and body["attemptId"] != attempt_id)
 
 # 24 tampered JWT

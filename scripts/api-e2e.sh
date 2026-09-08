@@ -67,15 +67,16 @@ MAN=$(curl -fsS "$BASE/manifest" -H "Authorization: Bearer $TOKEN")
 # The probe paper must carry syllabus topics: the graded attempt seats the
 # SM-2 review rows the /syllabus overlay (LEARNING/WEAK assertions below)
 # reads, and topic-less questions seat under "General" — outside every
-# syllabus tree. Real banks ship topic-less by design, so lead with the
-# curated mock packs (every question topicful, validated in-tree at boot)
-# and fall back to the first body-carrying bank.
-PACK=$(printf '%s' "$MAN" | jsonget "([e['code'] for e in d['exams'] if e['code'].endswith('-mock')] + [e['code'] for e in d['exams'] if e.get('body')])[0]")
+# syllabus tree. jamb-english-bank leads because 1,500+ of its questions
+# carry real JAMB-tree topics (Synonyms / Antonyms / Grammar, tagged from
+# their own instruction stems and validated in-tree at boot); fall back
+# to any -mock pack, then the first body-carrying bank.
+PACK=$(printf '%s' "$MAN" | jsonget "([e['code'] for e in d['exams'] if e['code'] == 'jamb-english-bank'] + [e['code'] for e in d['exams'] if e['code'].endswith('-mock')] + [e['code'] for e in d['exams'] if e.get('body')])[0]")
 
 step "GET /bundles/$PACK → questions present"
 BUN=$(curl -fsS "$BASE/bundles/$PACK" -H "Authorization: Bearer $TOKEN")
-Q1=$(printf '%s' "$BUN" | jsonget "d['questions'][0]['id']")
-Q2=$(printf '%s' "$BUN" | jsonget "d['questions'][1]['id']")
+Q1=$(printf '%s' "$BUN" | jsonget "[q['id'] for q in d['questions'] if q.get('topic')][0]")
+Q2=$(printf '%s' "$BUN" | jsonget "[q['id'] for q in d['questions'] if q.get('topic')][1]")
 
 step "POST /attempts → attemptId"
 ATT=$(curl -fsS -X POST "$BASE/attempts" \

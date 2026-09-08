@@ -5,8 +5,8 @@ import 'package:renance/models.dart';
 import 'package:renance/pack_share.dart';
 
 Bundle _bundle() => const Bundle(
-  code: 'jamb-biology-mock',
-  title: 'JAMB Biology — Practice Mock',
+  code: 'jamb-biology-bank',
+  title: 'JAMB Biology | Past Questions Bank',
   version: 1,
   questionCount: 2,
   totalMarks: 2,
@@ -130,7 +130,7 @@ void main() {
     });
 
     test('sharedPackFileName is predictable and picker-friendly', () {
-      expect(sharedPackFileName(_bundle()), 'jamb-biology-mock.renance-pack.json');
+      expect(sharedPackFileName(_bundle()), 'jamb-biology-bank.renance-pack.json');
     });
   });
 }

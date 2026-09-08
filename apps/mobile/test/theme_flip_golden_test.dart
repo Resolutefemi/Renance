@@ -66,8 +66,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class MemPackStore extends PackStore {
   final Map<String, Bundle> packs = <String, Bundle>{};
   final Map<String, int> sizes = <String, int>{
-    'jamb-biology-mock': 1048576,
-    'jamb-chemistry-mock': 2097152,
+    'jamb-biology-bank': 1048576,
+    'jamb-chemistry-bank': 2097152,
   };
   final List<PendingSubmission> subs = <PendingSubmission>[];
   final List<PendingCardGrade> grades = <PendingCardGrade>[];
@@ -207,7 +207,7 @@ http.Client fakeApi() {
         'version': 'demo',
         'exams': <dynamic>[
           <String, dynamic>{
-            'code': 'jamb-biology-mock',
+            'code': 'jamb-biology-bank',
             'title': 'JAMB Biology',
             'questionCount': 15,
             'totalMarks': 15,
@@ -216,7 +216,7 @@ http.Client fakeApi() {
             'sizeBytes': 1048576,
           },
           <String, dynamic>{
-            'code': 'jamb-chemistry-mock',
+            'code': 'jamb-chemistry-bank',
             'title': 'JAMB Chemistry',
             'questionCount': 12,
             'totalMarks': 12,
@@ -232,7 +232,7 @@ http.Client fakeApi() {
         'attempts': <dynamic>[
           <String, dynamic>{
             'attemptId': 'a-1',
-            'code': 'jamb-biology-mock',
+            'code': 'jamb-biology-bank',
             'status': 'graded',
             'startedAt': '2026-09-01T10:00:00Z',
             'submittedAt': '2026-09-01T10:24:00Z',
@@ -275,7 +275,7 @@ http.Client fakeApi() {
 // ---------------------------------------------------------------------------
 
 const ExamMeta kDemoExam = ExamMeta(
-  code: 'jamb-biology-mock',
+  code: 'jamb-biology-bank',
   title: 'JAMB Biology',
   questionCount: 15,
   totalMarks: 15,
@@ -371,7 +371,7 @@ WidgetBuilder screenFor(String name) {
     case 'exam_mode_setup':
       return (_) => ExamModeSetupScreen(
             exams: const <ExamMeta>[kDemoExam],
-            downloaded: const <String>{'jamb-biology-mock'},
+            downloaded: const <String>{'jamb-biology-bank'},
             onBegin: (BuildContext c, ExamMeta e) {},
           );
     case 'jamb_subjects':

@@ -139,9 +139,9 @@ void main() {
     test('downloads only packs matching profile exams', () async {
       final FakeApi api = FakeApi()
         ..manifestResult = <ExamMeta>[
-          meta('jamb-english-mock', 'JAMB'),
-          meta('jamb-physics-mock', 'JAMB'),
-          meta('cos101-university-mock', 'University Modules'),
+          meta('jamb-english-bank', 'JAMB'),
+          meta('jamb-physics-bank', 'JAMB'),
+          meta('neco-physics-bank', 'NECO'),
         ];
       final MemoryPackStore store = MemoryPackStore();
       final SyncController sync =
@@ -151,7 +151,7 @@ void main() {
 
       expect(sync.phase, SyncPhase.ready);
       final Set<String> have = await store.downloadedCodes();
-      expect(have, <String>{'jamb-english-mock', 'jamb-physics-mock'});
+      expect(have, <String>{'jamb-english-bank', 'jamb-physics-bank'});
       expect(sync.total, 2);
       sync.dispose();
     });
@@ -159,13 +159,13 @@ void main() {
     test('falls back to ALL packs when nothing matches', () async {
       final FakeApi api = FakeApi()
         ..manifestResult = <ExamMeta>[
-          meta('jamb-english-mock', 'JAMB'),
-          meta('cos101-university-mock', 'University Modules'),
+          meta('jamb-english-bank', 'JAMB'),
+          meta('neco-physics-bank', 'NECO'),
         ];
       final MemoryPackStore store = MemoryPackStore();
       final SyncController sync = SyncController(api: api, store: store);
 
-      // WAEC/NECO packs don't exist yet in the mock era — an empty library
+      // A profile for one exam body must not download other bodies' packs
       // helps nobody, so the controller downloads everything instead.
       await sync.bootstrap(profileExams: <String>['WAEC']);
 

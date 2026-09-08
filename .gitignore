@@ -39,6 +39,12 @@ apps/study-api/bin/
 data/answer-keys/*
 !data/answer-keys/mock/
 
+# Build-provenance copies of harvested source banks (with answers) are
+# kept on disk only — the packed student-safe artifacts live in
+# data/questions/. Never commit the raw sources.
+data/src/real/
+data/src/mock/
+
 # theme-flip golden renders (regenerable via --update-goldens)
 apps/mobile/test/goldens/
 arena-e2e
