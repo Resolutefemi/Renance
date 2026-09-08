@@ -415,9 +415,11 @@ step "GET /daily/JAMB -> byte-identical on refetch (pure function of day+body)"
 D2=$(curl -fsS "$BASE/daily/JAMB" -H "Authorization: Bearer $TOKEN")
 [ "$D1" = "$D2" ]
 
-step "GET /daily/University%20Modules -> 404 unknown_body (cos101 retired, no packs carry that body)"
-CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/University%20Modules" -H "Authorization: Bearer $TOKEN")
-[ "$CODE" = "404" ]
+step "GET /daily/University%20Modules -> 200 now that the 37 FUTA course banks carry that body"
+UMD=$(curl -fsS "$BASE/daily/University%20Modules" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$UMD" | jsonget "d['body']" | grep -q "University Modules"
+printf '%s' "$UMD" | jsonget "d['code']" | grep -q "^uni-futa-"
+printf '%s' "$UMD" | jsonget "len(d['questions'])" | grep -qx "10"
 
 step "GET /daily/jamb (lowercase) -> canonical JAMB challenge serves whole"
 UMLC=$(curl -fsS "$BASE/daily/jamb" -H "Authorization: Bearer $TOKEN")
