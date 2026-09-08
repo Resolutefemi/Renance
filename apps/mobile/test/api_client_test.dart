@@ -66,7 +66,7 @@ void main() {
               'version': 'era2-g1',
               'exams': <dynamic>[
                 <String, dynamic>{
-                  'code': 'jamb-biology-mock',
+                  'code': 'jamb-biology-bank',
                   'title': 'JAMB Biology',
                   'questionCount': 15,
                   'totalMarks': 15,
@@ -82,7 +82,7 @@ void main() {
         token: () => 'tok-1',
       );
       final Manifest m = await api.manifest();
-      expect(m.exams.single.code, 'jamb-biology-mock');
+      expect(m.exams.single.code, 'jamb-biology-bank');
       expect(m.exams.single.body, 'JAMB');
     });
 
@@ -107,7 +107,7 @@ void main() {
         client: MockClient((http.Request request) async => http.Response(
               jsonEncode(<String, dynamic>{
                 'attemptId': 'a-1',
-                'code': 'jamb-english-mock',
+                'code': 'jamb-english-bank',
                 'status': 'graded',
                 'result': <String, dynamic>{
                   'score': 12,

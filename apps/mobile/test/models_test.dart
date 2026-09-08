@@ -3,8 +3,8 @@ import 'package:renance/models.dart';
 import 'package:renance/storage.dart';
 
 Map<String, dynamic> fixtureBundle() => <String, dynamic>{
-      'code': 'jamb-english-mock',
-      'title': 'JAMB English — Practice Mock',
+      'code': 'jamb-english-bank',
+      'title': 'JAMB English | Past Questions Bank',
       'version': 1,
       'questionCount': 2,
       'totalMarks': 2,
@@ -13,7 +13,7 @@ Map<String, dynamic> fixtureBundle() => <String, dynamic>{
       'body': 'JAMB',
       'questions': <Map<String, dynamic>>[
         <String, dynamic>{
-          'id': 'jamb-english-mock-0001',
+          'id': 'jamb-english-bank-0001',
           'type': 'mcq',
           'stem': 'Choose the word most nearly OPPOSITE in meaning to: transparent',
           'marks': 1,
@@ -22,7 +22,7 @@ Map<String, dynamic> fixtureBundle() => <String, dynamic>{
           'difficulty': 'easy',
         },
         <String, dynamic>{
-          'id': 'jamb-english-mock-0002',
+          'id': 'jamb-english-bank-0002',
           'type': 'mcq',
           'stem': 'He has been good ______ mathematics since primary school.',
           'marks': 1,
@@ -37,7 +37,7 @@ void main() {
   group('Bundle parsing', () {
     test('parses full bundle with optional fields', () {
       final Bundle b = Bundle.fromJson(fixtureBundle());
-      expect(b.code, 'jamb-english-mock');
+      expect(b.code, 'jamb-english-bank');
       expect(b.questionCount, 2);
       expect(b.durationMinutes, 15);
       expect(b.body, 'JAMB');
@@ -76,8 +76,8 @@ void main() {
         'version': 'era2-g1',
         'exams': <dynamic>[
           <String, dynamic>{
-            'code': 'jamb-english-mock',
-            'title': 'JAMB English — Practice Mock',
+            'code': 'jamb-english-bank',
+            'title': 'JAMB English | Past Questions Bank',
             'questionCount': 20,
             'totalMarks': 20,
             'durationMinutes': 15,
@@ -113,7 +113,7 @@ void main() {
     test('round-trips through JSON for the SQLite queue', () {
       final PendingSubmission p = PendingSubmission(
         id: 'a-1',
-        code: 'jamb-english-mock',
+        code: 'jamb-english-bank',
         attemptId: 'a-1',
         answers: <String, String>{'q1': 'B', 'q2': 'A'},
         durationMs: 95000,

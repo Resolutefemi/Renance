@@ -68,19 +68,23 @@ Until then the site renders and the app defaults to the Android-emulator
 loopback (`http://10.0.2.2:3990`), which reaches a locally running
 `pnpm api:dev`.
 
-## Content pipeline (mock now, real banks in G2)
+## Content pipeline
 
 ```bash
-pnpm content:build      # data/src/mock/*.json → bundles + keys + manifest
+python3 tools/cbt-build/build.py   # data/src/<gen>/*.json → bundles + keys + manifest
 go -C apps/study-api test ./...
 ```
 
-Source banks (with answers) live in `data/src/`; the build emits
-student-safe bundles to `data/questions/`, keys to
-`data/answer-keys/` (gitignored except the mock set), and fingerprints
-everything into `data/manifest.json`. When the real 8,679-question banks
-arrive they drop into `data/src/real/` (never committed) and the same
-command does the rest — adapters cover every shape found in the wild.
+`data/questions/` is the single home of every question JSON (JAMB / WAEC /
+NECO banks + theory packs — nothing duplicates it elsewhere). Sealed
+answer keys live server-only in `data/answer-keys/mock/`, and
+`data/manifest.json` sha256-fingerprints every bundle so the API refuses
+tampered content at boot. Harvested source banks (with answers) drop into
+`data/src/real/` when they arrive — provenance copies kept on disk only,
+never committed (gitignored) — and the same command repacks everything;
+adapters cover every shape found in the wild. The retired `data/src/mock/`
+practice packs were removed; the app's UTME mock papers are composed at
+runtime from the real banks instead.
 
 ## Docs
 

@@ -1,23 +1,10 @@
 {
   "code": "jamb-chemistry-bank",
   "title": "JAMB Chemistry | Past Questions Bank",
-  "version": 2,
-  "questionCount": 2782,
-  "totalMarks": 2782,
+  "version": 3,
+  "questionCount": 2749,
+  "totalMarks": 2749,
   "questions": [
-    {
-      "id": "jamb-chemistry-bank-0002",
-      "type": "mcq",
-      "stem": "Which of the following is an example of a physical change?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2018
-    },
     {
       "id": "jamb-chemistry-bank-0006",
       "type": "mcq",
@@ -524,19 +511,6 @@
       },
       "marks": 1,
       "year": 2018
-    },
-    {
-      "id": "jamb-chemistry-bank-0005",
-      "type": "mcq",
-      "stem": "Which of the following is a noble gas?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1,
-      "year": 2017
     },
     {
       "id": "jamb-chemistry-bank-0044",
@@ -3338,42 +3312,6 @@
       "year": 2012
     },
     {
-      "id": "jamb-chemistry-bank-0001",
-      "type": "mcq",
-      "stem": "What is the atomic number of Carbon?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1
-    },
-    {
-      "id": "jamb-chemistry-bank-0003",
-      "type": "mcq",
-      "stem": "The pH of a neutral solution at 25°C is:",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1
-    },
-    {
-      "id": "jamb-chemistry-bank-0004",
-      "type": "mcq",
-      "stem": "Which gas is produced when zinc reacts with dilute hydrochloric acid?",
-      "options": {
-        "A": "a",
-        "B": "b",
-        "C": "c",
-        "D": "d"
-      },
-      "marks": 1
-    },
-    {
       "id": "jamb-chemistry-bank-0261",
       "type": "mcq",
       "stem": "A gas jar was inverted over burning yellow phosphorus floating over water in a beaker. After burning, the water level was found to rise in the gas jar. The water level rises because",
@@ -4660,20 +4598,6 @@
       "year": 1979
     },
     {
-      "id": "jamb-chemistry-bank-0353",
-      "type": "mcq",
-      "stem": "Which of the structural formula above is ethanoic acid is",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D",
-        "E": "E"
-      },
-      "marks": 1,
-      "year": 1979
-    },
-    {
       "id": "jamb-chemistry-bank-0354",
       "type": "mcq",
       "stem": "Which one of these compounds will NOT give an oxygen gas on heating?",
@@ -5215,20 +5139,6 @@
         "C": "Ethyl methyl ketone",
         "D": "Butanol",
         "E": "None"
-      },
-      "marks": 1,
-      "year": 1980
-    },
-    {
-      "id": "jamb-chemistry-bank-0394",
-      "type": "mcq",
-      "stem": "Which of the following is the correct order in the above diagram increasing boiling point, of the isomeric \\(C_{5}H_{12}\\) compounds?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D",
-        "E": "E"
       },
       "marks": 1,
       "year": 1980
@@ -7303,34 +7213,6 @@
       "year": 1984
     },
     {
-      "id": "jamb-chemistry-bank-0543",
-      "type": "mcq",
-      "stem": "USE THE DIAGRAM ABOVE TO ANSWER THIS QUESTION. Which of the following represents a carboxylic acid?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D",
-        "E": "E"
-      },
-      "marks": 1,
-      "year": 1984
-    },
-    {
-      "id": "jamb-chemistry-bank-0544",
-      "type": "mcq",
-      "stem": "Use the diagram above to answer this question Which of the following structural formula is NOT isomeric with the others?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D",
-        "E": "E"
-      },
-      "marks": 1,
-      "year": 1984
-    },
-    {
       "id": "jamb-chemistry-bank-0545",
       "type": "mcq",
       "stem": "Water is said to be 'hard' if it",
@@ -7946,34 +7828,6 @@
       "year": 1985
     },
     {
-      "id": "jamb-chemistry-bank-0589",
-      "type": "mcq",
-      "stem": "Use the above options to the question. The products formed on hydrolysis of",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D",
-        "E": "E"
-      },
-      "marks": 1,
-      "year": 1985
-    },
-    {
-      "id": "jamb-chemistry-bank-0590",
-      "type": "mcq",
-      "stem": "Use the following option above to answer this question. Which of the following is the functional group of carboxylic acids?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D",
-        "E": "E"
-      },
-      "marks": 1,
-      "year": 1985
-    },
-    {
       "id": "jamb-chemistry-bank-0591",
       "type": "mcq",
       "stem": "What is the formula of sodium gallate if gallium (Ga)shows an oxidation number of + 3?",
@@ -8408,19 +8262,6 @@
         "B": "1.4",
         "C": "4.1",
         "D": "5.1"
-      },
-      "marks": 1,
-      "year": 1986
-    },
-    {
-      "id": "jamb-chemistry-bank-0624",
-      "type": "mcq",
-      "stem": "Use the options above to answer this question. Which is the structural formula for pent-2-enoic acid?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
       },
       "marks": 1,
       "year": 1986
@@ -9051,32 +8892,6 @@
       "year": 1987
     },
     {
-      "id": "jamb-chemistry-bank-0673",
-      "type": "mcq",
-      "stem": "Use the option above to answer this question. The structure of benzoic acid is",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 1987
-    },
-    {
-      "id": "jamb-chemistry-bank-0674",
-      "type": "mcq",
-      "stem": "Use the option above to answer this question. Which is the correct set of results for tests conducted respectively on fresh lime juice and ethanol.",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 1987
-    },
-    {
       "id": "jamb-chemistry-bank-0675",
       "type": "mcq",
       "stem": "When sodium hydroxide is heated with ammonium tetraoxosulphate (IV), the gas given off may be collected by?",
@@ -9488,19 +9303,6 @@
         "B": "nitrogen (l) oxide",
         "C": "nitrogen (lV) oxide",
         "D": "nitrogen"
-      },
-      "marks": 1,
-      "year": 1988
-    },
-    {
-      "id": "jamb-chemistry-bank-0707",
-      "type": "mcq",
-      "stem": "Use the graph above to answer this question. The mass of a substance, M, liberated at an electrode during electrolysis is proportional to the quantity of electricity, Q passing through the electrolyte. This is represented graphically by.",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
       },
       "marks": 1,
       "year": 1988
@@ -10182,32 +9984,6 @@
       "year": 1989
     },
     {
-      "id": "jamb-chemistry-bank-0760",
-      "type": "mcq",
-      "stem": "Use the figure above to answer this question. Which of the following compounds is an isomer of the compound",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 1989
-    },
-    {
-      "id": "jamb-chemistry-bank-0761",
-      "type": "mcq",
-      "stem": "Use the figure above to answer this question. Which of the following is NOT an isomer of the compound?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 1989
-    },
-    {
       "id": "jamb-chemistry-bank-0762",
       "type": "mcq",
       "stem": "Using 50 cm\\(^3\\) of 1 M potassium hydroxide and 100 cm\\(^3\\) of 1 M tetraoxosulphate (VI) acid, calculate the respective volumes in cm\\(^3\\) of base and acid that would be required to produce the maximum amount of potassium tetraoxosulphate (IV) [K = 39, S = 32, O = 16, H = 1]",
@@ -10455,19 +10231,6 @@
       "year": 1990
     },
     {
-      "id": "jamb-chemistry-bank-0781",
-      "type": "mcq",
-      "stem": "CH3-C = CH \\(\\frac{Na}{liq NH_3}\\)> P, Compound P, in the above reaction, is",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 1990
-    },
-    {
       "id": "jamb-chemistry-bank-0782",
       "type": "mcq",
       "stem": "Changes in the physical in the scheme above.The letter X,Y and Z respectively represent",
@@ -10650,19 +10413,6 @@
       "year": 1990
     },
     {
-      "id": "jamb-chemistry-bank-0796",
-      "type": "mcq",
-      "stem": "Select the right answer from the structure above.Which of the following compounds represents the polymerization product of ethyne?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 1990
-    },
-    {
       "id": "jamb-chemistry-bank-0797",
       "type": "mcq",
       "stem": "Smoke consist of?",
@@ -10775,19 +10525,6 @@
         "B": "barium",
         "C": "zinc",
         "D": "copper"
-      },
-      "marks": 1,
-      "year": 1990
-    },
-    {
-      "id": "jamb-chemistry-bank-0806",
-      "type": "mcq",
-      "stem": "Use the graph above to answer this question. The structure of cis-2-butene is",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
       },
       "marks": 1,
       "year": 1990
@@ -11984,19 +11721,6 @@
         "B": "Benzene and methybenzene",
         "C": "Ethanol and propanone",
         "D": "Trichloromethane and tetrachloromethane"
-      },
-      "marks": 1,
-      "year": 1992
-    },
-    {
-      "id": "jamb-chemistry-bank-0900",
-      "type": "mcq",
-      "stem": "Which of the following compounds is a secondary alkanol?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
       },
       "marks": 1,
       "year": 1992
@@ -14122,19 +13846,6 @@
       "year": 1997
     },
     {
-      "id": "jamb-chemistry-bank-1065",
-      "type": "mcq",
-      "stem": "Choose the correct answer from the options above. When Fehling is solution is added to two isomeric carbonyl compounds X and Y with the molecular formula C 5H 10O, compound X gives a red precipitate while Y does not react. It can be inferred that X is",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 1997
-    },
-    {
       "id": "jamb-chemistry-bank-1066",
       "type": "mcq",
       "stem": "Coal gas is made up of carbon (II) oxide, hydrogen and?",
@@ -16176,19 +15887,6 @@
       "year": 2000
     },
     {
-      "id": "jamb-chemistry-bank-1223",
-      "type": "mcq",
-      "stem": "Use the option above to answer this question. The graph that describes a zero order reaction is",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2000
-    },
-    {
       "id": "jamb-chemistry-bank-1224",
       "type": "mcq",
       "stem": "Water molecule can be ligands especially when they are bonded to",
@@ -17146,19 +16844,6 @@
         "B": "ethanal",
         "C": "methanal",
         "D": "propanal"
-      },
-      "marks": 1,
-      "year": 2002
-    },
-    {
-      "id": "jamb-chemistry-bank-1298",
-      "type": "mcq",
-      "stem": "The major product of the dehydration of the compound above is?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
       },
       "marks": 1,
       "year": 2002
@@ -19795,20 +19480,6 @@
       "year": 2006
     },
     {
-      "id": "jamb-chemistry-bank-1501",
-      "type": "mcq",
-      "stem": "Which of the following functional groups will give gas bubbles when treated with a saturated solution of sodium hydrogen trioxocarbonate (IV)?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2006,
-      "image": "/qimages/ceb6bb6d0156c2eae990.jpg"
-    },
-    {
       "id": "jamb-chemistry-bank-1502",
       "type": "mcq",
       "stem": "Which of the following has an isomer?",
@@ -20435,20 +20106,6 @@
       "year": 2007
     },
     {
-      "id": "jamb-chemistry-bank-1550",
-      "type": "mcq",
-      "stem": "Which of the compounds above is a tertiary alkanol?",
-      "options": {
-        "A": "D",
-        "B": "C",
-        "C": "A",
-        "D": "B"
-      },
-      "marks": 1,
-      "year": 2007,
-      "image": "/qimages/d65cb22f758488f64050.jpg"
-    },
-    {
       "id": "jamb-chemistry-bank-1551",
       "type": "mcq",
       "stem": "Which of the following alkanes has the highest boiling point?",
@@ -20629,20 +20286,6 @@
       },
       "marks": 1,
       "year": 2008
-    },
-    {
-      "id": "jamb-chemistry-bank-1566",
-      "type": "mcq",
-      "stem": "Choose the correct option from the structure above",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2008,
-      "image": "/qimages/24e33db92010b5a870ca.jpg"
     },
     {
       "id": "jamb-chemistry-bank-1567",
@@ -22985,20 +22628,6 @@
       "year": 2011
     },
     {
-      "id": "jamb-chemistry-bank-1746",
-      "type": "mcq",
-      "stem": "choose the correct answer in the option above. Which of the following is a primary amine?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2011,
-      "image": "/qimages/5f53a0111eaebff35795.jpg"
-    },
-    {
       "id": "jamb-chemistry-bank-1747",
       "type": "mcq",
       "stem": "with conc H2SO4 as catalyst CH3COOH + C2H5OH → CH3COOC2H5 + H2O",
@@ -23610,19 +23239,6 @@
       "year": 2013
     },
     {
-      "id": "jamb-chemistry-bank-1795",
-      "type": "mcq",
-      "stem": "Choose the correct option from the graph above . 3Fe(S) + 4H2O(g) ⇌ Fe3O4(s) + 4H2(g). The equilibrium constant, K, of the reaction above is represented as",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2013
-    },
-    {
       "id": "jamb-chemistry-bank-1796",
       "type": "mcq",
       "stem": "From the diagram above, an ideal gas is represented by",
@@ -23750,33 +23366,6 @@
         "B": "less than 6.4",
         "C": "greater than 6.4",
         "D": "unaltered"
-      },
-      "marks": 1,
-      "year": 2013
-    },
-    {
-      "id": "jamb-chemistry-bank-1806",
-      "type": "mcq",
-      "stem": "Use the above option to answer this question. The dehydration of ammonium salt of alkanoic acids produces a compound with the general formula",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "marks": 1,
-      "year": 2013,
-      "image": "/qimages/de563accfc22aa411df7.jpg"
-    },
-    {
-      "id": "jamb-chemistry-bank-1807",
-      "type": "mcq",
-      "stem": "Use the following option above to answer this question. Which of the following compounds in solution will turn red litmus paper blue?",
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
       },
       "marks": 1,
       "year": 2013
@@ -36073,20 +35662,6 @@
       "image": "/qimages/bba772a8a0a9fdbfa064.jpg"
     },
     {
-      "id": "jamb-chemistry-bank-2753",
-      "type": "mcq",
-      "stem": "<p>2-methylbut-2-ene has the structure</p>",
-      "marks": 1,
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "year": 2006,
-      "image": "/qimages/4b2edaa98492a90fec00.png"
-    },
-    {
       "id": "jamb-chemistry-bank-2754",
       "type": "mcq",
       "stem": "In the diagram above , X is the ``",
@@ -36268,20 +35843,6 @@
         "D": "2 - propanol and 1 - propanol"
       },
       "year": 2012
-    },
-    {
-      "id": "jamb-chemistry-bank-2768",
-      "type": "mcq",
-      "stem": "Choose the correct option from the graph above . 3Fe<SUB>(S)</SUB> + 4H<sub>2</sub>O<sub>(g)</sub> ⇌ Fe<sub>3</sub>O<sub>4(s)</sub>  + 4H<sub>2(g)</sub>. The equilibrium constant, K, of the reaction above is represented as",
-      "marks": 1,
-      "options": {
-        "A": "A",
-        "B": "B",
-        "C": "C",
-        "D": "D"
-      },
-      "year": 2013,
-      "image": "/qimages/37052be0846dc472477f.jpg"
     },
     {
       "id": "jamb-chemistry-bank-2769",
