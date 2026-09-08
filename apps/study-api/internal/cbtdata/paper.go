@@ -437,6 +437,11 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
 
 // ComposePickPaper carves a practice subset from one static pack.
 // Deterministic per code + pack data; theory items never enter.
+//
+// A spec without From walks a seeded shuffle of the pool (random mode).
+// A spec with From takes a CONTIGUOUS slice in the pack's original
+// order — the university portals' Part chunks, where Part 2 of a 50-up
+// part means Q51–Q100 exactly as the source course page numbered them.
 func ComposePickPaper(spec *PaperSpec, base *Bundle) (*Bundle, error) {
         if spec.Family != PaperFamilyPick {
                 return nil, fmt.Errorf("cbtdata: ComposePickPaper handles pick only, got %q", spec.Family)
@@ -454,10 +459,27 @@ func ComposePickPaper(spec *PaperSpec, base *Bundle) (*Bundle, error) {
         }
         n := spec.N
         if n <= 0 {
-                n = 40
+                if spec.From > 0 {
+                        n = defaultPartN
+                } else {
+                        n = defaultPickN
+                }
         }
         rng := paperRNG(spec.Encode())
-        picked := takeShuffled(pool, n, &rng)
+        var picked []Question
+        if spec.From > 0 {
+                start := spec.From - 1
+                if start >= len(pool) {
+                        return nil, fmt.Errorf("cbtdata: %s has %d questions, from=%d is past the end", base.Code, len(pool), spec.From)
+                }
+                end := start + n
+                if end > len(pool) {
+                        end = len(pool)
+                }
+                picked = append([]Question{}, pool[start:end]...)
+        } else {
+                picked = takeShuffled(pool, n, &rng)
+        }
 
         paper := &Bundle{
                 Code:      spec.Encode(),
@@ -469,6 +491,8 @@ func ComposePickPaper(spec *PaperSpec, base *Bundle) (*Bundle, error) {
         }
         if year != 0 {
                 paper.Title = fmt.Sprintf("%s · %d Practice", strings.TrimSuffix(base.Title, " Bank"), year)
+        } else if spec.From > 0 {
+                paper.Title = fmt.Sprintf("%s · Q%d–Q%d", base.Title, spec.From, spec.From+len(picked)-1)
         } else {
                 paper.Title = base.Title + " · Practice Set"
         }

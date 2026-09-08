@@ -17,13 +17,20 @@ package cbtdata
 //                                            (waec-custom-…, neco-custom-…;
 //                                            y/n/t params only)
 //      jamb-pick-<base-code>[~params]        practice subset carved from one
-//                                            static manifest pack
+//                                            static manifest pack (any body:
+//                                            jamb, waec, neco, university
+//                                            course banks, …)
 //
-// params are dot-joined key=value pairs in canonical order y,n,enN,comp,compN,nov,t:
+// params are dot-joined key=value pairs in canonical order y,from,n,enN,comp,compN,nov,t:
 //
 //      y     per-subject years, semicolon list aligned with the subjects
 //            ("r" = random); a single value pins every subject; pick codes
 //            carry a single value. Omitted when every entry is random.
+//      from  1-based start index into the pack for CONTIGUOUS slices —
+//            the university portals' "Part" chunks (Part 2 = from=51.n=50
+//            serves Q51–Q100 in original order). Pick-only: custom/mock
+//            codes carrying it are non-canonical and refused. Omitted (=0)
+//            means the seeded shuffle walk.
 //      n     total question count (custom: spread across subjects; pick:
 //            subset size)
 //      enN   mock Use-of-English section size (default 60)
@@ -73,10 +80,15 @@ const (
         defaultMockTimer   = 120
         defaultCompN       = 10
         defaultNovelN      = 10
+        defaultPickN       = 40
+        defaultPartN       = 50
         maxEnglishSection  = 60
         maxCompN           = 30
         maxTimerMinutes    = 600
         maxPaperQuestions  = 500
+        // from is a 1-based START INDEX, not a count — banks run past
+        // maxPaperQuestions, so the cap follows bank size, not paper size.
+        maxPaperFrom       = 100000
         minYear, maxYear   = 1975, 2030
 )
 
@@ -87,6 +99,7 @@ type PaperSpec struct {
         Subjects []string // mock/custom: bank slugs (mock: English first)
         Base     string   // pick: the static pack the subset is carved from
         Years    []int    // aligned with Subjects (pick: length 1); 0 = random
+        From     int      // pick: 1-based start of a contiguous slice; 0 = shuffle
         N        int      // custom/pick question total; 0 = family default
         EnN      int      // mock English section size; 0 = default 60
         Comp     bool     // English comprehension included (default true)
@@ -351,6 +364,12 @@ func (p *PaperSpec) applyParams(params string, pick bool) error {
                                 return fmt.Errorf("cbtdata: bad n %q", v)
                         }
                         p.N = n
+                case "from":
+                        n, err := positiveInt(v)
+                        if err != nil || n > maxPaperFrom {
+                                return fmt.Errorf("cbtdata: bad from %q", v)
+                        }
+                        p.From = n
                 case "enN":
                         n, err := positiveInt(v)
                         if err != nil || n < 5 || n > maxEnglishSection {
@@ -468,6 +487,9 @@ func (p *PaperSpec) paramsString() string {
                                 }
                         }
                 }
+        }
+        if p.Family == PaperFamilyPick && p.From > 0 {
+                parts = append(parts, "from="+strconv.Itoa(p.From))
         }
         if p.Family == PaperFamilyCustom && p.N > 0 {
                 parts = append(parts, "n="+strconv.Itoa(p.N))

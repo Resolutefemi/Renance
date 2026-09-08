@@ -1,6 +1,7 @@
 package cbtdata
 
 import (
+        "fmt"
         "strings"
         "testing"
 )
@@ -478,6 +479,88 @@ func TestComposePickPaper(t *testing.T) {
         }
         if _, err := ComposePickPaper(parsed, base); err == nil {
                 t.Fatal("pick with a year the bank lacks must fail")
+        }
+}
+
+func TestComposePickPaperPartSlices(t *testing.T) {
+        lib := loadRealLibrary(t)
+        base, ok := lib.Bundle("uni-futa-cos101-bank")
+        if !ok {
+                t.Fatal("university cos101 bank missing")
+        }
+        mcq := mcqOnly(base.Questions)
+        if len(mcq) < 120 {
+                t.Fatalf("cos101 bank too small for slice tests: %d", len(mcq))
+        }
+
+        // Part 1: from=1.n=50 serves Q1–Q50 in the bank's ORIGINAL order.
+        parsed, err := lib.ParsePaper("jamb-pick-uni-futa-cos101-bank~from=1.n=50")
+        if err != nil {
+                t.Fatalf("ParsePaper part1: %v", err)
+        }
+        paper, err := ComposePickPaper(parsed, base)
+        if err != nil {
+                t.Fatalf("ComposePickPaper part1: %v", err)
+        }
+        for i, q := range paper.Questions {
+                if q.ID != mcq[i].ID {
+                        t.Fatalf("part slice broke order at %d: %s != %s", i, q.ID, mcq[i].ID)
+                }
+        }
+        if paper.QuestionCount != 50 {
+                t.Fatalf("part slice n=50 produced %d", paper.QuestionCount)
+        }
+        if want := base.Title + " · Q1–Q50"; paper.Title != want {
+                t.Fatalf("part title %q, want %q", paper.Title, want)
+        }
+
+        // Part 2 continues exactly where Part 1 ended.
+        parsed, _ = lib.ParsePaper("jamb-pick-uni-futa-cos101-bank~from=51.n=50")
+        part2, err := ComposePickPaper(parsed, base)
+        if err != nil {
+                t.Fatalf("ComposePickPaper part2: %v", err)
+        }
+        if part2.Questions[0].ID != mcq[50].ID {
+                t.Fatalf("part 2 starts at %s, want %s", part2.Questions[0].ID, mcq[50].ID)
+        }
+        // body + category carry through so the desk recognises the paper
+        if paper.Body != "University Modules" || paper.Category != "university" {
+                t.Fatalf("pick paper lost body/category: %q/%q", paper.Body, paper.Category)
+        }
+
+        // the final part clamps to the pool instead of inventing questions
+        tail := len(mcq) - len(mcq)%50 + 1
+        parsed, _ = lib.ParsePaper(fmt.Sprintf("jamb-pick-uni-futa-cos101-bank~from=%d.n=50", tail))
+        last, err := ComposePickPaper(parsed, base)
+        if err != nil {
+                t.Fatalf("ComposePickPaper tail: %v", err)
+        }
+        if last.QuestionCount != len(mcq)-tail+1 {
+                t.Fatalf("tail slice produced %d, want %d", last.QuestionCount, len(mcq)-tail+1)
+        }
+
+        // n omitted: the 50-up part default applies
+        parsed, _ = lib.ParsePaper("jamb-pick-uni-futa-cos101-bank~from=101")
+        def, err := ComposePickPaper(parsed, base)
+        if err != nil {
+                t.Fatalf("ComposePickPaper default n: %v", err)
+        }
+        if def.QuestionCount != 50 {
+                t.Fatalf("from without n produced %d, want 50", def.QuestionCount)
+        }
+
+        // from past the end refuses loudly
+        parsed, _ = lib.ParsePaper("jamb-pick-uni-futa-cos101-bank~from=99999.n=50")
+        if _, err := ComposePickPaper(parsed, base); err == nil {
+                t.Fatal("from past the pool end must fail")
+        }
+
+        // canonicality: from sorts BEFORE n; y first
+        if _, err := lib.ParsePaper("jamb-pick-uni-futa-cos101-bank~n=50.from=1"); err == nil {
+                t.Fatal("non-canonical param order must be refused")
+        }
+        if _, err := lib.ParsePaper("jamb-custom-mathematics~from=1.n=10"); err == nil {
+                t.Fatal("custom papers must not accept from")
         }
 }
 
