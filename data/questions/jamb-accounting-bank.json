@@ -2,8 +2,8 @@
   "code": "jamb-accounting-bank",
   "title": "JAMB Principles of Accounts | Past Questions Bank",
   "version": 1,
-  "questionCount": 1588,
-  "totalMarks": 1588,
+  "questionCount": 1591,
+  "totalMarks": 1591,
   "questions": [
     {
       "id": "jamb-accounting-bank-0001",
@@ -12273,7 +12273,8 @@
         "D": "N9,500"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/e1762d7ef57eaeeda391.jpg"
     },
     {
       "id": "jamb-accounting-bank-0948",
@@ -20681,6 +20682,47 @@
         "D": "oversubscribed shares and credit allotment account"
       },
       "year": 2012
+    },
+    {
+      "id": "jamb-accounting-bank-1595",
+      "type": "mcq",
+      "stem": "#800,000 worth of ordinary shares of 50k were issued at #1 each, payable in full on application. The entry in the cash book would be to",
+      "marks": 1,
+      "options": {
+        "A": "credit #1,600,000",
+        "B": "debit #1,600,000",
+        "C": "credit #1,600,000",
+        "D": "debit #800,000"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-accounting-bank-1596",
+      "type": "mcq",
+      "stem": "Determine the closing stock.",
+      "marks": 1,
+      "options": {
+        "A": "N30,000",
+        "B": "N40,000",
+        "C": "N50,000",
+        "D": "N60,000"
+      },
+      "year": 2014,
+      "image": "/qimages/04989f5529631b9e2e8d.jpg"
+    },
+    {
+      "id": "jamb-accounting-bank-1597",
+      "type": "mcq",
+      "stem": "What is the balance carried down?",
+      "marks": 1,
+      "options": {
+        "A": "N11,680",
+        "B": "N11,930",
+        "C": "N12,330",
+        "D": "N13,430"
+      },
+      "year": 2014,
+      "image": "/qimages/fcd71e2a4f618f8cf8de.jpg"
     }
   ],
   "category": "secondary",

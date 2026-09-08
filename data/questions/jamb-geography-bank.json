@@ -2,8 +2,8 @@
   "code": "jamb-geography-bank",
   "title": "JAMB Geography | Past Questions Bank",
   "version": 2,
-  "questionCount": 2383,
-  "totalMarks": 2383,
+  "questionCount": 2385,
+  "totalMarks": 2385,
   "questions": [
     {
       "id": "jamb-geography-bank-0001",
@@ -24529,7 +24529,8 @@
         "D": "Warm temperate forest"
       },
       "marks": 1,
-      "year": 2013
+      "year": 2013,
+      "image": "/qimages/9632acfa5f7818e1bdec.jpg"
     },
     {
       "id": "jamb-geography-bank-1882",
@@ -24542,7 +24543,8 @@
         "D": "plantinium"
       },
       "marks": 1,
-      "year": 2013
+      "year": 2013,
+      "image": "/qimages/6c4f45e47f67f04d755b.jpg"
     },
     {
       "id": "jamb-geography-bank-1883",
@@ -25219,7 +25221,8 @@
         "D": "1400 metric tonnes"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/c9717f8de4ef508e05be.jpg"
     },
     {
       "id": "jamb-geography-bank-1935",
@@ -31184,6 +31187,34 @@
       },
       "year": 2013,
       "image": "/qimages/55af70d8596a0c14c393.jpg"
+    },
+    {
+      "id": "jamb-geography-bank-2404",
+      "type": "mcq",
+      "stem": "The area marked P is",
+      "marks": 1,
+      "options": {
+        "A": "Udi Plateau",
+        "B": "Oban Hills",
+        "C": "Western Uplands",
+        "D": "Obudu Plateau"
+      },
+      "year": 2014,
+      "image": "/qimages/fe86dbc7fafc4b1e3d5e.jpg"
+    },
+    {
+      "id": "jamb-geography-bank-2405",
+      "type": "mcq",
+      "stem": "The area marked Y is known for",
+      "marks": 1,
+      "options": {
+        "A": "shifting cultivation",
+        "B": "intensive subsistence",
+        "C": "hunting and fishing",
+        "D": "nomadic herding"
+      },
+      "year": 2013,
+      "image": "/qimages/395696f15e11dfe8bfc7.jpg"
     }
   ],
   "body": "JAMB",

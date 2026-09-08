@@ -2,8 +2,8 @@
   "code": "jamb-economics-bank",
   "title": "JAMB Economics | Past Questions Bank",
   "version": 2,
-  "questionCount": 2699,
-  "totalMarks": 2699,
+  "questionCount": 2700,
+  "totalMarks": 2700,
   "questions": [
     {
       "id": "jamb-economics-bank-0001",
@@ -25002,7 +25002,8 @@
         "D": "GHOB"
       },
       "marks": 1,
-      "year": 2013
+      "year": 2013,
+      "image": "/qimages/e61535b1c367a739a0cd.jpg"
     },
     {
       "id": "jamb-economics-bank-1895",
@@ -25262,7 +25263,8 @@
         "D": "M"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/eb490702e07843e05a6b.jpg"
     },
     {
       "id": "jamb-economics-bank-1915",
@@ -25275,7 +25277,8 @@
         "D": "1.25"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/80d5594b22b771de3188.jpg"
     },
     {
       "id": "jamb-economics-bank-1916",
@@ -25392,7 +25395,8 @@
         "D": "9m"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/edd9e61d0a3cf5dfc630.jpg"
     },
     {
       "id": "jamb-economics-bank-1925",
@@ -25652,7 +25656,8 @@
         "D": "24%"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/847bfc03a3f19a77e76a.jpg"
     },
     {
       "id": "jamb-economics-bank-1945",
@@ -35509,6 +35514,20 @@
         "D": "Qd = f(P)"
       },
       "year": 2006
+    },
+    {
+      "id": "jamb-economics-bank-2705",
+      "type": "mcq",
+      "stem": "<p>From the graph above, R represents</p>",
+      "marks": 1,
+      "options": {
+        "A": "marginal cost",
+        "B": "total cost",
+        "C": "variable cost",
+        "D": "fixed cost"
+      },
+      "year": 2013,
+      "image": "/qimages/fe96420b9dd4dca0e243.jpg"
     }
   ],
   "body": "JAMB",
