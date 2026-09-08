@@ -2,8 +2,8 @@
   "code": "jamb-geography-bank",
   "title": "JAMB Geography | Past Questions Bank",
   "version": 2,
-  "questionCount": 2385,
-  "totalMarks": 2385,
+  "questionCount": 2387,
+  "totalMarks": 2387,
   "questions": [
     {
       "id": "jamb-geography-bank-0001",
@@ -31215,6 +31215,33 @@
       },
       "year": 2013,
       "image": "/qimages/395696f15e11dfe8bfc7.jpg"
+    },
+    {
+      "id": "jamb-geography-bank-2406",
+      "type": "mcq",
+      "stem": "The total export in 2002 is",
+      "marks": 1,
+      "options": {
+        "A": "800 metric tonnes",
+        "B": "1200 metic tonnes",
+        "C": "1000 metric tonnes",
+        "D": "11000 metric tonnes"
+      },
+      "year": 2014,
+      "image": "/qimages/b7e7014322c9be773e4c.jpg"
+    },
+    {
+      "id": "jamb-geography-bank-2407",
+      "type": "mcq",
+      "stem": "The longitudinal extent of Nigeria is",
+      "marks": 1,
+      "options": {
+        "A": "0<sup>0</sup>",
+        "B": "11<sup>0</sup>",
+        "C": "20<sup>0</sup>",
+        "D": "12<sup>0</sup>"
+      },
+      "year": 2015
     }
   ],
   "body": "JAMB",

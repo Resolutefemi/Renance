@@ -2,8 +2,8 @@
   "code": "jamb-mathematics-bank",
   "title": "JAMB Mathematics | Past Questions Bank",
   "version": 2,
-  "questionCount": 2762,
-  "totalMarks": 2762,
+  "questionCount": 2772,
+  "totalMarks": 2772,
   "questions": [
     {
       "id": "jamb-mathematics-bank-0001",
@@ -25343,7 +25343,8 @@
         "D": "y = -x - 5"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/1cc789f63ba852451bd8.jpg"
     },
     {
       "id": "jamb-mathematics-bank-1938",
@@ -36268,6 +36269,136 @@
       },
       "year": 2014,
       "image": "/qimages/fad8a85e2565a23e114c.jpg"
+    },
+    {
+      "id": "jamb-mathematics-bank-2786",
+      "type": "mcq",
+      "stem": "Evaluate Log<sub>2</sub>8 + Log<sub>2</sub>16 - Log<sub>2</sub>4",
+      "marks": 1,
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2787",
+      "type": "mcq",
+      "stem": "<i>y</i> varies directly as <i>w<sup>2</sup></i>. When y = 8, w = 2. Find y when w = 3",
+      "marks": 1,
+      "options": {
+        "A": "18",
+        "B": "12",
+        "C": "9",
+        "D": "6"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2788",
+      "type": "mcq",
+      "stem": "Simplify log<sub>10</sub>1.5 + 3 log<sub>10</sub>2 − log<sub>10</sub>0.3",
+      "marks": 1,
+      "options": {
+        "A": "log<sub>10</sub>4",
+        "B": "log<sub>10</sub>40",
+        "C": "log<sub>10</sub>-40",
+        "D": "log<sub>10</sub>4<sup>-</sup>"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-mathematics-bank-2789",
+      "type": "mcq",
+      "stem": "If log<sub>5</sub>20 = x, find x",
+      "marks": 1,
+      "options": {
+        "A": "1.761",
+        "B": "1.354",
+        "C": "1.861",
+        "D": "2.549"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-mathematics-bank-2790",
+      "type": "mcq",
+      "stem": "Simplify (0.09)<sup>2</sup> and give your answer correct to 4 significant figures",
+      "marks": 1,
+      "options": {
+        "A": "0.81",
+        "B": "0.081",
+        "C": "0.0081",
+        "D": "8.0001"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-mathematics-bank-2791",
+      "type": "mcq",
+      "stem": "Solve x<sup>2</sup> − 2x − 3 = 0",
+      "marks": 1,
+      "options": {
+        "A": "x = 2 or 1",
+        "B": "x = 3 or -1",
+        "C": "x = 1 or 0",
+        "D": "x = 1 or 2"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-mathematics-bank-2792",
+      "type": "mcq",
+      "stem": "The volume of a cylinder whose height is 4cm and whose radius 5cm is equal to (π = 3.14)",
+      "marks": 1,
+      "options": {
+        "A": "3.13cm<sup>2</sup>",
+        "B": "145cm<sup>2</sup>",
+        "C": "314cm<sup>2</sup>",
+        "D": "214cm<sup>2</sup>"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-mathematics-bank-2793",
+      "type": "mcq",
+      "stem": "10011<sub>2</sub> + *****<sub>2</sub> + 11100<sub>2</sub> + 101<sub>2</sub> = 1001111<sub>2</sub>",
+      "marks": 1,
+      "options": {
+        "A": "1111<sub>2</sub>",
+        "B": "11011<sub>2</sub>",
+        "C": "10111<sub>2</sub>",
+        "D": "11001<sub>2</sub>"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-mathematics-bank-2794",
+      "type": "mcq",
+      "stem": "Calculate the value of x and y if (27<sup>x</sup> ÷ 81<sup>x+2y</sup> = 9 ,x + 4y = 0",
+      "marks": 1,
+      "options": {
+        "A": "x = 1, y = 1/2",
+        "B": "x = 2, y = – 1/2",
+        "C": "x − 0, y = 1",
+        "D": "x = 2, y = –1"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-mathematics-bank-2795",
+      "type": "mcq",
+      "stem": "Given that tan x = \\(\\frac{2}{3}\\), where 0<sup>o</sup> d\" x d\" 90<sup>o</sup>, Find the value of 2sinx.",
+      "marks": 1,
+      "options": {
+        "A": "\\(\\frac{2\\sqrt{13}}{13}\\)",
+        "B": "\\(\\frac{3\\sqrt{13}}{13}\\)",
+        "C": "\\(\\frac{4\\sqrt{13}}{13}\\)",
+        "D": "\\(\\frac{6\\sqrt{13}}{13}\\)"
+      },
+      "year": 2015
     }
   ],
   "body": "JAMB",

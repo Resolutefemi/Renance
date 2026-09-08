@@ -2,8 +2,8 @@
   "code": "jamb-economics-bank",
   "title": "JAMB Economics | Past Questions Bank",
   "version": 2,
-  "questionCount": 2700,
-  "totalMarks": 2700,
+  "questionCount": 2701,
+  "totalMarks": 2701,
   "questions": [
     {
       "id": "jamb-economics-bank-0001",
@@ -25891,7 +25891,8 @@
         "D": "1000"
       },
       "marks": 1,
-      "year": 2015
+      "year": 2015,
+      "image": "/qimages/f15258d3bad23a289985.jpg"
     },
     {
       "id": "jamb-economics-bank-1963",
@@ -25969,7 +25970,8 @@
         "D": "There has been no change in the price of A relative to the price of B"
       },
       "marks": 1,
-      "year": 2015
+      "year": 2015,
+      "image": "/qimages/719ec7ddd71559d47240.jpg"
     },
     {
       "id": "jamb-economics-bank-1969",
@@ -35528,6 +35530,20 @@
       },
       "year": 2013,
       "image": "/qimages/fe96420b9dd4dca0e243.jpg"
+    },
+    {
+      "id": "jamb-economics-bank-2706",
+      "type": "mcq",
+      "stem": "A combination of factors responsible for a shift from D<sub>o</sub>D<sub>o</sub> to D<sub>1</sub>D<sub>1</sub> are",
+      "marks": 1,
+      "options": {
+        "A": "consumers income and change in technology",
+        "B": "price of the commodity and weather conditions",
+        "C": "consumers income and population size",
+        "D": "consumers taste and change in price"
+      },
+      "year": 2014,
+      "image": "/qimages/67324bf74c30f1902acb.jpg"
     }
   ],
   "body": "JAMB",
