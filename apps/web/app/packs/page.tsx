@@ -13,6 +13,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import TopNav from '@/components/top-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import { fetchManifest, type ExamMeta } from '@/lib/exams';
 
@@ -126,6 +127,7 @@ export default function PacksPage() {
         )}
       </div>
 
+      <TopNav />
       <BottomNav />
     </main>
   );

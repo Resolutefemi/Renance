@@ -97,6 +97,35 @@ export function loadSyllabi(): SyllabusFile[] {
   return out.sort((a, b) => a.body.localeCompare(b.body));
 }
 
+// ------------------------------------------------------- manifest
+
+export interface ManifestExam {
+  code: string;
+  title: string;
+  questionCount: number;
+  totalMarks: number;
+  body?: string;
+  category?: string;
+  years?: number[];
+}
+
+export interface ManifestFile {
+  generatedAt: string;
+  version: string;
+  exams: ManifestExam[];
+}
+
+/** The committed manifest, for build-time landing-page stats. */
+export function loadManifest(): ManifestFile | null {
+  const base = dataDir();
+  if (!base) return null;
+  try {
+    return JSON.parse(readFileSync(path.join(base, 'manifest.json'), 'utf8')) as ManifestFile;
+  } catch {
+    return null;
+  }
+}
+
 // ------------------------------------------------------- career (18)
 
 export interface CareerScholarship {
