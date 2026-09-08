@@ -21,7 +21,7 @@ import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import TutorChat from '@/components/tutor-chat';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import TopNav from '@/components/top-nav';
+import SideNav from '@/components/side-nav';
 import { apiImg, QText } from '@/lib/qtext';
 
 interface ReviewQuestion {
@@ -132,7 +132,7 @@ function ReviewInner() {
   );
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
       <PageBar title={`Review · ${review.title || review.code}`} />
       <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6">
       <div className="flex items-center justify-between">
@@ -279,7 +279,7 @@ function ReviewInner() {
         })}
       </div>
       </div>
-      <TopNav />
+      <SideNav />
       <BottomNav />
     </main>
   );
@@ -340,7 +340,7 @@ function ReviewQueue() {
   const latestGraded = attempts.find((a) => a.status === 'graded');
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
       <PageBar title="Review" />
       <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6">
       <div className="flex items-center justify-between">
@@ -425,7 +425,7 @@ function ReviewQueue() {
         </section>
       )}
       </div>
-      <TopNav />
+      <SideNav />
       <BottomNav />
     </main>
   );

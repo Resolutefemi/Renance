@@ -13,7 +13,7 @@
 import { useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import TopNav from '@/components/top-nav';
+import SideNav from '@/components/side-nav';
 
 interface Resource {
   name: string;
@@ -179,7 +179,7 @@ export default function StudyPage() {
   const [open, setOpen] = useState<string | null>(CATEGORIES[0]?.title ?? null);
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
       <PageBar title="Study" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">
@@ -262,7 +262,7 @@ export default function StudyPage() {
         </p>
       </div>
 
-      <TopNav />
+      <SideNav />
       <BottomNav />
     </main>
   );

@@ -11,6 +11,11 @@ package cbtdata
 //                                            (Use of English first, >=2 subjects)
 //      jamb-custom-<slug>-<slug>...~params   custom practice paper
 //                                            (>=1 subject, English optional)
+//      <body>-custom-<slug>...~params        body custom paper, body one of
+//                                            jamb | waec | neco — composes
+//                                            from THAT body's banks only
+//                                            (waec-custom-…, neco-custom-…;
+//                                            y/n/t params only)
 //      jamb-pick-<base-code>[~params]        practice subset carved from one
 //                                            static manifest pack
 //
@@ -47,10 +52,22 @@ const (
         PaperFamilyPick   = "pick"
 )
 
+// Exam bodies that ship customisable banks. The custom family is
+// body-parametric: the prefix names the body whose banks the paper is
+// composed from (jamb-custom-… composes from jamb-<slug>-bank, etc.).
+const (
+        BodyJamb = "jamb"
+        BodyWaec = "waec"
+        BodyNeco = "neco"
+)
+
 const (
         mockPaperFamilyPrefix   = "jamb-mock-"
         customPaperFamilyPrefix = "jamb-custom-"
         pickPaperFamilyPrefix   = "jamb-pick-"
+
+        waecCustomPaperFamilyPrefix = "waec-custom-"
+        necoCustomPaperFamilyPrefix = "neco-custom-"
 
         defaultMockEnglish = 60
         defaultMockTimer   = 120
@@ -66,6 +83,7 @@ const (
 // PaperSpec is a parsed composed-paper code.
 type PaperSpec struct {
         Family   string   // mock | custom | pick
+        Body     string   // custom families: jamb | waec | neco ("" = jamb)
         Subjects []string // mock/custom: bank slugs (mock: English first)
         Base     string   // pick: the static pack the subset is carved from
         Years    []int    // aligned with Subjects (pick: length 1); 0 = random
@@ -77,15 +95,43 @@ type PaperSpec struct {
         Timer    int      // minutes; 0 = family default
 }
 
+// BodyName returns the spec's exam body, defaulting to JAMB for the
+// original unprefixed codes.
+func (p *PaperSpec) BodyName() string {
+        if p.Body == "" {
+                return BodyJamb
+        }
+        return p.Body
+}
+
 // IsMockPaperCode reports whether code names a composite UTME mock paper
 // (with or without params).
 func IsMockPaperCode(code string) bool {
         return strings.HasPrefix(code, mockPaperFamilyPrefix) && len(code) > len(mockPaperFamilyPrefix)
 }
 
-// IsCustomPaperCode reports whether code names a custom practice paper.
+// customBodyPrefix returns the body slug for a custom-family prefix, or "".
+// A bare prefix ("waec-custom-") is not a paper — the tail must be non-empty.
+func customBodyPrefix(code string) string {
+        for _, p := range []struct {
+                prefix string
+                body   string
+        }{
+                {customPaperFamilyPrefix, BodyJamb},
+                {waecCustomPaperFamilyPrefix, BodyWaec},
+                {necoCustomPaperFamilyPrefix, BodyNeco},
+        } {
+                if strings.HasPrefix(code, p.prefix) && len(code) > len(p.prefix) {
+                        return p.body
+                }
+        }
+        return ""
+}
+
+// IsCustomPaperCode reports whether code names a custom practice paper
+// (any body: jamb-custom-, waec-custom-, neco-custom-).
 func IsCustomPaperCode(code string) bool {
-        return strings.HasPrefix(code, customPaperFamilyPrefix) && len(code) > len(customPaperFamilyPrefix)
+        return customBodyPrefix(code) != ""
 }
 
 // IsPickPaperCode reports whether code names a carved practice subset.
@@ -120,13 +166,29 @@ func ParsePaperCode(code string, dict map[string]struct{}) (*PaperSpec, error) {
                 }
                 return spec, nil
         case IsCustomPaperCode(code):
-                subjects, err := segmentSubjects(strings.TrimPrefix(body, customPaperFamilyPrefix), dict, false)
+                body := customBodyPrefix(code)
+                var tail string
+                switch body {
+                case BodyWaec:
+                        tail = strings.TrimPrefix(body_of(code), waecCustomPaperFamilyPrefix)
+                case BodyNeco:
+                        tail = strings.TrimPrefix(body_of(code), necoCustomPaperFamilyPrefix)
+                default:
+                        tail = strings.TrimPrefix(body_of(code), customPaperFamilyPrefix)
+                }
+                subjects, err := segmentSubjects(tail, dict, false)
                 if err != nil {
                         return nil, err
                 }
-                spec := &PaperSpec{Family: PaperFamilyCustom, Comp: true, Subjects: subjects}
+                spec := &PaperSpec{Family: PaperFamilyCustom, Body: body, Comp: true, Subjects: subjects}
                 if err := spec.applyParams(params, false); err != nil {
                         return nil, err
+                }
+                // enN/comp/compN/nov are JAMB English-section controls — the WAEC
+                // and NECO banks carry no comprehension/novel groups, so those
+                // params have nothing to steer. Refuse them instead of ignoring.
+                if body != BodyJamb && (spec.EnN != 0 || spec.CompN != 0 || !spec.Comp || spec.Novel) {
+                        return nil, fmt.Errorf("cbtdata: %s-custom papers take y/n/t only", body)
                 }
                 if err := spec.canonicalCheck(code); err != nil {
                         return nil, err
@@ -150,13 +212,24 @@ func ParsePaperCode(code string, dict map[string]struct{}) (*PaperSpec, error) {
 }
 
 // ParsePaper is the Library convenience wrapper: parse against this
-// library's bank-slug dictionary.
+// library's bank-slug dictionary — every body's slugs, since the code's
+// own prefix selects which body's banks it composes from.
 func (l *Library) ParsePaper(code string) (*PaperSpec, error) {
         dict := map[string]struct{}{}
-        for _, s := range l.bankSlugs() {
-                dict[s] = struct{}{}
+        for _, body := range []string{BodyJamb, BodyWaec, BodyNeco} {
+                for _, s := range l.bankSlugs(body) {
+                        dict[s] = struct{}{}
+                }
         }
         return ParsePaperCode(code, dict)
+}
+
+// body_of returns the code text before the "~" parameter separator.
+func body_of(code string) string {
+        if i := strings.Index(code, "~"); i >= 0 {
+                return code[:i]
+        }
+        return code
 }
 
 // splitParams cuts the code at the "~" separator (at most one).
@@ -342,7 +415,14 @@ func (p *PaperSpec) Encode() string {
         case PaperFamilyMock:
                 body = mockPaperFamilyPrefix + strings.Join(p.Subjects, "-")
         case PaperFamilyCustom:
-                body = customPaperFamilyPrefix + strings.Join(p.Subjects, "-")
+                prefix := customPaperFamilyPrefix
+                switch p.BodyName() {
+                case BodyWaec:
+                        prefix = waecCustomPaperFamilyPrefix
+                case BodyNeco:
+                        prefix = necoCustomPaperFamilyPrefix
+                }
+                body = prefix + strings.Join(p.Subjects, "-")
         case PaperFamilyPick:
                 body = pickPaperFamilyPrefix + p.Base
         }

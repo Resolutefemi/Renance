@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T20:40:13Z",
+  "generatedAt": "2026-09-08T21:19:32Z",
   "version": "myschool-merge-1",
   "exams": [
     {
@@ -81,8 +81,8 @@
     {
       "code": "jamb-biology-bank",
       "title": "JAMB Biology | Past Questions Bank",
-      "questionCount": 2578,
-      "totalMarks": 2578,
+      "questionCount": 2577,
+      "totalMarks": 2577,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -134,8 +134,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "abac883e55e76d167c475e38a7ef6201888af54ce3d5b8675b2b51c13e08f483",
-      "sizeBytes": 962064
+      "bundleSha256": "89b510b06f43b565a36b4fe8891a378a8f73d4b86d20a6acc704168a4aa6fda8",
+      "sizeBytes": 961767
     },
     {
       "code": "jamb-biology-theory",
@@ -1378,8 +1378,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "253ce15a5250fb14b3ea1e3b29f6db5530146d290c36cab6b2dd9734df56a935",
-      "sizeBytes": 753312
+      "bundleSha256": "2379ed22737a839c8226fcd23bab0e391fa9711819856d7e8e700bdce6f8fa50",
+      "sizeBytes": 753323
     },
     {
       "code": "waec-biology-theory",

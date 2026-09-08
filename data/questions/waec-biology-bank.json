@@ -574,7 +574,7 @@
         "A": "A",
         "B": "B",
         "C": "AB",
-        "D": "0."
+        "D": "O"
       },
       "marks": 1,
       "year": 2015
@@ -1391,7 +1391,7 @@
       "stem": "A man with blood group |A|A is married to a woman with blood group |A|O. The blood group of their son is likely to be",
       "options": {
         "A": "A",
-        "B": "0",
+        "B": "O",
         "C": "B",
         "D": "AB."
       },
@@ -5979,7 +5979,7 @@
       "type": "mcq",
       "stem": "The organ responsible for equalising air pressure in the ear is",
       "options": {
-        "A": "e",
+        "A": "cochlea",
         "B": "sacculus",
         "C": "utriculus",
         "D": "Eustachian tube"
@@ -7804,7 +7804,7 @@
       "type": "mcq",
       "stem": "The part of the ear which equalizes air pressure on either side of the eardrum is",
       "options": {
-        "A": "e",
+        "A": "cochlea",
         "B": "auditory meatus",
         "C": "malleus",
         "D": "Eustachian tube"

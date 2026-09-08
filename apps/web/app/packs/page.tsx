@@ -13,7 +13,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import TopNav from '@/components/top-nav';
+import SideNav from '@/components/side-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import { fetchManifest, type ExamMeta } from '@/lib/exams';
 
@@ -56,7 +56,7 @@ export default function PacksPage() {
   }, [exams]);
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
       <PageBar title="Question Pack" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">
@@ -89,9 +89,30 @@ export default function PacksPage() {
           <div className="mt-6 flex flex-col gap-6">
             {groups.map((group) => (
               <section key={group.body}>
-                <h2 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
-                  {group.body} · {group.packs.reduce((n, p) => n + p.questionCount, 0)} questions
-                </h2>
+                <div className="flex items-center justify-between gap-2">
+                  <h2 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
+                    {group.body} · {group.packs.reduce((n, p) => n + p.questionCount, 0)} questions
+                  </h2>
+                  {/* Each body's customise desk — compose a paper from its banks. */}
+                  {group.body === 'JAMB' && (
+                    <a
+                      href="/exams/setup"
+                      className="flex shrink-0 items-center gap-1 rounded-full bg-surface-container px-2.5 py-1 text-[11px] font-semibold text-on-surface transition hover:bg-surface-container-high"
+                    >
+                      <span className="material-symbols-outlined text-[14px]">tune</span>
+                      Customise
+                    </a>
+                  )}
+                  {(group.body === 'WAEC' || group.body === 'NECO') && (
+                    <a
+                      href={`/exams/setup?body=${group.body.toLowerCase()}`}
+                      className="flex shrink-0 items-center gap-1 rounded-full bg-surface-container px-2.5 py-1 text-[11px] font-semibold text-on-surface transition hover:bg-surface-container-high"
+                    >
+                      <span className="material-symbols-outlined text-[14px]">tune</span>
+                      Customise
+                    </a>
+                  )}
+                </div>
                 <ul className="mt-3 flex flex-col gap-3">
                   {group.packs.map((exam) => (
                     <li key={exam.code}>
@@ -127,7 +148,7 @@ export default function PacksPage() {
         )}
       </div>
 
-      <TopNav />
+      <SideNav />
       <BottomNav />
     </main>
   );

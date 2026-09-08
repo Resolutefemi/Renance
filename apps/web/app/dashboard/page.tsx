@@ -9,8 +9,9 @@ import { examHref, fetchManifest, migrateBundleCache, prefetchAll, type ExamMeta
 import { type ReviewSummary } from '@/lib/review';
 import { RenanceMark } from '@/components/renance-logo';
 import { loadActiveExam, type ActiveExam } from '@/lib/active-exam';
+import { refreshNotifications, subscribeNotifications, unreadCount } from '@/lib/notifications';
 import BottomNav from '@/components/bottom-nav';
-import TopNav from '@/components/top-nav';
+import SideNav from '@/components/side-nav';
 
 interface Profile {
   fullName: string;
@@ -90,6 +91,14 @@ export default function DashboardPage() {
     };
   }, []);
 
+  // Bell badge lives in the header chip (phones) and the side rail (md+).
+  const [unread, setUnread] = useState(0);
+  useEffect(() => {
+    const read = () => setUnread(unreadCount());
+    read();
+    return subscribeNotifications(read);
+  }, []);
+
   useEffect(() => {
     if (!getToken()) {
       router.replace('/login');
@@ -163,6 +172,18 @@ export default function DashboardPage() {
   const days = daysToTarget(me?.profile?.targetYear);
   const isJamb = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('JAMB');
   const isUniversity = (me?.profile?.exams?.[0] ?? '').includes('University');
+  const isWaec = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('WAEC');
+  const isNeco = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('NECO');
+  // Every exam body gets a real customise desk now — JAMB's Mock Setup,
+  // and the same subject/year/count/timer mode over WAEC/NECO banks.
+  // Only University Modules fall back to the pack list.
+  const setupHref = isJamb
+    ? '/exams/setup'
+    : isWaec
+      ? '/exams/setup?body=waec'
+      : isNeco
+        ? '/exams/setup?body=neco'
+        : '/packs';
 
   const coveragePct = useMemo(() => {
     const gradedCodes = new Set(
@@ -178,6 +199,27 @@ export default function DashboardPage() {
     recent?.score != null && recent?.total ? Math.round((recent.score * 100) / recent.total) : null;
   const pausedExamAnswers = activeExam ? Object.keys(activeExam.answers).length : 0;
 
+  // Derive the day's notifications from the real desk state. Safe to
+  // re-run: the engine dedupes by key per day and never un-reads a row.
+  useEffect(() => {
+    const lastGraded = attempts.find((a) => a.status === 'graded' && a.score != null && a.submittedAt);
+    refreshNotifications({
+      streak,
+      reviewDue: reviewDueCount,
+      activeExamCode: activeExam?.code ?? null,
+      activeExamAnswers: pausedExamAnswers,
+      lastGrade:
+        lastGraded && lastGraded.score != null && lastGraded.total
+          ? {
+              attemptId: lastGraded.attemptId,
+              pct: Math.round((lastGraded.score! * 100) / lastGraded.total!),
+              at: new Date(lastGraded.submittedAt!).getTime(),
+            }
+          : null,
+      dailyCode: daily?.code ?? null,
+    });
+  }, [streak, reviewDueCount, attempts, daily, activeExam, pausedExamAnswers]);
+
   if (!me) {
     return (
       <main className="flex min-h-dvh items-center justify-center bg-background">
@@ -187,7 +229,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
       {needsProfile && (
         <ProfileModal
           username={me.user.username}
@@ -202,7 +244,7 @@ export default function DashboardPage() {
 
       {/* Brand header: fixed, blurred, hairline shadow (home_dashboard).
           Founder rule: the logo and the avatar are both clickable. */}
-      <header className="fixed top-0 z-50 w-full border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl">
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl md:left-60">
         <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
           <Link
             href="/dashboard"
@@ -221,6 +263,18 @@ export default function DashboardPage() {
               className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container text-on-surface transition hover:bg-surface-container-high"
             >
               <span className="material-symbols-outlined text-[18px]">search</span>
+            </Link>
+            <Link
+              href="/notifications"
+              aria-label={`Notifications${unread ? ` (${unread} unread)` : ''}`}
+              className="relative flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container text-on-surface transition hover:bg-surface-container-high md:hidden"
+            >
+              <span className="material-symbols-outlined text-[18px]">notifications</span>
+              {unread > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-error px-1 font-mono text-[9px] font-bold text-on-error">
+                  {unread > 9 ? '9+' : unread}
+                </span>
+              )}
             </Link>
             <div className="flex items-center gap-1 rounded-full bg-surface-container px-2 py-1">
               <span className="material-symbols-outlined fill-current text-[20px] text-accent-amber">local_fire_department</span>
@@ -285,7 +339,7 @@ export default function DashboardPage() {
             </Link>
           ) : (
             <Link
-              href={isJamb ? '/exams/setup' : exams[0] ? examHref(exams[0].code) : '/packs'}
+              href={isJamb || isWaec || isNeco ? setupHref : exams[0] ? examHref(exams[0].code) : '/packs'}
               className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">play_arrow</span>
@@ -306,7 +360,7 @@ export default function DashboardPage() {
           <section className="mt-2">
             <h3 className="text-sm text-on-surface-variant">Practice</h3>
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-              <LauncherTile icon="description" label="Exams" href={isJamb ? '/exams/setup' : '/packs'} />
+              <LauncherTile icon="description" label="Exams" href={setupHref} />
               <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
               <LauncherTile icon="local_library" label="Study" href="/study" />
               <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
@@ -345,7 +399,7 @@ export default function DashboardPage() {
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
             <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
-            <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
+            <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
             <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
           </div>
         </section>
@@ -393,7 +447,7 @@ export default function DashboardPage() {
           student touches daily sits on the home grid (more_features_sheet_light). */}
       {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
 
-      <TopNav />
+      <SideNav />
       <BottomNav />
     </main>
   );
@@ -498,7 +552,7 @@ function UniversityHome({ onMore }: { onMore: () => void }) {
         <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
           <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
           <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
-          <LauncherTile icon="smart_toy" label="Tutor" inverse soon />
+          <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
           <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
         </div>
       </section>
@@ -512,6 +566,8 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
   // Progress, Badges, Certificates, Progress Report, Syllabus) live on
   // the home grids, so only the occasional tools remain in here.
   const items = [
+    { icon: 'notifications', label: 'Notifications', href: '/notifications' },
+    { icon: 'download', label: 'Downloads', href: '/downloads' },
     { icon: 'military_tech', label: 'Badges', href: '/progress' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },

@@ -98,11 +98,25 @@ export function isMockPaperCode(code: string): boolean {
   return code.startsWith(MOCK_PAPER_PREFIX) && code.length > MOCK_PAPER_PREFIX.length;
 }
 
-/** Custom-practice composed papers. */
+/** Custom-practice composed papers — any body: jamb/waec/neco. */
 export const CUSTOM_PAPER_PREFIX = 'jamb-custom-';
+export const WAEC_CUSTOM_PAPER_PREFIX = 'waec-custom-';
+export const NECO_CUSTOM_PAPER_PREFIX = 'neco-custom-';
 
 export function isCustomPaperCode(code: string): boolean {
-  return code.startsWith(CUSTOM_PAPER_PREFIX) && code.length > CUSTOM_PAPER_PREFIX.length;
+  return (
+    (code.startsWith(CUSTOM_PAPER_PREFIX) && code.length > CUSTOM_PAPER_PREFIX.length) ||
+    (code.startsWith(WAEC_CUSTOM_PAPER_PREFIX) && code.length > WAEC_CUSTOM_PAPER_PREFIX.length) ||
+    (code.startsWith(NECO_CUSTOM_PAPER_PREFIX) && code.length > NECO_CUSTOM_PAPER_PREFIX.length)
+  );
+}
+
+/** Exam body a custom paper composes from ("jamb" | "waec" | "neco"). */
+export function customPaperBody(code: string): 'jamb' | 'waec' | 'neco' | null {
+  if (code.startsWith(WAEC_CUSTOM_PAPER_PREFIX) && code.length > WAEC_CUSTOM_PAPER_PREFIX.length) return 'waec';
+  if (code.startsWith(NECO_CUSTOM_PAPER_PREFIX) && code.length > NECO_CUSTOM_PAPER_PREFIX.length) return 'neco';
+  if (code.startsWith(CUSTOM_PAPER_PREFIX) && code.length > CUSTOM_PAPER_PREFIX.length) return 'jamb';
+  return null;
 }
 
 /** Carved practice-subset papers. */
@@ -219,8 +233,9 @@ export function buildMockCode(electives: ReadonlyArray<string>, opts: MockOption
 export interface CustomOptions {
   /** Total questions, spread across the subjects (default 40). */
   count: number;
-  /** Single year for every subject, or null for random. */
-  year?: number | null;
+  /** Single year for every subject, a per-subject list (null = random
+   *  entries, semicolon-encoded), or null for all-random. */
+  year?: number | Array<number | null> | null;
   /** Timer minutes; 0/undefined = untimed. */
   timer?: number;
 }
@@ -236,6 +251,31 @@ export function buildCustomCode(subjects: ReadonlyArray<string>, opts: CustomOpt
   if (opts.count > 0) parts.push(`n=${Math.min(opts.count, 500)}`);
   if (opts.timer != null && opts.timer > 0) parts.push(`t=${opts.timer}`);
   return `jamb-custom-${sorted.join('-')}${joinParams(parts)}`;
+}
+
+/** Exam bodies whose banks can back a custom paper. */
+export type CustomBody = 'jamb' | 'waec' | 'neco';
+
+/**
+ * Canonical body custom-practice code: the same grammar as the JAMB
+ * custom family, but the prefix pins the exam body whose banks the
+ * server composes from (waec-custom-… pulls waec-<slug>-bank only).
+ * WAEC/NECO papers carry y/n/t only — the English comprehension/novel
+ * controls are JAMB-section features the server refuses elsewhere.
+ */
+export function buildBodyCustomCode(
+  body: Exclude<CustomBody, 'jamb'>,
+  subjects: ReadonlyArray<string>,
+  opts: CustomOptions,
+): string {
+  const sorted = [...new Set(subjects)].sort();
+  if (sorted.length === 0) return `${body}-custom-`;
+  const parts: string[] = [];
+  const y = yearsParam(opts.year ?? null);
+  if (y) parts.push(`y=${y}`);
+  if (opts.count > 0) parts.push(`n=${Math.min(opts.count, 500)}`);
+  if (opts.timer != null && opts.timer > 0) parts.push(`t=${opts.timer}`);
+  return `${body}-custom-${sorted.join('-')}${joinParams(parts)}`;
 }
 
 export interface PickOptions {
