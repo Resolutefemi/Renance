@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../api_client.dart';
+import '../qtext.dart';
 import 'tutor_screen.dart';
 import '../controllers.dart';
 import '../models.dart';
@@ -748,10 +749,57 @@ class _ReviewCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Text(
+          if (question.passage.isNotEmpty) ...<Widget>[
+            Container(
+              margin: const EdgeInsets.only(bottom: 10),
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: context.cardLow.withValues(alpha: 0.5),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(
+                  color: context.outlineVariant.withValues(alpha: 0.3),
+                ),
+              ),
+              constraints: const BoxConstraints(maxHeight: 200),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text('COMPREHENSION PASSAGE',
+                        style: RenanceText.labelMono.copyWith(
+                          fontSize: 10,
+                          color: context.textSecondary,
+                        )),
+                    const SizedBox(height: 6),
+                    QuestionText(
+                      question.passage,
+                      style: RenanceText.bodyBase.copyWith(
+                        fontSize: 13,
+                        height: 1.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+          QuestionText(
             question.stem,
             style: RenanceText.bodyBase.copyWith(height: 1.45),
           ),
+          if (question.image.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 10),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.network(
+                resolveQImageUrl(question.image),
+                fit: BoxFit.contain,
+                height: 200,
+                errorBuilder: (_, Object __, StackTrace? ___) =>
+                    const SizedBox.shrink(),
+              ),
+            ),
+          ],
           const SizedBox(height: 14),
           if (pickedWrong) ...<Widget>[
             _AnswerBlock(
@@ -776,6 +824,25 @@ class _ReviewCard extends StatelessWidget {
             label: 'Correct Answer',
             correct: true,
           ),
+          if (question.answerImage.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 10),
+            Text('WORKED SOLUTION',
+                style: RenanceText.labelMono.copyWith(
+                  fontSize: 10,
+                  color: context.textSecondary,
+                )),
+            const SizedBox(height: 6),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.network(
+                resolveQImageUrl(question.answerImage),
+                fit: BoxFit.contain,
+                height: 220,
+                errorBuilder: (_, Object __, StackTrace? ___) =>
+                    const SizedBox.shrink(),
+              ),
+            ),
+          ],
           if (question.explanation.isNotEmpty) ...<Widget>[
             const SizedBox(height: 12),
             Container(
@@ -785,11 +852,20 @@ class _ReviewCard extends StatelessWidget {
                 color: context.cardLow,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Text(
+              child: QuestionText(
                 question.explanation,
-                maxLines: 4,
-                overflow: TextOverflow.ellipsis,
-                style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.5),
+                style: RenanceText.caption.copyWith(
+                    color: context.textSecondary, height: 1.5),
+              ),
+            ),
+          ],
+          if (question.video.isNotEmpty) ...<Widget>[
+            const SizedBox(height: 10),
+            SelectableText(
+              question.video,
+              style: RenanceText.caption.copyWith(
+                color: context.textSecondary,
+                decoration: TextDecoration.underline,
               ),
             ),
           ],
@@ -878,7 +954,10 @@ class _AnswerBlock extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 2),
-              Text(text, style: RenanceText.bodyBase.copyWith(height: 1.4)),
+              QuestionText(
+                text,
+                style: RenanceText.bodyBase.copyWith(height: 1.4),
+              ),
             ],
           ),
         ),

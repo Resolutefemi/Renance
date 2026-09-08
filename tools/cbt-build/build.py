@@ -235,16 +235,25 @@ def main() -> int:
                     **({"difficulty": str(q["difficulty"])} if q.get("difficulty") else {}),
                     **({"year": int(q["year"])} if isinstance(q.get("year"), int) and not isinstance(q.get("year"), bool) else {}),
                     **({"group": str(q["group"])} if q.get("group") else {}),
+                    # Question diagram (path under /qimages/, or an absolute
+                    # URL) and the comprehension passage the question belongs
+                    # to. Both are student-visible material.
+                    **({"image": str(q["image"])} if q.get("image") else {}),
+                    **({"passage": str(q["passage"])} if q.get("passage") else {}),
                 })
                 if qtype == "mcq":
                     key_answers[qid] = {"type": "mcq", "letter": letter,
-                                        **({"explanation": str(q["explanation"])} if q.get("explanation") else {})}
+                                        **({"explanation": str(q["explanation"])} if q.get("explanation") else {}),
+                                        **({"answer_image": str(q["answer_image"])} if q.get("answer_image") else {}),
+                                        **({"video": str(q["video"])} if q.get("video") else {})}
                     entry["mcq"] += 1
                 elif qtype == "theory":
                     # Essay question: self-assessed, model answer lives ONLY
                     # in the sealed key. Never auto-scored (grading skips it).
                     key_answers[qid] = {"type": "theory", "letter": "",
-                                        **({"explanation": str(q["explanation"])} if q.get("explanation") else {})}
+                                        **({"explanation": str(q["explanation"])} if q.get("explanation") else {}),
+                                        **({"answer_image": str(q["answer_image"])} if q.get("answer_image") else {}),
+                                        **({"video": str(q["video"])} if q.get("video") else {})}
                     entry["theory"] = entry.get("theory", 0) + 1
                 else:
                     key_answers[qid] = {"type": "text", "accepted": accepted}

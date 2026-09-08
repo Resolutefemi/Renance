@@ -2,8 +2,8 @@
   "code": "waec-physics-bank",
   "title": "WAEC Physics | Past Questions Bank",
   "version": 1,
-  "questionCount": 1689,
-  "totalMarks": 1689,
+  "questionCount": 1767,
+  "totalMarks": 1767,
   "questions": [
     {
       "id": "waec-physics-bank-0001",
@@ -22467,6 +22467,1134 @@
       },
       "marks": 1,
       "year": 1997
+    },
+    {
+      "id": "waec-physics-bank-1690",
+      "type": "mcq",
+      "stem": "An oscillating pendulum has a velocity of 2ms<sup>-1</sup> at the equilibrium position O and velocity at same point P. Using the diagram above, calculate the height of P above O. (Take g = 10ms<sup>2</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "5.0m",
+        "B": "2.0m",
+        "C": "0.4m",
+        "D": "0.2m",
+        "E": "0.1m"
+      },
+      "year": 1990,
+      "image": "/qimages/3ebc811da8b7ac4e0c04.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1691",
+      "type": "mcq",
+      "stem": "The diagram above represents a portion of a micrometer screw 20 gauge. What is its reading?",
+      "marks": 1,
+      "options": {
+        "A": "3.70mm",
+        "B": "3.67mm",
+        "C": "3.50mm",
+        "D": "3.33mm",
+        "E": "3.17mm"
+      },
+      "year": 1990,
+      "image": "/qimages/821ab5101d8e74219f12.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1692",
+      "type": "mcq",
+      "stem": "A girl whose mass is 55kg stands on a spring - weighing machine inside a lift. When the lift starts to ascend, its acceleration is 2ms1. What will be the reading on the machine? (Take g = ms<sup>-2</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "66 kg",
+        "B": "55 kg",
+        "C": "44 kg",
+        "D": "22 kg",
+        "E": "11 kg"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-physics-bank-1693",
+      "type": "mcq",
+      "stem": "Two forces each of 4 N act on the opposite sides of a rectangular plate as shown in the diagram above. Calculate the magnitude of g the couple acting on the plate.",
+      "marks": 1,
+      "options": {
+        "A": "6.4 Nm",
+        "B": "3.2 Nm",
+        "C": "1.6 Nm",
+        "D": "0.8 Nm",
+        "E": "0.0 Nm"
+      },
+      "year": 1990,
+      "image": "/qimages/b33ad77c354e16b2cc50.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1694",
+      "type": "mcq",
+      "stem": "<p>A force F is applied to a body P as shown in the diagram above. If the body P moves through a distance r, which of the following represents the work done?</p>",
+      "marks": 1,
+      "options": {
+        "A": "Fx",
+        "B": "F<sup>cosθ</sup>/<sub>x</sub>",
+        "C": "Fx tanθ",
+        "D": "Fx sinθ",
+        "E": "Fx cosθ"
+      },
+      "year": 1990,
+      "image": "/qimages/4e3968bb8f9b60dc023c.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1695",
+      "type": "mcq",
+      "stem": "Dry hydrogen is trapped by pellet of mercury in a uniform capillary tube closed at one end. If the length of the column of hydrogen at 27°C is 1.0m, at what temperature will the length be 1.20m?",
+      "marks": 1,
+      "options": {
+        "A": "22.5<sup>o</sup>C",
+        "B": "32.4<sup>o</sup>C",
+        "C": "77.0<sup>o</sup>C",
+        "D": "87.0<sup>o</sup>C",
+        "E": "360.0<sup>o</sup>C"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-physics-bank-1696",
+      "type": "mcq",
+      "stem": "How much heat is given out when a piece of iron of mass 50g and specific heat capacity 460 Jkg<sup>-1</sup>k<sup>-1</sup> cools from 85<sup>o</sup>C to 25<sup>o</sup>C?",
+      "marks": 1,
+      "options": {
+        "A": "1.38 x 10<sup>6</sup> J",
+        "B": "2.53x10<sup>4</sup>J",
+        "C": "7.66x10<sup>3</sup>J",
+        "D": "1.38x10<sup>3</sup>J",
+        "E": "1.27 X10<sup>3</sup>J"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-physics-bank-1697",
+      "type": "mcq",
+      "stem": "A bat emits a sound wave at a speed of 1650.0ms<sup>-1</sup> and receives the echoes 0.15s later. Calculate the distance of the bat from the reflector",
+      "marks": 1,
+      "options": {
+        "A": "8.75m",
+        "B": "16.50m",
+        "C": "87.75m",
+        "D": "123.75m",
+        "E": "330.00m"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-physics-bank-1698",
+      "type": "mcq",
+      "stem": "The diagram above represents part of a wave motion in air. If the wave travels with a speed of 300ms<sup>-1</sup>calculate the frequency of the wave.",
+      "marks": 1,
+      "options": {
+        "A": "360Hz",
+        "B": "300Hz",
+        "C": "250Hz",
+        "D": "150Hz",
+        "E": "100Hz"
+      },
+      "year": 1990,
+      "image": "/qimages/cae4a2623f69f91b2b4c.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1699",
+      "type": "mcq",
+      "stem": "<p>Where will the image of the object OB shown in the diagram above be located after reflection from the mirror?</p>",
+      "marks": 1,
+      "options": {
+        "A": "At F",
+        "B": "Beyond C",
+        "C": "Between O and P",
+        "D": "Between P and F",
+        "E": "Between F and C"
+      },
+      "year": 1990,
+      "image": "/qimages/6e852a1bf810cf6ff769.png"
+    },
+    {
+      "id": "waec-physics-bank-1700",
+      "type": "mcq",
+      "stem": "The diagram above shows an incident ray A, inclined at angle of 50<sup>o</sup> to the interface CB. The ray OB is found to lie along the surface. What is the refractive index of the medium X with respect to air?",
+      "marks": 1,
+      "options": {
+        "A": "sin50<sup>o</sup>/sin40<sup>o</sup>",
+        "B": "sin40<sup>o</sup>sin50<sup>o</sup>",
+        "C": "sin90<sup>o</sup>/sin50<sup>o</sup>",
+        "D": "sin40<sup>o</sup>/sin90<sup>o</sup>",
+        "E": "sin90<sup>o</sup>/sin40<sup>o</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/fb6a162459e2bc854e17.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1701",
+      "type": "mcq",
+      "stem": "<p>The diagram above shows an incident ray A, inclined at angle of 50&ordm;&nbsp;to the interface CB. The ray OB is found to lie along the surface. What is the refractive index of the medium X with respect to air?</p>",
+      "marks": 1,
+      "options": {
+        "A": "sin50<sup>o</sup>/sin40<sup>o</sup>",
+        "B": "sin40<sup>o</sup>sin50<sup>o</sup>",
+        "C": "sin90<sup>o</sup>/sin50<sup>o</sup>",
+        "D": "sin40<sup>o</sup>/sin90<sup>o</sup>",
+        "E": "sin90<sup>o</sup>/sin40<sup>o</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/2a0c93f184afed0c8ab9.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1702",
+      "type": "mcq",
+      "stem": "The eye defect illustrated by the diagram above is",
+      "marks": 1,
+      "options": {
+        "A": "astigmatism",
+        "B": "long sightedness",
+        "C": "loss accommodation",
+        "D": "short sightedness",
+        "E": "colour blindness"
+      },
+      "year": 1990,
+      "image": "/qimages/a25d1b571b5096c2942c.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1703",
+      "type": "mcq",
+      "stem": "Calculate the current in the 3Ω resistor shown in<br>\r\nthe diagram above.",
+      "marks": 1,
+      "options": {
+        "A": "3.0A",
+        "B": "4.0A",
+        "C": "4.3A",
+        "D": "12.0A",
+        "E": "39.0A"
+      },
+      "year": 1990,
+      "image": "/qimages/60d15f85966a9ca04875.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1704",
+      "type": "mcq",
+      "stem": "<p>What is the electric potential energy between two protons each of charge q and at a distance of r apart? (Permittivity of free space = &epsilon;o)</p>",
+      "marks": 1,
+      "options": {
+        "A": "4πε<sub>o</sub>q<sup>2</sup>r",
+        "B": "qr/4πε<sub>o</sub>",
+        "C": "q/4πε<sub>o</sub>r",
+        "D": "q<sup>2</sup>/4πε<sub>o</sub>r",
+        "E": "q<sup>2</sup>/4πε<sub>o</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-physics-bank-1705",
+      "type": "mcq",
+      "stem": "A work of 30 joules is done is transferring 5 millicoulombs of charge from a point B to a point A in an electric Held. The potential difference between B and A is",
+      "marks": 1,
+      "options": {
+        "A": "1.7 x 10<sup>-4</sup>V",
+        "B": "3.4x10<sup>-4</sup>V",
+        "C": "1.5x10<sup>-1</sup>V",
+        "D": "6.0 x10<sup>3</sup>V",
+        "E": "1.2 x10<sup>4</sup>V"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-physics-bank-1706",
+      "type": "mcq",
+      "stem": "What is the value of R when G shows no deflection in the circuit illustrated above?",
+      "marks": 1,
+      "options": {
+        "A": "80Ω",
+        "B": "75Ω",
+        "C": "45Ω",
+        "D": "20Ω",
+        "E": "10Ω"
+      },
+      "year": 1990,
+      "image": "/qimages/201f94f64fa25a53597d.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1707",
+      "type": "mcq",
+      "stem": "A charge of 1.0 x 10<sup>-5</sup> Coulombs experience force of 40N at a certain point in space. What is the electric field intensity?",
+      "marks": 1,
+      "options": {
+        "A": "8.00 x 10<sup>6</sup>NC<sup>-1</sup>",
+        "B": "4.00 x 10<sup>6</sup>NC<sup>-1</sup>",
+        "C": "4.00 x 10<sup>-4</sup>NC<sup>-1</sup>",
+        "D": "2.00 x 10<sup>-4</sup>NC<sup>-1</sup>",
+        "E": "2.50 x 10<sup>-1</sup>NC<sup>-1</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-physics-bank-1708",
+      "type": "mcq",
+      "stem": "The diagram above represents the trajectory of a projectile with an initial velocity U. Calculate the time taken to reach the maximum height. (Take g as acceleration due to gravity)",
+      "marks": 1,
+      "options": {
+        "A": "Usinθ/2g",
+        "B": "2Usinθ/g",
+        "C": "Ucosθ/g",
+        "D": "2Ucosθ/g",
+        "E": "Usinθ/g"
+      },
+      "year": 1992,
+      "image": "/qimages/ddb4aaadf471bdec7e67.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1709",
+      "type": "mcq",
+      "stem": "What change in velocity would be produced on a body of mass 4kg if a constant force of 16 N acts on it for2 s?",
+      "marks": 1,
+      "options": {
+        "A": "0.5 ms<sup>-1</sup>",
+        "B": "2.0ms<sup>-1</sup>",
+        "C": "8.0 ms<sup>-1</sup>",
+        "D": "32.0 ms<sup>-1</sup>",
+        "E": "128.0 ms<sup>-1</sup>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1710",
+      "type": "mcq",
+      "stem": "A force of 20 N applied parallel to the surface of a horizontal table, is just sufficient to make a block of mass 4kg move on the table. Calculate the coefficient of friction between the block and the table. (g = 10ms<sup>2</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "0.05",
+        "B": "0.20",
+        "C": "0.50",
+        "D": "0.80",
+        "E": "2.00"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1711",
+      "type": "mcq",
+      "stem": "Steel bars, each of length 3.0 m at 28°C, are to be used for constructing a rail line. If the linear expansivity of steel is 1.0 x 10<sup>-5</sup>°C, what is the safety gap that must be left between successive bars if the highest temperature expected is 40<sup>o</sup>C?",
+      "marks": 1,
+      "options": {
+        "A": "1.2 x 10<sup>-1</sup>cm",
+        "B": "8.4 x 10<sup>-2</sup>cm",
+        "C": "7.2 x10<sup>-2</sup>cm",
+        "D": "3.6 x 10<sup>-2</sup>cm",
+        "E": "1.8 x 10<sup>-2</sup>cm"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1712",
+      "type": "mcq",
+      "stem": "<p>A given mass of gas at a temperature of 30&deg;C is trapped in a tube of volume V. Calculate the temperature of the gas when the volume is reduced to two-third of its original value by applying a pressure twice the original value.</p>",
+      "marks": 1,
+      "options": {
+        "A": "71<sup>o</sup>C",
+        "B": "40<sup>o</sup>C",
+        "C": "131<sup>o</sup>C",
+        "D": "313<sup>o</sup>C",
+        "E": "404<sup>o</sup>C"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1713",
+      "type": "mcq",
+      "stem": "<p>A gas which obeys Charles&rsquo; law exactly has a volume of 283cm3 at 10oC. What is its volume at 30oC?</p>",
+      "marks": 1,
+      "options": {
+        "A": "142cm<sup>3</sup>",
+        "B": "293cm<sup>3</sup>",
+        "C": "303cm<sup>3</sup>",
+        "D": "566cm<sup>3</sup>",
+        "E": "849cm<sup>3</sup>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1714",
+      "type": "mcq",
+      "stem": "<p>A small circular membrane is 10cm below the surface of a pool of mercury when the barometric height is 76 cm of mercury. If the density of mercury is 13600\\(kgm^{-3}\\), what is the pressure on the membrane in \\(Nm^{-2}\\)? \\((g =10ms^{-2})\\)</p>",
+      "marks": 1,
+      "options": {
+        "A": "1.17 x 10<sup>7</sup> Nm<sup>-2</sup>",
+        "B": "6.80 x 10<sup>5</sup>Nm<sup>-2</sup>",
+        "C": "1.17x10<sup>5</sup>Nm<sup>-2</sup>",
+        "D": "1.03 x 10<sup>5</sup>Nm<sup>-2</sup>",
+        "E": "1.36 x10<sup>4</sup> Nm<sup>-2</sup>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1715",
+      "type": "mcq",
+      "stem": "In an experiment to measure1 the focal length f of a converging lens object distances u and corresponding image distance were measured and 1/u plotted against 1/v to obtain the graph illustrated. How would f be determined from this graph?",
+      "marks": 1,
+      "options": {
+        "A": "f= the slope of the graph",
+        "B": "f= the intercept on the 1/u axis",
+        "C": "f =the intercept on the 1/v axis",
+        "D": "f = reciprocal of the slope",
+        "E": "f = reciprocal of the intercept on either axes"
+      },
+      "year": 1992,
+      "image": "/qimages/faeccb5caffb63e71036.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1716",
+      "type": "mcq",
+      "stem": "<p>The eye defect illustrated in the diagram above can be corrected by a</p>",
+      "marks": 1,
+      "options": {
+        "A": "convex mirror",
+        "B": "concave mirror",
+        "C": "diverging lens",
+        "D": "converging lens",
+        "E": "piano-converging lens"
+      },
+      "year": 1992,
+      "image": "/qimages/c91629d31116dbbd5f8e.png"
+    },
+    {
+      "id": "waec-physics-bank-1717",
+      "type": "mcq",
+      "stem": "<p>The diagram above shows a waveform in which energy is transferred from A to B in a time of 2.5 x 10-3s. Calculate the frequency of the wave</p>",
+      "marks": 1,
+      "options": {
+        "A": "2.0 x 10<sup>3</sup>Hz",
+        "B": "1.0 x 10<sup>3</sup>Hz",
+        "C": "4.0 x 10<sup>-2</sup>Hz",
+        "D": "1.0 x 10<sup>-3</sup>Hz",
+        "E": "5.0 x 10<sup>4</sup>Hz."
+      },
+      "year": 1992,
+      "image": "/qimages/ac88bfcc9c04e35e4857.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1718",
+      "type": "mcq",
+      "stem": "How far from a cliff should a boy stand in order to hear the echo of his clap 0.9s later? (Speed of sound in air = 330 ms<sup>-1</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "36.67m",
+        "B": "74.25m",
+        "C": "148.50m",
+        "D": "297.00",
+        "E": "366.67m"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1719",
+      "type": "mcq",
+      "stem": "A pipe closed at one end is 1.0m long. The air in the pipe is set into vibration and a fundamental note of frequency 85Hz is produced. Calculate the velocity of sound in the air. (Neglect end correction).",
+      "marks": 1,
+      "options": {
+        "A": "340.0ms<sup>-1</sup>",
+        "B": "33Oms<sup>-1</sup>",
+        "C": "170ms<sup>-1</sup>",
+        "D": "85.0ms<sup>-1</sup>",
+        "E": "42.5ms<sup>-1</sup>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1720",
+      "type": "mcq",
+      "stem": "<p>Calculate the rate at which energy is used up in the circuit illustrated by the diagram</p>",
+      "marks": 1,
+      "options": {
+        "A": "0 W",
+        "B": "2 W",
+        "C": "4 W",
+        "D": "8 W",
+        "E": "16 W"
+      },
+      "year": 1992,
+      "image": "/qimages/ae3b0a44ae6b497a4d0d.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1721",
+      "type": "mcq",
+      "stem": "Calculate the length of a constantan wire of cross- sectional area 4 π x 10<sup>-8</sup>m<sup>2</sup> and resistivity 1.1 x 10<sup>-6</sup> Ω m required to construct a standard resistor of resistance 21 Ω. [Take π = 22/7]",
+      "marks": 1,
+      "options": {
+        "A": "0.42m",
+        "B": "2.40 m",
+        "C": "6.25 m",
+        "D": "183.75 m",
+        "E": "590.00 m"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1722",
+      "type": "mcq",
+      "stem": "Calculate the time in which 4.8 kJ of energy would be expended when an electric heater of resistance 1.8 x 10<sup>3</sup>Ω is used on a 240 V mains supply. (Neglect heat losses to the surrounding).",
+      "marks": 1,
+      "options": {
+        "A": "150.0s",
+        "B": "90.0s",
+        "C": "36.0s",
+        "D": "20.0s",
+        "E": "2.7s."
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1723",
+      "type": "mcq",
+      "stem": "Calculate the energy stored in 20μF capacitor if the potential difference between the plates is 40 V.",
+      "marks": 1,
+      "options": {
+        "A": "3.2 x10<sup>-2</sup>J",
+        "B": "1.6x10<sup>2</sup>J",
+        "C": "8.0x10<sup>-4</sup>J",
+        "D": "4.0x10<sup>-4</sup>J",
+        "E": "2.0x10<sup>-4</sup>J"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-physics-bank-1724",
+      "type": "mcq",
+      "stem": "The diagrams above show lines of force in electric fields. In which of the diagrams would a positive test charge experience the least force as it moves from x to y?",
+      "marks": 1,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "III only",
+        "D": "I and II only",
+        "E": "II and III only"
+      },
+      "year": 1992,
+      "image": "/qimages/7a74e8602d4384cb03e9.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1725",
+      "type": "mcq",
+      "stem": "A stream of alpha particles is projected into an electric field between two plates X and Y as shown in the diagram above. Which of the following is correct? The particles are",
+      "marks": 1,
+      "options": {
+        "A": "accelerated and they continue in a straight line",
+        "B": "directionally reversed at the end of the plates",
+        "C": "deflected towards plate Y",
+        "D": "attracted by both plates",
+        "E": "deflected towards plate X."
+      },
+      "year": 1992,
+      "image": "/qimages/51e2e76d19060f57dc28.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1726",
+      "type": "mcq",
+      "stem": "A particle starts from rest and moves with a constant acceleration of 0.5 ms<sup>-2</sup>? Calculate the time taken by the particle to cover a distance of 25m.",
+      "marks": 1,
+      "options": {
+        "A": "25s",
+        "B": "7.1s",
+        "C": "10.0s",
+        "D": "50.0s",
+        "E": "100.0s."
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1727",
+      "type": "mcq",
+      "stem": "<p>An object is projected with a velocity of 100 ms\\(^{-1}\\) from the ground level at an angle \\(\\theta\\)&nbsp;to the vertical. If the total time of flight of the projectile is 10 s, calculate &theta;. (g = 10 ms\\(^{-2}\\)).</p>",
+      "marks": 1,
+      "options": {
+        "A": "0<sup>o</sup>",
+        "B": "30<sup>o</sup>",
+        "C": "45<sup>o</sup>",
+        "D": "60<sup>o</sup>",
+        "E": "90<sup>o</sup>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1728",
+      "type": "mcq",
+      "stem": "A solid metal cube of side 10 cm is heated from<br>\r\n10<sup>o</sup>C to 60<sup>o</sup>C. lf the linear expansivity of the metal is 1.2 x 10<sup>5</sup>K<sup>-1</sup>, calculate the increase in its volume.",
+      "marks": 1,
+      "options": {
+        "A": "0.6cm<sup>3</sup>",
+        "B": "1.2 cm<sup>3</sup>",
+        "C": "1.8 cm<sup>3</sup>",
+        "D": "3.6 cm<sup>3</sup>",
+        "E": "6.0cm<sup>3</sup>."
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1729",
+      "type": "mcq",
+      "stem": "<p>A gas has a volume of 546 cm3 at O&ordm;C. What is the volume of the gas at -100&ordm;C if its pressure remains constant?</p>",
+      "marks": 1,
+      "options": {
+        "A": "346cm<sup>3</sup>",
+        "B": "446cm<sup>3</sup>",
+        "C": "546cm<sup>3</sup>",
+        "D": "646cm<sup>3</sup>",
+        "E": "746 cm<sup>3</sup>."
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1730",
+      "type": "mcq",
+      "stem": "A man stands in front of a tall wall and produces a sound. If he receives the echo of the sound two seconds later, calculate his distance from the wall. (The speed of sound in air is 330ms<sup>-1</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "600m",
+        "B": "400m",
+        "C": "330m",
+        "D": "328m",
+        "E": "165m"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1731",
+      "type": "mcq",
+      "stem": "What is the gravitational potential due to a point mass m at a distance from it? (G = gravitational constant)",
+      "marks": 1,
+      "options": {
+        "A": "-Gm<sup>2</sup>/r<sup>2</sup>",
+        "B": "-Gm<sup>2</sup>/r",
+        "C": "–Gm/Gr<sup>2</sup>",
+        "D": "–Gm/r",
+        "E": "–Gm/2"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1732",
+      "type": "mcq",
+      "stem": "<p>The vector diagram shown below represents the resistance R, the capacitive reactance Xc, the inductive reactance Xc and the impedance, Z in an R-L-C circuit. The current in the circuit will be maximum when</p>",
+      "marks": 1,
+      "options": {
+        "A": "X<sub>L</sub> = X<sub>C</sub>",
+        "B": "X<sub>L</sub> = X<sub>L</sub>",
+        "C": "R = X<sub>L</sub>",
+        "D": "R = X"
+      },
+      "year": 1993,
+      "image": "/qimages/cf92bf513013e8969b4b.png"
+    },
+    {
+      "id": "waec-physics-bank-1733",
+      "type": "mcq",
+      "stem": "In the diagram above, three identical lamps each of 100 W are connected in parallel across a potential difference of 250 V. Calculate the reading of the ammeter.",
+      "marks": 1,
+      "options": {
+        "A": "7.5A",
+        "B": "2.5A",
+        "C": "1.2A",
+        "D": "0.8A",
+        "E": "O.4A"
+      },
+      "year": 1993,
+      "image": "/qimages/423096a8c7b63c248682.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1734",
+      "type": "mcq",
+      "stem": "ln the diagram below, the galvanometer indicates a null-deflection. What is the potential difference between P and Q?",
+      "marks": 1,
+      "options": {
+        "A": "0.0 V",
+        "B": "1.5 V",
+        "C": "2.0 V",
+        "D": "3.0V",
+        "E": "4.0 V."
+      },
+      "year": 1993,
+      "image": "/qimages/ecca2021055ea1805b2d.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1735",
+      "type": "mcq",
+      "stem": "When a potential difference, V is applied across the ends of a resistor of resistance, R a Current, l passes through the resistor. The heat generated in the resistor in time, t is given by the expression",
+      "marks": 1,
+      "options": {
+        "A": "V<sup>2</sup>lt",
+        "B": "I<sup>2</sup>t/R",
+        "C": "l<sup>2</sup>Rt",
+        "D": "lR<sup>2</sup>tR",
+        "E": "V<sup>2</sup>Rt"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1736",
+      "type": "mcq",
+      "stem": "Eight or - particles and size B - particles are emitted from an atom of <sub>92</sub><sup>238</sup>U before it achieves stability. What is the nucleon number of the final product in the chain reaction?",
+      "marks": 1,
+      "options": {
+        "A": "206",
+        "B": "234",
+        "C": "238",
+        "D": "240",
+        "E": "252"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-physics-bank-1737",
+      "type": "mcq",
+      "stem": "<p>The angular speed of an object describing a circle of radius 4m with a linear constant speed of 10 ms-1 is</p>",
+      "marks": 1,
+      "options": {
+        "A": "40.00 rad s<sup>-1</sup>",
+        "B": "14.00 rad s<sup>-1</sup>",
+        "C": "2.50 rad s<sup>-1</sup>",
+        "D": "1.58 rad s<sup>-1</sup>",
+        "E": "0.40 rad s<sup>-1</sup>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-physics-bank-1738",
+      "type": "mcq",
+      "stem": "A car travelling at a uniform speed of 120km h<sup>-1</sup> passes two stations in 4 minutes. Calculate the distance between the two stations.",
+      "marks": 1,
+      "options": {
+        "A": "8km",
+        "B": "15km",
+        "C": "22km",
+        "D": "30km",
+        "E": "60km"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-physics-bank-1739",
+      "type": "mcq",
+      "stem": "<p>Hot water at a temperature of t is added to twice that amount of water at a temperature of 30&deg;C. If the resulting temperature of the mixture is 50&deg;C. Calculate t.</p>",
+      "marks": 1,
+      "options": {
+        "A": "90<sup>o</sup>C",
+        "B": "80<sup>o</sup>C",
+        "C": "50<sup>o</sup>C",
+        "D": "40<sup>o</sup>C",
+        "E": "30<sup>o</sup>C."
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-physics-bank-1740",
+      "type": "mcq",
+      "stem": "<p>How much heat is required to convert 20 g of ice at 0oC to water at the same temperature? (Specific latent heat of ice = 336 J g-1)</p>",
+      "marks": 1,
+      "options": {
+        "A": "1.35 x 10<sup>3</sup>J",
+        "B": "5.38 x 10<sup>3</sup>J",
+        "C": "6.72 x 10<sup>3</sup>J",
+        "D": "7.06 x 10<sup>3</sup>J",
+        "E": "8.06 x 10<sup>3</sup>J"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-physics-bank-1741",
+      "type": "mcq",
+      "stem": "A ray of light is incident on mirror m1 and after reflection is incident on mirror m<sub>2</sub> as shown in the diagram, calculate the angle of reflection of the ray at mirror m<sub>2</sub>",
+      "marks": 1,
+      "options": {
+        "A": "120<sup>o</sup>",
+        "B": "90<sup>o</sup>",
+        "C": "60<sup>o</sup>",
+        "D": "45<sup>o</sup>",
+        "E": "30<sup>o</sup>"
+      },
+      "year": 1995,
+      "image": "/qimages/3ff13377ee0301019424.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1742",
+      "type": "mcq",
+      "stem": "A wire is stretched between two points, 1m apart. If the speed of the wave generated on plucking the wire is 200ms<sup>-1</sup>, what is the minimum frequency which will resonate with the wire?",
+      "marks": 1,
+      "options": {
+        "A": "50 Hz",
+        "B": "75 Hz",
+        "C": "100 Hz",
+        "D": "150 Hz",
+        "E": "200 Hz"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-physics-bank-1743",
+      "type": "mcq",
+      "stem": "A charge of 1.6 x 10<sup>-10</sup>C is placed in a uniform electric field of intensity 2.0 x 10<sup>5</sup>NC<sup>-1</sup>. What is the magnitude of the electric force exerted on the charge?",
+      "marks": 1,
+      "options": {
+        "A": "3.2 x10<sup>5</sup>N",
+        "B": "1.8 x10<sup>5</sup>N",
+        "C": "3.2 x10<sup>-5</sup>N",
+        "D": "1.8 x10<sup>-5</sup>N",
+        "E": "4.0X10<sup>-6</sup>N"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-physics-bank-1744",
+      "type": "mcq",
+      "stem": "<p>Calculate the electric potential at a distance of 20.0cm from a point charge of 0.015C placed in air of permittivity (Take \\(\\frac{1}{4&pi;&epsilon;o}\\) as 9.0 x 10\\(^9\\) Nm\\(^2\\)C\\(^2\\))</p>",
+      "marks": 1,
+      "options": {
+        "A": "3.40x10<sup>6</sup>V",
+        "B": "6.75x10<sup>8</sup>V",
+        "C": "6.75x10<sup>12</sup>V",
+        "D": "3.40x10<sup>5</sup>V",
+        "E": "8.30 x 10<sup>2</sup>V"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-physics-bank-1745",
+      "type": "mcq",
+      "stem": "Calculate the inductive reactance of the circuit shown above.",
+      "marks": 1,
+      "options": {
+        "A": "50.00",
+        "B": "5.00",
+        "C": "0.50",
+        "D": "0.05",
+        "E": "0.02"
+      },
+      "year": 1995,
+      "image": "/qimages/143aa7a7db0f5b7cfc30.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1746",
+      "type": "mcq",
+      "stem": "<p>If the current in the resistor R in diagram above is 0.05A, calculate the p.d. across the inductor.</p>",
+      "marks": 1,
+      "options": {
+        "A": "2.5V",
+        "B": "25.0V",
+        "C": "49.0V",
+        "D": "50.0V",
+        "E": "250.0V"
+      },
+      "year": 1995,
+      "image": "/qimages/125d721c6e846dc0b8b2.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1747",
+      "type": "mcq",
+      "stem": "An alternating current, having the waveform shown in the diagram above, is represented by the equation x = X<sub>o</sub> sinwt. Which of the following represents X<sub>o</sub>?",
+      "marks": 1,
+      "options": {
+        "A": "OS",
+        "B": "OR",
+        "C": "PQ",
+        "D": "RT",
+        "E": "OT"
+      },
+      "year": 1995,
+      "image": "/qimages/e73d3e0d0319443a31e4.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1748",
+      "type": "mcq",
+      "stem": "<p>Calculate the current in the 30 resistor in the diagram above if the battery is of negligible internal resistance</p>",
+      "marks": 1,
+      "options": {
+        "A": "0.3A",
+        "B": "0.4A",
+        "C": "1.0A",
+        "D": "1.5A",
+        "E": "2.5A"
+      },
+      "year": 1995,
+      "image": "/qimages/a9bf4cfffa2c5ddac07e.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1749",
+      "type": "mcq",
+      "stem": "A ball is projected horizontally from the top of a hill with a velocity of 20m<sup>-1</sup>. If it reaches the ground 4 seconds later, what is the height of the hill? (g = 10ms<sup>-2</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "20m",
+        "B": "40m",
+        "C": "80m",
+        "D": "160m",
+        "E": "200m"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-physics-bank-1750",
+      "type": "mcq",
+      "stem": "<p>A body moving with uniform acceleration has two points(5, 15) and (20, 60) on the velocity-times graph of its motion. Calculate the acceleration of the body</p>",
+      "marks": 1,
+      "options": {
+        "A": "0.25ms<sup>-2</sup>",
+        "B": "3.00ms<sup>-2</sup>",
+        "C": "4.00ms<sup>-2</sup>",
+        "D": "9.00ms<sup>-2</sup>",
+        "E": "16.00ms<sup>-2</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-physics-bank-1751",
+      "type": "mcq",
+      "stem": "An orange fruit drops to the ground from the top of a tree 45m tall. How long does it takes to reach the ground? (g = 10ms<sup>-2</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "3.0s",
+        "B": "4.5s",
+        "C": "6.0s",
+        "D": "7.5s",
+        "E": "9.0s"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-physics-bank-1752",
+      "type": "mcq",
+      "stem": "The diagram represents a block-and-tackle pulley system on which an effort of 50N is just able to lift a load of weight W. If the efficiency of the machine is 40%. find the value of W",
+      "marks": 1,
+      "options": {
+        "A": "300N",
+        "B": "200N",
+        "C": "140N",
+        "D": "120N",
+        "E": "20N"
+      },
+      "year": 1991,
+      "image": "/qimages/e1232a59bf6fd9b4f863.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1753",
+      "type": "mcq",
+      "stem": "The set-up illustrated above shows a capillary tube of uniform cross-sectional area in two different arrangements. Using the data in the diagrams. Calculate the pressure of the atmosphere",
+      "marks": 1,
+      "options": {
+        "A": "76cm of Hg",
+        "B": "75cm of Hg",
+        "C": "74cm of Hg",
+        "D": "60cm of Hg",
+        "E": "45cm of Hg"
+      },
+      "year": 1991,
+      "image": "/qimages/4e24debc5958dc40c6aa.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1754",
+      "type": "mcq",
+      "stem": "a tap supplies water at 26<sup>o</sup>C while another supplies water at 82<sup>o</sup>C. If a man wishes to bathe with water at 40<sup>o</sup>C the ratio of hot mass of hot water to that of cold water required is",
+      "marks": 1,
+      "options": {
+        "A": "1:3",
+        "B": "3:1",
+        "C": "3:7",
+        "D": "7:3",
+        "E": "15:8"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-physics-bank-1755",
+      "type": "mcq",
+      "stem": "Two forces, whose resultant is 100N are perpendicular to each other. If one of them makes an angle of 60<sup>o</sup> with the resultant, calculate the magnitude. (Sin 60<sup>o</sup> = 0.8660, Cos 60<sup>o</sup> = 0.500)",
+      "marks": 1,
+      "options": {
+        "A": "200.0N",
+        "B": "173.2N",
+        "C": "115.5N",
+        "D": "86.6N",
+        "E": "50.0N"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-physics-bank-1756",
+      "type": "mcq",
+      "stem": "The graph above shows the expansion of water as the temperature increases from 0<sup>o</sup>C. Which of the following deductions from the graph are true?  i. Water has its maximum density at Q.  ii. The volume of water is greater at 0<sup>o</sup>C than at 4<sup>o</sup>C.  iii. The volume of water decreases uniformly when cooled from 100<sup>o</sup>C.  iv. When water solidifies, its volume increases",
+      "marks": 1,
+      "options": {
+        "A": "i and ii only",
+        "B": "i and iii only",
+        "C": "ii and iii only",
+        "D": "i, ii and iii only",
+        "E": "i, ii and iv only"
+      },
+      "year": 1991,
+      "image": "/qimages/6fa7cf82830d070ef01a.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1757",
+      "type": "mcq",
+      "stem": "Two mirrors are inclined as shown in the diagram. A ray of light RO strikes the arrangement at O and emerges along PO. The emergent ray has been deviated through",
+      "marks": 1,
+      "options": {
+        "A": "240<sup>o</sup>",
+        "B": "180<sup>o</sup>",
+        "C": "120<sup>o</sup>",
+        "D": "60<sup>o</sup>",
+        "E": "30<sup>o</sup>"
+      },
+      "year": 1991,
+      "image": "/qimages/6a4db3d530e7598b416d.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1758",
+      "type": "mcq",
+      "stem": "In the arrangement illustrated above, Y and B are yellow and blue transparent light filters respectively through the filters is",
+      "marks": 1,
+      "options": {
+        "A": "blue",
+        "B": "red",
+        "C": "yellow",
+        "D": "green",
+        "E": "black"
+      },
+      "year": 1991,
+      "image": "/qimages/a3bd210dd767d8d3eeec.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1759",
+      "type": "mcq",
+      "stem": "Calculate the refractive index of the material of the glass block shown in the diagram if YZ = 4cm",
+      "marks": 1,
+      "options": {
+        "A": "0.40",
+        "B": "0.60",
+        "C": "1.50",
+        "D": "1.67",
+        "E": "2.50"
+      },
+      "year": 1991,
+      "image": "/qimages/2b56496b192a364c8975.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1760",
+      "type": "mcq",
+      "stem": "Which of the following statements is true of the diagram shown above?",
+      "marks": 1,
+      "options": {
+        "A": "the two point, A and B are in phase",
+        "B": "distance AB is halgf the wavelength of the wave",
+        "C": "AC and BD are the amplitude of the wave",
+        "D": "the two points A and B represents the wave crests",
+        "E": "the wave has four crests"
+      },
+      "year": 1991,
+      "image": "/qimages/0c84be11ac4b8b2d100b.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1761",
+      "type": "mcq",
+      "stem": "A man standing 300m away from the wall sounds a whistle. The echo from the wall reaches him 1.8sec. later, calculate the velocity of sound in air",
+      "marks": 1,
+      "options": {
+        "A": "540.0ms<sup>-1</sup>",
+        "B": "333.3ms<sup>-1</sup>",
+        "C": "270.0ms<sup>-1</sup>",
+        "D": "166.7ms<sup>-1</sup>",
+        "E": "83.3ms<sup>-1</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-physics-bank-1762",
+      "type": "mcq",
+      "stem": "<p>If the frequency of the e.m.f. source in the a.c. circuit illustrated above is \\(\\frac{500}{\\pi}\\)Hz. What is the reactance of the inductor?</p>",
+      "marks": 1,
+      "options": {
+        "A": "450",
+        "B": "0.9",
+        "C": "900",
+        "D": "567",
+        "E": "43"
+      },
+      "year": 1991,
+      "image": "/qimages/68abb642211f2369ea31.png"
+    },
+    {
+      "id": "waec-physics-bank-1763",
+      "type": "mcq",
+      "stem": "Two capacitors C<sub>1</sub> and C<sub>2</sub> are connected as shown in the diagram. The capacitance C<sub>2</sub> is twice C<sub>1</sub> when the key is opened the energy stored up in C<sub>1</sub> is W. If the key is later closed and the system is allowed to attain electrical equilibrium, the total energy stored in the system will be",
+      "marks": 1,
+      "options": {
+        "A": "\\(\\frac{1}{2}\\)W",
+        "B": "\\(\\frac{2}{3}\\)W",
+        "C": "W",
+        "D": "2w",
+        "E": "3W"
+      },
+      "year": 1991,
+      "image": "/qimages/d2807db75d1dd3357e6d.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1764",
+      "type": "mcq",
+      "stem": "Using the data in the circuit illustrated above, calculate the value of R",
+      "marks": 1,
+      "options": {
+        "A": "0.02\\(\\Omega\\)",
+        "B": "0.05\\(\\Omega\\)",
+        "C": "5.00\\(\\Omega\\)",
+        "D": "20.00\\(\\Omega\\)",
+        "E": "50.00\\(\\Omega\\)"
+      },
+      "year": 1991,
+      "image": "/qimages/040de03ac99077e3b471.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1765",
+      "type": "mcq",
+      "stem": "A 90W immersion heater is used to supply energy for 5 minutes. The energy supplied is used to completely melt 160g of a solid at its melting point. Calculate the specific latent heat of the solid.",
+      "marks": 1,
+      "options": {
+        "A": "2.81jg<sup>-1</sup>",
+        "B": "6.25Jg<sup>-1</sup>",
+        "C": "8.89Jg<sup>-1</sup>",
+        "D": "168.75Jg<sup>-1</sup>",
+        "E": "5333.33Jg<sup>-1</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-physics-bank-1766",
+      "type": "mcq",
+      "stem": "The diagram above shows a current carrying wire between the poles of a magnet. In which direction would the wire tend to move?",
+      "marks": 1,
+      "options": {
+        "A": "into the paper",
+        "B": "out of the paper",
+        "C": "towargs the north pole of the magnet",
+        "D": "towards the south pole of the magnet",
+        "E": "towards the top of the pages"
+      },
+      "year": 1991,
+      "image": "/qimages/c8992174622b8155f8ba.jpg"
+    },
+    {
+      "id": "waec-physics-bank-1767",
+      "type": "mcq",
+      "stem": "The half-life  of a radioactive substance is 2 seconds. Calculate the decay constant",
+      "marks": 1,
+      "options": {
+        "A": "0.035s<sup>-1</sup>",
+        "B": "0.151s<sup>-1</sup>",
+        "C": "0.347s<sup>-1</sup>",
+        "D": "0.576s<sup>-1</sup>",
+        "E": "1.386s<sup>-1</sup>"
+      },
+      "year": 1991
     }
   ],
   "category": "secondary",

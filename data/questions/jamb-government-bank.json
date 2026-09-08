@@ -2,8 +2,8 @@
   "code": "jamb-government-bank",
   "title": "JAMB Government | Past Questions Bank",
   "version": 2,
-  "questionCount": 2415,
-  "totalMarks": 2415,
+  "questionCount": 2416,
+  "totalMarks": 2416,
   "questions": [
     {
       "id": "jamb-government-bank-0001",
@@ -31531,6 +31531,20 @@
       },
       "marks": 1,
       "year": 2016
+    },
+    {
+      "id": "jamb-government-bank-2422",
+      "type": "mcq",
+      "stem": "Constitutional matters in which the Nigerian federal and state governments exercise joint authority are on the",
+      "marks": 1,
+      "options": {
+        "A": "exclusive list",
+        "B": "residual list",
+        "C": "concurrent list",
+        "D": "reserved list",
+        "E": "reserved list"
+      },
+      "year": 2006
     }
   ],
   "body": "JAMB",

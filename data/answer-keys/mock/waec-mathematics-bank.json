@@ -3,11 +3,13 @@
   "answers": {
     "waec-mathematics-bank-0001": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>T\\(_{2}\\) = ar = 6</p>\r\n\r\n<p>T\\(_{5}\\) = ar\\(^{4}\\) = 48</p>\r\n\r\n<p>\\(\\frac{T_5}{T_2}\\) = \\(\\frac{ar^{4}}{ar}\\) = \\(\\frac{48}{6}\\)</p>\r\n\r\n<p>= r\\(^{3}\\) = 8</p>\r\n\r\n<p>&rArr; r = 2</p>\r\n\r\n<p>S\\(_{n}\\) = \\(\\frac{a((r^n) - 1)}{r - 1}\\)</p>\r\n\r\n<p>S\\(_{4}\\) = \\(\\frac{a((r^4) - 1)}{r - 1}\\)</p>\r\n\r\n<p>S\\(_{4}\\) = \\(\\frac{3((2^4) - 1)}{2 - 1}\\)</p>\r\n\r\n<p>= 3(16 -1)</p>\r\n\r\n<p>= 45&nbsp;</p>"
     },
     "waec-mathematics-bank-0002": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>\\(\\sin \\theta = \\frac{k}{1}\\)</p>\r\n\r\n<p>\\(\\implies 1^2 = k^2 + adj^2\\)</p>\r\n\r\n<p>\\(adj = \\sqrt{1 - k^2}\\)</p>\r\n\r\n<p>\\(\\therefore \\tan \\theta = \\frac{k}{\\sqrt{1 - k^2}}\\)</p>"
     },
     "waec-mathematics-bank-0003": {
       "type": "mcq",
@@ -1607,7 +1609,8 @@
     },
     "waec-mathematics-bank-0402": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>125\\(^{\\frac{-1}{3}}\\) x 49\\(^{\\frac{-1}{2}}\\) x 10\\(^0\\)</p>\r\n\r\n<p>= 5\\(^{-1}\\) x 7\\(^{-1}\\) x 1</p>\r\n\r\n<p>= \\(\\frac{1}{35}\\)</p>"
     },
     "waec-mathematics-bank-0403": {
       "type": "mcq",
@@ -1767,7 +1770,8 @@
     },
     "waec-mathematics-bank-0442": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>3\\(^{2x}\\) = 27</p>\r\n\r\n<p>3\\(^{2x}\\) = 3\\(^3\\)</p>\r\n\r\n<p>2x = 3</p>\r\n\r\n<p>x = 1.5</p>"
     },
     "waec-mathematics-bank-0443": {
       "type": "mcq",
@@ -1779,11 +1783,13 @@
     },
     "waec-mathematics-bank-0445": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(\\frac{\\log \\sqrt{8}}{\\log 8}\\)</p>\r\n\r\n<p>= \\(\\frac{\\log 8^{\\frac{1}{2}}}{log 8}\\)</p>\r\n\r\n<p>= \\(\\frac{\\frac{1}{2} \\log 8}{\\log 8}\\)</p>\r\n\r\n<p>= \\(\\frac{1}{2}\\)&nbsp;</p>"
     },
     "waec-mathematics-bank-0446": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>log(0.65)\\(^2\\) = 2log(0.65) but log0.65 = \\(\\overline{1}\\).8129<br />\r\n&there4;2 x \\(\\overline{1}\\).8129 = \\(\\overline{1}\\).6258</p>"
     },
     "waec-mathematics-bank-0447": {
       "type": "mcq",
@@ -1923,15 +1929,18 @@
     },
     "waec-mathematics-bank-0481": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>log x = \\(\\bar{2}.3675\\) ; log y = 0.9750</p>\r\n\r\n<p>\\(x = 10^{\\bar{2}.3675} = 0.02331 \\)</p>\r\n\r\n<p>\\(y = 10^{0.9750} = 9.441 \\)</p>\r\n\r\n<p>\\(x + y = 9.4641 \\approxeq 9.46\\)</p>"
     },
     "waec-mathematics-bank-0482": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>%error = \\(\\frac{1.21 - 1.12}{1.21} \\times 100%\\)</p>\r\n\r\n<p>= \\(\\frac{9}{121} \\times 100%\\)</p>\r\n\r\n<p>= 7.44%</p>"
     },
     "waec-mathematics-bank-0483": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>\\(U_{n} = a + (n - 1)d\\)</p>\r\n\r\n<p>\\(U_{4} = 2 + (4 - 1) \\times 0.5\\)</p>\r\n\r\n<p>= \\(2 + 1.5\\)</p>\r\n\r\n<p>= 3.5</p>"
     },
     "waec-mathematics-bank-0484": {
       "type": "mcq",
@@ -2063,15 +2072,18 @@
     },
     "waec-mathematics-bank-0516": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>\\(S_{n} = \\frac{a(r^n - 1)}{r - 1}\\)</p>\r\n\r\n<p>a = 2; r = 6/2 = 3.</p>\r\n\r\n<p>\\(S_{5} = \\frac{2(3^5 - 1)}{3 - 1}\\)</p>\r\n\r\n<p>= \\(243 - 1 = 242\\)</p>"
     },
     "waec-mathematics-bank-0517": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>H = {x: x is a positive integer, x\\(^2\\) &lt; 3 and x \\(\\neq\\) 0}</p>\r\n\r\n<p>H = {1}</p>"
     },
     "waec-mathematics-bank-0518": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "∩(E∩G) = ∩(E) + ∩(G) - ∩(E∩G)<br>\r\n80 = 65 + 50 - ∩(F∩G)<br>\r\n∴∩(E∩G) = 115 - 80 = 35"
     },
     "waec-mathematics-bank-0519": {
       "type": "mcq",
@@ -2223,15 +2235,18 @@
     },
     "waec-mathematics-bank-0556": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>x\\(^2\\) + 4x - 192</p>\r\n\r\n<p>x\\(^2\\) + 16x - 12x - 192</p>\r\n\r\n<p>x(x + 16) - 12(x + 16)</p>\r\n\r\n<p>(x + 16)(x - 12)</p>"
     },
     "waec-mathematics-bank-0557": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>2e\\(^2\\) - 3e + 1</p>\r\n\r\n<p>2e\\(^2\\) - 2e - e + 1</p>\r\n\r\n<p>2e(e - 1) - 1(e - 1)</p>\r\n\r\n<p>(2e - 1)(e - 1)</p>"
     },
     "waec-mathematics-bank-0558": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>7y\\(^2\\) = 3y</p>\r\n\r\n<p>7y\\(^2\\) - 3y = 0</p>\r\n\r\n<p>y(7y - 3) = 0</p>\r\n\r\n<p>y = 0 or y = \\(\\frac{3}{7}\\)</p>"
     },
     "waec-mathematics-bank-0559": {
       "type": "mcq",
@@ -2363,11 +2378,13 @@
     },
     "waec-mathematics-bank-0591": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>x\\(^2\\) + 8 + m</p>\r\n\r\n<p>To make it a perfect square, we add \\((\\frac{b}{2})^2\\)</p>\r\n\r\n<p>= \\((\\frac{8}{2})^2\\)</p>\r\n\r\n<p>= 16</p>"
     },
     "waec-mathematics-bank-0592": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>2a\\(^2\\) - 3a - 27 = 0</p>\r\n\r\n<p>2a\\(^2\\) - 9a + 6a - 27 = 0</p>\r\n\r\n<p>a(2a - 9) + 3(2a - 9) = 0</p>\r\n\r\n<p>(a + 3)(2a - 9) = 0</p>\r\n\r\n<p>a = -3 or a = \\(\\frac{9}{2}\\)</p>"
     },
     "waec-mathematics-bank-0593": {
       "type": "mcq",
@@ -2783,7 +2800,8 @@
     },
     "waec-mathematics-bank-0696": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>(cos 40&deg; - sin 30&deg;)</p>\r\n\r\n<p>= 0.7660 - 0.5</p>\r\n\r\n<p>= 0.2660</p>"
     },
     "waec-mathematics-bank-0697": {
       "type": "mcq",
@@ -2947,11 +2965,13 @@
     },
     "waec-mathematics-bank-0737": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Probability that a student in favor is group A</p>\r\n\r\n<p>= \\(\\frac{128}{128 + 32 + 96 + 48}\\)</p>\r\n\r\n<p>= \\(\\frac{128}{304}\\)</p>\r\n\r\n<p>= \\(\\frac{8}{19}\\)</p>"
     },
     "waec-mathematics-bank-0738": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Probability that the student is against the proposal</p>\r\n\r\n<p>= \\(\\frac{32 + 48}{128 + 32 + 96 + 48}\\)</p>\r\n\r\n<p>= \\(\\frac{80}{304}\\)</p>\r\n\r\n<p>= \\(\\frac{5}{19}\\)</p>"
     },
     "waec-mathematics-bank-0739": {
       "type": "mcq",
@@ -3131,19 +3151,23 @@
     },
     "waec-mathematics-bank-0783": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>5846 \\(\\approxeq\\) 5850 (to 3 s.f.)</p>"
     },
     "waec-mathematics-bank-0784": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>log 6 + log 2 - log 12</p>\r\n\r\n<p>= \\(\\log (\\frac{6 \\times 2}{12})\\)</p>\r\n\r\n<p>= \\(\\log 1\\)</p>\r\n\r\n<p>= 0</p>"
     },
     "waec-mathematics-bank-0785": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>For the log to be 2.6025, there must be three digits before the decimal point.</p>"
     },
     "waec-mathematics-bank-0786": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>\\((\\frac{1}{4})^{-1\\frac{1}{2}}\\)</p>\r\n\r\n<p>= \\((\\frac{1}{4})^{-\\frac{3}{2}}\\)</p>\r\n\r\n<p>= \\((\\sqrt{\\frac{1}{4}})^{-3}\\)</p>\r\n\r\n<p>= \\((\\frac{1}{2})^{-3}\\)</p>\r\n\r\n<p>= \\(2^3\\)</p>\r\n\r\n<p>= 8</p>"
     },
     "waec-mathematics-bank-0787": {
       "type": "mcq",
@@ -3163,7 +3187,8 @@
     },
     "waec-mathematics-bank-0791": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>Degree for food items = 360&deg; - (120&deg; + 80&deg; + 43&deg; + 30&deg; + 18&deg;)</p>\r\n\r\n<p>= 360&deg; - 291&deg;</p>\r\n\r\n<p>= 69&deg;</p>\r\n\r\n<p>&there4;&there4;&nbsp;Amount spent on food items = \\(\\frac{69}{360}\\)&times;12,000.00</p>\r\n\r\n<p>=&nbsp;N2300.00</p>"
     },
     "waec-mathematics-bank-0792": {
       "type": "mcq",
@@ -3299,23 +3324,28 @@
     },
     "waec-mathematics-bank-0825": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(\\frac{y + 2}{y^2 - 3y - 10}\\)&nbsp;</p>\r\n\r\n<p>\\(y^2 - 3y - 10 = 0 \\implies y^2 - 5y + 2y - 10 = 0\\)</p>\r\n\r\n<p>\\(y(y - 5) + 2(y - 5) = 0\\)</p>\r\n\r\n<p>\\((y - 5)(y + 2) = 0\\)</p>\r\n\r\n<p>\\(\\frac{y + 2}{(y - 5)(y + 2)} = \\frac{1}{y - 5}\\)</p>\r\n\r\n<p>\\(\\therefore\\) At y = 5, the expression \\(\\frac{y + 2}{y^2 - 3y - 10}\\) is undefined.</p>"
     },
     "waec-mathematics-bank-0826": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>3a\\(^2\\) - 11a + 6</p>\r\n\r\n<p>3a\\(^2\\) - 9a - 2a + 6</p>\r\n\r\n<p>3a(a - 3) - 2(a - 3)&nbsp;</p>\r\n\r\n<p>= (3a - 2)(a - 3)</p>"
     },
     "waec-mathematics-bank-0827": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>3a + 10 = a\\(^2\\)</p>\r\n\r\n<p>a\\(^2\\) - 3a - 10 = 0</p>\r\n\r\n<p>a\\(^2\\) - 5a + 2a - 10 = 0</p>\r\n\r\n<p>a(a - 5) + 2(a - 5) = 0</p>\r\n\r\n<p>(a - 5)(a + 2) = 0</p>\r\n\r\n<p>a = 5 or a = -2.</p>"
     },
     "waec-mathematics-bank-0828": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\((\\frac{3}{x} - \\frac{15}{2y}) \\div \\frac{6}{xy}\\)</p>\r\n\r\n<p>= \\((\\frac{6y - 15x}{2xy}) \\div \\frac{6}{xy}\\)</p>\r\n\r\n<p>= \\(\\frac{6y - 15x}{2xy} \\times \\frac{xy}{6}\\)</p>\r\n\r\n<p>= \\(\\frac{3(2y - 5x)}{2xy} \\times \\frac{xy}{6}\\)</p>\r\n\r\n<p>= \\(\\frac{2y - 5x}{4}\\)</p>"
     },
     "waec-mathematics-bank-0829": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\(\\frac{1}{4}(2^n&nbsp; - 2^{n + 2}\\)) =&nbsp;\\(\\frac{1}{4}(2^n - 2^n \\times2^2\\))</p>\r\n\r\n<p>\\(\\frac{1}{4} \\times2^n(1 - 2^2\\)) = \\(2^{-2}\\times2^n(1 - 2^2\\))</p>\r\n\r\n<p>\\(2^{n - 2}(2^0 - 2^2\\)) = \\(2^{n - 2} - 2^n\\)</p>"
     },
     "waec-mathematics-bank-0830": {
       "type": "mcq",
@@ -3475,19 +3505,23 @@
     },
     "waec-mathematics-bank-0869": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>6(x - 4) + 3(x + 7) = 3</p>\r\n\r\n<p>6x - 24 + 3x + 21 = 3</p>\r\n\r\n<p>9x - 3 = 3</p>\r\n\r\n<p>9x = 6</p>\r\n\r\n<p>x = \\(\\frac{2}{3}\\)</p>"
     },
     "waec-mathematics-bank-0870": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "2x + y = 7 = i<br>\r\n3x - 2y = 3 = ii<br>\r\ni x 2 + ii = 4x + 2y = 14<br>\r\n<br>\r\n\\(\\frac {3x - 2y = 3}{7x = 17}\\)<br>\r\n<br>\r\nx = \\(\\frac {17}{7}\\) = 7x = 17 x 1/7 x 7<br>\r\n17 - 10 = 7"
     },
     "waec-mathematics-bank-0871": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "r= 4cm; base area = \\(\\pi\\)r<sup>2</sup>; Curve S.A = 2\\(\\pi\\)rh<br>\r\n<br>\r\n\\(\\frac{base area}{curved area}\\) = 1/4; \\(\\pi\\)/2\\(\\pi\\)rh <br>\r\n<br>\r\n=h = \\(\\frac{4 x 4cm}{2}\\)<br>\r\n<br>\r\nh= 8cm"
     },
     "waec-mathematics-bank-0872": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Husband contributions = \\(\\frac{7}{100}\\) x N5,500 = N385<br>\r\n<br>\r\nWife contribution = \\(\\frac{4}{100}\\) x N4,000 = N160<br>\r\n<br>\r\nSum of their Annual contribution = N385 + N160 = N545"
     },
     "waec-mathematics-bank-0873": {
       "type": "mcq",
@@ -3639,11 +3673,13 @@
     },
     "waec-mathematics-bank-0910": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "80km/h = \\(\\frac{80}{60}\\) x \\(\\frac{1000}{60}\\) = 3 x 3= \\(\\frac{40 x 5}{9}\\)<br>\r\n<br>\r\n= \\(\\frac{200m/s}{9}\\) = 22.22m/s"
     },
     "waec-mathematics-bank-0911": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Error =12.75 - 7.50 = 5.25<br>\r\n<br>\r\nError % = \\(\\frac{5.25}{12.75}\\) x 100% = 41.2%"
     },
     "waec-mathematics-bank-0912": {
       "type": "mcq",
@@ -3811,7 +3847,8 @@
     },
     "waec-mathematics-bank-0953": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>a = 1st term ; ar\\(^4\\) = 5th term<br />\r\n&there4; ar\\(^4\\) = a(2)\\(^4\\) = 16a; 16a = 45 + a, a = 3;<br />\r\n3(2)\\(^4\\) = 48</p>"
     },
     "waec-mathematics-bank-0954": {
       "type": "mcq",
@@ -4171,7 +4208,9 @@
     },
     "waec-mathematics-bank-1043": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Applying the formula<br />\r\n80 = 65 - x + x + 50 - x<br />\r\nx = 35</p>",
+      "answer_image": "/qimages/3a419f33e96db0d48222.jpg"
     },
     "waec-mathematics-bank-1044": {
       "type": "mcq",
@@ -4179,7 +4218,8 @@
     },
     "waec-mathematics-bank-1045": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>x = 5, \\(\\frac{\\sum {fx}}{\\sum {f}}\\) =<br />\r\n<br />\r\n5= \\(\\frac{\\sum {fx}}{30}\\)<br />\r\n<br />\r\n\\(\\sum {fx}\\) = 5 x 30 = 150; 150 - 34 = 116<br />\r\n<br />\r\n\\(\\sum {f}\\) = 29<br />\r\n\\(\\sum {fx}\\) = 116<br />\r\n<br />\r\n= \\(\\frac{116}{29}\\) = 4</p>"
     },
     "waec-mathematics-bank-1046": {
       "type": "mcq",
@@ -4323,7 +4363,8 @@
     },
     "waec-mathematics-bank-1081": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Median = 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5,<strong>| </strong>5, 5, <strong>|</strong>5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7,&nbsp;</p>\r\n\r\n<p>Median = \\(\\frac{5 + 5}{2}\\) = 5</p>"
     },
     "waec-mathematics-bank-1082": {
       "type": "mcq",
@@ -4331,11 +4372,13 @@
     },
     "waec-mathematics-bank-1083": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>P(X \\(\\cup\\) Y) = \\(\\frac{1}{3} + \\frac{2}{5}\\)</p>\r\n\r\n<p>= \\(\\frac{11}{15}\\)</p>"
     },
     "waec-mathematics-bank-1084": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Total number of marbles = 5; 1st pick = 2/5 2nd pick = 3/4; 3rd pick = 3/5; 4th pick = 2/4<br />\r\n&there4; Probability of picking two marbles of different colors = (2/5 x 3/4) + (3/5 + 2/4) = 12/20 = 3/5</p>"
     },
     "waec-mathematics-bank-1085": {
       "type": "mcq",
@@ -4363,7 +4406,8 @@
     },
     "waec-mathematics-bank-1091": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>(1/2)(1/4) = 1/8</p>"
     },
     "waec-mathematics-bank-1092": {
       "type": "mcq",
@@ -4371,11 +4415,13 @@
     },
     "waec-mathematics-bank-1093": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Sum of &ang;s in a pentagon = (n - 2)180 = 540&deg;<br />\r\nx&deg;&nbsp;+ 2x&deg;&nbsp;+ x&deg;&nbsp;+ 60&deg;&nbsp;+ x&deg;&nbsp;+ 10&deg;&nbsp;+ x&deg;&nbsp;- 10&deg;&nbsp;= 540&deg;<br />\r\n6x&deg;&nbsp;+ 60&deg;&nbsp;= 540&deg;; x = 80&deg;</p>"
     },
     "waec-mathematics-bank-1094": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "Let x be the exterior angle; interior = 3x; but x + 3x =  180<sup>o</sup><br>\r\n<br>\r\n4x = 180<sup>o</sup>; x = 45<br>\r\n<br>\r\n= \\(\\frac{360}{45}\\) = 8"
     },
     "waec-mathematics-bank-1095": {
       "type": "mcq",
@@ -4395,7 +4441,8 @@
     },
     "waec-mathematics-bank-1099": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>U = {1,2,3,4}; P = {2,3}; Q = {2,4}; P&cap;Q = {2}<br />\r\n(P&cap;Q)&#39;&nbsp;= {1,3,4}</p>"
     },
     "waec-mathematics-bank-1100": {
       "type": "mcq",
@@ -4403,23 +4450,28 @@
     },
     "waec-mathematics-bank-1101": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "\\(\\begin{array}{c|c} 2 & 77 \\\\ \\hline 2 & 38 R1 \\\\ 2 & 19 R0 \\\\ 2 & 9 R1 \\\\ 2 & 4 R1 \\\\ 2 & 2 R0 \\\\ 2 & 1 R0 \\\\ & 0 R1\\end{array}\\)<br>\r\n<br>\r\n77<sub>ten</sub> = 1001101<sub>two</sub>"
     },
     "waec-mathematics-bank-1102": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Error = 4.25 - 4.10 = 0.15</p>\r\n\r\n<p>% error = \\(\\frac{0.15}{4.25} \\times 100%\\)</p>\r\n\r\n<p>= \\(\\frac{15}{\\frac{17}{4}} = \\frac{15 \\times 4}{17}\\)</p>\r\n\r\n<p>= \\(3\\frac{9}{17} %\\)</p>"
     },
     "waec-mathematics-bank-1103": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(T_n = 3. 2^{n -&nbsp;2} \\\\</p>\r\n\r\n<p>T_{1} = 3. 2^{1 -&nbsp;2} = 3. 2^{-1}&nbsp;\\\\</p>\r\n\r\n<p>T_1 = \\frac{3}{2} \\)</p>\r\n\r\n<p>\\(T_2 = 3. 2^{2 -&nbsp;2} \\\\</p>\r\n\r\n<p>T_2 = 3. 2^0&nbsp; = 3\\)</p>\r\n\r\n<p>\\(T_3 = 3. 2^{3 -&nbsp;2} = 3. 2^1&nbsp;\\\\</p>\r\n\r\n<p>T_3 = 6\\)</p>\r\n\r\n<p>The first 3 terms of the sequence are \\(\\frac{3}{2}\\), 3&nbsp;and 6.</p>"
     },
     "waec-mathematics-bank-1104": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\((\\frac{16}{81})^{\\frac{1}{4}}\\)</p>\r\n\r\n<p>= \\(((\\frac{2}{3})^{4})^{\\frac{1}{4}}\\)</p>\r\n\r\n<p>= \\(\\frac{2}{3}\\)</p>"
     },
     "waec-mathematics-bank-1105": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(\\log_{10} 25 + \\log_{10} 32 - \\log_{10} 8\\)</p>\r\n\r\n<p>= \\(\\log_{10} (\\frac{25 \\times 32}{8})\\)</p>\r\n\r\n<p>= \\(\\log_{10} 100 \\)</p>\r\n\r\n<p>= 2</p>"
     },
     "waec-mathematics-bank-1106": {
       "type": "mcq",
@@ -4431,31 +4483,38 @@
     },
     "waec-mathematics-bank-1108": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>\\(\\frac{1}{1 - x} + \\frac{2}{1 + x}\\)</p>\r\n\r\n<p>= \\(\\frac{(1 + x) + 2(1 - x)}{(1 - x)(1 + x)}\\)</p>\r\n\r\n<p>= \\(\\frac{1 + x + 2 - 2x}{1 - x^2}\\)</p>\r\n\r\n<p>= \\(\\frac{3 - x}{1 - x^2}\\)</p>"
     },
     "waec-mathematics-bank-1109": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>x\\(^2\\) - 18x to be a perfect square.</p>\r\n\r\n<p>\\((\\frac{b}{2})^2\\) is added to ax\\(^2\\) + bx + c in order to make it a perfect square.</p>\r\n\r\n<p>\\(x^2 - 18x + (\\frac{-18}{2})^2\\)</p>\r\n\r\n<p>= \\(x^2 - 18x + 81\\)</p>"
     },
     "waec-mathematics-bank-1110": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(\\frac{m}{3} + \\frac{1}{2} = \\frac{3}{4} + \\frac{m}{4}\\)</p>\r\n\r\n<p>\\(\\frac{m}{3} - \\frac{m}{4} = \\frac{3}{4} - \\frac{1}{2}\\)</p>\r\n\r\n<p>\\(\\frac{m}{12} = \\frac{1}{4}\\)</p>\r\n\r\n<p>\\(4m = 12 \\implies m = 3\\)</p>"
     },
     "waec-mathematics-bank-1111": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>L = &theta;/360 x 2&pi;R = 240/360 x 2 x 22/7 x 8/1 ... (1)</p>\r\n\r\n<p>This must be equal to the circumference of the circle which is 2&pi;r = 44R/7 .... (2)</p>\r\n\r\n<p>equate (1) and (2)</p>\r\n\r\n<p>r = 16/3 = 5\\(\\frac{1}{3}\\)</p>"
     },
     "waec-mathematics-bank-1112": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Curved surface area of a cylindrical tin = \\(2\\pi rh\\)</p>\r\n\r\n<p>\\(\\therefore 2\\pi rh = 704cm^2\\)</p>\r\n\r\n<p>\\(2 \\times \\frac{22}{7} \\times 8 \\times h = 704\\)</p>\r\n\r\n<p>\\(h = \\frac{704 \\times 7}{2 \\times 22 \\times 8}\\)</p>\r\n\r\n<p>\\(h = 14cm\\)</p>"
     },
     "waec-mathematics-bank-1113": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>1/3 &pi;r\\(^2\\) x 9 = 1848<br />\r\n3 x &pi;r2 = 1848 r2 = 1848/3 x 7/22 r = 14</p>\r\n\r\n<p>\\(\\text{Volume of a cone} = \\frac{1}{3} \\pi r^2 h\\)</p>\r\n\r\n<p>\\(\\frac{1}{3} \\times \\frac{22}{7} \\times r^2 \\times 9 = 1848\\)</p>\r\n\r\n<p>\\(r^2 = \\frac{1848 \\times 7}{22 \\times 3}\\)</p>\r\n\r\n<p>\\(r^2 = 196 \\therefore r = 14cm\\)</p>"
     },
     "waec-mathematics-bank-1114": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Area of parallelogram = base \\(\\times\\) height.</p>\r\n\r\n<p>\\(513 = base \\times 19 \\implies base = \\frac{513}{19}\\)</p>\r\n\r\n<p>= 27 cm</p>"
     },
     "waec-mathematics-bank-1115": {
       "type": "mcq",
@@ -4463,19 +4522,23 @@
     },
     "waec-mathematics-bank-1116": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>In the second quadrant, \\(\\sin 120 = \\sin (180 - 120)\\)</p>\r\n\r\n<p>= \\(\\sin 60\\)</p>"
     },
     "waec-mathematics-bank-1117": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(\\cos \\theta = \\frac{5}{13}\\)</p>\r\n\r\n<p>\\(\\implies\\) In the right- angled triangle, with an angle \\(\\theta\\), the adjacent side to \\(\\theta\\) = 5 and the hypotenuse = 13.</p>\r\n\r\n<p>\\(\\therefore 13^2 = opp^2 + 5^2\\)</p>\r\n\r\n<p>\\(opp^2&nbsp;= 169 - 25 = 144 \\implies opp = \\sqrt{144}\\)</p>\r\n\r\n<p>= 12.</p>\r\n\r\n<p>\\(\\tan \\theta = \\frac{opp}{adj} = \\frac{12}{5}\\)&nbsp;</p>"
     },
     "waec-mathematics-bank-1118": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>tan 315&deg; = - tan (360 - 315) = - tan 45</p>\r\n\r\n<p>= -1</p>"
     },
     "waec-mathematics-bank-1119": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>sin 210 = - sin (210 - 180) = - sin 30</p>\r\n\r\n<p>= \\(-\\frac{1}{2}\\)</p>"
     },
     "waec-mathematics-bank-1120": {
       "type": "mcq",
@@ -4483,7 +4546,8 @@
     },
     "waec-mathematics-bank-1121": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The ladder makes 60&deg; inclination with the wall and its foot is 5m away from the wall.</p>\r\n\r\n<p>Sketching the diagram, you will see that we have</p>\r\n\r\n<p>\\(sin 60 = \\frac{5}{x}\\) (where x is the length of the ladder)</p>\r\n\r\n<p>&rArr; \\(x = \\frac{5}{sin60}\\)</p>\r\n\r\n<p>\\(x = \\frac{10\\sqrt{3}}{3}m\\)&nbsp;</p>"
     },
     "waec-mathematics-bank-1122": {
       "type": "mcq",
@@ -4491,7 +4555,8 @@
     },
     "waec-mathematics-bank-1123": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Using pythagora&#39;s theorem:</p>\r\n\r\n<p>hyp\\(^2\\) = opp\\(^2\\) + adj\\(^2\\)</p>\r\n\r\n<p>hyp\\(^2\\) = 12\\(^2\\) + 5\\(^2\\)&nbsp;&rarr; 144 + 25</p>\r\n\r\n<p>hyp\\(^2\\) = 169</p>\r\n\r\n<p>hyp =&nbsp;&radic;169</p>\r\n\r\n<p>hyp = 13</p>"
     },
     "waec-mathematics-bank-1124": {
       "type": "mcq",
@@ -4503,11 +4568,13 @@
     },
     "waec-mathematics-bank-1126": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "The given set {1, 2, 3, 4 ...., 9, 10} <br>\r\n(x ≥ 7 ) = 7 7, 8, 9, 10 = 4 <br>\r\nTotal number of possible outcome = 10<br>\r\n4/10 = 2/5"
     },
     "waec-mathematics-bank-1127": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>If a die is rolled once, the probability of getting a number greater than 2 is <strong>\\(\\frac{2}{3}\\)</strong>.</p>\r\n\r\n<p>i.e Pr( number greater than 2) = \\(\\frac{\\text{ no of required outcome}}{\\text{total no of expected outcome}}\\)</p>\r\n\r\n<p>= \\(\\frac{4}{6} = \\frac{2}{3}\\)</p>"
     },
     "waec-mathematics-bank-1128": {
       "type": "mcq",
@@ -4515,7 +4582,8 @@
     },
     "waec-mathematics-bank-1129": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Total number of balls = 18<br>\r\nP(1R, 1W, 1B) = <sup>5</sup>/<sub>18</sub> x <sup>9</sup>/<sub>18</sub> x <sup>4</sup>/<sub>18</sub> = <sup>5</sup>/<sub>162</sub>"
     },
     "waec-mathematics-bank-1130": {
       "type": "mcq",
@@ -4527,11 +4595,13 @@
     },
     "waec-mathematics-bank-1132": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>S = {1, 2, 3, 4, 5, 6};&nbsp; T = {2, 4, 5, 7}; R = {1, 4, 5}</p>\r\n\r\n<p>(S&cap;T) &cup; R = {2, 4, 5}&nbsp; &cup; {1, 4, 5}</p>\r\n\r\n<p>= {1, 2, 4, 5}</p>"
     },
     "waec-mathematics-bank-1133": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(\\frac{3}{4} \\div 1\\frac{1}{4} \\times (1\\frac{1}{2} - \\frac{2}{3})\\)</p>\r\n\r\n<p>\\(\\frac{3}{4} \\div \\frac{5}{4} \\times (\\frac{9 - 4}{6})\\)</p>\r\n\r\n<p>= \\(\\frac{3}{4} \\times \\frac{4}{5} \\times \\frac{5}{6}\\)</p>\r\n\r\n<p>= \\(\\frac{1}{2}\\)</p>"
     },
     "waec-mathematics-bank-1134": {
       "type": "mcq",
@@ -4543,11 +4613,13 @@
     },
     "waec-mathematics-bank-1136": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>3m + 3 &gt; 9</p>\r\n\r\n<p>3m &gt; 9 - 3</p>\r\n\r\n<p>3m &gt; 6</p>\r\n\r\n<p>m &gt; 2</p>"
     },
     "waec-mathematics-bank-1137": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(89_{10}\\)</p>\r\n\r\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:40%\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>89</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>44 r 1</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>22 r 0</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>11 r 0</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>5 r 1</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>2 r 1</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>1 r 0</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>0 r 1</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>\\(89_{10} = 1011001_{2}\\)</p>"
     },
     "waec-mathematics-bank-1138": {
       "type": "mcq",
@@ -4555,7 +4627,8 @@
     },
     "waec-mathematics-bank-1139": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>when n = 2</p>\r\n\r\n<p>(-1)\\(^{n-2}\\) x 2\\(^{n -1}\\) = 2</p>\r\n\r\n<p>When n = 3</p>\r\n\r\n<p>(-1)\\(^{n-2}\\) x 2\\(^{n - 1}\\) = -4</p>\r\n\r\n<p>Sum = 2 - 4 = - 2</p>"
     },
     "waec-mathematics-bank-1140": {
       "type": "mcq",
@@ -4563,15 +4636,18 @@
     },
     "waec-mathematics-bank-1141": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(\\frac{\\log \\sqrt{27}}{\\log&nbsp;81}\\)</p>\r\n\r\n<p>= \\(\\frac{\\log \\sqrt{3^3}}{\\log&nbsp;3^4}\\)</p>\r\n\r\n<p>= \\(\\frac{\\log 3^{\\frac{3}{2}}}{\\log 3^4}\\)</p>\r\n\r\n<p>= \\(\\frac{\\frac{3}{2} \\log 3}{4 \\log 3}\\)</p>\r\n\r\n<p>= \\(\\frac{\\frac{3}{2}}{4}\\)</p>\r\n\r\n<p>= \\(\\frac{3}{8}\\)</p>"
     },
     "waec-mathematics-bank-1142": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>2s\\(^2\\) - 3st - 2t\\(^2\\)</p>\r\n\r\n<p>= 2s\\(^2\\) - 4st + st - 2t\\(^2\\)</p>\r\n\r\n<p>= 2s(s - 2t) + t(s - 2t)</p>\r\n\r\n<p>= (2s + t)(s - 2t)</p>"
     },
     "waec-mathematics-bank-1143": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>x\\(^2\\) - 2x - 3 = 0</p>\r\n\r\n<p>x\\(^2\\) - 3x + x - 3 = 0</p>\r\n\r\n<p>x(x - 3) + 1(x - 3) = 0</p>\r\n\r\n<p>(x + 1)(x - 3) = 0</p>\r\n\r\n<p>x = (-1, 3)</p>"
     },
     "waec-mathematics-bank-1144": {
       "type": "mcq",
@@ -4579,11 +4655,13 @@
     },
     "waec-mathematics-bank-1145": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>2x\\(^2\\) - 21x + 45</p>\r\n\r\n<p>= 2x\\(^2\\) - 15x - 6x + 45</p>\r\n\r\n<p>= x(2x - 15) - 3(2x - 15)</p>\r\n\r\n<p>= (x - 3)(2x - 15)</p>"
     },
     "waec-mathematics-bank-1146": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>y = 3x&nbsp; ... (i);</p>\r\n\r\n<p>4y - 5x =14&nbsp; ... (ii)</p>\r\n\r\n<p>Put 3x for y in (ii).</p>\r\n\r\n<p>4(3x) - 5x = 14</p>\r\n\r\n<p>12x - 5x = 14</p>\r\n\r\n<p>7x = 14 \\(\\implies\\) x = 2.</p>\r\n\r\n<p>y = 3x = 3(2) = 6</p>\r\n\r\n<p>(x, y) = (2, 6)</p>"
     },
     "waec-mathematics-bank-1147": {
       "type": "mcq",
@@ -4591,7 +4669,9 @@
     },
     "waec-mathematics-bank-1148": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>&pi;rl + &pi;r2 = &pi;r(l + r)<br />\r\n\\(\\frac{22}{7}\\) x 5(13 + 5)<br />\r\n282\\(\\frac{6}{7}\\)cm\\(^2\\)</p>",
+      "answer_image": "/qimages/ef0844ea802b37271335.jpg"
     },
     "waec-mathematics-bank-1149": {
       "type": "mcq",
@@ -4599,15 +4679,18 @@
     },
     "waec-mathematics-bank-1150": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Area of rhombus = \\(\\frac{pq}{2}\\)</p>\r\n\r\n<p>where p and q are the two diagonals of the rhombus.</p>\r\n\r\n<p>\\(\\therefore 60 = \\frac{12 \\times q}{2}\\)</p>\r\n\r\n<p>6q = 60 \\(\\implies\\) q = 10 cm</p>"
     },
     "waec-mathematics-bank-1151": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Perimeter of a sector = \\(2r + \\frac{\\theta}{360} \\times 2\\pi r\\)</p>\r\n\r\n<p>= \\(2(10.5) + \\frac{120}{360} \\times 2 \\times \\frac{22}{7} \\times 10.5\\)</p>\r\n\r\n<p>= \\(21 + 22\\)</p>\r\n\r\n<p>= 43 cm</p>"
     },
     "waec-mathematics-bank-1152": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Sum of interior angles in a polygon = \\((2n - 4) \\times 90&deg;\\)</p>\r\n\r\n<p>\\(\\therefore (2n - 4) \\times 90&deg; = 30 \\times 90&deg;\\)</p>\r\n\r\n<p>\\(\\implies 2n - 4 = 30 \\)</p>\r\n\r\n<p>\\(2n = 34 \\implies n = 17\\)</p>\r\n\r\n<p>The polygon has 17 sides.</p>"
     },
     "waec-mathematics-bank-1153": {
       "type": "mcq",
@@ -4619,11 +4702,14 @@
     },
     "waec-mathematics-bank-1155": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\(-2, -3, -4\\frac{1}{2}, ...\\)</p>\r\n\r\n<p>This is a G.P with r = 1\\(\\frac{1}{2}\\).</p>\r\n\r\n<p>\\(T_{n} = ar^{n - 1}\\) (terms of a G.P)</p>\r\n\r\n<p>\\(T_{5} = (-2)(\\frac{3}{2})^{5 - 1}\\)</p>\r\n\r\n<p>= \\(-2 \\times \\frac{81}{16}\\)</p>\r\n\r\n<p>= \\(-\\frac{81}{8}\\)</p>\r\n\r\n<p>\\(T_{7} = (-2)(\\frac{3}{2})^{7 - 1}\\)</p>\r\n\r\n<p>= \\(-2 \\times \\frac{729}{64}\\)</p>\r\n\r\n<p>= \\(-\\frac{729}{32}\\)</p>"
     },
     "waec-mathematics-bank-1156": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "complete x as in the diagram. <sup>x</sup>/<sub>90</sub> = sin30<sup>o</sup><br>\r\nx = 90 x sin30 = 45<sup>o</sup><br>\r\n∴Dist = 150 + 45 = 195km",
+      "answer_image": "/qimages/ffa8b4cc4cd4ee30eb02.jpg"
     },
     "waec-mathematics-bank-1157": {
       "type": "mcq",
@@ -4635,7 +4721,8 @@
     },
     "waec-mathematics-bank-1159": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(\\tan x = \\frac{opp}{adj} = \\frac{5}{12}\\)</p>\r\n\r\n<p>\\(Hyp^2 = opp^2 + adj^2\\)</p>\r\n\r\n<p>\\(Hyp^2 = 5^2 + 12^2\\)</p>\r\n\r\n<p>= \\(25 + 144 = 169\\)</p>\r\n\r\n<p>\\(Hyp = \\sqrt{169} = 13\\)</p>\r\n\r\n<p>\\(\\sin x = \\frac{5}{13}; \\cos x = \\frac{12}{13}\\)</p>\r\n\r\n<p>\\(\\sin x + \\cos x = \\frac{5}{13} + \\frac{12}{13}\\)</p>\r\n\r\n<p>= \\(\\frac{17}{13}\\)</p>"
     },
     "waec-mathematics-bank-1160": {
       "type": "mcq",
@@ -4647,15 +4734,18 @@
     },
     "waec-mathematics-bank-1162": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p><img alt=\"\" src=\"/storage/classroom/editor_images/IMG_20191125_122752%20%282%29.jpg\" style=\"height:221px; width:250px\" /></p>\r\n\r\n<p>\\(\\tan 30 = \\frac{x}{40}\\)</p>\r\n\r\n<p>\\(x = 40 \\tan 30 = \\frac{40}{\\sqrt{3}}\\)</p>\r\n\r\n<p>= \\(\\frac{40\\sqrt{3}}{3} m\\)</p>"
     },
     "waec-mathematics-bank-1163": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p><img alt=\"\" src=\"/storage/classroom/editor_images/IMG_20191125_122752%20%283%29.jpg\" style=\"height:186px; width:250px\" /></p>\r\n\r\n<p>\\(\\tan 45 = \\frac{x}{500}\\)</p>\r\n\r\n<p>\\(x = 500 \\tan 45\\)</p>\r\n\r\n<p>= \\(500 m\\)</p>"
     },
     "waec-mathematics-bank-1164": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>15, 20, 25, 26, 28, 29, 33, 37, 38, 39</p>\r\n\r\n<p>median = \\(\\frac{28 + 29}{2}\\)</p>\r\n\r\n<p>= 28.5</p>"
     },
     "waec-mathematics-bank-1165": {
       "type": "mcq",
@@ -4667,11 +4757,13 @@
     },
     "waec-mathematics-bank-1167": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>S = {20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30}</p>\r\n\r\n<p>n(S) = 11</p>\r\n\r\n<p>P = {23, 29}</p>\r\n\r\n<p>n(P) = 2</p>\r\n\r\n<p>Prob(P) = \\(\\frac{2}{11}\\)</p>"
     },
     "waec-mathematics-bank-1168": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Prob(less than 3) = \\(\\frac{2}{6}\\)</p>\r\n\r\n<p>= \\(\\frac{1}{3}\\)</p>"
     },
     "waec-mathematics-bank-1169": {
       "type": "mcq",
@@ -4679,15 +4771,18 @@
     },
     "waec-mathematics-bank-1170": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>No of possible outcome = 36</p>\r\n\r\n<p>Required outcome (R) = {(1, 6), (6, 1), (2, 5), (5, 2), (3, 4), (4, 3)}</p>\r\n\r\n<p>n(R) = \\(\\frac{6}{36}\\)</p>\r\n\r\n<p>= \\(\\frac{1}{6}\\)</p>"
     },
     "waec-mathematics-bank-1171": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(2\\frac{1}{3} \\div 2\\frac{2}{3} \\times 1\\frac{1}{7}\\)</p>\r\n\r\n<p>= \\(\\frac{7}{3} \\div \\frac{8}{3} \\times \\frac{8}{7}\\)</p>\r\n\r\n<p>= \\(\\frac{7}{3} \\times \\frac{3}{8} \\times \\frac{8}{7}\\)</p>\r\n\r\n<p>= 1</p>"
     },
     "waec-mathematics-bank-1172": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\(\\frac{72}{125} = \\frac{8 \\times 9}{5 \\times 5 \\times 5}\\)</p>\r\n\r\n<p>= \\(\\frac{2^3 \\times 3^2}{5^3}\\)</p>"
     },
     "waec-mathematics-bank-1173": {
       "type": "mcq",
@@ -4695,7 +4790,8 @@
     },
     "waec-mathematics-bank-1174": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\(\\frac{27^{\\frac{1}{3}}}{16^{-\\frac{1}{4}}} \\)</p>\r\n\r\n<p>= \\(\\frac{(3^3)^{\\frac{1}{3}}}{(2^4)^{-\\frac{1}{4}}}\\)</p>\r\n\r\n<p>= \\(\\frac{3}{2^{-1}}\\)</p>\r\n\r\n<p>= 6</p>"
     },
     "waec-mathematics-bank-1175": {
       "type": "mcq",
@@ -4723,7 +4819,8 @@
     },
     "waec-mathematics-bank-1181": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>2log\\(_{3}\\) 6 + log\\(_{3}\\) 12 - log\\(_{3}\\) 16</p>\r\n\r\n<p>= \\(\\log_3 6^2 + \\log_3 12 - \\log_3 16\\)</p>\r\n\r\n<p>= \\(\\log_{3} (\\frac{36 \\times 12}{16})\\)</p>\r\n\r\n<p>= \\(\\log_{3} (27)\\)</p>\r\n\r\n<p>= \\(\\log_{3} 3^3\\)</p>\r\n\r\n<p>= \\(3 \\log_{3} 3\\)</p>\r\n\r\n<p>= 3</p>"
     },
     "waec-mathematics-bank-1182": {
       "type": "mcq",
@@ -4731,19 +4828,23 @@
     },
     "waec-mathematics-bank-1183": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Loss = N(100,000 - 80,000)</p>\r\n\r\n<p>= N20,000.</p>\r\n\r\n<p>Loss percentage = \\(\\frac{20,000}{100,000} \\times 100%\\)</p>\r\n\r\n<p>= 20%</p>"
     },
     "waec-mathematics-bank-1184": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>4.95m - 4.8m = 0.15m</p>\r\n\r\n<p>\\(\\frac{0.15}{4.8} \\times 100%\\)</p>\r\n\r\n<p>= \\(\\frac{25}{8}\\)</p>\r\n\r\n<p>= \\(3\\frac{1}{8} %)</p>"
     },
     "waec-mathematics-bank-1185": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(T_{n} = a + (n - 1) d\\) (terms of an A.P)</p>\r\n\r\n<p>\\(T_{1} = a\\)</p>\r\n\r\n<p>\\(T_{2} = a + d\\)</p>\r\n\r\n<p>\\(T_{10} = a + 9d\\)</p>\r\n\r\n<p>\\(a + a + d = 2a + d = 4 ... (i)\\)</p>\r\n\r\n<p>\\(a + 9d = 19 ... (ii)\\)</p>\r\n\r\n<p>(ii) x 2: \\(2a + 18d = 38 ... (iii)\\)</p>\r\n\r\n<p>(iii) - (i) : \\(17d = 34 \\implies d = 2\\)&nbsp;</p>\r\n\r\n<p>\\(2a + 2 = 4 \\implies 2a = 2\\)</p>\r\n\r\n<p>\\(a = 1\\)</p>\r\n\r\n<p>\\(T_{5} + T_{6}\\)</p>\r\n\r\n<p>= \\((a + 4d) + (a + 5d)\\)</p>\r\n\r\n<p>= \\(2a + 9d\\)</p>\r\n\r\n<p>= \\(2(1) + 9(2)\\)</p>\r\n\r\n<p>= 20</p>"
     },
     "waec-mathematics-bank-1186": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>E = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}</p>\r\n\r\n<p>P = {3, 6, 9, 12, 15, 18}</p>\r\n\r\n<p>Q = {4, 8, 12, 16, 20}</p>\r\n\r\n<p>P&#39; = {1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20}</p>\r\n\r\n<p>P&#39; \\(\\cap\\) Q = {4, 8, 16, 20}</p>"
     },
     "waec-mathematics-bank-1187": {
       "type": "mcq",
@@ -4755,19 +4856,23 @@
     },
     "waec-mathematics-bank-1189": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>8x - 4 = 6x - 10</p>\r\n\r\n<p>8x - 6x = -10 + 4</p>\r\n\r\n<p>2x = -6</p>\r\n\r\n<p>x = -3</p>\r\n\r\n<p>\\(\\therefore\\) 5x = 5(-3)</p>\r\n\r\n<p>= -15</p>"
     },
     "waec-mathematics-bank-1190": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(\\frac{x^2 + 15x + 50}{x - 5}\\)</p>\r\n\r\n<p>It is undefined when x - 5 = 0.</p>\r\n\r\n<p>That is at x = 5.</p>"
     },
     "waec-mathematics-bank-1191": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>4 + 3x &lt; 10</p>\r\n\r\n<p>3x &lt; 10 - 4</p>\r\n\r\n<p>3x &lt; 6</p>\r\n\r\n<p>x &lt; 2</p>\r\n\r\n<p>Therefore, the&nbsp;solution is 0 &lt; x &lt; 2</p>"
     },
     "waec-mathematics-bank-1192": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>2p\\(^2\\) - 2&nbsp;</p>\r\n\r\n<p>2(p\\(^2\\) - 1)</p>\r\n\r\n<p>= 2(p + 1)(p - 1)</p>"
     },
     "waec-mathematics-bank-1193": {
       "type": "mcq",
@@ -4775,11 +4880,13 @@
     },
     "waec-mathematics-bank-1194": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\(x^2 + 6x = 0\\)</p>\r\n\r\n<p>\\(x(x + 6) = 0\\)</p>\r\n\r\n<p>\\(x = 0\\) or \\(x = -6\\)</p>"
     },
     "waec-mathematics-bank-1195": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(6x^2 + 7xy - 5y^2\\)</p>\r\n\r\n<p>= \\(6x^2 + 10xy - 3xy - 5y^2\\)</p>\r\n\r\n<p>= \\(2x(3x + 5y) - y(3x + 5y)\\)</p>\r\n\r\n<p>= \\((2x - y)(3x + 5y)\\)</p>"
     },
     "waec-mathematics-bank-1196": {
       "type": "mcq",
@@ -4791,11 +4898,13 @@
     },
     "waec-mathematics-bank-1198": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Volume of cuboid = length x breadth x height</p>\r\n\r\n<p>12.5 x 20 x h = 1000</p>\r\n\r\n<p>250h&nbsp;= 1000</p>\r\n\r\n<p>h = 4 cm</p>"
     },
     "waec-mathematics-bank-1199": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>D = \\(\\frac{&theta;}{360}\\) x 2&pi;R</p>\r\n\r\n<p>45 + \\(\\frac{45}{360}\\) x \\(\\frac{44}{7}\\)&nbsp; x 6400</p>\r\n\r\n<p>&nbsp; &nbsp;= 10057 &cong; 10000km</p>"
     },
     "waec-mathematics-bank-1200": {
       "type": "mcq",
@@ -4803,7 +4912,8 @@
     },
     "waec-mathematics-bank-1201": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "A = <sup>θ</sup> <sub>360</sub> x πr<sup>2</sup> = <sup>135</sup> <sub>360</sub> x π x x<sup>2</sup> = (3πx<sup>2</sup>)/8"
     },
     "waec-mathematics-bank-1202": {
       "type": "mcq",
@@ -4839,7 +4949,8 @@
     },
     "waec-mathematics-bank-1210": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "1st card prob = 4/52 2nd card prob = 4/52 <br>\r\nprob.both are aces = (4/52) x (4/52) = 1/169"
     },
     "waec-mathematics-bank-1211": {
       "type": "mcq",
@@ -4847,15 +4958,18 @@
     },
     "waec-mathematics-bank-1212": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>In mathematics, numbers ranging from 0.5 - 0.9 are approximated to 1, while 0.1 - 0.4 are taken down to 0.</p>"
     },
     "waec-mathematics-bank-1213": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>You can convert it to base 10 and square, then re-convert it after the operation.&nbsp;</p>\r\n\r\n<p>OR</p>\r\n\r\n<p>You can multiply it straight applying the rules of binary multiplication.</p>"
     },
     "waec-mathematics-bank-1214": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Ratio = 6 + 7 + 8 = 21<br>\r\n21 = N10.50<br>\r\n1 = 1050K/21 = 50K<br>\r\n6 = 6 x 50K = N3.00<br>\r\n7 = 7 x 50K = N3.50<br>\r\n8 = 8 x 50K = N4.00<br>\r\nthe Largest share = N4.00"
     },
     "waec-mathematics-bank-1215": {
       "type": "mcq",
@@ -4863,7 +4977,8 @@
     },
     "waec-mathematics-bank-1216": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>S.P = N600.00</p>\r\n\r\n<p>(100 + 50)% = N600</p>\r\n\r\n<p>150% = N600</p>\r\n\r\n<p>1% = \\(\\frac{600}{150}\\)</p>\r\n\r\n<p>100% = \\(\\frac{600}{150} \\times 100%\\)</p>\r\n\r\n<p>= N400</p>"
     },
     "waec-mathematics-bank-1217": {
       "type": "mcq",
@@ -4891,19 +5006,23 @@
     },
     "waec-mathematics-bank-1223": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "16/9, x, 1, y => a, ar, ar<sup>2</sup>, ar<sup>3</sup><br>\r\nar<sup>2</sup> = 1 => 16r<sup>2</sup>/9 = 1 => 16r<sup>2</sup><br>\r\n9 => r<sup>2</sup> = 9/16 => r = 3/4<br>\r\nar<sup>2</sup> = y = ar<sup>2</sup> x r = 1 x 3/4 = 3/4<br>\r\nx xy = 4/3 x 3/4 = 1"
     },
     "waec-mathematics-bank-1224": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>R = {2, 4, 6, 7}; S = {1, 2, 4, 8}</p>\r\n\r\n<p>R \\(\\cup\\) S = {1, 2, 4, 6, 7, 8}</p>"
     },
     "waec-mathematics-bank-1225": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(\\frac{6x - 1}{x^2 + 4x - 5}\\)</p>\r\n\r\n<p>The expression is undefined when \\(x^2 + 4x - 5 = 0\\)</p>\r\n\r\n<p>\\(x^2 + 5x - x - 5 = 0\\)</p>\r\n\r\n<p>\\(x(x + 5) - 1(x + 5) = 0\\)</p>\r\n\r\n<p>\\((x - 1)(x + 5) = 0\\)</p>\r\n\r\n<p>The expression is undefined when x = 1 or -5.</p>"
     },
     "waec-mathematics-bank-1226": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(\\frac{1}{3}(2x - 1) &lt; 5\\)</p>\r\n\r\n<p>\\(2x - 1 &lt; 15\\)</p>\r\n\r\n<p>\\(2x &lt; 16\\)</p>\r\n\r\n<p>\\(x &lt; 8\\)</p>"
     },
     "waec-mathematics-bank-1227": {
       "type": "mcq",
@@ -4915,11 +5034,13 @@
     },
     "waec-mathematics-bank-1229": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>\\(y \\propto \\frac{1}{x^2}\\)</p>\r\n\r\n<p>\\(y = \\frac{k}{x^2}\\)</p>\r\n\r\n<p>\\(4 = \\frac{k}{3^2}\\)</p>\r\n\r\n<p>\\(k = 4 \\times 3^2 = 36\\)</p>\r\n\r\n<p>\\(y = \\frac{36}{x^2}\\)</p>\r\n\r\n<p>When x = 2,</p>\r\n\r\n<p>\\(y = \\frac{36}{2^2} = 9\\)</p>\r\n\r\n<p>&nbsp;</p>"
     },
     "waec-mathematics-bank-1230": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>3x\\(^2\\) + 25x - 18 = 0</p>\r\n\r\n<p>3x\\(^2\\) + 27x - 2x - 18 = 0</p>\r\n\r\n<p>3x(x + 9) - 2(x + 9) = 0</p>\r\n\r\n<p>(3x - 2)(x + 9) = 0</p>\r\n\r\n<p>x = \\(\\frac{2}{3}\\) or x = -9.</p>\r\n\r\n<p>&nbsp;</p>"
     },
     "waec-mathematics-bank-1231": {
       "type": "mcq",
@@ -4927,7 +5048,8 @@
     },
     "waec-mathematics-bank-1232": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>x + y = \\(\\frac{3}{2}\\) ... (i)</p>\r\n\r\n<p>x - y = \\(\\frac{5}{2}\\) ... (ii)</p>\r\n\r\n<p>(i) - (ii):</p>\r\n\r\n<p>2y = \\(\\frac{-2}{2}\\) = -1</p>\r\n\r\n<p>y = \\(-\\frac{1}{2}\\)</p>\r\n\r\n<p>x + y = \\(\\frac{3}{2}\\)</p>\r\n\r\n<p>x - \\(\\frac{1}{2}\\) = \\(\\frac{3}{2}\\)</p>\r\n\r\n<p>x = \\(\\frac{3}{2} + \\frac{1}{2}\\)</p>\r\n\r\n<p>= \\(\\frac{4}{2}\\)</p>\r\n\r\n<p>x = 2</p>\r\n\r\n<p>\\(\\therefore\\) 2y + x = 2(\\(-\\frac{1}{2}\\)) + 2</p>\r\n\r\n<p>= -1 + 2 = 1.</p>"
     },
     "waec-mathematics-bank-1233": {
       "type": "mcq",
@@ -4935,7 +5057,8 @@
     },
     "waec-mathematics-bank-1234": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Volume of water taken by the tank = \\(\\frac{3}{2} \\times \\frac{3}{2} \\times \\frac{1}{2}\\)</p>\r\n\r\n<p>= \\(\\frac{9}{8} m^3\\)</p>\r\n\r\n<p>= \\(\\frac{9}{8} \\times 1000\\)</p>\r\n\r\n<p>= 1125 litres</p>\r\n\r\n<p>\\(\\therefore\\) Water left = (1500 - 1125) litres</p>\r\n\r\n<p>= 375 litres.</p>"
     },
     "waec-mathematics-bank-1235": {
       "type": "mcq",
@@ -4947,7 +5070,8 @@
     },
     "waec-mathematics-bank-1237": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(Volume = \\frac{4}{3} \\pi r^3 = k\\) ...(i)</p>\r\n\r\n<p>\\(S.A = 4\\pi r^2 = k\\) ... (ii)</p>\r\n\r\n<p>Divide (i) by (ii),</p>\r\n\r\n<p>\\(\\frac{4}{3} \\pi r^3 \\div 4\\pi r^2 = \\frac{k}{k}\\)</p>\r\n\r\n<p>\\(\\frac{r}{3} = 1 \\implies r = 3cm\\)</p>\r\n\r\n<p>Diameter = 2 x 3cm = 6cm</p>"
     },
     "waec-mathematics-bank-1238": {
       "type": "mcq",
@@ -4963,7 +5087,8 @@
     },
     "waec-mathematics-bank-1241": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>log\\(_{10}\\) x = \\(\\bar{2}.3675\\) =&gt; x = 0.023</p>\r\n\r\n<p>log\\(_{10}\\) y = \\(\\bar{2}.9738\\) =&gt; y = 0.094</p>\r\n\r\n<p>x + y = 0.117</p>"
     },
     "waec-mathematics-bank-1242": {
       "type": "mcq",
@@ -4975,11 +5100,14 @@
     },
     "waec-mathematics-bank-1244": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Note: sin 20&deg; = cos 70&deg;&nbsp;hence</p>\r\n\r\n<p>\\(\\frac{\\sin 20}{\\cos 70} = 1\\)</p>\r\n\r\n<p>Also, cos 65&deg; = sin 25&deg;</p>\r\n\r\n<p>\\(\\frac{\\cos 65}{\\sin 25} = 1\\)</p>\r\n\r\n<p>\\(\\therefore \\frac{\\sin 20}{\\cos 70} + \\frac{\\cos 65}{\\sin 25}\\)</p>\r\n\r\n<p>= 1 + 1</p>\r\n\r\n<p>= 2</p>"
     },
     "waec-mathematics-bank-1245": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>x\\(^2\\) = 12\\(^2\\) + 5\\(^2\\)</p>\r\n\r\n<p>x\\(^2\\) = 144 + 25</p>\r\n\r\n<p>x\\(^2\\) = 169</p>\r\n\r\n<p>x = \\(\\sqrt{169}\\)&nbsp;= 13m.</p>",
+      "answer_image": "/qimages/dcab4cde9533ba7cf0fa.jpg"
     },
     "waec-mathematics-bank-1246": {
       "type": "mcq",
@@ -4991,15 +5119,19 @@
     },
     "waec-mathematics-bank-1248": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Arranging the numbers in ascending order, we have</p>\r\n\r\n<p>2.35, 2.50, 2.64, 2.72, 2.91.</p>\r\n\r\n<p>The median = 2.64</p>"
     },
     "waec-mathematics-bank-1249": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "at least 10 => ≥ 10<br>\r\n6/36 = 1/6",
+      "answer_image": "/qimages/d3d801f2b563a6e8d8d9.jpg"
     },
     "waec-mathematics-bank-1250": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "2r, 6w, 5b balls<br>\r\nTotal balls = 2 + 6 + 5 = 13 balls p(black) = 5/13"
     },
     "waec-mathematics-bank-1251": {
       "type": "mcq",
@@ -5336,6 +5468,582 @@
     "waec-mathematics-bank-1334": {
       "type": "mcq",
       "letter": "D"
+    },
+    "waec-mathematics-bank-1335": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>0.00562 = 5.62 x 10\\(^{-3}\\)</p>"
+    },
+    "waec-mathematics-bank-1336": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<sup>1</sup>/<sub>3</sub>log<sub>10</Sub>P = 1<br>\r\nlog<sub>10</Sub>P<sup>1/3</sup> = log<sub>10</Sub>10<br>\r\nP<sup>1/3</sup> = 10 P = 1000"
+    },
+    "waec-mathematics-bank-1337": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Where the curve cut x-axis is the root of the equation i.e. x = -2.0&nbsp;and x = 1.5</p>"
+    },
+    "waec-mathematics-bank-1338": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>from the graph, x = - 2.6 and 2.1</p>",
+      "answer_image": "/qimages/8e8ed1674955b4d78de9.jpg"
+    },
+    "waec-mathematics-bank-1339": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>\\(2\\pi r = 2 \\times 3.142 \\times 15 = 94.28cm\\)</p>\r\n\r\n<p>\\(94.28cm = 360&deg;\\)</p>\r\n\r\n<p>\\(1cm = \\frac{360&deg;}{94.28}\\)</p>\r\n\r\n<p>\\(\\therefore 22cm = \\frac{360&deg;}{94.28} \\times 22\\)</p>\r\n\r\n<p>= 84&deg;</p>"
+    },
+    "waec-mathematics-bank-1340": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-mathematics-bank-1341": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Vertical Line&nbsp;x = 3:<br />\r\nThis line indicates a constraint on x, specifically that&nbsp;<br />\r\nx &le; 3.(behind is shaded)</p>\r\n\r\n<p>The line y + 2x = -3 or y = - 2x - 3</p>\r\n\r\n<p>This line has a negative slope of -2 and intersects the y-axis at -3. The region below this line corresponds to&nbsp;<br />\r\ny &le; &minus; 2x &minus; 3.</p>\r\n\r\n<p>Line&nbsp;y = x:</p>\r\n\r\n<p>.This line has a slope of 1 and passes through the origin. The region below this line corresponds to&nbsp;y &le; x</p>\r\n\r\n<p>The lines are all thick = strict inequalities.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>"
+    },
+    "waec-mathematics-bank-1342": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>In the figure, &lt; AOC = 2 x &lt; ABC = 60&deg; (angle subtended at the centre)</p>\r\n\r\n<p>\\(\\therefore\\) Arc AC = \\(\\frac{60}{360} \\times 2 \\times 10 \\times \\frac{22}{7}\\)</p>\r\n\r\n<p>= \\(\\frac{31.4}{3}\\)</p>\r\n\r\n<p>= 10.466 cm \\(\\approxeq\\) 10.5 cm</p>"
+    },
+    "waec-mathematics-bank-1343": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "πr<sup>2</sup> = 360<sup>o</sup><br>\r\n<div class=\"eq-c\">44cm<sup>2</sup> = θ; ∴ θ = <div class=\"fraction\"><span class=\"fr_num\">44</span><span class=\"bar\">/</span><span class=\"fr_den\">πr<sup>2</sup></span></div> x 360<sup>o</sup> = 102.9<sup>o</sup> = 103<sup>o</sup></div>"
+    },
+    "waec-mathematics-bank-1344": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Surface area of a sphere = \\(4\\pi r^2\\)</p>\r\n\r\n<p>= \\(4 \\times \\frac{22}{7} \\times 7 \\times 7\\)</p>\r\n\r\n<p>= \\(616 cm^2\\)</p>"
+    },
+    "waec-mathematics-bank-1345": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p><img alt=\"\" src=\"/storage/classroom/editor_images/IMG_20191119_154320%20%282%29.jpg\" style=\"height:262px; width:250px\" /></p>\r\n\r\n<p>\\(\\theta_{1} = \\theta_{2} = 30&deg;\\)</p>"
+    },
+    "waec-mathematics-bank-1346": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>TSA of a cylinder = \\(2\\pi r^2 + 2\\pi rh\\)</p>\r\n\r\n<p>= \\(2\\pi r (r + h)\\)</p>\r\n\r\n<p>= \\(2 \\times \\frac{22}{7} \\times 7 (7 + 5)\\)</p>\r\n\r\n<p>= \\(44 \\times 12\\)</p>\r\n\r\n<p>= \\(528 cm^2\\)</p>"
+    },
+    "waec-mathematics-bank-1347": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>Volume = \\(\\pi r^2 h\\)</p>\r\n\r\n<p>= \\(\\frac{22}{7} \\times 7^2 \\times 5\\)</p>\r\n\r\n<p>= \\(770 cm^3\\)</p>"
+    },
+    "waec-mathematics-bank-1348": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>From the figure, &lt; PSR = 32&deg; (base angles of an isos. triangle)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; PRS&nbsp;= 180&deg; - (32&deg; + 32&deg;) = 116&deg; (sum of angles in a triangle)</p>\r\n\r\n<p>&lt; QRP = 180&deg; - 116&deg; = 64&deg; (angle on a straight line)</p>\r\n\r\n<p>&lt; PQR = 64&deg; (base angles of an isos. triangle)</p>\r\n\r\n<p>&lt; QPR = 180&deg; - (64&deg; + 64&deg;) = 52&deg;</p>"
+    },
+    "waec-mathematics-bank-1349": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>Diagonals bisect at 90&deg;;&nbsp; &lt; YXZ = 90&deg; - 20&deg; = 70&deg;</p>\r\n\r\n<p>But ZY = XY (sides of a rhombus)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; XYZ = 70&deg; (base angle of an isos. triangle)</p>"
+    },
+    "waec-mathematics-bank-1350": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Area of a triangle = \\(\\frac{1}{2} \\times b \\times h\\)</p>\r\n\r\n<p>Area of \\(\\Delta\\) SQR = \\(\\frac{1}{2} \\times 6.4 \\times 3.2\\)</p>\r\n\r\n<p>= 10.24 cm\\(^2\\)</p>"
+    },
+    "waec-mathematics-bank-1351": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>&lt; VWZ = &lt; VXZ (angles in the same segment)</p>"
+    },
+    "waec-mathematics-bank-1352": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Area of \\(\\Delta\\) VYZ = Area of \\(\\Delta\\) VWZ (same base and within same parallel)</p>"
+    },
+    "waec-mathematics-bank-1353": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "PQR = 180<sup>o</sup> - 86<sup>o</sup> = 94<sup>o</sup><br>\r\n∴PRQ = 180<sup>o</sup> - 94<sup>o</sup> - 36<sup>o</sup> = 48<sup>o</sup>"
+    },
+    "waec-mathematics-bank-1354": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>360&ordm;&nbsp;- 290&ordm;&nbsp;= 70&ordm;<br />\r\n\\(\\frac{70}{2}\\) = 35&ordm;</p>"
+    },
+    "waec-mathematics-bank-1355": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>From the figure &lt; TAB = &lt; BTQ = 40&deg; (alternate segment)</p>\r\n\r\n<p>\\(\\therefore\\)&lt; ATB = 180&deg; - (70&deg; + 40&deg;) = 70&deg; (angle on a straight line)</p>\r\n\r\n<p>&lt; BTC = \\(\\frac{40&deg;}{2}&nbsp;= \\frac{&lt; BTQ}{2}\\)</p>\r\n\r\n<p>\\(\\therefore &lt; BTQ = 40&deg;\\)</p>\r\n\r\n<p>x&deg; = 180&deg; - (40&deg; + 70&deg; + 20&deg;)&nbsp;</p>\r\n\r\n<p>= 50&deg;&nbsp;</p>"
+    },
+    "waec-mathematics-bank-1356": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "waec-mathematics-bank-1357": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "tan θ - 7/3.5 = 2<br>\r\ntan θ= 2.0000<br>\r\nθ = 63<sup>o</sup>",
+      "answer_image": "/qimages/a99adc0cee312c6ea00c.jpg"
+    },
+    "waec-mathematics-bank-1358": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "tan21<sup>o</sup> =x/10<br>\r\nx = 10 tan 21<sup>o</sup><br>\r\n= 3.3839 = 3.8m",
+      "answer_image": "/qimages/ec32b6fd00f1d27a99c9.jpg"
+    },
+    "waec-mathematics-bank-1359": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p><img alt=\"\" src=\"/storage/classroom/editor_images/IMG_20191120_093938%282%29.jpg\" style=\"height:176px; width:250px\" /></p>\r\n\r\n<p>&lt; YXS = 74&deg; (alternate angles, N\\(_1\\) S\\(_1\\) // N\\(_2\\) S\\(_2\\))</p>\r\n\r\n<p>N\\(_2\\) E\\(_2\\) S\\(_2\\) = 180&deg;</p>\r\n\r\n<p>\\(\\therefore\\) Bearing of Y from X = 180&deg; + 74&deg;</p>\r\n\r\n<p>= 254&deg;</p>"
+    },
+    "waec-mathematics-bank-1360": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>Agric project = \\(\\frac{120}{360} \\times N12,000.00\\)</p>\r\n\r\n<p>= \\(N4,000.00\\)</p>"
+    },
+    "waec-mathematics-bank-1361": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Mode = 12</p>"
+    },
+    "waec-mathematics-bank-1362": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-mathematics-bank-1363": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "4.62 x 10<sup>-2</sup>"
+    },
+    "waec-mathematics-bank-1364": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>x = \\(-\\frac{2}{3}\\) and \\(-\\frac{1}{4}\\)</p>\r\n\r\n<p>\\(\\implies (x + \\frac{2}{3}) = 0; (x + \\frac{1}{4}) = 0\\)</p>\r\n\r\n<p>\\((x + \\frac{2}{3})(x + \\frac{1}{4}) = 0\\)</p>\r\n\r\n<p>\\(x^{2} + \\frac{1}{4}x + \\frac{2}{3}x + \\frac{1}{6} = 0\\)</p>\r\n\r\n<p>\\(x^2 + \\frac{11}{12}x + \\frac{1}{6} = 0\\)</p>\r\n\r\n<p>\\(12x^2 + 11x + 2 = 0\\)</p>"
+    },
+    "waec-mathematics-bank-1365": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>Area of the bigger semi circle PRO = \\(\\frac{&pi;r^2}{2}\\)</p>\r\n\r\n<p>= \\(\\frac{22}{7}\\)&nbsp;x \\(\\frac{49}{2}\\)&nbsp; = 77cm\\(^2\\)</p>\r\n\r\n<p><br />\r\n2nd Area of the smaller circle DYO = \\(\\frac{22}{7}\\) x \\(\\frac{3.5^2}{2}\\)&nbsp; = 19.25cm\\(^2\\)<br />\r\nTotal Area = 77 + 19.25 = 96.25 &asymp;&nbsp;96.00cm\\(^2\\)</p>"
+    },
+    "waec-mathematics-bank-1366": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>P = \\(\\pi\\)r + \\(\\pi\\)r + R = \\(\\frac{22}{7}\\) x 7 + \\(\\frac{22}{7}\\) x \\(\\frac{7}{2}\\) + 7<br />\r\n<br />\r\nP = 22 + 11 + 7 = 40cm</p>"
+    },
+    "waec-mathematics-bank-1367": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>The region is denoted by 4x + 3y \\(\\geq\\) 6</p>"
+    },
+    "waec-mathematics-bank-1368": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>B occurs at the point y = 0.&nbsp;</p>\r\n\r\n<p>When y = 0, we have</p>\r\n\r\n<p>4x + 3(0) = 6</p>\r\n\r\n<p>4x = 6</p>\r\n\r\n<p>x = 1\\(\\frac{1}{2}\\)</p>\r\n\r\n<p>B = \\((1\\frac{1}{2}, 0)\\)</p>"
+    },
+    "waec-mathematics-bank-1369": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Angular distance = 40<sup>o</sup> + 20<sup>o</sup> = 60<sup>o</sup><br>\r\nusing <sup>θ</sup>/<sub>360</sub> x 2πr for distance between p and Q<br>\r\n= <sup>60</sup>/<sub>360</sub> x 2πRcos4<sup>o</sup> = <sup>1</sup>/<sub>3</sub>πRcos4<sup>o</sup>"
+    },
+    "waec-mathematics-bank-1370": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>by using trial and error&nbsp; Y = sinx since \\(\\pi\\) in radian = 180&ordm;</p>\r\n\r\n<p>&nbsp;</p>"
+    },
+    "waec-mathematics-bank-1371": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Sin\\(\\theta\\) = -0.9063; \\(\\theta\\) = sin-1(0.9063)<br />\r\n<br />\r\n\\(\\theta\\) = -64.99 = -65&deg;<br />\r\n<br />\r\n\\(\\theta\\) = 180&deg; - (-65);<br />\r\n<br />\r\n180 + 65 = 245&deg;</p>"
+    },
+    "waec-mathematics-bank-1372": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<sup>x</sup>/<sub>25</sub> = tan 30<sup>o</sup><br>\r\n<div class=\"eq-c\">x = <div class=\"fraction\"><span class=\"fr_num\">25</span><span class=\"bar\">/</span><span class=\"fr_den\">√3</span></div> = <div class=\"fraction\"><span class=\"fr_num\">25√3</span><span class=\"bar\">/</span><span class=\"fr_den\">3</span></div></div>",
+      "answer_image": "/qimages/4ceed3a9b5f64037198e.jpg"
+    },
+    "waec-mathematics-bank-1373": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<sup>x</sup>/<sub>25</sub> = tan 30<sup>o</sup><br>\r\nx = 39 x <sup>1</sup>/<sub>√3</sub> = 13√3m",
+      "answer_image": "/qimages/38cb73f492ac012c5ead.jpg"
+    },
+    "waec-mathematics-bank-1374": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>From the figure, &lt; ATO = 90&deg;</p>\r\n\r\n<p>&lt; AOT = 180&deg; - 145&deg; = 35&deg;</p>\r\n\r\n<p>\\(\\therefore\\) &lt; TAO = 180&deg; - (90&deg; + 35&deg;)</p>\r\n\r\n<p>= 55&deg; (sum of angle in a triangle)</p>"
+    },
+    "waec-mathematics-bank-1375": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>P = {2,1,3,9,1/2}; Q = {1,21/2,3,7}<br />\r\nR = {5,4,212}<br />\r\nP&cup;Q&cup;R = {1/2,1,2,21/2,3,4,5,7,9}<br />\r\n<br />\r\n= {1/2,1,2,21/2,3,4,5,7,9}</p>"
+    },
+    "waec-mathematics-bank-1376": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-mathematics-bank-1377": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>\\(\\bar{x}\\) = \\(\\frac{2 + 14 + 15 + 16 + 45 + 42 + 42}{40}\\) = \\(\\frac{176}{40}\\) = 4.4</p>"
+    },
+    "waec-mathematics-bank-1378": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "waec-mathematics-bank-1379": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>Since X and Y are mutually exclusive, Pr(X &cap; Y) = 0</p>"
+    },
+    "waec-mathematics-bank-1380": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Since &lt; URP = 25&deg;, then &lt; XPU = 4 x 25&deg; = 100&deg;</p>\r\n\r\n<p>\\(\\therefore\\) &lt; TPQ = 180&deg; - 100&deg; = 80&deg;</p>\r\n\r\n<p>\\(\\therefore\\) &lt; PQT = 180&deg; - (80&deg; + 25&deg;) = 75&deg;</p>\r\n\r\n<p>&lt; SQR = 75&deg; - 25&deg; = 50&deg; (exterior angle = 2 opp interior angles)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; USQ = 180&deg; - 50&deg; = 130&deg;</p>\r\n\r\n<p>&nbsp;</p>"
+    },
+    "waec-mathematics-bank-1381": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>From the figure, &lt; PQR = 68&deg;</p>\r\n\r\n<p>\\(\\therefore\\) &lt; QRS = &lt; QSR = \\(\\frac{180 - 68}{2}\\) (base angles of an isos. triangle)</p>\r\n\r\n<p>= 56&deg;</p>\r\n\r\n<p>\\(\\therefore\\) &lt; PRS = 90&deg; - 56&deg; = 34&deg; (angles in a semi-circle)</p>"
+    },
+    "waec-mathematics-bank-1382": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Area = <sup>1</sup>/<sub>2</sub> x 16 x 16sin60<sup>o</sup> = 64√3cm<sup>2</sup>"
+    },
+    "waec-mathematics-bank-1383": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Let the radius of the arc PQ = r and the radius of the arc XY = R.</p>\r\n\r\n<p>Length of arc PQ = \\(\\frac{\\theta}{360} \\times 2\\pi r = 1\\)</p>\r\n\r\n<p>Length of arc XY = \\(\\frac{\\theta}{360} \\times 2\\pi R = 3\\)</p>\r\n\r\n<p>Ratio of the arc = \\(\\frac{r}{R} = \\frac{360 \\times 2\\pi \\theta}{2\\pi \\theta \\times 360 \\times 3}\\)</p>\r\n\r\n<p>= \\(\\frac{1}{3}\\)</p>\r\n\r\n<p>Ratio of their area = \\((\\frac{1}{3})^2 = \\frac{1}{9}\\)</p>\r\n\r\n<p>= 1 : 9</p>"
+    },
+    "waec-mathematics-bank-1384": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Area of \\(\\Delta\\)DCF = 24cm<sup>2</sup><br>\r\n<br>\r\nArea of Quad= 2 x 24 = 48cm<sup>2</sup>"
+    },
+    "waec-mathematics-bank-1385": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-mathematics-bank-1386": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-mathematics-bank-1387": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>2y\\(^2\\) + xy - 3x\\(^2\\)</p>\r\n\r\n<p>2y\\(^2\\) + 3xy - 2xy - 3x\\(^2\\)</p>\r\n\r\n<p>y(2y + 3x) - x(2y + 3x)</p>\r\n\r\n<p>= (y - x)(2y + 3x)</p>"
+    },
+    "waec-mathematics-bank-1388": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>If x&nbsp;= \\(-\\frac{1}{2}\\) and 2; then</p>\r\n\r\n<p>\\(x&nbsp;+ \\frac{1}{2} = 0\\) and \\(x&nbsp;- 2 = 0\\)</p>\r\n\r\n<p>\\(\\implies (x&nbsp;+ \\frac{1}{2})(x&nbsp;- 2) = 0\\)</p>\r\n\r\n<p>\\(x^2 - 2x&nbsp;+ \\frac{1}{2}x&nbsp;- 1 = 0\\)</p>\r\n\r\n<p>\\(x^2 - \\frac{3}{2}x&nbsp;- 1 = 0\\)</p>\r\n\r\n<p>\\(2x^2 - 3x&nbsp;- 2 = 0\\)</p>"
+    },
+    "waec-mathematics-bank-1389": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Area of \\(\\Delta OXY\\) = \\(12\\frac{1}{4} cm^2\\)</p>\r\n\r\n<p>Area of sector OXY = \\(\\frac{30}{360} \\times \\frac{22}{7} \\times 7 \\times 7\\)</p>\r\n\r\n<p>= \\(\\frac{77}{6} = 12\\frac{5}{6} cm^2\\)</p>\r\n\r\n<p>Area of the shaded portion = \\(12\\frac{5}{6} - 12\\frac{1}{4}\\)</p>\r\n\r\n<p>= \\(\\frac{7}{12} cm^2\\)</p>"
+    },
+    "waec-mathematics-bank-1390": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>&ang;RQT = 180&deg; - (95&deg; +&nbsp;48&deg;) = 37&deg;<br />\r\n&ang;OQR = 90&deg;&nbsp;- 37&deg;&nbsp;= 53&deg;<br />\r\n&ang;QOR = 180&deg; - (53&deg;&nbsp;+ 53&deg;) = 74&deg;<br />\r\nQSR = 74&deg;/2 = 37&deg;</p>"
+    },
+    "waec-mathematics-bank-1391": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Reflex &lt; POR = 360&deg; - 126&deg; = 234&deg;</p>\r\n\r\n<p>\\(\\therefore\\) &lt; PQR = \\(\\frac{1}{2} \\times 234&deg;\\)</p>\r\n\r\n<p>= 117&deg;</p>"
+    },
+    "waec-mathematics-bank-1392": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "∠TRS = ∠RST = 60<sup>o</sup><br>\r\n∠PSR + ∠PQR = 180<sup>o</sup>, 120<sup>o</sup> + x<sup>o</sup> = 180<sup>o</sup><br>\r\nx = 60<sup>o</sup>"
+    },
+    "waec-mathematics-bank-1393": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>&lt; QOS = 2 &lt; QPS (angle subtended at the centre)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; QOS = 2 x 36&deg; = 72&deg;</p>"
+    },
+    "waec-mathematics-bank-1394": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Construction: Join PQ.</p>\r\n\r\n<p>Then &lt; RSP = 37&deg; = &lt; RQP (angles on the same segment)</p>\r\n\r\n<p>But &lt; RPQ = 90&deg; (angle in a semi-circle)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; PRQ = 180&deg; - (90&deg; + 37&deg;)</p>\r\n\r\n<p>&nbsp;= 53&deg;</p>"
+    },
+    "waec-mathematics-bank-1395": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p><img alt=\"\" src=\"/storage/classroom/editor_images/IMG_20191121_121655%20%282%29.jpg\" style=\"height:207px; width:250px\" /></p>\r\n\r\n<p>Draw line ANB// ML</p>\r\n\r\n<p>&lt; MNA = 40&deg; (alternate angle AB/ ML)</p>\r\n\r\n<p>&lt; ANP = 55&deg; - 40&deg; = 15&deg;</p>\r\n\r\n<p>&lt; PQR = 15&deg; = &lt; ANP (corresponding angles, PN // RQ)</p>"
+    },
+    "waec-mathematics-bank-1396": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Sum of exterior angles = 360&deg;</p>\r\n\r\n<p>2x + 3x + 2x + 3x + 5x = 360&deg;</p>\r\n\r\n<p>15x = 360&deg;</p>\r\n\r\n<p>x = 360&deg;/15 = 24&deg;</p>"
+    },
+    "waec-mathematics-bank-1397": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<sup>360</sup>/<sub>18</sub> = 20"
+    },
+    "waec-mathematics-bank-1398": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>&lt; PTQ = 25&deg; (base angles of an isos. triangle)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; PQT = 180&deg; - (25&deg; + 25&deg;) = 130&deg; (sum of angles in triangle PQT)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; RST = 130&deg; - 75&deg; = 55&deg; (exterior angle = sum of 2 opp. interior angles)</p>"
+    },
+    "waec-mathematics-bank-1399": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "waec-mathematics-bank-1400": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-mathematics-bank-1401": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-mathematics-bank-1402": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>Mean(x) = \\(\\frac{&nbsp;&sum;fx}{&nbsp;&sum;f}\\)</p>\r\n\r\n<p>Mean(x) = \\(\\frac{ 2 \\times&nbsp;2 + 3 \\times&nbsp;4 + 5 \\times 4 + 3 \\times 5 + 6&nbsp;\\times 1}{ 2 + 3 + 5 + 3 + 1}\\)</p>\r\n\r\n<p>= \\(\\frac{57}{15}\\) = 3.8</p>"
+    },
+    "waec-mathematics-bank-1403": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>mode = 72&ordm;</p>"
+    },
+    "waec-mathematics-bank-1404": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>No of students that scored at least 5 = 1 + 6 + 1 + 0 + 1 + 0</p>\r\n\r\n<p>= 9 students.</p>"
+    },
+    "waec-mathematics-bank-1405": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>% error = \\(\\frac{error value}{true value}\\) x 100%</p>\r\n\r\n<p>% error =&nbsp;\\(\\frac{1.80 - 1.75}{1.75}\\) x 100%&nbsp; =&nbsp;\\(\\frac{0.05}{1.75}\\) x 100% =&nbsp;\\(\\frac{20}{7}\\)% = 2\\(\\frac{6}{7}\\)%</p>"
+    },
+    "waec-mathematics-bank-1406": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>\\(\\frac{4^{-\\frac{1}{2}} \\times 16^{\\frac{3}{4}}}{4^{\\frac{1}{2}}}\\)</p>\r\n\r\n<p>= \\(\\frac{16^{\\frac{3}{4}}}{4^{\\frac{1}{2}} \\times 4^{\\frac{1}{2}}}\\)</p>\r\n\r\n<p>= \\(\\frac{(2^4)^{\\frac{3}{4}}}{4^{\\frac{1}{2}} \\times 4^{\\frac{1}{2}}}\\)</p>\r\n\r\n<p>= \\(\\frac{2^3}{4}\\)</p>\r\n\r\n<p>= 2</p>"
+    },
+    "waec-mathematics-bank-1407": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>\\(\\frac{PQ}{RQ} = \\frac{RQ}{SQ}\\) (Similar triangles)</p>\r\n\r\n<p>\\(\\therefore \\frac{PS + 10}{12} = \\frac{12}{10}\\)</p>\r\n\r\n<p>\\(10 (PS + 10) = 12 \\times 12\\)</p>\r\n\r\n<p>\\(10 PS + 100 = 144 \\implies 10 PS = 44\\)</p>\r\n\r\n<p>\\(PS = 4.4 cm\\)</p>"
+    },
+    "waec-mathematics-bank-1408": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Join PR<br />\r\nQRP = QPR<br />\r\n= 180 - 80 = \\(\\frac{100}{20}\\) = 50&ordm;<br />\r\nSRP = SPR<br />\r\n= 180 - 30 = \\(\\frac{150}{2}\\) = 75&ordm;<br />\r\n&there4; SPQ = SPR - QPR<br />\r\n= 75 - 50 = 25&ordm;</p>",
+      "answer_image": "/qimages/de205f569303ca3e96f2.png"
+    },
+    "waec-mathematics-bank-1409": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "QPS - QRK = 31<sup>o</sup><br>\r\nQRK + RKQ + KQR = 180<br>\r\n31 + 42 + KQR = 180<sup>o</sup><br>\r\nKQR = 180 - 73 = 107<sup>o</sup>",
+      "answer_image": "/qimages/1707e4f79d8c78bd2c3b.jpg"
+    },
+    "waec-mathematics-bank-1410": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>&lt; PQR = 180&deg; - (84&deg; + 56&deg;)</p>\r\n\r\n<p>= 40&deg;</p>\r\n\r\n<p>\\(\\therefore\\) x = 40&deg; (corresponding angles QP// RT)</p>"
+    },
+    "waec-mathematics-bank-1411": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-mathematics-bank-1412": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "x<sup>2</sup> = 24<sup>2</sup> + 7<sup>2</sup> = 576 + 49<br>\r\nx<sup>2</sup> = 625<br>\r\nx = √625 = 25",
+      "answer_image": "/qimages/8b0ebbda94b4f707b169.jpg"
+    },
+    "waec-mathematics-bank-1413": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-mathematics-bank-1414": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-mathematics-bank-1415": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:50%\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>x</td>\r\n\t\t\t<td>1</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>3</td>\r\n\t\t\t<td>4</td>\r\n\t\t\t<td>5</td>\r\n\t\t\t<td>6</td>\r\n\t\t\t<td>7</td>\r\n\t\t\t<td>8</td>\r\n\t\t\t<td>9</td>\r\n\t\t\t<td>Total</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>f</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>3</td>\r\n\t\t\t<td>6</td>\r\n\t\t\t<td>7</td>\r\n\t\t\t<td>9</td>\r\n\t\t\t<td>6</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>3</td>\r\n\t\t\t<td>40</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>fx</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>6</td>\r\n\t\t\t<td>18</td>\r\n\t\t\t<td>28</td>\r\n\t\t\t<td>45</td>\r\n\t\t\t<td>36</td>\r\n\t\t\t<td>14</td>\r\n\t\t\t<td>16</td>\r\n\t\t\t<td>27</td>\r\n\t\t\t<td>192</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>Mean = \\(\\frac{\\sum fx}{\\sum f}\\)</p>\r\n\r\n<p>= \\(\\frac{192}{40}\\)</p>\r\n\r\n<p>= 4.8</p>\r\n\r\n<p>&nbsp;</p>"
+    },
+    "waec-mathematics-bank-1416": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>Ondo = \\(\\frac{126}{840} \\times 360&deg;\\)</p>\r\n\r\n<p>= \\(54&deg;\\)</p>"
+    },
+    "waec-mathematics-bank-1417": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>= 2 + 4 + 3 + 6 + 6 + 2 + 1</p>\r\n\r\n<p>= 24 students</p>"
+    },
+    "waec-mathematics-bank-1418": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>= 2 + 4 + 3 + 6</p>\r\n\r\n<p>= 15 students scored less than 7 marks.</p>"
+    },
+    "waec-mathematics-bank-1419": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Prob(obtaining a 2) = \\(\\frac{30}{200}\\)</p>\r\n\r\n<p>= \\(0.15\\)</p>"
+    },
+    "waec-mathematics-bank-1420": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>\\(\\frac{8.75}{0.025}\\)</p>\r\n\r\n<p>= \\(\\frac{8750}{25}\\)</p>\r\n\r\n<p>= \\(350\\)</p>\r\n\r\n<p>= \\(3.5 \\times 10^2\\)</p>"
+    },
+    "waec-mathematics-bank-1421": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "-1-(-3)/-2-(-0.5) = 2/-1.5 = 20/-15 = -1<sup>1</sup><sub>3</sub>"
+    },
+    "waec-mathematics-bank-1422": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>The points P(-2, 3) and Q(2, 7) are on the line.</p>\r\n\r\n<p>Gradient of the line = \\(\\frac{7 - 3}{2 - (-2)}\\)</p>\r\n\r\n<p>= \\(\\frac{4}{4}\\)</p>\r\n\r\n<p>= 1</p>\r\n\r\n<p>y = x + b</p>\r\n\r\n<p>To find the intercept, we have</p>\r\n\r\n<p>7 = 2 + b or 3 = -2 + b.</p>\r\n\r\n<p>Solving for b, we get b = 5.</p>\r\n\r\n<p>\\(\\therefore\\) The line is y = x + 5.</p>"
+    },
+    "waec-mathematics-bank-1423": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>x = 3; x = \\(\\frac{2}{3}\\).</p>\r\n\r\n<p>(x - 3)(x - \\(\\frac{2}{3}\\)) = 0</p>\r\n\r\n<p>\\(x^2 - \\frac{2x}{3} - 3x + 2 = 0\\)</p>\r\n\r\n<p>\\(x^2 - \\frac{11x}{3} + 2 = 0\\)</p>\r\n\r\n<p>\\(3x^2 - 11x + 6 = 0\\)</p>"
+    },
+    "waec-mathematics-bank-1424": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>log\\(_8\\)x - 4log\\(_8\\)x = 2; log\\(_8\\)x - log\\(_8\\)x\\(^4\\) = 2<br />\r\nlog\\(_8\\)(\\(\\frac{\\text{x}}{x^4}\\)) = 2<br />\r\n\\(\\frac{\\text{x}}{x^4}\\) = 8\\(^2\\) = \\(\\frac{1}{x^3}\\) = 64<br />\r\nx\\(^3\\) = (\\(\\frac{1}{4}\\))\\(^3\\);</p>\r\n\r\n<p>x = \\(\\frac{1}{4}\\)</p>"
+    },
+    "waec-mathematics-bank-1425": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\"><sup>4</sup>/<sub>3</sub>πR<sup>3</sup></span><span class=\"bar\">/</span><span class=\"fr_den\"><sup>4</sup>/<sub>3</sub>πr<sup>3</sup></span></div> = <div class=\"fraction\"><span class=\"fr_num\">250</span><span class=\"bar\">/</span><span class=\"fr_den\">180</span></div> = (<sup>R</sup>/<sub>r</sub>)<sup>3</sup> = 5:4</div>"
+    },
+    "waec-mathematics-bank-1426": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-mathematics-bank-1427": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "2(n-2) x 90<sup>o</sup> = 2520; n = 16"
+    },
+    "waec-mathematics-bank-1428": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<div class=\"eq-c\">∠TSR = 68<sup>o</sup> ∴ STR =  <div class=\"fraction\"><span class=\"fr_num\">180-68</span><span class=\"bar\">/</span><span class=\"fr_den\">2</span></div> = 56<sup>o</sup></div><br>\r\nPTS= 180-(68+56) = 56<sup>o</sup>"
+    },
+    "waec-mathematics-bank-1429": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Join PR.</p>\r\n\r\n<p>&lt; PQR = 180&ordm; - 74&ordm; = 106&ordm;</p>\r\n\r\n<p>&lt;PRQ = \\(\\frac{180 - 106}{2}\\) = 37&ordm;&nbsp;&rArr; &lt; QRS = 37&ordm; + 90&ordm; = 127&ordm;</p>\r\n\r\n<p>&lt; QPS = 180 - 127 = 53&ordm;</p>"
+    },
+    "waec-mathematics-bank-1430": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "waec-mathematics-bank-1431": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-mathematics-bank-1432": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "\\(\\frac{67 + 68}{2} = 67.5 = 68kg\\)"
+    },
+    "waec-mathematics-bank-1433": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "waec-mathematics-bank-1434": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-mathematics-bank-1435": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Log<sub>2</sub>a = Log<sub>8</sub>4<br>\r\nLog<sub>2</sub>a = Log<sub>8</sub>8<sup>2/3</sup> → 2/3Log<sub>8</sub>8 → 2/3 x 1<br>\r\nLog<sub>2</sub>a = 2/3<br>\r\nRecall; If Log<sub>a</sub>x = y ∴ ay = x<br>\r\nLog<sub>2</sub>a = 2/3<br>\r\n2<sup>2/3</sup> = a"
+    },
+    "waec-mathematics-bank-1436": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Gradient of the line = \\(\\frac{3 - 0}{0 - 1}\\)</p>\r\n\r\n<p>= -3</p>\r\n\r\n<p>y = -3x + b.</p>\r\n\r\n<p>Using (1,0), we have</p>\r\n\r\n<p>0 = -3(1) + b</p>\r\n\r\n<p>0 = -3 + b</p>\r\n\r\n<p>b = 3</p>\r\n\r\n<p>y = -3x + 3</p>\r\n\r\n<p>\\(\\therefore\\) The graph illustrates y \\(\\leq\\) -3x + 3.</p>"
+    },
+    "waec-mathematics-bank-1437": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-mathematics-bank-1438": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-mathematics-bank-1439": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>|AB| = 12 cm; |DC| = 9 cm; |AE| = 8 cm.</p>\r\n\r\n<p>\\(\\Delta\\) ABE and \\(\\Delta\\) EDC are similar triangles. Hence,</p>\r\n\r\n<p>\\(\\frac{|AB|}{|DC|} = \\frac{|AE|}{|EC|}\\)</p>\r\n\r\n<p>\\(\\frac{12}{9} = \\frac{8}{|EC|}\\)</p>\r\n\r\n<p>\\(\\therefore |EC| = \\frac{9 \\times 8}{12}\\)</p>\r\n\r\n<p>= 6 cm</p>"
+    },
+    "waec-mathematics-bank-1440": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>\\(V = \\pi r^2 h\\)</p>\r\n\r\n<p>\\(V = \\frac{22}{7} \\times 7 \\times 7 \\times 5\\)</p>\r\n\r\n<p>= 770 cm\\(^3\\)</p>"
+    },
+    "waec-mathematics-bank-1441": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>T.S.A of a cone = \\(\\pi r^2 + \\pi rl\\)</p>\r\n\r\n<p>= \\(\\frac{22}{7} \\times 3^2 + \\frac{22}{7}&nbsp; \\times 3 \\times 4\\)</p>\r\n\r\n<p>= \\(\\frac{198}{7} + \\frac{264}{7}\\)</p>\r\n\r\n<p>= \\(\\frac{462}{7}\\)</p>\r\n\r\n<p>= 66 cm\\(^2\\)</p>"
+    },
+    "waec-mathematics-bank-1442": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Considering the smaller and larger triangle, these two are similar triangles. Hence,&nbsp;</p>\r\n\r\n<p>If the height of the smaller triangle = h,&nbsp;</p>\r\n\r\n<p>\\(\\therefore \\frac{h}{6} = \\frac{h + 12}{12}\\)</p>\r\n\r\n<p>\\(12h = 6h + 72 \\implies 6h = 72\\)</p>\r\n\r\n<p>\\(h = 12 cm\\)</p>\r\n\r\n<p>\\(\\therefore\\) The height of the cone = 12 + 12 = 24 cm</p>"
+    },
+    "waec-mathematics-bank-1443": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Latitudinal difference = 65&deg; - 15&deg;&nbsp;</p>\r\n\r\n<p>= 50&deg;</p>"
+    },
+    "waec-mathematics-bank-1444": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>The length of the arc subtended by the sector of angle 120&deg; = circumference of the base of the cone.</p>\r\n\r\n<p>\\(\\frac{120}{360} \\times 2 \\times \\frac{22}{7} \\times 21 = 2\\pi r\\)</p>\r\n\r\n<p>\\(44 = 2\\pi r\\)</p>\r\n\r\n<p>\\(r = 22 \\div \\pi\\)</p>\r\n\r\n<p>\\(r = 22 \\times \\frac{7}{22}\\)</p>\r\n\r\n<p>r = 7 cm</p>"
+    },
+    "waec-mathematics-bank-1445": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>&lt; DBC = 35&deg; (base angles of an isosceles triangle)</p>\r\n\r\n<p>&lt; CDB = 180&deg; - (35&deg; + 35&deg;)</p>\r\n\r\n<p>= 110&deg;</p>\r\n\r\n<p>&lt; ADB = 70&deg;; &lt; ABD = 90&deg;(&lt; in&nbsp; a semi-circle)</p>\r\n\r\n<p>\\(\\therefore\\) &lt; BAO = 180&deg; - (70&deg; + 90&deg;)( sum of &lt;s in a triangle)</p>\r\n\r\n<p>= 20&deg;</p>"
+    },
+    "waec-mathematics-bank-1446": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>4x + 3x + 2x + 90&nbsp;=360&deg; [angle at a point]</p>\r\n\r\n<p>9x + 90&nbsp;= 360&deg;</p>\r\n\r\n<p>9x = 360&deg; - 90&deg;</p>\r\n\r\n<p>9x = 270</p>\r\n\r\n<p>x = 270/9</p>\r\n\r\n<p>x = 30&deg;</p>",
+      "answer_image": "/qimages/418c3fea73cf2dbc34d4.jpg"
+    },
+    "waec-mathematics-bank-1447": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "Ae is a bisector of BAC => EAC = 45<sup>o</sup><br>\r\nCE is the bisector of ACD => ACE = 45<sup>o</sup><br>\r\nAEC = 180<sup>o</sup> - [EAC + ACE]<br>\r\n&nbsp&nbsp&nbsp&nbsp= 180<sup>o</sup> - (45<sup>o</sup> + 45<sup>o</sup>) = 180<sup>o</sup> - 90<sup>o</sup> = 90<sup>o</sup>",
+      "answer_image": "/qimages/7af5405b9d2bd3f38e23.jpg"
+    },
+    "waec-mathematics-bank-1448": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>a + c + d =&nbsp;180o[sum of angles in triangle]<br />\r\nx = a[vertical opp. &ang;s]<br />\r\ny + x + d = 180o[sum of &ang;s in a &Delta;]<br />\r\ny + a + d = 180o<br />\r\ny + a + d = a + c + d<br />\r\ny = c<br />\r\nbut b + y = 180o [sum of &ang;s on a straight line ]<br />\r\nb + c = 180o; Ans = A = 180o</p>",
+      "answer_image": "/qimages/6b291f8ef8a7f4f01362.jpg"
+    },
+    "waec-mathematics-bank-1449": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>The formula for the exterior angle of a regular polygon = \\(\\frac{360}{n}\\).</p>\r\n\r\n<p>Among&nbsp;the options, only 72&deg; is divisible by 360&deg; to give an integer.</p>"
+    },
+    "waec-mathematics-bank-1450": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "ACB = ABC [Base angles of isoceles triangle]<br>\r\nACB + ABC + 50<sup>o</sup> = 180<sup>o</sup>[sum of angles in a triangle]<br>\r\nACB + ABC = 180<sup>o</sup> - 50<sup>o</sup> = 130<sup>o</sup><br>\r\n<div class=\"eq-c\">ACB <div class=\"fraction\"><span class=\"fr_num\">130<sup>o</sup></span><span class=\"bar\">/</span><span class=\"fr_den\">2</span></div> = 65<sup>o</sup></div><br>\r\nACD + ACB = 180<sup>o</sup>[sum of ∠s on a straight line]<br>\r\nACD + 65<sup>o</sup> = 180<sup>o</sup><br>\r\nACD = 180<sup>o</sup> - 65<sup>o</sup> = 115<sup>o</sup>"
+    },
+    "waec-mathematics-bank-1451": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>\\(\\sin 30&deg; = \\frac{y}{10}\\)</p>\r\n\r\n<p>\\(y = 10 \\sin 30&deg; = 10 \\times 0.5 = 5 cm\\)</p>"
     }
   }
 }

@@ -21,6 +21,7 @@ import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import TutorChat from '@/components/tutor-chat';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import { apiImg, QText } from '@/lib/qtext';
 
 interface ReviewQuestion {
   questionId: string;
@@ -32,6 +33,11 @@ interface ReviewQuestion {
   correct: string;
   explanation?: string;
   correctly: boolean;
+  image?: string;
+  answerImage?: string;
+  passage?: string;
+  video?: string;
+  type?: string;
 }
 
 interface ReviewPayload {
@@ -192,7 +198,30 @@ function ReviewInner() {
                   </span>
                 )}
               </div>
-              <p className="mt-3 text-[15px] leading-relaxed text-on-surface">{q.stem}</p>
+              {q.passage && (
+                <details className="mt-3 rounded-lg border border-outline-variant/50 bg-surface-container-lowest/60">
+                  <summary className="cursor-pointer select-none px-3 py-2 font-mono text-[10px] uppercase tracking-wider text-outline">
+                    comprehension passage
+                  </summary>
+                  <div className="max-h-56 overflow-y-auto px-3 pb-3 text-[14px] leading-relaxed text-on-surface">
+                    <QText html={q.passage} />
+                  </div>
+                </details>
+              )}
+              <div className="mt-3 text-[15px] leading-relaxed text-on-surface">
+                <QText html={q.stem} />
+              </div>
+              {q.image && (
+                <div className="mt-3 flex justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={apiImg(q.image)}
+                    alt="question diagram"
+                    loading="lazy"
+                    className="max-h-72 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain"
+                  />
+                </div>
+              )}
 
               {pickedWrong && (
                 <AnswerBlock
@@ -214,10 +243,35 @@ function ReviewInner() {
                 />
               </div>
 
+              {q.answerImage && (
+                <div className="mt-3">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-outline">worked solution</p>
+                  <div className="mt-1.5 flex justify-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={apiImg(q.answerImage)}
+                      alt="worked solution diagram"
+                      loading="lazy"
+                      className="max-h-80 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain"
+                    />
+                  </div>
+                </div>
+              )}
               {q.explanation && (
-                <p className="mt-3 rounded-lg bg-surface-container-low p-3 text-[13px] leading-relaxed text-on-surface-variant">
-                  {q.explanation}
-                </p>
+                <div className="mt-3 rounded-lg bg-surface-container-low p-3 text-[13px] leading-relaxed text-on-surface-variant">
+                  <QText html={q.explanation} />
+                </div>
+              )}
+              {q.video && (
+                <a
+                  href={q.video}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-surface-container-low px-3 py-1.5 text-[12px] font-medium text-on-surface transition hover:bg-surface-container"
+                >
+                  <span className="material-symbols-outlined text-[16px]">play_circle</span>
+                  Watch the worked video
+                </a>
               )}
             </article>
           );
@@ -425,7 +479,9 @@ function AnswerBlock({
       </span>
       <span>
         <span className={`block font-mono text-[11px] ${color}`}>{label}</span>
-        <span className="mt-0.5 block text-sm text-on-surface">{text}</span>
+        <span className="mt-0.5 block text-sm text-on-surface">
+          <QText html={text} />
+        </span>
       </span>
     </div>
   );

@@ -2435,7 +2435,8 @@
     },
     "waec-accounting-bank-0609": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p><strong>current </strong><strong>liabilities:&nbsp;</strong>This is because it represents money received for services or goods that have yet to be delivered, thus creating an obligation for the company.</p>"
     },
     "waec-accounting-bank-0610": {
       "type": "mcq",
@@ -2507,7 +2508,8 @@
     },
     "waec-accounting-bank-0627": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The cost of raw materials used is gotten by summing up</p>\r\n\r\n<p>opening stock + purchases - closing stock</p>\r\n\r\n<p>Hence we have = 20,000 + 3,000 - 4,000 = 19,000</p>"
     },
     "waec-accounting-bank-0628": {
       "type": "mcq",
@@ -6836,6 +6838,14 @@
     "waec-accounting-bank-1709": {
       "type": "mcq",
       "letter": "A"
+    },
+    "waec-accounting-bank-1710": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-accounting-bank-1711": {
+      "type": "mcq",
+      "letter": "C"
     }
   }
 }

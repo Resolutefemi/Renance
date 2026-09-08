@@ -2655,7 +2655,8 @@
     },
     "jamb-accounting-bank-0667": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Balance per bank&nbsp;is the ending cash&nbsp;balance&nbsp;appearing on a&nbsp;bank statement.</p>\r\n\r\n<p>Hence we have; cashbook balance + unpresented cheques + direct bank debit - (direct credit + cashbook credit)</p>\r\n\r\n<p>20,000+5200+1000 - (1000+500) = 24,700</p>"
     },
     "jamb-accounting-bank-0668": {
       "type": "mcq",
@@ -2667,23 +2668,28 @@
     },
     "jamb-accounting-bank-0670": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Profit and Loss Appropriation A/C</p>\r\n\r\n<table border=\"0\" cellpadding=\"1\" cellspacing=\"0\" style=\"width:500px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>partners salary - K&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 800<br />\r\n\t\t\tInt.on capital -&nbsp; &nbsp; M&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2000<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;K&nbsp; 1000<br />\r\n\t\t\tshare of profit -&nbsp; M&nbsp; 4020<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; K&nbsp; &nbsp;<ins>2680</ins>&nbsp; <ins>&nbsp;6700</ins><br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp; 10500</ins></td>\r\n\t\t\t<td>Net profit b/d&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10000<br />\r\n\t\t\tInt. on drawings: M&nbsp; &nbsp; 500<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins> &nbsp; &nbsp; &nbsp; &nbsp; </ins>&nbsp;&nbsp;<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins>10500</ins></td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>"
     },
     "jamb-accounting-bank-0671": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Drawings is the withdrawals from a business by a business owner for his personal use. It represents a reduction of owners&#39;&nbsp;equity (capital)&nbsp;in the business.&nbsp;</p>\r\n\r\n<p>&nbsp;Drawings account&nbsp;have&nbsp;a debit balance which increases assets (remember in the balance sheet, assets are recorded on the debit side of the account while liabilities have a credit ballance). Hence drawings would reduce owners capital and increase the asset balance.</p>"
     },
     "jamb-accounting-bank-0672": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(\\frac{10}{100}\\) x 100,000 = 10,000</p>\r\n\r\n<p>cost of goods sold = sales - profit</p>\r\n\r\n<p>100,000 - 10,000 = 90,000</p>"
     },
     "jamb-accounting-bank-0673": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>opening stock&nbsp;+ cost of goods sold - closing stock = purchase</p>\r\n\r\n<p>Remember COGS was given as;</p>\r\n\r\n<p>cost of goods sold = sales - profit (10% of sales)</p>\r\n\r\n<p>100,000 - 10,000 = 90,000</p>\r\n\r\n<p>Hence we have;</p>\r\n\r\n<p>purchase = 5,000 + 90000 - 5,600 = 90,600</p>"
     },
     "jamb-accounting-bank-0674": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Realization account&nbsp;refers to an&nbsp;account&nbsp;opened by the firm when it goes to dissolution to record the profit made from the sale of assets and loss suffered on the settlement of liabilities. When non-assets are converted to cash its called realization</p>"
     },
     "jamb-accounting-bank-0675": {
       "type": "mcq",
@@ -2691,7 +2697,8 @@
     },
     "jamb-accounting-bank-0676": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The primary objectives of branch accounting are better accountability and control since&nbsp;profitability&nbsp;and efficiency can be closely tracked for individual locations</p>"
     },
     "jamb-accounting-bank-0677": {
       "type": "mcq",
@@ -2699,15 +2706,18 @@
     },
     "jamb-accounting-bank-0678": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The&nbsp;Provision for Bad&nbsp;and&nbsp;Doubtful Debts will&nbsp;appear in the Balance Sheet. Next year, the actual amount of&nbsp;bad debts will&nbsp;be debited not to the&nbsp;Profit and Loss Account&nbsp;but to the&nbsp;Provision for Bad&nbsp;and&nbsp;Doubtful Debts Account&nbsp;which&nbsp;will&nbsp;then stand reduced.</p>"
     },
     "jamb-accounting-bank-0679": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>A&nbsp;receipts and payments account&nbsp;is a summary of actual cash&nbsp;receipts and payments&nbsp;extracted from the cash book over a certain period. All cash received and paid during the period whether capital or revenue is included in this&nbsp;account. It is the equivalent of a cashbook</p>"
     },
     "jamb-accounting-bank-0680": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>&nbsp;Capital expenditures are money spent by a business or organization on acquiring or maintaining fixed assets, such as land, buildings, and equipment.</p>"
     },
     "jamb-accounting-bank-0681": {
       "type": "mcq",
@@ -2715,23 +2725,28 @@
     },
     "jamb-accounting-bank-0682": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Accrual concept&nbsp;is the most fundamental principle of accounting which requires recording revenues when they are earned and not when they are received in cash, and recording expenses when they are incurred and not when they are paid.</p>"
     },
     "jamb-accounting-bank-0683": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>To calculate the&nbsp;book value per share, you must first calculate the&nbsp;book value, then divide by the number of common&nbsp;shares. Also, since you&#39;re working with common&nbsp;shares, you must subtract the preferred shareholder equity from the total equity. Hence we have;</p>\r\n\r\n<p>Book Value per Share&nbsp;= (Shareholders&#39; Equity - Preferred Equity) / Total Outstanding Common&nbsp;Shares.</p>"
     },
     "jamb-accounting-bank-0684": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Service costs&nbsp;are the costs incurred to provide or deliver a service. They have the element of manufacturing cost but are not directly involved in production.&nbsp;They include&nbsp;cost such as&nbsp;the use of power and water; fee for use of furniture carpeting/curtains,&nbsp;costs&nbsp;such as cleaning of common areas,&nbsp;costs&nbsp;of concierge or&nbsp;maintenance&nbsp;of common garden.</p>"
     },
     "jamb-accounting-bank-0685": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Bookkeeping&nbsp;is the recording of financial transactions &nbsp;in which all of the financial transactions of the business (consisting of income and expenses) are entered into a database. It uses records recorded in the ledger.<br />\r\nLedgers is a book or other collection of financial accounts.</p>"
     },
     "jamb-accounting-bank-0686": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Standing order is an instruction to a bank by an account holder or customer to make regular fixed payments to a particular person or organization on their behalf.</p>"
     },
     "jamb-accounting-bank-0687": {
       "type": "mcq",
@@ -2739,7 +2754,8 @@
     },
     "jamb-accounting-bank-0688": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>FIFO means first in first out. This method assumes that the&nbsp;oldest&nbsp;products in a company&rsquo;s inventory have been sold&nbsp;first. The costs paid for those&nbsp;oldest&nbsp;products are the ones used in the calculation.</p>\r\n\r\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>issue price method</td>\r\n\t\t\t<td>Date</td>\r\n\t\t\t<td>Receipt</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>Issue</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>Balance</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"1\" rowspan=\"5\">FIFO</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>Qty</td>\r\n\t\t\t<td>price</td>\r\n\t\t\t<td>Value</td>\r\n\t\t\t<td>Qty</td>\r\n\t\t\t<td>price</td>\r\n\t\t\t<td>Value</td>\r\n\t\t\t<td>Qty</td>\r\n\t\t\t<td>value</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>1/1</td>\r\n\t\t\t<td>1000</td>\r\n\t\t\t<td>10</td>\r\n\t\t\t<td>10000</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>1000</td>\r\n\t\t\t<td>10000</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>2/1</td>\r\n\t\t\t<td>2000</td>\r\n\t\t\t<td>12</td>\r\n\t\t\t<td>24000</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>3000</td>\r\n\t\t\t<td>34000</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>3/1</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>1500</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>1500</td>\r\n\t\t\t<td>1500</td>\r\n\t\t\t<td>18000</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>4/1</td>\r\n\t\t\t<td>1000</td>\r\n\t\t\t<td>11</td>\r\n\t\t\t<td>11000</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>2500</td>\r\n\t\t\t<td>2500</td>\r\n\t\t\t<td>27,500</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"1\">&nbsp;</td>\r\n\t\t\t<td>5/1</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>-</td>\r\n\t\t\t<td>1000</td>\r\n\t\t\t<td>&nbsp;</td>\r\n\t\t\t<td>1500</td>\r\n\t\t\t<td>1500</td>\r\n\t\t\t<td>16500</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>From the table above, value of closing stock using FIFO&nbsp;=&nbsp;</p>\r\n\r\n<p>Total closing stock = 1500</p>\r\n\r\n<p>previous stock bought at N12 = 500 units</p>\r\n\r\n<p>Last stock bought at N11 = 1000 units</p>\r\n\r\n<p>12 x 500 + (11 x 1000) = 17,000</p>"
     },
     "jamb-accounting-bank-0689": {
       "type": "mcq",
@@ -2747,23 +2763,28 @@
     },
     "jamb-accounting-bank-0690": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Capital = Assets - liabilities</p>\r\n\r\n<p>Assets = Fixed assets + current assets + drawings</p>\r\n\r\n<p>2000 + 4000 + 200 = 6200</p>\r\n\r\n<p>Liabilities = current liabilities + longterm loans</p>\r\n\r\n<p>1200 + 2000 = 3200</p>\r\n\r\n<p>6200 - 3200 = 3000</p>\r\n\r\n<p>&nbsp;</p>"
     },
     "jamb-accounting-bank-0691": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Working capital = current assets - current liabilities</p>\r\n\r\n<p>2000&nbsp;- 1200 = 800</p>"
     },
     "jamb-accounting-bank-0692": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Trading profit and Loss Account&nbsp;</p>\r\n\r\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width:500px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>opening stock&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 4,000<br />\r\n\t\t\tAdd: cost of products&nbsp; &nbsp; &nbsp; &nbsp;20,000&nbsp; &nbsp; &nbsp;<ins>&nbsp;24,000</ins><br />\r\n\t\t\tLess: closing stock&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5000<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins>19,000</ins></p>\r\n\r\n\t\t\t<p>Gross profit&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins> &nbsp;<strong>31,000</strong></ins><br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins> &nbsp;50,000</ins><br />\r\n\t\t\tselling &amp; dis. Exp&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2000<br />\r\n\t\t\tAdmin. Exp&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1,000&nbsp; &nbsp; &nbsp; <ins>&nbsp; &nbsp;3000</ins><br />\r\n\t\t\tNet profit&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp;28,000</ins><br />\r\n\t\t\t<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;31,000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>Sales&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;50,000<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\tG.profit b/d&nbsp; &nbsp; 31000<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t&nbsp;</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>"
     },
     "jamb-accounting-bank-0693": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p><br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Trading profit and Loss Account&nbsp;</p>\r\n\r\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>opening stock&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 4,000<br />\r\n\t\t\tAdd: cost of products&nbsp; &nbsp; &nbsp; &nbsp;20,000&nbsp; &nbsp; &nbsp;<ins>&nbsp;24,000</ins><br />\r\n\t\t\tLess: closing stock&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5000<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins>19,000</ins></p>\r\n\r\n\t\t\t<p>Gross profit&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins> &nbsp;31,000</ins><br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<ins> &nbsp;50,000</ins><br />\r\n\t\t\tselling &amp; dis. Exp&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2000<br />\r\n\t\t\tAdmin. Exp&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1,000&nbsp; &nbsp; &nbsp; <ins>&nbsp; &nbsp;3000</ins><br />\r\n\t\t\tNet profit&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp;<strong>28,000</strong></ins><br />\r\n\t\t\t<br />\r\n\t\t\t&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;31,000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>Sales&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;50,000<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\tG.profit b/d&nbsp; &nbsp; 31000<br />\r\n\t\t\t<br />\r\n\t\t\t<br />\r\n\t\t\t&nbsp;</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>"
     },
     "jamb-accounting-bank-0694": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Premium shares = Issue price per share &ndash; Face value/par value per share&nbsp;x&nbsp;No of shares.</p>\r\n\r\n<p>Issue price = N1.50</p>\r\n\r\n<p>Face value = N1</p>\r\n\r\n<p>No. of shares = 750,000</p>\r\n\r\n<p>1.50 - 1 = 0.50</p>\r\n\r\n<p>0.50 x 750,000 = 375,000</p>\r\n\r\n<p>Share Application or share allotment or Share capital A/c all are personal accounts as they represent money from the&nbsp;shareholders&nbsp;and when money is due, these are to be debited because of the rule &quot;Debit the receiver&quot;.</p>"
     },
     "jamb-accounting-bank-0695": {
       "type": "mcq",
@@ -2771,31 +2792,38 @@
     },
     "jamb-accounting-bank-0696": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Fixed assets are assets which are purchased for long-term use and are not likely to be converted quickly into cash, such as land, buildings, furniture and equipment. From the question above they include; i, ii &amp; iii</p>"
     },
     "jamb-accounting-bank-0697": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p><strong>Current Liabilities </strong>= Notes payable + Accounts payable + Accrued expenses + Unearned revenue +&nbsp;Current&nbsp;portion of long term debt + other&nbsp;short term&nbsp;debt.</p>\r\n\r\n<p>From the question above, Loans from friends and creditors are liabilities the rest are assets</p>"
     },
     "jamb-accounting-bank-0698": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>sales volume of Q = 23,400</p>\r\n\r\n<p>If sales volume of Q doubles that of p which is \\(\\frac{1}{3}\\) of R we have;<br />\r\nfor P = 23,400 &divide; 2p</p>\r\n\r\n<p>p = \\(\\frac{23,400}{2}\\) = 11,700</p>\r\n\r\n<p>Since R&nbsp;is \\(\\frac{1}{3}\\) of P, hence we have,</p>\r\n\r\n<p>R= 1/3P<br />\r\nR = 3 x P</p>\r\n\r\n<p>R =&nbsp; \\(\\frac{3}\\times{11700}\\)&nbsp; = 35,100</p>\r\n\r\n<p>&nbsp;</p>"
     },
     "jamb-accounting-bank-0699": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Assuming the partnership maintains a fixed capital balance P capital would be the balance brought down 20,000 (that is capital without drawings)</p>"
     },
     "jamb-accounting-bank-0700": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>K capital contributed = 10000</p>\r\n\r\n<p>10000 -&nbsp;1,000 - 2000 - 100 - 10 = 6880<br />\r\n&nbsp;</p>"
     },
     "jamb-accounting-bank-0701": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Depreciation is considered an operating expense so it will be added to the expenses.</p>\r\n\r\n<p>Total expense of P = Selling expenses +&nbsp;&nbsp;Administrative expenses +&nbsp;&nbsp;depreciation</p>\r\n\r\n<p>1100 + 1400 + \\(\\frac{3}{15}\\)&nbsp;x 1800&nbsp;</p>\r\n\r\n<p>1100 + 1400 + 360&nbsp;= 2,860</p>"
     },
     "jamb-accounting-bank-0702": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The insurance premium to be taken to the profit and loss account will be the&nbsp;amount which could not be recovered by the trader on&nbsp;account&nbsp;of credit sales. It is a business&nbsp;loss, so is debited in the&nbsp;profit and loss account.</p>\r\n\r\n<p>Insurance premium posted to the P/L account&nbsp;would be;</p>\r\n\r\n<p>710 + 600 = 1310</p>"
     },
     "jamb-accounting-bank-0703": {
       "type": "mcq",
@@ -2807,7 +2835,8 @@
     },
     "jamb-accounting-bank-0705": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Financial Accounting&nbsp;is based on a systematic method of recording transactions of any business according to the accounting principles. It is the first and original form of accounting process.</p>"
     },
     "jamb-accounting-bank-0706": {
       "type": "mcq",
@@ -2819,15 +2848,18 @@
     },
     "jamb-accounting-bank-0708": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Recall sales ledger control account are used to track trade debtors, that is goods sold on credit. We already know that we debit all income and credit expenses. The debit side of the account contains interest charged by suppliers because the goods were sold on credit and its considered an income</p>"
     },
     "jamb-accounting-bank-0709": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The&nbsp;Consolidated Revenue Fund&nbsp;is an account that is owned and managed by the Federal Government, where all its&nbsp;revenues&nbsp;are paid.&nbsp;<br />\r\nRemember in account we debit all incomes and credit all expenses. Recurrent expenditures would be credited to the consolidated fund. showing monies that have gone out of the fund.</p>\r\n\r\n<p>Recurrent expenditure&nbsp;is&nbsp;expenditure, which does not result in the creation or acquisition of fixed assets (new or second-hand). It consists mainly of&nbsp;expenditure&nbsp;on wages, salaries and supplements, purchases of goods and services .</p>"
     },
     "jamb-accounting-bank-0710": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Current assets include cash and other assets that are expected to be converted to cash within a year. Option A &#39;&#39;Stock, bills receivable, cash and debtors&#39;&#39; is correct.</p>\r\n\r\n<p>- Stock are goods bought for the purpose of resale<br />\r\n- Bills receivable are incurred as a result of credit sales<br />\r\n- Cash is the available money at hand<br />\r\n- A&nbsp;debtor&nbsp;is a person, company, or other entity that owes money.</p>"
     },
     "jamb-accounting-bank-0711": {
       "type": "mcq",
@@ -2843,23 +2875,28 @@
     },
     "jamb-accounting-bank-0714": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>&nbsp;Electronic charges or payment on the&nbsp;bank statement&nbsp;not yet recorded&nbsp;in&nbsp;the cashbooks can cause discrepancies on the cash book. If interest has being paid on the account and not recorded of the cashbook, the bank statement is likely going to be overstated with the amount paid and not recorded</p>"
     },
     "jamb-accounting-bank-0715": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Supplementary Budget / estimate&nbsp;is the request for additional funds by Ministries and Departments during the course of the year.</p>"
     },
     "jamb-accounting-bank-0716": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Share premium is the amount by which the amount received by a company for a stock issue exceeds its face value. when shares are sold at an amount higher than the face value it is sold at premium</p>"
     },
     "jamb-accounting-bank-0717": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>A&nbsp;receipt voucher&nbsp;is a type of&nbsp;voucher&nbsp;which is typically issued by a certain business or an organization upon receiving payment in cash or check during a business transaction.&nbsp;</p>"
     },
     "jamb-accounting-bank-0718": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>&nbsp;Accruals are expenses incurred but not yet paid</p>"
     },
     "jamb-accounting-bank-0719": {
       "type": "mcq",
@@ -2867,7 +2904,8 @@
     },
     "jamb-accounting-bank-0720": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>credit sales = 160%&nbsp; x 280,000 (cash receivable)</p>\r\n\r\n<p>\\(\\frac{160}{100}\\)&nbsp;x 280,000</p>\r\n\r\n<p>1.6 x 280,000 = 448,000</p>\r\n\r\n<p>credit sales = 448,000</p>\r\n\r\n<p>Bal c/d = debit side - credit side of the account. Hence we have;</p>\r\n\r\n<p>Debit side = 87,000 + 488,000 + 58,000 + 50,000 = 643,000</p>\r\n\r\n<p>credit side = 40,000 + 50,000 + 280,000 + 30,000 = 400,000</p>\r\n\r\n<p>643,000 - 400,000 = 243,000</p>\r\n\r\n<p>Bal c/d = 243,000</p>"
     },
     "jamb-accounting-bank-0721": {
       "type": "mcq",
@@ -2875,15 +2913,18 @@
     },
     "jamb-accounting-bank-0722": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>6000 x 0.50 = 3000<br />\r\n6000 x 1 = 6000</p>\r\n\r\n<p>3000 + 6000 = 9000</p>"
     },
     "jamb-accounting-bank-0723": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>By debiting branch stock account and crediting branch debtors account</p>"
     },
     "jamb-accounting-bank-0724": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Since department K has the biggest shop space, its only fair that it pays the bigger chunk of rent. Hence it would be shared amongst the three department as;<br />\r\nDepartment k = 1200<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;L&nbsp; = 800<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; M =&nbsp; 1000<br />\r\nTotal = 3000</p>"
     },
     "jamb-accounting-bank-0725": {
       "type": "mcq",
@@ -2895,35 +2936,43 @@
     },
     "jamb-accounting-bank-0727": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>During&nbsp;periods of&nbsp;inflation (rise in prices), the use of&nbsp;LIFO&nbsp;will result in the highest estimate of cost of goods sold among the three approaches, and the lowest net income.</p>"
     },
     "jamb-accounting-bank-0728": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>In accounting, a financial period is calculated on a yearly basis. Accounts are prepared at the end of the year</p>"
     },
     "jamb-accounting-bank-0729": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Debit branch stock account (stock have increased by what was returned) and credit branch debtors&#39; account</p>"
     },
     "jamb-accounting-bank-0730": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>An&nbsp;error of principle&nbsp;is an accounting&nbsp;mistake&nbsp;in which an entry is recorded in the incorrect account</p>"
     },
     "jamb-accounting-bank-0731": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>To correct the error, we have to debit the amount in excess so as when it is being calculated, the debit side would balance with the credit side.&nbsp;</p>\r\n\r\n<p>Remember income in recorded on the debit side while expenses are recorded on the credit side. Since stationary was bought, (expense) it is assumed that it was recorded on the credit side. hence we will debit the amount in excess&nbsp;</p>"
     },
     "jamb-accounting-bank-0732": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Surplus is the&nbsp;excess of income over expenditure. A credit balance in the&nbsp;Income&nbsp;and&nbsp;expenditure&nbsp;account shows surplus. It is the profit earned and should be added to the capital fund on the liabilities side of the balance sheet</p>"
     },
     "jamb-accounting-bank-0733": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>General&nbsp;<em>Ledger</em>&nbsp;is divided into two types &ndash; Nominal&nbsp;Ledger&nbsp;and Private&nbsp;Ledger.</p>"
     },
     "jamb-accounting-bank-0734": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>5% x 800&nbsp;<br />\r\n5/100 x 800 = 40</p>\r\n\r\n<p>800 - 40 = 760</p>"
     },
     "jamb-accounting-bank-0735": {
       "type": "mcq",
@@ -2935,27 +2984,33 @@
     },
     "jamb-accounting-bank-0737": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Real account is an account dealing with the material assets of a business, such as its property.</p>"
     },
     "jamb-accounting-bank-0738": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Charge on turnover (COT) also known as Commission on&nbsp;turnover&nbsp;are&nbsp;charges&nbsp;a customer incurs for debit transactions (transaction involving withdrawals and/or operating cost to the bank) from his current account.&nbsp;</p>"
     },
     "jamb-accounting-bank-0739": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p><strong><em>Branch current account</em></strong>; This account is maintained in the head office books to record all transactions between head office and branch<strong>.&nbsp;</strong>This account is debited with the following</p>\r\n\r\n<ul>\r\n\t<li>Goods sent to branch</li>\r\n\t<li>Expenses of the branch paid by the head office</li>\r\n\t<li>Profit of the branch</li>\r\n</ul>\r\n\r\n<p>From the above explanation, we would debit expenses account and crediting the bank account</p>"
     },
     "jamb-accounting-bank-0740": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>partnership capital account: Which shows the capital contribution of a partner, plus profits and minus losses and distributions.</p>"
     },
     "jamb-accounting-bank-0741": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Uncredited&nbsp;cheques: These are&nbsp;cheques&nbsp;received from customers and other sources for which the firm has banked but the bank has not yet availed the funds by crediting the firm&#39;s account. In this case, the cash book balance will be more than the bank balance</p>"
     },
     "jamb-accounting-bank-0742": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>&#39;The profit and loss account is used by manufacturing concerns to ascertain the cost of production at various stages.&nbsp;&nbsp;A motor vehicle used by a manufacturing company would be depreciated to the debit side of&nbsp; profit and loss account&nbsp;</p>"
     },
     "jamb-accounting-bank-0743": {
       "type": "mcq",
@@ -2963,11 +3018,13 @@
     },
     "jamb-accounting-bank-0744": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>&nbsp;A&nbsp;receipts and payments account&nbsp;is a summary of actual cash&nbsp;receipts and payments&nbsp;extracted from the cash book over a certain period.&nbsp; Its equivalent is a cashbook</p>"
     },
     "jamb-accounting-bank-0745": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Budget in this context&nbsp; refers to expenditures and revenue-collection decisions made in a given time frame at central or local levels of government. It contains the financial plan of the government for a given period of time</p>"
     },
     "jamb-accounting-bank-0746": {
       "type": "mcq",
@@ -2975,7 +3032,8 @@
     },
     "jamb-accounting-bank-0747": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Interest&nbsp;on&nbsp;partners&#39;&nbsp;loan&nbsp;to the firm is a charge against profit. Such&nbsp;interest&nbsp;is to be allowed whether there are profit or not. So,&nbsp;interest&nbsp;as a&nbsp;partners&#39;&nbsp;loan&nbsp;is credited to his&nbsp;loan&nbsp;account and later on it is transferred to the debit of profit and loss account.</p>"
     },
     "jamb-accounting-bank-0748": {
       "type": "mcq",
@@ -2983,11 +3041,13 @@
     },
     "jamb-accounting-bank-0749": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The prime cost is the summation of all direct expenses and direct materials used in production. Its simply direct cost incurred during production</p>"
     },
     "jamb-accounting-bank-0750": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>A&nbsp;partnership deed, also known as a&nbsp;partnership&nbsp;agreement, is a document that outlines in detail the rights and responsibilities of all parties to a business operation.&nbsp;</p>"
     },
     "jamb-accounting-bank-0751": {
       "type": "mcq",
@@ -2995,7 +3055,8 @@
     },
     "jamb-accounting-bank-0752": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>A credit note is one of the source documents used by a business. It is a receipt given by a seller to a buyer.&nbsp;</p>\r\n\r\n<p>Credit notes&nbsp;are typically&nbsp;used&nbsp;when there has been an error in an already-issued invoice, such as an incorrect amount, or when a customer wishes to change their original order</p>"
     },
     "jamb-accounting-bank-0753": {
       "type": "mcq",
@@ -3003,11 +3064,13 @@
     },
     "jamb-accounting-bank-0754": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>sales&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10900<br />\r\n- Returns inwards&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 600<br />\r\n-carriage outwards&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp; 300&nbsp; &nbsp;</ins><br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10000&nbsp;<br />\r\nopening stock&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1000<br />\r\npurchase&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4000<br />\r\n- returns outwards&nbsp; &nbsp; &nbsp; 800&nbsp; &nbsp; &nbsp; &nbsp;<ins> &nbsp;3200 &nbsp;</ins> &nbsp; &nbsp;<br />\r\n+ carriage inwards&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;200<br />\r\ngoods avail. for sale&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>4400</strong></p>\r\n\r\n<p>less; closing stock&nbsp; &nbsp;&nbsp; 2000<br />\r\ncarriage outwards&nbsp; &nbsp; &nbsp;&nbsp;300&nbsp; &nbsp; &nbsp; &nbsp; 2300&nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp; 2100</ins><br />\r\nGross profit&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp;<strong> 7900</strong>&nbsp;</ins> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />\r\n<br />\r\n&nbsp;</p>"
     },
     "jamb-accounting-bank-0755": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>sales&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10900<br />\r\n- Returns inwards&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 600<br />\r\n-carriage outwards&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp; 300&nbsp; &nbsp;</ins><br />\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;10000&nbsp;<br />\r\nopening stock&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1000<br />\r\npurchase&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4000<br />\r\n- returns outwards&nbsp; &nbsp; &nbsp; 800&nbsp; &nbsp; &nbsp; &nbsp;<ins> &nbsp;3200 &nbsp;</ins> &nbsp; &nbsp;<br />\r\n+ carriage inwards&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;200<br />\r\ngoods avail. for sale&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>4400</strong></p>\r\n\r\n<p>less; closing stock&nbsp; &nbsp;&nbsp; 2000<br />\r\ncarriage outwards&nbsp; &nbsp; &nbsp;&nbsp;300&nbsp; &nbsp; &nbsp; &nbsp; 2300&nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp; 2100</ins><br />\r\nGross profit&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <ins>&nbsp; <strong>7900&nbsp;</strong></ins></p>"
     },
     "jamb-accounting-bank-0756": {
       "type": "mcq",
@@ -3015,19 +3078,23 @@
     },
     "jamb-accounting-bank-0757": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>opening stock = 4200<br />\r\nclosing stock = 3900<br />\r\ncost of goods sold = 6000</p>\r\n\r\n<p>purchase = opening stock -&nbsp;closing stock - cost of goods sold</p>\r\n\r\n<p>4200 - 3900 = 300<br />\r\n&nbsp;6000 - 300 = 5700</p>"
     },
     "jamb-accounting-bank-0758": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>furniture &amp; fittings + office equipt. + debtors + cash at bank - creditors<br />\r\n21000 + 9800 + 7000 + 6800 - 4900 = 39700</p>"
     },
     "jamb-accounting-bank-0759": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The business owner made a provision of&nbsp;500 as bad debt. Total debt owed was 20,000. At the end of the period, bad debts was 4%. Hence we have;&nbsp;</p>\r\n\r\n<p>4% x 20000<br />\r\n0.04 x 20000 = 800</p>"
     },
     "jamb-accounting-bank-0760": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The business owner made a provision of&nbsp;500 as bad debt. Total debt owed was 20,000. At the end of the period, bad debts was 4%. Hence we have;&nbsp;</p>\r\n\r\n<p>4% x 20000<br />\r\n0.04 x 20000 = 800</p>\r\n\r\n<p>we subtract the total bad debt from the amount that was initially provided for bad debt and charge it to the profit and loss account as a expense</p>\r\n\r\n<p>Provision for bad debts = 500<br />\r\n800 - 500 = 300</p>"
     },
     "jamb-accounting-bank-0761": {
       "type": "mcq",
@@ -3035,7 +3102,8 @@
     },
     "jamb-accounting-bank-0762": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Current account&nbsp;of&nbsp;partners&#39; is also a&nbsp;type&nbsp;of Capital&nbsp;Account. So if there is a debit balance in&nbsp;Current Account, it means a loan give to the&nbsp;Partner&nbsp;by the Firm.</p>"
     },
     "jamb-accounting-bank-0763": {
       "type": "mcq",
@@ -3235,7 +3303,8 @@
     },
     "jamb-accounting-bank-0812": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Since the van is not for resale rather to help in the running of the business, we Debit motor van and credit cash account</p>"
     },
     "jamb-accounting-bank-0813": {
       "type": "mcq",
@@ -3251,7 +3320,8 @@
     },
     "jamb-accounting-bank-0816": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>ATM is a machine that dispenses cash or performs other banking services when an account holder inserts a bank card. For one to withdraw money from the machine, you are required to own an ATM card</p>"
     },
     "jamb-accounting-bank-0817": {
       "type": "mcq",
@@ -3263,11 +3333,13 @@
     },
     "jamb-accounting-bank-0819": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>30,000 + 7000 + 8000 +10,000 = 55000</p>\r\n\r\n<p>55,000 - 3000 = 52,000</p>\r\n\r\n<p>&nbsp;</p>"
     },
     "jamb-accounting-bank-0820": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Gross profit = sales - cost of goods sold</p>\r\n\r\n<p>3000 - 800 = 2200</p>"
     },
     "jamb-accounting-bank-0821": {
       "type": "mcq",
@@ -3275,15 +3347,18 @@
     },
     "jamb-accounting-bank-0822": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Debit purchase account with 12,000 and credit cash paid to ibrahim&nbsp;12,000</p>"
     },
     "jamb-accounting-bank-0823": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>You can&#39;t transfer money when you do not not have sufficient amount of money on the account.</p>"
     },
     "jamb-accounting-bank-0824": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Dishonoured cheques will be recorded on the credit side, write &quot;By Debtor A/C&quot; with respective amount in the bank&nbsp;<strong>column</strong>.</p>"
     },
     "jamb-accounting-bank-0825": {
       "type": "mcq",
@@ -3291,7 +3366,8 @@
     },
     "jamb-accounting-bank-0826": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>profit and loss account is an account in the books of an organization to which incomes and gains are credited and expenses and losses debited, so as to show the net profit or loss over a given period.</p>"
     },
     "jamb-accounting-bank-0827": {
       "type": "mcq",
@@ -3299,7 +3375,8 @@
     },
     "jamb-accounting-bank-0828": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Goods sent to branch&nbsp;is recorded at the debit side of the branch stock account.&nbsp;Goods&nbsp;returned to head office and closing stock is shown at the credit side of this account. The excess of debit over credit is shortage. The excess of credit over debit is surplus.</p>"
     },
     "jamb-accounting-bank-0829": {
       "type": "mcq",
@@ -3307,27 +3384,33 @@
     },
     "jamb-accounting-bank-0830": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>A&nbsp;balance sheet&nbsp;is a financial statement that reports a company&#39;s assets, liabilities and shareholders&#39; equity. The&nbsp;balance sheet&nbsp;is one of the three (income statement and statement of cash flows being the other two) core financial statements used to evaluate a business.</p>"
     },
     "jamb-accounting-bank-0831": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Mary&#39;s capital contributed will be 15000 + 20000 = 35000 and will reflect a credit balance because money has gone out of Mary&#39;s purse<br />\r\nGoodwill will have a&nbsp;debit balance&nbsp;and moved to the balance sheet&nbsp;</p>"
     },
     "jamb-accounting-bank-0832": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Acid test ratio = cash + cash equivalents + marketable securities + current accounts receivables / Total current liabilities</p>"
     },
     "jamb-accounting-bank-0833": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Turnover ratio&nbsp;is the cost of goods sold divided by the average stock for the same period</p>\r\n\r\n<p>Cost of goods sold = opening stock + purchases - closing stock<br />\r\n25,120 + 44,880 - 27,840 = 42,160</p>\r\n\r\n<p>Average stock = opening stock + closing stock / 2<br />\r\n25,120 + 27,840 = 52960 / 2 = 26,480</p>\r\n\r\n<p>Turn over = 42,160 / 26,480 = 1.59&nbsp;times Approximately 2 times</p>"
     },
     "jamb-accounting-bank-0834": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The&nbsp;Creditors Ledger&nbsp;accumulates information from the purchases journal. The purpose of the&nbsp;Creditors Ledger&nbsp;is to provide knowledge about which suppliers the business owes money, and how much. It is also known as accounts payable or purchase journal.</p>"
     },
     "jamb-accounting-bank-0835": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p><strong>LIFO</strong>&nbsp;is used by firms to lower their tax liabilities at the expense of an outdated inventory value as reflected on the balance sheet.</p>"
     },
     "jamb-accounting-bank-0836": {
       "type": "mcq",
@@ -3339,7 +3422,8 @@
     },
     "jamb-accounting-bank-0838": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>A&nbsp;vote book&nbsp;is an accounts&nbsp;book&nbsp;which is used to record. and monitor expenditure in the public sector.</p>"
     },
     "jamb-accounting-bank-0839": {
       "type": "mcq",
@@ -3351,11 +3435,13 @@
     },
     "jamb-accounting-bank-0841": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>An&nbsp;accumulated fund&nbsp;is the capital&nbsp;fund&nbsp;of a nonprofit organization. Money is directed into the&nbsp;accumulated fund&nbsp;when revenues are greater than expenditures and there is a budgetary surplus.</p>"
     },
     "jamb-accounting-bank-0842": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The most significant&nbsp;advantages&nbsp;of&nbsp;departmental accounts&nbsp;are: Individual results of each&nbsp;department&nbsp;are known which helps to compare the performances among all the&nbsp;departments, i.e., the trading results can be compared.&nbsp;Departmental accounts&nbsp;help to understand or locate the success, failure, rates of profit, etc.</p>"
     },
     "jamb-accounting-bank-0843": {
       "type": "mcq",
@@ -3371,39 +3457,48 @@
     },
     "jamb-accounting-bank-0846": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Prime cost is the direct cost of a commodity in terms of the materials and labour involved in its production, excluding fixed costs and overheads.</p>\r\n\r\n<p>360,000 - 56,000 = 304,000</p>"
     },
     "jamb-accounting-bank-0847": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>selling price x production volume<br />\r\n120 x 4000 = 480,000</p>\r\n\r\n<p>Total sales - cost of production</p>\r\n\r\n<p>480,000 - 360,000 = 120,000 (profit)</p>"
     },
     "jamb-accounting-bank-0848": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Net profit = Gross profit - expenses</p>\r\n\r\n<p>To get gross profit subtract cost of goods sold from sales. Hence we have;<br />\r\n370,000 - 230,000 = 140,000</p>\r\n\r\n<p>Net profit = 140,000 - 35,000 = 105,000</p>"
     },
     "jamb-accounting-bank-0849": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Gross profit = sales - cost of goods sold&nbsp;</p>\r\n\r\n<p>370,000 - 230,000 = 140,000</p>"
     },
     "jamb-accounting-bank-0851": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The&nbsp;sales ledger control account&nbsp;is used to monitor the amounts owed by customers to your business.&nbsp;&nbsp;&nbsp;it contains transactions related to all the trade receivables (all the debtors) in the business,</p>\r\n\r\n<p>&nbsp;Bills receivables&nbsp;are drawn when a vendor or seller makes any credit sale to the business.</p>"
     },
     "jamb-accounting-bank-0852": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Tariff is a tax or duty to be paid on a particular class of imports or exports. It is a source of revenue to the government because these taxes are paid to the government of the importing country.</p>"
     },
     "jamb-accounting-bank-0853": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Special assets&nbsp;are typically private business interests, properties or natural resources that can be difficult to convert directly to more liquid investments, like cash. They may also be called illiquid&nbsp;assets. Example are trademarks, goodwill</p>"
     },
     "jamb-accounting-bank-0854": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Invoice Price&nbsp;Method&nbsp;Branch&nbsp;Accounting. In&nbsp;branch&nbsp;accounting,&nbsp;head office sends&nbsp;the&nbsp;goods&nbsp;to&nbsp;branch&nbsp;on the&nbsp;invoice price&nbsp;instead of cost&nbsp;price&nbsp;because with this, company can hide his profit margin from&nbsp;branch&nbsp;employees. In the&nbsp;invoice price, there are two&nbsp;prices&nbsp;will be included on is cost&nbsp;price&nbsp;and second is profit %.</p>"
     },
     "jamb-accounting-bank-0855": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>capital = assets - liabilities</p>\r\n\r\n<p>8,000 +10,500 +&nbsp;3500 - 2500 -&nbsp;9800 = 9700</p>"
     },
     "jamb-accounting-bank-0856": {
       "type": "mcq",
@@ -3415,27 +3510,33 @@
     },
     "jamb-accounting-bank-0858": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>A&nbsp;partnership deed, also known as a&nbsp;partnership&nbsp;agreement, is a document that outlines in detail the rights and responsibilities of all parties to a business operation. It has the force of law and is designed to guide the partners in the conduct of the business.</p>"
     },
     "jamb-accounting-bank-0859": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The&nbsp;Accountant-General&nbsp;is vested with the&nbsp;<em>duties</em>&nbsp;of: receiving, keeping and disbursement of government funds; recording and reporting of government financial transactions; exercising supervisory powers over other ministries in terms of financial matters; managing government investments etc.</p>"
     },
     "jamb-accounting-bank-0860": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Accounting is simply keeping of all business transaction records so as to help a business make informed decisions in future</p>"
     },
     "jamb-accounting-bank-0861": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Debit cash account and credit discount allowed account</p>"
     },
     "jamb-accounting-bank-0862": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Supplementary Budget&nbsp;is the request for additional funds by Ministries and Departments during the course of the year.</p>"
     },
     "jamb-accounting-bank-0863": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Sales - Cost of Goods Sold = Gross Profit.</p>\r\n\r\n<p>cost of goods sold = opening stock + purchases - closing stock</p>\r\n\r\n<p>COGS= 2500 + 120000 - 3000 = 119,500</p>\r\n\r\n<p>180,000 - 119,500 =&nbsp; 60,500</p>\r\n\r\n<p>&nbsp;</p>"
     },
     "jamb-accounting-bank-0864": {
       "type": "mcq",
@@ -3443,7 +3544,8 @@
     },
     "jamb-accounting-bank-0865": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>46k&nbsp;x 500,000 = 23,000,000 k</p>\r\n\r\n<p>23000000 / 100 = 230,000</p>"
     },
     "jamb-accounting-bank-0866": {
       "type": "mcq",
@@ -3455,7 +3557,8 @@
     },
     "jamb-accounting-bank-0868": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Closing capital&nbsp;= Opening&nbsp;<em>Capital</em>&nbsp;+ Additional&nbsp;<em>Capital</em>&nbsp;+ Profit - Less Loss - Drawings</p>\r\n\r\n<p>1500 + 500 + 800 - 250 = 2550</p>"
     },
     "jamb-accounting-bank-0869": {
       "type": "mcq",
@@ -3463,7 +3566,8 @@
     },
     "jamb-accounting-bank-0870": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Charging&nbsp;interest on drawings&nbsp;is a means of discouraging&nbsp;partners&nbsp;from withdrawing excessive amounts from the business. From this, it follows that&nbsp;interest on drawings&nbsp;is a debit&nbsp;entry&nbsp;in the&nbsp;partners&#39; current accounts and a credit&nbsp;entry&nbsp;in the Appropriation Account.</p>"
     },
     "jamb-accounting-bank-0871": {
       "type": "mcq",
@@ -3471,7 +3575,8 @@
     },
     "jamb-accounting-bank-0872": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Debit the creditors account ( agr0-machine) and credit cash</p>"
     },
     "jamb-accounting-bank-0873": {
       "type": "mcq",
@@ -3479,11 +3584,13 @@
     },
     "jamb-accounting-bank-0874": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>&nbsp;To&nbsp;<strong>calculate</strong>&nbsp;direct&nbsp;<strong>materials</strong>, add beginning direct&nbsp;<strong>materials</strong>&nbsp;to direct&nbsp;<strong>materials</strong>&nbsp;purchases and subtract ending direct&nbsp;<strong>materials</strong>.</p>\r\n\r\n<p>75,000 + 330,000 - 80,000 = 325,000</p>"
     },
     "jamb-accounting-bank-0875": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>330,000 + 30000 + 10,000 = 370,000</p>"
     },
     "jamb-accounting-bank-0876": {
       "type": "mcq",
@@ -3499,15 +3606,18 @@
     },
     "jamb-accounting-bank-0879": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Goodwill&nbsp;in&nbsp;accounting&nbsp;is an intangible asset that arises when a buyer acquires an existing business.&nbsp;Goodwill&nbsp;represents assets that are not separately identifiable.</p>"
     },
     "jamb-accounting-bank-0880": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>For every debit entry, there must be a corresponding credit entry. Hence we credit the ledger&nbsp;</p>"
     },
     "jamb-accounting-bank-0881": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>If&nbsp;debentures&nbsp;are&nbsp;issued&nbsp;at a price more than its nominal value (face value) such an&nbsp;issue&nbsp;is called&nbsp;issue&nbsp;at a&nbsp;premium.</p>"
     },
     "jamb-accounting-bank-0882": {
       "type": "mcq",
@@ -3519,7 +3629,8 @@
     },
     "jamb-accounting-bank-0884": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>&nbsp;Issued shares&nbsp;are the&nbsp;shares&nbsp;sold to and held by investors of a company. They consists of the&nbsp;shares&nbsp;that have been sold to the shareholders against cash or some other consideration.</p>"
     },
     "jamb-accounting-bank-0885": {
       "type": "mcq",
@@ -3527,15 +3638,18 @@
     },
     "jamb-accounting-bank-0886": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>To check out an interdepartmental performance.<br />\r\nTo evaluate the performance of the&nbsp;department&nbsp;with the previous period result.<br />\r\nThe gross profit of each&nbsp;department&nbsp;can ascertain.<br />\r\nUnprofitable departments will reveal.</p>"
     },
     "jamb-accounting-bank-0887": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Capital reserve&nbsp;is derived from the accumulated&nbsp;capital&nbsp;surplus of a company, created out of&nbsp;capital&nbsp;profit.&nbsp;</p>"
     },
     "jamb-accounting-bank-0888": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>In the book of the buyer, we debit stock or purchase account and credit bank</p>"
     },
     "jamb-accounting-bank-0889": {
       "type": "mcq",
@@ -3547,15 +3661,18 @@
     },
     "jamb-accounting-bank-0891": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>FIFO is a method of stock valuation that stands for &#39;First-In, First-Out&#39;. This assumes that the first (oldest) units of stock produced or received are also the first ones that are sold. This is also suitable for perishable items</p>"
     },
     "jamb-accounting-bank-0892": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Issue of&nbsp;shares at premium&nbsp;means that the issuing of&nbsp;shares&nbsp;above the face value (also called as nominal value or par value). Simply put, when shares are issued at a price higher than the face value, it is said to be issued at a premium.</p>"
     },
     "jamb-accounting-bank-0893": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The&nbsp;Manufacturing Profit, is&nbsp;the excess of transfer value of goods&nbsp;manufactured&nbsp;over their actual production cost</p>"
     },
     "jamb-accounting-bank-0894": {
       "type": "mcq",
@@ -3571,19 +3688,23 @@
     },
     "jamb-accounting-bank-0897": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Administrative overhead&nbsp;is those costs not involved in the development or production of goods or services. This is essentially all&nbsp;overhead&nbsp;that is not included in manufacturing&nbsp;overhead. Examples of&nbsp;administrative overhead&nbsp;costs are the costs of: Front office and sales salaries, wages, and commissions. Office supplies</p>"
     },
     "jamb-accounting-bank-0898": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>&nbsp;A&nbsp;receipts and payments account&nbsp;is a summary of actual cash&nbsp;receipts and payments&nbsp;extracted from the cash book over a certain period. All cash received and paid during the period whether capital or revenue is included in this&nbsp;account. It contains&nbsp;Subscriptions received in advance</p>"
     },
     "jamb-accounting-bank-0899": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>A&nbsp;capital reserve&nbsp;is an account in the equity section of the balance sheet that can be used for contingencies or to offset&nbsp;capital&nbsp;losses. It is derived from the accumulated&nbsp;capital&nbsp;surplus of a company, created out of&nbsp;capital&nbsp;profit.</p>\r\n\r\n<p>Capital Reserve&nbsp;is a type of profit that is earned on&nbsp;capital&nbsp;transactions - an&nbsp;example&nbsp;would be the profit arising from the forfeiture of shares, share premium,&nbsp;Capital&nbsp;Redemption&nbsp;Reserve&nbsp;or Debenture Redemption&nbsp;Reserve.</p>"
     },
     "jamb-accounting-bank-0900": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>capital expenditures are money spent by a business or organization on acquiring or maintaining fixed assets, such as land, buildings, and equipment.</p>"
     },
     "jamb-accounting-bank-0901": {
       "type": "mcq",
@@ -3591,7 +3712,8 @@
     },
     "jamb-accounting-bank-0902": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Prime cost is the direct cost of a commodity in terms of the materials and labour involved in its production, excluding fixed costs.&nbsp;Direct&nbsp;material and&nbsp;direct labor&nbsp;costs are&nbsp;prime cost&nbsp;because they are the main incremental costs of a product.</p>"
     },
     "jamb-accounting-bank-0904": {
       "type": "mcq",
@@ -5127,7 +5249,8 @@
     },
     "jamb-accounting-bank-1288": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>&nbsp;The&nbsp;Auditor General&nbsp;for the&nbsp;Federation&nbsp;is&nbsp;appointed&nbsp;by the President&nbsp;</p>"
     },
     "jamb-accounting-bank-1289": {
       "type": "mcq",
@@ -6300,6 +6423,62 @@
     "jamb-accounting-bank-1581": {
       "type": "mcq",
       "letter": "C"
+    },
+    "jamb-accounting-bank-1582": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "jamb-accounting-bank-1583": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "jamb-accounting-bank-1584": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "jamb-accounting-bank-1585": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "jamb-accounting-bank-1586": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "jamb-accounting-bank-1587": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "jamb-accounting-bank-1588": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "jamb-accounting-bank-1589": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "jamb-accounting-bank-1590": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "jamb-accounting-bank-1591": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Income = 210,000 + 80,000 + 60,000 = 350,000</p>\r\n\r\n<p>Expenditure = 20,000 + 15,000 +40,000 10,000 + 50,000 = 135,000</p>\r\n\r\n<p>350,000 - 135,000 = 215,000 Debit balance (income)</p>"
+    },
+    "jamb-accounting-bank-1592": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>A&nbsp;trade discount&nbsp;is the amount by which a manufacturer or wholesaler reduces the retail price of a product when it sells to a reseller, rather than to the end customer.</p>"
+    },
+    "jamb-accounting-bank-1593": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>2600 + 28200 - 15000 - 7600 - 1250 = 6950 (debit balance)</p>"
+    },
+    "jamb-accounting-bank-1594": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>You will debit application and allotment account and credit cash because monies that have been collected from the public wil have to be returned&nbsp;</p>"
     }
   }
 }

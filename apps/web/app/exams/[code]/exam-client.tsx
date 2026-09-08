@@ -18,6 +18,7 @@ import { assessFatigue, FATIGUE_NONE, type FatigueSignal } from '@/lib/fatigue';
 import { FatigueNudgeOverlay } from '@/components/fatigue-nudge';
 import CalculatorSheet from '@/components/calculator';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
+import { apiImg, QText } from '@/lib/qtext';
 
 interface ExamMetaLite {
   code: string;
@@ -1101,7 +1102,30 @@ export default function ExamPage({ code }: { code: string }) {
               {flags[question.id] ? 'flagged' : 'flag'}
             </button>
           </div>
-          <p className="mt-4 whitespace-pre-line text-[16px] leading-relaxed text-on-surface">{question.stem}</p>
+          {/* Comprehension passage: every group question carries the
+              shared text, collapsible so it never eats the screen. */}
+          {question.passage && (
+            <details open className="mt-4 rounded-xl border border-outline-variant/50 bg-surface-container-lowest/60">
+              <summary className="cursor-pointer select-none px-4 py-2.5 font-mono text-[10px] uppercase tracking-wider text-outline">
+                comprehension passage
+              </summary>
+              <div className="max-h-64 overflow-y-auto px-4 pb-3 text-[15px] leading-relaxed text-on-surface">
+                <QText html={question.passage} />
+              </div>
+            </details>
+          )}
+          <QText className="mt-4 text-[16px] leading-relaxed text-on-surface" html={question.stem} />
+          {question.image && (
+            <div className="mt-3 flex justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={apiImg(question.image)}
+                alt="question diagram"
+                loading="lazy"
+                className="max-h-72 max-w-full rounded-lg border border-outline-variant/40 bg-card object-contain"
+              />
+            </div>
+          )}
           {question.type === 'theory' ? (
             <div className="mt-6 flex flex-col gap-3">
               <div className="flex items-center gap-2 rounded-lg bg-accent-amber/10 px-3 py-2">
@@ -1162,7 +1186,9 @@ export default function ExamPage({ code }: { code: string }) {
                   >
                     {letter}
                   </span>
-                  <span className="flex-1 text-on-surface">{text}</span>
+                  <span className="flex-1 min-w-0 text-on-surface">
+                    <QText html={text} />
+                  </span>
                   {selected && examMode && (
                     <span className="material-symbols-outlined fill-current text-[16px] text-primary" title="Locked in exam mode">
                       lock

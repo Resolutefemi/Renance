@@ -2,8 +2,8 @@
   "code": "waec-economics-bank",
   "title": "WAEC Economics | Past Questions Bank",
   "version": 1,
-  "questionCount": 1680,
-  "totalMarks": 1680,
+  "questionCount": 1681,
+  "totalMarks": 1681,
   "questions": [
     {
       "id": "waec-economics-bank-0001",
@@ -22250,6 +22250,20 @@
       },
       "marks": 1,
       "year": 2000
+    },
+    {
+      "id": "waec-economics-bank-1681",
+      "type": "mcq",
+      "stem": "Under normal circumstances, a producer will bear the entire burden of taxation on his output if the",
+      "marks": 1,
+      "options": {
+        "A": "supply of his goods is more elastic than the demand",
+        "B": "demand for his products is completely elastic",
+        "C": "production of his commodity is subject to diminishing returns",
+        "D": "demand for his products is more elastic than the supply",
+        "E": "demand for his products is completely elastic"
+      },
+      "year": 1994
     }
   ],
   "category": "secondary",

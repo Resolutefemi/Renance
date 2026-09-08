@@ -12,6 +12,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import BottomNav from '@/components/bottom-nav';
+import { QText } from '@/lib/qtext';
 
 interface MatchQ {
   topic: string;
@@ -128,9 +129,9 @@ export default function ArenaMatchPage() {
               LIVE · first to 5
             </span>
           </div>
-          <h1 className="mt-3.5 text-xl font-semibold leading-7 tracking-tight text-on-surface">
-            {q.stem}
-          </h1>
+          <div className="mt-3.5 text-xl font-semibold leading-7 tracking-tight text-on-surface">
+            <QText html={q.stem} />
+          </div>
         </section>
 
         {/* options */}
@@ -157,7 +158,7 @@ export default function ArenaMatchPage() {
                   {String.fromCharCode(65 + i)}
                 </span>
                 <span className={`flex-1 text-base ${mine ? 'font-bold text-on-surface' : 'font-semibold text-on-surface'}`}>
-                  {opt}
+                  <QText html={opt} />
                 </span>
                 {mine && (
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary font-mono text-[11px] font-bold text-on-primary">Y</span>

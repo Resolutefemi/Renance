@@ -2,8 +2,8 @@
   "code": "waec-geography-bank",
   "title": "WAEC Geography | Past Questions Bank",
   "version": 1,
-  "questionCount": 1349,
-  "totalMarks": 1349,
+  "questionCount": 1360,
+  "totalMarks": 1360,
   "questions": [
     {
       "id": "waec-geography-bank-0001",
@@ -17919,6 +17919,160 @@
       },
       "marks": 1,
       "year": 2000
+    },
+    {
+      "id": "waec-geography-bank-1350",
+      "type": "mcq",
+      "stem": "What is the local time of a place on longitude 64<sup>0<sup>E when the GMT is 10.00a.m?",
+      "marks": 1,
+      "options": {
+        "A": "2.16 a.m",
+        "B": "5.44 a.m",
+        "C": "2.16 p.m",
+        "D": "4.16 p.m",
+        "E": "5.44 p.m"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-geography-bank-1351",
+      "type": "mcq",
+      "stem": "The environmental lapse rate is best described as",
+      "marks": 1,
+      "options": {
+        "A": "a decrease in air temperature by 0. 65 <sup>0</sup>C per 1000m of ascent in the atmosphere",
+        "B": "the rate of temperature changes within the stratosphere",
+        "C": "a fall in air temperature by 6.5<sup>0</supCper 100m of ascent in the stratoshere>",
+        "D": "a decrease of air temperature by 6.5<sup>0</supC per 1000m of ascent in the troposphere>",
+        "E": "a fall in air temperature by 0.6<sup>0</supC per 100m of ascent in the atmosphere>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-geography-bank-1352",
+      "type": "mcq",
+      "stem": "The longitudinal extent of Nigeria is",
+      "marks": 1,
+      "options": {
+        "A": "8<sup>0</sup>",
+        "B": "10<sup>0</sup>",
+        "C": "12<sup>0</sup>",
+        "D": "14<sup>0</sup>",
+        "E": "16<sup>0</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-geography-bank-1353",
+      "type": "mcq",
+      "stem": "In 1985 Anambra State with a land area of about 17.700km<sup>2</sup> had a population of about 6,175,000 what was the approximate population density per km<sup>2</sup>?",
+      "marks": 1,
+      "options": {
+        "A": "65",
+        "B": "32",
+        "C": "320",
+        "D": "349",
+        "E": "229"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-geography-bank-1354",
+      "type": "mcq",
+      "stem": "During a football match, the referee observed that the local time was noon while the Greenwich Mean Time was 16.16hours, what is the longitude of the place where the match was being played?",
+      "marks": 1,
+      "options": {
+        "A": "56<sup>0</sup>E",
+        "B": "60<sup>0</sup>E",
+        "C": "60<sup>0</sup>W",
+        "D": "64<sup>0</sup>E",
+        "E": "64<sup>0</sup>W"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-geography-bank-1355",
+      "type": "mcq",
+      "stem": "The distance of Leningrad (lat 60<sup>0</sup>Nlong 30<sup>0</sup>E) from the equator is approximately",
+      "marks": 1,
+      "options": {
+        "A": "8880km",
+        "B": "6660km",
+        "C": "5700km",
+        "D": "3330km",
+        "E": "1110km"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-geography-bank-1356",
+      "type": "mcq",
+      "stem": "If the temperature at the foot of a mountain is 25 <sup>0</sup>C what will be the temperature at its summit if the mountain is 4000m high?",
+      "marks": 1,
+      "options": {
+        "A": "51<sup>0</sup>C",
+        "B": "26<sup>0</sup>C",
+        "C": "10<sup>0</sup>C",
+        "D": "-1<sup>0</sup>C",
+        "E": "-6.5<sup>0</sup>C"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-geography-bank-1357",
+      "type": "mcq",
+      "stem": "When the sun is directly overhead at the tropic of Capricorn (23<sup>1</sup>/ <sub>2</sub><sup>0</sup>)on 22nd December, the Northern Hermisphere experiences its",
+      "marks": 1,
+      "options": {
+        "A": "twilight",
+        "B": "winter solstice",
+        "C": "summer solstice",
+        "D": "spring equinox",
+        "E": "autumn equinox"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-geography-bank-1358",
+      "type": "mcq",
+      "stem": "If the local time at a place X is 12.00 noon when the G.M.T is 5.00a.m then X is located on longitude",
+      "marks": 1,
+      "options": {
+        "A": "105<sup>0</sup>E",
+        "B": "10<sup>0</sup>W",
+        "C": "75<sup>0</sup>W",
+        "D": "75<sup>0</sup>E",
+        "E": "180<sup>0</sup>E"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-geography-bank-1359",
+      "type": "mcq",
+      "stem": "The commentary of a football match which started at 1600 hours GMT in a town P (45<sup>0</sup>W) was heard in town Q at 2200 hours GMT. What is the longitude of Q",
+      "marks": 1,
+      "options": {
+        "A": "39V<sup>0</sup>W",
+        "B": "45<sup>0</sup>E",
+        "C": "51<sup>0</sup>E",
+        "D": "90<sup>0</sup>W",
+        "E": "135<sup>0</sup>W"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-geography-bank-1360",
+      "type": "mcq",
+      "stem": "The axis of the earth is inclined to the plane of the ecliptic at an angle of",
+      "marks": 1,
+      "options": {
+        "A": "231/2<sup>0</sup>",
+        "B": "661/2<sup>0</sup>",
+        "C": "90<sup>0</sup>",
+        "D": "180<sup>0</sup>",
+        "E": "360<sup>0</sup>"
+      },
+      "year": 1995
     }
   ],
   "category": "secondary",

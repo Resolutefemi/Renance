@@ -1319,7 +1319,8 @@
     "waec-mathematics-theory-0264": {
       "type": "theory",
       "letter": "",
-      "explanation": "(a) x -2.0 -1.5 -1.0 -0.5 0 0.5 1 1.5 2.0 y -15.5 -8.0 -2.5 1 2.5 2.0 -0.5 -5.0 -11.5 (b) see the diagram above (c) The maximum value of y = 2.5. (d) Obtaining the root of \\(8x^{2} - 2x - 5 = 0\\) Divide both sides by -2, i.e \\(-4x^{2} + x + \\frac{5}{2} = 0\\) \\(\\therefore \\text{Roots are } x = -0.7 ; x = 0.8."
+      "explanation": "(a) x -2.0 -1.5 -1.0 -0.5 0 0.5 1 1.5 2.0 y -15.5 -8.0 -2.5 1 2.5 2.0 -0.5 -5.0 -11.5 (b) see the diagram above (c) The maximum value of y = 2.5. (d) Obtaining the root of \\(8x^{2} - 2x - 5 = 0\\) Divide both sides by -2, i.e \\(-4x^{2} + x + \\frac{5}{2} = 0\\) \\(\\therefore \\text{Roots are } x = -0.7 ; x = 0.8.",
+      "answer_image": "/qimages/f074a12a1431f48e8c5f.png"
     },
     "waec-mathematics-theory-0265": {
       "type": "theory",
@@ -1935,6 +1936,11 @@
       "type": "theory",
       "letter": "",
       "explanation": "Given P = 5, t = 10mins, V = 20 (a) t ∝ \\(\\frac{\\text{V}}{\\text{P}}\\) t = \\(\\frac{\\text{KV}}{\\text{P}}\\) K = \\(\\frac{\\text{tP}}{\\text{V}}\\) = \\(\\frac{10 \\times 5}{20}\\) = \\(\\frac{5}{2}\\) Therefore, the relationship between t, P, and V is t = \\(\\frac{\\frac{5}{2}V}{\\text{P}}\\) = \\(\\frac{5V}{2P}\\) (b) to find t, when V = 50 and P = 2 t = \\(\\frac{5 \\times 50 }{2 \\times 2}\\) = \\(\\frac{250}{4}\\) = 62.5mins. (c) to find P when V = 40 and t = 20mins P = \\(\\frac{5V}{2t}\\) (simply by switching t for P) P = \\(\\frac{5 \\times 40}{2 \\times 20}\\) = \\(\\frac{200}{40}\\) = 5 pumps."
+    },
+    "waec-mathematics-theory-0388": {
+      "type": "theory",
+      "letter": "",
+      "explanation": "<p>(a) \\(/QY/ = 2cm; /RS/ = 3cm\\)</p>\r\n\r\n<p>\\(\\therefore /YZ/ = /RS/ = /PQ/ = 3cm\\) (opp sides of a parallelogram)</p>\r\n\r\n<p>But \\(/PZ/ = /PQ/ + /QY/ + /YZ/\\)</p>\r\n\r\n<p>\\(\\therefore /PZ/ = 3cm + 2cm + 3cm = 8cm\\)</p>\r\n\r\n<p>(b) Difference in longitude = 95&deg; - 25&deg; = 70&deg;</p>\r\n\r\n<p><img alt=\"\" src=\"/storage/classroom/editor_images/scan0348%20%282%29.jpg\" style=\"height:106px; width:250px\" /></p>\r\n\r\n<p>Distance PQ = \\(\\frac{70}{360} \\times 2\\pi R \\cos \\theta\\)</p>\r\n\r\n<p>= \\(\\frac{70}{360} \\times 2 \\times \\frac{22}{7} \\times 6400 \\cos 56\\)</p>\r\n\r\n<p>= \\(\\frac{7}{36} \\times 2 \\times \\frac{22}{7} \\times 6400 \\times 0.5592\\)</p>\r\n\r\n<p>= \\(4374.19 km \\approxeq 4374 km\\) (to the nearest km)</p>"
     }
   }
 }

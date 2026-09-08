@@ -2,8 +2,8 @@
   "code": "waec-chemistry-bank",
   "title": "WAEC Chemistry | Past Questions Bank",
   "version": 1,
-  "questionCount": 1580,
-  "totalMarks": 1580,
+  "questionCount": 1640,
+  "totalMarks": 1640,
   "questions": [
     {
       "id": "waec-chemistry-bank-0001",
@@ -20667,7 +20667,7 @@
       "options": {
         "A": "CaCI2",
         "B": "MgO",
-        "C": "NaN",
+        "C": "Na<sub>3</sub>N",
         "D": "CH4"
       },
       "marks": 1,
@@ -20919,6 +20919,844 @@
       },
       "marks": 1,
       "year": 2001
+    },
+    {
+      "id": "waec-chemistry-bank-1581",
+      "type": "mcq",
+      "stem": "<p>Copper metal will react with concentrated trioxonitrate (V) acid to give?</p>",
+      "marks": 1,
+      "options": {
+        "A": "Cu(NO<sub>3</sub>)<sub>3</sub> + NO + N<sub>2</sub>O<sub>4</sub> + H<sub>2</sub>O",
+        "B": "Cu(NO<sub>3</sub>)<sub>2</sub>  +  NO  +  H<sub>2</sub>O",
+        "C": "CuO  +  NO<sub>2</sub>  +  H<sub>2</sub>O",
+        "D": "Cu(NO<sub>3</sub>)<sub>2</sub>  +  2NO<sub>2</sub>  +  2H<sub>2</sub>O"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1582",
+      "type": "mcq",
+      "stem": "<p>Which of the following reaction will not take place under normal conditions?</p>",
+      "marks": 1,
+      "options": {
+        "A": "Zn<sub>(s)</sub> + 2HCl → ZnCI<sub>2(aq)</sub> + H <sub>2(g)</sub>",
+        "B": "Fe <sub>(s)</sub> + H <sub>2</sub>SO<sub>4(aq)</sub> → FeSO<sub>4(aq)</sub> + H<sub>2(g)</sub>",
+        "C": "Cu <sub>(s)</sub> + 2HCI <sub>(aq)</sub> → CuCI <sub>2(aq)</sub> + H<sub>2(g)</sub>",
+        "D": "Ca<sub>(s)</sub> + 2H <sub>2</sub>O <sub>(1)</sub> →  Ca(OH)<sub>2(g)</sub>  + H<sub>2(g)</sub>",
+        "E": "2Na<sub>(s)</sub> + 2H <sub>2</sub>O <sub>(1)</sub> → 2NaOH<sub>(aq)</sub> + H<sub>2(g)</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1583",
+      "type": "mcq",
+      "stem": "The electronic configuration 1s<sup>2 2</sup>2s  <sup>2</sup>2p <sup>6</sup>3s<sup>2</sup>3p <sup>6</sup> is that of a",
+      "marks": 1,
+      "options": {
+        "A": "noble gas",
+        "B": "Group ll element",
+        "C": "Group lll element",
+        "D": "Group V element",
+        "E": "Group VI element"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1584",
+      "type": "mcq",
+      "stem": "The heat accompanying the reaction represented by the equation H<sub>2</sub>O <sub>(l)</sub> → H <sub>2</sub>O<sub>(g)</sub> is described as the heat of",
+      "marks": 1,
+      "options": {
+        "A": "solution",
+        "B": "neutralization",
+        "C": "vaporization",
+        "D": "sublimation",
+        "E": "activation"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1585",
+      "type": "mcq",
+      "stem": "Which of the following reactions does not occur in the blast furnace during the extraction of iron?",
+      "marks": 1,
+      "options": {
+        "A": "Fe<sub>2</sub>O<sub>3</sub> <sub>(s)</sub> + 3CO<sub>(g)</sub> → 2Fe<sub>(l)</sub> + 3CO<sub>2</sub><sub>(g)</sub>",
+        "B": "C<sub>2</sub> + CO <sub>2</sub><sub>(g)</sub>",
+        "C": "CaO<sub>(s)</sub> + SiO<sub>2</sub><sub>(s)</sub> → CaSiO <sub>3</sub><sub>(s)</sub>",
+        "D": "FeO<sub>(s)</sub> + CO<sub>2</sub><sub>(g)</sub> + Fe<sub>(l)</sub>",
+        "E": "2Fe<sub>2</sub>O<sub>(s)</sub> → 4Fe<sub>(l)</sub> 3O<sub>2</sub><sub>(g)</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1586",
+      "type": "mcq",
+      "stem": "<p>The gas that is liberated when iron is heated with concentrated tetraoxosulphate (VI)acid is</p>",
+      "marks": 1,
+      "options": {
+        "A": "H<sub>2</sub>S",
+        "B": "\\(SO_{2}\\)",
+        "C": "HCI",
+        "D": "SO<sub>3</sub>",
+        "E": "O<sub>2</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1587",
+      "type": "mcq",
+      "stem": "What is the molecular formula of a compound whose empirical formula is CH<sub>2</sub>O and molar mass is 180? (H = 1, C = 12, O = 16)",
+      "marks": 1,
+      "options": {
+        "A": "C <sub>4</sub>H <sub>8</sub>O<sub>2</sub>",
+        "B": "C <sub>4</sub>H <sub>8</sub>O<sub>3</sub>",
+        "C": "C <sub>6</sub>H <sub>10</sub>O<sub>5</sub>",
+        "D": "C <sub>6</sub>H <sub>12</sub>O<sub>6</sub>",
+        "E": "C <sub>12</sub>H <sub>22</sub>O<sub>11</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1588",
+      "type": "mcq",
+      "stem": "MO and X <sub>2</sub>O represent the formula of oxides of elements M and X respectively . If M and X should combine to form a separate compound, what would be the formula of the compound?",
+      "marks": 1,
+      "options": {
+        "A": "MX<sub>2</sub>",
+        "B": "M<sub>2</sub>X",
+        "C": "MX",
+        "D": "M<sub>3</sub>X<sub>2</sub>",
+        "E": "MX<sub>3</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1589",
+      "type": "mcq",
+      "stem": "In the reaction represented by the equation; 2FeCI<sub>3</sub> + SO<sub>2</sub> + 2H<sub>2</sub>O → 2FeCL<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub> + 2HCI the oxidation number of sulphur changes from",
+      "marks": 1,
+      "options": {
+        "A": "+2 to + 6",
+        "B": "+ 4 to + 6",
+        "C": "0 to + 6",
+        "D": "- 2 to + 4",
+        "E": "+2 to + 4"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1590",
+      "type": "mcq",
+      "stem": "Which of the following equations represents the reaction leading to the removal of permanent hardness of water?",
+      "marks": 1,
+      "options": {
+        "A": "Ca(HCO <sub>3</sub>)<sub>2</sub> → CaCO<sub>3</sub> + H<sub>2</sub>O + CO<sub>2</sub>",
+        "B": "MgSO<sub>4</sub> + Na <sub>2</sub>CO<sub>3</sub> + Na <sub>2</sub>SO",
+        "C": "Ca(OH) <sub>2</sub> + 2HCI → CaCI <sub>2</sub> + 2H <sub>2</sub>O",
+        "D": "Ca(HCO<sub>3</sub>)<sub>2</sub> +  Ca(OH)<sub>3</sub> → 2CaCO<sub>3</sub> + 2H<sub>2</sub>O",
+        "E": "MgSO<sub>4</sub> + BaCI<sub>2</sub> → MgCI<sub>2</sub> + BaSO<sub>4</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1591",
+      "type": "mcq",
+      "stem": "The decomposition of hydrogen peroxide is represented by the equation: 2H<sub>2</sub>O<sub>(l)</sub> + O<sub>2</sub><sub>(g)</sub> what mass of hydrogen peroxide would be required to produce 22.4dm<sub>3</sub> of oxygen at s.t.p? (H = 1, O = 16, molar volume of a gas at s.t.p. = 22.4dm<sub>3</sub>)",
+      "marks": 1,
+      "options": {
+        "A": "18 g",
+        "B": "34 g",
+        "C": "36 g",
+        "D": "64 g",
+        "E": "68 g"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1592",
+      "type": "mcq",
+      "stem": "Which of the following compounds crystallizes without water of crystallization?",
+      "marks": 1,
+      "options": {
+        "A": "Na<sub>2</sub>CO<sub>3</sub>",
+        "B": "CuSO<sub>4</sub>",
+        "C": "MgSO<sub>4</sub>",
+        "D": "NaCI",
+        "E": "FeSO<sub>4</sub>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-chemistry-bank-1593",
+      "type": "mcq",
+      "stem": "In which of the following is the oxidation number of nitrogen zero?",
+      "marks": 1,
+      "options": {
+        "A": "SO<sub>2</sub> and  NH<sub>3</sub>",
+        "B": "NaNO<sub>3</sub>",
+        "C": "HNO<sub>2</sub>",
+        "D": "NOI<sub>3</sub>",
+        "E": "N<sub>2</sub>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1594",
+      "type": "mcq",
+      "stem": "What is the amount (in mole) of sodium trioxocarbonate (IV) in 5.3 g of the compound?  (Na<sub>2</sub>CO<sub>3</sub> = 106)",
+      "marks": 1,
+      "options": {
+        "A": "0.05",
+        "B": "0.10",
+        "C": "0.20",
+        "D": "0.50",
+        "E": "2.00"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1595",
+      "type": "mcq",
+      "stem": "<p>Which of the processes represented by the following equations has the greatest positive entropy change?</p>",
+      "marks": 1,
+      "options": {
+        "A": "C<sub>6</sub>H<sub>3</sub><sub>(l)</sub> → C<sub>6</sub>H <sub>6</sub> <sub>(g)</sub>",
+        "B": "H<sub>2</sub>O <sub>(s)</sub> → H<sub>2</sub>O<sub>(l)</sub>",
+        "C": "CuO<sub>(s)</sub> + H<sub>2</sub><sub>(g)</sub> → Cu<sub>(s)</sub> + H<sub>2</sub>",
+        "D": "Na<sub>2</sub>CO<sub>3</sub><sub>(s)</sub> + nH<sub>2</sub>O<sub>(l)</sub> →Na <sub>2</sub>CO<sub>3</sub>nH<sub>2</sub>O<sub>(s)</sub>",
+        "E": "S<sub>(s)</sub> → S<sub>(l)</sub>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1596",
+      "type": "mcq",
+      "stem": "CH<sub>2</sub> = CH<sub>2</sub> + H<sub>2</sub>SO<sub>4</sub>  → CH<sub>3</sub> - CH<sub>2</sub> -OSO<sub>3</sub>H. The reaction illustrated by the equation above  is an example of",
+      "marks": 1,
+      "options": {
+        "A": "substitution",
+        "B": "oxidation",
+        "C": "reduction",
+        "D": "addition",
+        "E": "displacement"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1597",
+      "type": "mcq",
+      "stem": "Which of the following formula is that of a dicarboxylic acid?",
+      "marks": 1,
+      "options": {
+        "A": "(CH<sub>3</sub>CH <sub>2</sub>)<sub>2</sub>CHCOOH",
+        "B": "CH<sub>2</sub>(OH)<sub>2</sub>",
+        "C": "CH<sub>3</sub>CH(OH)COOH",
+        "D": "CH<sub>2</sub>(COOH)<sub>2</sub>",
+        "E": "CH<sub>3</sub>COCOOH"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1598",
+      "type": "mcq",
+      "stem": "A compound which liberates carbon (IV) oxide from a hydrogentrioxocarbonate (lV) could have the molecular formula",
+      "marks": 1,
+      "options": {
+        "A": "C<sub>2</sub>H<sub>5</sub>OH",
+        "B": "C <sub>3</sub>H <sub>4</sub>",
+        "C": "HCOOH",
+        "D": "H<sub>2</sub>O<sub>2</sub>",
+        "E": "C<sub>6</sub>H<sub>6</sub>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1599",
+      "type": "mcq",
+      "stem": "CH<sub>4</sub><sub>(g)</sub> + 2O<sub>2</sub><sub>(g) → 2H<sub>2</sub>O<sub>(l)</sub> + CO<sub>2</sub><sub>(g)</sub> ∆H = 890KJ mo-<sub>1</sub> ∆H in the reaction represented by the equation above is the enthalpy of",
+      "marks": 1,
+      "options": {
+        "A": "formation",
+        "B": "combustion",
+        "C": "solution",
+        "D": "activation",
+        "E": "neutralization"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1600",
+      "type": "mcq",
+      "stem": "<p>2NaNO3 &rarr; 2NaNO2 + O2. From the equation above, what is the volume of oxygen produced at s.t.p. when 8.5g of 2NaNO3 is heated until no further gas is evolved? (2NaNO3 = 85, molar volume of gases at s.t.p. = 22.4dm3)</p>",
+      "marks": 1,
+      "options": {
+        "A": "1.12dm<sup>3</sup>",
+        "B": "2.24dm<sup>3</sup>",
+        "C": "4.48dm<sup>3</sup>",
+        "D": "11.2dm<sup>3</sup>",
+        "E": "22.4dm<sup>3</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1601",
+      "type": "mcq",
+      "stem": "The ratio of reactants to products is 1: 3: 2 in the reaction represented by the equation below: N<SUB>2,/SUB> <sub>(g)</sub> → 2NH<sub>3</sub><sub>(g)</sub> which of the following law is demonstrated by this?",
+      "marks": 1,
+      "options": {
+        "A": "Boyle's law",
+        "B": "Law of multiple proportion",
+        "C": "Gay Lussac's law",
+        "D": "Law of constant composition",
+        "E": "Avogadro's law"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1602",
+      "type": "mcq",
+      "stem": "In the redox reaction represented by the following equation: Cu<sup>2+</sub><sub>aq</sub> + Zn<sub>(s)</sub> → Cu<sub>(s)</sub> + Zn<sup>2+</sup>",
+      "marks": 1,
+      "options": {
+        "A": "the oxidation number of copper increases",
+        "B": "copper (ll) ions are reduced to copper atoms",
+        "C": "zinc atoms are reduced to zinc ions",
+        "D": "copper (ll) ions donate electrons to zinc atoms"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1603",
+      "type": "mcq",
+      "stem": "Which of the reactions represented by the following equations will take place at room temperature?",
+      "marks": 1,
+      "options": {
+        "A": "C 6 H<SUB>2</SUB>O → CO + H<SUB>2</SUB>",
+        "B": "CuO + H<SUB>2</SUB> → Cu + H<SUB>2</SUB>O",
+        "C": "N<SUB>2</SUB> + 3H<SUB>2</SUB> → 2NH<SUB>3</SUB>",
+        "D": "2Na + 2H<SUB>2</SUB>O → 2NaOH + H<SUB>2</SUB>",
+        "E": "2Fe + 3CI<SUB>2</SUB> → 2FeCI<SUB>3</SUB>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1604",
+      "type": "mcq",
+      "stem": "How many principal electronic shells has an atom whose electronic configuration is shown below? 1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>1</sup>",
+      "marks": 1,
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "11"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1605",
+      "type": "mcq",
+      "stem": "In solution, aminoethanoic acid (glycine) can be represented as NH<sup>+</sup><sub>3</sub> CH<sub>2</sub>COO. This implies that it",
+      "marks": 1,
+      "options": {
+        "A": "is soluble in all inorganic liquids",
+        "B": "can function as a weak acid or a weak base",
+        "C": "does not form salt with mineral acids",
+        "D": "is highly acidic",
+        "E": "cannot form esters with alkanols"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-chemistry-bank-1606",
+      "type": "mcq",
+      "stem": "What is the following compounds will not decompose when heated strongly ?",
+      "marks": 1,
+      "options": {
+        "A": "NaHCO<sub>3</sub>",
+        "B": "K<sub>2</sub>CO<sub>3</sub>",
+        "C": "MgCO<sub>3</sub>",
+        "D": "Ca(HCO<sub>3</sub>)<sub>2</sub>",
+        "E": "ZnCO<sub>3</sub>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1607",
+      "type": "mcq",
+      "stem": "What is the change in the oxidation number of phosphorus in the the reaction represented by the following equation? 4P <sub>(s)</sub> + 5O<sub>(2)</sub><sub>(g)</sub> → 2P<sub>2</sub>O<sub>5</sub><sub>(g)</sub>",
+      "marks": 1,
+      "options": {
+        "A": "0 to + 2",
+        "B": "0 to 5",
+        "C": "+4 to + 2",
+        "D": "+4 to +5",
+        "E": "+4 to +7"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1608",
+      "type": "mcq",
+      "stem": "Consider the compounds represented by the following general formula: X<sub>2</sub>SO<sub>4</sub> Y<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>, 24H<sub>2</sub>OX and Y could respectively be",
+      "marks": 1,
+      "options": {
+        "A": "K and AI",
+        "B": "Fe and K",
+        "C": "AI and Fe",
+        "D": "AI and K",
+        "E": "Cr and K"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1609",
+      "type": "mcq",
+      "stem": "<p>The following salts are readily soluble in water except</p>",
+      "marks": 1,
+      "options": {
+        "A": "Na<sub>2</sub>CO<sub>3</sub>",
+        "B": "Pb(NO<sub>3</sub>)<sub>2</sub>",
+        "C": "KCI",
+        "D": "CuCO<sub>3</sub>",
+        "E": "PbSO<sub>4</sub>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1610",
+      "type": "mcq",
+      "stem": "Which of the following gases will have the highest rate of diffusion under the same conditions? (H = 1, C =12, O = 16, S = 32, CI = 35.5)",
+      "marks": 1,
+      "options": {
+        "A": "O<SUB>2</SUB>",
+        "B": "CI<SUB>2</SUB>",
+        "C": "HCI",
+        "D": "H<SUB>2</SUB>S",
+        "E": "CO<SUB>2</SUB>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1611",
+      "type": "mcq",
+      "stem": "The formula (CH<sub>3</sub>),<sub>3</sub> COH is that of a",
+      "marks": 1,
+      "options": {
+        "A": "polyhdric alkanol",
+        "B": "secondary alkanol",
+        "C": "tertiary alkanol",
+        "D": "primary alkanol",
+        "E": "trihydric alkanol"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1612",
+      "type": "mcq",
+      "stem": "If a reaction is said to be exothermic, which of the following statements is a correct deduction from the information?",
+      "marks": 1,
+      "options": {
+        "A": "the reaction vessel gets hotter as the reaction proceeds",
+        "B": "∆H for the reaction is positive",
+        "C": "the rate of the reaction increases with time",
+        "D": "the activation energy of the reaction is high",
+        "E": "the rate of the reaction increases with time"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1613",
+      "type": "mcq",
+      "stem": "Which of the following groups contains entirely linear molecules?",
+      "marks": 1,
+      "options": {
+        "A": "H <sub>2</sub>NH<sub>3</sub>O <sub>2</sub>",
+        "B": "CO<sub>2</sub>NH <sub>3</sub> <sub>2</sub>",
+        "C": "H <sub>2</sub>CH<sub>4</sub>N<sub>2</sub>",
+        "D": "CO<sub>2</sub>H<sub>2</sub>N<sub>2</sub>",
+        "E": "CH <sub>4</sub>O <sub>2</sub>CO <sub>2</sub>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1614",
+      "type": "mcq",
+      "stem": "What is the value of n in the following equation? XO-<sub>4</sub> +8H <sup>+</sup> + ne- → X<sup>2</sup> <sup> +</sup> + 4H<sub>2</sub>O",
+      "marks": 1,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-chemistry-bank-1615",
+      "type": "mcq",
+      "stem": "What does X atand for in the following expression? X = Log<sub>(10)</sub>(H<sup>+</sup>)",
+      "marks": 1,
+      "options": {
+        "A": "Enthalpy change (∆H)",
+        "B": "Equilibrium constant (K)",
+        "C": "Solubility product",
+        "D": "Degree of acidity (pH)",
+        "E": "lonic product of water"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1616",
+      "type": "mcq",
+      "stem": "In which of the following changes is ∆S negative ?",
+      "marks": 1,
+      "options": {
+        "A": "H<sub>2</sub>O<sub>(l)</sub> → H<sub>2</sub>O<sub>(s)</sub>",
+        "B": "C<sub>(s)</sub> + 1/2O<sub>2,/sub><sub>(g)</sub> → CO<sub>(g)</sub>",
+        "C": "PCI<sub>5</sub><sub>(g)</sub> → PCl<sub>3</sub><sub>(g)</sub> + Cl<sub>2</sub><sub>(g)</sub>",
+        "D": "NaCl<sub>(s)</sub> + aq →Na<sub>+</sub> <sub>(aq)</sub> + Cl<sub>-</sub> <sub>(aq)</sub>",
+        "E": "NH<sub>3</sub><sub>(g)</sub> + HCl<sub>(g)</sub>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1617",
+      "type": "mcq",
+      "stem": "Consider the reaction represented by the following equation CaCI<sub>2</sub> <sub>(aq)</sub> + H <sub>2</sub>C<sub>2</sub>O <sub>4</sub><sub>(aq)</sub> ⇌ CaC <sub>2</sub>O<sub>4</sub><sub>(s)</sub> + 2HCI<sub>(aq)</sub>. Which of the following would dissolve the precipitate of  CaC <sub>2</sub>O<sub>4</sub> formed?",
+      "marks": 1,
+      "options": {
+        "A": "Stirring the mixture vigorously",
+        "B": "Adding more calcium chloride solution",
+        "C": "lncreasing the concentration of the ethanedioic acid",
+        "D": "Adding concentrated hydrochloric acid",
+        "E": "Adding some distilled water"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1618",
+      "type": "mcq",
+      "stem": "The following gases decolorize bromine water except",
+      "marks": 1,
+      "options": {
+        "A": "C<sub>2</sub>H<sub>6</sub>",
+        "B": "C<sub>2</sub>H<sub>4</sub>",
+        "C": "C<sub>2</sub>H<sub>2</sub>",
+        "D": "C<sub>3</sub>H<sub>4</sub>",
+        "E": "C<sub>3</sub>H<sub>6</sub>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1619",
+      "type": "mcq",
+      "stem": "<p>What volume of distilled water should be added to 400cm3 of 2.0 mole dm-3 \\(H_{2}SO_{4}\\) to obtain 0.20 mole dm-3 of solution&gt;</p>",
+      "marks": 1,
+      "options": {
+        "A": "600cm-<sup>3</sup>",
+        "B": "800cm-<sup>3</sup>",
+        "C": "1,000cm-<sup>3</sup>",
+        "D": "3,600cm-<sup>3</sup>",
+        "E": "4,000cm-<sup>3</sup>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1620",
+      "type": "mcq",
+      "stem": "Which of the following substances is a peroxide?",
+      "marks": 1,
+      "options": {
+        "A": "Na<sub>2</sub>O<sub>2</sub>",
+        "B": "CuO",
+        "C": "Pb<sub<3</sub>O<sub>4</sub>",
+        "D": "Fe<sub>2</sub>O<sub<3</sub>",
+        "E": "AI<sub>2</sub>O<sub<3</sub>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1621",
+      "type": "mcq",
+      "stem": "When the trioxonitrate (IV) salt of an alkali metal Y is heated, the formula of the residue is",
+      "marks": 1,
+      "options": {
+        "A": "Y<sub>2</sub>O",
+        "B": "YNO<sub>2</sub>",
+        "C": "Y<sub>2</sub>O<sub>3</sub>",
+        "D": "Y (NO<sub>2</sub>)<sub>2</sub>",
+        "E": "YO<sub>2</sub>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1622",
+      "type": "mcq",
+      "stem": "Which of the following compounds of tin is a strong reducing agent?",
+      "marks": 1,
+      "options": {
+        "A": "SnCI<SUB>2</SUB>",
+        "B": "SnCI<SUB>4</SUB>",
+        "C": "SnO<SUB>2</SUB>",
+        "D": "SnH<SUB>4</SUB>",
+        "E": "Sn(OH)<SUB>2</SUB>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1623",
+      "type": "mcq",
+      "stem": "In which of the following pairs are both substances deliquescent?",
+      "marks": 1,
+      "options": {
+        "A": "CaCI<sub>2</sub> and H<sub>2</sub>SO<sub>4</sub>",
+        "B": "NaOH and MgSO<sub>4</sub> 7H<sub>2</sub>O",
+        "C": "CaCI<sub>2</sub> and NaOH",
+        "D": "CUO and NaCI",
+        "E": "CaCO<sub>3</sub> and MgCI<sub>2</sub>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-chemistry-bank-1624",
+      "type": "mcq",
+      "stem": "<p>Catalytic hydrogenation of alkenes produces compounds with the general formula</p>",
+      "marks": 1,
+      "options": {
+        "A": "C<sub>n</sub>H<sub>2n+1</sub> OH",
+        "B": "C<sub>n</sub>H<sub>2n+1</sub>",
+        "C": "C<sub>n</sub>H<sub>2n+2</sub>",
+        "D": "C<sub>n</sub>H<sub>2n-2</sub>",
+        "E": "C<sub>x</sub>(H<sub>2</sub>O)<sub>y</sub>"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-chemistry-bank-1625",
+      "type": "mcq",
+      "stem": "Which of the following would increase the rate of reaction of chips of a metal M as shown in the equation below? M<sub>(s)</sub> + 2HCI<sub>(aq)</sub> → MCI<sub>2(aq)</sub> + H<sub>2(g)</sub>",
+      "marks": 1,
+      "options": {
+        "A": "Diluting the hydrochloric acid",
+        "B": "Adding some distilled water",
+        "C": "Decreasing the temperature",
+        "D": "Grinding the metal into powder",
+        "E": "Increasing the pressure"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-chemistry-bank-1626",
+      "type": "mcq",
+      "stem": "If the volume of a given mass of gas at 0<sup>o</sup>C is 27.3cm<sup>3</sup>, what will be the volume of the gas at 10<sup>o</sup>C, pressure remaining constant?",
+      "marks": 1,
+      "options": {
+        "A": "2.73cm<sup>3</sup>",
+        "B": "28.3cm<sup>3</sup>",
+        "C": "37.3cm<sup>3</sup>",
+        "D": "273cm<sup>3</sup>",
+        "E": "283cm<sup>3</sup>"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-chemistry-bank-1627",
+      "type": "mcq",
+      "stem": "<p>Which of the following electronic structures belongs to a noble gas?</p>",
+      "marks": 1,
+      "options": {
+        "A": "1s<sup>2</sup>2s<sup>2</sup>",
+        "B": "1s <sup>2</sup>2s<sup>2</sup>2p<sup>4</sup>",
+        "C": "1s<sup>2</sup>2s<sup>2</sup>2p<sup>6</sup>3s<sup>2</sup>3p<sup>6</sup>",
+        "D": "1s<sup>2</sup>2s<sup>2</sup>2p<sup>2</sup>",
+        "E": "1s<sup>2</sup>2s<sup>2</sup>2p <sup>6</sup>3s<sup>2</sup>3p<sup>3</sup>"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-chemistry-bank-1628",
+      "type": "mcq",
+      "stem": "<p>Which of the following reactions is accompanied by the first ionization energy of an element X?</p>",
+      "marks": 1,
+      "options": {
+        "A": "X <sup>+</sup><sub>(aq)</sub> → X <sup>2+</sup> <sub>(aq)</sub> + e-",
+        "B": "X <sup>-</sup> <sub>(g)</sub> → X<sub>(g)</sub> + <sup>e-</sup>",
+        "C": "X<sup>+</sup> <sub>(g)</sub> → X<sup>2+</sup> +<sup>e-</sup>",
+        "D": "X <sub>(g)</sub> → X<sup>+</sup> <sub>(g)</sub> +<sup>e-</sup>",
+        "E": "X<sub>(s)</sub> → X <sup>+</sup> <sub>(g)</sub> + <sup>e-</sup>"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-chemistry-bank-1629",
+      "type": "mcq",
+      "stem": "What is the molar of hydrogen sulphide gas in the reaction H<sub>2</sub>SO<sub>4(aq)</sub> + 3H<sub>2</sub>S<sub>(g)</sub> → 4S<sub>(s)</sub> + 4H<sub>2</sub>O <sub>(l)</sub>n represented by the following equation?",
+      "marks": 1,
+      "options": {
+        "A": "Reducing agent",
+        "B": "A bleaching agent",
+        "C": "A dehydrating agent",
+        "D": "A sulphonating agent",
+        "E": "An oxidizing agent"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-chemistry-bank-1630",
+      "type": "mcq",
+      "stem": "What is the molar mass of an alkyne with the formula C<sub>x</sub> H <sub>14</sub>? (H = 1, C = 12)",
+      "marks": 1,
+      "options": {
+        "A": "86g",
+        "B": "92g",
+        "C": "98g",
+        "D": "110g",
+        "E": "112g"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-chemistry-bank-1631",
+      "type": "mcq",
+      "stem": "Which of the following molecules is linear in shape?",
+      "marks": 1,
+      "options": {
+        "A": "CH<sub>4</sub>",
+        "B": "H<sub>2</sub>O",
+        "C": "NH<sub>3</sub>",
+        "D": "H<sub>2</sub>S",
+        "E": "CI<sub>2</sub>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1632",
+      "type": "mcq",
+      "stem": "What is the percentage by mass of copper in copper in copper (l) oxide (CU<sub>2</sub>O)? [O = 16; CU =64]",
+      "marks": 1,
+      "options": {
+        "A": "88.9%",
+        "B": "80.0%",
+        "C": "66.7%",
+        "D": "20.0%",
+        "E": "11.1%"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1633",
+      "type": "mcq",
+      "stem": "Which of the following species is always present in acidified water?",
+      "marks": 1,
+      "options": {
+        "A": "NH<sup>+</sup><sub>4</sub>",
+        "B": "O <sup>2-</sup>",
+        "C": "HCI",
+        "D": "H<sup>3</sup>O<sup>+</sup>",
+        "E": "HNO<sub>3</sub>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1634",
+      "type": "mcq",
+      "stem": "Consider the reaction represented by the equation below: XO + YO → X + YO<sub>2</sub> In the reaction, YO acts as",
+      "marks": 1,
+      "options": {
+        "A": "an acidic oxide",
+        "B": "a basic oxide",
+        "C": "a reducing agent",
+        "D": "a weak base",
+        "E": "an oxidizing agent"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1635",
+      "type": "mcq",
+      "stem": "What mass of copper will be deposited by the liberation of Cu<sup>2+</sup> when 0.1F of electricity flows through an aqueous solution of a copper (ll) salt? [Cu = 64]",
+      "marks": 1,
+      "options": {
+        "A": "64g",
+        "B": "32g",
+        "C": "12.8g",
+        "D": "6.4g",
+        "E": "3.2g"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1636",
+      "type": "mcq",
+      "stem": "Which of the following is not correct of the reaction represented by the equation below? 2C<sub>(s)</sub> + O<sub>2(g)</sub> → 2CO<sub>(g)</sub>; ∆H = - xKJ",
+      "marks": 1,
+      "options": {
+        "A": "there is an increase in entropy ;",
+        "B": "There is anincrease in gaseous volume",
+        "C": "Carbon (lV) oxide is produced",
+        "D": "The oxidation number of carbon increases from 0 to +2",
+        "E": "The reaction is exothermic"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1637",
+      "type": "mcq",
+      "stem": "H<sub>3</sub>O<sup>+</sup><sub>(aq)</sub> + OH-<sub>(aq)</sub> → 2H<sub>2</sub>O<sub>(l)</sub>. The heat change accompanying the process represented by the equation above is the heat of",
+      "marks": 1,
+      "options": {
+        "A": "neutralization",
+        "B": "formation",
+        "C": "solution",
+        "D": "dilution",
+        "E": "hydration"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1638",
+      "type": "mcq",
+      "stem": "<p>The following alkanols will yield alkanoic acids on reacting with excess acidified K2Cr2O7 except</p>",
+      "marks": 1,
+      "options": {
+        "A": "CH<sub>3</sub>CH<sub>2</sub>OH",
+        "B": "(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>OH",
+        "C": "(CH<sub>3</sub>)<sub>3</sub>CCH<sub>2</sub>OH",
+        "D": "(CH<sub>3</sub>)<sub>3</sub>COH",
+        "E": "CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>OH"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1639",
+      "type": "mcq",
+      "stem": "The following salts dissolve readily in cold water except",
+      "marks": 1,
+      "options": {
+        "A": "CaCI<sub>2</sub>",
+        "B": "PbSO<sub>4</sub>",
+        "C": "(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>",
+        "D": "Na<sub>2</sub>CO<sub>3</sub>",
+        "E": "Na<sub>2</sub>SO<sub>3</sub>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-chemistry-bank-1640",
+      "type": "mcq",
+      "stem": "What is the amount (in mole) of hydrogen gas that would be produced if 0.6 mole of hydrochloric acid reacted with excess zinc according to the following equation? Zn<sub>(s)</sub> + 2HCI<sub>(aq)</sub> → ZnCI<sub>2(aq)</sub> + H<sub>2(g)</sub>",
+      "marks": 1,
+      "options": {
+        "A": "0.1 mole",
+        "B": "0.2mole",
+        "C": "0.3 mole",
+        "D": "1.0 mole",
+        "E": "2.9 moles"
+      },
+      "year": 1995
     }
   ],
   "category": "secondary",

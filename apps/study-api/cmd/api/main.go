@@ -148,6 +148,8 @@ func seedKeysIfPresent(st *store.Store, dataDir string, log *slog.Logger) error 
                         Answers map[string]struct {
                                 Letter      string `json:"letter"`
                                 Explanation string `json:"explanation"`
+                                AnswerImage string `json:"answer_image"`
+                                Video       string `json:"video"`
                         } `json:"answers"`
                 }
                 if err := json.Unmarshal(raw, &parsed); err != nil {
@@ -159,7 +161,7 @@ func seedKeysIfPresent(st *store.Store, dataDir string, log *slog.Logger) error 
                 }
                 keys := map[string]store.KeyEntry{}
                 for qid, k := range parsed.Answers {
-                        keys[qid] = store.KeyEntry{Letter: k.Letter, Explanation: k.Explanation}
+                        keys[qid] = store.KeyEntry{Letter: k.Letter, Explanation: k.Explanation, AnswerImage: k.AnswerImage, Video: k.Video}
                 }
                 n, err := st.SeedKeys(ctx, parsed.Code, keys)
                 if err != nil {
