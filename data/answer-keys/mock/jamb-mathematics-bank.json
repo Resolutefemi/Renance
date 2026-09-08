@@ -8362,7 +8362,9 @@
     },
     "jamb-mathematics-bank-1900": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "\\(\\int (2x + 3)^{\\frac{1}{2}} \\delta x\\)<br>\r\n<br>\r\nlet u = 2x + 3, \\(\\frac{\\delta y}{\\delta x} = 2\\)<br>\r\n<br>\r\n\\(\\delta x = \\frac{\\delta u}{2}\\)<br>\r\n<br>\r\nNow \\(\\int (2x + 3)^{\\frac{1}{2}} \\delta x = \\int u^{\\frac{1}{2}}.{\\frac{\\delta x}{2}}\\)<br>\r\n<br>\r\n\\( = \\frac{1}{2} \\int u^{\\frac{1}{2}} \\delta u\\)<br>\r\n<br>\r\n\\( = \\frac{1}{2} u^{\\frac{3}{2}} \\times \\frac{2}{3} + k\\)<br>\r\n<br>\r\n\\( = \\frac{1}{3} u^{\\frac{3}{2}} + k\\)<br>\r\n<br>\r\n\\( = \\frac{1}{3} (2x + 3)^{\\frac{3}{2}} + k\\)",
+      "video": "https://www.youtube.com/embed/4s9af1Z0owE?start=169"
     },
     "jamb-mathematics-bank-1901": {
       "type": "mcq",
@@ -8402,7 +8404,9 @@
     },
     "jamb-mathematics-bank-1908": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Mean x = \\(\\frac{\\sum x}{n}\\)<br>\r\n<br>\r\n\\( = \\frac{5 + 4 + 3 + 2 + 1}{5}\\)<br>\r\n<br>\r\n\\( = \\frac{15}{5}\\)<br>\r\n<br>\r\n= 3<br>\r\n<br>\r\n\\(\\begin{array}{c|c}<br>\r\n  x & d = x - 3 & d^2 \\\\<br>\r\n  \\hline<br>\r\n  5 & 2 & 4 \\\\<br>\r\n  4 & 1 & 1 \\\\<br>\r\n3 & 0 & 0 \\\\<br>\r\n2 & -1 & 1 \\\\<br>\r\n1 & -2 & 4 \\\\<br>\r\n  \\hline<br>\r\n &  & \\sum d^2 + 10<br>\r\n\\end{array}\\)<br>\r\n<br>\r\nHence, standard deviation;<br>\r\n<br>\r\n\\( = \\sqrt{\\frac{\\sum d^2}{n}}  = \\sqrt{\\frac{10}{5}}\\)<br>\r\n<br>\r\n<br>\r\n\\( = \\sqrt{2}\\)",
+      "video": "https://www.youtube.com/embed/4s9af1Z0owE?start=539"
     },
     "jamb-mathematics-bank-1909": {
       "type": "mcq",
@@ -8410,7 +8414,9 @@
     },
     "jamb-mathematics-bank-1910": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\(0 \\begin{vmatrix}7 &amp; 8 \\\\5 &amp; 4\\end{vmatrix} -3 \\begin{vmatrix}1 &amp; 8 \\\\0 &amp; 4\\end{vmatrix} +2 \\begin{vmatrix}1 &amp; 7 \\\\0 &amp; 5\\end{vmatrix}\\)<br />\r\n<br />\r\n= 0(28 - 40) - 3(4 - 0) + 2(5 - 0)<br />\r\n<br />\r\n= 0(-12) - 3(4) + 2(5)<br />\r\n<br />\r\n= 0 - 12 + 10<br />\r\n<br />\r\n= -2</p>",
+      "video": "https://www.youtube.com/embed/CsPb-UhkAbw?start=782"
     },
     "jamb-mathematics-bank-1911": {
       "type": "mcq",
@@ -8556,7 +8562,9 @@
     },
     "jamb-mathematics-bank-1937": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>(x1, y1) = (0,5)<br />\r\n<br />\r\n(x2, y2) = (5, 0)<br />\r\n<br />\r\nUsing \\(\\frac{y - y_1}{y_2&nbsp;- y_1} = \\frac{x - x_1}{x_2&nbsp;- x_1}\\)<br />\r\n<br />\r\n\\(\\frac{y - 5}{0 - 5} = \\frac{x - 0}{5 - 0}\\)<br />\r\n<br />\r\n\\(\\frac{y - 5}{-5} = \\frac{x}{5}\\)<br />\r\n<br />\r\n5(y - 5) = -5x<br />\r\n<br />\r\ny - 5 = -x<br />\r\n<br />\r\nx + y = 5<br />\r\n<br />\r\ny = -x + 5</p>",
+      "video": "https://www.youtube.com/embed/4s9af1Z0owE?start=1517"
     },
     "jamb-mathematics-bank-1938": {
       "type": "mcq",
@@ -8568,11 +8576,15 @@
     },
     "jamb-mathematics-bank-1940": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Percentage Loss = (actual loss ) ÷ (Cost price) × 100<br>\r\n<br>\r\nActual loss = Cost Price − Selling Price (sold price)<br>\r\n<br>\r\n= N800 − N520 = N280<br>\r\n<br>\r\nPercentage loss = (280 ÷ 800) × 100 = 35%<br>\r\n<br>\r\n∴ His loss percent = 35%",
+      "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=203"
     },
     "jamb-mathematics-bank-1941": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Cost Price:<br />\r\n<br />\r\nSelling price = 100 : (100 + 15)<br />\r\n<br />\r\n= 100 : 115<br />\r\n<br />\r\nCost Price<br />\r\n<br />\r\n= 100 &divide; 115 of selling price (i.e N420,000)<br />\r\n<br />\r\n= 100 &divide; 115 &times; N420,000<br />\r\n<br />\r\n= N365,217.4<br />\r\n<br />\r\n&there4; Cost Price = N365, 217</p>",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=1516"
     },
     "jamb-mathematics-bank-1942": {
       "type": "mcq",
@@ -8588,7 +8600,9 @@
     },
     "jamb-mathematics-bank-1945": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>1st G.P. = a =2<br />\r\n<br />\r\n2nd G.P. = ar\\(^{2 &minus;1}\\) = 54<br />\r\n<br />\r\n2(r) = 54<br />\r\n<br />\r\nr = 54/2 = 27<br />\r\n<br />\r\nr = 27<br />\r\n<br />\r\n3rd term = ar\\(^2\\) = (2) (27)\\(^2\\)<br />\r\n<br />\r\n2 &times; 27 &times; 27<br />\r\n<br />\r\n= 1458</p>",
+      "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=590"
     },
     "jamb-mathematics-bank-1946": {
       "type": "mcq",
@@ -8600,7 +8614,9 @@
     },
     "jamb-mathematics-bank-1948": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The trinomial = \\( a^2 &minus; 4a + 4 \\\\<br />\r\n<br />\r\na^2 &minus; b^2&minus; 4a + 4 = (a^2 &minus; 4a + 4) &minus; b^2 \\\\<br />\r\n<br />\r\n(a^2 &minus; 2a &minus; 2a + 4) &minus; b^2 \\\\<br />\r\n<br />\r\na(a &minus; 2)&minus; 2(a &minus; 2)] &minus; b^2 \\\\<br />\r\n<br />\r\n(a &minus; 2)2 &minus; b^2 \\\\<br />\r\n<br />\r\n(a &minus; 2 + b)(a &minus; 2 &minus; b )\\)</p>",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1685"
     },
     "jamb-mathematics-bank-1949": {
       "type": "mcq",
@@ -8612,7 +8628,9 @@
     },
     "jamb-mathematics-bank-1951": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "I = A − P<br>\r\n<br>\r\n= N588 − N525<br>\r\n<br>\r\n∴I = N63<br>\r\n<br>\r\nI = PRT ÷ 100<br>\r\n<br>\r\nR = [100I ÷PT]<br>\r\n<br>\r\nR = [(100 × 63 ) ÷ (525 × 3)]<br>\r\n<br>\r\n= (6300 ÷ 1575) = 4<br>\r\n<br>\r\n∴ The rate = 4 %",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=210"
     },
     "jamb-mathematics-bank-1952": {
       "type": "mcq",
@@ -8628,7 +8646,9 @@
     },
     "jamb-mathematics-bank-1955": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "I =[ PRT ÷ 100]<br>\r\n<br>\r\n[(325 × 5 × 3) ÷ (100)]<br>\r\n<br>\r\nN(195 ÷ 4)<br>\r\n<br>\r\nN48.75K",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=858"
     },
     "jamb-mathematics-bank-1956": {
       "type": "mcq",
@@ -8636,11 +8656,15 @@
     },
     "jamb-mathematics-bank-1957": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "\\( [ 1 ÷ 64^{(x + 2)}]= [4^{(x − 3)} ÷ 16^x ] \\)<br>\r\n<br>\r\n \\( 64^{−(x + 2)} = [4^{(x − 3)}] ÷[16^x] \\)<br>\r\n<br>\r\nbreakdown 4,16,64 into a small index no<br>\r\n<br>\r\n\\( 2^{−6(x + 2)} = 2^{2(x − 3)} ÷ 2^{4(x)} \\)<br>\r\n<br>\r\n\\( 2^{−6x− 12} = 2^{2x − 4x − 6} \\)<br>\r\n<br>\r\n\\( 2^{−6x −12} = 2^{−2x − 6} \\)<br>\r\n<br>\r\n− 6x − 12 = − 2x − 6<br>\r\n<br>\r\nCollect the like term<br>\r\n<br>\r\n−6x + 2x = −6 + 12<br>\r\n<br>\r\n−4x =6<br>\r\n<br>\r\nx = \\( \\frac{6}{4} \\)<br>\r\n<br>\r\nx = \\( \\frac{−3}{2} \\)",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=1704"
     },
     "jamb-mathematics-bank-1958": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Starting from 3x &minus; z \\(\\leq\\) 9<br />\r\n<br />\r\nx = 0, substitute the value of x (i.e. x = 0) into the equation 3x &minus; z \\(\\leq\\) 9<br />\r\n<br />\r\n3(0) &minus; z \\(\\leq\\) 9<br />\r\n<br />\r\nz \\(\\leq\\) &minus; 9<br />\r\n<br />\r\nIf z = 0<br />\r\n<br />\r\nThen, 3x &minus; 0 \\(\\leq\\) 9<br />\r\n<br />\r\n3x \\(\\leq\\) 9<br />\r\n<br />\r\nx \\(\\leq\\) 3<br />\r\n<br />\r\nIntercept of x and z i.e (x,z)<br />\r\n<br />\r\n= (3, -9)</p>",
+      "video": "https://www.youtube.com/embed/4ac261NYWEE?start=632"
     },
     "jamb-mathematics-bank-1959": {
       "type": "mcq",
@@ -8648,7 +8672,9 @@
     },
     "jamb-mathematics-bank-1960": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "{A ∪ B ∪ C}<br>\r\n<br>\r\n{A ∪ B} = {1, 3, 5, 7, 9, 12, 15}<br>\r\n<br>\r\n∪ C={2,4,6,8}<br>\r\n<br>\r\n{A ∪ B} ∪ C = {1, 3, 5, 7, 9, 12, 15} ∪ {2, 4, 6, 8}<br>\r\n<br>\r\n= {1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15}<br>\r\n<br>\r\n{A ∪ B} ∪ C = {1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15}",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=347"
     },
     "jamb-mathematics-bank-1961": {
       "type": "mcq",
@@ -8660,7 +8686,9 @@
     },
     "jamb-mathematics-bank-1963": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Z has 4 elements, power = number of subset = 2p<br>\r\n<br>\r\nZ = 2<sub>n</sub> = 2<sub>4</sub><br>\r\n<br>\r\n= 16",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=256"
     },
     "jamb-mathematics-bank-1964": {
       "type": "mcq",
@@ -8668,7 +8696,9 @@
     },
     "jamb-mathematics-bank-1965": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Each exterior angle = 180 − 120=60<br>\r\n<br>\r\nExterior angle =360/n<br>\r\n<br>\r\n60 = 360/n<br>\r\n<br>\r\nn =360/6<br>\r\n<br>\r\n= 6",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1176"
     },
     "jamb-mathematics-bank-1966": {
       "type": "mcq",
@@ -8676,15 +8706,21 @@
     },
     "jamb-mathematics-bank-1967": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The coordinate of the midpoint is \\((\\frac{-3 + 4}{2}, \\frac{5 + (-1)}{2})\\)</p>\r\n\r\n<p>= \\((\\frac{1}{2}, 2)\\)</p>",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=752"
     },
     "jamb-mathematics-bank-1968": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "[Return ÷ Investment] as a ratio ;<br>\r\n<br>\r\ni.e The Ratio is Return : Investmen<br>\r\n<br>\r\n[(Return1÷ Investment1 ) = (Return2÷ Investment2)]<br>\r\n<br>\r\nR1 = N 25000<br>\r\n<br>\r\nR2 =?<br>\r\n<br>\r\nI1 = N450,000,<br>\r\n<br>\r\nI1 = N 700000<br>\r\n<br>\r\n(25000 ÷ 450000) = (R2 ÷ 700000)<br>\r\n<br>\r\nR2 = [(25000 × 700000 ) ÷ 450000]<br>\r\n<br>\r\n= N38,888.90K<br>\r\n<br>\r\n∴ The return on a investment of Y = N38888.90K",
+      "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=882"
     },
     "jamb-mathematics-bank-1969": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "25% of N80 = 25/100 × 80<br>\r\n<br>\r\n= N20.00",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1300"
     },
     "jamb-mathematics-bank-1970": {
       "type": "mcq",
@@ -8692,7 +8728,9 @@
     },
     "jamb-mathematics-bank-1971": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Total of their ages: 18 + 20 + 22 = 60</p>\r\n\r\n<p>The second staff will get \\(\\frac{20}{60} \\times 120,000\\)</p>\r\n\r\n<p>= N40,000.00K</p>",
+      "video": "https://www.youtube.com/embed/4ac261NYWEE?start=418"
     },
     "jamb-mathematics-bank-1972": {
       "type": "mcq",
@@ -8700,15 +8738,21 @@
     },
     "jamb-mathematics-bank-1973": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "√(2x + 2 ) − √x = 1<br>\r\n<br>\r\n√(2x + 2) = 1 + √x<br>\r\n<br>\r\nSquare both sides<br>\r\n<br>\r\n√(2x + 2)<sup>2</sup> = (1 + √x)<sup>2</sup><br>\r\n<br>\r\n((2x + 2)<sup>2</sup>)<sup>½</sup> = 1 + √x + √x+ x<br>\r\n<br>\r\n2x + 2 = 1 + 2√x +x<br>\r\n<br>\r\nCollect the like term together<br>\r\n<br>\r\n2x − x + 2 − 1 = 2 √x<br>\r\nx + 1 = 2√x<br>\r\n<br>\r\nSquare both sides<br>\r\n<br>\r\n(x + 1)<sup>2</sup> = (2√x)<sup>2</sup><br>\r\n<br>\r\nx<sup>2</sup> + 2x + 1 = 4x<br>\r\n<br>\r\nx<sup>2</sup> + 2x − 4x + 1 = 0<br>\r\n<br>\r\n(x<sup>2</sup>− x)(x + 1)= 0<br>\r\n<br>\r\nx(x − 1) −1(x − 1)<br>\r\n<br>\r\n(x − 1)(x −1)<br>\r\n<br>\r\nEither (x − 1) = 0 or (x − 1) = 0<br>\r\n<br>\r\nx = 1 or 1<br>\r\n<br>\r\nx = 1 twice",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=780"
     },
     "jamb-mathematics-bank-1974": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Percentage birthrate = \\(\\frac{62}{6250} \\times 100%\\)</p>\r\n\r\n<p>= \\(\\frac{6200}{6250}\\)</p>\r\n\r\n<p>= 0.992% \\(\\approx\\) 1.0%.</p>",
+      "video": "https://www.youtube.com/embed/4ac261NYWEE?start=0"
     },
     "jamb-mathematics-bank-1975": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\(\\int (5x^{3} + 7x^{2} - 2x + 5) \\mathrm d x\\)</p>\r\n\r\n<p>= \\(\\frac{5x^{4}}{4} + \\frac{7x^{3}}{3} - \\frac{2x^{2}}{2} + 5x + c\\)</p>\r\n\r\n<p>= \\(\\frac{5x^{4}}{4} + \\frac{7x^{3}}{3} - x^{2} + 5x + c\\)</p>",
+      "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=1502"
     },
     "jamb-mathematics-bank-1976": {
       "type": "mcq",
@@ -8736,7 +8780,9 @@
     },
     "jamb-mathematics-bank-1983": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>[1 &divide; (x+1)] + [1 &divide; (x &minus; 1)]<br />\r\n<br />\r\n= ((x &minus; 1) + [(x + 1)) &divide; (x+1)(x &minus; 1)]<br />\r\n<br />\r\nUsing the L.C.M.<br />\r\n<br />\r\n= (x &minus; 1 + x + 1) &divide; (x + 1)(x &minus; 1)<br />\r\n<br />\r\n= (x + 2 &minus; 1 + 1) &divide; (x + 1)(x &minus; 1)<br />\r\n<br />\r\n= 2x &divide; (x + 1)(x &minus; 1) =2x &divide; (x + 1)(x &minus; 1)</p>",
+      "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=1730"
     },
     "jamb-mathematics-bank-1984": {
       "type": "mcq",
@@ -8744,7 +8790,9 @@
     },
     "jamb-mathematics-bank-1985": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>\\(\\sqrt{30}\\) &times; \\(\\sqrt{40}\\)<br />\r\n<br />\r\n= \\(\\sqrt{(30 &times; 40)}\\)<br />\r\n<br />\r\n\\(\\sqrt{(3 &times; 10 &times; 4 &times; 10)}\\)<br />\r\n<br />\r\n\\(\\sqrt{(400 &times; 3)}\\)<br />\r\n<br />\r\n\\(\\sqrt{400}\\) &times; \\(\\sqrt{3}\\)<br />\r\n<br />\r\n20 &times; \\(\\sqrt{3}\\)<br />\r\n<br />\r\n20\\(\\sqrt{3}\\)</p>",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=573"
     },
     "jamb-mathematics-bank-1986": {
       "type": "mcq",
@@ -8756,7 +8804,9 @@
     },
     "jamb-mathematics-bank-1988": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "\\( 5^{(x − 2)} = (125^{−1} )^{(x + 3)}\\\\<br>\r\n<br>\r\n5^{(x − 2)} = (5− 3)^{x + 3}\\\\<br>\r\n<br>\r\n5^{(x − 2)} = 5^{− 3x − 9}\\\\<br>\r\n<br>\r\nx + 3x = − 9 + 2\\\\<br>\r\n<br>\r\n4x = − 7\\\\<br>\r\n<br>\r\nx = \\frac{−7}{4} \\)",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1027"
     },
     "jamb-mathematics-bank-1989": {
       "type": "mcq",
@@ -8764,7 +8814,9 @@
     },
     "jamb-mathematics-bank-1990": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>\\( A = P \\left(1 + \\frac{r}{100}\\right)^n \\)<br />\r\n<br />\r\nWhere P = 126, r = 4,n = 2<br />\r\n<br />\r\nA=126 \\( \\left(1 + \\frac{4}{100}\\right)^2 \\text{Using LCM} \\)<br />\r\n<br />\r\n=126 \\( \\left(\\frac{100+4}{100}\\right)^2 = 126 \\left(\\frac{104}{100}\\right)^2 \\)<br />\r\n<br />\r\n<br />\r\n=126 \\( \\left(1.04^2 \\right) \\)<br />\r\n<br />\r\n= 126 * 1.04 * 1.04<br />\r\n<br />\r\n=136.28<br />\r\n<br />\r\nA = 136.30 (approx.)<br />\r\n<br />\r\nThe Amount A, = N136.30k</p>",
+      "video": "https://www.youtube.com/embed/4ac261NYWEE?start=1712"
     },
     "jamb-mathematics-bank-1991": {
       "type": "mcq",
@@ -8780,7 +8832,9 @@
     },
     "jamb-mathematics-bank-1994": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>nth term of a linear sequence (AP) = a+(n &minus; 1)d<br />\r\n<br />\r\nfirst term = 6, last term = 10 sum &minus; 40<br />\r\n<br />\r\ni.e. a = 6, l = 10, S = 40<br />\r\n<br />\r\nS\\(_{n}\\)= n/2(2a + (n &minus; 1)d or Sn = &divide;2 (a + l)<br />\r\n<br />\r\nS\\(_{n}\\)&nbsp;= n/2(a + l)<br />\r\n<br />\r\n40 = n/2(6 + 10)<br />\r\n<br />\r\n40 = 8n<br />\r\n<br />\r\n8n = 40<br />\r\n<br />\r\n8n = 40<br />\r\n<br />\r\nn = 40/8<br />\r\n<br />\r\n= 5<br />\r\n<br />\r\nThe number of terms&nbsp;= 5</p>",
+      "video": "https://www.youtube.com/embed/4ac261NYWEE?start=1498"
     },
     "jamb-mathematics-bank-1995": {
       "type": "mcq",
@@ -8788,11 +8842,15 @@
     },
     "jamb-mathematics-bank-1996": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Prob.(A outcome) = \\(\\frac{1}{6}\\), Prob.(B outcome) = ¼<br>\r\n<br>\r\nP(A ∪ B) = 1/12, Prob.(A ∩ B)<br>\r\n<br>\r\nProb.(A ∩ B) = Prob.(A) + Prob.(B) − Prob.(A ∪ B)<br>\r\n<br>\r\n1/6 + 1/4 − 1/12<br>\r\n<br>\r\n= (2 + 3 − 1) ÷ 12<br>\r\n<br>\r\n= 4/12<br>\r\n<br>\r\n= 1/3<br>\r\n<br>\r\nProb.(A ∩ B) = 1/3",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=139"
     },
     "jamb-mathematics-bank-1997": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Let x represent the first number;<br />\r\n<br />\r\nThen, the other is (5 &minus; x) , since their sum is 5 and their product is 14<br />\r\n<br />\r\nx(5 &minus; x) = 14<br />\r\n<br />\r\n5x &minus; x2 = 14<br />\r\n<br />\r\nx2 &minus; 5x &minus; 14 = 0<br />\r\n<br />\r\n(x2 &minus; 7x) + (2x &minus; 14) = 0<br />\r\n<br />\r\nx(x &minus; 7) + 2(x &minus; 7) = 0<br />\r\n<br />\r\n(x &minus; 7)(x + 2) = 0<br />\r\n<br />\r\nEither (x &minus; 7) = 0 or (x + 2) = 0<br />\r\n<br />\r\nx = 7 or x = &minus; 2<br />\r\n<br />\r\nThe two numbers are 7 and &minus; 2</p>",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=941"
     },
     "jamb-mathematics-bank-1998": {
       "type": "mcq",
@@ -8804,7 +8862,9 @@
     },
     "jamb-mathematics-bank-2000": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>n(X &cup;&nbsp;Y) = n(X)&nbsp;+ n(Y)&nbsp;&minus; n(X &cap; Y)<br />\r\n<br />\r\n= 15 + 12 &minus; 7<br />\r\n<br />\r\n&there4; n(X &cup;&nbsp;Y) = 20</p>",
+      "video": "https://www.youtube.com/embed/4ac261NYWEE?start=515"
     },
     "jamb-mathematics-bank-2001": {
       "type": "mcq",
@@ -12188,6 +12248,66 @@
       "explanation": "In the figure above, \\(\\frac{x}{\\sin 60^o} = \\frac{10}{\\sin 30^o}\\) (Sine rule)<br>\r\n<br>\r\nx = \\(\\frac{10 \\sin 60^o}{\\sin 30^o}\\)<br>\r\n<br>\r\n= 10 x \\(\\frac{\\sqrt{3}}{2} \\times \\frac{1}{2}\\)<br>\r\n<br>\r\n= 10 x \\(\\frac{\\sqrt{3}}{2} \\times \\frac{2}{1}\\)<br>\r\n<br>\r\n= 10\\(\\sqrt{3}\\)cm",
       "answer_image": "/qimages/8a1dfe04efb26e21eb77.jpg",
       "video": "https://www.youtube.com/embed/4s9af1Z0owE?start=1311"
+    },
+    "jamb-mathematics-bank-2786": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "\\( = log_2 \\frac{8 \\times 16}{4}\\)<br>\r\n<br>\r\n\\( = log_2 32\\)<br>\r\n<br>\r\n\\( = log_2 2^5\\)<br>\r\n<br>\r\n\\( = 5log_2 2\\)<br>\r\n<br>\r\n\\( = 5 \\times 1\\)<br>\r\n<br>\r\n\\( = 5 \\)",
+      "video": "https://www.youtube.com/embed/hXdIciRIb30?start=944"
+    },
+    "jamb-mathematics-bank-2787": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "\\(y \\propto w^2\\)<br>\r\n<br>\r\ny = kw<sup>2</sup><br>\r\n<br>\r\n8 = k(2)<sup>2</sup><br>\r\n<br>\r\n8 = k(4)<br>\r\n<br>\r\nk = 8/4<br>\r\n<br>\r\nk = 2<br>\r\n<br>\r\nThus y = 2w<sup>2</sup><br>\r\nWhen w = 3, y = 2(3)<sup>2</sup><br>\r\n<br>\r\ny = 2 x 9 = 18",
+      "video": "https://www.youtube.com/embed/hXdIciRIb30?start=1409"
+    },
+    "jamb-mathematics-bank-2788": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "log<sub>10</sub>1.5 + 3 log<sub>10</sub>2 − log<sub>10</sub>0.3<br>\r\n<br>\r\nlog<sub>10</sub>1.5 + log<sub>10</sub>23 − log<sub>10</sub>0.3<br>\r\n<br>\r\n[log<sub>10</sub>(1.5 × 23) ÷ log<sub>10</sub>0.3]<br>\r\n<br>\r\n[log<sub>10</sub>(15/10 × 8 ) ÷ log<sub>10</sub>( 3/10)]<br>\r\n<br>\r\nlog<sub>10</sub>(15/10 × 8 × 10/3 )<br>\r\n<br>\r\nlog<sub>10</sub>40",
+      "video": "https://www.youtube.com/embed/4ac261NYWEE?start=709"
+    },
+    "jamb-mathematics-bank-2789": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "log<sub>5</sub>20 = x<br>\r\n<br>\r\n5x = 20(Take log<sub>10</sub> of both sides)<br>\r\n<br>\r\nlog<sub>5x</sub> = log<sub>20</sub><br>\r\n<br>\r\nxlog<sub>5</sub> = log<sub>20</sub><br>\r\n<br>\r\nx= [log<sub>20</sub> ÷ log<sub>5</sub>]<br>\r\n<br>\r\n[1.30103 ÷ 0.69897]<br>\r\n<br>\r\nx = 1.861",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=0"
+    },
+    "jamb-mathematics-bank-2790": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "(0.09)<sup>2</sup>  = 0.09 × 0.09<br>\r\n<br>\r\n= 0.0081<br>\r\n<br>\r\n= 0.008100 to 4 significant figures<br>\r\n<br>\r\nPlease, start counting first from the non-zero digits i.e. 8",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=939"
+    },
+    "jamb-mathematics-bank-2791": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "x<sup>2</sup> − 2x − 3 = 0<br>\r\n<br>\r\n−3x + x = − 2x<br>\r\n<br>\r\n− 3x × x = − 3x<sup>2</sup><br>\r\n<br>\r\n(x<sup>2</sup> − 3x)(x − 3) = 0<br>\r\n<br>\r\n(x − 3)(x + 1) = 0<br>\r\n<br>\r\nEither (x − 3) = 0 or (x + 1) = 0<br>\r\n<br>\r\nx = 3 or − 1",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=1892"
+    },
+    "jamb-mathematics-bank-2792": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "“Explanation<br>\r\n<br>\r\nV = πr<sup>2</sup>h<br>\r\n<br>\r\nV = ?, h = 4cm, r = 5cm<br>\r\n<br>\r\nV = 3.14(5)<sup>2</sup> (4)<br>\r\n<br>\r\nV = 3.14(25)(4)<br>\r\n<br>\r\nV = 3.14 × 1200<br>\r\n<br>\r\n= 314cm<sup>2</sup>",
+      "video": "https://www.youtube.com/embed/63rah992e-s?start=1990"
+    },
+    "jamb-mathematics-bank-2793": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Convert the binary to base 10 and they convert back to base two<br>\r\n<br>\r\n10011<sub>2</sub> + xxxxx<sub>2</sub> + 11100<sub>2</sub> + 101<sub>2</sub> = 1001111<sub>2</sub><br>\r\n<br>\r\n<br>\r\n(1 × 2<sup>4</sup> + 0 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 1 × 2<sup>1</sup> + 1 × 2<sup>0</sup>) + xxxxx<sub>2</sub> +(1 × 2<sup>4</sup> + 1 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 0 × 2<sup>0</sup>) + (1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 1 × 2<sup>0</sup>)<br>\r\n<br>\r\n= (16 + 0 + 0 + 2 + 1) + xxxxx<sub>2</sub> + (16 + 8 + 4 + 0 + 0 ) + (4 + 0 + 1)<br>\r\n<br>\r\n=(64 + 0 + 0 + 8 + 4 + 2 + 1)<br>\r\n<br>\r\n19 + xxxxx<sub>2</sub> + 33 = 79<br>\r\n<br>\r\nxxxxx<sub>2</sub> + 52 = 79<br>\r\n<br>\r\nxxxxx<sub>2</sub> = 79 − 52<br>\r\n<br>\r\nxxxxx<sub>2</sub> = 27<sub>10</sub><br>\r\n<br>\r\n\\( \\begin{array}{c|c}<br>\r\n  2 & 27 \\\\ <br>\r\n  \\hline<br>\r\n  2 & 13 \\text{   rem 1}\\\\<br>\r\n  2 &  6 \\text{   rem 1}\\\\<br>\r\n  2 &  3 \\text{   rem 0}\\\\<br>\r\n  2 &  1 \\text{   rem 1}\\\\<br>\r\n    &  0 \\text{   rem 1}\\\\<br>\r\n \\end{array}\\uparrow \\)<br>\r\n<br>\r\n            27<sub>10</sub> = 11011<sub>2</sub><br>\r\n<br>\r\n           Therefore xxxxx<sub>2</sub> = 27<sub>10</sub> = 11011<sub>2</sub>",
+      "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=1118"
+    },
+    "jamb-mathematics-bank-2794": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "\\(27^x ÷ 81^{(x + 2y)} = 9 \\\\<br>\r\n<br>\r\n(27)x = 9 × 81^{(x+2y)} \\\\<br>\r\n<br>\r\n(3^3 )^x =32 \\times 3^{4(x + 2y)} \\\\<br>\r\n<br>\r\n=3^{(2 + 4x + 8y)}\\\\<br>\r\n<br>\r\n3^{3x} = 3^{ (2 + 4x + 8y)}\\\\<br>\r\n<br>\r\n3x = 2 + 4x + 8y\\\\<br>\r\n<br>\r\n3x − 4x − 8y = 2 … … … (1)\\\\<br>\r\n<br>\r\nx + 4y = 0 … … … (2)\\\\<br>\r\n<br>\r\n− 4y = 2\\\\<br>\r\n<br>\r\ny = (− 2) ÷ 4 = − ½\\\\<br>\r\n<br>\r\ny = − ½\\\\ \\)<br>\r\n<br>\r\nSubstitute the value of y into equation (2)<br>\r\n<br>\r\ni.e x + 4y = 0<br>\r\n<br>\r\nx + 4( − 1/2) = 0<br>\r\n<br>\r\nx − 2 = 0<br>\r\n<br>\r\nx = 2<br>\r\n<br>\r\n∴ x = 2,y = − ½)<br>\r\n<br>\r\nMethod II<br>\r\n<br>\r\n\\( 27^x ÷ 31^{(x + 2y) }= 9\\\\<br>\r\n<br>\r\n3^{3x} × 3^{( − 4x − 8y)} = 32\\\\<br>\r\n<br>\r\n3^{(3x − 8y)} = 32\\\\<br>\r\n<br>\r\n− x − 8y=2 ……… (1)\\\\<br>\r\n<br>\r\nx + 4y = 0 ……… (2)\\\\<br>\r\n<br>\r\n− 4 = 2\\\\<br>\r\n<br>\r\ny= 2/4 = ½\\\\<br>\r\n<br>\r\ny = ½ \\)<br>\r\n<br>\r\nSubstitute the value of y into equation 2<br>\r\n<br>\r\nx + 4y=0<br>\r\n<br>\r\nx + 4 (− 1) ÷ 2) = 0<br>\r\n<br>\r\nx − 2 = 0<br>\r\n<br>\r\nx = 2<br>\r\n<br>\r\nx = 2, y = ½",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=302"
+    },
+    "jamb-mathematics-bank-2795": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "tan x = \\(\\frac{2}{3}\\)(given), is illustrated in a right-angled \\(\\Delta\\)<br>\r\n<br>\r\nthus m<sup>2</sup> = 2<sup>2</sup> + 3<sup>2</sup> <br>\r\n<br>\r\n= 4 + 9 = 13<br>\r\n<br>\r\nm = \\(\\sqrt{13}\\)<br>\r\n<br>\r\nHence, 2sin x = 2 x \\(\\frac{2}{m}\\)<br>\r\n<br>\r\n2 x\\(\\frac{2}{\\sqrt{13}}\\)<br>\r\n<br>\r\n= \\(\\frac{4}{\\sqrt{13}}\\)<br>\r\n<br>\r\n= \\(\\frac{4}{\\sqrt{13}} = \\frac{\\sqrt{13}}{\\sqrt{13}}\\)<br>\r\n<br>\r\n= \\(\\frac{4\\sqrt{13}}{13}\\)",
+      "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1938"
     }
   }
 }

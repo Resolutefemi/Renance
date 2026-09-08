@@ -2,8 +2,8 @@
   "code": "jamb-chemistry-bank",
   "title": "JAMB Chemistry | Past Questions Bank",
   "version": 2,
-  "questionCount": 2773,
-  "totalMarks": 2773,
+  "questionCount": 2782,
+  "totalMarks": 2782,
   "questions": [
     {
       "id": "jamb-chemistry-bank-0002",
@@ -1108,7 +1108,8 @@
         "D": "entropy of reaction"
       },
       "marks": 1,
-      "year": 2016
+      "year": 2016,
+      "image": "/qimages/071f2c5ba15cb9891f1e.jpg"
     },
     {
       "id": "jamb-chemistry-bank-0088",
@@ -36450,6 +36451,123 @@
         "D": "C<sub>6</sub>H<sub>6</sub>"
       },
       "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2782",
+      "type": "mcq",
+      "stem": "<p>The acid in electrolysis of water is dilute</p>",
+      "marks": 1,
+      "options": {
+        "A": "HNO<sub>3</sub>",
+        "B": "CH<sub>3</sub>COOH",
+        "C": "H<sub>2</sub>SO<sub>4</sub>",
+        "D": "HCl"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2783",
+      "type": "mcq",
+      "stem": "<p>Which of the following ions&nbsp; requires the&nbsp;largest quantity&nbsp;of electricity for discharge at an electrode?</p>",
+      "marks": 1,
+      "options": {
+        "A": "2.0 mole of Q3<sup>+</sup>",
+        "B": "2.5 mole of R2<sup>+</sup>",
+        "C": "3.0 mole of T<sup>-</sup>",
+        "D": "4.0 mole of Y<sup>-</sup>"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2784",
+      "type": "mcq",
+      "stem": "<p>Hydrogen can be displaced from a hot alkaline solution by</p>",
+      "marks": 1,
+      "options": {
+        "A": "Fe",
+        "B": "Cu",
+        "C": "Ca",
+        "D": "Sn"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2785",
+      "type": "mcq",
+      "stem": "The number of isomers formed by C<sub>6</sub>H<sub>14</sub> is",
+      "marks": 1,
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "2",
+        "D": "3"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2786",
+      "type": "mcq",
+      "stem": "What volume of 0.5mldm<sup>3</sup> H<sub>2</sub>SO<sub>4</sub> will exactly neutralize 20cm<sup>3</sup> of 0.1moldm<sup>3</sup> NaOH Solution?",
+      "marks": 1,
+      "options": {
+        "A": "2.0cm<sup>3</sup>",
+        "B": "5.0cm<sup>3</sup>",
+        "C": "6.8cm<sup>3</sup>",
+        "D": "8.3cm<sup>3</sup>"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2787",
+      "type": "mcq",
+      "stem": "Which of the following gives a precipitation when treated with NaOH Solution?",
+      "marks": 1,
+      "options": {
+        "A": "AlCl<sub>3</sub>",
+        "B": "NH<sub>4</sub>Cl",
+        "C": "Na<sub>2</sub>CO<sub>3</sub>",
+        "D": "CH<sub>3</sub>COONa"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2788",
+      "type": "mcq",
+      "stem": "The substance that is used in the steel industry for the removal of carbon. Sulphur and phosphorus impurities from pig iron is",
+      "marks": 1,
+      "options": {
+        "A": "oxygen",
+        "B": "chlorine",
+        "C": "nitrogen",
+        "D": "hydrogen"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2789",
+      "type": "mcq",
+      "stem": "N<sub>2</sub>O<sub>4(g)</sub>→ 2NO<sub>2(g)</sub><br>\r\n<br>\r\nIn the endothermic reaction above, more products formed will be favored by",
+      "marks": 1,
+      "options": {
+        "A": "A constant values",
+        "B": "an increase in pressure",
+        "C": "a decrease pressure",
+        "D": "a decrease volume"
+      },
+      "year": 2015
+    },
+    {
+      "id": "jamb-chemistry-bank-2790",
+      "type": "mcq",
+      "stem": "<p>In the electrolysis of CuSo4(g) using platinum electrode the reaction at the anode is</p>",
+      "marks": 1,
+      "options": {
+        "A": "4H+ 4e - 2H<sub>2</sub>",
+        "B": "4OH<sup>=</sup> 4e- + 2H<sub>2</sub>O + O<sub>2</sub>",
+        "C": "2OH - 2e<sub>-</sub> = 2OH",
+        "D": "2OH<sup>-</sup> + 2OH = 2H<sub>2</sub>O + O<sub>2</sub>"
+      },
+      "year": 2015
     }
   ],
   "body": "JAMB",
