@@ -1,0 +1,4174 @@
+{
+  "code": "jamb-computer-studies-bank",
+  "title": "JAMB Computer Studies | Past Questions Bank",
+  "version": 1,
+  "category": "secondary",
+  "body": "JAMB",
+  "questions": [
+    {
+      "question": ".......... provides total solutions to reduce data redundancy, inconsistency, dependence and unauthorized access of data",
+      "options": {
+        "A": "Tables",
+        "B": "DBMS",
+        "C": "Production passwords",
+        "D": "Database"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The Database Management System or DBMS helps to tackle issues as these."
+    },
+    {
+      "question": "A 2-input gate that can be used to pass a digital waveform unchanged at certain times and inverted at other times is ___________",
+      "options": {
+        "A": "AND gate",
+        "B": "OR gate",
+        "C": "NAND gate",
+        "D": "XOR gate"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "This is what a XOR gate can do."
+    },
+    {
+      "question": "A collection of facts and figures is known to be _________",
+      "options": {
+        "A": "Data",
+        "B": "Database",
+        "C": "sequenced data",
+        "D": "structural data"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Data are a set of values of qualitative or quantitative variables about one or more persons or objects, while a datum (singular of data) is a single value of a single variable. They are individual facts, statistics, or items of information, often numeric."
+    },
+    {
+      "question": "A computer can't boot if it does not have ____________",
+      "options": {
+        "A": "compiler",
+        "B": "Loader",
+        "C": "OS",
+        "D": "Assembler"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The Operating system is responsible for the running of the computer. Hence, in its absence, its impossible for the computer to boot."
+    },
+    {
+      "question": "A display listing of program options which users can select is called?",
+      "options": {
+        "A": "icons",
+        "B": "options",
+        "C": "selection",
+        "D": "menu"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The menu consists of various programs users use"
+    },
+    {
+      "question": "A half byte is known as ________.",
+      "options": {
+        "A": "data",
+        "B": "bit",
+        "C": "half byte",
+        "D": "nibble"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A nibble is a 4 bit aggression, or half an octet. It has 16 possible values, and can be represented by a single hexadecimal digit which are called hex digit"
+    },
+    {
+      "question": "A light sensitive device that converts drawing, printed text or other images into digital form is",
+      "options": {
+        "A": "keyboard",
+        "B": "Plotter",
+        "C": "Scanner",
+        "D": "OMR"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A scanner converts hard copy of data and other information to soft copy, by serving as an input device that supplies the computer the information or data contained in the hard copy."
+    },
+    {
+      "question": "A logic circuit performs ________ functions",
+      "options": {
+        "A": "Interpretation",
+        "B": "Processing and Controlling",
+        "C": "Storage",
+        "D": "Security"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The logic circuit performs the function of processing and controlling in a computer. They perform logical operations"
+    },
+    {
+      "question": "A permanent memory, which has data and instruction to start up the computer and does not erase data after power off.",
+      "options": {
+        "A": "network interface card",
+        "B": "CPU",
+        "C": "RAM",
+        "D": "ROM"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The read only memory does not erase data after power off because, it is a non volatile memory."
+    },
+    {
+      "question": "A tier in which the database resides along with the query processing language is called",
+      "options": {
+        "A": "application tier",
+        "B": "data tier",
+        "C": "presentation tier",
+        "D": "model tier"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Database (Data) Tier − The database resides along with its query processing languages at this tier. We also have the relations that define the data and their constraints at this level."
+    },
+    {
+      "question": "A word processor can be used to",
+      "options": {
+        "A": "write text",
+        "B": "edit text",
+        "C": "print text",
+        "D": "all of these"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "word processor (WP) is a device or computer program that provides for input, editing, formatting, and output of text, often with some additional features. ... The functions of a word processor program fall somewhere between those of a simple text editor and a fully functioned desktop publishing program"
+    },
+    {
+      "question": "An Operating System is a type of?",
+      "options": {
+        "A": "Application Software",
+        "B": "System software",
+        "C": "Utility Program",
+        "D": "None of these"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "An operating system (OS) is a system software that manages computer hardware, software resources, and provides common services for computer programs"
+    },
+    {
+      "question": "An inventory management program can assist with ________",
+      "options": {
+        "A": "distribution",
+        "B": "purchasing",
+        "C": "planning",
+        "D": "all of the above"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "All of the above."
+    },
+    {
+      "question": "Another word for booting is",
+      "options": {
+        "A": "starting",
+        "B": "restarting",
+        "C": "loading",
+        "D": "running"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "In computing, booting is the process of starting a computer"
+    },
+    {
+      "question": "Applications on a screen are displayed by __________",
+      "options": {
+        "A": "Cursor",
+        "B": "icon",
+        "C": "Home screen",
+        "D": "App drawer"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A launcher icon displays applications on the screen."
+    },
+    {
+      "question": "At least how many keys is a keyboard made up of?",
+      "options": {
+        "A": "105",
+        "B": "107",
+        "C": "101",
+        "D": "103"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A standard computer has at least 101 keys."
+    },
+    {
+      "question": "Binary coded decimals (BCD) numbers express each digit as a ___________",
+      "options": {
+        "A": "byte",
+        "B": "nibble",
+        "C": "bit",
+        "D": "All of the above"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Nibbles are used to express binary coded number's digit"
+    },
+    {
+      "question": "CPU stands for ________________.",
+      "options": {
+        "A": "Control Processing Unit",
+        "B": "Computer Process Unit",
+        "C": "Central Personal Unit",
+        "D": "Central Processing Unit"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "CPU stands for Central Processing Unit."
+    },
+    {
+      "question": "CRACKING comes under ___________",
+      "options": {
+        "A": "website service",
+        "B": "transcription",
+        "C": "computer crime",
+        "D": "data security"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Computer crime. It is the use of a computer as an instrument to further illegal ends. Such as committing fraud, trafficking in child pornography, cracking etc."
+    },
+    {
+      "question": "Computer Monitor is also known as",
+      "options": {
+        "A": "DVU",
+        "B": "UVD",
+        "C": "VDU",
+        "D": "CCTV"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The computer monitor is a visual display Unit (VDU).A VDU displays images generated by a computer or other electronic device"
+    },
+    {
+      "question": "Computer applications are example of ___________",
+      "options": {
+        "A": "Hardware",
+        "B": "Computer utilities",
+        "C": "Program packages",
+        "D": "Software"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Every computer application is a software, because they are things that exist only in the computer, hence they aren't hardware."
+    },
+    {
+      "question": "Computer files can be characterised by all but",
+      "options": {
+        "A": "A title",
+        "B": "It's accessibility",
+        "C": "The ability to be modified",
+        "D": "Where it is stored"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The storage position of a file isn't one of its numerous characters because, it can be stored either in a primary or secondary memory."
+    },
+    {
+      "question": "Computer software can be classified into how many parts?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "2",
+        "D": "4"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Computer software can be classified into two parts. These are : the system softwares and the application softwares"
+    },
+    {
+      "question": "Computer softwares like ios, Ubuntu, Chrome OS, are classified as ___________",
+      "options": {
+        "A": "Computer utilities",
+        "B": "System software",
+        "C": "Computer application",
+        "D": "Application package"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "All applications listed are examples of system software, because they are all operating system."
+    },
+    {
+      "question": "Computers are used majorly at offices for ____________",
+      "options": {
+        "A": "Recreational purposes",
+        "B": "Research purposes",
+        "C": "Storage purpose",
+        "D": "Security purposes"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "In offices, computers are majorly used to store files and other confidential."
+    },
+    {
+      "question": "Computers that are portable and convenient for users who travel are known as _________________",
+      "options": {
+        "A": "Super computers",
+        "B": "Laptops",
+        "C": "Mini computers",
+        "D": "File servers"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A laptop computer is a personal computer for mobile use. It has most of the same components as a desktop computer, including a display, a keyboard, a pointing device such as a touchpad (also known as a trackpad) and/or a pointing stick, and speakers into a single unit. A laptop is powered by mains electricity via an AC adapter, and can be used away from an outlet using a rechargeable battery. Laptops are also sometimes called notebook computers, notebooks, ultrabooks or netbooks. This could also be referred to as portable computers as they are easy to carry around."
+    },
+    {
+      "question": "Destruction of files for malicious reasons such as access by fraudulent people is classified as being",
+      "options": {
+        "A": "modified",
+        "B": "accessed",
+        "C": "destroyed",
+        "D": "unauthorized access"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Access to an information system or network that violates the owner or operator's stated security policy is considered unauthorized access."
+    },
+    {
+      "question": "Encryption helps with what?",
+      "options": {
+        "A": "Spam messages",
+        "B": "identify source of message",
+        "C": "Safe delivery of messages to destination without being accessed by a third party",
+        "D": "interpretation of message and digital data"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Encryption deals with the safe transfer of data of information from its source to its destinations, without a third party having access to the information or data being transferred."
+    },
+    {
+      "question": "Files that maintain the hierarchical structure of the file system.",
+      "options": {
+        "A": "Descriptors",
+        "B": "Directories",
+        "C": "Modifiers",
+        "D": "Relative files"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Directories are the files that maintain the hierarchical structure of the file system. The users are allowed to read information in directories"
+    },
+    {
+      "question": "Fire fox is an example of __________",
+      "options": {
+        "A": "System software",
+        "B": "Application package",
+        "C": "Application software",
+        "D": "Computer tools."
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Fire fox is an application software, because it is not an operating system, hence it can't be classified as a system software because it doesn't contribute to the running of the computer system"
+    },
+    {
+      "question": "Firefox is an example of __________",
+      "options": {
+        "A": "System software",
+        "B": "Application package",
+        "C": "Application package",
+        "D": "Computer tools"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Fire fox is an application software, because it is not an operating system, hence it can't be classified as a system software because it doesn't contribute to the running of the computer system."
+    },
+    {
+      "question": "For what does WAN stand?",
+      "options": {
+        "A": "World application network",
+        "B": "Wide area network",
+        "C": "Wide acreage network",
+        "D": "Work arrangement network"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "In its simplest form, a wide-area network (WAN) is a collection of local-area networks (LANs) or other networks that communicate with one another. A WAN is essentially a network of networks, with the Internet the world's largest WAN"
+    },
+    {
+      "question": "From where can the name of a user account be changed?",
+      "options": {
+        "A": "Setting",
+        "B": "Computer name",
+        "C": "Code panel",
+        "D": "Control panel"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Control panel. It is a component of microsoft Windows that provides the ability to view and change system settings. It consists of a set of applets that include adding or removing hardware and software, controlling user accounts, changing accessibility options and accessing networking settings."
+    },
+    {
+      "question": "Hexadecimal numbers are a mixture of",
+      "options": {
+        "A": "Octal and decimal numbers",
+        "B": "Binary and octal numbers",
+        "C": "Letters and decimal digits",
+        "D": "Binary and decimal numbers"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The hexadecimal number system is described as a 16 digit number representation of numbers from 0 - 9 (decimal digits) and digits from A - F (letters)."
+    },
+    {
+      "question": "How are the stages of SDLC implemented?",
+      "options": {
+        "A": "Randomly, without overlapping",
+        "B": "sequentially, without overlapping",
+        "C": "sequentially with overlapping",
+        "D": "randomly with overlapping."
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "the stages of SDLC are executed sequentially in order to ensure it goes accordingly. Also, they must be done sequential to gets results from previous stages to know what to improve in later stages. Also it does not overlap because, a stage must be concluded before another proceeds."
+    },
+    {
+      "question": "How many different values can a bit have?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "10",
+        "D": "256"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A bit can have 2 different values."
+    },
+    {
+      "question": "How many types of booting are there?",
+      "options": {
+        "A": "5",
+        "B": "3",
+        "C": "2",
+        "D": "4"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "There are 2 types of booting cold and warm booting"
+    },
+    {
+      "question": "In Boolean algebra, the bar sign (-) indicates ...................",
+      "options": {
+        "A": "OR operation",
+        "B": "AND operation",
+        "C": "NOT operation",
+        "D": "None of the above"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "In modern Boolean algebra, we use the plus (+) symbol to mean OR, the dot (•) symbol to mean AND, and a bar above a variable to mean NOT."
+    },
+    {
+      "question": "In Microsoft Excel, sheet tabs can be renamed by ______",
+      "options": {
+        "A": "Double-clicking any column",
+        "B": "Double-clicking any row",
+        "C": "Double-clicking on the sheet tab; entering the new name",
+        "D": "Going to File, and clicking Save As"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "This is the quickest way to rename a sheet. Double left click on the sheet tab which you would like to rename."
+    },
+    {
+      "question": "In SQL, which command is used to remove a stored function from the database?",
+      "options": {
+        "A": "REMOVE Function",
+        "B": "DELETE function",
+        "C": "DROP function",
+        "D": "ERASE Function"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "DROP FUNCTION removes the definition of an existing function. To execute this command the user must be the owner of the function. The argument types to the function must be specified, since several different functions can exist with the same name and different argument lists."
+    },
+    {
+      "question": "In any software package, which of the following versions represents a major improvement on the previous version?",
+      "options": {
+        "A": "1.0",
+        "B": "1.5",
+        "C": "2.0",
+        "D": "2.5"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Windows 2.0 allowed application windows to overlap each other, unlike its predecessor Windows 1.0, which could display only tiled windows. Windows 2.0 also introduced more sophisticated keyboard-shortcuts and the terminology of \"Minimize\" and \"Maximize\", as opposed to \"Iconize\" and \"Zoom\" in Windows 1.0. It was also the last version of Windows that did not require a hard disk. With the improved speed, reliability and usability, computers now started becoming a part of daily life for some workers. Desktop icons and use of keyboard shortcuts helped to speed up work"
+    },
+    {
+      "question": "In general, a file is basically a collection of all related______.",
+      "options": {
+        "A": "Rows & Columns",
+        "B": "Fields",
+        "C": "Database",
+        "D": "Records"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A file is a collection of related data or program records stored on some input/output or auxiliary storage medium."
+    },
+    {
+      "question": "In the files, if order of operation on two or more files are similar, then operation will be",
+      "options": {
+        "A": "complex",
+        "B": "simple",
+        "C": "sequential",
+        "D": "combinational"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "If the order of operation on two or more files is similar, then the operation will be sequential. Sequential operation means that the files will be processed one after the other in the same order as specified."
+    },
+    {
+      "question": "In which situation does running application remain active?",
+      "options": {
+        "A": "when log off",
+        "B": "when user is switched",
+        "C": "when shut down",
+        "D": "when reboot"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Running applications remain active when user is switched because, when user is switched, cache memory is not cleared and the computer system does not go off. Therefore, running apps remain active when user is switched."
+    },
+    {
+      "question": "Internet explorer is used for",
+      "options": {
+        "A": "viewing movies",
+        "B": "Listening to music",
+        "C": "Drawing",
+        "D": "viewing Web pages"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The Internet explorer is used view Web pages. Internet Explorer is a free web browser, commonly called IE or MSIE, that allows users to view web pages on the internet. It is also used to access online banking, online marketing over the internet, listen to and watch streaming videos, and many more. It was introduced by Microsoft in 1995."
+    },
+    {
+      "question": "Java is a ______ language",
+      "options": {
+        "A": "High level",
+        "B": "Low level",
+        "C": "Machine",
+        "D": "Algorithm"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Java is a high level language because, the program is designed to interact with humans, and not the computer."
+    },
+    {
+      "question": "Microsoft PowerPoint is a ________________ application",
+      "options": {
+        "A": "presentation software",
+        "B": "graphing",
+        "C": "productivity software",
+        "D": "gaming"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Microsoft PowerPoint is a powerful slide show presentation program. It is a standard component of the company's Microsoft Office suite software, and is bundled together with Word, Excel, and other office productivity tools. The program uses slides to convey information rich in multimedia.(Basic computer operations)"
+    },
+    {
+      "question": "Microsoft word serves the purpose of ________",
+      "options": {
+        "A": "Developing other applications",
+        "B": "Creating documents",
+        "C": "Storing Documents",
+        "D": "Browsing"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Microsoft word serves the main purpose of creating documents."
+    },
+    {
+      "question": "Numerous files are referred to as _____________",
+      "options": {
+        "A": "Files",
+        "B": "Folder",
+        "C": "Memo",
+        "D": "Drafts"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Folders are created to help collate similar files before storing them. This helps to find files from folder because of its orderly arrangements."
+    },
+    {
+      "question": "Programming language COBOL works best for use in",
+      "options": {
+        "A": "Siemens applications",
+        "B": "student applications",
+        "C": "social applications",
+        "D": "commercial application"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "COBOL, in full Common Business-Oriented Language, high-level computer programming language, one of the first widely used languages and for many years the most popular language in the business community."
+    },
+    {
+      "question": "Running other software on idle computer without the knowledge of the organisation is called theft of ___________",
+      "options": {
+        "A": "Software",
+        "B": "computer",
+        "C": "computer time",
+        "D": "use"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Computer time theft is hacking into a large computer system and utilising its computing resources for a purpose not authorised by the owner of the system."
+    },
+    {
+      "question": "Sensitive data can be protected from prying eyes using _________",
+      "options": {
+        "A": "File permissions",
+        "B": "File locks",
+        "C": "passwords",
+        "D": "encryption"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A File permission specifies who and what can read, write, modify and access them. It therefore important as the codex explains, because without it in place, anyone or anything can access confidential files"
+    },
+    {
+      "question": "Storage which retains data after power cut off is called.",
+      "options": {
+        "A": "Volatile storage",
+        "B": "Non-volatile storage",
+        "C": "Sequential storage",
+        "D": "Direct storage"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Non volatile storage retains data after power is off because, Non volatile storage is a broad collection of technologies and devices that do not require a continuous power supply to retain data or program code persistently on a short or long term basis."
+    },
+    {
+      "question": "System software can further be classified into two. Operating software and ______________ software",
+      "options": {
+        "A": "Utility",
+        "B": "Storage",
+        "C": "Anti virus",
+        "D": "File management system"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The types of system software include: 1.Operating systems or system control program. 2. Utility software or system support programs"
+    },
+    {
+      "question": "System software has which major function?",
+      "options": {
+        "A": "Giving utility",
+        "B": "making navigation easier for user",
+        "C": "controlling the computer system",
+        "D": "maintain the system"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The system software controls the computer system. System software controls a computer's internal functioning, chiefly through an operating system, and also controls such peripherals as monitors, printers, and storage devices."
+    },
+    {
+      "question": "The Caps key on a keyboard is used to___________",
+      "options": {
+        "A": "move to previous page",
+        "B": "Delete files",
+        "C": "Switch between upper and lower case letters",
+        "D": "Space texts"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Caps Lock is a key on a computer keyboard that allows users to generate letters in uppercase once activated, as in \"SAMPLE,\" without holding down the Shift key. It is a toggle key and can be found on the left side of a computer keyboard below the Tab key."
+    },
+    {
+      "question": "The Domain name of a website is also its__________",
+      "options": {
+        "A": "IP address",
+        "B": "TCP address",
+        "C": "Database system",
+        "D": "Network server"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "IP address. Usually, a domain name is used instead of an IP address, because the domain name is easier to work with, and is more human friendly that the IP address. Also, every domain is unique and has its IP address. Therefore, Domain names are used by computer uses, because the IP address is more complex to work with."
+    },
+    {
+      "question": "The Internet is an example of which computer network?",
+      "options": {
+        "A": "LAN",
+        "B": "MAN",
+        "C": "CAN",
+        "D": "WAN"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Mesh network topologies are typical of the internet, and certain wide area networks (WANs)"
+    },
+    {
+      "question": "The acronym IP address has its full meaning to be _________",
+      "options": {
+        "A": "Internet protocol",
+        "B": "Internet password",
+        "C": "International processing",
+        "D": "Internet processing"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Internet protocol is the full meaning of the acronym IP"
+    },
+    {
+      "question": "The acronym from DATABASE MANAGEMENT SYSTEM is ________________",
+      "options": {
+        "A": "DMS",
+        "B": "DBMS",
+        "C": "DMGS",
+        "D": "DMSM"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "DBMS. A Database Management System (DBMS) is software designed to store, retrieve, define, and manage data in a database."
+    },
+    {
+      "question": "The actual physical network of wires, cables and satellite that connects computers and resources throughout the world is the _______________",
+      "options": {
+        "A": "Web",
+        "B": "Internet",
+        "C": "e-commerce",
+        "D": "social media"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The Internet (or internet)is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices."
+    },
+    {
+      "question": "The arrow displayed on the screen of a computer is called",
+      "options": {
+        "A": "Pointer",
+        "B": "Arrow",
+        "C": "Cursor",
+        "D": "Indicator"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The cursor is displayed on the monitor screen to help with navigation."
+    },
+    {
+      "question": "The binary system has the radix of ________",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "½"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Binary consists of two digits, hence its radix being 2"
+    },
+    {
+      "question": "The combination of the arithmetic and logic units, as well as the ______________ unit makes up the central processing unit.",
+      "options": {
+        "A": "input",
+        "B": "memory",
+        "C": "control",
+        "D": "1/0"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The control unit manages and coordinates the operation of a computer system. The ALU is responsible for performing all the arithmetic and bitwise operations. Therefore, both these units combine to form the brain of the computer, ie CPU."
+    },
+    {
+      "question": "The delete permission allows one to ____________",
+      "options": {
+        "A": "share music",
+        "B": "delete or remove files and directories",
+        "C": "read files and directories",
+        "D": "modify files and directories"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Delete or remove files. You can delete a permission that is associated with a user account. When you delete a permission, you remove it from use for all user accounts."
+    },
+    {
+      "question": "The device primarily used to provide hardcopy is the?",
+      "options": {
+        "A": "printer",
+        "B": "card reader",
+        "C": "computer console",
+        "D": "CRT"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Printer is an output device that is primarily used to provide hardcopy in the form of paper."
+    },
+    {
+      "question": "The end users are able to operate at the _______ tier.",
+      "options": {
+        "A": "model",
+        "B": "application",
+        "C": "data",
+        "D": "presentation"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The presentation tier is the user interface and communication layer of the application where the end user interacts with the application."
+    },
+    {
+      "question": "The explorer bar is divided into _________ categories.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The explore bar is divided into three categories."
+    },
+    {
+      "question": "The first commuters were programed using _________",
+      "options": {
+        "A": "Assembly language",
+        "B": "Machine language",
+        "C": "Source code",
+        "D": "Object code"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Machine languages or Machine code. Functionality, this language is a system which comprises of binary digits."
+    },
+    {
+      "question": "The function of an assembler is to _________",
+      "options": {
+        "A": "convert basic language to machine language",
+        "B": "convert high level language to machine language",
+        "C": "convert assembly language to machine language",
+        "D": "convert assembly language into high level language"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Assembler convert assembly language to machine language for the computer to operate with"
+    },
+    {
+      "question": "The hexadecimal digits are 0-9 and A-_____",
+      "options": {
+        "A": "E",
+        "B": "F",
+        "C": "G",
+        "D": "D"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Hexadecimal has 16 digits ranging from 0 to 9, and A to F."
+    },
+    {
+      "question": "The illegal access to a network or computer system is___________",
+      "options": {
+        "A": "security",
+        "B": "cracking",
+        "C": "virus",
+        "D": "piracy"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Cracking is trying to get into computer systems in order to steal, corrupt or illegitimately view data."
+    },
+    {
+      "question": "The java interpreter translates a java program from ____________ to machine language.",
+      "options": {
+        "A": "nibble",
+        "B": "bit",
+        "C": "byte code",
+        "D": "high level language"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The java interpreter translates a java program from ____________Byte code. This is a program code that has been compiled from source code into low level code designed for a software interpreter. to machine language."
+    },
+    {
+      "question": "The joystick typically have a button on _________ used to select the option pointed by the cursor.",
+      "options": {
+        "A": "bottom",
+        "B": "left",
+        "C": "right",
+        "D": "top"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The bottom is placed on top of the joystick."
+    },
+    {
+      "question": "The logical structure of the database can be depicted through its ______",
+      "options": {
+        "A": "Domain",
+        "B": "Data model",
+        "C": "Architecture",
+        "D": "Schemas"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Data model. It is the logical inter relationships and data flow between different data elements involved in the information word. Through the flow chart, the logical structure of a database can be depicted."
+    },
+    {
+      "question": "The major function of a Database management system is _______________",
+      "options": {
+        "A": "Virus detection",
+        "B": "Cyber security",
+        "C": "Manipulation of data in a data base",
+        "D": "Store large data"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The DBMS performs the function of manipulating the data in a data base, as well as managing the database structure."
+    },
+    {
+      "question": "The memory unit receives data and information from which unit?",
+      "options": {
+        "A": "input unit",
+        "B": "output unit",
+        "C": "control unit",
+        "D": "arithmetic and logic unit"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "From the chart or table of data flow, the data moves from the input unit to the control unit where it is determined if it needs a logical or arithmetic function. From the control unit, it is passed on to the arithmetic and logical unit, where it is then processed before being transferred to the memory unit, to be stored till when needed."
+    },
+    {
+      "question": "The most basic network is _________",
+      "options": {
+        "A": "WAN",
+        "B": "SAN",
+        "C": "PAN",
+        "D": "MAN"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Personal area network is the most basic network, because it is usually made up of one wireless modem, a computer or two mini computers and other computer accessories, and it revokes around one person in one building."
+    },
+    {
+      "question": "The number of input combination for a 4 input gate is ______",
+      "options": {
+        "A": "9",
+        "B": "8",
+        "C": "15",
+        "D": "16"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "16 possible combinations So, a 4-input AND gate has 16 possible combinations, 5 inputs would be 32 outputs, and so on."
+    },
+    {
+      "question": "The process of feeding instructions into the computer system is called",
+      "options": {
+        "A": "Processing",
+        "B": "Accessing",
+        "C": "Inputting",
+        "D": "Outputting"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "In computer science, the general meaning of input is to provide or give something to the computer, in other words, when a computer or device is receiving a command or signal from outer sources, the event is referred to as input to the device"
+    },
+    {
+      "question": "The rules that govern the structure of a command or programming language is called",
+      "options": {
+        "A": "Syntax",
+        "B": "Algorithm",
+        "C": "Logic",
+        "D": "Password"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Syntax refers to the rules that define the structure of a language. Syntax in computer programming means the rules that control the structure of the symbols, punctuation, and words of a programming language."
+    },
+    {
+      "question": "The set of rules that defines the combination of symbols that are considered to be correctly structured statements or expressions in that language is called _________",
+      "options": {
+        "A": "Syntax",
+        "B": "Instruction",
+        "C": "Program",
+        "D": "Domain"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "In computer science, the syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language."
+    },
+    {
+      "question": "The super computers are mainly used for",
+      "options": {
+        "A": "Data retrieval operations",
+        "B": "Input-output intensive processing",
+        "C": "Manipulation of records",
+        "D": "Mathematical intensive scientific applications"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Supercomputer is a computer with a high level of performance compared to a general-purpose computer. Performance of a supercomputer is measured in floating-point operations per second (FLOPS) instead of million instructions per second (MIPS)."
+    },
+    {
+      "question": "The windows explorer is divided into _________ categories.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022
+    },
+    {
+      "question": "The windows explorer is divided into _________ categories. A. 2 B. 3 C. 5 D. 7 The windows explorer window is separated into two parts, the left and the right-hand sides. The left-hand side pane shows the system folders (i.e. desktop) and sub-folders, whilst to the right-hand window, we can see/view the contents of the selected folders.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The windows explorer window is separated into two parts, the left and the right-hand sides. The left-hand side pane shows the system folders (i.e. desktop) and sub-folders, whilst to the right-hand window, we can see/view the contents of the selected folders."
+    },
+    {
+      "question": "To determine if a computer has the ability to think, a test was conducted named as",
+      "options": {
+        "A": "Turing test",
+        "B": "Computation test",
+        "C": "Teletype test",
+        "D": "Interrogator test"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The Turing test, originally called the imitation game by Alan Turing in 1950, is a test of a machine's ability to exhibit intelligent behaviour equivalent to, or indistinguishable from, that of a human. ... If the evaluator cannot reliably tell the machine from the human, the machine is said to have passed the test."
+    },
+    {
+      "question": "Total types of data that can be read by document reader are",
+      "options": {
+        "A": "marks",
+        "B": "handwritten and printed characters",
+        "C": "printed lines",
+        "D": "all of the above"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "All of the above listed data types can be read by a document reade"
+    },
+    {
+      "question": "Types of software programs are",
+      "options": {
+        "A": "Application programs",
+        "B": "replicate programs",
+        "C": "Logical programs",
+        "D": "both A and B"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "both A and B"
+    },
+    {
+      "question": "Typically, an ATM is used for",
+      "options": {
+        "A": "record keeping",
+        "B": "budget making",
+        "C": "watching movies",
+        "D": "withdrawing cash"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "An Automated Teller Machine, better known as an ATM, is a specialized computer that makes it convenient for bank account holders to manage their money. It allows them to check their account balances, withdraw or deposit money, transfer money from one account to another, print a statement of account transactions, and even purchase stamp"
+    },
+    {
+      "question": "What controls the way in which the computer system function and provides a means by which users can interact with the computer.",
+      "options": {
+        "A": "Application software",
+        "B": "Internet",
+        "C": "Operating system",
+        "D": "Control unit"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "An Operating System (OS) is a software that acts as an interface between computer hardware components and the user."
+    },
+    {
+      "question": "What differs a system software from application software?",
+      "options": {
+        "A": "ability to multi task",
+        "B": "being minimal in terms of space",
+        "C": "presence of cache memory",
+        "D": "unique programs installed by the creators to help run the computer"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A system software differs from an application software in so many ways. Of which one is the ability of system software to control and run the computer, while applications software are installed by users to perform certain functions."
+    },
+    {
+      "question": "What does CO stand for in COBOL?",
+      "options": {
+        "A": "common object",
+        "B": "common",
+        "C": "computer oriented",
+        "D": "common operating"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "COBOL stands for common business-oriented language. Therefore, CO stands for common"
+    },
+    {
+      "question": "What does ICT stand for?",
+      "options": {
+        "A": "information and community technology",
+        "B": "Internet and communication technology",
+        "C": "information and communication technology",
+        "D": "Internet access communication technologies"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "ICT means Information and Communications Technology"
+    },
+    {
+      "question": "What does LAN stand for?",
+      "options": {
+        "A": "Land area network",
+        "B": "Local arrangement network",
+        "C": "Legal alternative network",
+        "D": "Local area network"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A local area network (LAN) is a collection of devices connected together in one physical location, such as a building, office, or home. A LAN can be small or large, ranging from a home network with one user to an enterprise network with thousands of users and devices in an office or school. Regardless of size, a LAN's single defining characteristic is that it connects devices that are in a single, limited area."
+    },
+    {
+      "question": "What does RAM and ROM have in common?",
+      "options": {
+        "A": "They both deal with memory",
+        "B": "They were both invented by Bill Gates",
+        "C": "They do not have anything in common",
+        "D": "Their initials are similar"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "RAM and ROM are types of computer memory."
+    },
+    {
+      "question": "What does a linker program do?",
+      "options": {
+        "A": "it places the program in the memory for execution",
+        "B": "relocates the program to execute from the specific memory area allocated to it",
+        "C": "Links the program with other programs needed for its execution",
+        "D": "interface the program with the entities generating its input data"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "from the name linker program, a linker program links a program with other programs needed for its execution. It does this by taking one or more objects files and combining them into a single executable file, library file, or another object file."
+    },
+    {
+      "question": "What does an Operating System do?",
+      "options": {
+        "A": "Memory Management",
+        "B": "File Management",
+        "C": "Application Management",
+        "D": "All of the above"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Operating System (OS) is a program that manages a computer's resources, especially the allocation of those resources among other programs. Typical resources include the central processing unit (CPU), computer memory, file storage, input/output (I/O) devices, and network connections."
+    },
+    {
+      "question": "What is a computer file.",
+      "options": {
+        "A": "A computer program",
+        "B": "A document like bunch of text",
+        "C": "A place on a computer where information is stored in a package",
+        "D": "A physical paper document that entails how a computer works"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A computer file is a computer resource for recording data in a computer storage device, primarily identified by its file name"
+    },
+    {
+      "question": "What is a website main page called?",
+      "options": {
+        "A": "Home page",
+        "B": "Bookmark",
+        "C": "Search page",
+        "D": "Task page"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The Homepage is the main Web page of a website."
+    },
+    {
+      "question": "What is considered the brain of the computer?",
+      "options": {
+        "A": "Central Processing Unit",
+        "B": "Monitor/Display Screen",
+        "C": "Mouse",
+        "D": "Printer"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The CPU is the brain of a computer, containing all the circuitry needed to process input, store data, and output results. The CPU is constantly following instructions of computer programs that tell it which data to process and how to process it. Without a CPU, we could not run programs on a computer."
+    },
+    {
+      "question": "What is debugging?",
+      "options": {
+        "A": "Preventing bugs from getting to the computer",
+        "B": "inserting errors into the program",
+        "C": "finding and removing errors from a computer",
+        "D": "finding and removing errors from a program"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Debugging is the process of finding and removing errors from a program."
+    },
+    {
+      "question": "What is the etiquette one should follow while working online?",
+      "options": {
+        "A": "Anything goes . . . providing he/she remains anonymous",
+        "B": "Netflix",
+        "C": "Netiquette",
+        "D": "Piracy"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Netiquette, which is a portmanteau of \"net\" and \"etiquette,\" refers to using courtesy and politeness when communicating with others online."
+    },
+    {
+      "question": "What is the full form of CU?",
+      "options": {
+        "A": "Compound Unit",
+        "B": "Communication Unit",
+        "C": "Computer unit",
+        "D": "Control unit"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "CU stands for control unit. The control unit (CU) is a component of a computer's central processing unit (CPU) that directs the operation of the processor. A CU typically uses a binary decoder to convert coded instructions into timing and control signals that direct the operation of the other units (memory, arithmetic logic unit and input and output devices, etc.)."
+    },
+    {
+      "question": "What is the full form of TCP?",
+      "options": {
+        "A": "Transmission Control Protocol",
+        "B": "Transmission Communication Protocol",
+        "C": "Transformation Control Protocol",
+        "D": "Transmission Central Pass"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "TCP means Transmission Control Protocol."
+    },
+    {
+      "question": "What is the full form of UDP?",
+      "options": {
+        "A": "User Datagram Packet",
+        "B": "User Data Packet",
+        "C": "User Datagram Protocol",
+        "D": "Unique Data Protocol"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "User datagram protocol (UDP) operates on top of the Internet Protocol (IP) to transmit datagrams over a network."
+    },
+    {
+      "question": "What is the function of firewall?",
+      "options": {
+        "A": "Service provider",
+        "B": "Cyber security",
+        "C": "Internet browser",
+        "D": "Storage device"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Fire Wall could be either a software or hardware, but its major function is to help secure a computer system or website from hackers."
+    },
+    {
+      "question": "What is the major purpose of application software?",
+      "options": {
+        "A": "oversee the running of the computer",
+        "B": "utilities",
+        "C": "database management",
+        "D": "recreation"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The major function performed by all application software is to allow the user utilize it in a particular area. Be it security, research, gaming, etc."
+    },
+    {
+      "question": "What is the permanent memory built into your computer called?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "CPU",
+        "D": "CD-ROM"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "ROM is an acronym for Read-Only Memory. It refers to computer memory chips containing permanent or semi-permanent data. Unlike RAM, ROM is non-volatile; even after you turn off your computer, the contents of ROM will remain. Almost every computer comes with a small amount of ROM containing the boot firmware."
+    },
+    {
+      "question": "What is the primary purpose of Microsoft Excel?",
+      "options": {
+        "A": "To write essays",
+        "B": "To show a slide presentation",
+        "C": "To solve problems involving numbers",
+        "D": "To keep students updated in the latest Microsoft Office product"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Microsoft Excel is a spreadsheet application designed to perform basic and complex mathematical computations and functions"
+    },
+    {
+      "question": "What is the shortcut key to \"undo\" last action on a Microsoft word page?",
+      "options": {
+        "A": "Ctrl + A",
+        "B": "Ctrl + U",
+        "C": "Ctrl + X",
+        "D": "Ctrl + Z"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "To undo an action press Ctrl+Z. If you prefer your mouse, click Undo on the Quick Access Toolbar. You can press Undo (or CTRL+Z) repeatedly if you want to undo multiple steps"
+    },
+    {
+      "question": "What kind of data is processed by an analog computer?",
+      "options": {
+        "A": "Discrete data",
+        "B": "Intermittent",
+        "C": "Discretely varying",
+        "D": "Continuously varying data"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "An analog computer is the one which is used to process continuously varying data. This changeable yet continuous data is generally referred to as the analog data"
+    },
+    {
+      "question": "What tells the computer how to use its components?",
+      "options": {
+        "A": "utility",
+        "B": "application",
+        "C": "operating system",
+        "D": "network"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Operating system being responsible for the running of the computer system, tells the computer how to use its component, and the most suitable component to use."
+    },
+    {
+      "question": "What type of errors occurs when the program is asked to implement an impossible task such as dividing a number by zero?",
+      "options": {
+        "A": "Syntax error",
+        "B": "Runtime error",
+        "C": "Logical error",
+        "D": "Arithmetic error"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Runtime error. This type of error occurs when the program is asked to perform an impossible task or a task that has not been included in the program written."
+    },
+    {
+      "question": "When an input signal 1 is applied to a NOT gate, the output is ..................",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "Either 0 & 1",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "In a NOT gate, no output (0) is there when an input (1) is there."
+    },
+    {
+      "question": "When does the output of a NAND gate =1?",
+      "options": {
+        "A": "whenever a 0 is present at an input",
+        "B": "only when all input =0",
+        "C": "whenever 1 is present at an input",
+        "D": "only when all input =1"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Whenever a 0 is present at an input, NAND gate = 1."
+    },
+    {
+      "question": "When does the output of a NOR gate =0?",
+      "options": {
+        "A": "whenever 0 is present at input",
+        "B": "only when all input =0",
+        "C": "whenever 1 is present at input",
+        "D": "only when all input =1."
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The NOR gate is a digital logic gate that implements logical NOR - it behaves according to the truth table to the right. A HIGH output (1) results if both the inputs to the gate are LOW (0); if one or both input is HIGH (1), a LOW output (0) results."
+    },
+    {
+      "question": "Which among the following generation computers had expensive operation cost?",
+      "options": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The first generation computers had extensive operation cost because of many reasons such as the excess consumption of electricity, high generation of heat, as well as the cost of maintaining it."
+    },
+    {
+      "question": "Which can be the input and output devices both?",
+      "options": {
+        "A": "Scanner",
+        "B": "Touch screen monitor",
+        "C": "Speaker",
+        "D": "Digitizer"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A touch screen monitor can be used to input data into the computer system and can also be used to receive output information."
+    },
+    {
+      "question": "Which computer accessory is both an input and output device?",
+      "options": {
+        "A": "Monitor",
+        "B": "Printer",
+        "C": "Network cards",
+        "D": "Scanner"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Devices for communication between computers, such as modems and network cards, typically perform both input and output operations."
+    },
+    {
+      "question": "Which doesn't belong to the group?",
+      "options": {
+        "A": "Primary memory",
+        "B": "Main memory",
+        "C": "External memory",
+        "D": "Internal memory"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "External memory doesn't belong to the group because it is a type of memory that can be detached from the computer, unlike the other three options that can't be detached from the computer system because they are inbuilt."
+    },
+    {
+      "question": "Which doesn't belong to the group?",
+      "options": {
+        "A": "Flash drive",
+        "B": "Floppy disk",
+        "C": "Compact disk",
+        "D": "Memory unit"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Memory unit doesn't belong to the group because, it is a software and not a hard ware."
+    },
+    {
+      "question": "Which is not a network for distribution of information?",
+      "options": {
+        "A": "cloud storage",
+        "B": "Several computers to one printer",
+        "C": "Microsoft Word",
+        "D": "E-mail"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Ms-word is not a network for distribution of information."
+    },
+    {
+      "question": "Which key deletes text?",
+      "options": {
+        "A": "Arrow keys",
+        "B": "enter key",
+        "C": "backspace key",
+        "D": "esc key"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The backspace key is used to delete text, alphabets, etc."
+    },
+    {
+      "question": "Which number base system is used by low level languages",
+      "options": {
+        "A": "Duodecimal",
+        "B": "Binary",
+        "C": "Hexadecimal",
+        "D": "Decimal"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "binary base system is used by low level languages to interact with the computer."
+    },
+    {
+      "question": "Which of the below-mentioned reasons do not satisfy the reason why people create a computer virus?",
+      "options": {
+        "A": "protection",
+        "B": "Identity theft",
+        "C": "pranks",
+        "D": "research purpose"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Computer virus are not created for protection purpose."
+    },
+    {
+      "question": "Which of the following is a computer not used for?",
+      "options": {
+        "A": "entertainment",
+        "B": "information",
+        "C": "social media",
+        "D": "none of the above"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Computer is used in almost every aspect. Hence, it is almost impossible to say there is an aspect where computer isn't used."
+    },
+    {
+      "question": "Which of the following is an example of output device",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "speaker",
+        "D": "microphone"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A speaker is an output device because, it projects sounds from the system to the user."
+    },
+    {
+      "question": "Which of the following is an example of software",
+      "options": {
+        "A": "Joy stick",
+        "B": "Keyboard",
+        "C": "Operating systems",
+        "D": "Mouse"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Operating system is the only example of software from the options"
+    },
+    {
+      "question": "Which of the following is not a method of filing",
+      "options": {
+        "A": "Random",
+        "B": "Sequential",
+        "C": "Serial",
+        "D": "Geographical"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Geographical method of computer filing doesn't exist."
+    },
+    {
+      "question": "Which of the following is not a model used in problem solving?",
+      "options": {
+        "A": "critical thinking",
+        "B": "SDCL",
+        "C": "waterfall",
+        "D": "prototype"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Waterfall is not a model used in solving problems."
+    },
+    {
+      "question": "Which of the following is not a stage of system development cycle?",
+      "options": {
+        "A": "Design",
+        "B": "Test running",
+        "C": "Implementation",
+        "D": "Observation"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Observation isn't a stage of system development cycle."
+    },
+    {
+      "question": "Which of the following is not a type of computer network?",
+      "options": {
+        "A": "VPN",
+        "B": "CAN",
+        "C": "WLAN",
+        "D": "DAN"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Dan is not a type of computer network."
+    },
+    {
+      "question": "Which of the following is not a type of computer on the basis of operation?",
+      "options": {
+        "A": "Remote",
+        "B": "Hybrid",
+        "C": "Analog",
+        "D": "Digital"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Every other option but option A, is a type of computer based on the basis of operation"
+    },
+    {
+      "question": "Which of the following is not a type of logic gate",
+      "options": {
+        "A": "XOR",
+        "B": "OR",
+        "C": "AND",
+        "D": "DOR"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Dor is not a type of logic gate"
+    },
+    {
+      "question": "Which of the following is termed as the minimum error code?",
+      "options": {
+        "A": "binary code",
+        "B": "gray code",
+        "C": "excess 3 code",
+        "D": "octal code"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Gray code is considered minimum error code because they are less error prone for mechanical devices that involve making and breaking electrical circuits because they only change in one bit position at a time."
+    },
+    {
+      "question": "Which of the following isn't used to navigate in a computer?",
+      "options": {
+        "A": "Cursor",
+        "B": "Keyboard",
+        "C": "mouse",
+        "D": "Scanner"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A scanner is not used to navigate the computer"
+    },
+    {
+      "question": "Which of the following software can't be categorized as an application software?",
+      "options": {
+        "A": "DBM",
+        "B": "MS-DOS",
+        "C": "Spreadsheet",
+        "D": "word processor"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "MS-DOS can't be classified as an application software because, it is an operating system software. And OS are classified as system software not application software."
+    },
+    {
+      "question": "Which of the following system software resides in the main memory always?",
+      "options": {
+        "A": "Text editor",
+        "B": "Assembler",
+        "C": "Linker",
+        "D": "Loader"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The loader is always in the main memory because it must not be separated from the computer else, the system will not function."
+    },
+    {
+      "question": "Which of the listed is not a type of computer application?",
+      "options": {
+        "A": "Microsoft word",
+        "B": "Firefox",
+        "C": "Joy stic",
+        "D": "VLC media player"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "This because a joystick is a hard ware and not a software"
+    },
+    {
+      "question": "Which of the listed is not a type of computer application?",
+      "options": {
+        "A": "Microsoft word",
+        "B": "Firefox",
+        "C": "Joy stick",
+        "D": "VLC media player"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022
+    },
+    {
+      "question": "Which of the memories must be refreshed many times per second?",
+      "options": {
+        "A": "EPROM",
+        "B": "ROM",
+        "C": "Static RAM",
+        "D": "Dynamic RAM"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Dynamic RAM memory must be refreshed many times a second because without it being refreshed often, it will lose the data contents it holds"
+    },
+    {
+      "question": "Which of these application packages is mostly used by computer users?",
+      "options": {
+        "A": "CorelDraw",
+        "B": "Ms Access",
+        "C": "Ms Excel",
+        "D": "Ms Word"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Ms Word is an application package mostly used by computer users."
+    },
+    {
+      "question": "Which of these is not a job of the operating system",
+      "options": {
+        "A": "Stopping unauthorised users accessing files that do not belong to them",
+        "B": "Handling HTTP requests for Web pages",
+        "C": "Allocating memory to programs that are running on the computer",
+        "D": "none of the above"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The operating system doesn't handle HTTP requests for Web pages but a web server does."
+    },
+    {
+      "question": "Which of these is not a programming language",
+      "options": {
+        "A": "HTML",
+        "B": "Java",
+        "C": "C++",
+        "D": "ios"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Ios is an operating system not a programming language."
+    },
+    {
+      "question": "Which part of a laptop serves the same function as a mouse?",
+      "options": {
+        "A": "Arrow keys",
+        "B": "Navigation bar",
+        "C": "Touchpad",
+        "D": "Keyboard"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Touch pad is the part of a laptop that acts as a mouse."
+    },
+    {
+      "question": "Which part of a processor contains the hard ware necessary to perform all the operations required by a computer?",
+      "options": {
+        "A": "Data path",
+        "B": "Controller",
+        "C": "Registers",
+        "D": "Cache"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The data path contains all hardware necessary to perform every operation. A controller tells the data path what needs to be done."
+    },
+    {
+      "question": "Which process is used by large retailers to study trends?",
+      "options": {
+        "A": "Data mining",
+        "B": "Data selection",
+        "C": "Data conversion",
+        "D": "Pos"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Data mining is used to study trends by large retailers."
+    },
+    {
+      "question": "Which program translates programs to a simpler language that the computer can execute.",
+      "options": {
+        "A": "Compiler",
+        "B": "Interpreter",
+        "C": "Processor",
+        "D": "algorithm"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A compiler is the program that translates the programs written in low level languages to high level languages that can be understood by the computer."
+    },
+    {
+      "question": "Which term describes accessing files from a computer other than the one where the files are stored.",
+      "options": {
+        "A": "local access",
+        "B": "remote access",
+        "C": "cloud access",
+        "D": "special access"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The cloud access enables one access files from a cloud database than where the files are stored because, anything uploaded to a cloud can be accessed from another computer"
+    },
+    {
+      "question": "Which type of network can span several building, but is usually less than 30 square miles big?",
+      "options": {
+        "A": "CAN",
+        "B": "LAN",
+        "C": "MAN",
+        "D": "WAN"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "CAN usually provides network for places which are less than 30 square miles."
+    },
+    {
+      "question": "Which type of network is usually contained inside one office building?",
+      "options": {
+        "A": "CAN",
+        "B": "LAN",
+        "C": "MAN",
+        "D": "WAN"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "A local area network is the most suitable network for an office building because, it gives network to computer at a single site"
+    },
+    {
+      "question": "Why is the base 10 system unique?",
+      "options": {
+        "A": "There are only 10 fingers to every human",
+        "B": "There are only 10 one digit numbers",
+        "C": "The number 10 has just 2 factors",
+        "D": "no specific reason."
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The base 10 system of counting has been passed from generations to generations. This because, we learn to count with our fingers at young age."
+    },
+    {
+      "question": "Word processor, spreadsheets, database, graphics and presentation software are all examples of?",
+      "options": {
+        "A": "application packages",
+        "B": "utility packages",
+        "C": "operating system software",
+        "D": "None of the above"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "All the listed above are examples of application packages"
+    },
+    {
+      "question": "_______ is the process of finding errors and fixing them within a program.",
+      "options": {
+        "A": "Compiling",
+        "B": "Executing",
+        "C": "Debugging",
+        "D": "Scanning"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Debugging is the process of detecting and removing of existing and potential errors (also called as 'bugs') in a software code that can cause it to behave unexpectedly or crash. To prevent incorrect operation of a software or system, debugging is used to find and resolve bugs or defects"
+    },
+    {
+      "question": "________ is the process of dividing the disk into tracks and sectors",
+      "options": {
+        "A": "Tracking",
+        "B": "Formatting",
+        "C": "Crashinng",
+        "D": "Allotting"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "The correct answer is Formatting. The process of dividing the disk into tracks and sectors is called formatting. In computer disk storage, a sector is a subdivision of a track on a magnetic disk or optical disc. When a disk undergoes a low-level format, it is divided into tracks and sectors."
+    },
+    {
+      "question": "_________ are programmes that affect the effectiveness of a computer system.",
+      "options": {
+        "A": "bugs",
+        "B": "virus",
+        "C": "anti virus",
+        "D": "none of the above"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Virus is a piece of code which is capable of copying itself and typically has a detrimental effect, such as corrupting the system or destroying data."
+    },
+    {
+      "question": "___________ booting is done by turning on the computer at first instance.",
+      "options": {
+        "A": "hot",
+        "B": "spicy",
+        "C": "cold",
+        "D": "cool"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Cold booting is the process where a computer is turned on from a totally powerless state."
+    },
+    {
+      "question": "___________ is the combination of already processed _____________",
+      "options": {
+        "A": "information /data",
+        "B": "data /information",
+        "C": "information /instructions",
+        "D": "instructions /Data"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Information is the combination of already processed data"
+    },
+    {
+      "question": "___________ is when someone steals another persons identity.",
+      "options": {
+        "A": "Cyber bullying",
+        "B": "Identity Theft",
+        "C": "Identity Phase",
+        "D": "Cyber Know How"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Identity theft occurs when someone uses another person's personal identifying information, like their name, identifying number, or credit card number, without their permission, to commit fraud or other crimes. The term identity theft was coined in 1964"
+    },
+    {
+      "question": "__________________ is the conversion of computer data from one format to another.",
+      "options": {
+        "A": "data conversion",
+        "B": "data implementation",
+        "C": "data transmission",
+        "D": "data transfer"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "Data conversion is the process of translating data from one format to another"
+    },
+    {
+      "question": "___________________ is a program meant to be sent from one computer to another across the world wide Web.",
+      "options": {
+        "A": "Applet",
+        "B": "Mail",
+        "C": "algorithm",
+        "D": "data packages"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2022,
+      "explanation": "applet Is a \"small Java\" program that can be used in an internetworking environment. These programs can be transferred over the internet from one computer to another and can be displayed on various web browsers."
+    },
+    {
+      "question": "A computer code that spreads without the user interaction and can cause network performance problem is",
+      "options": {
+        "A": "a trojan",
+        "B": "a computer worm",
+        "C": "a spyware",
+        "D": "a computer virus"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A computer worm is a computer code that spreads without user interaction, they are not always destructive but can cause network performance and stability problems."
+    },
+    {
+      "question": "A device that sends and receives printed pages or images over telephone lines by digitizing the material with an internal optical scanner and transmitting the information as electronic signals is a",
+      "options": {
+        "A": "ATM",
+        "B": "scanner",
+        "C": "GSM",
+        "D": "fax machine"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Fax machine is a device that sends and receives printed pages or images over telephone lines by digitizing the material with an internal optical scanner and transmitting the information as electronic signals."
+    },
+    {
+      "question": "A set of moral principles that regulate the use of computers is called",
+      "options": {
+        "A": "cyber security guidelines",
+        "B": "computer ethics",
+        "C": "computer safety laws",
+        "D": "computer rules"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Computer ethics is the term used to describe a set of moral principles that regulate the use of computers. It involves questions related to privacy, accuracy, property, and access."
+    },
+    {
+      "question": "A set of programs that direct computers to perform specific information processing activities for end users is",
+      "options": {
+        "A": "System software",
+        "B": "Operating System",
+        "C": "Application software",
+        "D": "Translators"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Application software is the set of programs necessary to carry out operations for a specified application."
+    },
+    {
+      "question": "A type of application software that combines the abilities of several general purpose applications in one program is ?",
+      "options": {
+        "A": "Graphics Packages",
+        "B": "Integrated Packages",
+        "C": "Multipurpose application",
+        "D": "Database management packages"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Integrated Packages is an all-in-one application package that includes word processing, spreadsheet, database manager, graphics and communications."
+    },
+    {
+      "question": "An action performed in the GUI operating systems to hide a window but keep the program running in the background is ?",
+      "options": {
+        "A": "hide",
+        "B": "multitasking",
+        "C": "minimize",
+        "D": "maximize"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Minimize is an action performed in the GUI operating systems to hide a window but keep the program running in the background"
+    },
+    {
+      "question": "Analog, digital and hybrid computers are classification of computers based on",
+      "options": {
+        "A": "the type of data-handling techniques",
+        "B": "the purpose",
+        "C": "the size",
+        "D": "the functionality"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Computers are classified into analog, digital, and hybrid based on the type of data-handling techniques they use. Analog computers work with continuous data and are used for tasks such as measuring and controlling voltages. Digital computers work with discrete data and are used for tasks such as word processing and spreadsheet calculations. Hybrid computers combine the features of both analog and digital computers."
+    },
+    {
+      "question": "Anti-virus software is an example of ?",
+      "options": {
+        "A": "Utility programs",
+        "B": "Operating systems",
+        "C": "Application software",
+        "D": "Translators"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "software utilities is a type of computer system software also referred to as service program, tool, service routine, or utility routine, they help to analyze, configure, optimize or maintain a computer."
+    },
+    {
+      "question": "At what stage in system development life cycle are all data documented in the form of detailed data flow diagrams(DFDs)",
+      "options": {
+        "A": "System design",
+        "B": "Feasibility study",
+        "C": "System analysis",
+        "D": "Investigative study"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "During the System Analysis stage of the System Development Life Cycle (SDLC), all data are documented in the form of detailed Data Flow Diagrams (DFDs). The System Analysis stage involves understanding and documenting the business processes and requirements of the new system."
+    },
+    {
+      "question": "Computers manipulate data in many ways, and this manipulation is called ?",
+      "options": {
+        "A": "batching",
+        "B": "utilizing",
+        "C": "processing",
+        "D": "upgrading"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Computers manipulate data in many ways, and this manipulation is called processing. Data processing refers to the conversion of raw data into meaningful output by performing computations, logical comparisons, and other operations."
+    },
+    {
+      "question": "Computers that are small and low cost are referred to as ?",
+      "options": {
+        "A": "mini computers",
+        "B": "small computers",
+        "C": "tablet computers",
+        "D": "micro computers"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Micro computers are small and low cost digital computers, which usually consists of a micro-processor, a storage unit, an input channel and an output channel."
+    },
+    {
+      "question": "EDVAC was produced using which of these concepts ?",
+      "options": {
+        "A": "packet routing",
+        "B": "stored program",
+        "C": "circuit switching",
+        "D": "packet switching"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "EDVAC (Electronic Discrete Variable Automatic Computer) was produced using the 'stored program' concept. This concept is a design architecture for computers where the instructions to be executed by the computer are stored in the same memory that holds the data. 'Circuit switching', 'packet routing', and 'packet switching' are concepts related to network communication, not computer design."
+    },
+    {
+      "question": "Evaluate 1011₂+122₄, leaving your answer in base 10.",
+      "options": {
+        "A": "37",
+        "B": "51",
+        "C": "47",
+        "D": "73"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "10112 = 1 × 23 + 0 × 22 + 1 × 21 + 1 × 20 1 × 8 + 0 × 4 + 1 × 2 + 1 × 1 = 8 + 0 + 2 + 1 = 11 1224 = 1 × 42 + 2 × 41 + 2 × 40 1 × 16 + 2 × 4 + 2 × 1 = 16 + 8 + 2 = 26 11 + 26 = 37"
+    },
+    {
+      "question": "Evaluate \\(1011_2 + 122_4\\), leaving your answer in base 10.",
+      "options": {
+        "A": "37",
+        "B": "51",
+        "C": "47",
+        "D": "73"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023
+    },
+    {
+      "question": "How many bits are in one nibble ?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "8",
+        "D": "16"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A nibble is a four-bit aggregation, or half an octet. It is also known as half-byte or tetrade. In a networking or telecommunication context, the nibble is often called a semi-octet, quadbit, or quartet. A nibble has sixteen (2^4) possible values."
+    },
+    {
+      "question": "If the control unit controls other units of the CPU, which unit stores instructions,data and intermediate results.",
+      "options": {
+        "A": "Memory unit",
+        "B": "Arithmetic section",
+        "C": "Control unit",
+        "D": "Logic section"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The memory unit of the CPU stores instructions, data, and intermediate results. The control unit controls the operation of the CPU and hence the computer. The arithmetic section performs arithmetic operations like addition, subtraction, multiplication, and division. The logic section performs logical operations like comparison of values"
+    },
+    {
+      "question": "In BASIC, REM shows a statement to be",
+      "options": {
+        "A": "executable statement",
+        "B": "un-executable statement",
+        "C": "comment",
+        "D": "output"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "REM is an abbreviation for remark and it's the way you add comments to your code in BASIC."
+    },
+    {
+      "question": "In computer architecture, the type of bus that connects the major components of a computer system is",
+      "options": {
+        "A": "address",
+        "B": "data bus",
+        "C": "control bus",
+        "D": "system bus"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "In computer architecture, the system bus is the main communication route that connects the major components of a computer system, such as the CPU, memory, and input/output devices. It is composed of the data bus, address bus, and control bus. Therefore, the correct answer is 'system bus'."
+    },
+    {
+      "question": "In technical feasibility, the priority is ?",
+      "options": {
+        "A": "whether the probolem can be solved in the user's environment",
+        "B": "if the likely benefits outweight the cost of solving the problem",
+        "C": "whether the problem can be solved using existing technology and resources available",
+        "D": "whether the problem can be solved without causing any social issues"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "In technical feasibility, the priority is to check whether the problem can be solved using existing technology and resources available."
+    },
+    {
+      "question": "Large computers are classified as",
+      "options": {
+        "A": "desktops",
+        "B": "micro computers",
+        "C": "mini computers",
+        "D": "mainframe computers"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "mainframe computers are large and powerful computers that handle the processing for many users simultaneously"
+    },
+    {
+      "question": "One of the following is not a good way to prevent virus.",
+      "options": {
+        "A": "encryption",
+        "B": "use of firewall",
+        "C": "carelessly exposing your vital and personal information",
+        "D": "use of antivirus software"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Ways of preventing virus - use of antivirus software - use of firewall - exercising care in giving out personal and vital information - encryptions"
+    },
+    {
+      "question": "The Output will be a HIGH for any case when one or more inputs are one for a(an)",
+      "options": {
+        "A": "OR gate",
+        "B": "AND gate",
+        "C": "NOR gate",
+        "D": "NOT gate"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "An OR gate is a digital logic gate that implements logical disjunction - it behaves according to the truth table to the right. A HIGH output (1) results if one or more of the inputs to the gate is HIGH (1). If neither input is high, a LOW output (0) results. In another sense, the function of OR effectively finds the maximum between two binary digits, just as the complementary AND function finds the minimum."
+    },
+    {
+      "question": "The closest computer language to human is ?",
+      "options": {
+        "A": "High level language",
+        "B": "Low level language",
+        "C": "Machine language",
+        "D": "Assembly language"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "High level languages give formats close to English language and the purpose of developing high level language is to enable people to write programs easily and in their own native language environment."
+    },
+    {
+      "question": "The computer that combines the functions of both analog and digital computers is called ?",
+      "options": {
+        "A": "Digital computer",
+        "B": "Analog computer",
+        "C": "Hybrid computer",
+        "D": "multipurpose computer"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A hybrid computer is a type of computer that combines the characteristics of both digital and analog computers. It is designed to offer the speed of analog equipment and the accuracy and memory of digital equipment."
+    },
+    {
+      "question": "The connection between two or more computers to share resources or allow electronic communication is called ?",
+      "options": {
+        "A": "Connection",
+        "B": "Communication",
+        "C": "Transfer",
+        "D": "Network"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A network consists of two or more computers that are linked together in order to share resources, exchange files or allow electronic communication"
+    },
+    {
+      "question": "The default file extension for PowerPoint version 2007 and newer is ?",
+      "options": {
+        "A": ".ppxt",
+        "B": ".pps",
+        "C": ".ppt",
+        "D": ".pptx"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The default file extension for PowerPoint version 2007 and newer is .pptx. This extension stands for PowerPoint Open XML, which is a file format used by PowerPoint 2007 and newer for saving presentations"
+    },
+    {
+      "question": "The diagrammatic representation of an algorithm is",
+      "options": {
+        "A": "pseudocodes",
+        "B": "codes",
+        "C": "graphics",
+        "D": "flowchart"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The diagrammatic representation of an algorithm is a flowchart. A flowchart is a type of diagram that represents an algorithm, workflow or process, showing the steps as boxes of various kinds, and their order by connecting them with arrows."
+    },
+    {
+      "question": "The first computer made available for commercial use was",
+      "options": {
+        "A": "UNIVAC",
+        "B": "EDSAC",
+        "C": "Mark-1",
+        "D": "ENIAC"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023
+    },
+    {
+      "question": "The first stage of data processing activities is ?",
+      "options": {
+        "A": "Manipulation",
+        "B": "Collection",
+        "C": "Conversion",
+        "D": "Sorting"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The first stage of data processing is the collection or gathering of data and recording it in a usable form."
+    },
+    {
+      "question": "The first step in a CPU instruction cycle is",
+      "options": {
+        "A": "Decode",
+        "B": "Get",
+        "C": "Fetch",
+        "D": "Execute"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Fetch is the first step of CPU instruction cycle also called fetch-and-execute cycle, fetch-decode-execute cycle, or FDX."
+    },
+    {
+      "question": "The following are input devices except.",
+      "options": {
+        "A": "mouse",
+        "B": "monitor",
+        "C": "Keyboard",
+        "D": "joystick"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The monitor is an output device, not an input device. Input devices are used to input data into a computer system for processing. Examples include a keyboard, mouse, joystick, etc. On the other hand, output devices are used to display or output the processed data. Examples include a monitor, printer, etc."
+    },
+    {
+      "question": "The following are the methods of file security except",
+      "options": {
+        "A": "hacking",
+        "B": "use of password",
+        "C": "Use of back up",
+        "D": "Use of Anti-virus"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The methods of file security are - Use of back-ups - Use of anti-virus - Password - Proper label of storage devices."
+    },
+    {
+      "question": "The last cycle of data processing where data and information are preserved for future is called",
+      "options": {
+        "A": "processing",
+        "B": "recording",
+        "C": "storage",
+        "D": "output"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The last cycle of data processing where data and information are preserved for future use is called 'storage'. This is the phase where data or information is saved either temporarily or permanently for future use. The 'output' is the result of data processing but not necessarily preserved for future use. 'Processing' is the action of manipulating data. 'Record' is a piece of stored information."
+    },
+    {
+      "question": "The logic gate in the figure above is",
+      "options": {
+        "A": "XNOR gate",
+        "B": "NOT gate",
+        "C": "XOR gate",
+        "D": "OR gate"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The figure above is the \"XOR (exclusive-OR) gate\" acts in the same way as the logical \"either/or.\" The output is true if either, but not both, of the inputs are true. The output is false if both inputs are \"false\" or if both inputs are true. Similarly, the output is 1 if the inputs are different but 0 if the inputs are the same. OR It's an XOR gate denoted by Z = A ⊕ B."
+    },
+    {
+      "question": "The only possible number base for 235\\(_x\\) among the following is ?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "4",
+        "D": "6"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A number cannot contain digits that are greater than its base. therefore 235 can possible be in base 6."
+    },
+    {
+      "question": "The process of finding and correcting errors in the program code is called ?",
+      "options": {
+        "A": "testing",
+        "B": "Debugging",
+        "C": "Editing",
+        "D": "coding"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Debugging is the process of finding and correcting errors in the program code. It involves identifying, isolating, and fixing the problems or bugs in computer program code. The other options do not accurately describe this process. Editing is the process of making changes to the code, but it does not necessarily involve finding and correcting errors. Coding is the process of writing the code, and testing is the process of checking the code to see if it works as expected."
+    },
+    {
+      "question": "The process where a programmer converts a program specifications into computer instructions is called ?",
+      "options": {
+        "A": "Debugging",
+        "B": "Coding",
+        "C": "Testing",
+        "D": "System design"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The process where a programmer converts a program specifications into computer instructions is called Coding. Testing is the process of checking the functionality of the program, System design is the process of defining the architecture, components, modules, interfaces, and data for a system to satisfy specified requirements, and Debugging is the process of finding and resolving defects or problems within a computer program."
+    },
+    {
+      "question": "The term used to describe when new information replaces old information or data is",
+      "options": {
+        "A": "file loss",
+        "B": "delete",
+        "C": "re-write",
+        "D": "overwrite"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "In computing, when new information replaces old information or data, it is referred to as 'overwrite'. This is because the new data is written over the old data, effectively replacing it. Therefore, the correct answer is 'overwrite'."
+    },
+    {
+      "question": "The two types of operating system are",
+      "options": {
+        "A": "command line and graphical user interface",
+        "B": "translators and assemblers",
+        "C": "system software and application software",
+        "D": "UNIX and LINUX"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Operating systems can be categorized into two types based on their user interface: Command Line Interface (CLI) and Graphical User Interface (GUI). CLI requires users to type commands to interact with the system, while GUI uses visual elements like icons, windows, and buttons for interaction."
+    },
+    {
+      "question": "The type of computers that are designed to perform complex calculations extremely rapidly are called ?",
+      "options": {
+        "A": "supercomputer",
+        "B": "micro computers",
+        "C": "laptops",
+        "D": "mainframe computer"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Supercomputers are designed to perform complex calculations extremely rapidly. They are the fastest and most powerful type of computer, often used for large-scale simulations, such as weather forecasting, climate research, molecular modeling, and physical simulations."
+    },
+    {
+      "question": "The type of database in which the data are connected in different files by using common data elements or a key field is ?",
+      "options": {
+        "A": "Relational database",
+        "B": "Network database",
+        "C": "Hierarchical database",
+        "D": "Object-oriented database"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Relational database connects data in different files by using a common data elements or a key field."
+    },
+    {
+      "question": "Translating the problem statement into a series of sequential steps describing what the program must do is known as",
+      "options": {
+        "A": "coding",
+        "B": "creating the algorithm",
+        "C": "debugging",
+        "D": "writing documentation"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Algorithm design is the process of listing all the instructions which are to be performed by the computer at different stages."
+    },
+    {
+      "question": "Translators are type of ?",
+      "options": {
+        "A": "System software",
+        "B": "Operating system",
+        "C": "Utility programs",
+        "D": "Application software"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Translators are a type of system software. They are used to convert source code written in one programming language (the source language) into another programming language (the target language). Examples of translators include compilers, interpreters, and assemblers. System software is a type of computer software designed to run a computer's hardware and application programs. It includes the operating system, device drivers, diagnostic tools, servers, windowing systems, utilities, and more."
+    },
+    {
+      "question": "Using Boolean identities, reduce the given Boolean expression: A(A+1) + A(B+0) + C.1",
+      "options": {
+        "A": "A + B + C",
+        "B": "A.B.C",
+        "C": "A.B + C",
+        "D": "A + C"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Using Boolean identities, the given Boolean expression A(A+1) + A(B+0) + C.1 can be reduced as follows: A.1 + A.B + C = A + A.B + C = A + C. The Boolean identity A + A.B = A is used here, which states that if A is true, the whole expression is true regardless of the value of B."
+    },
+    {
+      "question": "What category of application package does microsoft excel belong to ?",
+      "options": {
+        "A": "Word processing package",
+        "B": "Graphics packages",
+        "C": "Database management packages",
+        "D": "Spreadsheet packages"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Microsoft Excel is a spreadsheet package. It is used for storing, organizing, and manipulating data. It provides tools for data visualization such as charts and graphs. Word processing packages like Microsoft Word are used for creating, editing, and formatting text documents. Database management packages are used for storing, retrieving, and managing data in a database. Graphics packages are used for creating and editing images, drawings, and illustrations."
+    },
+    {
+      "question": "What does R stands for in the CRUD acronym ?",
+      "options": {
+        "A": "Retrieve",
+        "B": "Redirect",
+        "C": "Read",
+        "D": "Relate"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "In the CRUD acronym, R stands for 'Read'. CRUD stands for Create, Read, Update, and Delete. These are the four basic functions of persistent storage in databases."
+    },
+    {
+      "question": "What generation of computer is characterized by the use of vacuum tubes for circuitry and magnetic drums for main memory?",
+      "options": {
+        "A": "second generation",
+        "B": "fourth generation",
+        "C": "first generation",
+        "D": "third generation"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The first generation computer systems used vacuum tubes for circuitry and magnetic drums for main memory, and they were often enormous, taking up entire rooms"
+    },
+    {
+      "question": "What is the difference between an assembler and a compiler ?",
+      "options": {
+        "A": "an assembler converts a machine language code into assembly level language code while a compiler converts high level programming language to a machine language code.",
+        "B": "an assembler converts assembly level language code into machine language code while a compiler converts high level programming language code to a machine language code.",
+        "C": "a compiler converts assembly level language code into machine lange while an assembler converts high level programming language to a machine language code.",
+        "D": "they both convert assembly level language code into machine lange"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "An assembler converts assembly level language code into machine language code while a compiler converts high level programming language code to a machine language code."
+    },
+    {
+      "question": "What is the difference between internal and external modem",
+      "options": {
+        "A": "external modems are PCI or ISA expansion cards while internal modems are traditionally plug into a serial port on the computer.",
+        "B": "internal modems are PCI or ISA expansion cards while external modems are traditionally plug into a serial port on the computer.",
+        "C": "external modems are PCI or ISA expansion cards while internal modems are USB modems",
+        "D": "they are PCI or ISA expansion cards"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Internal modems are PCI or ISA expansion cards, they tend to be simple to install while external modems are traditionally plug into a serial port on the computer."
+    },
+    {
+      "question": "What is the function of the escape key ?",
+      "options": {
+        "A": "to shutdown the computer",
+        "B": "to start an application",
+        "C": "to interrupt or cancel the current process or running program",
+        "D": "to delete a file/folder"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Escape key can perform various functions like interrupting or cancelling the current process or running program or close a pop-up window."
+    },
+    {
+      "question": "What is the shortcut for creating a new document ?",
+      "options": {
+        "A": "Ctrl + N",
+        "B": "Ctrl + O",
+        "C": "Ctrl + Q",
+        "D": "Ctrl + M"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The shortcut for creating a new document is Ctrl + N. This is a standard shortcut across many applications and operating systems."
+    },
+    {
+      "question": "What is the shortcut for performing warm booting ?",
+      "options": {
+        "A": "y pressing the Ctrl + Alt keys simultaneously",
+        "B": "y pressing the Ctrl + Alt + F1 keys simultaneously",
+        "C": "y pressing the Ctrl + Del keys simultaneously",
+        "D": "by pressing the Ctrl + Alt + Del keys simultaneously"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Warm booting refers to the process of restarting a computer system which is already on. This can be done by pressing the Ctrl + Alt + Del keys simultaneously. This is a common shortcut for warm booting in many operating systems."
+    },
+    {
+      "question": "What part of the central processing unit coordinates other units and manages the computer resources ?",
+      "options": {
+        "A": "coordinating unit",
+        "B": "Memory unit",
+        "C": "Arithmetic Logic unit",
+        "D": "Control unit"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The Control Unit of the Central Processing Unit (CPU) coordinates other units and manages the computer resources. It directs the operation of the processor, and interacts with the other hardware components in the system to carry out the instructions of a program. It is responsible for fetching, decoding, and executing instructions from the memory unit and performing arithmetic and logical operations."
+    },
+    {
+      "question": "What protocol is used between Email servers?",
+      "options": {
+        "A": "SMTP",
+        "B": "SNMP",
+        "C": "FTP",
+        "D": "POP"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The Simple Mail Transfer Protocol is an internet standard communication protocol for electronic mail transmission"
+    },
+    {
+      "question": "What type of booting does the computer go through when starting up from a powered down ?",
+      "options": {
+        "A": "Cold booting",
+        "B": "Soft booting",
+        "C": "Warm booting",
+        "D": "Rebooting"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Cold booting is when you start a computer from a powered-down, or off, state. This is often referred to as a system restart or a system reset. Warm booting, on the other hand, is restarting the computer while it's powered on. Rebooting and soft booting are general terms for restarting a computer and can refer to either cold or warm booting."
+    },
+    {
+      "question": "When records are given a new value, it is called",
+      "options": {
+        "A": "updation",
+        "B": "insertion",
+        "C": "deletion",
+        "D": "retrieval"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "When records are given a new value, it is called 'updation'. This is a process in database management where an existing record is modified with new data. 'Insertion' is adding a new record, 'deletion' is removing a record, and 'retrieval' is fetching data from the database."
+    },
+    {
+      "question": "When the computer reboots itself without triggering the hardware based reset, it is called ?",
+      "options": {
+        "A": "cold booting",
+        "B": "hard reboot",
+        "C": "cold reboot",
+        "D": "soft reboot"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "soft or warm reboot involves restarting a computer under software control without triggering the hardware based reset."
+    },
+    {
+      "question": "Which of the following allows devices on one network to communicate with devices on another network ?",
+      "options": {
+        "A": "T-switch",
+        "B": "gateway",
+        "C": "modem",
+        "D": "multiplexer"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A computer that sits between different networks or applications. The gateway converts information, data or other communications from one protocol or format to another."
+    },
+    {
+      "question": "Which of the following can be used to select the entire document ?",
+      "options": {
+        "A": "Ctrl + K",
+        "B": "Ctrl + A",
+        "C": "Shift + A",
+        "D": "Alt + F5"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The keyboard shortcut 'Ctrl + A' is used to select the entire document in most word processing software. This command selects all text or other content in the document."
+    },
+    {
+      "question": "Which of the following components of the computer is referred to as the administrative section ?",
+      "options": {
+        "A": "CPU",
+        "B": "Output unit",
+        "C": "Input unit",
+        "D": "Memory Unit"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "CPU is referred to as the administrative section of the computer, it is also called the brain of the computer."
+    },
+    {
+      "question": "Which of the following controls the way in which the computer system functions and provides a means by which users can interact with the computer.",
+      "options": {
+        "A": "CPU",
+        "B": "application software",
+        "C": "operating system",
+        "D": "ALU"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Operating system controls the way in which the computer system functions and provides a means by which users can interact with the computer."
+    },
+    {
+      "question": "Which of the following does not replicate itself in an infected computer?",
+      "options": {
+        "A": "spyware",
+        "B": "worm",
+        "C": "trojan horse",
+        "D": "virus"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "trojan horse is a malicious software program that hides inside other programs, trojan horse does not usually spread by themselves."
+    },
+    {
+      "question": "Which of the following is NOT a high-level programming language?",
+      "options": {
+        "A": "Assembly language",
+        "B": "C++",
+        "C": "Python",
+        "D": "Java"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Assembly language is a low-level programming language that is specific to a particular computer architecture. It is more difficult to learn and use than high-level programming languages, but it offers more control over the hardware."
+    },
+    {
+      "question": "Which of the following is a valid variable name in Python?",
+      "options": {
+        "A": "my_variable$",
+        "B": "my_variable",
+        "C": "my-variable",
+        "D": "1my_variable"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Variable names in Python must start with a letter or underscore, and can only contain letters, numbers, and underscores. The other options are invalid because they either start with a number (option C) or contain a special character (option D)."
+    },
+    {
+      "question": "Which of the following is an example of graphics software ?",
+      "options": {
+        "A": "Microsoft word",
+        "B": "Adobe Illustrator",
+        "C": "Microsoft powerpoint",
+        "D": "MS Access"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Adobe Illustrator is a vector graphics editor and design program developed and marketed by Adobe Inc. It is an example of graphics software, which is used to create, edit, and manipulate visual images."
+    },
+    {
+      "question": "Which of the following is not a third generation language?",
+      "options": {
+        "A": "FORTRAN",
+        "B": "COBOL",
+        "C": "Assembly language",
+        "D": "Basic"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Assembly language is a low-level programming language that is specific to a particular computer architecture. It is more difficult to learn and use than higher-level programming languages, but it offers more control over the hardware."
+    },
+    {
+      "question": "Which of the following is not an application software",
+      "options": {
+        "A": "MS - Word",
+        "B": "Corel Draw",
+        "C": "Linux",
+        "D": "MacWrite"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Linux is not an application software. It is an example of system software."
+    },
+    {
+      "question": "Which of the following is not an example of graphics packages",
+      "options": {
+        "A": "Freelance",
+        "B": "Quattro pro",
+        "C": "Corel draw",
+        "D": "Havard graphics"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Quattro Pro is not a graphics package. It is a spreadsheet program developed by Borland and now managed by Corel. It provides tools for data management and analysis. Havard Graphics, Freelance, and Corel Draw are examples of graphics packages. They provide tools for creating and editing images, drawings, and illustrations."
+    },
+    {
+      "question": "Which of the following is the standard keyboard layout ?",
+      "options": {
+        "A": "Dvorak",
+        "B": "QWERTY",
+        "C": "AZERTY",
+        "D": "ABCD"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The standard keyboard layout is QWERTY. This layout was patented by Christopher Sholes who invented the typewriter and later adapted to the world's first computers."
+    },
+    {
+      "question": "Which of the following is used for modulation and demodulation ?",
+      "options": {
+        "A": "Gateway",
+        "B": "Protocol",
+        "C": "Modem",
+        "D": "Multiplex"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A modem(modulator-demodulator) is a hardware device that connects a computer or router to a broadband network."
+    },
+    {
+      "question": "Which of the following monitors has only two colours",
+      "options": {
+        "A": "colour monitor",
+        "B": "colour graphic adapter (CGA)",
+        "C": "dichrome monitor",
+        "D": "monochrome monitor"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A monochrome monitor is a type of CRT computer monitor which was very common in the early days of computing, from the 1960s through the 1980s, before color monitors became popular. They are designed to display one color of information (usually green, amber, or white) along with a different color background (usually black). Therefore, the correct answer is 'monochrome monitor'."
+    },
+    {
+      "question": "Which of these application packages can be used to create a spreadsheet ?",
+      "options": {
+        "A": "Microsoft powerpoint",
+        "B": "Microsoft excel",
+        "C": "Macwrite",
+        "D": "Microsoft word"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Microsoft Excel is an application package that is specifically designed for creating spreadsheets. It provides features for creating, editing, and managing data in a tabular format."
+    },
+    {
+      "question": "Which of these commands will reboot the computer ?",
+      "options": {
+        "A": "Ctrl + Alt + Del",
+        "B": "Ctrl + Del",
+        "C": "Ctrl + Alt + C",
+        "D": "Ctrl + Alt"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The command 'Ctrl + Alt + Del' is a common PC shortcut that restarts the computer. It is also known as 'Three-finger salute'. This command is used to bring up the Task Manager or the Windows Security options (including the option to restart or shut down) in Windows operating systems."
+    },
+    {
+      "question": "Which of these criteria is not important while classifying files ?",
+      "options": {
+        "A": "Organization method",
+        "B": "Nature of content in the file",
+        "C": "Size of the file",
+        "D": "Storage medium"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "While classifying files, the storage medium is not a criterion. The classification of files is based on the nature of the content in the file, the organization method, and the size of the file. The storage medium is where the file is stored, which does not affect the classification of the file."
+    },
+    {
+      "question": "Which of these is not true about peer-to-peer network ?",
+      "options": {
+        "A": "there is no dedicated servers",
+        "B": "it has a strong security system",
+        "C": "all computers in this network are known as peers",
+        "D": "there is no hierarchy among the computers"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A peer-to-peer (P2P) network is a decentralized network where each computer (peer) acts as both a client and a server. This means that there are no dedicated servers and no hierarchy among the computers. However, P2P networks are generally not known for having a strong security system. This is because each peer has equal access to the resources, which can lead to potential security risks."
+    },
+    {
+      "question": "Which of these programming languages is the most suitable for a business data processing?",
+      "options": {
+        "A": "BASIC",
+        "B": "ALGOL",
+        "C": "COBOL",
+        "D": "FORTRAN"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "COBOL (Common Business-Oriented Language) is the most suitable for business data processing. It was specifically designed for business data processing needs such as arithmetic operations, file handling, and record management. BASIC and FORTRAN are more suited for educational and scientific computations respectively, while ALGOL is more for algorithmic representation."
+    },
+    {
+      "question": "Which of these storage devices can act as a buffer between the CPU and the main memory ?",
+      "options": {
+        "A": "Hard disk",
+        "B": "Floppy disk",
+        "C": "Cache Memory",
+        "D": "Flash drive"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Cache memory is a very high speed semiconductor memory which can speed up CPU, it acts as a buffer between the CPU and main memory."
+    },
+    {
+      "question": "Who invented the Napier Bones",
+      "options": {
+        "A": "John Napier",
+        "B": "Samuel Napier",
+        "C": "Joseph Jacquard",
+        "D": "Charles Babbage"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "Napier's bones is a manually-operated calculating device created by John Napier of Merchiston for calculation of products and quotients of numbers. The method was based on the ancient mathematical principle known as the Arabic lattice, or gelosia multiplication."
+    },
+    {
+      "question": "___ is the type of computer that is designed to operate on two states, 0 and 1.",
+      "options": {
+        "A": "Analog computer",
+        "B": "Hybrid computer",
+        "C": "Digital computer",
+        "D": "micro computer"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "A digital computer is a type of computer that operates on digital data, which is represented in binary form (0 and 1). These computers perform calculations using binary digits and can process both numerical and non-numerical data."
+    },
+    {
+      "question": "he first computer made available for commercial use was",
+      "options": {
+        "A": "UNIVAC",
+        "B": "EDSAC",
+        "C": "Mark-1",
+        "D": "ENIAC"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "On June 14, 1951, the U.S. Census bureau dedicates UNIVAC(Universal Automatic Computer), the first commercially produced electronic digital computer the US."
+    },
+    {
+      "question": "what is the first computing machine invented ?",
+      "options": {
+        "A": "slide rule",
+        "B": "Pascal calculator",
+        "C": "Napier bones",
+        "D": "Abacus"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "The Abacus was invented between 2700 and 2300 BC, it is the first computing machine known to mankind."
+    },
+    {
+      "question": "which communication channel allows the sending of information in one direction only?",
+      "options": {
+        "A": "simplex mode",
+        "B": "half duplex mode",
+        "C": "duplex mode",
+        "D": "full duplex mode"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2023,
+      "explanation": "simplex mode allows the sending of information in one direction only, which is similar to a one-way street."
+    },
+    {
+      "question": "How can you add speaker notes to a PowerPoint slide? You can add speaker notes by clicking on \"View\" and then selecting \"Notes Page\" to open the notes pane where you can edit your notes.",
+      "options": {
+        "A": "Click on Slide Sorter view",
+        "B": "Click on Notes Page view",
+        "C": "Click on Presenter view",
+        "D": "Click on Reading view"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024
+    },
+    {
+      "question": "In graphic design, what does the term DPI stand for?",
+      "options": {
+        "A": "Digital Processing Interface",
+        "B": "Data Process Indicator",
+        "C": "Digital Picture Index",
+        "D": "Dots Per Inch"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "DPI stands for Dots Per Inch and is a measure of the resolution of an image, indicating the number of dots of ink or pixels in one inch."
+    },
+    {
+      "question": "Microprocessors became widely used in which generation of computers?",
+      "options": {
+        "A": "Fourth generation",
+        "B": "Second generation",
+        "C": "Fifth generation",
+        "D": "Third generation"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The invention and widespread use of microprocessors marked the fourth generation of computers. Microprocessors, essentially complete CPUs on a single chip, led to a dramatic increase in processing power, miniaturization, and affordability of computers. Microprocessors became the cornerstone of modern computing paving the way for personal computers (PCs) and the continued evolution of computing power we see today."
+    },
+    {
+      "question": "What are some common criteria used to classify computer files?",
+      "options": {
+        "A": "File type and content.",
+        "B": "Operating system compatibility and hardware requirements.",
+        "C": "File size and creation date only.",
+        "D": "Font style and color used within the document itself."
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Common criteria for classifying files include: *File type (document, image, audio, video, etc.) *Content (project name, subject matter, date, etc.) *Project or task association *User (personal, work, client-specific)"
+    },
+    {
+      "question": "What are some key components of an ICT system?",
+      "options": {
+        "A": "Printers, paper, and pens",
+        "B": "Books, libraries, and classrooms",
+        "C": "Televisions, radios, and telephones",
+        "D": "Hardware, software, and networks"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "ICT systems encompass hardware (physical devices like computers), software (programs and applications), and network (communication channels) that together enable information processing storage and communication."
+    },
+    {
+      "question": "What distinguishes open-source software from proprietary software?",
+      "options": {
+        "A": "Open source software is free, while proprietary software requires purchase.",
+        "B": "Open-source software is more secure than proprietary software.",
+        "C": "Open-source software is more secure than proprietary software.",
+        "D": "Open source software allows modification and redistribution, while proprietary software does not."
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Open source software allows users to view, modify, and distribute the source code, while proprietary software restricts access to its source code and distribution."
+    },
+    {
+      "question": "What does SSD stand for, and what is its primary advantage?",
+      "options": {
+        "A": "Super Speed Disk, larger capacity",
+        "B": "Secure Storage Device, better security",
+        "C": "Simple Storage Disk, ease of use",
+        "D": "Solid State Drive, faster speed"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "SSD stands for Solid-State Drive. The primary advantage of SSDs over traditional hard disk drives (HDDs) is their significantly faster speed. This is due to their lack of moving parts, which eliminates the time it takes for the drive head to seek data on a spinning disk. While SSDs can be more expensive than HDDs, their performance benefits, especially in tasks like booting up, loading applications, and transferring files, make them a popular choice for many users."
+    },
+    {
+      "question": "What does the '%' operator represent in programming languages?",
+      "options": {
+        "A": "Assignment",
+        "B": "Modulus",
+        "C": "Concatenation",
+        "D": "Exponentiation"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The '%' operator calculates the modulus or remainder of a division operation in programming."
+    },
+    {
+      "question": "What does the 'Thesaurus' feature in word processing packages help users with?",
+      "options": {
+        "A": "Find synonyms and antonyms of words",
+        "B": "Check document statistics",
+        "C": "Insert citations",
+        "D": "Create a table of contents"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The Thesaurus feature in word processing packages helps users find synonyms (similar words) and antonyms (opposite words) for words in their document"
+    },
+    {
+      "question": "What does the acronym ISP stand for?",
+      "options": {
+        "A": "Internet Search Protocol",
+        "B": "Internet Service Provider",
+        "C": "International Service Provider",
+        "D": "Internet Security Protocol"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The acronym ISP stands for Internet Service Provider. An Internet Service Provider (ISP) is a company that provides individuals and organizations access to the Internet and related services such as website building and virtual hosting. ISPs provide the technology and infrastructure needed for users to connect to the Internet, whether through dial-up, DSL, cable, fiber-optic, or wireless connections."
+    },
+    {
+      "question": "What does the term \"formula\" refer to in a spreadsheet?",
+      "options": {
+        "A": "A graph representation",
+        "B": "A predefined layout",
+        "C": "A predefined calculation",
+        "D": "A text formatting rule"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "A formula in a spreadsheet refers to a predefined calculation or operation that performs specific calculations based on cell references and operators."
+    },
+    {
+      "question": "What is a common security threat that can compromise your computer files?",
+      "options": {
+        "A": "Incompatibility with different operating systems.",
+        "B": "Weak passwords are used for user accounts and file access.",
+        "C": "Outdated software versions.",
+        "D": "Physical damage to your computer hardvvare"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Weak passwords are a major security threat. Hackers can use brute-force attacks or password-cracking techniques to guess weak passwords and gain access to your files."
+    },
+    {
+      "question": "What is a flowchart?",
+      "options": {
+        "A": "A visual representation of an algorithm, using geometric shapes and symbols to depict the flow of logic.",
+        "B": "A collection of data tables used to organize and analyze information.",
+        "C": "A written explanation of the thought process behind solving a problem, without a visual representation.",
+        "D": "A complex code snippet written in a specific programming language."
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "A flowchart is a visual tool that translates the steps of an algorithm into an easy-to-understand diagram. It uses shapes like rectangles, diamonds, and arrows to represent processes, decision points, and the flow of logic within the algorithm."
+    },
+    {
+      "question": "What is a potential drawback of using high-level programming languages?",
+      "options": {
+        "A": "High-level languages provide a wider range of built-in functionalities.",
+        "B": "High-level languages are often more efficient than low-level languages.",
+        "C": "High-level languages can sometimes have slower execution speeds due to the abstraction layer.",
+        "D": "High-level languages require a deeper understanding of computer architecture."
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "High-level programming languages provide abstraction from the hardware, which simplifies development but can introduce overhead. This abstraction layer can lead to slower execution speeds compared to low-level programming languages that interact more directly with the hardware."
+    },
+    {
+      "question": "What is the advantage of using cell references in formulas compared to entering constant values?",
+      "options": {
+        "A": "Cell references make formulas more complex and difficult to understand.",
+        "B": "Cell references are only necessary for complex formulas with multiple functions.",
+        "C": "Cell references are only necessary for complex formulas with multiple functions.",
+        "D": "Cell references improve formula accuracy by reducing manual data entry."
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Cell references are crucial for maintaining dynamic formulas. When a value in a referenced cell changes, the formula automatically recalculates the result based on the updated data. This saves time and reduces errors compared to manually entering constant values within the formula itself."
+    },
+    {
+      "question": "What is the advantage of using cell references in formulas compared to entering constant values?",
+      "options": {
+        "A": "Cell references improve formula accuracy by reducing manual data entry.",
+        "B": "Cell references make formulas less flexible and adaptable to changes.",
+        "C": "Cell references make formulas more complex and difficult to understand.",
+        "D": "Cell references are only necessary for complex formulas with multiple functions."
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Cell references are crucial for maintaining dynamic formulas. When a value in a referenced cell changes, the formula automatically recalculates the result based on the updated data. This saves time and reduces errors compared to manually entering constant values within the formula itself."
+    },
+    {
+      "question": "What is the benefit of using a bulleted or numbered list in your document?",
+      "options": {
+        "A": "To automatically insert page breaks after each list item, forcing them onto separate pages.",
+        "B": "To automatically change the font style and size of the text within the list",
+        "C": "To add decorative borders and background colors to specific sections of your document.",
+        "D": "To highlight important points and improve readability by visually separating items."
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Bulleted and numbered lists are valuable tools for presenting information clearly and organized. They visually separate items, making them easier to read and understand, especially for points within a series or sequence."
+    },
+    {
+      "question": "What is the function of the motherboard in a computer system?",
+      "options": {
+        "A": "Store data",
+        "B": "Connect all hardware components",
+        "C": "Perform calculations",
+        "D": "Provide internet access"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The motherboard is the main circuit board that connects all hardware components of a computer."
+    },
+    {
+      "question": "What is the key innovation of the Analytical Engine?",
+      "options": {
+        "A": "It utilized a steam-powered mechanism for calculations.",
+        "B": "It introduced the concept of a central pmcessing unit (CPU) for calculations.",
+        "C": "It incorporated the idea of a memory unit to store data and programs.",
+        "D": "It employed punch cards for inputting instructions and data."
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The Analytical Engine, designed by Charles Babbage, though never fully built, proposed a more general-purpose computing machine with an integrated memory unit to store data and programs, separate from the processing unit. This concept became fundamental in later computers."
+    },
+    {
+      "question": "What is the main advantage of using hexadecimal over binary?",
+      "options": {
+        "A": "Compatible with octal",
+        "B": "Easier to read and write",
+        "C": "Provides higher precision",
+        "D": "Requires more digits"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Hexadecimal is easier to lead and write compared to binary because it uses fewer digits to represent the same value."
+    },
+    {
+      "question": "What is the main purpose of device drivers?",
+      "options": {
+        "A": "Manage hardware devices",
+        "B": "Run applications",
+        "C": "Provide internet security",
+        "D": "Run applications"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Device drivers are specialized system software that allows the operating system to communicate with hardware devices."
+    },
+    {
+      "question": "What is the output expression for the circuit shown above?",
+      "options": {
+        "A": "ABC+BC",
+        "B": "( A+B )+( B+C )",
+        "C": "AB+AC",
+        "D": "___ A B+BC"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The output of the expression for the circuit is shown above: ___ A B+BC"
+    },
+    {
+      "question": "What is the output expression for the circuit shown above?",
+      "options": {
+        "A": "ABC+BC",
+        "B": "( A+B )+( B+C )",
+        "C": "AB+AC",
+        "D": "A B+BC"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024
+    },
+    {
+      "question": "What is the primary purpose of using a query in MS Access?",
+      "options": {
+        "A": "To create a user-friendly interface for entering editing and displaying data in the database.",
+        "B": "To define the overall structure of the tables and their relationships within the database.",
+        "C": "To retrieve specific data from one or more tables based on defined criteria, allowing for filtering and sorting of information.",
+        "D": "To visually represent data trends and relationships through charts and graphs."
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Queries are a powerful tool in MS Access for retrieving specific data from your tables. You can define criteria to filter the data based on specific conditions, allowing you to focus on relevant information for analysis or reporting."
+    },
+    {
+      "question": "What is the primary purpose of using a query in MS Access?",
+      "options": {
+        "A": "To visually represent data trends and relationships through charts and graphs.",
+        "B": "To define the overall structure of the tables and their relationships within the database.",
+        "C": "To retrieve specific data from one or more tables based on defined criteria, allowing for filtering and sorting of information.",
+        "D": "To create a user-friendly interface for entering editing and displaying data in the database."
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Queries are a powerful tool in MS Access for retrieving specific data from your tables. You can define criteria to filter the data based on specific conditions, allowing you to focus on relevant information for analysis or reporting."
+    },
+    {
+      "question": "What is the purpose of the design phase in program development?",
+      "options": {
+        "A": "To provide program documentation",
+        "B": "To test the program",
+        "C": "To create a flow chart and algorithm",
+        "D": "To write the source code"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The purpose of the design phase is to create a flowchart and algorithm that outline the logical steps the program will take to solve the problem. This helps in planning the program's structure before coding begins."
+    },
+    {
+      "question": "What is the relationship between a 'record' and a 'file'?",
+      "options": {
+        "A": "A record contains multiple files",
+        "B": "A file is a type of record",
+        "C": "A record and a file are the same",
+        "D": "A file contains multiple records"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "A file is a collection of multiple records, each containing related fields"
+    },
+    {
+      "question": "What is the relationship between a 'record' and a 'file'?",
+      "options": {
+        "A": "A record contains multiple files",
+        "B": "A file is a type of record",
+        "C": "o A record and a file are the same",
+        "D": "A file contains multiple records"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024
+    },
+    {
+      "question": "What is the term for an email scam that tries to trick people into giving out personal information?",
+      "options": {
+        "A": "Cracking",
+        "B": "Spoofing",
+        "C": "Hacking",
+        "D": "Phishing"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Phishing is a type of email scam where attackers attempt to trick recipients into providing personal information such as passwords and credit card numbers by pretending to be a legitimate entity."
+    },
+    {
+      "question": "What is the term for the unauthorized modification of data within a database by exploiting vulnerabilities in an application's software?",
+      "options": {
+        "A": "Ransomware",
+        "B": "SQL injection",
+        "C": "Spoofing",
+        "D": "Phishing"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "SQL injection involves inserting malicious SQL statements into an application's input fields to manipulate the database and gain unauthorized access to data."
+    },
+    {
+      "question": "What type of ICT is used for immersive gaming solutions?",
+      "options": {
+        "A": "Portable Entertainment Device (PED)",
+        "B": "Virtual Reality (VR) Headset",
+        "C": "360 degree Panoramic Viewer",
+        "D": "Augmented Reality (AR) Visor"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Virtual Reality (VR) headsets are specifically designed for immersive gaming and simulations, providing users with a virtual environment that they can interact with in a realistic and engaging manner. Augmented Reality (AR) visors overlay digital information onto the real world, while PEDs and 3600 panoramic viewers typically do not offer the same level of immersive experience as VR headsets."
+    },
+    {
+      "question": "What type of printer uses toner to print documents?",
+      "options": {
+        "A": "Inkjet printer",
+        "B": "Laser jet printer",
+        "C": "Thermal Printer",
+        "D": "Dot Matrix Printer"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Laser printers use toner to produce high-quality text and graphics."
+    },
+    {
+      "question": "What was the primary advancement of the EDVAC over the ENIAC?",
+      "options": {
+        "A": "Use of Vacuum tubes",
+        "B": "Smaller size",
+        "C": "Stored-Program architecture",
+        "D": "Faster computation speeds"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The key difference between ENIAC and EDVAC lies in how they stored and executed instructions. ENIAC had a fixed program design, meaning the instructions were wired into the machine and could not be changed easily. EDVAC, on the other hand, introduced the concept of a stored-program architecture. Instructions were stored in memory alongside allowing for greater flexibility and easier modification of programs. This innovation paved the way for modern computers with stored programs on hard drives or other storage devices."
+    },
+    {
+      "question": "When data is organized, processed, and presented in a meaningful context, it becomes:",
+      "options": {
+        "A": "Information",
+        "B": "Structured Query Language",
+        "C": "Metadata",
+        "D": "Fact"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Information is the result of organizing and processing raw data to provide context, relevance, and meaning. It is essential for decision-making and communication. Metadata refers to data that describes other data, while a fact is a piece of information that is considered to be true. Structured Query Language (SQL) is a programming language used for managing data in relational database management systems, not the transformation of raw.' data into meaningful context."
+    },
+    {
+      "question": "Which access method is least efficient for data retrieval?",
+      "options": {
+        "A": "Direct access",
+        "B": "Sequential access",
+        "C": "Indexed access",
+        "D": "Random Access"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Sequential access requires data to be accessed in a sequential order from the beginning of the file until the desired data is found. This method is inefficient when the required data is not near the beginning of the file, as it necessitates reading through all preceding data. In contrast, direct access and indexed enable faster retrieval by allowing immediate access to specific data locations without the need for sequential scanning,Random access also provides efficient access to any data location in the file directly. Therefore, sequential access is the least efficient method for data retriev"
+    },
+    {
+      "question": "Which application package is used for developing websites?",
+      "options": {
+        "A": "Microsoft PowerPoint",
+        "B": "Microsoft Excel",
+        "C": "Figma",
+        "D": "Adobe Dreamwaver"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Adobe Dreamweaver is a web development application that provides features for coding websites using HTML, CSS, and JavaScript. It offers tools for editing code, managing website files, and previewing the website during development."
+    },
+    {
+      "question": "Which characteristic of a computer refers to its ability to minimize energy, consumption and resource usage?",
+      "options": {
+        "A": "Versatility",
+        "B": "Speed",
+        "C": "Efficiency",
+        "D": "Reliability"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Efficiency in computing pertains to the optimal use of resources such as energy, processing power, and memory."
+    },
+    {
+      "question": "Which database organization uses parent-child relationships to organize data in a tree-like structure?",
+      "options": {
+        "A": "Relational",
+        "B": "Network",
+        "C": "Hierarchical",
+        "D": "Object oriented"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Hierarchical databases organize data in a tree-like structure where each \"parent\" record can have multiple \"child\" records. This structure is suitable for situations where data has a clear superior-subordinate relationship, like a file system on a computer where folders can contain subfolders."
+    },
+    {
+      "question": "Which key on a keyboard is used to access special functions like volume control or brightness?",
+      "options": {
+        "A": "Alphabetic key",
+        "B": "Numeric key",
+        "C": "Function key",
+        "D": "Cursor key"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Function keys are often marked \"Fl \" to \"F12\" and perform specific actions depending on the software or computer."
+    },
+    {
+      "question": "Which network device provides a central point for connecting devices within a network and manages data traffic between them?",
+      "options": {
+        "A": "Router",
+        "B": "Modem",
+        "C": "Switch",
+        "D": "Hub"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "A switch provides a central point for connecting devices within a network and manages data traffic between them at Layer 2 of the OSI model."
+    },
+    {
+      "question": "Which of the following best describes software?",
+      "options": {
+        "A": "Elements used for data transmission",
+        "B": "Logical sequences of coded instructions",
+        "C": "Systems that control data flow",
+        "D": "Tangible components of a computer"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Software refers to logical sequences of coded instructions (programs and applications) that tell the computer what task to perform."
+    },
+    {
+      "question": "Which of the following best describes the SDLC?",
+      "options": {
+        "A": "A programming language for system development",
+        "B": "A framework for developing information system",
+        "C": "A methodoloy for software debugging",
+        "D": "A hardware configuration protocol"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The SDLC (System Development Life Cycle) is a structured process for planning designing creating deploying and maintaining information systems. It's a framework that ensures a systematic approach to developing high-quality and efficient systems."
+    },
+    {
+      "question": "Which of the following data types is used to represent textual data in computers?",
+      "options": {
+        "A": "Float",
+        "B": "Integer",
+        "C": "String",
+        "D": "Boolean"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The string data type is used to represent textual data in computers."
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of interpreters?",
+      "options": {
+        "A": "They are generally slower than compilers.",
+        "B": "They provide immediate error detection.",
+        "C": "They execute code line by line.",
+        "D": "They translate code into machine code at once"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Interpreters translate code line by line, not all at once."
+    },
+    {
+      "question": "Which of the following is a cloud storage service?",
+      "options": {
+        "A": "Yandex",
+        "B": "Drop Box",
+        "C": "DuckDuckGo",
+        "D": "Adobe XD"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Dropbox is a popular cloud storage service that allows users to store and share files online. OneDrive, Google Drive, and iCloud are other examples of cloud storage services commonly used for this purpose."
+    },
+    {
+      "question": "Which operation combines multiple files into a single archive file?",
+      "options": {
+        "A": "Copy",
+        "B": "Move",
+        "C": "Delete",
+        "D": "Compress"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Compressing files combines them into a single archive file, such as a ZIP file, reducing storage space and simplifying file management."
+    },
+    {
+      "question": "Which operation combines multiple files into a single archive file?",
+      "options": {
+        "A": "Delete",
+        "B": "Copy",
+        "C": "Compress",
+        "D": "Move"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Compressing files combines them into a single archive file, such as a ZIP file, reducing storage space and simplifying file management."
+    },
+    {
+      "question": "Which stage of the SDLC involves evaluating the system to ensure it meets user needs and making necessary adjustments?",
+      "options": {
+        "A": "Review",
+        "B": "Implementation",
+        "C": "Analysis",
+        "D": "Design"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The review stage, also sometimes called testing involves evaluating the developed system against the initial requirements and user needs. This stage identifies any gaps, errors, or usability issues. Based on the review findings,adjustments and bug fixes are made to ensure the system meets the intended purpose and provides a satisfactory user experience."
+    },
+    {
+      "question": "Which statement is used to skip the execution of the current iteration and start the next iteration in a loop?",
+      "options": {
+        "A": "Jump statement",
+        "B": "Skip statement",
+        "C": "Continue statement",
+        "D": "Next statement"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The continue statement skips the rest of the current loop iteration and continues with the next iteration. It is often used to skip certain values in a loop based on a specific condition."
+    },
+    {
+      "question": "Which toolbar in word processing packages provides options for adjusting paragraph alignment, indentation,and spacing.",
+      "options": {
+        "A": "Review Toolbar",
+        "B": "Insert Toolbar",
+        "C": "View Toolbar",
+        "D": "Formatting Toolbar"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "The formatting toolbar is specifically designed for controlling the appearance of your paragraphs. This includes options for setting alignment (left, right, center, justified), adjusting indentation (left and right), and modifying spacing settings (before and after paragraphs, line spacing)."
+    },
+    {
+      "question": "Which type of attack floods a network or server with excessive traffic to make it unavailable to legitimate users?",
+      "options": {
+        "A": "Man-in-the-middle attack",
+        "B": "Phishing attack",
+        "C": "SQL injection attack",
+        "D": "Denial-of-service attack"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "A DoS attack floods a network or server with excessive traffic or requests, disrupting its normal operation and making I unavailable to legitimate users."
+    },
+    {
+      "question": "Which type of computer functions as a central repository, providing hardware, software, and other resources to multiple clients connected over a network?",
+      "options": {
+        "A": "Workstation",
+        "B": "Mainframe",
+        "C": "Supercomputer",
+        "D": "Server"
+      },
+      "answer": "D",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Servers are specifically designed to act as central repositories on a network. They provide hardware resources (like storage space and processing power), software resources (like applications and databases), and other resources (like network access) to multiple clients (other computers or devices) connected to the network. Mainframes are used for large-scale data processing workstations are intended for individual use, and supercomputers are designed for highly complex computations."
+    },
+    {
+      "question": "Which type of computer would a small business most likely use for everyday tasks?",
+      "options": {
+        "A": "Minicomputers",
+        "B": "Mainframe computers",
+        "C": "Microcomputers",
+        "D": "Supercomputers"
+      },
+      "answer": "C",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Small businesses typically use microcomputers for everyday tasks such as word processing accounting and internet access."
+    },
+    {
+      "question": "Which type of software acts as an intermediary between hardware and applications?",
+      "options": {
+        "A": "System software",
+        "B": "Application software",
+        "C": "Firmware",
+        "D": "Middleware"
+      },
+      "answer": "A",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "System software, such as operating systems, acts as an intermediary between hardvvare and application software."
+    },
+    {
+      "question": "Why is it important to be stable, steady, and patient during program development?",
+      "options": {
+        "A": "To avoid using debugging tools",
+        "B": "To reduce the likelihood of making errors",
+        "C": "To ensure the program is written quickly",
+        "D": "To make the program more complex"
+      },
+      "answer": "B",
+      "marks": 1,
+      "topic": "Past Questions",
+      "year": 2024,
+      "explanation": "Being stable, steady, and patient helps in reducing errors and ensuring the quality of the program."
+    }
+  ]
+}

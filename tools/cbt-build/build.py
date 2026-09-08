@@ -186,6 +186,7 @@ def main() -> int:
                     "marks": int(q.get("marks") or 1),
                     **({"topic": str(q["topic"])} if q.get("topic") else {}),
                     **({"difficulty": str(q["difficulty"])} if q.get("difficulty") else {}),
+                    **({"year": int(q["year"])} if isinstance(q.get("year"), int) and not isinstance(q.get("year"), bool) else {}),
                 })
                 if qtype == "mcq":
                     key_answers[qid] = {"type": "mcq", "letter": letter,
