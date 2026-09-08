@@ -6124,35 +6124,51 @@
     },
     "jamb-physics-bank-1478": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>For anybody falling through a viscous liquid, at its terminal velocity. the resultant force acting on its is zero. from the equation: Mg - v - u = 0. where v = viscous drag<br />\r\nU = upthrust Mg = weight of the body.<br />\r\n&there4; 36 x 10 - 260 - U = 0<br />\r\n&there4; U = 360 - 260 = 100N<br />\r\nUpthrust on the body = 100N.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1816"
     },
     "jamb-physics-bank-1479": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "For a car battery rated 45 AH, being charged by a charger of 2.5 A rating, the time for the battery to be fully charged is given by:<br>\r\n                       T = (45)/2.5 = 18 hrs",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=208"
     },
     "jamb-physics-bank-1480": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Let the masses of the two objects be M1 and M2<br />\r\nand their distance apart = r<br />\r\n<br />\r\nTherefore the force acting F1 = \\( \\frac{GM1M2}{r^2}\\)<br />\r\n<br />\r\nfor a new distance of r/2, we have a force of<br />\r\n<br />\r\nF2 = \\( \\frac{GM2M2}{r/2}\\)<br />\r\n<br />\r\n\\(\\text{Thus } F1 \\times r^2 = GM_1M_1 \\text{and}\\)<br />\r\nF2 \\(\\times (r/2)^2 = GM_1M_1\\)<br />\r\n<br />\r\n\\(\\text{Since } GM1M1 = GM_1M_1\\)<br />\r\n<br />\r\n\\(\\implies F_1 \\times r^2 = F2 \\times (r/2)^2\\)<br />\r\n<br />\r\n\\(\\text{Therefore } 200 \\times r^2 = F2 \\times r^2/4\\)<br />\r\n<br />\r\nF2 = \\(\\frac{4 \\times 200 \\times r^2}{r^2} = 800N\\)</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=2543"
     },
     "jamb-physics-bank-1481": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>To determine the deceleration of the motorcyclist, we can use the kinematic equation that relates initial velocity, final velocity, acceleration, and distance:</p>\r\n\r\n<p>\\(v^2 = u^2 + 2as\\)</p>\r\n\r\n<p>Where:&nbsp;&nbsp;\\( v \\) = final velocity (0 m/s, since he stops at the traffic light), \\( u \\) = initial velocity (30 m/s),&nbsp;\\( a \\) = acceleration (deceleration, which will be negative)<br />\r\n&nbsp; &nbsp;\\( s \\) = distance (50 m)</p>\r\n\r\n<p>Substituting the values into the equation, we rearrange it to solve for \\( a \\):</p>\r\n\r\n<p>\\(0 = (30)^2 + 2a(50)\\)</p>\r\n\r\n<p>Calculating \\( (30)^2 \\):</p>\r\n\r\n<p>\\(0 = 900 + 100a\\)</p>\r\n\r\n<p>Now, rearranging for \\( a \\):</p>\r\n\r\n<p>\\(100a = -900\\)</p>\r\n\r\n<p>\\(a = -\\frac{900}{100} = -9 \\, \\text{m/s}^2\\)</p>\r\n\r\n<p>The deceleration of the motorcyclist is \\( \\mathbf{9 \\, m/s^2} \\).</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=3176"
     },
     "jamb-physics-bank-1482": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The force acting on a moving charge in the magnetic field is given by: F= qVBSin &theta;<br />\r\nsin &theta; =F=(8.0x10)-14/1.6x10-19x1.0x106x1.0 = (8.0x10)14/16 x 1013<br />\r\n(8.0x 10)-14/16x10-14<br />\r\n=0.5000<br />\r\n&there4; &theta;= sin-1 0.5000<br />\r\n=30&deg;</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=763"
     },
     "jamb-physics-bank-1483": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "for a real image 3 times the size of the object, it implies that the magnification 3 = v/u, 3 = 24/u, therefore 3u = 24, u = 8cm thus we have from the relation:m = (f)/(u)-f; that 3 = (f)/(8) - f. therefore f = 3(8-f) f = 24 - 3f ∴4f = 24; f = 6cm OR: (1)/(u) + (1)/(v) = (1)/(f).<br>\r\n(1)/(8) + (1)/(24) = (1)/(f)<br>\r\ntherefore (3+1)/(24) = (1)/(f) <br>\r\n4/24=1/f;therefore 4f = 24<br>\r\n                   f = 6cm",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=184"
     },
     "jamb-physics-bank-1484": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Silicon is a tetra valent (4 valent) element, and in order to produce an n type semi-conductor, it has to be dropped with a penta valent (5valent)element, that, that is element in group five (v)",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1094"
     },
     "jamb-physics-bank-1485": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>the power of a lens is defined as the reciprocal of the focal length ,expressed in metre.Mathematically, the power of a lens in dioptres is given by:(1)/f(in cm).<br />\r\nthus for lens of power of 4.0 dioptres we have that: (1)/(f) = +4.0<br />\r\nf= (1)/(4.0)&nbsp;<br />\r\n= 0.25cm</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=136"
     },
     "jamb-physics-bank-1486": {
       "type": "mcq",
@@ -6160,23 +6176,33 @@
     },
     "jamb-physics-bank-1487": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>For Hooke&#39;s law F = Ke<br />\r\n<br />\r\n\\( \\implies \\frac{F}{e} = K\\)<br />\r\n<br />\r\n\\(\\frac{f_1}{e_1} = \\frac{f_2}{e_2}\\)<br />\r\n<br />\r\n\\(\\text{Let the original length} = t_0 \\)<br />\r\n<br />\r\n\\(\\text{therefore}\\) e\\(_1\\) = (36 - t_0)\\)cm ; e\\(_2 = (46 - t_0)\\)cm&nbsp;<br />\r\n\\(f_1\\)&nbsp;= 40N, \\(f_2\\)&nbsp;= 60N<br />\r\n\\(\\frac{40}{36 - t_0} = \\frac{60}{45 - t_0}\\)<br />\r\n\\(\\implies 40(45 - t_0) = 60(36 - t_0)\\)<br />\r\n\\(\\text{therefore } 1800 - 40t_0\\) = 2160 - 60\\(t_0\\)<br />\r\n60\\(t_0\\) - 40\\(t_0\\) = 2160 - 1800<br />\r\n20\\(t_0\\) = 360<br />\r\n\\(t_0\\) = 18cm</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=2728"
     },
     "jamb-physics-bank-1488": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "For the device rated 2000 W, 250 V, implies that current I, flowing is given by the relation <br>\r\nPower = IV<br>\r\nI = (power)/v = (200)/250<br>\r\n  = 8A.<br>\r\n∴ the most suitable fuse for the device is 8A",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=78"
     },
     "jamb-physics-bank-1489": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>for a body projected at an angle &theta; to the horizontal, the time of the flight is given by T = (2u sin &theta;)/g =(2x 40)x sin (30)/10 =(2 x 40) x (0.5)/10 = 4.0secs.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=408"
     },
     "jamb-physics-bank-1490": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p><strong>Melting (I)</strong>: This process involves the breaking of intermolecular&nbsp;forces as a solid turns into a liquid, reflecting the molecular structure of matter.</p>\r\n\r\n<p><strong>Boiling (II)</strong>: Similar to melting, boiling involves the transition from liquid to gas, indicating how molecules gain energy and move apart</p>\r\n\r\n<p><strong>Conduction (IV)</strong>: This is the process of heat transfer through collisions between molecules, demonstrating how molecular interactions lead to energy transfer.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=2242"
     },
     "jamb-physics-bank-1491": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p><strong>Reproducibility (I)</strong><br />\r\nConsistent readings under the same conditions.</p>\r\n\r\n<p><strong>Sensibility (II)</strong><br />\r\nQuick response to small temperature changes.</p>\r\n\r\n<p><strong>High Accuracy (IV)</strong><br />\r\nMeasurements close to the true temperature.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=2061"
     },
     "jamb-physics-bank-1492": {
       "type": "mcq",
@@ -6184,19 +6210,28 @@
     },
     "jamb-physics-bank-1493": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "If the string is in equilibrium, the the tension in the string Q = 4N + 5N = 9N",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=1221"
     },
     "jamb-physics-bank-1494": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "l =l1 + l2 = 3 + 6 = 9H",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=2694"
     },
     "jamb-physics-bank-1495": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "In a purely capacity circuit, voltage lags behind current by 90°, or current leads voltage by 90°",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=537"
     },
     "jamb-physics-bank-1497": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "The fig above shows a conventional transistor, showing the three basic features, the Base, the Emitter and the collector. Thus comparing this with the figure in the question it implies that P = Emitter, Q = Base and R = collector",
+      "answer_image": "/qimages/ac363f62ea4ee3e78f4d.jpg",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=1353"
     },
     "jamb-physics-bank-1498": {
       "type": "mcq",
@@ -6212,23 +6247,33 @@
     },
     "jamb-physics-bank-1501": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Marching soldiers crossing a suspension bridge are usually advised to break their steps to avoid damaging the bridge owing to resonance. The steps of the marching soldiers can set the bridge into vibration, and when the frequency of the bridge is equal to that of the steps of the soldiers, the resonance occurs,and at this resonance, the bridge vibrates violently with maximum amplitude, and can collapse.",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=40"
     },
     "jamb-physics-bank-1502": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Radio waves are used to transmit signals between satellites and ground stations because they can travel long distances and effectively penetrate the atmosphere.</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=41"
     },
     "jamb-physics-bank-1503": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>To calculate the amount of energy released when 0.5 kg of uranium is completely burnt, we use Einstein&#39;s mass-energy equivalence formula:</p>\r\n\r\n<p>\\(E = mc^2\\)</p>\r\n\r\n<p>Given: Mass of uranium (\\( m \\)) = 0.5 kg, Speed of light (\\( c \\)) = \\( 3 \\times 10^8 \\, \\text{m/s} \\)<br />\r\nSubstituting the values into the formula:</p>\r\n\r\n<p>\\(E = 0.5 \\, \\text{kg} \\times (3 \\times 10^8 \\, \\text{m/s})^2\\)</p>\r\n\r\n<p>Calculating \\( c^2 \\):</p>\r\n\r\n<p>\\((3 \\times 10^8)^2 = 9 \\times 10^{16} \\, \\text{m}^2/\\text{s}^2\\)</p>\r\n\r\n<p>Now, substituting back:</p>\r\n\r\n<p>\\(E = 0.5 \\times 9 \\times 10^{16} = 4.5 \\times 10^{16} \\, \\text{J}\\)</p>\r\n\r\n<p>The amount of energy released when 0.5 kg of uranium is burnt completely is&nbsp; \\(E = 4.5 \\times 10^{16} \\, \\text{J}\\)</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=3066"
     },
     "jamb-physics-bank-1504": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The electrons and cations of ionized gas act as charge carriers.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1154"
     },
     "jamb-physics-bank-1505": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "the current in reverse biased junction diode is due to minority carriers, that is, the negative charges in the p-semi-conductor, and the positive charges in the n-semi-conductor.",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1353"
     },
     "jamb-physics-bank-1506": {
       "type": "mcq",
@@ -6240,19 +6285,28 @@
     },
     "jamb-physics-bank-1508": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "The effective capacitance in the circuit is given by:<br>\r\n1/C = <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>3</sub> + <sup>1</sup>/<sub>6</sub> = <sup>6</sup>/<sub>6</sub><br>\r\ntherefore C = 1μF or <br>\r\n1.0 x 10<sup>-6</sup>F.<br>\r\nSince C = Q/V, its implies that the charges Q, flowing in the circuit is given by Q = CV<br>\r\n= 1.0 x 10<sup>-6</sup> x 12<br>\r\n= 12.0 x 10<sup>-6</sup> Coulomb.<br>\r\n∴ P.d across the 6μF,<br>\r\n<table><tbody><tr><td rowspan=\"2\">V = Q/C = </td><td style=\"border-bottom:solid 1px\">12.0 x 10<sup>-6</sup></td></tr><tr><td>6.0 x 10<sup>-6</sup>F</td></tr></tbody></table><br>\r\n= 2.0 volts",
+      "answer_image": "/qimages/8b87de6b48a0304b388c.jpg",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=1970"
     },
     "jamb-physics-bank-1509": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p><strong>Magnetic poles always exist in pairs</strong>. It is not possible to produce just an isolated north pole or an isolated south pole. If a bar magnet is broken into two pieces, each piece will have a north and south pole.</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=153"
     },
     "jamb-physics-bank-1510": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Displacement and torque are vector quantities with both magnitude and direction, while options A, B, and D&nbsp;consist of vector and scalar.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=325"
     },
     "jamb-physics-bank-1511": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p><strong>Evaporation</strong>&nbsp;is a process by which molecules undergo a spontaneous transition from the liquid phase to the gaseous phase</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=2153"
     },
     "jamb-physics-bank-1512": {
       "type": "mcq",
@@ -6260,23 +6314,33 @@
     },
     "jamb-physics-bank-1513": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The ray which causes gas molecules to fluoresce or glow is the cathode rays</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1204"
     },
     "jamb-physics-bank-1514": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>since resistance R = \\(\\frac{p(l)}{a}\\)<br />\r\n= \\(\\frac{4 \\times&nbsp;10^{-7}&nbsp;\\times&nbsp;20}{8.0 \\times&nbsp;10^{-6}}\\)<br />\r\nR = 1.0 Ω</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=539"
     },
     "jamb-physics-bank-1515": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The characteristics of a shadow are dependent on the intensity of the light source. A hard light will produce a&nbsp;shadow with a sharp edge, a soft light will produce a shadow with a more blurry edge.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=90"
     },
     "jamb-physics-bank-1516": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>F = \\(\\frac{17}{sin 60} = \\frac{17}{0.866}\\)<br />\r\n<br />\r\n= 20N</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=774"
     },
     "jamb-physics-bank-1517": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>In general, the velocity of sound in air varies directly as the square root of temperature measured in kelvin.<br />\r\n<br />\r\nThat V \\( \\propto \\sqrt{T} \\implies V^2 \\propto T.\\)<br />\r\n<br />\r\n\\(\\text{Therefore} \\frac{V^2_1}{T_1} = \\frac{V^2_2}{T_2}\\)<br />\r\n<br />\r\n\\(\\text{Thus Let } V_1\\) = 4m/s&nbsp;<br />\r\nT\\(_1\\) = 10K&nbsp;<br />\r\n\\(\\text{Therefore } V_2 = 2V_1\\) = 8m/s&nbsp;<br />\r\n<br />\r\n\\(\\implies \\frac{4^2}{10} = \\frac{8^2}{T_2}\\)<br />\r\n<br />\r\nT\\(_2 = \\frac{64 \\times 10}{16}\\) = 40K<br />\r\n<br />\r\nT\\(_2 = 4T_1 \\)<br />\r\n<br />\r\nThus, when the velocity of sound in air is doubled, its absolute temperature will be quadrupled.</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=2346"
     },
     "jamb-physics-bank-1518": {
       "type": "mcq",
@@ -6288,19 +6352,27 @@
     },
     "jamb-physics-bank-1520": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "When impurities are added to semi conductor , the semi conductor is said to be doped, and increases the conductivity of the semi-conductor.",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1037"
     },
     "jamb-physics-bank-1521": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>When the temperature difference between the wet bulb and dry bulb of a hygrometer is high, it indicates that the air is dry, leading to lower relative humidity. The wet bulb temperature drops more significantly because of evaporation, which occurs more readily in dry air. Conversely, a smaller temperature difference indicates higher humidity.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1478"
     },
     "jamb-physics-bank-1522": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>When very hot water is poured into the thick glass tumbler, the inner surface of the glass heats up and expands more quickly than the outer part. This creates stress due to uneven expansion, leading to cracking. In contrast, the thin glass tumbler is less prone to this issue because it heats more uniformly.</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=2295"
     },
     "jamb-physics-bank-1523": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>\\( ^{235} _{92}U + ^1 _0n &rarr; ^{144} _{56}Ba + ^{90} _{36}Kr +2^1_0X \\)<br />\r\nIn the reaction above, balancing the left with the right shows that X is a neutron</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=1430"
     },
     "jamb-physics-bank-1524": {
       "type": "mcq",
@@ -6308,7 +6380,9 @@
     },
     "jamb-physics-bank-1525": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Sodium is a soft, silvery-white metal that is a good conductor of electricity. It has free-moving electrons, which allows it to conduct electrical current efficiently</p>",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=1375"
     },
     "jamb-physics-bank-1526": {
       "type": "mcq",
@@ -6316,7 +6390,9 @@
     },
     "jamb-physics-bank-1527": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>An n- type semi conductor is usually formed by dopping the semi conductor(a four valent element)with a five valent<br />\r\nelement.(arsenic and antimony)</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=627"
     },
     "jamb-physics-bank-1528": {
       "type": "mcq",
@@ -6328,7 +6404,10 @@
     },
     "jamb-physics-bank-1530": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>For vertical equilibrium, we have<br />\r\n2Ty = 75N<br />\r\nBut \\(\\frac{Ty}{T}\\) = \\(\\frac{adj}{hyp}\\) = cos 60&ordm;<br />\r\n&there4; Ty = T Cos 60&ordm;<br />\r\n=&gt; 2Ty = 2Tcos 60&ordm;&nbsp;= 75N<br />\r\n2 x T x 0.5 = 75 =&gt; T = 75N<br />\r\n&there4; Total tension in the rope = 2 T.<br />\r\n= 2 x 75 = 150N</p>",
+      "answer_image": "/qimages/2f6785af51dfc00b9dc1.jpg",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=1947"
     },
     "jamb-physics-bank-1531": {
       "type": "mcq",
@@ -6336,11 +6415,15 @@
     },
     "jamb-physics-bank-1532": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The least distance of distinct vision required = 25 cm.<br />\r\n&there4; for the person to see an object clearly at 25 cm from the eye, the image must be formed at 75 cm on the same side of lens, at his near point.<br />\r\n&there4; U = 25 cm; V = -75 cm (image should be virtual)<br />\r\nthus \\(\\frac{1}{f}\\) = \\(\\frac{1}{v}\\) +\\(\\frac{1}{u}\\)<br />\r\n= \\(\\frac{1}{75}\\) + \\(\\frac{1}{25}\\)<br />\r\n= \\(\\frac{-1 + 3}{75}\\) = \\(\\frac{2}{75}\\)<br />\r\n&there4;f = \\(\\frac{75}{2}\\) = 37.50cm.</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=1355"
     },
     "jamb-physics-bank-1533": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Y = sin &pi;(150&pi;t - \\(\\frac{&pi;x}{4}\\))<br />\r\nComparing the above with the standard wave equation:<br />\r\nY = A sin &pi; (\\(\\frac{(2vt)}{&lambda;}\\) - \\(\\frac{(2x)}{&lambda;}\\))<br />\r\n=&gt; the phase difference \\(\\frac{x}{4}\\) = \\(\\frac{2x}{&lambda;}\\)<br />\r\n&there4; \\(\\frac{1}{4}\\) = \\(\\frac{2}{&lambda;}\\) =&gt; &lambda; = 8cm<br />\r\n&there4; \\(\\frac{2&pi;x}{8}\\) = &nbsp;45&deg;<br />\r\nsince &pi;&nbsp;= 180&deg;</p>\r\n\r\n<p>45&deg; X&nbsp;8 = 2 X&nbsp;180&deg; x</p>\r\n\r\n<p>&there4; x =&nbsp; 1cm</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=2685"
     },
     "jamb-physics-bank-1534": {
       "type": "mcq",
@@ -6360,7 +6443,9 @@
     },
     "jamb-physics-bank-1538": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>R\\(_s\\) = \\(\\frac{(i_gr_g)}{I-i_g}\\) = \\(\\frac{(50 \\times&nbsp;10^{-3}&nbsp;\\times&nbsp;5)}{5 - (50 x 10^{-3})}\\) = \\(\\frac{(0.25)}{4.95}\\) = 0.0505 = 0.05Ω</p>",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=1878"
     },
     "jamb-physics-bank-1539": {
       "type": "mcq",
@@ -6380,15 +6465,21 @@
     },
     "jamb-physics-bank-1543": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Low humidity causes moisture to evaporate from the skin, leading to dryness and a rough texture.</p>",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=192"
     },
     "jamb-physics-bank-1544": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "M = Itz;  z = (M)/It = (2)/0.5 x 3 x 60 x 60<br>\r\n                    = 3.703 x 10<sup>-4</sup> gc<sup>-1</sup><br>\r\n∴ M = Itz = 1.5 x 1 x 60 x 60 x 3.703 x 10<sup>-4</sup> <br>\r\n  = 1.99962g.<br>\r\n  =2.0g",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=1648"
     },
     "jamb-physics-bank-1545": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p><strong>I. The number of neutrons released exceeds the number that caused the fission.</strong><br />\r\nfission releases additional neutrons that can initiate further reactions.</p>\r\n\r\n<p><strong>II. There is loss of mass.</strong></p>\r\n\r\n<p>&nbsp;mass is converted into energy according to Einstein&rsquo;s equation E = mc\\(^2\\)</p>\r\n\r\n<p><strong>III. Energy is produced.</strong></p>\r\n\r\n<p>significant energy is released during the fission process.</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=492"
     },
     "jamb-physics-bank-1546": {
       "type": "mcq",
@@ -6412,15 +6503,22 @@
     },
     "jamb-physics-bank-1551": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Generally, the viscosity of liquids tends to increase with pressure, as the increased pressure can lead to a greater interaction between molecules</p>",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=2126"
     },
     "jamb-physics-bank-1552": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Pressure of the Gas, P = A + h<br>\r\n= 76 + 10<br>\r\n86 cm Hg",
+      "answer_image": "/qimages/3abeb5aa3e5984a7afcc.jpg",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=1899"
     },
     "jamb-physics-bank-1553": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Non-luminous objects do not emit light; instead, they are visible because they reflect light from luminous sources (such as the sun or artificial lights). This reflection allows us to see them.</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=1179"
     },
     "jamb-physics-bank-1554": {
       "type": "mcq",
@@ -6432,7 +6530,9 @@
     },
     "jamb-physics-bank-1556": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>When two vectors are perpendicular, the angle between them is 90 degrees, resulting in the component of one vector along the direction of the other being zero.</p>",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=2332"
     },
     "jamb-physics-bank-1557": {
       "type": "mcq",
@@ -6440,7 +6540,10 @@
     },
     "jamb-physics-bank-1558": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>In the stress - strain graph shown above, X represents the breaking point of the wire</p>",
+      "answer_image": "/qimages/86915fe81d3a1ca34aa3.png",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=1837"
     },
     "jamb-physics-bank-1559": {
       "type": "mcq",
@@ -6452,11 +6555,15 @@
     },
     "jamb-physics-bank-1561": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Generally, period T = 1/f(reciprocal of frequency).<br />\r\n=&gt; f = 1/T<br />\r\nAnd from the diagram, period T = 4s<br />\r\n&there4; frequency, f = 1/T = 1/4 = 0.25 Hz</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=2833"
     },
     "jamb-physics-bank-1562": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>In many AC radio circuits, transformers are used primarily to reduce the voltage to levels suitable for safe and effective operation of the components.</p>",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=1339"
     },
     "jamb-physics-bank-1563": {
       "type": "mcq",
@@ -6468,15 +6575,21 @@
     },
     "jamb-physics-bank-1565": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The charge of a body is determined by the imbalance between the number of protons (positively charged) and electrons (negatively charged). A deficiency of electrons results in a positive charge, while a surplus of electrons results in a negative charge.</p>",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=1272"
     },
     "jamb-physics-bank-1566": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p><strong>Band Theory</strong>: This theory describes the energy levels of electrons in solids as bands. It explains how the bands (valence and conduction bands) determine the electrical properties of materials.</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=416"
     },
     "jamb-physics-bank-1567": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "The thermometric property of a constant volume thermometer is change in pressure with temperature",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=419"
     },
     "jamb-physics-bank-1568": {
       "type": "mcq",
@@ -6484,7 +6597,9 @@
     },
     "jamb-physics-bank-1569": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>In a closed tube, the fundamental note occurs when the length of the tube l = \\(\\frac{&lambda;}{4}\\),<br />\r\nthe first overtone occurs when the length of the tube l = \\(\\frac{3 \\lambda}{4}\\)<br />\r\n&lambda; = \\(\\frac{4l}{3}\\)&nbsp;= \\(\\frac{ 4 \\times 33}{3}\\)&nbsp;= 44 cm</p>",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=1255"
     },
     "jamb-physics-bank-1570": {
       "type": "mcq",
@@ -6492,7 +6607,10 @@
     },
     "jamb-physics-bank-1571": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>.</p>",
+      "answer_image": "/qimages/90e173e929b6a4798652.png",
+      "video": "https://www.youtube.com/embed/4kKu9DHBJWo?start=3028"
     },
     "jamb-physics-bank-1572": {
       "type": "mcq",
@@ -6500,7 +6618,9 @@
     },
     "jamb-physics-bank-1573": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "In a capacitive circuit, current leads voltage by 90°, or voltage lags current by 90°",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=1540"
     },
     "jamb-physics-bank-1574": {
       "type": "mcq",
@@ -6512,7 +6632,9 @@
     },
     "jamb-physics-bank-1576": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>From faradays law, M = itz<br />\r\nBut mass, M = volume x density<br />\r\nand volume = cross-sectional area x thickness<br />\r\nM = 118.8&nbsp;x 10\\(^{-6}\\) x 9 x 10\\(^3\\)<br />\r\n&there4; 118.8cm2 x 10\\(^{-6}\\) x 9 x 10\\(^3\\) = 10 x t x 3.3 x 10\\(^{-7}\\)<br />\r\n&there4; (118.8 x 9) x 10\\(^{-7}\\) = 10 x t x 3.3 x 10\\(^{-7}\\)<br />\r\n<br />\r\n&there4; t = \\(\\frac{118.8 \\times 9}{ 3.3}\\)<br />\r\n<br />\r\nt = 324 seconds<br />\r\n<br />\r\nConvert to minutes by dividing by 60<br />\r\n<br />\r\nt = \\(\\frac{324}{60}\\)<br />\r\n<br />\r\nt = 5.4 mins.</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=1390"
     },
     "jamb-physics-bank-1577": {
       "type": "mcq",
@@ -6564,11 +6686,15 @@
     },
     "jamb-physics-bank-1589": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Efficiency = \\( \\frac{W(120N)INPUT}{WORK OUTPUT} \\times \\frac{100}{1}\\)<br />\r\n<br />\r\nAnd for incline plane<br />\r\n<br />\r\nV.R =\\( \\frac{1}{Sin\\theta}\\)<br />\r\n= V.R = \\(\\frac{1}{Sin30} =\\frac{1}{0.5}\\) = 2<br />\r\n<br />\r\n\\(\\text{therefore } \\frac{60}{120} = \\frac{M.A}{2}\\)<br />\r\nM.A =&nbsp;\\(\\frac{120}{100}\\) = 1.2<br />\r\n<br />\r\n\\(\\text{but M.A } = \\frac{load}{effort} = \\frac{120}{\\text{E}}\\)<br />\r\n<br />\r\n\\(\\text{therefore} \\frac{120}{\\text{E}}\\) = 1.2<br />\r\n<br />\r\nE = \\(\\frac{120}{1.2 }\\) = 100N<br />\r\n<br />\r\n<br />\r\nTherefore, Effort up the plane = 100N</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=1706"
     },
     "jamb-physics-bank-1590": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\(\\lambda\\) = \\(\\frac{h}{mv}\\), then, h = mv\\(\\lambda\\)</p>\r\n\r\n<p>m = \\(\\frac{h}{v \\lambda}\\) = \\(\\frac{6.63 \\times 10^{-34}}{6.0 \\times 10^{-7} \\times 3 \\times 10^8}\\) = 3.68 x 10\\(^{-36}\\) kg</p>\r\n\r\n<p>OPtion&nbsp;A&nbsp;is the closest.</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=3084"
     },
     "jamb-physics-bank-1591": {
       "type": "mcq",
@@ -6576,7 +6702,9 @@
     },
     "jamb-physics-bank-1592": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>80 days = 4 half lives (i.e 4 x 20dqs = 80dq)<br />\r\n<br />\r\nBut the fraction always left by any radioactive material after 4 half lives is<br />\r\n<br />\r\n\\( \\left ( \\frac{1}{2} \\right)^4 = \\frac{1}{16} \\)</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=3000"
     },
     "jamb-physics-bank-1593": {
       "type": "mcq",
@@ -6584,11 +6712,16 @@
     },
     "jamb-physics-bank-1594": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "from hooke's law F=Ke<br>\r\n\\(<br>\r\n\\frac{F_1}{e_1} - \\frac{F_2}{e_2} \\text{therefore} <br>\r\n<br>\r\n\\frac{4}{0.02} = \\frac{15}{e_2} \\) <br>\r\n<br>\r\ne<sub>1</sub> = \\( \\frac{0.02 x 15}{4} = 0.075M \\)<br>\r\n<br>\r\nThe new length of the string is 4 + 0.075<br>\r\n= 4.075<br>\r\n= 4.08",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=1821"
     },
     "jamb-physics-bank-1595": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The decay process illustrated above shows that the lost &beta; -particle to decay to the X by increase its atomic number ( from 92 to 93) and leaving the mass no. unaffected. There after, x decayed by -&alpha; emission to give Y, by decreasing the mass no. by 2 ( from 93 to 91).<br />\r\nThus , the emission is &beta; and &alpha; particles respectively</p>",
+      "answer_image": "/qimages/3b4b83e053645363a497.jpg",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=1127"
     },
     "jamb-physics-bank-1596": {
       "type": "mcq",
@@ -6596,19 +6729,27 @@
     },
     "jamb-physics-bank-1597": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Increase in pressure generally raises the boiling point but but lowers the melting point. II and III",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=1186"
     },
     "jamb-physics-bank-1598": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Diffusion rates of a substance generally depend on mass, density, and temperature. and nature of substances I&nbsp;II, III, and IV</p>",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=1380"
     },
     "jamb-physics-bank-1599": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Identical (I): The waves should have the same frequency and wavelength.<br />\r\nCoherent (III): The waves must maintain a constant phase relationship.<br />\r\nMonochromatic (IV): The waves should have the same frequency (which is closely related to being coherent).</p>",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=1524"
     },
     "jamb-physics-bank-1600": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Using the liquid of high volume expansively  II only",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=932"
     },
     "jamb-physics-bank-1601": {
       "type": "mcq",
@@ -6620,15 +6761,21 @@
     },
     "jamb-physics-bank-1603": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Use <strong>Fleming&#39;s Left-Hand Rule<!--TgQPHd||[]--></strong> to find the direction:<!--TgQPHd||[]--></p>\r\n\r\n<p><strong>First Finger (Field):<!--TgQPHd||[]--></strong> Point it into the paper/screen.<!--TgQPHd||[]--><!--TgQPHd||[]--></p>\r\n\r\n<p><strong>Thumb (Force):<!--TgQPHd||[]--></strong> Point it upwards.<!--TgQPHd||[]--><!--TgQPHd||[]--></p>\r\n\r\n<p><strong>Second Finger (Current):<!--TgQPHd||[]--></strong> It will naturally point to the <strong>right<!--TgQPHd||[]--></strong>.</p>"
     },
     "jamb-physics-bank-1604": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Being a uniform rod, the height W should be acting at the mid point 25cm mark.<br>\r\n∴ Taking moment about the fulcrum, F, <br>\r\n200 x 10 = W x 10 + 40 x 30<br>\r\n2000 = 10W + 1200<br>\r\n=> 10W = 2000 - 1200<br>\r\n= 800<br>\r\nw = 800/10 = 80N",
+      "answer_image": "/qimages/bcda512623c4fa217b29.jpg",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=73"
     },
     "jamb-physics-bank-1605": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Lenz's lew of electrical magnetic induction is usefully referred to as the law of conservation of energy",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=2755"
     },
     "jamb-physics-bank-1606": {
       "type": "mcq",
@@ -6644,7 +6791,9 @@
     },
     "jamb-physics-bank-1609": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Spaces and Forces: The differences observed in solids, liquids, and gases can primarily be attributed to the arrangement, spacing, and&nbsp;intermolecular forces acting between the molecules.</p>\r\n\r\n<p>Solids: Tightly packed molecules with strong intermolecular forces, giving a definite shape and volume.<br />\r\nLiquids: Close molecules that can move past each other, resulting in a definite volume but no definite shape.<br />\r\nGases: Widely spaced molecules with weak intermolecular forces, filling the entire container.</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=2058"
     },
     "jamb-physics-bank-1610": {
       "type": "mcq",
@@ -6672,11 +6821,15 @@
     },
     "jamb-physics-bank-1616": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The phenomenon of light bending around an obstacle is:&nbsp;&nbsp;diffraction</p>",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=1694"
     },
     "jamb-physics-bank-1617": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>A pure spectrum can be produced using a triangular prism-two converging lenses and a narrow slit of white light</p>",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=2072"
     },
     "jamb-physics-bank-1618": {
       "type": "mcq",
@@ -6688,7 +6841,9 @@
     },
     "jamb-physics-bank-1620": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Since the cells are connected in parallel the net e.m.f is that of one cell, E.<br>\r\nHowever the effective internal resistance should be added as parallel resistance.<br>\r\n=> <sup>1</sup>/<sub>v</sub> + <sup>1</sup>/<sub>25</sub> + <sup>1</sup>/<sub>25</sub> + <sup>1</sup>/<sub>25</sub> = 1.2<br>\r\n∴ v = 0.83Ω<br>\r\n∴ Effective e.m.f and internal resistance are respectively = 1.5V and 0.83Ω",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=749"
     },
     "jamb-physics-bank-1621": {
       "type": "mcq",
@@ -6704,7 +6859,9 @@
     },
     "jamb-physics-bank-1624": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Mathematically Boyle's law = PV = K<br>\r\nWhere P = Pressure<br>\r\nand V = Volume<br>\r\n<br>\r\n<br>\r\nBy definition Pressure = \\( \\frac{F}{A} = \\frac{F}{M \\times M} \\)<br>\r\n<br>\r\nAgain Workdone = force x displacement <br>\r\n<br>\r\ntherefore \\( PV = \\frac{F}{A} \\times V = \\frac{F}{M^2} \\times \\frac{M^3}{1} \\\\<br>\r\n<br>\r\nPV = \\frac{F}{x\\times x} \\times \\frac{x \\times x \\times x}{1} = F \\times x \\)<br>\r\n<br>\r\n= force x displacement",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=1956"
     },
     "jamb-physics-bank-1625": {
       "type": "mcq",
@@ -6740,7 +6897,9 @@
     },
     "jamb-physics-bank-1633": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Energy stored in a spring = (1)/2 K e2 = (1)/2 x 500(0.05)2 = 0.625J</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=848"
     },
     "jamb-physics-bank-1634": {
       "type": "mcq",
@@ -6752,19 +6911,27 @@
     },
     "jamb-physics-bank-1636": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>relative density = (weight of substance )/weight of equal volume of water = (4 - 2)/5 - 2 = (2)/3</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=1215"
     },
     "jamb-physics-bank-1637": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Magnification = \\(\\frac{\\text{image height}}{\\text{object height}}<br />\r\n= \\frac{\\text{length camera}}{\\text{object distance from pin-hole}}\\)<br />\r\n&there4;\\(\\frac{2}{4} = \\frac{6}{X}\\)<br />\r\nX = \\(\\frac{4 \\times 6}{2}\\) = 12 cm</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=2449"
     },
     "jamb-physics-bank-1638": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>(1)/V + (1)/U = (1)/f<br />\r\n(1)/V + (1)/20 = (1)/10<br />\r\n(1)/V = (1)/10 - (1)/20 = (2 -1)/20 = (1)/20<br />\r\n&there4; V = 20 cm<br />\r\nmag = (image height)/object height = (v)/u<br />\r\n(X)/5 = (20)/50<br />\r\nX = 5 cm</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=2564"
     },
     "jamb-physics-bank-1639": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Real depth and apparent dept is due to refraction</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=2791"
     },
     "jamb-physics-bank-1640": {
       "type": "mcq",
@@ -6772,43 +6939,63 @@
     },
     "jamb-physics-bank-1641": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Image formed by convex mirror is always erect, virtual and diminished</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=2765"
     },
     "jamb-physics-bank-1642": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>since currency and finger contain unlike molecules, the force involved is adhesion</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=639"
     },
     "jamb-physics-bank-1643": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The elastic potential energy of the balance wheel reduces as the wheel expands, therefore the clock will loose time.</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=1374"
     },
     "jamb-physics-bank-1644": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The resistors are in series<br />\r\n&there4; Reff = R1 + R2 + .....<br />\r\n= 4 + 4 + 4 + 4 + 4 + 4 = 24 &Omega;</p>",
+      "video": "https://www.youtube.com/embed/kpW27O9rJhA?start=1924"
     },
     "jamb-physics-bank-1645": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Left = L1 + L2 + L3<br />\r\n= 5mH + 10mH + 20mH = 35mH</p>",
+      "video": "https://www.youtube.com/embed/kpW27O9rJhA?start=1982"
     },
     "jamb-physics-bank-1646": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Comparing y = 5sin (200 &pi;t - 0.4X) with the wave equation y = A sin (wt -KX) K = (2&pi;)/&lambda; = 0.4<br />\r\n&there4; &lambda; = (2&pi;)/0.4 = 15.7M</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=2008"
     },
     "jamb-physics-bank-1647": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The condition (ii) is a condition for an equilibrium of parallel forces only while conditions (i) and (iii) are correct for both parallel and non- parallel coplanar forces.</p>\r\n\r\n<p>No specifications are made, so all conditions apply.</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=303"
     },
     "jamb-physics-bank-1648": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>&there4;i,ii, iii and iv have correct units.</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=0"
     },
     "jamb-physics-bank-1649": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Due to rectilinear propagation of light we have ecslipse which occur as a result relative motion of the earth, sun and moon</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=2329"
     },
     "jamb-physics-bank-1650": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Transistor is used for amplification of current, power&#39;, voltage stabilization and as a switch in logic gates.</p>",
+      "video": "https://www.youtube.com/embed/kpW27O9rJhA?start=918"
     },
     "jamb-physics-bank-1651": {
       "type": "mcq",
@@ -6832,19 +7019,27 @@
     },
     "jamb-physics-bank-1656": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The silver coating on the inner bottle of a thermos flask is&nbsp;<strong>used to prevent heat transfer by radiation</strong></p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=1953"
     },
     "jamb-physics-bank-1657": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "h<sub>l</sub>p<sub>l</sub> = h<sub>w</sub>p<sub>w</sub><br>\r\nwhere, L =liquid and W = water <br>\r\n(pl)/pw = (h<sub>w</sub>)/h<sub>l</sub> = (26.5)/20.4 <br>\r\n         = 1.299",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=992"
     },
     "jamb-physics-bank-1658": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The basic function of microscope is magnification</p>",
+      "video": "https://www.youtube.com/embed/kpW27O9rJhA?start=0"
     },
     "jamb-physics-bank-1659": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Shortsightedness&nbsp;is&nbsp;corrected&nbsp;using a concave (curved inwards)&nbsp;lens&nbsp;which is placed in front of a&nbsp;myopic&nbsp;eye</p>",
+      "video": "https://www.youtube.com/embed/kpW27O9rJhA?start=97"
     },
     "jamb-physics-bank-1660": {
       "type": "mcq",
@@ -6872,7 +7067,9 @@
     },
     "jamb-physics-bank-1666": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Timber/ quality depends on the overtones or harmonics, and timber is a characteristic property of source of sound,</p>\r\n\r\n<p>A harmonic is a wave with a frequency that is a positive integer multiple of the fundamental frequency,</p>\r\n\r\n<p>These rest on the fundamental property of FREQUENCY.</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=2193"
     },
     "jamb-physics-bank-1667": {
       "type": "mcq",
@@ -6880,7 +7077,9 @@
     },
     "jamb-physics-bank-1668": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Temperature difference between hot and cold junctions of thermocouple is proportional to the emf. generated</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=1292"
     },
     "jamb-physics-bank-1669": {
       "type": "mcq",
@@ -6888,11 +7087,15 @@
     },
     "jamb-physics-bank-1670": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Heating a pure semiconductor increases the mobility of electrons and holes and hence the conductivity. thus, the resistance decreases on heating</p>",
+      "video": "https://www.youtube.com/embed/kpW27O9rJhA?start=862"
     },
     "jamb-physics-bank-1671": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Cold water reduces the temperature of the hot water inside the can causing the contraction of the hot water. This reduces the pressure inside the can and the can collapses due to the external greater expression.</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=1071"
     },
     "jamb-physics-bank-1672": {
       "type": "mcq",
@@ -6904,11 +7107,15 @@
     },
     "jamb-physics-bank-1674": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Zener diode is useful in stabilized power supply i.e to keep steady the voltage of a power supply.</p>",
+      "video": "https://www.youtube.com/embed/kpW27O9rJhA?start=822"
     },
     "jamb-physics-bank-1675": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "Number of tunes, n = 500<br>\r\nArea, A = 0.2m + 0.2m = 0.4m<sup>2</sup> <br>\r\nchange of flux density A B <br>\r\n= 1.0 - 0.4 = 0.6T<br>\r\nTune, t = 5 su <br>\r\nInduced emf, ξ = (AB AN)/AT<br>\r\n(0.6 x 0. 04 x 500)/5<br>\r\n= 2.4v",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=942"
     },
     "jamb-physics-bank-1676": {
       "type": "mcq",
@@ -6956,11 +7163,15 @@
     },
     "jamb-physics-bank-1687": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>u = 5 cm , f = 10 cm, v = ?<br />\r\n(1)/v + (1)/u = (1)/f<br />\r\n(1)/v + (1)/5 = (1)/10<br />\r\n= (1)/v = (1)/10 -&nbsp;(1)/5</p>\r\n\r\n<p>= (1 - 2)/10 = (1)/10<br />\r\n&there4; v = - 10 cm<br />\r\n&there4; The image is 10 cm behind the mirror</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=185"
     },
     "jamb-physics-bank-1688": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>coefficient of friction</p>\r\n\r\n<p>= \\(\\frac{F}{R}\\)</p>\r\n\r\n<p>=\\(\\frac{F}{mg}\\)</p>\r\n\r\n<p>&nbsp;= \\(\\frac{500}{80 \\times&nbsp;10}\\)<br />\r\n= 0.625</p>",
+      "video": "https://www.youtube.com/embed/C7BOuKr8S7k?start=458"
     },
     "jamb-physics-bank-1689": {
       "type": "mcq",
@@ -6968,7 +7179,9 @@
     },
     "jamb-physics-bank-1690": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>1/R = 1/R1 + 1/R2 = 1/3 + 1/6<br />\r\n= 3/6<br />\r\n&there4; R = 6/3 = 2<br />\r\nE = I(R + r) = 4(2 + 0) = 8v</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1372"
     },
     "jamb-physics-bank-1691": {
       "type": "mcq",
@@ -6988,11 +7201,15 @@
     },
     "jamb-physics-bank-1695": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Of all the instruments used in measuring length,the micrometer screw gauge has the highest reading accuracy (0.01 mm), and is therefore used in measuring very small length such as diameter of a small ball bearing, and thickness of a piece of paper.",
+      "video": "https://www.youtube.com/embed/C7BOuKr8S7k?start=0"
     },
     "jamb-physics-bank-1696": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The sun and stars are self luminous object.</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=147"
     },
     "jamb-physics-bank-1697": {
       "type": "mcq",
@@ -7016,11 +7233,15 @@
     },
     "jamb-physics-bank-1702": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The leaves collapse as the positive charges on the rod neutralize the negative charges on the electroscope.</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=774"
     },
     "jamb-physics-bank-1703": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Half-life, T (1)/2 = (0.693)/∆ = (0.693)/ 0.231 = 3.0sec</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=1112"
     },
     "jamb-physics-bank-1704": {
       "type": "mcq",
@@ -7028,7 +7249,9 @@
     },
     "jamb-physics-bank-1705": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Sin c = (1)/n<br />\r\n= (1)/1.51 = 0.6622<br />\r\n&there4; c = sin-\\(^1\\)&nbsp;0.6622 = 41.47</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=455"
     },
     "jamb-physics-bank-1706": {
       "type": "mcq",
@@ -7040,7 +7263,9 @@
     },
     "jamb-physics-bank-1708": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Accommodation&nbsp;is the adjustment of the optics of the eye to keep an object in focus on the retina as its distance from the eye varies.&nbsp;</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=639"
     },
     "jamb-physics-bank-1709": {
       "type": "mcq",
@@ -7052,7 +7277,9 @@
     },
     "jamb-physics-bank-1711": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The process of energy production in the sun is generally by nuclear fusion of hydrogen nuclei, the reaction of which takes place at a tremendous high temperature.</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1894"
     },
     "jamb-physics-bank-1712": {
       "type": "mcq",
@@ -7060,7 +7287,9 @@
     },
     "jamb-physics-bank-1713": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>A pyrometer is instrument for measuring high temperature.<br />\r\nThe optical pyrometer is one in which the luminous radiation from the hot body is compared with that from a known source.</p>",
+      "video": "https://www.youtube.com/embed/C7BOuKr8S7k?start=919"
     },
     "jamb-physics-bank-1714": {
       "type": "mcq",
@@ -7068,11 +7297,15 @@
     },
     "jamb-physics-bank-1715": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Diffraction is spreading of wave after passing through a slit</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1052"
     },
     "jamb-physics-bank-1716": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Thermionic emission is ejection of electron from a metal surface as a result of heating.</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=1309"
     },
     "jamb-physics-bank-1717": {
       "type": "mcq",
@@ -7080,11 +7313,15 @@
     },
     "jamb-physics-bank-1718": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>When a pentavalent (5 outer electron)atom is added to a pure semiconductor, there is an extra electrons which does not take part in the covalent bonding resulting in an n-type semiconductor.</p>\r\n\r\n<p>&nbsp;</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=111"
     },
     "jamb-physics-bank-1719": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "Since 1.51, the refractive index of X is greater than 1.33, the refractive index of y, the speed of light in y is higher than that in X",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=557"
     },
     "jamb-physics-bank-1720": {
       "type": "mcq",
@@ -7096,11 +7333,16 @@
     },
     "jamb-physics-bank-1722": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Neutral Equilibrium: If the body neither returns to its original position nor increases its displacement further, it will simply adopt its new position.</p>\r\n\r\n<p><strong>Examples of neutral equilibrium</strong></p>\r\n\r\n<ul>\r\n\t<li>Ball moving on the ground.</li>\r\n\t<li>Motion of sphere.</li>\r\n\t<li>A roller.</li>\r\n\t<li>A pencil lying horizontally.</li>\r\n\t<li>An egg lying horizontally on a flat surface.</li>\r\n</ul>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1834"
     },
     "jamb-physics-bank-1723": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Length of the string<br />\r\nL = y + x = 0.5m<br />\r\n&there4; x = L - y<br />\r\n= distance moved in the direction of force (which is the weight) when the body is released But cos 60o = y/0.5<br />\r\n&there4; y = 0.5cos60 = 0.5 x 1/2 = 0.25<br />\r\n&there4; x = l - y = 0.5 - 0.25 = 0.25m<br />\r\nWork done = force x distance moved in the direction of force.<br />\r\n= 0.1 x 0.25 = 0.025J</p>",
+      "answer_image": "/qimages/f38254cf4984a9ad5303.jpg",
+      "video": "https://www.youtube.com/embed/xfRLjv0Xais?start=115"
     },
     "jamb-physics-bank-1724": {
       "type": "mcq",
@@ -7108,11 +7350,16 @@
     },
     "jamb-physics-bank-1725": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>I = E/(R+r)<br />\r\n= 12/6 = 2A</p>",
+      "answer_image": "/qimages/f8b1913c9fbfe34de7cf.jpg",
+      "video": "https://www.youtube.com/embed/xfRLjv0Xais?start=1059"
     },
     "jamb-physics-bank-1726": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>r = resistance of the galvanometer</p>\r\n\r\n<p>l&nbsp;= current through galvanometer = 1mA or 0.01A</p>\r\n\r\n<p>V1&nbsp;= p.d across the&nbsp;galvanometer = I X r&nbsp;= 0.01 X r</p>\r\n\r\n<p>: V1 = 0.01r</p>\r\n\r\n<p>V2 =&nbsp; p.d across the&nbsp; multiplier = 5 - 0.01r</p>\r\n\r\n<p><br />\r\nR = resistance of the multiplier = 498&Omega;<br />\r\n&nbsp;</p>\r\n\r\n<p>where R = \\(\\frac{V}{I}\\)&nbsp;--&gt; 498 = \\(\\frac{5 - 0.01r}{0.01}\\)</p>\r\n\r\n<p>CROSS MULTIPLY --&gt; 498 X 0.01 = 5 - 0.01r</p>\r\n\r\n<p>0.01r = 5 - 4.98</p>\r\n\r\n<p>&there4; r =&nbsp;\\(\\frac{0.02}{0.01}\\) = 2&Omega;</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=764"
     },
     "jamb-physics-bank-1727": {
       "type": "mcq",
@@ -7120,23 +7367,33 @@
     },
     "jamb-physics-bank-1728": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Efficiency = (MA)/V.R x 100% = (load)/Effort x (1)/V.R<br />\r\n= (800)/400 x (1)/6 x 100% = 33.3%</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=308"
     },
     "jamb-physics-bank-1729": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The acceleration of free fall due to gravity is independent of mass of the body. Therefore, ignoring air resistance, which affects feather more than the stone, the stone and the feather will both reach the ground at the same time</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=113"
     },
     "jamb-physics-bank-1730": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>A saturated vapour is one which is in dynamic equilibrium with its own liquid; that is as many go from the liquid to the vapour state every second return back to liquid.</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=1140"
     },
     "jamb-physics-bank-1731": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>(1)/v + (1)/u = (1)/f<br />\r\n(1)/v + (1)/15 = (1)/5<br />\r\n(1)/v = (1)/5 - (1)/15 = (3 - 1)/15 = (2)/15<br />\r\n&there4; v = (15)/2 = 7.5 cm<br />\r\nmagnification = (v)/u = (image size)/object size<br />\r\n(7.5)/15 = (X)/4<br />\r\n&there4; image size. X = (7.5 x 4)/15 = 2 cm</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=100"
     },
     "jamb-physics-bank-1732": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Refraction index, n = (real depth)/apparent depth<br />\r\n1.5 = (10)/X<br />\r\nX = (10)/1.5 = 6.67 cm</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=345"
     },
     "jamb-physics-bank-1733": {
       "type": "mcq",
@@ -7144,7 +7401,9 @@
     },
     "jamb-physics-bank-1734": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Dispersion is the splitting of white light into its spectral component colors and is caused by different speed of the colors in the prism.</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=570"
     },
     "jamb-physics-bank-1735": {
       "type": "mcq",
@@ -7152,7 +7411,9 @@
     },
     "jamb-physics-bank-1736": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Infrared rays falling on the skin causes the skin causes the sensation of warmth. since the objects are hot, the correct option is informed.</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=998"
     },
     "jamb-physics-bank-1737": {
       "type": "mcq",
@@ -7160,11 +7421,15 @@
     },
     "jamb-physics-bank-1738": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Energy stored in a stretched wire (strain energy)<br />\r\n= average force x extension<br />\r\n= (1)/2 Fe<br />\r\n= (1)/2 x 300 N (30.5 - 30.0) x 10-2 m<br />\r\n= (300)/2 x 0.5 x 10-2 = 0.75J</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=394"
     },
     "jamb-physics-bank-1739": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>In Faradays law of electrolysis<br />\r\nM = It = Q<br />\r\nWhere M is the mass of substance deposit . Q is the quantity of charge. A graph of m against Q is a straight line passing through the origin with slope equal to the electrochemical equivalent.Z</p>",
+      "video": "https://www.youtube.com/embed/xfRLjv0Xais?start=1714"
     },
     "jamb-physics-bank-1740": {
       "type": "mcq",
@@ -7176,7 +7441,9 @@
     },
     "jamb-physics-bank-1742": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Resonance occurs whenever the phase angle of the circuit is&nbsp;<strong>zero</strong>, The only way that f = 0 is if XL&nbsp;= XC</p>\r\n\r\n<p>Note that tanϕ = \\(\\frac{ X }{ R}\\) where X = reactance and&nbsp;ϕ = angle of lead or lag.</p>\r\n\r\n<p>therefore, tan&nbsp;ϕ = \\(\\frac{ X_L - X_C}{ R}\\) but at resonance&nbsp; \\(X_L = X_C\\)</p>\r\n\r\n<p>tan&nbsp;ϕ = \\(\\frac{0}{R}\\) = 0 and&nbsp;ϕ = \\(tan^{-1}\\) = 0&ordm;</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=1112"
     },
     "jamb-physics-bank-1743": {
       "type": "mcq",
@@ -7188,7 +7455,9 @@
     },
     "jamb-physics-bank-1745": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>IN magnetisation by stroking, the last touched has a pole opposite to that of the magnet used. Therefore, the poles T and V are N and N respectively</p>",
+      "video": "https://www.youtube.com/embed/xfRLjv0Xais?start=1623"
     },
     "jamb-physics-bank-1746": {
       "type": "mcq",
@@ -7232,7 +7501,9 @@
     },
     "jamb-physics-bank-1756": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The process of a substance changing from solid to liquid upon heating is called fusion. It happens when the temperature reaches the melting point, allowing particles to gain enough energy to move freely as a liquid.</p>",
+      "video": "https://www.youtube.com/embed/xfRLjv0Xais?start=1753"
     },
     "jamb-physics-bank-1757": {
       "type": "mcq",
@@ -7240,15 +7511,21 @@
     },
     "jamb-physics-bank-1758": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Dew point is the temperature at which the water vapour present in air is just sufficient to saturate it. Dew is formed when air is cooled below its dew point",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=1091"
     },
     "jamb-physics-bank-1759": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Sound wave requires a material medium for its propagation. so when air is being pumped out the density of the medium is being reduced and the sound dies down. when all the air has been pumped out of the glass, no sound will be heard, as sound sound cannot travel through vacuum</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=1596"
     },
     "jamb-physics-bank-1760": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Rough surface promotes friction. Therefore, roughness of conveyor belt prevents the load from slipping</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=265"
     },
     "jamb-physics-bank-1761": {
       "type": "mcq",
@@ -7256,7 +7533,10 @@
     },
     "jamb-physics-bank-1762": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<sup>1</sup>/<sub>R</sub> = <sup>1</sup>/<sub>4</sub> + <sup>1</sup>/<sub>4</sub> + <sup>1</sup>/<sub>4</sub> = <sup>3</sup>/<sub>4</sub><br>\r\nR = <sup>4</sup>/<sub>3</sub><br>\r\nI = <sup>V</sup>/<sub>R</sub><br>\r\n<table><tbody><tr><td rowspan=\"2\"> = </td><td style=\"border-bottom:solid 1px\">16</td></tr><tr><td><sup>4</sup>/<sub>3</sub></td></tr></tbody></table><br>\r\n<table><tbody><tr><td rowspan=\"2\"> = </td><td style=\"border-bottom:solid 1px\">16 x 3</td></tr><tr><td>_4</td></tr></tbody></table><br>\r\n= 12 A",
+      "answer_image": "/qimages/2ebead7397f6391b74cb.jpg",
+      "video": "https://www.youtube.com/embed/xfRLjv0Xais?start=1335"
     },
     "jamb-physics-bank-1763": {
       "type": "mcq",
@@ -7272,7 +7552,9 @@
     },
     "jamb-physics-bank-1766": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>Total inductance,L = L1 + L2 = m<br />\r\n15 + 5 = 20mH = (20)H/1000<br />\r\n1 = 5A<br />\r\nEnergy of inductor, (1)/2 L I2<br />\r\n= (1)/2 X (20)/1000 X 5-2<br />\r\n= 0.25 J</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=967"
     },
     "jamb-physics-bank-1767": {
       "type": "mcq",
@@ -7284,15 +7566,21 @@
     },
     "jamb-physics-bank-1769": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Radiation depends on nature of the surface area and temperature. It is independent of density.</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=1445"
     },
     "jamb-physics-bank-1770": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>A semiconductor is a material whose conductivity is between good conductor and insulator. Example of pure semi conductors are silicon and germanium</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=1440"
     },
     "jamb-physics-bank-1771": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Concave lens diverges parallel rays of light. A short sighted person has the image formed before the retina,and the rays have to be diverged so that they intersect to form image onto the retina</p>",
+      "video": "https://www.youtube.com/embed/ZuOFAW0mXfE?start=475"
     },
     "jamb-physics-bank-1772": {
       "type": "mcq",
@@ -7320,7 +7608,9 @@
     },
     "jamb-physics-bank-1779": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The resultant force acting on the man is given by w = mg - R<br />\r\nMg - mg = 0<br />\r\nThe man feels weightless because the reaction, R is equal to the weight mg</p>",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=0"
     },
     "jamb-physics-bank-1780": {
       "type": "mcq",
@@ -7328,7 +7618,9 @@
     },
     "jamb-physics-bank-1781": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Dull, black surface are good emitters or absorbers of energy",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=1068"
     },
     "jamb-physics-bank-1782": {
       "type": "mcq",
@@ -7336,7 +7628,9 @@
     },
     "jamb-physics-bank-1783": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "m = <sup>v</sup>/<sub>u</sub> = -3<br>\r\nv = -3u<br>\r\nf = 15cm<br>\r\n<sup>1</sup>/<sub>v</sub> + <sup>1</sup>/<sub>U</sub> = <sup>1</sup>/<sub>f</sub> <br>\r\n<sup>1</sup>/<sub>-3U</sub> + <sup>1</sup>/<sub>u</sub> = <sup>1</sup>/<sub>15</sub><br>\r\n<sup>2</sup>/<sub>3u</sub> = <sup>1</sup>/<sub>15</sub><br>\r\n3U = 15 x 2<br>\r\nU = <sup>30</sup>/<sub>3</sub> <br>\r\n= 10 cm",
+      "video": "https://www.youtube.com/embed/K44oj9x2SX0?start=674"
     },
     "jamb-physics-bank-1784": {
       "type": "mcq",
@@ -7348,11 +7642,15 @@
     },
     "jamb-physics-bank-1786": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Pressure in liquid is independent of cross sectional area of the container/ liquid <br>\r\n∴ the correct options are I & II",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=918"
     },
     "jamb-physics-bank-1787": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "A good thermometric liquid should not have a high thermal capacity so that the themperetue of the body being measured will not be affected<br>\r\n∴ II, III and IV are qualities of a good thermometer",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=730"
     },
     "jamb-physics-bank-1788": {
       "type": "mcq",
@@ -7364,7 +7662,9 @@
     },
     "jamb-physics-bank-1790": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "S = (1)/2gt<sup>2</sup><br>\r\nS = (1)/2 x (10)/1 x 3<sup>2</sup> =5 x 9 = 45 m",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=219"
     },
     "jamb-physics-bank-1791": {
       "type": "mcq",
@@ -7380,7 +7680,9 @@
     },
     "jamb-physics-bank-1794": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>if appliances are connected in series, the effective voltage is the sum of individual voltages which will be high.</p>",
+      "video": "https://www.youtube.com/embed/K44oj9x2SX0?start=1095"
     },
     "jamb-physics-bank-1795": {
       "type": "mcq",
@@ -7400,11 +7702,14 @@
     },
     "jamb-physics-bank-1799": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "video": "https://www.youtube.com/embed/K44oj9x2SX0?start=136"
     },
     "jamb-physics-bank-1800": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Dielectric constant = (c)/c<sub>°</sub> = (60)/20 = 3",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=806"
     },
     "jamb-physics-bank-1801": {
       "type": "mcq",
@@ -7428,11 +7733,15 @@
     },
     "jamb-physics-bank-1806": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "The earth radiate heat to the atmosphere at night  thereby lowering the temperature of the ground",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=0"
     },
     "jamb-physics-bank-1807": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "Regelation means refreezing a phenomenon whereby melted ice free from increased pressure refreezed when they are released from the pressure.",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=246"
     },
     "jamb-physics-bank-1808": {
       "type": "mcq",
@@ -7456,27 +7765,39 @@
     },
     "jamb-physics-bank-1813": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>The colour which an object presents to the eye is the colour of light it reflects. Red rose flower will therefore absorb any other colour and reflect red. Therefore when viewed in blue light, it has no colur to reflect and will therefore appear black. Although mixture of red light and blue light = magenta .&nbsp;</p>",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=740"
     },
     "jamb-physics-bank-1814": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>presbyopia is loss of accommodation</p>",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=646"
     },
     "jamb-physics-bank-1815": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "grease is more viscous than the rest of the liquids",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=961"
     },
     "jamb-physics-bank-1816": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "r - rays has the highest frequency followed by X - rays, ultraviolet ray, visible light intra - red and the least is radio weaves",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=1029"
     },
     "jamb-physics-bank-1817": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Steel is not easily magnetized and dismagnetized",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=1030"
     },
     "jamb-physics-bank-1818": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "Resistance in metals are proportional to temperature",
+      "video": "https://www.youtube.com/embed/K44oj9x2SX0?start=105"
     },
     "jamb-physics-bank-1819": {
       "type": "mcq",
@@ -7484,7 +7805,9 @@
     },
     "jamb-physics-bank-1820": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "Metals and hydrogen are deposited at the cathode, while non-metals and oxygen are deposited on the anode <br>\r\n∴ metals Y will form the anode which is deposited at the cathode made of x",
+      "video": "https://www.youtube.com/embed/K44oj9x2SX0?start=434"
     },
     "jamb-physics-bank-1821": {
       "type": "mcq",
@@ -7508,7 +7831,8 @@
     },
     "jamb-physics-bank-1826": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "\\(\\mu\\) = R.9 = 1.5 = 10<br>\r\n<br>\r\nA.P A.d, Ad = 6.66<br>\r\n<br>\r\nDisplacement = R.d - A.d = 10 - 6.66<br>\r\n<br>\r\n= 3.33"
     },
     "jamb-physics-bank-1827": {
       "type": "mcq",
@@ -7524,11 +7848,15 @@
     },
     "jamb-physics-bank-1830": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "1000 → 500 → 250 → 125<br>\r\n<br>\r\n20 + 20 + 20 = 60s",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=834"
     },
     "jamb-physics-bank-1831": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "==> \\(\\frac{v}{u}\\) = \\(\\frac{hi}{ho}\\) <br>\r\n<br>\r\n==> \\(\\frac{5}{300}\\) = \\(\\frac{2.5}{ho}\\)<br>\r\n<br>\r\n= 150m",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=1257"
     },
     "jamb-physics-bank-1832": {
       "type": "mcq",
@@ -7536,7 +7864,8 @@
     },
     "jamb-physics-bank-1833": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=1373"
     },
     "jamb-physics-bank-1834": {
       "type": "mcq",
@@ -7560,7 +7889,8 @@
     },
     "jamb-physics-bank-1839": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "video": "https://www.youtube.com/embed/-HCmxtgYIFQ?start=1371"
     },
     "jamb-physics-bank-1840": {
       "type": "mcq",
@@ -7568,15 +7898,18 @@
     },
     "jamb-physics-bank-1841": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=711"
     },
     "jamb-physics-bank-1842": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=0"
     },
     "jamb-physics-bank-1843": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=982"
     },
     "jamb-physics-bank-1844": {
       "type": "mcq",
@@ -7588,7 +7921,9 @@
     },
     "jamb-physics-bank-1846": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The width of the depletion layer in a p-n junction diode increases in reverse bias as charge carriers are swept into battery terminals, holes from the p-type into the negative terminal, and electrons from the n-type into the positive terminal.</p>",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=952"
     },
     "jamb-physics-bank-1847": {
       "type": "mcq",
@@ -7596,19 +7931,26 @@
     },
     "jamb-physics-bank-1848": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The higher the amplitude of sound the larger the loudness of sound and the lower the amplitude of sound waves the softer the loudness of sound by this we get to know that the amplitude of a sound wave decides the loudness of sound or we can call it the intensity of sound.</p>",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=1028"
     },
     "jamb-physics-bank-1849": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "I<sub>rms</sub> = \\(\\frac{10}{\\sqrt{2}}\\)",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=596"
     },
     "jamb-physics-bank-1850": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Given: y = 15 sin \\(\\frac{2\\pi}{5}\\) (60t - x).</p>\r\n\r\n<p>comparing&nbsp; y = 15 sin \\(\\frac{2\\pi}{5}\\) (60t - x) with the equation of wave motion Asin\\(\\frac{2\\pi}{\\lambda}\\)(x - vt)</p>\r\n\r\n<p>\\(\\frac{2\\pi}{5}\\) =&nbsp;\\(\\frac{2\\pi}{\\lambda}\\)</p>\r\n\r\n<p>Therefore, \\(\\lambda\\) = 5m.</p>",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=938"
     },
     "jamb-physics-bank-1851": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=299"
     },
     "jamb-physics-bank-1852": {
       "type": "mcq",
@@ -7620,11 +7962,13 @@
     },
     "jamb-physics-bank-1854": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "video": "https://www.youtube.com/embed/-HCmxtgYIFQ?start=1209"
     },
     "jamb-physics-bank-1855": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=733"
     },
     "jamb-physics-bank-1856": {
       "type": "mcq",
@@ -7636,19 +7980,25 @@
     },
     "jamb-physics-bank-1858": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "P: \\(\\frac{\\alpha h \\theta}{\\alpha h \\theta}\\)<br>\r\n<br>\r\n\\(\\frac{2 \\times 3 \\times \\theta}{3 \\times 4 \\times \\theta}\\)<br>\r\n<br>\r\n\\(\\frac{1}{2}\\)",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=0"
     },
     "jamb-physics-bank-1859": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=1101"
     },
     "jamb-physics-bank-1860": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=783"
     },
     "jamb-physics-bank-1861": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Pitch, loudness, and atmospheric pressure do not affect sound velocity. Wind traveling in the same direction of sound affects its velocity.&nbsp;wind can&nbsp;<strong>slow down or accelerate the speed of sound</strong>, depending on whether it is blowing in the same direction or in the opposite direction to the sound signal.</p>",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=995"
     },
     "jamb-physics-bank-1862": {
       "type": "mcq",
@@ -7656,7 +8006,9 @@
     },
     "jamb-physics-bank-1863": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "r = \\(\\frac{E}{I} - R\\)<br>\r\n<br>\r\nr = \\(\\frac{1.5}{0.3} - 1\\)<br>\r\n<br>\r\nr = 4\\(\\Omega\\)",
+      "video": "https://www.youtube.com/embed/jfts3-ukVPY?start=80"
     },
     "jamb-physics-bank-1864": {
       "type": "mcq",
@@ -7664,11 +8016,15 @@
     },
     "jamb-physics-bank-1865": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "P = 40 x 10 + 100 x 5<br>\r\n<br>\r\nP = 400 + 500 = 900W<br>\r\n<br>\r\nCost = \\(\\frac{900 \\times 10 \\times 5}{1000}\\)<br>\r\n<br>\r\nCost = N45",
+      "video": "https://www.youtube.com/embed/jfts3-ukVPY?start=251"
     },
     "jamb-physics-bank-1866": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "\\(h_i = \\frac{h_o \\times V}{u}\\)<br>\r\n<br>\r\n\\(h_i = \\frac{1.5 \\times 0.1}{3}\\)<br>\r\n<br>\r\n= 0.05m",
+      "video": "https://www.youtube.com/embed/u086GufkJq8?start=491"
     },
     "jamb-physics-bank-1867": {
       "type": "mcq",
@@ -7680,7 +8036,9 @@
     },
     "jamb-physics-bank-1869": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "T<sub>2</sub> = \\(\\sqrt{\\frac{L^2  \\times  T_1^2}{L_1}}\\) <br>\r\n<br>\r\n= \\(\\sqrt{\\frac{0.8  \\times  2^2}{0.4}}\\) <br>\r\n<br>\r\n= 2\\(\\sqrt{2}s\\)",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=266"
     },
     "jamb-physics-bank-1870": {
       "type": "mcq",
@@ -7688,11 +8046,13 @@
     },
     "jamb-physics-bank-1871": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "video": "https://www.youtube.com/embed/u086GufkJq8?start=292"
     },
     "jamb-physics-bank-1872": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "video": "https://www.youtube.com/embed/u086GufkJq8?start=239"
     },
     "jamb-physics-bank-1873": {
       "type": "mcq",
@@ -7724,11 +8084,14 @@
     },
     "jamb-physics-bank-1880": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "W = \\(\\frac{1}{2}Fe\\)<br>\r\n<br>\r\nW = \\(\\frac{1}{2}\\times 20 \\times 0.05\\)<br>\r\n<br>\r\nW = 0.5J",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=959"
     },
     "jamb-physics-bank-1881": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "video": "https://www.youtube.com/embed/jfts3-ukVPY?start=0"
     },
     "jamb-physics-bank-1882": {
       "type": "mcq",
@@ -7744,19 +8107,25 @@
     },
     "jamb-physics-bank-1885": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "M = M<sub>1</sub> x M<sub>2</sub> = 4 x 7 = 28",
+      "video": "https://www.youtube.com/embed/u086GufkJq8?start=786"
     },
     "jamb-physics-bank-1886": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The photoelectric effect is dependent upon various factors including&nbsp;<strong>frequency of light, intensity of light, nature of material, energy of light and potential difference</strong>.</p>",
+      "video": "https://www.youtube.com/embed/jfts3-ukVPY?start=962"
     },
     "jamb-physics-bank-1887": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "video": "https://www.youtube.com/embed/jfts3-ukVPY?start=514"
     },
     "jamb-physics-bank-1888": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "video": "https://www.youtube.com/embed/u086GufkJq8?start=0"
     },
     "jamb-physics-bank-1889": {
       "type": "mcq",
@@ -7764,7 +8133,8 @@
     },
     "jamb-physics-bank-1890": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "video": "https://www.youtube.com/embed/jfts3-ukVPY?start=1171"
     },
     "jamb-physics-bank-1891": {
       "type": "mcq",
@@ -7796,7 +8166,9 @@
     },
     "jamb-physics-bank-1898": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>MC\\(x_\\theta\\) = MC\\(y_\\theta\\)</p>\r\n\r\n<p>\\(x_\\theta\\) = 2 \\(\\times y_\\theta\\)</p>\r\n\r\n<p>MC(2\\(y_\\theta\\)) = MC\\(y_\\theta\\)<br />\r\n<br />\r\n&rArr; 2C = C<br />\r\n<br />\r\n=1 : 2</p>",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=1465"
     },
     "jamb-physics-bank-1899": {
       "type": "mcq",
@@ -11261,6 +11633,324 @@
     "jamb-physics-bank-2771": {
       "type": "mcq",
       "letter": "A"
+    },
+    "jamb-physics-bank-2772": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "In a wheel and axle system of mechanic, the mechanical advantage is given by its ratio of the radius of the wheel R, to the radius of the axle r. that M.A = R/r",
+      "video": "https://www.youtube.com/embed/tSaGW1ZSvEo?start=377"
+    },
+    "jamb-physics-bank-2773": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "The electric force experienced in an electric field of intensity E is given by: <br>\r\nF = qE: where q = the test charge. <br>\r\nE = F/Q = 0.4/10<sup>-10</sup> = 0.4 X 10<sup>-10</sup><br>\r\n          = 4.0 X 10<sup>9</sup> NC<sup>-1</sup>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=336"
+    },
+    "jamb-physics-bank-2774": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Power of heater = lvt = 2 x 240 x t<br>\r\nheat required to boil the water = Mct = 2.5 x 4.2 x 10<sup>3</sup> x (100.52) = 2.5 x 4. 2 x 10<sup>3</sup> x 48<br>\r\n2 x 240 x t = 2.5 x 4.2 x 10<sup>3</sup> x 48<br>\r\n∴ t = (2.5 x 4.2 x 10<sup>3</sup> x 48)/2 x 240 <br>\r\n= 1050s or 1.05 x 10<sup>3</sup>s",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=470"
+    },
+    "jamb-physics-bank-2775": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>E = hf<br />\r\nf = (E)/h<br />\r\n&there4; f = (3.3 x 1.6 x 10-19)/6.6 x 10-34<br />\r\n= 0.8 x 1015 = 8.0 x 1014 Hz</p>",
+      "video": "https://www.youtube.com/embed/s_nHmjSsl6s?start=2605"
+    },
+    "jamb-physics-bank-2776": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>The force of attraction between the two spheres is given by F (GM1 M2)/r2 = (6.67X 10-11 X5X10)/(0.3)2<br />\r\n= 3.71 X 10-8N.</p>",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=254"
+    },
+    "jamb-physics-bank-2777": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Electricity heat energy supplies by the heater = lvt = 3.5 x 200 x (2 x 60) = 84000j.<br>\r\nand this heat is supplied to the 2 kg of the water MC  ∆ t = 84000 <br>\r\n2 x 4200 x  ∆ t = 84000<br>\r\n∴  ∆t = (84000)/8400 = 10°c<br>\r\n∴ increase in temp. of water = 10°c",
+      "video": "https://www.youtube.com/embed/LX-alSmwkzk?start=1020"
+    },
+    "jamb-physics-bank-2778": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Heat supplied = Heat gained<br />\r\nP x t = C ∆ &Oslash;<br />\r\n(25 x 5 x 60)/10 = 750 JK-1</p>",
+      "video": "https://www.youtube.com/embed/8jEpYFhuQn8?start=1635"
+    },
+    "jamb-physics-bank-2779": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>At maximum height, the final velocity, v = 0<br />\r\nthus from v = u -&nbsp;gt<br />\r\n0 = u - gt<br />\r\n&there4; U = at = 10 x 4 = 40 mls</p>",
+      "video": "https://www.youtube.com/embed/C7BOuKr8S7k?start=184"
+    },
+    "jamb-physics-bank-2780": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>Work done on a stretched cord<br />\r\n= Average force x extension<br />\r\n=&nbsp;\\(\\frac{1 \\times 10 \\times 0.012}{2}\\)<br />\r\n= 6.0 x 10\\(^{-2}\\)J</p>",
+      "video": "https://www.youtube.com/embed/C7BOuKr8S7k?start=685"
+    },
+    "jamb-physics-bank-2781": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Heat supplied = Heat gained<br />\r\npt = ml<br />\r\nT = \\(\\frac{ml}{p}\\)</p>\r\n\r\n<p>= \\(\\frac{2 \\times&nbsp;2.3 \\times&nbsp;10^6}{1000}\\)</p>\r\n\r\n<p>= 4.6 x 10\\(^3\\) sec</p>",
+      "video": "https://www.youtube.com/embed/C7BOuKr8S7k?start=1174"
+    },
+    "jamb-physics-bank-2782": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Energy generated = power X time  = 60w x 1h = 60 x 60 x 60 ws = 216000j = 2.16 x 10<sup>5</sup>J",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=853"
+    },
+    "jamb-physics-bank-2783": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>The number of disintegration,∆N in time interval At, is given by<br />\r\n- ∆N = N∆t<br />\r\nWhere N is the number of atoms present at the time t<br />\r\nBut ^ = (0.693)/T</p>\r\n\r\n<p>= 0.693&nbsp;&divide; 20</p>\r\n\r\n<p>=&nbsp;0.0347<br />\r\n&there4; ∆N =&nbsp;0.0347 \\(\\times\\) 10\\(^20\\)</p>\r\n\r\n<p>= 3.47&nbsp;\\(\\times\\) 10\\(^18\\)</p>",
+      "video": "https://www.youtube.com/embed/yjLOndlWgoU?start=1204"
+    },
+    "jamb-physics-bank-2784": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>From the given graph, when the angle of minimum deviation = 18&ordm;, the angle of incidence = 25&ordm;</p>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=717"
+    },
+    "jamb-physics-bank-2785": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Since the force is inclined at an angle 60<sup>o</sup> to the horizontal, the effective component of te force along the horizontal is given by F x cos 60<sup>o</sup><br>\r\n= 100 x 0.5 = 50N.<br>\r\n∴ work done = F x cos 60 x displacement <br>\r\n= 50 x 8.0m<br>\r\n= 400.0J",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=1258"
+    },
+    "jamb-physics-bank-2786": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Generally, from Hares Experiment, density is inversely proportional to height <br>\r\ni.e h ∝1/d; → h<sub>1</sub>d<sub>1</sub> = h<sub>2</sub>d<sub>2</sub><br>\r\n∴ 8 x 10<sup>3</sup> = h<sub>2</sub> x 800<br>\r\n<table><tbody><tr><td rowspan=\"2\">∴ h<sub>2</sub> = </td><td style=\"border-bottom:solid 1px\">8 x 10<sup>3</sup></td></tr><tr><td>_800</td></tr></tbody></table> <br>\r\n= 10cm",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=1626"
+    },
+    "jamb-physics-bank-2787": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "From the heat exchange involved, the latent heat of vaporization, L can be deduced from the relation:<br>\r\nML = 10<sup>6</sup>, where M = mass of the liquid.<br>\r\n∴ 2 x L = 10<sup>6</sup><br>\r\n=> L = <sup>10<sup>6</sup></sup>/<sub>2</sub> = 5.0 x 10<sup>5</sup>J kg<sup>-1</sup>",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=1840"
+    },
+    "jamb-physics-bank-2788": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "For the two point charges, the magnitude of the electrostatic force between them is given by the equation:<br>\r\nF ∝ <sup>1</sup>/<sub>r<sup>2</sup></sub>, and if the distance is increased by a factor of 4, that is new distance = 4r,<br>\r\n then, new force F ∝ <sup>1</sup>/<sub>(4r)<sup>2</sup></sub><br>\r\n= ∝ <sup>1</sup>/<sub>16r<sup>2</sup></sub><br>\r\nThus it will be <sup>1</sup>/<sub>16</sub> of the former value",
+      "video": "https://www.youtube.com/embed/6end2qPEksk?start=2230"
+    },
+    "jamb-physics-bank-2789": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>Acceleration = (increase in velocity)/time taken<br />\r\n= (45 - 25)/10 = (20)/10 = 2ms-2</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=221"
+    },
+    "jamb-physics-bank-2790": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>Density (D) = \\(\\frac{mass}{volume}\\)</p>\r\n\r\n<p>\\(\\therefore Mass = Density \\times volume\\)</p>\r\n\r\n<p>= \\(0.4 \\times 20 = 8kg\\)</p>\r\n\r\n<p>The initial volume = \\(\\frac{Mass}{\\text{Initial density}}\\)</p>\r\n\r\n<p>= \\(\\frac{8}{0.8} = 10m^{3}\\)</p>",
+      "video": "https://www.youtube.com/embed/lyiwQvA7H-o?start=820"
+    },
+    "jamb-physics-bank-2791": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "upthrust = weight in air - weight in liquid = 30 x 10 - 22 x 10 = 300 - 220 = 80 N",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=548"
+    },
+    "jamb-physics-bank-2792": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>increase in volume, \\(\\Delta\\)V = V x 3\\(\\alpha\\) x \\(\\Delta \\theta\\)<br />\r\n= 3 x 2.0 X 10\\(^{-5}\\) x 40 x (90 - 30)<br />\r\n= 6 x 10\\(^{-5}\\)&nbsp;x 40 x 60<br />\r\n0.144 cm\\(^3\\)<br />\r\n&there4; No correct option</p>",
+      "video": "https://www.youtube.com/embed/230Res0MqaA?start=586"
+    },
+    "jamb-physics-bank-2793": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>If the linear&nbsp;expansivity = &prop;<br />\r\n=&gt; area expansivity &beta; = 2&prop;.<br />\r\nAnd cubic expansivity &delta; = 3&prop;.<br />\r\n=&gt; 6.3 x 10\\(^{-6}\\) = 3&prop;<br />\r\n&there4; &prop; = \\(\\frac{6.3 \\times 10^{-11}}{3}\\) = 2.1 x 10\\(^{-6}\\)</p>\r\n\r\n<p>&there4; Area = 2&prop; = 2 x 2.1x10\\(^{-6}\\)<br />\r\n= 4.2 x 10\\(^{-6}\\)K\\(^{-1}\\)</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=302"
+    },
+    "jamb-physics-bank-2794": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Ratio of their linear expansion = \\(\\frac{&prop;_1}{&prop;_2}\\)= 3:4.<br />\r\nWhen heated to the same temperature range, the ratio of their increase in length \\(\\frac{e_1}{e_2}\\) = 1:2</p>\r\n\r\n<p>Since e = l \\(\\alpha \\Delta T\\) and \\(\\Delta T\\) is same,</p>\r\n\r\n<p>\\(\\frac{e_1}{e_2} = \\frac{l_1 \\alpha_1}{l_2 \\alpha_2}\\)</p>\r\n\r\n<p>\\(\\frac{1}{2} = \\left( \\frac{l_1}{l_2} \\right) \\times \\left( \\frac{3}{4} \\right)\\)</p>\r\n\r\n<p>\\(\\frac{l_1}{l_2} = \\frac{1}{2} \\times \\frac{4}{3} = \\frac{2}{3}\\)</p>\r\n\r\n<p>So, \\(\\frac{l_1}{l_2}\\) = 2:3.</p>\r\n\r\n<p>&nbsp;\r\n<p>&nbsp;</p>\r\n</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=415"
+    },
+    "jamb-physics-bank-2795": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Period is the time to complete one cycle of 360<sup>o</sup><br>\r\n=> Periodic Time T ≡ 1 cycle of 360<sup>o</sup><br>\r\n∴ <sup>T</sup>/<sub>4</sub> = <sup>360</sup>/<sub>4</sub> = 90<sup>o</sup><br>\r\n∴ Instantaneous e.m.f E = E<sup>o</sup> sin ωt<br>\r\n= E<sup>o</sup> sin 90<br>\r\nBut sin 90 = 1: => E = E<sup>o</sup> x 1<br>\r\n= E<sup>o</sup>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=973"
+    },
+    "jamb-physics-bank-2796": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>V = X/t<br />\r\n330 = (&nbsp;4.95 x 10^3)/t<br />\r\nt = (4.95&nbsp;x 10^3/330 =&nbsp;<br />\r\n= 15&nbsp;secs</p>",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=93"
+    },
+    "jamb-physics-bank-2797": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Heat supplied = Heat gained Pt = MCDθ<br>\r\n30 x 5 x 60 = c x 10<br>\r\nwhere c = mc which is the heat capacity <br>\r\nc = (30 x 5 x60)/10 = 900 JKg<sup>-1</sup>",
+      "video": "https://www.youtube.com/embed/YJH-aESKDvk?start=303"
+    },
+    "jamb-physics-bank-2798": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>T (1)/2 = (0.693)/&lambda; = (0.693)/10-5<br />\r\n= 0.693 x 105<br />\r\n= 6.93 x 104 sec</p>",
+      "video": "https://www.youtube.com/embed/K44oj9x2SX0?start=207"
+    },
+    "jamb-physics-bank-2799": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>\\(R^2 = 100^2 + 60^2\\)<br />\r\n10000+3600 = 13600<br />\r\nR = \\(\\sqrt{13600}\\) = 117km<br />\r\n60km&nbsp;&amp; 100km = tan&theta; = \\(\\frac{60}{100}\\)<br />\r\n\\(tan^{-1}\\)&nbsp;0.6<br />\r\n= 31&ordm;&nbsp;west of the North<br />\r\n117km N31&ordm;w</p>",
+      "answer_image": "/qimages/246708c38b7e491b51ba.jpg",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=340"
+    },
+    "jamb-physics-bank-2800": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>The sum of momentum before collision<br />\r\nM\\(_1\\) U\\(_1\\) + M\\(_2\\)U\\(_2\\)<br />\r\n12 x 4.2 + 18 x 0<br />\r\n12 x 4.2<br />\r\n= 50.4<br />\r\nThe sum of momentum after collision<br />\r\n(m\\(_1\\) + m\\(_2\\))v<br />\r\n= (12 + 18)v<br />\r\n= 30v<br />\r\nV = 50.4/30<br />\r\n= 1.7ms-1</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=673"
+    },
+    "jamb-physics-bank-2801": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>PV = nRT</p>\r\n\r\n<p>&there4; P = \\(\\frac{\\text{nRT}}{\\text{V}}\\)</p>\r\n\r\n<p>P = \\(\\frac{2 \\times 8.313 \\times 300}{10^{-2}}\\)</p>\r\n\r\n<p>= 4.987 x 10\\(^5\\) Nm\\(^{-2}\\)</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=890"
+    },
+    "jamb-physics-bank-2802": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>F = Ke (Hooke&#39;s law)<br />\r\nK = F/e = 80/4<br />\r\n= 20 Nm-1</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1088"
+    },
+    "jamb-physics-bank-2803": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>f = \\(\\frac{\\text{c}}{&lambda;}\\)</p>\r\n\r\n<p>&nbsp;f = \\(\\frac{ 3 \\times 10^8}{500 \\times 10^{-9}}\\)</p>\r\n\r\n<p>= 6.0 x 10\\(^{14}\\) Hz</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1202"
+    },
+    "jamb-physics-bank-2804": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>C = C1 + C2 + C3<br />\r\n= 2 + 4 + 8 = 14&mu;F<br />\r\nV = 6V<br />\r\nEnergy = 1/2CV2<br />\r\n1/2 x 14 x 10-6 x 62<br />\r\n= 2.52 x 10-4 J</p>",
+      "answer_image": "/qimages/225750cb44d1d338680d.jpg",
+      "video": "https://www.youtube.com/embed/xfRLjv0Xais?start=843"
+    },
+    "jamb-physics-bank-2805": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>Electric potential is work done in taking a unit mass or charge from infinity to that point</p>\r\n\r\n<p>V = \\(\\frac{\\text{W}}{\\text{Q}}\\) = \\(\\frac{\\text{Fr}}{\\text{Q}}\\) =&nbsp;\\(\\frac{Q_1Q_2}{4&pi;&epsilon;or^2}\\) x \\(\\frac{\\text{r}}{Q_1}\\)</p>\r\n\r\n<p>= \\(\\frac{- q}{4&pi;&epsilon;or}\\)</p>",
+      "video": "https://www.youtube.com/embed/K44oj9x2SX0?start=627"
+    },
+    "jamb-physics-bank-2806": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "F = mg cos 45<sup>o</sup> = 1500 x 0.708",
+      "video": "https://www.youtube.com/embed/-HCmxtgYIFQ?start=92"
+    },
+    "jamb-physics-bank-2807": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "K = \\(\\frac{F}{e}\\)<br>\r\n<br>\r\nK = \\(\\frac{1 \\times 10}{\\frac{0.2}{100}}\\)<br>\r\n<br>\r\nK = \\(\\frac{10}{12} \\times \\frac{1000}{1}\\)",
+      "video": "https://www.youtube.com/embed/-HCmxtgYIFQ?start=935"
+    },
+    "jamb-physics-bank-2808": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "F = mg = D x V x g = 1.3 x 300 x 10 = 3900",
+      "video": "https://www.youtube.com/embed/-HCmxtgYIFQ?start=1313"
+    },
+    "jamb-physics-bank-2809": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>\\(\\theta = \\frac{Q}{MC}\\)<br />\r\n<br />\r\n\\(\\theta = \\frac{500}{0.1 \\times 4200}\\)&nbsp;&asymp; 1.2 &ordm;C</p>",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=357"
+    },
+    "jamb-physics-bank-2810": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Q = mL + mcθ = 1 x 3.5 x 10 <sup>5</sup> + 1 x 2.1 x 10 <sup>3</sup> x 30",
+      "video": "https://www.youtube.com/embed/qjQ8SIArThc?start=826"
+    },
+    "jamb-physics-bank-2811": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "F = BQV<br>\r\n<br>\r\nB = \\(\\frac{F}{QV}\\)<br>\r\n<br>\r\nB = \\(\\frac{1.8 \\times 10^{-8}}{1.0 \\times 10^{-8} \\times 3.0 \\times 10^{-2}}\\)",
+      "video": "https://www.youtube.com/embed/Z-MNJrUaQF4?start=374"
+    },
+    "jamb-physics-bank-2812": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>\\( R = \\frac{\\rho L}{A}\\)&nbsp; \\(\\implies&nbsp;\\rho\\)&nbsp;= \\(\\frac{R.A}{L}\\) = \\(\\frac{0.1 \\times 3.14}{2} \\left ( \\frac{10^{-3}}{2} \\right)^2\\)<br />\r\n<br />\r\n\\(\\therefore\\)&nbsp;\\(\\rho\\)&nbsp;= \\(\\frac{0.1 \\times 3.14 \\times 10^{-6}}{2 \\times 4}\\)<br />\r\n<br />\r\n= 0.3925 x&nbsp;10\\(^{-7}\\) OR&nbsp;3.930 x 10 \\(^{-8}\\)&Omega;m</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=2249"
+    },
+    "jamb-physics-bank-2813": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>In general, Power = IV; \\( \\implies 40KW = IV \\\\<br />\r\n\\text{Therefore } 40000 = 1 \\times 800\\\\<br />\r\n<br />\r\n\\implies I = \\frac{40000}{800} = 50A,\\text{tune the current through} \\)<br />\r\n<br />\r\nResistor = 50A<br />\r\npower loss= I2R = 502 x 2<br />\r\n= 2500 x 2 = 5.0 x 103W</p>",
+      "video": "https://www.youtube.com/embed/G1pOG-dam8A?start=2463"
+    },
+    "jamb-physics-bank-2814": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Comparing \\( y = 10 \\text{Sin} (1000\\pi t - \\frac{\\pi x}{34}) \\) with y = A sin (<strong>&omega;t -&nbsp;ϕ)</strong></p>\r\n\r\n<p>where&nbsp;ϕ = \\(\\frac{2\\pi x}{&lambda;}\\)</p>\r\n\r\n<p>comparing:&nbsp; \\(\\frac{2\\pi x}{&lambda;}\\) = \\( \\frac{\\pi x}{34}\\)</p>\r\n\r\n<p>&lambda; = 34 \\(\\times\\) 2 = 68</p>\r\n\r\n<p>:&nbsp;ϕ =&nbsp; \\(\\frac{2\\pi x}{&lambda;}\\) =&nbsp; \\(\\frac{2\\pi \\times 153}{68}\\)</p>\r\n\r\n<p>ϕ = 4.5\\(\\pi\\) rad = 810&deg; or 90&deg;</p>\r\n\r\n<p>since sin&nbsp;810&deg; or 90&deg; = 1</p>",
+      "video": "https://www.youtube.com/embed/FkzS1X-am0k?start=1658"
+    },
+    "jamb-physics-bank-2815": {
+      "type": "mcq",
+      "letter": "A",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=0"
+    },
+    "jamb-physics-bank-2816": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "F = 50Cos30<sup>o</sup> = 43.3",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=92"
+    },
+    "jamb-physics-bank-2817": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "This is because volume and the area have only magnitude but no direction",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=214"
+    },
+    "jamb-physics-bank-2818": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "t = \\(\\frac{v - u}{a}\\)  = \\(\\frac{0 - 20}{-2}\\) = 10s",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=425"
+    },
+    "jamb-physics-bank-2819": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "\\(\\frac{0.25 \\times 10^3} {1.25 \\times 10^3}\\) = 0.2",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=600"
+    },
+    "jamb-physics-bank-2820": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "At 100<sup>o</sup>C = 400<br>\r\n<br>\r\nTherefore,<br>\r\n<br>\r\nAt 20<sup>o</sup>C = \\(\\frac{400}{100} \\times \\frac{20}{1}\\) = 80",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=1174"
+    },
+    "jamb-physics-bank-2821": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "\\(L_2 = L_1 + \\alpha(\\theta_2 - \\theta_1)\\)<br>\r\n<br>\r\n= 100 + 0.00002(-10-30) = 99.92",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=1237"
+    },
+    "jamb-physics-bank-2822": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "W = \\(\\frac{W_1 \\times V_1}{V_2}\\)<br>\r\n<br>\r\nW = \\(\\frac{10 \\times 0.6}{1.2}\\)<br>\r\n<br>\r\nW = 6.0 x 10 <sup>4</sup>J",
+      "video": "https://www.youtube.com/embed/KTiT1kx7YKQ?start=1385"
+    },
+    "jamb-physics-bank-2823": {
+      "type": "mcq",
+      "letter": "A",
+      "video": "https://www.youtube.com/embed/u086GufkJq8?start=88"
+    },
+    "jamb-physics-bank-2824": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>\\(V \\propto \\sqrt{T}\\)</p>\r\n\r\n<p>&rArr; \\(\\frac{V_{1}}{\\sqrt{T_{1}}} = \\frac{V_{2}}{\\sqrt{T_{2}}}\\)</p>\r\n\r\n<p>Using the above formula, we get</p>\r\n\r\n<p>\\(V_{2} \\approxeq 397ms^{-1}\\)</p>",
+      "video": "https://www.youtube.com/embed/u086GufkJq8?start=323"
     }
   }
 }

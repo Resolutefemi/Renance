@@ -2,8 +2,8 @@
   "code": "waec-accounting-bank",
   "title": "WAEC Principles of Accounts | Past Questions Bank",
   "version": 1,
-  "questionCount": 1709,
-  "totalMarks": 1709,
+  "questionCount": 1711,
+  "totalMarks": 1711,
   "questions": [
     {
       "id": "waec-accounting-bank-0001",
@@ -22675,6 +22675,34 @@
       },
       "marks": 1,
       "year": 2004
+    },
+    {
+      "id": "waec-accounting-bank-1710",
+      "type": "mcq",
+      "stem": "Goodwill is",
+      "marks": 1,
+      "options": {
+        "A": "a current asset",
+        "B": "a current liability",
+        "C": "a long term liability",
+        "D": "a fictitious asset",
+        "E": "an intangible asset"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-accounting-bank-1711",
+      "type": "mcq",
+      "stem": "Use the following information to answer the given question:<br>\r\n\\(\\begin{array}{c|c} \\text{Date of delivery}  &  customer  &  \\text{Gross amount N}  &  \\text{Trade discount %}  &  \\text{Cash Discount %}  & \\text{Terms of payment} \\\\ \\hline  \\text{4/1/86}  &  \\text{Mr. A.F.P}  &  12,000 &  15  & 10 & \\text{30 days of delivery} <br>\r\n\\end{array}\\)<br>\r\nIf Mr. A.F.P. settled his account after 30 days of the delivery, his total discount would be",
+      "marks": 1,
+      "options": {
+        "A": "N1,020",
+        "B": "N1,200",
+        "C": "N10,800",
+        "D": "N2,820",
+        "E": "N10,800"
+      },
+      "year": 1990
     }
   ],
   "category": "secondary",

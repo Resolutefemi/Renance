@@ -2,8 +2,8 @@
   "code": "waec-commerce-bank",
   "title": "WAEC Commerce | Past Questions Bank",
   "version": 1,
-  "questionCount": 2121,
-  "totalMarks": 2121,
+  "questionCount": 2124,
+  "totalMarks": 2124,
   "questions": [
     {
       "id": "waec-commerce-bank-0001",
@@ -28398,6 +28398,48 @@
         "E": "bearer cheque"
       },
       "marks": 1,
+      "year": 1994
+    },
+    {
+      "id": "waec-commerce-bank-2122",
+      "type": "mcq",
+      "stem": "Commerce developed as a result of?",
+      "marks": 1,
+      "options": {
+        "A": "speculation",
+        "B": "competition",
+        "C": "specialization",
+        "D": "importation",
+        "E": "exportation"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-commerce-bank-2123",
+      "type": "mcq",
+      "stem": "An organization chart shows the?",
+      "marks": 1,
+      "options": {
+        "A": "relative position of employeesin a firm",
+        "B": "customers position in a firm",
+        "C": "order in which tasks should be tackled",
+        "D": "specification of various jobs in a firm",
+        "E": "the profit position of the firm"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-commerce-bank-2124",
+      "type": "mcq",
+      "stem": "The practice of selling goods in foreign countries at lower prices than obtainable in the exporting country is known as?",
+      "marks": 1,
+      "options": {
+        "A": "hedging",
+        "B": "black market",
+        "C": "dumping",
+        "D": "speculation",
+        "E": "speculation"
+      },
       "year": 1994
     }
   ],

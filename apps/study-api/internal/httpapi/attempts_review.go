@@ -32,7 +32,9 @@ func (s *Server) handleListAttempts(w http.ResponseWriter, r *http.Request) {
 // reviewQuestion is one row of a post-grade answer review: the full
 // question, the pick, the sealed-now-opened correct letter, and the
 // explanation that was stored with the key. Theory (essay) rows carry
-// type "theory" and the model answer as the explanation.
+// type "theory" and the model answer as the explanation. Image/answer
+// image round-trip the diagram material the question/answer refers to;
+// video is an optional walkthrough link.
 type reviewQuestion struct {
         QuestionID  string            `json:"questionId"`
         Stem        string            `json:"stem"`
@@ -44,6 +46,10 @@ type reviewQuestion struct {
         Correct     string            `json:"correct"`
         Explanation string            `json:"explanation,omitempty"`
         Correctly   bool              `json:"correctly"`
+        Image       string            `json:"image,omitempty"`
+        AnswerImage string            `json:"answerImage,omitempty"`
+        Passage     string            `json:"passage,omitempty"`
+        Video       string            `json:"video,omitempty"`
 }
 
 // handleAttemptReview serves GET /attempts/{id}/review, per-question
@@ -110,6 +116,10 @@ func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
                         Selected:    chosen[q.ID],
                         Correct:     key.Letter,
                         Explanation: key.Explanation,
+                        Image:       q.Image,
+                        AnswerImage: key.AnswerImage,
+                        Passage:     q.Passage,
+                        Video:       key.Video,
                 }
                 if q.Type == "theory" {
                         // Self-assessed essay: there is no wrong pick, the

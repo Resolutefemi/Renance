@@ -2,8 +2,8 @@
   "code": "waec-mathematics-bank",
   "title": "WAEC Mathematics | Past Questions Bank",
   "version": 1,
-  "questionCount": 1334,
-  "totalMarks": 1334,
+  "questionCount": 1451,
+  "totalMarks": 1451,
   "questions": [
     {
       "id": "waec-mathematics-bank-0001",
@@ -8015,7 +8015,7 @@
     {
       "id": "waec-mathematics-bank-0611",
       "type": "mcq",
-      "stem": "Find the gradient of the line joining the points (2, -3) and 2, 5)",
+      "stem": "Find the gradient of the line joining the points (2, -3) and (2, 5)",
       "options": {
         "A": "9",
         "B": "1",
@@ -17706,6 +17706,1712 @@
       },
       "marks": 1,
       "year": 1998
+    },
+    {
+      "id": "waec-mathematics-bank-1335",
+      "type": "mcq",
+      "stem": "<p>Express 0.00562 in standard form</p>",
+      "marks": 1,
+      "options": {
+        "A": "5.62 x 10<sup>-3</sup>",
+        "B": "5.62 x 10<sup>-2</sup>",
+        "C": "562 x 10<sup>-2</sup>",
+        "D": "5.62 x 10<sup>2</sup>",
+        "E": "5.62 x 10<sup>3</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1336",
+      "type": "mcq",
+      "stem": "Given that 1/3log<sub>10</Sub> P = 1, find the value of P",
+      "marks": 1,
+      "options": {
+        "A": "1/10",
+        "B": "3",
+        "C": "10",
+        "D": "100",
+        "E": "1000"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1337",
+      "type": "mcq",
+      "stem": "<p>From the graph determine the roots of the equation y = 2x\\(^2\\) + x - 6</p>",
+      "marks": 1,
+      "options": {
+        "A": "-3, 4",
+        "B": "-2, -6",
+        "C": "-2, 1.5",
+        "D": "-1, 1",
+        "E": "2, 1.5"
+      },
+      "year": 1990,
+      "image": "/qimages/e4e77d6a166bcfeff103.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1338",
+      "type": "mcq",
+      "stem": "<p>Find the values of x for which y = 5</p>",
+      "marks": 1,
+      "options": {
+        "A": "-2.5, 2.0",
+        "B": "-2.6, 2.1",
+        "C": "-2.0, 1.5",
+        "D": "-2.0, 2.0",
+        "E": "0, 0"
+      },
+      "year": 1990,
+      "image": "/qimages/3b8e2c1510a5e6cde857.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1339",
+      "type": "mcq",
+      "stem": "<p>An arc of length 22cm subtends an angle of &theta; at the center of the circle. What is the value of &theta; if the radius of the circle is 15cm?[Take &pi; = 22/7]</p>",
+      "marks": 1,
+      "options": {
+        "A": "70<sup>o</sup>",
+        "B": "84<sup>o</sup>",
+        "C": "96<sup>o</sup>",
+        "D": "156<sup>o</sup>",
+        "E": "168<sup>o</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1340",
+      "type": "mcq",
+      "stem": "The area shaded with horizontal lines is the solution set of the inequalities;",
+      "marks": 1,
+      "options": {
+        "A": "y ≥ x, y + 3 ≥ 2x, x ≤ 3",
+        "B": "y ≤ x, y + 2x ≥ -3, x ≤ 3",
+        "C": "y ≤ -x, y + 2x ≤ 3, x ≥ -3",
+        "D": "y ≥ -x, y + 3 ≤ 2x, x ≥ -3",
+        "E": "y ≤ x, y ≤ 2x - 3, x ≥ 3"
+      },
+      "year": 1990,
+      "image": "/qimages/f9182f3335ef306bbcd7.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1341",
+      "type": "mcq",
+      "stem": "<p>the area shaded with vertical lines is the solution set of the inequalities;</p>",
+      "marks": 1,
+      "options": {
+        "A": "y ≤ x, y + 2x ≤ -3",
+        "B": "y ≥ x, y + 2x ≥ - 3",
+        "C": "y ≤ x, y ≤ 2x - 3, x ≤ 3",
+        "D": "y ≤ -x, y ≤ 2x - 3, x ≤ 3",
+        "E": "y ≥ x, y + 2x ≥ 3, x ≤ 3"
+      },
+      "year": 1990,
+      "image": "/qimages/d00bfe25fe252a985ae7.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1342",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, O is the center of the circle with radius 10cm, and &ang;ABC = 30&deg;. Calculate, correct to 1 decimal place, the length of arc AC [Take &pi; = 22/7]</p>",
+      "marks": 1,
+      "options": {
+        "A": "5.2cm",
+        "B": "10.5cm",
+        "C": "13.2cm",
+        "D": "20.6cm",
+        "E": "31.4cm"
+      },
+      "year": 1990,
+      "image": "/qimages/0fe0ec5cc23d16c2ffeb.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1343",
+      "type": "mcq",
+      "stem": "A sector of a circle of radius 7cm has an area of 44cm<sup>2</sup>. Calculate the angle of the sector correct to the nearest degree  [Take π = 22/7]",
+      "marks": 1,
+      "options": {
+        "A": "6<sup>o</sup>",
+        "B": "26<sup>o</sup>",
+        "C": "52<sup>o</sup>",
+        "D": "103<sup>o</sup>",
+        "E": "206<sup>o</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1344",
+      "type": "mcq",
+      "stem": "<p>calculate the surface area of a sphere of radius 7cm [Take &pi; = 22/7]</p>",
+      "marks": 1,
+      "options": {
+        "A": "86cm<sup>2</sup>",
+        "B": "154cm<sup>2</sup>",
+        "C": "616cm<sup>2</sup>",
+        "D": "1434cm<sup>2</sup>",
+        "E": "4312cm<sup>2</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1345",
+      "type": "mcq",
+      "stem": "<p>If the radius of the parallel of latitude 30&deg;N is equal to the radius of the parallel of latitude &theta;&deg;S, what is the value of &theta;?</p>",
+      "marks": 1,
+      "options": {
+        "A": "75<sup>o</sup>",
+        "B": "60<sup>o</sup>",
+        "C": "45<sup>o</sup>",
+        "D": "30<sup>o</sup>",
+        "E": "0<sup>o</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1346",
+      "type": "mcq",
+      "stem": "<p>A cylindrical container closed at both ends, has a radius of 7cm and height 5cm [Take &pi; = 22/7]<br />\r\nFind the total surface area of the container</p>",
+      "marks": 1,
+      "options": {
+        "A": "35cm<sup>2</sup>",
+        "B": "154cm<sup>2</sup>",
+        "C": "220cm<sup>2</sup>",
+        "D": "528cm<sup>2</sup>",
+        "E": "770cm<sup>2</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1347",
+      "type": "mcq",
+      "stem": "<p>A cylindrical container closed at both ends, has a radius of 7cm and height 5cm [Take &pi; = 22/7]. What is the volume of the container?</p>",
+      "marks": 1,
+      "options": {
+        "A": "35cm<sup>3</sup>",
+        "B": "154cm<sup>3</sup>",
+        "C": "220cm<sup>3</sup>",
+        "D": "528cm<sup>3</sup>",
+        "E": "770cm<sup>3</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1348",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, |PQ| = |PR| = |RS| and &ang;RPS = 32&deg;. Find the value of &ang;QPR</p>",
+      "marks": 1,
+      "options": {
+        "A": "72<sup>o</sup>",
+        "B": "64<sup>o</sup>",
+        "C": "52<sup>o</sup>",
+        "D": "32<sup>o</sup>",
+        "E": "26<sup>o</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/cf8f60871f3a29d4ccca.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1349",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, WXYZ is a rhombus and &ang;WYX = 20&deg;. What is the value of &ang;XZY</p>",
+      "marks": 1,
+      "options": {
+        "A": "20<sup>o</sup>",
+        "B": "30<sup>o</sup>",
+        "C": "45<sup>o</sup>",
+        "D": "60<sup>o</sup>",
+        "E": "70<sup>o</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/b115aa5d056e527b7db4.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1350",
+      "type": "mcq",
+      "stem": "<p>In the diagram above PS||RQ, |RQ| = 6.4cm and perpendicular PH = 3.2cm. Find the area of SQR</p>",
+      "marks": 1,
+      "options": {
+        "A": "5.12cm<sup>2</sup>",
+        "B": "9.60cm<sup>2</sup>",
+        "C": "10.24cm<sup>2</sup>",
+        "D": "20.48cm<sup>2</sup>",
+        "E": "40.96cm<sup>2</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/db5ad831e27b4489fb17.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1351",
+      "type": "mcq",
+      "stem": "<p>Which angle is equal to &ang;VWZ?</p>",
+      "marks": 1,
+      "options": {
+        "A": "∠VXZ",
+        "B": "∠VYX",
+        "C": "∠XZW",
+        "D": "∠YXZ",
+        "E": "∠VYW"
+      },
+      "year": 1990,
+      "image": "/qimages/95930dc0cd755f1f3bc8.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1352",
+      "type": "mcq",
+      "stem": "<p>Which triangle is equal in area to &Delta;VWZ</p>",
+      "marks": 1,
+      "options": {
+        "A": "ΔVXZ",
+        "B": "ΔVYZ",
+        "C": "ΔXYV",
+        "D": "ΔWYV",
+        "E": "ΔWYZ"
+      },
+      "year": 1990,
+      "image": "/qimages/8484e79b923c0dbd3fa8.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1353",
+      "type": "mcq",
+      "stem": "In the diagram above, PQRS s a cyclic quadrilateral, ∠PSR = 86<sup>o</sup> and ∠QPR = 38<sup>o</sup>. Calculate PRQ",
+      "marks": 1,
+      "options": {
+        "A": "58<sup>o</sup>",
+        "B": "53<sup>o</sup>",
+        "C": "48<sup>o</sup>",
+        "D": "43<sup>o</sup>",
+        "E": "38<sup>o</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/cf189d697d5c77252bb2.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1354",
+      "type": "mcq",
+      "stem": "<p>In the diagram below, O is the center of the circle if &ang;QOR = 290o, find the size &ang;QPR</p>",
+      "marks": 1,
+      "options": {
+        "A": "110<sup>o</sup>",
+        "B": "70<sup>o</sup>",
+        "C": "55<sup>o</sup>",
+        "D": "35<sup>o</sup>",
+        "E": "20<sup>o</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/9b9f67a4767bd9617b56.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1355",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, PQ is a tangent at T to the circle ABT. ABC is a straight line and TC bisects &ang;BTO. Find x.</p>",
+      "marks": 1,
+      "options": {
+        "A": "20<sup>o</sup>",
+        "B": "30<sup>o</sup>",
+        "C": "35<sup>o</sup>",
+        "D": "40<sup>o</sup>",
+        "E": "50<sup>o</sup>"
+      },
+      "year": 1990,
+      "image": "/qimages/2569779d26dfb2280daf.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1356",
+      "type": "mcq",
+      "stem": "Which of the sketches above gives a correct method for constructed an angle of 120<sup>o</sup> at the point P?",
+      "marks": 1,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "III only",
+        "D": "I and II only",
+        "E": "I, II and III"
+      },
+      "year": 1990,
+      "image": "/qimages/72c829302af3737e0c9c.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1357",
+      "type": "mcq",
+      "stem": "If the shadow of a pole 7m high is 1/2 its length what is the angle of elevation of the sun, correct to the nearest degree?",
+      "marks": 1,
+      "options": {
+        "A": "90<sup>o</sup>",
+        "B": "63<sup>o</sup>",
+        "C": "60<sup>o</sup>",
+        "D": "26<sup>o</sup>",
+        "E": "0<sup>o</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1358",
+      "type": "mcq",
+      "stem": "From the top of a building 10m high, the angle of depression of a stone lying on the horizontal ground is 69<sup>o</sup>. Calculate ,correct to one decimal place, the distance of the stone from the foot of the building",
+      "marks": 1,
+      "options": {
+        "A": "3.6m",
+        "B": "3.8m",
+        "C": "6.0m",
+        "D": "9.3m",
+        "E": "26.1m"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1359",
+      "type": "mcq",
+      "stem": "<p>The bearing of a point X&nbsp;from a point Y&nbsp;is 074&deg;. What is the bearing of Y&nbsp;from X?</p>",
+      "marks": 1,
+      "options": {
+        "A": "106<sup>o</sup>",
+        "B": "146<sup>o</sup>",
+        "C": "164<sup>o</sup>",
+        "D": "254<sup>o</sup>",
+        "E": "286<sup>o</sup>"
+      },
+      "year": 1990
+    },
+    {
+      "id": "waec-mathematics-bank-1360",
+      "type": "mcq",
+      "stem": "<p>The annual salary of Mr. Johnson Mohammed for 1989 was N12,000.00. He spent this on agriculture projects, education of his children, food items, saving , maintenance and miscellaneous items as shown in the pie chart</p>\r\n\r\n<p>How much money did he invest in agriculture?</p>",
+      "marks": 1,
+      "options": {
+        "A": "N1,200.00",
+        "B": "N1,440.00",
+        "C": "N2,000.00",
+        "D": "N2,910.00",
+        "E": "N4,000.00"
+      },
+      "year": 1990,
+      "image": "/qimages/6132bdad483f56c0d937.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1361",
+      "type": "mcq",
+      "stem": "<p>The table shows that the amount of money (in naira)collected through voluntary donations in a secondary school. What is the mode?</p>",
+      "marks": 1,
+      "options": {
+        "A": "N3",
+        "B": "N6",
+        "C": "N9",
+        "D": "N12",
+        "E": "N15"
+      },
+      "year": 1990,
+      "image": "/qimages/c1c065bb8fd0b3037ac6.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1362",
+      "type": "mcq",
+      "stem": "<p>The table shows that the amount of money (in naira)collected through voluntary donations in a secondary school.</p>What is the median of distribution",
+      "marks": 1,
+      "options": {
+        "A": "N3.00",
+        "B": "N9.00",
+        "C": "N12.00",
+        "D": "N15.00",
+        "E": "N18.00"
+      },
+      "year": 1990,
+      "image": "/qimages/d59dfb170e9d5b2a718a.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1363",
+      "type": "mcq",
+      "stem": "Express 0.0462 in standard form",
+      "marks": 1,
+      "options": {
+        "A": "0.462 x 10<sup>-1</sup>",
+        "B": "0.462 x 10<sup>-2</sup>",
+        "C": "4.62 x 10<sup>-1</sup>",
+        "D": "4.62 x 10<sup>-2</sup>",
+        "E": "4.62 x 10<sup>3</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1364",
+      "type": "mcq",
+      "stem": "<p>Find the equation whose roots are -2/3 and -1/4</p>",
+      "marks": 1,
+      "options": {
+        "A": "12x<sup>2</sup> + 11x + 2 = 0",
+        "B": "12x<sup>2</sup> - 11x + 2 = 0",
+        "C": "x<sup>2</sup> - 11/12x + 2 = 0",
+        "D": "12x<sup>2</sup> - 11x - 2 = 0",
+        "E": "x<sup>2</sup> - 11/12x - 2 = 0"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1365",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, PXR and PYO are two semi-circles with diameters 14cm and 7cm respectively. Find the area of the enclosed region, PXROY correct to the nearest whole number</p>",
+      "marks": 1,
+      "options": {
+        "A": "96cm<sup>2</sup>",
+        "B": "116cm<sup>2</sup>",
+        "C": "154cm<sup>2</sup>",
+        "D": "192cm<sup>2</sup>",
+        "E": "385cm<sup>2</sup>"
+      },
+      "year": 1991,
+      "image": "/qimages/b03048ba3d119214f358.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1366",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, PXR and PYO are two semicircles with diameters 14cm and 7cm respectively. Find the perimeter of the region (take \\(\\pi\\) = \\(\\frac{22}{7}\\) )</p>",
+      "marks": 1,
+      "options": {
+        "A": "22cm",
+        "B": "33cm",
+        "C": "40cm",
+        "D": "47cm",
+        "E": "66cm"
+      },
+      "year": 1991,
+      "image": "/qimages/6d1d3dc9956b2f555edb.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1367",
+      "type": "mcq",
+      "stem": "<p>The shaded portion shows the outer boundary<br />\r\nof the half plane defined by the inequality</p>",
+      "marks": 1,
+      "options": {
+        "A": "4x + 3y \\(\\geq\\) 6",
+        "B": "4x + 3y = 6",
+        "C": "4x + 3y < 6",
+        "D": "3y >6",
+        "E": "4x < 6"
+      },
+      "year": 1991,
+      "image": "/qimages/ed1bfad9ce4c071676c4.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1368",
+      "type": "mcq",
+      "stem": "<p>Find the coordinates of point B</p>",
+      "marks": 1,
+      "options": {
+        "A": "(0,1<sup>1</sup>/<sub>2</sub>)",
+        "B": "(O,2)",
+        "C": "(2,0)",
+        "D": "(1<sup>1</sup>/<sub>2</sub>, 2)",
+        "E": "(1<sup>1</sup>/<sub>2</sub>, 0)"
+      },
+      "year": 1991,
+      "image": "/qimages/a997ca886e638ffd3d8c.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1369",
+      "type": "mcq",
+      "stem": "Two towns, P and Q, are on (4<sup>o</sup>N 40<sup>o</sup>W) and (4<sup>o</sup>N<br>\r\n20<sup>o</sup>E) respectively. What is the distance between<br>\r\nthem, along their line of latitude? (Give your<br>\r\nanswer in teems of π and R, the radius of the earth).",
+      "marks": 1,
+      "options": {
+        "A": "2πR cos4<sup>o</sup>",
+        "B": "πR sin40<sup>o</sup>",
+        "C": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">πR</span><span class=\"bar\">/</span><span class=\"fr_den\">2</span></div> cos4<sup>o</sup></div>",
+        "D": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">πR</span><span class=\"bar\">/</span><span class=\"fr_den\">3</span></div> cos4<sup>o</sup></div>",
+        "E": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">πR</span><span class=\"bar\">/</span><span class=\"fr_den\">6</span></div> cos4<sup>o</sup></div>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1370",
+      "type": "mcq",
+      "stem": "<p>the graph above is a sketch of</p>",
+      "marks": 1,
+      "options": {
+        "A": "y = sin 2x",
+        "B": "y=sinx",
+        "C": "y=cos2x",
+        "D": "y=2sinx",
+        "E": "y = 2cos x"
+      },
+      "year": 1991,
+      "image": "/qimages/5df62b142aeefbb1d2c1.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1371",
+      "type": "mcq",
+      "stem": "<p>Given that sin \\(\\theta\\)&nbsp;= -0.9063, where O \\(\\leq\\) \\(\\theta\\)&nbsp;\\(\\leq\\) 270&deg;, find \\(\\theta\\).</p>",
+      "marks": 1,
+      "options": {
+        "A": "65<sup>o</sup>",
+        "B": "115<sup>o</sup>",
+        "C": "145<sup>o</sup>",
+        "D": "245<sup>o</sup>",
+        "E": "265<sup>o</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1372",
+      "type": "mcq",
+      "stem": "From the top of a cliff, the angle of depression of<br>\r\na boat on the sea is 60<sup>o</sup>, if the top of the cliff is<br>\r\n25m above the sea level, calculate the horizontal<br>\r\ndistance from the bottom of the cliff to the boat.",
+      "marks": 1,
+      "options": {
+        "A": "50√3m",
+        "B": "25√3m",
+        "C": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">25√3m</span><span class=\"bar\">/</span><span class=\"fr_den\">3</span></div></div>",
+        "D": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">25m</span><span class=\"bar\">/</span><span class=\"fr_den\">3</span></div></div>",
+        "E": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">√3m</span><span class=\"bar\">/</span><span class=\"fr_den\">25</span></div></div>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1373",
+      "type": "mcq",
+      "stem": "The angle of elevation of the top of a tree 39m<br>\r\naway from a point on the ground is 30<sup>o</sup>. Find the height of the tree",
+      "marks": 1,
+      "options": {
+        "A": "39√3m",
+        "B": "13√3m",
+        "C": "13/\\(\\sqrt{3}\\)m",
+        "D": "13/3\\(\\sqrt{3}\\)m",
+        "E": "\\(\\sqrt{3}\\)/13m"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1374",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, ATR is a tangent at the point T&nbsp;to the circle center O, if &ang;TOB = 145&deg;, find &ang;TAO</p>",
+      "marks": 1,
+      "options": {
+        "A": "20<sup>o</sup>",
+        "B": "35<sup>o</sup>",
+        "C": "45<sup>o</sup>",
+        "D": "55<sup>o</sup>",
+        "E": "65<sup>o</sup>"
+      },
+      "year": 1991,
+      "image": "/qimages/1b9b28810434d881876e.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1375",
+      "type": "mcq",
+      "stem": "<p>P={2, 1,3, 9, 1/2}; Q = {1,21/2,3, 7} and R = {5, 4, 21/2}. Find P&cup;Q&cup;R</p>",
+      "marks": 1,
+      "options": {
+        "A": "(2<sup>1</sup>/<sub>2</sub>)",
+        "B": "(1, 9)",
+        "C": "(1, 2, 3, 4, 5, 6, 7)",
+        "D": "(5, 4, 2<sup>1</sup>/<sub>2</sub>)",
+        "E": "(<sup>1</sup>/<sub>2</sub>, 1, 2, 2<sup>1</sup>/<sub>2</sub>, 3, 4, 5, 7, 9)"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1376",
+      "type": "mcq",
+      "stem": "<p>P = {2, 1,3, 9, 1/2}; Q = {1,21/2,3, 7} and R = {5, 4, 21/2}. Find P&cap;Q&cap;R</p>",
+      "marks": 1,
+      "options": {
+        "A": "(2<sup>1</sup>/<sub>2</sub>)",
+        "B": "∅",
+        "C": "(1, 3, 7)",
+        "D": "(4)",
+        "E": "(5,7,9)"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1377",
+      "type": "mcq",
+      "stem": "<p>Find the mean of the distribution</p>",
+      "marks": 1,
+      "options": {
+        "A": "3.5",
+        "B": "4.0",
+        "C": "4.4",
+        "D": "5.0",
+        "E": "5"
+      },
+      "year": 1991,
+      "image": "/qimages/804bce4edd5bde44aeb6.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1378",
+      "type": "mcq",
+      "stem": "Find the mode of the distribution",
+      "marks": 1,
+      "options": {
+        "A": "40",
+        "B": "9",
+        "C": "7",
+        "D": "5",
+        "E": "2"
+      },
+      "year": 1991,
+      "image": "/qimages/a973db7b6d41cfba7540.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1379",
+      "type": "mcq",
+      "stem": "<p>If two events are mutually exclusive, their intersection is empty. This means that there are no outcomes that are common to both events. In probability terms, if X and Y&nbsp;are mutually exclusive events, then:</p>\r\n\r\n<p>Pr(X&nbsp;<em>&cap; Y</em>) = 0</p>",
+      "marks": 1,
+      "options": {
+        "A": "0",
+        "B": "2/15",
+        "C": "11/15",
+        "D": "4/15",
+        "E": "1"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1380",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, &ang;PTQ = &ang;URP = 25&deg;&nbsp;and XPU = 4URP. Calculate &ang;USQ.</p>",
+      "marks": 1,
+      "options": {
+        "A": "100<sup>o</sup>",
+        "B": "120<sup>o</sup>",
+        "C": "125<sup>o</sup>",
+        "D": "130<sup>o</sup>",
+        "E": "150<sup>o</sup>"
+      },
+      "year": 1991,
+      "image": "/qimages/2b17b8bd0e547dc781b7.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1381",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, O is the center of the circle, |SQ| = |QR| and &ang;PQR = 68&deg;. Calculate &ang;PRS</p>",
+      "marks": 1,
+      "options": {
+        "A": "34<sup>o</sup>",
+        "B": "45<sup>o</sup>",
+        "C": "56<sup>o</sup>",
+        "D": "62<sup>o</sup>",
+        "E": "68<sup>o</sup>"
+      },
+      "year": 1991,
+      "image": "/qimages/484f9a23971a482d0cb1.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1382",
+      "type": "mcq",
+      "stem": "Find the area of an equivalent triangle of side 16cm",
+      "marks": 1,
+      "options": {
+        "A": "64√3cm<sup>2</sup>",
+        "B": "72√3cm<sup>2</sup>",
+        "C": "96cm<sup>2</sup>",
+        "D": "128√3cm<sup>2</sup>",
+        "E": "128cm<sup>2</sup>"
+      },
+      "year": 1991
+    },
+    {
+      "id": "waec-mathematics-bank-1383",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, PQ and XY are two concentric arc; center O, the ratio of the length of the two arc is 1:3, find the ratio of the areas of the two sectors OPQ and OXY</p>",
+      "marks": 1,
+      "options": {
+        "A": "1:3",
+        "B": "1:6",
+        "C": "1:9",
+        "D": "2:3",
+        "E": "4:9"
+      },
+      "year": 1991,
+      "image": "/qimages/412b02638ddf62436c30.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1384",
+      "type": "mcq",
+      "stem": "In the diagram above , |AD| = 10cm, |DC| = 8cm and |CF| = 15cmIf the area of triangle DCF = 24cm<sup>2</sup>, find the area of the quadrilateral ABCD.",
+      "marks": 1,
+      "options": {
+        "A": "24cm<sup>2</sup>",
+        "B": "48cm<sup>2</sup>",
+        "C": "80cm<sup>2</sup>",
+        "D": "96cm<sup>2</sup>",
+        "E": "120cm<sup>2</sup>"
+      },
+      "year": 1991,
+      "image": "/qimages/50f8ff488a46314cf58d.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1385",
+      "type": "mcq",
+      "stem": "<p>In the diagram above , |AD| = 10cm, |DC| = 8cm and |CF| = 15cm. Which of the following is correct?</p>",
+      "marks": 1,
+      "options": {
+        "A": "Area BCF = Area DCF",
+        "B": "Area ADE = Area ADF",
+        "C": "Area ADE = Area DCFE",
+        "D": "Area CBF = Area DABC",
+        "E": "Area DABO = Area CFEO"
+      },
+      "year": 1991,
+      "image": "/qimages/266841c3527628083b6d.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1386",
+      "type": "mcq",
+      "stem": "<p>If x varies over the set of real numbers, which of the following is illustrated in the diagram above?</p>",
+      "marks": 1,
+      "options": {
+        "A": "-3<x≤2",
+        "B": "-3≤x<2",
+        "C": "-3<x<2",
+        "D": "-3≤x≤2",
+        "E": "x≥2"
+      },
+      "year": 1992,
+      "image": "/qimages/cb2509ece13ae3af9c78.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1387",
+      "type": "mcq",
+      "stem": "<p>Factorize the expression 2y\\(^2\\)&nbsp;+ xy - 3x\\(^2\\)</p>",
+      "marks": 1,
+      "options": {
+        "A": "2y (y + x) - 3x<sup>2</sup>",
+        "B": "(2y - x)(2y + x)",
+        "C": "(3x - 2y(x - y)",
+        "D": "(2y + 3x)(y - x)",
+        "E": "(x – y)(2y + 3x)"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-mathematics-bank-1388",
+      "type": "mcq",
+      "stem": "<p>Construct a quadratic equation whose roots are \\(-\\frac{1}{2}\\)&nbsp;and 2.</p>",
+      "marks": 1,
+      "options": {
+        "A": "3x<sup>2</sup>-3x+2=0",
+        "B": "3x<sup>2</sup>+3x-2=0",
+        "C": "2x<sup>2</sup>+3x-2=0",
+        "D": "2x<sup>2</sup>-3x+2=0",
+        "E": "2x<sup>2</sup>-3x-2=0"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-mathematics-bank-1389",
+      "type": "mcq",
+      "stem": "<p>The diagram above shows the shaded segment of a circle of radius 7cm. if the area of the triangle OXY is 12\\(\\frac{1}{4}\\)cm\\(^2\\), calculate the area of the segment<br />\r\n[Take &pi; = 22/7]</p>",
+      "marks": 1,
+      "options": {
+        "A": "5/12cm<sup>2</sup>",
+        "B": "7/12cm<sup>2</sup>",
+        "C": "11/6cm<sup>2</sup>",
+        "D": "2 1/3cm<sup>2</sup>",
+        "E": "6 1/6cm<sup>2</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/8ab33147d7b6c1340e5d.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1390",
+      "type": "mcq",
+      "stem": "<p>In the diagram above PQT is a tangent to the circle QRS at Q. Angle QTR = 48&deg;&nbsp;and &ang;QRT = 95&deg;. Find &ang;QSR</p>",
+      "marks": 1,
+      "options": {
+        "A": "48<sup>o</sup>",
+        "B": "45<sup>o</sup>",
+        "C": "37<sup>o</sup>",
+        "D": "32<sup>o</sup>",
+        "E": "30<sup>o</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/9d2b6da648c9e450350d.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1391",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, O is the center of the circle and &ang;POR = 126&deg;. Find &ang;PQR</p>",
+      "marks": 1,
+      "options": {
+        "A": "234<sup>o</sup>",
+        "B": "117<sup>o</sup>",
+        "C": "72<sup>o</sup>",
+        "D": "63<sup>o</sup>",
+        "E": "54<sup>o</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/43d571ae3d952bbd0fa2.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1392",
+      "type": "mcq",
+      "stem": "In the diagram above, TR = TS and ∠TRS = 60<sup>o</sup>. Find the value of x",
+      "marks": 1,
+      "options": {
+        "A": "30",
+        "B": "45",
+        "C": "60",
+        "D": "120",
+        "E": "150"
+      },
+      "year": 1992,
+      "image": "/qimages/6dc7d50db2b4cee9990a.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1393",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, O is the center of the circle PQRS and &ang;QPS = 36&deg;. Find &ang;QOS</p>",
+      "marks": 1,
+      "options": {
+        "A": "36<sup>o</sup>",
+        "B": "72<sup>o</sup>",
+        "C": "108<sup>o</sup>",
+        "D": "144<sup>o</sup>",
+        "E": "288<sup>o</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/90fcac8a26c5b5e400c8.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1394",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, O is the center of the circle QOR is a diameter and &ang;PSR is 37&deg;. Find &ang;PRQ</p>",
+      "marks": 1,
+      "options": {
+        "A": "37<sup>o</sup>",
+        "B": "53<sup>o</sup>",
+        "C": "65<sup>o</sup>",
+        "D": "127<sup>o</sup>",
+        "E": "147<sup>o</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/1be41e9ebb29181e0e88.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1395",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, ML//PQ and NP//QR, if &ang;LMN = 40&deg;&nbsp;and &ang;MNP = 55&deg;. Find &ang;QPR</p>",
+      "marks": 1,
+      "options": {
+        "A": "15<sup>o</sup>",
+        "B": "25<sup>o</sup>",
+        "C": "35<sup>o</sup>",
+        "D": "40<sup>o</sup>",
+        "E": "55<sup>o</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/475357e0a74716ef78f8.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1396",
+      "type": "mcq",
+      "stem": "<p>The angles marked in the diagram above are measured in degrees. Find x</p>",
+      "marks": 1,
+      "options": {
+        "A": "15<sup>o</sup>",
+        "B": "24<sup>o</sup>",
+        "C": "30<sup>o</sup>",
+        "D": "36<sup>o</sup>",
+        "E": "48<sup>o</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/c11a4fdff8555c52f537.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1397",
+      "type": "mcq",
+      "stem": "A regular polygon has each of its exterior angles as 18<sup>o</sup>. How many sides has the polygon",
+      "marks": 1,
+      "options": {
+        "A": "10",
+        "B": "11",
+        "C": "12",
+        "D": "20",
+        "E": "24"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-mathematics-bank-1398",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, PQT is an isosceles triangle.|PQ| = |QT|, &ang;SRQ = 75&deg;, &ang;QPT = 25&deg;&nbsp;and PQR is straight line. Find &ang;RST</p>",
+      "marks": 1,
+      "options": {
+        "A": "20<sup>o</sup>",
+        "B": "50<sup>o</sup>",
+        "C": "55<sup>o</sup>",
+        "D": "70<sup>o</sup>",
+        "E": "75<sup>o</sup>"
+      },
+      "year": 1992,
+      "image": "/qimages/5bf691c4c6dda4a578b1.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1399",
+      "type": "mcq",
+      "stem": "Town P is on bearing 315<sup>o</sup> from town Q while town R is south of town P and west of town Q. lf town R is 60km away from Q, how far is R from P?",
+      "marks": 1,
+      "options": {
+        "A": "30km",
+        "B": "42km",
+        "C": "45km",
+        "D": "60km",
+        "E": "120km"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-mathematics-bank-1400",
+      "type": "mcq",
+      "stem": "<p>The data above shows the frequency distribution<br>\r\nof marks scored by a group of students in a class<br>\r\ntest.</p><br>\r\n<br>\r\nHow many students took the test?",
+      "marks": 1,
+      "options": {
+        "A": "13",
+        "B": "14",
+        "C": "15",
+        "D": "18",
+        "E": "20"
+      },
+      "year": 1992,
+      "image": "/qimages/9e2c0f68614739e6e446.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1401",
+      "type": "mcq",
+      "stem": "<p>The data below shows the frequency distribution<br>\r\nof marks scored by a group of students in a class<br>\r\ntest.</p><br>\r\nWhat is the modal score",
+      "marks": 1,
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "year": 1992,
+      "image": "/qimages/e94bb39b3628695091f0.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1402",
+      "type": "mcq",
+      "stem": "<p>The data below shows the frequency distribution<br />\r\nof marks scored by a group of students in a class<br />\r\ntest.</p>\r\n\r\n<p><br />\r\nFind the mean mark.</p>",
+      "marks": 1,
+      "options": {
+        "A": "1",
+        "B": "1.3",
+        "C": "2",
+        "D": "3",
+        "E": "3.8"
+      },
+      "year": 1992,
+      "image": "/qimages/0d1beda885bc2d7bd89e.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1403",
+      "type": "mcq",
+      "stem": "<p>A group of students measured a certain angle<br />\r\n(to the nearest degree) and obtained the following<br />\r\nresults: 75o, 76o, 72o, 73o, 74o, 79o, 72o, 72o, 77o,<br />\r\n72o, 71o, 70o, 78o, 73o. Find the mode</p>",
+      "marks": 1,
+      "options": {
+        "A": "79<sup>o</sup>",
+        "B": "78<sup>o</sup>",
+        "C": "74<sup>o</sup>",
+        "D": "73<sup>o</sup>",
+        "E": "72<sup>o</sup>"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-mathematics-bank-1404",
+      "type": "mcq",
+      "stem": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:55%\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Marks</td>\r\n\t\t\t<td>1</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>3</td>\r\n\t\t\t<td>4</td>\r\n\t\t\t<td>5</td>\r\n\t\t\t<td>6</td>\r\n\t\t\t<td>7</td>\r\n\t\t\t<td>8</td>\r\n\t\t\t<td>9</td>\r\n\t\t\t<td>10</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>No of students</td>\r\n\t\t\t<td>1</td>\r\n\t\t\t<td>3</td>\r\n\t\t\t<td>2</td>\r\n\t\t\t<td>0</td>\r\n\t\t\t<td>1</td>\r\n\t\t\t<td>6</td>\r\n\t\t\t<td>1</td>\r\n\t\t\t<td>0</td>\r\n\t\t\t<td>1</td>\r\n\t\t\t<td>0</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>The table above shows the scores of 15 students in a Physics test.</p>\r\n\r\n<p>How many students scored at least 5?</p>",
+      "marks": 1,
+      "options": {
+        "A": "1",
+        "B": "6",
+        "C": "8",
+        "D": "9",
+        "E": "14"
+      },
+      "year": 1992
+    },
+    {
+      "id": "waec-mathematics-bank-1405",
+      "type": "mcq",
+      "stem": "<p>A stick of length 1.75m was measured by a boy as 1.80m. Find the percentage error in his measurement</p>",
+      "marks": 1,
+      "options": {
+        "A": "2<sup>7</sup>/<sub>9</sub>%",
+        "B": "2<sup>6</sup>/<sub>7</sub>%",
+        "C": "5%",
+        "D": "27<sup>7</sup>/<sub>9</sub>%",
+        "E": "28<sup>4</sup>/<sub>7</sub>%."
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1406",
+      "type": "mcq",
+      "stem": "<p>Simplify: \\(\\frac{4^{-\\frac{1}{2}} \\times 16^{\\frac{3}{4}}}{4^{\\frac{1}{2}}}\\)</p>",
+      "marks": 1,
+      "options": {
+        "A": "<sup>1</sup>/<sub>4</sub>",
+        "B": "0",
+        "C": "1",
+        "D": "2",
+        "E": "4"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1407",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, |QR| = 12cm and |QS| = 10cm. If &ang;PQR = 90&deg;, &ang;RSQ = 90&deg;&nbsp;and PSQ is a straight line, find |PS|</p>",
+      "marks": 1,
+      "options": {
+        "A": "3.3cm",
+        "B": "4.4cm",
+        "C": "5cm",
+        "D": "5.5cm",
+        "E": "6.6cm"
+      },
+      "year": 1993,
+      "image": "/qimages/cf373918b85a2e3b40e9.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1408",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, |PQ| = |QR|, |PS| = |RS|, &ang;PSR = 30o and &ang;PQR = 80o. Find &ang;SPQ.</p>",
+      "marks": 1,
+      "options": {
+        "A": "15<sup>o</sup>",
+        "B": "25<sup>o</sup>",
+        "C": "40<sup>o</sup>",
+        "D": "50<sup>o</sup>",
+        "E": "55<sup>o</sup>"
+      },
+      "year": 1993,
+      "image": "/qimages/ebd6849e1a731d1f4748.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1409",
+      "type": "mcq",
+      "stem": "Two chords PQ and RS of a circle when produced meet at K. If ∠KPS = 31<sup>o</sup> and ∠PKR = 42<sup>o</sup>, find ∠KQR",
+      "marks": 1,
+      "options": {
+        "A": "11<sup>o</sup>",
+        "B": "73<sup>o</sup>",
+        "C": "107<sup>o</sup>",
+        "D": "138<sup>o</sup>",
+        "E": "149<sup>o</sup>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1410",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, QRS is a straight line, QP//RT, PRQ = 56&deg;, &ang;QPR =84&deg;&nbsp;and &ang;TRS = x&deg;. Find x</p>",
+      "marks": 1,
+      "options": {
+        "A": "28°",
+        "B": "40°",
+        "C": "44°",
+        "D": "84°",
+        "E": "124°"
+      },
+      "year": 1993,
+      "image": "/qimages/3219fc67c604e0e59157.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1411",
+      "type": "mcq",
+      "stem": "If sin x = cos 50<sup>o</sup>, then x equals",
+      "marks": 1,
+      "options": {
+        "A": "40<sup>o</sup>",
+        "B": "45<sup>o</sup>",
+        "C": "50<sup>o</sup>",
+        "D": "90<sup>o</sup>",
+        "E": "130<sup>o</sup>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1412",
+      "type": "mcq",
+      "stem": "From a point on the edge of the sea, one ship is 24km away on a bearing S 50<sup>o</sup>E and another ship is 7km away on a bearing S40<sup>o</sup>W. How far apart are the ships?",
+      "marks": 1,
+      "options": {
+        "A": "20km",
+        "B": "24km",
+        "C": "25km",
+        "D": "31km",
+        "E": "84km"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1413",
+      "type": "mcq",
+      "stem": "Cos 75<sup>o</sup> has the same value as",
+      "marks": 1,
+      "options": {
+        "A": "cos 115<sup>o</sup>",
+        "B": "cos 255<sup>o</sup>",
+        "C": "cos 285<sup>o</sup>",
+        "D": "-sin165<sup>o</sup>",
+        "E": "-sin 255<sup>o</sup>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1414",
+      "type": "mcq",
+      "stem": "What is A∩B in the diagram above?",
+      "marks": 1,
+      "options": {
+        "A": "(2,3)",
+        "B": "(2,3,4)",
+        "C": "(1,2,3)",
+        "D": "(2,3,8)",
+        "E": "(6,4,7)"
+      },
+      "year": 1993,
+      "image": "/qimages/3591cacde1fe0b56c2a2.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1415",
+      "type": "mcq",
+      "stem": "<table border=\"2\" cellpadding=\"3\" cellspacing=\"0\" style=\"width:500px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td><strong>Score</strong></td>\r\n\t\t\t<td><strong>1</strong></td>\r\n\t\t\t<td><strong>2</strong></td>\r\n\t\t\t<td><strong>3</strong></td>\r\n\t\t\t<td><strong>4</strong></td>\r\n\t\t\t<td><strong>5</strong></td>\r\n\t\t\t<td><strong>6</strong></td>\r\n\t\t\t<td><strong>7</strong></td>\r\n\t\t\t<td><strong>8</strong></td>\r\n\t\t\t<td><strong>9</strong></td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td><strong>Frequency</strong></td>\r\n\t\t\t<td><strong>2</strong></td>\r\n\t\t\t<td><strong>3</strong></td>\r\n\t\t\t<td><strong>6</strong></td>\r\n\t\t\t<td><strong>7</strong></td>\r\n\t\t\t<td><strong>9</strong></td>\r\n\t\t\t<td><strong>6</strong></td>\r\n\t\t\t<td><strong>2</strong></td>\r\n\t\t\t<td><strong>2</strong></td>\r\n\t\t\t<td><strong>3</strong></td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>The table above shows the scores of a group of 40 students in a physics test</p>\r\n\r\n<p>What is the mean of the distribution?</p>",
+      "marks": 1,
+      "options": {
+        "A": "4.2",
+        "B": "4.5",
+        "C": "4.8",
+        "D": "5.0",
+        "E": "5.2"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1416",
+      "type": "mcq",
+      "stem": "<p>The distribution by state of 840 students in the Faculty of Science of a Nigerian University in a certain session is as follows:</p>\r\n\r\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Bendel</td>\r\n\t\t\t<td>45</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>kwara</td>\r\n\t\t\t<td>410</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Ogun</td>\r\n\t\t\t<td>105</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Ondo</td>\r\n\t\t\t<td>126</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Oyo</td>\r\n\t\t\t<td>154</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>In a pie chart drawn to represent this distribution, the angle subtended by Ondo is</p>\r\n\r\n<p>&nbsp;</p>",
+      "marks": 1,
+      "options": {
+        "A": "36<sup>o</sup>",
+        "B": "42<sup>o</sup>",
+        "C": "45<sup>o</sup>",
+        "D": "48<sup>o</sup>",
+        "E": "54<sup>o</sup>"
+      },
+      "year": 1993
+    },
+    {
+      "id": "waec-mathematics-bank-1417",
+      "type": "mcq",
+      "stem": "<p>How many student took the examination</p>",
+      "marks": 1,
+      "options": {
+        "A": "18",
+        "B": "20",
+        "C": "21",
+        "D": "23",
+        "E": "24"
+      },
+      "year": 1993,
+      "image": "/qimages/ab8df4d82a05cf6aa280.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1418",
+      "type": "mcq",
+      "stem": "<p>How many students scored less than 7 marks?</p>",
+      "marks": 1,
+      "options": {
+        "A": "9",
+        "B": "15",
+        "C": "18",
+        "D": "21",
+        "E": "25"
+      },
+      "year": 1993,
+      "image": "/qimages/60cd787c7225fa911287.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1419",
+      "type": "mcq",
+      "stem": "<p>A die is rolled 200 times the outcomes obtained are shown in the table below.</p>\r\n\r\n<p>Find the probability of obtaining 2.</p>",
+      "marks": 1,
+      "options": {
+        "A": "0.002",
+        "B": "0.015",
+        "C": "0.15",
+        "D": "16",
+        "E": "0.2"
+      },
+      "year": 1993,
+      "image": "/qimages/814b08be6c86e768e8f2.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1420",
+      "type": "mcq",
+      "stem": "<p>Express in \\( \\frac{8.75}{0.025} \\)standard form</p>",
+      "marks": 1,
+      "options": {
+        "A": "3.5 x 10<sup>-3</sup>",
+        "B": "3.5 x 10<sup>-2</sup>",
+        "C": "3.5 x 10<sup>1</sup>",
+        "D": "3.5 x 10<sup>2</sup>",
+        "E": "3.5 x 10<sup>3</sup>"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-mathematics-bank-1421",
+      "type": "mcq",
+      "stem": "In the graph above, the gradient of the curve at the point P is",
+      "marks": 1,
+      "options": {
+        "A": "-1<sup>1</sup> <sub>3</sub>",
+        "B": "-<sup>3</sup> <sub>4</sub>",
+        "C": "3/7",
+        "D": "3/4",
+        "E": "1<sup>1</sup> <sub>3</sub>"
+      },
+      "year": 1994,
+      "image": "/qimages/afd24ccaa9d0f791a930.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1422",
+      "type": "mcq",
+      "stem": "<p>What is the equation of the line PQ?</p>",
+      "marks": 1,
+      "options": {
+        "A": "y = x - 5",
+        "B": "y = x + 3",
+        "C": "y = x + 5",
+        "D": "y = 2x + 3",
+        "E": "y = 2x - 3"
+      },
+      "year": 1994,
+      "image": "/qimages/b30abe785da05a8c7351.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1423",
+      "type": "mcq",
+      "stem": "<p>Find the quadratic equation whose roots are 3 and \\(\\frac{2}{3}\\).</p>",
+      "marks": 1,
+      "options": {
+        "A": "x<sup>2</sup> - 11 / 3x + 6 = 0",
+        "B": "x<sup>2</sup> - 11x + 6 = O",
+        "C": "3x<sup>2</sup> - 11x + 2 = O",
+        "D": "3X<sup>2</sup> - 11x – 2 = 0",
+        "E": "3x<sup>2</sup> - 11x + 6 = 0"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-mathematics-bank-1424",
+      "type": "mcq",
+      "stem": "<p>Solve the equation log8x - 4log8x = 2</p>",
+      "marks": 1,
+      "options": {
+        "A": "<sup>1</sup>/<sub>4</sub>",
+        "B": "<sup>1</sup>/<sub>2</sub>",
+        "C": "1",
+        "D": "2",
+        "E": "4"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-mathematics-bank-1425",
+      "type": "mcq",
+      "stem": "Two solid spheres have volumes 250cm<sup>o</sup> and 128cm<sup>o</sup> respectively. Find the ratio of their radii.",
+      "marks": 1,
+      "options": {
+        "A": "125:64",
+        "B": "25:16",
+        "C": "2:1",
+        "D": "4:3",
+        "E": "5:4"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-mathematics-bank-1426",
+      "type": "mcq",
+      "stem": "<p>In the diagram ST and QR are parallel. |PS| = 6cm, |SQ| = 8cm and |PR] = 18 2/3. Find |PT|</p>",
+      "marks": 1,
+      "options": {
+        "A": "7cm",
+        "B": "8cm",
+        "C": "8 2/3cm",
+        "D": "10cm",
+        "E": "10 2/3cm"
+      },
+      "year": 1994,
+      "image": "/qimages/440d1c8960e4d432205c.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1427",
+      "type": "mcq",
+      "stem": "The sum of the angles of regular polygon is 2520<sup>o</sup>. How many sides does the polygon have?",
+      "marks": 1,
+      "options": {
+        "A": "20",
+        "B": "18",
+        "C": "17",
+        "D": "16",
+        "E": "15"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-mathematics-bank-1428",
+      "type": "mcq",
+      "stem": "In the diagram above, PQ is the tangent to the circle RST at T.|ST| = ST and ∠RTQ = 68<sup>o</sup>. Find ∠PTS",
+      "marks": 1,
+      "options": {
+        "A": "68<sup>o</sup>",
+        "B": "62<sup>o</sup>",
+        "C": "61<sup>o</sup>",
+        "D": "56<sup>o</sup>",
+        "E": "34<sup>o</sup>"
+      },
+      "year": 1994,
+      "image": "/qimages/25eb269a4d0b4a1c07cb.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1429",
+      "type": "mcq",
+      "stem": "<p>In the diagram, |PS| is a diameter of circle PQRS. |PQ| = |QR| and &ang;RSP = 74&ordm;. Find &ang;QPS</p>",
+      "marks": 1,
+      "options": {
+        "A": "32<sup>o</sup>",
+        "B": "37<sup>o</sup>",
+        "C": "48<sup>o</sup>",
+        "D": "53<sup>o</sup>",
+        "E": "74<sup>o</sup>"
+      },
+      "year": 1994,
+      "image": "/qimages/32543436773c9f964d96.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1430",
+      "type": "mcq",
+      "stem": "A ladder 6m long leans against a vertical wall so that it makes an angle of 60<sup>o</sup> with the wall. Calculate the distance of the foot of the ladder from the wall",
+      "marks": 1,
+      "options": {
+        "A": "3m",
+        "B": "6m",
+        "C": "2√3m",
+        "D": "3√3m",
+        "E": "6√3m"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-mathematics-bank-1431",
+      "type": "mcq",
+      "stem": "cos 57<sup>o</sup> has the same value as",
+      "marks": 1,
+      "options": {
+        "A": "sin 213<sup>o</sup>",
+        "B": "-cos 303<sup>o</sup>",
+        "C": "sin 147<sup>o</sup>",
+        "D": "cos 123<sup>o</sup>",
+        "E": "cos237<sup>o</sup>"
+      },
+      "year": 1994
+    },
+    {
+      "id": "waec-mathematics-bank-1432",
+      "type": "mcq",
+      "stem": "The median of the distribution is",
+      "marks": 1,
+      "options": {
+        "A": "9.5kg",
+        "B": "11kg",
+        "C": "67kg",
+        "D": "65.5kg",
+        "E": "68kg"
+      },
+      "year": 1994,
+      "image": "/qimages/fca5561f63d0a91cf64b.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1433",
+      "type": "mcq",
+      "stem": "The percentage of the students with mass less than 69kg is",
+      "marks": 1,
+      "options": {
+        "A": "56%",
+        "B": "62.5%",
+        "C": "68%",
+        "D": "70%",
+        "E": "87.5%"
+      },
+      "year": 1994,
+      "image": "/qimages/6f53965faa4b6a98367b.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1434",
+      "type": "mcq",
+      "stem": "Express 0.000834 in standard form",
+      "marks": 1,
+      "options": {
+        "A": "8.34 x 10<sup>-4</sup>",
+        "B": "8.34 x 10<sup>-3</sup>",
+        "C": "8.34 x 10<sup>3</sup>",
+        "D": "8.34 x 10<sup>4</sup>",
+        "E": "8.34 x 10<sup>6</sup>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-mathematics-bank-1435",
+      "type": "mcq",
+      "stem": "Given that log<sub>2</sub>a = log<sub>8</sub>4, find a",
+      "marks": 1,
+      "options": {
+        "A": "2<sup>1/3</sup>",
+        "B": "4<sup>2/3</sup>",
+        "C": "4<sup>2/3</sup>",
+        "D": "2<sup>2/3</sup>",
+        "E": "2<sup>3</sup>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-mathematics-bank-1436",
+      "type": "mcq",
+      "stem": "<p>Which of the following could be the inequality illustrated in the sketch graph above?</p>",
+      "marks": 1,
+      "options": {
+        "A": "y≥2x+3",
+        "B": "y≤-3x+3",
+        "C": "y < 3x+2",
+        "D": "y≤x +3",
+        "E": "y≥3x+2."
+      },
+      "year": 1995,
+      "image": "/qimages/995913351ad1a59f1020.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1437",
+      "type": "mcq",
+      "stem": "<p>Use the graph of y = 3x\\(^2\\) + x - 7 above to answer the question</p>\r\n\r\n<p>What is the minimum value of y?</p>",
+      "marks": 1,
+      "options": {
+        "A": "-10",
+        "B": "-7",
+        "C": "-4",
+        "D": "-1",
+        "E": "2"
+      },
+      "year": 1995,
+      "image": "/qimages/3cf0f5650ff3d123620f.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1438",
+      "type": "mcq",
+      "stem": "<p>Use the graph of y = 3x\\(^2\\) + x - 7 above to answer the question</p>\r\n\r\n<p>Find the roots of the equation y=3x\\(^2\\) + x - 7</p>",
+      "marks": 1,
+      "options": {
+        "A": "1.0 And -1.2",
+        "B": "1.1and-1.3",
+        "C": "1.4and-1.7",
+        "D": "2.0 and -1.9",
+        "E": "2.4 and -2.0"
+      },
+      "year": 1995,
+      "image": "/qimages/e635df02757805a234c3.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1439",
+      "type": "mcq",
+      "stem": "<p>In the diagram above. |AB| = 12cm, |AE| = 8cm, |DCl = 9cm and AB||DC. Calculate |EC|</p>",
+      "marks": 1,
+      "options": {
+        "A": "10cm",
+        "B": "9cm",
+        "C": "8cm",
+        "D": "7cm",
+        "E": "6cm"
+      },
+      "year": 1995,
+      "image": "/qimages/e37d0a4d308885c89c61.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1440",
+      "type": "mcq",
+      "stem": "<p>A cylindrical container, closed at both ends, has a radius of 7cm and height 5cm [Take &pi; = 22/7]</p>\r\n\r\n<p>What is the volume of the container?</p>",
+      "marks": 1,
+      "options": {
+        "A": "35cm<sup>3</sup>",
+        "B": "154cm<sup>3</sup>",
+        "C": "220cm<sup>3</sup>",
+        "D": "528cm<sup>3</sup>",
+        "E": "770cm<sup>3</sup>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-mathematics-bank-1441",
+      "type": "mcq",
+      "stem": "<p>Find the total surface area of solid circular cone with base radius 3cm and slant height 4cm. [Take &pi; = 22/7]</p>",
+      "marks": 1,
+      "options": {
+        "A": "37 5/7cm<sup>2</sup>",
+        "B": "66cm<sup>2</sup>",
+        "C": "75 3/7cm<sup>2</sup>",
+        "D": "78 2/7cm<sup>2</sup>",
+        "E": "88cm<sup>2</sup>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-mathematics-bank-1442",
+      "type": "mcq",
+      "stem": "<p>The diagram above shows a cone with the dimensions of its frustrum indicated. Calculate the height of the cone.</p>",
+      "marks": 1,
+      "options": {
+        "A": "12cm",
+        "B": "15cm",
+        "C": "18cm",
+        "D": "24cm",
+        "E": "30cm"
+      },
+      "year": 1995,
+      "image": "/qimages/641b94d6558321fcd199.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1443",
+      "type": "mcq",
+      "stem": "<p>The positions of two countries P and Q are (15&deg;N, 12&deg;E) and (65&deg;N, 12&deg;E) respectively. What is the difference in latitude?</p>",
+      "marks": 1,
+      "options": {
+        "A": "104<sup>o</sup>",
+        "B": "100<sup>o</sup>",
+        "C": "80<sup>o</sup>",
+        "D": "50<sup>o</sup>",
+        "E": "24<sup>o</sup>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-mathematics-bank-1444",
+      "type": "mcq",
+      "stem": "<p>A 120&deg; sector of a circle of radius 21cm is bent to form a cone. What is the base radius of the cone?</p>",
+      "marks": 1,
+      "options": {
+        "A": "3<sup>1</sup>/<sub>2</sub>cm",
+        "B": "7cm",
+        "C": "1O<sup>1</sup>/<sub>2</sub>cm",
+        "D": "14cm",
+        "E": "21cm"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-mathematics-bank-1445",
+      "type": "mcq",
+      "stem": "<p>In the diagram above; O is the centre of the circle and |BD| = |DC|. If &ang;DCB = 35&deg;, find &ang;BAO.</p>",
+      "marks": 1,
+      "options": {
+        "A": "20<sup>o</sup>",
+        "B": "25<sup>o</sup>",
+        "C": "30<sup>o</sup>",
+        "D": "35<sup>o</sup>",
+        "E": "40<sup>o</sup>"
+      },
+      "year": 1995,
+      "image": "/qimages/d60faba72795d0b5d863.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1446",
+      "type": "mcq",
+      "stem": "<p>In the&nbsp;diagram above, AO is perpendicular to OB. Find x</p>",
+      "marks": 1,
+      "options": {
+        "A": "7.5<sup>o</sup>",
+        "B": "15<sup>o</sup>",
+        "C": "22.5<sup>o</sup>",
+        "D": "30<sup>o</sup>",
+        "E": "38.6<sup>o</sup>"
+      },
+      "year": 1995,
+      "image": "/qimages/b8fad7d2b0ddc3be5fd1.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1447",
+      "type": "mcq",
+      "stem": "In the diagram above, AB//CD, the bisector of ∠BAC  and ∠ACD meet at E. Find the value of ∠AEC",
+      "marks": 1,
+      "options": {
+        "A": "30<sup>o</sup>",
+        "B": "45<sup>o</sup>",
+        "C": "60<sup>o</sup>",
+        "D": "75<sup>o</sup>",
+        "E": "90<sup>o</sup>"
+      },
+      "year": 1995,
+      "image": "/qimages/29ad2b06c1bed1fc0455.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1448",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, the value of angles b + c is</p>",
+      "marks": 1,
+      "options": {
+        "A": "180<sup>o</sup>",
+        "B": "90<sup>o</sup>",
+        "C": "45<sup>o</sup>",
+        "D": "a<sup>o</sup>",
+        "E": "d<sup>o</sup>"
+      },
+      "year": 1995,
+      "image": "/qimages/4563e50b2868a1f91165.png"
+    },
+    {
+      "id": "waec-mathematics-bank-1449",
+      "type": "mcq",
+      "stem": "<p>Which of the following angles is an exterior angle of a regular polygon?</p>",
+      "marks": 1,
+      "options": {
+        "A": "95<sup>o</sup>",
+        "B": "85<sup>o</sup>",
+        "C": "78<sup>o</sup>",
+        "D": "75<sup>o</sup>",
+        "E": "72<sup>o</sup>"
+      },
+      "year": 1995
+    },
+    {
+      "id": "waec-mathematics-bank-1450",
+      "type": "mcq",
+      "stem": "In ΔABC above, BC is produced to D, /AB/ = /AC/ and ∠BAC = 50<sup>o</sup>. Find ∠ACD",
+      "marks": 1,
+      "options": {
+        "A": "50<sup>o</sup>",
+        "B": "60<sup>o</sup>",
+        "C": "65<sup>o</sup>",
+        "D": "100<sup>o</sup>",
+        "E": "115<sup>o</sup>"
+      },
+      "year": 1995,
+      "image": "/qimages/9932dde31daba926ec07.jpg"
+    },
+    {
+      "id": "waec-mathematics-bank-1451",
+      "type": "mcq",
+      "stem": "<p>In the diagram above, &ang;PRQ = 90&deg;, &ang;QPR = 30&deg;&nbsp;and /PQ/ = 10 cm. Find y.</p>",
+      "marks": 1,
+      "options": {
+        "A": "6cm",
+        "B": "5cm",
+        "C": "4cm",
+        "D": "3cm",
+        "E": "2cm"
+      },
+      "year": 1995,
+      "image": "/qimages/a7be43135d765a928e41.jpg"
     }
   ],
   "category": "secondary",

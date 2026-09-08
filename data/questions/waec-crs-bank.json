@@ -2,8 +2,8 @@
   "code": "waec-crs-bank",
   "title": "WAEC Christian Religious Studies | Past Questions Bank",
   "version": 1,
-  "questionCount": 1750,
-  "totalMarks": 1750,
+  "questionCount": 1751,
+  "totalMarks": 1751,
   "questions": [
     {
       "id": "waec-crs-bank-0001",
@@ -23171,6 +23171,20 @@
       },
       "marks": 1,
       "year": 2000
+    },
+    {
+      "id": "waec-crs-bank-1751",
+      "type": "mcq",
+      "stem": "The three sons of Saul who lost their lives on Mount Gilboa were",
+      "marks": 1,
+      "options": {
+        "A": "Abinadab, Jonathan and Malchishua",
+        "B": "Jonathan, Ishbosheth and Malchishua",
+        "C": "Jonathan, Ishbosheth and Malchishua",
+        "D": "Jonathan Abinadab and Ishbosheth",
+        "E": "Ishbosheth, Malchishua and Abinadab"
+      },
+      "year": 1990
     }
   ],
   "category": "secondary",

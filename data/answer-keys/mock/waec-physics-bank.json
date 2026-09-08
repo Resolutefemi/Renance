@@ -163,7 +163,8 @@
     },
     "waec-physics-bank-0041": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "P = \\(\\frac{N}{m^2}\\)<br>\r\n<br>\r\nV = m<br>\r\n<br>\r\nPV = Nm unit of work"
     },
     "waec-physics-bank-0042": {
       "type": "mcq",
@@ -183,7 +184,8 @@
     },
     "waec-physics-bank-0046": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The volume of the liquid does not affect the boiling point.</p>"
     },
     "waec-physics-bank-0047": {
       "type": "mcq",
@@ -251,7 +253,8 @@
     },
     "waec-physics-bank-0063": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The frequency of the light ray remains same when it travels from one medium to another because it depends on the source of light. But the wavelength and speed vary because they depend on the medium through which the light passes.</p>"
     },
     "waec-physics-bank-0064": {
       "type": "mcq",
@@ -283,7 +286,8 @@
     },
     "waec-physics-bank-0071": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>The energy stored in the dry Leclanche cell is the chemical energy. It converts the chemical energy to electrical energy.</p>"
     },
     "waec-physics-bank-0072": {
       "type": "mcq",
@@ -291,15 +295,18 @@
     },
     "waec-physics-bank-0073": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "\\(\\frac{E_p}{E_s} = \\frac{n_p}{n_s}\\)<br>\r\n<br>\r\nn<sub>s</sub> = 30"
     },
     "waec-physics-bank-0074": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>An&nbsp;induction coil&nbsp;is a device&nbsp;&nbsp;used&nbsp;to produce high emf from a low-voltage direct current (DC) supply.</p>"
     },
     "waec-physics-bank-0075": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The unit of stress is Pascal (Pa), which is equivalent to Newtons per square meter (N/m&sup2;).</p>"
     },
     "waec-physics-bank-0076": {
       "type": "mcq",
@@ -327,7 +334,8 @@
     },
     "waec-physics-bank-0082": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "K.E = \\(\\frac{1}{2}\\)mv<sup>2</sup> <br>\r\n<br>\r\nE - W = 6.86 - 4.65 <br>\r\n<br>\r\n<br>\r\n= 2.21ev"
     },
     "waec-physics-bank-0083": {
       "type": "mcq",
@@ -1615,7 +1623,8 @@
     },
     "waec-physics-bank-0404": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>E = \\(\\frac{\\text{M.A}}{\\text{V.R}}\\) ; \\(\\frac{50}{100}\\) = \\(\\frac{\\text{M.A}}{2}\\)<br />\r\nM.A = 1; \\(\\frac{\\text{L}}{\\text{E}}\\) = 1<br />\r\nE = L = 120N</p>"
     },
     "waec-physics-bank-0405": {
       "type": "mcq",
@@ -1819,7 +1828,8 @@
     },
     "waec-physics-bank-0455": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<div class=\"eq-c\">T = <div class=\"fraction\"><span class=\"fr_num\">t</span><span class=\"bar\">/</span><span class=\"fr_den\">no. of oscillation</span></div> =  <div class=\"fraction\"><span class=\"fr_num\">1 x 60</span><span class=\"bar\">/</span><span class=\"fr_den\">50</span></div> = 1.2s</div>"
     },
     "waec-physics-bank-0456": {
       "type": "mcq",
@@ -2043,7 +2053,8 @@
     },
     "waec-physics-bank-0511": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>Volume expansivity(&gamma;) = \\(\\frac{\\text{ change in volume}}{\\text{original volume&nbsp; x&nbsp; temp. change}}\\)</p>\r\n\r\n<p>\\(\\gamma = \\frac{\\Delta v}{V \\times \\Delta t}\\)</p>\r\n\r\n<p><strong>But&nbsp;</strong>&gamma;&nbsp;= 3&nbsp;&alpha;</p>\r\n\r\n<p><strong>&Delta;v&nbsp;</strong>&nbsp;= 3&nbsp;&nbsp;x&nbsp;&alpha; x&nbsp;<strong>&Delta; t</strong></p>"
     },
     "waec-physics-bank-0512": {
       "type": "mcq",
@@ -2659,7 +2670,8 @@
     },
     "waec-physics-bank-0665": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Constructive and destructive interference result from the interaction of waves that are correlated or coherent with each other, either because they come from the same source or because they have the same or nearly the same frequency.</p>"
     },
     "waec-physics-bank-0666": {
       "type": "mcq",
@@ -2667,7 +2679,8 @@
     },
     "waec-physics-bank-0667": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "1/U + 1/V = 1/f<br>\r\nf = r/2 = 10cm; 1/15 + 1/v = 1/10<br>\r\nv = 30 = m = v/u = 2"
     },
     "waec-physics-bank-0668": {
       "type": "mcq",
@@ -3267,11 +3280,13 @@
     },
     "waec-physics-bank-0817": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "R = V<sup>2</sup>/P = 240<sup>2</sup>/40 = 1440Ω"
     },
     "waec-physics-bank-0818": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>A bird remains safe on a single wire because it has only one point of contact, keeping it at a single electrical potential. However, if the bird touches another object with a different potential, it would complete a path to the ground, resulting in severe electric shock or electrocution.</p>"
     },
     "waec-physics-bank-0819": {
       "type": "mcq",
@@ -3447,11 +3462,13 @@
     },
     "waec-physics-bank-0862": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<div class=\"eq-c\">I = <div class=\"fraction\"><span class=\"fr_num\">E</span><span class=\"bar\">/</span><span class=\"fr_den\">R + r</span></div> =  <div class=\"fraction\"><span class=\"fr_num\">1.5</span><span class=\"bar\">/</span><span class=\"fr_den\">2.5 + 0.5 + 7</span></div> = 0.15</div>"
     },
     "waec-physics-bank-0863": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>This is a description of the d.c electric motor. The coil rotates due to the interaction between the magnetic field and the current flowing through the coil. The split ring and brushes act as a commutator, reversing the current direction in the coil every half rotation to maintain continuous rotation.&nbsp;</p>"
     },
     "waec-physics-bank-0864": {
       "type": "mcq",
@@ -3459,7 +3476,8 @@
     },
     "waec-physics-bank-0865": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>i) The back e.m.f. generated in the primary coil of an induction coil opposes the flow of current in the coil, causing a decrease in the current. This effect can be reduced by using a capacitor in the circuit, which stores the charge and releases it when the current drops. This maintains the flow of current and reduces the effect of the back e.m.f.&nbsp;ii) The make-and-break contact in the circuit also helps to reduce the effect of the back e.m.f. The contact repeatedly breaks the circuit, causing the current to stop flowing momentarily, which interrupts the magnetic field and reduces the back e.m.f.&nbsp;</p>"
     },
     "waec-physics-bank-0866": {
       "type": "mcq",
@@ -3651,7 +3669,8 @@
     },
     "waec-physics-bank-0913": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "1 → 1/2 → 1/4 → 1/8 → 1/16"
     },
     "waec-physics-bank-0914": {
       "type": "mcq",
@@ -3815,7 +3834,8 @@
     },
     "waec-physics-bank-0954": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "Work function = Total energy - kinetic Energy <br>\r\n= 6.88 - 1.50 = 5.38 ev"
     },
     "waec-physics-bank-0955": {
       "type": "mcq",
@@ -3823,7 +3843,8 @@
     },
     "waec-physics-bank-0956": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Glass is not a crystal because it lacks the long-range ordered atomic structure characteristics of crystalline materials. instead, it is an amorphous solid.</p>"
     },
     "waec-physics-bank-0957": {
       "type": "mcq",
@@ -4359,7 +4380,8 @@
     },
     "waec-physics-bank-1090": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>Under standard atmospheric pressure, pure water freezes at 0&ordm;C. Water is most dense at around 4&ordm;C. As it cools below this temperature, it begins to expand.</p>"
     },
     "waec-physics-bank-1091": {
       "type": "mcq",
@@ -4739,7 +4761,9 @@
     },
     "waec-physics-bank-1185": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "<p>the angle of deviation = 180 - the angle of incidence - the angle of reflection</p>\r\n\r\n<p>but angle of incidence = angle of reflection(snell&#39;s law)</p>\r\n\r\n<p>then angle of deviation = 180 - 2i&nbsp;</p>",
+      "answer_image": "/qimages/ccbf07531c8c6b1b98f5.jpg"
     },
     "waec-physics-bank-1186": {
       "type": "mcq",
@@ -4955,7 +4979,8 @@
     },
     "waec-physics-bank-1239": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "Distance between lens = f<sub>0</sub> + f<sub>e</sub> = 52.5cm"
     },
     "waec-physics-bank-1240": {
       "type": "mcq",
@@ -5143,7 +5168,8 @@
     },
     "waec-physics-bank-1286": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>&nbsp;Upon passage&nbsp;<strong>through</strong>&nbsp;the&nbsp;<strong>prism</strong>, the white&nbsp;<strong>light</strong>&nbsp;is separated into its component colors - red, orange, yellow, green, blue and violet.&nbsp;</p>"
     },
     "waec-physics-bank-1287": {
       "type": "mcq",
@@ -5343,7 +5369,8 @@
     },
     "waec-physics-bank-1336": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>loudness depends on the intensity of sound while intensity in turn depends on the amplitude of vibration, the frequency of the solution, and the distance away from the sounding body.</p>\r\n\r\n<p>&nbsp;</p>"
     },
     "waec-physics-bank-1337": {
       "type": "mcq",
@@ -5607,7 +5634,8 @@
     },
     "waec-physics-bank-1402": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "\\(\\frac{N}{3}\\) = 3years<br>\r\n<br>\r\n\\(\\frac{N}{4}\\) = 6years<br>\r\n<br>\r\n\\(\\frac{N}{8}\\) = 9years<br>\r\n<br>\r\nN - \\(\\frac{N}{8}\\) = \\(\\frac{7N}{8}\\)"
     },
     "waec-physics-bank-1403": {
       "type": "mcq",
@@ -5623,7 +5651,8 @@
     },
     "waec-physics-bank-1406": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "E =  Stress/Strain = F/A/e/L<br>\r\nE =  FL/AE; F = EAe/L"
     },
     "waec-physics-bank-1407": {
       "type": "mcq",
@@ -5659,7 +5688,8 @@
     },
     "waec-physics-bank-1415": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>S = ut + \\(\\frac{1}{2}\\) at\\(^2\\) = 0 + \\(\\frac{1}{2}\\) x 2 x 4\\(^2\\) = 16m</p>"
     },
     "waec-physics-bank-1416": {
       "type": "mcq",
@@ -5735,7 +5765,8 @@
     },
     "waec-physics-bank-1434": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p><strong>Bringing a negatively charged ebonite&nbsp;rod close to the cap</strong> (II):&nbsp;This causes the electrons in the electroscope to be repelled, leaving the top of the electroscope positively charged.<strong> Earthing the cap</strong> (III): This allows electrons from the ground to flow into the electroscope, neutralizing the positive charge.<br />\r\n<strong>Disconnecting the earthing</strong> (IV): This isolates the electroscope while it retains the induced charge.<br />\r\n<strong>Removing the ebonite&nbsp;rod</strong> (I): This stops the influence of the charged rod. Therefore,&nbsp;the correct sequence is: II &rarr; III &rarr; IV &rarr; I.</p>"
     },
     "waec-physics-bank-1435": {
       "type": "mcq",
@@ -5747,7 +5778,8 @@
     },
     "waec-physics-bank-1437": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "E = 200 x 30 x 24 Wh = 144000; Wh = 144KWh<br>\r\nCost 144 x 5k = N7.20"
     },
     "waec-physics-bank-1438": {
       "type": "mcq",
@@ -5779,7 +5811,8 @@
     },
     "waec-physics-bank-1445": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "F = eV = 0.01 x 5 x 1.5 = 0.075N"
     },
     "waec-physics-bank-1446": {
       "type": "mcq",
@@ -5843,7 +5876,8 @@
     },
     "waec-physics-bank-1461": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>Fraction remaining&nbsp; = (\\(\\frac{1}{2}\\))\\(^{\\frac{t}{T_{\\frac{1}{2}}}}\\)</p>\r\n\r\n<p>BUT \\(\\frac{t}{T_{\\frac{1}{2}}}\\) = \\(\\frac{80}{20}\\) = 4</p>\r\n\r\n<p>Fraction remaining = (\\(\\frac{1}{2})^4\\) = \\(\\frac{1}{16}\\)</p>"
     },
     "waec-physics-bank-1462": {
       "type": "mcq",
@@ -5943,11 +5977,13 @@
     },
     "waec-physics-bank-1486": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "<p>The heat absorbed by a substance is given by the formula: &nbsp;<br />\r\nQ = m &times; c &times; &Delta;T</p>\r\n\r\n<p>For objects P&nbsp;and Q.&nbsp;<br />\r\n- Same quantity of heat (Q) is supplied. &nbsp;<br />\r\n- Same mass (m). &nbsp;<br />\r\n- Temperature change in P is twice that in Q&nbsp;(&Delta;T\\(_P\\) = 2 &times; &Delta;T\\(_Q\\)). &nbsp;</p>\r\n\r\n<p>For P&nbsp;&nbsp;<br />\r\nQ = m &times; c\\(_P\\) &times; (2 &times; &Delta;T\\(_Q\\)) &nbsp;</p>\r\n\r\n<p>For Q: &nbsp;<br />\r\nQ = m &times; c\\(_Q\\) &times; &Delta;T\\(_Q\\)&nbsp;</p>\r\n\r\n<p>Since both equal **Q**, set them equal: &nbsp;<br />\r\nm &times; c\\(_P\\) &times; 2&Delta;T\\(_Q\\) = m &times; c\\(_Q\\) &times; &Delta;T\\(_Q\\)&nbsp;</p>\r\n\r\n<p>Cancel m&nbsp;and &Delta;T\\(_Q\\)&nbsp;from both sides: &nbsp;<br />\r\n2 c\\(_P\\) = c\\(_Q\\)&nbsp;&nbsp;</p>\r\n\r\n<p>Therefore: &nbsp;<br />\r\n\\(\\frac{c_Q }{&nbsp;c_P}\\) = 2<br />\r\nRatio c\\(_Q : c_P\\) = 2 : 1</p>"
     },
     "waec-physics-bank-1487": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>I, II, and IV are correct because they manifest the principle that light travels in a straight light while III is not correct because diffraction of light is the bending of light wave around an obstacle.</p>"
     },
     "waec-physics-bank-1488": {
       "type": "mcq",
@@ -6015,7 +6051,8 @@
     },
     "waec-physics-bank-1504": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>Set initial total energy to zero:<br />\r\n\\(\\frac{1}{2}mv^2 - \\frac{GMm}{R} = 0\\)<br />\r\n\\(\\frac{1}{2}mv^2 = \\frac{GMm}{R}\\)<br />\r\n\\(v^2 = \\frac{2GM}{R}\\)<br />\r\n\\(v = \\sqrt{\\frac{2GM}{R}}\\)</p>"
     },
     "waec-physics-bank-1505": {
       "type": "mcq",
@@ -6035,7 +6072,8 @@
     },
     "waec-physics-bank-1509": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>\\(E = \\frac{CV^{2}}{2}\\)</p>\r\n\r\n<p>\\(V^{2} = \\frac{2E}{C}\\)</p>\r\n\r\n<p>\\(V^{2} = \\frac{2\\times 40}{5 \\times 10^{-6}}\\)</p>\r\n\r\n<p>\\(V^{2} = 16 \\times 10^{6}\\)</p>\r\n\r\n<p>\\(V = 4 \\times 10^{3} = 4000v\\)</p>"
     },
     "waec-physics-bank-1510": {
       "type": "mcq",
@@ -6491,7 +6529,8 @@
     },
     "waec-physics-bank-1623": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p><img alt=\"\" src=\"/storage/classroom/editor_images/IMG_20200205_144538.jpg\" style=\"height:165px; width:200px\" /></p>\r\n\r\n<p>\\(\\frac{x - 0}{100 - 0} = \\frac{33.6 - 0}{90 - 0}\\)</p>\r\n\r\n<p>\\(\\frac{x}{100} = \\frac{33.6}{90}\\)</p>\r\n\r\n<p>\\(90x = 3360 \\implies x = \\frac{3360}{90}\\)</p>\r\n\r\n<p>= 37.3&deg;C</p>"
     },
     "waec-physics-bank-1624": {
       "type": "mcq",
@@ -6499,7 +6538,8 @@
     },
     "waec-physics-bank-1625": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "\\(MC_{p}\\ \\times 2\\theta^2\\ = mc\\theta\\ \\times \\theta\\) ; \\(\\frac{C_{p}}{CQ}\\) = \\(\\frac{m}{2mo}\\)"
     },
     "waec-physics-bank-1626": {
       "type": "mcq",
@@ -6587,7 +6627,8 @@
     },
     "waec-physics-bank-1647": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "100W X 10h = 1000Wh = 1KWh thus cost is 2k"
     },
     "waec-physics-bank-1648": {
       "type": "mcq",
@@ -6611,11 +6652,13 @@
     },
     "waec-physics-bank-1653": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "64g → 32g → 16g → 8g → 4g → 2g<br>\r\n <br>\r\nHalf life time= 24/5 = 4.8 days"
     },
     "waec-physics-bank-1654": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "238 - 92 = 146"
     },
     "waec-physics-bank-1655": {
       "type": "mcq",
@@ -6627,35 +6670,43 @@
     },
     "waec-physics-bank-1657": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "I =\\(\\frac{E}{R+r} = \\frac{1.5}{2.5+0.5+7}\\) = 0.15A"
     },
     "waec-physics-bank-1658": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "\\(v^2 = u^2+2as=0^2 + 2\\times 10\\times 45 \\Rightarrow<br>\r\nv^2 = 900m^2s^{-2} \\Rightarrow \\\\<br>\r\nv = \\sqrt{900m^2s^{-2}} \\Rightarrow<br>\r\nv = 30ms^{-1}\\)"
     },
     "waec-physics-bank-1659": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "\\(V^2= U^2+2as\\) =\\(0+ 2\\times 2ms^{-2}\\times 9 =36ms^{-1}\\) thus<br>\r\nV=\\(\\sqrt{36m^2s^{-2}}\\) = \\(6ms^{-1}\\)"
     },
     "waec-physics-bank-1660": {
       "type": "mcq",
-      "letter": "E"
+      "letter": "E",
+      "explanation": "\\(\\alpha = \\frac{I_2-I_1}{I_1(\\theta_2-\\theta_1)} \\\\ \\Rightarrow \\frac{40.05 - 40}{40 \\times (45-20)} = 5.0 \\times10^{-5}\\)"
     },
     "waec-physics-bank-1661": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "\\(\\frac{Q}{t} = \\frac{0.5\\times4200\\times(72-30)}{7}=12600J\\)"
     },
     "waec-physics-bank-1662": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "Pt=mI; I=\\(\\frac{1500\\times300}{0.3}=1.5\\times10^6Jkg^-1\\)"
     },
     "waec-physics-bank-1663": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "\\(P_1V_1=P_2V_2, V_2= \\frac{72\\times500}{76}cm^3\\)"
     },
     "waec-physics-bank-1664": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "\\(\\frac{P_1}{T_1}=\\frac{P_2}{T_2};P_2= \\frac{22.5\\times320K}{300K}=24Nm^{-2}\\)"
     },
     "waec-physics-bank-1665": {
       "type": "mcq",
@@ -6663,7 +6714,8 @@
     },
     "waec-physics-bank-1666": {
       "type": "mcq",
-      "letter": "B"
+      "letter": "B",
+      "explanation": "n =\\(\\frac{wavelength\\, in\\, air}{wavelength\\, in \\,medium}= \\frac{5.9\\times10^{-7}}{1.54}= 3.8\\times10^{-7}\\)m"
     },
     "waec-physics-bank-1667": {
       "type": "mcq",
@@ -6756,6 +6808,372 @@
     "waec-physics-bank-1689": {
       "type": "mcq",
       "letter": "D"
+    },
+    "waec-physics-bank-1690": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Kinetic energy at O = P.E at P 1/2mV = mgh<br>\r\nh = v<sup></sup>/2g = 0.2m"
+    },
+    "waec-physics-bank-1691": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1692": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "Reading = mg + ma = m(g + a) = 55(10 + 2)<br>\r\n= 660N = 66kg"
+    },
+    "waec-physics-bank-1693": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "couple moment = F x d = 4 x 0.4 = 1.6Nm"
+    },
+    "waec-physics-bank-1694": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "<p>resolving F into its components</p>\r\n\r\n<p>\\(F_x\\) = Fcosϴ</p>\r\n\r\n<p>\\(F_y\\) = Fsinϴ</p>\r\n\r\n<p>Work done = Force x Distance = Fcosϴ&nbsp;\\(\\times\\) x = Fxcosϴ</p>"
+    },
+    "waec-physics-bank-1695": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">V<sub>1</sub></span><span class=\"bar\">/</span><span class=\"fr_den\">T<sub>1</sub></span></div> =  <div class=\"fraction\"><span class=\"fr_num\">V<sub>2</sub></span><span class=\"bar\">/</span><span class=\"fr_den\">T<sub>2</sub></span></div></div><br>\r\n<div class=\"eq-c\"><div class=\"fraction\"><span class=\"fr_num\">1.0</span><span class=\"bar\">/</span><span class=\"fr_den\">(273 + 27)</span></div> =  <div class=\"fraction\"><span class=\"fr_num\">120</span><span class=\"bar\">/</span><span class=\"fr_den\">T<sub>2</sub></span></div></div><br>\r\nT<sub>2</sub> = 360K = 87"
+    },
+    "waec-physics-bank-1696": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Q = mcΔθ = 0.050 x 460 x (85 - 25) = 1.38x10<sup>3</sup>J"
+    },
+    "waec-physics-bank-1697": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<div class=\"eq-c\">Distance x = vt/2 = <div class=\"fraction\"><span class=\"fr_num\">1650 x 0.15</span><span class=\"bar\">/</span><span class=\"fr_den\">2</div> = 123.75m</div>"
+    },
+    "waec-physics-bank-1698": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "2<sup>1</sup>/<sub>2</sub>λ = 3m; λ = 1.2m v= 300<br>\r\nf = v/x = 300/1.2 = 250Hz"
+    },
+    "waec-physics-bank-1699": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>The image of an object after reflection from a mirror is located at the same distance behind the mirror as the object in front. In this case, the object is located between the mirror and the focal point. Therefore, the image will be located between p and F.</p>"
+    },
+    "waec-physics-bank-1700": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1701": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>angle of incidence&nbsp;= 90&ordm; - 50&ordm; = 40&ordm;</p>\r\n\r\n<p>the angle the refracted&nbsp;ray makes with the normal is 90&ordm;</p>\r\n\r\n<p>but refractive index(n) = \\(\\frac{i}{r} = \\frac{40}{90}\\).</p>"
+    },
+    "waec-physics-bank-1702": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-physics-bank-1703": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "Total Resistance R = 1/R = 1/R<sub>1</sub> + 1/R<sub>2</sub> + 1/R<sub>3</sub><br>\r\nR = 12/13Ω<br>\r\nV = IR = (12/13) x 13 = 12v<br>\r\n1 across 3Ω = V/R = 12/3 = 4A"
+    },
+    "waec-physics-bank-1704": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-physics-bank-1705": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "waec-physics-bank-1706": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "R/30 = 100/150R = 20Ω"
+    },
+    "waec-physics-bank-1707": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "F = qE; E = F/q = 40/(1.0 x 10<sup>-5</sup>) = 4.0 x 10<sup>6</sup>"
+    },
+    "waec-physics-bank-1708": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1709": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<div class=\"eq-c\">F = <div class=\"fraction\"><span class=\"fr_num\">m(v - u)</span><span class=\"bar\">/</span><span class=\"fr_den\">t</span></div>; (v - u) =  <div class=\"fraction\"><span class=\"fr_num\">Ft</span><span class=\"bar\">/</span><span class=\"fr_den\">m</span></div> = 8.0</div>"
+    },
+    "waec-physics-bank-1710": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "μ= F/mg = 20/40 = 0.5"
+    },
+    "waec-physics-bank-1711": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Gap ΔL = αL<sub>1</sub>Δθ = 1.0 x 10<sup>-5</sup> x 3 x (40 - 28)<br>\r\n= 3.6 x 10<sup>-2</sup>"
+    },
+    "waec-physics-bank-1712": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Using the genaral gas law: \\(\\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2}\\)</p>\r\n\r\n<p>T\\(_1\\) = 30&ordm; = 273 + 30 = 303k</p>\r\n\r\n<p>T\\(_2\\) = ?</p>\r\n\r\n<p>let V\\(_1\\) = V, V\\(_2\\) = \\(\\frac{2}{3}\\)V, P\\(_1\\) = P, P\\(_2\\) = 2P</p>\r\n\r\n<p>From,&nbsp; \\(\\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2}\\)</p>\r\n\r\n<p>T\\(_2\\) = \\(\\frac{P_2 V_2 T_1}{P_1 V_1}\\) = \\(\\frac{2P \\times&nbsp;\\frac{2}{3}V \\times 303}{P \\times V}\\) = 404k(the Ps and Vs cancel out)</p>\r\n\r\n<p>404k&nbsp;&rarr;&nbsp;&ordm;C = 404 - 273 = 131&ordm;C</p>"
+    },
+    "waec-physics-bank-1713": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Using Charles law:</p>\r\n\r\n<p>V1/T1 = V2/T2;</p>\r\n\r\n<p>(283 * 303) / 283&nbsp;</p>\r\n\r\n<p>V2= 303</p>"
+    },
+    "waec-physics-bank-1714": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Pressure at a depth for fluid with constant density such as mercury is given as&nbsp;</p>\r\n\r\n<p>\\(p = p_{0} + \\rho hg\\)</p>\r\n\r\n<p>where \\(p_{0}\\) = atmospheric pressure.</p>\r\n\r\n<p>\\(p_{0} = \\rho hg =13600 \\times \\frac{76}{100} \\times 10\\)</p>\r\n\r\n<p>= \\(103,360 Nm^{-2}\\)</p>\r\n\r\n<p>\\(p = 103,360 + (13600 \\times \\frac{10}{100} \\times 10)\\)</p>\r\n\r\n<p>\\(p = 103,360 + 13,600\\)</p>\r\n\r\n<p>\\(p = 116,960 Nm^{-2} \\approxeq 1.17 \\times 10^{5} Nm^{-2}\\)</p>\r\n\r\n<p>&nbsp;</p>"
+    },
+    "waec-physics-bank-1715": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1716": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Short sight can be corrected by placing a suitable CONCAVE(diverging) lens in front of the eye.</p>"
+    },
+    "waec-physics-bank-1717": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>The waveform moved from A to B in \\(2.5 \\times 10^{-3}\\) seconds.</p>\r\n\r\n<p>From the diagram, A to B has \\(2\\frac{1}{2}\\) complete oscillations between it, Therefore, the period of the oscillation is</p>\r\n\r\n<p>\\(\\frac{2.5 \\times 10^{-3}}{2.5} = 1 \\times 10^{-3} s\\)</p>\r\n\r\n<p>\\(Frequency = \\frac{1}{Period}\\)</p>\r\n\r\n<p>= \\(\\frac{1}{1 \\times 10^{-3}} = 1 \\times 10^{3} Hz\\)</p>"
+    },
+    "waec-physics-bank-1718": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "v = 2x/t ∴ distance x = vt/2 = 148.5m"
+    },
+    "waec-physics-bank-1719": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "L = λ/4; λ= 4 = 4m<br>\r\nv = fλ = 85 x 4 = 340ms<sup>-1</sup>"
+    },
+    "waec-physics-bank-1720": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>\\(R = \\frac{R_1 X R_2}{R_1&nbsp;+ R_2}\\)</p>\r\n\r\n<p>= 1</p>\r\n\r\n<p><br />\r\n\\(E = I^2R = 2^2 x 1 =4W\\)</p>"
+    },
+    "waec-physics-bank-1721": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<div class=\"eq-c\">R = PL/A => L = <div class=\"fraction\"><span class=\"fr_num\">RA</span><span class=\"bar\">/</span><span class=\"fr_den\">P</span></div> = <div class=\"fraction\"><span class=\"fr_num\">21 x 4π x 10<sup>8</sup></span><span class=\"bar\">/</span><span class=\"fr_den\">1.1 x 10<sup>-6</sup></span></div> = 2.40</div>"
+    },
+    "waec-physics-bank-1722": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "E = V<sup>2</sup>t/R<br>\r\n<div class=\"eq-c\">t =  <div class=\"fraction\"><span class=\"fr_num\">ER</span><span class=\"bar\">/</span><span class=\"fr_den\">V<sup>2</sup></span></div> = <div class=\"fraction\"><span class=\"fr_num\">4800 x 1.8 x 10<sup>3</sup></span><span class=\"bar\">/</span><span class=\"fr_den\">240 x 240</span></div> = 150s</div>"
+    },
+    "waec-physics-bank-1723": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "E = 1/2cv<sup>2</sup> = 1/2 x 10 x 10<sup>-6</sup> x 40<sup>2</sup> = 1.6 x 10<sup>-2</sup>J"
+    },
+    "waec-physics-bank-1724": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-physics-bank-1725": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-physics-bank-1726": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "S = ut + <sup>1</sup>/<sub>2</sub>at<sup>2</sup><br>\r\n25 = 0 + <sup>1</sup>/<sub>2</sub> x 0.5t<sup>2</sup><br>\r\nT = 10s"
+    },
+    "waec-physics-bank-1727": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "<p>T = \\(\\frac{2u sin &theta;}{g}\\)</p>\r\n\r\n<p><br />\r\nsin &theta; = \\(\\frac{Tg}{2u}\\)</p>\r\n\r\n<p>sin &theta; = \\(\\frac{10 \\times 10}{2 \\times 100}\\) =&nbsp;0.5<br />\r\n&theta; = sin\\(^{- 0.5}\\) = 30&ordm;</p>\r\n\r\n<p>\\(\\theta\\)\\(_{horizontal}\\) = 30&ordm;</p>\r\n\r\n<p>But \\(\\theta\\)\\(_{vertical}\\) = 90&ordm; - 30&ordm; = 60&ordm;</p>\r\n\r\n<p>&nbsp;</p>"
+    },
+    "waec-physics-bank-1728": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Δv = 3αvΔθ = 3 x 1.2 x 10<sup>-5</sup> x 1000<br>\r\nX(60 – 10) = 1.8cm"
+    },
+    "waec-physics-bank-1729": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>\\(\\frac{V_1}{T_1} =&nbsp; \\frac{V_2}{ T_2}\\)</p>\r\n\r\n<p>\\(T_1\\) = 0 + 273 = 273K, \\(T_2\\) = -100+273 = 173K</p>\r\n\r\n<p>\\(\\frac{546}{273} =&nbsp; \\frac{V_2}{ 173}\\)</p>\r\n\r\n<p><br />\r\n\\(V_2 = 346cm^3\\)</p>"
+    },
+    "waec-physics-bank-1730": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "x = vt/2 = \\(\\frac {330 \\times 2} {2}\\) = 660/2 = 330m"
+    },
+    "waec-physics-bank-1731": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "waec-physics-bank-1732": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>At resonance&nbsp;X&lt;sub&gt;L&lt;/sub&gt; = X&lt;sub&gt;C&lt;/sub&gt;</p>"
+    },
+    "waec-physics-bank-1733": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "P = VI ; I = P/V = 100/250 = 0.4A each<br>\r\nTotal current 3 x 0.4 = 1.2A"
+    },
+    "waec-physics-bank-1734": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-physics-bank-1735": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-physics-bank-1736": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-physics-bank-1737": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>To find the angular speed (\\( \\omega \\)) of an object moving in a circle, we use the formula:</p>\r\n\r\n<p>\\(\\omega = \\frac{v}{r}\\)</p>\r\n\r\n<p>Given:<br />\r\n- Linear speed (\\( v \\)) = 10 m/s<br />\r\n- Radius (\\( r \\)) = 4 m<br />\r\nSubstituting the values into the formula:</p>\r\n\r\n<p>\\(\\omega = \\frac{10 \\, \\text{m/s}}{4 \\, \\text{m}} = 2.5 \\, \\text{rad/s}\\)<br />\r\nThe angular speed is&nbsp; \\(\\omega = 2.50 \\, \\text{rad/s}\\)</p>"
+    },
+    "waec-physics-bank-1738": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-physics-bank-1739": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>Final Temperature = \\(\\frac{m_1 T_1 + m_2 T_2}{m_1 + m_2}\\)</p>\r\n\r\n<p>where m\\(_1\\) and m\\(_2\\) are the weights of the water in the first and second containers.</p>\r\n\r\n<p>T\\(_1\\) and T\\(_2\\) are the temperatures of the water in the first and second container.</p>\r\n\r\n<p>Given Final temperature = 50&deg;C;</p>\r\n\r\n<p>Let m\\(_1\\) = b, then m\\(_2\\) = 2b.</p>\r\n\r\n<p>T\\(_1\\) = t; T\\(_2\\) = 30&deg;C</p>\r\n\r\n<p>\\(\\therefore 50 = \\frac{b(t) + 2b(30)}{b + 2b}\\)</p>\r\n\r\n<p>\\(50 = \\frac{bt + 2b(30)}{3b}\\)</p>\r\n\r\n<p>\\(50(3b) = bt + 2b(30) \\implies 150b = b(t&nbsp;+ 60)\\)</p>\r\n\r\n<p>\\(150 = t + 60&nbsp;\\implies t&nbsp;= 150 - 60 = 90&deg;C\\)</p>"
+    },
+    "waec-physics-bank-1740": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>The formula of specific latent heat of fusion is given by:&nbsp;<strong>Q = mL</strong></p>\r\n\r\n<p><strong>: 20 X 336</strong></p>\r\n\r\n<p><strong>= 6720 or 6.72 X 10\\(^3\\)</strong></p>"
+    },
+    "waec-physics-bank-1741": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1742": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1743": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-physics-bank-1744": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>To calculate the electric potential \\( V \\) at a distance \\( r \\) from a point charge \\( Q \\):</p>\r\n\r\n<p>Given: \\( Q = 0.015 \\, \\text{C} \\),&nbsp;&nbsp;\\( r = 0.20 \\, \\text{m} \\)</p>\r\n\r\n<p>\\( \\frac{1}{4\\pi \\varepsilon_0} = 9.0 \\times 10^9 \\, \\text{N m}^2/\\text{C}^2 \\)</p>\r\n\r\n<p>The electric potential is given by:</p>\r\n\r\n<p>\\(V = \\frac{1}{4\\pi \\varepsilon_0} \\cdot \\frac{Q}{r} = 9.0 \\times 10^9 \\cdot \\frac{0.015}{0.20} = 6.75 \\times 10^8 \\, \\text{V}\\)</p>\r\n\r\n<p>Thus, the electric potential is: \\(6.75 \\times 10^8 \\, \\text{V}\\)</p>"
+    },
+    "waec-physics-bank-1745": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-physics-bank-1746": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "<p>V= i &times;&nbsp;\\(_l\\)<br />\r\n<br />\r\nX\\(_l\\) =&nbsp;inductive reactance&nbsp;&rarr; 50<br />\r\n<br />\r\nI = current &rarr; 0.05A<br />\r\nV = 0.05 &times; 50<br />\r\n<br />\r\nV = 2.5volt</p>"
+    },
+    "waec-physics-bank-1747": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "waec-physics-bank-1748": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>Voltage across 0.8 &Omega; = 2 V &nbsp;<br />\r\n&nbsp; &nbsp;&rarr; Current through 0.8 &Omega; (total current) = \\(\\frac{2}{0.8}\\) = 2.5 A</p>\r\n\r\n<p>The 3 &Omega; and 2 &Omega; are in parallel. &nbsp;<br />\r\n&nbsp; &nbsp;Current through 3 &Omega; resistor = total current x&nbsp;(\\(\\frac{2}{(3 + 2)}\\)) &nbsp;<br />\r\n&nbsp; &nbsp;= 2.5 x&nbsp;(\\(\\frac{2}{5}\\)) = 1.0 A</p>"
+    },
+    "waec-physics-bank-1749": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "Initial horizontal velocity = 20ms<sup>-1</sup><br>\r\n<br>\r\nInitial vertical velocity = 0<br>\r\n<br>\r\ns = ut + \\(\\frac{1}{2}gt^2\\) = 0 x 5 x 4<sup>2</sup><br>\r\n<br>\r\n= 80m"
+    },
+    "waec-physics-bank-1750": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "<p>slope = acceleration<br />\r\n<br />\r\na = \\(\\frac{v_2 - v_1}{t_2 - t_1} = \\frac{60- 15}{20 - 5}\\)<br />\r\n<br />\r\n= 3ms\\(^{-2}\\)</p>"
+    },
+    "waec-physics-bank-1751": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "s = ut + \\(\\frac{1}{2}gt^2\\)<br>\r\n<br>\r\n45 = 0 + 5t<sup>2</sup><br>\r\n<br>\r\nt = 3s"
+    },
+    "waec-physics-bank-1752": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "Eff = \\(\\frac{MA}{VR}\\) x 100%<br>\r\n<br>\r\n40 = \\(\\frac{MA}{60}\\)<br>\r\n<br>\r\nMA = 240<br>\r\n<br>\r\n\\(\\frac{L}{E} = \\frac{240}{100}\\)<br>\r\n<br>\r\nW = L = \\(\\frac{240}{100}\\) x 50<br>\r\n<br>\r\n= 120N"
+    },
+    "waec-physics-bank-1753": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "P<sub>1</sub> = p + 15, p<sub>2</sub> = p - 15<br>\r\n<br>\r\nv<sub>1</sub> = 30cm, v<sub>2</sub> = 45cm<br>\r\n<br>\r\nP<sub>1</sub>v<sub>1</sub> = p<sub>2</sub>v<sub>2</sub><br>\r\n<br>\r\np = 75cm of Hg"
+    },
+    "waec-physics-bank-1754": {
+      "type": "mcq",
+      "letter": "A",
+      "explanation": "heat supplied by hot water = heat gained by cold water M<sub>1</sub>C(82 - 40) = M<sub>2</sub>C(40 - 26)<br>\r\n<br>\r\n\\(\\frac{M_2}{M_1}\\)= \\(\\frac{14}{42}\\)<br>\r\n<br>\r\n= 1: 3"
+    },
+    "waec-physics-bank-1755": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "x = 100 cos50<sup>o</sup> = 50N"
+    },
+    "waec-physics-bank-1756": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1757": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-physics-bank-1758": {
+      "type": "mcq",
+      "letter": "E"
+    },
+    "waec-physics-bank-1759": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "n = \\(\\frac{\\text{real depth}}{\\text {apparent depth}}\\)<br>\r\n<br>\r\n\\(\\frac{10}{10^{-4}}\\) = 1.6"
+    },
+    "waec-physics-bank-1760": {
+      "type": "mcq",
+      "letter": "A"
+    },
+    "waec-physics-bank-1761": {
+      "type": "mcq",
+      "letter": "B",
+      "explanation": "V = \\(\\frac{2x}{t} = \\frac{2 \\times 300}{1.8}\\)<br>\r\n<br>\r\n<br>\r\n= 333.33ms<sup>-1</sup>"
+    },
+    "waec-physics-bank-1762": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "<p>x = 2\\(\\pi f L = 2\\pi \\times \\frac{500}{\\pi} \\times 0.9\\)<br />\r\n<br />\r\n= 900\\(\\Omega\\)</p>"
+    },
+    "waec-physics-bank-1763": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "E = \\(\\frac{1}{2} Cr^2 = \\frac{1}{2}(C-1 + C_2)V^2 = (3C_1)V^2\\)<br>\r\n<br>\r\n= 3(\\(\\frac{1}{2}C_1v^2\\)) = 3W"
+    },
+    "waec-physics-bank-1764": {
+      "type": "mcq",
+      "letter": "E",
+      "explanation": "R = \\(\\frac{V}{T} = \\frac{2v}{40 \\times 10^{-3}}\\)<br>\r\n<br>\r\n= 50.00\\(\\Omega\\)"
+    },
+    "waec-physics-bank-1765": {
+      "type": "mcq",
+      "letter": "D",
+      "explanation": "pt = ml 80 <br>\r\n<br>\r\n90 x 5 x 60 = 160 x L<br>\r\n<br>\r\nL = \\(\\frac{27000}{160}\\)<br>\r\n<br>\r\n= 168.75Jg<sup>-1</sup><br>\r\n<br>\r\n= 168.75"
+    },
+    "waec-physics-bank-1766": {
+      "type": "mcq",
+      "letter": "B"
+    },
+    "waec-physics-bank-1767": {
+      "type": "mcq",
+      "letter": "C",
+      "explanation": "\\(\\lambda = \\frac{0.693}{T_{\\frac{1}{2}}} = \\frac{0.693}{2}\\)<br>\r\n<br>\r\n= 0.347s<sup>-1</sup>"
     }
   }
 }

@@ -35,6 +35,11 @@ export interface BundleQuestion {
   /** Question family the player treats specially ("comprehension" =
    *  passage-based English questions); empty for ordinary questions. */
   group?: string;
+  /** Question diagram (origin-less /qimages/ path) the stem refers to. */
+  image?: string;
+  /** Shared comprehension text the question belongs to (per-question so
+   *  any member of the group can render it). */
+  passage?: string;
 }
 
 export interface BundleSection {

@@ -2,8 +2,8 @@
   "code": "jamb-commerce-bank",
   "title": "JAMB Commerce | Past Questions Bank",
   "version": 1,
-  "questionCount": 1701,
-  "totalMarks": 1701,
+  "questionCount": 1707,
+  "totalMarks": 1707,
   "questions": [
     {
       "id": "jamb-commerce-bank-0001",
@@ -7297,7 +7297,8 @@
         "D": "noise"
       },
       "marks": 1,
-      "year": 2006
+      "year": 2006,
+      "image": "/qimages/03f1a942eb21c7da7fb2.jpg"
     },
     {
       "id": "jamb-commerce-bank-0564",
@@ -8883,7 +8884,8 @@
         "D": "N12005"
       },
       "marks": 1,
-      "year": 2009
+      "year": 2009,
+      "image": "/qimages/e76ae30d141a39e5e022.jpg"
     },
     {
       "id": "jamb-commerce-bank-0686",
@@ -11977,7 +11979,8 @@
         "D": "Subrogation"
       },
       "marks": 1,
-      "year": 2013
+      "year": 2013,
+      "image": "/qimages/3924b77139b5a911a273.jpg"
     },
     {
       "id": "jamb-commerce-bank-0924",
@@ -11990,7 +11993,8 @@
         "D": "N 75, 000"
       },
       "marks": 1,
-      "year": 2013
+      "year": 2013,
+      "image": "/qimages/9096b4ee1147480e511d.jpg"
     },
     {
       "id": "jamb-commerce-bank-0925",
@@ -16926,7 +16930,8 @@
         "D": "advertising"
       },
       "marks": 1,
-      "year": 2020
+      "year": 2020,
+      "image": "/qimages/2eefdd7e3c4f259fe1ad.jpg"
     },
     {
       "id": "jamb-commerce-bank-1305",
@@ -22111,6 +22116,89 @@
       },
       "marks": 1,
       "year": 2025
+    },
+    {
+      "id": "jamb-commerce-bank-1708",
+      "type": "mcq",
+      "stem": "<p>X represents</p>",
+      "marks": 1,
+      "options": {
+        "A": "action",
+        "B": "transmission",
+        "C": "ideation",
+        "D": "receiver"
+      },
+      "year": 2006,
+      "image": "/qimages/a859271aedb2a0cf46b6.jpg"
+    },
+    {
+      "id": "jamb-commerce-bank-1709",
+      "type": "mcq",
+      "stem": "<p>What is the capital employed?</p>",
+      "marks": 1,
+      "options": {
+        "A": "N 200 000",
+        "B": "N 340 000",
+        "C": "N 170 000",
+        "D": "N 300 000"
+      },
+      "year": 2006,
+      "image": "/qimages/472f3e409cdece3388e3.jpg"
+    },
+    {
+      "id": "jamb-commerce-bank-1710",
+      "type": "mcq",
+      "stem": "<p>What is the net working capital?</p>",
+      "marks": 1,
+      "options": {
+        "A": "N 6 000 000",
+        "B": "N 16 000 000",
+        "C": "(N 11 000 000)",
+        "D": "N 25 000 000"
+      },
+      "year": 2007,
+      "image": "/qimages/8d1ec088218ef9f4c763.jpg"
+    },
+    {
+      "id": "jamb-commerce-bank-1711",
+      "type": "mcq",
+      "stem": "<p>Determine the owner&#39;s equity</p>",
+      "marks": 1,
+      "options": {
+        "A": "N 38 000 000",
+        "B": "N 20 000 000",
+        "C": "N 42 000 000",
+        "D": "N 25 000 000"
+      },
+      "year": 2007,
+      "image": "/qimages/ce577712745037daaa79.jpg"
+    },
+    {
+      "id": "jamb-commerce-bank-1712",
+      "type": "mcq",
+      "stem": "<p>What is Ojo&#39;s working capital?</p>",
+      "marks": 1,
+      "options": {
+        "A": "N 2150",
+        "B": "N 1950",
+        "C": "N1800",
+        "D": "N 1150"
+      },
+      "year": 2009,
+      "image": "/qimages/31db1a6325468c0c13aa.jpg"
+    },
+    {
+      "id": "jamb-commerce-bank-1713",
+      "type": "mcq",
+      "stem": "<p>Resources obtained from the extractive sector that are transformed into finished products are examples of</p>",
+      "marks": 1,
+      "options": {
+        "A": "primary production",
+        "B": "tertiary production",
+        "C": "direct production",
+        "D": "secondary production."
+      },
+      "year": 2011
     }
   ],
   "category": "secondary",

@@ -134,15 +134,27 @@ class BundleQuestion {
     this.options = const {},
     this.topic = '',
     this.difficulty = '',
+    this.year = 0,
+    this.group = '',
+    this.image = '',
+    this.passage = '',
   });
 
   final String id;
-  final String type; // mcq | text
+  final String type; // mcq | text | theory
   final String stem;
   final Map<String, String> options; // letter -> text
   final int marks;
   final String topic;
   final String difficulty;
+  /// Exam year the past question was drawn from (0 when unknown).
+  final int year;
+  /// Question family ("comprehension" = passage-based English).
+  final String group;
+  /// Question diagram, origin-less path under /qimages/ on the API.
+  final String image;
+  /// Shared comprehension text the question belongs to.
+  final String passage;
 
   factory BundleQuestion.fromJson(Map<String, dynamic> j) => BundleQuestion(
     id: (j['id'] ?? '') as String,
@@ -154,6 +166,10 @@ class BundleQuestion {
     ),
     topic: (j['topic'] ?? '') as String,
     difficulty: (j['difficulty'] ?? '') as String,
+    year: (j['year'] ?? 0) as int,
+    group: (j['group'] ?? '') as String,
+    image: (j['image'] ?? '') as String,
+    passage: (j['passage'] ?? '') as String,
   );
 }
 
@@ -241,6 +257,10 @@ class Bundle {
             if (q.options.isNotEmpty) 'options': q.options,
             if (q.topic.isNotEmpty) 'topic': q.topic,
             if (q.difficulty.isNotEmpty) 'difficulty': q.difficulty,
+            if (q.year > 0) 'year': q.year,
+            if (q.group.isNotEmpty) 'group': q.group,
+            if (q.image.isNotEmpty) 'image': q.image,
+            if (q.passage.isNotEmpty) 'passage': q.passage,
           },
         )
         .toList(),
@@ -416,6 +436,12 @@ class ReviewQuestion {
     required this.correct,
     required this.explanation,
     required this.correctly,
+    this.year = 0,
+    this.type = '',
+    this.image = '',
+    this.answerImage = '',
+    this.passage = '',
+    this.video = '',
   });
 
   final String questionId;
@@ -426,6 +452,16 @@ class ReviewQuestion {
   final String correct;
   final String explanation;
   final bool correctly;
+  final int year;
+  final String type; // mcq | theory
+  /// Question diagram, origin-less /qimages/ path.
+  final String image;
+  /// Worked-solution diagram unlocked with the key.
+  final String answerImage;
+  /// Shared comprehension text the question belongs to.
+  final String passage;
+  /// Optional walkthrough video link.
+  final String video;
 
   bool get isWrong => !correctly;
 
@@ -440,6 +476,12 @@ class ReviewQuestion {
     correct: (j['correct'] ?? '') as String,
     explanation: (j['explanation'] ?? '') as String,
     correctly: (j['correctly'] ?? false) as bool,
+    year: (j['year'] ?? 0) as int,
+    type: (j['type'] ?? '') as String,
+    image: (j['image'] ?? '') as String,
+    answerImage: (j['answerImage'] ?? '') as String,
+    passage: (j['passage'] ?? '') as String,
+    video: (j['video'] ?? '') as String,
   );
 }
 

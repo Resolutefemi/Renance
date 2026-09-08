@@ -16,6 +16,7 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import '../qtext.dart';
 import 'fatigue_nudge.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
 import 'renance_logo.dart';
@@ -469,7 +470,41 @@ class _Player extends StatelessWidget {
                       ),
                       const SizedBox(height: 12),
                     ],
-                    Text(
+                    if (question.passage.isNotEmpty) ...<Widget>[
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 12),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: context.cardLow.withValues(alpha: 0.5),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: context.outlineVariant.withValues(alpha: 0.3),
+                          ),
+                        ),
+                        constraints: const BoxConstraints(maxHeight: 220),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text('COMPREHENSION PASSAGE',
+                                  style: RenanceText.labelMono.copyWith(
+                                    fontSize: 10,
+                                    color: context.textSecondary,
+                                  )),
+                              const SizedBox(height: 6),
+                              QuestionText(
+                                question.passage,
+                                style: RenanceText.bodyBase.copyWith(
+                                  fontSize: 14,
+                                  height: 1.5,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                    QuestionText(
                       question.stem,
                       style: RenanceText.displayMd.copyWith(
                         fontSize: 20,
@@ -477,6 +512,19 @@ class _Player extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
+                    if (question.image.isNotEmpty) ...<Widget>[
+                      const SizedBox(height: 12),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Image.network(
+                          resolveQImageUrl(question.image),
+                          fit: BoxFit.contain,
+                          height: 220,
+                          errorBuilder: (_, Object __, StackTrace? ___) =>
+                              const SizedBox.shrink(),
+                        ),
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -673,7 +721,7 @@ class _OptionTile extends StatelessWidget {
             ),
             const SizedBox(width: 16),
             Expanded(
-              child: Text(
+              child: QuestionText(
                 text,
                 style: RenanceText.bodyBase.copyWith(
                   fontWeight: selected ? FontWeight.w600 : FontWeight.w400,

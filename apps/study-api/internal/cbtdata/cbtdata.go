@@ -45,6 +45,15 @@ type Question struct {
         // ("comprehension" = passage-based English questions); empty for
         // ordinary questions.
         Group string `json:"group,omitempty"`
+        // Image is the question's diagram/figure, served from the web
+        // app's /qimages/ directory (or an absolute URL). Diagram-based
+        // past questions (maths/physics/chemistry) carry it so the
+        // player renders the picture the stem refers to.
+        Image string `json:"image,omitempty"`
+        // Passage is the shared comprehension text the question belongs
+        // to. Carried per-question so any member of the group can render
+        // the passage it was cut from.
+        Passage string `json:"passage,omitempty"`
 }
 
 type Bundle struct {
