@@ -64,7 +64,13 @@ curl -fsS -X PUT "$BASE/me/profile" \
 
 step "GET /manifest → packs present"
 MAN=$(curl -fsS "$BASE/manifest" -H "Authorization: Bearer $TOKEN")
-PACK=$(printf '%s' "$MAN" | jsonget "d['exams'][0]['code']")
+# The probe paper must carry syllabus topics: the graded attempt seats the
+# SM-2 review rows the /syllabus overlay (LEARNING/WEAK assertions below)
+# reads, and topic-less questions seat under "General" — outside every
+# syllabus tree. Real banks ship topic-less by design, so lead with the
+# curated mock packs (every question topicful, validated in-tree at boot)
+# and fall back to the first body-carrying bank.
+PACK=$(printf '%s' "$MAN" | jsonget "([e['code'] for e in d['exams'] if e['code'].endswith('-mock')] + [e['code'] for e in d['exams'] if e.get('body')])[0]")
 
 step "GET /bundles/$PACK → questions present"
 BUN=$(curl -fsS "$BASE/bundles/$PACK" -H "Authorization: Bearer $TOKEN")
