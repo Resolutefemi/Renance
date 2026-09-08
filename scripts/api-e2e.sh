@@ -588,8 +588,8 @@ step "non-canonical mock code -> 404"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/bundles/jamb-mock-english-physics-mathematics-biology" -H "Authorization: Bearer $TOKEN")
 [ "$CODE" = "404" ]
 
-step "unknown-subject mock code -> 404"
-CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/bundles/jamb-mock-english-french-geography-physics" -H "Authorization: Bearer $TOKEN")
+step "unknown-subject mock code -> 404 (slug segments against shipped banks only)"
+CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/bundles/jamb-mock-english-latin-physics" -H "Authorization: Bearer $TOKEN")
 [ "$CODE" = "404" ]
 
 step "POST /attempts for the mock paper -> seated with the composed pack"
