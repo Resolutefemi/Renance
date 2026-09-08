@@ -2,8 +2,8 @@
   "code": "waec-biology-bank",
   "title": "WAEC Biology | Past Questions Bank",
   "version": 1,
-  "questionCount": 742,
-  "totalMarks": 742,
+  "questionCount": 720,
+  "totalMarks": 720,
   "body": "WAEC",
   "category": "secondary",
   "questions": [
@@ -349,21 +349,6 @@
       },
       "marks": 1,
       "topic": "Genetics",
-      "difficulty": "medium",
-      "year": 2017
-    },
-    {
-      "id": "waec-biology-bank-0024",
-      "type": "mcq",
-      "stem": "Assuming that A is the gene for normal skin colour and is dominant, while a is the gene for albinism and its recessive, what is the likely genotype of the couple which had 50% normal and 50% albino offspring?",
-      "options": {
-        "A": "AA, aa",
-        "B": "Aa, aa",
-        "C": "AA, Aa",
-        "D": "Aa, Aa"
-      },
-      "marks": 1,
-      "topic": "",
       "difficulty": "medium",
       "year": 2017
     },
@@ -3638,21 +3623,6 @@
       "year": 2003
     },
     {
-      "id": "waec-biology-bank-0243",
-      "type": "mcq",
-      "stem": "In an experiment, a red-flowered plant was crossed with another red-flowered plant and the following results were obtained: 448 red flowers and 154 white flowers in the F1 generation.Which of the following represents the genotypes of the parents if R is for red gene and r for white gene?",
-      "options": {
-        "A": "RR X Rr",
-        "B": "RR X rr",
-        "C": "rr x rr",
-        "D": "Rr x Rr"
-      },
-      "marks": 1,
-      "topic": "Genetics",
-      "difficulty": "hard",
-      "year": 2003
-    },
-    {
       "id": "waec-biology-bank-0244",
       "type": "mcq",
       "stem": "In Mendel's experiments, it was discovered that the skin of an African can be attributed to",
@@ -3830,21 +3800,6 @@
       "marks": 1,
       "topic": "Excretion",
       "difficulty": "easy",
-      "year": 2002
-    },
-    {
-      "id": "waec-biology-bank-0256",
-      "type": "mcq",
-      "stem": "Study the information below. Use it to answer question below",
-      "options": {
-        "A": "",
-        "B": "an experiment to study the rate of water loss in plants, leaves of a potted plant were treated as follows:",
-        "C": "Upper surface covered with Vaseline ll. Lower surface covered with Vaseline",
-        "D": "I. Both surfaces covered with Vaseline IV. None of the leaf surfaces covered"
-      },
-      "marks": 1,
-      "topic": "Transport",
-      "difficulty": "medium",
       "year": 2002
     },
     {
@@ -6068,36 +6023,6 @@
       "year": 1999
     },
     {
-      "id": "waec-biology-bank-0405",
-      "type": "mcq",
-      "stem": "Use the information on the stages involved in conjugation to answer the 2 questions below",
-      "options": {
-        "A": "",
-        "B": "Transfer of one cell content into the adjacent cell ll. Formation of a conjugation tube III. Secretion of thick",
-        "C": "ll to form a zygospore IV. Formation of a protuberance V. Germination of a filament Which of the following organisms exhibits 'the stages listed above during conjugation?",
-        "D": "Chlamydomonas"
-      },
-      "marks": 1,
-      "topic": "",
-      "difficulty": "easy",
-      "year": 1999
-    },
-    {
-      "id": "waec-biology-bank-0406",
-      "type": "mcq",
-      "stem": "Use the information on the stages involved in conjugation to answer the 2 questions below",
-      "options": {
-        "A": "",
-        "B": "Transfer of one cell content into the adjacent cell ll. Formation of a conjugation tube III. Secretion of thick",
-        "C": "ll to form a zygospore IV. Formation of a protuberance V. Germination of a filament Which of the following arrangements is the correct sequence of the process?",
-        "D": "II, I, IV, V and III"
-      },
-      "marks": 1,
-      "topic": "",
-      "difficulty": "easy",
-      "year": 1999
-    },
-    {
       "id": "waec-biology-bank-0407",
       "type": "mcq",
       "stem": "The teeth used for tearing and cutting are",
@@ -6391,36 +6316,6 @@
         "B": "water",
         "C": "chlorophyll",
         "D": "enzyme"
-      },
-      "marks": 1,
-      "topic": "Photosynthesis",
-      "difficulty": "easy",
-      "year": 1999
-    },
-    {
-      "id": "waec-biology-bank-0427",
-      "type": "mcq",
-      "stem": "Use the information below on factors required during photosynthesis to answer the two questions",
-      "options": {
-        "A": "",
-        "B": "CO2 II. Chlorophyll III. Water IV. ATP V NADPH2 Which of the above factors can be a limiting factor for the process to proceed?",
-        "C": "I and II only",
-        "D": "I and III only"
-      },
-      "marks": 1,
-      "topic": "",
-      "difficulty": "hard",
-      "year": 1999
-    },
-    {
-      "id": "waec-biology-bank-0428",
-      "type": "mcq",
-      "stem": "Use the information below on factors required during photosynthesis to answer the two questions",
-      "options": {
-        "A": "",
-        "B": "CO2 II. Chlorophyll III. Water IV. ATP V NADPH2 The factors required for the dark phase of photosynthesis are",
-        "C": "III and IV only",
-        "D": "III and V only"
       },
       "marks": 1,
       "topic": "Photosynthesis",
@@ -9833,21 +9728,6 @@
       "year": 1993
     },
     {
-      "id": "waec-biology-bank-0656",
-      "type": "mcq",
-      "stem": "The table below indicates the result of an experiment during which grains of different colours in two maize cobs were counted",
-      "options": {
-        "A": "",
-        "B": "ize cob White Pink Red",
-        "C": "30 60 30",
-        "D": "50 99 49"
-      },
-      "marks": 1,
-      "topic": "Microorganisms",
-      "difficulty": "medium",
-      "year": 1993
-    },
-    {
       "id": "waec-biology-bank-0657",
       "type": "mcq",
       "stem": "One of the factors that must be considered for safe blood transfusion is",
@@ -9908,51 +9788,6 @@
       "year": 1993
     },
     {
-      "id": "waec-biology-bank-0661",
-      "type": "mcq",
-      "stem": "The organ which is sensitive to light in Euglena is the",
-      "options": {
-        "A": "gullet",
-        "B": "chloroplast",
-        "C": "eye spot",
-        "D": "contractile vacuole"
-      },
-      "marks": 1,
-      "topic": "",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0662",
-      "type": "mcq",
-      "stem": "Which of the following is a similarity between a typical animal cell and a typical plant cell?presence of",
-      "options": {
-        "A": "cellulose cell wall",
-        "B": "chlorophyll",
-        "C": "centrally-placed nucleus",
-        "D": "cell membrane"
-      },
-      "marks": 1,
-      "topic": "Cell Biology",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0663",
-      "type": "mcq",
-      "stem": "The first scientist to describe the cell was",
-      "options": {
-        "A": "Theodor Schwann",
-        "B": "Felix Dujardin",
-        "C": "Robert Hooke",
-        "D": "Charles Darwin"
-      },
-      "marks": 1,
-      "topic": "Classification",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
       "id": "waec-biology-bank-0664",
       "type": "mcq",
       "stem": "In which of the following parts of a cell is the chromosome fund?",
@@ -9968,21 +9803,6 @@
       "year": 1992
     },
     {
-      "id": "waec-biology-bank-0665",
-      "type": "mcq",
-      "stem": "Which of the following diseases is caused by deficiency of insulin in the body?",
-      "options": {
-        "A": "Malaria",
-        "B": "Diabetes mellitus",
-        "C": "Hepatitis",
-        "D": "Gonorrhoea"
-      },
-      "marks": 1,
-      "topic": "Ecology",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
       "id": "waec-biology-bank-0666",
       "type": "mcq",
       "stem": "Which of the following is the medium of transportation of nutrients with unicellular organisms?",
@@ -9994,66 +9814,6 @@
       },
       "marks": 1,
       "topic": "Transport",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0667",
-      "type": "mcq",
-      "stem": "Which of the following blood vessels carries oxygenated blood into the heart?",
-      "options": {
-        "A": "Pulmonary vein",
-        "B": "Anterior vena cava",
-        "C": "Pulmonary artery",
-        "D": "Aorta"
-      },
-      "marks": 1,
-      "topic": "Transport",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0668",
-      "type": "mcq",
-      "stem": "The respiratory organ found in the cockroach is the",
-      "options": {
-        "A": "air sac",
-        "B": "trachea",
-        "C": "lung book",
-        "D": "lung"
-      },
-      "marks": 1,
-      "topic": "Respiration",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0669",
-      "type": "mcq",
-      "stem": "Which of the following organs is associated with deamination of proteins?",
-      "options": {
-        "A": "lung",
-        "B": "stomach",
-        "C": "kidney",
-        "D": "liver"
-      },
-      "marks": 1,
-      "topic": "",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0670",
-      "type": "mcq",
-      "stem": "Ultrafiltration in the kidney takes place in the",
-      "options": {
-        "A": "loop of Henle",
-        "B": "renal vein",
-        "C": "Bowman's capsule",
-        "D": "pelvis"
-      },
-      "marks": 1,
-      "topic": "Excretion",
       "difficulty": "easy",
       "year": 1992
     },
@@ -10114,36 +9874,6 @@
       },
       "marks": 1,
       "topic": "Reproduction",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0675",
-      "type": "mcq",
-      "stem": "Which of the following mineral salts is a trace element?",
-      "options": {
-        "A": "Zinc",
-        "B": "Carbon",
-        "C": "Hydrogen",
-        "D": "Potassium"
-      },
-      "marks": 1,
-      "topic": "Nutrition",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0676",
-      "type": "mcq",
-      "stem": "Which of the following organisms reduces nitrates in the soil to gaseous nitrogen?",
-      "options": {
-        "A": "Euglena",
-        "B": "Protozoan",
-        "C": "Denitrifying bacterium",
-        "D": "Parasitic mould"
-      },
-      "marks": 1,
-      "topic": "",
       "difficulty": "easy",
       "year": 1992
     },
@@ -10220,51 +9950,6 @@
       "marks": 1,
       "topic": "",
       "difficulty": "hard",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0682",
-      "type": "mcq",
-      "stem": "A climax community is characterised by",
-      "options": {
-        "A": "a stable composition of plant and animal species",
-        "B": "rapid changes in the composition of species",
-        "C": "constant changes in appearance of the habitat",
-        "D": "different species occurring at different times"
-      },
-      "marks": 1,
-      "topic": "Ecology",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0683",
-      "type": "mcq",
-      "stem": "Which of the following is not a characteristic of overcrowding in plant and animal community?",
-      "options": {
-        "A": "Population outstripping available space",
-        "B": "Population exceeding available food",
-        "C": "Competition within the population",
-        "D": "increase in primary production"
-      },
-      "marks": 1,
-      "topic": "Ecology",
-      "difficulty": "medium",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0684",
-      "type": "mcq",
-      "stem": "The use of predators or parasites to control pests in the farm is known as",
-      "options": {
-        "A": "predator control",
-        "B": "chemical control",
-        "C": "biological control",
-        "D": "animal control"
-      },
-      "marks": 1,
-      "topic": "Microorganisms",
-      "difficulty": "easy",
       "year": 1992
     },
     {
@@ -10351,21 +10036,6 @@
         "B": "single factor inheritance is never a reality",
         "C": "complete dominance is always possible",
         "D": "incomplete dominance is not possible"
-      },
-      "marks": 1,
-      "topic": "Genetics",
-      "difficulty": "easy",
-      "year": 1992
-    },
-    {
-      "id": "waec-biology-bank-0691",
-      "type": "mcq",
-      "stem": "Identical twins inherit their genes from...",
-      "options": {
-        "A": "the same ovum and different sperms",
-        "B": "the same sperm and different ova",
-        "C": "different sperms and many ova",
-        "D": "the same ovum and the same sperm"
       },
       "marks": 1,
       "topic": "Genetics",

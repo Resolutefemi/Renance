@@ -6,20 +6,19 @@
  *
  * Exam Format card (Standard UTME Mock with the 2 Hours / 4 Subjects
  * chips, Custom Practice secondary), the Subject Selection card with
- * Use of English locked on and exactly 3 electives to pick, live bank
- * sizes from the manifest, the official-timing notice and the sticky
- * Begin Mock Exam button. Begin talks to the exam backend: it seats an
- * attempt for the canonical composite paper code and deep-links
- * straight into the sitting — no intermediate selection page.
+ * Use of English locked on and exactly 3 electives to pick, the
+ * official-timing notice and the sticky Begin Mock Exam button. Begin
+ * talks to the exam backend: it seats an attempt for the canonical
+ * composite paper code and deep-links straight into the sitting — no
+ * intermediate selection page.
  */
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import { api } from '@/lib/api';
 import {
-  fetchManifest,
   mockPaperCode,
   UTME_ELECTIVES,
 } from '@/lib/exams';
@@ -67,26 +66,8 @@ export default function ExamSetupPage() {
   const [selected, setSelected] = useState<Set<string>>(
     new Set(['mathematics', 'physics', 'chemistry']),
   );
-  const [bankSizes, setBankSizes] = useState<Record<string, number>>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Live bank sizes keep the setup honest: the candidate sees how
-    // many real past questions stand behind each subject.
-    fetchManifest()
-      .then((m) => {
-        const sizes: Record<string, number> = {};
-        for (const exam of m.exams) {
-          if (exam.code.startsWith('jamb-') && exam.code.endsWith('-bank')) {
-            sizes[exam.code.replace('jamb-', '').replace('-bank', '')] =
-              exam.questionCount;
-          }
-        }
-        setBankSizes(sizes);
-      })
-      .catch(() => {}); // cosmetic only; the setup works without it
-  }, []);
 
   const full = selected.size === 3;
 
@@ -235,7 +216,6 @@ export default function ExamSetupPage() {
               {SUBJECTS.map((s) => {
                 const isSelected = s.mandatory || selected.has(s.id);
                 const dimmed = !isSelected && full;
-                const count = bankSizes[s.id];
                 return (
                   <button
                     key={s.id}
@@ -257,11 +237,7 @@ export default function ExamSetupPage() {
                       <div className="flex flex-col">
                         <span className="text-[15px] font-semibold text-on-surface">{s.name}</span>
                         <span className="text-[11px] text-text-secondary">
-                          {s.mandatory
-                            ? 'Mandatory'
-                            : count != null
-                              ? `${count} past questions`
-                              : 'Tap to select'}
+                          {s.mandatory ? 'Mandatory' : 'Tap to select'}
                         </span>
                       </div>
                     </div>

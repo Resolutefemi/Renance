@@ -95,6 +95,22 @@ export const UTME_ELECTIVES = [
   { slug: 'economics', name: 'Economics' },
   { slug: 'government', name: 'Government' },
   { slug: 'geography', name: 'Geography' },
+  { slug: 'literature', name: 'Literature in English' },
+  { slug: 'crs', name: 'Christian Religious Studies' },
+  { slug: 'irs', name: 'Islamic Religious Studies' },
+  { slug: 'agricultural-science', name: 'Agricultural Science' },
+  { slug: 'commerce', name: 'Commerce' },
+  { slug: 'accounting', name: 'Principles of Accounts' },
+  { slug: 'computer-studies', name: 'Computer Studies' },
+  { slug: 'civic-education', name: 'Civic Education' },
+  { slug: 'history', name: 'History' },
+  { slug: 'french', name: 'French' },
+  { slug: 'arabic', name: 'Arabic' },
+  { slug: 'hausa', name: 'Hausa' },
+  { slug: 'igbo', name: 'Igbo' },
+  { slug: 'yoruba', name: 'Yoruba' },
+  { slug: 'music', name: 'Music' },
+  { slug: 'fine-arts', name: 'Fine Arts' },
 ] as const;
 
 /**
