@@ -2,8 +2,8 @@
   "code": "jamb-chemistry-bank",
   "title": "JAMB Chemistry | Past Questions Bank",
   "version": 2,
-  "questionCount": 2762,
-  "totalMarks": 2762,
+  "questionCount": 2773,
+  "totalMarks": 2773,
   "questions": [
     {
       "id": "jamb-chemistry-bank-0002",
@@ -2460,7 +2460,8 @@
         "D": "2-chloro-3-bromobutanol"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/17275f3e7ee0ce4bb61a.jpg"
     },
     {
       "id": "jamb-chemistry-bank-0191",
@@ -23985,7 +23986,8 @@
         "D": "remove odour"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/624f7e7da044619ae43c.jpg"
     },
     {
       "id": "jamb-chemistry-bank-1824",
@@ -36305,6 +36307,149 @@
         "D": "increasing the temperature"
       },
       "year": 2013
+    },
+    {
+      "id": "jamb-chemistry-bank-2771",
+      "type": "mcq",
+      "stem": "The coloured nature of transition metal ions are associated with their partially filled",
+      "marks": 1,
+      "options": {
+        "A": "f- orbital",
+        "B": "s- orbital",
+        "C": "p-orbital",
+        "D": "d-orbital"
+      },
+      "year": 2013
+    },
+    {
+      "id": "jamb-chemistry-bank-2772",
+      "type": "mcq",
+      "stem": "An element X has electron configuration 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>5</sup>. Which of the following statements is correct about the element?",
+      "marks": 1,
+      "options": {
+        "A": "lt has a completely filled p-orbital",
+        "B": "lt has 5 electrons in its outermost shell.",
+        "C": "lt belongs to group ll on the periodic table",
+        "D": "lt is a halogen"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2773",
+      "type": "mcq",
+      "stem": "<p>Water is said to be temporarily hard when it contains</p>",
+      "marks": 1,
+      "options": {
+        "A": "Ca (HCO<sub>3</sub>)<sub>2</sub> and Mg (HCO<sub>3</sub>)<sub>2</sub> salts",
+        "B": "Ca (HCO<sub>3</sub>)<sub>2</sub> and CaCO<sub>3</sub> SALTS",
+        "C": "Mg(HCO<sub>3</sub>)<sub>2</sub> and CaSO<sub>4</sub> salts",
+        "D": "CaSO<sub>4</sub> and Ca(HCO<sub>3</sub>)<sub>2</sub> salts"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2774",
+      "type": "mcq",
+      "stem": "The basicity of CH<sub>3</sub>COOH is",
+      "marks": 1,
+      "options": {
+        "A": "4",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2775",
+      "type": "mcq",
+      "stem": "The mathematical expression of PH is",
+      "marks": 1,
+      "options": {
+        "A": "log <sub>10</sub>[OH<sup>-</sup>]",
+        "B": "log <sub>10</sub>1/[H <sub>3</sub> O<sup>+</sup>]",
+        "C": "log <sub>10</sub>[H <sub>3</sub> O<sup>+</sup>]",
+        "D": "log <sub>10</sub>1/[OH <sup>-</sup>]"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2776",
+      "type": "mcq",
+      "stem": "Zn <sub>(s)</sub> + CuSO <sub>4</sub>(aq) → ZnSO <sub>4</sub>(aq) + Cu <sub>(s)</sub><br>\r\nIn the reaction above, the oxidation number of the reducing agent changes from",
+      "marks": 1,
+      "options": {
+        "A": "0 to + 4",
+        "B": "0 to + 2",
+        "C": "+ 1 to + 2",
+        "D": "+ 1 to + 3"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2777",
+      "type": "mcq",
+      "stem": "<p>\\(H_2O_{(g)} + C_{(s)} &rarr; H_{2(g)} + CO_{(g)}\\)<br />\r\n<br />\r\nThe oxidizing agent in the reaction above is</p>",
+      "marks": 1,
+      "options": {
+        "A": "CO<sub>(g)</sub>",
+        "B": "C<sub>(s)</sub>",
+        "C": "H<sub>2</sub>O<sub>(g)</sub>",
+        "D": "H<sub>(2)</sub><sub>(g)</sub>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2778",
+      "type": "mcq",
+      "stem": "If the change in free energy of a system is -899 Jmol<sup>-1</sup> and the entropy change is 10Jmol<sup>-1</sup>k<sup>-1</sup> at 250C, calculate the enthalpy change.",
+      "marks": 1,
+      "options": {
+        "A": "+2081 Jmol<sup>-1</sup>",
+        "B": "-2081 Jmol<sup>-1</sup>",
+        "C": "-649 Jmol<sup>-1</sup>",
+        "D": "+649 Jmol<sup>-1</sup>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2779",
+      "type": "mcq",
+      "stem": "A few drops of NaOH solution was added to an unknown salt forming a white precipitate which is insoluble in excess solution. The cation likely present is",
+      "marks": 1,
+      "options": {
+        "A": "Zn<sup>2+</sup>",
+        "B": "Pb<sup>2+</sup>",
+        "C": "Ca<sup>2+</sup>",
+        "D": "Al<sup>3+</sup>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2780",
+      "type": "mcq",
+      "stem": "The general formula of haloalkanes where X represents the halide is",
+      "marks": 1,
+      "options": {
+        "A": "C<sub>n</sub> H <sub>2n-1</sub>X.",
+        "B": "C <sub>n</sub>H <sub>2n</sub>X.",
+        "C": "C <sub>n</sub>H <sub>2n+2</sub> X",
+        "D": "C <sub>n</sub>H <sub>2n+1</sub>X"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-chemistry-bank-2781",
+      "type": "mcq",
+      "stem": "A hydrocarbon has an empirical formula CH and a vapour density of 39. Determine its molecular formula.<br>\r\n<br>\r\n[C = 12, H = 1]",
+      "marks": 1,
+      "options": {
+        "A": "C<sub>2</sub>H<sub>6</sub>",
+        "B": "C<sub>3</sub>H<sub>8</sub>",
+        "C": "C<sub>3</sub>H<sub>4</sub>",
+        "D": "C<sub>6</sub>H<sub>6</sub>"
+      },
+      "year": 2014
     }
   ],
   "body": "JAMB",

@@ -2,8 +2,8 @@
   "code": "jamb-mathematics-bank",
   "title": "JAMB Mathematics | Past Questions Bank",
   "version": 2,
-  "questionCount": 2748,
-  "totalMarks": 2748,
+  "questionCount": 2762,
+  "totalMarks": 2762,
   "questions": [
     {
       "id": "jamb-mathematics-bank-0001",
@@ -25042,7 +25042,8 @@
         "D": "(P\\(\\cap\\)Q)\\(\\cup\\)(P\\(\\cup\\)R)"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/487eaa647ad44bdae5ed.jpg"
     },
     {
       "id": "jamb-mathematics-bank-1915",
@@ -25276,7 +25277,8 @@
         "D": "N12,000"
       },
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "image": "/qimages/ba43f7a47af1d84c7d0b.jpg"
     },
     {
       "id": "jamb-mathematics-bank-1933",
@@ -36080,6 +36082,192 @@
       },
       "year": 2012,
       "image": "/qimages/dd6dc0ecae29f5554457.jpg"
+    },
+    {
+      "id": "jamb-mathematics-bank-2772",
+      "type": "mcq",
+      "stem": "<p>Find the value of 1101112 + 101002</p>",
+      "marks": 1,
+      "options": {
+        "A": "1101011<sub>2</sub>",
+        "B": "1001001<sub>2</sub>",
+        "C": "1001011<sub>2</sub>",
+        "D": "1001111<sub>2</sub>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2773",
+      "type": "mcq",
+      "stem": "Express the product of 0.00043 and 2000 in standard form.",
+      "marks": 1,
+      "options": {
+        "A": "8.6 x 10<sup>-3</sup>",
+        "B": "8.3 x 10<sup>-2</sup>",
+        "C": "8.6 x 10<sup>-1</sup>",
+        "D": "8.6 x 10"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2774",
+      "type": "mcq",
+      "stem": "Solve for x in 8x<sup>-2</sup> = 2/25",
+      "marks": 1,
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2775",
+      "type": "mcq",
+      "stem": "Factorize 2y<sup>2</sup> - 15xy + 18x<sup>2</sup>",
+      "marks": 1,
+      "options": {
+        "A": "(2y - 3x) (y + 6x)",
+        "B": "(2y - 3x) (y - 6x)",
+        "C": "(2y + 3x) (y - 6x)",
+        "D": "(3y + 2x) (y - 6x)"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2776",
+      "type": "mcq",
+      "stem": "Find the value of <strong>k</strong> if <strong>y - 1</strong> is a factor of y<sup>3</sup> + 4y<sup>2</sup> + ky - 6",
+      "marks": 1,
+      "options": {
+        "A": "-6",
+        "B": "-4",
+        "C": "O",
+        "D": "1"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2777",
+      "type": "mcq",
+      "stem": "A binary operation * is defined by x * y = x<sup>y</sup>. If x * 2 = 12 - x, find the possible values of x",
+      "marks": 1,
+      "options": {
+        "A": "3,4",
+        "B": "3,-4",
+        "C": "-3,4",
+        "D": "-3,-4"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2778",
+      "type": "mcq",
+      "stem": "A cylindrical tank has a capacity of 6160m<sup>3</sup>. What is the depth of the tank if the radius of its base is 28cm?",
+      "marks": 1,
+      "options": {
+        "A": "8.0m",
+        "B": "7.5m",
+        "C": "5.0m",
+        "D": "2.5m"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2779",
+      "type": "mcq",
+      "stem": "If y = 4x<sup>3</sup> - 2x<sup>2</sup> + x, find \\(\\frac{\\delta y}{\\delta x}\\)",
+      "marks": 1,
+      "options": {
+        "A": "8x<sup>2</sup> - 2x + 1",
+        "B": "8x<sup>2</sup> - 4x + 1",
+        "C": "12x<sup>2</sup> - 2x + 1",
+        "D": "12x<sup>2</sup> - 4x + 1"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2780",
+      "type": "mcq",
+      "stem": "Find the minimum value of y = x<sup>2</sup> - 2x - 3",
+      "marks": 1,
+      "options": {
+        "A": "4",
+        "B": "1",
+        "C": "-1",
+        "D": "-4"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-mathematics-bank-2781",
+      "type": "mcq",
+      "stem": "The n<sup>th</sup> term of the progression \\(\\frac{4}{2}\\), \\(\\frac{7}{3}\\), \\(\\frac{10}{4}\\), \\(\\frac{13}{5}\\) is ...",
+      "marks": 1,
+      "options": {
+        "A": "\\(\\frac{1 - 3n}{n + 1}\\)",
+        "B": "\\(\\frac{3n + 1}{n + 1}\\)",
+        "C": "\\(\\frac{3n + 1}{n - 1}\\)",
+        "D": "\\(\\frac{3n - 1}{n + 1}\\)"
+      },
+      "year": 2013
+    },
+    {
+      "id": "jamb-mathematics-bank-2782",
+      "type": "mcq",
+      "stem": "In the diagram given, find the value of x.",
+      "marks": 1,
+      "options": {
+        "A": "30<sup>o</sup>",
+        "B": "40<sup>o</sup>",
+        "C": "45<sup>o</sup>",
+        "D": "15<sup>o</sup>"
+      },
+      "year": 2013,
+      "image": "/qimages/97c462894fd66ddf7771.jpg"
+    },
+    {
+      "id": "jamb-mathematics-bank-2783",
+      "type": "mcq",
+      "stem": "In the figure above, KL//NM, LN bisects < KNM. If angles KLN is 54<sup>o</sup> and angle MKN is 35<sup>o</sup>, calculate the size of angle KMN.",
+      "marks": 1,
+      "options": {
+        "A": "91<sup>o</sup>",
+        "B": "89<sup>o</sup>",
+        "C": "37<sup>o</sup>",
+        "D": "19<sup>o</sup>"
+      },
+      "year": 2014,
+      "image": "/qimages/5e810c9f58d95d3ea331.jpg"
+    },
+    {
+      "id": "jamb-mathematics-bank-2784",
+      "type": "mcq",
+      "stem": "From the  figure above, what is the value of p?",
+      "marks": 1,
+      "options": {
+        "A": "135<sup>o</sup>",
+        "B": "90<sup>o</sup>",
+        "C": "60<sup>o</sup>",
+        "D": "45<sup>o</sup>"
+      },
+      "year": 2014,
+      "image": "/qimages/e8a314c5d46378e1c52a.jpg"
+    },
+    {
+      "id": "jamb-mathematics-bank-2785",
+      "type": "mcq",
+      "stem": "Find the value of x in the figure above",
+      "marks": 1,
+      "options": {
+        "A": "20\\(\\sqrt{3}\\)cm",
+        "B": "10\\(\\sqrt{3}\\)cm",
+        "C": "5\\(\\sqrt{3}\\)cm",
+        "D": "4\\(\\sqrt{3}\\)cm"
+      },
+      "year": 2014,
+      "image": "/qimages/fad8a85e2565a23e114c.jpg"
     }
   ],
   "body": "JAMB",

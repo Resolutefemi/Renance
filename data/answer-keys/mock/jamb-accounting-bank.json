@@ -3506,7 +3506,8 @@
     },
     "jamb-accounting-bank-0857": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>35,000 - 15000 = 20000</p>\r\n\r\n<p>20000/ 5=&nbsp; 4000</p>"
     },
     "jamb-accounting-bank-0858": {
       "type": "mcq",
@@ -3562,7 +3563,8 @@
     },
     "jamb-accounting-bank-0869": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>closing capital - opening capital&nbsp; + drawings</p>\r\n\r\n<p>64,000 - 50,000 - 16,000 = 30,000</p>"
     },
     "jamb-accounting-bank-0870": {
       "type": "mcq",
@@ -3571,7 +3573,8 @@
     },
     "jamb-accounting-bank-0871": {
       "type": "mcq",
-      "letter": "A"
+      "letter": "A",
+      "explanation": "<p>Work in progress for the year is gotten by =&nbsp;<strong>WIP</strong>&nbsp;beginning balance + manufacturing costs - the cost of goods completed.</p>"
     },
     "jamb-accounting-bank-0872": {
       "type": "mcq",
@@ -3602,7 +3605,8 @@
     },
     "jamb-accounting-bank-0878": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The&nbsp;cost of goods manufactured equation&nbsp;is&nbsp;calculated&nbsp;by adding the total&nbsp;manufacturing&nbsp;costs; including all direct materials, direct labor, and factory overhead; to the beginning work in process inventory and subtracting the ending&nbsp;goods&nbsp;in process inventory.</p>"
     },
     "jamb-accounting-bank-0879": {
       "type": "mcq",
@@ -3708,7 +3712,8 @@
     },
     "jamb-accounting-bank-0901": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>The basic&nbsp;characteristic of an&nbsp;imprest system&nbsp;is that a fixed amount is reserved, which after a certain period of time or when circumstances require, because money was spent, it will be replenished.</p>"
     },
     "jamb-accounting-bank-0902": {
       "type": "mcq",
@@ -3737,7 +3742,8 @@
     },
     "jamb-accounting-bank-0909": {
       "type": "mcq",
-      "letter": "D"
+      "letter": "D",
+      "explanation": "<p>The three types of ledgers are general, sales, and purchase ledgers.</p>\r\n\r\n<p>The sales ledger records all sales transactions, whether cash or credit sales.&nbsp;While the&nbsp;purchase ledger records all purchases including those fully paid for and unpaid.</p>\r\n\r\n<p>The&nbsp;general ledger, on the other hand,&nbsp;&nbsp;is a&nbsp;document providing a complete record of all the financial transactions of your business.</p>"
     },
     "jamb-accounting-bank-0910": {
       "type": "mcq",
@@ -3801,7 +3807,8 @@
     },
     "jamb-accounting-bank-0925": {
       "type": "mcq",
-      "letter": "C"
+      "letter": "C",
+      "explanation": "<p>In absence of a&nbsp;partnership&nbsp;deed, a&nbsp;partnership Act&nbsp;cannot allow you to charge interest on capital, you cannot charge interest on drawing, you cannot give any salary to any partner, any rent to any partner, and any commission to any partner. also, you have to share profit in an equal ratio.</p>"
     },
     "jamb-accounting-bank-0926": {
       "type": "mcq",
@@ -6479,6 +6486,18 @@
       "type": "mcq",
       "letter": "B",
       "explanation": "<p>You will debit application and allotment account and credit cash because monies that have been collected from the public wil have to be returned&nbsp;</p>"
+    },
+    "jamb-accounting-bank-1595": {
+      "type": "mcq",
+      "letter": "D"
+    },
+    "jamb-accounting-bank-1596": {
+      "type": "mcq",
+      "letter": "C"
+    },
+    "jamb-accounting-bank-1597": {
+      "type": "mcq",
+      "letter": "C"
     }
   }
 }

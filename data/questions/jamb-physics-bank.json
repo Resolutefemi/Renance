@@ -2,8 +2,8 @@
   "code": "jamb-physics-bank",
   "title": "JAMB Physics | Past Questions Bank",
   "version": 2,
-  "questionCount": 2804,
-  "totalMarks": 2804,
+  "questionCount": 2813,
+  "totalMarks": 2813,
   "questions": [
     {
       "id": "jamb-physics-bank-0061",
@@ -36832,6 +36832,123 @@
         "D": "240m<sup>-1</sup>"
       },
       "year": 2013
+    },
+    {
+      "id": "jamb-physics-bank-2825",
+      "type": "mcq",
+      "stem": "A car accelerates uniformly from rest at 3ms<sup>-2</sup>. its velocity after traveling a distance of 24m is",
+      "marks": 1,
+      "options": {
+        "A": "12ms<sup>-1</sup>",
+        "B": "144ms<sup>-1</sup>",
+        "C": "72ms<sup>-1</sup>",
+        "D": "36ms<sup>-1</sup>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2826",
+      "type": "mcq",
+      "stem": "Calculate the escape velocity of a satellite launched from the earth's surface if the radius of the earth is 6.4x10<sup>6</sup>m",
+      "marks": 1,
+      "options": {
+        "A": "25.3kms<sup>-1</sup>",
+        "B": "4.2kms<sup>-1</sup>",
+        "C": "4.0kms<sup>-1</sup>",
+        "D": "11.3kms<sup>-1</sup>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2827",
+      "type": "mcq",
+      "stem": "A wheel and an axle is used to raise a load whose weight is 800N when an effort of 250N is applied. If the radii of the wheel and axle are 800mm and 200mm respectively, the efficiency of the machine is",
+      "marks": 1,
+      "options": {
+        "A": "90%",
+        "B": "80%",
+        "C": "85%",
+        "D": "87%"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2828",
+      "type": "mcq",
+      "stem": "A force of 500N<sup>1</sup> is applied to a steel wire of cross-sectional area 0.2m<sup>2</sup>, The tensile stress is",
+      "marks": 1,
+      "options": {
+        "A": "2.5x10<sup>4</sup>Nm<sup>-2</sup>",
+        "B": "1.0x10<sup>2</sup>Nm<sup>-2</sup>",
+        "C": "1.0x10<sup>3</sup>Nm<sup>-2</sup>",
+        "D": "2.5x10<sup>3</sup>Nm<sup>-2</sup>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2829",
+      "type": "mcq",
+      "stem": "<p>What is the equivalent of 20K in Celsius scale?</p>",
+      "marks": 1,
+      "options": {
+        "A": "-253<sup>o</sup>C",
+        "B": "-293<sup>o</sup>C",
+        "C": "68<sup>o</sup>C",
+        "D": "36<sup>o</sup>C"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2830",
+      "type": "mcq",
+      "stem": "The distance between two successive crests of a wave is 15cm and the velocity 300ms<sup>-1</sup>. Calculate the frequency.",
+      "marks": 1,
+      "options": {
+        "A": "2.0x10<sup>2</sup>Hz",
+        "B": "4.5x10<sup>3</sup>Hz",
+        "C": "2.0x10<sup>3</sup>Hz",
+        "D": "4.5x10<sup>2</sup>Hz"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2831",
+      "type": "mcq",
+      "stem": "An object is placed 10m from a pinhole camera of length 25cm. Calculate the linear magnification.",
+      "marks": 1,
+      "options": {
+        "A": "2.5x10<sup>2</sup>",
+        "B": "2.5x10<sup>-2</sup>",
+        "C": "2.5x10<sup>-1</sup>",
+        "D": "2.5x10<sup>1</sup>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2832",
+      "type": "mcq",
+      "stem": "The magnitude of the angle of dip at the equator is",
+      "marks": 1,
+      "options": {
+        "A": "360<sup>o</sup>",
+        "B": "0<sup>o</sup>",
+        "C": "90<sup>o</sup>",
+        "D": "180<sup>o</sup>"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-physics-bank-2833",
+      "type": "mcq",
+      "stem": "<p>A glass bottle of initial volume 2 x 10\\(^4\\) cm\\(^3\\) is heated from 20&ordm;C to 50&ordm;C. If the linear expansivity of glass is 9 x 10\\(^{-6}\\)K\\(^{-1}\\), the volume of the bottle at 50&ordm;C is</p>",
+      "marks": 1,
+      "options": {
+        "A": "20016.2cm<sup>3</sup>",
+        "B": "20005.4cm<sup>3</sup>",
+        "C": "20008.1cm<sup>3</sup>",
+        "D": "20013.5cm<sup>3</sup>"
+      },
+      "year": 2014
     }
   ],
   "body": "JAMB",

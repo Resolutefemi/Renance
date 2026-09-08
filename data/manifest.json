@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-08T09:44:19+00:00",
+  "generatedAt": "2026-09-08T10:02:17+00:00",
   "version": "myschool-merge-1",
   "exams": [
     {
       "code": "jamb-accounting-bank",
       "title": "JAMB Principles of Accounts | Past Questions Bank",
-      "questionCount": 1588,
-      "totalMarks": 1588,
+      "questionCount": 1591,
+      "totalMarks": 1591,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -41,8 +41,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "95b1ab7868d92a3c4bbdddb3e72109636f86b0cd0a5d30331ec497724d117e27",
-      "sizeBytes": 709845
+      "bundleSha256": "5a05e7edab23694abde3627fcdcd45ec4242e08ffde0072a283398c6c96bc339",
+      "sizeBytes": 710992
     },
     {
       "code": "jamb-agricultural-science-bank",
@@ -134,8 +134,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "2c30e291088d3b7b5d37d9c0415d2c648192fbf5a825d5a573bae7d814b958f3",
-      "sizeBytes": 964245
+      "bundleSha256": "b1dd36ec09c6eb8feaf2a277a7b17eed291c0bbbea69c3337ead396548def5c3",
+      "sizeBytes": 964505
     },
     {
       "code": "jamb-biology-mock",
@@ -164,8 +164,8 @@
     {
       "code": "jamb-chemistry-bank",
       "title": "JAMB Chemistry | Past Questions Bank",
-      "questionCount": 2762,
-      "totalMarks": 2762,
+      "questionCount": 2773,
+      "totalMarks": 2773,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -217,8 +217,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "72793ce0fa0c54c6fbce5eeaa129d3e2b988f0abf5096cab541f7bdf20f98f8e",
-      "sizeBytes": 1096929
+      "bundleSha256": "e913af1b218c9ce83628adbc82518c06eafa9a9018ef2142a2676462eee25046",
+      "sizeBytes": 1101813
     },
     {
       "code": "jamb-civic-education-bank",
@@ -349,8 +349,8 @@
     {
       "code": "jamb-economics-bank",
       "title": "JAMB Economics | Past Questions Bank",
-      "questionCount": 2699,
-      "totalMarks": 2699,
+      "questionCount": 2700,
+      "totalMarks": 2700,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -402,14 +402,14 @@
         2024,
         2025
       ],
-      "bundleSha256": "49c47d75a41079c8d01f0280d1ac2bcd6414e877d7a2b38803ea07b8a04b4c79",
-      "sizeBytes": 1118376
+      "bundleSha256": "5f52ee4a95a04bf046e1fbe6afc99b817bca628ae850331fbd027ef2b1a1c5f9",
+      "sizeBytes": 1118999
     },
     {
       "code": "jamb-english-bank",
       "title": "JAMB Use of English | Past Questions Bank",
-      "questionCount": 5316,
-      "totalMarks": 5316,
+      "questionCount": 5329,
+      "totalMarks": 5329,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -462,8 +462,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "73a7f956e0bdcaed4018f8b1edf1dff1502ce71a3cf319e8a9b0f69f5e71cd36",
-      "sizeBytes": 2752992
+      "bundleSha256": "432ff59068a2cf7b565e629a5c986d098b522d93fad9d0f8b407edb9018e6849",
+      "sizeBytes": 2778105
     },
     {
       "code": "jamb-english-mock",
@@ -511,8 +511,8 @@
     {
       "code": "jamb-geography-bank",
       "title": "JAMB Geography | Past Questions Bank",
-      "questionCount": 2383,
-      "totalMarks": 2383,
+      "questionCount": 2385,
+      "totalMarks": 2385,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -563,8 +563,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "53214271e20f810919c27771c8d7bbf83105c192b178774fe2dcdbe08a46a515",
-      "sizeBytes": 911933
+      "bundleSha256": "7bd4a15c60dfcf17df0d0538d4cf21dc0206e2b97de97320b9806b1f7673c182",
+      "sizeBytes": 912815
     },
     {
       "code": "jamb-government-bank",
@@ -712,8 +712,8 @@
     {
       "code": "jamb-irs-bank",
       "title": "JAMB Islamic Religious Studies | Past Questions Bank",
-      "questionCount": 492,
-      "totalMarks": 492,
+      "questionCount": 526,
+      "totalMarks": 526,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -729,10 +729,11 @@
         2010,
         2011,
         2012,
-        2013
+        2013,
+        2014
       ],
-      "bundleSha256": "2f311b434875fe2e615a4b0f56c0a742d6e9edd760220ba984480e59fc3a1867",
-      "sizeBytes": 192242
+      "bundleSha256": "c52895f77f18f6b00cb82839332fcb374c2b33b405a99a63e177edc9fd4b7d7b",
+      "sizeBytes": 204685
     },
     {
       "code": "jamb-literature-bank",
@@ -795,8 +796,8 @@
     {
       "code": "jamb-mathematics-bank",
       "title": "JAMB Mathematics | Past Questions Bank",
-      "questionCount": 2748,
-      "totalMarks": 2748,
+      "questionCount": 2762,
+      "totalMarks": 2762,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -848,8 +849,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "00f4c55e73e61e26ceb3e61af54291d01ddcac913cf60ac7efed99242289a4c7",
-      "sizeBytes": 1014009
+      "bundleSha256": "ab2f3ddd8ab8654f49dc973575c38278dfb749c7ff83e6a0563a0b7788ee40cc",
+      "sizeBytes": 1019262
     },
     {
       "code": "jamb-mathematics-mock",
@@ -895,8 +896,8 @@
     {
       "code": "jamb-physics-bank",
       "title": "JAMB Physics | Past Questions Bank",
-      "questionCount": 2804,
-      "totalMarks": 2804,
+      "questionCount": 2813,
+      "totalMarks": 2813,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -948,8 +949,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "488bba5361ae0aff724e2a9a4fc751aeebed13ca896853206141c1d213032fec",
-      "sizeBytes": 1155829
+      "bundleSha256": "dc92dd4363fedcda10277fcbc9724c89b4b53f9391bcc9706a27693e60a8160f",
+      "sizeBytes": 1159570
     },
     {
       "code": "jamb-physics-mock",

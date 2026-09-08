@@ -2,8 +2,8 @@
   "code": "jamb-irs-bank",
   "title": "JAMB Islamic Religious Studies | Past Questions Bank",
   "version": 1,
-  "questionCount": 492,
-  "totalMarks": 492,
+  "questionCount": 526,
+  "totalMarks": 526,
   "questions": [
     {
       "id": "jamb-irs-bank-0001",
@@ -1446,7 +1446,8 @@
         "D": "uphold the principle of justice"
       },
       "marks": 1,
-      "year": 1993
+      "year": 1993,
+      "image": "/qimages/48c92801cb7e2e834bf1.png"
     },
     {
       "id": "jamb-irs-bank-0112",
@@ -6410,6 +6411,450 @@
         "D": "Biographies"
       },
       "year": 2013
+    },
+    {
+      "id": "jamb-irs-bank-0493",
+      "type": "mcq",
+      "stem": "<p>Prophet Muhammad(SAW) lost his mother at the age of _____</p>",
+      "marks": 1,
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "5"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0494",
+      "type": "mcq",
+      "stem": "<p>The seal of all the prophets was prophet___</p>",
+      "marks": 1,
+      "options": {
+        "A": "Ayyub (a.s.w.)",
+        "B": "Muhammed (S.A.W.)",
+        "C": "Yahya (a.s.w.)",
+        "E": "Ibrahim"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0495",
+      "type": "mcq",
+      "stem": "<p>The Prophet was survived by only one child. This was___</p>",
+      "marks": 1,
+      "options": {
+        "A": "Ruqayah",
+        "B": "Ibrahim",
+        "C": "Fatimoh",
+        "D": "Zainab"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0496",
+      "type": "mcq",
+      "stem": "<p>The Khalifah who ordered the compilation of the Qu&#39;ran in a book form was ___</p>",
+      "marks": 1,
+      "options": {
+        "A": "Umar b. al Kattab",
+        "B": "Ali b. Talid",
+        "C": "Abu Bakr b. Abu Quhafah",
+        "D": "Uthman b. Affan"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0497",
+      "type": "mcq",
+      "stem": "<p>To ensure the authenticity of the compiled text of the Holy Qur&#39;ān, extracts written on various materials were cross-checked with texts</p>",
+      "marks": 1,
+      "options": {
+        "A": "Written by Zayd bin Thābit",
+        "B": "recalled from memory by early memorizers",
+        "C": "delivered by angel Jirīl to the Prophet (S.A.W)",
+        "D": "written by the Prophet (S.A.W) himself"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0498",
+      "type": "mcq",
+      "stem": "<p>The expressions&nbsp;above Iqra&#39;&#39;, &prime;allama and al - qalam in Sūrat al&minus; &prime;Alaq emphasize the importance of</p>",
+      "marks": 1,
+      "options": {
+        "A": "Generosity.",
+        "B": "Knowledge",
+        "C": "Humility",
+        "D": "Worship"
+      },
+      "year": 2014,
+      "image": "/qimages/a9cffa6ffd61c8c43336.png"
+    },
+    {
+      "id": "jamb-irs-bank-0499",
+      "type": "mcq",
+      "stem": "<p>Which of the following terms portrays the Qur&#39;ān as a healing for man&#39;s spiritual and moral waywardness?</p>",
+      "marks": 1,
+      "options": {
+        "A": "ash - Shifā'",
+        "B": "al - Maw'izah",
+        "C": "ar - Rahmah3",
+        "D": "al - Burhān"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0500",
+      "type": "mcq",
+      "stem": "<p>The first man created by Allah was called _____ (ASW)</p>",
+      "marks": 1,
+      "options": {
+        "A": "Dawud",
+        "B": "Musa",
+        "C": "Isa",
+        "D": "Adam"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0501",
+      "type": "mcq",
+      "stem": "<p>Belief in oneness of Allah is the cornerstone of Islamic _____</p>",
+      "marks": 1,
+      "options": {
+        "A": "Monotheism",
+        "B": "Brotherhood",
+        "C": "Politics",
+        "D": "Socialism"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0502",
+      "type": "mcq",
+      "stem": "<p>The divine attribute of omnipotence is implied in</p>",
+      "marks": 1,
+      "options": {
+        "A": "al-Basīr",
+        "B": "al-Qadīr",
+        "C": "as-Samī",
+        "D": "al-'Alīm."
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0503",
+      "type": "mcq",
+      "stem": "<p>The religion of the Arabs before the advent of Islam was _____</p>",
+      "marks": 1,
+      "options": {
+        "A": "Idol worshipping",
+        "B": "Christianity",
+        "C": "Judaism",
+        "D": "Judaism"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0504",
+      "type": "mcq",
+      "stem": "<p>The importance of the Hadith lies in the fact that it _____</p>",
+      "marks": 1,
+      "options": {
+        "A": "Supplements the Qu'ran and serves as a second source of Islamic law",
+        "B": "Was recorded and collected in some attentic",
+        "C": "Was officially collected by Muslim Caliphs",
+        "D": "Provides reliable information on thr biography of the Prophet (SAW)"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0505",
+      "type": "mcq",
+      "stem": "<p>One of the following is not part of the names of the Qu&#39;ran.</p>",
+      "marks": 1,
+      "options": {
+        "A": "Al-Bayyinah",
+        "B": "An-Nur",
+        "C": "Al-Huda",
+        "D": "Ar-Rahman"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0506",
+      "type": "mcq",
+      "stem": "<p>&#39;It is most hateful in the sight of Allah that you say that which you do not&#39; (Q. 61:3). The main teaching of the verse above is honesty in</p>",
+      "marks": 1,
+      "options": {
+        "A": "Deeds",
+        "B": "Words",
+        "C": "Words and deeds",
+        "D": "Deeds and worship"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0507",
+      "type": "mcq",
+      "stem": "<p>Al-Mutamatti means one___</p>",
+      "marks": 1,
+      "options": {
+        "A": "who performed 'Umarah and waited for Hajj and performed Hajj",
+        "B": "who visited most important places in Makka and Madinah",
+        "C": "who enjoyed life in Makka and Madina",
+        "D": "none of the above"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0508",
+      "type": "mcq",
+      "stem": "<p>The migration of the Prophet Muhammad (SAW) from Mecca to Madinah was called?</p>",
+      "marks": 1,
+      "options": {
+        "A": "Safar",
+        "B": "Hirah",
+        "C": "Gar6",
+        "D": "Hijrah"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0509",
+      "type": "mcq",
+      "stem": "<p>In the Islamic belief system, the opposite of Tawhīd is</p>",
+      "marks": 1,
+      "options": {
+        "A": "Shukr",
+        "B": "Qadā",
+        "C": "Shirk",
+        "D": "Qadar"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0510",
+      "type": "mcq",
+      "stem": "<p>In the hadīth that ends with &#39;...piety is based right here ...&#39;, the Prophet (S.A.W.) meant the</p>",
+      "marks": 1,
+      "options": {
+        "A": "Heart",
+        "B": "city of al-Madīnah",
+        "C": "hand",
+        "D": "city of Makkah"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0511",
+      "type": "mcq",
+      "stem": "<p>The purification performed in the absence of water</p>",
+      "marks": 1,
+      "options": {
+        "A": "Janabah",
+        "B": "Tayammum",
+        "C": "Janazah",
+        "D": "Taslim"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0512",
+      "type": "mcq",
+      "stem": "<p>The victory of the Roman Empire over the Persian Empire after the Persians had defeated the Romans as stated in the Glorious Qur&#39;an (Q. 30: 2-3) is an evidence of the</p>",
+      "marks": 1,
+      "options": {
+        "A": "beauty of the words of the Glorious Qur'an",
+        "B": "historical nature of the Glorious Qur'an",
+        "C": "simplicity of the wordings of the Glorious Qur'an",
+        "D": "authenticity of the Glorious Qur'an"
+      },
+      "year": 2013
+    },
+    {
+      "id": "jamb-irs-bank-0513",
+      "type": "mcq",
+      "stem": "<p>The first young person to accept Islam was?</p>",
+      "marks": 1,
+      "options": {
+        "A": "Muawiyah",
+        "B": "Umar Bn Khattab",
+        "C": "Ali Bn Abi Talib",
+        "D": "Uthman"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0514",
+      "type": "mcq",
+      "stem": "<p>Prophet Muhammad (SAW) did not hand-over the Glorious Qur&#39;an to his companions in an arranged form and in a single written volume because</p>",
+      "marks": 1,
+      "options": {
+        "A": "he did not want only the Quraish to inherit the book",
+        "B": "the revelation did not come in one piece but at intervals",
+        "C": "many tribes would want to take over its distribution",
+        "D": "there was no need for it."
+      },
+      "year": 2013
+    },
+    {
+      "id": "jamb-irs-bank-0515",
+      "type": "mcq",
+      "stem": "<p>In which Surah of the Qu&#39;ran does this verse occur &quot;Fasalli il-rabbika wani har&quot;</p>",
+      "marks": 1,
+      "options": {
+        "A": "lahb",
+        "B": "fathiah",
+        "C": "Kawthar",
+        "D": "Nas"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0516",
+      "type": "mcq",
+      "stem": "<p>Which of the following is not a quality of the Prophet (SAW)</p>",
+      "marks": 1,
+      "options": {
+        "A": "Forgetfulness",
+        "B": "Kindness",
+        "C": "Patience",
+        "D": "Forgiveness"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0517",
+      "type": "mcq",
+      "stem": "<p>The first woman to accept Islam was _____</p>",
+      "marks": 1,
+      "options": {
+        "A": "Aminah",
+        "B": "Khadijah",
+        "C": "Ruqayah",
+        "D": "Aisha"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0518",
+      "type": "mcq",
+      "stem": "<p>The following are considered good for water ablution except___</p>",
+      "marks": 1,
+      "options": {
+        "A": "well water",
+        "B": "Pond water",
+        "C": "river water",
+        "D": "rain water"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0519",
+      "type": "mcq",
+      "stem": "<p>The authenticity of a hadīth may be faulted if</p>",
+      "marks": 1,
+      "options": {
+        "A": "it is no longer than a verse of the Qur''ān",
+        "B": "its wording is too close to the text of the Qur''ān",
+        "C": "its narrator was not from Makkah",
+        "D": "it contradicts a Qur''ānic injuction"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0520",
+      "type": "mcq",
+      "stem": "<p>The first young person to accept Islam was?</p>",
+      "marks": 1,
+      "options": {
+        "A": "Ali Bn Abi Talib",
+        "B": "Tarifa",
+        "C": "Umar Bn Khattab",
+        "D": "Muawiyah"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0521",
+      "type": "mcq",
+      "stem": "<p>Subh prayer contains _____ obligatory ra&#39;kahs</p>",
+      "marks": 1,
+      "options": {
+        "A": "5",
+        "B": "2",
+        "C": "4",
+        "D": "3"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0522",
+      "type": "mcq",
+      "stem": "<p>The Makkahs were opposed to Muhammad (SAW) because he preached primarily against _____</p>",
+      "marks": 1,
+      "options": {
+        "A": "Murder and suicide",
+        "B": "Drinking and smoking",
+        "C": "Idolatry and exploitation",
+        "D": "Music and dancing"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0523",
+      "type": "mcq",
+      "stem": "<p>In Sūrat al-falaq, the Qur&#39;ān refers to an element of witchcraft and the</p>",
+      "marks": 1,
+      "options": {
+        "A": "evils of jinns and men",
+        "B": "mischief of the envious one",
+        "C": "mischief of created beings",
+        "D": "evils of back-biting"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0524",
+      "type": "mcq",
+      "stem": "<p>One of the major consequences of ribā is that, it makes people</p>",
+      "marks": 1,
+      "options": {
+        "A": "wealth",
+        "B": "lazy",
+        "C": "smart",
+        "D": "parasitic"
+      },
+      "year": 2013
+    },
+    {
+      "id": "jamb-irs-bank-0525",
+      "type": "mcq",
+      "stem": "<p>In Sūrat al - Mā&#39;ūn(Q.107), we learn that a good believer should not</p>",
+      "marks": 1,
+      "options": {
+        "A": "assist in wrongdoing",
+        "B": "tell lies",
+        "C": "repulse the orphan",
+        "D": "harm a fellow Muslim"
+      },
+      "year": 2014
+    },
+    {
+      "id": "jamb-irs-bank-0526",
+      "type": "mcq",
+      "stem": "<p>Imam Mālik Ibn Anās was born in</p>",
+      "marks": 1,
+      "options": {
+        "A": "Basra",
+        "B": "al-Madīnah",
+        "C": "Makkah",
+        "D": "Kūfah"
+      },
+      "year": 2014,
+      "image": "/qimages/3c9f8d6cdb8b607ce143.png"
     }
   ],
   "category": "secondary",
