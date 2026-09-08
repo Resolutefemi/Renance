@@ -21,7 +21,7 @@ var qimageFS embed.FS
 // QImage returns the raw bytes of the embedded image file, or
 // fs.ErrNotExist when the name is unknown.
 func QImage(name string) ([]byte, error) {
-	if len(name) > 64 || name != safeQImageName(name) {
+	if len(name) > 64 || !safeQImageName(name) {
 		return nil, fs.ErrNotExist
 	}
 	return qimageFS.ReadFile("qimages/" + name)
