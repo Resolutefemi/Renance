@@ -13,6 +13,7 @@
 import { useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import TopNav from '@/components/top-nav';
 
 interface Resource {
   name: string;
@@ -261,6 +262,7 @@ export default function StudyPage() {
         </p>
       </div>
 
+      <TopNav />
       <BottomNav />
     </main>
   );

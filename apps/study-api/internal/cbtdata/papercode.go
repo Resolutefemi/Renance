@@ -14,7 +14,7 @@ package cbtdata
 //      jamb-pick-<base-code>[~params]        practice subset carved from one
 //                                            static manifest pack
 //
-// params are dot-joined key=value pairs in canonical order y,n,enN,comp,compN,t:
+// params are dot-joined key=value pairs in canonical order y,n,enN,comp,compN,nov,t:
 //
 //      y     per-subject years, semicolon list aligned with the subjects
 //            ("r" = random); a single value pins every subject; pick codes
@@ -26,6 +26,9 @@ package cbtdata
 //            section (default 1)
 //      compN how many comprehension questions the English section carries
 //            (default 10, only meaningful when comp=1)
+//      nov   0|1 — include the JAMB novel questions ("The Lekki
+//            Headmaster") in the English section (default 0; the
+//            candidate opts in, like the hall's novel ask)
 //      t     timer minutes (mock default 120; custom/pick default 0 = untimed)
 //
 // Codes are canonical: re-encoding a parsed spec MUST reproduce the
@@ -52,6 +55,7 @@ const (
         defaultMockEnglish = 60
         defaultMockTimer   = 120
         defaultCompN       = 10
+        defaultNovelN      = 10
         maxEnglishSection  = 60
         maxCompN           = 30
         maxTimerMinutes    = 600
@@ -69,6 +73,7 @@ type PaperSpec struct {
         EnN      int      // mock English section size; 0 = default 60
         Comp     bool     // English comprehension included (default true)
         CompN    int      // comprehension count; 0 = default 10
+        Novel    bool     // JAMB novel questions included (default false)
         Timer    int      // minutes; 0 = family default
 }
 
@@ -290,6 +295,11 @@ func (p *PaperSpec) applyParams(params string, pick bool) error {
                                 return fmt.Errorf("cbtdata: bad compN %q", v)
                         }
                         p.CompN = n
+                case "nov":
+                        if v != "0" && v != "1" {
+                                return fmt.Errorf("cbtdata: bad nov %q", v)
+                        }
+                        p.Novel = v == "1"
                 case "t":
                         n, err := positiveInt(v)
                         if err != nil || n > maxTimerMinutes {
@@ -392,6 +402,9 @@ func (p *PaperSpec) paramsString() string {
                 parts = append(parts, "comp=0")
         } else if p.CompN > 0 && p.CompN != defaultCompN {
                 parts = append(parts, "compN="+strconv.Itoa(p.CompN))
+        }
+        if p.Novel {
+                parts = append(parts, "nov=1")
         }
         if p.Timer > 0 && !(p.Family == PaperFamilyMock && p.Timer == defaultMockTimer) {
                 parts = append(parts, "t="+strconv.Itoa(p.Timer))

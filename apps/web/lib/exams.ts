@@ -1,6 +1,7 @@
 'use client';
 
 import { api } from './api';
+import { idbGetBundle, idbSetBundle, migrateLocalStorageBundles } from './bundle-store';
 
 export interface ExamMeta {
   code: string;
@@ -65,23 +66,24 @@ export async function fetchManifest(): Promise<Manifest> {
   return api<Manifest>('/manifest');
 }
 
+/**
+ * Cache keys live under the renance.bundle.* namespace in IndexedDB
+ * (the old localStorage namespace, migrated once at boot). Bundles are
+ * multi-megabyte JSON — localStorage blew the ~5MB origin quota on the
+ * English bank, so all bundle persistence goes through bundle-store.ts
+ * and never touches localStorage again.
+ */
 function cacheKey(code: string, sha: string) {
   return `renance.bundle.${code}.${sha.slice(0, 12)}`;
 }
 
 export async function fetchBundle(exam: ExamMeta): Promise<Bundle> {
   const key = cacheKey(exam.code, exam.bundleSha256);
-  const cached = window.localStorage.getItem(key);
-  if (cached) {
-    try {
-      return JSON.parse(cached) as Bundle;
-    } catch {
-      window.localStorage.removeItem(key);
-    }
-  }
+  const cached = (await idbGetBundle(key)) as Bundle | null;
+  if (cached && cached.questions) return cached;
   const bundle = await api<Bundle>(`/bundles/${exam.code}`);
   // sha pinned cache: old versions simply become unreachable keys
-  window.localStorage.setItem(key, JSON.stringify(bundle));
+  void idbSetBundle(key, bundle);
   return bundle;
 }
 
@@ -169,10 +171,13 @@ export interface MockOptions {
   years?: Array<number | null> | number | null;
   /** Use-of-English section size (default 60). */
   englishSize?: number;
-  /** Include comprehension-passage questions (default true). */
+  /** Include comprehension-passage questions (default false). */
   comprehension?: boolean;
   /** How many comprehension questions the English section carries (default 10). */
   comprehensionCount?: number;
+  /** Include the JAMB novel questions ("The Lekki Headmaster") —
+   *  default false, mirroring the real "do you want the novel?" ask. */
+  novel?: boolean;
   /** Timer minutes (default 120). */
   timer?: number;
 }
@@ -199,10 +204,14 @@ export function buildMockCode(electives: ReadonlyArray<string>, opts: MockOption
   const y = yearsParam(opts.years ?? null);
   if (y) parts.push(`y=${y}`);
   if (opts.englishSize != null && opts.englishSize !== 60) parts.push(`enN=${opts.englishSize}`);
+  // Comprehension defaults ON in the server grammar (absent = on), so a
+  // switched-on section simply omits the param; OFF is stated explicitly.
+  // Emitting comp=1 would break the byte-for-byte canonical check.
   if (opts.comprehension === false) parts.push('comp=0');
   else if (opts.comprehensionCount != null && opts.comprehensionCount !== 10) {
     parts.push(`compN=${opts.comprehensionCount}`);
   }
+  if (opts.novel) parts.push('nov=1');
   if (opts.timer != null && opts.timer !== 120 && opts.timer > 0) parts.push(`t=${opts.timer}`);
   return `jamb-mock-${subjects.join('-')}${joinParams(parts)}`;
 }
@@ -216,13 +225,15 @@ export interface CustomOptions {
   timer?: number;
 }
 
-/** Canonical custom-practice paper code: subjects fully sorted, ≥1. */
+/** Canonical custom-practice paper code: subjects fully sorted, ≥1.
+ *  Params follow the server's canonical order y,n,t — emitting n before
+ *  y fails the byte-for-byte canonical check for any year-pinned paper. */
 export function buildCustomCode(subjects: ReadonlyArray<string>, opts: CustomOptions): string {
   const sorted = [...new Set(subjects)].sort();
   const parts: string[] = [];
-  if (opts.count > 0) parts.push(`n=${Math.min(opts.count, 500)}`);
   const y = yearsParam(opts.year ?? null);
   if (y) parts.push(`y=${y}`);
+  if (opts.count > 0) parts.push(`n=${Math.min(opts.count, 500)}`);
   if (opts.timer != null && opts.timer > 0) parts.push(`t=${opts.timer}`);
   return `jamb-custom-${sorted.join('-')}${joinParams(parts)}`;
 }
@@ -268,18 +279,11 @@ export function mockPaperCode(electives: ReadonlyArray<string>): string {
  */
 export async function fetchBundleByCode(code: string): Promise<Bundle> {
   const key = `renance.bundle.${code}`;
-  const cached = window.localStorage.getItem(key);
-  let fallback: Bundle | null = null;
-  if (cached) {
-    try {
-      fallback = JSON.parse(cached) as Bundle;
-    } catch {
-      window.localStorage.removeItem(key);
-    }
-  }
+  const cached = (await idbGetBundle(key)) as Bundle | null;
+  const fallback = cached && cached.questions ? cached : null;
   try {
     const bundle = await api<Bundle>(`/bundles/${code}`);
-    window.localStorage.setItem(key, JSON.stringify(bundle));
+    void idbSetBundle(key, bundle);
     return bundle;
   } catch (err) {
     if (fallback) return fallback; // offline: resume from the cached paper
@@ -287,14 +291,49 @@ export async function fetchBundleByCode(code: string): Promise<Bundle> {
   }
 }
 
-/** Silent background asset sync (web side): prefetch every pack. */
+/* ------------------------------------------------------------------ */
+/* Exam deep links (static-export safe)                                */
+/* ------------------------------------------------------------------ */
+
+/**
+ * The site ships as a Next.js static export: /exams/<code> pages exist
+ * ONLY for the manifest packs and the param-less mock combos baked in
+ * at build time. Composed papers (mock with year/count params, custom,
+ * pick) resolve through the static /exams/paper/ route with the code
+ * in the query string — a query string needs no build-time page. Every
+ * deep link to an exam MUST go through this helper, otherwise year-
+ * pinned papers 404 and bounce the candidate off the app.
+ */
+export function examHref(code: string, query?: Record<string, string | undefined>): string {
+  const qs = new URLSearchParams();
+  for (const [k, v] of Object.entries(query ?? {})) {
+    if (v != null && v !== '') qs.set(k, v);
+  }
+  const tail = qs.toString() ? `?${qs.toString()}` : '';
+  if (isComposedPaperCode(code)) {
+    return `/exams/paper/?code=${encodeURIComponent(code)}${tail}`;
+  }
+  return `/exams/${code}${tail}`;
+}
+
+/** Boot-time cache migration, safe to call from any client surface. */
+export function migrateBundleCache(): void {
+  void migrateLocalStorageBundles();
+}
+
+/** Silent background asset sync (web side): prefetch every pack.
+ *  Best-effort per pack — one offline fetch must not kill the sweep. */
 export async function prefetchAll(
   manifest: Manifest,
   onProgress?: (done: number, total: number) => void,
 ): Promise<number> {
   let done = 0;
   for (const exam of manifest.exams) {
-    await fetchBundle(exam);
+    try {
+      await fetchBundle(exam);
+    } catch {
+      /* offline or pack missing: keep sweeping, retry next boot */
+    }
     done += 1;
     onProgress?.(done, manifest.exams.length);
   }

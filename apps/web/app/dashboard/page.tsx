@@ -5,11 +5,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
 import { getToken, setStoredUser } from '@/lib/session';
-import { fetchManifest, prefetchAll, type ExamMeta } from '@/lib/exams';
+import { examHref, fetchManifest, migrateBundleCache, prefetchAll, type ExamMeta } from '@/lib/exams';
 import { type ReviewSummary } from '@/lib/review';
 import { RenanceMark } from '@/components/renance-logo';
 import { loadActiveExam, type ActiveExam } from '@/lib/active-exam';
 import BottomNav from '@/components/bottom-nav';
+import TopNav from '@/components/top-nav';
 
 interface Profile {
   fullName: string;
@@ -128,9 +129,14 @@ export default function DashboardPage() {
   }, [router]);
 
   /** Silent background asset sync: server job + client prefetch, in
-      parallel. No banner — the desk is ready long before it is asked for. */
+      parallel. No banner — the desk is ready long before it is asked for.
+      The prefetch now lands in IndexedDB (localStorage blew the ~5MB
+      origin quota on the big banks), and the first pass also migrates
+      any old localStorage bundles across, un-sticking quota-struck
+      devices. */
   async function startSyncFlow() {
     try {
+      migrateBundleCache();
       const manifest = await fetchManifest();
       setExams(manifest.exams);
       await Promise.all([pollSyncJob(), prefetchAll(manifest)]);
@@ -271,7 +277,7 @@ export default function DashboardPage() {
               otherwise the desk offers a way in, never a fake resume. */}
           {activeExam ? (
             <Link
-              href={`/exams/${activeExam.code}?resume=1`}
+              href={examHref(activeExam.code, { resume: '1' })}
               className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">play_arrow</span>
@@ -279,7 +285,7 @@ export default function DashboardPage() {
             </Link>
           ) : (
             <Link
-              href={isJamb ? '/exams/setup' : exams[0] ? `/exams/${exams[0].code}` : '/packs'}
+              href={isJamb ? '/exams/setup' : exams[0] ? examHref(exams[0].code) : '/packs'}
               className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">play_arrow</span>
@@ -315,7 +321,7 @@ export default function DashboardPage() {
                 icon="event_repeat"
                 label="Daily Challenge"
                 amber
-                href={daily ? `/exams/${daily.code}?daily=1` : '/exams/setup'}
+                href={daily ? examHref(daily.code, { daily: '1' }) : '/exams/setup'}
               />
               <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
               <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
@@ -350,7 +356,7 @@ export default function DashboardPage() {
         {/* Recent activity ------------------------------------------------ */}
         {recent && (
           <Link
-            href={recent.status === 'in_progress' ? `/exams/${recent.code}?resume=1` : '/progress'}
+            href={recent.status === 'in_progress' ? examHref(recent.code, { resume: '1' }) : '/progress'}
             className="mt-6 mb-4 flex items-center gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition-colors hover:bg-surface-container-lowest"
           >
             <div
@@ -387,6 +393,7 @@ export default function DashboardPage() {
           student touches daily sits on the home grid (more_features_sheet_light). */}
       {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
 
+      <TopNav />
       <BottomNav />
     </main>
   );

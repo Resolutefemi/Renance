@@ -138,6 +138,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
         <meta name="author" content="Ariyo Oluwafemi Stephen (Resolute Femi)" />
+        {/* Theme-adaptive favicon: flips white on dark browsers, ink on
+            light (the .ico/.png fallbacks Next auto-links are static).
+            Served from /public so Next ships it verbatim with the media
+            query intact — app/icon.svg would get rasterised to a PNG. */}
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icon.svg`}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(renanceJsonLd) }}

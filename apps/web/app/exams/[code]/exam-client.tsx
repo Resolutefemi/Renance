@@ -5,11 +5,13 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { api, ApiError } from '@/lib/api';
 import {
+  examHref,
   fetchBundle,
   fetchBundleByCode,
   fetchManifest,
   isComposedPaperCode,
   isMockPaperCode,
+  migrateBundleCache,
   type Bundle,
 } from '@/lib/exams';
 import { clearActiveExam, loadActiveExam, saveActiveExam, type ActiveExam } from '@/lib/active-exam';
@@ -70,7 +72,7 @@ type Phase = 'loading' | 'intro' | 'playing' | 'grading' | 'graded' | 'error';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
-export default function ExamPage({ code }: { code: string }) {
+export default function ExamPage({ code: routeCode }: { code: string }) {
   const router = useRouter();
 
   // Practice Settings overrides (?timer=15|30|60, ?timer=0 = No timer).
@@ -78,6 +80,10 @@ export default function ExamPage({ code }: { code: string }) {
   // sitting was started with — the resume deep link carries no ?timer.
   const searchParams = useSearchParams();
   const timerParam = searchParams.get('timer');
+  // Composed papers land on the static /exams/paper/ route with the
+  // real code in the query string (?code=…) — static export cannot
+  // enumerate their infinite ~param combinations as paths.
+  const code = routeCode || searchParams.get('code') || '';
   const [untimed, setUntimed] = useState(timerParam === '0');
   const [timerOverride, setTimerOverride] = useState<number | null>(
     timerParam && timerParam !== '0' ? Math.max(1, Number(timerParam) || 0) : null,
@@ -145,6 +151,8 @@ export default function ExamPage({ code }: { code: string }) {
     let alive = true;
     (async () => {
       try {
+        if (!code) throw new Error('No paper code — open it from the dashboard');
+        migrateBundleCache(); // heal quota-struck localStorage on entry
         // Composite mock papers never appear in the manifest — the server
         // composes them on demand, so resolve those straight by code.
         // Daily challenges resolve through /daily/{body} first.
@@ -155,7 +163,7 @@ export default function ExamPage({ code }: { code: string }) {
           dailyInfo = await api<DailyInfo>('/daily/jamb');
           if (!alive) return;
           if (dailyInfo.code !== code) {
-            router.replace(`/exams/${dailyInfo.code}?daily=1`);
+            router.replace(examHref(dailyInfo.code, { daily: '1' }));
             return;
           }
           const manifest = await fetchManifest();
@@ -476,6 +484,78 @@ export default function ExamPage({ code }: { code: string }) {
     nudgeDismissedRef.current = true;
   };
 
+  /* ------------------------------------------------------------ */
+  /* Keyboard controls (desktop CBT, like the real JAMB hall):      */
+  /*   A–F / 1–6 pick an option · ←/→ move · F flag · Enter next.   */
+  /* Suspended while any overlay (navigator, calculator, break,     */
+  /* fatigue nudge) is open or while typing in a theory textarea.   */
+  /* ------------------------------------------------------------- */
+  useEffect(() => {
+    if (phase !== 'playing' || !bundle || !question || navOpen || calcOpen || breakLeft > 0 || nudgeVisible) {
+      return;
+    }
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === 'TEXTAREA' || target.tagName === 'INPUT' || target.isContentEditable)) {
+        return;
+      }
+      const key = e.key;
+      if (question.type !== 'theory') {
+        // A–F by letter, 1–6 by position
+        const upper = key.length === 1 ? key.toUpperCase() : '';
+        const byLetter = upper && (question.options ?? {})[upper] !== undefined ? upper : null;
+        const digit = /^[1-6]$/.test(key) ? LETTERS[Number(key) - 1] : null;
+        const letter = byLetter ?? (digit && (question.options ?? {})[digit] !== undefined ? digit : null);
+        if (letter) {
+          e.preventDefault();
+          pick(question.id, letter);
+          return;
+        }
+      }
+      if (key === 'ArrowRight' || key === 'n' || key === 'N' || key === 'PageDown') {
+        e.preventDefault();
+        if (current < bundle.questionCount - 1) goTo(current + 1);
+        return;
+      }
+      if (key === 'ArrowLeft' || key === 'p' || key === 'P' || key === 'PageUp') {
+        e.preventDefault();
+        if (current > 0) goTo(current - 1);
+        return;
+      }
+      if (key === 'f' || key === 'F') {
+        e.preventDefault();
+        setFlags((f) => ({ ...f, [question.id]: !f[question.id] }));
+        return;
+      }
+      if (key === 'g' || key === 'G') {
+        e.preventDefault();
+        setNavOpen(true);
+        return;
+      }
+      if (key === 'c' || key === 'C') {
+        e.preventDefault();
+        setCalcOpen(true);
+        return;
+      }
+      if (key === 'Enter') {
+        // Enter advances; when the walk is done it opens the submit
+        // confirm exactly like the on-screen button.
+        e.preventDefault();
+        const answered = Object.keys(answers).length;
+        if (current === bundle.questionCount - 1 || answered === bundle.questionCount) {
+          if (answered < bundle.questionCount && !window.confirm(`${bundle.questionCount - answered} unanswered. Submit anyway?`)) return;
+          void submit();
+        } else if (current < bundle.questionCount - 1) {
+          goTo(current + 1);
+        }
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, bundle, question, current, navOpen, calcOpen, breakLeft, nudgeVisible, answers]);
+
+
   /* ------------------------------------------------------------- views */
 
   if (phase === 'loading') {
@@ -539,13 +619,39 @@ export default function ExamPage({ code }: { code: string }) {
             {bundle.durationMinutes != null ? `${bundle.durationMinutes} minutes` : 'untimed'} ·{' '}
             {bundle.totalMarks} marks
           </p>
-          <ul className="mx-auto mt-6 max-w-xs space-y-1.5 text-left text-xs text-on-surface-variant">
-            <li>· Timer starts the moment you begin</li>
-            <li>· Auto-submit when time runs out</li>
-            {examMode && <li>· Exam mode: answers lock once picked</li>}
-            {daily && <li>· Same 10 questions for every student today</li>}
-            <li>· Grading happens server-side: leave any time after submitting</li>
-          </ul>
+
+          {/* Pre-exam instructions — the sheet a candidate reads in the
+              hall before the invigilator says "start". Everything about
+              this sitting is on it: timing, locking, what the paper
+              carries (passages / novel), navigation and shortcuts. */}
+          <div className="mx-auto mt-5 w-full max-w-sm rounded-xl border border-outline-variant/60 bg-surface-container-low/60 p-4 text-left">
+            <p className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              <span className="material-symbols-outlined text-[14px]">info</span>
+              instructions — read before you begin
+            </p>
+            <ul className="mt-2.5 space-y-1.5 text-[12.5px] leading-relaxed text-on-surface-variant">
+              <li>· The clock starts the moment you tap Begin and auto-submits at zero.</li>
+              {examMode && <li>· Exam mode: a picked answer locks instantly, exactly like the CBT hall.</li>}
+              {!examMode && <li>· Practice mode: you may change an answer before submitting.</li>}
+              {bundle.questions.some((q) => q.group === 'comprehension') && (
+                <li>· This paper carries comprehension-passage questions — the passage sits above each stem and can be collapsed.</li>
+              )}
+              {bundle.questions.some((q) => q.group === 'novel') && (
+                <li>· This paper carries the JAMB novel questions (The Lekki Headmaster).</li>
+              )}
+              <li>· Flag tricky questions and jump back to them from the question map (grid button).</li>
+              <li>· Leaving mid-paper keeps your seat — the clock keeps running; resume from the dashboard.</li>
+            </ul>
+            <p className="mt-3 border-t border-outline-variant/50 pt-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              keyboard · desktop
+            </p>
+            <div className="mt-1.5 flex flex-wrap gap-1.5 text-[11px] text-on-surface-variant">
+              <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">A–F</span> pick
+              <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">←→</span> move
+              <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">F</span> flag
+              <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">Enter</span> next / submit
+            </div>
+          </div>
           {/* Daily: show today's seated score + board link once played */}
           {daily && daily.myResult && (
             <div className="mx-auto mt-5 flex w-full max-w-xs items-center justify-between rounded-xl bg-accent-emerald/10 px-4 py-3 text-left">
@@ -963,7 +1069,7 @@ export default function ExamPage({ code }: { code: string }) {
       <main className="min-h-dvh bg-gradient-to-b from-selection-blue/60 via-background to-background">
       {/* sticky exam chrome: leave · title · calculator · clock · map */}
       <header className="sticky top-0 z-40 border-b border-outline-variant/40 bg-surface/90 backdrop-blur-xl">
-        <div className="mx-auto flex h-14 w-full max-w-3xl items-center justify-between gap-2 px-4 sm:px-6">
+        <div className="mx-auto flex h-14 w-full max-w-3xl items-center justify-between gap-2 px-4 sm:px-6 lg:max-w-5xl">
           <div className="flex min-w-0 items-center gap-1">
             <Link
               href="/dashboard"
@@ -1066,7 +1172,9 @@ export default function ExamPage({ code }: { code: string }) {
         )}
       </header>
 
-      <div className="mx-auto w-full max-w-3xl px-4 pb-40 pt-5 sm:px-6">
+      {/* Desktop gets the two-pane CBT: the paper on the left, a live
+          navigator rail on the right (the grid button stays for phones). */}
+      <div className="mx-auto w-full max-w-3xl px-4 pb-40 pt-5 sm:px-6 lg:max-w-5xl lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start lg:gap-6">
         {/* question card */}
         <div className="renance-rise rounded-2xl border border-outline-variant/50 bg-card p-6 shadow-[0_2px_12px_0_rgba(20,28,45,0.10)] sm:p-7">
           <div className="flex items-center justify-between gap-3">
@@ -1206,11 +1314,67 @@ export default function ExamPage({ code }: { code: string }) {
             </p>
           )}
         </div>
+
+        {/* Desktop navigator rail (lg): the hall's question map, live and
+            always visible — phones keep the grid-button sheet. */}
+        <aside className="sticky top-20 hidden max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-2xl border border-outline-variant/50 bg-card p-4 shadow-[0_2px_12px_0_rgba(20,28,45,0.08)] lg:block">
+          <div className="flex items-center justify-between">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
+              question map
+            </p>
+            <span className="font-mono text-[11px] text-on-surface-variant">
+              {answeredCount}/{bundle.questionCount}
+            </span>
+          </div>
+          <div className="mt-3 grid grid-cols-5 gap-2">
+            {navShown.map(({ q, i }) => (
+              <button
+                key={q.id}
+                onClick={() => goTo(i)}
+                aria-label={`Go to question ${i + 1}`}
+                className={`relative flex h-10 items-center justify-center rounded-lg text-[13px] font-semibold transition ${navTileClass(q.id)} ${
+                  i === current ? 'ring-2 ring-accent-ink ring-offset-1 ring-offset-card' : ''
+                }`}
+              >
+                {i + 1}
+                {navIsFlagged(q.id) && (
+                  <span className="absolute right-1 top-1 h-1 w-1 rounded-full bg-accent-amber" />
+                )}
+              </button>
+            ))}
+          </div>
+          <div className="mt-3 border-t border-outline-variant/40 pt-3">
+            {current === bundle.questionCount - 1 || answeredCount === bundle.questionCount ? (
+              <button
+                onClick={() => {
+                  if (answeredCount < bundle.questionCount) {
+                    const left = bundle.questionCount - answeredCount;
+                    if (!window.confirm(`${left} unanswered. Submit anyway?`)) return;
+                  }
+                  void submit();
+                }}
+                className="h-10 w-full rounded-lg bg-primary text-[13px] font-semibold text-on-primary transition hover:opacity-90"
+              >
+                Submit paper
+              </button>
+            ) : (
+              <button
+                onClick={() => goTo(Math.min(bundle.questionCount - 1, current + 1))}
+                className="h-10 w-full rounded-lg bg-accent-ink text-[13px] font-semibold text-white transition hover:opacity-90"
+              >
+                Next question →
+              </button>
+            )}
+            <p className="mt-2.5 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] text-outline">
+              <span>A–F pick</span><span>←→ move</span><span>F flag</span><span>Enter next</span>
+            </p>
+          </div>
+        </aside>
       </div>
 
       {/* sticky action bar */}
       <div className="fixed bottom-0 inset-x-0 z-40 border-t border-outline-variant/40 bg-surface/95 backdrop-blur-xl">
-        <div className="mx-auto flex h-[68px] w-full max-w-3xl items-center justify-between gap-3 px-4 pb-[env(safe-area-inset-bottom)] sm:px-6">
+        <div className="mx-auto flex h-[68px] w-full max-w-3xl items-center justify-between gap-3 px-4 pb-[env(safe-area-inset-bottom)] sm:px-6 lg:max-w-5xl">
           <button
             onClick={() => goTo(Math.max(0, current - 1))}
             disabled={current === 0}

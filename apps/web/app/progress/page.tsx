@@ -23,6 +23,7 @@ import {
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import TopNav from '@/components/top-nav';
 
 export default function ProgressPage() {
   const router = useRouter();
@@ -240,6 +241,7 @@ export default function ProgressPage() {
         </>
       )}
       </div>
+      <TopNav />
       <BottomNav />
     </main>
   );

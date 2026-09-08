@@ -225,16 +225,21 @@ func takeShuffled(pool []Question, take int, rng *uint64) []Question {
         return out
 }
 
-// englishSplit divides an English pool into the comprehension group and
-// the rest, honouring the comp/compN options. It returns the questions
-// the English section should walk (already capped) or an error when the
-// section would come out empty.
-func englishSplit(pool []Question, rng *uint64, total int, comp bool, compN int) ([]Question, error) {
-        var compQ, restQ []Question
+// englishSplit divides an English pool into the comprehension, novel
+// and rest groups, honouring the comp/compN/nov options. It returns the
+// questions the English section should walk (already capped) or an
+// error when the section would come out empty. Novel questions (when
+// opted in) are seated first, then comprehension, then the rest — the
+// backfill logic still guarantees the section never comes up short.
+func englishSplit(pool []Question, rng *uint64, total int, comp bool, compN int, novel bool) ([]Question, error) {
+        var compQ, novelQ, restQ []Question
         for _, q := range pool {
-                if q.Group == "comprehension" {
+                switch q.Group {
+                case "comprehension":
                         compQ = append(compQ, q)
-                } else {
+                case "novel":
+                        novelQ = append(novelQ, q)
+                default:
                         restQ = append(restQ, q)
                 }
         }
@@ -244,35 +249,46 @@ func englishSplit(pool []Question, rng *uint64, total int, comp bool, compN int)
         if !comp {
                 compN = 0
         }
-        if total > len(compQ)+len(restQ) {
-                total = len(compQ) + len(restQ)
+        novelN := defaultNovelN
+        if novelN > len(novelQ) {
+                novelN = len(novelQ) // clamp: never invent novel questions
+        }
+        if !novel {
+                novelN = 0
+        }
+        if total > len(compQ)+len(novelQ)+len(restQ) {
+                total = len(compQ) + len(novelQ) + len(restQ)
         }
         if total <= 0 {
                 return nil, fmt.Errorf("english section has no questions")
         }
         // comp=0 with a comprehension-only pool is still answerable from the
         // rest pool only — surface the shortfall loudly instead.
-        if !comp && len(restQ) == 0 {
+        if !comp && !novel && len(restQ) == 0 {
                 return nil, fmt.Errorf("comprehension excluded but the bank has no other English questions")
         }
-        // Fill comprehension first, top up from the rest pool; if the rest
-        // pool runs dry and comp is on, backfill from comprehension.
-        compN = minInt(compN, total)
+        // Seat the opted-in special groups first (novel, then
+        // comprehension), top up from the rest pool; if the rest pool
+        // runs dry, backfill from whatever special-group questions the
+        // section has not used yet.
+        novelN = minInt(novelN, total)
+        compN = minInt(compN, total-novelN)
         var out []Question
-        if compN > 0 {
-                out = append(out, takeShuffled(compQ, compN, rng)...)
-        }
-        need := total - len(out)
-        if need > 0 {
-                out = append(out, takeShuffled(restQ, need, rng)...)
-        }
-        if len(out) < total && len(compQ) > 0 {
-                // rest pool exhausted: backfill from the comprehension group
-                used := map[string]struct{}{}
-                for _, q := range out {
+        used := map[string]struct{}{}
+        seat := func(src []Question, n int) {
+                for _, q := range takeShuffled(src, n, rng) {
+                        out = append(out, q)
                         used[q.ID] = struct{}{}
                 }
-                extra := takeShuffled(compQ, len(compQ), rng)
+        }
+        seat(novelQ, novelN)
+        seat(compQ, compN)
+        if need := total - len(out); need > 0 {
+                seat(restQ, need)
+        }
+        if len(out) < total {
+                // rest pool exhausted: backfill from the special groups
+                extra := takeShuffled(append(append([]Question{}, novelQ...), compQ...), len(novelQ)+len(compQ), rng)
                 for _, q := range extra {
                         if len(out) >= total {
                                 break
@@ -355,7 +371,7 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                 var section []Question
                 var err error
                 if slug == "english" {
-                        section, err = englishSplit(pool, &rng, take, spec.Comp, spec.CompN)
+                        section, err = englishSplit(pool, &rng, take, spec.Comp, spec.CompN, spec.Novel)
                         if err != nil {
                                 return nil, fmt.Errorf("cbtdata: paper %q english section: %w", paper.Code, err)
                         }

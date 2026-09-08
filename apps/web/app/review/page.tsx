@@ -21,6 +21,7 @@ import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import TutorChat from '@/components/tutor-chat';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import TopNav from '@/components/top-nav';
 import { apiImg, QText } from '@/lib/qtext';
 
 interface ReviewQuestion {
@@ -278,6 +279,7 @@ function ReviewInner() {
         })}
       </div>
       </div>
+      <TopNav />
       <BottomNav />
     </main>
   );
@@ -423,6 +425,7 @@ function ReviewQueue() {
         </section>
       )}
       </div>
+      <TopNav />
       <BottomNav />
     </main>
   );

@@ -16,6 +16,7 @@ import { clearSession, getToken } from '@/lib/session';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import TopNav from '@/components/top-nav';
 
 interface Profile {
   fullName: string;
@@ -358,6 +359,7 @@ export default function ProfilePage() {
         </div>
       </div>
 
+      <TopNav />
       <BottomNav />
     </main>
   );

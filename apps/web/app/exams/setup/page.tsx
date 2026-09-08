@@ -22,7 +22,9 @@ import { api } from '@/lib/api';
 import {
   buildCustomCode,
   buildMockCode,
+  examHref,
   fetchManifest,
+  migrateBundleCache,
   UTME_ELECTIVES,
   type Manifest,
 } from '@/lib/exams';
@@ -75,10 +77,13 @@ export default function ExamSetupPage() {
 
   // year pickers: subject slug -> exam year, null = Random (the default)
   const [yearFor, setYearFor] = useState<Record<string, number | null>>({});
-  // English section controls (standard mock)
+  // English section controls (standard mock). Comprehension and the
+  // JAMB novel both default OFF — the candidate opts IN, the same way
+  // the hall ask works ("do you want the novel this year?").
   const [englishSize, setEnglishSize] = useState(60);
-  const [comprehension, setComprehension] = useState(true);
+  const [comprehension, setComprehension] = useState(false);
   const [compCount, setCompCount] = useState(10);
+  const [novel, setNovel] = useState(false);
   // Custom Practice panel
   const [customSubjects, setCustomSubjects] = useState<Set<string>>(
     new Set(['english', 'mathematics', 'physics', 'chemistry']),
@@ -90,6 +95,7 @@ export default function ExamSetupPage() {
   // Years per bank come from the manifest (no question counts shown here).
   const [years, setYears] = useState<Record<string, number[]>>({});
   useEffect(() => {
+    migrateBundleCache(); // heal quota-struck localStorage on first entry
     let alive = true;
     fetchManifest()
       .then((m: Manifest) => {
@@ -168,7 +174,10 @@ export default function ExamSetupPage() {
         timerMinutes: null,
         savedAt: Date.now(),
       });
-      router.push(`/exams/${res.code}?resume=1`);
+      // examHref() routes composed codes (this one carries ~params) to
+      // the static /exams/paper/?code=… page — a direct /exams/<code>
+      // link 404s on the static export for any year-pinned paper.
+      router.push(examHref(res.code, { resume: '1' }));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not start the paper');
       setBusy(false);
@@ -185,6 +194,7 @@ export default function ExamSetupPage() {
       englishSize: englishSize !== 60 ? englishSize : undefined,
       comprehension,
       comprehensionCount: comprehension && compCount !== 10 ? compCount : undefined,
+      novel,
     });
     void seat(code, 'UTME Mock');
   }
@@ -369,8 +379,8 @@ export default function ExamSetupPage() {
                 <div className="flex flex-col gap-2">
                   <ToggleRow
                     icon="menu_book"
-                    label="Comprehension passages"
-                    hint="Include passage-based questions in the English section"
+                    label="English comprehension passages"
+                    hint="Include passage-based questions in the English section (off by default)"
                     value={comprehension}
                     onChange={setComprehension}
                   />
@@ -396,6 +406,13 @@ export default function ExamSetupPage() {
                       </div>
                     </div>
                   )}
+                  <ToggleRow
+                    icon="auto_stories"
+                    label="JAMB novel questions"
+                    hint="The Lekki Headmaster — the current JAMB recommended text (off by default)"
+                    value={novel}
+                    onChange={setNovel}
+                  />
                   <div className="flex items-center justify-between px-1 py-1.5">
                     <span className="text-[14px] text-on-surface-variant">
                       English section size

@@ -16,7 +16,7 @@ import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
-import { buildPickCode, fetchManifest, type Manifest } from '@/lib/exams';
+import { buildPickCode, examHref, fetchManifest, type Manifest } from '@/lib/exams';
 
 const TIMERS: Array<{ label: string; minutes: number | null }> = [
   { label: 'No timer', minutes: null },
@@ -73,9 +73,9 @@ function PracticeSettingsInner() {
       year,
       timer: timerMins ?? 0,
     });
-    const overrides = new URLSearchParams();
-    if (shuffleQuestions) overrides.set('shuffle', '1');
-    router.push(`/exams/${encodeURIComponent(code)}?${overrides.toString()}`);
+    const overrides: Record<string, string | undefined> = {};
+    if (shuffleQuestions) overrides.shuffle = '1';
+    router.push(examHref(code, overrides));
   }
 
   return (
