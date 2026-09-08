@@ -1,0 +1,907 @@
+{
+ "code": "neco-computer-studies-bank",
+ "title": "NECO Computer Studies | Past Questions Bank",
+ "category": "secondary",
+ "body": "NECO",
+ "questions": [
+  {
+   "id": "neco-computer-studies-bank-0001",
+   "type": "mcq",
+   "question": "The ...... is found in the CPU of a computer.",
+   "options": {
+    "A": "main memory",
+    "B": "modem",
+    "C": "mother board",
+    "D": "register",
+    "E": "zip drive"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0002",
+   "type": "mcq",
+   "question": "In order to find and load a file that has been saved, you need to select the ... Command.",
+   "options": {
+    "A": "close",
+    "B": "new",
+    "C": "open",
+    "D": "recycle",
+    "E": "save"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0003",
+   "type": "mcq",
+   "question": "The process of .... is difficult without computer in transportation system.",
+   "options": {
+    "A": "accommodation",
+    "B": "loading",
+    "C": "repair",
+    "D": "reservation",
+    "E": "ticketing"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0004",
+   "type": "mcq",
+   "question": "Which of the following is not among the features of presentation package?",
+   "options": {
+    "A": "Animation",
+    "B": "Insertion of range and cell",
+    "C": "Insertion of video and audio",
+    "D": "Slide",
+    "E": "Slide show"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0005",
+   "type": "mcq",
+   "question": "The central processing unit is connected to the?",
+   "options": {
+    "A": "expansion boards",
+    "B": "expansion slots",
+    "C": "memory chip",
+    "D": "mother board",
+    "E": "system unit"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0006",
+   "type": "mcq",
+   "question": "Which of the following circuits is used as memory device in a computer?",
+   "options": {
+    "A": "Attenuator",
+    "B": "Comparator",
+    "C": "Flip-flop",
+    "D": "Modem",
+    "E": "Rectifier"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0007",
+   "type": "mcq",
+   "question": "AutoCAD is best used in?",
+   "options": {
+    "A": "educating",
+    "B": "engineering",
+    "C": "journalism",
+    "D": "offices",
+    "E": "publishing"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0008",
+   "type": "mcq",
+   "question": "Change a\\(frac{(b-c)^2}{d +2}\\) in algebraic expression to BASIC arithmetic expression.",
+   "options": {
+    "A": "A * b\\(^2\\) - c\\(^2\\) ÷ d +2",
+    "B": "A * \\(frac{(b-c)^2}{D +2}\\)",
+    "C": "ab\\(^2\\) - ac\\(^2\\) ÷ d + 2",
+    "D": "A * \\(frac{(b-c)^2}{D +2}\\) Opera",
+    "E": "Python E. AB-AC^2 / D +2"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0009",
+   "type": "mcq",
+   "question": "In data base, the minimum number of characters. user can input in the field is known as field?",
+   "options": {
+    "A": "caption",
+    "B": "format",
+    "C": "name",
+    "D": "size",
+    "E": "text"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0010",
+   "type": "mcq",
+   "question": "Which of these storage media has the lowest capacity?",
+   "options": {
+    "A": "CD-ROM",
+    "B": "Flash Drive",
+    "C": "Floppy Disk",
+    "D": "RAM",
+    "E": "Register"
+   },
+   "answer": "E",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0011",
+   "type": "mcq",
+   "question": "The full meaning of BCD is?",
+   "options": {
+    "A": "Basic Code Decimal",
+    "B": "Basic Computer Decimal",
+    "C": "Binary Coded Decimal",
+    "D": "Binary Coded Digit",
+    "E": "Binary Computer Decimal"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0012",
+   "type": "mcq",
+   "question": "The user chosen secret string of characters that allows access to the use of computer is called?",
+   "options": {
+    "A": "address code",
+    "B": "ID-Name",
+    "C": "password",
+    "D": "pin code",
+    "E": "username"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0013",
+   "type": "mcq",
+   "question": "Which of these is a specialized port?",
+   "options": {
+    "A": "Firewall",
+    "B": "IRDA",
+    "C": "Parallel",
+    "D": "Serial",
+    "E": "USB"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0014",
+   "type": "mcq",
+   "question": "The maximum length of 10 base T unshielded twisted pair cable in meters is?",
+   "options": {
+    "A": "100",
+    "B": "185",
+    "C": "500",
+    "D": "2000",
+    "E": "3000"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0015",
+   "type": "mcq",
+   "question": "Which of these registered jacks is used in terminating phone lines?",
+   "options": {
+    "A": "RJ 11",
+    "B": "RJ 14",
+    "C": "RJ 25",
+    "D": "RJ 35",
+    "E": "RJ 45"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0016",
+   "type": "mcq",
+   "question": "In Microsoft Word, CTRL+ESC..... the start menu?",
+   "options": {
+    "A": "closes",
+    "B": "cuts",
+    "C": "opens",
+    "D": "redo",
+    "E": "undo"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0017",
+   "type": "mcq",
+   "question": "A/AN is a virus program that copies and multiplies itself by using computer networks and security flaws?",
+   "options": {
+    "A": "Asimov 1539",
+    "B": "Elkern",
+    "C": "Polyboot.B",
+    "D": "Stator",
+    "E": "Worm"
+   },
+   "answer": "E",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0018",
+   "type": "mcq",
+   "question": "Convert 687 in decimal to base 16?",
+   "options": {
+    "A": "2AF\\(_{16}\\)",
+    "B": "3BA\\(_{16}\\)",
+    "C": "4ff\\(_{16}\\)",
+    "D": "BB\\(_{16}\\)",
+    "E": "CBC\\(_{16}\\)"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0019",
+   "type": "mcq",
+   "question": "The editing features in Microsoft Word include the following, except?",
+   "options": {
+    "A": "animation",
+    "B": "format painter",
+    "C": "go to",
+    "D": "thesaurus",
+    "E": "word count"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0020",
+   "type": "mcq",
+   "question": "Which of these is not an example of a browser?",
+   "options": {
+    "A": "Chrome",
+    "B": "Internet Explorer",
+    "C": "Mozilla",
+    "D": "Opera",
+    "E": "Python"
+   },
+   "answer": "E",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0021",
+   "type": "mcq",
+   "question": "Which of these packages is appropriate for preparing payroll of workers?",
+   "options": {
+    "A": "CorelDraw",
+    "B": "Microsoft Access",
+    "C": "Microsoft Excel",
+    "D": "Microsoft Word"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0022",
+   "type": "mcq",
+   "question": "In a worksheet, a set of data is called?",
+   "options": {
+    "A": "Column range",
+    "B": "Data base",
+    "C": "Data file",
+    "D": "Data range",
+    "E": "Row range"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0023",
+   "type": "mcq",
+   "question": "In Microsoft Word, the background of word document is?",
+   "options": {
+    "A": "always the same for the entire document",
+    "B": "always white in colour",
+    "C": "automatically give any colour",
+    "D": "either white or black colour",
+    "E": "the colour you pre-set under the option menu"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0024",
+   "type": "mcq",
+   "question": "1 megabyte is equivalent to ...... kilobytes?",
+   "options": {
+    "A": "1000",
+    "B": "1024",
+    "C": "1034",
+    "D": "1204",
+    "E": "1304"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0025",
+   "type": "mcq",
+   "question": "Which of these is not a logic comparison symbol in computer studies ?",
+   "options": {
+    "A": "=",
+    "B": "<",
+    "C": ">",
+    "D": "<=",
+    "E": "^"
+   },
+   "answer": "E",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0026",
+   "type": "mcq",
+   "question": "The transfer of information from the Internet to your computer is called?",
+   "options": {
+    "A": "Copy",
+    "B": "Documentation",
+    "C": "Download",
+    "D": "Retrieval",
+    "E": "Upload"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0027",
+   "type": "mcq",
+   "question": "Every computer system connected to the Internet must have a unique address?",
+   "options": {
+    "A": "Domain name",
+    "B": "Instant message",
+    "C": "Internet protocol",
+    "D": "Internet relay",
+    "E": "Internet service"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0028",
+   "type": "mcq",
+   "question": "Read Only Memory (ROM) is a kind of...... storage?",
+   "options": {
+    "A": "Disk drive",
+    "B": "Flash drive",
+    "C": "Permanent",
+    "D": "Smart card",
+    "E": "Temporary"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0029",
+   "type": "mcq",
+   "question": "In a computer system, SQL, simply means ..... Query language?  Sample B. Simple C. Stratified D. Structured E. Summary",
+   "options": {
+    "A": "Sample",
+    "B": "Simple",
+    "C": "Stratified",
+    "D": "Structured",
+    "E": "Summary"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0030",
+   "type": "mcq",
+   "question": "We can improve computer security by the use of?",
+   "options": {
+    "A": "account number",
+    "B": "ID number",
+    "C": "layout",
+    "D": "password",
+    "E": "user names"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0031",
+   "type": "mcq",
+   "question": "The fourth generation programming language includes the following except?",
+   "options": {
+    "A": "Borland Delphi",
+    "B": "Java",
+    "C": "Oracle reports",
+    "D": "Postscript",
+    "E": "SQL"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0032",
+   "type": "mcq",
+   "question": "What is the other word used to describe browsing?",
+   "options": {
+    "A": "Cyber cafing",
+    "B": "Pinging",
+    "C": "Searching",
+    "D": "Surfing",
+    "E": "Uploading"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0033",
+   "type": "mcq",
+   "question": "When a file or folder is deleted, it goes to the?",
+   "options": {
+    "A": "Hard disk",
+    "B": "Memory",
+    "C": "Monitor",
+    "D": "Recycle bin",
+    "E": "System unit"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0034",
+   "type": "mcq",
+   "question": "Search engines are used for the following except?",
+   "options": {
+    "A": "finding pages of information or data.",
+    "B": "downloading educational material",
+    "C": "displaying advertisement",
+    "D": "downloading music and videos",
+    "E": "handling virus attacks"
+   },
+   "answer": "E",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0035",
+   "type": "mcq",
+   "question": "The mechanical counting device called pascaline was invented by......... pascal?",
+   "options": {
+    "A": "Blaize",
+    "B": "Bloom",
+    "C": "John",
+    "D": "Philip",
+    "E": "Susan"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0036",
+   "type": "mcq",
+   "question": "What is the decimal equivalent of the binary number 10110111?",
+   "options": {
+    "A": "180",
+    "B": "181",
+    "C": "183",
+    "D": "184",
+    "E": "186"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0037",
+   "type": "mcq",
+   "question": "Any document saved into a disc is referred to as a/an?",
+   "options": {
+    "A": "field",
+    "B": "file",
+    "C": "folder",
+    "D": "lcon",
+    "E": "record"
+   },
+   "answer": "E",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0038",
+   "type": "mcq",
+   "question": "ROM is also known as?",
+   "options": {
+    "A": "Adapter",
+    "B": "firmware",
+    "C": "Network",
+    "D": "Semi conductor",
+    "E": "Slot"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0039",
+   "type": "mcq",
+   "question": "Which of the following is not a function of symbolic DOS command?",
+   "options": {
+    "A": "CLS:",
+    "B": "MD:",
+    "C": "RD:",
+    "D": "TYPE:",
+    "E": "VER:"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0040",
+   "type": "mcq",
+   "question": "A calculating machine that is made of hardwood with cursor of glass and metal is called?",
+   "options": {
+    "A": "Abacus",
+    "B": "Difference Engine",
+    "C": "Pascaline",
+    "D": "Punched Card",
+    "E": "Slide Rule"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0041",
+   "type": "mcq",
+   "question": "The speed of a processor is measured in?",
+   "options": {
+    "A": "Kilobyte",
+    "B": "Kilohertz",
+    "C": "Megabyte",
+    "D": "Megahertz",
+    "E": "Megawatt"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0042",
+   "type": "mcq",
+   "question": "In the I.P.O cycle, P stands for?",
+   "options": {
+    "A": "pack",
+    "B": "pointer",
+    "C": "procedure",
+    "D": "processing",
+    "E": "programming"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0043",
+   "type": "mcq",
+   "question": "Which of the these is not among the file organization?",
+   "options": {
+    "A": "Indexed",
+    "B": "Parallel",
+    "C": "Random",
+    "D": "Sequential",
+    "E": "Serial"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0044",
+   "type": "mcq",
+   "question": "The logical unit of transfer between the backing storage and main memory in file organization is called?",
+   "options": {
+    "A": "block",
+    "B": "bucket",
+    "C": "hash",
+    "D": "hit",
+    "E": "partial"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0045",
+   "type": "mcq",
+   "question": "The four standard ports include the following buses, except?",
+   "options": {
+    "A": "fast infrared",
+    "B": "high performance serial",
+    "C": "parallel",
+    "D": "serial",
+    "E": "universal serial"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0046",
+   "type": "mcq",
+   "question": "By default in Microsoft word, your document prints in .. mode?",
+   "options": {
+    "A": "landscape",
+    "B": "page setup",
+    "C": "portrait",
+    "D": "print view",
+    "E": "vertical"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0047",
+   "type": "mcq",
+   "question": "What displays the content of the active cell in excel?",
+   "options": {
+    "A": "Formula bar",
+    "B": "Name box",
+    "C": "Range",
+    "D": "Row headings",
+    "E": "Task pane"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0048",
+   "type": "mcq",
+   "question": "How do you find and load a file that has been saved? select ..... command.",
+   "options": {
+    "A": "close",
+    "B": "file",
+    "C": "new",
+    "D": "open",
+    "E": "save"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0049",
+   "type": "mcq",
+   "question": "If P 1 and Q = 1, find the value of NOT(P and Q).",
+   "options": {
+    "A": "0",
+    "B": "0 and 1",
+    "C": "1",
+    "D": "1 and 0",
+    "E": "1 and 1"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0050",
+   "type": "mcq",
+   "question": "The distribution of video and audio content to a dispersed audience through electronic media is called?",
+   "options": {
+    "A": "broadcasting",
+    "B": "communication",
+    "C": "information",
+    "D": "messages",
+    "E": "news"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0051",
+   "type": "mcq",
+   "question": "36. Which of these characteristics of languages is common to all computer programs?",
+   "options": {
+    "A": "It uses symbolic storage address",
+    "B": "Machine dependence",
+    "C": "Uses instructions that seem like English",
+    "D": "Uses mnemonics",
+    "E": "Uses special codes"
+   },
+   "answer": "E",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0052",
+   "type": "mcq",
+   "question": "The  ...... is added to a host computer hardware in order to expand its abilities?",
+   "options": {
+    "A": "input devices",
+    "B": "monitor",
+    "C": "peripheral",
+    "D": "scanner",
+    "E": "webcam"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0053",
+   "type": "mcq",
+   "question": "The computer that features a Liquid Crystal Display (LCD) is known as ...... Computer?",
+   "options": {
+    "A": "desktop",
+    "B": "digital",
+    "C": "hybrid",
+    "D": "laptop",
+    "E": "notebook"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0054",
+   "type": "mcq",
+   "question": "The following are examples of synchronous communication, except?",
+   "options": {
+    "A": "blogs",
+    "B": "Google talk",
+    "C": "phone",
+    "D": "video conferencing",
+    "E": "yahoo messenger"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0055",
+   "type": "mcq",
+   "question": "What is the function of control unit in the CPU?",
+   "options": {
+    "A": "decodes program instructions",
+    "B": "generates data from the field",
+    "C": "performs logic functions",
+    "D": "stores program instructions",
+    "E": "transfers data to primary storage."
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0056",
+   "type": "mcq",
+   "question": "Integrated circuit chips used in micro computer are made of element called?",
+   "options": {
+    "A": "chromium",
+    "B": "copper",
+    "C": "gold",
+    "D": "silicon",
+    "E": "silver"
+   },
+   "answer": "D",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0057",
+   "type": "mcq",
+   "question": "The common name for all input and output devices is?",
+   "options": {
+    "A": "keyboard",
+    "B": "peripheral",
+    "C": "printer",
+    "D": "storage medium",
+    "E": "system unit"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0058",
+   "type": "mcq",
+   "question": "Lady Ada Lovelace improved upon the idea of?",
+   "options": {
+    "A": "Babbage's analytical engine",
+    "B": "Babbage's difference engine",
+    "C": "Herman hollerinth's machine",
+    "D": "Leibnitz's calculator",
+    "E": "Pascal's arithmetic"
+   },
+   "answer": "A",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0059",
+   "type": "mcq",
+   "question": "Notebook is an example of ..... Computer?",
+   "options": {
+    "A": "macro",
+    "B": "mainframe",
+    "C": "micro",
+    "D": "mini",
+    "E": "super"
+   },
+   "answer": "C",
+   "marks": 1,
+   "year": 2014
+  },
+  {
+   "id": "neco-computer-studies-bank-0060",
+   "type": "mcq",
+   "question": "The symbolic representation of hard disk is?",
+   "options": {
+    "A": "B:",
+    "B": "B:1",
+    "C": "C:",
+    "D": "C:l",
+    "E": "D:"
+   },
+   "answer": "B",
+   "marks": 1,
+   "year": 2014
+  }
+ ]
+}

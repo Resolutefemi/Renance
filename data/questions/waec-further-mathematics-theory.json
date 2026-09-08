@@ -1,0 +1,2300 @@
+{
+  "code": "waec-further-mathematics-theory",
+  "title": "WAEC Further Mathematics | Theory & Model Answers",
+  "version": 1,
+  "questionCount": 327,
+  "totalMarks": 327,
+  "questions": [
+    {
+      "id": "waec-further-mathematics-theory-0001",
+      "type": "theory",
+      "stem": "The sum of the 2nd and 5th terms of an arithmetic progression (AP) is 42. If the difference between the 6th and 3rd term is 12, find the \n(i) Common difference\n(ii) first term\n(iii) 20th term.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0002",
+      "type": "theory",
+      "stem": "If \\(2^{2x - 3y} = 32\\) and \\(\\log_{y} x = 2\\), find the values of x and y.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0003",
+      "type": "theory",
+      "stem": "If (x + 2) and (x - 1) are factors of \\(f(x) = 6x^{4} + mx^{3} - 13x^{2} + nx + 14\\), find the \n(a) values of m and n.\n(b) remainder when f(x) is divided be (x + 1).",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0004",
+      "type": "theory",
+      "stem": "Find the equation of the tangent to the curve \\(y = \\frac{x - 1}{2x + 1}, x \\neq -\\frac{1}{2}\\) at the point (1, 0).",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0005",
+      "type": "theory",
+      "stem": "(a) There are 6 points in a plane. How many triangles can be formed with the points?\n(b) A family of 6 is to be seated in a row . In how many ways can this be done if the father and mother are not to be seated together?",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0006",
+      "type": "theory",
+      "stem": "The probabilities that Ali, Baba and Katty will gain admission to college are \\(\\frac{2}{3}, \\frac{3}{4}\\) and \\(\\frac{4}{5}\\) respectively. Find the probability that:\n(a) only Katty and Baba will gain admission ;\n(b) none of them will gain admission ;\n(c) at most two of them will gain admission.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0007",
+      "type": "theory",
+      "stem": "The position vectors of points A, B and C with respect to the origin are (8i - 2j), (2i + 6j) and (-10i + 4j) respectively. If ABCN is a parallelogram, find :\n(a) the position vector of N;\n(b) AN and AB ;\n(c) correct to two decimal place, the acute angle between AN and AB.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0008",
+      "type": "theory",
+      "stem": "A uniform beam, XY, 4m long and weighing 350N rests on two pivots P and Q. It is kept in equilibrium by weights of 80N attached at X and 1000N attached at a point between P and Q such that it is 0.6m from Q. If XP = 0.8m and PQ = 2.2m.\n(a) calculate the reactions at P and Q ;\n(b) if the 1000N weight is replaced with a 1200N weight, at what point from Q should it be placed in order to maintain the equilibrium.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0009",
+      "type": "theory",
+      "stem": "(a) If \\(f(x) = \\frac{4 - 5x}{2}\\), and \\(g(x) = x + 6, x \\in R\\), find \\(f \\circ g^{-1}\\).\n(b) P(x, y) divides the line joining (7, -5) and (-2, 7) internally in 5 : 4. Find the coordinates of P.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0010",
+      "type": "theory",
+      "stem": "Evaluate : \\(\\int_{1}^{3} (\\frac{x - 1}{(x + 1)^{2}}) \\mathrm {d} x\\).",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0011",
+      "type": "theory",
+      "stem": "(a) Given that \\(\\log_{10} p = a, \\log_{10} q = b\\) and \\(\\log_{10} s = c\\), express \\(\\log_{10} (\\frac{p^{\\frac{1}{3}}q^{4}}{s^{2}}\\) in terms of a, b and c.\n(b) The radius of a circle is 6cm. If the area is increasing at the rate of 20\\(cm^{2}s^{-1}\\), find, leaving the answer in terms of \\(\\pi\\), the rate at which the radius is increasing.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0012",
+      "type": "theory",
+      "stem": "If (x + 1) and (x - 2) are factors of the polynomial \\(g(x) = x^{4} + ax^{3} + bx^{2} - 16x - 12\\), find the values of a and b.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0013",
+      "type": "theory",
+      "stem": "Bottles of the same sizes produced in a factory are packed in boxes. Each box contains 10 bottles. If 8% of the bottles are defective, find, correct to two decimal places, the probability that box chosen at random contains at least 3 defective bottles.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0014",
+      "type": "theory",
+      "stem": "The table shows the heights in cm of some seedlings in a certain garden.\n\n \n \n Height (cm)\n 36-40\n 41-45\n 46-50\n 51-55\n 56-60\n \n \n Frequency\n 3\n 9\n 21\n 12\n 5\n \n \n\n(a) Draw the cumulative frequency curve for the distribution.\n(b) Using the curve in (a), find thesemi-interquartile range.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0015",
+      "type": "theory",
+      "stem": "A parallelogram MNQR has vertices M(4, -6), N(10, 2), Q(8, 16) and R(x, y). Find the coordinates of R.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0016",
+      "type": "theory",
+      "stem": "Forces \\(F_{1} (18N, 330°), F_{2} (10N, 090°)\\) and \\(F_{3} (25N, 180°)\\) act on a body at rest. Find, correct to one decimal place, the magnitude and direction of the resultant force.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0017",
+      "type": "theory",
+      "stem": "(a) Simplify : \\(\\frac{1}{1 - \\cos \\theta} + \\frac{1}{1 + \\cos \\theta}\\) and leave your answer in terms of \\(\\sin \\theta\\).\n(b) Find the equation of the line joining the stationary points of \\(y = x^{2} (x - 3)\\) and the distance between them.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0018",
+      "type": "theory",
+      "stem": "(a) If \\(f(x) = \\frac{2x - 3}{(x^{2} - 1)(x + 2)}\\)\n(i) find the values of x for which f(x) is undefined.\n(ii) express f(x) in partial fractions.\n(b) A circle with centre (-3, 1) passes through the point (3, 1). Find its equation.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0019",
+      "type": "theory",
+      "stem": "(a) If \\(f(x) = \\int (4x - x^{2}) \\mathrm {d} x\\) and f(3) = 21, find f(x).\n(b) The second, fourth and eigth terms of an Arithmetic Progression (A.P) form the first three consecutive terms of a Geometric Progression (G.P). The sum of the third and fifth terms of the A.P is 20, find the :\n(i) first four terms of the A.P\n(ii) sum of the first ten terms of the A.P",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0020",
+      "type": "theory",
+      "stem": "(a) In a school, the ratio of those who passed to those who failed in a History test is 4 : 1. If 7 students are selected at random from the school, find, correct to two decimal places, the probability that :\n(i) at least 3 passed the test ; (ii) between 3 and 6 students failed the test.\n(b) A fair die is thrown five times; find the probability of obtaining a six three times.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0021",
+      "type": "theory",
+      "stem": "The table shows the frequency distribution of the ages of patients in a clinic.\n\n \n \n Ages (years)\n 17 - 19\n 20 - 22\n 23 - 28\n 29 - 34\n 35 - 43\n \n \n No. of patients\n 6\n 9\n 12\n 18\n 18\n \n \n\n(a) Draw a histogram for the distribution\n(b) Find, correct to two decimal places, the mean age of the patients.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0022",
+      "type": "theory",
+      "stem": "(a) A body P of mass q kg is suspended by two light inextensible strings AB and DB attached to a horizontal table. The strings are inclined at 30° and 60° respectively to the horizontal and the tension in AB is 48N. If the system is in equilibrium :\n(i) sketch a diagram to represent the information ; (ii) calculate the tension in DB ;",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0023",
+      "type": "theory",
+      "stem": "(a) Given that \\(m = (6i + 8j)\\) and \\(n = (-8i + \\frac{7}{3}j)\\), find the :\n(i) magnitudes and direction of m and n ; (ii) angle between m and n.\n(b) The position vectors of points P, Q, R and S are \\(\\begin{pmatrix} -2 \\\\ 3 \\end{pmatrix}, \\begin{pmatrix} 10 \\\\ 4 \\end{pmatrix}, \\begin{pmatrix} 3 \\\\ 12 \\end{pmatrix}\\) and \\(\\begin{pmatrix} 4 \\\\ 0 \\end{pmatrix}\\) respectively. Show that \\(\\overrightarrow{PQ}\\) is perpendicular to \\(\\overrightarrow{RS}\\).",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-further-mathematics-theory-0024",
+      "type": "theory",
+      "stem": "A binary operation \\(*\\) is defined on the set, R, of real numbers by \\(m * n = m + n + 2\\). Find the :\n(a) identity element under the operation ;\n(b) inverse of n under the operation .",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0025",
+      "type": "theory",
+      "stem": "Given that (5, 2), (-4, k) and (2, 1) lie on a straight line, find the value of k.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0026",
+      "type": "theory",
+      "stem": "(a) If \\(f(x + 2) = 6x^{2} + 5x - 8\\), find \\(f(5)\\).\n(b) Express \\(\\frac{7\\sqrt{2} + 3\\sqrt{3}}{4\\sqrt{2} - 2\\sqrt{3}}\\) in the form \\(p + q\\sqrt{r}\\), where p, q and r are rational numbers.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0027",
+      "type": "theory",
+      "stem": "When \\(f(x) = 2x^{3} + mx^{2} + nx + 11\\) is divided by \\(x^{2} + 5x + 1\\), the quotient is \\(2x - 5\\) and the remainder is \\(30x + 16\\). Find the values of m and n.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0028",
+      "type": "theory",
+      "stem": "The probabilities that Ago, Sulley and Musa will gain admission to a certain university are \\(\\frac{4}{5}, \\frac{3}{4}\\) and \\(\\frac{2}{3}\\) respectively. Find the probability that :\n(a) none of them will gain admission ; \n(b) only Ago and Sulley will gain admission.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0029",
+      "type": "theory",
+      "stem": "The mean of the numbers 1, 4, k, (k + 4) and 11 is (k + 1). Calculate the :\n(a) value of k ;\n(b) standard deviation.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0030",
+      "type": "theory",
+      "stem": "(a) A body of mass 3kg moves with a velocity of 8ms\\(^{-1}\\). It collides with a second body moving in the same direction with a velocity of 5ms\\(^{-1}\\). After collision, the bodies move together with a velocity of 6ms\\(^{-1}\\). Find the mass of the second body.\n(b) If the second body in (a) moves with a velocity of 5ms\\(^{-1}\\) in the opposite direction as that of the 3kg body with a velocity of 8ms\\(^{-1}\\), find, correct to two decimal places, the common velocity of the two bodies if they move together after collision.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0031",
+      "type": "theory",
+      "stem": "Given that \\(p = \\begin{pmatrix} 5 \\\\ 3 \\end{pmatrix}, q = \\begin{pmatrix} -1 \\\\ 2 \\end{pmatrix}\\) and \\(r = \\begin{pmatrix} 17 \\\\ 5 \\end{pmatrix}\\) and \\(r = \\alpha r + \\beta q\\), where \\(\\alpha\\) and \\(\\beta\\) are scalars, express q in terms of r and p.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0032",
+      "type": "theory",
+      "stem": "(a) Without using mathematical tables or calculator, evaluate \\(\\frac{\\frac{3}{2}\\log 27 - 3\\log 5\\sqrt{5}}{\\log 0.6}\\)\n(b) Two linear transformations A and B in the \\(O_{xy}\\) plane, are defined by :\n\\(A : (x, y)   (x + 2y, -x + y)\\)\n\\(B : (x, y)   (2x + 3y, x + 2y)\\).\n(i) Write down the matrices A and B; (ii) Find the image of the point P(-2, 2) under the linear transformation A followed by B.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0033",
+      "type": "theory",
+      "stem": "(a)(i) Write down the expansion of \\((1 + x)^{7}\\) in ascending powers of x.\n(ii) If the coefficients of the fifth, sixth and seventh terms in the expansion in (a)(i) above form a linear sequence(A.P), find the common difference of the A.P.\n(b) Using the trapezium rule with ordinates at 1, 2, 3, 4 and 5, calculate, correct to two decimal places, \n\\(\\int_{1}^{5} \\sqrt{(2x + 8x^{2})} \\mathrm {d} x\\).",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0034",
+      "type": "theory",
+      "stem": "(a) If \\(^{k}P_{2} = 72\\), find the value of k.\n(b) Solve the equation : \\(2\\cos^{2} \\theta - 5\\cos \\theta = 3; 0° \\leq \\theta \\leq 360°\\)",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0035",
+      "type": "theory",
+      "stem": "The table shows the distribution of marks scored by some students in a test.\n\n \n \n Marks\n 1-10\n 11-20\n 21-30\n 31-40\n 41-50\n 51-60\n 61-70\n 71-80\n 81-90\n 91-100\n \n \n No. of students\n 3\n 17\n 41\n 85\n 97\n 115\n 101\n 64\n 21\n 6\n \n \n\n(a)(i) Construct a cumulative frequency table for the distribution ; (ii) Draw a cumulative frequency curve for the distribution.\n(b) Use the curve to estimate the :\n(i) number of students who scored marks between 32 and 74 ; (ii) pass mark, if 18% of the students failed ; (iii) lowest mark for distinction, if 8% of the students passed with distinction.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0036",
+      "type": "theory",
+      "stem": "(a) Two Mathematics books, 5 different Physics books and 3 different Chemistry are to be arranged on a shelf. How many arrangements are possible if ;\n(i) books on the same subject must stand together?  (ii) only the Physics books must stand together?\n(b) In a certain community, 13 out of every 20 persons speak English. If 8 persons are selected at random from the community, find, correct to three significant figures, the probability that at least 3 of them speak English.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0037",
+      "type": "theory",
+      "stem": "Four vectors \\(r = \\alpha i + \\beta j\\), where \\(\\alpha \\text{ and } \\beta\\) are constants, \\(s = 2i -j, m = 3i + 2j\\) and \\(n = i + j\\) are such that the magnitude of r is three times as s and is parallel to the vactor (m - n).\n(a) Find the values of \\(\\alpha\\) and \\(\\beta\\).\n(b) Calculate the magnitude and direction of (r - s).",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0038",
+      "type": "theory",
+      "stem": "A particle is projected vertically upwards from the ground with speed \\(30ms^{-1}\\). Calculate the :\n(a) maximum height reached by the particle;\n(b) time taken by the particle to return to the ground;\n(c) time(s) taken for the particle to attain a height of 40m above the ground. [Take \\(g = 10ms^{-2}\\)]",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-further-mathematics-theory-0039",
+      "type": "theory",
+      "stem": "A binary operation A is defined on the set of real numbers, R, by \\(a \\Delta b = a^{3} - b^{3}\\). Without using calculator, find the value of \\((\\sqrt{3} + \\sqrt{2}) \\Delta (\\sqrt{3} - \\sqrt{2})\\) leaving the answer in surd form.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0040",
+      "type": "theory",
+      "stem": "Points (2, 1) and (6, 7) are opposite vertices of a square which is inscribed in a circle. Find the :\n(a) centre of the circle ; (b) equation of the circle.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0041",
+      "type": "theory",
+      "stem": "If \\(f ' '(x) = 2\\), \\(f ' (1) = 0\\) and \\(f(0) = - 8\\), find f(x).",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0042",
+      "type": "theory",
+      "stem": "Solve : \\(\\tan (2x - 15)° - 1 = 0\\), for values of x such that \\(0° \\leq x \\leq 360°\\).",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0043",
+      "type": "theory",
+      "stem": "A car moving with an initial velocity, u, travels in a straight line with a constant acceleration of 3ms\\(^{-2}\\) until it attains a velocity of 33ms\\(^{-1}\\) after 6 seconds. Calculate the distance travelled by the car.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0044",
+      "type": "theory",
+      "stem": "Five finalists in a beauty pageant were ranked by two judges X and Y as shown in the table :\n\n \n \n  Judges\n  Anne\n  Linda\n  Susan\n  Rose\n  Erica\n \n \n X\n 1\n 4\n 3\n 5\n 2\n \n \n Y\n 3\n 2\n 4\n 5\n 1\n \n \n\nCalculate the Spearman's rank correlation coefficient.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0045",
+      "type": "theory",
+      "stem": "There are 8 boys and 6 girls in a class. If two students are selected at random from the class, find the probability that they are of\n(a) the same sex ;\n(b) different sex.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0046",
+      "type": "theory",
+      "stem": "Forces of magnitude 3N, 4N and 2N act along the vectors \\(j ; -i + j\\) and \\(i + j\\) respectively. Calculate, correct to one decimal place, the magnitude of the resultant of the forces.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0047",
+      "type": "theory",
+      "stem": "(a) The functions \\(f : x \\to x^{2} + 1\\) and \\(g : x \\to 5 - 3x\\) are defined on the set of the real numbers, R.\n(i) State the domain of \\(f^{-1}\\), the inverse of f ; (ii) find \\(g^{-1} (2)\\).\n(b) Evaluate : \\(\\int \\frac{(x + 3)}{x^{2} + 6x + 9} \\mathrm {d} x\\)",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0048",
+      "type": "theory",
+      "stem": "(a) If \\(\\frac{\\sqrt{5} + 4}{3 - 2\\sqrt{5}} - \\frac{2 + \\sqrt{5}}{4 - 2\\sqrt{5}} = a + b\\sqrt{5}\\), find the values of a and b.\n(b)(i) Evaluate : \\(\\begin{vmatrix} 2 & -1 & 2 \\\\ 1 & 3 & 4 \\\\ 1 & 2 & 1 \\end{vmatrix}\\)\n(ii) Using the result in b(i), find, correct to two decimal places, the value of x in the system of equations.\n\\(2x - y + 2z + 5 = 0\\)\n\\(x + 3y + 4z - 1 = 0\\)\n\\(x + 2y + z + 2 = 0\\)",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0049",
+      "type": "theory",
+      "stem": "(a)(i) Write down the binomial expansion of \\((1 + x)^{4}\\).\n(ii) Use the result in (a)(i) to evaluate, correct to three decimal places \\((\\frac{5}{4})^{4}\\).\n(b) The first, second and fifth terms of a linear sequence (A.P) are three consecutive terms of an exponential sequence (G.P). If the first term of the linear sequence is 7, find the common difference.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0050",
+      "type": "theory",
+      "stem": "The table shows the distribution of the heights of a group of people.\n\n \n \n \n Height\n(m)\n \n 0.4 - 0.5\n 0.6 - 0.9\n 1.0 - 1.2\n 1.3 - 1.4\n 1.5 - 1.7\n \n \n Number of people\n 2\n 8\n 12\n 6\n 6\n \n \n\n(a) Draw a histogram to illustrate the distribution.\n(b) Using an assumed mean of 1.1m, find, correct to one decimal place, the mean height of the group.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0051",
+      "type": "theory",
+      "stem": "(a) Edem and his wife were invited to a dinner by a family of 5. They all sat in such a way in such a way that Edem sat next to his wife. Find the number of ways of seating them in a row.\n(b) A bag contains 4 red and 5 black identical balls. If 5 balls are selected at random, one after the other with replacement, find the probability that :\n(i) a red ball was picked 3 times ; (ii) a black ball was picked at most 2 times.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0052",
+      "type": "theory",
+      "stem": "(a) Given that \\(\\overrightarrow{AB} = \\begin{pmatrix} 4 \\\\ 5 \\end{pmatrix}\\) and \\(\\overrightarrow{BC} = \\begin{pmatrix} -3 \\\\ 5 \\end{pmatrix}\\); find the :\n(i) angle between the vectors AB and AC ; (ii) unit vector along \\(\\overrightarrow{AB} - \\overrightarrow{BC}\\).\n(b) P, Q, R and M are points in the \\(O_{XY}\\) plane. If \\(\\overrightarrow{PQ} = 2i + 8j , \\overrightarrow{PR} = 11i - 12j\\) and M divides QR internally in the ratio 3 : 7, find \\(\\overrightarrow{PM}\\).",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0053",
+      "type": "theory",
+      "stem": "(a) A bucket full of water with a mass of 8kg is pulled out of a well with a light inextensible rope. Find its acceleration when tha tension in the rope is 150N. [Take \\(g = 10ms^{-2}\\)].\n(b) A mass of 12kg is acted upon by a force F, changing its speed from 15 m/s to 25 m/s after covering a distance of 50m. Find the :\n(i) value of F ; (ii) distance covered when its speed is 35 m/s.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-further-mathematics-theory-0054",
+      "type": "theory",
+      "stem": "Solve \\((\\log_{2} m)^{2} - \\log_{2} m^{3} = 10\\).",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0055",
+      "type": "theory",
+      "stem": "A binary operation \\(\\ast\\) is defined on the set of rational numbers by \\(m \\ast n = \\frac{m^{2} - n^{2}}{2mn}, m \\neq 0 ; n \\neq 0\\).\n(a) Find \\(-3 \\ast 2\\).\n(b) Show whether or not \\(\\ast\\) is associative.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0056",
+      "type": "theory",
+      "stem": "The table shows the distribution of the ages of a group of people in a village.\n\n \n \n Ages (in years)\n 15 - 18\n 19 - 22\n 23 - 26\n 27 - 30\n 31 - 34\n 35 - 38\n \n \n Frequency\n 40\n 33\n 25\n 10\n 8\n 4\n \n \n\nUsing an assumed mean of 24.5, calculate the mean of the distribution.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0057",
+      "type": "theory",
+      "stem": "A body of mass 5 kg resting on a smooth horizontal plane, is acted upon by force 6i + 2j, 5i + 4j and 4i - j. Calculate the:\n(a) velocity of the body\n(b) Magnitude of its velocity after 4s.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0058",
+      "type": "theory",
+      "stem": "An object is projected vertically upwards with a velocity of 80 m/s. Find the :\n(a) Maximum height reached\n(b) Time taken to return to the point of projection. [Take g = \\(10 ms^{-2}\\)].",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0059",
+      "type": "theory",
+      "stem": "(a) Simplify \\(\\frac{\\sqrt{75} - 3}{\\sqrt{3} + 1}\\), leaving your answer in the form \\(a + b\\sqrt{c}\\); where a, b and c are rational numbers.\n(b) The points (7, 3), (2, 8) and (-3, 3) lie on a circle. Find the (i) equation and (ii) radius of the circle.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0060",
+      "type": "theory",
+      "stem": "(a) The gradient of the tangent to the curve \\(y = 4x^{3}\\) at points P and Q is 108. Find the coordinates of P and Q.\n(b) Given that \\(A = 45°, B = 30°, \\sin (A + B) = \\sin A \\cos B + \\sin B \\cos A\\) and \\(\\cos (A + B)  = \\cos A \\cos B - \\sin A \\sin B\\)\n(i) Show that \\(\\sin 15° = \\frac{\\sqrt{6} - \\sqrt{2}}{4}\\) and \\(\\cos 15° = \\frac{\\sqrt{6} + \\sqrt{2}}{4}\\)\n(ii) hence find \\(\\tan 15°\\).",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0061",
+      "type": "theory",
+      "stem": "If \\(\\alpha\\) and \\(\\beta\\) are the roots of \\(3x^{2} + 5x + 1 = 0\\), evaluate \\(27(\\alpha^{3} + \\beta^{3})\\).",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0062",
+      "type": "theory",
+      "stem": "Find the gradient of \\(xy^{2} + x^{2} y = 4xy\\) at the point (1, 3).",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0063",
+      "type": "theory",
+      "stem": "The position vectors of P, Q and R are \\(11i + j, 5i + \\frac{13}{3}j\\) and \\(2i + 6j\\) respectively. \n(a) Show that P, Q and R lie on a straight line.\n(b) Find the ratio of \\(|\\overrightarrow{PQ}| : |\\overrightarrow{QR}|\\)",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0064",
+      "type": "theory",
+      "stem": "A committee of 3 is formed from a panel of 5 men and 3 women. Find the :\n(a) number of ways of forming the committee ;\n(b) probability that at least one woman is on the committee.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0065",
+      "type": "theory",
+      "stem": "The table shows the distribution of the lengths of 20 iron rods measured in metres :\n\n \n \n Length (m)\n 1.0 - 1.1\n 1.2 - 1.3\n 1.4 - 1.5\n 1.6 - 1.7\n 1.8 - 1.9\n \n \n Frequency\n 2\n 3\n 8\n 5\n 2\n \n \n\nUsing an assumed mean of 1.45, calculate the mean of the distribution.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0066",
+      "type": "theory",
+      "stem": "(a) Differentiate \\((x - 3)(x^{2} + 5)\\) with respect to x.\n(b) If \\((x + 1)^{2}\\) is a factor of \\(f(x) = x^{3} + ax^{2} + bx + 3\\), where a and b are constants, find the :\n(i) values of a and b ; (ii) zeros of f(x).",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0067",
+      "type": "theory",
+      "stem": "(a) Express \\(\\frac{5 + \\sqrt{2}}{3 - \\sqrt{2}} - \\frac{5 - \\sqrt{2}}{3 + \\sqrt{2}}\\) in the form \\(a + b\\sqrt{2}\\).\n(b) Solve the following equations simultaneously using the determinant method.\n\\(3x - y - z = -2\\)\n\\(x + 5y + 2z = 5 \\)\n\\(2x + 3y + z = 0\\)",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0068",
+      "type": "theory",
+      "stem": "(a) If \\(f(x) = \\frac{x - 3}{2x - 1} , x \\neq \\frac{1}{2}\\) and \\(g(x) = \\frac{x - 1}{x + 1}, x \\neq -1\\), fing \\(g \\circ f\\).\n(b)(i) Sketch the curve \\(y = 9x - x^{3}\\) ; (ii) Calculate the total area bounded by the x- axis and the curve \\(y = 9x - x^{3}\\).",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0069",
+      "type": "theory",
+      "stem": "The histogram above represents the scores of some candidates in an examination. \n(a) Using the histogram, construct a frequency distribution table indicating clearly the class intervals ;\n(b) Draw a cumulative frequency curve of the distribution and use it to estimate the :\n(i) median ; (ii) quartile deviation.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0070",
+      "type": "theory",
+      "stem": "The probabilities that Kofi, Kwasi and Ama will pass a certain examination are \\(\\frac{9}{10}, \\frac{4}{5}\\) and x respectively. If the probability that only one of them will pass the examination is \\(\\frac{9}{50}\\), find the :\n(a) value of x ; \n(b) probability that at least one of them will pass the examination.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0071",
+      "type": "theory",
+      "stem": "(a) Given that \\(x = 3i - j, y = 2i + kj\\) and the cosine of the angle between x and y is \\(\\frac{\\sqrt{5}}{5}\\), find the values of the constant k.\n(b) In the quadrilateral ABCD, \n \\(\\overrightarrow{AB} = \\begin{pmatrix} -5 \\\\ -1 \\end{pmatrix}, \\overrightarrow{AC} = \\begin{pmatrix} -6 \\\\ -9 \\end{pmatrix}\\)\nand \\(\\overrightarrow{BD} = \\begin{pmatrix} 4 \\\\ -7 \\end{pmatrix}\\). Show whether or not ABCD is a parallelogram.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0072",
+      "type": "theory",
+      "stem": "(a) A(-1, 2), B(3, 5) and C(4, 8) are the vertices of triangle ABC. Forces whose magnitudes are 5N and \\(3\\sqrt{10}\\)N act along \\(\\overrightarrow{AB}\\) and \\(\\overrightarrow{CB}\\) respectively. Find the direction of the resultant of the forces.\n(b) A particle starts from rest and moves in a straight line. It attains a velocity of 20 m/s after covering a distance of 8 metres. Calculate : \n(i) its acceleration ; (ii) the time it will take to cover a distance of 40 metres.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-further-mathematics-theory-0073",
+      "type": "theory",
+      "stem": "(a) If the coefficient of \\(x^{2}\\) and \\(x^{3}\\) in the expansion of \\((p + qx)^{7}\\) are equal, express q in terms of p.\n(b) A man makes a weekly contribution into a fund. In the first week, he paid N180.00, second week N260.00, third week N340.00 and so on. How much would he have contributed in 16 weeks?",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0074",
+      "type": "theory",
+      "stem": "Calculate the gradient of the curve \\(x^{3} + y^{3} - 2xy = 11\\) at (2, -1).",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0075",
+      "type": "theory",
+      "stem": "A side of a rectangle is three times the other. If the perimeter increases by 2%, find the percentage increase in the area of the rectangle.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0076",
+      "type": "theory",
+      "stem": "The line \\(2y = x + 3\\) meets the circle \\(x^{2} + y^{2} - 2x + 6y - 15 = 0\\) at points M and N, where N is in the first quadrant. Find the coordinates of M and N.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0077",
+      "type": "theory",
+      "stem": "Three school prefects are to be chosen from four girls and five boys. What is the probability that :\n(a) only boys will be chosen ;\n(b) more girls than boys will be chosen ?",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0078",
+      "type": "theory",
+      "stem": "The table shows the distribution of ages of 22 students in a school.\n\n \n \n Age (years)\n 12-14\n 15-17\n 18-20\n 21-23\n 24-26\n \n \n Frequency\n 6\n 10\n 3\n 2\n 1\n \n \n\nUsing an assumed mean of 19, calculate, correct to three significant figures, the :\n(a) mean age ; (b) standard deviation ; of the distribution.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0079",
+      "type": "theory",
+      "stem": "The initial velocity of a particle of mass 0.1kg is 40 m/s in the direction of the unit vector j. The velocity of the particle changed to 30 m/s in the direction of the unit vector i. Find the change in momentum.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0080",
+      "type": "theory",
+      "stem": "A stone is dropped vertically downwards from the top of a tower of height 45m with a speed of 20 ms\\(^{-1}\\). Find the :\n(a) time it takes to reach the ground ;\n(b) speed with which it hits the ground. [Take \\(g = 10 ms^{-2}\\)].",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0081",
+      "type": "theory",
+      "stem": "(a) Differentiate \\(\\frac{x^{2} + 1}{(x + 1)^{2}}\\) with respect to x.\n(b)(i) Evaluate \\(\\begin{vmatrix} 1 & 2 & -1 \\\\ 2 & 3 & -1 \\\\ -1 & 1 & 3 \\end{vmatrix}\\).\n(ii) Using the answer in (b)(i), solve the system of equations.\n\\(x + 2y - z = 4\\)\n\\(2x + 3y - z = 2\\)\n\\(-x + y + 3z = -1\\).",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0082",
+      "type": "theory",
+      "stem": "(a) Using a scale of 2 cm to 30° on the x- axis, 2 cm to 0.2 units on the y- axis, on the same graph sheet, draw the graphs of \\(y = \\sin 2x\\) and \\(y = \\cos x\\) for \\(0° \\leq x \\leq 210°\\) at intervals of 30°.\n(b) Using the graphs in (a), find the truth set of :\n(i) \\(\\sin 2x = 0\\) ; (ii) \\(\\sin 2x - \\cos x = 0\\).",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0083",
+      "type": "theory",
+      "stem": "(a) The sum of the first three terms of a decreasing exponential sequence (G.P) is equal to 7 and the product of these three is equal to 8. Find the :\n(i) common ratio ; (ii) first three terms of the sequence.\n(b) Using the trapezium rule with the ordinates at x = 1, 2, 3, 4 and 5, calculate, correct to two decimal places, the value of \\(\\int_{1} ^{5} (x + \\frac{2}{x^{2}}) \\mathrm {d} x\\).",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0084",
+      "type": "theory",
+      "stem": "(a) Find the maximum and minimum points of the curve \\(y = 2x^{3} - 3x^{2} - 12x + 4\\).\n(b) Sketch the curve in (a) above.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0085",
+      "type": "theory",
+      "stem": "The table gives the relationship between the height, in metres, of a plant and the number of days it is left to grow.\n\n \n \n \n Number of days\n(x)\n \n 10\n 20\n 30\n 40\n 50\n 60\n 70\n 80\n \n \n Height (y)\n 1.0\n 1.1\n 1.2\n 1.4\n 1.6\n 1.8\n 2.0\n 2.3\n \n \n\n(a) Using a scale of 2 cm to represent 0.5 units on the y- axis and 2cm to 10 units on the x- axis, draw a scatter diagram for the information.\n(b) Find \\(\\bar{x}\\), the mean of x, and \\(\\bar{y}\\), the mean of y, and plot \\((\\bar{x}, \\bar{y})\\) on the diagram.\n(c) Draw the line of best fit to pass through \\((\\bar{x}, \\bar{y})\\) and \\((10, 1)\\).\n(d) From graph, find the :\n(i) equation of the line of best fit ; (ii) height of plant in 75 days.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0086",
+      "type": "theory",
+      "stem": "(a) A bag contains 5 blue, 4 green and 3 yellow balls. All the balls are identical except for colour. Three balls are drawn at random without replacement. Find the probability that : (i) all three balls have the same colour ; (ii) two balls have the same colour.\n(b) The table shows the ranks of the marks scored by 7 candidates in Physics and Chemistry tests.\n\n \n \n Physics\n 6\n 5\n 4\n 3\n 2\n 7\n 1\n \n \n Chemistry\n 7\n 6\n 2\n 4\n 1\n 5\n 3\n \n \n\nCalculate the Spearman's rank correlation coefficient.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0087",
+      "type": "theory",
+      "stem": "(a) The probability that a man wins a race is 0.8. In four different races, what is the probability that he wins : (i) all races ; (ii) no race ; (iii) at most 3 races ?\n(b) A class consists of 5 girls and 10 boys. If a committee of 5 is chosen at random from the class, find the probability that :\n(i) 3 boys are selected ; (ii) at least one girl is selected.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0088",
+      "type": "theory",
+      "stem": "(a) Three vectors a, b and c are \\(\\begin{pmatrix} 8 \\\\ 3 \\end{pmatrix}, \\begin{pmatrix} 6 \\\\ -5 \\end{pmatrix}\\) and \\(\\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}\\) respectively. Find the vector d such that \\(|d| = \\sqrt{41}\\) and d is in the direction of \\(a + b - 2c\\).\n(b) The coordinates of A and B are (3, 4) and (3, n) respectively. If AOB = 30°, find, correct to 2 decimal places, the values of n.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0089",
+      "type": "theory",
+      "stem": "A particle is under the action of forces \\(P = (4N, 030°)\\) and \\(R = (10N, 300°)\\). Find the force that will keep the particle in equilibrium.",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0090",
+      "type": "theory",
+      "stem": "The displacement S metres of a particle from a fixed point O at time t seconds is given by \\(S = t^{2} - 6t + 5\\).\n(a) On a graph sheet, draw a displacement- time graph for the interval \\(0 \\leq x \\leq 6\\).\n(b) From the graph, find the : (i) time at which the velocity is zero ; (ii) average velocity over the interval \\(0 \\leq x \\leq 4\\) ; (iii) total distance covered in the interval \\(0 \\leq x \\leq 5\\).",
+      "marks": 1,
+      "year": 2013
+    },
+    {
+      "id": "waec-further-mathematics-theory-0091",
+      "type": "theory",
+      "stem": "Two functions g and h are defined on the set R of real numbers by \\(g : x \\to x^{2} - 2\\) and \\(h : x \\to \\frac{1}{x + 2}\\). Find : \n(a) \\(h^{-1}\\), the inverse of h ;\n(b) \\(g \\circ h\\), when \\(x = -\\frac{1}{2}\\).",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0092",
+      "type": "theory",
+      "stem": "Express \\(3x^{2} - 6x + 10\\) in the form \\(a(x - b)^{2} + c\\), where a, b and c are integers. Hence state the minimum value of \\(3x^{2} - 6x + 10\\) and the value of x for which it occurs.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0093",
+      "type": "theory",
+      "stem": "The twenty-first term of an Arithmetic Progression is \\(5\\frac{1}{2}\\) and the sum of the first twenty-one terms is \\(94\\frac{1}{2}\\). Find the :\n(a) first term ; (b) common difference ; (c) sum of the first thirty terms.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0094",
+      "type": "theory",
+      "stem": "Write down the first three terms of the binomial expansion \\((1 + ax)^{n}\\) in ascending powers of x. If the coefficients of x and x\\(^{2}\\) are 2 and \\(\\frac{3}{2}\\) respectively, find the values of a and n.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0095",
+      "type": "theory",
+      "stem": "The gradient function of \\(y = ax^{2} + bx + c\\) is \\(8x + 4\\). If the function has a minimum value of 1, find the values of a, b and c.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0096",
+      "type": "theory",
+      "stem": "Three forces \\(-63j , 32.14i + 38.3j\\) and \\(14i - 24.25j\\) act on a body of mass 5kg. Find, correct to one decimal place, the :\n(a) magnitude of the resultant force ;\n(b) acceleration of the body.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0097",
+      "type": "theory",
+      "stem": "The marks scored by 35 students in a test are given in the table below.\n\n \n \n Marks\n 1-5\n 6-10\n 11-15\n 16-20\n 21-25\n 26-30\n \n \n Frequency\n 2\n 7\n 12\n 8\n 5\n 1\n \n \n\nDraw a histogram for the distribution.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0098",
+      "type": "theory",
+      "stem": "(a) The polynomial \\(f(x) = x^{3} + px^{2} - 10x + q\\) is exactly divisible by \\(x^{2} + x - 6\\). Find the :\n(i) values of p and q ; (ii) third factor.\n(b) The volume of a cube is increasing at the rate of \\(2\\frac{1}{2} cm^{3} s^{-1}\\). Find the rate of change of the side of the base when its length is 2cm.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0099",
+      "type": "theory",
+      "stem": "(a) Write down the matrix A of the linear transformation \\(A(x, y) \\to (2x -y, -5x + 3y)\\).\n(b) If \\(B = \\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix}\\), find :\n(i) \\(A^{2} - B^{2}\\) ; (ii) matrix \\(C = B^{2} A\\) ; (iii) the point \\(M(x, y)\\) whose image under the linear transformation \\(C\\) is \\(M' (10, 18)\\).\n(c) What is the relationship between matrix A and matrix C?",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0100",
+      "type": "theory",
+      "stem": "(a) Evaluate : \\(\\int_{1} ^{4} \\frac{x(3x - 2)}{2\\sqrt{x}} \\mathrm {d} x\\)\n(b) The equation of a circle is given by \\(2x^{2} + 2y^{2} - 8x + 5y - 10 = 0\\). Find the :\n(i) coordinates of the centre ; (ii) radius of the circle .",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0101",
+      "type": "theory",
+      "stem": "(a)(i) Find the sum of the series \\(A(1 + r) + A(1 + r)^{2} + ... + A(1 + r)^{n}\\).\n(ii) Given that r = 8% and A = GH 40.00, find the sum of the 6th to 10th terms of the series in (i).\n(b) Find the equation of the tangent to the curve \\(y = \\frac{1}{x}\\) at the point on the curve when x = 2.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0102",
+      "type": "theory",
+      "stem": "(a) A fair die with six faces is thrown six times. Calculate, correct to three decimal places, the probability of obtaining :\n(i) exactly three sixes ; (ii) at most three sixes.\n(b) Eight percent of screws produced by a machine are defective. From a random sample of 10 screws produced by the machine, find the probability that :\n(i) exactly two will be defective ; (ii) not more than two will be defective.",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0103",
+      "type": "theory",
+      "stem": "The table gives the distribution of heights in metres of 100 students.\n\n \n \n Height\n 1.40-1.42\n 1.43-1.45\n 1.46-1.48\n 1.49-1.51\n 1.52-1.54\n 1.55-1.57\n 1.58-1.60\n 1.61-1.63\n \n \n Freq\n 2\n 4\n 19\n 30\n 24\n 14\n 6\n 1\n \n \n\n(a) Calculate the : (i) mean height ; (ii) mean deviation of the distribution.\n(b) What is the probability that the height of a student selected at random is greater than the mean height of the distribution?",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0104",
+      "type": "theory",
+      "stem": "(a) Two items are selected at random from four items labelled (p, q, r, s).\n(i) List the sample space if sampling is done (1) with replacement ; (2) without replacement.\n(ii) Find the probability that r is at least one of the two objects selected : (1) in a(i)1 ; (2) in a(i)2.\n(b) How many whole numbers from 100 to 999 are divisible by (i) 4 ; (ii) both 3 and 4?",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0105",
+      "type": "theory",
+      "stem": "(a) A body P of mass 5kg is suspended by two light inextensible strings AP and BP attached to a ceiling. If the strings are inclined at angles 40° and 30° respectively to the downward vertical, find the tension in each of the strings. [Take \\(g = 10 ms^{-2}\\)].\n(b) A constant force F acts on a toy car of mass 5 kg and increases its velocity from 5 ms\\(^{-1}\\) to 9 ms\\(^{-1}\\) in 2 seconds. Calculate : \n(i) the magnitude of the force ; (ii) velocity of the toy car 3 seconds after attaining a velocity of 9 ms\\(^{-1}\\).",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0106",
+      "type": "theory",
+      "stem": "(a) Find the angle between the vectors \\(a = \\begin{pmatrix} -3 \\\\ 4 \\end{pmatrix}\\) and \\(b = \\begin{pmatrix} -8 \\\\ -15 \\end{pmatrix}\\).\n(b) Given that \\(a = (4N, 060°)\\) and \\(b = (3N, 120°)\\), find, in component form, the unit vector along \\(a - b\\).",
+      "marks": 1,
+      "year": 2012
+    },
+    {
+      "id": "waec-further-mathematics-theory-0107",
+      "type": "theory",
+      "stem": "If \\(f(x) = 6x^{3} + 13x^{2} + 2x - 5\\) and \\(f(-1) = 0\\), find the factors of f(x).",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0108",
+      "type": "theory",
+      "stem": "(a) Using the substitution \\(u = 5 - x^{2}\\), evaluate \\(\\int_{1}^{2} \\frac{x}{\\sqrt{5 - x^{2}}} \\mathrm {d} x\\).\n(b) If \\(y = px^{2} + qx; \\frac{\\mathrm d y}{\\mathrm d x} = 6x + 7\\) and \\(\\frac{\\mathrm d^{2} y}{\\mathrm d x^{2}} = 6\\), find the values of p and q.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0109",
+      "type": "theory",
+      "stem": "(a) A man P has 5 red, 3 blue and 2 white buses. Another man Q has 3 red, 2 blue and 4 white buses. A bus owned by P is involved in an accident with a bus belonging to Q. Calculate the probability that the two buses are not of the same color.\n(b) A man travels from Nigeria to Ghana by air and from Ghana to Liberia by ship. He returns by the same means. He has 6 airlines and 4 shipping lines to choose from. In how many ways can he make his journey without using the same airline or shipping line twice?",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0110",
+      "type": "theory",
+      "stem": "The table shows the distribution of hours spent at work by the employees of a factory in a week.\n\n \n \n Time (in hours)\n 20 - 29\n 30 - 39\n 40 - 49\n 50 - 59\n 60 - 69\n 70 - 79\n \n \n No of persons\n 8\n 11\n 23\n 25\n 8\n 5\n \n \n\n(a) Draw an ogive for the distribution.\n(b) Using your graph, estimate the (i) lower quartile   (ii) median  (iii) 40th percentile  (iv) number of employees that spent at least 50 hours 30 minutes at work.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0111",
+      "type": "theory",
+      "stem": "(a) Two pupils are chosen at random from a group of 4 boys and 5 girls. Find the probability that the two pupils chosen would be boys.\n(b) Twenty percent of the total production of transistors produced by a machine are below standard. If a random sample of 6 transistors produced by the machine is taken, what is the probability of getting (i) exactly 2 standard transistors  (ii) exactly 1 standard transistor  (iii) at least 2 standard transistors  (iv) at most 2 standard transistors?",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0112",
+      "type": "theory",
+      "stem": "(a) A body of mass 15 kg is suspended at a point P by two light inextensible strings \\(\\overrightarrow{XP}\\) and \\(\\overrightarrow{YP}\\). The strings are inclined at 60° and 40° respectively to the downward vertical. Find, correct to two decimal places, the tensionsin the strings. [Take g = \\(10 ms^{-2}\\)].\n(b) The height h metres, of a ball thrown into the air is \\(2 + 20t + kt^{2}\\), after t seconds. If it takes 2 seconds for the ball to reach its highest point, find\n(i) the value of k  (ii) its highest point from the point of throw.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0113",
+      "type": "theory",
+      "stem": "If \\(\\alpha\\) and \\(\\beta\\) are the roots of the equation \\(2x^{2} - 7x + 4 = 0\\), find the equation whose roots are \\(\\frac{\\alpha}{\\beta}\\) and \\(\\frac{\\beta}{\\alpha}\\).",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0114",
+      "type": "theory",
+      "stem": "(a) Write down the binomial expansion of \\((2 - x)^{5}\\) in ascending powers of x.\n(b) Use your expansion in (a) to evaluate \\((1.98)^{5}\\) correct to four decimal places.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0115",
+      "type": "theory",
+      "stem": "Solve \\(2^{(2y + 2)} - 9(2^{y}) = -2\\).",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0116",
+      "type": "theory",
+      "stem": "(a) Write the following as column vectors: \\(r = (10N, 090°) ; q = (8N, 135°)\\).\n(b) Use your answer in (a) to find \\((r + q)\\).",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0117",
+      "type": "theory",
+      "stem": "(a) Evaluate \\(\\frac{^{9}P_{3}}{^{15}C_{3}} + \\frac{^{5}C_{3}}{^{3}P_{2}}\\) correct to two decimal places.\n(b) A committee of 2 tutors and 5 pupils is to be formed among 6 tutors and 10 pupils. In how many ways can this be done if one particular tutor must be on the committee and two particular pupils must not be on the committee?",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0118",
+      "type": "theory",
+      "stem": "A tyre manufacturing company researched into the life span of one type of their motorcycle tyres. The results were as follows :\n\n \n \n \n Distance\n(100km)\n \n 10-19\n 20-29\n 30-39\n 40-49\n 50-59\n 60-69\n \n \n Number of tyres\n 30\n 69\n 93\n 57\n 36\n 15\n \n \n\n(a) Draw a histogram for the distribution.\n(b) Use the histogram to estimate the mode.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0119",
+      "type": "theory",
+      "stem": "A particle of mass 400g is moving under the action of two forces \\(F_{1} = (35N, 210°), F_{2} = (35\\sqrt{3} N, 300°)\\) and a resistance of 40N. Find the magnitude of the \n(a) resultant of \\(F_{1}\\) and \\(F_{2}\\).\n(b) resultant force acting on the particle.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0120",
+      "type": "theory",
+      "stem": "(a) Find, from first principles, the derivative of \\(f(x) = (2x + 3)^{2}\\).\n(b) Evaluate : \\(\\int_{1} ^{2} \\frac{(x + 1)(x^{2} - 2x + 2)}{x^{2}} \\mathrm {d} x\\)",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0121",
+      "type": "theory",
+      "stem": "(a) If \\(A = \\begin{pmatrix} -2 & 5 \\\\ 4 & 3 \\end{pmatrix}\\) and \\(B = \\begin{pmatrix} 3 & 1 \\\\ 2 & 3 \\end{pmatrix}\\), find the values of x and y such that \\(BA = 2\\begin{pmatrix} 3 & 7 \\\\ -2 & x \\end{pmatrix} + \\begin{pmatrix} y & 4 \\\\ 12 & -3 \\end{pmatrix}\\).\n(b) Two functions, f and g are defined by \\(f : x \\to \\frac{1}{2}x + 1\\) and \\(g : x \\to \\frac{5x - 1}{3}\\). Find :\n(i) \\(g^{-1}\\) ; (ii) \\(g^{-1} \\circ f\\).",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0122",
+      "type": "theory",
+      "stem": "The images of points (2, -3) and (4, 5) under a linear transformation A are (3, 4) and (5, 6) respectively. Find the :\n(a) matrix A ; (b) inverse of A ; (c) point whose image is (-1, 1).",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0123",
+      "type": "theory",
+      "stem": "(a) Find the equation of the tangent to curve \\(\\frac{x^{2}}{4} + y^{2} = 1\\) at point \\(1, \\frac{\\sqrt{3}}{2}\\).\n(b) Express \\(\\frac{3x + 2}{x^{2} + x - 2}\\) in partial fractions.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0124",
+      "type": "theory",
+      "stem": "A survey conducted revealed that four out of every twenty taxi drivers do not have a valid driving license. If 6 drivers are selected at random, calculate, correct to three decimal places, the probability that\n(a) exactly 2 ;\n(b) more than 3 ;\n(c) at least 5; have valid driving license.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0125",
+      "type": "theory",
+      "stem": "The table shows the frequency distribution of marks scored by some candidates in an examination.\n\n \n \n Marks\n 0-9\n 10-19\n 20-29\n 30-39\n 40-49\n 50-59\n 60-69\n 70-79\n 80-89\n 90-99\n \n \n Freq\n 2\n 5\n 8\n 18\n 20\n 15\n 5\n 4\n 2\n 1\n \n \n\n(a) Draw the cumulative frequency curve of the distribution.\n(b) Use your graph to estimate the :\n(i) semi-interquartile range of the distribution; (ii) percentage of candidates who passed with distinction if the least mark for distinction was 72.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0126",
+      "type": "theory",
+      "stem": "A bag contains 4 red, 6 blue and 8 green identical marbles.\n(a) If three marbles are drawn at random, without replacement, calculate the probability that :\n(i) all will be green ; (ii) all will have the same colour.\n(b) If each marble is replaced before another is drawn, calculate the probability that all will have the same colour.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0127",
+      "type": "theory",
+      "stem": "(a) An object P of mass 6.5kg is suspended by two light inextensible strings, AP and BP. The strings make angles 50° and 60° respectively with the downward vertical.\n(i) Express the forces acting on P in component form; (ii) If P is at rest, write down the vector equation connecting all the forces; (iii) Calculate, correct to one decimal place, the tensions in the strings.\n(b) A particle of mass 5 kg moves with initial velocity \\(\\frac{1}{2} m/s\\) and final velocity \\(\\frac{3}{4} m/s \\). Find the magnitude of its change in momentum.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0128",
+      "type": "theory",
+      "stem": "(a) \\(m \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} + n \\begin{pmatrix} -1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ -4 \\end{pmatrix}\\) where m and n are scalars. Find the value of (m + n).\n(b) A(-1, 3), B(2, -1) and C(5, 3) are the vertices of \\(\\Delta\\) ABC.\n(i) Express in column notation, the unit vectors parallel to AB and AC.\n(ii) Use a dot product to calculate \\(\\stackrel \\frown{BAC}\\), correct to the nearest degree.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0129",
+      "type": "theory",
+      "stem": "(a) Forces \\(F_{1} = (3N, 210°)\\) and \\(F_{2} = (4N, 120°)\\) act on a particle of mass 7kg which is at rest. Calculate the  :\n(i) acceleration of the particle ; (ii) velocity of the particle after 3 seconds.\n(b) \\(F_{1} = (2i + 3j)N, F_{2} = (-5j)N \\) and \\(F_{3} = (6i - 4j)N\\) act on a body. Find the magnitude and direction of the fourth force that will keep the body in equilibrium.",
+      "marks": 1,
+      "year": 2011
+    },
+    {
+      "id": "waec-further-mathematics-theory-0130",
+      "type": "theory",
+      "stem": "(a) Express \\(\\frac{2\\sqrt{2}}{\\sqrt{48} - \\sqrt{8} - \\sqrt{27}}\\) in the form \\(p + q\\sqrt{r}\\), where p, q and r are rational numbers. \n(b) If \\(V = A\\log_{10} (M + N)\\), express N in terms of M, V and A.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0131",
+      "type": "theory",
+      "stem": "If the quadratic equation \\((2x - 1) - p(x^{2} + 2) = 0\\), where p is a constant, has real roots :\n(a) show that \\(2p^{2} + p - 1 < 0\\);\n(b) find the values of p.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0132",
+      "type": "theory",
+      "stem": "The equation of a curve is \\(y = x(3 - x^{2})\\). Find the equation of its normal of the point where x = 2.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0133",
+      "type": "theory",
+      "stem": "If \\(3x^{2} + 2y^{2} + xy + x - 7 = 0\\), find \\(\\frac{\\mathrm d y}{\\mathrm d x}\\) at the point (-2, 1).",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0134",
+      "type": "theory",
+      "stem": "Five students are to be selected from a large population. If 60% of them are boys and the rest are girls, find the probability that :\n(a) exactly 3 of them are boys;\n(b) at least 3 of them are girls.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0135",
+      "type": "theory",
+      "stem": "The table shows the marks obtained by a group of students in a class test.\n\n \n \n Marks\n 40 - 44\n 45 - 49\n 50 - 54\n 55 - 59\n 60 - 64\n 65 - 69\n \n \n \n No of\nstudents\n \n 4\n 9\n 18\n 23\n 10\n 6\n \n \n\n(a) Draw a histogram for the distribution ;\n(b) Use your histogram to estimate the median of the distribution.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0136",
+      "type": "theory",
+      "stem": "The position vector of a particle of mass 3 kg moving along a space curve is given by \\(r = (4t^{3} - t^{2})i - (2t^{2} - t)j\\) at any time t seconds. Find the force acting on it at t = 2 seconds.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0137",
+      "type": "theory",
+      "stem": "A uniform plank PQ of length 8m and mass 10kg is supported horizontally at the end P and at point R, 3 metres from Q. A boy of mass 20 kg walks along the plank starting from P. If the plank is in equilibrium, calculate the \n(a) reactions at P and R when he walked 1.5 metres;\n(b) distance he had walked when the two reactions are equal;\n(c) distance he walked before the plank tips over.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0138",
+      "type": "theory",
+      "stem": "(a) The nth term of a sequence is given by \\(T_{n} = 4T_{n - 1} - 3\\). If twice the third term is five times the second term, find the first three terms of the sequence.\n(b) Given that \\(\\begin{pmatrix} 2 & 0 & 1 \\\\ 5 & -3 & 1 \\\\ 0 & 4 & 6 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ m \\\\ r \\end{pmatrix} = \\begin{pmatrix} k \\\\ 2 \\\\ 26 \\end{pmatrix}\\), find the values of the constants k, m and r.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0139",
+      "type": "theory",
+      "stem": "(a) Copy and complete the table for the relation: \\(y = 2\\cos x + 3\\sin x\\) for \\(0° \\leq x \\leq 360°\\).\n\n \n \n x\n 0°\n 30°\n 60°\n 90°\n 120°\n 150°\n 180°\n 210°\n \n \n y\n 2.00\n 3.23\n  \n  \n 1.60\n  \n  \n -3.23\n \n \n\n(b) Using a scale of 2 cm to 60° on the x- axis and 2 cm to one unit on the y- axis, draw the graph of \\(y = 2\\cos x + 3\\sin x\\) for \\(0° \\leq x \\leq 360°\\).\n(c) From the graph, find the : (i) maximum value of y, correct to two decimal places ; (ii) solution of the equation \\(\\frac{2}{3} \\cos x + \\sin x = \\frac{5}{6}\\).",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0140",
+      "type": "theory",
+      "stem": "(a) If \\(y = (2x + 3)^{7} + \\frac{x + 1}{2x - 1}\\), find the value of \\(\\frac{\\mathrm d y}{\\mathrm d x}\\) at x = -1.\n(b) Using the substitution, \\(u = x + 2\\), evaluate \\(\\int_{1} ^{2} \\frac{x - 1}{(x + 2)^{4}} \\mathrm d x\\).",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0141",
+      "type": "theory",
+      "stem": "The images of (3, 2) and (-1, 4) under a linear transformation T are (-1, 4) and (7, 11) respectively. P is another transformation where \\(P : (x, y) \\to (x + y, x + 2y)\\).\n(a) Find the matrices T and P of the linear transformations T and P;\n(b) Calculate TP.\n(c) Find the image of the point X(4, 3) under TP.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0142",
+      "type": "theory",
+      "stem": "The table gives the distribution of marks of 60 candidates in a test.\n\n \n \n Marks\n 23-25\n 26-28\n 29-31\n 32-34\n 35-37\n 38-40\n \n \n Frequency\n 3\n 7\n 15\n 21\n 10\n 4\n \n \n\n(a) Draw a cumulative frequency curve of the distribution.\n(b) From your curve, estimate the : (i) 80th percentile ; (ii) median ; (iii) semi-interquartile range.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0143",
+      "type": "theory",
+      "stem": "(a) Eight coins are tossed at once. Find, correct to three decimal places, the probability of obtaining :\n(i) exactly 8 heads ; (ii) at least 5 heads ; (iii) at most 1 head.\n(b) In how many ways can four letters from the word SHEEP be arranged (i) without any restriction ; (ii) with only one E.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0144",
+      "type": "theory",
+      "stem": "(a) A manufacturer produces light bulbs which are tested in the following way. A batch is accepted in either of the following cases:\n(i) a first sample of 5 bulbs contains no faulty bulbs ; (ii) a first sample of 5 bulbs contains at least one faulty bulb but a second sample of size 5 has no faulty bulb. If 10% of the bulbs are faulty, what is the probability that the batch is accepted?\n(b) A bag contains 15 identical marbles of which 3 are black, Keshi picks a marble at random from the bag and replaces it. If this is repeated 10 times; what is the probability that he :\n(i) did not pick a black ball? (ii) picked a black ball at most three times?",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0145",
+      "type": "theory",
+      "stem": "(a) Two ships M and N, moving with constant velocities, have position vectors (3i + 7j) and (4i + 5j) respectively. If the velocities of M and N are (5i + 6j) and (2i + 3j) and the distance covered by the ships after t seconds are in metres, find (i) MN ; (ii) |MN|, when t = 3 seconds.\n(b) A particle is acted upon by forces \\(F_{1} = 5i + pj ; F_{2} = qi + j ; F_{3} = -2pi + 3j\\) and \\(F_{4} = -4i + qj\\), where p and q are constants. If the particle remains in equilibrium under the action of these forces, find the values of p and q.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0146",
+      "type": "theory",
+      "stem": "A particle moves from point O along a straight line such that its acceleration at any time, t seconds is \\(a = (4 - 2t) ms^{-2}\\). At t = 0, its distance from O is 18 metres while its velocity is \\(5 ms^{-1}\\).\n(a) At what time will the velocity be greatest?\n(b) Calculate the : (i) time ; (ii) distance of the particle from O when the particle is momentarily at rest.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0147",
+      "type": "theory",
+      "stem": "(a) The position vectors of the points X and Y are \\(x = (-2i + 5j)\\) and \\(y = (i - 7j)\\) respectively. Find :\n(i) (3x + 2y) ; (ii) \\(|(y - 2x)|\\) ; (iii) the angle between x and y ; (iv) the unit vector in the direction of \\((x + y)\\).\n(b) A bullet of mass 0.084kg is fired horizontally into a 20 kg block of wood at rest on a smooth floor. If they both move at a velocity of \\(0.24 ms^{-1}\\) after impact; Calculate, correct to two decimal places, the initial velocity of the bullet.",
+      "marks": 1,
+      "year": 2010
+    },
+    {
+      "id": "waec-further-mathematics-theory-0148",
+      "type": "theory",
+      "stem": "(a) Solve : \\(2x^{2} + x - 6 < 0\\)\n(b) Express \\(\\frac{5 - 2\\sqrt{10}}{3\\sqrt{5} + \\sqrt{2}}\\) in the form \\(m\\sqrt{2} + n\\sqrt{5}\\) where m and n are rational numbers.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0149",
+      "type": "theory",
+      "stem": "Solve the simultaneous equations : \\(\\log_{2} x - \\log_{2} y = 2 ; \\log_{2} (x - 2y) = 3\\)",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0150",
+      "type": "theory",
+      "stem": "If the quadratic equation \\((x + 1)(x + 2) = k(3x + 7)\\) has equal roots, find the possible values of the constant k.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0151",
+      "type": "theory",
+      "stem": "Given that \\(\\tan 2A = \\frac{2 \\tan A}{1 - \\tan^{2} A}\\), evaluate \\(\\tan 15°\\), leaving your answer in surd form.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0152",
+      "type": "theory",
+      "stem": "The probabilities of Rotey obtaining the highest mark in Mathematics, Physics and Biology tests are 0.9, 0.75 and 0.8 respectively. Calculate the probability of getting the highest marks in at least two of the subjects.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0153",
+      "type": "theory",
+      "stem": "A student representative council consists of 8 girls and 6 boys. If an editorial board consisting of 5 persons is to be formed, what is the probability that the board consists of\n(a) 3 girls and 2 boys ;\n(b) either all girls or all boys.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0154",
+      "type": "theory",
+      "stem": "The coordinates of the vertices of triangle ABC are A(-2, 1), B(4, -2) and C(1, 8) respectively. If D(x, y) is the foot perpendicular from A to BC, find \n(a) an equation connecting x and y ; \n(b) the unit vector in the direction of BC.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0155",
+      "type": "theory",
+      "stem": "The position vector of a body, with respect to the origin, is given by \\(r = 4ti + (12 - 3t)j\\) at any time t seconds. \n(a) Find the velocity of the body ;\n(b) Calculate the magnitude of the displacement between t = 0 and t = 5.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0156",
+      "type": "theory",
+      "stem": "(a) The 3rd and 6th terms of a Geometric Progression (G.P) are 2 and 54 respectively. Find the : (i) common ratio ; (ii) first term ; (iii) sum of the first 10 terms, correct to the nearest whole number. \n(b) The ratio of the coefficient of \\(x^{4}\\) to that of \\(x^{3}\\) in the binomial expansion of \\((1 + 2x)^{n}\\) is \\(3 : 1\\). Find the value of n.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0157",
+      "type": "theory",
+      "stem": "(a) Using the same axes, sketch the curves \\(y = 6 - x - x^{2}\\) and \\(y = 3x^{2} - 2x + 3\\).\n(b) Find the x- coordinates of the points of intersection of the two curves in (a).\n(c) Calculatethe area of the finite region bounded by the two curves in (a).",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0158",
+      "type": "theory",
+      "stem": "(a) Evaluate \\(\\int_{1} ^{2} \\frac{x}{\\sqrt{5 - x^{2}}} \\mathrm {d} x\\)\n(b)(i) Evaluate: \\(\\begin{vmatrix} 2 & -3 & 1 \\\\ 0 & 1 & -2 \\\\ 1 & 2 & -3 \\end{vmatrix}\\)\n(ii) Using your answer in b(i), solve the simultaneous equations :\n\\(2x - 3y + z = 10\\)\n\\(y - 2z = -7\\)\n\\(x + 2y - 3z = -9\\)",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0159",
+      "type": "theory",
+      "stem": "(a) Use the trapezium rule with five ordinates to evaluate \\(\\int_{0} ^{1} \\frac{3}{1 + x^{2}} \\mathrm {d} x\\), correct to four significant figures.\n(b) If \\(A = \\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}\\), find the image of the point (1, 2) under the linear transformation \\(A^{2} + A + 2I\\), where I is the \\(2 \\times 2\\) unit matrix.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0160",
+      "type": "theory",
+      "stem": "(a) Simplify \\(^{n + 1}C_{3} - ^{n - 1}C_{3}\\)\n(b) A fair die is thrown five times. Calculate, correct to three decimal places, the probability of obtaining (i) at most two sixes ; (ii) exactly three sixes.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0161",
+      "type": "theory",
+      "stem": "(a) The distribution of the lives (in days) of 40 transitor batteries is shown in the table:\n\n \n \n \n Battery life\n(in days)\n \n 26-30\n 31-35\n 36-40\n 41-45\n 46-50\n 51-55\n \n \n Frequency\n 4\n 7\n 13\n 8\n 6\n 2\n \n \n\n(a) Draw a histogram for the distribution.\n(b) Use your graph in (a) to determine the mode for the distribution.\n(c) Using an assumed mean of 43 days, calculate the mean of the distribution.\n(d) What percentage number of batteries will live for less than 31 days or more than 45 days?",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0162",
+      "type": "theory",
+      "stem": "(a) A ball P moving with velocity \\(2u ms^{-1}\\), collides with a similar ball Q, of different mass, which is at rest. After collision, Q moves with \\(u ms^{-1}\\) and P with velocity \\(\\frac{1}{2} u ms^{-2}\\), in the opposite direction. Find the ratio of the masses of P and Q.\n(b) Two forces of magnitudes 3 N and 7 N have a resultant of magnitude 5 N. Calculate, correct to one decimal place, the angle between the two forces.\n(c) \\(AB = \\begin{pmatrix} -4 \\\\ 6 \\end{pmatrix}\\) and \\(CB = \\begin{pmatrix} 2 \\\\ -3 \\end{pmatrix}\\) are two vectors in the XY- plane. If V is the midpoint of AB, find CV.",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0163",
+      "type": "theory",
+      "stem": "(a) A body of mass 5 kg is placed on a smooth plane inclined at an angle 30° to the horizontal. Find the magnitude of the force: (i) acting parallel to the plane                               (ii) required to keep the body in equilibrium. [Take g = \\(10 ms^{-2}\\)].\n(b) A uniform plank PQ of length 10m and mass m kg rests on two supports A and B, where |PA| = |BQ| = 1m. A load of mass 8 kg is placed on the plank at point C such that |AC| = 3.5 m. If the reaction at B is 100 N, calculate the (i) value of m  (ii) reaction at A.  [Take g = \\(10 ms^{-2}\\)].",
+      "marks": 1,
+      "year": 2006
+    },
+    {
+      "id": "waec-further-mathematics-theory-0164",
+      "type": "theory",
+      "stem": "The second term of a geometric progression is 3. If its sum to infinity is \\(\\frac{25}{2}\\), find the value of its common ratio.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0165",
+      "type": "theory",
+      "stem": "Solve \\(x^{\\frac{2}{3}} - 5x^{\\frac{1}{3}} + 6 = 0\\).",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0166",
+      "type": "theory",
+      "stem": "The normal to the curve \\(y = 2x^{2} + x - 3\\) at the point (2, 7) meets the x- axis at the point P. Find the coordinates of P.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0167",
+      "type": "theory",
+      "stem": "(a) The position vectors of points L and M are (5i + 6j) and (13i + 4j) respectively. If point K lies on LM such that LK : KM is 2 : 3, find the position vector of K.\n(b) Three poles are situated at points A, B and C on the same horizontal plane such that \\(AB = (8km, 060°)\\) and \\(BC = (12km, 130°)\\). Calculate, \n(i) |AC|, correct to three significant figures ; (ii) the bearing of C from A, correct to the nearest degree.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0168",
+      "type": "theory",
+      "stem": "(a) The position vectors of points A, B and C are \\(i + 5j , 3i + 9j\\) and \\(-i + j\\) respectively. (i) Show that points A, B and C are collinear; (ii) Determine the ratio \\(|AB| : |BC|\\).\n(b) A uniform beam XY of mass 10 kg and length 24m is hunged horizontally from a cross bar by teo vertical inextensible strings, one attached to X and the other at a point M, 4m away from Y. A mass of 50kg is suspended at a point N which is 8m from X. If the system remains in equilibrium, calculate the tensions in the strings.",
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "waec-further-mathematics-theory-0169",
+      "type": "theory",
+      "stem": "A function F is defined on the set R, of real numbers by \\(f : x \\to px^{2} + qx + 2\\), where p and q are constants. If \\(f(-2) = 0\\) and \\(f(1) = 3\\), find \\(f(-4)\\).",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0170",
+      "type": "theory",
+      "stem": "If \\(\\sin A = \\frac{3}{5}\\) and \\(\\cos B = \\frac{15}{17}\\), where A is an obtuse angle and B is acute, find the value of \\(\\cos (A + B)\\).",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0171",
+      "type": "theory",
+      "stem": "Differentiate, with respect to x, \\(x^{3} + 2x\\) from the first principle.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0172",
+      "type": "theory",
+      "stem": "A straight line passes through the point P(-1, 3). Another line which passes through Q(-4, 4) intersects the first line at the point R(k, 5), where k is a constant. If \\(<PRQ = 90°\\), find the values of k.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0173",
+      "type": "theory",
+      "stem": "The table shows the distribution of marks obtained by some candidates in a test.\n\n \n \n Marks\n 10-14\n 15-24\n 25-29\n 30-39\n 40-44\n 45-49\n \n \n No of candidates\n 14\n 30\n 22\n 18\n 12\n 4\n \n \n\nDraw a histogram for the distribution.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0174",
+      "type": "theory",
+      "stem": "A car travelling at a velocity of 50kmh\\(^{-1}\\), covers a distance of 20km. If it was accelerating at 6kmh\\(^{-1}\\), calculate, correct to one decimal place, the time the car took to cover the distance.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0175",
+      "type": "theory",
+      "stem": "The magnitude of a force \\(xi + 15j\\) is 17N. Find the :\n(a) possible values of x ; \n(b) directions of the forces, correct to the nearest degree.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0176",
+      "type": "theory",
+      "stem": "(a) The sum of the first n  terms of a sequence is given by \\(S_{n} = \\frac{5n^{2}}{2} + \\frac{5n}{2}\\). Write down the first four terms of the sequence and an expression for the nth term.\n(b) The equation of a circle is given by \\(x^{2} + y^{2} - 10x - 8y + 25 = 0\\).\n(i) Show that the circle touches the x- axis ; (ii) Find the coordinates of the point of contact.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0177",
+      "type": "theory",
+      "stem": "(a) If \\(\\alpha\\) and \\(\\beta\\) are the roots of the equation \\(2x^{2} + 5x - 6 = 0\\), find the equation whose roots are \\((\\alpha - 2)\\) and \\((\\beta - 2)\\).\n(b) Given that \\(\\int_{0} ^{k} (x^{2} - 2x) \\mathrm {d} x = 4\\), find the values of k.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0178",
+      "type": "theory",
+      "stem": "(a) Express \\(\\frac{2x^{2} - 5x + 1}{x^{3} - 4x^{2} + 3x}\\) in partial fractions.\n(b) If \\(\\begin{vmatrix} x - 3 & -4 & 3 \\\\ 5 & 2 & 2 \\\\ 2 & -4 & 6 - x \\end{vmatrix} = -24\\), find the value of x.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0179",
+      "type": "theory",
+      "stem": "(a) The point P(3, -5) is rotated through an angle 60° anticlockwise about the origin. (i) Obtain the matrix for the rotation ; (ii) Find the image P' of the point P under the rotation.\n(b) A linear transformation is given by \\(N : (x, y) \\to (2x + 3y, 3x - y)\\).\n(i) Write down the matrix N of the transformation ; (ii) If \\(N^{2} + aN + bI = 0\\), where a, b \\(\\in\\) R, \\(I\\) is the \\(2 \\times 2\\) matrix and \\(0\\) is the \\(2 \\times 2\\) null matrix, find the values of a and b.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0180",
+      "type": "theory",
+      "stem": "A survey indicated that 65% of the families in an area have cars. Find, correct to three decimal places, the probability that among 7 families selected at random in the area\n(a) exactly 5 ;\n(b) 3 or 4 ;\n(c) at most 2 of them have cars.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0181",
+      "type": "theory",
+      "stem": "The following table shows the distribution of marks obtained by some students in an examination.\n\n \n \n Marks\n 0-9\n 10-19\n 20-29\n 30-39\n 40-49\n 50-59\n 60-69\n 70-79\n 80-89\n 90-99\n \n \n Frequency\n 50\n 50\n 40\n 60\n 100\n 100\n 50\n 25\n 15\n 10\n \n \n\n(a) Construct a cumulative frequency table for the distribution\n(b) Draw an ogive for the distribution\n(c) Use your graph in (b) to determine : (i) semi- interquartile range ; (ii) number of students who failed, if the pass mark for the examination is 37 ; (iii) probability that a student selected at random scored between 20% and 60%.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0182",
+      "type": "theory",
+      "stem": "(a) Five female and seven male teachers applied for 4 vacancies in a Junior High School. The teachers are equally qualified. Find the number of ways of employing the 4 teachers, if : (i) there is no restriction ; (ii) at least 2 of them are females.\n(b) The table shows the positions awarded to 7 contestants by Judges X and Y in a competition.\n\n \n \n Contestant\n P\n Q\n R\n S\n T\n U\n V\n \n \n Judge X\n 2\n 7\n 1\n 3\n 6\n 5\n 4\n \n \n Judge Y\n 4\n 6\n 2\n 3\n 1\n 1\n 5\n \n \n\n(i) Calculate, correct to one decimal place, the Spearman's rank correlation coefficient.\n(ii) Interpret your answer in b(i) above.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0183",
+      "type": "theory",
+      "stem": "The position vectors of points P, Q and R with respect to the origin are \\((4i - 5j), (i + 3j)\\) and \\((-5i + 2j)\\) respectively. If PQRM is a parallelogram, find:\n(a) the position vector of M ;\n(b) \\(|\\overrightarrow{PM}|\\) and \\(|\\overrightarrow{PQ}|\\) ;\n(c) the acute angle between \\(\\overrightarrow{PM}\\) and \\(\\overrightarrow{PQ}\\), correct to 1 decimal place ;\n(d) the area of PQRM.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0184",
+      "type": "theory",
+      "stem": "(a) Forces \\(F_{1} = \\begin{pmatrix} -5 & 4 \\end{pmatrix} N; F_{2} = \\begin{pmatrix} 2 \\\\ 5 \\end{pmatrix} N; F_{3} = \\begin{pmatrix} 2 & -1 \\end{pmatrix} N\\) and \\(F_{4} = \\begin{pmatrix} 3 & -5 \\end{pmatrix} N\\) act on a body. Find the : \n(i) resultant of these forces ; (ii) fifth force that will keep the body in equilibrium.\n(b) A body moving at 20 ms\\(^{-1}\\) accelerates uniformly at 2.5 ms\\(^{-2}\\) for 4 seconds. It continues the journey at the speed for 8 seconds, before coming to rest in t seconds with a uniform retardation. If the ratio of the acceleration to the retardation is 3 : 4, \n(i) sketch the velocity- time graph of the journey ; (ii) find t ; (iii) find the total distance of the journey.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0185",
+      "type": "theory",
+      "stem": "(a) An object is thrown up a smooth plane inclined at an angle of 30° to the horizontal. If the plane is 15m long and the object comes to rest at the top, find the :\n(i) initial speed of the object ; (ii) time taken to reach the top.\n(b)  \nForce of magnitudes \\(5 N, 5\\sqrt{3} N, 10 N, 5\\sqrt{3} N\\) and \\(5 N\\) act on a body P, of mass 5 kg as shown in the diagram. Find the :\n(i) magnitude of the resultant force ; (ii) acceleration of the body.",
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "waec-further-mathematics-theory-0186",
+      "type": "theory",
+      "stem": "Given that (\\(_r^n\\)) = \\(^nC_r\\), simplify (\\(^{2x + 1}_{3}\\)) - (\\(^{2x - 1}_3\\)) - 2(\\(^x_2\\))",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0187",
+      "type": "theory",
+      "stem": "Differentiate from first principles, with respect to x, (3x\\(^2\\) + 2x - 1)",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0188",
+      "type": "theory",
+      "stem": "Find the equation of the circle centre (2. 3) which passes through the y - intercept of the line 3x  - 2y + 6 = 0",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0189",
+      "type": "theory",
+      "stem": "If \\(\\alpha\\) and \\(\\beta\\) are the roots of the equation 3x\\(^2\\) + 4x - 5 = 0, find the value of (\\(\\alpha - \\beta\\)), leaving the answer in surd form.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0190",
+      "type": "theory",
+      "stem": "Three soldies, X, Y and Z have probabilities \\(\\frac{1}{3}, \\frac{1}{5}\\) and \\(\\frac{1}{4}\\) respectively of hitting a target. If each of them fires once, find, correct to two decimal places, the probability that only one of them hits the target",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0191",
+      "type": "theory",
+      "stem": "The distribution of the masses of a group of persons is shown in the following table\n\n \n \n Mass/kg\n 10.5 - 14.4\n 14.5 - 24.4\n 24.5 - 44.4\n 44.5 - 47.4\n 47.5 - 49.4\n \n \n Number of Persons\n 2\n 6\n 18\n 2\n 1\n \n \n\nDraw a histogram for the distribution",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0192",
+      "type": "theory",
+      "stem": "Find the angle between \\(\\over {OP}\\) = (\\(^{-3}_{-4}\\)) and \\(\\over{OQ}\\) = (\\(^8_{-15}\\))",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0193",
+      "type": "theory",
+      "stem": "(a).  \\(\\frac{T}{\\sin 90^o}\\) = \\(\\frac{120}{sin 135^o}\\) and found T = 169.71N\n(b) \\(\\frac{R}{\\sin 135^o}\\) = \\(\\frac{120}{\\sin 135^o}\\)\nR = 120N",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0194",
+      "type": "theory",
+      "stem": "(a) If sin p = \\(\\frac{1}{2}\\) and cos q = \\(\\frac{1}{3}\\), evaluate sin(p - q), where 0\\(^o\\) \\(\\geq\\) p \\(\\geq\\) 90\\(^o\\) and 90\\(^o\\) \\(\\geq\\) q \\(\\geq\\) 180\\(^o\\)\n\nb) Using trapezum rule with seven ordinates, evaluate \\(\\int^4_1\\frac{2}{\\sqrt{x + 3}}\\)dx",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0195",
+      "type": "theory",
+      "stem": "Using determinants, solve the following equations simultaneously.\n5x — 6y + 4z = 15\n7x + 4y — 3z = 19\n2x + y + 6z = 46",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0196",
+      "type": "theory",
+      "stem": "The table shows the distribution of masks obtained by students in an examination. \n\n \n \n Marks\n 50 - 54\n 55 - 59\n 60 - 64\n 65 - 69\n 70 - 74\n 75 - 79\n 80 - 84\n 85 - 89\n \n \n Frequency\n 5\n 15\n 20\n 28\n 12\n 9\n 7\n 4\n \n \n\nUsing an assumed mean of 67, calculate, correct to one decimal place. the\na) Mean\nb) Standard deviation of the distribution",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0197",
+      "type": "theory",
+      "stem": "(a) In a bakery, 30% of loaves of bread produced are of bad quality. If twelve loaves are selected at random from the bakery, calculate, correct to four decimal places. the probabshty of getting \n(i) exactly 6 bad ones:\n(ii) at least 4 bad ones;\n(ii) no bad one.\n \n(b) A group consists of 8 boys and 5 girls. A committee of 7 members is chosen from the group. Find the probability that the committee is made up of 4 boys and 3 girls.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0198",
+      "type": "theory",
+      "stem": "(a) P(-1, 4), Q(2, 3), R(x, y) and S(-2, 3) are the verticles of a parallelogram. Find the value of x and y. \n(b) A particle starts from rest and moves in a straight line. It attains a velocity of 20ms\\(^{-1}\\) after travelling a distance of 8 metres. Calculate;\n(ii) Iis acceleration\n(ii) the time taken to travel 40 metres",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0199",
+      "type": "theory",
+      "stem": "Forces(5N, 030\\(^o\\)), (PN, 060\\(^o\\)), (QN, 150\\(^o\\)), (3N, 180\\(^o\\)) and (5N, 270\\(^o\\)) act on a body . If the system is in quilibrium, find, correct to one decimal place, the values of P and Q",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0200",
+      "type": "theory",
+      "stem": "(a) Find the coordinates of the point which divides the line joining (7, -5) and (-2, 7) externally in the ration 3 : 2.\n(b) Without using calculators or mathematical tables, evaluate \\(\\frac{2}{1 + \\sqrt{2}}\\) - \\(\\frac{2}{2 + \\sqrt{2}}\\), leaving the answer in the form p + q\\(\\sqrt{n}\\), where p, q and n are integers.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0201",
+      "type": "theory",
+      "stem": "How many terms of the series -3 -1 + 1 +..... add up to 165?",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0202",
+      "type": "theory",
+      "stem": "If sin x \\(\\frac{P - Q}{P + Q}\\), where 0\\(^o\\) \\(\\leq\\) x \\(\\leq\\) 90\\(^o\\), find 1 - tan\\(^2\\)x",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0203",
+      "type": "theory",
+      "stem": "Three forces N, 14N and 16N acting on a particle keep it in equilibrium. Find the angle between the forces 10N and 16N.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0204",
+      "type": "theory",
+      "stem": "A uniform beam, WX, of length 90 cm and weight 50N is suspended on a pivot, 35 cm from W. It is kept in equilibrum by a means of forces T and 20N applied at Y and Z respectively. |WY| = 10cm and |XZ| = 10cm. Find the value of T",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0205",
+      "type": "theory",
+      "stem": "The table shows the age distribution in years of a group of people \n\n \n \n Age(in years) \n 1 - 5\n 6 - 10\n 11 - 15\n 16 - 20\n 21 - 25\n 26 - 30\n \n \n Number of people\n 18\n 12\n 25\n 15\n 20\n 10\n \n \n\nUsing an assume mean of 13 years, find the mean age of the people.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0206",
+      "type": "theory",
+      "stem": "Two fair dice are thrown together two times. Find the probability of obtaining a sum of seven in the first throw and a sum of four in the second throw.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0207",
+      "type": "theory",
+      "stem": "The curve y = 7 - \\(\\frac{6}{x}\\) and the line y + 2x - 3 = 0 intersect at two point. Finf the;\n(a) coordinates of the two points\n(b) equation of the perpendicular bisector of the line joining the two points",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0208",
+      "type": "theory",
+      "stem": "(a) Find the range of value of p for which 4x\\(^2\\) - px + 1 = 0 \n(b)(i) Expand (1 + 3x)\\(^6\\) in ascending powers of x\n(ii) Using the expression in 10\n(ii) find, correct to four significant figures, the value of (1.03)\\(^6\\)",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0209",
+      "type": "theory",
+      "stem": "In an examination, 60% of the candidates passed. If 10 candidates are selected at random, find the probability that;\n(1) at least two of the, failed\n(2) exactly half of them passed \n(3) at most two of them failed",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0210",
+      "type": "theory",
+      "stem": "In a research to determine the relationship between performance of students in an entrance examination and subsequent school performance, the results of ten randomly selected students wre obtained as follows;\n\n \n \n Students\n A\n B\n C\n D\n E\n F\n G\n H\n I\n \n \n Performance in Entrance Examination\n 11\n 12\n 8\n 13\n 6\n 15\n 10\n 14\n 17\n \n \n School Performance\n 5\n 10\n 9\n 7\n 4\n 8\n 6\n 14\n 11\n \n \n\n1, Calculate the spearman's rank correlation coefficient\n2. What would be the researcher's from the result in a?",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0211",
+      "type": "theory",
+      "stem": "A body, moving at 20ms\\(^{-1}\\) accelerates uniformly at 2\\(\\frac{1}{2}ms^{-2}\\) for 4 seconds. It continues the journey at this speed for 8 seconds, before coming to rest seconds at tseconds after with uniform retardation. If the ratio of the acceleration to retardation is 3 : 4\n(a( sketch the velocity - times graph of the journey\n(b) find t\n(c) find the total distance of the journey",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0212",
+      "type": "theory",
+      "stem": "(a) Given that m = i - i, n = 2i + 3j and 2m + n - r = 0, find |r|\n(b) The distance, S metres of a moving particle at any time tseconds is given by\nS = 3t - \\(\\frac{t^3}{3}\\) + 9\nFind the;\n(i) time\n(ii) distance travelled\nWhen the particle is momentarily at rest",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0213",
+      "type": "theory",
+      "stem": "Simplify \\(\\frac{      625(\\frac{3x}{4} - 1) + 125^{(x - 1)}    }{5^{(3x - 2)}}\\)",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0214",
+      "type": "theory",
+      "stem": "(a) Write down the first four terms of the binomial expansion of \\((2 - \\frac{1}{2})^{5}\\) in ascending powers of x.\n(b) Use your expansion in (a) above to find, correct to two decimal places, the value of \\((1.99)^{5}\\).",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0215",
+      "type": "theory",
+      "stem": "Five digit numbers are formed from digits 4, 5, 6, 7 and 8.\n(a)How many such numbers can be formed if repitition of digits is (i) allowed  (ii) not allowed?\n(b) How many of the numbers are odd, if repetition of digits is not allowed?",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0216",
+      "type": "theory",
+      "stem": "Four boys participated in a competition in which their respective chances of winning prizes are \\(\\frac{1}{5}, \\frac{1}{4}, \\frac{1}{3}\\) and \\(\\frac{1}{2}\\). What is the probability that at most two of them win prizes?",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0217",
+      "type": "theory",
+      "stem": "Forces \\(F_{1} = (10 N, 090°), F_{2} = (20 N, 210°)\\) and \\(F_{3} = (4 N, 330°)\\) act on a body at rest on a smooth table. Find, correct to one decimal place, the magnitude of the resultant force.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0218",
+      "type": "theory",
+      "stem": "An object is projected vertically upwards. Its height, h m, at time t seconds is given by \\(h = 20t - \\frac{3}{2}t^{2} - \\frac{2}{3}t^{3}\\). Find \n(a) the time at which it is momentarily at rest  (b) correct to two decimal places, the maximum height reached by the object.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0219",
+      "type": "theory",
+      "stem": "Given that M : (x, y) \\(\\to\\) (7x, 3x - y) and N : (x, y) \\(\\to\\) (2x - y; 5x + 3y) \n(a) write down matrices M and N of the linear transformation\n(b) find the image of P(2, -3) under the linear transformation N followed by M;\n(c) find the coordinates of the point Q whose image is Q(2, 4) under the linear transformation N",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-further-mathematics-theory-0220",
+      "type": "theory",
+      "stem": "A binary operation * is defined on the set of real numbers R, by p*q = p + q - \\(\\frac{pq}{2}\\), where p, q \\(\\in\\) R. Find the:\n(a) inverse of -1 under * given that the identity clement is zero.\n(b) truth set of m* 7 = m* 5,",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0221",
+      "type": "theory",
+      "stem": "(a) Two functions p and q are defined on the set of real numbers, R, by p : y \\(\\to\\) 2y +3 and q : y -> y - 2. Find QOP\n(b) How many four digits odd numbers greater than 4000 can be formed from 1,7,3,8,2 if repetition is allowed?",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0222",
+      "type": "theory",
+      "stem": "Evaluate; \\(\\int^3_1(3x - 2)^5 dx\\)",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0223",
+      "type": "theory",
+      "stem": "If \\(\\frac{3x^2 + 3x - 2}{(x - 1)(x + 1)}\\) = P + \\(\\frac{Q}{x - 1} + \\frac{R}{x - 1}\\) \nFind the value of Q and R",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0224",
+      "type": "theory",
+      "stem": "Marks\n 10 - 19\n 20 - 29\n 30 - 39\n 40 - 49\n 50 - 59\n 60 - 69\n 70 - 79\n 80 - 89\n 90 - 99\n \n \n Frequency \n 2\n 2\n 2\n 8\n 13\n 11\n 12\n 10\n 4\n \n \n\nThe table shows the distribution of marks scored by 64 students in a test\n(a) Draw a histogram for the distribution.\n(b) Use the histogram to estimate the modal score.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0225",
+      "type": "theory",
+      "stem": "(a) A bag contains 10 red and 8 green identical balls. Two balls are drawn at random from the bag, one after the other, without replacement. Find the probability that one is red and the other is green.\n(b) There are 20% defective bulbs in a large box. If 12 bulbs are selected randomly from the box, calculate the probability that between two and five are defective.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0226",
+      "type": "theory",
+      "stem": "Forces F\\(_1\\)(10N, 090°) and F\\(_2\\)(20N, 210\\(^o\\)) and (4N,330°) act on a particle, Find, correct to one decimal place, the magnitude of the resultant force.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0227",
+      "type": "theory",
+      "stem": "Given that w = 8i + 3j, x = 6i - 5j, y = 2i + 3j and |z| = 41. find z in the direction of w + x - 2y.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0228",
+      "type": "theory",
+      "stem": "(a) If (x + 2) is a factor of g(x) = 2x\\(^3\\) +11x\\(^2\\) - x - 30, find the zeros of g(x).\n(b) Solve 3(2\\(^x\\)) +3\\(^{y - 2}\\) = 25 and 2x - 3\\(^{y + 1}\\) = -19 simultaneously.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0229",
+      "type": "theory",
+      "stem": "(a) Find the derivative of y = x\\(^2\\) (1 + x)\\(^{\\frac{3}{2}}\\) with respect to x.\n(b) The centre of a circle lies on the line 2y - x = 3. If the circle passes through P(2,3) and Q(6,7), find its equation.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0230",
+      "type": "theory",
+      "stem": "(a) Simplify; \\(\\frac{log_2 ^8 + log_2 ^{16} - 4 log_2 ^2}{log_4^{16}}\\)\n(b) The first, third, and seventh terms of an Arithmetic Progression (A.P) from three consecutive terms of a Geometric Progression (G.P). If the sum of the first two terms of the A.P is 6, find its:\n(I) first term; (ii) common difference.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0231",
+      "type": "theory",
+      "stem": "(a) An association is made up of 6 farmers and 8 traders. If an executive body of 4 members is to be formed, find the probability that it will consist of at least two farmers. (b) The probability of an accident occurring in a given month in factories X, Y, and Z are \\(\\frac{1}{5}, \\frac{1}{12} \\) and \\(\\frac{1}{6}\\) respectively.\nFind the probability that the accident will occur in:\ni) none of the factories;\n(ii) all the factories;\n(iii) at least one factory.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0232",
+      "type": "theory",
+      "stem": "The essays of 10 candidates were ranked by three examiners as shown in the table.\n\n \n \n candidates\n A\n B\n C\n D\n E\n F\n G\n H\n I\n J\n \n \n Examiner I\n 1st\n 3rd\n 6th\n 2nd\n 10th\n 9th\n 7th\n 4th\n 8th\n 5th\n \n \n Examiner II\n 2nd\n 1st\n 3rd\n 9th\n 7th\n 4th\n 8th\n 10th\n 5th\n 6th\n \n \n Examiner III\n 3rd\n 2nd\n 1st\n 6th\n 9th\n 8th\n 7th\n 5th\n 4th\n 10th\n \n \n\n \na) Calculate the Spearman's rank correlation coefficient of the ranks assigned by:\n(i) Examiners I and lI;\n(ii) Examiners I and III\n(iii) Examiners II and II.\n(b) Using the results in (a), state which two examiners agree most.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0233",
+      "type": "theory",
+      "stem": "(a) A car is moving with a velocity of 10ms\\(^{-1}\\) It then accelerates at 0.2ms\\(^{-2}\\) for 100m. Find, correct to two decimal places the time taken by the car to cover the distance.\n(b) A particle moves along a straight line such that its distance S metres from a fixed point O is given by S = t\\(^2\\) - 5t + 6, where t is the time in seconds. Find its:\n(i) initial velocity;\n(ii) distance when it is momentarily at rest",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-further-mathematics-theory-0234",
+      "type": "theory",
+      "stem": "The polynomial f(x) =2x\\(^3\\) + px+ qx - 5 has  (x-1) as a factor and a remainder of 27 when divided by (x + 2), where p and q are constants. Find the values of p and q.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0235",
+      "type": "theory",
+      "stem": "Evaluate: \\(^9{∫}_1\\) \\(\\frac{x(2x-3)}{\\sqrt{x}}\\) dx",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0236",
+      "type": "theory",
+      "stem": "Given that (p + 1/2√3)(1 - √3)\\(^2\\) = 3- √3,\n find x the value of p.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0237",
+      "type": "theory",
+      "stem": "\\(^{5y}{C}_2\\) = 190, find the value of y",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0238",
+      "type": "theory",
+      "stem": "The table shows the distribution of monthly income (in thousands of naira) of workers in a factory\n\n \n \n Monthly Income (N'1000)\n 135-139\n 140-149\n 150-154\n 155-164\n 165-169\n \n \n Number of workers\n 20\n 42\n 28\n 38\n 22\n \n \n\n(a) Draw a histogram for the distribution.\n(b) Use your graph to estimate the mode of the distribution.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0239",
+      "type": "theory",
+      "stem": "A bag contains 24 mangoes out of which six are bad. If 6 mangoes are selected randomly from the bag with replacement, find the probability that not more than 3 are bad.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0240",
+      "type": "theory",
+      "stem": "(a) The speed of a moving bus reduced from 45m/s to 5m/s with a uniform retardation of 10m/s\\(^2\\). Calculate the distance covered.\n(b) A bucket full of water with mass 16kg is pulled out of a well with a light inextensible rope. Find its acceleration when the tension in the rope is 240N. [Take g= 10m/s\\(^2\\)]",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0241",
+      "type": "theory",
+      "stem": "Given that x =  \\(\\begin{pmatrix} -4 \\\\ 3 \\end{pmatrix}\\) and y= \\(\\begin{pmatrix} -9 \\\\ 15 \\end{pmatrix}\\) calculate, correct to the nearest degree, the angle between the vectors",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0242",
+      "type": "theory",
+      "stem": "(a) A jogger is training for 15km charity race. He starts with a run of 500 metres, then he increases the distance he runs daily by 250 metres.\n(i) How many days will it take the jogger to reach a distance of 15km in training?\n(ii) Calculate the total distance he would have run in the training.\n(b) The second term of a Geometric Progression (GP) is -3. If its sum to infinity is 25/2, find its common ratios.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0243",
+      "type": "theory",
+      "stem": "P and Q are two linear transformations in the X-Y plane defined by\nP: (x, y) → (-3x + 6y, 4x + y) and\nQ: (x, y) → (2x-3y, -4x - 6y).\n(a) Write down the matrices of P and Q. (b) What is the image of (-2,-3) under the transformation Q?\n(c) Obtain a single transformation representing the transformation Q followed by P.\n(d) Find the image of (1,4) when transformed by Q followed by P.\n(e) Find the image P\\(^1\\) of the point (-√2,2√2) under an anticlockwise rotation of 225° about the origin.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0244",
+      "type": "theory",
+      "stem": "(a) Find the equation of the normal to the curve y = (x\\(^2\\) - x + 1)(x - 2) at the point where the curve cuts the X - axis.\n(b) The coordinates of the pints P, Q and R are (-1, 2), (5, 1) and (3, -4) respectively. Find the equation of the line joining Q and the midpoint of \\(\\overline{PR}\\).",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0245",
+      "type": "theory",
+      "stem": "A box contains 5 red, 7 blue and 4 green identical bulbs. Two bulbs are picked at random from the box without replacement.\nCalculate the probability of picking: (a) same color of bulbs; (6) different color of bulbs (c) at least one red bulb.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0246",
+      "type": "theory",
+      "stem": "The table shows the frequency distribution of heights (in cm) of pupils in a certain school.\n\n \n \n \n Heights\n \n 100-109\n 110-119\n 120-129\n 130-139\n 140-149\n 150-159\n \n 160-169\n \n \n \n \n Frequency\n \n 27\n 58\n 130\n 105\n 50\n 25\n 5\n \n \n\n (a) (i) Construct a cumulative frequency table. (ii) Use the table to draw a cumulative frequency curve.\n(b) Using the curve, estimate the: (i)median height; (ii) inter quartile range (iii) percentage of students whose heights are most 130cm.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0247",
+      "type": "theory",
+      "stem": "The position vectors of P, Q and R with respect to the origin are (4i-5j), (i+3j) and (-5i+2j) respectively. If PQRM is a parallelogram, find:\n(a) the coordinates of M;\n(b) the acute angle between \\(\\overline{PM}\\) and \\(\\overline{PQ}\\), correct to the nearest degree.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0248",
+      "type": "theory",
+      "stem": "(a) A girl threw a stone horizontally with a velocity of 30m/s from the top of a cliff 50m high. How far from the foot of the cliff does the stone strike the ground? [Take g= 10m/s\\(^2\\)\n(b)\n\n \n(b) A body A, of mass 2kg is held in equilibrium by means of two strings AP and AR. AP is inclined at 56° to the upward vertical and AR is horizontal.\nFind the tensions T\\(_1\\), and T\\(_2\\), in the strings [Take g= 10ms\\(^2\\)]",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-further-mathematics-theory-0249",
+      "type": "theory",
+      "stem": "A binary operation * is defined on the set T = {-2,-1,1,2} by p*q = p\\(^2\\) + 2pq - q\\(^2\\), where p,q ∊ T.\n\nCopy and complete the table.\n\n \n \n *\n -2\n -1\n 1\n 2\n \n \n -2\n  \n 7\n  \n -8\n \n \n -1\n  \n 2\n -2\n  \n \n \n 1\n -7\n  \n  \n 1\n \n \n 2\n  \n -1",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0250",
+      "type": "theory",
+      "stem": "Solve \\(2^{(2y+1)} - 5(2^y) + 2\\) = 0",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0251",
+      "type": "theory",
+      "stem": "Two functions f and g are defined on the set of real numbers, R, by\nf:x → x\\(^2\\) + 2 and g:x → \\(\\frac{1}{x+2}\\).Find the domain of (g∘f)\\(^{-1}\\)",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0252",
+      "type": "theory",
+      "stem": "Solve 3cos2x - sinx = 0 for 0º≤x≤360º",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0253",
+      "type": "theory",
+      "stem": "The probability that  Abiola will be late to the office on a given day is 2/5. In a given working week of six days, find, correct to four significant figures, the probability that he will:\n(a) only be late for 3 days.\n(b) not be late in the week:\n(c) be late throughout the six days.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0254",
+      "type": "theory",
+      "stem": "The table shows the scores obtained by a group of artistes in Vocal (X) and the instrument (Y) musical competition.\n\n \n \n Vocal (X)\n 63\n 69\n 72\n 59\n 82\n 91\n 95\n 68\n \n \n Instrument (Y)\n 58\n 61\n 67\n 51\n 53\n 79\n 92\n 57\n \n \n\nCalculate the spearman's rank correlation coefficient between the scores.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0255",
+      "type": "theory",
+      "stem": "A body of mass of 18kg is suspended by an inextensible string from a rigid support and is pulled by a horizontal force F until the angle of inclination of the string to the vertical is 35º. If the system is in equilibrium, calculate the:\ni. value of F\nii. tension in the string",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0256",
+      "type": "theory",
+      "stem": "Given that p = (8N,030º) and q = (9N, 150º), find, in component from, the unit vector along(p - q).",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0257",
+      "type": "theory",
+      "stem": "Given that nC\\(_4\\), nC\\(_5\\) and nC\\(_6\\) are the terms of a linear sequence (A.P), find the :\ni. value of n\nii. common differences of the sequence.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0258",
+      "type": "theory",
+      "stem": "A solid rectangular block has a base that measures 3x cm by 2x cm. The height of the block is ycm and its volume is 72cm\\(^3\\).\ni. Express y in terms of x.\nii. An expression for the total surface area of the block in terms of x only;\niii. the value of x for which the total surface area has a stationary value.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0259",
+      "type": "theory",
+      "stem": "A basket contains 12 fruits: orange, apple and avocado pear, all of the same size. The number of oranges, apples and avocado pear forms three consecutive integers.\nTwo fruits are drawn one after the other without replacement. Calculate the probability that:\ni. the first is an orange and the second is an avocado pear.\nii.both are of same fruit;\niii. at least one is an apple",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0260",
+      "type": "theory",
+      "stem": "A particle initially at rest moves in a straight line with an acceleration of (10t - 4t\\(^2\\))m/s\\(^2\\)\n\nFind the:\n\na. velocity of the particle after t seconds;\nii. average acceleration of the particle during the 4th second.\nb. A load of mass 120kg is placed on a lift. Calculate the reaction between the floor of the lift and the load when the lift moves upwards at a constant velocity. [Take g = 10m/s\\(^2\\)]\nii. with an acceleration of 3m/s\\(^2\\). [Take g = 10m/s\\(^2\\)]",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0261",
+      "type": "theory",
+      "stem": "The vectors 6i + 8j and 8i - 6j are parallel to →OP and →OQ respectively. If the magnitude of →OP and →OQ are 80 units and 120 units respectively, express: →OP and →OQ in terms of i and j;\nii. |→PQ|, in the form c√k, where c and k are constants.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-further-mathematics-theory-0262",
+      "type": "theory",
+      "stem": "If \\(^9C_x = 4[^7C_{x - 1}]\\), find the values of \\(x\\)",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0263",
+      "type": "theory",
+      "stem": "The volume of a cube is increasing at the rate of \\(3\\frac{1}{2} cm ^3 s^{ -1}\\). Find the rate of change of the side of the base when its length is 6 cm .",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0264",
+      "type": "theory",
+      "stem": "(a) The inverse of a function \\(f\\) is given by \\(f^{-1}(x)=\\frac{5x - 6}{4 - x},x ≠ 4\\).Find the:\n\n function, \\(f (x)\\)\n(b) The inverse of a function \\(f\\) is given by \\(f^{-1}(x)=\\frac{5x - 6}{4 - x},x ≠ 4\\).Find the:\nvalue of x for which \\(f (x) = 5\\)",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0265",
+      "type": "theory",
+      "stem": "(a) The first term of an Arithmetic Progression is -8, the last term is 52 and the sum of terms is 286. Find the:\n\nnumber of terms in the series;\n(b) The first term of an Arithmetic Progression is -8, the last term is 52 and the sum of terms is 286. Find the:\ncommon difference.",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0266",
+      "type": "theory",
+      "stem": "(a)The table shows the distribution of heights ( cm ) of 60 seedlings in a vegetable garden.\n\n \n\n \n \n Heights(cm)\n 0.1 - 0.3\n 0.4 - 0.6\n 0.7 - 0.9\n 1.0 - 1.4\n 1.5 - 1.9\n 2.0 - 22\n 2.3 - 2.5\n \n \n Frequency\n      6\n       9\n      12\n      15\n      3\n       6\n       9\n \n \n\n \nDraw a histogram for the distribution.\n\n(b) The table shows the distribution of heights ( cm ) of 60 seedlings in a vegetable garden.\n\n \n\n \n \n Heights(cm)\n 0.1 - 0.3\n 0.4 - 0.6\n 0.7 - 0.9\n 1.0 - 1.4\n 1.5 - 1.9\n 2.0 - 2.2\n 2.3 - 2.5\n \n \n Frequency\n       6\n       9\n      12\n      15\n       3\n       6\n       9\n \n \n\nUse the histogram to estimate the modal height of the seedlings.",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0267",
+      "type": "theory",
+      "stem": "(a) The roots of the equation \\(x^{2} + mx + 11 = 0\\) are \\(\\alpha\\) and \\(\\beta\\), where m is a constant. If \\(\\alpha^{2} + \\beta^{2} = 27\\), find the values of m.\n(b) The line \\(2x + 3y = 1\\) intersects the circle \\(2x^{2} + 2y^{2} + 4x + 9y - 9 = 0\\) at points P and Q where Q lies in the fourth quadrant. Find the coordinates of P and Q.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0268",
+      "type": "theory",
+      "stem": "(a) Solve the equation : \\(\\sqrt{4x - 3} - \\sqrt{2x - 5} = 2\\).\n(b) Find the finite area enclosed by the curve \\(y^{2} = 4x\\) and the line \\(y + x = 0\\).",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0269",
+      "type": "theory",
+      "stem": "(a) Given that \\(\\begin{vmatrix} 5 & 2 & -3 \\\\ -1 & k & 6 \\\\ 3 & 9 & (k + 2) \\end{vmatrix} = -207\\), find the values of the constant k.\n(b) The equation of a curve is \\(x(y^{2} + 1) - y(x^{2} + 1) + 4 = 0\\). Find the:\n(i) gradient of the curve at any point (x, y).\n(ii) equation of the tangent to the curve at the point (-1, -3).",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0270",
+      "type": "theory",
+      "stem": "(a) Using the trapezium rule with seven ordinates, evaluate \\(\\int_{0}^{3} \\frac{\\mathrm d x}{x^{2} + 1}\\), correct to two decimal places.\n(b) Using matrix method, solve \\(-2x + y = 3; - x + 4y = 1\\).",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0271",
+      "type": "theory",
+      "stem": "(a) If \\(^{18}C_{r} = ^{18}C_{r + 2}\\), find \\(^{r}C_{5}\\).\n(b) In a community, 10% of the people tested positive to the HIV virus. If 6 persons from the community are selected at random, one after the other with replacement, calculate, correct to four decimal places, the probability that : (i) exactly 5 (ii) none (iii) at most 2; tested positive to the virus.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0272",
+      "type": "theory",
+      "stem": "There are 6 boys and 8 girls in a class. If five students are selected from the class, find the probability that more girls than boys are selected",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0273",
+      "type": "theory",
+      "stem": "(a) A bus travels with a velocity of \\(6 ms ^{-1}\\). It then accelerates uniformly and travels a distance of 70 m. If the final velocity is \\(20 ms ^{-1}\\), find, correct to one decimal place, the:\n\nacceleration;\n(b) A bus travels with a velocity of \\(6 ms ^{-1}\\). It then accelerates uniformly and travels a distance of 70 m. If the final velocity is \\(20 ms ^{-1}\\), find, correct to one decimal place, the:\n\ntime to travel this distance.",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0274",
+      "type": "theory",
+      "stem": "P is the mid-point of \\(\\overline{NO}\\) and equidistant from \\(\\overline{MN}\\) and \\(\\overline{MO}\\) . If \\(\\overline{MN}\\) = 8i + 3j and \\(\\overline{MO}\\) = 14i - 5j, find \\(\\overline{MP}\\) .",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0275",
+      "type": "theory",
+      "stem": "(a) Find the derivative of \\(4x-\\frac{7}{x^2}\\)with respect to \\(x\\), from first principle.\n(b) Given that tan \\(P =\\frac{3}{x - 1}\\) and tan \\(Q\\) =\\frac{2}{x + 1}\\), find tan \\(( P - Q )\\)",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0276",
+      "type": "theory",
+      "stem": "(ai) A quadratic polynomial, g (x) has (2x + 1) as a factor. If g (x) is divided by (x - 1) and (x - 2), the remainder are -6 and -5 respectively. Find;\n\n      g (x);\n(aii) A quadratic polynomial, g (x) has (2x + 1) as a factor. If g (x) is divided by (x - 1) and (x - 2), the remainder are -6 and -5 respectively. Find;\n\n       the zeros of g (x).\n(b) Find the third term when (\\(\\frac{x}{2}-1\\))\\(^8\\)is expanded in descending powers of \\(x\\).",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0277",
+      "type": "theory",
+      "stem": "(a) Express \\(\\frac{8x^2 + 8x + 9}{(x - 1)(2x + 3)^2}\\) in partial fractions.\n(b) The coordinates of the centre and circumference of a circle are (-2, 5) and 6π units respectively. Find the equation of the circle.",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0278",
+      "type": "theory",
+      "stem": "(a) The table shows the distribution of marks scored by some candidates in an examination.\n\n \n\n \n \n Marks\n 11 - 20\n 21 - 30\n 31 - 40\n 41 - 50\n 51 - 60\n 61 - 70\n 71 - 80\n 81 - 90\n \n 91 - 100\n \n \n \n Num of candidates\n 5\n 39\n 14\n 40\n 57\n 25\n 11\n 8\n 1\n \n \n\nConstruct a cumulative frequency table for the distribution.\n(b) The table shows the distribution of marks scored by some candidates in an examination.\n\n \n\n \n \n Marks\n 11 - 20\n 21 - 30\n 31 - 40\n 41 - 50\n 51 - 60\n 61 - 70\n 71 - 80\n 81 - 90\n \n 91 - 100\n \n \n \n Num of candidates\n 5\n 39\n 14\n 40\n 57\n 25\n 11\n 8\n 1\n \n \n\nDraw a cumulative frequency curve for the distribution.\n(ci) Use the curve to estimate the:\n\nnumber of candidates who scored marks between 24 and 58 ;\n(cii) Use the curve to estimate the:\n\nlowest mark for distinction, if 12% of the candidates passed with distinction.",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0279",
+      "type": "theory",
+      "stem": "(ai) A bag contains 16 identical balls of which 4 are green. A boy picks a ball at random from the bag and replaces it. If this is repeated 5 times, what is the probability that he:\n\ndid not pick a green ball;\n(aii) A bag contains 16 identical balls of which 4 are green. A boy picks a ball at random from the bag and replaces it. If this is repeated 5 times, what is the probability that he:\n\npicked a green ball at least three times?\n(b) The deviations from a mean of values from a set of data are \\(-2, ( m - 1), ( m ^2 + 1), -1, 2, (2 m - 1)\\) and \\(-2\\). Find the possible values of \\(m\\) .",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0280",
+      "type": "theory",
+      "stem": "(a) A particle of mass 2 kg moves under the action of a constant force, F N , with an initial velocity \\((3 i + 2 j ) ms^{ -1}\\) and a velocity of \\((15 i - 4 j ) ms^{ -1}\\) after 4 seconds . Find the:\n\n     acceleration of the particle;\n(b) A particle of mass 2 kg moves under the action of a constant force, F N , with an initial velocity \\((3 i + 2 j ) ms^{ -1}\\) and a velocity of \\((15 i - 4 j ) ms^{ -1}\\) after 4 seconds . Find the:\n\n    magnitude of the force F ;\n(c) A particle of mass 2 kg moves under the action of a constant force, F N , with an initial velocity \\((3 i + 2 j ) ms^{ -1}\\) and a velocity of \\((15 i - 4 j ) ms^{ -1}\\) after 4 seconds . Find the:\n\n     magnitude of the velocity of the particle after 8 seconds , correct to three decimal places.",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0281",
+      "type": "theory",
+      "stem": "(a) A see-saw pivoted at the middle is kept in balance by weights of Richard, John and Philip such that only Richard whose mass is 60 kg sits on one side. If they sit at distances 2       m , 3 m , and 4 m respectively from the pivot and Philip is 15 kg, find the mass of John.\n(bi) A body of mass 12 kg rests on a rough plane inclined at an angle of 30º to the horizontal. The coefficient of friction between the body and the plane is \\(\\frac{2}{3}\\). A force of magnitude P Newton acts on the body along the inclined plane. Find the value of P, if the body is at the point of moving:\n\ndown the plane;\n\n[Take \\(g = 10 ms ^{-2}\\)]\n(bii) A body of mass 12 kg rests on a rough plane inclined at an angle of 30º to the horizontal. The coefficient of friction between the body and the plane is \\(\\frac{2}{3}\\). A force of magnitude P Newton acts on the body along the inclined plane. Find the value of P, if the body is at the point of moving:\nup the plane;\n[Take \\(g = 10 ms ^{-2}\\)]",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-further-mathematics-theory-0282",
+      "type": "theory",
+      "stem": "If tan x = \\(\\frac{1}{3}\\), where 180º < x < 270º\nevaluate \\(\\frac{sin2 x - cos x}{2 tan x + sin 2x}\\), leaving the answer in surd form (radicals)",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0283",
+      "type": "theory",
+      "stem": "Find the sum of all natural numbers between 403 and 603 which are divisible by 7",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0284",
+      "type": "theory",
+      "stem": "Using the trapezium rule with seven ordinates, evaluate, correct to three decimal places, \\(\\int_{2.4}^{3.6} \\frac{1}{\\sqrt{x^2 - 2}}\\)dx",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0285",
+      "type": "theory",
+      "stem": "Find the equation of the normal to the curve y = 7x - 5x\\(^2\\) at x = 2",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0286",
+      "type": "theory",
+      "stem": "Two events M and N are such that P(M) = \\(\\frac{1}{2}\\), P(N) =  \\(\\frac{9}{20}\\) and P(M ∩ N) = \\(\\frac{11}{50}\\)\n(a) P(M ∩ N'):  (b) P(M' ∩ N)",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0287",
+      "type": "theory",
+      "stem": "The table shows the distribution of distance (in km) of 60 villages from a state capital.\n\n \n \n Distance (in km)\n 0 - 19\n 20 - 29\n 30 - 39\n 40 - 49\n 50 - 59\n 70 - 99\n 100 - 149\n \n \n Number of villages\n 12\n 7\n 6\n 8\n 5\n 9\n 10",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0288",
+      "type": "theory",
+      "stem": "The magnitude of two vectors u and v are 10N and 12N respectively. If the magnitude of their resultant is 15N, calculate the angle between them.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0289",
+      "type": "theory",
+      "stem": "A body of mass 40 kg is placed on a rough inclined plane which makes an angle of 30\\(^0\\) with the horizontal. If a force of 420 N is applied upwards parallel to the plane. find the:\n(a) maximum friction force that will keep the body in equilibrium;\n(b) coefficient of friction.[Take g = 10ms\\(^{-1}\\)",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0290",
+      "type": "theory",
+      "stem": "SECTION B (PART 1)\nA curve is given by y = 8x + \\(\\frac{27}{2x^2}\\),\nFIND:\n(a) an expression for \\(\\frac{dy}{dx}\\),\n(b) the coordinates of the stationary point on the curve and the nature of the stationary point;\n(c) the equation of the normal to the curve at (2, 2).",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0291",
+      "type": "theory",
+      "stem": "Three linear transformations, P, Q, and R in the oxy plane are defined by\nP: (x, y) → (-4x - y, 2x)\nQ: (x, y) → (y, 6x - 9y)\nR: (x, y) → (x - 2y, 3x + 5y)\n(a) write down the matrices of P, Q, and R \n(b) Find:\n(i) 2P - 3R + Q;\n(ii) QR;\n(iii) the inverse of the matrix R.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0292",
+      "type": "theory",
+      "stem": "(a) Express \\(\\frac{9x}{(2x + 1)(x^2 + 1)}\\) in partial fraction\n(b) If \\(^{2m}P_2\\) - 10 = \\(^m P_2\\), find the positive value of m.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0293",
+      "type": "theory",
+      "stem": "The data shows the ordered marks scored by students in a test: 11, 12, (2x + y), (x + 2y), 14, and ((y\\(^2\\) - 2x). Given that the median is 13\\(\\frac{1}{2}\\) and y is greater than x by 1, find:\n(a) the values of x and y\n(b) correct to three significant figures, the standard deviation of the distribution.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0294",
+      "type": "theory",
+      "stem": "In an examination, 70% of the candidates passed. If 12 candidates are selected at random, find the probability that:\n(a) at least two of them failed;\n(b) exactly half of them passed;\n(c) not more than one - six of them failed.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0295",
+      "type": "theory",
+      "stem": "PART II\nA particle of weight 12 N lying on a horizontal ground is acted by forces F\\(_1\\) = (10 N, 090º), F\\(_2\\) = (16 N, 180º), F\\(_3\\) = (7 N, 300º) and F\\(_4\\) = (12N, 030º)\n(a) Express all the forces acting on the particle as column vectors\n(b) Find, correct to two decimal places, the magnitude of the:\n(i) resultant forces;\n(ii) acceleration with which the particle starts to move.[Take g = 10 ms\\(^{-2}\\)]",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0296",
+      "type": "theory",
+      "stem": "(a) A boy runs in a line and his displacement at time t seconds after leaving the start point O is X metres, where 20X = 4t\\(^2\\) + t\\(^3\\). Find the:\n(i) velocity of the body when t = 15 seconds (ii) value of t for which the acceleration of the body is 8 times his initial acceleration\n(b) A body of mass 6 kg moves with a velocity of 7 ms\\(^{-1}\\). It collides with a second body moving in the opposite direction with a velocity of 5 ms\\(^{-1}\\). After collision, the two bodies move together with a velocity of 4 ms\\(^{-1}\\). Find the mass of the second body.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-further-mathematics-theory-0297",
+      "type": "theory",
+      "stem": "SECTION A\n\n1. The sum of the 2nd and 5th terms of an arithmetic progression (A.P) is 42. If the difference between the 6th and 3rd terms is 12, find:\na. the common difference\nb. the first term\nc. the 20th term.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0298",
+      "type": "theory",
+      "stem": "2.  If 2\\(^{2x -3y}\\) = 32 and log\\(_y\\) x = 2, find the values of x and y\nLeave your answer in this format \"+ x,- y\"",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0299",
+      "type": "theory",
+      "stem": "3. If (x + 2) and (x -1) are factors of f(x) = 6x\\(^4\\) + mx\\(^3\\) - 13x\\(^2\\) + n x + 14, find the:\na. value of m and n. Leave your answer in this format 'm,n.'\nb. remainder when f(x) is divided by (x + 1)",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0300",
+      "type": "theory",
+      "stem": "4. Find the equation of a tangent to the curve y = \\(\\frac{x - 1}{2x + 1}\\), x \\(\\pm\\) \\(\\frac{-1}{2}\\) at the point(1, 0)\nLeave your answer in this format: ay - bx + c = 0",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0301",
+      "type": "theory",
+      "stem": "5a. There are 6 points in a plane. How many triangles can be formed with the points?\nb. A family of 6 is to be seated in a row. In how many ways can this be done if the father and mother are not to sit together?\nLeave your answer in whole numbers \" abc.\"",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0302",
+      "type": "theory",
+      "stem": "6. The table shows the distribution of the ages of a group of people in a village.\n\n \n \n Ages(in years)\n 15-18\n 19-22\n 23-26\n 27-30\n 31-34\n 35-38\n \n \n Frequency\n 40\n 33\n 25\n 10\n 8\n 4\n \n \n\nUsing an assumed mean of 24.5. Calculate the mean distribution.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0303",
+      "type": "theory",
+      "stem": "7a. A body of mass 5 kg resting on a smooth horizontal plane is acted upon by forces 6i + 2j, 5i + 4j, and 4i − j. Calculate:  the velocity of the body\nb. the magnitude of its velocity, after 4 seconds",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0304",
+      "type": "theory",
+      "stem": "8.  An object is projected vertically upward with a velocity of 80 ms\\(^{-1}\\). Find the;\na. Maximum height reached (Leave your answer in whole number 'abc.')\nb. Time taken to return to the point of projection [ g = 10m/s\\(^2\\)]",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0305",
+      "type": "theory",
+      "stem": "SECTION B\n9a. Simplify \\(\\frac{\\sqrt{75} - 3}{\\sqrt{3} + 1}\\), leaving your answers in the form a + b\\(\\sqrt{c}\\), where a, b, and c are rational numbers.\nbi. The points (7,3), (2,8), and (-3,3) lie on a circle. Find the equation\nbii. Find the radius of the circle.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0306",
+      "type": "theory",
+      "stem": "10a. The gradient of a tangent to the curve y = 4x\\(^3\\) at points P and Q is 108. Find the coordinates of P and Q\nbi. Given \\(\\hat{A}\\) = 45º, \\(\\hat{B}\\) = 30º, sin(A + B) = sinA sinB + sinB sinA and cos(A + B) = cosA cosB - sinA sinB. Show that sin 15º = \\(\\frac{\\sqrt{6} - \\sqrt{2}}{4}\\)\nand cos15º = \\(\\frac{\\sqrt{6} + \\sqrt{2}}{4}\\)\nii. Hence, find tan 15º",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0307",
+      "type": "theory",
+      "stem": "11a. Using the substitution U = 5 - x\\(^2\\)\nevaluate \\(\\int _1^2 \\frac{\\text{x}}{\\sqrt{5 - x^2}}\\) dx\nb. If y = px\\(^2\\) + qx, \\(\\frac{\\text{dy}}{\\text{dx}}\\) = 7 and \\(\\frac{d^2y}{dx^2}\\) = 6. Find the values of p and q.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0308",
+      "type": "theory",
+      "stem": "13a. The table below shows the distribution of hours spent at work by the employees of a factory in a week\n\n \n \n Time(hours)\n 20 - 29\n 30 - 39\n 40 - 49\n 50 - 59\n 60 - 69\n 70 - 79\n \n \n No. of persons\n 8\n 11\n 23\n 25\n 8\n 5\n \n \n\nDraw an Ogive for the distribution\nb. Using your graph,  estimate\ni. the median.\nii. estimate the lower quartile\niii. 40th percentile\niv. number of employees that spent at least 50 hours 30 mins.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0309",
+      "type": "theory",
+      "stem": "14a.  Two pupils are chosen at random from a group of 4 boys and 5 girls. Find the probability that the two pupils chosen would be boys. Leave your answer in fraction 'a/b.'\nb. Twenty percent of the total production of transistors produced by a machine are below standard. If a random sample of six transistors produced by the machine is taken, what is the probability of getting \ni. Exactly 2\nii. Exactly 1. Leave your answer in six decimal places \" a.bcdefg.\"\niii. At least 2. Leave your answer in five decimal places \" a. bcdeg.\"\niv. At most 2 standard transistors",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0310",
+      "type": "theory",
+      "stem": "15a. A body of mass 15kg is suspended at a point P by two light inextensible strings XP\\(^→\\) and YP\\(^→\\). The strings are inclined at 60º and 40º, respectively, to the downward vertical. Find, correct to two decimal places, the tension in the strings (take g = 10m/s\\(^2\\))\nb. The height h metres, of a ball thrown into the air is 2 + 20t + kt\\(^2\\), after t seconds. If its takes 2 seconds for the ball to reach its height point, Find:\ni. the value of k\nii. its highest point from the point of throw.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0311",
+      "type": "theory",
+      "stem": "16a. A ball P moving with velocity 2 u m/s, collides with a similar ball Q, of different mass, which is at rest. After the collision, Q moves with u m/s and P with velocity \\(\\frac{1}{2}\\) u m/s in the opposite direction. Find the ratio of the mass of P and Q.\nb. Two forces of magnitude 3N and 7N have a resultant of magnitude 5N. Calculate, correct to one decimal place, the angle between the two forces.\nc. AB\\(^→\\)  \\(\\left| \\begin{array}{cc} -4 \\\\ 6 \\end{array} \\right|\\) and CB\\(^→\\)  \\(\\left| \\begin{array}{cc} 2 \\\\ 3 \\end{array} \\right|\\) are two vectors in the XY plane. If V is the midpoint AB\\(^→\\). Find CV\\(^→\\)",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0312",
+      "type": "theory",
+      "stem": "17a. A body of mass 5 kg is placed on a smooth plane inclined at an angle of 30º  to the horizontal. Find: the magnitude of the force acting parallel to the plane.\nbi. A uniform plank PQ of length 10m and mass m kg rests on two support A and B. Where \\PA\\ = \\BQ\\ = 1m. A load of mass 8kg is placed on the plank at point C such that \\AC\\ = 3.5m, if the reaction at B is 100N. Calculate the value of m\nbii. the reaction at A [ take g = 10m/s\\(^2\\)].",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-further-mathematics-theory-0313",
+      "type": "theory",
+      "stem": "The table below shows the distribution of ages of workers in a company.\n\n \n \n Age/ yr\n 17 - 21\n 22 - 26\n 27 - 31\n 32 - 36\n 37 - 41\n 42 - 46\n 47 - 51\n 52 - 56\n \n \n Workers\n 12\n 24\n 30\n 37\n 45\n 25\n 10\n 7\n \n \n\n(a) Using an assumed mean of 39, calculate the (i) mean (ii) standard deviation; of the distribution.\n(b) If a worker is selected at random from the company for an award, what is the probability that he is at most 36 years old?",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0314",
+      "type": "theory",
+      "stem": "The table shows the marks obtained by some candidates in Physics (y) and Mathematics (x) tests.\n\n \n \n Mathematics\n 43\n 46\n 48\n 39\n 30\n 60\n 8\n 45\n 40\n \n \n Physics\n 54\n 53\n 63\n 30\n 44\n 75\n 20\n 33\n 49\n \n \n\n(a)(i) Represent this information on a scatter diagram.\n(ii) Find \\(\\bar{x}\\) and \\(\\bar{y}\\), the mean of x and y respectively.\n(iii) Draw the line of best fit to pass through (x, y).\n(b) Find the equation of the line in a(iii).\n(c) Use your equation in (b) to find, correct to one decimal place, the mark in Physics for a candidate who scored 28 in Mathematics.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0315",
+      "type": "theory",
+      "stem": "(a) Find, correct to one decimal place, the angle between  \\(p = \\begin{pmatrix}  3 \\\\ -1 \\end{pmatrix}\\) and \\(q = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix}\\).\n(b) ABCD is a square with vertices at A(0, 0), B(2, 0), C(2, 2) and D(0, 2). Forces of magnitude 10 N, 15 N, 20 N and 5 N act along \\(\\overrightarrow{BA}, \\overrightarrow{BC}, \\overrightarrow{DC}\\) and \\(\\overrightarrow{AD}\\) respectively. Find the (i) magnitude (ii) direction; of the resultant.",
+      "marks": 1,
+      "year": 2007
+    },
+    {
+      "id": "waec-further-mathematics-theory-0316",
+      "type": "theory",
+      "stem": "If \\(\\begin{vmatrix} x - 3 & -4 & 3 \\\\ 5 & 2 & 2 \\\\ 2 & -4 & 6 - x \\end{vmatrix} = -24 \\), find the values of x.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0317",
+      "type": "theory",
+      "stem": "Given that \\(\\log_{3} x - 3\\log_{x} 3 + 2 = 0\\), find the values of x.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0318",
+      "type": "theory",
+      "stem": "(a) Using the substitution \\(u = x - 2\\), write \\(\\frac{x^{3} + 5}{(x - 2)^{4}}\\) as an expression in terms of u.\n(b) Using the answer in (a), express \\(\\frac{x^{3} + 5}{(x - 2)^{4}}\\) in partial fractions.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0319",
+      "type": "theory",
+      "stem": "The sum of the first twelve terms of an Arithmetic Progression is 168. If the third term is 7, find the values of the common difference and the first term.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0320",
+      "type": "theory",
+      "stem": "Two panel of judges, X and Y, rank 8 brands of cooking oil as follows :\n\n \n \n Cooking oil type\n A\n B\n C\n D\n E\n F\n G\n H\n \n \n X\n 8\n 5\n 1\n 7\n 2\n 6\n 3\n 4\n \n \n Y\n 6\n 3\n 4\n 8\n 5\n 7\n 1\n 2\n \n \n\nCalculate the Spearmann's rank correlation coefficient.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0321",
+      "type": "theory",
+      "stem": "(a) The probability that Kunle solves a particular question is \\(\\frac{1}{3}\\) while that of Tayo is \\(\\frac{1}{5}\\). If both of them attempt the question, find the probability that only one of them will solve the question.\n(b) A committee of 8 is to be chosen from 10 persons. In how many ways can this be done if there is no restriction?",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0322",
+      "type": "theory",
+      "stem": "Given that \\(m = 3i - 2j ; n = 2i - 3j\\) and \\(p = -i + 6j\\), find \\(4m + 2n - 3p\\).",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0323",
+      "type": "theory",
+      "stem": "A body of mass 20kg moving with a velocity of 80ms\\(^{-1}\\) collides with another body of mass 30kg moving with a velocity of 50ms\\(^{-1}\\). If they both moved in the same direction after collision, find their common velocity if they moved in the :\n(a) same direction before collision ; (b) opposite direction before collision.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0324",
+      "type": "theory",
+      "stem": "A circle is drawn through the points (3, 2), (-1, -2) and (5, -4). Find the :\n(a) coordinates of the centre of the circle ;\n(b) radius of the circle ;\n(c) equation of the circle.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0325",
+      "type": "theory",
+      "stem": "(a) Solve : \\(2^{3y + 2} - 7(2^{2y + 2}) - 31(2^{y}) - 8 = 0, y \\in R\\).\n(b) Find \\(\\int (\\sqrt{x^{2} + 1}) xdx\\).",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0326",
+      "type": "theory",
+      "stem": "(a)(i) Write down the binomial expansion of \\((2 - \\frac{1}{2}x)^{5}\\) in ascending powers of x.\n(ii) Using the expansion in (a)(i), find, correct to two decimal places, the value of \\((1.99)^{5}\\).\n(b) The polynomial \\(x^{3} + qx^{2} + rx + 9\\), where q and r are constants, has (x + 1) as a factor and has a remainder -17 when divided by (x + 2). Find the values of q and r.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-further-mathematics-theory-0327",
+      "type": "theory",
+      "stem": "Ten coins were tossed together a number of times. The distribution of the number of heads obtained is given in the following table :\n\n \n \n No of heads\n 0\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n 10\n \n \n Frequency\n 2\n 7\n 23\n 36\n 11\n 61\n 100\n 12\n 8\n 5\n 3\n \n \n\nCalculate, correct to three decimal places, the :\n(a) mean number of heads ;\n(b) probability of getting an even head ;\n(c) probability of getting an odd number.",
+      "marks": 1,
+      "year": 2018
+    }
+  ],
+  "category": "secondary",
+  "body": "WAEC"
+}

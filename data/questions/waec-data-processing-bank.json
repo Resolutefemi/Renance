@@ -1,0 +1,5146 @@
+{
+  "code": "waec-data-processing-bank",
+  "title": "WAEC Data Processing | Past Questions Bank",
+  "version": 1,
+  "questionCount": 395,
+  "totalMarks": 395,
+  "questions": [
+    {
+      "id": "waec-data-processing-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following persons invented the punch card machine?",
+      "options": {
+        "A": "Blaise Pascal",
+        "B": "Gottfried Leibniz",
+        "C": "J. Prosper Eckert",
+        "D": "Dr. Herman Hollerith"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0002",
+      "type": "mcq",
+      "stem": "Convert \\(47_8\\) to its binary equivalent.",
+      "options": {
+        "A": "100111\\(_2\\)",
+        "B": "110011\\(_2\\)",
+        "C": "10001\\(_2\\)",
+        "D": "1111011\\(_2\\)"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0003",
+      "type": "mcq",
+      "stem": "The operation of checking input data against specified criteria is referred to as.",
+      "options": {
+        "A": "data verification",
+        "B": "data validation",
+        "C": "data cross check",
+        "D": "data control"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0004",
+      "type": "mcq",
+      "stem": "Which of the following is not a source of data collection.",
+      "options": {
+        "A": "observation",
+        "B": "interview",
+        "C": "questionnaire",
+        "D": "classification"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following is true about digital computers.",
+      "options": {
+        "A": "They consist of magnetic core memory.",
+        "B": "they understand data as a continuous measurement of a physical quantity.",
+        "C": "they represent numbers through a string of binary digits.",
+        "D": "they are mainly used for scientific purposes."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0006",
+      "type": "mcq",
+      "stem": "Which of the following is not used for online shopping?",
+      "options": {
+        "A": "MasterCard",
+        "B": "Credit card",
+        "C": "Verve card",
+        "D": "Sim card"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0007",
+      "type": "mcq",
+      "stem": "Which of the following is a negative impact of ICT in education?",
+      "options": {
+        "A": "Plagiarism",
+        "B": "E-Library",
+        "C": "Distance Learning",
+        "D": "Computer-based test"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0008",
+      "type": "mcq",
+      "stem": "Which of the following are parts of a computer processor?",
+      "options": {
+        "A": "CPU and main memory",
+        "B": "Control unit and ALU",
+        "C": "Operating system and application",
+        "D": "Main memory and storage"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0009",
+      "type": "mcq",
+      "stem": "Data gathering involves the following means except",
+      "options": {
+        "A": "counting process",
+        "B": "voting process",
+        "C": "measuring process",
+        "D": "calculating process"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0010",
+      "type": "mcq",
+      "stem": "Two computers, X and Y are such that the processor in X has a word size of 32 bits while that of Y is 16bits. Which of the following statement is true?",
+      "options": {
+        "A": "X can process half as much data as Y at the same time",
+        "B": "X can process the same amount of data as Y at the same time.",
+        "C": "X can process two times as much data as Y at the same time.",
+        "D": "X can process four times as much data as Y at the same time."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0011",
+      "type": "mcq",
+      "stem": "The television set deisplays information as",
+      "options": {
+        "A": "antenna signals",
+        "B": "visual signal",
+        "C": "audio signals",
+        "D": "audio-visual signals"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0012",
+      "type": "mcq",
+      "stem": "Which of the following is not an ancient medium for transmitting information?",
+      "options": {
+        "A": "Fire lighting",
+        "B": "Beating of drums",
+        "C": "Telephone",
+        "D": "Whistling"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0013",
+      "type": "mcq",
+      "stem": "A server is a computer that provides services to other computers called",
+      "options": {
+        "A": "Clients",
+        "B": "Peers",
+        "C": "routers",
+        "D": "switches"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0014",
+      "type": "mcq",
+      "stem": "The rules for exchanging data on a network are known as",
+      "options": {
+        "A": "transmission rules",
+        "B": "transfer rules",
+        "C": "protocol",
+        "D": "configurations"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0015",
+      "type": "mcq",
+      "stem": "A search engine is a?",
+      "options": {
+        "A": "A program that searches engines",
+        "B": "Computer engine that searches a database",
+        "C": "hardware components of a computer",
+        "D": "tool that searches the web"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0016",
+      "type": "mcq",
+      "stem": "The feature in a browser which enables users to open the latest copy of a webpage is",
+      "options": {
+        "A": "Refresh",
+        "B": "Forward",
+        "C": "Backward",
+        "D": "Redirect"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0017",
+      "type": "mcq",
+      "stem": "An operating system will perform the following except",
+      "options": {
+        "A": "files and folder arrangement",
+        "B": "storage location",
+        "C": "user profile creation",
+        "D": "protection from surge"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0018",
+      "type": "mcq",
+      "stem": "A Microsoft Office application suites include all the following except",
+      "options": {
+        "A": "Word",
+        "B": "Access",
+        "C": "CorelDraw",
+        "D": "PowerPoint"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0019",
+      "type": "mcq",
+      "stem": "Which of the following is not a feature of the drawing tool bar?",
+      "options": {
+        "A": "Oval shape",
+        "B": "Line",
+        "C": "Drop Cap",
+        "D": "Arc"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0020",
+      "type": "mcq",
+      "stem": "The MS Excel worksheet below shows the salary distribution for four staff in a company. The net salary is paid after deductions have been made. \n\n \n \n S/N\n A\n B\n C\n D\n E\n \n \n 1\n IDENTIFICATION NUMBER\n BASIC SALARY (N)\n TOTAL ALLOWANCE (N)\n TOTAL DEDUCTION (N)\n NET SALARY (N)\n \n \n 2\n LP/p/1202\n 22000\n 29000\n 7000\n 44000\n \n \n 3\n L/P/1250\n 26000\n 35000\n 9000\n 52000\n \n \n 4\n L/P/3205\n 15000\n 21000\n 6000\n 30000\n \n \n 5\n L/P/3215\n 33000\n 41000\n 8000\n 66000\n \n \n\nWhich of the following cells contain numeric data?",
+      "options": {
+        "A": "A1",
+        "B": "A2",
+        "C": "C3",
+        "D": "E1"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0021",
+      "type": "mcq",
+      "stem": "The MS Excel worksheet below shows the salary distribution for four staff  of a company. The net salary is paid after deductions have been made.\n\n \n \n S/N\n A\n B\n C\n D\n E\n \n \n 1\n IDENTIFICATION NUMBER\n BASIC SALARY (N)\n TOTAL ALLOWANCE (N)\n TOTAL DEDUCTION (N)\n NET SALARY (N)\n \n \n 2\n LP/p/1202\n 22000\n 29000\n 7000\n 44000\n \n \n 3\n L/P/1250\n 26000\n 35000\n 9000\n 52000\n \n \n 4\n L/P/3205\n 15000\n 21000\n 6000\n 30000\n \n \n 5\n L/P/3215\n 33000\n 41000\n 8000\n 66000\n \n \n\nWhich of the following for mulas would be used to obtain the value in cell E2?",
+      "options": {
+        "A": "= B2 + C2 - D2",
+        "B": "= B2 + C2 + D2",
+        "C": "= (B2 + C2 + D2)/3",
+        "D": "= C2 - D2"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0022",
+      "type": "mcq",
+      "stem": "In Database Management System (DBMS), linking entities is used to represent?",
+      "options": {
+        "A": "Attributes",
+        "B": "Objects",
+        "C": "Relationships",
+        "D": "Relations"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0023",
+      "type": "mcq",
+      "stem": "A data element that uniquely identifies one record from the other in a table is the",
+      "options": {
+        "A": "Attribute key",
+        "B": "determinant",
+        "C": "entity key",
+        "D": "primary key"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0024",
+      "type": "mcq",
+      "stem": "In MS PowerPoint presentation, the special effects that control the order in which objects enter a slide and their manner of appearance is",
+      "options": {
+        "A": "Transition",
+        "B": "Media",
+        "C": "ClipArt",
+        "D": "Animation"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0025",
+      "type": "mcq",
+      "stem": "Which of these packages could be used by a Data processing teacher to design a website for a school",
+      "options": {
+        "A": "Front Page",
+        "B": "Pagemaker",
+        "C": "PowerPoint",
+        "D": "word Perfect"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0026",
+      "type": "mcq",
+      "stem": "Routine checks operations on computers in order to ensure its continuous functioning is known as computer",
+      "options": {
+        "A": "servicing",
+        "B": "repairs",
+        "C": "maintenance",
+        "D": "installation"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0027",
+      "type": "mcq",
+      "stem": "The perfomance of the computer can be enhanced by",
+      "options": {
+        "A": "using large monitors",
+        "B": "using faster printer",
+        "C": "installing a scanner",
+        "D": "increasing the memory size"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0028",
+      "type": "mcq",
+      "stem": "The moral principles that regulates the use of computers, its accessories and environment are called",
+      "options": {
+        "A": "ethics",
+        "B": "conduct",
+        "C": "attitude",
+        "D": "appreciation"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0029",
+      "type": "mcq",
+      "stem": "A technician can protect itself from electronic discharge by using",
+      "options": {
+        "A": "wrist strap",
+        "B": "voltmeter",
+        "C": "screw driver",
+        "D": "magnet"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0030",
+      "type": "mcq",
+      "stem": "Which of the following operations prevent file loss?",
+      "options": {
+        "A": "File backup",
+        "B": "File conversation",
+        "C": "File maintenance",
+        "D": "File sorting"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0031",
+      "type": "mcq",
+      "stem": "Acomputer pofessional who studies an existing system with a view to evolving a computer based system from it is",
+      "options": {
+        "A": "system analyst",
+        "B": "system administrator",
+        "C": "computer programmer",
+        "D": "computer engineer"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0032",
+      "type": "mcq",
+      "stem": "Computer virus cannot be transmitted by",
+      "options": {
+        "A": "downloading files",
+        "B": "e-mail attachment",
+        "C": "pen drives",
+        "D": "typing of keyboard"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0033",
+      "type": "mcq",
+      "stem": "A program designed to detect and prevent malicious programs from a computer system is",
+      "options": {
+        "A": "spyware",
+        "B": "passcode",
+        "C": "malware",
+        "D": "firewall"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0034",
+      "type": "mcq",
+      "stem": "In relational model, a tuple is a?",
+      "options": {
+        "A": "A column of table",
+        "B": "key of a table",
+        "C": "row of a table",
+        "D": "two-dimensional table"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0035",
+      "type": "mcq",
+      "stem": "Relationship between tables in a relational model are created by",
+      "options": {
+        "A": "foreign keys",
+        "B": "determinants",
+        "C": "composite keys",
+        "D": "candidates keys"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0036",
+      "type": "mcq",
+      "stem": "Computers store data as",
+      "options": {
+        "A": "folders",
+        "B": "files",
+        "C": "documents",
+        "D": "directories"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0037",
+      "type": "mcq",
+      "stem": "The records of students in a school are kept in order of their arrival. What files access method would be used to access a student's record if the latest record would first be retrieved?",
+      "options": {
+        "A": "Direct",
+        "B": "Indexed",
+        "C": "Batch",
+        "D": "sequential"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0038",
+      "type": "mcq",
+      "stem": "The prevention of data from corruption and unauthorized access is a function of data",
+      "options": {
+        "A": "security",
+        "B": "secrecy",
+        "C": "intergrity",
+        "D": "coding"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following defines heterogeneous distributed database?",
+      "options": {
+        "A": "Same DBMS is used at each location but data are not distributed across all nodes.",
+        "B": "Same DBSM is used at each location with data distributed across all nodes.",
+        "C": "Different DBSM is used at each location and data are not distributed across all nodes.",
+        "D": "Different DBSM is used at each location and data are distributed across all nodes"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0040",
+      "type": "mcq",
+      "stem": "One of the characteristic feature of the second generation computer is the presence of",
+      "options": {
+        "A": "vacuum tube",
+        "B": "transistors",
+        "C": "micro-chips",
+        "D": "integrated circuit"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0041",
+      "type": "mcq",
+      "stem": "Convert 4\\(_{10}\\) to a number in base two",
+      "options": {
+        "A": "10",
+        "B": "11",
+        "C": "100",
+        "D": "110"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0042",
+      "type": "mcq",
+      "stem": "Data processed into its useful form is referred to as",
+      "options": {
+        "A": "unique data",
+        "B": "raw data",
+        "C": "knowledge",
+        "D": "information"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0043",
+      "type": "mcq",
+      "stem": "Which of the following is an example of qualitative data?",
+      "options": {
+        "A": "Colour",
+        "B": "Height",
+        "C": "Length",
+        "D": "Show size"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0044",
+      "type": "mcq",
+      "stem": "Which of the following is not a characteristics of a personal computer",
+      "options": {
+        "A": "Automation",
+        "B": "Complex",
+        "C": "Digital",
+        "D": "High speed"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0045",
+      "type": "mcq",
+      "stem": "The gap between ownership, access, and benefits from computer and it's application is termed degital",
+      "options": {
+        "A": "separation",
+        "B": "divide",
+        "C": "deprivation",
+        "D": "annihilation"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0046",
+      "type": "mcq",
+      "stem": "Magnetic Ink Character Recognition (MICR) are used to read codes on",
+      "options": {
+        "A": "postal order",
+        "B": "multiple choice examination answer sheets",
+        "C": "bank teller",
+        "D": "bank cheques"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0047",
+      "type": "mcq",
+      "stem": "the device that sends information to the CPU is the",
+      "options": {
+        "A": "bus",
+        "B": "input device",
+        "C": "output devices",
+        "D": "processor"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0048",
+      "type": "mcq",
+      "stem": "Which of the following is not a procedure for information processing?",
+      "options": {
+        "A": "segregation",
+        "B": "organization",
+        "C": "interpretation",
+        "D": "collation"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0049",
+      "type": "mcq",
+      "stem": "The assembling of data according to a predetermined order is known as",
+      "options": {
+        "A": "collation",
+        "B": "interpretation",
+        "C": "organization",
+        "D": "summarization"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0050",
+      "type": "mcq",
+      "stem": "Information transmission medium from location P to location Q in space is called",
+      "options": {
+        "A": "wireless transmission",
+        "B": "wired transmission",
+        "C": "cabled transmission",
+        "D": "asynchronous transmission"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0051",
+      "type": "mcq",
+      "stem": "Which of the following is not a type of wireless transmission",
+      "options": {
+        "A": "Bluetooth",
+        "B": "Fiire optics",
+        "C": "Infrared",
+        "D": "WiFi"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0052",
+      "type": "mcq",
+      "stem": "The basic criterion for classifying a network is",
+      "options": {
+        "A": "psychological consideration",
+        "B": "geographical scope",
+        "C": "equipment availability",
+        "D": "economic reason"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0053",
+      "type": "mcq",
+      "stem": "Which of the following measures are used to secure data on-line? I. Password II. Encryption III. Personal Identification Number (PIN)",
+      "options": {
+        "A": "II only",
+        "B": "III only",
+        "C": "II and III",
+        "D": "I, II, and III"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0054",
+      "type": "mcq",
+      "stem": "In e-mail context, bcc stands for",
+      "options": {
+        "A": "backup carbon copy",
+        "B": "blank carbon copy",
+        "C": "blind carbon copy",
+        "D": "bulk carbon copy"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0055",
+      "type": "mcq",
+      "stem": "Facebook, Twitter and WhatsApp are examples of",
+      "options": {
+        "A": "social media",
+        "B": "social communication",
+        "C": "networking media",
+        "D": "search engines"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0056",
+      "type": "mcq",
+      "stem": "Which of the following is not an application of computers?",
+      "options": {
+        "A": "bank notes counter",
+        "B": "point of sales terminal",
+        "C": "Automated Teller Machine",
+        "D": "traffic lights control"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following is secondary storage device.",
+      "options": {
+        "A": "RAM",
+        "B": "bubble memory",
+        "C": "floppy disk",
+        "D": "EPROM"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0058",
+      "type": "mcq",
+      "stem": "Information analysis procedures includes the following except",
+      "options": {
+        "A": "skim and scan",
+        "B": "recognizing interrelationships",
+        "C": "interpret and conclude",
+        "D": "identifying propaganda and bias"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0059",
+      "type": "mcq",
+      "stem": "The advantages of electronic data processing includes the following except",
+      "options": {
+        "A": "automatic processing",
+        "B": "hacking",
+        "C": "fast and reliable processing",
+        "D": "storage capacity"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0060",
+      "type": "mcq",
+      "stem": "An internet-based system that allows people different geographical locations to have in-personmeeting is known as",
+      "options": {
+        "A": "voice messaging",
+        "B": "voice conferencing system",
+        "C": "on-line mailing",
+        "D": "fax system"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0061",
+      "type": "mcq",
+      "stem": "The following software programs coordinates and control all other computer progra, programs, hardware and users' action except",
+      "options": {
+        "A": "ZENITH",
+        "B": "UNIX",
+        "C": "DOS",
+        "D": "DBSM"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0062",
+      "type": "mcq",
+      "stem": "In word processing applications, the symbol B, I and U are commonly used buttons found on the",
+      "options": {
+        "A": "standard toolbar",
+        "B": "menu bar",
+        "C": "formatting bar",
+        "D": "drawing toolbar"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0063",
+      "type": "mcq",
+      "stem": "Bola intends to evoke the synonyms of a certain word during Word processing. What is the most appropriate tool to use?",
+      "options": {
+        "A": "Assistant",
+        "B": "Change case",
+        "C": "Grammar check",
+        "D": "Thesaurus"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0064",
+      "type": "mcq",
+      "stem": "In a worksheet, which of the following actions would select non-contiguous cells?",
+      "options": {
+        "A": "holding down the Shift key",
+        "B": "Holding down the Ctrl key",
+        "C": "holding than the Alt key",
+        "D": "holding down the Ctrl+Shift key"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0065",
+      "type": "mcq",
+      "stem": "Which of these formulas will not be executed in MS Excel?",
+      "options": {
+        "A": "=SUM(examscore)",
+        "B": "=SUM(examscore)-12",
+        "C": "=SUM(exam_score)*8",
+        "D": "=SUM(exam score)/8"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0066",
+      "type": "mcq",
+      "stem": "MS Access is an example of a",
+      "options": {
+        "A": "relational model",
+        "B": "network model",
+        "C": "hierarchical model",
+        "D": "file model"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0067",
+      "type": "mcq",
+      "stem": "When a database recovery manager is invoked after a crash, restart proceeds in the following three phases; I. Undo II. Redo III. Analysis. Arrange these phases in the right order.",
+      "options": {
+        "A": "I, II, III",
+        "B": "II, I, III",
+        "C": "III, II, I",
+        "D": "I, III, II"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0068",
+      "type": "mcq",
+      "stem": "During presentation, slide transition can be activated by",
+      "options": {
+        "A": "right-click",
+        "B": "mouse drag",
+        "C": "mouse click",
+        "D": "double-click"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0069",
+      "type": "mcq",
+      "stem": "Planning and creating of website is called web",
+      "options": {
+        "A": "analysis",
+        "B": "design",
+        "C": "maintenance",
+        "D": "publishing"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0070",
+      "type": "mcq",
+      "stem": "Magazines and brochures can be produced using a",
+      "options": {
+        "A": "data processing software",
+        "B": "graphics software",
+        "C": "presentation software",
+        "D": "web authoring software"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following is one of the tools used to maintain the computer",
+      "options": {
+        "A": "Blower",
+        "B": "Calipper",
+        "C": "Cotton wool",
+        "D": "Kerosine"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0072",
+      "type": "mcq",
+      "stem": "Which of the following is not a good computer maintenance practice?",
+      "options": {
+        "A": "Blowing the system unit with a blower",
+        "B": "Blowing the keyboard with a blower",
+        "C": "Cleaning the screen with a wet cloth",
+        "D": "Cleaning the CD-ROM drive with lens cleaner"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0073",
+      "type": "mcq",
+      "stem": "Commonly accepted practices, rules or methods in computing are called",
+      "options": {
+        "A": "Conventions",
+        "B": "Habits",
+        "C": "Laws",
+        "D": "Standards"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0074",
+      "type": "mcq",
+      "stem": "Which of the following is safety measure in the computer laboratory?",
+      "options": {
+        "A": "Eating in the computer laboratory",
+        "B": "Illumination in the computer laboratory",
+        "C": "Opening the monitor by unauthorized persons",
+        "D": "Poor ventilation in the computer laboratory"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0075",
+      "type": "mcq",
+      "stem": "Safety measures to be observed when using the computer include all of the following except",
+      "options": {
+        "A": "use of anti-glare protector",
+        "B": "sitting posture",
+        "C": "maintaining a dust-free environment",
+        "D": "dropping liquids in the computer rooms"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0076",
+      "type": "mcq",
+      "stem": "A computer professional who studies an existing system with a view to evolving a computer-based system from it is called?",
+      "options": {
+        "A": "computer engineer",
+        "B": "computer programmer",
+        "C": "data-base administrator",
+        "D": "system analyst"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0077",
+      "type": "mcq",
+      "stem": "Which of the following is not an anti-virus?",
+      "options": {
+        "A": "Avast",
+        "B": "AVG",
+        "C": "Compaq",
+        "D": "Norton"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0078",
+      "type": "mcq",
+      "stem": "Which of the following is used to retrieve specific information from database tables?",
+      "options": {
+        "A": "Index",
+        "B": "Query",
+        "C": "Report",
+        "D": "Table"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0079",
+      "type": "mcq",
+      "stem": "Which of these methods would delete a relationship defined between two tables in MS Access?",
+      "options": {
+        "A": "Selecting delete relationship from the edit menu dialog box",
+        "B": "Selecting the relationship line and pressing Delete key",
+        "C": "Selecting Delete from the relationship menu",
+        "D": "Selecting Delete relationship from the file drop menu"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0080",
+      "type": "mcq",
+      "stem": "Which of the following is not an effect of computer virus?",
+      "options": {
+        "A": "It distorts the computer screen",
+        "B": "interferes with computer operation",
+        "C": "damages the computer",
+        "D": "corrupts the computer"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0081",
+      "type": "mcq",
+      "stem": "What file organization would require that all the five (5) records be read before the 6th record is written?",
+      "options": {
+        "A": "Direct-access file",
+        "B": "Index sequential file",
+        "C": "Random access file",
+        "D": "Sequential access file"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0082",
+      "type": "mcq",
+      "stem": "Which of the following is not an advantage of file organization?",
+      "options": {
+        "A": "Faster processing of data input",
+        "B": "Postal data retrieval",
+        "C": "Prevention of data failure and data loss",
+        "D": "Safety of data and information in a storage medium"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0083",
+      "type": "mcq",
+      "stem": "Maintaining the value nd content of data is part of data",
+      "options": {
+        "A": "coding",
+        "B": "integrity",
+        "C": "secrecy",
+        "D": "security"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0084",
+      "type": "mcq",
+      "stem": "Which of these operations would not improve the performance of a parallel database system?",
+      "options": {
+        "A": "Building indexes",
+        "B": "Deleting unwanted data",
+        "C": "Evaluating queries",
+        "D": "Storing data across several sites."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-data-processing-bank-0085",
+      "type": "mcq",
+      "stem": "The use of Visual Display Unit was a major breakthrough in the",
+      "options": {
+        "A": "first generation computers",
+        "B": "second generation computers",
+        "C": "third generation computers",
+        "D": "fifth generation computers"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0086",
+      "type": "mcq",
+      "stem": "In hexadecimal system, D is equivalent to",
+      "options": {
+        "A": "15",
+        "B": "14",
+        "C": "13",
+        "D": "10"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0087",
+      "type": "mcq",
+      "stem": "A teacher computed the average score of students in a given test. The result of the computation describes",
+      "options": {
+        "A": "record",
+        "B": "information",
+        "C": "data",
+        "D": "file"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0088",
+      "type": "mcq",
+      "stem": "The sum of 110\\(_2\\) and 101\\(_2\\) is",
+      "options": {
+        "A": "1101\\(_2\\)",
+        "B": "1110\\(_2\\)",
+        "C": "1100\\(_2\\)",
+        "D": "1011\\(_2\\)"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0089",
+      "type": "mcq",
+      "stem": "One advantage of the first generation computers is",
+      "options": {
+        "A": "Processing speed",
+        "B": "Portability",
+        "C": "heating effect",
+        "D": "burglar-proof"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0090",
+      "type": "mcq",
+      "stem": "Magnetic Ink Charcter Recognition is applied on",
+      "options": {
+        "A": "voice recognition devices",
+        "B": "mobile devices",
+        "C": "large data capturing machines",
+        "D": "bank cheques"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0091",
+      "type": "mcq",
+      "stem": "Internet banking entails",
+      "options": {
+        "A": "applying computer networks in banking operation",
+        "B": "applying computers to automate banking operations",
+        "C": "generating tokens and One-Time-Passwords for online payments",
+        "D": "Using ATM for banking operations"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0092",
+      "type": "mcq",
+      "stem": "Which of the following parts of the computer ensures the smooth operation of its hardware?",
+      "options": {
+        "A": "Main memory",
+        "B": "Control unit",
+        "C": "Auxiliary age",
+        "D": "Arithmetic and Logic Unit"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0093",
+      "type": "mcq",
+      "stem": "Basic computer operations include the following except",
+      "options": {
+        "A": "control",
+        "B": "input",
+        "C": "output",
+        "D": "process"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0094",
+      "type": "mcq",
+      "stem": "One disadvantage of electronic data processing is",
+      "options": {
+        "A": "handling complex computation",
+        "B": "medium for effective storage",
+        "C": "processing data at a phenomenal speed",
+        "D": "vulnerability to attack"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0095",
+      "type": "mcq",
+      "stem": "Which of the following sources of information is received by the user in visual mode only?",
+      "options": {
+        "A": "Television",
+        "B": "Radio",
+        "C": "Photograph",
+        "D": "Computer"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the options A to D is not a medium of information transmission?",
+      "options": {
+        "A": "Cable",
+        "B": "Satellite",
+        "C": "Television set",
+        "D": "Wireless transmission"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0097",
+      "type": "mcq",
+      "stem": "A company has four computer system, one printer and one scanner for its daily operations. One factor that can motivate the company to connect all the devices in a network is the need to",
+      "options": {
+        "A": "provide efficient services",
+        "B": "save running cost",
+        "C": "share software only",
+        "D": "use a wireless connection"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0098",
+      "type": "mcq",
+      "stem": "One similarity  between the internet and intranet is that they both",
+      "options": {
+        "A": "were invented by the same company",
+        "B": "use the same technology",
+        "C": "have the same coverage",
+        "D": "are open to the public"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0099",
+      "type": "mcq",
+      "stem": "The process of copying data or information form the internet to a personal computer is termed",
+      "options": {
+        "A": "browsing",
+        "B": "downloading",
+        "C": "retrieving",
+        "D": "surfing"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0100",
+      "type": "mcq",
+      "stem": "An entrepreneur who wishes to send digital data over a telephone line would need a",
+      "options": {
+        "A": "hub",
+        "B": "modem",
+        "C": "router",
+        "D": "switch"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0101",
+      "type": "mcq",
+      "stem": "Graphical User Interface is considered user friendly because of the following reasons except that it",
+      "options": {
+        "A": "compels the user to learn all the command before operating the system",
+        "B": "displays all the actions available to the user for easy access.",
+        "C": "is easier for user to operate and understand",
+        "D": "makes the icons and menu familiar to the user"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0102",
+      "type": "mcq",
+      "stem": "The symbols dialog box of MS Word application is located on the",
+      "options": {
+        "A": "format menu",
+        "B": "help menu",
+        "C": "insert menu",
+        "D": "view menu"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0103",
+      "type": "mcq",
+      "stem": "Pressing the key combination Ctrl + J on a selected text in a Microsoft Word document would",
+      "options": {
+        "A": "align the text",
+        "B": "deselect the text",
+        "C": "justify the paragraph",
+        "D": "juxtapose the text"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0104",
+      "type": "mcq",
+      "stem": "The merge button in spreadsheet application is used to",
+      "options": {
+        "A": "combine adjacent cell",
+        "B": "convert selected cell into single cell",
+        "C": "merge two tables",
+        "D": "split a cell into two or more cells"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0105",
+      "type": "mcq",
+      "stem": "If cell A20 in MS Excel contains the value 5, then the formula \"A=A20^3\" will return a value equal to",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "65",
+        "D": "125"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0106",
+      "type": "mcq",
+      "stem": "A database contains list of customers and their phone numbers. What typ of relationship desribes a customer having multiple phone numbers?",
+      "options": {
+        "A": "Many-to-many",
+        "B": "Many-to-one",
+        "C": "One-to-many",
+        "D": "One-to-one"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0107",
+      "type": "mcq",
+      "stem": "Which of the following objects is not located on the slide layout",
+      "options": {
+        "A": "Animations",
+        "B": "Charts",
+        "C": "Lists",
+        "D": "Titles"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0108",
+      "type": "mcq",
+      "stem": "The following programming tools are employed by a web developer except",
+      "options": {
+        "A": "COBOL",
+        "B": "CSS",
+        "C": "HTML",
+        "D": "PHP"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0109",
+      "type": "mcq",
+      "stem": "Which of the following is not a transmission medium?",
+      "options": {
+        "A": "twisted pair cables",
+        "B": "coaxial cables",
+        "C": "wireless",
+        "D": "modem"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0110",
+      "type": "mcq",
+      "stem": "Information transmission by television is classified as",
+      "options": {
+        "A": "multimedia transmission",
+        "B": "polymedia transmission",
+        "C": "unimedia transmission",
+        "D": "monomedia transmission"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0111",
+      "type": "mcq",
+      "stem": "Which of the following are the basic components of a computer network? I. A minimum of two computers II. Printers III. Network interface card.",
+      "options": {
+        "A": "I and II",
+        "B": "I and III",
+        "C": "II and III",
+        "D": "I, II and III"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0112",
+      "type": "mcq",
+      "stem": "Social networking does not promote.",
+      "options": {
+        "A": "personal publicity",
+        "B": "business expansion",
+        "C": "e-commerce",
+        "D": "e-payment"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0113",
+      "type": "mcq",
+      "stem": "Companies that provide internet access are referred to as",
+      "options": {
+        "A": "fixed network operators",
+        "B": "network service providers",
+        "C": "internet service providers",
+        "D": "internet network operators"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0114",
+      "type": "mcq",
+      "stem": "Graphics can be captured using the following devices except",
+      "options": {
+        "A": "webcam",
+        "B": "scanners",
+        "C": "joystick",
+        "D": "digital camera"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0115",
+      "type": "mcq",
+      "stem": "Which of the following substances is used for cleaning the mouse ball",
+      "options": {
+        "A": "Distilled water",
+        "B": "Engine oil",
+        "C": "Isopropyl alcohol",
+        "D": "Kerosene"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0116",
+      "type": "mcq",
+      "stem": "One characteristics of a dirty mouse is that the mouse",
+      "options": {
+        "A": "is not recognized by the system",
+        "B": "unmounts itself from the system",
+        "C": "pointer changes appearance",
+        "D": "pointer moves erratically"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0117",
+      "type": "mcq",
+      "stem": "One responsible way of using the computer is",
+      "options": {
+        "A": "software piracy",
+        "B": "phishing",
+        "C": "pharming",
+        "D": "ethical hacking"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0118",
+      "type": "mcq",
+      "stem": "Any activity carried out to protect the user from hazards while using the computer is called",
+      "options": {
+        "A": "computer ethics",
+        "B": "computer maintenance",
+        "C": "laboratory rules",
+        "D": "safety measures"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0119",
+      "type": "mcq",
+      "stem": "In order to protect a computer on the World Wide Web from throats, the user should",
+      "options": {
+        "A": "Install the latest operating system version",
+        "B": "Install a single user antivirus software",
+        "C": "implement an internet security software",
+        "D": "deploy online transaction application"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0120",
+      "type": "mcq",
+      "stem": "Responsibilities of a database administrator includes the following except performing",
+      "options": {
+        "A": "database backup",
+        "B": "data recovery",
+        "C": "network maintenance",
+        "D": "user authentication"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0121",
+      "type": "mcq",
+      "stem": "The following tools are used for protecting the computer against virus attack except",
+      "options": {
+        "A": "Avast anti malware",
+        "B": "Kaspersky",
+        "C": "Norton",
+        "D": "Trojan horse"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0122",
+      "type": "mcq",
+      "stem": "Which of the following software replicates itself without being executed by the user",
+      "options": {
+        "A": "worm",
+        "B": "Trojan",
+        "C": "Plug-ins",
+        "D": "Driver"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0123",
+      "type": "mcq",
+      "stem": "In the model; Furniture (Table, Chair, Wardrobe) Furniture is...",
+      "options": {
+        "A": "a relation",
+        "B": "a schema",
+        "C": "a tuple",
+        "D": "an attribute"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0124",
+      "type": "mcq",
+      "stem": "Which of the following database operations does not require a Data Manipulation Language?",
+      "options": {
+        "A": "Modification of information",
+        "B": "Insertion of new information",
+        "C": "Deletion of information",
+        "D": "Creating of information"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0125",
+      "type": "mcq",
+      "stem": "The file organisation method which allows records to be accessed in any sequence is",
+      "options": {
+        "A": "Index",
+        "B": "random",
+        "C": "sequential",
+        "D": "serial"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0126",
+      "type": "mcq",
+      "stem": "A file organization that has reference which identifies a record in relation to other records is called...",
+      "options": {
+        "A": "indexed file organization",
+        "B": "random file organization",
+        "C": "sequential file organization",
+        "D": "serial file organization"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0127",
+      "type": "mcq",
+      "stem": "Providing access control to a school is the responsibility of a",
+      "options": {
+        "A": "database administrator",
+        "B": "programmer",
+        "C": "system administrator",
+        "D": "system analyst"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-data-processing-bank-0128",
+      "type": "mcq",
+      "stem": "The first generation computers made use of",
+      "options": {
+        "A": "low level programming",
+        "B": "high level programming language",
+        "C": "object-oriented programming language",
+        "D": "procedural programming language"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0129",
+      "type": "mcq",
+      "stem": "Microprocessor was used as the main electronic component of the",
+      "options": {
+        "A": "first generation computers",
+        "B": "second generation computers",
+        "C": "third generation computers",
+        "D": "fourth generation computers"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0130",
+      "type": "mcq",
+      "stem": "Which of the following is not considered when classifying computers",
+      "options": {
+        "A": "size",
+        "B": "type",
+        "C": "location",
+        "D": "purpose"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0131",
+      "type": "mcq",
+      "stem": "Which  of these channels would enable business transactions between a buyer from Nigeria and a seller from Ghana",
+      "options": {
+        "A": "e-portal",
+        "B": "e-library",
+        "C": "e-commerce",
+        "D": "podcasting"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0132",
+      "type": "mcq",
+      "stem": "The ICT application which helps to resolve road congestion at junctions is",
+      "options": {
+        "A": "automatic teller machine",
+        "B": "automomatic traffic marshal",
+        "C": "Street light",
+        "D": "traffic light"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0133",
+      "type": "mcq",
+      "stem": "The main components of the central processing unit (CPU) of the computer are",
+      "options": {
+        "A": "register and memory",
+        "B": "control unit and register",
+        "C": "control unit and ALU",
+        "D": "ALU and BUS"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0134",
+      "type": "mcq",
+      "stem": "Stages in data processing cycle includes the following except data",
+      "options": {
+        "A": "collation",
+        "B": "gathering",
+        "C": "parsing",
+        "D": "processing"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0135",
+      "type": "mcq",
+      "stem": "At what stage of information processing is data validtion carried out?",
+      "options": {
+        "A": "Data analysis",
+        "B": "Data collection",
+        "C": "Data processing",
+        "D": "Data summarization"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0136",
+      "type": "mcq",
+      "stem": "The media which enable electromagnetic signals to be transmitted through free space is known as",
+      "options": {
+        "A": "unguided media",
+        "B": "intranet",
+        "C": "guided media",
+        "D": "ethernet"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0137",
+      "type": "mcq",
+      "stem": "The following are advantages of networking except",
+      "options": {
+        "A": "spamming",
+        "B": "sharing of resources",
+        "C": "communication",
+        "D": "backup"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0138",
+      "type": "mcq",
+      "stem": "Which of the following devices would not transmit signals from one point to another?",
+      "options": {
+        "A": "telephone line",
+        "B": "modem",
+        "C": "fibre optics",
+        "D": "coaxial cable"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0139",
+      "type": "mcq",
+      "stem": "Another term for Uniform Resources Locator (URL) is",
+      "options": {
+        "A": "website address",
+        "B": "IP address",
+        "C": "domain name",
+        "D": "data link"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0140",
+      "type": "mcq",
+      "stem": "The website \"www.google.com\" indicates that Google is",
+      "options": {
+        "A": "a commercial organization",
+        "B": "a non-profit organization",
+        "C": "a research organization",
+        "D": "an educational organization"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0141",
+      "type": "mcq",
+      "stem": "Identify an operating system from the following software",
+      "options": {
+        "A": "Writer",
+        "B": "MS One note",
+        "C": "MS Access",
+        "D": "Linux"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0142",
+      "type": "mcq",
+      "stem": "Which of the following command would undo the last operation carried out in Microsoft Word",
+      "options": {
+        "A": "Ctrl + Z",
+        "B": "Ctrl + Y",
+        "C": "Ctrl + W",
+        "D": "Ctrl + U"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0143",
+      "type": "mcq",
+      "stem": "While typing, a series of letters were highlighted and the keyboard key combination \"Ctrl + B\" was executed, the highlighted letters would be",
+      "options": {
+        "A": "underlined",
+        "B": "italicized",
+        "C": "deleted",
+        "D": "bold"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0144",
+      "type": "mcq",
+      "stem": "Which of the following formulas would calculate the total score of ONYEBUEKE DEBORAH in the five subjects\n\n \n \n S/N\n A\n B\n C\n D\n E\n F\n \n \n 1\n NAME OF STUDENT\n ENGLISH LANGUAGE\n MATHEMATICS\n DATA PROCESSING\n COMPUTER STUDIES\n CIVIC EDUCATION\n \n \n 2\n ANENE LORRETA\n 65\n 90\n 70\n 85\n 65\n \n \n 3\n BAKARE IMAN\n 60\n 65\n 75\n 80\n 75\n \n \n 4\n ENEH GRACE\n 75\n 65\n 65\n 75\n 60\n \n \n 5\n MOHEMMED DEJI\n 65\n 60\n 65\n 60\n 60\n \n \n 6\n ONYEBUEKE DEBORAH\n 89\n 65\n 60\n 60\n 65",
+      "options": {
+        "A": "=SUM(B2:B6)",
+        "B": "=SUM(A6:G6)",
+        "C": "=SUM(A2:A6)",
+        "D": "=SUM(B6:F6)"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0145",
+      "type": "mcq",
+      "stem": "The following are advantages of a Database Management System (DBSM)  except",
+      "options": {
+        "A": "restriction of unauthorized access to data",
+        "B": "provision of multiple interfaces to different classes of users",
+        "C": "provision of backup and recovery",
+        "D": "compromise of data integrity"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0146",
+      "type": "mcq",
+      "stem": "Extracting information in Database Management System (DCMS) involves",
+      "options": {
+        "A": "sorting",
+        "B": "querying",
+        "C": "editing",
+        "D": "cross-referencing"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0147",
+      "type": "mcq",
+      "stem": "A special effect that controls the way slides appear in PowerPoint presentation is called",
+      "options": {
+        "A": "WordArt",
+        "B": "Transition",
+        "C": "Theme",
+        "D": "ClipArt"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0148",
+      "type": "mcq",
+      "stem": "A reference to another page or resource on a website is done by",
+      "options": {
+        "A": "FTP",
+        "B": "Hyperlinks",
+        "C": "SMTP",
+        "D": "Web page"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0149",
+      "type": "mcq",
+      "stem": "The design output of a graphic package can be in the following file formats except",
+      "options": {
+        "A": ".rtf",
+        "B": ".jpg",
+        "C": ".gif",
+        "D": ".bmp"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0150",
+      "type": "mcq",
+      "stem": "The proactive maintenance of computer equipment before a fault or failure occurs is called",
+      "options": {
+        "A": "corrective maintenance",
+        "B": "predictive maintenance",
+        "C": "preventive maintenance",
+        "D": "preservative maintenance"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0151",
+      "type": "mcq",
+      "stem": "A good computer maintenance practice entails",
+      "options": {
+        "A": "washing the dusty computer parts with soap and water",
+        "B": "keeping computer exposed to sunlight to dry the body",
+        "C": "cleaning the display unit with methylated spirit",
+        "D": "blowing the system unit with blower"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0152",
+      "type": "mcq",
+      "stem": "Set of moral principles that regulate the ise of computers and concerns professional and social conduct is known as",
+      "options": {
+        "A": "computer ethics",
+        "B": "computer misuse act",
+        "C": "computer use act",
+        "D": "safety measure"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0153",
+      "type": "mcq",
+      "stem": "Which of the following programs is a computer virus",
+      "options": {
+        "A": "Kaspersky",
+        "B": "NOD 32",
+        "C": "Norton",
+        "D": "Tuareg"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0154",
+      "type": "mcq",
+      "stem": "Precautionary measures on computer do not include",
+      "options": {
+        "A": "handling all files with care",
+        "B": "giving access to unauthorized persons into the computer room",
+        "C": "avoiding smoking in the computer room",
+        "D": "avoiding dirts and dust in the computer room"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0155",
+      "type": "mcq",
+      "stem": "The computer professional responsible for designing and maintaining a database is called database",
+      "options": {
+        "A": "programmer",
+        "B": "operator",
+        "C": "instructor",
+        "D": "administrator"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0156",
+      "type": "mcq",
+      "stem": "Computer virus is not transmitted through",
+      "options": {
+        "A": "formatting of documents",
+        "B": "email",
+        "C": "external storage device",
+        "D": "internet"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0157",
+      "type": "mcq",
+      "stem": "The following are attributes of computer virus except the ability to",
+      "options": {
+        "A": "modify other files",
+        "B": "replicate itself in order to spread to other files and system",
+        "C": "execute without the user's approval",
+        "D": "warn the user before execution"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0158",
+      "type": "mcq",
+      "stem": "A relational database model is designed according to set of rules known as",
+      "options": {
+        "A": "Normalization",
+        "B": "Isolation",
+        "C": "Grouping",
+        "D": "Enumeration"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0159",
+      "type": "mcq",
+      "stem": "Which of the foolowing statements about relational model is not correct?",
+      "options": {
+        "A": "A file is a sequence of related records",
+        "B": "A record consist of a row of data containing single value from each column",
+        "C": "Data in the column of a table are of the same data type",
+        "D": "Data in the rows of a table are of the same data type"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0160",
+      "type": "mcq",
+      "stem": "While typing a MS word document, Akin inserted footer in the document in order to",
+      "options": {
+        "A": "enhance the overall appearance of the document.",
+        "B": "make the document more readable",
+        "C": "insert page numbers",
+        "D": "make it appear on the document when printed."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0161",
+      "type": "mcq",
+      "stem": "The spreadsheet symbol used to convert a number to a label is",
+      "options": {
+        "A": "quotation mark (“ “)",
+        "B": "equality sign (=)",
+        "C": "underscore (_)",
+        "D": "apostrophe sign (')"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0162",
+      "type": "mcq",
+      "stem": "In spreadsheets, data would not be accepted into a cell by pressing the.",
+      "options": {
+        "A": "Enter key",
+        "B": "Arrow key",
+        "C": "Esc key",
+        "D": "Tab key"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0163",
+      "type": "mcq",
+      "stem": "A field in a database table is also known as",
+      "options": {
+        "A": "index",
+        "B": "relation",
+        "C": "attribute",
+        "D": "key"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0164",
+      "type": "mcq",
+      "stem": "The property of a system software that enables it to execute more than one program at a time is referred to as",
+      "options": {
+        "A": "compiling",
+        "B": "virtual memory",
+        "C": "multitasking",
+        "D": "load modules"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0165",
+      "type": "mcq",
+      "stem": "Arranging records in a file according to a particular order is referred to as",
+      "options": {
+        "A": "matching",
+        "B": "merging",
+        "C": "sorting",
+        "D": "updating"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0166",
+      "type": "mcq",
+      "stem": "One advantage of indexed sequential file organization is that",
+      "options": {
+        "A": "index tables are small and can be searched quickly",
+        "B": "it is cost effective",
+        "C": "it is suitable for dynamically changing files",
+        "D": "it requires less storage space"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0167",
+      "type": "mcq",
+      "stem": "The protection of database against compromise is known as",
+      "options": {
+        "A": "data passwording",
+        "B": "data protection",
+        "C": "database encoding",
+        "D": "database security"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0168",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of parallel databases?",
+      "options": {
+        "A": "there can be shared-memory or shared disk",
+        "B": "they are connected using public purpose network",
+        "C": "machines in this environment are in different locations",
+        "D": "it has local autonomy"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0169",
+      "type": "mcq",
+      "stem": "Information that stimulates both the senses of hearing and sight is called",
+      "options": {
+        "A": "audio information",
+        "B": "audio-visual",
+        "C": "video information",
+        "D": "visual information"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-data-processing-bank-0170",
+      "type": "mcq",
+      "stem": "The modern definition of a computing machine is based on a concept known as",
+      "options": {
+        "A": "circuit switching",
+        "B": "digital circuit",
+        "C": "packet switching",
+        "D": "stored program"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0171",
+      "type": "mcq",
+      "stem": "Arrange the following ICT tools in the order of invention from the earliest to the latest; cell phone, internet, satellite and radio",
+      "options": {
+        "A": "cell phone, satellite, radio, internet",
+        "B": "internet, satellite, cell phone, radio",
+        "C": "Radio, satellite, internet, cell phone",
+        "D": "Radio, cell phone, satellite, internet"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0172",
+      "type": "mcq",
+      "stem": "The pocess of gathering facts and statistics from different sources is known as data",
+      "options": {
+        "A": "analysis",
+        "B": "collection",
+        "C": "collation",
+        "D": "retrieval"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0173",
+      "type": "mcq",
+      "stem": "A chart is a graphical representation of",
+      "options": {
+        "A": "data",
+        "B": "map",
+        "C": "process",
+        "D": "transmission"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0174",
+      "type": "mcq",
+      "stem": "The use of transistors in circuit was a major advancement in the",
+      "options": {
+        "A": "first generation computers",
+        "B": "second generation computers",
+        "C": "third generation computers",
+        "D": "fourth generation computers"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0175",
+      "type": "mcq",
+      "stem": "An ICT-based service that uses telecommunication devices to hold meeting among many participants in two or more location known as",
+      "options": {
+        "A": "broadcasting",
+        "B": "multimedia",
+        "C": "podcasting",
+        "D": "teleconferencing"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0176",
+      "type": "mcq",
+      "stem": "Which of these devices does not support wireless communication",
+      "options": {
+        "A": "GSM Phone",
+        "B": "mouse",
+        "C": "router",
+        "D": "telephone"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0177",
+      "type": "mcq",
+      "stem": "The manipulation of digitised information by computer or other digital electronic equipment is known as",
+      "options": {
+        "A": "data collation",
+        "B": "data manipulation",
+        "C": "information manipulation",
+        "D": "information processing"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0178",
+      "type": "mcq",
+      "stem": "Which of the following statements explains information processing",
+      "options": {
+        "A": "Saving documents in a device",
+        "B": "Changing information detectable by an observer",
+        "C": "Data upload to server",
+        "D": "Transfer of information between devices"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0179",
+      "type": "mcq",
+      "stem": "The information transmission medium from location A to location B in space is called",
+      "options": {
+        "A": "asynchronous transmission",
+        "B": "guided transmission",
+        "C": "synchronous transmission",
+        "D": "wireless transmission"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0180",
+      "type": "mcq",
+      "stem": "Which of these technologies allows wireless connectivity in a Personal Area Network",
+      "options": {
+        "A": "Bandwidth",
+        "B": "Bluetooth",
+        "C": "Broadband",
+        "D": "Satellite"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0181",
+      "type": "mcq",
+      "stem": "A program that enables the computer hardware to communicate and function effectively is",
+      "options": {
+        "A": "translator",
+        "B": "liveware",
+        "C": "operating system",
+        "D": "application software"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0182",
+      "type": "mcq",
+      "stem": "A Word document can have any of these file extension except",
+      "options": {
+        "A": ".doc",
+        "B": ".docx",
+        "C": ".jpg",
+        "D": ".rtf"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0183",
+      "type": "mcq",
+      "stem": "The first step taken in editing a chart in MS Excel is",
+      "options": {
+        "A": "click and drag the chart object",
+        "B": "click the chart object",
+        "C": "copy the chart object",
+        "D": "drag the chart object"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0184",
+      "type": "mcq",
+      "stem": "By default numeric values in a worksheet are",
+      "options": {
+        "A": "centred",
+        "B": "left-aligned",
+        "C": "right-aligned",
+        "D": "unaligned"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0185",
+      "type": "mcq",
+      "stem": "Which of the following sets are available when creating a table in \"Design view\" in Microsoft Access?",
+      "options": {
+        "A": "Data type, Description and Field Name",
+        "B": "Description, Criteria and Field Property",
+        "C": "Field Name, Data Type and Field Property",
+        "D": "Criteria, Field Name and Description"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0186",
+      "type": "mcq",
+      "stem": "The MS PowerPoint feature which can be used to change the appearance of the entire presentation is the",
+      "options": {
+        "A": "Add slide option",
+        "B": "Design template",
+        "C": "Online view",
+        "D": "Slide Layout option"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0187",
+      "type": "mcq",
+      "stem": "One example of web design package is",
+      "options": {
+        "A": "MS FrontPage",
+        "B": "MS Outlook",
+        "C": "Peachtree",
+        "D": "SPSS"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0188",
+      "type": "mcq",
+      "stem": "In computer maintenance the dampen material can be used on the following devices except",
+      "options": {
+        "A": "DVD lens",
+        "B": "keyboard",
+        "C": "mouse",
+        "D": "screen"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0189",
+      "type": "mcq",
+      "stem": "Dust from the system unit casing can be removed using",
+      "options": {
+        "A": "antistatic wipes",
+        "B": "cotton wool",
+        "C": "static wipes",
+        "D": "wet cloth"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0190",
+      "type": "mcq",
+      "stem": "Indiscriminate sending of unsolicited e-mails to many addresses is known as",
+      "options": {
+        "A": "plagiarism",
+        "B": "phishing",
+        "C": "pharming",
+        "D": "spamming"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0191",
+      "type": "mcq",
+      "stem": "In computing, ergonomics is a term associated with computer",
+      "options": {
+        "A": "ethics",
+        "B": "maintenance",
+        "C": "malware detection",
+        "D": "safety measures"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0192",
+      "type": "mcq",
+      "stem": "A novice is discouraged from opening the CRT monitor for maintenance because",
+      "options": {
+        "A": "it cannot be appropriately reassembled after opening",
+        "B": "it may harbour pests carrying infectious diseases",
+        "C": "it may contain high static",
+        "D": "the tube is fragile"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0193",
+      "type": "mcq",
+      "stem": "Computer professional bodies in Nigeria include the following except",
+      "options": {
+        "A": "Internet Service Providers Association",
+        "B": "Nigeria Computer Society",
+        "C": "Nigeria Information Technology Development Agency",
+        "D": "Nigeria Internet Group"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0194",
+      "type": "mcq",
+      "stem": "The malware which appears as a harmless object but attack it's victims at the slightest opportunity is called",
+      "options": {
+        "A": "worm",
+        "B": "trojan horse",
+        "C": "macro virus",
+        "D": "logic bomb"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0195",
+      "type": "mcq",
+      "stem": "Virus effect can be prevented by",
+      "options": {
+        "A": "installing and updating antivirus",
+        "B": "installing new operating system",
+        "C": "purchasing new computer",
+        "D": "using external disk on public computer system"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0196",
+      "type": "mcq",
+      "stem": "The arrangement that gives the correct order of magnitude of the database elements is",
+      "options": {
+        "A": "character, field, record, table, database, file",
+        "B": "character, field, record, table, file, database",
+        "C": "database, table, file, record, field, character",
+        "D": "database, record, file, field, table, character"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0197",
+      "type": "mcq",
+      "stem": "One unique feature of index file is that it contains",
+      "options": {
+        "A": "reference number",
+        "B": "relative number",
+        "C": "sequential number",
+        "D": "static number"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0198",
+      "type": "mcq",
+      "stem": "Which of the following file organization requires a primary key",
+      "options": {
+        "A": "Indexed file organization",
+        "B": "Random file organization",
+        "C": "Serial file organization",
+        "D": "Sequential file organization"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0199",
+      "type": "mcq",
+      "stem": "Ensuring the correctness and consistency of data is referred to as data",
+      "options": {
+        "A": "security",
+        "B": "reliability",
+        "C": "productivity",
+        "D": "integrity"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0200",
+      "type": "mcq",
+      "stem": "In distributed database management system, breaking a relation into smaller relations is known as",
+      "options": {
+        "A": "replication",
+        "B": "fragmentation",
+        "C": "indexing",
+        "D": "normalisation"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-data-processing-bank-0201",
+      "type": "mcq",
+      "stem": "The main component of the first generation computer was",
+      "options": {
+        "A": "microchip",
+        "B": "transistor",
+        "C": "integrated circuit",
+        "D": "electronic valve"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0202",
+      "type": "mcq",
+      "stem": "The term Garbage-In-Garbage-Out is used to explain the characteristics of the computer in terms of",
+      "options": {
+        "A": "storage",
+        "B": "speed",
+        "C": "power",
+        "D": "accuracy"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0203",
+      "type": "mcq",
+      "stem": "The number 101100101\\(2\\) in denary is",
+      "options": {
+        "A": "753",
+        "B": "653",
+        "C": "357",
+        "D": "356"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0204",
+      "type": "mcq",
+      "stem": "Which of the following statements is true?",
+      "options": {
+        "A": "Data leads to information and information leads to knowledge",
+        "B": "Data leads to knowledge and knowledge leads to information",
+        "C": "Information leads to data and data leads to knowledge",
+        "D": "Knowledge leads to information and information leads to data"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0205",
+      "type": "mcq",
+      "stem": "The type of computer that counts in discrete form only is referred to as",
+      "options": {
+        "A": "analog computer",
+        "B": "digital computer",
+        "C": "hybrid computer",
+        "D": "mainframe computer"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0206",
+      "type": "mcq",
+      "stem": "Which of the following media involves point-to-point communication?",
+      "options": {
+        "A": "Radio",
+        "B": "Satellite",
+        "C": "Telephone",
+        "D": "Television"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0207",
+      "type": "mcq",
+      "stem": "Which of these operations would not close MS word application?",
+      "options": {
+        "A": "Pressing the Alt + F4 keys",
+        "B": "clicking the X button on the title bar",
+        "C": "choosing exit from the file menu drop down box",
+        "D": "selecting the close from the file menu drop down dialogue box"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0208",
+      "type": "mcq",
+      "stem": "The feature in a database application that acts as an interface between the user and the database is called a?",
+      "options": {
+        "A": "query",
+        "B": "report",
+        "C": "form",
+        "D": "table"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0209",
+      "type": "mcq",
+      "stem": "Planning and creating websites are stages in?",
+      "options": {
+        "A": "web analysis",
+        "B": "web maintenance",
+        "C": "web design",
+        "D": "web publishing"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0210",
+      "type": "mcq",
+      "stem": "The type of data entered into a table in database follow a set of rules known as?",
+      "options": {
+        "A": "protocols",
+        "B": "regulators",
+        "C": "algorithms",
+        "D": "constraints"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0211",
+      "type": "mcq",
+      "stem": "Which of the following drawing tools would create special effects for texts?",
+      "options": {
+        "A": "Smart Art",
+        "B": "Shape tool",
+        "C": "Textbox",
+        "D": "Word Art"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0212",
+      "type": "mcq",
+      "stem": "Fourth generation computer application can execute the following operations except",
+      "options": {
+        "A": "digging of drainages",
+        "B": "drainage channel design",
+        "C": "management of recreational facilities",
+        "D": "payroll management"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0213",
+      "type": "mcq",
+      "stem": "The joystick is mainly used for",
+      "options": {
+        "A": "clicking the links on web pages",
+        "B": "drawing and playing computer games",
+        "C": "erasing of unwanted graphics",
+        "D": "typing of document in a word processor"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0214",
+      "type": "mcq",
+      "stem": "The manipulation of digitalized information by computer or other electronic equipment is known as",
+      "options": {
+        "A": "data collation",
+        "B": "data manipulation",
+        "C": "information manipulation",
+        "D": "information processing"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0215",
+      "type": "mcq",
+      "stem": "Which of the following actions is not a source of computer virus?",
+      "options": {
+        "A": "Checking of e-mail",
+        "B": "Downloading programs",
+        "C": "Reading from CD/DVD",
+        "D": "Uploading data"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0216",
+      "type": "mcq",
+      "stem": "When information is conveyed from one space to another, it is referred to as information",
+      "options": {
+        "A": "retrieval",
+        "B": "translation",
+        "C": "transmission",
+        "D": "transportation"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0217",
+      "type": "mcq",
+      "stem": "Which of the following file organizations requires primary Key?",
+      "options": {
+        "A": "Indexed file organization",
+        "B": "Random file organization",
+        "C": "Serial file organization",
+        "D": "Sequential file organization"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0218",
+      "type": "mcq",
+      "stem": "The protocol for transferring file(s) from one machine to another is",
+      "options": {
+        "A": "SNMP",
+        "B": "SMTP",
+        "C": "FTP",
+        "D": "FAT"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0219",
+      "type": "mcq",
+      "stem": "Mr Francis has an office complex with 20 rooms. What type of network is suitable for connecting all the computers in their various rooms into a single network?",
+      "options": {
+        "A": "LAN",
+        "B": "MAN",
+        "C": "PAN",
+        "D": "WAN"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0220",
+      "type": "mcq",
+      "stem": "The following software are web browsers except",
+      "options": {
+        "A": "Firefox",
+        "B": "Google Chrome",
+        "C": "Linux",
+        "D": "Opera"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0221",
+      "type": "mcq",
+      "stem": "An operating systemthat enables more than one user to access the same data is called",
+      "options": {
+        "A": "multi-tasking OS",
+        "B": "multi-user OS",
+        "C": "single user OS",
+        "D": "virtual memory OS"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0222",
+      "type": "mcq",
+      "stem": "The feature of a word document that shows the page, number of words and errors found in a document is the",
+      "options": {
+        "A": "menu bar",
+        "B": "scroll bar",
+        "C": "status bar",
+        "D": "title bar"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0223",
+      "type": "mcq",
+      "stem": "The formula to calculate the average of a given range of data from cell B2 to cell D4 in a Microsoft Excel worksheet is",
+      "options": {
+        "A": "= AVERAGE (B2+D4)",
+        "B": "=AVERAGE (B2:D4)",
+        "C": "=AVERAGE(B2, D4)",
+        "D": "=AVERAGE(B2;D4)"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0224",
+      "type": "mcq",
+      "stem": "The field in a database which uniquely identifies each record is called a",
+      "options": {
+        "A": "composite key",
+        "B": "foreign key",
+        "C": "local key",
+        "D": "primary key"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0225",
+      "type": "mcq",
+      "stem": "The correct order of the steps taken in creating a database from the database template in MS Access 2007 is",
+      "options": {
+        "A": "click on the Office button --> click New --> choose a database of your choice",
+        "B": "click New --> click on Office button --> choose a database of your choice",
+        "C": "click on database of your choice --> click New --> click on Office button",
+        "D": "click New --> choose database of your choice --> click on Office button"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0226",
+      "type": "mcq",
+      "stem": "To show the whole presentation in Microsoft PowerPoint 2007, select slide show from the",
+      "options": {
+        "A": "design tab",
+        "B": "home tab",
+        "C": "title bar",
+        "D": "menu bar"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0227",
+      "type": "mcq",
+      "stem": "Web design packages includes the following except",
+      "options": {
+        "A": "Macromedia Dreamweaver",
+        "B": "iWeb",
+        "C": "Front Page",
+        "D": "Adobe PageMaker"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0228",
+      "type": "mcq",
+      "stem": "One precautionary measure taken when cleaning a monitor is",
+      "options": {
+        "A": "plugging of power supply cable",
+        "B": "spraying a windows cleaner on the monitor",
+        "C": "unplugging the power supply cable",
+        "D": "using a vacuum cleaner to clean the monitor casing"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0229",
+      "type": "mcq",
+      "stem": "The erratic movement of the mouse pointer is usually caused by",
+      "options": {
+        "A": "damaged driver",
+        "B": "dirty mouse ball",
+        "C": "improper connection of mouse cable",
+        "D": "outdated driver"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0230",
+      "type": "mcq",
+      "stem": "The use of the internet to perform illegal activities is generally called",
+      "options": {
+        "A": "cyber crime",
+        "B": "packet sniffing",
+        "C": "phishing",
+        "D": "spamming"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0231",
+      "type": "mcq",
+      "stem": "One safety measure to consider in a computer room is",
+      "options": {
+        "A": "arranging the chairs in the room together",
+        "B": "keeping liquid within the room",
+        "C": "closing the door always",
+        "D": "maintaining a dust-free environment"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0232",
+      "type": "mcq",
+      "stem": "Security breaches in computing cannot be prevented through the use of",
+      "options": {
+        "A": "antivirus",
+        "B": "encryption",
+        "C": "firewall",
+        "D": "firmware"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0233",
+      "type": "mcq",
+      "stem": "A system analyst is a person who",
+      "options": {
+        "A": "designs flowchart",
+        "B": "designs and implements new solutions",
+        "C": "trains computer users",
+        "D": "writes complex computer programs"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0234",
+      "type": "mcq",
+      "stem": "The malware which is programmed to initiate at a specific date or when a specific event occurs is called",
+      "options": {
+        "A": "directory virus",
+        "B": "logic bomb",
+        "C": "polymorphic virus",
+        "D": "root kit virus"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0235",
+      "type": "mcq",
+      "stem": "One advantage of information processing is that",
+      "options": {
+        "A": "face-to-face interaction among staff may be reduced",
+        "B": "initial investment cost can be high",
+        "C": "running cost becomes lower in the long term",
+        "D": "It encourages the training/retraining of staff"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0236",
+      "type": "mcq",
+      "stem": "The function of the SQL statement SELECT Student ID, Surname, House Name FROM Student, is that it",
+      "options": {
+        "A": "retrieves the listed fields from student table",
+        "B": "highlight the listed fields from student table",
+        "C": "hides the selected fields from student table",
+        "D": "deletes the listed fields from students table"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0237",
+      "type": "mcq",
+      "stem": "The best arrangement that gives the correct order of magnitude of the database element is",
+      "options": {
+        "A": "character, field, record, table, database, file",
+        "B": "character, field, record, table, file, database",
+        "C": "record, file, field, table, character, database",
+        "D": "table, file, record, field, character, database"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0238",
+      "type": "mcq",
+      "stem": "A file organization that contains a reference number is called",
+      "options": {
+        "A": "direct access",
+        "B": "indexed access",
+        "C": "random access",
+        "D": "sequential access"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0239",
+      "type": "mcq",
+      "stem": "The following media are used for information transmission except",
+      "options": {
+        "A": "diary",
+        "B": "magazine",
+        "C": "radio",
+        "D": "television"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0240",
+      "type": "mcq",
+      "stem": "To prevent the loss of data in the computer, it is better to implement file",
+      "options": {
+        "A": "access",
+        "B": "maintenance",
+        "C": "checks",
+        "D": "backup"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0241",
+      "type": "mcq",
+      "stem": "Which of the following terms is not a feature of distributed database?",
+      "options": {
+        "A": "Fragmentation",
+        "B": "Multiple storage",
+        "C": "Replication",
+        "D": "Single server"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-data-processing-bank-0242",
+      "type": "mcq",
+      "stem": "The database tool that allows the user to select and filter data from multiple tables is referred to as",
+      "options": {
+        "A": "Form",
+        "B": "Table",
+        "C": "Query",
+        "D": "Report"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0243",
+      "type": "mcq",
+      "stem": "The following statements are steps used in creating a new workbook in a Microsoft Excel application.\n\nI. Click on New\n\nII. Click on the Microsoft Office button\n\nIII. Choose blank document Which of the following arrangements shows the correct order of operation from the steps above?",
+      "options": {
+        "A": "I, II and III",
+        "B": "II, I and III",
+        "C": "II, III and I",
+        "D": "III, II and I"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0244",
+      "type": "mcq",
+      "stem": "Shared-memory is an architecture in",
+      "options": {
+        "A": "Parallel database",
+        "B": "Trusted distributed database",
+        "C": "Relational database",
+        "D": "Distributed database"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0245",
+      "type": "mcq",
+      "stem": "One example of web design package is",
+      "options": {
+        "A": "MS frontpage",
+        "B": "MS outlook",
+        "C": "SPSS",
+        "D": "Peachtree"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0246",
+      "type": "mcq",
+      "stem": "Preventive maintenance measures in computer room do not include",
+      "options": {
+        "A": "The use of tiles",
+        "B": "The use of rugs",
+        "C": "Good ventilation",
+        "D": "Proper illumination"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0247",
+      "type": "mcq",
+      "stem": "Corrective maintenance of software refers to",
+      "options": {
+        "A": "Enhancement aimed at making the product faster",
+        "B": "Deploying the software to a different hardware platform",
+        "C": "Modifications initiated due to defects in software",
+        "D": "Making the software easier to understand"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0248",
+      "type": "mcq",
+      "stem": "One of the major differences between WAN and MAN is that",
+      "options": {
+        "A": "WAN used routers while MAN uses switches",
+        "B": "WAN connects countries while MAN connects continents",
+        "C": "WAN has no limited coverage while MAN has limited coverage",
+        "D": "WAN incorporate servers while MAN does not incorporate servers"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0249",
+      "type": "mcq",
+      "stem": "Which of the following malware does not replicate itself?",
+      "options": {
+        "A": "Trojan horse",
+        "B": "Memory resident virus",
+        "C": "Boot sector virus",
+        "D": "Worm"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0250",
+      "type": "mcq",
+      "stem": "One disadvantage of using computer for information processing is",
+      "options": {
+        "A": "Reduced running cost in the long term",
+        "B": "Low productivity",
+        "C": "The need for staff retraining",
+        "D": "The increase in processing speed"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0251",
+      "type": "mcq",
+      "stem": "Table 1 is a portion of a Microsoft Excel Worksheet which shows the marks obtained by some students in an examination.\n\n \n \n            A     \n              B   \n      C    \n        D    \n          E       \n           F      \n \n \n 1.NAME OF         STUDENT  \n ENGLISH LANG\n MATHEMATICS\n DATA PROCESSING\n COMP.     STUDIES\n CIVIC EDUCATION\n \n \n 2.ANENE LORRETA\n           65\n           90\n          70\n      85\n       65\n \n \n 3.BAKARE IMAM\n           60\n           65\n          75\n      80\n       75\n \n \n 4.ENEM GRACE\n           75\n           65\n          65\n      75\n        60\n \n \n 5.MOHAMMED DEJI\n           65\n           60\n          65\n       60\n         60\n \n \n 6.ONYEBUEKE DEBORAH\n           89\n           65\n          60\n       65\n         65\n \n \n\nWhich of the following formulas can be used to find the average score for ENEH GRACE?",
+      "options": {
+        "A": "=AVERAGE(B4:F4)",
+        "B": "=AVERAGE(B4:B6)",
+        "C": "=AVERAGE(A4:F4)",
+        "D": "=AVERAGE(B5:F5)"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0252",
+      "type": "mcq",
+      "stem": "An application of ICT which allows a person to participate in a meeting from a remote location is called",
+      "options": {
+        "A": "Telepresence",
+        "B": "Podcasting",
+        "C": "Broadcasting",
+        "D": "Blogging"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0253",
+      "type": "mcq",
+      "stem": "The category of computers used for weather forecasting is known as",
+      "options": {
+        "A": "Special purpose computers",
+        "B": "Microcomputers",
+        "C": "Super computers",
+        "D": "General purpose computers"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0254",
+      "type": "mcq",
+      "stem": "When choosing a file organization method a system administrator will not consider",
+      "options": {
+        "A": "Frequency of update",
+        "B": "File activity",
+        "C": "File medium",
+        "D": "File access method"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0255",
+      "type": "mcq",
+      "stem": "The study of the effect of interaction between the computer and human users is referred to as computer",
+      "options": {
+        "A": "ergonomy",
+        "B": "economy",
+        "C": "ergophobia",
+        "D": "biomechanics"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0256",
+      "type": "mcq",
+      "stem": "In MS Powerpoint, the action of holding down the left mouse key and moving the mouse around the slide would",
+      "options": {
+        "A": "highlight an item",
+        "B": "drag an item",
+        "C": "select an item",
+        "D": "move an item"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0257",
+      "type": "mcq",
+      "stem": "A file kept in case of an accident or natural disaster is called",
+      "options": {
+        "A": "master",
+        "B": "transition",
+        "C": "back-up",
+        "D": "reference"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0258",
+      "type": "mcq",
+      "stem": "Which of the following is not a preventive maintenance measure?",
+      "options": {
+        "A": "Regular update of the operating system",
+        "B": "Proper shut down of the system",
+        "C": "use of uninterrupted power supply",
+        "D": "data recovery"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0259",
+      "type": "mcq",
+      "stem": "Which of the following is not a safety equipment in a computer laboratory?",
+      "options": {
+        "A": "surge protector",
+        "B": "metal detector",
+        "C": "smoke detector",
+        "D": "fore extinguisher"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0260",
+      "type": "mcq",
+      "stem": "In Microsoft PowerPoint, the command: ctrl + m is used to create",
+      "options": {
+        "A": "An animation",
+        "B": "New slide",
+        "C": "New presentation",
+        "D": "New PowerPoint document"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0261",
+      "type": "mcq",
+      "stem": "The capacity of a communication channel is referred to as",
+      "options": {
+        "A": "Bandwidth",
+        "B": "Baud rate",
+        "C": "Bit flow",
+        "D": "Data flow"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0262",
+      "type": "mcq",
+      "stem": "A desktop computer is switched on and the monitor displays an error message which reads: No input signal. The likely cause of this error is",
+      "options": {
+        "A": "Disconnected VGA",
+        "B": "Power failure",
+        "C": "Low memory",
+        "D": "Defective monitor"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0263",
+      "type": "mcq",
+      "stem": "The concept of stored program for electronic devices was introduced by",
+      "options": {
+        "A": "Tim Berners Lee",
+        "B": "Ada Augusta Lovelace",
+        "C": "Charles Babbage Lee",
+        "D": "John Von Neumann"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0264",
+      "type": "mcq",
+      "stem": "At what stage in data processing does data manipulation take place?",
+      "options": {
+        "A": "Organization",
+        "B": "Collation",
+        "C": "Analysis",
+        "D": "Interpretation"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0265",
+      "type": "mcq",
+      "stem": "One quality of a computer programmer",
+      "options": {
+        "A": "Ability to teach",
+        "B": "Friendliness",
+        "C": "Punctuality to work",
+        "D": "Excellent analytical thinking"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0266",
+      "type": "mcq",
+      "stem": "A file organization method that has reference which identifies a record in relation to other records is called",
+      "options": {
+        "A": "Sequential file organization",
+        "B": "Serial file organization",
+        "C": "Indexed file organization",
+        "D": "Random file organization"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0267",
+      "type": "mcq",
+      "stem": "One application of ICT in education is",
+      "options": {
+        "A": "Optical Mark Reader",
+        "B": "Electronic Fund Transfer",
+        "C": "Automated Teller Machine",
+        "D": "Magnetic Ink Character Recognition"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0268",
+      "type": "mcq",
+      "stem": "The process of sending and receiving information from one place to another is called information",
+      "options": {
+        "A": "Synchronization",
+        "B": "Transfer",
+        "C": "Transmission",
+        "D": "Technology"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0269",
+      "type": "mcq",
+      "stem": "Computer virus replicates itself into",
+      "options": {
+        "A": "Execution phase",
+        "B": "Trigger phase",
+        "C": "Propagation phase",
+        "D": "Dormant phase"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0270",
+      "type": "mcq",
+      "stem": "High level programming languages such as COBOL and FORTRAN were first used in the",
+      "options": {
+        "A": "First generation computers",
+        "B": "Third generation computers",
+        "C": "Fourth generation computers",
+        "D": "Second generation computers"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0271",
+      "type": "mcq",
+      "stem": "The subdivision of tracks in a hard disk is called",
+      "options": {
+        "A": "Record",
+        "B": "Row",
+        "C": "Sector",
+        "D": "Cluster"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0272",
+      "type": "mcq",
+      "stem": "The standard way of arranging information is known as",
+      "options": {
+        "A": "Organization of information",
+        "B": "Validation of information",
+        "C": "Collection of information",
+        "D": "Classification of information"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0273",
+      "type": "mcq",
+      "stem": "Any meaningful fact and knowledge item that can be expressed in words and numbers is called",
+      "options": {
+        "A": "Knowledge base",
+        "B": "Information",
+        "C": "Database",
+        "D": "Data"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0274",
+      "type": "mcq",
+      "stem": "The type of network which has a restricted coverage within an enterprise is called",
+      "options": {
+        "A": "Intranet",
+        "B": "Internet",
+        "C": "Ethernet",
+        "D": "Extranet"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0275",
+      "type": "mcq",
+      "stem": "Arrange the following steps in the correct order for editing data type in data sheet view of a Microsoft Access database\n\nI. Click the type of data that that will be entered into the fields\n\nII. Click the data sheet tab on the ribbon\n\nIII. Click the field you wish to define\n\nIV. Click the 'down' arrow next to the data type",
+      "options": {
+        "A": "IV, III, II and I",
+        "B": "III, II, IV and I",
+        "C": "I, III, IV and II",
+        "D": "II, III, I and IV"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0276",
+      "type": "mcq",
+      "stem": "Frequent backup of computer files helps to",
+      "options": {
+        "A": "Archive files",
+        "B": "Protect files",
+        "C": "Modify records in files",
+        "D": "Prevent virus attacks"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0277",
+      "type": "mcq",
+      "stem": "A user working on a computer that is running on Windows 7 issued the command: Ctrl +Alt +Del while typing a document. What interface is expected to be displayed on the screen?",
+      "options": {
+        "A": "Windows hibernate",
+        "B": "Shutdown windows",
+        "C": "Windows task manager",
+        "D": "Restart windows"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0278",
+      "type": "mcq",
+      "stem": "The following computer files will open on a computer that has only Microsoft office 1997 - 2003 installed except",
+      "options": {
+        "A": "exam.rft.",
+        "B": "exam.doc",
+        "C": "exam.ppt",
+        "D": "exam.docx"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0279",
+      "type": "mcq",
+      "stem": "The legal right given to the owner of an intellectual property to prevent others from duplicating or using the work freely is known as",
+      "options": {
+        "A": "Legal right",
+        "B": "Ownership right",
+        "C": "Trademark",
+        "D": "Copyright"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0280",
+      "type": "mcq",
+      "stem": "Which of the following practices is a safety measure?",
+      "options": {
+        "A": "Maintaining a dust-free environment",
+        "B": "Eating and typing at the same time",
+        "C": "Opening up the computer while still connected to the power supply",
+        "D": "Wearing hand gloves while typing"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-data-processing-bank-0281",
+      "type": "mcq",
+      "stem": "The Difference Engine and the Analytical Engine were invented by",
+      "options": {
+        "A": "Ada Lovelace and Charles Babbage",
+        "B": "Blaise Pascal",
+        "C": "Blaise Pascal and Ada Lovelace",
+        "D": "Charles Babbage"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0282",
+      "type": "mcq",
+      "stem": "A type of file organization that stores data in the order of their arrival is called",
+      "options": {
+        "A": "indexed-sequential file organization",
+        "B": "hashed file organization",
+        "C": "random file organization",
+        "D": "sequential file organization"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0283",
+      "type": "mcq",
+      "stem": "Which of the following computer types represents data as variable and continuous values?",
+      "options": {
+        "A": "Analogue computer",
+        "B": "Mainframe computer",
+        "C": "Microcomputer",
+        "D": "Digital computer"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0284",
+      "type": "mcq",
+      "stem": "The following feature are found in the toolbox of CorelDraw application except",
+      "options": {
+        "A": "elipse tool",
+        "B": "text tool",
+        "C": "marque tool",
+        "D": "rectangle tool"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0285",
+      "type": "mcq",
+      "stem": "The ruler feature in MS Word that is used to indent the second and subsequent lines of a paragraph is",
+      "options": {
+        "A": "right indent",
+        "B": "hanging indent",
+        "C": "left margin",
+        "D": "left indent"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0286",
+      "type": "mcq",
+      "stem": "Advantages of parallel database include the following except",
+      "options": {
+        "A": "high availability",
+        "B": "greater flexibility",
+        "C": "high performance",
+        "D": "huge resources"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0287",
+      "type": "mcq",
+      "stem": "The volume of data that can be sent from one point to another in a given time period is called",
+      "options": {
+        "A": "broadband",
+        "B": "byte",
+        "C": "baud",
+        "D": "bandwidth"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0288",
+      "type": "mcq",
+      "stem": "One application of ICT in medicine is",
+      "options": {
+        "A": "seismic software",
+        "B": "computerized axial tomography",
+        "C": "optical character recognition",
+        "D": "global positioning system"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0289",
+      "type": "mcq",
+      "stem": "Computer malware is detected by",
+      "options": {
+        "A": "adware",
+        "B": "logic bomb",
+        "C": "antivirus",
+        "D": "antiglare"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0290",
+      "type": "mcq",
+      "stem": "When performing computer recovery operations after a system crash, the startup disk is used to",
+      "options": {
+        "A": "restore the system to an earlier time",
+        "B": "update the application packages",
+        "C": "backup deleted users file",
+        "D": "recover the system disk from an image file"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0291",
+      "type": "mcq",
+      "stem": "The speed of access to files in a random access file compared to other file organization methods is",
+      "options": {
+        "A": "very slow.",
+        "B": "the same.",
+        "C": "relatively fast.",
+        "D": "slow."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0292",
+      "type": "mcq",
+      "stem": "Which of the following devices is needed by a technician for protection against electrostatic discharge?",
+      "options": {
+        "A": "Magnet",
+        "B": "Wrist strap",
+        "C": "Screw driver",
+        "D": "Surge protector"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0293",
+      "type": "mcq",
+      "stem": "Database Administrator is a professional who",
+      "options": {
+        "A": "handles packet sniffing in a network",
+        "B": "designs, implements and maintains a database",
+        "C": "performs data entry in a database",
+        "D": "tests and detects vulnerabilities on hardware devices and software"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0294",
+      "type": "mcq",
+      "stem": "The aim of administering questionaire is to collect",
+      "options": {
+        "A": "data",
+        "B": "information",
+        "C": "specimen",
+        "D": "statistics"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0295",
+      "type": "mcq",
+      "stem": "A pointing device that controls cursor movement on the screen is",
+      "options": {
+        "A": "trackball",
+        "B": "plotter",
+        "C": "keyboard",
+        "D": "monitor"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0296",
+      "type": "mcq",
+      "stem": "The information processing stage that produces detailed evaluation of data is",
+      "options": {
+        "A": "interpretation",
+        "B": "collection",
+        "C": "analysis",
+        "D": "organization"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0297",
+      "type": "mcq",
+      "stem": "A digital platform for the delivery of public sector information and seminar to citizens is called",
+      "options": {
+        "A": "e-library",
+        "B": "e-commerce",
+        "C": "e-learning",
+        "D": "e-government"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0298",
+      "type": "mcq",
+      "stem": "The following precautionary measures are taken against virus infection except",
+      "options": {
+        "A": "downloading e-mail and attachment before scanning it",
+        "B": "avoiding booting the computer with disks in it",
+        "C": "regular updating of antivirus.",
+        "D": "avoiding the installation of piratted software"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0299",
+      "type": "mcq",
+      "stem": "Artificial intelligence is a feature of",
+      "options": {
+        "A": "fifth generation computers",
+        "B": "third generation computers",
+        "C": "second generation computers",
+        "D": "fourth generation computers"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0300",
+      "type": "mcq",
+      "stem": "Macromedia Dreamweaver application is used for",
+      "options": {
+        "A": "surfing the internet",
+        "B": "graphic design",
+        "C": "intranet communication",
+        "D": "web design"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0301",
+      "type": "mcq",
+      "stem": "Which of the following is not a computer professional?",
+      "options": {
+        "A": "Network Administrator",
+        "B": "Web Master",
+        "C": "System Analyst",
+        "D": "File Manager"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0302",
+      "type": "mcq",
+      "stem": "The following are desturctive software except",
+      "options": {
+        "A": "drivers",
+        "B": "worms",
+        "C": "trojan horses",
+        "D": "logic bomb"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0303",
+      "type": "mcq",
+      "stem": "The type of file organisation in a DVD-ROM is?",
+      "options": {
+        "A": "direct access",
+        "B": "sequential",
+        "C": "serial",
+        "D": "hierarchical"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0304",
+      "type": "mcq",
+      "stem": "Which of these measures would not secure data in database?",
+      "options": {
+        "A": "Encryption",
+        "B": "Data integration",
+        "C": "Personal Identification Number",
+        "D": "Username and passwords"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0305",
+      "type": "mcq",
+      "stem": "People who use cathode ray tube monitor without antiglare screen are susceptible to",
+      "options": {
+        "A": "blurred vision",
+        "B": "back ache",
+        "C": "repetitive strain injury",
+        "D": "stiffness of the wrist"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0306",
+      "type": "mcq",
+      "stem": "Computer ethical practises include the following except",
+      "options": {
+        "A": "respect for intellectual property",
+        "B": "exposure of vulnerability in websites",
+        "C": "use of polite words on other users",
+        "D": "use of other people’s computer without due permission"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0307",
+      "type": "mcq",
+      "stem": "The process of drawing inference from a piece of information is called",
+      "options": {
+        "A": "interpretation",
+        "B": "analysis",
+        "C": "collation",
+        "D": "organization"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0308",
+      "type": "mcq",
+      "stem": "A computer system under use was found to be unusually slow, freezes often and very dusty. What is needed to correct this problem?",
+      "options": {
+        "A": "Hit the system unit with a blower",
+        "B": "Delete some files",
+        "C": "Change the location of the computer",
+        "D": "Perform maintenance procedure"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0309",
+      "type": "mcq",
+      "stem": "Use the information below to answer questions 13 and 14.\n\nA student in the school hostel was able to upload some personal details on the school portal via the school's WiFi .\n\nThe ISP and the hostel are both domiciled in the school premises.\n\nWhat type of network is illustrated above?",
+      "options": {
+        "A": "MAN",
+        "B": "WAN",
+        "C": "LAN",
+        "D": "PAN"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0310",
+      "type": "mcq",
+      "stem": "Use the information below to answer questions 13 and 14.\n\nA student in the school hostel was able to upload some personal details on the school portal via the school's WiFi .\n\nThe ISP and the hostel are both domiciled in the school premises.\n\nThe physical infrastructure through which internet traffic are exchanged between the ISP in the school illustrated above and other ISP s is called",
+      "options": {
+        "A": "switch racks",
+        "B": "subscriber end points",
+        "C": "internet exchange point",
+        "D": "server farms"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0311",
+      "type": "mcq",
+      "stem": "The allocation and de-allocation of computing resources in a computer is the function of",
+      "options": {
+        "A": "browsers",
+        "B": "operating system",
+        "C": "application software",
+        "D": "memory unit"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0312",
+      "type": "mcq",
+      "stem": "The following terms describe the importance of data security except data",
+      "options": {
+        "A": "availability",
+        "B": "integrity",
+        "C": "normalization",
+        "D": "consistency"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0313",
+      "type": "mcq",
+      "stem": "Which of the following data elements ranks highest in size?",
+      "options": {
+        "A": "Field",
+        "B": "Byte",
+        "C": "Record",
+        "D": "Bit"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-data-processing-bank-0314",
+      "type": "mcq",
+      "stem": "The Stepped Reckoner was developed by",
+      "options": {
+        "A": "Gottfied Leibnitz.",
+        "B": "Herman Hollerith",
+        "C": "John Von Neumann",
+        "D": "William Schickard"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0315",
+      "type": "mcq",
+      "stem": "The binary number 100101, can be written in denary as",
+      "options": {
+        "A": "25",
+        "B": "37",
+        "C": "45",
+        "D": "211"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0316",
+      "type": "mcq",
+      "stem": "The first stage in computer data processing procedure is",
+      "options": {
+        "A": "collection of data",
+        "B": "communication of information.",
+        "C": "conversion of data",
+        "D": "manipulation of data"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0317",
+      "type": "mcq",
+      "stem": "One advantage of electronic data processing is that it",
+      "options": {
+        "A": "involves special skill",
+        "B": "deals only with simple data.",
+        "C": ". is completely error-free",
+        "D": "handles complex data"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0318",
+      "type": "mcq",
+      "stem": "The type of computer that has the ability of counting in discrete form is referred to as",
+      "options": {
+        "A": "analogue computer",
+        "B": "digital computer",
+        "C": "hybrid computer",
+        "D": "versatile computer"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0319",
+      "type": "mcq",
+      "stem": "One reason for using Computer Aided Design in manufacturing is that",
+      "options": {
+        "A": "it uses few system resources",
+        "B": "manufacturing time is reduced.",
+        "C": "designers do not need training to use it",
+        "D": "3D designs are easily produced with it."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0320",
+      "type": "mcq",
+      "stem": "Which one of the following statements is true about Voice Over IP? it",
+      "options": {
+        "A": "converts voice and video data into a digital signal and transfers it over the Internet.",
+        "B": "converts voice and video data into a digital signal and broedcasts it via a transmitter.",
+        "C": "is a voice over communication system which is cyber-attack proof",
+        "D": "is a circuit-switched data communication system."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0321",
+      "type": "mcq",
+      "stem": "Which one of the following sets of devices can be used to store data during processing?",
+      "options": {
+        "A": "Cache, RAM and Register",
+        "B": "Cache, Register and ROM",
+        "C": "Flash Drive, ROM and Hard Disk Drive",
+        "D": "RAM, Register and Zip Drive"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0322",
+      "type": "mcq",
+      "stem": "The process of inspecting, transforming and modeling data to get useful information is known as",
+      "options": {
+        "A": "collation",
+        "B": "interpretation",
+        "C": "execution",
+        "D": "analysis"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0323",
+      "type": "mcq",
+      "stem": "One disadvantage of using computer for information processing is",
+      "options": {
+        "A": "need for staff retraining",
+        "B": "increased running cost in the long run",
+        "C": "the increase in storage space",
+        "D": "redundancy of computers in the long run."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0324",
+      "type": "mcq",
+      "stem": "The transmitter in communication is the component that",
+      "options": {
+        "A": "decodes sender's signal by interpretation",
+        "B": "encodes interpreted data by using machine language",
+        "C": "broadcasts synchronous signals",
+        "D": "launches signal into the air"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0325",
+      "type": "mcq",
+      "stem": "Which of the following resources is not usually shared in a network?",
+      "options": {
+        "A": "VGA projector",
+        "B": "Laserjet printer",
+        "C": "Folder",
+        "D": "File"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0326",
+      "type": "mcq",
+      "stem": "Factors to be considered when creating a backup system in a computer network include",
+      "options": {
+        "A": "amount of RAM, amount of data and time of backup",
+        "B": "amount of RAM, type of data and frequency of backup",
+        "C": "media to use, amount of data and frequency of backup.",
+        "D": "media to use, type of data and time of backup."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0327",
+      "type": "mcq",
+      "stem": "The URL www.exams.edu.ng represents the website of",
+      "options": {
+        "A": "an examination body",
+        "B": "a Nigerian-based learning institution",
+        "C": "an educational inctitution in Niger",
+        "D": "a research institution in Niger"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0328",
+      "type": "mcq",
+      "stem": "The Post Ofice Protocol (POP) is used to",
+      "options": {
+        "A": "interconnect devices on the Internet",
+        "B": "retrieve email from a mail server",
+        "C": "transfer file from a server to a client",
+        "D": "send email from one user to another."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0329",
+      "type": "mcq",
+      "stem": "A user working on a computer that is running on Windows 7 issued the com- mand \"Ctrl + Alt + Del\" while typing a document.\n\nWhat interface is expected to be displayed on the screen?",
+      "options": {
+        "A": "Restart Windows",
+        "B": "Shut Down Windows",
+        "C": "Windows Security",
+        "D": "Windows Task"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0330",
+      "type": "mcq",
+      "stem": "Header and Footer are added to a document in MS Word by just clicking on the",
+      "options": {
+        "A": "Edit menu",
+        "B": "Format menu",
+        "C": "Insert menu",
+        "D": "View menu"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0331",
+      "type": "mcq",
+      "stem": "A typist positioned the insertion point at the beginning of a line of text in a word processor and then pressed down the Shift key and clicked at the opposite end of the text. What would be the result of this action? The text will be",
+      "options": {
+        "A": "copied into the clipboard.",
+        "B": "cut into the clipboard.",
+        "C": "deleted from the storage.",
+        "D": "highlighted on the screen."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0332",
+      "type": "mcq",
+      "stem": "The function of the foreign key in a database is to",
+      "options": {
+        "A": "uniquely identify tuples in a table",
+        "B": "provide a link between data in two tables",
+        "C": "uniquely identify an entity occurrence",
+        "D": "uniquely identify each record in a table"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0333",
+      "type": "mcq",
+      "stem": "Web design packages include the following, except",
+      "options": {
+        "A": "Macromedia Dreamweaver",
+        "B": "iWeb",
+        "C": "Front page",
+        "D": "Adobe pagemaker"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0334",
+      "type": "mcq",
+      "stem": "One precautionary measure taken when cleaning a monitor is",
+      "options": {
+        "A": "covering the monitor with antiglare",
+        "B": "cleaning the monitor with alcohol",
+        "C": "unplugging the power supply cable",
+        "D": "using a vacuum cleaner to dust the monitor casing"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0335",
+      "type": "mcq",
+      "stem": "Which one of the following practices is considered ethical?",
+      "options": {
+        "A": "Gaining access into school database to change one's grades",
+        "B": "Gaining access into government database to alter personal details",
+        "C": "Logging into a friend's social media account to read inbox messages",
+        "D": "Signing into school e-library to read e-books"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0336",
+      "type": "mcq",
+      "stem": "Proper network implementation and good ICT policies are types of",
+      "options": {
+        "A": "adaptive measures",
+        "B": "corrective measures",
+        "C": "perfective measures",
+        "D": "preventive measures"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0337",
+      "type": "mcq",
+      "stem": "Preventive maintenance measures in the computer room include the following options except",
+      "options": {
+        "A": "good ventilation",
+        "B": "proper illumination",
+        "C": "the use of rugs",
+        "D": "the use of tiles"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0338",
+      "type": "mcq",
+      "stem": "A database administrator is responsible for the following tasks except",
+      "options": {
+        "A": "controlling and monitoring user access to the database",
+        "B": "enrolling users and maintaining system security",
+        "C": "maintaining archived data",
+        "D": "maintaining connection between local network and the network and the internet"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0339",
+      "type": "mcq",
+      "stem": "Measures taken to avoid eye strain include the following except",
+      "options": {
+        "A": "adjusting the brightness of the monitor",
+        "B": "adjustıng the height of the screen",
+        "C": "blinking of eyes often",
+        "D": "relaxing the body regularly."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0340",
+      "type": "mcq",
+      "stem": "A computer virus replicates itself into other programs or certain areas on the disk during the",
+      "options": {
+        "A": "dormant phase.",
+        "B": "execution phase",
+        "C": "propagation phase",
+        "D": "trigger phase."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0341",
+      "type": "mcq",
+      "stem": "A malware that copies and replicates itself using computer network and security flaws is",
+      "options": {
+        "A": "Rootkit virus",
+        "B": "Spyware",
+        "C": "Trojan horse",
+        "D": "Worm"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0342",
+      "type": "mcq",
+      "stem": "Which one of the following statements is true about database tables?",
+      "options": {
+        "A": "All the tables in a database have a common name",
+        "B": "A table may contain repeating groups",
+        "C": "Entries in a column are from different domains based on datatype",
+        "D": "There are no duplicate rows in a table"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0343",
+      "type": "mcq",
+      "stem": "The major difference between serial and sequential files is that sequential files are",
+      "options": {
+        "A": "given a key",
+        "B": "sorted in a particular order",
+        "C": "stored as they come",
+        "D": "recorded in any storage medium"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0344",
+      "type": "mcq",
+      "stem": "A program developed to protect the computer from malicious software is referred to as",
+      "options": {
+        "A": "trojan",
+        "B": "driver",
+        "C": "antivirus",
+        "D": "spyware"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0345",
+      "type": "mcq",
+      "stem": "One of the advantages of a parallel database is",
+      "options": {
+        "A": "data sharing",
+        "B": "data security",
+        "C": "faster processing of data",
+        "D": "uniform memory access"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0346",
+      "type": "mcq",
+      "stem": "In a relational database management system, files are organized as relations and",
+      "options": {
+        "A": "tuple",
+        "B": "modules",
+        "C": "tables",
+        "D": "forms"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0347",
+      "type": "mcq",
+      "stem": "The exchange of information over a network follows a set of rules called",
+      "options": {
+        "A": "transmission rules",
+        "B": "transfer rules",
+        "C": "channels rules",
+        "D": "protocols"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-data-processing-bank-0348",
+      "type": "mcq",
+      "stem": "Which one of the following pairs contains computer file classification?",
+      "options": {
+        "A": "Master file and serial file",
+        "B": "Random file and master file",
+        "C": "Reference file and random file",
+        "D": "Transaction file and master file"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0349",
+      "type": "mcq",
+      "stem": "Which of the following statements supports the goals of data backup?\n\nI. Need for duplication II. Need for future reference III. Protection against data loss",
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0350",
+      "type": "mcq",
+      "stem": "Which of the following characteristics is associated with the architecture of parallel database?",
+      "options": {
+        "A": "Communication cost and problems cannot be ignored",
+        "B": "Machines can be far from each other",
+        "C": "Machines are physically close to each other",
+        "D": "It is usually associated with shared-nothing architecture"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-data-processing-bank-0351",
+      "type": "mcq",
+      "stem": "Who among the following scientists invented the punch card?",
+      "options": {
+        "A": "charles babbage",
+        "B": "herman hollerith",
+        "C": "gottfried wilhelm",
+        "D": "blaise pascal"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0352",
+      "type": "mcq",
+      "stem": "Which of the following computers is designed to perform a variety of tasks?",
+      "options": {
+        "A": "General purpose",
+        "B": "Analogue",
+        "C": "Hybrid",
+        "D": "Digital"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0353",
+      "type": "mcq",
+      "stem": "The special feature in word processing which allows the sending of multiple data copies of document to different people without having it retyped is",
+      "options": {
+        "A": "cut and paste",
+        "B": "insert",
+        "C": "mail merge",
+        "D": "thesaurus"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0354",
+      "type": "mcq",
+      "stem": "A motion path is a",
+      "options": {
+        "A": "path to save powerpoint file",
+        "B": "methods of moving items on slide",
+        "C": "methods of advancing slide",
+        "D": "path to follow when starting powerpoint"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0355",
+      "type": "mcq",
+      "stem": "Which of the following can be used to make a PowerPoint slide in a presentation to have the same look?",
+      "options": {
+        "A": "Change the view to slide show",
+        "B": "Add a little slide option",
+        "C": "Format the slide layout option",
+        "D": "Add a presentation design template"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0356",
+      "type": "mcq",
+      "stem": "The correctness and completeness of the data in a database are its",
+      "options": {
+        "A": "constraint",
+        "B": "independence",
+        "C": "integrity",
+        "D": "redundancy"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0357",
+      "type": "mcq",
+      "stem": "Which of the following conditions is used to transmit packets over a medium at the same time?",
+      "options": {
+        "A": "Synchronous",
+        "B": "Collision",
+        "C": "Asynchronous",
+        "D": "Contention"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0358",
+      "type": "mcq",
+      "stem": "Which of the following is not a normal form of relational database?",
+      "options": {
+        "A": "4NF",
+        "B": "2NF",
+        "C": "1NF",
+        "D": "3NF"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0359",
+      "type": "mcq",
+      "stem": "The two major types of computer chips are",
+      "options": {
+        "A": "primary memory chip",
+        "B": "external memory chip",
+        "C": "microprocessor chip",
+        "D": "both b and c"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0360",
+      "type": "mcq",
+      "stem": "Which of the following is an advantage of electronic data processing?",
+      "options": {
+        "A": "automated backup",
+        "B": "automatic operation",
+        "C": "mass storage",
+        "D": "resource sharing"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0361",
+      "type": "mcq",
+      "stem": "The following are examples of relational operators. Use the image in the explanation to answer these questions.",
+      "options": {
+        "A": "=",
+        "B": "*",
+        "C": ">",
+        "D": "<"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0362",
+      "type": "mcq",
+      "stem": "A ______ In a database represents a relationship among a set of values",
+      "options": {
+        "A": "Column",
+        "B": "Entity",
+        "C": "Entry",
+        "D": "key"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0363",
+      "type": "mcq",
+      "stem": "Strategic data modeling is the",
+      "options": {
+        "A": "implementation of the blueprint in database",
+        "B": "development of logical data models",
+        "C": "capturing and displaying of program data",
+        "D": "creation of an information system procedure"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0364",
+      "type": "mcq",
+      "stem": "A data model has how many components?",
+      "options": {
+        "A": "5",
+        "B": "3",
+        "C": "2",
+        "D": "4"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0365",
+      "type": "mcq",
+      "stem": "How many types of index (es) is/are there in the structured query language server?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "4",
+        "D": "2"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0366",
+      "type": "mcq",
+      "stem": "Which of the following is an audiovisual medium of receiving information?",
+      "options": {
+        "A": "television",
+        "B": "flip chart",
+        "C": "film strip",
+        "D": "fax"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0367",
+      "type": "mcq",
+      "stem": "The following are examples of operating systems by Microsoft Corporation, except",
+      "options": {
+        "A": "os/2",
+        "B": "ms-dos",
+        "C": "vista",
+        "D": "xp"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0368",
+      "type": "mcq",
+      "stem": "Software that defines a database, stores the data, supports a query language, produces reports, and creates data entry screens is a",
+      "options": {
+        "A": "data dictionary",
+        "B": "decision support system",
+        "C": "relational database",
+        "D": "database management system (DBMS)"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0369",
+      "type": "mcq",
+      "stem": "The database design that consists of multiple tables that are linked together through matching data stored in each table is called a:",
+      "options": {
+        "A": "object oriented database",
+        "B": "relational data base",
+        "C": "network database",
+        "D": "hierarchical database"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0370",
+      "type": "mcq",
+      "stem": "Which of the following items is not an advantage of a DBMS?",
+      "options": {
+        "A": "Improved data consistency",
+        "B": "improved ability to enforce standards",
+        "C": "Local control over the data",
+        "D": "Minimal data redundancy"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0371",
+      "type": "mcq",
+      "stem": "The feature in word processing that compares every word with an electronic dictionary is",
+      "options": {
+        "A": "thesaurus",
+        "B": "help",
+        "C": "spell check",
+        "D": "page alignment"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0372",
+      "type": "mcq",
+      "stem": "Which of the following is not a database security tip?",
+      "options": {
+        "A": "Updating of Anti-Malware software",
+        "B": "enforce restrictions on internet access",
+        "C": "regular backup of data on removable media",
+        "D": "fight off hacking attacks with intrusion detection technology"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0373",
+      "type": "mcq",
+      "stem": "The process of distributing information over a communication network or medium is referred to as",
+      "options": {
+        "A": "interpretation",
+        "B": "organisation",
+        "C": "transmission",
+        "D": "acquisition"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0374",
+      "type": "mcq",
+      "stem": "Computers store data in units called",
+      "options": {
+        "A": "bit",
+        "B": "field",
+        "C": "database",
+        "D": "file"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0375",
+      "type": "mcq",
+      "stem": "How do you minimize and maximize windows?",
+      "options": {
+        "A": "Hold down both the right and left buttons on the mouse",
+        "B": "Go to file and select minimize or minimize",
+        "C": "It is an impossible task",
+        "D": "At the top right corner, click Dash or Square"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0376",
+      "type": "mcq",
+      "stem": "Excel worksheet version 8 has how many columns?",
+      "options": {
+        "A": "65,535",
+        "B": "65,534",
+        "C": "65,536",
+        "D": "65,533"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0377",
+      "type": "mcq",
+      "stem": "Which of the function keys opens the \"Save-As\" windows in MS word?",
+      "options": {
+        "A": "F12",
+        "B": "F10",
+        "C": "F2",
+        "D": "F1"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0378",
+      "type": "mcq",
+      "stem": "Multitasking allows the _____  to access several programs at the same time",
+      "options": {
+        "A": "cpu",
+        "B": "computer",
+        "C": "ram",
+        "D": "user"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0379",
+      "type": "mcq",
+      "stem": "Which of the following fields can uniquely identify a record of a student's performance in a school?",
+      "options": {
+        "A": "Classroom number",
+        "B": "Date of birth",
+        "C": "Administration number",
+        "D": "First name"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0380",
+      "type": "mcq",
+      "stem": "The execution of an instruction by a processor is in three distinct phases. They are",
+      "options": {
+        "A": "fetch, decode, execute",
+        "B": "input, output, process",
+        "C": "start, stop, process",
+        "D": "call, respond, store"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0381",
+      "type": "mcq",
+      "stem": "The function of the history link in the standard navigation bar of Internet Explorer is to",
+      "options": {
+        "A": "display a list of previously viewed websites",
+        "B": "go to the homepage of the currently viewed website",
+        "C": "display a list of previously bookmarked website",
+        "D": "move forward to a webpage viewed before using the back button"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0382",
+      "type": "mcq",
+      "stem": "The roles of a database administrator include the following except",
+      "options": {
+        "A": "aiding and abetting fraud",
+        "B": "backup and receiving the database",
+        "C": "ensuring database security is implemented to safeguard the data",
+        "D": "creating new databases"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0383",
+      "type": "mcq",
+      "stem": "Ctrl + B is?",
+      "options": {
+        "A": "paste the selected text bold the selected text",
+        "B": "bold the selected text",
+        "C": "open the specified file",
+        "D": "search the selected text"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0384",
+      "type": "mcq",
+      "stem": "The following are the benefits of parallel databases, except",
+      "options": {
+        "A": "high performance",
+        "B": "availability",
+        "C": "reliability",
+        "D": "complexity"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0385",
+      "type": "mcq",
+      "stem": "The slide that is used to introduce a topic during a presentation is called",
+      "options": {
+        "A": "title slide",
+        "B": "graph",
+        "C": "animation",
+        "D": "bullet"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0386",
+      "type": "mcq",
+      "stem": "Word has a list of predefined typing, spelling, capitalization, and grammar errors that ______ detect and correct.",
+      "options": {
+        "A": "autocorrect",
+        "B": "autoentry",
+        "C": "autoadd",
+        "D": "autoSpell"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0387",
+      "type": "mcq",
+      "stem": "The process of converting data or information into a form which is readily for processing is called",
+      "options": {
+        "A": "decoding",
+        "B": "manipulating",
+        "C": "encoding",
+        "D": "analysing"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0388",
+      "type": "mcq",
+      "stem": "The ring technology is a protocol at which layer of the OSI model?",
+      "options": {
+        "A": "network",
+        "B": "presentation",
+        "C": "datalink",
+        "D": "session"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0389",
+      "type": "mcq",
+      "stem": "Where was the abacus invented?",
+      "options": {
+        "A": "egypt",
+        "B": "china",
+        "C": "argentina",
+        "D": "australian"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0390",
+      "type": "mcq",
+      "stem": "A program installed on a computer that secretly collects information about the user is called",
+      "options": {
+        "A": "spyware",
+        "B": "malware",
+        "C": "fire wall",
+        "D": "ad ware"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-data-processing-bank-0391",
+      "type": "mcq",
+      "stem": "Who developed the first digital electrical computer?",
+      "options": {
+        "A": "Blaise Pascal",
+        "B": "Joseph Jacquard",
+        "C": "Mauchly and Eckert",
+        "D": "Von Leibniz"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0392",
+      "type": "mcq",
+      "stem": "Which generation of computers made use of intergrated circuit?",
+      "options": {
+        "A": "Fourth",
+        "B": "Third",
+        "C": "Second",
+        "D": "First"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0393",
+      "type": "mcq",
+      "stem": "Which of the following is an alphebetical data?",
+      "options": {
+        "A": "Bed",
+        "B": "Ax44jj",
+        "C": "AB+CD",
+        "D": "%"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0394",
+      "type": "mcq",
+      "stem": "The type of data which consist of text, number, audio, graphic and animation is called",
+      "options": {
+        "A": "data set",
+        "B": "multimedia data",
+        "C": "multi-purpose data",
+        "D": "multi-variable data"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-data-processing-bank-0395",
+      "type": "mcq",
+      "stem": "Which of the following factors is not considered when classifying computers?",
+      "options": {
+        "A": "Location",
+        "B": "Size",
+        "C": "Type",
+        "D": "Purpose"
+      },
+      "marks": 1,
+      "year": 2016
+    }
+  ],
+  "category": "secondary",
+  "body": "WAEC"
+}

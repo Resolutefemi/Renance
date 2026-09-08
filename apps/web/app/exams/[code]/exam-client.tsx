@@ -8,6 +8,7 @@ import {
   fetchBundle,
   fetchBundleByCode,
   fetchManifest,
+  isComposedPaperCode,
   isMockPaperCode,
   type Bundle,
 } from '@/lib/exams';
@@ -88,6 +89,9 @@ export default function ExamPage({ code }: { code: string }) {
 
   const [attempt, setAttempt] = useState<AttemptResponse | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  // Theory drafts: the essay text typed per question — device-local only,
+  // never submitted (ADR-0003: student content stays client-side).
+  const [theoryDrafts, setTheoryDrafts] = useState<Record<string, string>>({});
   const [flags, setFlags] = useState<Record<string, boolean>>({});
   const [visited, setVisited] = useState<Record<string, boolean>>({});
   const [navOpen, setNavOpen] = useState(false);
@@ -99,6 +103,8 @@ export default function ExamPage({ code }: { code: string }) {
   const [allAttempts, setAllAttempts] = useState<AttemptSummary[] | null>(null);
   // Smart order (ROADMAP #5): begin weak-topic-first by default; the
   // intro toggle flips it back to the pack's natural exam order.
+  // Official UTME mocks run in exam mode and skip the smart walk;
+  // custom practice papers and carved subsets play like practice.
   const [adaptive, setAdaptive] = useState(!isMockPaperCode(code));
   const [smartApplied, setSmartApplied] = useState(false);
   const startedAtRef = useRef<number>(0);
@@ -120,6 +126,7 @@ export default function ExamPage({ code }: { code: string }) {
   const [daily, setDaily] = useState<DailyInfo | null>(null);
   // Composite UTME mocks run in exam mode: answers lock once picked
   // (the same rule as the real CBT hall and jamb-cbt-web's exam mode).
+  // Custom/pick papers compose server-side but play in practice mode.
   const examMode = isMockPaperCode(code);
   const [calcOpen, setCalcOpen] = useState(false);
 
@@ -155,8 +162,13 @@ export default function ExamPage({ code }: { code: string }) {
           if (!exam) throw new Error("Today's challenge pack is missing");
           meta = exam;
           b = await fetchBundle(exam);
-        } else if (isMockPaperCode(code)) {
+        } else if (isComposedPaperCode(code)) {
+          // mock / custom / pick papers compose server-side on demand
           b = await fetchBundleByCode(code);
+          if (b.durationMinutes == null) {
+            // untimed composed practice: count-up clock
+            setUntimed(true);
+          }
         } else {
           const manifest = await fetchManifest();
           const exam = manifest.exams.find((e) => e.code === code);
@@ -422,7 +434,7 @@ export default function ExamPage({ code }: { code: string }) {
   const pick = (questionId: string, letter: string) => {
     // Exam mode (UTME mock): the hall rule — a pick is final.
     if (examMode && answers[questionId]) return;
-    if (!answers[questionId]) {
+    if (!answers[questionId] && letter !== '') {
       const latencies = [...latenciesRef.current, Date.now() - shownAtRef.current];
       latenciesRef.current = latencies;
       const minutes =
@@ -432,6 +444,12 @@ export default function ExamPage({ code }: { code: string }) {
       if (sig.suggestBreak && !nudgeDismissedRef.current) setNudgeVisible(true);
     }
     setAnswers((a) => ({ ...a, [questionId]: letter }));
+  };
+
+  /** Theory questions submit an empty marker pick (the essay text never
+   *  leaves the browser); the model answer unlocks in review. */
+  const markTheory = (questionId: string) => {
+    setAnswers((a) => (a[questionId] ? a : { ...a, [questionId]: '' }));
   };
 
   /** Question navigation resets the per-question latency clock. */
@@ -504,6 +522,11 @@ export default function ExamPage({ code }: { code: string }) {
               Standard UTME Mock
             </p>
           )}
+          {!examMode && isComposedPaperCode(code) && (
+            <p className="mx-auto mb-2 w-fit rounded-full bg-accent-emerald/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface">
+              Custom Practice
+            </p>
+          )}
           {daily && (
             <p className="mx-auto mb-2 w-fit rounded-full bg-accent-amber/15 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface">
               Daily Challenge · {daily.day}
@@ -511,7 +534,8 @@ export default function ExamPage({ code }: { code: string }) {
           )}
           <h1 className="text-xl font-semibold text-on-surface">{bundle.title}</h1>
           <p className="mt-2 text-sm text-on-surface-variant">
-            {bundle.questionCount} questions · {bundle.durationMinutes ?? 30} minutes ·{' '}
+            {bundle.questionCount} questions ·{' '}
+            {bundle.durationMinutes != null ? `${bundle.durationMinutes} minutes` : 'untimed'} ·{' '}
             {bundle.totalMarks} marks
           </p>
           <ul className="mx-auto mt-6 max-w-xs space-y-1.5 text-left text-xs text-on-surface-variant">
@@ -1077,7 +1101,41 @@ export default function ExamPage({ code }: { code: string }) {
               {flags[question.id] ? 'flagged' : 'flag'}
             </button>
           </div>
-          <p className="mt-4 text-[16px] leading-relaxed text-on-surface">{question.stem}</p>
+          <p className="mt-4 whitespace-pre-line text-[16px] leading-relaxed text-on-surface">{question.stem}</p>
+          {question.type === 'theory' ? (
+            <div className="mt-6 flex flex-col gap-3">
+              <div className="flex items-center gap-2 rounded-lg bg-accent-amber/10 px-3 py-2">
+                <span className="material-symbols-outlined text-[18px] text-accent-ink">edit_note</span>
+                <p className="text-[12px] leading-4 text-on-surface-variant">
+                  Theory question — write your answer below, then tick it when done.
+                  The model answer unlocks in the review after submission.
+                </p>
+              </div>
+              <textarea
+                value={theoryDrafts[question.id] ?? ''}
+                onChange={(e) =>
+                  setTheoryDrafts((d) => ({ ...d, [question.id]: e.target.value }))
+                }
+                rows={6}
+                placeholder="Write your answer here (kept on this device)…"
+                className="w-full rounded-xl border border-outline-variant bg-surface-container-lowest/60 px-4 py-3 text-sm leading-relaxed text-on-surface outline-none transition focus:border-primary"
+              />
+              <button
+                type="button"
+                onClick={() => markTheory(question.id)}
+                className={`flex w-fit items-center gap-2 rounded-full px-4 py-2 text-[13px] font-semibold transition ${
+                  answers[question.id] !== undefined
+                    ? 'bg-accent-emerald/15 text-on-surface'
+                    : 'bg-primary text-on-primary shadow-sm'
+                }`}
+              >
+                <span className="material-symbols-outlined text-[16px]">
+                  {answers[question.id] !== undefined ? 'check_circle' : 'task_alt'}
+                </span>
+                {answers[question.id] !== undefined ? 'Answered — submitted with the paper' : 'Mark as answered'}
+              </button>
+            </div>
+          ) : (
           <div className="mt-6 space-y-2.5">
             {Object.entries(question.options ?? {}).map(([letter, text]) => {
               const selected = answers[question.id] === letter;
@@ -1114,6 +1172,7 @@ export default function ExamPage({ code }: { code: string }) {
               );
             })}
           </div>
+          )}
           {examMode && answers[question.id] && (
             <p className="mt-3 flex items-center gap-1.5 text-[11px] text-on-surface-variant">
               <span className="material-symbols-outlined text-[14px]">lock</span>

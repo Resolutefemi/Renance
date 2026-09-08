@@ -196,6 +196,20 @@ const List<_SelectionSubject> _kSelectionSubjects = <_SelectionSubject>[
     covered: 1,
     total: 3,
   ),
+  _SelectionSubject(
+    id: 'home-economics',
+    name: 'Home Economics',
+    icon: Icons.home,
+    covered: 1,
+    total: 3,
+  ),
+  _SelectionSubject(
+    id: 'physical-education',
+    name: 'Physical Education',
+    icon: Icons.sports_soccer,
+    covered: 1,
+    total: 3,
+  ),
 ];
 
 class _JambSubjectSelectionScreenState
