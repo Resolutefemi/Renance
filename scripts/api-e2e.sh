@@ -427,9 +427,10 @@ WAEC=$(curl -fsS "$BASE/daily/WAEC" -H "Authorization: Bearer $TOKEN")
 printf '%s' "$WAEC" | jsonget "d['body']" | grep -q "WAEC"
 printf '%s' "$WAEC" | jsonget "len(d['questions'])" | grep -qx "10"
 
-step "GET /daily/NECO -> 404 unknown_body (NECO packs not published yet)"
-CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/NECO" -H "Authorization: Bearer $TOKEN")
-[ "$CODE" = "404" ]
+step "GET /daily/NECO -> 200 now that the 37-subject archive ships NECO banks"
+NECO=$(curl -fsS "$BASE/daily/NECO" -H "Authorization: Bearer $TOKEN")
+printf '%s' "$NECO" | jsonget "d['body']" | grep -q "NECO"
+printf '%s' "$NECO" | jsonget "len(d['questions'])" | grep -qx "10"
 
 step "GET /daily/JAMB without token -> 401"
 CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/daily/JAMB")
