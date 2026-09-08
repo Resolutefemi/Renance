@@ -1,16 +1,17 @@
 package httpapi
 
-// Composite UTME mock papers: the "Standard UTME Mock" backend flow.
+// Composite papers: the "Standard UTME Mock", "Custom Practice" and
+// carved practice-subset backends.
 //
-// A JAMB student configures Use of English + 3 subjects on the setup
-// screen and taps Begin; the client POSTs /attempts with the canonical
-// code (jamb-mock-english-<slug>-<slug>-<slug>). The server composes
-// that paper on demand — deterministically from the subject banks —
-// registers it in the library, assembles its sealed answer key from
-// the banks' own keys, seeds the key store (so grading survives a
-// restart) and hands the ordinary attempt pipeline a bundle like any
-// static pack. No new storage, no migration, no doctrine change: the
-// composite never enters the manifest and never carries answers.
+// The client POSTs /attempts with a canonical composed code (papercode.go
+// grammar) — jamb-mock-…, jamb-custom-… or jamb-pick-…. The server parses
+// the spec, composes that paper on demand — deterministically from the
+// subject banks or the base pack — registers it in the library, assembles
+// its sealed answer key from the source keys, seeds the key store (so
+// grading survives a restart) and hands the ordinary attempt pipeline a
+// bundle like any static pack. No new storage, no migration, no doctrine
+// change: the composite never enters the manifest and never carries
+// answers.
 
 import (
 	"context"
@@ -21,14 +22,14 @@ import (
 	"renance.dev/study-api/internal/store"
 )
 
-// ensurePaper resolves any pack code to a servable bundle, composing
-// and registering mock papers on first use (double-checked under the
-// lock so concurrent first requests compose exactly once).
+// ensurePaper resolves any pack code to a servable bundle, composing and
+// registering mock/custom/pick papers on first use (double-checked under
+// the lock so concurrent first requests compose exactly once).
 func (s *Server) ensurePaper(ctx context.Context, code string) (*cbtdata.Bundle, bool) {
 	if b, ok := s.lib.Bundle(code); ok {
 		return b, true
 	}
-	if !cbtdata.IsMockPaperCode(code) {
+	if !cbtdata.IsComposedPaperCode(code) {
 		return nil, false
 	}
 	s.mockMu.Lock()
@@ -36,56 +37,85 @@ func (s *Server) ensurePaper(ctx context.Context, code string) (*cbtdata.Bundle,
 	if b, ok := s.lib.Bundle(code); ok { // a raced winner already composed it
 		return b, true
 	}
-	subjects, ok := s.lib.MockPaperSubjects(code)
-	if !ok {
-		return nil, false
-	}
-	banks := map[string]*cbtdata.Bundle{}
-	for _, slug := range subjects {
-		bank, ok := s.lib.Bundle("jamb-" + slug + "-bank")
-		if !ok {
-			return nil, false
-		}
-		banks[slug] = bank
-	}
-	paper, err := cbtdata.ComposeMockPaper(code, subjects, banks)
+	spec, err := s.lib.ParsePaper(code)
 	if err != nil {
-		s.log.Error("mock paper compose", "code", code, "err", err)
+		s.log.Error("paper code parse", "code", code, "err", err)
 		return nil, false
 	}
-	// The sealed key is the union of the banks' keys over the questions
-	// the paper actually walks. A missing bank key is a content defect —
-	// refuse the paper loudly rather than strand an ungradable attempt.
-	keys := map[string]store.KeyEntry{}
-	for _, bank := range banks {
-		bankKeys, ok := s.keys.Get(bank.Code)
-		if !ok {
-			s.log.Error("mock paper: bank key missing", "code", code, "bank", bank.Code)
+
+	var paper *cbtdata.Bundle
+	var keys map[string]store.KeyEntry
+	switch spec.Family {
+	case cbtdata.PaperFamilyMock, cbtdata.PaperFamilyCustom:
+		banks := map[string]*cbtdata.Bundle{}
+		for _, slug := range spec.Subjects {
+			bank, ok := s.lib.Bundle("jamb-" + slug + "-bank")
+			if !ok {
+				return nil, false
+			}
+			banks[slug] = bank
+		}
+		paper, err = cbtdata.ComposePaper(spec, banks)
+		if err != nil {
+			s.log.Error("paper compose", "code", code, "err", err)
 			return nil, false
 		}
-		for _, q := range bank.Questions {
-			if k, ok := bankKeys[q.ID]; ok {
+		// The sealed key is the union of the banks' keys. A missing bank
+		// key is a content defect — refuse the paper loudly rather than
+		// strand an ungradable attempt.
+		keys = map[string]store.KeyEntry{}
+		for _, bank := range banks {
+			bankKeys, ok := s.keys.Get(bank.Code)
+			if !ok {
+				s.log.Error("composed paper: bank key missing", "code", code, "bank", bank.Code)
+				return nil, false
+			}
+			for _, q := range bank.Questions {
+				if k, ok := bankKeys[q.ID]; ok {
+					keys[q.ID] = k
+				}
+			}
+		}
+	case cbtdata.PaperFamilyPick:
+		base, ok := s.lib.Bundle(spec.Base)
+		if !ok {
+			return nil, false
+		}
+		paper, err = cbtdata.ComposePickPaper(spec, base)
+		if err != nil {
+			s.log.Error("pick compose", "code", code, "err", err)
+			return nil, false
+		}
+		baseKeys, ok := s.keys.Get(base.Code)
+		if !ok {
+			s.log.Error("pick paper: base key missing", "code", code, "base", base.Code)
+			return nil, false
+		}
+		keys = map[string]store.KeyEntry{}
+		for _, q := range base.Questions {
+			if k, ok := baseKeys[q.ID]; ok {
 				keys[q.ID] = k
 			}
 		}
 	}
+
 	// Persist first (best-effort: the in-memory cache below already
 	// covers the running process; the seed covers a restart mid-paper),
-	// then publish bundle + key atomically enough for every reader.
+	// then publish the key atomically enough for every reader.
 	if _, err := s.store.SeedKeys(ctx, code, keys); err != nil {
-		s.log.Error("mock paper: seed keys", "code", code, "err", err)
+		s.log.Error("composed paper: seed keys", "code", code, "err", err)
 	}
 	if putter, ok := s.keys.(interface {
 		Put(code string, keys map[string]store.KeyEntry)
 	}); ok {
 		putter.Put(code, keys)
 	} else {
-		s.log.Error("mock paper: key source cannot grow", "code", code)
+		s.log.Error("composed paper: key source cannot grow", "code", code)
 		return nil, false
 	}
 	s.lib.RegisterPaper(paper)
-	s.log.Info("mock paper composed", "code", code,
-		"questions", paper.QuestionCount, "subjects", len(subjects))
+	s.log.Info("composed paper ready", "code", code,
+		"questions", paper.QuestionCount, "family", spec.Family)
 	return paper, true
 }
 

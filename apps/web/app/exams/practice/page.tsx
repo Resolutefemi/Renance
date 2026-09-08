@@ -3,21 +3,21 @@
 /**
  * Practice Settings, the Stitch practice_mode_setup_light screen, 1:1.
  *
- * "Configure your JAMB practice session." The Past Question Year grid
- * (2024 / 2023 / 2022 / Random), the Question Count stepper with the
- * big stat and the 10 / 20 / 40 / 50 presets, the Timer grid (No
- * timer / 15m / 30m / 60m), the Shuffle Questions / Shuffle Options /
- * Show Answer Instantly toggle rows and the sticky Start Practice
- * button. Start launches the pack the student came from (?pack=code);
- * without one it returns to the pack library.
+ * The Past Question Year grid (Random by default, then every year the
+ * pack actually carries), the Question Count stepper with the big stat
+ * and the 10 / 20 / 40 / 50 presets, the Timer grid (No timer / 15m /
+ * 30m / 60m) plus your own minutes, and the Shuffle toggles. Start
+ * carves a server-composed practice subset (jamb-pick-<pack>~params)
+ * from the pack the student came from (?pack=code), so the sitting and
+ * its grading stay deterministic and resumable.
  */
 
-import { Suspense, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import { buildPickCode, fetchManifest, type Manifest } from '@/lib/exams';
 
-const YEARS = ['2024', '2023', '2022', 'Random'] as const;
 const TIMERS: Array<{ label: string; minutes: number | null }> = [
   { label: 'No timer', minutes: null },
   { label: '15m', minutes: 15 },
@@ -31,24 +31,51 @@ function PracticeSettingsInner() {
   const params = useSearchParams();
   const pack = params.get('pack') ?? '';
 
-  const [year, setYear] = useState<string>('2024');
+  const [packTitle, setPackTitle] = useState('');
+  const [packYears, setPackYears] = useState<number[]>([]);
+  const [year, setYear] = useState<number | null>(null); // null = Random
   const [count, setCount] = useState<number>(40);
+  const [customMinutes, setCustomMinutes] = useState<number | ''>('');
   const [timerMinutes, setTimerMinutes] = useState<number | null>(60);
   const [shuffleQuestions, setShuffleQuestions] = useState(true);
   const [shuffleOptions, setShuffleOptions] = useState(true);
-  const [showAnswerInstantly, setShowAnswerInstantly] = useState(false);
+
+  useEffect(() => {
+    let alive = true;
+    if (!pack) return () => { alive = false; };
+    fetchManifest()
+      .then((m: Manifest) => {
+        if (!alive) return;
+        const hit = m.exams.find((e) => e.code === pack);
+        if (hit) {
+          setPackTitle(hit.title);
+          setPackYears(hit.years ?? []);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [pack]);
+
+  const timerMins = useMemo<number | null>(() => {
+    if (customMinutes !== '') return customMinutes as number;
+    return timerMinutes;
+  }, [customMinutes, timerMinutes]);
 
   function start() {
-    const overrides = new URLSearchParams();
-    overrides.set('count', String(count));
-    overrides.set('timer', timerMinutes == null ? '0' : String(timerMinutes));
-    if (shuffleQuestions) overrides.set('shuffle', '1');
-    if (showAnswerInstantly) overrides.set('instant', '1');
-    if (pack) {
-      router.push(`/exams/${encodeURIComponent(pack)}?${overrides.toString()}`);
-    } else {
+    if (!pack) {
       router.push('/packs');
+      return;
     }
+    const code = buildPickCode(pack, {
+      count,
+      year,
+      timer: timerMins ?? 0,
+    });
+    const overrides = new URLSearchParams();
+    if (shuffleQuestions) overrides.set('shuffle', '1');
+    router.push(`/exams/${encodeURIComponent(code)}?${overrides.toString()}`);
   }
 
   return (
@@ -61,10 +88,10 @@ function PracticeSettingsInner() {
             Practice Settings
           </h1>
           <p className="mt-1 text-[15px] font-medium text-on-surface-variant">
-            Configure your JAMB practice session.
+            {packTitle ? `Configure your session · ${packTitle}` : 'Configure your practice session.'}
           </p>
 
-          {/* Past Question Year */}
+          {/* Past Question Year — real years from the pack, Random default */}
           <section className="mt-6 flex flex-col gap-4 rounded-[12px] bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
             <div className="flex items-center gap-3">
               <span className="material-symbols-outlined text-outline-light">history</span>
@@ -72,11 +99,27 @@ function PracticeSettingsInner() {
                 Past Question Year
               </h2>
             </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {YEARS.map((y) => (
-                <YearButton key={y} label={y} selected={year === y} onSelect={() => setYear(y)} />
-              ))}
-            </div>
+            {packYears.length === 0 ? (
+              <p className="text-[13px] text-on-surface-variant">
+                This pack runs on random draws — no year metadata.
+              </p>
+            ) : (
+              <div className="no-scrollbar flex flex-wrap gap-2">
+                <YearButton
+                  label="Random"
+                  selected={year == null}
+                  onSelect={() => setYear(null)}
+                />
+                {[...packYears].reverse().map((y) => (
+                  <YearButton
+                    key={y}
+                    label={String(y)}
+                    selected={year === y}
+                    onSelect={() => setYear(y)}
+                  />
+                ))}
+              </div>
+            )}
           </section>
 
           {/* Question Count */}
@@ -99,7 +142,7 @@ function PracticeSettingsInner() {
               </div>
               <StepButton
                 icon="add"
-                onClick={() => setCount((c) => Math.min(100, c + 5))}
+                onClick={() => setCount((c) => Math.min(200, c + 5))}
                 label="Add questions"
               />
             </div>
@@ -132,10 +175,29 @@ function PracticeSettingsInner() {
                 <YearButton
                   key={t.label}
                   label={t.label}
-                  selected={timerMinutes === t.minutes}
-                  onSelect={() => setTimerMinutes(t.minutes)}
+                  selected={customMinutes === '' && timerMinutes === t.minutes}
+                  onSelect={() => {
+                    setCustomMinutes('');
+                    setTimerMinutes(t.minutes);
+                  }}
                 />
               ))}
+            </div>
+            <div className="flex items-center justify-between px-1">
+              <span className="text-[14px] text-on-surface-variant">Your own minutes</span>
+              <input
+                type="number"
+                inputMode="numeric"
+                min={1}
+                max={300}
+                value={customMinutes}
+                onChange={(e) => {
+                  const v = e.target.value === '' ? '' : Math.max(1, Math.min(300, Number(e.target.value)));
+                  setCustomMinutes(v);
+                }}
+                placeholder="—"
+                className="w-24 rounded-lg border border-outline-variant bg-surface-container-low px-3 py-2 text-center font-mono text-[15px] text-on-surface outline-none focus:border-primary"
+              />
             </div>
           </section>
 
@@ -152,12 +214,6 @@ function PracticeSettingsInner() {
               label="Shuffle Options"
               value={shuffleOptions}
               onChange={setShuffleOptions}
-            />
-            <ToggleRow
-              icon="bolt"
-              label="Show Answer Instantly"
-              value={showAnswerInstantly}
-              onChange={setShowAnswerInstantly}
             />
           </section>
         </div>
@@ -211,7 +267,7 @@ function YearButton({
     <button
       type="button"
       onClick={onSelect}
-      className={`rounded-lg border-2 py-3 text-[15px] font-semibold transition-all ${
+      className={`min-w-[64px] rounded-lg border-2 px-3 py-2.5 text-[14px] font-semibold transition-all ${
         selected
           ? 'border-primary bg-selection-blue text-on-surface'
           : 'border-transparent bg-surface-container-low text-on-surface hover:bg-surface-variant'

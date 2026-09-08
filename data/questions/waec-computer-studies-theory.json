@@ -1,0 +1,431 @@
+{
+  "code": "waec-computer-studies-theory",
+  "title": "WAEC Computer Studies | Theory & Model Answers",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "waec-computer-studies-theory-0001",
+      "type": "theory",
+      "stem": "(a) What are \"Reports\" in a database system?\n(b) List four (4) ways in which Reports can be viewed in database management system.\n(c) Outline the steps to prints a Report in MS Access.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-theory-0002",
+      "type": "theory",
+      "stem": "Perform the following conversions in the stated number bases;\n(a) AB1\\(_{16}\\) to Octal system\n(b) 1110111.101\\(_2\\) to Denary system \n(c) 507\\(_2\\) to Binary system.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-theory-0003",
+      "type": "theory",
+      "stem": "(a)(i) What is Universal Serial Bus (USB)?\n(ii) State two benefits of using USB connection between a computer and another device.\n(b) In Table 1, three storage devices are described, Use it to answer questions 3(b)(i) and 3(b)(ii).\n(i) In column 2, name the storage device being described in column 1.\n(ii) Show the category of storage device being described in column 1 by ticking in any of the column 3, 4 or 5\n\n \n \n SN\n 1\n 2\n 3\n 4\n 5\n \n \n  \n Description of Storage Device\n Name of Storage Device\n Category of Storage Device\n \n \n  \n  \n  \n Primary\n Secondary\n Offline\n \n \n 1\n Magnetic storage medium which is composed of a thin flexible disk sealed in a square plastic carrier.\n  \n  \n  \n  \n \n \n 2\n Optical media - which uses one spiral track.Red lasers are used to read and write data on the media surface and it makes use of dual-layering technology to increase the storage capacity to over 1 GB.\n  \n  \n  \n  \n \n \n 3\n Non-volatile memory chip which contents cannot be altered. It is often used to store the start-up routines in a computer (e.g the BIOS).",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-theory-0004",
+      "type": "theory",
+      "stem": "(a)(i) Define computer graphics.\n(ii) List two applications of computer graphics in advertising.\n(b) Give one use of the following computer graphics application tools;\n(i) Interactive Fill Tool (ii) Texture Fill Tool (iii) Envelops Tool (iv) Extrude Tool \n(c) Name one Fill Tool in computer graphic application which is needed to (i) create a background that is faded from light blue to white (ii) fill an object with two colours that blend from one to another.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-theory-0005",
+      "type": "theory",
+      "stem": "(a) Match each type of ICT in Table 1 with its relevant 1.\n\n \n \n \n ICT Type\n \n \n communication sector.\n \n \n \n \n Satellite communication\n \n \n Radio\n \n \n \n \n Broadcasting\n \n \n Internet\n \n \n \n \n Data network\n \n \n GSM\n \n \n \n \n Telecommunication\n \n video conferencing\n \n \n\n(b) List three computing devices that belong to each of (i) 19th; and (ii) 20th century periods.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-theory-0006",
+      "type": "theory",
+      "stem": "A palindrome is a word which can be written in reversed order and it retains its meaning and spelling,Examples are lawal,ada,abba,etc\nWrite a simple QBASIC instruction that will accept a word from the keyboard and check if it is a palindrome or not. The palindrome must display a message showing if the word is palindrome or not.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-theory-0007",
+      "type": "theory",
+      "stem": "a - A principal asked the secretary to typeset a document containing some confidential information in Microsoft Word. The principal wants the document to be typed in such a way that when it is opened, the confidential information will be hidden from other users.\n\nHighlight the steps the secretary would take to hide the confidential information in the document.\n \nb - A principal asked the secretary to typeset a document containing some confidential information in Microsoft Word. The principal wants the document to be typed in such a way that when it is opened, the confidential information will be hidden from other users.\n\nOutline the steps the principal would take to display the hidden text in 3(a) for viewing.",
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-theory-0008",
+      "type": "theory",
+      "stem": "a(i) What is data cable?\n\n(ii) List two types of data cable.\n\n(iii) Explain how bus speed can affect the speed of data.\n(b) In the context of data conversion, explain the following terms:\n\n(i) register; (i) address.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-theory-0009",
+      "type": "theory",
+      "stem": "(a) Explain the following computer terms\n\n(i) fle; (ii) record; (ii) field\n(b) In a school registry, computer system is used to store students details.\n\n(i) In addition to name and address fields in a student's record, list three other fields that may be included.\n\n(i) Outline the steps involved in editing the field of a student's record.\n\n(iii) Name two database applications that can be used for creating the record in 3b(i).",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-theory-0010",
+      "type": "theory",
+      "stem": "(i)Explain a logic truth table\n\n(ii) Name two types of logic gate.\n\n(ii) Using the two named logic gates in 4a(ii), complete the truth table in Table 1.\nTable 1\n\n \n \n  X\n  Y\n  Z = X ? Y \n  Z = X ? Y \n \n \n  0\n  0\n  \n  \n \n \n  0\n  1\n  \n  \n \n \n  1\n  0\n  \n  \n \n \n  1\n  1\n  \n  \n \n \n\n \n(b) Explain the term comparator as a logic device.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-theory-0011",
+      "type": "theory",
+      "stem": "(a) Give two differences between a compiler and an interpreter in Table 2.\n\nTable 2\n\n \n \n  Compiler \n \n  Interpreter\n \n \n \n  \n  \n \n \n\n(b) State one advantage of coding in:\n\n(i) high level programming language;\n\n(i) low level programming language.\n(c) Outline two characteristics of a good program.",
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-theory-0012",
+      "type": "theory",
+      "stem": "3a (i) Define Information and Communication Technology.\n \n3a (ii) State three uses of Information and Communication Technology in the banking sector.\n \n3b (i) State the full meaning of LAN.\n \n3b (ii) State the full meaning of GPS.\n \n3b (iii) State the full meaning of IP.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-theory-0013",
+      "type": "theory",
+      "stem": "4(a)  List three criteria that are used in classifying files.\n \n4(b) State two advantages and two disadvantages of computer files.\n \n4b(ii) State three methods of file security.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-theory-0014",
+      "type": "theory",
+      "stem": "5(a) Define Programming Language.\n \n5b(ii) Write this mathematical expression in BASIC notation: x(w + y)2\n \n5b(iii) Write this mathematical expression in BASIC notation: ab ÷ cd\n \n5b(iii) Write this mathematical expression in BASIC notation: p = 2 (l+b).\n \n5(c) Write a simple BASIC program to calculate the area (A) of a rectangle with length (1) and breadth (b).\n \n5(d) List two levels of programming language.",
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-theory-0015",
+      "type": "theory",
+      "stem": "(a) List: (i) three application areas of a word processing program;\n(ii) three types of data item.\n(b) identify program; the four data types available in Table 2.\nTable 2\n\n \n \n \n Student I.D.\n \n Name\n Date of Birth\n Score in Computer Studies\n \n Gender\n \n \n \n \n A 00022\n \n Odi, G. A\n 13/10/97\n 38\n M\n \n \n \n C 00021\n \n Zakari, M.\n 15/05/98\n 71\n M\n \n \n \n B 00023\n \n Ngozi Tella\n 16/09/96\n 62\n F",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-theory-0016",
+      "type": "theory",
+      "stem": "(a) (i) Define Information and Communication Technology. (ii) State three uses of Information and Communication Technology in the banking sector.\n(b) State the full meaning of the following: i) LAN; (ii) GPS; (iii) IP",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-theory-0017",
+      "type": "theory",
+      "stem": "(a) List three criteria that are used in classifying file.\n (b) State: (i) two advantages and two disadvantages of computer files; (ii) three methods of file security.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-theory-0018",
+      "type": "theory",
+      "stem": "(a) Define programming language.\n(b) Write the 5 following mathematical expressions in BASIC notation:\n(i) x (w + y)\\(^2\\) (ii) ab/cd  (ii) p = 2 (1+b).\n(c) Write a simple BASIC program to calculate the area (A) of a rectangle with length (l) and breath (b).\n(d) List two levels of programming language.",
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-theory-0019",
+      "type": "theory",
+      "stem": "Write a QBASIC program to grade any score entered from the keyboard as either \"Poor\" for a score that is below 50% or \"Satisfactory\" for a score that is equal to or above 50%. The program execution should stop as soon as a score that is less than zero is entered.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-theory-0020",
+      "type": "theory",
+      "stem": "(a) Define the term operating system. (b) State two functions of an operating system. (c) List two types of: (i) application software (ii) translators\n(d) You were asked as a school prefect to compile the personal data of final year students in your school. State two software that could be used to perform the task.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-theory-0021",
+      "type": "theory",
+      "stem": "(a) What is a computer file?\n(b) State two features each of: (i) transaction file (ii) reference file.\n(c) List two: (i) effects of file insecurity (ii) methods of securing files.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-theory-0022",
+      "type": "theory",
+      "stem": "(a) Define the term system development cycle. (b) List four stages involved in system development cycle (c) State four qualities of a good program.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-theory-0023",
+      "type": "theory",
+      "stem": "(a) List the two main constituents of a computer (b) State four characteristics of a computer.\n(c) In a tabular form, categorize each of the following statements into either data or information: (i) It is no significant alone by itself; (ii) It is significant by itself\n(iii) It is obtained through observations and recordings (iv) It is obtained through analysis.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-theory-0024",
+      "type": "theory",
+      "stem": "(a) Define algorithm. (b) State three characteristics of an algorithm. (c) Write an algorithm for finding the average of numbers, when the sum of the numbers is given.",
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-theory-0025",
+      "type": "theory",
+      "stem": "(a) (i) What is a network cable?\n(ii) State three types of cable used in networking\n(b) Write the acronym VSAT in full.\n(C) (i) Distinguish between an e-mail address and a website address.\n(ii) List examples of each of: (1) e-mail address (2) website address",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-theory-0026",
+      "type": "theory",
+      "stem": "(a) (i) Define computer virus.\n(i) List three types of computer network security breach.\n(b) State five sources of computer network security breach.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-theory-0027",
+      "type": "theory",
+      "stem": "(a) Convert the following numbers to be stated bases:\n(i) 125.625, to binary\n(ii) 111011.10011, to octal\n(b) Given that X = 11011011 and Y= 11101101,\n(i) construct the truth table for X, Y Z;\n(ii) draw the logic gate of X, Y = Z\n(iii) state the value of Z.",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-theory-0028",
+      "type": "theory",
+      "stem": "(a) An electronic book is made up of 500 pages and there are 16 lines of 24,000 bits line on each page.\nComplete the space it will occupy on a computer in megabytes.\n (b) Give an example of auxiliary storage.\n(c) In the table below:\n(i) List the two main types of computer software.\n(ii) Give two examples under each in 4(c)i)\n\n \n \n main type \n example\n \n \n i\n A\n \n \n  \n B\n \n \n ii\n A\n\n B",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-theory-0029",
+      "type": "theory",
+      "stem": "(a) State two BASIC programming keywords.\n(b) Write the following equations in BASIC format:\n(i) I = PRT/100: (ii) Y= AX\\(_2\\) +BX+C; (iii) Y= MX + C\n(c) Write a BASIC program that accepts mass and volume of a liquid as input from the User.\nThe program should compute.and display the density of the liquid. Density = mass volume",
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-theory-0030",
+      "type": "theory",
+      "stem": "(a) What are input devices?\n(b) list two input devices\n\n(c) State two uses of logic gates\n\n(d) Draw and label the logic gate symbol for;\n\n(i) OR gate (ii) AND gate",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-theory-0031",
+      "type": "theory",
+      "stem": "State one difference between star and bus topologies\n(b) List four common network devices.\n\n(c) Write the acronyms below in full\nHTML, HTTP, ISP, SMTP.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-theory-0032",
+      "type": "theory",
+      "stem": "(a) Match each of the following computing devices.\n\n \n \n \n COMPUTER DEVICES\n \n \n USES\n \n \n \n \n  EDVAC\n \n \n Electronic general-purpose computer programmed to perform complex sequences of operation.\n \n \n \n \n   ENIAC\n \n \n  Electronic digital stored-program computer intended for the bureau of census and later for presidential election.\n \n \n \n \n UNIVAC\n \n \n Electronic computer, binary in nature with automatic addition, subtraction multiplication and programmed division.",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-theory-0033",
+      "type": "theory",
+      "stem": "(a) In a tabular form, state two differences between random access memory and read only memory\n(b) State four characteristics of windows operating system environment.\n(c) list two examples of utility programs",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-theory-0034",
+      "type": "theory",
+      "stem": "(a) Convert 1011011\\(_2\\) to its hexadecimal equivalent \n(b) State one difference a hacker and a scammer\n\n(c) identify the parts labeled A, B, C and D on the keyboard shown below",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-theory-0035",
+      "type": "theory",
+      "stem": "(a)i) Define the term computer system.\n(i) List the major components of the computer system and give one example of each.\n(b)(i) List two activities involved in transferring data into information. (i) Write the following acronyms in full:\n(1) EDSAC (11) EDVAC",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-theory-0036",
+      "type": "theory",
+      "stem": "(a) What is a register?\n(b) List two types of register.\n(c) State three functions of registers.\n(d) Outline three differences between a register and main memory.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-theory-0037",
+      "type": "theory",
+      "stem": "(a) What is: (i) an array; (ii) a syntax error?\n(b) Write QBASIC program that will input multiples of Three between 1 and 20 into a one-dimensional array and display the output on the screen.\n(c) Convert D5FA,, to binary.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-theory-0038",
+      "type": "theory",
+      "stem": "(a) Define logic gate.\n(b) Give one example each of: (i) standard logic gate; (ii) alternative logic gate.\n(c) Using P and Q as inputs and R as output:\n(i) draw the logic symbol for an XOR logic gate: (ii) construct the truth table for XOR logic gate.\n(d) List two uses of a logic gate.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-theory-0039",
+      "type": "theory",
+      "stem": "(a)i) What is booting?\n(i) State two differences between the types of booting.\n(b) What is peripheral?\n(c) Give one example each of (i) input device; (ii) output device; (iii) storage devices (iv) a component found inside the system unit.",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-theory-0040",
+      "type": "theory",
+      "stem": "(a) i() What is firewall? (ii) List two methods used in protecting the computer system.\n(b) Explain the following stages of the System Development Life Cycle: (i) feasibility study; (ii) design; (iii) maintenance.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-theory-0041",
+      "type": "theory",
+      "stem": "(a) A musician intends to record music on a storage medium. List four ways that the music file can organized in the storage medium.\n(b) State two basic operations on computer file. (c) Explain the following computer terms: (i) file (ii) re cord",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-theory-0042",
+      "type": "theory",
+      "stem": "(a) Explain the following terms: (i) storage device; (ii) virtual memory.\n(b) Two storage devices have capacities 2KB and 2MB respectively. (i) Calculate the number of bits that each of 2KB and 2MB can hold. 2 KB: 2 MB\n(i) Putting the two storage together, calculate the total capacity in bytes.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-theory-0043",
+      "type": "theory",
+      "stem": "(a)(i) Define the term encryption. (ii) Tick two authentication techniques involved in security measure from Table 1.\nTable 1\n  (ii) Outline two features of data encryption. (b) While exchanging data with a friend through your mobile phone, you observed that it took a longer time than usual. Outline four factors that may be responsible for the delay in the data transfer.\n\n \n \n \n TECHNIQUE\n \n \n TICK()\n \n \n \n \n Firewall\n \n  \n \n \n \n Biometric\n \n  \n \n \n \n Password\n \n  \n \n \n \n Intranet",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-theory-0044",
+      "type": "theory",
+      "stem": "Mention two graphic applications used in editing photographs\n (b) List four steps to take to insert the edited photographs into multimedia application\n(C) Menton one multimedia element that could be included in presentation other than graphics and texts \n(d) List three multimedia hardware for developing and displaying presentation.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-theory-0045",
+      "type": "theory",
+      "stem": "(a) (i) What is video conferencing? (ii) Mention four essential items to a video conference.\n(III) Give two examples of other hardware components essential to video conference\n(b) Give two examples of data cables.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-theory-0046",
+      "type": "theory",
+      "stem": "(a) Explain home page.\n (b)(i) Mention two reasons why computers are connected. (ii) Mention two reasons why computers are not connected.\n(c) List four additional items needed to send an email.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-theory-0047",
+      "type": "theory",
+      "stem": "(a) Supply the names of the inventors of the following devices:\n \n\n \n \n \n DEVICE\n \n \n NAME OF INVENTOR\n \n \n \n \n Analytical Engine\n \n  \n \n \n \n Mechanical Digital Calculator\n \n  \n \n \n \n Slide Rule\n \n  \n \n \n \n Punched Card\n \n  \n \n \n\n(b)(i) What are input devices? (ii) List four input devices",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-theory-0048",
+      "type": "theory",
+      "stem": "(a) Explain two differences between an Algorithm and a Flowchart.\n(b) List three examples of utility programs.\n(c) Draw a flowchart of the stops to be used in updating a customer's balance.",
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-theory-0049",
+      "type": "theory",
+      "stem": "[a] Define the term output device.\n[b] Give the two types of printers.\n[c]  [i] Construct a truth table for an AND gate with two input signals.\n     [ii] State the output of an OR gate with the signals 0 and 1.\n[d]  list two types of an logic gate that gives an output of 1 when all of its input signals are 1.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-theory-0050",
+      "type": "theory",
+      "stem": "2(a) Use appropriate labelled diagrams to illustrate the following network topologies.\n\n   i Startopology (ii) bustopology (iii) ring topology.\n(b) State one advantage of: i Star topology ii Bus topology.\n(c) Give one disadvantage of: (i) Bus topology: (i)Ring topology.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-theory-0051",
+      "type": "theory",
+      "stem": "3(a) Table 1 shows the actions perfomed by a company on its stored files.\nTick the actions that will ensure that the files are kept confidential and secured\n\n \n \n S/N\n ACTIONS\n TICK\n \n \n 1\n use of anti virus\n  \n \n \n 2\n use of backup\n  \n \n \n 3\n use of biometrics\n  \n \n \n 4\n use of folder\n  \n \n \n 5\n use of manual file\n  \n \n \n 6\n use of password\n  \n \n \n\n(b) list two disadvantages of computer files as compared to manual files.\n(c)(i) define charts as its relates to Ms Excel\n     (ii)  give two types of charts in Ms Excel",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-theory-0052",
+      "type": "theory",
+      "stem": "4[a][i] What is slide master in power point presentation\n      [ii] outline the steps to rename the slide master in ms power point\n     [b] explain the following features in Ms power point;   \n       [i] handout master\n       [ii] notes master",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-theory-0053",
+      "type": "theory",
+      "stem": "A supermarket listed ten items on sale.\n\nUse Microsoft Excel application to create an inventory for the supermarket.\n\n(a) Type in the following headings from cell A1 to F1 respectively.\n\nSN, Goods Cost Price, Selling Price, Gain/Loss and Target.\n(b) Populate the table by supplying ten different items sold in a supermarket. In column A, fill in the numbers 1 to 10 from cells A2 to A11. Similarly, list the ten items from cells B2 to B11. Supply Cost Price and Selling Price from cell B2 to B11. Supply Cost Price and Selling Price from cells C2 to C11 and D2 to D11 respectively. Note that it is possible to have some selling prices lower than the cost price. Create borders around the table.\n(c) Use formula or function to calculate; (i) the gain (if the selling price is higher than the cost price) or the loss (if the cost price is higher than the selling price) of each item from cells E2 to E11 \n\n(ii) 110% of the cost price of each item from cells F2 to F11.\n(d) Determine whether target is met or not by typing \"target met\" or \"target not met\" in cells H2 to H11 for each item.\n\nNote that target is met when the selling price is 110% of the cost price or more otherwise target is not met.\n(e) Insert a footer and type in your full name  and index number.\n(f) Save your work in the folder created on the desktop using your full name as th file name.\n(g) Print your work showing formulas and functions and submit to the supervisor.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-theory-0054",
+      "type": "theory",
+      "stem": "(a) Using the star shape tool in CorelDraw, draw a 30 pts star of diameter 18 cm and fill it with grey colour.\n(b) Use sharpness tool to adjust the corner sharpness of the star by 25 pts.\n(c) Place three circles; circle 1, circle 2 and circle 3 with diameters 10 am, 7.6 cm and 5.4 cm respectively inside the star.\n(d) Use Text tool to type ARISE AND SHINE and place it in-between circle 2 and 3.\n(e) Fill cicle2 with lemon colour and circle 3 with white colour.\n(f) Place five stars inside circle 3.\n(g) Group your drawing.\n(h) Type in your full name as a footer.\n(i) Save and print your work.\n(j) Submit your printout to the supervisor.",
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-theory-0055",
+      "type": "theory",
+      "stem": "Using a word processing package, create a college timetable format titled \"COLLEGE TIME TABLE\" for 7 subjects (English, Maths, Biology, Chemistry, Physics, Civic Education, and Computer Studies), for 5 days with a minimum of 45 minutes duration. Lunchtime is 40 minutes, and lessons in the college have a minimum of 5 periods/week.\n(a) Format the  \"COLLEGE TIME TABLE\" using the following:\n\n(i) The title of the table should be aligned center, bold, and underlined;\n\n(ii) Use table design style of any type\n\n(iii) Days of the week should be bold\n\n(b) Save your work with your full name in the folder created.\n\n(c) print and submit your work",
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-theory-0056",
+      "type": "theory",
+      "stem": "1(a) The table below shows the scores of six students in computer studies at Top Hill High School. Use the font Times New Roman with size 12 pt in spreadsheet application to prepare the information given in the table.\n\n \n \n Student I. D\n 1st\n\n Term\n 2nd\n\n Term\n 3rd\n\n Term\n 1st term\n\n W/score\n 2nd term\n\n W/score\n 3rd term\n\n W/score\n Total\n\n W/score\n \n \n \n \n THHS2015040\n 69\n 56\n 74\n  \n  \n  \n  \n \n \n THHS2015032\n 77\n 82\n 90\n  \n  \n  \n  \n \n \n THHS2015025\n 67\n 55\n 48\n  \n  \n  \n  \n \n \n THHS2015067\n 56\n 87\n 68\n  \n  \n  \n  \n \n \n THHS2015055\n 54\n 59\n 70\n  \n  \n  \n  \n \n \n THHS2015043\n 63\n 48\n 64\n  \n  \n  \n  \n \n \n\n \nInsert b:\n(i) new column with the heading \"Name\" between the first and second columns;\n(ii) title \"Students' Scores in Computer Studies\" above the table.\n(c) Beginning from the first cell under column heading \"Name\" to the sixth cell, type the following: Adedigba Eze, Balango Ngozi, Agbelero Cynthia, Okeowo Sulkite, Okonia Ifedola, and Umaru Edonk.\n(d) If \"W/score\" stands for weighted score, calculate:\n(i) weighted score for each term given that weighted score comprises 20%, 30%, and 50% of raw scores for first, second, and third terms respectively;\n(ii) total weighted score for the three terms.\n(e) Insert your full name and index number as a footer.\n(f) Save with your index number in the folder created.\n(g) Print and submit to the supervisor",
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-theory-0057",
+      "type": "theory",
+      "stem": "Use a spreadsheet application to do the following. (a) In cell A1, type \"My One Week Expenses On Five items\".\n(b) In row 2, type column-by-column the following: \"ITEM\", 1ST DAY, \"2ND DAY, \"3RD  DAY\", *4TH DAY, \"5THDAY\", \"6TH DAY\" and \"7TH DAY\".\n(c) In column A, starting from A3 to A7, List the items you spent money on.\n(d) Enter the amount spent on each item for each day in their respective columns.\nNote: select your own items and the amount spent.\n(e) In cells 12 and A8. type \"TOTAL N\".\n(f) Using formula/function compute the total expenses for each day and for each item.\n(g) Create borders around the table.\n(h) Insert a footer and type in your full name and index number. (i) Below the table, type in the formula that was used:\n(i) in cell 18: (ii) for summing from B3 to H3.\nNote: Enclose your formula in quotes ave your work with your full name in the folder created on the desktop.\n(k) Print your work and submit to the supervisor.",
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-theory-0058",
+      "type": "theory",
+      "stem": "use microsoft power point application to create the presentation on the topic computer systems\n[a]    use title slide and type  computer systems with font type arial black and size 44 points\n[b]     use title and content layout slide and type the following passage with font type:\n            [i] title in algerian and size 40 points ;\n            [ii] content in times new roman and size 30 points.\npassage: Definition of computer\nA computer is a device that accepts information in the form of digitized data and manipulates it for some results based on a program or sequence of instructions on how the data is to be processed\n[c]   Insert next slide and type the following using the same font type and size as in (b)\nCLASSIFICATION OF COMPUTERS\ni By type, ii  By Size: iii By Purpose: iv By Generation.\n[d] insert next slide and type the following using the same font type and size in 1b\nCLASSIFICATION BY TYPE\nDigital Computer, Analogue Computer, Hybrid Computer. (Note: use bullet list for the items)\n(e) Insert next slide and type the following using the same font type and size as in 1 (b).Mini\n\nComputer, Mainframe Computer, (Note: use a different list type for the Micro Computer, Super Computer items)\nCLASSIFICATION BY GENERATION\n\nFirst Generation eg UNIVAC\n\nSecond Generation eg HAVARD MARKII\n\nThird Generation eg IBM 360\n\nFourth Generation eg Microcomputer (Note: use a different list type for the items)\n(g) Using Footer tool, insert your full name and index number with font size of 14 points and bold.\n\n(h) Save your work in the folder created on the desktop using your full name as the file name.\n\n        [i]  Print your work and submit to the supervisor.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-theory-0059",
+      "type": "theory",
+      "stem": "2. Daniel James and three of his friends came up with the idea of starting a travel agency for college students in Nigeria. They invested sixty thousand naira each and started their dream company, SUMMER BREAK\n\nTRAVELS INC.\n\nAs sales continued to grow, the management of Summer Break Travels Inc. realised they need a better tracking system for First Quarter\n\nSales.\n\nPrepare a First Quarter Sales Worksheet that shows the sales for the first quarter using the details in the table  below\n \n                                                                                               Markerting outlets[#]\n\n \n \n location[vacation place]\n mail\n campus\n telephone\n internet\n \n \n bar beach\n 5,297.23\n 3,871.35\n 4,720.45\n 2,998.65\n \n \n trans amusement park ibadan\n 2,823.23\n 4,840.53\n 2,703.56\n 4,911.16\n \n \n agodi gardens\n 6,256.25\n 7,256.12\n 2,436.86\n 7,709.32\n \n \n obudu park calabar\n 2,856.15\n 437.20\n 4,997.60\n 1,201.45\n \n \n total\n  \n  \n  \n  \n \n \n\n \n[a]   (a) Using function or fomula, compute the total:\n\n         [i] sales at each marketing outlet; (ii)\n\n         [ii] amount of money made for each vacation place. (Note: create another column \"total\")\n         \n(b)     Format the table using the instruction below: ) the title \"Summer Break  Travels, Inc.\n          First Quarter Sales\" should be Bold and in Upper Case;\n         (ii) fill the table with white background 1 darker-25\"\n[c]      Create two charts for the first quarter sales: )\n            [i] a pie chart stating the most effective sales method;\n            [ii] a bar chart stating the most popular vacation place.\n\n[d]        Type in the formula used in calculating total for each location below your table\n            (enclosed in\"\")\n[e]        Save, print out your work and submit to the supervisor.",
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-theory-0060",
+      "type": "theory",
+      "stem": "(a) Create a;\n(i) database and save as WASSCE in the folder on the desktop.\n\n(i) table with headings as shown in Table 2 (11 rows).\n\n   \n    Define the fields appropriately. Save the table as the customers.\n    Set CustomlD as primary key\n\n \n \n Custom ID\n first name \n last name \n telephone\n address\n \n \n  \n  \n  \n  \n  \n \n \n  \n  \n  \n  \n  \n \n \n\n \n[iii] form from the customers and save as REFORM\n [b] Enter ten records of your choice using the\n\nForm created in (a)(ii).\n\n(c) Write a query to retrieve the First Name and Telephone.\n\n(d) Design a report using (c).\n\n(e) Insert a footer and type in your full name",
+      "marks": 1,
+      "year": 2022
+    }
+  ],
+  "category": "secondary",
+  "body": "WAEC"
+}

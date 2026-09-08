@@ -1,0 +1,6418 @@
+{
+  "code": "waec-computer-studies-bank",
+  "title": "WAEC Computer Studies | Past Questions Bank",
+  "version": 1,
+  "questionCount": 493,
+  "totalMarks": 493,
+  "questions": [
+    {
+      "id": "waec-computer-studies-bank-0001",
+      "type": "mcq",
+      "stem": "The first calculator was built by?",
+      "options": {
+        "A": "Marie Jacquad",
+        "B": "Balise Pascal",
+        "C": "Charles Babbage",
+        "D": "John Napier"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0002",
+      "type": "mcq",
+      "stem": "A similarity between data and information is that both?",
+      "options": {
+        "A": "can be displayed on the monitor",
+        "B": "are computer inputs",
+        "C": "are processed facts",
+        "D": "are computer results"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0003",
+      "type": "mcq",
+      "stem": "The computer hardware can be classified into",
+      "options": {
+        "A": "ALU and Control Unit",
+        "B": "System Unit and Peripheral",
+        "C": "Central Processing Unit and Control Unit",
+        "D": "Input and Output Units"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0004",
+      "type": "mcq",
+      "stem": "The outcome of a processed data in a computer is known as",
+      "options": {
+        "A": "raw fact",
+        "B": "Information",
+        "C": "database",
+        "D": "computer result"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following devices is not a micro computer?",
+      "options": {
+        "A": "Note book",
+        "B": "Laptop",
+        "C": "EDVAC",
+        "D": "Desktop"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0006",
+      "type": "mcq",
+      "stem": "The transaction file can also be described as _______",
+      "options": {
+        "A": "Master File",
+        "B": "Movement file",
+        "C": "Reference file",
+        "D": "Historical file"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0007",
+      "type": "mcq",
+      "stem": "Which of the following statements is not true about a computer file?",
+      "options": {
+        "A": "It is very fast to access any record within a file",
+        "B": "It is created electronically",
+        "C": "Initial setup is inexpensive",
+        "D": "File creation and access are less laborious"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0008",
+      "type": "mcq",
+      "stem": "An advantage of sequential access over serial access is that_______",
+      "options": {
+        "A": "Sequential file is slow",
+        "B": "Sequential file is detailed",
+        "C": "Sequential file does not use key",
+        "D": "Individual records can be located more quickly"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0009",
+      "type": "mcq",
+      "stem": "The Use of electronic systems to send an unsolicited e-mail to someone's address is known as ______",
+      "options": {
+        "A": "Hacking",
+        "B": "Spamming",
+        "C": "Internet fraud",
+        "D": "Piracy"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following ideals is protected by copyright?",
+      "options": {
+        "A": "Ideas",
+        "B": "Profit",
+        "C": "Expression of ideas",
+        "D": "Inexperience"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0011",
+      "type": "mcq",
+      "stem": "A program that converts source code instructions in high-level programming language to object codes line by line is known as",
+      "options": {
+        "A": "interpreter.",
+        "B": "compiler.",
+        "C": "editor",
+        "D": "assembler."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0012",
+      "type": "mcq",
+      "stem": "Stored instructions and data in digital computer consist of",
+      "options": {
+        "A": "bits.",
+        "B": "numerals.",
+        "C": "alphabets",
+        "D": "characters."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0013",
+      "type": "mcq",
+      "stem": "The process of making copies of files which can be used to restore the original copy in the event of data loss is called file",
+      "options": {
+        "A": "restoration.",
+        "B": "retrieval.",
+        "C": "organization",
+        "D": "backup"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0014",
+      "type": "mcq",
+      "stem": "An automatic system is one that",
+      "options": {
+        "A": "is operated using sophisticated skills.",
+        "B": "needs fuel before it can. be operated by humans.",
+        "C": "performs different kinds of tasks diligently.",
+        "D": "requires little or no human intervention to work."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0015",
+      "type": "mcq",
+      "stem": "Which of the following features of information is not important for meaningful decision?",
+      "options": {
+        "A": "Accuracy",
+        "B": "Competitiveness",
+        "C": "Completeness",
+        "D": "Timeliness"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0016",
+      "type": "mcq",
+      "stem": "The microprocessor that controls a washing machine is known as",
+      "options": {
+        "A": "bot.",
+        "B": "console.",
+        "C": "embedded computer.",
+        "D": "mainframe computer."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0017",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about data?",
+      "options": {
+        "A": "Information is a product of data while knowledge is a product of information",
+        "B": "Data produces knowledge while knowledge produces information",
+        "C": "Data is a product of information while knowledge is a product of data",
+        "D": "Knowledge produces information while in- formation produces data"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0018",
+      "type": "mcq",
+      "stem": "Instructions were written to the first generation computers using",
+      "options": {
+        "A": "assemblers.",
+        "B": "low level language.",
+        "C": "machine language.",
+        "D": "mnemonics"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0019",
+      "type": "mcq",
+      "stem": "Addition and subtraction of numbers in Abacus are done using",
+      "options": {
+        "A": "bars.",
+        "B": "beads.",
+        "C": "frame.",
+        "D": "string."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0020",
+      "type": "mcq",
+      "stem": "In using the slide rule, multiplication that goes off the scale can be corrected by the following approaches except",
+      "options": {
+        "A": "resetting the slide.",
+        "B": "using circular slide rule.",
+        "C": "using flat scales.",
+        "D": "using folded scales."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0021",
+      "type": "mcq",
+      "stem": "The computer's short-term memory is the",
+      "options": {
+        "A": "arithmetic logic unit.",
+        "B": "arithmetic operator.",
+        "C": "control unit.",
+        "D": "random access memory."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0022",
+      "type": "mcq",
+      "stem": "Which of the following logic devices is considered as equivalent gate?",
+      "options": {
+        "A": "AND",
+        "B": "EX-NOR",
+        "C": "EXOR",
+        "D": "NOR"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0023",
+      "type": "mcq",
+      "stem": "MS Access is an example of",
+      "options": {
+        "A": "Word processing package.",
+        "B": "spreadsheet application.",
+        "C": "graphic software.",
+        "D": "database management system."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following statements explains the function of device drivers? They",
+      "options": {
+        "A": "convert source code to object code.",
+        "B": "enable hardware and software control and manage the system.",
+        "C": "help to clean disk space and manage installation of applications.",
+        "D": "help to improve the functionality of hardware devices."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0025",
+      "type": "mcq",
+      "stem": "One usefulness of utility software in the computer is",
+      "options": {
+        "A": "conversion of source code to object code.",
+        "B": "enhancement of communication between hardware and the computer system.",
+        "C": "removal of malware from the computer.",
+        "D": "to improve the functionality of hardware devices."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0026",
+      "type": "mcq",
+      "stem": "Which of the following statements about operating system is false? It",
+      "options": {
+        "A": "enhances the booting process.",
+        "B": "manages computer devices.",
+        "C": "manages storage location.",
+        "D": "protects the computer from surge."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0027",
+      "type": "mcq",
+      "stem": "Debugging in program development is the process of",
+      "options": {
+        "A": "fixing errors.",
+        "B": "introducing bugs.",
+        "C": "removing virus.",
+        "D": "writing error messages."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0028",
+      "type": "mcq",
+      "stem": "Which of the following operations will be executed last in a program?",
+      "options": {
+        "A": "Addition",
+        "B": "Division",
+        "C": "Exponentiation",
+        "D": "PEMDAS"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0029",
+      "type": "mcq",
+      "stem": "A The equation x =p + qr +s) can be expressed in Q BASIC programming",
+      "options": {
+        "A": "X = P + Q* = \\(\\frac{R}{S}\\)",
+        "B": "X = P + Q* (R\\S)",
+        "C": "X = P x Q (R\\S)",
+        "D": "X = P + Q = \\(\\frac{R}{S}\\)"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0030",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about the rules of flowcharting?",
+      "options": {
+        "A": "All boxes of flowcharts are connected with arrows to show the logical connection between them.",
+        "B": "All flowchart process boxes are connected with on page connector to show the flow of operation.",
+        "C": "All flowcharts start with a start box and end with a decision box",
+        "D": "The low of control must always enter an object from bottom to top"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0031",
+      "type": "mcq",
+      "stem": "In computer programming, it is advised to translate source code into intermediate code to",
+      "options": {
+        "A": "change the analysis portion for different compilers.",
+        "B": "ensure that full native compiler is used for every new machine that will run the program.",
+        "C": "make it easier to apply the source code modifications to improve code performance.",
+        "D": "make the synthesis part of the compiler target-machine dependent."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0032",
+      "type": "mcq",
+      "stem": "A graphic or text in a document or web page that links to another file or object is referred to",
+      "options": {
+        "A": "a domain name.",
+        "B": "a hyperlink.",
+        "C": "a shortcut.",
+        "D": "an icon."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0033",
+      "type": "mcq",
+      "stem": "Instant messages can be sent with little or no tine lag using",
+      "options": {
+        "A": "podcast.",
+        "B": "facsimile.",
+        "C": "email.",
+        "D": "chat room,"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0034",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about preventing phishing?",
+      "options": {
+        "A": "Insure that antivirus is updated regularly",
+        "B": "Do not click on links in emails from untrusted sources",
+        "C": "Do not download from untrusted sites",
+        "D": "Use a strong password at all times"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about star topologies?",
+      "options": {
+        "A": "Computers are connected node-to-node",
+        "B": "Computers are connected to a central device",
+        "C": "The connection is linear in shape",
+        "D": "The connection is a tree-like structure"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about intranet?",
+      "options": {
+        "A": "Private network that uses internet protocol and is accessible by all visitors to an organization's website",
+        "B": "Private network that uses internet protocol and is accessible by employees of an organization",
+        "C": "Private network which does not use internet protocol and is accessible by employees of an organization",
+        "D": "Public network that uses internet protocol and is accessible by all visitors to an organization's website"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0037",
+      "type": "mcq",
+      "stem": "The art of checking for errors in a Word document before publishing is referred to as",
+      "options": {
+        "A": "editing.",
+        "B": "formatting.",
+        "C": "modifying.",
+        "D": "proof reading."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0038",
+      "type": "mcq",
+      "stem": "Columns in MS Access are referred to as",
+      "options": {
+        "A": "fields.",
+        "B": "files.",
+        "C": "records.",
+        "D": "tuples."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following application packages is suitable for making budgets?",
+      "options": {
+        "A": "Word processor",
+        "B": "Spreadsheet package",
+        "C": "Graphic package",
+        "D": "Database Management System"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0040",
+      "type": "mcq",
+      "stem": "30. New comment can be added to a cell in MS Excel by using the procedure",
+      "options": {
+        "A": "Edit → Comment.",
+        "B": "File → Comment.",
+        "C": "Insert→ Comment.",
+        "D": "Review→ Comment."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0041",
+      "type": "mcq",
+      "stem": "Which of the following statements about index is true? It is a data structure",
+      "options": {
+        "A": "that reduces the speed of data retrieval operations on a database table.",
+        "B": "used to quickly locate data without searching every row in a table every time a database table is accessed.",
+        "C": "created using only two rows of a database table to uniquely identify each record.",
+        "D": "that allows relational database to split and store data in different tables, while linking disparate items."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0042",
+      "type": "mcq",
+      "stem": "A collection of computer wires used to identify memory location in a computer is",
+      "options": {
+        "A": "system bus.",
+        "B": "data bus.",
+        "C": "data cable.",
+        "D": "address bus."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0043",
+      "type": "mcq",
+      "stem": "Read Only Memory (ROM) contains",
+      "options": {
+        "A": "current program in operation.",
+        "B": "preset instructions for operation.",
+        "C": "user instructions.",
+        "D": "volatile programs."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0044",
+      "type": "mcq",
+      "stem": "What happens when the Shift key is pressed down while deleting a file from the computer? The file is",
+      "options": {
+        "A": "un- installed from the computer.",
+        "B": "permanently deleted from the computer.",
+        "C": "deleted and sent to the Recycle Bin.",
+        "D": "deleted and kept in the clipboard."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0045",
+      "type": "mcq",
+      "stem": "Which of the following statements about warm booting is true? The computer",
+      "options": {
+        "A": "reloads the operating system while still running in the background.",
+        "B": "loads the operating system into memory from the power-on button.",
+        "C": "reloads the operating system into memory while still running.",
+        "D": "loads the application into memory from rest state."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0046",
+      "type": "mcq",
+      "stem": "The ASCII character set represents alphabetical and control characters using numeric code ranging from",
+      "options": {
+        "A": "0 to 32.",
+        "B": "0 to 64.",
+        "C": "0 to 127.",
+        "D": "0 to 128."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0047",
+      "type": "mcq",
+      "stem": "Which of the following hard disk drive memory capacities can store the largest size of data?",
+      "options": {
+        "A": "2TB",
+        "B": "12GB",
+        "C": "240MB",
+        "D": "800K"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0048",
+      "type": "mcq",
+      "stem": "The equivalent of the letter A in the standard ASCII is",
+      "options": {
+        "A": "01000001",
+        "B": "01000010",
+        "C": "01100001",
+        "D": "01100010"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0049",
+      "type": "mcq",
+      "stem": "One example of a file containing reference data which is usually altered is",
+      "options": {
+        "A": "brand name.",
+        "B": "payroll.",
+        "C": "price list.",
+        "D": "stock."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0050",
+      "type": "mcq",
+      "stem": "Quantitative data can exist in",
+      "options": {
+        "A": "continuous form only",
+        "B": "continuous and discrete forms",
+        "C": "nominal and ordinal forms",
+        "D": "ordinal form only"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0051",
+      "type": "mcq",
+      "stem": "Data created by the user is called",
+      "options": {
+        "A": "primary data",
+        "B": "qualitative data",
+        "C": "quantitative data",
+        "D": "secondary data"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0052",
+      "type": "mcq",
+      "stem": "The sequence of operation of a computer is",
+      "options": {
+        "A": "accept data, process date and produce output",
+        "B": "accept data, produce data and produce information",
+        "C": "produce data, supply data and produce output",
+        "D": "process data, produce data and display information"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0053",
+      "type": "mcq",
+      "stem": "Which of the following descriptions is not true about data?",
+      "options": {
+        "A": "It can be converted to information",
+        "C": "is unorganized",
+        "D": "is used for decision making"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0054",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about super computers? They",
+      "options": {
+        "A": "can fit on a single small chip",
+        "B": "are easily affordable",
+        "C": "can process billions of operations in a second",
+        "D": "are found across various homes and offices"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0055",
+      "type": "mcq",
+      "stem": "A user observed that a certain file in a removable storage device changed to a shortcut icon. This implies that",
+      "options": {
+        "A": "the file is corrupt.",
+        "B": "the file is shared.",
+        "C": "the removable storage device is corrupt.",
+        "D": "there is a link to the file."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0056",
+      "type": "mcq",
+      "stem": "Set of characters used to authenticate a computer user is called",
+      "options": {
+        "A": "encoder.",
+        "B": "binary code.",
+        "C": "password.",
+        "D": "barcode."
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following statements about firewall is correct?",
+      "options": {
+        "A": "A network transmission system that increases the speed of incoming and outgoing network traffic",
+        "B": "A network security system that establishes a barrier between a trusted internal network and an untrusted external network such as the Internet",
+        "C": "A data structure that improves the speed of data retrieval operations on a database table",
+        "D": "A data structure created using only two rows of a database table used to uniquely identify each record"
+      },
+      "marks": 1,
+      "year": 2024
+    },
+    {
+      "id": "waec-computer-studies-bank-0058",
+      "type": "mcq",
+      "stem": "The first calculator was built by ?",
+      "options": {
+        "A": "Marie Jacquad",
+        "B": "Charles Babbage",
+        "C": "Blaise Pascal",
+        "D": "John Napier"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0059",
+      "type": "mcq",
+      "stem": "The computer hardware can be classified into",
+      "options": {
+        "A": "ALU and Control Unit",
+        "B": "System Unit and Peripheral Central Processing Unit and Control Unit",
+        "C": "Input and Output Units",
+        "D": "Central Processing Unit and Control Unit"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0060",
+      "type": "mcq",
+      "stem": "The outcome of processed data in a computer is known as",
+      "options": {
+        "A": "Raw fact",
+        "B": "Information",
+        "C": "Database",
+        "D": "Computer result"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0061",
+      "type": "mcq",
+      "stem": "Which of the following computing devices did not exist in the pre-computing age to the 19th century?",
+      "options": {
+        "A": "Napiers bone",
+        "B": "Abacus",
+        "C": "ENIAC",
+        "D": "Slide Rule"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0062",
+      "type": "mcq",
+      "stem": "The computing devices invented by Charles Babbage are",
+      "options": {
+        "A": "Difference Engine and Abacus",
+        "B": "Analytical Engine and Slide Rule",
+        "C": "Abacus and Slide Rule A",
+        "D": "Analytical and Difference Engines"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0063",
+      "type": "mcq",
+      "stem": "In a computer, the set of instructions that directs it in performing a particular task is called",
+      "options": {
+        "A": "information",
+        "B": "program",
+        "C": "data",
+        "D": "file"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0064",
+      "type": "mcq",
+      "stem": "The property of a disk that determines the amount of data it may contain is",
+      "options": {
+        "A": "size",
+        "B": "volume",
+        "C": "storage capacity",
+        "D": "storage power"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following items best describes the term hard copy?",
+      "options": {
+        "A": "Print out",
+        "B": "Written on a hard board",
+        "C": "Information stored on a hard disk",
+        "D": "Amount of data"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0066",
+      "type": "mcq",
+      "stem": "Which of the following is not an output device?",
+      "options": {
+        "A": "Plotters",
+        "B": "Speakers",
+        "C": "Projectors",
+        "D": "Webcams"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0067",
+      "type": "mcq",
+      "stem": "Which of the following signifies the correct association between a hardware component and its function?",
+      "options": {
+        "A": "Hard disk to processing",
+        "B": "Mouse to input",
+        "C": "CPU to storage",
+        "D": "Monitor to print"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0068",
+      "type": "mcq",
+      "stem": "Which of the following software is best suited for keeping records during the national population census?",
+      "options": {
+        "A": "Graphic",
+        "B": "Database",
+        "C": "Word Processing",
+        "D": "Spreadfast"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0069",
+      "type": "mcq",
+      "stem": "A major function of system software is",
+      "options": {
+        "A": "collection of files",
+        "B": "translation of machine language into machine code",
+        "C": "file management",
+        "D": "arrangement of files in ascending order"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0070",
+      "type": "mcq",
+      "stem": "Which of the following methods is not suitable for securing files?",
+      "options": {
+        "A": "Saving documents without a password",
+        "B": "Use of back up",
+        "C": "Use of antivirus",
+        "D": "Proper labelling of storage devices"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following programming languages needs no translator for it to run?",
+      "options": {
+        "A": "Assembly Language",
+        "B": "Machine Language",
+        "C": "High Level Language",
+        "D": "Low Level Language"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0072",
+      "type": "mcq",
+      "stem": "The acronym HTTP stands for",
+      "options": {
+        "A": "Higher Text Transfer Protocol",
+        "B": "Hard Text Transfer Protocol",
+        "C": "Hyper Text Transfer Protocol",
+        "D": "Higher Transfer Text Protocol"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0073",
+      "type": "mcq",
+      "stem": "In ring topology, the computer that is allowed to transmit data possesses the\n \n \n.",
+      "options": {
+        "A": "data",
+        "B": "token",
+        "C": "packet",
+        "D": "access method"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0074",
+      "type": "mcq",
+      "stem": "The most cost-effective and secure way of transmitting confidential messages among the employees of an organization is the",
+      "options": {
+        "A": "social networks",
+        "B": "electronic notice boards",
+        "C": "e-mail",
+        "D": "teleconferencing"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0075",
+      "type": "mcq",
+      "stem": "The application software that allows information available on the internet to be obtained is called",
+      "options": {
+        "A": "spreadsheet",
+        "B": "internet protocol",
+        "C": "browser",
+        "D": "World Wide Web"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0076",
+      "type": "mcq",
+      "stem": "A modem and a telephone connection are provided. Other things needed to be able to connect a computer to the internet are",
+      "options": {
+        "A": "ISP account and utility software",
+        "B": "browser and printer",
+        "C": "browser and ISP account",
+        "D": "ISP account and network"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0077",
+      "type": "mcq",
+      "stem": "Which of the following is employed in the transfer of data between computers and a network?",
+      "options": {
+        "A": "USB Port",
+        "B": "Female connector",
+        "C": "Fiber optic",
+        "D": "Male connector"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0078",
+      "type": "mcq",
+      "stem": "Which of the following software can be used for graphic production?",
+      "options": {
+        "A": "Acrobat reader",
+        "B": "PC writer",
+        "C": "DOS editor",
+        "D": "Corel draw"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0079",
+      "type": "mcq",
+      "stem": "Which of the following items is not located on the MS Word menu bar?",
+      "options": {
+        "A": "view",
+        "B": "Open",
+        "C": "Home",
+        "D": "Mailings"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0080",
+      "type": "mcq",
+      "stem": "In changing the storage location of a file, the command to use is",
+      "options": {
+        "A": "'save as' command",
+        "B": "Alt + f, then save",
+        "C": "ctrl + S keys",
+        "D": "'save' command"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0081",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about registers?",
+      "options": {
+        "A": "It is a special high-speed storage area within the CPU",
+        "B": "It is a storage area around CPU",
+        "C": "It is situated beside the memory",
+        "D": "It is situated beside the CPU"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0082",
+      "type": "mcq",
+      "stem": "The instruction fetched into the CPU is decoded by the",
+      "options": {
+        "A": "ALU",
+        "B": "primary memory",
+        "C": "program counter",
+        "D": "Control Unit"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0083",
+      "type": "mcq",
+      "stem": "The process of restarting a computer is known as",
+      "options": {
+        "A": "cold booting",
+        "B": "resume booting",
+        "C": "warm booting",
+        "D": "restart booting"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0084",
+      "type": "mcq",
+      "stem": "Evaluate the BASIC statement\n\nLET Z = 4*W2 + 2*y given that W = 5 and Y = 10.",
+      "options": {
+        "A": "50",
+        "B": "120",
+        "C": "8",
+        "D": "100"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0085",
+      "type": "mcq",
+      "stem": "Given that 2610 = (X)2, X is",
+      "options": {
+        "A": "11110",
+        "B": "10111",
+        "C": "11011",
+        "D": "11010"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0086",
+      "type": "mcq",
+      "stem": "A = 10, B = 11, C = 12, D =13, E = 14, F = 15 B, D, F = 11, 13, 15, respectively. In the hexadecimal number system, B, D, F represent",
+      "options": {
+        "A": "11, 12, 13 respectively",
+        "B": "13, 14, 15 respectively",
+        "C": "11, 13, 15 respectively",
+        "D": "14, 16, 17 respectively"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0087",
+      "type": "mcq",
+      "stem": "The conversion of 110012 to base 10 equals",
+      "options": {
+        "A": "30",
+        "B": "20",
+        "C": "25",
+        "D": "28"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0088",
+      "type": "mcq",
+      "stem": "The transaction file can also be described as",
+      "options": {
+        "A": "master file",
+        "B": "reference file",
+        "C": "historical file",
+        "D": "movement file"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0089",
+      "type": "mcq",
+      "stem": "Which of the following statements is not true about a computer file?",
+      "options": {
+        "A": "It is very fast to access any record within a file",
+        "B": "It is created electronically",
+        "C": "File creation and access are less laborious",
+        "D": "Initial setup is expensive"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0090",
+      "type": "mcq",
+      "stem": "The Slide Rule is accurate to",
+      "options": {
+        "A": "1-2 decimal places",
+        "B": "3-4 decimal places",
+        "C": "5 decimal places",
+        "D": "6 decimal places"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0091",
+      "type": "mcq",
+      "stem": "What factors will motivate a field engineer into choosing a notebook computer over a desktop computer?",
+      "options": {
+        "A": "Cost, convenience and battery life",
+        "B": "Cost, size and convenience",
+        "C": "Size, convenience and battery life",
+        "D": "Size, cost and battery life"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0092",
+      "type": "mcq",
+      "stem": "A collection of wires through which data are transmitted from one part of the computer to another is known as",
+      "options": {
+        "A": "address",
+        "B": "bus",
+        "C": "driver",
+        "D": "register"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0093",
+      "type": "mcq",
+      "stem": "The total possible combinations of the input variables for a logic gate containing three input variables is",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "8",
+        "D": "12"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0094",
+      "type": "mcq",
+      "stem": "What is the least number of 750 MB capacity CD-ROM discs needed to transfer 10 GB size file?",
+      "options": {
+        "A": "75",
+        "B": "31",
+        "C": "14",
+        "D": "13"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0095",
+      "type": "mcq",
+      "stem": "An advantage of sequential access over serial access is that",
+      "options": {
+        "A": "individual records can be located more quickly",
+        "B": "sequential file does not use key",
+        "C": "sequential file is slow",
+        "D": "sequential file is detailed"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0096",
+      "type": "mcq",
+      "stem": "The use of electronic systems to send an unsolicited e-mail to someone's address is known as",
+      "options": {
+        "A": "spamming",
+        "B": "internet fraud",
+        "C": "hacking",
+        "D": "piracy"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0097",
+      "type": "mcq",
+      "stem": "Which of the following ideals is protected by copyright?",
+      "options": {
+        "A": "Profit",
+        "B": "inexperience",
+        "C": "Ideas",
+        "D": "Expression of Ideas"
+      },
+      "marks": 1,
+      "year": 2025
+    },
+    {
+      "id": "waec-computer-studies-bank-0098",
+      "type": "mcq",
+      "stem": "The operation of a computer and peripherals attached to it is controlled by",
+      "options": {
+        "A": "application",
+        "B": "hardware",
+        "C": "live ware",
+        "D": "system software"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0099",
+      "type": "mcq",
+      "stem": "COBOL was developed for",
+      "options": {
+        "A": "business operations",
+        "B": "game developers",
+        "C": "mobile application developers",
+        "D": "search engines optimization"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0100",
+      "type": "mcq",
+      "stem": "The operating system performs the following operations except",
+      "options": {
+        "A": "organization of data",
+        "B": "resource allocation",
+        "C": "creation of data",
+        "D": "arrangement of files"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0101",
+      "type": "mcq",
+      "stem": "The fundamental purpose of the BIOS is",
+      "options": {
+        "A": "initializing and testing hardware components",
+        "B": "testing the system performance",
+        "C": "updating the system performance",
+        "D": "saving the operating system's file"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0102",
+      "type": "mcq",
+      "stem": "The IF... THEN statement in BASIC is called",
+      "options": {
+        "A": "an assignment statement",
+        "B": "an object",
+        "C": "a class",
+        "D": "a control structure"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0103",
+      "type": "mcq",
+      "stem": "The use of natural language and symbols to write instructions for the computer is called",
+      "options": {
+        "A": "machine language programming",
+        "B": "assembly language programming",
+        "C": "algorithm language programming",
+        "D": "high level language programming"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0104",
+      "type": "mcq",
+      "stem": "Which of the following stages of the SDLC is post-operational stage?",
+      "options": {
+        "A": "Analysis",
+        "B": "Design",
+        "C": "Investigation",
+        "D": "Maintenance"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0105",
+      "type": "mcq",
+      "stem": "The expression 5 + 3*4/2 - 3^2 in QBASIC evaluate to",
+      "options": {
+        "A": "7",
+        "B": "4",
+        "C": "2",
+        "D": "1"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0106",
+      "type": "mcq",
+      "stem": "A computer system on the network that stores pages, takes request from clients as well as send out information is called a",
+      "options": {
+        "A": "client",
+        "B": "web page",
+        "C": "web server",
+        "D": "website"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0107",
+      "type": "mcq",
+      "stem": "The \"/exams\"in the web address; https;//www.waec.org.ng/exams is called",
+      "options": {
+        "A": "domain name",
+        "B": "path",
+        "C": "port",
+        "D": "subdomain"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0108",
+      "type": "mcq",
+      "stem": "Which of the following statements about URL is true? It is",
+      "options": {
+        "A": "a computer software program",
+        "B": "a type of web server",
+        "C": "an acronym for unlimited resources for learning",
+        "D": "the address of document or 'page' on the world wide web"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0109",
+      "type": "mcq",
+      "stem": "In MS Excel, the cell that contains the pointer or cursor is called",
+      "options": {
+        "A": "active cell",
+        "B": "current cell",
+        "C": "default cell",
+        "D": "passive cell"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0110",
+      "type": "mcq",
+      "stem": "Which of the following formulas will display the current seconds past the minute os the clock in MS Excel?",
+      "options": {
+        "A": "=MINUTES()",
+        "B": "=MINUTES(NOW())",
+        "C": "=MINUTE(YEAR())",
+        "D": "=MINUTES(HOUR(NOW()))"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0111",
+      "type": "mcq",
+      "stem": "What type of relationship can you deduce from the statement a department has many employees?",
+      "options": {
+        "A": "One-to-one",
+        "B": "One-to-many",
+        "C": "Many-to-many",
+        "D": "Many-to-one"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0112",
+      "type": "mcq",
+      "stem": "The screen background where icons and windows are displayed is GUI is called",
+      "options": {
+        "A": "explorer",
+        "B": "desktop",
+        "C": "opening screen",
+        "D": "homepage"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0113",
+      "type": "mcq",
+      "stem": "The windows shortcut key for closing an active application is",
+      "options": {
+        "A": "Alt+F4",
+        "B": "Ctrl+Alt+Del",
+        "C": "Ctrl+Esc.",
+        "D": "Ctrl+Shift+Del"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0114",
+      "type": "mcq",
+      "stem": "Changing the default settings or appearance of the Taskbar in windows by a user is known as",
+      "options": {
+        "A": "customization",
+        "B": "designing",
+        "C": "generalization",
+        "D": "globalization"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0115",
+      "type": "mcq",
+      "stem": "A single character in an EBCDIC encoding system can be represented using",
+      "options": {
+        "A": "4 bits",
+        "B": "6 bits",
+        "C": "8 bits",
+        "D": "16 bits"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0116",
+      "type": "mcq",
+      "stem": "Evaluate 10011\\(_2\\) - 1111\\(_2\\)",
+      "options": {
+        "A": "00010\\(_2\\)",
+        "B": "00100\\(_2\\)",
+        "C": "01000\\(_2\\)",
+        "D": "10000\\(_2\\)"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0117",
+      "type": "mcq",
+      "stem": "The binary number 0.1101 in decimal is",
+      "options": {
+        "A": "0.8125",
+        "B": "0.8215",
+        "C": "0.8225",
+        "D": "0.8512"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0118",
+      "type": "mcq",
+      "stem": "The computing devices invented by Charles Babbage are?",
+      "options": {
+        "A": "Difference Engine and Abacus",
+        "B": "Analytical Engine and Slide Rule",
+        "C": "Abacus and Slide Rule",
+        "D": "Analytical and Difference Engines"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0119",
+      "type": "mcq",
+      "stem": "In a computer, the sets of instruction that direct it in performing a particular task is called?",
+      "options": {
+        "A": "information",
+        "B": "program",
+        "C": "data",
+        "D": "file"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0120",
+      "type": "mcq",
+      "stem": "To prevent unforeseen data loss, a user must",
+      "options": {
+        "A": "edit the data",
+        "B": "create the data",
+        "C": "backup the data",
+        "D": "defragment the data"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0121",
+      "type": "mcq",
+      "stem": "Which of the following options is not a similarity between computer file and manual file? Both can",
+      "options": {
+        "A": "be accessed",
+        "B": "be retrieved",
+        "C": "store multimedia",
+        "D": "contain information"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0122",
+      "type": "mcq",
+      "stem": "A computer program that gathers information about a person or organization without their knowledge or consent  is known known as",
+      "options": {
+        "A": "adware",
+        "B": "time bomb",
+        "C": "trojan horse",
+        "D": "spyware"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0123",
+      "type": "mcq",
+      "stem": "The following actions are the effects of virus infection in a system except",
+      "options": {
+        "A": "deletion of files",
+        "B": "slow operation",
+        "C": "hard disk failure",
+        "D": "display of unwanted messages"
+      },
+      "marks": 1,
+      "year": 2021
+    },
+    {
+      "id": "waec-computer-studies-bank-0124",
+      "type": "mcq",
+      "stem": "Charles Babbage was the first to?",
+      "options": {
+        "A": "invent slide rule",
+        "B": "invent analytical engine",
+        "C": "make census machine",
+        "D": "make use of the punched card"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0125",
+      "type": "mcq",
+      "stem": "Which of the following devices is not a micro computer?",
+      "options": {
+        "A": "Desktop",
+        "B": "EDVAC",
+        "C": "Laptop",
+        "D": "Notebook"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0126",
+      "type": "mcq",
+      "stem": "The main difference between a laptop and a desktop is that, a laptop?",
+      "options": {
+        "A": "does not have mouse while a desktop has",
+        "B": "uses USB port while desktop uses parallel port",
+        "C": "can be connected to the internet while desktop cannot",
+        "D": "contains high capacity battery that powers for extensive period while desktop has not."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0127",
+      "type": "mcq",
+      "stem": "Abacus is used for?",
+      "options": {
+        "A": "addition",
+        "B": "subtraction",
+        "C": "addition and subtraction",
+        "D": "multiplication and division"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0128",
+      "type": "mcq",
+      "stem": "The computer hardware is made up of system unit and?",
+      "options": {
+        "A": "motherboard",
+        "B": "peripheral",
+        "C": "control unit",
+        "D": "central processing unit"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0129",
+      "type": "mcq",
+      "stem": "If the output signal of any logic gate is fed into an inverter, the results is?    .",
+      "options": {
+        "A": "NOT gate",
+        "B": "Nor gate",
+        "C": "the inverse of the output signal",
+        "D": "the same as the output signal"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0130",
+      "type": "mcq",
+      "stem": "The device through which the main components of the computer communicate with each other is called?",
+      "options": {
+        "A": "keyboard",
+        "B": "memory",
+        "C": "light pen",
+        "D": "system bus"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0131",
+      "type": "mcq",
+      "stem": "The hardware of a computer does not consist of?",
+      "options": {
+        "A": "casing",
+        "B": "mouse",
+        "C": "peripherals",
+        "D": "windows"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0132",
+      "type": "mcq",
+      "stem": "Output devices in a computer are those devices that send?",
+      "options": {
+        "A": "results to the memory of the computer",
+        "B": "processed data and instructions into the computer",
+        "C": "in data and instructions into the computer",
+        "D": "data and instructions into the memory of the computer"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0133",
+      "type": "mcq",
+      "stem": "Which of the following is not a mobile input device?",
+      "options": {
+        "A": "Joystick",
+        "B": "Light pen",
+        "C": "Mouse",
+        "D": "Scanner"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0134",
+      "type": "mcq",
+      "stem": "The memory unit of the computer belongs to the?",
+      "options": {
+        "A": "control unit",
+        "B": "input device",
+        "C": "output device",
+        "D": "system unit"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0135",
+      "type": "mcq",
+      "stem": "Which of the following is not a function of the operating system?",
+      "options": {
+        "A": "Analysis of the computer components.",
+        "B": "Ensuring the proper functioning of hardware. .",
+        "C": "Maintenance of directories in external storage.",
+        "D": "Opening and closing files."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0136",
+      "type": "mcq",
+      "stem": "An example of a specific purpose application package is the?",
+      "options": {
+        "A": "payroll program.",
+        "B": "database program.",
+        "C": "spreadsheet program.",
+        "D": "word processing program"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0137",
+      "type": "mcq",
+      "stem": "The operating system, translators and utility programs are examples of?",
+      "options": {
+        "A": "application software.",
+        "B": "customized Software.",
+        "C": "network software.",
+        "D": "system software."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0138",
+      "type": "mcq",
+      "stem": "The first stage in program development is problem?",
+      "options": {
+        "A": "analysis.",
+        "B": "definition.",
+        "C": "solving.",
+        "D": "testing"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0139",
+      "type": "mcq",
+      "stem": "A pictorial representation of program flow is referred to as?",
+      "options": {
+        "A": "algorithm",
+        "B": "flow chart.",
+        "C": "process mapping.",
+        "D": "pseudo code"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0140",
+      "type": "mcq",
+      "stem": "An example of a programming language that uses mnemonic codes is?",
+      "options": {
+        "A": "Assembly program.",
+        "B": "BASIC program.",
+        "C": "COBOL program.",
+        "D": "FORTRAN program."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0141",
+      "type": "mcq",
+      "stem": "The use of satellite to transmit signal information to the earth is enabled with the use of?",
+      "options": {
+        "A": "GSM.",
+        "B": "GPS.",
+        "C": "POS.",
+        "D": "WAN"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0142",
+      "type": "mcq",
+      "stem": ".The line segment that describes the contents of the message when sending an e-mail is?",
+      "options": {
+        "A": "Cc.",
+        "B": "Contents.",
+        "C": "Subject.",
+        "D": "To."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0143",
+      "type": "mcq",
+      "stem": "Which of the following networks covers the widest range?",
+      "options": {
+        "A": "LAN.",
+        "B": "MAN.",
+        "C": "PAN.",
+        "D": "WAN."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0144",
+      "type": "mcq",
+      "stem": "The keyboard command used to copy text in Ms-Word document is?",
+      "options": {
+        "A": "Shift+G.",
+        "B": "Ctrl+N.",
+        "C": "Ctrl + C.",
+        "D": "Ctrl+ Alt + C."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0145",
+      "type": "mcq",
+      "stem": "The colour palette in CorelDraw allows the user to?",
+      "options": {
+        "A": "arrange colour.",
+        "B": "draw in colour.",
+        "C": "pick colour tool.",
+        "D": "choose different pre-set colour palettes."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0146",
+      "type": "mcq",
+      "stem": "In order to get to the symbol dialog box in MS-Word click on the?",
+      "options": {
+        "A": "Home tab.",
+        "B": "Insert tab.",
+        "C": "Page Lay- out tab.",
+        "D": "View tab."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0147",
+      "type": "mcq",
+      "stem": "In a network, the workstation is usually.connected to the?",
+      "options": {
+        "A": "Hub.",
+        "B": "Modem.",
+        "C": "Router.",
+        "D": "Switch."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0148",
+      "type": "mcq",
+      "stem": "When browsing on the internet, a possible reason for. the message \"page not found\" is that?",
+      "options": {
+        "A": "the weather is hot.",
+        "B": "the web browser is fast.",
+        "C": "multiple web pages are loading at the same time.",
+        "D": "a connection between the client and server has been lost."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0149",
+      "type": "mcq",
+      "stem": "Which of the following is not a network device?",
+      "options": {
+        "A": "Hub",
+        "B": "Modem",
+        "C": "Port",
+        "D": "Router"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0150",
+      "type": "mcq",
+      "stem": "Which of the following is a valid e-mail address?",
+      "options": {
+        "A": "www.itbeginswithu.org",
+        "B": "waeconline@yahoo.co.uk",
+        "C": "www.waeconline.org",
+        "D": "www.fine.gov.ng"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0151",
+      "type": "mcq",
+      "stem": "In word processing, an efficient way to move the second paragraph and place it after the fourth paragraph is?",
+      "options": {
+        "A": "copy and paste.",
+        "B": "copy, cut and paste.",
+        "C": "cut and paste.",
+        "D": "cut, copy and paste."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0152",
+      "type": "mcq",
+      "stem": "Which of the following items changes shape depending on the task being performed?",
+      "options": {
+        "A": "Ribbon",
+        "B": "Active tab",
+        "C": "Insertion point",
+        "D": "Mouse pointer"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0153",
+      "type": "mcq",
+      "stem": "The computer keyboard key(s) that a user presses to move to the beginning of a current line of text is/are the?",
+      "options": {
+        "A": "Enter key.",
+        "B": "Home key.",
+        "C": "Ctrl +B keys.",
+        "D": "Ctrl+ Home keys."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0154",
+      "type": "mcq",
+      "stem": "Data loss in a computer cannot be prevented by the use of?",
+      "options": {
+        "A": "antivirus.",
+        "B": "backup.",
+        "C": "flash drive.",
+        "D": "password."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0155",
+      "type": "mcq",
+      "stem": "The shortcut command used in restarting a computer is?",
+      "options": {
+        "A": "Ctrl+ S.",
+        "B": "Ctrl+0.",
+        "C": "Del+Alt+S.",
+        "D": "Alt+Ctrl+Del."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0156",
+      "type": "mcq",
+      "stem": "The term bus' width in data transfer refers to the?",
+      "options": {
+        "A": "number of wires in the bus.",
+        "B": "size of the data movement.",
+        "C": "number of bits of information the RAM can send to the CPU at the same time.",
+        "D": "number of wires in the bus that carry information to the processor at a time"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0157",
+      "type": "mcq",
+      "stem": "The part of the computer that holds the data and pro- grams for CPU processing is the?",
+      "options": {
+        "A": "Address.",
+        "B": "Register:",
+        "C": "Random Access Memory.",
+        "D": "Read Only Memory"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0158",
+      "type": "mcq",
+      "stem": "A high level language can be converted to a machine language using?",
+      "options": {
+        "A": "a compiler.",
+        "B": "an editor.",
+        "C": "a utility program.",
+        "D": "an operating system"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0159",
+      "type": "mcq",
+      "stem": "Which of the following statements is true of encryption? It",
+      "options": {
+        "A": "provides complete privacy.",
+        "B": "provides security of varying reliability.",
+        "C": "makes messages un- readable by the recipient.",
+        "D": "permits an individual to have access to another person's message."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0160",
+      "type": "mcq",
+      "stem": "Computer ethics are important because they?",
+      "options": {
+        "A": "ensure identity theft.",
+        "B": "regulate the privacy of messages only.",
+        "C": "address piracy and comportment issues.",
+        "D": "prevent copyright infringement on discretional basis."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0161",
+      "type": "mcq",
+      "stem": "Which of the following is the main advantage of intellectual property right?",
+      "options": {
+        "A": "Discouragement of sharing.",
+        "B": "Discovery of brilliant persons.",
+        "C": "Encouragement of innovations.",
+        "D": "maximization of profit."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0162",
+      "type": "mcq",
+      "stem": "Which of the following statements is true of free software? It",
+      "options": {
+        "A": "can be borrowed freely.",
+        "B": "is a low-cost software:",
+        "C": "is a free unlicensed software.",
+        "D": "is a licensed software with permission to copy freely."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0163",
+      "type": "mcq",
+      "stem": "In hexadecimal number system, B, D and F represent which of the following decimal numbers?",
+      "options": {
+        "A": "11, 13 and 15 respectively.",
+        "B": "12, 14 and 15 respectively.",
+        "C": "13, 14 and 15 respectively.",
+        "D": "14, 16 and 17 respectively"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0164",
+      "type": "mcq",
+      "stem": "The conversion of 11001\\(_2\\), to base ten equals?",
+      "options": {
+        "A": "20.",
+        "B": "25.",
+        "C": "28.",
+        "D": "30"
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0165",
+      "type": "mcq",
+      "stem": "Which of the following signifies the correct association between a hardware component and its functions?",
+      "options": {
+        "A": "Mouse to input",
+        "B": "Monitor to print",
+        "C": "CPU to storage",
+        "D": "Hard disk to processing"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0166",
+      "type": "mcq",
+      "stem": "Which of the following software is best suitable for keeping records during national population census?",
+      "options": {
+        "A": "Word Processing",
+        "B": "Spreadsheet",
+        "C": "Graphic",
+        "D": "Database"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0167",
+      "type": "mcq",
+      "stem": "9\\(_{10}\\) is equivalent to X\\(_8\\), where X is?",
+      "options": {
+        "A": "7.",
+        "B": "10.",
+        "C": "11.",
+        "D": "12."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0168",
+      "type": "mcq",
+      "stem": "Use the MS-Excel table below to answer questions 48 to 50.\n\n \n \n  \n A\n B\n C\n D\n \n \n 1\n BOOKS SUPPLIED TO SENIOR HIGH SCHOOL\n  \n  \n  \n \n \n 2\n FORM\n MATHS\n ICT\n ENGLISH LANG\n \n \n 3\n SHS I\n 2456\n 6580\n 5678\n \n \n 4\n SHS II\n 3450\n 4009\n 4400\n \n \n 5\n SHS III\n 8765\n 4500\n 9000\n \n \n\nThe content of cell D3 is?",
+      "options": {
+        "A": "3450.",
+        "B": "4400.",
+        "C": "4500.",
+        "D": "5678."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0169",
+      "type": "mcq",
+      "stem": "Use the MS-Excel below to answer this question.\n\n \n \n  \n A\n B\n C\n D\n \n \n 1\n BOOKS\n SUPPLIED\n TO SENIOR\n HIGH SCHOOL\n \n \n 2\n FORMS\n MATHS\n ICT\n ENGLISH LANGUAGE\n \n \n 3\n SHSI\n 2456\n 6580\n 5678\n \n \n 4\n SHSII\n 3450\n 4009\n 4400\n \n \n 5\n SHSIII\n 8765\n 4500\n 9000\n \n \n\nThe number of cells that contain data in row 1 is?",
+      "options": {
+        "A": "1.",
+        "B": "3.",
+        "C": "4.",
+        "D": "5."
+      },
+      "marks": 1,
+      "year": 2015
+    },
+    {
+      "id": "waec-computer-studies-bank-0170",
+      "type": "mcq",
+      "stem": "The first calculating device is the?",
+      "options": {
+        "A": "Abacus",
+        "B": "Census machine",
+        "C": "Difference engine",
+        "D": "Napier bones."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0171",
+      "type": "mcq",
+      "stem": "Which of the following represents features of a computer?\nI. It is constructed from electronics components.\nII. It has self regeneration capability.\nIlI. It has facility for storage of data and programs.\nIV. It has provision for input and output data.",
+      "options": {
+        "A": "I, Il and ll only",
+        "B": "I, II and IV only",
+        "C": "I, IIl and IV only",
+        "D": "II, Ill and IV only."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0172",
+      "type": "mcq",
+      "stem": "Arrange in a hierarchical order by date, the following inventions: I. slide rule; Il. pascaline; IIl, analytical engine; v. difference engine.",
+      "options": {
+        "A": "I, lI, IV and llI",
+        "B": "II, IV, and Il",
+        "C": "III, IV, II and I",
+        "D": "I, II, IIl and IV."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0173",
+      "type": "mcq",
+      "stem": "Which of the following is true about raw data?",
+      "options": {
+        "A": "It is well categorized",
+        "B": "It exists in oral form only",
+        "C": "It exists in written form only",
+        "D": "It cannot be relied on to make decision."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0174",
+      "type": "mcq",
+      "stem": "Which of the following was used by Joseph Marie Jacquad in inventing the Loom?",
+      "options": {
+        "A": "Punched card",
+        "B": "Smart card",
+        "C": "Smart chip",
+        "D": "Sound card."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0175",
+      "type": "mcq",
+      "stem": "Which generation of computers used vaccum tubes in their circuitry?",
+      "options": {
+        "A": "First generation",
+        "B": "Second generation",
+        "C": "Third generation",
+        "D": "Fourth generation."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0176",
+      "type": "mcq",
+      "stem": "The full meaning of the acronym ENIAC is?",
+      "options": {
+        "A": "Electronic Numerical Integrator and Calculator.",
+        "B": "Electronic Numerical Integrator and Computer",
+        "C": "Electronic Numerical Integration Automatic Calculator",
+        "D": "Electronic Numerical Integrated Automatic Calculator"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0177",
+      "type": "mcq",
+      "stem": "The primary memory of the computer can be divided into?",
+      "options": {
+        "A": "register and random access memory",
+        "B": "mass storage and read only memory",
+        "C": "volatile memory and auxiliary memory",
+        "D": "random access memory and read only memory."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0178",
+      "type": "mcq",
+      "stem": "A common communication pathway shared by hard- ware components in the computer is called?",
+      "options": {
+        "A": "bus",
+        "B": "channel",
+        "C": "firmware",
+        "D": "register."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0179",
+      "type": "mcq",
+      "stem": "Which of the following can be described as the brain of the computer hardware?",
+      "options": {
+        "A": "BIOS",
+        "B": "microprocessor",
+        "C": "RAM chip",
+        "D": "system clock"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0180",
+      "type": "mcq",
+      "stem": "Which of the following is not a computer output device?",
+      "options": {
+        "A": "Disk",
+        "B": "Plotter",
+        "C": "Printer",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0181",
+      "type": "mcq",
+      "stem": "Data to be processed by the microprocessor is temporarily stored in the?",
+      "options": {
+        "A": "auxiliary storage",
+        "B": "backing storage",
+        "C": "main storage",
+        "D": "random access memory."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0182",
+      "type": "mcq",
+      "stem": "The smallest unit of information representation which is addressable on the computer memory is?",
+      "options": {
+        "A": "1 bit",
+        "B": "2 bits",
+        "C": "4 bits",
+        "D": "8 bits"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0183",
+      "type": "mcq",
+      "stem": "Software is referred to as the?",
+      "options": {
+        "A": "generic term for computer programs",
+        "B": "physical components of the computer",
+        "C": "part of the computer for communication",
+        "D": "part of the computer which is breakable."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0184",
+      "type": "mcq",
+      "stem": "The software whose output is intended for the human user is called?",
+      "options": {
+        "A": "application software",
+        "B": "firmware",
+        "D": "system software"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0185",
+      "type": "mcq",
+      "stem": "The parts of the taskbar include: I recycle bin Il start button lII system tray IV quick launch toolbar",
+      "options": {
+        "A": "I, I and IV only",
+        "B": "I, Ill and IV only",
+        "C": "II, Il and IV only",
+        "D": "I, II, III and IV"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0186",
+      "type": "mcq",
+      "stem": "The similarities between main memory and registers is that they are: I volatile Il under the direct control of the user ll protected by the system unit lIV for system\n\nuse only?",
+      "options": {
+        "A": "I, II and IV only",
+        "B": "I, Ill and IV only",
+        "C": "II, Ill and IV only",
+        "D": "I, I, Ill and IV"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0187",
+      "type": "mcq",
+      "stem": "A pictorial representation of the logic of a program is called?",
+      "options": {
+        "A": "diagram",
+        "B": "flowchart",
+        "C": "pseudo code",
+        "D": "software"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0188",
+      "type": "mcq",
+      "stem": "A subroutine is called in a flowchart through the use of?",
+      "options": {
+        "A": "data",
+        "B": "predefined process",
+        "C": "process",
+        "D": "terminator"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0189",
+      "type": "mcq",
+      "stem": "A suitable BASIC notation for the expression mc\\(^2\\) is?",
+      "options": {
+        "A": "m * c^2",
+        "B": "m * c * 2",
+        "C": "m * c",
+        "D": "m * c * \\(^2\\)"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0190",
+      "type": "mcq",
+      "stem": "Use the BASIC program below to answer questions 23 to 25\n10 LET K = 2\n20 LET L = 9\n30 LET SUM = 0\n 40 FOR J = K TO STEP 2\n50 SUM = SUM + J\\(^2\\)\n60 PRINT \"ANSWER =\", SUM\n70 NEXT J\n80 END\nHow many times will the statement lines 50 and 60 be repeated?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0191",
+      "type": "mcq",
+      "stem": "Which of the following best represents the sequence of output from the program?",
+      "options": {
+        "A": "2,4",
+        "B": "4, 20, 36",
+        "C": "4, 16, 36, 64",
+        "D": "4, 20, 56, 120"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0192",
+      "type": "mcq",
+      "stem": "Use the BASIC program below to answer this question\n\n10     LET K = 2\n\n20     LET L = 9\n\n30     LET SUM = 0\n\n40     FOR J = K TO STEP 2\n\n50     SUM = SUM + J2\n\n60     PRINT \"ANSWER =\", SUM\n\n70     NEXT J\n\n80     END\n\nThe last output that will be displayed by the program is",
+      "options": {
+        "A": "20",
+        "B": "36",
+        "C": "64",
+        "D": "120"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0193",
+      "type": "mcq",
+      "stem": "Which of the following networks can be extended to cover continents?",
+      "options": {
+        "A": "Metropolitan Area Network .",
+        "B": "Personal Area Network",
+        "C": "Wide Area Network",
+        "D": "Wireless Area Network"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0194",
+      "type": "mcq",
+      "stem": "Identify the browsers in the following list:\nI telnet II netscape navigator.ll opera IV mozilla firefox",
+      "options": {
+        "A": "I, lI and lll only",
+        "B": "I, ll and IV only",
+        "C": "Il, Ill and IV,only",
+        "D": "I, II, IIl and IV"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0195",
+      "type": "mcq",
+      "stem": "Trap doors and bombs are typical examples of?",
+      "options": {
+        "A": "adware",
+        "B": "computer worms",
+        "C": "firewall",
+        "D": "trojan horses"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0196",
+      "type": "mcq",
+      "stem": "The first four steps required to open e-mail account include:\nI click on \"Create my account\"\nII go to home page of the service provider\nlll click \"create new account\"\nIV click on \"mail\"",
+      "options": {
+        "A": "I, II, IV and III",
+        "B": "I, II, IV and Il",
+        "C": "II, IV, Ill and I",
+        "D": "IV, II, I, and Ill."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0197",
+      "type": "mcq",
+      "stem": "The two main components of a radio communication system are?",
+      "options": {
+        "A": "transmitter and terminal",
+        "B": "receiver and determinator",
+        "C": "transmitter and receiver",
+        "D": "transmitter and terminator."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0198",
+      "type": "mcq",
+      "stem": "Which of the following can a traveler who finds himself in a new environment rely on for direction to his final destination?",
+      "options": {
+        "A": "DNS",
+        "B": "GPRS",
+        "C": "GPS",
+        "D": "TCP"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0199",
+      "type": "mcq",
+      "stem": "The default number of sheets of a workbook is?",
+      "options": {
+        "A": "one",
+        "B": "two",
+        "C": "three",
+        "D": "four"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0200",
+      "type": "mcq",
+      "stem": "When a worksheet is deleted from a workbook, it is?",
+      "options": {
+        "A": "lost forever",
+        "B": "sent to the recycle bin",
+        "C": "sent to the original folder",
+        "D": "stored permanently in main memory."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0201",
+      "type": "mcq",
+      "stem": "A block of text that is marked by the tab key when the enter key is pressed can be referred to as?",
+      "options": {
+        "A": "margin",
+        "B": "paragraph",
+        "C": "white space",
+        "D": "word wrap"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0202",
+      "type": "mcq",
+      "stem": "Principal uses of word processing software packages include:\nI preparing deft articles for publication\nll pre- paring reports for top management\nIll preparing accounts\n\nIV preparing organizations' newsletter.",
+      "options": {
+        "A": "I, III and IV only",
+        "B": "I, II and IV only",
+        "C": "II, III and IV only",
+        "D": "I, II, IIl, and IV."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0203",
+      "type": "mcq",
+      "stem": "In a database, a primary key is a field which contains?",
+      "options": {
+        "A": "text only",
+        "B": "unique entries",
+        "C": "duplicate values",
+        "D": "numeric value only."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0204",
+      "type": "mcq",
+      "stem": "One megabyte is equivalent to?",
+      "options": {
+        "A": "one million bytes",
+        "B": "two million bytes",
+        "C": "three million bytes",
+        "D": "four million bytes"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0205",
+      "type": "mcq",
+      "stem": "Converting 4B7\\(_16\\) to binary?",
+      "options": {
+        "A": "0100 1010 0111",
+        "B": "0100 1011 0111,",
+        "C": "0100 1000 0111,",
+        "D": "0100 1100 0111"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0206",
+      "type": "mcq",
+      "stem": "The speed of data transfer in the computer can be determined in terms of ?",
+      "options": {
+        "A": "protocol and bus speed",
+        "B": "bus speed and width",
+        "C": "bus speed and storage media",
+        "D": "bus width and storage media."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0207",
+      "type": "mcq",
+      "stem": "The initial screen that is displayed after a computer booting is referred to as?",
+      "options": {
+        "A": "desktop",
+        "B": "interface",
+        "C": "software",
+        "D": "taskbar"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0208",
+      "type": "mcq",
+      "stem": "Which of the following is not a biometric data?",
+      "options": {
+        "A": "finger prints",
+        "B": "password",
+        "C": "pattern of eye iris",
+        "D": "sound of the voice."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0209",
+      "type": "mcq",
+      "stem": "The main advantage of intellectual property right is?",
+      "options": {
+        "A": "maximization of profit",
+        "B": "discovering of brilliant persons",
+        "C": "discovering of sharing",
+        "D": "encouragement of innovations."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0210",
+      "type": "mcq",
+      "stem": "The word bit refers to?",
+      "options": {
+        "A": "the value zero or one",
+        "B": "the value zero of more",
+        "C": "central processing unit command",
+        "D": "central processing unit instructions."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0211",
+      "type": "mcq",
+      "stem": "The decimal number 1024 in hexadecimal equivalent is?",
+      "options": {
+        "A": "24",
+        "B": "400",
+        "C": "3E8",
+        "D": "8BB"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0212",
+      "type": "mcq",
+      "stem": "Which of the following is true of a digital logic gate?\n.",
+      "options": {
+        "A": "It has at least two inputs but only one output.",
+        "B": "It has many outputs and inputs.",
+        "C": "It has at least one or more inputs but only one output.",
+        "D": "It has at least one input and two outputs"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0213",
+      "type": "mcq",
+      "stem": "Which of the following is a temporary file that can be used only once and then discarded?",
+      "options": {
+        "A": "Refresh file",
+        "B": "Master file",
+        "C": "System file",
+        "D": "Transaction file"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0214",
+      "type": "mcq",
+      "stem": "A major function of system software is_________?",
+      "options": {
+        "A": "Collection of Files",
+        "B": "Translation of machine language into machine code",
+        "C": "File management",
+        "D": "Arrangement of files in ascending order"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0215",
+      "type": "mcq",
+      "stem": "Which of the following methods is not suitable for securing files?",
+      "options": {
+        "A": "Use of backup",
+        "B": "Use of antivirus",
+        "C": "Saving documents without a password",
+        "D": "Proper labelling of storage devices"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0216",
+      "type": "mcq",
+      "stem": "Which of the following programming languages needs no translator for it to run?",
+      "options": {
+        "A": "High-Level Language",
+        "B": "Low Level Language",
+        "C": "Machine Language",
+        "D": "Assembly Language"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0217",
+      "type": "mcq",
+      "stem": "Sorting of records is sufficient and a necessary condition for creating?",
+      "options": {
+        "A": "random file",
+        "B": "indirect file",
+        "C": "sequential file",
+        "D": "indexed sequential file."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0218",
+      "type": "mcq",
+      "stem": "The illegal copying and use of proprietary/copy righted software is called?",
+      "options": {
+        "A": "hacking",
+        "B": "spamming",
+        "C": "hardware piracy",
+        "D": "software piracy."
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0219",
+      "type": "mcq",
+      "stem": "Symptoms of computer virus attack include:\nI improved processing speeds; Il drive light coming up without apparent reason; Ill unexplainable printer activity; IV the disappearance or strange files appearance on the screen",
+      "options": {
+        "A": "l, Il and Ill only",
+        "B": "I, Ill and IV only",
+        "C": "II, IIl, and IV only",
+        "D": "I, II, Ill and IV"
+      },
+      "marks": 1,
+      "year": 2016
+    },
+    {
+      "id": "waec-computer-studies-bank-0220",
+      "type": "mcq",
+      "stem": "The \"collection of the unorganized facts and figures\" is called?",
+      "options": {
+        "A": "data",
+        "B": "file",
+        "C": "information",
+        "D": "variable"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0221",
+      "type": "mcq",
+      "stem": "The census machine was invented by?",
+      "options": {
+        "A": "Blaise Pascal",
+        "B": "Gottfried Von Leibnitz",
+        "C": "Herman Hollerith",
+        "D": "Joseph Marie Jacquad"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0222",
+      "type": "mcq",
+      "stem": "A graph plotter is most suited for use in a/an?",
+      "options": {
+        "A": "tax office",
+        "B": "immigration office",
+        "C": "population census office",
+        "D": "geographical information system."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0223",
+      "type": "mcq",
+      "stem": "A set of programs, routines and procedures that are used to operate the computer hardware is called?",
+      "options": {
+        "A": "fimware",
+        "B": "shareware",
+        "C": "software",
+        "D": "utility"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0224",
+      "type": "mcq",
+      "stem": "Which of the following can be used to write a high level program source code?",
+      "options": {
+        "A": "Lotus 1-2-3",
+        "B": "MS Access",
+        "C": "Opera",
+        "D": "Text Editor"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0225",
+      "type": "mcq",
+      "stem": "A computer that requests the services of another computer on a network is called a?",
+      "options": {
+        "A": "client",
+        "B": "host",
+        "C": "master",
+        "D": "server"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0226",
+      "type": "mcq",
+      "stem": "The available page orientation in Microsoft Word are?",
+      "options": {
+        "A": "portrait and justify",
+        "B": "justify and right align",
+        "C": "left align and landscape",
+        "D": "portrait and landscape."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0227",
+      "type": "mcq",
+      "stem": "The copyright law is used to protect?",
+      "options": {
+        "A": "right of men",
+        "B": "right of minors",
+        "C": "intellectual property",
+        "D": "right of Women only."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0228",
+      "type": "mcq",
+      "stem": "Which of the following components is directly located inside the computer processor?",
+      "options": {
+        "A": "ALU",
+        "B": "BIOS",
+        "C": "RAM",
+        "D": "ROM"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0229",
+      "type": "mcq",
+      "stem": "Napier's Bone was designed purposely for calculation of?",
+      "options": {
+        "A": "sum and quotient",
+        "B": "sum and difference",
+        "C": "product and quotient",
+        "D": "difference and quotient"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0230",
+      "type": "mcq",
+      "stem": "The hardware component that is responsible for fetching, decoding and execution of program instruction is?",
+      "options": {
+        "A": "accumulator",
+        "B": "read only memory",
+        "C": "random access memory",
+        "D": "central processing unit."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0231",
+      "type": "mcq",
+      "stem": "Which of the following is found on the taskbar?",
+      "options": {
+        "A": "scrollbars",
+        "B": "wall paper",
+        "C": "screen saver",
+        "D": "quick lunch toolbar"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0232",
+      "type": "mcq",
+      "stem": "A high level language program translator which converts a source code to machine readable format and compile executes it one line at a time is?",
+      "options": {
+        "A": "complier",
+        "B": "debugger",
+        "C": "editor",
+        "D": "interpreter"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0233",
+      "type": "mcq",
+      "stem": "Use the following QBASIC statement to answer questions 14 and 15.\nDIM DEPOSIT (1, 10) 14.\nThe keyword DIM in the statement stands for?",
+      "options": {
+        "A": "diagram",
+        "B": "diameter",
+        "C": "diamond",
+        "D": "dimension"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0234",
+      "type": "mcq",
+      "stem": "The expression DEPOSIT (1, 10) stands for an array with?",
+      "options": {
+        "A": "1 element",
+        "B": "11 elements",
+        "C": "10 elements",
+        "D": "no element."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0235",
+      "type": "mcq",
+      "stem": "In a star network, each node must?",
+      "options": {
+        "A": "be connected directly to adjacent node",
+        "B": "be connected directly to a central network hub",
+        "C": "be connected directly to a common backbone cable",
+        "D": "possess a token before it can transmit signal to adjacent node"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0236",
+      "type": "mcq",
+      "stem": "Which of the following views is used to create data base objects in Microsoft Access?",
+      "options": {
+        "A": "Design view",
+        "B": "Datasheet view",
+        "C": "Layout view",
+        "D": "Normal view"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0237",
+      "type": "mcq",
+      "stem": "A field chosen to uniquely identify every record in a database is?",
+      "options": {
+        "A": "foreign key",
+        "B": "local key",
+        "C": "primary key",
+        "D": "secondary key"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0238",
+      "type": "mcq",
+      "stem": "The ASCII code for the word NOT can be written as?",
+      "options": {
+        "A": "101010010011111001110.",
+        "B": "100111010011111010100",
+        "C": "100111110101001001110",
+        "D": "100111010101001111"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0239",
+      "type": "mcq",
+      "stem": "Which of the following is not a method of accessing file?",
+      "options": {
+        "A": "Circular",
+        "B": "Random",
+        "C": "Serial",
+        "D": "Sequential"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0240",
+      "type": "mcq",
+      "stem": "The advantages of a computer include that they?\n\nI. operate at high speeds; II. think for the user; Ill. are accurate; IV. are credible.",
+      "options": {
+        "A": "I, Il and lll only",
+        "B": "I, III and IV only",
+        "C": "II, l and IV only",
+        "D": "I, II, l and IV"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0241",
+      "type": "mcq",
+      "stem": "In MS Excel, comments used in cells are called?",
+      "options": {
+        "A": "cell tip",
+        "B": "smart tip",
+        "C": "soft tip",
+        "D": "web tip"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0242",
+      "type": "mcq",
+      "stem": "Which of the following statements is not true about secondary storage media? They",
+      "options": {
+        "A": "are volatile",
+        "B": "are non-volatile",
+        "C": "are relatively cheap",
+        "D": "have storage capacity"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0243",
+      "type": "mcq",
+      "stem": "Which of the file formats is supported in all windows operating systems?",
+      "options": {
+        "A": "BSDB.",
+        "B": "EXT",
+        "C": "FAT",
+        "D": "NTFS"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0244",
+      "type": "mcq",
+      "stem": "Which of the following symbols is not a relational operator in BASIC programming language?",
+      "options": {
+        "A": "<",
+        "B": ">",
+        "C": "^",
+        "D": "≤"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0245",
+      "type": "mcq",
+      "stem": "The following are features of web browsers except?",
+      "options": {
+        "A": "address bar",
+        "B": "formula bar",
+        "C": "menu bar",
+        "D": "title bar"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0246",
+      "type": "mcq",
+      "stem": "The act of translating data into a secret code is known as?",
+      "options": {
+        "A": "authentication",
+        "B": "authorisation",
+        "C": "encryption",
+        "D": "piracy"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0247",
+      "type": "mcq",
+      "stem": "The absolute address of cell G5 in a spreadsheet application is represented by?",
+      "options": {
+        "A": "$G5",
+        "B": "G$5",
+        "C": "$G$5",
+        "D": "$G5$"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0248",
+      "type": "mcq",
+      "stem": "Soft boot is initiated by pressing?",
+      "options": {
+        "A": "Ctrl + Alt + Del.",
+        "B": "function key F10.",
+        "C": "main switch.",
+        "D": "bootstrap buttons."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0249",
+      "type": "mcq",
+      "stem": "Which of the following factors limits access to computerized file system? it",
+      "options": {
+        "A": "occupies less space",
+        "B": "requires regular supply of power",
+        "C": "is highly efficient in processing information",
+        "D": "provides easy and fast access to information"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0250",
+      "type": "mcq",
+      "stem": "Which of the following is not a good ICT security policy?",
+      "options": {
+        "A": "Re-use of old password",
+        "B": "Frequent change of password",
+        "C": "Backing up files and documents",
+        "D": "Scanning e-mail attachment for virus before opening it"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0251",
+      "type": "mcq",
+      "stem": "Use the information below to answer questions 35 and 36\nI-Mouse Il. -Keyboard III-Scanner IV. -Joystick.\nThe input devices used to capture date of birth on an Online form are?",
+      "options": {
+        "A": "I, Il and IV only",
+        "B": "I, II and lll only",
+        "C": "I and ll only",
+        "D": "lI and IV only"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0252",
+      "type": "mcq",
+      "stem": "Use the information below to answer this question\n\nI. - Mouse II. - Keyboard III. - Scanner IV. - Joystick.\n\nThe input devices used to capture finger print is?",
+      "options": {
+        "A": "I",
+        "B": "II",
+        "C": "III",
+        "D": "IV"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0253",
+      "type": "mcq",
+      "stem": "To hibernate windows operating system means?",
+      "options": {
+        "A": "re-start the computer in safe mode",
+        "B": "restart the computer in hibernate mode",
+        "C": "shut down the computer and terminate all the running applications",
+        "D": "shut down the computer without closing all the running applications"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0254",
+      "type": "mcq",
+      "stem": "Which of the following statements can be used for looping in BASIC?",
+      "options": {
+        "A": "FOR ... NEXT",
+        "B": "IF ... THEN",
+        "C": "GO TO",
+        "D": "Go SUB"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0255",
+      "type": "mcq",
+      "stem": "The flowchart ♦ symbol represents?",
+      "options": {
+        "A": "comment",
+        "B": "connector",
+        "C": "decision",
+        "D": "input/output"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0256",
+      "type": "mcq",
+      "stem": "Which of the following tasks is accomplished by using bookmarks? To",
+      "options": {
+        "A": "add anchors in webpage",
+        "B": "add hyperlinks in webpage",
+        "C": "quickly jump to specific location in document",
+        "D": "mark the ending of a paragraph of a document"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0257",
+      "type": "mcq",
+      "stem": "Which of the following function keys can be used to run slide show in a PowerPoint presentation?",
+      "options": {
+        "A": "F2",
+        "B": "F5",
+        "C": "F7",
+        "D": "F12"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0258",
+      "type": "mcq",
+      "stem": "Use the MS Excel table below to answer questions 42 and43\nThe formula used to compute the TOTAL VALUE in cell D7 is?    \n\n \n \n S/N\n A\n B\n C\n D\n \n \n 1\n STOCK LIST OF TAYO OKEKE AS AT MAY 2014\n \n \n 2\n QUOTED STOCK\n SHARE UNIT IN THOUSAND\n CURRENT UNIT(#)\n VALUE\n \n \n 3\n TANZEL PLC\n 44\n 50\n 2,200.000\n \n \n 4\n KAPTOL\n 125\n 80\n ####\n \n \n 5\n BANK KLM\n 75\n 140\n ####\n \n \n 6\n ARIX OIL\n 10\n 250\n 2,500.00\n \n \n 7\n  \n TOTAL VALUE",
+      "options": {
+        "A": "= sum (D2:D7).",
+        "B": "= sum (D3:D7).",
+        "C": "= sum (D2:D6).",
+        "D": "= sum (D3:D6)."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0259",
+      "type": "mcq",
+      "stem": "Which of the following statements is true for a circuit Switching communication system?",
+      "options": {
+        "A": "It is not ideal for a real-time communication",
+        "B": "Messages must be divided into packets before they are sent",
+        "C": "It does not require any dedicated channel to be established between two parties",
+        "D": "A dedicated channel must be established between two parties through the period of Communication"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0260",
+      "type": "mcq",
+      "stem": "The first three steps to open an email account include:\nI. - Click on create my account; II. - Go to home page; llI - Click create new account.",
+      "options": {
+        "A": "I, ll and lll",
+        "B": "II, I and ll",
+        "C": "ll, lll and I",
+        "D": "I, lll and lI"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0261",
+      "type": "mcq",
+      "stem": "Converting 4B7\\(_{hexadecimal}\\) to binary is?",
+      "options": {
+        "A": "010010100111",
+        "B": "010010110111",
+        "C": "010010000111",
+        "D": "010011000111"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0262",
+      "type": "mcq",
+      "stem": "The modifier keys on the computer keyboard comprises of?",
+      "options": {
+        "A": "DEL, ESC and ALT keys.",
+        "B": "CTRL, CAPS LOCK and DEL keys.",
+        "C": "SHIFT, CTRL and ALT keys.",
+        "D": "CTRL, ALT and DEL keys."
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0263",
+      "type": "mcq",
+      "stem": "Arrange in hierarchical order by date the following inventions:\nI. - Census machine; Il. - Abacus; lll. - Slide rule; IV.- Difference engine.",
+      "options": {
+        "A": "I, lI, IlI and IV",
+        "B": "I, Il, III and IV",
+        "C": "I, II, IV and llI",
+        "D": "II, III, IV, and l"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0264",
+      "type": "mcq",
+      "stem": "A student mistakenly pressed the F5 key on keyboard while browsing on the internet. This will lead to?",
+      "options": {
+        "A": "opening of a new tab",
+        "B": "closing of the active window",
+        "C": "Closing of all windows",
+        "D": "reloading of the active window"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0265",
+      "type": "mcq",
+      "stem": "Opening an already existing sequential file in output (O) mode will lead to?",
+      "options": {
+        "A": "buffer overflow",
+        "B": "deletion of the current content of the file",
+        "C": "duplication of the current content of the file",
+        "D": "addition of new data to the content of the file"
+      },
+      "marks": 1,
+      "year": 2017
+    },
+    {
+      "id": "waec-computer-studies-bank-0266",
+      "type": "mcq",
+      "stem": "Data can be defined as?",
+      "options": {
+        "A": "raw facts",
+        "B": "mixed facts",
+        "C": "facts on prints",
+        "D": "processed facts"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0267",
+      "type": "mcq",
+      "stem": "Which of the following output devices was common among the computing devices of the 19th century?",
+      "options": {
+        "A": "Monitor",
+        "B": "Plotter",
+        "C": "Printer",
+        "D": "Speaker"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0268",
+      "type": "mcq",
+      "stem": "The pre-computing age device which made use of beads and frames is?",
+      "options": {
+        "A": "Abacus",
+        "B": "Napier's bone",
+        "C": "Liebnitz multiplier",
+        "D": "Burrough's counting device"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0269",
+      "type": "mcq",
+      "stem": "The system unit houses the following components except?",
+      "options": {
+        "A": "plotter",
+        "B": "motherboard",
+        "C": "floppy disk",
+        "D": "central processing unit"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0270",
+      "type": "mcq",
+      "stem": "During program execution in the central processing unit, the instruction is interpreted by the?",
+      "options": {
+        "A": "arithmetic logic",
+        "B": "control unit",
+        "C": "memory unit",
+        "D": "registers unit"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0271",
+      "type": "mcq",
+      "stem": "The most important system software in a computer system is the?",
+      "options": {
+        "A": "control program",
+        "B": "language translator",
+        "C": "operating system",
+        "D": "utility programs"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0272",
+      "type": "mcq",
+      "stem": "QBASIC keywords do not include?",
+      "options": {
+        "A": "FIND B.",
+        "B": "LET C.",
+        "C": "REM D.",
+        "D": "STOP."
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0273",
+      "type": "mcq",
+      "stem": "An icon, a graphic or a text in a document or a webpage that connects to another file or object is called a?",
+      "options": {
+        "A": "hyperlink",
+        "B": "domain name",
+        "C": "web browser",
+        "D": "web server"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0274",
+      "type": "mcq",
+      "stem": "The largest component in a spreadsheet is?",
+      "options": {
+        "A": "cell",
+        "B": "range",
+        "C": "workbook",
+        "D": "worksheet"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0275",
+      "type": "mcq",
+      "stem": "Warm boot in computing is the same as?",
+      "options": {
+        "A": "debugging",
+        "B": "handshake",
+        "C": "hard boot",
+        "D": "soft boot"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0276",
+      "type": "mcq",
+      "stem": "The basic computer operation involves the following except?",
+      "options": {
+        "A": "Access",
+        "B": "Input",
+        "C": "Output",
+        "D": "Process"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0277",
+      "type": "mcq",
+      "stem": "The file that contains historical record is called a?",
+      "options": {
+        "A": "data file",
+        "B": "master file",
+        "C": "reference file",
+        "D": "transaction file"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0278",
+      "type": "mcq",
+      "stem": "Random file organisation is also known as?",
+      "options": {
+        "A": "direct file organisation",
+        "B": "indexed file organisation",
+        "C": "serial file organisation",
+        "D": "sequential file organisation"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0279",
+      "type": "mcq",
+      "stem": "Which of the following options is not a data type?",
+      "options": {
+        "A": "Alphabetic data",
+        "B": "Alphanumeric data",
+        "C": "Numeric data",
+        "D": "Valid data"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0280",
+      "type": "mcq",
+      "stem": "The major components of a computer system are?",
+      "options": {
+        "A": "fimware and humanware",
+        "B": "hardware and firmware",
+        "C": "hardware and software",
+        "D": "software and firmware"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0281",
+      "type": "mcq",
+      "stem": "The largest computer system in terms of processing power is A?",
+      "options": {
+        "A": "laptop computer",
+        "B": "mainframe computer",
+        "C": "minicomputer",
+        "D": "super computer"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0282",
+      "type": "mcq",
+      "stem": "Which of the following programs is an application specific?",
+      "options": {
+        "A": "CorelDraw",
+        "B": "Microsoft Access .",
+        "C": "Word",
+        "D": "Payroll system"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0283",
+      "type": "mcq",
+      "stem": "The following programs are general-purpose application software except?",
+      "options": {
+        "A": "CorelDraw",
+        "B": "Editor",
+        "C": "Ms Access",
+        "D": "MS Word"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0284",
+      "type": "mcq",
+      "stem": "The following are relational operators in QBASIC?",
+      "options": {
+        "A": "<",
+        "B": ">",
+        "C": "#",
+        "D": "="
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0285",
+      "type": "mcq",
+      "stem": "The three levels of programming language?",
+      "options": {
+        "A": "assembly language, low level language and high level language,",
+        "B": "java, C language and pascal",
+        "C": "machine language low level language and high level language",
+        "D": "machine language, machine code and assembly language"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0286",
+      "type": "mcq",
+      "stem": "which of the following network cables offers highest data transmission?",
+      "options": {
+        "A": "Coaxial",
+        "B": "Fibre optic",
+        "C": "Telephone line",
+        "D": "Twisted pair"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0287",
+      "type": "mcq",
+      "stem": "The following components are network interconnecting devices EXCEPT?",
+      "options": {
+        "A": "hub",
+        "B": "modem",
+        "C": "router",
+        "D": "webcam"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0288",
+      "type": "mcq",
+      "stem": "Which of the following options is not an advantage of  linear bus topology?",
+      "options": {
+        "A": "It requires less cable length",
+        "B": "It ensures easy casting",
+        "C": "Additional nodes can be connected easily",
+        "D": "Terminators are required at both ends of the"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0289",
+      "type": "mcq",
+      "stem": "Which of the following components are data communication equipment?\nI. Scanner ll. Hub lIl. Modem",
+      "options": {
+        "A": "I and Il only",
+        "B": "I and lll only",
+        "C": "II and IIl only",
+        "D": "I, Il and III"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0290",
+      "type": "mcq",
+      "stem": "The speed of data transfer in the computer can be determined in terms of?",
+      "options": {
+        "A": "protocols and bus speed",
+        "B": "bus speed and bus width",
+        "C": "bus width and storage media",
+        "D": "bus speed and storage media"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0291",
+      "type": "mcq",
+      "stem": "The process of restarting the computer system is known as?",
+      "options": {
+        "A": "cold booting",
+        "B": "hard booting",
+        "C": "hot bathing",
+        "D": "warm booting"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0292",
+      "type": "mcq",
+      "stem": "The ASCII chart control characters using numeric codes ranging from?",
+      "options": {
+        "A": "0 to 124",
+        "B": "0 to 125",
+        "C": "0 to 127",
+        "D": "0 to 128"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0293",
+      "type": "mcq",
+      "stem": "A row in a database table is referred to as?",
+      "options": {
+        "A": "attribute",
+        "B": "data item",
+        "C": "field",
+        "D": "record"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0294",
+      "type": "mcq",
+      "stem": "The conversion of readable data to unreadable codes in order to prevent unauthorised access is known as?",
+      "options": {
+        "A": "authentication",
+        "B": "encryption",
+        "C": "encoding",
+        "D": "decryption"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0295",
+      "type": "mcq",
+      "stem": "The algebraic equation for the AND gate with input variables A and B is?",
+      "options": {
+        "A": "X = A.B",
+        "B": "X =A/B",
+        "C": "X= A-B",
+        "D": "X = A+B"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0296",
+      "type": "mcq",
+      "stem": "The command line prompt of MS-DOS operating system is represented as?",
+      "options": {
+        "A": "C:>",
+        "B": "C:\\",
+        "C": "C:\\>",
+        "D": "C\\:>"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0297",
+      "type": "mcq",
+      "stem": "The process of testing the logic of programs to ensure they give correct result is known as?",
+      "options": {
+        "A": "algorithm",
+        "B": "desk checking",
+        "C": "flowcharting",
+        "D": "table checking"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0298",
+      "type": "mcq",
+      "stem": "The MS-Windows shortcut keys to initiate warm booting is?",
+      "options": {
+        "A": "Alt+ f4",
+        "B": "Ctrl+ Alt + Del",
+        "C": "Ctrl+Esc",
+        "D": "Ctn +Shift + Del"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0299",
+      "type": "mcq",
+      "stem": "The number 28 in binary is?",
+      "options": {
+        "A": "1001",
+        "B": "11001",
+        "C": "110011",
+        "D": "11100"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0300",
+      "type": "mcq",
+      "stem": "Which of the following options is a biometric data?",
+      "options": {
+        "A": "Gender",
+        "B": "Password",
+        "C": "Date of birth",
+        "D": "Pattern of eye iris"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0301",
+      "type": "mcq",
+      "stem": "A  site engineer intends to acquire a computer system. What factors Will he consider if he must choose a notebook computer over a desktop computer?",
+      "options": {
+        "A": "Size, cost and battery life",
+        "B": "Cost, size and convenience",
+        "C": "Size, convenience and battery life",
+        "D": "Cost, convenience and battery life"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0302",
+      "type": "mcq",
+      "stem": "A logic gate contains three input variables. The total possible combination of the input variables is?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "8",
+        "D": "12"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0303",
+      "type": "mcq",
+      "stem": "The following are the guidelines for drawing flowcharts except that it?",
+      "options": {
+        "A": "must have a logical start and finish",
+        "B": "should be clear, neat and easy to follow",
+        "C": "should follow a direction of right to left or bottom to top",
+        "D": "should follow a direction of left to right or top to bottom"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0304",
+      "type": "mcq",
+      "stem": "Use the infomation belowto answer questions 42 and 43.\nAs a computer professional, you have just been con- tracted by a school to help them solve the problem they are facing in computing students' results.\nThe school currently runs a manual system. Time and accuracy of the result are the major concerns.\nWhat would you advise the school to do?",
+      "options": {
+        "A": "Automate the system",
+        "B": "Close down the school",
+        "C": "Increase the number of staff",
+        "D": "Buy more calculators for the staff"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0305",
+      "type": "mcq",
+      "stem": "If you are given the contract, what would be your first step of action?",
+      "options": {
+        "A": "Analyse the result",
+        "B": "Design a software",
+        "C": "Investigate the problem",
+        "D": "Maintain the staff"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0306",
+      "type": "mcq",
+      "stem": "Which of the following charts does not display the X and Y axes?",
+      "options": {
+        "A": "Bar chart",
+        "B": "Bubble chart",
+        "C": "Doughnut chart",
+        "D": "X, Y graph"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0307",
+      "type": "mcq",
+      "stem": "The uses of spreadsheet packages include:\n1. -Preparing organisation's logo;   II. - Performing sensitivity analysis; III, - Preparing reports for senior manage- ment; IV. - Preparation of profit forecasts.\nWhich of the following options is true?",
+      "options": {
+        "A": "Il and IV only",
+        "B": "Ill and IV only",
+        "C": "I, Il and Ill only",
+        "D": "II, Il and IV only"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0308",
+      "type": "mcq",
+      "stem": "The common features of formula and function in spread- sheet are:\n-Entry is preceded by = or + symbol I.\n- They have fixed formats\n- They operate with cell addresses\n- Their results are displayed.\nWhich of the following options is/are true?",
+      "options": {
+        "A": "I, II, III",
+        "B": "I, III, IV",
+        "C": "II, III, IV",
+        "D": "I, II, III, IV"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0309",
+      "type": "mcq",
+      "stem": "The acronym HTTP stands for________",
+      "options": {
+        "A": "Hyper Text Transfer Protocol",
+        "B": "Higher Transfer Text Protocol",
+        "C": "Hard Text Transfer Protocol",
+        "D": "Higher Text Transfer Protocol"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0310",
+      "type": "mcq",
+      "stem": "In ring topology, the computer that is allowed to transmit data possesses the ________",
+      "options": {
+        "A": "Packet",
+        "B": "Data",
+        "C": "Access method",
+        "D": "Token"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0311",
+      "type": "mcq",
+      "stem": "The most cost-effective and secure way of transmitting confidential messages among the employees of an organization is the ___________",
+      "options": {
+        "A": "Electronic notice boards",
+        "B": "Teleconferencing",
+        "C": "E-mail",
+        "D": "Social networks"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0312",
+      "type": "mcq",
+      "stem": "The application software which allows information available on the internet to be obtained is called _________",
+      "options": {
+        "A": "Browser",
+        "B": "World Wide Web",
+        "C": "Spreadsheet",
+        "D": "Internet Protocol"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0313",
+      "type": "mcq",
+      "stem": "A modern and a telephone connection are provided. Other things needed to be able to connect a computer to the internet are _______",
+      "options": {
+        "A": "ISP account and Utility software",
+        "B": "Browser and ISP account",
+        "C": "ISP account and Network",
+        "D": "Browser and Printer"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0314",
+      "type": "mcq",
+      "stem": "One megabyte is equivalent to?",
+      "options": {
+        "A": "1000 X 1024 bytes",
+        "B": "1024 X 1024 bytes",
+        "C": "1024 X 1048 bytes",
+        "D": "1000 X 1000 bytes"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0315",
+      "type": "mcq",
+      "stem": "Arrange the following spreadsheet window parts in a hierarchical order by size:\n\nI. worksheet\n\nII. cell\n\nIII. workbook\n\nIV. Range",
+      "options": {
+        "A": "III, I, IV, II",
+        "B": "III, IV, II, I",
+        "C": "II, III, IV, I",
+        "D": "II, IV, I and II"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0316",
+      "type": "mcq",
+      "stem": "The statement in QBASIC that is used to add data at the end of existing sequential file is?",
+      "options": {
+        "A": "APPPEND",
+        "B": "CLOSE",
+        "C": "INPUT",
+        "D": "OUTPUT"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0317",
+      "type": "mcq",
+      "stem": "Which of the following computer files can be used for updating the master file?",
+      "options": {
+        "A": "date",
+        "B": "program",
+        "C": "reference",
+        "D": "transaction"
+      },
+      "marks": 1,
+      "year": 2018
+    },
+    {
+      "id": "waec-computer-studies-bank-0318",
+      "type": "mcq",
+      "stem": "The personnel who deals with the computer and its management is called?",
+      "options": {
+        "A": "software",
+        "B": "liveware",
+        "C": "hardware",
+        "D": "firmware"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0319",
+      "type": "mcq",
+      "stem": "The hexadecimal number 13, expressed as a binary here is?",
+      "options": {
+        "A": "00010011.",
+        "B": "00101100.",
+        "C": "0010110.",
+        "D": "00100100."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0320",
+      "type": "mcq",
+      "stem": "Which of the following statements are true about computer? \nI.Constructed from electronic components. II. It has self regeneration capability.\nIII. It has facility for storage of data and programs.       IV.It has provision tor input and output of data.",
+      "options": {
+        "A": "I, II and lll only",
+        "B": "I, Il and IV only",
+        "C": "I, lII and IV",
+        "D": "II, III and IV only"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0321",
+      "type": "mcq",
+      "stem": "Computers are classified using the following criteria except?",
+      "options": {
+        "A": "cost and portability.",
+        "B": "data representation and purpose.",
+        "C": "size and speed.",
+        "D": "speed and storage."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0322",
+      "type": "mcq",
+      "stem": "Modern computers compared to earlier computers are?",
+      "options": {
+        "A": "faster and larger.",
+        "B": "faster and smaller.",
+        "C": "larger and stronger.",
+        "D": "Iess reliable"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0323",
+      "type": "mcq",
+      "stem": "An input device that converts an image into text is known as?",
+      "options": {
+        "A": "Optical Character Reader.",
+        "B": "Optical Code Reader.",
+        "C": "Optical Display Reader.",
+        "D": "Optical Mark Reader."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0324",
+      "type": "mcq",
+      "stem": "The type of printer which works on the same principle as a photocopier is?",
+      "options": {
+        "A": "Dot Matrix Printer.",
+        "B": "Ink. Jet Printer.",
+        "C": "Laser jet Printer.",
+        "D": "Thermal Printer."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0325",
+      "type": "mcq",
+      "stem": "The output of a NAND gate is 1 when?",
+      "options": {
+        "A": "all inputs are 0.",
+        "B": "all inputs are 1.",
+        "C": "any of the input is 0.",
+        "D": "any of the input is 1."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0326",
+      "type": "mcq",
+      "stem": "The scanner and the floppy disk are?",
+      "options": {
+        "A": "both input devices.",
+        "B": "both output devices.",
+        "C": "input and output devices respectively.",
+        "D": "input and storage devices respectively."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0327",
+      "type": "mcq",
+      "stem": "The set of instructions written by computer experts to solve specific task of the user is called?",
+      "options": {
+        "A": "operating system.",
+        "B": "application software.",
+        "C": "system software.",
+        "D": "utility software"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0328",
+      "type": "mcq",
+      "stem": "A Collection of software that allows the computer to operate is called?",
+      "options": {
+        "A": "general-purpose software.",
+        "B": "utility software.",
+        "C": "operating system.",
+        "D": "specific software"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0329",
+      "type": "mcq",
+      "stem": "A suite of software that controls and manages the basic operation of a computer is?",
+      "options": {
+        "A": "application Software.",
+        "B": "management system.",
+        "C": "software package.",
+        "D": "system software."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0330",
+      "type": "mcq",
+      "stem": "The Windows PC and the Apple Macintosh are examples of two different?",
+      "options": {
+        "A": "input devices.",
+        "B": "platforms.",
+        "C": "programs.",
+        "D": "storage devices."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0331",
+      "type": "mcq",
+      "stem": "Machine Language instructions are expressed in?",
+      "options": {
+        "A": "binary.",
+        "B": "decimal.",
+        "C": "hexadecimal.",
+        "D": "octal."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0332",
+      "type": "mcq",
+      "stem": "The following symbols are used in flowcharting except the?",
+      "options": {
+        "A": "terminal symbol.",
+        "B": "process symbol.",
+        "C": "input/output symbol.",
+        "D": "close symbol."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0333",
+      "type": "mcq",
+      "stem": "Three major types of language translators are?",
+      "options": {
+        "A": "assembler, compiler and editor.",
+        "B": "assembler, Compiler and interpreter.",
+        "C": "compiler, debugger and editor.",
+        "D": "debugger, assembler and interpreter."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0334",
+      "type": "mcq",
+      "stem": ". Translate 2m\\(^2\\) + 3n- 9 as a BASIC arithmetic expression.",
+      "options": {
+        "A": "2 * m * 2 + 3 * n - 9",
+        "B": "2 * m ^2 +3 * n - 9",
+        "C": "2 * 2 * m + 3 * n - 9",
+        "D": "2 * m * m * n + 3 - 9"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0335",
+      "type": "mcq",
+      "stem": "The term compiler in computer programming refers to a?",
+      "options": {
+        "A": "key punch operator of the computer.",
+        "B": "person who compiles source programs.",
+        "C": "person who writes the computer programming codes.",
+        "D": "program which translates source program into object program."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0336",
+      "type": "mcq",
+      "stem": "The IF...THEN statement in BASIC programming is?",
+      "options": {
+        "A": "a transfer of control.",
+        "B": "used to redirect a statement.",
+        "C": "used to eliminate the need for prompting each INPUT statement.",
+        "D": "a conditional branch statement."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0337",
+      "type": "mcq",
+      "stem": "Flexibility of a good program means?",
+      "options": {
+        "A": "handling of any change(s) without having to rewrite the entire program.",
+        "B": "the length of processing time and memory to process the instruction.",
+        "C": "the program has to be broken down into a number of sub-tasks.",
+        "D": "the program should work for two similar tasks in the same domain."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0338",
+      "type": "mcq",
+      "stem": "Fibre Optic cable transmits signal in the fom of?",
+      "options": {
+        "A": "sound.",
+        "B": "electricity.",
+        "C": "Light.",
+        "D": "microwave"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0339",
+      "type": "mcq",
+      "stem": "Data transfer can be initiated through the following media except?",
+      "options": {
+        "A": "coaxial cable.",
+        "B": "fibre cable.",
+        "C": "trunking pipe.",
+        "D": "twisted pair cable."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0340",
+      "type": "mcq",
+      "stem": "To send a created MS PowerPoint document using email to a user, the document can be added as?",
+      "options": {
+        "A": "Attachment.",
+        "B": "Draft.",
+        "C": "Reply.",
+        "D": "Chat."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0341",
+      "type": "mcq",
+      "stem": "The major advantage of free software is that it is?",
+      "options": {
+        "A": "free and contains unlimited components.",
+        "B": "licensed and available always.",
+        "C": "licensed and can be copied by anyone.",
+        "D": "superior in quality but not robust."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0342",
+      "type": "mcq",
+      "stem": "One major difference between paper spreadsheet and electronic spreadsheet is?",
+      "options": {
+        "A": "a management of columns.",
+        "B": "headings from formatting.",
+        "C": "arrangement of rows. .",
+        "D": "speed of processing"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0343",
+      "type": "mcq",
+      "stem": "To hold row and column titles in places so that they do not scroll when the user scrolls a worksheet, click the?",
+      "options": {
+        "A": "freeze panes command on the windows menu.",
+        "B": "hold titles command on the edit menu.",
+        "C": "split command on the windows menu.",
+        "D": "show grid command on the windows menu."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0344",
+      "type": "mcq",
+      "stem": "In Microsoft PowerPoint, two kinds of sound effect files that can be added to a presentation are?",
+      "options": {
+        "A": ".wav files and .mid files.",
+        "B": ".wav files and .gif files.",
+        "C": ".wav files and jpg files.",
+        "D": "jpg files and.gif files."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0345",
+      "type": "mcq",
+      "stem": "A cell with a red triangle in the top-right comer in a spreadsheet application signifies?",
+      "options": {
+        "A": "an error in the cell.",
+        "B": "a comment associated with the cell.",
+        "C": "that the font colour for the text in the cell is red.",
+        "D": "that a formula cannot be entered into the cell."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0346",
+      "type": "mcq",
+      "stem": "Spreadsheet packages can be used for?      .",
+      "options": {
+        "A": "database and painting.",
+        "B": "drawing and painting.",
+        "C": "budgeting and inventory.",
+        "D": "word processing and drawing"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0347",
+      "type": "mcq",
+      "stem": "Which of the following is true when data maintained in MS Excel workbook is linked to a word document? The word document",
+      "options": {
+        "A": "cannot be edited.",
+        "B": "must contain a hyperlink.",
+        "C": "contains a copy of the actual data.",
+        "D": "contains a reference to the original source application."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0348",
+      "type": "mcq",
+      "stem": "Data that is copied from an application is stored in the?",
+      "options": {
+        "A": "clipboard.",
+        "B": "driver.",
+        "C": "prompt.",
+        "D": "terminal."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0349",
+      "type": "mcq",
+      "stem": "After several 'save' and 'delete' operations, there remain many scattered areas of data too small to be used productively. This describes?",
+      "options": {
+        "A": "utilization.",
+        "B": "protection.",
+        "C": "fragmentation.",
+        "D": "backing up."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0350",
+      "type": "mcq",
+      "stem": "The disk operating system will label three hard drives as?",
+      "options": {
+        "A": "A, B and C.",
+        "B": "C, D and E.",
+        "C": "B, C and D",
+        "D": "F, G and H."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0351",
+      "type": "mcq",
+      "stem": "Which of the options labeled I to IV give two stages involved in booting?\nI. Power On self test II. Loading of Operating System IIl. Loading of email IV. Power On Safe Mode",
+      "options": {
+        "A": "I and Il only",
+        "B": "I and III only",
+        "C": "Il and IV only",
+        "D": "Ill and IV"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0352",
+      "type": "mcq",
+      "stem": "A bit as used in computing in digital communication is?",
+      "options": {
+        "A": "a decimal digit.",
+        "B": "an octal digit.",
+        "C": "a bin digit.",
+        "D": ".a hexadecimal digit."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0353",
+      "type": "mcq",
+      "stem": "Multiply 101\\(_2\\) by 11\\(_2\\)",
+      "options": {
+        "A": "1001\\(_2\\)",
+        "B": "1011\\(_2\\)",
+        "C": "1110\\(_2\\)",
+        "D": "1111\\(_2\\)"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0354",
+      "type": "mcq",
+      "stem": "In BCD encoding system, 25, will be represented as?",
+      "options": {
+        "A": "01100101",
+        "B": "01010110.",
+        "C": "00100101.",
+        "D": "0101001."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0355",
+      "type": "mcq",
+      "stem": "The following actions are sources of breaches in computing except?",
+      "options": {
+        "A": "carelessness",
+        "B": "hackers' threat.",
+        "C": "piracy.",
+        "D": "viruses."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0356",
+      "type": "mcq",
+      "stem": "Which of the following is employed in the transfer of data between computers and a network?",
+      "options": {
+        "A": "Fiber optics",
+        "B": "Male connector",
+        "C": "Female Connector",
+        "D": "USB Port"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0357",
+      "type": "mcq",
+      "stem": "Which of the following software can be used for graphic production?",
+      "options": {
+        "A": "DOS Editor",
+        "B": "PC Writer",
+        "C": "Coreldraw",
+        "D": "Acrobat Reader"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0358",
+      "type": "mcq",
+      "stem": "Which of the following items is not located on the MS Word menu bar?",
+      "options": {
+        "A": "Home",
+        "B": "Open",
+        "C": "View",
+        "D": "Mailings"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0359",
+      "type": "mcq",
+      "stem": "Effects of file insecurity include the following except?",
+      "options": {
+        "A": "virus infection.",
+        "B": "file corruption.",
+        "C": "encrypted data",
+        "D": "data loss."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0360",
+      "type": "mcq",
+      "stem": "Which of the file organization methods can be accessed both randomly and sequentially?",
+      "options": {
+        "A": "Direct files",
+        "B": "Indexed sequential files",
+        "C": "Random files",
+        "D": "Sequential files"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0361",
+      "type": "mcq",
+      "stem": "A computer program that gathers information about a person or organization without their knowledge or consent is known as?",
+      "options": {
+        "A": "Adware.",
+        "B": "Time Bomb.",
+        "C": "Malware.",
+        "D": "Spyware."
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0362",
+      "type": "mcq",
+      "stem": "Password reset disk should be created?",
+      "options": {
+        "A": "every time the user changes password.",
+        "B": "once only.",
+        "C": "only when the user forgets the password.",
+        "D": "twice only"
+      },
+      "marks": 1,
+      "year": 2019
+    },
+    {
+      "id": "waec-computer-studies-bank-0363",
+      "type": "mcq",
+      "stem": "Which of the following is not a step involved in data conversion?",
+      "options": {
+        "A": "Input",
+        "B": "Output",
+        "C": "Process",
+        "D": "Transfer"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0364",
+      "type": "mcq",
+      "stem": "The communication of knowledge, concepts and ideas is referred to as?",
+      "options": {
+        "A": "information processing.",
+        "B": "information transmission.",
+        "C": "telecasting.",
+        "D": "webcasting."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0365",
+      "type": "mcq",
+      "stem": "The equivalent of the decimal number 89 in base 4 is?",
+      "options": {
+        "A": "1021.",
+        "B": "1201.",
+        "C": "1211.",
+        "D": "1121."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0366",
+      "type": "mcq",
+      "stem": "Choose the incorrect statement about microcomputers?",
+      "options": {
+        "A": "A microcomputer can be placed on a single silicon chip.",
+        "B": "A microcomputer can have more processing capability than a mainframe model.",
+        "C": "ROM chips may be used in micros to permanently store program instruction.",
+        "D": "Most micros use rigid disk storage devices rather than floppy disk drives."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0367",
+      "type": "mcq",
+      "stem": "Under classification by data representation. computers can be?",
+      "options": {
+        "A": "analogue, digital and hybrid.",
+        "B": "hybrid, mainframes and analogue.",
+        "C": "mini- computers, digital and supercomputers.",
+        "D": "supercomputers and mini-computers."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0368",
+      "type": "mcq",
+      "stem": "Pascal's calculating machine was useful in?",
+      "options": {
+        "A": "addition and subtraction only.",
+        "B": "division only.",
+        "C": "multiplication and division only.",
+        "D": "multiplication only."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0369",
+      "type": "mcq",
+      "stem": "Arrange the following inventions in chronological order.\nI. Slide Rule ll. Pascaline llI. Analytical Engine IV. Difference Engine",
+      "options": {
+        "A": "I, II, IV and IIl",
+        "B": "I, IV, III and Il",
+        "C": "III, IV, II and I",
+        "D": "I, II, III and IV"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0370",
+      "type": "mcq",
+      "stem": "Handwritten letters, typeset documents or printout Characters can be read into the computer by?",
+      "options": {
+        "A": "Barcode Reader.",
+        "B": "Magnetic Ink Character Recognition.",
+        "C": "Optical Character Recognition.",
+        "D": "Optical Mark Reader."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0371",
+      "type": "mcq",
+      "stem": "which of the following logic operations would select a record when at least one condition is satisfied?",
+      "options": {
+        "A": "AND",
+        "B": "NOR",
+        "C": "NOT",
+        "D": "OR"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0372",
+      "type": "mcq",
+      "stem": "A data bus that is capable of transferring 8 bytes of data at once can be rated as?",
+      "options": {
+        "A": "a 16-bit data bus.",
+        "B": "a 32-bit data bus.",
+        "C": "a 64-bit data bus.",
+        "D": "an 8- bit data bus."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0373",
+      "type": "mcq",
+      "stem": "Which of the following memory types are nonvolatile?\nI. PROM II. SRAM II. EEPROM IV. DRAM",
+      "options": {
+        "A": "I and lll only",
+        "B": "I and IV only",
+        "C": "Il and ll only",
+        "D": "IIl and IV only"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0374",
+      "type": "mcq",
+      "stem": "The operation of a computer and peripherals attached to it is controlled by?",
+      "options": {
+        "A": "application software.",
+        "B": "hardware",
+        "C": "liveware.",
+        "D": "system software"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0375",
+      "type": "mcq",
+      "stem": "Antivirus software is an example of?",
+      "options": {
+        "A": "application software.",
+        "B": "operating system",
+        "C": "system software.",
+        "D": "utility software."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0376",
+      "type": "mcq",
+      "stem": "Which of the following devices will not require the use of system software to operate?",
+      "options": {
+        "A": "Analogue camera",
+        "B": "MICR",
+        "C": "Mobile phones",
+        "D": "OCR"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0377",
+      "type": "mcq",
+      "stem": "Which of the following application packages is most suitable for database management?",
+      "options": {
+        "A": "Photoshop",
+        "B": "MS Publisher",
+        "C": "Macromedia Flash",
+        "D": "Fox Pro"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0378",
+      "type": "mcq",
+      "stem": "Files that contain machine language instructions are called?",
+      "options": {
+        "A": "interpreter files.",
+        "B": "executable files",
+        "C": "batch files",
+        "D": "source files."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0379",
+      "type": "mcq",
+      "stem": "The following are types of errors in programming except?",
+      "options": {
+        "A": "grammar error.",
+        "B": "syntax error.",
+        "C": "logic error.",
+        "D": "arithmetic error."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0380",
+      "type": "mcq",
+      "stem": "The stages of software development do not include?",
+      "options": {
+        "A": "analysis.",
+        "B": "conversion.",
+        "C": "design.",
+        "D": "maintenance."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0381",
+      "type": "mcq",
+      "stem": "Express P(1 + \\(\\frac{R}{100}\\))\\(^N\\) as a BASIC programming notation.",
+      "options": {
+        "A": "P x (1 + R ÷ 100)\\(^N\\)",
+        "B": "P * (1 + \\(\\frac{R}{100}\\))\\(^N\\)",
+        "C": "P x (1 + R ÷ 100)^N",
+        "D": "P *(1 + R /100) ^N"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0382",
+      "type": "mcq",
+      "stem": "An algorithm can be described as?",
+      "options": {
+        "A": "the output of the instruction to computer.",
+        "B": "the required to be processed.",
+        "C": "problem definition.",
+        "D": "a sequence of instructions for solving a problem."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0383",
+      "type": "mcq",
+      "stem": "The major difference between low level programming language and high level programming language Is that?",
+      "options": {
+        "A": "low level languages need an interpreter while a high level languages need a compiler.",
+        "B": "high level languages will not need a translator but low level languages do.",
+        "C": "low level languages need a compiler while high level languages need an interpreter.",
+        "D": "low level languages do not need translators while high level languages do."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0384",
+      "type": "mcq",
+      "stem": "What will the following BASIC statement produce? PRINT \"Afrikom Computer School\" A .",
+      "options": {
+        "A": "blank on Screen message.",
+        "B": "An error indicating on the screen.",
+        "C": "Afrikon Computer School displayed on the screen.",
+        "D": "Afrikom Computer School printed on paper."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0385",
+      "type": "mcq",
+      "stem": "A rectangular image consisting of black lines and white spaces representing data which can be optically read is called?",
+      "options": {
+        "A": "barcode.",
+        "B": "decoder.",
+        "C": "mnemonics.",
+        "D": "pseudocode."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0386",
+      "type": "mcq",
+      "stem": "The following are types of data network except?",
+      "options": {
+        "A": "MAC.",
+        "B": "MAN.",
+        "C": "PAN.",
+        "D": "WAN."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0387",
+      "type": "mcq",
+      "stem": "The minimum number of computers that can constitute a network is?",
+      "options": {
+        "A": "thirty.",
+        "B": "twenty.",
+        "C": "ten.",
+        "D": "two."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0388",
+      "type": "mcq",
+      "stem": "If a computer user wants to access the national database from a remote location, the user will require a?",
+      "options": {
+        "A": "modem, telephone line and decoder.",
+        "B": "teleprinter, telephone line and facsimile.",
+        "C": "communication software, telephone line and decoder.",
+        "D": "modem, communication software and telephone"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0389",
+      "type": "mcq",
+      "stem": "In networking, bandwidth means?",
+      "options": {
+        "A": "class of IP address used in the network",
+        "B": "number of interconnected computers in the network",
+        "C": "transmission capacity of a communication channel.",
+        "D": "types of nodes in a communication channel"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0390",
+      "type": "mcq",
+      "stem": "A pre-designed document coordinating fonts, a layout and a background is also known as?",
+      "options": {
+        "A": "guide.",
+        "B": "model.",
+        "C": "ruler.",
+        "D": "template"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0391",
+      "type": "mcq",
+      "stem": "The following are functions of database management system except?",
+      "options": {
+        "A": "backup and replication.",
+        "B": "operation.",
+        "C": "rule enforcement.",
+        "D": "security"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0392",
+      "type": "mcq",
+      "stem": "To make the entire slides in a presentation to have the same \"look\" in MS PowerPoint, a user  should?",
+      "options": {
+        "A": "use the slide layout option.",
+        "B": "use outline view",
+        "C": "use a presentation design template.",
+        "D": "add a slide option."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0393",
+      "type": "mcq",
+      "stem": "In MS Excel, the average of 10 numbers give B1, B2,...,B10 is?",
+      "options": {
+        "A": "= B1 + B2 ... B10)/10",
+        "B": "@SUM(B1:B10).",
+        "C": "#SUM(B1:B10)/10,",
+        "D": "= B1 +B2 +... + B10/10."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0394",
+      "type": "mcq",
+      "stem": "To centre worksheet titles across a range of cells MS Excel, the user must?",
+      "options": {
+        "A": "widen the rows to centres the titles across the range of cells.",
+        "B": "widen the columns to centre the titles across range of cell",
+        "C": "select the cells containing the title text and use the fill handle to centre the text across the range of cells.",
+        "D": "select any cell containing the title text and use the fill handle to centre the text across a range of cells."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0395",
+      "type": "mcq",
+      "stem": "In database application, the field length determines the?",
+      "options": {
+        "A": "maximum number of characters the field can accommodate.",
+        "B": "maximum number of operations that can be performed on the field.",
+        "C": "level of security of the database.",
+        "D": "maximum number of datatype the field can contain."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0396",
+      "type": "mcq",
+      "stem": "Removing a program on a computer properly requires?",
+      "options": {
+        "A": "deleting.",
+        "B": "archiving.",
+        "C": "disabling.",
+        "D": "uninstalling."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0397",
+      "type": "mcq",
+      "stem": "A feature on the computer desktop that indicates the current active applications is called?",
+      "options": {
+        "A": "icon.",
+        "B": "menu bar.",
+        "C": "ribbon.",
+        "D": "task bar."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0398",
+      "type": "mcq",
+      "stem": "In a Windows operation involving dragging and dropping an item on the desktop, the item will be?",
+      "options": {
+        "A": "deleted from the screen.",
+        "B": "duplicated.",
+        "C": "moved to a new location.",
+        "D": "renamed."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0399",
+      "type": "mcq",
+      "stem": "Digital signals can be represented by:   \nI. Binary Codes\nIl.0 and 1\nIII. High and Low Which of the following options is correct?",
+      "options": {
+        "A": "l and Il only",
+        "B": "I and lIl only",
+        "C": "II and lIl only",
+        "D": "I, Il and III"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0400",
+      "type": "mcq",
+      "stem": "A single hexadecimal digit is represented by?",
+      "options": {
+        "A": "one bit.",
+        "B": "two bits.",
+        "C": "four bits",
+        "D": "eight bits."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0401",
+      "type": "mcq",
+      "stem": "The decimal fraction 0.9375 converts to binary?",
+      "options": {
+        "A": "0.0111.",
+        "B": "0.1011.",
+        "C": "0.1111.",
+        "D": "O.1001."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0402",
+      "type": "mcq",
+      "stem": "In changing the storage location of a file, the command to use is_______",
+      "options": {
+        "A": "ctrl + S keys",
+        "B": "'save' command",
+        "C": "'save as' command",
+        "D": "alt + F, then save"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0403",
+      "type": "mcq",
+      "stem": "Which of the following statements is true about registers?",
+      "options": {
+        "A": "It is storage area around CPU",
+        "B": "It is situated beside the CPU",
+        "C": "It is situated beside the memory",
+        "D": "It is a special high speed storage area within the CPU"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0404",
+      "type": "mcq",
+      "stem": "The Instruction fetched into the CPU is decoded by the___________",
+      "options": {
+        "A": "Primary memory",
+        "B": "Program counter",
+        "C": "ALU",
+        "D": "Control unit"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0405",
+      "type": "mcq",
+      "stem": "The EBCDIC coding system was developed on?",
+      "options": {
+        "A": "IBM mainframe computers.",
+        "B": "HP mainframe and minicomputers.",
+        "C": "Dell mainframe computer",
+        "D": "Apple mainframe computers."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0406",
+      "type": "mcq",
+      "stem": "Which of the following is not a criterion files?",
+      "options": {
+        "A": "Nature of content",
+        "B": "Organizational method",
+        "C": "Storage medium",
+        "D": "Type of data"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0407",
+      "type": "mcq",
+      "stem": "Which of the following options best shows the arrangement of file structure?   \nI File\nll. Field\nIII. Character\nIV, Record",
+      "options": {
+        "A": "III, II, I and IV",
+        "B": "II, III, I and IV",
+        "C": "IlI, II, IV and I",
+        "D": "II, III, IV and I"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0408",
+      "type": "mcq",
+      "stem": "Which of the following statements best describes sequential file organization?",
+      "options": {
+        "A": "Records are arranged in no particular order.",
+        "B": "Records are directly addressed to the key value.",
+        "C": "Records are sorted according to a key field.",
+        "D": "Records are used as index to access the database."
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0409",
+      "type": "mcq",
+      "stem": "Viruses, worms and trojan horses are all?",
+      "options": {
+        "A": "application software",
+        "B": "malicious software.",
+        "C": "robust software.",
+        "D": "system software"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0410",
+      "type": "mcq",
+      "stem": "In order to avoid damages caused by security breaches, the user must?",
+      "options": {
+        "A": "configure firewall.",
+        "B": "encourage piracy.",
+        "C": "install cracked software",
+        "D": "promote cyber crime"
+      },
+      "marks": 1,
+      "year": 2020
+    },
+    {
+      "id": "waec-computer-studies-bank-0411",
+      "type": "mcq",
+      "stem": "One-millionth of a second is also referred to as",
+      "options": {
+        "A": "nanosecond",
+        "B": "microsecond",
+        "C": "millisecond",
+        "D": "picosecond"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0412",
+      "type": "mcq",
+      "stem": "Examples of quantitative data type are?",
+      "options": {
+        "A": "continuous and discrete",
+        "B": "local and foreign",
+        "C": "nominal and ordinal",
+        "D": "primary and secondary"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0413",
+      "type": "mcq",
+      "stem": "One difference between data and information is that ?",
+      "options": {
+        "A": "data is meaningful while information is not meaningful",
+        "B": "data are raw facts and figures while information is computed",
+        "C": "information is independent of data while data is dependent on information",
+        "D": "information is the raw material while data is the end product of information"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0414",
+      "type": "mcq",
+      "stem": "The following options are examples of information except?",
+      "options": {
+        "A": "area of a circle",
+        "B": "circumference of a circle",
+        "C": "perimeter of a rectangle",
+        "D": "plain shape of a rectangle"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0415",
+      "type": "mcq",
+      "stem": "Modem computers Compared to earlier computers are ?",
+      "options": {
+        "A": "less reliable",
+        "B": "faster and larger",
+        "C": "larger and stronger",
+        "D": "faster and smaller"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0416",
+      "type": "mcq",
+      "stem": "What type of computer would be most suitable for a student who lives in a remote village without constant electricity",
+      "options": {
+        "A": "Desktop computer",
+        "B": "Laptop computer",
+        "C": "Mainframe computer",
+        "D": "Minicomputer"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0417",
+      "type": "mcq",
+      "stem": "EDSAC was produced using a concept known as",
+      "options": {
+        "A": "Circuit switching",
+        "B": "Packet routing",
+        "C": "Packet switching",
+        "D": "Stored program"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0418",
+      "type": "mcq",
+      "stem": "The process of running more than one program concurrently is known as",
+      "options": {
+        "A": "multithreading",
+        "B": "multitasking",
+        "C": "multiprogramming",
+        "D": "multipurpose"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0419",
+      "type": "mcq",
+      "stem": "How many binary digits are contained in 10MB of a memory stick?",
+      "options": {
+        "A": "10x 1024",
+        "B": "10x 1024 x8",
+        "C": "10 x 1024 x 1024",
+        "D": "10 x 1024 x 1024 x 8"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0420",
+      "type": "mcq",
+      "stem": "A student would require the following devices to online application form except?",
+      "options": {
+        "A": "keyboard",
+        "B": "mouse",
+        "C": "printer",
+        "D": "webcam"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0421",
+      "type": "mcq",
+      "stem": "The program that is loaded into a special area on a microprocessor or ROM on a one-time basis and becomes part of the hardware is called?",
+      "options": {
+        "A": "firmware",
+        "B": "liveware",
+        "C": "software",
+        "D": "utility"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0422",
+      "type": "mcq",
+      "stem": "Thy following programs are general purpose application software except",
+      "options": {
+        "A": "corel draw",
+        "B": "payroll system",
+        "C": "Ms software",
+        "D": "MS word"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0423",
+      "type": "mcq",
+      "stem": "One similarity between be spoke software and application packages is that they are?",
+      "options": {
+        "A": "both available off the shelf",
+        "B": "highly standardized",
+        "C": "both written by computer users",
+        "D": "meant to be used by computer end users"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0424",
+      "type": "mcq",
+      "stem": "The process of testing the logic of algorithm to ensure they give correct result is known as ?",
+      "options": {
+        "A": "debbuging",
+        "B": "desk checking",
+        "C": "flow charting",
+        "D": "pseudo coding"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0425",
+      "type": "mcq",
+      "stem": "The following instructions are guidelines for drawing flowcharts except that?",
+      "options": {
+        "A": "flowcharts must have a logical start and finish",
+        "B": "it should follow a direction of left to right or top to bottom",
+        "C": "it should follow a direction of right to left or bottom to top",
+        "D": "it should be clear, neat and easy to follow"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0426",
+      "type": "mcq",
+      "stem": "Key skills of a system analyst include the following except",
+      "options": {
+        "A": "ability to troubleshoot",
+        "B": "interest in learning new skills",
+        "C": "motivational skills",
+        "D": "proficiency in programming languages"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0427",
+      "type": "mcq",
+      "stem": "The result of the expression 2 * 6 + 2/4 * 2 * 4^2",
+      "options": {
+        "A": "21",
+        "B": "27",
+        "C": "28",
+        "D": "29"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0428",
+      "type": "mcq",
+      "stem": "he QBASIC statement LETX=Y-3 means",
+      "options": {
+        "A": "the variables X and Y both receive the value 3",
+        "B": "the variable X receives the value3.",
+        "C": "the variable X receives the value of Y less 3",
+        "D": "an error message has occured due to type mismatch"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0429",
+      "type": "mcq",
+      "stem": "The virtual communication platform where many people keep in contact with family and friends is known as",
+      "options": {
+        "A": "microsoft visio",
+        "B": "social engineering",
+        "C": "cyberspace",
+        "D": "virtual reality"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0430",
+      "type": "mcq",
+      "stem": "The protocol used for email transmission is known as ?",
+      "options": {
+        "A": "HTTP",
+        "B": "DHCP",
+        "C": "IP",
+        "D": "SMTP"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0431",
+      "type": "mcq",
+      "stem": "In the URL https://waec.org.ng, the domain name is?",
+      "options": {
+        "A": "waec.org.ng",
+        "B": "http://www.",
+        "C": "//www/.waec.",
+        "D": "org.ng."
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0432",
+      "type": "mcq",
+      "stem": "The maximum length of a text field in MS Access is?",
+      "options": {
+        "A": "75",
+        "B": "120",
+        "C": "255",
+        "D": "265"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0433",
+      "type": "mcq",
+      "stem": "One function of operating system is ?",
+      "options": {
+        "A": "power supply allocation",
+        "B": "file corruption and deletion",
+        "C": "flowcharting",
+        "D": "resource allocation"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0434",
+      "type": "mcq",
+      "stem": "Which of the following operations will not run a slide show in MS PowerPoint?",
+      "options": {
+        "A": "pressing F5",
+        "B": "pressing shift +f5",
+        "C": "choosing the slide show tab",
+        "D": "clicking on the slide show icon bar"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0435",
+      "type": "mcq",
+      "stem": "What will be the result of writing the formula=year[now[][  + 3 in a worksheet,of a spread sheet,if the current calendar is 14 august ,1960?",
+      "options": {
+        "A": "17 august 196003",
+        "B": "14 aug,1963",
+        "C": "11 august,1963",
+        "D": "1963"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0436",
+      "type": "mcq",
+      "stem": "The pictorial representation of an object or application in the computer is called?",
+      "options": {
+        "A": "diagram",
+        "B": "graphic",
+        "C": "Icon",
+        "D": "image"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0437",
+      "type": "mcq",
+      "stem": "Deleted items in the computers are temporarily stored in the?",
+      "options": {
+        "A": "memory unit",
+        "B": "processor",
+        "C": "recycle bin",
+        "D": "task manager"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0438",
+      "type": "mcq",
+      "stem": "The keyboard key combination ALT + F4 in microsoft windows will",
+      "options": {
+        "A": "close active programmes",
+        "B": "open a file",
+        "C": "restart the computer",
+        "D": "Select two stages of booting from the following list"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0439",
+      "type": "mcq",
+      "stem": "Select two stages of booting from the following list:\ni. Power on Self Test;\nii.  Loading of Operating System; \niii.  Loading of e-mails;\niv.  Start in safe mode.\niv. Save all active files",
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and IV only",
+        "D": "III and IV only"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0440",
+      "type": "mcq",
+      "stem": "In number system ,base 16 is called ?",
+      "options": {
+        "A": "hexadecimal",
+        "B": "decimal",
+        "C": "duodecimal",
+        "D": "octal"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0441",
+      "type": "mcq",
+      "stem": "Add 127\\(_{16}\\) to  50A\\(_{16}\\)",
+      "options": {
+        "A": "629\\(_{16}\\)",
+        "B": "630\\(_{16}\\)",
+        "C": "631\\(_{16}\\)",
+        "D": "632\\(_{16}\\)"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0442",
+      "type": "mcq",
+      "stem": "The process of restarting a computer is known as ________",
+      "options": {
+        "A": "Cold booting",
+        "B": "Warm booting",
+        "C": "Resume booting",
+        "D": "Restart booting"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0443",
+      "type": "mcq",
+      "stem": "Evaluate the BASIC statement:\nLET Z = 4*W^2  + 2*Y\n\nGiven that W = 5 and Y = 10",
+      "options": {
+        "A": "50",
+        "B": "80",
+        "C": "100",
+        "D": "120"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0444",
+      "type": "mcq",
+      "stem": "Given that 26 \\(_10\\) = X \\(_2\\), X is _________",
+      "options": {
+        "A": "11011",
+        "B": "11010",
+        "C": "11110",
+        "D": "10111"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0445",
+      "type": "mcq",
+      "stem": "In hexadecimal number system, B, D, E represent_________",
+      "options": {
+        "A": "11, 12, 13 respectively",
+        "B": "11, 13, 14 respectively",
+        "C": "13, 14, 15 respectively",
+        "D": "14, 16, 17 respectively"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0446",
+      "type": "mcq",
+      "stem": "The conversion of 11001 \\(_2\\) to base 10 equals_______",
+      "options": {
+        "A": "30",
+        "B": "28",
+        "C": "25",
+        "D": "20"
+      },
+      "marks": 1,
+      "year": 2014
+    },
+    {
+      "id": "waec-computer-studies-bank-0447",
+      "type": "mcq",
+      "stem": "Sequential files are?",
+      "options": {
+        "A": "sorted using index",
+        "B": "sorted in a particular order",
+        "C": "stored as they come",
+        "D": "stored in any storage media"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0448",
+      "type": "mcq",
+      "stem": "Serial files are",
+      "options": {
+        "A": "stored using a key",
+        "B": "sorted in a particular order",
+        "C": "stored as they come",
+        "D": "stored in any storage media"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0449",
+      "type": "mcq",
+      "stem": "Duplicating copyrighted electronic or digital content without the authors approval is considered?",
+      "options": {
+        "A": "felonious",
+        "B": "ethical",
+        "C": "treasonable",
+        "D": "unethical"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0450",
+      "type": "mcq",
+      "stem": "Ethical practice requires a computer user to",
+      "options": {
+        "A": "shutdown properly",
+        "B": "hack into other peoples computer",
+        "C": "intrude into peoples privacy",
+        "D": "copy software without the license"
+      },
+      "marks": 1,
+      "year": 2022
+    },
+    {
+      "id": "waec-computer-studies-bank-0451",
+      "type": "mcq",
+      "stem": "An advantage of bus topology over star topology is that",
+      "options": {
+        "A": "it is stronger than star topology.",
+        "B": "it is more expensive than star topology.",
+        "C": "its component are easily removed compared to star topology.",
+        "D": "it requires less cable length than star topology"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0452",
+      "type": "mcq",
+      "stem": "The transmission method that allows data transmission to multiple computers on a network without addressing all the computers is called",
+      "options": {
+        "A": "unicast",
+        "B": "broadcast",
+        "C": "multicast",
+        "D": "switch"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0453",
+      "type": "mcq",
+      "stem": "The main distinguishing feature of fifth generation computers is",
+      "options": {
+        "A": "artificial intelligence.",
+        "B": "versatility.",
+        "C": "extremely low cost.",
+        "D": "liberal use of microprocessors."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0454",
+      "type": "mcq",
+      "stem": "Machine language instruction codes are expressed in",
+      "options": {
+        "A": "hexadecimal",
+        "B": "EBCDIC",
+        "C": "ASCII",
+        "D": "binary"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0455",
+      "type": "mcq",
+      "stem": "A wait state of zero in hardware means the",
+      "options": {
+        "A": "memory is faster than the processor in terms of speed.",
+        "B": "processor speed is higher than that of the memory.",
+        "C": "processor speed is lower than that of the memory.",
+        "D": "processor and the memory are equally matched in speed."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0456",
+      "type": "mcq",
+      "stem": "The following are effects of file insecurities except",
+      "options": {
+        "A": "file corruption.",
+        "B": "data use.",
+        "C": "data loss.",
+        "D": "data overwriting."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0457",
+      "type": "mcq",
+      "stem": "The commands used for adding comments in QBASIC programming is",
+      "options": {
+        "A": "PRINT",
+        "B": "REM",
+        "C": "CLS.",
+        "D": "INPUT"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0458",
+      "type": "mcq",
+      "stem": "Which of the following IP addresses can be used to access a locally running website on a user's computer?",
+      "options": {
+        "A": "127.1.0.1",
+        "B": "127.0.0.1",
+        "C": "1.172.0.0",
+        "D": "172.0.0.0"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0459",
+      "type": "mcq",
+      "stem": "The BCD equivalent of 135 is",
+      "options": {
+        "A": "100110101",
+        "B": "001011101",
+        "C": "000100110101",
+        "D": "111101"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0460",
+      "type": "mcq",
+      "stem": "A good algorithm must be",
+      "options": {
+        "A": "detailed and verbose.",
+        "B": "sequential and lengthy.",
+        "C": "consistent and continuous.",
+        "D": "concise and finite."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0461",
+      "type": "mcq",
+      "stem": "The central processing unit consists of",
+      "options": {
+        "A": "control unit, primary storage and secondary storage.",
+        "B": "input, output and processing.",
+        "C": "control unit, arithmetic logic unit and primary storage.",
+        "D": "control unit, processing and primary storage."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0462",
+      "type": "mcq",
+      "stem": "The technology used for first generation computers was",
+      "options": {
+        "A": "integrated circuit.",
+        "B": "microprocessors",
+        "C": "transistors.",
+        "D": "vacuum tubes."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0463",
+      "type": "mcq",
+      "stem": "The LET statement in QBASIC",
+      "options": {
+        "A": "allows users to assign a value to a variable.",
+        "B": "allows the users to enter data into the computer during program execution.",
+        "C": "checks the errors within the code.",
+        "D": "allows the users to enter data into the computer from"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0464",
+      "type": "mcq",
+      "stem": "The first attempt at using the punch card principle to do mathematical calculations led to the invention of",
+      "options": {
+        "A": "Napier’s bone",
+        "B": "Charles Babbage Analytical Engine",
+        "C": "Charles Babbage Difference Engine",
+        "D": "Abacus"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0465",
+      "type": "mcq",
+      "stem": "The radix of hexadecimal number system is",
+      "options": {
+        "A": "10",
+        "B": "2",
+        "C": "16",
+        "D": "8"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0466",
+      "type": "mcq",
+      "stem": "A file organization in which the records are stored in the order in which they occur is called",
+      "options": {
+        "A": "indexed file.",
+        "B": "serial file.",
+        "C": "sequential file.",
+        "D": "random file."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0467",
+      "type": "mcq",
+      "stem": "The process of converting data into information is known as data",
+      "options": {
+        "A": "collation",
+        "B": "processing",
+        "C": "analysis",
+        "D": "collection"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0468",
+      "type": "mcq",
+      "stem": "A BIOS configuration program that allows a windows user to configure attributes such as password, time and date is called",
+      "options": {
+        "A": "GRUB",
+        "B": "Bootstrap",
+        "C": "CMOS setup.",
+        "D": "BIOS drivers."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0469",
+      "type": "mcq",
+      "stem": "The software responsible for allocating and managing system resources is called",
+      "options": {
+        "A": "utility software.",
+        "B": "driver",
+        "C": "translator.",
+        "D": "operating system."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0470",
+      "type": "mcq",
+      "stem": "Which of the following commands can be used to switch between open window?",
+      "options": {
+        "A": "Alt + F4",
+        "B": "Alt + Tab",
+        "C": "Ctrl + F",
+        "D": "Ctrl + D"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0471",
+      "type": "mcq",
+      "stem": "During the booting process in Windows, the Master Boot Record is loaded by the",
+      "options": {
+        "A": "BIOS .",
+        "B": "Init.",
+        "C": "Kernel",
+        "D": "GRUB"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0472",
+      "type": "mcq",
+      "stem": "The set of instructions used to solve specific user tasks is called",
+      "options": {
+        "A": "editor",
+        "B": "utility software.",
+        "C": "system software",
+        "D": "application software."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0473",
+      "type": "mcq",
+      "stem": "Personalized form of letters which can be sent to many people can be achieved using",
+      "options": {
+        "A": "template.",
+        "B": "mail merge.",
+        "C": "query",
+        "D": "macros"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0474",
+      "type": "mcq",
+      "stem": "An input device that converts an image into a text is known as",
+      "options": {
+        "A": "scanner.",
+        "B": "optical mark reader.",
+        "C": "barcode reader.",
+        "D": "optical character reader."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0475",
+      "type": "mcq",
+      "stem": "Which of the following QBASIC arithmetic operations is the last in order of precedence?",
+      "options": {
+        "A": "Subtraction",
+        "B": "Addition",
+        "C": "Division",
+        "D": "Exponentiation"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0476",
+      "type": "mcq",
+      "stem": "The command used to seek for assistance in Microsoft disk operating system is",
+      "options": {
+        "A": "Attrib",
+        "B": "/S",
+        "C": "/?",
+        "D": "Helper."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0477",
+      "type": "mcq",
+      "stem": "Which of the following is an example of information?",
+      "options": {
+        "A": "Recorded observation",
+        "B": "Average score of students in a test",
+        "C": "List of items",
+        "D": "Student’s score in a test"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0478",
+      "type": "mcq",
+      "stem": "The usage of the keys CTRL + W in Ms Word",
+      "options": {
+        "A": "closes the current window.",
+        "B": "updates the current web page.",
+        "C": "opens the print dialogue box.",
+        "D": "saves the current file."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0479",
+      "type": "mcq",
+      "stem": "The speed of data transfer can be affected by the following factors except",
+      "options": {
+        "A": "address bus width.",
+        "B": "broadband status.",
+        "C": "data bus width.",
+        "D": "clock speed."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0480",
+      "type": "mcq",
+      "stem": "Which of the following data is alpha-numeric?",
+      "options": {
+        "A": "568",
+        "B": "10.00",
+        "C": "SS3",
+        "D": "Twenty-five"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0481",
+      "type": "mcq",
+      "stem": "The unit of the computer system that directs and supervises other units is called the",
+      "options": {
+        "A": "memory unit.",
+        "B": "control unit.",
+        "C": "arithmetic logic unit.",
+        "D": "accumulator"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0482",
+      "type": "mcq",
+      "stem": "An opening on the motherboard of a system unit where expansion cards can be inserted is known as",
+      "options": {
+        "A": "expansion port.",
+        "B": "extension box.",
+        "C": "extension board.",
+        "D": "expansion slot."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0483",
+      "type": "mcq",
+      "stem": "Headers and footers are used in Microsoft Word documents to",
+      "options": {
+        "A": "enhance the overall appearance of the document.",
+        "B": "allow text to appear at the top and bottom of every page.",
+        "C": "make large document more readable.",
+        "D": "allow test to appear at the top of the first page."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0484",
+      "type": "mcq",
+      "stem": "If today's date is 02/02/2008, what will be the result of typing \"=today() - 1\" in a cell of a spreadsheet?",
+      "options": {
+        "A": "02/01/2008",
+        "B": "01/02/2009",
+        "C": "01/02/2008",
+        "D": "02/02/2007"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0485",
+      "type": "mcq",
+      "stem": "The act of translating data into a secret code is known as",
+      "options": {
+        "A": "piracy.",
+        "B": "encryption.",
+        "C": "authentication.",
+        "D": "authorization."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0486",
+      "type": "mcq",
+      "stem": "The https in the web address, https://waec.org.ng, is called a",
+      "options": {
+        "A": "web page.",
+        "B": "protocol.",
+        "C": "hostname.",
+        "D": "file path."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0487",
+      "type": "mcq",
+      "stem": "The process of transferring a file from a server to a computer is called",
+      "options": {
+        "A": "pinging",
+        "B": "browsing.",
+        "C": "downloading.",
+        "D": "uploading."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0488",
+      "type": "mcq",
+      "stem": "The following are functions of database management system except",
+      "options": {
+        "A": "format operation.",
+        "B": "rule enforcement.",
+        "C": "security of data.",
+        "D": "backup and replication."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0489",
+      "type": "mcq",
+      "stem": "Input devices are computer devices that can",
+      "options": {
+        "A": "send data and instructions into the computer memory.",
+        "B": "be used to get data from the computer.",
+        "C": "send results to the memory of the computer.",
+        "D": "receive data and instructions from the computer memory."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0490",
+      "type": "mcq",
+      "stem": "Viruses, worms and Trojan horses are regarded as",
+      "options": {
+        "A": "system software.",
+        "B": "malicious software.",
+        "C": "application software.",
+        "D": "utility software."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0491",
+      "type": "mcq",
+      "stem": "Which of the following actions is not an animation in Microsoft PowerPoint?",
+      "options": {
+        "A": "Entrance",
+        "B": "Emphasis",
+        "C": "Motion paths",
+        "D": "Dancing"
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0492",
+      "type": "mcq",
+      "stem": "The database model that uses tables with columns and rows is called",
+      "options": {
+        "A": "hierarchical database.",
+        "B": "relational database.",
+        "C": "network database.",
+        "D": "linear database."
+      },
+      "marks": 1,
+      "year": 2023
+    },
+    {
+      "id": "waec-computer-studies-bank-0493",
+      "type": "mcq",
+      "stem": "Datatypes in QBASIC programming language include the following except",
+      "options": {
+        "A": "double",
+        "B": "short",
+        "C": "float.",
+        "D": "long."
+      },
+      "marks": 1,
+      "year": 2023
+    }
+  ],
+  "category": "secondary",
+  "body": "WAEC"
+}

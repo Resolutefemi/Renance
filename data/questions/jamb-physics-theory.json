@@ -1,0 +1,109 @@
+{
+  "code": "jamb-physics-theory",
+  "title": "JAMB Physics | Theory & Model Answers",
+  "version": 1,
+  "questionCount": 14,
+  "totalMarks": 14,
+  "questions": [
+    {
+      "id": "jamb-physics-theory-0001",
+      "type": "theory",
+      "stem": "Explain the rise of water in a glass capillary tube using the kinetic theory.",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0002",
+      "type": "theory",
+      "stem": "(a) What is diffusion?\n(b) State two factors which affect the rate of diffusion.",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0003",
+      "type": "theory",
+      "stem": "(a) Explain elasticity of a substance.\n(b) Define elastic constant.",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0004",
+      "type": "theory",
+      "stem": "(a) Define horizontal range of a projectile.\n(b) The horizontal range, R, of a projectile is given by the equation R = \\(\\frac{u^2 sin 2\\theta}{g}\\)\n(i) what does \\(\\theta\\) in the equation represent?\n(ii) for what value of \\(\\theta\\) would R be maximum?",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0005",
+      "type": "theory",
+      "stem": "Explain the action of direct electric current in an electrolytic process with a dilute solution of sodium chloride as electrolyte",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0006",
+      "type": "theory",
+      "stem": "(a) What is meant by;\n(i) anode;\n(ii) cathode, as used in electrolysis?\n(b) List the ions involved in an electrolytic process with dilute tetraoxosulphate (VI) acid as electrolyte",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0007",
+      "type": "theory",
+      "stem": "(a) Explain how neon signs can be produced.\n(b) State two factors on which the colour of light from a fluorescent tube depend.",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0008",
+      "type": "theory",
+      "stem": "Explain why a direct electric current is used instead of an alternating current in electroplating.",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0009",
+      "type": "theory",
+      "stem": "(a) (i) What is meant by a machine?\n(ii) List two examples of a simple machine.\n(iii) Explain the statement — the velocity ratio of a machine is 5.\n(b) (i) Define the efficiency of a machine.\n(ii) Explain why a machine can never be 100% efficient.\n(c) A screw jack, 25% efficient and having a screw of pitch 0.4 cm is used to raise a load through a certain height. If in the process, the handle turns through a circle of radius 40.0 cm, calculate the;\n(i) velocity ratio of the machine; (ii) mechanical advantage of the machine; (iii) effort required to raise a load of 1000 N with the machine. [Take \\(\\pi\\) =3.14]",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0010",
+      "type": "theory",
+      "stem": "(a) (i) Define relative density.\n(ii) List three characteristics of pressure in a liquid.\n(b) The horizontal door of a submarine at a depth of 500m has an area of 0.4m\\(^{2}\\). Calculate the force exerted by the sea water on the door at this depth. [Relative density of sea water = 1.03 ] [Atmospheric pressure =- 1.01 x 10\\(^{5}\\) Nm\\(^{-2}\\)] [Density of pure water = 1000kgm\\(^{-3}\\)] [g = 10ms\\(^{-2}\\)]\n(c) (i) List three effects of heat other than expansion.\n(ii) Explain saturated vapour pressure.\n(iii) A heating coil of resistance 20 \\(\\Omega\\) connected to a 220 V source is used to boil a certain quantity of water in a container of heat capacity 100 J kg\\(^{-1}\\) for 2 minutes. If the initial temperature of the water is 40° C, calculate the mass of the water in the container. [specific heat capacity of water = 4.2 x 10\\(^3\\) Jkg\\(^{-1}\\) K\\(^{-1}\\)] [assume boiling point of water = 100°C]",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0011",
+      "type": "theory",
+      "stem": "(a) State Heisenberg's uncertainty principle\n(b) mention two phenomena that can only be explained in terms of the particulate nature of light",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0012",
+      "type": "theory",
+      "stem": "(a) Define the following terms as applied to a convex mirror:\n(i) principal focus; (ii) pole (iii) radius of curvature.\n(b) State one advantage and one disadvantage of using a convex mirror as a driving mirror.\n(c) Draw a clearly labelled diagram to illustrate how two converging lenses may be arranged to form a compound microscope.\n(d) An object 2.5 mm long is viewed through a converging lens of focal length 10.0 cm held close to the eye. A magnified image of the object is formed 30.0 cm from the lens. Calculate the:\n(i) distance of the object from the lens; (ii) size of the image; (iii) power of the lens.",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0013",
+      "type": "theory",
+      "stem": "(a) Define: (i) reactance; (ii) impedance.\n(b)(i) Explain resonant frequency of an RLC circuit.\n(ii) Explain the statement — the power supply voltage of a source is 230V\n(c) A source of e.m.f 240V and frequency 50 Hz is connected to a series arrangement of a resistor, an inductor and a capacitor. When the current in the capacitor is 10A, the potential difference across the resistor is 140 V and that across the inductor is 50 V. Calculate the:\n(i) potential difference across the capacitor (ii) capacitance of the capacitor; (iii) inductance of the indicator.\n(d) Draw and label one vector diagram for the potential differences across the inductor, the capacitor and the resistor in (c) above.",
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "jamb-physics-theory-0014",
+      "type": "theory",
+      "stem": "(a) Explain: (i) nuclear fission; (ii) nuclear fusion.\n(b)(i) State three applications of atomic energy.\n(ii) Define State. life.\n(iii) Give the expression that relates the halflife, T, and the decay constant, X, of a radioactive material.\n(c) A radioactive element X with atomic number 88 and mass number 226 emits in succession:\n(i) an alpha particle, (ii) a beta particle and (iii) gamma radiation. Explain, using equations where necessary, the changes that take place in the atomic structure of the element at each stage.",
+      "marks": 1,
+      "year": 2002
+    }
+  ],
+  "category": "secondary",
+  "body": "JAMB"
+}

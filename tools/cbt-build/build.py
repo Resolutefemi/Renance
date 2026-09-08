@@ -51,6 +51,37 @@ def norm_text(s: str) -> str:
     return re.sub(r"\s+", " ", str(s).strip().lower())
 
 
+def load_syllabus_topics() -> dict[str, set[str]]:
+    """body name -> the set of topic names that appear in its tree."""
+    trees: dict[str, set[str]] = {}
+    sy_dir = REPO / "data" / "syllabus"
+    for p in sorted(sy_dir.glob("*.json")):
+        try:
+            sy = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            continue
+        body = str(sy.get("body") or "").strip()
+        topics: set[str] = set()
+        for s in sy.get("subjects", []) or []:
+            for sec in (s.get("sections") or []):
+                for t in (sec.get("topics") or []):
+                    if str(t).strip():
+                        topics.add(str(t).strip())
+        if body:
+            trees[body] = topics
+    return trees
+
+
+SYLLABUS_TOPICS = load_syllabus_topics()
+
+
+def syllabus_ok(body: str, topic: str) -> bool:
+    t = str(topic or "").strip()
+    if not t:
+        return False
+    return t in SYLLABUS_TOPICS.get(str(body or "").strip(), set())
+
+
 def code_from_filename(path: Path) -> str:
     stem = re.sub(r"\.json$", "", path.name, flags=re.I)
     stem = re.sub(r"_(questions|500|objectives)$", "", stem, flags=re.I)
@@ -140,6 +171,7 @@ def main() -> int:
             questions = data if isinstance(data, list) else data.get("questions", [])
             code = str(data.get("code")) if isinstance(data, dict) and data.get("code") else code_from_filename(path)
             title = (data.get("title") or data.get("course") or code) if isinstance(data, dict) else code
+            data_body = str(data.get("body") or "") if isinstance(data, dict) else ""
             duration = data.get("durationMinutes") if isinstance(data, dict) else None
             if isinstance(data, dict) and data.get("duration_minutes") and not duration:
                 duration = data["duration_minutes"]
@@ -158,13 +190,24 @@ def main() -> int:
                     continue
                 style, options = extract_options(q)
                 letter, accepted, err = extract_answer(q, options)
-                if err and accepted is None:
+                src_type = str(q.get("type") or "").strip().lower()
+                if src_type == "theory" and not options:
+                    # Essay question from the harvest: no options, no auto
+                    # answer — the sealed key carries the model answer.
+                    qtype = "theory"
+                    letter, accepted = None, []
+                    err = None
+                if err and accepted is None and qtype != "theory":
                     entry["dropped"].append({"index": i, "reason": err})
                     continue
 
-                qtype = "mcq" if options else "text"
+                if src_type != "theory":
+                    qtype = "mcq" if options else "text"
                 if qtype == "text" and not accepted:
                     entry["dropped"].append({"index": i, "reason": "text question without accepted answers"})
+                    continue
+                if qtype == "theory" and not str(q.get("explanation") or "").strip():
+                    entry["dropped"].append({"index": i, "reason": "theory question without model answer"})
                     continue
 
                 qid = str(q.get("id") or f"{code}-{i + 1:04d}")
@@ -184,14 +227,25 @@ def main() -> int:
                     "stem": stem,
                     **({"options": options} if qtype == "mcq" else {}),
                     "marks": int(q.get("marks") or 1),
-                    **({"topic": str(q["topic"])} if q.get("topic") else {}),
+                    # Topic passthrough is syllabus-gated: a topic that is
+                    # not in the body's tree would hard-fail the API's
+                    # boot-time validateTopics() ("Past Questions",
+                    # "Practice", ... are harvest tags, not syllabus topics).
+                    **({"topic": str(q["topic"])} if syllabus_ok(data_body, str(q.get("topic") or "")) else {}),
                     **({"difficulty": str(q["difficulty"])} if q.get("difficulty") else {}),
                     **({"year": int(q["year"])} if isinstance(q.get("year"), int) and not isinstance(q.get("year"), bool) else {}),
+                    **({"group": str(q["group"])} if q.get("group") else {}),
                 })
                 if qtype == "mcq":
                     key_answers[qid] = {"type": "mcq", "letter": letter,
                                         **({"explanation": str(q["explanation"])} if q.get("explanation") else {})}
                     entry["mcq"] += 1
+                elif qtype == "theory":
+                    # Essay question: self-assessed, model answer lives ONLY
+                    # in the sealed key. Never auto-scored (grading skips it).
+                    key_answers[qid] = {"type": "theory", "letter": "",
+                                        **({"explanation": str(q["explanation"])} if q.get("explanation") else {})}
+                    entry["theory"] = entry.get("theory", 0) + 1
                 else:
                     key_answers[qid] = {"type": "text", "accepted": accepted}
                     entry["text"] += 1
@@ -240,12 +294,15 @@ def main() -> int:
     for f in sorted(QUESTIONS_DIR.glob("*.json")):
         b = json.loads(f.read_text(encoding="utf-8"))
         raw = f.read_bytes()
+        years = sorted({int(q["year"]) for q in b.get("questions", [])
+                        if isinstance(q.get("year"), int) and not isinstance(q.get("year"), bool)})
         exams.append({
             "code": b["code"], "title": b.get("title", b["code"]),
             "questionCount": b["questionCount"], "totalMarks": b.get("totalMarks", 0),
             **({"durationMinutes": b["durationMinutes"]} if b.get("durationMinutes") else {}),
             **({"category": b["category"]} if b.get("category") else {}),
             **({"body": b["body"]} if b.get("body") else {}),
+            **({"years": years} if years else {}),
             "bundleSha256": hashlib.sha256(raw).hexdigest(),
             "sizeBytes": len(raw),
         })
@@ -259,7 +316,7 @@ def main() -> int:
 
     for entry in report:
         status = "ok" if entry["kept"] else "EMPTY"
-        print(f"{entry['file']}: kept={entry['kept']} mcq={entry['mcq']} text={entry['text']} "
+        print(f"{entry['file']}: kept={entry['kept']} mcq={entry['mcq']} text={entry['text']} theory={entry.get('theory', 0)} "
               f"dropped={len(entry['dropped'])} [{status}]")
         for drop in entry["dropped"][:5]:
             print(f"   dropped #{drop['index']}: {drop['reason']}")

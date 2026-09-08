@@ -1,0 +1,4866 @@
+{
+  "code": "neco-biology-bank",
+  "title": "NECO Biology | Past Questions Bank",
+  "version": 1,
+  "questionCount": 347,
+  "totalMarks": 347,
+  "questions": [
+    {
+      "id": "neco-biology-bank-0001",
+      "type": "mcq",
+      "stem": "The streaming movement of cytoplasm observed in a freshly cut leaf of a water plant is termed",
+      "options": {
+        "A": "amoeboids",
+        "B": "centrifugal motion",
+        "C": "ciliary motion",
+        "D": "cyclosis",
+        "E": "osmosis"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0002",
+      "type": "mcq",
+      "stem": "Which of the following sequences best illustrates a food chain in an aquatic habitat ?",
+      "options": {
+        "A": "algae → fungi → toad → snake",
+        "B": "diatoms → tadpole → fish → kingfisher",
+        "C": "grass → grasshopper → toad → whale",
+        "D": "phytoplankton → fish → snake → kingfisher",
+        "E": "zooplankton → tadpoles → fish → kingfisher"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0003",
+      "type": "mcq",
+      "stem": "The process which ensures that the chromosome number for each species of organism remains constant from generation to generation is called",
+      "options": {
+        "A": "fission",
+        "B": "fusion",
+        "C": "meiosis",
+        "D": "mitosis",
+        "E": "oogenesis"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0004",
+      "type": "mcq",
+      "stem": "Which of these pairs best illustrates symbiotic association?",
+      "options": {
+        "A": "dodder on green plants",
+        "B": "ferns growing on palm trees",
+        "C": "lice on hair of mammals",
+        "D": "sea anemone attached to hermit crab",
+        "E": "tick found on body of cow"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0005",
+      "type": "mcq",
+      "stem": "Which statement about decomposers is NOT true?",
+      "options": {
+        "A": "They are saprophytes",
+        "B": "They carry on intra-cellular digestion",
+        "C": "They facilitate the cleansing of the environment",
+        "D": "They facilitate the recycling of nutrients",
+        "E": "They form a link between autotrophs and heterotrophs"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0006",
+      "type": "mcq",
+      "stem": "Which part of the brain regulates and co-ordinates muscular movements?",
+      "options": {
+        "A": "Cerebellum",
+        "B": "Cerebrum",
+        "C": "Hypothalamus",
+        "D": "Medulla oblongata",
+        "E": "ThaIamus"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0007",
+      "type": "mcq",
+      "stem": "Bacteria; which derive energy by oxidizing certain inorganic compounds, are said to be",
+      "options": {
+        "A": "Chemosynthetic",
+        "B": "Holozoic",
+        "C": "Parasitic",
+        "D": "Photosynthetic",
+        "E": "Saprophytic"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0008",
+      "type": "mcq",
+      "stem": "Which is the most ecologically viable method of insect pest control?",
+      "options": {
+        "A": "Draining all stagnant pools of water",
+        "B": "Eliminating one of the development stages of the insect",
+        "C": "Employing a lot of labourers to physically handpick the insect pests",
+        "D": "Erecting physical barriers against insect pests",
+        "E": "Using stronger insecticides which can kill a greater number of insect."
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0009",
+      "type": "mcq",
+      "stem": "Which is NOT an effect of the food shortage on a population?",
+      "options": {
+        "A": "Cannibalism",
+        "B": "Competition",
+        "C": "Increase in mortality",
+        "D": "Increase in natality",
+        "E": "migration"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0010",
+      "type": "mcq",
+      "stem": "Which pollutant is likely to cause cholera?",
+      "options": {
+        "A": "agricultural wastes",
+        "B": "industrial wastes",
+        "C": "nuclear fallouts",
+        "D": "oil spillages",
+        "E": "untreated sewage"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0011",
+      "type": "mcq",
+      "stem": "The gradient of land can be measured with an instrument called a/an",
+      "options": {
+        "A": "Aneroid barometer",
+        "B": "Hygrometer",
+        "C": "Metre rule",
+        "D": "Secchi disc",
+        "E": "Slope gauge"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0012",
+      "type": "mcq",
+      "stem": "What is NOT a reflex action?",
+      "options": {
+        "A": "Blinking of an eye",
+        "B": "Jerking of the knee",
+        "C": "Leaning",
+        "D": "Salivating",
+        "E": "Sneezing"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0013",
+      "type": "mcq",
+      "stem": "What is NOT a kidney disease?",
+      "options": {
+        "A": "Cirrhosis",
+        "B": "Kidney stones",
+        "C": "Nephritis",
+        "D": "Uraemia",
+        "E": "Wilm’s tumour"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0014",
+      "type": "mcq",
+      "stem": "Which is a morphological variation",
+      "options": {
+        "A": "Ability to taste PTC",
+        "B": "Ability to roll the tongue",
+        "C": "Behaviour",
+        "D": "Blood group",
+        "E": "Finger print"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0015",
+      "type": "mcq",
+      "stem": "Which one is NOT an essential part of a flower?",
+      "options": {
+        "A": "Anther",
+        "B": "Filament",
+        "C": "Ovary",
+        "D": "Petal",
+        "E": "Stigma"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0016",
+      "type": "mcq",
+      "stem": "Evidence of organic evolution can be deduced from all the following EXCEPT",
+      "options": {
+        "A": "Antecology",
+        "B": "Comparative anatomy",
+        "C": "Embryology",
+        "D": "Fossil records",
+        "E": "Geographical distribution"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0017",
+      "type": "mcq",
+      "stem": "What is NOT an abiotic factor?",
+      "options": {
+        "A": "Humidity",
+        "B": "predators",
+        "C": "temperature",
+        "D": "turbidity",
+        "E": "wind"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0018",
+      "type": "mcq",
+      "stem": "The instrument used to measure the rate of transpiration in plants is called a/an",
+      "options": {
+        "A": "Anemometer",
+        "B": "Barometer",
+        "C": "Hydrometer",
+        "D": "Photomer",
+        "E": "Potometer"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0019",
+      "type": "mcq",
+      "stem": "What percentage of oxygen is contained in exhaled air?",
+      "options": {
+        "A": "21%",
+        "B": "16%",
+        "C": "4%",
+        "D": "0.04%",
+        "E": "Less than 0.01%"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0020",
+      "type": "mcq",
+      "stem": "The structure that hydra uses to immobilize its prey is called",
+      "options": {
+        "A": "Enteron",
+        "B": "Osteoblasts",
+        "C": "Osteocysts",
+        "D": "nematocysts",
+        "E": "Pneumatophores."
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0021",
+      "type": "mcq",
+      "stem": "Which statement about a nerve cell is NOT correct?",
+      "options": {
+        "A": "Sensory neurones have their cell bodies in the ganglia along dorsal wall",
+        "B": "The axon conduct impulses away from the cell body",
+        "C": "The cell body consists of the nucleus and cytoplasm.",
+        "D": "The cell bodies of the motor neurones are located in the white matter of the spinal cord.",
+        "E": "The dendrites transmit impulses towards the cell body"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0022",
+      "type": "mcq",
+      "stem": "Under secretion of thyroxine before maturity causes an abnormality known as",
+      "options": {
+        "A": "Cretinism",
+        "B": "Gigantism",
+        "C": "Dwarfism",
+        "D": "Myxoedema",
+        "E": "Obesity"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0023",
+      "type": "mcq",
+      "stem": "Which is NOT a carnivorous plant?",
+      "options": {
+        "A": "Bladderwort",
+        "B": "Dodder plant",
+        "C": "Drosera",
+        "D": "Pitcher plant",
+        "E": "Venus flytrap"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0024",
+      "type": "mcq",
+      "stem": "Relative humidity can be measured with a/an",
+      "options": {
+        "A": "Anemometer",
+        "B": "Barometer",
+        "C": "Hydrometer",
+        "D": "Hygrometer",
+        "E": "Photometer"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0025",
+      "type": "mcq",
+      "stem": "Which element is a micro element?",
+      "options": {
+        "A": "Iron",
+        "B": "Magnesium",
+        "C": "Manganese",
+        "D": "Phosphorus",
+        "E": "Potassium."
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0026",
+      "type": "mcq",
+      "stem": "Which disease is caused by a virus?",
+      "options": {
+        "A": "Cholera",
+        "B": "Measles",
+        "C": "Tetanus",
+        "D": "Typhoid",
+        "E": "Tuberculosis"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0027",
+      "type": "mcq",
+      "stem": "The vector of the malaria parasite is the",
+      "options": {
+        "A": "female anopheles mosquito",
+        "B": "female culex mosquito",
+        "C": "male anopheles mosquito",
+        "D": "male culex mosquito"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0028",
+      "type": "mcq",
+      "stem": "Which scientist did NOT contribute to the formulation of the cell theory?",
+      "options": {
+        "A": "Isaac Newton",
+        "B": "Matthias Schleiden",
+        "C": "Robert Hooke",
+        "D": "Rudolf Virchow",
+        "E": "Theodor Schwann"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0029",
+      "type": "mcq",
+      "stem": "Which is NOT an adaptive feature of hydrophytes?",
+      "options": {
+        "A": "Air spaces in tissues for buoyancy",
+        "B": "Broad leaves to enhance transpiration",
+        "C": "Extensive root system for absorption of water",
+        "D": "Fibrous root for absorption of water",
+        "E": "Waxy cuticle on leaves to prevent wetting"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0030",
+      "type": "mcq",
+      "stem": "Which plant stores food in its roots?",
+      "options": {
+        "A": "Cassava",
+        "B": "Cocoyam",
+        "C": "Irish potato",
+        "D": "Onion",
+        "E": "Yam"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0031",
+      "type": "mcq",
+      "stem": "Which is NOT a benefit of conservation of natural resources?",
+      "options": {
+        "A": "Permits nature studies",
+        "B": "Preserves the beauty of nature",
+        "C": "Prosecutes poachers",
+        "D": "Protects endangered species",
+        "E": "Sources of revenue earning"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0032",
+      "type": "mcq",
+      "stem": "The process through which excess amino acids in the body are broken down into urea and a carbohydrate is called",
+      "options": {
+        "A": "deamination",
+        "B": "denaturation",
+        "C": "detoxication",
+        "D": "emulsification",
+        "E": "excretion"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0033",
+      "type": "mcq",
+      "stem": "The toad’s long sticky tongue is an adaptation for",
+      "options": {
+        "A": "Catching insects",
+        "B": "Conserving water",
+        "C": "Escaping from its predators",
+        "D": "Regulating, body temperature",
+        "E": "Securing mates"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0034",
+      "type": "mcq",
+      "stem": "The scientist who propounded the theory of inheritance of acquired characters via use and disuse was",
+      "options": {
+        "A": "August Weismann",
+        "B": "Charles Darwin",
+        "C": "Gregory Mendel",
+        "D": "Jean Lamarck",
+        "E": "Thomas Morgan"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0035",
+      "type": "mcq",
+      "stem": "Which plant hormone inhibits the development of lateral buds in plants",
+      "options": {
+        "A": "Abscisic acid",
+        "B": "Auxins",
+        "C": "Cytokinins",
+        "D": "Florigen",
+        "E": "gberelIins"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0036",
+      "type": "mcq",
+      "stem": "The movement of food in soluble form within the vascular bundles to all parts of the plant is known as",
+      "options": {
+        "A": "Diffusion",
+        "B": "Evaporation",
+        "C": "Transportation",
+        "D": "Translocation",
+        "E": "Transpiration"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0037",
+      "type": "mcq",
+      "stem": "The first bone of the vertebral column located in the neck region is called",
+      "options": {
+        "A": "Atlas",
+        "B": "Axis",
+        "C": "Caudal.",
+        "D": "Cervical.",
+        "E": "Thoracic"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0038",
+      "type": "mcq",
+      "stem": "A cell that is capable of self existence is a/an",
+      "options": {
+        "A": "Amoeba",
+        "B": "Human cheek cell",
+        "C": "Onion epidermal cell",
+        "D": "ovum",
+        "E": "spermatozoom"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0039",
+      "type": "mcq",
+      "stem": "Which caste is NOT found in termites?",
+      "options": {
+        "A": "Drone",
+        "B": "King",
+        "C": "Queen",
+        "D": "Soldier",
+        "E": "Worker"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0040",
+      "type": "mcq",
+      "stem": "The number of individuals of a species per unit area of the habitat can be best described as",
+      "options": {
+        "A": "Distribution",
+        "B": "Frequency",
+        "C": "Percentage cover",
+        "D": "Population size",
+        "E": "Population density"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0041",
+      "type": "mcq",
+      "stem": "The tissue which carries organic food from its site of production to all other parts of the plant is called the",
+      "options": {
+        "A": "Cambium",
+        "B": "Epidermis",
+        "C": "Phloem",
+        "D": "Sclerenchyma",
+        "E": "Xylem"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0042",
+      "type": "mcq",
+      "stem": "Soil fertility is NOT conserved by",
+      "options": {
+        "A": "continuous cropping",
+        "B": "contour ridging",
+        "C": "Crop rotation",
+        "D": "Mulching",
+        "E": "Terracing"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0043",
+      "type": "mcq",
+      "stem": "The genotype of a species with respect to a particular trait can be determined by carrying out",
+      "options": {
+        "A": "a back cross with a pure stock known to be recessive for that trait",
+        "B": "a cross between two F, generations that are heterozygous for the trait",
+        "C": "a testcross with a pure stock known to be dominant for the trait",
+        "D": "in-breeding among the members of the species",
+        "E": "out-breeding with an exotic variety of the species"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0044",
+      "type": "mcq",
+      "stem": "The vector of trypanosome is the",
+      "options": {
+        "A": "black fly",
+        "B": "cockroach",
+        "C": "house –fly",
+        "D": "mosquito",
+        "E": "Tsetse fly"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0045",
+      "type": "mcq",
+      "stem": "Which world biomes can be found in Nigeria?",
+      "options": {
+        "A": "Afro-alpine",
+        "B": "Coniferous forest",
+        "C": "Dessert",
+        "D": "Savannah",
+        "E": "Tundra"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0046",
+      "type": "mcq",
+      "stem": "The organelle which is contractile in function in Euglena is the",
+      "options": {
+        "A": "Chloroplast",
+        "B": "Eyespot",
+        "C": "Gullet",
+        "D": "Myoneme",
+        "E": "Paramylon"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0047",
+      "type": "mcq",
+      "stem": "Which organism is NOT a filter feeder?",
+      "options": {
+        "A": "Adult mosquito",
+        "B": "Copepod",
+        "C": "Mosquito larva",
+        "D": "Oyster",
+        "E": "Whale"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0048",
+      "type": "mcq",
+      "stem": "What type of association does an epiphyte on a tree trunk illustrate?",
+      "options": {
+        "A": "Cannibalism",
+        "B": "Commensalism",
+        "C": "Parasitism",
+        "D": "Saprophytism",
+        "E": "Symbiosis"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0049",
+      "type": "mcq",
+      "stem": "Which is NOT a social animal?",
+      "options": {
+        "A": "Ant",
+        "B": "Bee",
+        "C": "Butterfly",
+        "D": "Termite",
+        "E": "Wolf"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0050",
+      "type": "mcq",
+      "stem": "A pair of genes which controls a trait is described as",
+      "options": {
+        "A": "allele",
+        "B": "dominant",
+        "C": "hybrid",
+        "D": "recessive",
+        "E": "variant"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0051",
+      "type": "mcq",
+      "stem": "In genetics, test cross is used to",
+      "options": {
+        "A": "confirm the number of offspring in F1",
+        "B": "confirm the number of gametes present in parents",
+        "C": "test for heterozygosity",
+        "D": "test for X and Y chromosomes",
+        "E": "test for the phenotypic ratio"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0052",
+      "type": "mcq",
+      "stem": "What is NOT characteristic of fresh water habitats?",
+      "options": {
+        "A": "high osmotic concentration",
+        "B": "low oxygen concentration",
+        "C": "they are flooded during the rainy season",
+        "D": "temperature changes daily",
+        "E": "they have limited size-and depth"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0053",
+      "type": "mcq",
+      "stem": "Which division is NOT part of the atmosphere?",
+      "options": {
+        "A": "hydrosphere",
+        "B": "mesosphere",
+        "C": "stratosphere",
+        "D": "thermosphere",
+        "E": "troposphere"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0054",
+      "type": "mcq",
+      "stem": "A group of interacting populations in a particular habitat can be described as",
+      "options": {
+        "A": "biome",
+        "B": "biosphere",
+        "C": "community",
+        "D": "ecosystem",
+        "E": "environment"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0055",
+      "type": "mcq",
+      "stem": "Iron is mainly required by plants for_________formation.",
+      "options": {
+        "A": "Chlorophyll",
+        "B": "glucose",
+        "C": "protein",
+        "D": "nuclear",
+        "E": "nucleproteins"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0056",
+      "type": "mcq",
+      "stem": "Root pressure and the transpiration pull are biophysical processes which account for the?",
+      "options": {
+        "A": "ascent of water into leaves",
+        "B": "exchange of gases at leaf surfaces",
+        "C": "movement of manufactured food from leaves to storage tissues",
+        "D": "opening and closing of stomata",
+        "E": "Release of energy from glucose molecules"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0057",
+      "type": "mcq",
+      "stem": "An organism existing at the colonial level of life is",
+      "options": {
+        "A": "chlamydomonas",
+        "B": "euglena",
+        "C": "paramecium",
+        "D": "spirogyra",
+        "E": "volvox"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0058",
+      "type": "mcq",
+      "stem": "A common characteristic of ALL living things is",
+      "options": {
+        "A": "gametogenesis",
+        "B": "hibernation",
+        "C": "photosynthesis",
+        "D": "phototropism",
+        "E": "respiration"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0059",
+      "type": "mcq",
+      "stem": "When a student suddenly runs into a snake on a pathway, which of these chemical messengers are released ?",
+      "options": {
+        "A": "adrenaline",
+        "B": "insulin",
+        "C": "oestrogen",
+        "D": "testosterone",
+        "E": "thyroxine"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following agricultural activities has the least harmful effect on the environment ?",
+      "options": {
+        "A": "application of fertilizers",
+        "B": "practicing crop rotation",
+        "C": "practicing monocropping",
+        "D": "spraying herbicides",
+        "E": "spraying pesticides"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0061",
+      "type": "mcq",
+      "stem": "Which reagent is used to test for the presence of starch in a food substance?",
+      "options": {
+        "A": "anhydrous copper (II) sulphate",
+        "B": "Fehling’s solution",
+        "C": "iodine solution",
+        "D": "iron(III) oxide",
+        "E": "Million’s reagent"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0062",
+      "type": "mcq",
+      "stem": "The incomplete breakdown of glucose into alcohol, carbon dioxide and energy is referred to as",
+      "options": {
+        "A": "decay",
+        "B": "digestion",
+        "C": "fermentation",
+        "D": "oxidation",
+        "E": "respiration"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0063",
+      "type": "mcq",
+      "stem": "Which organism is a primary producer?",
+      "options": {
+        "A": "Cassava",
+        "B": "cricket",
+        "C": "grasshopper",
+        "D": "hawk",
+        "E": "lizard"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0064",
+      "type": "mcq",
+      "stem": "Which is NOT an example of bacteria?",
+      "options": {
+        "A": "bacilli",
+        "B": "cocci",
+        "C": "diplococci",
+        "D": "spirilli",
+        "E": "sporangia"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0065",
+      "type": "mcq",
+      "stem": "The pro-condition for transfusion of blood to an accident victim is",
+      "options": {
+        "A": "assess the level of blood lost",
+        "B": "boil the blood before transfusion",
+        "C": "cross-match the victims and donor blood groups",
+        "D": "mix the blood to be donated with sulphur",
+        "E": "remove the remaining blood from the accident victim before transfusing the blood"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0066",
+      "type": "mcq",
+      "stem": "Which process best explains the raising upward and outward of the ribs during breathing?",
+      "options": {
+        "A": "aerobic respiration",
+        "B": "anaerobic respiration",
+        "C": "exhalation",
+        "D": "inhalation",
+        "E": "internal respiration"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0067",
+      "type": "mcq",
+      "stem": "Thick succulent stems and leaves are an adaptation for conservation of water",
+      "options": {
+        "A": "prevention of heat stroke",
+        "B": "protection",
+        "C": "reproduction",
+        "D": "sun tanning"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0068",
+      "type": "mcq",
+      "stem": "The remains impressions of animals and plants preserved in rocks are referred to as",
+      "options": {
+        "A": "crusts",
+        "B": "fossils",
+        "C": "honeycomb",
+        "D": "plaques",
+        "E": "residues"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0069",
+      "type": "mcq",
+      "stem": "Use the data to answer this question\n\nA class of 40 set out to determine the population of lizards in a bound field measuring 200 metres by 100 metres using the capture-recapture method.\n\nIn their first outing, the students captured a total of 360 lizards all of which were marked with indelible ink and then released back into the field.\n\nAfter a one week interval the students went back into the field and caught a total of 250 lizards out of which 150 bore the indelible ink mark.\n\nWhat is the estimated population of lizards in the field?",
+      "options": {
+        "A": "100",
+        "B": "300",
+        "C": "400",
+        "D": "560",
+        "E": "600"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0070",
+      "type": "mcq",
+      "stem": "Which part of Euglena performs a similar function to that of the oral groove in paramecium?",
+      "options": {
+        "A": "contractile vacuole",
+        "B": "ectoplasm",
+        "C": "endoplasm",
+        "D": "gullet",
+        "E": "nucleus"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0071",
+      "type": "mcq",
+      "stem": "Which process will NOT release carbon dioxide into the atmosphere?",
+      "options": {
+        "A": "Burning",
+        "B": "exhalation",
+        "C": "photosynthesis",
+        "D": "putrefaction",
+        "E": "respiration"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0072",
+      "type": "mcq",
+      "stem": "An inflorescence is a",
+      "options": {
+        "A": "group of flowers borne on the same stalk",
+        "B": "group of flowers born on different stalks",
+        "C": "flower pollinated by wind",
+        "D": "many flowers on the same plant",
+        "E": "plants which have both male and female reproductive organs"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0073",
+      "type": "mcq",
+      "stem": "Which excretory product is NOT found in mammals?",
+      "options": {
+        "A": "ammonia",
+        "B": "carbon dioxide",
+        "C": "mineral salts",
+        "D": "urea",
+        "E": "water"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0074",
+      "type": "mcq",
+      "stem": "An example of a disease linked to the sex-chromosome is",
+      "options": {
+        "A": "colour blindness",
+        "B": "gonorrhea",
+        "C": "night blindness",
+        "D": "syphilis",
+        "E": "tuberculosis"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0075",
+      "type": "mcq",
+      "stem": "Bacteria which derive energy for food synthesis by oxidizing certain inorganic compounds are said to be",
+      "options": {
+        "A": "chemosynthetic",
+        "B": "heterotrophic",
+        "C": "parasitic",
+        "D": "photosynthetic",
+        "E": "saprophylic"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0076",
+      "type": "mcq",
+      "stem": "The result of placing a plant cell in a hypertonic solution for a long time is ________of the cell.",
+      "options": {
+        "A": "crenation",
+        "B": "flaccidity",
+        "C": "haemolysis",
+        "D": "turgidity",
+        "E": "vasodilation"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0077",
+      "type": "mcq",
+      "stem": "Which statement about how all life started is NOT true according to current thinking on evolutionary trends?",
+      "options": {
+        "A": "animals to plant life",
+        "B": "aquatic to terrestrial forms",
+        "C": "non-specialization to specialization in functions",
+        "D": "simple to complex forms",
+        "E": "unicellularity to multicellularity"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0078",
+      "type": "mcq",
+      "stem": "What is NOT a supporting tissue in plant?",
+      "options": {
+        "A": "collenchymas",
+        "B": "coracoid",
+        "C": "parenchyma",
+        "D": "sclerenchyma",
+        "E": "xylem"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0079",
+      "type": "mcq",
+      "stem": "Mammals are said to be homoiothermic because their body temperature is",
+      "options": {
+        "A": "always higher than that of their environment",
+        "B": "always lower than that of their environment",
+        "C": "always the same as that of their environment",
+        "D": "relatively constant irrespective of that of their environment",
+        "E": "remains at 37 o c all the time"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0080",
+      "type": "mcq",
+      "stem": "Which statement is NOT true of both meiosis and mitosis?",
+      "options": {
+        "A": "aligning of chromosomes at equator",
+        "B": "disintegration of nuclear material",
+        "C": "formation of spindle apparatus",
+        "D": "halving the number of chromosomes",
+        "E": "thickening and shortening of chromosomes"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0081",
+      "type": "mcq",
+      "stem": "Which process does NOT represent a form of reproduction in plants?",
+      "options": {
+        "A": "binary fission",
+        "B": "budding",
+        "C": "conjugation",
+        "D": "regeneration",
+        "E": "vegetative propagation"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0082",
+      "type": "mcq",
+      "stem": "Which organelle is responsible for photosynthesis?",
+      "options": {
+        "A": "cell wall",
+        "B": "chloroplast",
+        "C": "cell membrane",
+        "D": "nucleus",
+        "E": "ribosomes"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0083",
+      "type": "mcq",
+      "stem": "Which characteristic in man is NOT inherited?",
+      "options": {
+        "A": "albinism",
+        "B": "colour blindness",
+        "C": "haemophilia",
+        "D": "night blindness",
+        "E": "sickle cell aneamia"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0084",
+      "type": "mcq",
+      "stem": "The interaction between members of the same population over scarce resources is called",
+      "options": {
+        "A": "behavioural adaptation",
+        "B": "inter-specific competition",
+        "C": "intra-specific competition",
+        "D": "morphological variation",
+        "E": "structural adaptation"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0085",
+      "type": "mcq",
+      "stem": "The number of daughter cells formed at the end of mitosis is",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0086",
+      "type": "mcq",
+      "stem": "What can be used to collect soil animals?",
+      "options": {
+        "A": "Insect net",
+        "B": "plankton net",
+        "C": "pooter",
+        "D": "quadrat",
+        "E": "Tullgren funnel"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0087",
+      "type": "mcq",
+      "stem": "Which climatic feature is NOT commonly found in Nigeria?",
+      "options": {
+        "A": "flooding",
+        "B": "harmattan",
+        "C": "heat intensity",
+        "D": "rainfall",
+        "E": "volcanic eruptions"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0088",
+      "type": "mcq",
+      "stem": "The sum total of all the roles an organism plays in a habitat is referred to as its",
+      "options": {
+        "A": "ecology",
+        "B": "ecosystem",
+        "C": "habit",
+        "D": "habitat",
+        "E": "niche"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0089",
+      "type": "mcq",
+      "stem": "Use the data to answer this question\n\nA class of 40 set out to determine the population of lizards in a bound field measuring 200 metres by 100 metres using the capture-recapture method.\n\nIn their first outing, the students captured a total of 360 lizards all of which were marked with indelible ink and then released back into the field.\n\nAfter a one week interval the students went back into the field and caught a total of 250 lizards out of which 150 bore the indelible ink mark.\n\nThe population density of the lizards in the field is?",
+      "options": {
+        "A": "0.003 per m 2",
+        "B": "0.03 per m 2",
+        "C": "3 per m 2",
+        "D": "4 per m 2",
+        "E": "6 per m 2"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0090",
+      "type": "mcq",
+      "stem": "In the nucleus of a cell, the thread-like structure in which genes are embedded is",
+      "options": {
+        "A": "centriole",
+        "B": "chromosomes",
+        "C": "cytoplasm",
+        "D": "somatic cell",
+        "E": "spindles"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0091",
+      "type": "mcq",
+      "stem": "Herbicides are agricultural chemicals that",
+      "options": {
+        "A": "encourage growth of weeds",
+        "B": "Increase the soil fertility",
+        "C": "improve disease resistance of crop",
+        "D": "suppress crop growth",
+        "E": "suppress weed growth"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0092",
+      "type": "mcq",
+      "stem": "Which is NOT a living thing?",
+      "options": {
+        "A": "bacteria",
+        "B": "fern",
+        "C": "fungi",
+        "D": "protozoa",
+        "E": "virus"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0093",
+      "type": "mcq",
+      "stem": "An example of an exoskeletal structure is",
+      "options": {
+        "A": "femur",
+        "B": "scapula",
+        "C": "shell",
+        "D": "skull",
+        "E": "tibia"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0094",
+      "type": "mcq",
+      "stem": "The autonomic nervous system comprises of the",
+      "options": {
+        "A": "brain and spinal cord",
+        "B": "brain and nerves",
+        "C": "dendrite and axon",
+        "D": "spinal cord and neuron",
+        "E": "sympathetic and parasympathetic systems"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0095",
+      "type": "mcq",
+      "stem": "Oxygenated blood from the lungs is carried to the left atrium of the heart through the",
+      "options": {
+        "A": "portal vein",
+        "B": "pulmonary artery",
+        "C": "pulmonary vein",
+        "D": "renal artery",
+        "E": "superior vena cava"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0096",
+      "type": "mcq",
+      "stem": "The hormones produced in the hypothalamus are",
+      "options": {
+        "A": "auxin and somatotropium",
+        "B": "oxytocin and vasopressin",
+        "C": "parathormone and progesterone",
+        "D": "testosterone and insulin",
+        "E": "thyroxine and nor-adrenalin"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0097",
+      "type": "mcq",
+      "stem": "Which is NOT a viral disease?",
+      "options": {
+        "A": "chicken pox",
+        "B": "common cold",
+        "C": "measles",
+        "D": "poliomyelitis",
+        "E": "tuberculosis"
+      },
+      "marks": 1,
+      "year": 2002
+    },
+    {
+      "id": "neco-biology-bank-0098",
+      "type": "mcq",
+      "stem": "When a plant shows reddish leaves, the soil is deficient in",
+      "options": {
+        "A": "calcium",
+        "B": "iron",
+        "C": "nitrogen",
+        "D": "phosphorus",
+        "E": "sulphur"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0099",
+      "type": "mcq",
+      "stem": "Which of the following factors affect population?",
+      "options": {
+        "A": "competition and natality rate",
+        "B": "heat and space",
+        "C": "food and mortality rate",
+        "D": "Space and competition",
+        "E": "Water and light"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0100",
+      "type": "mcq",
+      "stem": "The association between guinea worm and tissues of man is called",
+      "options": {
+        "A": "commensalism",
+        "B": "parasitism",
+        "C": "predation",
+        "D": "Saprophytism",
+        "E": "Symbiosis"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0101",
+      "type": "mcq",
+      "stem": "Which of the following is NOT true of enzymes?",
+      "options": {
+        "A": "Their reactions are reversible",
+        "B": "Their reactions are irreversible",
+        "C": "They remain unchanged after the reaction",
+        "D": "They are affected by high temperatures",
+        "E": "They have active sites"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0102",
+      "type": "mcq",
+      "stem": "The following are major groups of the plant kingdom EXCEPT",
+      "options": {
+        "A": "Bryophyta",
+        "B": "Chiorophyta",
+        "C": "Pteridophyta",
+        "D": "Spermatophyta",
+        "E": "Thallophyta"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0103",
+      "type": "mcq",
+      "stem": "The process by which some organisms oxidize inorganic compounds to obtain energy is known as",
+      "options": {
+        "A": "catabolism",
+        "B": "chemosynthesis",
+        "C": "glycolysis",
+        "D": "metabolism",
+        "E": "photosynthesis"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0104",
+      "type": "mcq",
+      "stem": "The excretory organ of earthworms is known as",
+      "options": {
+        "A": "contractile vacuole",
+        "B": "flame cell",
+        "C": "malphigian tubule",
+        "D": "nephridium",
+        "E": "kidney"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0105",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a family planning method?",
+      "options": {
+        "A": "abstinence",
+        "B": "contraceptive device",
+        "C": "masturbation",
+        "D": "sterilization",
+        "E": "use of condoms"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0106",
+      "type": "mcq",
+      "stem": "i 2/2, c 1/1, pm 2/2, m 3/3 The above dental formula represents the dentition of",
+      "options": {
+        "A": "cow",
+        "B": "dog",
+        "C": "man",
+        "D": "rabbit",
+        "E": "sheep"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0107",
+      "type": "mcq",
+      "stem": "Which practice does NOT promote the health of the community?",
+      "options": {
+        "A": "burning of refuse in incinerators",
+        "B": "disposal of human sewage using water closets",
+        "C": "legislating in favour of sexual indulgence",
+        "D": "provision of portable pipe-borne water",
+        "E": "sitting of industries downstream away from habitations"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0108",
+      "type": "mcq",
+      "stem": "The bee that lays eggs in a hive is called",
+      "options": {
+        "A": "broiler",
+        "B": "drone",
+        "C": "layer",
+        "D": "queen",
+        "E": "worker"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0109",
+      "type": "mcq",
+      "stem": "The biosphere can best be defined as part of the",
+      "options": {
+        "A": "atmosphere that contains moisture",
+        "B": "earth that contains gases",
+        "C": "earth that is liquid",
+        "D": "earth that supports life",
+        "E": "ocean that supports life"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0110",
+      "type": "mcq",
+      "stem": "Translocation of food substances in plants takes place through",
+      "options": {
+        "A": "collenchyma",
+        "B": "parenchyma",
+        "C": "phloem",
+        "D": "sclerenchyma",
+        "E": "xylem"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0111",
+      "type": "mcq",
+      "stem": "Which material is NOT necessary for the manufacture of plant food?",
+      "options": {
+        "A": "carbon(iv)oxide",
+        "B": "chloropyll",
+        "C": "oxygen",
+        "D": "sunlight",
+        "E": "water"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0112",
+      "type": "mcq",
+      "stem": "Lianas is to tropical rain forest as an extensive root system is to ---------------- habitat",
+      "options": {
+        "A": "afro-alpine",
+        "B": "estuarine",
+        "C": "fresh - water",
+        "D": "grass-land",
+        "E": "marine"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0113",
+      "type": "mcq",
+      "stem": "Which of these statements is NOT an idea contained in Lamarck’s theory of evolution.?",
+      "options": {
+        "A": "acquired characters are inheritable",
+        "B": "changes in the environment result in corresponding changes in the species",
+        "C": "environmental changes cause the organism to acquire new structures as an adjustment to a new prevailing environment",
+        "D": "organisms develop specialized characteristic by use and disuse of organs",
+        "E": "organisms tend to an increase in number at an exponential rate"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0114",
+      "type": "mcq",
+      "stem": "The release of sperms through the urethral opening into the vagina is called?",
+      "options": {
+        "A": "copulation",
+        "B": "ejaculation",
+        "C": "fertilization",
+        "D": "spermatogenesis",
+        "E": "urination"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0115",
+      "type": "mcq",
+      "stem": "An essential with the dental formula I 0/3 : C 0/1 : P 3/3 : M 3/3 is most likely adapted for ___________ nutrition .",
+      "options": {
+        "A": "carnivorous",
+        "B": "herbivorous",
+        "C": "holophytic",
+        "D": "ominivorous",
+        "E": "parasitic"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0116",
+      "type": "mcq",
+      "stem": "Herbicides are chemicals used to",
+      "options": {
+        "A": "check the spread of diseases",
+        "B": "control dormancy in seeds",
+        "C": "control insects",
+        "D": "control weeds",
+        "E": "control pests"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0117",
+      "type": "mcq",
+      "stem": "The sun rays reach the earth’s surface by",
+      "options": {
+        "A": "conduction",
+        "B": "convection",
+        "C": "radiation",
+        "D": "reflection",
+        "E": "refraction"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0118",
+      "type": "mcq",
+      "stem": "The following are effects of food shortage on population size EXCEPT",
+      "options": {
+        "A": "competition",
+        "B": "decline in reproduction",
+        "C": "emigration",
+        "D": "increase in natality",
+        "E": "mortality"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0119",
+      "type": "mcq",
+      "stem": "Vitamin K deficiency causes",
+      "options": {
+        "A": "constipation",
+        "B": "indigestion",
+        "C": "low sperm count",
+        "D": "uncontrolled haemorrhage",
+        "E": "stomach and duodenal ulcer"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0120",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a multiple fruit?",
+      "options": {
+        "A": "cashew",
+        "B": "maize",
+        "C": "mango",
+        "D": "orange",
+        "E": "pineapple"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0121",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a plant hormone?",
+      "options": {
+        "A": "Abscissic acid",
+        "B": "Auxin",
+        "C": "Cytokinin",
+        "D": "Cytochrome",
+        "E": "Gibberellins"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0122",
+      "type": "mcq",
+      "stem": "Which of the following is an immediate source of energy to man?",
+      "options": {
+        "A": "Beans",
+        "B": "Butter",
+        "C": "Egg",
+        "D": "Orange",
+        "E": "Plantain"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0123",
+      "type": "mcq",
+      "stem": "Which of the following instruments is used for measuring the speed of wind?",
+      "options": {
+        "A": "anemometer",
+        "B": "barometer",
+        "C": "hygrometer",
+        "D": "manometer",
+        "E": "windvane"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0124",
+      "type": "mcq",
+      "stem": "Here is a list of natural resources:\n\nI. Wildlife\n\nII. Forest\n\nIII. Fossil fuel\n\nIV. Minerals\n\nWhich of the natural resources are renewable?",
+      "options": {
+        "A": "I and IV",
+        "B": "II and III",
+        "C": "I and II",
+        "D": "I and III",
+        "E": "I, II, III and IV"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0125",
+      "type": "mcq",
+      "stem": "Which of the following plant products can be used to confirm that photosynthesis has taken place?",
+      "options": {
+        "A": "glucose",
+        "B": "fats",
+        "C": "protein",
+        "D": "starch",
+        "E": "vitamins"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0126",
+      "type": "mcq",
+      "stem": "The following are courtship behaviors in animals EXCEPT",
+      "options": {
+        "A": "copulation",
+        "B": "display",
+        "C": "pairing",
+        "D": "seasonal migration",
+        "E": "territoriality"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0127",
+      "type": "mcq",
+      "stem": "Sneezing in man is controlled by?",
+      "options": {
+        "A": "cerebellum",
+        "B": "cerebrum",
+        "C": "hypothalamus",
+        "D": "pineal body",
+        "E": "medulla oblongata"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0128",
+      "type": "mcq",
+      "stem": "Here is a list of natural resources:\n\nI. Wildlife\n\nII. Forest\n\nIII. Fossil fuel\n\nIV. Minerals\n\nWhich of the natural resources are non-renewable?",
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "I and IV only",
+        "D": "II and III only",
+        "E": "III and IV only"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0129",
+      "type": "mcq",
+      "stem": "Which of the organisms is a primary consumer?",
+      "options": {
+        "A": "Cassava",
+        "B": "Grasshopper",
+        "C": "Hawk",
+        "D": "Lizard",
+        "E": "Toad"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0130",
+      "type": "mcq",
+      "stem": "The tip of the tongue is sensitive to",
+      "options": {
+        "A": "bitter taste",
+        "B": "salty taste",
+        "C": "sweet taste",
+        "D": "salty and sweet taste",
+        "E": "sour taste"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0131",
+      "type": "mcq",
+      "stem": "Which of the following organisms possesses both plant and animal characteristics?",
+      "options": {
+        "A": "Amoeba",
+        "B": "Euglena",
+        "C": "Paramecium",
+        "D": "Spirogyra",
+        "E": "Volvox"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0132",
+      "type": "mcq",
+      "stem": "Autecology is defined as the study of Interrelationship of",
+      "options": {
+        "A": "many species of organisms and their environment",
+        "B": "same species of organisms and their environment",
+        "C": "organisms in the atmosphere",
+        "D": "organisms under the earth’s surface",
+        "E": "organisms in water"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0133",
+      "type": "mcq",
+      "stem": "Thrombocytes are responsible for",
+      "options": {
+        "A": "blood clotting",
+        "B": "digestion of food",
+        "C": "ingestion of bacteria",
+        "D": "transportation of digested food",
+        "E": "transportation of dissolved oxygen"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0134",
+      "type": "mcq",
+      "stem": "The function of digestive enzymes is to",
+      "options": {
+        "A": "acidify food",
+        "B": "build up food",
+        "C": "emulsify fats",
+        "D": "quicken absorption",
+        "E": "enhance food breakdown"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0135",
+      "type": "mcq",
+      "stem": "Which of the following factors affects enzyme activity?",
+      "options": {
+        "A": "Atmospheric pressure",
+        "B": "oxygen",
+        "C": "carbondioxide",
+        "D": "temperature",
+        "E": "Rainfall"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0136",
+      "type": "mcq",
+      "stem": "Which of the following is a liver disease?",
+      "options": {
+        "A": "diuresis",
+        "B": "dropsy",
+        "C": "hepatitis",
+        "D": "nephritis",
+        "E": "oedema"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0137",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an excretory organ?",
+      "options": {
+        "A": "Heart",
+        "B": "Kidney",
+        "C": "Liver",
+        "D": "Lung",
+        "E": "Skin"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0138",
+      "type": "mcq",
+      "stem": "The organelle responsible for the transportation of substances within the cell is",
+      "options": {
+        "A": "cell membrane",
+        "B": "chloroplast",
+        "C": "endoplasmic reticulum",
+        "D": "lysosome",
+        "E": "mitochondrion"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0139",
+      "type": "mcq",
+      "stem": "A flower made up of one carpel is referred to as",
+      "options": {
+        "A": "apocarpous",
+        "B": "monocarpus",
+        "C": "monogamous",
+        "D": "pericarpus",
+        "E": "Syncarpous"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0140",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a function of dilute hydrochloric acid secreted in the stomach of man?",
+      "options": {
+        "A": "acidities the contents",
+        "B": "activates pepsin",
+        "C": "inactivates pepsin",
+        "D": "inactivates ptyalin",
+        "E": "kills micro organisms"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0141",
+      "type": "mcq",
+      "stem": "The respiratory structures of insects are",
+      "options": {
+        "A": "body surfaces",
+        "B": "gills",
+        "C": "kidneys",
+        "D": "lung",
+        "E": "tracheae"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0142",
+      "type": "mcq",
+      "stem": "Chromosomes are found in the",
+      "options": {
+        "A": "cell membrane",
+        "B": "centriole",
+        "C": "mitochondrion",
+        "D": "nucleus",
+        "E": "lysosome"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0143",
+      "type": "mcq",
+      "stem": "The rate of transpiration of a leafy shoot can be measured with",
+      "options": {
+        "A": "anemometer",
+        "B": "barometer",
+        "C": "photometer",
+        "D": "potometer",
+        "E": "thermometer"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0144",
+      "type": "mcq",
+      "stem": "The axial skeleton is made up of",
+      "options": {
+        "A": "fore and hind limbs",
+        "B": "limbs and limb girdles",
+        "C": "ribs and sternum",
+        "D": "skull and limbs",
+        "E": "skull and spine"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0145",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a function of the mammalian skin?",
+      "options": {
+        "A": "detoxication",
+        "B": "excretion",
+        "C": "production of vitamin D",
+        "D": "protection",
+        "E": "temperature control"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0146",
+      "type": "mcq",
+      "stem": "A population can be referred to as the number of",
+      "options": {
+        "A": "adult organisms in an ecosystem",
+        "B": "female species in an ecosystem",
+        "C": "male species in an ecosystem",
+        "D": "organisms of same species in an ecosystem",
+        "E": "organisms that can withstand harsh conditions"
+      },
+      "marks": 1,
+      "year": 2003
+    },
+    {
+      "id": "neco-biology-bank-0147",
+      "type": "mcq",
+      "stem": "Stunted growth and reduced yield in cassava plant is as a result of a disease called",
+      "options": {
+        "A": "blight",
+        "B": "leaf curl",
+        "C": "leaf spot",
+        "D": "mosaic",
+        "E": "smut"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0148",
+      "type": "mcq",
+      "stem": "Food wastage is caused by the following EXCEPT",
+      "options": {
+        "A": "attack of moulds on farm crops",
+        "B": "lack of access roads",
+        "C": "lack of transportation",
+        "D": "poor harvesting methods",
+        "E": "proper storage"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0149",
+      "type": "mcq",
+      "stem": "Blood groups and tongue rolling are examples of",
+      "options": {
+        "A": "continuous variation",
+        "B": "discontinuous variation",
+        "C": "variation due to environment",
+        "D": "adaptive variation",
+        "E": "sex-linked variation"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0150",
+      "type": "mcq",
+      "stem": "Mealy bugs are pests of",
+      "options": {
+        "A": "cassava",
+        "B": "cotton",
+        "C": "maize",
+        "D": "rice",
+        "E": "yarn"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0151",
+      "type": "mcq",
+      "stem": "The end product of glycolysis is",
+      "options": {
+        "A": "acetic acid",
+        "B": "citric acid",
+        "C": "ketoglutaric acid",
+        "D": "oxaloacetic acid",
+        "E": "pyruvic acid"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0152",
+      "type": "mcq",
+      "stem": "Reflex action is controlled by",
+      "options": {
+        "A": "cerebellum",
+        "B": "cerebrum",
+        "C": "medulla oblongata",
+        "D": "olfactory lobe",
+        "E": "pineal body"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0153",
+      "type": "mcq",
+      "stem": "The tropical rainforest region is characterized by the following EXCEPT",
+      "options": {
+        "A": "abundant grasses",
+        "B": "abundant rainfall",
+        "C": "abundant trees and shrubs",
+        "D": "high humidity",
+        "E": "low temperature"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0154",
+      "type": "mcq",
+      "stem": "The removal of undigested food substances from the body is called",
+      "options": {
+        "A": "assimilation",
+        "B": "egestion",
+        "C": "excretion",
+        "D": "elimination",
+        "E": "ingestion"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0155",
+      "type": "mcq",
+      "stem": "The part of the skin which is excretory in function is the",
+      "options": {
+        "A": "adipose tissue",
+        "B": "erector muscle",
+        "C": "hair follicle",
+        "D": "sebaceous gland",
+        "E": "sweat gland"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0156",
+      "type": "mcq",
+      "stem": "A typical lumbar vertebra does NOT have",
+      "options": {
+        "A": "centrum",
+        "B": "neural arch",
+        "C": "neural spine",
+        "D": "neural canal",
+        "E": "vertebrartenal canal"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0157",
+      "type": "mcq",
+      "stem": "Xylem tissue consists of the following cells EXCEPT",
+      "options": {
+        "A": "sieve tubes",
+        "B": "tracheids",
+        "C": "vessels",
+        "D": "fibres",
+        "E": "parenchyma"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0158",
+      "type": "mcq",
+      "stem": "The correct sequence of energy transfer among living organisms in an ecosystem is",
+      "options": {
+        "A": "consumers - decomposers – producers",
+        "B": "consumers - producers - decomposers",
+        "C": "decomposers - producers- consumers",
+        "D": "producers - consumers- decomposers",
+        "E": "producers - decomposers- consumers"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0159",
+      "type": "mcq",
+      "stem": "Which of these is NOT a method of improving crop yield?",
+      "options": {
+        "A": "spraying the crops with chemicals",
+        "B": "mechanized farming",
+        "C": "sowing pest resistant varieties of seeds",
+        "D": "storing the crops in barns or silos",
+        "E": "sowing of viable seeds"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0160",
+      "type": "mcq",
+      "stem": "Simple sugars are also called",
+      "options": {
+        "A": "cellulose",
+        "B": "disaccharides",
+        "C": "monosaccharides",
+        "D": "polysacchaiides",
+        "E": "starch"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0161",
+      "type": "mcq",
+      "stem": "Plants that are found in extreme dry conditions are called",
+      "options": {
+        "A": "epiphytes",
+        "B": "hydrophytes",
+        "C": "mesophytes",
+        "D": "thallophytes",
+        "E": "xerophytes"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0162",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a characteristic of digestive enzymes?",
+      "options": {
+        "A": "changes in pH affect enzymes",
+        "B": "enzymes react best at high temperature",
+        "C": "enzymes react reversibly",
+        "D": "they are affected by intake of poisons",
+        "E": "they are protein in nature"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0163",
+      "type": "mcq",
+      "stem": "Which of the following is released from car exhaust due to incomplete combustion of fuel?",
+      "options": {
+        "A": "carbon dioxide",
+        "B": "carbon monoxide",
+        "C": "nitrogen dioxide",
+        "D": "oxygen",
+        "E": "sulphur dioxide"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0164",
+      "type": "mcq",
+      "stem": "The part of the kidney tubule where ultra filtration takes place is the",
+      "options": {
+        "A": "Bowman’s capsule",
+        "B": "distal convoluted tubule",
+        "C": "Henle’s loop",
+        "D": "main collecting tubule",
+        "E": "proximal convoluted tubule"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0165",
+      "type": "mcq",
+      "stem": "The plant cell is different from an animal cell because it has",
+      "options": {
+        "A": "cellulose cell-wall",
+        "B": "cytoplasmic content",
+        "C": "centriole",
+        "D": "mitochondria",
+        "E": "nucleus"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0166",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a natural source of energy ?",
+      "options": {
+        "A": "coal",
+        "B": "electricity",
+        "C": "food",
+        "D": "sun",
+        "E": "water"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0167",
+      "type": "mcq",
+      "stem": "Modern method of classification of living things is based on similarity of?",
+      "options": {
+        "A": "colour",
+        "B": "habitat",
+        "C": "shape",
+        "D": "size",
+        "E": "structure"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0168",
+      "type": "mcq",
+      "stem": "The part of the fruit which serves a protective function is called",
+      "options": {
+        "A": "endocary",
+        "B": "epicarp",
+        "C": "mesocarp",
+        "D": "pericarp",
+        "E": "testa"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0169",
+      "type": "mcq",
+      "stem": "Two identical twin boys had different finger print. This proves that",
+      "options": {
+        "A": "finger print is a sex-linked character",
+        "B": "the genotypes of the twins are similar",
+        "C": "the phenotypes of the twins are similar",
+        "D": "there are morphological variations",
+        "E": "there are physiological variation in the twins"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0170",
+      "type": "mcq",
+      "stem": "What is the result of placing a red blood cell in a hypertonic solution ?",
+      "options": {
+        "A": "crenation",
+        "B": "haemolysis",
+        "C": "osmosis",
+        "D": "plasmolysis",
+        "E": "wilting"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0171",
+      "type": "mcq",
+      "stem": "The following are classes of dry indehiscent fruits EXCEPT",
+      "options": {
+        "A": "achene",
+        "B": "caryopsis",
+        "C": "cypsela",
+        "D": "follicle",
+        "E": "schizocarp"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0172",
+      "type": "mcq",
+      "stem": "A feeding relationship in which both organisms benefit is referred to as",
+      "options": {
+        "A": "commensalism",
+        "B": "parasitism",
+        "C": "predation",
+        "D": "saprophytism",
+        "E": "symbiosis"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0173",
+      "type": "mcq",
+      "stem": "When a plant shows yellowing of leaves and stunted growth, the plant is deficient in",
+      "options": {
+        "A": "copper",
+        "B": "iron",
+        "C": "manganese",
+        "D": "silicon",
+        "E": "zinc"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0174",
+      "type": "mcq",
+      "stem": "The glomerular filtrate contains the following substances EXCEPT",
+      "options": {
+        "A": "blood cells",
+        "B": "glucose",
+        "C": "mineral salts",
+        "D": "Water",
+        "E": "urea"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0175",
+      "type": "mcq",
+      "stem": "The mouth part of a mosquito through which it sucks the blood of its victim is called",
+      "options": {
+        "A": "hypopharynx",
+        "B": "mandible",
+        "C": "labium",
+        "D": "labrum",
+        "E": "stylet"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0176",
+      "type": "mcq",
+      "stem": "An organism that transmits pathogens is called a",
+      "options": {
+        "A": "prey",
+        "B": "commensal",
+        "C": "parasite",
+        "D": "symbiont",
+        "E": "vector"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0177",
+      "type": "mcq",
+      "stem": "Which of the following factors does NOT affect photosynthesis?",
+      "options": {
+        "A": "carbon (iv) oxide",
+        "B": "light intensity",
+        "C": "relative humidity",
+        "D": "soil water",
+        "E": "temperature"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0178",
+      "type": "mcq",
+      "stem": "Soil factors in an ecosystems are referred to as",
+      "options": {
+        "A": "biotic",
+        "B": "climatic",
+        "C": "edaphic",
+        "D": "physiographic",
+        "E": "topographic"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0179",
+      "type": "mcq",
+      "stem": "Which of the following eye defects can be corrected with a bi-focal lens?",
+      "options": {
+        "A": "Astigmatism",
+        "B": "Cataract",
+        "C": "Hypermetropia",
+        "D": "Myopia",
+        "E": "Presbyopia"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0180",
+      "type": "mcq",
+      "stem": "Under secretion of thyroxine before maturity cause",
+      "options": {
+        "A": "cretinism",
+        "B": "gigantism",
+        "C": "goiter",
+        "D": "myxoedema",
+        "E": "obesity"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0181",
+      "type": "mcq",
+      "stem": "Intestinal juice contains the following enzymes EXCEPT",
+      "options": {
+        "A": "erepsin",
+        "B": "lipase",
+        "C": "maltase",
+        "D": "sucrase",
+        "E": "trypsin"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0182",
+      "type": "mcq",
+      "stem": "Mycelium is a characteristic feature of",
+      "options": {
+        "A": "bacteria",
+        "B": "hydra",
+        "C": "moulds",
+        "D": "Mosses",
+        "E": "yeasts"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0183",
+      "type": "mcq",
+      "stem": "In savanna trees, thick corky bark is an adaption for",
+      "options": {
+        "A": "absorbing water",
+        "B": "conserving water",
+        "C": "enhancing transpiration",
+        "D": "reducing transpiration",
+        "E": "resistance to bush fire"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0184",
+      "type": "mcq",
+      "stem": "The fluid in the inner ear is called",
+      "options": {
+        "A": "aqueous humour",
+        "B": "endolymph",
+        "C": "lymphocyte",
+        "D": "perilymph",
+        "E": "vitreous humour"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0185",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an application of variation?",
+      "options": {
+        "A": "adaptation for survival",
+        "B": "blood transfusion",
+        "C": "crime detection",
+        "D": "determination of paternity",
+        "E": "marriage counseling"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0186",
+      "type": "mcq",
+      "stem": "Which of the following deaminates excess amino acids?",
+      "options": {
+        "A": "Duodenum",
+        "B": "Ileum",
+        "C": "Kidney",
+        "D": "Liver",
+        "E": "Pancreas"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0187",
+      "type": "mcq",
+      "stem": "The enzyme ptyalin acts in the",
+      "options": {
+        "A": "large intestine",
+        "B": "mouth",
+        "C": "oesophagus",
+        "D": "small intestine",
+        "E": "stomach"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0188",
+      "type": "mcq",
+      "stem": "Maximum and minimum thermometer is used for measuring",
+      "options": {
+        "A": "atmospheric pressure",
+        "B": "highest and lowest amount of rainfall in habitat",
+        "C": "highest and lowest temperature of the day",
+        "D": "light intensity",
+        "E": "relative humidity"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0189",
+      "type": "mcq",
+      "stem": "An ovary with ovules arranged along its walls is said to have ------------ placentation.",
+      "options": {
+        "A": "axile",
+        "B": "central",
+        "C": "free central",
+        "D": "marginal",
+        "E": "parietal"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0190",
+      "type": "mcq",
+      "stem": "In which of the following blood vessels does exchange of materials occur",
+      "options": {
+        "A": "arteries",
+        "B": "arterioles",
+        "C": "capillaries",
+        "D": "venules",
+        "E": "veins"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0191",
+      "type": "mcq",
+      "stem": "All of these are vertebrates EXCEPT",
+      "options": {
+        "A": "lizard",
+        "B": "rat",
+        "C": "starfish",
+        "D": "tilapia fish",
+        "E": "toad"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0192",
+      "type": "mcq",
+      "stem": "The function of the ribosomes is the",
+      "options": {
+        "A": "absorption of carbon dioxide from the air",
+        "B": "control of all the vital activities of the cell",
+        "C": "provision of energy for cellular activities",
+        "D": "synthesis of secretory products",
+        "E": "synthesis of proteins and enzymes"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0193",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a transmissible character?",
+      "options": {
+        "A": "dimple cheek",
+        "B": "ability to roll tongue",
+        "C": "colour blindness",
+        "D": "sickle-cell anaemia",
+        "E": "big muscles of a boxer"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0194",
+      "type": "mcq",
+      "stem": "Cotton is an example of a/an crop.",
+      "options": {
+        "A": "fibre",
+        "B": "food",
+        "C": "latex",
+        "D": "oil",
+        "E": "cereal"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0195",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of finger print?",
+      "options": {
+        "A": "arch",
+        "B": "compound",
+        "C": "loop",
+        "D": "simple",
+        "E": "whorl"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0196",
+      "type": "mcq",
+      "stem": "In terms of evolutionary trend, which of these invertebrates evolved first?",
+      "options": {
+        "A": "Annelida",
+        "B": "Arthropoda",
+        "C": "Coelentrata",
+        "D": "Platyhelminthes",
+        "E": "Protozoa"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0197",
+      "type": "mcq",
+      "stem": "The tricuspid valve is located between the",
+      "options": {
+        "A": "left auricle and left ventricle",
+        "B": "left and right auricles",
+        "C": "right and left ventricles",
+        "D": "right auricle and right ventricle",
+        "E": "right auricle and left ventricle"
+      },
+      "marks": 1,
+      "year": 2004
+    },
+    {
+      "id": "neco-biology-bank-0198",
+      "type": "mcq",
+      "stem": "The following can increase crop production EXCEPT",
+      "options": {
+        "A": "erosion control",
+        "B": "fertilizer application",
+        "C": "mechanization",
+        "D": "monocropping",
+        "E": "pest control"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0199",
+      "type": "mcq",
+      "stem": "Which of the following enzymes requires acidic medium to function?",
+      "options": {
+        "A": "Amylase",
+        "B": "Erepsin",
+        "C": "Maltose",
+        "D": "Pepsin",
+        "E": "Ptyalin"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0200",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of exoskeleton?",
+      "options": {
+        "A": "Cartilage",
+        "B": "Chitin",
+        "C": "Hoot",
+        "D": "Nail",
+        "E": "Shell"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0201",
+      "type": "mcq",
+      "stem": "The number of chromosomes in a gamete is represented by",
+      "options": {
+        "A": "n",
+        "B": "2n",
+        "C": "4n",
+        "D": "23n",
+        "E": "46n"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0202",
+      "type": "mcq",
+      "stem": "An example of a carnivorous plant is",
+      "options": {
+        "A": "cassytha",
+        "B": "lichen",
+        "C": "mucor",
+        "D": "mushroom",
+        "E": "sundew"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0203",
+      "type": "mcq",
+      "stem": "Autotrophs include all the following EXCEPT",
+      "options": {
+        "A": "chemosynthetic bacteria",
+        "B": "diatoms",
+        "C": "green plants",
+        "D": "phytoplankton",
+        "E": "zooplankton"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0204",
+      "type": "mcq",
+      "stem": "Which of these statements best defines pyramid of energy?",
+      "options": {
+        "A": "energy flow from one tropic level to another",
+        "B": "energy flow from one habitat to another",
+        "C": "the amount of energy in a given area",
+        "D": "the loss of energy from one organism to another",
+        "E": "the rate of energy flow in an area"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0205",
+      "type": "mcq",
+      "stem": "Dry, horny scales in reptiles help them to",
+      "options": {
+        "A": "carryout gaseous exchange",
+        "B": "escape from predator",
+        "C": "facilitate movement",
+        "D": "look for mating partners",
+        "E": "prevent water loss."
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0206",
+      "type": "mcq",
+      "stem": "The process which reduces the nitrogen content of the soil is",
+      "options": {
+        "A": "ammonification",
+        "B": "denitrification",
+        "C": "nitrogen fixation",
+        "D": "nitrification",
+        "E": "putrefaction"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0207",
+      "type": "mcq",
+      "stem": "Birds excrete nitrogenous wastes in form of",
+      "options": {
+        "A": "ammonia",
+        "B": "sweat",
+        "C": "urea",
+        "D": "uric acid",
+        "E": "urine"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0208",
+      "type": "mcq",
+      "stem": "A waterlogged habitat with low light penetration and very low quantity of dissolved oxygen best describes a/an habitat",
+      "options": {
+        "A": "estuarine",
+        "B": "marine",
+        "C": "sahel savanna",
+        "D": "swampy",
+        "E": "tropical rainforest"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0209",
+      "type": "mcq",
+      "stem": "Deficiency of calcium in a child’s diet causes",
+      "options": {
+        "A": "cretinism",
+        "B": "goiter",
+        "C": "kwashiorkor",
+        "D": "rickets",
+        "E": "scurvy"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0210",
+      "type": "mcq",
+      "stem": "Which of these is a direct photosynthetic product?",
+      "options": {
+        "A": "fats",
+        "B": "glucose",
+        "C": "latex",
+        "D": "protein",
+        "E": "starch"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0211",
+      "type": "mcq",
+      "stem": "Which of the following is a nitrifying bacterium?",
+      "options": {
+        "A": "Azotobacter",
+        "B": "Clostridium",
+        "C": "Nitrobacter",
+        "D": "Rhizobium",
+        "E": "Staphylococcus"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0212",
+      "type": "mcq",
+      "stem": "ln the process of succession, a climax community is established when",
+      "options": {
+        "A": "a stable community is achieved",
+        "B": "the colonizers accommodate the new corners",
+        "C": "the colonizers are wiped out",
+        "D": "the first inhabitants settle down",
+        "E": "the new corners dominate the original inhabitants"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0213",
+      "type": "mcq",
+      "stem": "The speed of wind can be measured with an instrument called",
+      "options": {
+        "A": "anemometer",
+        "B": "barometer",
+        "C": "hygrometer",
+        "D": "photometer",
+        "E": "thermometer"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0214",
+      "type": "mcq",
+      "stem": "All these statements are correct about a vein EXCEPT that it",
+      "options": {
+        "A": "carries blood to the heart",
+        "B": "contains blood at low pressure",
+        "C": "has no valve",
+        "D": "possesses fairly thick walls",
+        "E": "usually carries deoxygenated blood"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0215",
+      "type": "mcq",
+      "stem": "Tsetse-fly is a vector of a disease known as",
+      "options": {
+        "A": "cholera",
+        "B": "dysentery",
+        "C": "elephantiasis",
+        "D": "malaria",
+        "E": "trypanosomiasis"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0216",
+      "type": "mcq",
+      "stem": "Which of the following does NOT occur during photosynthesis?",
+      "options": {
+        "A": "Carbon dioxide is evolved",
+        "B": "Energy from the sun is utilized",
+        "C": "Glucose is synthesized",
+        "D": "Oxygen is given off",
+        "E": "Split of water"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0217",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a function of placenta in mammals?",
+      "options": {
+        "A": "absorption of food",
+        "B": "gaseous exchange",
+        "C": "removal of wastes",
+        "D": "secretion of hormones",
+        "E": "secretion of enzymes."
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0218",
+      "type": "mcq",
+      "stem": "The following are ways of caring for the mammalian skin EXCEPT",
+      "options": {
+        "A": "eating balanced diet",
+        "B": "exposing the skin to adequate sunlight",
+        "C": "using skin toning creams",
+        "D": "using moisturising creams to prevent drying",
+        "E": "washing the skin with clean water and soap"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0219",
+      "type": "mcq",
+      "stem": "Which of these is NOT a structural adaptation of desert plants for water conservation?",
+      "options": {
+        "A": "Broad leaves with many stomata",
+        "B": "Leaves reduced into spines",
+        "C": "Scale leaves",
+        "D": "Stems and leaves with thick cuticle",
+        "E": "Sunken stomata"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0220",
+      "type": "mcq",
+      "stem": "Poor growth and yellowing of leaves in plants is due to deficiency of",
+      "options": {
+        "A": "boron",
+        "B": "calcium",
+        "C": "copper",
+        "D": "iron",
+        "E": "phosphorus"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0221",
+      "type": "mcq",
+      "stem": "The most likely mode of an organism that possesses attachment structure, thin outer surface layer and absence of an elaborate digestive tract is",
+      "options": {
+        "A": "Autotropic",
+        "B": "holophytic",
+        "C": "parasitic",
+        "D": "saprophytic",
+        "E": "symbiotic"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0222",
+      "type": "mcq",
+      "stem": "Which one is NOT an excretory product of man?",
+      "options": {
+        "A": "carbon(iv)oxide",
+        "B": "oxygen",
+        "C": "nitrogenous wastes",
+        "D": "salts",
+        "E": "respiration"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0223",
+      "type": "mcq",
+      "stem": "Which structure of the mammalian ear when removed will affect the maintenance of balance?",
+      "options": {
+        "A": "auditory canal",
+        "B": "ear ossicles",
+        "C": "pinna",
+        "D": "semi-circular canals",
+        "E": "tympanium"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0224",
+      "type": "mcq",
+      "stem": "Which of the following agricultural practices will NOT promote soil conservation ?",
+      "options": {
+        "A": "afforestation",
+        "B": "bush burning",
+        "C": "crop rotation",
+        "D": "manuring",
+        "E": "mulching"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0225",
+      "type": "mcq",
+      "stem": "The group of micro-organisms that plays a vital role in the baking industry is",
+      "options": {
+        "A": "algae",
+        "B": "bacteria",
+        "C": "fungi",
+        "D": "protozoa",
+        "E": "viruses"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0226",
+      "type": "mcq",
+      "stem": "Which of these nitrogenous bases is NOT a part of RNA?",
+      "options": {
+        "A": "Adenine",
+        "B": "Cytosine",
+        "C": "Guanine",
+        "D": "Thymine",
+        "E": "Uracil"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0227",
+      "type": "mcq",
+      "stem": "Which of the following processes removes carbon (IV) oxide from the atmosphere?",
+      "options": {
+        "A": "Combustion",
+        "B": "Excretion",
+        "C": "Photosynthesis",
+        "D": "Respiration",
+        "E": "Transpiration"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0228",
+      "type": "mcq",
+      "stem": "The practice of growing more than one type of crop on the same plot of land is called",
+      "options": {
+        "A": "continuous cropping",
+        "B": "crop rotation",
+        "C": "mixed cropping",
+        "D": "mixed farming",
+        "E": "subsistence farming"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0229",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an evidence of organic evolution?",
+      "options": {
+        "A": "Comparative anatomy",
+        "B": "Embryology",
+        "C": "Fossil records",
+        "D": "Homologous features",
+        "E": "Spontaneous generation."
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0230",
+      "type": "mcq",
+      "stem": "Blood carrying digested food from the small intestine flows into the liver via the",
+      "options": {
+        "A": "hepatic portal vein",
+        "B": "hepatic vein",
+        "C": "hepatic artery",
+        "D": "mesenteric artery",
+        "E": "renal vein"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0231",
+      "type": "mcq",
+      "stem": "The gland that secretes the hormone glucagon is ... gland",
+      "options": {
+        "A": "adrenal",
+        "B": "endocrine",
+        "C": "pancreas",
+        "D": "pituitary",
+        "E": "thyroid"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0232",
+      "type": "mcq",
+      "stem": "Which of these is NOT an example of heterotrophic mode of nutrition?",
+      "options": {
+        "A": "Holozoic",
+        "B": "Holophytic",
+        "C": "Parasitic",
+        "D": "Saprophytic",
+        "E": "Symbiotic"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0233",
+      "type": "mcq",
+      "stem": "In a test for reducing sugar, the food substance is usually warmed with",
+      "options": {
+        "A": "Benedict’s solution",
+        "B": "Millon’s reagent",
+        "C": "Sodium hydroxide",
+        "D": "Sudan III",
+        "E": "1% copper II sulphate solution"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0234",
+      "type": "mcq",
+      "stem": "Which of the following does NOT influence plant growth?",
+      "options": {
+        "A": "Light",
+        "B": "Nutrients",
+        "C": "Temperature",
+        "D": "Vitamins",
+        "E": "Water"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0235",
+      "type": "mcq",
+      "stem": "Which of the following fruits is an example of a caryopsis?",
+      "options": {
+        "A": "Cashew nut",
+        "B": "Cornbretum",
+        "C": "Maize",
+        "D": "Orange",
+        "E": "Tridax"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0236",
+      "type": "mcq",
+      "stem": "What type of fruit is pineapple?",
+      "options": {
+        "A": "Aggregate",
+        "B": "Capsule",
+        "C": "Complex",
+        "D": "Multiple",
+        "E": "Simple"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0237",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of supporting tissue in plants?",
+      "options": {
+        "A": "Cambium",
+        "B": "Collenchyma",
+        "C": "Parenchyma",
+        "D": "Sclerenchyma",
+        "E": "Xylem"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0238",
+      "type": "mcq",
+      "stem": "The medium of transportation in higher plants is",
+      "options": {
+        "A": "cell sap",
+        "B": "cytoplasm fluid",
+        "C": "phloem",
+        "D": "water",
+        "E": "xylem"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0239",
+      "type": "mcq",
+      "stem": "The vitreous humour in the human eye assists in ...... of objects",
+      "options": {
+        "A": "contraction",
+        "B": "conversion",
+        "C": "reflection",
+        "D": "refraction",
+        "E": "retention"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0240",
+      "type": "mcq",
+      "stem": "The association between a tapeworm and an infected mammal illustrates",
+      "options": {
+        "A": "commensalism",
+        "B": "parasitism",
+        "C": "predation",
+        "D": "saprophytism",
+        "E": "symbiosis."
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0241",
+      "type": "mcq",
+      "stem": "An example of a natural source of light energy is",
+      "options": {
+        "A": "electricity",
+        "B": "food",
+        "C": "heat",
+        "D": "petrol",
+        "E": "sun"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0242",
+      "type": "mcq",
+      "stem": "The following parts of the ear are involved in hearing EXCEPT",
+      "options": {
+        "A": "auditory meatus",
+        "B": "cochlea",
+        "C": "eardrum",
+        "D": "eustachian tube",
+        "E": "ossicles"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0243",
+      "type": "mcq",
+      "stem": "ln mammals, fertilization takes place in the",
+      "options": {
+        "A": "ovary",
+        "B": "oviduct",
+        "C": "uterus",
+        "D": "vagina",
+        "E": "vulva"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0244",
+      "type": "mcq",
+      "stem": "An organism with identical allelic genes is described as",
+      "options": {
+        "A": "dihybrid",
+        "B": "heterozygous",
+        "C": "homozygous",
+        "D": "monohybrid",
+        "E": "recessive"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0245",
+      "type": "mcq",
+      "stem": "Which of the following organisms maintains a fairly constant body temperature?",
+      "options": {
+        "A": "Chicken",
+        "B": "Fish",
+        "C": "Lizard",
+        "D": "Toad",
+        "E": "Snake"
+      },
+      "marks": 1,
+      "year": 2005
+    },
+    {
+      "id": "neco-biology-bank-0246",
+      "type": "mcq",
+      "stem": "Which of the following is an anabolic process",
+      "options": {
+        "A": "Excretion",
+        "B": "Fermentation",
+        "C": "Photolysis",
+        "D": "Photosynthesis",
+        "E": "Transportation"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0247",
+      "type": "mcq",
+      "stem": "The dental formula i 3/3, c 1/1, pm 4/4, m 2/3 represents that of a",
+      "options": {
+        "A": "Cat",
+        "B": "Dog",
+        "C": "Man",
+        "D": "Rabbit",
+        "E": "Sheep"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0248",
+      "type": "mcq",
+      "stem": "The following are kidney diseases EXCEPT",
+      "options": {
+        "A": "diuresis",
+        "B": "Hepatitis",
+        "C": "kidney stones",
+        "D": "nephritis",
+        "E": "oedema."
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0249",
+      "type": "mcq",
+      "stem": "The following are involved in reflex action EXCEPT",
+      "options": {
+        "A": "brain cells",
+        "B": "intermediate neuron",
+        "C": "motor neuron",
+        "D": "receptor",
+        "E": "sensory neuron"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0250",
+      "type": "mcq",
+      "stem": "The following are associated with succession EXCEPT",
+      "options": {
+        "A": "changes in species composition",
+        "B": "competition among organisms",
+        "C": "decrease in number of organisms",
+        "D": "diversity of organisms",
+        "E": "habitat change"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0251",
+      "type": "mcq",
+      "stem": "Which of the following is NOT found in animal cell?",
+      "options": {
+        "A": "Chloroplast",
+        "B": "Endoplasmic reticulum",
+        "C": "Golgi apparatus",
+        "D": "Mitochondria",
+        "E": "Nucleus"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0252",
+      "type": "mcq",
+      "stem": "A woman removed a hot aluminium pot with her bare hand and suddenly throws it down. What type of action has taken place?",
+      "options": {
+        "A": "Conditional",
+        "B": "Instinctive",
+        "C": "Involuntary",
+        "D": "Learned",
+        "E": "Voluntary"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0253",
+      "type": "mcq",
+      "stem": "A situation in which the African king fish encases itself in a cocoon, mud and mucus until the next rainy season is called",
+      "options": {
+        "A": "adaptation",
+        "B": "aestivation",
+        "C": "diapause",
+        "D": "dormancy",
+        "E": "hibernation"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0254",
+      "type": "mcq",
+      "stem": "The developing embryo is attached to the mother’s uterus by",
+      "options": {
+        "A": "amnion",
+        "B": "blood vessels",
+        "C": "placenta",
+        "D": "umbilical cord",
+        "E": "uterine cavity"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0255",
+      "type": "mcq",
+      "stem": "The following are types of finger prints EXCEPT",
+      "options": {
+        "A": "arch",
+        "B": "compound",
+        "C": "loop",
+        "D": "simple",
+        "E": "whorl"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0256",
+      "type": "mcq",
+      "stem": "Which of the following is a biotic factor that affects population?",
+      "options": {
+        "A": "Predator",
+        "B": "Salinity",
+        "C": "Space",
+        "D": "Temperature",
+        "E": "Water"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0257",
+      "type": "mcq",
+      "stem": "Amoeba engulfs food particles by means of its",
+      "options": {
+        "A": "contractile vacuole",
+        "B": "cytoplasmic membrane",
+        "C": "food vacuoles",
+        "D": "nucleus",
+        "E": "pseudopodia."
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0258",
+      "type": "mcq",
+      "stem": "The type of association in which one organism benefits and the other neither benefits nor is harmed is called",
+      "options": {
+        "A": "commensalism",
+        "B": "mutualism",
+        "C": "parasitism",
+        "D": "saprophytism",
+        "E": "symbiosis"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0259",
+      "type": "mcq",
+      "stem": "The group of organisms at the base of the pyramid of numbers are",
+      "options": {
+        "A": "decomposers",
+        "B": "primary consumers",
+        "C": "producers",
+        "D": "secondary consumers",
+        "E": "tertiary consumers"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0260",
+      "type": "mcq",
+      "stem": "Spider belongs to which of the following classes in the phylum arthropoda?",
+      "options": {
+        "A": "Arachnida",
+        "B": "Chilopoda",
+        "C": "Crustacean",
+        "D": "Insect",
+        "E": "Myriapoda"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0261",
+      "type": "mcq",
+      "stem": "Intercostal muscles are found in the ------ region",
+      "options": {
+        "A": "abdominal",
+        "B": "chest",
+        "C": "head",
+        "D": "limb",
+        "E": "neck"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0262",
+      "type": "mcq",
+      "stem": "Which of these is an example of physiological variation?",
+      "options": {
+        "A": "Blood group",
+        "B": "Eye colour",
+        "C": "Fingerprint",
+        "D": "Height",
+        "E": "Weight"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0263",
+      "type": "mcq",
+      "stem": "The main constituents of glomerular filterate are",
+      "options": {
+        "A": "blood and water",
+        "B": "blood and urea",
+        "C": "glucose and water",
+        "D": "salt and blood",
+        "E": "water and urea"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0264",
+      "type": "mcq",
+      "stem": "The structure that separates the thoracic from abdominal cavity is",
+      "options": {
+        "A": "diaphragm",
+        "B": "intercostal muscle",
+        "C": "rib",
+        "D": "sternum",
+        "E": "thoraxic vertebrae"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0265",
+      "type": "mcq",
+      "stem": "Meiosis involves all the following EXCEPT",
+      "options": {
+        "A": "exchange of genes",
+        "B": "production of cells with diploid number of chromosomes",
+        "C": "production of cells with haploid number of chromosomes",
+        "D": "production of two daughter cells",
+        "E": "two nuclear divisions"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0266",
+      "type": "mcq",
+      "stem": "The two nuclei contained in the germinating pollen grain are",
+      "options": {
+        "A": "egg and palisade",
+        "B": "generative and sperm",
+        "C": "generative and tube",
+        "D": "spongy and tube",
+        "E": "tube and cellular"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0267",
+      "type": "mcq",
+      "stem": "The following are ways of preserving food EXCEPT",
+      "options": {
+        "A": "boiling",
+        "B": "canning",
+        "C": "drying",
+        "D": "freezing",
+        "E": "salting"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0268",
+      "type": "mcq",
+      "stem": "The following are the functions of a worker termite EXCEPT",
+      "options": {
+        "A": "building of tunnels",
+        "B": "construction of fungus garden",
+        "C": "feeding the young",
+        "D": "fetching food",
+        "E": "protecting the nest"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0269",
+      "type": "mcq",
+      "stem": "Which of the following modes of nutrition Is autotrophic?",
+      "options": {
+        "A": "Holophytic",
+        "B": "Holozoic",
+        "C": "Parasitic",
+        "D": "Saprophytic",
+        "E": "Symbiotic"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0270",
+      "type": "mcq",
+      "stem": "The network of blood capillaries in the kidney capsule is referred to as",
+      "options": {
+        "A": "capsule",
+        "B": "glomerulus",
+        "C": "pelvis",
+        "D": "pyramid",
+        "E": "ureter"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0271",
+      "type": "mcq",
+      "stem": "Petals join together to form a tube known as",
+      "options": {
+        "A": "epigynous",
+        "B": "gamopetalous",
+        "C": "hypogynous",
+        "D": "polypctalous",
+        "E": "polysepalous"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0272",
+      "type": "mcq",
+      "stem": "The following attract insects to flowers for pollination EXCEPT",
+      "options": {
+        "A": "brightly coloured petals",
+        "B": "broad and grooved corolla",
+        "C": "presence of anther with light pollen grains",
+        "D": "presence of nectar",
+        "E": "presence of sweet scent"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0273",
+      "type": "mcq",
+      "stem": "Which of these organisms exists as a filament?",
+      "options": {
+        "A": "Diatom",
+        "B": "Euglena",
+        "C": "Paramecium",
+        "D": "Spirogyra",
+        "E": "Volvox"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0274",
+      "type": "mcq",
+      "stem": "An instrument of measuring wind speed is called",
+      "options": {
+        "A": "an anemometer",
+        "B": "a barometer",
+        "C": "a hygrometer",
+        "D": "a speedometer",
+        "E": "a thermometer"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0275",
+      "type": "mcq",
+      "stem": "Which of these traits shows discontinuous variation ?",
+      "options": {
+        "A": "ability to roll the tongue",
+        "B": "colour of hair",
+        "C": "height of stem",
+        "D": "size of girth",
+        "E": "weight of organism"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0276",
+      "type": "mcq",
+      "stem": "An example of a conditioned reflex is",
+      "options": {
+        "A": "blinking of the eye-lids",
+        "B": "shout of exclamation",
+        "C": "knee jerk",
+        "D": "riding a bicycle",
+        "E": "twitching of facial muscles"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0277",
+      "type": "mcq",
+      "stem": "Which of these is a liming factor with respect to human population size?",
+      "options": {
+        "A": "emigration",
+        "B": "high standard of living",
+        "C": "immigration",
+        "D": "improved medicare",
+        "E": "natality"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0278",
+      "type": "mcq",
+      "stem": "An essential element whose deficiency in plants will result in poor growth, particularly of the roots, and is essential for cell well formation is",
+      "options": {
+        "A": "calcium",
+        "B": "iron",
+        "C": "magnesium",
+        "D": "nitrogen",
+        "E": "phosphorus"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0279",
+      "type": "mcq",
+      "stem": "The following are functions of the liver EXCEPT",
+      "options": {
+        "A": "deamination of excess amino acids and proteins",
+        "B": "excretion of bile pigments",
+        "C": "manufacture of blood plasma",
+        "D": "production of heat",
+        "E": "storage of vitamins and minerals"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0280",
+      "type": "mcq",
+      "stem": "During fertilization, the direction in which the pollen tube grows is controlled by",
+      "options": {
+        "A": "Ovary",
+        "B": "ovule",
+        "C": "pollen grains",
+        "D": "pollen tube nucleus",
+        "E": "style"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0281",
+      "type": "mcq",
+      "stem": "Crime detection in a forensic laboratory involves the use of",
+      "options": {
+        "A": "blood transfusion",
+        "B": "blood analysis",
+        "C": "fingerprints",
+        "D": "genetic combination",
+        "E": "tongue rolling ability"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0282",
+      "type": "mcq",
+      "stem": "Which of these factors least affects population size?",
+      "options": {
+        "A": "Availability of food",
+        "B": "Disease",
+        "C": "Immigration",
+        "D": "Rate of reproduction",
+        "E": "Variation"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0283",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a natural method of birth control?",
+      "options": {
+        "A": "Abstaining from sex",
+        "B": "Prolonged breast feeding",
+        "C": "Rhythm method",
+        "D": "Use of condom",
+        "E": "Withdrawal method"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0284",
+      "type": "mcq",
+      "stem": "Which of these is NOT an example of reflex action",
+      "options": {
+        "A": "Walking",
+        "B": "Banging of feet on an object",
+        "C": "Blinking of the eyes",
+        "D": "Jerking of the knee",
+        "E": "Sneezing"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0285",
+      "type": "mcq",
+      "stem": "Which of these is produced by pancreas?",
+      "options": {
+        "A": "Insulin",
+        "B": "Pepsin",
+        "C": "Ptyalin",
+        "D": "Renin",
+        "E": "Streapsin"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0286",
+      "type": "mcq",
+      "stem": "Which of the following crop diseases is caused by a fungus?",
+      "options": {
+        "A": "Cassava blight",
+        "B": "Cocoa black pod",
+        "C": "Groundnut rosette",
+        "D": "Lettuce mossaic",
+        "E": "Yam mosaic"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0287",
+      "type": "mcq",
+      "stem": "The function of ribosome is",
+      "options": {
+        "A": "excretion of waste",
+        "B": "protein synthesis",
+        "C": "reproduction",
+        "D": "respiration",
+        "E": "secretion of hormones."
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0288",
+      "type": "mcq",
+      "stem": "The following practices are adopted in the conservation of tropical rain forest EXCEPT",
+      "options": {
+        "A": "afforestation",
+        "B": "creation of game reserve",
+        "C": "creation of forest reserve",
+        "D": "re-afforestation",
+        "E": "deforestation"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0289",
+      "type": "mcq",
+      "stem": "Which of these is a courtship behavior in toad?",
+      "options": {
+        "A": "Display of body parts",
+        "B": "Display of color",
+        "C": "Pairing",
+        "D": "Production of scent",
+        "E": "Territoriality"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0290",
+      "type": "mcq",
+      "stem": "Loamy soil - is used for crop production because of its",
+      "options": {
+        "A": "high humus content",
+        "B": "high percentage of clay",
+        "C": "high porosity",
+        "D": "low gravel content",
+        "E": "low humus content"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0291",
+      "type": "mcq",
+      "stem": "What will the phenotypic ratio when a tall pea plant (TT) is crossed with a short pea plant (Tt)?",
+      "options": {
+        "A": "0:04",
+        "B": "1:03",
+        "C": "2:02",
+        "D": "3:01",
+        "E": "4:00"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0292",
+      "type": "mcq",
+      "stem": "Liver destroys old red blood cells to produce digestive substance called",
+      "options": {
+        "A": "amalyse",
+        "B": "bile",
+        "C": "insulin",
+        "D": "lipase",
+        "E": "rennin"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0293",
+      "type": "mcq",
+      "stem": "A dehiscent fruit formed from several fused carpels with man seeds is classified as a/an",
+      "options": {
+        "A": "achene",
+        "B": "capsule",
+        "C": "caryopsis",
+        "D": "follicle",
+        "E": "legume"
+      },
+      "marks": 1,
+      "year": 2008
+    },
+    {
+      "id": "neco-biology-bank-0294",
+      "type": "mcq",
+      "stem": "The topmost layer of a typical soil profile is",
+      "options": {
+        "A": "clay",
+        "B": "coarse sand",
+        "C": "fine sand",
+        "D": "gravel",
+        "E": "humus"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0295",
+      "type": "mcq",
+      "stem": "Which of these is NOT part of a seed?",
+      "options": {
+        "A": "Cotyledon",
+        "B": "Embryo",
+        "C": "Endosperm",
+        "D": "Pericarp",
+        "E": "Testa"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0296",
+      "type": "mcq",
+      "stem": "Which of the following functions of the body are nephrons associated with?",
+      "options": {
+        "A": "Circulation",
+        "B": "Digestion",
+        "C": "Excretion",
+        "D": "Reproduction",
+        "E": "Respiration"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0297",
+      "type": "mcq",
+      "stem": "In a moss plant, spores are produced in the",
+      "options": {
+        "A": "capsule",
+        "B": "leaf",
+        "C": "rhizoid",
+        "D": "seta",
+        "E": "stalk"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0298",
+      "type": "mcq",
+      "stem": "Which of these organisms reproduces by budding?",
+      "options": {
+        "A": "Amoeba",
+        "B": "Euglena",
+        "C": "Hydra",
+        "D": "Paramecium",
+        "E": "Volvox"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0299",
+      "type": "mcq",
+      "stem": "Which of these is NOT a pollutant?",
+      "options": {
+        "A": "Carbondioxide",
+        "B": "Lead oxide",
+        "C": "Nitrogen gas",
+        "D": "Nitrogen oxide",
+        "E": "Sulphur dioxide"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0300",
+      "type": "mcq",
+      "stem": "Villi are finger-like structures found in the",
+      "options": {
+        "A": "large intestine",
+        "B": "rectum",
+        "C": "small intestine",
+        "D": "stomach",
+        "E": "tongue"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0301",
+      "type": "mcq",
+      "stem": "Over-grazing encourages soil",
+      "options": {
+        "A": "acidity",
+        "B": "conservation",
+        "C": "erosion",
+        "D": "fertility",
+        "E": "formation"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0302",
+      "type": "mcq",
+      "stem": "In mammals, tissue respiration takes place in the",
+      "options": {
+        "A": "alveoli",
+        "B": "cells",
+        "C": "lungs",
+        "D": "nose",
+        "E": "trachea"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0303",
+      "type": "mcq",
+      "stem": "The following plants have self-pollinated flowers EXCEPT?",
+      "options": {
+        "A": "groundnut",
+        "B": "okra",
+        "C": "rice",
+        "D": "wheat"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0304",
+      "type": "mcq",
+      "stem": "These processes are involved in asexual reproduction EXCEPT",
+      "options": {
+        "A": "budding",
+        "B": "fertilization",
+        "C": "fission",
+        "D": "spore formation",
+        "E": "vegetative propagation"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0305",
+      "type": "mcq",
+      "stem": "Excess amino acids are converted into urea by the",
+      "options": {
+        "A": "heart",
+        "B": "kidney",
+        "C": "liver",
+        "D": "muscles",
+        "E": "spleen"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0306",
+      "type": "mcq",
+      "stem": "The products of respiration in higher plants are",
+      "options": {
+        "A": "carbondioxide, energy and starch",
+        "B": "carbondioxide, energy and water",
+        "C": "carbondioxide, oxygen and water",
+        "D": "carbondioxide, starch and water",
+        "E": "glucose, energy and water"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0307",
+      "type": "mcq",
+      "stem": "What will be the phenotypic ratio in the f1 generation, if a dominant red flowered plant (RR) is crossed with recessive white flowered plant (rr)?",
+      "options": {
+        "A": "1 red : 1 white",
+        "B": "2 red : 0 white",
+        "C": "3 red : 1 white",
+        "D": "4 red : 0 white",
+        "E": "4 red : 4 white"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0308",
+      "type": "mcq",
+      "stem": "Which of these influences growth movement in plants?",
+      "options": {
+        "A": "Acetic acid",
+        "B": "Auxins",
+        "C": "Chlorophyll",
+        "D": "Enzyme",
+        "E": "Ethylene"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0309",
+      "type": "mcq",
+      "stem": "Which of the following is bryophyte?",
+      "options": {
+        "A": "Bladderwort",
+        "B": "Flytrap",
+        "C": "Liverwort",
+        "D": "Pitcher",
+        "E": "Sundew"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0310",
+      "type": "mcq",
+      "stem": "The basic unit of classification of living things is the",
+      "options": {
+        "A": "class",
+        "B": "genus",
+        "C": "kingdom",
+        "D": "phylum",
+        "E": "species"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0311",
+      "type": "mcq",
+      "stem": "Fern plants carry out Photosynthesis in the",
+      "options": {
+        "A": "frond",
+        "B": "rhizome",
+        "C": "sorus",
+        "D": "stolon",
+        "E": "thallus"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0312",
+      "type": "mcq",
+      "stem": "The cortex of a herbaceous stem is made up of",
+      "options": {
+        "A": "collenchyma and parenchyma",
+        "B": "collenchyma and sclerenchyma",
+        "C": "parenchyma and sclerenchma",
+        "D": "pericycle and endodermis",
+        "E": "sclerenthyma and endodermis"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0313",
+      "type": "mcq",
+      "stem": "Root hairs are extensions of the",
+      "options": {
+        "A": "cortex",
+        "B": "endodermis",
+        "C": "epidermis",
+        "D": "piliferous layer",
+        "E": "vascular bundle"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0314",
+      "type": "mcq",
+      "stem": "The structure in cell concerned with the synthesis of proteins is the",
+      "options": {
+        "A": "endoplasm reticulum",
+        "B": "ribosome",
+        "C": "nucleus",
+        "D": "plasma membrane",
+        "E": "golgi apparatus"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0315",
+      "type": "mcq",
+      "stem": "Which of the following is an abiotic factor in an ecosystem?",
+      "options": {
+        "A": "Food",
+        "B": "Host",
+        "C": "Parasite",
+        "D": "Predator",
+        "E": "Pressure"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0316",
+      "type": "mcq",
+      "stem": "Exoskeleton is a characteristic feature of",
+      "options": {
+        "A": "amoeba",
+        "B": "earthworm",
+        "C": "hydra",
+        "D": "millipede",
+        "E": "tapeworm"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0317",
+      "type": "mcq",
+      "stem": "The type of placentation found in tomato fruit is called",
+      "options": {
+        "A": "axile",
+        "B": "bisal",
+        "C": "free central",
+        "D": "marginal",
+        "E": "parietal"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0318",
+      "type": "mcq",
+      "stem": "The male reproductive part of a flower is made up of",
+      "options": {
+        "A": "anther and filament",
+        "B": "ovary and ovule",
+        "C": "ovule and style",
+        "D": "stigma and filament",
+        "E": "style and stigma"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0319",
+      "type": "mcq",
+      "stem": "Which of these is a simple dehiscent fruit?",
+      "options": {
+        "A": "Achene",
+        "B": "Cypsela",
+        "C": "Legume",
+        "D": "Nut",
+        "E": "Samara"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0320",
+      "type": "mcq",
+      "stem": "Which of the following processes converts nitrates in the soil to atmospheric nitrogen?",
+      "options": {
+        "A": "Denitrification",
+        "B": "Lightning",
+        "C": "Nitrification",
+        "D": "Putrefaction",
+        "E": "Rainfall"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0321",
+      "type": "mcq",
+      "stem": "The part of the male reproductive organ where sperm cells are produced is called?",
+      "options": {
+        "A": "epididymis",
+        "B": "penis",
+        "C": "seminal vesicle",
+        "D": "seminiferous tubules",
+        "E": "vas deferens"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0322",
+      "type": "mcq",
+      "stem": "Mycelium is a feature of",
+      "options": {
+        "A": "algae",
+        "B": "bacteria",
+        "C": "ferns",
+        "D": "fungi",
+        "E": "viruses."
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0323",
+      "type": "mcq",
+      "stem": "Which of the following body characteristics distinguishes Ascaris from Earthworms?",
+      "options": {
+        "A": "Bilaterally symmetrical",
+        "B": "Cylindrical",
+        "C": "Segmented",
+        "D": "Soft",
+        "E": "Unsegmented"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0324",
+      "type": "mcq",
+      "stem": "Which of the following enables mammals to maintain balance?",
+      "options": {
+        "A": "Cochlea",
+        "B": "Eustucian tube",
+        "C": "Ossicle",
+        "D": "Semi-circular canal",
+        "E": "Tympanic membrane"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0325",
+      "type": "mcq",
+      "stem": "Cellular respiration occurs in the",
+      "options": {
+        "A": "chloroplast",
+        "B": "endoplasmic reticulum",
+        "C": "food vacuole",
+        "D": "mitochondrion",
+        "E": "nucleus"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0326",
+      "type": "mcq",
+      "stem": "Which of these vertebrae is of the same number in man and rabbit?",
+      "options": {
+        "A": "Caudal",
+        "B": "Cervical",
+        "C": "Lumber",
+        "D": "Sacral",
+        "E": "Thoracic"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0327",
+      "type": "mcq",
+      "stem": "These animals exhibit camouflage EXCEPT",
+      "options": {
+        "A": "chameleon",
+        "B": "crab",
+        "C": "crocodile",
+        "D": "lizard",
+        "E": "snake"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0328",
+      "type": "mcq",
+      "stem": "In a case of disputed paternity the most likely clue to resolving the problem is to match the ________________ of the baby with that of the father .",
+      "options": {
+        "A": "blood group",
+        "B": "facial appearance",
+        "C": "finger print",
+        "D": "sex type",
+        "E": "skin color"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0329",
+      "type": "mcq",
+      "stem": "When both alleles in a heterozygous individual are fully expressed in the phenotype of the F, generation this phenomenon is described as",
+      "options": {
+        "A": "co-dominance",
+        "B": "dominance",
+        "C": "incomplete dominance",
+        "D": "mutation",
+        "E": "recession"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0330",
+      "type": "mcq",
+      "stem": "Which of these is NOT an excretory organ/organelle?",
+      "options": {
+        "A": "flame cell",
+        "B": "kidney",
+        "C": "malpighian tubule",
+        "D": "nephridium",
+        "E": "spiracle"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0331",
+      "type": "mcq",
+      "stem": "An example of sex-linked trait is",
+      "options": {
+        "A": "ability to roll the tongue",
+        "B": "ability to taste PTC",
+        "C": "baldness",
+        "D": "blindness",
+        "E": "blood group"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0332",
+      "type": "mcq",
+      "stem": "Which of these organisms is most likely to have the least number if found within the same habitat?",
+      "options": {
+        "A": "grasshopper",
+        "B": "hawk",
+        "C": "lizard",
+        "D": "snake",
+        "E": "toad"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0333",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of mollusc?",
+      "options": {
+        "A": "Bodies are protected by hard exoskeleton",
+        "B": "Bodies are segmented",
+        "C": "Body walls have three layers",
+        "D": "Presence of paired jointed appendages",
+        "E": "The head bears a pair of antennae"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0334",
+      "type": "mcq",
+      "stem": "These groups of bacteria are harmless EXCEPT",
+      "options": {
+        "A": "denitrifying",
+        "B": "nitrifying",
+        "C": "nitrogen-fixing",
+        "D": "parasitic",
+        "E": "saprophytic"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0335",
+      "type": "mcq",
+      "stem": "Which of the following enzymes act on carbohydrates?",
+      "options": {
+        "A": "Amylase",
+        "B": "Lipase",
+        "C": "Pepsin",
+        "D": "Renin",
+        "E": "Trypsin"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0336",
+      "type": "mcq",
+      "stem": "Plants use Nitrogen in the form of",
+      "options": {
+        "A": "ammonia",
+        "B": "ammonium",
+        "C": "nitrates",
+        "D": "nitrites",
+        "E": "urea"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0337",
+      "type": "mcq",
+      "stem": "Digested food is carried from small intestine to the liver by the",
+      "options": {
+        "A": "hepatic artery",
+        "B": "hepatic portal vein",
+        "C": "hepatic vein",
+        "D": "inferior vena cava",
+        "E": "superior vena cava"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0338",
+      "type": "mcq",
+      "stem": "The following processes release carbondioxide into the atmosphere EXCEPT",
+      "options": {
+        "A": "combustion",
+        "B": "decomposition",
+        "C": "putrefaction",
+        "D": "respiration",
+        "E": "transpiration"
+      },
+      "marks": 1,
+      "year": 2009
+    },
+    {
+      "id": "neco-biology-bank-0339",
+      "type": "mcq",
+      "stem": "Which of these agencies do not have anything to do with conservation of natural resources?",
+      "options": {
+        "A": "Family Economics Advancement Programme",
+        "B": "Federal Environmental Protection Agency",
+        "C": "Nigerian Conservation Foundation",
+        "D": "Nigerian Game Reserve Authorities",
+        "E": "World Wildlife Fund for Nature"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0340",
+      "type": "mcq",
+      "stem": "Which of these is NOT a method of asexual reproduction?",
+      "options": {
+        "A": "budding",
+        "B": "fission",
+        "C": "fusion",
+        "D": "fragmentation",
+        "E": "layering"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0341",
+      "type": "mcq",
+      "stem": "Which ONE is not an adaptation for water conservation in plant found is arid region?",
+      "options": {
+        "A": "absence of leaves",
+        "B": "leaves reduced to spines",
+        "C": "raised stomata",
+        "D": "sunken stomata",
+        "E": "thick stems"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0342",
+      "type": "mcq",
+      "stem": "Use the information to answer this question.\n\nI. Smoking\n\nII. Sun drying\n\nIII. Freezing\n\nIV. Canning\n\nV. Salting\n\nVI. Pasteurization\n\nA method of food preservation that works on the principle of dehydration is",
+      "options": {
+        "A": "I",
+        "B": "II",
+        "C": "I ,II ,and V",
+        "D": "II ,III, and V",
+        "E": "IV"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0343",
+      "type": "mcq",
+      "stem": "The genetic composition of an organism is termed",
+      "options": {
+        "A": "an allele",
+        "B": "a cross",
+        "C": "a genotype",
+        "D": "a phenotype",
+        "E": "a hybrid"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0344",
+      "type": "mcq",
+      "stem": "Which organisms are NOT autotrophic?",
+      "options": {
+        "A": "algae",
+        "B": "Ferns",
+        "C": "fungi",
+        "D": "grasses",
+        "E": "mosses"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0345",
+      "type": "mcq",
+      "stem": "Which of the following statements is NOT true according to the first and second laws of thermodynamics ?",
+      "options": {
+        "A": "In all energy conversions a certain amount is always lost as heat",
+        "B": "In any given ecosystem the energy transformations can be classified into catabolic and anabolic processes",
+        "C": "The energy at one trophic level is the same as the next higher or the one below it",
+        "D": "The sun is the ultimate source of energy in the universe",
+        "E": "The total energy in an ecosystem retains constant"
+      },
+      "marks": 1,
+      "year": 2000
+    },
+    {
+      "id": "neco-biology-bank-0346",
+      "type": "mcq",
+      "stem": "The blood vessel that supplies blood rich in digested food to the liver is the",
+      "options": {
+        "A": "Hepatic artery",
+        "B": "Hepatic portal artery",
+        "C": "Hepatic portal vein",
+        "D": "Hepatic vein",
+        "E": "Renal artery"
+      },
+      "marks": 1,
+      "year": 2001
+    },
+    {
+      "id": "neco-biology-bank-0347",
+      "type": "mcq",
+      "stem": "The cell organelle, from which spindle fibers originate during cell division in animal cells is known as",
+      "options": {
+        "A": "Centrosome",
+        "B": "Chromosome",
+        "C": "Leucoplast",
+        "D": "Lysosome",
+        "E": "Ribosome"
+      },
+      "marks": 1,
+      "year": 2001
+    }
+  ],
+  "category": "secondary",
+  "body": "NECO"
+}
