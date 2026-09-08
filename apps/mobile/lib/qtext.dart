@@ -1,7 +1,3 @@
-import 'package:flutter/material.dart';
-
-import 'config.dart';
-
 /// Question text rendering for past questions.
 ///
 /// Past questions arrive in three shapes:
@@ -16,6 +12,10 @@ import 'config.dart';
 /// <script>/<style> content is discarded, entities are decoded, and
 /// LaTeX is turned into unicode super/subscripts and symbols.
 library;
+
+import 'package:flutter/material.dart';
+
+import 'config.dart';
 
 /// Resolves an origin-less media path (/qimages/…) against the study API
 /// the app already talks to.
@@ -217,13 +217,13 @@ String latexToText(String src) {
 
 /// Converts \( … \), \[ … \] and $$ … $$ spans into converted text.
 String convertMath(String text) {
-  // Raw-string concatenation keeps every segment from ending on a
-  // backslash (illegal in Dart): r'\\' + r'\(' == regex \\ \( — a
+  // Adjacent raw strings keep every segment from ending on a
+  // backslash (illegal in Dart): r'\\' r'\(' == regex \\ \( — a
   // literal backslash followed by a literal '('.
   final RegExp inlineRe =
-      RegExp(r'\\' + r'\(' + r'([\s\S]*?)' + r'\\' + r'\)');
+      RegExp(r'\\' r'\(' r'([\s\S]*?)' r'\\' r'\)');
   final RegExp displayRe =
-      RegExp(r'\\' + r'\[' + r'([\s\S]*?)' + r'\\' + r'\]');
+      RegExp(r'\\' r'\[' r'([\s\S]*?)' r'\\' r'\]');
   final RegExp dollarRe = RegExp(r'\$\$?([\s\S]*?)\$\$?');
   return text
       .replaceAllMapped(inlineRe, (Match m) => latexToText(m.group(1)!))
@@ -301,50 +301,13 @@ const Set<String> _dropTags = <String>{
   'svg', 'video', 'audio', 'source',
 };
 
-const Set<String> _keepTags = <String>{
-  'p', 'br', 'b', 'strong', 'i', 'em', 'u', 'ins', 's', 'del', 'sub', 'sup',
-  'span', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'thead',
-  'tbody', 'tfoot', 'tr', 'td', 'th', 'ul', 'ol', 'li', 'blockquote', 'pre',
-  'code', 'figure', 'figcaption', 'a', 'img', 'hr', 'font', 'center',
-};
-
 class _Parser {
-  _Parser(this.baseStyle);
-
-  final TextStyle baseStyle;
   final List<InlineSpan> spans = <InlineSpan>[];
 
   void _addText(String raw, TextStyle style) {
     final String text = convertMath(decodeEntities(raw));
     if (text.isEmpty) return;
     spans.add(TextSpan(text: text, style: style));
-  }
-
-  TextStyle _styleFor(String tag) {
-    final TextStyle b = baseStyle;
-    switch (tag) {
-      case 'b':
-      case 'strong':
-        return b.copyWith(fontWeight: FontWeight.w600);
-      case 'i':
-      case 'em':
-        return b.copyWith(fontStyle: FontStyle.italic);
-      case 'u':
-      case 'ins':
-        return b.copyWith(decoration: TextDecoration.underline);
-      case 's':
-      case 'del':
-        return b.copyWith(decoration: TextDecoration.lineThrough);
-      case 'code':
-        return b.copyWith(
-          fontFamily: 'monospace',
-          background: Paint()..color = const Color(0x14000000),
-        );
-      case 'a':
-        return b.copyWith(color: b.color, decoration: TextDecoration.underline);
-      default:
-        return b;
-    }
   }
 
   /// Block-level: '\n' before the element's content, mimicking margins.
@@ -467,7 +430,7 @@ class _Parser {
 /// Renders a question stem / option / explanation into inline spans.
 List<InlineSpan> buildQuestionSpans(String html, TextStyle base) {
   if (html.isEmpty) return <InlineSpan>[];
-  final _Parser p = _Parser(base);
+  final _Parser p = _Parser();
   final List<_Tok> toks = _tokenize(html);
   int i = 0;
   while (i < toks.length) {
