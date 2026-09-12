@@ -133,7 +133,45 @@ The sign-in button itself now carries a "Google sign-in showing an
 error?" disclosure that renders the current page origin so anyone hitting
 this can self-diagnose.
 
-## 4. Local development
+## 4. AI (tutor + question generator)
+
+The Socratic tutor (`/review`) and the AI Generator (`/ai-generator`) run on
+**Gemini** through its OpenAI-compatible surface (base URL
+`https://generativelanguage.googleapis.com/v1beta/openai`, model
+`gemini-3.6-flash` by default). GitHub push protection blocks the API key
+inside this repo — it lives in the deployment environment only:
+
+```bash
+AI_API_KEY=AQ.…   # the founder's Gemini API key (GEMINI_API_KEY works too)
+```
+
+```bash
+AI_API_KEY=…      # or GEMINI_API_KEY — always wins over the baked key
+AI_BASE_URL=…     # any OpenAI-compatible /chat/completions provider
+AI_MODEL=…        # any model the provider serves
+```
+
+Notes:
+- **Region**: Gemini rejects requests from unsupported regions with
+  `User location is not supported` — host the API in a supported region
+  (US/EU) or set `AI_BASE_URL` to a proxy that is.
+- When the provider is unreachable the tutor degrades to deterministic
+  hint mode (`mode:"hint"`, never a crash) and the generator returns a
+  502 with an honest error. `GET /tutor/status` → `{aiEnabled}` badges
+  the client (false until `AI_API_KEY` is set).
+- Render dashboard → the api service → Environment → add `AI_API_KEY`;
+  the service restarts with the tutor in AI mode.
+
+## 5. Content layout (answers live inside the banks)
+
+Since 2026-09 the founder's doctrine supersedes the old ADR-0003
+split: `data/questions/**.json` carry `answer` / `explanation` per
+question and `data/answer-keys/` is gone. The API harvests those fields
+at boot (server-only key map) and **serves students sanitized bundles**
+— the answer fields never reach a client. Boot seeds the key store from
+the banks; a legacy `answer-keys/` tree is still honored if present.
+
+## 6. Local development
 
 ```bash
 cp apps/study-api/.env.example apps/study-api/.env   # point at local PG or Neon
@@ -150,7 +188,7 @@ bash scripts/api-e2e.sh http://127.0.0.1:3990
 
 CI runs the same script against a disposable Postgres 16 on every push.
 
-## 5. Operational notes
+## 7. Operational notes
 
 - **Migrations** are embedded and applied at boot in filename order
   (`internal/store/migrations/*.sql`), journaled in `study.schema_migrations`.
