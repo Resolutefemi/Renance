@@ -1,35 +1,30 @@
 'use client';
 
 /**
- * Settings, the Stitch settings_light screen, 1:1, with the founder's
- * three-tier Appearance control fully functional: Light, Mixed (dark
- * hero chrome on the light body) and Dark (full-dark tier). The choice
- * persists in localStorage and the root layout bootstraps it before
- * first paint, so a reload never flashes the wrong tier.
+ * Settings — the Stitch settings screen with the founder's Appearance
+ * control fully functional: Mode (Light / Mixed / Dark) plus the
+ * Chrome-style Seed Colour picker that re-tints every ink surface in
+ * the product (lib/theme.ts). The choice persists in localStorage and
+ * the root layout bootstraps it before first paint, so a reload never
+ * flashes the wrong tier.
  */
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { api } from '@/lib/api';
 import { clearSession, getToken } from '@/lib/session';
+import { readSeedColor, setSeedColor, type ThemeMode } from '@/lib/theme';
+import AppearancePanel from '@/components/appearance-panel';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
-
-type Theme = 'light' | 'mixed' | 'dark';
-
-const THEME_OPTIONS: Array<{ value: Theme; icon: string; label: string }> = [
-  { value: 'light', icon: 'light_mode', label: 'Light' },
-  { value: 'mixed', icon: 'contrast', label: 'Mixed' },
-  { value: 'dark', icon: 'dark_mode', label: 'Dark' },
-];
 
 interface MeResponse {
   user: { id: string; username: string; profileCompleted: boolean };
   profile: { fullName: string; institution: string; gradeLevel: string } | null;
 }
 
-function readTheme(): Theme {
+function readTheme(): ThemeMode {
   if (typeof window === 'undefined') return 'light';
   const t = window.localStorage.getItem('renance.theme');
   return t === 'mixed' || t === 'dark' ? t : 'light';
@@ -37,27 +32,36 @@ function readTheme(): Theme {
 
 export default function SettingsPage() {
   const router = useRouter();
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<ThemeMode>('light');
+  const [seed, setSeed] = useState<string | null>(null);
   const [me, setMe] = useState<MeResponse | null>(null);
   const [cleared, setCleared] = useState(false);
 
   useEffect(() => {
     setTheme(readTheme());
+    setSeed(readSeedColor());
     if (getToken()) {
       api<MeResponse>('/me').then(setMe).catch(() => setMe(null));
     }
   }, []);
 
-  function pickTheme(t: Theme) {
-    setTheme(t);
-    window.localStorage.setItem('renance.theme', t);
-    document.documentElement.dataset.theme = t;
+  function pickSeed(next: string | null) {
+    setSeed(next);
+    setSeedColor(next, theme);
   }
 
   function clearCache() {
-    const keep = window.localStorage.getItem('renance.theme');
+    const keepTheme = window.localStorage.getItem('renance.theme');
+    const keepSeed = window.localStorage.getItem('renance.seed');
+    const keepSeedVars = window.localStorage.getItem('renance.seedVars');
     window.localStorage.clear();
-    if (keep) window.localStorage.setItem('renance.theme', keep);
+    for (const [k, v] of [
+      ['renance.theme', keepTheme],
+      ['renance.seed', keepSeed],
+      ['renance.seedVars', keepSeedVars],
+    ] as const) {
+      if (v != null) window.localStorage.setItem(k, v);
+    }
     setCleared(true);
     setTimeout(() => setCleared(false), 2400);
   }
@@ -85,45 +89,15 @@ export default function SettingsPage() {
           Tune how Renance looks, syncs and reminds you.
         </p>
 
-        {/* Appearance: the Light / Mixed / Dark segmented control -------- */}
-        <section className="mt-6 flex flex-col gap-4 rounded-[12px] bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-          <div className="flex items-center gap-3">
-            <span className="material-symbols-outlined text-on-surface-variant">
-              brightness_medium
-            </span>
-            <div>
-              <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">
-                App Theme
-              </h2>
-              <p className="text-[13px] text-on-surface-variant">Appearance</p>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            {THEME_OPTIONS.map((o) => {
-              const selected = theme === o.value;
-              return (
-                <button
-                  key={o.value}
-                  type="button"
-                  onClick={() => pickTheme(o.value)}
-                  aria-pressed={selected}
-                  className={`flex flex-1 flex-col items-center gap-1.5 rounded-[10px] border px-2 py-3 transition ${
-                    selected
-                      ? 'border-on-surface bg-selection-blue text-on-surface'
-                      : 'border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-outline'
-                  }`}
-                >
-                  <span className="material-symbols-outlined text-[22px]">{o.icon}</span>
-                  <span className="text-[13px] font-semibold">{o.label}</span>
-                </button>
-              );
-            })}
-          </div>
-          <p className="text-[13px] leading-5 text-on-surface-variant">
-            Mixed keeps your pages light and turns the header cards dark, the
-            same treatment the exam player uses. Dark is the full dark tier.
+        {/* Appearance: Mode + the Chrome-style Seed Colour picker ------- */}
+        <AppearancePanel mode={theme} onMode={setTheme} />
+        {seed && (
+          <p className="mt-3 px-1 text-[13px] leading-5 text-on-surface-variant">
+            Seed <span className="font-mono font-semibold text-on-surface">{seed.toUpperCase()}</span> is live:{' '}
+            buttons, tiles, headers and surfaces are tinted with it across the app. Open Seed Color above to change or
+            reset it.
           </p>
-        </section>
+        )}
 
         {/* Learning ------------------------------------------------------- */}
         <section className="mt-4 overflow-hidden rounded-[12px] bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">

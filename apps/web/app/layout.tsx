@@ -113,8 +113,10 @@ export const metadata: Metadata = {
 };
 
 /* Appearance bootstrap: applied before first paint so the chosen tier
-   (light / mixed / dark, persisted in localStorage) never flashes. */
-const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='mixed'&&t!=='dark')t='light';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light';}})();`;
+   (light / mixed / dark) and the seeded colour palette never flash.
+   The seed's computed palettes ride in renance.seedVars (lib/theme.ts
+   wrote all three tiers at pick time), so this stays pure DOM writes. */
+const themeBootstrap = `(function(){try{var t=localStorage.getItem('renance.theme');if(t!=='mixed'&&t!=='dark')t='light';document.documentElement.dataset.theme=t;var sv=null;try{sv=JSON.parse(localStorage.getItem('renance.seedVars')||'null')}catch(e){}if(sv&&sv[t]){for(var k in sv[t]){document.documentElement.style.setProperty(k,sv[t][k]);}}}catch(e){document.documentElement.dataset.theme='light';}})();`;
 
 /* suppressHydrationWarning: the inline theme bootstrap writes data-theme
    onto <html> before React hydrates, so the DOM attribute never matches
@@ -136,6 +138,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
           rel="stylesheet"
+        />
+        {/* KaTeX renders the banks' LaTeX (array environments, fractions,
+            greek letters) as real typeset maths. CSS+JS ride the same CDN
+            as the fonts; when they are unreachable (offline revision) the
+            QText renderer falls back to its unicode approximation. */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+          crossOrigin="anonymous"
+        />
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+          crossOrigin="anonymous"
         />
         <meta name="author" content="Ariyo Oluwafemi Stephen (Resolute Femi)" />
         {/* Theme-adaptive favicon: flips white on dark browsers, ink on

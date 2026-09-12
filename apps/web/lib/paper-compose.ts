@@ -364,9 +364,17 @@ export async function composePaper(
     const base = await resolveBase();
     if (!base) throw new Error('base pack not loaded');
     const year = spec.years.length === 1 ? spec.years[0] : 0;
-    const pool = yearPool(mcqOnly(base.questions), year);
+    // Theory-only banks (every WAEC/JAMB/NECO *-theory pack) have no
+    // objective questions at all; the old mcqOnly filter emptied the
+    // pool, the compose threw and the paper bounced to the sleeping API
+    // which answered "no study pack with code …". A theory pack IS a
+    // study pack: seat its theory questions (they play with the essay
+    // textarea and reveal the model answer after grading) instead of
+    // failing the whole sitting.
+    const mcqPool = yearPool(mcqOnly(base.questions), year);
+    const pool = mcqPool.length > 0 ? mcqPool : yearPool(base.questions, year);
     if (pool.length === 0) {
-      throw new Error(year ? `${base.code} has no objective questions for ${year}` : `${base.code} has no objective questions`);
+      throw new Error(year ? `${base.code} has no questions for ${year}` : `${base.code} has no questions`);
     }
     let n = spec.n;
     if (n <= 0) n = spec.from > 0 ? DEFAULT_PART_N : DEFAULT_PICK_N;

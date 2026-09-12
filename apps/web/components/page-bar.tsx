@@ -35,16 +35,16 @@ export default function PageBar({
 
   return (
     <div className="sticky top-0 z-40 w-full border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-14 w-full max-w-5xl items-center gap-1 px-2 sm:px-4">
+      <div className="mx-auto flex h-14 w-full max-w-5xl items-center gap-1 px-2 sm:px-4 md:h-16 md:px-6">
         <button
           type="button"
           onClick={goBack}
           aria-label="Go back"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container md:h-11 md:w-11"
         >
           <span className="material-symbols-outlined text-[22px]">arrow_back</span>
         </button>
-        <h1 className="min-w-0 flex-1 truncate text-[15px] font-semibold text-on-surface">{title}</h1>
+        <h1 className="min-w-0 flex-1 truncate text-[15px] font-semibold text-on-surface md:text-[17px]">{title}</h1>
         {right}
       </div>
     </div>

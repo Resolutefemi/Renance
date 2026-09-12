@@ -250,3 +250,31 @@ body {
 html[data-rail='collapsed'] {
   --rail-w: 4rem;
 }
+
+/* ------------------------------------------------------------------ */
+/* PC canvas (founder: "the website is not PC responsive, the white    */
+/* space is too much"). The shells cap at 64/80rem for phones; on real */
+/* monitors the page must USE the canvas. These rules lift every       */
+/* mx-auto max-w-5xl shell (and the exam player's 3xl header/foot)     */
+/* one step per breakpoint — one edit here, every page obeys.          */
+/* ------------------------------------------------------------------ */
+@media (min-width: 1280px) {
+  .mx-auto.max-w-5xl { max-width: 84rem; }   /* 1344px */
+  .mx-auto.max-w-3xl { max-width: 56rem; }   /* exam player chrome */
+}
+@media (min-width: 1536px) {
+  .mx-auto.max-w-5xl { max-width: 92rem; }   /* 1472px */
+  .mx-auto.max-w-3xl { max-width: 62rem; }
+}
+
+/* Launcher tiles scale up on the desktop canvas so the home grid reads
+   like a dashboard, not a shrunk phone screen. */
+@media (min-width: 768px) {
+  .launcher-grid { gap: 1.75rem; }
+}
+
+/* KaTeX maths hosts: keep display blocks centred with breathing room and
+   scrollable when a wide array meets a narrow phone. */
+.katex-host { line-height: 1.4; }
+.katex-host .katex-display { margin: 0.45em 0; }
+.katex-host .katex { font-size: 1.04em; }

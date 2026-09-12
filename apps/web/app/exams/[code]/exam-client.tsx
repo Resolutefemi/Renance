@@ -75,6 +75,19 @@ type Phase = 'loading' | 'intro' | 'playing' | 'grading' | 'graded' | 'error';
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
+/**
+ * Deep links arrive from the wild: chats, address bars, other clients
+ * that append params with a second "?" (?code=…~n=40?shuffle=1). Only
+ * the first "?" starts the query string, so everything after a stray
+ * one rides INSIDE the code value and poisons the compose. Strip it,
+ * and trim the board-room whitespace while at it.
+ */
+function sanitizeCode(raw: string): string {
+  const cut = raw.indexOf('?');
+  const base = cut >= 0 ? raw.slice(0, cut) : raw;
+  return base.trim();
+}
+
 export default function ExamPage({ code: routeCode }: { code: string }) {
   const router = useRouter();
 
@@ -86,13 +99,14 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   // Composed papers land on the static /exams/paper/ route with the
   // real code in the query string (?code=…), static export cannot
   // enumerate their infinite ~param combinations as paths.
-  const code = routeCode || searchParams.get('code') || '';
+  const code = sanitizeCode(routeCode || searchParams.get('code') || '');
   const [untimed, setUntimed] = useState(timerParam === '0');
   const [timerOverride, setTimerOverride] = useState<number | null>(
     timerParam && timerParam !== '0' ? Math.max(1, Number(timerParam) || 0) : null,
   );
 
   const [phase, setPhase] = useState<Phase>('loading');
+  const [retry, setRetry] = useState(0);
   const [bundle, setBundle] = useState<Bundle | null>(null);
   const [meta, setMeta] = useState<ExamMetaLite | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -213,7 +227,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     return () => {
       alive = false;
     };
-  }, [code]);
+  }, [code, retry]);
 
   /** Rebuild a paused sitting: same picks, same walk, honest clock. */
   function resumeAttempt(snap: ActiveExam, b: Bundle) {
@@ -620,12 +634,21 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         <p className="max-w-md rounded-xl bg-error-container px-6 py-5 text-center text-sm text-on-error-container">
           {error}
         </p>
-        <button
-          onClick={() => router.push('/dashboard')}
-          className="mt-4 text-sm text-primary underline-offset-4 hover:underline"
-        >
-          ← back to dashboard
-        </button>
+        <div className="mt-4 flex items-center gap-4">
+          <button
+            onClick={() => setRetry((n) => n + 1)}
+            className="flex h-11 items-center gap-2 rounded-[10px] bg-primary px-5 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
+          >
+            <span className="material-symbols-outlined text-[20px]">refresh</span>
+            Retry
+          </button>
+          <button
+            onClick={() => router.push('/dashboard')}
+            className="text-sm text-primary underline-offset-4 hover:underline"
+          >
+            ← back to dashboard
+          </button>
+        </div>
       </Centered>
     );
   }

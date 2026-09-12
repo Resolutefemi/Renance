@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
 import { getToken, setStoredUser } from '@/lib/session';
 import { examHref, fetchManifest, migrateBundleCache, prefetchAll, type ExamMeta } from '@/lib/exams';
 import { type ReviewSummary } from '@/lib/review';
@@ -111,6 +111,8 @@ export default function DashboardPage() {
   const [attempts, setAttempts] = useState<AttemptRow[]>([]);
   const [reviewDueCount, setReviewDueCount] = useState(0);
   const [needsProfile, setNeedsProfile] = useState(false);
+  const [bootError, setBootError] = useState<string | null>(null);
+  const [bootNonce, setBootNonce] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [moreOpen, setMoreOpen] = useState(false);
   // Today's daily challenge (JAMB desk): the tile deep-links into the
@@ -167,20 +169,34 @@ export default function DashboardPage() {
         api<DailyTileInfo>(`/daily/${encodeURIComponent(body)}`)
           .then((d) => alive && setDaily(d))
           .catch(() => {}); // tile falls back to the setup screen
+        // The shelf syncs regardless of onboarding state — a fresh
+        // student finishing the profile sheet must not wait for another
+        // manifest round-trip to see packs behind it.
+        void startSyncFlow(meRes.profile ?? undefined);
         if (!meRes.profile?.completed) {
           setNeedsProfile(true);
           return;
         }
-        await startSyncFlow();
-      } catch {
-        /* api() already redirects on 401 */
+      } catch (err) {
+        // api() redirects on 401 itself; any other failure must never
+        // strand the desk on an eternal spinner — show it and offer a
+        // retry (offline morning, asleep API, captive portal).
+        if (alive) {
+          setBootError(
+            err instanceof ApiError && err.status === 401
+              ? ''
+              : err instanceof Error
+                ? err.message
+                : 'Could not reach your desk',
+          );
+        }
       }
     })();
     return () => {
       alive = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router]);
+  }, [router, bootNonce]);
 
   /** Silent background asset sync: server job + client prefetch, in
       parallel. No banner, the desk is ready long before it is asked for.
@@ -188,7 +204,7 @@ export default function DashboardPage() {
       origin quota on the big banks), and the first pass also migrates
       any old localStorage bundles across, un-sticking quota-struck
       devices. */
-  async function startSyncFlow() {
+  async function startSyncFlow(profile?: Profile | null) {
     try {
       migrateBundleCache();
       const manifest = await fetchManifest();
@@ -197,8 +213,10 @@ export default function DashboardPage() {
       // archive: a WAEC candidate caches the WAEC shelf, a university
       // student their school's banks. 632 packs would drown a phone's
       // storage AND its connection pool.
-      const focusExams = deskExams(manifest.exams, me?.profile?.exams?.[0], me?.profile?.institution);
-      await Promise.all([pollSyncJob(), prefetchAll({ ...manifest, exams: focusExams })]);
+      const p = profile ?? me?.profile ?? undefined;
+      const focusExams = deskExams(manifest.exams, p?.exams?.[0], p?.institution);
+      void pollSyncJob();
+      void prefetchAll({ ...manifest, exams: focusExams });
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Sync failed');
     }
@@ -272,8 +290,26 @@ export default function DashboardPage() {
 
   if (!me) {
     return (
-      <main className="flex min-h-dvh items-center justify-center bg-background">
-        <RenanceMark size={44} state="busy" />
+      <main className="flex min-h-dvh flex-col items-center justify-center gap-5 bg-background px-6">
+        <RenanceMark size={44} state={bootError == null ? 'busy' : 'idle'} />
+        {bootError != null && (
+          <>
+            <p className="max-w-sm rounded-xl bg-error-container px-5 py-3 text-center text-sm text-on-error-container">
+              {bootError || 'Could not load your desk.'}
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setBootError(null);
+                setBootNonce((n) => n + 1);
+              }}
+              className="flex h-11 items-center gap-2 rounded-[10px] bg-primary px-5 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
+            >
+              <span className="material-symbols-outlined text-[20px]">refresh</span>
+              Try again
+            </button>
+          </>
+        )}
       </main>
     );
   }
@@ -294,7 +330,7 @@ export default function DashboardPage() {
 
       {/* Brand header: fixed, blurred, hairline shadow (home_dashboard).
           Founder rule: the logo and the avatar are both clickable. */}
-      <header className="fixed left-0 right-0 top-0 z-50 border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl md:left-60">
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-outline-variant/40 bg-surface/80 backdrop-blur-xl md:left-[var(--rail-w)]">
         <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-4 sm:px-6">
           <Link
             href="/dashboard"
@@ -409,7 +445,7 @@ export default function DashboardPage() {
         <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
           <section className="mt-2">
             <h3 className="text-sm text-on-surface-variant">Practice</h3>
-            <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="description" label="Exams" href={setupHref} />
               <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
               <LauncherTile icon="local_library" label="Study" href="/study" />
@@ -419,7 +455,7 @@ export default function DashboardPage() {
 
           <section className="mt-4 lg:mt-2">
             <h3 className="text-sm text-on-surface-variant">Compete</h3>
-            <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
               <LauncherTile
                 icon="event_repeat"
@@ -434,7 +470,7 @@ export default function DashboardPage() {
 
           <section className="mt-4 lg:mt-0">
             <h3 className="text-sm text-on-surface-variant">Learn</h3>
-            <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
               <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
               <LauncherTile icon="trending_up" label="Progress" href="/progress" />
@@ -446,7 +482,7 @@ export default function DashboardPage() {
         {/* Tools: the occasional utilities, with More holding the rest. */}
         <section className="mt-4">
           <h3 className="text-sm text-on-surface-variant">Tools</h3>
-          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
             <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
             <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
@@ -603,7 +639,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
       <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <section className="mt-2">
           <h3 className="text-sm text-on-surface-variant">Study</h3>
-          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="assignment" label="Courses" href={`/university/${slug}`} />
             <LauncherTile icon="fact_check" label="Quizzes" href={`/university/${slug}`} />
             <LauncherTile icon="rate_review" label="Review" href="/review" />
@@ -612,7 +648,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         </section>
         <section className="mt-4 lg:mt-2">
           <h3 className="text-sm text-on-surface-variant">Grow</h3>
-          <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="calculate" label="CGPA" href="/progress" />
             <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
             <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
@@ -624,7 +660,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
       {/* Tools: shared with the other desks. */}
       <section className="mt-4">
         <h3 className="text-sm text-on-surface-variant">Tools</h3>
-        <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
           <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
           <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
           <LauncherTile icon="menu_book" label="Lessons" href="/lessons" />
@@ -715,7 +751,7 @@ function LauncherTile({
   const inner = (
     <>
       <div
-        className={`relative flex h-14 w-14 items-center justify-center rounded-[18px] transition-transform group-active:scale-95 ${
+        className={`relative flex h-14 w-14 items-center justify-center rounded-[18px] transition-transform group-active:scale-95 md:h-16 md:w-16 md:rounded-[22px] ${
           inverse
             ? 'bg-accent-ink text-white shadow-[0_2px_8px_0_rgba(17,28,45,0.25)]'
             : muted
@@ -732,7 +768,7 @@ function LauncherTile({
         )}
       </div>
       <span
-        className={`w-full truncate text-center text-[11px] ${
+        className={`w-full truncate text-center text-[11px] md:text-[12.5px] ${
           inverse ? 'font-semibold text-accent-ink' : 'text-on-surface-variant'
         }`}
       >
