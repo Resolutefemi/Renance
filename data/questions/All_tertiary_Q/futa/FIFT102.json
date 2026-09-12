@@ -1,1 +1,151 @@
-{"code":"uni-futa-fift102-bank","title":"FUTA FIFT 102 | Course Question Bank","version":1,"questionCount":10,"totalMarks":10,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-fift102-0001","type":"mcq","stem":"What does IP stand for in network protocols?","options":{"A":"Internet Protocol","B":"Intranet Pathway","C":"Internal Port","D":"Interconnected Packet"},"marks":1},{"id":"uni-futa-fift102-0002","type":"mcq","stem":"Which network device operates at the physical layer and simply repeats signals to all ports?","options":{"A":"Hub","B":"Switch","C":"Router","D":"Bridge"},"marks":1},{"id":"uni-futa-fift102-0003","type":"mcq","stem":"What is the standard port number for HTTP web traffic?","options":{"A":"80","B":"443","C":"21","D":"22"},"marks":1},{"id":"uni-futa-fift102-0004","type":"mcq","stem":"Which topology connects all devices to a single central cable?","options":{"A":"Bus topology","B":"Star topology","C":"Ring topology","D":"Mesh topology"},"marks":1},{"id":"uni-futa-fift102-0005","type":"mcq","stem":"What is the primary function of a router?","options":{"A":"To forward data packets between different networks","B":"To connect local printers to a computer","C":"To allocate power to network cables","D":"To display web page graphics"},"marks":1},{"id":"uni-futa-fift102-0006","type":"mcq","stem":"Which layer of the OSI model is responsible for end-to-end communication control, reliability, and flow control?","options":{"A":"Transport layer","B":"Physical layer","C":"Network layer","D":"Application layer"},"marks":1},{"id":"uni-futa-fift102-0007","type":"mcq","stem":"What is the main difference between TCP and UDP?","options":{"A":"TCP is connection-oriented and reliable, while UDP is connectionless and faster","B":"TCP operates at the physical layer, while UDP operates at the network layer","C":"UDP is connection-oriented, while TCP is faster","D":"There is no difference"},"marks":1},{"id":"uni-futa-fift102-0008","type":"mcq","stem":"What protocol is used to automatically assign IP addresses to devices on a network?","options":{"A":"DHCP","B":"DNS","C":"FTP","D":"SMTP"},"marks":1},{"id":"uni-futa-fift102-0009","type":"mcq","stem":"What is a MAC address?","options":{"A":"A unique physical address hardcoded into a network interface card","B":"A temporary address assigned by an ISP","C":"The software registration ID of macOS","D":"A domain name system record"},"marks":1},{"id":"uni-futa-fift102-0010","type":"mcq","stem":"Which wireless standard is commonly used for short-range personal area networks (PANs)?","options":{"A":"Bluetooth","B":"Wi-Fi","C":"Ethernet","D":"Cellular LTE"},"marks":1}]}
+{
+  "code": "uni-futa-fift102-bank",
+  "title": "FUTA FIFT 102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 10,
+  "totalMarks": 10,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-fift102-0001",
+      "type": "mcq",
+      "stem": "What does IP stand for in network protocols?",
+      "options": {
+        "A": "Internet Protocol",
+        "B": "Intranet Pathway",
+        "C": "Internal Port",
+        "D": "Interconnected Packet"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IP stands for Internet Protocol, which is the principal communications protocol in the Internet protocol suite for routing packets."
+    },
+    {
+      "id": "uni-futa-fift102-0002",
+      "type": "mcq",
+      "stem": "Which network device operates at the physical layer and simply repeats signals to all ports?",
+      "options": {
+        "A": "Hub",
+        "B": "Switch",
+        "C": "Router",
+        "D": "Bridge"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A hub is a basic network device that connects multiple computers but broadcasts all traffic to all ports, operating at the Physical Layer."
+    },
+    {
+      "id": "uni-futa-fift102-0003",
+      "type": "mcq",
+      "stem": "What is the standard port number for HTTP web traffic?",
+      "options": {
+        "A": "80",
+        "B": "443",
+        "C": "21",
+        "D": "22"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "HTTP (Hypertext Transfer Protocol) traffic defaults to port 80, while secure HTTPS traffic defaults to port 443."
+    },
+    {
+      "id": "uni-futa-fift102-0004",
+      "type": "mcq",
+      "stem": "Which topology connects all devices to a single central cable?",
+      "options": {
+        "A": "Bus topology",
+        "B": "Star topology",
+        "C": "Ring topology",
+        "D": "Mesh topology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "In a bus topology, all nodes are connected directly to a single transmission line or cable called a bus."
+    },
+    {
+      "id": "uni-futa-fift102-0005",
+      "type": "mcq",
+      "stem": "What is the primary function of a router?",
+      "options": {
+        "A": "To forward data packets between different networks",
+        "B": "To connect local printers to a computer",
+        "C": "To allocate power to network cables",
+        "D": "To display web page graphics"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Routers operate at the Network Layer to connect different networks and route packets based on IP addresses."
+    },
+    {
+      "id": "uni-futa-fift102-0006",
+      "type": "mcq",
+      "stem": "Which layer of the OSI model is responsible for end-to-end communication control, reliability, and flow control?",
+      "options": {
+        "A": "Transport layer",
+        "B": "Physical layer",
+        "C": "Network layer",
+        "D": "Application layer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Transport Layer (Layer 4) handles data transport reliability, error recovery, flow control, and multiplexing (e.g., TCP)."
+    },
+    {
+      "id": "uni-futa-fift102-0007",
+      "type": "mcq",
+      "stem": "What is the main difference between TCP and UDP?",
+      "options": {
+        "A": "TCP is connection-oriented and reliable, while UDP is connectionless and faster",
+        "B": "TCP operates at the physical layer, while UDP operates at the network layer",
+        "C": "UDP is connection-oriented, while TCP is faster",
+        "D": "There is no difference"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "TCP ensures delivery using handshakes and confirmations, whereas UDP sends packets immediately without confirmation, making it faster but less reliable."
+    },
+    {
+      "id": "uni-futa-fift102-0008",
+      "type": "mcq",
+      "stem": "What protocol is used to automatically assign IP addresses to devices on a network?",
+      "options": {
+        "A": "DHCP",
+        "B": "DNS",
+        "C": "FTP",
+        "D": "SMTP"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) dynamically assigns IP configurations to network hosts."
+    },
+    {
+      "id": "uni-futa-fift102-0009",
+      "type": "mcq",
+      "stem": "What is a MAC address?",
+      "options": {
+        "A": "A unique physical address hardcoded into a network interface card",
+        "B": "A temporary address assigned by an ISP",
+        "C": "The software registration ID of macOS",
+        "D": "A domain name system record"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A MAC (Media Access Control) address is a unique, permanent hardware identifier assigned to network adapters."
+    },
+    {
+      "id": "uni-futa-fift102-0010",
+      "type": "mcq",
+      "stem": "Which wireless standard is commonly used for short-range personal area networks (PANs)?",
+      "options": {
+        "A": "Bluetooth",
+        "B": "Wi-Fi",
+        "C": "Ethernet",
+        "D": "Cellular LTE"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Bluetooth is a short-range wireless communication technology designed for PANs (connecting phones, headphones, mice, etc.)."
+    }
+  ]
+}

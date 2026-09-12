@@ -1,1 +1,151 @@
-{"code":"uni-futa-fcys106-bank","title":"FUTA FCYS 106 | Course Question Bank","version":1,"questionCount":10,"totalMarks":10,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-fcys106-0001","type":"mcq","stem":"What is the primary purpose of an Information Security Policy?","options":{"A":"To define an organization's security goals and rules","B":"To configure firewalls","C":"To calculate employee salaries","D":"To write assembly code"},"marks":1},{"id":"uni-futa-fcys106-0002","type":"mcq","stem":"Which regulation governs data privacy and protection for individuals within the European Union?","options":{"A":"GDPR","B":"HIPAA","C":"PCI-DSS","D":"SOX"},"marks":1},{"id":"uni-futa-fcys106-0003","type":"mcq","stem":"What does CIA triad stand for in security policy?","options":{"A":"Confidentiality, Integrity, Availability","B":"Central Intelligence Agency","C":"Computer Integrity Audit","D":"Control Index Access"},"marks":1},{"id":"uni-futa-fcys106-0004","type":"mcq","stem":"Which type of security control represents written guidelines, standards, and policies?","options":{"A":"Administrative control","B":"Technical control","C":"Physical control","D":"Corrective control"},"marks":1},{"id":"uni-futa-fcys106-0005","type":"mcq","stem":"What is the term for a legally binding contract that restricts parties from sharing confidential information?","options":{"A":"Non-Disclosure Agreement (NDA)","B":"Service Level Agreement (SLA)","C":"User License Agreement (ULA)","D":"Memorandum of Understanding (MOU)"},"marks":1},{"id":"uni-futa-fcys106-0006","type":"mcq","stem":"What is the primary focus of the NIST Cybersecurity Framework?","options":{"A":"To provide guidelines for managing and reducing cybersecurity risk","B":"To regulate cellular networks","C":"To audit financial reports","D":"To design cryptography chips"},"marks":1},{"id":"uni-futa-fcys106-0007","type":"mcq","stem":"What is the legal doctrine that holds employers responsible for the actions of their employees?","options":{"A":"Vicarious liability","B":"Due diligence","C":"Absolute liability","D":"Sovereign immunity"},"marks":1},{"id":"uni-futa-fcys106-0008","type":"mcq","stem":"What is the term for a formal document that describes the security controls of a system?","options":{"A":"System Security Plan (SSP)","B":"Business Impact Analysis (BIA)","C":"Incident Response Plan (IRP)","D":"Disaster Recovery Plan (DRP)"},"marks":1},{"id":"uni-futa-fcys106-0009","type":"mcq","stem":"Which policy defines what actions users are allowed or not allowed to perform on organization assets?","options":{"A":"Acceptable Use Policy (AUP)","B":"Password Policy","C":"Backup Policy","D":"Access Control Policy"},"marks":1},{"id":"uni-futa-fcys106-0010","type":"mcq","stem":"What is the legal term for a failure to take proper care in doing something, resulting in damage or injury?","options":{"A":"Negligence","B":"Breach","C":"Tort","D":"Fraud"},"marks":1}]}
+{
+  "code": "uni-futa-fcys106-bank",
+  "title": "FUTA FCYS 106 | Course Question Bank",
+  "version": 1,
+  "questionCount": 10,
+  "totalMarks": 10,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-fcys106-0001",
+      "type": "mcq",
+      "stem": "What is the primary purpose of an Information Security Policy?",
+      "options": {
+        "A": "To define an organization's security goals and rules",
+        "B": "To configure firewalls",
+        "C": "To calculate employee salaries",
+        "D": "To write assembly code"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A security policy defines the administrative directives, goals, rules, and expectations for protecting an organization's assets."
+    },
+    {
+      "id": "uni-futa-fcys106-0002",
+      "type": "mcq",
+      "stem": "Which regulation governs data privacy and protection for individuals within the European Union?",
+      "options": {
+        "A": "GDPR",
+        "B": "HIPAA",
+        "C": "PCI-DSS",
+        "D": "SOX"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "GDPR (General Data Protection Regulation) is a regulation in EU law on data protection and privacy for all individuals within the EU."
+    },
+    {
+      "id": "uni-futa-fcys106-0003",
+      "type": "mcq",
+      "stem": "What does CIA triad stand for in security policy?",
+      "options": {
+        "A": "Confidentiality, Integrity, Availability",
+        "B": "Central Intelligence Agency",
+        "C": "Computer Integrity Audit",
+        "D": "Control Index Access"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The CIA Triad constitutes the core pillars of cybersecurity: Confidentiality (encryption), Integrity (hashes), and Availability (uptime)."
+    },
+    {
+      "id": "uni-futa-fcys106-0004",
+      "type": "mcq",
+      "stem": "Which type of security control represents written guidelines, standards, and policies?",
+      "options": {
+        "A": "Administrative control",
+        "B": "Technical control",
+        "C": "Physical control",
+        "D": "Corrective control"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Administrative (or managerial) controls are policies, procedures, and guidelines defined by management to enforce security behaviors."
+    },
+    {
+      "id": "uni-futa-fcys106-0005",
+      "type": "mcq",
+      "stem": "What is the term for a legally binding contract that restricts parties from sharing confidential information?",
+      "options": {
+        "A": "Non-Disclosure Agreement (NDA)",
+        "B": "Service Level Agreement (SLA)",
+        "C": "User License Agreement (ULA)",
+        "D": "Memorandum of Understanding (MOU)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An NDA is a legal contract between parties ensuring that confidential information disclosed remains protected and is not shared with outsiders."
+    },
+    {
+      "id": "uni-futa-fcys106-0006",
+      "type": "mcq",
+      "stem": "What is the primary focus of the NIST Cybersecurity Framework?",
+      "options": {
+        "A": "To provide guidelines for managing and reducing cybersecurity risk",
+        "B": "To regulate cellular networks",
+        "C": "To audit financial reports",
+        "D": "To design cryptography chips"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The NIST CSF provides a set of standards, guidelines, and practices to help organizations manage and reduce cybersecurity risks."
+    },
+    {
+      "id": "uni-futa-fcys106-0007",
+      "type": "mcq",
+      "stem": "What is the legal doctrine that holds employers responsible for the actions of their employees?",
+      "options": {
+        "A": "Vicarious liability",
+        "B": "Due diligence",
+        "C": "Absolute liability",
+        "D": "Sovereign immunity"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Vicarious liability holds an employer or supervisor responsible for acts of negligence committed by employees in the course of employment."
+    },
+    {
+      "id": "uni-futa-fcys106-0008",
+      "type": "mcq",
+      "stem": "What is the term for a formal document that describes the security controls of a system?",
+      "options": {
+        "A": "System Security Plan (SSP)",
+        "B": "Business Impact Analysis (BIA)",
+        "C": "Incident Response Plan (IRP)",
+        "D": "Disaster Recovery Plan (DRP)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An SSP (System Security Plan) is a formal document describing system boundaries, operational environments, and active security controls."
+    },
+    {
+      "id": "uni-futa-fcys106-0009",
+      "type": "mcq",
+      "stem": "Which policy defines what actions users are allowed or not allowed to perform on organization assets?",
+      "options": {
+        "A": "Acceptable Use Policy (AUP)",
+        "B": "Password Policy",
+        "C": "Backup Policy",
+        "D": "Access Control Policy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An Acceptable Use Policy (AUP) specifies rules for how employees and users may utilize enterprise hardware, networks, and internet resources."
+    },
+    {
+      "id": "uni-futa-fcys106-0010",
+      "type": "mcq",
+      "stem": "What is the legal term for a failure to take proper care in doing something, resulting in damage or injury?",
+      "options": {
+        "A": "Negligence",
+        "B": "Breach",
+        "C": "Tort",
+        "D": "Fraud"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Negligence is the legal term describing a failure to exercise the standard of care that a reasonably prudent person would under similar conditions."
+    }
+  ]
+}

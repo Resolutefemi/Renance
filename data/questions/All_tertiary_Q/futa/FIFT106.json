@@ -1,1 +1,151 @@
-{"code":"uni-futa-fift106-bank","title":"FUTA FIFT 106 | Course Question Bank","version":1,"questionCount":10,"totalMarks":10,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-fift106-0001","type":"mcq","stem":"What is the primary difference between data and information?","options":{"A":"Data is raw facts, while information is processed, meaningful data","B":"Information is raw facts, while data is processed","C":"Data is physical, while information is digital","D":"There is no difference between them"},"marks":1},{"id":"uni-futa-fift106-0002","type":"mcq","stem":"What does DBMS stand for in data management?","options":{"A":"Database Management System","B":"Data Block Monitoring Standard","C":"Digital Backup Memory Space","D":"Dynamic Business Mapping Solution"},"marks":1},{"id":"uni-futa-fift106-0003","type":"mcq","stem":"What is a primary key in a database table?","options":{"A":"A column that uniquely identifies each record in the table","B":"A password used to encrypt database files","C":"The main table in a relational database schema","D":"The first column in every database index"},"marks":1},{"id":"uni-futa-fift106-0004","type":"mcq","stem":"What is data redundancy?","options":{"A":"The duplication of data across multiple files or databases","B":"The compression of data files to save space","C":"The process of verifying data correctness","D":"The secure backup of database records"},"marks":1},{"id":"uni-futa-fift106-0005","type":"mcq","stem":"Which stage of the Information Lifecycle involves the secure destruction or archiving of old data?","options":{"A":"Disposal / Retention","B":"Data Creation","C":"Data Processing","D":"Information Distribution"},"marks":1},{"id":"uni-futa-fift106-0006","type":"mcq","stem":"What is the main purpose of data normalization?","options":{"A":"To minimize redundancy and improve data integrity","B":"To speed up database backup processes","C":"To format database text to uppercase","D":"To convert data tables into graphical charts"},"marks":1},{"id":"uni-futa-fift106-0007","type":"mcq","stem":"What is a data warehouse?","options":{"A":"A large store of data accumulated from a wide range of sources, used for decision support","B":"A physical room where server hardware is kept","C":"An offline backup drive for archiving files","D":"A database that only stores multimedia files"},"marks":1},{"id":"uni-futa-fift106-0008","type":"mcq","stem":"What does SQL stand for?","options":{"A":"Structured Query Language","B":"Standard Queue Loader","C":"Simple Query Logic","D":"System Query Link"},"marks":1},{"id":"uni-futa-fift106-0009","type":"mcq","stem":"What is information security?","options":{"A":"Protecting information and information systems from unauthorized access, use, or disruption","B":"Writing backup code for applications","C":"Purchasing anti-virus software licenses","D":"Securing server rooms with physical locks"},"marks":1},{"id":"uni-futa-fift106-0010","type":"mcq","stem":"Which role is responsible for the overall design, security, and maintenance of an organization's databases?","options":{"A":"Database Administrator (DBA)","B":"Systems Analyst","C":"Network Administrator","D":"Front-end Developer"},"marks":1}]}
+{
+  "code": "uni-futa-fift106-bank",
+  "title": "FUTA FIFT 106 | Course Question Bank",
+  "version": 1,
+  "questionCount": 10,
+  "totalMarks": 10,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-fift106-0001",
+      "type": "mcq",
+      "stem": "What is the primary difference between data and information?",
+      "options": {
+        "A": "Data is raw facts, while information is processed, meaningful data",
+        "B": "Information is raw facts, while data is processed",
+        "C": "Data is physical, while information is digital",
+        "D": "There is no difference between them"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Data represents unorganized raw facts, which, when structured, contextualized, and processed, become meaningful information."
+    },
+    {
+      "id": "uni-futa-fift106-0002",
+      "type": "mcq",
+      "stem": "What does DBMS stand for in data management?",
+      "options": {
+        "A": "Database Management System",
+        "B": "Data Block Monitoring Standard",
+        "C": "Digital Backup Memory Space",
+        "D": "Dynamic Business Mapping Solution"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "DBMS stands for Database Management System, which is software used to store, manage, and retrieve database records."
+    },
+    {
+      "id": "uni-futa-fift106-0003",
+      "type": "mcq",
+      "stem": "What is a primary key in a database table?",
+      "options": {
+        "A": "A column that uniquely identifies each record in the table",
+        "B": "A password used to encrypt database files",
+        "C": "The main table in a relational database schema",
+        "D": "The first column in every database index"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A primary key is a field or combination of fields that uniquely identifies each row in a database table."
+    },
+    {
+      "id": "uni-futa-fift106-0004",
+      "type": "mcq",
+      "stem": "What is data redundancy?",
+      "options": {
+        "A": "The duplication of data across multiple files or databases",
+        "B": "The compression of data files to save space",
+        "C": "The process of verifying data correctness",
+        "D": "The secure backup of database records"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Data redundancy occurs when the same piece of data is stored in two or more separate places needlessly."
+    },
+    {
+      "id": "uni-futa-fift106-0005",
+      "type": "mcq",
+      "stem": "Which stage of the Information Lifecycle involves the secure destruction or archiving of old data?",
+      "options": {
+        "A": "Disposal / Retention",
+        "B": "Data Creation",
+        "C": "Data Processing",
+        "D": "Information Distribution"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The final phase of the information lifecycle manages data retention and secure disposal or archiving of expired information."
+    },
+    {
+      "id": "uni-futa-fift106-0006",
+      "type": "mcq",
+      "stem": "What is the main purpose of data normalization?",
+      "options": {
+        "A": "To minimize redundancy and improve data integrity",
+        "B": "To speed up database backup processes",
+        "C": "To format database text to uppercase",
+        "D": "To convert data tables into graphical charts"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Normalization organizes database columns and tables to ensure dependencies are enforced and redundancy is eliminated."
+    },
+    {
+      "id": "uni-futa-fift106-0007",
+      "type": "mcq",
+      "stem": "What is a data warehouse?",
+      "options": {
+        "A": "A large store of data accumulated from a wide range of sources, used for decision support",
+        "B": "A physical room where server hardware is kept",
+        "C": "An offline backup drive for archiving files",
+        "D": "A database that only stores multimedia files"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A data warehouse is a centralized repository of integrated data from multiple sources used for reporting and analytics."
+    },
+    {
+      "id": "uni-futa-fift106-0008",
+      "type": "mcq",
+      "stem": "What does SQL stand for?",
+      "options": {
+        "A": "Structured Query Language",
+        "B": "Standard Queue Loader",
+        "C": "Simple Query Logic",
+        "D": "System Query Link"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SQL stands for Structured Query Language, the standard programming language used to manage relational databases."
+    },
+    {
+      "id": "uni-futa-fift106-0009",
+      "type": "mcq",
+      "stem": "What is information security?",
+      "options": {
+        "A": "Protecting information and information systems from unauthorized access, use, or disruption",
+        "B": "Writing backup code for applications",
+        "C": "Purchasing anti-virus software licenses",
+        "D": "Securing server rooms with physical locks"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Information security ensures the confidentiality, integrity, and availability (CIA triad) of database and system resources."
+    },
+    {
+      "id": "uni-futa-fift106-0010",
+      "type": "mcq",
+      "stem": "Which role is responsible for the overall design, security, and maintenance of an organization's databases?",
+      "options": {
+        "A": "Database Administrator (DBA)",
+        "B": "Systems Analyst",
+        "C": "Network Administrator",
+        "D": "Front-end Developer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A DBA (Database Administrator) is responsible for managing, securing, backing up, and optimizing database performance."
+    }
+  ]
+}

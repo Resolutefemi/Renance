@@ -1,1 +1,151 @@
-{"code":"uni-futa-fift104-bank","title":"FUTA FIFT 104 | Course Question Bank","version":1,"questionCount":10,"totalMarks":10,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-fift104-0001","type":"mcq","stem":"What is the term for the gap between those who have access to modern information technologies and those who do not?","options":{"A":"Digital divide","B":"Information highway","C":"Network latency","D":"Tech disparity"},"marks":1},{"id":"uni-futa-fift104-0002","type":"mcq","stem":"What is a key characteristic of Web 2.0?","options":{"A":"User-generated content and social interaction","B":"Static HTML pages with no user input","C":"Slow dial-up internet speeds","D":"The invention of personal computers"},"marks":1},{"id":"uni-futa-fift104-0003","type":"mcq","stem":"What is the ethical concept concerning the rights of individuals to control how their personal data is collected and used online?","options":{"A":"Digital privacy","B":"Intellectual property","C":"Digital footprint","D":"Cybersecurity"},"marks":1},{"id":"uni-futa-fift104-0004","type":"mcq","stem":"Which of the following describes the viral spread of false information disguised as news?","options":{"A":"Fake news / Misinformation","B":"Clickbait headlines","C":"Content syndication","D":"Digital PR campaigning"},"marks":1},{"id":"uni-futa-fift104-0005","type":"mcq","stem":"What is cloud computing?","options":{"A":"Delivering computing services over the internet","B":"A method for computing weather patterns","C":"Connecting physical hardware using local cables","D":"Designing local database storage units"},"marks":1},{"id":"uni-futa-fift104-0006","type":"mcq","stem":"What does SEO stand for in digital marketing?","options":{"A":"Search Engine Optimization","B":"Social Engagement Organization","C":"Secure Electronic Office","D":"Standard Encryption Option"},"marks":1},{"id":"uni-futa-fift104-0007","type":"mcq","stem":"What is the term for a community of people sharing common interests who interact primarily via the internet?","options":{"A":"Virtual community","B":"Physical collective","C":"Local area network","D":"Demographic segment"},"marks":1},{"id":"uni-futa-fift104-0008","type":"mcq","stem":"What is net neutrality?","options":{"A":"The principle that internet service providers must treat all data on the internet equally","B":"The rule that internet access must be free for everyone","C":"The protocol for securing network data packets","D":"The neutral political stance of major social networks"},"marks":1},{"id":"uni-futa-fift104-0009","type":"mcq","stem":"Which concept refers to the digital footprints and trail of data we leave behind when using the internet?","options":{"A":"Digital footprint","B":"Browsing history","C":"Online persona","D":"Data mining profile"},"marks":1},{"id":"uni-futa-fift104-0010","type":"mcq","stem":"What type of attack involves tricking users into revealing sensitive information, like passwords, via deceptive emails or websites?","options":{"A":"Phishing","B":"Denial of Service (DoS)","C":"Ransomware","D":"SQL Injection"},"marks":1}]}
+{
+  "code": "uni-futa-fift104-bank",
+  "title": "FUTA FIFT 104 | Course Question Bank",
+  "version": 1,
+  "questionCount": 10,
+  "totalMarks": 10,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-fift104-0001",
+      "type": "mcq",
+      "stem": "What is the term for the gap between those who have access to modern information technologies and those who do not?",
+      "options": {
+        "A": "Digital divide",
+        "B": "Information highway",
+        "C": "Network latency",
+        "D": "Tech disparity"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The digital divide refers to the economic and social inequality regarding access to, use of, or impact of information and communication technologies."
+    },
+    {
+      "id": "uni-futa-fift104-0002",
+      "type": "mcq",
+      "stem": "What is a key characteristic of Web 2.0?",
+      "options": {
+        "A": "User-generated content and social interaction",
+        "B": "Static HTML pages with no user input",
+        "C": "Slow dial-up internet speeds",
+        "D": "The invention of personal computers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Web 2.0 describes the modern era of the World Wide Web characterized by collaboration, sharing, social media, and dynamic user contribution."
+    },
+    {
+      "id": "uni-futa-fift104-0003",
+      "type": "mcq",
+      "stem": "What is the ethical concept concerning the rights of individuals to control how their personal data is collected and used online?",
+      "options": {
+        "A": "Digital privacy",
+        "B": "Intellectual property",
+        "C": "Digital footprint",
+        "D": "Cybersecurity"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Digital privacy concerns the protection of personal data and identity on the internet, including user control over sharing."
+    },
+    {
+      "id": "uni-futa-fift104-0004",
+      "type": "mcq",
+      "stem": "Which of the following describes the viral spread of false information disguised as news?",
+      "options": {
+        "A": "Fake news / Misinformation",
+        "B": "Clickbait headlines",
+        "C": "Content syndication",
+        "D": "Digital PR campaigning"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Fake news is false or misleading information presented as news, often spread rapidly via social media platforms."
+    },
+    {
+      "id": "uni-futa-fift104-0005",
+      "type": "mcq",
+      "stem": "What is cloud computing?",
+      "options": {
+        "A": "Delivering computing services over the internet",
+        "B": "A method for computing weather patterns",
+        "C": "Connecting physical hardware using local cables",
+        "D": "Designing local database storage units"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Cloud computing is the on-demand delivery of computing power, database storage, applications, and other IT resources through the internet."
+    },
+    {
+      "id": "uni-futa-fift104-0006",
+      "type": "mcq",
+      "stem": "What does SEO stand for in digital marketing?",
+      "options": {
+        "A": "Search Engine Optimization",
+        "B": "Social Engagement Organization",
+        "C": "Secure Electronic Office",
+        "D": "Standard Encryption Option"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SEO is Search Engine Optimization, the process of improving site visibility on search engines for relevant searches."
+    },
+    {
+      "id": "uni-futa-fift104-0007",
+      "type": "mcq",
+      "stem": "What is the term for a community of people sharing common interests who interact primarily via the internet?",
+      "options": {
+        "A": "Virtual community",
+        "B": "Physical collective",
+        "C": "Local area network",
+        "D": "Demographic segment"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A virtual community is a social network of individuals who connect and interact online, transcending geographical boundaries."
+    },
+    {
+      "id": "uni-futa-fift104-0008",
+      "type": "mcq",
+      "stem": "What is net neutrality?",
+      "options": {
+        "A": "The principle that internet service providers must treat all data on the internet equally",
+        "B": "The rule that internet access must be free for everyone",
+        "C": "The protocol for securing network data packets",
+        "D": "The neutral political stance of major social networks"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Net neutrality requires ISPs to treat all data on the internet equally, without blocking or prioritizing specific websites or services."
+    },
+    {
+      "id": "uni-futa-fift104-0009",
+      "type": "mcq",
+      "stem": "Which concept refers to the digital footprints and trail of data we leave behind when using the internet?",
+      "options": {
+        "A": "Digital footprint",
+        "B": "Browsing history",
+        "C": "Online persona",
+        "D": "Data mining profile"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A digital footprint is the unique trail of data left by users during their activities online, including site visits and posts."
+    },
+    {
+      "id": "uni-futa-fift104-0010",
+      "type": "mcq",
+      "stem": "What type of attack involves tricking users into revealing sensitive information, like passwords, via deceptive emails or websites?",
+      "options": {
+        "A": "Phishing",
+        "B": "Denial of Service (DoS)",
+        "C": "Ransomware",
+        "D": "SQL Injection"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Phishing is a cyber attack where attackers impersonate trusted entities to deceive victims into sharing sensitive credentials or data."
+    }
+  ]
+}

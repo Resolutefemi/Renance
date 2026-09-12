@@ -7,11 +7,11 @@
 // Sources: YAML (self-describing) or CSV (pack metadata via flags).
 // Output matches the cbt-build pipeline byte-for-byte conventions:
 //
-//      data/questions/<group>/<name>.json    student-visible pack, routed by
-//                                            code (WAEC/mathematics.json,
+//      data/questions/<group>/<name>.json    pack, routed by code
+//                                            (WAEC/mathematics.json,
 //                                            All_tertiary_Q/futa/BIO101.json);
-//                                            questions/index.json maps code → path
-//      data/answer-keys/<keysub>/<code>.json server-only key (gitignored except mock/)
+//                                            questions/index.json maps code → path;
+//                                            answers+explanations embedded per question
 //      data/src/<keysub>/<file>              provenance copy of the source
 //      data/manifest.json                    sha256 fingerprint of every pack
 //
@@ -38,8 +38,8 @@ func run(args []string) int {
         fs.SetOutput(os.Stderr)
         var (
                 inputs   multiFlag
-                outdir   = fs.String("outdir", "data", "content root (contains questions/, answer-keys/)")
-                keysub   = fs.String("keysub", "mock", "answer-keys subdir for the generated key")
+                outdir   = fs.String("outdir", "data", "content root (contains questions/)")
+                keysub   = fs.String("keysub", "mock", "src/ provenance subdir for the generated pack")
                 version  = fs.String("version", "", "manifest version label (default: preserve existing, else era2-g1)")
                 code     = fs.String("code", "", "pack code (required for CSV input)")
                 title    = fs.String("title", "", "pack title (required for CSV input)")

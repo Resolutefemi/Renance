@@ -15,7 +15,9 @@
         "C": "Wilhelm Conrad Roentgen",
         "D": "Louis Pasteur"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text mentions: '1896-X-ray Imaging: Roentgen discovered X-rays, which were immediately utilized for diagnosing bone fractures.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0002",
@@ -27,7 +29,9 @@
         "C": "To cause instability in the system",
         "D": "To initiate rapid, temporary spikes in electrical voltage"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 3 states, 'Most physiological control uses negative feedback to reduce deviation from set point.' It reduces the output to bring the system back to the set point."
     },
     {
       "id": "uni-unilag-bme102-bank-0003",
@@ -39,7 +43,9 @@
         "C": "As actuators",
         "D": "As cables"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 5, under 'The Musculoskeletal System – A Mechanics Problem', states: 'In an engineering view, Bones are beams, joints are hinges/ball-sockets, muscles are actuators, tendons are cables.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0004",
@@ -51,7 +57,9 @@
         "C": "Ignoring biocompatibility.",
         "D": "Ignoring dynamics."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states, 'Ignoring feedback: A drug pump that doesn't account for the body's natural insulin response causes hypoglycemia.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0005",
@@ -63,7 +71,9 @@
         "C": "The iron lung",
         "D": "The dialysis machine"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text notes: '1929-Artificial Respirator: The “iron lung” was invented as a mechanical device for breathing assistance. It is simulated breathing via pressure changes in a tank.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0006",
@@ -75,7 +85,9 @@
         "C": "Environmental Engineering",
         "D": "Chemical Engineering"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Key Interdisciplinary Areas' section lists Electrical (circuits/signals), Mechanical (forces/motion), and Chemical (drug delivery/materials) as contributing engineering disciplines, but not Environmental Engineering."
     },
     {
       "id": "uni-unilag-bme102-bank-0007",
@@ -87,7 +99,9 @@
         "C": "Telemedicine platforms, wearable health monitoring devices, and secure communication systems.",
         "D": "Advanced air filtration systems for hospitals."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states: 'Biomedical engineers played a role in developing telemedicine platforms, wearable health monitoring devices, and secure communication systems, making healthcare more accessible to remote and underserved areas.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0008",
@@ -99,7 +113,9 @@
         "C": "Primarily used for academic research rather than clinical diagnosis.",
         "D": "Increased instances of human error in diagnostic interpretation."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under the 'Imaging Technologies' section, the 'Impact' is summarized as: 'Faster diagnosis, less exploratory surgery, better treatment planning.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0009",
@@ -111,7 +127,9 @@
         "C": "Art, literature, and music.",
         "D": "Geology, astronomy, and meteorology."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The NIH defines biomedical engineering as an 'interdisciplinary field that integrates physical, chemical, mathematical and computational sciences with engineering principles to study biology, medicine, behavior and health.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0010",
@@ -123,7 +141,9 @@
         "C": "Conducting genetic research.",
         "D": "Designing artificial organs."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Clinical engineering is defined as 'Application of medical technology in hospitals and healthcare facilities. The CEs manages medical equipment, ensure safety and train medical personnel.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0011",
@@ -135,7 +155,9 @@
         "C": "Allowed doctors to predict, personalize and remotely manage health.",
         "D": "Enabled real-time tracking of vital signs with wearables."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 'Three Waves of Technological Impact on Medicine' table states that the 1st wave (mechanical) 'Allowed doctors to see and measure inside the body without surgery.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0012",
@@ -147,7 +169,9 @@
         "C": "By developing advanced surgical techniques only accessible to specialists.",
         "D": "By concentrating research on rare diseases in developed countries."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text notes: 'They design affordable and portable medical devices for use in resource-limited settings. For instance, point-of-care diagnostic tools and mobile health clinics provide access to healthcare services in remote and underserved regions.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0013",
@@ -159,7 +183,9 @@
         "C": "The body's systems are entirely unpredictable.",
         "D": "Biological systems do not have inputs or outputs."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Why View Man as a Living Machine?', 'System Thinking' is described as: 'The body is not isolated organs. It's a network where failure in one part affects others, just like a mechanical or electrical system.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0014",
@@ -171,7 +197,9 @@
         "C": "Who is the primary competitor?",
         "D": "What is the minimum profit margin required?"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Translating Physiology to Engineering Design', the first question listed is: \"1. What variable am I measuring or controlling? Pressure, flow, voltage, temperature?\" This is fundamental to defining the device's purpose."
     },
     {
       "id": "uni-unilag-bme102-bank-0015",
@@ -183,7 +211,9 @@
         "C": "Clinical Engineering",
         "D": "Tissue Engineering"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines 'Biomechanics' as 'Application of mechanical engineering principles(force, stress, strain) to biological systems E.g. designing prosthetic limbs, modelling blood flow in arteries, orthopedic implants(artificial hip joints)'."
     },
     {
       "id": "uni-unilag-bme102-bank-0016",
@@ -195,7 +225,9 @@
         "C": "Devices must filter 180 L of blood/day.",
         "D": "Pumps must handle shear stress >400 Pa."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 5, under 'Design constraint' for the Nervous System, states: 'Signals are microvolts (the electrical activity being transmitted is incredibly weak and delicate) Devices need high input impedance and shielding to avoid noise.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0017",
@@ -207,7 +239,9 @@
         "C": "Telemedicine platforms, wearable health monitoring devices, and secure communication systems",
         "D": "Advanced ventilation systems for ICUs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under '3. Telemedicine', the text states: 'Biomedical engineers played a role in developing telemedicine platforms, wearable health monitoring devices, and secure communication systems, making healthcare more accessible to remote and underserved areas.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0018",
@@ -219,7 +253,9 @@
         "C": "Fluid pump and pipe network with valves",
         "D": "Electrical signal network with sensors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the table 'We can break the body into subsystems, each with an engineering equivalent', for 'Cardiovascular', the 'Engineering Analogy' is 'Fluid pump and pipe network with valves'."
     },
     {
       "id": "uni-unilag-bme102-bank-0019",
@@ -231,7 +267,9 @@
         "C": "Eliminating the need for medical supervision during drug administration",
         "D": "Lowering the cost of drug manufacturing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states that 'Biomedical engineers are creating more efficient drug delivery systems that ensure precise and controlled release of medications. These systems improve the effectiveness of treatments and reduce side effects...'"
     },
     {
       "id": "uni-unilag-bme102-bank-0020",
@@ -243,7 +281,9 @@
         "C": "Gas exchange: Oxygen in, carbon dioxide out",
         "D": "Filter blood, maintain fluid balance"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the table 'We can break the body into subsystems, each with an engineering equivalent', for 'Respiratory', the 'Main function' is 'Gas exchange: Oxygen in, carbon dioxide out'."
     },
     {
       "id": "uni-unilag-bme102-bank-0021",
@@ -255,7 +295,9 @@
         "C": "To filter blood when kidneys fail.",
         "D": "To take over breathing for patients in intensive care."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document explicitly states: '- Dialysis Machine: Filters blood when kidneys fail.' The other options describe the functions of a pacemaker, insulin pump, and ventilator, respectively."
     },
     {
       "id": "uni-unilag-bme102-bank-0022",
@@ -267,7 +309,9 @@
         "C": "A method for 3D printing biological tissues",
         "D": "A system for remote robotic surgery"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines IoMT as: 'Is a connected infrastructure of medical devices, software applications and health systems that collect, analyze and transmit health data over the internet. i.e. all devices are connected to hospital network for real-time monitoring.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0023",
@@ -279,7 +323,9 @@
         "C": "Tissue Engineering",
         "D": "Biomedical Imaging and Optics"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Tissue Engineering is defined as the repair or replacement of damaged tissues using cells and scaffolds."
     },
     {
       "id": "uni-unilag-bme102-bank-0024",
@@ -291,7 +337,9 @@
         "C": "Application of mechanical engineering principles to biological systems.",
         "D": "Technologies used to visualize internal body structures for non-invasive diagnosis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the document, Bioinstrumentation is defined as 'application of electronics and measurement principles to develop devices for diagnosing and treating diseases.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0025",
@@ -303,7 +351,9 @@
         "C": "Microscope",
         "D": "Robotic surgery"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The table lists 'Pacemaker' as a key technology of the 2nd wave. Additionally, the 'Medical Devices for Organ Support' section confirms that a Pacemaker 'Sends electrical pulses to regulate heartbeat.' X-ray and Microscope are 1st wave technologies, and Robotic surgery is 3rd wave."
     },
     {
       "id": "uni-unilag-bme102-bank-0026",
@@ -315,7 +365,9 @@
         "C": "PCR machines, oxygen plants, and telemedicine platforms",
         "D": "Advanced robotic surgery systems"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Point 6 under 'Examples of Technology Impact' says: 'COVID-19 Response: PCR machines, oxygen plants, and telemedicine platforms were rapidly deployed across Nigeria in 2020-2021.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0027",
@@ -327,7 +379,9 @@
         "C": "Sound waves",
         "D": "Focused light"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document explicitly states: '- Ultrasound (1950s): Uses sound waves to see fetus, heart and abdomen. Safe for pregnancy.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0028",
@@ -339,7 +393,9 @@
         "C": "To design complex machinery exclusively for industrial manufacturing.",
         "D": "To solely focus on diagnosing diseases without contributing to treatment."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines biomedical engineering as 'the discipline that applies engineering principles, design concepts, problem solving skills to biology, medicine and healthcare to improve human health and quality of life.' This clearly points to option B as the primary aim."
     },
     {
       "id": "uni-unilag-bme102-bank-0029",
@@ -351,7 +407,9 @@
         "C": "1960s-1970s",
         "D": "1980s-1990s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states: '1940s-1950s: Major advancements in cardiovascular medicine.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0030",
@@ -363,7 +421,9 @@
         "C": "Signals are chemical, requiring fluid interfaces.",
         "D": "Signals are mechanical, requiring motion sensors."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document specifies under 'Nervous System' design constraints: \"Signals are microvolts (the electrical activity being transmitted is incredibly weak and delicate) Devices need high input impedance and shielding to avoid noise.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0031",
@@ -375,7 +435,9 @@
         "C": "1950s",
         "D": "1960s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under '4. Formalization of the discipline (1960s-present)', it lists '1955-Pacemaker: First pacemakers were invented, changing cardiovascular care.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0032",
@@ -387,7 +449,9 @@
         "C": "It is primarily used for simple cosmetic procedures only.",
         "D": "It significantly reduces recovery time only for major abdominal surgeries."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states: '- Robotic Surgery: Da Vinci robot allows surgeon to operate with more precision through tiny incisions.' This highlights the dual benefit of enhanced precision and minimally invasive access."
     },
     {
       "id": "uni-unilag-bme102-bank-0033",
@@ -399,7 +463,9 @@
         "C": "Biomechanics",
         "D": "Tissue Engineering"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document defines Biomechanics as the application of mechanical engineering principles (force, stress, strain) to biological systems, with examples including designing prosthetic limbs and modeling blood flow."
     },
     {
       "id": "uni-unilag-bme102-bank-0034",
@@ -411,7 +477,9 @@
         "C": "Bioinstrumentation",
         "D": "Rehabilitation Engineering"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states that 'Bioinstrumentation: application of electronics and measurement principles to develop devices for diagnosing and treating diseases. E.g. patient monitoring systems, blood analyzers, electrocardiographs(ECG)'. This directly matches the description."
     },
     {
       "id": "uni-unilag-bme102-bank-0035",
@@ -423,7 +491,9 @@
         "C": "Production of custom-made surgical guides.",
         "D": "Direct intervention in surgical procedures without human input."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states that 'Internet of Medical Things (IoMT)' 'is a connected infrastructure of medical devices, software applications and health systems that collect, analyze and transmit health data over the internet. i.e. all devices are connected to hospital network for real-time monitoring.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0036",
@@ -435,7 +505,9 @@
         "C": "A smart watch detecting irregular heartbeat.",
         "D": "A dialysis machine filtering blood."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'The Future of technology', 'Wearable & Implantable Sensors' are described as devices that 'monitor physiological parameters e.g. smart watches that detect irregular heartbeat, smart patches that monitor glucose continuously.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0037",
@@ -447,7 +519,9 @@
         "C": "Vessel radius only affects pressure, not flow.",
         "D": "Viscosity is the only factor affecting flow in stents."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document, under the description of Poiseuille's Law, clearly states: \"Small changes in vessel radius cause huge changes in flow. Explains hypertension.\" This is due to the r⁴ term in the formula."
     },
     {
       "id": "uni-unilag-bme102-bank-0038",
@@ -459,7 +533,9 @@
         "C": "Nigeria's Data Protection Act 2023",
         "D": "Nigeria's Cybersecurity Act 2022"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states under 'Challenges and Negative Impacts': 'Electronic medical records and telemedicine raise concerns about patient data security. Nigeria's Data Protection Act 2023 now addresses this.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0039",
@@ -471,7 +547,9 @@
         "C": "Ignoring variability.",
         "D": "Ignoring dynamics."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document explicitly lists 'Ignoring variability: Designing for a 70kg male only. Women, children, elderly differ.' as a common design mistake."
     },
     {
       "id": "uni-unilag-bme102-bank-0040",
@@ -483,7 +561,9 @@
         "C": "Cell → Tissue → Organ → Organ System → Molecule → Atom → Organism",
         "D": "Molecule → Atom → Cell → Tissue → Organ → Organism → Organ System"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text lists the organization as: 'Atom → Molecule → Cell → Tissue → Organ → Organ System → Organism.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0041",
@@ -495,7 +575,9 @@
         "C": "Diminished core clinical skills and judgment",
         "D": "Decreased risk from device malfunctions"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states under 'Challenges and Negative Impacts' that 'Over-reliance on Technology: This can reduce core clinical skills, reduce clinical thinking and introduce risks from device malfunctions or data breaches. Some doctors order too many tests instead of using clinical judgment. Excessive dependence on automated tools can lead to diagnostic errors and diminished patient-provider empathy.' Option C directly reflects this point."
     },
     {
       "id": "uni-unilag-bme102-bank-0042",
@@ -507,7 +589,9 @@
         "C": "To surgically implant drugs directly into organs.",
         "D": "To enable gene editing for targeted drug delivery."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states that controlled drug release involves 'Patches and implants that release medicine slowly over weeks.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0043",
@@ -519,7 +603,9 @@
         "C": "Electrophoresis",
         "D": "DNA sequencing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Advancements in Biotechnology', it is stated: 'Biomedical engineering is instrumental in the development of biotechnology breakthroughs, such as gene editing tools like CRISPR-Cas9, which hold immense promise in treating genetic disorders and advancing personalized medicine.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0044",
@@ -531,7 +617,9 @@
         "C": "Cardiac Output",
         "D": "Blood Flow"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3, under 'Key engineering parameters' for The Cardiovascular System, defines 'Cardiac Output: CO = Heart Rate × Stroke Volume. Normal: 5 L/min at rest.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0045",
@@ -543,7 +631,9 @@
         "C": "Cochlear implants",
         "D": "Artificial kidney"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under '8. Advancements in Biotechnology', it mentions 'gene editing tools like CRISPR-Cas9, which hold immense promise in treating genetic disorders and advancing personalized medicine.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0046",
@@ -555,7 +645,9 @@
         "C": "Because the body is a self-regulating, adaptive, living system that responds to devices.",
         "D": "To avoid needing to model the body as interconnected subsystems."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The section 'Why Engineers Study Physiology' states: 'Engineers design for the body, but the body is not a car or bridge. It is a self-regulating, adaptive, living system. A device that works perfectly in the lab can fail in a patient if you don't understand how the body will respond.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0047",
@@ -567,7 +659,9 @@
         "C": "1800s-1940s",
         "D": "Before 1800s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The table 'The Three Waves of Technological Impact on Medicine' clearly lists the '1st wave (mechanical)' as occurring in the '1800s-1940s' period."
     },
     {
       "id": "uni-unilag-bme102-bank-0048",
@@ -579,7 +673,9 @@
         "C": "Implants must be heavier than natural bone.",
         "D": "Implants should always have a smooth surface for minimal friction."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document highlights this under '4. The Musculoskeletal System' design constraint: \"Implants must match bone stiffness to avoid 'stress shielding' and bone loss.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0049",
@@ -591,7 +687,9 @@
         "C": "To measure blood glucose and adjust insulin delivery",
         "D": "To block the body's natural insulin response"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states, \"Insulin pump: Measures blood glucose and adjusts insulin delivery which serves as artificial negative feedback.\" This highlights its role in regulating blood glucose by counteracting deviations from a set point."
     },
     {
       "id": "uni-unilag-bme102-bank-0050",
@@ -603,7 +701,9 @@
         "C": "It developed the first artificial heart valve using biomaterials.",
         "D": "It established the initial principles of minimally invasive surgery."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Transformation of Research in Biology', point 1 states: 'DNA Sequencing: The Human Genome Project (2003) mapped all 3 billion DNA bases in humans. Now sequencing costs dropped from $3 billion to <$500. This allows personalized medicine.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0051",
@@ -615,7 +715,9 @@
         "C": "Creating artificial organs for transplantation.",
         "D": "Researching new drug delivery systems."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Clinical engineering involves the application of medical technology in hospitals and healthcare facilities, with Clinical Engineers managing medical equipment, ensuring safety, and training medical personnel."
     },
     {
       "id": "uni-unilag-bme102-bank-0052",
@@ -627,7 +729,9 @@
         "C": "Wearable sensors exclusively for real-time monitoring.",
         "D": "3D printing for creating prosthetic limbs."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'The Future of technology', AI in Medicine 'uses machine learning, data analysis and algorithms to support clinical decision-making, diagnostics and patient care.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0053",
@@ -639,7 +743,9 @@
         "C": "The application of AI to diagnose diseases.",
         "D": "The tracking of disease outbreaks using mobile phones."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document defines telemedicine as the 'delivery of healthcare services (including, diagnosis, treatment and consultation) remotely via telecommunications technology such as video calls, phone or secure apps.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0054",
@@ -651,7 +757,9 @@
         "C": "Mathematics and Computer Science",
         "D": "Sociology and Psychology"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text explicitly states: 'Biomedical engineering is an interdisciplinary field based in both Engineering and Life sciences.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0055",
@@ -663,7 +771,9 @@
         "C": "It exclusively leads to faster diagnosis and better treatment planning.",
         "D": "It primarily causes delays in treatment due to complex systems."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states under 'Challenges and Negative Impacts' that over-reliance on technology 'can reduce core clinical skills, reduce clinical thinking and introduce risks from device malfunctions or data breaches... Excessive dependence on automated tools can lead to diagnostic errors and diminished patient-provider empathy.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0056",
@@ -675,7 +785,9 @@
         "C": "Gene editing.",
         "D": "Development of advanced surgical robots."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Advancements in Biotechnology' section specifically mentions 'gene editing tools like CRISPR-Cas9' as a breakthrough where biomedical engineering is instrumental."
     },
     {
       "id": "uni-unilag-bme102-bank-0057",
@@ -687,7 +799,9 @@
         "C": "MRI, AI, Telemedicine, robotic surgery",
         "D": "Stethoscope"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Three Waves of Technological Impact on Medicine' table clearly lists 'MRI, AI, Telemedicine, robotic surgery' as key technologies for the 3rd wave. The other options belong to earlier waves."
     },
     {
       "id": "uni-unilag-bme102-bank-0058",
@@ -699,7 +813,9 @@
         "C": "Data Privacy and security breaches of sensitive patient information.",
         "D": "Ethical issues surrounding gene editing and AI diagnosis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document explicitly states under 'Challenges and Negative Impacts' that 'Electronic medical records and telemedicine raise concerns about patient data security. Nigeria's Data Protection Act 2023 now addresses this.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0059",
@@ -711,7 +827,9 @@
         "C": "Tissue Engineering and Regenerative Medicine",
         "D": "Clinical Engineering"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Tissue Engineering and Regenerative Medicine', the text states: 'Tissue engineering has the potential to address the shortage of organ donors. Biomedical engineers are working on creating bioengineered organs and tissues that can be transplanted into patients.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0060",
@@ -723,7 +841,9 @@
         "C": "They must only be made from titanium and UHMWPE.",
         "D": "They must have a conduction velocity of 1-120 m/s."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 states: 'Design constraint: Blood cells are fragile. Shear stress >400 Pa damages red cells. So pumps must be designed carefully.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0061",
@@ -735,7 +855,9 @@
         "C": "They automatically diagnose diseases without clinician input.",
         "D": "They enable surgeons to perform robotic surgeries remotely."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Examples of Technology Impact', point 1 states: 'They can now use wearable sensors to continuously track vital signs. These compact devices collect real time data, providing a detailed picture of a patient's health. Examples include; smart wearable patches that track sleep patterns, heart rate variability and also skin temperature.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0062",
@@ -747,7 +869,9 @@
         "C": "40-70%",
         "D": "70-90%"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Challenges and Negative Impacts', the document specifies: 'In Nigeria, 40–70% of medical devices are non-functional due to poor maintenance and power issues.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0063",
@@ -759,7 +883,9 @@
         "C": "Most ailments were cured using sophisticated surgical techniques.",
         "D": "Pharmacology was highly developed, providing cures for many diseases."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states for this period: 'There was minimal effective treatments for common ailments, limited technological capabilities and little impact of medicine on the average person.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0064",
@@ -771,7 +897,9 @@
         "C": "They are entirely separate fields with no direct or significant influence on each other.",
         "D": "Only biology impacts technology, primarily by providing subjects for study."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document explicitly states: 'The relationship is two-way: 1. Technology impacts biology and medicine: New tools let us see, measure, treat, and understand the body in ways that were impossible before. 2. Biology impacts technology: Studying how the body works inspires new engineering designs.' This perfectly matches option B."
     },
     {
       "id": "uni-unilag-bme102-bank-0065",
@@ -783,7 +911,9 @@
         "C": "Artificial Organ",
         "D": "CT Scan"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 'Summary of key milestones' includes: '1931: Electron Microscope(Ruska)'."
     },
     {
       "id": "uni-unilag-bme102-bank-0066",
@@ -795,7 +925,9 @@
         "C": "Monitoring devices use control systems, while assisting devices use only sensors.",
         "D": "Monitoring devices are invasive, while assisting devices are non-invasive."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The section 'How Health Technology Interfaces with the Human Machine' defines: \"Monitoring Level Devices measure signals without changing the body\" and \"Assisting Level Devices take over or support a failing function.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0067",
@@ -807,7 +939,9 @@
         "C": "Astrophysics",
         "D": "Archaeology"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Key Interdisciplinary Areas,' Life Sciences include Anatomy, Physiology, Biology, and Biochemistry."
     },
     {
       "id": "uni-unilag-bme102-bank-0068",
@@ -819,7 +953,9 @@
         "C": "Advances in physics (optics, electricity, mechanics).",
         "D": "Breakthroughs in genetic engineering."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states: 'Advances in physics (optics, electricity, mechanics) during the industrial revolution directly influenced by medicine' during 'The Foundations' period."
     },
     {
       "id": "uni-unilag-bme102-bank-0069",
@@ -831,7 +967,9 @@
         "C": "To develop new surgical instruments",
         "D": "To manufacture 3D printed organs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'The Future of technology: Where Is This Going?', it states: 'Artificial Intelligence in Medicine: This uses machine learning, data analysis and algorithms to support clinical decision-making, diagnostics and patient care.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0070",
@@ -843,7 +981,9 @@
         "C": "Difficulty in device maintenance",
         "D": "Reduced access to care in rural areas"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document lists under 'Challenges and Negative Impacts': 'Ethical Issues: Genetic testing, gene editing, and Al diagnosis raise questions about consent, privacy, and fairness.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0071",
@@ -855,7 +995,9 @@
         "C": "Action Potential",
         "D": "Frequency Coding"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4 states: 'The Action Potential is a rapid, temporary spike in electrical voltage that travels down a neuron's axon to transmit information across the nervous system.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0072",
@@ -867,7 +1009,9 @@
         "C": "The physical production of prosthetic limbs.",
         "D": "The development of new vaccines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IoMT is described as a 'connected infrastructure of medical devices, software applications and health systems that collect, analyze and transmit health data over the internet.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0073",
@@ -879,7 +1023,9 @@
         "C": "Physical Sciences",
         "D": "Computational Sciences"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states that Biomedical Engineering draws from 'Physical Sciences: Physics and Chemistry.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0074",
@@ -891,7 +1037,9 @@
         "C": "By engineering more efficient drug delivery systems.",
         "D": "By designing affordable medical devices for remote areas."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states: 'Biomedical engineers have revolutionized medical imaging technologies. High-resolution MRI and CT scans enable more accurate and early disease detection. Innovations such as functional MRI (fMRI) have provided insights into brain function...'"
     },
     {
       "id": "uni-unilag-bme102-bank-0075",
@@ -903,7 +1051,9 @@
         "C": "To detect outbreaks, monitor trends in diseases, and guide actions to reduce mortality and morbidity.",
         "D": "To automate laboratory blood tests."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document defines Disease Surveillance as 'an early warning system to detect outbreaks, monitor trends in infectious and chronic diseases and guide actions to reduce mortality and morbidity.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0076",
@@ -915,7 +1065,9 @@
         "C": "If you don't understand how the healthy system works, you can't fix the broken one.",
         "D": "The human body is a perfect machine with no limitations."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The final sentence of the document's summary is: 'One-line takeaway: If you don't understand how the healthy system works, you can't fix the broken one.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0077",
@@ -927,7 +1079,9 @@
         "C": "Analyzing millions of DNA sequences to find genes linked to diseases.",
         "D": "Performing robotic surgery."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document describes bioinformatics as using 'Computers analyze millions of DNA sequences to find genes linked to cancer, sickle cell, malaria resistance.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0078",
@@ -939,7 +1093,9 @@
         "C": "Neural control and muscle activation patterns.",
         "D": "Principles of levers, torque, and control systems."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The text states, '1. Prosthetic Limb Design: Uses principles of levers, torque, and control systems from the musculoskeletal system.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0079",
@@ -951,7 +1107,9 @@
         "C": "Telemedicine platforms, wearable health monitoring devices, and secure communication systems.",
         "D": "Large-scale hospital construction technologies."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Telemedicine' section states that biomedical engineers developed 'telemedicine platforms, wearable health monitoring devices, and secure communication systems' to make healthcare more accessible."
     },
     {
       "id": "uni-unilag-bme102-bank-0080",
@@ -963,7 +1121,9 @@
         "C": "Electrical signal network with sensors",
         "D": "Air handling unit and gas exchanger"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The table on page 2 explicitly states that the engineering analogy for the Renal system is a 'Filtration plant and fluid control'."
     },
     {
       "id": "uni-unilag-bme102-bank-0081",
@@ -975,7 +1135,9 @@
         "C": "Fairness in access to gene editing.",
         "D": "Increased hospital stays due to complex procedures."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The document lists 'Genetic testing, gene editing, and Al diagnosis raise questions about consent, privacy, and fairness' as ethical issues. Increased hospital stays are an impact of some procedures, but not specifically an 'ethical issue' in the context presented."
     },
     {
       "id": "uni-unilag-bme102-bank-0082",
@@ -987,7 +1149,9 @@
         "C": "40-70%",
         "D": "80-90%"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document explicitly states: 'In Nigeria, 40–70% of medical devices are non-functional due to poor maintenance and power issues.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0083",
@@ -999,7 +1163,9 @@
         "C": "Biomechanics",
         "D": "Biomedical Imaging and Optics"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document defines Biomechanics as 'Application of mechanical engineering principles(force, stress, strain) to biological systems'."
     },
     {
       "id": "uni-unilag-bme102-bank-0084",
@@ -1011,7 +1177,9 @@
         "C": "That the human body is too complex for analogical design.",
         "D": "That only non-living machines can be designed by analogy."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Why View Man as a Living Machine?', 'Design by Analogy' is explained: 'If the heart is a pump, we can design an artificial pump to replace it.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0085",
@@ -1023,7 +1191,9 @@
         "C": "Developing new vaccines and cold chain solutions",
         "D": "Creating microscopic sensors for continuous glucose monitoring"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'The Future of technology: Where Is This Going?', it states: 'E.g. Printing prosthetic limbs, surgical guides, and even skin tissue in Nigeria.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0086",
@@ -1035,7 +1205,9 @@
         "C": "Biomaterials",
         "D": "Biomedical Imaging and Optics"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rehabilitation Engineering is described as focusing on the development of technologies to improve quality of life and functionality for individuals with disabilities, listing examples like prosthetic limbs, advanced wheelchairs, and sensory aids."
     },
     {
       "id": "uni-unilag-bme102-bank-0087",
@@ -1047,7 +1219,9 @@
         "C": "Sociology, Psychology, Anthropology",
         "D": "Business, Law, Humanities"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text explicitly states: 'BME draws from multiple disciplines: a. Engineering... b. Life Sciences... c. Physical Sciences...'"
     },
     {
       "id": "uni-unilag-bme102-bank-0088",
@@ -1059,7 +1233,9 @@
         "C": "40-70%",
         "D": "80-90%"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Challenges and Negative Impacts', the document highlights that 'In Nigeria, 40–70% of medical devices are non-functional due to poor maintenance and power issues.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0089",
@@ -1071,7 +1247,9 @@
         "C": "By continuously tracking vital signs with wearable sensors.",
         "D": "By providing solar power to off-grid clinics."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states that EHRs have 'improved patient care by lowering chance of medical error. In addition, supplying health information reduces duplication of tests and delays in treatment.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0090",
@@ -1083,7 +1261,9 @@
         "C": "Electrical properties.",
         "D": "Optical absorption."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states, '3. Wearable Sensors: Designed based on electrical properties of skin and tissue to measure heart rate, glucose, etc.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0091",
@@ -1095,7 +1275,9 @@
         "C": "Connect all medical devices to a hospital network for real-time monitoring.",
         "D": "Read X-rays and predict sepsis with high accuracy."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text describes 'Gene Therapy & CRISPR' as 'a revolutionary, and precise gene editing technology that allows scientist to edit genes by acting as molecular scissors to cut, delete or replace scientific genetic sequences.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0092",
@@ -1107,7 +1289,9 @@
         "C": "Magnetic Resonance Imaging (MRI)",
         "D": "Positron Emission Tomography (PET)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under the 1940s-1950s advancements, it notes: '1941-Angiography: Techniques to visualize blood vessels were developed.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0093",
@@ -1119,7 +1303,9 @@
         "C": "Brain-computer interfaces and neuroprosthetics.",
         "D": "Automated drug dispensing systems."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states: 'Innovative technologies in rehabilitation, such as brain-computer interfaces and neuroprosthetics, are helping individuals recover from neurological injuries.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0094",
@@ -1131,7 +1317,9 @@
         "C": "It allows patients to self-diagnose without professional help.",
         "D": "It is primarily used for tracking disease outbreaks in real-time."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Point 3 under 'Examples of Technology Impact' states: 'Electronic health records are used... This has improved patient care by lowering chance of medical error. In addition, supplying health information reduces duplication of tests and delays in treatment.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0095",
@@ -1143,7 +1331,9 @@
         "C": "The Rise of Modern Biomedical Engineering (World War II Era)",
         "D": "Formalization of the discipline (1960s-present)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text mentions '1929-Artifical Respirator: The “iron lung” was invented...' under the section '2. The Foundations (late 19th-early 20th century).'"
     },
     {
       "id": "uni-unilag-bme102-bank-0096",
@@ -1155,7 +1345,9 @@
         "C": "Anatomy concerns structures, and Physiology concerns the functions of those structures.",
         "D": "Both Anatomy and Physiology are concerned solely with external body features."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text defines: 'Anatomy (internal and external structures of the body and their physical relationships) and Physiology (study of the functions of those structures)'. Therefore, Anatomy is about structures, and Physiology is about their functions."
     },
     {
       "id": "uni-unilag-bme102-bank-0097",
@@ -1167,7 +1359,9 @@
         "C": "They solely focus on making medications more palatable.",
         "D": "They increase the overall cost of treatment for patients."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 'Drug Delivery Systems' section highlights that these systems 'ensure precise and controlled release of medications,' which 'improve the effectiveness of treatments and reduce side effects.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0098",
@@ -1179,7 +1373,9 @@
         "C": "Nernst Equation",
         "D": "Beer-Lambert Law"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The text states that pulse oximeters measure SpO2 using light absorption, which is based on the Beer-Lambert Law. This is mentioned under 'Respiratory System' BME applications and further elaborated in 'Key Equations'."
     },
     {
       "id": "uni-unilag-bme102-bank-0099",
@@ -1191,7 +1387,9 @@
         "C": "It delivers drugs slowly over weeks.",
         "D": "It tracks sleep patterns and heart rate variability."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text explains that CRISPR technology works 'by acting as molecular scissors to cut, delete or replace specific genetic sequences.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0100",
@@ -1203,7 +1401,9 @@
         "C": "Lowered costs for medical devices.",
         "D": "Faster diagnosis and treatment planning."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text specifically states that over-reliance on technology 'can reduce core clinical skills, reduce clinical thinking... and diminished patient-provider empathy.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0101",
@@ -1215,7 +1415,9 @@
         "C": "Open-loop control, ignores deviation",
         "D": "Feedforward control, predicts deviation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text explicitly states, \"Most physiological control uses negative feedback to reduce deviation from set point.\" Negative feedback systems work to counteract changes and bring a variable back to a set point, thereby maintaining stability."
     },
     {
       "id": "uni-unilag-bme102-bank-0102",
@@ -1227,7 +1429,9 @@
         "C": "Blood pressure control",
         "D": "Blood glucose regulation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document specifies that \"Blood clotting and childbirth contractions\" are examples of processes in the human body that utilize positive feedback, which amplifies the output rather than regulating it to a set point."
     },
     {
       "id": "uni-unilag-bme102-bank-0103",
@@ -1239,7 +1443,9 @@
         "C": "Bones are beams, joints are hinges/ball-sockets, muscles are actuators, tendons are cables",
         "D": "Bones are cables, joints are beams, muscles are hinges, tendons are actuators"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states under '4. The Musculoskeletal System – A Mechanics Problem': \"In an engineering view, Bones are beams, joints are hinges/ball-sockets, muscles are actuators, tendons are cables.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0104",
@@ -1251,7 +1457,9 @@
         "C": "To retrain movement after stroke by mimicking neural control and muscle activation patterns.",
         "D": "To replace heart function by mimicking cardiac pump action."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document specifies, '4. Rehabilitation Robotics: Mimics neural control and muscle activation patterns to retrain movement after stroke.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0105",
@@ -1263,7 +1471,9 @@
         "C": "Making the device too affordable.",
         "D": "Over-communicating with physicians."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Common Design Mistakes When Ignoring Physiology', the first point listed is: \"1. Ignoring variability: Designing for a 70kg male only. Women, children, elderly differ.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0106",
@@ -1275,7 +1485,9 @@
         "C": "Replacing Level",
         "D": "Intervention Level"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 6, under 'How Health Technology Interfaces with the Human Machine', point iii. describes the 'Replacing Level' where 'Devices permanently replace a body part. Examples: Artificial hip joint, heart valve, cochlear implant, prosthetic limb.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0107",
@@ -1287,7 +1499,9 @@
         "C": "10 L/min",
         "D": "120/80 mmHg"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under the 'Cardiovascular System – A Fluid Mechanics Problem' section, the text explicitly states: \"Cardiac Output: CO = Heart Rate × Stroke Volume. Normal: 5 L/min at rest.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0108",
@@ -1299,7 +1513,9 @@
         "C": "3D Printing",
         "D": "Wearable & Implantable Sensors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document defines '3D Printing' as 'an additive manufacturing process used to build three dimensional structures from computer aided design (CAD) models in a layer by layer fashion.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0109",
@@ -1311,7 +1527,9 @@
         "C": "It eliminated the need for microscopy in biological studies.",
         "D": "It shifted focus solely to animal testing for drug discovery."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The section '3. Transformation of Research in Biology.' directly states: 'Technology turned biology from a descriptive science into a quantitative, data-driven science.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0110",
@@ -1323,7 +1541,9 @@
         "C": "To create new chemical compounds for industrial use.",
         "D": "To design faster computational algorithms for financial markets."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states: 'Biomedical engineering is the discipline that applies engineering principles, design concepts, problem solving skills to biology, medicine and healthcare to improve human health and quality of life.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0111",
@@ -1335,7 +1555,9 @@
         "C": "1970s",
         "D": "1980s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states: '1970s: Introduction of advanced medical imaging (CT scan) to address healthcare efficiency'. This is also listed in the summary of key milestones."
     },
     {
       "id": "uni-unilag-bme102-bank-0112",
@@ -1347,7 +1569,9 @@
         "C": "That only natural healing processes are effective.",
         "D": "That interventions are always simple and risk-free."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states for 'Intervention': 'If we understand the “design” of the body, we can intervene when it fails – with drugs, devices, or surgery.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0113",
@@ -1359,7 +1583,9 @@
         "C": "Wearable health monitoring devices",
         "D": "Gene editing tools like CRISPR-Cas9"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Medical Device Innovation', the text states: 'For example, the creation of advanced prosthetic limbs and robotic exoskeletons has significantly improved the quality of life for individuals with limb disabilities...'"
     },
     {
       "id": "uni-unilag-bme102-bank-0114",
@@ -1371,7 +1597,9 @@
         "C": "Enhance human cognitive abilities.",
         "D": "Replace natural biological processes entirely."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states: 'Health technology as defined by the World Health Organization is the application of organized knowledge and skills in the form of devices, medicines, vaccines, procedures and systems developed to solve health problems and improve quality of life.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0115",
@@ -1383,7 +1611,9 @@
         "C": "Symptom tracking",
         "D": "Performing complex surgical procedures"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The document lists 'Apps for appointment reminders, health education, symptom tracking' as m Health services, but 'performing complex surgical procedures' is not mentioned."
     },
     {
       "id": "uni-unilag-bme102-bank-0116",
@@ -1395,7 +1625,9 @@
         "C": "100 mV, 1-120 m/s",
         "D": "200 mV, 200 m/s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under '3. The Nervous System – An Electrical System', the text describes the Action Potential as a \"100 mV electrical pulse, 1–120 m/s conduction velocity.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0117",
@@ -1407,7 +1639,9 @@
         "C": "1960s",
         "D": "1970s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Formalization of the discipline (1960s-present)', it states: 'The 1960s marked the establishment of biomedical engineering as an academic discipline and the widespread application of computers in healthcare.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0118",
@@ -1419,7 +1653,9 @@
         "C": "The body's ability to self-repair, adapt, and regulate itself through homeostasis makes it more complex.",
         "D": "Man-made machines are always more complex than the human body."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Limitation' section on page 2 states: 'Unlike machines, the body can self-repair, adapt, and regulate itself. This is called homeostasis and makes it more complex than any man-made machine.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0119",
@@ -1431,7 +1667,9 @@
         "C": "CT scan",
         "D": "MRI, AI, Telemedicine"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The table lists 'MRI, AI, Telemedicine, robotic surgery' as key technologies of the 3rd wave. Thermometer is from the 1st wave, and ECG, EEG, and CT scan are from the 2nd wave."
     },
     {
       "id": "uni-unilag-bme102-bank-0120",
@@ -1443,7 +1681,9 @@
         "C": "Improved internet connectivity for telemedicine only.",
         "D": "Advanced diagnostic imaging equipment in off-grid areas."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document mentions: 'Solar-Powered PHCs: UNICEF and FMOH are installing solar systems and solar refrigerators in PHCs across northern Nigeria. This keeps vaccines viable and allows night-time deliveries.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0121",
@@ -1455,7 +1695,9 @@
         "C": "To determine the firing rate of action potentials.",
         "D": "To model the conversion of chemical signals to electrical signals at a synapse."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Nernst Equation is introduced with the description: 'Explains resting membrane potential of neurons.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0122",
@@ -1467,7 +1709,9 @@
         "C": "It introduced new surgical techniques.",
         "D": "It led to the invention of the stethoscope."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document explicitly states that the ability to sequence DNA at a lower cost 'allows personalized medicine.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0123",
@@ -1479,7 +1723,9 @@
         "C": "To eliminate the need for traditional pills.",
         "D": "To increase the shelf-life of pharmaceutical products."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document mentions: 'Biomedical engineers are creating more efficient drug delivery systems that ensure precise and controlled release of medications.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0124",
@@ -1491,7 +1737,9 @@
         "C": "Alveolar Ventilation",
         "D": "Oxygen Saturation (SpO2)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 4 defines 'Oxygen Saturation (SpO2): Percentage of hemoglobin carrying oxygen. Normal value is between 95-100%.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0125",
@@ -1503,7 +1751,9 @@
         "C": "Genetics",
         "D": "Biology"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Under 'Key Interdisciplinary Areas' -> 'b. Life Sciences', the text lists: 'Anatomy, Physiology, Biology, and Biochemistry'."
     },
     {
       "id": "uni-unilag-bme102-bank-0126",
@@ -1515,7 +1765,9 @@
         "C": "What is the time constant? Heart rate changes 3 in seconds, glucose in minutes, temperature in hours.",
         "D": "What are the safety limits?"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The section 'Translating Physiology to Engineering Design' lists several key questions for device design. Option C directly quotes the question related to the time constant and provides examples of different time constants for various physiological processes."
     },
     {
       "id": "uni-unilag-bme102-bank-0127",
@@ -1527,7 +1779,9 @@
         "C": "Gene Therapy & CRISPR",
         "D": "Bioinformatics"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the 'Future of technology' section, it specifies: 'Gene Therapy & CRISPR: Is a revolutionary, and precise gene editing technology that allows scientist to edit genes by acting as molecular scissors to cut, delete or replace scientific genetic sequences and potentially cure sickle cell disease, which affects 2–3% of Nigerians.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0128",
@@ -1539,7 +1793,9 @@
         "C": "The Rise of Modern Biomedical Engineering (World War II Era)",
         "D": "Formalization of the discipline (1960s-present)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Under '4. Formalization of the discipline (1960s-present)', it states: 'The 1960s marked the establishment of biomedical engineering as an academic discipline and the widespread application of computers in healthcare.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0129",
@@ -1551,7 +1807,9 @@
         "C": "12-20 breaths/min",
         "D": "25-30 breaths/min"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the 'Respiratory System – A Gas Exchange System' section, under 'Key parameters', the text specifies: \"Respiratory Rate: 12–20 breaths/min at rest.\""
     },
     {
       "id": "uni-unilag-bme102-bank-0130",
@@ -1563,7 +1821,9 @@
         "C": "Mobile Health (m Health) and symptom tracking apps.",
         "D": "Strictly automated laboratory diagnostics."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Public Health and Telemedicine', the text states: 'Mobile Health (m Health)... WhatsApp is used by Nigerian doctors to share X-rays and consult.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0131",
@@ -1575,7 +1835,9 @@
         "C": "Basis for pulse oximetry.",
         "D": "Calculating required pump pressures for ventricular assist devices."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states, 'Applications in BME. Basis for pulse oximetry- Standard clinical pulse oximeters use the law to measure oxygen saturation in arterial blood (SpO2).'"
     },
     {
       "id": "uni-unilag-bme102-bank-0132",
@@ -1587,7 +1849,9 @@
         "C": "To purify blood in patients with kidney failure.",
         "D": "To monitor heart rhythms non-invasively."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document mentions: '1929-Artifical Respirator: The “iron lung” was invented as a mechanical device for breathing assistance. It is simulated breathing via pressure changes in a tank.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0133",
@@ -1599,7 +1863,9 @@
         "C": "Chemical Engineering",
         "D": "Civil Engineering"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Key Interdisciplinary Areas', it lists 'Engineering: Electrical (circuits/ signals),Mechanical(forces/motion), Chemical(drug delivery/materials)'."
     },
     {
       "id": "uni-unilag-bme102-bank-0134",
@@ -1611,7 +1877,9 @@
         "C": "As a collection of isolated, independent organs.",
         "D": "As a system primarily controlled by conscious thought."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states: 'The human body is regarded in biomedical engineering as a sophisticated, autonomous, biological machine.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0135",
@@ -1623,7 +1891,9 @@
         "C": "It replaced all physical inspections of medical devices.",
         "D": "It introduced new tariffs on imported medical equipment."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Point 5 under 'Examples of Technology Impact' states: 'NAFDAC's E-Registration: Online system for registering medical devices has reduced fake and substandard equipment in the market.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0136",
@@ -1635,7 +1905,9 @@
         "C": "Early use of antibiotics.",
         "D": "The development of primitive surgical lasers."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Ancient & Pre-scientific roots (prior to 1900s)', the text mentions: 'The earliest evidence is a wooden prosthetic toe found on an Egyptian mummy (prosthetics).'"
     },
     {
       "id": "uni-unilag-bme102-bank-0137",
@@ -1647,7 +1919,9 @@
         "C": "Incubators for neonates",
         "D": "Cochlear implants"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 6 states: 'BME application: Incubators for neonates, cooling blankets for hyperthermia' for the Thermoregulatory System."
     },
     {
       "id": "uni-unilag-bme102-bank-0138",
@@ -1659,7 +1933,9 @@
         "C": "Electrocardiogram (ECG)",
         "D": "Pacemaker"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states: 'Dutch physiologist, Willem Einthoven won the 1924 Nobel Prize in Physiology for his discovery of the mechanism of the electrocardiogram.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0139",
@@ -1671,7 +1947,9 @@
         "C": "Electrical current",
         "D": "Power"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text explicitly states: \"Ohms law is the fluid equivalent of the electrical formula I=V/R, where, flow electrical current\"."
     },
     {
       "id": "uni-unilag-bme102-bank-0140",
@@ -1683,7 +1961,9 @@
         "C": "Wilhelm Roentgen",
         "D": "Alexander Fleming"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states: 'Dutch physiologist, Willem Einthoven won the 1924 Nobel Prize in Physiology for his discovery of the mechanism of the electrocardiogram.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0141",
@@ -1695,7 +1975,9 @@
         "C": "Managing medical equipment, ensuring safety, and training personnel",
         "D": "Designing pharmaceutical drugs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states that 'Clinical engineering: Application of medical technology in hospitals and healthcare facilities. The CEs manages medical equipment, ensure safety and train medical personnel.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0142",
@@ -1707,7 +1989,9 @@
         "C": "Bioreactivity",
         "D": "Bioabsorption"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Biomaterials', the text explicitly states: 'The materials has to be biocompatible to ensure the materials do not cause adverse reactions such as rejection or toxicity.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0143",
@@ -1719,7 +2003,9 @@
         "C": "The material triggers inflammation, causing the device to fail.",
         "D": "It prevents the device from incorporating feedback loops."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document lists 'Ignoring biocompatibility: Material triggers inflammation, device fails.' as a common design mistake."
     },
     {
       "id": "uni-unilag-bme102-bank-0144",
@@ -1731,7 +2017,9 @@
         "C": "Experienced biomedical engineers.",
         "D": "Simplified user interfaces for easy troubleshooting."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Challenges and Negative Impacts', it's noted that 'The high sophistication of digital equipment makes the repair difficult which will in turn need experienced biomedical engineers.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0145",
@@ -1743,7 +2031,9 @@
         "C": "Measure and control biological processes using measurable quantities.",
         "D": "Focus solely on qualitative observations of the body."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states: 'Quantification: Engineering deals with measurable quantities – pressure, flow, voltage, force. Viewing the body this way allows us to measure and control biological processes.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0146",
@@ -1755,7 +2045,9 @@
         "C": "1950s",
         "D": "1960s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Summary of key milestones' lists '1950s: Prosthetics and artificial organs' and the preceding text mentions '1955-Pacemaker: First pacemakers were invented'."
     },
     {
       "id": "uni-unilag-bme102-bank-0147",
@@ -1767,7 +2059,9 @@
         "C": "Time constant: 5–10 seconds for averaging.",
         "D": "LED power <10 mW to avoid burns."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Under the 'Translating Physiology to Engineering Design' section, for the pulse oximeter example, the safety limit is given as: 'Safety: LED power <10 mW to avoid burns.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0148",
@@ -1779,7 +2073,9 @@
         "C": "Core temp(C)",
         "D": "Nerve conduction velocity(m/s)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The table on page 2 lists 'Core temp(C)' and 'Sweat rate (L/h)' as key measurable variables for the Thermoregulatory system."
     },
     {
       "id": "uni-unilag-bme102-bank-0149",
@@ -1791,7 +2087,9 @@
         "C": "Pulse oximetry to measure oxygen saturation in arterial blood",
         "D": "Explaining resting membrane potential of neurons"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7, point 4, under 'Applications in BME' for the Beer-Lambert Law, states: 'Basis for pulse oximetry- Standard clinical pulse oximeters use the law to measure oxygen saturation in arterial blood (SpO2).'"
     },
     {
       "id": "uni-unilag-bme102-bank-0150",
@@ -1803,7 +2101,9 @@
         "C": "NAFDAC",
         "D": "WHO (World Health Organization)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'Examples of Technology Impact', it states: 'NAFDAC's E-Registration: Online system for registering medical devices has reduced fake and substandard equipment in the market.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0151",
@@ -1815,7 +2115,9 @@
         "C": "It images soft tissue like the brain, muscles, and tumors without radiation.",
         "D": "It creates real-time, moving images of internal organs."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states: '- MRI (1980s): Uses magnetic fields to image soft tissue like brain, muscles and tumors without radiation.' This highlights its capability for soft tissue imaging and avoidance of radiation, distinguishing it from X-ray and CT."
     },
     {
       "id": "uni-unilag-bme102-bank-0152",
@@ -1827,7 +2129,9 @@
         "C": "To provide real-time monitoring of drug levels in the bloodstream.",
         "D": "To facilitate surgical removal of unwanted substances from the body."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Drug Delivery & Biomaterials', it mentions: 'Controlled Drug Release: Patches and implants that release medicine slowly over weeks.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0153",
@@ -1839,7 +2143,9 @@
         "C": "To reduce fake and substandard medical equipment in the market.",
         "D": "To enable video consultations in rural areas."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states that NAFDAC's E-Registration 'Online system for registering medical devices has reduced fake and substandard equipment in the market.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0154",
@@ -1851,7 +2157,9 @@
         "C": "It created 3D images of organs.",
         "D": "It allowed observation of a fetus without radiation."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Imaging Technologies,' the document states: '- X-ray (1895): First way to see bones without cutting. Still used for fractures.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0155",
@@ -1863,7 +2171,9 @@
         "C": "Allows doctors to predict, personalize, and remotely manage health.",
         "D": "Focused solely on improving surgical instruments."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 'Impact' column for the '2nd wave (electronic)' in the table states: 'Allowed doctors to monitor and replace organ function.' Option A describes the 1st wave's impact, and C describes the 3rd wave's impact."
     },
     {
       "id": "uni-unilag-bme102-bank-0156",
@@ -1875,7 +2185,9 @@
         "C": "Brain-computer interfaces and neuroprosthetics",
         "D": "Advanced drug delivery systems"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under '7. Impact on Rehabilitation', the text states: 'Innovative technologies in rehabilitation, such as brain-computer interfaces and neuroprosthetics, are helping individuals recover from neurological injuries.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0157",
@@ -1887,7 +2199,9 @@
         "C": "The process of amplifying deviations from a set point.",
         "D": "The exclusive use of positive feedback loops for regulation."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text defines Homeostasis as: 'The body's ability to maintain a stable internal environment despite external changes.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0158",
@@ -1899,7 +2213,9 @@
         "C": "Exclusive focus on replacing broken parts with mechanical equivalents.",
         "D": "Knowledge of software engineering and data analytics only."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The summary point 4 states, 'Good BME design requires understanding normal physiology, normal ranges, and safety limits.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0159",
@@ -1911,7 +2227,9 @@
         "C": "Safe interaction with living systems without rejection or toxicity",
         "D": "Transparency to X-rays"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Biomaterials' component states that materials must be biocompatible to ensure they do not cause adverse reactions such as rejection or toxicity."
     },
     {
       "id": "uni-unilag-bme102-bank-0160",
@@ -1923,7 +2241,9 @@
         "C": "Portable ultrasound devices for midwives",
         "D": "Continuous Glucose Monitors (CGM) under the skin"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The document mentions: 'Implantable sensors are devices inserted into the body to monitor internal biochemical changes e.g. continuous glucose monitors (CGM) under the skin.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0161",
@@ -1935,7 +2255,9 @@
         "C": "Fluorescence microscope",
         "D": "Compound microscope"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text specifically mentions 'Fluorescence microscopes can track individual proteins in living cells.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0162",
@@ -1947,7 +2269,9 @@
         "C": "Design new types of prosthetic devices",
         "D": "Analyze biological signals from the body"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Components of BME', it states: 'Tissue Engineering: repair or replacing damaged tissues using cells and scaffolds.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0163",
@@ -1959,7 +2283,9 @@
         "C": "By designing affordable and portable medical devices and point-of-care diagnostic tools.",
         "D": "By establishing large, centralized medical facilities in rural areas."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under '6. Addressing Healthcare Disparities', it mentions: 'They design affordable and portable medical devices for use in resource-limited settings. For instance, point-of-care diagnostic tools and mobile health clinics provide access to healthcare services in remote and underserved regions.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0164",
@@ -1971,7 +2297,9 @@
         "C": "Space travel and satellite communication.",
         "D": "Internal combustion engines and assembly lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document states: 'Biomedical engineering emerged as a distinct discipline due to the need for combining medical knowledge with engineering developments in electronics and radar technology.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0165",
@@ -1983,7 +2311,9 @@
         "C": "Biocompatibility",
         "D": "High thermal resistance"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The text states that 'The materials has to be biocompatible to ensure the materials do not cause adverse reactions such as rejection or toxicity.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0166",
@@ -1995,7 +2325,9 @@
         "C": "Complex genetic sequencing labs for advanced research.",
         "D": "Large, stationary medical imaging machines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Under 'Addressing Healthcare Disparities,' the text mentions designing 'affordable and portable medical devices for use in resource-limited settings,' including 'point-of-care diagnostic tools and mobile health clinics.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0167",
@@ -2007,7 +2339,9 @@
         "C": "Control systems, fluid mechanics, signal processing.",
         "D": "Electrical properties of skin and tissue."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Under 'How Health Technology Interfaces with the Human Machine,' the Assisting Level is described with engineering principles: 'Control systems, fluid mechanics, signal processing.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0168",
@@ -2019,7 +2353,9 @@
         "C": "Action potential",
         "D": "Urine output"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In the table 'We can break the body into subsystems, each with an engineering equivalent', for 'Nervous', the 'Key measurable variables' include 'Action potential, nerve conduction velocity(m/s)'."
     },
     {
       "id": "uni-unilag-bme102-bank-0169",
@@ -2031,7 +2367,9 @@
         "C": "Rehabilitation for individuals recovering from neurological injuries.",
         "D": "Developing new vaccines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Impact on Rehabilitation' section states that these innovative technologies 'are helping individuals recover from neurological injuries' and 'regain independence and improve their quality of life.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0170",
@@ -2043,7 +2381,9 @@
         "C": "1931",
         "D": "1950s"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 'Summary of key milestones' explicitly lists '1931: Electron Microscope(Ruska)'."
     },
     {
       "id": "uni-unilag-bme102-bank-0171",
@@ -2055,7 +2395,9 @@
         "C": "Stethoscope",
         "D": "Telemedicine"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The table lists 'Stethoscope, Microscope, X-ray, thermometer' as key technologies for the 1st wave (mechanical). MRI, Pacemaker, and Telemedicine are associated with later waves."
     },
     {
       "id": "uni-unilag-bme102-bank-0172",
@@ -2067,7 +2409,9 @@
         "C": "Automatically run 100 different blood tests per hour.",
         "D": "Filter blood when a patient's kidneys fail."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The text states: '- PCR (Polymerase Chain Reaction): Amplifies tiny amounts of DNA to detect COVID-19, HIV and tuberculosis in hours instead of days.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0173",
@@ -2079,7 +2423,9 @@
         "C": "It combines X-ray with a computer to make 3D images of organs.",
         "D": "It is primarily used for tracking sleep patterns."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document states: '- CT Scan (1970s): Combines X-ray with computer to make 3D images of organs.' Options A (Ultrasound), B (MRI), and D (wearable sensors) describe other technologies or uses."
     },
     {
       "id": "uni-unilag-bme102-bank-0174",
@@ -2091,7 +2437,9 @@
         "C": "To keep vaccines viable and allow night-time deliveries",
         "D": "To facilitate high-speed internet for telemedicine"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Point 4 under 'Examples of Technology Impact' mentions: 'Solar-Powered PHCs: UNICEF and FMOH are installing solar systems and solar refrigerators in PHCs across northern Nigeria. This keeps vaccines viable and allows night-time deliveries.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0175",
@@ -2103,7 +2451,9 @@
         "C": "Levers and torque from mechanical systems.",
         "D": "Chemical signal conversion at synapses."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document notes, '2. Cardiovascular Devices: Stents and artificial valves are designed using fluid mechanics of blood flow.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0176",
@@ -2115,7 +2465,9 @@
         "C": "Beer-Lambert Law",
         "D": "Poiseuille's Law"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 7, point 2, states: 'Poiseuille's Law: this describes how the rate of fluid flow depends on the fluids viscosity, the tube dimensions and the pressure difference. It is widely applied to blood flow in the human body.'"
     },
     {
       "id": "uni-unilag-bme102-bank-0177",
@@ -2127,7 +2479,9 @@
         "C": "Insulin delivery by an artificial pump",
         "D": "Blood pressure regulation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "On page 3, under 'Positive Feedback', the text explicitly states, 'For example; Blood clotting and childbirth contractions.' are examples of positive feedback."
     },
     {
       "id": "uni-unilag-bme102-bank-0178",
@@ -2139,7 +2493,9 @@
         "C": "Nernst Equation",
         "D": "Beer-Lambert Law"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Poiseuille's Law (Q = πΔPr⁴ / 8μL) is explicitly stated as being used to model blood flow in arteries and veins, and the text highlights that 'Small changes in vessel radius cause huge changes in flow,' which is a key implication of the r⁴ term."
     }
   ],
   "category": "university",

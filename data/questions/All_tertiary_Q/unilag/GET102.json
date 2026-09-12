@@ -15,7 +15,9 @@
         "C": "Tracing an object's outline on a flat surface using a light source.",
         "D": "Creating a clay model of the object and flattening its sides."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 5 describes orthographic projection as 'suspending an object inside a hinged box and projecting the points to the planes which make up the box before unfolding the box.'"
     },
     {
       "id": "uni-unilag-get102-bank-0002",
@@ -27,7 +29,9 @@
         "C": "At a 30° angle.",
         "D": "They remain horizontal."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 9 indicates, 'Lines that appear horizontal in the orthographic view are drawn at 30° angle in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0003",
@@ -39,7 +43,9 @@
         "C": "They are always drawn to full size.",
         "D": "They are exclusively used for architectural drawings."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15 states: 'Perspective Projection: These are drawings that attempts to replicate what the human eye actually sees when it views an object.'"
     },
     {
       "id": "uni-unilag-get102-bank-0004",
@@ -51,7 +57,9 @@
         "C": "Two branches, each with a focus and directrix, having the same eccentricity.",
         "D": "Multiple branches, without defined foci or directrices."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The introductory text for 'HYPERBOLA: Circumscribing Rectangular Method' on page 17 states: 'The hyperbola has two branches, each with a focus and directrix. Both branches have the same eccentricity.'"
     },
     {
       "id": "uni-unilag-get102-bank-0005",
@@ -63,7 +71,9 @@
         "C": "The part being wrong in size.",
         "D": "Enhanced communication among engineers."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 13 states: 'An incorrect dimension on a technical drawing can cause the part to be wrong in size.'"
     },
     {
       "id": "uni-unilag-get102-bank-0006",
@@ -75,7 +85,9 @@
         "C": "Join points AJKHB",
         "D": "Draw a line through C and D"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Step 4 on Page 7 states: 'Draw a line through C and D'. This line is crucial for subsequent steps involving points E, F, and G."
     },
     {
       "id": "uni-unilag-get102-bank-0007",
@@ -87,7 +99,9 @@
         "C": "Their ratio.",
         "D": "Their difference."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 4 explains: 'Hyperbola: This is defined as the set of points in a plane whose distances from two fixed points, called the foci, in the plane have a constant difference.'"
     },
     {
       "id": "uni-unilag-get102-bank-0008",
@@ -99,7 +113,9 @@
         "C": "60º set square",
         "D": "Tee-square"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 6, step 3 for 'REGULAR OCTAGON: Given the Distance Across Corners' specifies: 'With the 45º set square, draw two cross lines through centre O to intersect the circle at E, F, G & H.'"
     },
     {
       "id": "uni-unilag-get102-bank-0009",
@@ -111,7 +127,9 @@
         "C": "60º",
         "D": "90º"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "As per step 4 on Page 4, 'With the 60º set square correctly placed on the Tee-square draw tangents to the circles.' This is specific to constructing a hexagon given the distance across flats."
     },
     {
       "id": "uni-unilag-get102-bank-0010",
@@ -123,7 +141,9 @@
         "C": "Construction",
         "D": "All of the above"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 11 lists 'Manufacturing', 'Engineering (Civil/Electrical/Mechanical/etc.)', 'Architecture', and 'Construction' as fields where engineering drawings are found. Therefore, all listed options are correct."
     },
     {
       "id": "uni-unilag-get102-bank-0011",
@@ -135,7 +155,9 @@
         "C": "By drawing an arc from the directrix to the focus.",
         "D": "By bisecting the distance between the focus (F) and the directrix (D)."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 13, 'STEPS 2' of the Parabola - Locus Method states: 'Locate the vertex by bisecting FD'. FD represents the distance between the focus and the directrix."
     },
     {
       "id": "uni-unilag-get102-bank-0012",
@@ -147,7 +169,9 @@
         "C": "420 mm x 594 mm",
         "D": "297 mm x 420 mm"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The table on page 32 lists A3 as 297 mm (Vertical) x 420 mm (Horizontal)."
     },
     {
       "id": "uni-unilag-get102-bank-0013",
@@ -159,7 +183,9 @@
         "C": "With the Tee-square, draw tangents to the circle.",
         "D": "Join the tangents to produce the hexagon."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4, step 1 for 'REGULAR HEXAGON: Given The Distance Across Flats' clearly states: 'Draw a circle of diameter equal to the given distance.'"
     },
     {
       "id": "uni-unilag-get102-bank-0014",
@@ -171,7 +197,9 @@
         "C": "Locate D on the second circle with AC=AD.",
         "D": "Construct lines at 90° from each center."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 14, step 3 states: 'Bisect OA to give B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0015",
@@ -183,7 +211,9 @@
         "C": "They vary in length as the square of their distances from O.",
         "D": "They are all of equal length."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 11, 'STEPS 4' of the Parabola - Offset Method clearly states: 'The offsets vary in length as the square of their distances from O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0016",
@@ -195,7 +225,9 @@
         "C": "A set of points equidistant from a given point (focus) and a given line (directrix).",
         "D": "A set of points where the difference of distances from two fixed points (foci) is constant."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4, under 'Parabola', states: 'Parabola: This is defined as the set of points in plane that are equidistant from a given point, called focus, and a given line, called a directrix.'"
     },
     {
       "id": "uni-unilag-get102-bank-0017",
@@ -207,7 +239,9 @@
         "C": "r1 and r2",
         "D": "R-r1 and R-r2"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 21, step 3 states: 'With centre A and radius R-r1, draw an arc' and step 4 states: 'With centre B and radius R-r2, draw an arc to intersect the first arc at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0018",
@@ -219,7 +253,9 @@
         "C": "The diameter",
         "D": "The radius"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 10 explicitly states: 'A tangent is perpendicular to the radius of a circle drawn at the point where the tangent meets the circle.' This is a core definition of tangency."
     },
     {
       "id": "uni-unilag-get102-bank-0019",
@@ -231,7 +267,9 @@
         "C": "A method for calculating structural integrity.",
         "D": "A system for tracking project timelines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 2 states, 'A projection is a drawing or representation of an entity on an imaginary plane or planes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0020",
@@ -243,7 +281,9 @@
         "C": "To speed up drafting work and improve accuracy by providing pre-cut shapes",
         "D": "To adjust the tilt of the drawing board"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 29 states that templates 'are designed to speed the work of the drafter and to make the finished drawing more accurate' and are 'Used for drawing circles, ellipse, plumbing fixtures, blots and nuts, screw threads, electronic symbols, springs, gears and structural metals.'"
     },
     {
       "id": "uni-unilag-get102-bank-0021",
@@ -255,7 +295,9 @@
         "C": "As the square of their distances from O.",
         "D": "As the cube of their distances from O."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 11, Step 4 of 'PARABOLA - Offset Method' states: 'The offsets vary in length as the square of their distances from O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0022",
@@ -267,7 +309,9 @@
         "C": "r",
         "D": "R + r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 16, step 4 states: 'Draw a circle centre O with radius (R+r) to cut semi-circle at B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0023",
@@ -279,7 +323,9 @@
         "C": "International Standards Organization (ISO)",
         "D": "National Aeronautics and Space Administration (NASA)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12 lists 'International Standards Organization (ISO)' as one of the most widely used standards."
     },
     {
       "id": "uni-unilag-get102-bank-0024",
@@ -291,7 +337,9 @@
         "C": "To facilitate the communication of technical information",
         "D": "To replace all multi-view drawings"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 2 mentions: 'Pictorial drawing facilitates the communication of technical information during all phases of a design process'."
     },
     {
       "id": "uni-unilag-get102-bank-0025",
@@ -303,7 +351,9 @@
         "C": "Its segments are always perpendicular to each other.",
         "D": "It must have all sides of equal length."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 3, point 1 defines polygons as 'Plane figures bounded by a finite chain of straight line segments closing in a loop to form a closed chain or circuit.'"
     },
     {
       "id": "uni-unilag-get102-bank-0026",
@@ -315,7 +365,9 @@
         "C": "Tee-square",
         "D": "Protractor"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4, step 3 explicitly states: 'With the Tee-square, draw tangents to the circle at the top and below the circle.'"
     },
     {
       "id": "uni-unilag-get102-bank-0027",
@@ -327,7 +379,9 @@
         "C": "The major axis",
         "D": "The distance between the foci"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 5 states: 'An ellipse is a curve traced by a point moving such that the sum of its distance from the two fixed points, foci, is constant and equal to the major axis.' The formula also shows PF1 + PF2 = AB (Major axis)."
     },
     {
       "id": "uni-unilag-get102-bank-0028",
@@ -339,7 +393,9 @@
         "C": "The front view should emphasize hidden lines.",
         "D": "The front view should minimize the number of dimensions."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7 states as a principle: 'The front view should show the shape of the object clearly.'"
     },
     {
       "id": "uni-unilag-get102-bank-0029",
@@ -351,7 +407,9 @@
         "C": "Four",
         "D": "Five"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 lists four components: 'The actual object', 'The eye of the viewer', 'The imaginary projection plane', and 'The imaginary lines of sight called projectors.'"
     },
     {
       "id": "uni-unilag-get102-bank-0030",
@@ -363,7 +421,9 @@
         "C": "As complex curves that cannot be drawn with standard tools",
         "D": "Circles are not typically represented in oblique drawings"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 states, 'Circles are true circles and drawn with compass or circle template.' This applies when they are on the true-shape face."
     },
     {
       "id": "uni-unilag-get102-bank-0031",
@@ -375,7 +435,9 @@
         "C": "A given point (focus) and a given line (directrix).",
         "D": "A fixed point and an axis of symmetry."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4 states: 'Parabola: This is defined as the set of points in plane that are equidistant from a given point, called focus, and a given line, called a directrix.'"
     },
     {
       "id": "uni-unilag-get102-bank-0032",
@@ -387,7 +449,9 @@
         "C": "They MUST be drawn and NOT sketched.",
         "D": "They are optional for informal drawings."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12 states: 'The symbols MUST be drawn and NOT sketched!'"
     },
     {
       "id": "uni-unilag-get102-bank-0033",
@@ -399,7 +463,9 @@
         "C": "Proposed Solution",
         "D": "Working Drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 10, 'Design Process' flowchart clearly shows 'Problem Identification' as the very first step."
     },
     {
       "id": "uni-unilag-get102-bank-0034",
@@ -411,7 +477,9 @@
         "C": "Ellipse",
         "D": "Hyperbola"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4 defines Ellipse as: 'This is defined a set of points in a plane whose sum of distances to two fixed point, called foci, is a constant.'"
     },
     {
       "id": "uni-unilag-get102-bank-0035",
@@ -423,7 +491,9 @@
         "C": "45º set square",
         "D": "90º set square"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4, in the 'Note' section, it states: 'A regular octagon can be produced with the procedures above using 45º set squares.'"
     },
     {
       "id": "uni-unilag-get102-bank-0036",
@@ -435,7 +505,9 @@
         "C": "Lines that are parallel to the axis and are drawn vertically or at 30° angle.",
         "D": "Hidden lines showing internal features."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 9 defines, 'Isometric lines: are lines that are parallel to the axis and are drawn vertically or at 30° angle in isometric views.' It also notes they can be measured."
     },
     {
       "id": "uni-unilag-get102-bank-0037",
@@ -447,7 +519,9 @@
         "C": "15-75 degree and 30 degree triangles",
         "D": "60 degree and 90 degree triangles"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 25 mentions: 'There are two standard triangles used in drawing, they are: - 30-60 degree triangle and - 45 degree triangle.'"
     },
     {
       "id": "uni-unilag-get102-bank-0038",
@@ -459,7 +533,9 @@
         "C": "A rectangle",
         "D": "A circle"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Step 2 of 'HYPERBOLA: Circumscribing Rectangular Method' (page 17) states: 'Construct a rectangle through P and its associated vertex.'"
     },
     {
       "id": "uni-unilag-get102-bank-0039",
@@ -471,7 +547,9 @@
         "C": "To specify the projection system used.",
         "D": "To signify that the drawing is complete."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The document on page 12 states, 'The symbols should be included with the drawing to show the projection used.'"
     },
     {
       "id": "uni-unilag-get102-bank-0040",
@@ -483,7 +561,9 @@
         "C": "To measure distances and transfer measurements.",
         "D": "To create straight lines at specific angles."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 23 states: 'French curves and flexible curves are used to produce irregular curved lines that cannot be made with a compass.'"
     },
     {
       "id": "uni-unilag-get102-bank-0041",
@@ -495,7 +575,9 @@
         "C": "They remain vertical",
         "D": "They are typically omitted"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 9 clarifies, 'While lines that appear vertical in orthographic views remain vertical lines in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0042",
@@ -507,7 +589,9 @@
         "C": "e > 1",
         "D": "e = 0"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Page 15, in the Eccentricity definition, states: '(For hyperbola, e>1; for parabola, e=1; for ellipse, e<1)'."
     },
     {
       "id": "uni-unilag-get102-bank-0043",
@@ -519,7 +603,9 @@
         "C": "The diameter of the circle",
         "D": "The line segment connecting point P to any point on the circumference"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 12, step 3, states: 'Bisect OP'. The midpoint of OP then becomes the center for drawing the semi-circle that helps locate the tangent point A."
     },
     {
       "id": "uni-unilag-get102-bank-0044",
@@ -531,7 +617,9 @@
         "C": "Five",
         "D": "Six"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 5 explicitly states, 'There are six principal views for every object.'"
     },
     {
       "id": "uni-unilag-get102-bank-0045",
@@ -543,7 +631,9 @@
         "C": "R",
         "D": "The distance BC"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 17, step 2 states: 'With centres B and C, radius R, draw arcs to intersect at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0046",
@@ -555,7 +645,9 @@
         "C": "Draw a line inclined at 30° at point O.",
         "D": "Transfer the length of the square to three lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 11 lists the first step as, '• Draw a horizontal line.' All subsequent steps build upon this initial line."
     },
     {
       "id": "uni-unilag-get102-bank-0047",
@@ -567,7 +659,9 @@
         "C": "Polyester film",
         "D": "Glass"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 32 mentions: 'Drawings may be made on paper, vellum, or polyester film.'"
     },
     {
       "id": "uni-unilag-get102-bank-0048",
@@ -579,7 +673,9 @@
         "C": "The plane of projection is assumed to be non-transparent.",
         "D": "The observer looks through the plane of projection to see the object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 11 states that in 1ST ANGLE PROJECTION, 'The plane of projection is assumed to be non-transparent.'"
     },
     {
       "id": "uni-unilag-get102-bank-0049",
@@ -591,7 +687,9 @@
         "C": "Circumscribing square method",
         "D": "True circle method"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 22 mentions the ordinate method, approximate parallelogram method, and circumscribing square method. Since circles appear as ellipses in isometric, a 'true circle method' would not be applicable."
     },
     {
       "id": "uni-unilag-get102-bank-0050",
@@ -603,7 +701,9 @@
         "C": "Diagonals",
         "D": "Radii"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 3, point 2 states: 'Segments are called its edges or sides.'"
     },
     {
       "id": "uni-unilag-get102-bank-0051",
@@ -615,7 +715,9 @@
         "C": "Equal to the distance between the foci and the major axis",
         "D": "Arbitrary radii that fit within the desired ellipse dimensions"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the 'ELLIPSE- Concentric Circle Method' section, Step 1 states: 'construct two concentric circles with radii equal to 1/2 of major and 1/2 of minor axes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0052",
@@ -627,7 +729,9 @@
         "C": "Orthographic projection",
         "D": "Perspective drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 6 explains: 'If you look down a long hall, you will notice that the walls and floor lines seem to converge at an imaginary point (vanishing point)' and this is a characteristic of Perspective drawing."
     },
     {
       "id": "uni-unilag-get102-bank-0053",
@@ -639,7 +743,9 @@
         "C": "3H or 4H",
         "D": "9B"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 26 states: '3H or 4H is recommended for layout work'."
     },
     {
       "id": "uni-unilag-get102-bank-0054",
@@ -651,7 +757,9 @@
         "C": "Center axes of circular features; drawn as long-short-long lines.",
         "D": "Dimensions; drawn as thin, continuous lines with arrows."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13 states: 'Hidden lines represent features on an object which are not visible in the particular view being drawn...' and 'Hidden details are represented by thin short dashes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0055",
@@ -663,7 +771,9 @@
         "C": "The major axis.",
         "D": "Half the major axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 7, step 2, explains: 'Find the focal points by drawing an arc from point C or D with radius OA (½ of major axis) to cut the major axis at F₁ and F₂.'"
     },
     {
       "id": "uni-unilag-get102-bank-0056",
@@ -675,7 +785,9 @@
         "C": "Below the elevation",
         "D": "Above the elevation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 11 states for 3RD ANGLE PROJECTION: 'Right Side View are drawn to the right side of the elevation'."
     },
     {
       "id": "uni-unilag-get102-bank-0057",
@@ -687,7 +799,9 @@
         "C": "The plane of projection lies between the observer and the object.",
         "D": "The object, observer, and plane are all on the same side."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The table on page 11 specifies that in 3RD ANGLE PROJECTION, 'The plane of projection lies between the observer and the object.'"
     },
     {
       "id": "uni-unilag-get102-bank-0058",
@@ -699,7 +813,9 @@
         "C": "At least one edge must be absolutely true/straight to accommodate the Tee square.",
         "D": "It must be small enough to be portable."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 18 states: 'At least one edge of the board must be absolutely true/straight to accommodate the Tee square.'"
     },
     {
       "id": "uni-unilag-get102-bank-0059",
@@ -711,7 +827,9 @@
         "C": "A theoretical concept in design.",
         "D": "A tool for aesthetic evaluation."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 5 states: \"Engineering drawing is the language of manufacturing.\""
     },
     {
       "id": "uni-unilag-get102-bank-0060",
@@ -723,7 +841,9 @@
         "C": "It appears as if it is tilted towards the observer.",
         "D": "It appears as if it is viewed from directly above."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 8 mentions: 'In isometric, the entire object is as if it is tilted towards the observer.'"
     },
     {
       "id": "uni-unilag-get102-bank-0061",
@@ -735,7 +855,9 @@
         "C": "To restrict the erasing area to avoid disturbing correctly drawn lines",
         "D": "To sharpen the eraser's edge"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 27 explains: 'An erasing shield restricts the erasing area so that the correctly drawn lines will not be disturbed during the erasing procedure.'"
     },
     {
       "id": "uni-unilag-get102-bank-0062",
@@ -747,7 +869,9 @@
         "C": "Drawing a rectangle with length and breadth equal to the major and minor axes",
         "D": "Dividing the major axis into equal parts"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Step 1 of the 'ELLIPSE- Rectangle Method' (page 9) explicitly states: 'Draw a rectangle with length and breadth equal to the major and minor axes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0063",
@@ -759,7 +883,9 @@
         "C": "60º",
         "D": "90º"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 11, step 2, instructs: 'Construct an angle 90° from the point where the radius crosses the circumference.' This directly applies the principle that a tangent is perpendicular to the radius at the point of tangency."
     },
     {
       "id": "uni-unilag-get102-bank-0064",
@@ -771,7 +897,9 @@
         "C": "θ/2",
         "D": "90 - θ"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 2 states: 'The apex angle of a cone is 2θ.' This refers to the angle of the original right-angled triangle at the apex before rotation. When rotated about the altitude, the full angle at the cone's apex will be twice this angle."
     },
     {
       "id": "uni-unilag-get102-bank-0065",
@@ -783,7 +911,9 @@
         "C": "120 degrees to each other",
         "D": "45 degrees to each other"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 states that isometric drawings use 'three axes at 120° to each other to show three faces of an object simultaneously.'"
     },
     {
       "id": "uni-unilag-get102-bank-0066",
@@ -795,7 +925,9 @@
         "C": "By drawing arcs with radius equal to the minor axis.",
         "D": "By measuring a fixed distance from the vertices."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 14, 'STEPS 3' of the Hyperbola: Locus Method 1 states: 'From the centre of the transverse axis, and radii equal to half the length of the diagonal, swing arcs to intersect the horizontal line through the centre of the square. This locates focus F1 and focus F2.'"
     },
     {
       "id": "uni-unilag-get102-bank-0067",
@@ -807,7 +939,9 @@
         "C": "R+r",
         "D": "R-r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 19, step 2 for 'To Construct a Curve OF radius R Tangential to a Line and a Circle of radius r' specifies: 'From centre of circle, draw an arc, radius R+r to intersect the parallel line at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0068",
@@ -819,7 +953,9 @@
         "C": "R * r",
         "D": "R / r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15, step 4 says: 'Draw a circle centre O with radius R-r to cut semi-circle at B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0069",
@@ -831,7 +967,9 @@
         "C": "They are parallel to the isometric axes but cannot be measured.",
         "D": "They are not parallel to the isometric axes and cannot be measured."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 10 clarifies that 'Non-isometric lines are lines that are not parallel to the axes. They cannot be measured.'"
     },
     {
       "id": "uni-unilag-get102-bank-0070",
@@ -843,7 +981,9 @@
         "C": "The material of the drawing paper",
         "D": "The imaginary lines of sight called projectors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 of the document states that a projection involves four components: the actual object, the eye of the viewer, the imaginary projection plane (the viewer's drawing paper), and the imaginary lines of sight called projectors. The material of the drawing paper is not mentioned as a component."
     },
     {
       "id": "uni-unilag-get102-bank-0071",
@@ -855,7 +995,9 @@
         "C": "Loci: Cam profile, ellipse, hyperbola, parabola, involute, cycloids",
         "D": "Isometric projection and oblique projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "On page 2, the schedule lists 'Polygons, Tangency, Loci: paths of points of simple mechanism' and immediately below it, 'Loci: Cam profile, ellipse, hyperbola, parabola, involute, cycloids'."
     },
     {
       "id": "uni-unilag-get102-bank-0072",
@@ -867,7 +1009,9 @@
         "C": "r",
         "D": "R"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15, step 4 states: 'Draw a circle centre O with radius R-r to cut semi-circle at B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0073",
@@ -879,7 +1023,9 @@
         "C": "Hyperbola",
         "D": "Circle"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15 states: '(For hyperbola, e>1; for parabola, e=1; for ellipse, e<1)'"
     },
     {
       "id": "uni-unilag-get102-bank-0074",
@@ -891,7 +1037,9 @@
         "C": "It is viewed from a bird's-eye perspective.",
         "D": "It appears as a flat, two-dimensional projection."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 8 explains, 'In isometric, the entire object is as if it is tilted towards the observer.' This tilting creates the characteristic 3D appearance."
     },
     {
       "id": "uni-unilag-get102-bank-0075",
@@ -903,7 +1051,9 @@
         "C": "By bisecting the distance between the vertices",
         "D": "By using an eccentricity formula"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Step 3 of 'HYPERBOLA: Locus Method 1' (page 14) describes the process: 'From the centre of the transverse axis, and radii equal to half the length of the diagonal, swing arcs to intersect the horizontal line through the centre of the square. This locates focus F1 and focus F2.'"
     },
     {
       "id": "uni-unilag-get102-bank-0076",
@@ -915,7 +1065,9 @@
         "C": "Principle of projection",
         "D": "Technical sketching"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "According to page 2, 'Engineering drawing is based on fundamental principle of projection.'"
     },
     {
       "id": "uni-unilag-get102-bank-0077",
@@ -927,7 +1079,9 @@
         "C": "It falls between perspective and oblique drawings.",
         "D": "It is identical to orthographic drawing."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 states: 'Isometric drawing in terms of realism and complexity falls in between perspective and oblique drawings.'"
     },
     {
       "id": "uni-unilag-get102-bank-0078",
@@ -939,7 +1093,9 @@
         "C": "To specify the type of projection used.",
         "D": "To represent the object's assembly sequence."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12 states, 'The symbols should be included with the drawing to show the projection used.'"
     },
     {
       "id": "uni-unilag-get102-bank-0079",
@@ -951,7 +1107,9 @@
         "C": "It is tilted towards the observer.",
         "D": "It is viewed from directly above."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 8 states, 'In isometric, the entire object is as if it is tilted towards the observer.'"
     },
     {
       "id": "uni-unilag-get102-bank-0080",
@@ -963,7 +1121,9 @@
         "C": "Tangentially to the straight lines.",
         "D": "Perpendicularly to the straight lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12, Step 4 states: 'The curve is drawn tangentially to the straight lines.'"
     },
     {
       "id": "uni-unilag-get102-bank-0081",
@@ -975,7 +1135,9 @@
         "C": "From the centre of the transverse axis, swinging arcs with a radius equal to half the length of the diagonal of the square whose sides equal the transverse axis.",
         "D": "By marking off equal spaces along the horizontal line."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 14, Step 3 of 'HYPERBOLA: Locus Method 1' states: 'From the centre of the transverse axis, and radii equal to half the length of the diagonal, swing arcs to intersect the horizontal line through the centre of the square. This locates focus F1 and focus F2.'"
     },
     {
       "id": "uni-unilag-get102-bank-0082",
@@ -987,7 +1149,9 @@
         "C": "R-r",
         "D": "R+r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 16, step 4 for 'To Construct a Cross Tangent to Two UNEqual Circles' instructs: 'Draw a circle centre O with radius (R+r) to cut semi-circle at B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0083",
@@ -999,7 +1163,9 @@
         "C": "When drawing multiple parallel curves simultaneously.",
         "D": "As the primary method for all isometric circles and curves."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 22 specifies, 'However, for small fraction of a circle the ordinate method must be used, since the approximate method deviate from a true ellipse at several points on the curve.'"
     },
     {
       "id": "uni-unilag-get102-bank-0084",
@@ -1011,7 +1177,9 @@
         "C": "The front view",
         "D": "None of the faces are shown in true shape and size"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "According to page 4, 'One face, especially the front view is exactly as it would appear in multi-view drawing,' implying it retains its true shape and size."
     },
     {
       "id": "uni-unilag-get102-bank-0085",
@@ -1023,7 +1191,9 @@
         "C": "The distance from the center to each focus",
         "D": "Random lengths to intersect lines"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Step 5 of 'HYPERBOLA: Locus Method 1' (page 14) states: 'With A1 as radius, swing an arc from focus F1. With radius B1, swing an arc from focus F2.' Points A1, B1, etc., are marked off on the horizontal line from the focus points (Step 4)."
     },
     {
       "id": "uni-unilag-get102-bank-0086",
@@ -1035,7 +1205,9 @@
         "C": "A2",
         "D": "A3"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "According to the table on page 32, 'A2' has a 'Vertical (mm)' of 420 and a 'Horizontal (mm)' of 594."
     },
     {
       "id": "uni-unilag-get102-bank-0087",
@@ -1047,7 +1219,9 @@
         "C": "It must always be accompanied by a rear view.",
         "D": "It should depict the object in its most complex state."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7 lists 'The front view should show a large surface of the part parallel to the viewing plane' as a principle for orientation."
     },
     {
       "id": "uni-unilag-get102-bank-0088",
@@ -1059,7 +1233,9 @@
         "C": "To limit the number of drawings produced.",
         "D": "To make drawings more complex."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 12 states: \"Regulation of engineering drawing ensures that people communicating using the graphic language are speaking the same language.\""
     },
     {
       "id": "uni-unilag-get102-bank-0089",
@@ -1071,7 +1247,9 @@
         "C": "To draw horizontal lines on the drawing sheet.",
         "D": "To transfer measurements between different scales."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 20 states: 'Used to draw horizontal lines on the drawing sheet.'"
     },
     {
       "id": "uni-unilag-get102-bank-0090",
@@ -1083,7 +1261,9 @@
         "C": "The imaginary projection plane.",
         "D": "The sound waves produced by the object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 14 lists the actual object, the eye of the viewer, the imaginary projection plane, and imaginary lines of sight (projectors). Sound waves are not mentioned."
     },
     {
       "id": "uni-unilag-get102-bank-0091",
@@ -1095,7 +1275,9 @@
         "C": "Equal to the distance of the directrix from the parallel lines",
         "D": "Equal to half the distance between the focus and the directrix"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Step 4 of the 'PARABOLA- Locus Method' (page 13) states: 'With F as centre, and radii equal to the distance of the directrix from the parallel lines, draw arcs to cut the parallel lines'."
     },
     {
       "id": "uni-unilag-get102-bank-0092",
@@ -1107,7 +1289,9 @@
         "C": "When the plane makes a smaller angle with the axis than do the elements.",
         "D": "When the plane intersects the cone parallel to its side (elements)."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Page 3 describes a Circle: 'This shape results when a plane passes through the cone, parallel with the base and perpendicular to the axis.'"
     },
     {
       "id": "uni-unilag-get102-bank-0093",
@@ -1119,7 +1303,9 @@
         "C": "Both equal to the major axis.",
         "D": "Both equal to the minor axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 6, Step 1 states: 'construct two concentric circles with radii equal to 1/2 of major and 1/2 of minor axes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0094",
@@ -1131,7 +1317,9 @@
         "C": "The shadow cast by the object",
         "D": "The imaginary projection plane"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 14 lists the four components: 'The actual object', 'The eye of the viewer', 'The imaginary projection plane', and 'The imaginary lines of sight called projectors'. The shadow cast by the object is not listed."
     },
     {
       "id": "uni-unilag-get102-bank-0095",
@@ -1143,7 +1331,9 @@
         "C": "Locate the foci of the ellipse.",
         "D": "Draw concentric circles."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9, 'STEPS 1' of the Ellipse - Rectangle Method specifies: 'Draw a rectangle with length and breadth equal to the major and minor axes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0096",
@@ -1155,7 +1345,9 @@
         "C": "Equal view.",
         "D": "Equal measure."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 7 clarifies, 'Isometric means equal measure.'"
     },
     {
       "id": "uni-unilag-get102-bank-0097",
@@ -1167,7 +1359,9 @@
         "C": "Lines which are tangents to the hyperbola at infinity.",
         "D": "Lines that define the boundaries of the construction rectangle."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 16 states: 'Lines which are tangents to he hyperbola at infinity are called asymptotes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0098",
@@ -1179,7 +1373,9 @@
         "C": "θ/2",
         "D": "90°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 2 states, 'The apex angle of a cone is 2θ.'"
     },
     {
       "id": "uni-unilag-get102-bank-0099",
@@ -1191,7 +1387,9 @@
         "C": "Pictorial Projection",
         "D": "Visual Projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 categorizes projections into 'Parallel Projection' and 'Perspective Projection'. Orthographic, Oblique, and Axonometric are listed as sub-types of 'Parallel Projection'."
     },
     {
       "id": "uni-unilag-get102-bank-0100",
@@ -1203,7 +1401,9 @@
         "C": "r1 and r2",
         "D": "R and R"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 20, steps 2 and 3 for 'To Construct a Curve Tangential to Two Circles' (external case) state: 'With centre A and radius R+r1, draw an arc' and 'With centre B and radius R+r2, draw an arc to intersect the first arc at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0101",
@@ -1215,7 +1415,9 @@
         "C": "e > 1",
         "D": "e = 0"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 15 states: 'Eccentricity, e, is the ratio of the distances of a point to the focus and directrix. (For hyperbola, e>1; for parabola, e=1; for ellipse, e<1)'."
     },
     {
       "id": "uni-unilag-get102-bank-0102",
@@ -1227,7 +1429,9 @@
         "C": "By simply dividing the transverse axis into equal parts.",
         "D": "By drawing lines perpendicular to the transverse axis at its ends."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 14, Step 3 states: 'From the centre of the transverse axis, and radii equal to half the length of the diagonal, swing arcs to intersect the horizontal line through the centre of the square. This locates focus F1 and focus F2.' The square mentioned has sides equal to the transverse axis (Step 1)."
     },
     {
       "id": "uni-unilag-get102-bank-0103",
@@ -1239,7 +1443,9 @@
         "C": "To represent cutting planes",
         "D": "Used for limits of partial or interrupted views"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 38 states this line type is 'Used for limits of partial or interrupted views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0104",
@@ -1251,7 +1457,9 @@
         "C": "To show the path of light rays during projection.",
         "D": "To highlight areas of the object that require special attention."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13 states, 'Hidden lines represent features on an object which are not visible in the particular view being drawn'."
     },
     {
       "id": "uni-unilag-get102-bank-0105",
@@ -1263,7 +1471,9 @@
         "C": "R * r",
         "D": "R / r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15, step 4, states: 'Draw a circle centre O with radius R-r to cut semi-circle at B.' This reduced radius is used to find an auxiliary point that helps determine the tangent."
     },
     {
       "id": "uni-unilag-get102-bank-0106",
@@ -1275,7 +1485,9 @@
         "C": "They may or may not be parallel depending on their orientation.",
         "D": "They always converge to a vanishing point."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 states, 'All lines parallel in the orthogonal view must be parallel in the isometric view.'"
     },
     {
       "id": "uni-unilag-get102-bank-0107",
@@ -1287,7 +1499,9 @@
         "C": "The plane is parallel to the side (elements).",
         "D": "The plane makes a smaller angle with the axis than do the sides (elements)."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 3 defines a Hyperbola: 'is the curve of intersection created when a plane intersects a right circular cone and makes a smaller angle with the axis than do the sides (elements).'"
     },
     {
       "id": "uni-unilag-get102-bank-0108",
@@ -1299,7 +1513,9 @@
         "C": "As ellipses.",
         "D": "As hyperbolas."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 22 mentions, 'Circles and curves on isometric planes appear as an ellipse.'"
     },
     {
       "id": "uni-unilag-get102-bank-0109",
@@ -1311,7 +1527,9 @@
         "C": "Pivot-joint divider",
         "D": "Friction-joint divider"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 22 states: 'Pivot-joint divider are used for measurement of approximately 20mm or more while for measurement less than 20mm, the bow divider is used.'"
     },
     {
       "id": "uni-unilag-get102-bank-0110",
@@ -1323,7 +1541,9 @@
         "C": "To the right of the Front View",
         "D": "To the left of the Front View"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The table on page 11, under '1ST ANGLE PROJECTION', states: 'Top View comes below Front View'."
     },
     {
       "id": "uni-unilag-get102-bank-0111",
@@ -1335,7 +1555,9 @@
         "C": "They are perpendicular to each other.",
         "D": "They bisect each other."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10, the second bullet point states: 'A tangent is perpendicular to the radius of a circle drawn at the point where the tangent meets the circle.'"
     },
     {
       "id": "uni-unilag-get102-bank-0112",
@@ -1347,7 +1569,9 @@
         "C": "Parallel and Perspective",
         "D": "Multiview and Three-dimensional"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 15 states: 'The two broad types of projection are: Parallel Projection and Perspective Projection'."
     },
     {
       "id": "uni-unilag-get102-bank-0113",
@@ -1359,7 +1583,9 @@
         "C": "Length and breadth equal to the minor axis.",
         "D": "Length equal to the major axis and breadth equal to half the minor axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Page 9, Step 1 of 'ELLIPSE- Rectangle Method' states: 'Draw a rectangle with length and breadth equal to the major and minor axes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0114",
@@ -1371,7 +1597,9 @@
         "C": "Foci method",
         "D": "Oblong method"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 5 lists: '(a) concentric circle method (b) Foci method (c) Trammel method (d) Oblong method'. Tangent line method is not listed."
     },
     {
       "id": "uni-unilag-get102-bank-0115",
@@ -1383,7 +1611,9 @@
         "C": "Locate the foci of the ellipse.",
         "D": "Draw two concentric circles."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9, Step 1 states: 'Draw a rectangle with length and breadth equal to the major and minor axes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0116",
@@ -1395,7 +1625,9 @@
         "C": "By connecting points that are equidistant from a focus and a directrix",
         "D": "By drawing the curve tangentially to the straight lines that have been joined"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Step 4 of the 'PARABOLA - Envelope Method' (page 12) states: 'The curve is drawn tangentially to the straight lines.'"
     },
     {
       "id": "uni-unilag-get102-bank-0117",
@@ -1407,7 +1639,9 @@
         "C": "With center A and radius R, draw arcs to cut lines at B and C.",
         "D": "Extend the perpendicular lines to meet at O."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 17, step 1 for 'To Construct a Curve Tangential to two Perpendicular lines' states: 'With centre A and radius R, draw arcs to cut lines at B and C.'"
     },
     {
       "id": "uni-unilag-get102-bank-0118",
@@ -1419,7 +1653,9 @@
         "C": "120° to each other",
         "D": "45° to each other"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 mentions: 'Isometric drawings is a pictorial view which uses three axes at 120° to each other'."
     },
     {
       "id": "uni-unilag-get102-bank-0119",
@@ -1431,7 +1667,9 @@
         "C": "Join the vertices to points on the rectangle.",
         "D": "Draw the second branch of the hyperbola."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 17, Step 2 states: 'Construct a rectangle through P and its associated vertex.'"
     },
     {
       "id": "uni-unilag-get102-bank-0120",
@@ -1443,7 +1681,9 @@
         "C": "Draw lines inclined at 30°.",
         "D": "Transfer the length of the square."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The first step listed on page 11 under 'DRAW A SQUARE BOX IN ISOMETRIC' is 'Draw a horizontal line.'"
     },
     {
       "id": "uni-unilag-get102-bank-0121",
@@ -1455,7 +1695,9 @@
         "C": "Twice AB",
         "D": "The distance CD"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7, step 2 states: 'With A as centre draw a circle of radius AB' and step 3 states: 'With B as centre draw a circle of radius AB'."
     },
     {
       "id": "uni-unilag-get102-bank-0122",
@@ -1467,7 +1709,9 @@
         "C": "Cylindrical Projection",
         "D": "Conical Projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 categorizes projections into two broad types: Parallel Projection and Perspective Projection. Under Parallel Projection, it lists Orthographic projection, Oblique projection, and Axonometric projections/Pictorial drawings."
     },
     {
       "id": "uni-unilag-get102-bank-0123",
@@ -1479,7 +1723,9 @@
         "C": "Use a 60º set square to draw more lines.",
         "D": "Bisect the diameter of the circle."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 5, step 3 says: 'Using the ends of the horizontal line as starting point step off the radius of the circle round it.'"
     },
     {
       "id": "uni-unilag-get102-bank-0124",
@@ -1491,7 +1737,9 @@
         "C": "The practice of designing structures without considering economic factors.",
         "D": "A field solely focused on theoretical research in natural sciences."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 3 states: \"Engineering is the profession in which knowledge of mathematical and natural sciences, gained by study, experience, and practice is applied with judgment to develop and utilize economically the materials and forces of nature for the benefit of humanity.\""
     },
     {
       "id": "uni-unilag-get102-bank-0125",
@@ -1503,7 +1751,9 @@
         "C": "Center lines; lines of symmetry; pitch circles.",
         "D": "Bending lines; repetitive features."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 37 states: 'Thin Chain Line (Long and Short Dashed Line) Used for centre lines; lines of symmetry; pitch circle for gears; pitch circle for holes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0126",
@@ -1515,7 +1765,9 @@
         "C": "To provide a smooth surface for drawing.",
         "D": "To measure small distances accurately."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 27 states: 'An erasing shield restricts the erasing area so that the correctly drawn lines will not be disturbed during the erasing procedure.'"
     },
     {
       "id": "uni-unilag-get102-bank-0127",
@@ -1527,7 +1779,9 @@
         "C": "Faster manufacturing process.",
         "D": "Enhanced material strength."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13 states: \"An incorrect dimension on a technical drawing can cause the part to be wrong in size.\""
     },
     {
       "id": "uni-unilag-get102-bank-0128",
@@ -1539,7 +1793,9 @@
         "C": "Realistic form",
         "D": "Complex drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "According to the document on page 7, 'Isometric means equal measure.' This refers to the principle that all three axes in an isometric drawing are measured using the same scale."
     },
     {
       "id": "uni-unilag-get102-bank-0129",
@@ -1551,7 +1807,9 @@
         "C": "The right side",
         "D": "The left side"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 19 states: 'While drawing with the Tee square, the head must always lay on the true/straight edge of the drawing board – preferably the left side. This is to guarantee parallel lines.'"
     },
     {
       "id": "uni-unilag-get102-bank-0130",
@@ -1563,7 +1821,9 @@
         "C": "A mathematical formula for calculating object dimensions.",
         "D": "A photographic image of an object from multiple angles."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 2 states: 'A projection is a drawing or representation of an entity on an imaginary plane or planes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0131",
@@ -1575,7 +1835,9 @@
         "C": "They are usually drawn in a horizontal position.",
         "D": "Their orientation does not matter as long as all details are visible."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 mentions: 'Usually, screws, shafts, tubes, and other elongated parts are drawn in a horizontal position.'"
     },
     {
       "id": "uni-unilag-get102-bank-0132",
@@ -1587,7 +1849,9 @@
         "C": "Thick lines should be approximately twice as wide as thin lines.",
         "D": "Thick lines should be three times as wide as thin lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 35 states: 'For pencil drawing, the thick lines should be approximately twice as wide as thin lines.'"
     },
     {
       "id": "uni-unilag-get102-bank-0133",
@@ -1599,7 +1863,9 @@
         "C": "Locate D on the second circle with AC=AD.",
         "D": "Draw a 90° line from the center of the second circle through A."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 14, step 5, states: 'Locate D on second circle with AC=AD.' This establishes the symmetry needed for the cross tangent."
     },
     {
       "id": "uni-unilag-get102-bank-0134",
@@ -1611,7 +1877,9 @@
         "C": "3H or 4H",
         "D": "9B"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 26, under 'Pencils', states: '3H or 4H is recommended for layout work.'"
     },
     {
       "id": "uni-unilag-get102-bank-0135",
@@ -1623,7 +1891,9 @@
         "C": "Bow divider",
         "D": "Adjustable divider"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 22 clarifies: 'Pivot-joint divider are used for measurement of approximately 20mm or more while for measurement less than 20mm, the bow divider is used.'"
     },
     {
       "id": "uni-unilag-get102-bank-0136",
@@ -1635,7 +1905,9 @@
         "C": "The object lies between the observer and the plane of projection.",
         "D": "The plane of projection is always vertical."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The table on page 11, under '3RD ANGLE PROJECTION', states: 'The plane of projection lies between the observer and the object'. It also notes the plane is 'assumed to be transparent'."
     },
     {
       "id": "uni-unilag-get102-bank-0137",
@@ -1647,7 +1919,9 @@
         "C": "Radii equal to 1/2 of the major axis and 1/2 of the minor axis.",
         "D": "Radii equal to the focal length and the minor axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "According to 'STEPS 1' on page 6 for the Ellipse - Concentric Circle Method, the two concentric circles are constructed 'with radii equal to 1/2 of major and 1/2 of minor axes'."
     },
     {
       "id": "uni-unilag-get102-bank-0138",
@@ -1659,7 +1933,9 @@
         "C": "To demonstrate the effect of light on the object",
         "D": "To explain the historical context of engineering drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 5 explains the hinged box analogy: 'The orthographic projection can be thought of as suspending an object inside a hinged box and projecting the points to the planes which make up the box before unfolding the box.' This directly relates to how the different views are obtained and laid out."
     },
     {
       "id": "uni-unilag-get102-bank-0139",
@@ -1671,7 +1947,9 @@
         "C": "Axonometric projection and Oblique projection",
         "D": "Isomeric projection and Dimetric projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 clearly lists: 'The two main systems for projecting views are: - First angle projection - Third angle projection'."
     },
     {
       "id": "uni-unilag-get102-bank-0140",
@@ -1683,7 +1961,9 @@
         "C": "Bisect the angle between the two lines.",
         "D": "Draw a circle of radius r tangent to one line."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 18, step 1 for 'To Construct a Curve Tangential to two Lines' states: 'Construct lines parallel to the lines at a distance r away to intersect at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0141",
@@ -1695,7 +1975,9 @@
         "C": "Join the centres of the two circles.",
         "D": "Draw circles of different radii."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 13, step 1 says: 'Join the centres of the two circles.'"
     },
     {
       "id": "uni-unilag-get102-bank-0142",
@@ -1707,7 +1989,9 @@
         "C": "To quickly manufacture products without prior planning.",
         "D": "To document existing structures."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 states: \"The design process is an organised, step-by step procedure in which mathematical and scientific principles, coupled with experience, are brought to bear in order to solve a problem or meet a need.\""
     },
     {
       "id": "uni-unilag-get102-bank-0143",
@@ -1719,7 +2003,9 @@
         "C": "In a horizontal position",
         "D": "Diagonally across the drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7, under 'Orientation of the front view should follow the principles:', the last point states: 'Usually, screws, shafts, tubes, and other elongated parts are drawn in a horizontal position.'"
     },
     {
       "id": "uni-unilag-get102-bank-0144",
@@ -1731,7 +2017,9 @@
         "C": "Drawing freehand sketches and artistic designs.",
         "D": "Drawing plumbing fixtures and screw threads."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 29 lists various uses for templates, including circles, ellipses, plumbing fixtures, screw threads, electronic symbols, springs, and gears. Drawing freehand sketches and artistic designs is contrary to the purpose of templates, which are used to increase accuracy and speed for standardized shapes."
     },
     {
       "id": "uni-unilag-get102-bank-0145",
@@ -1743,7 +2031,9 @@
         "C": "The front view should show a large surface of the part parallel to the viewing plane.",
         "D": "The front view should prioritize an unstable or unusual position."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7, under 'Orientation of the front view should follow the principles:', the first point states: 'The front view should show a large surface of the part parallel to the viewing plane.'"
     },
     {
       "id": "uni-unilag-get102-bank-0146",
@@ -1755,7 +2045,9 @@
         "C": "Parallel Projection",
         "D": "Isometric Projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4 categorizes 'Orthographic projection', 'Oblique projection', and 'Axonometric projections/Pictorial drawings' as types of 'Parallel Projection'."
     },
     {
       "id": "uni-unilag-get102-bank-0147",
@@ -1767,7 +2059,9 @@
         "C": "1.0 mm",
         "D": "0.1 mm"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 35, under 'Linework', states: 'Standard line thicknesses are; - 0.6 mm minimum for thick lines - 0.3 mm minimum for thin lines.'"
     },
     {
       "id": "uni-unilag-get102-bank-0148",
@@ -1779,7 +2073,9 @@
         "C": "Dimension and extension lines",
         "D": "Limits of partial views or sections"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 38 indicates that 'Thick Chain Line' is 'Used for surfaces which have to meet special requirements.'"
     },
     {
       "id": "uni-unilag-get102-bank-0149",
@@ -1791,7 +2087,9 @@
         "C": "Lines that represent hidden features and are always dashed.",
         "D": "Lines used only for construction purposes and are erased afterwards."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 defines isometric lines as: 'lines that are parallel to the axis and are drawn vertically or at 30° angle in isometric views,' and adds, 'Isometric lines can be measured.'"
     },
     {
       "id": "uni-unilag-get102-bank-0150",
@@ -1803,7 +2101,9 @@
         "C": "To specify locations of circular, cylindrical, or spherical features.",
         "D": "To denote the boundaries of an object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 13 states, 'Centre lines are to be used primarily as locations of circular, cylindrical, or spherical features.'"
     },
     {
       "id": "uni-unilag-get102-bank-0151",
@@ -1815,7 +2115,9 @@
         "C": "By bisecting the distance between the two circles' centers.",
         "D": "By extending the radii of the circles towards each other."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13, step 2, states: 'From each centre, construct lines at 90° to the centre line.' These lines identify the points on the circumference that are perpendicular to the center line, which are the points of tangency for a direct common tangent."
     },
     {
       "id": "uni-unilag-get102-bank-0152",
@@ -1827,7 +2129,9 @@
         "C": "60°",
         "D": "90°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 11, step 2 for 'To Draw Tangent to a Circle from any Point on the Circumference' says: 'Construct an angle 90° from the point where the radius crosses the circumference.'"
     },
     {
       "id": "uni-unilag-get102-bank-0153",
@@ -1839,7 +2143,9 @@
         "C": "R and R",
         "D": "r1 and r2"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 20, step 2 states: 'With centre A and radius R+r1, draw an arc' and step 3 states: 'With centre B and radius R+r2, draw an arc to intersect the first arc at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0154",
@@ -1851,7 +2157,9 @@
         "C": "The full major axis and half of the minor axis.",
         "D": "The full minor axis and half of the major axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 6, Step 1 of 'ELLIPSE- Concentric Circle Method' states: 'construct two concentric circles with radii equal to ½ of major and ½ of minor axes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0155",
@@ -1863,7 +2171,9 @@
         "C": "30° or 45°",
         "D": "0° or 180°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4 states: 'Oblique drawings use three axes; two at right angles (X and Y axes) and the third at any convenient angle usually 30° or 45°.'"
     },
     {
       "id": "uni-unilag-get102-bank-0156",
@@ -1875,7 +2185,9 @@
         "C": "R",
         "D": "r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15, step 4 for 'To Construct a Common Tangent to Two UNEqual Circles' instructs: 'Draw a circle centre O with radius R-r to cut semi-circle at B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0157",
@@ -1887,7 +2199,9 @@
         "C": "60° x 90° x 60°",
         "D": "120° x 120° x 120°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 8 explicitly states, 'Isometric angles are 30° x 90° x 30°.' This refers to the angles of the primary axes relative to the horizontal."
     },
     {
       "id": "uni-unilag-get102-bank-0158",
@@ -1899,7 +2213,9 @@
         "C": "The front view must always be positioned vertically.",
         "D": "The front view should obscure as many details as possible."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "One of the principles listed on page 7 for front view orientation is: 'The front view should show a large surface of the part parallel to the viewing plane.'"
     },
     {
       "id": "uni-unilag-get102-bank-0159",
@@ -1911,7 +2227,9 @@
         "C": "They speed up the work of the drafter and make the finished drawing more accurate.",
         "D": "They are primarily used for measuring distances."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 29 mentions: 'They are designed to speed the work of the drafter and to make the finished drawing more accurate.'"
     },
     {
       "id": "uni-unilag-get102-bank-0160",
@@ -1923,7 +2241,9 @@
         "C": "Join OP.",
         "D": "Join AP."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12, step 2 states: 'Join OP'."
     },
     {
       "id": "uni-unilag-get102-bank-0161",
@@ -1935,7 +2255,9 @@
         "C": "0.5 mm for thick, 0.25 mm for thin",
         "D": "1.0 mm for thick, 0.5 mm for thin"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 35 specifies: '0.6 mm minimum for thick lines' and '0.3 mm minimum for thin lines.'"
     },
     {
       "id": "uni-unilag-get102-bank-0162",
@@ -1947,7 +2269,9 @@
         "C": "Edges or sides",
         "D": "Radii"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3, point 2 states: 'Segments are called its edges or sides.'"
     },
     {
       "id": "uni-unilag-get102-bank-0163",
@@ -1959,7 +2283,9 @@
         "C": "It falls in between perspective and oblique drawings.",
         "D": "It is the least realistic but most complex."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 mentions, 'Isometric drawing in terms of realism and complexity falls in between perspective and oblique drawings.' Perspective is most realistic/complex, and oblique is simple but least realistic."
     },
     {
       "id": "uni-unilag-get102-bank-0164",
@@ -1971,7 +2297,9 @@
         "C": "A circle",
         "D": "A parabola"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 2 states: 'Depending upon where the section is cut, the shape can be a triangle, a circle, an ellipse, a parabola or a hyperbola.' A square is not listed among these possibilities."
     },
     {
       "id": "uni-unilag-get102-bank-0165",
@@ -1983,7 +2311,9 @@
         "C": "e > 1",
         "D": "e = 0"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 15, in the Eccentricity definition, states: '(For hyperbola, e>1; for parabola, e=1; for ellipse, e<1)'."
     },
     {
       "id": "uni-unilag-get102-bank-0166",
@@ -1995,7 +2325,9 @@
         "C": "By thin short dashes.",
         "D": "By dotted lines of varying thickness."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 13 clarifies, 'Hidden details are represented by thin short dashes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0167",
@@ -2007,7 +2339,9 @@
         "C": "x/2 parts",
         "D": "x^2 parts"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Step 3 mentions 'Divide half of the span into a number of parts, say x'. Step 4 then states: 'Divide the rise into the same number of x parts.'"
     },
     {
       "id": "uni-unilag-get102-bank-0168",
@@ -2019,7 +2353,9 @@
         "C": "Lines which are tangents to the hyperbola at infinity.",
         "D": "The directrices of the hyperbola."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 16 defines asymptotes: 'Lines which are tangents to he hyperbola at infinity are called asymptotes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0169",
@@ -2031,7 +2367,9 @@
         "C": "The approximate parallelogram method",
         "D": "Freehand sketching"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 22 highlights, 'A more convenient and preferred method of drawing isometric curves and circles is the approximate parallelogram method.'"
     },
     {
       "id": "uni-unilag-get102-bank-0170",
@@ -2043,7 +2381,9 @@
         "C": "Kilometer (km)",
         "D": "Meter (m)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 28 states: 'The metric system uses the meter (m) as its basic dimension.'"
     },
     {
       "id": "uni-unilag-get102-bank-0171",
@@ -2055,7 +2395,9 @@
         "C": "Divided into 2 parts, vertex 1 division from D",
         "D": "Divided into 3 parts, vertex 2 divisions from D"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Step 2 of 'HYPERBOLA: Locus Method (Given eccentricity)' (page 15) states: 'Divide DF into five (3+2) parts and locate the vertex 2 divisions from D.' The '3+2' corresponds to the numerator and denominator of the eccentricity 3/2."
     },
     {
       "id": "uni-unilag-get102-bank-0172",
@@ -2067,7 +2409,9 @@
         "C": "The sum of radii must be equal to the distance between the foci",
         "D": "The sum of radii is variable and depends on the selected points"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The definition of an ellipse (page 5) states that 'the sum of its distance from the two fixed points, foci, is constant and equal to the major axis.' Step 4 of the 'ELLIPSE- Foci Method' (page 8) confirms this: 'Draw intersecting arcs whose sum of radii is AB from F1 and F2.'"
     },
     {
       "id": "uni-unilag-get102-bank-0173",
@@ -2079,7 +2423,9 @@
         "C": "R + r",
         "D": "R - r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 19, step 2 states: 'From centre of circle, draw an arc, radius R+r to intersect the parallel line at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0174",
@@ -2091,7 +2437,9 @@
         "C": "Only the front, top, and right-side views",
         "D": "Views required for artistic representation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7 clarifies: 'The necessary views are the minimum number of views required to completely describe an object. Normally, a sketch or drawing should contain the necessary views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0175",
@@ -2103,7 +2451,9 @@
         "C": "By drawing an arc from point A or B (ends of the major axis) with a radius equal to half of the minor axis (OC) to cut the minor axis.",
         "D": "By dividing the major axis into a convenient number of equal parts."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7, Step 2 of 'ELLIPSE- Foci Method' states: 'Find the focal points by drawing an arc from point C or D with radius OA (½ of major axis) to cut the major axis at F1 and F2.'"
     },
     {
       "id": "uni-unilag-get102-bank-0176",
@@ -2115,7 +2465,9 @@
         "C": "In a horizontal position",
         "D": "Always in an isometric view"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 specifies: 'Usually, screws, shafts, tubes, and other elongated parts are drawn in a horizontal position.'"
     },
     {
       "id": "uni-unilag-get102-bank-0177",
@@ -2127,7 +2479,9 @@
         "C": "They remain vertical lines.",
         "D": "They are drawn at a 45° angle."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 9 mentions, 'While lines that appear vertical in orthographic views remain vertical lines in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0178",
@@ -2139,7 +2493,9 @@
         "C": "It is drawn at a 30-degree angle to the horizontal.",
         "D": "It always shows hidden lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 states: 'One face, especially the front view is exactly as it would appear in multi-view drawing' and 'Oblique drawing shows objects with one or more parallel faces having true shape and size.'"
     },
     {
       "id": "uni-unilag-get102-bank-0179",
@@ -2151,7 +2507,9 @@
         "C": "The major axis (AB)",
         "D": "The distance between the foci (F₁F₂)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 5, under 'ELLIPSE', states: 'An ellipse is a curve traced by a point moving such that the sum of its distance from the two fixed points, foci, is constant and equal to the major axis.' The formula also shows PF₁ + PF₂ = AB."
     },
     {
       "id": "uni-unilag-get102-bank-0180",
@@ -2163,7 +2521,9 @@
         "C": "Scribers",
         "D": "Drawing boards"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 30 describes: 'Scriber Templates: consists of laminated strips with engraved grooves that are used to form letters.' The text refers to the overall tool as a 'scriber' in relation to the grooves."
     },
     {
       "id": "uni-unilag-get102-bank-0181",
@@ -2175,7 +2535,9 @@
         "C": "Hidden outlines and edges",
         "D": "Cutting planes"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 37 clarifies that 'Thin Short Dashed Line' is 'Used for hidden outlines and edges.'"
     },
     {
       "id": "uni-unilag-get102-bank-0182",
@@ -2187,7 +2549,9 @@
         "C": "Half of the major axis (OA)",
         "D": "The full length of the minor axis (CD)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Step 2 of the 'ELLIPSE- Foci Method' on page 7 specifies: 'Find the focal points by drawing an arc from point C or D with radius OA (1/2 of major axis) to cut the major axis at F1 and F2.'"
     },
     {
       "id": "uni-unilag-get102-bank-0183",
@@ -2199,7 +2563,9 @@
         "C": "To clearly and concisely convey information for transforming an idea into reality.",
         "D": "To provide a universal language for engineering and construction."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7 states: 'Artistic drawing: This type of drawing are used to express the feeling, belief, philosophies, or abstract ideas of the artist. This is why a lay person finds its difficult to understand what is being communicated by a work of art.'"
     },
     {
       "id": "uni-unilag-get102-bank-0184",
@@ -2211,7 +2577,9 @@
         "C": "As locations of circular, cylindrical, or spherical features.",
         "D": "To denote the top-most point of an object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 13 states, 'Centre lines are to be used primarily as locations of circular, cylindrical, or spherical features.'"
     },
     {
       "id": "uni-unilag-get102-bank-0185",
@@ -2223,7 +2591,9 @@
         "C": "By measuring a fixed distance from the center along the minor axis.",
         "D": "By intersecting radial lines drawn from the center with the minor axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Page 7, Step 2 explicitly states: 'Find the focal points by drawing an arc from point C or D with radius OA (1/2 of major axis) to cut the major axis at F1 and F2.'"
     },
     {
       "id": "uni-unilag-get102-bank-0186",
@@ -2235,7 +2605,9 @@
         "C": "Perspective drawing",
         "D": "Orthographic drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 indicates, 'Perspective drawing is the most realistic and most complex.'"
     },
     {
       "id": "uni-unilag-get102-bank-0187",
@@ -2247,7 +2619,9 @@
         "C": "The imaginary projection plane.",
         "D": "The light source illuminating the object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 3 lists the four components as: The actual object, the eye of the viewer, the imaginary projection plane, and the imaginary lines of sight (projectors). A light source is not mentioned."
     },
     {
       "id": "uni-unilag-get102-bank-0188",
@@ -2259,7 +2633,9 @@
         "C": "A given line called the directrix.",
         "D": "An axis of symmetry."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 states: 'Circle: This is defined as the set of points that are equidistant from a given point called the centre.'"
     },
     {
       "id": "uni-unilag-get102-bank-0189",
@@ -2271,7 +2647,9 @@
         "C": "Join OP.",
         "D": "Join AP."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12, step 2 for 'To Draw a Tangent from Any Point P to a Circle' states: 'Join OP.'"
     },
     {
       "id": "uni-unilag-get102-bank-0190",
@@ -2283,7 +2661,9 @@
         "C": "European Committee for Standardization (CEN)",
         "D": "American Society of Mechanical Engineers (ASME)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12 lists DOD, U.S military (MIL), ANSI, ASME, JIS, ISO, and BS as widely used standards. CEN (European Committee for Standardization) is not mentioned in the provided list."
     },
     {
       "id": "uni-unilag-get102-bank-0191",
@@ -2295,7 +2675,9 @@
         "C": "Draw a semi-circle with radius OB.",
         "D": "Join C-D."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 14, step 3 states: 'Bisect OA to give B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0192",
@@ -2307,7 +2689,9 @@
         "C": "Edges or sides",
         "D": "Flats"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3, point 2 of the 'Polygons' section states: 'Segments are called its edges or sides.'"
     },
     {
       "id": "uni-unilag-get102-bank-0193",
@@ -2319,7 +2703,9 @@
         "C": "Asymptotes",
         "D": "Directrices"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The introductory text for 'HYPERBOLA: Rectangular Method' (page 16) defines them: 'Lines which are tangents to he hyperbola at infinity are called asymptotes.' Step 1 then instructs: 'Draw the asymptotes OA and OB...'."
     },
     {
       "id": "uni-unilag-get102-bank-0194",
@@ -2331,7 +2717,9 @@
         "C": "Its altitude",
         "D": "Its shortest side"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "According to page 2, 'Cone is formed when a right angled triangle with an apex and angled θ is rotated about its altitude as the axis.'"
     },
     {
       "id": "uni-unilag-get102-bank-0195",
@@ -2343,7 +2731,9 @@
         "C": "They are perpendicular.",
         "D": "They bisect each other."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10 states: 'A tangent is perpendicular to the radius of a circle drawn at the point where the tangent meets the circle.'"
     },
     {
       "id": "uni-unilag-get102-bank-0196",
@@ -2355,7 +2745,9 @@
         "C": "R and R",
         "D": "r1 and r2"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 20, steps 2 and 3, state: 'With centre A and radius R+r1, draw an arc' and 'With centre B and radius R+r2, draw an arc to intersect the first arc at O.' This addition of radii is characteristic for external tangency to two circles."
     },
     {
       "id": "uni-unilag-get102-bank-0197",
@@ -2367,7 +2759,9 @@
         "C": "No, hidden lines are never shown.",
         "D": "Sometimes, depending on the observer's preference."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10 explicitly states: 'Hidden lines are never shown in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0198",
@@ -2379,7 +2773,9 @@
         "C": "They are lines that are not parallel to the axes and cannot be measured.",
         "D": "They represent hidden features and are typically dashed."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10 states, 'Non-isometric lines are lines that are not parallel to the axes. They cannot be measured.'"
     },
     {
       "id": "uni-unilag-get102-bank-0199",
@@ -2391,7 +2787,9 @@
         "C": "By thick long dashes.",
         "D": "By dotted lines of varying thickness."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13 states: 'Hidden details are represented by thin short dashes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0200",
@@ -2403,7 +2801,9 @@
         "C": "Top (or plan), Front, and Side (or end) views",
         "D": "Exploded, Sectional, and Assembly views"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 states, 'The three regular views in orthographic drawings are the top (or plan) view, front view and a side (or end) view.'"
     },
     {
       "id": "uni-unilag-get102-bank-0201",
@@ -2415,7 +2815,9 @@
         "C": "Problem Identification",
         "D": "Working Drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The flowchart on page 10 clearly shows \"Problem Identification\" as the first step."
     },
     {
       "id": "uni-unilag-get102-bank-0202",
@@ -2427,7 +2829,9 @@
         "C": "The front and top view of a cylindrical object.",
         "D": "Standard symbols for hidden lines and centre lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 12 explicitly states: 'The symbols show the two views of a truncated cone drawn in the respective projections they represent.'"
     },
     {
       "id": "uni-unilag-get102-bank-0203",
@@ -2439,7 +2843,9 @@
         "C": "Greater than the angle between the axis and the sides.",
         "D": "Smaller than the angle between the axis and the sides."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 states an Ellipse: 'is a curve created when a plane passes through a right circular cone at an angle to the axis that is greater than the angle between the axis and the sides.'"
     },
     {
       "id": "uni-unilag-get102-bank-0204",
@@ -2451,7 +2857,9 @@
         "C": "The major axis.",
         "D": "Twice the minor axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 5 states: 'An ellipse is a curve traced by a point moving such that the sum of its distance from the two fixed points, foci, is constant and equal to the major axis.' It further clarifies: 'PF1 + PF2 = ... = AB', where AB is the major axis."
     },
     {
       "id": "uni-unilag-get102-bank-0205",
@@ -2463,7 +2871,9 @@
         "C": "Third angle projection",
         "D": "Fourth angle projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The last bullet point on page 12 specifies: 'Unless otherwise stated, the first angle projection is to be used for this course.'"
     },
     {
       "id": "uni-unilag-get102-bank-0206",
@@ -2475,7 +2885,9 @@
         "C": "Bisect the angle formed by the two lines.",
         "D": "Draw a circle of radius r at the intersection of the two lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 18, step 1 states: 'Construct lines parallel to the lines at a distance r away to intersect at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0207",
@@ -2487,7 +2899,9 @@
         "C": "Hidden outlines and edges.",
         "D": "Cutting planes."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 37 specifies: 'Thin Short Dashed Line Used for hidden outlines and edges.'"
     },
     {
       "id": "uni-unilag-get102-bank-0208",
@@ -2499,7 +2913,9 @@
         "C": "The object is behind the plane of projection.",
         "D": "The observer is between the object and the plane."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Page 11 clearly states for 1ST ANGLE PROJECTION: 'The object lies between the observer and the plane of projection.'"
     },
     {
       "id": "uni-unilag-get102-bank-0209",
@@ -2511,7 +2927,9 @@
         "C": "Pictures, words, numbers, and symbols.",
         "D": "Solely mathematical equations."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 5 states: \"This description is in most cases consists of pictures, words, number and symbols.\""
     },
     {
       "id": "uni-unilag-get102-bank-0210",
@@ -2523,7 +2941,9 @@
         "C": "By drawing it tangentially to the straight lines.",
         "D": "By drawing it through the intersections of perpendicular lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12, 'STEPS 4' of the Parabola - Envelope Method specifies: 'The curve is drawn tangentially to the straight lines.'"
     },
     {
       "id": "uni-unilag-get102-bank-0211",
@@ -2535,7 +2955,9 @@
         "C": "To create",
         "D": "To discover"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 states: \"The term, engineer, comes from the Latin word “ingenerare” which means to create.\""
     },
     {
       "id": "uni-unilag-get102-bank-0212",
@@ -2547,7 +2969,9 @@
         "C": "Focal tangents",
         "D": "Transverse axes"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 16, under 'HYPERBOLA: Rectangular Method', the text defines: 'Lines which are tangents to the hyperbola at infinity are called asymptotes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0213",
@@ -2559,7 +2983,9 @@
         "C": "Five",
         "D": "Six"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 5 explicitly states: 'There are six principal views for every object.'"
     },
     {
       "id": "uni-unilag-get102-bank-0214",
@@ -2571,7 +2997,9 @@
         "C": "A mathematical formula for calculating distances.",
         "D": "A physical model of an object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 14 states: \"A projection is a drawing or representation of an entity on an imaginary plane or planes.\""
     },
     {
       "id": "uni-unilag-get102-bank-0215",
@@ -2583,7 +3011,9 @@
         "C": "By drawing an arc from point C or D with radius equal to 1/2 of the major axis to cut the major axis.",
         "D": "By measuring 1/3 of the major axis from each end."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7, 'STEPS 2' of the Ellipse - Foci Method states: 'Find the focal points by drawing an arc from point C or D with radius OA (1/2 of major axis) to cut the major axis at F₁ and F₂.'"
     },
     {
       "id": "uni-unilag-get102-bank-0216",
@@ -2595,7 +3025,9 @@
         "C": "All three axes are at 120° to each other",
         "D": "Two axes are parallel and the third is perpendicular"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 explicitly states, 'Isometric drawings is a pictorial view which uses three axes at 120° to each other to show three faces of an object simultaneously.'"
     },
     {
       "id": "uni-unilag-get102-bank-0217",
@@ -2607,7 +3039,9 @@
         "C": "60º",
         "D": "90º"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "As per step 3 on Page 6, 'With the 45º set square, draw two cross lines through centre O to intersect the circle at E, F, G & H.' This creates the 8 equal divisions required for an octagon."
     },
     {
       "id": "uni-unilag-get102-bank-0218",
@@ -2619,7 +3053,9 @@
         "C": "Isometric projection",
         "D": "Perspective projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 states, 'In first angle projection, the observer looks through the object to the planes of projection to produce the view being observed.'"
     },
     {
       "id": "uni-unilag-get102-bank-0219",
@@ -2631,7 +3067,9 @@
         "C": "60° x 90° x 60°",
         "D": "20° x 90° x 20°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the document, 'Isometric angles are 30° x 90° x 30°' as stated on page 8."
     },
     {
       "id": "uni-unilag-get102-bank-0220",
@@ -2643,7 +3081,9 @@
         "C": "They are never shown.",
         "D": "They are only shown if they are critical to understanding the object's geometry."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10 explicitly states, 'Hidden lines are never shown in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0221",
@@ -2655,7 +3095,9 @@
         "C": "To hold the drawing paper in place.",
         "D": "To apply pressure evenly when erasing large areas."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 27 explains: 'An erasing shield restricts the erasing area so that the correctly drawn lines will not be disturbed during the erasing procedure.'"
     },
     {
       "id": "uni-unilag-get102-bank-0222",
@@ -2667,7 +3109,9 @@
         "C": "Ellipses",
         "D": "Parabolas"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 22 clearly states, 'Circles and curves on isometric planes appear as an ellipse.' This is due to the projection method."
     },
     {
       "id": "uni-unilag-get102-bank-0223",
@@ -2679,7 +3123,9 @@
         "C": "Lines that are intentionally distorted to create a sense of depth.",
         "D": "Lines used to indicate hidden features within the object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 10 states, 'Non-isometric lines are lines that are not parallel to the axes. They cannot be measured.'"
     },
     {
       "id": "uni-unilag-get102-bank-0224",
@@ -2691,7 +3137,9 @@
         "C": "Asymptotes.",
         "D": "Conjugate axes."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 16 clearly defines: 'Lines which are tangents to he hyperbola at infinity are called asymptotes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0225",
@@ -2703,7 +3151,9 @@
         "C": "The center for drawing a regular heptagon.",
         "D": "The center for drawing a regular nonagon."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 8, step 6 states: 'To draw a heptagon, use point 7 as centre to draw a circle passing through A and B'. This implies 7 is the center for a 7-sided polygon (heptagon)."
     },
     {
       "id": "uni-unilag-get102-bank-0226",
@@ -2715,7 +3165,9 @@
         "C": "To the right of the Front View",
         "D": "To the left of the Front View"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 11 states for 1ST ANGLE PROJECTION, 'Top View comes below Front View'."
     },
     {
       "id": "uni-unilag-get102-bank-0227",
@@ -2727,7 +3179,9 @@
         "C": "United Nations Educational, Scientific and Cultural Organization (UNESCO)",
         "D": "British Standard (BS)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12 lists DOD, MIL, ANSI, ASME, JIS, ISO, and BS. UNESCO is not listed."
     },
     {
       "id": "uni-unilag-get102-bank-0228",
@@ -2739,7 +3193,9 @@
         "C": "3H or 4H",
         "D": "9B"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 26 explicitly recommends: '3H or 4H is recommended for layout work'. HB is for outline, and 2H/H for most line work."
     },
     {
       "id": "uni-unilag-get102-bank-0229",
@@ -2751,7 +3207,9 @@
         "C": "Orthographic drawing",
         "D": "Perspective drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 3 mentions: 'Perspective drawing is the most realistic and most complex'."
     },
     {
       "id": "uni-unilag-get102-bank-0230",
@@ -2763,7 +3221,9 @@
         "C": "Exploded view drawings",
         "D": "Isometric projection and oblique projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 2 lists: Introduction, Introduction to drawing instruments, Use of scales, line work, lettering, Dimensioning, Polygons, Tangency, Loci, Orthographic projection, Isometric projection, and Isometric projections from orthographic projection. 'Exploded view drawings' is not listed."
     },
     {
       "id": "uni-unilag-get102-bank-0231",
@@ -2775,7 +3235,9 @@
         "C": "Draw a line connecting B and C.",
         "D": "Bisect the angle formed by the perpendicular lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 17, step 2 states: 'With centres B and C, radius R, draw arcs to intersect at O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0232",
@@ -2787,7 +3249,9 @@
         "C": "e > 1",
         "D": "e = 0"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 15, under 'HYPERBOLA: Locus Method (Given eccentricity)', it states: 'Eccentricity, e, is the ratio of the distances of a point to the focus and directrix. (For hyperbola, e>1; for parabola, e=1; for ellipse, e<1)'"
     },
     {
       "id": "uni-unilag-get102-bank-0233",
@@ -2799,7 +3263,9 @@
         "C": "A triangle",
         "D": "A trapezoid"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 2 mentions, 'Depending upon where the section is cut, the shape can be a triangle, a circle, an ellipse, a parabola or a hyperbola.'"
     },
     {
       "id": "uni-unilag-get102-bank-0234",
@@ -2811,7 +3277,9 @@
         "C": "Parallel to the side (elements) of the cone.",
         "D": "Making a smaller angle with the axis than do the sides."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 describes a Parabola: 'is the curve created when a plane intersects a right circular cone parallel to the side (elements) of the cone.'"
     },
     {
       "id": "uni-unilag-get102-bank-0235",
@@ -2823,7 +3291,9 @@
         "C": "45°",
         "D": "60°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 states, 'Lines that appear horizontal in the orthographic view are drawn at 30° angle in isometric views.' This is consistent with the diagrams on page 8 and 11."
     },
     {
       "id": "uni-unilag-get102-bank-0236",
@@ -2835,7 +3305,9 @@
         "C": "In the third quadrant",
         "D": "In the fourth quadrant"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 11 indicates that for 3RD ANGLE PROJECTION, 'The object is imagined to be in the third quadrant.'"
     },
     {
       "id": "uni-unilag-get102-bank-0237",
@@ -2847,7 +3319,9 @@
         "C": "They are typically drawn at varying angles.",
         "D": "They are only shown if they are non-isometric lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 states, 'All lines parallel in the orthogonal view must be parallel in the isometric view.'"
     },
     {
       "id": "uni-unilag-get102-bank-0238",
@@ -2859,7 +3333,9 @@
         "C": "Constructing lines parallel to the given lines at a distance r.",
         "D": "Using a set square to draw lines at a specific angle from the intersection."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 18, step 1, states: 'Construct lines parallel to the lines at a distance r away to intersect at O.' This intersection point O is the center of the tangential curve."
     },
     {
       "id": "uni-unilag-get102-bank-0239",
@@ -2871,7 +3347,9 @@
         "C": "Three",
         "D": "Four"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 2 states: 'These three (3) faces of the object are shown simultaneously'."
     },
     {
       "id": "uni-unilag-get102-bank-0240",
@@ -2883,7 +3361,9 @@
         "C": "No line is made freehand; each line is drawn using drawing tools.",
         "D": "Only curved lines require instruments; straight lines can be freehand."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 17, under 'A Few Rules', states: 'No line is made freehand. Each and every line is drawn using some kind of drawing tools.'"
     },
     {
       "id": "uni-unilag-get102-bank-0241",
@@ -2895,7 +3375,9 @@
         "C": "By drawing a line parallel to the given line at a distance R from the circle's center.",
         "D": "By simply placing the center O at a distance R from the given line."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 19, step 2, instructs: 'From centre of circle, draw an arc, radius R+r to intersect the parallel line at O.' This combination of R+r is used when the curve wraps around the outside of the existing circle and is tangential to a line."
     },
     {
       "id": "uni-unilag-get102-bank-0242",
@@ -2907,7 +3389,9 @@
         "C": "In the third quadrant",
         "D": "In the fourth quadrant"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The table on page 11, under '1ST ANGLE PROJECTION', states: 'The object is imagined to be in the first quadrant'."
     },
     {
       "id": "uni-unilag-get102-bank-0243",
@@ -2919,7 +3403,9 @@
         "C": "Architecture",
         "D": "Culinary Arts"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 11 lists Manufacturing, Engineering, Architecture, and Construction. Culinary Arts is not listed."
     },
     {
       "id": "uni-unilag-get102-bank-0244",
@@ -2931,7 +3417,9 @@
         "C": "To the right of the Front View",
         "D": "To the left of the Front View"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 11 states for '1ST ANGLE PROJECTION': 'Top View comes below Front View'."
     },
     {
       "id": "uni-unilag-get102-bank-0245",
@@ -2943,7 +3431,9 @@
         "C": "60°",
         "D": "90°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 6, step 3 specifies: 'With the 45° set square, draw two cross lines through centre O...'"
     },
     {
       "id": "uni-unilag-get102-bank-0246",
@@ -2955,7 +3445,9 @@
         "C": "Parabola",
         "D": "Hyperbola"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4 defines Parabola as: 'This is defined as the set of points in plane that are equidistant from a given point, called focus, and a given line, called a directrix.'"
     },
     {
       "id": "uni-unilag-get102-bank-0247",
@@ -2967,7 +3459,9 @@
         "C": "At the directrix (D).",
         "D": "By drawing lines parallel to the directrix."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13, Step 2 of 'PARABOLA- Locus Method' states: 'Locate the vertex by bisecting FD'."
     },
     {
       "id": "uni-unilag-get102-bank-0248",
@@ -2979,7 +3473,9 @@
         "C": "To mark the boundary where the circle will be truncated.",
         "D": "To determine the true diameter of the circle in isometric."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 23 outlines the steps for constructing an isometric circle using the 4-center method. Joining the longest diagonal (BD) is a crucial step ('Join the longest diagonal (BD) through centre.') to set up the construction of the ellipse, as it helps identify the points (R and S) on the diagonal from which arcs will be drawn, defining the major axis of the ellipse."
     },
     {
       "id": "uni-unilag-get102-bank-0249",
@@ -2991,7 +3487,9 @@
         "C": "The symbols MUST be drawn and NOT sketched.",
         "D": "The symbols should be placed at the bottom right corner of every sheet."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12 explicitly states: 'The symbols MUST be drawn and NOT sketched!'"
     },
     {
       "id": "uni-unilag-get102-bank-0250",
@@ -3003,7 +3501,9 @@
         "C": "In the third quadrant",
         "D": "In the fourth quadrant"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to the table on page 11, 'The object is imagined to be in the first quadrant' for 1ST ANGLE PROJECTION."
     },
     {
       "id": "uni-unilag-get102-bank-0251",
@@ -3015,7 +3515,9 @@
         "C": "Perspective drawing",
         "D": "Multi-view drawing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Page 3 states, 'Oblique drawing is simple but least realistic.'"
     },
     {
       "id": "uni-unilag-get102-bank-0252",
@@ -3027,7 +3529,9 @@
         "C": "Spring-bow compass",
         "D": "Proportional compass"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 21 explains: 'The spring bow type of compass is best for pencil drawing and tracing because it retains its setting even when strong pressure is applied to obtain dark lines.' The friction-joint type may slip under strong pressure."
     },
     {
       "id": "uni-unilag-get102-bank-0253",
@@ -3039,7 +3543,9 @@
         "C": "Points 5 and 7",
         "D": "Points 6 and 8"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Steps 2 and 3 on Page 8 state: 'Draw a line through A inclined at 45° using 45° set square to intersect the bisection line at 4' and 'Draw a line through B inclined at 60° using 60° set square to intersect the bisection line at 6'."
     },
     {
       "id": "uni-unilag-get102-bank-0254",
@@ -3051,7 +3557,9 @@
         "C": "Into '2x' parts.",
         "D": "Into 'x/2' parts."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10, Step 3 states: 'Divide half of the span into a number of parts, say x, such that the entire span is divided into 2x parts.'"
     },
     {
       "id": "uni-unilag-get102-bank-0255",
@@ -3063,7 +3571,9 @@
         "C": "Dependent on the position of the point.",
         "D": "Equal to the distance between the two foci."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 specifies: 'Ellipse: This is defined a set of points in a plane whose sum of distances to two fixed point, called foci, is a constant.'"
     },
     {
       "id": "uni-unilag-get102-bank-0256",
@@ -3075,7 +3585,9 @@
         "C": "The approximate parallelogram method.",
         "D": "The radial line method."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 22 states, 'A more convenient and preferred method of drawing isometric curves and circles is the approximate parallelogram method.'"
     },
     {
       "id": "uni-unilag-get102-bank-0257",
@@ -3087,7 +3599,9 @@
         "C": "Locate the foci of the hyperbola",
         "D": "Divide the asymptotes into equal parts"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Step 2 of 'HYPERBOLA: Rectangular Method' (page 16) states: 'Through point P, draw CD and EF parallel to the asymptotes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0258",
@@ -3099,7 +3613,9 @@
         "C": "Parallel to the side (elements) of the cone.",
         "D": "At an angle to the axis that is smaller than the angle between the axis and the sides."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 3 defines Parabola as: 'is the curve created when a plane intersects a right circular cone parallel to the side (elements) of the cone.'"
     },
     {
       "id": "uni-unilag-get102-bank-0259",
@@ -3111,7 +3627,9 @@
         "C": "60°",
         "D": "90°"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 11, step 2 instructs: 'Construct an angle 90° from the point where the radius crosses the circumference.'"
     },
     {
       "id": "uni-unilag-get102-bank-0260",
@@ -3123,7 +3641,9 @@
         "C": "It is assumed to be transparent.",
         "D": "It is always perpendicular to the object."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 11 states for 3RD ANGLE PROJECTION: 'The plane of projection is assumed to be transparent.'"
     },
     {
       "id": "uni-unilag-get102-bank-0261",
@@ -3135,7 +3655,9 @@
         "C": "Third Angle Projection",
         "D": "Fourth Angle Projection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 11 clearly defines that in '3RD ANGLE PROJECTION', 'The object is imagined to be in the third quadrant' and 'The plane of projection is assumed to be transparent'."
     },
     {
       "id": "uni-unilag-get102-bank-0262",
@@ -3147,7 +3669,9 @@
         "C": "Four (A, C, and two points on the longest diagonal)",
         "D": "An infinite number, as it's a smooth curve"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The method described on page 23 involves using points A and C (corners of the isometric square) and points R and S (found on the longest diagonal BD) as centers for drawing the four arcs that constitute the isometric circle, making a total of four centers."
     },
     {
       "id": "uni-unilag-get102-bank-0263",
@@ -3159,7 +3683,9 @@
         "C": "A set of points equidistant from a given point (focus) and a given line (directrix).",
         "D": "A set of points in a plane whose distances from two fixed points (foci) have a constant difference."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 4, under 'Hyperbola', states: 'Hyperbola: This is defined as the set of points in a plane whose distances from two fixed points, called the foci, in the plane have a constant difference.'"
     },
     {
       "id": "uni-unilag-get102-bank-0264",
@@ -3171,7 +3697,9 @@
         "C": "Only when the curve is perfectly symmetrical.",
         "D": "When converting from perspective drawings."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 22 advises, 'However, for small fraction of a circle the ordinate method must be used, since the approximate method deviate from a true ellipse at several points on the curve.'"
     },
     {
       "id": "uni-unilag-get102-bank-0265",
@@ -3183,7 +3711,9 @@
         "C": "The distance between the two foci.",
         "D": "The angle of the cutting plane relative to the axis."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15 defines Eccentricity, e, as: 'the ratio of the distances of a point to the focus and directrix.'"
     },
     {
       "id": "uni-unilag-get102-bank-0266",
@@ -3195,7 +3725,9 @@
         "C": "Is a constant.",
         "D": "Is always zero."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4, under 'Ellipse', states: 'Ellipse: This is defined a set of points in a plane whose sum of distances to two fixed point, called foci, is a constant.'"
     },
     {
       "id": "uni-unilag-get102-bank-0267",
@@ -3207,7 +3739,9 @@
         "C": "Five",
         "D": "Six"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 5 explicitly states: 'There are six principal views for every object.' These are Front, Rear, Right side, Left side, Top, and Bottom."
     },
     {
       "id": "uni-unilag-get102-bank-0268",
@@ -3219,7 +3753,9 @@
         "C": "To produce irregular curved lines that cannot be made with a compass",
         "D": "To create straight lines parallel to an edge"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 23 states: 'French curves and flexible curves are used to produce irregular curved lines that cannot be made with a compass.'"
     },
     {
       "id": "uni-unilag-get102-bank-0269",
@@ -3231,7 +3767,9 @@
         "C": "Only curved lines require drawing tools.",
         "D": "Straight lines can always be drawn without tools."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 17 explicitly states: \"No line is made freehand. Each and every line is drawn using some kind of drawing tools.\""
     },
     {
       "id": "uni-unilag-get102-bank-0270",
@@ -3243,7 +3781,9 @@
         "C": "By bisecting the angles of the polygon.",
         "D": "By using a compass to draw circles from point 5."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 8, step 5 states: 'Step off arcs 4-5 starting from 6 to produce 7, 8, 9, ..., n'."
     },
     {
       "id": "uni-unilag-get102-bank-0271",
@@ -3255,7 +3795,9 @@
         "C": "Distorted view",
         "D": "Complex angles"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7 states: 'Isometric means equal measure.'"
     },
     {
       "id": "uni-unilag-get102-bank-0272",
@@ -3267,7 +3809,9 @@
         "C": "Draw a horizontal line.",
         "D": "Transfer the length of the square to three lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 11 lists, 'Draw a horizontal line' as the first step."
     },
     {
       "id": "uni-unilag-get102-bank-0273",
@@ -3279,7 +3823,9 @@
         "C": "Inversely proportionally to their distances from O.",
         "D": "As the cube of their distances from O."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 11, Step 4 states: 'The offsets vary in length as the square of their distances from O.'"
     },
     {
       "id": "uni-unilag-get102-bank-0274",
@@ -3291,7 +3837,9 @@
         "C": "As irregular, non-geometric shapes.",
         "D": "They are typically simplified into straight lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 22 states, 'Circles and curves on isometric planes appear as an ellipse.'"
     },
     {
       "id": "uni-unilag-get102-bank-0275",
@@ -3303,7 +3851,9 @@
         "C": "Draw a semi-circle.",
         "D": "Bisect the line joining the centers."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13, step 2 for 'To Construct a Common Tangent to Two Equal Circles' specifies: 'From each centre, construct lines at 90° to the centre line.'"
     },
     {
       "id": "uni-unilag-get102-bank-0276",
@@ -3315,7 +3865,9 @@
         "C": "Dimensions must not be repeated on views.",
         "D": "Only critical dimensions need to be shown."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The last bullet point on page 13 clearly states: 'Dimensions must not be repeated on views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0277",
@@ -3327,7 +3879,9 @@
         "C": "They are always drawn vertically.",
         "D": "They become non-isometric lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 9 states: 'Lines that appear horizontal in the orthographic view are drawn at 30° angle in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0278",
@@ -3339,7 +3893,9 @@
         "C": "Only two of the three axes are measured",
         "D": "Measurements are not applied to axis lines"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7 clarifies, 'The three axis lines are measured using the same scale.' This is a key characteristic of isometric drawings."
     },
     {
       "id": "uni-unilag-get102-bank-0279",
@@ -3351,7 +3907,9 @@
         "C": "Below the Front View",
         "D": "Above the Front View"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 11 indicates that for 3RD ANGLE PROJECTION, 'Right Side View are drawn to the right side of the elevation'."
     },
     {
       "id": "uni-unilag-get102-bank-0280",
@@ -3363,7 +3921,9 @@
         "C": "Artistic drawing always includes dimensions, while Engineering Drawing focuses on aesthetic appeal.",
         "D": "Artistic drawing is used for design processes, while Engineering Drawing is for personal expression."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 7 states Artistic drawing expresses feelings, beliefs, philosophies, or abstract ideas, making it difficult for a layperson to understand. Page 8 states Engineering Drawing is not abstract, requires technical understanding, and communicates necessary information for reality, including dimensions, notes, and specifications."
     },
     {
       "id": "uni-unilag-get102-bank-0281",
@@ -3375,7 +3935,9 @@
         "C": "By drawing a line parallel to the directrix through the focus.",
         "D": "By measuring a specific distance from the focus."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 13, Step 2 states: 'Locate the vertex by bisecting FD' (where F is focus and D is directrix)."
     },
     {
       "id": "uni-unilag-get102-bank-0282",
@@ -3387,7 +3949,9 @@
         "C": "Draw a circle of diameter equal to the given distance.",
         "D": "Join the tangents to produce the hexagon."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 4, step 1 states: 'Draw a circle of diameter equal to the given distance.'"
     },
     {
       "id": "uni-unilag-get102-bank-0283",
@@ -3399,7 +3963,9 @@
         "C": "The respective projections (First or Third Angle) they represent.",
         "D": "The date the drawing was created."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 12 states: 'The symbols show the two views of a truncated cone drawn in the respective projections they represent.'"
     },
     {
       "id": "uni-unilag-get102-bank-0284",
@@ -3411,7 +3977,9 @@
         "C": "To the right of the Front View",
         "D": "To the left of the Front View"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 11 specifies for 1ST ANGLE PROJECTION: 'When views are drawn in their relative position, Top View comes below Front View'."
     },
     {
       "id": "uni-unilag-get102-bank-0285",
@@ -3423,7 +3991,9 @@
         "C": "Placing an object on a rotating platform and taking pictures from different angles.",
         "D": "Creating a 3D wireframe model of the object on a computer."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 5 states: 'The orthographic projection can be thought of as suspending an object inside a hinged box and projecting the points to the planes which make up the box before unfolding the box.'"
     },
     {
       "id": "uni-unilag-get102-bank-0286",
@@ -3435,7 +4005,9 @@
         "C": "Only 2D sketches",
         "D": "Technical blueprints"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 2 states: 'Pictorial means picture' and 'It refers to any realistic form of drawing'."
     },
     {
       "id": "uni-unilag-get102-bank-0287",
@@ -3447,7 +4019,9 @@
         "C": "A line segment connecting two points on a curve.",
         "D": "A line that passes through the center of a circle."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 10, the first bullet point defines it: 'A tangent to a curve is a straight line that touches the circle at only one point.'"
     },
     {
       "id": "uni-unilag-get102-bank-0288",
@@ -3459,7 +4033,9 @@
         "C": "R65 and R40",
         "D": "R12 and R65"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Figure 1 on page 25 clearly labels the large outer curve as R50 and the inner curve forming the 'eye' as R20."
     },
     {
       "id": "uni-unilag-get102-bank-0289",
@@ -3471,7 +4047,9 @@
         "C": "To transfer measurements.",
         "D": "To create irregular curves."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 24 states: 'A protractor is used to measure and lay out angles.'"
     },
     {
       "id": "uni-unilag-get102-bank-0290",
@@ -3483,7 +4061,9 @@
         "C": "They are never shown in oblique drawings.",
         "D": "As squares, for simplicity."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 4 mentions: 'Circles are true circles and drawn with compass or circle template.'"
     },
     {
       "id": "uni-unilag-get102-bank-0291",
@@ -3495,7 +4075,9 @@
         "C": "By thin, short dashes",
         "D": "By dotted lines of varying thickness"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 13 specifies, 'Hidden details are represented by thin short dashes.'"
     },
     {
       "id": "uni-unilag-get102-bank-0292",
@@ -3507,7 +4089,9 @@
         "C": "By drawing a perpendicular line from the directrix",
         "D": "By calculating its position using eccentricity"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Step 2 of the 'PARABOLA- Locus Method' (page 13) specifies: 'Locate the vertex by bisecting FD'."
     },
     {
       "id": "uni-unilag-get102-bank-0293",
@@ -3519,7 +4103,9 @@
         "C": "Parallel",
         "D": "Coinciding"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 lists principles for front view orientation, including: 'The front view should show a large surface of the part parallel to the viewing plane.'"
     },
     {
       "id": "uni-unilag-get102-bank-0294",
@@ -3531,7 +4117,9 @@
         "C": "They are drawn at a 30° angle.",
         "D": "They are always omitted."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 9 states, 'Lines that appear horizontal in the orthographic view are drawn at 30° angle in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0295",
@@ -3543,7 +4131,9 @@
         "C": "Analysis",
         "D": "Entertainment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Page 6 lists \"Communication,\" \"Record keeping,\" and \"Analysis\" as the three historical roles. Entertainment is not mentioned."
     },
     {
       "id": "uni-unilag-get102-bank-0296",
@@ -3555,7 +4145,9 @@
         "C": "R * r",
         "D": "R / r"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Page 16, step 4, states: 'Draw a circle centre O with radius (R+r) to cut semi-circle at B.' This sum of radii is used for the construction of a cross tangent between unequal circles."
     },
     {
       "id": "uni-unilag-get102-bank-0297",
@@ -3567,7 +4159,9 @@
         "C": "Draw a semi-circle with radius OB and centre B.",
         "D": "Join C-D."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 14, step 3 for 'To Construct a Common Cross Tangent to Two Equal Circles' states: 'Bisect OA to give B.'"
     },
     {
       "id": "uni-unilag-get102-bank-0298",
@@ -3579,7 +4173,9 @@
         "C": "They are drawn at a 90° angle to the horizontal.",
         "D": "They are converted into non-isometric lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "According to page 9, 'While lines that appear vertical in orthographic views remain vertical lines in isometric views.'"
     },
     {
       "id": "uni-unilag-get102-bank-0299",
@@ -3591,7 +4187,9 @@
         "C": "The tangent is perpendicular to the radius.",
         "D": "They intersect at an acute angle."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10, the second bullet point states: 'A tangent is perpendicular to the radius of a circle drawn at the point where the tangent meets the circle.'"
     },
     {
       "id": "uni-unilag-get102-bank-0300",
@@ -3603,7 +4201,9 @@
         "C": "Into '2x' parts.",
         "D": "Into 'x/2' parts."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 10, 'STEPS 3' of the Parabola - Rectangle Method states: 'Divide half of the span into a number of parts, say x, such that the entire span is divided into 2x parts.'"
     },
     {
       "id": "uni-unilag-get102-bank-0301",
@@ -3615,7 +4215,9 @@
         "C": "e > 1",
         "D": "e = 0"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 15, in the Eccentricity definition, states: '(For hyperbola, e>1; for parabola, e=1; for ellipse, e<1)'."
     },
     {
       "id": "uni-unilag-get102-bank-0302",
@@ -3627,7 +4229,9 @@
         "C": "A usual, stable, or operating position",
         "D": "A position that hides complex features"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 7 advises: 'The front view should show the object in a usual, stable, or operating position, particularly for familiar objects.'"
     },
     {
       "id": "uni-unilag-get102-bank-0303",
@@ -3639,7 +4243,9 @@
         "C": "The type of material the object is made from.",
         "D": "The imaginary lines of sight called projectors."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Page 14 lists the four components: the actual object, the eye of the viewer, the imaginary projection plane, and the imaginary lines of sight. The material of the object is not listed as a component of the projection itself."
     },
     {
       "id": "uni-unilag-get102-bank-0304",
@@ -3651,7 +4257,9 @@
         "C": "By rotating a scalene triangle about its hypotenuse as the axis.",
         "D": "By stacking multiple circular disks of decreasing radii."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 2 states: 'Cone is formed when a right angled triangle with an apex and angled θ is rotated about its altitude as the axis.'"
     },
     {
       "id": "uni-unilag-get102-bank-0305",
@@ -3663,7 +4271,9 @@
         "C": "By drawing lines parallel to the perpendicular lines at a distance R.",
         "D": "By constructing a 90° angle at the intersection of the two lines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Page 17, step 2, states: 'With centres B and C, radius R, draw arcs to intersect at O.' Points B and C are found by drawing arcs of radius R from the intersection point A."
     }
   ],
   "category": "university",

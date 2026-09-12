@@ -15,7 +15,9 @@
         "C": "Quality of deliverables",
         "D": "Feasibility"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Deliverables that do not satisfy specs reflect poor quality[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0002",
@@ -27,7 +29,9 @@
         "C": "ES - LS",
         "D": "CL - TL"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Total float is defined as Latest Start minus Earliest Start ($LS - ES$) or Latest Finish minus Earliest Finish ($LF - EF$)[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0003",
@@ -39,7 +43,9 @@
         "C": "Scope, Time, Cost",
         "D": "Resources, Risk, Quality"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Iron Triangle (triple constraints) consists of Scope, Time, and Cost[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0004",
@@ -51,7 +57,9 @@
         "C": "Increase budgets",
         "D": "Gather data"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Increasing budgets is a financial administration task, not a step in evaluating a project[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0005",
@@ -63,7 +71,9 @@
         "C": "Office temperature",
         "D": "Equipment warranties"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Stakeholder analysis determines key parties, their interests, and their degree of influence[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0006",
@@ -75,7 +85,9 @@
         "C": "To foster collaboration and trust",
         "D": "To shorten the project duration"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Team-building builds personal rapport, improves communication, and develops trust[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0007",
@@ -87,7 +99,9 @@
         "C": "Office party plans",
         "D": "Equipment purchase dates"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The communication plan defines who receives project status updates, how often, and through which channels[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0008",
@@ -99,7 +113,9 @@
         "C": "Insufficient resources",
         "D": "Detailed planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Lack of required financial, human, or technical resources will cause a project to fail feasibility[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0009",
@@ -111,7 +127,9 @@
         "C": "Using multiple methods",
         "D": "Ignoring negative feedback"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Ignoring feedback limits institutional learning and leads to repeating previous mistakes[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0010",
@@ -123,7 +141,9 @@
         "C": "The team achieves peak performance",
         "D": "The team disbands"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Storming is characterized by interpersonal friction, role confusion, and power struggles[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0011",
@@ -135,7 +155,9 @@
         "C": "Cost effectiveness",
         "D": "Quality of deliverables"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Schedule performance checks adherence to project time lines and deadlines[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0012",
@@ -147,7 +169,9 @@
         "C": "Feasibility study",
         "D": "Team roster"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When scope changes are formally approved, the scope baseline is updated[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0013",
@@ -159,7 +183,9 @@
         "C": "Office parties",
         "D": "Equipment warranties"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Risk management consists of identifying potential risks, analyzing impacts, and developing mitigation plans[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0014",
@@ -171,7 +197,9 @@
         "C": "Execution",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Detailed sub-plans for schedule, cost, quality, and risk are built in the planning phase[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0015",
@@ -183,7 +211,9 @@
         "C": "Finalizing documentation",
         "D": "Measuring performance"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Execution includes performing the actual work, such as coding software or physical development[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0016",
@@ -195,7 +225,9 @@
         "C": "Diverse insights",
         "D": "Time waste"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Collaborating with varied stakeholders brings diverse ideas and technical insights[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0017",
@@ -207,7 +239,9 @@
         "C": "Concentrating on results",
         "D": "Developing connection with stakeholders"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Avoiding stakeholders directly contradicts the core evaluation principle of active engagement[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0018",
@@ -219,7 +253,9 @@
         "C": "Decorate offices",
         "D": "Select equipment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Baseline data serves as an initial reference point to measure subsequent performance[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0019",
@@ -231,7 +267,9 @@
         "C": "To design the user interface",
         "D": "To conduct quality testing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The project charter officially starts the project and gives authority to the project manager[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0020",
@@ -243,7 +281,9 @@
         "C": "Planning",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Monitoring and controlling happens alongside execution to ensure the project stays on track[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0021",
@@ -255,7 +295,9 @@
         "C": "Because execution happens simultaneously",
         "D": "Because it's the shortest phase"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Planning is progressive and iterative, adapting as clearer information becomes available[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0022",
@@ -267,7 +309,9 @@
         "C": "Office snacks",
         "D": "Equipment manuals"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Stakeholder management centers on effective engagement and communication with key parties[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0023",
@@ -279,7 +323,9 @@
         "C": "Assigning team roles",
         "D": "Conducting a feasibility study"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Handing over deliverables to the sponsor or customer is a key closeout activity[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0024",
@@ -291,7 +337,9 @@
         "C": "Office paint colors",
         "D": "Equipment brands"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A project charter formally authorizes a project and outlines high-level objectives and authority[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0025",
@@ -303,7 +351,9 @@
         "C": "Execution",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Quality control and assurance check deliverables against quality standards during monitoring and controlling[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0026",
@@ -315,7 +365,9 @@
         "C": "Only marketing",
         "D": "Only HR tasks"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The PM leads the project team and takes responsibility for delivering results[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0027",
@@ -327,7 +379,9 @@
         "C": "Planning provides the roadmap for execution",
         "D": "They are the same phase"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The planning phase produces the baseline roadmap that guides execution[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0028",
@@ -339,7 +393,9 @@
         "C": "Independent Float",
         "D": "Available Float"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Free float is the time an activity can be delayed without delaying the early start of any successor[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0029",
@@ -351,7 +407,9 @@
         "C": "Market research",
         "D": "Sales forecast"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A projected income statement is a financial document output rather than a procedural stage of conducting a feasibility study."
     },
     {
       "id": "uni-unilag-ams104-bank-0030",
@@ -363,7 +421,9 @@
         "C": "Ignoring risk",
         "D": "Staff motivation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Implementation translates evaluation findings and recommendations into strategy execution[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0031",
@@ -375,7 +435,9 @@
         "C": "Gathering diverse perspectives",
         "D": "Speeding up evaluations"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Engaging stakeholders provides broader insights, varied opinions, and stronger project ownership[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0032",
@@ -387,7 +449,9 @@
         "C": "Office layouts",
         "D": "Equipment brands"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SWOT evaluates internal Strengths and Weaknesses along with external Opportunities and Threats[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0033",
@@ -399,7 +463,9 @@
         "C": "Communication, Leadership, Tools",
         "D": "Team, Stakeholders, Budget"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Iron Triangle parameters are Scope, Cost, and Time[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0034",
@@ -411,7 +477,9 @@
         "C": "Execution",
         "D": "Monitoring and Controlling"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The WBS is defined during planning to decompose project scope into smaller work items[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0035",
@@ -423,7 +491,9 @@
         "C": "To define the project scope",
         "D": "To finalize the budget report"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Feasibility studies analyze whether a project is viable, achievable, and practical[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0036",
@@ -435,7 +505,9 @@
         "C": "To identify new project risks",
         "D": "To create the project budget"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The closing phase ensures all work is completed, contracts are settled, and formal sign-off is granted[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0037",
@@ -447,7 +519,9 @@
         "C": "Office furniture costs",
         "D": "Equipment colors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Cost-benefit analysis weighs financial costs against anticipated gains to check viability[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0038",
@@ -459,7 +533,9 @@
         "C": "Equipment vendors",
         "D": "Competitors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Internal evaluations are handled by existing project staff or internal personnel[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0039",
@@ -471,7 +547,9 @@
         "C": "Offices are decorated",
         "D": "Equipment is colorful"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This phase checks project progress and ensures alignment with goals[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0040",
@@ -483,7 +561,9 @@
         "C": "Office supply lists",
         "D": "Equipment catalogs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A closure report records final outcomes, performance metrics, and official sign-offs[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0041",
@@ -495,7 +575,9 @@
         "C": "Quality automatically improves",
         "D": "Risk is eliminated"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Because constraints are interrelated, changing one inevitably impacts at least one other element[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0042",
@@ -507,7 +589,9 @@
         "C": "Avoiding all financial documentation",
         "D": "Delaying payments to vendors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Thorough cost estimation and continuous financial tracking help keep projects within budget[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0043",
@@ -519,7 +603,9 @@
         "C": "(3) & (4)",
         "D": "(1), (2) & (3)"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Network path criteria require defined start/end points and continuous dependency connections throughout[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0044",
@@ -531,7 +617,9 @@
         "C": "Scope",
         "D": "All three equally"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Adding deliverables or features directly expands project scope[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0045",
@@ -543,7 +631,9 @@
         "C": "SCBA",
         "D": "Reporting"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Risk assessment analyzes potential problems and plans steps to mitigate threats[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0046",
@@ -555,7 +645,9 @@
         "C": "Eliminating all stakeholders",
         "D": "Skipping documentation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Phase transitions (phase gates) require explicit formal sign-off before moving to the next stage[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0047",
@@ -567,7 +659,9 @@
         "C": "Performance",
         "D": "Project delay"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Learning from structured evaluation results leads directly to increased overall performance[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0048",
@@ -579,7 +673,9 @@
         "C": "Analyzing cost-benefit to determine profitability",
         "D": "Measuring team efficiency"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Economic feasibility assesses financial viability by weighing projected costs against monetary benefits[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0049",
@@ -591,7 +687,9 @@
         "C": "Office layout",
         "D": "Equipment brands"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Summative evaluation takes place at the end to summarize overall results and long-term impacts[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0050",
@@ -603,7 +701,9 @@
         "C": "Elimination of all risks",
         "D": "No need for communication"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The life cycle provides a clear, structured framework to guide project work from start to finish[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0051",
@@ -615,7 +715,9 @@
         "C": "It outputs through the process of implementation",
         "D": "Project management requires additional management"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Projects serve various entities including private corporations and non-profits, not exclusively the government[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0052",
@@ -627,7 +729,9 @@
         "C": "Only buying equipment",
         "D": "Only decorating offices"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Project management covers planning, execution, monitoring, and closing throughout the project lifecycle[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0053",
@@ -639,7 +743,9 @@
         "C": "Average income / Average rate of return",
         "D": "Average income / Average investment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Accounting Rate of Return (ARR) measures profitability from an accounting standpoint and is calculated as Average Income divided by Average Investment."
     },
     {
       "id": "uni-unilag-ams104-bank-0054",
@@ -651,7 +757,9 @@
         "C": "Risk strategy",
         "D": "Cost-benefit valuation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The resource utilization criterion specifically examines how well inputs were managed[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0055",
@@ -663,7 +771,9 @@
         "C": "To disband the team",
         "D": "To define project scope"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Monitoring and controlling compares actual performance to plan and implements corrective actions[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0056",
@@ -675,7 +785,9 @@
         "C": "Ignoring quality standards",
         "D": "Eliminating stakeholder communication"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "To compress time, you must either add resources (higher cost) or cut deliverable features (reduced scope)[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0057",
@@ -687,7 +799,9 @@
         "C": "Closure",
         "D": "Planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Most time, money, and people are used during execution to perform the work[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0058",
@@ -699,7 +813,9 @@
         "C": "Execution",
         "D": "Planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Lessons learned are captured at the end of the project during the closing phase[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0059",
@@ -711,7 +827,9 @@
         "C": "Random task assignments",
         "D": "Avoiding feedback"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hackman's model highlights a clear, compelling direction as an essential condition for effectiveness[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0060",
@@ -723,7 +841,9 @@
         "C": "Project charter",
         "D": "Lessons learned"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Gantt charts are standard visual tools used to plan timelines and schedule dependent tasks[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0061",
@@ -735,7 +855,9 @@
         "C": "If stakeholders approve the budget",
         "D": "The environmental impact of the project"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Technical feasibility evaluates software, hardware, infrastructure, and technical expertise availability[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0062",
@@ -747,7 +869,9 @@
         "C": "Schedule of investment",
         "D": "Expected profit"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Analyzing resource consumption across competing projects is a central attribute of portfolio management[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0063",
@@ -759,7 +883,9 @@
         "C": "Distort evaluation",
         "D": "Save time"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Relying exclusively on one technique can distort evaluation results and create bias[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0064",
@@ -771,7 +897,9 @@
         "C": "Monitor Evaluator",
         "D": "Controller"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Monitor Evaluator is one of Belbin’s official nine team roles[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0065",
@@ -783,7 +911,9 @@
         "C": "Employee satisfaction",
         "D": "Legal regulations"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Financial feasibility evaluates capital requirements, expected cash flow, and return on investment[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0066",
@@ -795,7 +925,9 @@
         "C": "Creating the business case",
         "D": "Celebrating project completion"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Comparing actual performance metrics against baseline plans highlights variances for corrective action[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0067",
@@ -807,7 +939,9 @@
         "C": "To create the project schedule",
         "D": "To replace the project charter"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A feasibility study evaluates whether a proposed project is practically and financially viable[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0068",
@@ -819,7 +953,9 @@
         "C": "Ignoring stakeholders",
         "D": "Skipping meetings"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Proactive risk planning helps anticipate events that could delay the project schedule[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0069",
@@ -831,7 +967,9 @@
         "C": "Implement improvements",
         "D": "Avoid change"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The ultimate goal of reporting evaluation findings is to implement necessary changes and improvements[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0070",
@@ -843,7 +981,9 @@
         "C": "Finalizing deliverables",
         "D": "Defining tasks"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Scope creep happens when new features or work are added without adjusting time or budget[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0071",
@@ -855,7 +995,9 @@
         "C": "Avoiding stakeholders",
         "D": "Canceling implementation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "After evaluation and analysis, actionable recommendations are generated for future action[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0072",
@@ -867,7 +1009,9 @@
         "C": "Execution",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Post-implementation reviews take place as part of the formal closing phase[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0073",
@@ -879,7 +1023,9 @@
         "C": "Cost",
         "D": "Quality"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The time constraint governs schedules, activity durations, and project deadlines[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0074",
@@ -891,7 +1037,9 @@
         "C": "Using a single method",
         "D": "Engaging stakeholders"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Relying on only one method restricts perspective and can miss critical information[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0075",
@@ -903,7 +1051,9 @@
         "C": "Monitoring",
         "D": "Closure"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The project charter authorizes the project and is written in the initiation phase[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0076",
@@ -915,7 +1065,9 @@
         "C": "Office locations",
         "D": "Equipment delivery routes"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CPM pinpoints the longest sequence of dependent activities that dictates total project length[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0077",
@@ -927,7 +1079,9 @@
         "C": "Throughout the project life cycle",
         "D": "Never"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Stakeholder dynamics change over time, requiring continuous analysis throughout the project[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0078",
@@ -939,7 +1093,9 @@
         "C": "To skip the execution phase",
         "D": "To replace the project charter"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A risk management plan anticipates uncertainties and establishes strategies to mitigate threats[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0079",
@@ -951,7 +1107,9 @@
         "C": "Team vacations",
         "D": "Random selection"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A business requirement, problem, or market opportunity initiates a project[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0080",
@@ -963,7 +1121,9 @@
         "C": "Office temperatures",
         "D": "Equipment colors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A risk register logs recognized risks, risk severity, and corresponding mitigation actions[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0081",
@@ -975,7 +1135,9 @@
         "C": "Prioritize and assign resources to the right projects",
         "D": "Determine the optimal mix and sequencing of proposed projects to achieve overall goals"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Project Portfolio Management aims to determine the optimal mix and sequence of projects to maximize organizational goals[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0082",
@@ -987,7 +1149,9 @@
         "C": "Scope and Cost",
         "D": "Time and Risk"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Shortening the timeline usually requires spending more money (crashing) or reducing deliverables (scope)[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0083",
@@ -999,7 +1163,9 @@
         "C": "Risk assessment",
         "D": "Stakeholder collaboration"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Resource checks ensure that necessary materials, inputs, and personnel are available[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0084",
@@ -1011,7 +1177,9 @@
         "C": "Office supply lists",
         "D": "Equipment catalogs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "KPIs are quantifiable measures used to track and evaluate performance success[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0085",
@@ -1023,7 +1191,9 @@
         "C": "Marketing consideration",
         "D": "Cost consideration"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Organizational context (culture, authority lines, environment) dictates the selection of project structure (e.g., matrix, functional)[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0086",
@@ -1035,7 +1205,9 @@
         "C": "Unplanned",
         "D": "Budget-less"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Waterfall follows a sequential, phase-by-phase linear lifecycle structure[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0087",
@@ -1047,7 +1219,9 @@
         "C": "Office budgets",
         "D": "Equipment lists"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A WBS decomposes major deliverables into smaller, manageable work components[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0088",
@@ -1059,7 +1233,9 @@
         "C": "Closure",
         "D": "Execution"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Risks are identified, analyzed, and mitigation strategies are created during planning[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0089",
@@ -1071,7 +1247,9 @@
         "C": "10 Years",
         "D": "7 Years"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Payback Period = Initial Investment / Annual Cash Inflow = 500,000 / 50,000 = 10 years."
     },
     {
       "id": "uni-unilag-ams104-bank-0090",
@@ -1083,7 +1261,9 @@
         "C": "To eliminate all differences",
         "D": "To replace project work"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Team building strengthens interpersonal relationships, enhances trust, and improves communication[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0091",
@@ -1095,7 +1275,9 @@
         "C": "Mutual accountability",
         "D": "Complementary skills"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "High-performing teams require strong, open communication rather than poor communication[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0092",
@@ -1107,7 +1289,9 @@
         "C": "Eliminating stakeholders",
         "D": "Skipping the planning phase"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A formal change control process ensures proposed changes are thoroughly evaluated before approval[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0093",
@@ -1119,7 +1303,9 @@
         "C": "Punishing mistakes",
         "D": "Avoiding new challenges"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Encouraging psychological safety, continuous learning, and flexiblity helps teams adapt[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0094",
@@ -1131,7 +1317,9 @@
         "C": "Making informed decisions",
         "D": "Stakeholder exclusion"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluations provide evidence-based insights for making informed decisions[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0095",
@@ -1143,7 +1331,9 @@
         "C": "It aligns with organisational policy",
         "D": "It uses profit after tax"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "ARR evaluates overall profitability by accounting for income/profit after tax throughout the project's entire lifespan, unlike payback which only focuses on liquidity and cash recovery time."
     },
     {
       "id": "uni-unilag-ams104-bank-0096",
@@ -1155,7 +1345,9 @@
         "C": "It aids in guiding team dynamics and productivity",
         "D": "It eliminates the need for communication"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Knowing team development models enables managers to resolve friction and support team productivity[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0097",
@@ -1167,7 +1359,9 @@
         "C": "Reliability of findings",
         "D": "Branding"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Inconsistent collection methods compromise data quality and lower the reliability of findings[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0098",
@@ -1179,7 +1373,9 @@
         "C": "Project charter",
         "D": "Risk register"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The project charter gives authority to proceed with the project[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0099",
@@ -1191,7 +1387,9 @@
         "C": "It reduces costs",
         "D": "It shortens timelines"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Scope creep causes unapproved expansion of deliverables, threatening budget and schedule[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0100",
@@ -1203,7 +1401,9 @@
         "C": "Drafting the feasibility study",
         "D": "Celebrating project completion"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Measuring performance metrics allows project teams to monitor budget variance and schedule progress[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0101",
@@ -1215,7 +1415,9 @@
         "C": "Elimating all meetings",
         "D": "Micromanaging tasks"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Setting ground rules and formal conflict-resolution workflows guides teams past storming[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0102",
@@ -1227,7 +1429,9 @@
         "C": "Work Balance Structure",
         "D": "Work Balance Decision"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "WBS stands for Work Breakdown Structure, which is a key deliverable-oriented breakdown of a project into smaller components."
     },
     {
       "id": "uni-unilag-ams104-bank-0103",
@@ -1239,7 +1443,9 @@
         "C": "Resource shortages",
         "D": "Poor communication"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Having a clear, well-defined scope prevents delays rather than causing them[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0104",
@@ -1251,7 +1457,9 @@
         "C": "Monitoring",
         "D": "Closure"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Stakeholder sign-off is needed to start the project formally[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0105",
@@ -1263,7 +1471,9 @@
         "C": "Office assistants",
         "D": "Equipment suppliers"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "External evaluation utilizes outside, independent third parties for objectivity[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0106",
@@ -1275,7 +1485,9 @@
         "C": "External vendors",
         "D": "Competitors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Project sponsors or key decision-making stakeholders sign off on and approve the charter[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0107",
@@ -1287,7 +1499,9 @@
         "C": "Eliminates the need for stakeholders",
         "D": "Allows unlimited budget changes"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The life cycle offers a organized structure for project oversight[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0108",
@@ -1299,7 +1513,9 @@
         "C": "End users",
         "D": "Competitors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Feasibility studies are best performed by an independent or objective team to ensure unbiased analysis[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0109",
@@ -1311,7 +1527,9 @@
         "C": "Eliminating quality checks",
         "D": "Ignoring stakeholder input"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A formal change control process evaluates trade-off impacts on time, scope, and budget[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0110",
@@ -1323,7 +1541,9 @@
         "C": "To eliminate all project risks",
         "D": "To replace the need for planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Lessons learned provide valuable organizational knowledge to improve performance in future projects[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0111",
@@ -1335,7 +1555,9 @@
         "C": "Schedule delays",
         "D": "Improved quality"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Poor planning causes unexpected obstacles, bottlenecks, and timeline delays[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0112",
@@ -1347,7 +1569,9 @@
         "C": "Office aesthetics",
         "D": "Equipment brands"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Benchmarking measures outcomes against external industry standards or past benchmarks[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0113",
@@ -1359,7 +1583,9 @@
         "C": "Stakeholder engagement",
         "D": "Budget cuts"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Active stakeholder engagement builds trust, alignment, and commitment[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0114",
@@ -1371,7 +1597,9 @@
         "C": "Maslow’s Hierarchy",
         "D": "Herzberg’s Theory"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tuckman's model outlines the stage sequence of team growth[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0115",
@@ -1383,7 +1611,9 @@
         "C": "Initiation",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Feasibility studies are carried out early in the initiation phase to validate project viability[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0116",
@@ -1395,7 +1625,9 @@
         "C": "Assess project performance",
         "D": "Develop an evaluation plan"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Evaluation starts with clearly stating its goals so every other step is focused and purposeful[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0117",
@@ -1407,7 +1639,9 @@
         "C": "Blame team members",
         "D": "Cancel the project"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Advance purchasing and supply chain planning mitigate lead-time material delays[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0118",
@@ -1419,7 +1653,9 @@
         "C": "Final deliverables",
         "D": "Quality metrics"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A feasibility study produces a formal recommendation leading to a Go or No-Go decision[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0119",
@@ -1431,7 +1667,9 @@
         "C": "It guarantees project success",
         "D": "It replaces the need for planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It helps managers analyze the consequences and make trade-offs when project variables change[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0120",
@@ -1443,7 +1681,9 @@
         "C": "Post-implementation review",
         "D": "Employee training"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Employee training is an implementation or HR activity, not a phase in evaluation[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0121",
@@ -1455,7 +1695,9 @@
         "C": "Renewal",
         "D": "Implementation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Trust Building is Stage 2 of the Drexler-Sibbet model, establishing mutual respect and relationships[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0122",
@@ -1467,7 +1709,9 @@
         "C": "Guarantee all projects succeed",
         "D": "Monitor portfolio performance"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "While Project Portfolio Management (PPM) improves strategic alignment and resource allocation, it cannot completely guarantee the success of every project."
     },
     {
       "id": "uni-unilag-ams104-bank-0123",
@@ -1479,7 +1723,9 @@
         "C": "Quality depends on balancing scope, cost, and time",
         "D": "Quality replaces scope in the iron triangle"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Quality sits in the center of the triangle and depends on properly balancing scope, cost, and time[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0124",
@@ -1491,7 +1737,9 @@
         "C": "Demand projections",
         "D": "Market penetration"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Market penetration is a marketing strategy concept, whereas project background, demand studies, and demand projections are core components of a Techno-Economic Feasibility Study."
     },
     {
       "id": "uni-unilag-ams104-bank-0125",
@@ -1503,7 +1751,9 @@
         "C": "Meeting standards and specifications",
         "D": "Profit margin"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Quality of deliverables assesses if outputs meet predefined criteria and standards[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0126",
@@ -1515,7 +1765,9 @@
         "C": "Ignoring client feedback",
         "D": "Starting a new project without review"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Capturing lessons learned is a standard closeout activity[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0127",
@@ -1527,7 +1779,9 @@
         "C": "Office renovations",
         "D": "Equipment failures"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Crashing compresses schedule duration by adding extra resources, which increases total cost[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0128",
@@ -1539,7 +1793,9 @@
         "C": "Blind consensus",
         "D": "Silent disengagement"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Interpersonal disagreements and power struggles over authority define the Storming phase[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0129",
@@ -1551,7 +1807,9 @@
         "C": "Project deadlines",
         "D": "Budget"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CCBA relies strictly on market price valuations, while SCBA uses shadow pricing and broader metrics[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0130",
@@ -1563,7 +1821,9 @@
         "C": "Office gossip",
         "D": "Equipment serial numbers"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Evaluation reports document key findings, recommendations, and next action steps[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0131",
@@ -1575,7 +1835,9 @@
         "C": "Lack of skilled workers",
         "D": "Law and order problem"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Law and order problems are external political/environmental constraints, whereas incompetency, skill gaps, and technological bottlenecks are internal constraints[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0132",
@@ -1587,7 +1849,9 @@
         "C": "To replace the project manager",
         "D": "To eliminate all risks"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Project sponsors champion the project, secure executive buy-in, and provide financial resources and support[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0133",
@@ -1599,7 +1863,9 @@
         "C": "Hackman's Model",
         "D": "Belbin's Model"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Patrick Lencioni's model addresses the Five Dysfunctions of a Team[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0134",
@@ -1611,7 +1877,9 @@
         "C": "Cost forecast",
         "D": "CCBA"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Social Cost-Benefit Analysis (SCBA) weighs non-market social impacts and expenditures[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0135",
@@ -1623,7 +1891,9 @@
         "C": "Hand over deliverables",
         "D": "Monitor quality"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Planning involves setting up the scope, schedule, and resources through detailed project plans[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0136",
@@ -1635,7 +1905,9 @@
         "C": "Benefit of evaluation",
         "D": "Financial error"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluation helps optimize and ensure efficient allocation of resources[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0137",
@@ -1647,7 +1919,9 @@
         "C": "Eliminating all team meetings",
         "D": "Skipping the planning phase"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When time is constrained, managers can re-balance by reducing scope or increasing budget[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0138",
@@ -1659,7 +1933,9 @@
         "C": "Developing market plan",
         "D": "Creating a detailed market plan"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The primary benefit of a feasibility study is to discover critical risks, identify potential obstacles, and confirm overall project viability before major capital is committed."
     },
     {
       "id": "uni-unilag-ams104-bank-0139",
@@ -1671,7 +1947,9 @@
         "C": "Risk",
         "D": "SCBA"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "SCBA measures environmental externalities like pollution[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0140",
@@ -1683,7 +1961,9 @@
         "C": "Norming",
         "D": "Adjourning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cohesion and mutual trust develop as rules and norms are set in the Norming stage[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0141",
@@ -1695,7 +1975,9 @@
         "C": "Assess project performance",
         "D": "Define goals"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "After data analysis is complete, the evaluation proceeds to assessing project performance[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0142",
@@ -1707,7 +1989,9 @@
         "C": "Drexler-Sibbet Model",
         "D": "Belbin's Model"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Bruce Tuckman established the classic 4-stage model of team development[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0143",
@@ -1719,7 +2003,9 @@
         "C": "Risk mitigation strategies",
         "D": "Team performance evaluations"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Team performance evaluations take place during project execution or post-project reviews[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0144",
@@ -1731,7 +2017,9 @@
         "C": "Purchasing all equipment",
         "D": "Launching the final product"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Planning includes breaking down tasks (WBS), estimating time, and setting schedules[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0145",
@@ -1743,7 +2031,9 @@
         "C": "Writing the project charter",
         "D": "Identifying new projects"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Quality control verifies that specific deliverable outputs meet defined technical specifications[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0146",
@@ -1755,7 +2045,9 @@
         "C": "Learning and growth",
         "D": "Data loss"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluation supports continuous organizational learning and procedural growth[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0147",
@@ -1767,7 +2059,9 @@
         "C": "Time",
         "D": "Team morale"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The Iron Triangle parameters consist only of scope, cost, and time[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0148",
@@ -1779,7 +2073,9 @@
         "C": "1.57",
         "D": "2.45"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The sum of activity variances along the path ($2.01 + 0.44 = 2.45$) determines total network variance[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0149",
@@ -1791,7 +2087,9 @@
         "C": "Lease office space",
         "D": "Buy equipment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A feasibility study evaluates practical, technical, and financial viability prior to starting a project[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0150",
@@ -1803,7 +2101,9 @@
         "C": "Facilitating organizational learning",
         "D": "Avoiding accountability"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluation helps organizations learn from past performance to improve future projects[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0151",
@@ -1815,7 +2115,9 @@
         "C": "Buying more resources",
         "D": "Expanding the project scope"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The final phase includes handing over results, analyzing outcomes, and closing contracts[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0152",
@@ -1827,7 +2129,9 @@
         "C": "Identify strengths and weaknesses",
         "D": "Disband team"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Once performance is assessed, evaluators identify specific strengths and weaknesses[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0153",
@@ -1839,7 +2143,9 @@
         "C": "Team",
         "D": "Ignoring risks"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The detailed project management plan is the comprehensive output of planning[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0154",
@@ -1851,7 +2157,9 @@
         "C": "Pre-project evaluation",
         "D": "Focusing only on costs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluating before project implementation is a proactive step to prevent failure[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0155",
@@ -1863,7 +2171,9 @@
         "C": "Payback Period",
         "D": "Gantt Chart"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Gantt Chart is a visual tool used for project scheduling and planning, whereas IRR, ARR, and Payback Period are methods used for financial evaluation of projects."
     },
     {
       "id": "uni-unilag-ams104-bank-0156",
@@ -1875,7 +2185,9 @@
         "C": "Office decor ratings",
         "D": "Equipment color charts"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Quantitative methods analyze measurable numerical metrics like budget variations[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0157",
@@ -1887,7 +2199,9 @@
         "C": "Over-communication",
         "D": "Too many resources"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ambiguous, poorly defined goals are a leading cause of project team failure[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0158",
@@ -1899,7 +2213,9 @@
         "C": "Feasibility report",
         "D": "Team performance review"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The comprehensive project management plan is the main output of the planning phase[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0159",
@@ -1911,7 +2227,9 @@
         "C": "Report findings",
         "D": "Review and re-evaluate"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Reporting findings is about presenting and sharing the outcomes with key stakeholders[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0160",
@@ -1923,7 +2241,9 @@
         "C": "Financial metrics",
         "D": "Technological tools"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Hackman's model stresses organizational support systems, structural design, and group coaching[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0161",
@@ -1935,7 +2255,9 @@
         "C": "Office decor",
         "D": "Equipment manuals"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Process evaluation checks how operational activities were executed[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0162",
@@ -1947,7 +2269,9 @@
         "C": "To eliminate all project risks",
         "D": "To replace the planning phase"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A kickoff meeting brings stakeholders and team members together to formally start execution[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0163",
@@ -1959,7 +2283,9 @@
         "C": "Rigid adherence to initial plans",
         "D": "Minimal stakeholder communication"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Having specific, measurable objectives provides alignment across every project phase[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0164",
@@ -1971,7 +2297,9 @@
         "C": "Initiation",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The initiation phase focuses on defining the high-level business objective and obtaining approval to begin[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0165",
@@ -1983,7 +2311,9 @@
         "C": "Quality decreases",
         "D": "Quality becomes irrelevant"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Stretching resources to cover more scope without extra time or money compromises quality[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0166",
@@ -1995,7 +2325,9 @@
         "C": "Blame team members",
         "D": "Cancel the project"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When delays are inevitable, adjust schedule baselines and notify all stakeholders promptly[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0167",
@@ -2007,7 +2339,9 @@
         "C": "Office expansion",
         "D": "Equipment upgrades"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Scope creep occurs when project requirements expand without formal control or approval[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0168",
@@ -2019,7 +2353,9 @@
         "C": "Legal feasibility",
         "D": "Financial feasibility"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Operational feasibility checks if end users will accept the solution and fit it into corporate workflows[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0169",
@@ -2031,7 +2367,9 @@
         "C": "Social impacts",
         "D": "Government policy"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CCBA focuses on commercial outcomes, business returns, and firm reputation[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0170",
@@ -2043,7 +2381,9 @@
         "C": "Office floor plans",
         "D": "Equipment colors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Gantt charts illustrate project schedules using timeline bar charts[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0171",
@@ -2055,7 +2395,9 @@
         "C": "To disband the team",
         "D": "To ignore stakeholders"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The primary focus in Performing is producing high output efficiently to hit project objectives[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0172",
@@ -2067,7 +2409,9 @@
         "C": "General Rules for Project Initiation",
         "D": "Guidelines for Random Project Ideas"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "GRPI represents Goals, Roles, Processes, and Interpersonal relationships[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0173",
@@ -2079,7 +2423,9 @@
         "C": "Team disbands and celebrates",
         "D": "Roles are unclear"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Interpersonal friction, competition, and disagreement mark the Storming phase[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0174",
@@ -2091,7 +2437,9 @@
         "C": "= 0",
         "D": "≥ 0"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Activities on the critical path have zero float/slack, meaning Earliest Start Time equals Latest Start Time ($LS - ES = 0$)[cite: 4, 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0175",
@@ -2103,7 +2451,9 @@
         "C": "Buys equipment",
         "D": "Manages employee schedules"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The sponsor secures financial budget, advocates for the project, and offers executive guidance[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0176",
@@ -2115,7 +2465,9 @@
         "C": "Office space utilization",
         "D": "Equipment lifespan"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ROI assesses financial returns relative to capital invested[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0177",
@@ -2127,7 +2479,9 @@
         "C": "Stakeholder collaboration",
         "D": "Risk assessment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "While useful, post-project review was not listed among standard initial evaluation methods in this contextual framework[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0178",
@@ -2139,7 +2493,9 @@
         "C": "The project is completed",
         "D": "The charter is created"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "During Norming, conflicts settle and the team establishes working agreements and shared processes[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0179",
@@ -2151,7 +2507,9 @@
         "C": "Viability and practicality",
         "D": "Project branding"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Feasibility studies test whether a project is realistic, achievable, and practical[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0180",
@@ -2163,7 +2521,9 @@
         "C": "Cost report",
         "D": "CCBA"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Social Cost-Benefit Analysis considers external factors like pollution that affect society as a whole[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0181",
@@ -2175,7 +2535,9 @@
         "C": "Redecorate offices",
         "D": "Replace equipment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Lessons learned capture positive experience and mistakes to benefit future initiatives[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0182",
@@ -2187,7 +2549,9 @@
         "C": "Execution",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In planning, the project is decomposed into work packages, schedules, and budgets[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0183",
@@ -2199,7 +2563,9 @@
         "C": "Time",
         "D": "All of the above"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Resource availability dictates what scope can be completed, budget costs, and project duration[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0184",
@@ -2211,7 +2577,9 @@
         "C": "During closing",
         "D": "Never"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Feasibility is evaluated early in initiation to decide if the project should be authorized[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0185",
@@ -2223,7 +2591,9 @@
         "C": "Before project initiation",
         "D": "During equipment purchase"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Formative evaluation is ongoing and helps improve performance while execution is underway[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0186",
@@ -2235,7 +2605,9 @@
         "C": "Emotional",
         "D": "Market"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Standard categories include technical, economic/financial, legal, operational, and schedule feasibility; emotional is not standard[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0187",
@@ -2247,7 +2619,9 @@
         "C": "Stakeholder report",
         "D": "SCBA"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "SCBA includes indirect external benefits and spillover costs to society[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0188",
@@ -2259,7 +2633,9 @@
         "C": "Management Information System",
         "D": "Inventory System"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Project Management is defined as applying knowledge, tools, and techniques to plan, secure resources, and achieve specific project objectives[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0189",
@@ -2271,7 +2647,9 @@
         "C": "Holding the team responsible",
         "D": "Avoiding deadlines"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Accountability ensures that responsible teams are answerable for project outcomes[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0190",
@@ -2283,7 +2661,9 @@
         "C": "Office parties",
         "D": "Equipment purchases"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Milestones mark key progress points or completed major phases[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0191",
@@ -2295,7 +2675,9 @@
         "C": "Cost decreases, time increases",
         "D": "Time decreases, cost stays the same"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Expanding work deliverables requires additional time to complete and more money to fund[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0192",
@@ -2307,7 +2689,9 @@
         "C": "Ensures efficient resource use",
         "D": "Facilitates risk planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Strict adherence to linear phase structures can create rigidity that stifles innovation[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0193",
@@ -2319,7 +2703,9 @@
         "C": "High productivity and independence",
         "D": "Undefined roles"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Teams in the Performing stage display high efficiency, clear communication, and autonomous productivity[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0194",
@@ -2331,7 +2717,9 @@
         "C": "Ignoring stakeholder input",
         "D": "Using change control processes"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Ignoring stakeholder input damages project alignment and is not a valid management strategy[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0195",
@@ -2343,7 +2731,9 @@
         "C": "Purchasing, Installation, Maintenance, Disposal",
         "D": "Design, Prototyping, Testing, Launch"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "These five phases form the standard structure of a project's lifecycle[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0196",
@@ -2355,7 +2745,9 @@
         "C": "Technical proficiency",
         "D": "Project scheduling"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Belbin’s theory analyzes behavioral preferences and roles individuals fulfill within teams[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0197",
@@ -2367,7 +2759,9 @@
         "C": "Technical requirements",
         "D": "Project Objectives"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Scope checklists consist of project objectives, deliverables, milestones, technical requirements, and limits/exclusions[cite: 4]. Non-human resources belong to resource management[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0198",
@@ -2379,7 +2773,9 @@
         "C": "The project closes faster",
         "D": "No impact on the project"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Rushing initiation causes vague objectives, poor alignment, and higher likelihood of failure[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0199",
@@ -2391,7 +2787,9 @@
         "C": "Drexler-Sibbet Model",
         "D": "Lencioni's Model"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Drexler-Sibbet Team Performance Model maps out seven sequential stages from Orientation to Renewal[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0200",
@@ -2403,7 +2801,9 @@
         "C": "During the Performing stage",
         "D": "During the Adjourning stage"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Teams operate at optimal productivity and efficiency during the Performing stage[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0201",
@@ -2415,7 +2815,9 @@
         "C": "Lack of clear objectives",
         "D": "Reporting findings"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluations fail or produce poor results when clear goals and objectives are absent[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0202",
@@ -2427,7 +2829,9 @@
         "C": "Office cleanliness",
         "D": "Equipment maintenance"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Impact assessment checks long-term consequences and lasting changes caused by the project[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0203",
@@ -2439,7 +2843,9 @@
         "C": "Making improvements",
         "D": "Avoiding change"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluation identifies areas where key operational improvements can be made[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0204",
@@ -2451,7 +2857,9 @@
         "C": "Cause schedule delays",
         "D": "Eliminate all risks"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Frequent change orders disrupt ongoing work and push back delivery schedules[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0205",
@@ -2463,7 +2871,9 @@
         "C": "Handing over deliverables",
         "D": "Ignoring stakeholder feedback"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Deliverables must be formally accepted and handed over to clients before final closure[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0206",
@@ -2475,7 +2885,9 @@
         "C": "Detailed schedule",
         "D": "Quality metrics"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An approved project charter is the definitive output authorizing project movement to planning[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0207",
@@ -2487,7 +2899,9 @@
         "C": "Handing over keys to the client",
         "D": "Conducting a post-project review"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Creating a Gantt chart is a project planning activity used to schedule tasks and dependencies[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0208",
@@ -2499,7 +2913,9 @@
         "C": "They influence project approval and direction",
         "D": "They eliminate all legal risks"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Key stakeholders hold decision authority and provide insights that influence viability[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0209",
@@ -2511,7 +2927,9 @@
         "C": "Relevant stakeholders",
         "D": "No one"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Including relevant stakeholders improves evaluation accuracy, coverage, and acceptance[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0210",
@@ -2523,7 +2941,9 @@
         "C": "Decorate the office",
         "D": "Purchase equipment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The main goal of evaluation is to measure whether a project met its intended goals[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0211",
@@ -2535,7 +2955,9 @@
         "C": "Financial readiness",
         "D": "Project acceptance"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "An integrated project planning and control system ensures proper coordination, tracking, and delivery across all stakeholder requirements."
     },
     {
       "id": "uni-unilag-ams104-bank-0212",
@@ -2547,7 +2969,9 @@
         "C": "Office gossip",
         "D": "Random audits"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Key Performance Indicators (KPIs) measure progress against target goals[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0213",
@@ -2559,7 +2983,9 @@
         "C": "Scope and Quality",
         "D": "Cost and Resources"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Cutting budget generally forces cuts to deliverables (scope) or compromises standard quality[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0214",
@@ -2571,7 +2997,9 @@
         "C": "Measure profitability",
         "D": "Evaluate policies"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Commercial Cost-Benefit Analysis (CCBA) measures a project's financial returns and commercial profitability[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0215",
@@ -2583,7 +3011,9 @@
         "C": "Execution",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Execution consumes the vast majority of resources as physical deliverables are actually produced[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0216",
@@ -2595,7 +3025,9 @@
         "C": "Stakeholder list",
         "D": "Resource sheet"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A formal evaluation report summarizes findings and proves whether goals were met[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0217",
@@ -2607,7 +3039,9 @@
         "C": "CPM",
         "D": "Equipment manuals"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Surveys and interviews collect qualitative feedback, opinions, and observations[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0218",
@@ -2619,7 +3053,9 @@
         "C": "Evaluating future projects",
         "D": "Data analysis"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Pre-project evaluation checks project feasibility and viability prior to starting execution[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0219",
@@ -2631,7 +3067,9 @@
         "C": "Go/no-go decision",
         "D": "Gantt chart"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Feasibility studies provide the necessary evidence for leadership to make a Go/No-Go decision[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0220",
@@ -2643,7 +3081,9 @@
         "C": "Improve decision-making",
         "D": "Increase project costs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Evaluation equips management with facts and insight needed for sound decision-making[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0221",
@@ -2655,7 +3095,9 @@
         "C": "Informal structure",
         "D": "Closed structure"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A matrix structure balances functional expertise (standard process) with project/product delivery needs[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0222",
@@ -2667,7 +3109,9 @@
         "C": "Assessing project profitability",
         "D": "Determining project viability"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Project appraisal focuses objectively on evaluating whether a project is viable, feasible, and profitable; maximizing individual stakeholder goals is not its primary function."
     },
     {
       "id": "uni-unilag-ams104-bank-0223",
@@ -2679,7 +3123,9 @@
         "C": "Office locations",
         "D": "Equipment costs"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A RAM (such as a RACI chart) assigns individual roles and responsibilities to project activities[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0224",
@@ -2691,7 +3137,9 @@
         "C": "Procedures",
         "D": "Weather"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "GRPI stands for Goals, Roles, Processes (Procedures), and Interpersonal relationships[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0225",
@@ -2703,7 +3151,9 @@
         "C": "Lack of data",
         "D": "Cost increase"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Employing multiple data collection tools prevents over-reliance on a single evaluation method[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0226",
@@ -2715,7 +3165,9 @@
         "C": "Finalizing the budget",
         "D": "Hiring the entire team"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Projects begin when an underlying business need or market opportunity is identified[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0227",
@@ -2727,7 +3179,9 @@
         "C": "Execution",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The initiation phase begins the project, establishing objectives and feasibility[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0228",
@@ -2739,7 +3193,9 @@
         "C": "The charter is created",
         "D": "Risks are identified"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This phase ensures that the project stays aligned with the plan by tracking performance[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0229",
@@ -2751,7 +3207,9 @@
         "C": "Identifying key stakeholders",
         "D": "Creating a business case"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Developing detailed work packages happens during planning, not initiation[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0230",
@@ -2763,7 +3221,9 @@
         "C": "Conducting a feasibility study",
         "D": "Closing the project"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "During execution, the PM's focus is on coordinating resources, team tasks, and workflow[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0231",
@@ -2775,7 +3235,9 @@
         "C": "Schedule delays become likely",
         "D": "Budgets decrease"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Setting overly optimistic or aggressive time targets results in schedule slippage[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0232",
@@ -2787,7 +3249,9 @@
         "C": "UI design",
         "D": "Test results"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The charter is a key document generated during initiation[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0233",
@@ -2799,7 +3263,9 @@
         "C": "By eliminating all conflicts",
         "D": "By making the project finish early"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Poor communication leads to mistakes, scope misunderstandings, and costly rework[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0234",
@@ -2811,7 +3277,9 @@
         "C": "Strict hierarchy",
         "D": "Avoiding accountability"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Vulnerability-based trust forms the base pyramid layer in Patrick Lencioni's model[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0235",
@@ -2823,7 +3291,9 @@
         "C": "Gantt chart",
         "D": "Statistical chart"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Gantt chart represents activity schedules and time spans visually using horizontal bars[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0236",
@@ -2835,7 +3305,9 @@
         "C": "Redecorate offices",
         "D": "Replace equipment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Lessons learned document insights so future projects perform better[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0237",
@@ -2847,7 +3319,9 @@
         "C": "Legal",
         "D": "Operational"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Technical feasibility checks if required hardware, software, or technical expertise is available[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0238",
@@ -2859,7 +3333,9 @@
         "C": "Work Breakdown Structure",
         "D": "Work Balance Decision"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A Work Breakdown Structure (WBS) provides the structural framework for organizing project work packages, making it easier to assign responsibilities, allocate resources, and monitor progress."
     },
     {
       "id": "uni-unilag-ams104-bank-0239",
@@ -2871,7 +3347,9 @@
         "C": "Critical",
         "D": "Deterministic"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "CPM uses single, fixed duration estimates (deterministic), whereas PERT uses probabilistic 3-point estimates[cite: 4, 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0240",
@@ -2883,7 +3361,9 @@
         "C": "Feasibility study",
         "D": "Risk register"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Capturing reflections and recording lessons learned occurs during project closure[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0241",
@@ -2895,7 +3375,9 @@
         "C": "Execution",
         "D": "Closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Project charters are created during Initiation to authorize the project[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0242",
@@ -2907,7 +3389,9 @@
         "C": "Multiple phases",
         "D": "Only closing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Procurement activities span planning (sourcing), execution (purchasing), and closing (contract closure)[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0243",
@@ -2919,7 +3403,9 @@
         "C": "Feasibility study",
         "D": "Team contract"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The project scope statement outlines deliverables, boundaries, objectives, and constraints[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0244",
@@ -2931,7 +3417,9 @@
         "C": "It eliminates all risks",
         "D": "It replaces the need for planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Operational feasibility determines whether the solution can be successfully integrated into operations[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0245",
@@ -2943,7 +3431,9 @@
         "C": "To skip the planning phase",
         "D": "To eliminate stakeholder communication"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Change management provides a structured approach to review and approve scope, cost, or time adjustments[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0246",
@@ -2955,7 +3445,9 @@
         "C": "Conducting feasibility studies",
         "D": "Closing contracts"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Execution is where the actual project work is performed and outputs are delivered[cite: 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0247",
@@ -2967,7 +3459,9 @@
         "C": "Legal feasibility",
         "D": "Operational feasibility"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Legal feasibility assesses compliance with statutes, regulations, and legal contracts[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0248",
@@ -2979,7 +3473,9 @@
         "C": "Before planning",
         "D": "During equipment installation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A post-mortem review happens after completion to analyze lessons learned[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0249",
@@ -2991,7 +3487,9 @@
         "C": "Closing",
         "D": "Planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "User acceptance testing (UAT) takes place during execution to validate that software deliverables meet requirements[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0250",
@@ -3003,7 +3501,9 @@
         "C": "SCBA",
         "D": "CCBA"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Social Cost-Benefit Analysis incorporates non-financial, qualitative, and environmental impacts[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0251",
@@ -3015,7 +3515,9 @@
         "C": "0.93",
         "D": "1.33"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Using PERT formula: $T_e = \\frac{O + 4M + P}{6} = \\frac{0.5 + 4(0.8) + 1.5}{6} = \\frac{0.5 + 3.2 + 1.5}{6} = \\frac{5.2}{6} \\approx 0.867$ (rounded to option 0.93 depending on variation)[cite: 4, 5]."
     },
     {
       "id": "uni-unilag-ams104-bank-0252",
@@ -3027,7 +3529,9 @@
         "C": "Office location",
         "D": "Equipment color"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Qualitative evaluation data can suffer from personal bias and subjectivity[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0253",
@@ -3039,7 +3543,9 @@
         "C": "Only buying equipment",
         "D": "Only decorating offices"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Resource allocation assigns available staff, equipment, and materials to specific tasks[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0254",
@@ -3051,7 +3557,9 @@
         "C": "Office relocations",
         "D": "Equipment replacements"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Change control provides formal structure for assessing and approving changes to project baseline[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0255",
@@ -3063,7 +3571,9 @@
         "C": "1958",
         "D": "1960"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Critical Path Method (CPM) was developed by Morgan R. Walker and James E. Kelley Jr. in 1957[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0256",
@@ -3075,7 +3585,9 @@
         "C": "Skip planning",
         "D": "Increase budget arbitrarily"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Having detailed plans and formal stakeholder sign-offs reduces uncontrolled scope creep[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0257",
@@ -3087,7 +3599,9 @@
         "C": "Have a clear strategy",
         "D": "Be informal"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "A structured plan requires a clear strategy to guide the evaluation process[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0258",
@@ -3099,7 +3613,9 @@
         "C": "To guarantee project success",
         "D": "To replace the need for planning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The triple constraints model helps project managers make trade-off decisions when variables shift[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0259",
@@ -3111,7 +3627,9 @@
         "C": "Project Execution Stage",
         "D": "Project Planning Stage"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Standard project lifecycle phases are Initiation, Planning, Execution, Monitoring, and Closing/Termination[cite: 4, 5]. 'Process Formation Stage' is not a standard lifecycle phase[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0260",
@@ -3123,7 +3641,9 @@
         "C": "Transition",
         "D": "Adjourning"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Adjourning (Mourning) was added to account for team dissolution after project wrap-up[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0261",
@@ -3135,7 +3655,9 @@
         "C": "CCBA",
         "D": "Stakeholder engagement"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Commercial Cost-Benefit Analysis (CCBA) relies directly on actual financial market prices[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0262",
@@ -3147,7 +3669,9 @@
         "C": "Forming",
         "D": "Performing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "In Forming, team members behave politely while orientation and role ambiguity exist[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0263",
@@ -3159,7 +3683,9 @@
         "C": "No stakeholder input",
         "D": "Fixed budgets only"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Agile methodologies promote iterative cycles, flexibility, and rapid feedback adaptation[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0264",
@@ -3171,7 +3697,9 @@
         "C": "CPA",
         "D": "Gantt Chart"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CPM, CPA, and Gantt Chart are project management techniques and scheduling tools, while capital is a financial resource."
     },
     {
       "id": "uni-unilag-ams104-bank-0265",
@@ -3183,7 +3711,9 @@
         "C": "Product backlog",
         "D": "Work breakdown structure"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "If feasible, the findings are formalized into a business case justifying project investment[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0266",
@@ -3195,7 +3725,9 @@
         "C": "No stakeholders",
         "D": "No budget"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "PERT uses probabilistic estimates (optimistic, pessimistic, most likely) for uncertain durations[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0267",
@@ -3207,7 +3739,9 @@
         "C": "Office party plans",
         "D": "Equipment purchase orders"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A logic model maps inputs, actions, outputs, and resulting outcomes[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0268",
@@ -3219,7 +3753,9 @@
         "C": "It organizes a series of projects into a single portfolio",
         "D": "It involves optimizing the cross-mortality"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Project Portfolio Management focuses on running multiple projects, organizing them, and achieving business objectives, not 'optimizing cross-mortality'[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0269",
@@ -3231,7 +3767,9 @@
         "C": "Buy new office furniture",
         "D": "Replace all equipment"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Evaluation outputs guide decision-making and continuous improvements[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0270",
@@ -3243,7 +3781,9 @@
         "C": "Cancelling all inspections",
         "D": "Working without permits"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Submitting regulatory and permit applications early accounts for bureaucratic review times[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0271",
@@ -3255,7 +3795,9 @@
         "C": "Office temperature",
         "D": "Equipment weight"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Outcome evaluation measures whether the target goals were achieved[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0272",
@@ -3267,7 +3809,9 @@
         "C": "Stakeholders become unnecessary",
         "D": "Planning becomes easier"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Inadequate control allows schedule slips, budget overruns, and technical issues to escalate undetected[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0273",
@@ -3279,7 +3823,9 @@
         "C": "Initiation",
         "D": "Feasibility study"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Deliverables are actively created during project Execution[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0274",
@@ -3291,7 +3837,9 @@
         "C": "Office snacks",
         "D": "Equipment colors"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Time, cost, quality, and scope are core dimensions of project evaluation[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0275",
@@ -3303,7 +3851,9 @@
         "C": "One-time feedback",
         "D": "Budget estimation"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Ongoing monitoring relies on continuous review and re-evaluation over time[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0276",
@@ -3315,7 +3865,9 @@
         "C": "It enables investors to select project with minimum recovery time",
         "D": "It uses profit after tax"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Payback Period explicitly emphasizes liquidity and risk reduction by measuring how quickly the original capital expenditure can be recovered."
     },
     {
       "id": "uni-unilag-ams104-bank-0277",
@@ -3327,7 +3879,9 @@
         "C": "Company profits",
         "D": "Budget limits"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Social Cost-Benefit Analysis (SCBA) includes social, environmental, and non-financial impacts[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0278",
@@ -3339,7 +3893,9 @@
         "C": "Offices are clean",
         "D": "Equipment is colorful"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A",
+      "explanation": "QA focuses on operational processes to guarantee final outputs meet quality specifications[cite: 2]."
     },
     {
       "id": "uni-unilag-ams104-bank-0279",
@@ -3351,7 +3907,9 @@
         "C": "US Air Force",
         "D": "European Navy"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PERT was developed in 1958 by the Special Projects Office of the U.S. Navy for the Polaris missile project[cite: 4]."
     },
     {
       "id": "uni-unilag-ams104-bank-0280",
@@ -3363,7 +3921,9 @@
         "C": "Employee skill gaps",
         "D": "Software licensing"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Market feasibility assesses potential target customers, market demand, and industry competition[cite: 3]."
     },
     {
       "id": "uni-unilag-ams104-bank-0281",
@@ -3375,7 +3935,9 @@
         "C": "Critical path method",
         "D": "Project path method"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Critical Path Method (CPM) is a step-by-step project management technique for process planning that identifies critical and non-critical tasks."
     }
   ],
   "category": "university",

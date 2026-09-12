@@ -1,1 +1,3511 @@
-{"code":"uni-futa-fsen106-bank","title":"FUTA FSEN 106 | Course Question Bank","version":1,"questionCount":250,"totalMarks":250,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-fsen106-0001","type":"mcq","stem":"Which is an example of a portability requirement?","options":{"A":"The system shall respond in under 2 seconds","B":"The system shall run on Windows 10, Ubuntu 22.04, and macOS 14 without modification","C":"Mean time to failure shall exceed 5,000 hours","D":"The system shall encrypt data using AES-256"},"marks":1},{"id":"uni-futa-fsen106-0002","type":"mcq","stem":"User requirements should avoid:","options":{"A":"Natural language","B":"Computer jargon","C":"Diagrams","D":"Tables"},"marks":1},{"id":"uni-futa-fsen106-0003","type":"mcq","stem":"The cost amplification of late requirements errors occurs because fixing them requires:","options":{"A":"Only updating the requirements document","B":"Redesigning architecture, rewriting code, redoing tests, and potentially retraining users","C":"Only adding a new test case","D":"Only updating the user manual"},"marks":1},{"id":"uni-futa-fsen106-0004","type":"mcq","stem":"The Appendices section of an SRD contains:","options":{"A":"Detailed supporting information like hardware specs, database schemas, and external interface descriptions","B":"The main user requirements","C":"The project budget summary","D":"Marketing analysis"},"marks":1},{"id":"uni-futa-fsen106-0005","type":"mcq","stem":"Natural language is the most commonly used notation because:","options":{"A":"It is completely unambiguous","B":"It is accessible to both technical and non-technical stakeholders","C":"It is required by IEEE 830","D":"It is the most precise notation"},"marks":1},{"id":"uni-futa-fsen106-0006","type":"mcq","stem":"The acronym VCCV stands for:","options":{"A":"Verification, Code, Coverage, Validation","B":"Validity, Consistency, Completeness, Verifiability","C":"Value, Cost, Compliance, Verification","D":"Vision, Context, Constraints, Validation"},"marks":1},{"id":"uni-futa-fsen106-0007","type":"mcq","stem":"Which validation technique creates a test plan that can be used directly when testing the final system?","options":{"A":"Reviews","B":"Test-case generation","C":"Automated analysis","D":"Prototyping"},"marks":1},{"id":"uni-futa-fsen106-0008","type":"mcq","stem":"Requirements management ensures that changes are:","options":{"A":"Prevented entirely","B":"Tracked, assessed, and incorporated in a controlled way","C":"Implemented immediately without review","D":"Ignored until deployment"},"marks":1},{"id":"uni-futa-fsen106-0009","type":"mcq","stem":"Requirements validation is the process of:","options":{"A":"Implementing requirements in code","B":"Checking that requirements in the SRD define the system the customer actually wants","C":"Deploying the system","D":"Writing test cases for the code"},"marks":1},{"id":"uni-futa-fsen106-0010","type":"mcq","stem":"Which is an example of a reliability requirement?","options":{"A":"The system shall respond in under 2 seconds","B":"Mean time to failure shall exceed 5,000 hours; downtime shall not exceed 4 hours per month","C":"All patient data shall be encrypted at rest","D":"The system shall run on macOS 14"},"marks":1},{"id":"uni-futa-fsen106-0011","type":"mcq","stem":"Requirements engineering processes vary enormously between:","options":{"A":"Different programming languages","B":"Different organisations and types of applications","C":"Different operating systems","D":"Different databases"},"marks":1},{"id":"uni-futa-fsen106-0012","type":"mcq","stem":"Consistency check asks:","options":{"A":"'Will the requirement deliver value?'","B":"'Can all requirements be satisfied simultaneously? No two requirements should contradict each other.'","C":"'Is anything missing?'","D":"'Can the requirement be tested?'"},"marks":1},{"id":"uni-futa-fsen106-0013","type":"mcq","stem":"The intended audience for system requirements is:","options":{"A":"Marketing teams","B":"Developers and architects","C":"End customers only","D":"Investors"},"marks":1},{"id":"uni-futa-fsen106-0014","type":"mcq","stem":"Which is NOT a standard section of an IEEE 830 SRD?","options":{"A":"Preface","B":"Glossary","C":"Marketing Plan","D":"System Requirements Specification"},"marks":1},{"id":"uni-futa-fsen106-0015","type":"mcq","stem":"Text highlighting in requirements (bold, italic) is used to:","options":{"A":"Make the document look prettier","B":"Pick out key terms, actors, and system names","C":"Replace unique identifiers","D":"Avoid using SHALL"},"marks":1},{"id":"uni-futa-fsen106-0016","type":"mcq","stem":"Validation may reveal missing requirements that require:","options":{"A":"Skipping the requirement","B":"New elicitation","C":"Immediate deployment","D":"Cancellation of the project"},"marks":1},{"id":"uni-futa-fsen106-0017","type":"mcq","stem":"Requirements engineering is one of the most critical phases because:","options":{"A":"It is the cheapest phase","B":"Mistakes made here are the most costly to correct later","C":"It requires the fewest people","D":"It is always completed first"},"marks":1},{"id":"uni-futa-fsen106-0018","type":"mcq","stem":"Which is NOT a guideline for writing natural language requirements?","options":{"A":"Use a standard format consistently","B":"Distinguish mandatory from desirable","C":"Avoid computer jargon in user requirements","D":"Use as many ambiguous words as possible"},"marks":1},{"id":"uni-futa-fsen106-0019","type":"mcq","stem":"Finding a requirements error after delivery may cost:","options":{"A":"The same as fixing it during requirements","B":"Up to 100 times more than fixing it during requirements","C":"Less than fixing it during requirements","D":"Nothing"},"marks":1},{"id":"uni-futa-fsen106-0020","type":"mcq","stem":"A requirement that cannot be tested is:","options":{"A":"Acceptable if it uses SHALL","B":"Worthless — requirements that cannot be tested are worthless","C":"Always a domain requirement","D":"Always an organisational requirement"},"marks":1},{"id":"uni-futa-fsen106-0021","type":"mcq","stem":"Closed interviews use:","options":{"A":"Free discussion to explore topics in depth","B":"Pre-defined questions for systematic information gathering","C":"Observation only","D":"Statistical sampling"},"marks":1},{"id":"uni-futa-fsen106-0022","type":"mcq","stem":"Ethnography is particularly effective for discovering:","options":{"A":"High-level goals stakeholders can articulate","B":"Implicit requirements related to existing work practices that stakeholders take for granted","C":"Statistical data about user preferences","D":"Source code defects"},"marks":1},{"id":"uni-futa-fsen106-0023","type":"mcq","stem":"SRD stands for:","options":{"A":"Software Requirements Document","B":"System Reliability Document","C":"Software Resource Diagram","D":"System Requirements Design"},"marks":1},{"id":"uni-futa-fsen106-0024","type":"mcq","stem":"Graphical notations add value when:","options":{"A":"Ambiguity is desired","B":"Visual clarity adds value, especially for interaction and behavioural requirements","C":"The system is very small","D":"The customer cannot read"},"marks":1},{"id":"uni-futa-fsen106-0025","type":"mcq","stem":"RE processes are:","options":{"A":"Identical across all organisations","B":"Varied — different types of systems need different processes","C":"Always waterfall","D":"Always agile"},"marks":1},{"id":"uni-futa-fsen106-0026","type":"mcq","stem":"Each requirement is assigned a unique identifier so it can be:","options":{"A":"Cross-referenced with other requirements, design components, test cases, and code modules","B":"Deleted more easily","C":"Hidden from stakeholders","D":"Marketed to customers"},"marks":1},{"id":"uni-futa-fsen106-0027","type":"mcq","stem":"The System Evolution section of an SRD anticipates:","options":{"A":"Past bugs","B":"Future changes and planned evolutionary modifications","C":"Marketing campaigns","D":"Employee salaries"},"marks":1},{"id":"uni-futa-fsen106-0028","type":"mcq","stem":"Errors in requirements documents are:","options":{"A":"The cheapest type of software defect","B":"The most expensive type of software defect","C":"Easier to fix than code errors","D":"Only found during deployment"},"marks":1},{"id":"uni-futa-fsen106-0029","type":"mcq","stem":"Prototyping as a validation technique is particularly effective for:","options":{"A":"Discovering missing requirements and validating usability requirements","B":"Replacing the SRD","C":"Mathematical specification","D":"Code review"},"marks":1},{"id":"uni-futa-fsen106-0030","type":"mcq","stem":"Which notation is most appropriate for safety-critical avionics software?","options":{"A":"Natural language","B":"Mathematical specifications (Z, VDM)","C":"Structured natural language","D":"UML use case diagrams"},"marks":1},{"id":"uni-futa-fsen106-0031","type":"mcq","stem":"Workshops and focus groups are useful for:","options":{"A":"Resolving conflicting viewpoints across stakeholder groups and reaching consensus quickly","B":"Observing tacit work practices","C":"Statistical sampling","D":"Mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0032","type":"mcq","stem":"Which of the following is a constraint, not a service?","options":{"A":"The system shall generate monthly invoices","B":"The system shall use no more than 512 MB of server storage","C":"The system shall allow users to log in","D":"The system shall send email confirmations"},"marks":1},{"id":"uni-futa-fsen106-0033","type":"mcq","stem":"System managers use the SRD to:","options":{"A":"Develop validation test plans","B":"Plan bids, estimate cost and timeline, and plan the development process","C":"Modify the system after deployment","D":"Develop test cases"},"marks":1},{"id":"uni-futa-fsen106-0034","type":"mcq","stem":"Traceability policies define:","options":{"A":"Relationships between each requirement and between requirements and system design","B":"Project budget","C":"Marketing strategy","D":"Network architecture"},"marks":1},{"id":"uni-futa-fsen106-0035","type":"mcq","stem":"Conflicting requirements cause:","options":{"A":"Faster integration","B":"Inconsistencies that may only surface during integration testing","C":"Lower coupling between modules","D":"Better user experience"},"marks":1},{"id":"uni-futa-fsen106-0036","type":"mcq","stem":"Questionnaires and surveys are useful for:","options":{"A":"Gathering statistical data about user priorities across large populations","B":"Resolving conflicts","C":"Observing work practices","D":"Mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0037","type":"mcq","stem":"Structured natural language uses:","options":{"A":"Free-form English sentences","B":"Predefined templates with fixed fields to improve consistency","C":"Mathematical notation","D":"Source code"},"marks":1},{"id":"uni-futa-fsen106-0038","type":"mcq","stem":"Which is a primary output of the requirements engineering process?","options":{"A":"A deployed software system","B":"A description of system services and constraints","C":"A marketing plan","D":"A network topology diagram"},"marks":1},{"id":"uni-futa-fsen106-0039","type":"mcq","stem":"Scenarios can be used to develop:","options":{"A":"Formal use cases","B":"Source code","C":"Database schemas","D":"Network diagrams"},"marks":1},{"id":"uni-futa-fsen106-0040","type":"mcq","stem":"Each requirement should have a unique identifier to enable:","options":{"A":"Faster compilation","B":"Traceability and change management","C":"Better user experience","D":"Lower memory usage"},"marks":1},{"id":"uni-futa-fsen106-0041","type":"mcq","stem":"Requirements prioritisation is part of:","options":{"A":"Requirements elicitation","B":"Requirements analysis","C":"Requirements validation","D":"Requirements management"},"marks":1},{"id":"uni-futa-fsen106-0042","type":"mcq","stem":"Ambiguous requirements typically lead to:","options":{"A":"Faster development","B":"Different interpretations by different developers","C":"Lower project costs","D":"Improved system performance"},"marks":1},{"id":"uni-futa-fsen106-0043","type":"mcq","stem":"Which is NOT a reason requirements change?","options":{"A":"Changing business environment","B":"Divided stakeholders","C":"Regulatory changes","D":"Improved grammar in the SRD"},"marks":1},{"id":"uni-futa-fsen106-0044","type":"mcq","stem":"Functional requirements describe:","options":{"A":"System performance only","B":"What the system should do — services, reactions to inputs, and behaviours","C":"The development process only","D":"External regulations only"},"marks":1},{"id":"uni-futa-fsen106-0045","type":"mcq","stem":"Which is an example of a space requirement?","options":{"A":"Mean time to failure shall exceed 5,000 hours","B":"The system footprint on the server shall not exceed 512 MB of storage excluding the database","C":"The system shall run on Windows 10, Ubuntu 22.04, and macOS 14","D":"The system shall process 1,000 records per minute"},"marks":1},{"id":"uni-futa-fsen106-0046","type":"mcq","stem":"Validation asks 'Are we building the right system?' This is different from verification, which asks:","options":{"A":"'Are we building the system right?'","B":"'Are we building the right system?'","C":"'Is the budget sufficient?'","D":"'Is the UI attractive?'"},"marks":1},{"id":"uni-futa-fsen106-0047","type":"mcq","stem":"Mathematical specifications (Z, VDM, finite state machines) are used for:","options":{"A":"Marketing websites","B":"Safety-critical systems where ambiguity is unacceptable","C":"User-facing requirements","D":"Project schedules"},"marks":1},{"id":"uni-futa-fsen106-0048","type":"mcq","stem":"Which stakeholder group signs off on the SRD as part of the contract?","options":{"A":"System customers","B":"System engineers","C":"Test engineers","D":"Maintenance engineers"},"marks":1},{"id":"uni-futa-fsen106-0049","type":"mcq","stem":"User requirements are typically written for:","options":{"A":"Developers and architects only","B":"Customers and end-users in natural language","C":"Database administrators","D":"Network engineers"},"marks":1},{"id":"uni-futa-fsen106-0050","type":"mcq","stem":"Which is NOT an elicitation technique listed in FSEN 106?","options":{"A":"Interviews","B":"Ethnography","C":"Code review","D":"Prototyping"},"marks":1},{"id":"uni-futa-fsen106-0051","type":"mcq","stem":"Which notation is most appropriate for a high-level user requirement?","options":{"A":"Mathematical specification","B":"Natural language supplemented with diagrams","C":"Source code","D":"Database schema"},"marks":1},{"id":"uni-futa-fsen106-0052","type":"mcq","stem":"A banking system must implement interest calculations according to specific regulatory formulas. This is:","options":{"A":"A functional requirement","B":"A domain requirement","C":"A usability requirement","D":"A portability requirement"},"marks":1},{"id":"uni-futa-fsen106-0053","type":"mcq","stem":"System requirements are written for:","options":{"A":"Project sponsors only","B":"Developers and architects as detailed technical specifications","C":"Marketing teams","D":"End customers without technical background"},"marks":1},{"id":"uni-futa-fsen106-0054","type":"mcq","stem":"Verification asks:","options":{"A":"'Are we building the right system?'","B":"'Are we building the system right?'","C":"'Is the project profitable?'","D":"'Is the UI attractive?'"},"marks":1},{"id":"uni-futa-fsen106-0055","type":"mcq","stem":"A requirement that 'the system shall send automated reminder notifications 24 hours before appointments' is:","options":{"A":"Functional","B":"Non-functional","C":"External","D":"Organisational"},"marks":1},{"id":"uni-futa-fsen106-0056","type":"mcq","stem":"Requirements serve a dual function as a basis for:","options":{"A":"A contract bid AND as the basis for the contract itself","B":"User training AND system testing","C":"Project scheduling AND budget tracking","D":"Database design AND network architecture"},"marks":1},{"id":"uni-futa-fsen106-0057","type":"mcq","stem":"Requirements engineering bridges the gap between:","options":{"A":"Frontend and backend developers","B":"What the customer needs and what the development team builds","C":"Testing and deployment","D":"Database design and network architecture"},"marks":1},{"id":"uni-futa-fsen106-0058","type":"mcq","stem":"System customers use the SRD to:","options":{"A":"Develop validation test plans","B":"Specify requirements; read and verify the document matches their needs; sign off as part of the contract","C":"Plan bids for the system","D":"Track progress and manage scope changes"},"marks":1},{"id":"uni-futa-fsen106-0059","type":"mcq","stem":"Structured natural language is preferred when:","options":{"A":"Ambiguity is acceptable","B":"A standard format is required across the organisation","C":"The system is safety-critical","D":"The customer is a mathematician"},"marks":1},{"id":"uni-futa-fsen106-0060","type":"mcq","stem":"Reviews can be:","options":{"A":"Only formal inspections","B":"Formal (structured inspection with roles) or informal (walkthrough)","C":"Only informal walkthroughs","D":"Only automated"},"marks":1},{"id":"uni-futa-fsen106-0061","type":"mcq","stem":"Which activity produces an organised requirement set with logical structure?","options":{"A":"Requirements discovery","B":"Requirements classification and organisation","C":"Requirements validation","D":"Requirements management"},"marks":1},{"id":"uni-futa-fsen106-0062","type":"mcq","stem":"Realism check asks:","options":{"A":"'Is the requirement testable?'","B":"'Can the requirements be implemented within budget, on schedule, and using available technology?'","C":"'Is anything missing?'","D":"'Will it deliver value?'"},"marks":1},{"id":"uni-futa-fsen106-0063","type":"mcq","stem":"Natural language notation is best used for:","options":{"A":"Safety-critical systems where ambiguity is unacceptable","B":"User requirements and high-level system requirements where accessibility matters more than precision","C":"Mathematical specifications","D":"Database schemas only"},"marks":1},{"id":"uni-futa-fsen106-0064","type":"mcq","stem":"Completeness check asks:","options":{"A":"'Are there any conflicts?'","B":"'Is anything the customer expects missing from the specification?'","C":"'Is the requirement testable?'","D":"'Is the requirement feasible?'"},"marks":1},{"id":"uni-futa-fsen106-0065","type":"mcq","stem":"A requirement may range from:","options":{"A":"A single test case to a test suite","B":"A high-level abstract statement to a detailed mathematical specification","C":"A user story to a deployment plan","D":"A use case to a sequence diagram"},"marks":1},{"id":"uni-futa-fsen106-0066","type":"mcq","stem":"The first stage of the elicitation and analysis process is:","options":{"A":"Requirements discovery","B":"Requirements classification","C":"Requirements prioritisation","D":"Requirements documentation"},"marks":1},{"id":"uni-futa-fsen106-0067","type":"mcq","stem":"Post-requirements traceability links requirements to:","options":{"A":"Their source","B":"The design components and tests that implement them","C":"Marketing materials","D":"Customer billing"},"marks":1},{"id":"uni-futa-fsen106-0068","type":"mcq","stem":"The User Requirements section of an SRD is written using:","options":{"A":"Natural language and diagrams, accessible to non-technical stakeholders","B":"Mathematical notation only","C":"Java source code","D":"Database schemas"},"marks":1},{"id":"uni-futa-fsen106-0069","type":"mcq","stem":"The tension in requirements specification is that:","options":{"A":"More precise requirements are easier to read","B":"More precise requirements are harder to read; simpler ones are more ambiguous","C":"Simpler requirements are always better","D":"Precision does not affect readability"},"marks":1},{"id":"uni-futa-fsen106-0070","type":"mcq","stem":"Draft requirements documentation is suitable for:","options":{"A":"Final deployment","B":"Review, validation, and baseline agreement","C":"Marketing","D":"Customer billing"},"marks":1},{"id":"uni-futa-fsen106-0071","type":"mcq","stem":"Trade-offs in requirements are resolved during:","options":{"A":"Elicitation","B":"Analysis","C":"Validation","D":"Deployment"},"marks":1},{"id":"uni-futa-fsen106-0072","type":"mcq","stem":"Which is an example of a maintainability requirement?","options":{"A":"Any licensed developer familiar with Python shall be able to understand and modify a module within 2 hours","B":"The system shall respond in under 2 seconds","C":"All data shall be encrypted using AES-256","D":"Mean time to failure shall exceed 5,000 hours"},"marks":1},{"id":"uni-futa-fsen106-0073","type":"mcq","stem":"A useful strategy for catching ambiguity is to ask:","options":{"A":"'Is this requirement short enough?'","B":"'How would I test this?' If the test is unclear, the requirement is ambiguous","C":"'Does this use SHALL?'","D":"'Is this in the Glossary?'"},"marks":1},{"id":"uni-futa-fsen106-0074","type":"mcq","stem":"Stakeholders often describe:","options":{"A":"What they need","B":"What they currently do, rather than what they need","C":"Future system architecture","D":"Internal algorithms"},"marks":1},{"id":"uni-futa-fsen106-0075","type":"mcq","stem":"IEEE Std 830 defines:","options":{"A":"A programming language","B":"The recommended standard structure for Software Requirements Specifications","C":"A testing methodology","D":"A project management framework"},"marks":1},{"id":"uni-futa-fsen106-0076","type":"mcq","stem":"Product requirements specify that the delivered product must:","options":{"A":"Follow organisational coding standards","B":"Behave in a particular way regarding execution, reliability, or memory usage","C":"Comply with external laws","D":"Be developed using a specific methodology"},"marks":1},{"id":"uni-futa-fsen106-0077","type":"mcq","stem":"Over-specified requirements can:","options":{"A":"Reduce development time","B":"Waste development effort on unnecessary features","C":"Improve system reliability","D":"Simplify testing"},"marks":1},{"id":"uni-futa-fsen106-0078","type":"mcq","stem":"The Preface section of an SRD defines:","options":{"A":"Expected readership and document history","B":"Detailed algorithms","C":"Source code listings","D":"Network topology"},"marks":1},{"id":"uni-futa-fsen106-0079","type":"mcq","stem":"Specialist requirements management tools mentioned in FSEN 106 include:","options":{"A":"IBM DOORS, Jira, and Azure DevOps","B":"Microsoft Word only","C":"Excel only","D":"Photoshop"},"marks":1},{"id":"uni-futa-fsen106-0080","type":"mcq","stem":"Which of the following is NOT a quality attribute typically covered by NFRs?","options":{"A":"Reliability","B":"Performance","C":"Maintainability","D":"Brand awareness"},"marks":1},{"id":"uni-futa-fsen106-0081","type":"mcq","stem":"Non-functional requirements are best described as:","options":{"A":"Descriptions of specific system services","B":"Constraints on services or functions offered by the system","C":"User interface layout specifications","D":"Database schema definitions"},"marks":1},{"id":"uni-futa-fsen106-0082","type":"mcq","stem":"Requirements engineering is best defined as the process of:","options":{"A":"Writing source code for a software system","B":"Establishing the services a customer requires from a system and the constraints under which it operates","C":"Designing the user interface of a software system","D":"Testing a software system against user expectations"},"marks":1},{"id":"uni-futa-fsen106-0083","type":"mcq","stem":"An example of an invalid requirement is one that:","options":{"A":"Does not actually deliver value to the user","B":"Is perfectly testable","C":"Has a unique identifier","D":"Uses SHALL correctly"},"marks":1},{"id":"uni-futa-fsen106-0084","type":"mcq","stem":"Requirements reviews are most cost-effective when:","options":{"A":"Done late in the project","B":"Done early","C":"Skipped entirely","D":"Done only by testers"},"marks":1},{"id":"uni-futa-fsen106-0085","type":"mcq","stem":"Verifiability check asks:","options":{"A":"'Can a test be written that will objectively confirm the requirement has been met?'","B":"'Is the requirement feasible?'","C":"'Will the requirement deliver value?'","D":"'Are there any conflicts?'"},"marks":1},{"id":"uni-futa-fsen106-0086","type":"mcq","stem":"The text states that non-functional requirements are often:","options":{"A":"Less critical than functional requirements","B":"MORE CRITICAL than functional requirements","C":"Equivalent to functional requirements","D":"Irrelevant to system usability"},"marks":1},{"id":"uni-futa-fsen106-0087","type":"mcq","stem":"Which is NOT a component of requirements management planning?","options":{"A":"Requirements identification","B":"Change management process","C":"Traceability policies","D":"Marketing campaign planning"},"marks":1},{"id":"uni-futa-fsen106-0088","type":"mcq","stem":"Workshops are faster than:","options":{"A":"Conducting many individual interviews","B":"Doing nothing","C":"Mathematical specification","D":"Code review"},"marks":1},{"id":"uni-futa-fsen106-0089","type":"mcq","stem":"The System Architecture section of an SRD provides:","options":{"A":"Detailed algorithms","B":"A high-level overview of anticipated system structure","C":"Project budget","D":"Test cases"},"marks":1},{"id":"uni-futa-fsen106-0090","type":"mcq","stem":"Which of the following is a non-functional requirement?","options":{"A":"The system shall allow users to reset their password","B":"The system shall load in under 2 seconds","C":"The system shall send an email confirmation","D":"The system shall generate monthly invoices"},"marks":1},{"id":"uni-futa-fsen106-0091","type":"mcq","stem":"To check consistency, you can use:","options":{"A":"A requirements matrix to identify conflicts","B":"A prototype","C":"A survey","D":"An interview"},"marks":1},{"id":"uni-futa-fsen106-0092","type":"mcq","stem":"To check completeness, you can:","options":{"A":"Ask stakeholders 'Is anything missing?' and use checklists based on the problem domain","B":"Build a prototype only","C":"Skip the check","D":"Deploy the system"},"marks":1},{"id":"uni-futa-fsen106-0093","type":"mcq","stem":"The improved version 'The system shall support a minimum of 500 concurrent users without degradation' is better because:","options":{"A":"It is shorter","B":"It is testable and unambiguous","C":"It uses passive voice","D":"It avoids SHALL"},"marks":1},{"id":"uni-futa-fsen106-0094","type":"mcq","stem":"Skilled requirements engineers:","options":{"A":"Always use interviews","B":"Choose and combine techniques based on system type, stakeholder availability, and nature of requirements","C":"Never use ethnography","D":"Always use mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0095","type":"mcq","stem":"Which keyword is used for mandatory requirements?","options":{"A":"SHOULD","B":"SHALL","C":"MAY","D":"WILL"},"marks":1},{"id":"uni-futa-fsen106-0096","type":"mcq","stem":"Every requirement should correspond to:","options":{"A":"At least one test case","B":"At least one diagram","C":"At least one stakeholder","D":"At least one developer"},"marks":1},{"id":"uni-futa-fsen106-0097","type":"mcq","stem":"A baseline is:","options":{"A":"A draft version","B":"A formally agreed version of the requirements at a specific point in time","C":"A marketing document","D":"A test case"},"marks":1},{"id":"uni-futa-fsen106-0098","type":"mcq","stem":"Functional requirements must be:","options":{"A":"Complete and consistent","B":"Ambiguous to allow flexibility","C":"Written only in formal mathematical notation","D":"Limited to fewer than 10 items"},"marks":1},{"id":"uni-futa-fsen106-0099","type":"mcq","stem":"Requirements engineering is described as:","options":{"A":"A linear waterfall","B":"An iterative spiral activity","C":"A one-time event","D":"A testing phase only"},"marks":1},{"id":"uni-futa-fsen106-0100","type":"mcq","stem":"Domain language barriers cause problems because:","options":{"A":"Developers may misunderstand technical terminology used in the application domain","B":"Stakeholders speak too quietly","C":"Developers always understand domain language","D":"Domain language is forbidden in requirements"},"marks":1},{"id":"uni-futa-fsen106-0101","type":"mcq","stem":"The disadvantage of mathematical specifications is that they are:","options":{"A":"Ambiguous","B":"Hard to validate with customers","C":"Easy to read","D":"Limited to small systems only"},"marks":1},{"id":"uni-futa-fsen106-0102","type":"mcq","stem":"Domain requirements are derived from:","options":{"A":"The application domain of the system","B":"User interface design","C":"Database schema","D":"Network topology"},"marks":1},{"id":"uni-futa-fsen106-0103","type":"mcq","stem":"Which technique is BEST for gathering data from thousands of users?","options":{"A":"Interviews","B":"Ethnography","C":"Questionnaires and surveys","D":"Prototyping"},"marks":1},{"id":"uni-futa-fsen106-0104","type":"mcq","stem":"Which technique is BEST when stakeholders cannot articulate abstract needs?","options":{"A":"Prototyping","B":"Closed interviews","C":"Questionnaires","D":"Mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0105","type":"mcq","stem":"Project management uses the SRD to:","options":{"A":"Track progress, manage scope changes, and assess impact of proposed changes","B":"Sign off on the contract","C":"Develop test plans","D":"Implement the source code"},"marks":1},{"id":"uni-futa-fsen106-0106","type":"mcq","stem":"Which requirement identifier scheme is recommended?","options":{"A":"Random numbers","B":"FR-001, NFR-012 style unique identifiers","C":"Sequential letters A, B, C","D":"No identifiers needed"},"marks":1},{"id":"uni-futa-fsen106-0107","type":"mcq","stem":"Requirements reviews involve:","options":{"A":"Manual analysis by a team of reviewers, including both customer and contractor staff","B":"Automated testing only","C":"Only customer review","D":"Only contractor review"},"marks":1},{"id":"uni-futa-fsen106-0108","type":"mcq","stem":"In practice, the four RE activities are:","options":{"A":"Strictly sequential","B":"Interleaved and iterative rather than sequential","C":"Performed only once per project","D":"Performed only by project managers"},"marks":1},{"id":"uni-futa-fsen106-0109","type":"mcq","stem":"Incomplete stakeholder availability leads to:","options":{"A":"Faster elicitation","B":"Gaps in the requirements","C":"Better requirements","D":"Lower project costs"},"marks":1},{"id":"uni-futa-fsen106-0110","type":"mcq","stem":"The output of requirements discovery is:","options":{"A":"A final, baselined requirements document","B":"An initial draft of unorganised stakeholder needs","C":"Source code","D":"Test cases"},"marks":1},{"id":"uni-futa-fsen106-0111","type":"mcq","stem":"'The system shall authenticate users via SHA-256 hashed passwords stored in PostgreSQL using bcrypt with salt factor 12' is an example of:","options":{"A":"A user requirement","B":"A system requirement","C":"A marketing requirement","D":"A budget requirement"},"marks":1},{"id":"uni-futa-fsen106-0112","type":"mcq","stem":"Requirements elicitation includes:","options":{"A":"Identifying all relevant stakeholders","B":"Understanding stakeholder goals, needs, and constraints","C":"Understanding the domain","D":"All of the above"},"marks":1},{"id":"uni-futa-fsen106-0113","type":"mcq","stem":"The example 'The system shall support a large number of users' is problematic because:","options":{"A":"It uses SHALL","B":"'Large' is ambiguous — does it mean 10, 10,000, or 1 million?","C":"It is too short","D":"It uses passive voice"},"marks":1},{"id":"uni-futa-fsen106-0114","type":"mcq","stem":"Requirements management is the process of:","options":{"A":"Preventing requirements from changing","B":"Managing changing requirements during the RE process and throughout the system development lifecycle","C":"Eliminating stakeholders","D":"Writing source code"},"marks":1},{"id":"uni-futa-fsen106-0115","type":"mcq","stem":"To check verifiability, you should:","options":{"A":"Draft a test case for each requirement","B":"Send a survey","C":"Skip the check","D":"Build a prototype"},"marks":1},{"id":"uni-futa-fsen106-0116","type":"mcq","stem":"Step 2 of the change management process is:","options":{"A":"Problem analysis","B":"Change analysis and costing","C":"Change implementation","D":"Public review"},"marks":1},{"id":"uni-futa-fsen106-0117","type":"mcq","stem":"Requirements elicitation is also called:","options":{"A":"Requirements validation","B":"Requirements discovery or requirements gathering","C":"Requirements management","D":"Requirements specification"},"marks":1},{"id":"uni-futa-fsen106-0118","type":"mcq","stem":"Functional requirements depend on:","options":{"A":"The type of software being developed","B":"Who the users are","C":"The overall type of system","D":"All of the above"},"marks":1},{"id":"uni-futa-fsen106-0119","type":"mcq","stem":"Which technique is BEST for resolving conflicts across many stakeholder groups?","options":{"A":"Ethnography","B":"Workshops with a skilled facilitator","C":"Questionnaires","D":"Mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0120","type":"mcq","stem":"The change management process has how many steps?","options":{"A":"Two","B":"Three","C":"Four","D":"Five"},"marks":1},{"id":"uni-futa-fsen106-0121","type":"mcq","stem":"Which is an example of a security requirement?","options":{"A":"The system shall respond in under 2 seconds","B":"All patient data shall be encrypted at rest using AES-256; all connections shall use TLS 1.3 or higher","C":"The system shall run on Windows 10","D":"Medical staff shall be trained in 4 hours"},"marks":1},{"id":"uni-futa-fsen106-0122","type":"mcq","stem":"A railway signalling system must comply with safety interlocking rules. This is an example of:","options":{"A":"Functional requirement","B":"Domain requirement","C":"Organisational requirement","D":"Usability requirement"},"marks":1},{"id":"uni-futa-fsen106-0123","type":"mcq","stem":"An ambiguous requirement typically:","options":{"A":"Has exactly one possible interpretation","B":"Has more than one possible interpretation","C":"Uses SHALL","D":"Is always testable"},"marks":1},{"id":"uni-futa-fsen106-0124","type":"mcq","stem":"Which validation technique is most cost-effective when done early?","options":{"A":"Prototyping","B":"Requirements reviews","C":"Automated analysis","D":"Test-case generation"},"marks":1},{"id":"uni-futa-fsen106-0125","type":"mcq","stem":"The output of RE feeds directly into:","options":{"A":"Marketing","B":"System design and validation planning","C":"Customer billing","D":"Employee salaries"},"marks":1},{"id":"uni-futa-fsen106-0126","type":"mcq","stem":"Requirements volatility means that requirements:","options":{"A":"Never change","B":"Change during analysis as the business environment evolves","C":"Only change after deployment","D":"Only change in agile projects"},"marks":1},{"id":"uni-futa-fsen106-0127","type":"mcq","stem":"Which is NOT a stakeholder group listed in FSEN 106 as using the SRD?","options":{"A":"System customers","B":"System managers","C":"System test engineers","D":"Marketing teams"},"marks":1},{"id":"uni-futa-fsen106-0128","type":"mcq","stem":"Requirements validation asks:","options":{"A":"'Are we building the system right?'","B":"'Are we building the right system?'","C":"'Is the code fast enough?'","D":"'Is the budget sufficient?'"},"marks":1},{"id":"uni-futa-fsen106-0129","type":"mcq","stem":"Which is the BEST example of a measurable non-functional requirement?","options":{"A":"The system shall be fast","B":"The system shall respond to user input within 200 milliseconds under normal load","C":"The system shall be reliable","D":"The system shall be easy to use"},"marks":1},{"id":"uni-futa-fsen106-0130","type":"mcq","stem":"When a change is implemented, the system is:","options":{"A":"Released immediately","B":"Retested in all affected areas; version control records the change history","C":"Cancelled","D":"Marketed again"},"marks":1},{"id":"uni-futa-fsen106-0131","type":"mcq","stem":"Step 1 of the change management process is:","options":{"A":"Change implementation","B":"Problem analysis and change specification","C":"Change acceptance or rejection","D":"Costing"},"marks":1},{"id":"uni-futa-fsen106-0132","type":"mcq","stem":"A hospital system correctly lists all appointments (functional) but is too slow to be usable. This is an example of:","options":{"A":"Functional failure","B":"Non-functional failure","C":"Domain failure","D":"User requirement failure"},"marks":1},{"id":"uni-futa-fsen106-0133","type":"mcq","stem":"Some requirements may be deferred to:","options":{"A":"Be forgotten","B":"Future releases","C":"Be deleted","D":"Be implemented by another team"},"marks":1},{"id":"uni-futa-fsen106-0134","type":"mcq","stem":"Design description languages are:","options":{"A":"The most common requirements notation","B":"Rarely used for requirements; more appropriate for system design and algorithm specification","C":"Used only for user requirements","D":"The IEEE 830 standard"},"marks":1},{"id":"uni-futa-fsen106-0135","type":"mcq","stem":"The four generic activities common to all RE processes are:","options":{"A":"Design, code, test, deploy","B":"Elicitation, analysis, validation, management","C":"Planning, scheduling, tracking, closing","D":"Interview, document, review, sign-off"},"marks":1},{"id":"uni-futa-fsen106-0136","type":"mcq","stem":"Different stakeholders have:","options":{"A":"Identical requirements","B":"Different priorities and conflicting views","C":"No requirements","D":"Only non-functional requirements"},"marks":1},{"id":"uni-futa-fsen106-0137","type":"mcq","stem":"Ethnography reveals:","options":{"A":"Only explicit requirements","B":"Social and political constraints on the system","C":"Source code defects","D":"Database performance issues"},"marks":1},{"id":"uni-futa-fsen106-0138","type":"mcq","stem":"Which statement about NFRs is TRUE?","options":{"A":"NFRs apply only to single features","B":"Even if every FR is perfectly implemented, the system can still fail if NFRs are not met","C":"NFRs are less critical than FRs","D":"NFRs cannot be tested"},"marks":1},{"id":"uni-futa-fsen106-0139","type":"mcq","stem":"Which of the following is NOT a consequence of poorly engineered requirements?","options":{"A":"Failing to meet user expectations","B":"Exceeding budget","C":"Missing deadlines","D":"Improving code readability"},"marks":1},{"id":"uni-futa-fsen106-0140","type":"mcq","stem":"Open interviews allow:","options":{"A":"Pre-defined questions only","B":"Free discussion to explore topics in depth","C":"Only yes/no answers","D":"Only written responses"},"marks":1},{"id":"uni-futa-fsen106-0141","type":"mcq","stem":"UML graphical notations for requirements include:","options":{"A":"Use-case diagrams, sequence diagrams, activity diagrams, state charts","B":"Only class diagrams","C":"Only ER diagrams","D":"Only flowcharts"},"marks":1},{"id":"uni-futa-fsen106-0142","type":"mcq","stem":"The Glossary section of an SRD:","options":{"A":"Lists all technical and domain terms alphabetically","B":"Contains source code","C":"Describes the user interface","D":"Defines the project budget"},"marks":1},{"id":"uni-futa-fsen106-0143","type":"mcq","stem":"Changes to baselined requirements must go through:","options":{"A":"The change management process","B":"Immediate implementation","C":"Public voting","D":"No process"},"marks":1},{"id":"uni-futa-fsen106-0144","type":"mcq","stem":"Unstated assumptions are dangerous because:","options":{"A":"They are explicitly documented","B":"Stakeholders assume they are obvious and will be included automatically, but they may not be","C":"They are always testable","D":"They have no impact on the system"},"marks":1},{"id":"uni-futa-fsen106-0145","type":"mcq","stem":"Poor requirements are a leading cause of:","options":{"A":"Project failure","B":"Faster delivery","C":"Higher user satisfaction","D":"Lower project costs"},"marks":1},{"id":"uni-futa-fsen106-0146","type":"mcq","stem":"The System Models section of an SRD typically includes:","options":{"A":"Data flow diagrams, ER diagrams, UML use case and sequence diagrams","B":"Source code listings","C":"Project budgets","D":"Marketing materials"},"marks":1},{"id":"uni-futa-fsen106-0147","type":"mcq","stem":"Which validation technique is particularly effective for usability requirements?","options":{"A":"Reviews","B":"Prototyping","C":"Automated analysis","D":"Mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0148","type":"mcq","stem":"The iterative nature of RE is:","options":{"A":"A flaw to be eliminated","B":"A feature, not a flaw","C":"Only present in agile projects","D":"Required only for safety-critical systems"},"marks":1},{"id":"uni-futa-fsen106-0149","type":"mcq","stem":"The SRD should describe:","options":{"A":"Only the user interface","B":"What the system should do, not how it achieves its goals","C":"The internal algorithms in detail","D":"Only the database schema"},"marks":1},{"id":"uni-futa-fsen106-0150","type":"mcq","stem":"To check realism, you should:","options":{"A":"Validate with developers and architects; cost unrealistic delivery","B":"Build a prototype only","C":"Send a survey","D":"Skip the check"},"marks":1},{"id":"uni-futa-fsen106-0151","type":"mcq","stem":"An example of an untestable requirement is:","options":{"A":"The system shall respond within 200 ms","B":"The system shall be user-friendly","C":"The system shall support 500 concurrent users","D":"The system shall encrypt data using AES-256"},"marks":1},{"id":"uni-futa-fsen106-0152","type":"mcq","stem":"Use cases are a UML technique that:","options":{"A":"Identify actors and describe their interactions with the system","B":"Are the same as scenarios","C":"Are informal narratives only","D":"Replace the SRD entirely"},"marks":1},{"id":"uni-futa-fsen106-0153","type":"mcq","stem":"Tool support for requirements management is essential because:","options":{"A":"Manual tracking is sufficient for large systems","B":"Large systems involve large volumes of information that manual processes cannot handle","C":"Tools are optional","D":"Tools are too expensive"},"marks":1},{"id":"uni-futa-fsen106-0154","type":"mcq","stem":"During requirements analysis, conflicting requirements from different stakeholders must be:","options":{"A":"Ignored","B":"Negotiated and agreed upon","C":"Documented but never resolved","D":"Decided by the developer unilaterally"},"marks":1},{"id":"uni-futa-fsen106-0155","type":"mcq","stem":"Which is an example of a usability requirement?","options":{"A":"The system shall respond in under 2 seconds","B":"Medical staff shall be able to perform all primary functions after 4 hours of training","C":"The system shall run on Windows 10","D":"Mean time to failure shall exceed 5,000 hours"},"marks":1},{"id":"uni-futa-fsen106-0156","type":"mcq","stem":"A limitation of interviews is that they may:","options":{"A":"Miss tacit knowledge that stakeholders do not realise they hold","B":"Be too expensive","C":"Take too long","D":"Require too many stakeholders"},"marks":1},{"id":"uni-futa-fsen106-0157","type":"mcq","stem":"A requirement 'The system shall allow users to log in with their student ID' is an example of:","options":{"A":"A system requirement","B":"A user requirement","C":"A non-functional requirement","D":"A domain requirement"},"marks":1},{"id":"uni-futa-fsen106-0158","type":"mcq","stem":"The SRD is the official statement of:","options":{"A":"What the system developers should implement","B":"How the system achieves its goals","C":"The project budget","D":"The deployment schedule"},"marks":1},{"id":"uni-futa-fsen106-0159","type":"mcq","stem":"Functional requirements may also explicitly state:","options":{"A":"What the system should NOT do to prevent misuse","B":"Only positive behaviours","C":"Database schemas","D":"Network configurations"},"marks":1},{"id":"uni-futa-fsen106-0160","type":"mcq","stem":"The SRD serves as a communication bridge between:","options":{"A":"Only developers and testers","B":"All stakeholders involved in a software project","C":"Only customers and managers","D":"Only testers and maintainers"},"marks":1},{"id":"uni-futa-fsen106-0161","type":"mcq","stem":"Who uses the SRD to develop validation test plans?","options":{"A":"System test engineers","B":"Marketing teams","C":"Customers","D":"Project sponsors"},"marks":1},{"id":"uni-futa-fsen106-0162","type":"mcq","stem":"Which is an example of a performance requirement?","options":{"A":"The system shall run on Windows 10","B":"The MHC-PMS shall process up to 1,000 patient records per minute under normal load","C":"All patient data shall be encrypted at rest using AES-256","D":"Medical staff shall be able to perform all primary functions after 4 hours of training"},"marks":1},{"id":"uni-futa-fsen106-0163","type":"mcq","stem":"A System Requirements Specification section in an IEEE 830 SRD contains:","options":{"A":"Both functional and non-functional requirements in precise, testable form","B":"Only marketing copy","C":"Only the project budget","D":"Only the deployment plan"},"marks":1},{"id":"uni-futa-fsen106-0164","type":"mcq","stem":"In UML, an actor is:","options":{"A":"A person or external system that interacts with the system","B":"A database table","C":"A use case","D":"A developer"},"marks":1},{"id":"uni-futa-fsen106-0165","type":"mcq","stem":"A standard format for every requirement in the document:","options":{"A":"Increases ambiguity","B":"Makes the document easier to read and reduces missing information","C":"Is prohibited by IEEE 830","D":"Is only needed for non-functional requirements"},"marks":1},{"id":"uni-futa-fsen106-0166","type":"mcq","stem":"Validation checks for which FIVE properties?","options":{"A":"Validity, Consistency, Completeness, Realism, Verifiability","B":"Validity, Cost, Coverage, Reuse, Verification","C":"Vision, Consistency, Coverage, Realism, Value","D":"Value, Cost, Completeness, Reuse, Verification"},"marks":1},{"id":"uni-futa-fsen106-0167","type":"mcq","stem":"Automated analysis tools (e.g., IBM DOORS) are useful for:","options":{"A":"Small documents with few requirements","B":"Large documents with hundreds or thousands of requirements where manual review is impractical","C":"Replacing the SRD","D":"User interface design"},"marks":1},{"id":"uni-futa-fsen106-0168","type":"mcq","stem":"Which of the following statements about requirements is FALSE?","options":{"A":"Requirements describe what the system should do","B":"Requirements describe constraints under which the system operates","C":"Requirements are always static once written","D":"Requirements can range from abstract to detailed mathematical specifications"},"marks":1},{"id":"uni-futa-fsen106-0169","type":"mcq","stem":"The people who pay for the system are not always the same people who use it. This leads to:","options":{"A":"Fewer requirements","B":"Conflicting priorities between sponsors and users","C":"Faster development","D":"Lower costs"},"marks":1},{"id":"uni-futa-fsen106-0170","type":"mcq","stem":"Which elicitation technique is mentioned in FSEN 106 as a 'formal UML technique'?","options":{"A":"Interviews","B":"Ethnography","C":"Use cases (UML)","D":"Prototyping"},"marks":1},{"id":"uni-futa-fsen106-0171","type":"mcq","stem":"System test engineers use the SRD to:","options":{"A":"Modify the system after deployment","B":"Develop validation test plans and test cases directly from requirements","C":"Plan bids","D":"Sign off on the contract"},"marks":1},{"id":"uni-futa-fsen106-0172","type":"mcq","stem":"An MHC-PMS requirement that 'a user shall be able to search the appointments lists for all clinics' is:","options":{"A":"A functional requirement","B":"A non-functional requirement","C":"A domain requirement only","D":"An external requirement"},"marks":1},{"id":"uni-futa-fsen106-0173","type":"mcq","stem":"Organisational and political factors may:","options":{"A":"Improve requirements quality","B":"Influence what requirements are stated or suppressed","C":"Eliminate conflicts","D":"Replace the need for elicitation"},"marks":1},{"id":"uni-futa-fsen106-0174","type":"mcq","stem":"Step 4 of the change management process is:","options":{"A":"Change implementation","B":"Problem analysis","C":"Costing","D":"Acceptance"},"marks":1},{"id":"uni-futa-fsen106-0175","type":"mcq","stem":"The dual role of requirements means they must be written to be:","options":{"A":"Open to interpretation AND precisely defined","B":"Vague AND short","C":"Technical AND verbose","D":"Abstract AND ambiguous"},"marks":1},{"id":"uni-futa-fsen106-0176","type":"mcq","stem":"Domain requirements may be expressed in:","options":{"A":"Plain English only","B":"The technical language of the application domain","C":"Java pseudocode only","D":"Mathematical notation only"},"marks":1},{"id":"uni-futa-fsen106-0177","type":"mcq","stem":"Which activity produces an agreed, prioritised requirements set with documented conflict resolutions?","options":{"A":"Discovery","B":"Classification","C":"Prioritisation and negotiation","D":"Documentation"},"marks":1},{"id":"uni-futa-fsen106-0178","type":"mcq","stem":"Which IEEE standard governs SRS structure?","options":{"A":"IEEE 802","B":"IEEE 830","C":"IEEE 12207","D":"IEEE 1016"},"marks":1},{"id":"uni-futa-fsen106-0179","type":"mcq","stem":"Ethnography is:","options":{"A":"A formal interview technique","B":"An observational technique where an analyst embeds in the working environment","C":"A statistical survey method","D":"A prototyping method"},"marks":1},{"id":"uni-futa-fsen106-0180","type":"mcq","stem":"Scenarios and stories help stakeholders:","options":{"A":"Avoid thinking about requirements","B":"Concretise vague needs by thinking through specific examples","C":"Skip the validation step","D":"Replace formal documentation"},"marks":1},{"id":"uni-futa-fsen106-0181","type":"mcq","stem":"System maintenance engineers use the SRD to:","options":{"A":"Understand system structure and design rationale for future modifications","B":"Plan bids for the system","C":"Sign off on the contract","D":"Develop test plans"},"marks":1},{"id":"uni-futa-fsen106-0182","type":"mcq","stem":"Changes during development require:","options":{"A":"Ignoring them","B":"Management to track, assess, and incorporate them","C":"Starting the project over","D":"Firing the customer"},"marks":1},{"id":"uni-futa-fsen106-0183","type":"mcq","stem":"Which statement best describes 'requirements engineering'?","options":{"A":"A one-time activity at project start","B":"An ongoing spiral process throughout development","C":"Only performed during testing","D":"Only performed by project managers"},"marks":1},{"id":"uni-futa-fsen106-0184","type":"mcq","stem":"Requirements specification is the process of:","options":{"A":"Implementing the system in code","B":"Writing down user and system requirements in a formal requirements document","C":"Testing the system against requirements","D":"Deploying the system to production"},"marks":1},{"id":"uni-futa-fsen106-0185","type":"mcq","stem":"Which is NOT a characteristic of functional requirements?","options":{"A":"Describe services","B":"Define system reactions to inputs","C":"Specify execution speed in milliseconds","D":"Describe behaviour in specific situations"},"marks":1},{"id":"uni-futa-fsen106-0186","type":"mcq","stem":"Which activity involves working with stakeholders to discover requirements?","options":{"A":"Requirements elicitation","B":"Requirements validation","C":"Requirements management","D":"Requirements documentation"},"marks":1},{"id":"uni-futa-fsen106-0187","type":"mcq","stem":"A requirement is testable if:","options":{"A":"You can write a test that confirms whether the requirement is met","B":"It uses SHALL","C":"It is short","D":"It is in natural language"},"marks":1},{"id":"uni-futa-fsen106-0188","type":"mcq","stem":"Requirements classification groups requirements based on:","options":{"A":"Random assignment","B":"Related functionality, subsystems, or requirement types","C":"Alphabetical order","D":"Date of discovery"},"marks":1},{"id":"uni-futa-fsen106-0189","type":"mcq","stem":"Missing requirements result in:","options":{"A":"Faster delivery","B":"Features the customer expected but never received","C":"Lower maintenance costs","D":"Improved test coverage"},"marks":1},{"id":"uni-futa-fsen106-0190","type":"mcq","stem":"SRS stands for:","options":{"A":"Software Requirements Specification","B":"System Reliability Standards","C":"Software Resource Scheduler","D":"Secure Requirements System"},"marks":1},{"id":"uni-futa-fsen106-0191","type":"mcq","stem":"Requirements management does NOT try to:","options":{"A":"Track changes","B":"Assess impact of changes","C":"Prevent change (which is impossible)","D":"Incorporate approved changes in a controlled way"},"marks":1},{"id":"uni-futa-fsen106-0192","type":"mcq","stem":"An SRD differs from a design document because the SRD:","options":{"A":"Specifies HOW the system works","B":"Specifies WHAT the system should do","C":"Contains source code","D":"Includes deployment scripts"},"marks":1},{"id":"uni-futa-fsen106-0193","type":"mcq","stem":"Following IEEE 830 ensures the SRD has:","options":{"A":"Completeness and consistency","B":"Source code listings","C":"Marketing plans","D":"Deployment scripts"},"marks":1},{"id":"uni-futa-fsen106-0194","type":"mcq","stem":"The phrase 'requirements engineering bridges the gap between' emphasises that RE:","options":{"A":"Eliminates the need for testing","B":"Translates customer needs into implementable specifications","C":"Replaces system design","D":"Removes the need for stakeholders"},"marks":1},{"id":"uni-futa-fsen106-0195","type":"mcq","stem":"Requirements must be written clearly enough to be understandable to:","options":{"A":"Only developers","B":"Both customers (who validate) and developers (who implement)","C":"Only customers","D":"Only testers"},"marks":1},{"id":"uni-futa-fsen106-0196","type":"mcq","stem":"Effective requirements management requires:","options":{"A":"Establishing policies and processes before development begins","B":"Waiting until changes occur","C":"Ignoring traceability","D":"Avoiding tools"},"marks":1},{"id":"uni-futa-fsen106-0197","type":"mcq","stem":"Step 3 of the change management process is:","options":{"A":"Change acceptance or rejection (with documented rationale)","B":"Problem analysis","C":"Costing","D":"Implementation"},"marks":1},{"id":"uni-futa-fsen106-0198","type":"mcq","stem":"The Index section of an SRD provides:","options":{"A":"Navigation aids including alphabetical and requirements indexes","B":"Project schedules","C":"Source code","D":"Network diagrams"},"marks":1},{"id":"uni-futa-fsen106-0199","type":"mcq","stem":"Validity check asks:","options":{"A":"'Are there any conflicting requirements?'","B":"'Will satisfying this requirement actually deliver value to the user?'","C":"'Is anything missing?'","D":"'Can a test be written?'"},"marks":1},{"id":"uni-futa-fsen106-0200","type":"mcq","stem":"New legislation or updated regulations may require:","options":{"A":"System modifications after requirements have been agreed","B":"Cancellation of the project","C":"Faster delivery","D":"Lower costs"},"marks":1},{"id":"uni-futa-fsen106-0201","type":"mcq","stem":"Organisational requirements arise from:","options":{"A":"External laws and regulations","B":"Organisational policies and procedures","C":"Hardware constraints","D":"User interface design"},"marks":1},{"id":"uni-futa-fsen106-0202","type":"mcq","stem":"Automated analysis tools can check for:","options":{"A":"Duplicate requirements","B":"Missing attributes","C":"Broken cross-references between related requirements","D":"All of the above"},"marks":1},{"id":"uni-futa-fsen106-0203","type":"mcq","stem":"The Introduction section of an SRD describes:","options":{"A":"The need for the system, target users, constraints, assumptions, dependencies","B":"Version history only","C":"Detailed algorithms","D":"Marketing strategy"},"marks":1},{"id":"uni-futa-fsen106-0204","type":"mcq","stem":"Pre-requirements traceability links requirements to:","options":{"A":"Their source","B":"Design components","C":"Test cases","D":"Source code"},"marks":1},{"id":"uni-futa-fsen106-0205","type":"mcq","stem":"Use case diagrams give:","options":{"A":"Detailed interaction steps","B":"An overview of system scope and actors","C":"Source code","D":"Database schemas"},"marks":1},{"id":"uni-futa-fsen106-0206","type":"mcq","stem":"External requirements arise from:","options":{"A":"Internal organisational policies","B":"Factors external to the system such as laws and regulations","C":"Hardware choices","D":"Programming language choice"},"marks":1},{"id":"uni-futa-fsen106-0207","type":"mcq","stem":"Prototyping may reveal that:","options":{"A":"Stakeholders imagined the system differently from how developers understood the requirements","B":"The system is already perfect","C":"No more requirements are needed","D":"The SRD is unnecessary"},"marks":1},{"id":"uni-futa-fsen106-0208","type":"mcq","stem":"Requirements validation is described as one of the highest-ROI activities because:","options":{"A":"It is the cheapest activity","B":"Time and effort invested in thorough validation pays dividends throughout the rest of the project","C":"It eliminates the need for testing","D":"It is performed only once"},"marks":1},{"id":"uni-futa-fsen106-0209","type":"mcq","stem":"Mistakes made during the requirements phase are described as:","options":{"A":"Easily corrected during testing","B":"The most costly to correct later in the lifecycle","C":"Impossible to correct after deployment","D":"Less expensive than design errors"},"marks":1},{"id":"uni-futa-fsen106-0210","type":"mcq","stem":"Test-case generation as a validation technique serves to:","options":{"A":"Replace requirements","B":"Reveal unmeasurable, ambiguous, or incomplete requirements","C":"Eliminate the need for testing later","D":"Replace the SRD"},"marks":1},{"id":"uni-futa-fsen106-0211","type":"mcq","stem":"Mixing WHAT and HOW in the SRD is:","options":{"A":"Best practice","B":"A common mistake that leads to premature design commitments","C":"Required by IEEE 830","D":"Recommended for agile projects"},"marks":1},{"id":"uni-futa-fsen106-0212","type":"mcq","stem":"Which of the following best describes RE as a 'spiral activity'?","options":{"A":"RE happens once at project start","B":"RE cycles back as new requirements emerge","C":"RE only happens at project end","D":"RE is linear and one-directional"},"marks":1},{"id":"uni-futa-fsen106-0213","type":"mcq","stem":"Including rationale for each requirement helps:","options":{"A":"Developers make correct trade-off decisions","B":"Reduce document length","C":"Avoid using SHALL","D":"Eliminate the need for testing"},"marks":1},{"id":"uni-futa-fsen106-0214","type":"mcq","stem":"A requirement that the system use a specific coding standard is an:","options":{"A":"Organisational requirement","B":"External requirement","C":"Product requirement","D":"Domain requirement"},"marks":1},{"id":"uni-futa-fsen106-0215","type":"mcq","stem":"Which keyword is used for desirable but optional requirements?","options":{"A":"SHALL","B":"SHOULD","C":"MUST","D":"WILL"},"marks":1},{"id":"uni-futa-fsen106-0216","type":"mcq","stem":"At key project milestones, the requirements set is formally:","options":{"A":"Deleted","B":"Baselined","C":"Made public","D":"Translated"},"marks":1},{"id":"uni-futa-fsen106-0217","type":"mcq","stem":"Use case descriptions provide:","options":{"A":"An overview only","B":"Detailed interaction steps, preconditions, and postconditions","C":"Source code","D":"Marketing copy"},"marks":1},{"id":"uni-futa-fsen106-0218","type":"mcq","stem":"A limitation of questionnaires is that they:","options":{"A":"Cannot follow up on interesting answers without additional contact","B":"Are too expensive","C":"Require too few stakeholders","D":"Are illegal in most jurisdictions"},"marks":1},{"id":"uni-futa-fsen106-0219","type":"mcq","stem":"Stakeholders may not be able to articulate requirements until they see a:","options":{"A":"Final product","B":"Prototype","C":"Marketing brochure","D":"Database schema"},"marks":1},{"id":"uni-futa-fsen106-0220","type":"mcq","stem":"If domain requirements are not satisfied, the system may be:","options":{"A":"Unworkable even if technically correct from a software perspective","B":"Faster than expected","C":"More secure","D":"Easier to maintain"},"marks":1},{"id":"uni-futa-fsen106-0221","type":"mcq","stem":"A large safety-critical aerospace system requires:","options":{"A":"The same RE process as a small web app","B":"A very different RE process than an agile web application startup","C":"No RE process","D":"Only requirements management"},"marks":1},{"id":"uni-futa-fsen106-0222","type":"mcq","stem":"Change analysis and costing uses:","options":{"A":"Traceability information to identify all affected requirements, design, code, and tests","B":"Marketing data","C":"Random guessing","D":"Customer billing records"},"marks":1},{"id":"uni-futa-fsen106-0223","type":"mcq","stem":"Interviews are best suited for:","options":{"A":"Understanding high-level goals, priorities, and known requirements","B":"Observing implicit work practices","C":"Statistical analysis of large populations","D":"Resolving conflicts across many stakeholder groups simultaneously"},"marks":1},{"id":"uni-futa-fsen106-0224","type":"mcq","stem":"Requirements analysis involves:","options":{"A":"Implementing requirements in code","B":"Checking collected requirements for consistency, completeness, and conflicts","C":"Deploying the system","D":"Writing the user manual"},"marks":1},{"id":"uni-futa-fsen106-0225","type":"mcq","stem":"An MHC-PMS requirement that 'each staff member shall be uniquely identified by an 8-digit employee number' is:","options":{"A":"A functional requirement","B":"A non-functional requirement","C":"An external requirement","D":"A usability requirement"},"marks":1},{"id":"uni-futa-fsen106-0226","type":"mcq","stem":"Which is NOT a category of non-functional requirement mentioned in FSEN 106?","options":{"A":"Product requirements","B":"Organisational requirements","C":"External requirements","D":"Marketing requirements"},"marks":1},{"id":"uni-futa-fsen106-0227","type":"mcq","stem":"Which is NOT a typical problem caused by poor requirements?","options":{"A":"Project exceeds budget","B":"System fails to meet user expectations","C":"Project misses deadlines","D":"Code compiles faster"},"marks":1},{"id":"uni-futa-fsen106-0228","type":"mcq","stem":"System requirements specify:","options":{"A":"Only the budget and timeline","B":"Exactly HOW the system behaves including error handling, data formats, and protocols","C":"Only the user interface layout","D":"Only marketing claims"},"marks":1},{"id":"uni-futa-fsen106-0229","type":"mcq","stem":"Research consistently shows that requirements errors are:","options":{"A":"The cheapest type of software defect","B":"The most expensive type of software defect","C":"Easier to fix than coding errors","D":"Found only during user acceptance testing"},"marks":1},{"id":"uni-futa-fsen106-0230","type":"mcq","stem":"Words like 'will' or 'may' in requirements are:","options":{"A":"Recommended for clarity","B":"Ambiguous and should be avoided","C":"Mandatory per IEEE 830","D":"Required for all functional requirements"},"marks":1},{"id":"uni-futa-fsen106-0231","type":"mcq","stem":"Requirements elicitation and analysis is challenging because:","options":{"A":"Stakeholders always know precisely what they want","B":"Stakeholders often do not know precisely what they want","C":"Requirements never change","D":"Domain language is always clear to developers"},"marks":1},{"id":"uni-futa-fsen106-0232","type":"mcq","stem":"The output of the requirements engineering process is:","options":{"A":"Source code","B":"Descriptions of system services and constraints","C":"Test cases only","D":"User manuals"},"marks":1},{"id":"uni-futa-fsen106-0233","type":"mcq","stem":"Which is NOT one of the four core RE activities?","options":{"A":"Elicitation","B":"Analysis","C":"Compilation","D":"Validation"},"marks":1},{"id":"uni-futa-fsen106-0234","type":"mcq","stem":"The change management process decides:","options":{"A":"Whether a proposed change should be accepted, deferred, or rejected based on cost-benefit analysis","B":"Whether to cancel the project","C":"Whether to fire developers","D":"Whether to skip testing"},"marks":1},{"id":"uni-futa-fsen106-0235","type":"mcq","stem":"Baseline management provides:","options":{"A":"Stability and prevents scope creep","B":"Faster development","C":"Lower costs","D":"Better UX"},"marks":1},{"id":"uni-futa-fsen106-0236","type":"mcq","stem":"Which technique is BEST for discovering implicit work practices?","options":{"A":"Closed interviews","B":"Ethnography","C":"Questionnaires","D":"Mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0237","type":"mcq","stem":"Software projects without properly engineered requirements risk:","options":{"A":"Delivering products that fail to meet user expectations","B":"Exceeding budget","C":"Missing deadlines","D":"All of the above"},"marks":1},{"id":"uni-futa-fsen106-0238","type":"mcq","stem":"Prioritisation and negotiation output:","options":{"A":"Raw stakeholder needs","B":"Agreed, prioritised requirements with conflict resolutions documented","C":"Source code","D":"Test cases"},"marks":1},{"id":"uni-futa-fsen106-0239","type":"mcq","stem":"Non-functional requirements often apply to:","options":{"A":"A single feature only","B":"The system as a whole rather than individual features","C":"Only the user interface","D":"Only the database layer"},"marks":1},{"id":"uni-futa-fsen106-0240","type":"mcq","stem":"A requirement that the system comply with GDPR is an:","options":{"A":"Organisational requirement","B":"External requirement","C":"Product requirement","D":"Domain requirement"},"marks":1},{"id":"uni-futa-fsen106-0241","type":"mcq","stem":"Domain requirements can introduce:","options":{"A":"New functional requirements","B":"Constraints to existing requirements","C":"Specific computations using domain formulas","D":"All of the above"},"marks":1},{"id":"uni-futa-fsen106-0242","type":"mcq","stem":"The SRD should include:","options":{"A":"Only user requirements","B":"Only system requirements","C":"Both user requirements and system requirements","D":"Only marketing requirements"},"marks":1},{"id":"uni-futa-fsen106-0243","type":"mcq","stem":"Requirements documentation produces:","options":{"A":"A final deployed system","B":"A draft requirements document suitable for review, validation, and baseline agreement","C":"Source code","D":"Marketing materials"},"marks":1},{"id":"uni-futa-fsen106-0244","type":"mcq","stem":"User requirements focus on:","options":{"A":"HOW the system behaves including error handling","B":"WHAT the system should do at a high level, avoiding implementation details","C":"Database schema design","D":"Network protocols"},"marks":1},{"id":"uni-futa-fsen106-0245","type":"mcq","stem":"User requirements may include:","options":{"A":"Abstract descriptions of system services and operational constraints","B":"Database schema definitions","C":"Source code listings","D":"Deployment scripts"},"marks":1},{"id":"uni-futa-fsen106-0246","type":"mcq","stem":"Prototyping is particularly effective when:","options":{"A":"Stakeholders find it difficult to articulate requirements in the abstract","B":"Requirements are perfectly clear","C":"The system is safety-critical","D":"The customer is a mathematician"},"marks":1},{"id":"uni-futa-fsen106-0247","type":"mcq","stem":"Which type of requirement specifies how the system must respond to particular inputs?","options":{"A":"Functional requirement","B":"Performance requirement","C":"Portability requirement","D":"Organisational requirement"},"marks":1},{"id":"uni-futa-fsen106-0248","type":"mcq","stem":"An IEEE 830 SRD's Index section primarily provides:","options":{"A":"Source code references","B":"Navigation aids including alphabetical and requirements indexes","C":"Project budget breakdown","D":"Deployment scripts"},"marks":1},{"id":"uni-futa-fsen106-0249","type":"mcq","stem":"Which elicitation technique is BEST for surfacing social and political constraints on the system?","options":{"A":"Closed interviews","B":"Ethnography","C":"Questionnaires","D":"Mathematical specification"},"marks":1},{"id":"uni-futa-fsen106-0250","type":"mcq","stem":"When a stakeholder says 'the system should be fast', the requirements engineer should:","options":{"A":"Accept 'fast' as the requirement","B":"Replace 'fast' with a measurable criterion like 'respond within 200ms'","C":"Drop the requirement","D":"Convert it to a domain requirement"},"marks":1}]}
+{
+  "code": "uni-futa-fsen106-bank",
+  "title": "FUTA FSEN 106 | Course Question Bank",
+  "version": 1,
+  "questionCount": 250,
+  "totalMarks": 250,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-fsen106-0001",
+      "type": "mcq",
+      "stem": "Which is an example of a portability requirement?",
+      "options": {
+        "A": "The system shall respond in under 2 seconds",
+        "B": "The system shall run on Windows 10, Ubuntu 22.04, and macOS 14 without modification",
+        "C": "Mean time to failure shall exceed 5,000 hours",
+        "D": "The system shall encrypt data using AES-256"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Portability requirements specify how easily the system can be moved to new environments."
+    },
+    {
+      "id": "uni-futa-fsen106-0002",
+      "type": "mcq",
+      "stem": "User requirements should avoid:",
+      "options": {
+        "A": "Natural language",
+        "B": "Computer jargon",
+        "C": "Diagrams",
+        "D": "Tables"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "User requirements must be readable by non-technical customers."
+    },
+    {
+      "id": "uni-futa-fsen106-0003",
+      "type": "mcq",
+      "stem": "The cost amplification of late requirements errors occurs because fixing them requires:",
+      "options": {
+        "A": "Only updating the requirements document",
+        "B": "Redesigning architecture, rewriting code, redoing tests, and potentially retraining users",
+        "C": "Only adding a new test case",
+        "D": "Only updating the user manual"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Late fixes ripple through architecture, code, tests, and training."
+    },
+    {
+      "id": "uni-futa-fsen106-0004",
+      "type": "mcq",
+      "stem": "The Appendices section of an SRD contains:",
+      "options": {
+        "A": "Detailed supporting information like hardware specs, database schemas, and external interface descriptions",
+        "B": "The main user requirements",
+        "C": "The project budget summary",
+        "D": "Marketing analysis"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Appendices hold supporting material that would clutter the main document."
+    },
+    {
+      "id": "uni-futa-fsen106-0005",
+      "type": "mcq",
+      "stem": "Natural language is the most commonly used notation because:",
+      "options": {
+        "A": "It is completely unambiguous",
+        "B": "It is accessible to both technical and non-technical stakeholders",
+        "C": "It is required by IEEE 830",
+        "D": "It is the most precise notation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Accessibility is the main advantage of natural language."
+    },
+    {
+      "id": "uni-futa-fsen106-0006",
+      "type": "mcq",
+      "stem": "The acronym VCCV stands for:",
+      "options": {
+        "A": "Verification, Code, Coverage, Validation",
+        "B": "Validity, Consistency, Completeness, Verifiability",
+        "C": "Value, Cost, Compliance, Verification",
+        "D": "Vision, Context, Constraints, Validation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "VCCV is the FSEN 106 mnemonic for the four validation checks (plus Realism)."
+    },
+    {
+      "id": "uni-futa-fsen106-0007",
+      "type": "mcq",
+      "stem": "Which validation technique creates a test plan that can be used directly when testing the final system?",
+      "options": {
+        "A": "Reviews",
+        "B": "Test-case generation",
+        "C": "Automated analysis",
+        "D": "Prototyping"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Test cases generated during validation are reused during system testing."
+    },
+    {
+      "id": "uni-futa-fsen106-0008",
+      "type": "mcq",
+      "stem": "Requirements management ensures that changes are:",
+      "options": {
+        "A": "Prevented entirely",
+        "B": "Tracked, assessed, and incorporated in a controlled way",
+        "C": "Implemented immediately without review",
+        "D": "Ignored until deployment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management does not prevent change; it controls it."
+    },
+    {
+      "id": "uni-futa-fsen106-0009",
+      "type": "mcq",
+      "stem": "Requirements validation is the process of:",
+      "options": {
+        "A": "Implementing requirements in code",
+        "B": "Checking that requirements in the SRD define the system the customer actually wants",
+        "C": "Deploying the system",
+        "D": "Writing test cases for the code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Validation confirms the SRD matches customer intent."
+    },
+    {
+      "id": "uni-futa-fsen106-0010",
+      "type": "mcq",
+      "stem": "Which is an example of a reliability requirement?",
+      "options": {
+        "A": "The system shall respond in under 2 seconds",
+        "B": "Mean time to failure shall exceed 5,000 hours; downtime shall not exceed 4 hours per month",
+        "C": "All patient data shall be encrypted at rest",
+        "D": "The system shall run on macOS 14"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reliability requirements cover failure rates and recovery time."
+    },
+    {
+      "id": "uni-futa-fsen106-0011",
+      "type": "mcq",
+      "stem": "Requirements engineering processes vary enormously between:",
+      "options": {
+        "A": "Different programming languages",
+        "B": "Different organisations and types of applications",
+        "C": "Different operating systems",
+        "D": "Different databases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "An aerospace system needs a very different RE process than an agile web app."
+    },
+    {
+      "id": "uni-futa-fsen106-0012",
+      "type": "mcq",
+      "stem": "Consistency check asks:",
+      "options": {
+        "A": "'Will the requirement deliver value?'",
+        "B": "'Can all requirements be satisfied simultaneously? No two requirements should contradict each other.'",
+        "C": "'Is anything missing?'",
+        "D": "'Can the requirement be tested?'"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Consistency means requirements do not conflict."
+    },
+    {
+      "id": "uni-futa-fsen106-0013",
+      "type": "mcq",
+      "stem": "The intended audience for system requirements is:",
+      "options": {
+        "A": "Marketing teams",
+        "B": "Developers and architects",
+        "C": "End customers only",
+        "D": "Investors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System requirements are detailed technical specifications for the development team."
+    },
+    {
+      "id": "uni-futa-fsen106-0014",
+      "type": "mcq",
+      "stem": "Which is NOT a standard section of an IEEE 830 SRD?",
+      "options": {
+        "A": "Preface",
+        "B": "Glossary",
+        "C": "Marketing Plan",
+        "D": "System Requirements Specification"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Marketing is not part of the IEEE 830 SRD structure."
+    },
+    {
+      "id": "uni-futa-fsen106-0015",
+      "type": "mcq",
+      "stem": "Text highlighting in requirements (bold, italic) is used to:",
+      "options": {
+        "A": "Make the document look prettier",
+        "B": "Pick out key terms, actors, and system names",
+        "C": "Replace unique identifiers",
+        "D": "Avoid using SHALL"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Highlighting draws attention to critical elements within requirement text."
+    },
+    {
+      "id": "uni-futa-fsen106-0016",
+      "type": "mcq",
+      "stem": "Validation may reveal missing requirements that require:",
+      "options": {
+        "A": "Skipping the requirement",
+        "B": "New elicitation",
+        "C": "Immediate deployment",
+        "D": "Cancellation of the project"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The iterative nature means validation can trigger new elicitation."
+    },
+    {
+      "id": "uni-futa-fsen106-0017",
+      "type": "mcq",
+      "stem": "Requirements engineering is one of the most critical phases because:",
+      "options": {
+        "A": "It is the cheapest phase",
+        "B": "Mistakes made here are the most costly to correct later",
+        "C": "It requires the fewest people",
+        "D": "It is always completed first"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Requirements errors propagate downstream and amplify in cost."
+    },
+    {
+      "id": "uni-futa-fsen106-0018",
+      "type": "mcq",
+      "stem": "Which is NOT a guideline for writing natural language requirements?",
+      "options": {
+        "A": "Use a standard format consistently",
+        "B": "Distinguish mandatory from desirable",
+        "C": "Avoid computer jargon in user requirements",
+        "D": "Use as many ambiguous words as possible"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Ambiguity should be avoided, not embraced."
+    },
+    {
+      "id": "uni-futa-fsen106-0019",
+      "type": "mcq",
+      "stem": "Finding a requirements error after delivery may cost:",
+      "options": {
+        "A": "The same as fixing it during requirements",
+        "B": "Up to 100 times more than fixing it during requirements",
+        "C": "Less than fixing it during requirements",
+        "D": "Nothing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The cost amplification factor is up to 100x."
+    },
+    {
+      "id": "uni-futa-fsen106-0020",
+      "type": "mcq",
+      "stem": "A requirement that cannot be tested is:",
+      "options": {
+        "A": "Acceptable if it uses SHALL",
+        "B": "Worthless — requirements that cannot be tested are worthless",
+        "C": "Always a domain requirement",
+        "D": "Always an organisational requirement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Untestable requirements cannot be validated."
+    },
+    {
+      "id": "uni-futa-fsen106-0021",
+      "type": "mcq",
+      "stem": "Closed interviews use:",
+      "options": {
+        "A": "Free discussion to explore topics in depth",
+        "B": "Pre-defined questions for systematic information gathering",
+        "C": "Observation only",
+        "D": "Statistical sampling"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Closed interviews follow a structured question set."
+    },
+    {
+      "id": "uni-futa-fsen106-0022",
+      "type": "mcq",
+      "stem": "Ethnography is particularly effective for discovering:",
+      "options": {
+        "A": "High-level goals stakeholders can articulate",
+        "B": "Implicit requirements related to existing work practices that stakeholders take for granted",
+        "C": "Statistical data about user preferences",
+        "D": "Source code defects"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tacit work practices are visible to observers but invisible to interviewers."
+    },
+    {
+      "id": "uni-futa-fsen106-0023",
+      "type": "mcq",
+      "stem": "SRD stands for:",
+      "options": {
+        "A": "Software Requirements Document",
+        "B": "System Reliability Document",
+        "C": "Software Resource Diagram",
+        "D": "System Requirements Design"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SRD = Software Requirements Document, also called SRS (Software Requirements Specification)."
+    },
+    {
+      "id": "uni-futa-fsen106-0024",
+      "type": "mcq",
+      "stem": "Graphical notations add value when:",
+      "options": {
+        "A": "Ambiguity is desired",
+        "B": "Visual clarity adds value, especially for interaction and behavioural requirements",
+        "C": "The system is very small",
+        "D": "The customer cannot read"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diagrams help stakeholders visualise complex interactions."
+    },
+    {
+      "id": "uni-futa-fsen106-0025",
+      "type": "mcq",
+      "stem": "RE processes are:",
+      "options": {
+        "A": "Identical across all organisations",
+        "B": "Varied — different types of systems need different processes",
+        "C": "Always waterfall",
+        "D": "Always agile"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Process choice depends on system type, risk, and organisational context."
+    },
+    {
+      "id": "uni-futa-fsen106-0026",
+      "type": "mcq",
+      "stem": "Each requirement is assigned a unique identifier so it can be:",
+      "options": {
+        "A": "Cross-referenced with other requirements, design components, test cases, and code modules",
+        "B": "Deleted more easily",
+        "C": "Hidden from stakeholders",
+        "D": "Marketed to customers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Unique IDs enable traceability assessments."
+    },
+    {
+      "id": "uni-futa-fsen106-0027",
+      "type": "mcq",
+      "stem": "The System Evolution section of an SRD anticipates:",
+      "options": {
+        "A": "Past bugs",
+        "B": "Future changes and planned evolutionary modifications",
+        "C": "Marketing campaigns",
+        "D": "Employee salaries"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It documents fundamental assumptions and anticipated future requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0028",
+      "type": "mcq",
+      "stem": "Errors in requirements documents are:",
+      "options": {
+        "A": "The cheapest type of software defect",
+        "B": "The most expensive type of software defect",
+        "C": "Easier to fix than code errors",
+        "D": "Only found during deployment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Requirements errors found after delivery can cost 100x more."
+    },
+    {
+      "id": "uni-futa-fsen106-0029",
+      "type": "mcq",
+      "stem": "Prototyping as a validation technique is particularly effective for:",
+      "options": {
+        "A": "Discovering missing requirements and validating usability requirements",
+        "B": "Replacing the SRD",
+        "C": "Mathematical specification",
+        "D": "Code review"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Prototypes make abstract requirements concrete and testable."
+    },
+    {
+      "id": "uni-futa-fsen106-0030",
+      "type": "mcq",
+      "stem": "Which notation is most appropriate for safety-critical avionics software?",
+      "options": {
+        "A": "Natural language",
+        "B": "Mathematical specifications (Z, VDM)",
+        "C": "Structured natural language",
+        "D": "UML use case diagrams"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Safety-critical systems need completely unambiguous formal notation."
+    },
+    {
+      "id": "uni-futa-fsen106-0031",
+      "type": "mcq",
+      "stem": "Workshops and focus groups are useful for:",
+      "options": {
+        "A": "Resolving conflicting viewpoints across stakeholder groups and reaching consensus quickly",
+        "B": "Observing tacit work practices",
+        "C": "Statistical sampling",
+        "D": "Mathematical specification"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A skilled facilitator manages group discussion to reach consensus."
+    },
+    {
+      "id": "uni-futa-fsen106-0032",
+      "type": "mcq",
+      "stem": "Which of the following is a constraint, not a service?",
+      "options": {
+        "A": "The system shall generate monthly invoices",
+        "B": "The system shall use no more than 512 MB of server storage",
+        "C": "The system shall allow users to log in",
+        "D": "The system shall send email confirmations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Storage usage is a constraint on the system, not a service it provides."
+    },
+    {
+      "id": "uni-futa-fsen106-0033",
+      "type": "mcq",
+      "stem": "System managers use the SRD to:",
+      "options": {
+        "A": "Develop validation test plans",
+        "B": "Plan bids, estimate cost and timeline, and plan the development process",
+        "C": "Modify the system after deployment",
+        "D": "Develop test cases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Managers use the SRD for bidding and project planning."
+    },
+    {
+      "id": "uni-futa-fsen106-0034",
+      "type": "mcq",
+      "stem": "Traceability policies define:",
+      "options": {
+        "A": "Relationships between each requirement and between requirements and system design",
+        "B": "Project budget",
+        "C": "Marketing strategy",
+        "D": "Network architecture"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Traceability links enable impact analysis."
+    },
+    {
+      "id": "uni-futa-fsen106-0035",
+      "type": "mcq",
+      "stem": "Conflicting requirements cause:",
+      "options": {
+        "A": "Faster integration",
+        "B": "Inconsistencies that may only surface during integration testing",
+        "C": "Lower coupling between modules",
+        "D": "Better user experience"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conflicts may remain hidden until integration, when they cause failures."
+    },
+    {
+      "id": "uni-futa-fsen106-0036",
+      "type": "mcq",
+      "stem": "Questionnaires and surveys are useful for:",
+      "options": {
+        "A": "Gathering statistical data about user priorities across large populations",
+        "B": "Resolving conflicts",
+        "C": "Observing work practices",
+        "D": "Mathematical specification"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Surveys scale to large stakeholder populations but lack depth."
+    },
+    {
+      "id": "uni-futa-fsen106-0037",
+      "type": "mcq",
+      "stem": "Structured natural language uses:",
+      "options": {
+        "A": "Free-form English sentences",
+        "B": "Predefined templates with fixed fields to improve consistency",
+        "C": "Mathematical notation",
+        "D": "Source code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Templates reduce flexibility but improve consistency across the document."
+    },
+    {
+      "id": "uni-futa-fsen106-0038",
+      "type": "mcq",
+      "stem": "Which is a primary output of the requirements engineering process?",
+      "options": {
+        "A": "A deployed software system",
+        "B": "A description of system services and constraints",
+        "C": "A marketing plan",
+        "D": "A network topology diagram"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE outputs are descriptions of services plus constraints."
+    },
+    {
+      "id": "uni-futa-fsen106-0039",
+      "type": "mcq",
+      "stem": "Scenarios can be used to develop:",
+      "options": {
+        "A": "Formal use cases",
+        "B": "Source code",
+        "C": "Database schemas",
+        "D": "Network diagrams"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Scenarios often evolve into formal use cases."
+    },
+    {
+      "id": "uni-futa-fsen106-0040",
+      "type": "mcq",
+      "stem": "Each requirement should have a unique identifier to enable:",
+      "options": {
+        "A": "Faster compilation",
+        "B": "Traceability and change management",
+        "C": "Better user experience",
+        "D": "Lower memory usage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unique IDs (e.g., FR-001, NFR-012) allow cross-referencing."
+    },
+    {
+      "id": "uni-futa-fsen106-0041",
+      "type": "mcq",
+      "stem": "Requirements prioritisation is part of:",
+      "options": {
+        "A": "Requirements elicitation",
+        "B": "Requirements analysis",
+        "C": "Requirements validation",
+        "D": "Requirements management"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Prioritisation and conflict resolution happen during analysis."
+    },
+    {
+      "id": "uni-futa-fsen106-0042",
+      "type": "mcq",
+      "stem": "Ambiguous requirements typically lead to:",
+      "options": {
+        "A": "Faster development",
+        "B": "Different interpretations by different developers",
+        "C": "Lower project costs",
+        "D": "Improved system performance"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ambiguity means each developer may implement a different interpretation."
+    },
+    {
+      "id": "uni-futa-fsen106-0043",
+      "type": "mcq",
+      "stem": "Which is NOT a reason requirements change?",
+      "options": {
+        "A": "Changing business environment",
+        "B": "Divided stakeholders",
+        "C": "Regulatory changes",
+        "D": "Improved grammar in the SRD"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Grammar fixes are edits, not requirement changes."
+    },
+    {
+      "id": "uni-futa-fsen106-0044",
+      "type": "mcq",
+      "stem": "Functional requirements describe:",
+      "options": {
+        "A": "System performance only",
+        "B": "What the system should do — services, reactions to inputs, and behaviours",
+        "C": "The development process only",
+        "D": "External regulations only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Functional requirements declare services the system must provide and behaviours it must exhibit."
+    },
+    {
+      "id": "uni-futa-fsen106-0045",
+      "type": "mcq",
+      "stem": "Which is an example of a space requirement?",
+      "options": {
+        "A": "Mean time to failure shall exceed 5,000 hours",
+        "B": "The system footprint on the server shall not exceed 512 MB of storage excluding the database",
+        "C": "The system shall run on Windows 10, Ubuntu 22.04, and macOS 14",
+        "D": "The system shall process 1,000 records per minute"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Space requirements constrain memory or disk usage."
+    },
+    {
+      "id": "uni-futa-fsen106-0046",
+      "type": "mcq",
+      "stem": "Validation asks 'Are we building the right system?' This is different from verification, which asks:",
+      "options": {
+        "A": "'Are we building the system right?'",
+        "B": "'Are we building the right system?'",
+        "C": "'Is the budget sufficient?'",
+        "D": "'Is the UI attractive?'"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Validation = right system; verification = system built right."
+    },
+    {
+      "id": "uni-futa-fsen106-0047",
+      "type": "mcq",
+      "stem": "Mathematical specifications (Z, VDM, finite state machines) are used for:",
+      "options": {
+        "A": "Marketing websites",
+        "B": "Safety-critical systems where ambiguity is unacceptable",
+        "C": "User-facing requirements",
+        "D": "Project schedules"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Formal methods are completely unambiguous but hard to validate with customers."
+    },
+    {
+      "id": "uni-futa-fsen106-0048",
+      "type": "mcq",
+      "stem": "Which stakeholder group signs off on the SRD as part of the contract?",
+      "options": {
+        "A": "System customers",
+        "B": "System engineers",
+        "C": "Test engineers",
+        "D": "Maintenance engineers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Customers verify and formally sign off on the SRD."
+    },
+    {
+      "id": "uni-futa-fsen106-0049",
+      "type": "mcq",
+      "stem": "User requirements are typically written for:",
+      "options": {
+        "A": "Developers and architects only",
+        "B": "Customers and end-users in natural language",
+        "C": "Database administrators",
+        "D": "Network engineers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "User requirements target non-technical stakeholders in natural language with diagrams."
+    },
+    {
+      "id": "uni-futa-fsen106-0050",
+      "type": "mcq",
+      "stem": "Which is NOT an elicitation technique listed in FSEN 106?",
+      "options": {
+        "A": "Interviews",
+        "B": "Ethnography",
+        "C": "Code review",
+        "D": "Prototyping"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Code review is a quality activity, not an elicitation technique."
+    },
+    {
+      "id": "uni-futa-fsen106-0051",
+      "type": "mcq",
+      "stem": "Which notation is most appropriate for a high-level user requirement?",
+      "options": {
+        "A": "Mathematical specification",
+        "B": "Natural language supplemented with diagrams",
+        "C": "Source code",
+        "D": "Database schema"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "User requirements need accessibility over precision."
+    },
+    {
+      "id": "uni-futa-fsen106-0052",
+      "type": "mcq",
+      "stem": "A banking system must implement interest calculations according to specific regulatory formulas. This is:",
+      "options": {
+        "A": "A functional requirement",
+        "B": "A domain requirement",
+        "C": "A usability requirement",
+        "D": "A portability requirement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The regulatory interest formula is a domain-specific computation."
+    },
+    {
+      "id": "uni-futa-fsen106-0053",
+      "type": "mcq",
+      "stem": "System requirements are written for:",
+      "options": {
+        "A": "Project sponsors only",
+        "B": "Developers and architects as detailed technical specifications",
+        "C": "Marketing teams",
+        "D": "End customers without technical background"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System requirements specify precise, testable detail for the development team."
+    },
+    {
+      "id": "uni-futa-fsen106-0054",
+      "type": "mcq",
+      "stem": "Verification asks:",
+      "options": {
+        "A": "'Are we building the right system?'",
+        "B": "'Are we building the system right?'",
+        "C": "'Is the project profitable?'",
+        "D": "'Is the UI attractive?'"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Verification checks the implementation against the specification."
+    },
+    {
+      "id": "uni-futa-fsen106-0055",
+      "type": "mcq",
+      "stem": "A requirement that 'the system shall send automated reminder notifications 24 hours before appointments' is:",
+      "options": {
+        "A": "Functional",
+        "B": "Non-functional",
+        "C": "External",
+        "D": "Organisational"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "It describes a specific service the system provides."
+    },
+    {
+      "id": "uni-futa-fsen106-0056",
+      "type": "mcq",
+      "stem": "Requirements serve a dual function as a basis for:",
+      "options": {
+        "A": "A contract bid AND as the basis for the contract itself",
+        "B": "User training AND system testing",
+        "C": "Project scheduling AND budget tracking",
+        "D": "Database design AND network architecture"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The dual function: requirements inform the contract bid and become the basis of the contract."
+    },
+    {
+      "id": "uni-futa-fsen106-0057",
+      "type": "mcq",
+      "stem": "Requirements engineering bridges the gap between:",
+      "options": {
+        "A": "Frontend and backend developers",
+        "B": "What the customer needs and what the development team builds",
+        "C": "Testing and deployment",
+        "D": "Database design and network architecture"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE translates customer needs into implementable specifications."
+    },
+    {
+      "id": "uni-futa-fsen106-0058",
+      "type": "mcq",
+      "stem": "System customers use the SRD to:",
+      "options": {
+        "A": "Develop validation test plans",
+        "B": "Specify requirements; read and verify the document matches their needs; sign off as part of the contract",
+        "C": "Plan bids for the system",
+        "D": "Track progress and manage scope changes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Customers verify and sign off on the SRD."
+    },
+    {
+      "id": "uni-futa-fsen106-0059",
+      "type": "mcq",
+      "stem": "Structured natural language is preferred when:",
+      "options": {
+        "A": "Ambiguity is acceptable",
+        "B": "A standard format is required across the organisation",
+        "C": "The system is safety-critical",
+        "D": "The customer is a mathematician"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Templates improve consistency in organisational settings."
+    },
+    {
+      "id": "uni-futa-fsen106-0060",
+      "type": "mcq",
+      "stem": "Reviews can be:",
+      "options": {
+        "A": "Only formal inspections",
+        "B": "Formal (structured inspection with roles) or informal (walkthrough)",
+        "C": "Only informal walkthroughs",
+        "D": "Only automated"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Both styles are valid; formality depends on project risk."
+    },
+    {
+      "id": "uni-futa-fsen106-0061",
+      "type": "mcq",
+      "stem": "Which activity produces an organised requirement set with logical structure?",
+      "options": {
+        "A": "Requirements discovery",
+        "B": "Requirements classification and organisation",
+        "C": "Requirements validation",
+        "D": "Requirements management"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Classification groups raw requirements into coherent clusters."
+    },
+    {
+      "id": "uni-futa-fsen106-0062",
+      "type": "mcq",
+      "stem": "Realism check asks:",
+      "options": {
+        "A": "'Is the requirement testable?'",
+        "B": "'Can the requirements be implemented within budget, on schedule, and using available technology?'",
+        "C": "'Is anything missing?'",
+        "D": "'Will it deliver value?'"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Realism verifies feasibility."
+    },
+    {
+      "id": "uni-futa-fsen106-0063",
+      "type": "mcq",
+      "stem": "Natural language notation is best used for:",
+      "options": {
+        "A": "Safety-critical systems where ambiguity is unacceptable",
+        "B": "User requirements and high-level system requirements where accessibility matters more than precision",
+        "C": "Mathematical specifications",
+        "D": "Database schemas only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Natural language is accessible but can be ambiguous."
+    },
+    {
+      "id": "uni-futa-fsen106-0064",
+      "type": "mcq",
+      "stem": "Completeness check asks:",
+      "options": {
+        "A": "'Are there any conflicts?'",
+        "B": "'Is anything the customer expects missing from the specification?'",
+        "C": "'Is the requirement testable?'",
+        "D": "'Is the requirement feasible?'"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Completeness means all expected functions and constraints are present."
+    },
+    {
+      "id": "uni-futa-fsen106-0065",
+      "type": "mcq",
+      "stem": "A requirement may range from:",
+      "options": {
+        "A": "A single test case to a test suite",
+        "B": "A high-level abstract statement to a detailed mathematical specification",
+        "C": "A user story to a deployment plan",
+        "D": "A use case to a sequence diagram"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Requirements span high-level abstractions for stakeholders down to precise mathematical specs."
+    },
+    {
+      "id": "uni-futa-fsen106-0066",
+      "type": "mcq",
+      "stem": "The first stage of the elicitation and analysis process is:",
+      "options": {
+        "A": "Requirements discovery",
+        "B": "Requirements classification",
+        "C": "Requirements prioritisation",
+        "D": "Requirements documentation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Discovery involves interacting with stakeholders to uncover needs."
+    },
+    {
+      "id": "uni-futa-fsen106-0067",
+      "type": "mcq",
+      "stem": "Post-requirements traceability links requirements to:",
+      "options": {
+        "A": "Their source",
+        "B": "The design components and tests that implement them",
+        "C": "Marketing materials",
+        "D": "Customer billing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Post-requirements traceability goes forward to implementation."
+    },
+    {
+      "id": "uni-futa-fsen106-0068",
+      "type": "mcq",
+      "stem": "The User Requirements section of an SRD is written using:",
+      "options": {
+        "A": "Natural language and diagrams, accessible to non-technical stakeholders",
+        "B": "Mathematical notation only",
+        "C": "Java source code",
+        "D": "Database schemas"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "User requirements must be readable by customers."
+    },
+    {
+      "id": "uni-futa-fsen106-0069",
+      "type": "mcq",
+      "stem": "The tension in requirements specification is that:",
+      "options": {
+        "A": "More precise requirements are easier to read",
+        "B": "More precise requirements are harder to read; simpler ones are more ambiguous",
+        "C": "Simpler requirements are always better",
+        "D": "Precision does not affect readability"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Specification must balance precision with readability."
+    },
+    {
+      "id": "uni-futa-fsen106-0070",
+      "type": "mcq",
+      "stem": "Draft requirements documentation is suitable for:",
+      "options": {
+        "A": "Final deployment",
+        "B": "Review, validation, and baseline agreement",
+        "C": "Marketing",
+        "D": "Customer billing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The draft is iteratively refined."
+    },
+    {
+      "id": "uni-futa-fsen106-0071",
+      "type": "mcq",
+      "stem": "Trade-offs in requirements are resolved during:",
+      "options": {
+        "A": "Elicitation",
+        "B": "Analysis",
+        "C": "Validation",
+        "D": "Deployment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Analysis negotiates and resolves trade-offs."
+    },
+    {
+      "id": "uni-futa-fsen106-0072",
+      "type": "mcq",
+      "stem": "Which is an example of a maintainability requirement?",
+      "options": {
+        "A": "Any licensed developer familiar with Python shall be able to understand and modify a module within 2 hours",
+        "B": "The system shall respond in under 2 seconds",
+        "C": "All data shall be encrypted using AES-256",
+        "D": "Mean time to failure shall exceed 5,000 hours"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Maintainability requirements cover ease of modification and extension."
+    },
+    {
+      "id": "uni-futa-fsen106-0073",
+      "type": "mcq",
+      "stem": "A useful strategy for catching ambiguity is to ask:",
+      "options": {
+        "A": "'Is this requirement short enough?'",
+        "B": "'How would I test this?' If the test is unclear, the requirement is ambiguous",
+        "C": "'Does this use SHALL?'",
+        "D": "'Is this in the Glossary?'"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Testability is a key signal of clarity."
+    },
+    {
+      "id": "uni-futa-fsen106-0074",
+      "type": "mcq",
+      "stem": "Stakeholders often describe:",
+      "options": {
+        "A": "What they need",
+        "B": "What they currently do, rather than what they need",
+        "C": "Future system architecture",
+        "D": "Internal algorithms"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Users tend to describe the status quo; analysts must infer needs."
+    },
+    {
+      "id": "uni-futa-fsen106-0075",
+      "type": "mcq",
+      "stem": "IEEE Std 830 defines:",
+      "options": {
+        "A": "A programming language",
+        "B": "The recommended standard structure for Software Requirements Specifications",
+        "C": "A testing methodology",
+        "D": "A project management framework"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IEEE 830 standardises the structure of SRS documents."
+    },
+    {
+      "id": "uni-futa-fsen106-0076",
+      "type": "mcq",
+      "stem": "Product requirements specify that the delivered product must:",
+      "options": {
+        "A": "Follow organisational coding standards",
+        "B": "Behave in a particular way regarding execution, reliability, or memory usage",
+        "C": "Comply with external laws",
+        "D": "Be developed using a specific methodology"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Product requirements cover execution speed, reliability, and memory/disk usage."
+    },
+    {
+      "id": "uni-futa-fsen106-0077",
+      "type": "mcq",
+      "stem": "Over-specified requirements can:",
+      "options": {
+        "A": "Reduce development time",
+        "B": "Waste development effort on unnecessary features",
+        "C": "Improve system reliability",
+        "D": "Simplify testing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Over-specification spends effort on features the customer did not really need."
+    },
+    {
+      "id": "uni-futa-fsen106-0078",
+      "type": "mcq",
+      "stem": "The Preface section of an SRD defines:",
+      "options": {
+        "A": "Expected readership and document history",
+        "B": "Detailed algorithms",
+        "C": "Source code listings",
+        "D": "Network topology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Preface covers version history, reasons for changes, scope, and intended audience."
+    },
+    {
+      "id": "uni-futa-fsen106-0079",
+      "type": "mcq",
+      "stem": "Specialist requirements management tools mentioned in FSEN 106 include:",
+      "options": {
+        "A": "IBM DOORS, Jira, and Azure DevOps",
+        "B": "Microsoft Word only",
+        "C": "Excel only",
+        "D": "Photoshop"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "These tools store requirements, manage change requests, and track traceability."
+    },
+    {
+      "id": "uni-futa-fsen106-0080",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a quality attribute typically covered by NFRs?",
+      "options": {
+        "A": "Reliability",
+        "B": "Performance",
+        "C": "Maintainability",
+        "D": "Brand awareness"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Brand awareness is a marketing concern, not a system quality attribute."
+    },
+    {
+      "id": "uni-futa-fsen106-0081",
+      "type": "mcq",
+      "stem": "Non-functional requirements are best described as:",
+      "options": {
+        "A": "Descriptions of specific system services",
+        "B": "Constraints on services or functions offered by the system",
+        "C": "User interface layout specifications",
+        "D": "Database schema definitions"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "NFRs constrain properties and qualities rather than specific behaviours."
+    },
+    {
+      "id": "uni-futa-fsen106-0082",
+      "type": "mcq",
+      "stem": "Requirements engineering is best defined as the process of:",
+      "options": {
+        "A": "Writing source code for a software system",
+        "B": "Establishing the services a customer requires from a system and the constraints under which it operates",
+        "C": "Designing the user interface of a software system",
+        "D": "Testing a software system against user expectations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE establishes services required plus constraints under which the system operates and is developed."
+    },
+    {
+      "id": "uni-futa-fsen106-0083",
+      "type": "mcq",
+      "stem": "An example of an invalid requirement is one that:",
+      "options": {
+        "A": "Does not actually deliver value to the user",
+        "B": "Is perfectly testable",
+        "C": "Has a unique identifier",
+        "D": "Uses SHALL correctly"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Invalid requirements do not serve real customer needs."
+    },
+    {
+      "id": "uni-futa-fsen106-0084",
+      "type": "mcq",
+      "stem": "Requirements reviews are most cost-effective when:",
+      "options": {
+        "A": "Done late in the project",
+        "B": "Done early",
+        "C": "Skipped entirely",
+        "D": "Done only by testers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Early reviews catch errors before they propagate."
+    },
+    {
+      "id": "uni-futa-fsen106-0085",
+      "type": "mcq",
+      "stem": "Verifiability check asks:",
+      "options": {
+        "A": "'Can a test be written that will objectively confirm the requirement has been met?'",
+        "B": "'Is the requirement feasible?'",
+        "C": "'Will the requirement deliver value?'",
+        "D": "'Are there any conflicts?'"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Verifiability means each requirement has an objective test."
+    },
+    {
+      "id": "uni-futa-fsen106-0086",
+      "type": "mcq",
+      "stem": "The text states that non-functional requirements are often:",
+      "options": {
+        "A": "Less critical than functional requirements",
+        "B": "MORE CRITICAL than functional requirements",
+        "C": "Equivalent to functional requirements",
+        "D": "Irrelevant to system usability"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Failure to meet an NFR can render the entire system unusable even if all FRs are met."
+    },
+    {
+      "id": "uni-futa-fsen106-0087",
+      "type": "mcq",
+      "stem": "Which is NOT a component of requirements management planning?",
+      "options": {
+        "A": "Requirements identification",
+        "B": "Change management process",
+        "C": "Traceability policies",
+        "D": "Marketing campaign planning"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Marketing is not part of requirements management."
+    },
+    {
+      "id": "uni-futa-fsen106-0088",
+      "type": "mcq",
+      "stem": "Workshops are faster than:",
+      "options": {
+        "A": "Conducting many individual interviews",
+        "B": "Doing nothing",
+        "C": "Mathematical specification",
+        "D": "Code review"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "One workshop can replace many sequential interviews."
+    },
+    {
+      "id": "uni-futa-fsen106-0089",
+      "type": "mcq",
+      "stem": "The System Architecture section of an SRD provides:",
+      "options": {
+        "A": "Detailed algorithms",
+        "B": "A high-level overview of anticipated system structure",
+        "C": "Project budget",
+        "D": "Test cases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It describes distribution of functions across modules and major components."
+    },
+    {
+      "id": "uni-futa-fsen106-0090",
+      "type": "mcq",
+      "stem": "Which of the following is a non-functional requirement?",
+      "options": {
+        "A": "The system shall allow users to reset their password",
+        "B": "The system shall load in under 2 seconds",
+        "C": "The system shall send an email confirmation",
+        "D": "The system shall generate monthly invoices"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Response time is a performance non-functional requirement."
+    },
+    {
+      "id": "uni-futa-fsen106-0091",
+      "type": "mcq",
+      "stem": "To check consistency, you can use:",
+      "options": {
+        "A": "A requirements matrix to identify conflicts",
+        "B": "A prototype",
+        "C": "A survey",
+        "D": "An interview"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Matrices reveal contradictions between requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0092",
+      "type": "mcq",
+      "stem": "To check completeness, you can:",
+      "options": {
+        "A": "Ask stakeholders 'Is anything missing?' and use checklists based on the problem domain",
+        "B": "Build a prototype only",
+        "C": "Skip the check",
+        "D": "Deploy the system"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Domain checklists and stakeholder dialogue surface gaps."
+    },
+    {
+      "id": "uni-futa-fsen106-0093",
+      "type": "mcq",
+      "stem": "The improved version 'The system shall support a minimum of 500 concurrent users without degradation' is better because:",
+      "options": {
+        "A": "It is shorter",
+        "B": "It is testable and unambiguous",
+        "C": "It uses passive voice",
+        "D": "It avoids SHALL"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Measurable criteria make the requirement testable."
+    },
+    {
+      "id": "uni-futa-fsen106-0094",
+      "type": "mcq",
+      "stem": "Skilled requirements engineers:",
+      "options": {
+        "A": "Always use interviews",
+        "B": "Choose and combine techniques based on system type, stakeholder availability, and nature of requirements",
+        "C": "Never use ethnography",
+        "D": "Always use mathematical specification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "No single technique fits all situations."
+    },
+    {
+      "id": "uni-futa-fsen106-0095",
+      "type": "mcq",
+      "stem": "Which keyword is used for mandatory requirements?",
+      "options": {
+        "A": "SHOULD",
+        "B": "SHALL",
+        "C": "MAY",
+        "D": "WILL"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SHALL indicates a mandatory requirement."
+    },
+    {
+      "id": "uni-futa-fsen106-0096",
+      "type": "mcq",
+      "stem": "Every requirement should correspond to:",
+      "options": {
+        "A": "At least one test case",
+        "B": "At least one diagram",
+        "C": "At least one stakeholder",
+        "D": "At least one developer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Test-case generation during validation creates a usable test plan."
+    },
+    {
+      "id": "uni-futa-fsen106-0097",
+      "type": "mcq",
+      "stem": "A baseline is:",
+      "options": {
+        "A": "A draft version",
+        "B": "A formally agreed version of the requirements at a specific point in time",
+        "C": "A marketing document",
+        "D": "A test case"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Baselines are formally agreed reference points."
+    },
+    {
+      "id": "uni-futa-fsen106-0098",
+      "type": "mcq",
+      "stem": "Functional requirements must be:",
+      "options": {
+        "A": "Complete and consistent",
+        "B": "Ambiguous to allow flexibility",
+        "C": "Written only in formal mathematical notation",
+        "D": "Limited to fewer than 10 items"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "All required services must be defined and no two should conflict."
+    },
+    {
+      "id": "uni-futa-fsen106-0099",
+      "type": "mcq",
+      "stem": "Requirements engineering is described as:",
+      "options": {
+        "A": "A linear waterfall",
+        "B": "An iterative spiral activity",
+        "C": "A one-time event",
+        "D": "A testing phase only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "New requirements emerge during development and the process repeats."
+    },
+    {
+      "id": "uni-futa-fsen106-0100",
+      "type": "mcq",
+      "stem": "Domain language barriers cause problems because:",
+      "options": {
+        "A": "Developers may misunderstand technical terminology used in the application domain",
+        "B": "Stakeholders speak too quietly",
+        "C": "Developers always understand domain language",
+        "D": "Domain language is forbidden in requirements"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Domain-specific terms can be misinterpreted by non-domain developers."
+    },
+    {
+      "id": "uni-futa-fsen106-0101",
+      "type": "mcq",
+      "stem": "The disadvantage of mathematical specifications is that they are:",
+      "options": {
+        "A": "Ambiguous",
+        "B": "Hard to validate with customers",
+        "C": "Easy to read",
+        "D": "Limited to small systems only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Customers typically cannot read formal notation."
+    },
+    {
+      "id": "uni-futa-fsen106-0102",
+      "type": "mcq",
+      "stem": "Domain requirements are derived from:",
+      "options": {
+        "A": "The application domain of the system",
+        "B": "User interface design",
+        "C": "Database schema",
+        "D": "Network topology"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Domain requirements reflect characteristics and rules of the specific application domain."
+    },
+    {
+      "id": "uni-futa-fsen106-0103",
+      "type": "mcq",
+      "stem": "Which technique is BEST for gathering data from thousands of users?",
+      "options": {
+        "A": "Interviews",
+        "B": "Ethnography",
+        "C": "Questionnaires and surveys",
+        "D": "Prototyping"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Surveys scale to large populations efficiently."
+    },
+    {
+      "id": "uni-futa-fsen106-0104",
+      "type": "mcq",
+      "stem": "Which technique is BEST when stakeholders cannot articulate abstract needs?",
+      "options": {
+        "A": "Prototyping",
+        "B": "Closed interviews",
+        "C": "Questionnaires",
+        "D": "Mathematical specification"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Concrete prototypes reveal latent requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0105",
+      "type": "mcq",
+      "stem": "Project management uses the SRD to:",
+      "options": {
+        "A": "Track progress, manage scope changes, and assess impact of proposed changes",
+        "B": "Sign off on the contract",
+        "C": "Develop test plans",
+        "D": "Implement the source code"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "PM uses the SRD as the baseline against which scope changes are assessed."
+    },
+    {
+      "id": "uni-futa-fsen106-0106",
+      "type": "mcq",
+      "stem": "Which requirement identifier scheme is recommended?",
+      "options": {
+        "A": "Random numbers",
+        "B": "FR-001, NFR-012 style unique identifiers",
+        "C": "Sequential letters A, B, C",
+        "D": "No identifiers needed"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unique IDs enable traceability and change management."
+    },
+    {
+      "id": "uni-futa-fsen106-0107",
+      "type": "mcq",
+      "stem": "Requirements reviews involve:",
+      "options": {
+        "A": "Manual analysis by a team of reviewers, including both customer and contractor staff",
+        "B": "Automated testing only",
+        "C": "Only customer review",
+        "D": "Only contractor review"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Reviews are most effective when customers and developers participate together."
+    },
+    {
+      "id": "uni-futa-fsen106-0108",
+      "type": "mcq",
+      "stem": "In practice, the four RE activities are:",
+      "options": {
+        "A": "Strictly sequential",
+        "B": "Interleaved and iterative rather than sequential",
+        "C": "Performed only once per project",
+        "D": "Performed only by project managers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE is a spiral process where activities are revisited."
+    },
+    {
+      "id": "uni-futa-fsen106-0109",
+      "type": "mcq",
+      "stem": "Incomplete stakeholder availability leads to:",
+      "options": {
+        "A": "Faster elicitation",
+        "B": "Gaps in the requirements",
+        "C": "Better requirements",
+        "D": "Lower project costs"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Missing stakeholders mean missing perspectives."
+    },
+    {
+      "id": "uni-futa-fsen106-0110",
+      "type": "mcq",
+      "stem": "The output of requirements discovery is:",
+      "options": {
+        "A": "A final, baselined requirements document",
+        "B": "An initial draft of unorganised stakeholder needs",
+        "C": "Source code",
+        "D": "Test cases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Discovery produces raw, unstructured requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0111",
+      "type": "mcq",
+      "stem": "'The system shall authenticate users via SHA-256 hashed passwords stored in PostgreSQL using bcrypt with salt factor 12' is an example of:",
+      "options": {
+        "A": "A user requirement",
+        "B": "A system requirement",
+        "C": "A marketing requirement",
+        "D": "A budget requirement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It specifies HOW the system behaves including protocols and storage details."
+    },
+    {
+      "id": "uni-futa-fsen106-0112",
+      "type": "mcq",
+      "stem": "Requirements elicitation includes:",
+      "options": {
+        "A": "Identifying all relevant stakeholders",
+        "B": "Understanding stakeholder goals, needs, and constraints",
+        "C": "Understanding the domain",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Elicitation covers stakeholder identification and goal/need/constraint discovery."
+    },
+    {
+      "id": "uni-futa-fsen106-0113",
+      "type": "mcq",
+      "stem": "The example 'The system shall support a large number of users' is problematic because:",
+      "options": {
+        "A": "It uses SHALL",
+        "B": "'Large' is ambiguous — does it mean 10, 10,000, or 1 million?",
+        "C": "It is too short",
+        "D": "It uses passive voice"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ambiguous quantifiers must be replaced with measurable criteria."
+    },
+    {
+      "id": "uni-futa-fsen106-0114",
+      "type": "mcq",
+      "stem": "Requirements management is the process of:",
+      "options": {
+        "A": "Preventing requirements from changing",
+        "B": "Managing changing requirements during the RE process and throughout the system development lifecycle",
+        "C": "Eliminating stakeholders",
+        "D": "Writing source code"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Management does not prevent change; it controls it."
+    },
+    {
+      "id": "uni-futa-fsen106-0115",
+      "type": "mcq",
+      "stem": "To check verifiability, you should:",
+      "options": {
+        "A": "Draft a test case for each requirement",
+        "B": "Send a survey",
+        "C": "Skip the check",
+        "D": "Build a prototype"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "If a test cannot be written, the requirement is ambiguous or unmeasurable."
+    },
+    {
+      "id": "uni-futa-fsen106-0116",
+      "type": "mcq",
+      "stem": "Step 2 of the change management process is:",
+      "options": {
+        "A": "Problem analysis",
+        "B": "Change analysis and costing",
+        "C": "Change implementation",
+        "D": "Public review"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Traceability information is used to assess impact and estimate cost."
+    },
+    {
+      "id": "uni-futa-fsen106-0117",
+      "type": "mcq",
+      "stem": "Requirements elicitation is also called:",
+      "options": {
+        "A": "Requirements validation",
+        "B": "Requirements discovery or requirements gathering",
+        "C": "Requirements management",
+        "D": "Requirements specification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Elicitation involves discovering requirements by working with stakeholders."
+    },
+    {
+      "id": "uni-futa-fsen106-0118",
+      "type": "mcq",
+      "stem": "Functional requirements depend on:",
+      "options": {
+        "A": "The type of software being developed",
+        "B": "Who the users are",
+        "C": "The overall type of system",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "FRs depend on software type, user type, and overall system context."
+    },
+    {
+      "id": "uni-futa-fsen106-0119",
+      "type": "mcq",
+      "stem": "Which technique is BEST for resolving conflicts across many stakeholder groups?",
+      "options": {
+        "A": "Ethnography",
+        "B": "Workshops with a skilled facilitator",
+        "C": "Questionnaires",
+        "D": "Mathematical specification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Workshops bring conflicting parties together for negotiation."
+    },
+    {
+      "id": "uni-futa-fsen106-0120",
+      "type": "mcq",
+      "stem": "The change management process has how many steps?",
+      "options": {
+        "A": "Two",
+        "B": "Three",
+        "C": "Four",
+        "D": "Five"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Steps: Problem Analysis, Change Analysis & Costing, Acceptance/Rejection, Implementation."
+    },
+    {
+      "id": "uni-futa-fsen106-0121",
+      "type": "mcq",
+      "stem": "Which is an example of a security requirement?",
+      "options": {
+        "A": "The system shall respond in under 2 seconds",
+        "B": "All patient data shall be encrypted at rest using AES-256; all connections shall use TLS 1.3 or higher",
+        "C": "The system shall run on Windows 10",
+        "D": "Medical staff shall be trained in 4 hours"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Security requirements protect data and systems from unauthorised access."
+    },
+    {
+      "id": "uni-futa-fsen106-0122",
+      "type": "mcq",
+      "stem": "A railway signalling system must comply with safety interlocking rules. This is an example of:",
+      "options": {
+        "A": "Functional requirement",
+        "B": "Domain requirement",
+        "C": "Organisational requirement",
+        "D": "Usability requirement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Safety interlocking rules are specific to the railway signalling domain."
+    },
+    {
+      "id": "uni-futa-fsen106-0123",
+      "type": "mcq",
+      "stem": "An ambiguous requirement typically:",
+      "options": {
+        "A": "Has exactly one possible interpretation",
+        "B": "Has more than one possible interpretation",
+        "C": "Uses SHALL",
+        "D": "Is always testable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ambiguity means multiple valid interpretations exist."
+    },
+    {
+      "id": "uni-futa-fsen106-0124",
+      "type": "mcq",
+      "stem": "Which validation technique is most cost-effective when done early?",
+      "options": {
+        "A": "Prototyping",
+        "B": "Requirements reviews",
+        "C": "Automated analysis",
+        "D": "Test-case generation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Reviews are cheap and surface different classes of problems when done early."
+    },
+    {
+      "id": "uni-futa-fsen106-0125",
+      "type": "mcq",
+      "stem": "The output of RE feeds directly into:",
+      "options": {
+        "A": "Marketing",
+        "B": "System design and validation planning",
+        "C": "Customer billing",
+        "D": "Employee salaries"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE outputs are inputs to design and validation activities."
+    },
+    {
+      "id": "uni-futa-fsen106-0126",
+      "type": "mcq",
+      "stem": "Requirements volatility means that requirements:",
+      "options": {
+        "A": "Never change",
+        "B": "Change during analysis as the business environment evolves",
+        "C": "Only change after deployment",
+        "D": "Only change in agile projects"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Volatility is a normal feature of RE."
+    },
+    {
+      "id": "uni-futa-fsen106-0127",
+      "type": "mcq",
+      "stem": "Which is NOT a stakeholder group listed in FSEN 106 as using the SRD?",
+      "options": {
+        "A": "System customers",
+        "B": "System managers",
+        "C": "System test engineers",
+        "D": "Marketing teams"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Marketing is not listed as a stakeholder group for the SRD."
+    },
+    {
+      "id": "uni-futa-fsen106-0128",
+      "type": "mcq",
+      "stem": "Requirements validation asks:",
+      "options": {
+        "A": "'Are we building the system right?'",
+        "B": "'Are we building the right system?'",
+        "C": "'Is the code fast enough?'",
+        "D": "'Is the budget sufficient?'"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Validation checks that requirements match what customers actually want."
+    },
+    {
+      "id": "uni-futa-fsen106-0129",
+      "type": "mcq",
+      "stem": "Which is the BEST example of a measurable non-functional requirement?",
+      "options": {
+        "A": "The system shall be fast",
+        "B": "The system shall respond to user input within 200 milliseconds under normal load",
+        "C": "The system shall be reliable",
+        "D": "The system shall be easy to use"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Measurable NFRs include specific thresholds that can be tested."
+    },
+    {
+      "id": "uni-futa-fsen106-0130",
+      "type": "mcq",
+      "stem": "When a change is implemented, the system is:",
+      "options": {
+        "A": "Released immediately",
+        "B": "Retested in all affected areas; version control records the change history",
+        "C": "Cancelled",
+        "D": "Marketed again"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Affected areas are retested to ensure no regressions."
+    },
+    {
+      "id": "uni-futa-fsen106-0131",
+      "type": "mcq",
+      "stem": "Step 1 of the change management process is:",
+      "options": {
+        "A": "Change implementation",
+        "B": "Problem analysis and change specification",
+        "C": "Change acceptance or rejection",
+        "D": "Costing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "First, the problem or improvement is formally specified."
+    },
+    {
+      "id": "uni-futa-fsen106-0132",
+      "type": "mcq",
+      "stem": "A hospital system correctly lists all appointments (functional) but is too slow to be usable. This is an example of:",
+      "options": {
+        "A": "Functional failure",
+        "B": "Non-functional failure",
+        "C": "Domain failure",
+        "D": "User requirement failure"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The function works but the performance quality attribute fails."
+    },
+    {
+      "id": "uni-futa-fsen106-0133",
+      "type": "mcq",
+      "stem": "Some requirements may be deferred to:",
+      "options": {
+        "A": "Be forgotten",
+        "B": "Future releases",
+        "C": "Be deleted",
+        "D": "Be implemented by another team"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Prioritisation may push lower-priority requirements to later releases."
+    },
+    {
+      "id": "uni-futa-fsen106-0134",
+      "type": "mcq",
+      "stem": "Design description languages are:",
+      "options": {
+        "A": "The most common requirements notation",
+        "B": "Rarely used for requirements; more appropriate for system design and algorithm specification",
+        "C": "Used only for user requirements",
+        "D": "The IEEE 830 standard"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DDLs resemble programming languages and are too implementation-focused for requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0135",
+      "type": "mcq",
+      "stem": "The four generic activities common to all RE processes are:",
+      "options": {
+        "A": "Design, code, test, deploy",
+        "B": "Elicitation, analysis, validation, management",
+        "C": "Planning, scheduling, tracking, closing",
+        "D": "Interview, document, review, sign-off"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "These are the four core RE activities."
+    },
+    {
+      "id": "uni-futa-fsen106-0136",
+      "type": "mcq",
+      "stem": "Different stakeholders have:",
+      "options": {
+        "A": "Identical requirements",
+        "B": "Different priorities and conflicting views",
+        "C": "No requirements",
+        "D": "Only non-functional requirements"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conflict between stakeholders is normal and must be negotiated."
+    },
+    {
+      "id": "uni-futa-fsen106-0137",
+      "type": "mcq",
+      "stem": "Ethnography reveals:",
+      "options": {
+        "A": "Only explicit requirements",
+        "B": "Social and political constraints on the system",
+        "C": "Source code defects",
+        "D": "Database performance issues"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Embedded observation surfaces social and political realities."
+    },
+    {
+      "id": "uni-futa-fsen106-0138",
+      "type": "mcq",
+      "stem": "Which statement about NFRs is TRUE?",
+      "options": {
+        "A": "NFRs apply only to single features",
+        "B": "Even if every FR is perfectly implemented, the system can still fail if NFRs are not met",
+        "C": "NFRs are less critical than FRs",
+        "D": "NFRs cannot be tested"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "NFR failure can render the whole system unusable regardless of FR success."
+    },
+    {
+      "id": "uni-futa-fsen106-0139",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a consequence of poorly engineered requirements?",
+      "options": {
+        "A": "Failing to meet user expectations",
+        "B": "Exceeding budget",
+        "C": "Missing deadlines",
+        "D": "Improving code readability"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Poor requirements never improve code quality; they degrade project outcomes."
+    },
+    {
+      "id": "uni-futa-fsen106-0140",
+      "type": "mcq",
+      "stem": "Open interviews allow:",
+      "options": {
+        "A": "Pre-defined questions only",
+        "B": "Free discussion to explore topics in depth",
+        "C": "Only yes/no answers",
+        "D": "Only written responses"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Open interviews are exploratory and unconstrained."
+    },
+    {
+      "id": "uni-futa-fsen106-0141",
+      "type": "mcq",
+      "stem": "UML graphical notations for requirements include:",
+      "options": {
+        "A": "Use-case diagrams, sequence diagrams, activity diagrams, state charts",
+        "B": "Only class diagrams",
+        "C": "Only ER diagrams",
+        "D": "Only flowcharts"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "UML provides multiple graphical notations for system requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0142",
+      "type": "mcq",
+      "stem": "The Glossary section of an SRD:",
+      "options": {
+        "A": "Lists all technical and domain terms alphabetically",
+        "B": "Contains source code",
+        "C": "Describes the user interface",
+        "D": "Defines the project budget"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Glossary defines terms so readers do not need specialised knowledge."
+    },
+    {
+      "id": "uni-futa-fsen106-0143",
+      "type": "mcq",
+      "stem": "Changes to baselined requirements must go through:",
+      "options": {
+        "A": "The change management process",
+        "B": "Immediate implementation",
+        "C": "Public voting",
+        "D": "No process"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Baselines are stable; changes require formal approval."
+    },
+    {
+      "id": "uni-futa-fsen106-0144",
+      "type": "mcq",
+      "stem": "Unstated assumptions are dangerous because:",
+      "options": {
+        "A": "They are explicitly documented",
+        "B": "Stakeholders assume they are obvious and will be included automatically, but they may not be",
+        "C": "They are always testable",
+        "D": "They have no impact on the system"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Implicit assumptions must be surfaced and made explicit."
+    },
+    {
+      "id": "uni-futa-fsen106-0145",
+      "type": "mcq",
+      "stem": "Poor requirements are a leading cause of:",
+      "options": {
+        "A": "Project failure",
+        "B": "Faster delivery",
+        "C": "Higher user satisfaction",
+        "D": "Lower project costs"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Industry studies repeatedly identify poor requirements as the top cause of project failure."
+    },
+    {
+      "id": "uni-futa-fsen106-0146",
+      "type": "mcq",
+      "stem": "The System Models section of an SRD typically includes:",
+      "options": {
+        "A": "Data flow diagrams, ER diagrams, UML use case and sequence diagrams",
+        "B": "Source code listings",
+        "C": "Project budgets",
+        "D": "Marketing materials"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "System Models provide graphical representations of structure and behaviour."
+    },
+    {
+      "id": "uni-futa-fsen106-0147",
+      "type": "mcq",
+      "stem": "Which validation technique is particularly effective for usability requirements?",
+      "options": {
+        "A": "Reviews",
+        "B": "Prototyping",
+        "C": "Automated analysis",
+        "D": "Mathematical specification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Usability is best validated by interacting with a working model."
+    },
+    {
+      "id": "uni-futa-fsen106-0148",
+      "type": "mcq",
+      "stem": "The iterative nature of RE is:",
+      "options": {
+        "A": "A flaw to be eliminated",
+        "B": "A feature, not a flaw",
+        "C": "Only present in agile projects",
+        "D": "Required only for safety-critical systems"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Iteration reflects the reality that understanding develops over time."
+    },
+    {
+      "id": "uni-futa-fsen106-0149",
+      "type": "mcq",
+      "stem": "The SRD should describe:",
+      "options": {
+        "A": "Only the user interface",
+        "B": "What the system should do, not how it achieves its goals",
+        "C": "The internal algorithms in detail",
+        "D": "Only the database schema"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The SRD is a requirements document, not a design document."
+    },
+    {
+      "id": "uni-futa-fsen106-0150",
+      "type": "mcq",
+      "stem": "To check realism, you should:",
+      "options": {
+        "A": "Validate with developers and architects; cost unrealistic delivery",
+        "B": "Build a prototype only",
+        "C": "Send a survey",
+        "D": "Skip the check"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Developers and architects know what is technically feasible."
+    },
+    {
+      "id": "uni-futa-fsen106-0151",
+      "type": "mcq",
+      "stem": "An example of an untestable requirement is:",
+      "options": {
+        "A": "The system shall respond within 200 ms",
+        "B": "The system shall be user-friendly",
+        "C": "The system shall support 500 concurrent users",
+        "D": "The system shall encrypt data using AES-256"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "'User-friendly' is subjective and cannot be objectively tested."
+    },
+    {
+      "id": "uni-futa-fsen106-0152",
+      "type": "mcq",
+      "stem": "Use cases are a UML technique that:",
+      "options": {
+        "A": "Identify actors and describe their interactions with the system",
+        "B": "Are the same as scenarios",
+        "C": "Are informal narratives only",
+        "D": "Replace the SRD entirely"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Use case diagrams show scope; use case descriptions detail interactions."
+    },
+    {
+      "id": "uni-futa-fsen106-0153",
+      "type": "mcq",
+      "stem": "Tool support for requirements management is essential because:",
+      "options": {
+        "A": "Manual tracking is sufficient for large systems",
+        "B": "Large systems involve large volumes of information that manual processes cannot handle",
+        "C": "Tools are optional",
+        "D": "Tools are too expensive"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Scale demands tool support."
+    },
+    {
+      "id": "uni-futa-fsen106-0154",
+      "type": "mcq",
+      "stem": "During requirements analysis, conflicting requirements from different stakeholders must be:",
+      "options": {
+        "A": "Ignored",
+        "B": "Negotiated and agreed upon",
+        "C": "Documented but never resolved",
+        "D": "Decided by the developer unilaterally"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Conflicts require structured negotiation."
+    },
+    {
+      "id": "uni-futa-fsen106-0155",
+      "type": "mcq",
+      "stem": "Which is an example of a usability requirement?",
+      "options": {
+        "A": "The system shall respond in under 2 seconds",
+        "B": "Medical staff shall be able to perform all primary functions after 4 hours of training",
+        "C": "The system shall run on Windows 10",
+        "D": "Mean time to failure shall exceed 5,000 hours"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Usability requirements define ease of use for the intended user class."
+    },
+    {
+      "id": "uni-futa-fsen106-0156",
+      "type": "mcq",
+      "stem": "A limitation of interviews is that they may:",
+      "options": {
+        "A": "Miss tacit knowledge that stakeholders do not realise they hold",
+        "B": "Be too expensive",
+        "C": "Take too long",
+        "D": "Require too many stakeholders"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Tacit knowledge is hard to articulate; ethnography surfaces it."
+    },
+    {
+      "id": "uni-futa-fsen106-0157",
+      "type": "mcq",
+      "stem": "A requirement 'The system shall allow users to log in with their student ID' is an example of:",
+      "options": {
+        "A": "A system requirement",
+        "B": "A user requirement",
+        "C": "A non-functional requirement",
+        "D": "A domain requirement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "It focuses on WHAT at a high level without implementation detail."
+    },
+    {
+      "id": "uni-futa-fsen106-0158",
+      "type": "mcq",
+      "stem": "The SRD is the official statement of:",
+      "options": {
+        "A": "What the system developers should implement",
+        "B": "How the system achieves its goals",
+        "C": "The project budget",
+        "D": "The deployment schedule"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The SRD specifies WHAT, not HOW."
+    },
+    {
+      "id": "uni-futa-fsen106-0159",
+      "type": "mcq",
+      "stem": "Functional requirements may also explicitly state:",
+      "options": {
+        "A": "What the system should NOT do to prevent misuse",
+        "B": "Only positive behaviours",
+        "C": "Database schemas",
+        "D": "Network configurations"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "FRs may state prohibitions to prevent unsafe or unwanted behaviour."
+    },
+    {
+      "id": "uni-futa-fsen106-0160",
+      "type": "mcq",
+      "stem": "The SRD serves as a communication bridge between:",
+      "options": {
+        "A": "Only developers and testers",
+        "B": "All stakeholders involved in a software project",
+        "C": "Only customers and managers",
+        "D": "Only testers and maintainers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The SRD is read by every stakeholder group, each using it differently."
+    },
+    {
+      "id": "uni-futa-fsen106-0161",
+      "type": "mcq",
+      "stem": "Who uses the SRD to develop validation test plans?",
+      "options": {
+        "A": "System test engineers",
+        "B": "Marketing teams",
+        "C": "Customers",
+        "D": "Project sponsors"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Testers derive validation test plans directly from SRD requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0162",
+      "type": "mcq",
+      "stem": "Which is an example of a performance requirement?",
+      "options": {
+        "A": "The system shall run on Windows 10",
+        "B": "The MHC-PMS shall process up to 1,000 patient records per minute under normal load",
+        "C": "All patient data shall be encrypted at rest using AES-256",
+        "D": "Medical staff shall be able to perform all primary functions after 4 hours of training"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Performance requirements specify response time or throughput."
+    },
+    {
+      "id": "uni-futa-fsen106-0163",
+      "type": "mcq",
+      "stem": "A System Requirements Specification section in an IEEE 830 SRD contains:",
+      "options": {
+        "A": "Both functional and non-functional requirements in precise, testable form",
+        "B": "Only marketing copy",
+        "C": "Only the project budget",
+        "D": "Only the deployment plan"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "This section is the technical core of the SRD."
+    },
+    {
+      "id": "uni-futa-fsen106-0164",
+      "type": "mcq",
+      "stem": "In UML, an actor is:",
+      "options": {
+        "A": "A person or external system that interacts with the system",
+        "B": "A database table",
+        "C": "A use case",
+        "D": "A developer"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Actors are external entities that interact with the system under development."
+    },
+    {
+      "id": "uni-futa-fsen106-0165",
+      "type": "mcq",
+      "stem": "A standard format for every requirement in the document:",
+      "options": {
+        "A": "Increases ambiguity",
+        "B": "Makes the document easier to read and reduces missing information",
+        "C": "Is prohibited by IEEE 830",
+        "D": "Is only needed for non-functional requirements"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Consistency aids readability and completeness."
+    },
+    {
+      "id": "uni-futa-fsen106-0166",
+      "type": "mcq",
+      "stem": "Validation checks for which FIVE properties?",
+      "options": {
+        "A": "Validity, Consistency, Completeness, Realism, Verifiability",
+        "B": "Validity, Cost, Coverage, Reuse, Verification",
+        "C": "Vision, Consistency, Coverage, Realism, Value",
+        "D": "Value, Cost, Completeness, Reuse, Verification"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "FSEN 106 lists these five validation checks."
+    },
+    {
+      "id": "uni-futa-fsen106-0167",
+      "type": "mcq",
+      "stem": "Automated analysis tools (e.g., IBM DOORS) are useful for:",
+      "options": {
+        "A": "Small documents with few requirements",
+        "B": "Large documents with hundreds or thousands of requirements where manual review is impractical",
+        "C": "Replacing the SRD",
+        "D": "User interface design"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Tools scale where manual review cannot."
+    },
+    {
+      "id": "uni-futa-fsen106-0168",
+      "type": "mcq",
+      "stem": "Which of the following statements about requirements is FALSE?",
+      "options": {
+        "A": "Requirements describe what the system should do",
+        "B": "Requirements describe constraints under which the system operates",
+        "C": "Requirements are always static once written",
+        "D": "Requirements can range from abstract to detailed mathematical specifications"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Requirements evolve throughout development; they are not static."
+    },
+    {
+      "id": "uni-futa-fsen106-0169",
+      "type": "mcq",
+      "stem": "The people who pay for the system are not always the same people who use it. This leads to:",
+      "options": {
+        "A": "Fewer requirements",
+        "B": "Conflicting priorities between sponsors and users",
+        "C": "Faster development",
+        "D": "Lower costs"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Divided stakeholders create evolving priorities."
+    },
+    {
+      "id": "uni-futa-fsen106-0170",
+      "type": "mcq",
+      "stem": "Which elicitation technique is mentioned in FSEN 106 as a 'formal UML technique'?",
+      "options": {
+        "A": "Interviews",
+        "B": "Ethnography",
+        "C": "Use cases (UML)",
+        "D": "Prototyping"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Use cases are formalised within the UML standard."
+    },
+    {
+      "id": "uni-futa-fsen106-0171",
+      "type": "mcq",
+      "stem": "System test engineers use the SRD to:",
+      "options": {
+        "A": "Modify the system after deployment",
+        "B": "Develop validation test plans and test cases directly from requirements",
+        "C": "Plan bids",
+        "D": "Sign off on the contract"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Testers derive test plans and test cases from the SRD."
+    },
+    {
+      "id": "uni-futa-fsen106-0172",
+      "type": "mcq",
+      "stem": "An MHC-PMS requirement that 'a user shall be able to search the appointments lists for all clinics' is:",
+      "options": {
+        "A": "A functional requirement",
+        "B": "A non-functional requirement",
+        "C": "A domain requirement only",
+        "D": "An external requirement"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "It specifies a service the system must provide."
+    },
+    {
+      "id": "uni-futa-fsen106-0173",
+      "type": "mcq",
+      "stem": "Organisational and political factors may:",
+      "options": {
+        "A": "Improve requirements quality",
+        "B": "Influence what requirements are stated or suppressed",
+        "C": "Eliminate conflicts",
+        "D": "Replace the need for elicitation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Politics can cause stakeholders to suppress or advance requirements for personal agendas."
+    },
+    {
+      "id": "uni-futa-fsen106-0174",
+      "type": "mcq",
+      "stem": "Step 4 of the change management process is:",
+      "options": {
+        "A": "Change implementation",
+        "B": "Problem analysis",
+        "C": "Costing",
+        "D": "Acceptance"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "If accepted, the SRD and design are modified and the system is retested."
+    },
+    {
+      "id": "uni-futa-fsen106-0175",
+      "type": "mcq",
+      "stem": "The dual role of requirements means they must be written to be:",
+      "options": {
+        "A": "Open to interpretation AND precisely defined",
+        "B": "Vague AND short",
+        "C": "Technical AND verbose",
+        "D": "Abstract AND ambiguous"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Requirements must serve both stakeholders (need interpretation) and developers (need precision)."
+    },
+    {
+      "id": "uni-futa-fsen106-0176",
+      "type": "mcq",
+      "stem": "Domain requirements may be expressed in:",
+      "options": {
+        "A": "Plain English only",
+        "B": "The technical language of the application domain",
+        "C": "Java pseudocode only",
+        "D": "Mathematical notation only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Domain requirements use domain-specific terminology that non-experts may not understand."
+    },
+    {
+      "id": "uni-futa-fsen106-0177",
+      "type": "mcq",
+      "stem": "Which activity produces an agreed, prioritised requirements set with documented conflict resolutions?",
+      "options": {
+        "A": "Discovery",
+        "B": "Classification",
+        "C": "Prioritisation and negotiation",
+        "D": "Documentation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Negotiation produces prioritised, agreed requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0178",
+      "type": "mcq",
+      "stem": "Which IEEE standard governs SRS structure?",
+      "options": {
+        "A": "IEEE 802",
+        "B": "IEEE 830",
+        "C": "IEEE 12207",
+        "D": "IEEE 1016"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IEEE Std 830 is the recommended practice for SRS."
+    },
+    {
+      "id": "uni-futa-fsen106-0179",
+      "type": "mcq",
+      "stem": "Ethnography is:",
+      "options": {
+        "A": "A formal interview technique",
+        "B": "An observational technique where an analyst embeds in the working environment",
+        "C": "A statistical survey method",
+        "D": "A prototyping method"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Ethnography observes actual work practices as they happen."
+    },
+    {
+      "id": "uni-futa-fsen106-0180",
+      "type": "mcq",
+      "stem": "Scenarios and stories help stakeholders:",
+      "options": {
+        "A": "Avoid thinking about requirements",
+        "B": "Concretise vague needs by thinking through specific examples",
+        "C": "Skip the validation step",
+        "D": "Replace formal documentation"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Concrete scenarios reveal missing requirements and edge cases."
+    },
+    {
+      "id": "uni-futa-fsen106-0181",
+      "type": "mcq",
+      "stem": "System maintenance engineers use the SRD to:",
+      "options": {
+        "A": "Understand system structure and design rationale for future modifications",
+        "B": "Plan bids for the system",
+        "C": "Sign off on the contract",
+        "D": "Develop test plans"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Maintainers need to understand structure and rationale for safe modification."
+    },
+    {
+      "id": "uni-futa-fsen106-0182",
+      "type": "mcq",
+      "stem": "Changes during development require:",
+      "options": {
+        "A": "Ignoring them",
+        "B": "Management to track, assess, and incorporate them",
+        "C": "Starting the project over",
+        "D": "Firing the customer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Change management is a core RE activity."
+    },
+    {
+      "id": "uni-futa-fsen106-0183",
+      "type": "mcq",
+      "stem": "Which statement best describes 'requirements engineering'?",
+      "options": {
+        "A": "A one-time activity at project start",
+        "B": "An ongoing spiral process throughout development",
+        "C": "Only performed during testing",
+        "D": "Only performed by project managers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE is iterative and revisits earlier activities as understanding develops."
+    },
+    {
+      "id": "uni-futa-fsen106-0184",
+      "type": "mcq",
+      "stem": "Requirements specification is the process of:",
+      "options": {
+        "A": "Implementing the system in code",
+        "B": "Writing down user and system requirements in a formal requirements document",
+        "C": "Testing the system against requirements",
+        "D": "Deploying the system to production"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Specification is the act of formally documenting requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0185",
+      "type": "mcq",
+      "stem": "Which is NOT a characteristic of functional requirements?",
+      "options": {
+        "A": "Describe services",
+        "B": "Define system reactions to inputs",
+        "C": "Specify execution speed in milliseconds",
+        "D": "Describe behaviour in specific situations"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Execution speed is a non-functional (performance) requirement."
+    },
+    {
+      "id": "uni-futa-fsen106-0186",
+      "type": "mcq",
+      "stem": "Which activity involves working with stakeholders to discover requirements?",
+      "options": {
+        "A": "Requirements elicitation",
+        "B": "Requirements validation",
+        "C": "Requirements management",
+        "D": "Requirements documentation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Elicitation is the discovery activity."
+    },
+    {
+      "id": "uni-futa-fsen106-0187",
+      "type": "mcq",
+      "stem": "A requirement is testable if:",
+      "options": {
+        "A": "You can write a test that confirms whether the requirement is met",
+        "B": "It uses SHALL",
+        "C": "It is short",
+        "D": "It is in natural language"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Testability is a core requirement quality."
+    },
+    {
+      "id": "uni-futa-fsen106-0188",
+      "type": "mcq",
+      "stem": "Requirements classification groups requirements based on:",
+      "options": {
+        "A": "Random assignment",
+        "B": "Related functionality, subsystems, or requirement types",
+        "C": "Alphabetical order",
+        "D": "Date of discovery"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Classification imposes logical structure on raw requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0189",
+      "type": "mcq",
+      "stem": "Missing requirements result in:",
+      "options": {
+        "A": "Faster delivery",
+        "B": "Features the customer expected but never received",
+        "C": "Lower maintenance costs",
+        "D": "Improved test coverage"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Missing requirements mean expected features never get built."
+    },
+    {
+      "id": "uni-futa-fsen106-0190",
+      "type": "mcq",
+      "stem": "SRS stands for:",
+      "options": {
+        "A": "Software Requirements Specification",
+        "B": "System Reliability Standards",
+        "C": "Software Resource Scheduler",
+        "D": "Secure Requirements System"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SRS = Software Requirements Specification, an alternative name for the SRD."
+    },
+    {
+      "id": "uni-futa-fsen106-0191",
+      "type": "mcq",
+      "stem": "Requirements management does NOT try to:",
+      "options": {
+        "A": "Track changes",
+        "B": "Assess impact of changes",
+        "C": "Prevent change (which is impossible)",
+        "D": "Incorporate approved changes in a controlled way"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Change is inevitable; management controls rather than prevents it."
+    },
+    {
+      "id": "uni-futa-fsen106-0192",
+      "type": "mcq",
+      "stem": "An SRD differs from a design document because the SRD:",
+      "options": {
+        "A": "Specifies HOW the system works",
+        "B": "Specifies WHAT the system should do",
+        "C": "Contains source code",
+        "D": "Includes deployment scripts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The SRD specifies WHAT; design documents specify HOW."
+    },
+    {
+      "id": "uni-futa-fsen106-0193",
+      "type": "mcq",
+      "stem": "Following IEEE 830 ensures the SRD has:",
+      "options": {
+        "A": "Completeness and consistency",
+        "B": "Source code listings",
+        "C": "Marketing plans",
+        "D": "Deployment scripts"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IEEE 830 standardises structure to ensure no essential components are omitted."
+    },
+    {
+      "id": "uni-futa-fsen106-0194",
+      "type": "mcq",
+      "stem": "The phrase 'requirements engineering bridges the gap between' emphasises that RE:",
+      "options": {
+        "A": "Eliminates the need for testing",
+        "B": "Translates customer needs into implementable specifications",
+        "C": "Replaces system design",
+        "D": "Removes the need for stakeholders"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE is the translation layer between customer needs and developer deliverables."
+    },
+    {
+      "id": "uni-futa-fsen106-0195",
+      "type": "mcq",
+      "stem": "Requirements must be written clearly enough to be understandable to:",
+      "options": {
+        "A": "Only developers",
+        "B": "Both customers (who validate) and developers (who implement)",
+        "C": "Only customers",
+        "D": "Only testers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The document serves dual audiences."
+    },
+    {
+      "id": "uni-futa-fsen106-0196",
+      "type": "mcq",
+      "stem": "Effective requirements management requires:",
+      "options": {
+        "A": "Establishing policies and processes before development begins",
+        "B": "Waiting until changes occur",
+        "C": "Ignoring traceability",
+        "D": "Avoiding tools"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A management plan must be in place before changes start arriving."
+    },
+    {
+      "id": "uni-futa-fsen106-0197",
+      "type": "mcq",
+      "stem": "Step 3 of the change management process is:",
+      "options": {
+        "A": "Change acceptance or rejection (with documented rationale)",
+        "B": "Problem analysis",
+        "C": "Costing",
+        "D": "Implementation"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Stakeholders decide to accept, defer, or reject; rationale is documented."
+    },
+    {
+      "id": "uni-futa-fsen106-0198",
+      "type": "mcq",
+      "stem": "The Index section of an SRD provides:",
+      "options": {
+        "A": "Navigation aids including alphabetical and requirements indexes",
+        "B": "Project schedules",
+        "C": "Source code",
+        "D": "Network diagrams"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Index helps readers find specific content quickly."
+    },
+    {
+      "id": "uni-futa-fsen106-0199",
+      "type": "mcq",
+      "stem": "Validity check asks:",
+      "options": {
+        "A": "'Are there any conflicting requirements?'",
+        "B": "'Will satisfying this requirement actually deliver value to the user?'",
+        "C": "'Is anything missing?'",
+        "D": "'Can a test be written?'"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Validity is about whether the requirement delivers real customer value."
+    },
+    {
+      "id": "uni-futa-fsen106-0200",
+      "type": "mcq",
+      "stem": "New legislation or updated regulations may require:",
+      "options": {
+        "A": "System modifications after requirements have been agreed",
+        "B": "Cancellation of the project",
+        "C": "Faster delivery",
+        "D": "Lower costs"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Regulatory changes force post-baseline requirement changes."
+    },
+    {
+      "id": "uni-futa-fsen106-0201",
+      "type": "mcq",
+      "stem": "Organisational requirements arise from:",
+      "options": {
+        "A": "External laws and regulations",
+        "B": "Organisational policies and procedures",
+        "C": "Hardware constraints",
+        "D": "User interface design"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Organisational requirements come from internal policies including process standards and delivery constraints."
+    },
+    {
+      "id": "uni-futa-fsen106-0202",
+      "type": "mcq",
+      "stem": "Automated analysis tools can check for:",
+      "options": {
+        "A": "Duplicate requirements",
+        "B": "Missing attributes",
+        "C": "Broken cross-references between related requirements",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Tools detect common defects automatically."
+    },
+    {
+      "id": "uni-futa-fsen106-0203",
+      "type": "mcq",
+      "stem": "The Introduction section of an SRD describes:",
+      "options": {
+        "A": "The need for the system, target users, constraints, assumptions, dependencies",
+        "B": "Version history only",
+        "C": "Detailed algorithms",
+        "D": "Marketing strategy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The Introduction covers system functions overview, target users, and project context."
+    },
+    {
+      "id": "uni-futa-fsen106-0204",
+      "type": "mcq",
+      "stem": "Pre-requirements traceability links requirements to:",
+      "options": {
+        "A": "Their source",
+        "B": "Design components",
+        "C": "Test cases",
+        "D": "Source code"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Pre-requirements traceability goes backward to stakeholder needs."
+    },
+    {
+      "id": "uni-futa-fsen106-0205",
+      "type": "mcq",
+      "stem": "Use case diagrams give:",
+      "options": {
+        "A": "Detailed interaction steps",
+        "B": "An overview of system scope and actors",
+        "C": "Source code",
+        "D": "Database schemas"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Diagrams show scope; descriptions detail interactions."
+    },
+    {
+      "id": "uni-futa-fsen106-0206",
+      "type": "mcq",
+      "stem": "External requirements arise from:",
+      "options": {
+        "A": "Internal organisational policies",
+        "B": "Factors external to the system such as laws and regulations",
+        "C": "Hardware choices",
+        "D": "Programming language choice"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "External requirements include interoperability, legislative compliance, and ethical requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0207",
+      "type": "mcq",
+      "stem": "Prototyping may reveal that:",
+      "options": {
+        "A": "Stakeholders imagined the system differently from how developers understood the requirements",
+        "B": "The system is already perfect",
+        "C": "No more requirements are needed",
+        "D": "The SRD is unnecessary"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Concrete prototypes expose mismatched mental models."
+    },
+    {
+      "id": "uni-futa-fsen106-0208",
+      "type": "mcq",
+      "stem": "Requirements validation is described as one of the highest-ROI activities because:",
+      "options": {
+        "A": "It is the cheapest activity",
+        "B": "Time and effort invested in thorough validation pays dividends throughout the rest of the project",
+        "C": "It eliminates the need for testing",
+        "D": "It is performed only once"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Validation prevents expensive late-stage rework."
+    },
+    {
+      "id": "uni-futa-fsen106-0209",
+      "type": "mcq",
+      "stem": "Mistakes made during the requirements phase are described as:",
+      "options": {
+        "A": "Easily corrected during testing",
+        "B": "The most costly to correct later in the lifecycle",
+        "C": "Impossible to correct after deployment",
+        "D": "Less expensive than design errors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Requirements errors propagate through design, code, and tests, making them the most expensive to fix late."
+    },
+    {
+      "id": "uni-futa-fsen106-0210",
+      "type": "mcq",
+      "stem": "Test-case generation as a validation technique serves to:",
+      "options": {
+        "A": "Replace requirements",
+        "B": "Reveal unmeasurable, ambiguous, or incomplete requirements",
+        "C": "Eliminate the need for testing later",
+        "D": "Replace the SRD"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "If you cannot write a test, the requirement is flawed."
+    },
+    {
+      "id": "uni-futa-fsen106-0211",
+      "type": "mcq",
+      "stem": "Mixing WHAT and HOW in the SRD is:",
+      "options": {
+        "A": "Best practice",
+        "B": "A common mistake that leads to premature design commitments",
+        "C": "Required by IEEE 830",
+        "D": "Recommended for agile projects"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Mixing concerns limits implementation options and causes rework."
+    },
+    {
+      "id": "uni-futa-fsen106-0212",
+      "type": "mcq",
+      "stem": "Which of the following best describes RE as a 'spiral activity'?",
+      "options": {
+        "A": "RE happens once at project start",
+        "B": "RE cycles back as new requirements emerge",
+        "C": "RE only happens at project end",
+        "D": "RE is linear and one-directional"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Spiral implies iterative revisiting of activities."
+    },
+    {
+      "id": "uni-futa-fsen106-0213",
+      "type": "mcq",
+      "stem": "Including rationale for each requirement helps:",
+      "options": {
+        "A": "Developers make correct trade-off decisions",
+        "B": "Reduce document length",
+        "C": "Avoid using SHALL",
+        "D": "Eliminate the need for testing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Rationale explains why a requirement exists, helping with future trade-offs."
+    },
+    {
+      "id": "uni-futa-fsen106-0214",
+      "type": "mcq",
+      "stem": "A requirement that the system use a specific coding standard is an:",
+      "options": {
+        "A": "Organisational requirement",
+        "B": "External requirement",
+        "C": "Product requirement",
+        "D": "Domain requirement"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Coding standards arise from organisational policies."
+    },
+    {
+      "id": "uni-futa-fsen106-0215",
+      "type": "mcq",
+      "stem": "Which keyword is used for desirable but optional requirements?",
+      "options": {
+        "A": "SHALL",
+        "B": "SHOULD",
+        "C": "MUST",
+        "D": "WILL"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SHOULD indicates a desirable but not mandatory requirement."
+    },
+    {
+      "id": "uni-futa-fsen106-0216",
+      "type": "mcq",
+      "stem": "At key project milestones, the requirements set is formally:",
+      "options": {
+        "A": "Deleted",
+        "B": "Baselined",
+        "C": "Made public",
+        "D": "Translated"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Baselining provides stability against scope creep."
+    },
+    {
+      "id": "uni-futa-fsen106-0217",
+      "type": "mcq",
+      "stem": "Use case descriptions provide:",
+      "options": {
+        "A": "An overview only",
+        "B": "Detailed interaction steps, preconditions, and postconditions",
+        "C": "Source code",
+        "D": "Marketing copy"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Descriptions are the textual counterpart to diagrams."
+    },
+    {
+      "id": "uni-futa-fsen106-0218",
+      "type": "mcq",
+      "stem": "A limitation of questionnaires is that they:",
+      "options": {
+        "A": "Cannot follow up on interesting answers without additional contact",
+        "B": "Are too expensive",
+        "C": "Require too few stakeholders",
+        "D": "Are illegal in most jurisdictions"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Surveys are one-shot; deeper follow-up requires another method."
+    },
+    {
+      "id": "uni-futa-fsen106-0219",
+      "type": "mcq",
+      "stem": "Stakeholders may not be able to articulate requirements until they see a:",
+      "options": {
+        "A": "Final product",
+        "B": "Prototype",
+        "C": "Marketing brochure",
+        "D": "Database schema"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Prototypes make abstract needs concrete."
+    },
+    {
+      "id": "uni-futa-fsen106-0220",
+      "type": "mcq",
+      "stem": "If domain requirements are not satisfied, the system may be:",
+      "options": {
+        "A": "Unworkable even if technically correct from a software perspective",
+        "B": "Faster than expected",
+        "C": "More secure",
+        "D": "Easier to maintain"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Domain requirements reflect domain rules; ignoring them makes the system unfit for purpose."
+    },
+    {
+      "id": "uni-futa-fsen106-0221",
+      "type": "mcq",
+      "stem": "A large safety-critical aerospace system requires:",
+      "options": {
+        "A": "The same RE process as a small web app",
+        "B": "A very different RE process than an agile web application startup",
+        "C": "No RE process",
+        "D": "Only requirements management"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE processes scale with system risk and complexity."
+    },
+    {
+      "id": "uni-futa-fsen106-0222",
+      "type": "mcq",
+      "stem": "Change analysis and costing uses:",
+      "options": {
+        "A": "Traceability information to identify all affected requirements, design, code, and tests",
+        "B": "Marketing data",
+        "C": "Random guessing",
+        "D": "Customer billing records"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Traceability is what makes impact analysis possible."
+    },
+    {
+      "id": "uni-futa-fsen106-0223",
+      "type": "mcq",
+      "stem": "Interviews are best suited for:",
+      "options": {
+        "A": "Understanding high-level goals, priorities, and known requirements",
+        "B": "Observing implicit work practices",
+        "C": "Statistical analysis of large populations",
+        "D": "Resolving conflicts across many stakeholder groups simultaneously"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Interviews reveal what stakeholders consciously know."
+    },
+    {
+      "id": "uni-futa-fsen106-0224",
+      "type": "mcq",
+      "stem": "Requirements analysis involves:",
+      "options": {
+        "A": "Implementing requirements in code",
+        "B": "Checking collected requirements for consistency, completeness, and conflicts",
+        "C": "Deploying the system",
+        "D": "Writing the user manual"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Analysis identifies conflicts, sets priorities, and resolves trade-offs."
+    },
+    {
+      "id": "uni-futa-fsen106-0225",
+      "type": "mcq",
+      "stem": "An MHC-PMS requirement that 'each staff member shall be uniquely identified by an 8-digit employee number' is:",
+      "options": {
+        "A": "A functional requirement",
+        "B": "A non-functional requirement",
+        "C": "An external requirement",
+        "D": "A usability requirement"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "It specifies behaviour the system must implement."
+    },
+    {
+      "id": "uni-futa-fsen106-0226",
+      "type": "mcq",
+      "stem": "Which is NOT a category of non-functional requirement mentioned in FSEN 106?",
+      "options": {
+        "A": "Product requirements",
+        "B": "Organisational requirements",
+        "C": "External requirements",
+        "D": "Marketing requirements"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "The three categories are Product, Organisational, and External."
+    },
+    {
+      "id": "uni-futa-fsen106-0227",
+      "type": "mcq",
+      "stem": "Which is NOT a typical problem caused by poor requirements?",
+      "options": {
+        "A": "Project exceeds budget",
+        "B": "System fails to meet user expectations",
+        "C": "Project misses deadlines",
+        "D": "Code compiles faster"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Poor requirements have no positive effect on compilation speed."
+    },
+    {
+      "id": "uni-futa-fsen106-0228",
+      "type": "mcq",
+      "stem": "System requirements specify:",
+      "options": {
+        "A": "Only the budget and timeline",
+        "B": "Exactly HOW the system behaves including error handling, data formats, and protocols",
+        "C": "Only the user interface layout",
+        "D": "Only marketing claims"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "System requirements specify detailed behaviour including error handling and protocols."
+    },
+    {
+      "id": "uni-futa-fsen106-0229",
+      "type": "mcq",
+      "stem": "Research consistently shows that requirements errors are:",
+      "options": {
+        "A": "The cheapest type of software defect",
+        "B": "The most expensive type of software defect",
+        "C": "Easier to fix than coding errors",
+        "D": "Found only during user acceptance testing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A requirements defect found after deployment can cost 100x more to fix."
+    },
+    {
+      "id": "uni-futa-fsen106-0230",
+      "type": "mcq",
+      "stem": "Words like 'will' or 'may' in requirements are:",
+      "options": {
+        "A": "Recommended for clarity",
+        "B": "Ambiguous and should be avoided",
+        "C": "Mandatory per IEEE 830",
+        "D": "Required for all functional requirements"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Use SHALL for mandatory and SHOULD for desirable; avoid 'will' and 'may'."
+    },
+    {
+      "id": "uni-futa-fsen106-0231",
+      "type": "mcq",
+      "stem": "Requirements elicitation and analysis is challenging because:",
+      "options": {
+        "A": "Stakeholders always know precisely what they want",
+        "B": "Stakeholders often do not know precisely what they want",
+        "C": "Requirements never change",
+        "D": "Domain language is always clear to developers"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Stakeholders frequently cannot articulate their needs until they see a prototype."
+    },
+    {
+      "id": "uni-futa-fsen106-0232",
+      "type": "mcq",
+      "stem": "The output of the requirements engineering process is:",
+      "options": {
+        "A": "Source code",
+        "B": "Descriptions of system services and constraints",
+        "C": "Test cases only",
+        "D": "User manuals"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RE produces descriptions of services plus constraints under which the system operates."
+    },
+    {
+      "id": "uni-futa-fsen106-0233",
+      "type": "mcq",
+      "stem": "Which is NOT one of the four core RE activities?",
+      "options": {
+        "A": "Elicitation",
+        "B": "Analysis",
+        "C": "Compilation",
+        "D": "Validation"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Compilation is a code activity, not a requirements activity."
+    },
+    {
+      "id": "uni-futa-fsen106-0234",
+      "type": "mcq",
+      "stem": "The change management process decides:",
+      "options": {
+        "A": "Whether a proposed change should be accepted, deferred, or rejected based on cost-benefit analysis",
+        "B": "Whether to cancel the project",
+        "C": "Whether to fire developers",
+        "D": "Whether to skip testing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Each change is evaluated for cost vs. benefit."
+    },
+    {
+      "id": "uni-futa-fsen106-0235",
+      "type": "mcq",
+      "stem": "Baseline management provides:",
+      "options": {
+        "A": "Stability and prevents scope creep",
+        "B": "Faster development",
+        "C": "Lower costs",
+        "D": "Better UX"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Formal change control prevents uncontrolled expansion of scope."
+    },
+    {
+      "id": "uni-futa-fsen106-0236",
+      "type": "mcq",
+      "stem": "Which technique is BEST for discovering implicit work practices?",
+      "options": {
+        "A": "Closed interviews",
+        "B": "Ethnography",
+        "C": "Questionnaires",
+        "D": "Mathematical specification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Observation surfaces tacit knowledge."
+    },
+    {
+      "id": "uni-futa-fsen106-0237",
+      "type": "mcq",
+      "stem": "Software projects without properly engineered requirements risk:",
+      "options": {
+        "A": "Delivering products that fail to meet user expectations",
+        "B": "Exceeding budget",
+        "C": "Missing deadlines",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Poor requirements lead to all three failure modes."
+    },
+    {
+      "id": "uni-futa-fsen106-0238",
+      "type": "mcq",
+      "stem": "Prioritisation and negotiation output:",
+      "options": {
+        "A": "Raw stakeholder needs",
+        "B": "Agreed, prioritised requirements with conflict resolutions documented",
+        "C": "Source code",
+        "D": "Test cases"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Negotiation produces agreed, prioritised, documented requirements."
+    },
+    {
+      "id": "uni-futa-fsen106-0239",
+      "type": "mcq",
+      "stem": "Non-functional requirements often apply to:",
+      "options": {
+        "A": "A single feature only",
+        "B": "The system as a whole rather than individual features",
+        "C": "Only the user interface",
+        "D": "Only the database layer"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "NFRs are typically system-wide properties like reliability or performance."
+    },
+    {
+      "id": "uni-futa-fsen106-0240",
+      "type": "mcq",
+      "stem": "A requirement that the system comply with GDPR is an:",
+      "options": {
+        "A": "Organisational requirement",
+        "B": "External requirement",
+        "C": "Product requirement",
+        "D": "Domain requirement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "GDPR is an external legal regulation."
+    },
+    {
+      "id": "uni-futa-fsen106-0241",
+      "type": "mcq",
+      "stem": "Domain requirements can introduce:",
+      "options": {
+        "A": "New functional requirements",
+        "B": "Constraints to existing requirements",
+        "C": "Specific computations using domain formulas",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Domain requirements may add FRs, constrain existing ones, or define domain-specific computations."
+    },
+    {
+      "id": "uni-futa-fsen106-0242",
+      "type": "mcq",
+      "stem": "The SRD should include:",
+      "options": {
+        "A": "Only user requirements",
+        "B": "Only system requirements",
+        "C": "Both user requirements and system requirements",
+        "D": "Only marketing requirements"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "SRD serves both customers (user reqs) and developers (system reqs)."
+    },
+    {
+      "id": "uni-futa-fsen106-0243",
+      "type": "mcq",
+      "stem": "Requirements documentation produces:",
+      "options": {
+        "A": "A final deployed system",
+        "B": "A draft requirements document suitable for review, validation, and baseline agreement",
+        "C": "Source code",
+        "D": "Marketing materials"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The draft is iteratively refined."
+    },
+    {
+      "id": "uni-futa-fsen106-0244",
+      "type": "mcq",
+      "stem": "User requirements focus on:",
+      "options": {
+        "A": "HOW the system behaves including error handling",
+        "B": "WHAT the system should do at a high level, avoiding implementation details",
+        "C": "Database schema design",
+        "D": "Network protocols"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "User requirements focus on the WHAT, not the HOW."
+    },
+    {
+      "id": "uni-futa-fsen106-0245",
+      "type": "mcq",
+      "stem": "User requirements may include:",
+      "options": {
+        "A": "Abstract descriptions of system services and operational constraints",
+        "B": "Database schema definitions",
+        "C": "Source code listings",
+        "D": "Deployment scripts"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "User requirements are high-level, abstract, and accessible to customers."
+    },
+    {
+      "id": "uni-futa-fsen106-0246",
+      "type": "mcq",
+      "stem": "Prototyping is particularly effective when:",
+      "options": {
+        "A": "Stakeholders find it difficult to articulate requirements in the abstract",
+        "B": "Requirements are perfectly clear",
+        "C": "The system is safety-critical",
+        "D": "The customer is a mathematician"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Seeing a prototype surfaces requirements stakeholders did not know they had."
+    },
+    {
+      "id": "uni-futa-fsen106-0247",
+      "type": "mcq",
+      "stem": "Which type of requirement specifies how the system must respond to particular inputs?",
+      "options": {
+        "A": "Functional requirement",
+        "B": "Performance requirement",
+        "C": "Portability requirement",
+        "D": "Organisational requirement"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Functional requirements define system reactions to inputs including error conditions."
+    },
+    {
+      "id": "uni-futa-fsen106-0248",
+      "type": "mcq",
+      "stem": "An IEEE 830 SRD's Index section primarily provides:",
+      "options": {
+        "A": "Source code references",
+        "B": "Navigation aids including alphabetical and requirements indexes",
+        "C": "Project budget breakdown",
+        "D": "Deployment scripts"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Index helps readers find specific content quickly."
+    },
+    {
+      "id": "uni-futa-fsen106-0249",
+      "type": "mcq",
+      "stem": "Which elicitation technique is BEST for surfacing social and political constraints on the system?",
+      "options": {
+        "A": "Closed interviews",
+        "B": "Ethnography",
+        "C": "Questionnaires",
+        "D": "Mathematical specification"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Embedded observation surfaces social and political realities."
+    },
+    {
+      "id": "uni-futa-fsen106-0250",
+      "type": "mcq",
+      "stem": "When a stakeholder says 'the system should be fast', the requirements engineer should:",
+      "options": {
+        "A": "Accept 'fast' as the requirement",
+        "B": "Replace 'fast' with a measurable criterion like 'respond within 200ms'",
+        "C": "Drop the requirement",
+        "D": "Convert it to a domain requirement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Vague quantifiers must be replaced with measurable criteria for testability."
+    }
+  ]
+}

@@ -15,7 +15,8 @@
         "C": "The waiting line itself.",
         "D": "The total time spent in the system."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0002",
@@ -27,7 +28,8 @@
         "C": "Queue discipline",
         "D": "System capacity"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D"
     },
     {
       "id": "uni-eksu-acc320-bank-0003",
@@ -39,7 +41,8 @@
         "C": "The rate at which customers enter the system.",
         "D": "The probability of an empty system."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0004",
@@ -51,7 +54,8 @@
         "C": "First-Come, First-Served (FCFS)",
         "D": "Random Service"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0005",
@@ -63,7 +67,8 @@
         "C": "They are highly adaptable to dynamic system changes.",
         "D": "They account for complex customer balking and reneging behaviors."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0006",
@@ -75,7 +80,8 @@
         "C": "Arrivals are independent and occur at a constant average rate.",
         "D": "Customers always join the queue."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0007",
@@ -87,7 +93,8 @@
         "C": "The rate at which the server can process customers.",
         "D": "The average waiting time in the queue."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0008",
@@ -99,7 +106,8 @@
         "C": "The system's performance measures (like queue length and waiting time) stabilize over time.",
         "D": "The server is always busy."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0009",
@@ -111,7 +119,8 @@
         "C": "Repetitive operational tasks.",
         "D": "A specific set of objectives."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0010",
@@ -123,7 +132,8 @@
         "C": "Absence of risk.",
         "D": "Flexible scope."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0011",
@@ -135,7 +145,8 @@
         "C": "Critical Path Method (CPM)",
         "D": "PERT Chart"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0012",
@@ -147,7 +158,8 @@
         "C": "Project scope into manageable components.",
         "D": "Project communication plan."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0013",
@@ -159,7 +171,8 @@
         "C": "Allocate resources to non-critical tasks.",
         "D": "Manage project scope changes."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0014",
@@ -171,7 +184,8 @@
         "C": "Switch to a different server.",
         "D": "Receive service faster."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0015",
@@ -183,7 +197,8 @@
         "C": "Decides not to join the queue.",
         "D": "Complains about the service."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0016",
@@ -195,7 +210,8 @@
         "C": "The arrival rate.",
         "D": "The system capacity."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0017",
@@ -207,7 +223,8 @@
         "C": "Immediately disappear.",
         "D": "Fluctuate unpredictably."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0018",
@@ -219,7 +236,8 @@
         "C": "A single server and an infinite queue capacity.",
         "D": "Customers with varying priorities."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0019",
@@ -231,7 +249,8 @@
         "C": "The total time customers spend in the system.",
         "D": "The rate at which customers arrive."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A"
     },
     {
       "id": "uni-eksu-acc320-bank-0020",
@@ -243,7 +262,8 @@
         "C": "Project scheduling.",
         "D": "Qualitative decision-making."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0021",
@@ -255,7 +275,8 @@
         "C": "Queue discipline and system capacity.",
         "D": "Server utilization and arrival rate."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0022",
@@ -267,7 +288,8 @@
         "C": "System throughput.",
         "D": "Arrival pattern."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0023",
@@ -279,7 +301,8 @@
         "C": "Expert opinion and subjective judgment.",
         "D": "Simulation and optimization techniques."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0024",
@@ -291,7 +314,8 @@
         "C": "Delphi method.",
         "D": "Monte Carlo simulation."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0025",
@@ -303,7 +327,8 @@
         "C": "Direct group discussion among experts.",
         "D": "Mathematical modeling of expert preferences."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0026",
@@ -315,7 +340,8 @@
         "C": "Rely solely on intuition and experience.",
         "D": "Avoid the use of mathematical tools."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0027",
@@ -327,7 +353,8 @@
         "C": "Analyzing qualitative data.",
         "D": "Managing project timelines."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0028",
@@ -339,7 +366,8 @@
         "C": "Summarize qualitative expert opinions.",
         "D": "Calculate the critical path of a project."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0029",
@@ -351,7 +379,8 @@
         "C": "Delphi method.",
         "D": "Work Breakdown Structure."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0030",
@@ -363,7 +392,8 @@
         "C": "Critical Path Method.",
         "D": "PERT Chart."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0031",
@@ -375,7 +405,8 @@
         "C": "Batch arrivals.",
         "D": "Priority service."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0032",
@@ -387,7 +418,8 @@
         "C": "Arrival rate to system capacity.",
         "D": "Server utilization to queue length."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0033",
@@ -399,7 +431,8 @@
         "C": "The total work to be performed to deliver a product, service, or result.",
         "D": "The risks associated with the project."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0034",
@@ -411,7 +444,8 @@
         "C": "Providing technical expertise for project deliverables.",
         "D": "Approving project funding."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0035",
@@ -423,7 +457,8 @@
         "C": "The tasks that require the most resources.",
         "D": "The tasks that can be performed in parallel."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0036",
@@ -435,7 +470,8 @@
         "C": "Increased subjectivity.",
         "D": "Simpler analysis for complex problems."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0037",
@@ -447,7 +483,8 @@
         "C": "Service is actually provided.",
         "D": "Customers depart."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0038",
@@ -459,7 +496,8 @@
         "C": "The service rate is infinite.",
         "D": "Arrivals are always accepted."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0039",
@@ -471,7 +509,8 @@
         "C": "M/G/1",
         "D": "M/D/1"
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0040",
@@ -483,7 +522,8 @@
         "C": "In the system (waiting and being served).",
         "D": "Arriving per hour."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0041",
@@ -495,7 +535,8 @@
         "C": "The capacity of the waiting line.",
         "D": "The frequency of customer arrivals."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0042",
@@ -507,7 +548,8 @@
         "C": "Complex customer behaviors like balking and reneging.",
         "D": "Poisson arrival processes."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0043",
@@ -519,7 +561,8 @@
         "C": "A project deliverable.",
         "D": "A project risk."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A"
     },
     {
       "id": "uni-eksu-acc320-bank-0044",
@@ -531,7 +574,8 @@
         "C": "Task durations are known with certainty.",
         "D": "There are no dependencies between tasks."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0045",
@@ -543,7 +587,8 @@
         "C": "The problem can be easily modeled mathematically.",
         "D": "Objective data is abundant."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0046",
@@ -555,7 +600,8 @@
         "C": "Scheduling project tasks.",
         "D": "Analyzing customer arrival patterns."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0047",
@@ -567,7 +613,8 @@
         "C": "Reliance on numerical data and mathematical models.",
         "D": "Acceptance of ambiguity."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0048",
@@ -579,7 +626,8 @@
         "C": "Expert judgment to define parameters.",
         "D": "Linear equations to find optimal solutions."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0049",
@@ -591,7 +639,8 @@
         "C": "The waiting line plus the service facility.",
         "D": "The arrival process."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0050",
@@ -603,7 +652,8 @@
         "C": "The square of the service rate.",
         "D": "The ratio of arrival rate to service rate."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0051",
@@ -615,7 +665,8 @@
         "C": "PERT Chart.",
         "D": "WBS."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "A"
     },
     {
       "id": "uni-eksu-acc320-bank-0052",
@@ -627,7 +678,8 @@
         "C": "Stakeholder satisfaction and team morale.",
         "D": "All of the above."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D"
     },
     {
       "id": "uni-eksu-acc320-bank-0053",
@@ -639,7 +691,8 @@
         "C": "Finite queue capacity.",
         "D": "Priority service."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0054",
@@ -651,7 +704,8 @@
         "C": "Reneging.",
         "D": "Queue discipline."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     },
     {
       "id": "uni-eksu-acc320-bank-0055",
@@ -663,7 +717,8 @@
         "C": "Maximizing profits.",
         "D": "Minimizing costs."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0056",
@@ -675,7 +730,8 @@
         "C": "Allocate project resources.",
         "D": "Visualize task dependencies."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0057",
@@ -687,7 +743,8 @@
         "C": "Focus Group.",
         "D": "Expert Panel Interview."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "D"
     },
     {
       "id": "uni-eksu-acc320-bank-0058",
@@ -699,7 +756,8 @@
         "C": "All tasks can be performed sequentially.",
         "D": "There are no dependencies between tasks."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0059",
@@ -711,7 +769,8 @@
         "C": "Queuing theory calculations.",
         "D": "Project scheduling."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "B"
     },
     {
       "id": "uni-eksu-acc320-bank-0060",
@@ -723,7 +782,8 @@
         "C": "A customer to be served.",
         "D": "A customer to leave the system."
       },
-      "marks": 1
+      "marks": 1,
+      "answer": "C"
     }
   ],
   "durationMinutes": 60,
