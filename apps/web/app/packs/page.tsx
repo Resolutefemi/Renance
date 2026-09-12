@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Question Pack, the small launcher behind the packs — focus-aware
+ * Question Pack, the small launcher behind the packs, focus-aware
  * (founder directive, 2026-09): a student sees THEIR exam's packs, not
  * the whole archive. The WAEC candidate's bank is the WAEC shelf, the
  * university student lands on their own school's courses, and the
@@ -151,7 +151,7 @@ export default function PacksPage() {
       : focus;
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Question Pack" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">
@@ -204,30 +204,30 @@ export default function PacksPage() {
                   <h2 className="truncate font-mono text-xs uppercase tracking-widest text-on-surface-variant">
                     {group.label} · {group.packs.reduce((n, p) => n + p.questionCount, 0)} questions
                   </h2>
-                  {/* Each body's customise desk — compose a paper from its banks. */}
+                  {/* Each body's customise desk, compose a paper from its banks. */}
                   {focus === 'JAMB' && (
-                    <a
+                    <Link
                       href="/exams/setup"
                       className="flex shrink-0 items-center gap-1 rounded-full bg-surface-container px-2.5 py-1 text-[11px] font-semibold text-on-surface transition hover:bg-surface-container-high"
                     >
                       <span className="material-symbols-outlined text-[14px]">tune</span>
                       Customise
-                    </a>
+                    </Link>
                   )}
                   {(focus === 'WAEC' || focus === 'NECO') && (
-                    <a
+                    <Link
                       href={`/exams/setup?body=${focus.toLowerCase()}`}
                       className="flex shrink-0 items-center gap-1 rounded-full bg-surface-container px-2.5 py-1 text-[11px] font-semibold text-on-surface transition hover:bg-surface-container-high"
                     >
                       <span className="material-symbols-outlined text-[14px]">tune</span>
                       Customise
-                    </a>
+                    </Link>
                   )}
                 </div>
                 <ul className="mt-3 flex flex-col gap-3">
                   {group.packs.map((exam) => (
                     <li key={exam.code}>
-                      <a
+                      <Link
                         href={`/exams/practice?pack=${encodeURIComponent(exam.code)}`}
                         className="flex items-center gap-4 rounded-[12px] bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition hover:shadow-md"
                       >
@@ -249,7 +249,7 @@ export default function PacksPage() {
                         <span className="material-symbols-outlined text-[20px] text-outline">
                           chevron_right
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Leaderboards — the standings the backend already keeps, finally on
+ * Leaderboards, the standings the backend already keeps, finally on
  * the web: the arena board (weekly / all-time), the all-time XP board
  * and the daily challenge board for today's JAMB sprint. Every board
  * returns the caller's own row as "me" even when it sits outside the
@@ -145,7 +145,7 @@ export default function LeaderboardClient() {
 
         {tab === 'daily' && daily && (
           <p className="mt-3 text-[13px] text-on-surface-variant">
-            {daily.title} · {daily.day} — one sprint, everyone worldwide, first-write-wins.
+            {daily.title} · {daily.day}, one sprint, everyone worldwide, first-write-wins.
           </p>
         )}
 
@@ -193,8 +193,8 @@ export default function LeaderboardClient() {
           {board && 'entries' in board && board.entries.length === 0 && (
             <p className="px-4 py-10 text-center text-sm text-on-surface-variant">
               {tab === 'daily'
-                ? 'Nobody has played today yet — be the first seat on the board.'
-                : 'No entries yet — play a paper or a match to appear here.'}
+                ? 'Nobody has played today yet, be the first seat on the board.'
+                : 'No entries yet, play a paper or a match to appear here.'}
             </p>
           )}
           {board &&
@@ -251,7 +251,7 @@ export default function LeaderboardClient() {
         </section>
 
         <p className="mt-3 text-center text-[11px] text-outline">
-          Boards are graded on the server against the sealed keys — no browser tricks count.
+          Boards are graded on the server against the sealed keys, no browser tricks count.
         </p>
       </div>
 

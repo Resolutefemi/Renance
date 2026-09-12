@@ -161,7 +161,7 @@
       "options": {
         "A": "x2 + 3x + 4 = 0",
         "B": "8x2 + 10x + 3 = 0",
-        "C": "8x2 +12x – 3 = 0",
+        "C": "8x2 +12x - 3 = 0",
         "D": "8x2 + 10x-3.= 0",
         "E": "8x2 + 12x + 3 = 0"
       },
@@ -685,9 +685,9 @@
       "stem": "Evaluate (Log13 - log5) ÷ X(log5-log13) without using tables",
       "options": {
         "A": "X",
-        "B": "–x",
+        "B": "-x",
         "C": "X-1",
-        "D": "–X-1",
+        "D": "-X-1",
         "E": "-1"
       },
       "marks": 1,
@@ -699,7 +699,7 @@
       "type": "mcq",
       "stem": "The roots of a quadratic equation in x, are -m and 2n. Fine equation.",
       "options": {
-        "A": "x2 - x(2n-m) – 2mn = 0",
+        "A": "x2 - x(2n-m) - 2mn = 0",
         "B": "x2 + x(2n - m) - 2mn = 0",
         "C": "x2 + x(m - 2n) + 2mn = 0",
         "D": "X2 + x (m + 2n ) + 2mn = 0",
@@ -1179,8 +1179,8 @@
       "type": "mcq",
       "stem": "What is the positive difference between the squares of 2.5 and 2.1 to 1 significant figures?",
       "options": {
-        "A": "– 2.0",
-        "B": "– 184",
+        "A": "- 2.0",
+        "B": "- 184",
         "C": "-1.84",
         "D": "2",
         "E": "18.4"
@@ -1961,9 +1961,9 @@
       "options": {
         "A": "3x2 + 11x + 21 = 0",
         "B": "2x2 + 11x + 21 = 0",
-        "C": "2x2 - 11x – 21 = 0",
+        "C": "2x2 - 11x - 21 = 0",
         "D": "3x2 - 11x - 21 = 0",
-        "E": "x2 - 11x – 21 = 0"
+        "E": "x2 - 11x - 21 = 0"
       },
       "marks": 1,
       "year": 2008,
@@ -2050,7 +2050,7 @@
       "stem": "Multiply (3\\(\\sqrt{a}\\) - 4a) by (4a + 3\\(\\sqrt{a}\\))",
       "options": {
         "A": "9a + 16a2",
-        "B": "9a – 16a2",
+        "B": "9a - 16a2",
         "C": "3a + 16a2",
         "D": "3a - 16a2",
         "E": "a - 16a2"
@@ -2079,11 +2079,11 @@
       "type": "mcq",
       "stem": "If A = \\(\\frac{1}{2}\\)h (a + b), make ‘a’ the subject of the formula",
       "options": {
-        "A": "(2A – 2bh) ÷ b",
-        "B": "(2A – bh) ÷ h",
-        "C": "(2A – bh) ÷ b",
-        "D": "(A – 2bh) ÷ h",
-        "E": "(2A – h) ÷ bh"
+        "A": "(2A - 2bh) ÷ b",
+        "B": "(2A - bh) ÷ h",
+        "C": "(2A - bh) ÷ b",
+        "D": "(A - 2bh) ÷ h",
+        "E": "(2A - h) ÷ bh"
       },
       "marks": 1,
       "year": 2008,
@@ -2514,11 +2514,11 @@
       "type": "mcq",
       "stem": "If , sT = \\(\\sqrt{\\frac{[(a + T)T]}{a}}\\) what does T equal?",
       "options": {
-        "A": "T = (a2s2 – 1)",
-        "B": "T = (a2s2– 1) ÷ a",
+        "A": "T = (a2s2 - 1)",
+        "B": "T = (a2s2- 1) ÷ a",
         "C": "T = a ÷ (a2 - s2)",
-        "D": "T = a ÷ (a2s2 – 1)",
-        "E": "T = (as – 1)2"
+        "D": "T = a ÷ (a2s2 - 1)",
+        "E": "T = (as - 1)2"
       },
       "marks": 1,
       "year": 2002,

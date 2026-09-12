@@ -1,11 +1,11 @@
 'use client';
 
 /**
- * Study — the PDF & resources shelf.
+ * Study, the PDF & resources shelf.
  *
  * One small icon on the desk (same size as the Exams icon) opens this
  * page: free, legal, downloadable study material for secondary and
- * university students — official syllabi, open textbooks, past-question
+ * university students, official syllabi, open textbooks, past-question
  * archives and curated open collections. Every link is external and
  * opens in a new tab; Renance itself stays the practice layer.
  */
@@ -64,26 +64,26 @@ const CATEGORIES: Category[] = [
     icon: 'picture_as_pdf',
     items: [
       {
-        name: 'OpenStax — Biology 2e',
+        name: 'OpenStax, Biology 2e',
         desc: 'Full university-standard biology textbook, free PDF, covers every WAEC/NECO bio topic.',
         url: 'https://openstax.org/details/books/biology-2e',
         tag: 'PDF',
       },
       {
-        name: 'OpenStax — Chemistry 2e',
+        name: 'OpenStax, Chemistry 2e',
         desc: 'Complete chemistry text with worked examples and end-of-chapter drills.',
         url: 'https://openstax.org/details/books/chemistry-2e',
         tag: 'PDF',
       },
       {
-        name: 'OpenStax — College Physics',
+        name: 'OpenStax, College Physics',
         desc: 'Algebra-based physics that maps cleanly onto the SS1-SS3 syllabus.',
         url: 'https://openstax.org/details/books/college-physics',
         tag: 'PDF',
       },
       {
-        name: 'OpenStax — Precalculus',
-        desc: 'Numbers, algebra, trigonometry and functions — the engine room of UTME maths.',
+        name: 'OpenStax, Precalculus',
+        desc: 'Numbers, algebra, trigonometry and functions, the engine room of UTME maths.',
         url: 'https://openstax.org/details/books/precalculus',
         tag: 'PDF',
       },
@@ -101,7 +101,7 @@ const CATEGORIES: Category[] = [
       },
       {
         name: 'Directory of Open Access Books',
-        desc: 'Academic-grade open books — strong for economics, government and literature.',
+        desc: 'Academic-grade open books, strong for economics, government and literature.',
         url: 'https://doabooks.org',
         tag: 'PDF',
       },
@@ -113,7 +113,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         name: 'Project Gutenberg',
-        desc: '70,000+ free classics — most literature set texts live here as free eBooks.',
+        desc: '70,000+ free classics, most literature set texts live here as free eBooks.',
         url: 'https://www.gutenberg.org',
         tag: 'PDF',
       },
@@ -161,7 +161,7 @@ const CATEGORIES: Category[] = [
     items: [
       {
         name: 'All-Resources by Resolute Femi',
-        desc: '300 hand-picked open educational repositories from across the globe — textbooks, notes, past questions.',
+        desc: '300 hand-picked open educational repositories from across the globe, textbooks, notes, past questions.',
         url: 'https://github.com/Resolutefemi/All-Resources',
         tag: 'Repo',
       },
@@ -179,7 +179,7 @@ export default function StudyPage() {
   const [open, setOpen] = useState<string | null>(CATEGORIES[0]?.title ?? null);
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Study" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">
@@ -187,7 +187,7 @@ export default function StudyPage() {
           Study resources
         </h1>
         <p className="mt-1 text-[15px] font-medium text-on-surface-variant">
-          Free PDFs, textbooks and archives for your exam — all legal, all open, all free.
+          Free PDFs, textbooks and archives for your exam, all legal, all open, all free.
         </p>
 
         <div className="mt-6 flex flex-col gap-3">
@@ -257,7 +257,7 @@ export default function StudyPage() {
 
         <p className="mt-6 rounded-[12px] bg-surface-container-low p-4 text-[13px] leading-relaxed text-on-surface-variant">
           Practice stays here: pair any of these texts with the question banks,
-          mocks and spaced review in the app — reading gets the concepts in,
+          mocks and spaced review in the app, reading gets the concepts in,
           past questions make them stick.
         </p>
       </div>

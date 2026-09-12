@@ -10,12 +10,14 @@
  */
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
+import { aiChat, aiConfigured } from '@/lib/ai';
 
 interface TutorQuestion {
   questionId: string;
   stem: string;
   topic?: string;
+  options?: Record<string, string>;
   selected?: string;
   correctly: boolean;
 }
@@ -77,8 +79,43 @@ export default function TutorChat({
       );
       setTurns([...next, { role: 'assistant', content: res.reply }]);
     } catch (err) {
+      // Server unreachable (or its provider key is not configured):
+      // fall back to the Gemini key baked into this deployment so the
+      // coach keeps coaching instead of dead-ending.
+      if (aiConfigured()) {
+        try {
+          const optionLines = active.options
+            ? Object.entries(active.options)
+                .map(([k, v]) => `${k}. ${v}`)
+                .join('\n')
+            : '';
+          const reply = await aiChat(
+            [
+              {
+                role: 'system',
+                content:
+                  'You are Rence, a Socratic exam coach for Nigerian students (JAMB, WAEC, NECO, university modules). ' +
+                  'Coach, do not just hand over answers: ask one guiding question, then explain the rule. Keep replies under 120 words.',
+              },
+              {
+                role: 'user',
+                content:
+                  `Question: ${active.stem}${optionLines ? `\nOptions:\n${optionLines}` : ''}` +
+                  `${active.selected ? `\nMy answer: ${active.selected} (${active.correctly ? 'marked correct' : 'marked wrong'})` : ''}` +
+                  `${active.topic ? `\nTopic: ${active.topic}` : ''}\n\nMy ask: ${content}`,
+              },
+            ],
+            { temperature: 0.5, maxTokens: 400 },
+          );
+          setTurns([...next, { role: 'assistant', content: reply }]);
+          setError(null);
+          return;
+        } catch {
+          /* fall through to the plain error note */
+        }
+      }
       setTurns(next); // keep the student's ask visible
-      setError(err instanceof Error ? err.message : 'The tutor could not reply — try again.');
+      setError(err instanceof ApiError ? err.message : 'The tutor could not reply. Try again.');
     } finally {
       setBusy(false);
     }
@@ -95,7 +132,7 @@ export default function TutorChat({
           <div>
             <h2 className="text-[15px] font-bold text-on-surface">Ask the Tutor</h2>
             <p className="text-xs text-on-surface-variant">
-              Socratic coaching on this paper — guided by your answers.
+              Socratic coaching on this paper, guided by your answers.
             </p>
           </div>
         </div>

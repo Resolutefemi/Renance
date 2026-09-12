@@ -25,7 +25,7 @@ export interface UniversityCourse {
   /** Course title when the source portal names one, else null. */
   title: string | null;
   semester: 1 | 2;
-  /** Material icon name — the university desk's own icon set. */
+  /** Material icon name, the university desk's own icon set. */
   icon: string;
   /** Bank pack code when the course ships questions, else null. */
   bank: string | null;

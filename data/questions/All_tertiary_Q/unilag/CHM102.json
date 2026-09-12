@@ -38,10 +38,10 @@
       "type": "mcq",
       "stem": "What two atomic orbitals or hybrid atomic orbitals overlap to form the carbon-carbon σ bond in ethyne?",
       "options": {
-        "A": "sp3–sp3",
-        "B": "sp2–sp2",
-        "C": "s–s",
-        "D": "sp–sp"
+        "A": "sp3-sp3",
+        "B": "sp2-sp2",
+        "C": "s-s",
+        "D": "sp-sp"
       },
       "marks": 1,
       "answer": "D",
@@ -909,7 +909,7 @@
         "A": "CH3CH2CH3",
         "B": "CH3C≡CH",
         "C": "CH3CH=CH2",
-        "D": "CH2=CH—CH=CH2"
+        "D": "CH2=CH-CH=CH2"
       },
       "marks": 1,
       "answer": "A",
@@ -1537,9 +1537,9 @@
       "stem": "What is the conjugate acid of CH3NH2?",
       "options": {
         "A": "CH3NH3+",
-        "B": "CH3NH–",
+        "B": "CH3NH-",
         "C": "NH4+",
-        "D": "NH2–"
+        "D": "NH2-"
       },
       "marks": 1,
       "answer": "A",
@@ -2766,7 +2766,7 @@
     {
       "id": "uni-unilag-chm102-bank-0198",
       "type": "mcq",
-      "stem": "The H–C–H bond angle in ethylene is",
+      "stem": "The H-C-H bond angle in ethylene is",
       "options": {
         "A": "60°",
         "B": "120°",
@@ -3231,13 +3231,13 @@
       "stem": "What is the conjugate base of CH3NH2?",
       "options": {
         "A": "CH3NH3+",
-        "B": "CH3NH–",
+        "B": "CH3NH-",
         "C": "NH4+",
-        "D": "NH2–"
+        "D": "NH2-"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The conjugate base of an acid is formed when the acid loses a proton (H+). CH3NH2 → CH3NH– + H+ (methylamide ion)."
+      "explanation": "The conjugate base of an acid is formed when the acid loses a proton (H+). CH3NH2 → CH3NH- + H+ (methylamide ion)."
     },
     {
       "id": "uni-unilag-chm102-bank-0232",
@@ -3326,12 +3326,12 @@
     {
       "id": "uni-unilag-chm102-bank-0238",
       "type": "mcq",
-      "stem": "Which of the following statements is not true about propyne, HC–C≡CH3?",
+      "stem": "Which of the following statements is not true about propyne, HC-C≡CH3?",
       "options": {
         "A": "It contains six sigma bonds.",
         "B": "It contains three pi bonds.",
-        "C": "The H–C–H bond angle is about 109.5°.",
-        "D": "The C–C–C bond angle is 180°."
+        "C": "The H-C-H bond angle is about 109.5°.",
+        "D": "The C-C-C bond angle is 180°."
       },
       "marks": 1,
       "answer": "B",
@@ -3468,7 +3468,7 @@
       "type": "mcq",
       "stem": "Which of the following is the best method for preparing CH3Br?",
       "options": {
-        "A": "CH3OH + Br–",
+        "A": "CH3OH + Br-",
         "B": "CH3OH + HBr",
         "C": "CH3OH + Br2",
         "D": "CH3OH + NaBr"
@@ -4028,10 +4028,10 @@
       "type": "mcq",
       "stem": "Which of the following statements is correct for a saturated alkyl halide?",
       "options": {
-        "A": "the C–X bond results from overlap of the s orbital of carbon and the p orbital of the halogen (X)",
-        "B": "the C–X bond results from overlap of the p orbital of carbon and the p orbital of the halogen (X)",
-        "C": "the C–X bond results from overlap of the sp3 orbital of carbon and the p orbital of the halogen (X)",
-        "D": "the C–X bond results from overlap of the sp2 orbital of carbon and the p orbital of the halogen (X)"
+        "A": "the C-X bond results from overlap of the s orbital of carbon and the p orbital of the halogen (X)",
+        "B": "the C-X bond results from overlap of the p orbital of carbon and the p orbital of the halogen (X)",
+        "C": "the C-X bond results from overlap of the sp3 orbital of carbon and the p orbital of the halogen (X)",
+        "D": "the C-X bond results from overlap of the sp2 orbital of carbon and the p orbital of the halogen (X)"
       },
       "marks": 1,
       "answer": "C",
@@ -6282,14 +6282,14 @@
       "type": "mcq",
       "stem": "Which group is an activating substituent?",
       "options": {
-        "A": "–NO3",
-        "B": "–Cl",
-        "C": "–OH",
-        "D": "–F"
+        "A": "-NO3",
+        "B": "-Cl",
+        "C": "-OH",
+        "D": "-F"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The hydroxyl group (–OH) is an activating substituent (electron-donating) and an ortho-para director. –NO3 is deactivating, –Cl and –F are deactivating (though ortho-para directors)."
+      "explanation": "The hydroxyl group (-OH) is an activating substituent (electron-donating) and an ortho-para director. -NO3 is deactivating, -Cl and -F are deactivating (though ortho-para directors)."
     },
     {
       "id": "uni-unilag-chm102-bank-0450",
@@ -6590,14 +6590,14 @@
       "type": "mcq",
       "stem": "Which of the following substituents is an ortho and para director and ring deactivating?",
       "options": {
-        "A": "–NH2",
-        "B": "–Cl",
-        "C": "–OCH3",
-        "D": "–OH"
+        "A": "-NH2",
+        "B": "-Cl",
+        "C": "-OCH3",
+        "D": "-OH"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "–Cl (and other halogens) are ortho-para directors but ring deactivating. –NH2, –OCH3, and –OH are activating (electron donating)."
+      "explanation": "-Cl (and other halogens) are ortho-para directors but ring deactivating. -NH2, -OCH3, and -OH are activating (electron donating)."
     },
     {
       "id": "uni-unilag-chm102-bank-0472",
@@ -6770,7 +6770,7 @@
     {
       "id": "uni-unilag-chm102-bank-0484",
       "type": "mcq",
-      "stem": "Why is the C–H bond of a terminal alkyne more acidic than the C–H bonds of alkanes or alkenes?",
+      "stem": "Why is the C-H bond of a terminal alkyne more acidic than the C-H bonds of alkanes or alkenes?",
       "options": {
         "A": "The sp hybridized carbon is more electronegative due to 50% s‑character",
         "B": "The triple bond is electron‑withdrawing",
@@ -6786,10 +6786,10 @@
       "type": "mcq",
       "stem": "Which of the bonds in Ethyl alcohol (CH3CH2OH) will undergo heterolytic bond fission most readily?",
       "options": {
-        "A": "O–H",
-        "B": "C–H",
-        "C": "C–O",
-        "D": "C–C"
+        "A": "O-H",
+        "B": "C-H",
+        "C": "C-O",
+        "D": "C-C"
       },
       "marks": 1,
       "answer": "A",
@@ -7574,11 +7574,11 @@
         "A": "AlCl3",
         "B": "H3O+",
         "C": "BF3",
-        "D": "CN–"
+        "D": "CN-"
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "The cyanide ion (CN–) has a negative charge and a lone pair on carbon, making it a strong nucleophile. AlCl3, H3O+, and BF3 are electrophiles."
+      "explanation": "The cyanide ion (CN-) has a negative charge and a lone pair on carbon, making it a strong nucleophile. AlCl3, H3O+, and BF3 are electrophiles."
     },
     {
       "id": "uni-unilag-chm102-bank-0542",
@@ -7655,10 +7655,10 @@
       "type": "mcq",
       "stem": "Which of the following statements about ethene, C2H4, is incorrect?",
       "options": {
-        "A": "The H–C–H bond angles are approximately 109.5°.",
+        "A": "The H-C-H bond angles are approximately 109.5°.",
         "B": "There is a total of five sigma bonds.",
         "C": "The carbon atoms are sp2 hybridized.",
-        "D": "The H–C–H bond angles are approximately 120°."
+        "D": "The H-C-H bond angles are approximately 120°."
       },
       "marks": 1,
       "answer": "A",
@@ -7964,7 +7964,7 @@
       "stem": "Which of the following compounds would react most rapidly in an SN2 reaction?",
       "options": {
         "A": "CH3CH2I",
-        "B": "CH2=CH–I",
+        "B": "CH2=CH-I",
         "C": "(CH3)2CHI",
         "D": "(CH3)3CI"
       },
@@ -8232,7 +8232,7 @@
         "A": "Acetic acid (CH₃COOH) only",
         "B": "Formaldehyde (HCHO)",
         "C": "Acetaldehyde (CH₃CHO)",
-        "D": "Glyoxal (OHC–CHO)"
+        "D": "Glyoxal (OHC-CHO)"
       },
       "marks": 1,
       "answer": "A",
@@ -9599,12 +9599,12 @@
     {
       "id": "uni-unilag-chm102-bank-0686",
       "type": "mcq",
-      "stem": "The N–H bond in the ammonium ion, NH4+, is formed by the overlap of what two orbitals?",
+      "stem": "The N-H bond in the ammonium ion, NH4+, is formed by the overlap of what two orbitals?",
       "options": {
-        "A": "sp3–sp3",
-        "B": "sp3–sp2",
-        "C": "sp2–sp2",
-        "D": "sp3–s"
+        "A": "sp3-sp3",
+        "B": "sp3-sp2",
+        "C": "sp2-sp2",
+        "D": "sp3-s"
       },
       "marks": 1,
       "answer": "D",
@@ -9795,7 +9795,7 @@
     {
       "id": "uni-unilag-chm102-bank-0700",
       "type": "mcq",
-      "stem": "The H–C–C bond angle in ethane is",
+      "stem": "The H-C-C bond angle in ethane is",
       "options": {
         "A": "60°",
         "B": "109.5°",
@@ -10271,7 +10271,7 @@
     {
       "id": "uni-unilag-chm102-bank-0734",
       "type": "mcq",
-      "stem": "Homolytic fission of C–C bond leads to the formation of :",
+      "stem": "Homolytic fission of C-C bond leads to the formation of :",
       "options": {
         "A": "Free radicals",
         "B": "Carbonium ions",
@@ -10285,12 +10285,12 @@
     {
       "id": "uni-unilag-chm102-bank-0735",
       "type": "mcq",
-      "stem": "The C–C bond length in benzene is",
+      "stem": "The C-C bond length in benzene is",
       "options": {
-        "A": "greater than the C–C bond length in ethane.",
-        "B": "shorter than the C–C bond length in ethylene.",
-        "C": "Same as that of C–C bond length in ethylene.",
-        "D": "intermediate between C–C bond length in ethane and C–C bond length in ethylene."
+        "A": "greater than the C-C bond length in ethane.",
+        "B": "shorter than the C-C bond length in ethylene.",
+        "C": "Same as that of C-C bond length in ethylene.",
+        "D": "intermediate between C-C bond length in ethane and C-C bond length in ethylene."
       },
       "marks": 1,
       "answer": "D",
@@ -12023,10 +12023,10 @@
       "type": "mcq",
       "stem": "Which of the following is the correct order of bond lengths :",
       "options": {
-        "A": "C–C < C=C < C≡C",
-        "B": "C–C > C≡C > C=C",
-        "C": "C≡C > C–C > C=C",
-        "D": "C≡C < C–C > C=C"
+        "A": "C-C < C=C < C≡C",
+        "B": "C-C > C≡C > C=C",
+        "C": "C≡C > C-C > C=C",
+        "D": "C≡C < C-C > C=C"
       },
       "marks": 1,
       "answer": "A",
@@ -12739,12 +12739,12 @@
       "options": {
         "A": "H+",
         "B": "H.",
-        "C": "HO–",
+        "C": "HO-",
         "D": "sulfate ion"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "In the acid-catalyzed hydration of ethylene, the electrophile H+ (from H2SO4) attacks the double bond first, forming a carbocation intermediate. Then water (not HO–) attacks the carbocation."
+      "explanation": "In the acid-catalyzed hydration of ethylene, the electrophile H+ (from H2SO4) attacks the double bond first, forming a carbocation intermediate. Then water (not HO-) attacks the carbocation."
     },
     {
       "id": "uni-unilag-chm102-bank-0911",
@@ -13582,7 +13582,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The document states that beryllium has a 'Small ionic radius – representing very dense centre of positive charge and high polarizing power.' A small ionic radius and high charge density lead to high polarizing power. Options A and B describe characteristics opposite to beryllium's. Option D is incorrect; its compounds are more covalent than ionic."
+      "explanation": "The document states that beryllium has a 'Small ionic radius - representing very dense centre of positive charge and high polarizing power.' A small ionic radius and high charge density lead to high polarizing power. Options A and B describe characteristics opposite to beryllium's. Option D is incorrect; its compounds are more covalent than ionic."
     },
     {
       "id": "uni-unilag-chm102-bank-0971",
@@ -13757,10 +13757,10 @@
       "type": "mcq",
       "stem": "Which of the following is the strongest nucleophile in an aqueous solution?",
       "options": {
-        "A": "HO–",
-        "B": "Cl–",
-        "C": "Br–",
-        "D": "I–"
+        "A": "HO-",
+        "B": "Cl-",
+        "C": "Br-",
+        "D": "I-"
       },
       "marks": 1,
       "answer": "D",
@@ -14724,9 +14724,9 @@
       "stem": "Which of the following is not a nucleophile?",
       "options": {
         "A": "NH3",
-        "B": "HSO3–",
+        "B": "HSO3-",
         "C": "AlCl3",
-        "D": "HO–"
+        "D": "HO-"
       },
       "marks": 1,
       "answer": "C",
@@ -15157,10 +15157,10 @@
       "type": "mcq",
       "stem": "Which of the following is the best nucleophile in water?",
       "options": {
-        "A": "I–",
+        "A": "I-",
         "B": "CH3SCH3",
         "C": "CH3OCH3",
-        "D": "Cl–"
+        "D": "Cl-"
       },
       "marks": 1,
       "answer": "A",
@@ -15920,7 +15920,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Page 7 describes the typical properties: 'Anomalous 1st row element – small size; high EN', '2nd row element much less EN than 1st row', and '3rd row element has higher EN (middle row anomaly)'."
+      "explanation": "Page 7 describes the typical properties: 'Anomalous 1st row element - small size; high EN', '2nd row element much less EN than 1st row', and '3rd row element has higher EN (middle row anomaly)'."
     },
     {
       "id": "uni-unilag-chm102-bank-1138",
@@ -16093,7 +16093,7 @@
     {
       "id": "uni-unilag-chm102-bank-1150",
       "type": "mcq",
-      "stem": "Which of the following reagents will replace –OH group by a halogen atom?",
+      "stem": "Which of the following reagents will replace -OH group by a halogen atom?",
       "options": {
         "A": "HOCl",
         "B": "Br2",
@@ -16473,10 +16473,10 @@
       "type": "mcq",
       "stem": "Explain why the water molecule has a bent shape and a bond angle less than 109.5°.",
       "options": {
-        "A": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O–H bonds to squeeze close together.",
-        "B": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O–H bonds to repel each other.",
-        "C": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O–H bonds to become linear.",
-        "D": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O–H bonds to have a bond angle of 180°."
+        "A": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O-H bonds to squeeze close together.",
+        "B": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O-H bonds to repel each other.",
+        "C": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O-H bonds to become linear.",
+        "D": "The electron repulsion between the two lone pairs of electrons on the oxygen of water causes the O-H bonds to have a bond angle of 180°."
       },
       "marks": 1,
       "answer": "A",
@@ -17202,7 +17202,7 @@
       "stem": "The reaction of 1-butene with bromine, Br2, in aqueous solution gives primarily 1-bromo-2-butanol. Identify the nucleophilic species in the reaction.",
       "options": {
         "A": "Br2",
-        "B": "Br–",
+        "B": "Br-",
         "C": "H2O",
         "D": "HOBr"
       },
@@ -17899,12 +17899,12 @@
     {
       "id": "uni-unilag-chm102-bank-1279",
       "type": "mcq",
-      "stem": "The compound methylamine, H3C–NH2, contains a C–N bond. In this bond, which of the following best describes the charge on the nitrogen atom?",
+      "stem": "The compound methylamine, H3C-NH2, contains a C-N bond. In this bond, which of the following best describes the charge on the nitrogen atom?",
       "options": {
         "A": "slightly positive",
         "B": "uncharged",
         "C": "slightly negative",
-        "D": "–1"
+        "D": "-1"
       },
       "marks": 1,
       "answer": "C",
@@ -18277,7 +18277,7 @@
     {
       "id": "uni-unilag-chm102-bank-1306",
       "type": "mcq",
-      "stem": "Which of the following is closest to the C–O–C bond angle in CH3–O–CH3?",
+      "stem": "Which of the following is closest to the C-O-C bond angle in CH3-O-CH3?",
       "options": {
         "A": "180°",
         "B": "120°",
@@ -18389,12 +18389,12 @@
     {
       "id": "uni-unilag-chm102-bank-1314",
       "type": "mcq",
-      "stem": "What orbitals overlap to create the H–C bond in CH3+?",
+      "stem": "What orbitals overlap to create the H-C bond in CH3+?",
       "options": {
-        "A": "sp3–sp3",
-        "B": "sp2–sp3",
-        "C": "s–p",
-        "D": "s–sp2"
+        "A": "sp3-sp3",
+        "B": "sp2-sp3",
+        "C": "s-p",
+        "D": "s-sp2"
       },
       "marks": 1,
       "answer": "D",
@@ -18538,7 +18538,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The hydroxyl group (–OH) donates electrons (via resonance) to the ortho and para positions, increasing electron density there and favoring electrophilic attack at those positions."
+      "explanation": "The hydroxyl group (-OH) donates electrons (via resonance) to the ortho and para positions, increasing electron density there and favoring electrophilic attack at those positions."
     },
     {
       "id": "uni-unilag-chm102-bank-1325",
@@ -18991,7 +18991,7 @@
     {
       "id": "uni-unilag-chm102-bank-1357",
       "type": "mcq",
-      "stem": "Thiols are alcohol analogs in which the oxygen has been replaced by sulfur (e.g., CH3SH). Given the fact that the S–H bond is less polar than the O–H bond, which of the following statements comparing thiols and alcohols is correct?",
+      "stem": "Thiols are alcohol analogs in which the oxygen has been replaced by sulfur (e.g., CH3SH). Given the fact that the S-H bond is less polar than the O-H bond, which of the following statements comparing thiols and alcohols is correct?",
       "options": {
         "A": "Hydrogen bonding forces are weaker in thiols.",
         "B": "Hydrogen bonding forces are stronger in thiols.",
@@ -20069,7 +20069,7 @@
     {
       "id": "uni-unilag-chm102-bank-1434",
       "type": "mcq",
-      "stem": "What is the common name for HC≡C–CH₂–CH₂–CH₃?",
+      "stem": "What is the common name for HC≡C-CH₂-CH₂-CH₃?",
       "options": {
         "A": "Methylacetylene",
         "B": "Ethylacetylene",
@@ -20078,7 +20078,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "HC≡C–(CH₂)₂CH₃ is 1‑pentyne, commonly called propylacetylene."
+      "explanation": "HC≡C-(CH₂)₂CH₃ is 1‑pentyne, commonly called propylacetylene."
     },
     {
       "id": "uni-unilag-chm102-bank-1435",
@@ -20512,7 +20512,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Anisole (methoxybenzene) has a strongly activating methoxy group (–OCH3, an ortho-para director) and reacts most rapidly with nitrating mixture. Toluene is also activated but less than anisole. Nitrobenzene and benzonitrile are deactivated."
+      "explanation": "Anisole (methoxybenzene) has a strongly activating methoxy group (-OCH3, an ortho-para director) and reacts most rapidly with nitrating mixture. Toluene is also activated but less than anisole. Nitrobenzene and benzonitrile are deactivated."
     },
     {
       "id": "uni-unilag-chm102-bank-1466",
@@ -20534,8 +20534,8 @@
       "stem": "In the Lucas test, a tertiary alcohol reacts with ZnCl2/HCl within:",
       "options": {
         "A": "less than 1 minute",
-        "B": "1–5 minutes",
-        "C": "5–10 minutes",
+        "B": "1-5 minutes",
+        "C": "5-10 minutes",
         "D": "no reaction"
       },
       "marks": 1,
@@ -20688,8 +20688,8 @@
       "stem": "Which of the following best describes the carbon-chlorine bond of an alkyl chloride?",
       "options": {
         "A": "nonpolar; no dipole",
-        "B": "polar; δ+ at carbon and δ– at chlorine",
-        "C": "polar; δ– at carbon and δ+ at chlorine",
+        "B": "polar; δ+ at carbon and δ- at chlorine",
+        "C": "polar; δ- at carbon and δ+ at chlorine",
         "D": "ionic"
       },
       "marks": 1,
@@ -20932,7 +20932,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Alkynes have the general formula CnH2n−2 because the triple bond introduces two degrees of unsaturation (four fewer hydrogens than alkanes)."
+      "explanation": "Alkynes have the general formula CnH2n-2 because the triple bond introduces two degrees of unsaturation (four fewer hydrogens than alkanes)."
     },
     {
       "id": "uni-unilag-chm102-bank-1496",
@@ -21067,7 +21067,7 @@
       "options": {
         "A": "NH3",
         "B": "CH3NH2",
-        "C": "HC≡C:–",
+        "C": "HC≡C:-",
         "D": "CH3CH2+"
       },
       "marks": 1,
@@ -21590,7 +21590,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Only terminal alkynes have the acidic ≡C–H that can be deprotonated and replaced by Ag⁺ to form an insoluble silver acetylide."
+      "explanation": "Only terminal alkynes have the acidic ≡C-H that can be deprotonated and replaced by Ag⁺ to form an insoluble silver acetylide."
     },
     {
       "id": "uni-unilag-chm102-bank-1543",
@@ -22174,7 +22174,7 @@
         "A": "The carbonyl carbon of an ester is more electrophilic than that of an aldehyde.",
         "B": "Aldehydes are more sterically hindered than esters.",
         "C": "Once the nucleophile adds to an aldehyde, the tetrahedral intermediate is too sterically hindered to eliminate one of the attached groups.",
-        "D": "Once the nucleophile adds to an aldehyde, neither H− nor R− can be eliminated since they are strongly basic."
+        "D": "Once the nucleophile adds to an aldehyde, neither H- nor R- can be eliminated since they are strongly basic."
       },
       "marks": 1,
       "answer": "D",
@@ -23055,7 +23055,7 @@
       "options": {
         "A": "CH3CH2CH=CH2",
         "B": "HOCH2CH2CH2CH2OH",
-        "C": "CH=CH–CH=CH2",
+        "C": "CH=CH-CH=CH2",
         "D": "CH3CH2CH2CH2OH"
       },
       "marks": 1,
@@ -23989,7 +23989,7 @@
     {
       "id": "uni-unilag-chm102-bank-1714",
       "type": "mcq",
-      "stem": "Which statement about the carbon–carbon triple bond is FALSE?",
+      "stem": "Which statement about the carbon-carbon triple bond is FALSE?",
       "options": {
         "A": "It is shorter than a C=C bond",
         "B": "It consists of one σ and two π bonds",
@@ -24325,7 +24325,7 @@
     {
       "id": "uni-unilag-chm102-bank-1738",
       "type": "mcq",
-      "stem": "The C—C—O bond angle in is approximately",
+      "stem": "The C-C-O bond angle in is approximately",
       "options": {
         "A": "60°",
         "B": "109.5°",
@@ -25137,7 +25137,7 @@
     {
       "id": "uni-unilag-chm102-bank-1796",
       "type": "mcq",
-      "stem": "How many σ (sigma) bonds are there in CH2=CH—CH=CH2?",
+      "stem": "How many σ (sigma) bonds are there in CH2=CH-CH=CH2?",
       "options": {
         "A": "3",
         "B": "6",
@@ -26301,10 +26301,10 @@
       "type": "mcq",
       "stem": "Which of the following is the best leaving group?",
       "options": {
-        "A": "F–",
-        "B": "Cl–",
-        "C": "Br–",
-        "D": "I–"
+        "A": "F-",
+        "B": "Cl-",
+        "C": "Br-",
+        "D": "I-"
       },
       "marks": 1,
       "answer": "D",

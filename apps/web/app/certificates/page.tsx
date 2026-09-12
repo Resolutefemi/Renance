@@ -96,7 +96,7 @@ export default function CertificatesPage() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Digital Wallet" />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-4 sm:px-6">

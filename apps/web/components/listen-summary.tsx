@@ -5,7 +5,7 @@ import { speak, speechSupported, stopSpeaking } from '@/lib/speech';
 
 /**
  * Audio summaries (ROADMAP #11), web slice: narrates the lesson's spoken
- * summary with the browser's local speech synthesis — the same words the
+ * summary with the browser's local speech synthesis, the same words the
  * app speaks (apps/mobile/lib/audio_summary.dart). Hidden entirely when
  * the browser has no speech engine; voice is an enhancement, the reader
  * page carries the study.

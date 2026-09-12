@@ -24,7 +24,7 @@
     {
       "id": "uni-futa-mts102-0002",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→0</sub> (1 − cos x) / x²",
+      "stem": "Evaluate: lim<sub>x→0</sub> (1 - cos x) / x²",
       "options": {
         "A": "0",
         "B": "1/2",
@@ -33,7 +33,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Using L'Hôpital's rule or Taylor series: lim(x→0) (1−cos x)/x² = 1/2."
+      "explanation": "Using L'Hôpital's rule or Taylor series: lim(x→0) (1-cos x)/x² = 1/2."
     },
     {
       "id": "uni-futa-mts102-0003",
@@ -80,7 +80,7 @@
     {
       "id": "uni-futa-mts102-0006",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→∞</sub> (x² + 3x) / (2x² − 5)",
+      "stem": "Evaluate: lim<sub>x→∞</sub> (x² + 3x) / (2x² - 5)",
       "options": {
         "A": "0",
         "B": "1/2",
@@ -94,7 +94,7 @@
     {
       "id": "uni-futa-mts102-0007",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→∞</sub> (3x³ − x) / (x³ + 2x²)",
+      "stem": "Evaluate: lim<sub>x→∞</sub> (3x³ - x) / (x³ + 2x²)",
       "options": {
         "A": "0",
         "B": "1",
@@ -108,7 +108,7 @@
     {
       "id": "uni-futa-mts102-0008",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→2</sub> (x² − 4) / (x − 2)",
+      "stem": "Evaluate: lim<sub>x→2</sub> (x² - 4) / (x - 2)",
       "options": {
         "A": "0",
         "B": "2",
@@ -117,12 +117,12 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Factor: (x²−4)/(x−2) = (x+2) → 4 as x→2."
+      "explanation": "Factor: (x²-4)/(x-2) = (x+2) → 4 as x→2."
     },
     {
       "id": "uni-futa-mts102-0009",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→3</sub> (x² − 9) / (x − 3)",
+      "stem": "Evaluate: lim<sub>x→3</sub> (x² - 9) / (x - 3)",
       "options": {
         "A": "0",
         "B": "3",
@@ -131,12 +131,12 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Factor: (x²−9)/(x−3) = (x+3) → 6 as x→3."
+      "explanation": "Factor: (x²-9)/(x-3) = (x+3) → 6 as x→3."
     },
     {
       "id": "uni-futa-mts102-0010",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→0</sub> (e<sup>x</sup> − 1) / x",
+      "stem": "Evaluate: lim<sub>x→0</sub> (e<sup>x</sup> - 1) / x",
       "options": {
         "A": "0",
         "B": "1",
@@ -173,7 +173,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "By squeeze theorem: −|x| ≤ x·sin(1/x) ≤ |x|, and both bounds → 0."
+      "explanation": "By squeeze theorem: -|x| ≤ x·sin(1/x) ≤ |x|, and both bounds → 0."
     },
     {
       "id": "uni-futa-mts102-0013",
@@ -187,7 +187,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "sin(1/x) oscillates between −1 and 1 as x→0."
+      "explanation": "sin(1/x) oscillates between -1 and 1 as x→0."
     },
     {
       "id": "uni-futa-mts102-0014",
@@ -220,7 +220,7 @@
     {
       "id": "uni-futa-mts102-0016",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→1</sub> (x³ − 1) / (x − 1)",
+      "stem": "Evaluate: lim<sub>x→1</sub> (x³ - 1) / (x - 1)",
       "options": {
         "A": "1",
         "B": "2",
@@ -229,12 +229,12 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Factor x³−1 = (x−1)(x²+x+1), so limit = 1+1+1 = 3."
+      "explanation": "Factor x³-1 = (x-1)(x²+x+1), so limit = 1+1+1 = 3."
     },
     {
       "id": "uni-futa-mts102-0017",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→0</sub> (√(1 + x) − 1) / x",
+      "stem": "Evaluate: lim<sub>x→0</sub> (√(1 + x) - 1) / x",
       "options": {
         "A": "0",
         "B": "1/2",
@@ -266,7 +266,7 @@
       "options": {
         "A": "L · M",
         "B": "L + M",
-        "C": "L − M",
+        "C": "L - M",
         "D": "L / M"
       },
       "marks": 1,
@@ -276,7 +276,7 @@
     {
       "id": "uni-futa-mts102-0020",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→0</sub> (1 − cos x) / x",
+      "stem": "Evaluate: lim<sub>x→0</sub> (1 - cos x) / x",
       "options": {
         "A": "0",
         "B": "1/2",
@@ -285,7 +285,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "lim(1−cos x)/x = 0 since 1−cos x ≈ x²/2 for small x."
+      "explanation": "lim(1-cos x)/x = 0 since 1-cos x ≈ x²/2 for small x."
     },
     {
       "id": "uni-futa-mts102-0021",
@@ -318,7 +318,7 @@
     {
       "id": "uni-futa-mts102-0023",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→0</sub> x² / (1 − cos x)",
+      "stem": "Evaluate: lim<sub>x→0</sub> x² / (1 - cos x)",
       "options": {
         "A": "0",
         "B": "1",
@@ -327,12 +327,12 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "1−cos x ≈ x²/2, so x²/(1−cos x) → x²/(x²/2) = 2."
+      "explanation": "1-cos x ≈ x²/2, so x²/(1-cos x) → x²/(x²/2) = 2."
     },
     {
       "id": "uni-futa-mts102-0024",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→0</sub> (e<sup>2x</sup> − 1) / x",
+      "stem": "Evaluate: lim<sub>x→0</sub> (e<sup>2x</sup> - 1) / x",
       "options": {
         "A": "0",
         "B": "1",
@@ -346,7 +346,7 @@
     {
       "id": "uni-futa-mts102-0025",
       "type": "mcq",
-      "stem": "Evaluate: lim<sub>x→−∞</sub> (x² + 3x) / (2x² − 5)",
+      "stem": "Evaluate: lim<sub>x→-∞</sub> (x² + 3x) / (2x² - 5)",
       "options": {
         "A": "0",
         "B": "1/2",
@@ -402,7 +402,7 @@
     {
       "id": "uni-futa-mts102-0029",
       "type": "mcq",
-      "stem": "If f(x) = (x² − 1)/(x − 1) for x ≠ 1 and f(1) = 2, then f is:",
+      "stem": "If f(x) = (x² - 1)/(x - 1) for x ≠ 1 and f(1) = 2, then f is:",
       "options": {
         "A": "Discontinuous at x = 1",
         "B": "Continuous at x = 1",
@@ -481,7 +481,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "lim(x→0) sin(x)/x = 1 exists but f(0) is undefined — removable."
+      "explanation": "lim(x→0) sin(x)/x = 1 exists but f(0) is undefined - removable."
     },
     {
       "id": "uni-futa-mts102-0035",
@@ -490,7 +490,7 @@
       "options": {
         "A": "x = 0",
         "B": "x = 1",
-        "C": "x = −1",
+        "C": "x = -1",
         "D": "No discontinuity"
       },
       "marks": 1,
@@ -528,7 +528,7 @@
     {
       "id": "uni-futa-mts102-0038",
       "type": "mcq",
-      "stem": "If f(x) = x² for x ≤ 1 and f(x) = 2x − 1 for x > 1, then f is:",
+      "stem": "If f(x) = x² for x ≤ 1 and f(x) = 2x - 1 for x > 1, then f is:",
       "options": {
         "A": "Discontinuous at x = 1",
         "B": "Continuous at x = 1",
@@ -570,35 +570,35 @@
     {
       "id": "uni-futa-mts102-0041",
       "type": "mcq",
-      "stem": "If f(x) = 3x − 2 and g(x) = x + 1, then g(f(x)) =",
+      "stem": "If f(x) = 3x - 2 and g(x) = x + 1, then g(f(x)) =",
       "options": {
-        "A": "3x − 1",
+        "A": "3x - 1",
         "B": "3x + 1",
-        "C": "3x − 2",
-        "D": "x − 1"
+        "C": "3x - 2",
+        "D": "x - 1"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "g(f(x)) = g(3x−2) = (3x−2)+1 = 3x−1."
+      "explanation": "g(f(x)) = g(3x-2) = (3x-2)+1 = 3x-1."
     },
     {
       "id": "uni-futa-mts102-0042",
       "type": "mcq",
-      "stem": "If f(x) = 5x − 2, find f⁻¹(−1):",
+      "stem": "If f(x) = 5x - 2, find f⁻¹(-1):",
       "options": {
         "A": "1/5",
-        "B": "−1/5",
+        "B": "-1/5",
         "C": "3/5",
         "D": "1/3"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "f⁻¹(y) = (y+2)/5, so f⁻¹(−1) = (−1+2)/5 = 1/5."
+      "explanation": "f⁻¹(y) = (y+2)/5, so f⁻¹(-1) = (-1+2)/5 = 1/5."
     },
     {
       "id": "uni-futa-mts102-0043",
       "type": "mcq",
-      "stem": "If f(x) = 3ˣ and g(x) = 3x − 2, find f∘g(2):",
+      "stem": "If f(x) = 3ˣ and g(x) = 3x - 2, find f∘g(2):",
       "options": {
         "A": "9",
         "B": "27",
@@ -607,35 +607,35 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "g(2) = 3(2)−2 = 4... wait: f(g(2)) = f(4) = 3⁴ = 81. Answer: 81."
+      "explanation": "g(2) = 3(2)-2 = 4... wait: f(g(2)) = f(4) = 3⁴ = 81. Answer: 81."
     },
     {
       "id": "uni-futa-mts102-0044",
       "type": "mcq",
       "stem": "Let f(x) = 2x + 1. Find f⁻¹(x):",
       "options": {
-        "A": "(x−1)/2",
+        "A": "(x-1)/2",
         "B": "(x+1)/2",
-        "C": "2x−1",
+        "C": "2x-1",
         "D": "x/2"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "y = 2x+1 → x = (y−1)/2, so f⁻¹(x) = (x−1)/2."
+      "explanation": "y = 2x+1 → x = (y-1)/2, so f⁻¹(x) = (x-1)/2."
     },
     {
       "id": "uni-futa-mts102-0045",
       "type": "mcq",
-      "stem": "If f: R → R is defined by f(x) = 3x − 1, find f⁻¹(x):",
+      "stem": "If f: R → R is defined by f(x) = 3x - 1, find f⁻¹(x):",
       "options": {
         "A": "(x+1)/3",
-        "B": "(x−1)/3",
+        "B": "(x-1)/3",
         "C": "3x + 1",
         "D": "(x+3)/1"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "y = 3x−1 → x = (y+1)/3, so f⁻¹(x) = (x+1)/3."
+      "explanation": "y = 3x-1 → x = (y+1)/3, so f⁻¹(x) = (x+1)/3."
     },
     {
       "id": "uni-futa-mts102-0046",
@@ -657,8 +657,8 @@
       "stem": "The derivative of f(x) = sin(x) is:",
       "options": {
         "A": "cos(x)",
-        "B": "−cos(x)",
-        "C": "−sin(x)",
+        "B": "-cos(x)",
+        "C": "-sin(x)",
         "D": "tan(x)"
       },
       "marks": 1,
@@ -671,13 +671,13 @@
       "stem": "The derivative of f(x) = cos(x) is:",
       "options": {
         "A": "sin(x)",
-        "B": "−sin(x)",
-        "C": "−cos(x)",
+        "B": "-sin(x)",
+        "C": "-cos(x)",
         "D": "tan(x)"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "d/dx(cos x) = −sin x."
+      "explanation": "d/dx(cos x) = -sin x."
     },
     {
       "id": "uni-futa-mts102-0049",
@@ -691,7 +691,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "d/dx(eˣ) = eˣ — the exponential function is its own derivative."
+      "explanation": "d/dx(eˣ) = eˣ - the exponential function is its own derivative."
     },
     {
       "id": "uni-futa-mts102-0050",
@@ -714,7 +714,7 @@
       "options": {
         "A": "sec²(x)",
         "B": "sec(x)·tan(x)",
-        "C": "−sec²(x)",
+        "C": "-sec²(x)",
         "D": "cot(x)"
       },
       "marks": 1,
@@ -728,7 +728,7 @@
       "options": {
         "A": "f'(x)·g'(x)",
         "B": "f'(x)·g(x) + f(x)·g'(x)",
-        "C": "f(x)·g'(x) − f'(x)·g(x)",
+        "C": "f(x)·g'(x) - f'(x)·g(x)",
         "D": "f'(x) + g'(x)"
       },
       "marks": 1,
@@ -740,14 +740,14 @@
       "type": "mcq",
       "stem": "Using the quotient rule, d/dx[f(x)/g(x)] =",
       "options": {
-        "A": "[f'(x)·g(x) − f(x)·g'(x)] / g(x)²",
-        "B": "[f(x)·g'(x) − f'(x)·g(x)] / g(x)²",
+        "A": "[f'(x)·g(x) - f(x)·g'(x)] / g(x)²",
+        "B": "[f(x)·g'(x) - f'(x)·g(x)] / g(x)²",
         "C": "f'(x)/g'(x)",
         "D": "[f'(x) + g'(x)] / g(x)²"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Quotient rule: (f/g)' = (f'g − fg')/g²."
+      "explanation": "Quotient rule: (f/g)' = (f'g - fg')/g²."
     },
     {
       "id": "uni-futa-mts102-0054",
@@ -757,7 +757,7 @@
         "A": "2x·sin(x)",
         "B": "2x·cos(x)",
         "C": "2x·sin(x) + x²·cos(x)",
-        "D": "x²·cos(x) − 2x·sin(x)"
+        "D": "x²·cos(x) - 2x·sin(x)"
       },
       "marks": 1,
       "answer": "C",
@@ -780,16 +780,16 @@
     {
       "id": "uni-futa-mts102-0056",
       "type": "mcq",
-      "stem": "If f(x) = x⁴ − 3x² + 5, then f'(x) =",
+      "stem": "If f(x) = x⁴ - 3x² + 5, then f'(x) =",
       "options": {
-        "A": "4x³ − 6x",
-        "B": "4x³ − 3x",
-        "C": "x³ − 3x + 5",
-        "D": "4x³ − 6x + 5"
+        "A": "4x³ - 6x",
+        "B": "4x³ - 3x",
+        "C": "x³ - 3x + 5",
+        "D": "4x³ - 6x + 5"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Power rule: 4x³ − 6x."
+      "explanation": "Power rule: 4x³ - 6x."
     },
     {
       "id": "uni-futa-mts102-0057",
@@ -797,13 +797,13 @@
       "stem": "The derivative of f(x) = 1/x is:",
       "options": {
         "A": "1/x²",
-        "B": "−1/x²",
+        "B": "-1/x²",
         "C": "1/x",
-        "D": "−1/x"
+        "D": "-1/x"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "d/dx(1/x) = d/dx(x⁻¹) = −1·x⁻² = −1/x²."
+      "explanation": "d/dx(1/x) = d/dx(x⁻¹) = -1·x⁻² = -1/x²."
     },
     {
       "id": "uni-futa-mts102-0058",
@@ -825,13 +825,13 @@
       "stem": "Implicit differentiation: If x² + y² = 25, then dy/dx =",
       "options": {
         "A": "x/y",
-        "B": "−x/y",
+        "B": "-x/y",
         "C": "y/x",
-        "D": "−y/x"
+        "D": "-y/x"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Differentiate: 2x + 2y·(dy/dx) = 0 → dy/dx = −x/y."
+      "explanation": "Differentiate: 2x + 2y·(dy/dx) = 0 → dy/dx = -x/y."
     },
     {
       "id": "uni-futa-mts102-0060",
@@ -840,7 +840,7 @@
       "options": {
         "A": "sec(x)·tan(x)",
         "B": "sec²(x)",
-        "C": "−sec(x)·tan(x)",
+        "C": "-sec(x)·tan(x)",
         "D": "csc(x)·cot(x)"
       },
       "marks": 1,
@@ -866,70 +866,70 @@
       "type": "mcq",
       "stem": "The derivative of f(x) = cot(x) is:",
       "options": {
-        "A": "−csc²(x)",
+        "A": "-csc²(x)",
         "B": "csc²(x)",
-        "C": "−sec²(x)",
+        "C": "-sec²(x)",
         "D": "csc(x)·cot(x)"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "d/dx(cot x) = −csc² x."
+      "explanation": "d/dx(cot x) = -csc² x."
     },
     {
       "id": "uni-futa-mts102-0063",
       "type": "mcq",
-      "stem": "If y = x⁵ + 3x³ − 2x + 7, find dy/dx:",
+      "stem": "If y = x⁵ + 3x³ - 2x + 7, find dy/dx:",
       "options": {
-        "A": "5x⁴ + 9x² − 2",
-        "B": "5x⁴ + 3x² − 2",
-        "C": "x⁴ + x² − 2",
+        "A": "5x⁴ + 9x² - 2",
+        "B": "5x⁴ + 3x² - 2",
+        "C": "x⁴ + x² - 2",
         "D": "5x⁴ + 9x² + 7"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Power rule: 5x⁴ + 9x² − 2 (constant 7 → 0)."
+      "explanation": "Power rule: 5x⁴ + 9x² - 2 (constant 7 → 0)."
     },
     {
       "id": "uni-futa-mts102-0064",
       "type": "mcq",
       "stem": "The derivative of f(x) = cos(x²) is:",
       "options": {
-        "A": "−sin(x²)",
-        "B": "−2x·sin(x²)",
+        "A": "-sin(x²)",
+        "B": "-2x·sin(x²)",
         "C": "sin(x²)",
         "D": "2x·cos(x²)"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Chain rule: −sin(x²) · 2x = −2x·sin(x²)."
+      "explanation": "Chain rule: -sin(x²) · 2x = -2x·sin(x²)."
     },
     {
       "id": "uni-futa-mts102-0065",
       "type": "mcq",
-      "stem": "If y = (x² + 1)/(x − 1), find dy/dx using the quotient rule:",
+      "stem": "If y = (x² + 1)/(x - 1), find dy/dx using the quotient rule:",
       "options": {
-        "A": "(2x(x−1) − (x²+1)) / (x−1)²",
-        "B": "(x²+1 − 2x(x−1)) / (x−1)²",
-        "C": "2x/(x−1)",
-        "D": "(x²+1)/(x−1)²"
+        "A": "(2x(x-1) - (x²+1)) / (x-1)²",
+        "B": "(x²+1 - 2x(x-1)) / (x-1)²",
+        "C": "2x/(x-1)",
+        "D": "(x²+1)/(x-1)²"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Quotient rule: [f'g − fg']/g² = [2x(x−1) − (x²+1)]/(x−1)²."
+      "explanation": "Quotient rule: [f'g - fg']/g² = [2x(x-1) - (x²+1)]/(x-1)²."
     },
     {
       "id": "uni-futa-mts102-0066",
       "type": "mcq",
       "stem": "The derivative of y = x·cos(x) is:",
       "options": {
-        "A": "cos(x) − x·sin(x)",
+        "A": "cos(x) - x·sin(x)",
         "B": "cos(x) + x·sin(x)",
-        "C": "−x·sin(x)",
+        "C": "-x·sin(x)",
         "D": "x·sin(x)"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Product rule: d/dx(x·cos x) = 1·cos x + x·(−sin x) = cos x − x·sin x."
+      "explanation": "Product rule: d/dx(x·cos x) = 1·cos x + x·(-sin x) = cos x - x·sin x."
     },
     {
       "id": "uni-futa-mts102-0067",
@@ -978,14 +978,14 @@
       "type": "mcq",
       "stem": "The derivative of y = ln(cos x) is:",
       "options": {
-        "A": "−tan(x)",
+        "A": "-tan(x)",
         "B": "tan(x)",
-        "C": "−sin(x)/cos(x)",
+        "C": "-sin(x)/cos(x)",
         "D": "Both A and C"
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Chain rule: (1/cos x)·(−sin x) = −sin x/cos x = −tan x."
+      "explanation": "Chain rule: (1/cos x)·(-sin x) = -sin x/cos x = -tan x."
     },
     {
       "id": "uni-futa-mts102-0071",
@@ -1018,16 +1018,16 @@
     {
       "id": "uni-futa-mts102-0073",
       "type": "mcq",
-      "stem": "Find dy/dx if y = (3x − 2)⁷:",
+      "stem": "Find dy/dx if y = (3x - 2)⁷:",
       "options": {
-        "A": "7(3x−2)⁶",
-        "B": "21(3x−2)⁶",
-        "C": "3(3x−2)⁶",
-        "D": "21x(3x−2)⁶"
+        "A": "7(3x-2)⁶",
+        "B": "21(3x-2)⁶",
+        "C": "3(3x-2)⁶",
+        "D": "21x(3x-2)⁶"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Chain rule: 7(3x−2)⁶ · 3 = 21(3x−2)⁶."
+      "explanation": "Chain rule: 7(3x-2)⁶ · 3 = 21(3x-2)⁶."
     },
     {
       "id": "uni-futa-mts102-0074",
@@ -1036,7 +1036,7 @@
       "options": {
         "A": "cos(x³)",
         "B": "3x²·cos(x³)",
-        "C": "−cos(x³)",
+        "C": "-cos(x³)",
         "D": "x²·cos(x³)"
       },
       "marks": 1,
@@ -1104,14 +1104,14 @@
       "type": "mcq",
       "stem": "Find dy/dx if y = cos(5x):",
       "options": {
-        "A": "−5·sin(5x)",
+        "A": "-5·sin(5x)",
         "B": "5·sin(5x)",
-        "C": "−sin(5x)",
+        "C": "-sin(5x)",
         "D": "5·cos(5x)"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Chain rule: −sin(5x) · 5 = −5·sin(5x)."
+      "explanation": "Chain rule: -sin(5x) · 5 = -5·sin(5x)."
     },
     {
       "id": "uni-futa-mts102-0080",
@@ -1130,16 +1130,16 @@
     {
       "id": "uni-futa-mts102-0081",
       "type": "mcq",
-      "stem": "Find dy/dx if y = (x³ − 1)⁶:",
+      "stem": "Find dy/dx if y = (x³ - 1)⁶:",
       "options": {
-        "A": "6(x³−1)⁵",
-        "B": "18x²(x³−1)⁵",
-        "C": "3x²(x³−1)⁵",
-        "D": "6x²(x³−1)⁵"
+        "A": "6(x³-1)⁵",
+        "B": "18x²(x³-1)⁵",
+        "C": "3x²(x³-1)⁵",
+        "D": "6x²(x³-1)⁵"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Chain rule: 6(x³−1)⁵ · 3x² = 18x²(x³−1)⁵."
+      "explanation": "Chain rule: 6(x³-1)⁵ · 3x² = 18x²(x³-1)⁵."
     },
     {
       "id": "uni-futa-mts102-0082",
@@ -1162,7 +1162,7 @@
       "options": {
         "A": "cos(eˣ)",
         "B": "eˣ·cos(eˣ)",
-        "C": "−cos(eˣ)",
+        "C": "-cos(eˣ)",
         "D": "eˣ·sin(eˣ)"
       },
       "marks": 1,
@@ -1188,14 +1188,14 @@
       "type": "mcq",
       "stem": "Find dy/dx if y = 1/(x² + 1)³:",
       "options": {
-        "A": "−6x/(x²+1)⁴",
+        "A": "-6x/(x²+1)⁴",
         "B": "6x/(x²+1)⁴",
-        "C": "−3x/(x²+1)⁴",
+        "C": "-3x/(x²+1)⁴",
         "D": "3x/(x²+1)⁴"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Rewrite as (x²+1)⁻³, then chain rule: −3(x²+1)⁻⁴ · 2x = −6x/(x²+1)⁴."
+      "explanation": "Rewrite as (x²+1)⁻³, then chain rule: -3(x²+1)⁻⁴ · 2x = -6x/(x²+1)⁴."
     },
     {
       "id": "uni-futa-mts102-0086",
@@ -1205,7 +1205,7 @@
         "A": "cos x / sin x = cot x",
         "B": "1/sin x",
         "C": "sin x / cos x",
-        "D": "−cot x"
+        "D": "-cot x"
       },
       "marks": 1,
       "answer": "A",
@@ -1228,21 +1228,21 @@
     {
       "id": "uni-futa-mts102-0088",
       "type": "mcq",
-      "stem": "Find dy/dx if y = √(1 − x²):",
+      "stem": "Find dy/dx if y = √(1 - x²):",
       "options": {
-        "A": "−x/√(1−x²)",
-        "B": "x/√(1−x²)",
-        "C": "1/√(1−x²)",
-        "D": "−2x/√(1−x²)"
+        "A": "-x/√(1-x²)",
+        "B": "x/√(1-x²)",
+        "C": "1/√(1-x²)",
+        "D": "-2x/√(1-x²)"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Chain rule: (1/(2√(1−x²))) · (−2x) = −x/√(1−x²)."
+      "explanation": "Chain rule: (1/(2√(1-x²))) · (-2x) = -x/√(1-x²)."
     },
     {
       "id": "uni-futa-mts102-0089",
       "type": "mcq",
-      "stem": "If f(x) = 3x − 2 and g(x) = x + 1, find (f∘g)'(x):",
+      "stem": "If f(x) = 3x - 2 and g(x) = x + 1, find (f∘g)'(x):",
       "options": {
         "A": "3",
         "B": "1",
@@ -1251,7 +1251,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "f(g(x)) = 3(x+1)−2 = 3x+1, so (f∘g)'(x) = 3."
+      "explanation": "f(g(x)) = 3(x+1)-2 = 3x+1, so (f∘g)'(x) = 3."
     },
     {
       "id": "uni-futa-mts102-0090",
@@ -1286,28 +1286,28 @@
       "type": "mcq",
       "stem": "Find dy/dx if y = cos³(x):",
       "options": {
-        "A": "3·cos²(x)·(−sin x)",
+        "A": "3·cos²(x)·(-sin x)",
         "B": "3·cos²(x)",
-        "C": "−3·sin(x)",
+        "C": "-3·sin(x)",
         "D": "3·cos²(x)·sin(x)"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Chain rule: 3·cos²(x) · (−sin x) = −3·cos²(x)·sin x."
+      "explanation": "Chain rule: 3·cos²(x) · (-sin x) = -3·cos²(x)·sin x."
     },
     {
       "id": "uni-futa-mts102-0093",
       "type": "mcq",
       "stem": "Find dy/dx if y = (x + 1/x)²:",
       "options": {
-        "A": "2(x + 1/x)(1 − 1/x²)",
+        "A": "2(x + 1/x)(1 - 1/x²)",
         "B": "2(x + 1/x)",
-        "C": "(1 − 1/x²)",
-        "D": "2(1 − 1/x²)"
+        "C": "(1 - 1/x²)",
+        "D": "2(1 - 1/x²)"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Chain rule: 2(x+1/x)¹ · (1 − 1/x²) = 2(x+1/x)(1−1/x²)."
+      "explanation": "Chain rule: 2(x+1/x)¹ · (1 - 1/x²) = 2(x+1/x)(1-1/x²)."
     },
     {
       "id": "uni-futa-mts102-0094",
@@ -1424,49 +1424,49 @@
     {
       "id": "uni-futa-mts102-0102",
       "type": "mcq",
-      "stem": "The function f(x) = x³ − 3x has a local maximum at:",
+      "stem": "The function f(x) = x³ - 3x has a local maximum at:",
       "options": {
         "A": "x = 0",
         "B": "x = 1",
-        "C": "x = −1",
+        "C": "x = -1",
         "D": "x = 2"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "f'(x) = 3x² − 3 = 0 → x = ±1. f''(−1) = −6 < 0 → local max at x = −1."
+      "explanation": "f'(x) = 3x² - 3 = 0 → x = ±1. f''(-1) = -6 < 0 → local max at x = -1."
     },
     {
       "id": "uni-futa-mts102-0103",
       "type": "mcq",
-      "stem": "The function f(x) = x³ − 3x has a local minimum at:",
+      "stem": "The function f(x) = x³ - 3x has a local minimum at:",
       "options": {
         "A": "x = 0",
         "B": "x = 1",
-        "C": "x = −1",
+        "C": "x = -1",
         "D": "x = 2"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "f'(x) = 3x² − 3 = 0 → x = ±1. f''(1) = 6 > 0 → local min at x = 1."
+      "explanation": "f'(x) = 3x² - 3 = 0 → x = ±1. f''(1) = 6 > 0 → local min at x = 1."
     },
     {
       "id": "uni-futa-mts102-0104",
       "type": "mcq",
       "stem": "If f(x) = x², then the equation of the tangent line at x = 3 is:",
       "options": {
-        "A": "y = 6x − 9",
+        "A": "y = 6x - 9",
         "B": "y = 6x + 9",
-        "C": "y = 3x − 9",
-        "D": "y = 2x − 3"
+        "C": "y = 3x - 9",
+        "D": "y = 2x - 3"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "f(3) = 9, f'(3) = 6. Tangent: y − 9 = 6(x − 3) → y = 6x − 9."
+      "explanation": "f(3) = 9, f'(3) = 6. Tangent: y - 9 = 6(x - 3) → y = 6x - 9."
     },
     {
       "id": "uni-futa-mts102-0105",
       "type": "mcq",
-      "stem": "The maximum value of f(x) = −x² + 4x + 1 is:",
+      "stem": "The maximum value of f(x) = -x² + 4x + 1 is:",
       "options": {
         "A": "1",
         "B": "3",
@@ -1475,40 +1475,40 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "f'(x) = −2x + 4 = 0 → x = 2. f(2) = −4 + 8 + 1 = 5."
+      "explanation": "f'(x) = -2x + 4 = 0 → x = 2. f(2) = -4 + 8 + 1 = 5."
     },
     {
       "id": "uni-futa-mts102-0106",
       "type": "mcq",
-      "stem": "If the position of a particle is s(t) = t³ − 6t² + 9t, the velocity is:",
+      "stem": "If the position of a particle is s(t) = t³ - 6t² + 9t, the velocity is:",
       "options": {
-        "A": "3t² − 12t + 9",
-        "B": "t² − 4t + 3",
-        "C": "3t² − 6t + 9",
-        "D": "t³ − 6t + 9"
+        "A": "3t² - 12t + 9",
+        "B": "t² - 4t + 3",
+        "C": "3t² - 6t + 9",
+        "D": "t³ - 6t + 9"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Velocity v(t) = s'(t) = 3t² − 12t + 9."
+      "explanation": "Velocity v(t) = s'(t) = 3t² - 12t + 9."
     },
     {
       "id": "uni-futa-mts102-0107",
       "type": "mcq",
-      "stem": "If s(t) = t³ − 6t² + 9t, the acceleration is:",
+      "stem": "If s(t) = t³ - 6t² + 9t, the acceleration is:",
       "options": {
-        "A": "6t − 12",
-        "B": "3t − 6",
-        "C": "6t² − 12t",
-        "D": "6t − 6"
+        "A": "6t - 12",
+        "B": "3t - 6",
+        "C": "6t² - 12t",
+        "D": "6t - 6"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Acceleration a(t) = v'(t) = 6t − 12."
+      "explanation": "Acceleration a(t) = v'(t) = 6t - 12."
     },
     {
       "id": "uni-futa-mts102-0108",
       "type": "mcq",
-      "stem": "The particle with s(t) = t³ − 6t² + 9t is at rest when t =",
+      "stem": "The particle with s(t) = t³ - 6t² + 9t is at rest when t =",
       "options": {
         "A": "t = 1 and t = 3",
         "B": "t = 2 only",
@@ -1517,7 +1517,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "At rest when v(t) = 0: 3t² − 12t + 9 = 0 → 3(t−1)(t−3) = 0 → t = 1, 3."
+      "explanation": "At rest when v(t) = 0: 3t² - 12t + 9 = 0 → 3(t-1)(t-3) = 0 → t = 1, 3."
     },
     {
       "id": "uni-futa-mts102-0109",
@@ -1536,7 +1536,7 @@
     {
       "id": "uni-futa-mts102-0110",
       "type": "mcq",
-      "stem": "The function f(x) = x⁴ − 2x² has inflection points at:",
+      "stem": "The function f(x) = x⁴ - 2x² has inflection points at:",
       "options": {
         "A": "x = 0 only",
         "B": "x = ±1/√3",
@@ -1545,7 +1545,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "f''(x) = 12x² − 4 = 0 → x² = 1/3 → x = ±1/√3."
+      "explanation": "f''(x) = 12x² - 4 = 0 → x² = 1/3 → x = ±1/√3."
     },
     {
       "id": "uni-futa-mts102-0111",
@@ -1580,14 +1580,14 @@
       "type": "mcq",
       "stem": "The equation of the tangent to y = 1/x at x = 2 is:",
       "options": {
-        "A": "y = −x/4 + 1",
-        "B": "y = −x/4 + 1/2",
-        "C": "y = −x/4 + 1",
+        "A": "y = -x/4 + 1",
+        "B": "y = -x/4 + 1/2",
+        "C": "y = -x/4 + 1",
         "D": "y = x/4 + 1"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "f(2) = 1/2, f'(2) = −1/4. Tangent: y − 1/2 = −1/4(x − 2) → y = −x/4 + 1."
+      "explanation": "f(2) = 1/2, f'(2) = -1/4. Tangent: y - 1/2 = -1/4(x - 2) → y = -x/4 + 1."
     },
     {
       "id": "uni-futa-mts102-0114",
@@ -1606,7 +1606,7 @@
     {
       "id": "uni-futa-mts102-0115",
       "type": "mcq",
-      "stem": "If f(x) = x³ − 3x + 1, find the critical points:",
+      "stem": "If f(x) = x³ - 3x + 1, find the critical points:",
       "options": {
         "A": "x = ±1",
         "B": "x = 0, 1",
@@ -1615,7 +1615,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "f'(x) = 3x² − 3 = 0 → x² = 1 → x = ±1."
+      "explanation": "f'(x) = 3x² - 3 = 0 → x² = 1 → x = ±1."
     },
     {
       "id": "uni-futa-mts102-0116",
@@ -1624,12 +1624,12 @@
       "options": {
         "A": "x = 0",
         "B": "x = 1",
-        "C": "x = −1",
+        "C": "x = -1",
         "D": "x = 2"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "f'(x) = 1 − 1/x² = 0 → x = ±1. f''(1) = 2 > 0 → min at x = 1."
+      "explanation": "f'(x) = 1 - 1/x² = 0 → x = ±1. f''(1) = 2 > 0 → min at x = 1."
     },
     {
       "id": "uni-futa-mts102-0117",
@@ -1657,7 +1657,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "By Pythagoras: x² + y² = 100. dx/dt = (y/x)·(−dy/dt) = 2y/x ft/s."
+      "explanation": "By Pythagoras: x² + y² = 100. dx/dt = (y/x)·(-dy/dt) = 2y/x ft/s."
     },
     {
       "id": "uni-futa-mts102-0119",

@@ -2,7 +2,7 @@ import type { Lesson } from '@/lib/site-data';
 
 /**
  * Audio summaries (ROADMAP #11), on-device slice: a deterministic spoken
- * script composed from the lesson bundle itself — no provider, no network,
+ * script composed from the lesson bundle itself, no provider, no network,
  * works offline. Mirrors apps/mobile/lib/audio_summary.dart 1:1 so both
  * clients narrate the same words for the same lesson.
  */

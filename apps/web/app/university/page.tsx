@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * /university — the school gate of the university desk.
+ * /university, the school gate of the university desk.
  *
  * Every Nigerian tertiary institution lives here (universities,
  * polytechnics, colleges of education). Schools with a live question
@@ -43,7 +43,7 @@ export default function UniversityPage() {
   }, [query]);
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="University Desk" backHref="/dashboard" />
       <div className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6">
         <div className="flex flex-col gap-1">
@@ -51,7 +51,7 @@ export default function UniversityPage() {
             Which school are you in?
           </h2>
           <p className="text-sm text-on-surface-variant">
-            Pick your institution — {SCHOOLS.length} Nigerian universities, polytechnics and
+            Pick your institution, {SCHOOLS.length} Nigerian universities, polytechnics and
             colleges of education. Your desk wraps each school&apos;s own courses, question banks
             and PDF materials.
           </p>
@@ -82,7 +82,7 @@ export default function UniversityPage() {
         )}
 
         <p className="mt-8 rounded-xl bg-surface-container-low px-4 py-3 text-xs text-on-surface-variant">
-          Your school not wrapped yet? The desk ships one interface for every school — question
+          Your school not wrapped yet? The desk ships one interface for every school, question
           banks and course PDFs are added per school as they are harvested. Students of any school
           can already use the JAMB, WAEC and NECO desks today.
         </p>

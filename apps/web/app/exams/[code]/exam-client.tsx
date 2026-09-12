@@ -77,11 +77,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   // Practice Settings overrides (?timer=15|30|60, ?timer=0 = No timer).
   // State (not consts) so a resumed paper can restore the timer the
-  // sitting was started with — the resume deep link carries no ?timer.
+  // sitting was started with, the resume deep link carries no ?timer.
   const searchParams = useSearchParams();
   const timerParam = searchParams.get('timer');
   // Composed papers land on the static /exams/paper/ route with the
-  // real code in the query string (?code=…) — static export cannot
+  // real code in the query string (?code=…), static export cannot
   // enumerate their infinite ~param combinations as paths.
   const code = routeCode || searchParams.get('code') || '';
   const [untimed, setUntimed] = useState(timerParam === '0');
@@ -96,7 +96,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   const [attempt, setAttempt] = useState<AttemptResponse | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  // Theory drafts: the essay text typed per question — device-local only,
+  // Theory drafts: the essay text typed per question, device-local only,
   // never submitted (ADR-0003: student content stays client-side).
   const [theoryDrafts, setTheoryDrafts] = useState<Record<string, string>>({});
   const [flags, setFlags] = useState<Record<string, boolean>>({});
@@ -151,9 +151,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     let alive = true;
     (async () => {
       try {
-        if (!code) throw new Error('No paper code — open it from the dashboard');
+        if (!code) throw new Error('No paper code, open it from the dashboard');
         migrateBundleCache(); // heal quota-struck localStorage on entry
-        // Composite mock papers never appear in the manifest — the server
+        // Composite mock papers never appear in the manifest, the server
         // composes them on demand, so resolve those straight by code.
         // Daily challenges resolve through /daily/{body} first.
         let b: Bundle;
@@ -441,7 +441,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   /** Records an answer: latency telemetry + fatigue assessment first. */
   const pick = (questionId: string, letter: string) => {
-    // Exam mode (UTME mock): the hall rule — a pick is final.
+    // Exam mode (UTME mock): the hall rule, a pick is final.
     if (examMode && answers[questionId]) return;
     if (!answers[questionId] && letter !== '') {
       const latencies = [...latenciesRef.current, Date.now() - shownAtRef.current];
@@ -486,7 +486,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   /* ------------------------------------------------------------ */
   /* Keyboard controls (desktop CBT, like the real JAMB hall):      */
-  /*   A–F / 1–6 pick an option · ←/→ move · F flag · Enter next.   */
+  /*   A-F / 1-6 pick an option · ←/→ move · F flag · Enter next.   */
   /* Suspended while any overlay (navigator, calculator, break,     */
   /* fatigue nudge) is open or while typing in a theory textarea.   */
   /* ------------------------------------------------------------- */
@@ -501,7 +501,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       }
       const key = e.key;
       if (question.type !== 'theory') {
-        // A–F by letter, 1–6 by position
+        // A-F by letter, 1-6 by position
         const upper = key.length === 1 ? key.toUpperCase() : '';
         const byLetter = upper && (question.options ?? {})[upper] !== undefined ? upper : null;
         const digit = /^[1-6]$/.test(key) ? LETTERS[Number(key) - 1] : null;
@@ -620,33 +620,33 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             {bundle.totalMarks} marks
           </p>
 
-          {/* Pre-exam instructions — the sheet a candidate reads in the
+          {/* Pre-exam instructions, the sheet a candidate reads in the
               hall before the invigilator says "start". Everything about
               this sitting is on it: timing, locking, what the paper
               carries (passages / novel), navigation and shortcuts. */}
           <div className="mx-auto mt-5 w-full max-w-sm rounded-xl border border-outline-variant/60 bg-surface-container-low/60 p-4 text-left">
             <p className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
               <span className="material-symbols-outlined text-[14px]">info</span>
-              instructions — read before you begin
+              instructions, read before you begin
             </p>
             <ul className="mt-2.5 space-y-1.5 text-[12.5px] leading-relaxed text-on-surface-variant">
               <li>· The clock starts the moment you tap Begin and auto-submits at zero.</li>
               {examMode && <li>· Exam mode: a picked answer locks instantly, exactly like the CBT hall.</li>}
               {!examMode && <li>· Practice mode: you may change an answer before submitting.</li>}
               {bundle.questions.some((q) => q.group === 'comprehension') && (
-                <li>· This paper carries comprehension-passage questions — the passage sits above each stem and can be collapsed.</li>
+                <li>· This paper carries comprehension-passage questions, the passage sits above each stem and can be collapsed.</li>
               )}
               {bundle.questions.some((q) => q.group === 'novel') && (
                 <li>· This paper carries the JAMB novel questions (The Lekki Headmaster).</li>
               )}
               <li>· Flag tricky questions and jump back to them from the question map (grid button).</li>
-              <li>· Leaving mid-paper keeps your seat — the clock keeps running; resume from the dashboard.</li>
+              <li>· Leaving mid-paper keeps your seat, the clock keeps running; resume from the dashboard.</li>
             </ul>
             <p className="mt-3 border-t border-outline-variant/50 pt-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
               keyboard · desktop
             </p>
             <div className="mt-1.5 flex flex-wrap gap-1.5 text-[11px] text-on-surface-variant">
-              <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">A–F</span> pick
+              <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">A-F</span> pick
               <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">←→</span> move
               <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">F</span> flag
               <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">Enter</span> next / submit
@@ -679,7 +679,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 {pausedLeftSec == null
                   ? 'Untimed paper · your clock continues where it stopped'
                   : pausedLeftSec <= 0
-                    ? 'Time is up — resuming submits the paper for marking'
+                    ? 'Time is up, resuming submits the paper for marking'
                     : `Time left on this paper: ${mmss(pausedLeftSec)}`}
               </p>
               <button
@@ -699,7 +699,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               </button>
             </div>
           )}
-          {/* Smart order (ROADMAP #5) — practice packs only */}
+          {/* Smart order (ROADMAP #5), practice packs only */}
           {!examMode && !daily && (
           <div className="mx-auto mt-5 flex w-full max-w-xs items-center justify-between rounded-xl border border-outline-variant bg-surface-container-low px-4 py-2.5">
             <div className="flex items-center gap-2 text-left">
@@ -1239,7 +1239,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               <div className="flex items-center gap-2 rounded-lg bg-accent-amber/10 px-3 py-2">
                 <span className="material-symbols-outlined text-[18px] text-accent-ink">edit_note</span>
                 <p className="text-[12px] leading-4 text-on-surface-variant">
-                  Theory question — write your answer below, then tick it when done.
+                  Theory question, write your answer below, then tick it when done.
                   The model answer unlocks in the review after submission.
                 </p>
               </div>
@@ -1264,7 +1264,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 <span className="material-symbols-outlined text-[16px]">
                   {answers[question.id] !== undefined ? 'check_circle' : 'task_alt'}
                 </span>
-                {answers[question.id] !== undefined ? 'Answered — submitted with the paper' : 'Mark as answered'}
+                {answers[question.id] !== undefined ? 'Answered, submitted with the paper' : 'Mark as answered'}
               </button>
             </div>
           ) : (
@@ -1310,13 +1310,13 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           {examMode && answers[question.id] && (
             <p className="mt-3 flex items-center gap-1.5 text-[11px] text-on-surface-variant">
               <span className="material-symbols-outlined text-[14px]">lock</span>
-              Exam mode — this answer is locked, exactly like the hall.
+              Exam mode, this answer is locked, exactly like the hall.
             </p>
           )}
         </div>
 
         {/* Desktop navigator rail (lg): the hall's question map, live and
-            always visible — phones keep the grid-button sheet. */}
+            always visible, phones keep the grid-button sheet. */}
         <aside className="sticky top-20 hidden max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-2xl border border-outline-variant/50 bg-card p-4 shadow-[0_2px_12px_0_rgba(20,28,45,0.08)] lg:block">
           <div className="flex items-center justify-between">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
@@ -1366,7 +1366,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               </button>
             )}
             <p className="mt-2.5 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] text-outline">
-              <span>A–F pick</span><span>←→ move</span><span>F flag</span><span>Enter next</span>
+              <span>A-F pick</span><span>←→ move</span><span>F flag</span><span>Enter next</span>
             </p>
           </div>
         </aside>
@@ -1481,7 +1481,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                       </p>
                       <div className="grid grid-cols-5 gap-3">
                         {shown.length === 0 && (
-                          <p className="col-span-5 py-3 text-center text-[12px] text-outline">—</p>
+                          <p className="col-span-5 py-3 text-center text-[12px] text-outline">-</p>
                         )}
                         {shown.map(({ q, i }) => (
                           <button

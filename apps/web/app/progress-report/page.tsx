@@ -98,7 +98,7 @@ export default function ProgressReportPage() {
   const focus = [...mastery].sort((a, b) => a.pct - b.pct).slice(0, 3);
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Progress report" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">

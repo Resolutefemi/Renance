@@ -50,3 +50,6 @@ arena-e2e
 
 # TypeScript incremental build cache
 *.tsbuildinfo
+
+# Generated at build time by scripts/web_bundles.py (never commit)
+apps/web/public/bundles/

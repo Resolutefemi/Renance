@@ -132,7 +132,7 @@ function ReviewInner() {
   );
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title={`Review · ${review.title || review.code}`} />
       <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6">
       <div className="flex items-center justify-between">
@@ -340,7 +340,7 @@ function ReviewQueue() {
   const latestGraded = attempts.find((a) => a.status === 'graded');
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Review" />
       <div className="mx-auto w-full max-w-2xl px-4 pt-6 sm:px-6">
       <div className="flex items-center justify-between">

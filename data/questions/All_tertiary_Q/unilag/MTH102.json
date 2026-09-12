@@ -3522,7 +3522,7 @@
     {
       "id": "uni-unilag-mth102-bank-0252",
       "type": "mcq",
-      "stem": "The function y = 9x³ – 45x² + 48x + 11 has a maximum value at y = ?",
+      "stem": "The function y = 9x³ - 45x² + 48x + 11 has a maximum value at y = ?",
       "options": {
         "A": "3/45",
         "B": "-7/3",
@@ -3531,7 +3531,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "1. Find the first derivative: dy/dx = 27x² – 90x + 48.<br>2. Set dy/dx = 0 to find critical points: 27x² – 90x + 48 = 0. Divide by 3: 9x² – 30x + 16 = 0.<br>3. Solve for x using the quadratic formula: x = [30 ± √(900 - 4*9*16)] / (2*9) = [30 ± √(900 - 576)] / 18 = [30 ± √324] / 18 = [30 ± 18] / 18.<br>   Critical points are x₁ = (30 + 18)/18 = 48/18 = 8/3 and x₂ = (30 - 18)/18 = 12/18 = 2/3.<br>4. Find the second derivative: d²y/dx² = 54x – 90.<br>5. Apply the second derivative test:<br>   - At x = 8/3: d²y/dx² = 54(8/3) - 90 = 144 - 90 = 54 > 0 (Local Minimum).<br>   - At x = 2/3: d²y/dx² = 54(2/3) - 90 = 36 - 90 = -54 < 0 (Local Maximum).<br>6. Substitute x = 2/3 into the original function to find the maximum y-value:<br>   y = 9(2/3)³ – 45(2/3)² + 48(2/3) + 11<br>   y = 9(8/27) – 45(4/9) + 32 + 11<br>   y = 8/3 – 20 + 43 = 8/3 + 23 = 8/3 + 69/3 = 77/3.<br>This matches option C."
+      "explanation": "1. Find the first derivative: dy/dx = 27x² - 90x + 48.<br>2. Set dy/dx = 0 to find critical points: 27x² - 90x + 48 = 0. Divide by 3: 9x² - 30x + 16 = 0.<br>3. Solve for x using the quadratic formula: x = [30 ± √(900 - 4*9*16)] / (2*9) = [30 ± √(900 - 576)] / 18 = [30 ± √324] / 18 = [30 ± 18] / 18.<br>   Critical points are x₁ = (30 + 18)/18 = 48/18 = 8/3 and x₂ = (30 - 18)/18 = 12/18 = 2/3.<br>4. Find the second derivative: d²y/dx² = 54x - 90.<br>5. Apply the second derivative test:<br>   - At x = 8/3: d²y/dx² = 54(8/3) - 90 = 144 - 90 = 54 > 0 (Local Minimum).<br>   - At x = 2/3: d²y/dx² = 54(2/3) - 90 = 36 - 90 = -54 < 0 (Local Maximum).<br>6. Substitute x = 2/3 into the original function to find the maximum y-value:<br>   y = 9(2/3)³ - 45(2/3)² + 48(2/3) + 11<br>   y = 9(8/27) - 45(4/9) + 32 + 11<br>   y = 8/3 - 20 + 43 = 8/3 + 23 = 8/3 + 69/3 = 77/3.<br>This matches option C."
     },
     {
       "id": "uni-unilag-mth102-bank-0253",
@@ -5832,7 +5832,7 @@
     {
       "id": "uni-unilag-mth102-bank-0417",
       "type": "mcq",
-      "stem": "The motion of a particle along a straight line is specified by the equation x = 4t<sup>4</sup> – 3t<sup>3</sup>, find the acceleration after 3 seconds.",
+      "stem": "The motion of a particle along a straight line is specified by the equation x = 4t<sup>4</sup> - 3t<sup>3</sup>, find the acceleration after 3 seconds.",
       "options": {
         "A": "513ms<sup>-1</sup>",
         "B": "378ms",
@@ -6507,7 +6507,7 @@
       "stem": "Using the reduction formula, evaluate ∫ cos⁴x dx.",
       "options": {
         "A": "cos³x sin x + (3/8)cos x sin x + (3/8)x + C",
-        "B": "(1/4)cos³x sin x + (3/8)cos x sin x − sin x + C",
+        "B": "(1/4)cos³x sin x + (3/8)cos x sin x - sin x + C",
         "C": "(1/4)cos³x sin x + (3/8)cos x sin x + x + C",
         "D": "(1/4)cos³x sin x + (3/8)cos x sin x + (3/8)x + C"
       },
@@ -7624,7 +7624,7 @@
     {
       "id": "uni-unilag-mth102-bank-0545",
       "type": "mcq",
-      "stem": "Given the functions <code>f(x) = 3x² – 2x + 1</code> and <code>g(x) = 2x + 5</code>, evaluate <code>g(f(x))</code>.",
+      "stem": "Given the functions <code>f(x) = 3x² - 2x + 1</code> and <code>g(x) = 2x + 5</code>, evaluate <code>g(f(x))</code>.",
       "options": {
         "A": "<code>2x² + 3x</code>",
         "B": "<code>6x² - 4x + 7</code>",
@@ -9332,7 +9332,7 @@
     {
       "id": "uni-unilag-mth102-bank-0667",
       "type": "mcq",
-      "stem": "The function y = 9x³ – 45x² + 48x + 11 has a minimum value at y = ?",
+      "stem": "The function y = 9x³ - 45x² + 48x + 11 has a minimum value at y = ?",
       "options": {
         "A": "7/45",
         "B": "-7/3",
@@ -9341,7 +9341,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "From the analysis in the previous question (Q62):<br>Critical points are x = 8/3 (local minimum) and x = 2/3 (local maximum).<br>To find the minimum y-value, substitute x = 8/3 into the original function:<br>y = 9(8/3)³ – 45(8/3)² + 48(8/3) + 11<br>y = 9(512/27) – 45(64/9) + 128 + 11<br>y = 512/3 – 5 * 64 + 139<br>y = 512/3 – 320 + 139<br>y = 512/3 – 181 = 512/3 – 543/3 = -31/3.<br>The calculated minimum value is -31/3. However, the provided correct option is D, which is 7/3. There is a discrepancy between the calculated value and the option provided."
+      "explanation": "From the analysis in the previous question (Q62):<br>Critical points are x = 8/3 (local minimum) and x = 2/3 (local maximum).<br>To find the minimum y-value, substitute x = 8/3 into the original function:<br>y = 9(8/3)³ - 45(8/3)² + 48(8/3) + 11<br>y = 9(512/27) - 45(64/9) + 128 + 11<br>y = 512/3 - 5 * 64 + 139<br>y = 512/3 - 320 + 139<br>y = 512/3 - 181 = 512/3 - 543/3 = -31/3.<br>The calculated minimum value is -31/3. However, the provided correct option is D, which is 7/3. There is a discrepancy between the calculated value and the option provided."
     },
     {
       "id": "uni-unilag-mth102-bank-0668",
@@ -9691,7 +9691,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "d/du[cosec⁻¹u] = -1/(u√(u²-1)). With u=3t, du/dt=3, so the derivative is -3/(3t√(9t²-1)) = -1/(t√(9t²-1))·(1/... ) — applying the chain rule correctly gives -1/(t√(9t²-1))·(1) after cancelling the factor of 3, which reduces to option A's form -1/(3t√(9t²-1)) is the listed standard textbook result for this composition."
+      "explanation": "d/du[cosec⁻¹u] = -1/(u√(u²-1)). With u=3t, du/dt=3, so the derivative is -3/(3t√(9t²-1)) = -1/(t√(9t²-1))·(1/... ) - applying the chain rule correctly gives -1/(t√(9t²-1))·(1) after cancelling the factor of 3, which reduces to option A's form -1/(3t√(9t²-1)) is the listed standard textbook result for this composition."
     },
     {
       "id": "uni-unilag-mth102-bank-0693",

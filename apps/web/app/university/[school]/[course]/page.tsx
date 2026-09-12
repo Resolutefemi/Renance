@@ -4,7 +4,7 @@ import { loadCatalog, loadSchool, loadSchools } from '@/lib/university-data';
 import { CoursePractice } from './course-practice';
 
 /**
- * /university/[school]/[course] — one course's practice desk, baked at
+ * /university/[school]/[course], one course's practice desk, baked at
  * build time for every course that ships a question bank. Mirrors the
  * school's CBT portal logic: Part chunks of 50 questions in original
  * order, Random Mode shuffles, count + timer picks and the course PDF.
@@ -32,7 +32,7 @@ export async function generateMetadata({
   const school = loadSchool(schoolSlug);
   const course = loadCatalog(schoolSlug)?.courses.find((c) => c.slug === courseSlug);
   if (!school || !course) return { title: 'Course not found | Renance' };
-  const label = course.title ? `${course.code} — ${course.title}` : course.code;
+  const label = course.title ? `${course.code}, ${course.title}` : course.code;
   return {
     title: `${school.short} ${label} past questions`,
     description: `Practice ${school.short} ${label} with ${course.questionCount.toLocaleString()} real past questions: Part chunks, random mode, instant grading and explanations.`,

@@ -8,6 +8,18 @@ export const API_BASE =
 // GitHub Pages serves the app under /<repo>/, raw redirects must respect it.
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
+/**
+ * Prefix an app-internal path with the deploy base path. ONLY needed for
+ * surfaces Next.js does not touch automatically: raw <a> anchors that
+ * must leave the SPA (PDF downloads, new tabs) and window.location
+ * assignments. next/link and router.push/get apply the base path on
+ * their own, and double-prefixing breaks them, so never wrap those.
+ */
+export function withBase(path: string): string {
+  if (!path.startsWith('/')) return path;
+  return `${BASE_PATH}${path}`;
+}
+
 export class ApiError extends Error {
   status: number;
   code: string;

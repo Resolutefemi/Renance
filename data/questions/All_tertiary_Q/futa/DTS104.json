@@ -145,7 +145,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "else: — colon introduces the indented block."
+      "explanation": "else: - colon introduces the indented block."
     },
     {
       "id": "uni-futa-dts104-0011",
@@ -243,7 +243,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "def f(x, y=10): — y defaults to 10 if not provided."
+      "explanation": "def f(x, y=10): - y defaults to 10 if not provided."
     },
     {
       "id": "uni-futa-dts104-0018",
@@ -334,7 +334,7 @@
       "type": "mcq",
       "stem": "Python statements do NOT need to end with:",
       "options": {
-        "A": "A special character — newline ends a statement",
+        "A": "A special character - newline ends a statement",
         "B": "A semicolon",
         "C": "A period",
         "D": "A colon"
@@ -719,7 +719,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "range(start, stop, step) — 0, 2, 4, 6, 8 (10 exclusive)."
+      "explanation": "range(start, stop, step) - 0, 2, 4, 6, 8 (10 exclusive)."
     },
     {
       "id": "uni-futa-dts104-0052",
@@ -852,7 +852,7 @@
       "type": "mcq",
       "stem": "Long integers in Python are:",
       "options": {
-        "A": "Arbitrary precision — as many digits as you can type",
+        "A": "Arbitrary precision - as many digits as you can type",
         "B": "Limited to 64 bits",
         "C": "Limited to 32 bits",
         "D": "Always floating point"
@@ -1153,7 +1153,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "if condition: — colon introduces the indented block."
+      "explanation": "if condition: - colon introduces the indented block."
     },
     {
       "id": "uni-futa-dts104-0083",

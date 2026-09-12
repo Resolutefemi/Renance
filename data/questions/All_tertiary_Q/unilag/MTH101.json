@@ -59,7 +59,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Students taking at least one = 40 − 4 = 36. Using inclusion-exclusion: 36 = 32 + 24 − x → x = 20."
+      "explanation": "Students taking at least one = 40 - 4 = 36. Using inclusion-exclusion: 36 = 32 + 24 - x → x = 20."
     },
     {
       "id": "uni-unilag-mth101-bank-0005",
@@ -718,7 +718,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "n(Tea ∪ Coffee) = 70 + 50 − 30 = 90."
+      "explanation": "n(Tea ∪ Coffee) = 70 + 50 - 30 = 90."
     },
     {
       "id": "uni-unilag-mth101-bank-0052",
@@ -779,16 +779,16 @@
     {
       "id": "uni-unilag-mth101-bank-0056",
       "type": "mcq",
-      "stem": "Find (cos60° − sin60°)",
+      "stem": "Find (cos60° - sin60°)",
       "options": {
         "A": "1/2",
         "B": "-1/2",
-        "C": "(1−√3)/2",
-        "D": "(√3−1)/2"
+        "C": "(1-√3)/2",
+        "D": "(√3-1)/2"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "1/2 − √3/2 = (1−√3)/2."
+      "explanation": "1/2 - √3/2 = (1-√3)/2."
     },
     {
       "id": "uni-unilag-mth101-bank-0057",
@@ -863,7 +863,7 @@
     {
       "id": "uni-unilag-mth101-bank-0062",
       "type": "mcq",
-      "stem": "Let A = {1,2,3,4}, B = {3,4,5,6}, find (A − B) ∪ (B − A).",
+      "stem": "Let A = {1,2,3,4}, B = {3,4,5,6}, find (A - B) ∪ (B - A).",
       "options": {
         "A": "{1,2,5,6}",
         "B": "{3,4}",
@@ -872,7 +872,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "A−B={1,2}, B−A={5,6}; union = {1,2,5,6}."
+      "explanation": "A-B={1,2}, B-A={5,6}; union = {1,2,5,6}."
     },
     {
       "id": "uni-unilag-mth101-bank-0063",
@@ -1026,7 +1026,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "20 + 15 − 5 = 30."
+      "explanation": "20 + 15 - 5 = 30."
     },
     {
       "id": "uni-unilag-mth101-bank-0074",
@@ -1124,7 +1124,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "a=3, d=4, n=50; t_n = a + (n−1)d = 3 + 49×4 = 3 + 196 = 199."
+      "explanation": "a=3, d=4, n=50; t_n = a + (n-1)d = 3 + 49×4 = 3 + 196 = 199."
     },
     {
       "id": "uni-unilag-mth101-bank-0081",
@@ -1283,7 +1283,7 @@
     {
       "id": "uni-unilag-mth101-bank-0092",
       "type": "mcq",
-      "stem": "Find the coefficient of x^2 in (1 − 3x)^4",
+      "stem": "Find the coefficient of x^2 in (1 - 3x)^4",
       "options": {
         "A": "54",
         "B": "-54",
@@ -1614,7 +1614,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Rewrite the expression: (1 - cos x)/sin x = 1/sin x - cos x/sin x = csc x - cot x. Hence, the correct identity is csc x − cot x."
+      "explanation": "Rewrite the expression: (1 - cos x)/sin x = 1/sin x - cos x/sin x = csc x - cot x. Hence, the correct identity is csc x - cot x."
     },
     {
       "id": "uni-unilag-mth101-bank-0116",
@@ -1647,7 +1647,7 @@
     {
       "id": "uni-unilag-mth101-bank-0118",
       "type": "mcq",
-      "stem": "In a set U = {1..15}, A = {1,3,5,7,9}, B = {5,6,7,8,9}, find (A ∪ B) − (A ∩ B).",
+      "stem": "In a set U = {1..15}, A = {1,3,5,7,9}, B = {5,6,7,8,9}, find (A ∪ B) - (A ∩ B).",
       "options": {
         "A": "{1,3,6,8}",
         "B": "{5,7,9}",
@@ -1656,7 +1656,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Symmetric difference = union − intersection = {1,3,6,8}."
+      "explanation": "Symmetric difference = union - intersection = {1,3,6,8}."
     },
     {
       "id": "uni-unilag-mth101-bank-0119",
@@ -1726,7 +1726,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Union = 20 + 15 − 5 = 30; neither = 35 − 30 = 5."
+      "explanation": "Union = 20 + 15 - 5 = 30; neither = 35 - 30 = 5."
     },
     {
       "id": "uni-unilag-mth101-bank-0124",
@@ -1880,7 +1880,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Word only = 30 − 15 = 15."
+      "explanation": "Word only = 30 - 15 = 15."
     },
     {
       "id": "uni-unilag-mth101-bank-0135",
@@ -2354,7 +2354,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "n(F ∪ B) = 18 + 22 − 10 = 30."
+      "explanation": "n(F ∪ B) = 18 + 22 - 10 = 30."
     },
     {
       "id": "uni-unilag-mth101-bank-0169",
@@ -2807,7 +2807,7 @@
     {
       "id": "uni-unilag-mth101-bank-0201",
       "type": "mcq",
-      "stem": "If tan θ = 3, find (1 − tan²θ)/(1 + tan²θ)",
+      "stem": "If tan θ = 3, find (1 - tan²θ)/(1 + tan²θ)",
       "options": {
         "A": "-4/5",
         "B": "4/5",
@@ -2816,7 +2816,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Substitute tanθ = 3: (1 − 9)/(1 + 9) = -8/10 = -4/5."
+      "explanation": "Substitute tanθ = 3: (1 - 9)/(1 + 9) = -8/10 = -4/5."
     },
     {
       "id": "uni-unilag-mth101-bank-0202",
@@ -2844,7 +2844,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_8 = a(r^8−1)/(r−1)=2(2^8−1)/(2−1)=2(256−1)=2×255=510."
+      "explanation": "S_8 = a(r^8-1)/(r-1)=2(2^8-1)/(2-1)=2(256-1)=2×255=510."
     },
     {
       "id": "uni-unilag-mth101-bank-0204",
@@ -3082,7 +3082,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_∞ = a/(1−r) = 6/(1−1/2)=6/(1/2)=12."
+      "explanation": "S_∞ = a/(1-r) = 6/(1-1/2)=6/(1/2)=12."
     },
     {
       "id": "uni-unilag-mth101-bank-0221",
@@ -3437,7 +3437,7 @@
     {
       "id": "uni-unilag-mth101-bank-0246",
       "type": "mcq",
-      "stem": "Prove by induction that 1×2⁰ + 2×2¹ + 3×2² + ... + n×2^{n-1} = (n−1)2^n + 1 for n ≥ 1.",
+      "stem": "Prove by induction that 1×2⁰ + 2×2¹ + 3×2² + ... + n×2^{n-1} = (n-1)2^n + 1 for n ≥ 1.",
       "options": {
         "A": "True",
         "B": "False",
@@ -3446,7 +3446,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Base n=1: 1×2⁰ = 1 = (1−1)2¹ +1 ✔. Assume n=k, then add (k+1)×2^k → factorization yields (k)2^{k+1}+1 ✔."
+      "explanation": "Base n=1: 1×2⁰ = 1 = (1-1)2¹ +1 ✔. Assume n=k, then add (k+1)×2^k → factorization yields (k)2^{k+1}+1 ✔."
     },
     {
       "id": "uni-unilag-mth101-bank-0247",
@@ -3516,7 +3516,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "t_5=a+4d=20, t_12=a+11d=48 → 7d=28 → d=4 → a=20−16=4 → S_15=15/2[2×4+14×4]=7.5[8+56]=7.5×64=480."
+      "explanation": "t_5=a+4d=20, t_12=a+11d=48 → 7d=28 → d=4 → a=20-16=4 → S_15=15/2[2×4+14×4]=7.5[8+56]=7.5×64=480."
     },
     {
       "id": "uni-unilag-mth101-bank-0252",
@@ -3600,7 +3600,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Total taking at least one = 18 + 20 − 5 = 33; neither = 40 − 33 = 7."
+      "explanation": "Total taking at least one = 18 + 20 - 5 = 33; neither = 40 - 33 = 7."
     },
     {
       "id": "uni-unilag-mth101-bank-0258",
@@ -3880,7 +3880,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Union = 100 − 5 = 95. So 40+45+35 − (15+10+12) + x = 95 → 120 − 37 + x = 95 → 83 + x = 95 → x = 12."
+      "explanation": "Union = 100 - 5 = 95. So 40+45+35 - (15+10+12) + x = 95 → 120 - 37 + x = 95 → 83 + x = 95 → x = 12."
     },
     {
       "id": "uni-unilag-mth101-bank-0278",
@@ -3951,7 +3951,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "By definition, C(n, j) = n! / (j!(n − j)!). None of the transformations given change it except itself."
+      "explanation": "By definition, C(n, j) = n! / (j!(n - j)!). None of the transformations given change it except itself."
     },
     {
       "id": "uni-unilag-mth101-bank-0283",
@@ -4049,7 +4049,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_n = n/2[2a + (n−1)d] → 420 = 20/2[10 + 19d] → 420 = 10[10+19d] → 42 = 10+19d → 19d=32 → d=32/19."
+      "explanation": "S_n = n/2[2a + (n-1)d] → 420 = 20/2[10 + 19d] → 420 = 10[10+19d] → 42 = 10+19d → 19d=32 → d=32/19."
     },
     {
       "id": "uni-unilag-mth101-bank-0290",
@@ -4147,7 +4147,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Tea only = 35 − 10 = 25."
+      "explanation": "Tea only = 35 - 10 = 25."
     },
     {
       "id": "uni-unilag-mth101-bank-0297",
@@ -4399,7 +4399,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_4 = a(r^4−1)/(r−1) = 5(r^4−1)/(r−1)=65 → (r^4−1)/(r−1)=13 → r^3+r^2+r+1=13 → r=2 satisfies this equation (8+4+2+1=15). Exact solution requires solving cubic, but r=2 is the integer solution."
+      "explanation": "S_4 = a(r^4-1)/(r-1) = 5(r^4-1)/(r-1)=65 → (r^4-1)/(r-1)=13 → r^3+r^2+r+1=13 → r=2 satisfies this equation (8+4+2+1=15). Exact solution requires solving cubic, but r=2 is the integer solution."
     },
     {
       "id": "uni-unilag-mth101-bank-0315",
@@ -4586,7 +4586,7 @@
     {
       "id": "uni-unilag-mth101-bank-0328",
       "type": "mcq",
-      "stem": "For all k ∈ N, 2^(5k) − 1 is divisible by",
+      "stem": "For all k ∈ N, 2^(5k) - 1 is divisible by",
       "options": {
         "A": "125",
         "B": "225",
@@ -4596,7 +4596,7 @@
       },
       "marks": 1,
       "answer": "E",
-      "explanation": "Since 2^5 = 32 ≡ 1 (mod 31), then 2^(5k) = (2^5)^k ≡ 1 (mod 31). Hence 2^(5k) − 1 is divisible by 31."
+      "explanation": "Since 2^5 = 32 ≡ 1 (mod 31), then 2^(5k) = (2^5)^k ≡ 1 (mod 31). Hence 2^(5k) - 1 is divisible by 31."
     },
     {
       "id": "uni-unilag-mth101-bank-0329",
@@ -4624,7 +4624,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "a=2, d=3, n=75; S_n = n/2[2a + (n−1)d] = 75/2[4 + 222] = 75/2×226=37.5×226=8475."
+      "explanation": "a=2, d=3, n=75; S_n = n/2[2a + (n-1)d] = 75/2[4 + 222] = 75/2×226=37.5×226=8475."
     },
     {
       "id": "uni-unilag-mth101-bank-0331",
@@ -4834,7 +4834,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Using inclusion-exclusion: 50 + 40 − 10 = 80."
+      "explanation": "Using inclusion-exclusion: 50 + 40 - 10 = 80."
     },
     {
       "id": "uni-unilag-mth101-bank-0346",
@@ -4965,7 +4965,7 @@
     {
       "id": "uni-unilag-mth101-bank-0355",
       "type": "mcq",
-      "stem": "Given U = {1,2,3,...,10}, S = {3,5,7,9} and T = {4,5,6,7}, find S − T.",
+      "stem": "Given U = {1,2,3,...,10}, S = {3,5,7,9} and T = {4,5,6,7}, find S - T.",
       "options": {
         "A": "{3,9}",
         "B": "{5,7}",
@@ -4974,7 +4974,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S − T are elements in S that are not in T. Removing 5 and 7 from S leaves {3,9}."
+      "explanation": "S - T are elements in S that are not in T. Removing 5 and 7 from S leaves {3,9}."
     },
     {
       "id": "uni-unilag-mth101-bank-0356",
@@ -5021,7 +5021,7 @@
     {
       "id": "uni-unilag-mth101-bank-0359",
       "type": "mcq",
-      "stem": "Let A = {1,2,3,4,5}, B = {4,5,6,7}. Find A − B.",
+      "stem": "Let A = {1,2,3,4,5}, B = {4,5,6,7}. Find A - B.",
       "options": {
         "A": "{1,2,3}",
         "B": "{4,5}",
@@ -5030,7 +5030,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "A − B = elements in A not in B = {1,2,3}."
+      "explanation": "A - B = elements in A not in B = {1,2,3}."
     },
     {
       "id": "uni-unilag-mth101-bank-0360",
@@ -5156,7 +5156,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Using the formula n(A ∪ B) = n(A) + n(B) − n(A ∩ B), substitute values: 15 = 20 + n(B) − 5. Simplifying gives 15 = 15 + n(B), so n(B) = 0."
+      "explanation": "Using the formula n(A ∪ B) = n(A) + n(B) - n(A ∩ B), substitute values: 15 = 20 + n(B) - 5. Simplifying gives 15 = 15 + n(B), so n(B) = 0."
     },
     {
       "id": "uni-unilag-mth101-bank-0369",
@@ -5198,7 +5198,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_∞ = a/(1−r) → 12 = 8/(1−r) → 1−r = 8/12 = 2/3 → r = 1−2/3 = 1/3."
+      "explanation": "S_∞ = a/(1-r) → 12 = 8/(1-r) → 1-r = 8/12 = 2/3 → r = 1-2/3 = 1/3."
     },
     {
       "id": "uni-unilag-mth101-bank-0372",
@@ -5493,7 +5493,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "a=3, r=2, t_n = a × r^(n−1) = 3 × 2^14 = 3 × 16384 = 49152."
+      "explanation": "a=3, r=2, t_n = a × r^(n-1) = 3 × 2^14 = 3 × 16384 = 49152."
     },
     {
       "id": "uni-unilag-mth101-bank-0393",
@@ -5736,7 +5736,7 @@
     {
       "id": "uni-unilag-mth101-bank-0410",
       "type": "mcq",
-      "stem": "If A = {x ∈ Z : 0 < x < 15} and B = {x ∈ Z : -3 < x < 10}, find A − B.",
+      "stem": "If A = {x ∈ Z : 0 < x < 15} and B = {x ∈ Z : -3 < x < 10}, find A - B.",
       "options": {
         "A": "{10,11,12,13,14}",
         "B": "{1,2,3}",
@@ -6114,16 +6114,16 @@
     {
       "id": "uni-unilag-mth101-bank-0437",
       "type": "mcq",
-      "stem": "Find the sum of the first 77 terms of the arithmetic progression 4, −3, −10, ...",
+      "stem": "Find the sum of the first 77 terms of the arithmetic progression 4, -3, -10, ...",
       "options": {
-        "A": "−20174",
-        "B": "−1540",
-        "C": "−1820",
-        "D": "−1700"
+        "A": "-20174",
+        "B": "-1540",
+        "C": "-1820",
+        "D": "-1700"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "a=4, d=−7, n=77. S_n = 77/2[8 + 76×(-7)] = 77/2[8 - 532] = 77/2×(−524) = 77×(−262) = −20174."
+      "explanation": "a=4, d=-7, n=77. S_n = 77/2[8 + 76×(-7)] = 77/2[8 - 532] = 77/2×(-524) = 77×(-262) = -20174."
     },
     {
       "id": "uni-unilag-mth101-bank-0438",
@@ -6557,7 +6557,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "t_12 = a + 11d = 34, t_20 = a + 19d = 58 → 19d−11d = 58−34 → 8d=24 → d=3. a + 11×3=34 → a=34−33=1."
+      "explanation": "t_12 = a + 11d = 34, t_20 = a + 19d = 58 → 19d-11d = 58-34 → 8d=24 → d=3. a + 11×3=34 → a=34-33=1."
     },
     {
       "id": "uni-unilag-mth101-bank-0469",
@@ -6989,7 +6989,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "cosθ = √(1 − sin²θ) = √(1 − 1/4) = √3/2."
+      "explanation": "cosθ = √(1 - sin²θ) = √(1 - 1/4) = √3/2."
     },
     {
       "id": "uni-unilag-mth101-bank-0500",
@@ -7130,7 +7130,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "a=1/2, r=1/2. S_n = a(1−r^n)/(1−r) = (1/2)(1−(1/2)^46)/(1/2) = 1−(1/2)^46 ≈ 1 for large n."
+      "explanation": "a=1/2, r=1/2. S_n = a(1-r^n)/(1-r) = (1/2)(1-(1/2)^46)/(1/2) = 1-(1/2)^46 ≈ 1 for large n."
     },
     {
       "id": "uni-unilag-mth101-bank-0510",
@@ -7200,7 +7200,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_n = a(r^n−1)/(r−1)=5(3^12−1)/(3−1)=5(531441−1)/2=5×531440/2=5×265720=1,328,600."
+      "explanation": "S_n = a(r^n-1)/(r-1)=5(3^12-1)/(3-1)=5(531441-1)/2=5×531440/2=5×265720=1,328,600."
     },
     {
       "id": "uni-unilag-mth101-bank-0515",
@@ -7298,7 +7298,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Number who stock at least one = 1000 − 430 = 570. Using inclusion-exclusion: 570 = 200 + 240 + 250 − 64 − 97 − 60 + x = 690 − 221 + x = 469 + x. So x = 570 − 469 = 101."
+      "explanation": "Number who stock at least one = 1000 - 430 = 570. Using inclusion-exclusion: 570 = 200 + 240 + 250 - 64 - 97 - 60 + x = 690 - 221 + x = 469 + x. So x = 570 - 469 = 101."
     },
     {
       "id": "uni-unilag-mth101-bank-0522",
@@ -7607,7 +7607,7 @@
       },
       "marks": 1,
       "answer": "E",
-      "explanation": "2^5 = 32 ≡ 1 (mod 31). Hence, 2^(5k) = (2^5)^k ≡ 1^k ≡ 1 (mod 31). Therefore, 2^(5k) − 1 is divisible by 31 for all k."
+      "explanation": "2^5 = 32 ≡ 1 (mod 31). Hence, 2^(5k) = (2^5)^k ≡ 1^k ≡ 1 (mod 31). Therefore, 2^(5k) - 1 is divisible by 31 for all k."
     },
     {
       "id": "uni-unilag-mth101-bank-0544",
@@ -8055,7 +8055,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "300 = 120 + 150 + 110 − (40 + 35 + 30) + x = 225 + x → x = 25"
+      "explanation": "300 = 120 + 150 + 110 - (40 + 35 + 30) + x = 225 + x → x = 25"
     },
     {
       "id": "uni-unilag-mth101-bank-0576",
@@ -8181,7 +8181,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_n = a(r^n−1)/(r−1) = 5(2^10−1)/(2−1) = 5(1024−1) = 5×1023 = 5115."
+      "explanation": "S_n = a(r^n-1)/(r-1) = 5(2^10-1)/(2-1) = 5(1024-1) = 5×1023 = 5115."
     },
     {
       "id": "uni-unilag-mth101-bank-0585",
@@ -8223,7 +8223,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_∞ = a/(1−r) = 3/(1−1/3)=3/(2/3)=9/2=4.5."
+      "explanation": "S_∞ = a/(1-r) = 3/(1-1/3)=3/(2/3)=9/2=4.5."
     },
     {
       "id": "uni-unilag-mth101-bank-0588",
@@ -8631,7 +8631,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "S_n = n/2[2a + (n−1)d] = 15/2[8+14×5]=7.5[8+70]=7.5×78=585."
+      "explanation": "S_n = n/2[2a + (n-1)d] = 15/2[8+14×5]=7.5[8+70]=7.5×78=585."
     },
     {
       "id": "uni-unilag-mth101-bank-0617",
@@ -8785,7 +8785,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "n(C ∪ P) = 25 + 30 − 10 = 45."
+      "explanation": "n(C ∪ P) = 25 + 30 - 10 = 45."
     },
     {
       "id": "uni-unilag-mth101-bank-0628",
@@ -8827,7 +8827,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Football only = 20 − 10 = 10."
+      "explanation": "Football only = 20 - 10 = 10."
     },
     {
       "id": "uni-unilag-mth101-bank-0631",
@@ -8841,7 +8841,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Total who chose at least one = 20 - 4 = 16. Using formula: A + B − both = 16 → 14 + 10 − x = 16 → x = 8."
+      "explanation": "Total who chose at least one = 20 - 4 = 16. Using formula: A + B - both = 16 → 14 + 10 - x = 16 → x = 8."
     },
     {
       "id": "uni-unilag-mth101-bank-0632",
@@ -8930,7 +8930,7 @@
     {
       "id": "uni-unilag-mth101-bank-0638",
       "type": "mcq",
-      "stem": "Evaluate cot45° − tan45°",
+      "stem": "Evaluate cot45° - tan45°",
       "options": {
         "A": "0",
         "B": "1",

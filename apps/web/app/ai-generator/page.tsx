@@ -5,7 +5,7 @@
  * now wired to its real backend: POST /ai/generate runs the founder's
  * Gemini key through the study-api (same provider as the Socratic
  * tutor). Topic chips + free-text topic, Easy / Medium / Hard segmented
- * control, count stepper, and the Review Generated list — every
+ * control, count stepper, and the Review Generated list, every
  * generated question ships with its options, correct answer and worked
  * explanation. Failures are honest: the API's error lands in a banner,
  * no mock questions are invented locally.
@@ -17,6 +17,7 @@ import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { RenanceMark } from '@/components/renance-logo';
 import { api, ApiError } from '@/lib/api';
+import { aiConfigured, aiGenerateQuestions } from '@/lib/ai';
 import { QText } from '@/lib/qtext';
 
 const TOPICS = ['Microeconomics', 'Calculus I', 'World History', 'Organic Chem'] as const;
@@ -60,10 +61,33 @@ export default function AiGeneratorPage() {
       });
       setGenerated(res.questions ?? []);
       if (!res.questions?.length) {
-        setError('The AI returned no usable questions — try again or pick another topic.');
+        setError('The AI returned no usable questions, try again or pick another topic.');
       }
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'Could not reach the AI — check your connection.');
+      // The study API may not carry the provider key yet (or may be
+      // asleep on the free tier). The Gemini key baked into this static
+      // deploy keeps generation working from the browser.
+      if (aiConfigured()) {
+        try {
+          const fresh: Generated[] = [];
+          for (const topic of effectiveTopics) {
+            const qs = await aiGenerateQuestions({
+              topic,
+              count,
+              difficulty: DIFFICULTIES[difficulty],
+            });
+            fresh.push(...qs.map((q) => ({ ...q, topic, difficulty: DIFFICULTIES[difficulty] })) as Generated[]);
+          }
+          if (fresh.length) {
+            setGenerated(fresh);
+            setError(null);
+            return;
+          }
+        } catch {
+          /* fall through to the plain error note */
+        }
+      }
+      setError(err instanceof ApiError ? err.message : 'Could not reach the AI, check your connection.');
     } finally {
       setBusy(false);
     }
@@ -87,7 +111,7 @@ export default function AiGeneratorPage() {
         <PageBar title="Generate practice" />
       </div>
       <p className="mt-2 text-[15px] leading-snug text-on-surface-variant">
-        AI-powered question generation tailored to your needs — every question lands with its
+        AI-powered question generation tailored to your needs, every question lands with its
         answer and explanation.
       </p>
 
@@ -193,7 +217,7 @@ export default function AiGeneratorPage() {
 
       {generated.length === 0 && (
         <p className="mt-3 rounded-xl bg-card p-4 text-[13px] leading-relaxed text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-          Pick a topic, set the difficulty and tap Generate — your practice set appears here,
+          Pick a topic, set the difficulty and tap Generate, your practice set appears here,
           answer and explanation included.
         </p>
       )}

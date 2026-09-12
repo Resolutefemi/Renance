@@ -141,7 +141,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {/* Theme-adaptive favicon: flips white on dark browsers, ink on
             light (the .ico/.png fallbacks Next auto-links are static).
             Served from /public so Next ships it verbatim with the media
-            query intact — app/icon.svg would get rasterised to a PNG. */}
+            query intact, app/icon.svg would get rasterised to a PNG. */}
         <link
           rel="icon"
           type="image/svg+xml"

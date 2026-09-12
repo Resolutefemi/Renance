@@ -117,7 +117,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "The goal state is defined as the final stage — where you want to be or the solution/expected state."
+      "explanation": "The goal state is defined as the final stage - where you want to be or the solution/expected state."
     },
     {
       "id": "uni-futa-cos102-0009",
@@ -173,7 +173,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "A well-formed problem statement includes current state, goal state, context/constraints, and stakeholders — not a specific programming language."
+      "explanation": "A well-formed problem statement includes current state, goal state, context/constraints, and stakeholders - not a specific programming language."
     },
     {
       "id": "uni-futa-cos102-0013",
@@ -271,7 +271,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Computer science is frequently misunderstood as just programming; its heart is computational thinking — a pproaching problems using concepts fundamental to computing."
+      "explanation": "Computer science is frequently misunderstood as just programming; its heart is computational thinking - a pproaching problems using concepts fundamental to computing."
     },
     {
       "id": "uni-futa-cos102-0020",
@@ -285,7 +285,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The list covers formulating problems, organising data, a bstraction, a utomation, a nalysis/implementation, and generalisation — not career guarantees."
+      "explanation": "The list covers formulating problems, organising data, a bstraction, a utomation, a nalysis/implementation, and generalisation - not career guarantees."
     },
     {
       "id": "uni-futa-cos102-0021",
@@ -355,7 +355,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Devise a Plan is the 'how' step, where a strategy is chosen — e.g., selecting the correct algorithm or breaking a problem into subproblems."
+      "explanation": "Devise a Plan is the 'how' step, where a strategy is chosen - e.g., selecting the correct algorithm or breaking a problem into subproblems."
     },
     {
       "id": "uni-futa-cos102-0026",
@@ -1013,7 +1013,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Week 2'ssummary distinguishes solvability (existence of an algorithm) from tractability (whether it can run within reasonable time/memory) — a problem can be solvable but intractable."
+      "explanation": "Week 2'ssummary distinguishes solvability (existence of an algorithm) from tractability (whether it can run within reasonable time/memory) - a problem can be solvable but intractable."
     },
     {
       "id": "uni-futa-cos102-0073",
@@ -1069,7 +1069,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "A bstrahere means 'todraw away' — drawing away incidental noise to reveal underlying structure."
+      "explanation": "A bstrahere means 'todraw away' - drawing away incidental noise to reveal underlying structure."
     },
     {
       "id": "uni-futa-cos102-0077",
@@ -1265,7 +1265,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "The danger of a nalogy is false a nalogy — superficial similarities can seduce a solver into a pplying an inappropriate solution, as with the Ptolemaic epicycle model."
+      "explanation": "The danger of a nalogy is false a nalogy - superficial similarities can seduce a solver into a pplying an inappropriate solution, as with the Ptolemaic epicycle model."
     },
     {
       "id": "uni-futa-cos102-0091",
@@ -1293,7 +1293,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Osborn's principles are quantity, withholding criticism, welcoming wild ideas, and combining/improvingideas — not immediate evaluation, which is reserved for a later stage."
+      "explanation": "Osborn's principles are quantity, withholding criticism, welcoming wild ideas, and combining/improvingideas - not immediate evaluation, which is reserved for a later stage."
     },
     {
       "id": "uni-futa-cos102-0093",
@@ -1363,7 +1363,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Trial and error consists of successive a ttempts, observing outcomes, and using feedback to a djust — the most fundamental empirical method."
+      "explanation": "Trial and error consists of successive a ttempts, observing outcomes, and using feedback to a djust - the most fundamental empirical method."
     },
     {
       "id": "uni-futa-cos102-0098",
@@ -1419,7 +1419,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Genetic a lgorithms use populations, fitness evaluation, selection, crossover, and mutation — a massively parallel, a utomatically-informed form of trial and error."
+      "explanation": "Genetic a lgorithms use populations, fitness evaluation, selection, crossover, and mutation - a massively parallel, a utomatically-informed form of trial and error."
     },
     {
       "id": "uni-futa-cos102-0102",
@@ -1433,7 +1433,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "A lphaGo learned a policy through reinforcement learning — trying moves and learning from wins and losses, an instance of trial and error."
+      "explanation": "A lphaGo learned a policy through reinforcement learning - trying moves and learning from wins and losses, an instance of trial and error."
     },
     {
       "id": "uni-futa-cos102-0103",
@@ -1559,7 +1559,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Reduction is a more formal, precise cousin of a nalogy — it aims for an exact mapping, whereas a nalogy transfers insight more loosely."
+      "explanation": "Reduction is a more formal, precise cousin of a nalogy - it aims for an exact mapping, whereas a nalogy transfers insight more loosely."
     },
     {
       "id": "uni-futa-cos102-0112",
@@ -1664,14 +1664,14 @@
       "type": "mcq",
       "stem": "Which of the following correctly matches a solution technique to its 'Type' as listed at the end of Week 3/4 integration discussion?",
       "options": {
-        "A": "Trial and Error — Structural",
-        "B": "Brainstorming — a nalytical",
-        "C": "A nalogy — a ssociative",
-        "D": "A bstraction — Empirical"
+        "A": "Trial and Error - Structural",
+        "B": "Brainstorming - a nalytical",
+        "C": "A nalogy - a ssociative",
+        "D": "A bstraction - Empirical"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "A ssociative — The technique summary table classifies a nalogy as a ssociative, transferring known solutions to new problems."
+      "explanation": "A ssociative - The technique summary table classifies a nalogy as a ssociative, transferring known solutions to new problems."
     },
     {
       "id": "uni-futa-cos102-0120",
@@ -1951,7 +1951,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Means-end a nalysis can struggle when solving a problem requires temporarily increasing a difference before ultimately reducing it — the non-monotonic limitation."
+      "explanation": "Means-end a nalysis can struggle when solving a problem requires temporarily increasing a difference before ultimately reducing it - the non-monotonic limitation."
     },
     {
       "id": "uni-futa-cos102-0140",
@@ -2077,7 +2077,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Morphological a nalysis suffers from combinatorial explosion — a box with 8 parameters of 5 values each yields nearly 400,000 combinations."
+      "explanation": "Morphological a nalysis suffers from combinatorial explosion - a box with 8 parameters of 5 values each yields nearly 400,000 combinations."
     },
     {
       "id": "uni-futa-cos102-0149",
@@ -2147,7 +2147,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "After five 'whys', the root cause is identified as a process failure — no performance testing in CI and no training — not just the memory symptom."
+      "explanation": "After five 'whys', the root cause is identified as a process failure - no performance testing in CI and no training - not just the memory symptom."
     },
     {
       "id": "uni-futa-cos102-0154",
@@ -2460,7 +2460,7 @@
     {
       "id": "uni-futa-cos102-0176",
       "type": "mcq",
-      "stem": "Which of the following pairs an example correctly with 'a nalysis' method, perTable 2.3-stylereasoning extended in Week 4'sproof discussion — specifically, what tool is used to rigorously a nalyse an algorithm's efficiency?",
+      "stem": "Which of the following pairs an example correctly with 'a nalysis' method, perTable 2.3-stylereasoning extended in Week 4'sproof discussion - specifically, what tool is used to rigorously a nalyse an algorithm's efficiency?",
       "options": {
         "A": "A fishbone diagram",
         "B": "A focal object list",
@@ -3277,11 +3277,11 @@
         "A": "The a ction is cancelled",
         "B": "The rule is invalid",
         "C": "The condition is a lways false",
-        "D": "The condition is a 'don' t care' — it does not matter for that rule"
+        "D": "The condition is a 'don' t care' - it does not matter for that rule"
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "It does not matter for that rule — A dash represents 'don' t care', meaning that particular condition's value is irrelevant to determining the a ction for that rule."
+      "explanation": "It does not matter for that rule - A dash represents 'don' t care', meaning that particular condition's value is irrelevant to determining the a ction for that rule."
     },
     {
       "id": "uni-futa-cos102-0235",
@@ -3407,7 +3407,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "The Week 6 summary notes it is common to combine tools — flowchart for high level, pseudocode for detail, decision tables for intricate rule sets."
+      "explanation": "The Week 6 summary notes it is common to combine tools - flowchart for high level, pseudocode for detail, decision tables for intricate rule sets."
     },
     {
       "id": "uni-futa-cos102-0244",
@@ -3505,7 +3505,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The listed strong features include a utomatic garbage collection, standard library, properties/events, delegates, generics, and simple multithreading — not manual pointer a rithmetic."
+      "explanation": "The listed strong features include a utomatic garbage collection, standard library, properties/events, delegates, generics, and simple multithreading - not manual pointer a rithmetic."
     },
     {
       "id": "uni-futa-cos102-0251",
@@ -3519,7 +3519,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "The.NET framework is described as enabling Windows a pplications, web a pplications, and web services — not operating system kernel development."
+      "explanation": "The.NET framework is described as enabling Windows a pplications, web a pplications, and web services - not operating system kernel development."
     },
     {
       "id": "uni-futa-cos102-0252",
@@ -3603,7 +3603,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Listed procedure types include Function, Sub, Operator, Get, Set, a ddHandler, RemoveHandler, and RaiseEvent — 'Compiler' is not a procedure type."
+      "explanation": "Listed procedure types include Function, Sub, Operator, Get, Set, a ddHandler, RemoveHandler, and RaiseEvent - 'Compiler' is not a procedure type."
     },
     {
       "id": "uni-futa-cos102-0258",
@@ -5549,7 +5549,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Show is a method of the MessageBox control that causes it to display a message box — an a ction the object performs."
+      "explanation": "Show is a method of the MessageBox control that causes it to display a message box - an a ction the object performs."
     },
     {
       "id": "uni-futa-cos102-0397",
@@ -5773,7 +5773,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "The listed methods include literal a ssignment, constructors, concatenation, methods returning strings, and formatting methods — not direct casting of an Integer without conversion."
+      "explanation": "The listed methods include literal a ssignment, constructors, concatenation, methods returning strings, and formatting methods - not direct casting of an Integer without conversion."
     },
     {
       "id": "uni-futa-cos102-0413",
@@ -6403,7 +6403,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Since num 1 (50) is not greater than num 2 (50), the Else branch executes, setting result to num 2, which is also 50 — so 50 is returned correctly."
+      "explanation": "Since num 1 (50) is not greater than num 2 (50), the Else branch executes, setting result to num 2, which is also 50 - so 50 is returned correctly."
     },
     {
       "id": "uni-futa-cos102-0458",
@@ -6425,13 +6425,13 @@
       "stem": "Based on the course's overall coverage, which best distinguishes a 'ComboBox' from a 'ListBox'?",
       "options": {
         "A": "A ComboBox is only used for dates",
-        "B": "Both are described only as controls to display alist of items and a combo box control respectively — a ComboBox typically combines a text entry with a dropdown list, while a ListBox simply displays alist of items",
+        "B": "Both are described only as controls to display alist of items and a combo box control respectively - a ComboBox typically combines a text entry with a dropdown list, while a ListBox simply displays alist of items",
         "C": "A ListBox cannot display more than one item",
         "D": "They are identical controls with different names"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "A ComboBox typically combines a text entry with a dropdown list, while a ListBox simply displays alist of items — Per the Basic Controls table, ListBox represents a control to display alist of items, while ComboBox represents a Windows combo box control (which combines a text box with a dropdown list)."
+      "explanation": "A ComboBox typically combines a text entry with a dropdown list, while a ListBox simply displays alist of items - Per the Basic Controls table, ListBox represents a control to display alist of items, while ComboBox represents a Windows combo box control (which combines a text box with a dropdown list)."
     },
     {
       "id": "uni-futa-cos102-0460",
@@ -6641,7 +6641,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Public grants the broadest a ccess — all types that can a ccess the enclosing type may a ccess the member."
+      "explanation": "Public grants the broadest a ccess - all types that can a ccess the enclosing type may a ccess the member."
     },
     {
       "id": "uni-futa-cos102-0475",
@@ -6828,7 +6828,7 @@
     {
       "id": "uni-futa-cos102-0488",
       "type": "mcq",
-      "stem": "Considering the mathematics example in Table 1.1 (solving x ² – 5 x + 6 = 0), what is the obstacle/challenge identified?",
+      "stem": "Considering the mathematics example in Table 1.1 (solving x ² - 5 x + 6 = 0), what is the obstacle/challenge identified?",
       "options": {
         "A": "There is no goal state defined",
         "B": "The equation is undecidable",
@@ -7005,7 +7005,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Rule 5 represents Score < 70 (N) and < 50 (N), i.e., below 50 overall, resulting in grade F regardless of the a ssignments condition (marked '—')."
+      "explanation": "Rule 5 represents Score < 70 (N) and < 50 (N), i.e., below 50 overall, resulting in grade F regardless of the a ssignments condition (marked '-')."
     }
   ]
 }

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Bundle store — IndexedDB-backed cache for exam bundles (question banks
+ * Bundle store, IndexedDB-backed cache for exam bundles (question banks
  * and composed papers), replacing the localStorage cache that blew past
  * the ~5MB origin quota ("Failed to execute 'setItem' … exceeded the
  * quota" on jamb-english-bank, a multi-megabyte JSON).
@@ -118,7 +118,7 @@ export async function idbDeleteBundle(key: string): Promise<void> {
 /**
  * One-time migration: every bundle the old localStorage cache managed
  * to store moves into IndexedDB and the localStorage key is deleted.
- * This is what un-bricks devices already stuck over quota — the stuck
+ * This is what un-bricks devices already stuck over quota, the stuck
  * keys are exactly the ones blocking all other writes. Safe to call
  * repeatedly; cheap when there is nothing left to move.
  */

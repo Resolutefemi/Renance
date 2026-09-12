@@ -160,7 +160,7 @@ export default function DashboardPage() {
         api<{ attempts: AttemptRow[] }>('/me/attempts')
           .then((a) => alive && setAttempts(a.attempts))
           .catch(() => {});
-        // The daily challenge follows the student's exam body — a WAEC
+        // The daily challenge follows the student's exam body, a WAEC
         // candidate sprints on WAEC banks, a university student on their
         // courses, exactly like the rest of the desk.
         const body = focusBodyOf(meRes.profile?.exams);
@@ -183,7 +183,7 @@ export default function DashboardPage() {
   }, [router]);
 
   /** Silent background asset sync: server job + client prefetch, in
-      parallel. No banner — the desk is ready long before it is asked for.
+      parallel. No banner, the desk is ready long before it is asked for.
       The prefetch now lands in IndexedDB (localStorage blew the ~5MB
       origin quota on the big banks), and the first pass also migrates
       any old localStorage bundles across, un-sticking quota-struck
@@ -224,7 +224,7 @@ export default function DashboardPage() {
   const isUniversity = (me?.profile?.exams?.[0] ?? '').includes('University');
   const isWaec = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('WAEC');
   const isNeco = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('NECO');
-  // Every exam body gets a real customise desk now — JAMB's Mock Setup,
+  // Every exam body gets a real customise desk now, JAMB's Mock Setup,
   // the same subject/year/count/timer mode over WAEC/NECO banks, and
   // the university desk's per-school course grid.
   const setupHref = isJamb
@@ -279,7 +279,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       {needsProfile && (
         <ProfileModal
           username={me.user.username}
@@ -435,7 +435,7 @@ export default function DashboardPage() {
           <section className="mt-4 lg:mt-0">
             <h3 className="text-sm text-on-surface-variant">Learn</h3>
             <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-              <LauncherTile icon="auto_stories" label="Lessons" href="/lessons" />
+              <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
               <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
               <LauncherTile icon="trending_up" label="Progress" href="/progress" />
               <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
@@ -480,7 +480,7 @@ export default function DashboardPage() {
               <p className="truncate text-[15px] font-semibold text-on-surface">{recent.code}</p>
               <p className="truncate text-[13px] text-on-surface-variant">
                 {recent.status === 'in_progress'
-                  ? 'Paused paper — your seat is saved, continue anytime'
+                  ? 'Paused paper, your seat is saved, continue anytime'
                   : recentPct != null
                     ? `Score: ${recentPct}% · ${recentPct >= 75 ? 'Strong work' : recentPct >= 50 ? 'Keep pushing' : 'Focus needed'}`
                     : recent.status}
@@ -493,7 +493,7 @@ export default function DashboardPage() {
         {/* Question Pack lives on /packs; the old home pack cards are gone. */}
       </div>
 
-      {/* More sheet: only the less-used tools live here now — everything a
+      {/* More sheet: only the less-used tools live here now, everything a
           student touches daily sits on the home grid (more_features_sheet_light). */}
       {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
 
@@ -507,7 +507,7 @@ export default function DashboardPage() {
 
 /* ----------------------------------------------------------------- */
 /* University home (university_home_dashboard): tertiary students get  */
-/* a course-based desk with its OWN icon set — Courses where the       */
+/* a course-based desk with its OWN icon set, Courses where the       */
 /* JAMBite desk says Subjects/Exams, CGPA, Lecture Notes… The desk is  */
 /* school-aware: content is wrapped per school, interface is one.      */
 /* ----------------------------------------------------------------- */
@@ -599,7 +599,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         </section>
       )}
 
-      {/* University Study / Grow grids — the university desk's OWN icons */}
+      {/* University Study / Grow grids, the university desk's OWN icons */}
       <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <section className="mt-2">
           <h3 className="text-sm text-on-surface-variant">Study</h3>
@@ -607,7 +607,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
             <LauncherTile icon="assignment" label="Courses" href={`/university/${slug}`} />
             <LauncherTile icon="fact_check" label="Quizzes" href={`/university/${slug}`} />
             <LauncherTile icon="rate_review" label="Review" href="/review" />
-            <LauncherTile icon="import_contacts" label="Notes" href="/lessons" />
+            <LauncherTile icon="import_contacts" label="Notes" href="/notes" />
           </div>
         </section>
         <section className="mt-4 lg:mt-2">
@@ -667,7 +667,7 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
       >
         <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-outline-variant sm:hidden" />
         <h3 className="mb-1 text-lg font-semibold text-on-surface">More</h3>
-        <p className="mb-3 text-xs text-on-surface-variant">Less-used tools — your daily drivers are on the home grid.</p>
+        <p className="mb-3 text-xs text-on-surface-variant">Less-used tools, your daily drivers are on the home grid.</p>
         <div className="grid grid-cols-2 gap-2">
           {items.map((it) => (
             <Link

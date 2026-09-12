@@ -1,11 +1,11 @@
 'use client';
 
 /**
- * Arena live match — now wired to the REAL multiplayer hub
+ * Arena live match, now wired to the REAL multiplayer hub
  * (apps/study-api/internal/arena) over one authenticated WebSocket:
  * queue with the student's exam body → matched (or the hub's bot after
  * the wait window) → server-pushed questions with answer deadlines →
- * result/over frames with the live score. QViews carry no answer key —
+ * result/over frames with the live score. QViews carry no answer key,
  * the correct letter only ever arrives in the result frame.
  *
  * The Stitch look stays: dark LIVE card, ink chips for you, gray for
@@ -165,7 +165,7 @@ export default function ArenaMatchPage() {
       case 'error':
         // already_queued etc. are benign during re-queue; surface the rest.
         if (frame.errorCode === 'no_pack_available') {
-          setErrorMsg('No live pack for your exam body yet — try another focus.');
+          setErrorMsg('No live pack for your exam body yet, try another focus.');
           setPhase('down');
         } else if (frame.errorCode !== 'already_queued' && frame.errorCode !== 'in_match') {
           setErrorMsg(frame.message || 'The arena refused that move.');
@@ -201,7 +201,7 @@ export default function ArenaMatchPage() {
   }, [q, tick, secondsPerQuestion]);
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <div className="mx-auto w-full max-w-2xl px-4 pt-4 sm:px-6">
         <button
           type="button"
@@ -229,7 +229,7 @@ export default function ArenaMatchPage() {
             <span className="material-symbols-outlined text-[34px] text-error">wifi_off</span>
             <h2 className="mt-2 text-lg font-semibold text-on-surface">Arena unreachable</h2>
             <p className="mt-1 text-[14px] text-on-surface-variant">
-              {errorMsg ?? 'The live arena socket dropped — check your connection.'}
+              {errorMsg ?? 'The live arena socket dropped, check your connection.'}
             </p>
             <button
               type="button"
@@ -254,7 +254,7 @@ export default function ArenaMatchPage() {
           <RenanceMark size={44} state="busy" />
           <p className="text-[15px] font-semibold text-on-surface">Finding a {body} opponent…</p>
           <p className="max-w-xs text-center text-[13px] text-on-surface-variant">
-            You will be matched with a live student on your exam shelf — or the Renance Bot keeps
+            You will be matched with a live student on your exam shelf, or the Renance Bot keeps
             the queue moving.
           </p>
           <button
@@ -361,8 +361,8 @@ export default function ArenaMatchPage() {
             <div className="rounded-xl bg-surface-container-high px-4 py-3 text-center text-[13px] font-medium text-on-surface-variant">
               {phase === 'over'
                 ? winner == null
-                  ? 'Draw — well played on both sides.'
-                  : 'Match decided — see the scoreline.'
+                  ? 'Draw, well played on both sides.'
+                  : 'Match decided, see the scoreline.'
                 : picked
                   ? `Answer locked in (${answeredIn}s). Next question is loading…`
                   : 'Answer locks in when the clock hits zero.'}
