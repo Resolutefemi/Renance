@@ -156,10 +156,10 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   useEffect(() => {
     if (phase !== 'graded') return;
-    api<{ state: { currentStreak: number; totalXp: number } }>('/me/gamification')
+    api<{ state: { currentStreak: number; totalXp: number } }>('/me/gamification', { noRedirect: true })
       .then(setGam)
       .catch(() => {});
-    api<{ attempts: AttemptSummary[] }>('/me/attempts')
+    api<{ attempts: AttemptSummary[] }>('/me/attempts', { noRedirect: true })
       .then((a) => setAllAttempts(a.attempts))
       .catch(() => {});
   }, [phase]);
@@ -310,6 +310,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     if (!localAttempt) {
       void api('/me/sessions', {
         method: 'POST',
+        noRedirect: true, // telemetry must never bounce the paper
         body: {
           attemptId: attempt.attemptId,
           code: attempt.code,
@@ -341,6 +342,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       await api<{ attemptId: string; status: string }>(`/attempts/${attempt.attemptId}/submit`, {
         method: 'POST',
         body: payload,
+        noRedirect: true, // a stale session grades on-device, never bounces
       });
       // Submitted: the pause snapshot has served its purpose.
       clearActiveExam();
@@ -434,6 +436,10 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             ...(daily ? { daily: true } : {}),
             ...(wantsAdaptive ? { adaptive: true } : {}),
           },
+          // A 401 (signed-out / stale session) must fall through to the
+          // on-device attempt below, never hard-bounce the candidate to
+          // /login from inside their own paper.
+          noRedirect: true,
         });
       } catch (serverErr) {
         // Server unreachable or the student is signed out (GitHub Pages
