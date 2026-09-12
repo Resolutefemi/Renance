@@ -16,6 +16,7 @@ import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 import { buildPickCode, examHref, fetchManifest, type Manifest } from '@/lib/exams';
 
 const TIMERS: Array<{ label: string; minutes: number | null }> = [
@@ -79,7 +80,7 @@ function PracticeSettingsInner() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
       <PageBar title="Practice Settings" />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col px-4 sm:px-6">
@@ -233,6 +234,7 @@ function PracticeSettingsInner() {
         </div>
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );
@@ -243,7 +245,7 @@ export default function PracticeSettingsPage() {
   return (
     <Suspense
       fallback={
-        <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+        <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
           <PageBar title="Practice Settings" />
         </main>
       }

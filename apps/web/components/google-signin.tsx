@@ -31,11 +31,16 @@ const GIS_SRC = 'https://accounts.google.com/gsi/client';
 const SCRIPT_ID = 'renance-gsi';
 
 export function GoogleSignIn({ onCredential }: { onCredential: (credential: string) => void }) {
-  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+  // Trim + validate: repo Variables often pick up stray quotes/whitespace, and
+  // pasting the ANDROID client ID here produces "Error 401: invalid_client".
+  // A web client ID looks like <number>-<hash>.apps.googleusercontent.com.
+  const rawId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
+  const clientId = rawId?.trim().replace(/^["']|["']$/g, '');
+  const malformed = !!clientId && !/^\d{4,}-[A-Za-z0-9_-]+\.apps\.googleusercontent\.com$/.test(clientId);
   const holder = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!clientId || !holder.current) return;
+    if (!clientId || malformed || !holder.current) return;
     let cancelled = false;
 
     const render = () => {
@@ -81,6 +86,15 @@ export function GoogleSignIn({ onCredential }: { onCredential: (credential: stri
   if (!clientId) return null;
   return (
     <>
+      {malformed && (
+        <p className="mx-auto max-w-sm rounded-xl border border-error/30 bg-error-container/40 p-3 text-center text-[12px] leading-5 text-on-surface">
+          Google sign-in is misconfigured: <code className="font-mono">NEXT_PUBLIC_GOOGLE_CLIENT_ID</code>{' '}
+          doesn&apos;t look like a web OAuth client ID (expected{' '}
+          <code className="font-mono">&lt;number&gt;-&lt;hash&gt;.apps.googleusercontent.com</code>, got{' '}
+          <span className="font-mono">&quot;{clientId}&quot;</span>). Using the Android client ID on web
+          triggers <b>Error 401: invalid_client</b>.
+        </p>
+      )}
       <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-on-surface-variant">
         <span className="h-px flex-1 bg-outline-variant" />
         or

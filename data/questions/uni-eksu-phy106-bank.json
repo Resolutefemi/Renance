@@ -1,0 +1,852 @@
+{
+  "code": "uni-eksu-phy106-bank",
+  "title": "EKSU Phy106 - Vibration, Waves & Optics | Practice Bank",
+  "version": 1,
+  "questionCount": 70,
+  "totalMarks": 70,
+  "questions": [
+    {
+      "id": "uni-eksu-phy106-bank-0001",
+      "type": "mcq",
+      "stem": "What does the wave phase velocity represent?",
+      "options": {
+        "A": "The speed of the particles in the medium",
+        "B": "The speed at which the phase of the wave propagates in space",
+        "C": "The speed of the source of the wave",
+        "D": "The rate of change of the amplitude"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0002",
+      "type": "mcq",
+      "stem": "A mass on a horizontal spring is 0.80 kg and the spring constant is 180 N/m. What is the angular frequency?",
+      "options": {
+        "A": "10 rad/s",
+        "B": "12 rad/s",
+        "C": "15 rad/s",
+        "D": "225 rad/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following equations correctly represents a one-dimensional wave equation?",
+      "options": {
+        "A": "∂²y/∂x² = (1/v²)(∂²y/∂t²)",
+        "B": "∂y/∂x = (1/v)(∂y/∂t)",
+        "C": "∂²y/∂x² = v²(∂²y/∂t²)",
+        "D": "∂y/∂t = (1/v²)(∂²y/∂x²)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0004",
+      "type": "mcq",
+      "stem": "For the wave y(x,t) = 10^-3 sin(3x10^6 x - 9x10^2 t), what is the speed of the wave?",
+      "options": {
+        "A": "3 x 10^3 m/s",
+        "B": "3 x 10^-4 m/s",
+        "C": "3 x 10^4 m/s",
+        "D": "2.7 x 10^9 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0005",
+      "type": "mcq",
+      "stem": "What is the primary phenomenon that occurs when two waves are superposed?",
+      "options": {
+        "A": "Diffraction",
+        "B": "Refraction",
+        "C": "Interference",
+        "D": "Dispersion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0006",
+      "type": "mcq",
+      "stem": "Ultrasonic waves are sound waves that have a frequency:",
+      "options": {
+        "A": "Below 20 Hz",
+        "B": "Between 20 Hz and 20 kHz",
+        "C": "Above 20 kHz",
+        "D": "Equal to the speed of light"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0007",
+      "type": "mcq",
+      "stem": "A string has a linear density of 1.70 g/m and a length of 0.70 m. If the fundamental frequency is 220 Hz, what is the wave speed?",
+      "options": {
+        "A": "154 m/s",
+        "B": "220 m/s",
+        "C": "308 m/s",
+        "D": "616 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0008",
+      "type": "mcq",
+      "stem": "Based on a linear density of 1.70 g/m and a wave speed of 308 m/s, what is the tension in the string?",
+      "options": {
+        "A": "161.3 N",
+        "B": "26.3 N",
+        "C": "52.3 N",
+        "D": "322.6 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0009",
+      "type": "mcq",
+      "stem": "What experiment clearly demonstrates the wave nature of light through interference?",
+      "options": {
+        "A": "Millikan's Oil Drop Experiment",
+        "B": "Rutherford's Gold Foil Experiment",
+        "C": "Young's Double Slit Experiment",
+        "D": "Compton Scattering Experiment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0010",
+      "type": "mcq",
+      "stem": "Huygens' Principle states that:",
+      "options": {
+        "A": "Light travels in straight lines only",
+        "B": "Every point on a wavefront acts as a source of secondary spherical wavelets",
+        "C": "Waves cannot pass through a vacuum",
+        "D": "The angle of incidence equals the angle of reflection"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0011",
+      "type": "mcq",
+      "stem": "The apparent change in frequency of a wave due to the relative motion between the source and the observer is known as:",
+      "options": {
+        "A": "Huygens' Principle",
+        "B": "The Doppler Effect",
+        "C": "Diffraction",
+        "D": "Superposition"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0012",
+      "type": "mcq",
+      "stem": "A truck travelling at 96 km/hr (26.67 m/s) approaches a stationary observer. The horn emits a 400 Hz frequency. Taking the speed of sound as 346 m/s, what is the approximate frequency heard by the observer?",
+      "options": {
+        "A": "371 Hz",
+        "B": "400 Hz",
+        "C": "433 Hz",
+        "D": "480 Hz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0013",
+      "type": "mcq",
+      "stem": "After the truck (speed 26.67 m/s) passes the observer, what is the approximate frequency heard? (Horn frequency 400 Hz, sound speed 346 m/s)",
+      "options": {
+        "A": "371 Hz",
+        "B": "400 Hz",
+        "C": "433 Hz",
+        "D": "350 Hz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0014",
+      "type": "mcq",
+      "stem": "What is a diffraction grating?",
+      "options": {
+        "A": "A lens used to focus light",
+        "B": "An optical component with a periodic structure that splits and diffracts light into several beams",
+        "C": "A device used to measure the speed of sound",
+        "D": "A mirror that reflects all wavelengths equally"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0015",
+      "type": "mcq",
+      "stem": "Which of the following is an advantage of a diffraction grating over a double slit?",
+      "options": {
+        "A": "It produces broader, less distinct fringes",
+        "B": "It produces sharper, brighter, and more widely separated principal maxima",
+        "C": "It is easier to manufacture",
+        "D": "It prevents all light interference"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0016",
+      "type": "mcq",
+      "stem": "What is the main usefulness of Fresnel lenses?",
+      "options": {
+        "A": "They completely eliminate chromatic aberration",
+        "B": "They are much thicker than standard lenses",
+        "C": "They provide a large aperture and short focal length with significantly less mass and volume",
+        "D": "They only transmit ultraviolet light"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0017",
+      "type": "mcq",
+      "stem": "In Young's double slit experiment, if the separation between the 1st and 5th bright fringes is 2.5 mm, what is the fringe spacing (y)?",
+      "options": {
+        "A": "0.5 mm",
+        "B": "0.625 mm",
+        "C": "2.5 mm",
+        "D": "10 mm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0018",
+      "type": "mcq",
+      "stem": "In a double slit experiment, fringe spacing y = 0.625 mm, wavelength = 6.2 x 10^-7 m, and distance to screen L = 0.8 m. What is the slit separation (d)? (Using y = λL/d)",
+      "options": {
+        "A": "0.49 mm",
+        "B": "0.79 mm",
+        "C": "1.25 mm",
+        "D": "7.9 mm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0019",
+      "type": "mcq",
+      "stem": "In Simple Harmonic Motion (SHM), the restoring force is directly proportional to:",
+      "options": {
+        "A": "Velocity",
+        "B": "Acceleration",
+        "C": "Displacement",
+        "D": "Mass"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0020",
+      "type": "mcq",
+      "stem": "At which point in its path does a simple pendulum have maximum kinetic energy?",
+      "options": {
+        "A": "At the maximum displacement",
+        "B": "At the equilibrium position",
+        "C": "Halfway between equilibrium and maximum displacement",
+        "D": "Kinetic energy is constant throughout"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0021",
+      "type": "mcq",
+      "stem": "The time required for one complete cycle of a vibrating object is called its:",
+      "options": {
+        "A": "Frequency",
+        "B": "Amplitude",
+        "C": "Period",
+        "D": "Wavelength"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0022",
+      "type": "mcq",
+      "stem": "For a mass-spring system, if the mass is quadrupled, how does the period change?",
+      "options": {
+        "A": "It is halved",
+        "B": "It remains the same",
+        "C": "It is doubled",
+        "D": "It is quadrupled"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0023",
+      "type": "mcq",
+      "stem": "The total energy of a system in simple harmonic motion is proportional to:",
+      "options": {
+        "A": "The amplitude",
+        "B": "The square of the amplitude",
+        "C": "The frequency",
+        "D": "The square root of the amplitude"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0024",
+      "type": "mcq",
+      "stem": "In a transverse wave, the particles of the medium vibrate:",
+      "options": {
+        "A": "Parallel to the direction of wave propagation",
+        "B": "Perpendicular to the direction of wave propagation",
+        "C": "In circular paths",
+        "D": "They do not vibrate at all"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0025",
+      "type": "mcq",
+      "stem": "Sound waves in air are an example of:",
+      "options": {
+        "A": "Transverse waves",
+        "B": "Electromagnetic waves",
+        "C": "Longitudinal waves",
+        "D": "Matter waves"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0026",
+      "type": "mcq",
+      "stem": "The distance between two consecutive crests of a wave is called its:",
+      "options": {
+        "A": "Amplitude",
+        "B": "Frequency",
+        "C": "Wavelength",
+        "D": "Phase"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0027",
+      "type": "mcq",
+      "stem": "What property of a wave is determined by the source and remains unchanged when the wave enters a new medium?",
+      "options": {
+        "A": "Velocity",
+        "B": "Wavelength",
+        "C": "Frequency",
+        "D": "Amplitude"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0028",
+      "type": "mcq",
+      "stem": "Constructive interference occurs when two waves meet and:",
+      "options": {
+        "A": "They are completely out of phase",
+        "B": "Their path difference is an odd multiple of half a wavelength",
+        "C": "They are in phase",
+        "D": "They have different frequencies"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0029",
+      "type": "mcq",
+      "stem": "The phenomenon of beats is produced by two sound waves that have:",
+      "options": {
+        "A": "Different amplitudes",
+        "B": "Slightly different frequencies",
+        "C": "Different speeds",
+        "D": "Perpendicular polarizations"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0030",
+      "type": "mcq",
+      "stem": "When a wave reflects from a fixed (hard) boundary, it undergoes a phase change of:",
+      "options": {
+        "A": "0 radians",
+        "B": "π/2 radians",
+        "C": "π radians",
+        "D": "2π radians"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0031",
+      "type": "mcq",
+      "stem": "A stationary (standing) wave is formed by:",
+      "options": {
+        "A": "Two waves of different frequencies traveling in the same direction",
+        "B": "Two identical waves traveling in opposite directions",
+        "C": "A single wave reflecting at varying angles",
+        "D": "Two waves of different amplitudes traveling in opposite directions"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0032",
+      "type": "mcq",
+      "stem": "The points in a standing wave where the amplitude is always zero are called:",
+      "options": {
+        "A": "Antinodes",
+        "B": "Crests",
+        "C": "Troughs",
+        "D": "Nodes"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0033",
+      "type": "mcq",
+      "stem": "For a stretched string of length L fixed at both ends, the wavelength of the fundamental harmonic is:",
+      "options": {
+        "A": "L/2",
+        "B": "L",
+        "C": "2L",
+        "D": "4L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0034",
+      "type": "mcq",
+      "stem": "In an open pipe (open at both ends), the fundamental frequency produces how many nodes?",
+      "options": {
+        "A": "Zero",
+        "B": "One",
+        "C": "Two",
+        "D": "Three"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0035",
+      "type": "mcq",
+      "stem": "In a pipe closed at one end, which harmonics are present?",
+      "options": {
+        "A": "All integer harmonics",
+        "B": "Only odd harmonics",
+        "C": "Only even harmonics",
+        "D": "No harmonics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0036",
+      "type": "mcq",
+      "stem": "If the tension in a stretched string is increased by a factor of 4, the wave speed will:",
+      "options": {
+        "A": "Decrease by half",
+        "B": "Remain the same",
+        "C": "Double",
+        "D": "Quadruple"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0037",
+      "type": "mcq",
+      "stem": "The intensity of a sound wave is directly proportional to the square of its:",
+      "options": {
+        "A": "Velocity",
+        "B": "Wavelength",
+        "C": "Amplitude",
+        "D": "Period"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0038",
+      "type": "mcq",
+      "stem": "The speed of sound is generally greatest in:",
+      "options": {
+        "A": "Gases",
+        "B": "Liquids",
+        "C": "Solids",
+        "D": "Vacuums"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following does NOT affect the speed of sound in air?",
+      "options": {
+        "A": "Temperature",
+        "B": "Humidity",
+        "C": "Pressure of the air",
+        "D": "Molecular mass of the gas"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0040",
+      "type": "mcq",
+      "stem": "When light passes from air into water, it bends towards the normal. This is because:",
+      "options": {
+        "A": "The speed of light increases in water",
+        "B": "The speed of light decreases in water",
+        "C": "The frequency of light changes",
+        "D": "The energy of the photons decreases"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0041",
+      "type": "mcq",
+      "stem": "The ratio of the speed of light in a vacuum to the speed of light in a medium is the:",
+      "options": {
+        "A": "Critical angle",
+        "B": "Index of refraction",
+        "C": "Wavelength ratio",
+        "D": "Optical density"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0042",
+      "type": "mcq",
+      "stem": "Total internal reflection can only occur when light travels from:",
+      "options": {
+        "A": "A less dense to a more dense medium",
+        "B": "A more dense to a less dense medium",
+        "C": "One medium to another with the exact same refractive index",
+        "D": "A vacuum into any physical medium"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0043",
+      "type": "mcq",
+      "stem": "The spreading out of light as it passes through a narrow opening or around an obstacle is called:",
+      "options": {
+        "A": "Dispersion",
+        "B": "Refraction",
+        "C": "Diffraction",
+        "D": "Polarization"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0044",
+      "type": "mcq",
+      "stem": "For diffraction to be prominent, the size of the opening must be:",
+      "options": {
+        "A": "Much larger than the wavelength",
+        "B": "Comparable to the wavelength",
+        "C": "Much smaller than the wavelength",
+        "D": "Equal to the amplitude"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0045",
+      "type": "mcq",
+      "stem": "Which wave property provides the strongest evidence that light is a transverse wave?",
+      "options": {
+        "A": "Interference",
+        "B": "Diffraction",
+        "C": "Polarization",
+        "D": "Refraction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0046",
+      "type": "mcq",
+      "stem": "In a Young's double slit setup, moving the screen further away from the slits will cause the fringe spacing to:",
+      "options": {
+        "A": "Decrease",
+        "B": "Increase",
+        "C": "Remain the same",
+        "D": "Disappear completely"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0047",
+      "type": "mcq",
+      "stem": "If the distance between the two slits in a double slit experiment is reduced, the interference fringes will:",
+      "options": {
+        "A": "Become narrower",
+        "B": "Move further apart",
+        "C": "Move closer together",
+        "D": "Remain unaffected"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0048",
+      "type": "mcq",
+      "stem": "A diffraction grating has 500 lines per mm. What is the grating spacing (d)?",
+      "options": {
+        "A": "500 mm",
+        "B": "2 x 10^-3 mm",
+        "C": "5 x 10^-6 m",
+        "D": "2 x 10^-6 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0049",
+      "type": "mcq",
+      "stem": "The condition for a principal maximum in a diffraction grating is given by:",
+      "options": {
+        "A": "d sinθ = (n + 1/2)λ",
+        "B": "d sinθ = nλ",
+        "C": "d cosθ = nλ",
+        "D": "d tanθ = nλ"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0050",
+      "type": "mcq",
+      "stem": "What is the phenomenon where white light separates into its component colors upon passing through a prism?",
+      "options": {
+        "A": "Diffraction",
+        "B": "Dispersion",
+        "C": "Polarization",
+        "D": "Interference"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0051",
+      "type": "mcq",
+      "stem": "Which color of visible light has the longest wavelength?",
+      "options": {
+        "A": "Violet",
+        "B": "Blue",
+        "C": "Green",
+        "D": "Red"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0052",
+      "type": "mcq",
+      "stem": "In an electromagnetic wave, the electric and magnetic fields are:",
+      "options": {
+        "A": "Parallel to each other",
+        "B": "Perpendicular to each other and to the direction of propagation",
+        "C": "Perpendicular to each other but parallel to propagation",
+        "D": "Non-existent in a vacuum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0053",
+      "type": "mcq",
+      "stem": "If a simple pendulum is taken to the moon (where gravity is weaker), its period will:",
+      "options": {
+        "A": "Decrease",
+        "B": "Increase",
+        "C": "Remain the same",
+        "D": "Become zero"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0054",
+      "type": "mcq",
+      "stem": "The maximum velocity of a particle in SHM is achieved when:",
+      "options": {
+        "A": "Displacement is maximum",
+        "B": "Acceleration is maximum",
+        "C": "Displacement is zero",
+        "D": "Potential energy is maximum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0055",
+      "type": "mcq",
+      "stem": "Which of the following functions can represent a traveling wave?",
+      "options": {
+        "A": "f(x,t) = A sin(kx) cos(wt)",
+        "B": "f(x,t) = A sin(kx - wt)",
+        "C": "f(x,t) = A (x² + t²)",
+        "D": "f(x,t) = A tan(kxt)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0056",
+      "type": "mcq",
+      "stem": "The angular wave number (k) is related to the wavelength (λ) by the equation:",
+      "options": {
+        "A": "k = 2π/λ",
+        "B": "k = λ/2π",
+        "C": "k = 2πλ",
+        "D": "k = 1/λ"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0057",
+      "type": "mcq",
+      "stem": "If two sound waves differ in phase by π radians, they will interfere:",
+      "options": {
+        "A": "Constructively",
+        "B": "Destructively",
+        "C": "To produce beats",
+        "D": "To produce a standing wave"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0058",
+      "type": "mcq",
+      "stem": "In a damped harmonic oscillator, the amplitude of the oscillations:",
+      "options": {
+        "A": "Increases over time",
+        "B": "Remains constant",
+        "C": "Decreases exponentially over time",
+        "D": "Fluctuates sinusoidally"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0059",
+      "type": "mcq",
+      "stem": "When an external driving frequency matches the natural frequency of a system, what phenomenon occurs?",
+      "options": {
+        "A": "Damping",
+        "B": "Resonance",
+        "C": "Diffraction",
+        "D": "Dispersion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0060",
+      "type": "mcq",
+      "stem": "In acoustics, the threshold of human hearing is generally accepted to be at an intensity of:",
+      "options": {
+        "A": "1 W/m²",
+        "B": "10^-6 W/m²",
+        "C": "10^-12 W/m²",
+        "D": "0 W/m²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0061",
+      "type": "mcq",
+      "stem": "The pitch of a sound is primarily determined by its:",
+      "options": {
+        "A": "Amplitude",
+        "B": "Frequency",
+        "C": "Waveform",
+        "D": "Speed"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0062",
+      "type": "mcq",
+      "stem": "The quality or timbre of a musical note is determined by:",
+      "options": {
+        "A": "The fundamental frequency",
+        "B": "The amplitude of the wave",
+        "C": "The number and relative intensities of the overtones (harmonics)",
+        "D": "The speed of sound in the air"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0063",
+      "type": "mcq",
+      "stem": "Snell's Law relates which two variables when light passes between two media?",
+      "options": {
+        "A": "Angle of incidence and angle of reflection",
+        "B": "Angle of incidence and angle of refraction",
+        "C": "Wavelength and frequency",
+        "D": "Phase and amplitude"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0064",
+      "type": "mcq",
+      "stem": "If light travels from a medium with refractive index 1.5 to one with 1.0, what is the sine of the critical angle?",
+      "options": {
+        "A": "0.5",
+        "B": "0.67",
+        "C": "1.0",
+        "D": "1.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0065",
+      "type": "mcq",
+      "stem": "Newton's rings are an example of interference fringes produced by:",
+      "options": {
+        "A": "Division of amplitude",
+        "B": "Division of wavefront",
+        "C": "Diffraction at a single edge",
+        "D": "Polarization"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0066",
+      "type": "mcq",
+      "stem": "Thin film interference is responsible for the colors seen in:",
+      "options": {
+        "A": "A rainbow",
+        "B": "A glass prism",
+        "C": "Soap bubbles",
+        "D": "A blue sky"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0067",
+      "type": "mcq",
+      "stem": "A magnifying glass utilizes which type of lens?",
+      "options": {
+        "A": "Concave lens",
+        "B": "Convex lens",
+        "C": "Plano-concave lens",
+        "D": "Cylindrical lens"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0068",
+      "type": "mcq",
+      "stem": "Which defect of lenses causes different colors of light to focus at different points?",
+      "options": {
+        "A": "Spherical aberration",
+        "B": "Astigmatism",
+        "C": "Chromatic aberration",
+        "D": "Coma"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0069",
+      "type": "mcq",
+      "stem": "In a compound microscope, the objective lens forms an image that is:",
+      "options": {
+        "A": "Virtual, erect, and magnified",
+        "B": "Real, inverted, and magnified",
+        "C": "Virtual, inverted, and diminished",
+        "D": "Real, erect, and diminished"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy106-bank-0070",
+      "type": "mcq",
+      "stem": "A wave equation gives potential energy as proportional to the square of:",
+      "options": {
+        "A": "The time t",
+        "B": "The phase velocity v",
+        "C": "The displacement y from equilibrium",
+        "D": "The mass of the string"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 70,
+  "category": "university",
+  "body": "University Modules"
+}

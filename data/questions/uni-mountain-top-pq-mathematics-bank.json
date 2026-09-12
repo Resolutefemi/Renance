@@ -1,0 +1,2411 @@
+{
+  "code": "uni-mountain-top-pq-mathematics-bank",
+  "title": "MOUNTAIN-TOP Post-UTME Mathematics | Prep Bank",
+  "version": 1,
+  "questionCount": 200,
+  "totalMarks": 200,
+  "questions": [
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0001",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height 6 cm, lower base radius 4 cm, and upper base radius 2 cm.",
+      "options": {
+        "A": "24π cm³",
+        "B": "48π cm³",
+        "C": "96π cm³",
+        "D": "192π cm³"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0002",
+      "type": "mcq",
+      "stem": "A particle moves along the curve y = x² + 2x + 1. Find the area under the curve between x = 0 and x = 2.",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0003",
+      "type": "mcq",
+      "stem": "Two events A and B are indep\\endent. If P(A) = 0.4 and P(B) = 0.6, find P(A ∩ B).",
+      "options": {
+        "A": "0.12",
+        "B": "0.24",
+        "C": "0.36",
+        "D": "0.48"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0004",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation x² + 5x + 6 = 0.",
+      "options": {
+        "A": "x = -2, x = -3",
+        "B": "x = -1, x = -6",
+        "C": "x = 2, x = 3",
+        "D": "x = 1, x = 6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0005",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center (2, 3) and radius 4.",
+      "options": {
+        "A": "\\( x - 2 \\)² + \\( y - 3 \\)² = 16",
+        "B": "\\( x - 2 \\)² + \\( y - 3 \\)² = 4",
+        "C": "\\( x + 2 \\)² + \\( y + 3 \\)² = 16",
+        "D": "\\( x + 2 \\)² + \\( y + 3 \\)² = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0006",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 + 3x - 2 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0007",
+      "type": "mcq",
+      "stem": "A circle with center ( C(2, 3) ) and radius 4 passes through the point ( P(6, 5) ). Find the equation of the circle.",
+      "options": {
+        "A": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "B": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 20 )",
+        "C": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 24 )",
+        "D": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 28 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0008",
+      "type": "mcq",
+      "stem": "Two events ( A ) and ( B ) are indep\\endent. If ( P(A) = 0.3 ) and ( P(B) = 0.4 ), find \\( P\\( A \\cap B \\ \\) ).",
+      "options": {
+        "A": "0.12",
+        "B": "0.24",
+        "C": "0.36",
+        "D": "0.48"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0009",
+      "type": "mcq",
+      "stem": "Solve the equation \\( \\sin^2 x + \\cos^2 x = 1 \\ \\) for ( x ) in the interval \\( [0, 2\\pi] \\).",
+      "options": {
+        "A": "\\( x = \\frac{\\pi}{4} \\ \\) or \\( x = \\frac{5\\pi}{4} \\ \\)",
+        "B": "\\( x = \\frac{\\pi}{2} \\ \\) or \\( x = \\frac{3\\pi}{2} \\ \\)",
+        "C": "\\( x = \\frac{\\pi}{4} \\ \\) or \\( x = \\frac{3\\pi}{4} \\ \\)",
+        "D": "\\( x = \\frac{\\pi}{2} \\ \\) or \\( x = \\frac{5\\pi}{2} \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0010",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \\begin{bmatrix} 2 &amp; 1 &amp; 3 \\ 4 &amp; 2 &amp; 5 \\ 6 &amp; 3 &amp; 7 \\end{bmatrix} \\ \\).",
+      "options": {
+        "A": "0",
+        "B": "10",
+        "C": "20",
+        "D": "30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0011",
+      "type": "mcq",
+      "stem": "Let \\( mathbf{a} = \begin{pmatrix} 2 \\ 3 \\end{pmatrix} \\) and \\( mathbf{b} = \begin{pmatrix} 1 \\ -2 \\end{pmatrix} \\). Find the vector \\( mathbf{a} \\times mathbf{b} \\) u\\sing the cross product formula.",
+      "options": {
+        "A": "\\( \begin{pmatrix} 6 \\ -4 \\end{pmatrix} \\)",
+        "B": "\\( \begin{pmatrix} 4 \\ -6 \\end{pmatrix} \\)",
+        "C": "\\( \begin{pmatrix} 3 \\ -2 \\end{pmatrix} \\)",
+        "D": "\\( \begin{pmatrix} 2 \\ -3 \\end{pmatrix} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0012",
+      "type": "mcq",
+      "stem": "Find the derivative of ( f(x) = \\frac{1}{x^2 + 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( \\frac{-2x}{\\( x^2 + 1 \\ \\)^2} )",
+        "B": "\\( \\frac{2x}{\\( x^2 + 1 \\ \\)^2} )",
+        "C": "\\( \\frac{x^2}{\\( x^2 + 1 \\ \\)^2} )",
+        "D": "\\( \\frac{1}{\\( x^2 + 1 \\ \\)^2} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0013",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 5 cm, a width of 3 cm, and a height of 2 cm. Find the volume of the prism.",
+      "options": {
+        "A": "30",
+        "B": "50",
+        "C": "60",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0014",
+      "type": "mcq",
+      "stem": "Simplify the expression \\( \\frac{1}{2} \\times \\frac{3}{4} \\) u\\sing binary operations.",
+      "options": {
+        "A": "\\( \\frac{3}{8} \\)",
+        "B": "\\( \\frac{1}{8} \\)",
+        "C": "\\( \\frac{3}{4} \\)",
+        "D": "\\( \\frac{1}{4} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0015",
+      "type": "mcq",
+      "stem": "Find the surface area of a sphere with a radius of 4 cm.",
+      "options": {
+        "A": "201.06",
+        "B": "202.06",
+        "C": "203.06",
+        "D": "204.06"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0016",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{\\sqrt{x^2 + 1}} ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( \\frac{-x}{\\( x^2 + 1 \\ \\)^{3/2}} )",
+        "B": "\\( \\frac{x}{\\( x^2 + 1 \\ \\)^{3/2}} )",
+        "C": "\\( \\frac{1}{\\( x^2 + 1 \\ \\)^{3/2}} )",
+        "D": "\\( \\frac{-1}{\\( x^2 + 1 \\ \\)^{3/2}} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0017",
+      "type": "mcq",
+      "stem": "A set ( A ) contains the elements ( { 1, 2, 3, 4, 5 } ). Find the number of subsets of ( A ) that contain exactly two elements.",
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "12",
+        "D": "15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0018",
+      "type": "mcq",
+      "stem": "The first five terms of a geometric sequence are ( 2, 6, 18, 54, 162 ). Find the common ratio.",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0019",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 75 and a s\\tandard deviation of 10. If the highest score is 95, find the lowest score.",
+      "options": {
+        "A": "55",
+        "B": "60",
+        "C": "65",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0020",
+      "type": "mcq",
+      "stem": "A number is divisible by 3 if the sum of its digits is divisible by 3. Find the smallest number greater than 1000 that is divisible by 3.",
+      "options": {
+        "A": "1002",
+        "B": "1005",
+        "C": "1008",
+        "D": "1011"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0021",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2,3) and (4,5) in the coordinate plane.",
+      "options": {
+        "A": "y = 2x + 1",
+        "B": "y = 3x - 2",
+        "C": "y = x + 2",
+        "D": "y = 2x - 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0022",
+      "type": "mcq",
+      "stem": "A coin is tossed 5 times. What is the probability that exactly 3 heads appear?",
+      "options": {
+        "A": "1/32",
+        "B": "5/32",
+        "C": "10/32",
+        "D": "15/32"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0023",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "x = -2",
+        "B": "x = 2",
+        "C": "x = -1",
+        "D": "x = 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0024",
+      "type": "mcq",
+      "stem": "Find the mean of the following data set: 2, 4, 6, 8, 10.",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0025",
+      "type": "mcq",
+      "stem": "A set of numbers has a mean of 10 and a s\\tandard deviation of 2. What is the probability that a randomly selected number from this set is greater than 12?",
+      "options": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "0.75",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0026",
+      "type": "mcq",
+      "stem": "Find the value of ( x ) in the equation \\( 2x^2 + 5x - 3 = 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "-2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0027",
+      "type": "mcq",
+      "stem": "A particle moves in a straight line with a velocity of ( v(t) = 2t + 5 ) m/s. Find the acceleration of the particle at time \\( t = 2 \\) seconds.",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0028",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 - 5x + 3 &gt; 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "x",
+        "B": "x > 1",
+        "C": "x",
+        "D": "x > 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0029",
+      "type": "mcq",
+      "stem": "A sequence is defined by the formula \\( a_n = 2n + 1 \\). Find the sum of the first five terms of the sequence.",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "35",
+        "D": "45"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0030",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix [ \begin{pmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; 1 &amp; 2 \\ 3 &amp; 2 &amp; 4 \\end{pmatrix} ].",
+      "options": {
+        "A": "23",
+        "B": "25",
+        "C": "27",
+        "D": "29"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0031",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations u\\sing Cramer&#039;s rule: [ \begin{cases} x + 2y - z = 5 \\ 3x - 2y + 4z = 2 \\ 2x + 3y - z = 3 \\end{cases} ].",
+      "options": {
+        "A": "x = 1, y = 2, z = 3",
+        "B": "x = 2, y = 3, z = 1",
+        "C": "x = 3, y = 1, z = 2",
+        "D": "x = 4, y = 2, z = 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0032",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2, 3) and (4, 5).",
+      "options": {
+        "A": "y = 2x - 1",
+        "B": "y = 2x + 1",
+        "C": "y = x - 2",
+        "D": "y = x + 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0033",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the curves y = x^2 and y = 4 - x^2 about the x-axis.",
+      "options": {
+        "A": "32π/3",
+        "B": "64π/3",
+        "C": "128π/3",
+        "D": "256π/3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0034",
+      "type": "mcq",
+      "stem": "Solve the inequality |x - 2| &gt; 3. x 5 x 5 x 4 x 4",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0035",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix [ \begin{pmatrix} 2 &amp; 3 \\ 4 &amp; 5 \\end{pmatrix} ].",
+      "options": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0036",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 60 students liked reading, 40 students liked writing, and 20 students liked both. What is the probability that a randomly selected student likes reading or writing?",
+      "options": {
+        "A": "0.6",
+        "B": "0.7",
+        "C": "0.8",
+        "D": "0.9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0037",
+      "type": "mcq",
+      "stem": "Solve the equation [ x^2 + 4x + 4 = 0 ] u\\sing the quadratic formula.",
+      "options": {
+        "A": "0",
+        "B": "-2",
+        "C": "2",
+        "D": "-4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0038",
+      "type": "mcq",
+      "stem": "Find the mean of the data set [ 2, 4, 6, 8, 10 ].",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0039",
+      "type": "mcq",
+      "stem": "A bakery sells 250 loaves of bread per day. If they make a profit of ₦5 per loaf, how much profit do they make in a day?",
+      "options": {
+        "A": "₦1000",
+        "B": "₦1250",
+        "C": "₦1500",
+        "D": "₦1750"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0040",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x}{x-2} &gt; 0 \\) for ( x in mathbb{R} setminus {2} ).",
+      "options": {
+        "A": "\\( -\\infty, 2 \\) \\cup \\( 2, \\infty \\)",
+        "B": "\\( -\\infty, 2 \\) \\cup (2, 4)",
+        "C": "(2, 4)",
+        "D": "\\( -\\infty, 2 \\) \\cup \\( 4, \\infty \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0041",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points ( (1, 2) ) and ( (3, 4) ).",
+      "options": {
+        "A": "y = 2x - 1",
+        "B": "y = 2x + 1",
+        "C": "y = x + 1",
+        "D": "y = x - 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0042",
+      "type": "mcq",
+      "stem": "A sequence is defined by \\( a_n = 2n + 1 \\). Find the sum of the first 5 terms of the sequence.",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0043",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "x = -2",
+        "B": "x = 2",
+        "C": "x = -1",
+        "D": "x = 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0044",
+      "type": "mcq",
+      "stem": "A circle has a radius of 4 cm. Find the area of the circle.",
+      "options": {
+        "A": "50.24 cm^2",
+        "B": "50.24 m^2",
+        "C": "50.24 mm^2",
+        "D": "50.24 km^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0045",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 + 3x - 4 \\) from \\( x = 0 \\) to \\( x = 2 \\).",
+      "options": {
+        "A": "\\( \\frac{1}{2} \\)",
+        "B": "( 3 )",
+        "C": "( 4 )",
+        "D": "( 5 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0046",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( 2^x + 3^x = 5^x \\).",
+      "options": {
+        "A": "\\( x = 2 \\)",
+        "B": "\\( x = 3 \\)",
+        "C": "\\( x = 4 \\)",
+        "D": "\\( x = 5 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0047",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\log_{10} \\( x^2 \\ \\) ) given that \\( \\log_{10} x = 2 \\).",
+      "options": {
+        "A": "( 4 )",
+        "B": "( 5 )",
+        "C": "( 6 )",
+        "D": "( 7 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0048",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( \\frac{x^2 - 4}{x + 2} = 2 \\).",
+      "options": {
+        "A": "\\( x = 2 \\)",
+        "B": "\\( x = -2 \\)",
+        "C": "\\( x = 4 \\)",
+        "D": "\\( x = -4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0049",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices ( (0, 0) ), ( (2, 0) ), and ( (1, 3) ).",
+      "options": {
+        "A": "( 3 )",
+        "B": "( 4 )",
+        "C": "( 5 )",
+        "D": "( 6 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0050",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series with first term 2 and common ratio 3.",
+      "options": {
+        "A": "2 \\cdot \\frac{3^{10} - 1}{3 - 1}",
+        "B": "2 \\cdot \\frac{3^{11} - 1}{3 - 1}",
+        "C": "2 \\cdot \\frac{3^{12} - 1}{3 - 1}",
+        "D": "2 \\cdot \\frac{3^{13} - 1}{3 - 1}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0051",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 5 cm, a width of 3 cm, and a height of 2 cm. Find its volume.",
+      "options": {
+        "A": "5 \\cdot 3 \\cdot 2",
+        "B": "5 \\cdot 3 + 2",
+        "C": "5 \\cdot 2 + 3",
+        "D": "3 \\cdot 2 + 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0052",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\frac{x}{2} + 3 = 7.",
+      "options": {
+        "A": "x = 8",
+        "B": "x = 10",
+        "C": "x = 12",
+        "D": "x = 14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0053",
+      "type": "mcq",
+      "stem": "Find the determinant of the 3x3 matrix \\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{bmatrix}.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0054",
+      "type": "mcq",
+      "stem": "A polynomial f(x) has roots x = 1, x = 2, and x = 3. Write the polynomial in factored form.",
+      "options": {
+        "A": "\\( x - 1 \\)\\( x - 2 \\)\\( x - 3 \\)",
+        "B": "\\( x - 1 \\)\\( x - 2 \\)\\( x + 3 \\)",
+        "C": "\\( x - 1 \\)\\( x + 2 \\)\\( x - 3 \\)",
+        "D": "\\( x + 1 \\)\\( x - 2 \\)\\( x - 3 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0055",
+      "type": "mcq",
+      "stem": "Let \\( mathbf{a} = \begin{pmatrix} 2 \\ 3 \\end{pmatrix} \\) and \\( mathbf{b} = \begin{pmatrix} 4 \\ 5 \\end{pmatrix} \\). Find the unit vector in the direction of \\( mathbf{a} + mathbf{b} \\).",
+      "options": {
+        "A": "\\( \begin{pmatrix} 0.6 \\ 0.8 \\end{pmatrix} \\)",
+        "B": "\\( \begin{pmatrix} 0.8 \\ 0.6 \\end{pmatrix} \\)",
+        "C": "\\( \begin{pmatrix} 0.4 \\ 0.6 \\end{pmatrix} \\)",
+        "D": "\\( \begin{pmatrix} 0.6 \\ 0.4 \\end{pmatrix} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0056",
+      "type": "mcq",
+      "stem": "A random variable ( X ) has a probability distribution given by \\( P\\( X = x \\ \\) = \\frac{1}{2} ) for \\( x = 1, 2, 3 \\). Find the probability that ( X ) is greater than 2.",
+      "options": {
+        "A": "\\( \\frac{1}{4} \\)",
+        "B": "\\( \\frac{1}{2} \\)",
+        "C": "\\( \\frac{3}{4} \\)",
+        "D": "\\( \\frac{1}{3} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0057",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 \\) from \\( x = 0 \\) to \\( x = 2 \\) u\\sing integration by substitution.",
+      "options": {
+        "A": "\\( \\frac{8}{3} \\)",
+        "B": "\\( \\frac{16}{3} \\)",
+        "C": "\\( \\frac{24}{3} \\)",
+        "D": "\\( \\frac{32}{3} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0058",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\sin^2 x ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( 2 \\sin x \\cos x \\)",
+        "B": "\\( \\cos^2 x \\)",
+        "C": "\\( \\sin^2 x \\)",
+        "D": "\\( \\tan x \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0059",
+      "type": "mcq",
+      "stem": "A set of data has a mean of 25 and a s\\tandard deviation of 5. Find the probability that a randomly selected value from the set is greater than 30.",
+      "options": {
+        "A": "\\( \\frac{1}{4} \\)",
+        "B": "\\( \\frac{1}{2} \\)",
+        "C": "\\( \\frac{3}{4} \\)",
+        "D": "\\( \\frac{1}{3} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0060",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the matrix equation \\( \\begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \\end{bmatrix} \\begin{bmatrix} x \\ y \\end{bmatrix} = \\begin{bmatrix} 3 \\ 4 \\end{bmatrix} \\).",
+      "options": {
+        "A": "x = 1, y = 2",
+        "B": "x = 2, y = 1",
+        "C": "x = 1, y = 1",
+        "D": "x = 2, y = 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0061",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled twice. What is the probability that the sum of the two rolls is 7?",
+      "options": {
+        "A": "1/6",
+        "B": "1/12",
+        "C": "1/36",
+        "D": "1/24"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0062",
+      "type": "mcq",
+      "stem": "The mean of a set of 5 numbers is 10. If one of the numbers is 15, what is the sum of the other 4 numbers?",
+      "options": {
+        "A": "40",
+        "B": "45",
+        "C": "50",
+        "D": "55"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0063",
+      "type": "mcq",
+      "stem": "The polynomial ( p(x) = x^3 - 6x^2 + 11x - 6 ) has a root at \\( x = 1 \\). What is the quotient when ( p(x) ) is divided by \\( x - 1 \\)?",
+      "options": {
+        "A": "x^2 - 5x + 6",
+        "B": "x^2 - 5x + 5",
+        "C": "x^2 - 5x + 4",
+        "D": "x^2 - 5x + 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0064",
+      "type": "mcq",
+      "stem": "In a certain number base $b$, the number $101_5$ is equivalent to $b^2 + 1$ in base $10$. Find the value of $b$.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0065",
+      "type": "mcq",
+      "stem": "The line $y = 2x + 3$ intersects the circle $x^2 + y^2 = 16$ at two points. Find the coordinates of the point where the line is \\tangent to the circle.",
+      "options": {
+        "A": "\\( 4, -1 \\)",
+        "B": "\\( -4, -1 \\)",
+        "C": "(4, 1)",
+        "D": "\\( -4, 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0066",
+      "type": "mcq",
+      "stem": "The quadratic equation $x^2 + 4x + 4 = 0$ has two equal roots. Find the value of $x$.",
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "0",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0067",
+      "type": "mcq",
+      "stem": "The mean of a set of numbers is $\\bar{x} = 10$. If the sum of the numbers is $S = 50$, find the median of the set.",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "20",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0068",
+      "type": "mcq",
+      "stem": "The polynomial $P(x) = x^3 - 6x^2 + 11x - 6$ has a root at $x = 1$. Find the value of $P(2)$.",
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "4",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0069",
+      "type": "mcq",
+      "stem": "A set of 10 numbers has a mean of 20 and a s\\tandard deviation of 5. If the set is multiplied by 2, what is the new s\\tandard deviation?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0070",
+      "type": "mcq",
+      "stem": "Solve for x in the equation: \\( 2^x + 3^x = 5^x \\)",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0071",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 70 and a s\\tandard deviation of 10. If the scores are normally distributed, what is the probability that a randomly selected score is between 60 and 80?",
+      "options": {
+        "A": "0.68",
+        "B": "0.80",
+        "C": "0.95",
+        "D": "0.99"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0072",
+      "type": "mcq",
+      "stem": "A sequence is defined by the formula: \\( a_n = 2a_{n-1} + 1 \\). If \\( a_1 = 3 \\), find the value of \\( a_5 \\)",
+      "options": {
+        "A": "31",
+        "B": "33",
+        "C": "35",
+        "D": "37"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0073",
+      "type": "mcq",
+      "stem": "A polynomial function is defined by: \\( f(x) = x^3 - 6x^2 + 11x - 6 \\). Find the value of \\( f\\( -1 \\)",
+      "options": {
+        "A": "-2",
+        "B": "0",
+        "C": "2",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0074",
+      "type": "mcq",
+      "stem": "In a right-angled triangle, the length of the hypotenuse is 10 cm and one of the other sides is 6 cm. Find the length of the third side u\\sing the Pythagorean theorem.",
+      "options": {
+        "A": "8 cm",
+        "B": "12 cm",
+        "C": "16 cm",
+        "D": "20 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0075",
+      "type": "mcq",
+      "stem": "A binary operation \\(*\\) on the set \\{1, 2, 3, 4\\} is defined as follows: \\(a \\ast b = a^2 + b^2\\). Find the value of \\(2 \\ast 3\\).",
+      "options": {
+        "A": "13",
+        "B": "17",
+        "C": "19",
+        "D": "21"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0076",
+      "type": "mcq",
+      "stem": "The mean of five numbers is 15. If one of the numbers is 10, find the sum of the other four numbers.",
+      "options": {
+        "A": "50",
+        "B": "60",
+        "C": "70",
+        "D": "80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0077",
+      "type": "mcq",
+      "stem": "The equation of a circle is given by \\(x^2 + y^2 + 4x + 6y = 0\\). Find the center and radius of the circle.",
+      "options": {
+        "A": "\\( -2, -3 \\) and 5",
+        "B": "( 2, 3 ) and 5",
+        "C": "\\( -2, 3 \\) and 5",
+        "D": "\\( 2, -3 \\) and 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0078",
+      "type": "mcq",
+      "stem": "A sequence is defined as \\(a_n = 2n + 1\\). Find the sum of the first five terms of the sequence.",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "35",
+        "D": "45"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0079",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center \\( -2,3 \\) and radius 4.",
+      "options": {
+        "A": "\\( x+2 \\ \\)^2 + \\( y-3 \\)^2 = 16 )",
+        "B": "\\( x-2 \\ \\)^2 + \\( y+3 \\)^2 = 16 )",
+        "C": "\\( x+2 \\ \\)^2 + \\( y+3 \\)^2 = 16 )",
+        "D": "\\( x-2 \\ \\)^2 + \\( y-3 \\)^2 = 16 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0080",
+      "type": "mcq",
+      "stem": "Evaluate the integral \\( int_{0}^{2} \\( 2x^2 + 3x - 1 \\ \\) dx ).",
+      "options": {
+        "A": "\\( left[ \\frac{2x^3}{3} + \\frac{3x^2}{2} - x \\right]_{0}^{2} = \\frac{16}{3} + 6 - 2 = \\frac{40}{3} \\)",
+        "B": "\\( left[ \\frac{2x^3}{3} + \\frac{3x^2}{2} - x \\right]_{0}^{2} = \\frac{16}{3} + 6 - 2 = \\frac{40}{3} \\)",
+        "C": "\\( left[ \\frac{2x^3}{3} + \\frac{3x^2}{2} - x \\right]_{0}^{2} = \\frac{16}{3} + 6 - 2 = \\frac{40}{3} \\)",
+        "D": "\\( left[ \\frac{2x^3}{3} + \\frac{3x^2}{2} - x \\right]_{0}^{2} = \\frac{16}{3} + 6 - 2 = \\frac{40}{3} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0081",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (1,2) and (3,4).",
+      "options": {
+        "A": "\\( y = \\frac{4}{2} \\( x - 1 \\ \\) + 2 )",
+        "B": "\\( y = \\frac{4}{2} \\( x - 3 \\ \\) + 4 )",
+        "C": "\\( y = \\frac{4}{2} \\( x - 1 \\ \\) + 4 )",
+        "D": "\\( y = \\frac{4}{2} \\( x - 3 \\ \\) + 2 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0082",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. Find the mean score.",
+      "options": {
+        "A": "\\( \\frac{1}{4} \\( 10 + 20 + 30 + 40 \\ \\) = 25 )",
+        "B": "\\( \\frac{1}{4} \\( 10 + 20 + 30 + 40 \\ \\) = 25 )",
+        "C": "\\( \\frac{1}{4} \\( 10 + 20 + 30 + 40 \\ \\) = 25 )",
+        "D": "\\( \\frac{1}{4} \\( 10 + 20 + 30 + 40 \\ \\) = 25 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0083",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 + 3x - 2 \\) from \\( x = 0 \\) to \\( x = 2 \\).",
+      "options": {
+        "A": "\\( \\frac{1}{2} \\)",
+        "B": "( 2 )",
+        "C": "( 4 )",
+        "D": "( 6 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0084",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\). \\( x \\frac{3}{2} \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x",
+        "C": "\\( x > -1 \\) or \\( x > \\frac{3}{2} \\)",
+        "D": "\\( x > -1 \\) or \\( x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0085",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 60 and a s\\tandard deviation of 10. If the scores are normally distributed, what is the probability that a randomly selected score is between 50 and 70?",
+      "options": {
+        "A": "( 0.9544 )",
+        "B": "( 0.8413 )",
+        "C": "( 0.6915 )",
+        "D": "( 0.6827 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0086",
+      "type": "mcq",
+      "stem": "Find the derivative of the function \\( y = \\sin^2\\( x \\ \\) ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( 2\\sin\\( x \\)\\cos(x \\) )",
+        "B": "\\( \\cos^2\\( x \\ \\) )",
+        "C": "\\( \\sin\\( x \\)\\cos(x \\) )",
+        "D": "\\( \\sin^2\\( x \\ \\) )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0087",
+      "type": "mcq",
+      "stem": "Let ( f(x) = \\frac{1}{x^2 + 1} ). Find the derivative of ( f(x) ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\frac{-2x}{\\( x^2 + 1 \\)^2}",
+        "B": "\\frac{2x}{\\( x^2 + 1 \\)^2}",
+        "C": "\\frac{-2}{\\( x^2 + 1 \\)^2}",
+        "D": "\\frac{2}{\\( x^2 + 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0088",
+      "type": "mcq",
+      "stem": "A set of 5 numbers has a mean of 10. If 2 is added to each number, what is the new mean?",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0089",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( x^2 - 6x + 8 &gt; 0 \\). x 4 x 4",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x > 2 or x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0090",
+      "type": "mcq",
+      "stem": "Find the sum of the first 5 terms of the geometric sequence ( 2, 6, 18, ... ).",
+      "options": {
+        "A": "62",
+        "B": "64",
+        "C": "66",
+        "D": "68"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0091",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 60 and a s\\tandard deviation of 10. What is the probability that a randomly selected score is between 50 and 70?",
+      "options": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "0.75",
+        "D": "0.9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0092",
+      "type": "mcq",
+      "stem": "Find the value of $x$ in the equation $2^x + 5^x = 7^x$.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0093",
+      "type": "mcq",
+      "stem": "A circle has a diameter of 10 cm. Find the area of the circle.",
+      "options": {
+        "A": "78.5",
+        "B": "78.54",
+        "C": "78.55",
+        "D": "78.6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0094",
+      "type": "mcq",
+      "stem": "Solve the inequality $x^2 - 4x - 5 &gt; 0$.",
+      "options": {
+        "A": "\\( -∞, -1 \\) ∪ (5, ∞)",
+        "B": "\\( -∞, -1 \\) ∪ (1, ∞)",
+        "C": "\\( -∞, 1 \\) ∪ (5, ∞)",
+        "D": "\\( -∞, 5 \\) ∪ (∞, 1)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0095",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\) for ( x ) in the interval \\( -infty, infty \\ \\) ). \\( x \\frac{3}{2} \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x",
+        "C": "\\( x > -\\frac{5}{4} \\) or \\( x",
+        "D": "\\( x > -\\frac{5}{4} \\) or \\( x > \\frac{3}{2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0096",
+      "type": "mcq",
+      "stem": "Find the value of ( x ) in the equation \\( \\sin^2 x + \\cos^2 x = 1 \\).",
+      "options": {
+        "A": "\\( x = \\frac{pi}{2} \\)",
+        "B": "\\( x = \\frac{pi}{4} \\)",
+        "C": "\\( x = \\frac{3pi}{4} \\)",
+        "D": "\\( x = \\frac{5pi}{4} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0097",
+      "type": "mcq",
+      "stem": "In the circuit below, find the equivalent resis\\tance.",
+      "options": {
+        "A": "( 2 Omega )",
+        "B": "( 4 Omega )",
+        "C": "( 6 Omega )",
+        "D": "( 8 Omega )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0098",
+      "type": "mcq",
+      "stem": "Find the sum of the first 5 terms of the geometric series \\( 2x^2 + 3x + 4 \\).",
+      "options": {
+        "A": "\\( 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 \\)",
+        "B": "\\( 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 \\)",
+        "C": "\\( 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 \\)",
+        "D": "\\( 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 + 2x^2 + 3x + 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0099",
+      "type": "mcq",
+      "stem": "Find the probability of drawing two hearts from a s\\tandard deck of 52 cards.",
+      "options": {
+        "A": "\\( \\frac{1}{52} \\)",
+        "B": "\\( \\frac{1}{52} \\times \\frac{1}{52} \\)",
+        "C": "\\( \\frac{1}{52} + \\frac{1}{52} \\)",
+        "D": "\\( \\frac{1}{52} \\times \\frac{1}{52} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0100",
+      "type": "mcq",
+      "stem": "Find the value of $x$ in the equation $2^x + 2^{x+1} = 3 cdot 2^{x+1}$.",
+      "options": {
+        "A": "-1",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0101",
+      "type": "mcq",
+      "stem": "Solve the inequality $\\frac{1}{x+1} + \\frac{1}{x-1} \\geq \\frac{1}{2}$.",
+      "options": {
+        "A": "$x \\in \\( -\\infty, -2 \\) \\cup \\( 1, \\infty \\)$",
+        "B": "$x \\in \\( -\\infty, -2 \\) \\cup [1, \\infty)$",
+        "C": "$x \\in \\( -\\infty, -1 \\) \\cup \\( 1, \\infty \\)$",
+        "D": "$x \\in \\( -\\infty, -1 \\) \\cup [1, \\infty)$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0102",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series $\\sum_{n=1}^{10} \\frac{2}{3^n}$.",
+      "options": {
+        "A": "$\\frac{63}{32}$",
+        "B": "$\\frac{127}{64}$",
+        "C": "$\\frac{255}{128}$",
+        "D": "$\\frac{511}{256}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0103",
+      "type": "mcq",
+      "stem": "In the diagram below, $ABCD$ is a rec\\tangle with $AB = 6$ and $BC = 8$. Find the area of the shaded region.",
+      "options": {
+        "A": "24",
+        "B": "32",
+        "C": "40",
+        "D": "48"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0104",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation $x^2 + 5x + 6 = 0$.",
+      "options": {
+        "A": "$x = -2$",
+        "B": "$x = -3$",
+        "C": "$x = -1$",
+        "D": "$x = 1$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0105",
+      "type": "mcq",
+      "stem": "Determine the mean of the following data set: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20. If the mean is 12, what is the value of the mis\\sing number in the data set?",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0106",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0107",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \\).",
+      "options": {
+        "A": "-2",
+        "B": "2",
+        "C": "4",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0108",
+      "type": "mcq",
+      "stem": "Differentiate the function ( f(x) = 3x^2 + 2x - 5 ) with respect to x.",
+      "options": {
+        "A": "6x + 2",
+        "B": "6x^2 + 2x",
+        "C": "6x^2 + 4x - 5",
+        "D": "6x^2 + 2x - 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0109",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\).",
+      "options": {
+        "A": "\\( -∞, -1 \\) ∪ (3, ∞)",
+        "B": "\\( -∞, -3 \\) ∪ (1, ∞)",
+        "C": "\\( -∞, -1 \\) ∪ (1, ∞)",
+        "D": "\\( -∞, 1 \\) ∪ (3, ∞)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0110",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( 2^x + 3^x = 5^x \\).",
+      "options": {
+        "A": "x = 2",
+        "B": "x = 3",
+        "C": "x = 4",
+        "D": "x = 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0111",
+      "type": "mcq",
+      "stem": "Find the area of the region bounded by the parabola y = x^2, the line y = 4, and the x-axis.",
+      "options": {
+        "A": "16",
+        "B": "32",
+        "C": "48",
+        "D": "64"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0112",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( x + y = 4 \\) and \\( xy = 5 \\).",
+      "options": {
+        "A": "x = 1, y = 3",
+        "B": "x = 2, y = 2",
+        "C": "x = 3, y = 1",
+        "D": "x = 4, y = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0113",
+      "type": "mcq",
+      "stem": "Let \\( mathbf{a} = \begin{pmatrix} 2 \\ 3 \\end{pmatrix} \\) and \\( mathbf{b} = \begin{pmatrix} 4 \\ 5 \\end{pmatrix} \\). Find the projection of ( mathbf{b} ) onto ( mathbf{a} ) u\\sing the formula \\( mathrm{proj}_{mathbf{a}} mathbf{b} = \\frac{mathbf{a} cdot mathbf{b}}{| mathbf{a} |^2} mathbf{a} \\).",
+      "options": {
+        "A": "\\( \begin{pmatrix} 0.8 \\ 1.2 \\end{pmatrix} \\)",
+        "B": "\\( \begin{pmatrix} 1.6 \\ 2.4 \\end{pmatrix} \\)",
+        "C": "\\( \begin{pmatrix} 2.4 \\ 3.6 \\end{pmatrix} \\)",
+        "D": "\\( \begin{pmatrix} 3.2 \\ 4.8 \\end{pmatrix} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0114",
+      "type": "mcq",
+      "stem": "A random variable ( X ) has a probability distribution given by \\( P\\( X = k \\ \\) = \\frac{1}{2^k} ) for \\( k = 1, 2, 3, ldots \\). Find the expected value of ( X ).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0115",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 75 and a s\\tandard deviation of 10. If the scores are normally distributed, what is the probability that a randomly selected score will be between 60 and 90?",
+      "options": {
+        "A": "0.5",
+        "B": "0.6",
+        "C": "0.7",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0116",
+      "type": "mcq",
+      "stem": "A binary operation ( ast ) is defined as \\( a ast b = a^2 + b^2 \\). Find the value of ( 2 ast 3 ).",
+      "options": {
+        "A": "13",
+        "B": "17",
+        "C": "19",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0117",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation \\( \\frac{1}{2}x^2 + 3x - 2 = 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "\\( x = -6 \\pm \\sqrt{6^2 - 4 \\cdot \\frac{1}{2} \\cdot \\( -2 \\ \\)} \\)",
+        "B": "\\( x = -6 \\pm \\sqrt{6^2 - 4 \\cdot \\frac{1}{2} \\cdot 2} \\ \\)",
+        "C": "\\( x = -6 \\pm \\sqrt{6^2 - 4 \\cdot \\frac{1}{2} \\cdot 3} \\ \\)",
+        "D": "\\( x = -6 \\pm \\sqrt{6^2 - 4 \\cdot \\frac{1}{2} \\cdot \\( -3 \\ \\)} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0118",
+      "type": "mcq",
+      "stem": "A random variable X has a probability distribution given by ( P(X) = \\begin{cases} 0.2 &amp; \\text{if } x = 1 \\ 0.3 &amp; \\text{if } x = 2 \\ 0.5 &amp; \\text{if } x = 3 \\end{cases} \\). Find the expected value of X.",
+      "options": {
+        "A": "( E(X) = 1 \\cdot 0.2 + 2 \\cdot 0.3 + 3 \\cdot 0.5 \\)",
+        "B": "( E(X) = 1 \\cdot 0.3 + 2 \\cdot 0.2 + 3 \\cdot 0.5 \\)",
+        "C": "( E(X) = 1 \\cdot 0.5 + 2 \\cdot 0.3 + 3 \\cdot 0.2 \\)",
+        "D": "( E(X) = 1 \\cdot 0.2 + 2 \\cdot 0.5 + 3 \\cdot 0.3 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0119",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\( \\sin^2 x + \\cos^2 x = 1 \\ \\) for \\( x \\ \\) in the interval \\( [0, 2\\pi] \\ \\).",
+      "options": {
+        "A": "\\( x = \\frac{\\pi}{4}, \\frac{3\\pi}{4}, \\frac{5\\pi}{4}, \\frac{7\\pi}{4} \\ \\)",
+        "B": "\\( x = \\frac{\\pi}{2}, \\frac{3\\pi}{2} \\ \\)",
+        "C": "\\( x = \\frac{\\pi}{4}, \\frac{3\\pi}{4} \\ \\)",
+        "D": "\\( x = \\frac{\\pi}{2}, \\frac{3\\pi}{2}, \\frac{5\\pi}{2} \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0120",
+      "type": "mcq",
+      "stem": "A vector \\( \\mathbf{a} \\ \\) has components \\( a_x = 2 \\ \\) and \\( a_y = 3 \\ \\). A vector \\( \\mathbf{b} \\ \\) has components \\( b_x = -1 \\ \\) and \\( b_y = 4 \\ \\). Find the magnitude of the sum of these two vectors.",
+      "options": {
+        "A": "\\( \\sqrt{\\( 2 - 1 \\ \\)^2 + \\( 3 + 4 \\)^2} \\)",
+        "B": "\\( \\sqrt{\\( 2 + 1 \\ \\)^2 + \\( 3 - 4 \\)^2} \\)",
+        "C": "\\( \\sqrt{\\( 2 - 1 \\ \\)^2 + \\( 3 - 4 \\)^2} \\)",
+        "D": "\\( \\sqrt{\\( 2 + 1 \\ \\)^2 + \\( 3 + 4 \\)^2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0121",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 70 and a s\\tandard deviation of 10. If the scores are normally distributed, find the probability that a randomly selected score is greater than 80.",
+      "options": {
+        "A": "\\( P\\( X > 80 \\ \\) = 0.1587 \\)",
+        "B": "\\( P\\( X > 80 \\ \\) = 0.3413 \\)",
+        "C": "\\( P\\( X > 80 \\ \\) = 0.5 \\)",
+        "D": "\\( P\\( X > 80 \\ \\) = 0.8413 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0122",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix [ \begin{array}{ccc} 2 &amp; 3 &amp; 1 \\ 4 &amp; 5 &amp; 2 \\ 1 &amp; 2 &amp; 3 \\end{array} ].",
+      "options": {
+        "A": "-1",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0123",
+      "type": "mcq",
+      "stem": "A rec\\tangular solid has dimensions 5 cm, 8 cm, and 3 cm. Find its surface area.",
+      "options": {
+        "A": "154 cm^2",
+        "B": "156 cm^2",
+        "C": "158 cm^2",
+        "D": "160 cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0124",
+      "type": "mcq",
+      "stem": "Evaluate the definite integral \\[ \\int_0^1 \\( 2x^2 + 3x - 1 \\) dx \\].",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0125",
+      "type": "mcq",
+      "stem": "Two events, A and B, are indep\\endent. If P(A) = 0.4 and P(B) = 0.6, find P\\( A \\cap B \\).",
+      "options": {
+        "A": "0.2",
+        "B": "0.24",
+        "C": "0.3",
+        "D": "0.36"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0126",
+      "type": "mcq",
+      "stem": "Solve the equation \\[ x^3 - 6x^2 + 11x - 6 = 0 \\].",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0127",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0128",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. What is the mean score?",
+      "options": {
+        "A": "50",
+        "B": "60",
+        "C": "70",
+        "D": "80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0129",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = 3x^2 + 2x - 5 ).",
+      "options": {
+        "A": "6x + 2",
+        "B": "3x^2 + 2",
+        "C": "2x^2 + 6",
+        "D": "x^2 + 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0130",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 60 students preferred coffee, 30 students preferred tea, and 10 students preferred both. What is the probability that a randomly selected student prefers coffee?",
+      "options": {
+        "A": "0.6",
+        "B": "0.7",
+        "C": "0.8",
+        "D": "0.9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0131",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 + 2x + 1 \\) from \\( x = 0 \\) to \\( x = 2 \\).",
+      "options": {
+        "A": "7",
+        "B": "9",
+        "C": "11",
+        "D": "13"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0132",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{bmatrix} \\).",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0133",
+      "type": "mcq",
+      "stem": "Find the sum of the first 5 terms of the geometric progression ( 2, 6, 18, ... ).",
+      "options": {
+        "A": "240",
+        "B": "242",
+        "C": "244",
+        "D": "246"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0134",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (2, 3) ) and radius 4.",
+      "options": {
+        "A": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\( x - 3 \\)^2 + \\( y - 2 \\)^2 = 16",
+        "C": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 9",
+        "D": "\\( x - 3 \\)^2 + \\( y - 2 \\)^2 = 9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0135",
+      "type": "mcq",
+      "stem": "Let ( f(x) = \\frac{x^2 + 2x - 3}{x^2 - 4} ). Find the value of \\( f\\( -2 \\ \\) ).",
+      "options": {
+        "A": "-1",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0136",
+      "type": "mcq",
+      "stem": "A circle with center ( C ) and radius ( 4 ) has equation \\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 ). Find the equation of the line pas\\sing through ( C ) and perp\\endicular to the line \\( y = x + 1 \\).",
+      "options": {
+        "A": "y = -x + 5",
+        "B": "y = x - 5",
+        "C": "y = -x - 5",
+        "D": "y = x + 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0137",
+      "type": "mcq",
+      "stem": "A box with a square base of side length ( 6 ) and height ( 8 ) has a square hole cut out of one of its sides. The hole has a side length of ( 2 ) and is centered on the side of the box. Find the volume of the box with the hole cut out.",
+      "options": {
+        "A": "48",
+        "B": "50",
+        "C": "52",
+        "D": "54"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0138",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled twice. What is the probability that the sum of the two numbers rolled is greater than 7?",
+      "options": {
+        "A": "\\frac{1}{3}",
+        "B": "\\frac{1}{2}",
+        "C": "\\frac{2}{3}",
+        "D": "\\frac{3}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0139",
+      "type": "mcq",
+      "stem": "A circle with center ( C ) and radius ( 5 ) has equation \\( x - 3 \\ \\)^2 + \\( y - 4 \\)^2 = 25 ). Find the equation of the line pas\\sing through ( C ) and perp\\endicular to the line \\( y = x - 2 \\).",
+      "options": {
+        "A": "y = -x + 7",
+        "B": "y = x + 7",
+        "C": "y = -x - 7",
+        "D": "y = x - 7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0140",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix [ \begin{array}{ccc} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{array} ].",
+      "options": {
+        "A": "-120",
+        "B": "120",
+        "C": "0",
+        "D": "180"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0141",
+      "type": "mcq",
+      "stem": "Solve the equation [ \\sin^2 x + \\cos^2 x = 1 ].",
+      "options": {
+        "A": "x = \\frac{\\pi}{4}",
+        "B": "x = \\frac{\\pi}{2}",
+        "C": "x = \\frac{\\pi}{3}",
+        "D": "x = \\frac{\\pi}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0142",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric progression 2, 6, 18, ...",
+      "options": {
+        "A": "1040",
+        "B": "1080",
+        "C": "1100",
+        "D": "1120"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0143",
+      "type": "mcq",
+      "stem": "Find the derivative of the function [ f(x) = \\frac{1}{x^2 + 1} \\].",
+      "options": {
+        "A": "\\frac{-2x}{\\( x^2 + 1 \\)^2}",
+        "B": "\\frac{2x}{\\( x^2 + 1 \\)^2}",
+        "C": "\\frac{1}{\\( x^2 + 1 \\)^2}",
+        "D": "\\frac{-1}{\\( x^2 + 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0144",
+      "type": "mcq",
+      "stem": "Solve the inequality [ 2x^2 - 5x - 3 &gt; 0 \\]. x \\frac{3}{2}",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x > -1 or x",
+        "D": "x > -1 or x > \\frac{3}{2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0145",
+      "type": "mcq",
+      "stem": "Determine the volume of the frustum of a cone with height 10 cm, lower base radius 4 cm, and upper base radius 2 cm.",
+      "options": {
+        "A": "50\\pi cm^3",
+        "B": "75\\pi cm^3",
+        "C": "100\\pi cm^3",
+        "D": "125\\pi cm^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0146",
+      "type": "mcq",
+      "stem": "A particle moves in a straight line with initial velocity 5 m/s and acceleration 2 m/s^2. Find its velocity after 4 seconds.",
+      "options": {
+        "A": "10 m/s",
+        "B": "12 m/s",
+        "C": "14 m/s",
+        "D": "16 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0147",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 \\geq 0 \\).",
+      "options": {
+        "A": "x \\in \\( -\\infty, -1 \\) \\cup [3, \\infty)",
+        "B": "x \\in \\( -\\infty, -3 \\) \\cup [1, \\infty)",
+        "C": "x \\in \\( -\\infty, -3 \\) \\cup [1, \\infty)",
+        "D": "x \\in \\( -\\infty, -1 \\) \\cup [3, \\infty)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0148",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = 2x^2 + 3x - 1 \\) from x = 0 to x = 2.",
+      "options": {
+        "A": "13",
+        "B": "15",
+        "C": "17",
+        "D": "19"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0149",
+      "type": "mcq",
+      "stem": "A right-angled triangle has sides 3 cm, 4 cm, and 5 cm. Find the area of the triangle.",
+      "options": {
+        "A": "6 cm^2",
+        "B": "8 cm^2",
+        "C": "10 cm^2",
+        "D": "12 cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0150",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height 8cm, lower base radius 4cm, and upper base radius 2cm.",
+      "options": {
+        "A": "64\\pi cm^3",
+        "B": "128\\pi cm^3",
+        "C": "256\\pi cm^3",
+        "D": "512\\pi cm^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0151",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4).",
+      "options": {
+        "A": "\\pm 2",
+        "B": "\\pm 4",
+        "C": "\\pm 8",
+        "D": "\\pm 16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0152",
+      "type": "mcq",
+      "stem": "A particle moves along the curve \\( y = x^2 + 2x + 1 \\) with a velocity of 2m/s. Find the acceleration at the point where x = 1.",
+      "options": {
+        "A": "-4 m/s^2",
+        "B": "-2 m/s^2",
+        "C": "2 m/s^2",
+        "D": "4 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0153",
+      "type": "mcq",
+      "stem": "Find the equation of the \\tangent to the curve \\( y = x^3 - 6x^2 + 9x + 2 \\) at the point where x = 2.",
+      "options": {
+        "A": "y = 3x - 5",
+        "B": "y = 3x + 5",
+        "C": "y = -3x + 5",
+        "D": "y = -3x - 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0154",
+      "type": "mcq",
+      "stem": "A company produces two products, A and B. The profit from the sale of product A is $10 per unit, and the profit from the sale of product B is $15 per unit. If the company produces 100 units of product A and 50 units of product B, what is the total profit?",
+      "options": {
+        "A": "$1500",
+        "B": "$2000",
+        "C": "$2500",
+        "D": "$3000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0155",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 - 5x - 3 &gt; 0 \\) u\\sing the quadratic formula. x 1 x \\frac{3}{2}",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x > -1 \\text{ or } x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0156",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series \\( 2 + 6 + 18 + \\cdots \\).",
+      "options": {
+        "A": "1023",
+        "B": "1024",
+        "C": "1025",
+        "D": "1026"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0157",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. What is the probability that the number rolled is greater than 4?",
+      "options": {
+        "A": "\\frac{1}{3}",
+        "B": "\\frac{1}{2}",
+        "C": "\\frac{2}{3}",
+        "D": "\\frac{5}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0158",
+      "type": "mcq",
+      "stem": "A set of 5 cards is drawn from a s\\tandard deck of 52 cards. What is the probability that the set contains at least one ace?",
+      "options": {
+        "A": "\\frac{1}{52}",
+        "B": "\\frac{1}{26}",
+        "C": "\\frac{1}{13}",
+        "D": "\\frac{51}{52}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0159",
+      "type": "mcq",
+      "stem": "A box contains 3 red balls and 2 blue balls. If a ball is drawn at random, what is the probability that it is blue?",
+      "options": {
+        "A": "\\frac{1}{5}",
+        "B": "\\frac{2}{5}",
+        "C": "\\frac{3}{5}",
+        "D": "\\frac{4}{5}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0160",
+      "type": "mcq",
+      "stem": "Determine the mean of the data set {2, 4, 6, 8, 10} u\\sing the formula for the mean.",
+      "options": {
+        "A": "\\( \\frac{2+4+6+8+10}{5} \\)",
+        "B": "\\( \\frac{2+4+6+8+10}{4} \\)",
+        "C": "\\( \\frac{2+4+6+8+10}{3} \\)",
+        "D": "\\( \\frac{2+4+6+8+10}{2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0161",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x}{x-2} &gt; 1 \\) for \\( x &gt; 2 \\).",
+      "options": {
+        "A": "\\( x > 3 \\ \\)",
+        "B": "\\( x",
+        "C": "\\( x = 3 \\ \\)",
+        "D": "\\( x = 2 \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0162",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "\\( \\frac{64}{3} \\ \\)",
+        "B": "\\( 16 \\ \\)",
+        "C": "\\( 32 \\ \\)",
+        "D": "\\( 64 \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0163",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( \\begin{cases} x + y = 4 \\ x - 2y = -2 \\end{cases} \\).",
+      "options": {
+        "A": "\\( x = 2, y = 2 \\ \\)",
+        "B": "\\( x = 3, y = 1 \\ \\)",
+        "C": "\\( x = 1, y = 3 \\ \\)",
+        "D": "\\( x = 4, y = 0 \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0164",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by rotating the region bounded by the curves \\( y = x^2 \\) and \\( y = x \\) about the x-axis.",
+      "options": {
+        "A": "\\( \\frac{\\pi}{12} \\ \\)",
+        "B": "\\( \\frac{\\pi}{6} \\ \\)",
+        "C": "\\( \\frac{\\pi}{4} \\ \\)",
+        "D": "\\( \\frac{\\pi}{2} \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0165",
+      "type": "mcq",
+      "stem": "Solve the matrix equation \\( \\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \\begin{bmatrix} x \\ y \\end{bmatrix} = \\begin{bmatrix} 3 \\ 7 \\end{bmatrix} \\).",
+      "options": {
+        "A": "\\( x = 1, y = 2 \\ \\)",
+        "B": "\\( x = 2, y = 1 \\ \\)",
+        "C": "\\( x = 3, y = 4 \\ \\)",
+        "D": "\\( x = 4, y = 3 \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0166",
+      "type": "mcq",
+      "stem": "A random variable X has a probability distribution given by P\\( X = 1 \\) = 0.3, P\\( X = 2 \\) = 0.4, P\\( X = 3 \\) = 0.3. If Y is an indep\\endent random variable with P\\( Y = 1 \\) = 0.5, P\\( Y = 2 \\) = 0.5, find the probability that X + Y = 3.",
+      "options": {
+        "A": "0.35",
+        "B": "0.45",
+        "C": "0.55",
+        "D": "0.65"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0167",
+      "type": "mcq",
+      "stem": "Solve the equation \\frac{x^2 - 4}{x + 2} = 2.",
+      "options": {
+        "A": "x = 0",
+        "B": "x = 2",
+        "C": "x = -2",
+        "D": "x = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0168",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; 1 &amp; 2 \\ 3 &amp; 2 &amp; 1 \\end{bmatrix}.",
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "4",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0169",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\sin^2 x + \\cos^2 x = 1.",
+      "options": {
+        "A": "x = \\frac{\\pi}{2}",
+        "B": "x = \\frac{\\pi}{4}",
+        "C": "x = \\frac{3\\pi}{4}",
+        "D": "x = \\frac{5\\pi}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0170",
+      "type": "mcq",
+      "stem": "Let \\( A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \\) and \\( B = \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \\end{bmatrix} \\). Find the determinant of the matrix ( AB ) if it exists.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0171",
+      "type": "mcq",
+      "stem": "A box contains 5 red balls and 3 blue balls. If a ball is drawn at random, what is the probability that it is blue?",
+      "options": {
+        "A": "1/2",
+        "B": "2/5",
+        "C": "3/8",
+        "D": "1/4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0172",
+      "type": "mcq",
+      "stem": "Let \\( S = \\{ 1, 2, 3, 4, 5 \\} \\). Find the number of subsets of ( S ) that contain exactly 3 elements.",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0173",
+      "type": "mcq",
+      "stem": "Find the sum of the first 5 terms of the geometric progression ( 2, 6, 18, 54, ... ).",
+      "options": {
+        "A": "120",
+        "B": "130",
+        "C": "140",
+        "D": "150"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0174",
+      "type": "mcq",
+      "stem": "Let ( f(x) = \\frac{x^2 - 4}{x - 2} ). Find the derivative of ( f(x) ) u\\sing the quotient rule.",
+      "options": {
+        "A": "\\frac{2x\\( x - 2 \\) - \\( x^2 - 4 \\)}{\\( x - 2 \\)^2}",
+        "B": "\\frac{2x\\( x - 2 \\) + \\( x^2 - 4 \\)}{\\( x - 2 \\)^2}",
+        "C": "\\frac{2x\\( x - 2 \\) - \\( x^2 - 4 \\)}{\\( x - 2 \\)^2}",
+        "D": "\\frac{2x\\( x - 2 \\) + \\( x^2 - 4 \\)}{\\( x - 2 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0175",
+      "type": "mcq",
+      "stem": "Solve the equation \\( 2^x + 3^x = 5^x \\) for ( x ).",
+      "options": {
+        "A": "x = 2",
+        "B": "x = 3",
+        "C": "x = 4",
+        "D": "x = 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0176",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices ( A(0, 0) ), ( B(3, 0) ), and ( C(0, 4) ).",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0177",
+      "type": "mcq",
+      "stem": "Find the derivative of ( f(x) = x^2 \\sin x ) u\\sing the product rule.",
+      "options": {
+        "A": "x^2 \\cos x + 2x \\sin x",
+        "B": "x^2 \\cos x - 2x \\sin x",
+        "C": "x^2 \\cos x + 2x \\sin x",
+        "D": "x^2 \\cos x - 2x \\sin x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0178",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x - 5 &gt; 3x + 2 \\).",
+      "options": {
+        "A": "x",
+        "B": "x > -3",
+        "C": "x",
+        "D": "x > 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0179",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (2, 3) ) and radius ( 4 ).",
+      "options": {
+        "A": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 4",
+        "C": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 9",
+        "D": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0180",
+      "type": "mcq",
+      "stem": "Find the derivative of ( f(x) = \\sin (2x) ) u\\sing the chain rule.",
+      "options": {
+        "A": "2 \\cos (2x)",
+        "B": "2 \\sin (2x)",
+        "C": "2 \\cos (2x)",
+        "D": "2 \\sin (2x)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0181",
+      "type": "mcq",
+      "stem": "Let X and Y be indep\\endent events with P(X) = 0.4 and P(Y) = 0.6. What is the probability that both events occur?",
+      "options": {
+        "A": "0.24",
+        "B": "0.36",
+        "C": "0.48",
+        "D": "0.64"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0182",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series 2 + 6 + 18 + ...",
+      "options": {
+        "A": "3120",
+        "B": "3240",
+        "C": "3360",
+        "D": "3480"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0183",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 60 students preferred Mathematics, 30 preferred Science, and 10 preferred both. What is the probability that a randomly selected student prefers either Mathematics or Science?",
+      "options": {
+        "A": "0.7",
+        "B": "0.8",
+        "C": "0.9",
+        "D": "0.95"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0184",
+      "type": "mcq",
+      "stem": "The histogram below shows the distribution of exam scores for a class of 50 students. What is the mean score?",
+      "options": {
+        "A": "60",
+        "B": "70",
+        "C": "80",
+        "D": "90"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0185",
+      "type": "mcq",
+      "stem": "A circle has a radius of 4 cm. What is the area of the circle?",
+      "options": {
+        "A": "16π",
+        "B": "32π",
+        "C": "64π",
+        "D": "128π"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0186",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center \\( 3, -2 \\ \\) ) and radius ( 4 ).",
+      "options": {
+        "A": "\\( x-3 \\ \\)^2 + \\( y+2 \\)^2 = 16 )",
+        "B": "\\( x-3 \\ \\)^2 + \\( y+2 \\)^2 = 25 )",
+        "C": "\\( x-3 \\ \\)^2 + \\( y+2 \\)^2 = 36 )",
+        "D": "\\( x-3 \\ \\)^2 + \\( y+2 \\)^2 = 49 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0187",
+      "type": "mcq",
+      "stem": "A sequence is defined by \\( a_n = 2n^2 - 3n + 1 \\). Find the sum of the first five terms.",
+      "options": {
+        "A": "55",
+        "B": "65",
+        "C": "75",
+        "D": "85"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0188",
+      "type": "mcq",
+      "stem": "A right-angled triangle has a hypotenuse of length 10 cm and one leg of length 6 cm. Find the length of the other leg.",
+      "options": {
+        "A": "8 cm",
+        "B": "6 cm",
+        "C": "10 cm",
+        "D": "12 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0189",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x-2}{x+1} &gt; 0 \\) for ( x in mathbb{R} ).",
+      "options": {
+        "A": "\\( -infty, -1 \\ \\) cup (2, infty) )",
+        "B": "\\( -infty, -1 \\ \\) cup (1, 2) )",
+        "C": "\\( -infty, -1 \\ \\) cup (2, infty) cup (1, 2) )",
+        "D": "\\( -infty, -1 \\ \\) cup (1, infty) )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0190",
+      "type": "mcq",
+      "stem": "A sequence is defined by the recurrence relation \\( a_n = 2a_{n-1} + 3 \\) with initial term \\( a_1 = 2 \\). Find the sum of the first five terms of the sequence.",
+      "options": {
+        "A": "\\( 2 + 7 + 17 + 37 + 79 \\)",
+        "B": "\\( 2 + 5 + 13 + 29 + 61 \\)",
+        "C": "\\( 2 + 7 + 17 + 37 + 79 \\)",
+        "D": "\\( 2 + 5 + 13 + 29 + 61 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0191",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{x^2 + 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( -\\frac{2x}{\\( x^2 + 1 \\ \\)^2} )",
+        "B": "\\( \\frac{2x}{\\( x^2 + 1 \\ \\)^2} )",
+        "C": "\\( -\\frac{2}{\\( x^2 + 1 \\ \\)^2} )",
+        "D": "\\( \\frac{2}{\\( x^2 + 1 \\ \\)^2} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0192",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^3 - 6x^2 + 11x - 6 = 0 \\) u\\sing the rational root theorem.",
+      "options": {
+        "A": "\\( x = 1 \\)",
+        "B": "\\( x = 2 \\)",
+        "C": "\\( x = 3 \\)",
+        "D": "\\( x = 6 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0193",
+      "type": "mcq",
+      "stem": "Find the sum of the infinite geometric series \\( sum_{n=1}^{infty} \\frac{1}{2^n} \\).",
+      "options": {
+        "A": "( 1 )",
+        "B": "\\( \\frac{1}{2} \\)",
+        "C": "\\( \\frac{1}{4} \\)",
+        "D": "\\( \\frac{1}{8} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0194",
+      "type": "mcq",
+      "stem": "A right triangle has a hypotenuse of length 10 cm and one leg of length 6 cm. Find the length of the other leg.",
+      "options": {
+        "A": "( 8 )",
+        "B": "( 6 )",
+        "C": "( 4 )",
+        "D": "( 2 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0195",
+      "type": "mcq",
+      "stem": "The mean of a set of numbers is 25. If the mean of a subset of these numbers is 30, and the subset has 4 more numbers than the original set, what is the mean of the original set?",
+      "options": {
+        "A": "20",
+        "B": "22",
+        "C": "24",
+        "D": "26"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0196",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "0",
+        "B": "-2",
+        "C": "-1",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0197",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\[ \\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{bmatrix} \\].",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0198",
+      "type": "mcq",
+      "stem": "A histogram is a graphical representation of a frequency distribution. What is the name of the type of graph that is used to show the relationship between two variables?",
+      "options": {
+        "A": "Scatter plot",
+        "B": "Bar chart",
+        "C": "Histogram",
+        "D": "Pie chart"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0199",
+      "type": "mcq",
+      "stem": "If \\( f(x) = 2x^2 + 3x - 1 \\), find \\( f&#039;(x) \\).",
+      "options": {
+        "A": "4x + 3",
+        "B": "2x + 1",
+        "C": "3x - 2",
+        "D": "x^2 + 2x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-mountain-top-pq-mathematics-bank-0200",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x - 5 &gt; 3 \\).",
+      "options": {
+        "A": "x > 4",
+        "B": "x",
+        "C": "x > 2",
+        "D": "x"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

@@ -1,0 +1,611 @@
+{
+  "code": "uni-aaua-cos101-bank",
+  "title": "AAUA COS 101 (Introduction to Computer Science) | Practice Bank",
+  "version": 1,
+  "questionCount": 50,
+  "totalMarks": 50,
+  "questions": [
+    {
+      "id": "uni-aaua-cos101-bank-0001",
+      "type": "mcq",
+      "stem": "Who is known as the father of computers?",
+      "options": {
+        "A": "Charles Babbage",
+        "B": "Alan Turing",
+        "C": "Bill Gates",
+        "D": "Steve Jobs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0002",
+      "type": "mcq",
+      "stem": "ENIAC belongs to which generation of computers?",
+      "options": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0003",
+      "type": "mcq",
+      "stem": "Which component is the brain of the computer?",
+      "options": {
+        "A": "CPU",
+        "B": "RAM",
+        "C": "Hard Disk",
+        "D": "Monitor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0004",
+      "type": "mcq",
+      "stem": "An example of an input device is:",
+      "options": {
+        "A": "Keyboard",
+        "B": "Monitor",
+        "C": "Printer",
+        "D": "Speaker"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0005",
+      "type": "mcq",
+      "stem": "An example of an output device is:",
+      "options": {
+        "A": "Printer",
+        "B": "Keyboard",
+        "C": "Mouse",
+        "D": "Scanner"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0006",
+      "type": "mcq",
+      "stem": "Which is a system software?",
+      "options": {
+        "A": "Operating System",
+        "B": "MS Word",
+        "C": "Photoshop",
+        "D": "Chrome"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0007",
+      "type": "mcq",
+      "stem": "Binary number system has base:",
+      "options": {
+        "A": "2",
+        "B": "8",
+        "C": "10",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0008",
+      "type": "mcq",
+      "stem": "Convert 1010₂ to decimal.",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "8",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0009",
+      "type": "mcq",
+      "stem": "WWW stands for:",
+      "options": {
+        "A": "World Wide Web",
+        "B": "Wide World Web",
+        "C": "Web World Wide",
+        "D": "World Web Wide"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0010",
+      "type": "mcq",
+      "stem": "RAM stands for:",
+      "options": {
+        "A": "Random Access Memory",
+        "B": "Read Access Memory",
+        "C": "Random Automatic Memory",
+        "D": "Read Automatic Memory"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0011",
+      "type": "mcq",
+      "stem": "Which generation used transistors?",
+      "options": {
+        "A": "Second",
+        "B": "First",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0012",
+      "type": "mcq",
+      "stem": "ROM stands for:",
+      "options": {
+        "A": "Read Only Memory",
+        "B": "Random Only Memory",
+        "C": "Read Open Memory",
+        "D": "Run Only Memory"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0013",
+      "type": "mcq",
+      "stem": "An example of application software is:",
+      "options": {
+        "A": "Microsoft Word",
+        "B": "Windows OS",
+        "C": "Linux",
+        "D": "BIOS"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0014",
+      "type": "mcq",
+      "stem": "The smallest unit of data in a computer is:",
+      "options": {
+        "A": "Bit",
+        "B": "Byte",
+        "C": "Kilobyte",
+        "D": "Nibble"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0015",
+      "type": "mcq",
+      "stem": "1 byte equals:",
+      "options": {
+        "A": "8 bits",
+        "B": "4 bits",
+        "C": "16 bits",
+        "D": "2 bits"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0016",
+      "type": "mcq",
+      "stem": "Which device is both input and output?",
+      "options": {
+        "A": "Touchscreen",
+        "B": "Keyboard",
+        "C": "Printer",
+        "D": "Monitor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0017",
+      "type": "mcq",
+      "stem": "USB stands for:",
+      "options": {
+        "A": "Universal Serial Bus",
+        "B": "United Serial Bus",
+        "C": "Universal System Bus",
+        "D": "Unified Serial Bus"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0018",
+      "type": "mcq",
+      "stem": "The hexadecimal system has base:",
+      "options": {
+        "A": "16",
+        "B": "8",
+        "C": "10",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0019",
+      "type": "mcq",
+      "stem": "Which is volatile memory?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Hard Disk",
+        "D": "SSD"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0020",
+      "type": "mcq",
+      "stem": "An operating system manages:",
+      "options": {
+        "A": "All of the above",
+        "B": "Memory",
+        "C": "Processes",
+        "D": "Files"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0021",
+      "type": "mcq",
+      "stem": "HTTP stands for:",
+      "options": {
+        "A": "HyperText Transfer Protocol",
+        "B": "High Text Transfer Protocol",
+        "C": "HyperText Transport Protocol",
+        "D": "High Transfer Text Protocol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0022",
+      "type": "mcq",
+      "stem": "Which is NOT a programming language?",
+      "options": {
+        "A": "HTML",
+        "B": "Python",
+        "C": "Java",
+        "D": "C++"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0023",
+      "type": "mcq",
+      "stem": "ALU stands for:",
+      "options": {
+        "A": "Arithmetic Logic Unit",
+        "B": "Automatic Logic Unit",
+        "C": "Arithmetic Linear Unit",
+        "D": "Automatic Linear Unit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0024",
+      "type": "mcq",
+      "stem": "Third generation computers used:",
+      "options": {
+        "A": "Integrated Circuits",
+        "B": "Vacuum Tubes",
+        "C": "Transistors",
+        "D": "Microprocessors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0025",
+      "type": "mcq",
+      "stem": "The octal number system has base:",
+      "options": {
+        "A": "8",
+        "B": "2",
+        "C": "10",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0026",
+      "type": "mcq",
+      "stem": "Which is a secondary storage device?",
+      "options": {
+        "A": "Hard Disk",
+        "B": "RAM",
+        "C": "Cache",
+        "D": "Register"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0027",
+      "type": "mcq",
+      "stem": "A scanner is an example of:",
+      "options": {
+        "A": "Input device",
+        "B": "Output device",
+        "C": "Storage device",
+        "D": "Processing device"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0028",
+      "type": "mcq",
+      "stem": "LAN stands for:",
+      "options": {
+        "A": "Local Area Network",
+        "B": "Large Area Network",
+        "C": "Long Area Network",
+        "D": "Linear Area Network"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0029",
+      "type": "mcq",
+      "stem": "Which protocol is used for sending emails?",
+      "options": {
+        "A": "SMTP",
+        "B": "HTTP",
+        "C": "FTP",
+        "D": "TCP"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0030",
+      "type": "mcq",
+      "stem": "CPU stands for:",
+      "options": {
+        "A": "Central Processing Unit",
+        "B": "Computer Personal Unit",
+        "C": "Central Program Unit",
+        "D": "Computer Processing Unit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0031",
+      "type": "mcq",
+      "stem": "Fourth generation computers use:",
+      "options": {
+        "A": "Microprocessors",
+        "B": "Vacuum Tubes",
+        "C": "Transistors",
+        "D": "ICs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0032",
+      "type": "mcq",
+      "stem": "A monitor is an example of:",
+      "options": {
+        "A": "Output device",
+        "B": "Input device",
+        "C": "Storage",
+        "D": "CPU"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0033",
+      "type": "mcq",
+      "stem": "Which is an open-source operating system?",
+      "options": {
+        "A": "Linux",
+        "B": "Windows",
+        "C": "macOS",
+        "D": "iOS"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0034",
+      "type": "mcq",
+      "stem": "ISP stands for:",
+      "options": {
+        "A": "Internet Service Provider",
+        "B": "Internet System Provider",
+        "C": "Internal Service Provider",
+        "D": "Internet Software Provider"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0035",
+      "type": "mcq",
+      "stem": "A byte can store:",
+      "options": {
+        "A": "One character",
+        "B": "One word",
+        "C": "One paragraph",
+        "D": "One page"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0036",
+      "type": "mcq",
+      "stem": "Which part of the CPU performs calculations?",
+      "options": {
+        "A": "ALU",
+        "B": "Control Unit",
+        "C": "Registers",
+        "D": "Cache"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0037",
+      "type": "mcq",
+      "stem": "The main function of the control unit is to:",
+      "options": {
+        "A": "Coordinate activities",
+        "B": "Store data",
+        "C": "Perform calculations",
+        "D": "Display output"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0038",
+      "type": "mcq",
+      "stem": "An IP address is used to:",
+      "options": {
+        "A": "Identify a device on a network",
+        "B": "Store files",
+        "C": "Process data",
+        "D": "Print documents"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0039",
+      "type": "mcq",
+      "stem": "A compiler translates:",
+      "options": {
+        "A": "High-level to machine code",
+        "B": "Machine to high-level",
+        "C": "Assembly to high-level",
+        "D": "Binary to octal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0040",
+      "type": "mcq",
+      "stem": "Which key combination copies selected text?",
+      "options": {
+        "A": "Ctrl + C",
+        "B": "Ctrl + V",
+        "C": "Ctrl + X",
+        "D": "Ctrl + Z"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0041",
+      "type": "mcq",
+      "stem": "SSD stands for:",
+      "options": {
+        "A": "Solid State Drive",
+        "B": "System Storage Device",
+        "C": "Serial State Drive",
+        "D": "Solid System Disk"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0042",
+      "type": "mcq",
+      "stem": "What does GUI stand for?",
+      "options": {
+        "A": "Graphical User Interface",
+        "B": "General User Interface",
+        "C": "Graphical Unified Interface",
+        "D": "General Unified Interface"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0043",
+      "type": "mcq",
+      "stem": "Cache memory is:",
+      "options": {
+        "A": "Very fast, small memory near CPU",
+        "B": "Slow, large storage",
+        "C": "Same as RAM",
+        "D": "Same as ROM"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0044",
+      "type": "mcq",
+      "stem": "Which is a search engine?",
+      "options": {
+        "A": "Google",
+        "B": "Windows",
+        "C": "Linux",
+        "D": "Python"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0045",
+      "type": "mcq",
+      "stem": "BIOS stands for:",
+      "options": {
+        "A": "Basic Input Output System",
+        "B": "Binary Input Output System",
+        "C": "Basic Internal Operating System",
+        "D": "Binary Internal Output System"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0046",
+      "type": "mcq",
+      "stem": "The process of starting a computer is called:",
+      "options": {
+        "A": "Booting",
+        "B": "Loading",
+        "C": "Processing",
+        "D": "Compiling"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0047",
+      "type": "mcq",
+      "stem": "A firewall is used for:",
+      "options": {
+        "A": "Network security",
+        "B": "Data storage",
+        "C": "Word processing",
+        "D": "Email"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0048",
+      "type": "mcq",
+      "stem": "Which cable type is fastest?",
+      "options": {
+        "A": "Fiber optic",
+        "B": "Coaxial",
+        "C": "Twisted pair",
+        "D": "USB"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0049",
+      "type": "mcq",
+      "stem": "Malware includes:",
+      "options": {
+        "A": "Viruses, worms, trojans",
+        "B": "Only viruses",
+        "C": "Only spam",
+        "D": "Hardware failures"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-cos101-bank-0050",
+      "type": "mcq",
+      "stem": "Cloud computing allows:",
+      "options": {
+        "A": "Access resources over internet",
+        "B": "Only local storage",
+        "C": "Only offline work",
+        "D": "Hardware repair"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

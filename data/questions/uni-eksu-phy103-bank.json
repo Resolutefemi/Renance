@@ -1,0 +1,852 @@
+{
+  "code": "uni-eksu-phy103-bank",
+  "title": "EKSU PHY 103 - Properties of Matter | Practice Bank",
+  "version": 1,
+  "questionCount": 70,
+  "totalMarks": 70,
+  "questions": [
+    {
+      "id": "uni-eksu-phy103-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following describes a situation where an object experiences an upward buoyant force equal to the weight of the fluid it displaces?",
+      "options": {
+        "A": "Pascal's Principle",
+        "B": "Bernoulli's Principle",
+        "C": "Archimedes' Principle",
+        "D": "Poiseuille's Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0002",
+      "type": "mcq",
+      "stem": "In crystal structures, what is a vacancy defect?",
+      "options": {
+        "A": "An atom occupying an interstitial site.",
+        "B": "A missing atom from its regular lattice position.",
+        "C": "An atom of a different element substituting a lattice atom.",
+        "D": "A line of missing atoms."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0003",
+      "type": "mcq",
+      "stem": "If a fluid is flowing through a pipe and its velocity increases, what can be inferred about its pressure, assuming no change in height and ideal fluid behavior?",
+      "options": {
+        "A": "Pressure increases proportionally.",
+        "B": "Pressure decreases.",
+        "C": "Pressure remains constant.",
+        "D": "Pressure fluctuates randomly."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0004",
+      "type": "mcq",
+      "stem": "The kinetic theory of gases postulates that gas molecules are in constant, random motion. What does this motion imply about the internal energy of an ideal gas?",
+      "options": {
+        "A": "Internal energy is solely due to intermolecular forces.",
+        "B": "Internal energy is directly proportional to the volume.",
+        "C": "Internal energy is primarily kinetic energy of molecular motion.",
+        "D": "Internal energy is dependent on the shape of the container."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following crystal structures is characterized by atoms at the corners and the center of the cube?",
+      "options": {
+        "A": "Face-Centered Cubic (FCC)",
+        "B": "Body-Centered Cubic (BCC)",
+        "C": "Hexagonal Close-Packed (HCP)",
+        "D": "Simple Cubic (SC)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0006",
+      "type": "mcq",
+      "stem": "When an object is submerged in a fluid, the upward force exerted by the fluid is known as:",
+      "options": {
+        "A": "Gravitational force",
+        "B": "Viscous force",
+        "C": "Buoyant force",
+        "D": "Surface tension"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0007",
+      "type": "mcq",
+      "stem": "The principle stating that pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid and the walls of the containing vessel is known as:",
+      "options": {
+        "A": "Archimedes' Principle",
+        "B": "Bernoulli's Principle",
+        "C": "Pascal's Principle",
+        "D": "Hooke's Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0008",
+      "type": "mcq",
+      "stem": "In the context of crystal defects, what is an interstitial defect?",
+      "options": {
+        "A": "A missing atom from its lattice site.",
+        "B": "A foreign atom occupying a lattice site.",
+        "C": "An atom located in a space between regular lattice positions.",
+        "D": "A dislocation along a line."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0009",
+      "type": "mcq",
+      "stem": "According to the kinetic theory of gases, the absolute temperature of a gas is a measure of:",
+      "options": {
+        "A": "The average potential energy of the molecules.",
+        "B": "The average speed of the molecules.",
+        "C": "The average translational kinetic energy of the molecules.",
+        "D": "The total mass of the gas."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following crystal structures has the highest packing efficiency?",
+      "options": {
+        "A": "Body-Centered Cubic (BCC)",
+        "B": "Face-Centered Cubic (FCC)",
+        "C": "Simple Cubic (SC)",
+        "D": "Hexagonal Close-Packed (HCP)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0011",
+      "type": "mcq",
+      "stem": "The ability of a fluid to resist flow is called:",
+      "options": {
+        "A": "Density",
+        "B": "Viscosity",
+        "C": "Surface tension",
+        "D": "Compressibility"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0012",
+      "type": "mcq",
+      "stem": "If a ship floats, it means that the weight of the ship is equal to:",
+      "options": {
+        "A": "The total weight of the water it displaces.",
+        "B": "The weight of the water at the bottom of the ship.",
+        "C": "The weight of the air displaced by the ship.",
+        "D": "The buoyant force acting on the ship's hull."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0013",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a postulate of the kinetic theory of gases?",
+      "options": {
+        "A": "Gas molecules are in constant random motion.",
+        "B": "The volume of gas molecules is negligible compared to the volume of the container.",
+        "C": "Intermolecular forces are significant and attractive.",
+        "D": "Collisions between molecules and with the container walls are perfectly elastic."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0014",
+      "type": "mcq",
+      "stem": "A point defect in a crystal lattice where an atom is missing from its normal position is called a:",
+      "options": {
+        "A": "Schottky defect",
+        "B": "Frenkel defect",
+        "C": "Edge dislocation",
+        "D": "Screw dislocation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0015",
+      "type": "mcq",
+      "stem": "The phenomenon where a liquid surface tends to contract to the smallest possible area is called:",
+      "options": {
+        "A": "Viscosity",
+        "B": "Capillarity",
+        "C": "Surface tension",
+        "D": "Adhesion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0016",
+      "type": "mcq",
+      "stem": "Bernoulli's equation relates pressure, velocity, and height in a fluid. For a horizontal pipe with decreasing velocity, what happens to the pressure?",
+      "options": {
+        "A": "It increases.",
+        "B": "It decreases.",
+        "C": "It remains constant.",
+        "D": "It fluctuates."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0017",
+      "type": "mcq",
+      "stem": "In the context of crystal structures, what does 'coordination number' refer to?",
+      "options": {
+        "A": "The number of unit cells in a crystal.",
+        "B": "The number of nearest neighbors an atom has.",
+        "C": "The total number of atoms in a unit cell.",
+        "D": "The distance between adjacent atoms."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0018",
+      "type": "mcq",
+      "stem": "Which principle is demonstrated by a hydraulic press?",
+      "options": {
+        "A": "Archimedes' Principle",
+        "B": "Bernoulli's Principle",
+        "C": "Pascal's Principle",
+        "D": "Principle of Conservation of Energy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0019",
+      "type": "mcq",
+      "stem": "The average distance traveled by a molecule between successive collisions in a gas is known as the:",
+      "options": {
+        "A": "Mean free path",
+        "B": "Mean collision time",
+        "C": "Molecular diameter",
+        "D": "Root-mean-square speed"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0020",
+      "type": "mcq",
+      "stem": "If the pressure of an ideal gas is doubled while its volume is kept constant, what happens to its absolute temperature?",
+      "options": {
+        "A": "It is halved.",
+        "B": "It remains the same.",
+        "C": "It is doubled.",
+        "D": "It is quadrupled."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0021",
+      "type": "mcq",
+      "stem": "Which of the following is a type of line defect in a crystal?",
+      "options": {
+        "A": "Vacancy",
+        "B": "Interstitial",
+        "C": "Dislocation",
+        "D": "Impurity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0022",
+      "type": "mcq",
+      "stem": "The rate of flow of a fluid through a pipe of uniform cross-section is determined by Poiseuille's Law. What is the relationship between flow rate and the radius of the pipe?",
+      "options": {
+        "A": "Flow rate is directly proportional to the radius.",
+        "B": "Flow rate is inversely proportional to the radius.",
+        "C": "Flow rate is proportional to the fourth power of the radius.",
+        "D": "Flow rate is proportional to the square root of the radius."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0023",
+      "type": "mcq",
+      "stem": "If an object floats, the buoyant force acting on it is equal to:",
+      "options": {
+        "A": "The weight of the object.",
+        "B": "The weight of the fluid displaced.",
+        "C": "The density of the object.",
+        "D": "The density of the fluid."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0024",
+      "type": "mcq",
+      "stem": "The kinetic theory of gases assumes that gas molecules have:",
+      "options": {
+        "A": "Significant attractive forces between them.",
+        "B": "A finite volume that is comparable to the container volume.",
+        "C": "Perfectly elastic collisions.",
+        "D": "Rotational and vibrational kinetic energy as the primary form of energy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0025",
+      "type": "mcq",
+      "stem": "In an FCC crystal structure, how many atoms are there per unit cell?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0026",
+      "type": "mcq",
+      "stem": "The pressure at a depth 'h' in a liquid of density 'ρ' is given by P = ρgh. This formula is derived from which principle?",
+      "options": {
+        "A": "Bernoulli's Principle",
+        "B": "Pascal's Principle",
+        "C": "Archimedes' Principle",
+        "D": "Principle of Hydrostatic Pressure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0027",
+      "type": "mcq",
+      "stem": "A Frenkel defect in an ionic crystal involves:",
+      "options": {
+        "A": "A missing ion from the lattice.",
+        "B": "A pair of cation and anion vacancies.",
+        "C": "An ion displaced from its normal lattice site to an interstitial position.",
+        "D": "An impurity ion substituting a lattice ion."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0028",
+      "type": "mcq",
+      "stem": "If the temperature of an ideal gas is increased at constant volume, its pressure will:",
+      "options": {
+        "A": "Decrease",
+        "B": "Increase",
+        "C": "Remain unchanged",
+        "D": "Fluctuates"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0029",
+      "type": "mcq",
+      "stem": "The phenomenon of a liquid rising or falling in a narrow tube due to surface tension and adhesion is called:",
+      "options": {
+        "A": "Osmosis",
+        "B": "Diffusion",
+        "C": "Capillarity",
+        "D": "Evaporation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0030",
+      "type": "mcq",
+      "stem": "In the context of fluid dynamics, the continuity equation (derived from conservation of mass) states that for an incompressible fluid:",
+      "options": {
+        "A": "The product of pressure and velocity is constant.",
+        "B": "The product of area and velocity is constant.",
+        "C": "The product of density and velocity is constant.",
+        "D": "The sum of pressure, kinetic energy per unit volume, and potential energy per unit volume is constant."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0031",
+      "type": "mcq",
+      "stem": "Which of the following crystal structures has a coordination number of 12?",
+      "options": {
+        "A": "Simple Cubic (SC)",
+        "B": "Body-Centered Cubic (BCC)",
+        "C": "Face-Centered Cubic (FCC)",
+        "D": "Diamond Cubic"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0032",
+      "type": "mcq",
+      "stem": "The principle that states that the buoyant force on an object submerged in a fluid is equal to the weight of the fluid displaced by the object is known as:",
+      "options": {
+        "A": "Pascal's Principle",
+        "B": "Bernoulli's Principle",
+        "C": "Archimedes' Principle",
+        "D": "Torricelli's Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0033",
+      "type": "mcq",
+      "stem": "According to the kinetic theory of gases, what is the relationship between the absolute temperature of an ideal gas and the average kinetic energy of its molecules?",
+      "options": {
+        "A": "Average KE is inversely proportional to T.",
+        "B": "Average KE is directly proportional to T.",
+        "C": "Average KE is proportional to T^2.",
+        "D": "Average KE is independent of T."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0034",
+      "type": "mcq",
+      "stem": "A solid solution where a foreign atom occupies a regular lattice site is called a:",
+      "options": {
+        "A": "Vacancy defect",
+        "B": "Interstitial defect",
+        "C": "Substitutional impurity",
+        "D": "Frenkel defect"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0035",
+      "type": "mcq",
+      "stem": "The pressure exerted by a fluid at rest is independent of the shape of the container. This statement is a consequence of:",
+      "options": {
+        "A": "Bernoulli's Principle",
+        "B": "Pascal's Principle",
+        "C": "Archimedes' Principle",
+        "D": "Surface tension"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0036",
+      "type": "mcq",
+      "stem": "If the mean free path of gas molecules decreases, it implies that the molecules are:",
+      "options": {
+        "A": "Moving faster.",
+        "B": "Colliding more frequently.",
+        "C": "Occupying less volume.",
+        "D": "Experiencing weaker intermolecular forces."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0037",
+      "type": "mcq",
+      "stem": "In a BCC crystal structure, what is the relationship between the atomic radius (r) and the lattice constant (a)?",
+      "options": {
+        "A": "a = 2r",
+        "B": "a = 4r/√3",
+        "C": "a = 4r",
+        "D": "a = 2r√2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0038",
+      "type": "mcq",
+      "stem": "The flow of a viscous fluid through a pipe is described by Poiseuille's Law. If the pressure difference across the pipe is doubled, what happens to the flow rate, assuming other factors remain constant?",
+      "options": {
+        "A": "It is halved.",
+        "B": "It remains the same.",
+        "C": "It is doubled.",
+        "D": "It is quadrupled."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of an ideal gas?",
+      "options": {
+        "A": "Significant intermolecular attractive forces.",
+        "B": "Molecules with large, finite volumes.",
+        "C": "Perfectly inelastic collisions.",
+        "D": "Negligible intermolecular forces and molecular volume."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0040",
+      "type": "mcq",
+      "stem": "A crystal defect that involves a missing atom from its lattice site is known as a:",
+      "options": {
+        "A": "Dislocation",
+        "B": "Interstitial",
+        "C": "Vacancy",
+        "D": "Impurity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0041",
+      "type": "mcq",
+      "stem": "The principle that explains why a boat floats on water is:",
+      "options": {
+        "A": "Bernoulli's Principle",
+        "B": "Pascal's Principle",
+        "C": "Archimedes' Principle",
+        "D": "Surface Tension"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0042",
+      "type": "mcq",
+      "stem": "If the volume of an ideal gas is increased at constant temperature, its pressure will:",
+      "options": {
+        "A": "Increase",
+        "B": "Decrease",
+        "C": "Remain unchanged",
+        "D": "Fluctuates"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0043",
+      "type": "mcq",
+      "stem": "In the kinetic theory of gases, the pressure exerted by a gas is attributed to:",
+      "options": {
+        "A": "The attractive forces between molecules.",
+        "B": "The repulsive forces between molecules.",
+        "C": "The collisions of molecules with the container walls.",
+        "D": "The potential energy of the molecules."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0044",
+      "type": "mcq",
+      "stem": "Which of the following crystal structures has the highest atomic packing factor (APF)?",
+      "options": {
+        "A": "Body-Centered Cubic (BCC)",
+        "B": "Simple Cubic (SC)",
+        "C": "Face-Centered Cubic (FCC)",
+        "D": "Diamond Cubic"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0045",
+      "type": "mcq",
+      "stem": "The rate at which a fluid flows through a narrow tube is directly proportional to the pressure gradient and inversely proportional to the fluid's viscosity. This statement describes:",
+      "options": {
+        "A": "Bernoulli's Equation",
+        "B": "Archimedes' Principle",
+        "C": "Poiseuille's Law",
+        "D": "Torricelli's Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0046",
+      "type": "mcq",
+      "stem": "What is the primary consequence of a vacancy defect in a crystal lattice?",
+      "options": {
+        "A": "Increased electrical conductivity.",
+        "B": "Reduced mechanical strength.",
+        "C": "Altered density.",
+        "D": "All of the above."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0047",
+      "type": "mcq",
+      "stem": "If a fluid is flowing such that its velocity is high, Bernoulli's principle suggests that its pressure will be:",
+      "options": {
+        "A": "High",
+        "B": "Low",
+        "C": "Constant",
+        "D": "Variable"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0048",
+      "type": "mcq",
+      "stem": "The average kinetic energy of gas molecules is directly proportional to the absolute temperature. This is a key postulate of the:",
+      "options": {
+        "A": "Law of Conservation of Energy",
+        "B": "Kinetic Theory of Gases",
+        "C": "Newton's Laws of Motion",
+        "D": "Thermodynamics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0049",
+      "type": "mcq",
+      "stem": "Which crystal structure has atoms at the corners and the center of each face of the cube?",
+      "options": {
+        "A": "Body-Centered Cubic (BCC)",
+        "B": "Face-Centered Cubic (FCC)",
+        "C": "Simple Cubic (SC)",
+        "D": "Hexagonal Close-Packed (HCP)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0050",
+      "type": "mcq",
+      "stem": "A hydraulic lift uses Pascal's Principle to multiply force. If the input piston has a smaller area than the output piston, the output force will be:",
+      "options": {
+        "A": "Smaller than the input force.",
+        "B": "Equal to the input force.",
+        "C": "Larger than the input force.",
+        "D": "Dependent on the fluid's viscosity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0051",
+      "type": "mcq",
+      "stem": "The mean free path of molecules in a gas is influenced by:",
+      "options": {
+        "A": "Temperature and pressure.",
+        "B": "Molecular diameter and number density.",
+        "C": "Both A and B.",
+        "D": "Neither A nor B."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0052",
+      "type": "mcq",
+      "stem": "In the context of crystal structures, what is the unit cell?",
+      "options": {
+        "A": "The entire crystal lattice.",
+        "B": "The smallest repeating unit that forms the crystal structure.",
+        "C": "A type of crystal defect.",
+        "D": "The distance between atoms."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0053",
+      "type": "mcq",
+      "stem": "If an object is denser than the fluid it is placed in, it will:",
+      "options": {
+        "A": "Float.",
+        "B": "Sink.",
+        "C": "Remain suspended.",
+        "D": "Partially submerge."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0054",
+      "type": "mcq",
+      "stem": "The statement \"Pressure applied to an enclosed fluid is transmitted undiminished to every portion of the fluid and the walls of the containing vessel\" is:",
+      "options": {
+        "A": "Bernoulli's Principle",
+        "B": "Archimedes' Principle",
+        "C": "Pascal's Principle",
+        "D": "Poiseuille's Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0055",
+      "type": "mcq",
+      "stem": "Which of the following is a consequence of the elastic collisions assumed in the kinetic theory of gases?",
+      "options": {
+        "A": "The total momentum of the gas molecules changes over time.",
+        "B": "The total kinetic energy of the gas molecules remains constant.",
+        "C": "The total energy of the gas molecules decreases.",
+        "D": "The temperature of the gas increases due to collisions."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0056",
+      "type": "mcq",
+      "stem": "An HCP crystal structure is characterized by:",
+      "options": {
+        "A": "Cubic symmetry.",
+        "B": "A hexagonal prism as the unit cell.",
+        "C": "Atoms only at the corners of the unit cell.",
+        "D": "A coordination number of 8."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0057",
+      "type": "mcq",
+      "stem": "Surface tension in liquids arises due to:",
+      "options": {
+        "A": "The attractive forces between liquid molecules and the container.",
+        "B": "The repulsive forces between liquid molecules.",
+        "C": "The net inward pull experienced by surface molecules.",
+        "D": "The evaporation of liquid molecules."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0058",
+      "type": "mcq",
+      "stem": "If the temperature of an ideal gas is decreased at constant volume, its pressure will:",
+      "options": {
+        "A": "Increase",
+        "B": "Decrease",
+        "C": "Remain unchanged",
+        "D": "Fluctuates"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0059",
+      "type": "mcq",
+      "stem": "The derivation of Bernoulli's equation relies on the principle of:",
+      "options": {
+        "A": "Conservation of momentum.",
+        "B": "Conservation of mass.",
+        "C": "Conservation of energy.",
+        "D": "Conservation of charge."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following is a point defect in a crystal lattice?",
+      "options": {
+        "A": "Edge dislocation",
+        "B": "Screw dislocation",
+        "C": "Interstitial impurity",
+        "D": "Grain boundary"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0061",
+      "type": "mcq",
+      "stem": "If the density of a fluid increases, the buoyant force on a submerged object of the same volume will:",
+      "options": {
+        "A": "Decrease",
+        "B": "Increase",
+        "C": "Remain the same",
+        "D": "Become zero"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0062",
+      "type": "mcq",
+      "stem": "In the kinetic theory of gases, the average translational kinetic energy of a molecule is given by:",
+      "options": {
+        "A": "(1/2)mv^2",
+        "B": "kT",
+        "C": "(3/2)kT",
+        "D": "PV/N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0063",
+      "type": "mcq",
+      "stem": "The packing fraction of a BCC crystal structure is approximately:",
+      "options": {
+        "A": "0.52",
+        "B": "0.68",
+        "C": "0.74",
+        "D": "0.82"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0064",
+      "type": "mcq",
+      "stem": "The viscosity of a fluid is a measure of its:",
+      "options": {
+        "A": "Compressibility.",
+        "B": "Resistance to flow.",
+        "C": "Ability to spread.",
+        "D": "Surface tension."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0065",
+      "type": "mcq",
+      "stem": "If the pressure of an ideal gas is kept constant and its volume is doubled, what happens to its absolute temperature?",
+      "options": {
+        "A": "It is halved.",
+        "B": "It remains the same.",
+        "C": "It is doubled.",
+        "D": "It is quadrupled."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0066",
+      "type": "mcq",
+      "stem": "A line defect in a crystal lattice is known as a:",
+      "options": {
+        "A": "Vacancy",
+        "B": "Interstitial",
+        "C": "Dislocation",
+        "D": "Impurity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0067",
+      "type": "mcq",
+      "stem": "According to Archimedes' Principle, an object will float if its weight is:",
+      "options": {
+        "A": "Greater than the buoyant force.",
+        "B": "Less than the buoyant force.",
+        "C": "Equal to the buoyant force.",
+        "D": "Equal to the weight of the fluid it displaces."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0068",
+      "type": "mcq",
+      "stem": "If the mean free path of gas molecules is very large, it suggests that the gas is:",
+      "options": {
+        "A": "At high pressure and low temperature.",
+        "B": "At low pressure and high temperature.",
+        "C": "At high pressure and high temperature.",
+        "D": "At low pressure and low temperature."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0069",
+      "type": "mcq",
+      "stem": "The phenomenon of a liquid supporting a weight greater than what would be expected based on its density alone is often related to:",
+      "options": {
+        "A": "Viscosity",
+        "B": "Surface tension",
+        "C": "Capillarity",
+        "D": "Bernoulli's effect"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy103-bank-0070",
+      "type": "mcq",
+      "stem": "In the derivation of Poiseuille's Law, the flow rate is assumed to be:",
+      "options": {
+        "A": "Turbulent",
+        "B": "Laminar",
+        "C": "Compressible",
+        "D": "Non-Newtonian"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 70,
+  "category": "university",
+  "body": "University Modules"
+}

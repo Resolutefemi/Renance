@@ -1,0 +1,1212 @@
+{
+  "code": "uni-eksu-phy102-bank",
+  "title": "EKSU Phy102 - General physics II | Practice Bank",
+  "version": 1,
+  "questionCount": 100,
+  "totalMarks": 100,
+  "questions": [
+    {
+      "id": "uni-eksu-phy102-bank-0001",
+      "type": "mcq",
+      "stem": "The SI unit of electric charge is the:",
+      "options": {
+        "A": "Ampere",
+        "B": "Coulomb",
+        "C": "Volt",
+        "D": "Ohm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0002",
+      "type": "mcq",
+      "stem": "According to Coulomb's Law, the electrostatic force between two point charges is inversely proportional to:",
+      "options": {
+        "A": "The product of their charges",
+        "B": "The distance between them",
+        "C": "The square of the distance between them",
+        "D": "The permittivity of the medium"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0003",
+      "type": "mcq",
+      "stem": "An electric field line indicates the direction of the force that would act on a:",
+      "options": {
+        "A": "Negative test charge",
+        "B": "Positive test charge",
+        "C": "Neutral particle",
+        "D": "Magnetic dipole"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0004",
+      "type": "mcq",
+      "stem": "The electric flux through a closed Gaussian surface is directly proportional to:",
+      "options": {
+        "A": "The net charge enclosed by the surface",
+        "B": "The volume of the surface",
+        "C": "The external electric field",
+        "D": "The surface area of the conductor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0005",
+      "type": "mcq",
+      "stem": "Under electrostatic conditions, the electric field inside a solid conducting sphere is:",
+      "options": {
+        "A": "Uniform and non-zero",
+        "B": "Maximum at the center",
+        "C": "Zero everywhere inside",
+        "D": "Inversely proportional to the radius"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0006",
+      "type": "mcq",
+      "stem": "Electric potential is defined as the:",
+      "options": {
+        "A": "Electric force per unit charge",
+        "B": "Electric field per unit area",
+        "C": "Potential energy per unit charge",
+        "D": "Work done per unit time"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0007",
+      "type": "mcq",
+      "stem": "The SI unit of electric potential difference is the:",
+      "options": {
+        "A": "Joule",
+        "B": "Newton",
+        "C": "Coulomb",
+        "D": "Volt"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0008",
+      "type": "mcq",
+      "stem": "The work done in moving a charge along an equipotential surface is:",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Zero",
+        "D": "Dependent on the path taken"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0009",
+      "type": "mcq",
+      "stem": "Capacitance is defined as the ratio of:",
+      "options": {
+        "A": "Charge to potential difference",
+        "B": "Potential difference to charge",
+        "C": "Current to voltage",
+        "D": "Electric field to distance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0010",
+      "type": "mcq",
+      "stem": "The equivalent capacitance of three $6\\,\\mu\\text{F}$ capacitors connected in series is:",
+      "options": {
+        "A": "$18\\,\\mu\\text{F}$",
+        "B": "$2\\,\\mu\\text{F}$",
+        "C": "$0.5\\,\\mu\\text{F}$",
+        "D": "$12\\,\\mu\\text{F}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0011",
+      "type": "mcq",
+      "stem": "When a dielectric material is inserted between the plates of an isolated charged parallel-plate capacitor, its capacitance:",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains the same",
+        "D": "Drops to zero"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0012",
+      "type": "mcq",
+      "stem": "Electric current is defined as the:",
+      "options": {
+        "A": "Total charge in a circuit",
+        "B": "Rate of flow of electric charge",
+        "C": "Potential difference per unit resistance",
+        "D": "Velocity of electrons"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0013",
+      "type": "mcq",
+      "stem": "The drift velocity of electrons in a typical copper wire carrying a normal current is on the order of:",
+      "options": {
+        "A": "Speed of light",
+        "B": "Meters per second",
+        "C": "Kilometers per hour",
+        "D": "Millimeters per second"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0014",
+      "type": "mcq",
+      "stem": "Ohm's law states that the current through a conductor is directly proportional to the applied voltage, provided that:",
+      "options": {
+        "A": "The current remains constant",
+        "B": "The physical conditions like temperature remain constant",
+        "C": "The resistance is zero",
+        "D": "The circuit is in parallel"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0015",
+      "type": "mcq",
+      "stem": "If the length of a uniform wire is doubled and its cross-sectional area is halved, its resistance will:",
+      "options": {
+        "A": "Increase by a factor of 4",
+        "B": "Decrease by a factor of 4",
+        "C": "Remain the same",
+        "D": "Double"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0016",
+      "type": "mcq",
+      "stem": "The resistivity of a material depends primarily on:",
+      "options": {
+        "A": "Its length",
+        "B": "Its cross-sectional area",
+        "C": "Its mass",
+        "D": "Its nature and temperature"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0017",
+      "type": "mcq",
+      "stem": "Electrical power can be calculated using the formula:",
+      "options": {
+        "A": "$P = I^2/R$",
+        "B": "$P = V^2 \\cdot R$",
+        "C": "$P = V \\cdot I$",
+        "D": "$P = Q/t$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0018",
+      "type": "mcq",
+      "stem": "The total resistance of four $10\\,\\Omega$ resistors connected in parallel is:",
+      "options": {
+        "A": "$40\\,\\Omega$",
+        "B": "$10\\,\\Omega$",
+        "C": "$2.5\\,\\Omega$",
+        "D": "$0.4\\,\\Omega$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0019",
+      "type": "mcq",
+      "stem": "Kirchhoff's Current Law (Junction Rule) is a consequence of the conservation of:",
+      "options": {
+        "A": "Energy",
+        "B": "Momentum",
+        "C": "Mass",
+        "D": "Charge"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0020",
+      "type": "mcq",
+      "stem": "Kirchhoff's Voltage Law (Loop Rule) is a consequence of the conservation of:",
+      "options": {
+        "A": "Charge",
+        "B": "Energy",
+        "C": "Current",
+        "D": "Magnetic flux"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0021",
+      "type": "mcq",
+      "stem": "The terminal voltage of a discharging battery is:",
+      "options": {
+        "A": "Greater than its EMF",
+        "B": "Less than its EMF",
+        "C": "Equal to its EMF",
+        "D": "Independent of internal resistance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0022",
+      "type": "mcq",
+      "stem": "In an RC circuit, the time constant $\\tau$ is given by:",
+      "options": {
+        "A": "$R/C$",
+        "B": "$C/R$",
+        "C": "$RC$",
+        "D": "$1/(RC)$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0023",
+      "type": "mcq",
+      "stem": "An ideal ammeter should have an internal resistance of:",
+      "options": {
+        "A": "Infinity",
+        "B": "One Ohm",
+        "C": "Zero",
+        "D": "Negative value"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0024",
+      "type": "mcq",
+      "stem": "An ideal voltmeter should have an internal resistance of:",
+      "options": {
+        "A": "Zero",
+        "B": "Infinity",
+        "C": "One Ohm",
+        "D": "Variable value"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0025",
+      "type": "mcq",
+      "stem": "Magnetic field lines around a straight current-carrying wire form:",
+      "options": {
+        "A": "Straight lines parallel to the wire",
+        "B": "Concentric circles around the wire",
+        "C": "Radial lines pointing outward",
+        "D": "Radial lines pointing inward"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0026",
+      "type": "mcq",
+      "stem": "The SI unit of magnetic flux density (Magnetic field) is the:",
+      "options": {
+        "A": "Weber",
+        "B": "Tesla",
+        "C": "Henry",
+        "D": "Farad"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0027",
+      "type": "mcq",
+      "stem": "The magnetic force on a moving charge is zero if the charge moves:",
+      "options": {
+        "A": "Perpendicular to the magnetic field",
+        "B": "At an angle of $45^\\circ$ to the field",
+        "C": "Parallel or anti-parallel to the magnetic field",
+        "D": "With a very high velocity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0028",
+      "type": "mcq",
+      "stem": "The work done by a steady magnetic field on a moving charged particle is:",
+      "options": {
+        "A": "Maximum when moving perpendicularly",
+        "B": "Proportional to its velocity",
+        "C": "Always zero",
+        "D": "Equal to its kinetic energy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0029",
+      "type": "mcq",
+      "stem": "When a charged particle enters a uniform magnetic field perpendicularly, its path is a:",
+      "options": {
+        "A": "Straight line",
+        "B": "Parabola",
+        "C": "Circle",
+        "D": "Helix"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0030",
+      "type": "mcq",
+      "stem": "Two parallel wires carrying currents in the same direction will:",
+      "options": {
+        "A": "Attract each other",
+        "B": "Repel each other",
+        "C": "Experience no force",
+        "D": "Rotate until they are perpendicular"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0031",
+      "type": "mcq",
+      "stem": "The Biot-Savart law is used to determine the:",
+      "options": {
+        "A": "Electric field due to a point charge",
+        "B": "Magnetic field due to a current element",
+        "C": "Electromotive force in a coil",
+        "D": "Capacitance of a configuration"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0032",
+      "type": "mcq",
+      "stem": "Ampere's Law relates the magnetic field along a closed loop to the:",
+      "options": {
+        "A": "Electric flux through the loop",
+        "B": "Net current enclosed by the loop",
+        "C": "Rate of change of magnetic flux",
+        "D": "Total charge enclosed"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0033",
+      "type": "mcq",
+      "stem": "The magnetic field at the center of a long ideal solenoid is:",
+      "options": {
+        "A": "Zero",
+        "B": "Non-uniform",
+        "C": "Uniform and strong",
+        "D": "Radial"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0034",
+      "type": "mcq",
+      "stem": "The phenomenon of electromagnetic induction was discovered by:",
+      "options": {
+        "A": "Isaac Newton",
+        "B": "Michael Faraday",
+        "C": "James Clerk Maxwell",
+        "D": "Heinrich Hertz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0035",
+      "type": "mcq",
+      "stem": "Faraday's Law states that the induced EMF is proportional to the:",
+      "options": {
+        "A": "Magnetic flux",
+        "B": "Rate of change of magnetic flux",
+        "C": "Area of the loop",
+        "D": "Strength of the magnetic field"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0036",
+      "type": "mcq",
+      "stem": "Lenz's Law is a specific application of the principle of conservation of:",
+      "options": {
+        "A": "Charge",
+        "B": "Mass",
+        "C": "Energy",
+        "D": "Momentum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0037",
+      "type": "mcq",
+      "stem": "Motional EMF is produced when a conductor moves through a:",
+      "options": {
+        "A": "Vacuum",
+        "B": "Uniform electric field",
+        "C": "Magnetic field",
+        "D": "Gravitational field"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0038",
+      "type": "mcq",
+      "stem": "Eddy currents are undesirable in transformer cores because they:",
+      "options": {
+        "A": "Increase the magnetic flux",
+        "B": "Cause energy loss in the form of heat",
+        "C": "Decrease the weight of the core",
+        "D": "Increase the primary voltage"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0039",
+      "type": "mcq",
+      "stem": "To reduce eddy current losses, transformer cores are usually:",
+      "options": {
+        "A": "Made of solid copper",
+        "B": "Laminated",
+        "C": "Made of non-magnetic materials",
+        "D": "Cooled with liquid nitrogen"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0040",
+      "type": "mcq",
+      "stem": "The SI unit of inductance is the:",
+      "options": {
+        "A": "Weber",
+        "B": "Tesla",
+        "C": "Farad",
+        "D": "Henry"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0041",
+      "type": "mcq",
+      "stem": "The energy stored in an inductor carrying a current $I$ is proportional to:",
+      "options": {
+        "A": "$I$",
+        "B": "$I^2$",
+        "C": "$1/I$",
+        "D": "$1/I^2$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0042",
+      "type": "mcq",
+      "stem": "A step-up transformer increases the:",
+      "options": {
+        "A": "Power",
+        "B": "Current",
+        "C": "Voltage",
+        "D": "Frequency"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0043",
+      "type": "mcq",
+      "stem": "In a purely resistive AC circuit, the voltage and current are:",
+      "options": {
+        "A": "Out of phase by $90^\\circ$",
+        "B": "Out of phase by $180^\\circ$",
+        "C": "In phase",
+        "D": "Out of phase by $45^\\circ$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0044",
+      "type": "mcq",
+      "stem": "In a purely capacitive AC circuit, the current:",
+      "options": {
+        "A": "Leads the voltage by $90^\\circ$",
+        "B": "Lags the voltage by $90^\\circ$",
+        "C": "Is in phase with the voltage",
+        "D": "Leads the voltage by $180^\\circ$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0045",
+      "type": "mcq",
+      "stem": "In a purely inductive AC circuit, the current:",
+      "options": {
+        "A": "Leads the voltage by $90^\\circ$",
+        "B": "Lags the voltage by $90^\\circ$",
+        "C": "Is in phase with the voltage",
+        "D": "Lags the voltage by $45^\\circ$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0046",
+      "type": "mcq",
+      "stem": "The opposition to the flow of alternating current caused by an inductor is called:",
+      "options": {
+        "A": "Resistance",
+        "B": "Capacitive reactance",
+        "C": "Inductive reactance",
+        "D": "Conductance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0047",
+      "type": "mcq",
+      "stem": "Inductive reactance $X_L$ is given by the formula:",
+      "options": {
+        "A": "$1/(\\omega L)$",
+        "B": "$\\omega L$",
+        "C": "$\\omega/L$",
+        "D": "$L/\\omega$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0048",
+      "type": "mcq",
+      "stem": "Capacitive reactance $X_C$ is given by the formula:",
+      "options": {
+        "A": "$\\omega C$",
+        "B": "$C/\\omega$",
+        "C": "$1/(\\omega C)$",
+        "D": "$\\omega/C$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0049",
+      "type": "mcq",
+      "stem": "The total opposition to alternating current in an RLC circuit is called:",
+      "options": {
+        "A": "Total Resistance",
+        "B": "Reactance",
+        "C": "Admittance",
+        "D": "Impedance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0050",
+      "type": "mcq",
+      "stem": "Resonance occurs in a series RLC circuit when:",
+      "options": {
+        "A": "The resistance is zero",
+        "B": "Inductive reactance equals capacitive reactance",
+        "C": "The frequency is zero",
+        "D": "The impedance is maximum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0051",
+      "type": "mcq",
+      "stem": "At the resonant frequency of a series RLC circuit, the impedance is:",
+      "options": {
+        "A": "Maximum",
+        "B": "Zero",
+        "C": "Equal to the resistance",
+        "D": "Purely reactive"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0052",
+      "type": "mcq",
+      "stem": "The RMS (Root Mean Square) value of an alternating voltage $V(t) = V_0 \\sin(\\omega t)$ is:",
+      "options": {
+        "A": "$V_0/2$",
+        "B": "$V_0/\\sqrt{2}$",
+        "C": "$\\sqrt{2} V_0$",
+        "D": "$2 V_0 / \\pi$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0053",
+      "type": "mcq",
+      "stem": "Maxwell's addition to Ampere's law involved the concept of:",
+      "options": {
+        "A": "Eddy currents",
+        "B": "Displacement current",
+        "C": "Motional EMF",
+        "D": "Magnetic monopoles"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0054",
+      "type": "mcq",
+      "stem": "Electromagnetic waves are produced by:",
+      "options": {
+        "A": "Static charges",
+        "B": "Charges moving with constant velocity",
+        "C": "Accelerating charges",
+        "D": "Steady direct currents"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0055",
+      "type": "mcq",
+      "stem": "In an electromagnetic wave in a vacuum, the electric and magnetic fields are:",
+      "options": {
+        "A": "Parallel to each other",
+        "B": "Perpendicular to each other and to the direction of propagation",
+        "C": "Opposite in direction",
+        "D": "Randomly oriented"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0056",
+      "type": "mcq",
+      "stem": "The speed of electromagnetic waves in a vacuum is approximately:",
+      "options": {
+        "A": "$3 \\times 10^5\\,\\text{m/s}$",
+        "B": "$3 \\times 10^6\\,\\text{m/s}$",
+        "C": "$3 \\times 10^8\\,\\text{m/s}$",
+        "D": "$3 \\times 10^{10}\\,\\text{m/s}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following types of electromagnetic radiation has the highest frequency?",
+      "options": {
+        "A": "Radio waves",
+        "B": "Visible light",
+        "C": "X-rays",
+        "D": "Gamma rays"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0058",
+      "type": "mcq",
+      "stem": "Which of the following types of electromagnetic radiation has the longest wavelength?",
+      "options": {
+        "A": "Radio waves",
+        "B": "Microwaves",
+        "C": "Ultraviolet",
+        "D": "Infrared"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0059",
+      "type": "mcq",
+      "stem": "The rate of energy transport per unit area by an electromagnetic wave is described by the:",
+      "options": {
+        "A": "Poynting vector",
+        "B": "Maxwell vector",
+        "C": "Faraday flux",
+        "D": "Gauss vector"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0060",
+      "type": "mcq",
+      "stem": "Gauss's Law for Magnetism states that the net magnetic flux through any closed surface is:",
+      "options": {
+        "A": "Proportional to the enclosed current",
+        "B": "Zero",
+        "C": "Proportional to the enclosed mass",
+        "D": "Infinite"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0061",
+      "type": "mcq",
+      "stem": "The fact that the net magnetic flux through a closed surface is always zero implies that:",
+      "options": {
+        "A": "Magnetic fields do not exist",
+        "B": "Magnetic monopoles do not exist",
+        "C": "Magnetic poles always attract",
+        "D": "Earth has no magnetic field"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0062",
+      "type": "mcq",
+      "stem": "Ferromagnetic materials are characterized by:",
+      "options": {
+        "A": "Weak repulsion to magnetic fields",
+        "B": "Weak attraction to magnetic fields",
+        "C": "Strong attraction to magnetic fields",
+        "D": "No response to magnetic fields"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0063",
+      "type": "mcq",
+      "stem": "Above the Curie temperature, a ferromagnetic material becomes:",
+      "options": {
+        "A": "Superconducting",
+        "B": "Diamagnetic",
+        "C": "Paramagnetic",
+        "D": "An electrical insulator"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0064",
+      "type": "mcq",
+      "stem": "The material property that describes how easily a substance can become magnetized is called:",
+      "options": {
+        "A": "Permittivity",
+        "B": "Resistivity",
+        "C": "Conductivity",
+        "D": "Magnetic susceptibility"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0065",
+      "type": "mcq",
+      "stem": "Materials that exhibit a weak repulsion to external magnetic fields are known as:",
+      "options": {
+        "A": "Ferromagnetic",
+        "B": "Paramagnetic",
+        "C": "Diamagnetic",
+        "D": "Non-magnetic"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0066",
+      "type": "mcq",
+      "stem": "The equivalent resistance of an $8\\,\\Omega$ and a $4\\,\\Omega$ resistor in series is:",
+      "options": {
+        "A": "$2\\,\\Omega$",
+        "B": "$4\\,\\Omega$",
+        "C": "$12\\,\\Omega$",
+        "D": "$32\\,\\Omega$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0067",
+      "type": "mcq",
+      "stem": "If the voltage across a $10\\,\\Omega$ resistor is $5\\,\\text{V}$, the current flowing through it is:",
+      "options": {
+        "A": "$0.5\\,\\text{A}$",
+        "B": "$2\\,\\text{A}$",
+        "C": "$50\\,\\text{A}$",
+        "D": "$15\\,\\text{A}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0068",
+      "type": "mcq",
+      "stem": "The power dissipated by a $5\\,\\Omega$ resistor carrying a current of $2\\,\\text{A}$ is:",
+      "options": {
+        "A": "$10\\,\\text{W}$",
+        "B": "$20\\,\\text{W}$",
+        "C": "$2.5\\,\\text{W}$",
+        "D": "$50\\,\\text{W}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0069",
+      "type": "mcq",
+      "stem": "The amount of charge that passes through a cross-section of wire in $5\\,\\text{s}$ with a steady current of $3\\,\\text{A}$ is:",
+      "options": {
+        "A": "$1.5\\,\\text{C}$",
+        "B": "$8\\,\\text{C}$",
+        "C": "$15\\,\\text{C}$",
+        "D": "$0.6\\,\\text{C}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0070",
+      "type": "mcq",
+      "stem": "A capacitor of $4\\,\\mu\\text{F}$ is connected to a $12\\,\\text{V}$ battery. The stored charge is:",
+      "options": {
+        "A": "$48\\,\\mu\\text{C}$",
+        "B": "$3\\,\\mu\\text{C}$",
+        "C": "$0.33\\,\\mu\\text{C}$",
+        "D": "$16\\,\\mu\\text{C}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0071",
+      "type": "mcq",
+      "stem": "The electric potential energy $U$ of two point charges $q_1$ and $q_2$ separated by a distance $r$ is given by:",
+      "options": {
+        "A": "$k \\cdot q_1 \\cdot q_2 / r^2$",
+        "B": "$k \\cdot q_1 \\cdot q_2 / r$",
+        "C": "$k \\cdot (q_1 + q_2) / r$",
+        "D": "$k \\cdot q_1 \\cdot q_2 \\cdot r$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0072",
+      "type": "mcq",
+      "stem": "The force between two parallel plates of a capacitor is:",
+      "options": {
+        "A": "Repulsive",
+        "B": "Attractive",
+        "C": "Zero",
+        "D": "Oscillating"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0073",
+      "type": "mcq",
+      "stem": "In electrostatics, the surface of a conductor is always:",
+      "options": {
+        "A": "An equipotential surface",
+        "B": "At zero potential",
+        "C": "Perpendicular to the current",
+        "D": "Free of any charge"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0074",
+      "type": "mcq",
+      "stem": "If the distance between two parallel plates of a capacitor is doubled, the capacitance:",
+      "options": {
+        "A": "Doubles",
+        "B": "Halves",
+        "C": "Quadruples",
+        "D": "Remains unchanged"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0075",
+      "type": "mcq",
+      "stem": "What is the equivalent capacitance of a $2\\,\\mu\\text{F}$ and a $4\\,\\mu\\text{F}$ capacitor connected in parallel?",
+      "options": {
+        "A": "$1.33\\,\\mu\\text{F}$",
+        "B": "$6\\,\\mu\\text{F}$",
+        "C": "$8\\,\\mu\\text{F}$",
+        "D": "$0.75\\,\\mu\\text{F}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0076",
+      "type": "mcq",
+      "stem": "An electron volt (eV) is a unit of:",
+      "options": {
+        "A": "Potential difference",
+        "B": "Charge",
+        "C": "Energy",
+        "D": "Power"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0077",
+      "type": "mcq",
+      "stem": "The fundamental charge $e$ of an electron is approximately:",
+      "options": {
+        "A": "$1.6 \\times 10^{-19}\\,\\text{C}$",
+        "B": "$9.11 \\times 10^{-31}\\,\\text{C}$",
+        "C": "$8.85 \\times 10^{-12}\\,\\text{C}$",
+        "D": "$6.67 \\times 10^{-11}\\,\\text{C}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0078",
+      "type": "mcq",
+      "stem": "Which constant is represented by $\\varepsilon_0$?",
+      "options": {
+        "A": "Permeability of free space",
+        "B": "Permittivity of free space",
+        "C": "Universal gas constant",
+        "D": "Planck's constant"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0079",
+      "type": "mcq",
+      "stem": "Which constant is represented by $\\mu_0$?",
+      "options": {
+        "A": "Permeability of free space",
+        "B": "Permittivity of free space",
+        "C": "Dielectric constant",
+        "D": "Boltzmann's constant"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0080",
+      "type": "mcq",
+      "stem": "The relationship between the speed of light $c$, $\\mu_0$, and $\\varepsilon_0$ is:",
+      "options": {
+        "A": "$c = \\mu_0 \\varepsilon_0$",
+        "B": "$c = 1/(\\mu_0 \\varepsilon_0)$",
+        "C": "$c = \\sqrt{\\mu_0 \\varepsilon_0}$",
+        "D": "$c = 1/\\sqrt{\\mu_0 \\varepsilon_0}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0081",
+      "type": "mcq",
+      "stem": "When a magnet is broken in half, what is the result?",
+      "options": {
+        "A": "One North monopole and one South monopole",
+        "B": "Two smaller magnets, each with a North and South pole",
+        "C": "Two unmagnetized pieces of metal",
+        "D": "The magnetic field is completely destroyed"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0082",
+      "type": "mcq",
+      "stem": "A Wheatstone bridge is balanced when the galvanometer shows:",
+      "options": {
+        "A": "Maximum deflection",
+        "B": "Minimum but non-zero current",
+        "C": "Zero deflection",
+        "D": "Continuous oscillation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0083",
+      "type": "mcq",
+      "stem": "The energy stored in a capacitor $C$ charged to a voltage $V$ is given by:",
+      "options": {
+        "A": "$C \\cdot V^2$",
+        "B": "$0.5 \\cdot C \\cdot V^2$",
+        "C": "$C^2 \\cdot V$",
+        "D": "$0.5 \\cdot C \\cdot V$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0084",
+      "type": "mcq",
+      "stem": "If a charged particle is accelerated from rest through a potential difference $V$, its final kinetic energy is:",
+      "options": {
+        "A": "$qV$",
+        "B": "$q/V$",
+        "C": "$0.5 \\cdot q V^2$",
+        "D": "$V/q$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0085",
+      "type": "mcq",
+      "stem": "The direction of an induced current is such that it opposes the change in magnetic flux that produced it. This is:",
+      "options": {
+        "A": "Ampere's Law",
+        "B": "Faraday's Law",
+        "C": "Lenz's Law",
+        "D": "Ohm's Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0086",
+      "type": "mcq",
+      "stem": "An ideal transformer has 100 turns on the primary coil and 500 turns on the secondary. If the primary voltage is $20\\,\\text{V}$, the secondary voltage is:",
+      "options": {
+        "A": "$4\\,\\text{V}$",
+        "B": "$100\\,\\text{V}$",
+        "C": "$250\\,\\text{V}$",
+        "D": "$10\\,\\text{V}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0087",
+      "type": "mcq",
+      "stem": "If the current in a primary coil changes at a rate of $2\\,\\text{A/s}$ and induces an EMF of $10\\,\\text{V}$ in a secondary coil, the mutual inductance is:",
+      "options": {
+        "A": "$20\\,\\text{H}$",
+        "B": "$0.2\\,\\text{H}$",
+        "C": "$5\\,\\text{H}$",
+        "D": "$12\\,\\text{H}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0088",
+      "type": "mcq",
+      "stem": "What is the primary function of a commutator in a DC motor?",
+      "options": {
+        "A": "To increase the magnetic field",
+        "B": "To reverse the current direction in the armature",
+        "C": "To cool down the coils",
+        "D": "To measure the RPM"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0089",
+      "type": "mcq",
+      "stem": "Electric field lines always originate from:",
+      "options": {
+        "A": "Negative charges",
+        "B": "Positive charges",
+        "C": "Magnetic North poles",
+        "D": "Magnetic South poles"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0090",
+      "type": "mcq",
+      "stem": "The net electric field inside an empty cavity within a solid conductor in static equilibrium is:",
+      "options": {
+        "A": "Zero",
+        "B": "Uniform and non-zero",
+        "C": "Dependent on the shape of the cavity",
+        "D": "Equal to the external field"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0091",
+      "type": "mcq",
+      "stem": "A material in which electrons are tightly bound to the nucleus and cannot move freely is called an:",
+      "options": {
+        "A": "Insulator",
+        "B": "Conductor",
+        "C": "Semiconductor",
+        "D": "Superconductor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0092",
+      "type": "mcq",
+      "stem": "The Hall effect occurs when a current-carrying conductor is placed in a:",
+      "options": {
+        "A": "Vacuum",
+        "B": "Parallel electric field",
+        "C": "Perpendicular magnetic field",
+        "D": "High temperature environment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0093",
+      "type": "mcq",
+      "stem": "The Hall voltage can be used to determine the:",
+      "options": {
+        "A": "Mass of the conductor",
+        "B": "Sign of the charge carriers",
+        "C": "Length of the conductor",
+        "D": "Thermal conductivity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0094",
+      "type": "mcq",
+      "stem": "Superconductors are materials that exhibit:",
+      "options": {
+        "A": "Infinite resistance",
+        "B": "Zero resistance below a critical temperature",
+        "C": "High resistivity",
+        "D": "Only magnetic properties"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0095",
+      "type": "mcq",
+      "stem": "The Meissner effect refers to the expulsion of a magnetic field from the interior of a:",
+      "options": {
+        "A": "Ferromagnet",
+        "B": "Dielectric",
+        "C": "Superconductor",
+        "D": "Plasma"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0096",
+      "type": "mcq",
+      "stem": "In a cathode ray tube (CRT), the beam of electrons is typically deflected using:",
+      "options": {
+        "A": "Only electric fields",
+        "B": "Only magnetic fields",
+        "C": "Crossed electric and magnetic fields",
+        "D": "Gravitational fields"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0097",
+      "type": "mcq",
+      "stem": "The ratio of the electric field amplitude to the magnetic field amplitude in an electromagnetic wave equals:",
+      "options": {
+        "A": "The frequency",
+        "B": "The wavelength",
+        "C": "The speed of light",
+        "D": "Planck's constant"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0098",
+      "type": "mcq",
+      "stem": "Which set of equations forms the foundation of classical electromagnetism?",
+      "options": {
+        "A": "Newton's Laws of Motion",
+        "B": "Maxwell's Equations",
+        "C": "Kepler's Laws",
+        "D": "Thermodynamic Laws"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0099",
+      "type": "mcq",
+      "stem": "If a dielectric with constant $k = 2$ is completely inserted into a capacitor, its energy storage capacity (for a given charge) will:",
+      "options": {
+        "A": "Double",
+        "B": "Halve",
+        "C": "Quadruple",
+        "D": "Remain the same"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy102-bank-0100",
+      "type": "mcq",
+      "stem": "A cyclotron relies on the fact that the orbital period of a charged particle in a uniform magnetic field is:",
+      "options": {
+        "A": "Dependent on its radius",
+        "B": "Dependent on its speed",
+        "C": "Independent of its speed",
+        "D": "Inversely proportional to its charge"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 100,
+  "category": "university",
+  "body": "University Modules"
+}

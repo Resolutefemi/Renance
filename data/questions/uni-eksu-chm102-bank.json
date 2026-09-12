@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-chm102-bank",
+  "title": "EKSU CHM102 | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-chm102-bank-0001",
+      "type": "mcq",
+      "stem": "Which type of crystal lattice has the highest packing efficiency?",
+      "options": {
+        "A": "Simple Cubic",
+        "B": "Body-Centered Cubic",
+        "C": "Hexagonal Close-Packed",
+        "D": "Rhombohedral"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0002",
+      "type": "mcq",
+      "stem": "The coordination number in a Face-Centered Cubic structure is:",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "12",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0003",
+      "type": "mcq",
+      "stem": "For a BCC crystal, the edge length a is related to atomic radius r by:",
+      "options": {
+        "A": "a = 2r",
+        "B": "a = 4r/√3",
+        "C": "a = 4r/√2",
+        "D": "a = r√3/4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0004",
+      "type": "mcq",
+      "stem": "The radius ratio required for tetrahedral void formation is:",
+      "options": {
+        "A": "0.732–1.00",
+        "B": "0.414–0.732",
+        "C": "0.225–0.414",
+        "D": "0.155–0.225"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0005",
+      "type": "mcq",
+      "stem": "Which of these correctly describes a Tetragonal unit cell?",
+      "options": {
+        "A": "a=b=c; α=β=γ=90°",
+        "B": "a≠b≠c; α=β=γ=90°",
+        "C": "a=b≠c; α=β=γ=90°",
+        "D": "a=b=c; α=β=γ≠90°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0006",
+      "type": "mcq",
+      "stem": "Which of the following is a covalent solid?",
+      "options": {
+        "A": "Copper",
+        "B": "Ice",
+        "C": "Sodium Chloride",
+        "D": "Diamond"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0007",
+      "type": "mcq",
+      "stem": "The maximum number of electrons in the subshell with l = 2 is:",
+      "options": {
+        "A": "2",
+        "B": "6",
+        "C": "10",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0008",
+      "type": "mcq",
+      "stem": "Which element ends with the configuration 3s2 3p5?",
+      "options": {
+        "A": "Sulfur",
+        "B": "Argon",
+        "C": "Chlorine",
+        "D": "Potassium"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0009",
+      "type": "mcq",
+      "stem": "Hund's Rule states that:",
+      "options": {
+        "A": "No two electrons have identical quantum numbers",
+        "B": "Lower energy orbitals fill first",
+        "C": "Orbitals of equal energy fill singly first",
+        "D": "Electrons occupy the lowest available energy level"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0010",
+      "type": "mcq",
+      "stem": "Modern periodic table is arranged in order of increasing:",
+      "options": {
+        "A": "Atomic mass",
+        "B": "Atomic number",
+        "C": "Valence electrons",
+        "D": "Density"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0011",
+      "type": "mcq",
+      "stem": "Across a period, atomic radius generally:",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains constant",
+        "D": "Increases then decreases"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0012",
+      "type": "mcq",
+      "stem": "Which element has the highest first ionization energy?",
+      "options": {
+        "A": "Li",
+        "B": "Be",
+        "C": "B",
+        "D": "N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0013",
+      "type": "mcq",
+      "stem": "The most electropositive element here is:",
+      "options": {
+        "A": "F",
+        "B": "Cl",
+        "C": "Br",
+        "D": "I"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0014",
+      "type": "mcq",
+      "stem": "Group VIIA elements are called:",
+      "options": {
+        "A": "Alkali metals",
+        "B": "Halogens",
+        "C": "Noble gases",
+        "D": "Metalloids"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0015",
+      "type": "mcq",
+      "stem": "Lanthanides and actinides are classified as:",
+      "options": {
+        "A": "Transition metals",
+        "B": "Inner transition metals",
+        "C": "Metalloids",
+        "D": "s-block elements"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0016",
+      "type": "mcq",
+      "stem": "Which element group has the highest electron affinity?",
+      "options": {
+        "A": "Alkali metals",
+        "B": "Noble gases",
+        "C": "Halogens",
+        "D": "Transition metals"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0017",
+      "type": "mcq",
+      "stem": "The principal quantum number determines:",
+      "options": {
+        "A": "Orbital shape",
+        "B": "Orbital orientation",
+        "C": "Energy and size",
+        "D": "Spin direction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0018",
+      "type": "mcq",
+      "stem": "O2- ion is isoelectronic with:",
+      "options": {
+        "A": "Ne",
+        "B": "C",
+        "C": "Mg2+",
+        "D": "Ar"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0019",
+      "type": "mcq",
+      "stem": "Element with atomic number 35 belongs to the:",
+      "options": {
+        "A": "s-block",
+        "B": "p-block",
+        "C": "d-block",
+        "D": "f-block"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0020",
+      "type": "mcq",
+      "stem": "Which has the largest atomic radius?",
+      "options": {
+        "A": "Li",
+        "B": "Na",
+        "C": "K",
+        "D": "Rb"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0021",
+      "type": "mcq",
+      "stem": "A bond between atoms with electronegativity difference >1.7 is usually:",
+      "options": {
+        "A": "Metallic",
+        "B": "Covalent",
+        "C": "Ionic",
+        "D": "Hydrogen"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0022",
+      "type": "mcq",
+      "stem": "Which molecule has sp2 hybridization on its central atom?",
+      "options": {
+        "A": "CH4",
+        "B": "H2O",
+        "C": "BF3",
+        "D": "BeCl2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0023",
+      "type": "mcq",
+      "stem": "NH3 has what geometry?",
+      "options": {
+        "A": "Linear",
+        "B": "Trigonal planar",
+        "C": "Tetrahedral",
+        "D": "Trigonal pyramidal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0024",
+      "type": "mcq",
+      "stem": "Hydrogen bonding is responsible for:",
+      "options": {
+        "A": "High conductivity of Cu",
+        "B": "Low melting point of NaCl",
+        "C": "High boiling point of water",
+        "D": "Nonpolar nature of CCl4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0025",
+      "type": "mcq",
+      "stem": "The carbon atoms in a C≡C triple bond are:",
+      "options": {
+        "A": "sp3",
+        "B": "sp2",
+        "C": "sp",
+        "D": "d2sp3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0026",
+      "type": "mcq",
+      "stem": "The strongest interatomic bond is:",
+      "options": {
+        "A": "Hydrogen bond",
+        "B": "Van der Waals",
+        "C": "Covalent bond",
+        "D": "Dipole-dipole"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0027",
+      "type": "mcq",
+      "stem": "Which molecule is nonpolar but has polar bonds?",
+      "options": {
+        "A": "HCl",
+        "B": "NH3",
+        "C": "H2O",
+        "D": "CO2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0028",
+      "type": "mcq",
+      "stem": "The formula of sulfate ion is:",
+      "options": {
+        "A": "SO3²⁻",
+        "B": "S²⁻",
+        "C": "SO4²⁻",
+        "D": "S2O3²⁻"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0029",
+      "type": "mcq",
+      "stem": "VSEPR theory predicts molecular shape based on repulsion between:",
+      "options": {
+        "A": "Nuclear protons",
+        "B": "Bonding and lone pairs",
+        "C": "Atomic masses",
+        "D": "Electron spin"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0030",
+      "type": "mcq",
+      "stem": "The perfect tetrahedral angle is:",
+      "options": {
+        "A": "120°",
+        "B": "109.5°",
+        "C": "104.5°",
+        "D": "180°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0031",
+      "type": "mcq",
+      "stem": "Ionic bond formation involves:",
+      "options": {
+        "A": "Sharing of electrons",
+        "B": "Transfer of electrons",
+        "C": "Overlap of p orbitals",
+        "D": "Sharing lone pairs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0032",
+      "type": "mcq",
+      "stem": "Which compound has the highest lattice energy?",
+      "options": {
+        "A": "NaCl",
+        "B": "KCl",
+        "C": "MgO",
+        "D": "LiBr"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0033",
+      "type": "mcq",
+      "stem": "A molecule represented by multiple structures exhibits:",
+      "options": {
+        "A": "Hybridization",
+        "B": "Resonance",
+        "C": "Tautomerism",
+        "D": "Isomerism"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0034",
+      "type": "mcq",
+      "stem": "Formula of magnesium nitrate is:",
+      "options": {
+        "A": "Mg(NO3)",
+        "B": "Mg2NO3",
+        "C": "Mg(NO3)2",
+        "D": "MgNO3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0035",
+      "type": "mcq",
+      "stem": "The simplest formula of covalent network solids is usually:",
+      "options": {
+        "A": "Molecular formula",
+        "B": "Empirical formula",
+        "C": "Isomeric formula",
+        "D": "General formula"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0036",
+      "type": "mcq",
+      "stem": "A dative bond forms when:",
+      "options": {
+        "A": "Electrons are shared equally",
+        "B": "Both electrons come from same atom",
+        "C": "Atoms transfer electrons",
+        "D": "s-orbitals overlap"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0037",
+      "type": "mcq",
+      "stem": "Energy released when gaseous ions form a crystal is:",
+      "options": {
+        "A": "Ionization energy",
+        "B": "Electron affinity",
+        "C": "Lattice energy",
+        "D": "Activation energy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0038",
+      "type": "mcq",
+      "stem": "Which has a bond angle less than 109.5°?",
+      "options": {
+        "A": "BCl3",
+        "B": "CH4",
+        "C": "H2O",
+        "D": "PCl5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0039",
+      "type": "mcq",
+      "stem": "The formula of aluminium hydroxide is:",
+      "options": {
+        "A": "AlOH",
+        "B": "Al3OH",
+        "C": "Al(OH)3",
+        "D": "Al2(OH)3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0040",
+      "type": "mcq",
+      "stem": "A sigma bond is formed by:",
+      "options": {
+        "A": "Sideways overlap",
+        "B": "End-to-end overlap",
+        "C": "Above-below overlap",
+        "D": "Only p-orbital interaction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0041",
+      "type": "mcq",
+      "stem": "The general formula for alkenes is:",
+      "options": {
+        "A": "CnH2n+2",
+        "B": "CnH2n",
+        "C": "CnH2n-2",
+        "D": "CnHn"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0042",
+      "type": "mcq",
+      "stem": "The IUPAC name of CH3–CH2–CH(CH3)–CH3 is:",
+      "options": {
+        "A": "n-Pentane",
+        "B": "2-Methylbutane",
+        "C": "3-Methylbutane",
+        "D": "Pentene"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0043",
+      "type": "mcq",
+      "stem": "Alkanes typically undergo:",
+      "options": {
+        "A": "Addition",
+        "B": "Elimination",
+        "C": "Free radical substitution",
+        "D": "Electrophilic addition"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0044",
+      "type": "mcq",
+      "stem": "The functional group of alcohol is:",
+      "options": {
+        "A": "COOH",
+        "B": "OH",
+        "C": "CHO",
+        "D": "O-"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0045",
+      "type": "mcq",
+      "stem": "Polymer formation by double-bond reaction is:",
+      "options": {
+        "A": "Condensation polymerization",
+        "B": "Addition polymerization",
+        "C": "Hydrolysis",
+        "D": "Esterification"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0046",
+      "type": "mcq",
+      "stem": "Compounds with same molecular formula but different connectivity are:",
+      "options": {
+        "A": "Tautomers",
+        "B": "Stereoisomers",
+        "C": "Constitutional isomers",
+        "D": "Enantiomers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0047",
+      "type": "mcq",
+      "stem": "Smallest alkyne is:",
+      "options": {
+        "A": "Methane",
+        "B": "Ethene",
+        "C": "Propyne",
+        "D": "Ethyne"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0048",
+      "type": "mcq",
+      "stem": "Simple distillation is used to:",
+      "options": {
+        "A": "Sublime solids",
+        "B": "Filter mixtures",
+        "C": "Separate solvent from solute",
+        "D": "Crystallize a solid"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0049",
+      "type": "mcq",
+      "stem": "Unsaturation is tested using:",
+      "options": {
+        "A": "Tollen’s reagent",
+        "B": "Fehling's solution",
+        "C": "Acidified KMnO4",
+        "D": "Conc. H2SO4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0050",
+      "type": "mcq",
+      "stem": "A compound containing a benzene ring is:",
+      "options": {
+        "A": "Aliphatic",
+        "B": "Aromatic",
+        "C": "Saturated",
+        "D": "Alicyclic"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0051",
+      "type": "mcq",
+      "stem": "Empirical formula of C6H12O6 is:",
+      "options": {
+        "A": "C6H12O6",
+        "B": "CH2O",
+        "C": "CHO",
+        "D": "C2H4O2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0052",
+      "type": "mcq",
+      "stem": "IR spectroscopy is used to identify:",
+      "options": {
+        "A": "Molecular mass",
+        "B": "Functional groups",
+        "C": "Isomers",
+        "D": "Elemental composition"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0053",
+      "type": "mcq",
+      "stem": "Chromatography separates substances based on:",
+      "options": {
+        "A": "Boiling point",
+        "B": "Single-solvent solubility",
+        "C": "Stationary-mobile phase distribution",
+        "D": "Melting point"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0054",
+      "type": "mcq",
+      "stem": "Toluene is also called:",
+      "options": {
+        "A": "Methylbenzene",
+        "B": "Dimethylbenzene",
+        "C": "Phenol",
+        "D": "Styrene"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0055",
+      "type": "mcq",
+      "stem": "DBE for acyclic alkanes (CnH2n+2) is:",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "2",
+        "D": "n"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0056",
+      "type": "mcq",
+      "stem": "Qualitative organic analysis determines:",
+      "options": {
+        "A": "Amount of each element",
+        "B": "Empirical formula",
+        "C": "Elements present",
+        "D": "Molecular mass"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0057",
+      "type": "mcq",
+      "stem": "Naphthalene undergoes:",
+      "options": {
+        "A": "Sublimation",
+        "B": "Steam distillation",
+        "C": "Crystallization",
+        "D": "Centrifugation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0058",
+      "type": "mcq",
+      "stem": "IUPAC name for CH3–O–CH3 is:",
+      "options": {
+        "A": "Ethanol",
+        "B": "Methoxy methane",
+        "C": "Diethyl ether",
+        "D": "Methanal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0059",
+      "type": "mcq",
+      "stem": "A ketone is represented as:",
+      "options": {
+        "A": "R–CHO",
+        "B": "R–OH",
+        "C": "R–CO–R'",
+        "D": "R–COOH"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm102-bank-0060",
+      "type": "mcq",
+      "stem": "The technique analyzing hydrogen and carbon nuclei is:",
+      "options": {
+        "A": "MS",
+        "B": "XRC",
+        "C": "NMR",
+        "D": "AAS"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

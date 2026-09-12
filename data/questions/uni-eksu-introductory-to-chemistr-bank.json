@@ -1,0 +1,612 @@
+{
+  "code": "uni-eksu-introductory-to-chemistr-bank",
+  "title": "EKSU Introductory to chemistry 1 | Practice Bank",
+  "version": 1,
+  "questionCount": 50,
+  "totalMarks": 50,
+  "questions": [
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following describes the charge of particles composing cathode rays?",
+      "options": {
+        "A": "Only positively charged particles",
+        "B": "Neutral particles",
+        "C": "Only negatively charged particles",
+        "D": "A mixture of positively and negatively charged particles"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0002",
+      "type": "mcq",
+      "stem": "The ability of cathode rays to travel in straight lines and cast shadows is a demonstration of which property?",
+      "options": {
+        "A": "High potential difference",
+        "B": "Possession of mass and momentum",
+        "C": "Composition of neutral particles",
+        "D": "Absorption by opaque bodies"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0003",
+      "type": "mcq",
+      "stem": "Which scientist is credited with the discovery of X-rays?",
+      "options": {
+        "A": "J.J. Thompson",
+        "B": "Lord Rutherford",
+        "C": "R.A. Millikan",
+        "D": "Roentgen"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0004",
+      "type": "mcq",
+      "stem": "What fundamental property of the electron was measured using the Oil drop experiment?",
+      "options": {
+        "A": "Mass-to-charge ratio",
+        "B": "Power",
+        "C": "Charge",
+        "D": "Mass"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0005",
+      "type": "mcq",
+      "stem": "The wave theory of light can explain all the following phenomena EXCEPT:",
+      "options": {
+        "A": "Reflection",
+        "B": "Incandescence",
+        "C": "Diffraction",
+        "D": "Polarization"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0006",
+      "type": "mcq",
+      "stem": "A key assumption of Bohr's model of the atom is that electrons can exist only in orbits of defined:",
+      "options": {
+        "A": "Mass-to-charge ratio",
+        "B": "Quantum energy",
+        "C": "Frequency of oscillation",
+        "D": "Orbital shape"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0007",
+      "type": "mcq",
+      "stem": "Which aspect of the hydrogen spectrum was Neils Bohr able to account for using Planck's and Einstein's quantum theory ideas?",
+      "options": {
+        "A": "Energy of photons",
+        "B": "Spectrum of Hydrogen",
+        "C": "Wave property of the atom",
+        "D": "Frequency of electrons"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0008",
+      "type": "mcq",
+      "stem": "In terms of space orientation, how many orientations do p-orbitals have?",
+      "options": {
+        "A": "1-space orientation",
+        "B": "5-space orientation",
+        "C": "7-space orientation",
+        "D": "3-space orientation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0009",
+      "type": "mcq",
+      "stem": "What is the Azimuthal quantum number (l) that corresponds to an F-orbital?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following species is NOT isoelectronic with the oxide ion, $O^{2-}$?",
+      "options": {
+        "A": "$F^{-}$",
+        "B": "$S^{2-}$",
+        "C": "Ne",
+        "D": "$Na^{+}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0011",
+      "type": "mcq",
+      "stem": "Given the relative abundances of Chlorine isotopes as 75\\% for $^{35}Cl$ and 25\\% for $^{37}Cl$, what is the relative atomic mass of Chlorine?",
+      "options": {
+        "A": "35.0",
+        "B": "37.0",
+        "C": "35.5",
+        "D": "17.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0012",
+      "type": "mcq",
+      "stem": "In the reaction: $2H_{2}S + SO_{2} \\rightarrow 3S + 2H_{2}O$, which species acts as the oxidizing agent?",
+      "options": {
+        "A": "$H_{2}S$",
+        "B": "$H_{2}O$",
+        "C": "$SO_{2}$",
+        "D": "S"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0013",
+      "type": "mcq",
+      "stem": "In the cell notation $Fe\\vert Fe^{2+} \\parallel Pt^{2+}\\vert Pt$, what does the double strike (\\parallel) represent?",
+      "options": {
+        "A": "Cell divider",
+        "B": "Alternator",
+        "C": "Separator",
+        "D": "Salt bridge"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0014",
+      "type": "mcq",
+      "stem": "If the half-cells are $Fe^{2+}\\vert Fe$ ($E^{0} = -0.44V$) and $Sn^{2+}\\vert Sn$ ($E^{0} = -0.154V$), what is the total e.m.f. of the cell (assuming $Sn^{2+}\\vert Sn$ is the cathode)?",
+      "options": {
+        "A": "$-0.594V$",
+        "B": "$0.924V$",
+        "C": "$0.771V$",
+        "D": "$0.286V$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0015",
+      "type": "mcq",
+      "stem": "The $K_{sp}$ of $AgCl$ at $25^\\circ C$ is $1.0 \\times 10^{-10}$. What is the concentration of $Ag^{+}$ in a saturated solution of $AgCl$?",
+      "options": {
+        "A": "$1.0 \\times 10^{-5} M$",
+        "B": "$1.0 \\times 10^{-20} M$",
+        "C": "$1.0 \\times 10^{-10} M$",
+        "D": "$1.0 \\times 10^{-2} M$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0016",
+      "type": "mcq",
+      "stem": "Which of the following substances gives an aqueous solution with a pH of less than 7.0?",
+      "options": {
+        "A": "$NH_{4}Cl$",
+        "B": "$NaCl$",
+        "C": "$K_{2}SO_{4}$",
+        "D": "$Ca(OH)_{2}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0017",
+      "type": "mcq",
+      "stem": "Which option correctly shows the order of increasing penetrating power of the common radiations (\\alpha, \\beta, \\gamma)?",
+      "options": {
+        "A": "$\\gamma < \\beta < \\alpha$",
+        "B": "$\\alpha < \\beta < \\gamma$",
+        "C": "$\\beta < \\alpha < \\gamma$",
+        "D": "$\\alpha < \\gamma < \\beta$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0018",
+      "type": "mcq",
+      "stem": "All of the following are methods used for the detection of radiation EXCEPT:",
+      "options": {
+        "A": "Geiger-Muller counters",
+        "B": "Photographic counters",
+        "C": "Scintillation counters",
+        "D": "Spindariscope"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0019",
+      "type": "mcq",
+      "stem": "To balance the half-reaction $MnO_{4}^{-} + xH^{+} + ye^{-} \\rightarrow Mn^{2+} + 4H_{2}O$, what are the values of $x$ and $y$?",
+      "options": {
+        "A": "8 and 5",
+        "B": "2 and 7",
+        "C": "4 and 6",
+        "D": "2 and 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0020",
+      "type": "mcq",
+      "stem": "The conversion of acetic acid to methyl acetate is an esterification reaction. How is this reaction typically enhanced according to Le Chatelier's principle and general organic reaction principles?",
+      "options": {
+        "A": "Raising the temperature (to speed up the reaction)",
+        "B": "Decreasing the concentration of water (product)",
+        "C": "Decreasing the concentration of alcohol (reactant)",
+        "D": "Adding a base catalyst"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0021",
+      "type": "mcq",
+      "stem": "For the dissociation of dinitrogen tetroxide ($N_{2}O_{4} \\rightleftharpoons 2NO_{2}$), what is the correct relationship between $K_{p}$ and $K_{c}$?",
+      "options": {
+        "A": "$K_{p} = K_{c}(RT)^{-1}$",
+        "B": "$K_{p} = K_{c}$",
+        "C": "$K_{p} = K_{c}(RT)^{2}$",
+        "D": "$K_{p} = K_{c}(RT)$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0022",
+      "type": "mcq",
+      "stem": "Which of the following compounds is generally considered a weak electrolyte in aqueous solution?",
+      "options": {
+        "A": "$H_{3}PO_{4}$",
+        "B": "$K_{2}SO_{4}$",
+        "C": "$MgCl_{2}$",
+        "D": "$NaI$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0023",
+      "type": "mcq",
+      "stem": "According to Le Chatelier's principle, the synthesis of sulphur trioxide ($2SO_{2}(g) + O_{2}(g) \\rightleftharpoons 2SO_{3}(g)$, $\\Delta H < 0$) by the contact process is favored by:",
+      "options": {
+        "A": "Increase in temperature",
+        "B": "Increase in volume",
+        "C": "Decrease in temperature and increase in pressure",
+        "D": "Decrease in pressure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0024",
+      "type": "mcq",
+      "stem": "For the dissociation of phosphorus pentachloride ($PCl_{5}(g) \\rightleftharpoons PCl_{3}(g) + Cl_{2}(g)$), what is the correct relationship between $K_{p}$ and $K_{c}$?",
+      "options": {
+        "A": "$K_{p} = K_{c}(RT)$",
+        "B": "$K_{p} = K_{c}(RT)^{2}$",
+        "C": "$K_{p} = K_{c}(RT)^{-1}$",
+        "D": "$K_{p} = K_{c}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0025",
+      "type": "mcq",
+      "stem": "Electrolysis of fused (molten) sodium chloride ($NaCl$) using graphite electrodes produces:",
+      "options": {
+        "A": "Sodium at anode and chlorine at cathode",
+        "B": "Sodium at cathode and oxygen at anode",
+        "C": "Sodium at cathode and chlorine at anode",
+        "D": "Hydrogen at cathode and chlorine at anode"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0026",
+      "type": "mcq",
+      "stem": "What does Faraday's First Law of Electrolysis state about the mass of a liberated substance?",
+      "options": {
+        "A": "It is proportional to the square of the current.",
+        "B": "It is proportional to its molar mass.",
+        "C": "It is proportional to the quantity of electricity passing through the electrolyte.",
+        "D": "It is inversely proportional to the time of electrolysis."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0027",
+      "type": "mcq",
+      "stem": "Gases exhibit remarkable deviation from ideal behavior particularly at low temperatures and high pressures primarily because:",
+      "options": {
+        "A": "The volume occupied by gas molecules is large compared to the total volume of the gas.",
+        "B": "Molecules do not exert any force of attraction on each other.",
+        "C": "Molecules do exert forces of attraction on each other and their volume is non-negligible.",
+        "D": "The collisions are perfectly elastic."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0028",
+      "type": "mcq",
+      "stem": "Under what conditions do molecules exert significant cohesive forces on each other?",
+      "options": {
+        "A": "High temperature and low pressure",
+        "B": "Low temperature and high pressure",
+        "C": "Low temperature and low pressure",
+        "D": "High temperature and high pressure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0029",
+      "type": "mcq",
+      "stem": "When the molar volume (V) of a real gas is very large, the term \\frac{a}{V^{2}} becomes negligible. To what equation does the Van der Waal's equation of state reduce?",
+      "options": {
+        "A": "Boyle's law equation",
+        "B": "Real gases equation",
+        "C": "Ideal gases equation",
+        "D": "Kinetic theory of gases equation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0030",
+      "type": "mcq",
+      "stem": "Stoichiometry is NOT typically used for which of the following purposes?",
+      "options": {
+        "A": "Predicting the quantities of species required to produce products",
+        "B": "Estimating the number of molecules involved in chemical reactions",
+        "C": "Choosing the most economical route to products formation in industry",
+        "D": "Determining the rate and mechanism of a chemical reaction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0031",
+      "type": "mcq",
+      "stem": "If a compound contains 72.0\\% Mn (Manganese, 54.94) and the remainder is Oxygen (O, 16.0), what is its empirical formula?",
+      "options": {
+        "A": "$MnO$",
+        "B": "$MnO_{2}$",
+        "C": "$Mn_{2}O_{3}$",
+        "D": "$Mn_{2}O$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0032",
+      "type": "mcq",
+      "stem": "Which formula shows the relative number of atoms of each element in a compound in the simplest whole number ratio?",
+      "options": {
+        "A": "Molecular formula",
+        "B": "Empirical formula",
+        "C": "Percentage composition",
+        "D": "Relative formula"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0033",
+      "type": "mcq",
+      "stem": "What is another name commonly given to a decomposition reaction?",
+      "options": {
+        "A": "Dissynthesis",
+        "B": "Synthesis",
+        "C": "Deconstruction",
+        "D": "Addition reaction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0034",
+      "type": "mcq",
+      "stem": "Chemical kinetics is primarily concerned with addressing the question of:",
+      "options": {
+        "A": "The feasibility of a chemical reaction (\\Delta G)",
+        "B": "The speed of a chemical reaction",
+        "C": "The orderliness of a chemical reaction (\\Delta S)",
+        "D": "The enthalpy of a chemical reaction (\\Delta H)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0035",
+      "type": "mcq",
+      "stem": "All of the following are factors affecting the kinetics (rate) of a chemical reaction EXCEPT:",
+      "options": {
+        "A": "Surface area of solids",
+        "B": "Catalysts",
+        "C": "Temperature",
+        "D": "Yield"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0036",
+      "type": "mcq",
+      "stem": "Selectivity in a chemical reaction is defined as the total amount of desired product formed per total amount of:",
+      "options": {
+        "A": "Reaction",
+        "B": "Unreacted species",
+        "C": "Limiting reactant consumed",
+        "D": "Total sum of all reactants"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0037",
+      "type": "mcq",
+      "stem": "In the reaction $2SO_{2} + O_{2} \\rightarrow 2SO_{3}$, what is the molecularity of the forward reaction if it is an elementary step?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0038",
+      "type": "mcq",
+      "stem": "Which of these is NOT a characteristic of the order of a chemical reaction?",
+      "options": {
+        "A": "It can be found experimentally.",
+        "B": "It is concentration-independent.",
+        "C": "It can have values of whole number, fraction, or zero.",
+        "D": "It is temperature dependent."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0039",
+      "type": "mcq",
+      "stem": "Following the linearization of the Arrhenius equation (\\ln k = \\ln A - \\frac{E_{a}}{RT}), the slope of the plot of \\ln k versus \\frac{1}{T} is equal to:",
+      "options": {
+        "A": "$\\frac{E_{a}}{R}$",
+        "B": "$-\\frac{R}{E_{a}}$",
+        "C": "$\\frac{E_{a}}{RT}$",
+        "D": "$-\\frac{E_{a}}{R}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0040",
+      "type": "mcq",
+      "stem": "For a first-order reaction, the half-life (t_{1/2}) is related to the rate constant (k) by the equation t_{1/2} = \\frac{\\ln 2}{k}. If t_{1/2} = 0.6 minutes, what is the rate constant in s^{-1}?",
+      "options": {
+        "A": "$0.0192 \\\\ s^{-1}$",
+        "B": "$1.153 \\\\ s^{-1}$",
+        "C": "$0.634 \\\\ s^{-1}$",
+        "D": "$0.643 \\\\ min^{-1}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0041",
+      "type": "mcq",
+      "stem": "Which statement about chemical bonding is FALSE?",
+      "options": {
+        "A": "The objective of chemical bonding is for each ion to attain the octet configuration.",
+        "B": "Bonding is the strong or weak chemical attraction between two atoms.",
+        "C": "The electrons involved in chemical combinations are located only in the outermost shell.",
+        "D": "Bonding in electrolytes is typically ionic."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0042",
+      "type": "mcq",
+      "stem": "In electrovalent bonding, the final electronic configuration of the ions often results in the noble gas structure. Which process is NOT a way to achieve this noble gas structure for a non-metal atom?",
+      "options": {
+        "A": "Gaining electrons to the outermost shell to form the octet configuration.",
+        "B": "Losing electrons to the outermost shell to form the octet configuration.",
+        "C": "Non-metal atoms gain electrons to attain a noble gas structure.",
+        "D": "Atoms can lose or gain electrons to have the noble gas structure."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0043",
+      "type": "mcq",
+      "stem": "Which of these common noble gas structures is INCORRECTLY indicated for the given ion?",
+      "options": {
+        "A": "$Mg^{2+} (2, 8) \\Rightarrow$ Neon structure",
+        "B": "$K^{+} (2, 8, 8) \\Rightarrow$ Argon structure",
+        "C": "$Rb^{+} (2, 8, 18, 8) \\Rightarrow$ Krypton structure",
+        "D": "$Cs^{+} (2, 8, 18, 18, 8) \\Rightarrow$ Xenon structure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0044",
+      "type": "mcq",
+      "stem": "Cations violating the octet rule can have various electron counts. Which electron configuration in the outermost shell is characteristic of ions that satisfy the octet rule?",
+      "options": {
+        "A": "18 electrons in their outermost shell (e.g., $Cd^{2+}$)",
+        "B": "2 electrons in their outermost shell (e.g., $Pb^{2+}$)",
+        "C": "9 to 17 electrons in their outermost shells (Transition metals)",
+        "D": "8 electrons in their outermost shell (e.g., $Cs^{+}$)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0045",
+      "type": "mcq",
+      "stem": "Which statement is FALSE regarding the nature of an electrovalent (ionic) bond?",
+      "options": {
+        "A": "A bond is formed by the complete transfer of one or more electrons from one atom to another.",
+        "B": "Compounds formed are solids with high melting and boiling points.",
+        "C": "The ions involved are held together by the Coulomb's force.",
+        "D": "A bond is formed by the sharing of one or more electrons between atoms."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0046",
+      "type": "mcq",
+      "stem": "Which statement about covalency is FALSE?",
+      "options": {
+        "A": "Covalent bonding involves the sharing of electrons between two elements.",
+        "B": "Non-metallic atoms can form covalent bonds.",
+        "C": "The difference in electronegativity values must be less than 1.7.",
+        "D": "The greater the difference in electronegativity, the higher the tendency to form electrovalent compounds."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0047",
+      "type": "mcq",
+      "stem": "The difference in bonding type between $AlF_{3}$ (electrovalent) and $AlCl_{3}$ (covalent) is primarily attributed to:",
+      "options": {
+        "A": "The fewer atoms in $AlF_{3}$ compared to $AlCl_{3}$",
+        "B": "The larger size and lower electronegativity of Cl compared to F",
+        "C": "The small ionic size of F coupled with its high electronegativity, contributing to a higher lattice energy of $AlF_{3}$",
+        "D": "The higher valency of Aluminum in $AlCl_{3}$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0048",
+      "type": "mcq",
+      "stem": "Which statement concerning sigma (\\sigma) and pi (\\pi) bonds is FALSE?",
+      "options": {
+        "A": "Sigma bonds are stronger than pi bonds.",
+        "B": "Pi bonds are formed through side-by-side overlap of atomic orbitals.",
+        "C": "Sigma bonds are formed through head-to-head overlap of atomic orbitals.",
+        "D": "Pi bonds are formed though head-to-head overlap of atomic orbitals."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0049",
+      "type": "mcq",
+      "stem": "Using the concept of Coulomb's law (F \\propto \\frac{q_{1}q_{2}}{r^{2}}), arrange the following alkali halides (NaI, NaCl, NaF, NaBr) in order of increasing ionic character.",
+      "options": {
+        "A": "$NaI < NaBr < NaCl < NaF$",
+        "B": "$NaF < NaCl < NaI < NaBr$",
+        "C": "$NaI < NaCl < NaF < NaBr$",
+        "D": "$NaF < NaCl < NaBr < NaI$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-introductory-to-chemistr-bank-0050",
+      "type": "mcq",
+      "stem": "How many sigma (\\sigma) and pi (\\pi) bonds are present in a diatomic nitrogen molecule ($N_{2}$)?",
+      "options": {
+        "A": "One sigma bond and two pi bonds",
+        "B": "One sigma bond and one pi bond",
+        "C": "Two sigma bonds and one pi bond",
+        "D": "Two sigma bonds and two pi bonds"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 50,
+  "category": "university",
+  "body": "University Modules"
+}

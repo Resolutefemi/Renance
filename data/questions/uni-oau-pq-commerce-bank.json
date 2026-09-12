@@ -1,0 +1,2411 @@
+{
+  "code": "uni-oau-pq-commerce-bank",
+  "title": "OAU Post-UTME Commerce | Prep Bank",
+  "version": 1,
+  "questionCount": 200,
+  "totalMarks": 200,
+  "questions": [
+    {
+      "id": "uni-oau-pq-commerce-bank-0001",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, what is the relationship between the marginal revenue product of labor and the market wage?",
+      "options": {
+        "A": "The marginal revenue product of labor is equal to the market wage.",
+        "B": "The marginal revenue product of labor is greater than the market wage.",
+        "C": "The marginal revenue product of labor is less than the market wage.",
+        "D": "The marginal revenue product of labor is unrelated to the market wage."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0002",
+      "type": "mcq",
+      "stem": "A company&#039;s cost of capital is 8% per annum. If it invests in a project with a 10-year life and a net present value of ₦120,000, what is the project&#039;s internal rate of return?",
+      "options": {
+        "A": "6%",
+        "B": "8%",
+        "C": "10%",
+        "D": "12%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0003",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the price of labor is ₦50 per unit and the price of capital is ₦100 per unit, what is the firm&#039;s optimal level of labor and capital?",
+      "options": {
+        "A": "L = 4, K = 16",
+        "B": "L = 16, K = 4",
+        "C": "L = 8, K = 8",
+        "D": "L = 2, K = 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0004",
+      "type": "mcq",
+      "stem": "A company has a cash flow of ₦100,000 in the first year, ₦120,000 in the second year, and ₦150,000 in the third year. If the cost of capital is 10% per annum, what is the company&#039;s present value?",
+      "options": {
+        "A": "₦100,000",
+        "B": "₦120,000",
+        "C": "₦150,000",
+        "D": "₦180,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0005",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the price elasticity of demand is 2, what is the firm&#039;s optimal price?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0006",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the law of supply states that as the price of a commodity increases, the quantity supplied will",
+      "options": {
+        "A": "increase",
+        "B": "decrease",
+        "C": "remain constant",
+        "D": "become elastic"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0007",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s current labor and capital inputs are L = 16 and K = 9 respectively, what is the firm&#039;s current output?",
+      "options": {
+        "A": "16",
+        "B": "18",
+        "C": "20",
+        "D": "22"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0008",
+      "type": "mcq",
+      "stem": "A company has the following inventory levels: 100 units of product A, 200 units of product B, and 300 units of product C. If the company uses the First-In-First-Out (FIFO) method of inventory valuation, what is the total value of the inventory?",
+      "options": {
+        "A": "₦120,000",
+        "B": "₦150,000",
+        "C": "₦180,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0009",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing mix is given by the 4 Ps: Product, Price, Place, and Promotion. If the firm wants to increase sales, which of the following would be the most effective way to do so?",
+      "options": {
+        "A": "Increase the price of the product",
+        "B": "Improve the product's quality",
+        "C": "Increase the advertising budget",
+        "D": "Reduce the product's price"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0010",
+      "type": "mcq",
+      "stem": "A company has the following financial statements: Income Statement and Balance Sheet. If the company&#039;s net income is ₦100,000 and its total assets are ₦500,000, what is the company&#039;s return on equity (ROE)?",
+      "options": {
+        "A": "20%",
+        "B": "25%",
+        "C": "30%",
+        "D": "35%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0011",
+      "type": "mcq",
+      "stem": "The concept of comparative advantage in international trade is based on the idea that countries should specialize in producing goods for which they have a lower opportunity cost. Which of the following is a correct example of comparative advantage?",
+      "options": {
+        "A": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 50 units of wheat and 100 units of cloth.",
+        "B": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 50 units of wheat and 150 units of cloth.",
+        "C": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 50 units of wheat and 50 units of cloth.",
+        "D": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 50 units of wheat and 200 units of cloth."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0012",
+      "type": "mcq",
+      "stem": "A consumer protection agency has the power to investigate complaints about unfair business practices. What is the primary purpose of this agency?",
+      "options": {
+        "A": "To protect consumers from unfair business practices and ensure fair competition.",
+        "B": "To regulate business practices and ensure compliance with laws and regulations.",
+        "C": "To investigate complaints about unfair business practices and take enforcement action.",
+        "D": "To provide education and awareness about consumer rights and responsibilities."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0013",
+      "type": "mcq",
+      "stem": "A firm is considering two different production processes for a new product. Process A requires an initial investment of ₦10 million and produces 100 units per day, while Process B requires an initial investment of ₦5 million and produces 50 units per day. What is the opportunity cost of choosing Process A over Process B?",
+      "options": {
+        "A": "₦5 million",
+        "B": "₦10 million",
+        "C": "₦15 million",
+        "D": "₦20 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0014",
+      "type": "mcq",
+      "stem": "A company is considering exporting its products to a foreign market. What is the primary benefit of exporting?",
+      "options": {
+        "A": "Increased revenue and profit",
+        "B": "Reduced competition and market share",
+        "C": "Improved brand recognition and reputation",
+        "D": "Enhanced market research and analysis"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0015",
+      "type": "mcq",
+      "stem": "A consumer has purchased a product that has a defect. What is the primary responsibility of the consumer in this situation?",
+      "options": {
+        "A": "To report the defect to the manufacturer and request a replacement",
+        "B": "To return the product to the store and request a refund",
+        "C": "To contact the consumer protection agency and file a complaint",
+        "D": "To ignore the defect and continue using the product"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0016",
+      "type": "mcq",
+      "stem": "A firm is considering two different production processes for a new product. Process A requires an initial investment of ₦10 million and produces 100 units per day, while Process B requires an initial investment of ₦5 million and produces 50 units per day. What is the opportunity cost of choosing Process B over Process A?",
+      "options": {
+        "A": "₦5 million",
+        "B": "₦10 million",
+        "C": "₦15 million",
+        "D": "₦20 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0017",
+      "type": "mcq",
+      "stem": "A company is considering importing a product from a foreign supplier. What is the primary benefit of importing?",
+      "options": {
+        "A": "Increased revenue and profit",
+        "B": "Reduced competition and market share",
+        "C": "Improved brand recognition and reputation",
+        "D": "Enhanced market research and analysis"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0018",
+      "type": "mcq",
+      "stem": "A consumer has purchased a product that has a defect. What is the primary responsibility of the manufacturer in this situation?",
+      "options": {
+        "A": "To report the defect to the consumer and request a replacement",
+        "B": "To return the product to the store and request a refund",
+        "C": "To contact the consumer protection agency and file a complaint",
+        "D": "To ignore the defect and continue producing the product"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0019",
+      "type": "mcq",
+      "stem": "A consumer protection law requires that all goods sold in a country must be labeled with their country of origin. Which of the following is a correct example of a country of origin label?",
+      "options": {
+        "A": "A label that reads 'Made in China'",
+        "B": "A label that reads 'Product of USA'",
+        "C": "A label that reads 'Imported from Japan'",
+        "D": "A label that reads 'Exported to Nigeria'"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0020",
+      "type": "mcq",
+      "stem": "A firm produces two goods, X and Y, using two inputs, labor and capital. The production function for good X is given by QX = 2L^0.5K^0.5, where QX is the quantity of good X produced, L is the amount of labor used, and K is the amount of capital used. The production function for good Y is given by QY = 3L^0.7K^0.3, where QY is the quantity of good Y produced. If the firm uses 100 units of labor and 50 units of capital, what is the quantity of good X produced?",
+      "options": {
+        "A": "50",
+        "B": "100",
+        "C": "200",
+        "D": "250"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0021",
+      "type": "mcq",
+      "stem": "A bank offers a loan of ₦100,000 at an interest rate of 10% per annum compounded annually. If the loan is repaid after 5 years, what is the total amount paid by the borrower?",
+      "options": {
+        "A": "₦163,922",
+        "B": "₦164,000",
+        "C": "₦164,100",
+        "D": "₦164,200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0022",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5, where Q is the quantity produced, L is the amount of labor used, and K is the amount of capital used. If the firm uses 100 units of labor and 50 units of capital, what is the marginal product of labor?",
+      "options": {
+        "A": "0.5",
+        "B": "1",
+        "C": "2",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0023",
+      "type": "mcq",
+      "stem": "A consumer&#039;s budget constraint is given by 2X + 3Y = 100, where X and Y are the quantities of two goods consumed. If the consumer&#039;s income is ₦100 and the price of good X is ₦2, what is the quantity of good Y consumed?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0024",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is registered under the Companies and Allied Matters Act (CAMA) 2020. Which of the following is a characteristic of a sole trader?",
+      "options": {
+        "A": "Unlimited liability",
+        "B": "Limited liability",
+        "C": "Separate legal entity",
+        "D": "No distinction between personal and business finances"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0025",
+      "type": "mcq",
+      "stem": "A company X is registered under the Companies and Allied Matters Act (CAMA) 2020. The company has a share capital of ₦5,000,000, divided into 500,000 ordinary shares of ₦10 each. What is the company&#039;s share capital in naira?",
+      "options": {
+        "A": "₦5,000,000",
+        "B": "₦10,000,000",
+        "C": "₦15,000,000",
+        "D": "₦20,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0026",
+      "type": "mcq",
+      "stem": "A bank&#039;s cash reserve ratio is 10%. If the bank has a cash reserve of ₦1,000,000, what is the total amount of deposits it has received?",
+      "options": {
+        "A": "₦10,000,000",
+        "B": "₦20,000,000",
+        "C": "₦30,000,000",
+        "D": "₦40,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0027",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a new product to appeal to a younger demographic. Which of the following is a characteristic of this marketing strategy?",
+      "options": {
+        "A": "Product differentiation",
+        "B": "Market segmentation",
+        "C": "Target marketing",
+        "D": "Positioning"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0028",
+      "type": "mcq",
+      "stem": "A company&#039;s supply chain involves transporting goods from a factory to a warehouse using a third-party logistics provider. Which of the following is a benefit of this supply chain strategy?",
+      "options": {
+        "A": "Reduced transportation costs",
+        "B": "Improved delivery times",
+        "C": "Increased flexibility",
+        "D": "Enhanced customer service"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0029",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the demand curve for a firm&#039;s product is its?",
+      "options": {
+        "A": "Supply Curve",
+        "B": "Demand Curve",
+        "C": "Marginal Revenue Curve",
+        "D": "Marginal Cost Curve"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0030",
+      "type": "mcq",
+      "stem": "A company&#039;s production function is given by Q = 100L^0.5K^0.25. If the price of labor is ₦100 per unit and the price of capital is ₦200 per unit, and the company wants to produce 100 units of output, how much will it spend on labor and capital?",
+      "options": {
+        "A": "₦10,000",
+        "B": "₦12,000",
+        "C": "₦15,000",
+        "D": "₦18,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0031",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R(x) = 3x^2 - 2x + 10. If the firm produces 5 units of output, what is its marginal revenue?",
+      "options": {
+        "A": "₦15",
+        "B": "₦20",
+        "C": "₦25",
+        "D": "₦30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0032",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing mix consists of a product, price, place, and promotion. Which of the following is NOT a part of the marketing mix?",
+      "options": {
+        "A": "Product",
+        "B": "Price",
+        "C": "Place",
+        "D": "Finance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0033",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.25. If the price of labor is ₦50 per unit and the price of capital is ₦100 per unit, and the firm wants to produce 50 units of output, how much will it spend on labor and capital?",
+      "options": {
+        "A": "₦2,500",
+        "B": "₦3,000",
+        "C": "₦4,000",
+        "D": "₦5,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0034",
+      "type": "mcq",
+      "stem": "In the context of international trade, what is the primary purpose of the Most Favoured Nation (MFN) clause in a trade agreement?",
+      "options": {
+        "A": "To impose tariffs on imports from other countries",
+        "B": "To grant preferential treatment to imports from specific countries",
+        "C": "To ensure that all trade partners are treated equally",
+        "D": "To restrict imports from certain countries"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0035",
+      "type": "mcq",
+      "stem": "A company is considering the implementation of a new production process that will reduce costs by 15% but increase lead time by 20%. What is the impact on the company&#039;s cash flow?",
+      "options": {
+        "A": "The cash flow will decrease by 10%",
+        "B": "The cash flow will increase by 5%",
+        "C": "The cash flow will remain unchanged",
+        "D": "The cash flow will increase by 15%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0036",
+      "type": "mcq",
+      "stem": "A consumer is considering purchasing a product with a 20% discount. The original price is ₦1,000. What is the discounted price?",
+      "options": {
+        "A": "₦800",
+        "B": "₦900",
+        "C": "₦1,000",
+        "D": "₦1,200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0037",
+      "type": "mcq",
+      "stem": "A company is considering the implementation of a new marketing strategy that will increase sales by 10% but also increase costs by 15%. What is the net impact on the company&#039;s profit?",
+      "options": {
+        "A": "The profit will increase by 5%",
+        "B": "The profit will decrease by 5%",
+        "C": "The profit will remain unchanged",
+        "D": "The profit will increase by 10%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0038",
+      "type": "mcq",
+      "stem": "A consumer is considering purchasing a product with a 10% sales tax. The original price is ₦1,000. What is the total price paid by the consumer?",
+      "options": {
+        "A": "₦1,100",
+        "B": "₦1,000",
+        "C": "₦1,050",
+        "D": "₦1,200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0039",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the law of supply states that as the price of a good increases, the quantity supplied will",
+      "options": {
+        "A": "increase",
+        "B": "decrease",
+        "C": "remain constant",
+        "D": "shift to the left"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0040",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements are audited by an independent auditor to ensure that they are",
+      "options": {
+        "A": "accurate and reliable",
+        "B": "fair and unbiased",
+        "C": "complete and transparent",
+        "D": "all of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0041",
+      "type": "mcq",
+      "stem": "The concept of opportunity cost is relevant in the context of",
+      "options": {
+        "A": "production and specialization",
+        "B": "home and foreign trade",
+        "C": "consumer protection and business law",
+        "D": "banking and financial institutions"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0042",
+      "type": "mcq",
+      "stem": "A sole trader is a type of business organization that is owned and managed by a single individual, known as the",
+      "options": {
+        "A": "partner",
+        "B": "director",
+        "C": "shareholder",
+        "D": "proprietor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0043",
+      "type": "mcq",
+      "stem": "The concept of comparative advantage is relevant in the context of",
+      "options": {
+        "A": "production and specialization",
+        "B": "home and foreign trade",
+        "C": "consumer protection and business law",
+        "D": "banking and financial institutions"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0044",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is downward sloping due to the law of increasing marginal opportunity cost. However, this law is not applicable in a market with a single firm, as the firm can influence the market price. What is the name of this market structure?",
+      "options": {
+        "A": "Monopoly",
+        "B": "Oligopoly",
+        "C": "Monopolistic Competition",
+        "D": "Perfect Competition"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0045",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s current labor and capital inputs are L = 16 and K = 9, respectively, what is the firm&#039;s current output?",
+      "options": {
+        "A": "24",
+        "B": "36",
+        "C": "48",
+        "D": "64"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0046",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 1000 units. The company&#039;s inventory level is currently at 500 units. If the company receives a shipment of 200 units, what is the new inventory level?",
+      "options": {
+        "A": "300",
+        "B": "400",
+        "C": "500",
+        "D": "600"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0047",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 100Q - 2Q^2. If the firm&#039;s current output is Q = 10, what is the firm&#039;s current revenue?",
+      "options": {
+        "A": "800",
+        "B": "900",
+        "C": "1000",
+        "D": "1100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0048",
+      "type": "mcq",
+      "stem": "A company has a trade deficit of 100 million. If the company&#039;s exports are 200 million and its imports are 300 million, what is the company&#039;s current account balance?",
+      "options": {
+        "A": "-100 million",
+        "B": "0",
+        "C": "100 million",
+        "D": "200 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0049",
+      "type": "mcq",
+      "stem": "A company&#039;s production function is given by the equation ( Q = 100L^0.5K^0.25 ), where Q is the quantity produced, L is the number of labor hours, and K is the capital invested. If the company wants to increase its production by 20% while keeping the capital invested constant, what percentage increase in labor hours is required?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0050",
+      "type": "mcq",
+      "stem": "A sole trader, Mr. A, has a business that generates an annual revenue of ₦1,500,000. His fixed costs are ₦200,000, and his variable costs are ₦300,000. What is his break-even point in terms of the number of units sold, assuming each unit sells for ₦5,000?",
+      "options": {
+        "A": "1000",
+        "B": "1500",
+        "C": "2000",
+        "D": "2500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0051",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity to store 10,000 units. The warehouse is currently 70% full, with 7,000 units stored. If the company receives an order for 1,500 units, what is the probability that the warehouse will be full after fulfilling the order?",
+      "options": {
+        "A": "0.2",
+        "B": "0.3",
+        "C": "0.4",
+        "D": "0.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0052",
+      "type": "mcq",
+      "stem": "A company has a production process that involves two stages: Stage 1 and Stage 2. The probability of success in Stage 1 is 0.8, and the probability of success in Stage 2 is 0.9, given that Stage 1 is successful. What is the probability that the production process will be successful?",
+      "options": {
+        "A": "0.7",
+        "B": "0.8",
+        "C": "0.9",
+        "D": "0.95"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0053",
+      "type": "mcq",
+      "stem": "A company has a marketing budget of ₦500,000. It plans to allocate 30% of the budget to advertising and 20% to promotion. What is the amount allocated to promotion?",
+      "options": {
+        "A": "₦80,000",
+        "B": "₦100,000",
+        "C": "₦120,000",
+        "D": "₦150,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0054",
+      "type": "mcq",
+      "stem": "A company&#039;s foreign trade policy is influenced by the following factors: political, economic, social, and technological. Which of the following is NOT a factor that affects a company&#039;s foreign trade policy?",
+      "options": {
+        "A": "Environmental",
+        "B": "Political",
+        "C": "Economic",
+        "D": "Social"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0055",
+      "type": "mcq",
+      "stem": "A firm&#039;s decision to export goods is influenced by the following factors: market demand, production costs, transportation costs, and exchange rates. Which of the following is NOT a factor that affects a firm&#039;s decision to export goods?",
+      "options": {
+        "A": "Market demand",
+        "B": "Production costs",
+        "C": "Transportation costs",
+        "D": "Government regulations"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0056",
+      "type": "mcq",
+      "stem": "A company&#039;s foreign trade policy is influenced by the following factors: political, economic, social, and technological. Which of the following is a factor that affects a company&#039;s foreign trade policy?",
+      "options": {
+        "A": "Environmental",
+        "B": "Political",
+        "C": "Economic",
+        "D": "Social"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0057",
+      "type": "mcq",
+      "stem": "A firm&#039;s decision to import goods is influenced by the following factors: market demand, production costs, transportation costs, and exchange rates. Which of the following is a factor that affects a firm&#039;s decision to import goods?",
+      "options": {
+        "A": "Market demand",
+        "B": "Production costs",
+        "C": "Transportation costs",
+        "D": "Government regulations"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0058",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves a mix of advertising, sales promotion, and public relations. Which of the following is NOT a characteristic of a successful marketing strategy?",
+      "options": {
+        "A": "Flexibility",
+        "B": "Consistency",
+        "C": "Relevance",
+        "D": "Unpredictability"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0059",
+      "type": "mcq",
+      "stem": "A firm&#039;s break-even point is the point at which its total revenue equals its total fixed costs. Which of the following is a factor that affects a firm&#039;s break-even point?",
+      "options": {
+        "A": "Selling price",
+        "B": "Fixed costs",
+        "C": "Variable costs",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0060",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statement shows a net income of ₦1,500,000. Which of the following is a possible reason for this net income?",
+      "options": {
+        "A": "High sales revenue",
+        "B": "Low operating expenses",
+        "C": "High interest income",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0061",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing mix involves a combination of product, price, promotion, and place. Which of the following is NOT a characteristic of a successful marketing mix?",
+      "options": {
+        "A": "Relevance",
+        "B": "Consistency",
+        "C": "Flexibility",
+        "D": "Unpredictability"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0062",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statement shows a net loss of ₦500,000. Which of the following is a possible reason for this net loss?",
+      "options": {
+        "A": "High operating expenses",
+        "B": "Low sales revenue",
+        "C": "High interest expense",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0063",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves a mix of advertising, sales promotions, and public relations. Which of the following is NOT a primary goal of advertising in this context?",
+      "options": {
+        "A": "To inform customers about the company's products",
+        "B": "To persuade customers to buy the company's products",
+        "C": "To entertain customers with the company's products",
+        "D": "To educate customers about the company's products"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0064",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost of capital is 10% per annum. If it invests in a project with a net present value (NPV) of ₦1,500,000, what is the expected rate of return on the investment?",
+      "options": {
+        "A": "10%",
+        "B": "12%",
+        "C": "15%",
+        "D": "18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0065",
+      "type": "mcq",
+      "stem": "A consumer protection agency has received complaints about a company&#039;s unfair business practices. Which of the following is a possible remedy for the consumers?",
+      "options": {
+        "A": "Compensation for damages suffered",
+        "B": "Restoration of the status quo ante",
+        "C": "Injunction to stop the unfair practice",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0066",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing strategy involves a mix of advertising, sales promotions, and public relations. Which of the following is a primary goal of public relations in this context?",
+      "options": {
+        "A": "To inform customers about the company's products",
+        "B": "To persuade customers to buy the company's products",
+        "C": "To build goodwill and reputation for the company",
+        "D": "To entertain customers with the company's products"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0067",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost of capital is 12% per annum. If it invests in a project with a net present value (NPV) of ₦2,000,000, what is the expected rate of return on the investment?",
+      "options": {
+        "A": "12%",
+        "B": "15%",
+        "C": "18%",
+        "D": "20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0068",
+      "type": "mcq",
+      "stem": "Under the Consumer Protection Act, what is the primary responsibility of a consumer in a contract?",
+      "options": {
+        "A": "To ensure the product is of satisfactory quality",
+        "B": "To ensure the product is fit for purpose",
+        "C": "To ensure the product is as described",
+        "D": "To ensure the product is delivered on time"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0069",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 10,000 units. If 8,000 units are already stored, what is the remaining capacity?",
+      "options": {
+        "A": "1000",
+        "B": "2000",
+        "C": "5000",
+        "D": "8000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0070",
+      "type": "mcq",
+      "stem": "A business has a profit of ₦500,000. If it has a tax rate of 20%, how much will it pay in taxes?",
+      "options": {
+        "A": "₦100000",
+        "B": "₦200000",
+        "C": "₦300000",
+        "D": "₦400000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0071",
+      "type": "mcq",
+      "stem": "A company uses the following marketing mix: product, price, promotion, and place. What is the primary goal of this mix?",
+      "options": {
+        "A": "To increase sales",
+        "B": "To reduce costs",
+        "C": "To improve customer satisfaction",
+        "D": "To increase market share"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0072",
+      "type": "mcq",
+      "stem": "A bank has a reserve requirement of 10%. If it has a deposit of ₦1,000,000, how much must it reserve?",
+      "options": {
+        "A": "₦100000",
+        "B": "₦200000",
+        "C": "₦300000",
+        "D": "₦400000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0073",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.4K^0.3, where Q is output, L is labor, and K is capital. If the firm wants to increase output by 20% while keeping labor constant, how much should it increase its capital?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0074",
+      "type": "mcq",
+      "stem": "A company has two warehouses, A and B, with capacities of 1000 and 500 units, respectively. Warehouse A has 800 units of stock, while Warehouse B has 200 units. If the company wants to transfer 200 units from Warehouse A to Warehouse B, what will be the new stock levels in each warehouse?",
+      "options": {
+        "A": "Warehouse A: 600 units, Warehouse B: 400 units",
+        "B": "Warehouse A: 700 units, Warehouse B: 300 units",
+        "C": "Warehouse A: 800 units, Warehouse B: 200 units",
+        "D": "Warehouse A: 900 units, Warehouse B: 100 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0075",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 100x - 2x^2, where x is the number of units sold. If the firm wants to maximize its revenue, how many units should it sell?",
+      "options": {
+        "A": "10 units",
+        "B": "20 units",
+        "C": "30 units",
+        "D": "40 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0076",
+      "type": "mcq",
+      "stem": "A company has a budget of ₦100,000 to invest in either a warehouse or a transportation system. The warehouse costs ₦80,000 and has a return on investment of 10%, while the transportation system costs ₦60,000 and has a return on investment of 15%. Which investment should the company choose?",
+      "options": {
+        "A": "Warehouse",
+        "B": "Transportation system",
+        "C": "Either investment is equally good",
+        "D": "Neither investment is good"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0077",
+      "type": "mcq",
+      "stem": "A commercial bank&#039;s primary function is to act as a &quot;warehouse&quot; for the economy by providing a safe place for people to store their money. Which of the following is a correct description of this function?",
+      "options": {
+        "A": "To provide loans to customers",
+        "B": "To act as a safe place for people to store their money",
+        "C": "To facilitate the exchange of goods and services",
+        "D": "To manage the risk of investments"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0078",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a new product line to target a specific demographic. Which of the following is a correct description of this strategy?",
+      "options": {
+        "A": "Product differentiation",
+        "B": "Market segmentation",
+        "C": "Target marketing",
+        "D": "Positioning"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0079",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is considered a &quot;sole proprietorship&quot; because it is owned and operated by one person. Which of the following is a correct description of this type of business?",
+      "options": {
+        "A": "A partnership between two or more people",
+        "B": "A business owned and operated by one person",
+        "C": "A corporation with multiple shareholders",
+        "D": "A cooperative owned by its members"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0080",
+      "type": "mcq",
+      "stem": "A company&#039;s insurance policy covers losses due to natural disasters. Which of the following is a correct description of this type of insurance?",
+      "options": {
+        "A": "Liability insurance",
+        "B": "Property insurance",
+        "C": "Casualty insurance",
+        "D": "Workers' compensation insurance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0081",
+      "type": "mcq",
+      "stem": "A foreign trade agreement between two countries involves the exchange of goods and services. Which of the following is a correct description of this type of agreement?",
+      "options": {
+        "A": "A bilateral trade agreement",
+        "B": "A multilateral trade agreement",
+        "C": "A free trade agreement",
+        "D": "A protectionist trade agreement"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0082",
+      "type": "mcq",
+      "stem": "A bank&#039;s cash reserve ratio is 20%. If the bank has a cash reserve of ₦1,000,000, what is the maximum amount it can lend to its customers?",
+      "options": {
+        "A": "₦4,000,000",
+        "B": "₦5,000,000",
+        "C": "₦6,000,000",
+        "D": "₦7,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0083",
+      "type": "mcq",
+      "stem": "A company&#039;s sole trader has a profit of ₦500,000. If the company&#039;s tax rate is 25%, what is the amount of tax the sole trader must pay?",
+      "options": {
+        "A": "₦125,000",
+        "B": "₦150,000",
+        "C": "₦175,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0084",
+      "type": "mcq",
+      "stem": "A warehouse has a storage capacity of 10,000 units. If the warehouse is currently storing 8,000 units, what is the maximum number of units that can be added to the warehouse?",
+      "options": {
+        "A": "1,000",
+        "B": "2,000",
+        "C": "3,000",
+        "D": "4,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0085",
+      "type": "mcq",
+      "stem": "A company has a foreign trade agreement with a country that has a currency exchange rate of 1 USD = 360 Naira. If the company imports goods worth 10,000, what is the total cost in Naira?",
+      "options": {
+        "A": "₦3,600,000",
+        "B": "₦3,600,000",
+        "C": "₦3,600,000",
+        "D": "₦3,600,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0086",
+      "type": "mcq",
+      "stem": "A bank&#039;s interest rate is 10% per annum. If a customer deposits ₦100,000 for 2 years, what is the total interest earned?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦21,000",
+        "C": "₦22,000",
+        "D": "₦23,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0087",
+      "type": "mcq",
+      "stem": "A company&#039;s foreign trade involves exporting goods worth ₦500 million to a foreign country. If the exchange rate is 1 USD = ₦400, what is the value of the exported goods in USD?",
+      "options": {
+        "A": "1,250,000",
+        "B": "1,000,000",
+        "C": "1,500,000",
+        "D": "2,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0088",
+      "type": "mcq",
+      "stem": "A warehouse has a storage capacity of 10,000 cubic meters. If the warehouse is currently storing goods with a volume of 5,000 cubic meters, what is the remaining storage capacity?",
+      "options": {
+        "A": "2,000",
+        "B": "5,000",
+        "C": "10,000",
+        "D": "20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0089",
+      "type": "mcq",
+      "stem": "A company has a policy of paying its employees a 10% bonus on their annual salary. If an employee&#039;s annual salary is ₦500,000, what is the value of the bonus?",
+      "options": {
+        "A": "50,000",
+        "B": "60,000",
+        "C": "70,000",
+        "D": "80,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0090",
+      "type": "mcq",
+      "stem": "A bank offers a 5% interest rate on deposits. If a customer deposits ₦100,000, what is the interest earned after 1 year?",
+      "options": {
+        "A": "5,000",
+        "B": "10,000",
+        "C": "15,000",
+        "D": "20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0091",
+      "type": "mcq",
+      "stem": "A company&#039;s insurance policy has a deductible of ₦50,000. If the company incurs a loss of ₦200,000, what is the amount paid by the insurance company?",
+      "options": {
+        "A": "150,000",
+        "B": "150,000",
+        "C": "200,000",
+        "D": "250,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0092",
+      "type": "mcq",
+      "stem": "In a warehouse with a capacity of 10,000 units, the stock level is currently at 8,000 units. The warehouse manager wants to maintain a safety stock of 20% of the total capacity. What is the minimum number of units that should be ordered to maintain the desired safety stock?",
+      "options": {
+        "A": "1,600",
+        "B": "2,000",
+        "C": "2,400",
+        "D": "3,200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0093",
+      "type": "mcq",
+      "stem": "A company is considering two different insurance policies to cover its business risks. Policy A has a premium of ₦10,000 and a deductible of ₦5,000. Policy B has a premium of ₦15,000 and a deductible of ₦2,000. If the company expects to incur a loss of ₦20,000, which policy would be more cost-effective?",
+      "options": {
+        "A": "Policy A",
+        "B": "Policy B",
+        "C": "Both policies are equally cost-effective",
+        "D": "Neither policy is cost-effective"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0094",
+      "type": "mcq",
+      "stem": "A consumer protection agency is investigating a complaint about a company that has been selling defective products. The company has a policy of replacing defective products within 30 days of purchase. However, the consumer claims that the company has been refusing to replace the defective products. What is the likely outcome of the investigation?",
+      "options": {
+        "A": "The company will be fined ₦100,000",
+        "B": "The company will be ordered to replace the defective products",
+        "C": "The consumer will be required to pay for the replacement",
+        "D": "The investigation will be dropped"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0095",
+      "type": "mcq",
+      "stem": "A company is considering exporting its products to a foreign market. The company has identified a potential customer who is interested in purchasing 1,000 units of the product. However, the customer is requesting a 30% discount on the price. What is the minimum price that the company can offer to the customer?",
+      "options": {
+        "A": "₦80,000",
+        "B": "₦90,000",
+        "C": "₦100,000",
+        "D": "₦110,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0096",
+      "type": "mcq",
+      "stem": "A business law firm is representing a client who is suing a company for breach of contract. The company has argued that the contract was void ab initio due to a lack of consideration. What is the likely outcome of the case?",
+      "options": {
+        "A": "The court will rule in favor of the company",
+        "B": "The court will rule in favor of the client",
+        "C": "The case will be dismissed",
+        "D": "The case will be adjourned"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0097",
+      "type": "mcq",
+      "stem": "In a just-in-time (JIT) inventory system, what is the primary goal of the warehouse manager?",
+      "options": {
+        "A": "To minimize inventory costs",
+        "B": "To maximize storage capacity",
+        "C": "To reduce lead times",
+        "D": "To increase inventory turnover"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0098",
+      "type": "mcq",
+      "stem": "A bank offers a 5-year fixed deposit account with an interest rate of 8% per annum compounded annually. If ₦ 10,000 is deposited, what will be the future value after 5 years?",
+      "options": {
+        "A": "₦ 16,386.16",
+        "B": "₦ 16,384.16",
+        "C": "₦ 16,385.16",
+        "D": "₦ 16,387.16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0099",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity to store 10,000 units of goods. The warehouse is currently 70% full. If 500 units of goods are received, what will be the new percentage of the warehouse that is full?",
+      "options": {
+        "A": "60%",
+        "B": "65%",
+        "C": "70%",
+        "D": "75%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0100",
+      "type": "mcq",
+      "stem": "A ship is traveling from Lagos to Port Harcourt. The distance between the two cities is 500 km. If the ship travels at an average speed of 50 km/h, how many hours will it take to cover the distance?",
+      "options": {
+        "A": "10 hours",
+        "B": "11 hours",
+        "C": "12 hours",
+        "D": "13 hours"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0101",
+      "type": "mcq",
+      "stem": "A company has a policy of paying its employees a 10% bonus on their annual salaries. If an employee&#039;s annual salary is ₦ 100,000, what will be the bonus amount?",
+      "options": {
+        "A": "₦ 10,000",
+        "B": "₦ 9,000",
+        "C": "₦ 11,000",
+        "D": "₦ 12,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0102",
+      "type": "mcq",
+      "stem": "In a market economy, the law of supply and demand determines the price of a commodity. However, the government may intervene to regulate prices in order to protect consumers. Which of the following is a potential consequence of government price regulation?",
+      "options": {
+        "A": "Increased competition among firms",
+        "B": "Reduced consumer choice",
+        "C": "Inefficient allocation of resources",
+        "D": "Increased government revenue"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0103",
+      "type": "mcq",
+      "stem": "A company produces two products, A and B, using two inputs, labor and capital. The production function for product A is given by Q_A = 2L^0.5K^0.5, where Q_A is the quantity of product A produced, L is the amount of labor used, and K is the amount of capital used. The production function for product B is given by Q_B = 3L^0.7K^0.3. If the company has 100 units of labor and 50 units of capital, how many units of product A and product B should the company produce to maximize profit?",
+      "options": {
+        "A": "Q_A = 20, Q_B = 30",
+        "B": "Q_A = 25, Q_B = 35",
+        "C": "Q_A = 30, Q_B = 20",
+        "D": "Q_A = 35, Q_B = 25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0104",
+      "type": "mcq",
+      "stem": "A consumer has a budget of ₦10,000 and a utility function given by U = 2x + 3y, where x and y are the quantities of two goods consumed. If the prices of the two goods are ₦2,000 and ₦3,000 respectively, how much of each good should the consumer buy to maximize utility?",
+      "options": {
+        "A": "x = 2, y = 3",
+        "B": "x = 3, y = 2",
+        "C": "x = 4, y = 1",
+        "D": "x = 1, y = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0105",
+      "type": "mcq",
+      "stem": "A company has a production function given by Q = 2L^0.5K^0.5, where Q is the quantity produced, L is the amount of labor used, and K is the amount of capital used. If the company has 100 units of labor and 50 units of capital, how much should it produce to minimize cost?",
+      "options": {
+        "A": "Q = 20",
+        "B": "Q = 25",
+        "C": "Q = 30",
+        "D": "Q = 35"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0106",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the law of diminishing marginal utility implies that the demand curve for a firm&#039;s product is likely to be:",
+      "options": {
+        "A": "Vertical",
+        "B": "Horizontal",
+        "C": "Inelastic",
+        "D": "Perfectly Elastic"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0107",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^(1/2)K^(1/2). If the firm&#039;s current labor and capital inputs are 4 and 9 respectively, what is the marginal product of labor?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0108",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 100Q - 2Q^2. If the firm sells 10 units of its product, what is its total revenue?",
+      "options": {
+        "A": "800",
+        "B": "900",
+        "C": "1000",
+        "D": "1100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0109",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by C = 50 + 10L + 2K. If the firm&#039;s current labor and capital inputs are 5 and 8 respectively, what is its total cost?",
+      "options": {
+        "A": "150",
+        "B": "200",
+        "C": "250",
+        "D": "300"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0110",
+      "type": "mcq",
+      "stem": "A firm&#039;s profit function is given by π = R - C. If the firm&#039;s revenue and cost functions are R = 100Q - 2Q^2 and C = 50 + 10L + 2K respectively, what is the firm&#039;s profit when Q = 10, L = 5 and K = 8?",
+      "options": {
+        "A": "50",
+        "B": "100",
+        "C": "150",
+        "D": "200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0111",
+      "type": "mcq",
+      "stem": "The demand for a product is given by the equation Q = 100 - 2P, where Q is the quantity demanded and P is the price. If the price elasticity of demand is 0.5, find the price at which the quantity demanded is 50 units.",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0112",
+      "type": "mcq",
+      "stem": "A company has two production plants, A and B. Plant A produces 100 units of a product per day, while plant B produces 150 units per day. If the total demand for the product is 250 units per day, what is the probability that plant A will produce more than 50% of the total demand?",
+      "options": {
+        "A": "0.2",
+        "B": "0.4",
+        "C": "0.6",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0113",
+      "type": "mcq",
+      "stem": "A firm has a market share of 30% in a particular industry. If the industry&#039;s total market size is ₦100 million, what is the firm&#039;s revenue?",
+      "options": {
+        "A": "₦20,000,000",
+        "B": "₦30,000,000",
+        "C": "₦40,000,000",
+        "D": "₦50,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0114",
+      "type": "mcq",
+      "stem": "A company has a profit of ₦50,000 and a total revenue of ₦200,000. If the company&#039;s cost of goods sold is ₦100,000, what is its gross margin?",
+      "options": {
+        "A": "0.2",
+        "B": "0.3",
+        "C": "0.5",
+        "D": "0.7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0115",
+      "type": "mcq",
+      "stem": "A firm has a market share of 20% in a particular industry. If the industry&#039;s total market size is ₦150 million, what is the firm&#039;s revenue?",
+      "options": {
+        "A": "₦20,000,000",
+        "B": "₦30,000,000",
+        "C": "₦40,000,000",
+        "D": "₦50,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0116",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5H^0.5, where Q is output, L is labor and H is capital. If the firm wants to increase output by 20% and labor by 15%, what percentage increase in capital is required?",
+      "options": {
+        "A": "10%",
+        "B": "12%",
+        "C": "15%",
+        "D": "18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0117",
+      "type": "mcq",
+      "stem": "A company is considering two marketing strategies: A and B. Strategy A has a probability of success of 0.6 and a cost of ₦100,000. Strategy B has a probability of success of 0.8 and a cost of ₦150,000. If the company wants to maximize its expected return, which strategy should it choose?",
+      "options": {
+        "A": "Strategy A",
+        "B": "Strategy B",
+        "C": "Both strategies are equally good",
+        "D": "Neither strategy is good"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0118",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P, where Q is quantity demanded and P is price. If the firm wants to increase revenue by 20%, what price should it set?",
+      "options": {
+        "A": "₦50",
+        "B": "₦60",
+        "C": "₦70",
+        "D": "₦80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0119",
+      "type": "mcq",
+      "stem": "A company has a production function Q = 2L^0.5H^0.5, where Q is output, L is labor and H is capital. If the company wants to increase output by 20% and labor by 15%, what percentage increase in capital is required?",
+      "options": {
+        "A": "10%",
+        "B": "12%",
+        "C": "15%",
+        "D": "18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0120",
+      "type": "mcq",
+      "stem": "The Consumer Protection Act of 1999 in Nigeria provides for the protection of consumers from unfair trade practices. Which of the following is a key provision of the Act?",
+      "options": {
+        "A": "The Act provides for the establishment of a Consumer Protection Council",
+        "B": "The Act provides for the protection of consumers from unfair trade practices",
+        "C": "The Act provides for the establishment of a Consumer Protection Agency",
+        "D": "The Act provides for the protection of consumers from environmental hazards"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0121",
+      "type": "mcq",
+      "stem": "A firm produces two goods, X and Y, using two inputs, labor (L) and capital (K). The production function for good X is given by QX = 2L^0.5 K^0.5. The production function for good Y is given by QY = 3L^0.25 K^0.75. If the firm has 100 units of labor and 200 units of capital, how many units of good X will it produce?",
+      "options": {
+        "A": "50",
+        "B": "100",
+        "C": "200",
+        "D": "300"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0122",
+      "type": "mcq",
+      "stem": "A bank has a reserve requirement of 10% and a cash reserve ratio of 5%. If the bank has 100 units of deposits, how much cash will it have to keep in reserve?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0123",
+      "type": "mcq",
+      "stem": "A firm imports goods from a foreign country. The foreign country has a tariff of 20% on the imported goods. If the firm imports 100 units of goods at a price of ₦100 per unit, what is the total cost of the imported goods?",
+      "options": {
+        "A": "₦12000",
+        "B": "₦14000",
+        "C": "₦16000",
+        "D": "₦18000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0124",
+      "type": "mcq",
+      "stem": "A firm produces two goods, X and Y, using two inputs, labor (L) and capital (K). The production function for good X is given by QX = 2L^0.5 K^0.5. The production function for good Y is given by QY = 3L^0.25 K^0.75. If the firm has 100 units of labor and 200 units of capital, how many units of good Y will it produce?",
+      "options": {
+        "A": "50",
+        "B": "100",
+        "C": "200",
+        "D": "300"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0125",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is upward-sloping because of the law of increasing",
+      "options": {
+        "A": "diminishing marginal opportunity costs",
+        "B": "increasing marginal opportunity costs",
+        "C": "decreasing marginal opportunity costs",
+        "D": "constant marginal opportunity costs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0126",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L + 3K, where Q is output, L is labor, and K is capital. If the firm wants to produce 12 units of output, how many units of capital will it need if it employs 4 units of labor?",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0127",
+      "type": "mcq",
+      "stem": "A company has the following balance sheet: Assets = ₦100m, Liabilities = ₦50m, Equity = ₦50m. If the company issues 10m new shares at ₦5 per share, what will be the new equity value?",
+      "options": {
+        "A": "₦60m",
+        "B": "₦65m",
+        "C": "₦70m",
+        "D": "₦75m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0128",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 2Q^2 + 3Q, where R is revenue and Q is output. If the firm produces 5 units of output, what will be its revenue?",
+      "options": {
+        "A": "₦35",
+        "B": "₦40",
+        "C": "₦45",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0129",
+      "type": "mcq",
+      "stem": "A company has the following cash flow statement: Cash Inflows = ₦100m, Cash Outflows = ₦80m. What will be the company&#039;s net cash flow?",
+      "options": {
+        "A": "₦10m",
+        "B": "₦15m",
+        "C": "₦20m",
+        "D": "₦25m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0130",
+      "type": "mcq",
+      "stem": "In a warehouse with a capacity of 10,000 units, the inventory level is currently at 8,000 units. If the warehouse receives a shipment of 2,000 units and 1,500 units are sold, what is the new inventory level?",
+      "options": {
+        "A": "6,000",
+        "B": "7,500",
+        "C": "8,500",
+        "D": "9,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0131",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves a 20% discount on all products for the first week of a new product launch. If the original price of the product is ₦10,000, what is the discounted price?",
+      "options": {
+        "A": "₦8,000",
+        "B": "₦9,000",
+        "C": "₦10,000",
+        "D": "₦12,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0132",
+      "type": "mcq",
+      "stem": "A sole trader has a business income of ₦500,000 and expenses of ₦200,000. What is the profit before tax?",
+      "options": {
+        "A": "₦300,000",
+        "B": "₦400,000",
+        "C": "₦500,000",
+        "D": "₦600,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0133",
+      "type": "mcq",
+      "stem": "A company uses the First-In-First-Out (FIFO) inventory method. If the cost of goods sold is ₦1,500,000 and the total inventory value is ₦2,500,000, what is the cost of goods available for sale?",
+      "options": {
+        "A": "₦3,000,000",
+        "B": "₦3,500,000",
+        "C": "₦4,000,000",
+        "D": "₦4,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0134",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing budget is ₦1,000,000. If the company allocates 30% of the budget to advertising and 20% to promotion, what is the amount allocated to advertising?",
+      "options": {
+        "A": "₦200,000",
+        "B": "₦250,000",
+        "C": "₦300,000",
+        "D": "₦350,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0135",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is perfectly elastic. What is the implication of this on the firm&#039;s profit-maximizing output?",
+      "options": {
+        "A": "The firm will produce at the minimum point of the average total cost curve.",
+        "B": "The firm will produce at the point where marginal revenue equals marginal cost.",
+        "C": "The firm will produce at the point where the demand curve intersects the average revenue curve.",
+        "D": "The firm will produce at the point where the supply curve intersects the demand curve."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0136",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 10,000 units. The company receives an order for 8,000 units. What is the most appropriate inventory control method to use in this situation?",
+      "options": {
+        "A": "First-In-First-Out (FIFO)",
+        "B": "Last-In-First-Out (LIFO)",
+        "C": "First-Come-First-Served (FCFS)",
+        "D": "Just-In-Time (JIT)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0137",
+      "type": "mcq",
+      "stem": "A life insurance policy has a premium of ₦10,000 per annum. The policy pays a benefit of ₦500,000 in the event of the policyholder&#039;s death. What is the probability of the policyholder dying within the next 10 years?",
+      "options": {
+        "A": "0.05",
+        "B": "0.10",
+        "C": "0.15",
+        "D": "0.20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0138",
+      "type": "mcq",
+      "stem": "A company is considering launching a new product. The company has estimated that the product will have a market share of 20% within the first year. What is the most appropriate marketing strategy to use in this situation?",
+      "options": {
+        "A": "Product differentiation",
+        "B": "Market segmentation",
+        "C": "Positioning",
+        "D": "Pricing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0139",
+      "type": "mcq",
+      "stem": "A company has a budget of ₦1,000,000 for advertising. The company wants to allocate the budget across three different media channels: television, radio, and print. What is the most appropriate allocation of the budget?",
+      "options": {
+        "A": "Television: 40%, Radio: 30%, Print: 30%",
+        "B": "Television: 30%, Radio: 40%, Print: 30%",
+        "C": "Television: 20%, Radio: 40%, Print: 40%",
+        "D": "Television: 50%, Radio: 20%, Print: 30%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0140",
+      "type": "mcq",
+      "stem": "A company is considering the establishment of a sole trade business. What is the primary advantage of a sole trade business?",
+      "options": {
+        "A": "Sole trade businesses are easier to establish and manage.",
+        "B": "Sole trade businesses are more profitable than companies.",
+        "C": "Sole trade businesses are less risky than companies.",
+        "D": "Sole trade businesses are more flexible than companies."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0141",
+      "type": "mcq",
+      "stem": "A bank is considering the establishment of a new branch in a rural area. What is the primary consideration for the bank?",
+      "options": {
+        "A": "The bank's profitability.",
+        "B": "The bank's risk exposure.",
+        "C": "The bank's social responsibility.",
+        "D": "The bank's market share."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0142",
+      "type": "mcq",
+      "stem": "A company is considering the use of just-in-time inventory management system. What is the primary advantage of this system?",
+      "options": {
+        "A": "Reduced inventory costs.",
+        "B": "Improved inventory turnover.",
+        "C": "Increased inventory levels.",
+        "D": "Reduced production costs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0143",
+      "type": "mcq",
+      "stem": "A consumer is considering the purchase of a product from a company. What is the primary consideration for the consumer?",
+      "options": {
+        "A": "The product's price.",
+        "B": "The product's quality.",
+        "C": "The company's reputation.",
+        "D": "The product's packaging."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0144",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is considered a separate legal entity from its owner. What is the primary advantage of this separation?",
+      "options": {
+        "A": "Limited liability",
+        "B": "Separate taxation",
+        "C": "Increased credibility",
+        "D": "Easier business closure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0145",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a new product line. Which of the following is a key consideration in this decision?",
+      "options": {
+        "A": "Market demand",
+        "B": "Production costs",
+        "C": "Competition analysis",
+        "D": "Supply chain management"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0146",
+      "type": "mcq",
+      "stem": "A business is considering outsourcing its production process. What is the primary benefit of this decision?",
+      "options": {
+        "A": "Reduced labor costs",
+        "B": "Increased flexibility",
+        "C": "Improved quality control",
+        "D": "Enhanced brand reputation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0147",
+      "type": "mcq",
+      "stem": "A company&#039;s foreign trade involves exporting goods to a country with a different currency. What is the primary consideration in this transaction?",
+      "options": {
+        "A": "Exchange rate fluctuations",
+        "B": "Tariffs and duties",
+        "C": "Cultural differences",
+        "D": "Language barriers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0148",
+      "type": "mcq",
+      "stem": "A business is considering a new marketing strategy. Which of the following is a key consideration in this decision?",
+      "options": {
+        "A": "Target market analysis",
+        "B": "Competitor analysis",
+        "C": "Product life cycle",
+        "D": "Supply chain management"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0149",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s current output is 16 units and the wage rate is 10 per hour, what is the minimum number of workers the firm must hire to produce this output?",
+      "options": {
+        "A": "4 workers",
+        "B": "6 workers",
+        "C": "8 workers",
+        "D": "10 workers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0150",
+      "type": "mcq",
+      "stem": "A firm&#039;s foreign trade involves exporting goods to a country with a different currency. Which of the following is a risk associated with this type of trade?",
+      "options": {
+        "A": "Exchange rate risk",
+        "B": "Country risk",
+        "C": "Product risk",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0151",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing strategy involves a mix of advertising, sales promotion, and public relations. Which of the following is a characteristic of a successful marketing strategy?",
+      "options": {
+        "A": "Flexibility",
+        "B": "Focus on a single target market",
+        "C": "Use of a wide range of marketing tools",
+        "D": "Long-term orientation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0152",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the demand curve for a firm&#039;s product is its",
+      "options": {
+        "A": "marginal revenue curve",
+        "B": "marginal cost curve",
+        "C": "average revenue curve",
+        "D": "average cost curve"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0153",
+      "type": "mcq",
+      "stem": "A company&#039;s production function is given by Q = 2L^0.5K^0.5. If the company wants to produce 16 units of output, and the price of labor is ₦10 per unit, and the price of capital is ₦20 per unit, what is the minimum cost of production?",
+      "options": {
+        "A": "₦160",
+        "B": "₦320",
+        "C": "₦640",
+        "D": "₦1280"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0154",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the firm&#039;s marginal revenue function is MR = 200 - 4P, what is the firm&#039;s optimal price?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0155",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is given by U = 2X + 3Y. If the consumer&#039;s budget constraint is given by 2X + 3Y = 12, what is the consumer&#039;s optimal bundle of goods?",
+      "options": {
+        "A": "(2, 4)",
+        "B": "(4, 2)",
+        "C": "(6, 0)",
+        "D": "(0, 6)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0156",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm wants to produce 16 units of output, and the price of labor is ₦10 per unit, and the price of capital is ₦20 per unit, what is the minimum cost of production?",
+      "options": {
+        "A": "₦160",
+        "B": "₦320",
+        "C": "₦640",
+        "D": "₦1280"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0157",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5H^0.5, where Q is output, L is labor, and H is capital. If the firm wants to increase output by 20% while keeping labor constant at 100 units, how much capital should it invest?",
+      "options": {
+        "A": "( 100 sqrt{5} )",
+        "B": "( 50 sqrt{5} )",
+        "C": "( 200 sqrt{5} )",
+        "D": "( 500 sqrt{5} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0158",
+      "type": "mcq",
+      "stem": "A company uses the following budget constraint: 2X + 3Y = 12. The company wants to maximize its profit, which is given by P = 4X + 2Y. Using the method of substitution, find the optimal values of X and Y.",
+      "options": {
+        "A": "( X = 2, Y = 2 )",
+        "B": "( X = 1, Y = 3 )",
+        "C": "( X = 3, Y = 1 )",
+        "D": "( X = 4, Y = 0 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0159",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P, where Q is quantity demanded and P is price. If the firm wants to maximize its revenue, which is given by R = PQ, what price should it charge?",
+      "options": {
+        "A": "( 20 )",
+        "B": "( 30 )",
+        "C": "( 40 )",
+        "D": "( 50 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0160",
+      "type": "mcq",
+      "stem": "A company uses the following production function: Q = 2L^0.5H^0.5, where Q is output, L is labor, and H is capital. If the company wants to increase output by 20% while keeping labor constant at 100 units, how much capital should it invest?",
+      "options": {
+        "A": "( 100 sqrt{5} )",
+        "B": "( 50 sqrt{5} )",
+        "C": "( 200 sqrt{5} )",
+        "D": "( 500 sqrt{5} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0161",
+      "type": "mcq",
+      "stem": "In the context of international trade, what is the primary advantage of a country adopting a free trade policy?",
+      "options": {
+        "A": "Increased government revenue",
+        "B": "Reduced trade barriers",
+        "C": "Protection of domestic industries",
+        "D": "Increased employment opportunities"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0162",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s labor and capital inputs are increased by 20% and 15% respectively, what is the percentage change in output?",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "15%",
+        "D": "20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0163",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing mix is given by the 4 Ps: Product, Price, Place, and Promotion. Which of the following is NOT a characteristic of a product?",
+      "options": {
+        "A": "Quality",
+        "B": "Design",
+        "C": "Packaging",
+        "D": "Warranty"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0164",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by C = 2L + 3K. If the firm&#039;s labor and capital inputs are increased by 10% and 5% respectively, what is the percentage change in total cost?",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "15%",
+        "D": "20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0165",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements show a net income of ₦1,000,000 and a total equity of ₦2,000,000. What is the company&#039;s return on equity (ROE)?",
+      "options": {
+        "A": "50%",
+        "B": "60%",
+        "C": "70%",
+        "D": "80%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0166",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is a straight line with a positive slope. What is the implication of this on the equilibrium price and quantity?",
+      "options": {
+        "A": "The equilibrium price and quantity will be at the intersection of the supply and demand curves.",
+        "B": "The equilibrium price will be higher than the equilibrium quantity.",
+        "C": "The equilibrium price and quantity will be at the midpoint of the supply and demand curves.",
+        "D": "The equilibrium price will be lower than the equilibrium quantity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0167",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue is given by the equation R(x) = 2x^2 + 5x + 1. If the firm&#039;s marginal revenue is 10, what is the value of x?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0168",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 1000 units. The company&#039;s storage cost per unit is ₦10. If the company orders 500 units, what is the total storage cost?",
+      "options": {
+        "A": "₦5000",
+        "B": "₦50000",
+        "C": "₦500000",
+        "D": "₦5000000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0169",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing budget is ₦100000. The firm wants to allocate the budget to advertising and promotion. If the firm allocates 20% of the budget to advertising, what is the amount allocated to promotion?",
+      "options": {
+        "A": "₦20000",
+        "B": "₦40000",
+        "C": "₦60000",
+        "D": "₦80000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0170",
+      "type": "mcq",
+      "stem": "A company&#039;s sales data for the past 5 years is as follows: 2018: 1000 units, 2019: 1200 units, 2020: 1500 units, 2021: 1800 units, 2022: 2000 units. What is the average annual sales growth rate?",
+      "options": {
+        "A": "10%",
+        "B": "15%",
+        "C": "20%",
+        "D": "25%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0171",
+      "type": "mcq",
+      "stem": "The concept of &#039;Gresham&#039;s Law&#039; in economics states that bad money drives out good money. What is the primary reason for this phenomenon?",
+      "options": {
+        "A": "Inflation",
+        "B": "Deflation",
+        "C": "Monetary policy",
+        "D": "Supply and demand"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0172",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves a 20% increase in advertising expenditure. If the initial advertising expenditure was ₦1,500,000, what is the new expenditure?",
+      "options": {
+        "A": "₦1,800,000",
+        "B": "₦1,600,000",
+        "C": "₦1,200,000",
+        "D": "₦1,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0173",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5, where Q is output, L is labor, and K is capital. If labor increases by 20% and capital remains constant, what is the percentage change in output?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0174",
+      "type": "mcq",
+      "stem": "A company&#039;s stock is priced at ₦50 per share. If the number of shares outstanding increases by 15%, what is the new market capitalization?",
+      "options": {
+        "A": "₦5,750,000",
+        "B": "₦5,250,000",
+        "C": "₦5,000,000",
+        "D": "₦4,750,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0175",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 2pQ, where R is revenue, p is price, and Q is quantity sold. If price increases by 10% and quantity sold remains constant, what is the percentage change in revenue?",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "15%",
+        "D": "20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0176",
+      "type": "mcq",
+      "stem": "A firm specializes in producing a single product, which is a type of commodity. The commodity is characterized by its homogeneity and perfect substitutability. What is the name of this type of commodity?",
+      "options": {
+        "A": "Standardized commodity",
+        "B": "Differentiated product",
+        "C": "Homogeneous product",
+        "D": "Perfectly competitive commodity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0177",
+      "type": "mcq",
+      "stem": "A bank&#039;s balance sheet is a statement that presents its financial position at a particular point in time. What is the name of the section of the balance sheet that shows the bank&#039;s assets?",
+      "options": {
+        "A": "Liabilities",
+        "B": "Equity",
+        "C": "Assets",
+        "D": "Revenue"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0178",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by the equation Q = 2L^0.5K^0.5. If the firm wants to produce 16 units of output, and the price of labor is ₦100 per unit, and the price of capital is ₦200 per unit, what is the minimum cost of production?",
+      "options": {
+        "A": "₦400",
+        "B": "₦800",
+        "C": "₦1200",
+        "D": "₦1600"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0179",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by the equation R = 2Q^2. If the firm produces 4 units of output, what is the total revenue?",
+      "options": {
+        "A": "₦16",
+        "B": "₦32",
+        "C": "₦64",
+        "D": "₦128"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0180",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by the equation C = 2L + 3K. If the firm hires 2 units of labor and 1 unit of capital, what is the total cost?",
+      "options": {
+        "A": "₦10",
+        "B": "₦20",
+        "C": "₦30",
+        "D": "₦40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0181",
+      "type": "mcq",
+      "stem": "In a monopolistically competitive market, a firm&#039;s demand curve is downward sloping due to the presence of close substitutes. However, the firm&#039;s marginal revenue curve is not necessarily downward sloping. What is the reason for this?",
+      "options": {
+        "A": "The firm's marginal revenue curve is downward sloping because the firm is a price taker.",
+        "B": "The firm's marginal revenue curve is downward sloping because the firm is a price maker.",
+        "C": "The firm's marginal revenue curve is downward sloping because the firm's demand curve is downward sloping.",
+        "D": "The firm's marginal revenue curve is downward sloping because the firm is a monopolist."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0182",
+      "type": "mcq",
+      "stem": "A company is considering two different production processes for a new product. Process A has a higher fixed cost but a lower variable cost per unit, while Process B has a lower fixed cost but a higher variable cost per unit. Which process should the company choose if it expects to produce 10,000 units?",
+      "options": {
+        "A": "Process A",
+        "B": "Process B",
+        "C": "It depends on the company's expectations for future production levels.",
+        "D": "The company should choose the process with the lower total cost."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0183",
+      "type": "mcq",
+      "stem": "A firm is considering two different advertising strategies. Strategy A involves a high upfront cost but a low ongoing cost, while Strategy B involves a low upfront cost but a high ongoing cost. Which strategy should the firm choose if it expects to advertise for 5 years?",
+      "options": {
+        "A": "Strategy A",
+        "B": "Strategy B",
+        "C": "It depends on the firm's expectations for future advertising needs.",
+        "D": "The firm should choose the strategy with the lower total cost."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0184",
+      "type": "mcq",
+      "stem": "A company is considering two different modes of transportation for its products. Mode A involves a high fixed cost but a low variable cost per unit, while Mode B involves a low fixed cost but a high variable cost per unit. Which mode should the company choose if it expects to transport 10,000 units?",
+      "options": {
+        "A": "Mode A",
+        "B": "Mode B",
+        "C": "It depends on the company's expectations for future transportation needs.",
+        "D": "The company should choose the mode with the lower total cost."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0185",
+      "type": "mcq",
+      "stem": "A firm is considering two different types of insurance policies. Policy A has a high premium but a low deductible, while Policy B has a low premium but a high deductible. Which policy should the firm choose if it expects to make a claim every year?",
+      "options": {
+        "A": "Policy A",
+        "B": "Policy B",
+        "C": "It depends on the firm's expectations for future claims.",
+        "D": "The firm should choose the policy with the lower premium."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0186",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is upward-sloping because",
+      "options": {
+        "A": "Firms are willing to supply more at a higher price",
+        "B": "Firms are willing to supply less at a lower price",
+        "C": "Firms are willing to supply more at a lower price",
+        "D": "Firms are willing to supply less at a higher price"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0187",
+      "type": "mcq",
+      "stem": "A firm&#039;s break-even point is the point at which its total revenue equals its total cost. Which of the following is NOT a factor that affects a firm&#039;s break-even point?",
+      "options": {
+        "A": "Fixed costs",
+        "B": "Variable costs",
+        "C": "Selling price",
+        "D": "Interest rates"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0188",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing mix consists of four Ps: product, price, promotion, and",
+      "options": {
+        "A": "Place",
+        "B": "People",
+        "C": "Process",
+        "D": "Product"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0189",
+      "type": "mcq",
+      "stem": "A firm&#039;s supply curve is upward-sloping because",
+      "options": {
+        "A": "Firms are willing to supply more at a higher price",
+        "B": "Firms are willing to supply less at a lower price",
+        "C": "Firms are willing to supply more at a lower price",
+        "D": "Firms are willing to supply less at a higher price"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0190",
+      "type": "mcq",
+      "stem": "A firm&#039;s break-even point is the point at which its total revenue equals its total cost. Which of the following is a factor that affects a firm&#039;s break-even point?",
+      "options": {
+        "A": "Fixed costs",
+        "B": "Variable costs",
+        "C": "Selling price",
+        "D": "Interest rates"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0191",
+      "type": "mcq",
+      "stem": "In a warehouse with a storage capacity of 10,000 units, the inventory level is currently at 8,000 units. If the warehouse receives a shipment of 2,000 units and 500 units are sold, what is the new inventory level?",
+      "options": {
+        "A": "6,000",
+        "B": "7,500",
+        "C": "8,500",
+        "D": "9,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0192",
+      "type": "mcq",
+      "stem": "A company has two branches, one in Lagos and the other in Abuja. The Lagos branch has a profit of ₦1,500,000 and the Abuja branch has a loss of ₦800,000. What is the overall profit of the company?",
+      "options": {
+        "A": "₦1,700,000",
+        "B": "₦1,300,000",
+        "C": "₦1,000,000",
+        "D": "₦900,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0193",
+      "type": "mcq",
+      "stem": "A firm produces two products, A and B. Product A requires 2 hours of labor and 3 units of raw material, while product B requires 3 hours of labor and 2 units of raw material. If the firm has 120 hours of labor and 180 units of raw material available, how many units of product A and product B should the firm produce to maximize profit?",
+      "options": {
+        "A": "(40, 60)",
+        "B": "(60, 40)",
+        "C": "(50, 50)",
+        "D": "(30, 70)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0194",
+      "type": "mcq",
+      "stem": "A life insurance policy has a premium of ₦50,000 per year and a benefit of ₦1,000,000. If the policyholder dies after 5 years, what is the total benefit paid to the beneficiary?",
+      "options": {
+        "A": "₦5,000,000",
+        "B": "₦4,500,000",
+        "C": "₦4,000,000",
+        "D": "₦3,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0195",
+      "type": "mcq",
+      "stem": "A company uses the marketing mix to promote its product. If the company increases the price of the product by 10% and reduces the advertising budget by 20%, what is the new marketing mix?",
+      "options": {
+        "A": "(10, 80)",
+        "B": "(20, 80)",
+        "C": "(15, 85)",
+        "D": "(12, 82)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0196",
+      "type": "mcq",
+      "stem": "The marketing mix of a product is often described as the 4 Ps. Which of the following is NOT one of the 4 Ps?",
+      "options": {
+        "A": "Product",
+        "B": "Price",
+        "C": "Place",
+        "D": "Profit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0197",
+      "type": "mcq",
+      "stem": "A company is considering exporting its products to a foreign market. What is the primary advantage of exporting?",
+      "options": {
+        "A": "Increased market share",
+        "B": "Reduced competition",
+        "C": "Access to new customers",
+        "D": "Improved profit margins"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0198",
+      "type": "mcq",
+      "stem": "A warehouse is used to store goods before they are shipped to customers. What is the primary benefit of using a warehouse?",
+      "options": {
+        "A": "Reduced transportation costs",
+        "B": "Improved inventory management",
+        "C": "Increased storage capacity",
+        "D": "Enhanced customer service"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0199",
+      "type": "mcq",
+      "stem": "A bank is considering offering a new loan product to its customers. What is the primary consideration for the bank?",
+      "options": {
+        "A": "Interest rate",
+        "B": "Loan term",
+        "C": "Credit risk",
+        "D": "Fees and charges"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-oau-pq-commerce-bank-0200",
+      "type": "mcq",
+      "stem": "An insurance company is considering offering a new policy to its customers. What is the primary consideration for the insurance company?",
+      "options": {
+        "A": "Premium rate",
+        "B": "Policy term",
+        "C": "Risk assessment",
+        "D": "Claims handling"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

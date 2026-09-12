@@ -14,6 +14,7 @@ import { api } from '@/lib/api';
 import { clearSession, getToken } from '@/lib/session';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 
 type Theme = 'light' | 'mixed' | 'dark';
 
@@ -73,7 +74,7 @@ export default function SettingsPage() {
   const displayEmail = me ? `${me.user.username}@renance.app` : 'student@renance.app';
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
       <PageBar title="Settings" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">
@@ -224,6 +225,7 @@ export default function SettingsPage() {
         </p>
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

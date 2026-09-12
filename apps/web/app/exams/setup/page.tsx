@@ -18,6 +18,7 @@ import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 import { api } from '@/lib/api';
 import {
   buildBodyCustomCode,
@@ -192,7 +193,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
   }
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
       <PageBar title={`${label} Practice Setup`} />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col px-4 sm:px-6">
@@ -393,6 +394,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
         </div>
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );
@@ -544,7 +546,7 @@ function ExamSetupInner() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
       <PageBar title="Mock Exam Setup" />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col px-4 sm:px-6">
@@ -959,6 +961,7 @@ function ExamSetupInner() {
         </div>
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

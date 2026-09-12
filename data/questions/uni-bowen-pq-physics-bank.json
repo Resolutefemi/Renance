@@ -1,0 +1,2615 @@
+{
+  "code": "uni-bowen-pq-physics-bank",
+  "title": "BOWEN Post-UTME Physics | Prep Bank",
+  "version": 1,
+  "questionCount": 217,
+  "totalMarks": 217,
+  "questions": [
+    {
+      "id": "uni-bowen-pq-physics-bank-0001",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal acceleration of 2 m/s^2, what is the magnitude of the force acting on the particle?",
+      "options": {
+        "A": "10 N",
+        "B": "12 N",
+        "C": "15 N",
+        "D": "20 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0002",
+      "type": "mcq",
+      "stem": "A 10 Ω resistor is connected in series with a 20 Ω resistor and a 30 Ω resistor. If a voltage of 12 V is applied across the circuit, what is the current flowing through the circuit?",
+      "options": {
+        "A": "0.4 A",
+        "B": "0.6 A",
+        "C": "0.8 A",
+        "D": "1 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0003",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 0.1 m. What is the speed of the wave?",
+      "options": {
+        "A": "5 m/s",
+        "B": "10 m/s",
+        "C": "20 m/s",
+        "D": "50 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0004",
+      "type": "mcq",
+      "stem": "A body is moving in a straight line with an initial velocity of 10 m/s and a uniform acceleration of 2 m/s^2. What is the velocity of the body after 5 seconds?",
+      "options": {
+        "A": "12 m/s",
+        "B": "15 m/s",
+        "C": "18 m/s",
+        "D": "20 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0005",
+      "type": "mcq",
+      "stem": "A spring has a spring cons\\tant of 100 N/m. If a force of 50 N is applied to the spring, what is the displacement of the spring?",
+      "options": {
+        "A": "0.5 m",
+        "B": "1 m",
+        "C": "2 m",
+        "D": "5 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0006",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular orbit of radius $r$ under the influence of a magnetic field of strength $B$. If the particle&#039;s speed is $v$, what is the magnitude of the magnetic field?",
+      "options": {
+        "A": "\\frac{mv}{qr}",
+        "B": "\\frac{mv^2}{qr}",
+        "C": "\\frac{mv}{r^2}",
+        "D": "\\frac{mv^2}{r^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0007",
+      "type": "mcq",
+      "stem": "A circuit consists of a resistor $R$, an inductor $L$, and a capacitor $C$ connected in series. If the circuit is driven by a \\sinusoidal voltage source of frequency $\\omega$, what is the impedance of the circuit?",
+      "options": {
+        "A": "\\sqrt{R^2 + \\( \\omega L - \\frac{1}{\\omega C} \\)^2}",
+        "B": "\\sqrt{R^2 + \\( \\omega L + \\frac{1}{\\omega C} \\)^2}",
+        "C": "\\sqrt{R^2 - \\( \\omega L - \\frac{1}{\\omega C} \\)^2}",
+        "D": "\\sqrt{R^2 - \\( \\omega L + \\frac{1}{\\omega C} \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0008",
+      "type": "mcq",
+      "stem": "A projectile is launched from the origin with an initial velocity $v_0$ at an angle $\\theta$ above the horizontal. If the projectile lands at a dis\\tance $d$ from the origin, what is the time of flight?",
+      "options": {
+        "A": "\\frac{2v_0 \\sin \\theta}{g}",
+        "B": "\\frac{2v_0 \\cos \\theta}{g}",
+        "C": "\\frac{2v_0 \\sin \\theta}{g^2}",
+        "D": "\\frac{2v_0 \\cos \\theta}{g^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0009",
+      "type": "mcq",
+      "stem": "A s\\tanding wave is formed by two waves of equal amplitude and frequency traveling in opposite directions. If the wavelength of each wave is $\\lambda$, what is the wavelength of the s\\tanding wave?",
+      "options": {
+        "A": "\\frac{\\lambda}{2}",
+        "B": "\\lambda",
+        "C": "2\\lambda",
+        "D": "4\\lambda"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0010",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is in a one-dimensional potential well of width $a$. If the particle&#039;s energy is $E$, what is the probability of finding the particle in the region $0 &lt; x &lt; a/2$?",
+      "options": {
+        "A": "\\frac{\\int_0^{a/2} \\psi^2(x) dx}{\\int_0^a \\psi^2(x) dx}",
+        "B": "\\frac{\\int_0^{a/2} \\psi^2(x) dx}{\\int_0^{a/2} \\psi^2(x) dx}",
+        "C": "\\frac{\\int_0^a \\psi^2(x) dx}{\\int_0^{a/2} \\psi^2(x) dx}",
+        "D": "\\frac{\\int_0^{a/2} \\psi^2(x) dx}{\\int_0^{a/2} \\psi^2(x) dx}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0011",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular path of radius $r$ with a cons\\tant speed $v$. The particle is subject to a centripetal force $F_c$ given by $F_c = \\frac{mv^2}{r}$. If the particle&#039;s speed is doubled to $2v$, what is the new centripetal force $F_{c,new}$?",
+      "options": {
+        "A": "\\frac{4mv^2}{r}",
+        "B": "\\frac{2mv^2}{r}",
+        "C": "\\frac{mv^2}{2r}",
+        "D": "\\frac{mv^2}{4r}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0012",
+      "type": "mcq",
+      "stem": "A convex lens of focal length $f$ forms an image of an object at a dis\\tance $u$ from the lens. If the object is moved to a dis\\tance $2u$ from the lens, what is the new image dis\\tance $v_{new}$?",
+      "options": {
+        "A": "\\frac{f}{2}",
+        "B": "\\frac{2f}{u}",
+        "C": "\\frac{f}{4}",
+        "D": "\\frac{4f}{u}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0013",
+      "type": "mcq",
+      "stem": "A block of mass $m$ is placed on a frictionless surface and attached to a horizontal spring with a spring cons\\tant $k$. If the block is displaced by a dis\\tance $x$ from its equilibrium position and released from rest, what is the resulting simple harmonic motion?",
+      "options": {
+        "A": "\\omega = \\sqrt{\\frac{k}{m}}",
+        "B": "\\omega = \\sqrt{\\frac{m}{k}}",
+        "C": "\\omega = \\sqrt{\\frac{k}{m}} \\sin\\( \\omega t \\)",
+        "D": "\\omega = \\sqrt{\\frac{k}{m}} \\cos\\( \\omega t \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0014",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor consists of two plates of area $A$ separated by a dis\\tance $d$. If a potential difference $V$ is applied across the plates, what is the capaci\\tance $C$?",
+      "options": {
+        "A": "\\frac{\\epsilon_0 A}{d}",
+        "B": "\\frac{\\epsilon_0 A}{d^2}",
+        "C": "\\frac{\\epsilon_0 d}{A}",
+        "D": "\\frac{\\epsilon_0 d^2}{A}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0015",
+      "type": "mcq",
+      "stem": "A body of mass $m$ is moving in a straight line with a velocity $v$. If the body is subjected to a cons\\tant force $F$ for a time $t$, what is the resulting change in momentum $\\Delta p$?",
+      "options": {
+        "A": "\\frac{Ft}{m}",
+        "B": "\\frac{Ft}{mv}",
+        "C": "\\frac{mv}{Ft}",
+        "D": "\\frac{Ft}{mv^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0016",
+      "type": "mcq",
+      "stem": "A 2 kg block of copper is heated from 20°C to 80°C. If the specific heat capacity of copper is 0.385 J/g°C, calculate the energy required to heat the block.",
+      "options": {
+        "A": "800 J",
+        "B": "1600 J",
+        "C": "2400 J",
+        "D": "3200 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0017",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path of radius 2 m with a cons\\tant speed of 4 m/s. If the particle is subject to a centripetal force of 10 N, calculate the time taken for the particle to complete one revolution.",
+      "options": {
+        "A": "2 s",
+        "B": "4 s",
+        "C": "6 s",
+        "D": "8 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0018",
+      "type": "mcq",
+      "stem": "A beam of light is incident on a glass slab at an angle of 30°. If the re\\fractive index of the glass is 1.5, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "25°",
+        "C": "30°",
+        "D": "35°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0019",
+      "type": "mcq",
+      "stem": "A gas is heated from 100 K to 300 K. If the initial volume is 2 L and the final volume is 5 L, calculate the work done by the gas.",
+      "options": {
+        "A": "100 J",
+        "B": "200 J",
+        "C": "300 J",
+        "D": "400 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0020",
+      "type": "mcq",
+      "stem": "A particle of mass 1 kg is moving in a circular path of radius 1 m with a cons\\tant speed of 3 m/s. If the particle is subject to a centripetal force of 15 N, calculate the time taken for the particle to complete one revolution.",
+      "options": {
+        "A": "2 s",
+        "B": "4 s",
+        "C": "6 s",
+        "D": "8 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0021",
+      "type": "mcq",
+      "stem": "A beam of light is incident on a glass slab at an angle of 45°. If the re\\fractive index of the glass is 1.8, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "25°",
+        "B": "30°",
+        "C": "35°",
+        "D": "40°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0022",
+      "type": "mcq",
+      "stem": "A gas is heated from 200 K to 400 K. If the initial volume is 3 L and the final volume is 6 L, calculate the work done by the gas.",
+      "options": {
+        "A": "150 J",
+        "B": "300 J",
+        "C": "450 J",
+        "D": "600 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0023",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path of radius 1 m with a cons\\tant speed of 2 m/s. If the particle is subject to a centripetal force of 5 N, calculate the time taken for the particle to complete one revolution.",
+      "options": {
+        "A": "2 s",
+        "B": "4 s",
+        "C": "6 s",
+        "D": "8 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0024",
+      "type": "mcq",
+      "stem": "A light ray is incident on a glass slab at an angle of 45°. If the re\\fractive index of glass is 1.5, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "75°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0025",
+      "type": "mcq",
+      "stem": "A 100 Ω resistor is connected in series with a 200 Ω resistor and a 50 Ω resistor. What is the total resis\\tance?",
+      "options": {
+        "A": "350 Ω",
+        "B": "450 Ω",
+        "C": "550 Ω",
+        "D": "650 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0026",
+      "type": "mcq",
+      "stem": "A container of volume 0.5 m³ is filled with an ideal gas at a temperature of 300 K. If the gas is heated to a temperature of 400 K, what is the new volume of the gas?",
+      "options": {
+        "A": "0.625 m³",
+        "B": "0.75 m³",
+        "C": "0.875 m³",
+        "D": "1 m³"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0027",
+      "type": "mcq",
+      "stem": "A radioactive sample has a half-life of 10 years. If the initial activity is 100 Bq, what is the activity after 20 years?",
+      "options": {
+        "A": "12.5 Bq",
+        "B": "25 Bq",
+        "C": "50 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0028",
+      "type": "mcq",
+      "stem": "A 10 Ω resistor is connected in series with a 20 Ω resistor and a 30 Ω resistor. What is the total resis\\tance of the circuit?",
+      "options": {
+        "A": "60 Ω",
+        "B": "70 Ω",
+        "C": "80 Ω",
+        "D": "90 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0029",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a spring with a spring cons\\tant of 100 N/m. If the block is displaced by 0.2 m from its equilibrium position, what is the force exerted by the spring on the block?",
+      "options": {
+        "A": "20 N",
+        "B": "30 N",
+        "C": "40 N",
+        "D": "50 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0030",
+      "type": "mcq",
+      "stem": "A heat engine operates between a high-temperature reservoir at 500 K and a low-temperature reservoir at 300 K. If the engine has an efficiency of 30%, what is the temperature of the high-temperature reservoir?",
+      "options": {
+        "A": "400 K",
+        "B": "450 K",
+        "C": "500 K",
+        "D": "550 K"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0031",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 2.5 μF. If a potential difference of 10 V is applied across the plates, calculate the charge stored on the capacitor.",
+      "options": {
+        "A": "25 μC",
+        "B": "250 μC",
+        "C": "2.5 mC",
+        "D": "25 mC"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0032",
+      "type": "mcq",
+      "stem": "A ray of light passes from air into a glass slab of re\\fractive index 1.5. If the angle of incidence is 30°, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0033",
+      "type": "mcq",
+      "stem": "A sound wave has a frequency of 200 Hz and a wavelength of 5 m. Calculate the speed of the sound wave.",
+      "options": {
+        "A": "1000 m/s",
+        "B": "2000 m/s",
+        "C": "3000 m/s",
+        "D": "4000 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0034",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 Ω resistor and a 20 Ω resistor connected in series. If a voltage of 24 V is applied across the circuit, calculate the current flowing through the circuit.",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "1.5 A",
+        "D": "2 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0035",
+      "type": "mcq",
+      "stem": "A light ray passes through a convex lens of focal length 10 cm. If the object dis\\tance is 20 cm, calculate the image dis\\tance.",
+      "options": {
+        "A": "10 cm",
+        "B": "20 cm",
+        "C": "30 cm",
+        "D": "40 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0036",
+      "type": "mcq",
+      "stem": "A 2 kg block is attached to a horizontal, massless spring with a force cons\\tant of 100 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. Assuming the block undergoes simple harmonic motion, determine the maximum speed of the block.",
+      "options": {
+        "A": "0.2 m/s",
+        "B": "1.0 m/s",
+        "C": "2.0 m/s",
+        "D": "5.0 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0037",
+      "type": "mcq",
+      "stem": "A projectile is launched from the origin with an initial velocity of 20 m/s at an angle of 60° above the horizontal. Assuming the only force acting on the projectile is gravity, determine the time of flight.",
+      "options": {
+        "A": "1.0 s",
+        "B": "2.0 s",
+        "C": "3.0 s",
+        "D": "4.0 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0038",
+      "type": "mcq",
+      "stem": "A gas is compressed from an initial volume of 2.0 L to a final volume of 1.0 L at a cons\\tant temperature of 300 K. Assuming ideal gas behavior, determine the work done on the gas.",
+      "options": {
+        "A": "-100 J",
+        "B": "-200 J",
+        "C": "-300 J",
+        "D": "-400 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0039",
+      "type": "mcq",
+      "stem": "A 5 kg block is moving at a speed of 10 m/s on a horizontal surface. If the coefficient of kinetic friction between the block and the surface is 0.2, determine the force of friction acting on the block.",
+      "options": {
+        "A": "10 N",
+        "B": "20 N",
+        "C": "30 N",
+        "D": "40 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0040",
+      "type": "mcq",
+      "stem": "A 10 kg object is moving at a speed of 20 m/s in a circular path with a radius of 5 m. If the object experiences a centripetal acceleration of 2 m/s^2, determine the force acting on the object.",
+      "options": {
+        "A": "20 N",
+        "B": "40 N",
+        "C": "60 N",
+        "D": "80 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0041",
+      "type": "mcq",
+      "stem": "A 2.5 mH inductor is connected in series with a 10 Ω resistor and a 20 V battery. If the inductor is initially at rest, what is the current in the circuit after 5 ms?",
+      "options": {
+        "A": "0.2 A",
+        "B": "0.4 A",
+        "C": "0.6 A",
+        "D": "0.8 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0042",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 10 μF and is charged to a potential difference of 20 V. If a dielectric slab of thickness 0.5 mm and dielectric cons\\tant 5 is inserted between the plates, what is the new capaci\\tance?",
+      "options": {
+        "A": "50 μF",
+        "B": "60 μF",
+        "C": "70 μF",
+        "D": "80 μF"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0043",
+      "type": "mcq",
+      "stem": "A 100 W bulb is connected to a 230 V mains supply. If the bulb is rated for 2500 hours of operation, how many joules of energy will it consume in that time?",
+      "options": {
+        "A": "5.25 x 10^6 J",
+        "B": "5.75 x 10^6 J",
+        "C": "6.25 x 10^6 J",
+        "D": "6.75 x 10^6 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0044",
+      "type": "mcq",
+      "stem": "A beam of light passes through a prism and is re\\fracted at an angle of 30°. If the angle of incidence is 20°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "25°",
+        "B": "30°",
+        "C": "35°",
+        "D": "40°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0045",
+      "type": "mcq",
+      "stem": "A 5 kg block is attached to a horizontal spring with a force cons\\tant of 100 N/m. If the block is displaced by 2 m from its equilibrium position and released, what is its maximum speed?",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0046",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is confined to a one-dimensional box of length $L$. The wave function of the particle is given by (psi(x) = \\sqrt{\\frac{2}{L}} \\sinleft\\( \\frac{npi x}{L}\\right \\)). What is the probability of finding the particle in the region $0 &lt; x &lt; \\frac{L}{2}$?",
+      "options": {
+        "A": "\\( \\frac{1}{2} \\)",
+        "B": "\\( \\frac{1}{4} \\)",
+        "C": "\\( \\frac{1}{8} \\)",
+        "D": "\\( \\frac{1}{16} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0047",
+      "type": "mcq",
+      "stem": "A projectile is launched from the origin with an initial velocity of $v_0$ at an angle $\\theta$ above the horizontal. The projectile&#039;s range is given by $R = \\frac{v_0^2 \\sin\\( 2\\theta \\)}{g}$. What is the maximum range of the projectile?",
+      "options": {
+        "A": "\\( \\frac{v_0^2}{g} \\)",
+        "B": "\\( \\frac{2v_0^2}{g} \\)",
+        "C": "\\( \\frac{v_0^2}{2g} \\)",
+        "D": "\\( \\frac{v_0^2}{4g} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0048",
+      "type": "mcq",
+      "stem": "A gas is contained in a cylinder of volume $V$ with a movable piston. The gas is heated, cau\\sing its temperature to increase by $Delta T$. What is the change in the gas&#039;s internal energy?",
+      "options": {
+        "A": "\\( nC_vDelta T \\)",
+        "B": "\\( nC_pDelta T \\)",
+        "C": "(nRDelta T)",
+        "D": "\\( nC_vDelta P \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0049",
+      "type": "mcq",
+      "stem": "A radioactive sample decays with a half-life of $T_{1/2}$. What is the activity of the sample after a time $t = 3T_{1/2}$?",
+      "options": {
+        "A": "\\( \\frac{1}{8}A_0 \\)",
+        "B": "\\( \\frac{1}{4}A_0 \\)",
+        "C": "\\( \\frac{1}{2}A_0 \\)",
+        "D": "\\( A_0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0050",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular orbit with a radius $r$ and a speed $v$. What is the particle&#039;s kinetic energy?",
+      "options": {
+        "A": "\\( \\frac{1}{2}mv^2 \\)",
+        "B": "(mvr)",
+        "C": "\\( \\frac{1}{2}m\\( r^2 + v^2 \\ \\))",
+        "D": "\\( \\frac{1}{2}m\\( r^2 - v^2 \\ \\))"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0051",
+      "type": "mcq",
+      "stem": "A 5 Ω resistor is connected in series with a 10 V battery. If the current through the resistor is 0.2 A, what is the power dissipated by the resistor?",
+      "options": {
+        "A": "0.1 W",
+        "B": "0.2 W",
+        "C": "0.5 W",
+        "D": "1 W"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0052",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. What is the magnitude of the net force acting on the particle?",
+      "options": {
+        "A": "10 N",
+        "B": "16/3 N",
+        "C": "20 N",
+        "D": "25 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0053",
+      "type": "mcq",
+      "stem": "A 100 V AC supply is connected across a 50 Ω resistor. If the current through the resistor is 2 A, what is the power dissipated by the resistor?",
+      "options": {
+        "A": "100 W",
+        "B": "150 W",
+        "C": "200 W",
+        "D": "250 W"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0054",
+      "type": "mcq",
+      "stem": "A 2 kg block is moving in a straight line with a speed of 5 m/s. If a force of 10 N is applied to the block, what is its acceleration?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "3 m/s^2",
+        "C": "4 m/s^2",
+        "D": "5 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0055",
+      "type": "mcq",
+      "stem": "A 5 Ω resistor is connected in parallel with a 10 Ω resistor. If a voltage of 20 V is applied across the combination, what is the current through the 5 Ω resistor?",
+      "options": {
+        "A": "2 A",
+        "B": "3 A",
+        "C": "4 A",
+        "D": "5 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0056",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a horizontal, massless spring with a spring cons\\tant of 200 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. Assuming the block undergoes simple harmonic motion, determine the maximum speed of the block as it passes through the equilibrium position.",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0057",
+      "type": "mcq",
+      "stem": "A convex lens of focal length 20 cm is placed in contact with a concave lens of focal length -15 cm. Determine the focal length of the combination.",
+      "options": {
+        "A": "10 cm",
+        "B": "15 cm",
+        "C": "20 cm",
+        "D": "25 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0058",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. Determine the magnitude of the centripetal force acting on the particle.",
+      "options": {
+        "A": "10 N",
+        "B": "20 N",
+        "C": "30 N",
+        "D": "40 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0059",
+      "type": "mcq",
+      "stem": "A beam of light passes from air into a glass of re\\fractive index 1.5. If the angle of incidence is 30°, determine the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "25°",
+        "C": "30°",
+        "D": "35°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0060",
+      "type": "mcq",
+      "stem": "A particle of mass 1 kg is in a one-dimensional potential well given by V(x) = 0 for 0 ≤ x ≤ 2 m and V(x) = ∞ for x &lt; 0 and x &gt; 2 m. Determine the ground-state energy of the particle.",
+      "options": {
+        "A": "0.1 J",
+        "B": "0.2 J",
+        "C": "0.3 J",
+        "D": "0.4 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0061",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is attached to a spring with a spring cons\\tant of 100 N/m. It is displaced by 0.2 m from its equilibrium position and released from rest. Assuming the motion is simple harmonic, calculate the total energy of the particle at time t = 0.",
+      "options": {
+        "A": "10 J",
+        "B": "20 J",
+        "C": "30 J",
+        "D": "40 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0062",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 Ω resistor, and an inductor with an induc\\tance of 0.5 H. If the current in the circuit is 2 A, what is the voltage drop across the inductor?",
+      "options": {
+        "A": "6 V",
+        "B": "8 V",
+        "C": "10 V",
+        "D": "12 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0063",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 0.5 m. What is the speed of the wave?",
+      "options": {
+        "A": "25 m/s",
+        "B": "50 m/s",
+        "C": "75 m/s",
+        "D": "100 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0064",
+      "type": "mcq",
+      "stem": "A body is moving in a circular path with a radius of 2 m. If the body completes one revolution in 4 s, what is its angular velocity?",
+      "options": {
+        "A": "1.57 rad/s",
+        "B": "3.14 rad/s",
+        "C": "4.71 rad/s",
+        "D": "6.28 rad/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0065",
+      "type": "mcq",
+      "stem": "A heat engine operates between the temperatures of 500 K and 300 K. If the engine absorbs 1000 J of heat energy, what is its efficiency?",
+      "options": {
+        "A": "0.25",
+        "B": "0.33",
+        "C": "0.4",
+        "D": "0.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0066",
+      "type": "mcq",
+      "stem": "A 2 kg block of ice at 0°C is placed in a 5°C water bath. Assuming the specific heat capacity of ice is 2090 J/(kg°C) and the specific heat capacity of water is 4186 J/(kg°C), calculate the time it takes for the ice to melt completely.",
+      "options": {
+        "A": "10 minutes",
+        "B": "20 minutes",
+        "C": "30 minutes",
+        "D": "40 minutes"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0067",
+      "type": "mcq",
+      "stem": "A magnetic field of 0.5 T is applied to a coil of wire with 100 turns and a radius of 0.1 m. If the coil is connected to a 12 V battery, calculate the induced emf in the coil.",
+      "options": {
+        "A": "0.6 V",
+        "B": "1.2 V",
+        "C": "2.4 V",
+        "D": "3.6 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0068",
+      "type": "mcq",
+      "stem": "A 50 Hz AC voltage source is connected to a 100 Ω resistor. Calculate the current flowing through the resistor.",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "2 A",
+        "D": "5 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0069",
+      "type": "mcq",
+      "stem": "A simple harmonic motion has a maximum displacement of 2 m and a frequency of 4 Hz. Calculate the angular frequency.",
+      "options": {
+        "A": "8\\pi rad/s",
+        "B": "16\\pi rad/s",
+        "C": "32\\pi rad/s",
+        "D": "64\\pi rad/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0070",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 200 Hz and a wavelength of 0.5 m. Calculate the speed of the wave.",
+      "options": {
+        "A": "100 m/s",
+        "B": "200 m/s",
+        "C": "300 m/s",
+        "D": "400 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0071",
+      "type": "mcq",
+      "stem": "A 2.5 mH inductor is connected in series with a 10 Ω resistor and a 20 V battery. If the initial current is 0 A, calculate the time taken for the current to reach 5 A.",
+      "options": {
+        "A": "0.5 s",
+        "B": "1 s",
+        "C": "2 s",
+        "D": "5 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0072",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path of radius 2 m with a cons\\tant speed of 4 m/s. Calculate the magnitude of the force acting on the particle.",
+      "options": {
+        "A": "10 N",
+        "B": "20 N",
+        "C": "30 N",
+        "D": "40 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0073",
+      "type": "mcq",
+      "stem": "A convex lens of focal length 20 cm is used to form an image of an object placed 30 cm in front of it. Calculate the magnification of the image.",
+      "options": {
+        "A": "0.5",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0074",
+      "type": "mcq",
+      "stem": "A 5 μF capacitor is connected in series with a 10 kΩ resistor and a 20 V battery. If the initial charge on the capacitor is 0 C, calculate the time taken for the charge to reach 10 μC.",
+      "options": {
+        "A": "0.1 s",
+        "B": "0.5 s",
+        "C": "1 s",
+        "D": "2 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0075",
+      "type": "mcq",
+      "stem": "A particle of mass 0.2 kg is moving in a circular path of radius 1.5 m with a cons\\tant speed of 6 m/s. Calculate the magnitude of the force acting on the particle.",
+      "options": {
+        "A": "20 N",
+        "B": "30 N",
+        "C": "40 N",
+        "D": "50 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0076",
+      "type": "mcq",
+      "stem": "A light ray passes from air into a medium with re\\fractive index 1.5. If the angle of incidence is 30°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0077",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 Ω resistor, and a 2 Ω resistor connected in series. What is the current through the 4 Ω resistor?",
+      "options": {
+        "A": "1 A",
+        "B": "2 A",
+        "C": "3 A",
+        "D": "4 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0078",
+      "type": "mcq",
+      "stem": "A heat engine operates between two temperatures, 500 K and 300 K. If the efficiency of the engine is 30%, what is the work done per cycle?",
+      "options": {
+        "A": "100 J",
+        "B": "200 J",
+        "C": "300 J",
+        "D": "400 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0079",
+      "type": "mcq",
+      "stem": "A sound wave has a frequency of 200 Hz and a speed of 340 m/s. What is the wavelength of the sound wave?",
+      "options": {
+        "A": "1.7 m",
+        "B": "1.8 m",
+        "C": "1.9 m",
+        "D": "2.0 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0080",
+      "type": "mcq",
+      "stem": "A light source is placed 2 m away from a convex lens with a focal length of 0.5 m. What is the image dis\\tance?",
+      "options": {
+        "A": "-1 m",
+        "B": "-2 m",
+        "C": "-3 m",
+        "D": "-4 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0081",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has plates of area 0.04 m^2 and separation 0.02 m. If the capaci\\tance is 2.5 x 10^-10 F, what is the charge on the plates when the potential difference between them is 100 V?",
+      "options": {
+        "A": "2.5 x 10^-9 C",
+        "B": "5 x 10^-9 C",
+        "C": "1 x 10^-8 C",
+        "D": "2 x 10^-8 C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0082",
+      "type": "mcq",
+      "stem": "A particle moves in a circular path with a radius of 2 m and a speed of 4 m/s. If the particle is displaced by 1 m from its initial position, what is the change in its kinetic energy?",
+      "options": {
+        "A": "2 J",
+        "B": "4 J",
+        "C": "6 J",
+        "D": "8 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0083",
+      "type": "mcq",
+      "stem": "A heat engine operates between two reservoirs at temperatures 300 K and 400 K. If the engine absorbs 100 J of heat from the high-temperature reservoir, what is the efficiency of the engine?",
+      "options": {
+        "A": "0.25",
+        "B": "0.30",
+        "C": "0.35",
+        "D": "0.40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0084",
+      "type": "mcq",
+      "stem": "A body of mass 2 kg is moving with a velocity of 5 m/s. If the body is subjected to a force of 10 N, what is the acceleration of the body?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "5 m/s^2",
+        "C": "10 m/s^2",
+        "D": "15 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0085",
+      "type": "mcq",
+      "stem": "A gas is heated from 300 K to 400 K at cons\\tant volume. If the initial volume is 2 L, what is the final volume?",
+      "options": {
+        "A": "1 L",
+        "B": "2 L",
+        "C": "3 L",
+        "D": "4 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0086",
+      "type": "mcq",
+      "stem": "A radioactive sample has an initial activity of 100 Bq. If the half-life of the sample is 10 minutes, what is the activity after 20 minutes?",
+      "options": {
+        "A": "25 Bq",
+        "B": "50 Bq",
+        "C": "75 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0087",
+      "type": "mcq",
+      "stem": "A simple harmonic motion has an amplitude of 2 m and a frequency of 3 Hz. If the initial phase angle is 30°, what is the equation of motion?",
+      "options": {
+        "A": "\\text{x}(t) = 2 \\cdot \\sin\\( 6t + 30° \\)",
+        "B": "\\text{x}(t) = 2 \\cdot \\sin\\( 6t - 30° \\)",
+        "C": "\\text{x}(t) = 2 \\cdot \\cos\\( 6t + 30° \\)",
+        "D": "\\text{x}(t) = 2 \\cdot \\cos\\( 6t - 30° \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0088",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 Ω resistor, and a 6 Ω resistor connected in series. If the current is 2 A, what is the voltage drop across the 6 Ω resistor?",
+      "options": {
+        "A": "6 V",
+        "B": "8 V",
+        "C": "10 V",
+        "D": "12 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0089",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor with plates of area 0.04 m^2 and separation 0.02 m is charged to a potential difference of 10 V. If the plates are then connected to a 5 F capacitor in parallel, what is the resulting charge on the 5 F capacitor?",
+      "options": {
+        "A": "0.02 C",
+        "B": "0.04 C",
+        "C": "0.06 C",
+        "D": "0.08 C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0090",
+      "type": "mcq",
+      "stem": "A beam of light passes from air into a glass of re\\fractive index 1.5. If the angle of incidence is 30°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0091",
+      "type": "mcq",
+      "stem": "A point charge of 2 μC is placed at the center of a circular loop of wire of radius 0.1 m. If the loop is made of a material with a magnetic permeability of 4π × 10^\\( -7 \\) H/m, what is the magnetic field at the center of the loop?",
+      "options": {
+        "A": "0.02 T",
+        "B": "0.04 T",
+        "C": "0.06 T",
+        "D": "0.08 T"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0092",
+      "type": "mcq",
+      "stem": "A heat engine operates between a high-temperature reservoir at 500 K and a low-temperature reservoir at 300 K. If the engine has an efficiency of 30%, what is the maximum possible work output?",
+      "options": {
+        "A": "1000 J",
+        "B": "2000 J",
+        "C": "3000 J",
+        "D": "4000 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0093",
+      "type": "mcq",
+      "stem": "A vector A has a magnitude of 5 m and makes an angle of 60° with the x-axis. If vector B has a magnitude of 3 m and makes an angle of 30° with the x-axis, what is the magnitude of the resul\\tant vector A + B?",
+      "options": {
+        "A": "4 m",
+        "B": "5 m",
+        "C": "6 m",
+        "D": "7 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0094",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a horizontal, massless spring with a force cons\\tant of 200 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. Assuming the block undergoes simple harmonic motion, determine the maximum speed of the block as it passes through the equilibrium position.",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0095",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 50 m/s at an angle of 60° above the horizontal. Assuming a cons\\tant acceleration due to gravity of 9.8 m/s², determine the time of flight of the projectile.",
+      "options": {
+        "A": "2 s",
+        "B": "4 s",
+        "C": "6 s",
+        "D": "8 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0096",
+      "type": "mcq",
+      "stem": "A gas is compressed from an initial volume of 2 m³ to a final volume of 1 m³ at a cons\\tant temperature of 300 K. Assuming the gas obeys Boyle&#039;s Law, determine the final pressure of the gas.",
+      "options": {
+        "A": "100 kPa",
+        "B": "200 kPa",
+        "C": "300 kPa",
+        "D": "400 kPa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0097",
+      "type": "mcq",
+      "stem": "A heat engine operates between a high-temperature reservoir at 500 K and a low-temperature reservoir at 300 K. Assuming the engine has an efficiency of 30%, determine the maximum possible work output of the engine.",
+      "options": {
+        "A": "100 J",
+        "B": "200 J",
+        "C": "300 J",
+        "D": "400 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0098",
+      "type": "mcq",
+      "stem": "A simple p\\endulum of length 1 m is released from rest at an angle of 30° from the vertical. Assuming the p\\endulum undergoes simple harmonic motion, determine the time period of the p\\endulum.",
+      "options": {
+        "A": "2 s",
+        "B": "4 s",
+        "C": "6 s",
+        "D": "8 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0099",
+      "type": "mcq",
+      "stem": "A radioactive sample of Uranium-238 undergoes \\alpha decay. If the initial mass of the sample is 100 g, and the mass of the \\alpha particle is 4 u, what is the mass of the daughter nucleus after 10 half-lives?",
+      "options": {
+        "A": "0.001 g",
+        "B": "0.01 g",
+        "C": "0.1 g",
+        "D": "1 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0100",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a speed of 4 m/s. What is the magnitude of the centripetal acceleration?",
+      "options": {
+        "A": "0.5 m/s^2",
+        "B": "1 m/s^2",
+        "C": "2 m/s^2",
+        "D": "4 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0101",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a horizontal spring with a spring cons\\tant of 200 N/m. If the block is displaced by 2 m from its equilibrium position and released from rest, what is the maximum speed of the block?",
+      "options": {
+        "A": "1 m/s",
+        "B": "2 m/s",
+        "C": "4 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0102",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 10 μF and is charged to a potential difference of 5 V. If the dis\\tance between the plates is doubled, what is the new capaci\\tance?",
+      "options": {
+        "A": "5 μF",
+        "B": "10 μF",
+        "C": "20 μF",
+        "D": "50 μF"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0103",
+      "type": "mcq",
+      "stem": "A ray of light passes from air into a glass slab of re\\fractive index 1.5. If the angle of incidence is 30°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0104",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular orbit of radius $R$ under the influence of a central force given by $F(r) = -\\frac{k}{r^2}$. If the particle&#039;s speed is $v$, what is the total energy of the particle?",
+      "options": {
+        "A": "E = \\frac{1}{2}mv^2",
+        "B": "E = -\\frac{k}{R}",
+        "C": "E = \\frac{1}{2}mv^2 - \\frac{k}{R}",
+        "D": "E = \\frac{k}{R}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0105",
+      "type": "mcq",
+      "stem": "A beam of light is incident on a prism at an angle of incidence of $30^\\circ$. If the re\\fractive index of the prism is $\\mu = 1.5$, what is the angle of re\\fraction?",
+      "options": {
+        "A": "\\theta_r = 20^\\circ",
+        "B": "\\theta_r = 30^\\circ",
+        "C": "\\theta_r = 40^\\circ",
+        "D": "\\theta_r = 50^\\circ"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0106",
+      "type": "mcq",
+      "stem": "A simple harmonic motion has a maximum displacement of $A = 2$ m and a period of $T = 4$ s. What is the angular frequency of the motion?",
+      "options": {
+        "A": "\\omega = \\frac{\\pi}{2} rad/s",
+        "B": "\\omega = \\frac{\\pi}{4} rad/s",
+        "C": "\\omega = \\frac{\\pi}{8} rad/s",
+        "D": "\\omega = \\frac{\\pi}{16} rad/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0107",
+      "type": "mcq",
+      "stem": "A circuit consists of a resistor $R = 10\\Omega$, an inductor $L = 5H$, and a capacitor $C = 10^{-6}F$. If the circuit is driven by a voltage source of $V = 20V$, what is the impedance of the circuit?",
+      "options": {
+        "A": "Z = 20\\Omega",
+        "B": "Z = 30\\Omega",
+        "C": "Z = 40\\Omega",
+        "D": "Z = 50\\Omega"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0108",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of $v_0 = 20m/s$ at an angle of $\\theta = 45^\\circ$ above the horizontal. What is the maximum height reached by the projectile?",
+      "options": {
+        "A": "h_{max} = 10m",
+        "B": "h_{max} = 20m",
+        "C": "h_{max} = 30m",
+        "D": "h_{max} = 40m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0109",
+      "type": "mcq",
+      "stem": "A 2.0 kg block is attached to a horizontal, massless spring with a force cons\\tant of 100 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. Assuming the motion is simple harmonic, calculate the maximum speed of the block as it passes through the equilibrium position.",
+      "options": {
+        "A": "0.5 m/s",
+        "B": "1.0 m/s",
+        "C": "1.5 m/s",
+        "D": "2.0 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0110",
+      "type": "mcq",
+      "stem": "A gas expands from an initial volume of 0.5 m^3 to a final volume of 1.5 m^3 against an external pressure of 2.0 x 10^5 Pa. Assuming the process is isothermal, calculate the work done by the gas.",
+      "options": {
+        "A": "-375 J",
+        "B": "-3750 J",
+        "C": "-37500 J",
+        "D": "-375000 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0111",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path with a radius of 0.2 m. The particle has a speed of 2.0 m/s. Calculate the centripetal acceleration of the particle.",
+      "options": {
+        "A": "2.0 m/s^2",
+        "B": "4.0 m/s^2",
+        "C": "6.0 m/s^2",
+        "D": "8.0 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0112",
+      "type": "mcq",
+      "stem": "A light source emits light of wavelength 500 nm. The light passes through a double-slit apparatus and forms an interference pattern on a screen 2.0 m away. Calculate the dis\\tance between the central maximum and the first minimum.",
+      "options": {
+        "A": "1.0 mm",
+        "B": "2.0 mm",
+        "C": "3.0 mm",
+        "D": "4.0 mm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0113",
+      "type": "mcq",
+      "stem": "A 10.0 V battery is connected to a 2.0 kΩ resistor. Calculate the current flowing through the resistor.",
+      "options": {
+        "A": "5.0 mA",
+        "B": "10.0 mA",
+        "C": "15.0 mA",
+        "D": "20.0 mA"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0114",
+      "type": "mcq",
+      "stem": "A particle of mass 2.5 kg is moving in a circular path with a cons\\tant speed of 4 m/s. If the radius of the path is 1.8 m, calculate the magnitude of the centripetal acceleration.",
+      "options": {
+        "A": "10 m/s^2",
+        "B": "12 m/s^2",
+        "C": "15 m/s^2",
+        "D": "18 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0115",
+      "type": "mcq",
+      "stem": "A 1000 W heater is connected to a 220 V AC supply. If the power factor of the heater is 0.8, calculate the current drawn from the supply.",
+      "options": {
+        "A": "4.5 A",
+        "B": "5.0 A",
+        "C": "5.5 A",
+        "D": "6.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0116",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is placed on a frictionless surface and a horizontal force of 20 N is applied to it. If the block starts from rest, calculate the velocity of the block after 2 seconds.",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0117",
+      "type": "mcq",
+      "stem": "A \\tank is filled with water to a height of 5 m. If the density of water is 1000 kg/m^3, calculate the pressure at the bottom of the \\tank.",
+      "options": {
+        "A": "5000 Pa",
+        "B": "10000 Pa",
+        "C": "15000 Pa",
+        "D": "20000 Pa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0118",
+      "type": "mcq",
+      "stem": "A spring has a spring cons\\tant of 100 N/m. If a force of 50 N is applied to the spring, calculate the displacement of the spring.",
+      "options": {
+        "A": "0.5 m",
+        "B": "1.0 m",
+        "C": "1.5 m",
+        "D": "2.0 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0119",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is confined to a one-dimensional box of length $L$. The ground state wave function of the particle is given by \\( psi_1\\( x \\ \\) = \\sqrt{\\frac{2}{L}} \\sinleft\\( \\frac{pi x}{L}\\right \\)). What is the expectation value of the position operator for this state?",
+      "options": {
+        "A": "\\frac{L}{2}",
+        "B": "\\frac{L}{4}",
+        "C": "\\frac{3L}{4}",
+        "D": "\\frac{L}{\\pi}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0120",
+      "type": "mcq",
+      "stem": "A nucleus of mass number $A$ and atomic number $Z$ undergoes \\beta decay. What is the resulting nucleus if the parent nucleus is $^{238}_{92}U$?",
+      "options": {
+        "A": "^{238}_{93}Np",
+        "B": "^{238}_{91}Pa",
+        "C": "^{238}_{92}U",
+        "D": "^{238}_{94}Pu"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0121",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular orbit of radius $r$ with a cons\\tant speed $v$. What is the magnitude of the centripetal force acting on the particle?",
+      "options": {
+        "A": "\\frac{mv^2}{r}",
+        "B": "\\frac{mv}{r}",
+        "C": "\\frac{m}{r^2}",
+        "D": "\\frac{r}{mv}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0122",
+      "type": "mcq",
+      "stem": "A simple harmonic oscillator has a frequency of $f = 2.0 \\, \\text{Hz}$ and an amplitude of $A = 0.5 \\, \\text{m}$. What is the maximum kinetic energy of the oscillator?",
+      "options": {
+        "A": "0.25 \\, \\text{J}",
+        "B": "0.50 \\, \\text{J}",
+        "C": "0.75 \\, \\text{J}",
+        "D": "1.00 \\, \\text{J}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0123",
+      "type": "mcq",
+      "stem": "A wave of wavelength $\\lambda$ and frequency $f$ is traveling through a medium with speed $v$. What is the wave number of the wave?",
+      "options": {
+        "A": "\\frac{2 \\pi f}{v}",
+        "B": "\\frac{v}{2 \\pi f}",
+        "C": "\\frac{f}{v}",
+        "D": "\\frac{v}{f}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0124",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. What is the magnitude of the force acting on the particle?",
+      "options": {
+        "A": "8 N",
+        "B": "12 N",
+        "C": "16 N",
+        "D": "20 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0125",
+      "type": "mcq",
+      "stem": "A radioactive sample has a half-life of 5 years. If the initial activity is 1000 Bq, what is the activity after 10 years?",
+      "options": {
+        "A": "125 Bq",
+        "B": "250 Bq",
+        "C": "500 Bq",
+        "D": "1000 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0126",
+      "type": "mcq",
+      "stem": "A gas is contained in a cylinder of volume 2 L at a pressure of 2 atm. If the temperature is increased by 10°C, what is the new pressure?",
+      "options": {
+        "A": "2.5 atm",
+        "B": "3 atm",
+        "C": "3.5 atm",
+        "D": "4 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0127",
+      "type": "mcq",
+      "stem": "A projectile is launched at an angle of 30° to the horizontal with an initial velocity of 20 m/s. What is the maximum height reached by the projectile?",
+      "options": {
+        "A": "5 m",
+        "B": "10 m",
+        "C": "15 m",
+        "D": "20 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0128",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal force of 12 N, what is the magnitude of the acceleration of the particle?",
+      "options": {
+        "A": "10 m/s^2",
+        "B": "12 m/s^2",
+        "C": "15 m/s^2",
+        "D": "20 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0129",
+      "type": "mcq",
+      "stem": "A gas is enclosed in a container of volume 2 m^3 at a pressure of 1 atm. If the temperature is increased by 10°C, what is the new pressure of the gas?",
+      "options": {
+        "A": "1.2 atm",
+        "B": "1.5 atm",
+        "C": "2.0 atm",
+        "D": "2.5 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0130",
+      "type": "mcq",
+      "stem": "A convex lens of focal length 20 cm is used to form an image of an object placed 30 cm from the lens. What is the magnification of the image?",
+      "options": {
+        "A": "0.5",
+        "B": "1.0",
+        "C": "2.0",
+        "D": "3.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0131",
+      "type": "mcq",
+      "stem": "A radioactive sample has a half-life of 10 years. If the initial activity of the sample is 100 Bq, what is the activity of the sample after 20 years?",
+      "options": {
+        "A": "12.5 Bq",
+        "B": "25 Bq",
+        "C": "50 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0132",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 20 m/s at an angle of 30° above the horizontal. What is the maximum height reached by the projectile?",
+      "options": {
+        "A": "5 m",
+        "B": "10 m",
+        "C": "15 m",
+        "D": "20 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0133",
+      "type": "mcq",
+      "stem": "A photon of energy 2 eV is incident on a metal surface with a work function of 1.5 eV. What is the maximum kinetic energy of the photoelectron?",
+      "options": {
+        "A": "0.5 eV",
+        "B": "1 eV",
+        "C": "1.5 eV",
+        "D": "2 eV"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0134",
+      "type": "mcq",
+      "stem": "A radioactive sample has a half-life of 2 days. If the initial activity is 100 Bq, what is the activity after 4 days?",
+      "options": {
+        "A": "12.5 Bq",
+        "B": "25 Bq",
+        "C": "50 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0135",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is moving with a velocity of 10 m/s. If a force of 20 N is applied to the block, what is the acceleration of the block?",
+      "options": {
+        "A": "4 m/s^2",
+        "B": "8 m/s^2",
+        "C": "12 m/s^2",
+        "D": "16 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0136",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 2 m. What is the speed of the wave?",
+      "options": {
+        "A": "50 m/s",
+        "B": "100 m/s",
+        "C": "150 m/s",
+        "D": "200 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0137",
+      "type": "mcq",
+      "stem": "A capacitor of capaci\\tance 10 μF is connected in series with a resistor of resis\\tance 20 Ω. If a voltage of 50 V is applied across the circuit, what is the current flowing through the circuit?",
+      "options": {
+        "A": "1.25 A",
+        "B": "2.5 A",
+        "C": "5 A",
+        "D": "10 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0138",
+      "type": "mcq",
+      "stem": "A heat engine operates between two temperatures of 300 K and 400 K. If the engine absorbs 100 J of heat energy from the high-temperature reservoir, what is the efficiency of the engine?",
+      "options": {
+        "A": "0.1",
+        "B": "0.25",
+        "C": "0.5",
+        "D": "0.75"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0139",
+      "type": "mcq",
+      "stem": "A magnetic field of strength 0.5 T is directed along the z-axis. If a current of 2 A is flowing in a wire loop of radius 0.2 m, what is the magnitude of the magnetic moment of the loop?",
+      "options": {
+        "A": "0.1 π A m^2",
+        "B": "0.125 π A m^2",
+        "C": "0.15 π A m^2",
+        "D": "0.2 π A m^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0140",
+      "type": "mcq",
+      "stem": "A 10 μF capacitor is connected in parallel with a 20 μF capacitor. If a voltage of 50 V is applied across the combination, what is the equivalent capaci\\tance?",
+      "options": {
+        "A": "10 μF",
+        "B": "20 μF",
+        "C": "30 μF",
+        "D": "40 μF"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0141",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 10 μF and is charged to a potential difference of 100 V. If the dis\\tance between the plates is doubled, what is the new capaci\\tance?",
+      "options": {
+        "A": "5 μF",
+        "B": "10 μF",
+        "C": "20 μF",
+        "D": "40 μF"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0142",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a speed of 4 m/s. What is the magnitude of the centripetal force acting on the particle?",
+      "options": {
+        "A": "10 N",
+        "B": "20 N",
+        "C": "30 N",
+        "D": "40 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0143",
+      "type": "mcq",
+      "stem": "A simple harmonic motion has a maximum displacement of 2 m and a period of 4 s. What is the angular frequency?",
+      "options": {
+        "A": "0.5 rad/s",
+        "B": "1 rad/s",
+        "C": "2 rad/s",
+        "D": "4 rad/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0144",
+      "type": "mcq",
+      "stem": "A fluid of density 1000 kg/m³ is flowing through a pipe of radius 0.1 m with a velocity of 2 m/s. What is the pressure at the center of the pipe?",
+      "options": {
+        "A": "1000 Pa",
+        "B": "2000 Pa",
+        "C": "3000 Pa",
+        "D": "4000 Pa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0145",
+      "type": "mcq",
+      "stem": "A block of mass 2 kg is susp\\ended from a spring with spring cons\\tant 100 N/m. If the block is displaced by 0.2 m from its equilibrium position and released from rest, what is the maximum speed of the block?",
+      "options": {
+        "A": "1.0 m/s",
+        "B": "2.0 m/s",
+        "C": "3.0 m/s",
+        "D": "4.0 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0146",
+      "type": "mcq",
+      "stem": "A 200 V, 50 Hz AC source is connected to a 100 Ω resistor. What is the rms value of the current flowing through the resistor?",
+      "options": {
+        "A": "0.5 A",
+        "B": "1.0 A",
+        "C": "2.0 A",
+        "D": "4.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0147",
+      "type": "mcq",
+      "stem": "A gas expands from an initial volume of 0.1 m^3 to a final volume of 0.5 m^3 against an external pressure of 2 atm. What is the work done by the gas?",
+      "options": {
+        "A": "10 J",
+        "B": "20 J",
+        "C": "30 J",
+        "D": "40 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0148",
+      "type": "mcq",
+      "stem": "A particle moves in a circular path with a cons\\tant speed of 5 m/s. If the radius of the circle is 2 m, what is the magnitude of the acceleration of the particle?",
+      "options": {
+        "A": "1.0 m/s^2",
+        "B": "2.0 m/s^2",
+        "C": "3.0 m/s^2",
+        "D": "4.0 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0149",
+      "type": "mcq",
+      "stem": "A 10 kg block is placed on a frictionless surface and a horizontal force of 20 N is applied to it. What is the acceleration of the block?",
+      "options": {
+        "A": "1.0 m/s^2",
+        "B": "2.0 m/s^2",
+        "C": "3.0 m/s^2",
+        "D": "4.0 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0150",
+      "type": "mcq",
+      "stem": "A gas is enclosed in a container with a movable piston. The gas is heated at cons\\tant pressure. Which of the following statements is true?",
+      "options": {
+        "A": "The volume of the gas increases exponentially with temperature.",
+        "B": "The volume of the gas increases linearly with temperature.",
+        "C": "The volume of the gas remains cons\\tant with temperature.",
+        "D": "The volume of the gas decreases exponentially with temperature."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0151",
+      "type": "mcq",
+      "stem": "A beam of light passes from air into a glass slab. If the angle of incidence is 30°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0152",
+      "type": "mcq",
+      "stem": "A radioactive sample decays at a rate of 0.5% per hour. If the initial activity is 1000 Bq, what is the activity after 2 hours?",
+      "options": {
+        "A": "900 Bq",
+        "B": "950 Bq",
+        "C": "975 Bq",
+        "D": "990 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0153",
+      "type": "mcq",
+      "stem": "A particle moves in a circular path with a radius of 2 m. If the angular velocity is 10 rad/s, what is the linear velocity?",
+      "options": {
+        "A": "20 m/s",
+        "B": "30 m/s",
+        "C": "40 m/s",
+        "D": "50 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0154",
+      "type": "mcq",
+      "stem": "A 100 V AC supply is connected to a 50 Ω resistor. What is the current drawn?",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "2 A",
+        "D": "5 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0155",
+      "type": "mcq",
+      "stem": "A tuning fork of frequency 256 Hz is placed near a stationary observer. If the speed of sound in air is 343 m/s, calculate the wavelength of the sound wave produced by the tuning fork.",
+      "options": {
+        "A": "1.34 m",
+        "B": "1.34 cm",
+        "C": "1.34 km",
+        "D": "1.34 μm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0156",
+      "type": "mcq",
+      "stem": "A capacitor of capaci\\tance 2 μF is connected in series with a resistor of resis\\tance 10 kΩ. If a voltage of 12 V is applied across the circuit, calculate the current flowing through the circuit.",
+      "options": {
+        "A": "1.2 mA",
+        "B": "1.2 μA",
+        "C": "1.2 A",
+        "D": "1.2 kA"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0157",
+      "type": "mcq",
+      "stem": "A magnetic field of strength 0.5 T is applied to a current-carrying wire of length 2 m. If the current flowing through the wire is 5 A, calculate the force experienced by the wire.",
+      "options": {
+        "A": "2.5 N",
+        "B": "2.5 mN",
+        "C": "2.5 μN",
+        "D": "2.5 kN"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0158",
+      "type": "mcq",
+      "stem": "A photon of energy 2.5 eV is incident on a metal surface. If the work function of the metal is 1.5 eV, calculate the kinetic energy of the electron emitted.",
+      "options": {
+        "A": "1 eV",
+        "B": "1.5 eV",
+        "C": "2 eV",
+        "D": "2.5 eV"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0159",
+      "type": "mcq",
+      "stem": "A beam of light is incident on a prism of angle 30°. If the angle of incidence is 20°, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "10°",
+        "B": "20°",
+        "C": "30°",
+        "D": "40°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0160",
+      "type": "mcq",
+      "stem": "A 2.0 mH inductor is connected in series with a 10 V battery. If the inductor is initially at rest, what is the current in the circuit after 0.1 s?",
+      "options": {
+        "A": "0.1 A",
+        "B": "0.2 A",
+        "C": "0.5 A",
+        "D": "1.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0161",
+      "type": "mcq",
+      "stem": "A ray of light passes through a prism and is re\\fracted at an angle of 30°. If the angle of incidence is 20°, what is the angle of emergence?",
+      "options": {
+        "A": "10°",
+        "B": "20°",
+        "C": "30°",
+        "D": "40°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0162",
+      "type": "mcq",
+      "stem": "A container of volume 2.0 L is filled with 1.0 mol of an ideal gas at 300 K. If the gas is heated to 400 K, what is the new volume of the gas?",
+      "options": {
+        "A": "1.5 L",
+        "B": "2.0 L",
+        "C": "2.5 L",
+        "D": "3.0 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0163",
+      "type": "mcq",
+      "stem": "A sound wave with frequency 200 Hz and amplitude 0.5 m is traveling through a medium with speed 340 m/s. If the wave is reflected off a wall, what is the amplitude of the reflected wave?",
+      "options": {
+        "A": "0.25 m",
+        "B": "0.5 m",
+        "C": "0.75 m",
+        "D": "1.0 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0164",
+      "type": "mcq",
+      "stem": "A vector \\vec{A} has magnitude 5.0 m and direction 30° north of east. If a second vector \\vec{B} has magnitude 3.0 m and direction 60° south of west, what is the magnitude of the resul\\tant vector \\vec{A} + \\vec{B}?",
+      "options": {
+        "A": "4.0 m",
+        "B": "5.0 m",
+        "C": "6.0 m",
+        "D": "7.0 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0165",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal force of 12 N, what is the angle between the velocity vector and the radius vector at the ins\\tant the particle is at the top of its path?",
+      "options": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "90°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0166",
+      "type": "mcq",
+      "stem": "A capacitor consists of two parallel plates, each of area 0.1 m^2, separated by a dis\\tance of 0.01 m. If the capaci\\tance is 10 μF, what is the potential difference between the plates when a charge of 0.01 C is stored?",
+      "options": {
+        "A": "10 V",
+        "B": "20 V",
+        "C": "30 V",
+        "D": "40 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0167",
+      "type": "mcq",
+      "stem": "A gas is compressed from an initial volume of 2 m^3 to a final volume of 1 m^3. If the initial pressure is 100 kPa, what is the final pressure?",
+      "options": {
+        "A": "200 kPa",
+        "B": "150 kPa",
+        "C": "100 kPa",
+        "D": "50 kPa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0168",
+      "type": "mcq",
+      "stem": "A simple harmonic motion has a maximum displacement of 5 m and a period of 2 s. What is the angular frequency?",
+      "options": {
+        "A": "1.57 rad/s",
+        "B": "3.14 rad/s",
+        "C": "4.71 rad/s",
+        "D": "6.28 rad/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0169",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is confined to a one-dimensional box of length $L$. The ground state wave function of the particle is given by \\( psi_1\\( x \\ \\) = \\sqrt{\\frac{2}{L}} \\sinleft\\( \\frac{pi x}{L}\\right \\)). What is the probability of finding the particle in the region $0 &lt; x &lt; \\frac{L}{2}$?",
+      "options": {
+        "A": "\\frac{1}{2}",
+        "B": "\\frac{1}{4}",
+        "C": "\\frac{1}{8}",
+        "D": "\\frac{1}{16}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0170",
+      "type": "mcq",
+      "stem": "A block of mass $M$ is attached to a horizontal, massless spring with force cons\\tant $k$. The block is displaced by a dis\\tance $x$ from its equilibrium position and released from rest. Assuming the motion is simple harmonic, what is the angular frequency of the block&#039;s motion?",
+      "options": {
+        "A": "\\sqrt{\\frac{k}{M}}",
+        "B": "\\frac{k}{M}",
+        "C": "\\frac{M}{k}",
+        "D": "\\frac{1}{\\sqrt{kM}}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0171",
+      "type": "mcq",
+      "stem": "A \\tank is filled with water to a height of $h$. A small hole of area $A$ is made at the bottom of the \\tank. Assuming the water flows out of the hole with a speed $v$, what is the rate at which the water level in the \\tank falls?",
+      "options": {
+        "A": "\\frac{A}{h}v",
+        "B": "\\frac{Ah}{v}",
+        "C": "\\frac{v}{Ah}",
+        "D": "\\frac{Ah}{v^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0172",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular path of radius $r$ with a cons\\tant speed $v$. What is the magnitude of the particle&#039;s acceleration?",
+      "options": {
+        "A": "\\frac{v^2}{r}",
+        "B": "\\frac{rv^2}{m}",
+        "C": "\\frac{mv^2}{r}",
+        "D": "\\frac{v^2}{mr}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0173",
+      "type": "mcq",
+      "stem": "A block of mass $M$ is placed on a frictionless surface and a force $F$ is applied to it. The block accelerates with a cons\\tant acceleration $a$. What is the magnitude of the force $F$?",
+      "options": {
+        "A": "Ma",
+        "B": "\\frac{Ma}{2}",
+        "C": "\\frac{2Ma}{3}",
+        "D": "\\frac{3Ma}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0174",
+      "type": "mcq",
+      "stem": "A particle of mass m is attached to a spring with spring cons\\tant k. The particle is displaced from its equilibrium position by a dis\\tance x and released from rest. Assuming the motion is simple harmonic, find the angular frequency ω in terms of k and m.",
+      "options": {
+        "A": "\\omega = \\frac{k}{m}",
+        "B": "\\omega = \\sqrt{\\frac{m}{k}}",
+        "C": "\\omega = \\frac{m}{k}",
+        "D": "\\omega = \\sqrt{\\frac{k}{m}}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0175",
+      "type": "mcq",
+      "stem": "A wave of wavelength λ and frequency f is traveling through a medium with speed v. Find the wave number k in terms of λ and f.",
+      "options": {
+        "A": "k = \\frac{\\lambda}{2\\pi}",
+        "B": "k = \\frac{2\\pi}{\\lambda}",
+        "C": "k = \\frac{\\lambda}{f}",
+        "D": "k = \\frac{f}{\\lambda}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0176",
+      "type": "mcq",
+      "stem": "A radioactive sample decays with a half-life of t1/2. Find the activity A(t) at time t in terms of the initial activity A0.",
+      "options": {
+        "A": "A(t) = A0 e^{\\frac{t}{t_{1/2}}}",
+        "B": "A(t) = A0 e^{-\\frac{t}{t_{1/2}}}",
+        "C": "A(t) = A0 e^{\\frac{t_{1/2}}{t}}",
+        "D": "A(t) = A0 e^{-\\frac{t_{1/2}}{t}}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0177",
+      "type": "mcq",
+      "stem": "A gas is heated from 0°C to 100°C at cons\\tant volume. Find the change in internal energy ΔU in terms of the specific heat capacity c.",
+      "options": {
+        "A": "\\Delta U = mc\\frac{\\Delta T}{2}",
+        "B": "\\Delta U = mc\\Delta T",
+        "C": "\\Delta U = mc\\frac{\\Delta T}{3}",
+        "D": "\\Delta U = mc\\frac{\\Delta T}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0178",
+      "type": "mcq",
+      "stem": "A circuit consists of a resistor R and an inductor L in series. Find the impedance Z in terms of R and L.",
+      "options": {
+        "A": "Z = R + \\omega L",
+        "B": "Z = \\sqrt{R^2 - \\( \\omega L \\)^2}",
+        "C": "Z = \\sqrt{R^2 + \\( \\omega L \\)^2}",
+        "D": "Z = R - \\omega L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0179",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has plates of area 0.04 m^2 and separation 0.02 m. If a potential difference of 10 V is applied across the plates, calculate the capaci\\tance.",
+      "options": {
+        "A": "2.5 x 10^-10 F",
+        "B": "5.0 x 10^-10 F",
+        "C": "1.0 x 10^-9 F",
+        "D": "2.0 x 10^-9 F"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0180",
+      "type": "mcq",
+      "stem": "A circuit consists of a 10 Ω resistor, a 20 Ω resistor, and a 5 Ω resistor connected in series. If a voltage of 12 V is applied across the circuit, calculate the current through the 5 Ω resistor.",
+      "options": {
+        "A": "0.4 A",
+        "B": "0.6 A",
+        "C": "0.8 A",
+        "D": "1.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0181",
+      "type": "mcq",
+      "stem": "A sound wave has a frequency of 200 Hz and a wavelength of 0.5 m. Calculate the speed of the sound wave.",
+      "options": {
+        "A": "100 m/s",
+        "B": "200 m/s",
+        "C": "300 m/s",
+        "D": "400 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0182",
+      "type": "mcq",
+      "stem": "A heat engine operates between a temperature of 500 K and a temperature of 300 K. Calculate the efficiency of the engine.",
+      "options": {
+        "A": "0.25",
+        "B": "0.33",
+        "C": "0.40",
+        "D": "0.50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0183",
+      "type": "mcq",
+      "stem": "A block of mass 2 kg is attached to a horizontal, massless spring with a spring cons\\tant of 100 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. Assuming the block undergoes simple harmonic motion, calculate the maximum speed of the block as it passes through the equilibrium position.",
+      "options": {
+        "A": "4 m/s",
+        "B": "6 m/s",
+        "C": "8 m/s",
+        "D": "10 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0184",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path of radius 2 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal acceleration of 2 m/s^2, calculate the force exerted on the particle.",
+      "options": {
+        "A": "2 N",
+        "B": "4 N",
+        "C": "6 N",
+        "D": "8 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0185",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor consists of two plates, each of area 0.1 m^2, separated by a dis\\tance of 0.01 m. If the capaci\\tance of the capacitor is 10^-6 F, calculate the charge stored on the capacitor when a potential difference of 10 V is applied across it.",
+      "options": {
+        "A": "10^-8 C",
+        "B": "10^-7 C",
+        "C": "10^-6 C",
+        "D": "10^-5 C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0186",
+      "type": "mcq",
+      "stem": "A heat engine operates between a high-temperature reservoir at 500 K and a low-temperature reservoir at 300 K. If the engine has an efficiency of 30%, calculate the work done by the engine per cycle.",
+      "options": {
+        "A": "100 J",
+        "B": "200 J",
+        "C": "300 J",
+        "D": "400 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0187",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 20 m/s at an angle of 60 degrees above the horizontal. If the projectile lands 10 m away from the point of launch, calculate the time of flight.",
+      "options": {
+        "A": "2 s",
+        "B": "3 s",
+        "C": "4 s",
+        "D": "5 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0188",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. What is the magnitude of the centripetal acceleration of the particle?",
+      "options": {
+        "A": "16 m/s^2",
+        "B": "32 m/s^2",
+        "C": "48 m/s^2",
+        "D": "64 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0189",
+      "type": "mcq",
+      "stem": "A 10 μF capacitor is connected in series with a 20 Ω resistor and a 5 V battery. What is the time cons\\tant of the circuit?",
+      "options": {
+        "A": "0.1 s",
+        "B": "0.2 s",
+        "C": "0.5 s",
+        "D": "1 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0190",
+      "type": "mcq",
+      "stem": "A gas at a pressure of 2 atm and a volume of 10 L expands to a volume of 20 L. What is the final pressure of the gas?",
+      "options": {
+        "A": "1 atm",
+        "B": "2 atm",
+        "C": "3 atm",
+        "D": "4 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0191",
+      "type": "mcq",
+      "stem": "A projectile is launched at an angle of 60° above the horizontal with an initial velocity of 20 m/s. What is the maximum height reached by the projectile?",
+      "options": {
+        "A": "10 m",
+        "B": "15 m",
+        "C": "20 m",
+        "D": "25 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0192",
+      "type": "mcq",
+      "stem": "A 100 Ω resistor is connected in parallel with a 200 Ω resistor. What is the equivalent resis\\tance of the circuit?",
+      "options": {
+        "A": "50 Ω",
+        "B": "75 Ω",
+        "C": "100 Ω",
+        "D": "150 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0193",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has plates of area 0.02 m^2 and separation 0.005 m. If the capaci\\tance is 5.0 nF, what is the value of the dielectric cons\\tant?",
+      "options": {
+        "A": "1.0",
+        "B": "2.0",
+        "C": "3.0",
+        "D": "4.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0194",
+      "type": "mcq",
+      "stem": "A gas at 300 K expands from 1.0 L to 2.0 L against a cons\\tant external pressure of 1.0 atm. What is the work done by the gas?",
+      "options": {
+        "A": "-1.0 J",
+        "B": "0.0 J",
+        "C": "1.0 J",
+        "D": "2.0 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0195",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 ohm resistor, and a 6 ohm resistor connected in series. What is the current flowing through the 4 ohm resistor?",
+      "options": {
+        "A": "0.5 A",
+        "B": "1.0 A",
+        "C": "1.5 A",
+        "D": "2.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0196",
+      "type": "mcq",
+      "stem": "A projectile is launched at an angle of 60 degrees above the horizontal with an initial velocity of 20 m/s. What is the maximum height reached by the projectile?",
+      "options": {
+        "A": "10.0 m",
+        "B": "15.0 m",
+        "C": "20.0 m",
+        "D": "25.0 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0197",
+      "type": "mcq",
+      "stem": "A magnetic field is produced by a current-carrying wire. If the current is 2.0 A and the length of the wire is 0.5 m, what is the magnetic field strength at a dis\\tance of 0.2 m from the wire?",
+      "options": {
+        "A": "0.01 T",
+        "B": "0.02 T",
+        "C": "0.03 T",
+        "D": "0.04 T"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0198",
+      "type": "mcq",
+      "stem": "A 2.5 mH inductor is connected in series with a 10 Ω resistor and a 20 V AC source. If the frequency of the source is 50 Hz, calculate the impedance of the circuit.",
+      "options": {
+        "A": "10 Ω",
+        "B": "20 Ω",
+        "C": "30 Ω",
+        "D": "40 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0199",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path of radius 2 m with a speed of 4 m/s. If the particle is subject to a centripetal force of 10 N, calculate the acceleration of the particle.",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "4 m/s^2",
+        "C": "6 m/s^2",
+        "D": "8 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0200",
+      "type": "mcq",
+      "stem": "A 100 W bulb is connected to a 230 V AC source. If the power factor of the bulb is 0.8, calculate the current drawn by the bulb.",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "1.5 A",
+        "D": "2 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0201",
+      "type": "mcq",
+      "stem": "A wave of frequency 100 Hz and wavelength 2 m is traveling through a medium. If the speed of the wave is 300 m/s, calculate the amplitude of the wave.",
+      "options": {
+        "A": "0.1 m",
+        "B": "0.2 m",
+        "C": "0.3 m",
+        "D": "0.4 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0202",
+      "type": "mcq",
+      "stem": "A particle of mass 0.2 kg is moving in a circular path of radius 1 m with a speed of 3 m/s. If the particle is subject to a centripetal force of 5 N, calculate the kinetic energy of the particle.",
+      "options": {
+        "A": "1 J",
+        "B": "2 J",
+        "C": "3 J",
+        "D": "4 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0203",
+      "type": "mcq",
+      "stem": "A 2.5 m long wire of resis\\tance 3.5 Ω is connected in series with a 9 V battery. If the current flowing through the wire is 0.5 A, what is the potential difference across the wire?",
+      "options": {
+        "A": "2.25 V",
+        "B": "3.5 V",
+        "C": "4.5 V",
+        "D": "6.75 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0204",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path of radius 2 m with a cons\\tant speed of 4 m/s. What is the magnitude of the centripetal force acting on the particle?",
+      "options": {
+        "A": "2 N",
+        "B": "4 N",
+        "C": "6 N",
+        "D": "8 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0205",
+      "type": "mcq",
+      "stem": "A 1000 W electric heater is connected to a 220 V power supply. If the resis\\tance of the heater is 10 Ω, what is the current flowing through the heater?",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "2 A",
+        "D": "4 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0206",
+      "type": "mcq",
+      "stem": "A 5 kg block is moving with a velocity of 10 m/s. If the block is brought to rest in 2 s, what is the magnitude of the force acting on the block?",
+      "options": {
+        "A": "5 N",
+        "B": "10 N",
+        "C": "20 N",
+        "D": "50 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0207",
+      "type": "mcq",
+      "stem": "A 2 m long wire of resis\\tance 2 Ω is connected in series with a 6 V battery. If the current flowing through the wire is 1 A, what is the potential difference across the wire?",
+      "options": {
+        "A": "2 V",
+        "B": "3 V",
+        "C": "4 V",
+        "D": "6 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0208",
+      "type": "mcq",
+      "stem": "A particle of mass m is confined to a one-dimensional box of length L. The wave function of the particle is given by ψ(x) = √\\( 2/L \\) * \\sin\\( nπx/L \\), where n is a positive integer. What is the expectation value of the position operator x?",
+      "options": {
+        "A": "L/2",
+        "B": "nπL/2",
+        "C": "nπL/2 + L/2",
+        "D": "nπL/2 - L/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0209",
+      "type": "mcq",
+      "stem": "A magnetic field B is directed along the z-axis. A current I flows through a wire loop of radius r, placed in the x-y plane. What is the magnetic flux Φ through the loop?",
+      "options": {
+        "A": "Bπr^2",
+        "B": "Bπr^2 \\cos(θ)",
+        "C": "Bπr^2 \\sin(θ)",
+        "D": "Bπr^2 \\tan(θ)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0210",
+      "type": "mcq",
+      "stem": "A capacitor C is connected to a battery of voltage V. The capacitor is initially uncharged. What is the charge Q on the capacitor after a time t?",
+      "options": {
+        "A": "CV",
+        "B": "CV\\( 1 - e^{-t/RC} \\)",
+        "C": "CV\\( 1 + e^{-t/RC} \\)",
+        "D": "CV\\( 1 - e^{t/RC} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0211",
+      "type": "mcq",
+      "stem": "A radioactive sample decays with a half-life of T1/2. What is the activity A of the sample after a time t?",
+      "options": {
+        "A": "A0 e^{-λt}",
+        "B": "A0 e^{λt}",
+        "C": "A0 + λt",
+        "D": "A0 - λt"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0212",
+      "type": "mcq",
+      "stem": "A particle of mass m is moving in a circular orbit of radius r with a speed v. What is the centripetal force F_c acting on the particle?",
+      "options": {
+        "A": "\\( m v^2 \\) / r",
+        "B": "m v^2",
+        "C": "m v^3",
+        "D": "m v^4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0213",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a spring with a spring cons\\tant of 200 N/m. If the block is displaced by 0.2 m from its equilibrium position and released from rest, calculate the maximum speed of the block as it passes through the equilibrium position.",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0214",
+      "type": "mcq",
+      "stem": "A radioactive sample has an initial activity of 100 Bq. If the half-life of the sample is 10 minutes, calculate the activity of the sample after 30 minutes.",
+      "options": {
+        "A": "12.5 Bq",
+        "B": "25 Bq",
+        "C": "50 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0215",
+      "type": "mcq",
+      "stem": "A 10 μF capacitor is connected in series with a 20 Ω resistor and a 50 V battery. Calculate the current flowing through the circuit.",
+      "options": {
+        "A": "0.25 A",
+        "B": "0.5 A",
+        "C": "1 A",
+        "D": "2 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0216",
+      "type": "mcq",
+      "stem": "A 100 V AC source is connected in series with a 20 Ω resistor and a 10 μF capacitor. Calculate the impedance of the circuit.",
+      "options": {
+        "A": "20 Ω",
+        "B": "22 Ω",
+        "C": "24 Ω",
+        "D": "26 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-bowen-pq-physics-bank-0217",
+      "type": "mcq",
+      "stem": "A 5 μF capacitor is connected in parallel with a 10 μF capacitor. Calculate the equivalent capaci\\tance of the circuit.",
+      "options": {
+        "A": "5 μF",
+        "B": "10 μF",
+        "C": "15 μF",
+        "D": "20 μF"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

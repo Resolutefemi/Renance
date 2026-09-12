@@ -1,0 +1,804 @@
+{
+  "code": "uni-eksu-acc208-bank",
+  "title": "EKSU Acc208 COMPUTER APPLICATION | Practice Bank",
+  "version": 1,
+  "questionCount": 66,
+  "totalMarks": 66,
+  "questions": [
+    {
+      "id": "uni-eksu-acc208-bank-0001",
+      "type": "mcq",
+      "stem": "What is a computer?",
+      "options": {
+        "A": "An electronic device that processes data",
+        "B": "A mechanical typewriter",
+        "C": "A paper-based calculator",
+        "D": "A manual counting tool"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0002",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a characteristic of a computer?",
+      "options": {
+        "A": "Speed",
+        "B": "Accuracy",
+        "C": "Manual operation",
+        "D": "Automation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0003",
+      "type": "mcq",
+      "stem": "Which characteristic refers to a computer’s ability to perform repeated tasks without fatigue?",
+      "options": {
+        "A": "Diligence",
+        "B": "Speed",
+        "C": "Versatility",
+        "D": "Accuracy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0004",
+      "type": "mcq",
+      "stem": "Which characteristic refers to the ability of a computer to perform different types of tasks?",
+      "options": {
+        "A": "Speed",
+        "B": "Versatility",
+        "C": "Accuracy",
+        "D": "Reliability"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0005",
+      "type": "mcq",
+      "stem": "The first generation of computers used:",
+      "options": {
+        "A": "Vacuum tubes",
+        "B": "Transistors",
+        "C": "Integrated circuits",
+        "D": "Microprocessors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0006",
+      "type": "mcq",
+      "stem": "The second generation of computers used:",
+      "options": {
+        "A": "Vacuum tubes",
+        "B": "Transistors",
+        "C": "Microchips",
+        "D": "Nanotechnology"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0007",
+      "type": "mcq",
+      "stem": "Which computer generation used integrated circuits?",
+      "options": {
+        "A": "First",
+        "B": "Second",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0008",
+      "type": "mcq",
+      "stem": "Microprocessors were introduced in which generation?",
+      "options": {
+        "A": "Fourth",
+        "B": "Second",
+        "C": "First",
+        "D": "Third"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0009",
+      "type": "mcq",
+      "stem": "A computer network is defined as:",
+      "options": {
+        "A": "A group of connected computers sharing resources",
+        "B": "One computer working alone",
+        "C": "A disconnected digital system",
+        "D": "A manual record system"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0010",
+      "type": "mcq",
+      "stem": "Which network covers a small geographical area like a room or building?",
+      "options": {
+        "A": "LAN",
+        "B": "WAN",
+        "C": "MAN",
+        "D": "SAN"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0011",
+      "type": "mcq",
+      "stem": "Which network spans cities or countries?",
+      "options": {
+        "A": "LAN",
+        "B": "WAN",
+        "C": "PAN",
+        "D": "CAN"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0012",
+      "type": "mcq",
+      "stem": "Which type of network connects devices within a person’s reach (like Bluetooth)?",
+      "options": {
+        "A": "LAN",
+        "B": "PAN",
+        "C": "WAN",
+        "D": "MAN"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0013",
+      "type": "mcq",
+      "stem": "Which network type covers a university or campus environment?",
+      "options": {
+        "A": "CAN",
+        "B": "MAN",
+        "C": "WAN",
+        "D": "PAN"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0014",
+      "type": "mcq",
+      "stem": "Which network covers a city or large town?",
+      "options": {
+        "A": "LAN",
+        "B": "MAN",
+        "C": "WAN",
+        "D": "PAN"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0015",
+      "type": "mcq",
+      "stem": "One benefit of computer networks is:",
+      "options": {
+        "A": "Data sharing",
+        "B": "Slower communication",
+        "C": "More manual work",
+        "D": "Reduced connectivity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0016",
+      "type": "mcq",
+      "stem": "Preventive network maintenance includes:",
+      "options": {
+        "A": "Regular updates",
+        "B": "Ignoring faults",
+        "C": "Overloading servers",
+        "D": "Removing backups"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0017",
+      "type": "mcq",
+      "stem": "Which is an essential network tool?",
+      "options": {
+        "A": "Cable tester",
+        "B": "Hammer",
+        "C": "Saw",
+        "D": "Knife"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0018",
+      "type": "mcq",
+      "stem": "Troubleshooting a network means:",
+      "options": {
+        "A": "Identifying and fixing network problems",
+        "B": "Destroying network equipment",
+        "C": "Ignoring connectivity issues",
+        "D": "Hiding network cables"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0019",
+      "type": "mcq",
+      "stem": "Which of the following is a common network problem?",
+      "options": {
+        "A": "Loose cables",
+        "B": "Perfect connection",
+        "C": "Overheating of food",
+        "D": "Sunlight exposure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0020",
+      "type": "mcq",
+      "stem": "A solution for slow network performance is:",
+      "options": {
+        "A": "Upgrade bandwidth",
+        "B": "Add more weight to cables",
+        "C": "Disconnect devices unnecessarily",
+        "D": "Use damaged routers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0021",
+      "type": "mcq",
+      "stem": "Which is a benefit of the internet to business?",
+      "options": {
+        "A": "Online marketing",
+        "B": "Slower operations",
+        "C": "Higher cost of communication",
+        "D": "No access to customers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0022",
+      "type": "mcq",
+      "stem": "A security system protects an organization’s:",
+      "options": {
+        "A": "Information system",
+        "B": "Furniture",
+        "C": "Vehicles",
+        "D": "Building size"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0023",
+      "type": "mcq",
+      "stem": "Which unit performs calculations in a computer?",
+      "options": {
+        "A": "ALU",
+        "B": "CU",
+        "C": "Memory unit",
+        "D": "Keyboard"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0024",
+      "type": "mcq",
+      "stem": "The part of the CPU that controls operations is:",
+      "options": {
+        "A": "Control Unit",
+        "B": "Keyboard",
+        "C": "Monitor",
+        "D": "Scanner"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0025",
+      "type": "mcq",
+      "stem": "Which is a preventive technique for data protection?",
+      "options": {
+        "A": "Regular backups",
+        "B": "Deleting all files",
+        "C": "Using weak passwords",
+        "D": "Sharing passwords"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0026",
+      "type": "mcq",
+      "stem": "Information quality depends on:",
+      "options": {
+        "A": "Accuracy",
+        "B": "Confusion",
+        "C": "Irrelevance",
+        "D": "Distortion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0027",
+      "type": "mcq",
+      "stem": "A computer keyboard is used for:",
+      "options": {
+        "A": "Inputting data",
+        "B": "Displaying images",
+        "C": "Printing documents",
+        "D": "Scanning pictures"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0028",
+      "type": "mcq",
+      "stem": "A monitor is a:",
+      "options": {
+        "A": "Display device",
+        "B": "Storage medium",
+        "C": "Primary memory",
+        "D": "Keyboard accessory"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0029",
+      "type": "mcq",
+      "stem": "A scanner is used to:",
+      "options": {
+        "A": "Convert documents into digital form",
+        "B": "Print images",
+        "C": "Store programs",
+        "D": "Destroy files"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0030",
+      "type": "mcq",
+      "stem": "The Shift key is used to:",
+      "options": {
+        "A": "Type uppercase letters",
+        "B": "Open programs",
+        "C": "Print data",
+        "D": "Insert images"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0031",
+      "type": "mcq",
+      "stem": "The Enter key is used to:",
+      "options": {
+        "A": "Execute commands",
+        "B": "Open CD tray",
+        "C": "Increase brightness",
+        "D": "Move mouse"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0032",
+      "type": "mcq",
+      "stem": "The ESC key is used to:",
+      "options": {
+        "A": "Cancel operations",
+        "B": "Restart the computer",
+        "C": "Shutdown system",
+        "D": "Save files"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0033",
+      "type": "mcq",
+      "stem": "A printer is a:",
+      "options": {
+        "A": "Hardcopy output device",
+        "B": "Memory unit",
+        "C": "Control device",
+        "D": "Network device"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0034",
+      "type": "mcq",
+      "stem": "The memory unit stores:",
+      "options": {
+        "A": "Data and instructions",
+        "B": "Printed papers",
+        "C": "Emails only",
+        "D": "Web pages only"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0035",
+      "type": "mcq",
+      "stem": "A method of preventing computer viruses is:",
+      "options": {
+        "A": "Installing antivirus",
+        "B": "Opening unknown files",
+        "C": "Ignoring warnings",
+        "D": "Removing firewalls"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following is an antivirus software?",
+      "options": {
+        "A": "Avast",
+        "B": "Notepad",
+        "C": "Excel",
+        "D": "WordPad"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0037",
+      "type": "mcq",
+      "stem": "Which is a type of computer network?",
+      "options": {
+        "A": "WAN",
+        "B": "CSV",
+        "C": "DOCX",
+        "D": "PDF"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0038",
+      "type": "mcq",
+      "stem": "Which is NOT an essential network tool?",
+      "options": {
+        "A": "Cable tester",
+        "B": "Punch-down tool",
+        "C": "Screwdriver",
+        "D": "Frying pan"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0039",
+      "type": "mcq",
+      "stem": "A benefit of networking is:",
+      "options": {
+        "A": "Resource sharing",
+        "B": "Increased isolation",
+        "C": "Higher cost of communication",
+        "D": "Data loss"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0040",
+      "type": "mcq",
+      "stem": "Which network device distributes data packets?",
+      "options": {
+        "A": "Router",
+        "B": "Printer",
+        "C": "Projector",
+        "D": "Keyboard"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0041",
+      "type": "mcq",
+      "stem": "Which device amplifies network signals?",
+      "options": {
+        "A": "Repeater",
+        "B": "Scanner",
+        "C": "Mouse",
+        "D": "Keyboard"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0042",
+      "type": "mcq",
+      "stem": "Which topology connects devices in a straight line?",
+      "options": {
+        "A": "Bus",
+        "B": "Ring",
+        "C": "Star",
+        "D": "Mesh"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0043",
+      "type": "mcq",
+      "stem": "Which topology connects all devices to a central hub?",
+      "options": {
+        "A": "Star",
+        "B": "Ring",
+        "C": "Bus",
+        "D": "Tree"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0044",
+      "type": "mcq",
+      "stem": "Which device connects multiple networks?",
+      "options": {
+        "A": "Router",
+        "B": "Switch",
+        "C": "Hub",
+        "D": "Mouse"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0045",
+      "type": "mcq",
+      "stem": "A firewall is used to:",
+      "options": {
+        "A": "Protect networks from unauthorized access",
+        "B": "Increase screen brightness",
+        "C": "Improve typing speed",
+        "D": "Print faster"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0046",
+      "type": "mcq",
+      "stem": "Which is NOT a computer input device?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Scanner",
+        "D": "Monitor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0047",
+      "type": "mcq",
+      "stem": "Which is a computer output device?",
+      "options": {
+        "A": "Monitor",
+        "B": "Scanner",
+        "C": "Keyboard",
+        "D": "Mouse"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0048",
+      "type": "mcq",
+      "stem": "Data that has been processed into meaningful form is called:",
+      "options": {
+        "A": "Information",
+        "B": "Noise",
+        "C": "Error",
+        "D": "Backup"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0049",
+      "type": "mcq",
+      "stem": "Which unit temporarily holds data?",
+      "options": {
+        "A": "RAM",
+        "B": "Printer",
+        "C": "Keyboard",
+        "D": "Floppy disk"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0050",
+      "type": "mcq",
+      "stem": "Which is a storage device?",
+      "options": {
+        "A": "Hard drive",
+        "B": "Monitor",
+        "C": "Keyboard",
+        "D": "Mouse"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0051",
+      "type": "mcq",
+      "stem": "Which of these is a type of malware?",
+      "options": {
+        "A": "Virus",
+        "B": "Keyboard",
+        "C": "Processor",
+        "D": "Monitor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0052",
+      "type": "mcq",
+      "stem": "Which key is used to delete characters?",
+      "options": {
+        "A": "Backspace",
+        "B": "Enter",
+        "C": "Shift",
+        "D": "Ctrl"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0053",
+      "type": "mcq",
+      "stem": "Which device converts digital data to printed output?",
+      "options": {
+        "A": "Printer",
+        "B": "Monitor",
+        "C": "Scanner",
+        "D": "Keyboard"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0054",
+      "type": "mcq",
+      "stem": "An IP address is used to:",
+      "options": {
+        "A": "Identify devices on a network",
+        "B": "Increase processor speed",
+        "C": "Print documents",
+        "D": "Scan images"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0055",
+      "type": "mcq",
+      "stem": "The term ‘bandwidth’ refers to:",
+      "options": {
+        "A": "Network data transfer capacity",
+        "B": "Printer ink level",
+        "C": "Monitor brightness",
+        "D": "Mouse speed"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0056",
+      "type": "mcq",
+      "stem": "Which is a wired transmission medium?",
+      "options": {
+        "A": "Ethernet cable",
+        "B": "Bluetooth",
+        "C": "Wi-Fi",
+        "D": "Infrared"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0057",
+      "type": "mcq",
+      "stem": "Which protocol is used for web browsing?",
+      "options": {
+        "A": "HTTP",
+        "B": "SMS",
+        "C": "FTP",
+        "D": "MMS"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0058",
+      "type": "mcq",
+      "stem": "Which device stores BIOS settings?",
+      "options": {
+        "A": "CMOS",
+        "B": "DVD",
+        "C": "USB",
+        "D": "Monitor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0059",
+      "type": "mcq",
+      "stem": "A virus that hides within another program is called:",
+      "options": {
+        "A": "Trojan",
+        "B": "Router",
+        "C": "Hub",
+        "D": "Switch"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following is a symptom of a computer virus?",
+      "options": {
+        "A": "Slow performance",
+        "B": "Faster printing",
+        "C": "Extra storage",
+        "D": "Better network"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0061",
+      "type": "mcq",
+      "stem": "Which network device broadcasts data to all ports?",
+      "options": {
+        "A": "Hub",
+        "B": "Router",
+        "C": "Switch",
+        "D": "Firewall"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0062",
+      "type": "mcq",
+      "stem": "Which is an example of secondary memory?",
+      "options": {
+        "A": "Hard disk",
+        "B": "Register",
+        "C": "Cache",
+        "D": "RAM"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0063",
+      "type": "mcq",
+      "stem": "Which of the following is an Internet service?",
+      "options": {
+        "A": "Email",
+        "B": "Ruler",
+        "C": "Keyboard",
+        "D": "Printer"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0064",
+      "type": "mcq",
+      "stem": "Which part of the CPU performs logical operations?",
+      "options": {
+        "A": "ALU",
+        "B": "Control Unit",
+        "C": "Memory Unit",
+        "D": "Input Unit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0065",
+      "type": "mcq",
+      "stem": "Which type of memory is volatile?",
+      "options": {
+        "A": "RAM",
+        "B": "ROM",
+        "C": "Hard drive",
+        "D": "Flash drive"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc208-bank-0066",
+      "type": "mcq",
+      "stem": "The unit that interprets program instructions is:",
+      "options": {
+        "A": "Control Unit",
+        "B": "ALU",
+        "C": "Monitor",
+        "D": "Mouse"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 66,
+  "category": "university",
+  "body": "University Modules"
+}

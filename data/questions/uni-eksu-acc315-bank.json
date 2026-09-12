@@ -1,0 +1,612 @@
+{
+  "code": "uni-eksu-acc315-bank",
+  "title": "EKSU ACC 315 - Accounting Theory | Practice Bank",
+  "version": 1,
+  "questionCount": 50,
+  "totalMarks": 50,
+  "questions": [
+    {
+      "id": "uni-eksu-acc315-bank-0001",
+      "type": "mcq",
+      "stem": "Accounting is primarily understood as a medium for communicating financial information within various organizational contexts. Which of the following best describes the essential components of this communication role?",
+      "options": {
+        "A": "Strictly for profit-making entities with external stakeholders.",
+        "B": "A system for internal control and operational efficiency.",
+        "C": "A financial communication channel for both commercial and non-commercial entities, serving distinct users with specific information qualities.",
+        "D": "A regulatory reporting mechanism for government agencies."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0002",
+      "type": "mcq",
+      "stem": "Which of the following is a fundamental characteristic of accounting as a financial communication medium?",
+      "options": {
+        "A": "It prioritizes artistic expression over quantitative data.",
+        "B": "It involves users with diverse needs and requires specific information attributes.",
+        "C": "Its primary goal is to obscure financial performance.",
+        "D": "It is solely focused on historical cost valuation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0003",
+      "type": "mcq",
+      "stem": "Accounting bases are crucial for preparing financial statements. Which of the following is NOT typically considered an accounting base?",
+      "options": {
+        "A": "Cash basis",
+        "B": "Accrual basis",
+        "C": "Modified accrual basis",
+        "D": "Fair value basis"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0004",
+      "type": "mcq",
+      "stem": "When determining materiality in financial reporting, which factor is of primary importance?",
+      "options": {
+        "A": "The total number of transactions in a period.",
+        "B": "The potential influence of an omission or misstatement on user decisions.",
+        "C": "The accounting method used for a specific item.",
+        "D": "The auditor's personal opinion on the item's significance."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0005",
+      "type": "mcq",
+      "stem": "Objectivity in financial reporting refers to the characteristic that financial information should be:",
+      "options": {
+        "A": "Prepared solely by internal accounting staff.",
+        "B": "Free from bias and verifiable by independent parties.",
+        "C": "Based on subjective estimates and forecasts.",
+        "D": "Presented in a way that favors management's perspective."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0006",
+      "type": "mcq",
+      "stem": "The Robert Trueblood Committee of 1973 was instrumental in shaping accounting thought. One of its key recommendations pertained to the:",
+      "options": {
+        "A": "Abolition of accounting standards.",
+        "B": "Focus on the information needs of investors and creditors.",
+        "C": "Simplification of financial reporting for small businesses.",
+        "D": "Mandate for a single accounting system globally."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0007",
+      "type": "mcq",
+      "stem": "The importance of financial reporting, as examined by committees like the Trueblood Committee, lies in its ability to:",
+      "options": {
+        "A": "Guarantee future company success.",
+        "B": "Provide users with relevant information for economic decision-making.",
+        "C": "Replace the need for independent audits.",
+        "D": "Eliminate the possibility of accounting fraud."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0008",
+      "type": "mcq",
+      "stem": "In accounting, \"measurement\" refers to the process of:",
+      "options": {
+        "A": "Recording every single transaction in detail.",
+        "B": "Assigning monetary amounts to economic events and items.",
+        "C": "Predicting future financial performance.",
+        "D": "Analyzing the organizational structure."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0009",
+      "type": "mcq",
+      "stem": "Which of the following is a recognized type of measurement in accounting?",
+      "options": {
+        "A": "Qualitative measurement",
+        "B": "Subjective measurement",
+        "C": "Quantitative measurement",
+        "D": "Intuitive measurement"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0010",
+      "type": "mcq",
+      "stem": "Constraints to measurement in accounting aim to ensure that financial information is both useful and reliable. Which of the following is a common constraint?",
+      "options": {
+        "A": "Arbitrariness",
+        "B": "Subjectivity",
+        "C": "Materiality",
+        "D": "Complexity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0011",
+      "type": "mcq",
+      "stem": "The concept of \"matching\" in financial reporting dictates that:",
+      "options": {
+        "A": "All expenses incurred in a period should be recognized regardless of revenue.",
+        "B": "Revenue and expenses should be recognized in the same period to which they relate.",
+        "C": "Assets should always be matched with liabilities.",
+        "D": "Profits should be matched with dividends paid."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0012",
+      "type": "mcq",
+      "stem": "The \"realization concept\" in accounting generally states that revenue should be recognized when:",
+      "options": {
+        "A": "It is earned and collection is reasonably assured.",
+        "B": "The cash is received from the customer.",
+        "C": "The order is placed by the customer.",
+        "D": "The product is manufactured."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0013",
+      "type": "mcq",
+      "stem": "The \"accrual concept\" in accounting means that:",
+      "options": {
+        "A": "Revenue and expenses are recognized only when cash is exchanged.",
+        "B": "Economic events are recognized when they occur, regardless of cash flow.",
+        "C": "Accounting principles should be applied retrospectively.",
+        "D": "All liabilities must be settled immediately."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0014",
+      "type": "mcq",
+      "stem": "According to the accrual concept, when should an expense be recognized?",
+      "options": {
+        "A": "When the cash payment is made.",
+        "B": "When the related revenue is earned or the benefit is consumed.",
+        "C": "When the invoice is received.",
+        "D": "At the end of the fiscal year."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0015",
+      "type": "mcq",
+      "stem": "The realization concept is most directly related to the recognition of:",
+      "options": {
+        "A": "Expenses",
+        "B": "Assets",
+        "C": "Liabilities",
+        "D": "Revenues"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0016",
+      "type": "mcq",
+      "stem": "Which of the following conditions is crucial for determining the realization of revenue?",
+      "options": {
+        "A": "The seller has complete control over the buyer.",
+        "B": "The earnings process is substantially complete and collection is reasonably assured.",
+        "C": "The product is shipped but not yet delivered.",
+        "D": "The buyer has expressed interest in the product."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0017",
+      "type": "mcq",
+      "stem": "Objectivity in accounting information is essential for:",
+      "options": {
+        "A": "Enhancing comparability across different entities.",
+        "B": "Allowing management to manipulate financial results.",
+        "C": "Reducing the amount of disclosure required.",
+        "D": "Prioritizing timeliness over accuracy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0018",
+      "type": "mcq",
+      "stem": "A financial reporting characteristic that makes information useful for predicting future outcomes is known as:",
+      "options": {
+        "A": "Verifiability",
+        "B": "Relevance",
+        "C": "Understandability",
+        "D": "Comparability"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0019",
+      "type": "mcq",
+      "stem": "The ability to compare financial information of different companies over time and across similar entities is a quality of useful information. This quality is called:",
+      "options": {
+        "A": "Timeliness",
+        "B": "Neutrality",
+        "C": "Comparability",
+        "D": "Representational faithfulness"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0020",
+      "type": "mcq",
+      "stem": "When financial information is free from bias and error, it possesses the quality of:",
+      "options": {
+        "A": "Relevance",
+        "B": "Understandability",
+        "C": "Verifiability",
+        "D": "Timeliness"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0021",
+      "type": "mcq",
+      "stem": "The Trueblood Committee emphasized that financial reporting should serve the needs of a broad range of users. Who are considered primary users of financial reports?",
+      "options": {
+        "A": "Only internal management.",
+        "B": "Primarily government regulators.",
+        "C": "Investors, creditors, and other resource allocators.",
+        "D": "Competitors of the reporting company."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0022",
+      "type": "mcq",
+      "stem": "The condition for determining materiality in financial reporting involves considering whether information, if omitted or misstated, could:",
+      "options": {
+        "A": "Increase the company's stock price.",
+        "B": "Lead to a lawsuit against the company.",
+        "C": "Influence the economic decisions of users.",
+        "D": "Reduce the auditors' workload."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0023",
+      "type": "mcq",
+      "stem": "In accounting measurement, the use of nominal scales implies:",
+      "options": {
+        "A": "Ordering of items based on magnitude.",
+        "B": "Ranking of items based on preference.",
+        "C": "Classification of items into categories.",
+        "D": "Measuring the distance between values."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0024",
+      "type": "mcq",
+      "stem": "Interval scales in accounting measurement allow for:",
+      "options": {
+        "A": "Only classification of data.",
+        "B": "Ranking and measurement of equal intervals between values.",
+        "C": "Classification, ranking, and a meaningful zero point.",
+        "D": "Classification, ranking, interval measurement, and a meaningful zero point."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0025",
+      "type": "mcq",
+      "stem": "A meaningful zero point is a characteristic of which type of accounting measurement scale?",
+      "options": {
+        "A": "Nominal scale",
+        "B": "Ordinal scale",
+        "C": "Interval scale",
+        "D": "Ratio scale"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0026",
+      "type": "mcq",
+      "stem": "The constraint of \"cost-benefit\" in accounting suggests that the cost of providing financial information should not:",
+      "options": {
+        "A": "Exceed the profit generated by the company.",
+        "B": "Be greater than the benefits derived from it.",
+        "C": "Be less than the amount of revenue reported.",
+        "D": "Exceed the market capitalization of the company."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0027",
+      "type": "mcq",
+      "stem": "The accounting concept that ensures that all expenses incurred in generating revenue are recognized in the same accounting period is the:",
+      "options": {
+        "A": "Revenue recognition concept",
+        "B": "Going concern concept",
+        "C": "Matching concept",
+        "D": "Historical cost concept"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0028",
+      "type": "mcq",
+      "stem": "Under the accrual basis of accounting, revenue is recognized when:",
+      "options": {
+        "A": "Cash is received.",
+        "B": "It is earned, regardless of when cash is received.",
+        "C": "The customer places an order.",
+        "D": "The goods are manufactured."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0029",
+      "type": "mcq",
+      "stem": "An example of applying the matching concept would be:",
+      "options": {
+        "A": "Recording rent expense only when the rent is paid.",
+        "B": "Recording depreciation expense for the period even if the asset was not sold.",
+        "C": "Recording sales revenue when the customer pays.",
+        "D": "Recording advertising costs when the company is profitable."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0030",
+      "type": "mcq",
+      "stem": "The \"importance of financial reporting\" as discussed by accounting committees primarily relates to its role in:",
+      "options": {
+        "A": "Predicting the exact stock price movements.",
+        "B": "Providing reliable information for investment and credit decisions.",
+        "C": "Eliminating competition in the market.",
+        "D": "Ensuring guaranteed returns for shareholders."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0031",
+      "type": "mcq",
+      "stem": "Which of the following statements best describes the \"information qualities\" mentioned in relation to accounting's communication role?",
+      "options": {
+        "A": "The information should be complex and difficult to understand.",
+        "B": "The information should be relevant, reliable, comparable, and understandable.",
+        "C": "The information should be generated only by external auditors.",
+        "D": "The information should be presented in a single format for all users."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0032",
+      "type": "mcq",
+      "stem": "The Robert Trueblood Committee's focus on the information contents of financial reporting aimed to improve:",
+      "options": {
+        "A": "The aesthetic presentation of financial statements.",
+        "B": "The usefulness of financial information for decision-making.",
+        "C": "The speed at which financial statements are produced.",
+        "D": "The level of detail included in footnotes."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0033",
+      "type": "mcq",
+      "stem": "When applying the realization concept, a company should recognize revenue when:",
+      "options": {
+        "A": "The customer verbally agrees to purchase the goods.",
+        "B": "The goods are shipped to the customer, and collection is probable.",
+        "C": "The invoice is prepared, but not yet sent.",
+        "D": "The production of goods is complete."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0034",
+      "type": "mcq",
+      "stem": "The \"conditions for determining materiality\" in financial reporting consider the size and nature of an item's impact on:",
+      "options": {
+        "A": "The company's operational efficiency.",
+        "B": "The readability of the financial statements.",
+        "C": "The overall financial picture presented to users.",
+        "D": "The company's marketing strategies."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following is a type of accounting base that deviates from the strict accrual method?",
+      "options": {
+        "A": "Accrual basis",
+        "B": "Cash basis",
+        "C": "Modified accrual basis",
+        "D": "Both B and C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0036",
+      "type": "mcq",
+      "stem": "The \"matching concept\" is most closely associated with the accounting principle of:",
+      "options": {
+        "A": "Conservatism",
+        "B": "Full disclosure",
+        "C": "Accrual accounting",
+        "D": "Consistency"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0037",
+      "type": "mcq",
+      "stem": "The \"objectivity\" in financial reporting means that the information should be:",
+      "options": {
+        "A": "Subjective and based on management's best estimates.",
+        "B": "Verifiable and free from personal bias.",
+        "C": "Easily manipulated to achieve desired results.",
+        "D": "Available only to a select group of users."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0038",
+      "type": "mcq",
+      "stem": "The Trueblood Committee's recommendations on the \"information contents of financial reporting\" suggested that the primary objective of financial reporting is to:",
+      "options": {
+        "A": "Provide detailed historical transaction data.",
+        "B": "Assist users in predicting future cash flows.",
+        "C": "Comply with tax regulations.",
+        "D": "Simplify accounting for non-accountants."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0039",
+      "type": "mcq",
+      "stem": "\"Measurement in accounting\" involves assigning:",
+      "options": {
+        "A": "Qualitative attributes to financial transactions.",
+        "B": "Monetary values to economic events and resources.",
+        "C": "Future projections without historical basis.",
+        "D": "Subjective interpretations of market trends."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0040",
+      "type": "mcq",
+      "stem": "Which of the following is a constraint to measurement in accounting that prevents excessive detail?",
+      "options": {
+        "A": "Objectivity",
+        "B": "Materiality",
+        "C": "Relevance",
+        "D": "Timeliness"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0041",
+      "type": "mcq",
+      "stem": "The cash basis of accounting recognizes revenue when:",
+      "options": {
+        "A": "It is earned.",
+        "B": "Cash is received.",
+        "C": "An invoice is sent.",
+        "D": "An order is placed."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0042",
+      "type": "mcq",
+      "stem": "The condition for determining \"objectivity\" in financial reporting is that the information must be:",
+      "options": {
+        "A": "Understandable to all users.",
+        "B": "Free from bias and verifiable.",
+        "C": "Timely and delivered quickly.",
+        "D": "Prepared by management."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0043",
+      "type": "mcq",
+      "stem": "The Robert Trueblood Committee's emphasis on the importance of financial reporting highlighted its role in supporting:",
+      "options": {
+        "A": "Internal managerial decision-making exclusively.",
+        "B": "External economic decision-making by investors and creditors.",
+        "C": "Political campaigning.",
+        "D": "Artistic endeavors."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0044",
+      "type": "mcq",
+      "stem": "Which type of measurement scale in accounting allows for ordering and has equal intervals but lacks a true zero point?",
+      "options": {
+        "A": "Nominal scale",
+        "B": "Ordinal scale",
+        "C": "Interval scale",
+        "D": "Ratio scale"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0045",
+      "type": "mcq",
+      "stem": "The accrual concept requires that expenses be recognized when:",
+      "options": {
+        "A": "They are paid.",
+        "B": "They are incurred, regardless of cash payment.",
+        "C": "They are budgeted.",
+        "D": "They are approved by management."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0046",
+      "type": "mcq",
+      "stem": "The realization concept dictates that revenue should be recognized when:",
+      "options": {
+        "A": "The customer makes a down payment.",
+        "B": "The goods are delivered and collection is reasonably assured.",
+        "C": "The contract is signed.",
+        "D": "The cost of goods sold is determined."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0047",
+      "type": "mcq",
+      "stem": "Which of the following best describes \"accounting bases\"?",
+      "options": {
+        "A": "The principles used for internal audits.",
+        "B": "The methods used for recognizing revenue and expenses.",
+        "C": "The systems for managing inventory.",
+        "D": "The techniques for financial forecasting."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0048",
+      "type": "mcq",
+      "stem": "The primary goal of ensuring \"objectivity\" in financial reporting is to make the information:",
+      "options": {
+        "A": "More voluminous.",
+        "B": "More understandable to non-experts.",
+        "C": "More credible and trustworthy.",
+        "D": "More favorable to the reporting company."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0049",
+      "type": "mcq",
+      "stem": "According to the matching concept, if a company incurs advertising costs in January to generate sales in March, the advertising costs should be recognized as an expense:",
+      "options": {
+        "A": "In January.",
+        "B": "In March.",
+        "C": "When cash is paid for the advertisement.",
+        "D": "At the end of the year."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc315-bank-0050",
+      "type": "mcq",
+      "stem": "The Trueblood Committee identified that financial reporting serves to fulfill the needs of users who require information for:",
+      "options": {
+        "A": "Personal investment decisions.",
+        "B": "Economic decisions such as investing and lending.",
+        "C": "Social media engagement.",
+        "D": "Academic research only."
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 50,
+  "category": "university",
+  "body": "University Modules"
+}

@@ -1,0 +1,2279 @@
+{
+  "code": "uni-babcock-pq-mathematics-bank",
+  "title": "BABCOCK Post-UTME Mathematics | Prep Bank",
+  "version": 1,
+  "questionCount": 189,
+  "totalMarks": 189,
+  "questions": [
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0001",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 + 2x - 3 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0002",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\). x 3/2",
+      "options": {
+        "A": "x",
+        "B": "x > -1 or x",
+        "C": "x",
+        "D": "x > -1 or x > 3/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0003",
+      "type": "mcq",
+      "stem": "Find the mean of the following data set: 2, 4, 6, 8, 10.",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0004",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{bmatrix} \\).",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0005",
+      "type": "mcq",
+      "stem": "Two events A and B are indep\\endent. If P(A) = 0.4 and P(B) = 0.6, find P(A and B).",
+      "options": {
+        "A": "0.2",
+        "B": "0.4",
+        "C": "0.6",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0006",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by rotating the region bounded by the curves y = 2x^2 + 1, y = 0, and x = 1 about the x-axis.",
+      "options": {
+        "A": "π/3",
+        "B": "π/2",
+        "C": "π/4",
+        "D": "π/6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0007",
+      "type": "mcq",
+      "stem": "A random variable X has a probability distribution given by P\\( X = 1 \\) = 1/4, P\\( X = 2 \\) = 1/2, and P\\( X = 3 \\) = 1/4. Find the expected value of X.",
+      "options": {
+        "A": "1.5",
+        "B": "2",
+        "C": "2.5",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0008",
+      "type": "mcq",
+      "stem": "The mean of a set of 5 numbers is 10. If one of the numbers is 15, find the sum of the remaining 4 numbers.",
+      "options": {
+        "A": "35",
+        "B": "40",
+        "C": "45",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0009",
+      "type": "mcq",
+      "stem": "A histogram of the heights of 20 students in a class is shown below. If the class has 10 boys and 10 girls, find the probability that a randomly selected student is taller than 170 cm.",
+      "options": {
+        "A": "0.4",
+        "B": "0.5",
+        "C": "0.6",
+        "D": "0.7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0010",
+      "type": "mcq",
+      "stem": "A binary number 1011 is converted to decimal. Find the decimal equivalent.",
+      "options": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0011",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{x^2 + 1} \\) from \\( x = 0 \\) to \\( x = 1 \\).",
+      "options": {
+        "A": "\\( \\frac{pi}{2} \\)",
+        "B": "\\( \\frac{pi}{4} \\)",
+        "C": "\\( \\frac{pi}{6} \\)",
+        "D": "\\( \\frac{pi}{8} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0012",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( 2^x + 3^x = 5^x \\).",
+      "options": {
+        "A": "\\( x = 1 \\)",
+        "B": "\\( x = 2 \\)",
+        "C": "\\( x = 3 \\)",
+        "D": "\\( x = 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0013",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (2, 3) ) and radius ( 4 ).",
+      "options": {
+        "A": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "B": "\\( x - 3 \\ \\)^2 + \\( y - 2 \\)^2 = 16 )",
+        "C": "\\( x - 4 \\ \\)^2 + \\( y - 2 \\)^2 = 16 )",
+        "D": "\\( x - 2 \\ \\)^2 + \\( y - 4 \\)^2 = 16 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0014",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\log_{10} \\( 1000 \\ \\) ).",
+      "options": {
+        "A": "( 3 )",
+        "B": "( 4 )",
+        "C": "( 5 )",
+        "D": "( 6 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0015",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points ( (1, 2) ) and ( (3, 4) ).",
+      "options": {
+        "A": "\\( y = 2x - 1 \\)",
+        "B": "\\( y = 2x + 1 \\)",
+        "C": "\\( y = 3x - 2 \\)",
+        "D": "\\( y = 3x + 2 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0016",
+      "type": "mcq",
+      "stem": "In a binary system, what is the value of the number represented by the sequence 1011?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0017",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\frac{1}{2}x^2 + 3x - 2 = 0 \\)",
+      "options": {
+        "A": "1",
+        "B": "-2",
+        "C": "4",
+        "D": "-1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0018",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 1 \\ 4 &amp; 3 \\end{bmatrix} \\)",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0019",
+      "type": "mcq",
+      "stem": "A histogram is constructed with a mean of 25 and a s\\tandard deviation of 5. What is the value of the area of the histogram?",
+      "options": {
+        "A": "100",
+        "B": "200",
+        "C": "300",
+        "D": "400"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0020",
+      "type": "mcq",
+      "stem": "A vector ( vec{a} ) has a magnitude of 5 and is directed at an angle of 30° to the x-axis. What is the value of the y-component of the vector?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0021",
+      "type": "mcq",
+      "stem": "A random sample of 16 students from a population of 100 students has a mean height of 170 cm with a s\\tandard deviation of 5 cm. Calculate the s\\tandard error of the mean.",
+      "options": {
+        "A": "1.25 cm",
+        "B": "2.5 cm",
+        "C": "3.75 cm",
+        "D": "5 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0022",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 4x + 4 = 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "0",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0023",
+      "type": "mcq",
+      "stem": "A circle has a radius of 4 cm. Find the area of the circle.",
+      "options": {
+        "A": "50.24 cm^2",
+        "B": "100.48 cm^2",
+        "C": "200.96 cm^2",
+        "D": "25.13 cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0024",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 5 cm, a width of 3 cm, and a height of 2 cm. Find the volume of the prism.",
+      "options": {
+        "A": "30 cm^3",
+        "B": "50 cm^3",
+        "C": "60 cm^3",
+        "D": "70 cm^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0025",
+      "type": "mcq",
+      "stem": "A vector \\( \\vec{a} \\) has a magnitude of 5 units and makes an angle of 60° with the positive x-axis. Find the x-component of the vector.",
+      "options": {
+        "A": "2.5 units",
+        "B": "3.75 units",
+        "C": "4.33 units",
+        "D": "5 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0026",
+      "type": "mcq",
+      "stem": "In a triangle $ABC$, if $\\tan A = \\frac{1}{3}$ and $\\tan B = \\frac{1}{2}$, find $\\tan C$.",
+      "options": {
+        "A": "\\frac{\\sqrt{5}}{5}",
+        "B": "\\frac{5}{\\sqrt{5}}",
+        "C": "\\frac{\\sqrt{5}}{2}",
+        "D": "\\frac{2}{\\sqrt{5}}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0027",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by $y = x^2$ and $y = 4 - x$ about the $x$-axis.",
+      "options": {
+        "A": "\\frac{256}{15}\\pi",
+        "B": "\\frac{256}{3}\\pi",
+        "C": "\\frac{256}{5}\\pi",
+        "D": "\\frac{256}{7}\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0028",
+      "type": "mcq",
+      "stem": "In a right-angled triangle, the length of the hypotenuse is 10 cm and one of the other sides is 6 cm. Find the length of the third side.",
+      "options": {
+        "A": "8 cm",
+        "B": "6 cm",
+        "C": "10 cm",
+        "D": "12 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0029",
+      "type": "mcq",
+      "stem": "Solve the equation $\\log_{10} \\( x^2 \\) = 4$ for $x$.",
+      "options": {
+        "A": "\\pm 4",
+        "B": "\\pm 2",
+        "C": "\\pm 1",
+        "D": "\\pm 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0030",
+      "type": "mcq",
+      "stem": "Find the surface area of the sphere with radius 5 cm.",
+      "options": {
+        "A": "250\\pi cm^2",
+        "B": "500\\pi cm^2",
+        "C": "750\\pi cm^2",
+        "D": "1000\\pi cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0031",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with centre at ((2,3)) and radius (5).",
+      "options": {
+        "A": "\\( x-2 \\ \\)^2 + \\( y-3 \\)^2 = 25 )",
+        "B": "\\( x+2 \\ \\)^2 + \\( y+3 \\)^2 = 25 )",
+        "C": "\\( x-3 \\ \\)^2 + \\( y-2 \\)^2 = 25 )",
+        "D": "\\( x+3 \\ \\)^2 + \\( y+2 \\)^2 = 25 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0032",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( |x-2| geq 3 \\).",
+      "options": {
+        "A": "\\( x leq -1 \\) or ( x geq 5 )",
+        "B": "( x leq 1 ) or ( x geq 5 )",
+        "C": "\\( x leq -1 \\) or ( x geq 4 )",
+        "D": "( x leq 1 ) or ( x geq 4 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0033",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\sin 2\\theta \\) given that \\( \\sin \\theta = \\frac{3}{5} \\) and \\( \\cos \\theta = \\frac{4}{5} \\).",
+      "options": {
+        "A": "\\( \\frac{24}{25} \\)",
+        "B": "\\( \\frac{16}{25} \\)",
+        "C": "\\( \\frac{12}{25} \\)",
+        "D": "\\( \\frac{20}{25} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0034",
+      "type": "mcq",
+      "stem": "A rec\\tangular box has a length of ( 6 ) cm, a width of ( 4 ) cm, and a height of ( 3 ) cm. Find the volume of the box.",
+      "options": {
+        "A": "( 72 ) cm\\( ^3 \\)",
+        "B": "( 48 ) cm\\( ^3 \\)",
+        "C": "( 36 ) cm\\( ^3 \\)",
+        "D": "( 24 ) cm\\( ^3 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0035",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "\\( x = -2 \\)",
+        "B": "\\( x = 2 \\)",
+        "C": "\\( x = -1 \\)",
+        "D": "\\( x = 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0036",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center at (2, 3) and radius 4.",
+      "options": {
+        "A": "\\text{Equation: } \\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\text{Equation: } \\( x + 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "C": "\\text{Equation: } \\( x - 2 \\)^2 + \\( y + 3 \\)^2 = 16",
+        "D": "\\text{Equation: } \\( x + 2 \\)^2 + \\( y + 3 \\)^2 = 16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0037",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations: \\begin{align*} x + y &amp;= 4 \\ 2x - 3y &amp;= 5 \\end{align*}",
+      "options": {
+        "A": "\\text{Solution: } x = 2, y = 2",
+        "B": "\\text{Solution: } x = 1, y = 3",
+        "C": "\\text{Solution: } x = 3, y = 1",
+        "D": "\\text{Solution: } x = 4, y = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0038",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the parabola \\( y = x^2 \\) and the line \\( y = 2x \\) about the x-axis.",
+      "options": {
+        "A": "\\text{Volume: } \\frac{16}{3} \\pi",
+        "B": "\\text{Volume: } \\frac{32}{3} \\pi",
+        "C": "\\text{Volume: } \\frac{64}{3} \\pi",
+        "D": "\\text{Volume: } \\frac{128}{3} \\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0039",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 \\geq 0 \\). \\text{Solution: } x \\leq -1 \\text{ or } x \\geq \\frac{3}{2} \\text{Solution: } x \\frac{3}{2}",
+      "options": {
+        "A": "\\text{Solution: } x \\leq -1 \\text{ or } x \\geq \\frac{3}{2}",
+        "B": "\\text{Solution: } x",
+        "C": "\\text{Solution: } x \\leq -1 \\text{ or } x",
+        "D": "\\text{Solution: } x > -1 \\text{ or } x \\geq \\frac{3}{2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0040",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\log_{10} \\( x^2 \\) given that \\( \\log_{10} x = 2 \\).",
+      "options": {
+        "A": "\\text{Value: } 4",
+        "B": "\\text{Value: } 6",
+        "C": "\\text{Value: } 8",
+        "D": "\\text{Value: } 10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0041",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{x^2 + 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = \\frac{-2x}{\\( x^2 + 1 \\)^2} )",
+        "B": "( f'(x) = \\frac{2x}{\\( x^2 + 1 \\)^2} )",
+        "C": "( f'(x) = \\frac{2}{\\( x^2 + 1 \\)^2} )",
+        "D": "( f'(x) = \\frac{-2}{\\( x^2 + 1 \\)^2} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0042",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 5 cm, a width of 3 cm, and a height of 2 cm. Find the surface area of the prism.",
+      "options": {
+        "A": "\\( 2\\( 5 \\times 3 + 3 \\times 2 + 5 \\times 2 \\ \\) )",
+        "B": "\\( 2\\( 5 \\times 3 + 3 \\times 2 + 5 \\times 3 \\ \\) )",
+        "C": "\\( 2\\( 5 \\times 3 + 3 \\times 5 + 2 \\times 5 \\ \\) )",
+        "D": "\\( 2\\( 5 \\times 3 + 3 \\times 5 + 2 \\times 3 \\ \\) )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0043",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the curve \\( y = x^2 \\) and the line \\( y = 2 \\) about the x-axis.",
+      "options": {
+        "A": "\\( \\frac{8}{3} pi \\)",
+        "B": "\\( \\frac{16}{3} pi \\)",
+        "C": "\\( \\frac{32}{3} pi \\)",
+        "D": "\\( \\frac{64}{3} pi \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0044",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\sin^2(x) ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = 2 \\sin(x) \\cos(x) )",
+        "B": "( f'(x) = 2 \\cos(x) \\sin(x) )",
+        "C": "( f'(x) = 2 \\sin^2(x) \\cos(x) )",
+        "D": "( f'(x) = 2 \\cos^2(x) \\sin(x) )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0045",
+      "type": "mcq",
+      "stem": "Let \\( mathbf{a} = \begin{pmatrix} 2 \\ 3 \\end{pmatrix} \\) and \\( mathbf{b} = \begin{pmatrix} 1 \\ -1 \\end{pmatrix} \\). Find the projection of ( mathbf{b} ) onto ( mathbf{a} ) u\\sing the formula \\( mathrm{proj}_{mathbf{a}} mathbf{b} = \\frac{mathbf{a} cdot mathbf{b}}{| mathbf{a} |^2} mathbf{a} \\).",
+      "options": {
+        "A": "0.6",
+        "B": "0.8",
+        "C": "1.2",
+        "D": "1.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0046",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. What is the probability that the number rolled is a multiple of 3 or 5?",
+      "options": {
+        "A": "1/3",
+        "B": "1/2",
+        "C": "2/3",
+        "D": "5/6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0047",
+      "type": "mcq",
+      "stem": "The volume of a cube is given by \\( V = s^3 \\), where ( s ) is the length of a side. If the volume of the cube is 216 cubic units, what is the length of a side?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0048",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^2 + 4x + 4 = 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "0",
+        "B": "-2",
+        "C": "-4",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0049",
+      "type": "mcq",
+      "stem": "A right triangle has a hypotenuse of length 10 and one leg of length 6. Find the length of the other leg.",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0050",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 3 \\ 4 &amp; 5 \\end{bmatrix} \\).",
+      "options": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0051",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "32",
+        "B": "64",
+        "C": "16",
+        "D": "128"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0052",
+      "type": "mcq",
+      "stem": "Solve the equation \\( 2x + 5 = 11 \\).",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0053",
+      "type": "mcq",
+      "stem": "Find the value of ( x ) in the equation \\( x^2 - 4x - 5 = 0 \\).",
+      "options": {
+        "A": "5",
+        "B": "-1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0054",
+      "type": "mcq",
+      "stem": "Find the value of $\\frac{d}{dx} \\left\\( \\frac{1}{x^2 + 1} \\right \\)$ u\\sing the quotient rule.",
+      "options": {
+        "A": "\\frac{-2x}{\\( x^2 + 1 \\)^2}",
+        "B": "\\frac{2x}{\\( x^2 + 1 \\)^2}",
+        "C": "\\frac{2}{\\( x^2 + 1 \\)^2}",
+        "D": "\\frac{-2}{\\( x^2 + 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0055",
+      "type": "mcq",
+      "stem": "Solve the inequality $\\left| x - 2 \\right| &gt; 3$. $x 5$ $x 5$ $x 2$ $x 2$",
+      "options": {
+        "A": "$x",
+        "B": "$x",
+        "C": "$x",
+        "D": "$x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0056",
+      "type": "mcq",
+      "stem": "Find the sum of the first 5 terms of the geometric series $\\sum_{n=1}^5 \\frac{2}{3^n}$.",
+      "options": {
+        "A": "\\frac{2}{3} + \\frac{2}{9} + \\frac{2}{27} + \\frac{2}{81} + \\frac{2}{243}",
+        "B": "\\frac{2}{3} + \\frac{2}{9} + \\frac{2}{27} + \\frac{2}{81} + \\frac{2}{243}",
+        "C": "\\frac{2}{3} + \\frac{2}{9} + \\frac{2}{27} + \\frac{2}{81}",
+        "D": "\\frac{2}{3} + \\frac{2}{9} + \\frac{2}{27}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0057",
+      "type": "mcq",
+      "stem": "Solve the matrix equation $\\begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \\end{bmatrix} \\begin{bmatrix} x \\ y \\end{bmatrix} = \\begin{bmatrix} 3 \\ 3 \\end{bmatrix}$.",
+      "options": {
+        "A": "\\begin{bmatrix} 1 \\ 1 \\end{bmatrix}",
+        "B": "\\begin{bmatrix} 1 \\ 2 \\end{bmatrix}",
+        "C": "\\begin{bmatrix} 2 \\ 1 \\end{bmatrix}",
+        "D": "\\begin{bmatrix} 2 \\ 2 \\end{bmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0058",
+      "type": "mcq",
+      "stem": "A set of 5 numbers has a mean of 10. If 2 is added to each number, what is the new mean?",
+      "options": {
+        "A": "12",
+        "B": "13",
+        "C": "14",
+        "D": "15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0059",
+      "type": "mcq",
+      "stem": "A random sample of 25 students from a population of 1000 students had a mean height of 175 cm with a s\\tandard deviation of 5 cm. Calculate the 95% confidence interval for the population mean.",
+      "options": {
+        "A": "170.4 cm, 179.6 cm",
+        "B": "172.5 cm, 177.5 cm",
+        "C": "174.5 cm, 175.5 cm",
+        "D": "171.2 cm, 178.8 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0060",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 \\geq 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "\\( x \\leq -1.5 \\) or \\( x \\geq 1 \\)",
+        "B": "\\( x \\leq -1 \\) or \\( x \\geq 1.5 \\)",
+        "C": "\\( x \\leq -1.5 \\) or \\( x \\geq 1.5 \\)",
+        "D": "\\( x \\leq 1 \\) or \\( x \\geq 1.5 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0061",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\[ \\begin{bmatrix} 2 &amp; 3 &amp; 1 \\\\ 4 &amp; 1 &amp; 2 \\\\ 3 &amp; 2 &amp; 1 \\end{bmatrix} \\].",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0062",
+      "type": "mcq",
+      "stem": "A company produces two products, A and B. The profit from the sale of product A is ₦200 per unit, while the profit from the sale of product B is ₦150 per unit. If the company produces 100 units of product A and 50 units of product B, what is the total profit?",
+      "options": {
+        "A": "₦25000",
+        "B": "₦30000",
+        "C": "₦35000",
+        "D": "₦40000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0063",
+      "type": "mcq",
+      "stem": "A histogram of the heights of 100 students is shown below. If the mean height of the students is 175 cm, what is the s\\tandard deviation?",
+      "options": {
+        "A": "5 cm",
+        "B": "10 cm",
+        "C": "15 cm",
+        "D": "20 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0064",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 + 3x - 2 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0065",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled twice. What is the probability that the sum of the two numbers is 7?",
+      "options": {
+        "A": "1/6",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0066",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\).",
+      "options": {
+        "A": "\\( -∞, -3 \\) ∪ (1, ∞)",
+        "B": "\\( -∞, -1 \\) ∪ (3, ∞)",
+        "C": "\\( -∞, 1 \\) ∪ (3, ∞)",
+        "D": "\\( -∞, -3 \\) ∪ \\( -1, ∞ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0067",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{\\sqrt{x^2 + 1}} ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = \\frac{-x}{\\( x^2 + 1 \\)^{\\frac{3}{2}}} )",
+        "B": "( f'(x) = \\frac{x}{\\( x^2 + 1 \\)^{\\frac{3}{2}}} )",
+        "C": "( f'(x) = \\frac{1}{\\( x^2 + 1 \\)^{\\frac{3}{2}}} )",
+        "D": "( f'(x) = \\frac{x^2}{\\( x^2 + 1 \\)^{\\frac{3}{2}}} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0068",
+      "type": "mcq",
+      "stem": "A binary operation ( odot ) is defined as \\( a odot b = ab + 2 \\). Find the value of ( 3 odot 4 ).",
+      "options": {
+        "A": "14",
+        "B": "16",
+        "C": "18",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0069",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\( \\sin^2 x + \\cos^2 x = 1 \\) for ( x ) in the interval ( [0, 2pi] ).",
+      "options": {
+        "A": "\\( x = \\frac{pi}{4} \\)",
+        "B": "\\( x = \\frac{pi}{2} \\)",
+        "C": "\\( x = \\frac{3pi}{4} \\)",
+        "D": "\\( x = \\frac{5pi}{4} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0070",
+      "type": "mcq",
+      "stem": "A random experiment consists of rolling a fair six-sided die. Find the probability that the sum of the numbers on the two dice is 7.",
+      "options": {
+        "A": "\\frac{1}{6}",
+        "B": "\\frac{1}{3}",
+        "C": "\\frac{1}{2}",
+        "D": "\\frac{2}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0071",
+      "type": "mcq",
+      "stem": "Convert the decimal number 0.000123 to a binary number.",
+      "options": {
+        "A": "0.000123",
+        "B": "0.00011011",
+        "C": "0.00010101",
+        "D": "0.00011101"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0072",
+      "type": "mcq",
+      "stem": "Find the derivative of ( f(x) = \\frac{1}{\\sqrt{x}} ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = -\\frac{1}{2}x^{-\\frac{3}{2}} )",
+        "B": "( f'(x) = \\frac{1}{2}x^{-\\frac{3}{2}} )",
+        "C": "( f'(x) = -\\frac{1}{2}x^{-\\frac{1}{2}} )",
+        "D": "( f'(x) = \\frac{1}{2}x^{-\\frac{1}{2}} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0073",
+      "type": "mcq",
+      "stem": "Solve the system of equations u\\sing matrices: \\( \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 5 \\ 6 \\end{bmatrix} \\).",
+      "options": {
+        "A": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\end{bmatrix} \\)",
+        "B": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 2 \\ 1 \\end{bmatrix} \\)",
+        "C": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 3 \\ 4 \\end{bmatrix} \\)",
+        "D": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 4 \\ 3 \\end{bmatrix} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0074",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; 5 &amp; 2 \\ 1 &amp; 2 &amp; 3 \\end{bmatrix} \\).",
+      "options": {
+        "A": "( 20 )",
+        "B": "( 30 )",
+        "C": "( 40 )",
+        "D": "( 50 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0075",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "\\( x = -2 \\)",
+        "B": "\\( x = 2 \\)",
+        "C": "\\( x = -1 \\)",
+        "D": "\\( x = 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0076",
+      "type": "mcq",
+      "stem": "Find the derivative of ( f(x) = \\sin^2(x) ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = 2\\sin\\( x)\\cos(x \\) )",
+        "B": "( f'(x) = \\sin(x) )",
+        "C": "( f'(x) = \\cos(x) )",
+        "D": "( f'(x) = \\tan(x) )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0077",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the curve \\( y = \\frac{1}{2}x^2 \\), the x-axis, and the line \\( x = 2 \\) about the x-axis.",
+      "options": {
+        "A": "\\( \\frac{16pi}{3} \\)",
+        "B": "\\( \\frac{32pi}{3} \\)",
+        "C": "\\( \\frac{64pi}{3} \\)",
+        "D": "\\( \\frac{128pi}{3} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0078",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\log_{10} \\( x^2 - 4 \\ \\) &gt; 2 ).",
+      "options": {
+        "A": "\\( x > 2 \\)",
+        "B": "\\( x",
+        "C": "\\( x > 4 \\)",
+        "D": "\\( x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0079",
+      "type": "mcq",
+      "stem": "Find the equation of the circle pas\\sing through the points ( (2, 3) ) and ( (4, 5) ).",
+      "options": {
+        "A": "\\( x^2 + y^2 - 6x - 4y + 4 = 0 \\)",
+        "B": "\\( x^2 + y^2 - 8x - 6y + 9 = 0 \\)",
+        "C": "\\( x^2 + y^2 - 10x - 8y + 16 = 0 \\)",
+        "D": "\\( x^2 + y^2 - 12x - 10y + 25 = 0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0080",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^3 - 6x^2 + 11x - 6 = 0 \\).",
+      "options": {
+        "A": "\\( x = 1, 2, 3 \\)",
+        "B": "\\( x = 1, 3, 4 \\)",
+        "C": "\\( x = 2, 3, 4 \\)",
+        "D": "\\( x = 1, 2, 5 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0081",
+      "type": "mcq",
+      "stem": "A random variable X has a probability distribution given by P\\( X = 1 \\) = 0.3, P\\( X = 2 \\) = 0.4, and P\\( X = 3 \\) = 0.3. What is the expected value of X?",
+      "options": {
+        "A": "1.1",
+        "B": "1.2",
+        "C": "1.3",
+        "D": "1.4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0082",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^2 + 4x + 4 = 0 \\) u\\sing the quadratic formula. What is the value of x?",
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "1",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0083",
+      "type": "mcq",
+      "stem": "In the diagram below, what is the value of x?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0084",
+      "type": "mcq",
+      "stem": "A function f(x) is defined as f(x) = 2x^2 + 3x - 1. What is the value of f\\( -2 \\)?",
+      "options": {
+        "A": "-5",
+        "B": "-4",
+        "C": "-3",
+        "D": "-2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0085",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\( 2 \\sin^2 x + 3 \\sin x - 2 = 0 \\) for x in the interval [0, 2\\pi].",
+      "options": {
+        "A": "\\frac{\\pi}{6}",
+        "B": "\\frac{\\pi}{3}",
+        "C": "\\frac{\\pi}{2}",
+        "D": "\\frac{5\\pi}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0086",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( \\left| x - 2 \\right| + \\left| x + 1 \\right| = 3 \\).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0087",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\sin \\left\\( \\arc\\cos \\frac{3}{5} \\right \\ \\) ).",
+      "options": {
+        "A": "0.6",
+        "B": "0.8",
+        "C": "0.4",
+        "D": "0.2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0088",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. What is the probability that the number obtained is greater than 4?",
+      "options": {
+        "A": "1/6",
+        "B": "1/3",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0089",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series \\( 2x^2 + 3x + 1 \\).",
+      "options": {
+        "A": "200x^2 + 300x + 10",
+        "B": "100x^2 + 150x + 5",
+        "C": "50x^2 + 75x + 2.5",
+        "D": "25x^2 + 37.5x + 1.25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0090",
+      "type": "mcq",
+      "stem": "Let X be a random variable with probability density function f(x) = \\( \begin{cases} 2x &amp; 0 leq x leq 1 \\ 0 &amp; \\text{otherwise} \\end{cases} \\). Find the probability that X is greater than 0.5.",
+      "options": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "0.75",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0091",
+      "type": "mcq",
+      "stem": "Find the area under the curve y = \\( \\frac{1}{x^2 + 1} \\) from x = 0 to x = 1.",
+      "options": {
+        "A": "0.5",
+        "B": "1",
+        "C": "1.5",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0092",
+      "type": "mcq",
+      "stem": "The equation of a circle is given by \\( x^2 + y^2 - 6x + 4y + 4 = 0 \\). Find the center and radius of the circle.",
+      "options": {
+        "A": "Center: \\( 3, -2 \\), Radius: 2",
+        "B": "Center: (2, 3), Radius: 3",
+        "C": "Center: (3, 2), Radius: 2",
+        "D": "Center: \\( 2, -3 \\), Radius: 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0093",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( |x - 2| &gt; 3 \\).",
+      "options": {
+        "A": "\\( -∞, -1 \\) ∪ (4, ∞)",
+        "B": "\\( -∞, 1 \\) ∪ (4, ∞)",
+        "C": "\\( -∞, -1 \\) ∪ (1, ∞)",
+        "D": "\\( -∞, 4 \\) ∪ (1, ∞)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0094",
+      "type": "mcq",
+      "stem": "Find the mean and s\\tandard deviation of the data set {2, 4, 6, 8, 10}.",
+      "options": {
+        "A": "Mean: 6, S\\tandard Deviation: 2",
+        "B": "Mean: 5, S\\tandard Deviation: 2",
+        "C": "Mean: 6, S\\tandard Deviation: 3",
+        "D": "Mean: 5, S\\tandard Deviation: 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0095",
+      "type": "mcq",
+      "stem": "A random sample of 25 students from a population of 500 students has a mean height of 170 cm with a s\\tandard deviation of 5 cm. Calculate the s\\tandard error of the mean.",
+      "options": {
+        "A": "2.5 cm",
+        "B": "3.5 cm",
+        "C": "4.5 cm",
+        "D": "5.5 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0096",
+      "type": "mcq",
+      "stem": "A circle has a diameter of 10 cm. Find the area of the circle.",
+      "options": {
+        "A": "78.5 cm^2",
+        "B": "87.5 cm^2",
+        "C": "97.5 cm^2",
+        "D": "107.5 cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0097",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = 3x^2 + 2x - 5.",
+      "options": {
+        "A": "6x + 2",
+        "B": "6x - 2",
+        "C": "3x + 2",
+        "D": "3x - 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0098",
+      "type": "mcq",
+      "stem": "Solve the inequality 2x^2 + 5x - 3 &gt; 0. x 3/2 x -3/2 x 1 x -1",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0099",
+      "type": "mcq",
+      "stem": "A circle has a radius of 4 cm. Find the circumference of the circle.",
+      "options": {
+        "A": "25.13 cm",
+        "B": "26.18 cm",
+        "C": "27.23 cm",
+        "D": "28.28 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0100",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = x^3 - 2x^2 + x - 1.",
+      "options": {
+        "A": "3x^2 - 4x + 1",
+        "B": "3x^2 - 4x - 1",
+        "C": "3x^2 + 4x + 1",
+        "D": "3x^2 + 4x - 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0101",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 6 cm, a width of 4 cm, and a height of 3 cm. Find the surface area of the prism.",
+      "options": {
+        "A": "104 cm^2",
+        "B": "114 cm^2",
+        "C": "124 cm^2",
+        "D": "134 cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0102",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by rotating the region bounded by the curves y = x^2, y = 0, and x = 2 about the x-axis.",
+      "options": {
+        "A": "32\\pi",
+        "B": "64\\pi",
+        "C": "128\\pi",
+        "D": "256\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0103",
+      "type": "mcq",
+      "stem": "Solve the inequality \\[\\frac{x^2 - 4}{x^2 - 9} &gt; 0\\].",
+      "options": {
+        "A": "\\[\\( -\\infty, -3 \\) \\cup (1, \\infty)\\]",
+        "B": "\\[\\( -\\infty, -3 \\) \\cup (1, \\infty)\\]",
+        "C": "\\[\\( -\\infty, -3 \\) \\cup (1, \\infty)\\]",
+        "D": "\\[\\( -\\infty, -3 \\) \\cup (1, \\infty)\\]"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0104",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\sin^2 x + \\cos^2 x = 1 \\).",
+      "options": {
+        "A": "\\( x = \\frac{pi}{2} \\)",
+        "B": "\\( x = \\frac{pi}{4} \\)",
+        "C": "\\( x = \\frac{3pi}{4} \\)",
+        "D": "\\( x = \\frac{5pi}{4} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0105",
+      "type": "mcq",
+      "stem": "A random variable X has a probability distribution given by \\( P\\( X = x \\ \\) = \\frac{1}{2} ) for \\( x = 1, 2, 3, 4 \\). Find the expected value of X.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0106",
+      "type": "mcq",
+      "stem": "In the diagram below, ( ABC ) is a right-angled triangle with \\( angle B = 90^circ \\). If \\( AB = 3 \\) and \\( BC = 4 \\), find the length of ( AC ).",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0107",
+      "type": "mcq",
+      "stem": "A histogram of the heights of students in a class is shown below. If the class has 50 students, find the median height.",
+      "options": {
+        "A": "160",
+        "B": "170",
+        "C": "180",
+        "D": "190"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0108",
+      "type": "mcq",
+      "stem": "A circle with center ( C ) and radius ( r ) is shown below. If \\( OC = 6 \\), find the length of ( AB ).",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0109",
+      "type": "mcq",
+      "stem": "A cylindrical \\tank with a radius of 5m and a height of 10m is filled with water. If the density of water is 1000 kg/m^3, calculate the volume of water in the \\tank.",
+      "options": {
+        "A": "785.4 m^3",
+        "B": "785.4 m^2",
+        "C": "785.4 m",
+        "D": "785.4 km^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0110",
+      "type": "mcq",
+      "stem": "Solve the inequality: \\frac{x-2}{x+1} &gt; 0 x 2",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x > -1 or x",
+        "D": "x > -1 or x > 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0111",
+      "type": "mcq",
+      "stem": "Find the area under the curve y = 2x^2 + 3x - 1 from x = 0 to x = 2",
+      "options": {
+        "A": "14.67",
+        "B": "14.67 m^2",
+        "C": "14.67 km^2",
+        "D": "14.67 cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0112",
+      "type": "mcq",
+      "stem": "A bag contains 5 red balls and 3 blue balls. If a ball is drawn at random, what is the probability that it is blue?",
+      "options": {
+        "A": "0.375",
+        "B": "0.375 or 3/8",
+        "C": "0.375 or 1/3",
+        "D": "0.375 or 1/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0113",
+      "type": "mcq",
+      "stem": "The mean of 5 numbers is 12. If one of the numbers is 15, what is the mean of the remaining 4 numbers?",
+      "options": {
+        "A": "11.25",
+        "B": "11.25 or 45/4",
+        "C": "11.25 or 3/4",
+        "D": "11.25 or 1/4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0114",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{bmatrix} \\).",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0115",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0116",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (3, 4) ) and radius ( 5 ).",
+      "options": {
+        "A": "\\( x - 3 \\)^2 + \\( y - 4 \\)^2 = 25",
+        "B": "\\( x - 4 \\)^2 + \\( y - 3 \\)^2 = 25",
+        "C": "\\( x - 3 \\)^2 + \\( y - 4 \\)^2 = 30",
+        "D": "\\( x - 4 \\)^2 + \\( y - 3 \\)^2 = 30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0117",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\sin \\( 2x \\ \\) ) given that \\( \\sin \\( x \\ \\) = \\frac{3}{5} ) and \\( \\cos \\( x \\ \\) = \\frac{4}{5} ).",
+      "options": {
+        "A": "\\frac{24}{25}",
+        "B": "\\frac{24}{25}",
+        "C": "\\frac{24}{25}",
+        "D": "\\frac{24}{25}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0118",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series with first term \\( a = 2 \\) and common ratio \\( r = 3 \\).",
+      "options": {
+        "A": "59049",
+        "B": "59049",
+        "C": "59049",
+        "D": "59049"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0119",
+      "type": "mcq",
+      "stem": "Determine the mean of the following data set: 2, 4, 6, 8, 10. If the mean is increased by 2, what is the new mean?",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0120",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations u\\sing matrices:\\n\\( \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 7 \\ 10 \\end{bmatrix} \\)",
+      "options": {
+        "A": "\\( \begin{bmatrix} 1 \\ 2 \\end{bmatrix} \\)",
+        "B": "\\( \begin{bmatrix} 2 \\ 1 \\end{bmatrix} \\)",
+        "C": "\\( \begin{bmatrix} 3 \\ 4 \\end{bmatrix} \\)",
+        "D": "\\( \begin{bmatrix} 4 \\ 3 \\end{bmatrix} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0121",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (2, 3) ) and radius 4.",
+      "options": {
+        "A": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "B": "\\( x - 3 \\ \\)^2 + \\( y - 2 \\)^2 = 16 )",
+        "C": "\\( x - 4 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "D": "\\( x - 3 \\ \\)^2 + \\( y - 4 \\)^2 = 16 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0122",
+      "type": "mcq",
+      "stem": "A car travels from city A to city B at an average speed of 60 km/h and returns at an average speed of 40 km/h. If the dis\\tance between the two cities is 240 km, what is the average speed for the round trip?",
+      "options": {
+        "A": "48",
+        "B": "50",
+        "C": "52",
+        "D": "54"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0123",
+      "type": "mcq",
+      "stem": "A random sample of 25 students from a university had a mean height of 175.5 cm with a s\\tandard deviation of 5.2 cm. Calculate the coefficient of variation (CV) of the sample.",
+      "options": {
+        "A": "12.5%",
+        "B": "15%",
+        "C": "17.5%",
+        "D": "20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0124",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\) = 4 \\).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0125",
+      "type": "mcq",
+      "stem": "A sequence is defined by the formula \\( a_n = 2n + 1 \\). Find the sum of the first 10 terms of the sequence.",
+      "options": {
+        "A": "110",
+        "B": "120",
+        "C": "130",
+        "D": "140"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0126",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. What is the mean score of the exam?",
+      "options": {
+        "A": "30",
+        "B": "40",
+        "C": "50",
+        "D": "60"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0127",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation [ \\sin^2(x) + \\cos^2(x) = 1 ].",
+      "options": {
+        "A": "\\pi/2",
+        "B": "\\pi/4",
+        "C": "\\pi/6",
+        "D": "\\pi/8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0128",
+      "type": "mcq",
+      "stem": "Find the area under the curve [ y = \\frac{1}{x} \\] from [ x = 1 \\] to [ x = 2 \\].",
+      "options": {
+        "A": "\\log(2)",
+        "B": "\\log(1)",
+        "C": "\\log(2) - \\log(1)",
+        "D": "\\log(1) - \\log(2)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0129",
+      "type": "mcq",
+      "stem": "A sequence is defined as [ a_n = \\frac{1}{n} \\]. Find the sum of the first 5 terms of the sequence.",
+      "options": {
+        "A": "\\frac{1}{1} + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\frac{1}{5}",
+        "B": "\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\frac{1}{5} + \\frac{1}{6}",
+        "C": "\\frac{1}{1} + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\frac{1}{5}",
+        "D": "\\frac{1}{1} + \\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} + \\frac{1}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0130",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 75 and a s\\tandard deviation of 10. If the scores are normally distributed, what is the probability that a randomly selected score is between 60 and 90?",
+      "options": {
+        "A": "0.5",
+        "B": "0.6",
+        "C": "0.7",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0131",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( x^2 - 4x + 3 &gt; 0 \\).",
+      "options": {
+        "A": "\\( -\\infty, 1 \\) \\cup \\( 3, \\infty \\)",
+        "B": "\\( -\\infty, 3 \\) \\cup \\( 1, \\infty \\)",
+        "C": "\\( -\\infty, 1 \\) \\cup (1, 3)",
+        "D": "(1, 3)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0132",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = 3x^2 - 2x + 1 ) u\\sing the chain rule.",
+      "options": {
+        "A": "6x - 2",
+        "B": "6x + 2",
+        "C": "3x^2 - 2",
+        "D": "3x^2 + 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0133",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 5 cm, a width of 3 cm, and a height of 2 cm. Find its volume.",
+      "options": {
+        "A": "30",
+        "B": "40",
+        "C": "50",
+        "D": "60"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0134",
+      "type": "mcq",
+      "stem": "A bakery sells a total of 480 loaves of bread per day. They make a profit of ₦5 per loaf of bread. If they sell a total of ₦2400 per day, what is the ratio of the number of loaves of bread they sell to the number of loaves of bread they do not sell?",
+      "options": {
+        "A": "1:239",
+        "B": "1:239",
+        "C": "1:239",
+        "D": "1:239"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0135",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by rotating the region bounded by the curves \\( y = x^2 \\) and \\( y = 2x \\) about the x-axis.",
+      "options": {
+        "A": "\\( \\frac{2}{3} pi \\)",
+        "B": "\\( \\frac{4}{3} pi \\)",
+        "C": "\\( \\frac{8}{3} pi \\)",
+        "D": "\\( \\frac{16}{3} pi \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0136",
+      "type": "mcq",
+      "stem": "A box contains 5 red balls and 3 blue balls. If a ball is drawn at random, what is the probability that it is blue?",
+      "options": {
+        "A": "\\( \\frac{1}{4} \\)",
+        "B": "\\( \\frac{1}{2} \\)",
+        "C": "\\( \\frac{3}{8} \\)",
+        "D": "\\( \\frac{5}{8} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0137",
+      "type": "mcq",
+      "stem": "Find the surface area of the solid formed by rotating the region bounded by the curves \\( y = x^2 \\) and \\( y = 2x \\) about the x-axis.",
+      "options": {
+        "A": "( 4 pi )",
+        "B": "( 8 pi )",
+        "C": "( 16 pi )",
+        "D": "( 32 pi )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0138",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 - 3x + 5 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "35"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0139",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{x^2 + 1} \\) u\\sing the chain rule.",
+      "options": {
+        "A": "\\frac{-2x}{\\( x^2 + 1 \\)^2}",
+        "B": "\\frac{2x}{\\( x^2 + 1 \\)^2}",
+        "C": "\\frac{-2}{\\( x^2 + 1 \\)^2}",
+        "D": "\\frac{2}{\\( x^2 + 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0140",
+      "type": "mcq",
+      "stem": "A box contains 5 red balls and 3 blue balls. If 2 balls are drawn at random, what is the probability that both balls are red?",
+      "options": {
+        "A": "\\frac{5}{8}",
+        "B": "\\frac{3}{8}",
+        "C": "\\frac{1}{4}",
+        "D": "\\frac{1}{2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0141",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{\\sqrt{1 - x^2}} ) u\\sing the chain rule.",
+      "options": {
+        "A": "f'(x) = \\frac{x}{\\( 1 - x^2 \\)^{3/2}}",
+        "B": "f'(x) = \\frac{-x}{\\( 1 - x^2 \\)^{3/2}}",
+        "C": "f'(x) = \\frac{1}{\\( 1 - x^2 \\)^{3/2}}",
+        "D": "f'(x) = \\frac{-1}{\\( 1 - x^2 \\)^{3/2}}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0142",
+      "type": "mcq",
+      "stem": "A box contains 5 red balls and 3 blue balls. If 2 balls are drawn at random, what is the probability that at least one blue ball is drawn?",
+      "options": {
+        "A": "\\frac{3}{8}",
+        "B": "\\frac{5}{8}",
+        "C": "\\frac{1}{2}",
+        "D": "\\frac{3}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0143",
+      "type": "mcq",
+      "stem": "Convert the decimal number 0.75 to a \\fraction in its simplest form.",
+      "options": {
+        "A": "\\frac{3}{4}",
+        "B": "\\frac{1}{4}",
+        "C": "\\frac{3}{5}",
+        "D": "\\frac{2}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0144",
+      "type": "mcq",
+      "stem": "Find the equation of the plane pas\\sing through the points ((1,2,3)), ((4,5,6)), and ((7,8,9)).",
+      "options": {
+        "A": "\\( 2x - 3y + z = 0 \\)",
+        "B": "\\( x + 2y - 3z = 0 \\)",
+        "C": "\\( 3x - 2y + z = 0 \\)",
+        "D": "\\( x - 2y + 3z = 0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0145",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x^2 - 4}{x^2 - 9} &gt; 0 \\).",
+      "options": {
+        "A": "\\( x in \\( -infty, -3 \\ \\) cup (2, infty) )",
+        "B": "\\( x in \\( -infty, -3 \\ \\) cup (3, infty) )",
+        "C": "\\( x in \\( -infty, 2 \\ \\) cup (3, infty) )",
+        "D": "\\( x in \\( -infty, -3 \\ \\) cup (2, 3) )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0146",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 70% of them preferred Mathematics, 20% preferred Science, and 10% preferred both. What is the probability that a randomly selected student prefers either Mathematics or Science?",
+      "options": {
+        "A": "\\( \\frac{9}{10} \\)",
+        "B": "\\( \\frac{8}{10} \\)",
+        "C": "\\( \\frac{7}{10} \\)",
+        "D": "\\( \\frac{6}{10} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0147",
+      "type": "mcq",
+      "stem": "A rec\\tangular box has a length of 10 cm, a width of 5 cm, and a height of 8 cm. Find the volume of the box in cubic centimeters.",
+      "options": {
+        "A": "( 400 )",
+        "B": "( 500 )",
+        "C": "( 600 )",
+        "D": "( 800 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0148",
+      "type": "mcq",
+      "stem": "In the diagram below, the area of triangle ABC is 12 square units. If the base of the triangle is 4 units, find the height of the triangle.",
+      "options": {
+        "A": "( 3 )",
+        "B": "( 4 )",
+        "C": "( 6 )",
+        "D": "( 8 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0149",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 6 cm, a width of 4 cm, and a height of 3 cm. Find the volume of the prism.",
+      "options": {
+        "A": "6 cm × 4 cm × 3 cm",
+        "B": "6 cm × 4 cm + 3 cm",
+        "C": "6 cm × 4 cm × 3 cm",
+        "D": "6 cm + 4 cm × 3 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0150",
+      "type": "mcq",
+      "stem": "Solve the equation \\( 2^x + 2^x = 128 \\).",
+      "options": {
+        "A": "\\( x = 7 \\)",
+        "B": "\\( x = 6 \\)",
+        "C": "\\( x = 5 \\)",
+        "D": "\\( x = 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0151",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (3, 4) ) and radius 5.",
+      "options": {
+        "A": "\\( x - 3 \\ \\)^2 + \\( y - 4 \\)^2 = 25 )",
+        "B": "\\( x - 4 \\ \\)^2 + \\( y - 3 \\)^2 = 25 )",
+        "C": "\\( x - 3 \\ \\)^2 + \\( y - 4 \\)^2 = 30 )",
+        "D": "\\( x - 4 \\ \\)^2 + \\( y - 3 \\)^2 = 30 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0152",
+      "type": "mcq",
+      "stem": "A cone has a base radius of 4 cm and a height of 6 cm. Find the volume of the cone.",
+      "options": {
+        "A": "\\( \\frac{1}{3} pi r^2 h \\)",
+        "B": "\\( \\frac{1}{3} pi r h \\)",
+        "C": "\\( \\frac{1}{3} pi r^2 \\)",
+        "D": "\\( \\frac{1}{3} pi r \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0153",
+      "type": "mcq",
+      "stem": "Find the value of $\\frac{d}{dx}\\left\\( \\frac{1}{x^2}\\right \\)$.",
+      "options": {
+        "A": "-\\frac{2}{x^3}",
+        "B": "+\\frac{2}{x^3}",
+        "C": "-\\frac{1}{x^3}",
+        "D": "+\\frac{1}{x^3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0154",
+      "type": "mcq",
+      "stem": "Solve the equation $\\log_2\\( x-1 \\) + \\log_2\\( x+1 \\) = 2$.",
+      "options": {
+        "A": "x = 3",
+        "B": "x = 2",
+        "C": "x = 1",
+        "D": "x = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0155",
+      "type": "mcq",
+      "stem": "A circle with center $C$ and radius $r$ has equation $\\( x-h \\)^2 + \\( y-k \\)^2 = r^2$. Find the equation of the circle with center $C\\( -2,3 \\)$ and radius $r=4$.",
+      "options": {
+        "A": "\\( x+2 \\)^2 + \\( y-3 \\)^2 = 16",
+        "B": "\\( x-2 \\)^2 + \\( y+3 \\)^2 = 16",
+        "C": "\\( x+2 \\)^2 + \\( y+3 \\)^2 = 16",
+        "D": "\\( x-2 \\)^2 + \\( y-3 \\)^2 = 16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0156",
+      "type": "mcq",
+      "stem": "Find the value of $\\int_0^1 x^2 dx$.",
+      "options": {
+        "A": "\\frac{1}{3}",
+        "B": "\\frac{1}{2}",
+        "C": "1",
+        "D": "\\frac{2}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0157",
+      "type": "mcq",
+      "stem": "Solve the inequality $x^2 - 4x + 3 &gt; 0$. x 3 x 3",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x > 1 \\text{ or } x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0158",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series with first term 2 and common ratio 3.",
+      "options": {
+        "A": "12155",
+        "B": "12158",
+        "C": "12161",
+        "D": "12164"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0159",
+      "type": "mcq",
+      "stem": "A rec\\tangular solid has a length of 6 cm, a width of 4 cm, and a height of 3 cm. Find its volume.",
+      "options": {
+        "A": "72",
+        "B": "80",
+        "C": "88",
+        "D": "96"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0160",
+      "type": "mcq",
+      "stem": "Solve the inequality 2x^2 + 5x - 3 &gt; 0. x 3/2 x > -1 or x x -1",
+      "options": {
+        "A": "x",
+        "B": "x > -1 or x",
+        "C": "x",
+        "D": "x > 3/2 or x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0161",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = 3x^2 - 2x + 1.",
+      "options": {
+        "A": "6x - 2",
+        "B": "6x + 2",
+        "C": "3x^2 - 2",
+        "D": "3x^2 + 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0162",
+      "type": "mcq",
+      "stem": "A right triangle has a hypotenuse of length 10 cm and one leg of length 6 cm. Find the length of the other leg.",
+      "options": {
+        "A": "8",
+        "B": "6",
+        "C": "4",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0163",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\) for ( x ) in the interval \\( -infty, infty \\ \\) ).",
+      "options": {
+        "A": "\\frac{-5 + \\sqrt{49}}{4}",
+        "B": "\\frac{-5 - \\sqrt{49}}{4}",
+        "C": "\\frac{-5 + \\sqrt{25}}{4}",
+        "D": "\\frac{-5 - \\sqrt{25}}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0164",
+      "type": "mcq",
+      "stem": "A sequence is defined by \\( a_n = 2n^2 - 3n + 1 \\). Find the sum of the first five terms of the sequence.",
+      "options": {
+        "A": "120",
+        "B": "130",
+        "C": "140",
+        "D": "150"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0165",
+      "type": "mcq",
+      "stem": "A set of data is given by the following table. Find the mean of the data.",
+      "options": {
+        "A": "25",
+        "B": "30",
+        "C": "35",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0166",
+      "type": "mcq",
+      "stem": "A polynomial is defined by ( p(x) = x^3 - 2x^2 + x - 1 ). Find the value of \\( p\\( -1 \\ \\) ).",
+      "options": {
+        "A": "-3",
+        "B": "-2",
+        "C": "-1",
+        "D": "0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0167",
+      "type": "mcq",
+      "stem": "Determine the value of $k$ in the quadratic equation $x^2 + kx + 16 = 0$, given that one of the roots is $-4$.",
+      "options": {
+        "A": "-8",
+        "B": "-4",
+        "C": "8",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0168",
+      "type": "mcq",
+      "stem": "A particle moves along the x-axis with its position given by the equation $s(t) = 2t^3 - 5t^2 + 3t + 1$. Find the velocity of the particle at time $t = 2$ seconds.",
+      "options": {
+        "A": "-14",
+        "B": "14",
+        "C": "-28",
+        "D": "28"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0169",
+      "type": "mcq",
+      "stem": "In the diagram below, $ABCD$ is a rec\\tangle with $AB = 6$ cm and $BC = 8$ cm. Find the area of the shaded region.",
+      "options": {
+        "A": "24",
+        "B": "32",
+        "C": "48",
+        "D": "64"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0170",
+      "type": "mcq",
+      "stem": "A bag contains 5 red marbles, 8 blue marbles, and 12 green marbles. If a marble is drawn at random, what is the probability that it is not blue?",
+      "options": {
+        "A": "1/3",
+        "B": "2/3",
+        "C": "3/5",
+        "D": "4/5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0171",
+      "type": "mcq",
+      "stem": "Solve the inequality $|2x - 1| geq 3$. $x leq -1$ or $x geq 2$ $x 2$ $x leq 2$ or $x geq -1$ $x -1$",
+      "options": {
+        "A": "$x leq -1$ or $x geq 2$",
+        "B": "$x",
+        "C": "$x leq 2$ or $x geq -1$",
+        "D": "$x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0172",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0173",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 5x + 6 = 0 \\).",
+      "options": {
+        "A": "-2",
+        "B": "-3",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0174",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\sin \\( 2x \\ \\) ) given that \\( \\sin \\( x \\ \\) = \\frac{1}{2} ).",
+      "options": {
+        "A": "\\frac{\\sqrt{3}}{2}",
+        "B": "\\frac{1}{2}",
+        "C": "\\frac{\\sqrt{3}}{3}",
+        "D": "\\frac{1}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0175",
+      "type": "mcq",
+      "stem": "A vector \\( \\vec{a} \\) has a magnitude of 5 units and makes an angle of 30° with the positive x-axis. Find the x and y components of \\( \\vec{a} \\).",
+      "options": {
+        "A": "5, 2.5",
+        "B": "2.5, 5",
+        "C": "4, 3",
+        "D": "3, 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0176",
+      "type": "mcq",
+      "stem": "Determine the volume of the frustum of a cone with a height of 10 cm, a lower base radius of 4 cm, and an upper base radius of 6 cm.",
+      "options": {
+        "A": "200\\pi\\text{ cm}^3",
+        "B": "300\\pi\\text{ cm}^3",
+        "C": "400\\pi\\text{ cm}^3",
+        "D": "500\\pi\\text{ cm}^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0177",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_2\\( x^2 \\ \\) = 4\\).",
+      "options": {
+        "A": "16",
+        "B": "32",
+        "C": "64",
+        "D": "128"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0178",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 60% of them preferred Mathematics, 20% preferred Science, and 20% preferred English. If a student is randomly selected, what is the probability that the student prefers Mathematics or Science?",
+      "options": {
+        "A": "0.4",
+        "B": "0.6",
+        "C": "0.8",
+        "D": "1.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0179",
+      "type": "mcq",
+      "stem": "Find the surface area of the sphere with radius 8 cm.",
+      "options": {
+        "A": "256\\pi\\text{ cm}^2",
+        "B": "512\\pi\\text{ cm}^2",
+        "C": "768\\pi\\text{ cm}^2",
+        "D": "1024\\pi\\text{ cm}^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0180",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the curves y = x^2, y = 0, and x = 2 about the x-axis.",
+      "options": {
+        "A": "32\\pi",
+        "B": "64\\pi",
+        "C": "128\\pi",
+        "D": "256\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0181",
+      "type": "mcq",
+      "stem": "Solve the system of equations: \\begin{align*} x + y &amp;= 2 \\ 2x - 3y &amp;= -1 \\end{align*}",
+      "options": {
+        "A": "\\\\begin{pmatrix} 1 \\\\ 1 \\\\end{pmatrix}",
+        "B": "\\\\begin{pmatrix} -1 \\\\ 3 \\\\end{pmatrix}",
+        "C": "\\\\begin{pmatrix} 2 \\\\ -1 \\\\end{pmatrix}",
+        "D": "\\\\begin{pmatrix} -2 \\\\ 1 \\\\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0182",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\frac{1}{x^2 + 1} u\\sing the chain rule.",
+      "options": {
+        "A": "\\frac{-2x}{\\( x^2 + 1 \\)^2}",
+        "B": "\\frac{2x}{\\( x^2 + 1 \\)^2}",
+        "C": "\\frac{x}{\\( x^2 + 1 \\)^2}",
+        "D": "\\frac{-x}{\\( x^2 + 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0183",
+      "type": "mcq",
+      "stem": "Solve the matrix equation AX = B, where A = \\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{pmatrix}, X = \\begin{pmatrix} x \\ y \\end{pmatrix}, and B = \\begin{pmatrix} 5 \\ 6 \\end{pmatrix}.",
+      "options": {
+        "A": "\\\\begin{pmatrix} 1 \\\\ 2 \\\\end{pmatrix}",
+        "B": "\\\\begin{pmatrix} 2 \\\\ 1 \\\\end{pmatrix}",
+        "C": "\\\\begin{pmatrix} 3 \\\\ 4 \\\\end{pmatrix}",
+        "D": "\\\\begin{pmatrix} 4 \\\\ 3 \\\\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0184",
+      "type": "mcq",
+      "stem": "Find the area of the triangle formed by the points (0, 0), (2, 0), and (1, 2).",
+      "options": {
+        "A": "\\frac{1}{2}bh",
+        "B": "bh",
+        "C": "\\frac{1}{4}bh",
+        "D": "\\frac{1}{8}bh"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0185",
+      "type": "mcq",
+      "stem": "Solve the inequality x^2 - 4x - 5 &gt; 0.",
+      "options": {
+        "A": "\\( -\\\\infty, -1 \\) \\\\cup \\( 5, \\\\infty \\)",
+        "B": "\\( -\\\\infty, 1 \\) \\\\cup \\( 5, \\\\infty \\)",
+        "C": "\\( -\\\\infty, -5 \\) \\\\cup \\( 1, \\\\infty \\)",
+        "D": "\\( -\\\\infty, 5 \\) \\\\cup \\( 1, \\\\infty \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0186",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\frac{1}{x^2 - 4} u\\sing the quotient rule.",
+      "options": {
+        "A": "\\frac{2x}{\\( x^2 - 4 \\)^2}",
+        "B": "\\frac{-2x}{\\( x^2 - 4 \\)^2}",
+        "C": "\\frac{x}{\\( x^2 - 4 \\)^2}",
+        "D": "\\frac{-x}{\\( x^2 - 4 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0187",
+      "type": "mcq",
+      "stem": "Solve the system of equations: \\begin{align*} x + y &amp;= 3 \\ x - y &amp;= 1 \\end{align*}",
+      "options": {
+        "A": "\\\\begin{pmatrix} 2 \\\\ 1 \\\\end{pmatrix}",
+        "B": "\\\\begin{pmatrix} 1 \\\\ 2 \\\\end{pmatrix}",
+        "C": "\\\\begin{pmatrix} 3 \\\\ 0 \\\\end{pmatrix}",
+        "D": "\\\\begin{pmatrix} 0 \\\\ 3 \\\\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0188",
+      "type": "mcq",
+      "stem": "In a survey of 100 students, 60 students preferred Mathematics, 30 students preferred Science, and 10 students preferred both Mathematics and Science. What is the probability that a randomly selected student prefers either Mathematics or Science?",
+      "options": {
+        "A": "0.7",
+        "B": "0.6",
+        "C": "0.5",
+        "D": "0.4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-babcock-pq-mathematics-bank-0189",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height 6 cm, lower base radius 4 cm, and upper base radius 2 cm.",
+      "options": {
+        "A": "12\\pi",
+        "B": "24\\pi",
+        "C": "36\\pi",
+        "D": "48\\pi"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

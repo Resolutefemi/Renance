@@ -1,0 +1,377 @@
+{
+ "school": "unilag",
+ "name": "University of Lagos",
+ "short": "UNILAG",
+ "courses": [
+  {
+   "slug": "ams104",
+   "code": "AMS 104",
+   "title": null,
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-unilag-ams104-bank",
+   "questionCount": 281,
+   "pdf": null
+  },
+  {
+   "slug": "bio101",
+   "code": "BIO 101",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-unilag-bio101-bank",
+   "questionCount": 2203,
+   "pdf": null
+  },
+  {
+   "slug": "bio102",
+   "code": "BIO 102",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-unilag-bio102-bank",
+   "questionCount": 670,
+   "pdf": null
+  },
+  {
+   "slug": "bio107",
+   "code": "BIO 107",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-unilag-bio107-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "bme102",
+   "code": "BME 102",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-unilag-bme102-bank",
+   "questionCount": 178,
+   "pdf": null
+  },
+  {
+   "slug": "bot102",
+   "code": "BOT 102",
+   "title": null,
+   "semester": null,
+   "icon": "eco",
+   "bank": "uni-unilag-bot102-bank",
+   "questionCount": 754,
+   "pdf": null
+  },
+  {
+   "slug": "chm101",
+   "code": "CHM 101",
+   "title": null,
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-unilag-chm101-bank",
+   "questionCount": 1438,
+   "pdf": null
+  },
+  {
+   "slug": "chm102",
+   "code": "CHM 102",
+   "title": null,
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-unilag-chm102-bank",
+   "questionCount": 1938,
+   "pdf": null
+  },
+  {
+   "slug": "com101",
+   "code": "COM 101",
+   "title": null,
+   "semester": null,
+   "icon": "computer",
+   "bank": "uni-unilag-com101-bank",
+   "questionCount": 972,
+   "pdf": null
+  },
+  {
+   "slug": "cos102",
+   "code": "COS 102",
+   "title": null,
+   "semester": null,
+   "icon": "computer",
+   "bank": "uni-unilag-cos102-bank",
+   "questionCount": 485,
+   "pdf": null
+  },
+  {
+   "slug": "get102",
+   "code": "GET 102",
+   "title": null,
+   "semester": null,
+   "icon": "engineering",
+   "bank": "uni-unilag-get102-bank",
+   "questionCount": 305,
+   "pdf": null
+  },
+  {
+   "slug": "gst111",
+   "code": "GST 111",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-unilag-gst111-bank",
+   "questionCount": 1509,
+   "pdf": null
+  },
+  {
+   "slug": "gst112",
+   "code": "GST 112",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-unilag-gst112-bank",
+   "questionCount": 1219,
+   "pdf": null
+  },
+  {
+   "slug": "irp321",
+   "code": "IRP 321",
+   "title": null,
+   "semester": null,
+   "icon": "public",
+   "bank": "uni-unilag-irp321-bank",
+   "questionCount": 59,
+   "pdf": null
+  },
+  {
+   "slug": "irp322",
+   "code": "IRP 322",
+   "title": null,
+   "semester": null,
+   "icon": "public",
+   "bank": "uni-unilag-irp322-bank",
+   "questionCount": 74,
+   "pdf": null
+  },
+  {
+   "slug": "mic121",
+   "code": "MIC 121",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-unilag-mic121-bank",
+   "questionCount": 892,
+   "pdf": null
+  },
+  {
+   "slug": "mth101",
+   "code": "MTH 101",
+   "title": null,
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-unilag-mth101-bank",
+   "questionCount": 659,
+   "pdf": null
+  },
+  {
+   "slug": "mth102",
+   "code": "MTH 102",
+   "title": null,
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-unilag-mth102-bank",
+   "questionCount": 903,
+   "pdf": null
+  },
+  {
+   "slug": "phy101",
+   "code": "PHY 101",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-unilag-phy101-bank",
+   "questionCount": 1209,
+   "pdf": null
+  },
+  {
+   "slug": "phy102",
+   "code": "PHY 102",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-unilag-phy102-bank",
+   "questionCount": 1689,
+   "pdf": null
+  },
+  {
+   "slug": "phy104",
+   "code": "PHY 104",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-unilag-phy104-bank",
+   "questionCount": 910,
+   "pdf": null
+  },
+  {
+   "slug": "sta112",
+   "code": "STA 112",
+   "title": null,
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-unilag-sta112-bank",
+   "questionCount": 112,
+   "pdf": null
+  },
+  {
+   "slug": "zoo101",
+   "code": "ZOO 101",
+   "title": null,
+   "semester": null,
+   "icon": "pets",
+   "bank": "uni-unilag-zoo101-bank",
+   "questionCount": 2041,
+   "pdf": null
+  },
+  {
+   "slug": "zoo102",
+   "code": "ZOO 102",
+   "title": null,
+   "semester": null,
+   "icon": "pets",
+   "bank": "uni-unilag-zoo102-bank",
+   "questionCount": 733,
+   "pdf": null
+  },
+  {
+   "slug": "pq-accounting",
+   "code": "Post-UTME Accounting",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-unilag-pq-accounting-bank",
+   "questionCount": 197,
+   "pdf": null
+  },
+  {
+   "slug": "pq-biology",
+   "code": "Post-UTME Biology",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-unilag-pq-biology-bank",
+   "questionCount": 209,
+   "pdf": null
+  },
+  {
+   "slug": "pq-chemistry",
+   "code": "Post-UTME Chemistry",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-unilag-pq-chemistry-bank",
+   "questionCount": 157,
+   "pdf": null
+  },
+  {
+   "slug": "pq-commerce",
+   "code": "Post-UTME Commerce",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "storefront",
+   "bank": "uni-unilag-pq-commerce-bank",
+   "questionCount": 220,
+   "pdf": null
+  },
+  {
+   "slug": "pq-crs",
+   "code": "Post-UTME CRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "auto_stories",
+   "bank": "uni-unilag-pq-crs-bank",
+   "questionCount": 205,
+   "pdf": null
+  },
+  {
+   "slug": "pq-economics",
+   "code": "Post-UTME Economics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "trending_up",
+   "bank": "uni-unilag-pq-economics-bank",
+   "questionCount": 200,
+   "pdf": null
+  },
+  {
+   "slug": "pq-english",
+   "code": "Post-UTME English",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "translate",
+   "bank": "uni-unilag-pq-english-bank",
+   "questionCount": 174,
+   "pdf": null
+  },
+  {
+   "slug": "pq-geography",
+   "code": "Post-UTME Geography",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "public",
+   "bank": "uni-unilag-pq-geography-bank",
+   "questionCount": 217,
+   "pdf": null
+  },
+  {
+   "slug": "pq-government",
+   "code": "Post-UTME Government",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "account_balance",
+   "bank": "uni-unilag-pq-government-bank",
+   "questionCount": 219,
+   "pdf": null
+  },
+  {
+   "slug": "pq-irs",
+   "code": "Post-UTME IRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-unilag-pq-irs-bank",
+   "questionCount": 208,
+   "pdf": null
+  },
+  {
+   "slug": "pq-literature",
+   "code": "Post-UTME Literature",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-unilag-pq-literature-bank",
+   "questionCount": 137,
+   "pdf": null
+  },
+  {
+   "slug": "pq-mathematics",
+   "code": "Post-UTME Mathematics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-unilag-pq-mathematics-bank",
+   "questionCount": 179,
+   "pdf": null
+  },
+  {
+   "slug": "pq-physics",
+   "code": "Post-UTME Physics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-unilag-pq-physics-bank",
+   "questionCount": 193,
+   "pdf": null
+  }
+ ]
+}

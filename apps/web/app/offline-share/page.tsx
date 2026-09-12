@@ -11,6 +11,7 @@
 import { useEffect, useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 
 export default function OfflineSharePage() {
   const [angle, setAngle] = useState(0);
@@ -95,6 +96,7 @@ export default function OfflineSharePage() {
         </div>
       </section>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

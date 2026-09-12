@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-acc320-bank",
+  "title": "EKSU ACC 320 - Analysis for Business Decision II | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-acc320-bank-0001",
+      "type": "mcq",
+      "stem": "In queuing theory, which of the following best describes the \"server\" in a system?",
+      "options": {
+        "A": "The entity that arrives at the service facility.",
+        "B": "The mechanism or process that provides the service.",
+        "C": "The waiting line itself.",
+        "D": "The total time spent in the system."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0002",
+      "type": "mcq",
+      "stem": "Which characteristic of a queuing system refers to the capacity of the waiting line?",
+      "options": {
+        "A": "Arrival process",
+        "B": "Service mechanism",
+        "C": "Queue discipline",
+        "D": "System capacity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0003",
+      "type": "mcq",
+      "stem": "The \"arrival rate\" in a queuing model represents:",
+      "options": {
+        "A": "The number of customers served per unit of time.",
+        "B": "The average time a customer spends waiting.",
+        "C": "The rate at which customers enter the system.",
+        "D": "The probability of an empty system."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0004",
+      "type": "mcq",
+      "stem": "A queuing system where customers are served in the order they arrive is an example of:",
+      "options": {
+        "A": "Last-Come, First-Served (LCFS)",
+        "B": "Priority Service",
+        "C": "First-Come, First-Served (FCFS)",
+        "D": "Random Service"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following is a common limitation of basic queuing models?",
+      "options": {
+        "A": "They can perfectly model all real-world customer behaviors.",
+        "B": "They assume constant arrival and service rates.",
+        "C": "They are highly adaptable to dynamic system changes.",
+        "D": "They account for complex customer balking and reneging behaviors."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0006",
+      "type": "mcq",
+      "stem": "The assumption of a \"Poisson arrival process\" in queuing models implies:",
+      "options": {
+        "A": "Arrivals occur at fixed, regular intervals.",
+        "B": "The probability of an arrival depends on previous arrivals.",
+        "C": "Arrivals are independent and occur at a constant average rate.",
+        "D": "Customers always join the queue."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0007",
+      "type": "mcq",
+      "stem": "In a single-server queuing system, the \"service rate\" refers to:",
+      "options": {
+        "A": "The rate at which customers arrive.",
+        "B": "The maximum number of customers that can be in the system.",
+        "C": "The rate at which the server can process customers.",
+        "D": "The average waiting time in the queue."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0008",
+      "type": "mcq",
+      "stem": "The \"steady state\" in a queuing system refers to a condition where:",
+      "options": {
+        "A": "The system is always empty.",
+        "B": "Arrival rates exceed service rates.",
+        "C": "The system's performance measures (like queue length and waiting time) stabilize over time.",
+        "D": "The server is always busy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0009",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a typical element of a project?",
+      "options": {
+        "A": "A defined start and end date.",
+        "B": "A unique outcome or deliverable.",
+        "C": "Repetitive operational tasks.",
+        "D": "A specific set of objectives."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0010",
+      "type": "mcq",
+      "stem": "A fundamental requirement for a successful project is:",
+      "options": {
+        "A": "Unlimited resources.",
+        "B": "Clear communication channels.",
+        "C": "Absence of risk.",
+        "D": "Flexible scope."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0011",
+      "type": "mcq",
+      "stem": "Which project management tool is primarily used for visualizing task dependencies and project timelines?",
+      "options": {
+        "A": "Work Breakdown Structure (WBS)",
+        "B": "Gantt Chart",
+        "C": "Critical Path Method (CPM)",
+        "D": "PERT Chart"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0012",
+      "type": "mcq",
+      "stem": "The Work Breakdown Structure (WBS) is a hierarchical decomposition of:",
+      "options": {
+        "A": "Project risks.",
+        "B": "Project resources.",
+        "C": "Project scope into manageable components.",
+        "D": "Project communication plan."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0013",
+      "type": "mcq",
+      "stem": "The Critical Path Method (CPM) is used to:",
+      "options": {
+        "A": "Identify the most expensive tasks.",
+        "B": "Determine the shortest possible project duration.",
+        "C": "Allocate resources to non-critical tasks.",
+        "D": "Manage project scope changes."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0014",
+      "type": "mcq",
+      "stem": "In the context of queuing theory, \"balking\" refers to a customer's decision to:",
+      "options": {
+        "A": "Leave the queue after joining.",
+        "B": "Not join the queue because it is too long.",
+        "C": "Switch to a different server.",
+        "D": "Receive service faster."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0015",
+      "type": "mcq",
+      "stem": "\"Reneging\" in queuing theory describes the behavior of a customer who:",
+      "options": {
+        "A": "Arrives and immediately leaves.",
+        "B": "Joins the queue and then leaves before being served.",
+        "C": "Decides not to join the queue.",
+        "D": "Complains about the service."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0016",
+      "type": "mcq",
+      "stem": "The probability of zero customers in the system (P0) in a simple queuing model is a key input for calculating:",
+      "options": {
+        "A": "The service rate.",
+        "B": "The average number of customers in the queue.",
+        "C": "The arrival rate.",
+        "D": "The system capacity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0017",
+      "type": "mcq",
+      "stem": "If the arrival rate (λ) is greater than the service rate (μ) in a single-server system, the queue will:",
+      "options": {
+        "A": "Remain stable.",
+        "B": "Grow indefinitely.",
+        "C": "Immediately disappear.",
+        "D": "Fluctuate unpredictably."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0018",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of a \"simple queue\" in queuing theory?",
+      "options": {
+        "A": "Multiple servers with different service rates.",
+        "B": "A finite waiting line capacity.",
+        "C": "A single server and an infinite queue capacity.",
+        "D": "Customers with varying priorities."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0019",
+      "type": "mcq",
+      "stem": "The concept of \"service utilization\" in a queuing system refers to:",
+      "options": {
+        "A": "The proportion of time the server is busy.",
+        "B": "The average number of customers waiting.",
+        "C": "The total time customers spend in the system.",
+        "D": "The rate at which customers arrive."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0020",
+      "type": "mcq",
+      "stem": "When comparing the cost of a second store worker in the provided example, the decision hinges on whether the savings in production staff waiting time outweigh the additional cost of the new worker. This is an application of:",
+      "options": {
+        "A": "Risk analysis.",
+        "B": "Queuing theory for cost optimization.",
+        "C": "Project scheduling.",
+        "D": "Qualitative decision-making."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0021",
+      "type": "mcq",
+      "stem": "The \"expected number of customers in the system\" (L) in a queuing model is calculated using:",
+      "options": {
+        "A": "Arrival rate and service rate only.",
+        "B": "P0, arrival rate, and service rate.",
+        "C": "Queue discipline and system capacity.",
+        "D": "Server utilization and arrival rate."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0022",
+      "type": "mcq",
+      "stem": "The \"expected waiting time in the queue\" (Wq) is a crucial metric for assessing:",
+      "options": {
+        "A": "Server efficiency.",
+        "B": "Customer satisfaction.",
+        "C": "System throughput.",
+        "D": "Arrival pattern."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0023",
+      "type": "mcq",
+      "stem": "A qualitative approach to decision analysis relies heavily on:",
+      "options": {
+        "A": "Statistical models and mathematical calculations.",
+        "B": "Objective data and measurable outcomes.",
+        "C": "Expert opinion and subjective judgment.",
+        "D": "Simulation and optimization techniques."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a qualitative approach to decision making?",
+      "options": {
+        "A": "Linear programming.",
+        "B": "Decision trees.",
+        "C": "Delphi method.",
+        "D": "Monte Carlo simulation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0025",
+      "type": "mcq",
+      "stem": "The Delphi method is characterized by:",
+      "options": {
+        "A": "A single expert providing an opinion.",
+        "B": "A structured process of iterative expert consensus-building.",
+        "C": "Direct group discussion among experts.",
+        "D": "Mathematical modeling of expert preferences."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0026",
+      "type": "mcq",
+      "stem": "A quantitative approach to decision making aims to:",
+      "options": {
+        "A": "Incorporate subjective biases into the decision process.",
+        "B": "Provide objective comparisons of alternatives based on measurable data.",
+        "C": "Rely solely on intuition and experience.",
+        "D": "Avoid the use of mathematical tools."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0027",
+      "type": "mcq",
+      "stem": "Linear programming is a quantitative technique used for:",
+      "options": {
+        "A": "Forecasting future demand.",
+        "B": "Optimizing resource allocation under constraints.",
+        "C": "Analyzing qualitative data.",
+        "D": "Managing project timelines."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0028",
+      "type": "mcq",
+      "stem": "Decision trees are a quantitative tool used to:",
+      "options": {
+        "A": "Visualize project dependencies.",
+        "B": "Model sequential decisions and their potential outcomes.",
+        "C": "Summarize qualitative expert opinions.",
+        "D": "Calculate the critical path of a project."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0029",
+      "type": "mcq",
+      "stem": "The \"expected monetary value\" (EMV) is a concept used in which quantitative decision analysis technique?",
+      "options": {
+        "A": "Queuing theory.",
+        "B": "Decision trees.",
+        "C": "Delphi method.",
+        "D": "Work Breakdown Structure."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0030",
+      "type": "mcq",
+      "stem": "When a project involves a high degree of uncertainty and requires multiple stages of decision-making, which quantitative tool is most appropriate?",
+      "options": {
+        "A": "Gantt Chart.",
+        "B": "Decision Tree.",
+        "C": "Critical Path Method.",
+        "D": "PERT Chart."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0031",
+      "type": "mcq",
+      "stem": "Which of the following is a key assumption of the M/M/1 queuing model?",
+      "options": {
+        "A": "Finite queue capacity.",
+        "B": "Exponential service times.",
+        "C": "Batch arrivals.",
+        "D": "Priority service."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0032",
+      "type": "mcq",
+      "stem": "The \"traffic intensity\" (ρ) in a queuing system is defined as the ratio of:",
+      "options": {
+        "A": "Service rate to arrival rate.",
+        "B": "Arrival rate to service rate.",
+        "C": "Arrival rate to system capacity.",
+        "D": "Server utilization to queue length."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0033",
+      "type": "mcq",
+      "stem": "In project management, the \"scope\" refers to:",
+      "options": {
+        "A": "The project budget.",
+        "B": "The time allocated for the project.",
+        "C": "The total work to be performed to deliver a product, service, or result.",
+        "D": "The risks associated with the project."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0034",
+      "type": "mcq",
+      "stem": "A \"project manager\" is primarily responsible for:",
+      "options": {
+        "A": "Executing individual project tasks.",
+        "B": "Ensuring the project meets its objectives within defined constraints.",
+        "C": "Providing technical expertise for project deliverables.",
+        "D": "Approving project funding."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0035",
+      "type": "mcq",
+      "stem": "The \"Critical Path\" in a project network diagram represents:",
+      "options": {
+        "A": "The sequence of tasks with the least slack.",
+        "B": "The sequence of tasks that determines the shortest possible project duration.",
+        "C": "The tasks that require the most resources.",
+        "D": "The tasks that can be performed in parallel."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following is a benefit of using quantitative approaches in decision analysis?",
+      "options": {
+        "A": "Reduced reliance on data.",
+        "B": "Enhanced objectivity.",
+        "C": "Increased subjectivity.",
+        "D": "Simpler analysis for complex problems."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0037",
+      "type": "mcq",
+      "stem": "The \"service facility\" in a queuing system is where:",
+      "options": {
+        "A": "Customers wait for service.",
+        "B": "Customers arrive.",
+        "C": "Service is actually provided.",
+        "D": "Customers depart."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0038",
+      "type": "mcq",
+      "stem": "A \"finite queue\" system implies that:",
+      "options": {
+        "A": "There is no limit to the number of customers that can wait.",
+        "B": "The waiting line has a maximum capacity.",
+        "C": "The service rate is infinite.",
+        "D": "Arrivals are always accepted."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0039",
+      "type": "mcq",
+      "stem": "Which queuing system classification involves multiple servers working in parallel?",
+      "options": {
+        "A": "M/M/1",
+        "B": "M/M/c",
+        "C": "M/G/1",
+        "D": "M/D/1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0040",
+      "type": "mcq",
+      "stem": "The \"system capacity\" in a queuing model refers to the maximum number of entities that can be:",
+      "options": {
+        "A": "Waiting in the queue.",
+        "B": "Served by the server.",
+        "C": "In the system (waiting and being served).",
+        "D": "Arriving per hour."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0041",
+      "type": "mcq",
+      "stem": "The \"service discipline\" dictates:",
+      "options": {
+        "A": "The rate at which customers are served.",
+        "B": "The order in which customers are selected for service.",
+        "C": "The capacity of the waiting line.",
+        "D": "The frequency of customer arrivals."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0042",
+      "type": "mcq",
+      "stem": "A limitation of queuing models is their difficulty in accurately representing:",
+      "options": {
+        "A": "Constant arrival rates.",
+        "B": "Single-server systems.",
+        "C": "Complex customer behaviors like balking and reneging.",
+        "D": "Poisson arrival processes."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0043",
+      "type": "mcq",
+      "stem": "In project management, a \"milestone\" is:",
+      "options": {
+        "A": "A significant event or achievement in the project.",
+        "B": "A specific task to be completed.",
+        "C": "A project deliverable.",
+        "D": "A project risk."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0044",
+      "type": "mcq",
+      "stem": "The \"Critical Path Method\" (CPM) assumes:",
+      "options": {
+        "A": "Task durations are uncertain.",
+        "B": "Tasks can be performed in any order.",
+        "C": "Task durations are known with certainty.",
+        "D": "There are no dependencies between tasks."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0045",
+      "type": "mcq",
+      "stem": "A \"qualitative approach\" to decision analysis is most valuable when:",
+      "options": {
+        "A": "All data is precisely measurable.",
+        "B": "Subjective factors and expert judgment are crucial.",
+        "C": "The problem can be easily modeled mathematically.",
+        "D": "Objective data is abundant."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0046",
+      "type": "mcq",
+      "stem": "The \"Delphi technique\" is a method for:",
+      "options": {
+        "A": "Optimizing resource allocation.",
+        "B": "Forecasting future trends through expert consensus.",
+        "C": "Scheduling project tasks.",
+        "D": "Analyzing customer arrival patterns."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0047",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of a \"quantitative approach\" to decision making?",
+      "options": {
+        "A": "Emphasis on intuition.",
+        "B": "Use of subjective probabilities.",
+        "C": "Reliance on numerical data and mathematical models.",
+        "D": "Acceptance of ambiguity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0048",
+      "type": "mcq",
+      "stem": "\"Monte Carlo simulation\" is a quantitative technique that uses:",
+      "options": {
+        "A": "Deterministic calculations.",
+        "B": "Random sampling to model uncertainty.",
+        "C": "Expert judgment to define parameters.",
+        "D": "Linear equations to find optimal solutions."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0049",
+      "type": "mcq",
+      "stem": "In queuing theory, the term \"system\" refers to:",
+      "options": {
+        "A": "Only the waiting line.",
+        "B": "Only the service facility.",
+        "C": "The waiting line plus the service facility.",
+        "D": "The arrival process."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0050",
+      "type": "mcq",
+      "stem": "The \"average queue length\" (Lq) in a stable M/M/1 system is directly proportional to:",
+      "options": {
+        "A": "The service rate.",
+        "B": "The square of the arrival rate.",
+        "C": "The square of the service rate.",
+        "D": "The ratio of arrival rate to service rate."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0051",
+      "type": "mcq",
+      "stem": "If a project has a slack of zero for a particular task, it means that task is on the:",
+      "options": {
+        "A": "Critical Path.",
+        "B": "Non-critical Path.",
+        "C": "PERT Chart.",
+        "D": "WBS."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0052",
+      "type": "mcq",
+      "stem": "The primary goal of project management is to achieve project objectives by balancing:",
+      "options": {
+        "A": "Scope, time, and cost.",
+        "B": "Quality, risk, and communication.",
+        "C": "Stakeholder satisfaction and team morale.",
+        "D": "All of the above."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0053",
+      "type": "mcq",
+      "stem": "Which of the following is a key assumption of the M/M/c queuing model?",
+      "options": {
+        "A": "A single server.",
+        "B": "Exponential inter-arrival and service times.",
+        "C": "Finite queue capacity.",
+        "D": "Priority service."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0054",
+      "type": "mcq",
+      "stem": "In a queuing system, \"customer behavior\" can significantly impact performance. Which behavior is NOT typically modeled in basic queuing systems?",
+      "options": {
+        "A": "Arrival rate.",
+        "B": "Service rate.",
+        "C": "Reneging.",
+        "D": "Queue discipline."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0055",
+      "type": "mcq",
+      "stem": "The \"Expected Value of Perfect Information\" (EVPI) is a concept used in decision analysis to determine the value of:",
+      "options": {
+        "A": "Eliminating all risks.",
+        "B": "Obtaining complete future knowledge.",
+        "C": "Maximizing profits.",
+        "D": "Minimizing costs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0056",
+      "type": "mcq",
+      "stem": "A \"risk register\" is a project management tool used to:",
+      "options": {
+        "A": "Track project progress.",
+        "B": "Document identified risks, their analysis, and response plans.",
+        "C": "Allocate project resources.",
+        "D": "Visualize task dependencies."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0057",
+      "type": "mcq",
+      "stem": "Which qualitative approach involves a series of interviews with experts to gather their opinions on a specific topic?",
+      "options": {
+        "A": "Brainstorming.",
+        "B": "Nominal Group Technique.",
+        "C": "Focus Group.",
+        "D": "Expert Panel Interview."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0058",
+      "type": "mcq",
+      "stem": "The \"PERT Chart\" is a project management tool that is particularly useful for projects where:",
+      "options": {
+        "A": "Task durations are known with certainty.",
+        "B": "Task durations are uncertain and probabilistic.",
+        "C": "All tasks can be performed sequentially.",
+        "D": "There are no dependencies between tasks."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0059",
+      "type": "mcq",
+      "stem": "In the context of decision analysis, \"optimism\" and \"pessimism\" are considerations in:",
+      "options": {
+        "A": "Quantitative approaches.",
+        "B": "Qualitative approaches, particularly under uncertainty.",
+        "C": "Queuing theory calculations.",
+        "D": "Project scheduling."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc320-bank-0060",
+      "type": "mcq",
+      "stem": "The \"service time\" in a queuing system is the time it takes for:",
+      "options": {
+        "A": "A customer to arrive.",
+        "B": "A customer to wait in the queue.",
+        "C": "A customer to be served.",
+        "D": "A customer to leave the system."
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

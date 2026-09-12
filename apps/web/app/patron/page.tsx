@@ -10,6 +10,7 @@
 
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 
 const NEEDS = [
   { tag: 'Exam Fee', amount: '₦21,500', title: 'WAEC Registration', sub: 'For 5 students in Lagos', raised: '₦8,500 raised', pct: 40, bar: 'bg-primary', barText: 'text-on-surface' },
@@ -130,6 +131,7 @@ export default function PatronPage() {
         Download Full Ledger (PDF)
       </p>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

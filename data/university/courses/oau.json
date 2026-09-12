@@ -1,0 +1,157 @@
+{
+ "school": "oau",
+ "name": "Obafemi Awolowo University",
+ "short": "OAU",
+ "courses": [
+  {
+   "slug": "gst111",
+   "code": "GST 111",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-oau-gst111-bank",
+   "questionCount": 40,
+   "pdf": null
+  },
+  {
+   "slug": "pq-accounting",
+   "code": "Post-UTME Accounting",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-oau-pq-accounting-bank",
+   "questionCount": 206,
+   "pdf": null
+  },
+  {
+   "slug": "pq-biology",
+   "code": "Post-UTME Biology",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-oau-pq-biology-bank",
+   "questionCount": 212,
+   "pdf": null
+  },
+  {
+   "slug": "pq-chemistry",
+   "code": "Post-UTME Chemistry",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-oau-pq-chemistry-bank",
+   "questionCount": 192,
+   "pdf": null
+  },
+  {
+   "slug": "pq-commerce",
+   "code": "Post-UTME Commerce",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "storefront",
+   "bank": "uni-oau-pq-commerce-bank",
+   "questionCount": 200,
+   "pdf": null
+  },
+  {
+   "slug": "pq-crk",
+   "code": "Post-UTME CRK",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-oau-pq-crk-bank",
+   "questionCount": 15,
+   "pdf": null
+  },
+  {
+   "slug": "pq-crs",
+   "code": "Post-UTME CRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "auto_stories",
+   "bank": "uni-oau-pq-crs-bank",
+   "questionCount": 195,
+   "pdf": null
+  },
+  {
+   "slug": "pq-economics",
+   "code": "Post-UTME Economics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "trending_up",
+   "bank": "uni-oau-pq-economics-bank",
+   "questionCount": 216,
+   "pdf": null
+  },
+  {
+   "slug": "pq-english",
+   "code": "Post-UTME English",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "translate",
+   "bank": "uni-oau-pq-english-bank",
+   "questionCount": 167,
+   "pdf": null
+  },
+  {
+   "slug": "pq-geography",
+   "code": "Post-UTME Geography",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "public",
+   "bank": "uni-oau-pq-geography-bank",
+   "questionCount": 211,
+   "pdf": null
+  },
+  {
+   "slug": "pq-government",
+   "code": "Post-UTME Government",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "account_balance",
+   "bank": "uni-oau-pq-government-bank",
+   "questionCount": 214,
+   "pdf": null
+  },
+  {
+   "slug": "pq-irs",
+   "code": "Post-UTME IRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-oau-pq-irs-bank",
+   "questionCount": 211,
+   "pdf": null
+  },
+  {
+   "slug": "pq-literature",
+   "code": "Post-UTME Literature",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-oau-pq-literature-bank",
+   "questionCount": 143,
+   "pdf": null
+  },
+  {
+   "slug": "pq-mathematics",
+   "code": "Post-UTME Mathematics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-oau-pq-mathematics-bank",
+   "questionCount": 187,
+   "pdf": null
+  },
+  {
+   "slug": "pq-physics",
+   "code": "Post-UTME Physics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-oau-pq-physics-bank",
+   "questionCount": 213,
+   "pdf": null
+  }
+ ]
+}

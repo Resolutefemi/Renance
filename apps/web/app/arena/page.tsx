@@ -10,6 +10,7 @@
 import { useRouter } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 
 const RANKS: ReadonlyArray<{ rank: string; name: string; points: string; you?: boolean }> = [
   { rank: '1', name: 'Alex Chen', points: '2,450' },
@@ -100,6 +101,7 @@ export default function ArenaLobbyPage() {
         ))}
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

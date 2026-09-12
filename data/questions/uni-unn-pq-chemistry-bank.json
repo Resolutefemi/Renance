@@ -1,0 +1,2363 @@
+{
+  "code": "uni-unn-pq-chemistry-bank",
+  "title": "UNN Post-UTME Chemistry | Prep Bank",
+  "version": 1,
+  "questionCount": 196,
+  "totalMarks": 196,
+  "questions": [
+    {
+      "id": "uni-unn-pq-chemistry-bank-0001",
+      "type": "mcq",
+      "stem": "Determine the pH of a 0.1 M solution of HCl.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0002",
+      "type": "mcq",
+      "stem": "A diagram of a titration setup is shown below. If 25.0 mL of 0.1 M NaOH is required to reach the equivalence point, what is the concentration of the HCl solution?",
+      "options": {
+        "A": "0.05 M",
+        "B": "0.1 M",
+        "C": "0.2 M",
+        "D": "0.5 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0003",
+      "type": "mcq",
+      "stem": "A sample of CO2 gas is collected over water at a temperature of 25°C and a pressure of 1 atm. If the partial pressure of CO2 is 0.5 atm, what is the mole \\fraction of CO2 in the gas mixture?",
+      "options": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "0.75",
+        "D": "0.9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0004",
+      "type": "mcq",
+      "stem": "A diagram of a simple distillation apparatus is shown below. If the boiling point of the solvent is 100°C and the boiling point of the impurity is 120°C, what is the minimum temperature required to separate the impurity from the solvent?",
+      "options": {
+        "A": "110°C",
+        "B": "115°C",
+        "C": "120°C",
+        "D": "125°C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0005",
+      "type": "mcq",
+      "stem": "A sample of polystyrene is analyzed by gel permeation chromatography (GPC). The chromatogram shows a \\single peak with a retention time of 10 minutes. If the calibration curve is linear, what is the molecular weight of the polystyrene sample?",
+      "options": {
+        "A": "100,000 g/mol",
+        "B": "200,000 g/mol",
+        "C": "500,000 g/mol",
+        "D": "1,000,000 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0006",
+      "type": "mcq",
+      "stem": "The reaction between chlorine gas and potassium iodide is a classic example of a redox reaction. What is the oxidation state of iodine in KI?",
+      "options": {
+        "A": "0",
+        "B": "-1",
+        "C": "+1",
+        "D": "+2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0007",
+      "type": "mcq",
+      "stem": "A 2.50 g sample of a metal carbonate is heated to produce a metal oxide and carbon dioxide gas. If the mass of the metal oxide produced is 1.75 g, what is the molar mass of the metal carbonate?",
+      "options": {
+        "A": "100 g/mol",
+        "B": "150 g/mol",
+        "C": "200 g/mol",
+        "D": "250 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0008",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CO2 is -393.5 kJ/mol. What is the s\\tandard enthalpy of formation of CO?",
+      "options": {
+        "A": "-110.5 kJ/mol",
+        "B": "-130.5 kJ/mol",
+        "C": "-150.5 kJ/mol",
+        "D": "-170.5 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0009",
+      "type": "mcq",
+      "stem": "A 1.00 L sample of a gas at 25°C and 1.00 atm is collected over water at 25°C. If the vapor pressure of water at 25°C is 23.8 mmHg, what is the partial pressure of the gas?",
+      "options": {
+        "A": "0.76 atm",
+        "B": "0.86 atm",
+        "C": "0.96 atm",
+        "D": "1.06 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0010",
+      "type": "mcq",
+      "stem": "A 2.00 g sample of a non-metallic element is heated in a crucible until it is completely vaporized. If the mass of the crucible and its contents after heating is 2.50 g, what is the molar mass of the element?",
+      "options": {
+        "A": "50 g/mol",
+        "B": "60 g/mol",
+        "C": "70 g/mol",
+        "D": "80 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0011",
+      "type": "mcq",
+      "stem": "Determine the molar mass of a gas that occupies 2.5 L at 27°C and 1.2 atm. Use the ideal gas law to calculate the number of moles.",
+      "options": {
+        "A": "\\( 2.5 , \\text{L} \\times 1.2 , \\text{atm} \\times 0.0821 , \\text{L atm/mol K} \\times 300 , \\text{K} \\)",
+        "B": "\\( 2.5 , \\text{L} \\times 1.2 , \\text{atm} \\times 0.0821 , \\text{L atm/mol K} \\times 300 , \\text{K} \\times 6.022 \\times 10^{23} \\)",
+        "C": "\\( 2.5 , \\text{L} \\times 1.2 , \\text{atm} \\times 0.0821 , \\text{L atm/mol K} \\times 300 , \\text{K} \\times 6.022 \\times 10^{23} \\times 4.184 , \\text{J/g°C} \\)",
+        "D": "\\( 2.5 , \\text{L} \\times 1.2 , \\text{atm} \\times 0.0821 , \\text{L atm/mol K} \\times 300 , \\text{K} \\times 6.022 \\times 10^{23} \\times 4.184 , \\text{J/g°C} \\times 10^{-3} , \\text{kg/g} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0012",
+      "type": "mcq",
+      "stem": "A metal alloy consists of 75% copper and 25% zinc. If 2.5 kg of the alloy is melted and cast into a cylindrical shape, what is the volume of the cylinder?",
+      "options": {
+        "A": "\\( 2.5 , \\text{kg} \\times 0.75 \\times 8.9 , \\text{g/cm}^3 \\)",
+        "B": "\\( 2.5 , \\text{kg} \\times 0.75 \\times 8.9 , \\text{g/cm}^3 \\times 1000 , \\text{cm}^3/\\text{L} \\)",
+        "C": "\\( 2.5 , \\text{kg} \\times 0.75 \\times 8.9 , \\text{g/cm}^3 \\times 1000 , \\text{cm}^3/\\text{L} \\times pi , \\text{r}^2 \\)",
+        "D": "\\( 2.5 , \\text{kg} \\times 0.75 \\times 8.9 , \\text{g/cm}^3 \\times 1000 , \\text{cm}^3/\\text{L} \\times pi , \\text{r}^2 \\times 2 , \\text{cm} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0013",
+      "type": "mcq",
+      "stem": "A polymer consists of repeating units of the following structure: CH2=CH-CH2-CH3. What is the molar mass of this polymer?",
+      "options": {
+        "A": "\\( 28 , \\text{g/mol} \\)",
+        "B": "\\( 28 , \\text{g/mol} \\times 2 \\)",
+        "C": "\\( 28 , \\text{g/mol} \\times 3 \\)",
+        "D": "\\( 28 , \\text{g/mol} \\times 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0014",
+      "type": "mcq",
+      "stem": "A solution of ethanol (C2H5OH) is 20% by volume. If 2.5 L of this solution is diluted to 5.0 L, what is the new concentration?",
+      "options": {
+        "A": "\\( 20% , \\text{v/v} \\)",
+        "B": "\\( 10% , \\text{v/v} \\)",
+        "C": "\\( 5% , \\text{v/v} \\)",
+        "D": "\\( 2.5% , \\text{v/v} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0015",
+      "type": "mcq",
+      "stem": "A sample of a metal oxide has a mass of 25 g and a volume of 2.5 cm3. What is the density of the metal oxide?",
+      "options": {
+        "A": "\\( 10 , \\text{g/cm}^3 \\)",
+        "B": "\\( 20 , \\text{g/cm}^3 \\)",
+        "C": "\\( 30 , \\text{g/cm}^3 \\)",
+        "D": "\\( 40 , \\text{g/cm}^3 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0016",
+      "type": "mcq",
+      "stem": "The reaction between chlorine gas and ammonia is highly exothermic. What is the balanced chemical equation for this reaction?",
+      "options": {
+        "A": "\\text{Cl}_2 + \\text{NH}_3 \\rightarrow \\text{NH}_4\\text{Cl} + \\text{HCl}",
+        "B": "\\text{Cl}_2 + \\text{NH}_3 \\rightarrow \\text{NH}_3\\text{Cl} + \\text{HCl}",
+        "C": "\\text{Cl}_2 + \\text{NH}_3 \\rightarrow \\text{NH}_4\\text{Cl} + \\text{NH}_3",
+        "D": "\\text{Cl}_2 + \\text{NH}_3 \\rightarrow \\text{NH}_3\\text{Cl} + \\text{NH}_3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0017",
+      "type": "mcq",
+      "stem": "A 2.5 M solution of sodium hydroxide is prepared by dissolving 12.5 g of NaOH in water to make 1 L of solution. What is the concentration of the solution in moles per liter?",
+      "options": {
+        "A": "2.5 M",
+        "B": "5 M",
+        "C": "10 M",
+        "D": "12.5 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0018",
+      "type": "mcq",
+      "stem": "A solution of 0.1 M HCl is titrated with 0.1 M NaOH. What is the pH of the solution after 10 mL of NaOH has been added?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0019",
+      "type": "mcq",
+      "stem": "A 1 L solution of 0.5 M NaCl is prepared by dissolving 25 g of NaCl in water. What is the concentration of the solution in moles per liter?",
+      "options": {
+        "A": "0.5 M",
+        "B": "1 M",
+        "C": "2 M",
+        "D": "5 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0020",
+      "type": "mcq",
+      "stem": "A 2 L solution of 0.2 M H2SO4 is prepared by dissolving 40 g of H2SO4 in water. What is the concentration of the solution in moles per liter?",
+      "options": {
+        "A": "0.2 M",
+        "B": "0.4 M",
+        "C": "0.6 M",
+        "D": "0.8 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0021",
+      "type": "mcq",
+      "stem": "A solution of 0.1 M HCl is titrated with 0.1 M NaOH. What is the pH of the solution after 20 mL of NaOH has been added?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0022",
+      "type": "mcq",
+      "stem": "Determine the pH of a 0.1 M solution of HCl at 25°C, given that the dissociation cons\\tant of HCl is 10^\\( -7 \\) and the temperature dep\\endence of the dissociation cons\\tant is described by the equation \\( \\log_{10} K = -\\frac{1000}{2.303RT} \\), where R is the gas cons\\tant and T is the temperature in Kelvin.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0023",
+      "type": "mcq",
+      "stem": "A sample of an ideal gas is heated from 300 K to 400 K at cons\\tant volume. What is the ratio of the final pressure to the initial pressure?",
+      "options": {
+        "A": "1.33",
+        "B": "2.00",
+        "C": "1.00",
+        "D": "0.75"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0024",
+      "type": "mcq",
+      "stem": "The diagram below shows a titration setup. What is the purpose of the burette?",
+      "options": {
+        "A": "To measure the volume of the acid",
+        "B": "To measure the volume of the base",
+        "C": "To measure the pH of the solution",
+        "D": "To mix the acid and base"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0025",
+      "type": "mcq",
+      "stem": "A polymer has a molecular weight of 100,000 g/mol. If 2.5 g of the polymer is dissolved in 50 mL of solvent, what is the concentration of the solution in g/L?",
+      "options": {
+        "A": "0.05 g/L",
+        "B": "0.5 g/L",
+        "C": "5.0 g/L",
+        "D": "50 g/L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0026",
+      "type": "mcq",
+      "stem": "A solution of NaOH is titrated with a solution of HCl. The pH of the solution at the equivalence point is 7. What is the concentration of the NaOH solution?",
+      "options": {
+        "A": "0.1 M",
+        "B": "0.5 M",
+        "C": "1.0 M",
+        "D": "2.0 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0027",
+      "type": "mcq",
+      "stem": "A sample of a gas is collected over water at a temperature of 25°C and a pressure of 1 atm. The vapor pressure of water at this temperature is 0.0313 atm. What is the partial pressure of the gas?",
+      "options": {
+        "A": "0.9687 atm",
+        "B": "0.9697 atm",
+        "C": "0.9707 atm",
+        "D": "0.9717 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0028",
+      "type": "mcq",
+      "stem": "A mixture of 0.5 mol of CO2 and 0.3 mol of H2O is placed in a 1 L flask at 25°C. Assuming ideal gas behavior, calculate the partial pressure of CO2 in the mixture.",
+      "options": {
+        "A": "0.15 atm",
+        "B": "0.25 atm",
+        "C": "0.35 atm",
+        "D": "0.45 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0029",
+      "type": "mcq",
+      "stem": "A polymer has a molecular weight of 100,000 g/mol and a degree of polymerization of 500. Calculate the molar mass of the monomer.",
+      "options": {
+        "A": "200 g/mol",
+        "B": "250 g/mol",
+        "C": "300 g/mol",
+        "D": "350 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0030",
+      "type": "mcq",
+      "stem": "A metal has a density of 8.5 g/cm3 and a molar mass of 65 g/mol. Calculate the number of moles of the metal in a 2.5 g sample.",
+      "options": {
+        "A": "0.038 mol",
+        "B": "0.048 mol",
+        "C": "0.058 mol",
+        "D": "0.068 mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0031",
+      "type": "mcq",
+      "stem": "A solution of 0.1 M HCl is mixed with a solution of 0.2 M NaOH. Calculate the pH of the resulting solution.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0032",
+      "type": "mcq",
+      "stem": "A sample of air contains 20% O2, 70% N2, and 10% CO2 by volume. Calculate the partial pressure of CO2 in the sample at 1 atm.",
+      "options": {
+        "A": "0.1 atm",
+        "B": "0.2 atm",
+        "C": "0.3 atm",
+        "D": "0.4 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0033",
+      "type": "mcq",
+      "stem": "Determine the number of unpaired electrons in the ground state of a copper atom, given that the atomic number of copper is 29 and the electron configuration is [Ar] 3d10 4s1.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0034",
+      "type": "mcq",
+      "stem": "A 0.5 M solution of sodium chloride (NaCl) is prepared by dissolving 25 g of NaCl in 1000 mL of water. Calculate the molarity of the solution if 10 mL of the solution is diluted to 100 mL with water.",
+      "options": {
+        "A": "0.25 M",
+        "B": "0.5 M",
+        "C": "1.0 M",
+        "D": "2.0 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0035",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of carbon dioxide (CO2) is -393.5 kJ/mol. Calculate the s\\tandard enthalpy of formation of carbon monoxide (CO) if the s\\tandard enthalpy of formation of carbon (C) is -717.1 kJ/mol and the s\\tandard enthalpy of formation of oxygen (O2) is 0 kJ/mol.",
+      "options": {
+        "A": "-110.5 kJ/mol",
+        "B": "-110.5 kJ/mol",
+        "C": "-110.5 kJ/mol",
+        "D": "-110.5 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0036",
+      "type": "mcq",
+      "stem": "A metal rod of length 50 cm and cross-sectional area 2 cm^2 is subjected to a force of 100 N. Calculate the stress and strain on the rod if the Young&#039;s modulus of the metal is 2.0 x 10^11 Pa.",
+      "options": {
+        "A": "2.0 x 10^8 Pa, 0.01",
+        "B": "2.0 x 10^8 Pa, 0.01",
+        "C": "2.0 x 10^8 Pa, 0.01",
+        "D": "2.0 x 10^8 Pa, 0.01"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0037",
+      "type": "mcq",
+      "stem": "A 2.0 M solution of sodium hydroxide (NaOH) is prepared by dissolving 40 g of NaOH in 1000 mL of water. Calculate the pH of the solution if 10 mL of the solution is diluted to 100 mL with water.",
+      "options": {
+        "A": "13",
+        "B": "13",
+        "C": "13",
+        "D": "13"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0038",
+      "type": "mcq",
+      "stem": "Determine the number of moles of $\\text{O}_2$ required to react with 2.5 moles of $\\text{C}_2\\text{H}_4$ according to the equation: $\\text{C}_2\\text{H}_4 + 3\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 2\\text{H}_2\\text{O}$",
+      "options": {
+        "A": "1.25 moles",
+        "B": "2.5 moles",
+        "C": "3.75 moles",
+        "D": "5 moles"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0039",
+      "type": "mcq",
+      "stem": "A sample of $\\text{CaCO}_3$ weighing 25.0 g is heated to produce $\\text{CaO}$ and $\\text{CO}_2$. If the mass of $\\text{CaO}$ produced is 15.0 g, what is the mass of $\\text{CO}_2$ produced?",
+      "options": {
+        "A": "5.0 g",
+        "B": "10.0 g",
+        "C": "15.0 g",
+        "D": "20.0 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0040",
+      "type": "mcq",
+      "stem": "The half-life of a radioactive subs\\tance is 5 days. If 100 mg of the subs\\tance is present initially, how much will remain after 15 days?",
+      "options": {
+        "A": "12.5 mg",
+        "B": "25.0 mg",
+        "C": "50.0 mg",
+        "D": "100 mg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0041",
+      "type": "mcq",
+      "stem": "A solution containing 2.0 M $\\text{HCl}$ is mixed with a solution containing 1.0 M $\\text{NaOH}$. If 50.0 mL of the $\\text{HCl}$ solution is added to 50.0 mL of the $\\text{NaOH}$ solution, what is the concentration of the resulting solution?",
+      "options": {
+        "A": "1.0 M",
+        "B": "1.5 M",
+        "C": "2.0 M",
+        "D": "2.5 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0042",
+      "type": "mcq",
+      "stem": "A 2.0 L flask contains 0.50 M $\\text{CO}_2$ at 25°C. If 1.0 L of $\\text{N}_2$ is added to the flask, what is the new concentration of $\\text{CO}_2$?",
+      "options": {
+        "A": "0.25 M",
+        "B": "0.50 M",
+        "C": "0.75 M",
+        "D": "1.0 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0043",
+      "type": "mcq",
+      "stem": "Determine the number of moles of glu\\cose (C6H12O6) that can be produced from 2.5 mol of ethene (C2H4) in the following reaction: C2H4 + 3O2 → C2H4O2 + 2CO2. Assume that the reaction proceeds to completion.",
+      "options": {
+        "A": "1.5 mol",
+        "B": "2.0 mol",
+        "C": "2.5 mol",
+        "D": "3.0 mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0044",
+      "type": "mcq",
+      "stem": "A 25.0 mL sample of 0.100 M HCl is titrated with 0.0500 M NaOH. Calculate the pH of the solution after 15.0 mL of NaOH has been added.",
+      "options": {
+        "A": "2.00",
+        "B": "2.50",
+        "C": "3.00",
+        "D": "3.50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0045",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CO2(g) is -393.5 kJ/mol. Calculate the s\\tandard enthalpy of formation of CH4(g) from the following reaction: C(s) + 2H2(g) → CH4(g).",
+      "options": {
+        "A": "-74.8 kJ/mol",
+        "B": "-74.9 kJ/mol",
+        "C": "-75.0 kJ/mol",
+        "D": "-75.1 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0046",
+      "type": "mcq",
+      "stem": "A solution of 0.100 M NaOH is prepared by dissolving 3.00 g of NaOH in 100.0 mL of water. Calculate the pH of the solution.",
+      "options": {
+        "A": "12.0",
+        "B": "12.1",
+        "C": "12.2",
+        "D": "12.3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0047",
+      "type": "mcq",
+      "stem": "A 2.00 L sample of 0.100 M HCl is titrated with 0.0500 M NaOH. Calculate the number of moles of NaOH required to reach the equivalence point.",
+      "options": {
+        "A": "0.0100 mol",
+        "B": "0.0150 mol",
+        "C": "0.0200 mol",
+        "D": "0.0250 mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0048",
+      "type": "mcq",
+      "stem": "What is the oxidation state of the underlined atom in the compound H2SO4?",
+      "options": {
+        "A": "+2",
+        "B": "+4",
+        "C": "+6",
+        "D": "+8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0049",
+      "type": "mcq",
+      "stem": "A 2.5 g sample of a subs\\tance is dissolved in 50 mL of water. The resulting solution has a conductivity of 0.02 S/m. What is the molar conductivity of the solution?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0050",
+      "type": "mcq",
+      "stem": "A solution contains 0.1 M HCl and 0.1 M NaOH. What is the pH of the solution after mixing?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0051",
+      "type": "mcq",
+      "stem": "Calculate the s\\tandard enthalpy change for the reaction: 2Al(s) + Fe2O3(s) → 2Fe(s) + Al2O3(s). Given that ΔH°(Al2O3(s)) = -1675 kJ/mol, ΔH°(Al(s)) = 0 kJ/mol, ΔH°(Fe2O3(s)) = -825 kJ/mol, and ΔH°(Fe(s)) = 0 kJ/mol.",
+      "options": {
+        "A": "-2750 kJ/mol",
+        "B": "-1750 kJ/mol",
+        "C": "-275 kJ/mol",
+        "D": "-175 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0052",
+      "type": "mcq",
+      "stem": "A solution containing 0.1 M HCl is titrated with 0.1 M NaOH. What is the pH of the solution after 25 mL of NaOH has been added?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0053",
+      "type": "mcq",
+      "stem": "The s\\tandard Gibbs free energy change for the reaction: 2NO(g) + O2(g) → 2NO2(g) is -120 kJ/mol. Calculate the equilibrium cons\\tant (K) for the reaction.",
+      "options": {
+        "A": "10^\\( -6 \\)",
+        "B": "10^\\( -3 \\)",
+        "C": "10^\\( -2 \\)",
+        "D": "10^\\( -1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0054",
+      "type": "mcq",
+      "stem": "A 2.5 M solution of H2SO4 is titrated with 1 M NaOH. What is the pH of the solution after 20 mL of NaOH has been added?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0055",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy change for the reaction: CaO(s) + H2O(l) → Ca(OH)2(s) is -63.5 kJ/mol. Calculate the s\\tandard entropy change (ΔS°) for the reaction.",
+      "options": {
+        "A": "-0.1 kJ/mol·K",
+        "B": "-0.2 kJ/mol·K",
+        "C": "-0.3 kJ/mol·K",
+        "D": "-0.4 kJ/mol·K"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0056",
+      "type": "mcq",
+      "stem": "The atomic radius of a metal atom is 200 pm. If the metal atom has a valency of 2, what is the expected value of the atomic radius of its monovalent ion?",
+      "options": {
+        "A": "180 pm",
+        "B": "220 pm",
+        "C": "240 pm",
+        "D": "260 pm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0057",
+      "type": "mcq",
+      "stem": "A sample of an ideal gas occupies a volume of 2.5 L at a pressure of 1.5 atm. What is the expected volume of the gas at a pressure of 3.0 atm, assuming the temperature remains cons\\tant?",
+      "options": {
+        "A": "1.67 L",
+        "B": "2.33 L",
+        "C": "3.33 L",
+        "D": "4.67 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0058",
+      "type": "mcq",
+      "stem": "The reaction of an alkene with a strong acid results in the formation of a tertiary alcohol. What is the expected product of the reaction?",
+      "options": {
+        "A": "CH₃C(OH)(CH₃)₂",
+        "B": "CH₃CH(OH)CH₃",
+        "C": "CH₃C(OH)CH₂CH₃",
+        "D": "CH₃CH₂C(OH)CH₃"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0059",
+      "type": "mcq",
+      "stem": "A polymer has a molecular weight of 50,000 g/mol. If the polymer has a degree of polymerization of 500, what is the expected molecular weight of the monomer?",
+      "options": {
+        "A": "100 g/mol",
+        "B": "500 g/mol",
+        "C": "1000 g/mol",
+        "D": "5000 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0060",
+      "type": "mcq",
+      "stem": "A metal has a density of 10 g/cm³. If the metal has a volume of 2 cm³, what is the expected mass of the metal?",
+      "options": {
+        "A": "20 g",
+        "B": "30 g",
+        "C": "40 g",
+        "D": "50 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0061",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CO2(g) is -393.5 kJ/mol. Calculate the s\\tandard enthalpy of formation of CaCO3(s) u\\sing the following reaction: CaO(s) + CO2(g) → CaCO3(s).",
+      "options": {
+        "A": "-1206.5 kJ/mol",
+        "B": "-1206.5 kJ/mol",
+        "C": "-1206.5 kJ/mol",
+        "D": "-1206.5 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0062",
+      "type": "mcq",
+      "stem": "A 2.50 g sample of a non-metallic oxide of nitrogen is dissolved in water to give a solution with a pH of 7.00. What is the molar mass of the oxide?",
+      "options": {
+        "A": "60.0 g/mol",
+        "B": "60.0 g/mol",
+        "C": "60.0 g/mol",
+        "D": "60.0 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0063",
+      "type": "mcq",
+      "stem": "A 1.00 L sample of a gas at 25°C and 1.00 atm is collected over water at 25°C. The vapor pressure of water at 25°C is 23.8 mmHg. What is the partial pressure of the gas?",
+      "options": {
+        "A": "0.976 atm",
+        "B": "0.976 atm",
+        "C": "0.976 atm",
+        "D": "0.976 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0064",
+      "type": "mcq",
+      "stem": "A 10.0 mL sample of a 0.100 M solution of NaOH is mixed with 10.0 mL of a 0.100 M solution of HCl. What is the pH of the resulting solution?",
+      "options": {
+        "A": "7.00",
+        "B": "7.00",
+        "C": "7.00",
+        "D": "7.00"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0065",
+      "type": "mcq",
+      "stem": "A 5.00 g sample of a non-metallic oxide of nitrogen is dissolved in water to give a solution with a pH of 7.00. What is the molar mass of the oxide?",
+      "options": {
+        "A": "60.0 g/mol",
+        "B": "60.0 g/mol",
+        "C": "60.0 g/mol",
+        "D": "60.0 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0066",
+      "type": "mcq",
+      "stem": "Determine the number of moles of oxygen gas (O2) produced at STP when 2.5 moles of hydrogen gas (H2) react with oxygen gas according to the equation: 2H2 + O2 → 2H2O.",
+      "options": {
+        "A": "1.25 moles",
+        "B": "2.5 moles",
+        "C": "3.75 moles",
+        "D": "5 moles"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0067",
+      "type": "mcq",
+      "stem": "A 2.5 L flask contains 0.5 mol of an ideal gas at 300 K. If the gas is heated to 400 K at cons\\tant volume, what is the new pressure?",
+      "options": {
+        "A": "1.5 atm",
+        "B": "2.5 atm",
+        "C": "3.5 atm",
+        "D": "4.5 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0068",
+      "type": "mcq",
+      "stem": "A polymer has a degree of polymerization (n) of 1000. If the molecular weight of the repeating unit is 100 g/mol, what is the molecular weight of the polymer?",
+      "options": {
+        "A": "100,000 g/mol",
+        "B": "200,000 g/mol",
+        "C": "300,000 g/mol",
+        "D": "400,000 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0069",
+      "type": "mcq",
+      "stem": "A 10 g sample of a subs\\tance is burned in a bomb calorimeter, relea\\sing 2500 J of heat. If the heat capacity of the calorimeter is 1000 J/K, what is the change in internal energy (ΔU) of the subs\\tance?",
+      "options": {
+        "A": "-2500 J",
+        "B": "-2000 J",
+        "C": "-1500 J",
+        "D": "-1000 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0070",
+      "type": "mcq",
+      "stem": "A voltaic cell consists of a zinc anode and a copper cathode. If the s\\tandard reduction potential of zinc is -0.76 V and the s\\tandard reduction potential of copper is +0.34 V, what is the cell potential?",
+      "options": {
+        "A": "-1.1 V",
+        "B": "-0.9 V",
+        "C": "-0.7 V",
+        "D": "-0.5 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0071",
+      "type": "mcq",
+      "stem": "The solubility of a gas in a liquid is influenced by the following factors: temperature, pressure, and the nature of the gas and liquid. Which of the following statements is NOT true about the solubility of a gas in a liquid?",
+      "options": {
+        "A": "The solubility of a gas in a liquid increases with increa\\sing temperature.",
+        "B": "The solubility of a gas in a liquid decreases with increa\\sing pressure.",
+        "C": "The solubility of a gas in a liquid is indep\\endent of the nature of the gas and liquid.",
+        "D": "The solubility of a gas in a liquid increases with increa\\sing pressure."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0072",
+      "type": "mcq",
+      "stem": "A 0.1 M solution of a weak acid HA is 5% ionized at 25°C. Calculate the pH of the solution.",
+      "options": {
+        "A": "2.3",
+        "B": "2.5",
+        "C": "2.7",
+        "D": "2.9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0073",
+      "type": "mcq",
+      "stem": "A sample of a polymer has a molecular weight of 100,000 g/mol. If the polymer is composed of 80% monomer A and 20% monomer B, what is the average molecular weight of the polymer?",
+      "options": {
+        "A": "80,000 g/mol",
+        "B": "90,000 g/mol",
+        "C": "100,000 g/mol",
+        "D": "110,000 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0074",
+      "type": "mcq",
+      "stem": "The diagram below shows a simple black and white chemistry apparatus showing a titration setup. What is the purpose of the burette?",
+      "options": {
+        "A": "To measure the volume of the titrant.",
+        "B": "To measure the volume of the analyte.",
+        "C": "To mix the titrant and analyte.",
+        "D": "To measure the pH of the solution."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0075",
+      "type": "mcq",
+      "stem": "The reaction between chlorine gas and potassium iodide is a classic example of a redox reaction. Write the balanced chemical equation for this reaction, including the states of matter for each reac\\tant and product.",
+      "options": {
+        "A": "Cl2(g) + 2KI(s) → 2KCl(s) + I2(s)",
+        "B": "Cl2(g) + 2KI(s) → 2KCl(s) + I2(g)",
+        "C": "Cl2(g) + 2KI(l) → 2KCl(l) + I2(g)",
+        "D": "Cl2(l) + 2KI(s) → 2KCl(s) + I2(g)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0076",
+      "type": "mcq",
+      "stem": "A sample of nitrogen gas at 25°C and 1 atm is allowed to expand into a larger container. If the final temperature is 50°C and the final pressure is 0.5 atm, what is the final volume of the gas?",
+      "options": {
+        "A": "0.25 m³",
+        "B": "0.5 m³",
+        "C": "1 m³",
+        "D": "2 m³"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0077",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CO2(g) is -393.5 kJ/mol. What is the s\\tandard enthalpy of formation of CO(g)?",
+      "options": {
+        "A": "-110.5 kJ/mol",
+        "B": "-110.5 kJ/mol",
+        "C": "-110.5 kJ/mol",
+        "D": "-110.5 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0078",
+      "type": "mcq",
+      "stem": "A 2.5 M solution of HCl is mixed with a 1.5 M solution of NaOH. What is the concentration of the resulting solution?",
+      "options": {
+        "A": "1.5 M",
+        "B": "2.5 M",
+        "C": "3.5 M",
+        "D": "4.5 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0079",
+      "type": "mcq",
+      "stem": "A sample of oxygen gas at 25°C and 1 atm is compressed to a final pressure of 5 atm. What is the final temperature of the gas?",
+      "options": {
+        "A": "50°C",
+        "B": "75°C",
+        "C": "100°C",
+        "D": "125°C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0080",
+      "type": "mcq",
+      "stem": "Calculate the s\\tandard enthalpy change (ΔH°) for the reaction: 2Al(s) + Fe2O3(s) → 2Fe(s) + Al2O3(s). Given that the s\\tandard enthalpy of formation (ΔHf°) for Al2O3(s) is -1675.7 kJ/mol, and the s\\tandard enthalpy of formation for Fe(s) is 0 kJ/mol.",
+      "options": {
+        "A": "-1651.4 kJ/mol",
+        "B": "-1675.7 kJ/mol",
+        "C": "-1699.0 kJ/mol",
+        "D": "-1712.3 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0081",
+      "type": "mcq",
+      "stem": "The reaction of 2.5 g of an unknown hydrocarbon with 100 cm³ of 0.5 M HCl produces 1.25 g of CO2. Calculate the empirical formula of the hydrocarbon.",
+      "options": {
+        "A": "C2H4",
+        "B": "C3H6",
+        "C": "C4H8",
+        "D": "C5H10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0082",
+      "type": "mcq",
+      "stem": "A 0.5 M solution of H2SO4 is titrated with 0.5 M NaOH. The initial volume of the acid is 25 cm³. After the addition of 20 cm³ of NaOH, the pH of the solution is 4. Calculate the concentration of the acid.",
+      "options": {
+        "A": "0.2 M",
+        "B": "0.3 M",
+        "C": "0.4 M",
+        "D": "0.5 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0083",
+      "type": "mcq",
+      "stem": "The half-life of a radioactive subs\\tance is 5 years. If the initial amount of the subs\\tance is 100 g, what is the amount remaining after 10 years?",
+      "options": {
+        "A": "25 g",
+        "B": "50 g",
+        "C": "75 g",
+        "D": "100 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0084",
+      "type": "mcq",
+      "stem": "A 10 g sample of a polymer is dissolved in 100 cm³ of a solvent. The solution has a vis\\cosity of 0.5 Pa·s. Calculate the molecular weight of the polymer.",
+      "options": {
+        "A": "1000 g/mol",
+        "B": "2000 g/mol",
+        "C": "3000 g/mol",
+        "D": "4000 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0085",
+      "type": "mcq",
+      "stem": "At 25°C, the vapor pressure of a liquid is 755 mmHg. If the temperature is increased to 50°C, what is the new vapor pressure?",
+      "options": {
+        "A": "1013 mmHg",
+        "B": "755 mmHg",
+        "C": "1013 mmHg",
+        "D": "1013 mmHg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0086",
+      "type": "mcq",
+      "stem": "A 2.50-g sample of a hydrocarbon is burned in a bomb calorimeter, relea\\sing 12.1 kJ of heat energy. What is the molar mass of the hydrocarbon?",
+      "options": {
+        "A": "12.0 g/mol",
+        "B": "12.0 g/mol",
+        "C": "12.0 g/mol",
+        "D": "12.0 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0087",
+      "type": "mcq",
+      "stem": "A solution contains 5.00 g of NaCl in 250.0 mL of water. What is the molarity of the solution?",
+      "options": {
+        "A": "0.200 M",
+        "B": "0.200 M",
+        "C": "0.200 M",
+        "D": "0.200 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0088",
+      "type": "mcq",
+      "stem": "A 1.50-L sample of a gas at 25°C and 755 mmHg is collected over water at 25°C. What is the partial pressure of the gas?",
+      "options": {
+        "A": "755 mmHg",
+        "B": "755 mmHg",
+        "C": "755 mmHg",
+        "D": "755 mmHg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0089",
+      "type": "mcq",
+      "stem": "Determine the s\\tandard enthalpy of formation of CaCO3(s) from the following data: ΔHf(CaO(s)) = -635.09 kJ/mol, ΔHf(CO2(g)) = -393.51 kJ/mol, ΔHf(C(s)) = 0 kJ/mol.",
+      "options": {
+        "A": "-1206.60 kJ/mol",
+        "B": "-1206.19 kJ/mol",
+        "C": "-1206.99 kJ/mol",
+        "D": "-1207.01 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0090",
+      "type": "mcq",
+      "stem": "A 25.0 mL sample of 0.100 M HCl is titrated with 0.100 M NaOH. Calculate the pH of the solution after 10.0 mL of NaOH has been added.",
+      "options": {
+        "A": "2.00",
+        "B": "2.50",
+        "C": "3.00",
+        "D": "3.50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0091",
+      "type": "mcq",
+      "stem": "The s\\tandard electrode potential of the cell is 1.10 V. If the cell operates at 25°C, what is the cell potential at 50°C?",
+      "options": {
+        "A": "1.05 V",
+        "B": "1.10 V",
+        "C": "1.15 V",
+        "D": "1.20 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0092",
+      "type": "mcq",
+      "stem": "A sample of nitrogen gas occupies a volume of 2.50 L at a pressure of 1.00 atm and a temperature of 298 K. What is the number of moles of nitrogen gas present?",
+      "options": {
+        "A": "0.0100 mol",
+        "B": "0.0200 mol",
+        "C": "0.0300 mol",
+        "D": "0.0400 mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0093",
+      "type": "mcq",
+      "stem": "A 2.00 M solution of sulfuric acid (H2SO4) is mixed with a 2.00 M solution of sodium hydroxide (NaOH). What is the concentration of the resulting solution?",
+      "options": {
+        "A": "1.00 M",
+        "B": "1.50 M",
+        "C": "2.00 M",
+        "D": "2.50 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0094",
+      "type": "mcq",
+      "stem": "Determine the major product of the reaction between 2-methylpropene and HCl.",
+      "options": {
+        "A": "2-chloro-2-methylpropane",
+        "B": "2-chloro-2-methylbu\\tane",
+        "C": "2-chloro-3-methylbu\\tane",
+        "D": "2-chloro-2-methylpen\\tane"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0095",
+      "type": "mcq",
+      "stem": "What is the pH of a 0.1 M solution of HCl?",
+      "options": {
+        "A": "0.1",
+        "B": "1",
+        "C": "10",
+        "D": "100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0096",
+      "type": "mcq",
+      "stem": "A 25 mL sample of a 0.5 M solution of NaOH is titrated with 0.5 M HCl. What is the pH of the solution after the titration?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0097",
+      "type": "mcq",
+      "stem": "A solution contains 0.1 M HCl and 0.1 M NaOH. What is the pH of the solution?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "7",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0098",
+      "type": "mcq",
+      "stem": "A 10 mL sample of a 0.1 M solution of NaOH is titrated with 0.1 M HCl. What is the pH of the solution after the titration?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0099",
+      "type": "mcq",
+      "stem": "The van der Waals equation is given by \\( left\\( P + \\frac{a}{V^2} \\right \\ \\) \\( V - b \\) = RT ). If the gas cons\\tant \\( R = 0.0821 , \\text{L atm} , \\text{K}^{-1} , \\text{mol}^{-1} \\), the van der Waals cons\\tant \\( a = 2.17 , \\text{L}^2 , \\text{atm}^2 , \\text{mol}^{-2} \\), and the van der Waals cons\\tant \\( b = 4.17 \\times 10^{-2} , \\text{L} , \\text{mol}^{-1} \\), calculate the pressure ( P ) in atm when the volume \\( V = 2.5 , \\text{L} \\) and the temperature \\( T = 300 , \\text{K} \\).",
+      "options": {
+        "A": "10.5 atm",
+        "B": "12.7 atm",
+        "C": "15.2 atm",
+        "D": "18.5 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0100",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of \\( \\text{CO}_2\\( g \\ \\) ) is \\( \\Delta H^\\circ_f = -393.5 , \\text{kJ} , \\text{mol}^{-1} \\). Calculate the s\\tandard enthalpy of combustion of \\( 2.5 , \\text{g} \\) of \\( \\text{C}_2\\text{H}_6\\( g \\ \\) ) at \\( 298 , \\text{K} \\) and \\( 1 , \\text{bar} \\).",
+      "options": {
+        "A": "-975.5 kJ",
+        "B": "-1175.5 kJ",
+        "C": "-1475.5 kJ",
+        "D": "-1575.5 kJ"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0101",
+      "type": "mcq",
+      "stem": "The half-reaction for the oxidation of \\( \\text{Zn} \\) is \\( \\text{Zn} \\rightarrow \\text{Zn}^{2+} + 2e^- \\). If \\( 2.5 , \\text{g} \\) of \\( \\text{Zn} \\) is oxidized, calculate the number of moles of electrons transferred.",
+      "options": {
+        "A": "0.25 mol",
+        "B": "0.5 mol",
+        "C": "0.75 mol",
+        "D": "1.0 mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0102",
+      "type": "mcq",
+      "stem": "The atomic radius of \\( \\text{Na} \\) is \\( 186 , \\text{pm} \\). If the atomic radius of \\( \\text{K} \\) is \\( 227 , \\text{pm} \\), calculate the percentage increase in atomic radius from \\( \\text{Na} \\) to \\( \\text{K} \\).",
+      "options": {
+        "A": "22%",
+        "B": "25%",
+        "C": "30%",
+        "D": "35%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0103",
+      "type": "mcq",
+      "stem": "The s\\tandard Gibbs free energy change for the reaction \\( \\text{Ca} + \\text{Cl}_2 \\rightarrow \\text{CaCl}_2 \\) is \\( \\Delta G^\\circ = -341.7 , \\text{kJ} , \\text{mol}^{-1} \\). If the reaction is carried out at \\( 298 , \\text{K} \\) and \\( 1 , \\text{bar} \\), calculate the equilibrium cons\\tant ( K ) for the reaction.",
+      "options": {
+        "A": "1.0",
+        "B": "2.0",
+        "C": "3.0",
+        "D": "4.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0104",
+      "type": "mcq",
+      "stem": "A mixture of 0.5 mol of CO2 and 0.3 mol of O2 is placed in a 2.0 L container at 25°C. Calculate the partial pressure of CO2 in the mixture.",
+      "options": {
+        "A": "0.5 atm",
+        "B": "0.7 atm",
+        "C": "1.0 atm",
+        "D": "1.5 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0105",
+      "type": "mcq",
+      "stem": "A sample of a polymer has a molecular weight of 50,000 g/mol. If 0.5 g of the polymer is dissolved in 20 mL of solvent, what is the concentration of the solution in g/L?",
+      "options": {
+        "A": "0.25 g/L",
+        "B": "0.5 g/L",
+        "C": "1.0 g/L",
+        "D": "2.0 g/L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0106",
+      "type": "mcq",
+      "stem": "A solution contains 0.1 M NaCl and 0.2 M NaOH. What is the pH of the solution?",
+      "options": {
+        "A": "1.0",
+        "B": "2.0",
+        "C": "3.0",
+        "D": "4.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0107",
+      "type": "mcq",
+      "stem": "A 2.0 L container is filled with 1.0 mol of H2 and 1.0 mol of O2 at 25°C. What is the partial pressure of H2 in the mixture?",
+      "options": {
+        "A": "0.5 atm",
+        "B": "0.7 atm",
+        "C": "1.0 atm",
+        "D": "1.5 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0108",
+      "type": "mcq",
+      "stem": "A 0.5 M solution of NaOH is prepared by dissolving 25 g of NaOH in 1 L of water. Calculate the number of moles of NaOH used in preparing the solution.",
+      "options": {
+        "A": "0.5 mol",
+        "B": "0.25 mol",
+        "C": "0.75 mol",
+        "D": "1.0 mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0109",
+      "type": "mcq",
+      "stem": "The half-life of a radioactive subs\\tance is 5 years. If the initial amount of the subs\\tance is 100 g, how much of the subs\\tance will remain after 10 years?",
+      "options": {
+        "A": "25 g",
+        "B": "50 g",
+        "C": "75 g",
+        "D": "100 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0110",
+      "type": "mcq",
+      "stem": "A 2.0 L sample of a gas at 27°C and 1.0 atm is collected over water at 27°C. If the vapor pressure of water at 27°C is 0.031 atm, what is the partial pressure of the gas?",
+      "options": {
+        "A": "0.969 atm",
+        "B": "0.969 kPa",
+        "C": "1.0 atm",
+        "D": "1.0 kPa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0111",
+      "type": "mcq",
+      "stem": "A 10.0 g sample of a compound containing only carbon and hydrogen is analyzed and found to contain 6.0 g of carbon and 4.0 g of hydrogen. What is the empirical formula of the compound?",
+      "options": {
+        "A": "CH",
+        "B": "C2H",
+        "C": "C3H2",
+        "D": "C4H3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0112",
+      "type": "mcq",
+      "stem": "A 5.0 L sample of a gas at 25°C and 2.0 atm is collected over water at 25°C. If the vapor pressure of water at 25°C is 0.031 atm, what is the partial pressure of the gas?",
+      "options": {
+        "A": "1.969 atm",
+        "B": "1.969 kPa",
+        "C": "2.0 atm",
+        "D": "2.0 kPa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0113",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CO2(g) is -393.5 kJ/mol. Calculate the s\\tandard enthalpy of formation of CO(g) if the s\\tandard enthalpy of formation of O2(g) is 0 kJ/mol.",
+      "options": {
+        "A": "-110.5 kJ/mol",
+        "B": "-110.5 kJ/mol",
+        "C": "-110.5 kJ/mol",
+        "D": "-110.5 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0114",
+      "type": "mcq",
+      "stem": "A 2.5 M solution of HCl is titrated with 0.5 M NaOH. Calculate the pH of the solution after 25 mL of NaOH has been added.",
+      "options": {
+        "A": "2.5",
+        "B": "2.5",
+        "C": "2.5",
+        "D": "2.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0115",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of NH3(g) is -45.9 kJ/mol. Calculate the s\\tandard enthalpy of formation of N2(g) if the s\\tandard enthalpy of formation of H2(g) is 0 kJ/mol.",
+      "options": {
+        "A": "0 kJ/mol",
+        "B": "0 kJ/mol",
+        "C": "0 kJ/mol",
+        "D": "0 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0116",
+      "type": "mcq",
+      "stem": "A 1.0 M solution of H2SO4 is titrated with 0.5 M NaOH. Calculate the pH of the solution after 50 mL of NaOH has been added.",
+      "options": {
+        "A": "1.0",
+        "B": "1.0",
+        "C": "1.0",
+        "D": "1.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0117",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CO(g) is -110.5 kJ/mol. Calculate the s\\tandard enthalpy of formation of C(g) if the s\\tandard enthalpy of formation of O2(g) is 0 kJ/mol.",
+      "options": {
+        "A": "0 kJ/mol",
+        "B": "0 kJ/mol",
+        "C": "0 kJ/mol",
+        "D": "0 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0118",
+      "type": "mcq",
+      "stem": "The reaction of cyclohexane with bromine in the presence of light produces a mixture of 1,2-dibromocyclohexane and 1,4-dibromocyclohexane. What is the major product of this reaction?",
+      "options": {
+        "A": "1,2-dibromocyclohexane",
+        "B": "1,4-dibromocyclohexane",
+        "C": "cis-1,2-dibromocyclohexane",
+        "D": "trans-1,4-dibromocyclohexane"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0119",
+      "type": "mcq",
+      "stem": "The polymerization of styrene produces a polymer with the following structure: [-CH2-CH(C6H5)-]n. What is the type of polymerization reaction that occurred?",
+      "options": {
+        "A": "Addition polymerization",
+        "B": "Condensation polymerization",
+        "C": "Ring-opening polymerization",
+        "D": "Step-growth polymerization"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0120",
+      "type": "mcq",
+      "stem": "The following diagram shows a titration setup. What is the purpose of the burette?",
+      "options": {
+        "A": "To measure the volume of the titrant",
+        "B": "To measure the volume of the analyte",
+        "C": "To mix the titrant and analyte",
+        "D": "To measure the pH of the solution"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0121",
+      "type": "mcq",
+      "stem": "The following diagram shows a circuit. What is the purpose of the resistor?",
+      "options": {
+        "A": "To reduce the current flowing through the circuit",
+        "B": "To increase the voltage across the circuit",
+        "C": "To measure the voltage across the circuit",
+        "D": "To measure the current flowing through the circuit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0122",
+      "type": "mcq",
+      "stem": "The following diagram shows a graph. What is the type of relationship between the variables?",
+      "options": {
+        "A": "Direct variation",
+        "B": "Inverse variation",
+        "C": "Proportional variation",
+        "D": "Inverse square variation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0123",
+      "type": "mcq",
+      "stem": "A 0.1 M solution of NaOH is titrated with 0.1 M HCl. If 20 mL of HCl is required to reach the equivalence point, what is the pH of the resulting solution?",
+      "options": {
+        "A": "7",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0124",
+      "type": "mcq",
+      "stem": "A polymer has a molecular weight of 100,000 g/mol and a degree of polymerization of 500. What is the molar mass of the repeating unit?",
+      "options": {
+        "A": "200 g/mol",
+        "B": "400 g/mol",
+        "C": "500 g/mol",
+        "D": "1000 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0125",
+      "type": "mcq",
+      "stem": "A solution of 0.1 M HCl is mixed with a solution of 0.1 M NaOH. If the initial pH of the HCl solution is 1, what is the pH of the resulting solution after the reaction is complete?",
+      "options": {
+        "A": "7",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0126",
+      "type": "mcq",
+      "stem": "A 1 M solution of H2SO4 is titrated with 1 M NaOH. If 20 mL of NaOH is required to reach the equivalence point, what is the pH of the resulting solution?",
+      "options": {
+        "A": "7",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0127",
+      "type": "mcq",
+      "stem": "A 0.1 M solution of NaOH is titrated with 0.1 M HCl. If 20 mL of HCl is required to reach the equivalence point, what is the concentration of the resulting solution?",
+      "options": {
+        "A": "0.05 M",
+        "B": "0.1 M",
+        "C": "0.15 M",
+        "D": "0.2 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0128",
+      "type": "mcq",
+      "stem": "A 25.0 mL sample of 0.100 M HCl is titrated with 0.100 M NaOH. If the initial pH of the HCl solution is 1.00, what is the pH of the solution after the addition of 25.0 mL of NaOH?",
+      "options": {
+        "A": "2.00",
+        "B": "3.00",
+        "C": "4.00",
+        "D": "5.00"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0129",
+      "type": "mcq",
+      "stem": "A reaction is represented by the equation: \\( 2A + B \\rightarrow 2C + D \\). If the rate cons\\tant for the reaction is 0.0500 s\\( ^{-1} \\) and the initial concentrations of A and B are 0.100 M and 0.0500 M, respectively, what is the concentration of A after 10.0 s?",
+      "options": {
+        "A": "0.0500 M",
+        "B": "0.0750 M",
+        "C": "0.100 M",
+        "D": "0.125 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0130",
+      "type": "mcq",
+      "stem": "A diagram of a titration setup is shown below. If the burette contains 0.100 M HCl and the initial pH of the solution is 3.00, what is the pH of the solution after the addition of 25.0 mL of HCl?",
+      "options": {
+        "A": "1.00",
+        "B": "2.00",
+        "C": "3.00",
+        "D": "4.00"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0131",
+      "type": "mcq",
+      "stem": "A 25.0 mL sample of 0.100 M NaOH is titrated with 0.100 M HCl. If the initial pH of the NaOH solution is 12.00, what is the pH of the solution after the addition of 25.0 mL of HCl?",
+      "options": {
+        "A": "7.00",
+        "B": "8.00",
+        "C": "9.00",
+        "D": "10.00"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0132",
+      "type": "mcq",
+      "stem": "A reaction is represented by the equation: \\( A \\rightarrow 2B + C \\). If the rate cons\\tant for the reaction is 0.0500 s\\( ^{-1} \\) and the initial concentration of A is 0.100 M, what is the concentration of B after 10.0 s?",
+      "options": {
+        "A": "0.0500 M",
+        "B": "0.0750 M",
+        "C": "0.100 M",
+        "D": "0.125 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0133",
+      "type": "mcq",
+      "stem": "A 2.50 g sample of a non-metallic oxide of nitrogen is decomposed by heating with graphite. The volume of nitrogen gas produced at 25°C and 1 atm is 2.50 L. Calculate the molar mass of the oxide.",
+      "options": {
+        "A": "60 g/mol",
+        "B": "80 g/mol",
+        "C": "100 g/mol",
+        "D": "120 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0134",
+      "type": "mcq",
+      "stem": "The half-life of a radioactive subs\\tance is 5.0 days. If 100 mg of the subs\\tance is present initially, how much will remain after 20 days?",
+      "options": {
+        "A": "12.5 mg",
+        "B": "25 mg",
+        "C": "50 mg",
+        "D": "100 mg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0135",
+      "type": "mcq",
+      "stem": "A solution of 0.10 M HCl is titrated with 0.10 M NaOH. If 25 mL of NaOH is required to reach the equivalence point, what is the volume of HCl required to reach the equivalence point?",
+      "options": {
+        "A": "25 mL",
+        "B": "50 mL",
+        "C": "100 mL",
+        "D": "200 mL"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0136",
+      "type": "mcq",
+      "stem": "A 2.0 L flask contains 1.0 M H2SO4. If 0.10 M NaOH is added to the flask, what is the concentration of the resulting solution?",
+      "options": {
+        "A": "0.50 M",
+        "B": "0.75 M",
+        "C": "1.0 M",
+        "D": "1.25 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0137",
+      "type": "mcq",
+      "stem": "A 2.0 g sample of a hydrocarbon is burned in a combustion apparatus. The volume of CO2 produced is 2.5 L at 25°C and 1 atm. What is the empirical formula of the hydrocarbon?",
+      "options": {
+        "A": "C2H4",
+        "B": "C3H6",
+        "C": "C4H8",
+        "D": "C5H10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0138",
+      "type": "mcq",
+      "stem": "A 25.0 mL sample of 0.100 M HCl is titrated with 0.100 M NaOH. Calculate the pH of the solution after the addition of 25.0 mL of NaOH.",
+      "options": {
+        "A": "2.00",
+        "B": "3.00",
+        "C": "4.00",
+        "D": "5.00"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0139",
+      "type": "mcq",
+      "stem": "The reaction between H2S and O2 is catalyzed by a metal ion. Which of the following metal ions is most likely to be the catalyst?",
+      "options": {
+        "A": "Cu2+",
+        "B": "Fe3+",
+        "C": "Mn2+",
+        "D": "Cr3+"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0140",
+      "type": "mcq",
+      "stem": "A 2.00 g sample of a non-metallic oxide is dissolved in water to form a solution with a pH of 7.00. What is the molar mass of the oxide?",
+      "options": {
+        "A": "50.0 g/mol",
+        "B": "100 g/mol",
+        "C": "150 g/mol",
+        "D": "200 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0141",
+      "type": "mcq",
+      "stem": "A 1.00 L sample of a gas at 25°C and 1.00 atm is collected over water at 25°C. What is the partial pressure of the gas?",
+      "options": {
+        "A": "0.950 atm",
+        "B": "0.975 atm",
+        "C": "1.00 atm",
+        "D": "1.05 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0142",
+      "type": "mcq",
+      "stem": "A 2.00 g sample of a metal is dissolved in acid to form a solution with a concentration of 0.100 M. What is the molar mass of the metal?",
+      "options": {
+        "A": "50.0 g/mol",
+        "B": "100 g/mol",
+        "C": "150 g/mol",
+        "D": "200 g/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0143",
+      "type": "mcq",
+      "stem": "Determine the pH of a 0.1 M solution of HCl after 10 mL of 0.1 M NaOH has been added to 50 mL of the HCl solution. Assume that the volume of the solution remains cons\\tant at 60 mL.",
+      "options": {
+        "A": "1.0",
+        "B": "2.0",
+        "C": "3.0",
+        "D": "4.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0144",
+      "type": "mcq",
+      "stem": "A 25 mL sample of 0.1 M HCl is titrated with 0.1 M NaOH. Calculate the number of moles of HCl that have reacted after 15 mL of NaOH has been added.",
+      "options": {
+        "A": "0.0025",
+        "B": "0.0050",
+        "C": "0.0075",
+        "D": "0.0100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0145",
+      "type": "mcq",
+      "stem": "The reaction between HCl and NaOH is represented by the equation: HCl + NaOH → NaCl + H2O. If 50 mL of 0.1 M HCl is mixed with 50 mL of 0.1 M NaOH, what is the concentration of the resulting solution?",
+      "options": {
+        "A": "0.05 M",
+        "B": "0.10 M",
+        "C": "0.15 M",
+        "D": "0.20 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0146",
+      "type": "mcq",
+      "stem": "A solution containing 0.1 M HCl and 0.1 M NaOH is prepared by mixing equal volumes of each solution. What is the pH of this solution?",
+      "options": {
+        "A": "1.0",
+        "B": "2.0",
+        "C": "3.0",
+        "D": "4.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0147",
+      "type": "mcq",
+      "stem": "A 25 mL sample of 0.1 M HCl is titrated with 0.1 M NaOH. Calculate the number of moles of NaOH that have reacted after 15 mL of NaOH has been added.",
+      "options": {
+        "A": "0.0025",
+        "B": "0.0050",
+        "C": "0.0075",
+        "D": "0.0100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0148",
+      "type": "mcq",
+      "stem": "A sample of an ideal gas is heated at cons\\tant volume. Which of the following statements is true?",
+      "options": {
+        "A": "The pressure of the gas increases.",
+        "B": "The pressure of the gas decreases.",
+        "C": "The pressure of the gas remains cons\\tant.",
+        "D": "The pressure of the gas becomes zero."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0149",
+      "type": "mcq",
+      "stem": "A solution of 2.5 g of NaCl in 50 g of water is prepared. What is the molality of the solution?",
+      "options": {
+        "A": "0.1 m",
+        "B": "0.2 m",
+        "C": "0.3 m",
+        "D": "0.4 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0150",
+      "type": "mcq",
+      "stem": "The s\\tandard electrode potential of the couple Zn2+/Zn is -0.76 V. What is the s\\tandard electrode potential of the couple Cu2+/Cu?",
+      "options": {
+        "A": "-0.34 V",
+        "B": "-0.44 V",
+        "C": "-0.54 V",
+        "D": "-0.64 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0151",
+      "type": "mcq",
+      "stem": "A 1.0 M solution of HCl is prepared by dissolving 36.5 g of HCl in water to make 1.0 L of solution. What is the pH of the solution?",
+      "options": {
+        "A": "1.0",
+        "B": "2.0",
+        "C": "3.0",
+        "D": "4.0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0152",
+      "type": "mcq",
+      "stem": "A sample of a gas occupies a volume of 2.5 L at a pressure of 1.0 atm and a temperature of 298 K. What is the volume of the gas at a pressure of 2.0 atm and a temperature of 298 K?",
+      "options": {
+        "A": "1.25 L",
+        "B": "2.5 L",
+        "C": "3.75 L",
+        "D": "5.0 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0153",
+      "type": "mcq",
+      "stem": "Determine the number of unpaired electrons in the ground state of a neutral chromium atom.",
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "4",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0154",
+      "type": "mcq",
+      "stem": "A 0.5 M solution of NaCl is prepared by dissolving 25 g of NaCl in 1000 mL of water. What is the concentration of the solution in g/L?",
+      "options": {
+        "A": "0.25 g/L",
+        "B": "0.5 g/L",
+        "C": "1.0 g/L",
+        "D": "2.0 g/L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0155",
+      "type": "mcq",
+      "stem": "A diagram of a titration setup is shown below. If 25 mL of 0.1 M NaOH is required to reach the equivalence point, what is the concentration of the HCl solution?",
+      "options": {
+        "A": "0.05 M",
+        "B": "0.1 M",
+        "C": "0.2 M",
+        "D": "0.5 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0156",
+      "type": "mcq",
+      "stem": "A gas occupies a volume of 2.5 L at a pressure of 1.5 atm and a temperature of 300 K. What is the new volume of the gas if the pressure is increased to 3.0 atm and the temperature is decreased to 200 K?",
+      "options": {
+        "A": "1.0 L",
+        "B": "1.5 L",
+        "C": "2.0 L",
+        "D": "2.5 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0157",
+      "type": "mcq",
+      "stem": "A diagram of a chromatography setup is shown below. If the retention time of a particular compound is 15 minutes, what is the concentration of the compound in the sample?",
+      "options": {
+        "A": "0.1 mg/mL",
+        "B": "0.5 mg/mL",
+        "C": "1.0 mg/mL",
+        "D": "5.0 mg/mL"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0158",
+      "type": "mcq",
+      "stem": "The reaction of nitrogen with oxygen to form nitrogen dioxide is represented by the equation: 4NO + O2 → 2N2O4. What is the oxidation state of nitrogen in N2O4?",
+      "options": {
+        "A": "+2",
+        "B": "+4",
+        "C": "+6",
+        "D": "+8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0159",
+      "type": "mcq",
+      "stem": "A sample of oxygen gas occupies a volume of 2.5 liters at a pressure of 1 atm and a temperature of 298 K. What is the number of moles of oxygen gas present?",
+      "options": {
+        "A": "0.010",
+        "B": "0.0224",
+        "C": "0.0348",
+        "D": "0.0472"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0160",
+      "type": "mcq",
+      "stem": "The graph below shows the relationship between the volume of a gas and its pressure. What is the slope of the graph?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0161",
+      "type": "mcq",
+      "stem": "The reaction of sodium with water is represented by the equation: 2Na + 2H2O → 2NaOH + H2. What is the oxidation state of sodium in NaOH?",
+      "options": {
+        "A": "+1",
+        "B": "+2",
+        "C": "+3",
+        "D": "+4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0162",
+      "type": "mcq",
+      "stem": "The reaction of sodium with water is highly exothermic. What is the primary product of this reaction?",
+      "options": {
+        "A": "Sodium hydroxide (NaOH)",
+        "B": "Sodium carbonate (Na2CO3)",
+        "C": "Sodium chloride (NaCl)",
+        "D": "Sodium oxide (Na2O)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0163",
+      "type": "mcq",
+      "stem": "A sample of a polymer has a molecular weight of 100,000 g/mol. If 2.5 g of the polymer is dissolved in 50 mL of solvent, what is the concentration of the solution in g/L?",
+      "options": {
+        "A": "0.05 g/L",
+        "B": "0.5 g/L",
+        "C": "5 g/L",
+        "D": "50 g/L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0164",
+      "type": "mcq",
+      "stem": "The half-life of a radioactive subs\\tance is 5 years. If 100 g of the subs\\tance is initially present, how much will remain after 10 years?",
+      "options": {
+        "A": "50 g",
+        "B": "25 g",
+        "C": "12.5 g",
+        "D": "6.25 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0165",
+      "type": "mcq",
+      "stem": "A solution of 0.1 M HCl is mixed with a solution of 0.1 M NaOH. What is the pH of the resulting solution?",
+      "options": {
+        "A": "1",
+        "B": "7",
+        "C": "10",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0166",
+      "type": "mcq",
+      "stem": "A metal M reacts with oxygen to form a basic oxide. The reaction is as follows: 4M + 3O2 → 2M2O3. What is the oxidation state of M in the product?",
+      "options": {
+        "A": "+3",
+        "B": "+2",
+        "C": "+1",
+        "D": "-2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0167",
+      "type": "mcq",
+      "stem": "Determine the pH of a solution containing 0.1 M HCl and 0.1 M NaOH.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0168",
+      "type": "mcq",
+      "stem": "A metal (X) reacts with dilute hydrochloric acid to produce a gas (Y). The gas (Y) is used in the manufacture of semiconductors. Identify the metal (X) and the gas (Y).",
+      "options": {
+        "A": "Zinc, Hydrogen",
+        "B": "Iron, Carbon Dioxide",
+        "C": "Copper, Oxygen",
+        "D": "Lead, Nitrogen"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0169",
+      "type": "mcq",
+      "stem": "The diagram below shows a titration setup. Identify the subs\\tance being titrated.",
+      "options": {
+        "A": "Acid",
+        "B": "Base",
+        "C": "Salt",
+        "D": "Water"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0170",
+      "type": "mcq",
+      "stem": "A solution contains 0.1 M HCl and 0.1 M NaOH. What is the concentration of the resulting solution after the reaction is complete?",
+      "options": {
+        "A": "0.1 M",
+        "B": "0.2 M",
+        "C": "0.3 M",
+        "D": "0.4 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0171",
+      "type": "mcq",
+      "stem": "The diagram below shows a circuit. Identify the component labeled A.",
+      "options": {
+        "A": "Resistor",
+        "B": "Battery",
+        "C": "Capacitor",
+        "D": "Inductor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0172",
+      "type": "mcq",
+      "stem": "A 2.00 M solution of NaOH is mixed with a 1.00 M solution of HCl. What is the resulting concentration of the solution after the reaction is complete?",
+      "options": {
+        "A": "1.00 M",
+        "B": "1.50 M",
+        "C": "2.00 M",
+        "D": "3.00 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0173",
+      "type": "mcq",
+      "stem": "A 100.0 mL sample of 0.100 M HCl is titrated with 0.100 M NaOH. What is the pH of the solution after the reaction is complete?",
+      "options": {
+        "A": "1.00",
+        "B": "2.00",
+        "C": "3.00",
+        "D": "4.00"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0174",
+      "type": "mcq",
+      "stem": "A diagram of a titration setup is shown below. If 25.0 mL of 0.1 M NaOH is added to 25.0 mL of 0.1 M HCl, what is the pH of the resulting solution?",
+      "options": {
+        "A": "7",
+        "B": "2",
+        "C": "10",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0175",
+      "type": "mcq",
+      "stem": "The rate cons\\tant (k) for a first-order reaction is given by the equation \\( k = Ae^{-E_a/RT} \\). If the activation energy \\( E_a \\) is 100 kJ/mol, the gas cons\\tant (R) is 8.314 J/mol*K, and the temperature (T) is 298 K, what is the value of A?",
+      "options": {
+        "A": "1.0 x 10^10",
+        "B": "1.0 x 10^5",
+        "C": "1.0 x 10^2",
+        "D": "1.0 x 10^-5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0176",
+      "type": "mcq",
+      "stem": "A diagram of a chemical apparatus is shown below. If the apparatus is used to measure the volume of a gas, what is the name of the apparatus?",
+      "options": {
+        "A": "Burette",
+        "B": "Test Tube",
+        "C": "Beaker",
+        "D": "Flask"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0177",
+      "type": "mcq",
+      "stem": "The half-life \\( t_1/2 \\) of a radioactive subs\\tance is given by the equation \\( t_{1/2} = \\frac{ln 2}{k} \\). If the decay cons\\tant (k) is 0.05 min^-1, what is the half-life of the subs\\tance?",
+      "options": {
+        "A": "14 min",
+        "B": "28 min",
+        "C": "42 min",
+        "D": "56 min"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0178",
+      "type": "mcq",
+      "stem": "The half-life of a radioactive subs\\tance is 5 days. If 100 mg of the subs\\tance is present initially, how much of the subs\\tance will remain after 15 days?",
+      "options": {
+        "A": "12.5 mg",
+        "B": "25 mg",
+        "C": "50 mg",
+        "D": "100 mg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0179",
+      "type": "mcq",
+      "stem": "A solution of 2 M HCl is titrated with 1 M NaOH. If 25 mL of NaOH is added, what is the pH of the resulting solution?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0180",
+      "type": "mcq",
+      "stem": "A 0.1 M solution of NaOH is prepared by dissolving 4 g of NaOH in water and diluting to 1 L. What is the molarity of the resulting solution?",
+      "options": {
+        "A": "0.1 M",
+        "B": "0.2 M",
+        "C": "0.3 M",
+        "D": "0.4 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0181",
+      "type": "mcq",
+      "stem": "A 1 L solution of 0.5 M HCl is prepared by dissolving 250 g of HCl in water. What is the mass of HCl in the solution?",
+      "options": {
+        "A": "125 g",
+        "B": "250 g",
+        "C": "375 g",
+        "D": "500 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0182",
+      "type": "mcq",
+      "stem": "A 2 L solution of 0.2 M NaOH is prepared by dissolving 40 g of NaOH in water. What is the molarity of the resulting solution?",
+      "options": {
+        "A": "0.1 M",
+        "B": "0.2 M",
+        "C": "0.3 M",
+        "D": "0.4 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0183",
+      "type": "mcq",
+      "stem": "Determine the number of moles of nitrogen gas (N2) produced in the reaction: 2NH3(g) + 3O2(g) → 2N2(g) + 6H2O(l) when 2.5 moles of ammonia (NH3) are consumed.",
+      "options": {
+        "A": "1.25 moles",
+        "B": "2.5 moles",
+        "C": "3.75 moles",
+        "D": "5 moles"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0184",
+      "type": "mcq",
+      "stem": "A 0.500 M solution of sodium hydroxide (NaOH) is mixed with 0.500 M solution of hydrochloric acid (HCl). What is the resulting pH of the solution?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0185",
+      "type": "mcq",
+      "stem": "A diagram of a titration setup is shown below. If 25.0 mL of 0.100 M sodium hydroxide (NaOH) is used to titrate 25.0 mL of 0.100 M hydrochloric acid (HCl), what is the resulting pH of the solution?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0186",
+      "type": "mcq",
+      "stem": "A 0.500 M solution of sodium hydroxide (NaOH) is mixed with 0.500 M solution of hydrochloric acid (HCl). What is the resulting concentration of sodium chloride (NaCl) in the solution?",
+      "options": {
+        "A": "0.500 M",
+        "B": "0.750 M",
+        "C": "1.000 M",
+        "D": "1.250 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0187",
+      "type": "mcq",
+      "stem": "A diagram of a chemical apparatus is shown below. If 25.0 mL of 0.100 M sodium hydroxide (NaOH) is used to titrate 25.0 mL of 0.100 M hydrochloric acid (HCl), what is the resulting concentration of sodium chloride (NaCl) in the solution?",
+      "options": {
+        "A": "0.500 M",
+        "B": "0.750 M",
+        "C": "1.000 M",
+        "D": "1.250 M"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0188",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of H2O(l) is -285.8 kJ/mol. What is the s\\tandard enthalpy of formation of H2(g)?",
+      "options": {
+        "A": "0 kJ/mol",
+        "B": "285.8 kJ/mol",
+        "C": "-285.8 kJ/mol",
+        "D": "117.2 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0189",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CH4(g) is -74.8 kJ/mol. What is the s\\tandard enthalpy of formation of C(s)?",
+      "options": {
+        "A": "0 kJ/mol",
+        "B": "74.8 kJ/mol",
+        "C": "-74.8 kJ/mol",
+        "D": "117.2 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0190",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of CO2(g) is -393.5 kJ/mol. What is the s\\tandard enthalpy of formation of O2(g)?",
+      "options": {
+        "A": "0 kJ/mol",
+        "B": "393.5 kJ/mol",
+        "C": "-393.5 kJ/mol",
+        "D": "117.2 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0191",
+      "type": "mcq",
+      "stem": "The s\\tandard enthalpy of formation of H2O(l) is -285.8 kJ/mol. What is the s\\tandard enthalpy of formation of H(g)?",
+      "options": {
+        "A": "0 kJ/mol",
+        "B": "285.8 kJ/mol",
+        "C": "-285.8 kJ/mol",
+        "D": "117.2 kJ/mol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0192",
+      "type": "mcq",
+      "stem": "A sample of a gas at 27°C and 1 atm is heated to 127°C at cons\\tant pressure. What is the new volume of the gas, given that the initial volume is 2.5 L?",
+      "options": {
+        "A": "6.5 L",
+        "B": "8.5 L",
+        "C": "10.5 L",
+        "D": "12.5 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0193",
+      "type": "mcq",
+      "stem": "A 0.1 M solution of HCl is titrated with 0.1 M NaOH. If 25 mL of NaOH is required to reach the equivalence point, what is the volume of HCl used?",
+      "options": {
+        "A": "25 mL",
+        "B": "50 mL",
+        "C": "75 mL",
+        "D": "100 mL"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0194",
+      "type": "mcq",
+      "stem": "A sample of N2 gas at 25°C and 1 atm is compressed to 5 atm at cons\\tant temperature. What is the new volume of the gas?",
+      "options": {
+        "A": "0.2 L",
+        "B": "0.5 L",
+        "C": "1.0 L",
+        "D": "2.0 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0195",
+      "type": "mcq",
+      "stem": "A 0.05 M solution of H2SO4 is titrated with 0.05 M NaOH. If 50 mL of NaOH is required to reach the equivalence point, what is the volume of H2SO4 used?",
+      "options": {
+        "A": "50 mL",
+        "B": "75 mL",
+        "C": "100 mL",
+        "D": "125 mL"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-chemistry-bank-0196",
+      "type": "mcq",
+      "stem": "A sample of O2 gas at 27°C and 1 atm is heated to 127°C at cons\\tant pressure. What is the new volume of the gas, given that the initial volume is 2.5 L?",
+      "options": {
+        "A": "6.5 L",
+        "B": "8.5 L",
+        "C": "10.5 L",
+        "D": "12.5 L"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

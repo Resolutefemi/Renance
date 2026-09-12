@@ -1,0 +1,2351 @@
+{
+  "code": "uni-futa-pq-accounting-bank",
+  "title": "FUTA Post-UTME Accounting | Prep Bank",
+  "version": 1,
+  "questionCount": 195,
+  "totalMarks": 195,
+  "questions": [
+    {
+      "id": "uni-futa-pq-accounting-bank-0001",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a debit balance of ₦15,000 in the &#039;Rent Expense&#039; account. However, the company&#039;s accounting records indicate that it has paid ₦20,000 in rent for the year. What is the correct journal entry to record the payment?",
+      "options": {
+        "A": "Debit Rent Expense ₦5,000, Credit Cash ₦5,000",
+        "B": "Debit Rent Expense ₦20,000, Credit Cash ₦20,000",
+        "C": "Debit Rent Expense ₦15,000, Credit Cash ₦15,000",
+        "D": "Debit Rent Expense ₦5,000, Credit Cash ₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0002",
+      "type": "mcq",
+      "stem": "A partnership agreement between two partners, John and Jane, states that their profit-sharing ratio is 3:2. If the total profit for the year is ₦120,000, what is Jane&#039;s share of the profit?",
+      "options": {
+        "A": "₦60,000",
+        "B": "₦72,000",
+        "C": "₦80,000",
+        "D": "₦90,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0003",
+      "type": "mcq",
+      "stem": "A company manufactures two products, A and B. Product A requires 2 hours of direct labor and Product B requires 3 hours of direct labor. If the company operates for 120 hours in a week, how many units of Product A can be produced?",
+      "options": {
+        "A": "60 units",
+        "B": "80 units",
+        "C": "100 units",
+        "D": "120 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0004",
+      "type": "mcq",
+      "stem": "A company&#039;s ledger shows the following balances: Cash ₦100,000, Accounts Payable ₦50,000, and Common Stock ₦200,000. What is the company&#039;s total equity?",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦300,000",
+        "C": "₦350,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0005",
+      "type": "mcq",
+      "stem": "A company uses the double-entry system of accounting. If a customer pays ₦10,000 for goods sold, what is the journal entry to record the transaction?",
+      "options": {
+        "A": "Debit Cash ₦10,000, Credit Sales Revenue ₦10,000",
+        "B": "Debit Sales Revenue ₦10,000, Credit Cash ₦10,000",
+        "C": "Debit Cash ₦10,000, Credit Accounts Receivable ₦10,000",
+        "D": "Debit Accounts Receivable ₦10,000, Credit Cash ₦10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0006",
+      "type": "mcq",
+      "stem": "A company issued 5,000, 10% debentures of ₦100 each at a discount of 5%. The debentures are redeemable at the end of 5 years. Calculate the amount of discount on the debentures.",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦500,000",
+        "C": "₦750,000",
+        "D": "₦1,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0007",
+      "type": "mcq",
+      "stem": "A partnership consisting of A, B, and C shares profits and losses in the ratio 5:3:2. The capital contributed by A, B, and C are ₦50,000, ₦30,000, and ₦20,000 respectively. Calculate the share of profit of A.",
+      "options": {
+        "A": "₦12,500",
+        "B": "₦15,000",
+        "C": "₦17,500",
+        "D": "₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0008",
+      "type": "mcq",
+      "stem": "A company purchased a machine for ₦120,000. The machine is expected to last for 5 years and has a residual value of ₦20,000. Calculate the annual depreciation of the machine using the straight-line method.",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦22,000",
+        "C": "₦24,000",
+        "D": "₦26,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0009",
+      "type": "mcq",
+      "stem": "A government agency purchased a vehicle for ₦500,000. The vehicle is expected to last for 5 years and has a residual value of ₦100,000. Calculate the annual depreciation of the vehicle using the straight-line method.",
+      "options": {
+        "A": "₦60,000",
+        "B": "₦70,000",
+        "C": "₦80,000",
+        "D": "₦90,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0010",
+      "type": "mcq",
+      "stem": "A company issued 10,000, 10% shares of ₦10 each at a premium of ₦2. The shares are redeemable at the end of 5 years. Calculate the amount of premium on the shares.",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦40,000",
+        "C": "₦60,000",
+        "D": "₦80,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0011",
+      "type": "mcq",
+      "stem": "A company has the following incomplete records: Purchases 15,000, Sales 20,000, and Wages 8,000. Using the Single Entry method, what is the total value of the company&#039;s assets?",
+      "options": {
+        "A": "₦43,000",
+        "B": "₦45,000",
+        "C": "₦48,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0012",
+      "type": "mcq",
+      "stem": "A public sector organization has the following transactions: Revenue 100,000, Expenditure 80,000, and Capital Expenditure 20,000. What is the net change in the organization&#039;s equity?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦30,000",
+        "C": "₦40,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0013",
+      "type": "mcq",
+      "stem": "A company has the following control account balances: Debtors 10,000, Creditors 8,000, and Capital 20,000. What is the total value of the company&#039;s assets?",
+      "options": {
+        "A": "₦38,000",
+        "B": "₦40,000",
+        "C": "₦42,000",
+        "D": "₦44,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0014",
+      "type": "mcq",
+      "stem": "A company has the following final accounts: Trading Profit 15,000, Profit and Loss 10,000, and Balance Sheet 20,000. What is the total value of the company&#039;s equity?",
+      "options": {
+        "A": "₦45,000",
+        "B": "₦50,000",
+        "C": "₦55,000",
+        "D": "₦60,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0015",
+      "type": "mcq",
+      "stem": "A company has the following incomplete records: Purchases 15,000, Sales 20,000, and Wages 8,000. Using the Single Entry method, what is the total value of the company&#039;s liabilities?",
+      "options": {
+        "A": "₦23,000",
+        "B": "₦25,000",
+        "C": "₦27,000",
+        "D": "₦29,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0016",
+      "type": "mcq",
+      "stem": "A company issued 10,000 shares of £ 1 each at a premium of £ 0.50 per share. The issue expenses were £ 5,000. Prepare the journal entry to record the issue of shares.",
+      "options": {
+        "A": "Debit Share Capital £ 10,000, Credit Cash £ 10,000",
+        "B": "Debit Share Capital £ 10,000, Credit Cash £ 15,000",
+        "C": "Debit Share Capital £ 15,000, Credit Cash £ 10,000",
+        "D": "Debit Share Capital £ 10,000, Credit Cash £ 10,000, Credit Issue Expenses £ 5,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0017",
+      "type": "mcq",
+      "stem": "A company purchased a machine for £ 20,000. The machine has a useful life of 5 years and a residual value of £ 2,000. Calculate the annual depreciation using the straight-line method.",
+      "options": {
+        "A": "£ 3,600",
+        "B": "£ 4,000",
+        "C": "£ 4,200",
+        "D": "£ 4,800"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0018",
+      "type": "mcq",
+      "stem": "A government agency received £ 10,000 from the treasury to cover the cost of a project. The project was completed at a cost of £ 12,000. Prepare the journal entry to record the transaction.",
+      "options": {
+        "A": "Debit Project Expenses £ 12,000, Credit Cash £ 10,000",
+        "B": "Debit Project Expenses £ 12,000, Credit Cash £ 12,000",
+        "C": "Debit Project Expenses £ 10,000, Credit Cash £ 12,000",
+        "D": "Debit Project Expenses £ 12,000, Credit Cash £ 10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0019",
+      "type": "mcq",
+      "stem": "A company issued 5,000 debentures of £ 100 each at a discount of £ 5 per debenture. The issue expenses were £ 2,000. Prepare the journal entry to record the issue of debentures.",
+      "options": {
+        "A": "Debit Debenture Capital £ 500,000, Credit Cash £ 475,000",
+        "B": "Debit Debenture Capital £ 500,000, Credit Cash £ 480,000",
+        "C": "Debit Debenture Capital £ 480,000, Credit Cash £ 475,000",
+        "D": "Debit Debenture Capital £ 500,000, Credit Cash £ 475,000, Credit Issue Expenses £ 2,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0020",
+      "type": "mcq",
+      "stem": "A company purchased a machine for £ 30,000. The machine has a useful life of 8 years and a residual value of £ 4,000. Calculate the annual depreciation using the straight-line method.",
+      "options": {
+        "A": "£ 3,250",
+        "B": "£ 3,500",
+        "C": "£ 3,750",
+        "D": "£ 4,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0021",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a debit balance of ₦150,000. The bank statement shows a credit balance of ₦120,000. The difference of ₦30,000 is due to a dishonored cheque. Prepare the bank reconciliation statement.",
+      "options": {
+        "A": "₦120,000",
+        "B": "₦150,000",
+        "C": "₦180,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0022",
+      "type": "mcq",
+      "stem": "A company&#039;s trading account shows a profit of ₦500,000. The profit and loss account shows a net profit of ₦750,000. The balance sheet shows a capital of ₦1,200,000. Prepare the statement of changes in equity.",
+      "options": {
+        "A": "₦1,250,000",
+        "B": "₦1,500,000",
+        "C": "₦1,750,000",
+        "D": "₦2,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0023",
+      "type": "mcq",
+      "stem": "A company issues 10,000 shares of ₦5 each at a premium of ₦2 per share. The company also issues 5,000 debentures of ₦100 each. Prepare the journal entry to record the issue of shares and debentures.",
+      "options": {
+        "A": "₦50,000",
+        "B": "₦100,000",
+        "C": "₦150,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0024",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a debit balance of ₦80,000. The bank statement shows a credit balance of ₦60,000. The difference of ₦20,000 is due to a bank charge. Prepare the bank reconciliation statement.",
+      "options": {
+        "A": "₦60,000",
+        "B": "₦80,000",
+        "C": "₦100,000",
+        "D": "₦120,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0025",
+      "type": "mcq",
+      "stem": "A company&#039;s trading account shows a loss of ₦200,000. The profit and loss account shows a net loss of ₦300,000. The balance sheet shows a capital of ₦1,000,000. Prepare the statement of changes in equity.",
+      "options": {
+        "A": "₦1,200,000",
+        "B": "₦1,300,000",
+        "C": "₦1,400,000",
+        "D": "₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0026",
+      "type": "mcq",
+      "stem": "A partnership is formed between two individuals, A and B, with a capital of ₦500,000 each. The partnership agreement states that the profits will be shared in the ratio 3:2. If the profit for the year is ₦750,000, calculate the amount of profit that will be shared by A.",
+      "options": {
+        "A": "₦450,000",
+        "B": "₦525,000",
+        "C": "₦600,000",
+        "D": "₦675,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0027",
+      "type": "mcq",
+      "stem": "A company issues 1,000, 10% debentures of ₦100 each at a discount of 5%. Calculate the amount of discount on the debentures.",
+      "options": {
+        "A": "₦5,000",
+        "B": "₦10,000",
+        "C": "₦15,000",
+        "D": "₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0028",
+      "type": "mcq",
+      "stem": "A public sector organization has the following transactions for the year: ₦100,000 received from customers ₦150,000 paid to suppliers ₦20,000 paid to employees ₦30,000 received from government grant Prepare a statement of cash flows for the year.",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦30,000",
+        "C": "₦40,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0029",
+      "type": "mcq",
+      "stem": "A company has the following trial balance: ₦100,000 Cash ₦50,000 Accounts Receivable ₦20,000 Prepaid Rent ₦30,000 Salaries Expense ₦40,000 Rent Expense ₦50,000 Utilities Expense Identify the error in the trial balance.",
+      "options": {
+        "A": "₦50,000",
+        "B": "₦30,000",
+        "C": "₦20,000",
+        "D": "₦10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0030",
+      "type": "mcq",
+      "stem": "A partnership is formed between two individuals, A and B, with a capital of ₦500,000 each. The partnership agreement states that the profits will be shared in the ratio 3:2. If the profit for the year is ₦750,000, calculate the amount of profit that will be shared by B.",
+      "options": {
+        "A": "₦300,000",
+        "B": "₦325,000",
+        "C": "₦350,000",
+        "D": "₦375,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0031",
+      "type": "mcq",
+      "stem": "A company uses the weighted average method to value its inventory. The cost of goods available for sale is ₦1,500,000, and the total cost of the opening inventory is ₦300,000. The company purchases additional inventory at a cost of ₦600,000. If the total cost of the closing inventory is ₦750,000, what is the cost of goods sold?",
+      "options": {
+        "A": "₦750,000",
+        "B": "₦900,000",
+        "C": "₦1,200,000",
+        "D": "₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0032",
+      "type": "mcq",
+      "stem": "A company has the following transactions during the year:",
+      "options": {
+        "A": "₦100,000",
+        "B": "₦200,000",
+        "C": "₦300,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0033",
+      "type": "mcq",
+      "stem": "A company uses the FIFO method to value its inventory. The cost of goods available for sale is ₦1,200,000, and the total cost of the opening inventory is ₦200,000. The company purchases additional inventory at a cost of ₦400,000. If the total cost of the closing inventory is ₦600,000, what is the cost of goods sold?",
+      "options": {
+        "A": "₦600,000",
+        "B": "₦800,000",
+        "C": "₦1,000,000",
+        "D": "₦1,200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0034",
+      "type": "mcq",
+      "stem": "A company uses the LIFO method to value its inventory. The cost of goods available for sale is ₦1,500,000, and the total cost of the opening inventory is ₦300,000. The company purchases additional inventory at a cost of ₦600,000. If the total cost of the closing inventory is ₦750,000, what is the cost of goods sold?",
+      "options": {
+        "A": "₦900,000",
+        "B": "₦1,000,000",
+        "C": "₦1,200,000",
+        "D": "₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0035",
+      "type": "mcq",
+      "stem": "A company issued 10,000 shares of 1 par value at a premium of 2 per share. If the shares were sold for 5 each, calculate the total amount received from the sale of shares.",
+      "options": {
+        "A": "₦20,000,000",
+        "B": "₦30,000,000",
+        "C": "₦40,000,000",
+        "D": "₦50,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0036",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a balance of ₦50,000. The bank statement shows a balance of ₦60,000. The difference is due to an outstanding cheque of ₦5,000. Calculate the correct balance of the company&#039;s cash.",
+      "options": {
+        "A": "₦55,000",
+        "B": "₦60,000",
+        "C": "₦65,000",
+        "D": "₦70,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0037",
+      "type": "mcq",
+      "stem": "A company issued 5% debentures of ₦100,000 at a premium of 10%. If the debentures were issued for 5 years, calculate the annual interest payable.",
+      "options": {
+        "A": "₦5,000",
+        "B": "₦5,500",
+        "C": "₦6,000",
+        "D": "₦6,500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0038",
+      "type": "mcq",
+      "stem": "A company&#039;s assets are valued at ₦500,000. The company&#039;s liabilities are ₦200,000. Calculate the company&#039;s net worth.",
+      "options": {
+        "A": "₦300,000",
+        "B": "₦400,000",
+        "C": "₦500,000",
+        "D": "₦600,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0039",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a balance of ₦20,000. The company&#039;s bank statement shows a balance of ₦30,000. The difference is due to an outstanding cheque of ₦5,000. Calculate the correct balance of the company&#039;s cash.",
+      "options": {
+        "A": "₦25,000",
+        "B": "₦30,000",
+        "C": "₦35,000",
+        "D": "₦40,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0040",
+      "type": "mcq",
+      "stem": "A company issued 10,000 9% debentures of ₦100 each at a discount of 5%. Calculate the amount received from the issue of debentures and the amount of discount.",
+      "options": {
+        "A": "₦950,000 and ₦50,000",
+        "B": "₦990,000 and ₦5,000",
+        "C": "₦950,000 and ₦5,000",
+        "D": "₦990,000 and ₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0041",
+      "type": "mcq",
+      "stem": "A partnership is formed between two partners, A and B. A contributes ₦200,000 and B contributes ₦300,000. The profit is to be shared in the ratio 2:3. If the total profit is ₦120,000, calculate the share of profit of each partner.",
+      "options": {
+        "A": "A: ₦40,000, B: ₦80,000",
+        "B": "A: ₦60,000, B: ₦60,000",
+        "C": "A: ₦80,000, B: ₦40,000",
+        "D": "A: ₦60,000, B: ₦60,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0042",
+      "type": "mcq",
+      "stem": "A company purchased a machine for ₦500,000. The machine has a useful life of 5 years and a residual value of ₦50,000. Calculate the annual depreciation using the straight-line method.",
+      "options": {
+        "A": "₦90,000 per annum",
+        "B": "₦80,000 per annum",
+        "C": "₦100,000 per annum",
+        "D": "₦110,000 per annum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0043",
+      "type": "mcq",
+      "stem": "A company issued 10,000 9% preference shares of ₦10 each at a premium of ₦2 per share. Calculate the amount received from the issue of preference shares and the amount of premium.",
+      "options": {
+        "A": "₦200,000 and ₦20,000",
+        "B": "₦220,000 and ₦20,000",
+        "C": "₦200,000 and ₦20,000",
+        "D": "₦220,000 and ₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0044",
+      "type": "mcq",
+      "stem": "A company purchased a machine for ₦500,000. The machine has a useful life of 5 years and a residual value of ₦50,000. Calculate the annual depreciation using the reducing balance method.",
+      "options": {
+        "A": "₦90,000 per annum",
+        "B": "₦80,000 per annum",
+        "C": "₦100,000 per annum",
+        "D": "₦110,000 per annum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0045",
+      "type": "mcq",
+      "stem": "In a partnership account, the capital of one partner is increased by ₦50,000, while the capital of another partner is decreased by ₦30,000. What is the net effect on the total capital of the partnership?",
+      "options": {
+        "A": "₦20,000 increase",
+        "B": "₦20,000 decrease",
+        "C": "₦20,000 no change",
+        "D": "₦20,000 unknown"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0046",
+      "type": "mcq",
+      "stem": "A company uses the single-entry system of accounting. The company&#039;s assets increased by ₦100,000 and liabilities decreased by ₦50,000. What is the net increase in equity?",
+      "options": {
+        "A": "₦50,000",
+        "B": "₦150,000",
+        "C": "₦200,000",
+        "D": "₦250,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0047",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows an error of ₦20,000. The error is due to an incorrect posting of an account. What is the correct procedure to rectify the error?",
+      "options": {
+        "A": "Repost the account",
+        "B": "Reconcile the account",
+        "C": "Correct the error in the trial balance",
+        "D": "Reopen the account"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0048",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements show a net income of ₦500,000. However, the company&#039;s cash flow statement shows a net decrease of ₦200,000. What is the reason for the discrepancy?",
+      "options": {
+        "A": "Accruals and deferrals",
+        "B": "Non-cash items",
+        "C": "Changes in working capital",
+        "D": "Error in accounting"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0049",
+      "type": "mcq",
+      "stem": "A company uses a self-balancing ledger to record its transactions. What is the advantage of using this system?",
+      "options": {
+        "A": "Easy to maintain",
+        "B": "Reduces errors",
+        "C": "Increases efficiency",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0050",
+      "type": "mcq",
+      "stem": "In a partnership account, if the capital of A and B is ₦120,000 and ₦150,000 respectively, and the profit-sharing ratio is 3:2, what is the total profit-sharing ratio?",
+      "options": {
+        "A": "5:3",
+        "B": "3:2",
+        "C": "5:2",
+        "D": "3:5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0051",
+      "type": "mcq",
+      "stem": "A company uses the straight-line method of depreciation. If the cost of the asset is ₦200,000 and its residual value is ₦50,000, what is the annual depreciation?",
+      "options": {
+        "A": "₦25,000",
+        "B": "₦30,000",
+        "C": "₦20,000",
+        "D": "₦15,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0052",
+      "type": "mcq",
+      "stem": "A company has the following transactions: Purchase of equipment for ₦100,000, sale of goods for ₦150,000, and purchase of goods for ₦80,000. What is the total value of assets?",
+      "options": {
+        "A": "₦230,000",
+        "B": "₦250,000",
+        "C": "₦220,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0053",
+      "type": "mcq",
+      "stem": "A company has the following transactions: Purchase of goods for ₦100,000, sale of goods for ₦150,000, and purchase of goods for ₦80,000. What is the total value of liabilities?",
+      "options": {
+        "A": "₦230,000",
+        "B": "₦250,000",
+        "C": "₦220,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0054",
+      "type": "mcq",
+      "stem": "A company has the following transactions: Purchase of goods for ₦100,000, sale of goods for ₦150,000, and purchase of goods for ₦80,000. What is the total value of equity?",
+      "options": {
+        "A": "₦230,000",
+        "B": "₦250,000",
+        "C": "₦220,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0055",
+      "type": "mcq",
+      "stem": "Determine the amount of depreciation for a machine that cost ₦250,000 and has a useful life of 5 years, with a residual value of ₦50,000. The machine is depreciated using the straight-line method.",
+      "options": {
+        "A": "₦40,000",
+        "B": "₦50,000",
+        "C": "₦60,000",
+        "D": "₦70,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0056",
+      "type": "mcq",
+      "stem": "A company has the following transactions in its manufacturing account for the year: Opening inventory: ₦100,000 Purchases: ₦500,000 Direct labor: ₦200,000 Overheads: ₦150,000 Closing inventory: ₦250,000 Calculate the cost of goods manufactured.",
+      "options": {
+        "A": "₦1,200,000",
+        "B": "₦1,300,000",
+        "C": "₦1,400,000",
+        "D": "₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0057",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance as at 31st December, 2022 is as follows: Debit ₦100,000 ₦50,000 ₦20,000 ₦10,000 ₦5,000 Credit ₦80,000 ₦40,000 ₦15,000 ₦8,000 ₦4,000 Identify the error in the trial balance.",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦30,000",
+        "C": "₦40,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0058",
+      "type": "mcq",
+      "stem": "A company uses the perpetual inventory system. The following transactions occurred during the month of January: January 1: Purchased 100 units of goods at ₦100 each. January 5: Sold 50 units of goods at ₦150 each. January 10: Purchased 50 units of goods at ₦120 each. January 15: Sold 25 units of goods at ₦160 each. January 20: Purchased 75 units of goods at ₦130 each. January 25: Sold 50 units of goods at ₦170 each. January 31: Purchased 25 units of goods at ₦140 each. Calculate the cost of goods sold for the month of January.",
+      "options": {
+        "A": "₦15,000",
+        "B": "₦16,000",
+        "C": "₦17,000",
+        "D": "₦18,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0059",
+      "type": "mcq",
+      "stem": "A company has the following transactions in its control account for the year: Opening balance: ₦100,000 Purchases: ₦500,000 Sales: ₦700,000 Closing balance: ₦200,000 Calculate the value of the control account.",
+      "options": {
+        "A": "₦1,200,000",
+        "B": "₦1,300,000",
+        "C": "₦1,400,000",
+        "D": "₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0060",
+      "type": "mcq",
+      "stem": "A company uses the single-entry system of accounting. The following transactions were recorded in the cash book during the year:",
+      "options": {
+        "A": "₦1,500",
+        "B": "₦2,000",
+        "C": "₦1,800",
+        "D": "₦2,500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0061",
+      "type": "mcq",
+      "stem": "The following is a statement of cash flows for a company:",
+      "options": {
+        "A": "₦10,000",
+        "B": "₦20,000",
+        "C": "₦30,000",
+        "D": "₦40,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0062",
+      "type": "mcq",
+      "stem": "A company&#039;s assets are valued at ₦1,000,000. The company&#039;s liabilities are ₦500,000. What is the company&#039;s equity?",
+      "options": {
+        "A": "₦500,000",
+        "B": "₦1,000,000",
+        "C": "₦1,500,000",
+        "D": "₦2,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0063",
+      "type": "mcq",
+      "stem": "A company&#039;s depreciation policy is to depreciate its assets by 10% per annum. If the company&#039;s asset is valued at ₦10,000, what will be its value after 2 years?",
+      "options": {
+        "A": "₦8,100",
+        "B": "₦9,000",
+        "C": "₦9,900",
+        "D": "₦10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0064",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows the following transactions:",
+      "options": {
+        "A": "₦1,500",
+        "B": "₦2,000",
+        "C": "₦1,800",
+        "D": "₦2,500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0065",
+      "type": "mcq",
+      "stem": "A company uses the single-entry system of accounting. The following transactions were recorded during the year:",
+      "options": {
+        "A": "₦10,000",
+        "B": "₦20,000",
+        "C": "₦30,000",
+        "D": "₦40,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0066",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance as at 31st December 2022 is shown below:",
+      "options": {
+        "A": "₦100,000",
+        "B": "₦200,000",
+        "C": "₦300,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0067",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book as at 31st December 2022 is shown below:",
+      "options": {
+        "A": "₦50,000",
+        "B": "₦100,000",
+        "C": "₦150,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0068",
+      "type": "mcq",
+      "stem": "A company&#039;s bank reconciliation statement as at 31st December 2022 is shown below:",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦30,000",
+        "C": "₦40,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0069",
+      "type": "mcq",
+      "stem": "A company&#039;s final accounts as at 31st December 2022 are shown below:",
+      "options": {
+        "A": "₦100,000",
+        "B": "₦200,000",
+        "C": "₦300,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0070",
+      "type": "mcq",
+      "stem": "A company uses the straight-line method to depreciate its assets. If the asset&#039;s useful life is 5 years and the residual value is ₦10,000, what is the annual depreciation charge if the asset&#039;s cost is ₦150,000?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦25,000",
+        "C": "₦30,000",
+        "D": "₦35,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0071",
+      "type": "mcq",
+      "stem": "A bank&#039;s cash book shows a balance of ₦500,000. The bank statement shows a balance of ₦550,000. The bank reconciliation statement shows a difference of ₦20,000 due to outstanding checks. What is the correct balance in the bank&#039;s cash book?",
+      "options": {
+        "A": "₦480,000",
+        "B": "₦500,000",
+        "C": "₦520,000",
+        "D": "₦540,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0072",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows the following accounts: Sales ₦1,000,000, Cost of Goods Sold ₦800,000, and Net Income ₦200,000. What is the correct amount of Gross Profit?",
+      "options": {
+        "A": "₦100,000",
+        "B": "₦200,000",
+        "C": "₦300,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0073",
+      "type": "mcq",
+      "stem": "A company uses the perpetual inventory system. The company&#039;s beginning inventory is ₦100,000, and the cost of goods available for sale is ₦500,000. The company sells ₦300,000 worth of goods. What is the company&#039;s ending inventory?",
+      "options": {
+        "A": "₦200,000",
+        "B": "₦250,000",
+        "C": "₦300,000",
+        "D": "₦350,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0074",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows the following accounts: Cash ₦500,000, Accounts Receivable ₦200,000, and Inventory ₦300,000. What is the company&#039;s total current assets?",
+      "options": {
+        "A": "₦1,000,000",
+        "B": "₦1,200,000",
+        "C": "₦1,300,000",
+        "D": "₦1,400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0075",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements for the year ended December 31, 2022, are presented below. Prepare a single entry for the following transactions: (i) Purchase of office equipment for ₦120,000 cash. (ii) Sale of office equipment for ₦80,000 cash.",
+      "options": {
+        "A": "₦40,000 debit to office equipment and ₦40,000 credit to cash",
+        "B": "₦80,000 debit to office equipment and ₦80,000 credit to cash",
+        "C": "₦120,000 debit to office equipment and ₦120,000 credit to cash",
+        "D": "₦40,000 debit to office equipment and ₦40,000 credit to cash, and ₦80,000 debit to cash and ₦80,000 credit to office equipment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0076",
+      "type": "mcq",
+      "stem": "A company issues 10,000, 9% debentures of ₦100 each at a discount of 5%. Calculate the amount received from debenture holders.",
+      "options": {
+        "A": "₦950,000",
+        "B": "₦975,000",
+        "C": "₦1,000,000",
+        "D": "₦1,025,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0077",
+      "type": "mcq",
+      "stem": "A partnership has two partners, A and B. The capital accounts of A and B are ₦50,000 and ₦30,000 respectively. If the profit for the year is ₦20,000, and the drawings of A and B are ₦5,000 and ₦3,000 respectively, what is the balance in A&#039;s capital account?",
+      "options": {
+        "A": "₦45,000",
+        "B": "₦50,000",
+        "C": "₦55,000",
+        "D": "₦60,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0078",
+      "type": "mcq",
+      "stem": "A company has a manufacturing department that produces two products, X and Y. The selling price of X is ₦100 per unit, and the selling price of Y is ₦120 per unit. The company sells 500 units of X and 300 units of Y. If the total cost of production is ₦150,000, what is the gross profit?",
+      "options": {
+        "A": "₦45,000",
+        "B": "₦50,000",
+        "C": "₦55,000",
+        "D": "₦60,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0079",
+      "type": "mcq",
+      "stem": "A company has a departmental account for the year ended 31st December 2022. The departmental account shows a balance of ₦20,000 in the beginning of the year and a balance of ₦15,000 at the end of the year. If the departmental account has a credit balance of ₦5,000, what is the amount of the departmental account that has been transferred to the general ledger?",
+      "options": {
+        "A": "₦10,000",
+        "B": "₦15,000",
+        "C": "₦20,000",
+        "D": "₦25,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0080",
+      "type": "mcq",
+      "stem": "A company has a control account for the year ended 31st December 2022. The control account shows a balance of ₦50,000 in the beginning of the year and a balance of ₦60,000 at the end of the year. If the control account has a credit balance of ₦10,000, what is the amount of the control account that has been transferred to the general ledger?",
+      "options": {
+        "A": "₦40,000",
+        "B": "₦50,000",
+        "C": "₦60,000",
+        "D": "₦70,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0081",
+      "type": "mcq",
+      "stem": "A company uses the single-entry system of accounting. The following transactions occurred during the year: 1. Purchased office supplies for ₦10,000. 2. Collected cash from customers for ₦50,000. 3. Paid salaries to employees for ₦30,000. 4. Purchased a new vehicle for ₦200,000. What is the total amount of assets on the balance sheet?",
+      "options": {
+        "A": "₦240,000",
+        "B": "₦250,000",
+        "C": "₦260,000",
+        "D": "₦270,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0082",
+      "type": "mcq",
+      "stem": "A company has the following ledger balances: Debit: ₦100,000; Credit: ₦120,000. What is the correct journal entry to record the transaction?",
+      "options": {
+        "A": "Debit: ₦20,000; Credit: ₦0",
+        "B": "Debit: ₦0; Credit: ₦20,000",
+        "C": "Debit: ₦20,000; Credit: ₦20,000",
+        "D": "Debit: ₦0; Credit: ₦0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0083",
+      "type": "mcq",
+      "stem": "A company has the following trial balance: Debit: ₦100,000; Credit: ₦120,000. What is the correct journal entry to record the transaction?",
+      "options": {
+        "A": "Debit: ₦20,000; Credit: ₦0",
+        "B": "Debit: ₦0; Credit: ₦20,000",
+        "C": "Debit: ₦20,000; Credit: ₦20,000",
+        "D": "Debit: ₦0; Credit: ₦0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0084",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a balance of ₦250,000. However, the bank statement shows a balance of ₦300,000. The difference is due to a discrepancy of ₦50,000. What is the reason for this discrepancy?",
+      "options": {
+        "A": "The company has not yet deposited the cash into the bank.",
+        "B": "The bank has not yet credited the company's account for the cash deposited.",
+        "C": "The company has not yet paid a cheque that has been presented to the bank.",
+        "D": "The bank has charged a fee for the cash deposited."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0085",
+      "type": "mcq",
+      "stem": "A company purchases a machine for ₦500,000. The machine has a useful life of 5 years and a residual value of ₦50,000. What is the annual depreciation charge?",
+      "options": {
+        "A": "₦80,000",
+        "B": "₦90,000",
+        "C": "₦100,000",
+        "D": "₦110,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0086",
+      "type": "mcq",
+      "stem": "A company uses the double-entry system to record transactions. The following journal entry is made: Debit Cash 1,000, Credit Accounts Payable 1,000. What is the effect of this transaction on the accounting equation?",
+      "options": {
+        "A": "Increases assets and decreases liabilities",
+        "B": "Decreases assets and increases liabilities",
+        "C": "Increases liabilities and decreases equity",
+        "D": "Has no effect on the accounting equation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0087",
+      "type": "mcq",
+      "stem": "A company has the following ledger accounts: Cash 10,000, Accounts Payable 5,000, Sales Revenue 20,000. What is the total amount of assets?",
+      "options": {
+        "A": "15,000",
+        "B": "20,000",
+        "C": "25,000",
+        "D": "30,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0088",
+      "type": "mcq",
+      "stem": "A company has the following bank statement: Debit 1,000, Credit 500. What is the net change in cash?",
+      "options": {
+        "A": "500",
+        "B": "1,000",
+        "C": "1,500",
+        "D": "2,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0089",
+      "type": "mcq",
+      "stem": "A company uses the straight-line method of depreciation. The asset cost 10,000 and has a useful life of 5 years. What is the annual depreciation expense?",
+      "options": {
+        "A": "2,000",
+        "B": "2,500",
+        "C": "3,000",
+        "D": "3,500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0090",
+      "type": "mcq",
+      "stem": "A company has the following trial balance: Cash 10,000, Accounts Payable 5,000, Sales Revenue 20,000. What is the total amount of assets?",
+      "options": {
+        "A": "15,000",
+        "B": "20,000",
+        "C": "25,000",
+        "D": "30,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0091",
+      "type": "mcq",
+      "stem": "A company issues 10,000, 10% preference shares of ₦1 each at a premium of ₦0.50 per share. Calculate the total amount received from the issue of these shares.",
+      "options": {
+        "A": "₦0,500",
+        "B": "₦1,000",
+        "C": "₦1,050",
+        "D": "₦1,500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0092",
+      "type": "mcq",
+      "stem": "A company has a capital structure consisting of ₦0.5 million ordinary shares of ₡0 each and ₡0 million 10% preference shares of ₥0 each. Calculate the ratio of ordinary shares to preference shares.",
+      "options": {
+        "A": "1:10",
+        "B": "1:100",
+        "C": "1:50",
+        "D": "1:500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0093",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows a debit balance of ₦0.5 million in the profit and loss account. The company&#039;s capital structure consists of ₡0 million 10% preference shares and ₣0 million ordinary shares. Calculate the amount of retained earnings.",
+      "options": {
+        "A": "₡0 million",
+        "B": "₢0 million",
+        "C": "₣0 million",
+        "D": "₤0 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0094",
+      "type": "mcq",
+      "stem": "A company issues 5,000, 10% debentures of ₡00 each at a discount of ₥ per debenture. Calculate the total amount received from the issue of these debentures.",
+      "options": {
+        "A": "₤5,000",
+        "B": "₥0,000",
+        "C": "₥5,000",
+        "D": "₦0,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0095",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a credit balance of ₡0 million in the sales account. The company&#039;s capital structure consists of ₢0 million ordinary shares and ₣0 million 10% preference shares. Calculate the amount of retained earnings.",
+      "options": {
+        "A": "₢0 million",
+        "B": "₣0 million",
+        "C": "₤0 million",
+        "D": "₥0 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0096",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows an error of ₦5,000 due to an incorrect posting in the ledger. The error is discovered during the preparation of the balance sheet. What is the correct procedure to rectify this error?",
+      "options": {
+        "A": "Correct the error by making an adjusting entry in the ledger.",
+        "B": "Correct the error by making an adjusting entry in the journal.",
+        "C": "Correct the error by making an adjusting entry in the trial balance.",
+        "D": "Correct the error by making an adjusting entry in the financial statements."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0097",
+      "type": "mcq",
+      "stem": "A company uses a self-balancing ledger to record its transactions. The ledger shows the following balances: Cash ₦100,000; Accounts Payable ₦50,000; and Common Stock ₦200,000. What is the total equity of the company?",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦300,000",
+        "C": "₦350,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0098",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows the following transactions: Cash received from customers ₦100,000; Cash paid to suppliers ₦50,000; and Cash received from bank ₦20,000. What is the total cash balance of the company?",
+      "options": {
+        "A": "₦170,000",
+        "B": "₦180,000",
+        "C": "₦190,000",
+        "D": "₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0099",
+      "type": "mcq",
+      "stem": "A government agency prepares its financial statements in accordance with the Public Sector Accounting Standards (PSAS). The agency&#039;s financial statements show a net loss of ₦500,000. What is the correct treatment of this loss?",
+      "options": {
+        "A": "The loss is transferred to the retained earnings account.",
+        "B": "The loss is transferred to the general reserve account.",
+        "C": "The loss is transferred to the capital reserve account.",
+        "D": "The loss is transferred to the appropriations account."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0100",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements show a net income of ₦1,000,000. The company&#039;s tax rate is 25%. What is the amount of income tax payable?",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦300,000",
+        "C": "₦350,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0101",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a debit balance of ₦15,000 in the account &#039;Rent Received&#039; and a credit balance of ₦20,000 in the account &#039;Rent Paid&#039;. What is the correct journal entry to correct this discrepancy?",
+      "options": {
+        "A": "₦5,000 debit to Rent Received and ₦5,000 credit to Rent Paid",
+        "B": "₦10,000 debit to Rent Received and ₦10,000 credit to Rent Paid",
+        "C": "₦15,000 debit to Rent Received and ₦20,000 credit to Rent Paid",
+        "D": "₦20,000 debit to Rent Received and ₦15,000 credit to Rent Paid"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0102",
+      "type": "mcq",
+      "stem": "A partnership has two partners, A and B. The capital accounts of A and B are ₦50,000 and ₦30,000 respectively. The profit-sharing ratio is 3:2. What is the correct distribution of profit?",
+      "options": {
+        "A": "₦60,000 to A and ₦40,000 to B",
+        "B": "₦45,000 to A and ₦30,000 to B",
+        "C": "₦60,000 to A and ₦20,000 to B",
+        "D": "₦45,000 to A and ₦25,000 to B"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0103",
+      "type": "mcq",
+      "stem": "A company uses a self-balancing ledger to record its transactions. The ledger shows a debit balance of ₦10,000 in the account &#039;Purchases&#039; and a credit balance of ₦15,000 in the account &#039;Sales&#039;. What is the correct journal entry to correct this discrepancy?",
+      "options": {
+        "A": "₦5,000 debit to Purchases and ₦5,000 credit to Sales",
+        "B": "₦10,000 debit to Purchases and ₦10,000 credit to Sales",
+        "C": "₦15,000 debit to Purchases and ₦20,000 credit to Sales",
+        "D": "₦20,000 debit to Purchases and ₦15,000 credit to Sales"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0104",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a debit balance of ₦20,000 in the account &#039;Wages&#039; and a credit balance of ₦25,000 in the account &#039;Salaries&#039;. What is the correct journal entry to correct this discrepancy?",
+      "options": {
+        "A": "₦5,000 debit to Wages and ₦5,000 credit to Salaries",
+        "B": "₦10,000 debit to Wages and ₦10,000 credit to Salaries",
+        "C": "₦20,000 debit to Wages and ₦25,000 credit to Salaries",
+        "D": "₦25,000 debit to Wages and ₦20,000 credit to Salaries"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0105",
+      "type": "mcq",
+      "stem": "A company uses a control account to record its transactions. The control account shows a debit balance of ₦15,000 in the account &#039;Purchases&#039; and a credit balance of ₦20,000 in the account &#039;Sales&#039;. What is the correct journal entry to correct this discrepancy?",
+      "options": {
+        "A": "₦5,000 debit to Purchases and ₦5,000 credit to Sales",
+        "B": "₦10,000 debit to Purchases and ₦10,000 credit to Sales",
+        "C": "₦15,000 debit to Purchases and ₦20,000 credit to Sales",
+        "D": "₦20,000 debit to Purchases and ₦15,000 credit to Sales"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0106",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a debit balance of ₦25,000 in the account &#039;Rent Paid&#039; and a credit balance of ₦30,000 in the account &#039;Rent Received&#039;. What is the correct journal entry to correct this discrepancy?",
+      "options": {
+        "A": "₦5,000 debit to Rent Paid and ₦5,000 credit to Rent Received",
+        "B": "₦10,000 debit to Rent Paid and ₦10,000 credit to Rent Received",
+        "C": "₦25,000 debit to Rent Paid and ₦30,000 credit to Rent Received",
+        "D": "₦30,000 debit to Rent Paid and ₦25,000 credit to Rent Received"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0107",
+      "type": "mcq",
+      "stem": "A company uses a self-balancing ledger to record its transactions. The ledger shows a debit balance of ₦20,000 in the account &#039;Purchases&#039; and a credit balance of ₦25,000 in the account &#039;Sales&#039;. What is the correct journal entry to correct this discrepancy?",
+      "options": {
+        "A": "₦5,000 debit to Purchases and ₦5,000 credit to Sales",
+        "B": "₦10,000 debit to Purchases and ₦10,000 credit to Sales",
+        "C": "₦20,000 debit to Purchases and ₦25,000 credit to Sales",
+        "D": "₦25,000 debit to Purchases and ₦20,000 credit to Sales"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0108",
+      "type": "mcq",
+      "stem": "A company issued 5,000, 9% debentures of ₦100 each at a discount of 5%. Calculate the amount received from debenture holders.",
+      "options": {
+        "A": "₦475,000",
+        "B": "₦475,000",
+        "C": "₦475,000",
+        "D": "₦475,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0109",
+      "type": "mcq",
+      "stem": "A company has a profit of ₦1,000,000. If the company&#039;s tax rate is 25%, calculate the amount of tax payable.",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦250,000",
+        "C": "₦250,000",
+        "D": "₦250,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0110",
+      "type": "mcq",
+      "stem": "A company has a capital of ₦500,000 and a profit of ₦200,000. If the company&#039;s capital is to be increased by 20%, calculate the new capital.",
+      "options": {
+        "A": "₦600,000",
+        "B": "₦600,000",
+        "C": "₦600,000",
+        "D": "₦600,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0111",
+      "type": "mcq",
+      "stem": "A company issued 10,000 shares of ₦ 1 each at a premium of ₦ 2 per share. The issue expenses were ₦ 50,000. Calculate the amount received from the issue of shares.",
+      "options": {
+        "A": "₦ 120,000",
+        "B": "₦ 130,000",
+        "C": "₦ 140,000",
+        "D": "₦ 150,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0112",
+      "type": "mcq",
+      "stem": "A firm&#039;s trial balance showed the following balances: Accounts Payable ₦ 50,000, Sales Revenue ₦ 200,000, Cost of Goods Sold ₦ 150,000, and Common Stock ₦ 100,000. Prepare a balance sheet.",
+      "options": {
+        "A": "₦ 50,000",
+        "B": "₦ 100,000",
+        "C": "₦ 150,000",
+        "D": "₦ 200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0113",
+      "type": "mcq",
+      "stem": "A company purchased a machine for ₦ 80,000. The machine has a useful life of 5 years and a residual value of ₦ 10,000. Calculate the annual depreciation using the straight-line method.",
+      "options": {
+        "A": "₦ 15,000",
+        "B": "₦ 16,000",
+        "C": "₦ 17,000",
+        "D": "₦ 18,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0114",
+      "type": "mcq",
+      "stem": "A partnership has two partners, A and B. Partner A invested ₦ 50,000 and Partner B invested ₦ 30,000. The profit-sharing ratio is 3:2. Calculate the amount of profit to be distributed to Partner A.",
+      "options": {
+        "A": "₦ 30,000",
+        "B": "₦ 35,000",
+        "C": "₦ 40,000",
+        "D": "₦ 45,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0115",
+      "type": "mcq",
+      "stem": "A company issued 5,000 debentures of ₦ 100 each at a premium of ₦ 5 per debenture. The issue expenses were ₦ 20,000. Calculate the amount received from the issue of debentures.",
+      "options": {
+        "A": "₦ 500,000",
+        "B": "₦ 510,000",
+        "C": "₦ 520,000",
+        "D": "₦ 530,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0116",
+      "type": "mcq",
+      "stem": "A partnership is dissolved when a partner dies. What is the accounting treatment for the deceased partner&#039;s share of profits?",
+      "options": {
+        "A": "The deceased partner's share of profits is written off immediately.",
+        "B": "The deceased partner's share of profits is transferred to the partner's capital account.",
+        "C": "The deceased partner's share of profits is transferred to the partner's current account.",
+        "D": "The deceased partner's share of profits is transferred to the partner's drawings account."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0117",
+      "type": "mcq",
+      "stem": "A company issues 1,000 shares of ₠ 10 each at a premium of ₠ 5 per share. What is the total amount received from the issue of shares?",
+      "options": {
+        "A": "₠ 10,000",
+        "B": "₠ 15,000",
+        "C": "₠ 20,000",
+        "D": "₠ 25,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0118",
+      "type": "mcq",
+      "stem": "A manufacturing company produces 10,000 units of a product at a cost of ₠ 50 per unit. The selling price is ₠ 80 per unit. What is the profit per unit?",
+      "options": {
+        "A": "₠ 30",
+        "B": "₠ 40",
+        "C": "₠ 50",
+        "D": "₠ 60"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0119",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a discrepancy of ₠ 1,000. What is the accounting treatment for the discrepancy?",
+      "options": {
+        "A": "The discrepancy is written off as an expense.",
+        "B": "The discrepancy is transferred to the partner's capital account.",
+        "C": "The discrepancy is transferred to the partner's current account.",
+        "D": "The discrepancy is transferred to the partner's drawings account."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0120",
+      "type": "mcq",
+      "stem": "A company issued 5,000 shares of 10 par value at a premium of 5 per share. The company also issued 2,000 debentures of 100 each. Calculate the total amount of share capital and debenture capital.",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦300,000",
+        "C": "₦350,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0121",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows the following transactions: | Date | Particulars | Debit | Credit | | --- | --- | --- | --- | | 1 Jan | Cash | 1,000 |  | | 2 Jan | Bank |  | 500 | | 3 Jan | Cash |  | 800 | | 4 Jan | Bank |  | 200 | Calculate the balance of the cash book.",
+      "options": {
+        "A": "₦1,200",
+        "B": "₦1,400",
+        "C": "₦1,600",
+        "D": "₦1,800"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0122",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows the following: | Assets | ₦ | Liabilities | ₦ | | --- | --- | --- | --- | | Cash | 10,000 | Debentures | 20,000 | | Bank | 15,000 | Share Capital | 30,000 | | Stock | 20,000 | | | | | 45,000 | | 50,000 | Calculate the amount of stock.",
+      "options": {
+        "A": "₦10,000",
+        "B": "₦15,000",
+        "C": "₦20,000",
+        "D": "₦25,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0123",
+      "type": "mcq",
+      "stem": "In a partnership account, the capital of two partners, A and B, is shared in the ratio 3:2. If the total capital is ₦150,000, what is the amount of capital that partner A has?",
+      "options": {
+        "A": "₦90,000",
+        "B": "₦60,000",
+        "C": "₦120,000",
+        "D": "₦180,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0124",
+      "type": "mcq",
+      "stem": "A manufacturing company produces two products, X and Y. Product X requires 2 hours of labor and 3 units of raw material, while product Y requires 3 hours of labor and 2 units of raw material. If the company has 120 hours of labor and 180 units of raw material available, how many units of product X and product Y should be produced to maximize profit?",
+      "options": {
+        "A": "20 units of X and 30 units of Y",
+        "B": "30 units of X and 20 units of Y",
+        "C": "25 units of X and 25 units of Y",
+        "D": "35 units of X and 15 units of Y"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0125",
+      "type": "mcq",
+      "stem": "A company uses a self-balancing ledger to record its transactions. The ledger has the following accounts: Cash, Accounts Receivable, Accounts Payable, Sales, and Cost of Goods Sold. If the company&#039;s trial balance shows a debit balance of ₦10,000 in the Cash account and a credit balance of ₦15,000 in the Accounts Payable account, what is the net effect on the company&#039;s equity?",
+      "options": {
+        "A": "Increase in equity by ₦5,000",
+        "B": "Decrease in equity by ₦5,000",
+        "C": "No effect on equity",
+        "D": "Increase in equity by ₦10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0126",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows the following accounts: Sales (₦100,000), Cost of Goods Sold (₦60,000), and Net Income (₦40,000). If the company&#039;s accounting period is 12 months, what is the company&#039;s net income per month?",
+      "options": {
+        "A": "₦3,333",
+        "B": "₦4,000",
+        "C": "₦5,000",
+        "D": "₦6,667"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0127",
+      "type": "mcq",
+      "stem": "A company&#039;s accounting equation is Assets = Liabilities + Equity. If the company&#039;s assets are ₦200,000, liabilities are ₦100,000, and equity is ₦50,000, what is the company&#039;s net income?",
+      "options": {
+        "A": "₦50,000",
+        "B": "₦60,000",
+        "C": "₦70,000",
+        "D": "₦80,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0128",
+      "type": "mcq",
+      "stem": "In a public sector accounting system, what is the primary purpose of the &#039;Object of Account&#039; column in the Ledger Account?",
+      "options": {
+        "A": "To record the source of the transaction",
+        "B": "To identify the account to be debited or credited",
+        "C": "To specify the nature of the transaction",
+        "D": "To indicate the date of the transaction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0129",
+      "type": "mcq",
+      "stem": "A company uses the straight-line method of depreciation. If the asset&#039;s useful life is 5 years and the residual value is ₦10,000, what is the annual depreciation charge if the asset&#039;s cost is ₦150,000?",
+      "options": {
+        "A": "₦25,000",
+        "B": "₦30,000",
+        "C": "₦35,000",
+        "D": "₦40,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0130",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows the following transactions: | Date | Particulars | Debit | Credit | | --- | --- | --- | --- | | 1st Jan | Cash | ₦10,000 |  | | 2nd Jan | Bank |  | ₦8,000 | | 3rd Jan | Cash |  | ₦2,000 | What is the correct balance of the cash account?",
+      "options": {
+        "A": "₦12,000",
+        "B": "₦10,000",
+        "C": "₦8,000",
+        "D": "₦6,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0131",
+      "type": "mcq",
+      "stem": "A company uses the double-entry system to record transactions. The following journal entry was made: Debit Cash 1,000, Credit Accounts Payable 1,000. What is the effect of this transaction on the accounting equation?",
+      "options": {
+        "A": "Increases both assets and liabilities",
+        "B": "Increases assets and decreases liabilities",
+        "C": "Decreases assets and increases liabilities",
+        "D": "Increases liabilities and decreases assets"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0132",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows the following accounts: Accounts Receivable 10,000, Sales Revenue 20,000. What is the correct journal entry to record the sale of goods on account?",
+      "options": {
+        "A": "Debit Accounts Receivable 10,000, Credit Sales Revenue 20,000",
+        "B": "Debit Sales Revenue 20,000, Credit Accounts Receivable 10,000",
+        "C": "Debit Cash 10,000, Credit Sales Revenue 20,000",
+        "D": "Debit Sales Revenue 20,000, Credit Cash 10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0133",
+      "type": "mcq",
+      "stem": "A partnership has two partners, A and B. The partnership agreement states that profits and losses are shared in the ratio 3:2. If the partnership has a profit of 10,000, how much will each partner receive?",
+      "options": {
+        "A": "Partner A: 6,000, Partner B: 4,000",
+        "B": "Partner A: 4,000, Partner B: 6,000",
+        "C": "Partner A: 5,000, Partner B: 5,000",
+        "D": "Partner A: 7,000, Partner B: 3,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0134",
+      "type": "mcq",
+      "stem": "A government agency has the following transactions: Purchase of office supplies 5,000, Payment of salaries 10,000. What is the correct journal entry to record these transactions?",
+      "options": {
+        "A": "Debit Office Supplies 5,000, Credit Salaries Expense 10,000",
+        "B": "Debit Salaries Expense 10,000, Credit Office Supplies 5,000",
+        "C": "Debit Cash 15,000, Credit Office Supplies 5,000 and Salaries Expense 10,000",
+        "D": "Debit Office Supplies 5,000, Credit Cash 10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0135",
+      "type": "mcq",
+      "stem": "A company has the following transactions: Sale of goods on account 20,000, Purchase of inventory 15,000. What is the correct journal entry to record these transactions?",
+      "options": {
+        "A": "Debit Accounts Receivable 20,000, Credit Sales Revenue 20,000",
+        "B": "Debit Inventory 15,000, Credit Purchases 15,000",
+        "C": "Debit Sales Revenue 20,000, Credit Accounts Receivable 20,000",
+        "D": "Debit Purchases 15,000, Credit Inventory 15,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0136",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a debit balance of ₦15,000 in the &#039;Rent Received&#039; account. Prepare the necessary journal entry to correct this error.",
+      "options": {
+        "A": "₦15,000 debit to 'Rent Received' and ₦15,000 credit to 'Rent Paid'",
+        "B": "₦15,000 debit to 'Rent Paid' and ₦15,000 credit to 'Rent Received'",
+        "C": "₦15,000 debit to 'Rent Received' and ₦15,000 credit to 'Cash'",
+        "D": "₦15,000 debit to 'Cash' and ₦15,000 credit to 'Rent Received'"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0137",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a balance of ₦20,000 in the &#039;Cash&#039; account. However, the bank statement shows a balance of ₦18,000. Prepare the necessary bank reconciliation statement.",
+      "options": {
+        "A": "₦2,000 bank overdraft",
+        "B": "₦2,000 unrecorded deposit",
+        "C": "₦2,000 unrecorded withdrawal",
+        "D": "₦2,000 bank interest"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0138",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows a total asset value of ₦100,000 and a total liability value of ₦80,000. Calculate the company&#039;s equity.",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦30,000",
+        "C": "₦40,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0139",
+      "type": "mcq",
+      "stem": "A company&#039;s profit and loss account shows a net profit of ₦50,000. However, the balance sheet shows a decrease in equity of ₦20,000. Calculate the company&#039;s retained earnings.",
+      "options": {
+        "A": "₦30,000",
+        "B": "₦40,000",
+        "C": "₦50,000",
+        "D": "₦60,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0140",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows a debit balance of ₦10,000 in the &#039;Salaries&#039; account. Prepare the necessary journal entry to correct this error.",
+      "options": {
+        "A": "₦10,000 debit to 'Salaries' and ₦10,000 credit to 'Cash'",
+        "B": "₦10,000 debit to 'Cash' and ₦10,000 credit to 'Salaries'",
+        "C": "₦10,000 debit to 'Salaries' and ₦10,000 credit to 'Rent Received'",
+        "D": "₦10,000 debit to 'Rent Received' and ₦10,000 credit to 'Salaries'"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0141",
+      "type": "mcq",
+      "stem": "A company&#039;s trading account for the year ended 31st December 2019 shows a profit of ₦1,500,000. The balance sheet as at 31st December 2018 showed a capital of ₦2,000,000 and a profit and loss account balance of ₦500,000. If the company&#039;s capital as at 31st December 2019 is ₦3,500,000, what is the amount of drawings made by the proprietor during the year?",
+      "options": {
+        "A": "₦1,000,000",
+        "B": "₦1,500,000",
+        "C": "₦2,000,000",
+        "D": "₦2,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0142",
+      "type": "mcq",
+      "stem": "A manufacturing company uses a job costing system. The following data are extracted from the company&#039;s records for the year ended 31st December 2019:",
+      "options": {
+        "A": "₦1,000,000",
+        "B": "₦1,500,000",
+        "C": "₦2,000,000",
+        "D": "₦2,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0143",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet as at 31st December 2018 showed a capital of ₦2,000,000 and a profit and loss account balance of ₦500,000. If the company&#039;s capital as at 31st December 2019 is ₦3,500,000 and the profit for the year ended 31st December 2019 is ₦1,500,000, what is the amount of drawings made by the proprietor during the year?",
+      "options": {
+        "A": "₦1,000,000",
+        "B": "₦1,500,000",
+        "C": "₦2,000,000",
+        "D": "₦2,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0144",
+      "type": "mcq",
+      "stem": "A company issued 5,000, 9% debentures of ₦100 each at a discount of 5%. The debentures are redeemable at the end of 5 years. Calculate the amount of discount on the debentures.",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦500,000",
+        "C": "₦750,000",
+        "D": "₦1,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0145",
+      "type": "mcq",
+      "stem": "A company&#039;s trading account for the year ended 31st December 20X7 is as follows: Sales: ₦1,500,000; Purchases: ₦1,200,000; Carriage Inward: ₦50,000; Carriage Outward: ₦20,000. Calculate the cost of goods sold.",
+      "options": {
+        "A": "₦1,230,000",
+        "B": "₦1,250,000",
+        "C": "₦1,270,000",
+        "D": "₦1,300,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0146",
+      "type": "mcq",
+      "stem": "A company issued 10,000, 10% preference shares of ₦10 each at a premium of ₦2 per share. Calculate the amount of premium received on the issue of preference shares.",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦40,000",
+        "C": "₦60,000",
+        "D": "₦80,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0147",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet as at 31st December 20X7 is as follows: Fixed Assets ₦1,500,000; Current Assets ₦1,200,000; Capital and Reserves ₦2,000,000; Debentures ₦500,000. Calculate the amount of working capital.",
+      "options": {
+        "A": "₦1,700,000",
+        "B": "₦1,800,000",
+        "C": "₦1,900,000",
+        "D": "₦2,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0148",
+      "type": "mcq",
+      "stem": "A company&#039;s profit and loss account for the year ended 31st December 20X7 is as follows: Sales: ₦1,500,000; Purchases: ₦1,200,000; Gross Profit: ₦300,000; Operating Expenses: ₦150,000; Net Profit: ₦150,000. Calculate the gross profit percentage.",
+      "options": {
+        "A": "20%",
+        "B": "25%",
+        "C": "30%",
+        "D": "35%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0149",
+      "type": "mcq",
+      "stem": "A company issued 5,000, 9% debentures of ₦100 each at a premium of ₦5 per share. The debentures are redeemable at the end of 5 years. Calculate the amount of premium received on the issue of debentures.",
+      "options": {
+        "A": "₦25,000",
+        "B": "₦50,000",
+        "C": "₦75,000",
+        "D": "₦100,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0150",
+      "type": "mcq",
+      "stem": "A company uses the weighted average method to value its inventory. The following data is available for the year ended December 31, 2022: Cost of goods available for sale: ₦1,500,000; Net realizable value of goods on hand: ₦1,200,000; Beginning inventory: ₦400,000; Purchases: ₦800,000. Calculate the cost of goods sold using the weighted average method.",
+      "options": {
+        "A": "₦900,000",
+        "B": "₦1,000,000",
+        "C": "₦1,200,000",
+        "D": "₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0151",
+      "type": "mcq",
+      "stem": "A company has the following transactions related to its manufacturing accounts: Raw materials purchased: ₦300,000; Direct labor: ₦200,000; Factory overhead: ₦150,000; Work-in-progress: ₦100,000. Calculate the total cost of production.",
+      "options": {
+        "A": "₦750,000",
+        "B": "₦800,000",
+        "C": "₦850,000",
+        "D": "₦900,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0152",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a balance of ₦150,000. However, the bank statement shows a balance of ₦120,000. The difference is due to a discrepancy in the cash book. What is the most likely reason for this discrepancy?",
+      "options": {
+        "A": "The company has not recorded a deposit of ₦30,000.",
+        "B": "The company has not recorded a withdrawal of ₦30,000.",
+        "C": "The company has not recorded a sale of ₦30,000.",
+        "D": "The company has not recorded a purchase of ₦30,000."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0153",
+      "type": "mcq",
+      "stem": "A company&#039;s trading account shows a profit of ₦200,000. However, the profit and loss account shows a loss of ₦50,000. What is the reason for this discrepancy?",
+      "options": {
+        "A": "The company has not recorded a sale of ₦250,000.",
+        "B": "The company has not recorded a purchase of ₦250,000.",
+        "C": "The company has not recorded a depreciation charge of ₦250,000.",
+        "D": "The company has not recorded a provision for bad debts of ₦250,000."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0154",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows a total assets of ₦1,500,000 and a total liabilities of ₦1,000,000. What is the company&#039;s equity?",
+      "options": {
+        "A": "₦500,000",
+        "B": "₦750,000",
+        "C": "₦1,000,000",
+        "D": "₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0155",
+      "type": "mcq",
+      "stem": "A company issued 5,000, 9% debentures of ₦100 each at a discount of 5%. The debentures are redeemable after 5 years. Calculate the amount of discount on the debentures.",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦200,000",
+        "C": "₦300,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0156",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows the following transactions: | Date | Particulars | Debit | Credit | | --- | --- | --- | --- | | 1 Jan | Cash | ₦10,000 |  | | 2 Jan | Bank |  | ₦15,000 | | 3 Jan | Cash |  | ₦20,000 | | 4 Jan | Bank | ₦30,000 |  | | 5 Jan | Cash |  | ₦25,000 | What is the balance of the cash account?",
+      "options": {
+        "A": "₦5,000",
+        "B": "₦10,000",
+        "C": "₦15,000",
+        "D": "₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0157",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows the following balances: | Account | Debit | Credit | | --- | --- | --- | | Sales | ₦100,000 |  | | Purchases |  | ₦150,000 | | Wages | ₦20,000 |  | | Rent |  | ₦30,000 | What is the total of the trial balance?",
+      "options": {
+        "A": "₦200,000",
+        "B": "₦250,000",
+        "C": "₦300,000",
+        "D": "₦350,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0158",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows the following transactions: | Date | Particulars | Debit | Credit | | --- | --- | --- | --- | | 1 Jan | Cash | ₦10,000 |  | | 2 Jan | Bank |  | ₦15,000 | | 3 Jan | Cash |  | ₦20,000 | | 4 Jan | Bank | ₦30,000 |  | | 5 Jan | Cash |  | ₦25,000 | What is the balance of the bank account?",
+      "options": {
+        "A": "₦5,000",
+        "B": "₦10,000",
+        "C": "₦15,000",
+        "D": "₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0159",
+      "type": "mcq",
+      "stem": "A company produces two products, X and Y, using two machines, A and B. The production process for X requires 2 hours on machine A and 3 hours on machine B, while the production process for Y requires 3 hours on machine A and 2 hours on machine B. If machine A operates for 24 hours and machine B operates for 18 hours, how many units of product X and Y should the company produce?",
+      "options": {
+        "A": "(10, 8)",
+        "B": "(8, 10)",
+        "C": "(12, 6)",
+        "D": "(6, 12)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0160",
+      "type": "mcq",
+      "stem": "A firm has two departments, A and B, with the following profit and loss accounts for the year ended December 31, 2022:",
+      "options": {
+        "A": "Department A: ₦ 100,000; Department B: ₦ 150,000",
+        "B": "Department A: ₦ 150,000; Department B: ₦ 100,000",
+        "C": "Department A: ₦ 200,000; Department B: ₦ 50,000",
+        "D": "Department A: ₦ 50,000; Department B: ₦ 200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0161",
+      "type": "mcq",
+      "stem": "A company has the following transactions in its cash book for the month of January 2023:",
+      "options": {
+        "A": "₦ 10,000",
+        "B": "₦ 20,000",
+        "C": "₦ 30,000",
+        "D": "₦ 40,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0162",
+      "type": "mcq",
+      "stem": "A partnership has two partners, A and B, with the following capital accounts:",
+      "options": {
+        "A": "A: ₦ 50,000; B: ₦ 30,000",
+        "B": "A: ₦ 30,000; B: ₦ 50,000",
+        "C": "A: ₦ 40,000; B: ₦ 20,000",
+        "D": "A: ₦ 20,000; B: ₦ 40,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0163",
+      "type": "mcq",
+      "stem": "A company has the following journal entries for the month of January 2023:",
+      "options": {
+        "A": "₦ 10,000",
+        "B": "₦ 20,000",
+        "C": "₦ 30,000",
+        "D": "₦ 40,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0164",
+      "type": "mcq",
+      "stem": "A company uses the straight-line method to depreciate its assets. If the asset cost ₦120,000 and has a useful life of 5 years, what is the annual depreciation charge?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦24,000",
+        "C": "₦28,000",
+        "D": "₦32,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0165",
+      "type": "mcq",
+      "stem": "A trader purchases goods on credit for ₦150,000. He sells the goods for ₦200,000 and incurs a commission of ₦5,000. What is his profit?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦25,000",
+        "C": "₦30,000",
+        "D": "₦35,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0166",
+      "type": "mcq",
+      "stem": "A partnership is formed between two individuals, A and B, with a capital of ₦200,000 and ₦300,000 respectively. If the profit is ₦50,000, what is A&#039;s share of the profit?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦25,000",
+        "C": "₦30,000",
+        "D": "₦35,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0167",
+      "type": "mcq",
+      "stem": "A company prepares its trial balance and discovers an error of ₦10,000. What is the correct journal entry to rectify the error?",
+      "options": {
+        "A": "Debit Sales and Credit Profit",
+        "B": "Debit Profit and Credit Sales",
+        "C": "Debit Sales and Credit Purchases",
+        "D": "Debit Purchases and Credit Sales"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0168",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows an asset of ₦100,000 and a liability of ₦50,000. What is the company&#039;s equity?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦30,000",
+        "C": "₦40,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0169",
+      "type": "mcq",
+      "stem": "A company uses the double-entry system of accounting. The company&#039;s trial balance shows the following balances: Accounts Payable ₦150,000, Accounts Receivable ₦200,000, Common Stock ₦500,000, Dividends ₦20,000, Equipment ₦300,000, Interest Expense ₦15,000, Interest Income ₦12,000, Net Income ₦100,000, Retained Earnings ₦250,000, Salaries Expense ₦80,000, Sales Revenue ₦600,000, and Utilities Expense ₦30,000. What is the correct order of the accounts in the general ledger?",
+      "options": {
+        "A": "Assets, Liabilities, Equity, Revenues, Expenses, Dividends",
+        "B": "Assets, Liabilities, Equity, Revenues, Dividends, Expenses",
+        "C": "Assets, Liabilities, Equity, Revenues, Expenses, Dividends",
+        "D": "Assets, Liabilities, Equity, Dividends, Revenues, Expenses"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0170",
+      "type": "mcq",
+      "stem": "A manufacturing company uses a job order costing system. The company has the following costs: direct materials ₦120,000, direct labor ₦150,000, and overhead ₦180,000. What is the total cost of production?",
+      "options": {
+        "A": "₦450,000",
+        "B": "₦450,000",
+        "C": "₦450,000",
+        "D": "₦450,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0171",
+      "type": "mcq",
+      "stem": "A company uses the straight-line method of depreciation. The company&#039;s asset has a cost of ₦300,000, a useful life of 5 years, and a residual value of ₦50,000. What is the annual depreciation expense?",
+      "options": {
+        "A": "₦50,000",
+        "B": "₦50,000",
+        "C": "₦50,000",
+        "D": "₦50,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0172",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows the following balances: Accounts Payable ₦150,000, Accounts Receivable ₦200,000, Common Stock ₦500,000, Dividends ₦20,000, Equipment ₦300,000, Interest Expense ₦15,000, Interest Income ₦12,000, Net Income ₦100,000, Retained Earnings ₦250,000, Salaries Expense ₦80,000, Sales Revenue ₦600,000, and Utilities Expense ₦30,000. What is the correct order of the accounts in the general ledger?",
+      "options": {
+        "A": "Assets, Liabilities, Equity, Revenues, Expenses, Dividends",
+        "B": "Assets, Liabilities, Equity, Revenues, Dividends, Expenses",
+        "C": "Assets, Liabilities, Equity, Revenues, Expenses, Dividends",
+        "D": "Assets, Liabilities, Equity, Dividends, Revenues, Expenses"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0173",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows an error of ₦300 in the debit side of the &#039;Office Equipment&#039; account. The correct balance of the &#039;Office Equipment&#039; account is ₦1000. What is the correct balance of the &#039;Office Equipment&#039; account after correcting the error?",
+      "options": {
+        "A": "₦1000",
+        "B": "₦3000",
+        "C": "₦5000",
+        "D": "₦7000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0174",
+      "type": "mcq",
+      "stem": "A firm&#039;s cash book shows a balance of ₦1000. The bank statement shows a balance of ₦3000. The difference is due to a bank overdraft of ₦000. What is the correct balance of the cash book?",
+      "options": {
+        "A": "₦1000",
+        "B": "₦2000",
+        "C": "₦3000",
+        "D": "₦4000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0175",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows a total of ₦10000000 in assets and ₦30000000 in liabilities. What is the company&#039;s net worth?",
+      "options": {
+        "A": "₥8000000",
+        "B": "₥9000000",
+        "C": "₦0000000",
+        "D": "₦1000000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0176",
+      "type": "mcq",
+      "stem": "A partnership has two partners, A and B. Partner A&#039;s capital is ₦10000 and partner B&#039;s capital is ₦20000. The profit-sharing ratio is 3:2. What is the amount of profit to be shared by partner A?",
+      "options": {
+        "A": "₦10000",
+        "B": "₦20000",
+        "C": "₦30000",
+        "D": "₦40000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0177",
+      "type": "mcq",
+      "stem": "A company issued 10,000 shares of £ 1 each at a premium of £ 0.50 per share. The issue expenses were £ 10,000. Prepare the journal entry to record the issue of shares.",
+      "options": {
+        "A": "Debit Share Capital £ 10,000, Credit Share Premium £ 5,000, Credit Issue Expenses £ 10,000",
+        "B": "Debit Share Capital £ 10,000, Credit Share Premium £ 10,000, Credit Issue Expenses £ 5,000",
+        "C": "Debit Share Capital £ 10,000, Credit Share Premium £ 5,000, Credit Issue Expenses £ 5,000",
+        "D": "Debit Share Capital £ 10,000, Credit Share Premium £ 10,000, Credit Issue Expenses £ 10,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0178",
+      "type": "mcq",
+      "stem": "A partnership of three partners has a capital balance of £ 100,000. The partners&#039; capital accounts are as follows: A £ 30,000, B £ 40,000, C £ 30,000. The profit-sharing ratio is 2:3:1. Prepare the partnership balance sheet.",
+      "options": {
+        "A": "A£ 30,000, B£ 40,000, C£ 30,000, Total Capital £ 100,000",
+        "B": "A£ 60,000, B£ 80,000, C£ 40,000, Total Capital £ 180,000",
+        "C": "A£ 40,000, B£ 60,000, C£ 40,000, Total Capital £ 140,000",
+        "D": "A£ 60,000, B£ 80,000, C£ 40,000, Total Capital £ 180,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0179",
+      "type": "mcq",
+      "stem": "A company has the following transactions: Purchased goods for £ 10,000, Sold goods for £ 15,000, Purchased equipment for £ 5,000. Prepare the journal entries for the above transactions.",
+      "options": {
+        "A": "Debit Purchases £ 10,000, Credit Cash £ 10,000, Debit Sales £ 15,000, Credit Cash £ 15,000, Debit Equipment £ 5,000, Credit Cash £ 5,000",
+        "B": "Debit Purchases £ 10,000, Credit Cash £ 10,000, Debit Sales £ 15,000, Credit Cash £ 15,000, Debit Equipment £ 5,000, Credit Purchases £ 5,000",
+        "C": "Debit Purchases £ 10,000, Credit Cash £ 10,000, Debit Sales £ 15,000, Credit Cash £ 15,000, Debit Equipment £ 5,000, Credit Sales £ 5,000",
+        "D": "Debit Purchases £ 10,000, Credit Cash £ 10,000, Debit Sales £ 15,000, Credit Cash £ 15,000, Debit Equipment £ 5,000, Credit Purchases £ 5,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0180",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a balance of ₦100,000. However, the bank statement shows a balance of ₦120,000. The difference of ₦20,000 is due to a dishonored cheque of ₦10,000 and an outstanding deposit of ₦10,000. What is the correct balance in the cash book?",
+      "options": {
+        "A": "₦90,000",
+        "B": "₦100,000",
+        "C": "₦110,000",
+        "D": "₦120,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0181",
+      "type": "mcq",
+      "stem": "A company purchases a machine for ₦500,000 and depreciates it by 10% per annum. What is the value of the machine after 3 years?",
+      "options": {
+        "A": "₦300,000",
+        "B": "₦350,000",
+        "C": "₦400,000",
+        "D": "₦450,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0182",
+      "type": "mcq",
+      "stem": "A company&#039;s trading account shows a profit of ₦200,000. However, the profit and loss account shows a loss of ₦50,000. What is the correct net profit?",
+      "options": {
+        "A": "₦150,000",
+        "B": "₦200,000",
+        "C": "₦250,000",
+        "D": "₦300,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0183",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows a total assets of ₦1,000,000 and total liabilities of ₦500,000. What is the correct net worth?",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦500,000",
+        "C": "₦750,000",
+        "D": "₦1,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0184",
+      "type": "mcq",
+      "stem": "A company&#039;s cash book shows a balance of ₦200,000. However, the bank statement shows a balance of ₦220,000. The difference of ₦20,000 is due to a bank charge of ₦10,000 and an outstanding deposit of ₦10,000. What is the correct balance in the cash book?",
+      "options": {
+        "A": "₦180,000",
+        "B": "₦200,000",
+        "C": "₦220,000",
+        "D": "₦240,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0185",
+      "type": "mcq",
+      "stem": "A company purchases a machine for ₦600,000 and depreciates it by 15% per annum. What is the value of the machine after 2 years?",
+      "options": {
+        "A": "₦420,000",
+        "B": "₦450,000",
+        "C": "₦480,000",
+        "D": "₦510,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0186",
+      "type": "mcq",
+      "stem": "In a partnership account, the capital of a partner who leaves the business is transferred to the remaining partners in the ratio of their current profits. If the capital of the departing partner is ₦120,000 and the current profits of the remaining partners are ₦80,000 and ₦60,000 respectively, what is the amount of capital that will be transferred to each partner?",
+      "options": {
+        "A": "₦40,000",
+        "B": "₦50,000",
+        "C": "₦60,000",
+        "D": "₦80,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0187",
+      "type": "mcq",
+      "stem": "A company issued 5,000, 9% debentures of ₦100 each at a discount of 5%. If the debentures are redeemable at a premium of 10% after 5 years, what is the amount of interest that will be paid on the debentures for the first year?",
+      "options": {
+        "A": "₦22,500",
+        "B": "₦25,000",
+        "C": "₦27,500",
+        "D": "₦30,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0188",
+      "type": "mcq",
+      "stem": "A public sector organization has the following transactions for the year: ₦10,000 received from the government for a grant ₦20,000 paid to an employee as salary ₦15,000 paid to a supplier for goods purchased ₦5,000 received from the sale of assets What is the net cash outflow for the year?",
+      "options": {
+        "A": "₦10,000",
+        "B": "₦15,000",
+        "C": "₦20,000",
+        "D": "₦25,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0189",
+      "type": "mcq",
+      "stem": "A company has the following balance sheet: Assets: ₦100,000 cash ₦50,000 accounts receivable ₦20,000 inventory Liabilities: ₦30,000 accounts payable ₦20,000 loans payable What is the net working capital of the company?",
+      "options": {
+        "A": "₦40,000",
+        "B": "₦50,000",
+        "C": "₦60,000",
+        "D": "₦70,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0190",
+      "type": "mcq",
+      "stem": "A partnership has the following capital accounts: Partner A: ₦50,000 Partner B: ₦30,000 Partner C: ₦20,000 If Partner A withdraws ₦10,000 from the business, what is the new capital balance of Partner B?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦25,000",
+        "C": "₦30,000",
+        "D": "₦35,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0191",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows an error of ₦0.50 in the debit side of the account &#039;Rent Received&#039;. The error is due to the omission of a receipt of ₦0.50 from the cash book. Prepare the necessary journal entry to rectify the error.",
+      "options": {
+        "A": "Debit Rent Received ₦0.50, Credit Cash ₦0.50",
+        "B": "Debit Rent Received ₦0.50, Credit Bank ₦0.50",
+        "C": "Debit Rent Received ₦0.50, Credit Cash ₦0.50 and Bank ₦0.50",
+        "D": "Debit Rent Received ₦0.50, Credit Bank ₦0.50 and Cash ₦0.50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0192",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows an increase in the value of its property, plant and equipment by ₦1,500,000. The increase is due to the purchase of new machinery. Prepare the necessary journal entry to record the increase in value.",
+      "options": {
+        "A": "Debit Machinery ₦1,500,000, Credit Bank ₦1,500,000",
+        "B": "Debit Machinery ₦1,500,000, Credit Accumulated Depreciation ₦1,500,000",
+        "C": "Debit Machinery ₦1,500,000, Credit Bank ₦1,500,000 and Accumulated Depreciation ₦1,500,000",
+        "D": "Debit Bank ₦1,500,000, Credit Machinery ₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0193",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows an error of ₦0.50 in the debit side of the account &#039;Rent Paid&#039;. The error is due to the omission of a payment of ₦0.50 from the cash book. Prepare the necessary journal entry to rectify the error.",
+      "options": {
+        "A": "Debit Rent Paid ₦0.50, Credit Cash ₦0.50",
+        "B": "Debit Rent Paid ₦0.50, Credit Bank ₦0.50",
+        "C": "Debit Rent Paid ₦0.50, Credit Cash ₦0.50 and Bank ₦0.50",
+        "D": "Debit Rent Paid ₦0.50, Credit Bank ₦0.50 and Cash ₦0.50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0194",
+      "type": "mcq",
+      "stem": "A company&#039;s balance sheet shows an increase in the value of its inventory by ₦1,500,000. The increase is due to the purchase of new goods. Prepare the necessary journal entry to record the increase in value.",
+      "options": {
+        "A": "Debit Inventory ₦1,500,000, Credit Bank ₦1,500,000",
+        "B": "Debit Inventory ₦1,500,000, Credit Accumulated Depreciation ₦1,500,000",
+        "C": "Debit Inventory ₦1,500,000, Credit Bank ₦1,500,000 and Accumulated Depreciation ₦1,500,000",
+        "D": "Debit Bank ₦1,500,000, Credit Inventory ₦1,500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-accounting-bank-0195",
+      "type": "mcq",
+      "stem": "A company&#039;s trial balance shows an error of ₦0.50 in the debit side of the account &#039;Salaries Paid&#039;. The error is due to the omission of a payment of ₦0.50 from the cash book. Prepare the necessary journal entry to rectify the error.",
+      "options": {
+        "A": "Debit Salaries Paid ₦0.50, Credit Cash ₦0.50",
+        "B": "Debit Salaries Paid ₦0.50, Credit Bank ₦0.50",
+        "C": "Debit Salaries Paid ₦0.50, Credit Cash ₦0.50 and Bank ₦0.50",
+        "D": "Debit Salaries Paid ₦0.50, Credit Bank ₦0.50 and Cash ₦0.50"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

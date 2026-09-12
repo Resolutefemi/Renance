@@ -1,0 +1,2375 @@
+{
+  "code": "uni-jabu-pq-mathematics-bank",
+  "title": "JABU Post-UTME Mathematics | Prep Bank",
+  "version": 1,
+  "questionCount": 197,
+  "totalMarks": 197,
+  "questions": [
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0001",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center at ((2,3)) and radius 4.",
+      "options": {
+        "A": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 \\)",
+        "B": "\\( x - 3 \\ \\)^2 + \\( y - 2 \\)^2 = 16 \\)",
+        "C": "\\( x - 2 \\ \\)^2 + \\( y - 2 \\)^2 = 16 \\)",
+        "D": "\\( x - 3 \\ \\)^2 + \\( y - 3 \\)^2 = 16 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0002",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( 2x^2 + 5x - 3 = 0 \\).",
+      "options": {
+        "A": "\\( x = \\frac{-5 \\pm \\sqrt{5^2 - 4\\( 2 \\)\\( -3 \\ \\)}}{2(2)} \\)",
+        "B": "\\( x = \\frac{-5 \\pm \\sqrt{5^2 - 4\\( 2 \\ \\)(3)}}{2(2)} \\)",
+        "C": "\\( x = \\frac{-5 \\pm \\sqrt{5^2 - 4\\( 2 \\)\\( -1 \\ \\)}}{2(2)} \\)",
+        "D": "\\( x = \\frac{-5 \\pm \\sqrt{5^2 - 4\\( 2 \\)\\( -2 \\ \\)}}{2(2)} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0003",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 - 2x + 1 \\) from \\( x = 0 \\) to \\( x = 2 \\).",
+      "options": {
+        "A": "\\( \\frac{4}{3} \\ \\)",
+        "B": "\\( \\frac{2}{3} \\ \\)",
+        "C": "\\( \\frac{1}{3} \\ \\)",
+        "D": "\\( \\frac{1}{2} \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0004",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. What is the probability that the number rolled is greater than 4?",
+      "options": {
+        "A": "\\( \\frac{1}{6} \\ \\)",
+        "B": "\\( \\frac{1}{3} \\ \\)",
+        "C": "\\( \\frac{2}{3} \\ \\)",
+        "D": "\\( \\frac{5}{6} \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0005",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( x + y = 2 \\) and \\( 2x - 3y = - 5 \\).",
+      "options": {
+        "A": "\\( x = \\frac{3}{5}, y = \\frac{7}{5} \\ \\)",
+        "B": "\\( x = \\frac{7}{5}, y = \\frac{3}{5} \\ \\)",
+        "C": "\\( x = \\frac{3}{5}, y = - \\frac{7}{5} \\ \\)",
+        "D": "\\( x = - \\frac{7}{5}, y = \\frac{3}{5} \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0006",
+      "type": "mcq",
+      "stem": "Find the area under the curve y = x^2 + 2x + 1 from x = 0 to x = 3.",
+      "options": {
+        "A": "27",
+        "B": "30",
+        "C": "33",
+        "D": "36"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0007",
+      "type": "mcq",
+      "stem": "A solid cone has a height of 10 cm and a base radius of 4 cm. Find the volume of the cone.",
+      "options": {
+        "A": "200\\pi",
+        "B": "250\\pi",
+        "C": "300\\pi",
+        "D": "350\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0008",
+      "type": "mcq",
+      "stem": "The mean of 5 numbers is 12. If one of the numbers is 15, find the sum of the remaining 4 numbers.",
+      "options": {
+        "A": "45",
+        "B": "48",
+        "C": "51",
+        "D": "54"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0009",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center \\( -2, 3 \\) and radius 4.",
+      "options": {
+        "A": "\\( x + 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\( x - 2 \\)^2 + \\( y + 3 \\)^2 = 16",
+        "C": "\\( x + 3 \\)^2 + \\( y - 2 \\)^2 = 16",
+        "D": "\\( x - 3 \\)^2 + \\( y + 2 \\)^2 = 16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0010",
+      "type": "mcq",
+      "stem": "Solve the equation \\sin^2 x + \\cos^2 x = 1 for x.",
+      "options": {
+        "A": "x = \\frac{\\pi}{4}",
+        "B": "x = \\frac{\\pi}{2}",
+        "C": "x = \\frac{3\\pi}{4}",
+        "D": "x = \\frac{5\\pi}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0011",
+      "type": "mcq",
+      "stem": "Let X and Y be indep\\endent events with P(X) = 0.4 and P(Y) = 0.6. Find P(X ∩ Y) u\\sing the formula for indep\\endent events.",
+      "options": {
+        "A": "0.24",
+        "B": "0.36",
+        "C": "0.48",
+        "D": "0.64"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0012",
+      "type": "mcq",
+      "stem": "Find the magnitude of the vector \\overrightarrow{a} = &lt;2, 3, -1&gt;.",
+      "options": {
+        "A": "1",
+        "B": "\\sqrt{14}",
+        "C": "2\\sqrt{7}",
+        "D": "3\\sqrt{2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0013",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation x^2 + 5x + 6 = 0.",
+      "options": {
+        "A": "-2, -3",
+        "B": "-1, -4",
+        "C": "-3, 2",
+        "D": "-2, 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0014",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = x^3 - 2x^2 + 5x - 1.",
+      "options": {
+        "A": "3x^2 - 4x + 5",
+        "B": "x^2 - 2x + 1",
+        "C": "2x^2 - 3x + 2",
+        "D": "x^2 + 2x - 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0015",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\sin(x) = \\cos(x).",
+      "options": {
+        "A": "\\frac{\\pi}{4}",
+        "B": "\\frac{\\pi}{2}",
+        "C": "\\frac{3\\pi}{4}",
+        "D": "\\frac{5\\pi}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0016",
+      "type": "mcq",
+      "stem": "In a geometric sequence, the first term is 2 and the common ratio is 3. If the sum of the first 5 terms is 341, find the sum of the next 5 terms.",
+      "options": {
+        "A": "2048",
+        "B": "4096",
+        "C": "8192",
+        "D": "16384"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0017",
+      "type": "mcq",
+      "stem": "Solve for x in the equation: \\frac{1}{x+2} + \\frac{1}{x-3} = \\frac{1}{2}",
+      "options": {
+        "A": "5",
+        "B": "-2",
+        "C": "3",
+        "D": "-1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0018",
+      "type": "mcq",
+      "stem": "A circle has a radius of 4 cm. If the area of the circle is 50.24 cm^2, find the circumference of the circle.",
+      "options": {
+        "A": "25.12",
+        "B": "50.24",
+        "C": "100.48",
+        "D": "200.96"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0019",
+      "type": "mcq",
+      "stem": "A histogram shows the distribution of exam scores for a class of 50 students. The histogram has 5 bars, each representing a different score range. If the mean score is 75 and the median score is 80, find the mode of the distribution.",
+      "options": {
+        "A": "70",
+        "B": "75",
+        "C": "80",
+        "D": "85"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0020",
+      "type": "mcq",
+      "stem": "Solve for x in the equation: \\log_{10} \\( x^2 \\) = 4",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0021",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 + 3x - 2 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0022",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\). x 3/2 x -3/2 x 1 x -1",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0023",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series \\( 2 + 6 + 18 + ... \\).",
+      "options": {
+        "A": "1230",
+        "B": "1240",
+        "C": "1250",
+        "D": "1260"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0024",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\( \\sin^2 x + \\cos^2 x = 1 \\).",
+      "options": {
+        "A": "x = 0",
+        "B": "x = 90",
+        "C": "x = 180",
+        "D": "x = 270"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0025",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (2, 3) ) and radius 4.",
+      "options": {
+        "A": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\( x - 3 \\)^2 + \\( y - 2 \\)^2 = 16",
+        "C": "\\( x - 4 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "D": "\\( x - 2 \\)^2 + \\( y - 4 \\)^2 = 16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0026",
+      "type": "mcq",
+      "stem": "In a circle of radius 5 cm, a chord of length 8 cm subt\\ends an angle of 60° at the centre. Find the area of the sector.",
+      "options": {
+        "A": "20π cm²",
+        "B": "30π cm²",
+        "C": "40π cm²",
+        "D": "50π cm²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0027",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{x^2 + 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = \\frac{-2x}{\\( x^2 + 1 \\)^2} )",
+        "B": "( f'(x) = \\frac{2x}{\\( x^2 + 1 \\)^2} )",
+        "C": "( f'(x) = \\frac{-x}{\\( x^2 + 1 \\)^2} )",
+        "D": "( f'(x) = \\frac{x}{\\( x^2 + 1 \\)^2} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0028",
+      "type": "mcq",
+      "stem": "A rec\\tangular block measures 5 cm by 3 cm by 2 cm. Find the volume of the block.",
+      "options": {
+        "A": "30 cm³",
+        "B": "40 cm³",
+        "C": "50 cm³",
+        "D": "60 cm³"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0029",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 \\) from \\( x = 0 \\) to \\( x = 4 \\) u\\sing integration.",
+      "options": {
+        "A": "64",
+        "B": "80",
+        "C": "96",
+        "D": "112"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0030",
+      "type": "mcq",
+      "stem": "A circle of radius 4 cm is inscribed in a square. Find the area of the square.",
+      "options": {
+        "A": "16π cm²",
+        "B": "32π cm²",
+        "C": "64π cm²",
+        "D": "128π cm²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0031",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series with first term 2 and common ratio 3.",
+      "options": {
+        "A": "12166",
+        "B": "12346",
+        "C": "12456",
+        "D": "12566"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0032",
+      "type": "mcq",
+      "stem": "Solve the inequality \\frac{x-1}{x+1} &gt; 0.",
+      "options": {
+        "A": "\\( -\\infty, -1 \\) \\cup \\( 1, \\infty \\)",
+        "B": "\\( -\\infty, 1 \\) \\cup \\( 1, \\infty \\)",
+        "C": "\\( -\\infty, -1 \\) \\cup \\( 1, \\infty \\)",
+        "D": "\\( -\\infty, 1 \\) \\cup \\( 1, \\infty \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0033",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2, 3) and (4, 5).",
+      "options": {
+        "A": "y - 3 = \\frac{2}{2} \\( x - 2 \\)",
+        "B": "y - 5 = \\frac{1}{2} \\( x - 4 \\)",
+        "C": "y - 2 = \\frac{3}{2} \\( x - 3 \\)",
+        "D": "y - 4 = \\frac{1}{2} \\( x - 5 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0034",
+      "type": "mcq",
+      "stem": "A binary operation \\ast is defined as follows: a \\ast b = a^2 + b^2. Find the value of 2 \\ast 3.",
+      "options": {
+        "A": "13",
+        "B": "14",
+        "C": "15",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0035",
+      "type": "mcq",
+      "stem": "A histogram is shown below. What is the median of the data?",
+      "options": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "35"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0036",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height 8cm, lower base radius 4cm, and upper base radius 2cm.",
+      "options": {
+        "A": "256\\pi cm^3",
+        "B": "512\\pi cm^3",
+        "C": "768\\pi cm^3",
+        "D": "1024\\pi cm^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0037",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\log_{10} \\( x^2 \\) = 4.",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0038",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\frac{x^2}{x^2 + 1} u\\sing the chain rule.",
+      "options": {
+        "A": "\\frac{2x}{\\( x^2 + 1 \\)^2}",
+        "B": "\\frac{2x^3}{\\( x^2 + 1 \\)^2}",
+        "C": "\\frac{2x^2}{\\( x^2 + 1 \\)^2}",
+        "D": "\\frac{2x^3 + 2x}{\\( x^2 + 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0039",
+      "type": "mcq",
+      "stem": "Solve the system of equations u\\sing substitution: x + y = 4 and x - y = 2.",
+      "options": {
+        "A": "x = 3, y = 1",
+        "B": "x = 1, y = 3",
+        "C": "x = 2, y = 2",
+        "D": "x = 4, y = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0040",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices (0, 0), (3, 0), and (0, 4).",
+      "options": {
+        "A": "12",
+        "B": "15",
+        "C": "18",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0041",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 3 \\ 4 &amp; 5 \\end{bmatrix} \\).",
+      "options": {
+        "A": "1",
+        "B": "-1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0042",
+      "type": "mcq",
+      "stem": "A sequence is defined by \\( a_n = 2n + 1 \\). Find the sum of the first 5 terms.",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "35",
+        "D": "45"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0043",
+      "type": "mcq",
+      "stem": "A function ( f(x) = x^2 + 2x - 3 ) is given. Find the derivative of the function.",
+      "options": {
+        "A": "2x + 2",
+        "B": "x^2 + 2",
+        "C": "2x - 2",
+        "D": "x^2 - 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0044",
+      "type": "mcq",
+      "stem": "A set of numbers is given: {1, 2, 3, 4, 5}. Find the probability of selecting a prime number.",
+      "options": {
+        "A": "0.2",
+        "B": "0.4",
+        "C": "0.6",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0045",
+      "type": "mcq",
+      "stem": "A solid cylinder has a radius of 4 cm and a height of 10 cm. Find the volume of the cylinder.",
+      "options": {
+        "A": "800\\pi",
+        "B": "1000\\pi",
+        "C": "1200\\pi",
+        "D": "1600\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0046",
+      "type": "mcq",
+      "stem": "A random variable X has a probability distribution given by ( P(X) = \begin{cases} 0.2 &amp; \\text{if } X = 1 \\ 0.8 &amp; \\text{if } X = 2 \\ 0 &amp; \\text{otherwise} \\end{cases} ). Find the probability that X is greater than 1.",
+      "options": {
+        "A": "0.2",
+        "B": "0.8",
+        "C": "1",
+        "D": "0.6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0047",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 + 2x - 3 \\) from \\( x = 0 \\) to \\( x = 2 \\).",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0048",
+      "type": "mcq",
+      "stem": "Solve the equation \\( 2^x + 2^x = 64 \\).",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0049",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12V battery, a 4Ω resistor, and a 6Ω resistor connected in series. Find the current flowing through the circuit.",
+      "options": {
+        "A": "1.5A",
+        "B": "2A",
+        "C": "2.5A",
+        "D": "3A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0050",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\) = 4 \\).",
+      "options": {
+        "A": "10^4",
+        "B": "10^8",
+        "C": "10^12",
+        "D": "10^16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0051",
+      "type": "mcq",
+      "stem": "A vector \\( \\vec{a} \\) has magnitude 5 units and direction 30° north of east. Find the magnitude of the vector \\( \\vec{a} \\) if it is rotated 60° counterclockwise.",
+      "options": {
+        "A": "5\\sqrt{3} units",
+        "B": "10 units",
+        "C": "5\\sqrt{2} units",
+        "D": "5 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0052",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 \\geq 0 \\).",
+      "options": {
+        "A": "\\[ x \\leq -1 \\] or \\[ x \\geq \\frac{3}{2} \\]",
+        "B": "\\[ x \\leq 1 \\] or \\[ x \\geq -3 \\]",
+        "C": "\\[ x \\leq -3 \\] or \\[ x \\geq 1 \\]",
+        "D": "\\[ x \\leq \\frac{3}{2} \\] or \\[ x \\geq -1 \\]"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0053",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices \\( A(0, 0), B(3, 0), C(1, 2) \\).",
+      "options": {
+        "A": "3 square units",
+        "B": "6 square units",
+        "C": "9 square units",
+        "D": "12 square units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0054",
+      "type": "mcq",
+      "stem": "Find the equation of the circle pas\\sing through the points (2, 3), (4, 5), and (6, 7).",
+      "options": {
+        "A": "x^2 + y^2 + 4x + 6y - 11 = 0",
+        "B": "x^2 + y^2 + 2x + 4y - 9 = 0",
+        "C": "x^2 + y^2 + 6x + 2y - 13 = 0",
+        "D": "x^2 + y^2 + 8x + 10y - 15 = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0055",
+      "type": "mcq",
+      "stem": "A random variable X has a probability distribution given by P\\( X = 1 \\) = 1/4, P\\( X = 2 \\) = 1/2, P\\( X = 3 \\) = 1/4. Find the probability that X is greater than 2.",
+      "options": {
+        "A": "1/2",
+        "B": "3/4",
+        "C": "1/4",
+        "D": "3/8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0056",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\( 2x^2 + 3x - 1 \\) / \\( x^2 - 4x + 3 \\) u\\sing the quotient rule.",
+      "options": {
+        "A": "\\( 4x^2 - 2x - 3 \\) / \\( x^2 - 4x + 3 \\)^2",
+        "B": "\\( 4x^2 + 2x - 3 \\) / \\( x^2 - 4x + 3 \\)^2",
+        "C": "\\( 4x^2 - 2x + 3 \\) / \\( x^2 - 4x + 3 \\)^2",
+        "D": "\\( 4x^2 + 2x + 3 \\) / \\( x^2 - 4x + 3 \\)^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0057",
+      "type": "mcq",
+      "stem": "A set A contains the elements {1, 2, 3, 4, 5}. Find the number of subsets of A.",
+      "options": {
+        "A": "32",
+        "B": "16",
+        "C": "8",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0058",
+      "type": "mcq",
+      "stem": "Find the sum of the infinite geometric series 1 + 1/2 + 1/4 + ...",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "8",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0059",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{x^2 + 2x - 3}{x^2 - 4} ) u\\sing the quotient rule.",
+      "options": {
+        "A": "\\frac{2x\\( x^2 - 4 \\) - \\( x^2 + 2x - 3 \\)(2x)}{\\( x^2 - 4 \\)^2}",
+        "B": "\\frac{2x\\( x^2 - 4 \\) + \\( x^2 + 2x - 3 \\)(2x)}{\\( x^2 - 4 \\)^2}",
+        "C": "\\frac{2x\\( x^2 - 4 \\) - \\( x^2 + 2x - 3 \\)(2x)}{\\( x^2 - 4 \\)^2}",
+        "D": "\\frac{2x\\( x^2 - 4 \\) + \\( x^2 + 2x - 3 \\)(2x)}{\\( x^2 - 4 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0060",
+      "type": "mcq",
+      "stem": "A circle has a radius of 5 units. Find the area of the circle u\\sing the formula \\( A = \\pi r^2 \\).",
+      "options": {
+        "A": "25\\pi",
+        "B": "50\\pi",
+        "C": "75\\pi",
+        "D": "100\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0061",
+      "type": "mcq",
+      "stem": "Solve the equation \\( \\sin^2 x + \\cos^2 x = 1 \\) for ( x ).",
+      "options": {
+        "A": "x = \\frac{\\pi}{2}",
+        "B": "x = \\frac{\\pi}{4}",
+        "C": "x = \\\\frac{3\\\\pi}{4}",
+        "D": "x = \\\\frac{5\\\\pi}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0062",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \\begin{bmatrix} 2 &amp; 1 &amp; 3 \\ 4 &amp; 2 &amp; 1 \\ 3 &amp; 1 &amp; 2 \\end{bmatrix} \\).",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0063",
+      "type": "mcq",
+      "stem": "A curve has the equation \\( y = x^2 + 2x - 3 \\). Find the area under the curve between \\( x = 0 \\) and \\( x = 2 \\).",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0064",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x - 5 &gt; 3x + 2 \\).",
+      "options": {
+        "A": "x",
+        "B": "x > -3",
+        "C": "x",
+        "D": "x > 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0065",
+      "type": "mcq",
+      "stem": "A right-angled triangle has a hypotenuse of length 10 units and one leg of length 6 units. Find the length of the other leg.",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0066",
+      "type": "mcq",
+      "stem": "In a binary number system, what is the value of the digit in the 5th position from the right in the number 1011011101?",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0067",
+      "type": "mcq",
+      "stem": "A bag contains 5 red balls and 3 blue balls. If a ball is drawn at random, what is the probability that it is blue?",
+      "options": {
+        "A": "1/2",
+        "B": "1/3",
+        "C": "2/5",
+        "D": "3/8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0068",
+      "type": "mcq",
+      "stem": "Determine the equation of the circle with center \\( -2, 3 \\) and radius 4.",
+      "options": {
+        "A": "\\( x^2 + y^2 + 4x - 6y + 13 = 0 \\)",
+        "B": "\\( x^2 + y^2 - 4x + 6y + 13 = 0 \\)",
+        "C": "\\( x^2 + y^2 + 4x + 6y + 13 = 0 \\)",
+        "D": "\\( x^2 + y^2 - 4x - 6y + 13 = 0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0069",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 70% of them preferred Mathematics, 20% preferred Science, and 10% preferred both. What is the probability that a randomly selected student prefers either Mathematics or Science?",
+      "options": {
+        "A": "0.85",
+        "B": "0.75",
+        "C": "0.65",
+        "D": "0.55"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0070",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\). \\( x \\frac{3}{2} \\) \\( x 3 \\) \\( x \\frac{1}{2} \\) \\( x -\\frac{1}{2} \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x",
+        "C": "\\( x",
+        "D": "\\( x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0071",
+      "type": "mcq",
+      "stem": "A car travels from city A to city B at an average speed of 60 km/h and returns at an average speed of 40 km/h. What is the average speed of the car for the entire trip?",
+      "options": {
+        "A": "50 km/h",
+        "B": "55 km/h",
+        "C": "60 km/h",
+        "D": "65 km/h"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0072",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{\\sqrt{x}} \\) from \\( x = 1 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0073",
+      "type": "mcq",
+      "stem": "A set ( A ) contains the elements ( 1, 2, 3, 4, 5 ). Find the number of subsets of ( A ) that contain exactly two elements.",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "20",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0074",
+      "type": "mcq",
+      "stem": "A geometric sequence has first term \\( a = 2 \\) and common ratio \\( r = 3 \\). Find the sum of the first five terms.",
+      "options": {
+        "A": "325",
+        "B": "335",
+        "C": "345",
+        "D": "355"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0075",
+      "type": "mcq",
+      "stem": "Two events ( A ) and ( B ) are indep\\endent. If ( P(A) = 0.4 ) and ( P(B) = 0.6 ), find the probability that both events occur.",
+      "options": {
+        "A": "0.2",
+        "B": "0.24",
+        "C": "0.28",
+        "D": "0.32"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0076",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (2, 3) ) and radius ( 4 ).",
+      "options": {
+        "A": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 20",
+        "C": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 24",
+        "D": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 28"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0077",
+      "type": "mcq",
+      "stem": "Let X be a random variable with probability density function f(x) = \\( \\frac{1}{2}e^{-|x|} \\) for -∞ &lt; x &lt; ∞. Find the probability that X lies between -1 and 1.",
+      "options": {
+        "A": "0",
+        "B": "0.5",
+        "C": "1",
+        "D": "1.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0078",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x^2 - 4}{x^2 - 9} &gt; 0 \\).",
+      "options": {
+        "A": "\\( -∞, -3 \\) ∪ (3, ∞)",
+        "B": "\\( -3, 3 \\)",
+        "C": "\\( -∞, -3 \\) ∪ (3, ∞) ∪ (0, 3)",
+        "D": "\\( -∞, -3 \\) ∪ (3, ∞) ∪ (0, 3) ∪ (4, ∞)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0079",
+      "type": "mcq",
+      "stem": "Find the derivative of the function (f(x) = \\frac{1}{x^2 + 1}) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( \\frac{-2x}{\\( x^2 + 1 \\ \\)^2} )",
+        "B": "\\( \\frac{-2x^2}{\\( x^2 + 1 \\ \\)^2} )",
+        "C": "\\( \\frac{-2x^3}{\\( x^2 + 1 \\ \\)^2} )",
+        "D": "\\( \\frac{2x^3}{\\( x^2 + 1 \\ \\)^2} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0080",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\( \\sin^2 x + \\cos^2 x = 1 \\) for (0 ≤ x ≤ 2pi).",
+      "options": {
+        "A": "\\( x = 0, \\frac{pi}{2}, pi, \\frac{3pi}{2} \\)",
+        "B": "\\( x = 0, \\frac{pi}{2}, pi, \\frac{3pi}{2}, 2pi \\)",
+        "C": "\\( x = 0, \\frac{pi}{2}, pi, \\frac{3pi}{2}, 2pi, \\frac{5pi}{2} \\)",
+        "D": "\\( x = 0, \\frac{pi}{2}, pi, \\frac{3pi}{2}, 2pi, \\frac{5pi}{2}, \\frac{7pi}{2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0081",
+      "type": "mcq",
+      "stem": "A particle moves along the x-axis with its position given by the equation (x(t) = 2t^2 - 5t + 1). Find the velocity of the particle at time \\( t = 2 \\).",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0082",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation \\( \\sin\\( 2x \\ \\) = \\frac{1}{2} ) given that \\( \\sin\\( x \\ \\) = \\frac{\\sqrt{3}}{2} ).",
+      "options": {
+        "A": "\\frac{\\pi}{6}",
+        "B": "\\frac{\\pi}{4}",
+        "C": "\\frac{\\pi}{3}",
+        "D": "\\frac{\\pi}{2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0083",
+      "type": "mcq",
+      "stem": "A binary operation \\( * \\) on the set of real numbers is defined as \\( a * b = a^2 + b^2 \\). Find the value of ( x ) such that \\( x * \\( x + 1 \\ \\) = 25 ).",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0084",
+      "type": "mcq",
+      "stem": "In a circle with center ( O ) and radius ( 4 ), a chord ( AB ) is drawn such that \\( OA = 3 \\). Find the length of ( AB ).",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0085",
+      "type": "mcq",
+      "stem": "A random experiment consists of rolling a fair six-sided die and then flipping a fair coin. If the outcome of the die roll is even, the coin is flipped twice. Otherwise, the coin is flipped once. What is the probability that the outcome of the die roll is even and the outcome of the coin flip is heads?",
+      "options": {
+        "A": "\\frac{1}{6}",
+        "B": "\\frac{1}{12}",
+        "C": "\\frac{1}{4}",
+        "D": "\\frac{1}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0086",
+      "type": "mcq",
+      "stem": "Find the value of ( x ) in the equation \\( 2^x + 5^x = 100 \\).",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0087",
+      "type": "mcq",
+      "stem": "A solid right circular cone has a height of 12 cm and a base radius of 6 cm. Find the volume of the cone in terms of π.",
+      "options": {
+        "A": "\\frac{288\\pi}{\\pi}",
+        "B": "\\frac{288\\pi}{3}",
+        "C": "\\frac{288\\pi}{\\pi}",
+        "D": "\\frac{288\\pi}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0088",
+      "type": "mcq",
+      "stem": "A histogram is constructed from the following data: 5, 7, 9, 11, 13, 15. Find the mean of the data.",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0089",
+      "type": "mcq",
+      "stem": "Simplify the expression: \\frac{2x^2 + 3x - 1}{x^2 - 4}",
+      "options": {
+        "A": "\\frac{2x + 1}{x - 2}",
+        "B": "\\frac{2x - 1}{x + 2}",
+        "C": "\\frac{2x + 1}{x + 2}",
+        "D": "\\frac{2x - 1}{x - 2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0090",
+      "type": "mcq",
+      "stem": "A right-angled triangle has a base of 5 cm and a height of 12 cm. Find the length of the hypotenuse.",
+      "options": {
+        "A": "13",
+        "B": "15",
+        "C": "17",
+        "D": "19"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0091",
+      "type": "mcq",
+      "stem": "Find the value of x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0092",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\).",
+      "options": {
+        "A": "\\( -∞, -1 \\) ∪ (3, ∞)",
+        "B": "\\( -∞, -3 \\) ∪ (1, ∞)",
+        "C": "\\( -∞, 1 \\) ∪ (3, ∞)",
+        "D": "\\( -∞, -3 \\) ∪ (1, ∞)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0093",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = 3x^2 \\sin (2x) ) u\\sing the product rule.",
+      "options": {
+        "A": "6x^2 \\sin (2x) + 12x \\cos (2x)",
+        "B": "6x \\sin (2x) + 12x^2 \\cos (2x)",
+        "C": "6x^2 \\cos (2x) - 12x \\sin (2x)",
+        "D": "6x \\cos (2x) - 12x^2 \\sin (2x)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0094",
+      "type": "mcq",
+      "stem": "A right circular cylinder has a height of 10 cm and a radius of 4 cm. Find its volume.",
+      "options": {
+        "A": "800\\pi",
+        "B": "1600\\pi",
+        "C": "3200\\pi",
+        "D": "6400\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0095",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( x + y = 2 \\) and \\( xy = 3 \\).",
+      "options": {
+        "A": "(1, 3)",
+        "B": "(3, 1)",
+        "C": "(2, 1)",
+        "D": "(1, 2)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0096",
+      "type": "mcq",
+      "stem": "Find the area under the curve y = 2x^2 + 3x - 4 from x = 0 to x = 2.",
+      "options": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0097",
+      "type": "mcq",
+      "stem": "Solve for x in the equation 2^x + 3^x = 5^x.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0098",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{bmatrix}.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0099",
+      "type": "mcq",
+      "stem": "A box contains 5 red balls and 3 blue balls. If a ball is drawn at random, what is the probability that it is blue?",
+      "options": {
+        "A": "1/2",
+        "B": "2/3",
+        "C": "3/4",
+        "D": "4/5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0100",
+      "type": "mcq",
+      "stem": "Given the vectors θ = 2i + 3j and β = i - 2j, find the magnitude of the vector θ + β.",
+      "options": {
+        "A": "3.60555",
+        "B": "4.47214",
+        "C": "5.38516",
+        "D": "6.40312"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0101",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 60 students preferred Mathematics, 30 preferred Science, and 10 preferred both. What is the probability that a randomly selected student prefers Mathematics or Science?",
+      "options": {
+        "A": "0.7",
+        "B": "0.75",
+        "C": "0.8",
+        "D": "0.85"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0102",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the curves y = x^2 and y = 4 - x^2 about the x-axis.",
+      "options": {
+        "A": "16\\pi",
+        "B": "32\\pi",
+        "C": "64\\pi",
+        "D": "128\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0103",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. If the total number of students is 50, what is the mean score?",
+      "options": {
+        "A": "35",
+        "B": "40",
+        "C": "45",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0104",
+      "type": "mcq",
+      "stem": "A company produces two products, A and B. The profit from the sale of product A is $10 per unit, and the profit from the sale of product B is $15 per unit. If the company produces 100 units of product A and 50 units of product B, what is the total profit?",
+      "options": {
+        "A": "1500",
+        "B": "2000",
+        "C": "2500",
+        "D": "3000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0105",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x^2 - 4}{x + 2} geq 0 \\) for ( x in mathbb{R} ).",
+      "options": {
+        "A": "\\( -∞, -2 \\) ∪ [0, ∞)",
+        "B": "\\( -∞, -2 \\) ∪ (0, ∞)",
+        "C": "\\( -∞, -2 \\) ∪ [0, 2]",
+        "D": "\\( -∞, 2 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0106",
+      "type": "mcq",
+      "stem": "A box contains 5 red balls and 3 blue balls. If 2 balls are drawn at random without replacement, what is the probability that at least one blue ball is drawn?",
+      "options": {
+        "A": "1/2",
+        "B": "2/3",
+        "C": "3/4",
+        "D": "4/5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0107",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the parabola \\( y = x^2 \\), the line \\( x = 1 \\), and the x-axis about the x-axis.",
+      "options": {
+        "A": "π/6",
+        "B": "π/4",
+        "C": "π/2",
+        "D": "π/3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0108",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^3 + 2x^2 - 7x + 12 = 0 \\) u\\sing the Rational Root Theorem.",
+      "options": {
+        "A": "x = -3",
+        "B": "x = -1",
+        "C": "x = 3",
+        "D": "x = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0109",
+      "type": "mcq",
+      "stem": "A bakery sells a total of 480 loaves of bread per day. They sell a combination of whole wheat and white bread. If the ratio of whole wheat to white bread is 5:3, how many loaves of whole wheat bread are sold per day?",
+      "options": {
+        "A": "200",
+        "B": "250",
+        "C": "300",
+        "D": "350"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0110",
+      "type": "mcq",
+      "stem": "Find the area under the curve y = x^2 + 2x - 3 from x = 0 to x = 3.",
+      "options": {
+        "A": "27",
+        "B": "30",
+        "C": "33",
+        "D": "36"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0111",
+      "type": "mcq",
+      "stem": "Solve for x in the equation 2^x + 2^x + 2^x = 3^x.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0112",
+      "type": "mcq",
+      "stem": "Find the sum of the infinite geometric series 1 + 2x + 4x^2 + 8x^3 + ...",
+      "options": {
+        "A": "1/\\( 1-2x \\)",
+        "B": "1/\\( 1+x \\)",
+        "C": "1/\\( 1-2x \\)^2",
+        "D": "1/\\( 1+x \\)^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0113",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2,3) and (4,5).",
+      "options": {
+        "A": "y = x + 1",
+        "B": "y = x - 1",
+        "C": "y = 2x - 3",
+        "D": "y = 2x + 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0114",
+      "type": "mcq",
+      "stem": "Solve the inequality x^2 + 4x + 4 &gt; 0.",
+      "options": {
+        "A": "\\( -\\infty, -2 \\) \\cup \\( 2, \\infty \\)",
+        "B": "\\( -\\infty, 2 \\) \\cup \\( 2, \\infty \\)",
+        "C": "\\( -\\infty, -2 \\) \\cup \\( -2, 2 \\)",
+        "D": "\\( -\\infty, 2 \\) \\cup \\( 2, \\infty \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0115",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{2}x^2 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "( 8 )",
+        "B": "( 16 )",
+        "C": "( 32 )",
+        "D": "( 64 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0116",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( \\sin^2 x + \\cos^2 x = 1 \\).",
+      "options": {
+        "A": "\\( x = \\frac{pi}{4} \\)",
+        "B": "\\( x = \\frac{3pi}{4} \\)",
+        "C": "\\( x = \\frac{pi}{2} \\)",
+        "D": "\\( x = \\frac{5pi}{4} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0117",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{x^2} ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = -\\frac{2}{x^3} )",
+        "B": "( f'(x) = \\frac{2}{x^3} )",
+        "C": "( f'(x) = -\\frac{1}{x^3} )",
+        "D": "( f'(x) = \\frac{1}{x^3} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0118",
+      "type": "mcq",
+      "stem": "Solve the system of equations u\\sing matrices:",
+      "options": {
+        "A": "\\( x = 2, y = 3 \\)",
+        "B": "\\( x = 3, y = 2 \\)",
+        "C": "\\( x = 4, y = 5 \\)",
+        "D": "\\( x = 5, y = 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0119",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{bmatrix} \\).",
+      "options": {
+        "A": "( 0 )",
+        "B": "( 1 )",
+        "C": "( 2 )",
+        "D": "( 3 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0120",
+      "type": "mcq",
+      "stem": "A circle has a radius of 5 units. Find the equation of the circle in s\\tandard form.",
+      "options": {
+        "A": "\\( x^2 + y^2 = 25 \\)",
+        "B": "\\( x^2 + y^2 = 25 \\)",
+        "C": "\\( x^2 - y^2 = 25 \\)",
+        "D": "\\( x^2 + y^2 = 25 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0121",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points ( (1, 2) ) and ( (3, 4) ).",
+      "options": {
+        "A": "\\( y = x + 1 \\)",
+        "B": "\\( y = x - 1 \\)",
+        "C": "\\( y = x + 1 \\)",
+        "D": "\\( y = x - 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0122",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\sin^2\\( x \\ \\) + \\cos^2(x) = 1 ) u\\sing the identity \\( \\sin^2\\( x \\ \\) + \\cos^2(x) = 1 ).",
+      "options": {
+        "A": "x = \\frac{\\pi}{2}",
+        "B": "x = \\frac{\\pi}{4}",
+        "C": "x = \\frac{3\\pi}{4}",
+        "D": "x = \\frac{5\\pi}{4}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0123",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. What is the mean score of the exam?",
+      "options": {
+        "A": "60",
+        "B": "70",
+        "C": "80",
+        "D": "90"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0124",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 5x + 6 = 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "x = -2",
+        "B": "x = -3",
+        "C": "x = 2",
+        "D": "x = 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0125",
+      "type": "mcq",
+      "stem": "A circle has a radius of 4 cm. What is the area of the circle?",
+      "options": {
+        "A": "50\\pi",
+        "B": "100\\pi",
+        "C": "200\\pi",
+        "D": "300\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0126",
+      "type": "mcq",
+      "stem": "A car travels from city A to city B at an average speed of 60 km/h. If the dis\\tance between the two cities is 240 km, how long does the trip take?",
+      "options": {
+        "A": "4 hours",
+        "B": "6 hours",
+        "C": "8 hours",
+        "D": "10 hours"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0127",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 75 and a s\\tandard deviation of 10. What is the probability that a randomly selected score is between 60 and 90?",
+      "options": {
+        "A": "0.68",
+        "B": "0.72",
+        "C": "0.76",
+        "D": "0.80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0128",
+      "type": "mcq",
+      "stem": "Solve the inequality \\frac{x^2 - 4}{x + 2} &gt; 0. x 2",
+      "options": {
+        "A": "x",
+        "B": "x > -2 or x",
+        "C": "x",
+        "D": "x > -2 or x = -2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0129",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. What is the probability that the number rolled is a multiple of 3?",
+      "options": {
+        "A": "1/2",
+        "B": "1/3",
+        "C": "2/3",
+        "D": "1/6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0130",
+      "type": "mcq",
+      "stem": "Find the area under the curve y = x^2 from x = 0 to x = 4.",
+      "options": {
+        "A": "32",
+        "B": "64",
+        "C": "16",
+        "D": "128"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0131",
+      "type": "mcq",
+      "stem": "Given that \\( \\log_{10} \\( x^2 \\ \\) = 4 ), find the value of ( x ) u\\sing the change of base formula.",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "40",
+        "D": "80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0132",
+      "type": "mcq",
+      "stem": "A vector ( mathbf{a} ) has magnitude ( 5 ) and direction \\( 60^\\circ \\) counterclockwise from the positive x-axis. Find the vector ( mathbf{a} ).",
+      "options": {
+        "A": "\\( 5\\cos\\( 60^\\circ \\ \\) + 5\\sin\\( 60^\\circ \\) )",
+        "B": "\\( 5\\cos\\( 60^\\circ \\ \\) - 5\\sin\\( 60^\\circ \\) )",
+        "C": "\\( 5\\sin\\( 60^\\circ \\ \\) + 5\\cos\\( 60^\\circ \\) )",
+        "D": "\\( 5\\sin\\( 60^\\circ \\ \\) - 5\\cos\\( 60^\\circ \\) )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0133",
+      "type": "mcq",
+      "stem": "Two events ( A ) and ( B ) are indep\\endent. If ( P(A) = 0.3 ) and ( P(B) = 0.4 ), find \\( P\\( A \\cap B \\ \\) ).",
+      "options": {
+        "A": "0.12",
+        "B": "0.24",
+        "C": "0.36",
+        "D": "0.48"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0134",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( 2x^2 + 5x - 3 = 0 \\).",
+      "options": {
+        "A": "\\( x = -\\frac{3}{2} \\)",
+        "B": "\\( x = \\frac{1}{2} \\)",
+        "C": "\\( x = -\\frac{1}{2} \\)",
+        "D": "\\( x = \\frac{3}{2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0135",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices ( (0, 0) ), ( (2, 0) ), and ( (0, 3) ).",
+      "options": {
+        "A": "( 6 )",
+        "B": "( 12 )",
+        "C": "( 18 )",
+        "D": "( 24 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0136",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 - 5x + 3 &gt; 0 \\). \\( x \\frac{3}{2} \\) \\( x \\frac{1}{2} \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x",
+        "C": "\\( x",
+        "D": "\\( x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0137",
+      "type": "mcq",
+      "stem": "A circle has a radius of 5 cm. Find the area of the circle.",
+      "options": {
+        "A": "\\( 50 \\pi \\)",
+        "B": "\\( 100 \\pi \\)",
+        "C": "\\( 150 \\pi \\)",
+        "D": "\\( 200 \\pi \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0138",
+      "type": "mcq",
+      "stem": "Find the derivative of the function \\( y = 2x^3 - 5x^2 + x - 1 \\) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( 6x^2 - 10x + 1 \\)",
+        "B": "\\( 6x^2 - 10x + 2 \\)",
+        "C": "\\( 6x^2 - 10x - 1 \\)",
+        "D": "\\( 6x^2 - 10x - 2 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0139",
+      "type": "mcq",
+      "stem": "A line passes through the points ( (2, 3) ) and ( (4, 5) ). Find the equation of the line in slope-intercept form.",
+      "options": {
+        "A": "\\( y = x + 1 \\)",
+        "B": "\\( y = x - 1 \\)",
+        "C": "\\( y = x + 2 \\)",
+        "D": "\\( y = x - 2 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0140",
+      "type": "mcq",
+      "stem": "A random experiment has two indep\\endent events ( A ) and ( B ) with probabilities ( P(A) = 0.4 ) and ( P(B) = 0.6 ). Find the probability that both events occur.",
+      "options": {
+        "A": "( 0.24 )",
+        "B": "( 0.36 )",
+        "C": "( 0.48 )",
+        "D": "( 0.64 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0141",
+      "type": "mcq",
+      "stem": "Let \\( mathbf{a} = \begin{pmatrix} 2 \\ 3 \\end{pmatrix} \\) and \\( mathbf{b} = \begin{pmatrix} 1 \\ -2 \\end{pmatrix} \\). Find the projection of ( mathbf{b} ) onto ( mathbf{a} ).",
+      "options": {
+        "A": "\\begin{pmatrix} \\frac{7}{5} \\\\ \\frac{6}{5} \\end{pmatrix}",
+        "B": "\\begin{pmatrix} \\frac{1}{5} \\\\ -\\frac{2}{5} \\end{pmatrix}",
+        "C": "\\begin{pmatrix} \\frac{2}{5} \\\\ -\\frac{3}{5} \\end{pmatrix}",
+        "D": "\\begin{pmatrix} -\\frac{1}{5} \\\\ \\frac{2}{5} \\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0142",
+      "type": "mcq",
+      "stem": "Find the equation of the plane pas\\sing through the points ( (1, 2, 3) ), ( (2, 3, 4) ), and ( (3, 4, 5) ).",
+      "options": {
+        "A": "3x + 2y - z = 6",
+        "B": "2x + 3y - z = 6",
+        "C": "x + 2y - 3z = 6",
+        "D": "x + 3y - 2z = 6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0143",
+      "type": "mcq",
+      "stem": "Let ( f(x) = x^2 + 2x + 1 ). Find the equation of the \\tangent line to the curve at the point where \\( x = 1 \\).",
+      "options": {
+        "A": "y = 3x - 2",
+        "B": "y = 3x + 2",
+        "C": "y = 3x - 1",
+        "D": "y = 3x + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0144",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. What is the probability that the number obtained is greater than 4?",
+      "options": {
+        "A": "\\frac{1}{6}",
+        "B": "\\frac{1}{3}",
+        "C": "\\frac{2}{3}",
+        "D": "\\frac{5}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0145",
+      "type": "mcq",
+      "stem": "A right circular cylinder has a height of 10 cm and a radius of 4 cm. Find the volume of the cylinder.",
+      "options": {
+        "A": "80\\pi",
+        "B": "160\\pi",
+        "C": "320\\pi",
+        "D": "640\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0146",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0147",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\sin \\( 2 \\theta \\ \\) ) given that \\( \\sin \\( \\theta \\ \\) = \\frac{3}{5} ) and \\( \\cos \\( \\theta \\ \\) = \\frac{4}{5} ).",
+      "options": {
+        "A": "√2",
+        "B": "√6",
+        "C": "√10",
+        "D": "√14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0148",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 75 and a s\\tandard deviation of 10. If the scores are normally distributed, what is the probability that a randomly selected score is between 60 and 90?",
+      "options": {
+        "A": "0.5",
+        "B": "0.6",
+        "C": "0.7",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0149",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 5x + 6 = 0 \\).",
+      "options": {
+        "A": "-2",
+        "B": "-3",
+        "C": "-4",
+        "D": "-5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0150",
+      "type": "mcq",
+      "stem": "A vector ( vec{a} ) has a magnitude of 5 and makes an angle of 30° with the positive x-axis. Find the x and y components of ( vec{a} ).",
+      "options": {
+        "A": "x: 4, y: 4",
+        "B": "x: 4, y: 3",
+        "C": "x: 3, y: 4",
+        "D": "x: 3, y: 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0151",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\) u\\sing the quadratic formula. x 3/2 x 1 x -3/2 x -1",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0152",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center \\( -2, 3 \\ \\) ) and radius 4.",
+      "options": {
+        "A": "\\( x + 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\( x - 2 \\)^2 + \\( y + 3 \\)^2 = 16",
+        "C": "\\( x + 2 \\)^2 + \\( y + 3 \\)^2 = 16",
+        "D": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0153",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( x + y = 4 \\) and \\( x - y = 2 \\).",
+      "options": {
+        "A": "x = 3, y = 1",
+        "B": "x = 1, y = 3",
+        "C": "x = 2, y = 2",
+        "D": "x = 4, y = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0154",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = x^3 - 2x^2 + 3x - 1 ) u\\sing the power rule.",
+      "options": {
+        "A": "3x^2 - 4x + 3",
+        "B": "3x^2 - 4x - 3",
+        "C": "3x^2 + 4x + 3",
+        "D": "3x^2 - 4x + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0155",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2, 3) and (4, 5) in the vector form.",
+      "options": {
+        "A": "\\vec{r} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} + \\lambda \\begin{pmatrix} 2 \\\\ 2 \\end{pmatrix}",
+        "B": "\\vec{r} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} + \\lambda \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}",
+        "C": "\\vec{r} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} + \\lambda \\begin{pmatrix} 3 \\\\ 2 \\end{pmatrix}",
+        "D": "\\vec{r} = \\begin{pmatrix} 2 \\\\ 3 \\end{pmatrix} + \\lambda \\begin{pmatrix} 1 \\\\ 3 \\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0156",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^2 + 4x + 4 = 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "\\frac{-4 \\pm \\sqrt{16 - 16}}{2}",
+        "B": "\\frac{-4 \\pm \\sqrt{16 + 16}}{2}",
+        "C": "\\frac{-4 \\pm \\sqrt{16 - 4}}{2}",
+        "D": "\\frac{-4 \\pm \\sqrt{16 + 4}}{2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0157",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center (2, 3) and radius 4.",
+      "options": {
+        "A": "\\left\\( x - 2 \\right \\)^2 + \\left\\( y - 3 \\right \\)^2 = 16",
+        "B": "\\left\\( x - 3 \\right \\)^2 + \\left\\( y - 2 \\right \\)^2 = 16",
+        "C": "\\left\\( x - 4 \\right \\)^2 + \\left\\( y - 3 \\right \\)^2 = 16",
+        "D": "\\left\\( x - 2 \\right \\)^2 + \\left\\( y - 4 \\right \\)^2 = 16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0158",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( x^2 - 4x + 3 &gt; 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "\\left\\( x - 1 \\right \\) \\left\\( x - 3 \\right \\) > 0",
+        "B": "\\left\\( x - 2 \\right \\) \\left\\( x - 2 \\right \\) > 0",
+        "C": "\\left\\( x - 3 \\right \\) \\left\\( x - 1 \\right \\) > 0",
+        "D": "\\left\\( x - 1 \\right \\) \\left\\( x - 3 \\right \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0159",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2, 3) and (4, 5) in the slope-intercept form.",
+      "options": {
+        "A": "y = 1x + 1",
+        "B": "y = 2x + 2",
+        "C": "y = 3x + 3",
+        "D": "y = 4x + 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0160",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{2x^2 + 3x - 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\frac{-2x + 3}{\\( 2x^2 + 3x - 1 \\)^2}",
+        "B": "\\frac{2x + 3}{\\( 2x^2 + 3x - 1 \\)^2}",
+        "C": "\\frac{2x - 3}{\\( 2x^2 + 3x - 1 \\)^2}",
+        "D": "\\frac{2x + 1}{\\( 2x^2 + 3x - 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0161",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 75 and a s\\tandard deviation of 10. If the scores are normally distributed, what is the probability that a randomly selected student scored above 90?",
+      "options": {
+        "A": "0.1587",
+        "B": "0.3413",
+        "C": "0.4772",
+        "D": "0.6915"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0162",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\( \\tan^2 x + 2 \\tan x - 6 = 0 \\) for ( x ) in the interval ( [0, 2 pi] ).",
+      "options": {
+        "A": "\\frac{3 pi}{12}",
+        "B": "\\frac{5 pi}{12}",
+        "C": "\\frac{7 pi}{12}",
+        "D": "\\frac{11 pi}{12}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0163",
+      "type": "mcq",
+      "stem": "A random experiment has two indep\\endent events, A and B, with probabilities 0.4 and 0.6, respectively. What is the probability that both events occur?",
+      "options": {
+        "A": "0.24",
+        "B": "0.36",
+        "C": "0.48",
+        "D": "0.64"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0164",
+      "type": "mcq",
+      "stem": "Find the equation of the \\tangent line to the curve \\( y = x^3 - 6x^2 + 9x + 2 \\) at the point \\( 1, -4 \\ \\) ).",
+      "options": {
+        "A": "y = 3x - 5",
+        "B": "y = 3x - 7",
+        "C": "y = 3x - 9",
+        "D": "y = 3x - 11"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0165",
+      "type": "mcq",
+      "stem": "A random sample of 25 students from a university had a mean height of 175.5 cm with a s\\tandard deviation of 5.2 cm. If the population s\\tandard deviation is unknown, calculate the 95% confidence interval for the mean height of the university students.",
+      "options": {
+        "A": "173.5 cm to 177.5 cm",
+        "B": "171.5 cm to 179.5 cm",
+        "C": "174.5 cm to 176.5 cm",
+        "D": "172.5 cm to 178.5 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0166",
+      "type": "mcq",
+      "stem": "Solve the system of equations u\\sing matrices: \\[\\begin{align*} x + y + z &amp;= 6 \\ 2x + 3y - z &amp;= 2 \\ -x + 2y + 3z &amp;= -1 \\end{align*}\\]",
+      "options": {
+        "A": "\\[\\begin{bmatrix} x \\ y \\ z \\end{bmatrix} = \\begin{bmatrix} 1 \\ 2 \\ 3 \\end{bmatrix}\\]",
+        "B": "\\[\\begin{bmatrix} x \\ y \\ z \\end{bmatrix} = \\begin{bmatrix} 2 \\ 1 \\ 3 \\end{bmatrix}\\]",
+        "C": "\\[\\begin{bmatrix} x \\ y \\ z \\end{bmatrix} = \\begin{bmatrix} 3 \\ 2 \\ 1 \\end{bmatrix}\\]",
+        "D": "\\[\\begin{bmatrix} x \\ y \\ z \\end{bmatrix} = \\begin{bmatrix} 1 \\ 3 \\ 2 \\end{bmatrix}\\]"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0167",
+      "type": "mcq",
+      "stem": "A binary operation \\(*\\) on the set \\{1, 2, 3, 4, 5\\} is defined as \\[\\begin{align*} *: \\{1, 2, 3, 4, 5\\} \\times \\{1, 2, 3, 4, 5\\} &amp;\\to \\{1, 2, 3, 4, 5\\} \\end{align*}\\]. If \\(a * b = 3\\), find the value of \\(a\\) and \\(b\\).",
+      "options": {
+        "A": "\\(a = 2, b = 1\\)",
+        "B": "\\(a = 3, b = 2\\)",
+        "C": "\\(a = 4, b = 3\\)",
+        "D": "\\(a = 5, b = 4\\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0168",
+      "type": "mcq",
+      "stem": "Solve the equation \\(\\frac{1}{x + 1} + \\frac{1}{x - 1} = \\frac{1}{2}\\) for \\(x\\).",
+      "options": {
+        "A": "\\(x = 2\\)",
+        "B": "\\(x = -2\\)",
+        "C": "\\(x = 1\\)",
+        "D": "\\(x = -1\\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0169",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x}{x-2} &gt; 0 \\) for \\( x in \\( -infty, infty \\ \\) ).",
+      "options": {
+        "A": "\\( -2, 2 \\) \\cup \\( 2, \\infty \\)",
+        "B": "\\( -\\infty, -2 \\) \\cup \\( 2, \\infty \\)",
+        "C": "\\( -\\infty, 2 \\) \\cup \\( 2, \\infty \\)",
+        "D": "\\( -\\infty, 2 \\) \\cup \\( 2, \\infty \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0170",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height \\( h = 6 \\) cm, and radii of the bases \\( r_1 = 4 \\) cm and \\( r_2 = 2 \\) cm.",
+      "options": {
+        "A": "48\\pi",
+        "B": "64\\pi",
+        "C": "72\\pi",
+        "D": "80\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0171",
+      "type": "mcq",
+      "stem": "Solve the system of equations: \\( x + y = 4 \\) and \\( x^2 + y^2 = 16 \\).",
+      "options": {
+        "A": "\\left\\{ (2, 2) \\right\\}",
+        "B": "\\left\\{ (2, 2), \\( -2, -2 \\) \\right\\}",
+        "C": "\\left\\{ (2, 2), \\( -2, 2 \\) \\right\\}",
+        "D": "\\left\\{ (2, 2), \\( 2, -2 \\) \\right\\}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0172",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points ( (2, 3) ) and ( (4, 5) ).",
+      "options": {
+        "A": "y = 2x - 1",
+        "B": "y = 2x + 1",
+        "C": "y = x - 1",
+        "D": "y = x + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0173",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "\\left\\{ -2 \\right\\}",
+        "B": "\\left\\{ -1, -3 \\right\\}",
+        "C": "\\left\\{ -2, 2 \\right\\}",
+        "D": "\\left\\{ -2, -4 \\right\\}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0174",
+      "type": "mcq",
+      "stem": "A histogram is constructed from the following data: 2, 4, 6, 8, 10, 12, 14, 16. What is the class width?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0175",
+      "type": "mcq",
+      "stem": "Find the equation of the \\tangent line to the curve y = x^2 + 2x - 3 at the point (1, 4).",
+      "options": {
+        "A": "y = 2x + 1",
+        "B": "y = 2x - 1",
+        "C": "y = x + 1",
+        "D": "y = x - 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0176",
+      "type": "mcq",
+      "stem": "A polynomial f(x) has roots at x = -2, x = 1, and x = 3. What is the product of the roots?",
+      "options": {
+        "A": "-6",
+        "B": "-12",
+        "C": "-18",
+        "D": "-24"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0177",
+      "type": "mcq",
+      "stem": "In a triangle $ABC$, if $\\tan A = \\frac{1}{3}$ and $\\tan B = \\frac{1}{2}$, find $\\tan C$.",
+      "options": {
+        "A": "\\frac{7}{4}",
+        "B": "\\frac{4}{7}",
+        "C": "\\frac{5}{12}",
+        "D": "\\frac{12}{5}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0178",
+      "type": "mcq",
+      "stem": "A set of 5 numbers has a mean of 10 and a s\\tandard deviation of 2. If 3 more numbers are added to the set, the new mean is 12. What is the sum of the 3 additional numbers?",
+      "options": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "120"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0179",
+      "type": "mcq",
+      "stem": "In a circle of radius 6, a chord of length 8 is drawn. If the chord is ext\\ended by 4 units, what is the length of the new chord?",
+      "options": {
+        "A": "12",
+        "B": "10",
+        "C": "8",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0180",
+      "type": "mcq",
+      "stem": "A sequence is defined by the formula $a_n = 2a_{n-1} + 1$, where $a_1 = 3$. Find the sum of the first 5 terms of the sequence.",
+      "options": {
+        "A": "65",
+        "B": "70",
+        "C": "75",
+        "D": "80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0181",
+      "type": "mcq",
+      "stem": "In a right-angled triangle, the length of the hypotenuse is 10 and one of the legs is 6. Find the length of the other leg.",
+      "options": {
+        "A": "8",
+        "B": "6",
+        "C": "4",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0182",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the curves y = 2x^2, y = 0, and x = 2 about the x-axis.",
+      "options": {
+        "A": "\\frac{256\\pi}{15}",
+        "B": "\\frac{512\\pi}{15}",
+        "C": "\\frac{256\\pi}{3}",
+        "D": "\\frac{512\\pi}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0183",
+      "type": "mcq",
+      "stem": "A histogram of the heights of students in a class is shown. Find the mean height of the students.",
+      "options": {
+        "A": "170",
+        "B": "172",
+        "C": "174",
+        "D": "176"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0184",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (1, 2) and (3, 4).",
+      "options": {
+        "A": "y = x + 1",
+        "B": "y = x - 1",
+        "C": "y = x + 2",
+        "D": "y = x - 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0185",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x}{x-2} &gt; 0 \\) for \\( x in \\( -infty, infty \\ \\) ). x 2",
+      "options": {
+        "A": "x",
+        "B": "x > 0 \\text{ or } x",
+        "C": "x",
+        "D": "x > 0 \\text{ or } x = 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0186",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 - 4x + 3 \\) from \\( x = 1 \\) to \\( x = 3 \\).",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0187",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( x + y = 3 \\) and \\( xy = 2 \\).",
+      "options": {
+        "A": "x = 2, y = 1",
+        "B": "x = 1, y = 2",
+        "C": "x = -1, y = -2",
+        "D": "x = 2, y = -1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0188",
+      "type": "mcq",
+      "stem": "Find the mean of the data set ( 2, 4, 6, 8, 10 ).",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0189",
+      "type": "mcq",
+      "stem": "Find the sum of the first 5 terms of the geometric sequence ( 2, 6, 18, 54, ... ).",
+      "options": {
+        "A": "242",
+        "B": "242",
+        "C": "242",
+        "D": "242"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0190",
+      "type": "mcq",
+      "stem": "In a normal distribution with mean \\( mu = 10 \\) and s\\tandard deviation \\( sigma = 2 \\), find the probability that a randomly selected value lies between 8 and 12.",
+      "options": {
+        "A": "0.5",
+        "B": "0.75",
+        "C": "0.866",
+        "D": "0.95"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0191",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{x^2 + 1} \\) from \\( x = 0 \\) to \\( x = 1 \\).",
+      "options": {
+        "A": "\\frac{pi}{4}",
+        "B": "\\frac{pi}{2}",
+        "C": "\\frac{pi}{3}",
+        "D": "\\frac{pi}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0192",
+      "type": "mcq",
+      "stem": "A random experiment has two indep\\endent events (A) and (B) with probabilities (P(A) = 0.4) and (P(B) = 0.6). Find the probability that both events occur.",
+      "options": {
+        "A": "0.2",
+        "B": "0.24",
+        "C": "0.28",
+        "D": "0.32"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0193",
+      "type": "mcq",
+      "stem": "In a normal distribution with mean \\( mu = 5 \\) and s\\tandard deviation \\( sigma = 1.5 \\), find the z-score corresponding to a value of 6.",
+      "options": {
+        "A": "1",
+        "B": "1.33",
+        "C": "1.5",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0194",
+      "type": "mcq",
+      "stem": "Find the value of x in the quadratic equation \\( x^2 + 5x + 6 = 0 \\).",
+      "options": {
+        "A": "2",
+        "B": "-3",
+        "C": "-2",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0195",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations \\( \\begin{cases} 2x + 3y = 7 \\ 4x - 2y = - 3 \\end{cases} \\).",
+      "options": {
+        "A": "\\( x = 1, y = 1 \\)",
+        "B": "\\( x = 2, y = 3 \\)",
+        "C": "\\( x = 3, y = 2 \\)",
+        "D": "\\( x = 4, y = 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0196",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \\begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; 1 &amp; 2 \\ 3 &amp; 2 &amp; 4 \\end{bmatrix} \\ \\).",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-jabu-pq-mathematics-bank-0197",
+      "type": "mcq",
+      "stem": "Find the mean of the data set \\( \\{ 2, 4, 6, 8, 10 \\} \\ \\).",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

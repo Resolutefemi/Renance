@@ -1,0 +1,612 @@
+{
+  "code": "uni-eksu-fms312-bank",
+  "title": "EKSU FMS 312 - ENTREPRENEURIAL STUDY II | Practice Bank",
+  "version": 1,
+  "questionCount": 50,
+  "totalMarks": 50,
+  "questions": [
+    {
+      "id": "uni-eksu-fms312-bank-0001",
+      "type": "mcq",
+      "stem": "What is the primary purpose of a feasibility study in entrepreneurship?",
+      "options": {
+        "A": "To secure immediate funding for a project",
+        "B": "To assess the practicality and viability of a proposed business venture",
+        "C": "To determine the final selling price of products",
+        "D": "To conduct a post-launch performance review"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0002",
+      "type": "mcq",
+      "stem": "In the context of a feasibility report, what does \"viability\" refer to?",
+      "options": {
+        "A": "The technical ease of implementing the project",
+        "B": "The potential for the project to be profitable and sustainable",
+        "C": "The number of competitors in the market",
+        "D": "The availability of raw materials"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following is a key consideration when selecting a source of short-term financing?",
+      "options": {
+        "A": "The company's long-term debt-to-equity ratio",
+        "B": "The interest rate and other costs associated with the financing",
+        "C": "The potential for future expansion of the business",
+        "D": "The company's historical stock performance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0004",
+      "type": "mcq",
+      "stem": "What does the term \"net 30\" in a credit term signify?",
+      "options": {
+        "A": "The customer has 30 days from the invoice date to pay the full amount without penalty",
+        "B": "A 30% discount is offered if paid within 30 days",
+        "C": "The payment is due immediately upon receipt of goods",
+        "D": "A late payment fee of 30% will be applied after 30 days"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0005",
+      "type": "mcq",
+      "stem": "If a company offers credit terms of \"2/15, net 30\", what is the discount percentage offered for early payment?",
+      "options": {
+        "A": "15%",
+        "B": "2%",
+        "C": "30%",
+        "D": "3%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0006",
+      "type": "mcq",
+      "stem": "In the credit terms \"2/15, net 30\", how many days does the customer have to pay the full invoice amount if they do not take the discount?",
+      "options": {
+        "A": "15 days",
+        "B": "2 days",
+        "C": "30 days",
+        "D": "17 days"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0007",
+      "type": "mcq",
+      "stem": "What is the fundamental purpose of trade credit?",
+      "options": {
+        "A": "To provide long-term capital for business expansion",
+        "B": "To allow customers to purchase goods or services and pay for them later",
+        "C": "To finance the purchase of fixed assets",
+        "D": "To cover operational losses"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0008",
+      "type": "mcq",
+      "stem": "Which of the following is a category of trade credit?",
+      "options": {
+        "A": "Bank overdrafts",
+        "B": "Leasing agreements",
+        "C": "Supplier credit",
+        "D": "Commercial paper"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0009",
+      "type": "mcq",
+      "stem": "Agidingbi Consult Ltd. pledges its receivables to GTBank. What is this arrangement commonly known as?",
+      "options": {
+        "A": "Factoring",
+        "B": "Leasing",
+        "C": "Underwriting",
+        "D": "Syndicated loan"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0010",
+      "type": "mcq",
+      "stem": "In the scenario of Agidingbi Consult Ltd., GTBank advances up to 75 percent of the face value of the receivable. What does this percentage represent?",
+      "options": {
+        "A": "The total cost of financing",
+        "B": "The loan-to-value ratio",
+        "C": "The processing charge",
+        "D": "The prime interest rate"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0011",
+      "type": "mcq",
+      "stem": "What is the interest rate charged by GTBank for financing receivables if the prime rate is 12% and the advance is at 4% over the prime rate?",
+      "options": {
+        "A": "4%",
+        "B": "12%",
+        "C": "16%",
+        "D": "8%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0012",
+      "type": "mcq",
+      "stem": "What are the processing charges levied by GTBank on all receivables pledged by Agidingbi Consult Ltd.?",
+      "options": {
+        "A": "4%",
+        "B": "12%",
+        "C": "2%",
+        "D": "75%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0013",
+      "type": "mcq",
+      "stem": "Agidingbi Consult Ltd. maintains the practice of borrowing the maximum amount possible. This indicates a desire to utilize leverage. What is the maximum percentage of the face value of receivables they can borrow?",
+      "options": {
+        "A": "75%",
+        "B": "25%",
+        "C": "100%",
+        "D": "16%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0014",
+      "type": "mcq",
+      "stem": "If Agidingbi Consult Ltd. has average monthly sales of N25,000.00k and a two-month credit term, what is their average receivable balance?",
+      "options": {
+        "A": "N12,500.00k",
+        "B": "N25,000.00k",
+        "C": "N50,000.00k",
+        "D": "N75,000.00k"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0015",
+      "type": "mcq",
+      "stem": "Calculate the effective annual interest rate (cost) of a cash discount of 2/15, net 30. (Assume 360 days in a year).",
+      "options": {
+        "A": "Approximately 24.5%",
+        "B": "Approximately 49.0%",
+        "C": "Approximately 12.2%",
+        "D": "Approximately 36.0%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0016",
+      "type": "mcq",
+      "stem": "Calculate the effective annual interest rate (cost) of a cash discount of 3/10, net 60. (Assume 360 days in a year).",
+      "options": {
+        "A": "Approximately 18.4%",
+        "B": "Approximately 36.8%",
+        "C": "Approximately 27.6%",
+        "D": "Approximately 55.2%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0017",
+      "type": "mcq",
+      "stem": "What is a \"Term Loan\"?",
+      "options": {
+        "A": "A loan repaid over a specific period with a fixed schedule of payments",
+        "B": "A loan that can be repaid at any time without penalty",
+        "C": "A loan secured by physical assets only",
+        "D": "A loan with an interest rate that fluctuates daily"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0018",
+      "type": "mcq",
+      "stem": "Bonds represent a form of:",
+      "options": {
+        "A": "Equity financing",
+        "B": "Debt financing",
+        "C": "Grant funding",
+        "D": "Venture capital"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0019",
+      "type": "mcq",
+      "stem": "What distinguishes Preferred Stock from Common Stock?",
+      "options": {
+        "A": "Preferred stockholders have voting rights, while common stockholders do not.",
+        "B": "Preferred stockholders have a claim on assets and dividends that is senior to common stockholders.",
+        "C": "Common stockholders receive fixed dividends, while preferred stockholders do not.",
+        "D": "Preferred stock is always a debt instrument."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0020",
+      "type": "mcq",
+      "stem": "Common Stockholders are typically the:",
+      "options": {
+        "A": "First to be repaid in case of liquidation",
+        "B": "Owners of the company with residual claims on assets and earnings",
+        "C": "Holders of a fixed maturity debt instrument",
+        "D": "Guarantors of the company's debts"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0021",
+      "type": "mcq",
+      "stem": "What is a Convertible Bond?",
+      "options": {
+        "A": "A bond that can be exchanged for cash at a predetermined price",
+        "B": "A bond that can be converted into shares of the issuing company's common stock",
+        "C": "A bond with an interest rate that is fixed for its entire life",
+        "D": "A bond that is guaranteed by a third party"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0022",
+      "type": "mcq",
+      "stem": "What is the main benefit of leasing as a financing option?",
+      "options": {
+        "A": "Ownership of the asset at the end of the lease term",
+        "B": "Significant tax deductions on the asset's purchase price",
+        "C": "Preservation of working capital by avoiding large upfront outlays",
+        "D": "The ability to sell the asset at any time"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0023",
+      "type": "mcq",
+      "stem": "What is a significant disadvantage of leasing as a financing option?",
+      "options": {
+        "A": "The lessee gains full ownership of the asset",
+        "B": "The total cost of leasing can be higher than purchasing the asset over its lifetime",
+        "C": "The lessor handles all maintenance costs",
+        "D": "It provides immediate equity in the asset"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0024",
+      "type": "mcq",
+      "stem": "The \"contents of a good feasibility report\" would typically include:",
+      "options": {
+        "A": "A detailed marketing plan and sales forecasts",
+        "B": "Financial projections and analysis",
+        "C": "Technical specifications of the equipment to be used",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0025",
+      "type": "mcq",
+      "stem": "Which of the following is a crucial step in the conduct of a feasibility study?",
+      "options": {
+        "A": "Securing the final loan approval",
+        "B": "Conducting a market analysis",
+        "C": "Hiring the entire workforce",
+        "D": "Designing the company logo"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0026",
+      "type": "mcq",
+      "stem": "A feasibility study aims to determine if a project is:",
+      "options": {
+        "A": "Socially acceptable",
+        "B": "Environmentally friendly",
+        "C": "Technologically possible, financially viable, and operationally manageable",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0027",
+      "type": "mcq",
+      "stem": "The \"benefit of a good feasibility report\" includes:",
+      "options": {
+        "A": "Providing a clear roadmap for project implementation",
+        "B": "Identifying potential risks and challenges",
+        "C": "Supporting funding applications by demonstrating viability",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0028",
+      "type": "mcq",
+      "stem": "What does the term \"net 60\" in credit terms indicate?",
+      "options": {
+        "A": "The customer has 60 days to claim a discount",
+        "B": "The full payment is due within 60 days from the invoice date",
+        "C": "A 60% penalty is applied after 60 days",
+        "D": "The discount is valid for 60 days"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0029",
+      "type": "mcq",
+      "stem": "Which type of trade credit involves goods or services being supplied on credit by a vendor to a buyer?",
+      "options": {
+        "A": "Bank loans",
+        "B": "Leasing",
+        "C": "Supplier credit",
+        "D": "Factoring"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0030",
+      "type": "mcq",
+      "stem": "In the context of financing based on receivables, what is a common arrangement?",
+      "options": {
+        "A": "Issuing long-term bonds",
+        "B": "Factoring or pledging receivables",
+        "C": "Obtaining a mortgage",
+        "D": "Selling equity shares"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0031",
+      "type": "mcq",
+      "stem": "What is the primary purpose of a feasibility study?",
+      "options": {
+        "A": "To manage day-to-day operations",
+        "B": "To explore the potential success of a new venture before significant investment",
+        "C": "To set the company's dividend policy",
+        "D": "To evaluate past marketing campaigns"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0032",
+      "type": "mcq",
+      "stem": "When considering short-term financing, which factor is most critical for a business operating on tight margins?",
+      "options": {
+        "A": "The length of the repayment term",
+        "B": "The administrative complexity of the application process",
+        "C": "The cost of financing (interest rates, fees)",
+        "D": "The collateral requirements for long-term assets"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0033",
+      "type": "mcq",
+      "stem": "In the credit term \"3/10 net 60,\" what is the period during which the discount is available?",
+      "options": {
+        "A": "3 days",
+        "B": "10 days",
+        "C": "60 days",
+        "D": "70 days"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0034",
+      "type": "mcq",
+      "stem": "If Agidingbi Consult Ltd. pledged all its receivables, it means they have:",
+      "options": {
+        "A": "Sold their receivables to the bank",
+        "B": "Used their receivables as collateral for a loan",
+        "C": "Transferred ownership of their receivables to the bank without recourse",
+        "D": "Both A and B are possible depending on the agreement"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0035",
+      "type": "mcq",
+      "stem": "The \"prime rate\" is a benchmark interest rate typically used by banks for:",
+      "options": {
+        "A": "Loans to individual consumers",
+        "B": "Loans to the most creditworthy corporate customers",
+        "C": "Government borrowing",
+        "D": "International trade financing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0036",
+      "type": "mcq",
+      "stem": "What does it mean for a company to \"maintain the practice of borrowing the maximum amount possible\" on its receivables?",
+      "options": {
+        "A": "They are prioritizing debt repayment",
+        "B": "They are seeking to maximize the immediate liquidity from their receivables",
+        "C": "They are avoiding all forms of external financing",
+        "D": "They are focusing on reducing their accounts payable"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0037",
+      "type": "mcq",
+      "stem": "The cost to the buyer of a cash discount is essentially the:",
+      "options": {
+        "A": "Interest paid on the full invoice amount",
+        "B": "Opportunity cost of not taking the discount",
+        "C": "Processing fee charged by the supplier",
+        "D": "Penalty for late payment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0038",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a category of trade credit?",
+      "options": {
+        "A": "Open account credit",
+        "B": "Installment credit",
+        "C": "Revolving credit",
+        "D": "Secured credit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0039",
+      "type": "mcq",
+      "stem": "What is the fundamental nature of bonds issued by a company?",
+      "options": {
+        "A": "They represent ownership in the company.",
+        "B": "They represent a loan made to the company.",
+        "C": "They are a form of government subsidy.",
+        "D": "They are a contract for future services."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0040",
+      "type": "mcq",
+      "stem": "Preferred stock typically offers dividends that are:",
+      "options": {
+        "A": "Variable and dependent on company profits",
+        "B": "Fixed and paid before common stock dividends",
+        "C": "Tax-deductible for the company",
+        "D": "Paid only if the company issues new stock"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0041",
+      "type": "mcq",
+      "stem": "What is the primary right of common stockholders?",
+      "options": {
+        "A": "To receive a fixed dividend payment",
+        "B": "To vote on company matters and elect the board of directors",
+        "C": "To have their investment repaid on a specific date",
+        "D": "To have a senior claim on company assets"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0042",
+      "type": "mcq",
+      "stem": "What is a key advantage of a Term Loan for a business?",
+      "options": {
+        "A": "It provides immediate access to funds without any repayment obligation.",
+        "B": "The repayment schedule is fixed, allowing for predictable budgeting.",
+        "C": "It can be recalled by the lender at any time.",
+        "D": "It does not require any interest payments."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0043",
+      "type": "mcq",
+      "stem": "What is the significance of a \"good feasibility report\" for an entrepreneur?",
+      "options": {
+        "A": "It guarantees project success regardless of market conditions.",
+        "B": "It helps in making informed decisions about whether to proceed with a project.",
+        "C": "It replaces the need for a business plan.",
+        "D": "It automatically secures all necessary permits."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0044",
+      "type": "mcq",
+      "stem": "The steps required for conducting a feasibility study typically involve:",
+      "options": {
+        "A": "Identifying the project idea and defining its scope",
+        "B": "Conducting market, technical, financial, and organizational analyses",
+        "C": "Evaluating the risks and proposing mitigation strategies",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0045",
+      "type": "mcq",
+      "stem": "If a bank advances 75% of the face value of receivables at an interest rate of 4% over prime, and the prime rate is 12%, what is the effective interest rate on the advanced amount?",
+      "options": {
+        "A": "12%",
+        "B": "4%",
+        "C": "16%",
+        "D": "15%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0046",
+      "type": "mcq",
+      "stem": "What does \"net 30\" in credit terms mean for the customer?",
+      "options": {
+        "A": "They can pay in 30 installments.",
+        "B": "They have 30 days to pay the full amount without incurring a penalty.",
+        "C": "They receive a 30% discount if paid within 30 days.",
+        "D": "The payment is due immediately."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0047",
+      "type": "mcq",
+      "stem": "Which type of trade credit is characterized by goods being delivered with an expectation of future payment by the buyer?",
+      "options": {
+        "A": "Leasing",
+        "B": "Factoring",
+        "C": "Supplier credit",
+        "D": "Term loan"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0048",
+      "type": "mcq",
+      "stem": "What is the main function of trade credit in a business context?",
+      "options": {
+        "A": "To provide long-term investment capital",
+        "B": "To facilitate sales by offering customers payment flexibility",
+        "C": "To cover employee salaries",
+        "D": "To purchase fixed assets"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0049",
+      "type": "mcq",
+      "stem": "In the context of a feasibility study, the \"technical feasibility\" assesses:",
+      "options": {
+        "A": "The market demand for the product or service.",
+        "B": "The availability and cost of necessary technology and resources.",
+        "C": "The financial profitability of the project.",
+        "D": "The legal and regulatory requirements."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-fms312-bank-0050",
+      "type": "mcq",
+      "stem": "If a company pledges its receivables to a bank for financing, and the bank advances 75% of the face value, what happens to the remaining 25%?",
+      "options": {
+        "A": "It is immediately paid to the company.",
+        "B": "It is retained by the bank as profit.",
+        "C": "It is the company's equity in the receivables, and the company may receive it after the bank is repaid.",
+        "D": "It is forfeited by the company."
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 50,
+  "category": "university",
+  "body": "University Modules"
+}

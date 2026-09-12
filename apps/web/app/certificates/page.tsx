@@ -14,6 +14,7 @@ import { getToken } from '@/lib/session';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 
 interface MeResponse {
   user: { id: string; username: string };
@@ -95,7 +96,7 @@ export default function CertificatesPage() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
       <PageBar title="Digital Wallet" />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 pt-4 sm:px-6">
@@ -218,6 +219,7 @@ export default function CertificatesPage() {
         </div>
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

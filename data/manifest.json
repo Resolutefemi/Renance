@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-09T00:00:00Z",
-  "version": "myschool-merge-1",
+  "generatedAt": "2026-09-12T02:38:26+00:00",
+  "version": "era2-g1",
   "exams": [
     {
       "code": "jamb-accounting-bank",
@@ -1121,6 +1121,2108 @@
       "sizeBytes": 142491
     },
     {
+      "code": "uni-aaua-cos101-bank",
+      "title": "AAUA COS 101 (Introduction to Computer Science) | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b045c17b716542038a230ac42f9c9efde754f124693fdb371f2a7cc2121832ba",
+      "sizeBytes": 14256
+    },
+    {
+      "code": "uni-aaua-csc103-bank",
+      "title": "AAUA CSC 103 (Computer Hardware and Installation Management) | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "846f0ffb72ff8ccb49262a19ef0e7eaecd4a4805d74a272ab975d81df61fdaf9",
+      "sizeBytes": 15017
+    },
+    {
+      "code": "uni-aaua-gst111-bank",
+      "title": "AAUA GST 111 (Use of English) | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "eb2fb9c1e94f93dac8311c8e5570c634ac933f68f7b0ebb5c5982a51496f663d",
+      "sizeBytes": 14441
+    },
+    {
+      "code": "uni-aaua-mth101-bank",
+      "title": "AAUA MTH 101 (General Mathematics) | Practice Bank",
+      "questionCount": 62,
+      "totalMarks": 62,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "333133a8efc9c3b854c6dca5c31200814d93ad7aec9f6bfed8ae53ee116db77e",
+      "sizeBytes": 16298
+    },
+    {
+      "code": "uni-aaua-phy101-bank",
+      "title": "AAUA PHY 101 (General Physics) | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "dadfc4d7e753cc58dba7469decc5f391de6ba3c41f33e1a4619becfb0b6646b5",
+      "sizeBytes": 13817
+    },
+    {
+      "code": "uni-aaua-pq-accounting-bank",
+      "title": "AAUA Post-UTME Accounting | Prep Bank",
+      "questionCount": 218,
+      "totalMarks": 218,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "728d623b7060238dcf89e19375493981e1ff0f2e39734cfb28e7e39de77ae6cb",
+      "sizeBytes": 108262
+    },
+    {
+      "code": "uni-aaua-pq-biology-bank",
+      "title": "AAUA Post-UTME Biology | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9d63b3e0f5ac96c97bff31a099c5d10c714c6b5f8795f563a2a7f0d6682b167a",
+      "sizeBytes": 84945
+    },
+    {
+      "code": "uni-aaua-pq-chemistry-bank",
+      "title": "AAUA Post-UTME Chemistry | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ab444f84168d00596fc8b88bc3c728537d542738349277fc2c466119a190c682",
+      "sizeBytes": 77376
+    },
+    {
+      "code": "uni-aaua-pq-commerce-bank",
+      "title": "AAUA Post-UTME Commerce | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "19c11eb234a4f3521888eca48ed4b17f6fc47806895071007d3d877ad8920b64",
+      "sizeBytes": 104791
+    },
+    {
+      "code": "uni-aaua-pq-crs-bank",
+      "title": "AAUA Post-UTME CRS | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5afdaa87807ccfabf1ded2a160feec6bafa39d47419ccbabc5834eec0c64f5c4",
+      "sizeBytes": 100939
+    },
+    {
+      "code": "uni-aaua-pq-economics-bank",
+      "title": "AAUA Post-UTME Economics | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "76a2f133173a2ddf0cec1afdffc0b457b7c62387cef1b0f2000627f6e7e39f81",
+      "sizeBytes": 106381
+    },
+    {
+      "code": "uni-aaua-pq-english-bank",
+      "title": "AAUA Post-UTME English | Prep Bank",
+      "questionCount": 173,
+      "totalMarks": 173,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f55fc31900906a75ffbed02f55ae7bf6e1b07def038ca33f23b3e51223b1fe20",
+      "sizeBytes": 83253
+    },
+    {
+      "code": "uni-aaua-pq-geography-bank",
+      "title": "AAUA Post-UTME Geography | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cd9c58ee4757ae8dfe9f8c19e9229a0a348b24e1be1176b3afe43760334a3325",
+      "sizeBytes": 93258
+    },
+    {
+      "code": "uni-aaua-pq-government-bank",
+      "title": "AAUA Post-UTME Government | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c2356e0566f18ad764ab2d3a037d826b640346989e710179d7abcdabf85c8947",
+      "sizeBytes": 134918
+    },
+    {
+      "code": "uni-aaua-pq-irs-bank",
+      "title": "AAUA Post-UTME IRS | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "835dc4703d630c5857de9dca22cec1b867c167105b1fa52413f8ef3b13e6d77b",
+      "sizeBytes": 95740
+    },
+    {
+      "code": "uni-aaua-pq-literature-bank",
+      "title": "AAUA Post-UTME Literature | Prep Bank",
+      "questionCount": 145,
+      "totalMarks": 145,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bdb347df77be99a420e468aee17e83ade27d2a1173340561ea750f26ab6fc059",
+      "sizeBytes": 84888
+    },
+    {
+      "code": "uni-aaua-pq-mathematics-bank",
+      "title": "AAUA Post-UTME Mathematics | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d5dd90c3c395cce4b1185441befb893d3ec6c9527b194409084169a4cf1b56e0",
+      "sizeBytes": 74726
+    },
+    {
+      "code": "uni-aaua-pq-physics-bank",
+      "title": "AAUA Post-UTME Physics | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b710cb6afb12d3d70c10b3c840682a842657fa37dec04e007e16ccd3fcbfd1f1",
+      "sizeBytes": 86535
+    },
+    {
+      "code": "uni-aaua-sta101-bank",
+      "title": "AAUA STA 101 (Introduction to Statistics) | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ff1aeb3c6c0998909ba1e559d137f639b6d8c955323e30a90190adddcb62e05e",
+      "sizeBytes": 14748
+    },
+    {
+      "code": "uni-abu-pq-accounting-bank",
+      "title": "ABU Post-UTME Accounting | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2bed0772a9ae7d1c83f941d112f0772d06f5b9d272b50e0ab933f31da0c63698",
+      "sizeBytes": 109541
+    },
+    {
+      "code": "uni-abu-pq-biology-bank",
+      "title": "ABU Post-UTME Biology | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8b9c7d11d775559dd5b343ac1ad2420005e3519f1a43ca1c33d55bc8e1ef68d3",
+      "sizeBytes": 86838
+    },
+    {
+      "code": "uni-abu-pq-chemistry-bank",
+      "title": "ABU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0f527265aac7fedee690baffaccf27f185c0c74b93ac71d7ac5dedd343fbead2",
+      "sizeBytes": 79397
+    },
+    {
+      "code": "uni-abu-pq-commerce-bank",
+      "title": "ABU Post-UTME Commerce | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ba03a1cbffc0b2f111561eefc4f70cc957cc7f1a155383ef5afe4dbb319c6e35",
+      "sizeBytes": 105068
+    },
+    {
+      "code": "uni-abu-pq-crs-bank",
+      "title": "ABU Post-UTME CRS | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c4b5d61ae12e5f0954c99d211c2e89434de3c897755db0ba32d4f48eac2ae6fd",
+      "sizeBytes": 95520
+    },
+    {
+      "code": "uni-abu-pq-economics-bank",
+      "title": "ABU Post-UTME Economics | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8b6bda0b573be2db8cd9ccb5571aa282c34aa61ad045a0e7d3c62339947d6f92",
+      "sizeBytes": 103532
+    },
+    {
+      "code": "uni-abu-pq-english-bank",
+      "title": "ABU Post-UTME English | Prep Bank",
+      "questionCount": 172,
+      "totalMarks": 172,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "597c72ac4ba7b04fc960d916eed55e66c8eb18e6163a51b19159d335f80d1572",
+      "sizeBytes": 80199
+    },
+    {
+      "code": "uni-abu-pq-geography-bank",
+      "title": "ABU Post-UTME Geography | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "452615e20ac0e3c9883c0cb4e37787527e037796973813d3b5eb9c1097d99e3a",
+      "sizeBytes": 93647
+    },
+    {
+      "code": "uni-abu-pq-government-bank",
+      "title": "ABU Post-UTME Government | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b407bae73c846261cb850fc3adb7973d23f9533cf409916ee7d6f4288f8e327d",
+      "sizeBytes": 140442
+    },
+    {
+      "code": "uni-abu-pq-irs-bank",
+      "title": "ABU Post-UTME IRS | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8f0cef45fc6268b140ffbbb4cad73f405d89a3322de02e6d3975e9923fc06ff2",
+      "sizeBytes": 103653
+    },
+    {
+      "code": "uni-abu-pq-literature-bank",
+      "title": "ABU Post-UTME Literature | Prep Bank",
+      "questionCount": 138,
+      "totalMarks": 138,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2bf036172d656abc68cb7b5ed640a2cd31425b0ea2fa0cf495b52a695d25c2ab",
+      "sizeBytes": 81341
+    },
+    {
+      "code": "uni-abu-pq-mathematics-bank",
+      "title": "ABU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "91f968234886b5ea05fdf2e38ef5867a8f6b70885aca7cb505eb44b70f734b43",
+      "sizeBytes": 72751
+    },
+    {
+      "code": "uni-abu-pq-physics-bank",
+      "title": "ABU Post-UTME Physics | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d9d3538ad649ea9c2ff731615959e1f98d3a94bef9557bd2c4adaeac9b4e4f91",
+      "sizeBytes": 88441
+    },
+    {
+      "code": "uni-abuad-pq-accounting-bank",
+      "title": "ABUAD Post-UTME Accounting | Prep Bank",
+      "questionCount": 220,
+      "totalMarks": 220,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "445a9ef2d74e9c9ceb1ab4eaa3646f884aec219e97658461c788a366b0599e16",
+      "sizeBytes": 112313
+    },
+    {
+      "code": "uni-abuad-pq-biology-bank",
+      "title": "ABUAD Post-UTME Biology | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "48656317ca1ffcf0d55bce4526a479ccb4e245c92283ee92ac8f2f717a6a0296",
+      "sizeBytes": 87203
+    },
+    {
+      "code": "uni-abuad-pq-chemistry-bank",
+      "title": "ABUAD Post-UTME Chemistry | Prep Bank",
+      "questionCount": 181,
+      "totalMarks": 181,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bc4b663adfacefa325992bad523f6d3c0d7e74cd19ccc771fb22402b898d4c47",
+      "sizeBytes": 72253
+    },
+    {
+      "code": "uni-abuad-pq-commerce-bank",
+      "title": "ABUAD Post-UTME Commerce | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "13920214c75b8f2e7e93121b0d4334b00a0322af906db9d1b69753e824a823e9",
+      "sizeBytes": 105403
+    },
+    {
+      "code": "uni-abuad-pq-crs-bank",
+      "title": "ABUAD Post-UTME CRS | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8550a802fcb9c1a791186941807eb26cded84f0d6a8d6923a40cab0cf40669e7",
+      "sizeBytes": 97754
+    },
+    {
+      "code": "uni-abuad-pq-economics-bank",
+      "title": "ABUAD Post-UTME Economics | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bde2a249ef7656054333abbfcc2a55c84b9765d49fb3c6f73e3216147fc9159c",
+      "sizeBytes": 105188
+    },
+    {
+      "code": "uni-abuad-pq-english-bank",
+      "title": "ABUAD Post-UTME English | Prep Bank",
+      "questionCount": 183,
+      "totalMarks": 183,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "fe0c87692a72809a8b1cdfe4d7562e420217d93fa694bc50d9b8eb6f738bb28c",
+      "sizeBytes": 82407
+    },
+    {
+      "code": "uni-abuad-pq-geography-bank",
+      "title": "ABUAD Post-UTME Geography | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e503509753aa3b916aed38d3fcf569881aa5be955bceb8a23b653782f883198d",
+      "sizeBytes": 92927
+    },
+    {
+      "code": "uni-abuad-pq-government-bank",
+      "title": "ABUAD Post-UTME Government | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b2fc5dc30673a04228d9fbdba511074a000265be08726958564a9605d7e2a49d",
+      "sizeBytes": 125389
+    },
+    {
+      "code": "uni-abuad-pq-irs-bank",
+      "title": "ABUAD Post-UTME IRS | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f73601dbf3660f04832fac5050602316ac9fb4f310dfe85f4a1b4663793d4692",
+      "sizeBytes": 99504
+    },
+    {
+      "code": "uni-abuad-pq-literature-bank",
+      "title": "ABUAD Post-UTME Literature | Prep Bank",
+      "questionCount": 145,
+      "totalMarks": 145,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cf8155237d75d6139a4514f5745119560f962484879a2ce799b29917b3b057f5",
+      "sizeBytes": 85870
+    },
+    {
+      "code": "uni-abuad-pq-mathematics-bank",
+      "title": "ABUAD Post-UTME Mathematics | Prep Bank",
+      "questionCount": 191,
+      "totalMarks": 191,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "22b44fdb606f01af39bdb3d7162c2180e82482b198fe04ed08cc4bbba398d7a5",
+      "sizeBytes": 71316
+    },
+    {
+      "code": "uni-abuad-pq-physics-bank",
+      "title": "ABUAD Post-UTME Physics | Prep Bank",
+      "questionCount": 193,
+      "totalMarks": 193,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3d68f571c5533fbe4e90698b914f4c6d5bde68ac3a72493a0795d6f113764fbb",
+      "sizeBytes": 82106
+    },
+    {
+      "code": "uni-achievers-pq-accounting-bank",
+      "title": "ACHIEVERS Post-UTME Accounting | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1a4ba44c317357370b38dd3800bbbaa746fb1ab36a71155716add30c0f69410c",
+      "sizeBytes": 117209
+    },
+    {
+      "code": "uni-achievers-pq-biology-bank",
+      "title": "ACHIEVERS Post-UTME Biology | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "78e15b2a3a7277df669a7e31ffccf876598d9c4b773e1a409ca4cdde24efbbd0",
+      "sizeBytes": 86160
+    },
+    {
+      "code": "uni-achievers-pq-chemistry-bank",
+      "title": "ACHIEVERS Post-UTME Chemistry | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a36f4a9f7c7eacca19614e15ee56a1ed6d39d94f47a94b8225e5da3c9bf2e8e1",
+      "sizeBytes": 81805
+    },
+    {
+      "code": "uni-achievers-pq-commerce-bank",
+      "title": "ACHIEVERS Post-UTME Commerce | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7431f67ecc4d32a7b8a22c08fb1ec18dd38b8a52b19fb6b0e8d1dfac3e95a20c",
+      "sizeBytes": 106895
+    },
+    {
+      "code": "uni-achievers-pq-crs-bank",
+      "title": "ACHIEVERS Post-UTME CRS | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b5bf03ebff9e2c36c3b52ebc3a2c4779641b5595b0574e16f5e4514dbaa6c651",
+      "sizeBytes": 102778
+    },
+    {
+      "code": "uni-achievers-pq-economics-bank",
+      "title": "ACHIEVERS Post-UTME Economics | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c5792d2b7972f776c6a3f9919cb293d35d2ee9b278a393a1bdd434521285b628",
+      "sizeBytes": 105795
+    },
+    {
+      "code": "uni-achievers-pq-english-bank",
+      "title": "ACHIEVERS Post-UTME English | Prep Bank",
+      "questionCount": 162,
+      "totalMarks": 162,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e3f24fa483933cc668d5a82f098289807a802d82c31d1199499c1e867bb252bf",
+      "sizeBytes": 75788
+    },
+    {
+      "code": "uni-achievers-pq-geography-bank",
+      "title": "ACHIEVERS Post-UTME Geography | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b11e20ccacf0cab2035c90afb75b1f43f46ef0866e195ab5f53fec8b25033d59",
+      "sizeBytes": 88093
+    },
+    {
+      "code": "uni-achievers-pq-government-bank",
+      "title": "ACHIEVERS Post-UTME Government | Prep Bank",
+      "questionCount": 221,
+      "totalMarks": 221,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4587ca2c20cccefec6f165f0c34451aa09f30028d8af5edb434681bcd29acdb8",
+      "sizeBytes": 142067
+    },
+    {
+      "code": "uni-achievers-pq-irs-bank",
+      "title": "ACHIEVERS Post-UTME IRS | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4c5bb8745dacc5f7922e345da19d760e8b57857b7be86a707973b1f5e4ae07a5",
+      "sizeBytes": 100067
+    },
+    {
+      "code": "uni-achievers-pq-literature-bank",
+      "title": "ACHIEVERS Post-UTME Literature | Prep Bank",
+      "questionCount": 129,
+      "totalMarks": 129,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1f962734a40afa0517d9f5eb1a41841d26d6e2b217c37a9a22034b9cb29c88ee",
+      "sizeBytes": 75457
+    },
+    {
+      "code": "uni-achievers-pq-mathematics-bank",
+      "title": "ACHIEVERS Post-UTME Mathematics | Prep Bank",
+      "questionCount": 175,
+      "totalMarks": 175,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "630a5c11e9315c23d95ae662e001b92cdf68ae8d44efb8c5b2f5aa9ace033e70",
+      "sizeBytes": 67675
+    },
+    {
+      "code": "uni-achievers-pq-physics-bank",
+      "title": "ACHIEVERS Post-UTME Physics | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b61bfa707e0e44b795d606243bda1a97794fb8feb4a235967d69b11ed8c60ec8",
+      "sizeBytes": 83951
+    },
+    {
+      "code": "uni-babcock-pq-accounting-bank",
+      "title": "BABCOCK Post-UTME Accounting | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b49d6e51d87757343812b684d7048916bc2f98963250cd0fee5882f7c43d5536",
+      "sizeBytes": 103353
+    },
+    {
+      "code": "uni-babcock-pq-biology-bank",
+      "title": "BABCOCK Post-UTME Biology | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "003aa423f543513c74e7cd1fac240a140ccb8665b6fbb01767aa05b16649adca",
+      "sizeBytes": 92490
+    },
+    {
+      "code": "uni-babcock-pq-chemistry-bank",
+      "title": "BABCOCK Post-UTME Chemistry | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e5fd0111da6e735bf856c03c3d768477da7305cba0c249026e90dfe18fa11c99",
+      "sizeBytes": 75668
+    },
+    {
+      "code": "uni-babcock-pq-commerce-bank",
+      "title": "BABCOCK Post-UTME Commerce | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a8cccad726d53bba1bb09901dc852bb89dff96c687ff955927e4a755a5c66230",
+      "sizeBytes": 104521
+    },
+    {
+      "code": "uni-babcock-pq-crs-bank",
+      "title": "BABCOCK Post-UTME CRS | Prep Bank",
+      "questionCount": 190,
+      "totalMarks": 190,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "605d96c0bc4130a2aabb52361e1b7f011d6b197c8819141c4a4c66c3195d085c",
+      "sizeBytes": 94105
+    },
+    {
+      "code": "uni-babcock-pq-economics-bank",
+      "title": "BABCOCK Post-UTME Economics | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2cf832c41e26ad2e6e60e49d11ef072bf3e3680c10b92cffa1086ef78ba364f9",
+      "sizeBytes": 100344
+    },
+    {
+      "code": "uni-babcock-pq-english-bank",
+      "title": "BABCOCK Post-UTME English | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "71b92d378a0457ce99dc84789a94c9bedcba48beb9f9e39de80341a9823c7255",
+      "sizeBytes": 98060
+    },
+    {
+      "code": "uni-babcock-pq-geography-bank",
+      "title": "BABCOCK Post-UTME Geography | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3793bdedf965c9672e3d1a878bf4fc9e12a0b21e29e28879def0fdc43c2efae5",
+      "sizeBytes": 95240
+    },
+    {
+      "code": "uni-babcock-pq-government-bank",
+      "title": "BABCOCK Post-UTME Government | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "43984a47cf90ff977a82d42667f4624f51c602b25574c97e07fb5f2ec2a86a42",
+      "sizeBytes": 136019
+    },
+    {
+      "code": "uni-babcock-pq-irs-bank",
+      "title": "BABCOCK Post-UTME IRS | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "914ff72fdbb12dda21d19402e4a96a47656738fb4e64fb623f459ec2adf66687",
+      "sizeBytes": 101473
+    },
+    {
+      "code": "uni-babcock-pq-literature-bank",
+      "title": "BABCOCK Post-UTME Literature | Prep Bank",
+      "questionCount": 128,
+      "totalMarks": 128,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e2c6f5fc4e06d1061f672059e7391b5b1e0505baddd2f7069dba4180860ded65",
+      "sizeBytes": 76498
+    },
+    {
+      "code": "uni-babcock-pq-mathematics-bank",
+      "title": "BABCOCK Post-UTME Mathematics | Prep Bank",
+      "questionCount": 189,
+      "totalMarks": 189,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0571db1cad0832a26b585d92b9006966d7b3f344846488553f36857de7bc9578",
+      "sizeBytes": 72084
+    },
+    {
+      "code": "uni-babcock-pq-physics-bank",
+      "title": "BABCOCK Post-UTME Physics | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a843cbfb68847fa3d2b013de5ed2589ee75daa0e892608a1a5cf092ff3ee32ab",
+      "sizeBytes": 90370
+    },
+    {
+      "code": "uni-bowen-pq-accounting-bank",
+      "title": "BOWEN Post-UTME Accounting | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2ee37a6f223cdc768b83e3dce5de26b5ffef164dbb856361ed86f91a555512b4",
+      "sizeBytes": 111543
+    },
+    {
+      "code": "uni-bowen-pq-biology-bank",
+      "title": "BOWEN Post-UTME Biology | Prep Bank",
+      "questionCount": 186,
+      "totalMarks": 186,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "50a417eccc5b2712079f11ce6061f4181053c8d230a9e337d2f40dccbb159acc",
+      "sizeBytes": 79139
+    },
+    {
+      "code": "uni-bowen-pq-chemistry-bank",
+      "title": "BOWEN Post-UTME Chemistry | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bd82a1daf612cc4908720fe7352d321a277d2aba9cb12f9b6a7a33ad8a417c93",
+      "sizeBytes": 78843
+    },
+    {
+      "code": "uni-bowen-pq-commerce-bank",
+      "title": "BOWEN Post-UTME Commerce | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "703aae00e2b85069bae9a3f3bb1ce69169167707906282f423e70ed7ccaf8f52",
+      "sizeBytes": 111020
+    },
+    {
+      "code": "uni-bowen-pq-crs-bank",
+      "title": "BOWEN Post-UTME CRS | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "045376ef51dca26481412f1c0be126d15c16269ed48a8b5665d4219221c53c97",
+      "sizeBytes": 100566
+    },
+    {
+      "code": "uni-bowen-pq-economics-bank",
+      "title": "BOWEN Post-UTME Economics | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a3004c430c769af8ef50e6de7a39ef1fb91cd1a2ca6c413196430fc53d778dd6",
+      "sizeBytes": 104572
+    },
+    {
+      "code": "uni-bowen-pq-english-bank",
+      "title": "BOWEN Post-UTME English | Prep Bank",
+      "questionCount": 180,
+      "totalMarks": 180,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1653d2ce7665c66325ccb6e2cbf8195b88eb5d5eabbcf46e1a362d08180ebcf4",
+      "sizeBytes": 88708
+    },
+    {
+      "code": "uni-bowen-pq-geography-bank",
+      "title": "BOWEN Post-UTME Geography | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "61f89620877e40df1fa3b99af4c6e703d1fd9d26b88c637fdf4a5b4355aec5ac",
+      "sizeBytes": 93205
+    },
+    {
+      "code": "uni-bowen-pq-government-bank",
+      "title": "BOWEN Post-UTME Government | Prep Bank",
+      "questionCount": 220,
+      "totalMarks": 220,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cca008364f3d6ce0c78a2bfbc65559331ae1d725316380871e57990ecb47e1ca",
+      "sizeBytes": 149690
+    },
+    {
+      "code": "uni-bowen-pq-irs-bank",
+      "title": "BOWEN Post-UTME IRS | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "13f1842b9642b4745e1cb9cf907ac14d0dc6246ead6ff9ffae226a8135ccec66",
+      "sizeBytes": 101921
+    },
+    {
+      "code": "uni-bowen-pq-literature-bank",
+      "title": "BOWEN Post-UTME Literature | Prep Bank",
+      "questionCount": 125,
+      "totalMarks": 125,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d4b76c562644c2f5d47761eb75ed7e8881949b2e40e8ba1b6455b6f21757394d",
+      "sizeBytes": 73811
+    },
+    {
+      "code": "uni-bowen-pq-mathematics-bank",
+      "title": "BOWEN Post-UTME Mathematics | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "23e15b1342bbe43edb13f2eb7b8b036be4466fd0cf81be28382edd54f459abe1",
+      "sizeBytes": 77008
+    },
+    {
+      "code": "uni-bowen-pq-physics-bank",
+      "title": "BOWEN Post-UTME Physics | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "40983c13c7f3a0bb4bb39aea32232df0fa8ee8b03c1cfb597b83f3a4ba1646a4",
+      "sizeBytes": 90644
+    },
+    {
+      "code": "uni-bsu-pq-accounting-bank",
+      "title": "BSU Post-UTME Accounting | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "30bf2a5624eb4c85b5b25a6e1db3a904c02c7b9a76b08d6bb19d01b8d0fe664d",
+      "sizeBytes": 104151
+    },
+    {
+      "code": "uni-bsu-pq-biology-bank",
+      "title": "BSU Post-UTME Biology | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bf2d8bbb03fbbafcac72233cc5e75b28f055f4c39075a7d5ffe553cf1f0f1594",
+      "sizeBytes": 89914
+    },
+    {
+      "code": "uni-bsu-pq-chemistry-bank",
+      "title": "BSU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1c3aabc56837862c2d24c9e889ab9bb8ec90f97786be170e2951917033a1bf5b",
+      "sizeBytes": 82968
+    },
+    {
+      "code": "uni-bsu-pq-commerce-bank",
+      "title": "BSU Post-UTME Commerce | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e15fe71c7bc8ca400ee1c8cbd600ce15cc720261b80e4586640975c2779a518a",
+      "sizeBytes": 97068
+    },
+    {
+      "code": "uni-bsu-pq-crs-bank",
+      "title": "BSU Post-UTME CRS | Prep Bank",
+      "questionCount": 192,
+      "totalMarks": 192,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e554708ad1b22a4bdbe99de7cb69e312d2632afc92b40cb4c3116bb830238970",
+      "sizeBytes": 91385
+    },
+    {
+      "code": "uni-bsu-pq-economics-bank",
+      "title": "BSU Post-UTME Economics | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4098a7ff092ca20439fdc8140ec464503cb0f93433fd92e9eea6d959c82608a8",
+      "sizeBytes": 96055
+    },
+    {
+      "code": "uni-bsu-pq-english-bank",
+      "title": "BSU Post-UTME English | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8a0403f4ab6b359e91d8882aca7bde2cccc22b4771da4ac94c47f9a0c8a87b21",
+      "sizeBytes": 99155
+    },
+    {
+      "code": "uni-bsu-pq-geography-bank",
+      "title": "BSU Post-UTME Geography | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e1e84ba80384986bf0650a7d5ff2ae0ffa4991c6b53eab8cc77cce6c1d20f4ce",
+      "sizeBytes": 87478
+    },
+    {
+      "code": "uni-bsu-pq-government-bank",
+      "title": "BSU Post-UTME Government | Prep Bank",
+      "questionCount": 219,
+      "totalMarks": 219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6f2f71aa4b52c20ec70a837238beb7a3508d3ab352591c96017379f876da45d9",
+      "sizeBytes": 139777
+    },
+    {
+      "code": "uni-bsu-pq-irs-bank",
+      "title": "BSU Post-UTME IRS | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6379492c18d449fe9ec96b19f188b1df37e3cfd68eb7bbc8a3c7945f39db91fc",
+      "sizeBytes": 106769
+    },
+    {
+      "code": "uni-bsu-pq-literature-bank",
+      "title": "BSU Post-UTME Literature | Prep Bank",
+      "questionCount": 125,
+      "totalMarks": 125,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "53252edf448fb531f29d9b9b9f3adb9387ee36771e424b7f45418dd201f9ce8f",
+      "sizeBytes": 73903
+    },
+    {
+      "code": "uni-bsu-pq-mathematics-bank",
+      "title": "BSU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8fdf28b28c9600658d7f2feec8a73117ffb67e59f4833d601cce9f1c176e04ad",
+      "sizeBytes": 75025
+    },
+    {
+      "code": "uni-bsu-pq-physics-bank",
+      "title": "BSU Post-UTME Physics | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d778e978a06daf88b6c9366e8097a30dc4a2b261a797d88621a4d5be4cf381f2",
+      "sizeBytes": 82411
+    },
+    {
+      "code": "uni-caleb-pq-accounting-bank",
+      "title": "CALEB Post-UTME Accounting | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ef9247ce328c8d581a480a97d292ec227e334cfd565c8e7b2cc65bdf961b7cd9",
+      "sizeBytes": 103896
+    },
+    {
+      "code": "uni-caleb-pq-biology-bank",
+      "title": "CALEB Post-UTME Biology | Prep Bank",
+      "questionCount": 192,
+      "totalMarks": 192,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "55148b4ce4ae9e55a0430f51c8bf7546ab957df949075e84e354d9ebe754822a",
+      "sizeBytes": 84135
+    },
+    {
+      "code": "uni-caleb-pq-chemistry-bank",
+      "title": "CALEB Post-UTME Chemistry | Prep Bank",
+      "questionCount": 178,
+      "totalMarks": 178,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b9a16e13fb5b0927a58207187bdcd5471068288dc8dc78e991d0f19dd37401b4",
+      "sizeBytes": 71721
+    },
+    {
+      "code": "uni-caleb-pq-commerce-bank",
+      "title": "CALEB Post-UTME Commerce | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "92c5ef3c49bb23308b400736d2a4bc84459646981a77e4defd56b5bc9c9003ea",
+      "sizeBytes": 104669
+    },
+    {
+      "code": "uni-caleb-pq-crs-bank",
+      "title": "CALEB Post-UTME CRS | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "66a9b7668d9b866e9a211fe7ca512e19953aec5efdc117147c5c1243ed2b0612",
+      "sizeBytes": 102108
+    },
+    {
+      "code": "uni-caleb-pq-economics-bank",
+      "title": "CALEB Post-UTME Economics | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "aabfd96273127b9457b370a3f65a652f0f4b49c2f19c56ce3727a824115808ee",
+      "sizeBytes": 102778
+    },
+    {
+      "code": "uni-caleb-pq-english-bank",
+      "title": "CALEB Post-UTME English | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f88e812298b89825bd2b50d73d323ce146cebe3208b2a0c1a5f043d4c8b4613a",
+      "sizeBytes": 97173
+    },
+    {
+      "code": "uni-caleb-pq-geography-bank",
+      "title": "CALEB Post-UTME Geography | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "520ad756e6e5999a7bb8754d46a7cd243af76df5fbf221254be9595f990db955",
+      "sizeBytes": 91561
+    },
+    {
+      "code": "uni-caleb-pq-government-bank",
+      "title": "CALEB Post-UTME Government | Prep Bank",
+      "questionCount": 221,
+      "totalMarks": 221,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "88c459a62c84ecfbb1b84d42ed22a1bd54afd3302d7c4f2b37467ffff487b457",
+      "sizeBytes": 150669
+    },
+    {
+      "code": "uni-caleb-pq-irs-bank",
+      "title": "CALEB Post-UTME IRS | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "aac2f9220be15d9c35a6b116e15e9af4b928f537a05babdaf84530d637ed1444",
+      "sizeBytes": 96331
+    },
+    {
+      "code": "uni-caleb-pq-literature-bank",
+      "title": "CALEB Post-UTME Literature | Prep Bank",
+      "questionCount": 135,
+      "totalMarks": 135,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d7c7f6a8113a310f9a3280aeedefe40e4ea721f9c48ccd3f6640793da5072a1d",
+      "sizeBytes": 80539
+    },
+    {
+      "code": "uni-caleb-pq-mathematics-bank",
+      "title": "CALEB Post-UTME Mathematics | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "dd5121c1501d7da38032508ab90e43084afa6e4998576c9d4adc199c58c8aa40",
+      "sizeBytes": 77330
+    },
+    {
+      "code": "uni-caleb-pq-physics-bank",
+      "title": "CALEB Post-UTME Physics | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7ee98bedf535f8a2680fb580ee414a2d26537fcd127c63c7447b3ce396ed23c5",
+      "sizeBytes": 87064
+    },
+    {
+      "code": "uni-covenant-pq-accounting-bank",
+      "title": "COVENANT Post-UTME Accounting | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c7cabe7771d9d930ae4fd3f780ea50272f6b6935861b76674072a20b14766406",
+      "sizeBytes": 107917
+    },
+    {
+      "code": "uni-covenant-pq-biology-bank",
+      "title": "COVENANT Post-UTME Biology | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cdc0c57cb02567b1d6f93becec73f075d93d09305e385ad24c0174fd72d070a7",
+      "sizeBytes": 88138
+    },
+    {
+      "code": "uni-covenant-pq-chemistry-bank",
+      "title": "COVENANT Post-UTME Chemistry | Prep Bank",
+      "questionCount": 189,
+      "totalMarks": 189,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "261ce22a1c5483019399873984cae7281ebb543205d46a5418315bc1de4ad395",
+      "sizeBytes": 75462
+    },
+    {
+      "code": "uni-covenant-pq-commerce-bank",
+      "title": "COVENANT Post-UTME Commerce | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ee71b5064b29689b8c95c17352d771c834143d64aaf54f7a1de8d090d6a24a30",
+      "sizeBytes": 101004
+    },
+    {
+      "code": "uni-covenant-pq-crs-bank",
+      "title": "COVENANT Post-UTME CRS | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3762a544ea550eb631e89db24e05ec34ee8d105548e66779a87c7583a5747be6",
+      "sizeBytes": 98284
+    },
+    {
+      "code": "uni-covenant-pq-economics-bank",
+      "title": "COVENANT Post-UTME Economics | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "49821027e3c9a5db0a24f5926207ea488826e8f504fde8b85be5f73122e01bd5",
+      "sizeBytes": 106476
+    },
+    {
+      "code": "uni-covenant-pq-english-bank",
+      "title": "COVENANT Post-UTME English | Prep Bank",
+      "questionCount": 159,
+      "totalMarks": 159,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "82be701b78b93a0b56e21d0e9ad050e13090eba6aa100f7c986c184f672470cf",
+      "sizeBytes": 80318
+    },
+    {
+      "code": "uni-covenant-pq-geography-bank",
+      "title": "COVENANT Post-UTME Geography | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f45c20ac702f80d6f9cb446cab48abe4716f52e3400721501f5212e1f861acf2",
+      "sizeBytes": 93477
+    },
+    {
+      "code": "uni-covenant-pq-government-bank",
+      "title": "COVENANT Post-UTME Government | Prep Bank",
+      "questionCount": 218,
+      "totalMarks": 218,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "af7df943a80551532c7752fd821d2aed261caef5ba92f0aa3cb19268f59ffa9b",
+      "sizeBytes": 149551
+    },
+    {
+      "code": "uni-covenant-pq-irs-bank",
+      "title": "COVENANT Post-UTME IRS | Prep Bank",
+      "questionCount": 194,
+      "totalMarks": 194,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "23caaccf8ea02ed716f4f284dca900408fad30ea59c65ee51e1d7a43daff4f6b",
+      "sizeBytes": 97285
+    },
+    {
+      "code": "uni-covenant-pq-literature-bank",
+      "title": "COVENANT Post-UTME Literature | Prep Bank",
+      "questionCount": 126,
+      "totalMarks": 126,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f07bb686a26f4c887d6d04480b8c47a0abaf2f5e57397ef2b21c87c530d3b719",
+      "sizeBytes": 73321
+    },
+    {
+      "code": "uni-covenant-pq-mathematics-bank",
+      "title": "COVENANT Post-UTME Mathematics | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "04496e6c09985bee7f4582df30010164311ae9a79b427b0f27f8be9ecc479883",
+      "sizeBytes": 77331
+    },
+    {
+      "code": "uni-covenant-pq-physics-bank",
+      "title": "COVENANT Post-UTME Physics | Prep Bank",
+      "questionCount": 183,
+      "totalMarks": 183,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e67ba11a8879f0710c6fee8d30d851d217e38226565844be9eb0084c6972040c",
+      "sizeBytes": 77063
+    },
+    {
+      "code": "uni-delsu-pq-accounting-bank",
+      "title": "DELSU Post-UTME Accounting | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "eeb276f26724f8a64eabc2cf45392ff16c9ddb91ed27bc25a1777ed085bbe34e",
+      "sizeBytes": 109100
+    },
+    {
+      "code": "uni-delsu-pq-biology-bank",
+      "title": "DELSU Post-UTME Biology | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8d3ac33513fa6dc60efd964069f9d26334d3fa411f91dd2c54f9280a9f492566",
+      "sizeBytes": 91869
+    },
+    {
+      "code": "uni-delsu-pq-chemistry-bank",
+      "title": "DELSU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "778a64c903da4f60c12815e512bb8e1f8f7528d6be84fcc65e35d7195d96e7f5",
+      "sizeBytes": 80413
+    },
+    {
+      "code": "uni-delsu-pq-commerce-bank",
+      "title": "DELSU Post-UTME Commerce | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4fdb27642a72a3ec803e932c82b134ffceae7a551095d11c9106a6bbe020c035",
+      "sizeBytes": 107525
+    },
+    {
+      "code": "uni-delsu-pq-crs-bank",
+      "title": "DELSU Post-UTME CRS | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "49399931974453377b3a042ec7ffe831ec23e14b2b99270c8f3209bf2c80f27e",
+      "sizeBytes": 91865
+    },
+    {
+      "code": "uni-delsu-pq-economics-bank",
+      "title": "DELSU Post-UTME Economics | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bf4b5379903e08e1f4ae54dfdbf965e0449c4f709558c05ea95730a064ab50b4",
+      "sizeBytes": 107935
+    },
+    {
+      "code": "uni-delsu-pq-english-bank",
+      "title": "DELSU Post-UTME English | Prep Bank",
+      "questionCount": 190,
+      "totalMarks": 190,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "02352bbcb10c6cb1e527f4c31fba5c4db7b22cd60e80557bf2610729bb0655e6",
+      "sizeBytes": 91498
+    },
+    {
+      "code": "uni-delsu-pq-geography-bank",
+      "title": "DELSU Post-UTME Geography | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "995068efa6cbd867904d956f5ddc52b4373e8b36ad0b1cbae5ce81dbcb4a1546",
+      "sizeBytes": 92397
+    },
+    {
+      "code": "uni-delsu-pq-government-bank",
+      "title": "DELSU Post-UTME Government | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cccb345230b2ace3fdc1987e3a627a2e5fa355a7013b4c9f6988031387cc7212",
+      "sizeBytes": 143968
+    },
+    {
+      "code": "uni-delsu-pq-irs-bank",
+      "title": "DELSU Post-UTME IRS | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c0586a483bd7da78ca4337a60007386db8db3b7bf06b34e4cbbb73990198c564",
+      "sizeBytes": 105307
+    },
+    {
+      "code": "uni-delsu-pq-literature-bank",
+      "title": "DELSU Post-UTME Literature | Prep Bank",
+      "questionCount": 140,
+      "totalMarks": 140,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9b82fe6552aea12437c484ed77789e34dc4886defb983f7135cb3c8f28d1165c",
+      "sizeBytes": 81633
+    },
+    {
+      "code": "uni-delsu-pq-mathematics-bank",
+      "title": "DELSU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 194,
+      "totalMarks": 194,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1007044a695ca7a9d0f084cde0529005ab6394a70df3ca0155e060e1ef22e4a0",
+      "sizeBytes": 73668
+    },
+    {
+      "code": "uni-delsu-pq-physics-bank",
+      "title": "DELSU Post-UTME Physics | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c32aaaf802d666a678e7204dbabdeba68e9a20351f93f1e18bcfe31ee1340e44",
+      "sizeBytes": 82756
+    },
+    {
+      "code": "uni-eksu-acc208-bank",
+      "title": "EKSU Acc208 COMPUTER APPLICATION | Practice Bank",
+      "questionCount": 66,
+      "totalMarks": 66,
+      "durationMinutes": 66,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4aad8f76b8e437426cb8e514ce13a279400558c70906f28ecec141e03b9323c0",
+      "sizeBytes": 19475
+    },
+    {
+      "code": "uni-eksu-acc210-bank",
+      "title": "EKSU ACC210 - International accounting standard | Practice Bank",
+      "questionCount": 65,
+      "totalMarks": 65,
+      "durationMinutes": 65,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "719d684f362b296cad1b312de9c9d0e549dcda6f086e301861855f6833fd64d5",
+      "sizeBytes": 21572
+    },
+    {
+      "code": "uni-eksu-acc315-bank",
+      "title": "EKSU ACC 315 - Accounting Theory | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "durationMinutes": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "34f4787fdc757ca6acfee6849320337ba214c94f97483287e120922890106e29",
+      "sizeBytes": 22865
+    },
+    {
+      "code": "uni-eksu-acc316-bank",
+      "title": "EKSU ACC 316 - Advanced International Financial Reporting Standards (AIFRS) | Practice Bank",
+      "questionCount": 59,
+      "totalMarks": 59,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "02103de0e4feda7e1dac241fcc03be2c6d6f9fbdc3375b4238e1cabba72b29fd",
+      "sizeBytes": 31136
+    },
+    {
+      "code": "uni-eksu-acc320-bank",
+      "title": "EKSU ACC 320 - Analysis for Business Decision II | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8f453360436ff4df7fe772f1f728b894277b59a5e0c375229bf8e25545705f8b",
+      "sizeBytes": 24727
+    },
+    {
+      "code": "uni-eksu-acc328-bank",
+      "title": "EKSU ACC 328 - Elements of Government | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1ad0c7d42bffd221f9835eef827c08034d7389de3ad736ff91112936b7b00118",
+      "sizeBytes": 29012
+    },
+    {
+      "code": "uni-eksu-bio102-bank",
+      "title": "EKSU Bio102 - Introduction to Animal Diversity | Practice Bank",
+      "questionCount": 70,
+      "totalMarks": 70,
+      "durationMinutes": 70,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f2838f6471b7ebd164c5dac91aae03ac6fc390c7259aa5e7bfcf258abd20d4d8",
+      "sizeBytes": 24892
+    },
+    {
+      "code": "uni-eksu-chm102-bank",
+      "title": "EKSU CHM102 | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "65fc6638a6206e8c06ede3cb8a2eac8ebcd2a186f4ac61403db5385eac07b420",
+      "sizeBytes": 17738
+    },
+    {
+      "code": "uni-eksu-chm201-bank",
+      "title": "EKSU Chm201 - Experimental Organic Chemistry | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0b87999281013429ed19cf3fd02dfe5d2d88a62b6f2b6e03169b36659c858d28",
+      "sizeBytes": 24292
+    },
+    {
+      "code": "uni-eksu-chm211-bank",
+      "title": "EKSU Chm211 - Organic Chemistry II | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1687012d4791b041984063da82dba4b9491b47b3ce208646ada9dc3e07f79275",
+      "sizeBytes": 21894
+    },
+    {
+      "code": "uni-eksu-chm213-bank",
+      "title": "EKSU CHM 213 - Analytical Chemistry I | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e886aadd4901acffe4b9476ac5f67432e5a2ebf2f096ad11e082a6bf0cf9273b",
+      "sizeBytes": 25295
+    },
+    {
+      "code": "uni-eksu-els121-bank",
+      "title": "EKSU ELS 121 - INTRODUCTION TO NIGERIAN LITERATURE | Practice Bank",
+      "questionCount": 30,
+      "totalMarks": 30,
+      "durationMinutes": 30,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7e7047b10dc6f2b56e883e9e9046ef16f2a480dff2f43b7dfe147f6363f11d47",
+      "sizeBytes": 16212
+    },
+    {
+      "code": "uni-eksu-eng231-bank",
+      "title": "EKSU Eng231 - Mathematics | Practice Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "durationMinutes": 10,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "424e84ff3ff609c9c48bea62714570dffafe8de46ac5e8f5f5a8e44e07384f65",
+      "sizeBytes": 3494
+    },
+    {
+      "code": "uni-eksu-financial-sector-and-eco-bank",
+      "title": "EKSU FINANCIAL SECTOR and ECONOMIC DEVELOPMENT | Practice Bank",
+      "questionCount": 65,
+      "totalMarks": 65,
+      "durationMinutes": 65,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b157a24120c92acf7a2373666bd68a5721a5f4c091804f4cea46a4bf9ea096ce",
+      "sizeBytes": 22441
+    },
+    {
+      "code": "uni-eksu-fms312-bank",
+      "title": "EKSU FMS 312 - ENTREPRENEURIAL STUDY II | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "durationMinutes": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1caf3c32db2c5a15500878a9dd6a1735f16418ff02bb24bc478d893957e39770",
+      "sizeBytes": 21518
+    },
+    {
+      "code": "uni-eksu-general-biology-i-bank",
+      "title": "EKSU General Biology I | Practice Bank",
+      "questionCount": 20,
+      "totalMarks": 20,
+      "durationMinutes": 20,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d577780f2f965193e45da950d7576635da4e2000cd3ef1d716e11ddda6e1d799",
+      "sizeBytes": 7158
+    },
+    {
+      "code": "uni-eksu-gst111-bank",
+      "title": "EKSU Gst 111 Communication in English | Practice Bank",
+      "questionCount": 49,
+      "totalMarks": 49,
+      "durationMinutes": 49,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "93b5d1503000a8b361cd14cd56cb0c0bf06fb74a5bd2a23081f3abbf067d56a5",
+      "sizeBytes": 15291
+    },
+    {
+      "code": "uni-eksu-gst112-bank",
+      "title": "EKSU GST112 - Use of library | Practice Bank",
+      "questionCount": 68,
+      "totalMarks": 68,
+      "durationMinutes": 68,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b0e2b0f8dbdbce4f6fac94e1a3150966feb7b85e86f028aac9a82313ef125a2c",
+      "sizeBytes": 24211
+    },
+    {
+      "code": "uni-eksu-gst113-bank",
+      "title": "EKSU GST113 Nigeria people and Culture | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "66131752fb817a28e92914fe6ca6c34e2791e92b021b6eed3321b1719a1d2ad3",
+      "sizeBytes": 18305
+    },
+    {
+      "code": "uni-eksu-gst115-bank",
+      "title": "EKSU GST 115 - Introduction to Computer Application and Information Technology | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0ddead3099200064c275f3f8f1cc80ecb54c770e469823f0f901f7610f8d987d",
+      "sizeBytes": 26956
+    },
+    {
+      "code": "uni-eksu-gst116-bank",
+      "title": "EKSU GST116 - Introduction to entrepreneurship  | Practice Bank",
+      "questionCount": 80,
+      "totalMarks": 80,
+      "durationMinutes": 80,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cc5cd94aba84e4de0bb2f2b6c402f0795d7f8225efb775b3908604b58c30d9b8",
+      "sizeBytes": 29337
+    },
+    {
+      "code": "uni-eksu-gst212-bank",
+      "title": "EKSU Gst 212 - Philosophy, Logic and Human Existence | Practice Bank",
+      "questionCount": 80,
+      "totalMarks": 80,
+      "durationMinutes": 80,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a8c66089d061c24b7736e10fef2ead606ff99302e54b39400f362dce3fd2f7ef",
+      "sizeBytes": 27902
+    },
+    {
+      "code": "uni-eksu-introductory-to-chemistr-bank",
+      "title": "EKSU Introductory to chemistry 1 | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "durationMinutes": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8a3669015d1d62f2e8bd35e4c1c72fe6c49c886289b76df4249c69db28ea34d4",
+      "sizeBytes": 22836
+    },
+    {
+      "code": "uni-eksu-mcb403-bank",
+      "title": "EKSU MCB 403 - Pharmaceutical Microbiology | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "96cb097b1cfb57052d7c54730a1d23c0cbc01f22eed98f07c94e97d3a5d6c18a",
+      "sizeBytes": 28580
+    },
+    {
+      "code": "uni-eksu-mcb407-bank",
+      "title": "EKSU MCB 407 - Industrial Microbiology | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2dafe6a5c713ea67e95212ea04b8dd97f811295b6c3fa48b79036ddb4071319a",
+      "sizeBytes": 26785
+    },
+    {
+      "code": "uni-eksu-mcb409-bank",
+      "title": "EKSU MCB 409 - Pathogenic Mycology (MCB 409) | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5e572d3c0c02834880d88e7b09297801fbf254e0040b396e4a5bbd43922d239d",
+      "sizeBytes": 27177
+    },
+    {
+      "code": "uni-eksu-phy101-bank",
+      "title": "EKSU Phy101 - Physics (Mechanics) | Practice Bank",
+      "questionCount": 69,
+      "totalMarks": 69,
+      "durationMinutes": 70,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "48d991b9579545ac6bd2b973094bf4c8ac0c819003897cf4c9598bfb3fff44a6",
+      "sizeBytes": 23851
+    },
+    {
+      "code": "uni-eksu-phy102-bank",
+      "title": "EKSU Phy102 - General physics II | Practice Bank",
+      "questionCount": 100,
+      "totalMarks": 100,
+      "durationMinutes": 100,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f4724b2e0e281aa99bb6d0b88fd18fd9662e744f9ff334ac4f9390892f592512",
+      "sizeBytes": 35615
+    },
+    {
+      "code": "uni-eksu-phy103-bank",
+      "title": "EKSU PHY 103 - Properties of Matter | Practice Bank",
+      "questionCount": 70,
+      "totalMarks": 70,
+      "durationMinutes": 70,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "98ac3d97abdd3016b2beb2ebbff41bc5693d1e66ab5444b6da88625f2a4cbf9e",
+      "sizeBytes": 28188
+    },
+    {
+      "code": "uni-eksu-phy106-bank",
+      "title": "EKSU Phy106 - Vibration, Waves & Optics | Practice Bank",
+      "questionCount": 70,
+      "totalMarks": 70,
+      "durationMinutes": 70,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "955461d365b770d420bf10dc3b11bc995d312ccef33373b24ab74ecdd6a7f024",
+      "sizeBytes": 25563
+    },
+    {
+      "code": "uni-eksu-phy201-bank",
+      "title": "EKSU Phy201 - Elementary Modern Physics | Practice Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "durationMinutes": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "97e2144a6643b3800e9ebe7524cb240b83915a61c2f3c8b4a35b70fe23ffcf48",
+      "sizeBytes": 22889
+    },
+    {
+      "code": "uni-eksu-pq-accounting-bank",
+      "title": "EKSU Post-UTME Accounting | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f2ba5a60725af9f2b589db58ceb6b5a6975992d403e0760bd6a951f265dc5fa3",
+      "sizeBytes": 106579
+    },
+    {
+      "code": "uni-eksu-pq-biology-bank",
+      "title": "EKSU Post-UTME Biology | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6e5ee63b84b959c955cae05bbf86912af3275653af2f8dfea492cbe2b009f547",
+      "sizeBytes": 88340
+    },
+    {
+      "code": "uni-eksu-pq-chemistry-bank",
+      "title": "EKSU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f3a4fd9963429f0c418f743291605a979ba513a3855863f9bd3c5f656cfc9ac1",
+      "sizeBytes": 78317
+    },
+    {
+      "code": "uni-eksu-pq-commerce-bank",
+      "title": "EKSU Post-UTME Commerce | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "26d23cc3b2d1f71c56d60f6938fe15627d723fb58282b583b6f9b703f3927ae8",
+      "sizeBytes": 97059
+    },
+    {
+      "code": "uni-eksu-pq-crs-bank",
+      "title": "EKSU Post-UTME CRS | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "aea923d15bf33dfba7248f52663a54dfea8282071d85cbc57c3a1cc15af53338",
+      "sizeBytes": 105243
+    },
+    {
+      "code": "uni-eksu-pq-economics-bank",
+      "title": "EKSU Post-UTME Economics | Prep Bank",
+      "questionCount": 219,
+      "totalMarks": 219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "08c1d65fbaaaf93bb3a462426c0cc06bd06d8144a8abc329bd3402684a2ff5d0",
+      "sizeBytes": 111338
+    },
+    {
+      "code": "uni-eksu-pq-english-bank",
+      "title": "EKSU Post-UTME English | Prep Bank",
+      "questionCount": 183,
+      "totalMarks": 183,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6cf2041e678e9ba50ac8699f6cf37ef0f54aac1a4d8f9135f742c7f85ed3b58b",
+      "sizeBytes": 85748
+    },
+    {
+      "code": "uni-eksu-pq-geography-bank",
+      "title": "EKSU Post-UTME Geography | Prep Bank",
+      "questionCount": 189,
+      "totalMarks": 189,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "72e68faae1b90edefe40ec4e13127694eee4a5ff4a8662ebb82dbcf8c173aeef",
+      "sizeBytes": 82521
+    },
+    {
+      "code": "uni-eksu-pq-government-bank",
+      "title": "EKSU Post-UTME Government | Prep Bank",
+      "questionCount": 223,
+      "totalMarks": 223,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "19b726d2fdfb51bf34826c35f19991272dc923e78a0508c0a32b14f3e620ff6b",
+      "sizeBytes": 139934
+    },
+    {
+      "code": "uni-eksu-pq-irs-bank",
+      "title": "EKSU Post-UTME IRS | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a6d7b74675b1b73b00cb51844ae9c1c48ae66ef6c85ba32e83e7a9551e494791",
+      "sizeBytes": 100501
+    },
+    {
+      "code": "uni-eksu-pq-literature-bank",
+      "title": "EKSU Post-UTME Literature | Prep Bank",
+      "questionCount": 142,
+      "totalMarks": 142,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0a1d55e90075b4035076ee0b0ff41ce13530cca2d55824495ed5f1f55b93a9e8",
+      "sizeBytes": 84449
+    },
+    {
+      "code": "uni-eksu-pq-mathematics-bank",
+      "title": "EKSU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 184,
+      "totalMarks": 184,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0d2dbb4c0bf6603d29640ec6a5b9728e66392333c16f678f4fa274d3acd6a52b",
+      "sizeBytes": 69021
+    },
+    {
+      "code": "uni-eksu-pq-physics-bank",
+      "title": "EKSU Post-UTME Physics | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "09666ce744ebd60e52af7554b1c4d907806be54f7d1b2ac8d7c1a4bf50a8169a",
+      "sizeBytes": 90275
+    },
+    {
+      "code": "uni-eksu-you202-bank",
+      "title": "EKSU You202 - Yoruba note | Practice Bank",
+      "questionCount": 10,
+      "totalMarks": 10,
+      "durationMinutes": 15,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "806fe57c5fd0fc839d1c8d40e0483f38537db0a3ae2b2af74eee2bd88e140c4d",
+      "sizeBytes": 3534
+    },
+    {
+      "code": "uni-elizade-pq-accounting-bank",
+      "title": "ELIZADE Post-UTME Accounting | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a5946c77c7187b973f832c0390e9006b8b3f0cf9055ff9b651ef9ea9b06ea8ca",
+      "sizeBytes": 102083
+    },
+    {
+      "code": "uni-elizade-pq-biology-bank",
+      "title": "ELIZADE Post-UTME Biology | Prep Bank",
+      "questionCount": 186,
+      "totalMarks": 186,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2a7e919096192c4a10e80a03f6adeab35292eca3be23e04436245367a3b1b456",
+      "sizeBytes": 79572
+    },
+    {
+      "code": "uni-elizade-pq-chemistry-bank",
+      "title": "ELIZADE Post-UTME Chemistry | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "82e2e02d0ab99ac030e2a3db03f5e9b77d54fea09aa0a7d3efab45ddd71799f5",
+      "sizeBytes": 79872
+    },
+    {
+      "code": "uni-elizade-pq-commerce-bank",
+      "title": "ELIZADE Post-UTME Commerce | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "224bc466167441a028599916558e6062a88aaa40b0b3a987185fe8d5837d6cde",
+      "sizeBytes": 105277
+    },
+    {
+      "code": "uni-elizade-pq-crs-bank",
+      "title": "ELIZADE Post-UTME CRS | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e4d87fabd8eee1808527ccf86b74265f25b7d3f92e5678341d6080e453d1b87f",
+      "sizeBytes": 102539
+    },
+    {
+      "code": "uni-elizade-pq-economics-bank",
+      "title": "ELIZADE Post-UTME Economics | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "64aa0d328c72bcf8270bfbeeba6b2f5aafe57104b885e37f88270dd9c7ce755c",
+      "sizeBytes": 107772
+    },
+    {
+      "code": "uni-elizade-pq-english-bank",
+      "title": "ELIZADE Post-UTME English | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7e81030cf819b3b00346a4bdf319968b67fd9450365bd5e5249a646ea1b0f832",
+      "sizeBytes": 90563
+    },
+    {
+      "code": "uni-elizade-pq-geography-bank",
+      "title": "ELIZADE Post-UTME Geography | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "384e99936df1e4bfcd5d6cd9082e122cbe92b4969c0befb2b2b49dcff97f1cd5",
+      "sizeBytes": 87197
+    },
+    {
+      "code": "uni-elizade-pq-government-bank",
+      "title": "ELIZADE Post-UTME Government | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "48794eaac7a1e457b00d7ddf4bc2bf1378c852d94159aa83efcc9c1516926b0b",
+      "sizeBytes": 136474
+    },
+    {
+      "code": "uni-elizade-pq-irs-bank",
+      "title": "ELIZADE Post-UTME IRS | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ba86fd367dd1e40739735e105b851974f9bfe5d85933eb20742f8d8af182cba4",
+      "sizeBytes": 102088
+    },
+    {
+      "code": "uni-elizade-pq-literature-bank",
+      "title": "ELIZADE Post-UTME Literature | Prep Bank",
+      "questionCount": 134,
+      "totalMarks": 134,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5cc877581e4cf03279a39a0922bba43484f37f213ffc199b42ca1da0f7808fca",
+      "sizeBytes": 82727
+    },
+    {
+      "code": "uni-elizade-pq-mathematics-bank",
+      "title": "ELIZADE Post-UTME Mathematics | Prep Bank",
+      "questionCount": 182,
+      "totalMarks": 182,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ea9379d32c133fed8e236e29faba94c2cc314a41e883293836383b7d905fd298",
+      "sizeBytes": 68168
+    },
+    {
+      "code": "uni-elizade-pq-physics-bank",
+      "title": "ELIZADE Post-UTME Physics | Prep Bank",
+      "questionCount": 181,
+      "totalMarks": 181,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c2aa5ac1314385d15b657f42f3a38af1eda48646464319a0c8e775a5e020a67e",
+      "sizeBytes": 79106
+    },
+    {
+      "code": "uni-esut-pq-accounting-bank",
+      "title": "ESUT Post-UTME Accounting | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "eaaa2806956e0f3d0984e35bf4dfd5428f14d2f1c5b5e4b955cf098201893468",
+      "sizeBytes": 104348
+    },
+    {
+      "code": "uni-esut-pq-biology-bank",
+      "title": "ESUT Post-UTME Biology | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "72b7340c46d1c62cfc5e9fe432dabeb54c525966fda4ec9c2441cd9639a24b30",
+      "sizeBytes": 90165
+    },
+    {
+      "code": "uni-esut-pq-chemistry-bank",
+      "title": "ESUT Post-UTME Chemistry | Prep Bank",
+      "questionCount": 188,
+      "totalMarks": 188,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bbc3644828d478f9bdd272e66a10e471cd5fd590738bd4da9d06441b2d0b184a",
+      "sizeBytes": 76551
+    },
+    {
+      "code": "uni-esut-pq-commerce-bank",
+      "title": "ESUT Post-UTME Commerce | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0572a1f00f2c00afb6258847f457fe3b7f14f6dbb9c098a5e7375b92ab0f04e4",
+      "sizeBytes": 103203
+    },
+    {
+      "code": "uni-esut-pq-crs-bank",
+      "title": "ESUT Post-UTME CRS | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "184b2d04b0f6df4d1f400311068289cfc3e954f55b159f2f257dec58f44e0293",
+      "sizeBytes": 102378
+    },
+    {
+      "code": "uni-esut-pq-economics-bank",
+      "title": "ESUT Post-UTME Economics | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "069edb4abd0a0c537aa83720522d9fb7de47d434c18f61ebf28d3a8dc859a26d",
+      "sizeBytes": 102877
+    },
+    {
+      "code": "uni-esut-pq-english-bank",
+      "title": "ESUT Post-UTME English | Prep Bank",
+      "questionCount": 193,
+      "totalMarks": 193,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2493f4422a88a08d45c04064d12089391eab9177f6cbcc88cbbfb02b7f07e094",
+      "sizeBytes": 89888
+    },
+    {
+      "code": "uni-esut-pq-geography-bank",
+      "title": "ESUT Post-UTME Geography | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9abd0754cbfae400313baac03b74b70ea55d5713e6dc819ffa8a8279d41cf915",
+      "sizeBytes": 89207
+    },
+    {
+      "code": "uni-esut-pq-government-bank",
+      "title": "ESUT Post-UTME Government | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ef0a054c55aa4a263131230a29c379fb4f4484578e43362432e35dfaae7a2e75",
+      "sizeBytes": 115041
+    },
+    {
+      "code": "uni-esut-pq-irs-bank",
+      "title": "ESUT Post-UTME IRS | Prep Bank",
+      "questionCount": 194,
+      "totalMarks": 194,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "be5bba726114a49892fdabd321406f2742afc84bd8b4aec0d432fe581193232b",
+      "sizeBytes": 95297
+    },
+    {
+      "code": "uni-esut-pq-literature-bank",
+      "title": "ESUT Post-UTME Literature | Prep Bank",
+      "questionCount": 121,
+      "totalMarks": 121,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "87a740c0b8160720830e89d827ab3e07ed27f80aee00365c98b88ede3a6e81bf",
+      "sizeBytes": 71614
+    },
+    {
+      "code": "uni-esut-pq-mathematics-bank",
+      "title": "ESUT Post-UTME Mathematics | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "80f09b3273065192b1046700f13819d2eedf5a9ec7fd5b729a98660a15ef5cad",
+      "sizeBytes": 69025
+    },
+    {
+      "code": "uni-esut-pq-physics-bank",
+      "title": "ESUT Post-UTME Physics | Prep Bank",
+      "questionCount": 193,
+      "totalMarks": 193,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5d1f06e13ee37920c0ffbdc1222968d2cce27cd9ddf8ac818f707f4bbcb46283",
+      "sizeBytes": 79458
+    },
+    {
       "code": "uni-futa-ams101-bank",
       "title": "FUTA AMS 101 | Course Question Bank",
       "questionCount": 599,
@@ -1471,6 +3573,136 @@
       "sizeBytes": 31953
     },
     {
+      "code": "uni-futa-pq-accounting-bank",
+      "title": "FUTA Post-UTME Accounting | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7ce1c706f6fe57ba011cc464246b204ddf211e51d9da9d686c9c2304d2e0ad09",
+      "sizeBytes": 98187
+    },
+    {
+      "code": "uni-futa-pq-biology-bank",
+      "title": "FUTA Post-UTME Biology | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "aa0384fda678798fdfe019f717e9eecaa7d58ac640dd1a6159e973f0779f01e4",
+      "sizeBytes": 84065
+    },
+    {
+      "code": "uni-futa-pq-chemistry-bank",
+      "title": "FUTA Post-UTME Chemistry | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "26c3680f149d770af65a2cdd7bd9466d504d5316d27967f5842483a2c33e843f",
+      "sizeBytes": 83569
+    },
+    {
+      "code": "uni-futa-pq-commerce-bank",
+      "title": "FUTA Post-UTME Commerce | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ac94eade487efc2d127d687089b3480aa2f22c381305904411def7fc8cd22fbb",
+      "sizeBytes": 95308
+    },
+    {
+      "code": "uni-futa-pq-crs-bank",
+      "title": "FUTA Post-UTME CRS | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "097bb3aef1eb53e14dcac16192caebe09664b5ae114323a8f9cbcae35cbeae76",
+      "sizeBytes": 105290
+    },
+    {
+      "code": "uni-futa-pq-economics-bank",
+      "title": "FUTA Post-UTME Economics | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a8be0b9d6c670d02fdc7c2361e136fdd10dbb27b4f620bc93fcc83fdf5ee7b02",
+      "sizeBytes": 102397
+    },
+    {
+      "code": "uni-futa-pq-english-bank",
+      "title": "FUTA Post-UTME English | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9b01007a104b31644ebcdc6a8bf3f2366f9a50df760f4fd01051fc81fcf362c2",
+      "sizeBytes": 97528
+    },
+    {
+      "code": "uni-futa-pq-geography-bank",
+      "title": "FUTA Post-UTME Geography | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "08e86561121ed547937bce9b9ec609dd501777703ad75799fcdb544500b49fd1",
+      "sizeBytes": 90038
+    },
+    {
+      "code": "uni-futa-pq-government-bank",
+      "title": "FUTA Post-UTME Government | Prep Bank",
+      "questionCount": 219,
+      "totalMarks": 219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8a185e33bc2952f618a03771b2ac5715b839faeaeda1219a6a21274f5099ec91",
+      "sizeBytes": 141719
+    },
+    {
+      "code": "uni-futa-pq-irs-bank",
+      "title": "FUTA Post-UTME IRS | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "db98025ff0dbefeb91be0eaf68d779c3b37223eecec5b1e4c9dc1da742c09b1c",
+      "sizeBytes": 102677
+    },
+    {
+      "code": "uni-futa-pq-literature-bank",
+      "title": "FUTA Post-UTME Literature | Prep Bank",
+      "questionCount": 130,
+      "totalMarks": 130,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c6ac18ef73f549848618c35427171319260e2610b094d4a35b0d954751329c4b",
+      "sizeBytes": 77416
+    },
+    {
+      "code": "uni-futa-pq-mathematics-bank",
+      "title": "FUTA Post-UTME Mathematics | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "55fb5b6bbfa6a0c1f6ce150a38704f75f86b96aec05fb05164d2ccb99d0cf8e1",
+      "sizeBytes": 78409
+    },
+    {
+      "code": "uni-futa-pq-physics-bank",
+      "title": "FUTA Post-UTME Physics | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ca8a2dbe8192252867a3adbc58229e9f4a6caaa30e25c1ed0c20d2e183077b72",
+      "sizeBytes": 84457
+    },
+    {
       "code": "uni-futa-sen101-bank",
       "title": "FUTA SEN 101 | Course Question Bank",
       "questionCount": 600,
@@ -1489,6 +3721,2866 @@
       "body": "University Modules",
       "bundleSha256": "10c2078b45d28f448a6aa3d16cfd070ecf7cf33def67e03618e2076e21876074",
       "sizeBytes": 122399
+    },
+    {
+      "code": "uni-futo-pq-accounting-bank",
+      "title": "FUTO Post-UTME Accounting | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cf575857976a07184fad8667ebbeeb796c9b16c59172828836a361954acb216b",
+      "sizeBytes": 107779
+    },
+    {
+      "code": "uni-futo-pq-biology-bank",
+      "title": "FUTO Post-UTME Biology | Prep Bank",
+      "questionCount": 173,
+      "totalMarks": 173,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "adfa7c0edc26698b6728b21e8b03340bf7fdfbb5b5355f2ec165b8ccd7cacc73",
+      "sizeBytes": 74857
+    },
+    {
+      "code": "uni-futo-pq-chemistry-bank",
+      "title": "FUTO Post-UTME Chemistry | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d62e6c61effb8c042ad189b6daaf10601548ef8326cb4b7e0680046d7865f753",
+      "sizeBytes": 78856
+    },
+    {
+      "code": "uni-futo-pq-commerce-bank",
+      "title": "FUTO Post-UTME Commerce | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f88804f059b5022ce379704ad37bd4cef268067c7eec4dd41fa3b40cc188036f",
+      "sizeBytes": 106164
+    },
+    {
+      "code": "uni-futo-pq-crs-bank",
+      "title": "FUTO Post-UTME CRS | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "250008c6d0b904ed24f8e5a9a5b5dfa5920ad989cc631f67f80f93ea7cc8aa0f",
+      "sizeBytes": 98081
+    },
+    {
+      "code": "uni-futo-pq-economics-bank",
+      "title": "FUTO Post-UTME Economics | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6f21f5ee292e404c99cd4c5c66ecb8ea3aacd83953f4df3fe9601cd92cf14a7f",
+      "sizeBytes": 93308
+    },
+    {
+      "code": "uni-futo-pq-english-bank",
+      "title": "FUTO Post-UTME English | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "022b5f44c610bb942b5a7121c6611b26a5758289bde2125821715f93fcd6b068",
+      "sizeBytes": 93974
+    },
+    {
+      "code": "uni-futo-pq-geography-bank",
+      "title": "FUTO Post-UTME Geography | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3186290456e1106eeff0eff6d4f5689b1e37afaad4272fb2a2713492d39a8684",
+      "sizeBytes": 93665
+    },
+    {
+      "code": "uni-futo-pq-government-bank",
+      "title": "FUTO Post-UTME Government | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5ea4dc6815b5c09764bd1fddf7da74a34393d162094cd15c773613e8cd451365",
+      "sizeBytes": 136883
+    },
+    {
+      "code": "uni-futo-pq-irs-bank",
+      "title": "FUTO Post-UTME IRS | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6445d4a02f84337dc256549454a989cf8cf9d563141ad8642f96bf42552dda01",
+      "sizeBytes": 101758
+    },
+    {
+      "code": "uni-futo-pq-literature-bank",
+      "title": "FUTO Post-UTME Literature | Prep Bank",
+      "questionCount": 130,
+      "totalMarks": 130,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ad4efb9eb7796e83bc5e19024522d3b48ecb5a8ab6ef1c7a81042618c8da1044",
+      "sizeBytes": 76173
+    },
+    {
+      "code": "uni-futo-pq-mathematics-bank",
+      "title": "FUTO Post-UTME Mathematics | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "081fe14555f4f8d21a80cc07b2edf81a9db6621f4f85cce5a299f80d1a5f030d",
+      "sizeBytes": 78014
+    },
+    {
+      "code": "uni-futo-pq-physics-bank",
+      "title": "FUTO Post-UTME Physics | Prep Bank",
+      "questionCount": 188,
+      "totalMarks": 188,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "53259e22c3db7664d3ab8420db280c72a9b0825ac9ac113b2687e45ca7c17a50",
+      "sizeBytes": 79192
+    },
+    {
+      "code": "uni-greenfield-pq-accounting-bank",
+      "title": "GREENFIELD Post-UTME Accounting | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "62fd56416f290a28f167545534abb4551043293fb2552ad1a122d4043e88b1bb",
+      "sizeBytes": 105718
+    },
+    {
+      "code": "uni-greenfield-pq-biology-bank",
+      "title": "GREENFIELD Post-UTME Biology | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "67285f29a3568c8aaf2a79a97e808ae0661d81f93519be21ef736bea1b022213",
+      "sizeBytes": 93431
+    },
+    {
+      "code": "uni-greenfield-pq-chemistry-bank",
+      "title": "GREENFIELD Post-UTME Chemistry | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a505dd9498962cb0667d6db0800f1dcc10ea72c606bbb6efc30a341c8737d3e8",
+      "sizeBytes": 80576
+    },
+    {
+      "code": "uni-greenfield-pq-commerce-bank",
+      "title": "GREENFIELD Post-UTME Commerce | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3d374d849dc6ee3fa1c0b2b0236e0b3eca0071014ac8578e7a2cf39e75514cf6",
+      "sizeBytes": 109116
+    },
+    {
+      "code": "uni-greenfield-pq-crs-bank",
+      "title": "GREENFIELD Post-UTME CRS | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "57aea4408bb1ff70f7a3659d8c3d42e10fe23fd0bd73e80f7e176d9a71cf7885",
+      "sizeBytes": 97568
+    },
+    {
+      "code": "uni-greenfield-pq-economics-bank",
+      "title": "GREENFIELD Post-UTME Economics | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6ca6d4287323dc8ad86e52eb7800f1fee5871bd89ca7c8eb3a6266c5a2e6bf78",
+      "sizeBytes": 105661
+    },
+    {
+      "code": "uni-greenfield-pq-english-bank",
+      "title": "GREENFIELD Post-UTME English | Prep Bank",
+      "questionCount": 188,
+      "totalMarks": 188,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "56224409750651b38c69a88e2692abfeec52609e42a58982539119909787d29e",
+      "sizeBytes": 88000
+    },
+    {
+      "code": "uni-greenfield-pq-geography-bank",
+      "title": "GREENFIELD Post-UTME Geography | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3c9f316a566135d33d57b3cb9d0814dd3d763f7ebe9fb205b16167251456ffff",
+      "sizeBytes": 94408
+    },
+    {
+      "code": "uni-greenfield-pq-government-bank",
+      "title": "GREENFIELD Post-UTME Government | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9c42d4f100f33db9fb9e7dba68468c8fb92f0667319ae3c4b7e2456399ebb521",
+      "sizeBytes": 131629
+    },
+    {
+      "code": "uni-greenfield-pq-irs-bank",
+      "title": "GREENFIELD Post-UTME IRS | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ecfab6492541da6c3f67b0ea53f31a6a7deff3f99f75de4a553360498d9feba8",
+      "sizeBytes": 101886
+    },
+    {
+      "code": "uni-greenfield-pq-literature-bank",
+      "title": "GREENFIELD Post-UTME Literature | Prep Bank",
+      "questionCount": 151,
+      "totalMarks": 151,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c672142a5477935e23b16d1a90159bbcf47baca23a930949e99df8170e555980",
+      "sizeBytes": 91729
+    },
+    {
+      "code": "uni-greenfield-pq-mathematics-bank",
+      "title": "GREENFIELD Post-UTME Mathematics | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "100d59e127fc3bb9b8a1755374f59e9cad316296233d378f0b8a21bb5859c3f4",
+      "sizeBytes": 74709
+    },
+    {
+      "code": "uni-greenfield-pq-physics-bank",
+      "title": "GREENFIELD Post-UTME Physics | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f25f19106200b1bb3c00296bfef5df23674749f12fa5235a6c1e7791303a8c39",
+      "sizeBytes": 89044
+    },
+    {
+      "code": "uni-igbinedion-pq-accounting-bank",
+      "title": "IGBINEDION Post-UTME Accounting | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "22cf5110d8e586394ab398d23957c60f09e20640726785da5984f09c0837fab3",
+      "sizeBytes": 106977
+    },
+    {
+      "code": "uni-igbinedion-pq-biology-bank",
+      "title": "IGBINEDION Post-UTME Biology | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8bb0dd95ee65c8f00abd2a2b6f036ec576b4cf38c2be5f75e639fc4db805ac8c",
+      "sizeBytes": 91790
+    },
+    {
+      "code": "uni-igbinedion-pq-chemistry-bank",
+      "title": "IGBINEDION Post-UTME Chemistry | Prep Bank",
+      "questionCount": 169,
+      "totalMarks": 169,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "dbd21d4746a36495bcd4275faa305113d67fc722dc8c2550e54106d39d0c8307",
+      "sizeBytes": 68757
+    },
+    {
+      "code": "uni-igbinedion-pq-commerce-bank",
+      "title": "IGBINEDION Post-UTME Commerce | Prep Bank",
+      "questionCount": 221,
+      "totalMarks": 221,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1a1b8e39d78b6ecea0d21a75b241e28ad48283638406486bbc93dedaee568a0d",
+      "sizeBytes": 110771
+    },
+    {
+      "code": "uni-igbinedion-pq-crs-bank",
+      "title": "IGBINEDION Post-UTME CRS | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ded529bd8c01b335b91528794b1b96f7bcbcb372125d8a6fb982e656e9aa23bc",
+      "sizeBytes": 101219
+    },
+    {
+      "code": "uni-igbinedion-pq-economics-bank",
+      "title": "IGBINEDION Post-UTME Economics | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "951d703d281db40a98b0ca1bde38b1ae3d1d1bf17a71e7c9fc376d121d1899f6",
+      "sizeBytes": 102238
+    },
+    {
+      "code": "uni-igbinedion-pq-english-bank",
+      "title": "IGBINEDION Post-UTME English | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d533943a752becd9a57bbb54df11187b433e2b6b60f836bfd090716ee98ee1b6",
+      "sizeBytes": 99463
+    },
+    {
+      "code": "uni-igbinedion-pq-geography-bank",
+      "title": "IGBINEDION Post-UTME Geography | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3e9684add0fc78dab76a1621be589186de5234728d4d043f81586691779c5a7e",
+      "sizeBytes": 89238
+    },
+    {
+      "code": "uni-igbinedion-pq-government-bank",
+      "title": "IGBINEDION Post-UTME Government | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0d136af44901759f0f6f2a4bf2ba4b8272ecfb7bc30e9df4ae48e7a378571215",
+      "sizeBytes": 137816
+    },
+    {
+      "code": "uni-igbinedion-pq-irs-bank",
+      "title": "IGBINEDION Post-UTME IRS | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e2257a66048875f8c0b9ac58f750ad9286423681fa257250cc7cb1886f0e62ea",
+      "sizeBytes": 94446
+    },
+    {
+      "code": "uni-igbinedion-pq-literature-bank",
+      "title": "IGBINEDION Post-UTME Literature | Prep Bank",
+      "questionCount": 134,
+      "totalMarks": 134,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5b74cc1e1070f2b331a6a4479d8df0ab610ae3a6a271b3507f8300349de8d28a",
+      "sizeBytes": 81040
+    },
+    {
+      "code": "uni-igbinedion-pq-mathematics-bank",
+      "title": "IGBINEDION Post-UTME Mathematics | Prep Bank",
+      "questionCount": 178,
+      "totalMarks": 178,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "db9257ff31d1c3f0d1f21ee4041ccf9efe365826657c9b875fef0d3ad8051e71",
+      "sizeBytes": 69085
+    },
+    {
+      "code": "uni-igbinedion-pq-physics-bank",
+      "title": "IGBINEDION Post-UTME Physics | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "096aeaee4d517f7fa77955d60b00308b23c2e15a4631734015639259a07b0bdf",
+      "sizeBytes": 87903
+    },
+    {
+      "code": "uni-jabu-pq-accounting-bank",
+      "title": "JABU Post-UTME Accounting | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "12b037cab034128c899a405a38c0f4c4c2379ffbbd28ade0bc491772bd6c7e2e",
+      "sizeBytes": 106598
+    },
+    {
+      "code": "uni-jabu-pq-biology-bank",
+      "title": "JABU Post-UTME Biology | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2cf539dd1c7b021ad81081bb9c7fc40a26eaeb7af02236e559a38ecb87e5c6a0",
+      "sizeBytes": 89674
+    },
+    {
+      "code": "uni-jabu-pq-chemistry-bank",
+      "title": "JABU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a7d3207a36c4ce2247358d06ff913dbc233c0f5b9d9fc8dbd8abed9b0844c4cd",
+      "sizeBytes": 82591
+    },
+    {
+      "code": "uni-jabu-pq-commerce-bank",
+      "title": "JABU Post-UTME Commerce | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "42079c10680494f6737cf1e5d31614180213163271ed126b9514d3d979902dc5",
+      "sizeBytes": 102857
+    },
+    {
+      "code": "uni-jabu-pq-crs-bank",
+      "title": "JABU Post-UTME CRS | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8eacda659483666495bb0f9ef7b3c910c5db8b5d1c5275822c138583e9f73731",
+      "sizeBytes": 109058
+    },
+    {
+      "code": "uni-jabu-pq-economics-bank",
+      "title": "JABU Post-UTME Economics | Prep Bank",
+      "questionCount": 221,
+      "totalMarks": 221,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b8d0e76c677471bae80b67e68e31e9accd61db3548809cf05ff51ad21b3358b9",
+      "sizeBytes": 108449
+    },
+    {
+      "code": "uni-jabu-pq-english-bank",
+      "title": "JABU Post-UTME English | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c814330d40a8f2536cce9f8e55c616028f7e336d735f668855b72d946e0cf726",
+      "sizeBytes": 97020
+    },
+    {
+      "code": "uni-jabu-pq-geography-bank",
+      "title": "JABU Post-UTME Geography | Prep Bank",
+      "questionCount": 186,
+      "totalMarks": 186,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9fab0894110c7d58d29b08736661d1aafba3f501082df2c6b0359413af253402",
+      "sizeBytes": 78804
+    },
+    {
+      "code": "uni-jabu-pq-government-bank",
+      "title": "JABU Post-UTME Government | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9c16573cfe95be1f19b2ad5fd0c9ed9818a578ec5473c24da4c4ec60fe47c05b",
+      "sizeBytes": 142981
+    },
+    {
+      "code": "uni-jabu-pq-irs-bank",
+      "title": "JABU Post-UTME IRS | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ebfdab8d2a53a65863b918a9135c7a752f268df205f350f704e7269a2aed5951",
+      "sizeBytes": 98984
+    },
+    {
+      "code": "uni-jabu-pq-literature-bank",
+      "title": "JABU Post-UTME Literature | Prep Bank",
+      "questionCount": 112,
+      "totalMarks": 112,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "650ac2f84a2cc3cf54156d5e01399c4db1607eac5dd1662fa899f4c27bdffd7f",
+      "sizeBytes": 68906
+    },
+    {
+      "code": "uni-jabu-pq-mathematics-bank",
+      "title": "JABU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "76823f3e093c5c065433a5ac043aefd870fec08f2a3af32a93bb2a46c29fc17b",
+      "sizeBytes": 73454
+    },
+    {
+      "code": "uni-jabu-pq-physics-bank",
+      "title": "JABU Post-UTME Physics | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "85bd097dd9c88e4963f468bbd5b2edf92310ccd8e5ad570ccae8f086686c6761",
+      "sizeBytes": 81621
+    },
+    {
+      "code": "uni-ksu-pq-accounting-bank",
+      "title": "KSU Post-UTME Accounting | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c2e90b942881443fe0ca43f9258d1e6bd3015f9677660e6c132b5c7ee50b2e6d",
+      "sizeBytes": 105157
+    },
+    {
+      "code": "uni-ksu-pq-biology-bank",
+      "title": "KSU Post-UTME Biology | Prep Bank",
+      "questionCount": 184,
+      "totalMarks": 184,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bed975ef263b0e590aa8a855fe6f2508b46eceaf291902341e64f99b6860a538",
+      "sizeBytes": 81019
+    },
+    {
+      "code": "uni-ksu-pq-chemistry-bank",
+      "title": "KSU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "17e14d6ddf5ec833d0cbb3f3dba2481cbc978709a69447df3f652420d20f8c4d",
+      "sizeBytes": 76972
+    },
+    {
+      "code": "uni-ksu-pq-commerce-bank",
+      "title": "KSU Post-UTME Commerce | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0a7f5dbfe5ea8a1614e83fd984dbdde80a45b572460dcbd711112342ed61cf05",
+      "sizeBytes": 100276
+    },
+    {
+      "code": "uni-ksu-pq-crs-bank",
+      "title": "KSU Post-UTME CRS | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "43324cafc6cb9bfe8a4d1ff1a6bd1b715a123d3a18146c4b6f16b4d060e3e9c3",
+      "sizeBytes": 104471
+    },
+    {
+      "code": "uni-ksu-pq-economics-bank",
+      "title": "KSU Post-UTME Economics | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9990056756f0b3c6fbbbc28a2259f7e2dcab171c70bc0b09686192c7a9dd43a8",
+      "sizeBytes": 103213
+    },
+    {
+      "code": "uni-ksu-pq-english-bank",
+      "title": "KSU Post-UTME English | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bc8f0f68d4aad26d0583c898b3bca0e26ca3b808b4bc8e196cc864c4cdc3b8f7",
+      "sizeBytes": 97481
+    },
+    {
+      "code": "uni-ksu-pq-geography-bank",
+      "title": "KSU Post-UTME Geography | Prep Bank",
+      "questionCount": 182,
+      "totalMarks": 182,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6009c46441b6be3d3dd76685727618c0d06495d8f4e3a1f0a6afec932b5e584a",
+      "sizeBytes": 75982
+    },
+    {
+      "code": "uni-ksu-pq-government-bank",
+      "title": "KSU Post-UTME Government | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5c9e1bb0b373427ef718abb067841c8e919f729c70c52d31f53233be557f7826",
+      "sizeBytes": 129828
+    },
+    {
+      "code": "uni-ksu-pq-irs-bank",
+      "title": "KSU Post-UTME IRS | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d39fea8b4f9c8e05599d6560f020f8d6245b7a812eb34166eab482b696301a7f",
+      "sizeBytes": 101086
+    },
+    {
+      "code": "uni-ksu-pq-literature-bank",
+      "title": "KSU Post-UTME Literature | Prep Bank",
+      "questionCount": 126,
+      "totalMarks": 126,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "83e8094225d18a305e184acb79a86ccfb757de3d923c8a8041bb2ea8e83fe2d4",
+      "sizeBytes": 78831
+    },
+    {
+      "code": "uni-ksu-pq-mathematics-bank",
+      "title": "KSU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7b2383d1f834cbb7ab32c4896d0d68c262e243c287e1030bc42a9dbe6cfcb3b0",
+      "sizeBytes": 77364
+    },
+    {
+      "code": "uni-ksu-pq-physics-bank",
+      "title": "KSU Post-UTME Physics | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "920182fb16f9814f5cdf3fe3e6e3e154a68babea9059d5c21710a9e1aedda5ed",
+      "sizeBytes": 87335
+    },
+    {
+      "code": "uni-lasu-pq-accounting-bank",
+      "title": "LASU Post-UTME Accounting | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c5c300ab8f6cfdbad9119b7f0624dba1eb7a91b733f0d8ee26d19f24a850521c",
+      "sizeBytes": 102532
+    },
+    {
+      "code": "uni-lasu-pq-biology-bank",
+      "title": "LASU Post-UTME Biology | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e54ca102f5b562a8df29cd3caad46b60a8006a7570344c63bc26fb1b1c0873d0",
+      "sizeBytes": 87813
+    },
+    {
+      "code": "uni-lasu-pq-chemistry-bank",
+      "title": "LASU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "eb7fde5708ee5ecf7671d2f6e2b2a066c7914df5c513fd3252b7d024ecaf5a97",
+      "sizeBytes": 79173
+    },
+    {
+      "code": "uni-lasu-pq-commerce-bank",
+      "title": "LASU Post-UTME Commerce | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "125c9fac156ff1ca76e66c006c9e9ce949fce922c1a6a0bea1086246ce2f2d60",
+      "sizeBytes": 103315
+    },
+    {
+      "code": "uni-lasu-pq-crs-bank",
+      "title": "LASU Post-UTME CRS | Prep Bank",
+      "questionCount": 189,
+      "totalMarks": 189,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "20e14395563f9c3129bb4a8d531f5e8fe273be7224a34c56959e4a535cb9b9cc",
+      "sizeBytes": 92038
+    },
+    {
+      "code": "uni-lasu-pq-economics-bank",
+      "title": "LASU Post-UTME Economics | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "56456a41995eda2bbf52d1ba242f9f08421475f88aabfe4f04d48d708a8f99c2",
+      "sizeBytes": 107050
+    },
+    {
+      "code": "uni-lasu-pq-english-bank",
+      "title": "LASU Post-UTME English | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "970e30e70ba9c97923fdc06d4023e49b3d2502173814018f3144ead9c1ea26bd",
+      "sizeBytes": 100342
+    },
+    {
+      "code": "uni-lasu-pq-geography-bank",
+      "title": "LASU Post-UTME Geography | Prep Bank",
+      "questionCount": 222,
+      "totalMarks": 222,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9bf09715cbaf8d09a9496f8c4f788c3b27e590357c85741310eff38e38fd260a",
+      "sizeBytes": 97216
+    },
+    {
+      "code": "uni-lasu-pq-government-bank",
+      "title": "LASU Post-UTME Government | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "411921f335f2658080e7c6e6fa62aa4639664de14ca1e0cb33d5918826561b2f",
+      "sizeBytes": 135937
+    },
+    {
+      "code": "uni-lasu-pq-irs-bank",
+      "title": "LASU Post-UTME IRS | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8199b66d20a314f30d1c15176448d8ab057a4cf96c4057098132a51b0d62ea63",
+      "sizeBytes": 100229
+    },
+    {
+      "code": "uni-lasu-pq-literature-bank",
+      "title": "LASU Post-UTME Literature | Prep Bank",
+      "questionCount": 116,
+      "totalMarks": 116,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9fb7821cc5193bb1009e7f52a6c9d989ab367a57683f474173e8bb32418ed6fc",
+      "sizeBytes": 68542
+    },
+    {
+      "code": "uni-lasu-pq-mathematics-bank",
+      "title": "LASU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "02dfffed79adec41d5a5a3b844565ccfd75dccd2a7c9ce8bc3ed465803cc7014",
+      "sizeBytes": 77392
+    },
+    {
+      "code": "uni-lasu-pq-physics-bank",
+      "title": "LASU Post-UTME Physics | Prep Bank",
+      "questionCount": 174,
+      "totalMarks": 174,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "27202d8d6914ba0963f8879dc3854420085b07deda689fe6b43ec1ed630cfac2",
+      "sizeBytes": 70345
+    },
+    {
+      "code": "uni-lautech-pq-accounting-bank",
+      "title": "LAUTECH Post-UTME Accounting | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "99f189f3825a9dd6ae8cb169cb01b47aaacd1507d59a3284cc05b1e75929dff0",
+      "sizeBytes": 106466
+    },
+    {
+      "code": "uni-lautech-pq-biology-bank",
+      "title": "LAUTECH Post-UTME Biology | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a4ebdc3deae11b2cda97b0bbe242b2594b71105b20e63aa04706a65a29686c8f",
+      "sizeBytes": 90415
+    },
+    {
+      "code": "uni-lautech-pq-chemistry-bank",
+      "title": "LAUTECH Post-UTME Chemistry | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d86c0da6d8ba32368e7f785a943164c9d5614ff9fffd7cc5a25d97386da2dfeb",
+      "sizeBytes": 83833
+    },
+    {
+      "code": "uni-lautech-pq-commerce-bank",
+      "title": "LAUTECH Post-UTME Commerce | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bb9de48c9b797450090eaa722684f6864de2588bd1e47f953321b25e3c2c5075",
+      "sizeBytes": 100840
+    },
+    {
+      "code": "uni-lautech-pq-crs-bank",
+      "title": "LAUTECH Post-UTME CRS | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5779e799d04c100cdaa284a8db21c7d53e551ccf2cbc447c1ade5c05ee4baa90",
+      "sizeBytes": 104971
+    },
+    {
+      "code": "uni-lautech-pq-economics-bank",
+      "title": "LAUTECH Post-UTME Economics | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "78f29d5cb1effd76aaa88f4322da9122d6c58b716808d19c228664542de5cea2",
+      "sizeBytes": 106476
+    },
+    {
+      "code": "uni-lautech-pq-english-bank",
+      "title": "LAUTECH Post-UTME English | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "35d048646112c5f090c27ede4ed6b84da724f55ccf3b4957657bb2251d53c127",
+      "sizeBytes": 99320
+    },
+    {
+      "code": "uni-lautech-pq-geography-bank",
+      "title": "LAUTECH Post-UTME Geography | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "073ea98dc16e4c8f3e6640c66ae3daf3f04f6268d20a43710837f92186de70b3",
+      "sizeBytes": 80144
+    },
+    {
+      "code": "uni-lautech-pq-government-bank",
+      "title": "LAUTECH Post-UTME Government | Prep Bank",
+      "questionCount": 221,
+      "totalMarks": 221,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e993e8207996e2ed845b7fdc1a4ad8b539a92c206508758d70a365b17fd93165",
+      "sizeBytes": 128022
+    },
+    {
+      "code": "uni-lautech-pq-irs-bank",
+      "title": "LAUTECH Post-UTME IRS | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c2964566fb6d216d767422fbe66bd5fc104065ec79f80107ef58a975844c7e51",
+      "sizeBytes": 97154
+    },
+    {
+      "code": "uni-lautech-pq-literature-bank",
+      "title": "LAUTECH Post-UTME Literature | Prep Bank",
+      "questionCount": 136,
+      "totalMarks": 136,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ac8e00052c732ba5119a41ecfe8b6343c47885bbd873d4d6c54040da0152edc8",
+      "sizeBytes": 80632
+    },
+    {
+      "code": "uni-lautech-pq-mathematics-bank",
+      "title": "LAUTECH Post-UTME Mathematics | Prep Bank",
+      "questionCount": 190,
+      "totalMarks": 190,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b9c60ed387dbec88ba42438a2c6c9c97f3f79e568166448a04ee551857b90129",
+      "sizeBytes": 70559
+    },
+    {
+      "code": "uni-lautech-pq-physics-bank",
+      "title": "LAUTECH Post-UTME Physics | Prep Bank",
+      "questionCount": 177,
+      "totalMarks": 177,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d47d2424c5d4ec1b29c68f6cd8d20cca10c094c0c3386f34490c14d0e7a25718",
+      "sizeBytes": 73250
+    },
+    {
+      "code": "uni-leadcity-pq-accounting-bank",
+      "title": "LEADCITY Post-UTME Accounting | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9230ec4cc6b9beb5f27e85e16d3bc59a543c53df623d698c91f47bf1d9d61078",
+      "sizeBytes": 99401
+    },
+    {
+      "code": "uni-leadcity-pq-biology-bank",
+      "title": "LEADCITY Post-UTME Biology | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e071db1343633c211f3b491eada5db6a0e4a2bf6b2940d99d7ee04aedb718845",
+      "sizeBytes": 92809
+    },
+    {
+      "code": "uni-leadcity-pq-chemistry-bank",
+      "title": "LEADCITY Post-UTME Chemistry | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f735b75d62e8c72204fd7c330a9ff16f555d64e587b85ece309a5d6dbffbc598",
+      "sizeBytes": 85147
+    },
+    {
+      "code": "uni-leadcity-pq-commerce-bank",
+      "title": "LEADCITY Post-UTME Commerce | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d763a735aae9a3bbc42d84e96c7bc3f21c9f02fc10de53e016c998337b3397b0",
+      "sizeBytes": 104928
+    },
+    {
+      "code": "uni-leadcity-pq-crs-bank",
+      "title": "LEADCITY Post-UTME CRS | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bbbbaad15aae91b468958b7cbe0506cb5de30a99340543af93c375d9c92acd70",
+      "sizeBytes": 108022
+    },
+    {
+      "code": "uni-leadcity-pq-economics-bank",
+      "title": "LEADCITY Post-UTME Economics | Prep Bank",
+      "questionCount": 221,
+      "totalMarks": 221,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "447bc4492871dfe05454fa862c2aab7df8220dafff2cd9413efe2a8e5f522bdc",
+      "sizeBytes": 111385
+    },
+    {
+      "code": "uni-leadcity-pq-english-bank",
+      "title": "LEADCITY Post-UTME English | Prep Bank",
+      "questionCount": 190,
+      "totalMarks": 190,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5f0ed19202157f99cfa23985366e19c05e9acd90c018986c9d12bb308e7f190f",
+      "sizeBytes": 94081
+    },
+    {
+      "code": "uni-leadcity-pq-geography-bank",
+      "title": "LEADCITY Post-UTME Geography | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "106a2bb7b4fbecb833f6aef395f7578e6082001c956c76a4cbb454d24414f19c",
+      "sizeBytes": 85539
+    },
+    {
+      "code": "uni-leadcity-pq-government-bank",
+      "title": "LEADCITY Post-UTME Government | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c1e4cbff44d28667cded42ca2b179d0ceb40e88bc2aa2c88e8db31ebd836ed22",
+      "sizeBytes": 137379
+    },
+    {
+      "code": "uni-leadcity-pq-irs-bank",
+      "title": "LEADCITY Post-UTME IRS | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6033be2ba579486a25d1c68e0bc172a6c862c9b7911a983c8413687f31246dac",
+      "sizeBytes": 101205
+    },
+    {
+      "code": "uni-leadcity-pq-literature-bank",
+      "title": "LEADCITY Post-UTME Literature | Prep Bank",
+      "questionCount": 141,
+      "totalMarks": 141,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3bd73da19d381bb921d10fcb9537a061bd6b034ddfe152559d91f043ec1e8559",
+      "sizeBytes": 79380
+    },
+    {
+      "code": "uni-leadcity-pq-mathematics-bank",
+      "title": "LEADCITY Post-UTME Mathematics | Prep Bank",
+      "questionCount": 194,
+      "totalMarks": 194,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "358068d6219757f9fdfe05dad5f4d6a398e27f3eda215028f8ce60278e0e71c3",
+      "sizeBytes": 73573
+    },
+    {
+      "code": "uni-leadcity-pq-physics-bank",
+      "title": "LEADCITY Post-UTME Physics | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ead5f23a555010756619efcdb1bb62e1521c1510987584644329399d132e8e64",
+      "sizeBytes": 90699
+    },
+    {
+      "code": "uni-mountain-top-pq-accounting-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Accounting | Prep Bank",
+      "questionCount": 218,
+      "totalMarks": 218,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bb7a70b5e0f1b6844717e48a9b52506f7da8531bcecfd7819db59ca966858cc6",
+      "sizeBytes": 115446
+    },
+    {
+      "code": "uni-mountain-top-pq-biology-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Biology | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "27479a5307e7e04ac6f79a57db84aa98146a194017bfbe0681d5e7e0682aa4d4",
+      "sizeBytes": 90712
+    },
+    {
+      "code": "uni-mountain-top-pq-chemistry-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Chemistry | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "92b12b31d40f53c21699ef144b79ac2426a2aee6591131a29f72b8aee897c29d",
+      "sizeBytes": 82033
+    },
+    {
+      "code": "uni-mountain-top-pq-commerce-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Commerce | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3f441aa1f6f97f4def16fa74c5289d193260bf8693408bb92d6a9138c788b1e3",
+      "sizeBytes": 104637
+    },
+    {
+      "code": "uni-mountain-top-pq-crs-bank",
+      "title": "MOUNTAIN-TOP Post-UTME CRS | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2272fc50d1921807c1f3abe96553b7c2c5f0796927b7983969565dcf8877ae6b",
+      "sizeBytes": 92684
+    },
+    {
+      "code": "uni-mountain-top-pq-economics-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Economics | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f394a267225d4bb4737e3f428aca0329a0d9094975d39ee224c600cff90a8151",
+      "sizeBytes": 107022
+    },
+    {
+      "code": "uni-mountain-top-pq-english-bank",
+      "title": "MOUNTAIN-TOP Post-UTME English | Prep Bank",
+      "questionCount": 193,
+      "totalMarks": 193,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "05a478add0b93dc2fedf01311e32fb3696db4d632af52fc4df2ad03011efbdc6",
+      "sizeBytes": 90831
+    },
+    {
+      "code": "uni-mountain-top-pq-geography-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Geography | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d4ac04a5f847ebff42866273a8f474b984a66caf2837d39fcbe8bdebbed499f8",
+      "sizeBytes": 91180
+    },
+    {
+      "code": "uni-mountain-top-pq-government-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Government | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "74d5ca5f3fcf9a4ebfbb3c457039ffda37319c4123854d09cd0b751f359cbbc9",
+      "sizeBytes": 131724
+    },
+    {
+      "code": "uni-mountain-top-pq-irs-bank",
+      "title": "MOUNTAIN-TOP Post-UTME IRS | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6f97e968ba2ccb55cf3e66bccbf5208db89ba87e84cb431814e98521aba30edc",
+      "sizeBytes": 98282
+    },
+    {
+      "code": "uni-mountain-top-pq-literature-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Literature | Prep Bank",
+      "questionCount": 149,
+      "totalMarks": 149,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a6ffd58b98f1e7a194a71a0614815127c71b7978f3292f0548d2697a84bb6d12",
+      "sizeBytes": 88338
+    },
+    {
+      "code": "uni-mountain-top-pq-mathematics-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Mathematics | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f940151c4c60c314eaaf3e1ec7ae8dbbef6038a1f182ca617558508ce28f2570",
+      "sizeBytes": 76561
+    },
+    {
+      "code": "uni-mountain-top-pq-physics-bank",
+      "title": "MOUNTAIN-TOP Post-UTME Physics | Prep Bank",
+      "questionCount": 164,
+      "totalMarks": 164,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0db98b51cf2e5ab384976ad2139526546cffc21964511ddbf48ec5dbc80c3666",
+      "sizeBytes": 70425
+    },
+    {
+      "code": "uni-noun-pq-accounting-bank",
+      "title": "NOUN Post-UTME Accounting | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "fa7b7a515bccc7d5303bd6d7e611b5d9f90dbd471dba5c50676f282db91b02a7",
+      "sizeBytes": 113738
+    },
+    {
+      "code": "uni-noun-pq-biology-bank",
+      "title": "NOUN Post-UTME Biology | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "34b1c8ec439cad6096cc3e5670bf04e9353a275aaab72ba7a909aff40c6c3d22",
+      "sizeBytes": 93799
+    },
+    {
+      "code": "uni-noun-pq-chemistry-bank",
+      "title": "NOUN Post-UTME Chemistry | Prep Bank",
+      "questionCount": 192,
+      "totalMarks": 192,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5aeaa5c8d6ecfce07f21889f2c95cdde02141acad16caec5d564e11f0a1f2a6a",
+      "sizeBytes": 77420
+    },
+    {
+      "code": "uni-noun-pq-commerce-bank",
+      "title": "NOUN Post-UTME Commerce | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "586748e94875d80d3bb0a32f9119dbf8d5d7f713fe36e153c9a7800e30cf5dba",
+      "sizeBytes": 102269
+    },
+    {
+      "code": "uni-noun-pq-crs-bank",
+      "title": "NOUN Post-UTME CRS | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "fd105cbaaaecb8a149858fb812665607eaede0ed5c6cf960fd1ea776f7e55cdf",
+      "sizeBytes": 97970
+    },
+    {
+      "code": "uni-noun-pq-economics-bank",
+      "title": "NOUN Post-UTME Economics | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3aa79f3a7c94f4c6b2ed2a81fa39726234d1b39b0bf595c68c8ffa4ba31114ed",
+      "sizeBytes": 101916
+    },
+    {
+      "code": "uni-noun-pq-english-bank",
+      "title": "NOUN Post-UTME English | Prep Bank",
+      "questionCount": 184,
+      "totalMarks": 184,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ca46f117c61d470dd40de98779c15c6d9003a9bdad4efb14bf99c013e9ef0ce3",
+      "sizeBytes": 88386
+    },
+    {
+      "code": "uni-noun-pq-geography-bank",
+      "title": "NOUN Post-UTME Geography | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "29c35c566bfc0c6630232e877dd3da1c04d13536078432310bb9c298bd55701b",
+      "sizeBytes": 91350
+    },
+    {
+      "code": "uni-noun-pq-government-bank",
+      "title": "NOUN Post-UTME Government | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2afdb7dd28e6b8064b82951711bcfc8c21c5a5c031fab5686aa3a5f3e8b4f40e",
+      "sizeBytes": 132254
+    },
+    {
+      "code": "uni-noun-pq-irs-bank",
+      "title": "NOUN Post-UTME IRS | Prep Bank",
+      "questionCount": 193,
+      "totalMarks": 193,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "29ea4142b8cd523f9e392cc946ce7fee9b7feae1b2067870474814eaec7bac9d",
+      "sizeBytes": 97913
+    },
+    {
+      "code": "uni-noun-pq-literature-bank",
+      "title": "NOUN Post-UTME Literature | Prep Bank",
+      "questionCount": 141,
+      "totalMarks": 141,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f456c0d77e9e5c603cd0a39eb2ce1279330dbf646a9189261fa30172f358abbe",
+      "sizeBytes": 83679
+    },
+    {
+      "code": "uni-noun-pq-mathematics-bank",
+      "title": "NOUN Post-UTME Mathematics | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1449c22f2f9d8952fb1e03d153533c338730252fe085e09ce04dad75730aa7ea",
+      "sizeBytes": 77312
+    },
+    {
+      "code": "uni-noun-pq-physics-bank",
+      "title": "NOUN Post-UTME Physics | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b4bad990285db3eb902e3536463a7a53e42823e75ed79cc60f9af4749d9cd581",
+      "sizeBytes": 89951
+    },
+    {
+      "code": "uni-oau-gst111-bank",
+      "title": "OAU GST 111 (Use of English) | Practice Bank",
+      "questionCount": 40,
+      "totalMarks": 40,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "db3a9aad46fd35c57ec27c63cc0e439a7be037b3af58cfa86e2fd7bdcd0ce6ed",
+      "sizeBytes": 11581
+    },
+    {
+      "code": "uni-oau-pq-accounting-bank",
+      "title": "OAU Post-UTME Accounting | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f63260e0eb2db5d76b6231e21acd8fece5bd1d63fe6aa2925955b6ffe4c07058",
+      "sizeBytes": 105746
+    },
+    {
+      "code": "uni-oau-pq-biology-bank",
+      "title": "OAU Post-UTME Biology | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7e1e15a28b5a19122155dce6069769436a8240a269b3cea15749e5a3a4c098f4",
+      "sizeBytes": 89440
+    },
+    {
+      "code": "uni-oau-pq-chemistry-bank",
+      "title": "OAU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 192,
+      "totalMarks": 192,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "813912dd580d70498076c93bbffa964ea158f6b9d197cb9af45a58a560bb5934",
+      "sizeBytes": 74720
+    },
+    {
+      "code": "uni-oau-pq-commerce-bank",
+      "title": "OAU Post-UTME Commerce | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c72d807ca50ecc77420f9430c9a12c1737e1455beeea98b54ba2d2a4a008a868",
+      "sizeBytes": 93403
+    },
+    {
+      "code": "uni-oau-pq-crk-bank",
+      "title": "OAU Post-UTME CRK | Practice Bank",
+      "questionCount": 15,
+      "totalMarks": 15,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e2984eb4d2cfd442ae13e2a82323ca765bfc8b0bcd1264c85c8b27f6b106a9c8",
+      "sizeBytes": 4172
+    },
+    {
+      "code": "uni-oau-pq-crs-bank",
+      "title": "OAU Post-UTME CRS | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "713d436465f55cad86ed603479ac2809e0cafe02991ba7f184c51bc139df6e6c",
+      "sizeBytes": 95399
+    },
+    {
+      "code": "uni-oau-pq-economics-bank",
+      "title": "OAU Post-UTME Economics | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "a0e72d263897d11fbadd84ad573a3d8b982b6dfb052ecccd1b86daddb9166db2",
+      "sizeBytes": 106262
+    },
+    {
+      "code": "uni-oau-pq-english-bank",
+      "title": "OAU Post-UTME English | Prep Bank",
+      "questionCount": 167,
+      "totalMarks": 167,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "94afe6e32b7aa458a9a5c408cb7871cf3ca2c89f227bfefdbc47080f080ceb6d",
+      "sizeBytes": 80653
+    },
+    {
+      "code": "uni-oau-pq-geography-bank",
+      "title": "OAU Post-UTME Geography | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b3748d88ce7adb8ce0b059571e5c5d2d2649424aa85df21d0346f66da8eedd6d",
+      "sizeBytes": 91805
+    },
+    {
+      "code": "uni-oau-pq-government-bank",
+      "title": "OAU Post-UTME Government | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bef4cb7e096da80dc4f2e444731fff4ddb68b7e0d495421c241b99c544d8041d",
+      "sizeBytes": 130150
+    },
+    {
+      "code": "uni-oau-pq-irs-bank",
+      "title": "OAU Post-UTME IRS | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "24edef7aeb9cc5e6d4b5c94175de385d0b7eb02f62b13c5caeb99549eef77d6c",
+      "sizeBytes": 101644
+    },
+    {
+      "code": "uni-oau-pq-literature-bank",
+      "title": "OAU Post-UTME Literature | Prep Bank",
+      "questionCount": 143,
+      "totalMarks": 143,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2180f9e4a6dd382d9671669e96fe69666d340edd49082259c9e0108e044b02c6",
+      "sizeBytes": 87127
+    },
+    {
+      "code": "uni-oau-pq-mathematics-bank",
+      "title": "OAU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d0bb94458e7a3be4888d0c3a8f74aff61068b0dc95ceda8c909736a7c7f4815d",
+      "sizeBytes": 70784
+    },
+    {
+      "code": "uni-oau-pq-physics-bank",
+      "title": "OAU Post-UTME Physics | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "45be7154a8fbf1038c7882bc0f27107b9070a66e5a1effc18dc4d553f0cfdfb8",
+      "sizeBytes": 91313
+    },
+    {
+      "code": "uni-rsu-pq-accounting-bank",
+      "title": "RSU Post-UTME Accounting | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "50da7790b49da270ccc0e921314f79f2ee757100a7965be8c1e92af6607ac9b0",
+      "sizeBytes": 100801
+    },
+    {
+      "code": "uni-rsu-pq-biology-bank",
+      "title": "RSU Post-UTME Biology | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "617c21a53d712ba883e9c0bc58691cf6a48489697d5b6a2823e49609476e9be7",
+      "sizeBytes": 91531
+    },
+    {
+      "code": "uni-rsu-pq-chemistry-bank",
+      "title": "RSU Post-UTME Chemistry | Prep Bank",
+      "questionCount": 182,
+      "totalMarks": 182,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ac16f075017be4583b788e1a9a8f1e46ee09442d527fbfc2c1f9d749a97e048e",
+      "sizeBytes": 71961
+    },
+    {
+      "code": "uni-rsu-pq-commerce-bank",
+      "title": "RSU Post-UTME Commerce | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "15bc354268cd0edd35fcf139fa5c7e8a13154a57a25bd26c54637011e371523c",
+      "sizeBytes": 96118
+    },
+    {
+      "code": "uni-rsu-pq-crs-bank",
+      "title": "RSU Post-UTME CRS | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f88b41fc62b5a1987ba9c67318104fa271068275a88680dff41c41ddfa7354ba",
+      "sizeBytes": 103056
+    },
+    {
+      "code": "uni-rsu-pq-economics-bank",
+      "title": "RSU Post-UTME Economics | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f44ba20debf2c2df323a698010037a5e48120eea421d5af92962c7b02ae3d0c6",
+      "sizeBytes": 104734
+    },
+    {
+      "code": "uni-rsu-pq-english-bank",
+      "title": "RSU Post-UTME English | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e016bbe776d9976092c0d7f95cf061373621cd0b7128aecd2f7eddf82ad40bef",
+      "sizeBytes": 98565
+    },
+    {
+      "code": "uni-rsu-pq-geography-bank",
+      "title": "RSU Post-UTME Geography | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "52b4cd928918f14cb19111a8198e8057f2a3e8a83c8bdc07638bb8fcbda7fd66",
+      "sizeBytes": 91297
+    },
+    {
+      "code": "uni-rsu-pq-government-bank",
+      "title": "RSU Post-UTME Government | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cada53d9a67a4be5cc95ec56899df509e6c9ab921da855d2366704aac431d535",
+      "sizeBytes": 123877
+    },
+    {
+      "code": "uni-rsu-pq-irs-bank",
+      "title": "RSU Post-UTME IRS | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ebf4f65e38d09b1bbaf5e33e0ac345a0e4d72300659b757c52033ef49ded2abc",
+      "sizeBytes": 102515
+    },
+    {
+      "code": "uni-rsu-pq-literature-bank",
+      "title": "RSU Post-UTME Literature | Prep Bank",
+      "questionCount": 132,
+      "totalMarks": 132,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "70c92720de22070b005106e8a3e6588b97c348ab9888abf7ed871eac0e0fede5",
+      "sizeBytes": 79679
+    },
+    {
+      "code": "uni-rsu-pq-mathematics-bank",
+      "title": "RSU Post-UTME Mathematics | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "fb887c98691ba512e45099746143f54769ac0b0d261bfb8b4c721155639877cf",
+      "sizeBytes": 76257
+    },
+    {
+      "code": "uni-rsu-pq-physics-bank",
+      "title": "RSU Post-UTME Physics | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d6811ba631ba5074675835608d534acc707c227f590d943b882a6aeea2751f73",
+      "sizeBytes": 89373
+    },
+    {
+      "code": "uni-ui-pq-accounting-bank",
+      "title": "UI Post-UTME Accounting | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "89c479e40bcf85f8ce7c37e21c65048287488066a72b181cd39b516a36f646bb",
+      "sizeBytes": 98494
+    },
+    {
+      "code": "uni-ui-pq-biology-bank",
+      "title": "UI Post-UTME Biology | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "37071ae15451a8849f3a7bbd19fb504f936d748f4ec3a408682812bbd1cff8a9",
+      "sizeBytes": 85821
+    },
+    {
+      "code": "uni-ui-pq-chemistry-bank",
+      "title": "UI Post-UTME Chemistry | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1f2df6b37bd0139cf46b62fecdd9ee443606be2ae20bed57616e7f6105f1fdef",
+      "sizeBytes": 85157
+    },
+    {
+      "code": "uni-ui-pq-commerce-bank",
+      "title": "UI Post-UTME Commerce | Prep Bank",
+      "questionCount": 220,
+      "totalMarks": 220,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "faed4738c024241ab9875d3d1920237ba75c5b85f202e139cb057390080a3444",
+      "sizeBytes": 103152
+    },
+    {
+      "code": "uni-ui-pq-crs-bank",
+      "title": "UI Post-UTME CRS | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9001c499a3f62834069b8415c1eae19d9becd01bd6eabbead1cba61df9656414",
+      "sizeBytes": 110015
+    },
+    {
+      "code": "uni-ui-pq-economics-bank",
+      "title": "UI Post-UTME Economics | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "433ca593c19d70ae4bdbebbe40a901c62a50f56132b206c718a24de82e15456a",
+      "sizeBytes": 109482
+    },
+    {
+      "code": "uni-ui-pq-english-bank",
+      "title": "UI Post-UTME English | Prep Bank",
+      "questionCount": 177,
+      "totalMarks": 177,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ef87517923aea8bacaadab2f426d936b1627adeaa896ff51a71b6316286e8a68",
+      "sizeBytes": 88127
+    },
+    {
+      "code": "uni-ui-pq-geography-bank",
+      "title": "UI Post-UTME Geography | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0e1893e67a66693b0c16641fa32aab086396c414e59cd9e209700b1865fae658",
+      "sizeBytes": 89858
+    },
+    {
+      "code": "uni-ui-pq-government-bank",
+      "title": "UI Post-UTME Government | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b0330154e373bee2fddbee16993b9164c60e67a9f3534ec04c8b7492ae2617bc",
+      "sizeBytes": 135371
+    },
+    {
+      "code": "uni-ui-pq-irs-bank",
+      "title": "UI Post-UTME IRS | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4817ad34395d66b7bff863ad7524930a076a527460b97b53774a86409d8f71f9",
+      "sizeBytes": 104939
+    },
+    {
+      "code": "uni-ui-pq-literature-bank",
+      "title": "UI Post-UTME Literature | Prep Bank",
+      "questionCount": 139,
+      "totalMarks": 139,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d81cd482fe69ee95fc773b5c8b63dc4c08b38df74358ef034cf9b83396abd725",
+      "sizeBytes": 79094
+    },
+    {
+      "code": "uni-ui-pq-mathematics-bank",
+      "title": "UI Post-UTME Mathematics | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "19bea99ce22a82728e17d1d5f603a65e9e11eb1e85f7de891a7a8ab826a84c2e",
+      "sizeBytes": 77912
+    },
+    {
+      "code": "uni-ui-pq-physics-bank",
+      "title": "UI Post-UTME Physics | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ad90d10e5d7b2c3444dfd8c0812f90ec85b9a87ef5bb9e596224b5e6074163d5",
+      "sizeBytes": 87482
+    },
+    {
+      "code": "uni-uniben-pq-accounting-bank",
+      "title": "UNIBEN Post-UTME Accounting | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8b9af20b55c01b2b652fce144c7e6e1fed9152d97dee4b66120a9745d72dd0c1",
+      "sizeBytes": 106433
+    },
+    {
+      "code": "uni-uniben-pq-biology-bank",
+      "title": "UNIBEN Post-UTME Biology | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5236dca8d80735dda5e2be138baa056fcf7060d884296eecb5069e6676e6daec",
+      "sizeBytes": 92334
+    },
+    {
+      "code": "uni-uniben-pq-chemistry-bank",
+      "title": "UNIBEN Post-UTME Chemistry | Prep Bank",
+      "questionCount": 184,
+      "totalMarks": 184,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "65534cfbc1ec1d997e6f9206104ccc025497df7023a3a501bb82916b346d3bb9",
+      "sizeBytes": 76746
+    },
+    {
+      "code": "uni-uniben-pq-commerce-bank",
+      "title": "UNIBEN Post-UTME Commerce | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4e1368466f8aeacf17a5c161a56d96236dda2be1c963e40bf57e928911771962",
+      "sizeBytes": 95736
+    },
+    {
+      "code": "uni-uniben-pq-crs-bank",
+      "title": "UNIBEN Post-UTME CRS | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e1c6fb6c35e94b22f42db13e77bdcb366ce05bda27d9f21565234bf66b0d2d65",
+      "sizeBytes": 111954
+    },
+    {
+      "code": "uni-uniben-pq-economics-bank",
+      "title": "UNIBEN Post-UTME Economics | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8407ceeb7c660f140fe7580023c9a45b28063b4012060f5fdbc2666e4a2d4d2d",
+      "sizeBytes": 100783
+    },
+    {
+      "code": "uni-uniben-pq-english-bank",
+      "title": "UNIBEN Post-UTME English | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6b6f3a145bd9adbcd7772062d4fcf1f2c3ba910c49abf918950164f844c76133",
+      "sizeBytes": 98642
+    },
+    {
+      "code": "uni-uniben-pq-geography-bank",
+      "title": "UNIBEN Post-UTME Geography | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b74047b180689fccc611fb73de08a7c416e7d530c8f6e1d1b4d93b34c3d7f5f5",
+      "sizeBytes": 93246
+    },
+    {
+      "code": "uni-uniben-pq-government-bank",
+      "title": "UNIBEN Post-UTME Government | Prep Bank",
+      "questionCount": 219,
+      "totalMarks": 219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "42d9eed4535a56bba2dffc061c6f57f13889fac7de758c2a03087b2ce6ddbba2",
+      "sizeBytes": 136108
+    },
+    {
+      "code": "uni-uniben-pq-irs-bank",
+      "title": "UNIBEN Post-UTME IRS | Prep Bank",
+      "questionCount": 194,
+      "totalMarks": 194,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d6cc80ca355f3772a8d95183a57d91c81042c42c475485d4c969e347684bfd4a",
+      "sizeBytes": 91316
+    },
+    {
+      "code": "uni-uniben-pq-literature-bank",
+      "title": "UNIBEN Post-UTME Literature | Prep Bank",
+      "questionCount": 128,
+      "totalMarks": 128,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ddfd1615aca9c1b1a40b7836798b540e76ba7450907ceda4bb2844d39bfeecc9",
+      "sizeBytes": 75157
+    },
+    {
+      "code": "uni-uniben-pq-mathematics-bank",
+      "title": "UNIBEN Post-UTME Mathematics | Prep Bank",
+      "questionCount": 191,
+      "totalMarks": 191,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "07f872c2e48d27ab488cc561cb4697c1ed1748a0a30d50802aa78d5145c24c28",
+      "sizeBytes": 73830
+    },
+    {
+      "code": "uni-uniben-pq-physics-bank",
+      "title": "UNIBEN Post-UTME Physics | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bdb6d139aa1cc160bae9b66728b0be8b0e5ab0ce77f7a34fd97d6019128dceed",
+      "sizeBytes": 88355
+    },
+    {
+      "code": "uni-unilag-ams104-bank",
+      "title": "UNILAG AMS 104 | Course Question Bank",
+      "questionCount": 281,
+      "totalMarks": 281,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5182de0bf2f7231f041d1ec096166e581f9edd1005414c5e58c37860a25bc46a",
+      "sizeBytes": 97070
+    },
+    {
+      "code": "uni-unilag-bio101-bank",
+      "title": "UNILAG BIO 101 | Course Question Bank",
+      "questionCount": 2203,
+      "totalMarks": 2203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7e9c2feb777b71691906bffaeaadbe0cabbed38599a88ce761dcff4ada6a89e6",
+      "sizeBytes": 783450
+    },
+    {
+      "code": "uni-unilag-bio102-bank",
+      "title": "UNILAG BIO 102 | Course Question Bank",
+      "questionCount": 670,
+      "totalMarks": 670,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "65e1ba6500409a8fa32d11ce954e43339d5f8fcb4a24016ece79b8b40b6e6ac8",
+      "sizeBytes": 239967
+    },
+    {
+      "code": "uni-unilag-bio107-bank",
+      "title": "UNILAG BIO 107 | Course Question Bank",
+      "questionCount": 60,
+      "totalMarks": 60,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "431802b0562fb6e04781f4d7e1f6c406c2c5813cc7b0049446ba5651570cb12a",
+      "sizeBytes": 29620
+    },
+    {
+      "code": "uni-unilag-bme102-bank",
+      "title": "UNILAG BME 102 | Course Question Bank",
+      "questionCount": 178,
+      "totalMarks": 178,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8fdedbaf0d13d4b7002ab4e9bb0667248a948ec2b6d040b484e57be4686da81e",
+      "sizeBytes": 87027
+    },
+    {
+      "code": "uni-unilag-bot102-bank",
+      "title": "UNILAG BOT 102 | Course Question Bank",
+      "questionCount": 754,
+      "totalMarks": 754,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "80d27fe2c5ddf0bd04d37f1f25a63537583854fc31804f1ccf3394a4e6e5bf51",
+      "sizeBytes": 289706
+    },
+    {
+      "code": "uni-unilag-chm101-bank",
+      "title": "UNILAG CHM 101 | Course Question Bank",
+      "questionCount": 1438,
+      "totalMarks": 1438,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0dbcb122268ca09b1a50bc9391430f1629a656a3be7afd7b87ff1d2515aca5cc",
+      "sizeBytes": 539135
+    },
+    {
+      "code": "uni-unilag-chm102-bank",
+      "title": "UNILAG CHM 102 | Course Question Bank",
+      "questionCount": 1938,
+      "totalMarks": 1938,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bf97fdbab1bb1f0a56754f708e570e315185483f96cddecc8385d947b2f96b0f",
+      "sizeBytes": 698791
+    },
+    {
+      "code": "uni-unilag-com101-bank",
+      "title": "UNILAG COM 101 | Course Question Bank",
+      "questionCount": 972,
+      "totalMarks": 972,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d6c6eff48bd568e5b20c4f5126d98ad2403fb5a36b895a1b31273dca95d2aae0",
+      "sizeBytes": 335737
+    },
+    {
+      "code": "uni-unilag-cos102-bank",
+      "title": "UNILAG COS 102 | Course Question Bank",
+      "questionCount": 485,
+      "totalMarks": 485,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "01d73d832134f866b490fc640f0517a4c45944586be2be22c4250a8844343a89",
+      "sizeBytes": 220005
+    },
+    {
+      "code": "uni-unilag-get102-bank",
+      "title": "UNILAG GET 102 | Course Question Bank",
+      "questionCount": 305,
+      "totalMarks": 305,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bb7844840c9abd0f2c65bf0861e4cee5c41f1fe92d3baea96f1a4df432184406",
+      "sizeBytes": 138631
+    },
+    {
+      "code": "uni-unilag-gst111-bank",
+      "title": "UNILAG GST 111 | Course Question Bank",
+      "questionCount": 1509,
+      "totalMarks": 1509,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ab6b8a7777424d88fe12f1efd94efd0c534672c55d109146cf93aeddd860389e",
+      "sizeBytes": 521281
+    },
+    {
+      "code": "uni-unilag-gst112-bank",
+      "title": "UNILAG GST 112 | Course Question Bank",
+      "questionCount": 1219,
+      "totalMarks": 1219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "f66fcaea896e689ccfdf25b818e2d1933d9efc97ce339cb51dbf6c7cb14120de",
+      "sizeBytes": 493318
+    },
+    {
+      "code": "uni-unilag-irp321-bank",
+      "title": "UNILAG IRP 321 | Course Question Bank",
+      "questionCount": 59,
+      "totalMarks": 59,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5dca2a97aad424381bd4980c22881fa7bd0c4aed094f1c7d8cf0f99019c777d7",
+      "sizeBytes": 29424
+    },
+    {
+      "code": "uni-unilag-irp322-bank",
+      "title": "UNILAG IRP 322 | Course Question Bank",
+      "questionCount": 74,
+      "totalMarks": 74,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cc909f26e345227ef322d260ba6f80e096b9faebdccc6154ceec64e49998fe92",
+      "sizeBytes": 35473
+    },
+    {
+      "code": "uni-unilag-mic121-bank",
+      "title": "UNILAG MIC 121 | Course Question Bank",
+      "questionCount": 892,
+      "totalMarks": 892,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bf367accbf0c2723817fbfb4ff54b4118130307e91a230554d09d466637c4900",
+      "sizeBytes": 400714
+    },
+    {
+      "code": "uni-unilag-mth101-bank",
+      "title": "UNILAG MTH 101 | Course Question Bank",
+      "questionCount": 659,
+      "totalMarks": 659,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "516be1dbbf2ed76e97696dab04d47e04a0dace5edffe5fff9570a2ffcdbe5a68",
+      "sizeBytes": 215667
+    },
+    {
+      "code": "uni-unilag-mth102-bank",
+      "title": "UNILAG MTH 102 | Course Question Bank",
+      "questionCount": 903,
+      "totalMarks": 903,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1639a85996f4110d48c08d7e8bf12197216bf89d843fadd46630f3e4793071f6",
+      "sizeBytes": 325670
+    },
+    {
+      "code": "uni-unilag-phy101-bank",
+      "title": "UNILAG PHY 101 | Course Question Bank",
+      "questionCount": 1209,
+      "totalMarks": 1209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1a5f39d3c7b1981adcadcdef6db11d266f90b82842fc2c08d422cb41a000ab9a",
+      "sizeBytes": 482658
+    },
+    {
+      "code": "uni-unilag-phy102-bank",
+      "title": "UNILAG PHY 102 | Course Question Bank",
+      "questionCount": 1689,
+      "totalMarks": 1689,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "920ea3f5056c50c11ebdacfc79c47fb6afa9453985e8f956c1333b1f59840e22",
+      "sizeBytes": 675059
+    },
+    {
+      "code": "uni-unilag-phy104-bank",
+      "title": "UNILAG PHY 104 | Course Question Bank",
+      "questionCount": 910,
+      "totalMarks": 910,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "996cda483ca34982f8bcfdbb88b33b4fa5ffc01f2c79a911985cf4a14171172b",
+      "sizeBytes": 411634
+    },
+    {
+      "code": "uni-unilag-pq-accounting-bank",
+      "title": "UNILAG Post-UTME Accounting | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2d725c23e521d72e622bb744f89e96fdab150286a51a3cdfb26edbac6cb8f51f",
+      "sizeBytes": 101138
+    },
+    {
+      "code": "uni-unilag-pq-biology-bank",
+      "title": "UNILAG Post-UTME Biology | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9f6e229ea049c7a27eea9be2c1b41f3798172d33d8594ecbf3efe293a01d0233",
+      "sizeBytes": 88125
+    },
+    {
+      "code": "uni-unilag-pq-chemistry-bank",
+      "title": "UNILAG Post-UTME Chemistry | Prep Bank",
+      "questionCount": 157,
+      "totalMarks": 157,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "739757fda5e09b0f02ef4c78172dd123f03864341f5748323f6441029f51461c",
+      "sizeBytes": 65033
+    },
+    {
+      "code": "uni-unilag-pq-commerce-bank",
+      "title": "UNILAG Post-UTME Commerce | Prep Bank",
+      "questionCount": 220,
+      "totalMarks": 220,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "406d247d7f8cdacfde817def53602dda94d16753befb7797a4447655dd285bcd",
+      "sizeBytes": 113151
+    },
+    {
+      "code": "uni-unilag-pq-crs-bank",
+      "title": "UNILAG Post-UTME CRS | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6923a9c2fef3c0301105d3b0677e47f107d80e665bf2290db3f8b7555a232065",
+      "sizeBytes": 107498
+    },
+    {
+      "code": "uni-unilag-pq-economics-bank",
+      "title": "UNILAG Post-UTME Economics | Prep Bank",
+      "questionCount": 200,
+      "totalMarks": 200,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e618913cafb95b1706fabe3608a527bd22593c9a2232f9fc33c08a51f32fbce0",
+      "sizeBytes": 102974
+    },
+    {
+      "code": "uni-unilag-pq-english-bank",
+      "title": "UNILAG Post-UTME English | Prep Bank",
+      "questionCount": 174,
+      "totalMarks": 174,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b1caa81ad349e890bc1f120a6a5c862af092569fc483d01d5408440e974a3761",
+      "sizeBytes": 90351
+    },
+    {
+      "code": "uni-unilag-pq-geography-bank",
+      "title": "UNILAG Post-UTME Geography | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7f0fb8a096a83d8f1479867c22dacc5b259b480126e9515176db2e7857c77250",
+      "sizeBytes": 96002
+    },
+    {
+      "code": "uni-unilag-pq-government-bank",
+      "title": "UNILAG Post-UTME Government | Prep Bank",
+      "questionCount": 219,
+      "totalMarks": 219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6d4950b98b7e38334461a9f1b1c3b4b0403e4dd1020e6c4af8096666774fb3cb",
+      "sizeBytes": 134822
+    },
+    {
+      "code": "uni-unilag-pq-irs-bank",
+      "title": "UNILAG Post-UTME IRS | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d735e462986ffd76834de231dee2ed472789669532643d78c707ab149f5632ec",
+      "sizeBytes": 100185
+    },
+    {
+      "code": "uni-unilag-pq-literature-bank",
+      "title": "UNILAG Post-UTME Literature | Prep Bank",
+      "questionCount": 137,
+      "totalMarks": 137,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "de977c790bfdb061e7257db5984573134f77acf173a7426f47c454b6105a7e3e",
+      "sizeBytes": 81744
+    },
+    {
+      "code": "uni-unilag-pq-mathematics-bank",
+      "title": "UNILAG Post-UTME Mathematics | Prep Bank",
+      "questionCount": 179,
+      "totalMarks": 179,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9e49bf5e674f8813dc981a4f2a1afc54f1730e98465da0be2be5b837d5d7b608",
+      "sizeBytes": 65499
+    },
+    {
+      "code": "uni-unilag-pq-physics-bank",
+      "title": "UNILAG Post-UTME Physics | Prep Bank",
+      "questionCount": 193,
+      "totalMarks": 193,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "431125cb749fff9e6504fdd90e55c493d2dd522ae6cbdabf42c0a7e1ad534488",
+      "sizeBytes": 81011
+    },
+    {
+      "code": "uni-unilag-sta112-bank",
+      "title": "UNILAG STA 112 | Course Question Bank",
+      "questionCount": 112,
+      "totalMarks": 112,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "32812b4fabfbbbfaf138e12af7178f0ed445f0f5a18221bc7bf623b3454cc814",
+      "sizeBytes": 46117
+    },
+    {
+      "code": "uni-unilag-zoo101-bank",
+      "title": "UNILAG ZOO 101 | Course Question Bank",
+      "questionCount": 2041,
+      "totalMarks": 2041,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "c405525ff08bd5ff6ca6d6039e6557cf20d6151c7eb1c1ad7f2ed42a2d49a347",
+      "sizeBytes": 729585
+    },
+    {
+      "code": "uni-unilag-zoo102-bank",
+      "title": "UNILAG ZOO 102 | Course Question Bank",
+      "questionCount": 733,
+      "totalMarks": 733,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b2f8ed5cc0435015594d2234a8ec9680ef567e8921151ac5e48b5e60f6bf3126",
+      "sizeBytes": 280432
+    },
+    {
+      "code": "uni-unilorin-pq-accounting-bank",
+      "title": "UNILORIN Post-UTME Accounting | Prep Bank",
+      "questionCount": 211,
+      "totalMarks": 211,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ba3e14444072963bff6b27ee9b3aed51cf444a1832c708212f7554f46df875cf",
+      "sizeBytes": 111111
+    },
+    {
+      "code": "uni-unilorin-pq-biology-bank",
+      "title": "UNILORIN Post-UTME Biology | Prep Bank",
+      "questionCount": 204,
+      "totalMarks": 204,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0be6a5034a4da0c1d9852bef27f7976e71078c87a3fbe94bcbf82dd29e82495a",
+      "sizeBytes": 90149
+    },
+    {
+      "code": "uni-unilorin-pq-chemistry-bank",
+      "title": "UNILORIN Post-UTME Chemistry | Prep Bank",
+      "questionCount": 176,
+      "totalMarks": 176,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "08621786b67ae772241816161414cebba4b104f0997e4a19cb5fbebc26639781",
+      "sizeBytes": 71847
+    },
+    {
+      "code": "uni-unilorin-pq-commerce-bank",
+      "title": "UNILORIN Post-UTME Commerce | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "42e626299c458c3ea7bac6c05cf7aa8dbd5ea6fbd754bc46311dfcc0c01b2dec",
+      "sizeBytes": 105283
+    },
+    {
+      "code": "uni-unilorin-pq-crs-bank",
+      "title": "UNILORIN Post-UTME CRS | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "07003f381fc7ab2995480476bd3f6a6b6244195d90c92987e363c41b4b438194",
+      "sizeBytes": 109063
+    },
+    {
+      "code": "uni-unilorin-pq-economics-bank",
+      "title": "UNILORIN Post-UTME Economics | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0d31644d3cec90cca827c694f59c4a4111e4fde883060c2c8e053c73e05a65c3",
+      "sizeBytes": 108228
+    },
+    {
+      "code": "uni-unilorin-pq-english-bank",
+      "title": "UNILORIN Post-UTME English | Prep Bank",
+      "questionCount": 201,
+      "totalMarks": 201,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "709ef2b0b576c2fed82b64794197a448ded1af87b1a1d80337c2d4e28412a185",
+      "sizeBytes": 101367
+    },
+    {
+      "code": "uni-unilorin-pq-geography-bank",
+      "title": "UNILORIN Post-UTME Geography | Prep Bank",
+      "questionCount": 208,
+      "totalMarks": 208,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "4199d5c38ea2f2af7fd0a7b523ae34e10a2a5d02bf9d67198b69cc89bf97d97b",
+      "sizeBytes": 91220
+    },
+    {
+      "code": "uni-unilorin-pq-government-bank",
+      "title": "UNILORIN Post-UTME Government | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "ee246c649f98b9252d577660e1b6635ff83e9465cc13d868a73e6cb54ed05fa3",
+      "sizeBytes": 138451
+    },
+    {
+      "code": "uni-unilorin-pq-irs-bank",
+      "title": "UNILORIN Post-UTME IRS | Prep Bank",
+      "questionCount": 191,
+      "totalMarks": 191,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2049a6e3c1d1f9c32840885483b59bb2b0f7e41c7f6a1a503aeb51ab33af539f",
+      "sizeBytes": 88870
+    },
+    {
+      "code": "uni-unilorin-pq-literature-bank",
+      "title": "UNILORIN Post-UTME Literature | Prep Bank",
+      "questionCount": 138,
+      "totalMarks": 138,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "34ce7bcbcf1dde836be7bc9c7ac91ba6fe7c0f4956aab273d7b7df7f657c01fd",
+      "sizeBytes": 80778
+    },
+    {
+      "code": "uni-unilorin-pq-mathematics-bank",
+      "title": "UNILORIN Post-UTME Mathematics | Prep Bank",
+      "questionCount": 202,
+      "totalMarks": 202,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "dab35a31001600e549e85c73694e5319987917298f28f1b84c8f8d435ab28b58",
+      "sizeBytes": 78809
+    },
+    {
+      "code": "uni-unilorin-pq-physics-bank",
+      "title": "UNILORIN Post-UTME Physics | Prep Bank",
+      "questionCount": 195,
+      "totalMarks": 195,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "196692330487304b0a5aa26b20de0bfacac5f596c935979c755449b880f1f448",
+      "sizeBytes": 83336
+    },
+    {
+      "code": "uni-uniosun-pq-accounting-bank",
+      "title": "UNIOSUN Post-UTME Accounting | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6d2402e904ce7bc1741e43940cb8ed241b6c1e0a7868a8e30dbd644d65e11735",
+      "sizeBytes": 106107
+    },
+    {
+      "code": "uni-uniosun-pq-biology-bank",
+      "title": "UNIOSUN Post-UTME Biology | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0b90d3baaf21c964a981022f014832c3947fd7a53770f3861835638dd557ce99",
+      "sizeBytes": 92653
+    },
+    {
+      "code": "uni-uniosun-pq-chemistry-bank",
+      "title": "UNIOSUN Post-UTME Chemistry | Prep Bank",
+      "questionCount": 165,
+      "totalMarks": 165,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8ece3ff21ef6e015efdc684f9e4d2968bf449278b5fa209f18100227e3156003",
+      "sizeBytes": 66361
+    },
+    {
+      "code": "uni-uniosun-pq-commerce-bank",
+      "title": "UNIOSUN Post-UTME Commerce | Prep Bank",
+      "questionCount": 219,
+      "totalMarks": 219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "16b341d4f35f8a69fb519bac9ff5bbe4989edc5564e93491481df1af44ae785f",
+      "sizeBytes": 109978
+    },
+    {
+      "code": "uni-uniosun-pq-crs-bank",
+      "title": "UNIOSUN Post-UTME CRS | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "7e1eadc9d18133ef90ccff943833cbeca8eb96b9308bbaa357da0b01ce83cc3b",
+      "sizeBytes": 96593
+    },
+    {
+      "code": "uni-uniosun-pq-economics-bank",
+      "title": "UNIOSUN Post-UTME Economics | Prep Bank",
+      "questionCount": 219,
+      "totalMarks": 219,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3db6f609b5dcce35c56879212abf53bf5d1c524ce2b9f748fc6f963321145ccc",
+      "sizeBytes": 110698
+    },
+    {
+      "code": "uni-uniosun-pq-english-bank",
+      "title": "UNIOSUN Post-UTME English | Prep Bank",
+      "questionCount": 190,
+      "totalMarks": 190,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8568c642596b008d62bed06f3fdd0c96e92b26f1c20493efe16fe60680166911",
+      "sizeBytes": 93344
+    },
+    {
+      "code": "uni-uniosun-pq-geography-bank",
+      "title": "UNIOSUN Post-UTME Geography | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "bc6f7a86c601f7e775abc0eaae262d8c5f3c6a663db776c79325fb50c83f5f7e",
+      "sizeBytes": 96172
+    },
+    {
+      "code": "uni-uniosun-pq-government-bank",
+      "title": "UNIOSUN Post-UTME Government | Prep Bank",
+      "questionCount": 218,
+      "totalMarks": 218,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8a2dfd45a307f542f39a1b0365d812b32cd74617b4eafba6260c57a878283bff",
+      "sizeBytes": 148667
+    },
+    {
+      "code": "uni-uniosun-pq-irs-bank",
+      "title": "UNIOSUN Post-UTME IRS | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3e3897351d8d0221367ea076a5316d4262f2faa3142840a9e332430a52dff9fb",
+      "sizeBytes": 98078
+    },
+    {
+      "code": "uni-uniosun-pq-literature-bank",
+      "title": "UNIOSUN Post-UTME Literature | Prep Bank",
+      "questionCount": 140,
+      "totalMarks": 140,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "66ac18cc4e50d99cc2c7d6dea5d33951c9e57a341257f79c3ed2e9662239bd2b",
+      "sizeBytes": 86283
+    },
+    {
+      "code": "uni-uniosun-pq-mathematics-bank",
+      "title": "UNIOSUN Post-UTME Mathematics | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "cc15af9f7a29abe6aa1056707a802c98f879e3672bf4b998ca6c0aa4ae0d8200",
+      "sizeBytes": 77502
+    },
+    {
+      "code": "uni-uniosun-pq-physics-bank",
+      "title": "UNIOSUN Post-UTME Physics | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "aaed2b0970831c72f6c56a5221ce42bc550c86dfb373be1c03ced41cb91ab3d0",
+      "sizeBytes": 88278
+    },
+    {
+      "code": "uni-uniport-pq-accounting-bank",
+      "title": "UNIPORT Post-UTME Accounting | Prep Bank",
+      "questionCount": 210,
+      "totalMarks": 210,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6b8ee34462213bd4c44c58b73ee1992ea59ab057c589e173ca818f4094d4a017",
+      "sizeBytes": 105305
+    },
+    {
+      "code": "uni-uniport-pq-biology-bank",
+      "title": "UNIPORT Post-UTME Biology | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8eea601d7c477f0ad0e192aa5242d29dc7ffe1fe19116eca262d8d5114b890b3",
+      "sizeBytes": 88903
+    },
+    {
+      "code": "uni-uniport-pq-chemistry-bank",
+      "title": "UNIPORT Post-UTME Chemistry | Prep Bank",
+      "questionCount": 197,
+      "totalMarks": 197,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8dfa512525d786eb1ae74f3b737c8e7b443ea5fb2c7110e7f8b2886cde179262",
+      "sizeBytes": 81419
+    },
+    {
+      "code": "uni-uniport-pq-commerce-bank",
+      "title": "UNIPORT Post-UTME Commerce | Prep Bank",
+      "questionCount": 218,
+      "totalMarks": 218,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6287008d2e28852a4ef216ed4cc9c0d390f05c3b759de8d8114bba6278c9edb0",
+      "sizeBytes": 111175
+    },
+    {
+      "code": "uni-uniport-pq-crs-bank",
+      "title": "UNIPORT Post-UTME CRS | Prep Bank",
+      "questionCount": 199,
+      "totalMarks": 199,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "31ba2db2c6f8352b9abdd4add6fb9fa8bd20922abe9484021736e546d9aa3662",
+      "sizeBytes": 93914
+    },
+    {
+      "code": "uni-uniport-pq-economics-bank",
+      "title": "UNIPORT Post-UTME Economics | Prep Bank",
+      "questionCount": 215,
+      "totalMarks": 215,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9f6f4a5d335562ecd2dea0fa4f469f2a46ec7aa15bef52747b033a94b6c4b68a",
+      "sizeBytes": 113881
+    },
+    {
+      "code": "uni-uniport-pq-english-bank",
+      "title": "UNIPORT Post-UTME English | Prep Bank",
+      "questionCount": 187,
+      "totalMarks": 187,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "32aff191b671fcb4bab0645ed6ada13133c279423c7206bbaca352480f45528a",
+      "sizeBytes": 87760
+    },
+    {
+      "code": "uni-uniport-pq-geography-bank",
+      "title": "UNIPORT Post-UTME Geography | Prep Bank",
+      "questionCount": 213,
+      "totalMarks": 213,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8c433ef108b93acf8794fc8ee62096b45010a2766c6e18b2387bd34e9b24a598",
+      "sizeBytes": 96607
+    },
+    {
+      "code": "uni-uniport-pq-government-bank",
+      "title": "UNIPORT Post-UTME Government | Prep Bank",
+      "questionCount": 212,
+      "totalMarks": 212,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8bd52da08cab4b2470e03dd8c5999484c3edc90a4cf83500a33e2049144248e0",
+      "sizeBytes": 140145
+    },
+    {
+      "code": "uni-uniport-pq-irs-bank",
+      "title": "UNIPORT Post-UTME IRS | Prep Bank",
+      "questionCount": 194,
+      "totalMarks": 194,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "fda042ab23bb274c0a0b461abd25ba9cda1d4b9fd2c29778a4d30f97da529760",
+      "sizeBytes": 90387
+    },
+    {
+      "code": "uni-uniport-pq-literature-bank",
+      "title": "UNIPORT Post-UTME Literature | Prep Bank",
+      "questionCount": 136,
+      "totalMarks": 136,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "409f9ab85333d6a63d42cf603317df9ae692dd0d5ea0030cc139d73c0df2d8b5",
+      "sizeBytes": 80803
+    },
+    {
+      "code": "uni-uniport-pq-mathematics-bank",
+      "title": "UNIPORT Post-UTME Mathematics | Prep Bank",
+      "questionCount": 205,
+      "totalMarks": 205,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "e95bc17218a03819c33f785b52c8858fcd0ba894abee76bc723d0bcd05fbe528",
+      "sizeBytes": 77220
+    },
+    {
+      "code": "uni-uniport-pq-physics-bank",
+      "title": "UNIPORT Post-UTME Physics | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2f89b7893c923f64e78eb35aa7ebb567880efa7918774bb38e15e48faa2be9ff",
+      "sizeBytes": 91319
+    },
+    {
+      "code": "uni-unn-pq-accounting-bank",
+      "title": "UNN Post-UTME Accounting | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "801adeb72f0ca94f9836918079f417f8313ad1efd3f0bae5bf64295f603c7d47",
+      "sizeBytes": 106856
+    },
+    {
+      "code": "uni-unn-pq-biology-bank",
+      "title": "UNN Post-UTME Biology | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "5dbbffda51efe24c2a7baddf90c8c7a79af737433cd751fec8e530742a29ca39",
+      "sizeBytes": 90029
+    },
+    {
+      "code": "uni-unn-pq-chemistry-bank",
+      "title": "UNN Post-UTME Chemistry | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "18e5ab253709845e3d9a7b554cbd2b9602629caf1371c8a2c01a8868208f7465",
+      "sizeBytes": 79858
+    },
+    {
+      "code": "uni-unn-pq-commerce-bank",
+      "title": "UNN Post-UTME Commerce | Prep Bank",
+      "questionCount": 217,
+      "totalMarks": 217,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "19119e81919b828b382cc12855924c56897cb7f011b4e0ca7904d8db4fc9487d",
+      "sizeBytes": 104037
+    },
+    {
+      "code": "uni-unn-pq-crs-bank",
+      "title": "UNN Post-UTME CRS | Prep Bank",
+      "questionCount": 196,
+      "totalMarks": 196,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3185e1ba99f9dbfa8969b2328710173d4cf15c9f91cbf319547acd90279b2070",
+      "sizeBytes": 105080
+    },
+    {
+      "code": "uni-unn-pq-economics-bank",
+      "title": "UNN Post-UTME Economics | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9873cbe9c575fd6a1110667a30284e26b6f51afee6904679cf4e058a571e10b8",
+      "sizeBytes": 103725
+    },
+    {
+      "code": "uni-unn-pq-english-bank",
+      "title": "UNN Post-UTME English | Prep Bank",
+      "questionCount": 184,
+      "totalMarks": 184,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "aa91391dc5a6083dc904715f791d767b441f70966b078197d9d190413e00e718",
+      "sizeBytes": 87297
+    },
+    {
+      "code": "uni-unn-pq-geography-bank",
+      "title": "UNN Post-UTME Geography | Prep Bank",
+      "questionCount": 169,
+      "totalMarks": 169,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9d74131236ec29be5db22f35254e3001afd0117d0867fd77ecc6aadf78105f94",
+      "sizeBytes": 75790
+    },
+    {
+      "code": "uni-unn-pq-government-bank",
+      "title": "UNN Post-UTME Government | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0dd88bc5c3bc4d949d673339e087308bea71f9b7af3812a27b3f305173570281",
+      "sizeBytes": 141976
+    },
+    {
+      "code": "uni-unn-pq-irs-bank",
+      "title": "UNN Post-UTME IRS | Prep Bank",
+      "questionCount": 193,
+      "totalMarks": 193,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "745faa463718dde84f8698226f0bdc55d162da008ab3c4ba7947cefcde662ec1",
+      "sizeBytes": 98018
+    },
+    {
+      "code": "uni-unn-pq-literature-bank",
+      "title": "UNN Post-UTME Literature | Prep Bank",
+      "questionCount": 136,
+      "totalMarks": 136,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2ef36fb3d9bf621af46603c0624f1fde5e915d719f5278b788ec73d1143e123f",
+      "sizeBytes": 84199
+    },
+    {
+      "code": "uni-unn-pq-mathematics-bank",
+      "title": "UNN Post-UTME Mathematics | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "59dd83dd95c0806064e518d04d2be1e97a4bbb48b5a5387b4bc2c4833dadc93a",
+      "sizeBytes": 74612
+    },
+    {
+      "code": "uni-unn-pq-physics-bank",
+      "title": "UNN Post-UTME Physics | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "56386eefab99b4ea6f41f1761c0f4a200863870c27aa20273370ca6954763ad2",
+      "sizeBytes": 85299
+    },
+    {
+      "code": "uni-veritas-pq-accounting-bank",
+      "title": "VERITAS Post-UTME Accounting | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6ee138dea0a3cb1112bfe9431d1c0888a8d4a45401e38c827e025ed8d79026e8",
+      "sizeBytes": 107682
+    },
+    {
+      "code": "uni-veritas-pq-biology-bank",
+      "title": "VERITAS Post-UTME Biology | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "65669c633cfe4d5640bddf3f18166a0421cb720489fe91d0ea488bb31ec2fa67",
+      "sizeBytes": 91489
+    },
+    {
+      "code": "uni-veritas-pq-chemistry-bank",
+      "title": "VERITAS Post-UTME Chemistry | Prep Bank",
+      "questionCount": 171,
+      "totalMarks": 171,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1b6345ae133da0928905f7deb480bd5c27d78aad9311739d931a83f768abf74e",
+      "sizeBytes": 69449
+    },
+    {
+      "code": "uni-veritas-pq-commerce-bank",
+      "title": "VERITAS Post-UTME Commerce | Prep Bank",
+      "questionCount": 216,
+      "totalMarks": 216,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d38bfbf788dd0250f130f788a5f90c1998e30771c2139dc8b43e4679e432d485",
+      "sizeBytes": 108629
+    },
+    {
+      "code": "uni-veritas-pq-crs-bank",
+      "title": "VERITAS Post-UTME CRS | Prep Bank",
+      "questionCount": 203,
+      "totalMarks": 203,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "d94726ffa5784fc41e0dd7101b560d90e171e9121afd77c322e898941896aefa",
+      "sizeBytes": 101686
+    },
+    {
+      "code": "uni-veritas-pq-economics-bank",
+      "title": "VERITAS Post-UTME Economics | Prep Bank",
+      "questionCount": 209,
+      "totalMarks": 209,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0537a6acb01bd81c4b363d168142d7eec070dca599f5ec04fce8d17a8f4c2037",
+      "sizeBytes": 104728
+    },
+    {
+      "code": "uni-veritas-pq-english-bank",
+      "title": "VERITAS Post-UTME English | Prep Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "8b2301d3b91c5b22122e3453d26bfc8afa45cd863a1bf9ba0a644d26cd18e409",
+      "sizeBytes": 92336
+    },
+    {
+      "code": "uni-veritas-pq-geography-bank",
+      "title": "VERITAS Post-UTME Geography | Prep Bank",
+      "questionCount": 206,
+      "totalMarks": 206,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "2baac8b0e4cfd039f067dc3ac00ffcc8d577841e5f216c3b89bb4caa9c7a5c79",
+      "sizeBytes": 89056
+    },
+    {
+      "code": "uni-veritas-pq-government-bank",
+      "title": "VERITAS Post-UTME Government | Prep Bank",
+      "questionCount": 214,
+      "totalMarks": 214,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "3ddee265fe11709817350239a6fbe2a628b00cce16715c07a878a6f865a9f5ce",
+      "sizeBytes": 140251
+    },
+    {
+      "code": "uni-veritas-pq-irs-bank",
+      "title": "VERITAS Post-UTME IRS | Prep Bank",
+      "questionCount": 192,
+      "totalMarks": 192,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "b215f1613d1bcefe0469f9aad10f31987d2dfd36c99da74b5c3e2f87a847c366",
+      "sizeBytes": 102556
+    },
+    {
+      "code": "uni-veritas-pq-literature-bank",
+      "title": "VERITAS Post-UTME Literature | Prep Bank",
+      "questionCount": 136,
+      "totalMarks": 136,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "0a92950d370f7e02424b9d12d3e210f3cefa8b713c1102aefb7ccec517c7264f",
+      "sizeBytes": 84555
+    },
+    {
+      "code": "uni-veritas-pq-mathematics-bank",
+      "title": "VERITAS Post-UTME Mathematics | Prep Bank",
+      "questionCount": 191,
+      "totalMarks": 191,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "1207c11f3e2fd515414dd4217563a197c445c5ff964cd7271aff7245a368238c",
+      "sizeBytes": 71670
+    },
+    {
+      "code": "uni-veritas-pq-physics-bank",
+      "title": "VERITAS Post-UTME Physics | Prep Bank",
+      "questionCount": 207,
+      "totalMarks": 207,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "6ecd411382f9cfd2ee32c39e41baa1fbee415de571d3cac2930f8167296c61dd",
+      "sizeBytes": 89330
     },
     {
       "code": "waec-accounting-bank",

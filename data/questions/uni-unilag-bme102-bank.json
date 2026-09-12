@@ -1,0 +1,2147 @@
+{
+  "code": "uni-unilag-bme102-bank",
+  "title": "UNILAG BME 102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 178,
+  "totalMarks": 178,
+  "questions": [
+    {
+      "id": "uni-unilag-bme102-bank-0001",
+      "type": "mcq",
+      "stem": "Who discovered X-rays in 1896, which were immediately utilized for diagnosing bone fractures?",
+      "options": {
+        "A": "Willem Einthoven",
+        "B": "Ernst Ruska",
+        "C": "Wilhelm Conrad Roentgen",
+        "D": "Louis Pasteur"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0002",
+      "type": "mcq",
+      "stem": "What is the primary function of <b>negative feedback</b> in maintaining homeostasis, as described in the text?",
+      "options": {
+        "A": "To amplify the output of a process",
+        "B": "To reduce deviation from a set point",
+        "C": "To cause instability in the system",
+        "D": "To initiate rapid, temporary spikes in electrical voltage"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0003",
+      "type": "mcq",
+      "stem": "From an engineering perspective, how are muscles viewed in the Musculoskeletal System?",
+      "options": {
+        "A": "As beams",
+        "B": "As hinges/ball-sockets",
+        "C": "As actuators",
+        "D": "As cables"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0004",
+      "type": "mcq",
+      "stem": "A drug pump that doesn't account for the body's natural insulin response causes hypoglycemia. This scenario is given as an example of which common design mistake?",
+      "options": {
+        "A": "Ignoring variability.",
+        "B": "Ignoring feedback.",
+        "C": "Ignoring biocompatibility.",
+        "D": "Ignoring dynamics."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0005",
+      "type": "mcq",
+      "stem": "What mechanical device, invented in 1929, simulated breathing via pressure changes in a tank to assist breathing?",
+      "options": {
+        "A": "The defibrillator",
+        "B": "The artificial heart",
+        "C": "The iron lung",
+        "D": "The dialysis machine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0006",
+      "type": "mcq",
+      "stem": "Which of the following is NOT explicitly listed as a primary engineering discipline from which Biomedical Engineering draws its principles?",
+      "options": {
+        "A": "Electrical Engineering",
+        "B": "Mechanical Engineering",
+        "C": "Environmental Engineering",
+        "D": "Chemical Engineering"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0007",
+      "type": "mcq",
+      "stem": "During the COVID-19 pandemic, biomedical engineers played a role in accelerating <b>telemedicine</b> by developing which of the following?",
+      "options": {
+        "A": "New vaccine technologies.",
+        "B": "Surgical robots for remote operations.",
+        "C": "Telemedicine platforms, wearable health monitoring devices, and secure communication systems.",
+        "D": "Advanced air filtration systems for hospitals."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0008",
+      "type": "mcq",
+      "stem": "What is the overall impact of advanced imaging technologies on diagnosis, as summarized in the document?",
+      "options": {
+        "A": "Slower diagnosis and increased reliance on exploratory surgery.",
+        "B": "Faster diagnosis, less exploratory surgery, and better treatment planning.",
+        "C": "Primarily used for academic research rather than clinical diagnosis.",
+        "D": "Increased instances of human error in diagnostic interpretation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0009",
+      "type": "mcq",
+      "stem": "The National Institute of Health (NIH) defines biomedical engineering as an interdisciplinary field that integrates which of the following with engineering principles?",
+      "options": {
+        "A": "Economics, political science, and philosophy.",
+        "B": "Physical, chemical, mathematical, and computational sciences.",
+        "C": "Art, literature, and music.",
+        "D": "Geology, astronomy, and meteorology."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0010",
+      "type": "mcq",
+      "stem": "What is the main role of <b>Clinical Engineering</b> in hospitals and healthcare facilities?",
+      "options": {
+        "A": "Developing new surgical techniques.",
+        "B": "Managing medical equipment, ensuring safety, and training personnel.",
+        "C": "Conducting genetic research.",
+        "D": "Designing artificial organs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0011",
+      "type": "mcq",
+      "stem": "According to the document, what was the primary impact of the 1st wave (mechanical) of technological advancement on medicine?",
+      "options": {
+        "A": "Allowed doctors to monitor and replace organ function.",
+        "B": "Allowed doctors to see and measure inside the body without surgery.",
+        "C": "Allowed doctors to predict, personalize and remotely manage health.",
+        "D": "Enabled real-time tracking of vital signs with wearables."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0012",
+      "type": "mcq",
+      "stem": "How do biomedical engineers help in addressing <b>healthcare disparities</b>?",
+      "options": {
+        "A": "By focusing solely on high-tech solutions for urban hospitals.",
+        "B": "By designing affordable and portable medical devices for resource-limited settings.",
+        "C": "By developing advanced surgical techniques only accessible to specialists.",
+        "D": "By concentrating research on rare diseases in developed countries."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0013",
+      "type": "mcq",
+      "stem": "The 'System Thinking' approach to the human body emphasizes that:",
+      "options": {
+        "A": "Organs function in isolation from each other.",
+        "B": "Failure in one part of the body affects others, similar to mechanical or electrical systems.",
+        "C": "The body's systems are entirely unpredictable.",
+        "D": "Biological systems do not have inputs or outputs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0014",
+      "type": "mcq",
+      "stem": "When designing a medical device, which of the following is one of the essential questions an engineer should ask to translate physiology into design?",
+      "options": {
+        "A": "What is the most expensive material available?",
+        "B": "What variable am I measuring or controlling?",
+        "C": "Who is the primary competitor?",
+        "D": "What is the minimum profit margin required?"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0015",
+      "type": "mcq",
+      "stem": "Which component of Biomedical Engineering applies mechanical engineering principles (force, stress, strain) to biological systems, exemplified by designing prosthetic limbs or modeling blood flow?",
+      "options": {
+        "A": "Biomedical Imaging and Optics",
+        "B": "Biomechanics",
+        "C": "Clinical Engineering",
+        "D": "Tissue Engineering"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0016",
+      "type": "mcq",
+      "stem": "What is a significant design constraint for devices that interface with the Nervous System, as highlighted in the document?",
+      "options": {
+        "A": "Implants must match bone stiffness.",
+        "B": "Signals are microvolts, requiring high input impedance and shielding to avoid noise.",
+        "C": "Devices must filter 180 L of blood/day.",
+        "D": "Pumps must handle shear stress >400 Pa."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0017",
+      "type": "mcq",
+      "stem": "During the COVID-19 pandemic, biomedical engineers played a crucial role in telemedicine by developing which of the following?",
+      "options": {
+        "A": "New vaccines and antiviral medications",
+        "B": "Surgical robots for remote operations",
+        "C": "Telemedicine platforms, wearable health monitoring devices, and secure communication systems",
+        "D": "Advanced ventilation systems for ICUs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0018",
+      "type": "mcq",
+      "stem": "What is the engineering analogy for the Cardiovascular System?",
+      "options": {
+        "A": "Air handling unit and gas exchanger",
+        "B": "Filtration plant and fluid control",
+        "C": "Fluid pump and pipe network with valves",
+        "D": "Electrical signal network with sensors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0019",
+      "type": "mcq",
+      "stem": "What is the primary benefit of the advanced drug delivery systems developed by biomedical engineers?",
+      "options": {
+        "A": "Increasing the speed of drug absorption",
+        "B": "Ensuring precise and controlled release of medications, reducing side effects",
+        "C": "Eliminating the need for medical supervision during drug administration",
+        "D": "Lowering the cost of drug manufacturing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0020",
+      "type": "mcq",
+      "stem": "What is the main function of the Respiratory System according to the provided table?",
+      "options": {
+        "A": "Transport oxygen, nutrients, waste",
+        "B": "Control, sensing, communication",
+        "C": "Gas exchange: Oxygen in, carbon dioxide out",
+        "D": "Filter blood, maintain fluid balance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0021",
+      "type": "mcq",
+      "stem": "What is the specific function of a Dialysis Machine as described in the 'Medical Devices for Organ Support' section?",
+      "options": {
+        "A": "To send electrical pulses to regulate heartbeat.",
+        "B": "To automatically deliver insulin for diabetic patients.",
+        "C": "To filter blood when kidneys fail.",
+        "D": "To take over breathing for patients in intensive care."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0022",
+      "type": "mcq",
+      "stem": "What does the Internet of Medical Things (IoMT) primarily refer to in the document?",
+      "options": {
+        "A": "A new type of medical imaging device",
+        "B": "A connected infrastructure of medical devices, software applications, and health systems",
+        "C": "A method for 3D printing biological tissues",
+        "D": "A system for remote robotic surgery"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0023",
+      "type": "mcq",
+      "stem": "The process of repairing or replacing damaged tissues using cells and scaffolds is the primary focus of which area within Biomedical Engineering?",
+      "options": {
+        "A": "Bioinstrumentation",
+        "B": "Biomechanics",
+        "C": "Tissue Engineering",
+        "D": "Biomedical Imaging and Optics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0024",
+      "type": "mcq",
+      "stem": "Which of the following best describes the primary focus of <b>Bioinstrumentation</b> within Biomedical Engineering?",
+      "options": {
+        "A": "The study of materials that safely interact with living systems.",
+        "B": "Application of electronics and measurement principles to develop devices for diagnosis and treatment.",
+        "C": "Application of mechanical engineering principles to biological systems.",
+        "D": "Technologies used to visualize internal body structures for non-invasive diagnosis."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0025",
+      "type": "mcq",
+      "stem": "A patient needs a device to regulate their heartbeat. Which technology, originating from the 2nd wave (electronic), would likely be used for this purpose?",
+      "options": {
+        "A": "X-ray",
+        "B": "Pacemaker",
+        "C": "Microscope",
+        "D": "Robotic surgery"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0026",
+      "type": "mcq",
+      "stem": "During the COVID-19 response in Nigeria (2020-2021), what types of technologies were rapidly deployed according to the document?",
+      "options": {
+        "A": "Only social media platforms for health education",
+        "B": "Mainly diagnostic imaging equipment like MRI and CT scans",
+        "C": "PCR machines, oxygen plants, and telemedicine platforms",
+        "D": "Advanced robotic surgery systems"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0027",
+      "type": "mcq",
+      "stem": "Ultrasound (1950s) is described as safe for pregnancy primarily because it uses which type of technology?",
+      "options": {
+        "A": "Magnetic fields",
+        "B": "Ionizing radiation",
+        "C": "Sound waves",
+        "D": "Focused light"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0028",
+      "type": "mcq",
+      "stem": "What is the primary aim of biomedical engineering as described in the document?",
+      "options": {
+        "A": "To purely research biological processes without practical application.",
+        "B": "To apply engineering principles to biology, medicine, and healthcare to improve human health and quality of life.",
+        "C": "To design complex machinery exclusively for industrial manufacturing.",
+        "D": "To solely focus on diagnosing diseases without contributing to treatment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0029",
+      "type": "mcq",
+      "stem": "The document indicates that major advancements in cardiovascular medicine occurred during which period?",
+      "options": {
+        "A": "1920s-1930s",
+        "B": "1940s-1950s",
+        "C": "1960s-1970s",
+        "D": "1980s-1990s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0030",
+      "type": "mcq",
+      "stem": "When designing devices for the nervous system, what is a critical design constraint related to the electrical signals involved, and what is required for the devices?",
+      "options": {
+        "A": "Signals are strong (volts), requiring low input impedance.",
+        "B": "Signals are microvolts, requiring high input impedance and shielding.",
+        "C": "Signals are chemical, requiring fluid interfaces.",
+        "D": "Signals are mechanical, requiring motion sensors."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0031",
+      "type": "mcq",
+      "stem": "When were the first pacemakers invented, marking a significant change in cardiovascular care?",
+      "options": {
+        "A": "1930s",
+        "B": "1940s",
+        "C": "1950s",
+        "D": "1960s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0032",
+      "type": "mcq",
+      "stem": "According to the document, what is a key benefit of Robotic Surgery (e.g., Da Vinci robot)?",
+      "options": {
+        "A": "It completely eliminates the need for a human surgeon during procedures.",
+        "B": "It allows surgeons to operate with more precision through tiny incisions.",
+        "C": "It is primarily used for simple cosmetic procedures only.",
+        "D": "It significantly reduces recovery time only for major abdominal surgeries."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0033",
+      "type": "mcq",
+      "stem": "The application of mechanical engineering principles to biological systems, such as designing prosthetic limbs, modeling blood flow in arteries, and orthopedic implants, falls under which key component of Biomedical Engineering?",
+      "options": {
+        "A": "Biomedical Imaging and Optics",
+        "B": "Bioinstrumentation",
+        "C": "Biomechanics",
+        "D": "Tissue Engineering"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0034",
+      "type": "mcq",
+      "stem": "Which component of Biomedical Engineering focuses on the application of electronics and measurement principles to develop devices for diagnosing and treating diseases, such as patient monitoring systems and blood analyzers?",
+      "options": {
+        "A": "Biomaterials",
+        "B": "Biomechanics",
+        "C": "Bioinstrumentation",
+        "D": "Rehabilitation Engineering"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0035",
+      "type": "mcq",
+      "stem": "What does IoMT primarily enable by connecting medical devices, software applications, and health systems?",
+      "options": {
+        "A": "Offline data storage and manual analysis.",
+        "B": "Real-time monitoring and transmission of health data over the internet.",
+        "C": "Production of custom-made surgical guides.",
+        "D": "Direct intervention in surgical procedures without human input."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a 'Wearable & Implantable Sensor' mentioned in the document?",
+      "options": {
+        "A": "A pacemaker regulating heartbeat.",
+        "B": "An MRI machine imaging soft tissue.",
+        "C": "A smart watch detecting irregular heartbeat.",
+        "D": "A dialysis machine filtering blood."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0037",
+      "type": "mcq",
+      "stem": "Poiseuille's Law, as applied to blood flow, highlights a critical design consideration for vascular implants. What is the most significant impact of small changes in vessel radius on blood flow, and what condition does this help explain?",
+      "options": {
+        "A": "Small changes in radius cause minor flow changes, explaining hypotension.",
+        "B": "Small changes in radius cause huge changes in flow, explaining hypertension.",
+        "C": "Vessel radius only affects pressure, not flow.",
+        "D": "Viscosity is the only factor affecting flow in stents."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0038",
+      "type": "mcq",
+      "stem": "Which specific act in Nigeria is mentioned as addressing concerns about patient data security raised by electronic medical records and telemedicine?",
+      "options": {
+        "A": "Nigeria's Medical Devices Act 2020",
+        "B": "Nigeria's Telemedicine Regulation Act 2021",
+        "C": "Nigeria's Data Protection Act 2023",
+        "D": "Nigeria's Cybersecurity Act 2022"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0039",
+      "type": "mcq",
+      "stem": "Which common design mistake, when ignoring physiology, is exemplified by 'Designing for a 70kg male only. Women, children, elderly differ.'?",
+      "options": {
+        "A": "Ignoring feedback.",
+        "B": "Ignoring biocompatibility.",
+        "C": "Ignoring variability.",
+        "D": "Ignoring dynamics."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0040",
+      "type": "mcq",
+      "stem": "Which of the following represents the organizational levels of the body from simple to complex, as described in the text?",
+      "options": {
+        "A": "Organism → Organ System → Organ → Tissue → Cell → Molecule → Atom",
+        "B": "Atom → Molecule → Cell → Tissue → Organ → Organ System → Organism",
+        "C": "Cell → Tissue → Organ → Organ System → Molecule → Atom → Organism",
+        "D": "Molecule → Atom → Cell → Tissue → Organ → Organism → Organ System"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0041",
+      "type": "mcq",
+      "stem": "According to the document, what is one of the primary negative impacts of over-reliance on technology in medicine?",
+      "options": {
+        "A": "Increased patient-provider empathy",
+        "B": "Reduced need for experienced biomedical engineers",
+        "C": "Diminished core clinical skills and judgment",
+        "D": "Decreased risk from device malfunctions"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0042",
+      "type": "mcq",
+      "stem": "What is the primary function of 'Controlled Drug Release' as described under 'Drug Delivery & Biomaterials'?",
+      "options": {
+        "A": "To provide immediate, high-dose medication.",
+        "B": "To allow medicine to be released slowly over weeks.",
+        "C": "To surgically implant drugs directly into organs.",
+        "D": "To enable gene editing for targeted drug delivery."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0043",
+      "type": "mcq",
+      "stem": "Which gene editing tool is specifically mentioned as an advancement in biotechnology due to biomedical engineering, holding promise in treating genetic disorders?",
+      "options": {
+        "A": "PCR",
+        "B": "CRISPR-Cas9",
+        "C": "Electrophoresis",
+        "D": "DNA sequencing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0044",
+      "type": "mcq",
+      "stem": "In the Cardiovascular System, which key engineering parameter is calculated as Heart Rate × Stroke Volume, normally 5 L/min at rest?",
+      "options": {
+        "A": "Blood Pressure",
+        "B": "Total Peripheral Resistance",
+        "C": "Cardiac Output",
+        "D": "Blood Flow"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0045",
+      "type": "mcq",
+      "stem": "According to the document, which of these is an advancement in biotechnology highlighted for its potential in treating genetic disorders?",
+      "options": {
+        "A": "Functional MRI (fMRI)",
+        "B": "CRISPR-Cas9",
+        "C": "Cochlear implants",
+        "D": "Artificial kidney"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0046",
+      "type": "mcq",
+      "stem": "Why is it crucial for engineers to study physiology when designing for the body?",
+      "options": {
+        "A": "Because the body is a rigid, unchanging structure like a car or bridge.",
+        "B": "To ensure devices work perfectly in isolation from the body.",
+        "C": "Because the body is a self-regulating, adaptive, living system that responds to devices.",
+        "D": "To avoid needing to model the body as interconnected subsystems."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0047",
+      "type": "mcq",
+      "stem": "During which period did the '1st wave (mechanical)' of technological impact on medicine primarily occur?",
+      "options": {
+        "A": "1950s-1990s",
+        "B": "2000s-now",
+        "C": "1800s-1940s",
+        "D": "Before 1800s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0048",
+      "type": "mcq",
+      "stem": "What is a crucial design constraint for implants in the musculoskeletal system, particularly to prevent bone loss?",
+      "options": {
+        "A": "Implants must be made of soft, flexible materials.",
+        "B": "Implants must match bone stiffness to avoid “stress shielding\" and bone loss.",
+        "C": "Implants must be heavier than natural bone.",
+        "D": "Implants should always have a smooth surface for minimal friction."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0049",
+      "type": "mcq",
+      "stem": "An insulin pump is described as an artificial negative feedback system. What is its primary function in this context?",
+      "options": {
+        "A": "To amplify blood glucose levels",
+        "B": "To increase insulin production indefinitely",
+        "C": "To measure blood glucose and adjust insulin delivery",
+        "D": "To block the body's natural insulin response"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0050",
+      "type": "mcq",
+      "stem": "What was a significant impact of the Human Genome Project (2003) as noted in the document?",
+      "options": {
+        "A": "It led to the invention of the first electron microscope.",
+        "B": "It mapped all 3 billion DNA bases in humans, and significantly dropped sequencing costs.",
+        "C": "It developed the first artificial heart valve using biomaterials.",
+        "D": "It established the initial principles of minimally invasive surgery."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0051",
+      "type": "mcq",
+      "stem": "In a hospital setting, Clinical Engineering is primarily concerned with which aspect of medical technology?",
+      "options": {
+        "A": "Developing new methods for gene editing.",
+        "B": "Managing medical equipment, ensuring its safety, and training medical personnel.",
+        "C": "Creating artificial organs for transplantation.",
+        "D": "Researching new drug delivery systems."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0052",
+      "type": "mcq",
+      "stem": "What is Artificial Intelligence (AI) in medicine described as utilizing to support clinical decision-making, diagnostics, and patient care?",
+      "options": {
+        "A": "Only robotic arms for surgical procedures.",
+        "B": "Machine learning, data analysis, and algorithms.",
+        "C": "Wearable sensors exclusively for real-time monitoring.",
+        "D": "3D printing for creating prosthetic limbs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0053",
+      "type": "mcq",
+      "stem": "How is 'Telemedicine' primarily defined in the context of Public Health and Telemedicine?",
+      "options": {
+        "A": "The use of robotic systems for remote surgery.",
+        "B": "The delivery of healthcare services remotely via telecommunications technology.",
+        "C": "The application of AI to diagnose diseases.",
+        "D": "The tracking of disease outbreaks using mobile phones."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0054",
+      "type": "mcq",
+      "stem": "Biomedical engineering is described as an interdisciplinary field. Which two main areas form its foundation?",
+      "options": {
+        "A": "Physics and Chemistry",
+        "B": "Engineering and Life sciences",
+        "C": "Mathematics and Computer Science",
+        "D": "Sociology and Psychology"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0055",
+      "type": "mcq",
+      "stem": "According to the document, which of the following is a key concern regarding over-reliance on technology in medicine?",
+      "options": {
+        "A": "It can increase the cost of medical devices.",
+        "B": "It may reduce core clinical skills and diminish patient-provider empathy.",
+        "C": "It exclusively leads to faster diagnosis and better treatment planning.",
+        "D": "It primarily causes delays in treatment due to complex systems."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0056",
+      "type": "mcq",
+      "stem": "Which major advancement in biotechnology, highlighted as an area where biomedical engineering is instrumental, involves tools like CRISPR-Cas9?",
+      "options": {
+        "A": "Enhanced medical imaging resolution.",
+        "B": "Precision drug delivery systems.",
+        "C": "Gene editing.",
+        "D": "Development of advanced surgical robots."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following key technologies is <i>explicitly</i> listed under the 3rd wave (digital & biological) in the provided table?",
+      "options": {
+        "A": "X-ray",
+        "B": "ECG, EEG",
+        "C": "MRI, AI, Telemedicine, robotic surgery",
+        "D": "Stethoscope"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0058",
+      "type": "mcq",
+      "stem": "The Nigeria's Data Protection Act 2023 was enacted to address concerns primarily related to which of the following challenges?",
+      "options": {
+        "A": "Cost and access inequality of advanced medical technologies.",
+        "B": "Over-reliance on technology reducing clinical skills.",
+        "C": "Data Privacy and security breaches of sensitive patient information.",
+        "D": "Ethical issues surrounding gene editing and AI diagnosis."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0059",
+      "type": "mcq",
+      "stem": "Which field within Biomedical Engineering has the potential to address the shortage of organ donors?",
+      "options": {
+        "A": "Rehabilitation Engineering",
+        "B": "Biomedical Imaging and Optics",
+        "C": "Tissue Engineering and Regenerative Medicine",
+        "D": "Clinical Engineering"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0060",
+      "type": "mcq",
+      "stem": "What is a critical design constraint for pumps used in the cardiovascular system, according to the text?",
+      "options": {
+        "A": "They must operate at very low pressures to avoid damage.",
+        "B": "They must be designed carefully because blood cells are fragile and shear stress >400 Pa damages red cells.",
+        "C": "They must only be made from titanium and UHMWPE.",
+        "D": "They must have a conduction velocity of 1-120 m/s."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0061",
+      "type": "mcq",
+      "stem": "How have wearable sensors, such as smart patches, improved real-time monitoring according to the document?",
+      "options": {
+        "A": "They replaced the need for all vital sign monitoring equipment.",
+        "B": "They allow continuous tracking of vital signs like sleep patterns and heart rate variability.",
+        "C": "They automatically diagnose diseases without clinician input.",
+        "D": "They enable surgeons to perform robotic surgeries remotely."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0062",
+      "type": "mcq",
+      "stem": "What percentage range of medical devices in Nigeria is non-functional due to poor maintenance and power issues, as mentioned in the document?",
+      "options": {
+        "A": "10-20%",
+        "B": "20-30%",
+        "C": "40-70%",
+        "D": "70-90%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0063",
+      "type": "mcq",
+      "stem": "During the 'Ancient & Pre-scientific roots' period, what was generally true about effective treatments for common ailments?",
+      "options": {
+        "A": "There were many effective treatments due to advanced technology.",
+        "B": "Effective treatments were minimal and had little impact on the average person.",
+        "C": "Most ailments were cured using sophisticated surgical techniques.",
+        "D": "Pharmacology was highly developed, providing cures for many diseases."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0064",
+      "type": "mcq",
+      "stem": "According to the document, what characterizes the two-way relationship between technology and biology/medicine?",
+      "options": {
+        "A": "Technology impacts biology and medicine, but biology has no reciprocal impact on technology.",
+        "B": "Biology impacts technology by inspiring new designs, and technology impacts biology/medicine by providing new tools.",
+        "C": "They are entirely separate fields with no direct or significant influence on each other.",
+        "D": "Only biology impacts technology, primarily by providing subjects for study."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0065",
+      "type": "mcq",
+      "stem": "Which specific device was discovered by Ruska in 1931, as mentioned in the summary of key milestones?",
+      "options": {
+        "A": "Medical X-ray",
+        "B": "Electron Microscope",
+        "C": "Artificial Organ",
+        "D": "CT Scan"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0066",
+      "type": "mcq",
+      "stem": "According to the document, what is the fundamental difference between health technology at the 'Monitoring Level' and the 'Assisting Level'?",
+      "options": {
+        "A": "Monitoring devices replace body parts, while assisting devices measure signals.",
+        "B": "Monitoring devices measure signals without changing the body, while assisting devices support a failing function.",
+        "C": "Monitoring devices use control systems, while assisting devices use only sensors.",
+        "D": "Monitoring devices are invasive, while assisting devices are non-invasive."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0067",
+      "type": "mcq",
+      "stem": "Biomedical Engineering integrates knowledge from Life Sciences. Which of these is a listed discipline contributing to BME?",
+      "options": {
+        "A": "Geology",
+        "B": "Anatomy",
+        "C": "Astrophysics",
+        "D": "Archaeology"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0068",
+      "type": "mcq",
+      "stem": "What significant scientific advancements during the industrial revolution directly influenced medicine and characterized 'The Foundations' period (late 19th-early 20th century)?",
+      "options": {
+        "A": "Advances in sociology and psychology.",
+        "B": "Discoveries in quantum mechanics.",
+        "C": "Advances in physics (optics, electricity, mechanics).",
+        "D": "Breakthroughs in genetic engineering."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0069",
+      "type": "mcq",
+      "stem": "What is the primary function of Artificial Intelligence (AI) in medicine as described in the 'Future of technology' section?",
+      "options": {
+        "A": "To replace human surgeons entirely",
+        "B": "To support clinical decision-making, diagnostics, and patient care",
+        "C": "To develop new surgical instruments",
+        "D": "To manufacture 3D printed organs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0070",
+      "type": "mcq",
+      "stem": "What is one of the ethical issues raised by genetic testing, gene editing, and AI diagnosis mentioned in the document?",
+      "options": {
+        "A": "Increased cost of healthcare",
+        "B": "Concerns about consent, privacy, and fairness",
+        "C": "Difficulty in device maintenance",
+        "D": "Reduced access to care in rural areas"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0071",
+      "type": "mcq",
+      "stem": "In the Nervous System, what is the rapid, temporary spike in electrical voltage that travels down a neuron's axon to transmit information?",
+      "options": {
+        "A": "Synapse",
+        "B": "Membrane Potential",
+        "C": "Action Potential",
+        "D": "Frequency Coding"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0072",
+      "type": "mcq",
+      "stem": "The 'Internet of Medical Things (IoMT)' primarily facilitates what, according to the document?",
+      "options": {
+        "A": "Manual data entry for patient records.",
+        "B": "The connection of medical devices, software, and health systems to collect, analyze, and transmit health data over the internet.",
+        "C": "The physical production of prosthetic limbs.",
+        "D": "The development of new vaccines."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0073",
+      "type": "mcq",
+      "stem": "Physics and Chemistry are identified as crucial contributing fields from which broader category to Biomedical Engineering?",
+      "options": {
+        "A": "Life Sciences",
+        "B": "Social Sciences",
+        "C": "Physical Sciences",
+        "D": "Computational Sciences"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0074",
+      "type": "mcq",
+      "stem": "How have biomedical engineers contributed to advancements in <b>medical imaging and diagnostics</b>?",
+      "options": {
+        "A": "By developing new types of surgical instruments.",
+        "B": "By creating high-resolution MRI and CT scans, and functional MRI (fMRI).",
+        "C": "By engineering more efficient drug delivery systems.",
+        "D": "By designing affordable medical devices for remote areas."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0075",
+      "type": "mcq",
+      "stem": "What is the stated purpose of 'Disease Surveillance' in the document?",
+      "options": {
+        "A": "To develop new surgical robots.",
+        "B": "To create personalized treatment plans.",
+        "C": "To detect outbreaks, monitor trends in diseases, and guide actions to reduce mortality and morbidity.",
+        "D": "To automate laboratory blood tests."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0076",
+      "type": "mcq",
+      "stem": "What is the 'one-line takeaway' provided in the summary of the document?",
+      "options": {
+        "A": "Health technology is solely about replacing failing organs.",
+        "B": "Biomedical engineering is an interdisciplinary field.",
+        "C": "If you don't understand how the healthy system works, you can't fix the broken one.",
+        "D": "The human body is a perfect machine with no limitations."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0077",
+      "type": "mcq",
+      "stem": "According to the document, what is the main application of 'Bioinformatics' in biology and medicine?",
+      "options": {
+        "A": "Growing human cells in the lab.",
+        "B": "Designing prosthetic limbs.",
+        "C": "Analyzing millions of DNA sequences to find genes linked to diseases.",
+        "D": "Performing robotic surgery."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0078",
+      "type": "mcq",
+      "stem": "According to the 'Applications in Health Technology Design' section, what engineering principles from the musculoskeletal system primarily guide prosthetic limb design?",
+      "options": {
+        "A": "Fluid mechanics of blood flow.",
+        "B": "Electrical properties of skin and tissue.",
+        "C": "Neural control and muscle activation patterns.",
+        "D": "Principles of levers, torque, and control systems."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0079",
+      "type": "mcq",
+      "stem": "Biomedical engineers played a significant role in advancing telemedicine, particularly during the COVID-19 pandemic, by developing which of the following?",
+      "options": {
+        "A": "Advanced surgical instruments for in-person procedures.",
+        "B": "New pharmaceutical drugs for viral infections.",
+        "C": "Telemedicine platforms, wearable health monitoring devices, and secure communication systems.",
+        "D": "Large-scale hospital construction technologies."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0080",
+      "type": "mcq",
+      "stem": "According to the provided text, what is the engineering analogy for the Renal system?",
+      "options": {
+        "A": "Fluid pump and pipe network with valves",
+        "B": "Filtration plant and fluid control",
+        "C": "Electrical signal network with sensors",
+        "D": "Air handling unit and gas exchanger"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0081",
+      "type": "mcq",
+      "stem": "Which of the following is NOT identified as an ethical issue raised by technology in medicine?",
+      "options": {
+        "A": "Consent for genetic testing.",
+        "B": "Privacy of patient data in AI diagnosis.",
+        "C": "Fairness in access to gene editing.",
+        "D": "Increased hospital stays due to complex procedures."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0082",
+      "type": "mcq",
+      "stem": "What percentage of medical devices in Nigeria are reported to be non-functional due to poor maintenance and power issues, according to the document?",
+      "options": {
+        "A": "10-20%",
+        "B": "20-30%",
+        "C": "40-70%",
+        "D": "80-90%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0083",
+      "type": "mcq",
+      "stem": "The application of mechanical engineering principles (force, stress, strain) to biological systems is the core of which BME component?",
+      "options": {
+        "A": "Rehabilitation Engineering",
+        "B": "Clinical Engineering",
+        "C": "Biomechanics",
+        "D": "Biomedical Imaging and Optics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0084",
+      "type": "mcq",
+      "stem": "The concept of 'Design by Analogy' in viewing man as a living machine suggests what?",
+      "options": {
+        "A": "That all human organs must be replaced by artificial ones.",
+        "B": "That understanding a body part's function (e.g., heart as a pump) allows for designing artificial replacements.",
+        "C": "That the human body is too complex for analogical design.",
+        "D": "That only non-living machines can be designed by analogy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0085",
+      "type": "mcq",
+      "stem": "Which of the following is an example of 3D printing application in Nigeria, as mentioned in the document?",
+      "options": {
+        "A": "Manufacturing of advanced MRI machines",
+        "B": "Printing prosthetic limbs, surgical guides, and even skin tissue",
+        "C": "Developing new vaccines and cold chain solutions",
+        "D": "Creating microscopic sensors for continuous glucose monitoring"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0086",
+      "type": "mcq",
+      "stem": "Which component of Biomedical Engineering is responsible for the development of technologies like advanced wheelchairs and sensory aids (e.g., cochlear implants) to improve the quality of life and functionality of individuals with disabilities?",
+      "options": {
+        "A": "Clinical Engineering",
+        "B": "Rehabilitation Engineering",
+        "C": "Biomaterials",
+        "D": "Biomedical Imaging and Optics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0087",
+      "type": "mcq",
+      "stem": "Biomedical engineering draws from which three main categories of interdisciplinary areas?",
+      "options": {
+        "A": "Computer Science, Economics, Arts",
+        "B": "Engineering, Life Sciences, Physical Sciences",
+        "C": "Sociology, Psychology, Anthropology",
+        "D": "Business, Law, Humanities"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0088",
+      "type": "mcq",
+      "stem": "What percentage range of medical devices in Nigeria is reported to be non-functional due to poor maintenance and power issues?",
+      "options": {
+        "A": "10-20%",
+        "B": "20-30%",
+        "C": "40-70%",
+        "D": "80-90%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0089",
+      "type": "mcq",
+      "stem": "How have Electronic Health Records (EHRs) specifically improved patient care, according to the 'Examples of Technology Impact' section?",
+      "options": {
+        "A": "By allowing surgeons to perform eye surgery with robotics.",
+        "B": "By lowering the chance of medical error and reducing duplication of tests.",
+        "C": "By continuously tracking vital signs with wearable sensors.",
+        "D": "By providing solar power to off-grid clinics."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0090",
+      "type": "mcq",
+      "stem": "Wearable sensors are designed based on which properties of skin and tissue?",
+      "options": {
+        "A": "Thermal conductivity.",
+        "B": "Mechanical strength.",
+        "C": "Electrical properties.",
+        "D": "Optical absorption."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0091",
+      "type": "mcq",
+      "stem": "Gene Therapy & CRISPR is highlighted as a revolutionary technology that allows scientists to achieve what specific outcome?",
+      "options": {
+        "A": "Continuously monitor glucose levels under the skin.",
+        "B": "Edit genes by cutting, deleting, or replacing genetic sequences.",
+        "C": "Connect all medical devices to a hospital network for real-time monitoring.",
+        "D": "Read X-rays and predict sepsis with high accuracy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0092",
+      "type": "mcq",
+      "stem": "What technique, developed in 1941, allowed for the visualization of blood vessels?",
+      "options": {
+        "A": "Ultrasound",
+        "B": "Angiography",
+        "C": "Magnetic Resonance Imaging (MRI)",
+        "D": "Positron Emission Tomography (PET)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0093",
+      "type": "mcq",
+      "stem": "What types of technologies are mentioned as having an impact on <b>rehabilitation</b>, helping individuals recover from neurological injuries and regain independence?",
+      "options": {
+        "A": "Advanced surgical robots and laparoscopic tools.",
+        "B": "High-resolution MRI and CT scanners.",
+        "C": "Brain-computer interfaces and neuroprosthetics.",
+        "D": "Automated drug dispensing systems."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0094",
+      "type": "mcq",
+      "stem": "What is a key benefit of Streamlined care via EHRs (Electronic Health Records) as described in the document?",
+      "options": {
+        "A": "It completely eliminates the need for physical doctor visits.",
+        "B": "It improves patient care by lowering the chance of medical error and reduces duplication of tests.",
+        "C": "It allows patients to self-diagnose without professional help.",
+        "D": "It is primarily used for tracking disease outbreaks in real-time."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0095",
+      "type": "mcq",
+      "stem": "The 'iron lung' was invented in 1929 as a mechanical device for breathing assistance. This invention falls under which historical period of Biomedical Engineering?",
+      "options": {
+        "A": "Ancient & Pre-scientific roots",
+        "B": "The Foundations (late 19th-early 20th century)",
+        "C": "The Rise of Modern Biomedical Engineering (World War II Era)",
+        "D": "Formalization of the discipline (1960s-present)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0096",
+      "type": "mcq",
+      "stem": "Which of the following best describes the relationship between Anatomy and Physiology according to the text?",
+      "options": {
+        "A": "Anatomy studies body functions, while Physiology studies structures.",
+        "B": "Anatomy deals with internal structures, and Physiology focuses on their physical relationships.",
+        "C": "Anatomy concerns structures, and Physiology concerns the functions of those structures.",
+        "D": "Both Anatomy and Physiology are concerned solely with external body features."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0097",
+      "type": "mcq",
+      "stem": "What is a primary advantage of the efficient drug delivery systems developed by biomedical engineers?",
+      "options": {
+        "A": "They completely eliminate the need for medication.",
+        "B": "They ensure precise and controlled release of medications, improving effectiveness and reducing side effects.",
+        "C": "They solely focus on making medications more palatable.",
+        "D": "They increase the overall cost of treatment for patients."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0098",
+      "type": "mcq",
+      "stem": "The pulse oximeter, a BME application for the respiratory system, measures SpO2 using which foundational physical principle?",
+      "options": {
+        "A": "Poiseuille's Law",
+        "B": "Ohm's Law",
+        "C": "Nernst Equation",
+        "D": "Beer-Lambert Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0099",
+      "type": "mcq",
+      "stem": "What is the primary mechanism by which 'Gene Therapy & CRISPR' technology works, as described in the document?",
+      "options": {
+        "A": "It uses sound waves to image soft tissue.",
+        "B": "It employs molecular scissors to cut, delete or replace specific genetic sequences.",
+        "C": "It delivers drugs slowly over weeks.",
+        "D": "It tracks sleep patterns and heart rate variability."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0100",
+      "type": "mcq",
+      "stem": "A potential negative consequence of 'over-reliance on technology' mentioned in the document is:",
+      "options": {
+        "A": "Increased access to care in rural areas.",
+        "B": "Reduced core clinical skills and diminished patient-provider empathy.",
+        "C": "Lowered costs for medical devices.",
+        "D": "Faster diagnosis and treatment planning."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0101",
+      "type": "mcq",
+      "stem": "What is the primary mechanism by which the body maintains homeostasis, and what is its effect on deviations from a set point?",
+      "options": {
+        "A": "Positive feedback, amplifies deviation",
+        "B": "Negative feedback, reduces deviation",
+        "C": "Open-loop control, ignores deviation",
+        "D": "Feedforward control, predicts deviation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0102",
+      "type": "mcq",
+      "stem": "According to the text, which of the following is an example of a process in the human body that primarily uses positive feedback?",
+      "options": {
+        "A": "Body temperature regulation",
+        "B": "Blood clotting",
+        "C": "Blood pressure control",
+        "D": "Blood glucose regulation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0103",
+      "type": "mcq",
+      "stem": "From an engineering perspective, how are bones, joints, muscles, and tendons viewed in the musculoskeletal system?",
+      "options": {
+        "A": "Bones are actuators, joints are cables, muscles are beams, tendons are hinges",
+        "B": "Bones are hinges, joints are ball-sockets, muscles are beams, tendons are actuators",
+        "C": "Bones are beams, joints are hinges/ball-sockets, muscles are actuators, tendons are cables",
+        "D": "Bones are cables, joints are beams, muscles are hinges, tendons are actuators"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0104",
+      "type": "mcq",
+      "stem": "What is the primary goal of rehabilitation robotics, and what does it mimic to achieve it?",
+      "options": {
+        "A": "To filter blood by mimicking renal system processes.",
+        "B": "To assist breathing by mimicking respiratory gas exchange.",
+        "C": "To retrain movement after stroke by mimicking neural control and muscle activation patterns.",
+        "D": "To replace heart function by mimicking cardiac pump action."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0105",
+      "type": "mcq",
+      "stem": "Which of the following is identified as a common design mistake when ignoring physiology?",
+      "options": {
+        "A": "Designing a device that is too aesthetically pleasing.",
+        "B": "Ignoring variability, such as designing only for a 70kg male.",
+        "C": "Making the device too affordable.",
+        "D": "Over-communicating with physicians."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0106",
+      "type": "mcq",
+      "stem": "At which level of health technology interface do devices permanently replace a body part, such as an artificial hip joint or heart valve?",
+      "options": {
+        "A": "Monitoring Level",
+        "B": "Assisting Level",
+        "C": "Replacing Level",
+        "D": "Intervention Level"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0107",
+      "type": "mcq",
+      "stem": "What is the normal cardiac output (CO) for an adult at rest, as stated in the document?",
+      "options": {
+        "A": "1 L/min",
+        "B": "5 L/min",
+        "C": "10 L/min",
+        "D": "120/80 mmHg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0108",
+      "type": "mcq",
+      "stem": "Which future technology is described as an additive manufacturing process used to build three-dimensional structures layer by layer?",
+      "options": {
+        "A": "Gene Therapy & CRISPR",
+        "B": "Internet of Medical Things (IoMT)",
+        "C": "3D Printing",
+        "D": "Wearable & Implantable Sensors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0109",
+      "type": "mcq",
+      "stem": "How did technology transform research in biology, according to the document?",
+      "options": {
+        "A": "It turned biology into a purely observational science.",
+        "B": "It made biology a quantitative, data-driven science.",
+        "C": "It eliminated the need for microscopy in biological studies.",
+        "D": "It shifted focus solely to animal testing for drug discovery."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0110",
+      "type": "mcq",
+      "stem": "According to the document, what is the primary goal of biomedical engineering?",
+      "options": {
+        "A": "To develop advanced software for space exploration.",
+        "B": "To apply engineering principles to improve human health and quality of life.",
+        "C": "To create new chemical compounds for industrial use.",
+        "D": "To design faster computational algorithms for financial markets."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0111",
+      "type": "mcq",
+      "stem": "The introduction of advanced medical imaging such as CT scans to address healthcare efficiency occurred in which decade?",
+      "options": {
+        "A": "1950s",
+        "B": "1960s",
+        "C": "1970s",
+        "D": "1980s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0112",
+      "type": "mcq",
+      "stem": "What is the primary implication of 'Intervention' when viewing man as a living machine?",
+      "options": {
+        "A": "That the body cannot be improved or repaired.",
+        "B": "That understanding the body's 'design' allows for correction of failures with drugs, devices, or surgery.",
+        "C": "That only natural healing processes are effective.",
+        "D": "That interventions are always simple and risk-free."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0113",
+      "type": "mcq",
+      "stem": "Which specific medical device innovation, mentioned in the document, has significantly improved the quality of life for individuals with limb disabilities?",
+      "options": {
+        "A": "High-resolution MRI scanners",
+        "B": "Advanced prosthetic limbs and robotic exoskeletons",
+        "C": "Wearable health monitoring devices",
+        "D": "Gene editing tools like CRISPR-Cas9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0114",
+      "type": "mcq",
+      "stem": "According to the World Health Organization's definition provided in the text, what is health technology primarily designed to do?",
+      "options": {
+        "A": "Produce energy for human consumption.",
+        "B": "Solve health problems and improve quality of life.",
+        "C": "Enhance human cognitive abilities.",
+        "D": "Replace natural biological processes entirely."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0115",
+      "type": "mcq",
+      "stem": "Which of the following is <i>not</i> listed as an example of a service provided by Mobile Health (m Health) apps?",
+      "options": {
+        "A": "Appointment reminders",
+        "B": "Health education",
+        "C": "Symptom tracking",
+        "D": "Performing complex surgical procedures"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0116",
+      "type": "mcq",
+      "stem": "An Action Potential, a key concept in the nervous system, is described as having what approximate electrical pulse magnitude and conduction velocity?",
+      "options": {
+        "A": "10 mV, 1 m/s",
+        "B": "50 mV, 50 m/s",
+        "C": "100 mV, 1-120 m/s",
+        "D": "200 mV, 200 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0117",
+      "type": "mcq",
+      "stem": "In what decade was biomedical engineering formalized as an academic discipline and saw the widespread application of computers in healthcare?",
+      "options": {
+        "A": "1940s",
+        "B": "1950s",
+        "C": "1960s",
+        "D": "1970s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0118",
+      "type": "mcq",
+      "stem": "What is identified as a key limitation of the 'Man as a Living Machine' analogy, distinguishing the body from man-made machines?",
+      "options": {
+        "A": "The body is unable to adapt or regulate itself.",
+        "B": "The body can only self-repair if external help is provided.",
+        "C": "The body's ability to self-repair, adapt, and regulate itself through homeostasis makes it more complex.",
+        "D": "Man-made machines are always more complex than the human body."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0119",
+      "type": "mcq",
+      "stem": "Which of these technologies is characteristic of the '3rd wave (digital & biological)' of technological impact on medicine?",
+      "options": {
+        "A": "Thermometer",
+        "B": "ECG, EEG",
+        "C": "CT scan",
+        "D": "MRI, AI, Telemedicine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0120",
+      "type": "mcq",
+      "stem": "Solar-Powered PHCs (Primary Healthcare Centers) implemented by UNICEF and FMOH primarily aim to ensure what?",
+      "options": {
+        "A": "Enhanced robotic surgery capabilities in rural areas.",
+        "B": "Viability of vaccines and allows night-time deliveries.",
+        "C": "Improved internet connectivity for telemedicine only.",
+        "D": "Advanced diagnostic imaging equipment in off-grid areas."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0121",
+      "type": "mcq",
+      "stem": "What is the main purpose of the Nernst Equation in the context of the nervous system, as stated in the document?",
+      "options": {
+        "A": "To calculate the speed of nerve conduction velocity.",
+        "B": "To explain the resting membrane potential of neurons.",
+        "C": "To determine the firing rate of action potentials.",
+        "D": "To model the conversion of chemical signals to electrical signals at a synapse."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0122",
+      "type": "mcq",
+      "stem": "How did the Human Genome Project, with its ability to map all 3 billion DNA bases, significantly impact medicine according to the document?",
+      "options": {
+        "A": "It enabled the development of basic microscopes.",
+        "B": "It facilitated personalized medicine.",
+        "C": "It introduced new surgical techniques.",
+        "D": "It led to the invention of the stethoscope."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0123",
+      "type": "mcq",
+      "stem": "What is the primary goal of <b>drug delivery systems</b> designed by biomedical engineers?",
+      "options": {
+        "A": "To reduce the cost of medication.",
+        "B": "To ensure precise and controlled release of medications.",
+        "C": "To eliminate the need for traditional pills.",
+        "D": "To increase the shelf-life of pharmaceutical products."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0124",
+      "type": "mcq",
+      "stem": "Which key parameter of the Respiratory System represents the percentage of hemoglobin carrying oxygen, with a normal value between 95-100%?",
+      "options": {
+        "A": "Tidal Volume",
+        "B": "Respiratory Rate",
+        "C": "Alveolar Ventilation",
+        "D": "Oxygen Saturation (SpO2)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0125",
+      "type": "mcq",
+      "stem": "Which life science discipline is listed as a key interdisciplinary area for Biomedical Engineering, alongside Anatomy, Physiology, and Biochemistry?",
+      "options": {
+        "A": "Zoology",
+        "B": "Botany",
+        "C": "Genetics",
+        "D": "Biology"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0126",
+      "type": "mcq",
+      "stem": "According to the document, what is one of the key questions an engineer should ask when designing a medical device to address <i>time constant</i>?",
+      "options": {
+        "A": "What variable am I measuring or controlling?",
+        "B": "What is the normal range?",
+        "C": "What is the time constant? Heart rate changes 3 in seconds, glucose in minutes, temperature in hours.",
+        "D": "What are the safety limits?"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0127",
+      "type": "mcq",
+      "stem": "Which revolutionary gene editing technology is mentioned as having the potential to cure sickle cell disease, which affects 2–3% of Nigerians?",
+      "options": {
+        "A": "DNA Sequencing",
+        "B": "Polymerase Chain Reaction (PCR)",
+        "C": "Gene Therapy & CRISPR",
+        "D": "Bioinformatics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0128",
+      "type": "mcq",
+      "stem": "Biomedical engineering became established as an academic discipline and saw widespread application of computers in healthcare primarily during which period?",
+      "options": {
+        "A": "Ancient & Pre-scientific roots",
+        "B": "The Foundations (late 19th-early 20th century)",
+        "C": "The Rise of Modern Biomedical Engineering (World War II Era)",
+        "D": "Formalization of the discipline (1960s-present)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0129",
+      "type": "mcq",
+      "stem": "What is the normal range for Respiratory Rate (breaths/min) at rest, according to the document?",
+      "options": {
+        "A": "2-5 breaths/min",
+        "B": "6-10 breaths/min",
+        "C": "12-20 breaths/min",
+        "D": "25-30 breaths/min"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0130",
+      "type": "mcq",
+      "stem": "The use of WhatsApp by Nigerian doctors to share X-rays and consult is an example of which type of technology impact?",
+      "options": {
+        "A": "Traditional telemedicine through video consultations.",
+        "B": "Advanced robotic surgery applications.",
+        "C": "Mobile Health (m Health) and symptom tracking apps.",
+        "D": "Strictly automated laboratory diagnostics."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0131",
+      "type": "mcq",
+      "stem": "The Beer-Lambert Law is the foundational physical principle in biomedical engineering that relates the attenuation of light to the properties of the material or tissue it travels through. What is its primary application mentioned in the document?",
+      "options": {
+        "A": "Modeling blood flow in arteries.",
+        "B": "Explaining resting membrane potential of neurons.",
+        "C": "Basis for pulse oximetry.",
+        "D": "Calculating required pump pressures for ventricular assist devices."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0132",
+      "type": "mcq",
+      "stem": "The 'iron lung' was an early artificial respirator invented in 1929 primarily for what purpose?",
+      "options": {
+        "A": "To assist in complex surgeries.",
+        "B": "To provide breathing assistance via pressure changes in a tank.",
+        "C": "To purify blood in patients with kidney failure.",
+        "D": "To monitor heart rhythms non-invasively."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0133",
+      "type": "mcq",
+      "stem": "Which of the following engineering disciplines is specifically mentioned as contributing to 'drug delivery/materials' within Biomedical Engineering's interdisciplinary areas?",
+      "options": {
+        "A": "Electrical Engineering",
+        "B": "Mechanical Engineering",
+        "C": "Chemical Engineering",
+        "D": "Civil Engineering"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0134",
+      "type": "mcq",
+      "stem": "In biomedical engineering, how is the human body generally regarded?",
+      "options": {
+        "A": "As a simple, static biological entity.",
+        "B": "As a sophisticated, autonomous, biological machine.",
+        "C": "As a collection of isolated, independent organs.",
+        "D": "As a system primarily controlled by conscious thought."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0135",
+      "type": "mcq",
+      "stem": "What was the main outcome of NAFDAC's E-Registration online system for medical devices?",
+      "options": {
+        "A": "It increased the cost of medical devices.",
+        "B": "It led to a reduction in fake and substandard equipment in the market.",
+        "C": "It replaced all physical inspections of medical devices.",
+        "D": "It introduced new tariffs on imported medical equipment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0136",
+      "type": "mcq",
+      "stem": "Which of the following is cited as the earliest evidence of engineering applications in medicine from the 'Ancient & Pre-scientific roots' period?",
+      "options": {
+        "A": "The invention of the stethoscope.",
+        "B": "A wooden prosthetic toe found on an Egyptian mummy.",
+        "C": "Early use of antibiotics.",
+        "D": "The development of primitive surgical lasers."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0137",
+      "type": "mcq",
+      "stem": "Which BME application is associated with the Thermoregulatory System?",
+      "options": {
+        "A": "Dialysis machines",
+        "B": "Pulse-oximeters",
+        "C": "Incubators for neonates",
+        "D": "Cochlear implants"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0138",
+      "type": "mcq",
+      "stem": "Willem Einthoven won the 1924 Nobel Prize for his discovery related to the mechanism of which diagnostic tool?",
+      "options": {
+        "A": "X-ray Imaging",
+        "B": "Artificial Respirator (iron lung)",
+        "C": "Electrocardiogram (ECG)",
+        "D": "Pacemaker"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0139",
+      "type": "mcq",
+      "stem": "In hemodynamics, Ohm's Law (Pressure difference = Flow × Resistance) is presented as an analogy to the electrical formula I=V/R. Which component in the electrical formula corresponds to 'Flow' in the blood flow analogy?",
+      "options": {
+        "A": "Voltage",
+        "B": "Resistance",
+        "C": "Electrical current",
+        "D": "Power"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0140",
+      "type": "mcq",
+      "stem": "Which Dutch physiologist won the 1924 Nobel Prize in Physiology for his discovery of the mechanism of the electrocardiogram (ECG)?",
+      "options": {
+        "A": "Ernst Ruska",
+        "B": "Willem Einthoven",
+        "C": "Wilhelm Roentgen",
+        "D": "Alexander Fleming"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0141",
+      "type": "mcq",
+      "stem": "What is a primary responsibility of a Clinical Engineer in a hospital setting, according to the document?",
+      "options": {
+        "A": "Conducting medical research in laboratories",
+        "B": "Developing new surgical techniques",
+        "C": "Managing medical equipment, ensuring safety, and training personnel",
+        "D": "Designing pharmaceutical drugs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0142",
+      "type": "mcq",
+      "stem": "A key characteristic required for materials to be used in living systems, ensuring they do not cause adverse reactions like rejection or toxicity, is known as:",
+      "options": {
+        "A": "Biodegradability",
+        "B": "Biocompatibility",
+        "C": "Bioreactivity",
+        "D": "Bioabsorption"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0143",
+      "type": "mcq",
+      "stem": "What is the primary reason that ignoring biocompatibility is a critical mistake in medical device design, according to the document?",
+      "options": {
+        "A": "It leads to devices responding too slowly for changes.",
+        "B": "It results in designing for only a specific demographic.",
+        "C": "The material triggers inflammation, causing the device to fail.",
+        "D": "It prevents the device from incorporating feedback loops."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0144",
+      "type": "mcq",
+      "stem": "One of the challenges mentioned is that the high sophistication of digital equipment often requires what to be effectively repaired?",
+      "options": {
+        "A": "Extensive international travel for technicians.",
+        "B": "Frequent software updates from manufacturers.",
+        "C": "Experienced biomedical engineers.",
+        "D": "Simplified user interfaces for easy troubleshooting."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0145",
+      "type": "mcq",
+      "stem": "What does 'Quantification' in the context of viewing man as a living machine enable engineers to do?",
+      "options": {
+        "A": "Eliminate the need for biological measurements.",
+        "B": "Deal with subjective feelings and emotions.",
+        "C": "Measure and control biological processes using measurable quantities.",
+        "D": "Focus solely on qualitative observations of the body."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0146",
+      "type": "mcq",
+      "stem": "According to the 'Summary of key milestones', in which decade were the first pacemakers invented?",
+      "options": {
+        "A": "1930s",
+        "B": "1940s",
+        "C": "1950s",
+        "D": "1960s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0147",
+      "type": "mcq",
+      "stem": "When designing a pulse oximeter, the document specifies several parameters. Which of the following correctly identifies its safety limit?",
+      "options": {
+        "A": "Variable: Light absorption at 660nm and 940nm.",
+        "B": "Range for SpO2 is 70-100%.",
+        "C": "Time constant: 5–10 seconds for averaging.",
+        "D": "LED power <10 mW to avoid burns."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0148",
+      "type": "mcq",
+      "stem": "Which of the following is a key measurable variable for the Thermoregulatory system, as listed in the document?",
+      "options": {
+        "A": "Blood pressure",
+        "B": "SpO2(%)",
+        "C": "Core temp(C)",
+        "D": "Nerve conduction velocity(m/s)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0149",
+      "type": "mcq",
+      "stem": "The Beer-Lambert Law is described as the foundational physical principle for which biomedical engineering application?",
+      "options": {
+        "A": "Designing artificial pumps for ventricular assist devices",
+        "B": "Modeling blood flow in arteries and veins",
+        "C": "Pulse oximetry to measure oxygen saturation in arterial blood",
+        "D": "Explaining resting membrane potential of neurons"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0150",
+      "type": "mcq",
+      "stem": "Which organization's E-Registration online system is mentioned for reducing fake and substandard medical equipment in the market?",
+      "options": {
+        "A": "UNICEF",
+        "B": "FMOH (Federal Ministry of Health)",
+        "C": "NAFDAC",
+        "D": "WHO (World Health Organization)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0151",
+      "type": "mcq",
+      "stem": "What is a key advantage of MRI (1980s) over X-ray or CT scan, as mentioned in the document?",
+      "options": {
+        "A": "It produces images much faster than previous methods.",
+        "B": "It uses sound waves, making it completely harmless.",
+        "C": "It images soft tissue like the brain, muscles, and tumors without radiation.",
+        "D": "It creates real-time, moving images of internal organs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0152",
+      "type": "mcq",
+      "stem": "What is the primary purpose of 'Controlled Drug Release' technologies, such as patches and implants?",
+      "options": {
+        "A": "To rapidly deliver high doses of medicine for acute conditions.",
+        "B": "To release medicine slowly over extended periods, like weeks.",
+        "C": "To provide real-time monitoring of drug levels in the bloodstream.",
+        "D": "To facilitate surgical removal of unwanted substances from the body."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0153",
+      "type": "mcq",
+      "stem": "What was the primary impact of NAFDAC's E-Registration system, as mentioned in the document?",
+      "options": {
+        "A": "To deploy PCR machines across Nigeria.",
+        "B": "To install solar-powered refrigerators in PHCs.",
+        "C": "To reduce fake and substandard medical equipment in the market.",
+        "D": "To enable video consultations in rural areas."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0154",
+      "type": "mcq",
+      "stem": "What was the primary impact of the X-ray, introduced in 1895, on diagnosis?",
+      "options": {
+        "A": "It allowed imaging of soft tissue without radiation.",
+        "B": "It was the first way to see bones without cutting.",
+        "C": "It created 3D images of organs.",
+        "D": "It allowed observation of a fetus without radiation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0155",
+      "type": "mcq",
+      "stem": "What was the primary impact of the '2nd wave (electronic)' technologies on medicine, according to the table?",
+      "options": {
+        "A": "Allowed doctors to see and measure inside the body without surgery.",
+        "B": "Allowed doctors to monitor and replace organ function.",
+        "C": "Allows doctors to predict, personalize, and remotely manage health.",
+        "D": "Focused solely on improving surgical instruments."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0156",
+      "type": "mcq",
+      "stem": "Which innovative technologies are mentioned as impacting rehabilitation by helping individuals recover from neurological injuries and regain independence?",
+      "options": {
+        "A": "High-resolution MRI and CT scans",
+        "B": "Affordable point-of-care diagnostic tools",
+        "C": "Brain-computer interfaces and neuroprosthetics",
+        "D": "Advanced drug delivery systems"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0157",
+      "type": "mcq",
+      "stem": "What is the definition of Homeostasis as presented in the text?",
+      "options": {
+        "A": "The body's inability to maintain a stable internal environment.",
+        "B": "The body's ability to maintain a stable internal environment despite external changes.",
+        "C": "The process of amplifying deviations from a set point.",
+        "D": "The exclusive use of positive feedback loops for regulation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0158",
+      "type": "mcq",
+      "stem": "According to the summary, what fundamental understanding does 'good BME design' require?",
+      "options": {
+        "A": "Only advanced material science and manufacturing processes.",
+        "B": "Understanding of normal physiology, normal ranges, and safety limits.",
+        "C": "Exclusive focus on replacing broken parts with mechanical equivalents.",
+        "D": "Knowledge of software engineering and data analytics only."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0159",
+      "type": "mcq",
+      "stem": "What is the crucial characteristic that materials must possess to be considered 'biocompatible' in the context of Biomaterials, ensuring they do not cause adverse reactions in living systems?",
+      "options": {
+        "A": "High electrical conductivity",
+        "B": "Exceptional hardness",
+        "C": "Safe interaction with living systems without rejection or toxicity",
+        "D": "Transparency to X-rays"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0160",
+      "type": "mcq",
+      "stem": "What specific example of a wearable/implantable sensor is given for continuous internal biochemical monitoring?",
+      "options": {
+        "A": "Smart watches detecting irregular heartbeat",
+        "B": "Smart patches tracking sleep patterns",
+        "C": "Portable ultrasound devices for midwives",
+        "D": "Continuous Glucose Monitors (CGM) under the skin"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0161",
+      "type": "mcq",
+      "stem": "Which type of microscope is mentioned in the document for its ability to track individual proteins in living cells?",
+      "options": {
+        "A": "Basic microscope",
+        "B": "Electron microscope",
+        "C": "Fluorescence microscope",
+        "D": "Compound microscope"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0162",
+      "type": "mcq",
+      "stem": "The primary goal of Tissue Engineering as a component of Biomedical Engineering is to:",
+      "options": {
+        "A": "Develop advanced diagnostic imaging techniques",
+        "B": "Repair or replace damaged tissues using cells and scaffolds",
+        "C": "Design new types of prosthetic devices",
+        "D": "Analyze biological signals from the body"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0163",
+      "type": "mcq",
+      "stem": "How do biomedical engineers contribute to addressing healthcare disparities, particularly in resource-limited settings?",
+      "options": {
+        "A": "By developing high-cost, cutting-edge diagnostic equipment only for major hospitals.",
+        "B": "By focusing solely on advancements for developed countries.",
+        "C": "By designing affordable and portable medical devices and point-of-care diagnostic tools.",
+        "D": "By establishing large, centralized medical facilities in rural areas."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0164",
+      "type": "mcq",
+      "stem": "The 'Rise of Modern Biomedical Engineering (World War II Era)' is attributed to the need for combining medical knowledge with what technological developments?",
+      "options": {
+        "A": "Agricultural machinery and irrigation systems.",
+        "B": "Electronics and radar technology.",
+        "C": "Space travel and satellite communication.",
+        "D": "Internal combustion engines and assembly lines."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0165",
+      "type": "mcq",
+      "stem": "What is a crucial characteristic required for materials used in <b>Biomaterials</b>, as stated in the document?",
+      "options": {
+        "A": "High electrical conductivity",
+        "B": "Low density",
+        "C": "Biocompatibility",
+        "D": "High thermal resistance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0166",
+      "type": "mcq",
+      "stem": "To address global healthcare disparities, biomedical engineers are involved in designing which type of medical solutions for resource-limited settings?",
+      "options": {
+        "A": "Expensive, high-tech devices primarily for urban hospitals.",
+        "B": "Affordable and portable medical devices, point-of-care diagnostic tools, and mobile health clinics.",
+        "C": "Complex genetic sequencing labs for advanced research.",
+        "D": "Large, stationary medical imaging machines."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0167",
+      "type": "mcq",
+      "stem": "The three levels at which health technology interacts with the body are Monitoring, Assisting, and Replacing. Which engineering principle is primarily associated with the 'Assisting Level'?",
+      "options": {
+        "A": "Sensors + signal conditioning + display.",
+        "B": "Biomaterials, biomechanics, biocompatibility.",
+        "C": "Control systems, fluid mechanics, signal processing.",
+        "D": "Electrical properties of skin and tissue."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0168",
+      "type": "mcq",
+      "stem": "Which of the following is a key measurable variable for the Nervous System?",
+      "options": {
+        "A": "Blood pressure",
+        "B": "Tidal volume",
+        "C": "Action potential",
+        "D": "Urine output"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0169",
+      "type": "mcq",
+      "stem": "Technologies such as brain-computer interfaces and neuroprosthetics, developed by biomedical engineers, are most impactful in which area of patient care?",
+      "options": {
+        "A": "Preventative medicine for healthy individuals.",
+        "B": "Surgical preparation and intraoperative monitoring.",
+        "C": "Rehabilitation for individuals recovering from neurological injuries.",
+        "D": "Developing new vaccines."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0170",
+      "type": "mcq",
+      "stem": "According to the 'Summary of key milestones,' in which year was the Electron Microscope discovered by Ruska?",
+      "options": {
+        "A": "1896",
+        "B": "1924",
+        "C": "1931",
+        "D": "1950s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0171",
+      "type": "mcq",
+      "stem": "Which of the following was a key technology introduced during the 1st wave (mechanical) of medical impact?",
+      "options": {
+        "A": "MRI",
+        "B": "Pacemaker",
+        "C": "Stethoscope",
+        "D": "Telemedicine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0172",
+      "type": "mcq",
+      "stem": "Polymerase Chain Reaction (PCR) is highlighted for its ability to:",
+      "options": {
+        "A": "Measure glucose levels accurately in blood.",
+        "B": "Amplify tiny amounts of DNA to detect diseases like COVID-19 and HIV in hours.",
+        "C": "Automatically run 100 different blood tests per hour.",
+        "D": "Filter blood when a patient's kidneys fail."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0173",
+      "type": "mcq",
+      "stem": "How does a CT Scan (1970s) differentiate itself from a standard X-ray according to the text?",
+      "options": {
+        "A": "It uses sound waves instead of radiation for imaging.",
+        "B": "It can image soft tissues like the brain without limitations.",
+        "C": "It combines X-ray with a computer to make 3D images of organs.",
+        "D": "It is primarily used for tracking sleep patterns."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0174",
+      "type": "mcq",
+      "stem": "What is the primary purpose of UNICEF and FMOH installing solar systems and solar refrigerators in PHCs (Primary Health Care centers) across northern Nigeria?",
+      "options": {
+        "A": "To power advanced MRI scanners",
+        "B": "To enable remote robotic surgery",
+        "C": "To keep vaccines viable and allow night-time deliveries",
+        "D": "To facilitate high-speed internet for telemedicine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0175",
+      "type": "mcq",
+      "stem": "Cardiovascular devices like stents and artificial valves are primarily designed using what engineering principles?",
+      "options": {
+        "A": "Electrical stimulation and signal processing.",
+        "B": "Fluid mechanics of blood flow.",
+        "C": "Levers and torque from mechanical systems.",
+        "D": "Chemical signal conversion at synapses."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0176",
+      "type": "mcq",
+      "stem": "Which law describes how the rate of fluid flow depends on the fluid's viscosity, the tube dimensions, and the pressure difference, and is widely applied to blood flow in the human body?",
+      "options": {
+        "A": "Ohm's Law for Blood Flow",
+        "B": "Nernst Equation",
+        "C": "Beer-Lambert Law",
+        "D": "Poiseuille's Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0177",
+      "type": "mcq",
+      "stem": "Which of the following processes is given as an example of <b>positive feedback</b> in the human body?",
+      "options": {
+        "A": "Body temperature regulation",
+        "B": "Blood clotting",
+        "C": "Insulin delivery by an artificial pump",
+        "D": "Blood pressure regulation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bme102-bank-0178",
+      "type": "mcq",
+      "stem": "Which of the following equations is used in biomedical engineering to model blood flow in arteries and veins, emphasizing the significant impact of vessel radius on flow?",
+      "options": {
+        "A": "Ohm's Law for Blood Flow",
+        "B": "Poiseuille's Law",
+        "C": "Nernst Equation",
+        "D": "Beer-Lambert Law"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-mcb407-bank",
+  "title": "EKSU MCB 407 - Industrial Microbiology | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-mcb407-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following microbial products, often derived from filamentous fungi or bacteria, is primarily utilized as a protein supplement in animal feed?",
+      "options": {
+        "A": "Antibiotics",
+        "B": "Enzymes",
+        "C": "Single Cell Protein (SCP)",
+        "D": "Organic Acids"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0002",
+      "type": "mcq",
+      "stem": "The primary economic driver for the large-scale production of Single Cell Protein (SCP) is its potential to:",
+      "options": {
+        "A": "Replace traditional antibiotics in animal husbandry.",
+        "B": "Serve as a renewable source of biomass for various industrial applications.",
+        "C": "Produce high-value secondary metabolites for pharmaceutical use.",
+        "D": "Act as a biocontrol agent against plant pathogens."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0003",
+      "type": "mcq",
+      "stem": "A significant challenge in the widespread adoption of Single Cell Protein (SCP) as a human food source, beyond its nutritional profile, relates to:",
+      "options": {
+        "A": "The high cost of downstream processing and purification.",
+        "B": "Public perception and consumer acceptance of microbial-derived food.",
+        "C": "The limited availability of suitable microbial strains.",
+        "D": "The inherent toxicity of most SCP-producing microorganisms."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0004",
+      "type": "mcq",
+      "stem": "In the context of Penicillin production, the beta-lactam ring is a crucial structural component responsible for its:",
+      "options": {
+        "A": "Solubility in aqueous media.",
+        "B": "Antimicrobial activity.",
+        "C": "Resistance to enzymatic degradation.",
+        "D": "Ability to penetrate bacterial cell walls."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0005",
+      "type": "mcq",
+      "stem": "The biosynthesis of Penicillin by *Penicillium chrysogenum* is an example of:",
+      "options": {
+        "A": "Primary metabolism, essential for cell growth.",
+        "B": "Secondary metabolism, produced under specific conditions.",
+        "C": "Catabolic pathway, breaking down complex molecules.",
+        "D": "Anabolic pathway, synthesizing essential cell components."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0006",
+      "type": "mcq",
+      "stem": "Microbes can be employed in hydrocarbon prospecting due to their ability to:",
+      "options": {
+        "A": "Directly synthesize crude oil from inorganic precursors.",
+        "B": "Detect specific hydrocarbon signatures through metabolic byproducts.",
+        "C": "Create seismic waves to map underground oil deposits.",
+        "D": "Facilitate the rapid decomposition of oil reservoirs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0007",
+      "type": "mcq",
+      "stem": "The application of microorganisms in prospecting for hydrocarbons is often termed:",
+      "options": {
+        "A": "Bioremediation",
+        "B": "Biosurfactant production",
+        "C": "Microbial Enhanced Oil Recovery (MEOR)",
+        "D": "Microbial prospecting or biosensing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0008",
+      "type": "mcq",
+      "stem": "Which type of microbial bio-deterioration is characterized by the breakdown of organic materials in textiles, leading to discoloration and loss of tensile strength?",
+      "options": {
+        "A": "Wood decay",
+        "B": "Food spoilage",
+        "C": "Textile degradation",
+        "D": "Leather rot"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0009",
+      "type": "mcq",
+      "stem": "Fungal growth on paints and coatings is often facilitated by the presence of:",
+      "options": {
+        "A": "High levels of inorganic pigments.",
+        "B": "Moisture and organic binders.",
+        "C": "UV-resistant additives.",
+        "D": "Acidic pH environments."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0010",
+      "type": "mcq",
+      "stem": "The primary microbial agents responsible for the biodeterioration of paints and coatings typically include species of:",
+      "options": {
+        "A": "*Lactobacillus* and *Saccharomyces*",
+        "B": "*Aspergillus*, *Penicillium*, and *Cladosporium*",
+        "C": "*Escherichia* and *Salmonella*",
+        "D": "*Bacillus* and *Streptomyces*"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0011",
+      "type": "mcq",
+      "stem": "Bioremediation is fundamentally a process that utilizes biological agents to:",
+      "options": {
+        "A": "Synthesize new valuable products from pollutants.",
+        "B": "Remove or neutralize environmental contaminants.",
+        "C": "Accelerate the natural weathering of toxic substances.",
+        "D": "Isolate and concentrate pollutants for easier disposal."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0012",
+      "type": "mcq",
+      "stem": "Bioaugmentation, in the context of bioremediation, refers to the process of:",
+      "options": {
+        "A": "Enhancing the metabolic activity of indigenous microorganisms.",
+        "B": "Introducing specific microbial strains to a contaminated site.",
+        "C": "Modifying the physical environment to favor microbial degradation.",
+        "D": "Using genetically engineered microbes for pollutant breakdown."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0013",
+      "type": "mcq",
+      "stem": "Biostimulation, a bioremediation strategy, aims to:",
+      "options": {
+        "A": "Introduce novel microorganisms to the contaminated site.",
+        "B": "Increase the concentration of pollutants to promote microbial growth.",
+        "C": "Provide essential nutrients or electron acceptors to indigenous microbes.",
+        "D": "Employ physical methods to enhance pollutant bioavailability."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0014",
+      "type": "mcq",
+      "stem": "A significant advantage of bioremediation over traditional physical and chemical clean-up methods for oil spills is its:",
+      "options": {
+        "A": "Rapid and immediate effectiveness.",
+        "B": "Ability to completely eliminate all byproducts.",
+        "C": "Potential for lower cost and reduced environmental impact.",
+        "D": "Applicability in all environmental conditions."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0015",
+      "type": "mcq",
+      "stem": "Fermentation, in its broadest industrial microbiology definition, is a metabolic process that occurs in the absence of:",
+      "options": {
+        "A": "Oxygen",
+        "B": "Nutrients",
+        "C": "Water",
+        "D": "Light"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0016",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a typical advantage of industrial fermentation processes?",
+      "options": {
+        "A": "Production of high-value products.",
+        "B": "Relatively mild operating conditions.",
+        "C": "High energy consumption.",
+        "D": "Generation of diverse metabolic products."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0017",
+      "type": "mcq",
+      "stem": "Surface fermentation is characterized by microbial growth occurring:",
+      "options": {
+        "A": "Throughout the liquid medium.",
+        "B": "On the surface of a liquid or solid substrate.",
+        "C": "Within specialized microbial biofilms.",
+        "D": "In the absence of any medium."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0018",
+      "type": "mcq",
+      "stem": "Submerged fermentation is typically carried out in:",
+      "options": {
+        "A": "Solid-state bioreactors.",
+        "B": "Shallow trays with a thin layer of substrate.",
+        "C": "Large vessels where microorganisms are suspended in a liquid medium.",
+        "D": "Aerated compost piles."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0019",
+      "type": "mcq",
+      "stem": "Continuous fermentation offers a potential advantage over batch fermentation by:",
+      "options": {
+        "A": "Allowing for complete product sterilization at the end of the run.",
+        "B": "Maintaining a steady-state of microbial growth and product formation.",
+        "C": "Simplifying the downstream processing of products.",
+        "D": "Reducing the need for microbial inoculation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0020",
+      "type": "mcq",
+      "stem": "The principle of sterilization in an industrial setting is to eliminate:",
+      "options": {
+        "A": "Only pathogenic microorganisms.",
+        "B": "All viable microorganisms, including spores.",
+        "C": "Specific spoilage organisms.",
+        "D": "Microorganisms that interfere with product quality."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0021",
+      "type": "mcq",
+      "stem": "In the pharmaceutical industry, autoclaving is a common sterilization method for:",
+      "options": {
+        "A": "Heat-sensitive drugs.",
+        "B": "Culture media, glassware, and surgical instruments.",
+        "C": "Sterile filtration of large volumes of liquid.",
+        "D": "Gaseous sterilization of sensitive equipment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0022",
+      "type": "mcq",
+      "stem": "Filtration is a sterilization method particularly suited for:",
+      "options": {
+        "A": "Heat-labile liquids and gases.",
+        "B": "Solid materials that can withstand high temperatures.",
+        "C": "Large volumes of viscous solutions.",
+        "D": "Sterilizing air entering bioreactors."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0023",
+      "type": "mcq",
+      "stem": "The nutritional requirements of microorganisms for industrial fermentation are primarily dictated by their:",
+      "options": {
+        "A": "Genetic makeup and desired metabolic output.",
+        "B": "The type of bioreactor used.",
+        "C": "The ambient temperature of the fermentation.",
+        "D": "The cost of raw materials."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0024",
+      "type": "mcq",
+      "stem": "A defined medium in industrial fermentation is characterized by:",
+      "options": {
+        "A": "The presence of complex undefined biological extracts.",
+        "B": "Precise knowledge of the chemical composition of all ingredients.",
+        "C": "The use of naturally occurring microbial consortia.",
+        "D": "The absence of any added nutrients."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0025",
+      "type": "mcq",
+      "stem": "The production of citric acid via fermentation typically utilizes:",
+      "options": {
+        "A": "*Saccharomyces cerevisiae*",
+        "B": "*Aspergillus niger*",
+        "C": "*Penicillium chrysogenum*",
+        "D": "*Lactobacillus bulgaricus*"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0026",
+      "type": "mcq",
+      "stem": "Which of the following is a key consideration when selecting a microbial strain for industrial SCP production?",
+      "options": {
+        "A": "Its ability to produce toxins.",
+        "B": "Its rapid growth rate and high protein content.",
+        "C": "Its requirement for complex and expensive nutrients.",
+        "D": "Its sensitivity to oxygen."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0027",
+      "type": "mcq",
+      "stem": "The economic feasibility of SCP production is heavily influenced by:",
+      "options": {
+        "A": "The cost of the microbial biomass itself.",
+        "B": "The availability of inexpensive carbon and nitrogen sources.",
+        "C": "The market demand for antibiotics.",
+        "D": "The complexity of the downstream purification process."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0028",
+      "type": "mcq",
+      "stem": "The core structure of Penicillin, the beta-lactam ring, is susceptible to hydrolysis by:",
+      "options": {
+        "A": "Beta-glucosidases",
+        "B": "Beta-lactamases",
+        "C": "Esterases",
+        "D": "Proteases"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0029",
+      "type": "mcq",
+      "stem": "In the context of hydrocarbon prospecting, the detection of specific alkanes or aromatic compounds in soil gas can indicate the presence of:",
+      "options": {
+        "A": "Deep-seated mineral deposits.",
+        "B": "Subsurface petroleum reservoirs.",
+        "C": "Underground water sources.",
+        "D": "Geothermal activity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0030",
+      "type": "mcq",
+      "stem": "Microbial bio-deterioration of building materials like concrete is often associated with the metabolic activity of:",
+      "options": {
+        "A": "Acid-producing bacteria and fungi.",
+        "B": "Algae that form biofilms.",
+        "C": "Nitrogen-fixing bacteria.",
+        "D": "Photosynthetic yeasts."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0031",
+      "type": "mcq",
+      "stem": "The microbial degradation of organic matter in sewage sludge is an example of:",
+      "options": {
+        "A": "Bioaugmentation",
+        "B": "Biostimulation",
+        "C": "Bioremediation",
+        "D": "Bioleaching"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0032",
+      "type": "mcq",
+      "stem": "Introducing oxygen and nutrients to a contaminated soil to enhance the activity of indigenous hydrocarbon-degrading bacteria is an example of:",
+      "options": {
+        "A": "Bioremediation",
+        "B": "Bioaugmentation",
+        "C": "Biostimulation",
+        "D": "Bioaccumulation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0033",
+      "type": "mcq",
+      "stem": "When a specific, highly effective microbial strain is introduced to a contaminated site to accelerate the breakdown of pollutants, this process is known as:",
+      "options": {
+        "A": "Biostimulation",
+        "B": "Bioremediation",
+        "C": "Bioaugmentation",
+        "D": "Bioleaching"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0034",
+      "type": "mcq",
+      "stem": "The use of genetically modified microorganisms in bioremediation is often explored to:",
+      "options": {
+        "A": "Reduce the overall cost of the process.",
+        "B": "Increase the specificity and efficiency of pollutant degradation.",
+        "C": "Minimize the need for nutrient supplementation.",
+        "D": "Enhance the aesthetic appeal of the contaminated site."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0035",
+      "type": "mcq",
+      "stem": "Which of the following is a primary benefit of using fermentation for producing food products like yogurt or bread?",
+      "options": {
+        "A": "Increased shelf life through sterilization.",
+        "B": "Enhanced digestibility and flavor development.",
+        "C": "Reduction in microbial load.",
+        "D": "Production of antibiotics."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0036",
+      "type": "mcq",
+      "stem": "Continuous fermentation systems are often preferred for the production of:",
+      "options": {
+        "A": "Antibiotics requiring long production cycles.",
+        "B": "Products where a consistent output is desired.",
+        "C": "High-value, low-volume specialty chemicals.",
+        "D": "Products that are sensitive to shear forces."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0037",
+      "type": "mcq",
+      "stem": "The process of sterilization in an industrial context aims to achieve a state of:",
+      "options": {
+        "A": "Pasteurization",
+        "B": "Asepsis",
+        "C": "Sanitization",
+        "D": "Disinfection"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0038",
+      "type": "mcq",
+      "stem": "In the food processing industry, hot air oven sterilization is typically used for:",
+      "options": {
+        "A": "Liquids and semi-solids.",
+        "B": "Heat-sensitive materials.",
+        "C": "Glassware, metal instruments, and powders.",
+        "D": "Gaseous sterilization."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0039",
+      "type": "mcq",
+      "stem": "The selection of appropriate media for industrial fermentation is crucial for:",
+      "options": {
+        "A": "Ensuring the sterility of the final product.",
+        "B": "Maximizing microbial growth and product yield.",
+        "C": "Reducing the energy consumption of the process.",
+        "D": "Facilitating the downstream purification of the product."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0040",
+      "type": "mcq",
+      "stem": "A complex medium in industrial fermentation is often used when:",
+      "options": {
+        "A": "Precise control over nutrient levels is required.",
+        "B": "The exact nutritional requirements of the microorganism are unknown.",
+        "C": "The cost of production needs to be minimized.",
+        "D": "The microorganism has very simple nutritional needs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0041",
+      "type": "mcq",
+      "stem": "The production of ethanol by yeast fermentation is an example of:",
+      "options": {
+        "A": "Aerobic respiration",
+        "B": "Anaerobic respiration",
+        "C": "Fermentation",
+        "D": "Photosynthesis"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0042",
+      "type": "mcq",
+      "stem": "Which of the following is a critical factor in optimizing the yield of Single Cell Protein (SCP) from a given microbial strain?",
+      "options": {
+        "A": "The purity of the initial inoculum.",
+        "B": "The availability of essential nutrients and growth factors.",
+        "C": "The presence of inhibitory byproducts.",
+        "D": "The efficiency of the sterilization process."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0043",
+      "type": "mcq",
+      "stem": "The historical development of Penicillin production was significantly advanced by the discovery of strains of *Penicillium* that:",
+      "options": {
+        "A": "Produced higher yields of the antibiotic.",
+        "B": "Were more resistant to environmental stresses.",
+        "C": "Required simpler nutrient media.",
+        "D": "Could be grown in solid-state fermentation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0044",
+      "type": "mcq",
+      "stem": "Microbial biosensing for hydrocarbon prospecting relies on the detection of volatile organic compounds (VOCs) released by microbes that are metabolizing:",
+      "options": {
+        "A": "Inorganic minerals",
+        "B": "Hydrocarbons",
+        "C": "Water",
+        "D": "Atmospheric gases"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0045",
+      "type": "mcq",
+      "stem": "The bio-deterioration of historical documents and artifacts is primarily a concern due to the activity of:",
+      "options": {
+        "A": "Thermophilic bacteria",
+        "B": "Mesophilic fungi and bacteria",
+        "C": "Psychrophilic algae",
+        "D": "Halophilic archaea"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0046",
+      "type": "mcq",
+      "stem": "Microbial growth on food surfaces, leading to spoilage, is often characterized by changes in:",
+      "options": {
+        "A": "Texture and pH only.",
+        "B": "Color, odor, and texture.",
+        "C": "Water activity and nutrient availability.",
+        "D": "Temperature and light exposure."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0047",
+      "type": "mcq",
+      "stem": "The process of removing or neutralizing environmental pollutants using living organisms is broadly defined as:",
+      "options": {
+        "A": "Bioleaching",
+        "B": "Biotransformation",
+        "C": "Bioremediation",
+        "D": "Biosynthesis"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0048",
+      "type": "mcq",
+      "stem": "When a polluted site is treated with a nutrient solution to stimulate the growth and activity of naturally occurring pollutant-degrading microbes, the process is called:",
+      "options": {
+        "A": "Bioaugmentation",
+        "B": "Biostimulation",
+        "C": "Bioremediation",
+        "D": "Bioaccumulation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0049",
+      "type": "mcq",
+      "stem": "The introduction of specialized microorganisms capable of degrading specific pollutants into a contaminated environment is known as:",
+      "options": {
+        "A": "Biostimulation",
+        "B": "Bioremediation",
+        "C": "Bioaugmentation",
+        "D": "Bioleaching"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0050",
+      "type": "mcq",
+      "stem": "An advantage of bioremediation for contaminated soil is its potential to:",
+      "options": {
+        "A": "Convert pollutants into more toxic compounds.",
+        "B": "Leave behind fewer harmful byproducts compared to incineration.",
+        "C": "Require extensive excavation and transportation of soil.",
+        "D": "Be ineffective in the presence of oxygen."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0051",
+      "type": "mcq",
+      "stem": "Fermentation is a metabolic pathway that primarily generates energy through the partial oxidation of:",
+      "options": {
+        "A": "Glucose",
+        "B": "Amino acids",
+        "C": "Fatty acids",
+        "D": "Proteins"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0052",
+      "type": "mcq",
+      "stem": "Which of the following is a significant benefit of using fermentation in the production of dairy products like cheese?",
+      "options": {
+        "A": "Sterilization of the final product.",
+        "B": "Development of characteristic flavors and textures.",
+        "C": "Elimination of all microbial activity.",
+        "D": "Production of antibiotics."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0053",
+      "type": "mcq",
+      "stem": "Continuous fermentation systems are often characterized by:",
+      "options": {
+        "A": "Periodic feeding and harvesting of the culture.",
+        "B": "A single batch of culture processed over time.",
+        "C": "The continuous addition of fresh medium and removal of spent medium.",
+        "D": "A stationary phase of microbial growth."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0054",
+      "type": "mcq",
+      "stem": "The principle of sterilization in industrial microbiology is to achieve a microbial population level that is:",
+      "options": {
+        "A": "Significantly reduced but not eliminated.",
+        "B": "Completely absent.",
+        "C": "Below a threshold that poses a risk.",
+        "D": "Viable but non-pathogenic."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0055",
+      "type": "mcq",
+      "stem": "In the biopharmaceutical industry, sterile filtration is a critical method for sterilizing:",
+      "options": {
+        "A": "Heat-stable equipment.",
+        "B": "Large volumes of injectable drugs and solutions.",
+        "C": "Solid powders for formulation.",
+        "D": "Gaseous reagents."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0056",
+      "type": "mcq",
+      "stem": "The use of radiation (e.g., gamma rays) for sterilization is particularly effective for:",
+      "options": {
+        "A": "Heat-labile materials.",
+        "B": "Materials that can withstand high temperatures.",
+        "C": "Sterilizing large volumes of liquids.",
+        "D": "Sterilizing air."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0057",
+      "type": "mcq",
+      "stem": "The nutritional composition of the fermentation medium directly influences:",
+      "options": {
+        "A": "The capital cost of the bioreactor.",
+        "B": "The rate of heat transfer within the bioreactor.",
+        "C": "The growth rate and metabolic activity of the microorganisms.",
+        "D": "The pressure inside the bioreactor."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0058",
+      "type": "mcq",
+      "stem": "For the production of antibiotics, a typical industrial fermentation medium would likely include:",
+      "options": {
+        "A": "High concentrations of inorganic salts.",
+        "B": "A carbon source, nitrogen source, and essential trace elements.",
+        "C": "Only water and air.",
+        "D": "Sterilizing agents."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0059",
+      "type": "mcq",
+      "stem": "The primary metabolic role of fermentation in industrial processes is to:",
+      "options": {
+        "A": "Produce ATP efficiently through oxidative phosphorylation.",
+        "B": "Regenerate NAD+ for glycolysis.",
+        "C": "Synthesize complex polysaccharides.",
+        "D": "Break down complex molecules into simpler ones without oxygen."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-mcb407-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following is a common challenge associated with the large-scale production of Single Cell Protein (SCP)?",
+      "options": {
+        "A": "Over-production of essential vitamins.",
+        "B": "Ensuring consistent product quality and safety standards.",
+        "C": "The low cost of raw materials.",
+        "D": "The absence of any downstream processing requirements."
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

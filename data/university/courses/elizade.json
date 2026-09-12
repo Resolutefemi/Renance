@@ -1,0 +1,137 @@
+{
+ "school": "elizade",
+ "name": "Elizade University",
+ "short": "ELIZADE",
+ "courses": [
+  {
+   "slug": "pq-accounting",
+   "code": "Post-UTME Accounting",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-elizade-pq-accounting-bank",
+   "questionCount": 201,
+   "pdf": null
+  },
+  {
+   "slug": "pq-biology",
+   "code": "Post-UTME Biology",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-elizade-pq-biology-bank",
+   "questionCount": 186,
+   "pdf": null
+  },
+  {
+   "slug": "pq-chemistry",
+   "code": "Post-UTME Chemistry",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-elizade-pq-chemistry-bank",
+   "questionCount": 198,
+   "pdf": null
+  },
+  {
+   "slug": "pq-commerce",
+   "code": "Post-UTME Commerce",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "storefront",
+   "bank": "uni-elizade-pq-commerce-bank",
+   "questionCount": 217,
+   "pdf": null
+  },
+  {
+   "slug": "pq-crs",
+   "code": "Post-UTME CRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "auto_stories",
+   "bank": "uni-elizade-pq-crs-bank",
+   "questionCount": 202,
+   "pdf": null
+  },
+  {
+   "slug": "pq-economics",
+   "code": "Post-UTME Economics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "trending_up",
+   "bank": "uni-elizade-pq-economics-bank",
+   "questionCount": 212,
+   "pdf": null
+  },
+  {
+   "slug": "pq-english",
+   "code": "Post-UTME English",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "translate",
+   "bank": "uni-elizade-pq-english-bank",
+   "questionCount": 199,
+   "pdf": null
+  },
+  {
+   "slug": "pq-geography",
+   "code": "Post-UTME Geography",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "public",
+   "bank": "uni-elizade-pq-geography-bank",
+   "questionCount": 200,
+   "pdf": null
+  },
+  {
+   "slug": "pq-government",
+   "code": "Post-UTME Government",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "account_balance",
+   "bank": "uni-elizade-pq-government-bank",
+   "questionCount": 207,
+   "pdf": null
+  },
+  {
+   "slug": "pq-irs",
+   "code": "Post-UTME IRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-elizade-pq-irs-bank",
+   "questionCount": 196,
+   "pdf": null
+  },
+  {
+   "slug": "pq-literature",
+   "code": "Post-UTME Literature",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-elizade-pq-literature-bank",
+   "questionCount": 134,
+   "pdf": null
+  },
+  {
+   "slug": "pq-mathematics",
+   "code": "Post-UTME Mathematics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-elizade-pq-mathematics-bank",
+   "questionCount": 182,
+   "pdf": null
+  },
+  {
+   "slug": "pq-physics",
+   "code": "Post-UTME Physics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-elizade-pq-physics-bank",
+   "questionCount": 181,
+   "pdf": null
+  }
+ ]
+}

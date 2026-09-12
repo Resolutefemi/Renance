@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-chm211-bank",
+  "title": "EKSU Chm211 - Organic Chemistry II | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-chm211-bank-0001",
+      "type": "mcq",
+      "stem": "What is the primary intermediate produced when an alcohol reacts with a strong acid to give an alkyl halide?",
+      "options": {
+        "A": "Carbanion",
+        "B": "Carbocation (or protonated alcohol)",
+        "C": "Free radical",
+        "D": "Carbene"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0002",
+      "type": "mcq",
+      "stem": "Complete the following reaction: CH3CH2Cl + CH3CH2ONa -> A + NaCl. What is the product 'A'?",
+      "options": {
+        "A": "Diethyl ether",
+        "B": "Dimethyl ether",
+        "C": "Ethyl methyl ether",
+        "D": "Ethanol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0003",
+      "type": "mcq",
+      "stem": "The general name for the reaction CH3CH2Cl + CH3CH2ONa -> CH3CH2OCH2CH3 + NaCl is:",
+      "options": {
+        "A": "Esterification",
+        "B": "Williamson ether synthesis",
+        "C": "Friedel-Crafts alkylation",
+        "D": "Aldol condensation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0004",
+      "type": "mcq",
+      "stem": "Which of the following describes the correct molecular formula representation for ketones?",
+      "options": {
+        "A": "RCOOH",
+        "B": "RCHO",
+        "C": "RCOR'",
+        "D": "ROH"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0005",
+      "type": "mcq",
+      "stem": "How can propanal be selectively prepared from 1-propanol (a primary alcohol) without over-oxidation to propanoic acid?",
+      "options": {
+        "A": "Using hot acidic KMnO4",
+        "B": "Using Pyridinium chlorochromate (PCC) in CH2Cl2",
+        "C": "Using Na2Cr2O7 in H2SO4",
+        "D": "Using concentrated HNO3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0006",
+      "type": "mcq",
+      "stem": "Which of the following is a key difference between esterification and neutralization?",
+      "options": {
+        "A": "Esterification is fast and irreversible, while neutralization is slow and reversible.",
+        "B": "Esterification is a reaction of molecules and is reversible, while neutralization involves ions and is irreversible.",
+        "C": "Neutralization produces an ester, while esterification produces a salt.",
+        "D": "There is no difference; they are the same reaction."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0007",
+      "type": "mcq",
+      "stem": "Which of the following is a common reducing agent used in organic reactions to reduce aldehydes and ketones?",
+      "options": {
+        "A": "KMnO4",
+        "B": "O3",
+        "C": "NaBH4",
+        "D": "H2SO4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0008",
+      "type": "mcq",
+      "stem": "What is the major product of the reaction between aniline and excess bromine water?",
+      "options": {
+        "A": "o-Bromoaniline",
+        "B": "p-Bromoaniline",
+        "C": "2,4,6-Tribromoaniline",
+        "D": "Bromobenzene"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0009",
+      "type": "mcq",
+      "stem": "Why does acetanilide predominantly yield a monobrominated product when reacted with bromine, unlike aniline?",
+      "options": {
+        "A": "The acetyl group strongly activates the ring.",
+        "B": "The acetyl group is electron-withdrawing by resonance, moderating the ring's reactivity.",
+        "C": "Acetanilide is highly soluble in bromine.",
+        "D": "Bromine cannot attack substituted benzene rings."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0010",
+      "type": "mcq",
+      "stem": "Which instrument is used to measure the optical rotation of chiral molecules in Organic Chemistry?",
+      "options": {
+        "A": "Spectrophotometer",
+        "B": "Polarimeter",
+        "C": "Barometer",
+        "D": "Calorimeter"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0011",
+      "type": "mcq",
+      "stem": "Which of the following molecules is a classic example used to explain resonance?",
+      "options": {
+        "A": "Methane",
+        "B": "Ozone",
+        "C": "Ethane",
+        "D": "Cyclohexane"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0012",
+      "type": "mcq",
+      "stem": "What are the functional groups present in methyl parahydroxybenzoate?",
+      "options": {
+        "A": "Ester, Phenol (hydroxyl), and Aromatic ring",
+        "B": "Carboxylic acid and Amine",
+        "C": "Ketone and Ether",
+        "D": "Aldehyde and Alcohol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0013",
+      "type": "mcq",
+      "stem": "What is the product of the reaction between an ester (RCOOR') and two equivalents of a Grignard reagent (R''MgBr), followed by acidic workup?",
+      "options": {
+        "A": "A primary alcohol",
+        "B": "A secondary alcohol",
+        "C": "A tertiary alcohol",
+        "D": "A ketone"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0014",
+      "type": "mcq",
+      "stem": "The reduction of ethyl hexadecanoate [CH3(CH2)14COOC2H5] with LiAlH4 yields which two alcohols?",
+      "options": {
+        "A": "Hexadecan-1-ol and Ethanol",
+        "B": "Hexadecan-2-ol and Methanol",
+        "C": "Pentadecan-1-ol and Propanol",
+        "D": "Hexadecanoic acid and Ethanol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0015",
+      "type": "mcq",
+      "stem": "Which reaction represents the formation of an ester from a carboxylic acid and an alcohol?",
+      "options": {
+        "A": "RCOOH + R'OH -> RCOOR' + H2O",
+        "B": "RCOCl + R'OH -> RCOOR' + HCl",
+        "C": "RCOOR' + H2O -> RCOOH + R'OH",
+        "D": "Both A and B can form esters"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0016",
+      "type": "mcq",
+      "stem": "When benzoic acid reacts with sodium bicarbonate (NaHCO3), what are the products?",
+      "options": {
+        "A": "Sodium benzoate, water, and carbon dioxide",
+        "B": "Benzene, carbon monoxide, and water",
+        "C": "Sodium phenoxide and carbonic acid",
+        "D": "Benzyl alcohol and carbon dioxide"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0017",
+      "type": "mcq",
+      "stem": "What is the organic product of the reaction between ethanoic acid (CH3COOH) and phosphorus pentachloride (PCl5)?",
+      "options": {
+        "A": "Ethanol",
+        "B": "Ethanoyl chloride (Acetyl chloride)",
+        "C": "Chloroethane",
+        "D": "Ethanoic anhydride"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0018",
+      "type": "mcq",
+      "stem": "Aniline reacts with NaNO2 and cold HCl (0-5 °C) to form:",
+      "options": {
+        "A": "Nitrobenzene",
+        "B": "Chlorobenzene",
+        "C": "Benzene diazonium chloride",
+        "D": "Phenol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0019",
+      "type": "mcq",
+      "stem": "Which biological process is used to prepare ethanol commercially from glucose?",
+      "options": {
+        "A": "Hydration",
+        "B": "Fermentation",
+        "C": "Esterification",
+        "D": "Oxidation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0020",
+      "type": "mcq",
+      "stem": "Which chemical equation correctly describes the formation of an alkyl halide from an alcohol using a hydrogen halide?",
+      "options": {
+        "A": "ROH + HX -> RX + H2O",
+        "B": "ROH + X2 -> RX + H2O",
+        "C": "ROH + HX -> RH + HOX",
+        "D": "2ROH + HX -> ROR + H2X"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0021",
+      "type": "mcq",
+      "stem": "Dehydration of ethanol in the presence of concentrated sulfuric acid at high temperatures (170 °C) primarily yields:",
+      "options": {
+        "A": "Diethyl ether",
+        "B": "Ethene",
+        "C": "Ethane",
+        "D": "Ethanal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0022",
+      "type": "mcq",
+      "stem": "When ethanol reacts with sodium metal, which gas is liberated?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Carbon dioxide",
+        "C": "Hydrogen",
+        "D": "Methane"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0023",
+      "type": "mcq",
+      "stem": "Which of the following is a common commercial use of alkyl halides?",
+      "options": {
+        "A": "As artificial sweeteners",
+        "B": "As solvents and refrigerants",
+        "C": "As food preservatives",
+        "D": "As fertilizers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0024",
+      "type": "mcq",
+      "stem": "Which chemical test is commonly used in the laboratory to distinguish between primary, secondary, and tertiary alcohols?",
+      "options": {
+        "A": "Tollens' Test",
+        "B": "Iodoform Test",
+        "C": "Lucas Test",
+        "D": "Biuret Test"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0025",
+      "type": "mcq",
+      "stem": "The Lucas reagent is a mixture of:",
+      "options": {
+        "A": "Concentrated HCl and anhydrous ZnCl2",
+        "B": "Concentrated HNO3 and H2SO4",
+        "C": "AgNO3 in aqueous ammonia",
+        "D": "Sodium hydroxide and iodine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0026",
+      "type": "mcq",
+      "stem": "Which class of alcohol reacts fastest with Lucas reagent, often turning cloudy immediately at room temperature?",
+      "options": {
+        "A": "Primary alcohols",
+        "B": "Secondary alcohols",
+        "C": "Tertiary alcohols",
+        "D": "Phenols"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0027",
+      "type": "mcq",
+      "stem": "Which of the following compounds can exhibit cis-trans (geometric) isomerism?",
+      "options": {
+        "A": "1-butene",
+        "B": "2-methyl-2-butene",
+        "C": "2-butene",
+        "D": "Propene"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0028",
+      "type": "mcq",
+      "stem": "Propanoic acid (b.p. 141 °C) boils at a significantly higher temperature than 1-butanol (b.p. 118 °C) of comparable molecular weight. This is primarily due to:",
+      "options": {
+        "A": "Propanoic acid having a higher molecular mass.",
+        "B": "Propanoic acid forming stable, hydrogen-bonded dimers in the liquid state.",
+        "C": "1-butanol being more branched.",
+        "D": "Propanoic acid being a liquid and 1-butanol a gas."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0029",
+      "type": "mcq",
+      "stem": "What is the structural formula of methanoic acid?",
+      "options": {
+        "A": "CH3COOH",
+        "B": "HCOOH",
+        "C": "CH3CH2COOH",
+        "D": "CH3OH"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0030",
+      "type": "mcq",
+      "stem": "When ethene reacts with cold, dilute alkaline potassium permanganate (KMnO4), the product is:",
+      "options": {
+        "A": "Ethanal",
+        "B": "Ethanoic acid",
+        "C": "Ethane-1,2-diol (Ethylene glycol)",
+        "D": "Ethanol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0031",
+      "type": "mcq",
+      "stem": "What product is formed when 1-bromopropane reacts with aqueous sodium hydroxide (NaOH) under reflux?",
+      "options": {
+        "A": "Propene",
+        "B": "1-Propanol",
+        "C": "2-Propanol",
+        "D": "Propanal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0032",
+      "type": "mcq",
+      "stem": "Which reagent is used to convert an alcohol to an alkyl chloride without forming gaseous byproducts like SO2?",
+      "options": {
+        "A": "SOCl2",
+        "B": "HCl",
+        "C": "PCl3",
+        "D": "NaCl"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0033",
+      "type": "mcq",
+      "stem": "Stereoisomers that are non-superimposable mirror images of each other are called:",
+      "options": {
+        "A": "Diastereomers",
+        "B": "Enantiomers",
+        "C": "Meso compounds",
+        "D": "Structural isomers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0034",
+      "type": "mcq",
+      "stem": "Stereoisomers that are NOT mirror images of each other are called:",
+      "options": {
+        "A": "Enantiomers",
+        "B": "Diastereomers",
+        "C": "Tautomers",
+        "D": "Rotamers"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0035",
+      "type": "mcq",
+      "stem": "Carbon does not typically form simple C4+ or C4- ions in organic compounds because:",
+      "options": {
+        "A": "It requires too much energy to gain or lose four electrons.",
+        "B": "It is a highly electronegative element.",
+        "C": "It is an alkaline earth metal.",
+        "D": "It does not have valence electrons."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0036",
+      "type": "mcq",
+      "stem": "What functional group characterizes an amide?",
+      "options": {
+        "A": "-NH2 attached to an alkyl group",
+        "B": "-C(=O)NH2",
+        "C": "-C(=O)OR",
+        "D": "-C#N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0037",
+      "type": "mcq",
+      "stem": "The prefix 'al' in IUPAC nomenclature designates which functional group?",
+      "options": {
+        "A": "Alcohol",
+        "B": "Aldehyde",
+        "C": "Alkene",
+        "D": "Alkyne"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0038",
+      "type": "mcq",
+      "stem": "What is the structure of acetone (propanone)?",
+      "options": {
+        "A": "CH3CHO",
+        "B": "CH3COCH3",
+        "C": "CH3CH2OH",
+        "D": "CH3COOH"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following compounds is an aromatic amine?",
+      "options": {
+        "A": "Cyclohexylamine",
+        "B": "Aniline",
+        "C": "Ethylamine",
+        "D": "Dimethylamine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0040",
+      "type": "mcq",
+      "stem": "What type of bond is formed when electrons are shared equally between two identical atoms?",
+      "options": {
+        "A": "Ionic bond",
+        "B": "Polar covalent bond",
+        "C": "Non-polar covalent bond",
+        "D": "Hydrogen bond"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0041",
+      "type": "mcq",
+      "stem": "In a polar covalent bond, the electron pair is:",
+      "options": {
+        "A": "Transferred completely",
+        "B": "Shared equally",
+        "C": "Pulled closer to the more electronegative atom",
+        "D": "Pulled closer to the less electronegative atom"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0042",
+      "type": "mcq",
+      "stem": "Isooctane, an important component in gasoline, is heavily branched. Its systematic IUPAC name is:",
+      "options": {
+        "A": "Octane",
+        "B": "2,2,4-trimethylpentane",
+        "C": "2-methylheptane",
+        "D": "3,3-dimethylhexane"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0043",
+      "type": "mcq",
+      "stem": "What is the result of adding hydrogen (H2) to an alkene in the presence of a Nickel (Ni) catalyst?",
+      "options": {
+        "A": "An alkyne",
+        "B": "An alcohol",
+        "C": "An alkane",
+        "D": "An alkyl halide"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0044",
+      "type": "mcq",
+      "stem": "Hydrazine (NH2NH2) and a strong base applied to a ketone under heat (Wolff-Kishner reduction) produces:",
+      "options": {
+        "A": "An alcohol",
+        "B": "An alkane",
+        "C": "An amine",
+        "D": "An ester"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0045",
+      "type": "mcq",
+      "stem": "The reduction of an imine or oxime with NaBH3CN typically yields:",
+      "options": {
+        "A": "An alkane",
+        "B": "An alcohol",
+        "C": "An amine",
+        "D": "An amide"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0046",
+      "type": "mcq",
+      "stem": "Which of the following classes of alcohols cannot be oxidized by standard reagents like Jones reagent (CrO3/H2SO4)?",
+      "options": {
+        "A": "Primary alcohols",
+        "B": "Secondary alcohols",
+        "C": "Tertiary alcohols",
+        "D": "Phenols"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0047",
+      "type": "mcq",
+      "stem": "Oxidation of a secondary alcohol yields a(n):",
+      "options": {
+        "A": "Aldehyde",
+        "B": "Carboxylic acid",
+        "C": "Ketone",
+        "D": "Ester"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0048",
+      "type": "mcq",
+      "stem": "What is the molecular geometry around the carbon atom in a carbonyl group (C=O)?",
+      "options": {
+        "A": "Tetrahedral",
+        "B": "Trigonal planar",
+        "C": "Linear",
+        "D": "Bent"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0049",
+      "type": "mcq",
+      "stem": "The reaction of an alkyl halide with ammonia (NH3) initially forms a:",
+      "options": {
+        "A": "Primary amine salt",
+        "B": "Secondary amine",
+        "C": "Tertiary amine",
+        "D": "Quaternary ammonium salt"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0050",
+      "type": "mcq",
+      "stem": "What is the general name for a cyclic ester?",
+      "options": {
+        "A": "Lactam",
+        "B": "Lactone",
+        "C": "Acetal",
+        "D": "Epoxide"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0051",
+      "type": "mcq",
+      "stem": "What is the general name for a cyclic amide?",
+      "options": {
+        "A": "Lactam",
+        "B": "Lactone",
+        "C": "Imide",
+        "D": "Amine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0052",
+      "type": "mcq",
+      "stem": "The structural formula of p-Toluidine is an aniline ring with which substituent at the para position?",
+      "options": {
+        "A": "A chloro group",
+        "B": "A nitro group",
+        "C": "A methyl group",
+        "D": "A methoxy group"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0053",
+      "type": "mcq",
+      "stem": "The presence of a chiral center (stereocenter) in a molecule generally makes the molecule capable of:",
+      "options": {
+        "A": "Geometric isomerism",
+        "B": "Optical activity",
+        "C": "Conformational isomerism",
+        "D": "Resonance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0054",
+      "type": "mcq",
+      "stem": "A meso compound is a stereoisomer that has chiral centers but is optically inactive because:",
+      "options": {
+        "A": "It is a racemic mixture",
+        "B": "It lacks a chiral carbon",
+        "C": "It has an internal plane of symmetry",
+        "D": "It rapidly rotates light in both directions"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0055",
+      "type": "mcq",
+      "stem": "What reagent can be used to convert an alkene into an epoxide?",
+      "options": {
+        "A": "OsO4",
+        "B": "A peroxyacid (e.g., mCPBA)",
+        "C": "O3 followed by Zn/H2O",
+        "D": "HBr"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0056",
+      "type": "mcq",
+      "stem": "Ozonolysis (O3 followed by H2O/Zn) of an alkene cleaves the double bond to form:",
+      "options": {
+        "A": "Alcohols",
+        "B": "Aldehydes and/or Ketones",
+        "C": "Carboxylic acids",
+        "D": "Alkanes"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0057",
+      "type": "mcq",
+      "stem": "Electrophilic aromatic substitution of benzene with nitric acid and sulfuric acid yields:",
+      "options": {
+        "A": "Chlorobenzene",
+        "B": "Nitrobenzene",
+        "C": "Aniline",
+        "D": "Phenol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0058",
+      "type": "mcq",
+      "stem": "In electrophilic aromatic substitution, an amino (-NH2) group acts as an:",
+      "options": {
+        "A": "Activating, ortho/para director",
+        "B": "Deactivating, ortho/para director",
+        "C": "Activating, meta director",
+        "D": "Deactivating, meta director"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following directing effects does a nitro (-NO2) group have on a benzene ring?",
+      "options": {
+        "A": "Activating, ortho/para",
+        "B": "Deactivating, ortho/para",
+        "C": "Activating, meta",
+        "D": "Deactivating, meta"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm211-bank-0060",
+      "type": "mcq",
+      "stem": "The Friedel-Crafts acylation of benzene requires an acyl chloride and which Lewis acid catalyst?",
+      "options": {
+        "A": "FeBr3",
+        "B": "AlCl3",
+        "C": "H2SO4",
+        "D": "ZnCl2"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

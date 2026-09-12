@@ -15,6 +15,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 import { api } from '@/lib/api';
 import { getToken } from '@/lib/session';
 import { fetchCardProgress } from '@/lib/flashcards';
@@ -204,6 +205,7 @@ export default function StudyPlanPage() {
         </div>
       </section>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

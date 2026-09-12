@@ -1,0 +1,611 @@
+{
+  "code": "uni-aaua-csc103-bank",
+  "title": "AAUA CSC 103 (Computer Hardware and Installation Management) | Practice Bank",
+  "version": 1,
+  "questionCount": 50,
+  "totalMarks": 50,
+  "questions": [
+    {
+      "id": "uni-aaua-csc103-bank-0001",
+      "type": "mcq",
+      "stem": "The main circuit board of a computer is the:",
+      "options": {
+        "A": "Motherboard",
+        "B": "CPU",
+        "C": "RAM",
+        "D": "GPU"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0002",
+      "type": "mcq",
+      "stem": "CPU speed is measured in:",
+      "options": {
+        "A": "GHz",
+        "B": "GB",
+        "C": "TB",
+        "D": "Mbps"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0003",
+      "type": "mcq",
+      "stem": "Which type of RAM is faster?",
+      "options": {
+        "A": "SRAM",
+        "B": "DRAM",
+        "C": "DDR",
+        "D": "SDRAM"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0004",
+      "type": "mcq",
+      "stem": "ROM is:",
+      "options": {
+        "A": "Non-volatile",
+        "B": "Volatile",
+        "C": "Temporary",
+        "D": "Erasable by default"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0005",
+      "type": "mcq",
+      "stem": "The GPU is responsible for:",
+      "options": {
+        "A": "Graphics processing",
+        "B": "Sound processing",
+        "C": "Network management",
+        "D": "File storage"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0006",
+      "type": "mcq",
+      "stem": "A heat sink is used to:",
+      "options": {
+        "A": "Cool the CPU",
+        "B": "Store data",
+        "C": "Display images",
+        "D": "Connect to network"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0007",
+      "type": "mcq",
+      "stem": "SATA is an interface for:",
+      "options": {
+        "A": "Storage devices",
+        "B": "Network",
+        "C": "Display",
+        "D": "Audio"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0008",
+      "type": "mcq",
+      "stem": "The power supply unit converts:",
+      "options": {
+        "A": "AC to DC",
+        "B": "DC to AC",
+        "C": "Analog to digital",
+        "D": "Digital to analog"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0009",
+      "type": "mcq",
+      "stem": "Which slot is used for graphics cards?",
+      "options": {
+        "A": "PCIe",
+        "B": "RAM slot",
+        "C": "CPU socket",
+        "D": "SATA port"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0010",
+      "type": "mcq",
+      "stem": "DDR in DDR RAM stands for:",
+      "options": {
+        "A": "Double Data Rate",
+        "B": "Dual Drive Rate",
+        "C": "Direct Data Rate",
+        "D": "Double Drive Rate"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0011",
+      "type": "mcq",
+      "stem": "A solid-state drive has no:",
+      "options": {
+        "A": "Moving parts",
+        "B": "Storage capacity",
+        "C": "Data transfer",
+        "D": "Power supply"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0012",
+      "type": "mcq",
+      "stem": "The chipset on a motherboard:",
+      "options": {
+        "A": "Manages data flow",
+        "B": "Stores files",
+        "C": "Displays graphics",
+        "D": "Provides power"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0013",
+      "type": "mcq",
+      "stem": "CMOS battery in a computer:",
+      "options": {
+        "A": "Maintains BIOS settings",
+        "B": "Powers the CPU",
+        "C": "Charges the laptop",
+        "D": "Runs the OS"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0014",
+      "type": "mcq",
+      "stem": "USB 3.0 is identified by:",
+      "options": {
+        "A": "Blue port color",
+        "B": "Red port color",
+        "C": "White port color",
+        "D": "Black port color"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0015",
+      "type": "mcq",
+      "stem": "RAID is used for:",
+      "options": {
+        "A": "Data redundancy and performance",
+        "B": "Network security",
+        "C": "Display output",
+        "D": "Audio processing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0016",
+      "type": "mcq",
+      "stem": "Which is NOT a form factor for motherboards?",
+      "options": {
+        "A": "RAID",
+        "B": "ATX",
+        "C": "Micro-ATX",
+        "D": "Mini-ITX"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0017",
+      "type": "mcq",
+      "stem": "Thermal paste is applied between:",
+      "options": {
+        "A": "CPU and heat sink",
+        "B": "RAM and motherboard",
+        "C": "GPU and monitor",
+        "D": "PSU and motherboard"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0018",
+      "type": "mcq",
+      "stem": "ESD stands for:",
+      "options": {
+        "A": "Electrostatic Discharge",
+        "B": "Electronic System Design",
+        "C": "External Storage Device",
+        "D": "Enhanced System Driver"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0019",
+      "type": "mcq",
+      "stem": "To prevent ESD damage, you should:",
+      "options": {
+        "A": "Wear an anti-static wristband",
+        "B": "Work on carpet",
+        "C": "Touch the CPU directly",
+        "D": "Ignore grounding"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0020",
+      "type": "mcq",
+      "stem": "A POST (Power-On Self-Test) checks:",
+      "options": {
+        "A": "Hardware components at startup",
+        "B": "Software updates",
+        "C": "Internet connection",
+        "D": "File integrity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0021",
+      "type": "mcq",
+      "stem": "Which component stores the BIOS?",
+      "options": {
+        "A": "ROM chip",
+        "B": "Hard drive",
+        "C": "RAM",
+        "D": "CPU cache"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0022",
+      "type": "mcq",
+      "stem": "The front panel connectors include:",
+      "options": {
+        "A": "Power button, LED, USB headers",
+        "B": "CPU, GPU, RAM",
+        "C": "SATA, PCIe, M.2",
+        "D": "Ethernet, WiFi, Bluetooth"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0023",
+      "type": "mcq",
+      "stem": "M.2 is a type of:",
+      "options": {
+        "A": "Storage interface",
+        "B": "RAM type",
+        "C": "CPU socket",
+        "D": "Power connector"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0024",
+      "type": "mcq",
+      "stem": "NVMe stands for:",
+      "options": {
+        "A": "Non-Volatile Memory Express",
+        "B": "New Virtual Memory Extension",
+        "C": "Network Virtual Machine Environment",
+        "D": "Non-Virtual Memory Express"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0025",
+      "type": "mcq",
+      "stem": "A CPU with multiple cores can:",
+      "options": {
+        "A": "Process multiple tasks simultaneously",
+        "B": "Only run one program",
+        "C": "Store more data",
+        "D": "Display better graphics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0026",
+      "type": "mcq",
+      "stem": "Overclocking means:",
+      "options": {
+        "A": "Running hardware faster than rated speed",
+        "B": "Reducing clock speed",
+        "C": "Adding more RAM",
+        "D": "Upgrading the OS"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0027",
+      "type": "mcq",
+      "stem": "The northbridge chipset typically manages:",
+      "options": {
+        "A": "CPU, RAM, and PCIe",
+        "B": "USB and audio",
+        "C": "SATA and network",
+        "D": "Power management"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0028",
+      "type": "mcq",
+      "stem": "How much data can a single-layer Blu-ray disc hold?",
+      "options": {
+        "A": "25 GB",
+        "B": "4.7 GB",
+        "C": "700 MB",
+        "D": "50 GB"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0029",
+      "type": "mcq",
+      "stem": "What does formatting a drive do?",
+      "options": {
+        "A": "Prepares it for use by creating a file system",
+        "B": "Physically cleans the drive",
+        "C": "Increases its capacity",
+        "D": "Repairs bad sectors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0030",
+      "type": "mcq",
+      "stem": "HDMI is used for:",
+      "options": {
+        "A": "Video and audio output",
+        "B": "Storage",
+        "C": "Network connection",
+        "D": "Power supply"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0031",
+      "type": "mcq",
+      "stem": "The function of a network interface card (NIC) is:",
+      "options": {
+        "A": "Connect to a network",
+        "B": "Process graphics",
+        "C": "Store data",
+        "D": "Manage power"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0032",
+      "type": "mcq",
+      "stem": "Which tool is essential for opening a computer case?",
+      "options": {
+        "A": "Screwdriver",
+        "B": "Soldering iron",
+        "C": "Multimeter",
+        "D": "Oscilloscope"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0033",
+      "type": "mcq",
+      "stem": "DVI is a type of:",
+      "options": {
+        "A": "Video connector",
+        "B": "Audio connector",
+        "C": "Storage connector",
+        "D": "Network connector"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0034",
+      "type": "mcq",
+      "stem": "A UPS provides:",
+      "options": {
+        "A": "Backup power during outages",
+        "B": "Faster internet",
+        "C": "More storage",
+        "D": "Better graphics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0035",
+      "type": "mcq",
+      "stem": "Which type of printer uses toner?",
+      "options": {
+        "A": "Laser printer",
+        "B": "Inkjet printer",
+        "C": "Dot matrix printer",
+        "D": "Thermal printer"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0036",
+      "type": "mcq",
+      "stem": "The clock speed of a CPU determines:",
+      "options": {
+        "A": "How fast it processes instructions",
+        "B": "How much data it stores",
+        "C": "Display resolution",
+        "D": "Network speed"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0037",
+      "type": "mcq",
+      "stem": "What is the purpose of a surge protector?",
+      "options": {
+        "A": "Protect from power spikes",
+        "B": "Increase power",
+        "C": "Store energy",
+        "D": "Convert power"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0038",
+      "type": "mcq",
+      "stem": "DIMM slots are for:",
+      "options": {
+        "A": "RAM modules",
+        "B": "CPU installation",
+        "C": "GPU installation",
+        "D": "Storage devices"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0039",
+      "type": "mcq",
+      "stem": "A modem converts:",
+      "options": {
+        "A": "Digital to analog and vice versa",
+        "B": "AC to DC",
+        "C": "Text to speech",
+        "D": "Images to text"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0040",
+      "type": "mcq",
+      "stem": "Which is a troubleshooting step?",
+      "options": {
+        "A": "Identify the problem first",
+        "B": "Replace all parts",
+        "C": "Ignore error messages",
+        "D": "Skip diagnostics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0041",
+      "type": "mcq",
+      "stem": "Safe Mode starts Windows with:",
+      "options": {
+        "A": "Minimal drivers",
+        "B": "All programs",
+        "C": "Full graphics",
+        "D": "Network access by default"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0042",
+      "type": "mcq",
+      "stem": "A driver is:",
+      "options": {
+        "A": "Software that controls hardware",
+        "B": "A type of virus",
+        "C": "A hardware component",
+        "D": "A storage device"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0043",
+      "type": "mcq",
+      "stem": "Which component connects all parts of a computer?",
+      "options": {
+        "A": "Motherboard",
+        "B": "Power supply",
+        "C": "Hard drive",
+        "D": "Monitor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0044",
+      "type": "mcq",
+      "stem": "VGA is a type of:",
+      "options": {
+        "A": "Video connector",
+        "B": "Storage interface",
+        "C": "Audio port",
+        "D": "Network protocol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0045",
+      "type": "mcq",
+      "stem": "The file system used by Windows is typically:",
+      "options": {
+        "A": "NTFS",
+        "B": "ext4",
+        "C": "HFS+",
+        "D": "FAT16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0046",
+      "type": "mcq",
+      "stem": "An optical drive reads:",
+      "options": {
+        "A": "CDs, DVDs, Blu-rays",
+        "B": "Only flash drives",
+        "C": "Only hard disks",
+        "D": "Only SSDs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0047",
+      "type": "mcq",
+      "stem": "What does partitioning a hard drive mean?",
+      "options": {
+        "A": "Dividing it into logical sections",
+        "B": "Physically cutting it",
+        "C": "Encrypting it",
+        "D": "Defragmenting it"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0048",
+      "type": "mcq",
+      "stem": "Bluetooth is used for:",
+      "options": {
+        "A": "Short-range wireless communication",
+        "B": "Long-range networking",
+        "C": "Wired connections",
+        "D": "Power supply"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0049",
+      "type": "mcq",
+      "stem": "Which component manages data traffic on a network?",
+      "options": {
+        "A": "Router",
+        "B": "Monitor",
+        "C": "Keyboard",
+        "D": "Speaker"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-csc103-bank-0050",
+      "type": "mcq",
+      "stem": "Defragmentation:",
+      "options": {
+        "A": "Reorganizes files on a hard drive",
+        "B": "Deletes files",
+        "C": "Adds more storage",
+        "D": "Formats the drive"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}
