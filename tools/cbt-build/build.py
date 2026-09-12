@@ -3,7 +3,11 @@
 Renance CBT content pipeline (ERA-2) — ports the ERA-1 adapter contract.
 
 DOCTRINE (ADR-0003): one bank in `data/src/` → TWO artifacts.
-  bundle   data/questions/<code>.json     student-visible, NEVER answer material
+  bundle   data/questions/<group>/<name>.json  student-visible, NEVER answer
+           material — grouped by exam body (WAEC/mathematics.json,
+           JAMB/…, NECO/…), per-school tertiary folders
+           (All_tertiary_Q/futa/BIO101.json) and POST_UTME/; codes inside
+           the JSONs never change (see bundle_relpath + questions/index.json)
   key      data/answer-keys/<sub>/<code>.json   server-only (subdir gitignored
            except mock/); explanations live ONLY here
   manifest data/manifest.json             sha256 fingerprint of every bundle
@@ -38,6 +42,41 @@ REPO = Path(__file__).resolve().parents[2]
 SRC_DIRS = [REPO / "data" / "src" / "real"]  # data/src/mock retired (f490393)
 QUESTIONS_DIR = REPO / "data" / "questions"
 KEYS_DIR = REPO / "data" / "answer-keys"
+TERTIARY_DIR = "All_tertiary_Q"
+INDEX_NAME = "index.json"  # code → relative path map, read by the API loader
+
+
+def bundle_relpath(code: str) -> str:
+    """Where a bundle with this code lives under data/questions/ (posix rel).
+
+    Grouped layout — one folder per exam body, per-school tertiary folders:
+      waec-<subject>[-bank|-theory]    → WAEC/<subject>[…].json
+      jamb-… / neco-…                  → JAMB/…  NECO/…
+      uni-<school>-<course>[-bank]     → All_tertiary_Q/<school>/<COURSE>.json
+      <school>[-x]-post-utme[-<y>]…    → POST_UTME/<school[-x][-<y>]>.json
+    Anything else stays flat (<code>.json): composed papers never hit disk
+    and unknown shapes must not silently misroute.
+    """
+    c = str(code).strip()
+    body = next((b for b in ("jamb", "waec", "neco") if c.startswith(b + "-")), None)
+    if body:
+        tail = c[len(body) + 1:]
+        if tail.endswith("-bank"):
+            tail = tail[: -len("-bank")]
+        return f"{body.upper()}/{tail}.json"
+    if c.startswith("uni-"):
+        stem = c[4:]
+        if stem.endswith("-bank"):
+            stem = stem[: -len("-bank")]
+        school, _, course = stem.rpartition("-")
+        if school and re.fullmatch(r"[a-z]{2,}\d+", course, re.IGNORECASE):
+            return f"{TERTIARY_DIR}/{school}/{course.upper()}.json"
+    if "-post-utme" in c:
+        stem = re.sub(r"-bank$", "", c).replace("-post-utme", "", 1)
+        return f"POST_UTME/{stem}.json"
+    return f"{c}.json"
+
+
 LETTERS = "ABCDEFGH"
 FORBIDDEN_IN_BUNDLE = {"answer", "answers", "correct", "correct_letter",
                        "correctletter", "correctoption", "explanation", "is_correct"}
@@ -288,7 +327,9 @@ def main() -> int:
                         check(v, where)
             check(bundle)
 
-            (QUESTIONS_DIR / f"{code}.json").write_text(
+            dest = QUESTIONS_DIR / bundle_relpath(code)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_text(
                 json.dumps(bundle, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             keys_sub = KEYS_DIR / "mock"
             keys_sub.mkdir(parents=True, exist_ok=True)
@@ -298,10 +339,15 @@ def main() -> int:
             banks_built.append(code)
             report.append(entry)
 
-    # Rebuild the manifest over EVERY bundle on disk (self-healing).
+    # Rebuild the manifest over EVERY bundle on disk (self-healing,
+    # subfolder-aware: WAEC/, JAMB/, NECO/, POST_UTME/,
+    # All_tertiary_Q/<school>/) and refresh questions/index.json — the
+    # code → relative-path map the API loader resolves bundles through.
     exams = []
-    for f in sorted(QUESTIONS_DIR.glob("*.json")):
+    index: dict[str, str] = {}
+    for f in sorted(p for p in QUESTIONS_DIR.rglob("*.json") if p.name != INDEX_NAME):
         b = json.loads(f.read_text(encoding="utf-8"))
+        index[str(b["code"])] = f.relative_to(QUESTIONS_DIR).as_posix()
         raw = f.read_bytes()
         years = sorted({int(q["year"]) for q in b.get("questions", [])
                         if isinstance(q.get("year"), int) and not isinstance(q.get("year"), bool)})
@@ -315,6 +361,18 @@ def main() -> int:
             "bundleSha256": hashlib.sha256(raw).hexdigest(),
             "sizeBytes": len(raw),
         })
+    # Preserve the previous manifest's exam order (list surfaces render in
+    # manifest order; a regen must not reshuffle the UI). Fresh codes append
+    # in scan order.
+    prev_order: dict[str, int] = {}
+    try:
+        prev = json.loads((REPO / "data" / "manifest.json").read_text(encoding="utf-8"))
+        prev_order = {str(e["code"]): i for i, e in enumerate(prev.get("exams", []))}
+    except Exception:  # noqa: BLE001 — first run or unreadable manifest
+        pass
+    scan_order = {e["code"]: i for i, e in enumerate(exams)}
+    exams.sort(key=lambda e: (prev_order.get(e["code"], len(prev_order)), scan_order[e["code"]]))
+
     manifest = {
         "generatedAt": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "version": args.version,
@@ -322,6 +380,9 @@ def main() -> int:
     }
     (REPO / "data" / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (QUESTIONS_DIR / INDEX_NAME).write_text(
+        json.dumps(index, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8")
 
     for entry in report:
         status = "ok" if entry["kept"] else "EMPTY"
@@ -332,7 +393,9 @@ def main() -> int:
         if entry["fixes"][:3]:
             print(f"   fixes: {'; '.join(entry['fixes'][:3])}")
     print(f"manifest: {len(exams)} packs fingerprinted → data/manifest.json")
-    return 0 if any(e["kept"] for e in report) else 1
+    print(f"index: {len(index)} banks mapped → data/questions/{INDEX_NAME}")
+    # Self-heal-only runs (no src banks left) must succeed too.
+    return 0 if not report or any(e["kept"] for e in report) else 1
 
 
 if __name__ == "__main__":

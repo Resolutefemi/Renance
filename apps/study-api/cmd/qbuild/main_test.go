@@ -179,3 +179,22 @@ func hasWarn(iss []Issue, substr string) bool {
 	}
 	return false
 }
+
+func TestPackRelPath(t *testing.T) {
+	cases := map[string]string{
+		"waec-mathematics-bank":      "WAEC/mathematics.json",
+		"waec-mathematics-theory":    "WAEC/mathematics-theory.json",
+		"jamb-english-reading-bank":  "JAMB/english-reading.json",
+		"neco-commerce-bank":         "NECO/commerce.json",
+		"uni-futa-bio101-bank":       "All_tertiary_Q/futa/BIO101.json",
+		"uni-futa-gns103-bank":       "All_tertiary_Q/futa/GNS103.json",
+		"unilag-post-utme-bank":      "POST_UTME/unilag.json",
+		"unilag-post-utme-2020-bank": "POST_UTME/unilag-2020.json",
+		"round-trip-mock":            "round-trip-mock.json",
+	}
+	for code, want := range cases {
+		if got := packRelPath(code); got != want {
+			t.Errorf("packRelPath(%q) = %q, want %q", code, got, want)
+		}
+	}
+}
