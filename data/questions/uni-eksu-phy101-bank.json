@@ -1,0 +1,840 @@
+{
+  "code": "uni-eksu-phy101-bank",
+  "title": "EKSU Phy101 - Physics (Mechanics) | Practice Bank",
+  "version": 1,
+  "questionCount": 69,
+  "totalMarks": 69,
+  "questions": [
+    {
+      "id": "uni-eksu-phy101-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following best describes the relationship between force and acceleration in Newton's second law?",
+      "options": {
+        "A": "Acceleration is inversely proportional to the force.",
+        "B": "Acceleration is directly proportional to the mass.",
+        "C": "Acceleration is directly proportional to the net force and inversely proportional to the mass.",
+        "D": "Force is independent of mass and acceleration."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0002",
+      "type": "mcq",
+      "stem": "If an object's velocity is positive and its acceleration is negative, what is happening to the object's motion?",
+      "options": {
+        "A": "It is speeding up in the positive direction.",
+        "B": "It is slowing down.",
+        "C": "It is moving at a constant velocity.",
+        "D": "It is accelerating in the negative direction."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0003",
+      "type": "mcq",
+      "stem": "In rotational equilibrium, the net torque acting on an object is:",
+      "options": {
+        "A": "Equal to its moment of inertia.",
+        "B": "Equal to its angular acceleration.",
+        "C": "Zero.",
+        "D": "Equal to its angular velocity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0004",
+      "type": "mcq",
+      "stem": "The principle of conservation of momentum states that in the absence of external forces, the total momentum of a system:",
+      "options": {
+        "A": "Increases with time.",
+        "B": "Decreases with time.",
+        "C": "Remains constant.",
+        "D": "Becomes zero."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following is a scalar quantity?",
+      "options": {
+        "A": "Velocity",
+        "B": "Force",
+        "C": "Displacement",
+        "D": "Speed"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0006",
+      "type": "mcq",
+      "stem": "The unit of impulse is equivalent to the unit of:",
+      "options": {
+        "A": "Momentum",
+        "B": "Kinetic energy",
+        "C": "Power",
+        "D": "Work"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0007",
+      "type": "mcq",
+      "stem": "A projectile launched horizontally will have a vertical acceleration due to:",
+      "options": {
+        "A": "Its initial horizontal velocity.",
+        "B": "Air resistance.",
+        "C": "Gravity.",
+        "D": "The horizontal component of its motion."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0008",
+      "type": "mcq",
+      "stem": "The work done by a force is zero if:",
+      "options": {
+        "A": "The force is zero.",
+        "B": "The displacement is zero.",
+        "C": "The force is perpendicular to the displacement.",
+        "D": "All of the above."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0009",
+      "type": "mcq",
+      "stem": "Kinetic energy is the energy of:",
+      "options": {
+        "A": "Position.",
+        "B": "Motion.",
+        "C": "Chemical bonds.",
+        "D": "Nuclear reactions."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0010",
+      "type": "mcq",
+      "stem": "Gravitational potential energy is dependent on:",
+      "options": {
+        "A": "The object's mass and its velocity.",
+        "B": "The object's mass and its height above a reference point.",
+        "C": "The object's temperature and pressure.",
+        "D": "The object's charge and the electric field."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0011",
+      "type": "mcq",
+      "stem": "The escape velocity from Earth is approximately:",
+      "options": {
+        "A": "1.1 km/s",
+        "B": "11.2 km/s",
+        "C": "112 km/s",
+        "D": "1120 km/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0012",
+      "type": "mcq",
+      "stem": "The vector product of two parallel vectors is:",
+      "options": {
+        "A": "A scalar quantity.",
+        "B": "A vector perpendicular to both.",
+        "C": "Zero.",
+        "D": "Equal to the product of their magnitudes."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0013",
+      "type": "mcq",
+      "stem": "The dimensions of force are:",
+      "options": {
+        "A": "[M][L][T]⁻²",
+        "B": "[M][L]⁻¹[T]⁻²",
+        "C": "[M][L]²[T]⁻²",
+        "D": "[M]⁰[L][T]⁻¹"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0014",
+      "type": "mcq",
+      "stem": "If a force of 10 N acts on a mass of 5 kg, what is the resulting acceleration?",
+      "options": {
+        "A": "0.5 m/s²",
+        "B": "2 m/s²",
+        "C": "50 m/s²",
+        "D": "15 m/s²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0015",
+      "type": "mcq",
+      "stem": "An object is moving with constant velocity. What is its acceleration?",
+      "options": {
+        "A": "Positive",
+        "B": "Negative",
+        "C": "Zero",
+        "D": "Undefined"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0016",
+      "type": "mcq",
+      "stem": "Which of the following is an example of uniform circular motion?",
+      "options": {
+        "A": "A car turning a corner.",
+        "B": "A planet orbiting the sun.",
+        "C": "A ball thrown upwards.",
+        "D": "A pendulum swinging."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0017",
+      "type": "mcq",
+      "stem": "The rate of change of momentum is equal to:",
+      "options": {
+        "A": "Velocity.",
+        "B": "Acceleration.",
+        "C": "Net force.",
+        "D": "Impulse."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0018",
+      "type": "mcq",
+      "stem": "If the work done on an object is positive, its kinetic energy:",
+      "options": {
+        "A": "Decreases.",
+        "B": "Increases.",
+        "C": "Remains constant.",
+        "D": "Becomes zero."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0019",
+      "type": "mcq",
+      "stem": "Power is defined as the rate of doing:",
+      "options": {
+        "A": "Work.",
+        "B": "Energy.",
+        "C": "Force.",
+        "D": "Momentum."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0020",
+      "type": "mcq",
+      "stem": "The gravitational force between two objects is:",
+      "options": {
+        "A": "Always repulsive.",
+        "B": "Always attractive.",
+        "C": "Dependent on their relative velocity.",
+        "D": "Dependent on their electric charge."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0021",
+      "type": "mcq",
+      "stem": "The moment of inertia of a point mass is given by:",
+      "options": {
+        "A": "mr",
+        "B": "m/r",
+        "C": "mr²",
+        "D": "m²r"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0022",
+      "type": "mcq",
+      "stem": "Which of the following is a unit of angular velocity?",
+      "options": {
+        "A": "m/s",
+        "B": "rad/s",
+        "C": "kg·m²/s",
+        "D": "N·m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0023",
+      "type": "mcq",
+      "stem": "If the net force on an object is zero, then:",
+      "options": {
+        "A": "Its velocity must be zero.",
+        "B": "Its acceleration must be zero.",
+        "C": "Its momentum must be zero.",
+        "D": "Its kinetic energy must be zero."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0024",
+      "type": "mcq",
+      "stem": "A body is in equilibrium if:",
+      "options": {
+        "A": "The net force is zero.",
+        "B": "The net torque is zero.",
+        "C": "Both the net force and net torque are zero.",
+        "D": "It is at rest."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0025",
+      "type": "mcq",
+      "stem": "The distance traveled by an object is always:",
+      "options": {
+        "A": "Equal to the magnitude of its displacement.",
+        "B": "Greater than or equal to the magnitude of its displacement.",
+        "C": "Less than the magnitude of its displacement.",
+        "D": "Zero."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0026",
+      "type": "mcq",
+      "stem": "The impulse-momentum theorem states that the impulse applied to an object is equal to the change in its:",
+      "options": {
+        "A": "Kinetic energy.",
+        "B": "Potential energy.",
+        "C": "Momentum.",
+        "D": "Velocity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0027",
+      "type": "mcq",
+      "stem": "When a force does negative work on an object, its kinetic energy:",
+      "options": {
+        "A": "Increases.",
+        "B": "Decreases.",
+        "C": "Remains the same.",
+        "D": "Becomes zero."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0028",
+      "type": "mcq",
+      "stem": "For a given displacement, the work done by a force is maximum when the angle between the force and displacement is:",
+      "options": {
+        "A": "0°",
+        "B": "90°",
+        "C": "180°",
+        "D": "45°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0029",
+      "type": "mcq",
+      "stem": "The SI unit of energy is the:",
+      "options": {
+        "A": "Watt",
+        "B": "Joule",
+        "C": "Newton",
+        "D": "Pascal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0030",
+      "type": "mcq",
+      "stem": "The gravitational field strength at a point is defined as the:",
+      "options": {
+        "A": "Force of gravity on a unit mass at that point.",
+        "B": "Potential energy of a unit mass at that point.",
+        "C": "Gravitational constant multiplied by the mass.",
+        "D": "Mass of the Earth divided by the square of the distance."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0031",
+      "type": "mcq",
+      "stem": "The angular momentum of a rigid body rotating about a fixed axis is given by the product of its moment of inertia and its:",
+      "options": {
+        "A": "Linear velocity.",
+        "B": "Angular velocity.",
+        "C": "Linear acceleration.",
+        "D": "Angular acceleration."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0032",
+      "type": "mcq",
+      "stem": "The scalar product of two vectors results in a:",
+      "options": {
+        "A": "Vector.",
+        "B": "Scalar.",
+        "C": "Matrix.",
+        "D": "Tensor."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0033",
+      "type": "mcq",
+      "stem": "The dimensions of angular momentum are the same as the dimensions of:",
+      "options": {
+        "A": "Torque.",
+        "B": "Power.",
+        "C": "Impulse.",
+        "D": "Energy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0034",
+      "type": "mcq",
+      "stem": "A car is moving at 20 m/s. If the driver applies the brakes and the car decelerates at 4 m/s², how long will it take to stop?",
+      "options": {
+        "A": "4 seconds",
+        "B": "5 seconds",
+        "C": "10 seconds",
+        "D": "20 seconds"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0035",
+      "type": "mcq",
+      "stem": "An object is thrown vertically upwards. At its highest point, its velocity is:",
+      "options": {
+        "A": "Maximum.",
+        "B": "Minimum and positive.",
+        "C": "Zero.",
+        "D": "Minimum and negative."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a fundamental unit in the SI system?",
+      "options": {
+        "A": "Meter",
+        "B": "Kilogram",
+        "C": "Newton",
+        "D": "Second"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0037",
+      "type": "mcq",
+      "stem": "The work done by a centripetal force on an object moving in a circle is:",
+      "options": {
+        "A": "Positive.",
+        "B": "Negative.",
+        "C": "Zero.",
+        "D": "Dependent on the speed."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0038",
+      "type": "mcq",
+      "stem": "If the momentum of an object doubles, its kinetic energy:",
+      "options": {
+        "A": "Doubles.",
+        "B": "Becomes four times its original value.",
+        "C": "Remains the same.",
+        "D": "Halves."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0039",
+      "type": "mcq",
+      "stem": "The SI unit of pressure is the:",
+      "options": {
+        "A": "Joule per square meter.",
+        "B": "Newton per meter.",
+        "C": "Pascal.",
+        "D": "Watt per meter."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0040",
+      "type": "mcq",
+      "stem": "The gravitational force between two masses is proportional to the product of their masses and inversely proportional to the square of the distance between them. This is known as:",
+      "options": {
+        "A": "Newton's First Law.",
+        "B": "Newton's Second Law.",
+        "C": "Newton's Law of Universal Gravitation.",
+        "D": "Kepler's Third Law."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0041",
+      "type": "mcq",
+      "stem": "A rigid body rotates with a constant angular velocity. This means its angular acceleration is:",
+      "options": {
+        "A": "Constant and non-zero.",
+        "B": "Variable.",
+        "C": "Zero.",
+        "D": "Infinite."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0042",
+      "type": "mcq",
+      "stem": "The cross product of a vector with itself is always:",
+      "options": {
+        "A": "The vector itself.",
+        "B": "A scalar.",
+        "C": "Zero.",
+        "D": "The negative of the vector."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0043",
+      "type": "mcq",
+      "stem": "If the speed of an object is doubled, its kinetic energy is:",
+      "options": {
+        "A": "Halved.",
+        "B": "Doubled.",
+        "C": "Tripled.",
+        "D": "Quadrupled."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0044",
+      "type": "mcq",
+      "stem": "A body is moving with constant speed in a circular path. The net force acting on it is:",
+      "options": {
+        "A": "Zero.",
+        "B": "Tangential to the path.",
+        "C": "Directed towards the center of the circle.",
+        "D": "Directed away from the center of the circle."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0045",
+      "type": "mcq",
+      "stem": "The SI unit of power is the:",
+      "options": {
+        "A": "Joule.",
+        "B": "Watt.",
+        "C": "Newton-meter.",
+        "D": "Coulomb."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0046",
+      "type": "mcq",
+      "stem": "Which of the following is a vector quantity?",
+      "options": {
+        "A": "Mass",
+        "B": "Time",
+        "C": "Velocity",
+        "D": "Temperature"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0047",
+      "type": "mcq",
+      "stem": "The work-energy theorem states that the net work done on an object is equal to the change in its:",
+      "options": {
+        "A": "Momentum.",
+        "B": "Kinetic energy.",
+        "C": "Potential energy.",
+        "D": "Angular momentum."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0048",
+      "type": "mcq",
+      "stem": "If the distance between two masses is tripled, the gravitational force between them becomes:",
+      "options": {
+        "A": "Three times weaker.",
+        "B": "Nine times weaker.",
+        "C": "Three times stronger.",
+        "D": "Nine times stronger."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0049",
+      "type": "mcq",
+      "stem": "The period of a satellite in a circular orbit around the Earth is:",
+      "options": {
+        "A": "Independent of its orbital radius.",
+        "B": "Directly proportional to its orbital radius.",
+        "C": "Proportional to the square root of its orbital radius.",
+        "D": "Proportional to the cube root of its orbital radius."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0050",
+      "type": "mcq",
+      "stem": "The torque acting on a rigid body is equal to the product of its moment of inertia and its:",
+      "options": {
+        "A": "Linear acceleration.",
+        "B": "Angular velocity.",
+        "C": "Angular acceleration.",
+        "D": "Linear velocity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0051",
+      "type": "mcq",
+      "stem": "The scalar product of two perpendicular vectors is:",
+      "options": {
+        "A": "Equal to the product of their magnitudes.",
+        "B": "A non-zero scalar.",
+        "C": "Zero.",
+        "D": "A vector."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0052",
+      "type": "mcq",
+      "stem": "If a force of 50 N is applied over a distance of 10 m, and the force is parallel to the displacement, the work done is:",
+      "options": {
+        "A": "5 J",
+        "B": "50 J",
+        "C": "500 J",
+        "D": "5000 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0053",
+      "type": "mcq",
+      "stem": "Which of the following is a unit of angular momentum?",
+      "options": {
+        "A": "N·m",
+        "B": "kg·m²/s",
+        "C": "J·s",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0054",
+      "type": "mcq",
+      "stem": "An object is in free fall. If air resistance is neglected, its acceleration is:",
+      "options": {
+        "A": "Zero.",
+        "B": "Constant and equal to g.",
+        "C": "Variable, depending on its speed.",
+        "D": "Equal to its velocity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0055",
+      "type": "mcq",
+      "stem": "The center of mass of a uniform rod lies at its:",
+      "options": {
+        "A": "One end.",
+        "B": "Middle.",
+        "C": "One-quarter mark.",
+        "D": "It depends on the material."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0056",
+      "type": "mcq",
+      "stem": "If the velocity of an object is constant, its acceleration is:",
+      "options": {
+        "A": "Constant and non-zero.",
+        "B": "Zero.",
+        "C": "Variable.",
+        "D": "Undefined."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0057",
+      "type": "mcq",
+      "stem": "The SI unit of angular velocity is:",
+      "options": {
+        "A": "Revolutions per minute.",
+        "B": "Degrees per second.",
+        "C": "Radians per second.",
+        "D": "Cycles per second."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0058",
+      "type": "mcq",
+      "stem": "The work done by friction is always:",
+      "options": {
+        "A": "Positive.",
+        "B": "Negative.",
+        "C": "Zero.",
+        "D": "Dependent on the speed."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following quantities is conserved in an elastic collision?",
+      "options": {
+        "A": "Momentum only.",
+        "B": "Kinetic energy only.",
+        "C": "Both momentum and kinetic energy.",
+        "D": "Neither momentum nor kinetic energy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0060",
+      "type": "mcq",
+      "stem": "The magnitude of the gravitational force between two objects is directly proportional to the product of their masses and inversely proportional to the square of the distance between them. This statement describes:",
+      "options": {
+        "A": "Newton's First Law of Motion.",
+        "B": "Newton's Second Law of Motion.",
+        "C": "Newton's Law of Universal Gravitation.",
+        "D": "Hooke's Law."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0061",
+      "type": "mcq",
+      "stem": "A particle is moving in a straight line. If its velocity is positive and its acceleration is also positive, the particle is:",
+      "options": {
+        "A": "Slowing down.",
+        "B": "Speeding up.",
+        "C": "Moving at a constant velocity.",
+        "D": "Changing direction."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0062",
+      "type": "mcq",
+      "stem": "The unit of angular acceleration is:",
+      "options": {
+        "A": "rad/s",
+        "B": "rad/s²",
+        "C": "m/s²",
+        "D": "N·m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0063",
+      "type": "mcq",
+      "stem": "If two vectors are perpendicular, their scalar product is:",
+      "options": {
+        "A": "Equal to the product of their magnitudes.",
+        "B": "A non-zero scalar.",
+        "C": "Zero.",
+        "D": "A vector."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0064",
+      "type": "mcq",
+      "stem": "The SI unit of impulse is:",
+      "options": {
+        "A": "kg·m/s",
+        "B": "N·s",
+        "C": "J·s",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0065",
+      "type": "mcq",
+      "stem": "Which of the following is a non-conservative force?",
+      "options": {
+        "A": "Gravitational force",
+        "B": "Elastic spring force",
+        "C": "Friction",
+        "D": "Electrostatic force"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0066",
+      "type": "mcq",
+      "stem": "If the mass of an object is doubled while the force acting on it remains the same, its acceleration will be:",
+      "options": {
+        "A": "Doubled.",
+        "B": "Halved.",
+        "C": "Quadrupled.",
+        "D": "Remain the same."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0067",
+      "type": "mcq",
+      "stem": "The work done by a force that causes an object to move in a circular path with constant speed is:",
+      "options": {
+        "A": "Positive.",
+        "B": "Negative.",
+        "C": "Zero.",
+        "D": "Dependent on the radius."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0068",
+      "type": "mcq",
+      "stem": "The SI unit of angular momentum is:",
+      "options": {
+        "A": "kg·m²/s",
+        "B": "N·m·s",
+        "C": "J·s",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy101-bank-0069",
+      "type": "mcq",
+      "stem": "If the distance between two masses is halved, the gravitational force between them becomes:",
+      "options": {
+        "A": "Half as strong.",
+        "B": "Twice as strong.",
+        "C": "Four times as strong.",
+        "D": "One-fourth as strong."
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 70,
+  "category": "university",
+  "body": "University Modules"
+}

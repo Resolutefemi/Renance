@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-phy201-bank",
+  "title": "EKSU Phy201 - Elementary Modern Physics | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-phy201-bank-0001",
+      "type": "mcq",
+      "stem": "Which principle states that it is impossible to simultaneously determine both the exact position and momentum of an electron?",
+      "options": {
+        "A": "Pauli's Exclusion Principle",
+        "B": "Heisenberg's Uncertainty Principle",
+        "C": "Aufbau Principle",
+        "D": "Bohr's Postulate"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0002",
+      "type": "mcq",
+      "stem": "The minimum energy required to remove an electron completely from an atom in its ground state is known as:",
+      "options": {
+        "A": "Excitation Energy",
+        "B": "Kinetic Energy",
+        "C": "Ionization Energy",
+        "D": "Potential Energy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following defines the 'ground state' of an atom?",
+      "options": {
+        "A": "The state where the atom is ionized",
+        "B": "The highest possible energy level",
+        "C": "The lowest permitted energy level",
+        "D": "A state of continuous radiation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0004",
+      "type": "mcq",
+      "stem": "Which principle states that no two electrons in an atom can have the same four quantum numbers?",
+      "options": {
+        "A": "Hund's Rule",
+        "B": "Heisenberg's Principle",
+        "C": "Pauli's Exclusion Principle",
+        "D": "Rydberg's Rule"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0005",
+      "type": "mcq",
+      "stem": "In the hydrogen atom, if an electron is in the third excited state, what is its principal quantum number (n)?",
+      "options": {
+        "A": "n = 1",
+        "B": "n = 2",
+        "C": "n = 3",
+        "D": "n = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0006",
+      "type": "mcq",
+      "stem": "A photon is emitted with the shortest possible wavelength when an electron in a hydrogen atom transitions to the ground state from which level?",
+      "options": {
+        "A": "n = 2",
+        "B": "n = infinity",
+        "C": "n = 3",
+        "D": "n = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0007",
+      "type": "mcq",
+      "stem": "Which series of the hydrogen emission spectrum corresponds to electron transitions down to the n=1 level?",
+      "options": {
+        "A": "Balmer series",
+        "B": "Paschen series",
+        "C": "Lyman series",
+        "D": "Brackett series"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0008",
+      "type": "mcq",
+      "stem": "Which series of the hydrogen emission spectrum lies primarily in the visible region of the electromagnetic spectrum?",
+      "options": {
+        "A": "Lyman series",
+        "B": "Balmer series",
+        "C": "Paschen series",
+        "D": "Pfund series"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0009",
+      "type": "mcq",
+      "stem": "The principal quantum number (n) primarily determines the:",
+      "options": {
+        "A": "Shape of the orbital",
+        "B": "Orientation of the orbital",
+        "C": "Spin of the electron",
+        "D": "Energy level and size of the orbital"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0010",
+      "type": "mcq",
+      "stem": "Which quantum number describes the shape of the atomic orbital?",
+      "options": {
+        "A": "Principal quantum number (n)",
+        "B": "Orbital/Azimuthal quantum number (l)",
+        "C": "Magnetic quantum number (ml)",
+        "D": "Spin quantum number (ms)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0011",
+      "type": "mcq",
+      "stem": "What are the allowed values for the orbital quantum number (l) for a given principal quantum number n?",
+      "options": {
+        "A": "1 to n",
+        "B": "0 to n-1",
+        "C": "-l to +l",
+        "D": "-1/2 and +1/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0012",
+      "type": "mcq",
+      "stem": "Which quantum number specifies the orientation of an orbital in space relative to an external magnetic field?",
+      "options": {
+        "A": "Principal",
+        "B": "Azimuthal",
+        "C": "Magnetic",
+        "D": "Spin"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0013",
+      "type": "mcq",
+      "stem": "The allowed states for the electron spin quantum number (ms) are:",
+      "options": {
+        "A": "0 and 1",
+        "B": "-1 and +1",
+        "C": "+1/2 and -1/2",
+        "D": "1 to n"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0014",
+      "type": "mcq",
+      "stem": "According to Einstein's first postulate of Special Relativity, the laws of physics are the same in all:",
+      "options": {
+        "A": "Accelerating frames",
+        "B": "Inertial frames of reference",
+        "C": "Gravitational fields",
+        "D": "Non-inertial frames"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0015",
+      "type": "mcq",
+      "stem": "Einstein's second postulate of Special Relativity states that the speed of light in a vacuum is:",
+      "options": {
+        "A": "Dependent on the observer's speed",
+        "B": "Dependent on the source's speed",
+        "C": "Constant for all observers",
+        "D": "Infinite"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0016",
+      "type": "mcq",
+      "stem": "The phenomenon where a moving clock is measured to tick more slowly than a stationary clock is known as:",
+      "options": {
+        "A": "Length contraction",
+        "B": "Time dilation",
+        "C": "Mass increase",
+        "D": "Simultaneity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0017",
+      "type": "mcq",
+      "stem": "The Lorentz velocity transformation equations are used to:",
+      "options": {
+        "A": "Transform velocities between classical Galilean frames",
+        "B": "Relate velocities of an object as measured in two different inertial frames moving at relativistic speeds",
+        "C": "Calculate the acceleration of light",
+        "D": "Determine the mass defect"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0018",
+      "type": "mcq",
+      "stem": "If an object is moving at a speed approaching the speed of light, its length measured by a stationary observer along the direction of motion will appear:",
+      "options": {
+        "A": "Longer",
+        "B": "Shorter",
+        "C": "Unchanged",
+        "D": "Infinite"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0019",
+      "type": "mcq",
+      "stem": "The relativistic momentum (p) of a particle with rest mass m_0 moving at velocity v is given by:",
+      "options": {
+        "A": "p = m_0 * v",
+        "B": "p = m_0 * c",
+        "C": "p = (m_0 * v) / sqrt(1 - v^2/c^2)",
+        "D": "p = 0.5 * m_0 * v^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0020",
+      "type": "mcq",
+      "stem": "What is the rest mass energy (E_0) of a particle?",
+      "options": {
+        "A": "0.5 * m_0 * v^2",
+        "B": "m_0 * c^2",
+        "C": "h * f",
+        "D": "p * c"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0021",
+      "type": "mcq",
+      "stem": "Two lightning bolts strike the ends of a moving train simultaneously for an observer on the ground. An observer on the train will find the strikes to be:",
+      "options": {
+        "A": "Simultaneous",
+        "B": "Not simultaneous",
+        "C": "Invisible",
+        "D": "Infinitely separated in time"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0022",
+      "type": "mcq",
+      "stem": "The invariance of an equation in physics implies that the equation:",
+      "options": {
+        "A": "Takes the same mathematical form in all inertial frames",
+        "B": "Is only valid at non-relativistic speeds",
+        "C": "Changes depending on the observer's velocity",
+        "D": "Is only valid in a vacuum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0023",
+      "type": "mcq",
+      "stem": "Muons created in the upper atmosphere can reach the Earth's surface before decaying due to which relativistic effect?",
+      "options": {
+        "A": "Mass increase",
+        "B": "Length expansion",
+        "C": "Time dilation",
+        "D": "Doppler effect"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0024",
+      "type": "mcq",
+      "stem": "The energy of a photon is directly proportional to its:",
+      "options": {
+        "A": "Wavelength",
+        "B": "Velocity",
+        "C": "Frequency",
+        "D": "Mass"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0025",
+      "type": "mcq",
+      "stem": "The equation linking the energy of a photon (E) and its frequency (f) is:",
+      "options": {
+        "A": "E = mc^2",
+        "B": "E = hf",
+        "C": "E = hc",
+        "D": "E = f/h"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0026",
+      "type": "mcq",
+      "stem": "What is the value of Planck's constant (h)?",
+      "options": {
+        "A": "6.626 x 10^-34 J s",
+        "B": "3.0 x 10^8 m/s",
+        "C": "1.6 x 10^-19 C",
+        "D": "9.11 x 10^-31 kg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0027",
+      "type": "mcq",
+      "stem": "In the photoelectric effect, the minimum frequency of incident light required to eject an electron from a metal surface is called the:",
+      "options": {
+        "A": "Resonant frequency",
+        "B": "Cutoff frequency",
+        "C": "Threshold frequency",
+        "D": "Work frequency"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0028",
+      "type": "mcq",
+      "stem": "The 'work function' of a metal is the:",
+      "options": {
+        "A": "Maximum kinetic energy of emitted electrons",
+        "B": "Minimum energy required to eject an electron",
+        "C": "Total energy of the incident photon",
+        "D": "Rate of electron emission"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0029",
+      "type": "mcq",
+      "stem": "If the energy of an incident photon is less than the work function of a metal, what happens?",
+      "options": {
+        "A": "Electrons are emitted with low kinetic energy",
+        "B": "Electrons are emitted with zero kinetic energy",
+        "C": "No electrons are emitted",
+        "D": "The metal absorbs the photon and gets cold"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0030",
+      "type": "mcq",
+      "stem": "According to Einstein's photoelectric equation, the maximum kinetic energy (K_max) of an emitted photoelectron is:",
+      "options": {
+        "A": "K_max = hf + Work Function",
+        "B": "K_max = hf - Work Function",
+        "C": "K_max = Work Function - hf",
+        "D": "K_max = h / f"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0031",
+      "type": "mcq",
+      "stem": "The stopping potential in a photoelectric experiment is used to measure the:",
+      "options": {
+        "A": "Maximum kinetic energy of the photoelectrons",
+        "B": "Intensity of the incident light",
+        "C": "Work function of the metal directly",
+        "D": "Charge of the electron"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0032",
+      "type": "mcq",
+      "stem": "Increasing the intensity of incident light in a photoelectric experiment (keeping frequency constant and above threshold) increases the:",
+      "options": {
+        "A": "Maximum kinetic energy of electrons",
+        "B": "Number of photoelectrons emitted per second",
+        "C": "Stopping potential",
+        "D": "Work function of the material"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0033",
+      "type": "mcq",
+      "stem": "The de Broglie hypothesis suggests that:",
+      "options": {
+        "A": "Light consists of particles",
+        "B": "Particles of matter have wave-like properties",
+        "C": "Energy is continuous",
+        "D": "Electrons orbit the nucleus in fixed paths"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0034",
+      "type": "mcq",
+      "stem": "The de Broglie wavelength (lambda) of a particle with momentum (p) is given by:",
+      "options": {
+        "A": "lambda = p/h",
+        "B": "lambda = h*p",
+        "C": "lambda = h/p",
+        "D": "lambda = p*c"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0035",
+      "type": "mcq",
+      "stem": "Which experiment verified the wave nature of electrons by demonstrating electron diffraction?",
+      "options": {
+        "A": "Michelson-Morley experiment",
+        "B": "Davisson-Germer experiment",
+        "C": "Rutherford scattering experiment",
+        "D": "Millikan oil-drop experiment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0036",
+      "type": "mcq",
+      "stem": "The Compton effect provides evidence for the:",
+      "options": {
+        "A": "Wave nature of light",
+        "B": "Particle nature of light",
+        "C": "Wave nature of matter",
+        "D": "Quantization of atomic energy levels"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0037",
+      "type": "mcq",
+      "stem": "In the Compton effect, an X-ray photon scatters off a free electron. The scattered photon has:",
+      "options": {
+        "A": "A shorter wavelength than the incident photon",
+        "B": "A longer wavelength than the incident photon",
+        "C": "The same wavelength as the incident photon",
+        "D": "No wavelength"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0038",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a fundamental property of a photon?",
+      "options": {
+        "A": "It travels at the speed of light",
+        "B": "It has zero rest mass",
+        "C": "It carries electrical charge",
+        "D": "It carries momentum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0039",
+      "type": "mcq",
+      "stem": "The Rydberg constant is used primarily to calculate:",
+      "options": {
+        "A": "The speed of light in a vacuum",
+        "B": "The wavelengths of spectral lines in hydrogen",
+        "C": "The mass of a proton",
+        "D": "The energy of a free electron"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0040",
+      "type": "mcq",
+      "stem": "What happens to the spacing between adjacent energy levels in a hydrogen atom as the principal quantum number (n) increases?",
+      "options": {
+        "A": "It increases",
+        "B": "It decreases",
+        "C": "It remains constant",
+        "D": "It fluctuates"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0041",
+      "type": "mcq",
+      "stem": "The total energy of an electron in a stable orbit of a hydrogen atom is:",
+      "options": {
+        "A": "Zero",
+        "B": "Positive",
+        "C": "Negative",
+        "D": "Infinite"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0042",
+      "type": "mcq",
+      "stem": "When an electron transitions from a higher energy state to a lower energy state, it:",
+      "options": {
+        "A": "Absorbs a photon",
+        "B": "Emits a photon",
+        "C": "Absorbs a proton",
+        "D": "Emits an electron"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0043",
+      "type": "mcq",
+      "stem": "The momentum of a photon with wavelength lambda is:",
+      "options": {
+        "A": "p = h / lambda",
+        "B": "p = h * lambda",
+        "C": "p = c / lambda",
+        "D": "p = lambda / h"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0044",
+      "type": "mcq",
+      "stem": "If a particle's kinetic energy increases, its de Broglie wavelength:",
+      "options": {
+        "A": "Increases",
+        "B": "Decreases",
+        "C": "Remains the same",
+        "D": "Becomes zero"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0045",
+      "type": "mcq",
+      "stem": "The mass of an electron at rest is approximately:",
+      "options": {
+        "A": "1.67 x 10^-27 kg",
+        "B": "9.11 x 10^-31 kg",
+        "C": "1.60 x 10^-19 kg",
+        "D": "3.00 x 10^8 kg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0046",
+      "type": "mcq",
+      "stem": "If an electron's speed is 0.9c, its relativistic mass is:",
+      "options": {
+        "A": "Equal to its rest mass",
+        "B": "Less than its rest mass",
+        "C": "Greater than its rest mass",
+        "D": "Zero"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0047",
+      "type": "mcq",
+      "stem": "The mathematical form of the Heisenberg Uncertainty Principle relating position (x) and momentum (p) is:",
+      "options": {
+        "A": "Delta x * Delta p >= h / 4*pi",
+        "B": "Delta x * Delta p = 0",
+        "C": "Delta x / Delta p = h",
+        "D": "Delta x * Delta p <= h"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0048",
+      "type": "mcq",
+      "stem": "Which of the following is an implication of the Heisenberg Uncertainty Principle?",
+      "options": {
+        "A": "Electrons move in precise planetary orbits",
+        "B": "The concept of precise electron orbits is invalid",
+        "C": "Energy is perfectly conserved at all time scales",
+        "D": "Light is strictly a wave"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0049",
+      "type": "mcq",
+      "stem": "A 5000 Angstrom (Å) photon corresponds to a wavelength of:",
+      "options": {
+        "A": "500 nm",
+        "B": "50 nm",
+        "C": "5 nm",
+        "D": "5000 nm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0050",
+      "type": "mcq",
+      "stem": "1 Electron-volt (eV) is equivalent to:",
+      "options": {
+        "A": "1.6 x 10^-19 Joules",
+        "B": "6.626 x 10^-34 Joules",
+        "C": "3 x 10^8 Joules",
+        "D": "9.11 x 10^-31 Joules"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0051",
+      "type": "mcq",
+      "stem": "If the threshold frequency of a metal is 5.0 x 10^14 Hz, and it is illuminated with light of 6.0 x 10^15 Hz, will photoelectrons be emitted?",
+      "options": {
+        "A": "Yes, because incident frequency > threshold frequency",
+        "B": "No, because incident frequency > threshold frequency",
+        "C": "Yes, because incident frequency < threshold frequency",
+        "D": "No, because incident frequency < threshold frequency"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0052",
+      "type": "mcq",
+      "stem": "The formula to calculate the energy of a hydrogen atom at energy level n is proportional to:",
+      "options": {
+        "A": "1/n",
+        "B": "n^2",
+        "C": "1/n^2",
+        "D": "n"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0053",
+      "type": "mcq",
+      "stem": "The continuous X-ray spectrum produced in an X-ray tube is primarily due to:",
+      "options": {
+        "A": "Electron transitions between inner shells",
+        "B": "Bremsstrahlung (braking radiation) of decelerating electrons",
+        "C": "Radioactive decay of the target",
+        "D": "The photoelectric effect"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0054",
+      "type": "mcq",
+      "stem": "The characteristic X-ray spectrum is produced when:",
+      "options": {
+        "A": "A free electron is captured by a nucleus",
+        "B": "An incident electron ejects an inner-shell electron, and an outer-shell electron drops down to fill the vacancy",
+        "C": "An atom absorbs an X-ray photon",
+        "D": "A nucleus decays spontaneously"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0055",
+      "type": "mcq",
+      "stem": "Isotopes are atoms of the same element that have the same number of protons but different numbers of:",
+      "options": {
+        "A": "Electrons",
+        "B": "Positrons",
+        "C": "Neutrons",
+        "D": "Photons"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0056",
+      "type": "mcq",
+      "stem": "In nuclear physics, the mass defect of a nucleus is defined as:",
+      "options": {
+        "A": "The total mass of the nucleus",
+        "B": "The difference between the sum of the masses of its individual nucleons and the actual mass of the nucleus",
+        "C": "The mass of the electrons orbiting the nucleus",
+        "D": "The mass lost due to beta decay"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0057",
+      "type": "mcq",
+      "stem": "Nuclear binding energy is calculated from the mass defect using which equation?",
+      "options": {
+        "A": "E = 1/2 mv^2",
+        "B": "E = hf",
+        "C": "E = mc^2",
+        "D": "E = mgh"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0058",
+      "type": "mcq",
+      "stem": "Which of the following radioactive decays emits a particle identical to a helium nucleus?",
+      "options": {
+        "A": "Alpha decay",
+        "B": "Beta decay",
+        "C": "Gamma decay",
+        "D": "Positron emission"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following radioactive decays involves the emission of high-energy electromagnetic radiation?",
+      "options": {
+        "A": "Alpha decay",
+        "B": "Beta decay",
+        "C": "Gamma decay",
+        "D": "Neutron emission"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-phy201-bank-0060",
+      "type": "mcq",
+      "stem": "The half-life of a radioactive substance is the time required for:",
+      "options": {
+        "A": "Half of the substance to be created",
+        "B": "The substance to completely disappear",
+        "C": "Half of the radioactive nuclei in a sample to decay",
+        "D": "The temperature of the substance to halve"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

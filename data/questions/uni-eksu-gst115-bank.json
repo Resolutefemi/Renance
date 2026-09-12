@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-gst115-bank",
+  "title": "EKSU GST 115 - Introduction to Computer Application and Information Technology | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-gst115-bank-0001",
+      "type": "mcq",
+      "stem": "Which historical event is most directly linked to the early development of programmable computing devices like the Harvard Mark I?",
+      "options": {
+        "A": "The Industrial Revolution",
+        "B": "The Cold War",
+        "C": "World War II",
+        "D": "The Space Race"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0002",
+      "type": "mcq",
+      "stem": "In the context of computer generations, what technological advancement primarily characterized the second generation of computers?",
+      "options": {
+        "A": "Integrated Circuits",
+        "B": "Vacuum Tubes",
+        "C": "Transistors",
+        "D": "Microprocessors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0003",
+      "type": "mcq",
+      "stem": "The concept of a \"closed system\" in computing implies which of the following about its interaction with the environment?",
+      "options": {
+        "A": "It actively exchanges information and energy with its surroundings.",
+        "B": "It operates independently with minimal external influence.",
+        "C": "It is designed to adapt its processes based on environmental feedback.",
+        "D": "It is inherently unstable and prone to external disruption."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0004",
+      "type": "mcq",
+      "stem": "Which of the following is a fundamental characteristic of a \"digital\" computer system as opposed to an \"analog\" system?",
+      "options": {
+        "A": "It processes continuous physical quantities.",
+        "B": "It uses discrete numerical values for computation.",
+        "C": "Its output is always an approximation of the input.",
+        "D": "It is primarily used for measuring physical phenomena."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0005",
+      "type": "mcq",
+      "stem": "The development of UNIVAC I, a significant early electronic computer, is most closely associated with which of the following?",
+      "options": {
+        "A": "The need for advanced cryptography during wartime.",
+        "B": "The automation of complex scientific calculations.",
+        "C": "The processing of large volumes of census data.",
+        "D": "The creation of early graphical user interfaces."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0006",
+      "type": "mcq",
+      "stem": "In the context of operating systems, what is the primary purpose of \"context switching\"?",
+      "options": {
+        "A": "To manage memory allocation for multiple applications.",
+        "B": "To allow the CPU to switch between different tasks efficiently.",
+        "C": "To provide a graphical interface for user interaction.",
+        "D": "To ensure data integrity during file transfers."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0007",
+      "type": "mcq",
+      "stem": "The \".com\" domain extension, commonly seen in web addresses, traditionally signifies a connection to which type of organization?",
+      "options": {
+        "A": "Educational Institutions",
+        "B": "Government Agencies",
+        "C": "Commercial Businesses",
+        "D": "Non-profit Organizations"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0008",
+      "type": "mcq",
+      "stem": "When discussing web navigation, what is the role of a \"search engine\"?",
+      "options": {
+        "A": "To display the content of a specific web page.",
+        "B": "To translate web page code into a readable format.",
+        "C": "To index and retrieve information from the World Wide Web.",
+        "D": "To manage the connection between a user's computer and the internet."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0009",
+      "type": "mcq",
+      "stem": "The Shannon-Weaver communication model, when applied to information technology, identifies \"noise\" as a factor that:",
+      "options": {
+        "A": "Enhances the clarity of the message.",
+        "B": "Distorts or interferes with the transmission of information.",
+        "C": "Is a necessary component for encoding data.",
+        "D": "Represents the intended meaning of the sender."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0010",
+      "type": "mcq",
+      "stem": "Which of the following is a key characteristic of an \"open system\" in contrast to a \"closed system\"?",
+      "options": {
+        "A": "It is entirely self-contained and isolated.",
+        "B": "It actively interacts and exchanges with its environment.",
+        "C": "Its internal processes are completely predictable.",
+        "D": "It is designed for minimal external dependencies."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0011",
+      "type": "mcq",
+      "stem": "The invention of the transistor during the second generation of computers led to significant improvements in:",
+      "options": {
+        "A": "Processing speed and power consumption.",
+        "B": "The size and reliability of computing devices.",
+        "C": "The development of graphical user interfaces.",
+        "D": "The ability to perform complex mathematical operations."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0012",
+      "type": "mcq",
+      "stem": "What is the primary function of a \"web browser\"?",
+      "options": {
+        "A": "To store digital information permanently.",
+        "B": "To translate human-readable text into binary code.",
+        "C": "To access and display information from the World Wide Web.",
+        "D": "To manage network connections between computers."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0013",
+      "type": "mcq",
+      "stem": "The term \"information explosion\" in the context of modern technology refers to:",
+      "options": {
+        "A": "The rapid increase in the volume and diversity of available information.",
+        "B": "The sudden collapse of data storage systems.",
+        "C": "A decrease in the speed of information dissemination.",
+        "D": "The monopolization of information by a few entities."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0014",
+      "type": "mcq",
+      "stem": "Which of the following is a primary function of a \"scheduler\" in a multitasking operating system?",
+      "options": {
+        "A": "To manage hardware resources like printers.",
+        "B": "To determine which process gets to use the CPU and for how long.",
+        "C": "To encrypt sensitive user data.",
+        "D": "To facilitate communication between different network devices."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0015",
+      "type": "mcq",
+      "stem": "The \".org\" domain extension is typically associated with which type of entity?",
+      "options": {
+        "A": "Commercial Enterprises",
+        "B": "Government Organizations",
+        "C": "Non-profit Organizations",
+        "D": "Educational Institutions"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0016",
+      "type": "mcq",
+      "stem": "In the context of digital imaging, what device is used to convert a physical document or image into a digital format?",
+      "options": {
+        "A": "Printer",
+        "B": "Scanner",
+        "C": "Camera",
+        "D": "Projector"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0017",
+      "type": "mcq",
+      "stem": "Which of the following is NOT considered a primary storage device?",
+      "options": {
+        "A": "Hard Disk Drive",
+        "B": "RAM (Random Access Memory)",
+        "C": "Solid State Drive",
+        "D": "USB Flash Drive"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0018",
+      "type": "mcq",
+      "stem": "The development of the first electronic general-purpose computer, ENIAC, was a significant milestone during which historical period?",
+      "options": {
+        "A": "The Great Depression",
+        "B": "The Cold War",
+        "C": "World War II",
+        "D": "The Renaissance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0019",
+      "type": "mcq",
+      "stem": "What does the acronym \"TCP\" stand for in the context of internet protocols?",
+      "options": {
+        "A": "Transfer Control Protocol",
+        "B": "Transmission Control Protocol",
+        "C": "Technical Communication Protocol",
+        "D": "Transmission Connection Protocol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0020",
+      "type": "mcq",
+      "stem": "MS Word, by default, saves documents in which file format?",
+      "options": {
+        "A": ".txt",
+        "B": ".rtf",
+        "C": ".docx",
+        "D": ".pdf"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0021",
+      "type": "mcq",
+      "stem": "The term \"GUI\" is an acronym for what common computer interface concept?",
+      "options": {
+        "A": "General User Interface",
+        "B": "Graphical User Interface",
+        "C": "Global Utility Interface",
+        "D": "Guided User Interaction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0022",
+      "type": "mcq",
+      "stem": "Which of the following is a core function of a \"database management system\" (DBMS)?",
+      "options": {
+        "A": "Creating visual presentations.",
+        "B": "Managing and organizing large amounts of data.",
+        "C": "Editing video content.",
+        "D": "Browsing the internet."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0023",
+      "type": "mcq",
+      "stem": "The concept of \"teleconferencing\" primarily facilitates which type of communication?",
+      "options": {
+        "A": "One-way broadcast of information.",
+        "B": "Asynchronous text-based messaging.",
+        "C": "Real-time audio and video interaction between multiple locations.",
+        "D": "Storing and retrieving digital files."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0024",
+      "type": "mcq",
+      "stem": "What does the acronym \"DVD\" commonly stand for?",
+      "options": {
+        "A": "Digital Video Device",
+        "B": "Dynamic Versatile Disk",
+        "C": "Digital Versatile Disc",
+        "D": "Data Volume Drive"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0025",
+      "type": "mcq",
+      "stem": "In the context of the Shannon-Weaver model, the \"source\" is responsible for:",
+      "options": {
+        "A": "Receiving the message.",
+        "B": "Encoding and transmitting the message.",
+        "C": "Interpreting the message.",
+        "D": "Introducing interference into the message."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0026",
+      "type": "mcq",
+      "stem": "The term \"web surfing\" is a colloquialism for:",
+      "options": {
+        "A": "Downloading large files from the internet.",
+        "B": "Navigating and exploring various websites on the World Wide Web.",
+        "C": "Sending and receiving emails.",
+        "D": "Creating new web pages."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0027",
+      "type": "mcq",
+      "stem": "Which of the following is a key characteristic of a \"deterministic system\"?",
+      "options": {
+        "A": "Its behavior is unpredictable and random.",
+        "B": "Its future state is entirely determined by its current state and inputs.",
+        "C": "It actively adapts to environmental changes.",
+        "D": "It operates with a high degree of uncertainty."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0028",
+      "type": "mcq",
+      "stem": "The development of the third generation of computers was marked by the widespread adoption of which technology?",
+      "options": {
+        "A": "Transistors",
+        "B": "Vacuum Tubes",
+        "C": "Integrated Circuits",
+        "D": "Microprocessors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0029",
+      "type": "mcq",
+      "stem": "What is the primary purpose of a \"protocol\" in computer networking?",
+      "options": {
+        "A": "To define the physical layout of network cables.",
+        "B": "To establish a set of rules for communication between devices.",
+        "C": "To encrypt all data transmitted over the network.",
+        "D": "To manage the power supply to network hardware."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0030",
+      "type": "mcq",
+      "stem": "The term \"hits\" in the context of search engine results typically refers to:",
+      "options": {
+        "A": "The number of times a website has been visited.",
+        "B": "The individual web pages that match a search query.",
+        "C": "The speed at which a search engine processes queries.",
+        "D": "The security measures employed by a search engine."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0031",
+      "type": "mcq",
+      "stem": "Which of the following is a primary function of an \"email client\" like Outlook Express?",
+      "options": {
+        "A": "To host websites.",
+        "B": "To send, receive, and manage electronic mail.",
+        "C": "To perform complex data analysis.",
+        "D": "To create graphical designs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0032",
+      "type": "mcq",
+      "stem": "The concept of \"information technology\" (IT) encompasses which of the following?",
+      "options": {
+        "A": "Only the hardware components of computers.",
+        "B": "The study and use of systems for storing, retrieving, and sending information.",
+        "C": "Exclusively the software applications used for entertainment.",
+        "D": "The physical infrastructure of telecommunication networks."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0033",
+      "type": "mcq",
+      "stem": "What does the acronym \"FTP\" stand for in networking?",
+      "options": {
+        "A": "File Transmission Protocol",
+        "B": "Fast Transfer Protocol",
+        "C": "File Transfer Protocol",
+        "D": "Format Transfer Protocol"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0034",
+      "type": "mcq",
+      "stem": "The \"1880 Census\" is historically significant in the development of computing because it led to the application of which early data processing technology?",
+      "options": {
+        "A": "Punch Cards and Tabulating Machines",
+        "B": "Electronic Calculators",
+        "C": "Magnetic Tape Storage",
+        "D": "Early Microprocessors"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0035",
+      "type": "mcq",
+      "stem": "A \"cybernetic system\" is characterized by its ability to:",
+      "options": {
+        "A": "Operate in complete isolation from its environment.",
+        "B": "Maintain a stable internal state regardless of external conditions.",
+        "C": "Regulate itself and interact with its environment to achieve goals.",
+        "D": "Perform computations based on analog signals."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following is a common example of an \"application software\" package?",
+      "options": {
+        "A": "The operating system kernel",
+        "B": "A word processor",
+        "C": "The CPU",
+        "D": "A network interface card"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0037",
+      "type": "mcq",
+      "stem": "The ability of a multitasking operating system to give the illusion of running multiple programs simultaneously is achieved through:",
+      "options": {
+        "A": "Single-tasking",
+        "B": "Context switching",
+        "C": "Direct hardware manipulation",
+        "D": "Batch processing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0038",
+      "type": "mcq",
+      "stem": "What is the primary purpose of \"HTML\" in web development?",
+      "options": {
+        "A": "To define the network protocols for data transmission.",
+        "B": "To structure and present content on web pages.",
+        "C": "To encrypt sensitive information transmitted online.",
+        "D": "To manage the flow of data between servers."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0039",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of \"analog\" computer systems?",
+      "options": {
+        "A": "They process data using discrete numerical values.",
+        "B": "They are primarily used for general-purpose computing.",
+        "C": "They represent data using continuous physical quantities.",
+        "D": "They are highly accurate for complex calculations."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0040",
+      "type": "mcq",
+      "stem": "The introduction of \"microprocessors\" is a defining characteristic of which generation of computers?",
+      "options": {
+        "A": "First Generation",
+        "B": "Second Generation",
+        "C": "Third Generation",
+        "D": "Fourth Generation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0041",
+      "type": "mcq",
+      "stem": "In the context of communication, what does \"encoding\" refer to?",
+      "options": {
+        "A": "The process of receiving and interpreting a message.",
+        "B": "The conversion of a message into a transmittable form.",
+        "C": "The introduction of errors into a message.",
+        "D": "The physical medium used for transmission."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0042",
+      "type": "mcq",
+      "stem": "The term \"information revolution\" is often used to describe:",
+      "options": {
+        "A": "A period of decline in the availability of information.",
+        "B": "The rapid and profound societal changes brought about by the widespread use of information technology.",
+        "C": "The invention of the printing press.",
+        "D": "The development of early forms of writing."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0043",
+      "type": "mcq",
+      "stem": "Which of the following is a fundamental component of \"Information and Communication Technology\" (ICT) infrastructure?",
+      "options": {
+        "A": "Only software applications.",
+        "B": "Both hardware and software.",
+        "C": "Only network cables.",
+        "D": "Exclusively data storage devices."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0044",
+      "type": "mcq",
+      "stem": "What is the main purpose of the \"Internet Protocol\" (IP) in networking?",
+      "options": {
+        "A": "To define the syntax of web pages.",
+        "B": "To provide unique addresses for devices on a network and route data packets.",
+        "C": "To manage user authentication for websites.",
+        "D": "To encrypt communication between servers."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0045",
+      "type": "mcq",
+      "stem": "Charles Babbage is credited with designing the first automatic calculating machine, known as the:",
+      "options": {
+        "A": "ENIAC",
+        "B": "UNIVAC",
+        "C": "Analytical Engine",
+        "D": "Harvard Mark I"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0046",
+      "type": "mcq",
+      "stem": "The limitation of the UNIX operating system, as mentioned in the text, is its reliance on:",
+      "options": {
+        "A": "Graphical User Interface (GUI)",
+        "B": "Command-line interface",
+        "C": "Window-based operations",
+        "D": "Open-source development"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0047",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a type of database management system (DBMS)?",
+      "options": {
+        "A": "Oracle",
+        "B": "MS Access",
+        "C": "SQL Server",
+        "D": "MS Word"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0048",
+      "type": "mcq",
+      "stem": "The \"vacuum tube\" was the primary electronic component used in which generation of computers?",
+      "options": {
+        "A": "First Generation",
+        "B": "Second Generation",
+        "C": "Third Generation",
+        "D": "Fourth Generation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0049",
+      "type": "mcq",
+      "stem": "The term \"browser\" in the context of the internet refers to:",
+      "options": {
+        "A": "A device for storing digital files.",
+        "B": "A program used to access and view web pages.",
+        "C": "A system for managing network connections.",
+        "D": "A tool for encrypting data."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0050",
+      "type": "mcq",
+      "stem": "What is the primary function of a \"search engine\" in relation to information retrieval on the internet?",
+      "options": {
+        "A": "To create and host web pages.",
+        "B": "To provide a direct connection to any website.",
+        "C": "To index and search vast amounts of online information.",
+        "D": "To download files from the internet."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0051",
+      "type": "mcq",
+      "stem": "The concept of \"socialization\" as a function of communication in a social system, according to MacBride, relates to:",
+      "options": {
+        "A": "The dissemination of news and current events.",
+        "B": "The process by which individuals learn and adopt societal norms and values.",
+        "C": "The transmission of entertainment content.",
+        "D": "The sharing of factual information."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0052",
+      "type": "mcq",
+      "stem": "What is the fundamental difference between \"hardware\" and \"software\" in computing?",
+      "options": {
+        "A": "Hardware is intangible, while software is physical.",
+        "B": "Hardware refers to the physical components, while software refers to the instructions and programs.",
+        "C": "Hardware is used for input, and software is used for output.",
+        "D": "Hardware is always temporary, while software is permanent."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0053",
+      "type": "mcq",
+      "stem": "The term \"universal access\" in the context of communication technology implies:",
+      "options": {
+        "A": "Access only for a select few with specialized knowledge.",
+        "B": "The ability for all individuals to access and utilize communication services.",
+        "C": "Access limited to specific geographical regions.",
+        "D": "Access that requires significant financial investment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0054",
+      "type": "mcq",
+      "stem": "Which of the following is a common characteristic of a \"portable document format\" (PDF) file?",
+      "options": {
+        "A": "It can only be opened and edited by specific software.",
+        "B": "It is designed to preserve document formatting across different platforms.",
+        "C": "It is primarily used for creating animated graphics.",
+        "D": "It is a temporary file format that is automatically deleted."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0055",
+      "type": "mcq",
+      "stem": "The invention of the \"transistor\" led to a significant reduction in the size and power consumption of computers, paving the way for which generation?",
+      "options": {
+        "A": "First Generation",
+        "B": "Second Generation",
+        "C": "Third Generation",
+        "D": "Fourth Generation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0056",
+      "type": "mcq",
+      "stem": "What is the primary role of a \"channel\" in the Shannon-Weaver communication model?",
+      "options": {
+        "A": "To encode the message.",
+        "B": "To introduce noise into the message.",
+        "C": "The medium through which the message is transmitted.",
+        "D": "To decode the message."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following best describes the function of \"context switching\" in an operating system?",
+      "options": {
+        "A": "It allows the user to switch between different applications visually.",
+        "B": "It enables the CPU to efficiently manage and switch between multiple running processes.",
+        "C": "It is used to switch between different network protocols.",
+        "D": "It is a security feature that switches user accounts."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0058",
+      "type": "mcq",
+      "stem": "The term \"digital versatile disc\" (DVD) highlights its capability to store:",
+      "options": {
+        "A": "Only audio data.",
+        "B": "Only video data.",
+        "C": "Both audio and video data, as well as other digital information.",
+        "D": "Only text-based documents."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0059",
+      "type": "mcq",
+      "stem": "Which of the following is a fundamental requirement for two computer systems to communicate effectively on a network?",
+      "options": {
+        "A": "They must have identical operating systems.",
+        "B": "They must share a common set of communication protocols.",
+        "C": "They must be physically connected by the same type of cable.",
+        "D": "They must have the same brand of network card."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-gst115-bank-0060",
+      "type": "mcq",
+      "stem": "The concept of \"information dissemination\" in communication refers to:",
+      "options": {
+        "A": "The process of encoding a message.",
+        "B": "The act of spreading or distributing information.",
+        "C": "The interpretation of a message by the receiver.",
+        "D": "The creation of new information."
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

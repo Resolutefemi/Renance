@@ -1,0 +1,731 @@
+{
+  "code": "uni-unilag-bio107-bank",
+  "title": "UNILAG BIO 107 | Course Question Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-unilag-bio107-bank-0001",
+      "type": "mcq",
+      "stem": "What is one of the key learning outcomes listed for this module regarding loops?",
+      "options": {
+        "A": "Designing complex algorithms for sorting.",
+        "B": "Mastering the <code>while</code> loop syntax and flow.",
+        "C": "Understanding advanced data structures.",
+        "D": "Optimizing code for maximum performance."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0002",
+      "type": "mcq",
+      "stem": "According to the 'Key Takeaways' on page 14, what does Python use to define what's inside a loop (or other blocks of code)?",
+      "options": {
+        "A": "Parentheses <code>()</code>",
+        "B": "Curly braces <code>{}</code>",
+        "C": "Semicolons <code>;</code>",
+        "D": "Indentation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0003",
+      "type": "mcq",
+      "stem": "In the anatomy of a <code>while</code> loop, what is the crucial role of the \"# update variable\" step?",
+      "options": {
+        "A": "To declare new variables for the loop.",
+        "B": "To display the current status of the loop.",
+        "C": "To prevent the loop from becoming an infinite loop.",
+        "D": "To define the initial condition of the loop."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0004",
+      "type": "mcq",
+      "stem": "On the 'The Need for Repetition' slide, the quote 'Iteration saves you from writing the same code 1,000 times' emphasizes which primary benefit of using loops?",
+      "options": {
+        "A": "Increased program speed.",
+        "B": "Reduced memory usage.",
+        "C": "Code conciseness and efficiency in handling repetitive tasks.",
+        "D": "Enhanced program security."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0005",
+      "type": "mcq",
+      "stem": "What is the primary purpose of the <code>break</code> statement in a loop, as described in the document?",
+      "options": {
+        "A": "To restart the loop from the beginning.",
+        "B": "To skip the current iteration and move to the next.",
+        "C": "To exit a loop instantly, even if the condition is still <code>True</code>.",
+        "D": "To pause the loop for a specified duration."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0006",
+      "type": "mcq",
+      "stem": "Consider the following Python code snippet:<br><code>num = 10<br>while num > 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(num)<br>&nbsp;&nbsp;&nbsp;&nbsp;num = num + 1</code><br>What is the outcome when this code is executed?",
+      "options": {
+        "A": "It will print numbers from 10 down to 1 and then stop.",
+        "B": "The loop will never start because <code>num</code> is initialized to 10.",
+        "C": "It will result in an infinite loop, continuously printing numbers that keep getting larger.",
+        "D": "It will print 10 and then stop, as the condition <code>num > 0</code> becomes false."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0007",
+      "type": "mcq",
+      "stem": "Based on the 'Key Takeaways', a <code>while</code> loop continues to run under what condition?",
+      "options": {
+        "A": "As long as the condition is False.",
+        "B": "Only for a fixed number of iterations.",
+        "C": "As long as the condition is True.",
+        "D": "Until all variables within the loop are updated."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0008",
+      "type": "mcq",
+      "stem": "Analyze the following Python code from the \"Can you find the error?\" section:<br><code>num = 10<br>while num > 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(num)<br>&nbsp;&nbsp;&nbsp;&nbsp;num = num + 1</code><br>What type of error does this code contain?",
+      "options": {
+        "A": "A syntax error, as <code>num = num + 1</code> is incorrect.",
+        "B": "A logical error resulting in the loop never starting.",
+        "C": "A runtime error causing the program to crash immediately.",
+        "D": "A logical error resulting in an infinite loop."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0009",
+      "type": "mcq",
+      "stem": "In the counting example from Slide 5, what is the value of the <code>count</code> variable immediately *after* the loop has finished executing?",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "6",
+        "D": "0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0010",
+      "type": "mcq",
+      "stem": "According to the 'The Infinite Loop' slide, what is the usual cause of an infinite loop?",
+      "options": {
+        "A": "The <code>while</code> condition is always <code>False</code>.",
+        "B": "Forgetting to define the loop variable before the loop.",
+        "C": "Forgetting to update the variable inside the loop that controls the condition.",
+        "D": "Using a <code>break</code> statement incorrectly."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0011",
+      "type": "mcq",
+      "stem": "When is the <code>break</code> statement most appropriately used, according to the 'When to use Break?' slide?",
+      "options": {
+        "A": "When you know exactly when the loop should end based on a fixed number.",
+        "B": "When the exit condition depends on something unpredictable like user input.",
+        "C": "To pause the loop for a short duration.",
+        "D": "To skip the current iteration and move to the next."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0012",
+      "type": "mcq",
+      "stem": "If your program is stuck in an infinite loop in the terminal or console, what key combination should you press to stop it immediately?",
+      "options": {
+        "A": "Ctrl + X",
+        "B": "Ctrl + S",
+        "C": "Ctrl + C",
+        "D": "Ctrl + V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0013",
+      "type": "mcq",
+      "stem": "The document suggests using a <code>break</code> statement when the exit condition depends on \"something unpredictable.\" Which of the following is given as an example of such an unpredictable condition?",
+      "options": {
+        "A": "When the loop needs to run exactly 10 times.",
+        "B": "When a counter variable reaches a specific number.",
+        "C": "When waiting for user input.",
+        "D": "When processing a fixed list of items."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0014",
+      "type": "mcq",
+      "stem": "Consider the code snippet: <code>i = 1; while i <= 5: print(i) # FORGOT i = i + 1!</code>. What type of loop will this create?",
+      "options": {
+        "A": "A loop that runs 5 times and stops.",
+        "B": "A loop that prints 1 once and stops.",
+        "C": "An infinite loop.",
+        "D": "A syntax error."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0015",
+      "type": "mcq",
+      "stem": "In the 'Guess the Number Game Python Code' example, why is <code>while True:</code> used?",
+      "options": {
+        "A": "To ensure the loop runs a fixed number of times.",
+        "B": "To make the loop conditional on an external factor.",
+        "C": "To create an infinite loop that can only be exited by a <code>break</code> statement.",
+        "D": "To signal that the loop will only run if a certain condition is met initially."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0016",
+      "type": "mcq",
+      "stem": "According to the \"Key Takeaways,\" a <code>while</code> loop runs __________.",
+      "options": {
+        "A": "only once.",
+        "B": "for a predefined number of iterations.",
+        "C": "as long as the condition is True.",
+        "D": "until an error occurs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0017",
+      "type": "mcq",
+      "stem": "In the ATM Security Check example, the loop condition is <code>while pin != \"1234\":</code>. What is the primary purpose of this specific condition?",
+      "options": {
+        "A": "To check if the <code>pin</code> variable is empty.",
+        "B": "To ensure the loop runs only a fixed number of times.",
+        "C": "To keep prompting the user for input until the correct PIN is entered.",
+        "D": "To allow access if any 4-digit number is provided."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0018",
+      "type": "mcq",
+      "stem": "If your program is stuck in an infinite loop in a terminal or console, what key combination is typically used to send an interrupt signal and stop the program immediately?",
+      "options": {
+        "A": "Ctrl + S",
+        "B": "Ctrl + P",
+        "C": "Ctrl + C",
+        "D": "Ctrl + Z"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0019",
+      "type": "mcq",
+      "stem": "Consider the counting example: <code>count = 1; while count <= 5: print(\"Number:\", count); count = count + 1</code>. What will be the value of <code>count</code> immediately <i>after</i> the <code>print</code> statement executes for the <i>first</i> time?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "5",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0020",
+      "type": "mcq",
+      "stem": "Although not explicitly defined in detail, based on the context of 'While Loops & Control Flow' as a topic, what does 'Control Flow' most generally refer to in programming?",
+      "options": {
+        "A": "The speed at which a program executes.",
+        "B": "The order in which individual statements or instructions are executed.",
+        "C": "The ability to control external hardware devices.",
+        "D": "The process of debugging errors in a program."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0021",
+      "type": "mcq",
+      "stem": "In the 'Guess the Number Game' Python code, why is <code>while True:</code> used?",
+      "options": {
+        "A": "To ensure the loop runs only once.",
+        "B": "To create a loop that will explicitly run until the program crashes.",
+        "C": "To keep asking for a guess indefinitely until an explicit <code>break</code> statement is met.",
+        "D": "It's a placeholder and has no functional meaning."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0022",
+      "type": "mcq",
+      "stem": "In the \"Guess the Number Game Python Code,\" after the user guesses the <code>secret_number</code> correctly, what is the immediate effect of the <code>break</code> statement?",
+      "options": {
+        "A": "It restarts the game with a new <code>secret_number</code>.",
+        "B": "It causes the program to exit the <code>while True</code> loop.",
+        "C": "It prints \"Try again!\" and continues the loop.",
+        "D": "It prevents the <code>print(\"You Win!\")</code> statement from executing."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0023",
+      "type": "mcq",
+      "stem": "In a flowchart, what does a diamond symbol typically represent?",
+      "options": {
+        "A": "A start or end point.",
+        "B": "An input or output operation.",
+        "C": "A process or action.",
+        "D": "A decision."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0024",
+      "type": "mcq",
+      "stem": "What is the primary method Python uses to define what's inside a loop, according to the 'Key Takeaways'?",
+      "options": {
+        "A": "Curly braces <code>{}</code>.",
+        "B": "Parentheses <code>()</code>.",
+        "C": "Indentation.",
+        "D": "Keywords like <code>begin</code> and <code>end</code>."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0025",
+      "type": "mcq",
+      "stem": "In the anatomy of a while loop, what is the purpose of the 'Update' component?",
+      "options": {
+        "A": "To re-evaluate the loop's condition.",
+        "B": "To define the starting value of a variable.",
+        "C": "To print output to the console.",
+        "D": "It is essential to prevent infinite loops."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0026",
+      "type": "mcq",
+      "stem": "According to the 'When to use Break?' slide, which scenario is <b>NOT</b> typically associated with the primary use of a <code>break</code> statement?",
+      "options": {
+        "A": "A loop that needs to terminate based on a user typing a specific word.",
+        "B": "A loop that waits for a file to be present before continuing.",
+        "C": "A loop designed to run exactly 100 times.",
+        "D": "A loop that requires a complex internal check to determine termination."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0027",
+      "type": "mcq",
+      "stem": "In the ATM Security Check example, the <code>while pin != '1234':</code> loop continues to run. What specifically makes this loop 'run forever until the correct PIN is entered'?",
+      "options": {
+        "A": "The <code>pin</code> variable is never updated inside the loop.",
+        "B": "The <code>input()</code> function automatically repeats until a valid number is entered.",
+        "C": "The <code>!=</code> operator means the loop continues as long as the PIN is <i>not</i> '1234'.",
+        "D": "There is no <code>break</code> statement in the loop."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0028",
+      "type": "mcq",
+      "stem": "What is the primary function of the <code>break</code> statement in a loop, as demonstrated in the document?",
+      "options": {
+        "A": "To pause the loop's execution for a short period.",
+        "B": "To skip the current iteration and move to the next.",
+        "C": "To exit the loop instantly, even if its condition is still True.",
+        "D": "To restart the loop from its beginning."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0029",
+      "type": "mcq",
+      "stem": "According to the 'Anatomy of a While Loop' slide, what does a rectangle represent in a flowchart?",
+      "options": {
+        "A": "Input/Output",
+        "B": "Process",
+        "C": "Start/End Point",
+        "D": "Connector"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0030",
+      "type": "mcq",
+      "stem": "In a flowchart, what does an oval symbol represent?",
+      "options": {
+        "A": "A process.",
+        "B": "A connector.",
+        "C": "A start or end point.",
+        "D": "Input/Output."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0031",
+      "type": "mcq",
+      "stem": "Analyze the following Python code from page 11: <code>num = 10; while num > 0: print(num); num = num + 1</code>. What is the error in this code?",
+      "options": {
+        "A": "The loop will never start because <code>num</code> is not greater than 0.",
+        "B": "The code works perfectly, printing numbers from 10 upwards.",
+        "C": "It is an infinite loop because <code>num</code> keeps increasing, always satisfying <code>num > 0</code>.",
+        "D": "It will print 10, then 1, then stop."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0032",
+      "type": "mcq",
+      "stem": "What is the most common cause of an Infinite Loop, as described in the document?",
+      "options": {
+        "A": "Using a <code>break</code> statement prematurely.",
+        "B": "The loop's condition never becomes False.",
+        "C": "Incorrect indentation of the loop's body.",
+        "D": "Forgetting to initialize the loop variable."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0033",
+      "type": "mcq",
+      "stem": "According to the document, when is the <code>break</code> statement particularly useful compared to a 'Normal Condition' loop exit?",
+      "options": {
+        "A": "When you know exactly how many times the loop should run.",
+        "B": "When the loop's exit condition depends on a numerical count.",
+        "C": "When the exit condition depends on something unpredictable, like user input.",
+        "D": "When the loop needs to repeat a fixed number of times."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0034",
+      "type": "mcq",
+      "stem": "In the 'Guess the Number Game Python Code' on page 13, why is <code>while True:</code> used for the main game loop?",
+      "options": {
+        "A": "It ensures the loop runs exactly once.",
+        "B": "It makes the loop wait for a specific time interval.",
+        "C": "It signifies that the loop will run indefinitely until an explicit <code>break</code> statement is encountered.",
+        "D": "It checks if the <code>secret_number</code> is a boolean <code>True</code>."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0035",
+      "type": "mcq",
+      "stem": "According to the document, what is the primary benefit of 'Iteration' in programming?",
+      "options": {
+        "A": "It allows computers to express creativity in tasks.",
+        "B": "It enables writing the same code many times for clarity.",
+        "C": "It saves programmers from writing the same repetitive code multiple times.",
+        "D": "It slows down program execution for better user interaction."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0036",
+      "type": "mcq",
+      "stem": "In the provided flowchart symbols, what does a \"parallelogram\" represent?",
+      "options": {
+        "A": "A decision point in the program flow.",
+        "B": "The start or end point of a process.",
+        "C": "Input or output operations.",
+        "D": "A specific process or action."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0037",
+      "type": "mcq",
+      "stem": "When a <code>break</code> statement is executed inside a <code>while</code> loop, what happens immediately?",
+      "options": {
+        "A": "The program pauses for user input.",
+        "B": "The loop condition is re-evaluated.",
+        "C": "The loop terminates, and execution continues with the statement immediately following the loop.",
+        "D": "The program skips to the next iteration of the loop."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0038",
+      "type": "mcq",
+      "stem": "In the 'Guess the Number Game Python Code,' what is the purpose of <code>int(input('Guess the secret number: '))</code>?",
+      "options": {
+        "A": "To display a message and store the user's input as a string.",
+        "B": "To convert the user's string input into an integer.",
+        "C": "To generate a random secret number.",
+        "D": "To check if the user's input is a valid number."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0039",
+      "type": "mcq",
+      "stem": "What is the primary function of the <code>break</code> statement in a loop?",
+      "options": {
+        "A": "To skip the current iteration and continue with the next one.",
+        "B": "To pause the execution of the program for a specified time.",
+        "C": "To exit the loop instantly, even if the condition is still True.",
+        "D": "To restart the loop from the beginning."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0040",
+      "type": "mcq",
+      "stem": "What is the primary purpose of \"Iteration\" as described in the learning outcomes?",
+      "options": {
+        "A": "To define the start and end points of a program.",
+        "B": "To repeat a block of code multiple times.",
+        "C": "To handle errors and exceptions in code.",
+        "D": "To declare variables and data types."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0041",
+      "type": "mcq",
+      "stem": "According to the 'Key Takeaways' slide, what mechanism does Python use to define what's inside a loop?",
+      "options": {
+        "A": "Parentheses",
+        "B": "Curly braces",
+        "C": "Indentation",
+        "D": "Semicolons"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0042",
+      "type": "mcq",
+      "stem": "If your program is stuck in an infinite loop and you need to stop it immediately, what key combination is recommended?",
+      "options": {
+        "A": "Ctrl + X",
+        "B": "Ctrl + S",
+        "C": "Ctrl + C",
+        "D": "Ctrl + V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0043",
+      "type": "mcq",
+      "stem": "Consider the following code snippet from Slide 5:<br><code>count = 1<br>while count ≤ 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Number:', count)<br>&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</code><br>What is the *last* number printed by this loop?",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "6",
+        "D": "The loop never ends."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0044",
+      "type": "mcq",
+      "stem": "What does a diamond shape represent in a flowchart, as indicated in the 'Anatomy of a While Loop' slide?",
+      "options": {
+        "A": "Start/End Point",
+        "B": "Process",
+        "C": "Decision",
+        "D": "Input/Output"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0045",
+      "type": "mcq",
+      "stem": "According to the document, why are computers \"great at doing the same thing over and over\"?",
+      "options": {
+        "A": "Because they require less power for repetitive tasks.",
+        "B": "Because they learn and improve with each repetition.",
+        "C": "Because they do not get tired, unlike humans.",
+        "D": "Because they can generate new tasks from repetitive actions."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0046",
+      "type": "mcq",
+      "stem": "In the 'ATM Security Check' example on page 6, the <code>while</code> loop condition is <code>while pin != \"1234\":</code>. What is the intended behavior of this loop?",
+      "options": {
+        "A": "It runs only once and then exits, regardless of the PIN.",
+        "B": "It continuously prompts the user for a PIN until the correct PIN ('1234') is entered.",
+        "C": "It grants access immediately and then asks for the PIN.",
+        "D": "It waits for 1234 seconds before granting access."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0047",
+      "type": "mcq",
+      "stem": "What are the three essential components for a <code>while</code> loop to function correctly and avoid infinite loops, as described in the 'Anatomy of a While Loop' slide?",
+      "options": {
+        "A": "<code>if</code>, <code>else</code>, <code>elif</code>",
+        "B": "<code>while</code> keyword, <code>condition</code>, <code>update</code>",
+        "C": "<code>start</code>, <code>process</code>, <code>end</code>",
+        "D": "<code>input</code>, <code>output</code>, <code>decision</code>"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0048",
+      "type": "mcq",
+      "stem": "Consider the Python code snippet:<br><code>count = 1<br>while count &lt;= 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(\"Number:\", count)<br>&nbsp;&nbsp;&nbsp;&nbsp;count = count + 1</code><br>What will be the <i>last</i> number printed by this loop?",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "6",
+        "D": "0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0049",
+      "type": "mcq",
+      "stem": "In the counting example on page 5, what is the final value of <code>count</code> that causes the loop condition (<code>count <= 5</code>) to become <code>False</code> and terminate the loop?",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "6",
+        "D": "0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0050",
+      "type": "mcq",
+      "stem": "What mechanism does Python use to define what's inside a loop, according to the \"Key Takeaways\"?",
+      "options": {
+        "A": "Curly braces <code>{}</code>.",
+        "B": "Parentheses <code>()</code>.",
+        "C": "Indentation.",
+        "D": "Keywords like <code>BEGIN</code> and <code>END</code>."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0051",
+      "type": "mcq",
+      "stem": "If your program is stuck in an infinite loop, what action is recommended on the 'Stopping a Runaway Loop' slide to immediately stop the program?",
+      "options": {
+        "A": "Press <code>Alt + F4</code>",
+        "B": "Type <code>exit()</code> in the terminal",
+        "C": "Press <code>Ctrl + C</code>",
+        "D": "Restart the computer"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0052",
+      "type": "mcq",
+      "stem": "According to the document, when is the <code>break</code> statement most appropriate to use?",
+      "options": {
+        "A": "When the loop should end based on a fixed number of iterations.",
+        "B": "When the exit condition depends on something unpredictable, like user input.",
+        "C": "When you want to continue to the next iteration of the loop.",
+        "D": "When the loop's condition is always False from the start."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0053",
+      "type": "mcq",
+      "stem": "According to the document, an 'Infinite Loop' primarily occurs when:",
+      "options": {
+        "A": "The <code>while</code> keyword is misspelled.",
+        "B": "The loop's condition never becomes <code>False</code>.",
+        "C": "The program runs out of memory.",
+        "D": "The <code>print()</code> function is used too many times."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0054",
+      "type": "mcq",
+      "stem": "Examine the following code snippet from Slide 11:<br><code>num = 10<br>while num > 0:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(num)<br>&nbsp;&nbsp;&nbsp;&nbsp;num = num + 1</code><br>What will happen when this code runs?",
+      "options": {
+        "A": "The loop will never start.",
+        "B": "It will print numbers from 10 down to 1.",
+        "C": "It will cause an infinite loop.",
+        "D": "It will print only the number 10 and then stop."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0055",
+      "type": "mcq",
+      "stem": "In the \"Guess the Number Game,\" why is <code>while True:</code> used as the loop condition?",
+      "options": {
+        "A": "It ensures the loop runs exactly seven times.",
+        "B": "It automatically generates a random secret number.",
+        "C": "It allows the loop to continue indefinitely until explicitly exited (e.g., by a <code>break</code> statement).",
+        "D": "It checks if the user's guess is always correct."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0056",
+      "type": "mcq",
+      "stem": "Which of the following is NOT listed as a learning outcome in this module?",
+      "options": {
+        "A": "Understand the concept of Iteration.",
+        "B": "Master the while loop syntax and flow.",
+        "C": "Identify the causes of Infinite Loops.",
+        "D": "Learn to implement object-oriented programming concepts."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0057",
+      "type": "mcq",
+      "stem": "According to the document, what is one of the primary benefits of using iteration in programming?",
+      "options": {
+        "A": "It makes debugging easier.",
+        "B": "It allows computers to perform tasks repeatedly without getting tired.",
+        "C": "It reduces the memory footprint of a program.",
+        "D": "It automatically generates user interfaces."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0058",
+      "type": "mcq",
+      "stem": "Based on the document, what is another term for a 'runaway loop'?",
+      "options": {
+        "A": "A loop that executes too quickly.",
+        "B": "A loop that consumes too much memory.",
+        "C": "An infinite loop.",
+        "D": "A loop with a complex condition."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0059",
+      "type": "mcq",
+      "stem": "According to the document, what is the most common reason an \"Infinite Loop\" occurs?",
+      "options": {
+        "A": "The <code>while</code> keyword is misspelled.",
+        "B": "The program runs out of memory.",
+        "C": "The loop's condition never becomes False.",
+        "D": "The <code>print</code> statement is missing inside the loop."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-bio107-bank-0060",
+      "type": "mcq",
+      "stem": "In a flowchart diagram, what shape is used to represent a 'Decision' point?",
+      "options": {
+        "A": "Oval",
+        "B": "Parallelogram",
+        "C": "Rectangle",
+        "D": "Diamond"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

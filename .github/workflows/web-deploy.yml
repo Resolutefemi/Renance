@@ -48,8 +48,9 @@ jobs:
           # Must be https once set — browsers block http from an https origin.
           NEXT_PUBLIC_API_BASE: ${{ vars.PUBLIC_API_BASE || 'http://localhost:3990' }}
           NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-          # Google sign-in button — absent variable renders no button at all.
-          NEXT_PUBLIC_GOOGLE_CLIENT_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '' }}
+          # Google sign-in button — falls back to the shipped WEB client ID
+          # (public value, same as render.yaml); override via repo Variables if rotated.
+          NEXT_PUBLIC_GOOGLE_CLIENT_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com' }}
         run: pnpm exec next build
 
       - name: SPA fallback (unknown paths -> home)

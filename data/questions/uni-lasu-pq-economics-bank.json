@@ -1,0 +1,2459 @@
+{
+  "code": "uni-lasu-pq-economics-bank",
+  "title": "LASU Post-UTME Economics | Prep Bank",
+  "version": 1,
+  "questionCount": 204,
+  "totalMarks": 204,
+  "questions": [
+    {
+      "id": "uni-lasu-pq-economics-bank-0001",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is given by the equation ( U(x,y) = 2x + 3y ). If the consumer&#039;s initial \\endowment is \\( x_0, y_0 \\ \\) = (10, 20) ), and the price of good x is \\( P_x = 2 \\), find the consumer&#039;s optimal bundle.",
+      "options": {
+        "A": "Bundle (15, 30)",
+        "B": "Bundle (20, 40)",
+        "C": "Bundle (25, 50)",
+        "D": "Bundle (30, 60)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0002",
+      "type": "mcq",
+      "stem": "A government imposes a tax on a firm&#039;s output. The firm&#039;s \\cost function is given by ( C(q) = 10q + 20 ), and the tax rate is \\( t = 0.2 \\). Find the firm&#039;s new \\cost function after the tax is imposed.",
+      "options": {
+        "A": "C(q) = 12q + 20",
+        "B": "C(q) = 10q + 22",
+        "C": "C(q) = 12q + 22",
+        "D": "C(q) = 10q + 24"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0003",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is given by \\( GDP = 1000 + 0.2Y \\), where Y is the country&#039;s GNP. If the country&#039;s GNP is $5000, find the country&#039;s GDP.",
+      "options": {
+        "A": "$1200",
+        "B": "$1300",
+        "C": "$1400",
+        "D": "$1500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0004",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by ( R(p) = 100p - 2p^2 ). Find the firm&#039;s maximum revenue.",
+      "options": {
+        "A": "$200",
+        "B": "$250",
+        "C": "$300",
+        "D": "$350"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0005",
+      "type": "mcq",
+      "stem": "A government&#039;s budget constraint is given by \\( B = 1000 + 0.2G \\), where G is the government&#039;s exp\\enditure. If the government&#039;s exp\\enditure is $5000, find the government&#039;s budget.",
+      "options": {
+        "A": "$1200",
+        "B": "$1300",
+        "C": "$1400",
+        "D": "$1500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0006",
+      "type": "mcq",
+      "stem": "The concept of returns to scale in production theory refers to the change in the output of a firm as all its inputs are increased proportionally. Which of the following best describes the relationship between the output and the inputs in the case of increa\\sing returns to scale?",
+      "options": {
+        "A": "Output increases at a decrea\\sing rate compared to the inputs.",
+        "B": "Output increases at an increa\\sing rate compared to the inputs.",
+        "C": "Output increases at a cons\\tant rate compared to the inputs.",
+        "D": "Output decreases at an increa\\sing rate compared to the inputs."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0007",
+      "type": "mcq",
+      "stem": "A monopolistically competitive firm faces a downward-sloping demand curve due to the presence of close substitutes. Which of the following is a characteristic of the demand curve faced by this firm?",
+      "options": {
+        "A": "The demand curve is perfectly inelastic.",
+        "B": "The demand curve is downward-sloping.",
+        "C": "The demand curve is upward-sloping.",
+        "D": "The demand curve is perfectly elastic."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0008",
+      "type": "mcq",
+      "stem": "The Nigerian government has implemented a policy to increase agricultural production in the country. Which of the following is a potential consequence of this policy?",
+      "options": {
+        "A": "The policy will lead to an increase in the price of agricultural products.",
+        "B": "The policy will lead to an increase in the production of agricultural products.",
+        "C": "The policy will lead to a decrease in the production of agricultural products.",
+        "D": "The policy will have no effect on the production of agricultural products."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0009",
+      "type": "mcq",
+      "stem": "A firm is considering investing in a new project that has a net present value (NPV) of ₦1,000,000. The firm&#039;s \\cost of capital is 10%. Which of the following is the correct interpretation of the NPV?",
+      "options": {
+        "A": "The project will generate a return of ₦1,000,000.",
+        "B": "The project will generate a return of ₦100,000.",
+        "C": "The project will generate a return of ₦10,000.",
+        "D": "The project will generate a return of ₦1,000."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0010",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by the equation Q = 100 - 2P. The firm&#039;s marginal revenue (MR) is given by the equation MR = 2P. Which of the following is the correct interpretation of the MR curve?",
+      "options": {
+        "A": "The MR curve is upward-sloping.",
+        "B": "The MR curve is downward-sloping.",
+        "C": "The MR curve is horizontal.",
+        "D": "The MR curve is vertical."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0011",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is calculated as the sum of all final goods and services produced within its borders. However, if a multinational corporation operating in the country imports all its raw materials and exports all its finished goods, what would be the impact on the country&#039;s GDP?",
+      "options": {
+        "A": "The country's GDP would increase",
+        "B": "The country's GDP would decrease",
+        "C": "The country's GDP would remain unchanged",
+        "D": "The country's GDP would be unaffected"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0012",
+      "type": "mcq",
+      "stem": "A consumer&#039;s budget constraint is given by the equation \\( 2x + 3y = 12 \\). If the consumer&#039;s income is ₦60 and the price of good x is ₦2, what is the maximum amount the consumer can sp\\end on good y?",
+      "options": {
+        "A": "₦10",
+        "B": "₦12",
+        "C": "₦15",
+        "D": "₦18"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0013",
+      "type": "mcq",
+      "stem": "A government imposes a tax on a particular good. The demand for the good is given by the equation \\( Q_d = 100 - 2P \\) and the supply of the good is given by the equation \\( Q_s = 2P - 10 \\). If the government imposes a tax of ₦5 per unit, what will be the new equilibrium price and quantity?",
+      "options": {
+        "A": "P = ₦10, Q = 20",
+        "B": "P = ₦15, Q = 25",
+        "C": "P = ₦20, Q = 30",
+        "D": "P = ₦25, Q = 35"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0014",
+      "type": "mcq",
+      "stem": "A country&#039;s national income is calculated as the sum of all wages, rents, and profits earned by its citizens. If a country&#039;s GDP is ₦100 billion and its net foreign income is ₦10 billion, what is its national income?",
+      "options": {
+        "A": "₦110 billion",
+        "B": "₦120 billion",
+        "C": "₦130 billion",
+        "D": "₦140 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0015",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is given by the equation \\( U = 2x + 3y \\). If the consumer&#039;s income is ₦60 and the price of good x is ₦2, what is the maximum amount the consumer can sp\\end on good y?",
+      "options": {
+        "A": "₦10",
+        "B": "₦12",
+        "C": "₦15",
+        "D": "₦18"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0016",
+      "type": "mcq",
+      "stem": "Determine the value of the marginal propensity to consume (MPC) in a closed economy with a GDP of ₦1.2 trillion, a government exp\\enditure of ₦250 billion, and a tax rate of 20%.",
+      "options": {
+        "A": "0.25",
+        "B": "0.30",
+        "C": "0.35",
+        "D": "0.40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0017",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the price of labor is ₦100 per unit and the price of capital is ₦200 per unit, determine the optimal level of labor and capital to minimize the \\cost of production.",
+      "options": {
+        "A": "L = 100, K = 50",
+        "B": "L = 50, K = 100",
+        "C": "L = 200, K = 100",
+        "D": "L = 100, K = 200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0018",
+      "type": "mcq",
+      "stem": "A country&#039;s money supply is given by M = ₦100 billion. If the velocity of money is 5, determine the nominal GDP.",
+      "options": {
+        "A": "₦500 billion",
+        "B": "₦600 billion",
+        "C": "₦700 billion",
+        "D": "₦800 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0019",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the price elasticity of demand is 0.5, determine the optimal price to maximize revenue.",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0020",
+      "type": "mcq",
+      "stem": "A country&#039;s production possibilities frontier (PPF) is given by the equation Y = 100 - 2X. If the country is currently producing at a point on the PPF where X = 20, determine the opportunity \\cost of producing one more unit of X.",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0021",
+      "type": "mcq",
+      "stem": "Consider a perfectly competitive market with an inverse demand function of the form \\( p = 100 - 2q \\). If the market equilibrium price is $80, what is the quantity demanded at that price?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0022",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve of the form \\( p = 100 - 2q \\). If the monopolist&#039;s marginal \\cost is $20, what is the optimal quantity to produce?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0023",
+      "type": "mcq",
+      "stem": "Consider a firm with a production function of the form \\( q = 2K^0.5L^0.5 \\). If the firm&#039;s capital and labor inputs are $100 and $50 respectively, what is the firm&#039;s output?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0024",
+      "type": "mcq",
+      "stem": "A central bank increases the money supply by 10%. What is the expected effect on the price level?",
+      "options": {
+        "A": "Increase",
+        "B": "Decrease",
+        "C": "No effect",
+        "D": "Uncertain"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0025",
+      "type": "mcq",
+      "stem": "The Marshall-Lerner condition states that a country&#039;s balance of payments will improve if the sum of the price elasticities of demand for imports and exports is greater than 1. Which of the following statements is a correct interpretation of this condition?",
+      "options": {
+        "A": "The country's trade balance will improve if the price elasticity of demand for imports is greater than 1.",
+        "B": "The country's trade balance will improve if the sum of the price elasticities of demand for imports and exports is greater than 1.",
+        "C": "The country's trade balance will improve if the price elasticity of demand for exports is greater than 1.",
+        "D": "The country's trade balance will improve if the price elasticity of demand for imports is less than 1."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0026",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand curve is given by the equation Q = 100 - 2P, where Q is the quantity demanded and P is the price. If the firm&#039;s revenue function is R(P) = P\\( 100 - 2P \\), what is the price at which the firm&#039;s revenue is maximized?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0027",
+      "type": "mcq",
+      "stem": "The government of a country has a budget deficit of ₦100 billion. If the government decides to finance this deficit by printing more money, what will be the effect on the general price level?",
+      "options": {
+        "A": "The general price level will decrease.",
+        "B": "The general price level will increase.",
+        "C": "The general price level will remain unchanged.",
+        "D": "The general price level will be unaffected."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0028",
+      "type": "mcq",
+      "stem": "A farmer produces wheat and sells it to a miller. The supply curve of the farmer is given by the equation Q = 100 + 2P, where Q is the quantity supplied and P is the price. If the miller&#039;s demand curve is given by the equation Q = 100 - 2P, what is the equilibrium price and quantity?",
+      "options": {
+        "A": "P = ₦20, Q = 80",
+        "B": "P = ₦30, Q = 70",
+        "C": "P = ₦40, Q = 60",
+        "D": "P = ₦50, Q = 50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0029",
+      "type": "mcq",
+      "stem": "A country&#039;s balance of payments is given by the equation BOP = X - M, where BOP is the balance of payments, X is the value of exports, and M is the value of imports. If the value of exports is ₦100 billion and the value of imports is ₦120 billion, what is the balance of payments?",
+      "options": {
+        "A": "₦20 billion surplus",
+        "B": "₦20 billion deficit",
+        "C": "₦40 billion surplus",
+        "D": "₦40 billion deficit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0030",
+      "type": "mcq",
+      "stem": "The government of a country decides to implement a new tax policy to reduce income inequality. The tax policy involves a progressive tax system where higher income earners are taxed at a higher rate. However, the tax revenue generated from this policy is not enough to cover the \\cost of implementing the policy. U\\sing the concept of opportunity \\cost, explain why the government may still decide to implement this policy.",
+      "options": {
+        "A": "The government may still decide to implement the policy because the benefits of reducing income inequality outweigh the \\costs.",
+        "B": "The government may still decide to implement the policy because the tax revenue generated from this policy is enough to cover the \\cost of implementing the policy.",
+        "C": "The government may still decide to implement the policy because the opportunity \\cost of not implementing the policy is higher than the \\cost of implementing it.",
+        "D": "The government may still decide to implement the policy because the tax policy is a necessary evil to achieve economic growth."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0031",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is $100 billion, its GNP is $120 billion, and its net factor income from abroad is $10 billion. What is the country&#039;s net national income?",
+      "options": {
+        "A": "$130 billion",
+        "B": "$120 billion",
+        "C": "$110 billion",
+        "D": "$100 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0032",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand curve is given by the equation Qd = 100 - 2P, where Qd is the quantity demanded and P is the price. The firm&#039;s supply curve is given by the equation Qs = 2P - 10, where Qs is the quantity supplied. Find the equilibrium price and quantity.",
+      "options": {
+        "A": "P = $20, Q = 40",
+        "B": "P = $30, Q = 50",
+        "C": "P = $40, Q = 60",
+        "D": "P = $50, Q = 70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0033",
+      "type": "mcq",
+      "stem": "A country&#039;s balance of payments account shows a trade deficit of $10 billion, a current account deficit of $5 billion, and a capital account surplus of $15 billion. What is the country&#039;s overall balance of payments position?",
+      "options": {
+        "A": "Surplus of $10 billion",
+        "B": "Deficit of $5 billion",
+        "C": "Surplus of $15 billion",
+        "D": "Deficit of $20 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0034",
+      "type": "mcq",
+      "stem": "A government decides to implement a policy to reduce unemployment. The policy involves increa\\sing government sp\\ending and cutting taxes. U\\sing the concept of fiscal policy, explain how this policy will affect the economy.",
+      "options": {
+        "A": "The policy will increase aggregate demand and reduce unemployment.",
+        "B": "The policy will decrease aggregate demand and increase unemployment.",
+        "C": "The policy will have no effect on aggregate demand and unemployment.",
+        "D": "The policy will increase aggregate demand but increase unemployment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0035",
+      "type": "mcq",
+      "stem": "The concept of comparative advantage in international trade is based on the idea that countries should specialize in producing goods for which they have a lower opportunity \\cost. Which of the following statements best describes the opportunity \\cost of a country?",
+      "options": {
+        "A": "The value of the next best alternative use of resources",
+        "B": "The quantity of a good that a country is willing to give up in order to produce another good",
+        "C": "The price of a good that a country is willing to pay for another good",
+        "D": "The quantity of a good that a country is willing to produce in order to meet domestic demand"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0036",
+      "type": "mcq",
+      "stem": "Agricultural development in Nigeria has been hindered by several factors, including lack of access to credit, inadequate infrastructure, and limited market access. Which of the following policies would most likely address these issues?",
+      "options": {
+        "A": "Providing subsidies to farmers to reduce the \\cost of production",
+        "B": "Establishing agricultural cooperatives to facilitate market access and credit access",
+        "C": "Implementing price controls to stabilize prices and reduce market volatility",
+        "D": "Investing in irrigation systems to increase crop yields"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0037",
+      "type": "mcq",
+      "stem": "The production function for a firm is given by Q = 2L^0.5K^0.5, where Q is the quantity produced, L is the number of labor hours, and K is the amount of capital invested. If the firm wants to increase production by 20%, what percentage increase in labor hours and capital investment is required?",
+      "options": {
+        "A": "10% increase in labor hours and 10% increase in capital investment",
+        "B": "20% increase in labor hours and 20% increase in capital investment",
+        "C": "30% increase in labor hours and 30% increase in capital investment",
+        "D": "40% increase in labor hours and 40% increase in capital investment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0038",
+      "type": "mcq",
+      "stem": "The Central Bank of Nigeria has implemented a monetary policy aimed at reducing inflation. Which of the following tools would most likely achieve this goal?",
+      "options": {
+        "A": "Increa\\sing the reserve requirement for commercial banks",
+        "B": "Implementing a price ceiling on essential goods",
+        "C": "Reducing the money supply by selling government securities",
+        "D": "Increa\\sing the discount rate to reduce borrowing \\costs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0039",
+      "type": "mcq",
+      "stem": "The following diagram shows the production possibilities frontier (PPF) for a country. What is the opportunity \\cost of producing 100 units of good X?",
+      "options": {
+        "A": "50 units of good Y",
+        "B": "75 units of good Y",
+        "C": "100 units of good Y",
+        "D": "125 units of good Y"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0040",
+      "type": "mcq",
+      "stem": "Consider a firm operating in a perfectly competitive market with a given production function Q = 2L^0.5K^0.5. If the firm&#039;s current input prices are w = ₦100 and r = ₦50, and the current output price is p = ₦200, calculate the firm&#039;s optimal input bundle (L, K) u\\sing the Hotelling&#039;s Lemma. Assume that the firm&#039;s objective is to maximize its profit.",
+      "options": {
+        "A": "\\( L = 100, K = 50 \\)",
+        "B": "\\( L = 50, K = 100 \\)",
+        "C": "\\( L = 25, K = 100 \\)",
+        "D": "\\( L = 100, K = 25 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0041",
+      "type": "mcq",
+      "stem": "A country&#039;s trade balance is given by the equation TB = X - M, where X is the value of exports and M is the value of imports. If the country&#039;s exports are ₦500 billion and imports are ₦700 billion, calculate the trade balance.",
+      "options": {
+        "A": "₦-200 billion",
+        "B": "₦200 billion",
+        "C": "₦500 billion",
+        "D": "₦700 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0042",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the firm&#039;s current price is ₦50, calculate the quantity demanded.",
+      "options": {
+        "A": "50 units",
+        "B": "75 units",
+        "C": "100 units",
+        "D": "125 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0043",
+      "type": "mcq",
+      "stem": "A country&#039;s money supply is given by the equation M = kY, where k is the money multiplier and Y is the national income. If the money multiplier is 0.5 and the national income is ₦100 billion, calculate the money supply.",
+      "options": {
+        "A": "₦50 billion",
+        "B": "₦100 billion",
+        "C": "₦150 billion",
+        "D": "₦200 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0044",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s current input prices are w = ₦100 and r = ₦50, and the current output price is p = ₦200, calculate the firm&#039;s optimal input bundle (L, K) u\\sing the Hotelling&#039;s Lemma. Assume that the firm&#039;s objective is to maximize its profit.",
+      "options": {
+        "A": "\\( L = 100, K = 50 \\)",
+        "B": "\\( L = 50, K = 100 \\)",
+        "C": "\\( L = 25, K = 100 \\)",
+        "D": "\\( L = 100, K = 25 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0045",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the equilibrium price and quantity are determined by the intersection of the market demand and supply curves. However, in a monopoly market, the equilibrium price and quantity are determined by the intersection of the demand curve and the marginal revenue curve. Which of the following statements is correct?",
+      "options": {
+        "A": "The equilibrium price and quantity in a perfectly competitive market are higher than in a monopoly market.",
+        "B": "The equilibrium price and quantity in a monopoly market are higher than in a perfectly competitive market.",
+        "C": "The equilibrium price and quantity in a perfectly competitive market are lower than in a monopoly market.",
+        "D": "The equilibrium price and quantity in a monopoly market are lower than in a perfectly competitive market."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0046",
+      "type": "mcq",
+      "stem": "A firm is considering two investment projects, A and B. Project A has a higher initial \\cost but generates a higher return on investment. Project B has a lower initial \\cost but generates a lower return on investment. Which of the following statements is correct?",
+      "options": {
+        "A": "Project A is a better investment because it has a higher return on investment.",
+        "B": "Project B is a better investment because it has a lower initial \\cost.",
+        "C": "Both projects are equally good investments.",
+        "D": "Neither project is a good investment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0047",
+      "type": "mcq",
+      "stem": "A central bank uses monetary policy to control inflation by increa\\sing the reserve requirement for commercial banks. This action will lead to a decrease in the money supply and a decrease in the price level. Which of the following statements is correct?",
+      "options": {
+        "A": "The money supply will decrease and the price level will increase.",
+        "B": "The money supply will increase and the price level will decrease.",
+        "C": "The money supply will decrease and the price level will decrease.",
+        "D": "The money supply will increase and the price level will increase."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0048",
+      "type": "mcq",
+      "stem": "A government is considering a policy to reduce poverty by increa\\sing the minimum wage. However, this policy may lead to higher unemployment. Which of the following statements is correct?",
+      "options": {
+        "A": "The policy will reduce poverty and increase employment.",
+        "B": "The policy will reduce poverty but may lead to higher unemployment.",
+        "C": "The policy will increase poverty and unemployment.",
+        "D": "The policy will have no effect on poverty and unemployment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0049",
+      "type": "mcq",
+      "stem": "A firm is considering a new investment project that requires an initial investment of ₦100 million. The project is expected to generate a return on investment of 15% per annum. Which of the following statements is correct?",
+      "options": {
+        "A": "The project is a good investment because it has a high return on investment.",
+        "B": "The project is a bad investment because it has a low return on investment.",
+        "C": "The project is a good investment because it has a high return on investment and a low initial \\cost.",
+        "D": "The project is a bad investment because it has a low return on investment and a high initial \\cost."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0050",
+      "type": "mcq",
+      "stem": "A firm operating in a perfectly competitive market produces two goods, A and B. The production of good A is characterized by increa\\sing returns to scale, while the production of good B exhibits decrea\\sing returns to scale. If the firm&#039;s \\cost function is given by C(q) = 2q^2 + 5q + 10, where q is the total output, what is the firm&#039;s optimal output level for good A?",
+      "options": {
+        "A": "100 units",
+        "B": "50 units",
+        "C": "200 units",
+        "D": "300 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0051",
+      "type": "mcq",
+      "stem": "A government is considering implementing a new tax on a particular good. The demand for the good is given by Q_d = 100 - 2P, where Q_d is the quantity demanded and P is the price. The supply of the good is given by Q_s = 2P - 10, where Q_s is the quantity supplied. If the government wants to raise revenue of ₦100,000, what is the optimal tax rate?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0052",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by Q_d = 100 - 2P and a \\cost function given by C(q) = 2q^2 + 5q + 10. If the firm&#039;s marginal revenue is given by MR = 200 - 2q, what is the firm&#039;s optimal output level?",
+      "options": {
+        "A": "50 units",
+        "B": "75 units",
+        "C": "100 units",
+        "D": "125 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0053",
+      "type": "mcq",
+      "stem": "A firm is considering investing in a new project. The project has a \\cost of ₦100,000 and is expected to generate a revenue of ₦150,000. If the firm&#039;s \\cost of capital is 10%, what is the project&#039;s net present value?",
+      "options": {
+        "A": "₦50,000",
+        "B": "₦75,000",
+        "C": "₦100,000",
+        "D": "₦125,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0054",
+      "type": "mcq",
+      "stem": "A government is considering implementing a new policy to reduce poverty. The policy involves providing a subsidy to a particular good. The demand for the good is given by Q_d = 100 - 2P, where Q_d is the quantity demanded and P is the price. The supply of the good is given by Q_s = 2P - 10, where Q_s is the quantity supplied. If the government wants to reduce poverty by increa\\sing the quantity demanded of the good, what is the optimal subsidy?",
+      "options": {
+        "A": "₦10",
+        "B": "₦20",
+        "C": "₦30",
+        "D": "₦40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0055",
+      "type": "mcq",
+      "stem": "The Central Bank of Nigeria (CBN) has implemented a monetary policy aimed at reducing inflation. If the money supply increases by 10% and the velocity of money remains cons\\tant, what will be the effect on the price level?",
+      "options": {
+        "A": "Increase by 10%",
+        "B": "Decrease by 10%",
+        "C": "Remain unchanged",
+        "D": "Increase by 20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0056",
+      "type": "mcq",
+      "stem": "A firm is producing a good with a total revenue of ₦1,500 and a total \\cost of ₦1,200. If the price elasticity of demand is 0.5, what is the price elasticity of supply?",
+      "options": {
+        "A": "0.5",
+        "B": "1.5",
+        "C": "2.5",
+        "D": "3.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0057",
+      "type": "mcq",
+      "stem": "The government of Nigeria has implemented a tax on imported goods to raise revenue. If the tax rate is 10% and the price of the good is ₦100, what is the tax revenue?",
+      "options": {
+        "A": "₦10",
+        "B": "₦20",
+        "C": "₦30",
+        "D": "₦40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0058",
+      "type": "mcq",
+      "stem": "A farmer is producing wheat with a total revenue of ₦2,000 and a total \\cost of ₦1,800. If the price elasticity of demand is 0.8, what is the price elasticity of supply?",
+      "options": {
+        "A": "0.8",
+        "B": "1.8",
+        "C": "2.8",
+        "D": "3.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0059",
+      "type": "mcq",
+      "stem": "The government of Nigeria has implemented a policy to increase agricultural production. If the production function is Q = 2L + 3K, where Q is the quantity produced, L is the labor input, and K is the capital input, what is the marginal product of labor?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0060",
+      "type": "mcq",
+      "stem": "A firm operating in a perfectly competitive market produces two goods, A and B. The production of good A is subject to increa\\sing returns to scale, while the production of good B is subject to decrea\\sing returns to scale. If the firm&#039;s production function for good A is given by Q_A = 2L^2 + 3K, and the production function for good B is given by Q_B = 4L - 2K, where L is labor and K is capital, what is the firm&#039;s optimal input combination?",
+      "options": {
+        "A": "L = 2, K = 1",
+        "B": "L = 1, K = 2",
+        "C": "L = 3, K = 0",
+        "D": "L = 0, K = 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0061",
+      "type": "mcq",
+      "stem": "A consumer&#039;s utility function is given by U = 2x + 3y, where x and y are the quantities of two goods consumed. If the consumer&#039;s budget constraint is given by 2x + 3y = 12, and the prices of the two goods are given by p_x = 2 and p_y = 3, what is the consumer&#039;s optimal consumption bundle?",
+      "options": {
+        "A": "x = 2, y = 4",
+        "B": "x = 4, y = 2",
+        "C": "x = 6, y = 0",
+        "D": "x = 0, y = 6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0062",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by Q = 100 - 2P, where Q is the quantity demanded and P is the price. If the monopolist&#039;s marginal \\cost function is given by MC = 10 + 2Q, what is the monopolist&#039;s optimal price and quantity?",
+      "options": {
+        "A": "P = 50, Q = 25",
+        "B": "P = 75, Q = 12.5",
+        "C": "P = 100, Q = 0",
+        "D": "P = 0, Q = 50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0063",
+      "type": "mcq",
+      "stem": "A government is considering implementing a tax on a particular good. The demand curve for the good is given by Q = 100 - 2P, and the supply curve is given by Q = 20 + 2P. If the government wants to raise revenue of ₦1000, what is the optimal tax rate?",
+      "options": {
+        "A": "P = 20, Q = 40",
+        "B": "P = 30, Q = 35",
+        "C": "P = 40, Q = 30",
+        "D": "P = 50, Q = 25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0064",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is given by the equation Y = C + I + G, where Y is the GDP, C is the consumption, I is the investment, and G is the government sp\\ending. If the country&#039;s consumption is given by C = 100 + 0.8Y, the investment is given by I = 20 + 0.2Y, and the government sp\\ending is given by G = 50, what is the country&#039;s GDP?",
+      "options": {
+        "A": "Y = 200",
+        "B": "Y = 250",
+        "C": "Y = 300",
+        "D": "Y = 350"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0065",
+      "type": "mcq",
+      "stem": "The production function for a firm is given by Q = 2L^0.5K^0.5, where Q is output, L is labor, and K is capital. If the firm increases labor from 100 to 121 units, and capital from 100 to 121 units, what is the percentage change in output?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0066",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by P = 100 - 2Q. The marginal revenue function is MR = 50 - 2Q. What is the profit-maximizing quantity?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0067",
+      "type": "mcq",
+      "stem": "A consumer has the following utility function: U = 2x + 3y. The budget constraint is 2x + 3y = 12. What is the consumer&#039;s optimal bundle?",
+      "options": {
+        "A": "x = 2, y = 4",
+        "B": "x = 3, y = 3",
+        "C": "x = 4, y = 2",
+        "D": "x = 5, y = 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0068",
+      "type": "mcq",
+      "stem": "The money market equilibrium is given by the equation: M = kPY, where M is the money supply, k is a cons\\tant, P is the price level, and Y is real GDP. If the money supply increases from 100 to 120, and the price level increases from 2 to 3, what is the new equilibrium real GDP?",
+      "options": {
+        "A": "50",
+        "B": "60",
+        "C": "70",
+        "D": "80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0069",
+      "type": "mcq",
+      "stem": "A firm is producing a good u\\sing the production function Q = 3L^0.5K^0.5. The firm&#039;s \\cost function is C = 2L + 3K. What is the firm&#039;s profit-maximizing input bundle?",
+      "options": {
+        "A": "L = 4, K = 4",
+        "B": "L = 6, K = 2",
+        "C": "L = 8, K = 1",
+        "D": "L = 10, K = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0070",
+      "type": "mcq",
+      "stem": "A firm operates in a perfectly competitive market with a downward-sloping demand curve. If the firm&#039;s marginal revenue (MR) is greater than its marginal \\cost (MC), what will be the effect on the firm&#039;s output?",
+      "options": {
+        "A": "The firm will increase its output.",
+        "B": "The firm will decrease its output.",
+        "C": "The firm's output will remain unchanged.",
+        "D": "The firm will exit the market."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0071",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is represented by the equation ( U(x,y) = 2x + 3y ). If the consumer&#039;s budget constraint is \\( 2x + 3y = 12 \\), what is the consumer&#039;s optimal bundle?",
+      "options": {
+        "A": "x = 2, y = 4",
+        "B": "x = 4, y = 2",
+        "C": "x = 3, y = 3",
+        "D": "x = 1, y = 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0072",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by \\( Q = 100 - 2P \\). If the firm&#039;s marginal \\cost is \\( MC = 10 \\), what is the monopolist&#039;s optimal price?",
+      "options": {
+        "A": "P = 40",
+        "B": "P = 50",
+        "C": "P = 60",
+        "D": "P = 70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0073",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is given by \\( GDP = C + I + G + \\( X - M \\ \\) ). If the country&#039;s consumption is \\( C = 100 \\), investment is \\( I = 50 \\), government sp\\ending is \\( G = 20 \\), exports are \\( X = 30 \\), and imports are \\( M = 10 \\), what is the country&#039;s GDP?",
+      "options": {
+        "A": "GDP = 180",
+        "B": "GDP = 190",
+        "C": "GDP = 200",
+        "D": "GDP = 210"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0074",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by \\( Q = 2L^{1/2}K^{1/2} \\). If the firm&#039;s labor input is \\( L = 4 \\) and capital input is \\( K = 9 \\), what is the firm&#039;s output?",
+      "options": {
+        "A": "Q = 12",
+        "B": "Q = 16",
+        "C": "Q = 20",
+        "D": "Q = 24"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0075",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand for raw materials is given by the equation Q = 100 - 2P, where Q is the quantity demanded and P is the price. If the price of the raw material increases by 20%, what is the new quantity demanded?",
+      "options": {
+        "A": "80",
+        "B": "60",
+        "C": "40",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0076",
+      "type": "mcq",
+      "stem": "A government imposes a tax on a firm&#039;s output. The firm&#039;s supply function is given by Q = 2P - 10. If the tax increases the firm&#039;s \\cost by 30%, what is the new supply function?",
+      "options": {
+        "A": "Q = 2P - 20",
+        "B": "Q = 2P - 15",
+        "C": "Q = 2P - 30",
+        "D": "Q = 2P - 25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0077",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is given by the equation GDP = C + I + G + \\( X - M \\), where C is consumption, I is investment, G is government sp\\ending, X is exports, and M is imports. If the country&#039;s GDP increases by 15% and the consumption increases by 20%, what is the percentage increase in the investment?",
+      "options": {
+        "A": "10%",
+        "B": "15%",
+        "C": "20%",
+        "D": "25%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0078",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by the equation Q = 2L^2 + 3K, where Q is the output, L is labor, and K is capital. If the firm increases the labor by 20% and the capital by 15%, what is the new output?",
+      "options": {
+        "A": "120",
+        "B": "150",
+        "C": "180",
+        "D": "200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0079",
+      "type": "mcq",
+      "stem": "A country&#039;s GNP is given by the equation GNP = GDP + (net factor income from abroad). If the country&#039;s GDP is 100 billion and the net factor income from abroad is 20 billion, what is the country&#039;s GNP?",
+      "options": {
+        "A": "120 billion",
+        "B": "100 billion",
+        "C": "80 billion",
+        "D": "60 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0080",
+      "type": "mcq",
+      "stem": "A firm&#039;s \\cost function is given by ( C(q) = 2q^2 + 5q + 10 ). If the firm&#039;s revenue function is ( R(q) = 3q^2 - 2q + 15 ), what is the profit-maximizing quantity of output?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0081",
+      "type": "mcq",
+      "stem": "A government imposes a tax on a firm&#039;s output. The firm&#039;s supply curve shifts from \\( S_0 \\) to \\( S_1 \\). What is the effect of the tax on the equilibrium price and quantity?",
+      "options": {
+        "A": "Price increases and quantity decreases",
+        "B": "Price decreases and quantity increases",
+        "C": "Price increases and quantity increases",
+        "D": "Price decreases and quantity decreases"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0082",
+      "type": "mcq",
+      "stem": "A country&#039;s balance of payments is given by the following equation: \\( BOP = X - M \\), where ( X ) is the value of exports and ( M ) is the value of imports. If the country&#039;s exports are \\( X = 100 \\) and imports are \\( M = 80 \\), what is the balance of payments?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0083",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by \\( Q = 2K^0.5L^0.5 \\). If the firm&#039;s capital is \\( K = 16 \\) and labor is \\( L = 9 \\), what is the level of output?",
+      "options": {
+        "A": "12",
+        "B": "15",
+        "C": "18",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0084",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is given by the following equation: \\( GDP = C + I + G + \\( X - M \\ \\) ), where ( C ) is consumption, ( I ) is investment, ( G ) is government sp\\ending, ( X ) is exports, and ( M ) is imports. If the country&#039;s consumption is \\( C = 100 \\), investment is \\( I = 20 \\), government sp\\ending is \\( G = 30 \\), exports are \\( X = 80 \\), and imports are \\( M = 60 \\), what is the country&#039;s GDP?",
+      "options": {
+        "A": "₦250",
+        "B": "₦300",
+        "C": "₦350",
+        "D": "₦400"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0085",
+      "type": "mcq",
+      "stem": "The opportunity \\cost of producing one more unit of a good is equal to the",
+      "options": {
+        "A": "marginal benefit",
+        "B": "marginal \\cost",
+        "C": "average product",
+        "D": "average \\cost"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0086",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand curve shifts to the right due to an increase in consumer income, which leads to a",
+      "options": {
+        "A": "increase in price",
+        "B": "decrease in quantity demanded",
+        "C": "increase in quantity supplied",
+        "D": "decrease in price"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0087",
+      "type": "mcq",
+      "stem": "The agricultural sector in Nigeria contributes significantly to the country&#039;s GDP, but its growth rate has been",
+      "options": {
+        "A": "higher than the industrial sector",
+        "B": "lower than the industrial sector",
+        "C": "equal to the industrial sector",
+        "D": "negligible"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0088",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R(x) = 2x^2 + 5x - 3. The marginal revenue function is",
+      "options": {
+        "A": "R'(x) = 4x + 5",
+        "B": "R'(x) = 2x + 5",
+        "C": "R'(x) = 4x - 5",
+        "D": "R'(x) = 2x - 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0089",
+      "type": "mcq",
+      "stem": "The money supply in an economy is increased by the central bank, which leads to a",
+      "options": {
+        "A": "decrease in interest rates",
+        "B": "increase in interest rates",
+        "C": "decrease in inflation rate",
+        "D": "increase in inflation rate"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0090",
+      "type": "mcq",
+      "stem": "Suppose the demand for a product is given by the equation Qd = 100 - 2P, where Qd is the quantity demanded and P is the price. If the price elasticity of demand is -2, what is the percentage change in quantity demanded when the price increases by 10?",
+      "options": {
+        "A": "20%",
+        "B": "10%",
+        "C": "5%",
+        "D": "15%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0091",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is calculated as the sum of the value of all final goods and services produced within its borders. If the country&#039;s GDP is ₦10,000,000,000 and the value of imports is ₦2,000,000,000, what is the value of the country&#039;s net exports?",
+      "options": {
+        "A": "₦8,000,000,000",
+        "B": "₦6,000,000,000",
+        "C": "₦4,000,000,000",
+        "D": "₦2,000,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0092",
+      "type": "mcq",
+      "stem": "A firm&#039;s supply curve is given by the equation Qs = 2P + 10, where Qs is the quantity supplied and P is the price. If the price elasticity of supply is 2, what is the percentage change in quantity supplied when the price increases by 5?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0093",
+      "type": "mcq",
+      "stem": "A country&#039;s balance of payments account is given by the equation BOP = X - M, where BOP is the balance of payments, X is the value of exports, and M is the value of imports. If the value of exports is ₦5,000,000,000 and the value of imports is ₦3,000,000,000, what is the balance of payments?",
+      "options": {
+        "A": "₦2,000,000,000",
+        "B": "₦4,000,000,000",
+        "C": "₦6,000,000,000",
+        "D": "₦8,000,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0094",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand curve is given by the equation Qd = 100 - 2P, where Qd is the quantity demanded and P is the price. If the price elasticity of demand is -2, what is the price elasticity of demand when the quantity demanded is 80?",
+      "options": {
+        "A": "-1",
+        "B": "-2",
+        "C": "-3",
+        "D": "-4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0095",
+      "type": "mcq",
+      "stem": "A firm&#039;s total revenue is given by the equation TR = 100x - 2x^2, where x is the number of units sold. If the firm sells 20 units, what is its total revenue?",
+      "options": {
+        "A": "₦1800",
+        "B": "₦2000",
+        "C": "₦2200",
+        "D": "₦2400"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0096",
+      "type": "mcq",
+      "stem": "A firm is operating under cons\\tant returns to scale. If it increases its inputs by 10%, what will happen to its output?",
+      "options": {
+        "A": "Output will increase by 10%",
+        "B": "Output will increase by 20%",
+        "C": "Output will remain the same",
+        "D": "Output will decrease by 10%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0097",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by Q = 100 - 2P. If the firm&#039;s marginal \\cost is MC = 10, what is the optimal price?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0098",
+      "type": "mcq",
+      "stem": "A country is experiencing a recession. The government decides to implement a fiscal policy to stimulate the economy. Which of the following is a characteristic of a fiscal policy?",
+      "options": {
+        "A": "Increase in government sp\\ending",
+        "B": "Decrease in government sp\\ending",
+        "C": "Increase in taxes",
+        "D": "Decrease in taxes"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0099",
+      "type": "mcq",
+      "stem": "A firm is considering two production processes. Process A has a fixed \\cost of ₦100,000 and a variable \\cost of ₦50 per unit. Process B has a fixed \\cost of ₦150,000 and a variable \\cost of ₦30 per unit. If the firm produces 10,000 units, which process is more profitable?",
+      "options": {
+        "A": "Process A",
+        "B": "Process B",
+        "C": "Both processes are equally profitable",
+        "D": "Neither process is profitable"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0100",
+      "type": "mcq",
+      "stem": "A consumer has a budget of ₦1,000 and faces a price of ₦100 per unit of a good. If the consumer&#039;s demand curve is given by Q = 10 - 0.1P, what is the optimal quantity?",
+      "options": {
+        "A": "10 units",
+        "B": "20 units",
+        "C": "30 units",
+        "D": "40 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0101",
+      "type": "mcq",
+      "stem": "A monopolistically competitive firm faces a downward-sloping demand curve. If the firm increases its price, what will happen to its total revenue?",
+      "options": {
+        "A": "Total revenue will decrease",
+        "B": "Total revenue will increase",
+        "C": "Total revenue will remain unchanged",
+        "D": "Total revenue will be unaffected"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0102",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is represented by the equation ( u(x,y) = 2x + 3y ). If the consumer&#039;s income is ₦1000 and the prices of x and y are ₦5 and ₦10 respectively, what is the consumer&#039;s optimal bundle?",
+      "options": {
+        "A": "(100, 50)",
+        "B": "(50, 100)",
+        "C": "(200, 0)",
+        "D": "(0, 200)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0103",
+      "type": "mcq",
+      "stem": "A country&#039;s balance of payments account is in equilibrium. If the country&#039;s trade deficit increases, what will happen to its exchange rate?",
+      "options": {
+        "A": "The exchange rate will appreciate",
+        "B": "The exchange rate will depreciate",
+        "C": "The exchange rate will remain unchanged",
+        "D": "The exchange rate will be unaffected"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0104",
+      "type": "mcq",
+      "stem": "A firm&#039;s marginal revenue product (MRP) is represented by the equation \\( MRP = 2x + 3y \\). If the firm&#039;s marginal \\cost (MC) is ₦10 and the prices of x and y are ₦5 and ₦10 respectively, what is the firm&#039;s optimal output?",
+      "options": {
+        "A": "(100, 50)",
+        "B": "(50, 100)",
+        "C": "(200, 0)",
+        "D": "(0, 200)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0105",
+      "type": "mcq",
+      "stem": "A country&#039;s inflation rate is 5% and its nominal interest rate is 10%. If the country&#039;s real interest rate is 5%, what is the expected rate of return on investment?",
+      "options": {
+        "A": "10%",
+        "B": "5%",
+        "C": "15%",
+        "D": "20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0106",
+      "type": "mcq",
+      "stem": "A firm operating under perfect competition has a \\cost function given by C(q) = 2q^2 + 10q. If the market price is $15, what is the firm&#039;s profit-maximizing quantity?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0107",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is $100 billion, and its GNP is $120 billion. What is the country&#039;s net factor income from abroad?",
+      "options": {
+        "A": "$10 billion",
+        "B": "$20 billion",
+        "C": "$30 billion",
+        "D": "$40 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0108",
+      "type": "mcq",
+      "stem": "A firm&#039;s total revenue is given by TR(q) = 20q - 0.5q^2. If the firm&#039;s marginal revenue is $10, what is its total revenue?",
+      "options": {
+        "A": "$500",
+        "B": "$600",
+        "C": "$700",
+        "D": "$800"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0109",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the firm&#039;s supply function is Q = 2P - 10, what is the equilibrium price?",
+      "options": {
+        "A": "$20",
+        "B": "$30",
+        "C": "$40",
+        "D": "$50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0110",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s input prices are L = $10 and K = $20, what is the firm&#039;s \\cost-minimizing input bundle?",
+      "options": {
+        "A": "L = 10, K = 20",
+        "B": "L = 20, K = 10",
+        "C": "L = 30, K = 15",
+        "D": "L = 15, K = 30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0111",
+      "type": "mcq",
+      "stem": "The demand for a product is given by the equation Qd = 100 - 2P, where Qd is the quantity demanded and P is the price. If the price elasticity of demand is -2, what is the percentage change in quantity demanded when the price increases by 10%?",
+      "options": {
+        "A": "20%",
+        "B": "30%",
+        "C": "40%",
+        "D": "50%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0112",
+      "type": "mcq",
+      "stem": "A monopolistically competitive firm faces a demand curve given by Qd = 100 - 2P. If the firm&#039;s marginal revenue is 50, what is the price at which the firm will produce 60 units?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0113",
+      "type": "mcq",
+      "stem": "A firm is producing at a point where its marginal \\cost is equal to its marginal revenue. If the firm&#039;s marginal \\cost is 10 and its marginal revenue is 20, what is the price at which the firm will produce 40 units?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0114",
+      "type": "mcq",
+      "stem": "The government of Nigeria has introduced a new policy to increase agricultural production. The policy includes providing subsidies to farmers, improving irrigation systems, and increa\\sing the use of fertilizers. However, some critics argue that the policy will lead to an increase in inflation. Which of the following is a possible reason for this increase in inflation?",
+      "options": {
+        "A": "The increased demand for fertilizers will lead to a shortage of fertilizers, cau\\sing prices to rise.",
+        "B": "The subsidies provided to farmers will lead to an increase in the money supply, cau\\sing inflation.",
+        "C": "The improved irrigation systems will lead to an increase in crop yields, cau\\sing prices to fall.",
+        "D": "The increased use of fertilizers will lead to an increase in the \\cost of production, cau\\sing prices to rise."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0115",
+      "type": "mcq",
+      "stem": "A monopolistically competitive firm is facing a decrease in demand for its product. The firm&#039;s marginal revenue (MR) and marginal \\cost (MC) curves are given by the following equations:",
+      "options": {
+        "A": "The firm will increase its price and reduce its output.",
+        "B": "The firm will decrease its price and increase its output.",
+        "C": "The firm will keep its price and output unchanged.",
+        "D": "The firm will increase its price and increase its output."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0116",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is given by the following equation:",
+      "options": {
+        "A": "The country's GDP is equal to its national income.",
+        "B": "The country's GDP is equal to its national income plus the value of net exports.",
+        "C": "The country's GDP is equal to its national income minus the value of net imports.",
+        "D": "The country's GDP is equal to its national income plus the value of net imports."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0117",
+      "type": "mcq",
+      "stem": "A firm is producing a good with a cons\\tant elasticity of demand (ED) of 2. The firm&#039;s marginal revenue (MR) and marginal \\cost (MC) curves are given by the following equations:",
+      "options": {
+        "A": "The firm will produce at a level where MR = MC.",
+        "B": "The firm will produce at a level where MR > MC.",
+        "C": "The firm will produce at a level where MR",
+        "D": "The firm will not produce at all."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0118",
+      "type": "mcq",
+      "stem": "A country&#039;s inflation rate is given by the following equation:",
+      "options": {
+        "A": "The country's inflation rate is equal to the percentage change in the price level.",
+        "B": "The country's inflation rate is equal to the percentage change in the price level minus the percentage change in the quantity of goods and services.",
+        "C": "The country's inflation rate is equal to the percentage change in the quantity of goods and services minus the percentage change in the price level.",
+        "D": "The country's inflation rate is equal to the percentage change in the price level plus the percentage change in the quantity of goods and services."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0119",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is downward sloping, indicating that as the quantity of one good increases, the quantity of the other good decreases. What is the name of this phenomenon?",
+      "options": {
+        "A": "Diminishing Marginal Utility",
+        "B": "Diminishing Returns to Scale",
+        "C": "Giffen Paradox",
+        "D": "Income Effect"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0120",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s current production is 4 units, and the price of labor is ₦100 per unit, while the price of capital is ₦200 per unit, what is the minimum \\cost of producing 4 units of output?",
+      "options": {
+        "A": "₦400",
+        "B": "₦800",
+        "C": "₦1200",
+        "D": "₦1600"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0121",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is ₦10 trillion, its GNP is ₦12 trillion, and its national income is ₦15 trillion. What is the country&#039;s net factor income from abroad?",
+      "options": {
+        "A": "₦3 trillion",
+        "B": "₦5 trillion",
+        "C": "₦7 trillion",
+        "D": "₦9 trillion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0122",
+      "type": "mcq",
+      "stem": "A central bank uses the following monetary policy tools: open market operations, reserve requirements, and discount rate. Which of the following is NOT a tool used by the central bank?",
+      "options": {
+        "A": "Open Market Operations",
+        "B": "Reserve Requirements",
+        "C": "Discount Rate",
+        "D": "Fiscal Policy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0123",
+      "type": "mcq",
+      "stem": "A consumer&#039;s budget constraint is given by 2x + 3y = 12. If the consumer&#039;s income is ₦12, and the price of good x is ₦2 per unit, while the price of good y is ₦3 per unit, what is the consumer&#039;s optimal bundle of goods?",
+      "options": {
+        "A": "(2, 4)",
+        "B": "(4, 2)",
+        "C": "(6, 0)",
+        "D": "(0, 6)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0124",
+      "type": "mcq",
+      "stem": "The production function for a firm is given by Q = 2L^0.5K^0.5, where Q is the output, L is the labor and K is the capital. If the firm increases labor from 4 units to 9 units and capital from 9 units to 16 units, what is the percentage increase in output?",
+      "options": {
+        "A": "25%",
+        "B": "50%",
+        "C": "75%",
+        "D": "100%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0125",
+      "type": "mcq",
+      "stem": "A firm is producing a good with a cons\\tant elasticity of demand of -2. If the price of the good increases by 10%, what is the percentage change in quantity demanded?",
+      "options": {
+        "A": "-20%",
+        "B": "-10%",
+        "C": "10%",
+        "D": "20%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0126",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is ₦100 billion, its imports are ₦20 billion, and its exports are ₦30 billion. What is the country&#039;s balance of trade?",
+      "options": {
+        "A": "₦10 billion",
+        "B": "₦20 billion",
+        "C": "₦30 billion",
+        "D": "₦40 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0127",
+      "type": "mcq",
+      "stem": "A firm is producing a good with a production function Q = 2L^0.5K^0.5. If the firm increases labor from 4 units to 9 units and capital from 9 units to 16 units, what is the percentage increase in output?",
+      "options": {
+        "A": "25%",
+        "B": "50%",
+        "C": "75%",
+        "D": "100%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0128",
+      "type": "mcq",
+      "stem": "A country&#039;s GNP is ₦120 billion, its GDP is ₦100 billion, and its net factor income from abroad is ₦20 billion. What is the country&#039;s GNP?",
+      "options": {
+        "A": "₦100 billion",
+        "B": "₦120 billion",
+        "C": "₦140 billion",
+        "D": "₦160 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0129",
+      "type": "mcq",
+      "stem": "The Nigerian government has implemented policies to promote agricultural development. Which of the following is a likely consequence of these policies?",
+      "options": {
+        "A": "Increased food production",
+        "B": "Reduced poverty",
+        "C": "Increased inequality",
+        "D": "Decreased economic growth"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0130",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s labor and capital inputs are increased by 20% and 15% respectively, what is the percentage change in output?",
+      "options": {
+        "A": "10%",
+        "B": "15%",
+        "C": "20%",
+        "D": "25%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0131",
+      "type": "mcq",
+      "stem": "The Central Bank of Nigeria has increased the reserve requirement for commercial banks. What is the likely effect on the money supply?",
+      "options": {
+        "A": "Increase",
+        "B": "Decrease",
+        "C": "No change",
+        "D": "Uncertain"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0132",
+      "type": "mcq",
+      "stem": "A consumer has a budget constraint of 100 units of currency and two goods, A and B. The prices of A and B are 5 and 3 units respectively. If the consumer sp\\ends 80 units on good A, what is the opportunity \\cost of good B?",
+      "options": {
+        "A": "10 units",
+        "B": "15 units",
+        "C": "20 units",
+        "D": "25 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0133",
+      "type": "mcq",
+      "stem": "The Nigerian government has implemented a policy to increase the minimum wage. What is the likely effect on employment?",
+      "options": {
+        "A": "Increase",
+        "B": "Decrease",
+        "C": "No change",
+        "D": "Uncertain"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0134",
+      "type": "mcq",
+      "stem": "Consider a firm operating in a perfectly competitive market with a production function given by Q = 2L^0.5K^0.5. If the firm&#039;s current input prices are w = 10 and r = 20, and it is currently producing 4 units of output, what is the firm&#039;s current input mix?",
+      "options": {
+        "A": "L = 4, K = 4",
+        "B": "L = 16, K = 1",
+        "C": "L = 1, K = 16",
+        "D": "L = 2, K = 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0135",
+      "type": "mcq",
+      "stem": "Suppose the exchange rate between the Nigerian naira (NGN) and the US dollar (USD) is 1 USD = 500 NGN. If a Nigerian consumer has a budget of 250,000 NGN and wants to buy a laptop that \\costs 500 USD, what is the maximum number of laptops the consumer can buy?",
+      "options": {
+        "A": "2 laptops",
+        "B": "3 laptops",
+        "C": "4 laptops",
+        "D": "5 laptops"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0136",
+      "type": "mcq",
+      "stem": "A consumer has a utility function given by U = 2x + 3y, where x and y are the quantities of two goods consumed. If the consumer&#039;s budget constraint is 10x + 5y = 100, and the prices of the two goods are 2 and 5 respectively, what is the consumer&#039;s optimal consumption bundle?",
+      "options": {
+        "A": "x = 10, y = 10",
+        "B": "x = 20, y = 5",
+        "C": "x = 5, y = 20",
+        "D": "x = 15, y = 15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0137",
+      "type": "mcq",
+      "stem": "Consider a firm operating in a perfectly competitive market with a production function given by Q = 3L^0.5K^0.5. If the firm&#039;s current input prices are w = 15 and r = 30, and it is currently producing 6 units of output, what is the firm&#039;s current input mix?",
+      "options": {
+        "A": "L = 9, K = 1",
+        "B": "L = 1, K = 9",
+        "C": "L = 3, K = 3",
+        "D": "L = 6, K = 6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0138",
+      "type": "mcq",
+      "stem": "Suppose the exchange rate between the Nigerian naira (NGN) and the South African rand (ZAR) is 1 ZAR = 200 NGN. If a Nigerian consumer has a budget of 400,000 NGN and wants to buy a smartphone that \\costs 200 ZAR, what is the maximum number of smartphones the consumer can buy?",
+      "options": {
+        "A": "2 smartphones",
+        "B": "3 smartphones",
+        "C": "4 smartphones",
+        "D": "5 smartphones"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0139",
+      "type": "mcq",
+      "stem": "Consider a perfectly competitive market with n firms, each producing a homogeneous product. If the market demand curve is downward sloping and the firms are price takers, what will be the effect on the market supply curve if the price of a key input increases?",
+      "options": {
+        "A": "The market supply curve will shift to the left.",
+        "B": "The market supply curve will shift to the right.",
+        "C": "The market supply curve will remain unchanged.",
+        "D": "The market supply curve will shift downward."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0140",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by Qd = 100 - 2P and a \\cost function C(Q) = 10Q + 5Q^2. What is the profit-maximizing quantity of output?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0141",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is 100 billion naira. The government sp\\ends 20 billion naira on goods and services, and the private sector sp\\ends 30 billion naira on goods and services. What is the country&#039;s national income?",
+      "options": {
+        "A": "80 billion naira",
+        "B": "90 billion naira",
+        "C": "100 billion naira",
+        "D": "110 billion naira"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0142",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand curve is given by Qd = 100 - 2P. If the firm&#039;s marginal revenue (MR) is 20, what is the firm&#039;s marginal \\cost (MC)?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0143",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by Qd = 100 - 2P and a \\cost function C(Q) = 10Q + 5Q^2. What is the monopolist&#039;s profit-maximizing price?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0144",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2K^\\( 1/2 \\)L^\\( 1/2 \\). If the firm&#039;s capital stock increases by 25% while keeping labor cons\\tant, what is the percentage change in output?",
+      "options": {
+        "A": "25%",
+        "B": "12.5%",
+        "C": "50%",
+        "D": "-12.5%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0145",
+      "type": "mcq",
+      "stem": "The demand for a product is given by Qd = 100 - 2P and the supply is given by Qs = 2P. If the price is initially at 20, what is the new equilibrium price?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0146",
+      "type": "mcq",
+      "stem": "A monopolist faces a demand curve given by Qd = 100 - 2P and a marginal revenue function MR = 200 - 4Q. If the firm produces 20 units, what is the price?",
+      "options": {
+        "A": "30",
+        "B": "40",
+        "C": "50",
+        "D": "60"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0147",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2K^\\( 1/2 \\)L^\\( 1/2 \\). If the firm&#039;s labor increases by 25% while keeping capital cons\\tant, what is the percentage change in output?",
+      "options": {
+        "A": "25%",
+        "B": "12.5%",
+        "C": "50%",
+        "D": "-12.5%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0148",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2K^\\( 1/2 \\)L^\\( 1/2 \\). If the firm&#039;s capital stock increases by 25% while keeping labor cons\\tant, what is the new output?",
+      "options": {
+        "A": "20",
+        "B": "25",
+        "C": "30",
+        "D": "35"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0149",
+      "type": "mcq",
+      "stem": "Consider a firm operating in a perfectly competitive market. If the firm&#039;s marginal revenue (MR) curve intersects its marginal \\cost (MC) curve at point E, where MR = MC, and the firm is producing at a level of output where the average revenue (AR) curve is above the average \\cost (AC) curve, what can be concluded about the firm&#039;s profit-maximizing output?",
+      "options": {
+        "A": "The firm is producing at a level of output where the average revenue (AR) curve is below the average \\cost (AC) curve.",
+        "B": "The firm is producing at a level of output where the average revenue (AR) curve is above the average \\cost (AC) curve.",
+        "C": "The firm is producing at a level of output where the average revenue (AR) curve is equal to the average \\cost (AC) curve.",
+        "D": "The firm is producing at a level of output where the average revenue (AR) curve is below the average \\cost (AC) curve."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0150",
+      "type": "mcq",
+      "stem": "A country&#039;s inflation rate is 5% per annum, and its nominal interest rate is 6% per annum. If the real interest rate is 2% per annum, what is the expected rate of inflation?",
+      "options": {
+        "A": "4%",
+        "B": "5%",
+        "C": "6%",
+        "D": "7%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0151",
+      "type": "mcq",
+      "stem": "A firm&#039;s total revenue (TR) is given by the equation TR = 100x - 2x^2, where x is the number of units sold. If the firm&#039;s total \\cost (TC) is given by the equation TC = 50x + 100, what is the firm&#039;s profit-maximizing output?",
+      "options": {
+        "A": "20 units",
+        "B": "30 units",
+        "C": "40 units",
+        "D": "50 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0152",
+      "type": "mcq",
+      "stem": "A firm is considering two different production techno\\logies: a traditional techno\\logy and a modern techno\\logy. The traditional techno\\logy has a fixed \\cost of ₦100,000 and a variable \\cost of ₦50 per unit. The modern techno\\logy has a fixed \\cost of ₦200,000 and a variable \\cost of ₦30 per unit. If the firm produces 1,000 units, what is the total \\cost of each techno\\logy?",
+      "options": {
+        "A": "Traditional techno\\logy: ₦250,000; Modern techno\\logy: ₦220,000",
+        "B": "Traditional techno\\logy: ₦220,000; Modern techno\\logy: ₦250,000",
+        "C": "Traditional techno\\logy: ₦200,000; Modern techno\\logy: ₦220,000",
+        "D": "Traditional techno\\logy: ₦220,000; Modern techno\\logy: ₦200,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0153",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand curve is given by the equation Qd = 100 - 2P, where Qd is the quantity demanded and P is the price. If the firm&#039;s supply curve is given by the equation Qs = 2P - 10, what is the equilibrium price?",
+      "options": {
+        "A": "₦20",
+        "B": "₦30",
+        "C": "₦40",
+        "D": "₦50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0154",
+      "type": "mcq",
+      "stem": "The demand for a commodity is said to be elastic if the percentage change in the quantity demanded is greater than the percentage change in the price. U\\sing the concept of elasticity of demand, explain why the demand for a commodity is said to be elastic.",
+      "options": {
+        "A": "The demand for a commodity is said to be elastic if the percentage change in the quantity demanded is greater than the percentage change in the price.",
+        "B": "The demand for a commodity is said to be elastic if the percentage change in the quantity demanded is less than the percentage change in the price.",
+        "C": "The demand for a commodity is said to be elastic if the percentage change in the quantity demanded is equal to the percentage change in the price.",
+        "D": "The demand for a commodity is said to be elastic if the percentage change in the quantity demanded is less than the percentage change in the price, but the price is not affected by the change in quantity demanded."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0155",
+      "type": "mcq",
+      "stem": "The agricultural sector is a major contributor to the GDP of Nigeria. Discuss the impact of agricultural industrialization on the GDP of Nigeria.",
+      "options": {
+        "A": "The agricultural sector is a major contributor to the GDP of Nigeria. Agricultural industrialization has a positive impact on the GDP of Nigeria.",
+        "B": "The agricultural sector is a major contributor to the GDP of Nigeria. Agricultural industrialization has a negative impact on the GDP of Nigeria.",
+        "C": "The agricultural sector is not a major contributor to the GDP of Nigeria. Agricultural industrialization has a positive impact on the GDP of Nigeria.",
+        "D": "The agricultural sector is not a major contributor to the GDP of Nigeria. Agricultural industrialization has a negative impact on the GDP of Nigeria."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0156",
+      "type": "mcq",
+      "stem": "The National Bureau of Statistics (NBS) releases the Gross Domestic Product (GDP) of Nigeria on a quarterly basis. Explain the concept of GDP and its impor\\tance in the economy.",
+      "options": {
+        "A": "The Gross Domestic Product (GDP) is the total value of all final goods and services produced within a country's borders over a specific time period.",
+        "B": "The Gross Domestic Product (GDP) is the total value of all intermediate goods and services produced within a country's borders over a specific time period.",
+        "C": "The Gross Domestic Product (GDP) is the total value of all final goods and services produced within a country's borders over a specific time period, excluding the value of intermediate goods and services.",
+        "D": "The Gross Domestic Product (GDP) is the total value of all intermediate goods and services produced within a country's borders over a specific time period, excluding the value of final goods and services."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0157",
+      "type": "mcq",
+      "stem": "The balance of payments (BOP) is a statistical statement that summarizes a country&#039;s economic transactions with the rest of the world over a specific period of time. Explain the concept of BOP and its impor\\tance in the economy.",
+      "options": {
+        "A": "The balance of payments (BOP) is a statistical statement that summarizes a country's economic transactions with the rest of the world over a specific period of time.",
+        "B": "The balance of payments (BOP) is a statistical statement that summarizes a country's economic transactions with the rest of the world over a specific period of time, excluding the value of imports and exports.",
+        "C": "The balance of payments (BOP) is a statistical statement that summarizes a country's economic transactions with the rest of the world over a specific period of time, including the value of imports and exports.",
+        "D": "The balance of payments (BOP) is a statistical statement that summarizes a country's economic transactions with the rest of the world over a specific period of time, excluding the value of imports and exports, and including the value of intermediate goods and services."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0158",
+      "type": "mcq",
+      "stem": "The government of Nigeria collects taxes from its citizens to fund public goods and services. Explain the concept of taxation and its impor\\tance in the economy.",
+      "options": {
+        "A": "The government of Nigeria collects taxes from its citizens to fund public goods and services.",
+        "B": "The government of Nigeria collects taxes from its citizens to fund private goods and services.",
+        "C": "The government of Nigeria does not collect taxes from its citizens to fund public goods and services.",
+        "D": "The government of Nigeria collects taxes from its citizens to fund public goods and services, but the taxes are not used to fund public goods and services."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0159",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^\\( 1/2 \\)K^\\( 1/2 \\). If the price of labor is ₦50 per unit and the price of capital is ₦100 per unit, and if the firm&#039;s budget constraint is 50L + 100K = ₦10,000, what is the optimal level of labor (L) that the firm should employ?",
+      "options": {
+        "A": "100 units",
+        "B": "200 units",
+        "C": "300 units",
+        "D": "400 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0160",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is ₦1,500 billion and its GNP is ₦1,600 billion. What is the net factor income from abroad?",
+      "options": {
+        "A": "₦100 billion",
+        "B": "₦200 billion",
+        "C": "₦300 billion",
+        "D": "₦400 billion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0161",
+      "type": "mcq",
+      "stem": "A consumer&#039;s utility function is given by U = 2x + 3y. If the consumer&#039;s budget constraint is 2x + 3y = ₦100, and if the price of good x is ₦20 per unit and the price of good y is ₦30 per unit, what is the optimal level of good x (x) that the consumer should purchase?",
+      "options": {
+        "A": "2 units",
+        "B": "3 units",
+        "C": "4 units",
+        "D": "5 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0162",
+      "type": "mcq",
+      "stem": "A firm&#039;s \\cost function is given by C = 2L + 3K. If the firm&#039;s revenue function is given by R = 4L + 5K, and if the firm&#039;s profit function is given by π = R - C, what is the optimal level of labor (L) that the firm should employ?",
+      "options": {
+        "A": "10 units",
+        "B": "20 units",
+        "C": "30 units",
+        "D": "40 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0163",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is given by the equation U = 2x + 3y. If the consumer&#039;s budget constraint is 2x + 3y = ₦100, and if the price of good x is ₦20 per unit and the price of good y is ₦30 per unit, what is the optimal level of good x (x) that the consumer should purchase?",
+      "options": {
+        "A": "2 units",
+        "B": "3 units",
+        "C": "4 units",
+        "D": "5 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0164",
+      "type": "mcq",
+      "stem": "A firm is operating on a long-run average \\cost curve. If the firm&#039;s output increases from 100 units to 200 units, and the average \\cost decreases from ₦100 to ₦80, what can be concluded about the firm&#039;s returns to scale?",
+      "options": {
+        "A": "Decrea\\sing returns to scale",
+        "B": "Increa\\sing returns to scale",
+        "C": "Cons\\tant returns to scale",
+        "D": "No conclusion can be drawn"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0165",
+      "type": "mcq",
+      "stem": "The Nigerian government has implemented a policy to increase the production of rice in the country. The policy includes providing subsidies to farmers and increa\\sing the importation of rice seeds. What is the likely effect of this policy on the supply of rice in Nigeria?",
+      "options": {
+        "A": "Increase in supply",
+        "B": "Decrease in supply",
+        "C": "No change in supply",
+        "D": "Increase in demand"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0166",
+      "type": "mcq",
+      "stem": "A consumer has the following utility function: U(x, y) = 2x + 3y. If the consumer&#039;s income is ₦100 and the prices of x and y are ₦20 and ₦30 respectively, what is the consumer&#039;s optimal bundle of x and y?",
+      "options": {
+        "A": "x = 2, y = 1",
+        "B": "x = 3, y = 2",
+        "C": "x = 4, y = 3",
+        "D": "x = 5, y = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0167",
+      "type": "mcq",
+      "stem": "A firm is producing a good u\\sing two inputs, labor and capital. The production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s output is 100 units and the price of labor is ₦50 per unit, what is the firm&#039;s optimal level of capital?",
+      "options": {
+        "A": "₦1000",
+        "B": "₦2000",
+        "C": "₦3000",
+        "D": "₦4000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0168",
+      "type": "mcq",
+      "stem": "The Nigerian government has implemented a policy to increase the production of rice in the country. The policy includes providing subsidies to farmers and increa\\sing the importation of rice seeds. What is the likely effect of this policy on the demand for rice in Nigeria?",
+      "options": {
+        "A": "Increase in demand",
+        "B": "Decrease in demand",
+        "C": "No change in demand",
+        "D": "Increase in supply"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0169",
+      "type": "mcq",
+      "stem": "A firm&#039;s total revenue is given by the equation R(x) = 2x^2 + 5x + 1, where x is the number of units sold. If the firm&#039;s marginal revenue is 10 when x = 3, what is the value of the firm&#039;s total revenue when x = 4?",
+      "options": {
+        "A": "41",
+        "B": "43",
+        "C": "45",
+        "D": "47"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0170",
+      "type": "mcq",
+      "stem": "The demand function for a product is given by the equation p(x) = 100 - 2x, where p is the price and x is the quantity demanded. If the supply function is given by the equation p(x) = 2x + 10, what is the equilibrium price and quantity?",
+      "options": {
+        "A": "20, 30",
+        "B": "30, 20",
+        "C": "40, 25",
+        "D": "50, 30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0171",
+      "type": "mcq",
+      "stem": "A consumer&#039;s utility function is given by the equation U(x, y) = 2x + 3y, where x is the number of units of good X and y is the number of units of good Y. If the consumer&#039;s budget constraint is given by the equation 2x + 3y = 12, what is the consumer&#039;s optimal bundle of goods?",
+      "options": {
+        "A": "2, 2",
+        "B": "3, 1",
+        "C": "4, 0",
+        "D": "1, 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0172",
+      "type": "mcq",
+      "stem": "A firm&#039;s \\cost function is given by the equation C(x) = 2x^2 + 5x + 1, where x is the number of units produced. If the firm&#039;s revenue function is given by the equation R(x) = 3x^2 - 2x + 1, what is the firm&#039;s profit function?",
+      "options": {
+        "A": "x^2 + 3x - 2",
+        "B": "x^2 + 2x - 1",
+        "C": "x^2 + x + 1",
+        "D": "x^2 - 2x + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0173",
+      "type": "mcq",
+      "stem": "A consumer&#039;s budget constraint is given by the equation 2x + 3y = 12, where x is the number of units of good X and y is the number of units of good Y. If the consumer&#039;s utility function is given by the equation U(x, y) = 2x + 3y, what is the consumer&#039;s optimal bundle of goods?",
+      "options": {
+        "A": "2, 2",
+        "B": "3, 1",
+        "C": "4, 0",
+        "D": "1, 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0174",
+      "type": "mcq",
+      "stem": "U\\sing the concept of opportunity \\cost, explain why a country may choose to import a good even if it can be produced domestically.",
+      "options": {
+        "A": "The opportunity \\cost of producing the good domestically is too high.",
+        "B": "The good is not produced domestically due to lack of resources.",
+        "C": "The country wants to specialize in producing other goods.",
+        "D": "The good is not produced domestically due to lack of techno\\logy."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0175",
+      "type": "mcq",
+      "stem": "A country&#039;s GDP is ₦10 trillion, its GNP is ₦12 trillion, and its net factor income from abroad is ₦1 trillion. What is the country&#039;s net national income?",
+      "options": {
+        "A": "₦11 trillion",
+        "B": "₦12 trillion",
+        "C": "₦13 trillion",
+        "D": "₦14 trillion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0176",
+      "type": "mcq",
+      "stem": "A consumer has a budget of ₦1000 and faces the following prices: good A \\costs ₦200, good B \\costs ₦300, and good C \\costs ₦400. U\\sing the budget constraint, find the consumer&#039;s optimal consumption bundle.",
+      "options": {
+        "A": "(2, 1, 0)",
+        "B": "(1, 2, 0)",
+        "C": "(0, 1, 2)",
+        "D": "(1, 1, 1)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0177",
+      "type": "mcq",
+      "stem": "U\\sing the concept of comparative advantage, explain why a country may choose to specialize in producing a good even if it is not the most efficient producer.",
+      "options": {
+        "A": "The country wants to specialize in producing other goods.",
+        "B": "The country has a comparative advantage in producing the good.",
+        "C": "The country wants to increase its trade deficit.",
+        "D": "The country wants to decrease its trade surplus."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0178",
+      "type": "mcq",
+      "stem": "A country&#039;s balance of payments is in equilibrium when its current account is equal to its capital account. What is the implication of this for the country&#039;s exchange rate?",
+      "options": {
+        "A": "The exchange rate will appreciate.",
+        "B": "The exchange rate will depreciate.",
+        "C": "The exchange rate will remain unchanged.",
+        "D": "The exchange rate will fluctuate."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0179",
+      "type": "mcq",
+      "stem": "Consider a closed economy with a GDP of ₦100 billion and a population of 20 million. If the average annual income per capita is ₦5,000, what is the implied GDP deflator?",
+      "options": {
+        "A": "100",
+        "B": "120",
+        "C": "150",
+        "D": "180"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0180",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P + 3X, where Q is the quantity demanded, P is the price, and X is the income. If the price is ₦50 and the income is ₦10,000, what is the quantity demanded?",
+      "options": {
+        "A": "50",
+        "B": "75",
+        "C": "100",
+        "D": "125"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0181",
+      "type": "mcq",
+      "stem": "A consumer&#039;s utility function is given by U = 2X + 3Y, where X is the quantity of good X and Y is the quantity of good Y. If the consumer&#039;s income is ₦10,000 and the prices of good X and good Y are ₦2 and ₦3 respectively, what is the optimal bundle of goods?",
+      "options": {
+        "A": "\\( X = 2, Y = 3 \\)",
+        "B": "\\( X = 3, Y = 2 \\)",
+        "C": "\\( X = 4, Y = 1 \\)",
+        "D": "\\( X = 1, Y = 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0182",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L + 3K, where Q is the output, L is the labor and K is the capital. If the firm hires 10 workers and uses ₦10,000 worth of capital, what is the output?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0183",
+      "type": "mcq",
+      "stem": "A country&#039;s national income is given by N = W + I + \\( G - T \\), where N is the national income, W is the wage income, I is the investment, G is the government exp\\enditure and T is the tax revenue. If the wage income is ₦50 billion, the investment is ₦20 billion, the government exp\\enditure is ₦30 billion and the tax revenue is ₦10 billion, what is the national income?",
+      "options": {
+        "A": "80",
+        "B": "90",
+        "C": "100",
+        "D": "110"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0184",
+      "type": "mcq",
+      "stem": "The opportunity \\cost of producing one more unit of a good is equal to the marginal benefit of producing that good. This is an example of which economic concept?",
+      "options": {
+        "A": "Law of Diminishing Returns",
+        "B": "Law of Increa\\sing Opportunity Cost",
+        "C": "Law of Diminishing Marginal Utility",
+        "D": "Law of Increa\\sing Marginal Utility"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0185",
+      "type": "mcq",
+      "stem": "A country&#039;s balance of payments is in equilibrium when the value of its imports equals the value of its exports. This is an example of which economic concept?",
+      "options": {
+        "A": "Trade Deficit",
+        "B": "Trade Surplus",
+        "C": "Balance of Payments Equilibrium",
+        "D": "Current Account Deficit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0186",
+      "type": "mcq",
+      "stem": "The demand for a good is inversely related to its price. This is an example of which economic concept?",
+      "options": {
+        "A": "Law of Demand",
+        "B": "Law of Supply",
+        "C": "Law of Diminishing Marginal Utility",
+        "D": "Law of Increa\\sing Marginal Utility"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0187",
+      "type": "mcq",
+      "stem": "The opportunity \\cost of producing one more unit of a good is equal to the marginal \\cost of producing that good. This is an example of which economic concept?",
+      "options": {
+        "A": "Law of Diminishing Returns",
+        "B": "Law of Increa\\sing Opportunity Cost",
+        "C": "Law of Diminishing Marginal Utility",
+        "D": "Law of Increa\\sing Marginal Utility"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0188",
+      "type": "mcq",
+      "stem": "The supply of a good is directly related to its price. This is an example of which economic concept?",
+      "options": {
+        "A": "Law of Supply",
+        "B": "Law of Demand",
+        "C": "Law of Diminishing Marginal Utility",
+        "D": "Law of Increa\\sing Marginal Utility"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0189",
+      "type": "mcq",
+      "stem": "The following table shows the relationship between the price of a commodity and its quantity demanded. U\\sing the midpoint method, calculate the price elasticity of demand for the commodity when the price is ₦120.",
+      "options": {
+        "A": "0.5",
+        "B": "1.2",
+        "C": "2.5",
+        "D": "3.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0190",
+      "type": "mcq",
+      "stem": "A firm has a production function given by Q = 2L^0.5K^0.5. If the price of labor is ₦100 per unit and the price of capital is ₦200 per unit, find the optimal level of labor and capital that will maximize the firm&#039;s profits.",
+      "options": {
+        "A": "L = 100, K = 50",
+        "B": "L = 50, K = 100",
+        "C": "L = 200, K = 100",
+        "D": "L = 100, K = 200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0191",
+      "type": "mcq",
+      "stem": "A consumer has the following utility function: U = 2x + 3y. If the prices of x and y are ₦10 and ₦20 respectively, and the consumer has a budget of ₦100, find the optimal quantities of x and y that will maximize the consumer&#039;s utility.",
+      "options": {
+        "A": "x = 5, y = 2",
+        "B": "x = 2, y = 5",
+        "C": "x = 10, y = 5",
+        "D": "x = 5, y = 10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0192",
+      "type": "mcq",
+      "stem": "A firm has a \\cost function given by C = 2L + 3K. If the price of labor is ₦100 per unit and the price of capital is ₦200 per unit, find the optimal level of labor and capital that will minimize the firm&#039;s \\costs.",
+      "options": {
+        "A": "L = 50, K = 100",
+        "B": "L = 100, K = 50",
+        "C": "L = 200, K = 100",
+        "D": "L = 100, K = 200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0193",
+      "type": "mcq",
+      "stem": "A consumer has the following budget constraint: 2x + 3y = 100. If the prices of x and y are ₦10 and ₦20 respectively, find the optimal quantities of x and y that will maximize the consumer&#039;s utility.",
+      "options": {
+        "A": "x = 20, y = 10",
+        "B": "x = 10, y = 20",
+        "C": "x = 30, y = 10",
+        "D": "x = 10, y = 30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0194",
+      "type": "mcq",
+      "stem": "A firm has a revenue function given by R = 2x + 3y. If the price of x is ₦10 per unit and the price of y is ₦20 per unit, find the optimal quantities of x and y that will maximize the firm&#039;s revenue.",
+      "options": {
+        "A": "x = 20, y = 10",
+        "B": "x = 10, y = 20",
+        "C": "x = 30, y = 10",
+        "D": "x = 10, y = 30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0195",
+      "type": "mcq",
+      "stem": "Consider a country with a fixed exchange rate regime. If the country&#039;s central bank decides to increase the money supply by 10%, what will be the effect on the balance of payments?",
+      "options": {
+        "A": "The balance of payments will improve due to increased exports.",
+        "B": "The balance of payments will worsen due to increased imports.",
+        "C": "The balance of payments will remain unchanged.",
+        "D": "The balance of payments will improve due to increased foreign investment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0196",
+      "type": "mcq",
+      "stem": "A firm is producing a good with a cons\\tant returns to scale production function. If the price of the good increases by 20%, what will be the effect on the firm&#039;s output?",
+      "options": {
+        "A": "The firm's output will increase by 20%.",
+        "B": "The firm's output will decrease by 20%.",
+        "C": "The firm's output will remain unchanged.",
+        "D": "The firm's output will increase by 10%."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0197",
+      "type": "mcq",
+      "stem": "A government is considering a tax on a particular good. If the tax is implemented, what will be the effect on the supply of the good?",
+      "options": {
+        "A": "The supply of the good will increase.",
+        "B": "The supply of the good will decrease.",
+        "C": "The supply of the good will remain unchanged.",
+        "D": "The supply of the good will increase at a decrea\\sing rate."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0198",
+      "type": "mcq",
+      "stem": "A central bank is considering a monetary policy to reduce inflation. If the central bank increases the reserve requirement for commercial banks, what will be the effect on the money supply?",
+      "options": {
+        "A": "The money supply will increase.",
+        "B": "The money supply will decrease.",
+        "C": "The money supply will remain unchanged.",
+        "D": "The money supply will increase at a decrea\\sing rate."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0199",
+      "type": "mcq",
+      "stem": "A firm is producing a good with a decrea\\sing returns to scale production function. If the price of the good increases by 20%, what will be the effect on the firm&#039;s output?",
+      "options": {
+        "A": "The firm's output will increase by 20%.",
+        "B": "The firm's output will decrease by 20%.",
+        "C": "The firm's output will remain unchanged.",
+        "D": "The firm's output will increase by 10%."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0200",
+      "type": "mcq",
+      "stem": "A government is considering a tax on a particular good. If the tax is implemented, what will be the effect on the demand for the good?",
+      "options": {
+        "A": "The demand for the good will increase.",
+        "B": "The demand for the good will decrease.",
+        "C": "The demand for the good will remain unchanged.",
+        "D": "The demand for the good will increase at a decrea\\sing rate."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0201",
+      "type": "mcq",
+      "stem": "A central bank is considering a monetary policy to reduce inflation. If the central bank increases the interest rate, what will be the effect on the money supply?",
+      "options": {
+        "A": "The money supply will increase.",
+        "B": "The money supply will decrease.",
+        "C": "The money supply will remain unchanged.",
+        "D": "The money supply will increase at a decrea\\sing rate."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0202",
+      "type": "mcq",
+      "stem": "A firm is producing a good with a cons\\tant returns to scale production function. If the price of the good decreases by 20%, what will be the effect on the firm&#039;s output?",
+      "options": {
+        "A": "The firm's output will increase by 20%.",
+        "B": "The firm's output will decrease by 20%.",
+        "C": "The firm's output will remain unchanged.",
+        "D": "The firm's output will increase by 10%."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0203",
+      "type": "mcq",
+      "stem": "A country&#039;s inflation rate is 8% per annum, and its nominal interest rate is 10% per annum. If the real interest rate is 2% per annum, what is the expected rate of return on a 2-year bond?",
+      "options": {
+        "A": "\\( 1.02^2 \\)",
+        "B": "\\( 1.08^2 \\)",
+        "C": "\\( 1.10^2 \\)",
+        "D": "\\( 1.02 \\times 1.10 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-lasu-pq-economics-bank-0204",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by \\( Q = 100K^0.5L^0.5 \\), where Q is output, K is capital, and L is labor. If the firm&#039;s capital stock is 100 units and labor is 100 units, what is the marginal product of labor?",
+      "options": {
+        "A": "\\( 0.5 \\times 100^{0.5} \\times L^{-0.5} \\)",
+        "B": "\\( 0.5 \\times 100^{0.5} \\times L^{0.5} \\)",
+        "C": "\\( 100^{0.5} \\times L^{0.5} \\)",
+        "D": "\\( 100^{0.5} \\times L^{-0.5} \\)"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

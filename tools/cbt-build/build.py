@@ -35,7 +35,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-SRC_DIRS = [REPO / "data" / "src" / "mock", REPO / "data" / "src" / "real"]
+SRC_DIRS = [REPO / "data" / "src" / "real"]  # data/src/mock retired (f490393)
 QUESTIONS_DIR = REPO / "data" / "questions"
 KEYS_DIR = REPO / "data" / "answer-keys"
 LETTERS = "ABCDEFGH"
@@ -189,20 +189,20 @@ def main() -> int:
                     entry["dropped"].append({"index": i, "reason": "no stem"})
                     continue
                 style, options = extract_options(q)
-                letter, accepted, err = extract_answer(q, options)
                 src_type = str(q.get("type") or "").strip().lower()
-                if src_type == "theory" and not options:
+                qtype = "theory" if (src_type == "theory" and not options) else None
+                if qtype == "theory":
                     # Essay question from the harvest: no options, no auto
                     # answer — the sealed key carries the model answer.
-                    qtype = "theory"
                     letter, accepted = None, []
                     err = None
+                else:
+                    letter, accepted, err = extract_answer(q, options)
+                    qtype = "mcq" if options else "text"
                 if err and accepted is None and qtype != "theory":
                     entry["dropped"].append({"index": i, "reason": err})
                     continue
 
-                if src_type != "theory":
-                    qtype = "mcq" if options else "text"
                 if qtype == "text" and not accepted:
                     entry["dropped"].append({"index": i, "reason": "text question without accepted answers"})
                     continue

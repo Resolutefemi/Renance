@@ -1,0 +1,132 @@
+{
+  "code": "uni-eksu-eng231-bank",
+  "title": "EKSU Eng231 - Mathematics | Practice Bank",
+  "version": 1,
+  "questionCount": 10,
+  "totalMarks": 10,
+  "questions": [
+    {
+      "id": "uni-eksu-eng231-bank-0001",
+      "type": "mcq",
+      "stem": "If a vector $\\mathbf{a} = 2\\mathbf{i} - 3\\mathbf{j} + \\mathbf{k}$ and a vector $\\mathbf{b} = -\\mathbf{i} + 5\\mathbf{j} - 2\\mathbf{k}$, find the scalar product $\\mathbf{a} \\cdot \\mathbf{b}$.",
+      "options": {
+        "A": "$-13$",
+        "B": "$13$",
+        "C": "$-5$",
+        "D": "$5$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0002",
+      "type": "mcq",
+      "stem": "What is the magnitude of the complex number $z = 3 + 4i$?",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "$\\sqrt{7}$",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0003",
+      "type": "mcq",
+      "stem": "Evaluate the definite integral $\\int_{0}^{\\pi/2} \\cos(x) dx$.",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "-1",
+        "D": "$\\pi/2$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0004",
+      "type": "mcq",
+      "stem": "Find the derivative of the function $f(x) = x^3 - 5x^2 + 2x - 7$ with respect to $x$.",
+      "options": {
+        "A": "$3x^2 - 10x + 2$",
+        "B": "$3x^2 - 5x + 2$",
+        "C": "$x^4/4 - 5x^3/3 + x^2 - 7x$",
+        "D": "$3x^2 - 10x$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0005",
+      "type": "mcq",
+      "stem": "The general solution of the differential equation $\\frac{dy}{dx} = ky$ is:",
+      "options": {
+        "A": "$y = C e^{kx}$",
+        "B": "$y = C e^{-kx}$",
+        "C": "$y = kx + C$",
+        "D": "$y = e^{kx} + C$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0006",
+      "type": "mcq",
+      "stem": "If a matrix $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ and a matrix $B = \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}$, find the determinant of $A+B$.",
+      "options": {
+        "A": "$-2$",
+        "B": "$2$",
+        "C": "$-18$",
+        "D": "$18$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0007",
+      "type": "mcq",
+      "stem": "What is the value of $i^5$, where $i$ is the imaginary unit?",
+      "options": {
+        "A": "$i$",
+        "B": "$-i$",
+        "C": "$1$",
+        "D": "$-1$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0008",
+      "type": "mcq",
+      "stem": "Find the partial derivative of $f(x,y) = x^2y + 3xy^2$ with respect to $x$.",
+      "options": {
+        "A": "$2xy + 3y^2$",
+        "B": "$x^2 + 6xy$",
+        "C": "$2xy + 3xy^2$",
+        "D": "$x^2 + 3y^2$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0009",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations:",
+      "options": {
+        "A": "$2x + y = 5$",
+        "B": "$x - y = 1$",
+        "C": "$x=2, y=1$",
+        "D": "$x=1, y=2$"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-eng231-bank-0010",
+      "type": "mcq",
+      "stem": "If the mean of the numbers $4, 7, k, 10$ is 6, what is the value of $k$?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 10,
+  "category": "university",
+  "body": "University Modules"
+}

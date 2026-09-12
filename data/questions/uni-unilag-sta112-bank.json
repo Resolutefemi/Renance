@@ -1,0 +1,1355 @@
+{
+  "code": "uni-unilag-sta112-bank",
+  "title": "UNILAG STA 112 | Course Question Bank",
+  "version": 1,
+  "questionCount": 112,
+  "totalMarks": 112,
+  "questions": [
+    {
+      "id": "uni-unilag-sta112-bank-0001",
+      "type": "mcq",
+      "stem": "What is the value of r, if 12C5 = 12Cr?",
+      "options": {
+        "A": "5 or 7",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0002",
+      "type": "mcq",
+      "stem": "What is the critical distinction between <b>Disjoint</b> events and <b>Independent</b> events?",
+      "options": {
+        "A": "Disjoint events have a non-empty intersection, while independent events do not.",
+        "B": "If events are disjoint, knowing one happened makes the other impossible; if independent, knowing one happened tells you nothing about the other.",
+        "C": "Disjoint events always have P(E|F) = P(E), while independent events have P(EF) = 0.",
+        "D": "There is no significant difference; the terms are interchangeable."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0003",
+      "type": "mcq",
+      "stem": "What is the number of signals that can be sent by 6 flags of different colours taking one or more at a time?",
+      "options": {
+        "A": "45",
+        "B": "63",
+        "C": "720",
+        "D": "1956"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0004",
+      "type": "mcq",
+      "stem": "Which formula represents the <b>General Addition Rule</b> for any two events <i>E</i> and <i>F</i> (not necessarily disjoint)?",
+      "options": {
+        "A": "P(E∪F) = P(E) + P(F)",
+        "B": "P(E∪F) = P(E) + P(F) – P(EF)",
+        "C": "P(E∪F) = P(E) × P(F)",
+        "D": "P(E∪F) = P(E) / P(F)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0005",
+      "type": "mcq",
+      "stem": "The <i>Additivity for Disjoint Events</i> axiom states that if events E<sub>1</sub>, E<sub>2</sub>, ... are mutually exclusive, then:",
+      "options": {
+        "A": "P(&cup;<sub>n=1</sub><sup>&infin;</sup> E<sub>n</sub>) = &prod;<sub>n=1</sub><sup>&infin;</sup> P(E<sub>n</sub>)",
+        "B": "P(&cup;<sub>n=1</sub><sup>&infin;</sup> E<sub>n</sub>) = &Sigma;<sub>n=1</sub><sup>&infin;</sup> P(E<sub>n</sub>)",
+        "C": "P(E<sub>n</sub>) = 1 for all n",
+        "D": "P(E<sub>n</sub> | E<sub>m</sub>) = P(E<sub>n</sub>) for n &ne; m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0006",
+      "type": "mcq",
+      "stem": "What is the number of ways of arrangement of letters of the word 'BANANA' so that no two N's are together?",
+      "options": {
+        "A": "40",
+        "B": "60",
+        "C": "80",
+        "D": "100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0007",
+      "type": "mcq",
+      "stem": "Ten buses are plying between two places A and B. In how many ways a person can travel from A to B and come back?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "100",
+        "D": "90"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0008",
+      "type": "mcq",
+      "stem": "What is the value of x, if 12C5 + 12C6 = XC6?",
+      "options": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0009",
+      "type": "mcq",
+      "stem": "What is the value of n, if P(15, n - 1) : P(16, n - 2) = 3 : 4?",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0010",
+      "type": "mcq",
+      "stem": "If nCr + nCr+1 = n+1Cx, then x = ?",
+      "options": {
+        "A": "r",
+        "B": "r-1",
+        "C": "n",
+        "D": "r + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0011",
+      "type": "mcq",
+      "stem": "What is the key difference between 'Disjoint' events and 'Independent' events?",
+      "options": {
+        "A": "Disjoint events have P(EF) = 0, while independent events have P(EF) = P(E)P(F).",
+        "B": "Disjoint events are highly dependent, while independent events mean knowing one happened tells you nothing about the other.",
+        "C": "If events are disjoint, they cannot be independent.",
+        "D": "All of the above."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0012",
+      "type": "mcq",
+      "stem": "If <sup>43</sup>C<sub>r-6</sub> = <sup>43</sup>C<sub>3r+1</sub>, then the value of r is:",
+      "options": {
+        "A": "12",
+        "B": "8",
+        "C": "6",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0013",
+      "type": "mcq",
+      "stem": "In the context of Bayes' Theorem, what does P(F<sub>j</sub>|E) represent?",
+      "options": {
+        "A": "Prior probability",
+        "B": "Likelihood",
+        "C": "Posterior probability",
+        "D": "Total probability"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0014",
+      "type": "mcq",
+      "stem": "The <i>Law of Total Probability</i> (Slide 22) states that the total probability of an event <i>E</i> is the:",
+      "options": {
+        "A": "Sum of the probabilities of E and F.",
+        "B": "Product of the conditional probabilities P(E|F<sub>i</sub>).",
+        "C": "Weighted average of its conditional probabilities, weighted by the probabilities of the 'causes' F<sub>i</sub>.",
+        "D": "Difference between P(E) and P(F)."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0015",
+      "type": "mcq",
+      "stem": "There are 10 points on a circle. By joining them how many chords can be drawn?",
+      "options": {
+        "A": "90",
+        "B": "45",
+        "C": "100",
+        "D": "120"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0016",
+      "type": "mcq",
+      "stem": "In the 'Disease Testing Problem' (Slides 24-26), after a person tests positive (T<sup>+</sup>), what is the probability they actually have the disease (D)?",
+      "options": {
+        "A": "0.01 (1%)",
+        "B": "0.95 (95%)",
+        "C": "0.02 (2%)",
+        "D": "Approximately 0.324 (32.4%)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0017",
+      "type": "mcq",
+      "stem": "If mC₁ = nC2, then which of the following relations is true?",
+      "options": {
+        "A": "2m = n",
+        "B": "2m = n(n + 1)",
+        "C": "2m = n(n - 1)",
+        "D": "2n = m(m - 1)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0018",
+      "type": "mcq",
+      "stem": "How many ways are there to arrange the letters of the word 'GARDEN' with the vowels in alphabetical order?",
+      "options": {
+        "A": "720",
+        "B": "360",
+        "C": "120",
+        "D": "240"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0019",
+      "type": "mcq",
+      "stem": "The probability of an event <i>E</i> given that event <i>F</i> has occurred, denoted P(E|F), is defined as:",
+      "options": {
+        "A": "P(E &cap; F) &times; P(F)",
+        "B": "P(F) / P(E &cap; F)",
+        "C": "P(E &cap; F) / P(F), for P(F) &gt; 0",
+        "D": "P(E) + P(F) - P(E &cap; F)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0020",
+      "type": "mcq",
+      "stem": "The module title is 'Quantifying Uncertainty'. How does the document describe the assignment of a numerical measure to events?",
+      "options": {
+        "A": "It's a process of subjective estimation.",
+        "B": "It's done by assigning a numerical measure &ndash; a probability &ndash; to events.",
+        "C": "It's solely based on counting the number of outcomes.",
+        "D": "It's an arbitrary process with no specific rules."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0021",
+      "type": "mcq",
+      "stem": "There are 10 points on a circle. By joining them, how many chords can be drawn?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "45",
+        "D": "90"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0022",
+      "type": "mcq",
+      "stem": "What is the definition of a 'Sample Space S' according to the provided material?",
+      "options": {
+        "A": "Any process or action that produces an observation or outcome.",
+        "B": "Any subset E of the sample space S.",
+        "C": "The set of all possible, mutually exclusive, and exhaustive outcomes of an experiment.",
+        "D": "A numerical measure assigned to events."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0023",
+      "type": "mcq",
+      "stem": "The Law of Total Probability states that P(E) = &sum;P(E|F<sub>i</sub>)P(F<sub>i</sub>). What does this formula conceptually represent, as described on Slide 22?",
+      "options": {
+        "A": "The simple sum of all conditional probabilities.",
+        "B": "The product of all prior probabilities.",
+        "C": "The unweighted average of the probabilities of the 'causes'.",
+        "D": "The weighted average of its conditional probabilities, weighted by the probabilities of the 'causes' F<sub>i</sub>."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0024",
+      "type": "mcq",
+      "stem": "According to the axioms of probability, what is the probability of the entire <i>Sample Space S</i>?",
+      "options": {
+        "A": "0",
+        "B": "0.5",
+        "C": "1",
+        "D": "Varies depending on the experiment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0025",
+      "type": "mcq",
+      "stem": "What is the number of ways to arrange the letters of the word 'BANANA' so that no two 'N's are together?",
+      "options": {
+        "A": "40",
+        "B": "60",
+        "C": "80",
+        "D": "100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0026",
+      "type": "mcq",
+      "stem": "How many ways are there to arrange the letters of the word “GARDEN” with the vowels in alphabetical order?",
+      "options": {
+        "A": "120",
+        "B": "360",
+        "C": "720",
+        "D": "240"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0027",
+      "type": "mcq",
+      "stem": "According to the document, what is the definition of an <i>Experiment</i> in probability?",
+      "options": {
+        "A": "The set of all possible outcomes.",
+        "B": "Any process or action that produces an observation or outcome.",
+        "C": "A subset of the sample space.",
+        "D": "An outcome that cannot occur together with another specific outcome."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0028",
+      "type": "mcq",
+      "stem": "The derivation of the Complement Rule, P(E<sup>c</sup>) = 1 - P(E), relies on which of the three axioms of probability?",
+      "options": {
+        "A": "Only Axiom 1 (Non-negativity).",
+        "B": "Only Axiom 2 (Probability of the Sample Space).",
+        "C": "Axiom 2 (P(S)=1) and Axiom 3 (Additivity for Disjoint Events).",
+        "D": "All three axioms are required for the derivation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0029",
+      "type": "mcq",
+      "stem": "In how many ways 7 pictures can be hanged on 9 pegs?",
+      "options": {
+        "A": "<sup>9</sup>C<sub>7</sub>",
+        "B": "<sup>9</sup>P<sub>7</sub>",
+        "C": "7!",
+        "D": "9!"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0030",
+      "type": "mcq",
+      "stem": "In probability, an <i>Event E</i> is defined as:",
+      "options": {
+        "A": "Any process or action that produces an observation.",
+        "B": "The entire collection of all possible outcomes.",
+        "C": "Any subset of the sample space S.",
+        "D": "An outcome that is guaranteed to occur."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0031",
+      "type": "mcq",
+      "stem": "If <sup>n</sup>P<sub>4</sub> : <sup>n</sup>P<sub>2</sub> = 12, find the value of n.",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0032",
+      "type": "mcq",
+      "stem": "What key characteristics define a 'Sample Space S' according to its definition on Slide 4?",
+      "options": {
+        "A": "It is any subset of all possible outcomes.",
+        "B": "It is the set of all possible, mutually exclusive, and exhaustive outcomes of an experiment.",
+        "C": "It is a numerical value representing the probability of an experiment.",
+        "D": "It only includes the most likely outcomes."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0033",
+      "type": "mcq",
+      "stem": "There are 6 letters and 3 post boxes. The number of ways in which these letters can be posted is:",
+      "options": {
+        "A": "6<sup>3</sup>",
+        "B": "3<sup>6</sup>",
+        "C": "<sup>6</sup>P<sub>3</sub>",
+        "D": "<sup>6</sup>C<sub>3</sub>"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0034",
+      "type": "mcq",
+      "stem": "What is the value of 6! / 3!?",
+      "options": {
+        "A": "3!",
+        "B": "6",
+        "C": "120",
+        "D": "720"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0035",
+      "type": "mcq",
+      "stem": "According to the summary, what is the role of Conditional Probability?",
+      "options": {
+        "A": "It defines sample spaces and events.",
+        "B": "It helps in counting outcomes in a set.",
+        "C": "It updates our beliefs with evidence.",
+        "D": "It ensures events are mutually exclusive."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0036",
+      "type": "mcq",
+      "stem": "A gentleman has 6 friends to invite. In how many ways can he send invitation cards to them if he has three servants to carry the cards?",
+      "options": {
+        "A": "3!",
+        "B": "6!",
+        "C": "3⁶",
+        "D": "6³"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0037",
+      "type": "mcq",
+      "stem": "If <sup>n-1</sup>P<sub>3</sub> : <sup>n</sup>P<sub>4</sub> = 1 : 9, then what is the value of n?",
+      "options": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0038",
+      "type": "mcq",
+      "stem": "If 43Cr-6 = 43C3r+1, then value of r is -",
+      "options": {
+        "A": "12",
+        "B": "8",
+        "C": "6",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0039",
+      "type": "mcq",
+      "stem": "In Bayes' Theorem, P(F<sub>j</sub>|E) is referred to as the:",
+      "options": {
+        "A": "Prior probability",
+        "B": "Likelihood",
+        "C": "Posterior probability",
+        "D": "Marginal probability"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0040",
+      "type": "mcq",
+      "stem": "When considering the 'Motivating Question' for Conditional Probability (Slides 13-14) &ndash; 'If you roll two dice and I tell you the first die is a 6, what's the probability the sum is 10?' &ndash; how does the new information affect the sample space?",
+      "options": {
+        "A": "The sample space remains the full 36 outcomes, but probabilities are adjusted.",
+        "B": "The original sample space is entirely discarded, and a new one is created from scratch.",
+        "C": "The new sample space is reduced to only those outcomes where the first die is a 6.",
+        "D": "The information is irrelevant and does not change the sample space."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0041",
+      "type": "mcq",
+      "stem": "Which of the following best defines a <i>Sample Space S</i> according to the provided material?",
+      "options": {
+        "A": "A collection of all possible events for an experiment.",
+        "B": "The set of all possible, mutually exclusive, and exhaustive outcomes of an experiment.",
+        "C": "Any single observation or result from an experiment.",
+        "D": "The probability of all outcomes combined, which must equal 1."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0042",
+      "type": "mcq",
+      "stem": "Which of the following is the correct formula for the <i>Complement Rule</i>, as presented in the document?",
+      "options": {
+        "A": "P(E &cup; F) = P(E) + P(F)",
+        "B": "P(E &cap; F) = P(E)P(F)",
+        "C": "P(E<sup>c</sup>) = 1 - P(E)",
+        "D": "P(E|F) = P(E &cap; F) / P(F)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0043",
+      "type": "mcq",
+      "stem": "According to the document's 'Critical Warning' on Slide 18, what is the key difference between events being <i>disjoint</i> and events being <i>independent</i>?",
+      "options": {
+        "A": "Disjoint events occur together, while independent events do not affect each other's probability.",
+        "B": "Independent events are always disjoint, but disjoint events are not necessarily independent.",
+        "C": "Disjoint events cannot occur together, making them highly dependent; independent events mean knowing one happened tells you nothing about the other.",
+        "D": "Both terms mean the same thing, indicating that events have no relationship."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0044",
+      "type": "mcq",
+      "stem": "According to the document, which set operation represents the event that both E and F occur?",
+      "options": {
+        "A": "Union (E U F)",
+        "B": "Intersection (E ∩ F or EF)",
+        "C": "Complement (E<sup>c</sup>)",
+        "D": "Mutually Exclusive (Disjoint)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0045",
+      "type": "mcq",
+      "stem": "According to the 'Critical Warning' on Slide 18, what is the relationship between <i>Disjoint</i> events and <i>Independent</i> events?",
+      "options": {
+        "A": "They are interchangeable terms, meaning the same thing.",
+        "B": "Disjoint events are a special case of independent events.",
+        "C": "They are totally different; if events are disjoint, they are highly dependent.",
+        "D": "If events are independent, they must also be disjoint."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0046",
+      "type": "mcq",
+      "stem": "Given an urn with 3 red (R) and 2 blue (B) balls, if we draw 2 balls without replacement, what is the probability that both balls are red (P(R<sub>1</sub>R<sub>2</sub>))?",
+      "options": {
+        "A": "3/5",
+        "B": "2/4",
+        "C": "0.3",
+        "D": "0.6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0047",
+      "type": "mcq",
+      "stem": "Which of the following formulas represents the number of diagonals of an n-sided polygon?",
+      "options": {
+        "A": "n(n+1)/2",
+        "B": "n(n-1)/2",
+        "C": "n(n-2)/2",
+        "D": "n(n-3)/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0048",
+      "type": "mcq",
+      "stem": "What is the value of n, if P(15, n − 1) : P(16, n − 2) = 3 : 4?",
+      "options": {
+        "A": "10",
+        "B": "12",
+        "C": "14",
+        "D": "15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0049",
+      "type": "mcq",
+      "stem": "If <sup>n</sup>C<sub>1</sub> = <sup>n</sup>C<sub>2</sub>, then which of the following is true if we replace 'm' with 'n' in the options?",
+      "options": {
+        "A": "2n = n",
+        "B": "2n = n(n + 1)",
+        "C": "2n = n(n - 1)",
+        "D": "2n = m(m - 1)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0050",
+      "type": "mcq",
+      "stem": "If events E<sub>1</sub>, E<sub>2</sub>, ... are mutually exclusive, what does the Additivity for Disjoint Events axiom state about their probabilities?",
+      "options": {
+        "A": "P(∪<sup>∞</sup><sub>n=1</sub> E<sub>n</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>)",
+        "B": "P(∪<sup>∞</sup><sub>n=1</sub> E<sub>n</sub>) = 1",
+        "C": "P(∪<sup>∞</sup><sub>n=1</sub> E<sub>n</sub>) = Σ<sup>∞</sup><sub>n=1</sub> P(E<sub>n</sub>)",
+        "D": "P(∪<sup>∞</sup><sub>n=1</sub> E<sub>n</sub>) = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0051",
+      "type": "mcq",
+      "stem": "Ten buses are plying between two places A and B. In how many ways can a person travel from A to B and come back?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "100",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0052",
+      "type": "mcq",
+      "stem": "Which statement correctly describes statistically independent events E and F?",
+      "options": {
+        "A": "E and F cannot occur together.",
+        "B": "The occurrence of one affects the probability of the other.",
+        "C": "P(EF) = P(E)P(F).",
+        "D": "If P(F) > 0, then P(E|F) = 0."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0053",
+      "type": "mcq",
+      "stem": "In how many ways can a bowler take four wickets in a single 6-ball over?",
+      "options": {
+        "A": "6",
+        "B": "15",
+        "C": "20",
+        "D": "30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0054",
+      "type": "mcq",
+      "stem": "Rearranging the definition of conditional probability leads to the <i>Multiplication Rule</i> for finding joint probabilities. Which formula represents this rule for two events E and F?",
+      "options": {
+        "A": "P(E &cup; F) = P(E) + P(F) &ndash; P(EF)",
+        "B": "P(EF) = P(F) &middot; P(E|F)",
+        "C": "P(E|F) = P(E)",
+        "D": "P(E) = &Sigma;P(E|F<sub>i</sub>)P(F<sub>i</sub>)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0055",
+      "type": "mcq",
+      "stem": "If there are 12 persons in a party, and if each two of them shake hands with each other, how many handshakes happen in the party?",
+      "options": {
+        "A": "12",
+        "B": "24",
+        "C": "66",
+        "D": "132"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0056",
+      "type": "mcq",
+      "stem": "Which of the three axioms of probability (Slide 7) allows us to sum the probabilities of mutually exclusive events to find the probability of their union?",
+      "options": {
+        "A": "Axiom 1: Non-negativity (0 &le; P(E) &le; 1).",
+        "B": "Axiom 2: Probability of the Sample Space (P(S) = 1).",
+        "C": "Axiom 3: Additivity for Disjoint Events.",
+        "D": "None of the above; this rule is a theorem derived from the axioms."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0057",
+      "type": "mcq",
+      "stem": "Based on the definitions provided, when are two events <i>E</i> and <i>F</i> considered <i>Mutually Exclusive (Disjoint)</i>?",
+      "options": {
+        "A": "When the occurrence of one does not affect the probability of the other.",
+        "B": "When they share at least one common outcome.",
+        "C": "When they cannot occur together, meaning their intersection is empty (EF = Ø).",
+        "D": "When one event is a subset of the other."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0058",
+      "type": "mcq",
+      "stem": "What are the key characteristics of a <i>Sample Space S</i>, as defined in the document?",
+      "options": {
+        "A": "It is a subset of the experiment's outcomes.",
+        "B": "It is the set of all possible, mutually exclusive, and exhaustive outcomes of an experiment.",
+        "C": "It only includes outcomes with positive probabilities.",
+        "D": "It is a single observation from an experiment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0059",
+      "type": "mcq",
+      "stem": "There are 6 letters and 3 post boxes. The number of ways in which these letters can be posted is -",
+      "options": {
+        "A": "6^3",
+        "B": "3^6",
+        "C": "6P3",
+        "D": "6C3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0060",
+      "type": "mcq",
+      "stem": "The number of words which can be formed from the letters of the word MAXIMUM, if two consonants can't occur together is -",
+      "options": {
+        "A": "4!",
+        "B": "3! × 4!",
+        "C": "7!",
+        "D": "None of these."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0061",
+      "type": "mcq",
+      "stem": "If 7 points out of 12 are in the same straight line, then what is the number of triangles formed?",
+      "options": {
+        "A": "84",
+        "B": "175",
+        "C": "185",
+        "D": "201"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0062",
+      "type": "mcq",
+      "stem": "Which of the following best describes an <i>Event E</i> in probability theory?",
+      "options": {
+        "A": "A specific outcome of an experiment.",
+        "B": "The sample space itself.",
+        "C": "Any subset E of the sample space S.",
+        "D": "The numerical probability assigned to an outcome."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0063",
+      "type": "mcq",
+      "stem": "The first axiom of probability, <i>Non-negativity</i>, states that for any event <i>E</i>:",
+      "options": {
+        "A": "P(S) = 1",
+        "B": "0 &le; P(E) &le; 1",
+        "C": "P(E<sup>c</sup>) = 1 - P(E)",
+        "D": "P(E) + P(F) = P(E &cup; F)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0064",
+      "type": "mcq",
+      "stem": "According to the 'Key Concepts to Remember' on Slide 27, what is the primary function of Conditional Probability?",
+      "options": {
+        "A": "To count the number of outcomes in a set.",
+        "B": "To define the sample space of an experiment.",
+        "C": "To update our beliefs with evidence.",
+        "D": "To simplify calculations of independent events."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0065",
+      "type": "mcq",
+      "stem": "What does the <b>Probability of the Sample Space</b> axiom state?",
+      "options": {
+        "A": "The probability of the sample space is always 0.",
+        "B": "The probability of the sample space is 1, representing certainty.",
+        "C": "The probability of the sample space is equal to the sum of probabilities of all disjoint events.",
+        "D": "The probability of the sample space is equal to the average of all event probabilities."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0066",
+      "type": "mcq",
+      "stem": "Given that 12C5 = 12Cr, and r ≠ 5, what is the value of r?",
+      "options": {
+        "A": "12",
+        "B": "7",
+        "C": "5",
+        "D": "0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0067",
+      "type": "mcq",
+      "stem": "If mC1 = nC2, then which of the following relations holds true?",
+      "options": {
+        "A": "2m = n",
+        "B": "2m = n(n + 1)",
+        "C": "2m = n(n - 1)",
+        "D": "2n = m(m - 1)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0068",
+      "type": "mcq",
+      "stem": "In an examination, there are three multiple choice questions and each question has 4 choices. Find the number of ways in which a student can fail to get all answers correct.",
+      "options": {
+        "A": "12",
+        "B": "16",
+        "C": "63",
+        "D": "64"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0069",
+      "type": "mcq",
+      "stem": "In the context of Bayes' Theorem, what does <b>P(F<sub>j</sub>|E)</b> represent?",
+      "options": {
+        "A": "The probability of the evidence E given event F<sub>j</sub>.",
+        "B": "The initial belief about event F<sub>j</sub> before observing evidence.",
+        "C": "The updated belief about event F<sub>j</sub> after observing evidence E (Posterior probability).",
+        "D": "The joint probability of F<sub>j</sub> and E."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0070",
+      "type": "mcq",
+      "stem": "In how many ways can a bowler take four wickets in a single 6 balls over?",
+      "options": {
+        "A": "6",
+        "B": "15",
+        "C": "20",
+        "D": "30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0071",
+      "type": "mcq",
+      "stem": "Which of the following statements correctly represents the first Axiom of Probability, 'Non-negativity'?",
+      "options": {
+        "A": "P(S) = 1.",
+        "B": "P(E) = 1 - P(E<sup>c</sup>).",
+        "C": "0 ≤ P(E) ≤ 1.",
+        "D": "P(E U F) = P(E) + P(F) - P(EF)."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0072",
+      "type": "mcq",
+      "stem": "In the context of Bayes' Theorem, what does <b>P(F<sub>j</sub>)</b> represent?",
+      "options": {
+        "A": "The likelihood of seeing evidence E.",
+        "B": "The posterior probability (updated belief).",
+        "C": "The prior probability (belief before evidence).",
+        "D": "The probability of the evidence itself."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0073",
+      "type": "mcq",
+      "stem": "If <sup>12</sup>C<sub>5</sub> = <sup>12</sup>C<sub>r</sub>, then what is the value of r?",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "Both A and B",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0074",
+      "type": "mcq",
+      "stem": "Which of the following statements is TRUE?",
+      "options": {
+        "A": "0! = 0",
+        "B": "n! / (n-r)! = n",
+        "C": "nPn = 1",
+        "D": "nCr = nCn-r"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0075",
+      "type": "mcq",
+      "stem": "In the solved example of drawing a card from a 52-card deck, what is the probability of drawing a Heart (E) or a Face Card (F)?",
+      "options": {
+        "A": "13/52",
+        "B": "12/52",
+        "C": "3/52",
+        "D": "11/26"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0076",
+      "type": "mcq",
+      "stem": "When are two events, <i>E</i> and <i>F</i>, considered <i>Mutually Exclusive (Disjoint)</i>?",
+      "options": {
+        "A": "When the occurrence of one does not affect the probability of the other.",
+        "B": "When their union covers the entire sample space.",
+        "C": "When they cannot occur together, meaning their intersection is empty (EF = &Oslash;).",
+        "D": "When the probability of E is equal to the probability of F."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0077",
+      "type": "mcq",
+      "stem": "If <sup>n</sup>C<sub>r</sub> + <sup>n</sup>C<sub>r+1</sub> = <sup>n+1</sup>C<sub>x</sub>, then x = ?",
+      "options": {
+        "A": "r",
+        "B": "r-1",
+        "C": "n",
+        "D": "r + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0078",
+      "type": "mcq",
+      "stem": "After applying Bayes' Theorem in the 'Disease Testing Problem' (Slides 24-26), what was the 'Shocking Result' regarding the probability of actually having the disease given a positive test?",
+      "options": {
+        "A": "The probability was very high, close to 95%.",
+        "B": "The probability was exactly 50%, indicating no real diagnostic value.",
+        "C": "The probability was only 32.4%, significantly lower than the test's accuracy.",
+        "D": "The probability could not be determined due to insufficient information."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0079",
+      "type": "mcq",
+      "stem": "What is the definition of an 'Experiment' in the context of probability, as provided on Slide 4?",
+      "options": {
+        "A": "The set of all possible outcomes.",
+        "B": "Any process or action that produces an observation or outcome.",
+        "C": "A subset of the sample space.",
+        "D": "A numerical measure assigned to an event."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0080",
+      "type": "mcq",
+      "stem": "If n-1P3 : nP4 = 1 : 9, then what is the value of n?",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0081",
+      "type": "mcq",
+      "stem": "Which of the following conditions is equivalent to events E and F being statistically independent, assuming P(F) &gt; 0?",
+      "options": {
+        "A": "P(E|F) = P(F)",
+        "B": "P(F|E) = P(E)",
+        "C": "P(E|F) = P(E)",
+        "D": "P(E&cup;F) = P(E) + P(F)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0082",
+      "type": "mcq",
+      "stem": "The document states that probability is a mathematical system built on three axioms. Which of the following is NOT one of these axioms?",
+      "options": {
+        "A": "Non-negativity",
+        "B": "Probability of the Sample Space",
+        "C": "Multiplication Rule",
+        "D": "Additivity for Disjoint Events"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0083",
+      "type": "mcq",
+      "stem": "What is the number of signals that can be sent by 6 flags of different colours, taking one or more at a time?",
+      "options": {
+        "A": "45",
+        "B": "63",
+        "C": "720",
+        "D": "1956"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0084",
+      "type": "mcq",
+      "stem": "There are 10 non-collinear points in a plane. By joining them how many triangles can be made?",
+      "options": {
+        "A": "10",
+        "B": "45",
+        "C": "120",
+        "D": "210"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0085",
+      "type": "mcq",
+      "stem": "When are two events <i>E</i> and <i>F</i> considered <b>Statistically Independent</b>?",
+      "options": {
+        "A": "If their intersection is empty (EF = Ø).",
+        "B": "If the occurrence of one affects the probability of the other.",
+        "C": "If P(EF) = P(E)P(F).",
+        "D": "If P(E) = 1 - P(F)."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0086",
+      "type": "mcq",
+      "stem": "Which of the following statements represents the <b>Non-negativity</b> axiom of probability?",
+      "options": {
+        "A": "P(S) = 1",
+        "B": "0 < P(E) ≤ 1",
+        "C": "P(E∪F) = P(E) + P(F)",
+        "D": "P(E|F) = P(EF) / P(F)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0087",
+      "type": "mcq",
+      "stem": "Which of the following is the correct definition of Conditional Probability, P(E|F)?",
+      "options": {
+        "A": "P(E)P(F)",
+        "B": "P(EF) / P(E), for P(E) > 0",
+        "C": "P(EF) / P(F), for P(F) > 0",
+        "D": "P(E) + P(F) - P(EF)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0088",
+      "type": "mcq",
+      "stem": "Events <i>E</i> and <i>F</i> are considered <i>statistically independent</i> if:",
+      "options": {
+        "A": "They cannot occur together (EF = &Oslash;).",
+        "B": "The occurrence of one does not affect the probability of the other, meaning P(EF) = P(E)P(F).",
+        "C": "P(E) + P(F) = 1.",
+        "D": "The probability of E is less than or equal to the probability of F."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0089",
+      "type": "mcq",
+      "stem": "The number of diagonals in an n-sided polygon is:",
+      "options": {
+        "A": "n(n-1)/2",
+        "B": "n(n-2)/2",
+        "C": "n(n-3)/2",
+        "D": "n(n+1)/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0090",
+      "type": "mcq",
+      "stem": "The Complement Rule states that for any event E, P(E<sup>c</sup>) = 1 - P(E). Which axiom is used in the derivation to state that P(S) = P(E) + P(E<sup>c</sup>)?",
+      "options": {
+        "A": "Non-negativity",
+        "B": "Probability of the Sample Space",
+        "C": "Additivity for Disjoint Events",
+        "D": "General Addition Rule"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0091",
+      "type": "mcq",
+      "stem": "How does the Multiplication Rule extend to three events, E<sub>1</sub>, E<sub>2</sub>, and E<sub>3</sub>, according to Slide 16?",
+      "options": {
+        "A": "P(E<sub>1</sub>E<sub>2</sub>E<sub>3</sub>) = P(E<sub>1</sub>)P(E<sub>2</sub>)P(E<sub>3</sub>)",
+        "B": "P(E<sub>1</sub>E<sub>2</sub>E<sub>3</sub>) = P(E<sub>1</sub>) + P(E<sub>2</sub>) + P(E<sub>3</sub>)",
+        "C": "P(E<sub>1</sub>E<sub>2</sub>E<sub>3</sub>) = P(E<sub>1</sub>)P(E<sub>2</sub>|E<sub>1</sub>)P(E<sub>3</sub>|E<sub>1</sub>E<sub>2</sub>)",
+        "D": "P(E<sub>1</sub>E<sub>2</sub>E<sub>3</sub>) = P(E<sub>1</sub>E<sub>2</sub>) + P(E<sub>2</sub>E<sub>3</sub>) + P(E<sub>1</sub>E<sub>3</sub>)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0092",
+      "type": "mcq",
+      "stem": "In how many ways can 4 boys be chosen from 7 boys to make a committee?",
+      "options": {
+        "A": "7",
+        "B": "14",
+        "C": "21",
+        "D": "35"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0093",
+      "type": "mcq",
+      "stem": "What is the number of ways to arrange the letters of the word 'BANANA' such that no two N's are together?",
+      "options": {
+        "A": "40",
+        "B": "60",
+        "C": "80",
+        "D": "100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0094",
+      "type": "mcq",
+      "stem": "In Bayes' Theorem, as described on Slide 23, what does P(E|F<sub>j</sub>) represent?",
+      "options": {
+        "A": "The Prior probability, which is the belief before evidence.",
+        "B": "The Likelihood, which is the probability of seeing evidence E given F<sub>j</sub>.",
+        "C": "The Posterior probability, which is the updated belief after evidence E.",
+        "D": "The marginal probability of event E."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0095",
+      "type": "mcq",
+      "stem": "If <sup>12</sup>C<sub>5</sub> + <sup>12</sup>C<sub>6</sub> = <sup>X</sup>C<sub>6</sub>, then what is the value of X?",
+      "options": {
+        "A": "12",
+        "B": "13",
+        "C": "14",
+        "D": "15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0096",
+      "type": "mcq",
+      "stem": "If nCr + nCr+1 = n+1Cx, then the value of x is:",
+      "options": {
+        "A": "r",
+        "B": "r-1",
+        "C": "n",
+        "D": "r + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0097",
+      "type": "mcq",
+      "stem": "How does the <b>Multiplication Rule</b> relate to conditional probability for finding joint probabilities, according to the document?",
+      "options": {
+        "A": "P(EF) = P(E) + P(F)",
+        "B": "P(EF) = P(E) / P(F|E)",
+        "C": "P(EF) = P(F) ⋅ P(E|F)",
+        "D": "P(EF) = P(E|F) + P(F|E)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0098",
+      "type": "mcq",
+      "stem": "How many different words can be formed by using all the letters of the word “SCHOOL”?",
+      "options": {
+        "A": "120",
+        "B": "240",
+        "C": "360",
+        "D": "720"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0099",
+      "type": "mcq",
+      "stem": "The number of words which can be formed from the letters of the word 'MAXIMUM', if two consonants can't occur together is:",
+      "options": {
+        "A": "4!",
+        "B": "3! × 4!",
+        "C": "7!",
+        "D": "None of these"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0100",
+      "type": "mcq",
+      "stem": "If 12C5 + 12C6 = XC6, then what is the value of X?",
+      "options": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "18"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0101",
+      "type": "mcq",
+      "stem": "In the <i>General Addition Rule</i>, P(E &cup; F) = P(E) + P(F) &ndash; P(EF), why is P(EF) subtracted?",
+      "options": {
+        "A": "To account for mutually exclusive events.",
+        "B": "Because the intersection area is counted twice when P(E) and P(F) are added.",
+        "C": "To ensure the total probability does not exceed 1.",
+        "D": "It is only subtracted when events E and F are independent."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0102",
+      "type": "mcq",
+      "stem": "If 43Cr-6 = 43C3r+1, then what is the value of r?",
+      "options": {
+        "A": "12",
+        "B": "8",
+        "C": "6",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0103",
+      "type": "mcq",
+      "stem": "The number of words which can be formed from the letters of the word MAXIMUM, if two consonants can't occur together is:",
+      "options": {
+        "A": "4!",
+        "B": "3! × 4!",
+        "C": "7!",
+        "D": "None of these."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0104",
+      "type": "mcq",
+      "stem": "What is the definition of <b>Conditional Probability P(E|F)</b>?",
+      "options": {
+        "A": "The probability of event E and event F occurring simultaneously.",
+        "B": "The probability of event E given that event F has occurred, calculated as P(EF) / P(F) for P(F) > 0.",
+        "C": "The probability of event F given that event E has occurred.",
+        "D": "The probability of event E plus the probability of event F."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0105",
+      "type": "mcq",
+      "stem": "The <b>Complement Rule</b> states that for any event <i>E</i>, the probability of its complement <i>E<sup>c</sup></i> is:",
+      "options": {
+        "A": "P(E<sup>c</sup>) = P(E) + 1",
+        "B": "P(E<sup>c</sup>) = P(E) - 1",
+        "C": "P(E<sup>c</sup>) = 1 – P(E)",
+        "D": "P(E<sup>c</sup>) = P(E) / P(S)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0106",
+      "type": "mcq",
+      "stem": "According to the 'Key Concepts to Remember' on Slide 27, what is the primary role of Bayes' Theorem?",
+      "options": {
+        "A": "To define sample spaces and events.",
+        "B": "To calculate the union of events.",
+        "C": "To update beliefs with new evidence, taking us from a Prior P(F) to a Posterior P(F|E).",
+        "D": "To determine if two events are independent."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0107",
+      "type": "mcq",
+      "stem": "In how many ways can 7 pictures be hanged on 9 pegs?",
+      "options": {
+        "A": "P(9,7)",
+        "B": "C(9,7)",
+        "C": "7!",
+        "D": "9!"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0108",
+      "type": "mcq",
+      "stem": "In the General Addition Rule for any two events E and F, P(E&cup;F) = P(E) + P(F) &ndash; P(EF). Why is P(EF) subtracted?",
+      "options": {
+        "A": "To account for the non-negativity axiom.",
+        "B": "Because the intersection area is counted twice when P(E) and P(F) are added.",
+        "C": "To ensure that the total probability does not exceed 1.",
+        "D": "It is only subtracted if the events are disjoint."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0109",
+      "type": "mcq",
+      "stem": "When rolling two dice, if the first die is a 6, what is the probability that the sum is 10? (Based on the motivating question example).",
+      "options": {
+        "A": "3/36",
+        "B": "1/12",
+        "C": "1/6",
+        "D": "1/36"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0110",
+      "type": "mcq",
+      "stem": "How many different words (with or without meaning) can be made using all the vowels at a time?",
+      "options": {
+        "A": "24",
+        "B": "60",
+        "C": "120",
+        "D": "240"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0111",
+      "type": "mcq",
+      "stem": "There are 10 non-collinear points in a plane. By joining them, how many triangles can be made?",
+      "options": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "120"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unilag-sta112-bank-0112",
+      "type": "mcq",
+      "stem": "The <b>Law of Total Probability</b> is used to calculate P(E) when the sample space S is partitioned by mutually exclusive and exhaustive events F<sub>1</sub>, F<sub>2</sub>, ..., F<sub>n</sub>. Which formula correctly represents this law?",
+      "options": {
+        "A": "P(E) = P(E|F<sub>1</sub>) + P(E|F<sub>2</sub>) + ... + P(E|F<sub>n</sub>)",
+        "B": "P(E) = Σ P(E|F<sub>i</sub>)P(F<sub>i</sub>)",
+        "C": "P(E) = P(E) / P(F<sub>i</sub>)",
+        "D": "P(E) = P(F<sub>i</sub>|E)P(F<sub>i</sub>)"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

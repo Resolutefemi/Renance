@@ -1,0 +1,2411 @@
+{
+  "code": "uni-futa-pq-commerce-bank",
+  "title": "FUTA Post-UTME Commerce | Prep Bank",
+  "version": 1,
+  "questionCount": 200,
+  "totalMarks": 200,
+  "questions": [
+    {
+      "id": "uni-futa-pq-commerce-bank-0001",
+      "type": "mcq",
+      "stem": "In a just-in-time (JIT) inventory system, what is the primary goal of the reorder point?",
+      "options": {
+        "A": "To minimize inventory costs",
+        "B": "To maximize inventory turnover",
+        "C": "To ensure that stockouts are avoided",
+        "D": "To reduce lead times"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0002",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 10,000 units. The current stock level is 5,000 units, and the reorder point is 8,000 units. If the lead time is 5 days, and the demand rate is 1,000 units per day, what is the optimal order quantity?",
+      "options": {
+        "A": "6,000 units",
+        "B": "8,000 units",
+        "C": "10,000 units",
+        "D": "12,000 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0003",
+      "type": "mcq",
+      "stem": "A bank offers a 5-year fixed deposit account with an interest rate of 10% per annum compounded annually. If the principal amount is ₦100,000, what is the future value of the investment after 5 years?",
+      "options": {
+        "A": "₦163,922.78",
+        "B": "₦164,922.78",
+        "C": "₦165,922.78",
+        "D": "₦166,922.78"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0004",
+      "type": "mcq",
+      "stem": "A company is considering two marketing strategies: a 4% increase in advertising expenditure or a 2% increase in sales promotion expenditure. If the current advertising expenditure is ₦500,000 and the current sales promotion expenditure is ₦200,000, what is the total increase in marketing expenditure if the company chooses the first strategy?",
+      "options": {
+        "A": "₦2,000",
+        "B": "₦4,000",
+        "C": "₦6,000",
+        "D": "₦8,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0005",
+      "type": "mcq",
+      "stem": "A country has a trade deficit of 100 million and a trade surplus of 50 million with its trading partners. What is the net trade balance?",
+      "options": {
+        "A": "-50 million",
+        "B": "-100 million",
+        "C": "0",
+        "D": "50 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0006",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue is given by the equation R(x) = 2x^2 + 5x + 1, where x is the number of units sold. If the firm&#039;s cost function is C(x) = x^2 + 2x + 1, what is the profit function P(x)?",
+      "options": {
+        "A": "x^2 + 3x",
+        "B": "2x^2 + 3x",
+        "C": "x^2 - 3x",
+        "D": "2x^2 - 3x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0007",
+      "type": "mcq",
+      "stem": "A company&#039;s stock is currently priced at ₦120 per share. If the company declares a 20% dividend, what is the new stock price?",
+      "options": {
+        "A": "₦144",
+        "B": "₦128",
+        "C": "₦112",
+        "D": "₦96"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0008",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5, where Q is the quantity produced, L is the labor input, and K is the capital input. If the firm has 100 units of labor and 100 units of capital, what is the quantity produced?",
+      "options": {
+        "A": "200",
+        "B": "250",
+        "C": "300",
+        "D": "400"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0009",
+      "type": "mcq",
+      "stem": "A company&#039;s revenue is given by the equation R(x) = 3x^2 - 2x + 1, where x is the number of units sold. If the company&#039;s cost function is C(x) = x^2 + x + 1, what is the profit function P(x)?",
+      "options": {
+        "A": "2x^2 - 3x",
+        "B": "3x^2 - 3x",
+        "C": "2x^2 + 3x",
+        "D": "3x^2 + 3x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0010",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 3L^0.5K^0.5, where Q is the quantity produced, L is the labor input, and K is the capital input. If the firm has 100 units of labor and 100 units of capital, what is the quantity produced?",
+      "options": {
+        "A": "300",
+        "B": "250",
+        "C": "200",
+        "D": "150"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0011",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is considered a separate legal entity from its owner. However, the owner is personally liable for all business debts and obligations. What is the name of this type of business organization?",
+      "options": {
+        "A": "Sole Proprietorship",
+        "B": "Partnership",
+        "C": "Limited Liability Company",
+        "D": "Cooperative"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0012",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a unique selling proposition (USP) to differentiate its product from competitors. What is the primary goal of a USP?",
+      "options": {
+        "A": "To increase market share",
+        "B": "To reduce production costs",
+        "C": "To create a unique selling proposition",
+        "D": "To improve customer satisfaction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0013",
+      "type": "mcq",
+      "stem": "A business owner wants to insure against the risk of fire damage to her warehouse. What type of insurance policy would she purchase?",
+      "options": {
+        "A": "Fire insurance",
+        "B": "Liability insurance",
+        "C": "Business interruption insurance",
+        "D": "Property insurance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0014",
+      "type": "mcq",
+      "stem": "A company&#039;s inventory management system uses a just-in-time (JIT) approach to minimize inventory levels. What is the primary benefit of JIT?",
+      "options": {
+        "A": "Reduced inventory costs",
+        "B": "Improved product quality",
+        "C": "Increased production efficiency",
+        "D": "Enhanced customer satisfaction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0015",
+      "type": "mcq",
+      "stem": "A business owner wants to expand her operations to a new location. What type of business organization would she need to form to achieve this?",
+      "options": {
+        "A": "Sole proprietorship",
+        "B": "Partnership",
+        "C": "Limited liability company",
+        "D": "Corporation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0016",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a sense of urgency among customers to purchase a product. This strategy is an example of which of the following?",
+      "options": {
+        "A": "Scarcity principle",
+        "B": "Limited-time offer",
+        "C": "Loss aversion",
+        "D": "Endowment effect"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0017",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is registered under which of the following?",
+      "options": {
+        "A": "Partnership",
+        "B": "Company",
+        "C": "Sole trader",
+        "D": "Limited liability partnership"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0018",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements include a balance sheet, income statement, and cash flow statement. Which of the following is the primary purpose of the balance sheet?",
+      "options": {
+        "A": "To show the company's profitability",
+        "B": "To show the company's liquidity",
+        "C": "To show the company's financial position at a specific point in time",
+        "D": "To show the company's cash flows"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0019",
+      "type": "mcq",
+      "stem": "A consumer protection law requires businesses to provide clear and accurate information about their products. Which of the following is an example of a consumer protection law?",
+      "options": {
+        "A": "Consumer Protection Act",
+        "B": "Fair Trading Act",
+        "C": "Health and Safety at Work Act",
+        "D": "Data Protection Act"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0020",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a sense of exclusivity among customers to purchase a product. This strategy is an example of which of the following?",
+      "options": {
+        "A": "Scarcity principle",
+        "B": "Limited-time offer",
+        "C": "Exclusivity principle",
+        "D": "Loss aversion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0021",
+      "type": "mcq",
+      "stem": "The concept of &#039;caveat emptor&#039; is most closely associated with which of the following business units?",
+      "options": {
+        "A": "Sole Trade",
+        "B": "Partnership",
+        "C": "Limited Liability Company",
+        "D": "Cooperative Society"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0022",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s output is 100 units, and the number of workers (L) is 25, what is the value of the capital stock (K)?",
+      "options": {
+        "A": "25",
+        "B": "50",
+        "C": "100",
+        "D": "200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0023",
+      "type": "mcq",
+      "stem": "A consumer has a budget of ₦10,000 and a preference for two goods, A and B. The prices of the goods are ₦2,000 and ₦3,000 respectively. If the consumer spends all their budget on the two goods, what is the maximum amount they can spend on good A?",
+      "options": {
+        "A": "₦4,000",
+        "B": "₦5,000",
+        "C": "₦6,000",
+        "D": "₦7,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0024",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by C = 2L + 3K. If the firm&#039;s output is 100 units, and the number of workers (L) is 25, what is the value of the capital stock (K)?",
+      "options": {
+        "A": "25",
+        "B": "50",
+        "C": "100",
+        "D": "200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0025",
+      "type": "mcq",
+      "stem": "A consumer has a utility function given by U = 2A + 3B. If the prices of the goods are ₦2,000 and ₦3,000 respectively, and the consumer spends all their budget on the two goods, what is the maximum amount they can spend on good A?",
+      "options": {
+        "A": "₦4,000",
+        "B": "₦5,000",
+        "C": "₦6,000",
+        "D": "₦7,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0026",
+      "type": "mcq",
+      "stem": "The concept of &#039;caveat emptor&#039; in consumer protection law is best described as:",
+      "options": {
+        "A": "A warning to consumers to be cautious when purchasing goods",
+        "B": "A principle that holds sellers liable for defects in goods",
+        "C": "A doctrine that requires consumers to inspect goods before purchase",
+        "D": "A rule that prohibits sellers from making false claims about goods"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0027",
+      "type": "mcq",
+      "stem": "A company&#039;s website is hacked, and sensitive customer information is stolen. Which of the following is a likely consequence of this breach?",
+      "options": {
+        "A": "The company's reputation is severely damaged",
+        "B": "The company is liable for damages to affected customers",
+        "C": "The company's website is shut down indefinitely",
+        "D": "The company's employees are fired"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0028",
+      "type": "mcq",
+      "stem": "A consumer purchases a product online, but it arrives damaged. The consumer wants to return the product, but the seller refuses. What is the consumer&#039;s best course of action?",
+      "options": {
+        "A": "File a complaint with the Better Business Bureau",
+        "B": "Contact the seller's customer service department",
+        "C": "Seek mediation through a consumer protection agency",
+        "D": "Take the seller to small claims court"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0029",
+      "type": "mcq",
+      "stem": "A company is considering outsourcing its manufacturing operations to a foreign country. Which of the following is a potential benefit of this decision?",
+      "options": {
+        "A": "Reduced labor costs",
+        "B": "Increased market share",
+        "C": "Improved product quality",
+        "D": "Enhanced brand reputation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0030",
+      "type": "mcq",
+      "stem": "A consumer is considering purchasing a product from a company that has a history of producing high-quality products. Which of the following is a likely outcome of this purchase?",
+      "options": {
+        "A": "The consumer will be satisfied with the product",
+        "B": "The consumer will experience a significant increase in costs",
+        "C": "The consumer will encounter difficulties with the product's warranty",
+        "D": "The consumer will be exposed to a higher risk of product failure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0031",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is registered under the Companies and Allied Matters Act (CAMA) 2020. Which of the following is a requirement for registration?",
+      "options": {
+        "A": "Obtaining a Tax Identification Number (TIN)",
+        "B": "Obtaining a Business Name Registration Certificate",
+        "C": "Obtaining a Certificate of Incorporation",
+        "D": "Obtaining a Business Permit"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0032",
+      "type": "mcq",
+      "stem": "A company is required to keep a register of its members under the Companies and Allied Matters Act (CAMA) 2020. What is the purpose of this register?",
+      "options": {
+        "A": "To record the company's financial transactions",
+        "B": "To record the company's share capital",
+        "C": "To record the names and addresses of the company's members",
+        "D": "To record the company's business activities"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0033",
+      "type": "mcq",
+      "stem": "A bank&#039;s cash reserve ratio is 10%. If the bank has a cash reserve of ₦1,000,000, what is the total amount of deposits it can make?",
+      "options": {
+        "A": "₦1,000,000",
+        "B": "₦10,000,000",
+        "C": "₦100,000,000",
+        "D": "₦1,000,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0034",
+      "type": "mcq",
+      "stem": "A company has a policy of paying its employees a bonus of 10% of their salary after 6 months of service. If an employee earns ₦50,000 per month, what is the bonus amount after 6 months?",
+      "options": {
+        "A": "₦3,000",
+        "B": "₦5,000",
+        "C": "₦10,000",
+        "D": "₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0035",
+      "type": "mcq",
+      "stem": "A warehouse has a capacity of 10,000 units. If 8,000 units are already stored, what is the remaining capacity?",
+      "options": {
+        "A": "2,000 units",
+        "B": "4,000 units",
+        "C": "6,000 units",
+        "D": "8,000 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0036",
+      "type": "mcq",
+      "stem": "A firm specializes in producing a single product, which is a type of commodity. If the firm&#039;s production increases by 20% and the price of the commodity decreases by 15%, what is the effect on the firm&#039;s total revenue?",
+      "options": {
+        "A": "Total revenue increases by 5%",
+        "B": "Total revenue decreases by 2.5%",
+        "C": "Total revenue remains the same",
+        "D": "Total revenue increases by 2.5%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0037",
+      "type": "mcq",
+      "stem": "A bank offers a loan with an interest rate of 12% per annum compounded annually. If the principal amount is ₦10,000 and the loan is repaid after 3 years, what is the total amount paid by the borrower?",
+      "options": {
+        "A": "₦12,727.08",
+        "B": "₦12,727.09",
+        "C": "₦12,727.10",
+        "D": "₦12,727.11"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0038",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5, where Q is the output, L is the labor, and K is the capital. If the firm increases its labor by 20% and capital by 15%, what is the effect on the output?",
+      "options": {
+        "A": "Output increases by 10%",
+        "B": "Output increases by 12%",
+        "C": "Output increases by 15%",
+        "D": "Output increases by 18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0039",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by C = 2L + 3K, where C is the cost, L is the labor, and K is the capital. If the firm increases its labor by 20% and capital by 15%, what is the effect on the cost?",
+      "options": {
+        "A": "Cost increases by 10%",
+        "B": "Cost increases by 12%",
+        "C": "Cost increases by 15%",
+        "D": "Cost increases by 18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0040",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 2Q^2, where R is the revenue and Q is the output. If the firm increases its output by 20%, what is the effect on the revenue?",
+      "options": {
+        "A": "Revenue increases by 10%",
+        "B": "Revenue increases by 12%",
+        "C": "Revenue increases by 15%",
+        "D": "Revenue increases by 18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0041",
+      "type": "mcq",
+      "stem": "A firm&#039;s profit function is given by π = R - C, where π is the profit, R is the revenue, and C is the cost. If the firm increases its revenue by 20% and cost by 15%, what is the effect on the profit?",
+      "options": {
+        "A": "Profit increases by 10%",
+        "B": "Profit increases by 12%",
+        "C": "Profit increases by 15%",
+        "D": "Profit increases by 18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0042",
+      "type": "mcq",
+      "stem": "The Central Bank of Nigeria (CBN) uses the following monetary policy tools to control inflation: interest rates, reserve requirements, and open market operations. However, the CBN has also been known to use a less conventional tool to control inflation. Which of the following is NOT a less conventional tool used by the CBN to control inflation?",
+      "options": {
+        "A": "Quantitative Easing",
+        "B": "Forward Guidance",
+        "C": "Price Controls",
+        "D": "Fiscal Policy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0043",
+      "type": "mcq",
+      "stem": "A company is considering the following business units: sole trader, partnership, and limited liability company. Which of the following is a key advantage of a sole trader over a partnership?",
+      "options": {
+        "A": "Limited liability",
+        "B": "Easy to set up",
+        "C": "No need for a partnership agreement",
+        "D": "No tax implications"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0044",
+      "type": "mcq",
+      "stem": "A consumer has purchased a product from a retailer, but the product has a manufacturing defect. The consumer has the right to claim damages under which of the following laws?",
+      "options": {
+        "A": "Sale of Goods Act",
+        "B": "Consumer Protection Act",
+        "C": "Contract Act",
+        "D": "Tort Law"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0045",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 10,000 units. The company has received an order for 5,000 units, but the supplier has only delivered 3,000 units. The company&#039;s inventory level is currently at which of the following levels?",
+      "options": {
+        "A": "5,000 units",
+        "B": "3,000 units",
+        "C": "7,000 units",
+        "D": "10,000 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0046",
+      "type": "mcq",
+      "stem": "A company uses the following transportation modes: road, rail, and air. Which of the following is a key advantage of rail transportation over road transportation?",
+      "options": {
+        "A": "Faster delivery time",
+        "B": "Lower fuel costs",
+        "C": "Higher capacity",
+        "D": "Lower maintenance costs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0047",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is horizontal and the demand curve is downward-sloping. If the market price increases, what happens to the quantity supplied?",
+      "options": {
+        "A": "The quantity supplied decreases",
+        "B": "The quantity supplied increases",
+        "C": "The quantity supplied remains the same",
+        "D": "The quantity supplied is unaffected"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0048",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is upward-sloping because of the law of increasing",
+      "options": {
+        "A": "marginal opportunity cost",
+        "B": "marginal benefit",
+        "C": "marginal utility",
+        "D": "marginal revenue"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0049",
+      "type": "mcq",
+      "stem": "The following diagram shows the demand and supply curves for a competitive market. If the price of the good increases from P1 to P2, what will happen to the equilibrium quantity?",
+      "options": {
+        "A": "Increase",
+        "B": "Decrease",
+        "C": "Remain the same",
+        "D": "Become negative"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0050",
+      "type": "mcq",
+      "stem": "A company has a market share of 30% in the industry. If the industry growth rate is 5%, what is the company&#039;s expected growth rate?",
+      "options": {
+        "A": "10%",
+        "B": "15%",
+        "C": "20%",
+        "D": "25%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0051",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm wants to produce 16 units of output, how many units of labor (L) and capital (K) should it hire?",
+      "options": {
+        "A": "L = 4, K = 4",
+        "B": "L = 8, K = 2",
+        "C": "L = 2, K = 8",
+        "D": "L = 16, K = 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0052",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by P = 100 - 2Q. If the firm wants to maximize its profit, how many units of output should it produce?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0053",
+      "type": "mcq",
+      "stem": "A company has a production function given by Q = 100L^0.5K^0.5, where Q is the quantity produced, L is the labor input, and K is the capital input. If the company increases its labor input by 20% and capital input by 15%, what is the percentage change in the quantity produced?",
+      "options": {
+        "A": "10%",
+        "B": "12%",
+        "C": "15%",
+        "D": "18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0054",
+      "type": "mcq",
+      "stem": "A firm is considering two mutually exclusive projects, A and B. Project A has a net present value (NPV) of ₦100,000 and a probability of success of 0.8, while project B has an NPV of ₦120,000 and a probability of success of 0.6. Which project should the firm choose?",
+      "options": {
+        "A": "Project A",
+        "B": "Project B",
+        "C": "Both projects are equally attractive",
+        "D": "Neither project is attractive"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0055",
+      "type": "mcq",
+      "stem": "A warehouse has a storage capacity of 10,000 units. The warehouse is currently 70% full. If 500 units are added to the warehouse, what is the new percentage of the warehouse that is full?",
+      "options": {
+        "A": "60%",
+        "B": "65%",
+        "C": "70%",
+        "D": "75%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0056",
+      "type": "mcq",
+      "stem": "A bank has a loan portfolio with a total value of ₦500,000,000. The bank&#039;s risk-weighted assets (RWAs) are 80% of the total loan portfolio. If the bank&#039;s capital requirement is 10% of the RWAs, what is the minimum capital the bank must hold?",
+      "options": {
+        "A": "₦40,000,000",
+        "B": "₦50,000,000",
+        "C": "₦60,000,000",
+        "D": "₦70,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0057",
+      "type": "mcq",
+      "stem": "A firm is considering a new product launch. The firm&#039;s marketing manager estimates that the product will sell 10,000 units in the first year, with a revenue of ₦100 per unit. The firm&#039;s production costs are ₦50 per unit, and the firm&#039;s fixed costs are ₦500,000. What is the firm&#039;s expected profit from the product launch?",
+      "options": {
+        "A": "₦750,000",
+        "B": "₦850,000",
+        "C": "₦950,000",
+        "D": "₦1,050,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0058",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing strategy involves creating a unique selling proposition (USP) to differentiate its product from competitors. Which of the following is a characteristic of a USP?",
+      "options": {
+        "A": "It is a statement that highlights the product's features and benefits",
+        "B": "It is a statement that emphasizes the product's price advantage",
+        "C": "It is a statement that focuses on the product's quality",
+        "D": "It is a statement that emphasizes the product's brand name"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0059",
+      "type": "mcq",
+      "stem": "A company is considering implementing a just-in-time (JIT) inventory system. Which of the following is a benefit of JIT?",
+      "options": {
+        "A": "Reduced inventory costs",
+        "B": "Improved product quality",
+        "C": "Increased flexibility in production",
+        "D": "Enhanced customer service"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0060",
+      "type": "mcq",
+      "stem": "A bank is considering offering a new credit card product. Which of the following is a key factor in determining the interest rate for the credit card?",
+      "options": {
+        "A": "The bank's target profit margin",
+        "B": "The credit card holder's credit score",
+        "C": "The credit card holder's income level",
+        "D": "The credit card holder's employment status"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0061",
+      "type": "mcq",
+      "stem": "A logistics company is considering investing in a new transportation mode. Which of the following is a key consideration in evaluating the feasibility of the investment?",
+      "options": {
+        "A": "The initial investment cost",
+        "B": "The potential return on investment",
+        "C": "The impact on the company's carbon footprint",
+        "D": "The potential impact on the company's brand reputation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0062",
+      "type": "mcq",
+      "stem": "A marketing manager is considering launching a new product. Which of the following is a key factor in determining the product&#039;s pricing strategy?",
+      "options": {
+        "A": "The product's target market",
+        "B": "The product's life cycle stage",
+        "C": "The product's competition",
+        "D": "The product's production costs"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0063",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is not registered with the Corporate Affairs Commission (CAC). What is the legal implication of this?",
+      "options": {
+        "A": "The sole trader is exempt from paying taxes.",
+        "B": "The sole trader is not liable for any business debts.",
+        "C": "The sole trader's business is not recognized by law.",
+        "D": "The sole trader cannot sue or be sued in a court of law."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0064",
+      "type": "mcq",
+      "stem": "A company&#039;s Memorandum and Articles of Association are not filed with the Corporate Affairs Commission (CAC). What is the legal implication of this?",
+      "options": {
+        "A": "The company is not recognized by law.",
+        "B": "The company's shareholders are not protected.",
+        "C": "The company's directors are not liable for any business debts.",
+        "D": "The company's business is not valid."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0065",
+      "type": "mcq",
+      "stem": "A company&#039;s Articles of Association state that the company&#039;s business is to manufacture and sell textiles. However, the company starts manufacturing and selling electronics. What is the legal implication of this?",
+      "options": {
+        "A": "The company's business is still valid.",
+        "B": "The company's shareholders are not protected.",
+        "C": "The company's directors are liable for any business debts.",
+        "D": "The company's business is not valid."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0066",
+      "type": "mcq",
+      "stem": "A company&#039;s Memorandum of Association states that the company&#039;s business is to manufacture and sell textiles. However, the company starts manufacturing and selling electronics. What is the legal implication of this?",
+      "options": {
+        "A": "The company's business is still valid.",
+        "B": "The company's shareholders are not protected.",
+        "C": "The company's directors are liable for any business debts.",
+        "D": "The company's business is not valid."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0067",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^(1/2)K^(1/2), where Q is output, L is labor, and K is capital. If the firm&#039;s labor and capital inputs are increased by 20% and 15% respectively, what is the percentage change in output?",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "12%",
+        "D": "15%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0068",
+      "type": "mcq",
+      "stem": "A company&#039;s stock is currently trading at ₦120 per share. If the company announces a 2-for-1 stock split, what will be the new stock price?",
+      "options": {
+        "A": "₦60",
+        "B": "₦80",
+        "C": "₦100",
+        "D": "₦120"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0069",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is given by the equation U = 2x + 3y, where x and y are the quantities of two goods. If the consumer&#039;s income is ₦100 and the prices of the two goods are ₦5 and ₦10 respectively, what is the consumer&#039;s optimal bundle?",
+      "options": {
+        "A": "(10, 5)",
+        "B": "(5, 10)",
+        "C": "(15, 3)",
+        "D": "(3, 15)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0070",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by C = 2L + 3K, where C is cost, L is labor, and K is capital. If the firm&#039;s labor and capital inputs are increased by 20% and 15% respectively, what is the percentage change in cost?",
+      "options": {
+        "A": "5%",
+        "B": "10%",
+        "C": "12%",
+        "D": "15%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0071",
+      "type": "mcq",
+      "stem": "A company&#039;s revenue function is given by R = 2x^2 - 3x + 1, where x is the quantity sold. If the company sells 10 units, what is the revenue?",
+      "options": {
+        "A": "₦41",
+        "B": "₦43",
+        "C": "₦45",
+        "D": "₦47"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0072",
+      "type": "mcq",
+      "stem": "The Central Bank of Nigeria (CBN) uses monetary policy to regulate the money supply in the economy. Which of the following instruments is used to reduce the money supply?",
+      "options": {
+        "A": "Open Market Operations (OMO)",
+        "B": "Reserve Requirements",
+        "C": "Discount Rate",
+        "D": "Selective Credit Controls"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0073",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a new product to target a specific segment of the market. Which of the following marketing mix elements is most relevant to this strategy?",
+      "options": {
+        "A": "Product",
+        "B": "Price",
+        "C": "Promotion",
+        "D": "Place"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0074",
+      "type": "mcq",
+      "stem": "A firm&#039;s financial statements are prepared in accordance with Generally Accepted Accounting Principles (GAAP). Which of the following financial statements is used to show the firm&#039;s financial position at a specific point in time?",
+      "options": {
+        "A": "Balance Sheet",
+        "B": "Income Statement",
+        "C": "Cash Flow Statement",
+        "D": "Statement of Changes in Equity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0075",
+      "type": "mcq",
+      "stem": "A company&#039;s insurance policy covers losses due to fire, theft, and liability. Which of the following types of insurance is most relevant to this policy?",
+      "options": {
+        "A": "Property Insurance",
+        "B": "Liability Insurance",
+        "C": "Casualty Insurance",
+        "D": "Workers' Compensation Insurance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0076",
+      "type": "mcq",
+      "stem": "A firm&#039;s foreign exchange risk arises from fluctuations in the exchange rate between the naira and the US dollar. Which of the following hedging strategies is most effective in managing this risk?",
+      "options": {
+        "A": "Forward Contract",
+        "B": "Futures Contract",
+        "C": "Options Contract",
+        "D": "Swap Contract"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0077",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^(1/2)K^(1/2), where Q is output, L is labor, and K is capital. If the firm wants to produce 16 units of output, how many units of labor are required if K = 4?",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "16",
+        "D": "32"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0078",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 1000 units. The warehouse is currently 75% full. If 150 units are added to the warehouse, what is the new percentage of capacity?",
+      "options": {
+        "A": "62.5",
+        "B": "65",
+        "C": "67.5",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0079",
+      "type": "mcq",
+      "stem": "A firm has a probability distribution of the following outcomes: 20% chance of 10 units, 30% chance of 20 units, and 50% chance of 30 units. What is the expected value of the distribution?",
+      "options": {
+        "A": "20",
+        "B": "22",
+        "C": "24",
+        "D": "26"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0080",
+      "type": "mcq",
+      "stem": "A bank has a reserve requirement of 20% and a cash reserve of ₦100,000. If the bank wants to increase its cash reserve by 10%, what is the new cash reserve?",
+      "options": {
+        "A": "₦110,000",
+        "B": "₦120,000",
+        "C": "₦130,000",
+        "D": "₦140,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0081",
+      "type": "mcq",
+      "stem": "The following diagram illustrates the concept of warehousing and stock control. What is the primary purpose of the inventory management system depicted?",
+      "options": {
+        "A": "To track the movement of goods within the warehouse",
+        "B": "To monitor the inventory levels and reorder stock as needed",
+        "C": "To optimize storage space within the warehouse",
+        "D": "To manage the flow of goods in and out of the warehouse"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0082",
+      "type": "mcq",
+      "stem": "A company is considering the introduction of a new product line. The marketing manager has identified three target markets: A, B, and C. Which of the following marketing strategies would be most effective in reaching market A?",
+      "options": {
+        "A": "Direct mail marketing",
+        "B": "Social media advertising",
+        "C": "Influencer marketing",
+        "D": "Trade show participation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0083",
+      "type": "mcq",
+      "stem": "A bank is considering the introduction of a new credit card product. The product will have a 20% annual interest rate and a 2% annual fee. What is the effective annual interest rate on the credit card?",
+      "options": {
+        "A": "0.24",
+        "B": "0.26",
+        "C": "0.28",
+        "D": "0.30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0084",
+      "type": "mcq",
+      "stem": "A company is considering the purchase of a new piece of equipment. The equipment will cost ₦1,000,000 and will have a useful life of 5 years. What is the annual depreciation expense on the equipment?",
+      "options": {
+        "A": "₦200,000",
+        "B": "₦250,000",
+        "C": "₦300,000",
+        "D": "₦350,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0085",
+      "type": "mcq",
+      "stem": "A sole trader is considering the incorporation of a new business. What are the primary advantages of incorporation?",
+      "options": {
+        "A": "Limited liability, ease of transfer of ownership, and increased credibility",
+        "B": "Increased tax liability, reduced flexibility, and decreased credibility",
+        "C": "Reduced liability, increased flexibility, and decreased credibility",
+        "D": "Increased liability, reduced flexibility, and increased credibility"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0086",
+      "type": "mcq",
+      "stem": "A company has two production units, A and B. Unit A produces 60% of the total output, while unit B produces 40%. If the total output is 1000 units, how many units will be produced by unit B?",
+      "options": {
+        "A": "400",
+        "B": "500",
+        "C": "600",
+        "D": "800"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0087",
+      "type": "mcq",
+      "stem": "A sole trader has a business income of ₦1,500,000 and expenses of ₦800,000. What is the net profit?",
+      "options": {
+        "A": "₦700,000",
+        "B": "₦800,000",
+        "C": "₦900,000",
+        "D": "₦1,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0088",
+      "type": "mcq",
+      "stem": "A company has a production cost of ₦5,000,000 and a selling price of ₦7,000,000. What is the profit margin?",
+      "options": {
+        "A": "25%",
+        "B": "30%",
+        "C": "35%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0089",
+      "type": "mcq",
+      "stem": "A business has a risk management strategy that involves diversification. What is the benefit of diversification?",
+      "options": {
+        "A": "Reduced risk",
+        "B": "Increased risk",
+        "C": "No change in risk",
+        "D": "Unknown"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0090",
+      "type": "mcq",
+      "stem": "A company has a production capacity of 10,000 units per day. If the demand is 8,000 units per day, what is the level of specialization?",
+      "options": {
+        "A": "80%",
+        "B": "90%",
+        "C": "95%",
+        "D": "100%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0091",
+      "type": "mcq",
+      "stem": "A company is considering two different production methods for its new product. Method A involves a higher initial investment but results in lower production costs per unit. Method B involves a lower initial investment but results in higher production costs per unit. If the company expects to produce 10,000 units in the first year, which method should it choose if it wants to minimize its total production costs?",
+      "options": {
+        "A": "Method A",
+        "B": "Method B",
+        "C": "Both methods are equally cost-effective",
+        "D": "More information is needed to make a decision"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0092",
+      "type": "mcq",
+      "stem": "A firm is considering exporting its product to a foreign market. The firm&#039;s marketing manager has estimated that the demand for the product in the foreign market is given by the equation Q = 100 - 2P, where Q is the quantity demanded and P is the price. If the firm wants to maximize its revenue, what price should it charge for the product?",
+      "options": {
+        "A": "P = 20",
+        "B": "P = 30",
+        "C": "P = 40",
+        "D": "P = 50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0093",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 10,000 units. The company receives a shipment of 5,000 units and wants to store them in the warehouse. If the warehouse is already 75% full, what is the maximum number of additional units that the company can store in the warehouse?",
+      "options": {
+        "A": "1,250 units",
+        "B": "2,500 units",
+        "C": "3,750 units",
+        "D": "5,000 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0094",
+      "type": "mcq",
+      "stem": "A sole trader is considering expanding its business by hiring additional staff. The sole trader currently earns a profit of ₦100,000 per month and expects to increase its profit by ₦20,000 per month for each additional staff member hired. If the sole trader wants to increase its profit by ₦100,000 per month, how many additional staff members should it hire?",
+      "options": {
+        "A": "2 staff members",
+        "B": "3 staff members",
+        "C": "4 staff members",
+        "D": "5 staff members"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0095",
+      "type": "mcq",
+      "stem": "A company is considering two different insurance policies to protect its business against risks. Policy A has a premium of ₦50,000 per year and provides a maximum payout of ₦200,000 in the event of a loss. Policy B has a premium of ₦30,000 per year and provides a maximum payout of ₦300,000 in the event of a loss. If the company expects to incur a loss of ₦250,000, which policy should it choose?",
+      "options": {
+        "A": "Policy A",
+        "B": "Policy B",
+        "C": "Both policies are equally cost-effective",
+        "D": "More information is needed to make a decision"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0096",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is upward sloping because of the law of increasing",
+      "options": {
+        "A": "diminishing marginal opportunity cost",
+        "B": "increasing marginal opportunity cost",
+        "C": "decreasing marginal opportunity cost",
+        "D": "constant marginal opportunity cost"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0097",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost of capital is the minimum rate of return that investors require in exchange for",
+      "options": {
+        "A": "equity and debt financing",
+        "B": "equity financing only",
+        "C": "debt financing only",
+        "D": "operating expenses"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0098",
+      "type": "mcq",
+      "stem": "The diagram below shows the demand and supply curves for a perfectly competitive market. Which of the following statements is true?",
+      "options": {
+        "A": "The market is in equilibrium at point A",
+        "B": "The market is in equilibrium at point B",
+        "C": "The market is in equilibrium at point C",
+        "D": "The market is not in equilibrium"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0099",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve shows the various combinations of two goods that the consumer is equally willing to",
+      "options": {
+        "A": "buy and sell",
+        "B": "consume and save",
+        "C": "buy and consume",
+        "D": "sell and save"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0100",
+      "type": "mcq",
+      "stem": "The diagram below shows the production possibilities frontier for a country. Which of the following statements is true?",
+      "options": {
+        "A": "The country is currently producing at point A",
+        "B": "The country is currently producing at point B",
+        "C": "The country is currently producing at point C",
+        "D": "The country is not producing at any point on the frontier"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0101",
+      "type": "mcq",
+      "stem": "A company&#039;s production function is given by Q = 100L^0.5K^0.25, where Q is the quantity produced, L is the labor input, and K is the capital input. If the company increases labor input from 4 to 9 units, and capital input from 16 to 25 units, by how much does the quantity produced increase?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0102",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by P = 100 - 2Q, where P is the price and Q is the quantity demanded. If the firm&#039;s marginal revenue is given by MR = 200 - 4Q, what is the firm&#039;s optimal quantity?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0103",
+      "type": "mcq",
+      "stem": "A company&#039;s cost function is given by C = 100 + 2L + 3K, where C is the total cost, L is the labor input, and K is the capital input. If the company increases labor input from 4 to 9 units, and capital input from 16 to 25 units, by how much does the total cost increase?",
+      "options": {
+        "A": "100",
+        "B": "200",
+        "C": "300",
+        "D": "400"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0104",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 100Q - 2Q^2, where R is the total revenue and Q is the quantity sold. If the firm&#039;s marginal revenue is given by MR = 100 - 4Q, what is the firm&#039;s optimal quantity?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0105",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is upward-sloping because of the law of increasing costs. What is the primary reason for this upward-sloping supply curve?",
+      "options": {
+        "A": "The law of diminishing marginal returns",
+        "B": "The law of increasing costs",
+        "C": "The law of supply and demand",
+        "D": "The law of diminishing returns"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0106",
+      "type": "mcq",
+      "stem": "A company is considering two different production processes to manufacture a product. Process A has a fixed cost of ₦100,000 and a variable cost of ₦50 per unit. Process B has a fixed cost of ₦150,000 and a variable cost of ₦30 per unit. If the selling price of the product is ₦120 per unit, which process should the company use to maximize its profit?",
+      "options": {
+        "A": "Process A",
+        "B": "Process B",
+        "C": "Both processes are equally profitable",
+        "D": "Neither process is profitable"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0107",
+      "type": "mcq",
+      "stem": "A firm is producing a product with the following cost function: C(x) = 2x^2 + 100x + 5000. If the selling price of the product is ₦120 per unit, what is the optimal quantity to produce to maximize profit?",
+      "options": {
+        "A": "100 units",
+        "B": "200 units",
+        "C": "300 units",
+        "D": "400 units"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0108",
+      "type": "mcq",
+      "stem": "A company is considering two different marketing strategies to promote a new product. Strategy A involves a ₦100,000 advertising campaign and is expected to increase sales by 20%. Strategy B involves a ₦150,000 advertising campaign and is expected to increase sales by 30%. If the company&#039;s current sales are ₦1,000,000, which strategy should the company use to maximize its revenue?",
+      "options": {
+        "A": "Strategy A",
+        "B": "Strategy B",
+        "C": "Both strategies are equally effective",
+        "D": "Neither strategy is effective"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0109",
+      "type": "mcq",
+      "stem": "A firm is producing a product with the following demand function: Q = 100 - 2P. If the firm&#039;s cost function is C(x) = 2x^2 + 100x + 5000, what is the optimal price to charge to maximize profit?",
+      "options": {
+        "A": "₦50",
+        "B": "₦60",
+        "C": "₦70",
+        "D": "₦80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0110",
+      "type": "mcq",
+      "stem": "A company&#039;s production function is given by Q = 100L^0.5K^0.5, where Q is the quantity produced, L is the labor input, and K is the capital input. If the company increases its labor input from 100 to 121 units, and its capital input from 100 to 121 units, by how much will the quantity produced increase?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0111",
+      "type": "mcq",
+      "stem": "A firm produces two goods, A and B, using two inputs, labor and capital. The production functions are given by Q_A = 2L^0.5K^0.5 and Q_B = 3L^0.5K^0.5. If the firm increases its labor input from 100 to 121 units, and its capital input from 100 to 121 units, by how much will the quantity of good A produced increase?",
+      "options": {
+        "A": "10%",
+        "B": "20%",
+        "C": "30%",
+        "D": "40%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0112",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves a 20% discount on all products for the first 100 customers. If the company sells 200 units of a product at the discounted price, and each unit sells for ₦1,000, what is the total revenue generated?",
+      "options": {
+        "A": "₦180,000",
+        "B": "₦200,000",
+        "C": "₦220,000",
+        "D": "₦240,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0113",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 100L^0.5K^0.5, where Q is the quantity produced, L is the labor input, and K is the capital input. If the firm increases its labor input from 100 to 121 units, and its capital input from 100 to 121 units, what is the marginal product of labor?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0114",
+      "type": "mcq",
+      "stem": "In a sole trade business, the owner&#039;s personal assets are not protected from business liabilities. What is the primary reason for this?",
+      "options": {
+        "A": "The business is not registered as a separate legal entity.",
+        "B": "The owner has not obtained necessary licenses and permits.",
+        "C": "The business is not insured against liabilities.",
+        "D": "The owner has not separated personal and business finances."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0115",
+      "type": "mcq",
+      "stem": "A company is considering a new production process that will increase its output by 20% but also increase its costs by 15%. What is the expected change in the company&#039;s profit?",
+      "options": {
+        "A": "Increase by 5%",
+        "B": "Decrease by 5%",
+        "C": "Increase by 10%",
+        "D": "Decrease by 10%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0116",
+      "type": "mcq",
+      "stem": "A consumer protection law requires businesses to provide a 30-day cooling-off period for customers to return goods. What is the primary purpose of this law?",
+      "options": {
+        "A": "To protect consumers from faulty goods.",
+        "B": "To protect businesses from fraudulent customers.",
+        "C": "To provide consumers with a chance to review goods before purchasing.",
+        "D": "To promote competition among businesses."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0117",
+      "type": "mcq",
+      "stem": "A company is considering a new marketing strategy that involves offering a 10% discount to customers who purchase a product online. What is the expected effect on the company&#039;s revenue?",
+      "options": {
+        "A": "Increase by 5%",
+        "B": "Decrease by 5%",
+        "C": "Increase by 10%",
+        "D": "Decrease by 10%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0118",
+      "type": "mcq",
+      "stem": "A sole trade business has a total revenue of ₦1,000,000 and a total cost of ₦800,000. What is the business&#039;s profit?",
+      "options": {
+        "A": "₦100,000",
+        "B": "₦200,000",
+        "C": "₦300,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0119",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the law of supply states that the quantity supplied of a good increases as the price of the good increases, ceteris paribus. However, the law of supply also states that the quantity supplied of a good decreases as the price of the good decreases, ceteris paribus. Which of the following is a correct statement regarding the law of supply?",
+      "options": {
+        "A": "The law of supply is a fundamental concept in economics that explains the relationship between the price of a good and the quantity supplied of the good.",
+        "B": "The law of supply is a concept that is only applicable in perfectly competitive markets.",
+        "C": "The law of supply states that the quantity supplied of a good increases as the price of the good increases, ceteris paribus.",
+        "D": "The law of supply states that the quantity supplied of a good decreases as the price of the good increases, ceteris paribus."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0120",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5, where Q is the quantity produced, L is the number of labor hours, and K is the amount of capital. If the firm wants to produce 100 units of output, how many labor hours are required if the amount of capital is 400 units?",
+      "options": {
+        "A": "100",
+        "B": "200",
+        "C": "400",
+        "D": "500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0121",
+      "type": "mcq",
+      "stem": "A consumer has a budget constraint of 100 units of currency and a preference for two goods, A and B. The prices of the goods are 5 units of currency for good A and 10 units of currency for good B. Using the budget constraint and the prices of the goods, calculate the consumer&#039;s indifference curve.",
+      "options": {
+        "A": "The indifference curve is a straight line with a slope of -1.",
+        "B": "The indifference curve is a straight line with a slope of 1.",
+        "C": "The indifference curve is a curved line with a slope that increases as the quantity of good A increases.",
+        "D": "The indifference curve is a curved line with a slope that decreases as the quantity of good A increases."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0122",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by C = 2L + 3K, where C is the total cost, L is the number of labor hours, and K is the amount of capital. If the firm wants to minimize its cost, how many labor hours are required if the amount of capital is 200 units?",
+      "options": {
+        "A": "50",
+        "B": "100",
+        "C": "200",
+        "D": "300"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0123",
+      "type": "mcq",
+      "stem": "A consumer has a utility function given by U = 2A + 3B, where U is the total utility, A is the quantity of good A, and B is the quantity of good B. If the consumer&#039;s budget constraint is 100 units of currency and the prices of the goods are 5 units of currency for good A and 10 units of currency for good B, calculate the consumer&#039;s optimal consumption bundle.",
+      "options": {
+        "A": "The optimal consumption bundle is (20, 10).",
+        "B": "The optimal consumption bundle is (10, 20).",
+        "C": "The optimal consumption bundle is (15, 15).",
+        "D": "The optimal consumption bundle is (5, 25)."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0124",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves a mix of advertising, personal selling, and sales promotion. Which of the following is NOT a characteristic of advertising?",
+      "options": {
+        "A": "It is a form of non-personal communication",
+        "B": "It is a one-way communication process",
+        "C": "It is a form of personal communication",
+        "D": "It is a form of sales promotion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0125",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm wants to produce 16 units of output, and it has a budget constraint of 100 units of labor and 50 units of capital, what is the opportunity cost of using labor?",
+      "options": {
+        "A": "10 units of labor",
+        "B": "20 units of labor",
+        "C": "30 units of labor",
+        "D": "40 units of labor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0126",
+      "type": "mcq",
+      "stem": "A consumer&#039;s budget constraint is given by 2x + 3y = 12. If the consumer&#039;s indifference curve is given by u(x, y) = 2x + y, what is the consumer&#039;s optimal consumption bundle?",
+      "options": {
+        "A": "(2, 4)",
+        "B": "(4, 2)",
+        "C": "(6, 0)",
+        "D": "(0, 6)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0127",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the firm&#039;s marginal revenue function is given by MR = 200 - 2Q, what is the firm&#039;s optimal price?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0128",
+      "type": "mcq",
+      "stem": "A consumer&#039;s utility function is given by u(x, y) = 2x + y. If the consumer&#039;s budget constraint is given by 2x + 3y = 12, what is the consumer&#039;s optimal consumption bundle?",
+      "options": {
+        "A": "(2, 4)",
+        "B": "(4, 2)",
+        "C": "(6, 0)",
+        "D": "(0, 6)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0129",
+      "type": "mcq",
+      "stem": "A company&#039;s production function is given by the Cobb-Douglas production function: Q = 10L^0.4K^0.6. If the company&#039;s labor input increases by 20% and its capital input remains constant, what is the percentage change in output?",
+      "options": {
+        "A": "10%",
+        "B": "12%",
+        "C": "15%",
+        "D": "18%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0130",
+      "type": "mcq",
+      "stem": "A consumer has a utility function given by U = 2x + 3y. If the consumer&#039;s income is ₦1000 and the prices of x and y are ₦5 and ₦10 respectively, what is the consumer&#039;s optimal bundle?",
+      "options": {
+        "A": "x = 100, y = 50",
+        "B": "x = 150, y = 25",
+        "C": "x = 200, y = 0",
+        "D": "x = 0, y = 100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0131",
+      "type": "mcq",
+      "stem": "A firm&#039;s cost function is given by C = 2L + 3K. If the firm&#039;s labor input is 10 units and its capital input is 5 units, what is the firm&#039;s total cost?",
+      "options": {
+        "A": "₦25",
+        "B": "₦30",
+        "C": "₦35",
+        "D": "₦40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0132",
+      "type": "mcq",
+      "stem": "A bank&#039;s reserve requirement is 20%. If the bank&#039;s deposits are ₦100,000, what is the bank&#039;s required reserve?",
+      "options": {
+        "A": "₦20,000",
+        "B": "₦25,000",
+        "C": "₦30,000",
+        "D": "₦35,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0133",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 2x + 3y. If the firm&#039;s output is 10 units, what is the firm&#039;s revenue?",
+      "options": {
+        "A": "₦25",
+        "B": "₦30",
+        "C": "₦35",
+        "D": "₦40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0134",
+      "type": "mcq",
+      "stem": "The concept of comparative advantage in international trade is based on the idea that countries should specialize in producing goods for which they have a lower opportunity cost compared to other countries. Which of the following is a correct example of comparative advantage?",
+      "options": {
+        "A": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 50 units of wheat and 100 units of cloth.",
+        "B": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 50 units of wheat and 150 units of cloth.",
+        "C": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 50 units of wheat and 50 units of cloth.",
+        "D": "Country A produces 100 units of wheat and 50 units of cloth, while Country B produces 150 units of wheat and 50 units of cloth."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0135",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5, where Q is the quantity produced, L is labor, and K is capital. If the firm wants to produce 100 units of output, and labor is fixed at 25 units, how much capital is required?",
+      "options": {
+        "A": "25",
+        "B": "50",
+        "C": "100",
+        "D": "200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0136",
+      "type": "mcq",
+      "stem": "A bank&#039;s balance sheet is given by Assets = Liabilities + Equity. If the bank&#039;s assets are worth ₦100 million, and liabilities are ₦80 million, what is the bank&#039;s equity?",
+      "options": {
+        "A": "₦10 million",
+        "B": "₦20 million",
+        "C": "₦30 million",
+        "D": "₦40 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0137",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue function is given by R = 2Q^2, where R is revenue and Q is quantity produced. If the firm produces 10 units of output, what is its revenue?",
+      "options": {
+        "A": "₦100",
+        "B": "₦200",
+        "C": "₦400",
+        "D": "₦800"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0138",
+      "type": "mcq",
+      "stem": "A country&#039;s trade balance is given by Trade Balance = Exports - Imports. If the country&#039;s exports are ₦100 million and imports are ₦80 million, what is its trade balance?",
+      "options": {
+        "A": "₦10 million",
+        "B": "₦20 million",
+        "C": "₦30 million",
+        "D": "₦40 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0139",
+      "type": "mcq",
+      "stem": "The Central Bank of Nigeria (CBN) uses the following monetary policy tools to control inflation: Open Market Operations (OMO), Reserve Requirements, and Moral Suasion. Which of the following is NOT a monetary policy tool used by the CBN?",
+      "options": {
+        "A": "Fiscal Policy",
+        "B": "Monetary Policy",
+        "C": "Supply-Side Policy",
+        "D": "Demand-Side Policy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0140",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing mix is a combination of the following elements: Product, Price, Place, and Promotion. Which of the following is NOT a part of the marketing mix?",
+      "options": {
+        "A": "Product",
+        "B": "Price",
+        "C": "Place",
+        "D": "Packaging"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0141",
+      "type": "mcq",
+      "stem": "The following are the main types of foreign exchange markets: Spot Market, Forward Market, and Futures Market. Which of the following is NOT a type of foreign exchange market?",
+      "options": {
+        "A": "Spot Market",
+        "B": "Forward Market",
+        "C": "Futures Market",
+        "D": "Options Market"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0142",
+      "type": "mcq",
+      "stem": "The following are the main characteristics of a consumer: Wants, Needs, Income, and Demographics. Which of the following is NOT a characteristic of a consumer?",
+      "options": {
+        "A": "Wants",
+        "B": "Needs",
+        "C": "Income",
+        "D": "Psychographics"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0143",
+      "type": "mcq",
+      "stem": "The following are the main types of business organizations: Sole Proprietorship, Partnership, Corporation, and Cooperative. Which of the following is NOT a type of business organization?",
+      "options": {
+        "A": "Sole Proprietorship",
+        "B": "Partnership",
+        "C": "Corporation",
+        "D": "Government Agency"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0144",
+      "type": "mcq",
+      "stem": "In a sole proprietorship, the owner&#039;s personal assets are",
+      "options": {
+        "A": "liable for all business debts",
+        "B": "liable for business debts but not personal assets",
+        "C": "not liable for business debts",
+        "D": "liable for business debts but not personal assets and vice versa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0145",
+      "type": "mcq",
+      "stem": "The process of evaluating the effectiveness of a marketing campaign is known as",
+      "options": {
+        "A": "Market Research",
+        "B": "Market Analysis",
+        "C": "Market Segmentation",
+        "D": "Return on Investment (ROI)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0146",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements are audited by",
+      "options": {
+        "A": "The company's management",
+        "B": "The company's board of directors",
+        "C": "An independent auditor",
+        "D": "The company's shareholders"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0147",
+      "type": "mcq",
+      "stem": "The diagram below shows a simple inventory control system. Identify the component labeled &#039;A&#039;.",
+      "options": {
+        "A": "Warehouse",
+        "B": "Inventory",
+        "C": "Shipping",
+        "D": "Receiving"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0148",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing strategy involves creating a brand identity that is unique and memorable. This is an example of",
+      "options": {
+        "A": "Market Segmentation",
+        "B": "Market Research",
+        "C": "Market Analysis",
+        "D": "Brand Positioning"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0149",
+      "type": "mcq",
+      "stem": "The concept of comparative advantage in international trade suggests that a country should specialize in producing goods for which it has a lower opportunity cost compared to another country. What is the opportunity cost of a country that specializes in producing a good for which it has a comparative advantage?",
+      "options": {
+        "A": "The opportunity cost is the value of the next best alternative good that could have been produced.",
+        "B": "The opportunity cost is the value of the next best alternative good that could have been produced, but not consumed.",
+        "C": "The opportunity cost is the value of the next best alternative good that could have been produced, but not consumed, and not traded.",
+        "D": "The opportunity cost is the value of the next best alternative good that could have been produced, but not consumed, and not traded, and not imported."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0150",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5 + 3K^0.5. If the firm&#039;s labor and capital inputs are 4 and 9 respectively, what is the firm&#039;s output?",
+      "options": {
+        "A": "25",
+        "B": "30",
+        "C": "35",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0151",
+      "type": "mcq",
+      "stem": "A consumer&#039;s indifference curve is given by U = 2x + 3y. If the consumer&#039;s income is 100 and the prices of x and y are 5 and 10 respectively, what is the consumer&#039;s optimal bundle?",
+      "options": {
+        "A": "x = 10, y = 5",
+        "B": "x = 15, y = 3",
+        "C": "x = 20, y = 2",
+        "D": "x = 25, y = 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0152",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the firm&#039;s marginal revenue is 50, what is the firm&#039;s price?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0153",
+      "type": "mcq",
+      "stem": "A consumer&#039;s budget constraint is given by 2x + 3y = 100. If the consumer&#039;s indifference curve is given by U = 2x + 3y, what is the consumer&#039;s optimal bundle?",
+      "options": {
+        "A": "x = 20, y = 10",
+        "B": "x = 15, y = 15",
+        "C": "x = 10, y = 20",
+        "D": "x = 5, y = 25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0154",
+      "type": "mcq",
+      "stem": "A firm specializes in producing only one product. This is an example of",
+      "options": {
+        "A": "Product diversification",
+        "B": "Product specialization",
+        "C": "Market segmentation",
+        "D": "Target marketing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0155",
+      "type": "mcq",
+      "stem": "A company&#039;s production process involves the transformation of raw materials into finished goods. This is an example of",
+      "options": {
+        "A": "Production",
+        "B": "Manufacturing",
+        "C": "Service delivery",
+        "D": "Marketing"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0156",
+      "type": "mcq",
+      "stem": "A firm&#039;s warehouse is used to store raw materials, work-in-progress, and finished goods. This is an example of",
+      "options": {
+        "A": "Raw materials storage",
+        "B": "Work-in-progress storage",
+        "C": "Finished goods storage",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0157",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements include the balance sheet, income statement, and cash flow statement. These statements are used to",
+      "options": {
+        "A": "Evaluate the company's financial performance",
+        "B": "Assess the company's liquidity position",
+        "C": "Determine the company's profitability",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0158",
+      "type": "mcq",
+      "stem": "A bank&#039;s primary function is to act as a financial intermediary between savers and borrowers. This is an example of",
+      "options": {
+        "A": "Deposit-taking",
+        "B": "Loan-making",
+        "C": "Investment",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0159",
+      "type": "mcq",
+      "stem": "A commercial bank&#039;s primary function is to act as a _______ between savers and borrowers.",
+      "options": {
+        "A": "financial intermediary",
+        "B": "investment advisor",
+        "C": "insurance provider",
+        "D": "tax collector"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0160",
+      "type": "mcq",
+      "stem": "The _______ of a product refers to the process of creating a new product or service that meets the needs of a target market.",
+      "options": {
+        "A": "development",
+        "B": "production",
+        "C": "marketing",
+        "D": "distribution"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0161",
+      "type": "mcq",
+      "stem": "A _______ is a contract between a buyer and a seller where the buyer agrees to buy a product or service at a fixed price.",
+      "options": {
+        "A": "purchase order",
+        "B": "sales order",
+        "C": "invoice",
+        "D": "proforma invoice"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0162",
+      "type": "mcq",
+      "stem": "A company&#039;s Memorandum and Articles of Association are not registered with the Corporate Affairs Commission (CAC). What is the legal implication of this?",
+      "options": {
+        "A": "The company is not recognized as a legal entity.",
+        "B": "The company is not entitled to limited liability.",
+        "C": "The company is not required to file tax returns.",
+        "D": "The company is not eligible for government contracts."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0163",
+      "type": "mcq",
+      "stem": "A company has two warehouses, A and B. Warehouse A has a capacity of 10,000 units and is currently 70% full, while Warehouse B has a capacity of 5,000 units and is currently 50% full. If the company receives an order for 8,000 units, which warehouse should it use to fulfill the order?",
+      "options": {
+        "A": "Warehouse A",
+        "B": "Warehouse B",
+        "C": "Both Warehouses A and B",
+        "D": "Neither Warehouse A nor B"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0164",
+      "type": "mcq",
+      "stem": "A business has two production lines, P1 and P2. Line P1 produces 500 units per hour, while Line P2 produces 300 units per hour. If the business operates for 8 hours a day, what is the total number of units produced per day?",
+      "options": {
+        "A": "4000",
+        "B": "5000",
+        "C": "6000",
+        "D": "7000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0165",
+      "type": "mcq",
+      "stem": "A company has a sole trader business structure. What is the primary advantage of this structure?",
+      "options": {
+        "A": "Limited liability",
+        "B": "Easy to set up",
+        "C": "Flexibility in decision-making",
+        "D": "No tax benefits"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0166",
+      "type": "mcq",
+      "stem": "A company has a risk management strategy that includes diversification. What is the primary benefit of diversification?",
+      "options": {
+        "A": "Reduced risk",
+        "B": "Increased returns",
+        "C": "Improved liquidity",
+        "D": "Enhanced reputation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0167",
+      "type": "mcq",
+      "stem": "A company has a warehouse with a capacity of 20,000 units. The warehouse is currently 60% full. If the company receives an order for 12,000 units, what is the remaining capacity of the warehouse?",
+      "options": {
+        "A": "8000",
+        "B": "10000",
+        "C": "12000",
+        "D": "14000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0168",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation: ( \frac{1}{x} + \frac{1}{x+1} = \frac{1}{2} )",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0169",
+      "type": "mcq",
+      "stem": "A company&#039;s profit is given by the equation: ( P = 2x^2 + 5x - 3 ). Find the value of x when P = 10.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0170",
+      "type": "mcq",
+      "stem": "A firm&#039;s revenue is given by the equation: ( R = 3x^2 - 2x + 1 ). Find the value of x when R = 10.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0171",
+      "type": "mcq",
+      "stem": "A consumer protection agency is considering a new law to regulate the sale of goods. Which of the following is a key principle of consumer protection?",
+      "options": {
+        "A": "The right to a fair trial",
+        "B": "The right to compensation for damages",
+        "C": "The right to withdraw from a contract",
+        "D": "The right to a refund"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0172",
+      "type": "mcq",
+      "stem": "A company is considering a new marketing strategy to increase sales. Which of the following is a key benefit of using social media advertising?",
+      "options": {
+        "A": "Increased brand awareness",
+        "B": "Improved customer engagement",
+        "C": "Enhanced product visibility",
+        "D": "Better customer retention"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0173",
+      "type": "mcq",
+      "stem": "In a perfectly competitive market, the supply curve is typically represented by the law of increasing marginal costs. What is the primary reason for this relationship?",
+      "options": {
+        "A": "The law of increasing marginal costs is a result of the increasing scarcity of resources.",
+        "B": "The law of increasing marginal costs is a result of the decreasing marginal utility of additional units produced.",
+        "C": "The law of increasing marginal costs is a result of the increasing marginal cost of production due to the law of diminishing returns.",
+        "D": "The law of increasing marginal costs is a result of the increasing price of raw materials."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0174",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s current input levels are L = 4 and K = 9, what is the marginal product of labor?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0175",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the firm&#039;s current price is P = 20, what is the consumer surplus?",
+      "options": {
+        "A": "100",
+        "B": "200",
+        "C": "300",
+        "D": "400"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0176",
+      "type": "mcq",
+      "stem": "A firm&#039;s production function is given by Q = 2L^0.5K^0.5. If the firm&#039;s current input levels are L = 4 and K = 9, what is the marginal product of capital?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0177",
+      "type": "mcq",
+      "stem": "A firm&#039;s demand function is given by Q = 100 - 2P. If the firm&#039;s current price is P = 20, what is the producer surplus?",
+      "options": {
+        "A": "100",
+        "B": "200",
+        "C": "300",
+        "D": "400"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0178",
+      "type": "mcq",
+      "stem": "The Consumer Protection Act of 1999 provides for the establishment of the National Consumer Protection Agency. What is the primary function of this agency?",
+      "options": {
+        "A": "To investigate complaints against businesses",
+        "B": "To regulate the activities of consumer protection organizations",
+        "C": "To provide education and awareness on consumer rights",
+        "D": "To enforce consumer protection laws"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0179",
+      "type": "mcq",
+      "stem": "A company uses the just-in-time inventory system to manage its stock levels. What is the primary advantage of this system?",
+      "options": {
+        "A": "Reduced inventory costs",
+        "B": "Improved customer service",
+        "C": "Increased efficiency in production",
+        "D": "Better forecasting of demand"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0180",
+      "type": "mcq",
+      "stem": "A life insurance policy has a premium of ₦10,000 per annum. The policy pays a benefit of ₦500,000 in the event of the policyholder&#039;s death. What is the probability that the policyholder will die within the next 5 years?",
+      "options": {
+        "A": "0.05",
+        "B": "0.10",
+        "C": "0.15",
+        "D": "0.20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0181",
+      "type": "mcq",
+      "stem": "A bank offers a savings account with an interest rate of 5% per annum. The account has a minimum balance requirement of ₦10,000. What is the interest earned on a balance of ₦20,000 for 1 year?",
+      "options": {
+        "A": "₦1,000",
+        "B": "₦1,500",
+        "C": "₦2,000",
+        "D": "₦2,500"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0182",
+      "type": "mcq",
+      "stem": "A company uses the road transport mode to deliver its products. What is the primary advantage of this mode?",
+      "options": {
+        "A": "Flexibility in routing",
+        "B": "Reduced transportation costs",
+        "C": "Improved security of goods",
+        "D": "Increased speed of delivery"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0183",
+      "type": "mcq",
+      "stem": "In a sole trader business, what is the primary advantage of using a separate business bank account?",
+      "options": {
+        "A": "Separate business and personal finances",
+        "B": "Increased tax benefits",
+        "C": "Improved credit rating",
+        "D": "Enhanced business reputation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0184",
+      "type": "mcq",
+      "stem": "A company has a capital structure consisting of 60% equity and 40% debt. If the cost of equity is 12% and the cost of debt is 6%, what is the weighted average cost of capital (WACC)?",
+      "options": {
+        "A": "8.4%",
+        "B": "9.2%",
+        "C": "10.8%",
+        "D": "12.0%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0185",
+      "type": "mcq",
+      "stem": "A warehouse has a storage capacity of 10,000 units. The warehouse is currently 70% full. If 500 units are added to the warehouse, what is the new percentage of capacity?",
+      "options": {
+        "A": "60%",
+        "B": "65%",
+        "C": "70%",
+        "D": "75%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0186",
+      "type": "mcq",
+      "stem": "A company exports 80% of its production to foreign countries. If the company&#039;s total production is 100,000 units, how many units are exported?",
+      "options": {
+        "A": "80,000",
+        "B": "90,000",
+        "C": "100,000",
+        "D": "120,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0187",
+      "type": "mcq",
+      "stem": "A sole trader business has a cash flow statement that shows a net cash inflow of ₦500,000. If the business has a cash balance of ₦200,000 at the beginning of the year, what is the new cash balance?",
+      "options": {
+        "A": "₦700,000",
+        "B": "₦600,000",
+        "C": "₦500,000",
+        "D": "₦400,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0188",
+      "type": "mcq",
+      "stem": "A company is considering two different modes of transportation for its goods: road and rail. Which of the following is a factor that would influence the choice of transportation mode?",
+      "options": {
+        "A": "The distance between the origin and destination",
+        "B": "The type of goods being transported",
+        "C": "The cost of transportation",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0189",
+      "type": "mcq",
+      "stem": "A firm&#039;s insurance policy covers losses due to fire, theft, and natural disasters. Which of the following is a type of insurance policy?",
+      "options": {
+        "A": "Fire insurance",
+        "B": "Theft insurance",
+        "C": "Natural disaster insurance",
+        "D": "All-risk insurance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0190",
+      "type": "mcq",
+      "stem": "A bank&#039;s cash management system involves the use of a cash management software to track and manage its cash flows. Which of the following is a benefit of using a cash management software?",
+      "options": {
+        "A": "Improved cash forecasting",
+        "B": "Reduced cash handling costs",
+        "C": "Increased cash availability",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0191",
+      "type": "mcq",
+      "stem": "A firm&#039;s marketing strategy involves creating a brand identity that is consistent across all its marketing channels. Which of the following is a key element of a brand identity?",
+      "options": {
+        "A": "Brand name",
+        "B": "Brand logo",
+        "C": "Brand tagline",
+        "D": "All of the above"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0192",
+      "type": "mcq",
+      "stem": "The Consumer Protection Act of 1999 provides for the establishment of the Consumer Protection Council. What is the primary function of the Council?",
+      "options": {
+        "A": "To promote consumer awareness and education",
+        "B": "To investigate consumer complaints and prosecute offenders",
+        "C": "To regulate consumer transactions and enforce consumer rights",
+        "D": "To provide consumer protection and advocacy services"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0193",
+      "type": "mcq",
+      "stem": "A firm produces two goods, X and Y, using two inputs, labor (L) and capital (K). The production function for good X is given by X = 2L + 3K, and the production function for good Y is given by Y = 4L + 2K. If the firm has 10 units of labor and 5 units of capital, how many units of good X will it produce?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0194",
+      "type": "mcq",
+      "stem": "A company has a policy of paying its employees a bonus of 10% of their salary if they meet their sales targets. If an employee&#039;s salary is ₦50,000 and they meet their sales targets, how much bonus will they receive?",
+      "options": {
+        "A": "₦5,000",
+        "B": "₦10,000",
+        "C": "₦15,000",
+        "D": "₦20,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0195",
+      "type": "mcq",
+      "stem": "A firm has a production function given by Q = 2L^0.5 + 3K^0.5. If the firm has 16 units of labor and 9 units of capital, how many units of output will it produce?",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "20",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0196",
+      "type": "mcq",
+      "stem": "A company has a marketing budget of ₦1,000,000. If it allocates 30% of the budget to advertising, 20% to promotions, and 50% to public relations, how much will it spend on public relations?",
+      "options": {
+        "A": "₦250,000",
+        "B": "₦300,000",
+        "C": "₦400,000",
+        "D": "₦500,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0197",
+      "type": "mcq",
+      "stem": "A firm produces two goods, X and Y, using two inputs, labor (L) and capital (K). The production function for good X is given by X = 2L + 3K, and the production function for good Y is given by Y = 4L + 2K. If the firm has 10 units of labor and 5 units of capital, how many units of good Y will it produce?",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0198",
+      "type": "mcq",
+      "stem": "A company&#039;s financial statements show a net income of ₦1,500,000 and a total equity of ₦3,000,000. If the company&#039;s debt-to-equity ratio is 0.6, what is the amount of its long-term debt?",
+      "options": {
+        "A": "₦1,800,000",
+        "B": "₦2,400,000",
+        "C": "₦1,200,000",
+        "D": "₦1,000,000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0199",
+      "type": "mcq",
+      "stem": "A sole trader&#039;s business is affected by the following factors: high competition, low profit margins, and a high level of uncertainty. Which of the following is the most appropriate business strategy for this sole trader?",
+      "options": {
+        "A": "Diversification",
+        "B": "Concentration",
+        "C": "Vertical integration",
+        "D": "Horizontal integration"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-futa-pq-commerce-bank-0200",
+      "type": "mcq",
+      "stem": "A company&#039;s marketing mix consists of a product with a high level of quality, a price that is slightly above the average market price, a promotion strategy that focuses on social media advertising, and a distribution channel that involves online sales. What is the primary advantage of this marketing mix?",
+      "options": {
+        "A": "Increased market share",
+        "B": "Improved brand image",
+        "C": "Reduced production costs",
+        "D": "Enhanced customer satisfaction"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

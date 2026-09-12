@@ -1,0 +1,457 @@
+{
+ "school": "eksu",
+ "name": "Ekiti State University",
+ "short": "EKSU",
+ "courses": [
+  {
+   "slug": "acc208",
+   "code": "Acc208 COMPUTER APPLICATION",
+   "title": null,
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-eksu-acc208-bank",
+   "questionCount": 66,
+   "pdf": null
+  },
+  {
+   "slug": "acc210",
+   "code": "ACC210 - International accounting standard",
+   "title": null,
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-eksu-acc210-bank",
+   "questionCount": 65,
+   "pdf": null
+  },
+  {
+   "slug": "acc315",
+   "code": "ACC 315 - Accounting Theory",
+   "title": null,
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-eksu-acc315-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "acc316",
+   "code": "ACC 316 - Advanced International Financial Reporting Standards (AIFRS)",
+   "title": null,
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-eksu-acc316-bank",
+   "questionCount": 59,
+   "pdf": null
+  },
+  {
+   "slug": "acc320",
+   "code": "ACC 320 - Analysis for Business Decision II",
+   "title": null,
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-eksu-acc320-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "acc328",
+   "code": "ACC 328 - Elements of Government",
+   "title": null,
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-eksu-acc328-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "bio102",
+   "code": "Bio102 - Introduction to Animal Diversity",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-eksu-bio102-bank",
+   "questionCount": 70,
+   "pdf": null
+  },
+  {
+   "slug": "chm102",
+   "code": "CHM102",
+   "title": null,
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-eksu-chm102-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "chm201",
+   "code": "Chm201 - Experimental Organic Chemistry",
+   "title": null,
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-eksu-chm201-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "chm211",
+   "code": "Chm211 - Organic Chemistry II",
+   "title": null,
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-eksu-chm211-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "chm213",
+   "code": "CHM 213 - Analytical Chemistry I",
+   "title": null,
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-eksu-chm213-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "els121",
+   "code": "ELS 121 - INTRODUCTION TO NIGERIAN LITERATURE",
+   "title": null,
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-eksu-els121-bank",
+   "questionCount": 30,
+   "pdf": null
+  },
+  {
+   "slug": "eng231",
+   "code": "Eng231 - Mathematics",
+   "title": null,
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-eksu-eng231-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "financial-sector-and-eco",
+   "code": "FINANCIAL SECTOR and ECONOMIC DEVELOPMENT",
+   "title": null,
+   "semester": null,
+   "icon": "payments",
+   "bank": "uni-eksu-financial-sector-and-eco-bank",
+   "questionCount": 65,
+   "pdf": null
+  },
+  {
+   "slug": "fms312",
+   "code": "FMS 312 - ENTREPRENEURIAL STUDY II",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-fms312-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "general-biology-i",
+   "code": "General Biology I",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-eksu-general-biology-i-bank",
+   "questionCount": 20,
+   "pdf": null
+  },
+  {
+   "slug": "gst111",
+   "code": "Gst 111 Communication in English",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-gst111-bank",
+   "questionCount": 49,
+   "pdf": null
+  },
+  {
+   "slug": "gst112",
+   "code": "GST112 - Use of library",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-gst112-bank",
+   "questionCount": 68,
+   "pdf": null
+  },
+  {
+   "slug": "gst113",
+   "code": "GST113 Nigeria people and Culture",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-gst113-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "gst115",
+   "code": "GST 115 - Introduction to Computer Application and Information Technology",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-gst115-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "gst116",
+   "code": "GST116 - Introduction to entrepreneurship ",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-gst116-bank",
+   "questionCount": 80,
+   "pdf": null
+  },
+  {
+   "slug": "gst212",
+   "code": "Gst 212 - Philosophy, Logic and Human Existence",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-gst212-bank",
+   "questionCount": 80,
+   "pdf": null
+  },
+  {
+   "slug": "introductory-to-chemistr",
+   "code": "Introductory to chemistry 1",
+   "title": null,
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-eksu-introductory-to-chemistr-bank",
+   "questionCount": 50,
+   "pdf": null
+  },
+  {
+   "slug": "mcb403",
+   "code": "MCB 403 - Pharmaceutical Microbiology",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-eksu-mcb403-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "mcb407",
+   "code": "MCB 407 - Industrial Microbiology",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-eksu-mcb407-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "mcb409",
+   "code": "MCB 409 - Pathogenic Mycology (MCB 409)",
+   "title": null,
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-eksu-mcb409-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "phy101",
+   "code": "Phy101 - Physics (Mechanics)",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-eksu-phy101-bank",
+   "questionCount": 69,
+   "pdf": null
+  },
+  {
+   "slug": "phy102",
+   "code": "Phy102 - General physics II",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-eksu-phy102-bank",
+   "questionCount": 100,
+   "pdf": null
+  },
+  {
+   "slug": "phy103",
+   "code": "PHY 103 - Properties of Matter",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-eksu-phy103-bank",
+   "questionCount": 70,
+   "pdf": null
+  },
+  {
+   "slug": "phy106",
+   "code": "Phy106 - Vibration, Waves & Optics",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-eksu-phy106-bank",
+   "questionCount": 70,
+   "pdf": null
+  },
+  {
+   "slug": "phy201",
+   "code": "Phy201 - Elementary Modern Physics",
+   "title": null,
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-eksu-phy201-bank",
+   "questionCount": 60,
+   "pdf": null
+  },
+  {
+   "slug": "you202",
+   "code": "You202 - Yoruba note",
+   "title": null,
+   "semester": null,
+   "icon": "school",
+   "bank": "uni-eksu-you202-bank",
+   "questionCount": 10,
+   "pdf": null
+  },
+  {
+   "slug": "pq-accounting",
+   "code": "Post-UTME Accounting",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-eksu-pq-accounting-bank",
+   "questionCount": 202,
+   "pdf": null
+  },
+  {
+   "slug": "pq-biology",
+   "code": "Post-UTME Biology",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-eksu-pq-biology-bank",
+   "questionCount": 206,
+   "pdf": null
+  },
+  {
+   "slug": "pq-chemistry",
+   "code": "Post-UTME Chemistry",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-eksu-pq-chemistry-bank",
+   "questionCount": 195,
+   "pdf": null
+  },
+  {
+   "slug": "pq-commerce",
+   "code": "Post-UTME Commerce",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "storefront",
+   "bank": "uni-eksu-pq-commerce-bank",
+   "questionCount": 201,
+   "pdf": null
+  },
+  {
+   "slug": "pq-crs",
+   "code": "Post-UTME CRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "auto_stories",
+   "bank": "uni-eksu-pq-crs-bank",
+   "questionCount": 206,
+   "pdf": null
+  },
+  {
+   "slug": "pq-economics",
+   "code": "Post-UTME Economics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "trending_up",
+   "bank": "uni-eksu-pq-economics-bank",
+   "questionCount": 219,
+   "pdf": null
+  },
+  {
+   "slug": "pq-english",
+   "code": "Post-UTME English",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "translate",
+   "bank": "uni-eksu-pq-english-bank",
+   "questionCount": 183,
+   "pdf": null
+  },
+  {
+   "slug": "pq-geography",
+   "code": "Post-UTME Geography",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "public",
+   "bank": "uni-eksu-pq-geography-bank",
+   "questionCount": 189,
+   "pdf": null
+  },
+  {
+   "slug": "pq-government",
+   "code": "Post-UTME Government",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "account_balance",
+   "bank": "uni-eksu-pq-government-bank",
+   "questionCount": 223,
+   "pdf": null
+  },
+  {
+   "slug": "pq-irs",
+   "code": "Post-UTME IRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-eksu-pq-irs-bank",
+   "questionCount": 199,
+   "pdf": null
+  },
+  {
+   "slug": "pq-literature",
+   "code": "Post-UTME Literature",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-eksu-pq-literature-bank",
+   "questionCount": 142,
+   "pdf": null
+  },
+  {
+   "slug": "pq-mathematics",
+   "code": "Post-UTME Mathematics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-eksu-pq-mathematics-bank",
+   "questionCount": 184,
+   "pdf": null
+  },
+  {
+   "slug": "pq-physics",
+   "code": "Post-UTME Physics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-eksu-pq-physics-bank",
+   "questionCount": 214,
+   "pdf": null
+  }
+ ]
+}

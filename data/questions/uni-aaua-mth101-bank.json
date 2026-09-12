@@ -1,0 +1,755 @@
+{
+  "code": "uni-aaua-mth101-bank",
+  "title": "AAUA MTH 101 (General Mathematics) | Practice Bank",
+  "version": 1,
+  "questionCount": 62,
+  "totalMarks": 62,
+  "questions": [
+    {
+      "id": "uni-aaua-mth101-bank-0001",
+      "type": "mcq",
+      "stem": "What is the LCM of 12 and 18?",
+      "options": {
+        "A": "36",
+        "B": "24",
+        "C": "72",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0002",
+      "type": "mcq",
+      "stem": "The HCF of 24, 36 and 48 is:",
+      "options": {
+        "A": "12",
+        "B": "6",
+        "C": "24",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following is an irrational number?",
+      "options": {
+        "A": "√2",
+        "B": "3/4",
+        "C": "0.5",
+        "D": "7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0004",
+      "type": "mcq",
+      "stem": "Express 0.375 as a fraction in its lowest term.",
+      "options": {
+        "A": "3/8",
+        "B": "375/100",
+        "C": "15/40",
+        "D": "37/100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0005",
+      "type": "mcq",
+      "stem": "The product of two numbers is 192. If one number is 16, what is the other?",
+      "options": {
+        "A": "12",
+        "B": "14",
+        "C": "10",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0006",
+      "type": "mcq",
+      "stem": "What is 25% of 240?",
+      "options": {
+        "A": "60",
+        "B": "48",
+        "C": "80",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0007",
+      "type": "mcq",
+      "stem": "Simplify: 3² × 3³",
+      "options": {
+        "A": "3⁵",
+        "B": "3⁶",
+        "C": "9⁵",
+        "D": "3⁸"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0008",
+      "type": "mcq",
+      "stem": "Convert 11011₂ to base 10.",
+      "options": {
+        "A": "27",
+        "B": "25",
+        "C": "29",
+        "D": "23"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0009",
+      "type": "mcq",
+      "stem": "If f(x) = 2x² + 3x - 5, find f(2).",
+      "options": {
+        "A": "9",
+        "B": "7",
+        "C": "11",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0010",
+      "type": "mcq",
+      "stem": "Factorize: x² - 9",
+      "options": {
+        "A": "(x+3)(x-3)",
+        "B": "(x+9)(x-1)",
+        "C": "(x-3)²",
+        "D": "(x+3)²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0011",
+      "type": "mcq",
+      "stem": "Find the remainder when x³ + 2x - 1 is divided by (x - 1).",
+      "options": {
+        "A": "2",
+        "B": "0",
+        "C": "1",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0012",
+      "type": "mcq",
+      "stem": "The degree of the polynomial 4x³ - 2x + 7 is:",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0013",
+      "type": "mcq",
+      "stem": "Expand (x + 2)².",
+      "options": {
+        "A": "x² + 4x + 4",
+        "B": "x² + 2x + 4",
+        "C": "x² + 4x + 2",
+        "D": "2x² + 4x + 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0014",
+      "type": "mcq",
+      "stem": "Simplify: (x² - 4)/(x - 2)",
+      "options": {
+        "A": "x + 2",
+        "B": "x - 2",
+        "C": "x² - 2",
+        "D": "2x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0015",
+      "type": "mcq",
+      "stem": "If (x - 1) is a factor of x³ - 3x² + 2, find the other factor.",
+      "options": {
+        "A": "x² - 2x - 2",
+        "B": "x² + 2x + 2",
+        "C": "x² - x - 2",
+        "D": "x² + x - 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0016",
+      "type": "mcq",
+      "stem": "Simplify: (3 + 2i) + (1 - 4i)",
+      "options": {
+        "A": "4 - 2i",
+        "B": "4 + 6i",
+        "C": "2 - 2i",
+        "D": "4 - 6i"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0017",
+      "type": "mcq",
+      "stem": "Find the modulus of 3 + 4i.",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "√7",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0018",
+      "type": "mcq",
+      "stem": "What is i²?",
+      "options": {
+        "A": "-1",
+        "B": "1",
+        "C": "i",
+        "D": "-i"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0019",
+      "type": "mcq",
+      "stem": "The conjugate of 2 - 3i is:",
+      "options": {
+        "A": "2 + 3i",
+        "B": "-2 + 3i",
+        "C": "-2 - 3i",
+        "D": "3 + 2i"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0020",
+      "type": "mcq",
+      "stem": "Multiply: (1 + i)(1 - i)",
+      "options": {
+        "A": "2",
+        "B": "0",
+        "C": "2i",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0021",
+      "type": "mcq",
+      "stem": "Express (2+i)/(1-i) in standard form.",
+      "options": {
+        "A": "1/2 + 3i/2",
+        "B": "3/2 + i/2",
+        "C": "1 + i",
+        "D": "2 + i"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0022",
+      "type": "mcq",
+      "stem": "Find the determinant of [[2, 3],[1, 4]].",
+      "options": {
+        "A": "5",
+        "B": "11",
+        "C": "8",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0023",
+      "type": "mcq",
+      "stem": "The order of a 3×2 matrix is:",
+      "options": {
+        "A": "3 by 2",
+        "B": "2 by 3",
+        "C": "6",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0024",
+      "type": "mcq",
+      "stem": "If A = [[1,0],[0,1]], then A is called:",
+      "options": {
+        "A": "Identity matrix",
+        "B": "Null matrix",
+        "C": "Scalar matrix",
+        "D": "Diagonal matrix"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0025",
+      "type": "mcq",
+      "stem": "Two matrices can be multiplied if:",
+      "options": {
+        "A": "Columns of first = Rows of second",
+        "B": "They are square",
+        "C": "They have same order",
+        "D": "Rows of first = Rows of second"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0026",
+      "type": "mcq",
+      "stem": "The transpose of a 2×3 matrix is:",
+      "options": {
+        "A": "3×2 matrix",
+        "B": "2×3 matrix",
+        "C": "2×2 matrix",
+        "D": "3×3 matrix"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0027",
+      "type": "mcq",
+      "stem": "Find the trace of [[3,1],[2,5]].",
+      "options": {
+        "A": "8",
+        "B": "13",
+        "C": "6",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0028",
+      "type": "mcq",
+      "stem": "Solve: x² - 5x + 6 = 0",
+      "options": {
+        "A": "x = 2 or x = 3",
+        "B": "x = 1 or x = 6",
+        "C": "x = -2 or x = -3",
+        "D": "x = 2 or x = -3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0029",
+      "type": "mcq",
+      "stem": "The discriminant of 2x² + 3x + 1 = 0 is:",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "-1",
+        "D": "17"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0030",
+      "type": "mcq",
+      "stem": "If the roots of x² + bx + c = 0 are 2 and 3, find b.",
+      "options": {
+        "A": "-5",
+        "B": "5",
+        "C": "6",
+        "D": "-6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0031",
+      "type": "mcq",
+      "stem": "The sum of roots of 3x² - 7x + 2 = 0 is:",
+      "options": {
+        "A": "7/3",
+        "B": "-7/3",
+        "C": "2/3",
+        "D": "3/7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0032",
+      "type": "mcq",
+      "stem": "The product of roots of x² - 4x + 3 = 0 is:",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "-3",
+        "D": "7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0033",
+      "type": "mcq",
+      "stem": "Which equation has roots -1 and 4?",
+      "options": {
+        "A": "x² - 3x - 4 = 0",
+        "B": "x² + 3x - 4 = 0",
+        "C": "x² - 5x + 4 = 0",
+        "D": "x² + 5x + 4 = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0034",
+      "type": "mcq",
+      "stem": "Solve using the formula: x² + 2x - 3 = 0",
+      "options": {
+        "A": "x = 1 or x = -3",
+        "B": "x = -1 or x = 3",
+        "C": "x = 3 or x = -1",
+        "D": "x = 1 or x = 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0035",
+      "type": "mcq",
+      "stem": "Find the 10th term of the AP: 2, 5, 8, 11, ...",
+      "options": {
+        "A": "29",
+        "B": "32",
+        "C": "26",
+        "D": "35"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0036",
+      "type": "mcq",
+      "stem": "The sum of the first 20 terms of the AP: 1, 3, 5, 7, ... is:",
+      "options": {
+        "A": "400",
+        "B": "380",
+        "C": "420",
+        "D": "200"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0037",
+      "type": "mcq",
+      "stem": "Find the 5th term of the GP: 3, 6, 12, 24, ...",
+      "options": {
+        "A": "48",
+        "B": "96",
+        "C": "36",
+        "D": "24"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0038",
+      "type": "mcq",
+      "stem": "The common ratio of 2, 6, 18, 54 is:",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0039",
+      "type": "mcq",
+      "stem": "What is the sum of the first 5 terms of GP: 1, 2, 4, 8, ...?",
+      "options": {
+        "A": "31",
+        "B": "32",
+        "C": "16",
+        "D": "15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0040",
+      "type": "mcq",
+      "stem": "The nth term of an AP is given by a + (n-1)d. If a=3, d=4, find the 8th term.",
+      "options": {
+        "A": "31",
+        "B": "35",
+        "C": "28",
+        "D": "32"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0041",
+      "type": "mcq",
+      "stem": "If f(x) = 3x + 1, find f(4).",
+      "options": {
+        "A": "13",
+        "B": "12",
+        "C": "15",
+        "D": "7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0042",
+      "type": "mcq",
+      "stem": "The domain of f(x) = 1/(x-2) excludes:",
+      "options": {
+        "A": "2",
+        "B": "0",
+        "C": "-2",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0043",
+      "type": "mcq",
+      "stem": "If f(x) = x² and g(x) = x+1, find f(g(2)).",
+      "options": {
+        "A": "9",
+        "B": "5",
+        "C": "4",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0044",
+      "type": "mcq",
+      "stem": "A function is one-to-one if:",
+      "options": {
+        "A": "Each output has exactly one input",
+        "B": "It passes the vertical line test",
+        "C": "It is continuous",
+        "D": "It has no domain"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0045",
+      "type": "mcq",
+      "stem": "Find the inverse of f(x) = 2x + 3.",
+      "options": {
+        "A": "(x-3)/2",
+        "B": "(x+3)/2",
+        "C": "2x-3",
+        "D": "x/2 - 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0046",
+      "type": "mcq",
+      "stem": "If f(x) = |x|, then f(-5) is:",
+      "options": {
+        "A": "5",
+        "B": "-5",
+        "C": "0",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0047",
+      "type": "mcq",
+      "stem": "Evaluate: log₁₀(1000)",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0048",
+      "type": "mcq",
+      "stem": "Simplify: √(144)",
+      "options": {
+        "A": "12",
+        "B": "14",
+        "C": "11",
+        "D": "13"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0049",
+      "type": "mcq",
+      "stem": "If 2ˣ = 32, find x.",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "6",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0050",
+      "type": "mcq",
+      "stem": "Find the value of 5! (5 factorial).",
+      "options": {
+        "A": "120",
+        "B": "60",
+        "C": "24",
+        "D": "720"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0051",
+      "type": "mcq",
+      "stem": "The binomial expansion of (1+x)² is:",
+      "options": {
+        "A": "1 + 2x + x²",
+        "B": "1 + x + x²",
+        "C": "1 + 2x + 2x²",
+        "D": "2 + 2x + x²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0052",
+      "type": "mcq",
+      "stem": "In how many ways can 4 books be arranged on a shelf?",
+      "options": {
+        "A": "24",
+        "B": "12",
+        "C": "16",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0053",
+      "type": "mcq",
+      "stem": "Evaluate: ∑(k=1 to 4) k²",
+      "options": {
+        "A": "30",
+        "B": "20",
+        "C": "10",
+        "D": "14"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0054",
+      "type": "mcq",
+      "stem": "What is the 3rd term in the expansion of (a+b)⁴?",
+      "options": {
+        "A": "6a²b²",
+        "B": "4a³b",
+        "C": "4ab³",
+        "D": "a⁴"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0055",
+      "type": "mcq",
+      "stem": "Convert 45° to radians.",
+      "options": {
+        "A": "π/4",
+        "B": "π/3",
+        "C": "π/6",
+        "D": "π/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0056",
+      "type": "mcq",
+      "stem": "sin(30°) equals:",
+      "options": {
+        "A": "1/2",
+        "B": "√3/2",
+        "C": "1",
+        "D": "√2/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0057",
+      "type": "mcq",
+      "stem": "cos(60°) equals:",
+      "options": {
+        "A": "1/2",
+        "B": "√3/2",
+        "C": "0",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0058",
+      "type": "mcq",
+      "stem": "tan(45°) equals:",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "√3",
+        "D": "∞"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0059",
+      "type": "mcq",
+      "stem": "The period of sin(x) is:",
+      "options": {
+        "A": "2π",
+        "B": "π",
+        "C": "π/2",
+        "D": "4π"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0060",
+      "type": "mcq",
+      "stem": "Solve: 2x + 5 = 13",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "5",
+        "D": "9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0061",
+      "type": "mcq",
+      "stem": "If a = 3 and b = -2, evaluate a² + 2ab + b².",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "9",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-mth101-bank-0062",
+      "type": "mcq",
+      "stem": "Simplify: (2x³)(3x²)",
+      "options": {
+        "A": "6x⁵",
+        "B": "5x⁵",
+        "C": "6x⁶",
+        "D": "5x⁶"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

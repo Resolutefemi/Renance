@@ -1,0 +1,2111 @@
+{
+  "code": "uni-achievers-pq-mathematics-bank",
+  "title": "ACHIEVERS Post-UTME Mathematics | Prep Bank",
+  "version": 1,
+  "questionCount": 175,
+  "totalMarks": 175,
+  "questions": [
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0001",
+      "type": "mcq",
+      "stem": "Determine the volume of the solid formed by rotating the region bounded by $y = x^2$ and $y = 4x$ about the x-axis.",
+      "options": {
+        "A": "\\frac{16\\pi}{3}",
+        "B": "\\frac{32\\pi}{3}",
+        "C": "\\frac{64\\pi}{3}",
+        "D": "\\frac{128\\pi}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0002",
+      "type": "mcq",
+      "stem": "A histogram of exam scores has a mean of 75 and a s\\tandard deviation of 10. If the scores are normally distributed, what is the probability that a randomly selected score is greater than 85?",
+      "options": {
+        "A": "0.1587",
+        "B": "0.3413",
+        "C": "0.4772",
+        "D": "0.6915"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0003",
+      "type": "mcq",
+      "stem": "Find the area under the curve $y = 2x^3 - 5x^2 + x + 1$ from $x = 0$ to $x = 2$.",
+      "options": {
+        "A": "\\frac{23}{3}",
+        "B": "\\frac{47}{6}",
+        "C": "\\frac{97}{12}",
+        "D": "\\frac{191}{15}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0004",
+      "type": "mcq",
+      "stem": "A rec\\tangular prism has a length of 5 cm, a width of 3 cm, and a height of 2 cm. Find the volume of the prism.",
+      "options": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "120"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0005",
+      "type": "mcq",
+      "stem": "A circle has a radius of 4 cm. Find the area of the circle.",
+      "options": {
+        "A": "50.24",
+        "B": "100.48",
+        "C": "201.06",
+        "D": "314.16"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0006",
+      "type": "mcq",
+      "stem": "A solid right circular cone has a height of 8 cm and a base radius of 4 cm. Find the volume of the cone in cubic centimeters.",
+      "options": {
+        "A": "256\\pi",
+        "B": "512\\pi",
+        "C": "1024\\pi",
+        "D": "2048\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0007",
+      "type": "mcq",
+      "stem": "Find the area of the region bounded by the parabola y = x^2, the x-axis, and the line x = 4.",
+      "options": {
+        "A": "64",
+        "B": "128",
+        "C": "256",
+        "D": "512"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0008",
+      "type": "mcq",
+      "stem": "A vector \\overrightarrow{a} has a magnitude of 6 units and makes an angle of 30° with the positive x-axis. Find the x and y components of \\overrightarrow{a}.",
+      "options": {
+        "A": "3\\hat{i} + 3\\hat{j}",
+        "B": "6\\hat{i} + 3\\hat{j}",
+        "C": "3\\hat{i} + 6\\hat{j}",
+        "D": "6\\hat{i} + 6\\hat{j}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0009",
+      "type": "mcq",
+      "stem": "Solve the inequality 2x^2 + 5x - 3 &gt; 0. x 3/2 x 3 x 1",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0010",
+      "type": "mcq",
+      "stem": "A binary operation \\ast is defined as a \\ast b = ab + 1. Find the value of \\( 2 \\ast 3 \\) \\ast 4.",
+      "options": {
+        "A": "25",
+        "B": "26",
+        "C": "27",
+        "D": "28"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0011",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2, 3) and (4, 5).",
+      "options": {
+        "A": "y = 2x - 1",
+        "B": "y = 2x + 1",
+        "C": "y = x - 1",
+        "D": "y = x + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0012",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations: \\begin{align*} x + y &amp;= 2 \\ 2x - y &amp;= 3 \\end{align*}",
+      "options": {
+        "A": "x = 1, y = 1",
+        "B": "x = 2, y = 0",
+        "C": "x = 0, y = 2",
+        "D": "x = 1, y = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0013",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices (0, 0), (3, 0), and (0, 2).",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "10",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0014",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation: x^2 + 5x + 6 = 0.",
+      "options": {
+        "A": "x = -2, x = -3",
+        "B": "x = -1, x = -6",
+        "C": "x = 2, x = 3",
+        "D": "x = 1, x = 6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0015",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center (2, 3) and radius 4.",
+      "options": {
+        "A": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "B": "\\( x - 2 \\)^2 + \\( y - 3 \\)^2 = 4",
+        "C": "\\( x - 3 \\)^2 + \\( y - 2 \\)^2 = 16",
+        "D": "\\( x - 3 \\)^2 + \\( y - 2 \\)^2 = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0016",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations: \\begin{align*} x + y &amp;= 2 \\ x - y &amp;= 1 \\end{align*}",
+      "options": {
+        "A": "x = 1, y = 1",
+        "B": "x = 2, y = 0",
+        "C": "x = 0, y = 2",
+        "D": "x = 1, y = 0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0017",
+      "type": "mcq",
+      "stem": "Let X be a random variable with probability density function (pdf) given by f(x) = \\( \\frac{1}{2}e^{-|x|} \\) for -∞ &lt; x &lt; ∞. Find the probability that X lies in the interval \\( -2, 3 \\).",
+      "options": {
+        "A": "0.5",
+        "B": "0.6",
+        "C": "0.7",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0018",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x^2 - 4}{x^2 - 9} &gt; 0 \\).",
+      "options": {
+        "A": "\\( -∞, -3 \\) ∪ (2, ∞)",
+        "B": "\\( -∞, -3 \\) ∪ (2, 3)",
+        "C": "\\( -∞, -3 \\) ∪ (3, ∞)",
+        "D": "\\( -∞, 3 \\) ∪ (4, ∞)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0019",
+      "type": "mcq",
+      "stem": "Find the sum of the infinite geometric series \\( sum_{n=1}^{infty} \\frac{2}{3^n} \\).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0020",
+      "type": "mcq",
+      "stem": "Let A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7, 8}. Find the symmetric difference of A and B.",
+      "options": {
+        "A": "{1, 2, 3}",
+        "B": "{4, 5, 6, 7, 8}",
+        "C": "{1, 2, 3, 4, 5}",
+        "D": "{6, 7, 8}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0021",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\( \\frac{1}{x^2 + 1} \\) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( \\frac{-2x}{\\( x^2 + 1 \\ \\)^2})",
+        "B": "\\( \\frac{2x}{\\( x^2 + 1 \\ \\)^2})",
+        "C": "\\( \\frac{1}{\\( x^2 + 1 \\ \\)^2})",
+        "D": "\\( \\frac{-1}{\\( x^2 + 1 \\ \\)^2})"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0022",
+      "type": "mcq",
+      "stem": "Solve the equation \\( \\log_{10} \\( x^2 \\ \\) = 4).",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "10",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0023",
+      "type": "mcq",
+      "stem": "Let X be a random variable with probability density function (pdf) given by f(x) = \\( \\frac{1}{2}e^{-|x|} \\) for -∞ &lt; x &lt; ∞. Find the probability that X lies in the interval \\( -3, 2 \\).",
+      "options": {
+        "A": "0.6",
+        "B": "0.7",
+        "C": "0.8",
+        "D": "0.9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0024",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation \\( 2^x + 5^x = 3^x \\) if x is a positive integer.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0025",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{x^2 + 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = -\\frac{2x}{\\( x^2 + 1 \\)^2} )",
+        "B": "( f'(x) = -\\frac{2}{\\( x^2 + 1 \\)^2} )",
+        "C": "( f'(x) = \\frac{2x}{\\( x^2 + 1 \\)^2} )",
+        "D": "( f'(x) = \\frac{2}{\\( x^2 + 1 \\)^2} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0026",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations u\\sing matrices: \\( \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 5 \\ 6 \\end{bmatrix} \\).",
+      "options": {
+        "A": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 1 \\ 2 \\end{bmatrix} \\)",
+        "B": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 2 \\ 1 \\end{bmatrix} \\)",
+        "C": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 3 \\ 4 \\end{bmatrix} \\)",
+        "D": "\\( \begin{bmatrix} x \\ y \\end{bmatrix} = \begin{bmatrix} 4 \\ 3 \\end{bmatrix} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0027",
+      "type": "mcq",
+      "stem": "Determine the value of the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 3 &amp; 4 \\ 5 &amp; 6 &amp; 7 \\ 8 &amp; 9 &amp; 10 \\end{bmatrix} \\).",
+      "options": {
+        "A": "( 0 )",
+        "B": "( 1 )",
+        "C": "( 2 )",
+        "D": "( 3 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0028",
+      "type": "mcq",
+      "stem": "Find the sum of the infinite geometric series \\( sum_{n=1}^{infty} \\frac{1}{2^n} \\).",
+      "options": {
+        "A": "( 1 )",
+        "B": "\\( \\frac{1}{2} \\)",
+        "C": "\\( \\frac{1}{3} \\)",
+        "D": "\\( \\frac{1}{4} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0029",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{x^2 + 2x - 3}{x^2 - 4} ) u\\sing the quotient rule.",
+      "options": {
+        "A": "f'(x) = \\frac{\\( x^2 - 4 \\)\\( 2x + 2 \\) - \\( x^2 + 2x - 3 \\)(2x)}{\\( x^2 - 4 \\)^2}",
+        "B": "f'(x) = \\frac{\\( x^2 + 2x - 3 \\)\\( 2x^2 - 8 \\) - \\( x^2 - 4 \\)\\( 2x^2 + 4x \\)}{\\( x^2 - 4 \\)^2}",
+        "C": "f'(x) = \\frac{\\( x^2 + 2x - 3 \\)\\( 2x^2 + 8 \\) - \\( x^2 - 4 \\)\\( 2x^2 - 4x \\)}{\\( x^2 - 4 \\)^2}",
+        "D": "f'(x) = \\frac{\\( x^2 + 2x - 3 \\)\\( 2x^2 - 8 \\) - \\( x^2 - 4 \\)\\( 2x^2 - 4x \\)}{\\( x^2 - 4 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0030",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. If the number 4 is rolled, a second die is rolled. If the number 6 is rolled, a third die is rolled. What is the probability that at least one 5 is rolled?",
+      "options": {
+        "A": "\\frac{1}{6}",
+        "B": "\\frac{1}{3}",
+        "C": "\\frac{2}{3}",
+        "D": "\\frac{5}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0031",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\) u\\sing the quadratic formula. x \\frac{3}{2} x > -\\frac{5}{4} \\text{ or } x x \\frac{3}{2}",
+      "options": {
+        "A": "x",
+        "B": "x > -\\frac{5}{4} \\text{ or } x",
+        "C": "x",
+        "D": "x > -\\frac{5}{4} \\text{ and } x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0032",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 + 2x - 3 \\) from \\( x = 0 \\) to \\( x = 2 \\) u\\sing integration.",
+      "options": {
+        "A": "\\left[\\frac{x^3}{3} + x^2 - 3x\\right]_0^2",
+        "B": "\\left[\\frac{x^3}{3} + x^2 - 3x\\right]_2^0",
+        "C": "\\left[\\frac{x^3}{3} + x^2 - 3x\\right]_0^1",
+        "D": "\\left[\\frac{x^3}{3} + x^2 - 3x\\right]_1^0"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0033",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations \\( 2x + 3y = 7 \\) and \\( x - 2y = -3 \\) u\\sing substitution.",
+      "options": {
+        "A": "\\left\\{x = \\frac{17}{5}, y = \\frac{14}{5}\\right\\}",
+        "B": "\\left\\{x = \\frac{17}{5}, y = -\\frac{14}{5}\\right\\}",
+        "C": "\\left\\{x = -\\frac{17}{5}, y = \\frac{14}{5}\\right\\}",
+        "D": "\\left\\{x = -\\frac{17}{5}, y = -\\frac{14}{5}\\right\\}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0034",
+      "type": "mcq",
+      "stem": "In the coordinate plane, the equation of a circle is given by \\( x - h \\ \\)^2 + \\( y - k \\)^2 = r^2 ). If the center of the circle is at ( (h, k) = (3, 4) ) and the radius is 5 units, what is the equation of the circle?",
+      "options": {
+        "A": "\\( x - 3 \\ \\)^2 + \\( y - 4 \\)^2 = 25 )",
+        "B": "\\( x - 4 \\ \\)^2 + \\( y - 3 \\)^2 = 25 )",
+        "C": "\\( x - 3 \\ \\)^2 + \\( y - 3 \\)^2 = 25 )",
+        "D": "\\( x - 4 \\ \\)^2 + \\( y - 4 \\)^2 = 25 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0035",
+      "type": "mcq",
+      "stem": "Solve for ( x ) in the equation \\( \\frac{1}{2}x + 3 = \\frac{3}{4}x - 2 \\).",
+      "options": {
+        "A": "\\( x = -\\frac{14}{5} \\)",
+        "B": "\\( x = \\frac{14}{5} \\)",
+        "C": "\\( x = -\\frac{7}{5} \\)",
+        "D": "\\( x = \\frac{7}{5} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0036",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 3 &amp; 4 \\ 5 &amp; 6 &amp; 7 \\ 8 &amp; 9 &amp; 10 \\end{bmatrix} \\).",
+      "options": {
+        "A": "( 0 )",
+        "B": "( 1 )",
+        "C": "\\( -1 \\)",
+        "D": "( 2 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0037",
+      "type": "mcq",
+      "stem": "A bakery sells a total of 250 loaves of bread per day. They sell a combination of whole wheat and white bread. If the ratio of whole wheat to white bread is 5:3, how many loaves of white bread are sold per day?",
+      "options": {
+        "A": "( 90 )",
+        "B": "( 100 )",
+        "C": "( 110 )",
+        "D": "( 120 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0038",
+      "type": "mcq",
+      "stem": "In a right-angled triangle, the length of the hypotenuse is 10 cm and one of the other sides is 6 cm. What is the length of the third side?",
+      "options": {
+        "A": "( 8 ) cm",
+        "B": "\\( 6 \\sqrt{5} \\) cm",
+        "C": "\\( 8 \\sqrt{5} \\) cm",
+        "D": "( 10 ) cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0039",
+      "type": "mcq",
+      "stem": "Let \\( mathbf{a} = \begin{pmatrix} 2 \\ 3 \\end{pmatrix} \\) and \\( mathbf{b} = \begin{pmatrix} -1 \\ 4 \\end{pmatrix} \\). Find the projection of ( mathbf{b} ) onto ( mathbf{a} ).",
+      "options": {
+        "A": "0.8",
+        "B": "-0.6",
+        "C": "0.6",
+        "D": "1.2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0040",
+      "type": "mcq",
+      "stem": "Find the derivative of ( f(x) = \\frac{1}{x^2 + 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "-2x/\\( x^2 + 1 \\)^2",
+        "B": "2x/\\( x^2 + 1 \\)^2",
+        "C": "-x/\\( x^2 + 1 \\)^2",
+        "D": "x/\\( x^2 + 1 \\)^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0041",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\).",
+      "options": {
+        "A": "\\( -∞, -1 \\) ∪ (3, ∞)",
+        "B": "\\( -∞, -3 \\) ∪ (1, ∞)",
+        "C": "\\( -∞, 1 \\) ∪ (3, ∞)",
+        "D": "\\( -∞, -3 \\) ∪ \\( -1, ∞ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0042",
+      "type": "mcq",
+      "stem": "Find the mean of the following data set: 2, 4, 6, 8, 10.",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0043",
+      "type": "mcq",
+      "stem": "A fair six-sided die is rolled. What is the probability that the number rolled is greater than 4?",
+      "options": {
+        "A": "\\frac{1}{3}",
+        "B": "\\frac{1}{2}",
+        "C": "\\frac{2}{3}",
+        "D": "\\frac{1}{6}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0044",
+      "type": "mcq",
+      "stem": "Let \\( mathbf{a} = \begin{pmatrix} 2 \\ 3 \\end{pmatrix} \\) and \\( mathbf{b} = \begin{pmatrix} 1 \\ -2 \\end{pmatrix} \\). Find the projection of ( mathbf{b} ) onto ( mathbf{a} ) u\\sing the formula \\( mathrm{proj}_{mathbf{a}}\\( mathbf{b} \\ \\) = \\frac{mathbf{a} cdot mathbf{b}}{|mathbf{a}|^2} mathbf{a} ).",
+      "options": {
+        "A": "\\begin{pmatrix} \\frac{7}{13} \\\\ \\frac{12}{13} \\end{pmatrix}",
+        "B": "\\begin{pmatrix} \\frac{1}{13} \\\\ -\\frac{2}{13} \\end{pmatrix}",
+        "C": "\\begin{pmatrix} \\frac{2}{13} \\\\ -\\frac{3}{13} \\end{pmatrix}",
+        "D": "\\begin{pmatrix} \\frac{3}{13} \\\\ -\\frac{4}{13} \\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0045",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 - 2x + 1 \\) from \\( x = 0 \\) to \\( x = 2 \\) u\\sing the definite integral.",
+      "options": {
+        "A": "\\frac{1}{3}",
+        "B": "\\frac{2}{3}",
+        "C": "\\frac{3}{2}",
+        "D": "\\frac{4}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0046",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\) u\\sing the quadratic formula.",
+      "options": {
+        "A": "\\left\\( -\\frac{5}{4}, \\frac{3}{2} \\right \\)",
+        "B": "\\left\\( -\\frac{3}{2}, \\frac{5}{4} \\right \\)",
+        "C": "\\left\\( -\\infty, -\\frac{3}{2} \\right \\) \\cup \\left\\( \\frac{5}{4}, \\infty \\right \\)",
+        "D": "\\left\\( -\\infty, \\frac{5}{4} \\right \\) \\cup \\left\\( -\\frac{3}{2}, \\infty \\right \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0047",
+      "type": "mcq",
+      "stem": "Find the value of ( x ) in the equation \\( 2^x + 3^x = 5^x \\).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0048",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations \\( \begin{cases} 2x + 3y = 7 \\ 4x - 2y = -3 \\end{cases} \\) u\\sing substitution or elimination.",
+      "options": {
+        "A": "\\left\\( x, y \\right \\) = \\left\\( 1, 2 \\right \\)",
+        "B": "\\left\\( x, y \\right \\) = \\left\\( 2, 1 \\right \\)",
+        "C": "\\left\\( x, y \\right \\) = \\left\\( 3, -1 \\right \\)",
+        "D": "\\left\\( x, y \\right \\) = \\left\\( -1, 3 \\right \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0049",
+      "type": "mcq",
+      "stem": "Let X and Y be indep\\endent random variables with probability density functions f_X(x) = 2x, 0 &lt; x &lt; 1, and f_Y(y) = 3y^2, 0 &lt; y &lt; 1. Find the probability that X + Y &lt; 1.",
+      "options": {
+        "A": "1/3",
+        "B": "1/4",
+        "C": "1/2",
+        "D": "2/3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0050",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\frac{\\sin(x)}{x^2} u\\sing the chain rule.",
+      "options": {
+        "A": "\\frac{\\cos(x)}{x^2} - \\frac{2\\sin(x)}{x^3}",
+        "B": "\\frac{\\cos(x)}{x^2} + \\frac{2\\sin(x)}{x^3}",
+        "C": "\\frac{\\cos(x)}{x^2} - \\frac{\\sin(x)}{x^3}",
+        "D": "\\frac{\\cos(x)}{x^2} + \\frac{\\sin(x)}{x^3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0051",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations u\\sing the method of substitution: x + y = 2 and x - y = 1.",
+      "options": {
+        "A": "x = 1, y = 1",
+        "B": "x = 1, y = -1",
+        "C": "x = -1, y = 1",
+        "D": "x = -1, y = -1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0052",
+      "type": "mcq",
+      "stem": "Find the area under the curve y = x^2 from x = 0 to x = 1 u\\sing integration.",
+      "options": {
+        "A": "1/3",
+        "B": "1/2",
+        "C": "2/3",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0053",
+      "type": "mcq",
+      "stem": "Let A = \\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{pmatrix} and B = \\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \\end{pmatrix}. Find the product AB.",
+      "options": {
+        "A": "\\begin{pmatrix} 19 & 22 \\ 43 & 50 \\end{pmatrix}",
+        "B": "\\begin{pmatrix} 23 & 26 \\ 47 & 54 \\end{pmatrix}",
+        "C": "\\begin{pmatrix} 17 & 20 \\ 39 & 46 \\end{pmatrix}",
+        "D": "\\begin{pmatrix} 21 & 24 \\ 41 & 48 \\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0054",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation x^2 + 4x + 4 = 0 u\\sing the quadratic formula.",
+      "options": {
+        "A": "x = -2",
+        "B": "x = -1",
+        "C": "x = 1",
+        "D": "x = 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0055",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\sin\\( x^2 \\) u\\sing the chain rule.",
+      "options": {
+        "A": "2x \\cos\\( x^2 \\)",
+        "B": "x^2 \\cos\\( x^2 \\)",
+        "C": "x \\cos\\( x^2 \\)",
+        "D": "\\cos\\( x^2 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0056",
+      "type": "mcq",
+      "stem": "Let ( X ) and ( Y ) be indep\\endent random variables with probability density functions \\( f_X\\( x \\ \\) = \begin{cases} 2x &amp; 0 leq x leq 1 \\ 0 &amp; \\text{otherwise} \\end{cases} ) and \\( f_Y\\( y \\ \\) = \begin{cases} 3y^2 &amp; 0 leq y leq 1 \\ 0 &amp; \\text{otherwise} \\end{cases} ). Find the probability that \\( X + Y leq 1 \\).",
+      "options": {
+        "A": "\\( \\frac{5}{12} \\)",
+        "B": "\\( \\frac{1}{3} \\)",
+        "C": "\\( \\frac{2}{3} \\)",
+        "D": "\\( \\frac{7}{12} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0057",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points ( (2,3) ) and ( (4,5) ).",
+      "options": {
+        "A": "\\( y = \\frac{1}{2}x + \\frac{1}{2} \\)",
+        "B": "\\( y = \\frac{1}{2}x - \\frac{1}{2} \\)",
+        "C": "\\( y = 2x - 1 \\)",
+        "D": "\\( y = 2x + 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0058",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation \\( \begin{bmatrix} 2 &amp; 1 \\ 3 &amp; 2 \\end{bmatrix} \begin{bmatrix} x \\ 1 \\end{bmatrix} = \begin{bmatrix} 4 \\ 8 \\end{bmatrix} \\).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0059",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. If the mean score is 60, what is the value of the class width?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0060",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the curve \\( y = x^2 \\) and the line \\( x = 2 \\) about the x-axis.",
+      "options": {
+        "A": "16π",
+        "B": "32π",
+        "C": "64π",
+        "D": "128π"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0061",
+      "type": "mcq",
+      "stem": "Solve the equation \\( \\sin^2 x + \\cos^2 x = 1 \\) for ( x ) in the interval ( [0, 2π] ).",
+      "options": {
+        "A": "0",
+        "B": "π/2",
+        "C": "π",
+        "D": "3π/2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0062",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation \\( \\frac{x}{2} + 5 = 11 \\).",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0063",
+      "type": "mcq",
+      "stem": "Find the sum of the first 10 terms of the geometric series ( 2, 6, 18, 54, ... ).",
+      "options": {
+        "A": "3120",
+        "B": "3240",
+        "C": "3360",
+        "D": "3480"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0064",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "40",
+        "D": "80"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0065",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height 10 cm, lower base radius 4 cm, and upper base radius 2 cm.",
+      "options": {
+        "A": "100π",
+        "B": "120π",
+        "C": "140π",
+        "D": "160π"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0066",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height 8 cm, lower base radius 4 cm, and upper base radius 2 cm.",
+      "options": {
+        "A": "64\\pi cm^3",
+        "B": "128\\pi cm^3",
+        "C": "256\\pi cm^3",
+        "D": "512\\pi cm^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0067",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations u\\sing matrices: \\begin{align*} x + 2y - z &amp;= 3 \\ 2x - 3y + 4z &amp;= 5 \\ -x + y - 2z &amp;= -2 \\end{align*}",
+      "options": {
+        "A": "\\begin{pmatrix} 1 \\ 2 \\ -1 \\end{pmatrix}",
+        "B": "\\begin{pmatrix} 2 \\ -1 \\ 3 \\end{pmatrix}",
+        "C": "\\begin{pmatrix} 3 \\ 4 \\ 5 \\end{pmatrix}",
+        "D": "\\begin{pmatrix} 5 \\ 6 \\ 7 \\end{pmatrix}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0068",
+      "type": "mcq",
+      "stem": "Find the equation of the circle pas\\sing through the points (2, 3), (4, 5), and (6, 7).",
+      "options": {
+        "A": "\\( x - 4 \\)^2 + \\( y - 5 \\)^2 = 9",
+        "B": "\\( x - 3 \\)^2 + \\( y - 4 \\)^2 = 16",
+        "C": "\\( x - 5 \\)^2 + \\( y - 6 \\)^2 = 25",
+        "D": "\\( x - 6 \\)^2 + \\( y - 7 \\)^2 = 36"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0069",
+      "type": "mcq",
+      "stem": "Find the area of the triangle formed by the points (0, 0), (3, 0), and (0, 4).",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "18",
+        "D": "24"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0070",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the parabola \\( y = x^2 \\), the x-axis, and the line \\( x = 2 \\) about the x-axis.",
+      "options": {
+        "A": "16π",
+        "B": "32π",
+        "C": "64π",
+        "D": "128π"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0071",
+      "type": "mcq",
+      "stem": "A circle with center ( C(2, 3) ) and radius 4 passes through the point ( P(0, 0) ). Find the equation of the circle.",
+      "options": {
+        "A": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "B": "\\( x + 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "C": "\\( x - 2 \\ \\)^2 + \\( y + 3 \\)^2 = 16 )",
+        "D": "\\( x + 2 \\ \\)^2 + \\( y + 3 \\)^2 = 16 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0072",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{x} \\) from \\( x = 1 \\) to \\( x = 2 \\) u\\sing integration.",
+      "options": {
+        "A": "ln(2)",
+        "B": "ln(1)",
+        "C": "ln(4)",
+        "D": "ln\\( 1/2 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0073",
+      "type": "mcq",
+      "stem": "Two events, A and B, are indep\\endent. If ( P(A) = 0.3 ) and ( P(B) = 0.4 ), find ( P(A cap B) ).",
+      "options": {
+        "A": "0.12",
+        "B": "0.24",
+        "C": "0.36",
+        "D": "0.48"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0074",
+      "type": "mcq",
+      "stem": "Find the vector ( mathbf{a} ) such that \\( mathbf{a} cdot mathbf{b} = 10 \\) and \\( mathbf{a} cdot mathbf{c} = 5 \\), where \\( mathbf{b} = 2mathbf{i} + 3mathbf{j} \\) and \\( mathbf{c} = mathbf{i} - 2mathbf{j} \\).",
+      "options": {
+        "A": "\\( 5mathbf{i} + 3mathbf{j} \\)",
+        "B": "\\( 3mathbf{i} + 5mathbf{j} \\)",
+        "C": "\\( 2mathbf{i} + 4mathbf{j} \\)",
+        "D": "\\( 4mathbf{i} + 2mathbf{j} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0075",
+      "type": "mcq",
+      "stem": "Find the derivative of the function ( f(x) = \\frac{1}{\\sqrt{x^2 + 1}} ) u\\sing the chain rule.",
+      "options": {
+        "A": "\\( \\frac{-x}{\\( x^2 + 1 \\ \\)^{3/2}} )",
+        "B": "\\( \\frac{x}{\\( x^2 + 1 \\ \\)^{3/2}} )",
+        "C": "\\( \\frac{1}{\\( x^2 + 1 \\ \\)^{3/2}} )",
+        "D": "\\( \\frac{-1}{\\( x^2 + 1 \\ \\)^{3/2}} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0076",
+      "type": "mcq",
+      "stem": "Solve the equation \\( 2 \\log_{10} \\( x^2 \\ \\) = 4 ) for ( x ).",
+      "options": {
+        "A": "\\( x = 10 \\)",
+        "B": "\\( x = 10^2 \\)",
+        "C": "\\( x = 10^{-2} \\)",
+        "D": "\\( x = 10^{-1} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0077",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center ( (2, 3) ) and radius ( 4 ).",
+      "options": {
+        "A": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "B": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 4 )",
+        "C": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 9 )",
+        "D": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 25 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0078",
+      "type": "mcq",
+      "stem": "A sequence is defined by the recurrence relation \\( a_n = 2a_{n-1} + 1 \\) with initial term \\( a_1 = 3 \\). Find the value of \\( a_5 \\).",
+      "options": {
+        "A": "( 73 )",
+        "B": "( 71 )",
+        "C": "( 69 )",
+        "D": "( 67 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0079",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( |x - 2| &gt; 3 \\). \\( x 5 \\) \\( x 5 \\) \\( x 2 \\) \\( x 2 \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x",
+        "C": "\\( x",
+        "D": "\\( x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0080",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations u\\sing matrices:",
+      "options": {
+        "A": "x = 1, y = 2",
+        "B": "x = 2, y = 1",
+        "C": "x = 3, y = 4",
+        "D": "x = 4, y = 3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0081",
+      "type": "mcq",
+      "stem": "Find the equation of the \\tangent line to the curve y = x^2 + 2x - 3 at the point (1, 2).",
+      "options": {
+        "A": "y = 2x - 1",
+        "B": "y = 2x + 1",
+        "C": "y = x - 1",
+        "D": "y = x + 1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0082",
+      "type": "mcq",
+      "stem": "A sequence is defined by the recurrence relation a_n = 2a_{n-1} + 1, with a_1 = 3. Find the value of a_5.",
+      "options": {
+        "A": "31",
+        "B": "32",
+        "C": "33",
+        "D": "34"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0083",
+      "type": "mcq",
+      "stem": "Find the surface area of the sphere with radius 6 cm.",
+      "options": {
+        "A": "288\\pi cm^2",
+        "B": "288\\pi cm^3",
+        "C": "288\\pi cm^4",
+        "D": "288\\pi cm^5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0084",
+      "type": "mcq",
+      "stem": "Solve the inequality \\frac{x^2 - 4x + 3}{x^2 - 4x + 4} &gt; 0.",
+      "options": {
+        "A": "\\( -\\infty, -1 \\) \\cup \\( 1, \\infty \\)",
+        "B": "\\( -\\infty, -1 \\) \\cup (1, 2]",
+        "C": "\\( -\\infty, 1 \\) \\cup \\( 2, \\infty \\)",
+        "D": "\\( -\\infty, 1] \\cup \\( 2, \\infty \\ \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0085",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center \\( 2, -3 \\) and radius 4.",
+      "options": {
+        "A": "\\( x - 2 \\)^2 + \\( y + 3 \\)^2 = 16",
+        "B": "\\( x - 2 \\)^2 + \\( y + 3 \\)^2 = 32",
+        "C": "\\( x + 2 \\)^2 + \\( y - 3 \\)^2 = 16",
+        "D": "\\( x + 2 \\)^2 + \\( y - 3 \\)^2 = 32"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0086",
+      "type": "mcq",
+      "stem": "Find the derivative of the function f(x) = \\frac{x^2}{x^2 + 1} u\\sing the quotient rule.",
+      "options": {
+        "A": "\\frac{2x\\( x^2 + 1 \\) - 2x^3}{\\( x^2 + 1 \\)^2}",
+        "B": "\\frac{2x^3 + 2x}{\\( x^2 + 1 \\)^2}",
+        "C": "\\frac{2x^3 - 2x}{\\( x^2 + 1 \\)^2}",
+        "D": "\\frac{2x^3 + 2}{\\( x^2 + 1 \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0087",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\begin{align*} x + y &amp;= 2 \\ x - 2y &amp;= -3 \\end{align*}.",
+      "options": {
+        "A": "\\begin{cases} x = -1 \\ y = 3 \\end{cases}",
+        "B": "\\begin{cases} x = 1 \\ y = 1 \\end{cases}",
+        "C": "\\begin{cases} x = -1 \\ y = 1 \\end{cases}",
+        "D": "\\begin{cases} x = 1 \\ y = 3 \\end{cases}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0088",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center at $\\( -2,3 \\)$ and radius $4$.",
+      "options": {
+        "A": "\\( x^2 + y^2 + 4x - 6y - 7 = 0 \\)",
+        "B": "\\( x^2 + y^2 - 4x + 6y - 7 = 0 \\)",
+        "C": "\\( x^2 + y^2 + 2x - 3y - 7 = 0 \\)",
+        "D": "\\( x^2 + y^2 - 2x + 3y - 7 = 0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0089",
+      "type": "mcq",
+      "stem": "Find the derivative of ( f(x) = \\frac{x^2}{x^2 + 1} ) u\\sing the chain rule.",
+      "options": {
+        "A": "( f'(x) = \\frac{2x\\( x^2 + 1 \\) - 2x^3}{\\( x^2 + 1 \\)^2} )",
+        "B": "( f'(x) = \\frac{2x^2 - 2}{\\( x^2 + 1 \\)^2} )",
+        "C": "( f'(x) = \\frac{2x^3 - 2x}{\\( x^2 + 1 \\)^2} )",
+        "D": "( f'(x) = \\frac{2x^2 + 2}{\\( x^2 + 1 \\)^2} )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0090",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. What is the mean score?",
+      "options": {
+        "A": "( 60 )",
+        "B": "( 70 )",
+        "C": "( 80 )",
+        "D": "( 90 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0091",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( x^2 - 4x - 5 &gt; 0 \\). \\( x 5 \\) \\( x 5 \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x",
+        "C": "\\( x",
+        "D": "\\( x > 1 \\) or \\( x > 5 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0092",
+      "type": "mcq",
+      "stem": "Determine the number of terms in the expansion of \\( 1+x \\ \\)^{10}) when it is expressed as a binomial series.",
+      "options": {
+        "A": "11",
+        "B": "10",
+        "C": "9",
+        "D": "12"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0093",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = \\frac{1}{x^2 + 1} \\) from \\( x = 0 \\) to \\( x = 1 \\).",
+      "options": {
+        "A": "\\frac{π}{4}",
+        "B": "\\frac{π}{2}",
+        "C": "\\frac{π}{3}",
+        "D": "\\frac{π}{5}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0094",
+      "type": "mcq",
+      "stem": "A snail is at the bottom of a 20-foot well. Each day, it climbs up 3 feet, but at night, it slips back 2 feet. How many days will it take for the snail to reach the top of the well?",
+      "options": {
+        "A": "18",
+        "B": "17",
+        "C": "16",
+        "D": "15"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0095",
+      "type": "mcq",
+      "stem": "Find the value of (x) in the equation \\( 2^x + 2^x = 128 \\).",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0096",
+      "type": "mcq",
+      "stem": "Find the equation of the circle pas\\sing through the points ((2,3)), ((4,5)), and ((6,7)).",
+      "options": {
+        "A": "\\( x^2 + y^2 - 12x - 6y + 36 = 0 \\)",
+        "B": "\\( x^2 + y^2 - 8x - 4y + 16 = 0 \\)",
+        "C": "\\( x^2 + y^2 - 10x - 5y + 25 = 0 \\)",
+        "D": "\\( x^2 + y^2 - 14x - 7y + 49 = 0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0097",
+      "type": "mcq",
+      "stem": "A solid cone has a height of 10 cm and a base radius of 4 cm. Find the volume of the cone.",
+      "options": {
+        "A": "\\( \\frac{1}{3} pi \\( 4^2 \\ \\)(10) = \\frac{160pi}{3} \\text{ cm}^3 )",
+        "B": "\\( \\frac{1}{3} pi \\( 4^2 \\ \\)(5) = \\frac{80pi}{3} \\text{ cm}^3 )",
+        "C": "\\( \\frac{1}{3} pi \\( 4^2 \\ \\)(15) = \\frac{240pi}{3} \\text{ cm}^3 )",
+        "D": "\\( \\frac{1}{3} pi \\( 4^2 \\ \\)(20) = \\frac{320pi}{3} \\text{ cm}^3 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0098",
+      "type": "mcq",
+      "stem": "Find the area under the curve [ y = \\frac{1}{x^2 + 1} ] from [ x = 0 ] to [ x = 1 ].",
+      "options": {
+        "A": "\\( int_0^1 \\frac{1}{x^2 + 1} dx = arc\\tan x Big|_0^1 = \\frac{pi}{4} \\)",
+        "B": "\\( int_0^1 \\frac{1}{x^2 + 1} dx = arc\\tan x Big|_0^1 = \\frac{pi}{2} \\)",
+        "C": "\\( int_0^1 \\frac{1}{x^2 + 1} dx = arc\\tan x Big|_0^1 = \\frac{pi}{6} \\)",
+        "D": "\\( int_0^1 \\frac{1}{x^2 + 1} dx = arc\\tan x Big|_0^1 = \\frac{pi}{3} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0099",
+      "type": "mcq",
+      "stem": "Two events, A and B, are indep\\endent. If P(A) = 0.4 and P(B) = 0.6, find P(A ∩ B).",
+      "options": {
+        "A": "( P(A cap B) = P(A) cdot P(B) = 0.4 cdot 0.6 = 0.24 )",
+        "B": "( P(A cap B) = P(A) + P(B) = 0.4 + 0.6 = 1 )",
+        "C": "( P(A cap B) = P(A) - P(B) = 0.4 - 0.6 = -0.2 )",
+        "D": "( P(A cap B) = P(A) cdot P(B) = 0.4 cdot 0.6 = 0.24 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0100",
+      "type": "mcq",
+      "stem": "Simplify the expression [ \\sqrt[3]{64x^3y^3} ].",
+      "options": {
+        "A": "\\( \\sqrt[3]{64x^3y^3} = 4x^1y^1 \\)",
+        "B": "\\( \\sqrt[3]{64x^3y^3} = 4x^3y^3 \\)",
+        "C": "\\( \\sqrt[3]{64x^3y^3} = 8x^3y^3 \\)",
+        "D": "\\( \\sqrt[3]{64x^3y^3} = 2x^3y^3 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0101",
+      "type": "mcq",
+      "stem": "Determine the volume of the frustum of a cone with height 6 cm, lower base radius 4 cm, and upper base radius 2 cm.",
+      "options": {
+        "A": "24\\pi cm^3",
+        "B": "48\\pi cm^3",
+        "C": "96\\pi cm^3",
+        "D": "192\\pi cm^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0102",
+      "type": "mcq",
+      "stem": "Find the mean deviation about the median of the data set: 2, 4, 6, 8, 10.",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0103",
+      "type": "mcq",
+      "stem": "Solve for x in the equation: \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "1",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0104",
+      "type": "mcq",
+      "stem": "A binary operation \\( * \\) on the set of integers is defined as: \\( a * b = a^2 + b^2 \\). Find the value of \\( 2 * 3 \\).",
+      "options": {
+        "A": "13",
+        "B": "17",
+        "C": "19",
+        "D": "25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0105",
+      "type": "mcq",
+      "stem": "Find the surface area of the sphere with radius 5 cm.",
+      "options": {
+        "A": "100\\pi cm^2",
+        "B": "200\\pi cm^2",
+        "C": "300\\pi cm^2",
+        "D": "400\\pi cm^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0106",
+      "type": "mcq",
+      "stem": "Find the value of ( k ) in the equation \\( 2x^2 + 7x + k = 0 \\) if the sum of the roots is \\( -\\frac{7}{2} \\) and the product of the roots is \\( -\\frac{3}{4} \\).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0107",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. If the mean score is ( 60 ) and the s\\tandard deviation is ( 10 ), what is the value of ( x ) in the interval ( [40, 80] ) where the frequency is maximum?",
+      "options": {
+        "A": "40",
+        "B": "50",
+        "C": "60",
+        "D": "70"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0108",
+      "type": "mcq",
+      "stem": "Solve the equation \\( \\sin^2 x + \\cos^2 x = 1 \\) for ( x ) in the interval ( [0, 2pi] ).",
+      "options": {
+        "A": "0",
+        "B": "\\frac{pi}{4}",
+        "C": "\\frac{pi}{2}",
+        "D": "pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0109",
+      "type": "mcq",
+      "stem": "Find the value of ( x ) in the equation \\( x^3 - 6x^2 + 11x - 6 = 0 \\) if the sum of the roots is ( 6 ) and the product of the roots is \\( -6 \\).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0110",
+      "type": "mcq",
+      "stem": "A matrix ( A ) is given by \\( A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \\). Find the value of ( x ) in the equation \\( A^2 = xA \\).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0111",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center \\( -2, 3 \\) and radius 4.",
+      "options": {
+        "A": "\\( x + 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )",
+        "B": "\\( x - 2 \\ \\)^2 + \\( y + 3 \\)^2 = 16 )",
+        "C": "\\( x + 2 \\ \\)^2 + \\( y + 3 \\)^2 = 16 )",
+        "D": "\\( x - 2 \\ \\)^2 + \\( y - 3 \\)^2 = 16 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0112",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\). \\( x \\frac{3}{2} \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x > -1 \\) or \\( x",
+        "C": "\\( x",
+        "D": "\\( x > -1 \\) or \\( x > \\frac{3}{2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0113",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\frac{d}{dx} \\( x^3 - 2x^2 + x - 1 \\ \\) ).",
+      "options": {
+        "A": "\\( 3x^2 - 4x + 1 \\)",
+        "B": "\\( x^2 - 2x - 1 \\)",
+        "C": "\\( 3x^2 - 4x + 2 \\)",
+        "D": "\\( x^2 - 2x + 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0114",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( x + y = 4 \\) and \\( x - y = 2 \\).",
+      "options": {
+        "A": "\\( x = 3, y = 1 \\)",
+        "B": "\\( x = 1, y = 3 \\)",
+        "C": "\\( x = 2, y = 2 \\)",
+        "D": "\\( x = 4, y = 0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0115",
+      "type": "mcq",
+      "stem": "Solve the quadratic equation \\( x^2 + 4x + 4 = 0 \\).",
+      "options": {
+        "A": "\\( x = -2 \\)",
+        "B": "\\( x = -1 \\)",
+        "C": "\\( x = 0 \\)",
+        "D": "\\( x = 1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0116",
+      "type": "mcq",
+      "stem": "Find the value of \\( \\frac{d^2}{dx^2} \\( x^3 - 2x^2 + x - 1 \\ \\) ).",
+      "options": {
+        "A": "( 6x )",
+        "B": "( 2x )",
+        "C": "\\( x^2 \\)",
+        "D": "( x )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0117",
+      "type": "mcq",
+      "stem": "Find the volume of the solid generated by revolving the region bounded by the curves y = x^2, y = 0, and x = 2 about the x-axis.",
+      "options": {
+        "A": "32\\pi",
+        "B": "64\\pi",
+        "C": "128\\pi",
+        "D": "256\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0118",
+      "type": "mcq",
+      "stem": "Solve the inequality |x^2 - 4| &gt; 5. x 4 x 5 x 6 x 7",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0119",
+      "type": "mcq",
+      "stem": "Find the area of the region bounded by the curves y = x^2 + 1, y = 0, and x = 2.",
+      "options": {
+        "A": "9",
+        "B": "18",
+        "C": "27",
+        "D": "36"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0120",
+      "type": "mcq",
+      "stem": "Solve the equation x^3 - 6x^2 + 11x - 6 = 0.",
+      "options": {
+        "A": "x = 1",
+        "B": "x = 2",
+        "C": "x = 3",
+        "D": "x = 4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0121",
+      "type": "mcq",
+      "stem": "Find the volume of the solid generated by revolving the region bounded by the curves y = x^2, y = 0, and x = 2 about the y-axis.",
+      "options": {
+        "A": "32\\pi",
+        "B": "64\\pi",
+        "C": "128\\pi",
+        "D": "256\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0122",
+      "type": "mcq",
+      "stem": "Solve the inequality |x^2 - 4| &lt; 5. x 4 x 5 x 6 x 7",
+      "options": {
+        "A": "x",
+        "B": "x",
+        "C": "x",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0123",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 )",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0124",
+      "type": "mcq",
+      "stem": "Find the value of y in the equation \\( y = \\frac{1}{2} x^2 + 3x - 4 \\) when x = 2",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0125",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\)",
+      "options": {
+        "A": "\\( -∞, -1 \\) ∪ (3, ∞)",
+        "B": "\\( -∞, -3 \\) ∪ (1, ∞)",
+        "C": "\\( -∞, 1 \\) ∪ (3, ∞)",
+        "D": "\\( -∞, -3 \\) ∪ (1, ∞)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0126",
+      "type": "mcq",
+      "stem": "Find the equation of the line pas\\sing through the points (2, 3) and (4, 5)",
+      "options": {
+        "A": "y = x + 1",
+        "B": "y = x - 1",
+        "C": "y = -x + 1",
+        "D": "y = x + 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0127",
+      "type": "mcq",
+      "stem": "A survey of 100 students found that 70% preferred pizza, 20% preferred burgers, and 10% preferred sandwiches. What is the probability that a randomly selected student prefers pizza or burgers?",
+      "options": {
+        "A": "0.9",
+        "B": "0.8",
+        "C": "0.7",
+        "D": "0.6"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0128",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix [ \begin{pmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; 1 &amp; 2 \\ 3 &amp; 2 &amp; 4 \\end{pmatrix} ].",
+      "options": {
+        "A": "25",
+        "B": "30",
+        "C": "35",
+        "D": "40"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0129",
+      "type": "mcq",
+      "stem": "A polynomial has roots at x = -2, x = 3, and x = 4. What is the polynomial in factored form?",
+      "options": {
+        "A": "\\( x + 2 \\)\\( x - 3 \\)\\( x - 4 \\)",
+        "B": "\\( x + 2 \\)\\( x - 3 \\)\\( x - 4 \\)",
+        "C": "\\( x + 2 \\)\\( x - 3 \\)\\( x - 4 \\)",
+        "D": "\\( x + 2 \\)\\( x - 3 \\)\\( x - 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0130",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by y = x^2, y = 0, and x = 2 about the x-axis.",
+      "options": {
+        "A": "16π",
+        "B": "32π",
+        "C": "64π",
+        "D": "128π"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0131",
+      "type": "mcq",
+      "stem": "A set A has 5 elements, and a set B has 3 elements. What is the number of elements in the union of sets A and B?",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0132",
+      "type": "mcq",
+      "stem": "A sequence is defined by the formula an = 2n + 1. What is the sum of the first 5 terms of the sequence?",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0133",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( \\frac{x}{x-2} &gt; 1 \\) for \\( x &gt; 2 \\).",
+      "options": {
+        "A": "2",
+        "B": "x > 4",
+        "C": "x > 2",
+        "D": "x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0134",
+      "type": "mcq",
+      "stem": "Find the volume of the frustum of a cone with height 6 cm, lower base radius 4 cm, and upper base radius 2 cm.",
+      "options": {
+        "A": "24\\pi cm^3",
+        "B": "48\\pi cm^3",
+        "C": "72\\pi cm^3",
+        "D": "96\\pi cm^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0135",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 + 2x - 3 \\) from \\( x = 1 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0136",
+      "type": "mcq",
+      "stem": "Solve the trigonometric equation \\( 2 \\sin^2 x + 3 \\cos x - 1 = 0 \\) for ( 0 leq x leq 2 pi ).",
+      "options": {
+        "A": "\\frac{\\pi}{6}, \\frac{5\\pi}{6}",
+        "B": "\\frac{\\pi}{4}, \\frac{3\\pi}{4}",
+        "C": "\\frac{\\pi}{3}, \\frac{2\\pi}{3}",
+        "D": "\\frac{\\pi}{2}, \\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0137",
+      "type": "mcq",
+      "stem": "A right-angled triangle has a hypotenuse of length 10 cm and one of its legs is 6 cm. Find the length of the other leg.",
+      "options": {
+        "A": "8 cm",
+        "B": "6 cm",
+        "C": "4 cm",
+        "D": "2 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0138",
+      "type": "mcq",
+      "stem": "Find the volume of the solid formed by revolving the region bounded by the parabola \\( y = x^2 \\) and the line \\( y = 4 \\) about the x-axis.",
+      "options": {
+        "A": "\\( \\frac{64}{5} pi \\)",
+        "B": "\\( \\frac{32}{3} pi \\)",
+        "C": "\\( \\frac{16}{3} pi \\)",
+        "D": "\\( \\frac{8}{3} pi \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0139",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( |2x - 3| geq 5 \\).",
+      "options": {
+        "A": "\\( x leq -1 \\) or ( x geq 4 )",
+        "B": "\\( x leq -4 \\) or ( x geq 1 )",
+        "C": "( x leq 1 ) or ( x geq 4 )",
+        "D": "\\( x leq -4 \\) or ( x geq 1 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0140",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices (A(1, 2)), (B(4, 6)), and (C(2, 1)).",
+      "options": {
+        "A": "\\( 5 \\sqrt{3} \\)",
+        "B": "\\( 10 \\sqrt{3} \\)",
+        "C": "\\( 15 \\sqrt{3} \\)",
+        "D": "\\( 20 \\sqrt{3} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0141",
+      "type": "mcq",
+      "stem": "Solve the system of linear equations \\( 2x + 3y = 7 \\) and \\( x - 2y = -3 \\).",
+      "options": {
+        "A": "\\( x = 1, y = 2 \\)",
+        "B": "\\( x = 2, y = 1 \\)",
+        "C": "\\( x = 3, y = 4 \\)",
+        "D": "\\( x = 4, y = 3 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0142",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 1 &amp; 4 \\ 3 &amp; 2 &amp; 5 \\ 6 &amp; 3 &amp; 7 \\end{bmatrix} \\).",
+      "options": {
+        "A": "( 0 )",
+        "B": "( 1 )",
+        "C": "( 2 )",
+        "D": "( 3 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0143",
+      "type": "mcq",
+      "stem": "A polynomial $p(x)$ has degree 4 and has roots $x = 1, x = -2, x = 3,$ and $x = -4.$ Find the value of $p(0)$.",
+      "options": {
+        "A": "0",
+        "B": "24",
+        "C": "-24",
+        "D": "48"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0144",
+      "type": "mcq",
+      "stem": "A solid right circular cone has a height of 12 cm and a base radius of 6 cm. Find the volume of the cone.",
+      "options": {
+        "A": "288\\pi",
+        "B": "288\\pi/3",
+        "C": "288\\pi/2",
+        "D": "288\\pi/4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0145",
+      "type": "mcq",
+      "stem": "Solve for $x$: $\\log_{10} \\( x^2 \\) = 4$.",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0146",
+      "type": "mcq",
+      "stem": "A matrix $A$ is given by $\\begin{bmatrix} 2 &amp; 1 \\\\ 4 &amp; 3 \\end{bmatrix}$. Find the determinant of $A$.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0147",
+      "type": "mcq",
+      "stem": "A histogram is given below. Find the mean of the data.",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0148",
+      "type": "mcq",
+      "stem": "Determine the value of x in the equation \\( \\log_{10} \\( x^2 \\ \\) = 4 ).",
+      "options": {
+        "A": "10",
+        "B": "100",
+        "C": "1000",
+        "D": "10000"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0149",
+      "type": "mcq",
+      "stem": "Find the area under the curve \\( y = x^2 \\) from \\( x = 0 \\) to \\( x = 4 \\).",
+      "options": {
+        "A": "64",
+        "B": "128",
+        "C": "256",
+        "D": "512"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0150",
+      "type": "mcq",
+      "stem": "Solve the matrix equation \\( \\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\end{bmatrix} \\begin{bmatrix} x \\ y \\end{bmatrix} = \\begin{bmatrix} 5 \\ 6 \\end{bmatrix} \\).",
+      "options": {
+        "A": "x = 1, y = 2",
+        "B": "x = 2, y = 3",
+        "C": "x = 3, y = 4",
+        "D": "x = 4, y = 5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0151",
+      "type": "mcq",
+      "stem": "A circle has a radius of 5 cm. Find the area of the circle.",
+      "options": {
+        "A": "25\\pi",
+        "B": "50\\pi",
+        "C": "75\\pi",
+        "D": "100\\pi"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0152",
+      "type": "mcq",
+      "stem": "A right-angled triangle has a hypotenuse of length 10 cm and one leg of length 6 cm. Find the length of the other leg.",
+      "options": {
+        "A": "4 cm",
+        "B": "6 cm",
+        "C": "8 cm",
+        "D": "12 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0153",
+      "type": "mcq",
+      "stem": "A random sample of 25 students from a university had a mean height of 175.5 cm with a s\\tandard deviation of 5.2 cm. If the population s\\tandard deviation is unknown, calculate the 95% confidence interval for the mean height of all students in the university.",
+      "options": {
+        "A": "170.3 cm, 180.7 cm",
+        "B": "168.1 cm, 182.9 cm",
+        "C": "169.5 cm, 181.5 cm",
+        "D": "171.1 cm, 179.9 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0154",
+      "type": "mcq",
+      "stem": "Find the area under the curve of the function \\( f(x) = \\frac{1}{x^2 + 1} \\) from \\( x = 0 \\) to \\( x = 1 \\).",
+      "options": {
+        "A": "\\frac{\\pi}{4}",
+        "B": "\\frac{\\pi}{2}",
+        "C": "\\frac{\\pi}{6}",
+        "D": "\\frac{\\pi}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0155",
+      "type": "mcq",
+      "stem": "Solve the equation \\( x^3 - 6x^2 + 11x - 6 = 0 \\) u\\sing the factor theorem.",
+      "options": {
+        "A": "\\( x = 1 \\)",
+        "B": "\\( x = 2 \\)",
+        "C": "\\( x = 3 \\)",
+        "D": "\\( x = 4 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0156",
+      "type": "mcq",
+      "stem": "A binary operation \\( \\ast \\) on the set \\( \\{ 1, 2, 3, 4 \\} \\) is defined as \\( a \\ast b = a + b \\). Find the value of \\( 2 \\ast 3 \\).",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0157",
+      "type": "mcq",
+      "stem": "A histogram of exam scores is shown below. If the mean score is 75 and the s\\tandard deviation is 10, find the area under the curve between 60 and 80.",
+      "options": {
+        "A": "0.5",
+        "B": "0.6",
+        "C": "0.7",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0158",
+      "type": "mcq",
+      "stem": "Solve for x in the equation \\( \\frac{1}{2}x^2 + 5x - 3 = 0 \\).",
+      "options": {
+        "A": "\\( x = -10 \\)",
+        "B": "\\( x = 3 \\)",
+        "C": "\\( x = -3 \\)",
+        "D": "\\( x = 10 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0159",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix \\( \begin{bmatrix} 2 &amp; 3 \\ 4 &amp; 5 \\end{bmatrix} \\).",
+      "options": {
+        "A": "( 1 )",
+        "B": "( 2 )",
+        "C": "( 3 )",
+        "D": "( 4 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0160",
+      "type": "mcq",
+      "stem": "Solve the inequality \\( 2x^2 + 5x - 3 &gt; 0 \\). \\( x 3 \\) \\( x 3 \\) \\( x 1 \\) \\( x 1 \\)",
+      "options": {
+        "A": "\\( x",
+        "B": "\\( x",
+        "C": "\\( x",
+        "D": "\\( x"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0161",
+      "type": "mcq",
+      "stem": "Find the area of the triangle with vertices ( (0, 0) ), ( (3, 0) ), and ( (0, 4) ).",
+      "options": {
+        "A": "( 6 )",
+        "B": "( 8 )",
+        "C": "( 10 )",
+        "D": "( 12 )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0162",
+      "type": "mcq",
+      "stem": "Solve the system of equations \\( x + y = 4 \\) and \\( 2x - y = 3 \\).",
+      "options": {
+        "A": "\\( x = 1, y = 3 \\)",
+        "B": "\\( x = 2, y = 2 \\)",
+        "C": "\\( x = 3, y = 1 \\)",
+        "D": "\\( x = 4, y = 0 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0163",
+      "type": "mcq",
+      "stem": "Find the determinant of the matrix [ \begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \\end{pmatrix} ].",
+      "options": {
+        "A": "-4",
+        "B": "4",
+        "C": "-2",
+        "D": "2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0164",
+      "type": "mcq",
+      "stem": "Solve the equation [ \\sin^2 x + \\cos^2 x = 1 ].",
+      "options": {
+        "A": "x = \\frac{\\pi}{4}",
+        "B": "x = \\frac{\\pi}{2}",
+        "C": "x = \\frac{\\pi}{6}",
+        "D": "x = \\frac{\\pi}{3}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0165",
+      "type": "mcq",
+      "stem": "Find the equation of the circle with center (3, 4) and radius 5.",
+      "options": {
+        "A": "\\( x - 3 \\)^2 + \\( y - 4 \\)^2 = 25",
+        "B": "\\( x - 4 \\)^2 + \\( y - 3 \\)^2 = 25",
+        "C": "\\( x - 5 \\)^2 + \\( y - 3 \\)^2 = 25",
+        "D": "\\( x - 3 \\)^2 + \\( y - 5 \\)^2 = 25"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0166",
+      "type": "mcq",
+      "stem": "Find the derivative of the function [ f(x) = 3x^2 + 2x - 5 ].",
+      "options": {
+        "A": "f'(x) = 6x + 2",
+        "B": "f'(x) = 6x - 2",
+        "C": "f'(x) = 3x^2 + 2",
+        "D": "f'(x) = 3x^2 - 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0167",
+      "type": "mcq",
+      "stem": "Find the area under the curve [ y = x^2 + 2x - 3 ] from x = 0 to x = 4.",
+      "options": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0168",
+      "type": "mcq",
+      "stem": "Find the value of $\\int_0^1 x^2 \\ln(x) dx$.",
+      "options": {
+        "A": "1/3",
+        "B": "1/2",
+        "C": "2/3",
+        "D": "1"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0169",
+      "type": "mcq",
+      "stem": "Solve the inequality $|x^2 - 4| &gt; 2$.",
+      "options": {
+        "A": "\\( -∞, -2 \\) ∪ (2, ∞)",
+        "B": "\\( -∞, -1 \\) ∪ (1, ∞)",
+        "C": "\\( -∞, -3 \\) ∪ (3, ∞)",
+        "D": "\\( -∞, -4 \\) ∪ (4, ∞)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0170",
+      "type": "mcq",
+      "stem": "Find the area of the region bounded by the curves $y = x^2$ and $y = 2x$.",
+      "options": {
+        "A": "2/3",
+        "B": "1/2",
+        "C": "1",
+        "D": "4/3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0171",
+      "type": "mcq",
+      "stem": "Solve the system of equations $x + y = 2$ and $xy = 1$.",
+      "options": {
+        "A": "(1, 1)",
+        "B": "\\( 1, -1 \\)",
+        "C": "\\( -1, 1 \\)",
+        "D": "\\( -1, -1 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0172",
+      "type": "mcq",
+      "stem": "Find the derivative of the function $f(x) = \\ln\\( x^2 \\)$.",
+      "options": {
+        "A": "2/x",
+        "B": "1/x",
+        "C": "2/x^2",
+        "D": "1/x^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0173",
+      "type": "mcq",
+      "stem": "A histogram of exam scores for a class of 50 students is shown below.",
+      "options": {
+        "A": "The mean score is 60.",
+        "B": "The median score is 70.",
+        "C": "The mode score is 80.",
+        "D": "The s\\tandard deviation is 10."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0174",
+      "type": "mcq",
+      "stem": "Find the value of x in the equation \\( 2^x = 16 \\).",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-achievers-pq-mathematics-bank-0175",
+      "type": "mcq",
+      "stem": "A vector is given by \\( \\vec{a} = \\begin{bmatrix} 2 \\ 3 \\ 4 \\end{bmatrix} \\). Find the magnitude of the vector.",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

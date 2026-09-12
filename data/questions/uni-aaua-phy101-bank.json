@@ -1,0 +1,611 @@
+{
+  "code": "uni-aaua-phy101-bank",
+  "title": "AAUA PHY 101 (General Physics) | Practice Bank",
+  "version": 1,
+  "questionCount": 50,
+  "totalMarks": 50,
+  "questions": [
+    {
+      "id": "uni-aaua-phy101-bank-0001",
+      "type": "mcq",
+      "stem": "The SI unit of force is:",
+      "options": {
+        "A": "Newton",
+        "B": "Joule",
+        "C": "Watt",
+        "D": "Pascal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0002",
+      "type": "mcq",
+      "stem": "Speed is a _____ quantity.",
+      "options": {
+        "A": "Scalar",
+        "B": "Vector",
+        "C": "Both",
+        "D": "Neither"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0003",
+      "type": "mcq",
+      "stem": "Velocity is a _____ quantity.",
+      "options": {
+        "A": "Vector",
+        "B": "Scalar",
+        "C": "Both",
+        "D": "Neither"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0004",
+      "type": "mcq",
+      "stem": "Newton's first law is also known as the law of:",
+      "options": {
+        "A": "Inertia",
+        "B": "Acceleration",
+        "C": "Action-reaction",
+        "D": "Gravity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0005",
+      "type": "mcq",
+      "stem": "The unit of work is:",
+      "options": {
+        "A": "Joule",
+        "B": "Newton",
+        "C": "Watt",
+        "D": "Pascal"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0006",
+      "type": "mcq",
+      "stem": "Power is defined as:",
+      "options": {
+        "A": "Work done per unit time",
+        "B": "Force × distance",
+        "C": "Mass × velocity",
+        "D": "Force / area"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0007",
+      "type": "mcq",
+      "stem": "The SI unit of temperature is:",
+      "options": {
+        "A": "Kelvin",
+        "B": "Celsius",
+        "C": "Fahrenheit",
+        "D": "Rankine"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0008",
+      "type": "mcq",
+      "stem": "A body at rest has:",
+      "options": {
+        "A": "Potential energy",
+        "B": "Kinetic energy",
+        "C": "No energy",
+        "D": "Heat energy"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0009",
+      "type": "mcq",
+      "stem": "The acceleration due to gravity (g) is approximately:",
+      "options": {
+        "A": "9.8 m/s²",
+        "B": "10.8 m/s²",
+        "C": "8.9 m/s²",
+        "D": "11 m/s²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0010",
+      "type": "mcq",
+      "stem": "F = ma is Newton's _____ law.",
+      "options": {
+        "A": "Second",
+        "B": "First",
+        "C": "Third",
+        "D": "Fourth"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0011",
+      "type": "mcq",
+      "stem": "For every action, there is an equal and opposite:",
+      "options": {
+        "A": "Reaction",
+        "B": "Force",
+        "C": "Motion",
+        "D": "Acceleration"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0012",
+      "type": "mcq",
+      "stem": "The unit of pressure is:",
+      "options": {
+        "A": "Pascal",
+        "B": "Newton",
+        "C": "Joule",
+        "D": "Watt"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0013",
+      "type": "mcq",
+      "stem": "Sound travels fastest in:",
+      "options": {
+        "A": "Solids",
+        "B": "Liquids",
+        "C": "Gases",
+        "D": "Vacuum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0014",
+      "type": "mcq",
+      "stem": "Light travels at approximately:",
+      "options": {
+        "A": "3 × 10⁸ m/s",
+        "B": "3 × 10⁶ m/s",
+        "C": "3 × 10¹⁰ m/s",
+        "D": "3 × 10⁴ m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0015",
+      "type": "mcq",
+      "stem": "The unit of electric current is:",
+      "options": {
+        "A": "Ampere",
+        "B": "Volt",
+        "C": "Ohm",
+        "D": "Watt"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0016",
+      "type": "mcq",
+      "stem": "Ohm's law states V =",
+      "options": {
+        "A": "IR",
+        "B": "I/R",
+        "C": "R/I",
+        "D": "I²R"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0017",
+      "type": "mcq",
+      "stem": "The unit of resistance is:",
+      "options": {
+        "A": "Ohm",
+        "B": "Ampere",
+        "C": "Volt",
+        "D": "Farad"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0018",
+      "type": "mcq",
+      "stem": "Frequency is measured in:",
+      "options": {
+        "A": "Hertz",
+        "B": "Meters",
+        "C": "Seconds",
+        "D": "Newtons"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0019",
+      "type": "mcq",
+      "stem": "The period of a wave is:",
+      "options": {
+        "A": "1/frequency",
+        "B": "Frequency × wavelength",
+        "C": "Wavelength / speed",
+        "D": "Speed × frequency"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0020",
+      "type": "mcq",
+      "stem": "Kinetic energy =",
+      "options": {
+        "A": "½mv²",
+        "B": "mgh",
+        "C": "mv",
+        "D": "Fd"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0021",
+      "type": "mcq",
+      "stem": "Potential energy =",
+      "options": {
+        "A": "mgh",
+        "B": "½mv²",
+        "C": "Fd",
+        "D": "Pt"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0022",
+      "type": "mcq",
+      "stem": "Momentum =",
+      "options": {
+        "A": "mass × velocity",
+        "B": "mass × acceleration",
+        "C": "force × time",
+        "D": "work / time"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0023",
+      "type": "mcq",
+      "stem": "Impulse equals change in:",
+      "options": {
+        "A": "Momentum",
+        "B": "Energy",
+        "C": "Force",
+        "D": "Velocity"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0024",
+      "type": "mcq",
+      "stem": "Heat transfer by direct contact is:",
+      "options": {
+        "A": "Conduction",
+        "B": "Convection",
+        "C": "Radiation",
+        "D": "Evaporation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0025",
+      "type": "mcq",
+      "stem": "Heat transfer through fluid movement is:",
+      "options": {
+        "A": "Convection",
+        "B": "Conduction",
+        "C": "Radiation",
+        "D": "Sublimation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0026",
+      "type": "mcq",
+      "stem": "The unit of charge is:",
+      "options": {
+        "A": "Coulomb",
+        "B": "Ampere",
+        "C": "Volt",
+        "D": "Ohm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0027",
+      "type": "mcq",
+      "stem": "A concave mirror converges light at the:",
+      "options": {
+        "A": "Focus",
+        "B": "Center",
+        "C": "Edge",
+        "D": "Vertex"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0028",
+      "type": "mcq",
+      "stem": "The law of conservation of energy states:",
+      "options": {
+        "A": "Energy cannot be created or destroyed",
+        "B": "Energy always increases",
+        "C": "Energy is always lost",
+        "D": "Energy can only be created"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0029",
+      "type": "mcq",
+      "stem": "Distance / time gives:",
+      "options": {
+        "A": "Speed",
+        "B": "Acceleration",
+        "C": "Force",
+        "D": "Momentum"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0030",
+      "type": "mcq",
+      "stem": "The resultant of two forces acting in the same direction is their:",
+      "options": {
+        "A": "Sum",
+        "B": "Difference",
+        "C": "Product",
+        "D": "Quotient"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0031",
+      "type": "mcq",
+      "stem": "Density =",
+      "options": {
+        "A": "Mass / Volume",
+        "B": "Volume / Mass",
+        "C": "Mass × Volume",
+        "D": "Force / Area"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0032",
+      "type": "mcq",
+      "stem": "The unit of density is:",
+      "options": {
+        "A": "kg/m³",
+        "B": "m/s",
+        "C": "N/m²",
+        "D": "J/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0033",
+      "type": "mcq",
+      "stem": "A body in free fall experiences:",
+      "options": {
+        "A": "Acceleration due to gravity only",
+        "B": "No acceleration",
+        "C": "Constant velocity",
+        "D": "Deceleration"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0034",
+      "type": "mcq",
+      "stem": "Wavelength × frequency =",
+      "options": {
+        "A": "Speed",
+        "B": "Energy",
+        "C": "Power",
+        "D": "Force"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0035",
+      "type": "mcq",
+      "stem": "Which type of wave requires a medium?",
+      "options": {
+        "A": "Mechanical wave",
+        "B": "Electromagnetic wave",
+        "C": "Light wave",
+        "D": "Radio wave"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0036",
+      "type": "mcq",
+      "stem": "The bending of light as it passes through different media is:",
+      "options": {
+        "A": "Refraction",
+        "B": "Reflection",
+        "C": "Diffraction",
+        "D": "Dispersion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0037",
+      "type": "mcq",
+      "stem": "Snell's law relates to:",
+      "options": {
+        "A": "Refraction",
+        "B": "Reflection",
+        "C": "Diffraction",
+        "D": "Interference"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0038",
+      "type": "mcq",
+      "stem": "Electric power P =",
+      "options": {
+        "A": "IV",
+        "B": "I/V",
+        "C": "V/I",
+        "D": "I²/R"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0039",
+      "type": "mcq",
+      "stem": "1 kilowatt =",
+      "options": {
+        "A": "1000 watts",
+        "B": "100 watts",
+        "C": "10000 watts",
+        "D": "10 watts"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0040",
+      "type": "mcq",
+      "stem": "The angle of incidence equals the angle of:",
+      "options": {
+        "A": "Reflection",
+        "B": "Refraction",
+        "C": "Diffraction",
+        "D": "Polarization"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0041",
+      "type": "mcq",
+      "stem": "Total internal reflection occurs when light moves from:",
+      "options": {
+        "A": "Denser to less dense medium",
+        "B": "Less dense to denser medium",
+        "C": "Same medium",
+        "D": "Vacuum to air"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0042",
+      "type": "mcq",
+      "stem": "The unit of capacitance is:",
+      "options": {
+        "A": "Farad",
+        "B": "Henry",
+        "C": "Ohm",
+        "D": "Coulomb"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0043",
+      "type": "mcq",
+      "stem": "Resistors in series: total R =",
+      "options": {
+        "A": "R1 + R2 + R3",
+        "B": "1/R1 + 1/R2",
+        "C": "R1 × R2",
+        "D": "R1 / R2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0044",
+      "type": "mcq",
+      "stem": "The SI unit of energy is:",
+      "options": {
+        "A": "Joule",
+        "B": "Calorie",
+        "C": "Electron volt",
+        "D": "Erg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0045",
+      "type": "mcq",
+      "stem": "Efficiency =",
+      "options": {
+        "A": "(Useful output / Total input) × 100%",
+        "B": "Input / Output",
+        "C": "Output × Input",
+        "D": "Loss / Input"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0046",
+      "type": "mcq",
+      "stem": "A transformer works on the principle of:",
+      "options": {
+        "A": "Electromagnetic induction",
+        "B": "Electrostatics",
+        "C": "Gravity",
+        "D": "Nuclear fission"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0047",
+      "type": "mcq",
+      "stem": "The unit of magnetic flux is:",
+      "options": {
+        "A": "Weber",
+        "B": "Tesla",
+        "C": "Henry",
+        "D": "Gauss"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0048",
+      "type": "mcq",
+      "stem": "Displacement is a _____ quantity.",
+      "options": {
+        "A": "Vector",
+        "B": "Scalar",
+        "C": "Dimensionless",
+        "D": "Constant"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0049",
+      "type": "mcq",
+      "stem": "The centre of gravity of a uniform rod is at its:",
+      "options": {
+        "A": "Midpoint",
+        "B": "End",
+        "C": "Quarter point",
+        "D": "Third point"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-aaua-phy101-bank-0050",
+      "type": "mcq",
+      "stem": "Pascal's principle applies to:",
+      "options": {
+        "A": "Fluids",
+        "B": "Solids",
+        "C": "Gases only",
+        "D": "Vacuum"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

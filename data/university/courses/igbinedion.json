@@ -1,0 +1,137 @@
+{
+ "school": "igbinedion",
+ "name": "Igbinedion University",
+ "short": "IGBINEDION",
+ "courses": [
+  {
+   "slug": "pq-accounting",
+   "code": "Post-UTME Accounting",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "calculate",
+   "bank": "uni-igbinedion-pq-accounting-bank",
+   "questionCount": 209,
+   "pdf": null
+  },
+  {
+   "slug": "pq-biology",
+   "code": "Post-UTME Biology",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "biotech",
+   "bank": "uni-igbinedion-pq-biology-bank",
+   "questionCount": 211,
+   "pdf": null
+  },
+  {
+   "slug": "pq-chemistry",
+   "code": "Post-UTME Chemistry",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "experiment",
+   "bank": "uni-igbinedion-pq-chemistry-bank",
+   "questionCount": 169,
+   "pdf": null
+  },
+  {
+   "slug": "pq-commerce",
+   "code": "Post-UTME Commerce",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "storefront",
+   "bank": "uni-igbinedion-pq-commerce-bank",
+   "questionCount": 221,
+   "pdf": null
+  },
+  {
+   "slug": "pq-crs",
+   "code": "Post-UTME CRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "auto_stories",
+   "bank": "uni-igbinedion-pq-crs-bank",
+   "questionCount": 201,
+   "pdf": null
+  },
+  {
+   "slug": "pq-economics",
+   "code": "Post-UTME Economics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "trending_up",
+   "bank": "uni-igbinedion-pq-economics-bank",
+   "questionCount": 210,
+   "pdf": null
+  },
+  {
+   "slug": "pq-english",
+   "code": "Post-UTME English",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "translate",
+   "bank": "uni-igbinedion-pq-english-bank",
+   "questionCount": 199,
+   "pdf": null
+  },
+  {
+   "slug": "pq-geography",
+   "code": "Post-UTME Geography",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "public",
+   "bank": "uni-igbinedion-pq-geography-bank",
+   "questionCount": 204,
+   "pdf": null
+  },
+  {
+   "slug": "pq-government",
+   "code": "Post-UTME Government",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "account_balance",
+   "bank": "uni-igbinedion-pq-government-bank",
+   "questionCount": 209,
+   "pdf": null
+  },
+  {
+   "slug": "pq-irs",
+   "code": "Post-UTME IRS",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-igbinedion-pq-irs-bank",
+   "questionCount": 197,
+   "pdf": null
+  },
+  {
+   "slug": "pq-literature",
+   "code": "Post-UTME Literature",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-igbinedion-pq-literature-bank",
+   "questionCount": 134,
+   "pdf": null
+  },
+  {
+   "slug": "pq-mathematics",
+   "code": "Post-UTME Mathematics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "functions",
+   "bank": "uni-igbinedion-pq-mathematics-bank",
+   "questionCount": 178,
+   "pdf": null
+  },
+  {
+   "slug": "pq-physics",
+   "code": "Post-UTME Physics",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "science",
+   "bank": "uni-igbinedion-pq-physics-bank",
+   "questionCount": 207,
+   "pdf": null
+  }
+ ]
+}

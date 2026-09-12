@@ -1,0 +1,720 @@
+{
+  "code": "uni-eksu-acc316-bank",
+  "title": "EKSU ACC 316 - Advanced International Financial Reporting Standards (AIFRS) | Practice Bank",
+  "version": 1,
+  "questionCount": 59,
+  "totalMarks": 59,
+  "questions": [
+    {
+      "id": "uni-eksu-acc316-bank-0001",
+      "type": "mcq",
+      "stem": "Under IFRS 5, what is the primary criterion for classifying an asset or disposal group as held for sale?",
+      "options": {
+        "A": "The asset must be actively marketed.",
+        "B": "The sale is expected to be completed within five years.",
+        "C": "Management has committed to a plan to sell the asset, and the sale is highly probable.",
+        "D": "The asset's carrying amount is higher than its fair value less costs to sell."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0002",
+      "type": "mcq",
+      "stem": "When an asset or disposal group is classified as held for sale under IFRS 5, how should it be measured?",
+      "options": {
+        "A": "At its original cost less accumulated depreciation.",
+        "B": "At the lower of its carrying amount and its fair value less costs to sell.",
+        "C": "At its fair value less costs to sell, regardless of its carrying amount.",
+        "D": "At its estimated future selling price."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0003",
+      "type": "mcq",
+      "stem": "What is the minimum presentation requirement for assets held for sale in the statement of financial position under IFRS 5?",
+      "options": {
+        "A": "They must be presented as part of property, plant, and equipment.",
+        "B": "They must be presented separately as current assets.",
+        "C": "They must be presented separately as non-current assets, but not as current assets.",
+        "D": "They must be presented separately on a dedicated line item within assets."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0004",
+      "type": "mcq",
+      "stem": "Under IFRS 5, which of the following conditions must be met for an operation to be classified as discontinued?",
+      "options": {
+        "A": "The operation has been sold during the reporting period.",
+        "B": "The operation represents a separate major line of business or geographical area of operations, and is part of a single coordinated plan to dispose of it.",
+        "C": "The operation has ceased to generate revenue.",
+        "D": "The operation's losses exceed its revenues in the current period."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0005",
+      "type": "mcq",
+      "stem": "Which of the following is a minimum disclosure requirement on the face of the statement of comprehensive income for discontinued operations under IFRS 5?",
+      "options": {
+        "A": "The net profit or loss from discontinued operations.",
+        "B": "The total revenue of the discontinued operation.",
+        "C": "The total expenses of the discontinued operation.",
+        "D": "The fair value of the assets of the discontinued operation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0006",
+      "type": "mcq",
+      "stem": "Which IFRS standard addresses the accounting for exploration and evaluation of mineral resources?",
+      "options": {
+        "A": "IFRS 4",
+        "B": "IFRS 6",
+        "C": "IFRS 8",
+        "D": "IFRS 11"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0007",
+      "type": "mcq",
+      "stem": "Under IFRS 6, what are the elements of the cost of an exploration and evaluation asset?",
+      "options": {
+        "A": "Only directly attributable external costs.",
+        "B": "All costs incurred up to the point where commercial extraction can begin.",
+        "C": "Costs that can be directly attributed to the exploration and evaluation of specific mineral resources.",
+        "D": "Only the costs of acquiring exploration and evaluation licenses."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0008",
+      "type": "mcq",
+      "stem": "What does the term \"Exploration and evaluation assets\" refer to under IFRS 6?",
+      "options": {
+        "A": "Assets that are held for sale after exploration activities.",
+        "B": "Expenditures that have been capitalized as exploration and evaluation assets.",
+        "C": "Assets that have been fully developed and are ready for production.",
+        "D": "Intangible assets related to mineral rights."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0009",
+      "type": "mcq",
+      "stem": "According to IFRS 6, \"Exploration and evaluation expenditure\" refers to:",
+      "options": {
+        "A": "All costs incurred by an entity in connection with the exploration for and evaluation of mineral resources before the determination of the commercial viability of extracting a mineral resource.",
+        "B": "Only the costs of drilling and seismic surveys.",
+        "C": "Expenditures related to the sale of mineral resources.",
+        "D": "Costs incurred after the commencement of commercial production."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0010",
+      "type": "mcq",
+      "stem": "\"Exploration for and evaluation of mineral resources\" under IFRS 6 encompasses:",
+      "options": {
+        "A": "The discovery of mineral deposits.",
+        "B": "The assessment of the technical feasibility and commercial viability of extracting a mineral resource.",
+        "C": "The sale of extracted mineral resources.",
+        "D": "The decommissioning of mining facilities."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0011",
+      "type": "mcq",
+      "stem": "In segment reporting, which of the following is a primary test for identifying reportable segments based on revenue?",
+      "options": {
+        "A": "The segment's profit margin compared to the consolidated profit.",
+        "B": "The segment's revenue (external and internal) is 10% or more of the total revenue.",
+        "C": "The segment's assets are 10% or more of the consolidated assets.",
+        "D": "The segment's operating expenses are 10% or more of the consolidated expenses."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0012",
+      "type": "mcq",
+      "stem": "If a segment's external revenue is N50 million and its internal revenue is N150 million, and the total consolidated revenue is N280 million (after eliminations), what is the total revenue for this segment?",
+      "options": {
+        "A": "N50 million",
+        "B": "N150 million",
+        "C": "N200 million",
+        "D": "N280 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0013",
+      "type": "mcq",
+      "stem": "According to the provided data, if the total external revenue of LUCIDITY limited is N295 million, which segment would qualify as reportable if the revenue test is 10% of total external revenue?",
+      "options": {
+        "A": "Electronics (N50 million)",
+        "B": "Restaurants (N20 million)",
+        "C": "Recreational clubs (N40 million)",
+        "D": "Travel agencies (N75 million)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0014",
+      "type": "mcq",
+      "stem": "In the context of LUCIDITY limited's segments, if \"Reconciling items and elimination\" amount to N150 million in total, this represents:",
+      "options": {
+        "A": "Inter-segment revenues and eliminations.",
+        "B": "External revenues not yet recognized.",
+        "C": "Profits from the sale of assets.",
+        "D": "Unallocated corporate expenses."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0015",
+      "type": "mcq",
+      "stem": "Which of the following revenue figures for a segment would *not* qualify as a reportable segment if the threshold is 10% of N280 million (consolidated revenue)?",
+      "options": {
+        "A": "N30 million",
+        "B": "N28 million",
+        "C": "N20 million",
+        "D": "N40 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0016",
+      "type": "mcq",
+      "stem": "IFRS 11 identifies two types of joint arrangements. What are they?",
+      "options": {
+        "A": "Joint Ventures and Jointly Controlled Assets",
+        "B": "Joint Operations and Joint Ventures",
+        "C": "Jointly Controlled Entities and Joint Operations",
+        "D": "Jointly Controlled Operations and Jointly Controlled Entities"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0017",
+      "type": "mcq",
+      "stem": "In a joint operation under IFRS 11, a joint operator recognizes:",
+      "options": {
+        "A": "Its share of the assets and liabilities of the joint operation.",
+        "B": "Only its share of the revenue generated by the joint operation.",
+        "C": "Its share of the net profit or loss of the joint operation.",
+        "D": "Its share of the capital contributions made to the joint operation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0018",
+      "type": "mcq",
+      "stem": "Which of the following is a characteristic of a joint arrangement under IFRS 11?",
+      "options": {
+        "A": "One party has control over the arrangement.",
+        "B": "The arrangement involves two or more parties.",
+        "C": "The arrangement is established for a single transaction.",
+        "D": "The arrangement is a wholly-owned subsidiary."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0019",
+      "type": "mcq",
+      "stem": "When a joint operator recognizes its share of the assets and liabilities in a joint operation, it is essentially accounting for:",
+      "options": {
+        "A": "The entire joint operation as a separate entity.",
+        "B": "Its individual assets, liabilities, revenues, and expenses related to the joint operation.",
+        "C": "Only the assets contributed by the joint operator.",
+        "D": "The capital invested by all joint operators."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0020",
+      "type": "mcq",
+      "stem": "What is the primary distinction between a joint operation and a joint venture under IFRS 11?",
+      "options": {
+        "A": "Joint operations involve shared assets and liabilities, while joint ventures involve equity accounting.",
+        "B": "Joint ventures involve shared assets and liabilities, while joint operations involve equity accounting.",
+        "C": "Joint operations are always unincorporated, while joint ventures are always incorporated.",
+        "D": "Joint ventures have separate legal status, while joint operations do not."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0021",
+      "type": "mcq",
+      "stem": "According to IFRS 11, a joint operator recognizes its share of the following elements in relation to joint operations:",
+      "options": {
+        "A": "The revenues and expenses incurred by the other joint operator.",
+        "B": "Its assets contributed to the joint operation.",
+        "C": "Its share of the assets it controls jointly.",
+        "D": "Its share of the total liabilities of the joint operation, regardless of its control."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0022",
+      "type": "mcq",
+      "stem": "IFRS 13 establishes a framework for measuring fair value. What is the fundamental principle of fair value measurement under IFRS 13?",
+      "options": {
+        "A": "The price an entity would receive to sell an asset or pay to transfer a liability in an orderly transaction between market participants at the measurement date.",
+        "B": "The historical cost of the asset or liability.",
+        "C": "The price an entity would receive to sell an asset at a discount.",
+        "D": "The price based on management's best estimate of value."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0023",
+      "type": "mcq",
+      "stem": "IFRS 13 defines fair value as:",
+      "options": {
+        "A": "The amount an asset was acquired for.",
+        "B": "The amount an entity would need to pay to replace an asset.",
+        "C": "The exit price received to sell an asset or paid to transfer a liability.",
+        "D": "The intrinsic value of an asset."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0024",
+      "type": "mcq",
+      "stem": "According to IFRS 13, what does the term \"market participants\" refer to in the context of fair value measurement?",
+      "options": {
+        "A": "Participants in the entity's own market.",
+        "B": "Buyers and sellers in the principal market for the asset or liability.",
+        "C": "Only professional investors.",
+        "D": "Customers who are willing to pay any price."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0025",
+      "type": "mcq",
+      "stem": "An \"orderly transaction\" in the context of IFRS 13 fair value measurement means:",
+      "options": {
+        "A": "A transaction at the end of the reporting period.",
+        "B": "A transaction that is not a forced liquidation or distressed sale.",
+        "C": "A transaction that involves only cash.",
+        "D": "A transaction with a related party."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0026",
+      "type": "mcq",
+      "stem": "IFRS 13 categorizes fair value measurements into a three-level hierarchy based on:",
+      "options": {
+        "A": "The size of the entity.",
+        "B": "The type of asset or liability.",
+        "C": "The observability of inputs to valuation techniques.",
+        "D": "The length of time the asset has been held."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0027",
+      "type": "mcq",
+      "stem": "Which level of the fair value hierarchy under IFRS 13 includes inputs that are not based on observable market data?",
+      "options": {
+        "A": "Level 1",
+        "B": "Level 2",
+        "C": "Level 3",
+        "D": "All levels include non-observable data."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0028",
+      "type": "mcq",
+      "stem": "Level 1 inputs in the IFRS 13 fair value hierarchy are:",
+      "options": {
+        "A": "Unobservable inputs derived from internal models.",
+        "B": "Observable inputs that are quoted prices in active markets for identical assets or liabilities.",
+        "C": "Observable inputs other than quoted prices in active markets for identical items.",
+        "D": "Inputs that are significant but not directly observable."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0029",
+      "type": "mcq",
+      "stem": "Level 2 inputs in the IFRS 13 fair value hierarchy are:",
+      "options": {
+        "A": "Quoted prices in active markets for identical assets or liabilities.",
+        "B": "Observable inputs other than quoted prices in active markets for identical items, such as quoted prices for similar assets or liabilities in active markets.",
+        "C": "Unobservable inputs derived from internal data.",
+        "D": "Inputs that require significant management judgment."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0030",
+      "type": "mcq",
+      "stem": "What is the main objective of IFRS 13?",
+      "options": {
+        "A": "To introduce new requirements for when fair value accounting is required.",
+        "B": "To establish a single framework for measuring fair value and enhance disclosures related to it.",
+        "C": "To mandate the use of fair value for all assets and liabilities.",
+        "D": "To eliminate the use of historical cost accounting."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0031",
+      "type": "mcq",
+      "stem": "Under IFRS 5, a disposal group is a group of assets to be disposed of together as a group in a single transaction, and liabilities directly associated with those assets that will be transferred in the transaction. What is a key condition for classifying it as held for sale?",
+      "options": {
+        "A": "The group must be actively advertised for sale.",
+        "B": "The disposal must be expected to be completed within one year of the classification date.",
+        "C": "Management must have committed to a plan to sell the group.",
+        "D": "The liabilities must exceed the assets in the group."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0032",
+      "type": "mcq",
+      "stem": "How are assets classified as held for sale presented in the statement of financial position under IFRS 5?",
+      "options": {
+        "A": "Within their existing categories, but with a disclosure.",
+        "B": "Separately from other assets, as current assets if sale is within one year.",
+        "C": "Separately on a line item as \"Assets Held for Sale\".",
+        "D": "As a deduction from equity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0033",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a criterion for classifying an operation as discontinued under IFRS 5?",
+      "options": {
+        "A": "It represents a separate major line of business or geographical area of operations.",
+        "B": "It is part of a single coordinated plan to dispose of a separate major line of business or geographical area of operations.",
+        "C": "It is an operation that has ceased to exist entirely.",
+        "D": "It is a disposal of a subsidiary or other group of assets that form a disposal group."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0034",
+      "type": "mcq",
+      "stem": "What is the minimum disclosure required on the face of the statement of comprehensive income for discontinued operations?",
+      "options": {
+        "A": "Details of assets and liabilities.",
+        "B": "A single amount representing the net profit or loss from the discontinued operation.",
+        "C": "Detailed breakdown of revenues and expenses.",
+        "D": "Information about the buyer."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0035",
+      "type": "mcq",
+      "stem": "IFRS 6 provides guidance on the accounting for exploration and evaluation expenditures. Which of the following is considered a cost element under this standard?",
+      "options": {
+        "A": "General administrative overheads not directly related to a specific project.",
+        "B": "Depreciation of plant and equipment used in exploration.",
+        "C": "Costs of acquiring exploration rights.",
+        "D": "Research and development costs for new extraction technologies."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0036",
+      "type": "mcq",
+      "stem": "Which of the following definitions best fits \"Exploration and evaluation assets\" under IFRS 6?",
+      "options": {
+        "A": "Assets acquired for future development.",
+        "B": "Expenditures recognized in accordance with IFRS 6 in the accounting for the exploration for and evaluation of mineral resources.",
+        "C": "Assets used in the sale of mineral resources.",
+        "D": "Intangible assets representing mineral reserves."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0037",
+      "type": "mcq",
+      "stem": "The process of \"Exploration for and evaluation of mineral resources\" under IFRS 6 involves:",
+      "options": {
+        "A": "Only the drilling of exploratory wells.",
+        "B": "Activities undertaken to discover a potential for commercially viable mineral resources, and then assessing the technical and commercial feasibility of extracting them.",
+        "C": "The extraction and sale of mineral resources.",
+        "D": "The transportation of extracted minerals."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0038",
+      "type": "mcq",
+      "stem": "In segment reporting, if a segment's revenue is N25 million and the total consolidated revenue is N300 million, would it be considered a reportable segment based on the revenue test (10% threshold)?",
+      "options": {
+        "A": "Yes, because N25 million is greater than N30 million.",
+        "B": "No, because N25 million is less than N30 million.",
+        "C": "Yes, because N25 million is a significant portion of N300 million.",
+        "D": "No, because the segment must be profitable to be reportable."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0039",
+      "type": "mcq",
+      "stem": "What is the purpose of \"Reconciling items and elimination\" in segment reporting?",
+      "options": {
+        "A": "To increase the reported revenue of segments.",
+        "B": "To eliminate inter-segment transactions and ensure that consolidated revenues reflect external sales.",
+        "C": "To add back expenses not allocated to segments.",
+        "D": "To show the profit of each segment individually."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0040",
+      "type": "mcq",
+      "stem": "Under IFRS 11, a \"joint arrangement\" requires:",
+      "options": {
+        "A": "Control by a single party.",
+        "B": "A contractually agreed sharing of control over the economic activities of the arrangement.",
+        "C": "The establishment of a separate legal entity.",
+        "D": "A unanimous decision-making process for all operational matters."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0041",
+      "type": "mcq",
+      "stem": "When a joint operator accounts for its share of assets and liabilities in a joint operation, it recognizes:",
+      "options": {
+        "A": "The fair value of all assets in the joint operation.",
+        "B": "Its share of assets and liabilities it controls jointly.",
+        "C": "Only the assets it has contributed.",
+        "D": "The entire liabilities of the joint operation."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0042",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a characteristic of a joint arrangement under IFRS 11?",
+      "options": {
+        "A": "Two or more parties have an agreement.",
+        "B": "The parties share control over the arrangement.",
+        "C": "One party has sole control over the arrangement.",
+        "D": "The arrangement involves significant economic activity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0043",
+      "type": "mcq",
+      "stem": "In a joint venture, a joint operator typically accounts for its investment using:",
+      "options": {
+        "A": "The fair value method.",
+        "B": "The equity method.",
+        "C": "The cost method.",
+        "D": "The consolidation method."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0044",
+      "type": "mcq",
+      "stem": "Under IFRS 13, the \"principal market\" for an asset or liability is:",
+      "options": {
+        "A": "The market with the highest price.",
+        "B": "The market where the entity normally transacts.",
+        "C": "The market that maximizes the volume of transactions for the asset or liability.",
+        "D": "The market with the greatest liquidity."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0045",
+      "type": "mcq",
+      "stem": "Which level of the fair value hierarchy is most reliant on unobservable inputs and management judgment?",
+      "options": {
+        "A": "Level 1",
+        "B": "Level 2",
+        "C": "Level 3",
+        "D": "None of the above, all levels are equally reliable."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0046",
+      "type": "mcq",
+      "stem": "When an asset or disposal group is classified as held for sale under IFRS 5, it is measured at the lower of its carrying amount and:",
+      "options": {
+        "A": "Its original cost.",
+        "B": "Its fair value.",
+        "C": "Its fair value less costs to sell.",
+        "D": "Its recoverable amount."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0047",
+      "type": "mcq",
+      "stem": "Under IFRS 5, what is the primary condition that signifies an operation is discontinued?",
+      "options": {
+        "A": "It has incurred a net loss for the period.",
+        "B": "It is a separate major line of business or geographical area of operations that is disposed of or held for sale.",
+        "C": "It is no longer part of the entity's primary business activities.",
+        "D": "Its results are presented separately in the financial statements."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0048",
+      "type": "mcq",
+      "stem": "In the context of IFRS 6, \"Exploration and evaluation assets\" are recognized when:",
+      "options": {
+        "A": "Commercial discovery of mineral resources is confirmed.",
+        "B": "The entity has rights to explore in a specific area and intends to carry out exploration and evaluation.",
+        "C": "Production of minerals has commenced.",
+        "D": "Feasibility studies are completed."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0049",
+      "type": "mcq",
+      "stem": "Which of the following is NOT an example of an exploration and evaluation expenditure that could be capitalized under IFRS 6?",
+      "options": {
+        "A": "Geological and geophysical surveys.",
+        "B": "Expenditure for drilling exploratory wells.",
+        "C": "Administrative overheads allocated to exploration activities.",
+        "D": "Costs of evaluating the technical feasibility and commercial viability of an ore body."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0050",
+      "type": "mcq",
+      "stem": "If a segment's external revenue is N15 million and its internal revenue is N5 million, and the total consolidated revenue is N280 million, what is the total revenue for this segment?",
+      "options": {
+        "A": "N15 million",
+        "B": "N20 million",
+        "C": "N25 million",
+        "D": "N280 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0051",
+      "type": "mcq",
+      "stem": "According to IFRS 11, a joint arrangement is characterized by:",
+      "options": {
+        "A": "The absence of a contractual agreement.",
+        "B": "Shared control by two or more parties.",
+        "C": "Sole control by one party.",
+        "D": "The operation of a fully owned subsidiary."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0052",
+      "type": "mcq",
+      "stem": "In a joint operation, a joint operator recognizes its share of:",
+      "options": {
+        "A": "The revenues earned by the entire joint operation.",
+        "B": "The assets and liabilities it controls jointly.",
+        "C": "The profit or loss before considering its share.",
+        "D": "The capital contributed by all parties."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0053",
+      "type": "mcq",
+      "stem": "Which level of the fair value hierarchy uses quoted prices in active markets for identical assets or liabilities?",
+      "options": {
+        "A": "Level 1",
+        "B": "Level 2",
+        "C": "Level 3",
+        "D": "Not applicable to IFRS 13."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0054",
+      "type": "mcq",
+      "stem": "Under IFRS 5, how are assets held for sale presented in the statement of financial position?",
+      "options": {
+        "A": "They are grouped with similar assets but labelled as held for sale.",
+        "B": "They are presented separately as a current asset if the sale is expected within one year.",
+        "C": "They are presented separately on a line item as 'Assets Held for Sale', with no depreciation charged.",
+        "D": "They are reclassified as intangible assets."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0055",
+      "type": "mcq",
+      "stem": "Which of the following best describes a \"discontinued operation\" under IFRS 5?",
+      "options": {
+        "A": "An operation that has stopped generating profits.",
+        "B": "An operation that is being sold, is already sold, or is closed down, and represents a separate major line of business or geographical area.",
+        "C": "An operation that is undergoing restructuring.",
+        "D": "An operation whose management has been changed."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0056",
+      "type": "mcq",
+      "stem": "Under IFRS 6, \"Exploration and evaluation expenditure\" includes:",
+      "options": {
+        "A": "Costs incurred after commercial viability has been established.",
+        "B": "Expenditures incurred before the determination of the commercial viability of extracting a mineral resource.",
+        "C": "Costs of plant and equipment used in the extraction phase.",
+        "D": "Expenses related to the sale of mineral resources."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0057",
+      "type": "mcq",
+      "stem": "Which of the following would NOT be considered a reportable segment based on the revenue test (10% of total consolidated revenue of N280 million), if the segment's external revenue is N25 million and internal revenue is N3 million?",
+      "options": {
+        "A": "Segment Revenue: N28 million",
+        "B": "Segment Revenue: N20 million",
+        "C": "Segment Revenue: N30 million",
+        "D": "Segment Revenue: N25 million"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0058",
+      "type": "mcq",
+      "stem": "IFRS 11 distinguishes between joint operations and joint ventures. A joint venture is characterized by:",
+      "options": {
+        "A": "Joint control over assets and liabilities.",
+        "B": "The right to the assets and obligations for the liabilities of the arrangement.",
+        "C": "The establishment of a separate entity where parties have an interest and account for it using the equity method.",
+        "D": "Direct recognition of revenues and expenses."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-acc316-bank-0059",
+      "type": "mcq",
+      "stem": "Under IFRS 13, Level 3 fair value measurements are characterized by:",
+      "options": {
+        "A": "Direct observation of market prices for identical items.",
+        "B": "Use of observable inputs for similar items.",
+        "C": "Reliance on unobservable inputs that are significant to the measurement.",
+        "D": "Application of the entity's own assumptions without market validation."
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

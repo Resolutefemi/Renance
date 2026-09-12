@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-chm201-bank",
+  "title": "EKSU Chm201 - Experimental Organic Chemistry | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-chm201-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following is NOT a standard safety measure applicable to students performing Organic Chemistry experiments?",
+      "options": {
+        "A": "Wearing safety goggles at all times",
+        "B": "Eating and drinking in the laboratory",
+        "C": "Working in a fume hood when handling volatile solvents",
+        "D": "Wearing closed-toe shoes"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0002",
+      "type": "mcq",
+      "stem": "What is an effective way to induce the growth of crystals in the laboratory if they fail to form upon cooling?",
+      "options": {
+        "A": "Adding a large volume of cold water",
+        "B": "Heating the solution rapidly",
+        "C": "Scratching the inside of the flask with a glass rod",
+        "D": "Adding a strong acid to the mixture"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following is another accepted method for inducing crystallization?",
+      "options": {
+        "A": "Seeding with a small crystal of the pure substance",
+        "B": "Vigorously shaking the flask",
+        "C": "Adding a boiling chip",
+        "D": "Filtering the hot solution immediately"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0004",
+      "type": "mcq",
+      "stem": "What is the most suitable laboratory method to test the purity of a solid organic compound like Naphthalene?",
+      "options": {
+        "A": "Determining its boiling point",
+        "B": "Determining its melting point",
+        "C": "Using fractional distillation",
+        "D": "Performing solvent extraction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0005",
+      "type": "mcq",
+      "stem": "To test the purity of a volatile liquid like Ethanol, which physical property is most commonly determined?",
+      "options": {
+        "A": "Melting point",
+        "B": "Boiling point",
+        "C": "Sublimation point",
+        "D": "Freezing point"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0006",
+      "type": "mcq",
+      "stem": "Which basic content is usually placed first in a standard good laboratory report?",
+      "options": {
+        "A": "Conclusion",
+        "B": "Results and Calculations",
+        "C": "Title of the Experiment",
+        "D": "Procedure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0007",
+      "type": "mcq",
+      "stem": "If an unknown liquid sample 'A' boils consistently between 77.9°C and 78.1°C during multiple trials, what is its likely actual boiling point?",
+      "options": {
+        "A": "77.0°C",
+        "B": "78.0°C",
+        "C": "79.0°C",
+        "D": "80.0°C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0008",
+      "type": "mcq",
+      "stem": "Based on a boiling point of 78.0°C, what is the most likely identity of the unknown liquid sample A?",
+      "options": {
+        "A": "Water",
+        "B": "Ethanol",
+        "C": "Chloroform",
+        "D": "Acetone"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0009",
+      "type": "mcq",
+      "stem": "Which method should be used to separate a mixture of liquid A (B.P. 78°C) and sample B (B.P. 88°C)?",
+      "options": {
+        "A": "Simple distillation",
+        "B": "Fractional distillation",
+        "C": "Sublimation",
+        "D": "Recrystallization"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0010",
+      "type": "mcq",
+      "stem": "What is a primary requirement for choosing a solvent for recrystallization?",
+      "options": {
+        "A": "It must dissolve the compound at all temperatures",
+        "B": "It must dissolve the compound only when hot and not when cold",
+        "C": "It must never dissolve the compound",
+        "D": "It must react chemically with the compound"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0011",
+      "type": "mcq",
+      "stem": "Why is a fluted filter paper often used during the hot filtration step of recrystallization?",
+      "options": {
+        "A": "To slow down the filtration process",
+        "B": "To increase the surface area and speed up filtration",
+        "C": "To cool the solution faster",
+        "D": "To react with the impurities"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0012",
+      "type": "mcq",
+      "stem": "Which of the following apparatus is NOT typically used for a boiling point determination?",
+      "options": {
+        "A": "Thermometer",
+        "B": "Thiele tube or oil bath",
+        "C": "Capillary tube",
+        "D": "Separatory funnel"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0013",
+      "type": "mcq",
+      "stem": "Why are boiling chips added to a liquid before heating?",
+      "options": {
+        "A": "To lower the boiling point",
+        "B": "To prevent bumping by providing nucleation sites",
+        "C": "To increase the yield of the distillate",
+        "D": "To act as a catalyst"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0014",
+      "type": "mcq",
+      "stem": "In a laboratory report, where should you record unexpected observations made during the experiment?",
+      "options": {
+        "A": "In the Title",
+        "B": "In the Objective",
+        "C": "In the Results/Observation section",
+        "D": "In the References"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0015",
+      "type": "mcq",
+      "stem": "A pure substance typically melts over a temperature range of:",
+      "options": {
+        "A": "5 - 10 °C",
+        "B": "0.5 - 2.0 °C",
+        "C": "10 - 15 °C",
+        "D": "20 - 25 °C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0016",
+      "type": "mcq",
+      "stem": "The presence of a soluble impurity in a solid sample will usually cause its melting point to:",
+      "options": {
+        "A": "Broaden and depress (lower)",
+        "B": "Sharpen and elevate (increase)",
+        "C": "Remain completely unchanged",
+        "D": "Broaden and elevate"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0017",
+      "type": "mcq",
+      "stem": "Which separation technique relies on the differing solubilities of a compound in two immiscible liquids?",
+      "options": {
+        "A": "Distillation",
+        "B": "Sublimation",
+        "C": "Solvent Extraction",
+        "D": "Filtration"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0018",
+      "type": "mcq",
+      "stem": "When separating an aqueous layer and an organic layer in a separatory funnel, the bottom layer is always the one with:",
+      "options": {
+        "A": "The higher volume",
+        "B": "The lower boiling point",
+        "C": "The higher density",
+        "D": "The darker color"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0019",
+      "type": "mcq",
+      "stem": "What happens if a separatory funnel is not vented occasionally during shaking?",
+      "options": {
+        "A": "The extraction efficiency increases",
+        "B": "Pressure builds up and can cause the stopper to blow out",
+        "C": "The liquids will permanently emulsify",
+        "D": "The solvent will freeze"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0020",
+      "type": "mcq",
+      "stem": "Which drying agent is commonly used to remove trace amounts of water from an organic extract?",
+      "options": {
+        "A": "Sodium hydroxide",
+        "B": "Anhydrous sodium sulfate",
+        "C": "Concentrated sulfuric acid",
+        "D": "Aqueous sodium chloride"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0021",
+      "type": "mcq",
+      "stem": "What technique is used to purify a solid that passes directly from the solid phase to the gas phase without melting?",
+      "options": {
+        "A": "Crystallization",
+        "B": "Distillation",
+        "C": "Sublimation",
+        "D": "Chromatography"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0022",
+      "type": "mcq",
+      "stem": "In Thin Layer Chromatography (TLC), the stationary phase is typically:",
+      "options": {
+        "A": "A liquid solvent",
+        "B": "Silica gel or alumina",
+        "C": "Filter paper",
+        "D": "A non-polar gas"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0023",
+      "type": "mcq",
+      "stem": "How is the Rf value calculated in chromatography?",
+      "options": {
+        "A": "Distance traveled by solvent / Distance traveled by spot",
+        "B": "Distance traveled by spot / Distance traveled by solvent",
+        "C": "Size of the spot / Distance traveled by solvent",
+        "D": "Distance traveled by solvent * Distance traveled by spot"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0024",
+      "type": "mcq",
+      "stem": "If two spots on a TLC plate have identical Rf values under the same conditions, it is likely that:",
+      "options": {
+        "A": "They are the same compound",
+        "B": "They are completely different compounds",
+        "C": "The solvent is contaminated",
+        "D": "The plate was overloaded"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0025",
+      "type": "mcq",
+      "stem": "The process of collecting different fractions of liquid at specific temperature ranges is called:",
+      "options": {
+        "A": "Refluxing",
+        "B": "Fractional Distillation",
+        "C": "Extraction",
+        "D": "Decantation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0026",
+      "type": "mcq",
+      "stem": "What is the purpose of the fractionating column in fractional distillation?",
+      "options": {
+        "A": "To cool the liquid rapidly",
+        "B": "To provide a large surface area for multiple vaporization-condensation cycles",
+        "C": "To filter out solid impurities",
+        "D": "To measure the exact temperature of the vapor"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0027",
+      "type": "mcq",
+      "stem": "When setting up a water-cooled condenser, water should enter from the:",
+      "options": {
+        "A": "Top inlet",
+        "B": "Bottom inlet",
+        "C": "Both inlets simultaneously",
+        "D": "It does not matter"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0028",
+      "type": "mcq",
+      "stem": "Heating a reaction mixture to its boiling point without loss of solvent is achieved by:",
+      "options": {
+        "A": "Distillation",
+        "B": "Evaporation",
+        "C": "Refluxing",
+        "D": "Sublimation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0029",
+      "type": "mcq",
+      "stem": "What piece of glassware is essential for a reflux setup?",
+      "options": {
+        "A": "Separatory funnel",
+        "B": "Buchner funnel",
+        "C": "Condenser",
+        "D": "Burette"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0030",
+      "type": "mcq",
+      "stem": "Which compound would most likely be purified by sublimation?",
+      "options": {
+        "A": "Ethanol",
+        "B": "Sodium chloride",
+        "C": "Iodine or Naphthalene",
+        "D": "Glucose"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0031",
+      "type": "mcq",
+      "stem": "In liquid-liquid extraction, the partition coefficient depends primarily on:",
+      "options": {
+        "A": "The volume of the solvents",
+        "B": "The solubility of the solute in the two layers",
+        "C": "The temperature of the room",
+        "D": "The shape of the separatory funnel"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0032",
+      "type": "mcq",
+      "stem": "When handling corrosive acids in the lab, one should always:",
+      "options": {
+        "A": "Add water to the acid",
+        "B": "Add the acid to water slowly",
+        "C": "Mix them rapidly",
+        "D": "Heat the water first"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0033",
+      "type": "mcq",
+      "stem": "What is the purpose of a Buchner funnel?",
+      "options": {
+        "A": "Simple gravity filtration",
+        "B": "Liquid-liquid extraction",
+        "C": "Vacuum (suction) filtration",
+        "D": "Storing chemicals"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0034",
+      "type": "mcq",
+      "stem": "If crystals do not dry completely after vacuum filtration, what is a common next step?",
+      "options": {
+        "A": "Dissolve them again",
+        "B": "Press them between filter papers or place in a desiccator",
+        "C": "Heat them directly over a Bunsen burner",
+        "D": "Wash them with boiling water"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0035",
+      "type": "mcq",
+      "stem": "Which physical property is defined as the temperature at which the vapor pressure of a liquid equals the external atmospheric pressure?",
+      "options": {
+        "A": "Melting point",
+        "B": "Boiling point",
+        "C": "Flash point",
+        "D": "Dew point"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0036",
+      "type": "mcq",
+      "stem": "How does a decrease in atmospheric pressure affect the boiling point of a liquid?",
+      "options": {
+        "A": "It increases the boiling point",
+        "B": "It decreases the boiling point",
+        "C": "It has no effect",
+        "D": "It makes the boiling point fluctuate wildly"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0037",
+      "type": "mcq",
+      "stem": "An ideal solvent for recrystallization should dissolve impurities:",
+      "options": {
+        "A": "Very well at all temperatures or not at all at any temperature",
+        "B": "Only when the solvent is cold",
+        "C": "Only when the solvent is boiling",
+        "D": "In equal amounts to the desired compound"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0038",
+      "type": "mcq",
+      "stem": "Decolorizing carbon (charcoal) is sometimes added during recrystallization to:",
+      "options": {
+        "A": "Induce crystallization",
+        "B": "Remove colored soluble impurities",
+        "C": "Lower the boiling point of the solvent",
+        "D": "Increase the yield of the product"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0039",
+      "type": "mcq",
+      "stem": "Why is it important to remove the thermometer prior to allowing a melting point apparatus to cool?",
+      "options": {
+        "A": "The thermometer might shatter if cooled too quickly",
+        "B": "The mercury will evaporate",
+        "C": "It is not important; it can be left in",
+        "D": "To clean it immediately"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0040",
+      "type": "mcq",
+      "stem": "A mixture of two immiscible liquids will boil at a temperature that is:",
+      "options": {
+        "A": "Higher than the boiling point of both components",
+        "B": "Lower than the boiling point of the lowest-boiling component",
+        "C": "The average of their boiling points",
+        "D": "Equal to the highest-boiling component"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0041",
+      "type": "mcq",
+      "stem": "Steam distillation is particularly useful for separating compounds that are:",
+      "options": {
+        "A": "Highly soluble in water",
+        "B": "Temperature sensitive and immiscible with water",
+        "C": "Solid at room temperature",
+        "D": "Inorganic salts"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0042",
+      "type": "mcq",
+      "stem": "In a laboratory report, the 'Procedure' section should be written in:",
+      "options": {
+        "A": "Future tense, first person",
+        "B": "Past tense, passive voice",
+        "C": "Present tense, active voice",
+        "D": "Bullet points as instructions"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0043",
+      "type": "mcq",
+      "stem": "What is the primary function of a desiccator in the organic lab?",
+      "options": {
+        "A": "To heat substances",
+        "B": "To store substances in a dry atmosphere",
+        "C": "To measure atmospheric pressure",
+        "D": "To conduct vacuum filtration"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0044",
+      "type": "mcq",
+      "stem": "Which of the following is considered an indeterminate (random) error in a lab experiment?",
+      "options": {
+        "A": "An incorrectly calibrated balance",
+        "B": "Fluctuations in room temperature affecting a reading",
+        "C": "Using a contaminated reagent",
+        "D": "Spilling part of the sample"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0045",
+      "type": "mcq",
+      "stem": "When washing glassware that contained organic residues, what is typically used before washing with soap and water?",
+      "options": {
+        "A": "A small amount of an organic solvent like acetone",
+        "B": "Concentrated sulfuric acid",
+        "C": "Liquid nitrogen",
+        "D": "Strong base"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0046",
+      "type": "mcq",
+      "stem": "During a melting point determination, heating the sample too rapidly will result in:",
+      "options": {
+        "A": "A more accurate melting point",
+        "B": "A melting point range that is too narrow",
+        "C": "A recorded melting point that is higher than the true value due to thermometer lag",
+        "D": "The sample subliming instead of melting"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0047",
+      "type": "mcq",
+      "stem": "What is the standard unit of expression for melting point in a laboratory report?",
+      "options": {
+        "A": "Kelvin (K)",
+        "B": "Degrees Celsius (°C)",
+        "C": "Fahrenheit (°F)",
+        "D": "Joules (J)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0048",
+      "type": "mcq",
+      "stem": "Which of the following indicates a supersaturated solution?",
+      "options": {
+        "A": "A solution containing less solute than it can hold",
+        "B": "A solution containing exactly the maximum amount of solute",
+        "C": "A cooled solution that contains more dissolved solute than is normally possible at that temperature",
+        "D": "A solution where solute continuously precipitates upon heating"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0049",
+      "type": "mcq",
+      "stem": "Which piece of equipment is best used to accurately measure a specific volume of liquid, such as 10.0 mL?",
+      "options": {
+        "A": "Beaker",
+        "B": "Erlenmeyer flask",
+        "C": "Graduated cylinder or pipette",
+        "D": "Test tube"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0050",
+      "type": "mcq",
+      "stem": "In chromatography, the mobile phase is:",
+      "options": {
+        "A": "Always a solid",
+        "B": "The phase that moves through the stationary phase",
+        "C": "The phase that remains fixed in place",
+        "D": "Used only for color development"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0051",
+      "type": "mcq",
+      "stem": "When preparing a TLC plate, the baseline and solvent front should be marked with:",
+      "options": {
+        "A": "A ballpoint pen",
+        "B": "A felt-tip marker",
+        "C": "A graphite pencil",
+        "D": "A sharp scalpel"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0052",
+      "type": "mcq",
+      "stem": "Why must the solvent level in a TLC developing chamber be below the baseline of the plate?",
+      "options": {
+        "A": "To prevent the solvent from evaporating",
+        "B": "So the spots do not dissolve directly into the solvent pool",
+        "C": "To make the solvent travel faster",
+        "D": "To keep the chamber pressure balanced"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0053",
+      "type": "mcq",
+      "stem": "An emulsion formed during liquid-liquid extraction can sometimes be broken by:",
+      "options": {
+        "A": "Adding a saturated aqueous NaCl solution (brine)",
+        "B": "Vigorously shaking the funnel",
+        "C": "Adding more water",
+        "D": "Heating the funnel with a Bunsen burner"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0054",
+      "type": "mcq",
+      "stem": "The organic solvent 'Diethyl ether' is commonly used in extraction because it is:",
+      "options": {
+        "A": "Highly miscible with water",
+        "B": "Non-flammable",
+        "C": "Volatile and easily removed from the extracted compound",
+        "D": "Heavier than water"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0055",
+      "type": "mcq",
+      "stem": "The 'Yield' of an experimental organic synthesis is calculated by:",
+      "options": {
+        "A": "(Theoretical Yield / Actual Yield) x 100",
+        "B": "(Actual Yield / Theoretical Yield) x 100",
+        "C": "Actual Yield - Theoretical Yield",
+        "D": "Actual Yield + Theoretical Yield"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0056",
+      "type": "mcq",
+      "stem": "If you spill a strong acid on your hands in the laboratory, the immediate first aid step is to:",
+      "options": {
+        "A": "Neutralize it with a strong base",
+        "B": "Wipe it off with a paper towel",
+        "C": "Wash immediately with plenty of running water",
+        "D": "Apply a burn ointment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0057",
+      "type": "mcq",
+      "stem": "Which functional group is most likely present if an organic compound undergoes rapid decolorization of bromine water without the evolution of hydrogen bromide gas?",
+      "options": {
+        "A": "Alkane",
+        "B": "Alkene",
+        "C": "Alcohol",
+        "D": "Carboxylic acid"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0058",
+      "type": "mcq",
+      "stem": "Which of the following is a key reason for taking the melting point of a known standard alongside an unknown?",
+      "options": {
+        "A": "To calibrate the thermometer",
+        "B": "To perform a mixed melting point test and confirm identity",
+        "C": "To clean the capillary tube",
+        "D": "To lower the melting point of the unknown"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0059",
+      "type": "mcq",
+      "stem": "A 'Tare' function on an electronic analytical balance is used to:",
+      "options": {
+        "A": "Change the units to ounces",
+        "B": "Reset the balance display to zero, ignoring the weight of the container",
+        "C": "Calibrate the internal mechanism",
+        "D": "Measure the density of the object"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm201-bank-0060",
+      "type": "mcq",
+      "stem": "What is the primary danger of heating a closed system in the organic laboratory?",
+      "options": {
+        "A": "The reaction will proceed too slowly",
+        "B": "The solvent will not reflux",
+        "C": "Pressure buildup can cause an explosion",
+        "D": "The products will immediately decompose"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

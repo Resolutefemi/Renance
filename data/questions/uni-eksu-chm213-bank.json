@@ -1,0 +1,732 @@
+{
+  "code": "uni-eksu-chm213-bank",
+  "title": "EKSU CHM 213 - Analytical Chemistry I | Practice Bank",
+  "version": 1,
+  "questionCount": 60,
+  "totalMarks": 60,
+  "questions": [
+    {
+      "id": "uni-eksu-chm213-bank-0001",
+      "type": "mcq",
+      "stem": "Which of the following is an essential factor to consider to ensure that the composition of a sample remains identical during chemical analysis?",
+      "options": {
+        "A": "Avoiding contamination from the environment or containers",
+        "B": "Heating the sample to its boiling point",
+        "C": "Adding a strong acid immediately",
+        "D": "Exposing the sample to direct sunlight"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0002",
+      "type": "mcq",
+      "stem": "Determinate (systematic) errors in analytical chemistry are characterized by:",
+      "options": {
+        "A": "Being random and unpredictable",
+        "B": "Having a definite value and an assignable cause",
+        "C": "Following a normal (Gaussian) distribution",
+        "D": "Being impossible to detect or correct"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0003",
+      "type": "mcq",
+      "stem": "Which of the following represents an indeterminate (random) error?",
+      "options": {
+        "A": "Using an uncalibrated balance",
+        "B": "A side reaction occurring during titration",
+        "C": "Slight fluctuations in room temperature or electrical noise",
+        "D": "Reading the meniscus consistently from the wrong angle"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0004",
+      "type": "mcq",
+      "stem": "How can a chemist best minimize determinate errors in an experiment?",
+      "options": {
+        "A": "By performing multiple random analyses",
+        "B": "By calibrating equipment and running blank determinations",
+        "C": "By ignoring small variations in data",
+        "D": "By increasing the sample size indefinitely"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0005",
+      "type": "mcq",
+      "stem": "The statistical measure defined as the sum of all measurements divided by the number of measurements is the:",
+      "options": {
+        "A": "Median",
+        "B": "Mode",
+        "C": "Mean",
+        "D": "Standard Deviation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0006",
+      "type": "mcq",
+      "stem": "Which statistical test is used to decide whether a suspected outlier in a set of replicate measurements should be rejected or retained?",
+      "options": {
+        "A": "Student's t-test",
+        "B": "F-test",
+        "C": "Q-test (Rejection Quotient)",
+        "D": "Chi-square test"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0007",
+      "type": "mcq",
+      "stem": "The F-test in analytical chemistry is primarily used to:",
+      "options": {
+        "A": "Determine the mean of a data set",
+        "B": "Compare the precisions (variances) of two different sets of data",
+        "C": "Reject an outlying data point",
+        "D": "Calculate the standard deviation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0008",
+      "type": "mcq",
+      "stem": "The Student's t-test is commonly used to:",
+      "options": {
+        "A": "Find the absolute error",
+        "B": "Determine if there is a significant difference between two experimental means",
+        "C": "Identify the presence of a determinate error in a single measurement",
+        "D": "Measure the transmittance of a solution"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0009",
+      "type": "mcq",
+      "stem": "In statistical analysis, the number of 'degrees of freedom' for a set of N measurements is typically calculated as:",
+      "options": {
+        "A": "N + 1",
+        "B": "N",
+        "C": "N - 1",
+        "D": "N / 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0010",
+      "type": "mcq",
+      "stem": "The Coefficient of Variation (CV) is defined as:",
+      "options": {
+        "A": "(Standard Deviation / Mean) x 100",
+        "B": "(Mean / Standard Deviation) x 100",
+        "C": "Variance squared",
+        "D": "Absolute error / True value"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0011",
+      "type": "mcq",
+      "stem": "Which of the following is a primary condition for an ideal analytical precipitate in gravimetric analysis?",
+      "options": {
+        "A": "It must be highly soluble in water",
+        "B": "It must react with the atmosphere",
+        "C": "It must have a very low solubility to prevent loss during filtration",
+        "D": "It must form a colloidal suspension permanently"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0012",
+      "type": "mcq",
+      "stem": "What is the purpose of 'digestion' in gravimetric analysis?",
+      "options": {
+        "A": "To dissolve the precipitate",
+        "B": "To promote the growth of larger, purer crystals from smaller ones",
+        "C": "To convert the precipitate into a gas",
+        "D": "To introduce co-precipitation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0013",
+      "type": "mcq",
+      "stem": "The 'gravimetric factor' is used to convert the mass of a precipitate into:",
+      "options": {
+        "A": "The volume of the solution",
+        "B": "The mass of the analyte of interest",
+        "C": "The standard deviation of the sample",
+        "D": "The molarity of the reagent"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0014",
+      "type": "mcq",
+      "stem": "What is the formula for the gravimetric factor to calculate the mass of Fe in an Fe2O3 precipitate? (Let AW = Atomic Weight, MW = Molecular Weight)",
+      "options": {
+        "A": "AW of Fe / MW of Fe2O3",
+        "B": "2 x AW of Fe / MW of Fe2O3",
+        "C": "MW of Fe2O3 / AW of Fe",
+        "D": "AW of Fe / 2 x MW of Fe2O3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0015",
+      "type": "mcq",
+      "stem": "Which phenomenon occurs when normally soluble compounds are carried out of solution by a precipitate during its formation?",
+      "options": {
+        "A": "Peptization",
+        "B": "Post-precipitation",
+        "C": "Co-precipitation",
+        "D": "Digestion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0016",
+      "type": "mcq",
+      "stem": "Post-precipitation differs from co-precipitation in that post-precipitation:",
+      "options": {
+        "A": "Occurs before the primary precipitate forms",
+        "B": "Involves the precipitation of an impurity onto the primary precipitate after the primary precipitate has formed",
+        "C": "Can be eliminated by rapid filtering",
+        "D": "Only happens in gaseous phases"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0017",
+      "type": "mcq",
+      "stem": "Which of the following is a recognized method for reducing co-precipitation contaminants?",
+      "options": {
+        "A": "Using highly concentrated solutions",
+        "B": "Rapid addition of the precipitating agent",
+        "C": "Reprecipitation (dissolving and precipitating again)",
+        "D": "Filtering the solution immediately without digestion"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0018",
+      "type": "mcq",
+      "stem": "If 0.371 g of KClO4 precipitate is obtained from a 0.425 g sample, the calculation to find the percentage of K involves multiplying the mass of the precipitate by the gravimetric factor, dividing by the sample mass, and multiplying by 100. The gravimetric factor here is:",
+      "options": {
+        "A": "MW of K / MW of KClO4",
+        "B": "MW of KClO4 / MW of K",
+        "C": "2 x MW of K / MW of KClO4",
+        "D": "MW of K / 2 x MW of KClO4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0019",
+      "type": "mcq",
+      "stem": "A 'complex' in analytical chemistry is generally defined as:",
+      "options": {
+        "A": "A mixture of two immiscible liquids",
+        "B": "A species formed by the association of a central metal ion with surrounding ligands",
+        "C": "A precipitate that cannot be filtered",
+        "D": "An organic solvent used in extraction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0020",
+      "type": "mcq",
+      "stem": "Which of the following is an absolute requirement for a chemical reaction to be used in a titration?",
+      "options": {
+        "A": "The reaction must be very slow",
+        "B": "The reaction must produce a gas",
+        "C": "The reaction must have a known stoichiometry and proceed rapidly to completion",
+        "D": "The reaction must be endothermic"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0021",
+      "type": "mcq",
+      "stem": "To prepare a standard solution of HCl from a concentrated commercial acid, an analyst must know the acid's specific gravity and its:",
+      "options": {
+        "A": "Boiling point",
+        "B": "Percentage purity (weight/weight %)",
+        "C": "Refractive index",
+        "D": "Optical rotation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0022",
+      "type": "mcq",
+      "stem": "In the titration of Fe2+ with MnO4- in an acidic medium, what is the change in the oxidation state of Manganese?",
+      "options": {
+        "A": "+7 to +2",
+        "B": "+5 to +2",
+        "C": "+7 to +4",
+        "D": "+2 to +7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0023",
+      "type": "mcq",
+      "stem": "What role does the acid play in the redox titration of Iron(II) with Potassium Permanganate?",
+      "options": {
+        "A": "It acts as a catalyst",
+        "B": "It prevents the precipitation of MnO2 and provides the H+ ions required for the reduction of MnO4-",
+        "C": "It oxidizes the iron",
+        "D": "It acts as a color indicator"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0024",
+      "type": "mcq",
+      "stem": "When an atom or molecule absorbs radiant energy (UV or visible light), which of the following changes is most likely to occur?",
+      "options": {
+        "A": "Nuclear fission",
+        "B": "Electronic transition to a higher energy state",
+        "C": "Change in isotopic mass",
+        "D": "Emission of a proton"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0025",
+      "type": "mcq",
+      "stem": "Lambert's Law states that the absorbance of a medium is directly proportional to the:",
+      "options": {
+        "A": "Concentration of the absorbing species",
+        "B": "Path length of the medium through which the light passes",
+        "C": "Temperature of the solution",
+        "D": "Wavelength of the incident light"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0026",
+      "type": "mcq",
+      "stem": "Beer's Law establishes a direct proportionality between absorbance and the:",
+      "options": {
+        "A": "Path length of the cuvette",
+        "B": "Volume of the solution",
+        "C": "Concentration of the absorbing species",
+        "D": "Refractive index of the solvent"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0027",
+      "type": "mcq",
+      "stem": "If a solution transmits 80% of the incident light, its transmittance (T) is:",
+      "options": {
+        "A": "80",
+        "B": "0.80",
+        "C": "8.0",
+        "D": "0.08"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0028",
+      "type": "mcq",
+      "stem": "What is the mathematical relationship between Absorbance (A) and Transmittance (T)?",
+      "options": {
+        "A": "A = log T",
+        "B": "A = 1/T",
+        "C": "A = -log T",
+        "D": "A = T^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0029",
+      "type": "mcq",
+      "stem": "If a solution at concentration C transmits 80% of light (T = 0.8), what fraction of light will be transmitted if the concentration is tripled to 3C?",
+      "options": {
+        "A": "0.8 x 3",
+        "B": "0.8 / 3",
+        "C": "(0.8)^3 = 0.512",
+        "D": "1 - 0.8^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0030",
+      "type": "mcq",
+      "stem": "A typical Atomic Absorption Spectrophotometer (AAS) contains a specialized light source known as a:",
+      "options": {
+        "A": "Tungsten filament lamp",
+        "B": "Hollow cathode lamp",
+        "C": "Deuterium arc lamp",
+        "D": "X-ray tube"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0031",
+      "type": "mcq",
+      "stem": "In Atomic Absorption Spectroscopy, the sample must be atomized. Which component is typically used for this process?",
+      "options": {
+        "A": "A nebulizer and a flame",
+        "B": "A cuvette",
+        "C": "A magnetic stirrer",
+        "D": "A photomultiplier tube"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0032",
+      "type": "mcq",
+      "stem": "If a colored substance at concentration A has a transmittance of 70%, its absorbance is -log(0.70). According to Beer's law, at concentration 4A, the absorbance is multiplied by 4. The new transmittance can be calculated as:",
+      "options": {
+        "A": "(0.70)^4",
+        "B": "0.70 / 4",
+        "C": "4 x 0.70",
+        "D": "1 - (0.70 x 4)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0033",
+      "type": "mcq",
+      "stem": "The fundamental principle behind solvent extraction is:",
+      "options": {
+        "A": "The different boiling points of two solvents",
+        "B": "The unequal distribution of a solute between two immiscible liquid phases",
+        "C": "The precipitation of a solid from a liquid",
+        "D": "The absorption of light by a solvent"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0034",
+      "type": "mcq",
+      "stem": "The Distribution Law (or Partition Law) relates to the ratio of concentrations of a solute in two immiscible solvents at equilibrium. This ratio is known as the:",
+      "options": {
+        "A": "Gravimetric factor",
+        "B": "Partition coefficient (KD)",
+        "C": "Retention factor (Rf)",
+        "D": "Equilibrium constant of precipitation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0035",
+      "type": "mcq",
+      "stem": "In a solvent extraction process, multiple extractions with smaller volumes of the extracting solvent are more efficient than a single extraction with the entire volume because:",
+      "options": {
+        "A": "It saves time",
+        "B": "It prevents emulsions from forming",
+        "C": "The mathematics of the partition coefficient favor a higher total yield of extracted solute across multiple steps",
+        "D": "It decreases the partition coefficient"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0036",
+      "type": "mcq",
+      "stem": "If a solute has a partition coefficient (KD) of 5 between ether and water, and equal volumes of ether and water are used, what percentage of the solute moves into the ether phase in a single extraction?",
+      "options": {
+        "A": "50%",
+        "B": "83.3%",
+        "C": "16.7%",
+        "D": "100%"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0037",
+      "type": "mcq",
+      "stem": "Which glassware is indispensable for carrying out a liquid-liquid extraction in an analytical laboratory?",
+      "options": {
+        "A": "Burette",
+        "B": "Separatory funnel",
+        "C": "Volumetric flask",
+        "D": "Desiccator"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0038",
+      "type": "mcq",
+      "stem": "To prepare 0.25 M HCl in a 1000 mL volumetric flask from a concentrated stock, the volume of stock required depends on its specific gravity and weight percent. Specific gravity is equivalent to the liquid's:",
+      "options": {
+        "A": "Molar mass",
+        "B": "Density relative to water",
+        "C": "Viscosity",
+        "D": "Refractive index"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0039",
+      "type": "mcq",
+      "stem": "In the reaction H2SO4 + 2NaOH -> Na2SO4 + 2H2O, how many moles of NaOH react with one mole of H2SO4?",
+      "options": {
+        "A": "0.5",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0040",
+      "type": "mcq",
+      "stem": "If 15 mL of 0.30 M NaOH is used in a titration, the number of moles of NaOH is:",
+      "options": {
+        "A": "0.0045 moles",
+        "B": "4.5 moles",
+        "C": "0.045 moles",
+        "D": "0.020 moles"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0041",
+      "type": "mcq",
+      "stem": "In the titration of Fe2+ with MnO4-, the balanced equation shows that 1 mole of MnO4- reacts with how many moles of Fe2+?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0042",
+      "type": "mcq",
+      "stem": "A substance that meets the criteria of high purity, stability, and high equivalent weight, and is used to directly prepare a standard solution is called a:",
+      "options": {
+        "A": "Secondary standard",
+        "B": "Primary standard",
+        "C": "Indicator",
+        "D": "Masking agent"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0043",
+      "type": "mcq",
+      "stem": "The point in a titration where the amount of added titrant is chemically equivalent to the amount of analyte is the:",
+      "options": {
+        "A": "End point",
+        "B": "Equivalence point",
+        "C": "Inflection point",
+        "D": "Titration error point"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0044",
+      "type": "mcq",
+      "stem": "The visual change (e.g., color change) that signals the completion of a titration is called the:",
+      "options": {
+        "A": "Equivalence point",
+        "B": "End point",
+        "C": "Standard point",
+        "D": "Isosbestic point"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0045",
+      "type": "mcq",
+      "stem": "To convert milligrams (mg) to grams (g), one must:",
+      "options": {
+        "A": "Multiply by 1000",
+        "B": "Divide by 1000",
+        "C": "Multiply by 100",
+        "D": "Divide by 100"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0046",
+      "type": "mcq",
+      "stem": "The 'blank' titration in analytical chemistry is used to:",
+      "options": {
+        "A": "Clean the burette",
+        "B": "Correct for the volume of titrant required to react with impurities or the indicator in the solvent",
+        "C": "Determine the true concentration of the primary standard",
+        "D": "Dilute the analyte solution"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0047",
+      "type": "mcq",
+      "stem": "A chemical species added to an analytical sample to prevent an interfering ion from reacting with the reagent is called a:",
+      "options": {
+        "A": "Catalyst",
+        "B": "Masking agent",
+        "C": "Reducing agent",
+        "D": "Buffer"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0048",
+      "type": "mcq",
+      "stem": "In the context of the Beer-Lambert law, the molar absorptivity is a constant that depends on:",
+      "options": {
+        "A": "The concentration of the solution",
+        "B": "The path length",
+        "C": "The nature of the absorbing species and the wavelength of light",
+        "D": "The volume of the cuvette"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0049",
+      "type": "mcq",
+      "stem": "Which deviation from Beer's Law is caused by high concentrations of the analyte?",
+      "options": {
+        "A": "Chemical deviation",
+        "B": "Instrumental deviation",
+        "C": "Real (fundamental) deviation",
+        "D": "Optical deviation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0050",
+      "type": "mcq",
+      "stem": "A monochromator in a spectrophotometer serves to:",
+      "options": {
+        "A": "Measure the intensity of transmitted light",
+        "B": "Convert light into an electrical current",
+        "C": "Isolate a specific, narrow wavelength band of light from a broad-spectrum source",
+        "D": "Hold the sample cuvette"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0051",
+      "type": "mcq",
+      "stem": "Washing the precipitate in gravimetric analysis is primarily intended to:",
+      "options": {
+        "A": "Remove the analyte",
+        "B": "Remove volatile impurities",
+        "C": "Remove soluble counter-ions and impurities adhering to the surface",
+        "D": "Change the crystal structure"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0052",
+      "type": "mcq",
+      "stem": "The process of heating a precipitate in a crucible to high temperatures to convert it into a chemically stable form of known composition is called:",
+      "options": {
+        "A": "Digestion",
+        "B": "Peptization",
+        "C": "Ignition",
+        "D": "Desiccation"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0053",
+      "type": "mcq",
+      "stem": "In gravimetry, filter paper that leaves virtually no ash upon combustion is called:",
+      "options": {
+        "A": "Quantitative (ashless) filter paper",
+        "B": "Qualitative filter paper",
+        "C": "Glass fiber filter",
+        "D": "Membrane filter"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0054",
+      "type": "mcq",
+      "stem": "An emulsion in solvent extraction can often be broken by:",
+      "options": {
+        "A": "Shaking the funnel more violently",
+        "B": "Adding a salt like NaCl to the aqueous phase (salting out)",
+        "C": "Boiling the separatory funnel",
+        "D": "Adding more of the analyte"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0055",
+      "type": "mcq",
+      "stem": "Which of the following organic solvents is less dense than water and will form the top layer in a separatory funnel?",
+      "options": {
+        "A": "Dichloromethane",
+        "B": "Chloroform",
+        "C": "Carbon tetrachloride",
+        "D": "Diethyl ether"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0056",
+      "type": "mcq",
+      "stem": "Which instrumental technique determines the concentration of metal ions by measuring the radiant energy absorbed by ground-state atoms?",
+      "options": {
+        "A": "UV-Vis Spectrophotometry",
+        "B": "Atomic Emission Spectroscopy",
+        "C": "Atomic Absorption Spectrophotometry (AAS)",
+        "D": "Mass Spectrometry"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0057",
+      "type": "mcq",
+      "stem": "In statistics, the difference between the experimental mean and the true value is called:",
+      "options": {
+        "A": "Absolute error",
+        "B": "Relative error",
+        "C": "Standard deviation",
+        "D": "Variance"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0058",
+      "type": "mcq",
+      "stem": "Accuracy in analytical chemistry refers to:",
+      "options": {
+        "A": "How closely replicate measurements agree with each other",
+        "B": "The speed of the analysis",
+        "C": "How closely a measured value agrees with the true or accepted value",
+        "D": "The number of significant figures in the result"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0059",
+      "type": "mcq",
+      "stem": "Precision in analytical chemistry is a measure of:",
+      "options": {
+        "A": "The agreement between a measured value and the true value",
+        "B": "The reproducibility or agreement among a set of replicate measurements",
+        "C": "The accuracy of the balance used",
+        "D": "The total error in the experiment"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-eksu-chm213-bank-0060",
+      "type": "mcq",
+      "stem": "Which of the following describes the 'Salting-out' effect in extraction?",
+      "options": {
+        "A": "Adding a salt to decrease the solubility of an organic compound in the aqueous phase, driving it into the organic phase",
+        "B": "Adding salt to lower the boiling point of the solvent",
+        "C": "Using salt to precipitate the metal ions",
+        "D": "Using salt to increase the solubility of the organic layer in water"
+      },
+      "marks": 1
+    }
+  ],
+  "durationMinutes": 60,
+  "category": "university",
+  "body": "University Modules"
+}

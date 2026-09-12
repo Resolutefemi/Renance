@@ -1,0 +1,2447 @@
+{
+  "code": "uni-unn-pq-physics-bank",
+  "title": "UNN Post-UTME Physics | Prep Bank",
+  "version": 1,
+  "questionCount": 203,
+  "totalMarks": 203,
+  "questions": [
+    {
+      "id": "uni-unn-pq-physics-bank-0001",
+      "type": "mcq",
+      "stem": "A gas is enclosed in a container with a movable piston. The gas is heated, cau\\sing its pressure to increase. If the piston is allowed to move freely, what will happen to the volume of the gas?",
+      "options": {
+        "A": "The volume of the gas will decrease.",
+        "B": "The volume of the gas will increase.",
+        "C": "The volume of the gas will remain cons\\tant.",
+        "D": "The volume of the gas will decrease and then increase."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0002",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path with a radius of 3 m. If the particle is moving at a speed of 4 m/s, what is the magnitude of the centripetal force acting on the particle?",
+      "options": {
+        "A": "10 N",
+        "B": "12 N",
+        "C": "15 N",
+        "D": "20 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0003",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 Ω resistor, and a 6 Ω resistor connected in series. What is the total resis\\tance of the circuit?",
+      "options": {
+        "A": "6 Ω",
+        "B": "8 Ω",
+        "C": "10 Ω",
+        "D": "12 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0004",
+      "type": "mcq",
+      "stem": "A charged particle of mass 1 kg and charge 2 C is moving in a magnetic field of strength 5 T. If the particle is moving at a speed of 3 m/s, what is the magnitude of the force acting on the particle?",
+      "options": {
+        "A": "10 N",
+        "B": "12 N",
+        "C": "15 N",
+        "D": "20 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0005",
+      "type": "mcq",
+      "stem": "A capacitor consists of two parallel plates separated by a dis\\tance of 2 mm. If the capaci\\tance of the capacitor is 10 μF, what is the charge stored on the capacitor when a potential difference of 5 V is applied across it?",
+      "options": {
+        "A": "50 μC",
+        "B": "60 μC",
+        "C": "70 μC",
+        "D": "80 μC"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0006",
+      "type": "mcq",
+      "stem": "A 50 Hz AC generator produces an emf given by \\( varepsilon = 120 \\sin \\( 2 pi ft \\ \\) ) V, where ( f ) is the frequency in Hz. Determine the maximum value of the emf.",
+      "options": {
+        "A": "60 V",
+        "B": "120 V",
+        "C": "180 V",
+        "D": "240 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0007",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is projected from the origin with an initial velocity of 20 m/s at an angle of 60° to the horizontal. Assuming a cons\\tant acceleration of 2 m/s² due to gravity, determine the time taken for the particle to reach its maximum height.",
+      "options": {
+        "A": "1.5 s",
+        "B": "2.0 s",
+        "C": "2.5 s",
+        "D": "3.0 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0008",
+      "type": "mcq",
+      "stem": "A sound wave with a frequency of 200 Hz has a maximum displacement of 0.5 mm. Determine the amplitude of the wave.",
+      "options": {
+        "A": "0.25 mm",
+        "B": "0.5 mm",
+        "C": "1.0 mm",
+        "D": "1.5 mm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0009",
+      "type": "mcq",
+      "stem": "A circuit consists of a 10 Ω resistor and a 20 Ω resistor connected in series. A voltage of 20 V is applied across the circuit. Determine the current flowing through the circuit.",
+      "options": {
+        "A": "0.5 A",
+        "B": "1.0 A",
+        "C": "1.5 A",
+        "D": "2.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0010",
+      "type": "mcq",
+      "stem": "A magnetic field of 0.5 T is applied to a coil of 100 turns. The coil has a resis\\tance of 10 Ω. Determine the induced emf in the coil.",
+      "options": {
+        "A": "0.5 V",
+        "B": "1.0 V",
+        "C": "1.5 V",
+        "D": "2.0 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0011",
+      "type": "mcq",
+      "stem": "A light ray passes through a prism and is re\\fracted. If the angle of incidence is 30° and the angle of re\\fraction is 20°, what is the angle of deviation?",
+      "options": {
+        "A": "40°",
+        "B": "50°",
+        "C": "60°",
+        "D": "70°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0012",
+      "type": "mcq",
+      "stem": "A body of mass 2 kg is moving with a velocity of 5 m/s. If it is subjected to a force of 10 N, what is the acceleration produced?",
+      "options": {
+        "A": "0.5 m/s²",
+        "B": "1 m/s²",
+        "C": "2 m/s²",
+        "D": "5 m/s²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0013",
+      "type": "mcq",
+      "stem": "A circuit consists of a 10 Ω resistor, a 20 Ω resistor, and a 5 Ω resistor connected in series. If a voltage of 20 V is applied across the circuit, what is the current flowing through the circuit?",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "2 A",
+        "D": "5 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0014",
+      "type": "mcq",
+      "stem": "A light source is placed 2 m away from a convex lens of focal length 0.5 m. If the light source is moved 1 m closer to the lens, what is the new image dis\\tance?",
+      "options": {
+        "A": "1 m",
+        "B": "2 m",
+        "C": "3 m",
+        "D": "4 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0015",
+      "type": "mcq",
+      "stem": "A body of mass 5 kg is moving with a velocity of 10 m/s. If it is subjected to a force of 20 N, what is the acceleration produced?",
+      "options": {
+        "A": "0.5 m/s²",
+        "B": "1 m/s²",
+        "C": "2 m/s²",
+        "D": "5 m/s²"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0016",
+      "type": "mcq",
+      "stem": "In a nuclear reactor, the fission of ΔU-235 releases 200 MeV of energy per reaction. If 1 MeV is equivalent to 1.602 × 10⁻⁹ J, calculate the total energy released per reaction in joules.",
+      "options": {
+        "A": "3.204 × 10⁻⁹ J",
+        "B": "3.204 × 10⁸ J",
+        "C": "3.204 × 10⁺ J",
+        "D": "3.204 × 10⁻ J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0017",
+      "type": "mcq",
+      "stem": "A beam of light is incident on a prism at an angle of 30°. If the re\\fractive index of the prism is 1.5, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0018",
+      "type": "mcq",
+      "stem": "A 5 kg block is attached to a horizontal spring with a force cons\\tant of 100 N/m. If the block is displaced by 2 m from its equilibrium position and released from rest, calculate the maximum speed of the block.",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0019",
+      "type": "mcq",
+      "stem": "A 100 W light bulb is connected to a 120 V power source. If the resis\\tance of the bulb is 10 Ω, calculate the current flowing through the bulb.",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "2 A",
+        "D": "5 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0020",
+      "type": "mcq",
+      "stem": "A 2 kg object is moving in a circular path with a radius of 3 m. If the object has a speed of 4 m/s, calculate the centripetal acceleration.",
+      "options": {
+        "A": "2 m/s⁻⁹",
+        "B": "4 m/s⁻⁹",
+        "C": "6 m/s⁻⁹",
+        "D": "8 m/s⁻⁹"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0021",
+      "type": "mcq",
+      "stem": "A 20 Ω resistor is connected in series with a 10 Ω resistor and a 5 Ω resistor. If a 12 V battery is connected across the circuit, what is the current flowing through the 20 Ω resistor?",
+      "options": {
+        "A": "0.3 A",
+        "B": "0.4 A",
+        "C": "0.5 A",
+        "D": "0.6 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0022",
+      "type": "mcq",
+      "stem": "A magnetic field is produced by a current-carrying wire. If the current is increased by a factor of 2, what happens to the magnetic field?",
+      "options": {
+        "A": "Increases by a factor of 2",
+        "B": "Increases by a factor of 4",
+        "C": "Remains the same",
+        "D": "Decreases by a factor of 2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0023",
+      "type": "mcq",
+      "stem": "A heat engine operates between two temperatures, 300 K and 500 K. If the efficiency of the engine is 30%, what is the temperature of the hot reservoir?",
+      "options": {
+        "A": "400 K",
+        "B": "450 K",
+        "C": "500 K",
+        "D": "550 K"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0024",
+      "type": "mcq",
+      "stem": "A 50 Hz AC voltage is applied across a 10 Ω resistor. If the current is 2 A, what is the power consumed by the resistor?",
+      "options": {
+        "A": "100 W",
+        "B": "200 W",
+        "C": "400 W",
+        "D": "600 W"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0025",
+      "type": "mcq",
+      "stem": "A sound wave has a frequency of 200 Hz and a wavelength of 1.5 m. If the speed of sound is 340 m/s, what is the amplitude of the wave?",
+      "options": {
+        "A": "0.5 m",
+        "B": "1 m",
+        "C": "1.5 m",
+        "D": "2 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0026",
+      "type": "mcq",
+      "stem": "A 1000 Hz AC voltage source is connected to a 50 Ω resistor. If the maximum voltage is 100 V, calculate the root mean square (RMS) value of the current.",
+      "options": {
+        "A": "2 A",
+        "B": "4 A",
+        "C": "5 A",
+        "D": "10 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0027",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is attached to a spring with a spring cons\\tant of 100 N/m. If the particle is displaced by 0.5 m from its equilibrium position and released from rest, calculate the maximum velocity of the particle.",
+      "options": {
+        "A": "1 m/s",
+        "B": "2 m/s",
+        "C": "5 m/s",
+        "D": "10 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0028",
+      "type": "mcq",
+      "stem": "A heat engine operates between two reservoirs at temperatures 500 K and 300 K. If the engine absorbs 1000 J of heat from the high-temperature reservoir, calculate the efficiency of the engine.",
+      "options": {
+        "A": "0.2",
+        "B": "0.3",
+        "C": "0.4",
+        "D": "0.5"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0029",
+      "type": "mcq",
+      "stem": "A magnetic field of magnitude 0.5 T is directed along the z-axis. If a current of 2 A is flowing in a wire loop of radius 0.1 m, calculate the torque experienced by the loop.",
+      "options": {
+        "A": "0.1 Nm",
+        "B": "0.2 Nm",
+        "C": "0.3 Nm",
+        "D": "0.4 Nm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0030",
+      "type": "mcq",
+      "stem": "A photon of energy 2 eV is incident on a metal surface with a work function of 1.5 eV. If the photon is not absorbed, calculate the kinetic energy of the electron.",
+      "options": {
+        "A": "0.5 eV",
+        "B": "1 eV",
+        "C": "1.5 eV",
+        "D": "2 eV"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0031",
+      "type": "mcq",
+      "stem": "A radioactive sample of Uranium-238 undergoes \\alpha decay. If the initial mass of the sample is 100 g, and the mass of the \\alpha particle is 4 u, what is the mass of the daughter nucleus after 10 half-lives?",
+      "options": {
+        "A": "36 g",
+        "B": "40 g",
+        "C": "44 g",
+        "D": "48 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0032",
+      "type": "mcq",
+      "stem": "A sound wave with a frequency of 200 Hz and an amplitude of 0.5 m is traveling through a medium with a speed of 340 m/s. What is the wavelength of the sound wave?",
+      "options": {
+        "A": "1.7 m",
+        "B": "1.8 m",
+        "C": "1.9 m",
+        "D": "2.0 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0033",
+      "type": "mcq",
+      "stem": "A particle is moving in a circular path with a radius of 2 m. If the particle has a mass of 0.5 kg and is moving with a speed of 4 m/s, what is the magnitude of the centripetal force acting on the particle?",
+      "options": {
+        "A": "10 N",
+        "B": "20 N",
+        "C": "30 N",
+        "D": "40 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0034",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 Ω resistor, and a 6 Ω resistor connected in series. What is the current flowing through the circuit?",
+      "options": {
+        "A": "1.5 A",
+        "B": "2.0 A",
+        "C": "2.5 A",
+        "D": "3.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0035",
+      "type": "mcq",
+      "stem": "A heat engine operates between a temperature of 500 K and a temperature of 300 K. If the engine has an efficiency of 30%, what is the maximum possible work output?",
+      "options": {
+        "A": "1000 J",
+        "B": "1500 J",
+        "C": "2000 J",
+        "D": "2500 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0036",
+      "type": "mcq",
+      "stem": "A thermodynamic system undergoes a process from state A to state B. If the system&#039;s internal energy is given by \\( U = \\frac{3}{2}nRT \\), where (n) is the number of moles, (R) is the gas cons\\tant, and (T) is the temperature in Kelvin, determine the change in internal energy (Delta U) for a process where the temperature increases from 300 K to 400 K, and the number of moles remains cons\\tant.",
+      "options": {
+        "A": "-150 J",
+        "B": "150 J",
+        "C": "300 J",
+        "D": "600 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0037",
+      "type": "mcq",
+      "stem": "A particle of mass (m) is confined to a one-dimensional box of length (L). If the particle&#039;s wave function is given by (psi(x) = \\sqrt{\\frac{2}{L}} \\sinleft\\( \\frac{npi x}{L}\\right \\)), where (n) is a positive integer, determine the probability of finding the particle in the region \\( 0 &lt; x &lt; \\frac{L}{2} \\).",
+      "options": {
+        "A": "\\( \\frac{1}{2} \\)",
+        "B": "\\( \\frac{1}{4} \\)",
+        "C": "\\( \\frac{1}{8} \\)",
+        "D": "\\( \\frac{1}{16} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0038",
+      "type": "mcq",
+      "stem": "A magnetic field is given by \\( vec{B} = \\( 2hat{i} + 3hat{j} \\ \\) \\times 10^{-3} T). If a current of 5 A flows through a wire of length 2 m, determine the force exerted on the wire.",
+      "options": {
+        "A": "\\( 2.5 \\times 10^{-3} N \\)",
+        "B": "\\( 5.0 \\times 10^{-3} N \\)",
+        "C": "\\( 7.5 \\times 10^{-3} N \\)",
+        "D": "\\( 1.0 \\times 10^{-2} N \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0039",
+      "type": "mcq",
+      "stem": "A ray of light passes from air into a glass of re\\fractive index 1.5. If the angle of incidence is 30°, determine the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0040",
+      "type": "mcq",
+      "stem": "A lens of focal length 10 cm is used to form an image of an object 20 cm away. If the object is moved 5 cm closer to the lens, determine the new image dis\\tance.",
+      "options": {
+        "A": "15 cm",
+        "B": "20 cm",
+        "C": "25 cm",
+        "D": "30 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0041",
+      "type": "mcq",
+      "stem": "A sound wave with a frequency of 200 Hz is produced by a source moving towards a stationary observer. If the speed of sound in air is 343 m/s, calculate the apparent frequency heard by the observer.",
+      "options": {
+        "A": "220 Hz",
+        "B": "240 Hz",
+        "C": "260 Hz",
+        "D": "280 Hz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0042",
+      "type": "mcq",
+      "stem": "A 2 kg block is susp\\ended from a spring with a spring cons\\tant of 100 N/m. If the block is displaced by 0.2 m from its equilibrium position, calculate the work done by the spring in bringing the block back to its equilibrium position.",
+      "options": {
+        "A": "2 J",
+        "B": "4 J",
+        "C": "6 J",
+        "D": "8 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0043",
+      "type": "mcq",
+      "stem": "A capacitor consists of two parallel plates, each of area 0.01 m^2, separated by a dis\\tance of 0.001 m. If the capaci\\tance is 10 nF, calculate the charge stored on each plate when a potential difference of 10 V is applied across the capacitor.",
+      "options": {
+        "A": "0.1 C",
+        "B": "0.2 C",
+        "C": "0.3 C",
+        "D": "0.4 C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0044",
+      "type": "mcq",
+      "stem": "A convex lens of focal length 0.2 m is used to form an image of an object placed 0.5 m away from the lens. Calculate the magnification of the image formed.",
+      "options": {
+        "A": "0.2",
+        "B": "0.4",
+        "C": "0.6",
+        "D": "0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0045",
+      "type": "mcq",
+      "stem": "A 50 Hz AC voltage is applied across a circuit containing a resistor of 10 ohms and an inductor of 5 H. If the initial current is 0 A, calculate the current in the circuit after 0.1 s.",
+      "options": {
+        "A": "0.1 A",
+        "B": "0.2 A",
+        "C": "0.3 A",
+        "D": "0.4 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0046",
+      "type": "mcq",
+      "stem": "A sound wave with a frequency of 200 Hz is emitted from a stationary source. A listener is moving towards the source at a speed of 5 m/s. If the speed of sound in air is 343 m/s, what is the apparent frequency heard by the listener?",
+      "options": {
+        "A": "220 Hz",
+        "B": "240 Hz",
+        "C": "260 Hz",
+        "D": "280 Hz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0047",
+      "type": "mcq",
+      "stem": "A convex lens of focal length 20 cm is placed in contact with a concave lens of focal length -15 cm. What is the focal length of the combination?",
+      "options": {
+        "A": "10 cm",
+        "B": "15 cm",
+        "C": "20 cm",
+        "D": "25 cm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0048",
+      "type": "mcq",
+      "stem": "A magnetic field of 0.5 T is applied to a coil of 100 turns. If the coil is rotated through an angle of 90° in 0.1 s, what is the induced emf?",
+      "options": {
+        "A": "0.5 V",
+        "B": "1 V",
+        "C": "2 V",
+        "D": "5 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0049",
+      "type": "mcq",
+      "stem": "A heat engine operates between two temperatures of 500 K and 300 K. If the engine has an efficiency of 30%, what is the temperature of the hot reservoir?",
+      "options": {
+        "A": "400 K",
+        "B": "500 K",
+        "C": "600 K",
+        "D": "700 K"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0050",
+      "type": "mcq",
+      "stem": "A capacitor of 10 μF is connected in parallel with a resistor of 100 Ω. If a voltage of 20 V is applied across the circuit, what is the current through the resistor?",
+      "options": {
+        "A": "0.2 A",
+        "B": "0.4 A",
+        "C": "0.6 A",
+        "D": "0.8 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0051",
+      "type": "mcq",
+      "stem": "A block of mass 2 kg is attached to a spring with spring cons\\tant 100 N/m. If the block is displaced by 0.2 m from its equilibrium position and released from rest, what is the maximum speed of the block?",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0052",
+      "type": "mcq",
+      "stem": "A light ray passes from air into a glass slab of re\\fractive index 1.5. If the angle of incidence is 30°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "20°",
+        "B": "25°",
+        "C": "30°",
+        "D": "35°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0053",
+      "type": "mcq",
+      "stem": "A radioactive sample decays at a rate of 0.05% per hour. If the initial mass of the sample is 100 g, what is the mass of the sample after 5 hours?",
+      "options": {
+        "A": "90 g",
+        "B": "95 g",
+        "C": "99 g",
+        "D": "100 g"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0054",
+      "type": "mcq",
+      "stem": "A sound wave with frequency 200 Hz and amplitude 0.5 m is traveling through a medium with speed 340 m/s. If the wave is reflected from a rigid wall, what is the maximum displacement of the wave at the wall?",
+      "options": {
+        "A": "0.5 m",
+        "B": "1 m",
+        "C": "1.5 m",
+        "D": "2 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0055",
+      "type": "mcq",
+      "stem": "A particle of mass 1 kg is moving in a circular path with radius 2 m and speed 4 m/s. If the particle is subject to a centripetal force of 10 N, what is the acceleration of the particle?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "4 m/s^2",
+        "C": "6 m/s^2",
+        "D": "8 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0056",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal acceleration of 2 m/s^2, what is the force exerted on the particle?",
+      "options": {
+        "A": "10 N",
+        "B": "12 N",
+        "C": "15 N",
+        "D": "20 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0057",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 20 m/s at an angle of 60° above the horizontal. If the acceleration due to gravity is 9.8 m/s^2, what is the maximum height reached by the projectile?",
+      "options": {
+        "A": "10 m",
+        "B": "15 m",
+        "C": "20 m",
+        "D": "25 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0058",
+      "type": "mcq",
+      "stem": "A simple harmonic motion has a time period of 2 s and an amplitude of 5 m. If the initial phase angle is 30°, what is the equation of motion?",
+      "options": {
+        "A": "y = 5 \\sin\\( πt - π/6 \\)",
+        "B": "y = 5 \\sin\\( πt + π/6 \\)",
+        "C": "y = 5 \\sin\\( πt - π/3 \\)",
+        "D": "y = 5 \\sin\\( πt + π/3 \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0059",
+      "type": "mcq",
+      "stem": "A radioactive subs\\tance has a half-life of 10 years. If the initial activity is 100 Bq, what is the activity after 20 years?",
+      "options": {
+        "A": "25 Bq",
+        "B": "50 Bq",
+        "C": "75 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0060",
+      "type": "mcq",
+      "stem": "A gas at 300 K is heated to 500 K. If the initial volume is 2.5 L, what is the final volume if the gas obeys Charles&#039; Law?",
+      "options": {
+        "A": "5.0 L",
+        "B": "6.25 L",
+        "C": "7.5 L",
+        "D": "10.0 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0061",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 10 μF. If a potential difference of 20 V is applied across it, what is the charge stored?",
+      "options": {
+        "A": "200 μC",
+        "B": "400 μC",
+        "C": "600 μC",
+        "D": "800 μC"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0062",
+      "type": "mcq",
+      "stem": "A current of 5 A flows through a resistor of 10 Ω. What is the power dissipated?",
+      "options": {
+        "A": "25 W",
+        "B": "50 W",
+        "C": "75 W",
+        "D": "100 W"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0063",
+      "type": "mcq",
+      "stem": "A photon has an energy of 2.5 eV. What is its wavelength?",
+      "options": {
+        "A": "500 nm",
+        "B": "750 nm",
+        "C": "1000 nm",
+        "D": "1250 nm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0064",
+      "type": "mcq",
+      "stem": "A circuit consists of a 5 Ω resistor and a 10 Ω resistor in series. If a current of 2 A flows through the circuit, what is the potential difference across the 10 Ω resistor?",
+      "options": {
+        "A": "10 V",
+        "B": "20 V",
+        "C": "30 V",
+        "D": "40 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0065",
+      "type": "mcq",
+      "stem": "A gas is enclosed in a container with a movable piston. The gas is heated, cau\\sing its pressure to increase. Which of the following statements is true about the gas?",
+      "options": {
+        "A": "The gas expands and its volume increases.",
+        "B": "The gas contracts and its volume decreases.",
+        "C": "The gas remains at cons\\tant volume.",
+        "D": "The gas expands and its pressure decreases."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0066",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path with a cons\\tant speed of 4 m/s. The radius of the circle is 3 m. What is the magnitude of the centripetal acceleration of the particle?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "4 m/s^2",
+        "C": "6 m/s^2",
+        "D": "8 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0067",
+      "type": "mcq",
+      "stem": "A 12 V battery is connected to a 4 Ω resistor. What is the current flowing through the resistor?",
+      "options": {
+        "A": "1 A",
+        "B": "2 A",
+        "C": "3 A",
+        "D": "4 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0068",
+      "type": "mcq",
+      "stem": "A magnetic field is directed into the page. A wire carrying a current of 2 A is placed in the magnetic field. The force on the wire is 0.5 N. What is the angle between the wire and the magnetic field?",
+      "options": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "90°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0069",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a spring with a spring cons\\tant of 100 N/m. The block is displaced by 0.2 m from its equilibrium position and released. What is the maximum speed of the block?",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0070",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal force of 12 N, what is the acceleration of the particle?",
+      "options": {
+        "A": "6 m/s^2",
+        "B": "12 m/s^2",
+        "C": "24 m/s^2",
+        "D": "48 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0071",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 2 m. What is the speed of the wave?",
+      "options": {
+        "A": "50 m/s",
+        "B": "100 m/s",
+        "C": "150 m/s",
+        "D": "200 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0072",
+      "type": "mcq",
+      "stem": "A particle is moving in a circular path with a cons\\tant speed of 5 m/s. If the radius of the path is 2 m, what is the centripetal acceleration of the particle?",
+      "options": {
+        "A": "10 m/s^2",
+        "B": "12.5 m/s^2",
+        "C": "15 m/s^2",
+        "D": "20 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0073",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal force of 12 N, what is the magnitude of the acceleration of the particle?",
+      "options": {
+        "A": "10 m/s^2",
+        "B": "12 m/s^2",
+        "C": "15 m/s^2",
+        "D": "20 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0074",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 0.2 m. If the wave is traveling in the positive x-direction, what is the direction of the group velocity?",
+      "options": {
+        "A": "Positive x-direction",
+        "B": "Negative x-direction",
+        "C": "Positive y-direction",
+        "D": "Negative y-direction"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0075",
+      "type": "mcq",
+      "stem": "A radioactive sample has an initial activity of 100 Bq. If the half-life of the sample is 10 minutes, what is the activity of the sample after 20 minutes?",
+      "options": {
+        "A": "50 Bq",
+        "B": "25 Bq",
+        "C": "12.5 Bq",
+        "D": "6.25 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0076",
+      "type": "mcq",
+      "stem": "A gas is contained in a cylinder of volume 2 L. If the temperature of the gas is increased from 300 K to 400 K, what is the new volume of the gas?",
+      "options": {
+        "A": "2.5 L",
+        "B": "3 L",
+        "C": "3.5 L",
+        "D": "4 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0077",
+      "type": "mcq",
+      "stem": "A particle of mass 1 kg is moving in a straight line with a velocity of 5 m/s. If the particle is subjected to a force of 10 N, what is the acceleration of the particle?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "5 m/s^2",
+        "C": "10 m/s^2",
+        "D": "20 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0078",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is attached to a spring with spring cons\\tant 100 N/m. It is displaced by 0.5 m from its equilibrium position and released from rest. Assuming the motion is simple harmonic, calculate the time taken for the particle to return to its equilibrium position.",
+      "options": {
+        "A": "1.57 s",
+        "B": "2.12 s",
+        "C": "3.14 s",
+        "D": "4.19 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0079",
+      "type": "mcq",
+      "stem": "A gas at temperature 300 K expands from 1 L to 2 L against a cons\\tant external pressure of 2 atm. Assuming the gas is ideal, calculate the work done by the gas.",
+      "options": {
+        "A": "-1.38 kJ",
+        "B": "-1.73 kJ",
+        "C": "-2.09 kJ",
+        "D": "-2.45 kJ"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0080",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is placed on a horizontal, frictionless surface. A horizontal force of 10 N is applied to the block. Calculate the acceleration of the block.",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "4 m/s^2",
+        "C": "6 m/s^2",
+        "D": "8 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0081",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has plates of area 0.1 m^2 and separation 0.01 m. The capaci\\tance is 10 nF. Calculate the electric field between the plates.",
+      "options": {
+        "A": "1 kV/m",
+        "B": "2 kV/m",
+        "C": "3 kV/m",
+        "D": "4 kV/m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0082",
+      "type": "mcq",
+      "stem": "A radioactive sample has a half-life of 10 years. If the initial activity is 100 Bq, calculate the activity after 20 years.",
+      "options": {
+        "A": "12.5 Bq",
+        "B": "25 Bq",
+        "C": "50 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0083",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular path of radius $r$ with a cons\\tant speed $v$. If the particle is subjected to a centripetal force $F_c = \\frac{mv^2}{r}$, what is the magnitude of the acceleration of the particle?",
+      "options": {
+        "A": "\\frac{v^2}{r}",
+        "B": "\\frac{mv^2}{r}",
+        "C": "\\frac{v}{r}",
+        "D": "\\frac{m}{r}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0084",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of $C = 2 \\mu F$. If a potential difference of $V = 10 V$ is applied across the plates, what is the charge stored on the capacitor?",
+      "options": {
+        "A": "20 \\mu C",
+        "B": "40 \\mu C",
+        "C": "60 \\mu C",
+        "D": "80 \\mu C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0085",
+      "type": "mcq",
+      "stem": "A wave with a frequency of $f = 50 Hz$ is traveling through a medium with a speed of $v = 300 m/s$. What is the wavelength of the wave?",
+      "options": {
+        "A": "6 m",
+        "B": "12 m",
+        "C": "18 m",
+        "D": "24 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0086",
+      "type": "mcq",
+      "stem": "A circuit consists of a resistor $R = 10 \\Omega$ and an inductor $L = 5 H$ in series. If a voltage source of $V = 20 V$ is applied across the circuit, what is the current flowing through the circuit?",
+      "options": {
+        "A": "2 A",
+        "B": "4 A",
+        "C": "6 A",
+        "D": "8 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0087",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of $v_0 = 20 m/s$ at an angle of $\\theta = 30^\\circ$ above the horizontal. What is the maximum height reached by the projectile?",
+      "options": {
+        "A": "5 m",
+        "B": "10 m",
+        "C": "15 m",
+        "D": "20 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0088",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is susp\\ended from a spring with spring cons\\tant 200 N/m. If the block is displaced by 0.2 m from its equilibrium position and released, what is the maximum speed of the block?",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0089",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has plates of area 0.1 m^2 and separation 0.01 m. If a potential difference of 10 V is applied across the plates, what is the capaci\\tance of the capacitor?",
+      "options": {
+        "A": "0.01 F",
+        "B": "0.1 F",
+        "C": "1 F",
+        "D": "10 F"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0090",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 1 m with a speed of 4 m/s. What is the magnitude of the centripetal acceleration of the particle?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "4 m/s^2",
+        "C": "6 m/s^2",
+        "D": "8 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0091",
+      "type": "mcq",
+      "stem": "A beam of light passes through a prism and is re\\fracted. If the angle of incidence is 30° and the angle of re\\fraction is 20°, what is the angle of deviation?",
+      "options": {
+        "A": "10°",
+        "B": "20°",
+        "C": "30°",
+        "D": "40°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0092",
+      "type": "mcq",
+      "stem": "A gas is heated from 300 K to 400 K at cons\\tant volume. If the initial volume is 2.00 L, what is the final volume?",
+      "options": {
+        "A": "2.00 L",
+        "B": "4.00 L",
+        "C": "6.00 L",
+        "D": "8.00 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0093",
+      "type": "mcq",
+      "stem": "A particle of mass 2.00 kg is moving in a circular path of radius 3.00 m with a cons\\tant speed of 4.00 m/s. What is the magnitude of the force acting on the particle?",
+      "options": {
+        "A": "10.0 N",
+        "B": "20.0 N",
+        "C": "30.0 N",
+        "D": "40.0 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0094",
+      "type": "mcq",
+      "stem": "A light ray passes from air into a glass of re\\fractive index 1.50. If the angle of incidence is 30°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0095",
+      "type": "mcq",
+      "stem": "A particle of mass 1.00 kg is moving in a straight line with a velocity of 5.00 m/s. If the particle is subjected to a force of 10.0 N, what is the acceleration of the particle?",
+      "options": {
+        "A": "1.00 m/s^2",
+        "B": "2.00 m/s^2",
+        "C": "3.00 m/s^2",
+        "D": "4.00 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0096",
+      "type": "mcq",
+      "stem": "A light source is placed 2.00 m away from a convex lens of focal length 0.50 m. If the image dis\\tance is 1.00 m, what is the magnification of the lens?",
+      "options": {
+        "A": "2.00",
+        "B": "3.00",
+        "C": "4.00",
+        "D": "5.00"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0097",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 10 μF. If a potential difference of 20 V is applied across it, what is the charge stored on each plate?",
+      "options": {
+        "A": "20 μC",
+        "B": "40 μC",
+        "C": "80 μC",
+        "D": "100 μC"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0098",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. What is the magnitude of the centripetal acceleration?",
+      "options": {
+        "A": "0.5 m/s^2",
+        "B": "1.0 m/s^2",
+        "C": "2.0 m/s^2",
+        "D": "4.0 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0099",
+      "type": "mcq",
+      "stem": "A circuit consists of a 10 Ω resistor and a 20 Ω resistor connected in series. If a voltage of 12 V is applied across the circuit, what is the current flowing through the circuit?",
+      "options": {
+        "A": "0.4 A",
+        "B": "0.6 A",
+        "C": "0.8 A",
+        "D": "1.0 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0100",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 0.2 m. What is the speed of the wave?",
+      "options": {
+        "A": "10 m/s",
+        "B": "20 m/s",
+        "C": "30 m/s",
+        "D": "40 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0101",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path with a radius of 3 m. If the particle experiences a centripetal acceleration of 4 m/s^2, what is the magnitude of the force acting on the particle?",
+      "options": {
+        "A": "12 N",
+        "B": "16 N",
+        "C": "20 N",
+        "D": "24 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0102",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is placed on a frictionless surface. A force of 20 N is applied to the block, cau\\sing it to accelerate at 4 m/s^2. What is the normal force acting on the block?",
+      "options": {
+        "A": "10 N",
+        "B": "15 N",
+        "C": "20 N",
+        "D": "25 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0103",
+      "type": "mcq",
+      "stem": "A gas is contained in a cylinder with a volume of 2 L. The gas is heated, cau\\sing its temperature to increase by 10°C. If the initial pressure of the gas is 1 atm, what is the final pressure?",
+      "options": {
+        "A": "1.5 atm",
+        "B": "2 atm",
+        "C": "2.5 atm",
+        "D": "3 atm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0104",
+      "type": "mcq",
+      "stem": "A magnetic field is created by a current-carrying wire. If the current is 2 A and the wire is 0.5 m long, what is the magnitude of the magnetic field at a dis\\tance of 1 m from the wire?",
+      "options": {
+        "A": "0.1 T",
+        "B": "0.2 T",
+        "C": "0.3 T",
+        "D": "0.4 T"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0105",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is projected from the origin with an initial velocity $v_0$ at an angle $\\theta$ to the horizontal. If the particle experiences a uniform gravitational field of strength $g$, determine the time $t$ at which the particle reaches its maximum height.",
+      "options": {
+        "A": "\\( \\frac{v_0 \\sin \\theta}{g} \\)",
+        "B": "\\( \\frac{v_0 \\cos \\theta}{g} \\)",
+        "C": "\\( \\frac{v_0 \\sin \\theta}{g^2} \\)",
+        "D": "\\( \\frac{v_0 \\cos \\theta}{g^2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0106",
+      "type": "mcq",
+      "stem": "A charged particle of mass $m$ and charge $q$ is moving in a uniform magnetic field of strength $B$ with a velocity $v$. If the particle experiences a force $F$ due to the magnetic field, determine the magnitude of the force.",
+      "options": {
+        "A": "\\( qvB \\sin \\theta \\)",
+        "B": "\\( qvB \\cos \\theta \\)",
+        "C": "\\( qvB \\)",
+        "D": "\\( qvB \\sin \\theta \\cos \\theta \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0107",
+      "type": "mcq",
+      "stem": "A photon of energy $E$ is incident on a metal surface with work function $\\phi$. If the photon is absorbed by the metal, determine the maximum kinetic energy of the emitted electron.",
+      "options": {
+        "A": "\\( E - \\phi \\)",
+        "B": "\\( E + \\phi \\)",
+        "C": "\\( E \\phi \\)",
+        "D": "\\( \\phi - E \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0108",
+      "type": "mcq",
+      "stem": "A container of volume $V$ is filled with an ideal gas of mass $m$ at temperature $T$. If the gas is heated to a temperature $T_2$, determine the new pressure of the gas.",
+      "options": {
+        "A": "\\( \\frac{nRT_2}{V} \\)",
+        "B": "\\( \\frac{nRT}{V} \\)",
+        "C": "\\( \\frac{nRT_2}{V^2} \\)",
+        "D": "\\( \\frac{nRT}{V^2} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0109",
+      "type": "mcq",
+      "stem": "A spring of spring cons\\tant $k$ is stretched by a dis\\tance $x$. If the spring is then released, determine the maximum speed of the spring.",
+      "options": {
+        "A": "\\( \\sqrt{\\frac{kx^2}{m}} \\)",
+        "B": "\\( \\frac{kx^2}{m} \\)",
+        "C": "\\( \\frac{kx}{m} \\)",
+        "D": "\\( \\frac{k}{m} \\)"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0110",
+      "type": "mcq",
+      "stem": "A uniform magnetic field of strength 2 T is applied to a current-carrying wire of length 0.5 m. If the current in the wire is 5 A, calculate the force experienced by the wire.",
+      "options": {
+        "A": "0.5 N",
+        "B": "1 N",
+        "C": "2 N",
+        "D": "5 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0111",
+      "type": "mcq",
+      "stem": "A block of mass 10 kg is placed on a frictionless surface. A horizontal force of 20 N is applied to the block. Calculate the acceleration of the block.",
+      "options": {
+        "A": "0.2 m/s^2",
+        "B": "0.5 m/s^2",
+        "C": "1 m/s^2",
+        "D": "2 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0112",
+      "type": "mcq",
+      "stem": "A capacitor of capaci\\tance 10 μF is charged to a potential difference of 5 V. Calculate the energy stored in the capacitor.",
+      "options": {
+        "A": "0.25 J",
+        "B": "0.5 J",
+        "C": "1 J",
+        "D": "2 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0113",
+      "type": "mcq",
+      "stem": "A spring of spring cons\\tant 100 N/m is stretched by 0.5 m. Calculate the work done in stretching the spring.",
+      "options": {
+        "A": "0.25 J",
+        "B": "0.5 J",
+        "C": "1 J",
+        "D": "2 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0114",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a horizontal spring of spring cons\\tant 50 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. Calculate the frequency of oscillation of the block.",
+      "options": {
+        "A": "0.5 Hz",
+        "B": "1 Hz",
+        "C": "2 Hz",
+        "D": "5 Hz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0115",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular path of radius $r$ with a cons\\tant speed $v$. The particle is subject to a centripetal force $F_c$ given by $F_c = \\frac{mv^2}{r}$. If the particle&#039;s speed is doubled to $2v$, what is the new centripetal force $F_{c,new}$?",
+      "options": {
+        "A": "\\frac{2mv^2}{r}",
+        "B": "\\frac{4mv^2}{r}",
+        "C": "\\frac{mv^2}{2r}",
+        "D": "\\frac{mv^2}{4r}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0116",
+      "type": "mcq",
+      "stem": "A block of mass $m$ is attached to a horizontal, massless spring with a spring cons\\tant $k$. The block is displaced by a dis\\tance $x$ from its equilibrium position and released from rest. Assuming the block undergoes simple harmonic motion, what is the maximum speed $v_{max}$ of the block?",
+      "options": {
+        "A": "\\frac{kx}{m}",
+        "B": "\\sqrt{\\frac{kx^2}{m}}",
+        "C": "\\frac{kx^2}{m}",
+        "D": "\\frac{mx^2}{k}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0117",
+      "type": "mcq",
+      "stem": "A circuit consists of a resistor $R$, an inductor $L$, and a capacitor $C$ connected in series. The circuit is driven by an AC voltage source with a frequency $f$. If the inductive reac\\tance $X_L = 10\\,\\Omega$ and the capacitive reac\\tance $X_C = 5\\,\\Omega$, what is the impedance $Z$ of the circuit?",
+      "options": {
+        "A": "\\sqrt{R^2 + \\( X_L + X_C \\)^2}",
+        "B": "\\sqrt{R^2 + \\( X_L - X_C \\)^2}",
+        "C": "\\sqrt{R^2 - \\( X_L - X_C \\)^2}",
+        "D": "\\sqrt{R^2 + \\( X_L + X_C \\)^2}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0118",
+      "type": "mcq",
+      "stem": "A sound wave with a frequency $f$ is traveling through a medium with a speed $v$. If the wavelength $\\lambda$ of the sound wave is $10\\,\\text{m}$, what is the period $T$ of the sound wave?",
+      "options": {
+        "A": "\\frac{v}{f}",
+        "B": "\\frac{\\lambda}{v}",
+        "C": "\\frac{v}{\\lambda}",
+        "D": "\\frac{f}{v}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0119",
+      "type": "mcq",
+      "stem": "A radioactive sample decays with a half-life $t_{1/2}$. If the initial number of nuclei $N_0$ is $1000$, what is the number of nuclei $N$ remaining after a time $t = 2t_{1/2}$?",
+      "options": {
+        "A": "N_0 \\left\\( \\frac{1}{2}\\right \\)^1",
+        "B": "N_0 \\left\\( \\frac{1}{2}\\right \\)^2",
+        "C": "N_0 \\left\\( \\frac{1}{2}\\right \\)^3",
+        "D": "N_0 \\left\\( \\frac{1}{2}\\right \\)^4"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0120",
+      "type": "mcq",
+      "stem": "A 2.5 mH inductor is connected in series with a 10 V AC source. If the frequency of the source is 50 Hz, what is the inductive reac\\tance of the circuit?",
+      "options": {
+        "A": "\\( 2.5 \\times 10^{-3} \\times 2 pi \\times 50 \\) Ω",
+        "B": "\\( 2.5 \\times 10^{-3} \\times 2 pi \\times 100 \\) Ω",
+        "C": "\\( 2.5 \\times 10^{-3} \\times 2 pi \\times 150 \\) Ω",
+        "D": "\\( 2.5 \\times 10^{-3} \\times 2 pi \\times 200 \\) Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0121",
+      "type": "mcq",
+      "stem": "A body of mass 5 kg is moving in a circular path with a radius of 2 m. If the body is subjected to a centripetal acceleration of 10 m/s^2, what is the force acting on the body?",
+      "options": {
+        "A": "\\( 5 \\times 10 \\) N",
+        "B": "\\( 5 \\times 20 \\) N",
+        "C": "\\( 5 \\times 30 \\) N",
+        "D": "\\( 5 \\times 40 \\) N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0122",
+      "type": "mcq",
+      "stem": "A 100 W bulb is connected to a 230 V AC source. If the power factor of the circuit is 0.8, what is the current drawn by the bulb?",
+      "options": {
+        "A": "\\( \\frac{100}{230 \\times 0.8} \\) A",
+        "B": "\\( \\frac{100}{230 \\times 0.9} \\) A",
+        "C": "\\( \\frac{100}{230 \\times 0.7} \\) A",
+        "D": "\\( \\frac{100}{230 \\times 0.6} \\) A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0123",
+      "type": "mcq",
+      "stem": "A 5 kg body is moving with a velocity of 10 m/s. If the body is subjected to a force of 20 N, what is the acceleration of the body?",
+      "options": {
+        "A": "\\( \\frac{20}{5} \\) m/s^2",
+        "B": "\\( \\frac{20}{10} \\) m/s^2",
+        "C": "\\( \\frac{20}{15} \\) m/s^2",
+        "D": "\\( \\frac{20}{20} \\) m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0124",
+      "type": "mcq",
+      "stem": "A light ray passes from air into a glass slab of thickness 6 cm and re\\fractive index 1.5. If the angle of incidence is 30°, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "25°",
+        "C": "30°",
+        "D": "35°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0125",
+      "type": "mcq",
+      "stem": "A particle moves in a straight line with an initial velocity of 5 m/s and an acceleration of 2 m/s². If the particle&#039;s velocity is 10 m/s at time t = 2 s, calculate the time taken for the particle to reach a velocity of 15 m/s.",
+      "options": {
+        "A": "3 s",
+        "B": "5 s",
+        "C": "7 s",
+        "D": "9 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0126",
+      "type": "mcq",
+      "stem": "A wave has a frequency of 50 Hz and a wavelength of 0.2 m. If the wave is traveling in a medium with a speed of 100 m/s, calculate the amplitude of the wave.",
+      "options": {
+        "A": "1 m",
+        "B": "2 m",
+        "C": "3 m",
+        "D": "4 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0127",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a spring with a spring cons\\tant of 100 N/m. If the block is displaced by 0.2 m from its equilibrium position and released, calculate the time period of the resulting simple harmonic motion.",
+      "options": {
+        "A": "0.5 s",
+        "B": "0.628 s",
+        "C": "1 s",
+        "D": "1.5 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0128",
+      "type": "mcq",
+      "stem": "A light ray passes through a prism with an angle of incidence of 30° and an angle of re\\fraction of 20°. If the prism has a re\\fractive index of 1.5, calculate the angle of emergence.",
+      "options": {
+        "A": "25°",
+        "B": "30°",
+        "C": "35°",
+        "D": "40°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0129",
+      "type": "mcq",
+      "stem": "A radioactive sample emits \\alpha particles with a half-life of 5 days. If the initial activity is 100 Bq, what is the activity after 10 days?",
+      "options": {
+        "A": "12.5 Bq",
+        "B": "25 Bq",
+        "C": "50 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0130",
+      "type": "mcq",
+      "stem": "A 10 V battery is connected to a 2 Ω resistor in series with a 4 Ω resistor. What is the current in the circuit?",
+      "options": {
+        "A": "1.25 A",
+        "B": "2.5 A",
+        "C": "5 A",
+        "D": "10 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0131",
+      "type": "mcq",
+      "stem": "A gas is heated from 20°C to 50°C. If the initial volume is 2 L, what is the final volume?",
+      "options": {
+        "A": "4 L",
+        "B": "6 L",
+        "C": "8 L",
+        "D": "10 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0132",
+      "type": "mcq",
+      "stem": "A capacitor is charged to 10 μC. If the capaci\\tance is 2 μF, what is the potential difference across the capacitor?",
+      "options": {
+        "A": "5 V",
+        "B": "10 V",
+        "C": "20 V",
+        "D": "50 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0133",
+      "type": "mcq",
+      "stem": "A 10 Ω resistor is connected to a 20 Ω resistor in parallel. What is the equivalent resis\\tance?",
+      "options": {
+        "A": "5 Ω",
+        "B": "10 Ω",
+        "C": "15 Ω",
+        "D": "20 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0134",
+      "type": "mcq",
+      "stem": "A radioactive sample of Δₗ emits Δₗ particles at a rate of 1.5 ± 0.1 decays per minute. If the half-life of Δₗ is 5.27 ± 0.02 minutes, what is the mean lifetime of the sample?",
+      "options": {
+        "A": "( 3.45 pm 0.23 ) minutes",
+        "B": "( 6.54 pm 0.41 ) minutes",
+        "C": "( 9.63 pm 0.59 ) minutes",
+        "D": "( 12.72 pm 0.77 ) minutes"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0135",
+      "type": "mcq",
+      "stem": "A particle of mass 2.0 ± 0.1 kg is moving in a circular path with a radius of 3.0 ± 0.1 m. If the particle experiences a centripetal acceleration of 4.0 ± 0.2 m/s², what is the magnitude of the net force acting on the particle?",
+      "options": {
+        "A": "( 12.0 pm 1.6 ) N",
+        "B": "( 16.0 pm 2.1 ) N",
+        "C": "( 20.0 pm 2.6 ) N",
+        "D": "( 24.0 pm 3.2 ) N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0136",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 20.0 ± 0.5 m/s at an angle of 30° above the horizontal. If the acceleration due to gravity is 9.8 ± 0.2 m/s², what is the maximum height reached by the projectile?",
+      "options": {
+        "A": "( 10.0 pm 0.5 ) m",
+        "B": "( 12.0 pm 0.6 ) m",
+        "C": "( 14.0 pm 0.7 ) m",
+        "D": "( 16.0 pm 0.8 ) m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0137",
+      "type": "mcq",
+      "stem": "A 100 µF capacitor is connected in series with a 200 µF capacitor and a 500 µF resistor. If the circuit is driven by a 10 V AC source with a frequency of 50 Hz, what is the impedance of the circuit?",
+      "options": {
+        "A": "( 150 µ Omega )",
+        "B": "( 200 µ Omega )",
+        "C": "( 250 µ Omega )",
+        "D": "( 300 µ Omega )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0138",
+      "type": "mcq",
+      "stem": "A 10 µF capacitor is connected in parallel with a 20 µF capacitor. If the circuit is driven by a 5 V AC source with a frequency of 60 Hz, what is the equivalent capaci\\tance of the circuit?",
+      "options": {
+        "A": "( 10 µ F )",
+        "B": "( 15 µ F )",
+        "C": "( 20 µ F )",
+        "D": "( 25 µ F )"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0139",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. If the particle is subjected to a centripetal acceleration of 2 m/s^2, what is the magnitude of the force acting on the particle?",
+      "options": {
+        "A": "8 N",
+        "B": "10 N",
+        "C": "12 N",
+        "D": "16 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0140",
+      "type": "mcq",
+      "stem": "A 10 μF capacitor is connected in series with a 20 Ω resistor and a 50 V battery. If the switch is closed at t = 0, what is the time cons\\tant of the circuit?",
+      "options": {
+        "A": "0.1 s",
+        "B": "0.2 s",
+        "C": "0.5 s",
+        "D": "1 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0141",
+      "type": "mcq",
+      "stem": "A wave of frequency 100 Hz and amplitude 2 m is traveling along a string. If the string is stretched to twice its original length, what is the new frequency of the wave?",
+      "options": {
+        "A": "50 Hz",
+        "B": "75 Hz",
+        "C": "100 Hz",
+        "D": "125 Hz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0142",
+      "type": "mcq",
+      "stem": "A 5 kg block is attached to a horizontal spring with a force cons\\tant of 100 N/m. If the block is displaced by 2 m from its equilibrium position and released, what is the maximum speed of the block?",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0143",
+      "type": "mcq",
+      "stem": "A 10 μF capacitor is connected in parallel with a 20 μF capacitor. If a 50 V battery is connected across the combination, what is the equivalent capaci\\tance?",
+      "options": {
+        "A": "10 μF",
+        "B": "20 μF",
+        "C": "30 μF",
+        "D": "40 μF"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0144",
+      "type": "mcq",
+      "stem": "A radioactive sample undergoes \\alpha decay with a half-life of 5 days. If the initial activity is 100 Bq, what is the activity after 10 days?",
+      "options": {
+        "A": "50 Bq",
+        "B": "25 Bq",
+        "C": "12.5 Bq",
+        "D": "6.25 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0145",
+      "type": "mcq",
+      "stem": "A gas at 300 K expands from 1 L to 2 L against a cons\\tant external pressure of 1 atm. What is the work done by the gas?",
+      "options": {
+        "A": "-300 J",
+        "B": "-600 J",
+        "C": "-900 J",
+        "D": "-1200 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0146",
+      "type": "mcq",
+      "stem": "A particle of mass 1 kg is moving in a circular path with a radius of 2 m and a speed of 4 m/s. What is the magnitude of the centripetal acceleration?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "4 m/s^2",
+        "C": "6 m/s^2",
+        "D": "8 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0147",
+      "type": "mcq",
+      "stem": "A capacitor consists of two parallel plates, each with a surface area of 0.1 m^2. The plates are separated by a dis\\tance of 0.01 m and are charged to a potential difference of 10 V. What is the capaci\\tance?",
+      "options": {
+        "A": "0.1 F",
+        "B": "0.01 F",
+        "C": "0.001 F",
+        "D": "0.0001 F"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0148",
+      "type": "mcq",
+      "stem": "A simple harmonic motion has a maximum displacement of 2 m and a period of 4 s. What is the angular frequency?",
+      "options": {
+        "A": "0.5 rad/s",
+        "B": "1 rad/s",
+        "C": "2 rad/s",
+        "D": "4 rad/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0149",
+      "type": "mcq",
+      "stem": "A 2.0 kg block is attached to a horizontal, massless spring with a force cons\\tant of 100 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. Assuming the block undergoes simple harmonic motion, calculate the maximum speed of the block as it passes through the equilibrium position.",
+      "options": {
+        "A": "2.0 m/s",
+        "B": "4.0 m/s",
+        "C": "6.0 m/s",
+        "D": "8.0 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0150",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor consists of two plates, each of area 0.04 m^2, separated by a dis\\tance of 0.02 m. The capaci\\tance of the capacitor is 2.0 x 10^-9 F. If a potential difference of 10 V is applied across the capacitor, calculate the charge stored on each plate.",
+      "options": {
+        "A": "2.0 x 10^-8 C",
+        "B": "4.0 x 10^-8 C",
+        "C": "6.0 x 10^-8 C",
+        "D": "8.0 x 10^-8 C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0151",
+      "type": "mcq",
+      "stem": "A sound wave with a frequency of 200 Hz and a wavelength of 0.5 m is traveling through a medium. If the speed of the wave is 340 m/s, calculate the amplitude of the wave.",
+      "options": {
+        "A": "0.01 m",
+        "B": "0.02 m",
+        "C": "0.03 m",
+        "D": "0.04 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0152",
+      "type": "mcq",
+      "stem": "A gas is contained in a cylinder of volume 0.05 m^3 at a temperature of 300 K. If the gas is heated to a temperature of 400 K, calculate the new volume of the gas, assuming the pressure remains cons\\tant.",
+      "options": {
+        "A": "0.06 m^3",
+        "B": "0.07 m^3",
+        "C": "0.08 m^3",
+        "D": "0.09 m^3"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0153",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 20 m/s at an angle of 60 degrees above the horizontal. If the acceleration due to gravity is 9.8 m/s^2, calculate the time of flight of the projectile.",
+      "options": {
+        "A": "2.0 s",
+        "B": "3.0 s",
+        "C": "4.0 s",
+        "D": "5.0 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0154",
+      "type": "mcq",
+      "stem": "A radioactive sample of Δ⁵² emits Δ⁵²⁴ particles. If the half-life of Δ⁵² is 5.27 × 10¹ years, what is the activity of the sample in Bq?",
+      "options": {
+        "A": "1.00 × 10¹ Bq",
+        "B": "2.00 × 10¹ Bq",
+        "C": "5.27 × 10¹ Bq",
+        "D": "1.05 × 10¹ Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0155",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 5.00 µF. If a potential difference of 12.0 V is applied across the plates, what is the charge stored on the capacitor?",
+      "options": {
+        "A": "60.0 µC",
+        "B": "120.0 µC",
+        "C": "240.0 µC",
+        "D": "480.0 µC"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0156",
+      "type": "mcq",
+      "stem": "A block of mass 2.00 kg is attached to a horizontal spring with a force cons\\tant of 100 N/m. If the block is displaced by 0.200 m from its equilibrium position and released from rest, what is the maximum speed of the block?",
+      "options": {
+        "A": "0.400 m/s",
+        "B": "0.800 m/s",
+        "C": "1.00 m/s",
+        "D": "1.20 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0157",
+      "type": "mcq",
+      "stem": "A \\tank is filled with water to a height of 10.0 m. If the density of water is 1000 kg/m³, what is the pressure at the bottom of the \\tank?",
+      "options": {
+        "A": "1.00 × 10µ Pa",
+        "B": "1.00 × 10³ Pa",
+        "C": "1.00 × 10µ Pa",
+        "D": "1.00 × 10³ Pa"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0158",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12.0 V battery, a 4.00 µF capacitor, and a 100 × 10³ µ resistor. If the switch is closed at time t = 0, what is the current in the circuit at time t = 5.00 ms?",
+      "options": {
+        "A": "0.400 A",
+        "B": "0.800 A",
+        "C": "1.00 A",
+        "D": "1.20 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0159",
+      "type": "mcq",
+      "stem": "A body of mass 2 kg is moving in a circular path with a cons\\tant speed of 4 m/s. If the radius of the circular path is 3 m, calculate the magnitude of the centripetal acceleration of the body.",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "4 m/s^2",
+        "C": "6 m/s^2",
+        "D": "8 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0160",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 10 μF and is charged to a potential difference of 20 V. If the dis\\tance between the plates is doubled, what is the new potential difference?",
+      "options": {
+        "A": "10 V",
+        "B": "20 V",
+        "C": "40 V",
+        "D": "80 V"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0161",
+      "type": "mcq",
+      "stem": "A beam of light passes from air into a glass of re\\fractive index 1.5. If the angle of incidence is 30°, what is the angle of re\\fraction?",
+      "options": {
+        "A": "20°",
+        "B": "30°",
+        "C": "40°",
+        "D": "50°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0162",
+      "type": "mcq",
+      "stem": "A particle of mass 1 kg is moving in a straight line with a velocity of 5 m/s. If the particle experiences a force of 10 N, what is the acceleration?",
+      "options": {
+        "A": "2 m/s^2",
+        "B": "5 m/s^2",
+        "C": "10 m/s^2",
+        "D": "20 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0163",
+      "type": "mcq",
+      "stem": "A gas is enclosed in a container of volume 2.5 liters at a temperature of 300 K. If the temperature is increased to 400 K, what is the new volume of the gas, assuming the gas obeys Charles&#039; Law?",
+      "options": {
+        "A": "3.125 liters",
+        "B": "4.0 liters",
+        "C": "5.0 liters",
+        "D": "6.25 liters"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0164",
+      "type": "mcq",
+      "stem": "A 100 V AC source is connected to a circuit containing a 50 Ω resistor and a 20 mH inductor in series. What is the impedance of the circuit?",
+      "options": {
+        "A": "50.6 Ω",
+        "B": "51.2 Ω",
+        "C": "52.0 Ω",
+        "D": "53.0 Ω"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0165",
+      "type": "mcq",
+      "stem": "A particle is moving in a circular path with a cons\\tant speed of 5 m/s. If the radius of the circle is 2 m, what is the magnitude of the acceleration of the particle?",
+      "options": {
+        "A": "2.5 m/s^2",
+        "B": "5.0 m/s^2",
+        "C": "7.5 m/s^2",
+        "D": "10.0 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0166",
+      "type": "mcq",
+      "stem": "A force of 10 N is applied to an object, cau\\sing it to accelerate at a rate of 2 m/s^2. What is the mass of the object?",
+      "options": {
+        "A": "2.5 kg",
+        "B": "5.0 kg",
+        "C": "7.5 kg",
+        "D": "10.0 kg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0167",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 20 m/s at an angle of 30° above the horizontal. What is the maximum height reached by the projectile?",
+      "options": {
+        "A": "4.0 m",
+        "B": "5.0 m",
+        "C": "6.0 m",
+        "D": "7.0 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0168",
+      "type": "mcq",
+      "stem": "A capacitor of capaci\\tance 10 μF is connected in series with a resistor of resis\\tance 20 Ω. If a voltage of 50 V is applied across the circuit, what is the current flowing through the circuit?",
+      "options": {
+        "A": "0.25 A",
+        "B": "0.5 A",
+        "C": "1 A",
+        "D": "2 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0169",
+      "type": "mcq",
+      "stem": "A wave of frequency 100 Hz and amplitude 2 m is traveling through a medium with a speed of 300 m/s. If the wave is reflected from a fixed \\end, what is the magnitude of the displacement of the wave at the fixed \\end?",
+      "options": {
+        "A": "0 m",
+        "B": "1 m",
+        "C": "2 m",
+        "D": "3 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0170",
+      "type": "mcq",
+      "stem": "A projectile is launched from the ground with an initial velocity of 50 m/s at an angle of 60° above the horizontal. If the air resis\\tance is neglected, what is the maximum height reached by the projectile?",
+      "options": {
+        "A": "25 m",
+        "B": "50 m",
+        "C": "75 m",
+        "D": "100 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0171",
+      "type": "mcq",
+      "stem": "A current of 5 A is flowing through a wire of resis\\tance 10 Ω. If the wire is connected to a battery of emf 20 V, what is the power consumed by the wire?",
+      "options": {
+        "A": "50 W",
+        "B": "100 W",
+        "C": "150 W",
+        "D": "200 W"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0172",
+      "type": "mcq",
+      "stem": "A 10 μC charge is placed at the center of a circular loop of radius 0.2 m. If the loop has a resis\\tance of 5 Ω, what is the magnitude of the current induced in the loop?",
+      "options": {
+        "A": "0.02 A",
+        "B": "0.04 A",
+        "C": "0.06 A",
+        "D": "0.08 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0173",
+      "type": "mcq",
+      "stem": "A body of mass 5 kg is moving in a straight line with an initial velocity of 10 m/s. If it experiences a cons\\tant acceleration of 2 m/s^2, what is the magnitude of the force acting on the body after 5 seconds?",
+      "options": {
+        "A": "10 N",
+        "B": "20 N",
+        "C": "30 N",
+        "D": "40 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0174",
+      "type": "mcq",
+      "stem": "A 100 μF capacitor is connected in series with a 50 Ω resistor. If a 10 V potential difference is applied across the circuit, what is the magnitude of the current flowing through the circuit?",
+      "options": {
+        "A": "0.1 A",
+        "B": "0.2 A",
+        "C": "0.3 A",
+        "D": "0.4 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0175",
+      "type": "mcq",
+      "stem": "A body of mass 2 kg is moving in a circular path of radius 4 m with a cons\\tant speed of 6 m/s. If the body is subjected to a centripetal force of 16 N, what is the magnitude of the acceleration of the body?",
+      "options": {
+        "A": "4 m/s^2",
+        "B": "8 m/s^2",
+        "C": "12 m/s^2",
+        "D": "16 m/s^2"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0176",
+      "type": "mcq",
+      "stem": "A 2.5 kg block of ice at 0°C is placed in a container of water at 80°C. Assuming no heat loss to the surroundings, calculate the mass of water that will freeze in 10 minutes.",
+      "options": {
+        "A": "0.1 kg",
+        "B": "0.2 kg",
+        "C": "0.3 kg",
+        "D": "0.4 kg"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0177",
+      "type": "mcq",
+      "stem": "A particle of mass 0.5 kg is moving in a circular path of radius 2 m with a cons\\tant speed of 4 m/s. Calculate the magnitude of the force acting on the particle.",
+      "options": {
+        "A": "10 N",
+        "B": "20 N",
+        "C": "30 N",
+        "D": "40 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0178",
+      "type": "mcq",
+      "stem": "A gas occupies a volume of 2.5 L at a pressure of 1.5 atm. If the pressure is increased to 3.5 atm, calculate the new volume of the gas.",
+      "options": {
+        "A": "1.5 L",
+        "B": "2.5 L",
+        "C": "3.5 L",
+        "D": "4.5 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0179",
+      "type": "mcq",
+      "stem": "A capacitor of capaci\\tance 10 μF is connected to a battery of voltage 12 V. Calculate the energy stored in the capacitor.",
+      "options": {
+        "A": "0.1 J",
+        "B": "0.2 J",
+        "C": "0.3 J",
+        "D": "0.4 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0180",
+      "type": "mcq",
+      "stem": "A coil of wire of resis\\tance 5 Ω is connected to a battery of voltage 9 V. Calculate the current flowing through the coil.",
+      "options": {
+        "A": "1.5 A",
+        "B": "2.5 A",
+        "C": "3.5 A",
+        "D": "4.5 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0181",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is projected from the origin with an initial velocity of 10 m/s at an angle of 60° to the horizontal. If the acceleration due to gravity is 9.8 m/s², calculate the time taken for the particle to reach its maximum height.",
+      "options": {
+        "A": "3 s",
+        "B": "4 s",
+        "C": "5 s",
+        "D": "6 s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0182",
+      "type": "mcq",
+      "stem": "A light ray passes from air into a glass of re\\fractive index 1.5. If the angle of incidence is 30°, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "25°",
+        "C": "30°",
+        "D": "35°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0183",
+      "type": "mcq",
+      "stem": "A radioactive sample decays at a rate of 0.05% per hour. If the initial activity is 1000 Bq, calculate the activity after 5 hours.",
+      "options": {
+        "A": "900 Bq",
+        "B": "950 Bq",
+        "C": "975 Bq",
+        "D": "995 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0184",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 Ω resistor, and a 6 Ω resistor connected in series. Calculate the current flowing through the circuit.",
+      "options": {
+        "A": "1.5 A",
+        "B": "2 A",
+        "C": "2.5 A",
+        "D": "3 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0185",
+      "type": "mcq",
+      "stem": "A lens of focal length 20 cm forms an image of an object 30 cm away. Calculate the magnification of the lens.",
+      "options": {
+        "A": "-0.5",
+        "B": "-0.6",
+        "C": "-0.7",
+        "D": "-0.8"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0186",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is attached to a spring with a spring cons\\tant of 100 N/m. If the particle is displaced by 0.2 m from its equilibrium position and released from rest, what is the maximum speed of the particle?",
+      "options": {
+        "A": "2 m/s",
+        "B": "4 m/s",
+        "C": "6 m/s",
+        "D": "8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0187",
+      "type": "mcq",
+      "stem": "A circuit consists of a 10 Ω resistor, a 20 Ω resistor, and a 30 Ω resistor connected in series. If a voltage of 12 V is applied across the circuit, what is the current in the circuit?",
+      "options": {
+        "A": "0.4 A",
+        "B": "0.6 A",
+        "C": "0.8 A",
+        "D": "1 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0188",
+      "type": "mcq",
+      "stem": "A radioactive sample has a half-life of 10 years. If the initial activity of the sample is 100 Bq, what is the activity of the sample after 20 years?",
+      "options": {
+        "A": "12.5 Bq",
+        "B": "25 Bq",
+        "C": "50 Bq",
+        "D": "100 Bq"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0189",
+      "type": "mcq",
+      "stem": "A block of mass 5 kg is attached to a horizontal spring with a spring cons\\tant of 200 N/m. If the block is displaced by 0.1 m from its equilibrium position and released from rest, what is the frequency of the oscillations?",
+      "options": {
+        "A": "0.5 Hz",
+        "B": "1 Hz",
+        "C": "2 Hz",
+        "D": "5 Hz"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0190",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor has a capaci\\tance of 10 μF. If a voltage of 12 V is applied across the capacitor, what is the energy stored in the capacitor?",
+      "options": {
+        "A": "0.12 J",
+        "B": "0.24 J",
+        "C": "0.36 J",
+        "D": "0.48 J"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0191",
+      "type": "mcq",
+      "stem": "A beam of light passes from air into a glass slab of thickness 6 cm and re\\fractive index 1.5. If the angle of incidence is 30°, calculate the angle of re\\fraction.",
+      "options": {
+        "A": "20°",
+        "B": "25°",
+        "C": "30°",
+        "D": "35°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0192",
+      "type": "mcq",
+      "stem": "A particle of mass 2 kg is moving in a circular path of radius 3 m with a cons\\tant speed of 4 m/s. Calculate the magnitude of the force acting on the particle.",
+      "options": {
+        "A": "10 N",
+        "B": "12 N",
+        "C": "15 N",
+        "D": "18 N"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0193",
+      "type": "mcq",
+      "stem": "A gas occupies a volume of 2.5 L at a pressure of 1.2 atm. If the pressure is increased to 2.5 atm, calculate the new volume of the gas.",
+      "options": {
+        "A": "1.25 L",
+        "B": "1.5 L",
+        "C": "1.75 L",
+        "D": "2.0 L"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0194",
+      "type": "mcq",
+      "stem": "A light source is placed 2 m away from a convex lens of focal length 0.5 m. If the object is moved 0.5 m closer to the lens, calculate the new image dis\\tance.",
+      "options": {
+        "A": "1.5 m",
+        "B": "1.75 m",
+        "C": "2.0 m",
+        "D": "2.25 m"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0195",
+      "type": "mcq",
+      "stem": "A particle of mass 1 kg is moving in a circular path of radius 2 m with a cons\\tant speed of 3 m/s. If the particle is subjected to a force of 5 N, calculate the angle between the force and the radius vector.",
+      "options": {
+        "A": "30°",
+        "B": "45°",
+        "C": "60°",
+        "D": "75°"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0196",
+      "type": "mcq",
+      "stem": "A gas is enclosed in a container with a movable piston. The gas is heated at cons\\tant pressure, cau\\sing its volume to increase. Which of the following statements is true about the process?",
+      "options": {
+        "A": "The temperature of the gas increases.",
+        "B": "The internal energy of the gas increases.",
+        "C": "The entropy of the gas decreases.",
+        "D": "The gas expands against the external pressure."
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0197",
+      "type": "mcq",
+      "stem": "A circuit consists of a 12 V battery, a 4 Ω resistor, and a 6 Ω resistor connected in series. What is the current flowing through the 4 Ω resistor?",
+      "options": {
+        "A": "0.5 A",
+        "B": "1 A",
+        "C": "1.5 A",
+        "D": "2 A"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0198",
+      "type": "mcq",
+      "stem": "A block of mass 2 kg is attached to a spring with a spring cons\\tant of 100 N/m. The block is displaced by 0.2 m from its equilibrium position and released from rest. What is the maximum speed of the block?",
+      "options": {
+        "A": "0.2 m/s",
+        "B": "0.4 m/s",
+        "C": "0.6 m/s",
+        "D": "0.8 m/s"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0199",
+      "type": "mcq",
+      "stem": "A parallel plate capacitor consists of two plates, each of area 0.01 m^2, separated by a dis\\tance of 0.001 m. The capaci\\tance of the capacitor is 10 nF. What is the charge on the capacitor when a potential difference of 10 V is applied across it?",
+      "options": {
+        "A": "0.1 C",
+        "B": "0.2 C",
+        "C": "0.3 C",
+        "D": "0.4 C"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0200",
+      "type": "mcq",
+      "stem": "A photon has an energy of 2 eV. What is its wavelength?",
+      "options": {
+        "A": "1.24 μm",
+        "B": "2.48 μm",
+        "C": "3.72 μm",
+        "D": "4.96 μm"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0201",
+      "type": "mcq",
+      "stem": "A particle of mass $m$ is moving in a circular path of radius $r$ with a cons\\tant speed $v$. The particle is subject to a centripetal force $F_c$ given by $F_c = \\frac{mv^2}{r}$. If the particle&#039;s speed is doubled, what is the new centripetal force $F_{c,new}$?",
+      "options": {
+        "A": "\\frac{2mv^2}{r}",
+        "B": "\\frac{mv^2}{2r}",
+        "C": "\\frac{mv^2}{r}",
+        "D": "\\frac{mv^2}{4r}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0202",
+      "type": "mcq",
+      "stem": "A block of mass $m$ is placed on a frictionless surface and attached to a horizontal spring with spring cons\\tant $k$. The block is displaced by a dis\\tance $x$ from its equilibrium position and released from rest. Assuming the block undergoes simple harmonic motion, what is the maximum speed $v_{max}$ of the block?",
+      "options": {
+        "A": "\\frac{\\sqrt{k}x}{\\sqrt{m}}",
+        "B": "\\frac{\\sqrt{m}x}{\\sqrt{k}}",
+        "C": "\\frac{\\sqrt{k}x}{m}",
+        "D": "\\frac{\\sqrt{m}x}{k}"
+      },
+      "marks": 1
+    },
+    {
+      "id": "uni-unn-pq-physics-bank-0203",
+      "type": "mcq",
+      "stem": "A gas is contained in a cylinder of volume $V$ with a movable piston. The gas is heated, cau\\sing its temperature to increase from $T_1$ to $T_2$. Assuming the gas is ideal and the process is isothermal, what is the new pressure $P_2$ of the gas?",
+      "options": {
+        "A": "\\frac{P_1V}{T_1}",
+        "B": "\\frac{P_1V}{T_2}",
+        "C": "\\frac{P_2V}{T_1}",
+        "D": "\\frac{P_2V}{T_2}"
+      },
+      "marks": 1
+    }
+  ],
+  "category": "university",
+  "body": "University Modules"
+}

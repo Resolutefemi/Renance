@@ -12,6 +12,7 @@
 import { useState } from 'react';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 
 const TOPICS = ['Microeconomics', 'Calculus I', 'World History', 'Organic Chem'] as const;
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard'] as const;
@@ -151,6 +152,7 @@ export default function AiGeneratorPage() {
         ))}
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );

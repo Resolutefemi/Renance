@@ -12,6 +12,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import BottomNav from '@/components/bottom-nav';
+import SideNav from '@/components/side-nav';
 import { QText } from '@/lib/qtext';
 
 interface MatchQ {
@@ -192,6 +193,7 @@ export default function ArenaMatchPage() {
         </div>
       </div>
 
+      <SideNav />
       <BottomNav />
     </main>
   );
