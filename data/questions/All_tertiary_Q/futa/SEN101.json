@@ -397,7 +397,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The method attribute of a <form> specifies the HTTP method used to send form data — either GET (appended to URL) or POST (sent in request body)."
+      "explanation": "The method attribute of a <form> specifies the HTTP method used to send form data - either GET (appended to URL) or POST (sent in request body)."
     },
     {
       "id": "uni-futa-sen101-0029",
@@ -439,7 +439,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The <head> tag contains meta-information about the HTML document — such as the title, character set, CSS links, and JavaScript references — not visible content."
+      "explanation": "The <head> tag contains meta-information about the HTML document - such as the title, character set, CSS links, and JavaScript references - not visible content."
     },
     {
       "id": "uni-futa-sen101-0032",
@@ -1181,7 +1181,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "The CSS box model consists of content, padding, border, and margin — from innermost to outermost — defining the space an element occupies."
+      "explanation": "The CSS box model consists of content, padding, border, and margin - from innermost to outermost - defining the space an element occupies."
     },
     {
       "id": "uni-futa-sen101-0085",
@@ -3547,7 +3547,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "PHP variables start with a $ sign (e.g., $name). They are dynamically typed — no need to declare a type before use."
+      "explanation": "PHP variables start with a $ sign (e.g., $name). They are dynamically typed - no need to declare a type before use."
     },
     {
       "id": "uni-futa-sen101-0254",
@@ -3771,7 +3771,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The DELETE statement removes records from a table. Without WHERE, it deletes all rows — use with caution."
+      "explanation": "The DELETE statement removes records from a table. Without WHERE, it deletes all rows - use with caution."
     },
     {
       "id": "uni-futa-sen101-0270",
@@ -4121,7 +4121,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The ALTER TABLE statement modifies an existing table — adding, dropping, or modifying columns and constraints."
+      "explanation": "The ALTER TABLE statement modifies an existing table - adding, dropping, or modifying columns and constraints."
     },
     {
       "id": "uni-futa-sen101-0295",
@@ -4303,7 +4303,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The COALESCE() function returns the first non-NULL value from a list of expressions — a more flexible alternative to IFNULL()."
+      "explanation": "The COALESCE() function returns the first non-NULL value from a list of expressions - a more flexible alternative to IFNULL()."
     },
     {
       "id": "uni-futa-sen101-0308",
@@ -4681,7 +4681,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "PHP interfaces define a contract — a set of methods a class must implement. A class can implement multiple interfaces."
+      "explanation": "PHP interfaces define a contract - a set of methods a class must implement. A class can implement multiple interfaces."
     },
     {
       "id": "uni-futa-sen101-0335",
@@ -4877,7 +4877,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "MySQL's LOAD DATA INFILE imports data from a text/CSV file directly into a table — much faster than individual INSERT statements."
+      "explanation": "MySQL's LOAD DATA INFILE imports data from a text/CSV file directly into a table - much faster than individual INSERT statements."
     },
     {
       "id": "uni-futa-sen101-0349",
@@ -5045,7 +5045,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "PHP 8's match expression is like switch but stricter — it uses strict comparison, has no fall-through, and must be exhaustive."
+      "explanation": "PHP 8's match expression is like switch but stricter - it uses strict comparison, has no fall-through, and must be exhaustive."
     },
     {
       "id": "uni-futa-sen101-0361",
@@ -5745,7 +5745,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The N+1 query problem occurs when one query fetches N records, then N additional queries fetch related data for each — solved with JOIN FETCH."
+      "explanation": "The N+1 query problem occurs when one query fetches N records, then N additional queries fetch related data for each - solved with JOIN FETCH."
     },
     {
       "id": "uni-futa-sen101-0411",
@@ -5829,7 +5829,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Listeners in Java EE respond to lifecycle events of ServletContext, HttpSession, and ServletRequest — e.g., session creation/destruction."
+      "explanation": "Listeners in Java EE respond to lifecycle events of ServletContext, HttpSession, and ServletRequest - e.g., session creation/destruction."
     },
     {
       "id": "uni-futa-sen101-0417",
@@ -6145,7 +6145,7 @@
       "stem": "What is DNS?",
       "options": {
         "A": "Data Network System",
-        "B": "Domain Name System – translates domain to IP",
+        "B": "Domain Name System - translates domain to IP",
         "C": "Dynamic Network Service",
         "D": "Digital Name Server"
       },
@@ -6202,7 +6202,7 @@
       "options": {
         "A": "A type of database",
         "B": "A CSS framework",
-        "C": "Asynchronous JavaScript and XML – updates pages without reload",
+        "C": "Asynchronous JavaScript and XML - updates pages without reload",
         "D": "A JSP tag library"
       },
       "marks": 1,
@@ -6725,7 +6725,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Web performance metrics: LCP (Largest Contentful Paint), FID (First Input Delay), CLS (Cumulative Layout Shift) — Google's Core Web Vitals."
+      "explanation": "Web performance metrics: LCP (Largest Contentful Paint), FID (First Input Delay), CLS (Cumulative Layout Shift) - Google's Core Web Vitals."
     },
     {
       "id": "uni-futa-sen101-0481",
@@ -6790,7 +6790,7 @@
       "options": {
         "A": "Secure Script Language",
         "B": "Standard Server Layer",
-        "C": "Secure Sockets Layer – encryption protocol",
+        "C": "Secure Sockets Layer - encryption protocol",
         "D": "Server Side Language"
       },
       "marks": 1,
@@ -6991,7 +6991,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The Observer pattern notifies dependent objects (observers) automatically when the subject's state changes — foundation of reactive programming."
+      "explanation": "The Observer pattern notifies dependent objects (observers) automatically when the subject's state changes - foundation of reactive programming."
     },
     {
       "id": "uni-futa-sen101-0500",
@@ -7061,7 +7061,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion — guidelines for OOP design."
+      "explanation": "SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion - guidelines for OOP design."
     },
     {
       "id": "uni-futa-sen101-0505",
@@ -7377,7 +7377,7 @@
       "stem": "What is CSRF?",
       "options": {
         "A": "CSS Resource Filter",
-        "B": "Cross-Site Request Forgery – tricking a user into making unintended requests",
+        "B": "Cross-Site Request Forgery - tricking a user into making unintended requests",
         "C": "Client-Side Request Form",
         "D": "Content Security Response Filter"
       },
@@ -7901,7 +7901,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Idempotency means performing an operation multiple times has the same effect as doing it once — important for safe API retries."
+      "explanation": "Idempotency means performing an operation multiple times has the same effect as doing it once - important for safe API retries."
     },
     {
       "id": "uni-futa-sen101-0565",
@@ -8125,7 +8125,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Container queries (CSS) apply styles based on the size of a parent container rather than the viewport — more modular than media queries."
+      "explanation": "Container queries (CSS) apply styles based on the size of a parent container rather than the viewport - more modular than media queries."
     },
     {
       "id": "uni-futa-sen101-0581",
@@ -8223,7 +8223,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Web Components consist of Custom Elements, Shadow DOM, and HTML Templates — a set of standards for reusable, encapsulated UI components."
+      "explanation": "Web Components consist of Custom Elements, Shadow DOM, and HTML Templates - a set of standards for reusable, encapsulated UI components."
     },
     {
       "id": "uni-futa-sen101-0588",
@@ -8391,7 +8391,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Prepared statements prevent SQL injection by separating the SQL structure from the data — the database compiles the query template once, then executes it safely with supplied parameters."
+      "explanation": "Prepared statements prevent SQL injection by separating the SQL structure from the data - the database compiles the query template once, then executes it safely with supplied parameters."
     },
     {
       "id": "uni-futa-sen101-0600",
@@ -8405,7 +8405,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Separation of concerns in web development means HTML defines structure, CSS handles presentation, and JavaScript controls behavior — keeping each technology focused on its role for maintainability."
+      "explanation": "Separation of concerns in web development means HTML defines structure, CSS handles presentation, and JavaScript controls behavior - keeping each technology focused on its role for maintainability."
     }
   ]
 }

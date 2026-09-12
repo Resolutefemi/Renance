@@ -279,7 +279,7 @@
       "stem": "A requirement that cannot be tested is:",
       "options": {
         "A": "Acceptable if it uses SHALL",
-        "B": "Worthless — requirements that cannot be tested are worthless",
+        "B": "Worthless - requirements that cannot be tested are worthless",
         "C": "Always a domain requirement",
         "D": "Always an organisational requirement"
       },
@@ -349,7 +349,7 @@
       "stem": "RE processes are:",
       "options": {
         "A": "Identical across all organisations",
-        "B": "Varied — different types of systems need different processes",
+        "B": "Varied - different types of systems need different processes",
         "C": "Always waterfall",
         "D": "Always agile"
       },
@@ -615,7 +615,7 @@
       "stem": "Functional requirements describe:",
       "options": {
         "A": "System performance only",
-        "B": "What the system should do — services, reactions to inputs, and behaviours",
+        "B": "What the system should do - services, reactions to inputs, and behaviours",
         "C": "The development process only",
         "D": "External regulations only"
       },
@@ -1581,7 +1581,7 @@
       "stem": "The example 'The system shall support a large number of users' is problematic because:",
       "options": {
         "A": "It uses SHALL",
-        "B": "'Large' is ambiguous — does it mean 10, 10,000, or 1 million?",
+        "B": "'Large' is ambiguous - does it mean 10, 10,000, or 1 million?",
         "C": "It is too short",
         "D": "It uses passive voice"
       },

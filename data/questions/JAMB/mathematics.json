@@ -38,7 +38,7 @@
     {
       "id": "jamb-mathematics-bank-0015",
       "type": "mcq",
-      "stem": "Solve the inequality 2x − 4 > 6.",
+      "stem": "Solve the inequality 2x - 4 > 6.",
       "options": {
         "A": "x > 5",
         "B": "x > 1",
@@ -81,7 +81,7 @@
     {
       "id": "jamb-mathematics-bank-0004",
       "type": "mcq",
-      "stem": "Solve: 5 − 2(3 − x) = 1",
+      "stem": "Solve: 5 - 2(3 - x) = 1",
       "options": {
         "A": "x = 1",
         "B": "x = 2",
@@ -90,7 +90,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "5 − 6 + 2x = 1 gives 2x − 1 = 1, so x = 1."
+      "explanation": "5 - 6 + 2x = 1 gives 2x - 1 = 1, so x = 1."
     },
     {
       "id": "jamb-mathematics-bank-0005",
@@ -118,7 +118,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Slope = (6 − 2)/(3 − 1) = 4/2 = 2."
+      "explanation": "Slope = (6 - 2)/(3 - 1) = 4/2 = 2."
     },
     {
       "id": "jamb-mathematics-bank-0007",
@@ -160,35 +160,35 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "P(A') = 1 − P(A) = 1 − 0.3 = 0.7."
+      "explanation": "P(A') = 1 - P(A) = 1 - 0.3 = 0.7."
     },
     {
       "id": "jamb-mathematics-bank-0011",
       "type": "mcq",
-      "stem": "Factorize x² − 9.",
+      "stem": "Factorize x² - 9.",
       "options": {
-        "A": "(x − 3)(x + 3)",
-        "B": "(x − 9)(x + 1)",
-        "C": "(x − 3)²",
+        "A": "(x - 3)(x + 3)",
+        "B": "(x - 9)(x + 1)",
+        "C": "(x - 3)²",
         "D": "(x + 3)²"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Difference of two squares: x² − 9 = (x − 3)(x + 3)."
+      "explanation": "Difference of two squares: x² - 9 = (x - 3)(x + 3)."
     },
     {
       "id": "jamb-mathematics-bank-0012",
       "type": "mcq",
       "stem": "Find the nth term of the sequence 2, 5, 8, 11, ...",
       "options": {
-        "A": "3n − 1",
+        "A": "3n - 1",
         "B": "3n + 1",
-        "C": "2n − 1",
+        "C": "2n - 1",
         "D": "n + 1"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Common difference 3, first term 2: Tn = 3n − 1 (check n = 1 gives 2)."
+      "explanation": "Common difference 3, first term 2: Tn = 3n - 1 (check n = 1 gives 2)."
     },
     {
       "id": "jamb-mathematics-bank-0013",
@@ -20434,10 +20434,10 @@
       "type": "mcq",
       "stem": "A polynomial in x whose roots are 4/3 and -3/5 is?",
       "options": {
-        "A": "15x2 - 11x – 12",
-        "B": "15x2 + 11x – 12",
-        "C": "12x2 - x – 12",
-        "D": "12x2 + 11x – 15"
+        "A": "15x2 - 11x - 12",
+        "B": "15x2 + 11x - 12",
+        "C": "12x2 - x - 12",
+        "D": "12x2 + 11x - 15"
       },
       "marks": 1,
       "year": 2009,
@@ -24426,7 +24426,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "C",
-      "explanation": "Percentage Loss = (actual loss ) ÷ (Cost price) × 100<br>\r\n<br>\r\nActual loss = Cost Price − Selling Price (sold price)<br>\r\n<br>\r\n= N800 − N520 = N280<br>\r\n<br>\r\nPercentage loss = (280 ÷ 800) × 100 = 35%<br>\r\n<br>\r\n∴ His loss percent = 35%",
+      "explanation": "Percentage Loss = (actual loss ) ÷ (Cost price) × 100<br>\r\n<br>\r\nActual loss = Cost Price - Selling Price (sold price)<br>\r\n<br>\r\n= N800 - N520 = N280<br>\r\n<br>\r\nPercentage loss = (280 ÷ 800) × 100 = 35%<br>\r\n<br>\r\n∴ His loss percent = 35%",
       "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=203"
     },
     {
@@ -24479,9 +24479,9 @@
       "stem": "Calculate the value of x and y if (27x ÷ 81x+2y = 9 ,x + 4y = 0",
       "options": {
         "A": "x = 1, y = 1/2",
-        "B": "x = 2, y = – 1/2",
-        "C": "x − 0, y = 1",
-        "D": "x = 2, y = –1"
+        "B": "x = 2, y = - 1/2",
+        "C": "x - 0, y = 1",
+        "D": "x = 2, y = -1"
       },
       "marks": 1,
       "year": 2015,
@@ -24508,10 +24508,10 @@
       "type": "mcq",
       "stem": "Evaluate log5(\\( y^2x^5 ÷ 125b½) \\)",
       "options": {
-        "A": "2 log5y + 5log5 y2 − 3",
+        "A": "2 log5y + 5log5 y2 - 3",
         "B": "log5 y2 + 5log5 x + 3",
         "C": "25logy 5 + 3",
-        "D": "2log5y + 5log5x − ½ log5b −3"
+        "D": "2log5y + 5log5x - ½ log5b -3"
       },
       "marks": 1,
       "year": 2015,
@@ -24534,11 +24534,11 @@
     {
       "id": "jamb-mathematics-bank-1948",
       "type": "mcq",
-      "stem": "Factorize \\( a^2 − b^2 − 4a + 4 \\)",
+      "stem": "Factorize \\( a^2 - b^2 - 4a + 4 \\)",
       "options": {
-        "A": "(a + b)(a − b)",
-        "B": "(a − 2 + b)(a - 2- b)",
-        "C": "(a + 1)(a − 2 + b)",
+        "A": "(a + b)(a - b)",
+        "B": "(a - 2 + b)(a - 2- b)",
+        "C": "(a + 1)(a - 2 + b)",
         "D": "(a + b) 2"
       },
       "marks": 1,
@@ -24550,12 +24550,12 @@
     {
       "id": "jamb-mathematics-bank-1949",
       "type": "mcq",
-      "stem": "Factorize \\( x^2 − 2x − 15 \\)",
+      "stem": "Factorize \\( x^2 - 2x - 15 \\)",
       "options": {
         "A": "(x + 3)2",
-        "B": "(x + 5)(x − 3)",
-        "C": "(x − 5)2",
-        "D": "(x − 5)(x + 3)"
+        "B": "(x + 5)(x - 3)",
+        "C": "(x - 5)2",
+        "D": "(x - 5)(x + 3)"
       },
       "marks": 1,
       "year": 2015,
@@ -24566,9 +24566,9 @@
       "type": "mcq",
       "stem": "Factorize x2 + 9x + 20",
       "options": {
-        "A": "(x − 5) 2",
+        "A": "(x - 5) 2",
         "B": "(x + 5)(x + 4)",
-        "C": "(x – 5)(x + 3)",
+        "C": "(x - 5)(x + 3)",
         "D": "(x + 3) 2"
       },
       "marks": 1,
@@ -24588,7 +24588,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "D",
-      "explanation": "I = A − P<br>\r\n<br>\r\n= N588 − N525<br>\r\n<br>\r\n∴I = N63<br>\r\n<br>\r\nI = PRT ÷ 100<br>\r\n<br>\r\nR = [100I ÷PT]<br>\r\n<br>\r\nR = [(100 × 63 ) ÷ (525 × 3)]<br>\r\n<br>\r\n= (6300 ÷ 1575) = 4<br>\r\n<br>\r\n∴ The rate = 4 %",
+      "explanation": "I = A - P<br>\r\n<br>\r\n= N588 - N525<br>\r\n<br>\r\n∴I = N63<br>\r\n<br>\r\nI = PRT ÷ 100<br>\r\n<br>\r\nR = [100I ÷PT]<br>\r\n<br>\r\nR = [(100 × 63 ) ÷ (525 × 3)]<br>\r\n<br>\r\n= (6300 ÷ 1575) = 4<br>\r\n<br>\r\n∴ The rate = 4 %",
       "video": "https://www.youtube.com/embed/63rah992e-s?start=210"
     },
     {
@@ -24622,7 +24622,7 @@
     {
       "id": "jamb-mathematics-bank-1954",
       "type": "mcq",
-      "stem": "Find the equation of a line which is form origin and passes through the point (−3, −4)",
+      "stem": "Find the equation of a line which is form origin and passes through the point (-3, -4)",
       "options": {
         "A": "y = \\( \\frac{3x}{4} \\)",
         "B": "y = \\( \\frac{4x}{3} \\)",
@@ -24667,7 +24667,7 @@
     {
       "id": "jamb-mathematics-bank-1957",
       "type": "mcq",
-      "stem": "Find the value of x if \\( [ 1 ÷ 64^{(x + 2)}]= [4^{(x − 3)} ÷ 16^x ] \\)",
+      "stem": "Find the value of x if \\( [ 1 ÷ 64^{(x + 2)}]= [4^{(x - 3)} ÷ 16^x ] \\)",
       "options": {
         "A": "\\( \\frac{3}{2} \\)",
         "B": "\\( \\frac{2}{3} \\)",
@@ -24677,7 +24677,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "D",
-      "explanation": "\\( [ 1 ÷ 64^{(x + 2)}]= [4^{(x − 3)} ÷ 16^x ] \\)<br>\r\n<br>\r\n \\( 64^{−(x + 2)} = [4^{(x − 3)}] ÷[16^x] \\)<br>\r\n<br>\r\nbreakdown 4,16,64 into a small index no<br>\r\n<br>\r\n\\( 2^{−6(x + 2)} = 2^{2(x − 3)} ÷ 2^{4(x)} \\)<br>\r\n<br>\r\n\\( 2^{−6x− 12} = 2^{2x − 4x − 6} \\)<br>\r\n<br>\r\n\\( 2^{−6x −12} = 2^{−2x − 6} \\)<br>\r\n<br>\r\n− 6x − 12 = − 2x − 6<br>\r\n<br>\r\nCollect the like term<br>\r\n<br>\r\n−6x + 2x = −6 + 12<br>\r\n<br>\r\n−4x =6<br>\r\n<br>\r\nx = \\( \\frac{6}{4} \\)<br>\r\n<br>\r\nx = \\( \\frac{−3}{2} \\)",
+      "explanation": "\\( [ 1 ÷ 64^{(x + 2)}]= [4^{(x - 3)} ÷ 16^x ] \\)<br>\r\n<br>\r\n \\( 64^{-(x + 2)} = [4^{(x - 3)}] ÷[16^x] \\)<br>\r\n<br>\r\nbreakdown 4,16,64 into a small index no<br>\r\n<br>\r\n\\( 2^{-6(x + 2)} = 2^{2(x - 3)} ÷ 2^{4(x)} \\)<br>\r\n<br>\r\n\\( 2^{-6x- 12} = 2^{2x - 4x - 6} \\)<br>\r\n<br>\r\n\\( 2^{-6x -12} = 2^{-2x - 6} \\)<br>\r\n<br>\r\n- 6x - 12 = - 2x - 6<br>\r\n<br>\r\nCollect the like term<br>\r\n<br>\r\n-6x + 2x = -6 + 12<br>\r\n<br>\r\n-4x =6<br>\r\n<br>\r\nx = \\( \\frac{6}{4} \\)<br>\r\n<br>\r\nx = \\( \\frac{-3}{2} \\)",
       "video": "https://www.youtube.com/embed/63rah992e-s?start=1704"
     },
     {
@@ -24743,12 +24743,12 @@
     {
       "id": "jamb-mathematics-bank-1962",
       "type": "mcq",
-      "stem": "Given that S and T are sets of real numbers such that S = {x : 0 \\(\\leq\\) x \\(\\leq\\) 5} and T = {x : − 2 < x < 3} Find S \\(\\cup\\) T",
+      "stem": "Given that S and T are sets of real numbers such that S = {x : 0 \\(\\leq\\) x \\(\\leq\\) 5} and T = {x : - 2 < x < 3} Find S \\(\\cup\\) T",
       "options": {
-        "A": "−3 < x < \\(\\leq\\)3",
-        "B": "−2< x < \\(\\leq\\)5",
-        "C": "2< x < \\(\\geq\\) −5",
-        "D": "−1< x \\(\\geq\\) \\(\\leq\\)2"
+        "A": "-3 < x < \\(\\leq\\)3",
+        "B": "-2< x < \\(\\leq\\)5",
+        "C": "2< x < \\(\\geq\\) -5",
+        "D": "-1< x \\(\\geq\\) \\(\\leq\\)2"
       },
       "marks": 1,
       "year": 2015,
@@ -24797,7 +24797,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "C",
-      "explanation": "Each exterior angle = 180 − 120=60<br>\r\n<br>\r\nExterior angle =360/n<br>\r\n<br>\r\n60 = 360/n<br>\r\n<br>\r\nn =360/6<br>\r\n<br>\r\n= 6",
+      "explanation": "Each exterior angle = 180 - 120=60<br>\r\n<br>\r\nExterior angle =360/n<br>\r\n<br>\r\n60 = 360/n<br>\r\n<br>\r\nn =360/6<br>\r\n<br>\r\n= 6",
       "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1176"
     },
     {
@@ -24817,7 +24817,7 @@
     {
       "id": "jamb-mathematics-bank-1967",
       "type": "mcq",
-      "stem": "If A = (−3,5) and B = (4,−1) find the co-ordinate of the mid point",
+      "stem": "If A = (-3,5) and B = (4,-1) find the co-ordinate of the mid point",
       "options": {
         "A": "2, ½",
         "B": "½ , 2",
@@ -24895,7 +24895,7 @@
     {
       "id": "jamb-mathematics-bank-1972",
       "type": "mcq",
-      "stem": "If x + y = 90 simplify \\((sinx + siny)^2\\)−2sinxsiny",
+      "stem": "If x + y = 90 simplify \\((sinx + siny)^2\\)-2sinxsiny",
       "options": {
         "A": "1",
         "B": "0",
@@ -24909,7 +24909,7 @@
     {
       "id": "jamb-mathematics-bank-1973",
       "type": "mcq",
-      "stem": "If √ (2x + 2) − √x =1 ,find x.",
+      "stem": "If √ (2x + 2) - √x =1 ,find x.",
       "options": {
         "A": "x = 1 twice",
         "B": "x = 0 or 1",
@@ -24919,7 +24919,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "A",
-      "explanation": "√(2x + 2 ) − √x = 1<br>\r\n<br>\r\n√(2x + 2) = 1 + √x<br>\r\n<br>\r\nSquare both sides<br>\r\n<br>\r\n√(2x + 2)<sup>2</sup> = (1 + √x)<sup>2</sup><br>\r\n<br>\r\n((2x + 2)<sup>2</sup>)<sup>½</sup> = 1 + √x + √x+ x<br>\r\n<br>\r\n2x + 2 = 1 + 2√x +x<br>\r\n<br>\r\nCollect the like term together<br>\r\n<br>\r\n2x − x + 2 − 1 = 2 √x<br>\r\nx + 1 = 2√x<br>\r\n<br>\r\nSquare both sides<br>\r\n<br>\r\n(x + 1)<sup>2</sup> = (2√x)<sup>2</sup><br>\r\n<br>\r\nx<sup>2</sup> + 2x + 1 = 4x<br>\r\n<br>\r\nx<sup>2</sup> + 2x − 4x + 1 = 0<br>\r\n<br>\r\n(x<sup>2</sup>− x)(x + 1)= 0<br>\r\n<br>\r\nx(x − 1) −1(x − 1)<br>\r\n<br>\r\n(x − 1)(x −1)<br>\r\n<br>\r\nEither (x − 1) = 0 or (x − 1) = 0<br>\r\n<br>\r\nx = 1 or 1<br>\r\n<br>\r\nx = 1 twice",
+      "explanation": "√(2x + 2 ) - √x = 1<br>\r\n<br>\r\n√(2x + 2) = 1 + √x<br>\r\n<br>\r\nSquare both sides<br>\r\n<br>\r\n√(2x + 2)<sup>2</sup> = (1 + √x)<sup>2</sup><br>\r\n<br>\r\n((2x + 2)<sup>2</sup>)<sup>½</sup> = 1 + √x + √x+ x<br>\r\n<br>\r\n2x + 2 = 1 + 2√x +x<br>\r\n<br>\r\nCollect the like term together<br>\r\n<br>\r\n2x - x + 2 - 1 = 2 √x<br>\r\nx + 1 = 2√x<br>\r\n<br>\r\nSquare both sides<br>\r\n<br>\r\n(x + 1)<sup>2</sup> = (2√x)<sup>2</sup><br>\r\n<br>\r\nx<sup>2</sup> + 2x + 1 = 4x<br>\r\n<br>\r\nx<sup>2</sup> + 2x - 4x + 1 = 0<br>\r\n<br>\r\n(x<sup>2</sup>- x)(x + 1)= 0<br>\r\n<br>\r\nx(x - 1) -1(x - 1)<br>\r\n<br>\r\n(x - 1)(x -1)<br>\r\n<br>\r\nEither (x - 1) = 0 or (x - 1) = 0<br>\r\n<br>\r\nx = 1 or 1<br>\r\n<br>\r\nx = 1 twice",
       "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=780"
     },
     {
@@ -24941,7 +24941,7 @@
     {
       "id": "jamb-mathematics-bank-1975",
       "type": "mcq",
-      "stem": "Integral ∫\\( (5x^3 + 7x^2 − 2x + 5)\\)dx",
+      "stem": "Integral ∫\\( (5x^3 + 7x^2 - 2x + 5)\\)dx",
       "options": {
         "A": "\\( \\frac{5x^4}{4} + \\frac{7x^3}{3} + 2x + C \\)",
         "B": "\\( \\frac{5x^4}{4} + \\frac{7x^3}{3} - x^2 + 5x + C \\)",
@@ -24959,10 +24959,10 @@
       "type": "mcq",
       "stem": "Make x the subject of the equation s = 2 + \\(\\frac{t}{5} \\)(x + ⅗y)",
       "options": {
-        "A": "x = 5[(s − 2) ÷ t] - 3/5y",
-        "B": "x = 25[(s − 2) ÷ t] − 3ty",
-        "C": "x = [1 ÷ (s − 2)3ty]",
-        "D": "x = [5(s − 2) 2 ÷ 3ty] × t"
+        "A": "x = 5[(s - 2) ÷ t] - 3/5y",
+        "B": "x = 25[(s - 2) ÷ t] - 3ty",
+        "C": "x = [1 ÷ (s - 2)3ty]",
+        "D": "x = [5(s - 2) 2 ÷ 3ty] × t"
       },
       "marks": 1,
       "year": 2015,
@@ -24985,7 +24985,7 @@
     {
       "id": "jamb-mathematics-bank-1978",
       "type": "mcq",
-      "stem": "Rationalize 5 ÷ (2 − √3)",
+      "stem": "Rationalize 5 ÷ (2 - √3)",
       "options": {
         "A": "3(2 + √5)",
         "B": "2(3 + √5)",
@@ -25041,10 +25041,10 @@
     {
       "id": "jamb-mathematics-bank-1983",
       "type": "mcq",
-      "stem": "Simplify \\( \\frac{1}{(x + 1)} + \\frac{1}{(x − 1)} \\)",
+      "stem": "Simplify \\( \\frac{1}{(x + 1)} + \\frac{1}{(x - 1)} \\)",
       "options": {
-        "A": "2x/(x + 1)(x−3)",
-        "B": "2x/(x + 1)(x−1)",
+        "A": "2x/(x + 1)(x-3)",
+        "B": "2x/(x + 1)(x-1)",
         "C": "2x/(x + 1)2",
         "D": "2x(x+1)2"
       },
@@ -25057,7 +25057,7 @@
     {
       "id": "jamb-mathematics-bank-1984",
       "type": "mcq",
-      "stem": "Simplify \\(6\\frac{1}{12} − 2 ¾ + 1 ½ \\)",
+      "stem": "Simplify \\(6\\frac{1}{12} - 2 ¾ + 1 ½ \\)",
       "options": {
         "A": "\\( 3 \\frac{5}{6}\\)",
         "B": "\\( 4 \\frac{5}{6}\\)",
@@ -25087,7 +25087,7 @@
     {
       "id": "jamb-mathematics-bank-1986",
       "type": "mcq",
-      "stem": "Simplify log101.5 + 3 log102 − log100.3",
+      "stem": "Simplify log101.5 + 3 log102 - log100.3",
       "options": {
         "A": "log104",
         "B": "log1040",
@@ -25101,12 +25101,12 @@
     {
       "id": "jamb-mathematics-bank-1987",
       "type": "mcq",
-      "stem": "Solve the equation \\( 3x^2 − 4x − 5 = 0 \\)",
+      "stem": "Solve the equation \\( 3x^2 - 4x - 5 = 0 \\)",
       "options": {
-        "A": "x = 1.75 or − 0.15",
-        "B": "x = 2.12 or − 0.79",
-        "C": "x = 1.5 or − 0.34",
-        "D": "x = 2.35 or −1.23"
+        "A": "x = 1.75 or - 0.15",
+        "B": "x = 2.12 or - 0.79",
+        "C": "x = 1.5 or - 0.34",
+        "D": "x = 2.35 or -1.23"
       },
       "marks": 1,
       "year": 2015,
@@ -25115,23 +25115,23 @@
     {
       "id": "jamb-mathematics-bank-1988",
       "type": "mcq",
-      "stem": "Solve the equation \\( 5^{(x − 2)} = (1 ÷ 125)^{(x +3)}\\)",
+      "stem": "Solve the equation \\( 5^{(x - 2)} = (1 ÷ 125)^{(x +3)}\\)",
       "options": {
         "A": "3/2",
-        "B": "− 7/4",
+        "B": "- 7/4",
         "C": "4/7",
         "D": "7/4"
       },
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "\\( 5^{(x − 2)} = (125^{−1} )^{(x + 3)}\\\\<br>\r\n<br>\r\n5^{(x − 2)} = (5− 3)^{x + 3}\\\\<br>\r\n<br>\r\n5^{(x − 2)} = 5^{− 3x − 9}\\\\<br>\r\n<br>\r\nx + 3x = − 9 + 2\\\\<br>\r\n<br>\r\n4x = − 7\\\\<br>\r\n<br>\r\nx = \\frac{−7}{4} \\)",
+      "explanation": "\\( 5^{(x - 2)} = (125^{-1} )^{(x + 3)}\\\\<br>\r\n<br>\r\n5^{(x - 2)} = (5- 3)^{x + 3}\\\\<br>\r\n<br>\r\n5^{(x - 2)} = 5^{- 3x - 9}\\\\<br>\r\n<br>\r\nx + 3x = - 9 + 2\\\\<br>\r\n<br>\r\n4x = - 7\\\\<br>\r\n<br>\r\nx = \\frac{-7}{4} \\)",
       "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1027"
     },
     {
       "id": "jamb-mathematics-bank-1989",
       "type": "mcq",
-      "stem": "Solve x2 − 2x − 3 = 0",
+      "stem": "Solve x2 - 2x - 3 = 0",
       "options": {
         "A": "x = 2 or 1",
         "B": "x = 3 or -1",
@@ -25243,7 +25243,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "Prob.(A outcome) = \\(\\frac{1}{6}\\), Prob.(B outcome) = ¼<br>\r\n<br>\r\nP(A ∪ B) = 1/12, Prob.(A ∩ B)<br>\r\n<br>\r\nProb.(A ∩ B) = Prob.(A) + Prob.(B) − Prob.(A ∪ B)<br>\r\n<br>\r\n1/6 + 1/4 − 1/12<br>\r\n<br>\r\n= (2 + 3 − 1) ÷ 12<br>\r\n<br>\r\n= 4/12<br>\r\n<br>\r\n= 1/3<br>\r\n<br>\r\nProb.(A ∩ B) = 1/3",
+      "explanation": "Prob.(A outcome) = \\(\\frac{1}{6}\\), Prob.(B outcome) = ¼<br>\r\n<br>\r\nP(A ∪ B) = 1/12, Prob.(A ∩ B)<br>\r\n<br>\r\nProb.(A ∩ B) = Prob.(A) + Prob.(B) - Prob.(A ∪ B)<br>\r\n<br>\r\n1/6 + 1/4 - 1/12<br>\r\n<br>\r\n= (2 + 3 - 1) ÷ 12<br>\r\n<br>\r\n= 4/12<br>\r\n<br>\r\n= 1/3<br>\r\n<br>\r\nProb.(A ∩ B) = 1/3",
       "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=139"
     },
     {
@@ -25254,7 +25254,7 @@
         "A": "x = 5 or 1",
         "B": "x = 7 or 1",
         "C": "x = 7 or 0",
-        "D": "x = 7 or − 2"
+        "D": "x = 7 or - 2"
       },
       "marks": 1,
       "year": 2015,
@@ -26040,7 +26040,7 @@
       "stem": "Evaluate (\\(\\sin\\)45º + \\(\\sin\\)30º ) in surd form",
       "options": {
         "A": "\\(\\frac{\\sqrt{3}}{2\\sqrt{2}}\\)",
-        "B": "√3 − \\(\\frac{1}{2}\\)",
+        "B": "√3 - \\(\\frac{1}{2}\\)",
         "C": "\\(\\frac{1}{2}\\)√2",
         "D": "\\(\\frac{1 +\\sqrt{2}}{2}\\)"
       },
@@ -26065,7 +26065,7 @@
     {
       "id": "jamb-mathematics-bank-2055",
       "type": "mcq",
-      "stem": "Evaluate 1 − (\\(\\frac{1}{5}\\) x 1\\(\\frac{2}{3}\\)) + (5 + 1\\(\\frac{2}{3}\\))",
+      "stem": "Evaluate 1 - (\\(\\frac{1}{5}\\) x 1\\(\\frac{2}{3}\\)) + (5 + 1\\(\\frac{2}{3}\\))",
       "options": {
         "A": "4",
         "B": "3",
@@ -26121,7 +26121,7 @@
     {
       "id": "jamb-mathematics-bank-2060",
       "type": "mcq",
-      "stem": "Find the range of the following set of numbers 0.4, −0.4, 0.3, 0.47, −0.53, 0.2 and −0.2",
+      "stem": "Find the range of the following set of numbers 0.4, -0.4, 0.3, 0.47, -0.53, 0.2 and -0.2",
       "options": {
         "A": "1.03",
         "B": "0.07",
@@ -26163,7 +26163,7 @@
     {
       "id": "jamb-mathematics-bank-2063",
       "type": "mcq",
-      "stem": "Find ∫(x2 + 3x − 5)dx",
+      "stem": "Find ∫(x2 + 3x - 5)dx",
       "options": {
         "A": "\\(\\frac{x_3}{3}\\) - \\(\\frac{3x_2}{2}\\) - 5x + k",
         "B": "\\(\\frac{x_3}{3}\\) - \\(\\frac{3x_2}{2}\\) + 5x + k",
@@ -26235,8 +26235,8 @@
       "type": "mcq",
       "stem": "If \\(\\frac{2 \\sqrt{3} - \\sqrt{2}}{\\sqrt{3} + 2 \\sqrt{2}}\\) = m + n √ 6, find the values of m and n respectively",
       "options": {
-        "A": "1, − 2",
-        "B": "− 2, n = 1",
+        "A": "1, - 2",
+        "B": "- 2, n = 1",
         "C": "\\(\\frac{-2}{5}\\), 1",
         "D": "\\(\\frac{2}{3}\\)"
       },
@@ -26275,11 +26275,11 @@
     {
       "id": "jamb-mathematics-bank-2071",
       "type": "mcq",
-      "stem": "If two graphs Y = px2 + q and y = 2x2 − 1 intersect at x =2, find the value of p in terms of q",
+      "stem": "If two graphs Y = px2 + q and y = 2x2 - 1 intersect at x =2, find the value of p in terms of q",
       "options": {
-        "A": "q − \\(\\frac{8}{7}\\)",
-        "B": "7 − \\(\\frac{q}{4}\\)",
-        "C": "8 − \\(\\frac{q}{2}\\)",
+        "A": "q - \\(\\frac{8}{7}\\)",
+        "B": "7 - \\(\\frac{q}{4}\\)",
+        "C": "8 - \\(\\frac{q}{2}\\)",
         "D": "7 + \\(\\frac{q}{8}\\)"
       },
       "marks": 1,
@@ -26387,7 +26387,7 @@
     {
       "id": "jamb-mathematics-bank-2079",
       "type": "mcq",
-      "stem": "Simplify 3 \\(^{n − 1}\\) × \\(\\frac{27^{n + 1}}{81^n}\\)",
+      "stem": "Simplify 3 \\(^{n - 1}\\) × \\(\\frac{27^{n + 1}}{81^n}\\)",
       "options": {
         "A": "3\\(^{2n}\\)",
         "B": "9",
@@ -26401,11 +26401,11 @@
     {
       "id": "jamb-mathematics-bank-2080",
       "type": "mcq",
-      "stem": "Simplify 4\\(\\sqrt{27}\\) + 5\\(\\sqrt{12}\\) − 3\\(\\sqrt{75}\\)",
+      "stem": "Simplify 4\\(\\sqrt{27}\\) + 5\\(\\sqrt{12}\\) - 3\\(\\sqrt{75}\\)",
       "options": {
         "A": "7",
-        "B": "− 7",
-        "C": "− 7\\(\\sqrt{3}\\)",
+        "B": "- 7",
+        "C": "- 7\\(\\sqrt{3}\\)",
         "D": "7\\(\\sqrt{3}\\)"
       },
       "marks": 1,
@@ -26457,7 +26457,7 @@
     {
       "id": "jamb-mathematics-bank-2084",
       "type": "mcq",
-      "stem": "The operation * on the set R of real number is defined by x * y = 3x + 2y − 1, find 3* − 1",
+      "stem": "The operation * on the set R of real number is defined by x * y = 3x + 2y - 1, find 3* - 1",
       "options": {
         "A": "9",
         "B": "- 9",
@@ -26513,12 +26513,12 @@
     {
       "id": "jamb-mathematics-bank-2088",
       "type": "mcq",
-      "stem": "What is the product of 2x2 − x + 1 and 3 − 2x",
+      "stem": "What is the product of 2x2 - x + 1 and 3 - 2x",
       "options": {
-        "A": "4x3 − 8x2 + 5x + 3",
-        "B": "−4x3 + 8x2 − 5x + 3",
-        "C": "−4x3 − 8x2 + 5x + 3",
-        "D": "4x3 + 8x2 − 5x + 3"
+        "A": "4x3 - 8x2 + 5x + 3",
+        "B": "-4x3 + 8x2 - 5x + 3",
+        "C": "-4x3 - 8x2 + 5x + 3",
+        "D": "4x3 + 8x2 - 5x + 3"
       },
       "marks": 1,
       "year": 2017,
@@ -26709,7 +26709,7 @@
     {
       "id": "jamb-mathematics-bank-2102",
       "type": "mcq",
-      "stem": "Calculate 243\\(_{six}\\) – 243\\(_{five}\\) expressing your answer in base 10",
+      "stem": "Calculate 243\\(_{six}\\) - 243\\(_{five}\\) expressing your answer in base 10",
       "options": {
         "A": "0",
         "B": "1",
@@ -26779,7 +26779,7 @@
     {
       "id": "jamb-mathematics-bank-2107",
       "type": "mcq",
-      "stem": "Evaluate log\\(_2\\) 8 – log\\(_3\\) \\(\\frac{1}{9}\\)",
+      "stem": "Evaluate log\\(_2\\) 8 - log\\(_3\\) \\(\\frac{1}{9}\\)",
       "options": {
         "A": "-1 1\\(\\frac{1}{2}\\)",
         "B": "-1",
@@ -26905,7 +26905,7 @@
     {
       "id": "jamb-mathematics-bank-2116",
       "type": "mcq",
-      "stem": "Given that Sin (5\\(_x\\) − 28)\\(^o\\) = Cos(3\\(_x\\) − 50)\\(^o\\), o < x < 90\\(^o\\) Find the value of x",
+      "stem": "Given that Sin (5\\(_x\\) - 28)\\(^o\\) = Cos(3\\(_x\\) - 50)\\(^o\\), o < x < 90\\(^o\\) Find the value of x",
       "options": {
         "A": "14\\(^o\\)",
         "B": "21\\(^o\\)",
@@ -27035,8 +27035,8 @@
       "options": {
         "A": "3x\\(^3\\) - 2x\\(^2\\) + x + c",
         "B": "2x\\(^3\\) - x\\(^2\\) + x + c",
-        "C": "2x\\(^3\\) – 3x\\(^2\\) + c",
-        "D": "x\\(^3\\) + x\\(^2\\) – x + c"
+        "C": "2x\\(^3\\) - 3x\\(^2\\) + c",
+        "D": "x\\(^3\\) + x\\(^2\\) - x + c"
       },
       "marks": 1,
       "year": 2018,
@@ -29354,7 +29354,7 @@
     {
       "id": "jamb-mathematics-bank-2296",
       "type": "mcq",
-      "stem": "Correct 241.34(3 x 10−3 )2 to 4 significant figures",
+      "stem": "Correct 241.34(3 x 10-3 )2 to 4 significant figures",
       "options": {
         "A": "0.0014",
         "B": "0.001448",
@@ -29690,7 +29690,7 @@
     {
       "id": "jamb-mathematics-bank-2320",
       "type": "mcq",
-      "stem": "Solve the following equation: 2/(2r−1) - 5/3 = 1/(r+2)",
+      "stem": "Solve the following equation: 2/(2r-1) - 5/3 = 1/(r+2)",
       "options": {
         "A": "( -1,5/2 )",
         "B": "(1, - 5/2 )",
@@ -29944,9 +29944,9 @@
       "type": "mcq",
       "stem": "find the value of p if the line which passes through (-1, -p) and (-2,2) is parallel to the line 2y+8x-17=0?",
       "options": {
-        "A": "−2/7",
+        "A": "-2/7",
         "B": "7/6",
-        "C": "−6/7",
+        "C": "-6/7",
         "D": "2"
       },
       "marks": 1,
@@ -30544,7 +30544,7 @@
     {
       "id": "jamb-mathematics-bank-2381",
       "type": "mcq",
-      "stem": "Simplify 1/3−√2 in the form of p + q√2",
+      "stem": "Simplify 1/3-√2 in the form of p + q√2",
       "options": {
         "A": "7/3 - 1/7√2",
         "B": "7/3 + 1/7√2",
@@ -30768,7 +30768,7 @@
     {
       "id": "jamb-mathematics-bank-2397",
       "type": "mcq",
-      "stem": "find the limit of y = x3+6x−7/x−1 as x tends to 1",
+      "stem": "find the limit of y = x3+6x-7/x-1 as x tends to 1",
       "options": {
         "A": "9",
         "B": "8",
@@ -31177,7 +31177,7 @@
       "stem": "Determine the area of the region bounded by y = 2x² + 10 and Y = 4x+16 .",
       "options": {
         "A": "18",
-        "B": "−10/3",
+        "B": "-10/3",
         "C": "44/3",
         "D": "64/3"
       },
@@ -31397,12 +31397,12 @@
     {
       "id": "jamb-mathematics-bank-2442",
       "type": "mcq",
-      "stem": "Factorize: 16x⁴−y⁴",
+      "stem": "Factorize: 16x⁴-y⁴",
       "options": {
-        "A": "(2x−y)(2x+y)(4x²+y²)",
+        "A": "(2x-y)(2x+y)(4x²+y²)",
         "B": "(2x+y)(2x+y)(4x²+y²)",
-        "C": "(2x−y)(2x−y)(4x²+y²)",
-        "D": "(2x−y)(2x+y)(4x²−y²)"
+        "C": "(2x-y)(2x-y)(4x²+y²)",
+        "D": "(2x-y)(2x+y)(4x²-y²)"
       },
       "marks": 1,
       "year": 2023,
@@ -31498,7 +31498,7 @@
       "stem": "Find the equation of straight line passing through (2, 3) and perpendicular to the line 3x+2y+4=0",
       "options": {
         "A": "3y = 5x - 2",
-        "B": "y = 5/3×−2",
+        "B": "y = 5/3×-2",
         "C": "None of these",
         "D": "3y = 2x + 5"
       },
@@ -31551,7 +31551,7 @@
     {
       "id": "jamb-mathematics-bank-2453",
       "type": "mcq",
-      "stem": "Find the value of t, if the distance between the points P(–3, –14) and Q(t, –5) is 9 units.",
+      "stem": "Find the value of t, if the distance between the points P(-3, -14) and Q(t, -5) is 9 units.",
       "options": {
         "A": "3",
         "B": "2",
@@ -31817,7 +31817,7 @@
     {
       "id": "jamb-mathematics-bank-2472",
       "type": "mcq",
-      "stem": "If A = { 1, 2, 3, 4, 5, 6}, B = { 2, 4, 6, 8 }. Find (A – B) ⋃ (B – A).",
+      "stem": "If A = { 1, 2, 3, 4, 5, 6}, B = { 2, 4, 6, 8 }. Find (A - B) ⋃ (B - A).",
       "options": {
         "A": "{1, 3, 5, 8}",
         "B": "{8}",
@@ -31971,7 +31971,7 @@
     {
       "id": "jamb-mathematics-bank-2483",
       "type": "mcq",
-      "stem": "Make x the subject of the formula: y = 3x−9c / 4x+5d",
+      "stem": "Make x the subject of the formula: y = 3x-9c / 4x+5d",
       "options": {
         "A": "x = -(9c - 5dy) / (4y - 3)",
         "B": "x = (9c + 5dy) / (4y - 3)",
@@ -32013,7 +32013,7 @@
     {
       "id": "jamb-mathematics-bank-2486",
       "type": "mcq",
-      "stem": "Solve for x: 3(x – 1) ≤ 2 (x – 3)",
+      "stem": "Solve for x: 3(x - 1) ≤ 2 (x - 3)",
       "options": {
         "A": "x ≤ -3",
         "B": "x ≥ -3",
@@ -32041,12 +32041,12 @@
     {
       "id": "jamb-mathematics-bank-2488",
       "type": "mcq",
-      "stem": "Solve the following quadratic inequality: x²−x - 4 ≤ 2",
+      "stem": "Solve the following quadratic inequality: x²-x - 4 ≤ 2",
       "options": {
-        "A": "−3<x<2",
-        "B": "−2≤x≤3",
-        "C": "x≤−2,x≤3",
-        "D": "−2<x<3"
+        "A": "-3<x<2",
+        "B": "-2≤x≤3",
+        "C": "x≤-2,x≤3",
+        "D": "-2<x<3"
       },
       "marks": 1,
       "year": 2023,
@@ -32419,9 +32419,9 @@
     {
       "id": "jamb-mathematics-bank-2515",
       "type": "mcq",
-      "stem": "The second term of a geometric series is −2/3 and its sum to infinity is 3/2 . Find its common ratio.",
+      "stem": "The second term of a geometric series is -2/3 and its sum to infinity is 3/2 . Find its common ratio.",
       "options": {
-        "A": "−1/3",
+        "A": "-1/3",
         "B": "2",
         "C": "4/3",
         "D": "2/9"
@@ -33063,11 +33063,11 @@
     {
       "id": "jamb-mathematics-bank-2561",
       "type": "mcq",
-      "stem": "If tanθ = 8/15 , simplify Sinθ−Cosθ/Sin2θ−Sinθ",
+      "stem": "If tanθ = 8/15 , simplify Sinθ-Cosθ/Sin2θ-Sinθ",
       "options": {
-        "A": "−119/72",
+        "A": "-119/72",
         "B": "119/72",
-        "C": "−7/17",
+        "C": "-7/17",
         "D": "0"
       },
       "marks": 1,
@@ -33161,12 +33161,12 @@
     {
       "id": "jamb-mathematics-bank-2568",
       "type": "mcq",
-      "stem": "Make q the subject of the relation t = (pq/r−r2q",
+      "stem": "Make q the subject of the relation t = (pq/r-r2q",
       "options": {
-        "A": "q = rt2/p−r3",
-        "B": "q = p−r3/rt2",
-        "C": "q = t2/p−r3",
-        "D": "q = rt/p−r3"
+        "A": "q = rt2/p-r3",
+        "B": "q = p-r3/rt2",
+        "C": "q = t2/p-r3",
+        "D": "q = rt/p-r3"
       },
       "marks": 1,
       "year": 2024,
@@ -34015,7 +34015,7 @@
     {
       "id": "jamb-mathematics-bank-2631",
       "type": "mcq",
-      "stem": "Simplify 125\\(^{−\\frac{1}{3}}\\) × 49\\(^{−\\frac{1}{2}}\\) × 10\\(^0\\)",
+      "stem": "Simplify 125\\(^{-\\frac{1}{3}}\\) × 49\\(^{-\\frac{1}{2}}\\) × 10\\(^0\\)",
       "options": {
         "A": "\\(\\frac{1}{35}\\)",
         "B": "\\(\\frac{1}{350}\\)",
@@ -34887,7 +34887,7 @@
       "marks": 1,
       "year": 2006,
       "answer": "C",
-      "explanation": "F(x) = Q x D + R<br>\r\nKx<sup>3</sup> + x<sup>2</sup> - 5x – 2 = Q(2x+1)+R<br>\r\nIf 2x+1 = 0 implies x = -<sup>1</sup>/<sub>2</sub><br>\r\n∴k(-<sup>1</sup>/<sub>2</sub>)<sup>3</sup> + (-<sup>1</sup>/<sub>2</sub>)<sup>2</sup> -5(-<sup>1</sup>/<sub>2</sub>) -2<br>\r\n= Q(2(-<sup>1</sup>/<sub>2</sub>) + 1) +2<br>\r\nK(-<sup>1</sup>/<sub>8</sub>) + <sup>1</sup>/<sub>4</sub> + <sup>5</sup>/<sub>2</sub> - 2 = Q(-1+1)+2<br>\r\n-<sup>k</sup>/<sub>8</sub> + <sup>1</sup>/<sub>4</sub> + <sup>5</sup>/<sub>2</sub> - 2 = 0+2<br>\r\n(-k+2+20-16) / 8 = 2<br>\r\n(-k+6) / 8 = 2<br>\r\n-k+6 = 2*8<br>\r\n-k+6 = 16<br>\r\n-k = 16-6<br>\r\n-k = 10<br>\r\n∴k = -10",
+      "explanation": "F(x) = Q x D + R<br>\r\nKx<sup>3</sup> + x<sup>2</sup> - 5x - 2 = Q(2x+1)+R<br>\r\nIf 2x+1 = 0 implies x = -<sup>1</sup>/<sub>2</sub><br>\r\n∴k(-<sup>1</sup>/<sub>2</sub>)<sup>3</sup> + (-<sup>1</sup>/<sub>2</sub>)<sup>2</sup> -5(-<sup>1</sup>/<sub>2</sub>) -2<br>\r\n= Q(2(-<sup>1</sup>/<sub>2</sub>) + 1) +2<br>\r\nK(-<sup>1</sup>/<sub>8</sub>) + <sup>1</sup>/<sub>4</sub> + <sup>5</sup>/<sub>2</sub> - 2 = Q(-1+1)+2<br>\r\n-<sup>k</sup>/<sub>8</sub> + <sup>1</sup>/<sub>4</sub> + <sup>5</sup>/<sub>2</sub> - 2 = 0+2<br>\r\n(-k+2+20-16) / 8 = 2<br>\r\n(-k+6) / 8 = 2<br>\r\n-k+6 = 2*8<br>\r\n-k+6 = 16<br>\r\n-k = 16-6<br>\r\n-k = 10<br>\r\n∴k = -10",
       "video": "https://www.youtube.com/embed/kquYB5WvegQ?start=2070"
     },
     {
@@ -35098,7 +35098,7 @@
       "marks": 1,
       "year": 2007,
       "answer": "D",
-      "explanation": "log<sub>10</sub>12.5 = log<sub>10</sub> 12<sup>1</sup>/<sub>2</sub><br>\r\n= log<sub>10</sub><sup>25</sup>/<sub>2</sub><br>\r\n= log<sub>10</sub>25 - log<sub>10</sub>2<br>\r\n= log<sub>10</sub>5<sup>2</sup> - log<sub>10</sub>2<br>\r\n= 2log<sub>10</sub>5 - log<sub>10</sub>2<br>\r\n= 2log<sub>10</sub><sup>10</sup>/<sub>2</sub> - log<sub>10</sub>2<br>\r\n= 2(1-x)- x<br>\r\n= 2 - 2x – x<br>\r\n= 2 – 3x",
+      "explanation": "log<sub>10</sub>12.5 = log<sub>10</sub> 12<sup>1</sup>/<sub>2</sub><br>\r\n= log<sub>10</sub><sup>25</sup>/<sub>2</sub><br>\r\n= log<sub>10</sub>25 - log<sub>10</sub>2<br>\r\n= log<sub>10</sub>5<sup>2</sup> - log<sub>10</sub>2<br>\r\n= 2log<sub>10</sub>5 - log<sub>10</sub>2<br>\r\n= 2log<sub>10</sub><sup>10</sup>/<sub>2</sub> - log<sub>10</sub>2<br>\r\n= 2(1-x)- x<br>\r\n= 2 - 2x - x<br>\r\n= 2 - 3x",
       "video": "https://www.youtube.com/embed/08btcs6ByiM?start=396"
     },
     {
@@ -35130,7 +35130,7 @@
       "marks": 1,
       "year": 2007,
       "answer": "D",
-      "explanation": "If the line 3y = 4x – 1 is parallel t[ line qy = x + 3<br>\r\nImplies gradient of 3y = 4x – 1<br>\r\nY = <sup>4</sup>/<sub>3</sub>x - <sup>1</sup>/<sub>3</sub><br>\r\n∴Gradient = <sup>4</sup>/<sub>3</sub><br>\r\nGradient of line qy = x + 3<br>\r\nY = <sup>1</sup>/<sub>q</sub>x + <sup>3</sup>/<sub>q</sub><br>\r\n∴ Gradient = <sup>1</sup>/<sub>q</sub><br>\r\n<sup>4</sup>/<sub>3</sub> = <sup>1</sup>/<sub>q</sub><br>\r\n4q = 3<br>\r\nQ = <sup>3</sup>/<sub>4</sub>",
+      "explanation": "If the line 3y = 4x - 1 is parallel t[ line qy = x + 3<br>\r\nImplies gradient of 3y = 4x - 1<br>\r\nY = <sup>4</sup>/<sub>3</sub>x - <sup>1</sup>/<sub>3</sub><br>\r\n∴Gradient = <sup>4</sup>/<sub>3</sub><br>\r\nGradient of line qy = x + 3<br>\r\nY = <sup>1</sup>/<sub>q</sub>x + <sup>3</sup>/<sub>q</sub><br>\r\n∴ Gradient = <sup>1</sup>/<sub>q</sub><br>\r\n<sup>4</sup>/<sub>3</sub> = <sup>1</sup>/<sub>q</sub><br>\r\n4q = 3<br>\r\nQ = <sup>3</sup>/<sub>4</sub>",
       "video": "https://www.youtube.com/embed/08btcs6ByiM?start=1310"
     },
     {
@@ -35401,10 +35401,10 @@
       "type": "mcq",
       "stem": "<p>A polynomial in x whose roots are 4/3 and -3/5 is?</p>",
       "options": {
-        "A": "15x<sup>2</sup> - 11x – 12",
-        "B": "15x<sup>2</sup> + 11x – 12",
-        "C": "12x<sup>2</sup> - x – 12",
-        "D": "12x<sup>2</sup> + 11x – 15"
+        "A": "15x<sup>2</sup> - 11x - 12",
+        "B": "15x<sup>2</sup> + 11x - 12",
+        "C": "12x<sup>2</sup> - x - 12",
+        "D": "12x<sup>2</sup> + 11x - 15"
       },
       "marks": 1,
       "year": 2009,
@@ -35973,9 +35973,9 @@
       "stem": "<p>In the diagram above, PQR is a circle centre O. If &lt; QPR is x&deg;, find &lt; QRP.</p>",
       "options": {
         "A": "x°",
-        "B": "(90 – x)°",
+        "B": "(90 - x)°",
         "C": "(90 + x)°",
-        "D": "(180 – x)°"
+        "D": "(180 - x)°"
       },
       "marks": 1,
       "year": 2012,
@@ -36513,7 +36513,7 @@
     {
       "id": "jamb-mathematics-bank-2788",
       "type": "mcq",
-      "stem": "Simplify log<sub>10</sub>1.5 + 3 log<sub>10</sub>2 − log<sub>10</sub>0.3",
+      "stem": "Simplify log<sub>10</sub>1.5 + 3 log<sub>10</sub>2 - log<sub>10</sub>0.3",
       "options": {
         "A": "log<sub>10</sub>4",
         "B": "log<sub>10</sub>40",
@@ -36523,7 +36523,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "log<sub>10</sub>1.5 + 3 log<sub>10</sub>2 − log<sub>10</sub>0.3<br>\r\n<br>\r\nlog<sub>10</sub>1.5 + log<sub>10</sub>23 − log<sub>10</sub>0.3<br>\r\n<br>\r\n[log<sub>10</sub>(1.5 × 23) ÷ log<sub>10</sub>0.3]<br>\r\n<br>\r\n[log<sub>10</sub>(15/10 × 8 ) ÷ log<sub>10</sub>( 3/10)]<br>\r\n<br>\r\nlog<sub>10</sub>(15/10 × 8 × 10/3 )<br>\r\n<br>\r\nlog<sub>10</sub>40",
+      "explanation": "log<sub>10</sub>1.5 + 3 log<sub>10</sub>2 - log<sub>10</sub>0.3<br>\r\n<br>\r\nlog<sub>10</sub>1.5 + log<sub>10</sub>23 - log<sub>10</sub>0.3<br>\r\n<br>\r\n[log<sub>10</sub>(1.5 × 23) ÷ log<sub>10</sub>0.3]<br>\r\n<br>\r\n[log<sub>10</sub>(15/10 × 8 ) ÷ log<sub>10</sub>( 3/10)]<br>\r\n<br>\r\nlog<sub>10</sub>(15/10 × 8 × 10/3 )<br>\r\n<br>\r\nlog<sub>10</sub>40",
       "video": "https://www.youtube.com/embed/4ac261NYWEE?start=709"
     },
     {
@@ -36561,7 +36561,7 @@
     {
       "id": "jamb-mathematics-bank-2791",
       "type": "mcq",
-      "stem": "Solve x<sup>2</sup> − 2x − 3 = 0",
+      "stem": "Solve x<sup>2</sup> - 2x - 3 = 0",
       "options": {
         "A": "x = 2 or 1",
         "B": "x = 3 or -1",
@@ -36571,7 +36571,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "x<sup>2</sup> − 2x − 3 = 0<br>\r\n<br>\r\n−3x + x = − 2x<br>\r\n<br>\r\n− 3x × x = − 3x<sup>2</sup><br>\r\n<br>\r\n(x<sup>2</sup> − 3x)(x − 3) = 0<br>\r\n<br>\r\n(x − 3)(x + 1) = 0<br>\r\n<br>\r\nEither (x − 3) = 0 or (x + 1) = 0<br>\r\n<br>\r\nx = 3 or − 1",
+      "explanation": "x<sup>2</sup> - 2x - 3 = 0<br>\r\n<br>\r\n-3x + x = - 2x<br>\r\n<br>\r\n- 3x × x = - 3x<sup>2</sup><br>\r\n<br>\r\n(x<sup>2</sup> - 3x)(x - 3) = 0<br>\r\n<br>\r\n(x - 3)(x + 1) = 0<br>\r\n<br>\r\nEither (x - 3) = 0 or (x + 1) = 0<br>\r\n<br>\r\nx = 3 or - 1",
       "video": "https://www.youtube.com/embed/63rah992e-s?start=1892"
     },
     {
@@ -36603,7 +36603,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "Convert the binary to base 10 and they convert back to base two<br>\r\n<br>\r\n10011<sub>2</sub> + xxxxx<sub>2</sub> + 11100<sub>2</sub> + 101<sub>2</sub> = 1001111<sub>2</sub><br>\r\n<br>\r\n<br>\r\n(1 × 2<sup>4</sup> + 0 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 1 × 2<sup>1</sup> + 1 × 2<sup>0</sup>) + xxxxx<sub>2</sub> +(1 × 2<sup>4</sup> + 1 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 0 × 2<sup>0</sup>) + (1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 1 × 2<sup>0</sup>)<br>\r\n<br>\r\n= (16 + 0 + 0 + 2 + 1) + xxxxx<sub>2</sub> + (16 + 8 + 4 + 0 + 0 ) + (4 + 0 + 1)<br>\r\n<br>\r\n=(64 + 0 + 0 + 8 + 4 + 2 + 1)<br>\r\n<br>\r\n19 + xxxxx<sub>2</sub> + 33 = 79<br>\r\n<br>\r\nxxxxx<sub>2</sub> + 52 = 79<br>\r\n<br>\r\nxxxxx<sub>2</sub> = 79 − 52<br>\r\n<br>\r\nxxxxx<sub>2</sub> = 27<sub>10</sub><br>\r\n<br>\r\n\\( \\begin{array}{c|c}<br>\r\n  2 & 27 \\\\ <br>\r\n  \\hline<br>\r\n  2 & 13 \\text{   rem 1}\\\\<br>\r\n  2 &  6 \\text{   rem 1}\\\\<br>\r\n  2 &  3 \\text{   rem 0}\\\\<br>\r\n  2 &  1 \\text{   rem 1}\\\\<br>\r\n    &  0 \\text{   rem 1}\\\\<br>\r\n \\end{array}\\uparrow \\)<br>\r\n<br>\r\n            27<sub>10</sub> = 11011<sub>2</sub><br>\r\n<br>\r\n           Therefore xxxxx<sub>2</sub> = 27<sub>10</sub> = 11011<sub>2</sub>",
+      "explanation": "Convert the binary to base 10 and they convert back to base two<br>\r\n<br>\r\n10011<sub>2</sub> + xxxxx<sub>2</sub> + 11100<sub>2</sub> + 101<sub>2</sub> = 1001111<sub>2</sub><br>\r\n<br>\r\n<br>\r\n(1 × 2<sup>4</sup> + 0 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 1 × 2<sup>1</sup> + 1 × 2<sup>0</sup>) + xxxxx<sub>2</sub> +(1 × 2<sup>4</sup> + 1 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 0 × 2<sup>0</sup>) + (1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 1 × 2<sup>0</sup>)<br>\r\n<br>\r\n= (16 + 0 + 0 + 2 + 1) + xxxxx<sub>2</sub> + (16 + 8 + 4 + 0 + 0 ) + (4 + 0 + 1)<br>\r\n<br>\r\n=(64 + 0 + 0 + 8 + 4 + 2 + 1)<br>\r\n<br>\r\n19 + xxxxx<sub>2</sub> + 33 = 79<br>\r\n<br>\r\nxxxxx<sub>2</sub> + 52 = 79<br>\r\n<br>\r\nxxxxx<sub>2</sub> = 79 - 52<br>\r\n<br>\r\nxxxxx<sub>2</sub> = 27<sub>10</sub><br>\r\n<br>\r\n\\( \\begin{array}{c|c}<br>\r\n  2 & 27 \\\\ <br>\r\n  \\hline<br>\r\n  2 & 13 \\text{   rem 1}\\\\<br>\r\n  2 &  6 \\text{   rem 1}\\\\<br>\r\n  2 &  3 \\text{   rem 0}\\\\<br>\r\n  2 &  1 \\text{   rem 1}\\\\<br>\r\n    &  0 \\text{   rem 1}\\\\<br>\r\n \\end{array}\\uparrow \\)<br>\r\n<br>\r\n            27<sub>10</sub> = 11011<sub>2</sub><br>\r\n<br>\r\n           Therefore xxxxx<sub>2</sub> = 27<sub>10</sub> = 11011<sub>2</sub>",
       "video": "https://www.youtube.com/embed/72Y3uci_y_A?start=1118"
     },
     {
@@ -36612,14 +36612,14 @@
       "stem": "Calculate the value of x and y if (27<sup>x</sup> ÷ 81<sup>x+2y</sup> = 9 ,x + 4y = 0",
       "options": {
         "A": "x = 1, y = 1/2",
-        "B": "x = 2, y = – 1/2",
-        "C": "x − 0, y = 1",
-        "D": "x = 2, y = –1"
+        "B": "x = 2, y = - 1/2",
+        "C": "x - 0, y = 1",
+        "D": "x = 2, y = -1"
       },
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "\\(27^x ÷ 81^{(x + 2y)} = 9 \\\\<br>\r\n<br>\r\n(27)x = 9 × 81^{(x+2y)} \\\\<br>\r\n<br>\r\n(3^3 )^x =32 \\times 3^{4(x + 2y)} \\\\<br>\r\n<br>\r\n=3^{(2 + 4x + 8y)}\\\\<br>\r\n<br>\r\n3^{3x} = 3^{ (2 + 4x + 8y)}\\\\<br>\r\n<br>\r\n3x = 2 + 4x + 8y\\\\<br>\r\n<br>\r\n3x − 4x − 8y = 2 … … … (1)\\\\<br>\r\n<br>\r\nx + 4y = 0 … … … (2)\\\\<br>\r\n<br>\r\n− 4y = 2\\\\<br>\r\n<br>\r\ny = (− 2) ÷ 4 = − ½\\\\<br>\r\n<br>\r\ny = − ½\\\\ \\)<br>\r\n<br>\r\nSubstitute the value of y into equation (2)<br>\r\n<br>\r\ni.e x + 4y = 0<br>\r\n<br>\r\nx + 4( − 1/2) = 0<br>\r\n<br>\r\nx − 2 = 0<br>\r\n<br>\r\nx = 2<br>\r\n<br>\r\n∴ x = 2,y = − ½)<br>\r\n<br>\r\nMethod II<br>\r\n<br>\r\n\\( 27^x ÷ 31^{(x + 2y) }= 9\\\\<br>\r\n<br>\r\n3^{3x} × 3^{( − 4x − 8y)} = 32\\\\<br>\r\n<br>\r\n3^{(3x − 8y)} = 32\\\\<br>\r\n<br>\r\n− x − 8y=2 ……… (1)\\\\<br>\r\n<br>\r\nx + 4y = 0 ……… (2)\\\\<br>\r\n<br>\r\n− 4 = 2\\\\<br>\r\n<br>\r\ny= 2/4 = ½\\\\<br>\r\n<br>\r\ny = ½ \\)<br>\r\n<br>\r\nSubstitute the value of y into equation 2<br>\r\n<br>\r\nx + 4y=0<br>\r\n<br>\r\nx + 4 (− 1) ÷ 2) = 0<br>\r\n<br>\r\nx − 2 = 0<br>\r\n<br>\r\nx = 2<br>\r\n<br>\r\nx = 2, y = ½",
+      "explanation": "\\(27^x ÷ 81^{(x + 2y)} = 9 \\\\<br>\r\n<br>\r\n(27)x = 9 × 81^{(x+2y)} \\\\<br>\r\n<br>\r\n(3^3 )^x =32 \\times 3^{4(x + 2y)} \\\\<br>\r\n<br>\r\n=3^{(2 + 4x + 8y)}\\\\<br>\r\n<br>\r\n3^{3x} = 3^{ (2 + 4x + 8y)}\\\\<br>\r\n<br>\r\n3x = 2 + 4x + 8y\\\\<br>\r\n<br>\r\n3x - 4x - 8y = 2 … … … (1)\\\\<br>\r\n<br>\r\nx + 4y = 0 … … … (2)\\\\<br>\r\n<br>\r\n- 4y = 2\\\\<br>\r\n<br>\r\ny = (- 2) ÷ 4 = - ½\\\\<br>\r\n<br>\r\ny = - ½\\\\ \\)<br>\r\n<br>\r\nSubstitute the value of y into equation (2)<br>\r\n<br>\r\ni.e x + 4y = 0<br>\r\n<br>\r\nx + 4( - 1/2) = 0<br>\r\n<br>\r\nx - 2 = 0<br>\r\n<br>\r\nx = 2<br>\r\n<br>\r\n∴ x = 2,y = - ½)<br>\r\n<br>\r\nMethod II<br>\r\n<br>\r\n\\( 27^x ÷ 31^{(x + 2y) }= 9\\\\<br>\r\n<br>\r\n3^{3x} × 3^{( - 4x - 8y)} = 32\\\\<br>\r\n<br>\r\n3^{(3x - 8y)} = 32\\\\<br>\r\n<br>\r\n- x - 8y=2 ……… (1)\\\\<br>\r\n<br>\r\nx + 4y = 0 ……… (2)\\\\<br>\r\n<br>\r\n- 4 = 2\\\\<br>\r\n<br>\r\ny= 2/4 = ½\\\\<br>\r\n<br>\r\ny = ½ \\)<br>\r\n<br>\r\nSubstitute the value of y into equation 2<br>\r\n<br>\r\nx + 4y=0<br>\r\n<br>\r\nx + 4 (- 1) ÷ 2) = 0<br>\r\n<br>\r\nx - 2 = 0<br>\r\n<br>\r\nx = 2<br>\r\n<br>\r\nx = 2, y = ½",
       "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=302"
     },
     {

@@ -49,10 +49,10 @@
       "type": "mcq",
       "stem": "The radius ratio required for tetrahedral void formation is:",
       "options": {
-        "A": "0.732–1.00",
-        "B": "0.414–0.732",
-        "C": "0.225–0.414",
-        "D": "0.155–0.225"
+        "A": "0.732-1.00",
+        "B": "0.414-0.732",
+        "C": "0.225-0.414",
+        "D": "0.155-0.225"
       },
       "marks": 1,
       "answer": "C"
@@ -541,7 +541,7 @@
     {
       "id": "uni-eksu-chm102-bank-0042",
       "type": "mcq",
-      "stem": "The IUPAC name of CH3–CH2–CH(CH3)–CH3 is:",
+      "stem": "The IUPAC name of CH3-CH2-CH(CH3)-CH3 is:",
       "options": {
         "A": "n-Pentane",
         "B": "2-Methylbutane",
@@ -749,7 +749,7 @@
     {
       "id": "uni-eksu-chm102-bank-0058",
       "type": "mcq",
-      "stem": "IUPAC name for CH3–O–CH3 is:",
+      "stem": "IUPAC name for CH3-O-CH3 is:",
       "options": {
         "A": "Ethanol",
         "B": "Methoxy methane",
@@ -764,10 +764,10 @@
       "type": "mcq",
       "stem": "A ketone is represented as:",
       "options": {
-        "A": "R–CHO",
-        "B": "R–OH",
-        "C": "R–CO–R'",
-        "D": "R–COOH"
+        "A": "R-CHO",
+        "B": "R-OH",
+        "C": "R-CO-R'",
+        "D": "R-COOH"
       },
       "marks": 1,
       "answer": "C"

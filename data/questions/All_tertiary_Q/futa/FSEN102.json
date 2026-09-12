@@ -481,7 +481,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The stack grows downward — PUSH decrements SP by 2, POP increments SP by 2."
+      "explanation": "The stack grows downward - PUSH decrements SP by 2, POP increments SP by 2."
     },
     {
       "id": "uni-futa-fsen102-0035",
@@ -1153,7 +1153,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Both operands are registers — no memory or immediate value involved."
+      "explanation": "Both operands are registers - no memory or immediate value involved."
     },
     {
       "id": "uni-futa-fsen102-0083",
@@ -1209,7 +1209,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Indexed addressing (using SI or DI) is ideal for arrays — increment SI/DI to access successive elements."
+      "explanation": "Indexed addressing (using SI or DI) is ideal for arrays - increment SI/DI to access successive elements."
     },
     {
       "id": "uni-futa-fsen102-0087",
@@ -1363,7 +1363,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "INC does not affect CF (Carry Flag) — this allows using INC in loop counters without disturbing carry state."
+      "explanation": "INC does not affect CF (Carry Flag) - this allows using INC in loop counters without disturbing carry state."
     },
     {
       "id": "uni-futa-fsen102-0098",
@@ -1461,7 +1461,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "JE and JZ are identical — both jump when ZF=1."
+      "explanation": "JE and JZ are identical - both jump when ZF=1."
     },
     {
       "id": "uni-futa-fsen102-0105",
@@ -1475,7 +1475,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "JNE and JNZ are identical — both jump when ZF=0."
+      "explanation": "JNE and JNZ are identical - both jump when ZF=0."
     },
     {
       "id": "uni-futa-fsen102-0106",
@@ -1755,7 +1755,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "TEST is like AND but does not store the result — it only sets flags for conditional jumps."
+      "explanation": "TEST is like AND but does not store the result - it only sets flags for conditional jumps."
     },
     {
       "id": "uni-futa-fsen102-0126",
@@ -1839,7 +1839,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "RCL (Rotate through Carry Left) treats CF as bit 16 — the MSB goes into CF, and old CF goes into LSB."
+      "explanation": "RCL (Rotate through Carry Left) treats CF as bit 16 - the MSB goes into CF, and old CF goes into LSB."
     },
     {
       "id": "uni-futa-fsen102-0132",
@@ -1853,7 +1853,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "RCR (Rotate through Carry Right) treats CF as bit 16 — the LSB goes into CF, and old CF goes into MSB."
+      "explanation": "RCR (Rotate through Carry Right) treats CF as bit 16 - the LSB goes into CF, and old CF goes into MSB."
     },
     {
       "id": "uni-futa-fsen102-0133",
@@ -1965,7 +1965,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "INT 21h is the DOS API interrupt — AH specifies the function number (e.g., AH=09h for print string, AH=4Ch for exit)."
+      "explanation": "INT 21h is the DOS API interrupt - AH specifies the function number (e.g., AH=09h for print string, AH=4Ch for exit)."
     },
     {
       "id": "uni-futa-fsen102-0141",
@@ -2049,7 +2049,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "IRET pops IP, CS, and FLAGS from the stack — used to return from interrupt handlers."
+      "explanation": "IRET pops IP, CS, and FLAGS from the stack - used to return from interrupt handlers."
     },
     {
       "id": "uni-futa-fsen102-0147",
@@ -2175,7 +2175,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "DF=0 (cleared by CLD) means forward direction — SI and DI increment after each string operation."
+      "explanation": "DF=0 (cleared by CLD) means forward direction - SI and DI increment after each string operation."
     },
     {
       "id": "uni-futa-fsen102-0156",
@@ -2189,7 +2189,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "DF=1 (set by STD) means backward direction — SI and DI decrement after each string operation."
+      "explanation": "DF=1 (set by STD) means backward direction - SI and DI decrement after each string operation."
     },
     {
       "id": "uni-futa-fsen102-0157",
@@ -2357,7 +2357,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "REPNE SCASB repeats until AL matches a byte in the string (ZF=1) or CX=0 — finding a character."
+      "explanation": "REPNE SCASB repeats until AL matches a byte in the string (ZF=1) or CX=0 - finding a character."
     },
     {
       "id": "uni-futa-fsen102-0169",
@@ -2693,7 +2693,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "COM programs use a single 64KB segment for code, data, and stack — CS=DS=SS."
+      "explanation": "COM programs use a single 64KB segment for code, data, and stack - CS=DS=SS."
     },
     {
       "id": "uni-futa-fsen102-0193",
@@ -2875,7 +2875,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "BSWAP reverses byte order in a 32-bit register — introduced in the 80486."
+      "explanation": "BSWAP reverses byte order in a 32-bit register - introduced in the 80486."
     },
     {
       "id": "uni-futa-fsen102-0206",
@@ -2917,7 +2917,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "OF detects signed overflow — when the result of a signed operation is too large/small for the operand size."
+      "explanation": "OF detects signed overflow - when the result of a signed operation is too large/small for the operand size."
     },
     {
       "id": "uni-futa-fsen102-0209",
@@ -2931,7 +2931,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "CF detects unsigned overflow — carry out of the MSB during addition, or borrow during subtraction."
+      "explanation": "CF detects unsigned overflow - carry out of the MSB during addition, or borrow during subtraction."
     },
     {
       "id": "uni-futa-fsen102-0210",

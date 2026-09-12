@@ -361,7 +361,7 @@
       "stem": "Which of the following is NOT listed as a type of decision control statement in Python?",
       "options": {
         "A": "Simple If",
-        "B": "If – else",
+        "B": "If - else",
         "C": "Nested If",
         "D": "GoTo statement"
       },
@@ -1193,7 +1193,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Page 18 of the document explicitly states: 'Python has three types of control structures: Sequential – default mode, Selection – used for decisions and branching, Repetition – used for looping i.e Repeating a piece of code multiple times'. Recursion is a programming technique, but not one of the fundamental control structures listed in this context."
+      "explanation": "Page 18 of the document explicitly states: 'Python has three types of control structures: Sequential - default mode, Selection - used for decisions and branching, Repetition - used for looping i.e Repeating a piece of code multiple times'. Recursion is a programming technique, but not one of the fundamental control structures listed in this context."
     },
     {
       "id": "uni-unilag-cos102-bank-0086",
@@ -3587,7 +3587,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The document clarifies: 'String methods don't modify the original text—they return a brand new string value that you have to save into a variable.' This is a direct consequence of strings being immutable."
+      "explanation": "The document clarifies: 'String methods don't modify the original text-they return a brand new string value that you have to save into a variable.' This is a direct consequence of strings being immutable."
     },
     {
       "id": "uni-unilag-cos102-bank-0257",
@@ -4021,7 +4021,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Page 43 indicates that the V-Shaped Model is an 'Excellent choice for systems requiring high reliability – hospital patient control applications.'"
+      "explanation": "Page 43 indicates that the V-Shaped Model is an 'Excellent choice for systems requiring high reliability - hospital patient control applications.'"
     },
     {
       "id": "uni-unilag-cos102-bank-0288",
@@ -4231,7 +4231,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Page 43 indicates that the V-Shaped Model is an \"Excellent choice for systems requiring high reliability – hospital patient control applications.\" This suggests its suitability for critical systems where precision and verification are paramount."
+      "explanation": "Page 43 indicates that the V-Shaped Model is an \"Excellent choice for systems requiring high reliability - hospital patient control applications.\" This suggests its suitability for critical systems where precision and verification are paramount."
     },
     {
       "id": "uni-unilag-cos102-bank-0303",
@@ -6107,7 +6107,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Page 18 explicitly states: 'Selection – used for decisions and branching.'"
+      "explanation": "Page 18 explicitly states: 'Selection - used for decisions and branching.'"
     },
     {
       "id": "uni-unilag-cos102-bank-0437",

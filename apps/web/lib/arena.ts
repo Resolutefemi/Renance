@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Arena WS client — the browser half of the multiplayer hub
+ * Arena WS client, the browser half of the multiplayer hub
  * (apps/study-api/internal/arena). One authenticated socket per match
  * session: queue → matched → question/result… → over. The access token
  * rides the ?token= query (browsers cannot set WS headers), the same
@@ -36,7 +36,7 @@ export type ArenaInbound =
   | {
       type: 'question';
       matchId?: string;
-      // index 0 is the first question — tolerate older hubs that omit it
+      // index 0 is the first question, tolerate older hubs that omit it
       index?: number;
       deadline: number;
       question: ArenaQView;

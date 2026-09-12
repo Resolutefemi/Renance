@@ -25,12 +25,12 @@ const FEATURES = [
   {
     icon: 'fact_check',
     title: 'Server-graded CBT papers',
-    body: 'Every mock is marked on the server with the sealed answer keys, the same doctrine real exam bodies use. No browser tricks, no self-marking — your score is honest even when the network drops.',
+    body: 'Every mock is marked on the server with the sealed answer keys, the same doctrine real exam bodies use. No browser tricks, no self-marking, your score is honest even when the network drops.',
   },
   {
     icon: 'event_repeat',
     title: 'Spaced review that plans itself',
-    body: 'Topics you miss enter an SM-2 spaced-repetition queue and return exactly when you would forget them. Clear the queue, keep the knowledge — no planner to maintain.',
+    body: 'Topics you miss enter an SM-2 spaced-repetition queue and return exactly when you would forget them. Clear the queue, keep the knowledge, no planner to maintain.',
   },
   {
     icon: 'record_voice_over',
@@ -40,7 +40,7 @@ const FEATURES = [
   {
     icon: 'auto_stories',
     title: 'The JAMB novel, question by question',
-    body: 'The Lekki Headmaster ships as an opt-in question set inside every Use of English mock — switch it on when you are ready, exactly like the hall asks.',
+    body: 'The Lekki Headmaster ships as an opt-in question set inside every Use of English mock, switch it on when you are ready, exactly like the hall asks.',
   },
   {
     icon: 'battery_saver',
@@ -58,7 +58,7 @@ const STEPS = [
   {
     icon: 'how_to_reg',
     title: 'Register in 10 seconds',
-    body: 'Username and password only — no email, no data bundle wasted on forms. Set your target exam and year, and your desk is ready.',
+    body: 'Username and password only, no email, no data bundle wasted on forms. Set your target exam and year, and your desk is ready.',
   },
   {
     icon: 'tune',
@@ -109,7 +109,7 @@ export default function Landing() {
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
             {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, CBT mocks graded
             on the server, a review queue that plans itself, voice flashcards and the JAMB novel
-            built in — for JAMB, WAEC, NECO and university students. Free, on Android, iOS, Windows,
+            built in, for JAMB, WAEC, NECO and university students. Free, on Android, iOS, Windows,
             macOS and the web.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -125,12 +125,12 @@ export default function Landing() {
             username + password only · no email required
           </p>
 
-          {/* live stats strip — baked from the manifest at build time */}
+          {/* live stats strip, baked from the manifest at build time */}
           <dl className="mt-12 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
             {[
               { k: 'Past questions', v: `${fmt(totalQuestions)}+` },
               { k: 'Exam packs', v: String(exams.length) },
-              { k: 'Years covered', v: `${yearFrom}–${yearTo}` },
+              { k: 'Years covered', v: `${yearFrom}-${yearTo}` },
               { k: 'Exam bodies', v: 'JAMB · WAEC · NECO' },
             ].map((s) => (
               <div
@@ -146,7 +146,7 @@ export default function Landing() {
           </dl>
         </section>
 
-        {/* coverage — the archive, by body */}
+        {/* coverage, the archive, by body */}
         <section className="pb-4">
           <div className="rounded-2xl bg-dark-surface p-6 sm:p-10">
             <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
@@ -156,7 +156,7 @@ export default function Landing() {
                 </h2>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/70">
                   Every pack carries the year it was sat, the options, the sealed answer key and the
-                  worked explanation — harvested, cleaned and organised so you practise the real
+                  worked explanation, harvested, cleaned and organised so you practise the real
                   thing, not a paraphrase.
                 </p>
               </div>
@@ -169,10 +169,10 @@ export default function Landing() {
             </div>
             <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978–2025 · all subjects · novel included' },
+                { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978-2025 · all subjects · novel included' },
                 { body: 'WAEC', count: sum(waecExams), packs: waecExams.length, note: 'objectives + theory with model answers' },
                 { body: 'NECO', count: sum(necoExams), packs: necoExams.length, note: 'objectives + theory packs' },
-                { body: 'University', count: sum(uniExams), packs: uniExams.length, note: 'per-school course banks — FUTA first, more landing' },
+                { body: 'University', count: sum(uniExams), packs: uniExams.length, note: 'per-school course banks, FUTA first, more landing' },
               ].map((b) => (
                 <div key={b.body} className="rounded-xl bg-white/5 p-5 ring-1 ring-white/10">
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">{b.body}</p>
@@ -192,7 +192,7 @@ export default function Landing() {
             Everything a serious candidate needs
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-[15px] leading-relaxed text-on-surface-variant">
-            Not a quiz bank with ads glued on — a complete study operating system that remembers
+            Not a quiz bank with ads glued on, a complete study operating system that remembers
             what you missed and schedules the fix.
           </p>
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -238,8 +238,8 @@ export default function Landing() {
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
                 The player mirrors the real JAMB software: a live question map, flag-and-return,
-                answers that lock in exam mode, a hall-approved calculator, auto-submit at zero —
-                and a keyboard-first desktop layout (A–F to pick, arrows to move) so laptop
+                answers that lock in exam mode, a hall-approved calculator, auto-submit at zero,
+                and a keyboard-first desktop layout (A-F to pick, arrows to move) so laptop
                 candidates train the way they will sit.
               </p>
               <ul className="mt-4 space-y-1.5 text-[13px] text-on-surface-variant">
@@ -261,7 +261,7 @@ export default function Landing() {
               <span className="material-symbols-outlined text-3xl text-accent-amber">auto_stories</span>
               <h3 className="mt-3 text-lg font-bold tracking-tight">Reading “The Lekki Headmaster”?</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/75">
-                JAMB&apos;s recommended text ships inside Renance as a proper question set — fifty
+                JAMB&apos;s recommended text ships inside Renance as a proper question set, fifty
                 questions across all twelve chapters, each with the sealed answer and a worked
                 explanation. Switch it on in Mock Setup when you are ready; leave it off while you
                 are still reading.
@@ -318,7 +318,7 @@ export default function Landing() {
               Your competition started revising yesterday.
             </h2>
             <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-on-surface-variant">
-              Create a free account and sit your first server-graded paper in the next two minutes —
+              Create a free account and sit your first server-graded paper in the next two minutes,
               {fmt(totalQuestions)}+ past questions are waiting.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">

@@ -9,7 +9,7 @@ import type { School, SchoolCatalog, UniversityCourse } from './university-data'
  * Client half of the university desk: the school registry (bundled at
  * build time) and the student's chosen school. The interface is one and
  * the same for every school; what changes is the content wrapped under
- * it — courses, question banks, PDFs — keyed by the school slug.
+ * it, courses, question banks, PDFs, keyed by the school slug.
  */
 
 const SCHOOL_KEY = 'renance.uni.school.v1';
@@ -150,7 +150,7 @@ export function schoolHref(slug: string): string {
 }
 
 /* ------------------------------------------------------------------ */
-/* Practice math — the renancecbt course-portal logic                   */
+/* Practice math, the renancecbt course-portal logic                   */
 /* ------------------------------------------------------------------ */
 
 /** The portals slice every course into 50-question Part chunks. */
@@ -167,7 +167,7 @@ export function partRange(part: number, total: number): { from: number; to: numb
   return { from, to };
 }
 
-/** href of a course part — a contiguous Q-chunk, portal-style. */
+/** href of a course part, a contiguous Q-chunk, portal-style. */
 export function partHref(bank: string, part: number, total: number, timer?: number): string {
   const { from, to } = partRange(part, total);
   return examHref(buildPickCode(bank, { from, count: to - from + 1, timer }));

@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }));
-  // The university desk is public per school + course — the same commit
+  // The university desk is public per school + course, the same commit
   // that wraps a school's content ships its sitemap entries.
   const schoolEntries = loadSchools()
     .filter((s) => s.live)

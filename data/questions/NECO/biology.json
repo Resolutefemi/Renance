@@ -656,7 +656,7 @@
       "options": {
         "A": "black fly",
         "B": "cockroach",
-        "C": "house –fly",
+        "C": "house -fly",
         "D": "mosquito",
         "E": "Tsetse fly"
       },
@@ -2363,7 +2363,7 @@
       "type": "mcq",
       "stem": "The correct sequence of energy transfer among living organisms in an ecosystem is",
       "options": {
-        "A": "consumers - decomposers – producers",
+        "A": "consumers - decomposers - producers",
         "B": "consumers - producers - decomposers",
         "C": "decomposers - producers- consumers",
         "D": "producers - consumers- decomposers",

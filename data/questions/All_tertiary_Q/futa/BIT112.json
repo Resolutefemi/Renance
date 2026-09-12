@@ -215,7 +215,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Timely information is available at the right time — outdated information may be useless."
+      "explanation": "Timely information is available at the right time - outdated information may be useless."
     },
     {
       "id": "uni-futa-bit112-0016",
@@ -229,7 +229,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Relevant information directly relates to the question being addressed — irrelevant data wastes time."
+      "explanation": "Relevant information directly relates to the question being addressed - irrelevant data wastes time."
     },
     {
       "id": "uni-futa-bit112-0017",
@@ -243,7 +243,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Primary storage is the main memory directly accessible by the CPU — RAM, ROM, and cache."
+      "explanation": "Primary storage is the main memory directly accessible by the CPU - RAM, ROM, and cache."
     },
     {
       "id": "uni-futa-bit112-0018",
@@ -369,7 +369,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Data minimization is a privacy principle — collect only what you need to reduce risk."
+      "explanation": "Data minimization is a privacy principle - collect only what you need to reduce risk."
     },
     {
       "id": "uni-futa-bit112-0027",
@@ -705,7 +705,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "RPO defines how much data loss is tolerable — e.g., 'RPO of 1 hour' means at most 1 hour of data can be lost."
+      "explanation": "RPO defines how much data loss is tolerable - e.g., 'RPO of 1 hour' means at most 1 hour of data can be lost."
     },
     {
       "id": "uni-futa-bit112-0051",
@@ -719,7 +719,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "RTO defines how quickly systems must be back online — e.g., 'RTO of 4 hours' means restore within 4 hours."
+      "explanation": "RTO defines how quickly systems must be back online - e.g., 'RTO of 4 hours' means restore within 4 hours."
     },
     {
       "id": "uni-futa-bit112-0052",
@@ -803,7 +803,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Tacit knowledge is experiential and hard to document — it lives in people's heads."
+      "explanation": "Tacit knowledge is experiential and hard to document - it lives in people's heads."
     },
     {
       "id": "uni-futa-bit112-0058",
@@ -817,7 +817,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Explicit knowledge is codified — it can be written, stored, and transferred easily."
+      "explanation": "Explicit knowledge is codified - it can be written, stored, and transferred easily."
     },
     {
       "id": "uni-futa-bit112-0059",
@@ -845,7 +845,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Metadata describes the structure, source, format, and properties of data — e.g., file size, author, date created."
+      "explanation": "Metadata describes the structure, source, format, and properties of data - e.g., file size, author, date created."
     },
     {
       "id": "uni-futa-bit112-0061",
@@ -971,7 +971,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Structured data fits neatly into rows and columns — easy to search, sort, and analyze."
+      "explanation": "Structured data fits neatly into rows and columns - easy to search, sort, and analyze."
     },
     {
       "id": "uni-futa-bit112-0070",
@@ -985,7 +985,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Unstructured data has no predefined model — it requires specialized tools (NLP, ML) to analyze."
+      "explanation": "Unstructured data has no predefined model - it requires specialized tools (NLP, ML) to analyze."
     },
     {
       "id": "uni-futa-bit112-0071",
@@ -1181,7 +1181,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "RAID combines multiple disks for redundancy and/or performance — if one fails, data survives."
+      "explanation": "RAID combines multiple disks for redundancy and/or performance - if one fails, data survives."
     },
     {
       "id": "uni-futa-bit112-0085",
@@ -1202,14 +1202,14 @@
       "type": "mcq",
       "stem": "ROM is different from RAM because ROM is:",
       "options": {
-        "A": "Non-volatile — retains data even without power",
+        "A": "Non-volatile - retains data even without power",
         "B": "Only used for gaming in the context of modern digital operations",
         "C": "Volatile and temporary in most organizational contexts",
         "D": "Faster than RAM in most organizational contexts"
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "ROM stores permanent instructions like BIOS — it doesn't lose data when power is off."
+      "explanation": "ROM stores permanent instructions like BIOS - it doesn't lose data when power is off."
     },
     {
       "id": "uni-futa-bit112-0087",
@@ -1265,7 +1265,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Duplicate records cause confusion and errors — uniqueness ensures no redundancy."
+      "explanation": "Duplicate records cause confusion and errors - uniqueness ensures no redundancy."
     },
     {
       "id": "uni-futa-bit112-0091",
@@ -1307,7 +1307,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Audio recordings have no predefined structure — they require NLP/speech-to-text to analyze."
+      "explanation": "Audio recordings have no predefined structure - they require NLP/speech-to-text to analyze."
     },
     {
       "id": "uni-futa-bit112-0094",
@@ -1377,7 +1377,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Valid data follows business rules — e.g., age cannot be negative, dates must be real."
+      "explanation": "Valid data follows business rules - e.g., age cannot be negative, dates must be real."
     },
     {
       "id": "uni-futa-bit112-0099",
@@ -1405,7 +1405,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Encryption protects data — even if stolen, encrypted data is useless without the decryption key."
+      "explanation": "Encryption protects data - even if stolen, encrypted data is useless without the decryption key."
     },
     {
       "id": "uni-futa-bit112-0101",
@@ -1433,7 +1433,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "An SLA defines the expected level of service — uptime, response time, support availability."
+      "explanation": "An SLA defines the expected level of service - uptime, response time, support availability."
     },
     {
       "id": "uni-futa-bit112-0103",
@@ -1461,7 +1461,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "BPR reimagines how work gets done — it's radical change, not incremental improvement."
+      "explanation": "BPR reimagines how work gets done - it's radical change, not incremental improvement."
     },
     {
       "id": "uni-futa-bit112-0105",
@@ -1531,7 +1531,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "KM ensures valuable knowledge isn't lost when employees leave — it's preserved and shared."
+      "explanation": "KM ensures valuable knowledge isn't lost when employees leave - it's preserved and shared."
     },
     {
       "id": "uni-futa-bit112-0110",
@@ -1629,7 +1629,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "TCO reveals the true cost — a cheap system with high maintenance may cost more long-term."
+      "explanation": "TCO reveals the true cost - a cheap system with high maintenance may cost more long-term."
     },
     {
       "id": "uni-futa-bit112-0117",
@@ -1685,7 +1685,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Ransomware locks businesses out of their own data — backups are the best defense."
+      "explanation": "Ransomware locks businesses out of their own data - backups are the best defense."
     },
     {
       "id": "uni-futa-bit112-0121",
@@ -1713,7 +1713,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Information has no inherent value — its value comes from being applied effectively."
+      "explanation": "Information has no inherent value - its value comes from being applied effectively."
     },
     {
       "id": "uni-futa-bit112-0123",
@@ -1741,7 +1741,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "SSDs have no mechanical parts — data access is electronic, making them much faster than spinning HDDs."
+      "explanation": "SSDs have no mechanical parts - data access is electronic, making them much faster than spinning HDDs."
     },
     {
       "id": "uni-futa-bit112-0125",
@@ -1811,7 +1811,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Good decisions require good information — accurate, relevant, and available when needed."
+      "explanation": "Good decisions require good information - accurate, relevant, and available when needed."
     },
     {
       "id": "uni-futa-bit112-0130",
@@ -1895,7 +1895,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "ROM is non-volatile — it retains data permanently even without power."
+      "explanation": "ROM is non-volatile - it retains data permanently even without power."
     },
     {
       "id": "uni-futa-bit112-0136",
@@ -1909,7 +1909,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Retention policies balance legal requirements, business needs, and privacy — keeping data too long is a risk."
+      "explanation": "Retention policies balance legal requirements, business needs, and privacy - keeping data too long is a risk."
     },
     {
       "id": "uni-futa-bit112-0137",
@@ -1937,7 +1937,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Shadow IT creates security risks and data silos — employees use unauthorized tools, bypassing IT governance."
+      "explanation": "Shadow IT creates security risks and data silos - employees use unauthorized tools, bypassing IT governance."
     },
     {
       "id": "uni-futa-bit112-0139",
@@ -1951,7 +1951,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Cache is the fastest type of memory — it stores frequently accessed data for quick retrieval."
+      "explanation": "Cache is the fastest type of memory - it stores frequently accessed data for quick retrieval."
     },
     {
       "id": "uni-futa-bit112-0140",
@@ -1965,7 +1965,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "All five components work together — missing any one makes the system incomplete."
+      "explanation": "All five components work together - missing any one makes the system incomplete."
     },
     {
       "id": "uni-futa-bit112-0141",
@@ -1993,7 +1993,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "RBAC assigns permissions based on job roles — managers see more than entry-level staff."
+      "explanation": "RBAC assigns permissions based on job roles - managers see more than entry-level staff."
     },
     {
       "id": "uni-futa-bit112-0143",
@@ -2049,7 +2049,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Full backups copy everything — they're comprehensive but slow and storage-intensive."
+      "explanation": "Full backups copy everything - they're comprehensive but slow and storage-intensive."
     },
     {
       "id": "uni-futa-bit112-0147",
@@ -2077,7 +2077,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "IDS detects potential threats but doesn't block them — an IPS (intrusion prevention system) actively blocks."
+      "explanation": "IDS detects potential threats but doesn't block them - an IPS (intrusion prevention system) actively blocks."
     },
     {
       "id": "uni-futa-bit112-0149",
@@ -2189,7 +2189,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Differential backups are between full and incremental — more storage than incremental but faster restore."
+      "explanation": "Differential backups are between full and incremental - more storage than incremental but faster restore."
     },
     {
       "id": "uni-futa-bit112-0157",
@@ -2203,7 +2203,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Asymmetric encryption (e.g., RSA) is more secure — the public key can be shared, the private key is secret."
+      "explanation": "Asymmetric encryption (e.g., RSA) is more secure - the public key can be shared, the private key is secret."
     },
     {
       "id": "uni-futa-bit112-0158",
@@ -2217,7 +2217,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Technology fails without user adoption — change management ensures employees embrace new systems."
+      "explanation": "Technology fails without user adoption - change management ensures employees embrace new systems."
     },
     {
       "id": "uni-futa-bit112-0159",
@@ -2245,7 +2245,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Pen tests find weaknesses before real attackers do — they're a proactive security measure."
+      "explanation": "Pen tests find weaknesses before real attackers do - they're a proactive security measure."
     },
     {
       "id": "uni-futa-bit112-0161",
@@ -2259,7 +2259,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Cache is the fastest — it's built into the CPU for immediate access to frequently used data."
+      "explanation": "Cache is the fastest - it's built into the CPU for immediate access to frequently used data."
     },
     {
       "id": "uni-futa-bit112-0162",
@@ -2287,7 +2287,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Silos prevent collaboration and create inefficiencies — integrated systems break them down."
+      "explanation": "Silos prevent collaboration and create inefficiencies - integrated systems break them down."
     },
     {
       "id": "uni-futa-bit112-0164",
@@ -2385,7 +2385,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "RAM is volatile — it loses all stored data when power is turned off."
+      "explanation": "RAM is volatile - it loses all stored data when power is turned off."
     },
     {
       "id": "uni-futa-bit112-0171",
@@ -2483,7 +2483,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Without internet, cloud-stored data is inaccessible — a major limitation for offline scenarios."
+      "explanation": "Without internet, cloud-stored data is inaccessible - a major limitation for offline scenarios."
     },
     {
       "id": "uni-futa-bit112-0178",
@@ -2497,7 +2497,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Compliance requires accurate, complete, and retrievable records — enabled by information systems."
+      "explanation": "Compliance requires accurate, complete, and retrievable records - enabled by information systems."
     },
     {
       "id": "uni-futa-bit112-0179",
@@ -2539,7 +2539,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Complete data has no gaps — missing fields can lead to incorrect conclusions."
+      "explanation": "Complete data has no gaps - missing fields can lead to incorrect conclusions."
     },
     {
       "id": "uni-futa-bit112-0182",
@@ -2567,7 +2567,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "A purchase receipt is generated from a specific transaction — it's transactional data."
+      "explanation": "A purchase receipt is generated from a specific transaction - it's transactional data."
     },
     {
       "id": "uni-futa-bit112-0184",
@@ -2581,7 +2581,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "External hard drives are secondary storage — permanent but slower than primary memory."
+      "explanation": "External hard drives are secondary storage - permanent but slower than primary memory."
     },
     {
       "id": "uni-futa-bit112-0185",
@@ -2595,7 +2595,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Least privilege limits damage from compromised accounts — if an account is hacked, the attacker has limited access."
+      "explanation": "Least privilege limits damage from compromised accounts - if an account is hacked, the attacker has limited access."
     },
     {
       "id": "uni-futa-bit112-0186",
@@ -2651,7 +2651,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Consistent data doesn't conflict — the same customer's name shouldn't differ between systems."
+      "explanation": "Consistent data doesn't conflict - the same customer's name shouldn't differ between systems."
     },
     {
       "id": "uni-futa-bit112-0190",
@@ -2679,7 +2679,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "SaaS (e.g., Google Workspace, Salesforce) delivers software over the internet — no installation needed."
+      "explanation": "SaaS (e.g., Google Workspace, Salesforce) delivers software over the internet - no installation needed."
     },
     {
       "id": "uni-futa-bit112-0192",
@@ -2693,7 +2693,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Flash storage (USB, SSD) uses electronic memory — no mechanical parts means faster access and better durability."
+      "explanation": "Flash storage (USB, SSD) uses electronic memory - no mechanical parts means faster access and better durability."
     },
     {
       "id": "uni-futa-bit112-0193",
@@ -2707,7 +2707,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "MFA significantly reduces unauthorized access — even if one factor is compromised, others protect the account."
+      "explanation": "MFA significantly reduces unauthorized access - even if one factor is compromised, others protect the account."
     },
     {
       "id": "uni-futa-bit112-0194",
@@ -2735,7 +2735,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Validation rules check data at entry point — e.g., email must contain @, age must be positive."
+      "explanation": "Validation rules check data at entry point - e.g., email must contain @, age must be positive."
     },
     {
       "id": "uni-futa-bit112-0196",
@@ -2749,7 +2749,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Tape is slow to access but cheap and durable — ideal for long-term archival storage."
+      "explanation": "Tape is slow to access but cheap and durable - ideal for long-term archival storage."
     },
     {
       "id": "uni-futa-bit112-0197",
@@ -2758,12 +2758,12 @@
       "options": {
         "A": "Slower than ROM in most organizational contexts",
         "B": "Only for gaming as typically understood in business",
-        "C": "Volatile — loses data when power is off",
+        "C": "Volatile - loses data when power is off",
         "D": "Permanent and non-volatile"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "RAM is volatile (temporary) — it loses all data when the computer is turned off. ROM is non-volatile."
+      "explanation": "RAM is volatile (temporary) - it loses all data when the computer is turned off. ROM is non-volatile."
     },
     {
       "id": "uni-futa-bit112-0198",
@@ -2777,7 +2777,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "DevOps breaks down silos between dev and ops — enabling continuous integration and deployment."
+      "explanation": "DevOps breaks down silos between dev and ops - enabling continuous integration and deployment."
     },
     {
       "id": "uni-futa-bit112-0199",
@@ -2903,7 +2903,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Cloud computing provides flexible resources that scale up/down based on demand — you only pay for what you use."
+      "explanation": "Cloud computing provides flexible resources that scale up/down based on demand - you only pay for what you use."
     },
     {
       "id": "uni-futa-bit112-0208",
@@ -2959,7 +2959,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Data masking replaces real data with fake but realistic data for testing — real customer data is never exposed."
+      "explanation": "Data masking replaces real data with fake but realistic data for testing - real customer data is never exposed."
     }
   ]
 }

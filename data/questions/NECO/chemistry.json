@@ -971,8 +971,8 @@
       "stem": "pH is define as",
       "options": {
         "A": "[H+]",
-        "B": "–log [H]",
-        "C": "–log [H+]",
+        "B": "-log [H]",
+        "C": "-log [H+]",
         "D": "log [H]",
         "E": "log [H+]"
       },
@@ -1390,11 +1390,11 @@
       "type": "mcq",
       "stem": "The following compounds decolorize acidified potassium tetraoxomanganate (VII) solution EXCEPT",
       "options": {
-        "A": "HOCH2 – CH2OH",
-        "B": "H2C –C =C– CH3",
-        "C": "H3C – HC = CH2",
+        "A": "HOCH2 - CH2OH",
+        "B": "H2C -C =C- CH3",
+        "C": "H3C - HC = CH2",
         "D": "H2C = CH2",
-        "E": "H3C – C =CH"
+        "E": "H3C - C =CH"
       },
       "marks": 1,
       "year": 2009,
@@ -1888,7 +1888,7 @@
         "A": "δ G ° =-nFE °",
         "B": "δG °-RT ln K",
         "C": "δ G °= + RT In k",
-        "D": "δG ° = δH – T S",
+        "D": "δG ° = δH - T S",
         "E": "H=TδS"
       },
       "marks": 1,
@@ -2309,7 +2309,7 @@
         "B": "NaCl(aq) contains mobile electrons, where absent in NaCl(s).",
         "C": "NaCl(aq) contains mobile ions which Nacl,) does not contain.",
         "D": "NaCl(s) ionizes partiality while NaCl(aq) iodizes completely.",
-        "E": "NaCl(s) decomposes when heated but NCl(aq) is stable to heat. –"
+        "E": "NaCl(s) decomposes when heated but NCl(aq) is stable to heat. -"
       },
       "marks": 1,
       "year": 2001,

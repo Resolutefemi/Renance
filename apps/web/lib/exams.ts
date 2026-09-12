@@ -13,7 +13,7 @@ export interface ExamMeta {
   sizeBytes: number;
   /** Exam body this pack serves: JAMB | WAEC | NECO | University Modules. */
   body?: string;
-  /** Exam years present in the pack (sorted) — the year pickers' data. */
+  /** Exam years present in the pack (sorted), the year pickers' data. */
   years?: number[];
 }
 
@@ -63,13 +63,28 @@ export interface Bundle {
 }
 
 export async function fetchManifest(): Promise<Manifest> {
-  return api<Manifest>('/manifest');
+  // The manifest is baked into the static export at build time
+  // (scripts/web_bundles.py): same-origin, CDN-cached, no API cold
+  // start. The API stays as the fallback for stale deploys.
+  try {
+    return await fetchStatic<Manifest>('/bundles/manifest.json');
+  } catch {
+    return api<Manifest>('/manifest');
+  }
+}
+
+/** Same-origin static asset fetch (GitHub Pages serves under the base path). */
+async function fetchStatic<T>(path: string): Promise<T> {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+  const res = await fetch(`${base}${path}`);
+  if (!res.ok) throw new Error(`static ${path}: ${res.status}`);
+  return (await res.json()) as T;
 }
 
 /**
  * Cache keys live under the renance.bundle.* namespace in IndexedDB
  * (the old localStorage namespace, migrated once at boot). Bundles are
- * multi-megabyte JSON — localStorage blew the ~5MB origin quota on the
+ * multi-megabyte JSON, localStorage blew the ~5MB origin quota on the
  * English bank, so all bundle persistence goes through bundle-store.ts
  * and never touches localStorage again.
  */
@@ -81,7 +96,16 @@ export async function fetchBundle(exam: ExamMeta): Promise<Bundle> {
   const key = cacheKey(exam.code, exam.bundleSha256);
   const cached = (await idbGetBundle(key)) as Bundle | null;
   if (cached && cached.questions) return cached;
-  const bundle = await api<Bundle>(`/bundles/${exam.code}`);
+  // Manifest packs ship as static files on the CDN (scripts/web_bundles.py
+  // bakes them into the export, answer material stripped): instant, no
+  // Render cold start. Composed papers are not in the manifest, so
+  // fetchBundleByCode keeps going straight to the API.
+  let bundle: Bundle;
+  try {
+    bundle = await fetchStatic<Bundle>(`/bundles/${exam.code}.json`);
+  } catch {
+    bundle = await api<Bundle>(`/bundles/${exam.code}`);
+  }
   // sha pinned cache: old versions simply become unreachable keys
   void idbSetBundle(key, bundle);
   return bundle;
@@ -98,7 +122,7 @@ export function isMockPaperCode(code: string): boolean {
   return code.startsWith(MOCK_PAPER_PREFIX) && code.length > MOCK_PAPER_PREFIX.length;
 }
 
-/** Custom-practice composed papers — any body: jamb/waec/neco. */
+/** Custom-practice composed papers, any body: jamb/waec/neco. */
 export const CUSTOM_PAPER_PREFIX = 'jamb-custom-';
 export const WAEC_CUSTOM_PAPER_PREFIX = 'waec-custom-';
 export const NECO_CUSTOM_PAPER_PREFIX = 'neco-custom-';
@@ -175,7 +199,7 @@ export function subjectName(slug: string): string {
  * The server composes these papers purely from the code (see
  * apps/study-api/internal/cbtdata/papercode.go): subjects + optional
  * dot-joined params, canonically ordered y,n,enN,comp,compN,t. The
- * client MUST build codes through these builders — the server refuses
+ * client MUST build codes through these builders, the server refuses
  * non-canonical strings.
  */
 
@@ -189,7 +213,7 @@ export interface MockOptions {
   comprehension?: boolean;
   /** How many comprehension questions the English section carries (default 10). */
   comprehensionCount?: number;
-  /** Include the JAMB novel questions ("The Lekki Headmaster") —
+  /** Include the JAMB novel questions ("The Lekki Headmaster"),
    *  default false, mirroring the real "do you want the novel?" ask. */
   novel?: boolean;
   /** Timer minutes (default 120). */
@@ -241,7 +265,7 @@ export interface CustomOptions {
 }
 
 /** Canonical custom-practice paper code: subjects fully sorted, ≥1.
- *  Params follow the server's canonical order y,n,t — emitting n before
+ *  Params follow the server's canonical order y,n,t, emitting n before
  *  y fails the byte-for-byte canonical check for any year-pinned paper. */
 export function buildCustomCode(subjects: ReadonlyArray<string>, opts: CustomOptions): string {
   const sorted = [...new Set(subjects)].sort();
@@ -260,7 +284,7 @@ export type CustomBody = 'jamb' | 'waec' | 'neco';
  * Canonical body custom-practice code: the same grammar as the JAMB
  * custom family, but the prefix pins the exam body whose banks the
  * server composes from (waec-custom-… pulls waec-<slug>-bank only).
- * WAEC/NECO papers carry y/n/t only — the English comprehension/novel
+ * WAEC/NECO papers carry y/n/t only, the English comprehension/novel
  * controls are JAMB-section features the server refuses elsewhere.
  */
 export function buildBodyCustomCode(
@@ -281,8 +305,8 @@ export function buildBodyCustomCode(
 export interface PickOptions {
   /** Subset size (default 40; contiguous slices default 50). */
   count: number;
-  /** 1-based start of a CONTIGUOUS slice — the university portals'
-   *  Part chunks (from=51, n=50 serves Q51–Q100 in original order).
+  /** 1-based start of a CONTIGUOUS slice, the university portals'
+   *  Part chunks (from=51, n=50 serves Q51-Q100 in original order).
    *  Omitted = seeded shuffle of the whole pool. */
   from?: number;
   /** Particular exam year, or null for random. */
@@ -346,7 +370,7 @@ export async function fetchBundleByCode(code: string): Promise<Bundle> {
  * ONLY for the manifest packs and the param-less mock combos baked in
  * at build time. Composed papers (mock with year/count params, custom,
  * pick) resolve through the static /exams/paper/ route with the code
- * in the query string — a query string needs no build-time page. Every
+ * in the query string, a query string needs no build-time page. Every
  * deep link to an exam MUST go through this helper, otherwise year-
  * pinned papers 404 and bounce the candidate off the app.
  */
@@ -368,7 +392,7 @@ export function migrateBundleCache(): void {
 }
 
 /** Silent background asset sync (web side): prefetch every pack.
- *  Best-effort per pack — one offline fetch must not kill the sweep. */
+ *  Best-effort per pack, one offline fetch must not kill the sweep. */
 export async function prefetchAll(
   manifest: Manifest,
   onProgress?: (done: number, total: number) => void,

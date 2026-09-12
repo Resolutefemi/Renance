@@ -80,7 +80,7 @@ function PracticeSettingsInner() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Practice Settings" />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col px-4 sm:px-6">
@@ -92,7 +92,7 @@ function PracticeSettingsInner() {
             {packTitle ? `Configure your session · ${packTitle}` : 'Configure your practice session.'}
           </p>
 
-          {/* Past Question Year — real years from the pack, Random default */}
+          {/* Past Question Year, real years from the pack, Random default */}
           <section className="mt-6 flex flex-col gap-4 rounded-[12px] bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
             <div className="flex items-center gap-3">
               <span className="material-symbols-outlined text-outline-light">history</span>
@@ -102,7 +102,7 @@ function PracticeSettingsInner() {
             </div>
             {packYears.length === 0 ? (
               <p className="text-[13px] text-on-surface-variant">
-                This pack runs on random draws — no year metadata.
+                This pack runs on random draws, no year metadata.
               </p>
             ) : (
               <div className="no-scrollbar flex flex-wrap gap-2">
@@ -196,7 +196,7 @@ function PracticeSettingsInner() {
                   const v = e.target.value === '' ? '' : Math.max(1, Math.min(300, Number(e.target.value)));
                   setCustomMinutes(v);
                 }}
-                placeholder="—"
+                placeholder="-"
                 className="w-24 rounded-lg border border-outline-variant bg-surface-container-low px-3 py-2 text-center font-mono text-[15px] text-on-surface outline-none focus:border-primary"
               />
             </div>
@@ -245,7 +245,7 @@ export default function PracticeSettingsPage() {
   return (
     <Suspense
       fallback={
-        <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+        <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
           <PageBar title="Practice Settings" />
         </main>
       }

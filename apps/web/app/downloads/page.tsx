@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Downloads — the Stitch downloads_light / downloads_full_dark screen.
+ * Downloads, the Stitch downloads_light / downloads_full_dark screen.
  * Every manifest pack with its real offline state: downloaded (cached
  * in IndexedDB, sha-pinned), ready to fetch, or syncing. Per-pack
  * download/delete, a live storage meter from the browser's own
@@ -24,7 +24,7 @@ function cacheKey(code: string, sha: string) {
 }
 
 function fmtBytes(n: number): string {
-  if (!n) return '—';
+  if (!n) return '-';
   if (n >= 1_048_576) return `${(n / 1_048_576).toFixed(1)} MB`;
   if (n >= 1024) return `${Math.round(n / 1024)} KB`;
   return `${n} B`;
@@ -112,7 +112,7 @@ export default function DownloadsPage() {
   const totalBytes = manifest?.exams.reduce((n, e) => n + (e.sizeBytes ?? 0), 0) ?? 0;
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Downloads" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">
@@ -120,7 +120,7 @@ export default function DownloadsPage() {
           Downloads
         </h1>
         <p className="mt-1 text-[14px] text-on-surface-variant">
-          Your offline library — every pack cached on this device keeps working with no network.
+          Your offline library, every pack cached on this device keeps working with no network.
         </p>
 
         {/* Storage meter */}

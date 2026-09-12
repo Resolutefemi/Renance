@@ -87,7 +87,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The section 'Beta minus Decay' states: 'Light nuclei with excess neutron convert the excess neutron into proton emitting a beta β– particle.' The equation also shows a neutron (¹n₀) converting to a proton (¹P₁) and an electron (⁰e⁻₁)."
+      "explanation": "The section 'Beta minus Decay' states: 'Light nuclei with excess neutron convert the excess neutron into proton emitting a beta β- particle.' The equation also shows a neutron (¹n₀) converting to a proton (¹P₁) and an electron (⁰e⁻₁)."
     },
     {
       "id": "uni-unilag-phy104-bank-0007",
@@ -960,7 +960,7 @@
     {
       "id": "uni-unilag-phy104-bank-0069",
       "type": "mcq",
-      "stem": "A vibrating string is described by the equation y = 0.5sin(2x−3t), where x and y are in metres and t in seconds. If the tension in the string is 0.4 N, what is the linear density (mass per unit length) of the string?",
+      "stem": "A vibrating string is described by the equation y = 0.5sin(2x-3t), where x and y are in metres and t in seconds. If the tension in the string is 0.4 N, what is the linear density (mass per unit length) of the string?",
       "options": {
         "A": "0.089 kg/m",
         "B": "0.178 kg/m",
@@ -1380,7 +1380,7 @@
     {
       "id": "uni-unilag-phy104-bank-0099",
       "type": "mcq",
-      "stem": "A wave on a string is described by y = 2cos(0.02x – 28t – 0.7). Assuming this wave can form a standing wave through reflection, what is the distance between consecutive nodes and antinodes in the resulting standing wave?",
+      "stem": "A wave on a string is described by y = 2cos(0.02x - 28t - 0.7). Assuming this wave can form a standing wave through reflection, what is the distance between consecutive nodes and antinodes in the resulting standing wave?",
       "options": {
         "A": "25π m",
         "B": "50π m",
@@ -8590,7 +8590,7 @@
     {
       "id": "uni-unilag-phy104-bank-0614",
       "type": "mcq",
-      "stem": "A wave is described by the equation <i>y(x,t) = (8cm) sin 2π(0.3x−0.5t)</i>. Based on the standard wave equation <i>y = Asin(kx - ωt)</i> or its variations discussed, what is the wave number (k) for this wave?",
+      "stem": "A wave is described by the equation <i>y(x,t) = (8cm) sin 2π(0.3x-0.5t)</i>. Based on the standard wave equation <i>y = Asin(kx - ωt)</i> or its variations discussed, what is the wave number (k) for this wave?",
       "options": {
         "A": "0.3 rad/m",
         "B": "0.6π rad/m",
@@ -8599,7 +8599,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "The general form of a wave equation is <i>y = A sin(kx - ωt)</i>. The provided equation is <i>y(x,t) = (8cm) sin 2π(0.3x−0.5t)</i>. Expanding this, we get <i>y(x,t) = (8cm) sin (2π * 0.3x - 2π * 0.5t)</i>, which simplifies to <i>y(x,t) = (8cm) sin (0.6πx - 1.0πt)</i>. By comparing this to the standard form, we can identify <i>k = 0.6π</i> rad/m. This matches the 'Example' section on page 3 where <i>k</i> is associated with the <i>x</i> term."
+      "explanation": "The general form of a wave equation is <i>y = A sin(kx - ωt)</i>. The provided equation is <i>y(x,t) = (8cm) sin 2π(0.3x-0.5t)</i>. Expanding this, we get <i>y(x,t) = (8cm) sin (2π * 0.3x - 2π * 0.5t)</i>, which simplifies to <i>y(x,t) = (8cm) sin (0.6πx - 1.0πt)</i>. By comparing this to the standard form, we can identify <i>k = 0.6π</i> rad/m. This matches the 'Example' section on page 3 where <i>k</i> is associated with the <i>x</i> term."
     },
     {
       "id": "uni-unilag-phy104-bank-0615",
@@ -10270,7 +10270,7 @@
     {
       "id": "uni-unilag-phy104-bank-0734",
       "type": "mcq",
-      "stem": "For the wave described by <i>y(x,t) = (8cm) sin 2π(0.3x−0.5t)</i>, what is its angular frequency (ω)?",
+      "stem": "For the wave described by <i>y(x,t) = (8cm) sin 2π(0.3x-0.5t)</i>, what is its angular frequency (ω)?",
       "options": {
         "A": "0.3 rad/s",
         "B": "0.5 rad/s",
@@ -10279,7 +10279,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "The general form of a wave equation is <i>y = A sin(kx - ωt)</i>. The provided equation is <i>y(x,t) = (8cm) sin 2π(0.3x−0.5t)</i>. Expanding this, we get <i>y(x,t) = (8cm) sin (2π * 0.3x - 2π * 0.5t)</i>, which simplifies to <i>y(x,t) = (8cm) sin (0.6πx - 1.0πt)</i>. By comparing this to the standard form, we can identify <i>ω = 1.0π</i> rad/s. This aligns with the 'Example' section on page 3 where <i>ω</i> is associated with the <i>t</i> term."
+      "explanation": "The general form of a wave equation is <i>y = A sin(kx - ωt)</i>. The provided equation is <i>y(x,t) = (8cm) sin 2π(0.3x-0.5t)</i>. Expanding this, we get <i>y(x,t) = (8cm) sin (2π * 0.3x - 2π * 0.5t)</i>, which simplifies to <i>y(x,t) = (8cm) sin (0.6πx - 1.0πt)</i>. By comparing this to the standard form, we can identify <i>ω = 1.0π</i> rad/s. This aligns with the 'Example' section on page 3 where <i>ω</i> is associated with the <i>t</i> term."
     },
     {
       "id": "uni-unilag-phy104-bank-0735",

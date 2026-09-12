@@ -40,6 +40,9 @@ jobs:
       - name: Install workspace dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Bake static question bundles into the export
+        run: python3 scripts/web_bundles.py
+
       - name: Build static export
         working-directory: apps/web
         env:
@@ -51,6 +54,12 @@ jobs:
           # Google sign-in button — falls back to the shipped WEB client ID
           # (public value, same as render.yaml); override via repo Variables if rotated.
           NEXT_PUBLIC_GOOGLE_CLIENT_ID: ${{ vars.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '850087098854-pni8gohld0isi8v8nhhnlcl5fuvi77q4.apps.googleusercontent.com' }}
+          # Browser-side AI fallback (same Gemini provider the study API
+          # uses server-side). The key rides the client bundle because
+          # Pages is static; every AI surface degrades gracefully without it.
+          NEXT_PUBLIC_AI_API_KEY: ${{ secrets.AI_API_KEY || '' }}
+          NEXT_PUBLIC_AI_BASE_URL: ${{ vars.NEXT_PUBLIC_AI_BASE_URL || 'https://generativelanguage.googleapis.com/v1beta/openai' }}
+          NEXT_PUBLIC_AI_MODEL: ${{ vars.NEXT_PUBLIC_AI_MODEL || 'gemini-3.6-flash' }}
         run: pnpm exec next build
 
       - name: SPA fallback (unknown paths -> home)

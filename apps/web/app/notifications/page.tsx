@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Notifications — the Stitch notifications_light / notifications_full_dark
+ * Notifications, the Stitch notifications_light / notifications_full_dark
  * screen, fed by the local notification engine (lib/notifications.ts).
  * Today / Yesterday / Older bands, unread rows carry the violet accent
  * bar and the tinted surface; "Mark all read" clears the whole ledger.
@@ -58,7 +58,7 @@ export default function NotificationsPage() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Notifications" />
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-2 sm:px-6">
@@ -77,7 +77,7 @@ export default function NotificationsPage() {
           )}
         </div>
         <p className="mt-1 text-[14px] text-on-surface-variant">
-          Signals from your own study desk — streaks, reviews, papers and badges.
+          Signals from your own study desk, streaks, reviews, papers and badges.
         </p>
 
         {items === null && (
@@ -93,7 +93,7 @@ export default function NotificationsPage() {
             </span>
             <p className="text-[15px] font-semibold text-on-surface">Nothing yet</p>
             <p className="max-w-xs text-[13px] text-on-surface-variant">
-              Practice a paper, keep a streak or queue a review — your desk will speak up here.
+              Practice a paper, keep a streak or queue a review, your desk will speak up here.
             </p>
           </div>
         )}

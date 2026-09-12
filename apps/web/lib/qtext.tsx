@@ -13,7 +13,7 @@ import { API_BASE } from './api';
 /*   3. small HTML fragments from the myschool archive (<sub>, <sup>,  */
 /*      <br>, <table>, entities).                                      */
 /*                                                                     */
-/* The player used to print all three verbatim — the "raw markup in    */
+/* The player used to print all three verbatim, the "raw markup in    */
 /* maths questions" bug. This renderer converts the safe subset into   */
 /* React nodes. It is NOT dangerouslySetInnerHTML: unknown tags are    */
 /* unwrapped (text kept), attributes beyond a whitelisted set are      */
@@ -115,7 +115,7 @@ function latexGroup(src: string, i: number): [string, number] {
 }
 
 /** Convert the LaTeX inline-math body (between \( and \)) into a plain
- *  string with unicode super/subscripts — enough for MCQ options, no
+ *  string with unicode super/subscripts, enough for MCQ options, no
  *  full TeX engine involved. */
 export function latexToText(src: string): string {
   let out = '';
@@ -139,7 +139,7 @@ export function latexToText(src: string): string {
       if (cmd === 'sqrt') {
         let j = i;
         while (src[j] === ' ') j++;
-        if (src[j] === '[') { // optional root degree — skip to ]
+        if (src[j] === '[') { // optional root degree, skip to ]
           const close = src.indexOf(']', j);
           i = close >= 0 ? close + 1 : j;
           let [body2, i3] = latexGroup(src, i);

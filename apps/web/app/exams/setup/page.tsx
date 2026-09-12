@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Mock Exam Setup — the ONE place a paper is configured and launched.
+ * Mock Exam Setup, the ONE place a paper is configured and launched.
  *
  * Standard UTME Mock: Use of English locked on + exactly 3 electives,
  * a per-subject year picker (Random by default, exactly like the real
@@ -9,7 +9,7 @@
  * on/off + how many) and the official-timing notice.
  *
  * Custom Practice: any number of subjects (English toggleable), the
- * question count, your own timer and a particular year or random —
+ * question count, your own timer and a particular year or random,
  * composed server-side from the same banks, so grading and resume
  * stay honest.
  */
@@ -89,7 +89,7 @@ function SetupRouter() {
 }
 
 /**
- * WAEC / NECO customise mode — the JAMB custom-practice experience over
+ * WAEC / NECO customise mode, the JAMB custom-practice experience over
  * that body's banks. Composes a server-side paper (waec-custom-… /
  * neco-custom-…): subjects + per-subject years + question count + timer,
  * so grading, review and resume stay deterministic exactly like JAMB.
@@ -193,7 +193,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
   }
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title={`${label} Practice Setup`} />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col px-4 sm:px-6">
@@ -207,7 +207,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
               </h1>
             </div>
             <p className="text-[15px] text-on-surface-variant">
-              Compose a paper from real {label} past questions — pick your subjects,
+              Compose a paper from real {label} past questions, pick your subjects,
               pin years, set the length and the clock.
             </p>
           </div>
@@ -261,7 +261,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
                   <div key={slug} className="flex flex-col gap-1 border-b border-outline-variant/30 py-2 last:border-none">
                     <span className="text-[13px] font-semibold text-on-surface">{subjectName(slug)}</span>
                     {pool.length === 0 ? (
-                      <span className="text-[12px] text-on-surface-variant">Random — this subject ships without year tags.</span>
+                      <span className="text-[12px] text-on-surface-variant">Random, this subject ships without year tags.</span>
                     ) : (
                       <div className="no-scrollbar flex items-center gap-2">
                         <span className="material-symbols-outlined text-[16px] text-outline">history</span>
@@ -331,7 +331,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
                   const v = e.target.value === '' ? '' : Math.max(1, Math.min(300, Number(e.target.value)));
                   setMinutes(v);
                 }}
-                placeholder="—"
+                placeholder="-"
                 className="w-24 rounded-lg border border-outline-variant bg-surface-container-low px-3 py-2 text-center font-mono text-[15px] text-on-surface outline-none focus:border-primary"
               />
             </div>
@@ -357,7 +357,7 @@ function BodyCustomSetup({ body }: { body: 'waec' | 'neco' }) {
           <div className="mb-2 mt-4 flex items-start gap-2 rounded-lg bg-surface-container-high p-3">
             <span className="material-symbols-outlined mt-0.5 text-[18px] text-outline">info</span>
             <p className="text-[13px] leading-[18px] text-on-surface-variant">
-              Every paper is composed server-side from the real {label} past-question banks —
+              Every paper is composed server-side from the real {label} past-question banks,
               the same questions, deterministically seated, graded on the Renance engine.
               Answers lock once picked; leaving mid-paper keeps your seat.
             </p>
@@ -414,7 +414,7 @@ function ExamSetupInner() {
   // year pickers: subject slug -> exam year, null = Random (the default)
   const [yearFor, setYearFor] = useState<Record<string, number | null>>({});
   // English section controls (standard mock). Comprehension and the
-  // JAMB novel both default OFF — the candidate opts IN, the same way
+  // JAMB novel both default OFF, the candidate opts IN, the same way
   // the hall ask works ("do you want the novel this year?").
   const [englishSize, setEnglishSize] = useState(60);
   const [comprehension, setComprehension] = useState(false);
@@ -491,7 +491,7 @@ function ExamSetupInner() {
         body: { code },
       });
       // Seat the sitting locally, then walk straight into it: the
-      // resume deep link rebuilds the exact attempt — JAMB style,
+      // resume deep link rebuilds the exact attempt, JAMB style,
       // one paper at a time.
       saveActiveExam({
         attemptId: res.attemptId,
@@ -511,7 +511,7 @@ function ExamSetupInner() {
         savedAt: Date.now(),
       });
       // examHref() routes composed codes (this one carries ~params) to
-      // the static /exams/paper/?code=… page — a direct /exams/<code>
+      // the static /exams/paper/?code=… page, a direct /exams/<code>
       // link 404s on the static export for any year-pinned paper.
       router.push(examHref(res.code, { resume: '1' }));
     } catch (err) {
@@ -546,7 +546,7 @@ function ExamSetupInner() {
   }
 
   return (
-    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Mock Exam Setup" />
 
       <div className="mx-auto flex w-full max-w-5xl flex-col px-4 sm:px-6">
@@ -618,7 +618,7 @@ function ExamSetupInner() {
 
           {standard ? (
             <>
-              {/* Subject Selection card — English locked, exactly 3 electives */}
+              {/* Subject Selection card, English locked, exactly 3 electives */}
               <section className="mt-4 flex flex-col gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
                 <div className="flex items-center justify-between">
                   <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">
@@ -745,7 +745,7 @@ function ExamSetupInner() {
                   <ToggleRow
                     icon="auto_stories"
                     label="JAMB novel questions"
-                    hint="The Lekki Headmaster — the current JAMB recommended text (off by default)"
+                    hint="The Lekki Headmaster, the current JAMB recommended text (off by default)"
                     value={novel}
                     onChange={setNovel}
                   />
@@ -778,13 +778,13 @@ function ExamSetupInner() {
                 <p className="text-[13px] leading-[18px] text-on-surface-variant">
                   This environment simulates official JAMB timing and rules: one paper
                   at a time, answers lock once picked, and pausing is disabled once the
-                  mock begins. Leaving mid-paper keeps your seat — the clock keeps running.
+                  mock begins. Leaving mid-paper keeps your seat, the clock keeps running.
                 </p>
               </div>
             </>
           ) : (
             <>
-              {/* Custom subjects — English toggleable, any count */}
+              {/* Custom subjects, English toggleable, any count */}
               <section className="mt-4 flex flex-col gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
                 <div className="flex items-center justify-between">
                   <h2 className="text-[18px] font-semibold leading-6 tracking-[-0.01em] text-on-surface">
@@ -871,7 +871,7 @@ function ExamSetupInner() {
                       const v = e.target.value === '' ? '' : Math.max(1, Math.min(300, Number(e.target.value)));
                       setCustomMinutes(v);
                     }}
-                    placeholder="—"
+                    placeholder="-"
                     className="w-24 rounded-lg border border-outline-variant bg-surface-container-low px-3 py-2 text-center font-mono text-[15px] text-on-surface outline-none focus:border-primary"
                   />
                 </div>

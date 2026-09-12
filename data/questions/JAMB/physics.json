@@ -1421,8 +1421,8 @@
       "stem": "In the diagram above, P, Q and R are vectors. Which of the following options gives the correct relationship between the vectors?",
       "options": {
         "A": "P = Q + R",
-        "B": "P = Q − R",
-        "C": "P = R − Q",
+        "B": "P = Q - R",
+        "C": "P = R - Q",
         "D": "P + Q + R = 0"
       },
       "marks": 1,
@@ -1698,7 +1698,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "C",
-      "explanation": "The diagram shows an objective lens forming an intermediate image and an eyepiece lens producing a final image for viewing—typical of an astronomical telescope setup."
+      "explanation": "The diagram shows an objective lens forming an intermediate image and an eyepiece lens producing a final image for viewing-typical of an astronomical telescope setup."
     },
     {
       "id": "jamb-physics-bank-0176",
@@ -1968,7 +1968,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "A",
-      "explanation": "Upthrust in water = 10 − 6 = 4 N. Upthrust in liquid X = 10 − 7 = 3 N. Relative density =frac{ρ_X}{rhowater}=frac{text{upthrust in X}}{text{upthrust in water}}=(3)/(4)."
+      "explanation": "Upthrust in water = 10 - 6 = 4 N. Upthrust in liquid X = 10 - 7 = 3 N. Relative density =frac{ρ_X}{rhowater}=frac{text{upthrust in X}}{text{upthrust in water}}=(3)/(4)."
     },
     {
       "id": "jamb-physics-bank-0196",
@@ -2209,7 +2209,7 @@
       "marks": 1,
       "year": 2014,
       "answer": "B",
-      "explanation": "Acceleration is the slope of a velocity–time graph. Zero acceleration corresponds to a horizontal segment; NS is horizontal."
+      "explanation": "Acceleration is the slope of a velocity-time graph. Zero acceleration corresponds to a horizontal segment; NS is horizontal."
     },
     {
       "id": "jamb-physics-bank-0212",
@@ -2738,7 +2738,7 @@
       "marks": 1,
       "year": 2014,
       "answer": "B",
-      "explanation": "Mass number drops 210→206 (−4) and atomic number drops 82→80 (−2), which corresponds to alpha emission."
+      "explanation": "Mass number drops 210→206 (-4) and atomic number drops 82→80 (-2), which corresponds to alpha emission."
     },
     {
       "id": "jamb-physics-bank-0247",
@@ -16128,7 +16128,7 @@
       "type": "mcq",
       "stem": "The displacement d produced in a glass block of thickness t and refractive index n when an object is viewed through it is",
       "options": {
-        "A": "t – n",
+        "A": "t - n",
         "B": "t (1 + 1/n)",
         "C": "t (1-1/n)",
         "D": "t (1/n - 1)"
@@ -27132,7 +27132,7 @@
     {
       "id": "jamb-physics-bank-1935",
       "type": "mcq",
-      "stem": "A radioactive source emits X–rays of very short wavelength (10\\(^{-13}\\)m ). What is the frequency of these rays?",
+      "stem": "A radioactive source emits X-rays of very short wavelength (10\\(^{-13}\\)m ). What is the frequency of these rays?",
       "options": {
         "A": "2 × 1018HZ",
         "B": "3 × 10 19HZ",
@@ -27240,9 +27240,9 @@
       "type": "mcq",
       "stem": "At what respective value of a, b, and c would the unit of work, the joule, be dimensionally similar to Ma Lb Tc?",
       "options": {
-        "A": "1, – 2, 1",
-        "B": "1, 2, – 2",
-        "C": "1, 1, –2",
+        "A": "1, - 2, 1",
+        "B": "1, 2, - 2",
+        "C": "1, 1, -2",
         "D": "2, 2, 1"
       },
       "marks": 1,
@@ -27450,10 +27450,10 @@
       "type": "mcq",
       "stem": "If an object whose mass is 3kg moves in a circular path of a radius 0.7m, records a speed at 2m/s. What is the result of the angular velocity?",
       "options": {
-        "A": "4 rads–1",
-        "B": "1rads–1–1",
-        "C": "3–1rads–1",
-        "D": "4rads–1–1"
+        "A": "4 rads-1",
+        "B": "1rads-1-1",
+        "C": "3-1rads-1",
+        "D": "4rads-1-1"
       },
       "marks": 1,
       "year": 2015,
@@ -27550,10 +27550,10 @@
       "type": "mcq",
       "stem": "Lodestone is a natural magnet, it points at",
       "options": {
-        "A": "N – W when suspended freely",
-        "B": "N–S when suspended freely",
-        "C": "S – E when suspended freely",
-        "D": "S–W when suspended freely"
+        "A": "N - W when suspended freely",
+        "B": "N-S when suspended freely",
+        "C": "S - E when suspended freely",
+        "D": "S-W when suspended freely"
       },
       "marks": 1,
       "year": 2015,
@@ -27678,7 +27678,7 @@
       "type": "mcq",
       "stem": "The dimension of universal gravitational constant is……….?",
       "options": {
-        "A": "\\( M­^{–1}L^3 T^{–2} \\)",
+        "A": "\\( M­^{-1}L^3 T^{-2} \\)",
         "B": "ML3T2",
         "C": "ML3",
         "D": "MLT-2"
@@ -27832,7 +27832,7 @@
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "Note: moment of a couple = force × length (fL)<br>\r\n<br>\r\nThe tangential force is actingin an opposite direction alongside its length<br>\r\n<br>\r\ni.e f1 L1 = f2L2<br>\r\n<br>\r\nf2L2 − f1 L1 = 0(i.e Zero)",
+      "explanation": "Note: moment of a couple = force × length (fL)<br>\r\n<br>\r\nThe tangential force is actingin an opposite direction alongside its length<br>\r\n<br>\r\ni.e f1 L1 = f2L2<br>\r\n<br>\r\nf2L2 - f1 L1 = 0(i.e Zero)",
       "video": "https://www.youtube.com/embed/PBqg0wxURtY?start=824"
     },
     {
@@ -27853,7 +27853,7 @@
     {
       "id": "jamb-physics-bank-1984",
       "type": "mcq",
-      "stem": "The symbol −10X used to represent which of the particles?",
+      "stem": "The symbol -10X used to represent which of the particles?",
       "options": {
         "A": "Proton",
         "B": "Neutron",
@@ -28731,10 +28731,10 @@
       "type": "mcq",
       "stem": "A constant force of 5N acts for 5 seconds on a mass of 5kg initially at rest. Calculate the final momentum",
       "options": {
-        "A": "125kgms−1",
-        "B": "25kgms−1",
-        "C": "15kgms−1",
-        "D": "0kgms−1"
+        "A": "125kgms-1",
+        "B": "25kgms-1",
+        "C": "15kgms-1",
+        "D": "0kgms-1"
       },
       "marks": 1,
       "year": 2017,
@@ -28757,7 +28757,7 @@
     {
       "id": "jamb-physics-bank-2049",
       "type": "mcq",
-      "stem": "A radio station broadcast at a frequency of 600KHZ. If the speed of light in air is 3 × 108ms\\(^{−1}\\). Calculate the wavelength of the radio wave",
+      "stem": "A radio station broadcast at a frequency of 600KHZ. If the speed of light in air is 3 × 108ms\\(^{-1}\\). Calculate the wavelength of the radio wave",
       "options": {
         "A": "2.20 × 10\\(^3\\)m",
         "B": "5.0 × 10\\(^2\\)m",
@@ -29137,10 +29137,10 @@
       "type": "mcq",
       "stem": "What is the speed of a body vibrating at 50 cyclic per second",
       "options": {
-        "A": "100 πrads\\(_{−1}\\)",
-        "B": "200 πrads\\(_{−1}\\)",
-        "C": "50 πrads\\(_{−1}\\)",
-        "D": "400 πrads\\(_{−1}\\)"
+        "A": "100 πrads\\(_{-1}\\)",
+        "B": "200 πrads\\(_{-1}\\)",
+        "C": "50 πrads\\(_{-1}\\)",
+        "D": "400 πrads\\(_{-1}\\)"
       },
       "marks": 1,
       "year": 2017,
@@ -29193,10 +29193,10 @@
       "type": "mcq",
       "stem": "Which is the incorrect formula for a body accelerating uniformly?",
       "options": {
-        "A": "a = v2 − \\(\\frac{u^2}{2}\\)",
+        "A": "a = v2 - \\(\\frac{u^2}{2}\\)",
         "B": "v2 = u2 + 2as",
         "C": "s = ut + \\(\\frac{1}{2}\\) at2",
-        "D": "v2 − u2= 2as"
+        "D": "v2 - u2= 2as"
       },
       "marks": 1,
       "year": 2017,
@@ -29373,7 +29373,7 @@
     {
       "id": "jamb-physics-bank-2093",
       "type": "mcq",
-      "stem": "A 20kg mass is to be pulled up a slope inclined at 30° to the horizontal. If efficiency of the plane is 75%. The force required to pull the load up the plane is J [g=10ms\\(^{− 2}\\)]",
+      "stem": "A 20kg mass is to be pulled up a slope inclined at 30° to the horizontal. If efficiency of the plane is 75%. The force required to pull the load up the plane is J [g=10ms\\(^{- 2}\\)]",
       "options": {
         "A": "87N",
         "B": "73.5N",
@@ -29443,7 +29443,7 @@
     {
       "id": "jamb-physics-bank-2098",
       "type": "mcq",
-      "stem": "A body of mass 100g moving with a velocity of 10ms-1 collides with a wall. If after collision it moves with a velocity of 2.0ms−1 in the opposite direction, calculate the change in momentum.",
+      "stem": "A body of mass 100g moving with a velocity of 10ms-1 collides with a wall. If after collision it moves with a velocity of 2.0ms-1 in the opposite direction, calculate the change in momentum.",
       "options": {
         "A": "0.8Ns",
         "B": "1.2Ns",
@@ -30367,9 +30367,9 @@
       "type": "mcq",
       "stem": "Which of the following is not a product of nuclear fusion?",
       "options": {
-        "A": "X – ray",
-        "B": "Y –ray",
-        "C": "α – particles",
+        "A": "X - ray",
+        "B": "Y -ray",
+        "C": "α - particles",
         "D": "neutron"
       },
       "marks": 1,
@@ -31876,12 +31876,12 @@
     {
       "id": "jamb-physics-bank-2273",
       "type": "mcq",
-      "stem": "A machine gun with a mass of 5kg fires a 50g bullet at a speed of 100 ms−1 . The recoil speed of the machine gun is",
+      "stem": "A machine gun with a mass of 5kg fires a 50g bullet at a speed of 100 ms-1 . The recoil speed of the machine gun is",
       "options": {
-        "A": "0.5 ms−1",
-        "B": "1.5 ms−1",
-        "C": "1 ms−1",
-        "D": "2ms−1"
+        "A": "0.5 ms-1",
+        "B": "1.5 ms-1",
+        "C": "1 ms-1",
+        "D": "2ms-1"
       },
       "marks": 1,
       "year": 2020,
@@ -32016,12 +32016,12 @@
     {
       "id": "jamb-physics-bank-2283",
       "type": "mcq",
-      "stem": "Heat is supplied uniformly at the rate of 100W to 1.0 x 10−2 kg of a liquid for 20 seconds. If the temperature of the liquid rises by 5o C, then the specific heat capacity of the liquid is",
+      "stem": "Heat is supplied uniformly at the rate of 100W to 1.0 x 10-2 kg of a liquid for 20 seconds. If the temperature of the liquid rises by 5o C, then the specific heat capacity of the liquid is",
       "options": {
-        "A": "2.0 x 1022Jkg−1−1K−1",
-        "B": "2.0 x 1022Jkg−1",
-        "C": "4.0 x 1044Jkg−1−1K−1",
-        "D": "4.0 x 1044Jkg−1"
+        "A": "2.0 x 1022Jkg-1-1K-1",
+        "B": "2.0 x 1022Jkg-1",
+        "C": "4.0 x 1044Jkg-1-1K-1",
+        "D": "4.0 x 1044Jkg-1"
       },
       "marks": 1,
       "year": 2020,
@@ -32282,7 +32282,7 @@
     {
       "id": "jamb-physics-bank-2302",
       "type": "mcq",
-      "stem": "The linear expansivity of brass is 2 x 10−5 oC−1 . If the volume of piece of brass is 10cm3 at 0o C. What will be its volume at 100o C?",
+      "stem": "The linear expansivity of brass is 2 x 10-5 oC-1 . If the volume of piece of brass is 10cm3 at 0o C. What will be its volume at 100o C?",
       "options": {
         "A": "10.06cm3",
         "B": "10.04 cm3",
@@ -32324,12 +32324,12 @@
     {
       "id": "jamb-physics-bank-2305",
       "type": "mcq",
-      "stem": "The refractive index of a liquid is 1.5. If the velocity of light in vacuum is 3.0 x 108ms−1 , the velocity of light in the liquid is",
+      "stem": "The refractive index of a liquid is 1.5. If the velocity of light in vacuum is 3.0 x 108ms-1 , the velocity of light in the liquid is",
       "options": {
-        "A": "1.5 x 108ms−1",
-        "B": "2.0 x 108ms−1",
-        "C": "3.0 x 108ms−1",
-        "D": "4.5 x 108ms−1"
+        "A": "1.5 x 108ms-1",
+        "B": "2.0 x 108ms-1",
+        "C": "3.0 x 108ms-1",
+        "D": "4.5 x 108ms-1"
       },
       "marks": 1,
       "year": 2020,
@@ -32522,10 +32522,10 @@
       "type": "mcq",
       "stem": "0.5kg of water at 10ºC is completely converted to ice at 0ºC by extracting (88000) of heat from it. If the specific heat capacity of water is 4200jkg1 Cº. Calculate the specific latent heat of fusion of ice.",
       "options": {
-        "A": "9.0kjkg−1",
-        "B": "84.0kjkg−1",
-        "C": "134.0kjkg−1",
-        "D": "168.0kjkg−1"
+        "A": "9.0kjkg-1",
+        "B": "84.0kjkg-1",
+        "C": "134.0kjkg-1",
+        "D": "168.0kjkg-1"
       },
       "marks": 1,
       "year": 2021,
@@ -32562,7 +32562,7 @@
     {
       "id": "jamb-physics-bank-2324",
       "type": "mcq",
-      "stem": "A ball of mass 0.1kg is thrown vertically upwards with a speed of 10ms−1−1 from the top of a tower 10m high. Neglecting air resistance, its total energy just before hitting the ground is? (Take g = 10ms−2−2)",
+      "stem": "A ball of mass 0.1kg is thrown vertically upwards with a speed of 10ms-1-1 from the top of a tower 10m high. Neglecting air resistance, its total energy just before hitting the ground is? (Take g = 10ms-2-2)",
       "options": {
         "A": "5J",
         "B": "10J",
@@ -32590,12 +32590,12 @@
     {
       "id": "jamb-physics-bank-2326",
       "type": "mcq",
-      "stem": "A ball of mass 0.5kg moving at 10ms−1−1 collides with another ball of equal mass at rest. If the two balls move off together after the impact, calculate their common velocity.",
+      "stem": "A ball of mass 0.5kg moving at 10ms-1-1 collides with another ball of equal mass at rest. If the two balls move off together after the impact, calculate their common velocity.",
       "options": {
-        "A": "0.2ms−1",
-        "B": "0.5ms−1",
-        "C": "5.0ms−1",
-        "D": "5.5ms−1"
+        "A": "0.2ms-1",
+        "B": "0.5ms-1",
+        "C": "5.0ms-1",
+        "D": "5.5ms-1"
       },
       "marks": 1,
       "year": 2021,
@@ -32604,7 +32604,7 @@
     {
       "id": "jamb-physics-bank-2327",
       "type": "mcq",
-      "stem": "A boy standing some distance from the foot of a tall cliff claps his hands and hears an echo 0.5s later. If the speed of sound is 340ms−1 , how far is he from the cliff?",
+      "stem": "A boy standing some distance from the foot of a tall cliff claps his hands and hears an echo 0.5s later. If the speed of sound is 340ms-1 , how far is he from the cliff?",
       "options": {
         "A": "680m",
         "B": "170m",
@@ -32688,12 +32688,12 @@
     {
       "id": "jamb-physics-bank-2333",
       "type": "mcq",
-      "stem": "A given mass of gas has a pressure of 80 Nm−2 at a temperature of 47 C. If the temperature is reduced to 27 C with volume remaining constant, the new pressure is?",
+      "stem": "A given mass of gas has a pressure of 80 Nm-2 at a temperature of 47 C. If the temperature is reduced to 27 C with volume remaining constant, the new pressure is?",
       "options": {
-        "A": "46.0 Nm−2",
-        "B": "75.0 Nm−2",
+        "A": "46.0 Nm-2",
+        "B": "75.0 Nm-2",
         "C": "80.0 Nm",
-        "D": "85.3 Nm−2"
+        "D": "85.3 Nm-2"
       },
       "marks": 1,
       "year": 2021,
@@ -32702,7 +32702,7 @@
     {
       "id": "jamb-physics-bank-2334",
       "type": "mcq",
-      "stem": "A lead bullet of mass 0.05kg is fired with a velocity of 200ms−1 into a block of mass 0.95kg. Given that the lead block can move freely, the final kinetic energy after impact is?",
+      "stem": "A lead bullet of mass 0.05kg is fired with a velocity of 200ms-1 into a block of mass 0.95kg. Given that the lead block can move freely, the final kinetic energy after impact is?",
       "options": {
         "A": "50J",
         "B": "100J",
@@ -32772,7 +32772,7 @@
     {
       "id": "jamb-physics-bank-2339",
       "type": "mcq",
-      "stem": "A piece of substance of specific heat capacity 450Jkg−1 k1 falls through a vertical distance of 20m from rest. Calculate the rise in temperature of the substance on hitting the ground when all its energies are converted into heat. [g = 10ms−2 ]",
+      "stem": "A piece of substance of specific heat capacity 450Jkg-1 k1 falls through a vertical distance of 20m from rest. Calculate the rise in temperature of the substance on hitting the ground when all its energies are converted into heat. [g = 10ms-2 ]",
       "options": {
         "A": "2/9ºC",
         "B": "4/9ºC",
@@ -32814,7 +32814,7 @@
     {
       "id": "jamb-physics-bank-2342",
       "type": "mcq",
-      "stem": "A source of sound produces waves in air of wavelength 1.65m. If the speed of sound in air is 330ms−1 , the period of vibration in air is?",
+      "stem": "A source of sound produces waves in air of wavelength 1.65m. If the speed of sound in air is 330ms-1 , the period of vibration in air is?",
       "options": {
         "A": "200",
         "B": "0.005",
@@ -32856,7 +32856,7 @@
     {
       "id": "jamb-physics-bank-2345",
       "type": "mcq",
-      "stem": "Calculate the heat energy required to vaporize 50g of water initially at 80ºC if the specific heat capacity of water is 4.23jg−1−1k−1−1 (specific latent heat of vaporization of water is 2260jg−1",
+      "stem": "Calculate the heat energy required to vaporize 50g of water initially at 80ºC if the specific heat capacity of water is 4.23jg-1-1k-1-1 (specific latent heat of vaporization of water is 2260jg-1",
       "options": {
         "A": "530000J",
         "B": "23200J",
@@ -32870,7 +32870,7 @@
     {
       "id": "jamb-physics-bank-2346",
       "type": "mcq",
-      "stem": "Calculate the mass of ice that would melt when 2kg of copper is quickly transferred from boiling water to a block of ice without heat loss (specific heat capacity of copper = 400Jkg11k−1−1, latent heat of fusion of ice = 3.3 x 1055Jkg−1−1)",
+      "stem": "Calculate the mass of ice that would melt when 2kg of copper is quickly transferred from boiling water to a block of ice without heat loss (specific heat capacity of copper = 400Jkg11k-1-1, latent heat of fusion of ice = 3.3 x 1055Jkg-1-1)",
       "options": {
         "A": "8/33kg",
         "B": "3.3/80kg",
@@ -32940,7 +32940,7 @@
     {
       "id": "jamb-physics-bank-2351",
       "type": "mcq",
-      "stem": "If the frequency of an emitted x-ray is 1.6 x 1016 Hz, the accelerating potential is? [e = 1.6 x 10−19 J, h = 6.63 x 10-34 Js]",
+      "stem": "If the frequency of an emitted x-ray is 1.6 x 1016 Hz, the accelerating potential is? [e = 1.6 x 10-19 J, h = 6.63 x 10-34 Js]",
       "options": {
         "A": "6630.0V",
         "B": "663.0V",
@@ -32954,12 +32954,12 @@
     {
       "id": "jamb-physics-bank-2352",
       "type": "mcq",
-      "stem": "If the stress on a wire is 1077NM−2−2 and the wire is stretched from its original length of 10.00m to 10.05m. The young's modulus of the wire is?",
+      "stem": "If the stress on a wire is 1077NM-2-2 and the wire is stretched from its original length of 10.00m to 10.05m. The young's modulus of the wire is?",
       "options": {
-        "A": "5.0 x 10−4−4Nm−2",
-        "B": "5.0 x 10−5−5Nm−2",
-        "C": "2.0 x 10−8−8Nm−2",
-        "D": "2.0 x 1099Nm−2"
+        "A": "5.0 x 10-4-4Nm-2",
+        "B": "5.0 x 10-5-5Nm-2",
+        "C": "2.0 x 10-8-8Nm-2",
+        "D": "2.0 x 1099Nm-2"
       },
       "marks": 1,
       "year": 2021,
@@ -32996,7 +32996,7 @@
     {
       "id": "jamb-physics-bank-2355",
       "type": "mcq",
-      "stem": "Particles of mass 10−2 kg is fixed to the tip of a fan blade which rotates with angular velocity of 100rad−1 . If the radius of the blade is 0.2m, the centripetal force is?",
+      "stem": "Particles of mass 10-2 kg is fixed to the tip of a fan blade which rotates with angular velocity of 100rad-1 . If the radius of the blade is 0.2m, the centripetal force is?",
       "options": {
         "A": "2N",
         "B": "20N",
@@ -33024,12 +33024,12 @@
     {
       "id": "jamb-physics-bank-2357",
       "type": "mcq",
-      "stem": "The equation of a wave traveling along the positive x-direction is given by; y = 0.25 x 10−3−3 sin (500t - 0.025x). Determine the angular velocity of the wave motion.",
+      "stem": "The equation of a wave traveling along the positive x-direction is given by; y = 0.25 x 10-3-3 sin (500t - 0.025x). Determine the angular velocity of the wave motion.",
       "options": {
-        "A": "0.25 x 10−3−3rads−1",
-        "B": "0.25 x 10−1−1rads−1",
-        "C": "5.00 x 1022rads−1",
-        "D": "2.50 x 103 rads−1"
+        "A": "0.25 x 10-3-3rads-1",
+        "B": "0.25 x 10-1-1rads-1",
+        "C": "5.00 x 1022rads-1",
+        "D": "2.50 x 103 rads-1"
       },
       "marks": 1,
       "year": 2021,
@@ -33110,10 +33110,10 @@
       "type": "mcq",
       "stem": "The temperature gradient across a copper rod of thickness 0.02m, maintained at two temperature junctions of 20º and 80ºC respectively is?",
       "options": {
-        "A": "3.0 x 1022km−1",
-        "B": "3.0 x 1033km−1",
-        "C": "5.0 x 1033km−1",
-        "D": "3.0 x 104 km−1"
+        "A": "3.0 x 1022km-1",
+        "B": "3.0 x 1033km-1",
+        "C": "5.0 x 1033km-1",
+        "D": "3.0 x 104 km-1"
       },
       "marks": 1,
       "year": 2021,
@@ -33136,7 +33136,7 @@
     {
       "id": "jamb-physics-bank-2365",
       "type": "mcq",
-      "stem": "The velocities of light in air and glass are 3.0 x 1088ms−1−1 and 2.0 x 1088ms−1−1 respectively. If the angle of refraction is 30º, the sine of the angle of incidence is?",
+      "stem": "The velocities of light in air and glass are 3.0 x 1088ms-1-1 and 2.0 x 1088ms-1-1 respectively. If the angle of refraction is 30º, the sine of the angle of incidence is?",
       "options": {
         "A": "0.33",
         "B": "0.5",
@@ -33306,10 +33306,10 @@
       "type": "mcq",
       "stem": "A car starts from rest and covers a distance of 40 m in 10 s. Calculate the magnitude of its acceleration",
       "options": {
-        "A": "3.20 ms−2",
-        "B": "0.25 ms−2",
-        "C": "0.80 ms−2",
-        "D": "4.00 ms−2"
+        "A": "3.20 ms-2",
+        "B": "0.25 ms-2",
+        "C": "0.80 ms-2",
+        "D": "4.00 ms-2"
       },
       "marks": 1,
       "year": 2022,
@@ -33402,7 +33402,7 @@
     {
       "id": "jamb-physics-bank-2384",
       "type": "mcq",
-      "stem": "A reservoir is filled with liquid of density 2000 kgm−1−1. Calculate the depth at which the pressure in the liquid will be equal to 9100 Nm−2−2 (g = 10 ms−2−2)",
+      "stem": "A reservoir is filled with liquid of density 2000 kgm-1-1. Calculate the depth at which the pressure in the liquid will be equal to 9100 Nm-2-2 (g = 10 ms-2-2)",
       "options": {
         "A": "0.262 m",
         "B": "0.664 m",
@@ -33444,7 +33444,7 @@
     {
       "id": "jamb-physics-bank-2387",
       "type": "mcq",
-      "stem": "A train of mass 1600 kg attains a speed of 25 ms−1−1 in 20 seconds. The power developed in the engine is?",
+      "stem": "A train of mass 1600 kg attains a speed of 25 ms-1-1 in 20 seconds. The power developed in the engine is?",
       "options": {
         "A": "2.5 KW",
         "B": "80 KW",
@@ -33460,10 +33460,10 @@
       "type": "mcq",
       "stem": "A tuning fork having a frequency of 312 Hz emits a wave which has a wavelength of 1.10 m. Calculate the velocity of sound",
       "options": {
-        "A": "312.0 ms−1",
-        "B": "110.0 ms−1",
-        "C": "343.2 ms−1",
-        "D": "686.4 ms−1"
+        "A": "312.0 ms-1",
+        "B": "110.0 ms-1",
+        "C": "343.2 ms-1",
+        "D": "686.4 ms-1"
       },
       "marks": 1,
       "year": 2022,
@@ -33514,12 +33514,12 @@
     {
       "id": "jamb-physics-bank-2393",
       "type": "mcq",
-      "stem": "Consider the wave equation y = 5mm sin [1cm−1−1x - 60s−1−1t]. The wave number is?",
+      "stem": "Consider the wave equation y = 5mm sin [1cm-1-1x - 60s-1-1t]. The wave number is?",
       "options": {
-        "A": "0.1 cm−1",
-        "B": "10cm−1",
-        "C": "1.0cm−1",
-        "D": "2cm−1"
+        "A": "0.1 cm-1",
+        "B": "10cm-1",
+        "C": "1.0cm-1",
+        "D": "2cm-1"
       },
       "marks": 1,
       "year": 2022,
@@ -33726,7 +33726,7 @@
       "type": "mcq",
       "stem": "The relationship between the coefficient of linear expansion αα and volumetric expansion (γγ) is-----------------",
       "options": {
-        "A": "γγ = α−3",
+        "A": "γγ = α-3",
         "B": "γγ = α",
         "C": "3α",
         "D": "γγ = α3"
@@ -33822,7 +33822,7 @@
     {
       "id": "jamb-physics-bank-2416",
       "type": "mcq",
-      "stem": "What quantity of heat is required to convert 20 g of ice at 0 ºC to water at the same temperature? (Specific latent heat of ice = 336 Jg−1 )",
+      "stem": "What quantity of heat is required to convert 20 g of ice at 0 ºC to water at the same temperature? (Specific latent heat of ice = 336 Jg-1 )",
       "options": {
         "A": "7.06 x 1033J",
         "B": "5.38 x 1033J",
@@ -34046,7 +34046,7 @@
     {
       "id": "jamb-physics-bank-2432",
       "type": "mcq",
-      "stem": "A block of mass 0.5 kg is suspended at the 40 cm mark of a light metre rule AB that is pivoted at point E, the 90 cm mark, and is kept at equilibrium by a string attached at point D, the 60 cm mark, as shown in the figure above. Find the tension T in the string. [Take g = 10ms−210ms−2 ]",
+      "stem": "A block of mass 0.5 kg is suspended at the 40 cm mark of a light metre rule AB that is pivoted at point E, the 90 cm mark, and is kept at equilibrium by a string attached at point D, the 60 cm mark, as shown in the figure above. Find the tension T in the string. [Take g = 10ms-210ms-2 ]",
       "options": {
         "A": "16.67N",
         "B": "15.67N",
@@ -34060,7 +34060,7 @@
     {
       "id": "jamb-physics-bank-2433",
       "type": "mcq",
-      "stem": "A charge of 4.6×10−54.6×10−5C is placed in an electric field of intensity 3.2×1043.2×104 Vm−1Vm−1. What is the force acting on the electron?",
+      "stem": "A charge of 4.6×10-54.6×10-5C is placed in an electric field of intensity 3.2×1043.2×104 Vm-1Vm-1. What is the force acting on the electron?",
       "options": {
         "A": "1.5 N",
         "B": "3.7 N",
@@ -34102,7 +34102,7 @@
     {
       "id": "jamb-physics-bank-2436",
       "type": "mcq",
-      "stem": "A lorry accelerates uniformly in a straight line with acceleration of 4ms−24ms−2 and covers a...",
+      "stem": "A lorry accelerates uniformly in a straight line with acceleration of 4ms-24ms-2 and covers a...",
       "options": {
         "A": "650",
         "B": "900",
@@ -34172,7 +34172,7 @@
     {
       "id": "jamb-physics-bank-2441",
       "type": "mcq",
-      "stem": "A parallel plate capacitor separated by an air gap is made of 0.8m2 tin plates and 20 mm apart. It is connected to 120 V battery. What is the charge on each plate? Take εo = 8.85×10−12Fm−1",
+      "stem": "A parallel plate capacitor separated by an air gap is made of 0.8m2 tin plates and 20 mm apart. It is connected to 120 V battery. What is the charge on each plate? Take εo = 8.85×10-12Fm-1",
       "options": {
         "A": "3.54nC",
         "B": "42.5nC",
@@ -34284,7 +34284,7 @@
     {
       "id": "jamb-physics-bank-2449",
       "type": "mcq",
-      "stem": "A travelling wave of amplitude 0.80 m has a frequency of 16 Hz and a wave speed of 20 ms−1ms−1 Calculate the wave number of the wave.",
+      "stem": "A travelling wave of amplitude 0.80 m has a frequency of 16 Hz and a wave speed of 20 ms-1ms-1 Calculate the wave number of the wave.",
       "options": {
         "A": "3",
         "B": "4",
@@ -34298,12 +34298,12 @@
     {
       "id": "jamb-physics-bank-2450",
       "type": "mcq",
-      "stem": "A wire of radius 0.2 mm is extended by 0.5% of its length when supported by a load of 1.5 kg. Determine the Young's modulus for the material of the wire. [Take g = 10 ms−2 ]",
+      "stem": "A wire of radius 0.2 mm is extended by 0.5% of its length when supported by a load of 1.5 kg. Determine the Young's modulus for the material of the wire. [Take g = 10 ms-2 ]",
       "options": {
-        "A": "2.4×1010(Nm−2)",
-        "B": "1.5×1010(Nm−2)",
-        "C": "2.4×109(Nm−2)",
-        "D": "1.3×1010(Nm−2)"
+        "A": "2.4×1010(Nm-2)",
+        "B": "1.5×1010(Nm-2)",
+        "C": "2.4×109(Nm-2)",
+        "D": "1.3×1010(Nm-2)"
       },
       "marks": 1,
       "year": 2023,
@@ -34480,7 +34480,7 @@
     {
       "id": "jamb-physics-bank-2463",
       "type": "mcq",
-      "stem": "How much net work is required to accelerate a 1200 kg car from 10ms−1ms−1 to 15ms−1",
+      "stem": "How much net work is required to accelerate a 1200 kg car from 10ms-1ms-1 to 15ms-1",
       "options": {
         "A": "1.95× 105j",
         "B": "1.35×104j",
@@ -34664,10 +34664,10 @@
       "type": "mcq",
       "stem": "The half life of a radioactive material is 12 days. Calculate the decay constant.",
       "options": {
-        "A": "0.8663 day−1",
-        "B": "0.04331 day−1",
-        "C": "0.17325 day−1",
-        "D": "0.05775 day−1"
+        "A": "0.8663 day-1",
+        "B": "0.04331 day-1",
+        "C": "0.17325 day-1",
+        "D": "0.05775 day-1"
       },
       "marks": 1,
       "year": 2023,
@@ -34858,7 +34858,7 @@
     {
       "id": "jamb-physics-bank-2490",
       "type": "mcq",
-      "stem": "What is the amount of heat required to raise the temperature of a 0.02 kg of ice cube from −10oC−10oC to 10oC10oC ? [specific latent heat of fusion of ice = 3.34 x 105105 Jkg−1Jkg−1, Specific heat capacity of water = 4200 Jkg−1Jkg−1 k−1k−1 Specific heat capacity of ice = 2100 Jkg−1Jkg−1 k−1",
+      "stem": "What is the amount of heat required to raise the temperature of a 0.02 kg of ice cube from -10oC-10oC to 10oC10oC ? [specific latent heat of fusion of ice = 3.34 x 105105 Jkg-1Jkg-1, Specific heat capacity of water = 4200 Jkg-1Jkg-1 k-1k-1 Specific heat capacity of ice = 2100 Jkg-1Jkg-1 k-1",
       "options": {
         "A": "6680j",
         "B": "1680 J",
@@ -34970,7 +34970,7 @@
     {
       "id": "jamb-physics-bank-2499",
       "type": "mcq",
-      "stem": "Which of the following is/are not true about the heat capacity of a substance? (i) It is an intensive property (ii) Its S.I unit is jK−1 (iii) It is an extensive property (iv) Its S.I unit is jkg−1",
+      "stem": "Which of the following is/are not true about the heat capacity of a substance? (i) It is an intensive property (ii) Its S.I unit is jK-1 (iii) It is an extensive property (iv) Its S.I unit is jkg-1",
       "options": {
         "A": "(i) and (iii) only",
         "B": "(i), (ii) and (iv) only",
@@ -35137,12 +35137,12 @@
     {
       "id": "jamb-physics-bank-2511",
       "type": "mcq",
-      "stem": "288KJ is conducted across two opposite faces of a 3m cube of temperature gradient 90ºCm−1 in 7200s. Calculate the thermal conductivity.",
+      "stem": "288KJ is conducted across two opposite faces of a 3m cube of temperature gradient 90ºCm-1 in 7200s. Calculate the thermal conductivity.",
       "options": {
-        "A": "4.9 x 10−2−2Wm−1−1k−1",
-        "B": "5.0 x 10−2 Wm−1 k−1",
-        "C": "5.2 x 10−2 Wm−1 k−1",
-        "D": "5.1 x 10−2 Wm−1 k−1"
+        "A": "4.9 x 10-2-2Wm-1-1k-1",
+        "B": "5.0 x 10-2 Wm-1 k-1",
+        "C": "5.2 x 10-2 Wm-1 k-1",
+        "D": "5.1 x 10-2 Wm-1 k-1"
       },
       "marks": 1,
       "year": 2024,
@@ -35165,12 +35165,12 @@
     {
       "id": "jamb-physics-bank-2513",
       "type": "mcq",
-      "stem": "5 X 10−3−3kg of liquid at its boiling point is evaporated in 20s by the heat generated by a resistor of 2ΩΩ when a current of 10A is used. The specific latent heat of vaporization of the liquid is",
+      "stem": "5 X 10-3-3kg of liquid at its boiling point is evaporated in 20s by the heat generated by a resistor of 2ΩΩ when a current of 10A is used. The specific latent heat of vaporization of the liquid is",
       "options": {
-        "A": "8.0 x 104 Jkg−1",
-        "B": "8.0 x 105 Jkg −1",
-        "C": "8.0 x 1066Jkg−1",
-        "D": "8.0 x 1077Jkg−1"
+        "A": "8.0 x 104 Jkg-1",
+        "B": "8.0 x 105 Jkg -1",
+        "C": "8.0 x 1066Jkg-1",
+        "D": "8.0 x 1077Jkg-1"
       },
       "marks": 1,
       "year": 2024,
@@ -35193,12 +35193,12 @@
     {
       "id": "jamb-physics-bank-2515",
       "type": "mcq",
-      "stem": "A blacksmith heated a metal whose cubic expansivity is 3.9 x 10−6 K−1 . Calculate the area expansivity.",
+      "stem": "A blacksmith heated a metal whose cubic expansivity is 3.9 x 10-6 K-1 . Calculate the area expansivity.",
       "options": {
-        "A": "3.9 x 10−6 K −1",
-        "B": "2.6 x 10−6 K−1 .",
-        "C": "1.3 x 10−6−6K−1−1.",
-        "D": "1.6 x 10−6 K−1 ."
+        "A": "3.9 x 10-6 K -1",
+        "B": "2.6 x 10-6 K-1 .",
+        "C": "1.3 x 10-6-6K-1-1.",
+        "D": "1.6 x 10-6 K-1 ."
       },
       "marks": 1,
       "year": 2024,
@@ -35223,10 +35223,10 @@
       "type": "mcq",
       "stem": "A body is whirled in a horizontal circle at the rate of 800 revolutions per minute. Determine the angular velocity",
       "options": {
-        "A": "100π rads−1",
-        "B": "33.3π rads−1",
-        "C": "29.5π rads−1",
-        "D": "26.7π rads −1"
+        "A": "100π rads-1",
+        "B": "33.3π rads-1",
+        "C": "29.5π rads-1",
+        "D": "26.7π rads -1"
       },
       "marks": 1,
       "year": 2024,
@@ -35333,12 +35333,12 @@
     {
       "id": "jamb-physics-bank-2525",
       "type": "mcq",
-      "stem": "A hydrometer of mass y kg and volume 2y x 10−5−5m33 floats in a fluid with 20% of its volume above the fluid, what is the density of the fluid?",
+      "stem": "A hydrometer of mass y kg and volume 2y x 10-5-5m33 floats in a fluid with 20% of its volume above the fluid, what is the density of the fluid?",
       "options": {
-        "A": "6.22 x 104 kgm−3",
-        "B": "6.23 x 104 kgm−3",
-        "C": "6.24 x 104 kgm−3",
-        "D": "6.25 x 104 kgm −3"
+        "A": "6.22 x 104 kgm-3",
+        "B": "6.23 x 104 kgm-3",
+        "C": "6.24 x 104 kgm-3",
+        "D": "6.25 x 104 kgm -3"
       },
       "marks": 1,
       "year": 2024,
@@ -35487,7 +35487,7 @@
     {
       "id": "jamb-physics-bank-2536",
       "type": "mcq",
-      "stem": "A solid cube of aluminum is 1.5cm on each edge. The density of aluminum is 2700kgm−1−1. Find the mass of the cube.",
+      "stem": "A solid cube of aluminum is 1.5cm on each edge. The density of aluminum is 2700kgm-1-1. Find the mass of the cube.",
       "options": {
         "A": "7.5g",
         "B": "9.1g",
@@ -35613,12 +35613,12 @@
     {
       "id": "jamb-physics-bank-2545",
       "type": "mcq",
-      "stem": "An electron falls from an energy level of -5.44eV to another energy level, E. If the emitted photon is of wavelength 5.68 x 10−6 m, calculate the energy change. [ Plank's constant = 6.63 x 10−34 Js, emitted radiation speed = 3.0 x 108 ms−1 ]",
+      "stem": "An electron falls from an energy level of -5.44eV to another energy level, E. If the emitted photon is of wavelength 5.68 x 10-6 m, calculate the energy change. [ Plank's constant = 6.63 x 10-34 Js, emitted radiation speed = 3.0 x 108 ms-1 ]",
       "options": {
-        "A": "1.49 x 10−20 J",
-        "B": "1.49 x 10−19 J",
-        "C": "3.49 x 10−20 J",
-        "D": "3.49 x 10−19 J"
+        "A": "1.49 x 10-20 J",
+        "B": "1.49 x 10-19 J",
+        "C": "3.49 x 10-20 J",
+        "D": "3.49 x 10-19 J"
       },
       "marks": 1,
       "year": 2024,
@@ -35683,7 +35683,7 @@
     {
       "id": "jamb-physics-bank-2550",
       "type": "mcq",
-      "stem": "At a pressure of 1055Nm−2−2, a gas has a volume of 20m33. Calculate the volume at 4 x 1055Nm−2−2 at constant temperature.",
+      "stem": "At a pressure of 1055Nm-2-2, a gas has a volume of 20m33. Calculate the volume at 4 x 1055Nm-2-2 at constant temperature.",
       "options": {
         "A": "2m3",
         "B": "3m3",
@@ -35753,12 +35753,12 @@
     {
       "id": "jamb-physics-bank-2555",
       "type": "mcq",
-      "stem": "Calculate the magnetic force on an electron in a magnetic field of flux density 10T, with a velocity of 3 x 107 m/s at 60º to the magnetic field (e = 1.6 x 10−19 C)",
+      "stem": "Calculate the magnetic force on an electron in a magnetic field of flux density 10T, with a velocity of 3 x 107 m/s at 60º to the magnetic field (e = 1.6 x 10-19 C)",
       "options": {
-        "A": "4.8 x 10−11 N",
-        "B": "4.6 x 10−12 N",
-        "C": "4.16 x 10−11 N",
-        "D": "4.3 x 10−11 N"
+        "A": "4.8 x 10-11 N",
+        "B": "4.6 x 10-12 N",
+        "C": "4.16 x 10-11 N",
+        "D": "4.3 x 10-11 N"
       },
       "marks": 1,
       "year": 2024,
@@ -35781,7 +35781,7 @@
     {
       "id": "jamb-physics-bank-2557",
       "type": "mcq",
-      "stem": "Calculate the quantity of heat for copper rod whose thermal capacity is 400Jk−1 for a temperature change of 60ºC to 80ºC",
+      "stem": "Calculate the quantity of heat for copper rod whose thermal capacity is 400Jk-1 for a temperature change of 60ºC to 80ºC",
       "options": {
         "A": "2KJ",
         "B": "4KJ",
@@ -35795,7 +35795,7 @@
     {
       "id": "jamb-physics-bank-2558",
       "type": "mcq",
-      "stem": "Calculate the upthrust on a spherical ball of volume 4.2 x 10−4 m3 when totally immersed in a liquid of density 1028kgm−3",
+      "stem": "Calculate the upthrust on a spherical ball of volume 4.2 x 10-4 m3 when totally immersed in a liquid of density 1028kgm-3",
       "options": {
         "A": "5.2N",
         "B": "4.3N",
@@ -35811,10 +35811,10 @@
       "type": "mcq",
       "stem": "Calculate the value of electric field intensity due to a charge of 4μC if the force due to the charge is 8N",
       "options": {
-        "A": "2.0 x 106 NC−1",
-        "B": "3.0 x 106 NC−1",
-        "C": "4.0 x 106 NC−1",
-        "D": "8.0 x 106 NC−1"
+        "A": "2.0 x 106 NC-1",
+        "B": "3.0 x 106 NC-1",
+        "C": "4.0 x 106 NC-1",
+        "D": "8.0 x 106 NC-1"
       },
       "marks": 1,
       "year": 2024,
@@ -35881,8 +35881,8 @@
       "type": "mcq",
       "stem": "Find the amount of current required to deposit 0.02kg of metal in a given electrolysis...",
       "options": {
-        "A": "7.8 x 10−4−4A",
-        "B": "7.8 x 10−2−2A",
+        "A": "7.8 x 10-4-4A",
+        "B": "7.8 x 10-2-2A",
         "C": "1.3 x 1033A",
         "D": "1.3 x 1055A"
       },
@@ -35907,7 +35907,7 @@
     {
       "id": "jamb-physics-bank-2566",
       "type": "mcq",
-      "stem": "How much joules of heat are given out when a piece of iron, of mass 60g and specific heat capacity 460JKg−1 K−1 , cools from 75ºC to 35ºC",
+      "stem": "How much joules of heat are given out when a piece of iron, of mass 60g and specific heat capacity 460JKg-1 K-1 , cools from 75ºC to 35ºC",
       "options": {
         "A": "1000J",
         "B": "1050J",
@@ -36369,9 +36369,9 @@
     {
       "id": "jamb-physics-bank-2599",
       "type": "mcq",
-      "stem": "The charge of magnitude 1.6 x 10 −19 C is placed in a uniform electric field of intensity 1200Vm−1 . Calculate its acceleration, if the mass of the charge is 9.1 x 10−31 kg",
+      "stem": "The charge of magnitude 1.6 x 10 -19 C is placed in a uniform electric field of intensity 1200Vm-1 . Calculate its acceleration, if the mass of the charge is 9.1 x 10-31 kg",
       "options": {
-        "A": "2.11 x 1014 ms−2",
+        "A": "2.11 x 1014 ms-2",
         "B": "2.11 x 1013ms-2",
         "C": "C. 1.20 x 1014ms-2",
         "D": "D. 1.20 x 1013ms-2"
@@ -36455,10 +36455,10 @@
       "type": "mcq",
       "stem": "The dimension of young's modulus,E is given by",
       "options": {
-        "A": "MLT−1",
-        "B": "MT−2",
-        "C": "ML−1 T−2",
-        "D": "M−1 T"
+        "A": "MLT-1",
+        "B": "MT-2",
+        "C": "ML-1 T-2",
+        "D": "M-1 T"
       },
       "marks": 1,
       "year": 2024,
@@ -36469,10 +36469,10 @@
       "type": "mcq",
       "stem": "The distance between two successive crests of a water wave is 0.25m. If a particle on the surface of the water makes four complete vertical oscillations in one second. Calculate the speed of the wave.",
       "options": {
-        "A": "4ms−1",
-        "B": "3ms−1",
-        "C": "2ms−1",
-        "D": "1ms−1"
+        "A": "4ms-1",
+        "B": "3ms-1",
+        "C": "2ms-1",
+        "D": "1ms-1"
       },
       "marks": 1,
       "year": 2024,
@@ -36523,12 +36523,12 @@
     {
       "id": "jamb-physics-bank-2611",
       "type": "mcq",
-      "stem": "The energy of light of frequency 2.0 x 1015 Hz is (h = 6.63 x 10−34 Js)",
+      "stem": "The energy of light of frequency 2.0 x 1015 Hz is (h = 6.63 x 10-34 Js)",
       "options": {
-        "A": "3.33 x 10−18 J",
-        "B": "1.33 x 10−18 J",
-        "C": "1.33 x 10−19 J",
-        "D": "3.33 x 10−19 J"
+        "A": "3.33 x 10-18 J",
+        "B": "1.33 x 10-18 J",
+        "C": "1.33 x 10-19 J",
+        "D": "3.33 x 10-19 J"
       },
       "marks": 1,
       "year": 2024,
@@ -36635,11 +36635,11 @@
     {
       "id": "jamb-physics-bank-2619",
       "type": "mcq",
-      "stem": "The gravitational force between two objects masses 1024 kg and 1027 kg is 6.67N. Calculate the distance between them [ G = 6.6 x 10−11 Nm2 kg−2 ]",
+      "stem": "The gravitational force between two objects masses 1024 kg and 1027 kg is 6.67N. Calculate the distance between them [ G = 6.6 x 10-11 Nm2 kg-2 ]",
       "options": {
         "A": "1.0 x 1020 m",
-        "B": "2.0 x 10−20−20m",
-        "C": "1.0 x 10−20 m",
+        "B": "2.0 x 10-20-20m",
+        "C": "1.0 x 10-20 m",
         "D": "2.0 x 1020 m"
       },
       "marks": 1,
@@ -36833,10 +36833,10 @@
       "type": "mcq",
       "stem": "The stress experienced by a wire of diameter yπyπm loaded by a weight y22N is",
       "options": {
-        "A": "π Nm −2",
-        "B": "2π Nm−2",
-        "C": "4π Nm −2",
-        "D": "8π Nm−2"
+        "A": "π Nm -2",
+        "B": "2π Nm-2",
+        "C": "4π Nm -2",
+        "D": "8π Nm-2"
       },
       "marks": 1,
       "year": 2024,
@@ -37055,7 +37055,7 @@
     {
       "id": "jamb-physics-bank-2649",
       "type": "mcq",
-      "stem": "Using the diagram above, calculate the relative density of x, if the density of methanol is 800kgm−3",
+      "stem": "Using the diagram above, calculate the relative density of x, if the density of methanol is 800kgm-3",
       "options": {
         "A": "0.8",
         "B": "0.5",
@@ -37909,7 +37909,7 @@
     {
       "id": "jamb-physics-bank-2711",
       "type": "mcq",
-      "stem": "If the critical angle for a glass–air boundary is 45º, what is the refractive index of the glass?",
+      "stem": "If the critical angle for a glass-air boundary is 45º, what is the refractive index of the glass?",
       "options": {
         "A": "\\(\\sqrt{2}\\)",
         "B": "\\(\\sqrt{5}\\)",
@@ -39761,15 +39761,15 @@
       "type": "mcq",
       "stem": "At what respective value of a, b, and c would the unit of work, the joule, be dimensionally similar to M<sup>a</sup>  L<sup>b</sup>  T<sup>c</sup>?",
       "options": {
-        "A": "1, – 2, 1",
-        "B": "1, 2, – 2",
-        "C": "1, 1, –2",
+        "A": "1, - 2, 1",
+        "B": "1, 2, - 2",
+        "C": "1, 1, -2",
         "D": "2, 2, 1"
       },
       "marks": 1,
       "year": 2015,
       "answer": "B",
-      "explanation": "Work (w) = Force (f) × Distance (d)<br>\r\n<br>\r\nNote: f = ma = mass × acceleration<br>\r\n<br>\r\n= mass ×acceleration ×distance<br>\r\n<br>\r\n= kg ×ms<sup>–2</sup> × m<br>\r\n<br>\r\n= kg m2 5<sup>–2</sup><br>\r\n<br>\r\n(Note: the dimension of kg = M, M = L & S = T)<br>\r\n<br>\r\nWork = ML2 T–2 = Ma  Lb  Tc<br>\r\n<br>\r\ni.e. Ma  Lb  Tc = as 1, b = 2, c = –2<br>\r\n<br>\r\nThe value of a, band c = 1, 2, –2",
+      "explanation": "Work (w) = Force (f) × Distance (d)<br>\r\n<br>\r\nNote: f = ma = mass × acceleration<br>\r\n<br>\r\n= mass ×acceleration ×distance<br>\r\n<br>\r\n= kg ×ms<sup>-2</sup> × m<br>\r\n<br>\r\n= kg m2 5<sup>-2</sup><br>\r\n<br>\r\n(Note: the dimension of kg = M, M = L & S = T)<br>\r\n<br>\r\nWork = ML2 T-2 = Ma  Lb  Tc<br>\r\n<br>\r\ni.e. Ma  Lb  Tc = as 1, b = 2, c = -2<br>\r\n<br>\r\nThe value of a, band c = 1, 2, -2",
       "video": "https://www.youtube.com/embed/jbvvzEdo49I?start=225"
     },
     {
@@ -39793,10 +39793,10 @@
       "type": "mcq",
       "stem": "<p>If an object whose&nbsp;mass is 3kg moves in a circular path of a radius 0.7m, records a speed at 2m/s. What is the result of the angular velocity?</p>",
       "options": {
-        "A": "4 rads<sup>–1</sup>",
-        "B": "1rads–1<sup>–1</sup>",
-        "C": "3<sup>–1</sup>rads–1",
-        "D": "4rads–1<sup>–1</sup>"
+        "A": "4 rads<sup>-1</sup>",
+        "B": "1rads-1<sup>-1</sup>",
+        "C": "3<sup>-1</sup>rads-1",
+        "D": "4rads-1<sup>-1</sup>"
       },
       "marks": 1,
       "year": 2015,

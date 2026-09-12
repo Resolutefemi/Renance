@@ -1307,7 +1307,7 @@
       "stem": "(a) A body of mass 5 kg is placed on a smooth plane inclined at an angle 30° to the horizontal. Find the magnitude of the force: (i) acting parallel to the plane                               (ii) required to keep the body in equilibrium. [Take g = \\(10 ms^{-2}\\)].\n(b) A uniform plank PQ of length 10m and mass m kg rests on two supports A and B, where |PA| = |BQ| = 1m. A load of mass 8 kg is placed on the plank at point C such that |AC| = 3.5 m. If the reaction at B is 100 N, calculate the (i) value of m  (ii) reaction at A.  [Take g = \\(10 ms^{-2}\\)].",
       "marks": 1,
       "year": 2006,
-      "explanation": "(a) (i) Force parallel to plane = \\(mg \\sin 30\\) = \\(5 \\times 10 \\times 0.5 \\) = \\(25 N\\) (ii) Force required to keep the body in equilibrium = \\(mg \\sin 30 - \\mu R\\) = \\(25 - \\mu \\times 5 \\times \\frac{5\\sqrt{3}}{2}\\) = \\(25(1 - \\mu) \\frac{\\sqrt{3}}{2}\\) b) Since the plank does not move, all forces and torques are balanced. Forces: RA + RB - mCg - mpg=0, torques (consider A as the pivot): \\(\\frac{mp}{10}\\)g ⋅ 0.5 − \\(\\frac{9}{10}\\)mp​g⋅4.5 −mC​g⋅3.5+100⋅8=0 mp​=13 kg, RA​=110 N."
+      "explanation": "(a) (i) Force parallel to plane = \\(mg \\sin 30\\) = \\(5 \\times 10 \\times 0.5 \\) = \\(25 N\\) (ii) Force required to keep the body in equilibrium = \\(mg \\sin 30 - \\mu R\\) = \\(25 - \\mu \\times 5 \\times \\frac{5\\sqrt{3}}{2}\\) = \\(25(1 - \\mu) \\frac{\\sqrt{3}}{2}\\) b) Since the plank does not move, all forces and torques are balanced. Forces: RA + RB - mCg - mpg=0, torques (consider A as the pivot): \\(\\frac{mp}{10}\\)g ⋅ 0.5 - \\(\\frac{9}{10}\\)mp​g⋅4.5 -mC​g⋅3.5+100⋅8=0 mp​=13 kg, RA​=110 N."
     },
     {
       "id": "waec-further-mathematics-theory-0164",
@@ -1507,7 +1507,7 @@
       "stem": "Find the equation of the circle centre (2. 3) which passes through the y - intercept of the line 3x  - 2y + 6 = 0",
       "marks": 1,
       "year": 2019,
-      "explanation": "At y-intercept, 3(0) — 2y + 6 = 0 and solving for y, y = 3. Therefore, the coordinates of y — intercept is (0, 3). Then, r\\(^2\\) = (0 — 2)\\(^2\\) + (3 — 3)\\(^2\\) = 4. With the centre at (2, 3). the equation of the circle was (x — 2)\\(^2\\) + (y — 3)\\(^2\\) = 4 and which simplified to \\(x^2\\) - y\\(^2\\) — 4x — 6y + 9 = 0"
+      "explanation": "At y-intercept, 3(0) - 2y + 6 = 0 and solving for y, y = 3. Therefore, the coordinates of y - intercept is (0, 3). Then, r\\(^2\\) = (0 - 2)\\(^2\\) + (3 - 3)\\(^2\\) = 4. With the centre at (2, 3). the equation of the circle was (x - 2)\\(^2\\) + (y - 3)\\(^2\\) = 4 and which simplified to \\(x^2\\) - y\\(^2\\) - 4x - 6y + 9 = 0"
     },
     {
       "id": "waec-further-mathematics-theory-0189",
@@ -1560,7 +1560,7 @@
     {
       "id": "waec-further-mathematics-theory-0195",
       "type": "theory",
-      "stem": "Using determinants, solve the following equations simultaneously.\n5x — 6y + 4z = 15\n7x + 4y — 3z = 19\n2x + y + 6z = 46",
+      "stem": "Using determinants, solve the following equations simultaneously.\n5x - 6y + 4z = 15\n7x + 4y - 3z = 19\n2x + y + 6z = 46",
       "marks": 1,
       "year": 2019,
       "explanation": "To find the determinant of \\(\\begin{pmatrix} 5 & -6 & 4\\\\ 7 & 4 & -3\\\\ 2 & 1 & 6 \\end{pmatrix}\\) which is 5(24 + 3) + 6(4 + 6) + 4(7 - 8) = 135 + 288 - 4 = 419. Then, substitude the column of the coefficient of x by the right - hand side of the equations and find the determinant of \\(\\begin{pmatrix} 5 & -6 & 4\\\\ 7 & 4 & -3\\\\ 46 & 1 & 6 \\end{pmatrix}\\) = 15(24 + 3) + 6(114 + 138) + 4(19 - 184) = 405 + 1512 - 660 = 1257. Similarly, to find the coefficient of y, find the determinant of \\(\\begin{pmatrix} 5 & 15 & 4\\\\ 7 & 19 & -3\\\\ 2 & 46 & 6 \\end{pmatrix}\\) = 5(114 + 138) - 13(42 + 6) - 4(322 - 38) = 1260 - 720 + 1136 = 1676. Finally, for the coefficient of z find the determinant of \\(\\begin{pmatrix} 5 & -6 & 15\\\\ 7 & 19 & -3\\\\ 2 & 46 & 6 \\end{pmatrix}\\) = 5(184 - 19) + 6(322 - 38) + 15(7 - 8) = 825 + 1704 - 15 = 2514 Therefore, x = \\(\\frac{1257}{419}\\) = 3, y = \\(\\frac{1676}{419}\\) = 4 and z = \\(\\frac{2514}{419}\\) = 6"
@@ -1835,7 +1835,7 @@
       "stem": "(a) Find the derivative of y = x\\(^2\\) (1 + x)\\(^{\\frac{3}{2}}\\) with respect to x.\n(b) The centre of a circle lies on the line 2y - x = 3. If the circle passes through P(2,3) and Q(6,7), find its equation.",
       "marks": 1,
       "year": 2020,
-      "explanation": "y = x\\(^2\\)(1 + x)\\(^{\\frac{3}{2}}\\) Let u = x\\(^2\\) v = (1 + x)\\(^{\\frac{3}{2}}\\) \\(\\frac{du}{dx} 2x\\) \\(\\frac{dv}{dx} = \\frac{3}{2}\\)(1 + x)\\(^\\frac{1}{2}\\) \\(\\frac{dy}{dx} = v\\frac{du}{dx} + u\\frac{dv}{dx}\\) = (1 + x)\\(^{\\frac{3}{2}}\\)(2x) + x\\(^2\\)\\(\\frac{3}{2}(1 + x)^{\\frac{1}{2}}\\) = 2x(1 + x)\\(^{\\frac{3}{2}}\\) + \\(\\frac{3x^2(1 + x)^{\\frac{1}{2}}}{2}\\) (b) Let the coordinates of the centre of a circle be C(h,k) which lies on the line 2y - x = 3 , therefore 2k — h = 3. ………………..(1). The circle passes through the points P(2,3) and Q(6,7) ,then :— CP = CQ = radius of the circle. or, (CP)\\(^2\\) = (CQ)\\(^2\\). or, (h - 2)\\(^2\\) + (k-3)\\(^2\\) = (h - 6)\\(^2\\) + (k - 7)\\(^2\\). or, h\\(^2\\) – 4h + 4 + k\\(^2\\) – 6k + 9 = h\\(^2\\) – 12h + 36 + k\\(^2\\) – 14k + 49. or, 8h + 8k = 85 - 13 = 72. or, h + k = 9…………………(2) , from eqn.(1) and (2). h = 5, k = 4. Thus the coordinates of the centre of a circle are (5,4). Radius (r) = CP = \\(\\sqrt{(5–2)^2 + (4 – 3)^2}\\) = \\(\\sqrt{10}\\) units. Equation of a circle is:— (x - 5)\\(^2\\) + (y - 4)\\(^2\\) = \\(\\sqrt{(10)}^2\\) x\\(^2\\) - 10x + 25 + y\\(^2\\) - 8y + 16 = 10 x\\(^2\\) + y\\(^2\\) - 10x - 8y + 25 + 16 - 10 = 0 x\\(^2\\) + y\\(^2\\) - 10x - 8y + 31 = 0"
+      "explanation": "y = x\\(^2\\)(1 + x)\\(^{\\frac{3}{2}}\\) Let u = x\\(^2\\) v = (1 + x)\\(^{\\frac{3}{2}}\\) \\(\\frac{du}{dx} 2x\\) \\(\\frac{dv}{dx} = \\frac{3}{2}\\)(1 + x)\\(^\\frac{1}{2}\\) \\(\\frac{dy}{dx} = v\\frac{du}{dx} + u\\frac{dv}{dx}\\) = (1 + x)\\(^{\\frac{3}{2}}\\)(2x) + x\\(^2\\)\\(\\frac{3}{2}(1 + x)^{\\frac{1}{2}}\\) = 2x(1 + x)\\(^{\\frac{3}{2}}\\) + \\(\\frac{3x^2(1 + x)^{\\frac{1}{2}}}{2}\\) (b) Let the coordinates of the centre of a circle be C(h,k) which lies on the line 2y - x = 3 , therefore 2k - h = 3. ………………..(1). The circle passes through the points P(2,3) and Q(6,7) ,then :- CP = CQ = radius of the circle. or, (CP)\\(^2\\) = (CQ)\\(^2\\). or, (h - 2)\\(^2\\) + (k-3)\\(^2\\) = (h - 6)\\(^2\\) + (k - 7)\\(^2\\). or, h\\(^2\\) - 4h + 4 + k\\(^2\\) - 6k + 9 = h\\(^2\\) - 12h + 36 + k\\(^2\\) - 14k + 49. or, 8h + 8k = 85 - 13 = 72. or, h + k = 9…………………(2) , from eqn.(1) and (2). h = 5, k = 4. Thus the coordinates of the centre of a circle are (5,4). Radius (r) = CP = \\(\\sqrt{(5-2)^2 + (4 - 3)^2}\\) = \\(\\sqrt{10}\\) units. Equation of a circle is:- (x - 5)\\(^2\\) + (y - 4)\\(^2\\) = \\(\\sqrt{(10)}^2\\) x\\(^2\\) - 10x + 25 + y\\(^2\\) - 8y + 16 = 10 x\\(^2\\) + y\\(^2\\) - 10x - 8y + 25 + 16 - 10 = 0 x\\(^2\\) + y\\(^2\\) - 10x - 8y + 31 = 0"
     },
     {
       "id": "waec-further-mathematics-theory-0230",
@@ -2019,7 +2019,7 @@
       "stem": "Solve 3cos2x - sinx = 0 for 0º≤x≤360º",
       "marks": 1,
       "year": 2022,
-      "explanation": "3cos2x - sinx = 0 cos 2A = 1 – 2 sin\\(^2\\)A 3(1 - 2sin\\(^2\\)x) - sinx = 0 3 - 6sin\\(^2\\)x -sinx = 0 let sinx = p 3 - 6p\\(^2\\) -p = 0 -6p2 - p +3 = 0 factors of p in the eqn: p = 0.7953 or 0.6287 when p = 0.7953 p = sinx x = sin\\(^{-1}\\) p x = sin\\(^{-1}\\)(0.7953) x = 52.68º when p = 0.6287 p = sinx x = sin\\(^{-1}\\) p x = sin\\(^{-1}\\)(0.6287) x = 38.95º"
+      "explanation": "3cos2x - sinx = 0 cos 2A = 1 - 2 sin\\(^2\\)A 3(1 - 2sin\\(^2\\)x) - sinx = 0 3 - 6sin\\(^2\\)x -sinx = 0 let sinx = p 3 - 6p\\(^2\\) -p = 0 -6p2 - p +3 = 0 factors of p in the eqn: p = 0.7953 or 0.6287 when p = 0.7953 p = sinx x = sin\\(^{-1}\\) p x = sin\\(^{-1}\\)(0.7953) x = 52.68º when p = 0.6287 p = sinx x = sin\\(^{-1}\\) p x = sin\\(^{-1}\\)(0.6287) x = 38.95º"
     },
     {
       "id": "waec-further-mathematics-theory-0253",
@@ -2355,7 +2355,7 @@
       "stem": "In an examination, 70% of the candidates passed. If 12 candidates are selected at random, find the probability that:\n(a) at least two of them failed;\n(b) exactly half of them passed;\n(c) not more than one - six of them failed.",
       "marks": 1,
       "year": 2024,
-      "explanation": "70% passed = p 30% failed = q Using binomial theorem P[x = x] = \\(\\begin{pmatrix} n \\\\ x \\end{pmatrix}\\)P\\(^x\\)q\\(^{n - x}\\) (a) Probability that at least two of them failed: P(X \\(\\geq\\) 2) = 1 − P(X=0) − P(X=1) When P(x = 0) = \\(\\begin{pmatrix} 12 \\\\ 12 \\end{pmatrix}\\)\\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^2\\)\\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^0\\) = 0.01384129 When P(x = 1) = \\(\\begin{pmatrix} 12 \\\\ 11 \\end{pmatrix}\\)\\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^{11}\\)\\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^1\\) = 0.07118376 P(X \\(\\geq\\) 2) = 1 - 0.01384129 - 0.0711837 = 0.9149751 ≈ 0.915 (b) half of twelve = 6 P(x = 6) = \\(\\begin{pmatrix} 12 \\\\ 6 \\end{pmatrix}\\) \\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^6\\) \\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^6\\) = 924 x 0.117649 x 0.000729 = 0.079245 (c) \\(\\frac{1}{6}\\) x 12 = 2, i.e. P[x \\(\\leq\\) 2) = P[x = 0] + P[ x = 1] + P[x = 2] = 0.01384129 + 0.07118376 + \\(\\begin{pmatrix} 12 \\\\ 10 \\end{pmatrix}\\) \\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^{10}\\) \\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^2\\) = 0.01384129 + 0.07118376 + 0.167790298 = 0.252815348."
+      "explanation": "70% passed = p 30% failed = q Using binomial theorem P[x = x] = \\(\\begin{pmatrix} n \\\\ x \\end{pmatrix}\\)P\\(^x\\)q\\(^{n - x}\\) (a) Probability that at least two of them failed: P(X \\(\\geq\\) 2) = 1 - P(X=0) - P(X=1) When P(x = 0) = \\(\\begin{pmatrix} 12 \\\\ 12 \\end{pmatrix}\\)\\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^2\\)\\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^0\\) = 0.01384129 When P(x = 1) = \\(\\begin{pmatrix} 12 \\\\ 11 \\end{pmatrix}\\)\\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^{11}\\)\\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^1\\) = 0.07118376 P(X \\(\\geq\\) 2) = 1 - 0.01384129 - 0.0711837 = 0.9149751 ≈ 0.915 (b) half of twelve = 6 P(x = 6) = \\(\\begin{pmatrix} 12 \\\\ 6 \\end{pmatrix}\\) \\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^6\\) \\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^6\\) = 924 x 0.117649 x 0.000729 = 0.079245 (c) \\(\\frac{1}{6}\\) x 12 = 2, i.e. P[x \\(\\leq\\) 2) = P[x = 0] + P[ x = 1] + P[x = 2] = 0.01384129 + 0.07118376 + \\(\\begin{pmatrix} 12 \\\\ 10 \\end{pmatrix}\\) \\(\\begin{pmatrix} 7 \\\\ 10 \\end{pmatrix}\\)\\(^{10}\\) \\(\\begin{pmatrix} 3 \\\\ 10 \\end{pmatrix}\\)\\(^2\\) = 0.01384129 + 0.07118376 + 0.167790298 = 0.252815348."
     },
     {
       "id": "waec-further-mathematics-theory-0295",
@@ -2411,7 +2411,7 @@
       "stem": "5a. There are 6 points in a plane. How many triangles can be formed with the points?\nb. A family of 6 is to be seated in a row. In how many ways can this be done if the father and mother are not to sit together?\nLeave your answer in whole numbers \" abc.\"",
       "marks": 1,
       "year": 2025,
-      "explanation": "a. Assuming no three points are collinear (as is standard unless specified otherwise), the number of triangles is the number of ways to choose 3 points out of 6, which form a triangle. I.e \\(^6C_3\\) = \\(\\frac{6!}{(6-3)!3!}\\) = \\(\\frac{6!}{3!3!}\\) = \\(\\frac{6 \\times 5 \\times 4 \\times 3!}{3! \\times 3 \\times 2 \\times 1}\\) = \\(\\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1}\\) = 5 x 4 = 20 triangles. b. Total number of ways to seat 6 people in a row (no restrictions): 6! =720 Number of ways where father and mother sit together: Treat father and mother as a single unit (they can switch places within the unit: father-mother or mother-father). This gives 5 units to arrange: 5! x 2 = 120 x 2 = 240ways. Number of ways where they are not together: Total - Together = 720 − 240 = 480 ways"
+      "explanation": "a. Assuming no three points are collinear (as is standard unless specified otherwise), the number of triangles is the number of ways to choose 3 points out of 6, which form a triangle. I.e \\(^6C_3\\) = \\(\\frac{6!}{(6-3)!3!}\\) = \\(\\frac{6!}{3!3!}\\) = \\(\\frac{6 \\times 5 \\times 4 \\times 3!}{3! \\times 3 \\times 2 \\times 1}\\) = \\(\\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1}\\) = 5 x 4 = 20 triangles. b. Total number of ways to seat 6 people in a row (no restrictions): 6! =720 Number of ways where father and mother sit together: Treat father and mother as a single unit (they can switch places within the unit: father-mother or mother-father). This gives 5 units to arrange: 5! x 2 = 120 x 2 = 240ways. Number of ways where they are not together: Total - Together = 720 - 240 = 480 ways"
     },
     {
       "id": "waec-further-mathematics-theory-0302",
@@ -2424,10 +2424,10 @@
     {
       "id": "waec-further-mathematics-theory-0303",
       "type": "theory",
-      "stem": "7a. A body of mass 5 kg resting on a smooth horizontal plane is acted upon by forces 6i + 2j, 5i + 4j, and 4i − j. Calculate:  the velocity of the body\nb. the magnitude of its velocity, after 4 seconds",
+      "stem": "7a. A body of mass 5 kg resting on a smooth horizontal plane is acted upon by forces 6i + 2j, 5i + 4j, and 4i - j. Calculate:  the velocity of the body\nb. the magnitude of its velocity, after 4 seconds",
       "marks": 1,
       "year": 2025,
-      "explanation": "a. Mass , m = 5 kg Resultant force, f = (6i+2j) + (5i+4j) + (4i−j) = (6+5+4)i + (2+4−1)j = F = 15i + 5j From Newton second law of motion F = \\(\\frac{m \\Delta V}{\\text{t}}\\) ​F = \\(\\frac{m(v - u)}{\\text{t}}\\) where u=0 ms\\(^{−1}\\) F = \\(\\frac{\\text{mv}}{\\text{t}}\\) v = \\(\\frac{\\text{Ft}}{\\text{m}}\\) v = \\(\\frac{t(15i + 5j)}{5}\\) v = t(3i + j)m/s b. Velocity, V after 4 s v = t(3i + j) = (4)(3i + j) = 12i + 4jm/s."
+      "explanation": "a. Mass , m = 5 kg Resultant force, f = (6i+2j) + (5i+4j) + (4i-j) = (6+5+4)i + (2+4-1)j = F = 15i + 5j From Newton second law of motion F = \\(\\frac{m \\Delta V}{\\text{t}}\\) ​F = \\(\\frac{m(v - u)}{\\text{t}}\\) where u=0 ms\\(^{-1}\\) F = \\(\\frac{\\text{mv}}{\\text{t}}\\) v = \\(\\frac{\\text{Ft}}{\\text{m}}\\) v = \\(\\frac{t(15i + 5j)}{5}\\) v = t(3i + j)m/s b. Velocity, V after 4 s v = t(3i + j) = (4)(3i + j) = 12i + 4jm/s."
     },
     {
       "id": "waec-further-mathematics-theory-0304",
@@ -2435,7 +2435,7 @@
       "stem": "8.  An object is projected vertically upward with a velocity of 80 ms\\(^{-1}\\). Find the;\na. Maximum height reached (Leave your answer in whole number 'abc.')\nb. Time taken to return to the point of projection [ g = 10m/s\\(^2\\)]",
       "marks": 1,
       "year": 2025,
-      "explanation": "Maximum height, h, v = 0m/s at max height Recall v\\(^2\\) = u\\(^2\\) − 2gh 0\\(^2\\) = 80\\(^2\\) − 2(10)h 0 = 6400 - 20h h = \\(\\frac{6400}{20}\\) h = 320 m b. Time taken to reach maximum height, t V = u − gt 0 = 80−10t 10t = 80 t = \\(\\frac{80}{10}\\) = 8s Since it takes 8 s to reach maximum height, it will also take 8 s to return to the point of projection; hence, it is 16 s"
+      "explanation": "Maximum height, h, v = 0m/s at max height Recall v\\(^2\\) = u\\(^2\\) - 2gh 0\\(^2\\) = 80\\(^2\\) - 2(10)h 0 = 6400 - 20h h = \\(\\frac{6400}{20}\\) h = 320 m b. Time taken to reach maximum height, t V = u - gt 0 = 80-10t 10t = 80 t = \\(\\frac{80}{10}\\) = 8s Since it takes 8 s to reach maximum height, it will also take 8 s to return to the point of projection; hence, it is 16 s"
     },
     {
       "id": "waec-further-mathematics-theory-0305",
@@ -2475,7 +2475,7 @@
       "stem": "14a.  Two pupils are chosen at random from a group of 4 boys and 5 girls. Find the probability that the two pupils chosen would be boys. Leave your answer in fraction 'a/b.'\nb. Twenty percent of the total production of transistors produced by a machine are below standard. If a random sample of six transistors produced by the machine is taken, what is the probability of getting \ni. Exactly 2\nii. Exactly 1. Leave your answer in six decimal places \" a.bcdefg.\"\niii. At least 2. Leave your answer in five decimal places \" a. bcdeg.\"\niv. At most 2 standard transistors",
       "marks": 1,
       "year": 2025,
-      "explanation": "14a. Total number of pupils = 4 boys + 5 girls = 9. Number of ways to choose 2 boys = \\(\\binom{4}{2} = 6\\). Total number of ways to choose any 2 pupils = \\(\\binom{9}{2} = 36\\). Probability that both chosen are boys = \\(\\dfrac{6}{36} = \\dfrac{1}{6}\\). 14b. This is a binomial distribution with n = 6 trials and p = 0.80 (probability a transistor is standard), q = 0.2 (Prb. of a transistor below standard) Let Y = number of standard transistors. P(Y = k) = C(6, k) × (0.8)\\(^k\\) × (0.2)\\(^{(6−k)}\\) i: k = 2 → 15 × 0.64 × 0.0016 = 0.015360 ii: k = 1 → 6 × 0.8 × 0.00032 = 0.001536 iii: P(Y ≥ 2) = 1 − P(Y = 0) − P(Y = 1) = 1 − 0.000064 − 0.001536 = 0.99840 iv: P(Y ≤ 2) = P(Y = 0) + P(Y = 1) + P(Y = 2) = 0.000064 + 0.001536 + 0.015360 = 0.016960"
+      "explanation": "14a. Total number of pupils = 4 boys + 5 girls = 9. Number of ways to choose 2 boys = \\(\\binom{4}{2} = 6\\). Total number of ways to choose any 2 pupils = \\(\\binom{9}{2} = 36\\). Probability that both chosen are boys = \\(\\dfrac{6}{36} = \\dfrac{1}{6}\\). 14b. This is a binomial distribution with n = 6 trials and p = 0.80 (probability a transistor is standard), q = 0.2 (Prb. of a transistor below standard) Let Y = number of standard transistors. P(Y = k) = C(6, k) × (0.8)\\(^k\\) × (0.2)\\(^{(6-k)}\\) i: k = 2 → 15 × 0.64 × 0.0016 = 0.015360 ii: k = 1 → 6 × 0.8 × 0.00032 = 0.001536 iii: P(Y ≥ 2) = 1 - P(Y = 0) - P(Y = 1) = 1 - 0.000064 - 0.001536 = 0.99840 iv: P(Y ≤ 2) = P(Y = 0) + P(Y = 1) + P(Y = 2) = 0.000064 + 0.001536 + 0.015360 = 0.016960"
     },
     {
       "id": "waec-further-mathematics-theory-0310",

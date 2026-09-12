@@ -93,12 +93,6 @@ export default function LessonsIndex() {
           Renance turns reading into marks: mock CBT papers, spaced review and an
           exam-technique tutor, free for students.
         </p>
-        <Link
-          href="/register/"
-          className="mt-4 inline-flex h-12 items-center justify-center rounded-[10px] bg-primary px-8 text-sm font-semibold text-on-primary transition hover:opacity-90"
-        >
-          Create your free account
-        </Link>
       </footer>
     </main>
   );

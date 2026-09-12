@@ -89,7 +89,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Filter paper pore size is chosen based on the size of the particles to be filtered — coarser particles use larger pore size paper."
+      "explanation": "Filter paper pore size is chosen based on the size of the particles to be filtered - coarser particles use larger pore size paper."
     },
     {
       "id": "uni-futa-che103-0007",
@@ -117,7 +117,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Crystallization exploits differences in solubility at different temperatures — cooling a hot saturated solution causes less-soluble material to crystallize out."
+      "explanation": "Crystallization exploits differences in solubility at different temperatures - cooling a hot saturated solution causes less-soluble material to crystallize out."
     },
     {
       "id": "uni-futa-che103-0009",
@@ -432,10 +432,10 @@
       "type": "mcq",
       "stem": "Which piece of apparatus is specifically designed for evaporating liquid solutions to dryness or concentrating them?",
       "options": {
-        "A": "Evaporating dish — shallow porcelain dish with a spout; can be heated directly",
-        "B": "Beaker — cylindrical flat-bottomed glass vessel used for mixing",
-        "C": "Crucible — small deep container for igniting at very high temperatures",
-        "D": "Watch glass — thin circular glass plate used as a cover"
+        "A": "Evaporating dish - shallow porcelain dish with a spout; can be heated directly",
+        "B": "Beaker - cylindrical flat-bottomed glass vessel used for mixing",
+        "C": "Crucible - small deep container for igniting at very high temperatures",
+        "D": "Watch glass - thin circular glass plate used as a cover"
       },
       "marks": 1,
       "answer": "A",
@@ -462,7 +462,7 @@
       "options": {
         "A": "Hydrogen gas (H₂) from a cylinder",
         "B": "Oxygen gas (O₂) under pressure",
-        "C": "Liquefied petroleum gas (LPG) — propane or butane",
+        "C": "Liquefied petroleum gas (LPG) - propane or butane",
         "D": "Carbon monoxide (CO) piped from the main line"
       },
       "marks": 1,
@@ -531,7 +531,7 @@
       "stem": "A retort stand with a clamp is used to support which apparatus during laboratory experiments?",
       "options": {
         "A": "The Bunsen burner and tripod stand only",
-        "B": "The filter funnel, thermometer, burette, condenser, or flask — whichever requires vertical support",
+        "B": "The filter funnel, thermometer, burette, condenser, or flask - whichever requires vertical support",
         "C": "The evaporating dish during crystallisation only",
         "D": "The mortar and pestle during grinding operations"
       },
@@ -559,7 +559,7 @@
       "stem": "What is the key difference between a measuring cylinder and a burette when measuring liquid volumes?",
       "options": {
         "A": "A measuring cylinder is more accurate than a burette in all situations",
-        "B": "They are identical — 'burette' is just an alternative name for a measuring cylinder",
+        "B": "They are identical - 'burette' is just an alternative name for a measuring cylinder",
         "C": "A burette (±0.05 cm³) is far more accurate than a measuring cylinder (±0.5 mL); only the burette has a stopcock for controlled delivery",
         "D": "A measuring cylinder has a stopcock; a burette does not"
       },
@@ -587,7 +587,7 @@
       "stem": "Simple distillation separates components based on which physical property?",
       "options": {
         "A": "Difference in density of the two liquids",
-        "B": "Difference in volatility (boiling point) — the more volatile component evaporates and is condensed and collected first",
+        "B": "Difference in volatility (boiling point) - the more volatile component evaporates and is condensed and collected first",
         "C": "Difference in solubility in a common third solvent",
         "D": "Difference in magnetic susceptibility of the components"
       },
@@ -601,7 +601,7 @@
       "stem": "Fractional distillation of ethanol (b.p. 78°C) and water (b.p. 100°C) requires which additional apparatus compared to simple distillation?",
       "options": {
         "A": "A separating funnel to drain off the denser layer",
-        "B": "A fractionating column packed with glass beads — providing multiple condensation/re-evaporation cycles for better separation",
+        "B": "A fractionating column packed with glass beads - providing multiple condensation/re-evaporation cycles for better separation",
         "C": "A Buchner funnel and vacuum pump for suction filtration",
         "D": "A chromatographic tank with solvent and silica stationary phase"
       },
@@ -616,7 +616,7 @@
       "options": {
         "A": "Difference in specific heat capacity between solute and solvent",
         "B": "Difference in boiling points at standard atmospheric pressure",
-        "C": "Difference in solubility at different temperatures — cooling a hot saturated solution causes less-soluble material to crystallise out",
+        "C": "Difference in solubility at different temperatures - cooling a hot saturated solution causes less-soluble material to crystallise out",
         "D": "Difference in bubble-point pressure at reduced atmospheric pressure"
       },
       "marks": 1,
@@ -628,10 +628,10 @@
       "type": "mcq",
       "stem": "Which method is used to separate a mixture of immiscible liquids such as kerosene and water?",
       "options": {
-        "A": "Separating funnel — the two immiscible liquids form separate density-based layers that can be drained independently",
-        "B": "Evaporation — the water evaporates, leaving the kerosene",
-        "C": "Filtration — using filter paper to trap the kerosene",
-        "D": "Simple distillation — the liquids are boiled and condensed separately"
+        "A": "Separating funnel - the two immiscible liquids form separate density-based layers that can be drained independently",
+        "B": "Evaporation - the water evaporates, leaving the kerosene",
+        "C": "Filtration - using filter paper to trap the kerosene",
+        "D": "Simple distillation - the liquids are boiled and condensed separately"
       },
       "marks": 1,
       "answer": "A",
@@ -642,7 +642,7 @@
       "type": "mcq",
       "stem": "How are a mixture of iron filings and copper filings best separated?",
       "options": {
-        "A": "Magnetic separation — iron is ferromagnetic and attracted by a magnet; copper is non-magnetic",
+        "A": "Magnetic separation - iron is ferromagnetic and attracted by a magnet; copper is non-magnetic",
         "B": "Crystallisation from a common solvent at low temperature",
         "C": "Evaporation from a mixed dissolved metallic solution",
         "D": "Distillation from a mixed metallic melt"
@@ -656,10 +656,10 @@
       "type": "mcq",
       "stem": "Which separation method is used to separate several solutes that all dissolve in the same solvent?",
       "options": {
-        "A": "Evaporation to dryness — removes only the solvent",
-        "B": "Gravity filtration — separates only insoluble solids",
-        "C": "Chromatography — different solutes migrate at different rates through the stationary phase with the mobile phase solvent",
-        "D": "Sublimation — applicable only when one component sublimes"
+        "A": "Evaporation to dryness - removes only the solvent",
+        "B": "Gravity filtration - separates only insoluble solids",
+        "C": "Chromatography - different solutes migrate at different rates through the stationary phase with the mobile phase solvent",
+        "D": "Sublimation - applicable only when one component sublimes"
       },
       "marks": 1,
       "answer": "C",
@@ -685,7 +685,7 @@
       "stem": "If a laboratory fire breaks out involving a burning organic solvent, what should be done FIRST?",
       "options": {
         "A": "Pour water directly onto the flame to extinguish it quickly",
-        "B": "Smother the fire with a fire blanket or damp cloth — water can spread burning organic liquid and worsen the fire",
+        "B": "Smother the fire with a fire blanket or damp cloth - water can spread burning organic liquid and worsen the fire",
         "C": "Blow out the flame with a fan directed at the burning liquid",
         "D": "Immediately leave the lab and do not attempt to extinguish it"
       },
@@ -700,7 +700,7 @@
       "options": {
         "A": "Only a lab coat to protect clothing from spills",
         "B": "Only safety goggles to protect the eyes from splashes",
-        "C": "Laboratory coat, safety goggles, and closed-toe shoes — at minimum; gloves when handling corrosive, toxic, or carcinogenic substances",
+        "C": "Laboratory coat, safety goggles, and closed-toe shoes - at minimum; gloves when handling corrosive, toxic, or carcinogenic substances",
         "D": "No PPE is required for simple, room-temperature experiments"
       },
       "marks": 1,
@@ -740,10 +740,10 @@
       "type": "mcq",
       "stem": "Which of the following is the simplest member of all organic compounds?",
       "options": {
-        "A": "Formic acid (HCOOH) — the simplest carboxylic acid",
-        "B": "Formaldehyde (HCHO) — the simplest aldehyde",
-        "C": "Methane (CH₄) — the simplest alkane, hydrocarbon, and organic compound",
-        "D": "Methanol (CH₃OH) — the simplest alcohol"
+        "A": "Formic acid (HCOOH) - the simplest carboxylic acid",
+        "B": "Formaldehyde (HCHO) - the simplest aldehyde",
+        "C": "Methane (CH₄) - the simplest alkane, hydrocarbon, and organic compound",
+        "D": "Methanol (CH₃OH) - the simplest alcohol"
       },
       "marks": 1,
       "answer": "C",
@@ -775,7 +775,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Vacuum filtration through a Buchner funnel is 10× faster than gravity filtration and produces much drier filter cakes — essential for collecting crystalline products."
+      "explanation": "Vacuum filtration through a Buchner funnel is 10× faster than gravity filtration and produces much drier filter cakes - essential for collecting crystalline products."
     },
     {
       "id": "uni-futa-che103-0056",
@@ -868,7 +868,7 @@
       "options": {
         "A": "Hydrogen gas (H₂) from a cylinder",
         "B": "Oxygen gas (O₂) under pressure",
-        "C": "Liquefied petroleum gas (LPG) — propane or butane",
+        "C": "Liquefied petroleum gas (LPG) - propane or butane",
         "D": "Carbon monoxide (CO) piped from the main line"
       },
       "marks": 1,
@@ -923,7 +923,7 @@
       "stem": "What is the key difference between a measuring cylinder and a burette when measuring liquid volumes?",
       "options": {
         "A": "A measuring cylinder is more accurate than a burette",
-        "B": "They are identical — 'burette' is just an alternative name for a measuring cylinder",
+        "B": "They are identical - 'burette' is just an alternative name for a measuring cylinder",
         "C": "A burette (±0.05 cm³) is far more accurate than a measuring cylinder (±0.5 mL); only the burette has a stopcock",
         "D": "A measuring cylinder has a stopcock; a burette does not"
       },
@@ -964,14 +964,14 @@
       "type": "mcq",
       "stem": "A combustion tube for organic analysis must be made of what material?",
       "options": {
-        "A": "Soda-lime glass — transparent and thin-walled",
+        "A": "Soda-lime glass - transparent and thin-walled",
         "B": "Polypropylene plastic for broad chemical resistance",
-        "C": "Pyrex (borosilicate) or hard glass — to withstand very high combustion temperatures",
-        "D": "Porcelain — same material as crucibles"
+        "C": "Pyrex (borosilicate) or hard glass - to withstand very high combustion temperatures",
+        "D": "Porcelain - same material as crucibles"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Pyrex/borosilicate glass has very low thermal expansion and can withstand the high temperatures used in organic combustion analysis (600–900°C)."
+      "explanation": "Pyrex/borosilicate glass has very low thermal expansion and can withstand the high temperatures used in organic combustion analysis (600-900°C)."
     },
     {
       "id": "uni-futa-che103-0070",
@@ -1035,7 +1035,7 @@
       "stem": "A desiccator is used to store substances after drying. What is placed in the base to absorb moisture?",
       "options": {
         "A": "Concentrated HCl to absorb basic vapours",
-        "B": "Silica gel, CaCl₂, or P₂O₅ — desiccant that absorbs water vapour from the enclosed space",
+        "B": "Silica gel, CaCl₂, or P₂O₅ - desiccant that absorbs water vapour from the enclosed space",
         "C": "Activated charcoal to remove organic vapour impurities",
         "D": "Distilled water to maintain a constant humidity inside"
       },
@@ -1063,7 +1063,7 @@
       "stem": "A Buchner flask (side-arm flask) side arm is connected to what during filtration under reduced pressure?",
       "options": {
         "A": "A Liebig condenser for cooling vapour",
-        "B": "A vacuum pump — creating suction that draws the filtrate through the Buchner funnel",
+        "B": "A vacuum pump - creating suction that draws the filtrate through the Buchner funnel",
         "C": "A burette for standardized delivery of acid",
         "D": "A thermometer to monitor the reaction temperature"
       },
@@ -1091,7 +1091,7 @@
       "stem": "Why must a pipette filler be used instead of sucking a pipette with the mouth?",
       "options": {
         "A": "Because mouth suction gives less accurate volume measurements",
-        "B": "Safety — the liquid may be toxic, corrosive, or harmful; the rubber filler prevents any contact with the mouth",
+        "B": "Safety - the liquid may be toxic, corrosive, or harmful; the rubber filler prevents any contact with the mouth",
         "C": "Because the rubber filler maintains the liquid at constant temperature",
         "D": "Because mouth suction introduces CO₂ from breath, contaminating the solution"
       },
@@ -1139,7 +1139,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Vacuum filtration through a Buchner funnel is 10× faster than gravity filtration and produces much drier filter cakes — essential for collecting crystalline products."
+      "explanation": "Vacuum filtration through a Buchner funnel is 10× faster than gravity filtration and produces much drier filter cakes - essential for collecting crystalline products."
     },
     {
       "id": "uni-futa-che103-0082",
@@ -1203,7 +1203,7 @@
       "stem": "Simple distillation separates components based on which physical property?",
       "options": {
         "A": "Difference in density of the two liquids",
-        "B": "Difference in volatility (boiling point) — the more volatile component evaporates and is condensed first",
+        "B": "Difference in volatility (boiling point) - the more volatile component evaporates and is condensed first",
         "C": "Difference in solubility in a common third solvent",
         "D": "Difference in magnetic susceptibility of the components"
       },
@@ -1216,10 +1216,10 @@
       "type": "mcq",
       "stem": "Which method is used to separate a mixture of immiscible liquids such as kerosene and water?",
       "options": {
-        "A": "Separating funnel — the two immiscible liquids form separate density-based layers",
-        "B": "Evaporation — the water evaporates, leaving the kerosene",
-        "C": "Filtration — using filter paper to trap the kerosene",
-        "D": "Simple distillation — the liquids are boiled and condensed separately"
+        "A": "Separating funnel - the two immiscible liquids form separate density-based layers",
+        "B": "Evaporation - the water evaporates, leaving the kerosene",
+        "C": "Filtration - using filter paper to trap the kerosene",
+        "D": "Simple distillation - the liquids are boiled and condensed separately"
       },
       "marks": 1,
       "answer": "A",
@@ -1230,10 +1230,10 @@
       "type": "mcq",
       "stem": "Which separation method is used to separate several solutes that all dissolve in the same solvent?",
       "options": {
-        "A": "Evaporation to dryness — removes only the solvent",
-        "B": "Gravity filtration — separates only insoluble solids",
-        "C": "Chromatography — different solutes migrate at different rates through the stationary phase",
-        "D": "Sublimation — applicable only when one component sublimes"
+        "A": "Evaporation to dryness - removes only the solvent",
+        "B": "Gravity filtration - separates only insoluble solids",
+        "C": "Chromatography - different solutes migrate at different rates through the stationary phase",
+        "D": "Sublimation - applicable only when one component sublimes"
       },
       "marks": 1,
       "answer": "C",
@@ -1244,10 +1244,10 @@
       "type": "mcq",
       "stem": "Which method of separation is used to separate butter from curd?",
       "options": {
-        "A": "Sublimation — one component sublimes when gently heated",
-        "B": "Paper chromatography — components travel at different rates",
-        "C": "Centrifugation — rapid spinning separates the less-dense fat from the denser liquid",
-        "D": "Magnetic separation — fat is non-magnetic"
+        "A": "Sublimation - one component sublimes when gently heated",
+        "B": "Paper chromatography - components travel at different rates",
+        "C": "Centrifugation - rapid spinning separates the less-dense fat from the denser liquid",
+        "D": "Magnetic separation - fat is non-magnetic"
       },
       "marks": 1,
       "answer": "C",
@@ -1288,7 +1288,7 @@
       "options": {
         "A": "Nitrogen is magnetic and oxygen is not",
         "B": "They have different densities in the liquid phase",
-        "C": "N₂ (b.p. −196°C) has a lower boiling point than O₂ (b.p. −183°C) and boils off first during gradual warming",
+        "C": "N₂ (b.p. -196°C) has a lower boiling point than O₂ (b.p. -183°C) and boils off first during gradual warming",
         "D": "They have different solubilities in the liquid nitrogen phase"
       },
       "marks": 1,
@@ -1329,7 +1329,7 @@
       "stem": "Steam distillation is used to separate substances that:",
       "options": {
         "A": "Are completely miscible with water in all proportions",
-        "B": "Are immiscible with water and have high boiling points — they co-distil with steam at temperatures below 100°C",
+        "B": "Are immiscible with water and have high boiling points - they co-distil with steam at temperatures below 100°C",
         "C": "Are solids that sublime readily when heated gently",
         "D": "Are gases at room temperature and must be liquefied for collection"
       },
@@ -1343,7 +1343,7 @@
       "stem": "In liquid-liquid extraction, the process depends on:",
       "options": {
         "A": "The difference in density between the two solvents",
-        "B": "The partition coefficient — the ratio of solute concentration in solvent A to solvent B at equilibrium",
+        "B": "The partition coefficient - the ratio of solute concentration in solvent A to solvent B at equilibrium",
         "C": "The difference in boiling point between the two solvents",
         "D": "The magnetic susceptibility of the solute in each solvent"
       },
@@ -1399,7 +1399,7 @@
       "stem": "What type of indicator is Chlorophenol Red?",
       "options": {
         "A": "A redox indicator that changes colour with changes in oxidation state",
-        "B": "A colorimetric (pH) indicator — changes colour based on the acidity or alkalinity of the solution",
+        "B": "A colorimetric (pH) indicator - changes colour based on the acidity or alkalinity of the solution",
         "C": "An adsorption indicator used in precipitation titrations",
         "D": "A radioactive tracer used in kinetic studies"
       },
@@ -1415,7 +1415,7 @@
         "A": "Bright red",
         "B": "Violet or purple",
         "C": "Blue-green",
-        "D": "Yellow — it is yellow below pH 6.8 and transitions to red above pH 8.4"
+        "D": "Yellow - it is yellow below pH 6.8 and transitions to red above pH 8.4"
       },
       "marks": 1,
       "answer": "D",
@@ -1442,7 +1442,7 @@
       "options": {
         "A": "It accepts electrons from the substance it reacts with and is itself reduced",
         "B": "It has a higher oxidation state than the substance being reduced",
-        "C": "It donates electrons to the oxidising agent, reducing it — and is itself oxidised in the process",
+        "C": "It donates electrons to the oxidising agent, reducing it - and is itself oxidised in the process",
         "D": "It is always a metal oxide or a hydroxide compound"
       },
       "marks": 1,
@@ -1454,10 +1454,10 @@
       "type": "mcq",
       "stem": "The standard hydrogen electrode (SHE) has a standard electrode potential of:",
       "options": {
-        "A": "0.00 V — by international convention",
-        "B": "+2.87 V — the most positive possible electrode potential",
-        "C": "−3.04 V — the most negative electrode potential",
-        "D": "+1.23 V — the potential for oxygen evolution"
+        "A": "0.00 V - by international convention",
+        "B": "+2.87 V - the most positive possible electrode potential",
+        "C": "-3.04 V - the most negative electrode potential",
+        "D": "+1.23 V - the potential for oxygen evolution"
       },
       "marks": 1,
       "answer": "A",
@@ -1469,9 +1469,9 @@
       "stem": "Potassium permanganate (KMnO₄) is deep purple. When it reacts with a reducing agent in acidic solution, what colour change occurs?",
       "options": {
         "A": "Colourless to deep purple",
-        "B": "Deep purple/violet to colourless (or very pale pink) — MnO₄⁻ reduced to Mn²⁺",
-        "C": "Yellow to colourless — the chromate ion is reduced",
-        "D": "Blue to red — the complex ion changes oxidation state"
+        "B": "Deep purple/violet to colourless (or very pale pink) - MnO₄⁻ reduced to Mn²⁺",
+        "C": "Yellow to colourless - the chromate ion is reduced",
+        "D": "Blue to red - the complex ion changes oxidation state"
       },
       "marks": 1,
       "answer": "B",
@@ -1482,10 +1482,10 @@
       "type": "mcq",
       "stem": "With an increase in temperature, which concentration measure changes while others remain constant?",
       "options": {
-        "A": "Molality (mol/kg) — based on mass of solvent",
-        "B": "Mole fraction — a dimensionless ratio of moles",
-        "C": "Molarity (mol/L) — volume changes with temperature, so mol/L changes too",
-        "D": "Mass percent (% w/w) — based on mass ratio"
+        "A": "Molality (mol/kg) - based on mass of solvent",
+        "B": "Mole fraction - a dimensionless ratio of moles",
+        "C": "Molarity (mol/L) - volume changes with temperature, so mol/L changes too",
+        "D": "Mass percent (% w/w) - based on mass ratio"
       },
       "marks": 1,
       "answer": "C",
@@ -1496,28 +1496,28 @@
       "type": "mcq",
       "stem": "Which indicator is used in EDTA complexometric titration for determining water hardness?",
       "options": {
-        "A": "Phenolphthalein — colourless to pink at pH 9",
-        "B": "Methyl orange — red to yellow in acidic to basic transition",
-        "C": "Eriochrome Black T (EBT) — wine-red in presence of metal ions, turns blue at endpoint",
-        "D": "Starch solution — gives a blue-black colour with iodine"
+        "A": "Phenolphthalein - colourless to pink at pH 9",
+        "B": "Methyl orange - red to yellow in acidic to basic transition",
+        "C": "Eriochrome Black T (EBT) - wine-red in presence of metal ions, turns blue at endpoint",
+        "D": "Starch solution - gives a blue-black colour with iodine"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "EBT forms a wine-red complex with Ca²⁺ and Mg²⁺ ions. When EDTA fully complexes all metal ions, EBT is released and turns blue — this is the endpoint."
+      "explanation": "EBT forms a wine-red complex with Ca²⁺ and Mg²⁺ ions. When EDTA fully complexes all metal ions, EBT is released and turns blue - this is the endpoint."
     },
     {
       "id": "uni-futa-che103-0108",
       "type": "mcq",
       "stem": "In an iodometric titration, starch indicator gives what endpoint?",
       "options": {
-        "A": "Colourless to pink — starch reacts with iodide to form a coloured complex",
-        "B": "Blue-black to colourless — starch forms blue-black complex with I₂; at endpoint all I₂ is consumed and colour disappears",
-        "C": "Yellow to red — the iodo-starch complex changes colour as pH increases",
-        "D": "Colourless to yellow — the appearance of free iodine causes the yellow colour"
+        "A": "Colourless to pink - starch reacts with iodide to form a coloured complex",
+        "B": "Blue-black to colourless - starch forms blue-black complex with I₂; at endpoint all I₂ is consumed and colour disappears",
+        "C": "Yellow to red - the iodo-starch complex changes colour as pH increases",
+        "D": "Colourless to yellow - the appearance of free iodine causes the yellow colour"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Starch forms an intense blue-black complex with I₃⁻. When the reducing agent consumes all I₂, the blue-black colour disappears sharply — the endpoint."
+      "explanation": "Starch forms an intense blue-black complex with I₃⁻. When the reducing agent consumes all I₂, the blue-black colour disappears sharply - the endpoint."
     },
     {
       "id": "uni-futa-che103-0109",
@@ -1527,7 +1527,7 @@
         "A": "A white precipitate that dissolves in excess NaOH to give a colourless solution",
         "B": "A green precipitate that is insoluble in excess NaOH",
         "C": "A pale blue precipitate of Cu(OH)₂ that is insoluble in excess NaOH",
-        "D": "No precipitate — Cu²⁺ ions remain in solution even with excess NaOH"
+        "D": "No precipitate - Cu²⁺ ions remain in solution even with excess NaOH"
       },
       "marks": 1,
       "answer": "C",
@@ -1541,11 +1541,11 @@
         "A": "A pale blue gelatinous precipitate that does not dissolve in excess NaOH",
         "B": "A green precipitate that darkens on standing in air",
         "C": "A white gelatinous precipitate of Al(OH)₃ that dissolves in excess NaOH to give a colourless aluminate solution",
-        "D": "No precipitate — Al³⁺ remains fully in solution even with excess NaOH"
+        "D": "No precipitate - Al³⁺ remains fully in solution even with excess NaOH"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Al(OH)₃ is amphoteric — it dissolves in excess NaOH: Al(OH)₃ + NaOH → NaAl(OH)₄ (sodium aluminate, colourless solution). This amphoteric behaviour distinguishes Al³⁺."
+      "explanation": "Al(OH)₃ is amphoteric - it dissolves in excess NaOH: Al(OH)₃ + NaOH → NaAl(OH)₄ (sodium aluminate, colourless solution). This amphoteric behaviour distinguishes Al³⁺."
     },
     {
       "id": "uni-futa-che103-0111",
@@ -1553,7 +1553,7 @@
       "stem": "The 'brown ring' test is used to confirm the presence of which ion?",
       "options": {
         "A": "The sulphate ion (SO₄²⁻)",
-        "B": "The nitrate ion (NO₃⁻) — FeSO₄ + conc. H₂SO₄ gives a brown ring at the interface",
+        "B": "The nitrate ion (NO₃⁻) - FeSO₄ + conc. H₂SO₄ gives a brown ring at the interface",
         "C": "The chloride ion (Cl⁻)",
         "D": "The carbonate ion (CO₃²⁻)"
       },
@@ -1569,7 +1569,7 @@
         "A": "A yellow precipitate soluble in dilute HNO₃",
         "B": "A white precipitate of AgCl insoluble in dilute HNO₃ but soluble in dilute NH₃",
         "C": "A red precipitate of Ag₂CrO₄ insoluble in all acids",
-        "D": "No precipitate — chloride ions remain in solution"
+        "D": "No precipitate - chloride ions remain in solution"
       },
       "marks": 1,
       "answer": "B",
@@ -1596,7 +1596,7 @@
       "options": {
         "A": "Ammonia (NH₃)",
         "B": "Carbon dioxide (CO₂)",
-        "C": "Hydrogen chloride (HCl) or sulphur dioxide (SO₂) — acidic pungent gases",
+        "C": "Hydrogen chloride (HCl) or sulphur dioxide (SO₂) - acidic pungent gases",
         "D": "Nitrogen (N₂)"
       },
       "marks": 1,
@@ -1609,7 +1609,7 @@
       "stem": "When diluting a concentrated acid with water, what is the correct safe procedure?",
       "options": {
         "A": "Add water slowly to the concentrated acid with constant stirring",
-        "B": "Always add acid slowly into water — never add water to acid (prevents violent, exothermic spattering)",
+        "B": "Always add acid slowly into water - never add water to acid (prevents violent, exothermic spattering)",
         "C": "Mix acid and water simultaneously in equal rapid portions",
         "D": "Pour acid into water quickly in the fume cupboard"
       },
@@ -1624,7 +1624,7 @@
       "options": {
         "A": "At an open bench near a large window for cross-ventilation",
         "B": "In a sealed glass container at the back of the laboratory",
-        "C": "In the fume cupboard (fume hood) — its extraction fan safely removes toxic gases from the lab air",
+        "C": "In the fume cupboard (fume hood) - its extraction fan safely removes toxic gases from the lab air",
         "D": "Outdoors in the open air next to the laboratory building"
       },
       "marks": 1,
@@ -1638,7 +1638,7 @@
       "options": {
         "A": "Only a lab coat to protect clothing from spills",
         "B": "Only safety goggles to protect the eyes from splashes",
-        "C": "Laboratory coat, safety goggles, and closed-toe shoes — at minimum; gloves when handling corrosive or toxic substances",
+        "C": "Laboratory coat, safety goggles, and closed-toe shoes - at minimum; gloves when handling corrosive or toxic substances",
         "D": "No PPE is required for simple, room-temperature experiments"
       },
       "marks": 1,
@@ -1650,10 +1650,10 @@
       "type": "mcq",
       "stem": "Which variety of glass is most commonly used for high-quality chemistry laboratory apparatus?",
       "options": {
-        "A": "Pyrex (borosilicate glass) — low thermal expansion, high chemical resistance, withstands strong heating",
-        "B": "Soda-lime glass (sodaglass) — the most chemically resistant and cheapest",
-        "C": "Lead crystal glass — used for precision optical components",
-        "D": "Polycarbonate — a synthetic transparent polymer for impact resistance"
+        "A": "Pyrex (borosilicate glass) - low thermal expansion, high chemical resistance, withstands strong heating",
+        "B": "Soda-lime glass (sodaglass) - the most chemically resistant and cheapest",
+        "C": "Lead crystal glass - used for precision optical components",
+        "D": "Polycarbonate - a synthetic transparent polymer for impact resistance"
       },
       "marks": 1,
       "answer": "A",
@@ -1681,7 +1681,7 @@
         "A": "Hydrogen (H₂)",
         "B": "Chlorine (Cl₂)",
         "C": "Carbon dioxide (CO₂)",
-        "D": "Ammonia (NH₃) — reacts with H₂SO₄ to form (NH₄)₂SO₄"
+        "D": "Ammonia (NH₃) - reacts with H₂SO₄ to form (NH₄)₂SO₄"
       },
       "marks": 1,
       "answer": "D",
@@ -1692,7 +1692,7 @@
       "type": "mcq",
       "stem": "A Kipp's apparatus (gas generator) allows intermittent production of gas WITHOUT heating. What reaction does it use?",
       "options": {
-        "A": "A solid reacts with a liquid (acid) at room temperature — e.g. marble chips + HCl → CO₂; Zn + H₂SO₄ → H₂",
+        "A": "A solid reacts with a liquid (acid) at room temperature - e.g. marble chips + HCl → CO₂; Zn + H₂SO₄ → H₂",
         "B": "A liquid mixture is heated to boiling and vapour collected over water",
         "C": "Two liquids are electrolysed to produce gas at electrodes",
         "D": "A solid is strongly heated in air until it thermally decomposes"
@@ -1750,7 +1750,7 @@
       "options": {
         "A": "Addition reactions with bromine water",
         "B": "Electrophilic substitution with halogens in sunlight",
-        "C": "Free radical substitution — UV light initiates halogenation",
+        "C": "Free radical substitution - UV light initiates halogenation",
         "D": "Nucleophilic addition with HBr"
       },
       "marks": 1,
@@ -1777,7 +1777,7 @@
       "stem": "What is produced when an alcohol reacts with a carboxylic acid in the presence of concentrated H₂SO₄?",
       "options": {
         "A": "An aldehyde and water",
-        "B": "An ester and water — this is esterification",
+        "B": "An ester and water - this is esterification",
         "C": "A ketone and hydrogen gas",
         "D": "A salt and carbon dioxide"
       },
@@ -1834,7 +1834,7 @@
       "options": {
         "A": "50 mL",
         "B": "100 mL",
-        "C": "No HCl is needed — NaCl dissolves in water",
+        "C": "No HCl is needed - NaCl dissolves in water",
         "D": "200 mL"
       },
       "marks": 1,
@@ -2021,7 +2021,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "Filter paper pore size is chosen based on the size of the particles to be filtered — coarser particles use larger pore size paper."
+      "explanation": "Filter paper pore size is chosen based on the size of the particles to be filtered - coarser particles use larger pore size paper."
     },
     {
       "id": "uni-futa-che103-0145",
@@ -2154,10 +2154,10 @@
       "type": "mcq",
       "stem": "The shape of a water molecule (H₂O) is:",
       "options": {
-        "A": "Linear — all atoms in a straight line",
-        "B": "Trigonal planar — three bonds at 120°",
-        "C": "V-shaped (bent) — due to two lone pairs repelling the bonding pairs",
-        "D": "Tetrahedral — four equal bond angles of 109.5°"
+        "A": "Linear - all atoms in a straight line",
+        "B": "Trigonal planar - three bonds at 120°",
+        "C": "V-shaped (bent) - due to two lone pairs repelling the bonding pairs",
+        "D": "Tetrahedral - four equal bond angles of 109.5°"
       },
       "marks": 1,
       "answer": "C",
@@ -2183,7 +2183,7 @@
       "stem": "Hydrogen bonding occurs between molecules that contain:",
       "options": {
         "A": "Any hydrogen atom and any other atom",
-        "B": "A hydrogen atom bonded to N, O, or F — and a lone pair on another N, O, or F atom",
+        "B": "A hydrogen atom bonded to N, O, or F - and a lone pair on another N, O, or F atom",
         "C": "Hydrogen and a metallic element only",
         "D": "Any two polar molecules with a dipole moment"
       },
@@ -2211,7 +2211,7 @@
       "stem": "According to the Brønsted-Lowry theory, an acid is defined as:",
       "options": {
         "A": "A substance that produces OH⁻ ions in solution",
-        "B": "A proton (H⁺) donor — it gives a proton to another substance",
+        "B": "A proton (H⁺) donor - it gives a proton to another substance",
         "C": "An electron pair acceptor (Lewis acid)",
         "D": "A substance with pH less than 5"
       },
@@ -2245,7 +2245,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "HCl is a strong acid — it fully dissociates in water: HCl → H⁺ + Cl⁻. Acetic, carbonic, and formic acids are weak acids that only partially dissociate."
+      "explanation": "HCl is a strong acid - it fully dissociates in water: HCl → H⁺ + Cl⁻. Acetic, carbonic, and formic acids are weak acids that only partially dissociate."
     },
     {
       "id": "uni-futa-che103-0161",
@@ -2371,7 +2371,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Combustion is always exothermic — it releases energy as heat and light. Melting and evaporation are endothermic (absorb energy to break intermolecular forces)."
+      "explanation": "Combustion is always exothermic - it releases energy as heat and light. Melting and evaporation are endothermic (absorb energy to break intermolecular forces)."
     },
     {
       "id": "uni-futa-che103-0170",
@@ -2422,7 +2422,7 @@
       "options": {
         "A": "Decreases the reaction rate by exposing fewer reactive sites",
         "B": "Increases the reaction rate by providing more collision sites per unit time",
-        "C": "Has no effect on rate — only concentration matters",
+        "C": "Has no effect on rate - only concentration matters",
         "D": "Changes the equilibrium position of the reaction"
       },
       "marks": 1,
@@ -2474,10 +2474,10 @@
     {
       "id": "uni-futa-che103-0177",
       "type": "mcq",
-      "stem": "The standard electrode potential of the Zn²⁺/Zn half-cell is −0.76 V. What does the negative sign indicate?",
+      "stem": "The standard electrode potential of the Zn²⁺/Zn half-cell is -0.76 V. What does the negative sign indicate?",
       "options": {
         "A": "Zinc is a weaker reducing agent than hydrogen",
-        "B": "Zinc is a stronger reducing agent than hydrogen — it is more easily oxidised than H₂",
+        "B": "Zinc is a stronger reducing agent than hydrogen - it is more easily oxidised than H₂",
         "C": "The cell reaction is endothermic",
         "D": "Zinc cannot undergo electrolysis"
       },
@@ -2658,14 +2658,14 @@
       "type": "mcq",
       "stem": "Adding a non-volatile solute to a solvent causes the boiling point of the solution to:",
       "options": {
-        "A": "Decrease — solute molecules lower the vapour pressure",
-        "B": "Increase — solute molecules raise the boiling point above the pure solvent's boiling point",
-        "C": "Remain unchanged — only the melting point changes",
+        "A": "Decrease - solute molecules lower the vapour pressure",
+        "B": "Increase - solute molecules raise the boiling point above the pure solvent's boiling point",
+        "C": "Remain unchanged - only the melting point changes",
         "D": "Depend on the identity of the solute"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Dissolved solute particles reduce the vapour pressure (Raoult's Law). The solution must be heated to a higher temperature before vapour pressure equals atmospheric pressure — hence higher b.p."
+      "explanation": "Dissolved solute particles reduce the vapour pressure (Raoult's Law). The solution must be heated to a higher temperature before vapour pressure equals atmospheric pressure - hence higher b.p."
     },
     {
       "id": "uni-futa-che103-0191",
@@ -2742,7 +2742,7 @@
       "type": "mcq",
       "stem": "Hard water is caused by the presence of dissolved:",
       "options": {
-        "A": "NaCl and KCl — common table and potassium salts",
+        "A": "NaCl and KCl - common table and potassium salts",
         "B": "Ca²⁺ and Mg²⁺ ions from dissolved CaCO₃, CaSO₄, and MgSO₄",
         "C": "CO₂ gas dissolved from the atmosphere",
         "D": "Fe²⁺ ions from corroded pipes"
@@ -2756,10 +2756,10 @@
       "type": "mcq",
       "stem": "What reagent is used to test for the presence of a C=C double bond (alkenes)?",
       "options": {
-        "A": "Fehling's solution — turns from blue to brick-red precipitate",
-        "B": "Bromine water — decolourised from orange/brown to colourless",
-        "C": "Tollens' reagent — forms a silver mirror",
-        "D": "Limewater — turns milky"
+        "A": "Fehling's solution - turns from blue to brick-red precipitate",
+        "B": "Bromine water - decolourised from orange/brown to colourless",
+        "C": "Tollens' reagent - forms a silver mirror",
+        "D": "Limewater - turns milky"
       },
       "marks": 1,
       "answer": "B",
@@ -2770,10 +2770,10 @@
       "type": "mcq",
       "stem": "Which reagent is used to distinguish an aldehyde from a ketone?",
       "options": {
-        "A": "Bromine water — decolourises with both",
-        "B": "Tollens' reagent (ammoniacal AgNO₃) — gives silver mirror with aldehydes only",
-        "C": "Concentrated H₂SO₄ — reacts with ketones only",
-        "D": "Limewater — turns milky with aldehydes only"
+        "A": "Bromine water - decolourises with both",
+        "B": "Tollens' reagent (ammoniacal AgNO₃) - gives silver mirror with aldehydes only",
+        "C": "Concentrated H₂SO₄ - reacts with ketones only",
+        "D": "Limewater - turns milky with aldehydes only"
       },
       "marks": 1,
       "answer": "B",
@@ -2784,10 +2784,10 @@
       "type": "mcq",
       "stem": "Which gas is produced when a metal reacts with a dilute acid, and how is it tested?",
       "options": {
-        "A": "CO₂ — turns limewater milky",
-        "B": "O₂ — relights a glowing splint",
-        "C": "H₂ — gives a squeaky pop with a burning splint",
-        "D": "SO₂ — turns dichromate paper green"
+        "A": "CO₂ - turns limewater milky",
+        "B": "O₂ - relights a glowing splint",
+        "C": "H₂ - gives a squeaky pop with a burning splint",
+        "D": "SO₂ - turns dichromate paper green"
       },
       "marks": 1,
       "answer": "C",
@@ -2869,13 +2869,13 @@
       "stem": "Which of the following substances has the highest melting point?",
       "options": {
         "A": "NaCl (sodium chloride)",
-        "B": "SiO₂ (silicon dioxide — giant covalent)",
+        "B": "SiO₂ (silicon dioxide - giant covalent)",
         "C": "CO₂ (carbon dioxide)",
         "D": "H₂O (water)"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "SiO₂ has a giant covalent lattice with millions of strong Si-O covalent bonds throughout — it requires very high energy to melt (~1650°C). NaCl has strong ionic bonds (~801°C). CO₂ is molecular and easily sublimes."
+      "explanation": "SiO₂ has a giant covalent lattice with millions of strong Si-O covalent bonds throughout - it requires very high energy to melt (~1650°C). NaCl has strong ionic bonds (~801°C). CO₂ is molecular and easily sublimes."
     },
     {
       "id": "uni-futa-che103-0206",

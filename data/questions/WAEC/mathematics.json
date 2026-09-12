@@ -2879,7 +2879,7 @@
       "stem": "If \\(P = \\sqrt{QR\\left(1+\\frac{3t}{R}\\right)}\\), make R the subject of the formula.",
       "options": {
         "A": "\\(R = \\frac{3Qt}{P^2 - Q}\\)",
-        "B": "\\(R = \\frac{P^2 – 3t}{Q+1}\\)",
+        "B": "\\(R = \\frac{P^2 - 3t}{Q+1}\\)",
         "C": "\\(R = \\frac{P^2 + 3t}{Q - 1}\\)",
         "D": "\\(R = \\frac{P^2-3Qt}{Q}\\)"
       },
@@ -3503,7 +3503,7 @@
       "options": {
         "A": "\\(\\frac{3}{a+b}\\)",
         "B": "\\(\\frac{a-3b}{a^2-b^2}\\)",
-        "C": "\\(\\frac{3a-b}{a^2 – b^2}\\)",
+        "C": "\\(\\frac{3a-b}{a^2 - b^2}\\)",
         "D": "\\(\\frac{a-3b}{a^2+b^2}\\)"
       },
       "marks": 1,
@@ -3516,9 +3516,9 @@
       "stem": "Which of the following quadratic equations has \\(-\\frac{1}{2}\\) and \\(\\frac{3}{4}\\) as its roots?",
       "options": {
         "A": "8x2 + 11x - 3 = 0",
-        "B": "8x2 -11x – 3 = 0",
+        "B": "8x2 -11x - 3 = 0",
         "C": "8x2 + 2x -3 = 0",
-        "D": "8x2 - 2x – 3 = 0"
+        "D": "8x2 - 2x - 3 = 0"
       },
       "marks": 1,
       "year": 2004,
@@ -15670,7 +15670,7 @@
         "B": "(2y - x)(2y + x)",
         "C": "(3x - 2y(x - y)",
         "D": "(2y + 3x)(y - x)",
-        "E": "(x – y)(2y + 3x)"
+        "E": "(x - y)(2y + 3x)"
       },
       "marks": 1,
       "year": 1992,
@@ -17027,7 +17027,7 @@
         "A": "x2 - 11 / 3x + 6 = 0",
         "B": "x2 - 11x + 6 = O",
         "C": "3x2 - 11x + 2 = O",
-        "D": "3X2 - 11x – 2 = 0",
+        "D": "3X2 - 11x - 2 = 0",
         "E": "3x2 - 11x + 6 = 0"
       },
       "marks": 1,
@@ -20043,7 +20043,7 @@
         "B": "(2y - x)(2y + x)",
         "C": "(3x - 2y(x - y)",
         "D": "(2y + 3x)(y - x)",
-        "E": "(x – y)(2y + 3x)"
+        "E": "(x - y)(2y + 3x)"
       },
       "marks": 1,
       "year": 1992,
@@ -20636,7 +20636,7 @@
         "A": "x<sup>2</sup> - 11 / 3x + 6 = 0",
         "B": "x<sup>2</sup> - 11x + 6 = O",
         "C": "3x<sup>2</sup> - 11x + 2 = O",
-        "D": "3X<sup>2</sup> - 11x – 2 = 0",
+        "D": "3X<sup>2</sup> - 11x - 2 = 0",
         "E": "3x<sup>2</sup> - 11x + 6 = 0"
       },
       "marks": 1,

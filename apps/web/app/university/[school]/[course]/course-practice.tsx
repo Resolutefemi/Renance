@@ -1,17 +1,19 @@
 'use client';
 
 /**
- * CoursePractice — the per-course desk, a faithful (and sharper) rebuild
+ * CoursePractice, the per-course desk, a faithful (and sharper) rebuild
  * of the school CBT portal's course page: a Random Mode card that shuffles
  * the whole bank, and the Part grid slicing the course into 50-question
- * chunks IN ORIGINAL ORDER (Part 2 is exactly Q51–Q100), with the count
+ * chunks IN ORIGINAL ORDER (Part 2 is exactly Q51-Q100), with the count
  * and timer picks the portals offer before a sitting.
  */
 
 import { useMemo, useState } from 'react';
+import Link from 'next/link';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
+import { withBase } from '@/lib/api';
 import type { School, UniversityCourse } from '@/lib/university-data';
 import { PART_SIZE, partCount, partHref, partRange, randomHref } from '@/lib/university';
 
@@ -27,7 +29,7 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
   const bank = course.bank!;
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title={course.code} backHref={`/university/${school.slug}`} />
 
       <div className="mx-auto w-full max-w-5xl px-4 py-5 sm:px-6">
@@ -59,7 +61,7 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
         <section className="mt-6">
           <h3 className="text-sm font-semibold text-on-surface">Random Mode</h3>
           <p className="text-xs text-on-surface-variant">
-            Full shuffle — questions drawn from the whole course in random order.
+            Full shuffle, questions drawn from the whole course in random order.
           </p>
           <div className="mt-3 rounded-xl border border-outline-variant bg-card p-4">
             <div className="flex flex-wrap items-center gap-2">
@@ -96,13 +98,13 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
                 </button>
               ))}
             </div>
-            <a
+            <Link
               href={randomHref(bank, Math.min(randomCount, total), timer || undefined)}
               className="mt-4 flex h-12 items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">shuffle</span>
               Start {Math.min(randomCount, total)} random questions
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -111,14 +113,14 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
           <h3 className="text-sm font-semibold text-on-surface">Practice by Part</h3>
           <p className="text-xs text-on-surface-variant">
             The course cut into {PART_SIZE}-question chunks, in the same order the portal numbers
-            them — Part 2 is exactly Q{PART_SIZE + 1}–Q{Math.min(PART_SIZE * 2, total)}.
+            them, Part 2 is exactly Q{PART_SIZE + 1}-Q{Math.min(PART_SIZE * 2, total)}.
           </p>
           <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {Array.from({ length: parts }, (_, i) => i + 1).map((p) => {
               const { from, to } = partRange(p, total);
               return (
                 <li key={p}>
-                  <a
+                  <Link
                     href={partHref(bank, p, total, timer || undefined)}
                     className="flex items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline hover:shadow-sm"
                   >
@@ -128,13 +130,13 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-bold text-on-surface">Part {p}</p>
                       <p className="font-mono text-[11px] text-on-surface-variant">
-                        Q{from}–Q{to} · {to - from + 1} questions
+                        Q{from}-Q{to} · {to - from + 1} questions
                       </p>
                     </div>
                     <span className="material-symbols-outlined text-on-surface-variant">
                       chevron_right
                     </span>
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -146,7 +148,7 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
           <section className="mt-8">
             <h3 className="text-sm font-semibold text-on-surface">Course Material</h3>
             <a
-              href={course.pdf}
+              href={withBase(course.pdf)}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 flex items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline"
@@ -156,7 +158,7 @@ export function CoursePractice({ school, course }: { school: School; course: Uni
               </div>
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-semibold text-on-surface">
-                  {course.code} — study notes (PDF)
+                  {course.code}, study notes (PDF)
                 </p>
                 <p className="text-xs text-on-surface-variant">Opens in a new tab</p>
               </div>

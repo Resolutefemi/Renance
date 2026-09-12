@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Active (paused) exam snapshot — the client half of pause & resume.
+ * Active (paused) exam snapshot, the client half of pause & resume.
  *
  * Answers only leave the browser at submit time, so an exam the student
  * walked away from is fully reconstructable from this localStorage
@@ -14,7 +14,7 @@ export interface ActiveExam {
   code: string;
   title: string;
   questionCount: number;
-  /** epoch ms — the exam clock start; time keeps running while away */
+  /** epoch ms, the exam clock start; time keeps running while away */
   startedAt: number;
   /** accumulated non-play ms (fatigue breaks), excluded from the clock */
   pausedMs: number;

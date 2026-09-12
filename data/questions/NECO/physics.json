@@ -1376,8 +1376,8 @@
       "stem": "A body of mass M1 moving with a velocity U collides with a stationary body of mass M2 and both move with a common velocity V. If linear momentum is conserved, which expression correctly represents V?",
       "options": {
         "A": "M1 + M2 ÷ M1U",
-        "B": "M2U ÷ M1 – M2",
-        "C": "M1U ÷ M1 – M2",
+        "B": "M2U ÷ M1 - M2",
+        "C": "M1U ÷ M1 - M2",
         "D": "M1U ÷ M1+ M2",
         "E": "M2U ÷ M1 + M2"
       },
@@ -1660,11 +1660,11 @@
       "type": "mcq",
       "stem": "An element of nuclear number A and proton number Z emits an alpha particle from its nucleus. The nucleon number and the proton number of the new element formed are respectively",
       "options": {
-        "A": "(A – 2) and (Z – 2)",
+        "A": "(A - 2) and (Z - 2)",
         "B": "(A + 4) and (Z + 2)",
-        "C": "(A– 4) and (Z+2)",
-        "D": "(A+ 4) and (Z – 2)",
-        "E": "(A – 4) and (Z – 2)"
+        "C": "(A- 4) and (Z+2)",
+        "D": "(A+ 4) and (Z - 2)",
+        "E": "(A - 4) and (Z - 2)"
       },
       "marks": 1,
       "year": 2000,
@@ -1799,7 +1799,7 @@
         "B": "Beta particle",
         "C": "Gamma ray",
         "D": "Neutron",
-        "E": "X – ray"
+        "E": "X - ray"
       },
       "marks": 1,
       "year": 2003,

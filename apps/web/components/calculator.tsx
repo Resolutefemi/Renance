@@ -2,7 +2,7 @@
 
 /**
  * The on-screen calculator every JAMB CBT hall puts next to the clock:
- * a basic arithmetic machine with one memory register — digits, the
+ * a basic arithmetic machine with one memory register, digits, the
  * four operations, percent, square root, sign flip, and the MRC / M+ /
  * M- row. Immediate-execution semantics (like the real device), never
  * eval: the chain is a tiny accumulator state machine.
@@ -157,7 +157,7 @@ export default function CalculatorSheet({
     [clearAll, current, digit, display, equals, mem, setOp, show],
   );
 
-  // Keyboard support while the sheet is open — the PC candidate keeps
+  // Keyboard support while the sheet is open, the PC candidate keeps
   // typing numbers the way the real hall allows.
   useEffect(() => {
     if (!open) return;

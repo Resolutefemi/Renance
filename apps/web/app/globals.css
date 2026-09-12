@@ -240,3 +240,13 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Desktop side rail: the SideNav hamburger collapses the menu list to an
+   icon strip; every page offsets its content with --rail-w so the reflow
+   is one variable away. 15rem = w-60 (open), 4rem = w-16 (collapsed). */
+:root {
+  --rail-w: 15rem;
+}
+html[data-rail='collapsed'] {
+  --rail-w: 4rem;
+}

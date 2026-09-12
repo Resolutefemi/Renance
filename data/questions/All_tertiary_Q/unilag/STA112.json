@@ -53,13 +53,13 @@
       "stem": "Which formula represents the <b>General Addition Rule</b> for any two events <i>E</i> and <i>F</i> (not necessarily disjoint)?",
       "options": {
         "A": "P(E∪F) = P(E) + P(F)",
-        "B": "P(E∪F) = P(E) + P(F) – P(EF)",
+        "B": "P(E∪F) = P(E) + P(F) - P(EF)",
         "C": "P(E∪F) = P(E) × P(F)",
         "D": "P(E∪F) = P(E) / P(F)"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Slide 9 states the Theorem (Addition Rule for Any Two Events) as: 'P(E∪F) = P(E) + P(F) – P(EF)'."
+      "explanation": "Slide 9 states the Theorem (Addition Rule for Any Two Events) as: 'P(E∪F) = P(E) + P(F) - P(EF)'."
     },
     {
       "id": "uni-unilag-sta112-bank-0005",
@@ -666,7 +666,7 @@
     {
       "id": "uni-unilag-sta112-bank-0048",
       "type": "mcq",
-      "stem": "What is the value of n, if P(15, n − 1) : P(16, n − 2) = 3 : 4?",
+      "stem": "What is the value of n, if P(15, n - 1) : P(16, n - 2) = 3 : 4?",
       "options": {
         "A": "10",
         "B": "12",
@@ -1468,12 +1468,12 @@
       "options": {
         "A": "P(E<sup>c</sup>) = P(E) + 1",
         "B": "P(E<sup>c</sup>) = P(E) - 1",
-        "C": "P(E<sup>c</sup>) = 1 – P(E)",
+        "C": "P(E<sup>c</sup>) = 1 - P(E)",
         "D": "P(E<sup>c</sup>) = P(E) / P(S)"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Slide 8 presents the Theorem (Complement Rule) as: 'P(E<sup>c</sup>) = 1 – P(E)'."
+      "explanation": "Slide 8 presents the Theorem (Complement Rule) as: 'P(E<sup>c</sup>) = 1 - P(E)'."
     },
     {
       "id": "uni-unilag-sta112-bank-0106",

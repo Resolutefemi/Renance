@@ -78,7 +78,7 @@ export default function ProgressPage() {
   const dots = weekDots(s);
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title="Progress" />
       <div className="mx-auto w-full max-w-xl px-4 pt-6 sm:px-6">
       {/* header */}

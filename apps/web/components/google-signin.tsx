@@ -102,7 +102,7 @@ export function GoogleSignIn({ onCredential }: { onCredential: (credential: stri
       </div>
       <div ref={holder} className="flex min-h-10 justify-center" />
       {/* Google renders its own error page for a misconfigured OAuth client
-          ("Error 401: invalid_client") — un-interceptable from JS. This
+          ("Error 401: invalid_client"), un-interceptable from JS. This
           note puts the exact fix one tap away instead of a dead end. */}
       <details className="mx-auto mt-2 max-w-sm text-center text-[12px] text-on-surface-variant">
         <summary className="cursor-pointer select-none text-outline hover:text-on-surface-variant">
@@ -117,7 +117,7 @@ export function GoogleSignIn({ onCredential }: { onCredential: (credential: stri
           <code className="mt-1 block break-all rounded bg-surface-container px-2 py-1 font-mono text-[11px]">
             {typeof window !== 'undefined' ? window.location.origin : 'https://resolutefemi.github.io'}
           </code>
-          plus <code className="font-mono">http://localhost:3000</code> for local dev — and the
+          plus <code className="font-mono">http://localhost:3000</code> for local dev, and the
           OAuth consent screen must be published (Audience → Publishing status
           &ldquo;In production&rdquo;).
         </p>

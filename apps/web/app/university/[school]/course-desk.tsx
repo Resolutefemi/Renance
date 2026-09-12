@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * UniversityCourseDesk — the school's course home (the FUTA student
+ * UniversityCourseDesk, the school's course home (the FUTA student
  * interface). Black-and-white Renance language, course-based vocabulary
  * and its own icon set; every course card opens the practice desk that
  * mirrors the school's CBT portal: Part chunks of 50, Random Mode and
@@ -13,6 +13,7 @@ import Link from 'next/link';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
+import { withBase } from '@/lib/api';
 import type { School, SchoolCatalog, UniversityCourse } from '@/lib/university-data';
 
 export function UniversityCourseDesk({
@@ -33,7 +34,7 @@ export function UniversityCourseDesk({
   const withPdfs = catalog.courses.filter((c) => c.pdf);
 
   return (
-    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-60">
+    <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
       <PageBar title={`${school.short} Desk`} backHref="/university" />
 
       <div className="mx-auto w-full max-w-5xl px-4 py-5 sm:px-6">
@@ -105,7 +106,7 @@ export function UniversityCourseDesk({
               {withPdfs.map((c) => (
                 <li key={c.slug}>
                   <a
-                    href={c.pdf!}
+                    href={withBase(c.pdf!)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 rounded-xl border border-outline-variant bg-card p-3 transition hover:border-outline"
@@ -116,7 +117,7 @@ export function UniversityCourseDesk({
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-semibold text-on-surface">
                         {c.code}
-                        {c.title ? ` — ${c.title}` : ''}
+                        {c.title ? `, ${c.title}` : ''}
                       </p>
                       <p className="text-xs text-on-surface-variant">PDF · opens in a new tab</p>
                     </div>

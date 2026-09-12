@@ -1,11 +1,11 @@
 'use client';
 
 /**
- * Renance notifications — a local, honest notification center.
+ * Renance notifications, a local, honest notification center.
  *
  * Every item is derived from REAL student state (review queue, streak,
  * paused papers, graded attempts, the daily challenge) on the devices
- * that already hold that state — no push server, no fake marketing
+ * that already hold that state, no push server, no fake marketing
  * rows. Items persist in localStorage, dedupe by key per day, cap at
  * 60, and expose a tiny subscription so the sidebar bell, the header
  * chip and the /notifications page all render the same unread count.
@@ -14,7 +14,7 @@
 export type NotificationTone = 'error' | 'emerald' | 'blue' | 'violet' | 'amber' | 'neutral';
 
 export interface RenanceNotification {
-  /** stable identity — dedupe key (usually `<kind>-<yyyy-mm-dd>` or attempt id) */
+  /** stable identity, dedupe key (usually `<kind>-<yyyy-mm-dd>` or attempt id) */
   id: string;
   title: string;
   body: string;
@@ -73,7 +73,7 @@ function save(items: RenanceNotification[]) {
   try {
     window.localStorage.setItem(KEY, JSON.stringify({ items: items.slice(0, CAP) }));
   } catch {
-    /* private mode / quota — notifications are best-effort */
+    /* private mode / quota, notifications are best-effort */
   }
   window.dispatchEvent(new Event(EVENT));
 }
@@ -133,7 +133,7 @@ export function refreshNotifications(input: NotificationInput) {
     push(
       `grade-${input.lastGrade.attemptId}`,
       pct >= 50 ? 'Score recorded' : 'Paper graded',
-      `You scored ${pct}% on your last paper. ${pct >= 75 ? 'Strong work — keep the streak honest.' : pct >= 50 ? 'Review the misses to push past 75%.' : 'Your review queue now carries the weak items.'}`,
+      `You scored ${pct}% on your last paper. ${pct >= 75 ? 'Strong work, keep the streak honest.' : pct >= 50 ? 'Review the misses to push past 75%.' : 'Your review queue now carries the weak items.'}`,
       'fact_check',
       'violet',
       '/progress',
@@ -167,7 +167,7 @@ export function refreshNotifications(input: NotificationInput) {
     push(
       `daily-${today}`,
       'Daily Challenge is live',
-      "Today's 10-question sprint is on the desk. It takes two minutes — and it counts toward the streak.",
+      "Today's 10-question sprint is on the desk. It takes two minutes, and it counts toward the streak.",
       'event_repeat',
       'amber',
       '/dashboard',
@@ -178,7 +178,7 @@ export function refreshNotifications(input: NotificationInput) {
     push(
       `paused-${input.activeExamCode}`,
       'Paused paper waiting',
-      `Your seat in ${input.activeExamCode} is saved — the clock has not stopped. Continue anytime.`,
+      `Your seat in ${input.activeExamCode} is saved, the clock has not stopped. Continue anytime.`,
       'pause_circle',
       'blue',
       '/dashboard',
@@ -194,7 +194,7 @@ export function refreshNotifications(input: NotificationInput) {
     if (!existing) {
       byId.set(c.id, c);
     } else {
-      existing.at = existing.at; // touch nothing — no unread re-fire
+      existing.at = existing.at; // touch nothing, no unread re-fire
     }
   }
 
@@ -216,7 +216,7 @@ export function subscribeNotifications(cb: () => void): () => void {
   };
 }
 
-/** Group label for a row's timestamp — the Stitch Today/Yesterday/Older bands. */
+/** Group label for a row's timestamp, the Stitch Today/Yesterday/Older bands. */
 export function dayGroup(at: number): 'Today' | 'Yesterday' | 'Older' {
   const now = startOfDay(Date.now());
   const day = startOfDay(at);

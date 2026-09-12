@@ -1586,7 +1586,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "Distance = √(4²+3²)=5 m. F = k|Q1Q2|/r² = (9e9 × 0.5 × 0.1)/25 = (4.5e8)/25 = 1.8×10⁷ N — huge. Options are 1.9,90,28,18. Likely Q in μC not mC. If Q1=500μC=5e-4, Q2=100μC=1e-4, then F = (9e9×5e-4×1e-4)/25 = (9e9×5e-8)/25 = 450/25=18 N. Yes D."
+      "explanation": "Distance = √(4²+3²)=5 m. F = k|Q1Q2|/r² = (9e9 × 0.5 × 0.1)/25 = (4.5e8)/25 = 1.8×10⁷ N - huge. Options are 1.9,90,28,18. Likely Q in μC not mC. If Q1=500μC=5e-4, Q2=100μC=1e-4, then F = (9e9×5e-4×1e-4)/25 = (9e9×5e-8)/25 = 450/25=18 N. Yes D."
     },
     {
       "id": "uni-unilag-phy102-bank-0114",
@@ -1824,7 +1824,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "E = –dV/dr. The steepest decrease in potential gives the largest E magnitude."
+      "explanation": "E = -dV/dr. The steepest decrease in potential gives the largest E magnitude."
     },
     {
       "id": "uni-unilag-phy102-bank-0131",
@@ -1964,7 +1964,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "In purely capacitive circuit, current leads voltage by 90° (voltage lags current). Statement C says voltage leads current — false."
+      "explanation": "In purely capacitive circuit, current leads voltage by 90° (voltage lags current). Statement C says voltage leads current - false."
     },
     {
       "id": "uni-unilag-phy102-bank-0141",
@@ -2132,7 +2132,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "X_L = ωL = 400×1 = 400 Ω. X_C = 1/(ωC) = 1/(400×10×10⁻⁶) = 1/0.004 = 250 Ω. X_L > X_C → inductive. tanφ = (X_L–X_C)/R = (150)/100 = 1.5 → φ = 56.3°."
+      "explanation": "X_L = ωL = 400×1 = 400 Ω. X_C = 1/(ωC) = 1/(400×10×10⁻⁶) = 1/0.004 = 250 Ω. X_L > X_C → inductive. tanφ = (X_L-X_C)/R = (150)/100 = 1.5 → φ = 56.3°."
     },
     {
       "id": "uni-unilag-phy102-bank-0153",
@@ -3771,7 +3771,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Conductors (metals) typically have 1–3 valence electrons (e.g., Cu, Ag: 1). Semiconductors have 4, insulators have many."
+      "explanation": "Conductors (metals) typically have 1-3 valence electrons (e.g., Cu, Ag: 1). Semiconductors have 4, insulators have many."
     },
     {
       "id": "uni-unilag-phy102-bank-0270",
@@ -5494,7 +5494,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "E = – dV/dx, the negative gradient of potential (magnitude is rate of change of potential with distance)."
+      "explanation": "E = - dV/dx, the negative gradient of potential (magnitude is rate of change of potential with distance)."
     },
     {
       "id": "uni-unilag-phy102-bank-0393",
@@ -6950,7 +6950,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "V_H = (IB)/(nqt) — proportional to I and B, and also to E_H = V_H/d."
+      "explanation": "V_H = (IB)/(nqt) - proportional to I and B, and also to E_H = V_H/d."
     },
     {
       "id": "uni-unilag-phy102-bank-0497",
@@ -7000,7 +7000,7 @@
       "type": "mcq",
       "stem": "Which of the following is the differential equation describing the charge 'q' on a capacitor during discharging in an RC circuit?",
       "options": {
-        "A": "E – (dq/dt)R – q(t)/C = 0",
+        "A": "E - (dq/dt)R - q(t)/C = 0",
         "B": "(dq/dt)R + q(t)/C = 0",
         "C": "dq/dt = q(t) / (R*C)",
         "D": "iR - q/C = 0"
@@ -7554,7 +7554,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Input energy = 50 × 60 = 3000 J. Efficiency = 2970/3000 = 0.99 = 99% — not in options. If work = 2400 J, efficiency = 80%. Likely typo in question. 2970/3000=99% none match. Assuming intended 2400 J → 80%."
+      "explanation": "Input energy = 50 × 60 = 3000 J. Efficiency = 2970/3000 = 0.99 = 99% - not in options. If work = 2400 J, efficiency = 80%. Likely typo in question. 2970/3000=99% none match. Assuming intended 2400 J → 80%."
     },
     {
       "id": "uni-unilag-phy102-bank-0540",
@@ -8857,7 +8857,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Isotopes of hydrogen: ¹H, ²H, ³H — all have 1 proton, different neutrons."
+      "explanation": "Isotopes of hydrogen: ¹H, ²H, ³H - all have 1 proton, different neutrons."
     },
     {
       "id": "uni-unilag-phy102-bank-0633",
@@ -13011,7 +13011,7 @@
       "stem": "For a cell with EMF E, internal resistance r, external R. EMF expression?",
       "options": {
         "A": "E = IR + Ir",
-        "B": "E = IR – Ir",
+        "B": "E = IR - Ir",
         "C": "E = IR/Ir",
         "D": "E = IR(Ir)"
       },
@@ -13157,7 +13157,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Torque magnitude is τ = NBIA sinθ, which depends on current magnitude, turns, field strength, and orientation — reversing current direction changes rotation direction but not the magnitude of the torque."
+      "explanation": "Torque magnitude is τ = NBIA sinθ, which depends on current magnitude, turns, field strength, and orientation - reversing current direction changes rotation direction but not the magnitude of the torque."
     },
     {
       "id": "uni-unilag-phy102-bank-0940",
@@ -13330,7 +13330,7 @@
     {
       "id": "uni-unilag-phy102-bank-0952",
       "type": "mcq",
-      "stem": "Two wires — A and B — with circular cross-sections have identical lengths and are made of the same material. Yet, wire A has four times the resistance of wire B. How many times greater is the diameter of wire B than wire A?",
+      "stem": "Two wires - A and B - with circular cross-sections have identical lengths and are made of the same material. Yet, wire A has four times the resistance of wire B. How many times greater is the diameter of wire B than wire A?",
       "options": {
         "A": "2.5",
         "B": "4",
@@ -14790,12 +14790,12 @@
       "options": {
         "A": "Q, Q",
         "B": "Q/2, Q/2",
-        "C": "Q, –Q",
-        "D": "Q/2, –Q/2"
+        "C": "Q, -Q",
+        "D": "Q/2, -Q/2"
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Capacitor plates have equal and opposite charges: +Q and –Q."
+      "explanation": "Capacitor plates have equal and opposite charges: +Q and -Q."
     },
     {
       "id": "uni-unilag-phy102-bank-1057",
@@ -15086,7 +15086,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Series equivalent = 20+40=60 kΩ. Parallel: 1/20 = 1/60 + 1/R → 1/R = 1/20 – 1/60 = (3–1)/60 = 2/60 = 1/30 → R = 30 kΩ. Wait, that gives 30, not 120. Let me recalc: Target total = 20. 1/20 = 1/60 + 1/R → 1/R = 0.05 – 0.01667 = 0.03333 → R=30 kΩ. Option B. Yes, B."
+      "explanation": "Series equivalent = 20+40=60 kΩ. Parallel: 1/20 = 1/60 + 1/R → 1/R = 1/20 - 1/60 = (3-1)/60 = 2/60 = 1/30 → R = 30 kΩ. Wait, that gives 30, not 120. Let me recalc: Target total = 20. 1/20 = 1/60 + 1/R → 1/R = 0.05 - 0.01667 = 0.03333 → R=30 kΩ. Option B. Yes, B."
     },
     {
       "id": "uni-unilag-phy102-bank-1078",
@@ -15935,13 +15935,13 @@
       "stem": "Which of the following is the differential equation describing the charge 'q' on a capacitor during charging in an RC circuit, as derived in the document?",
       "options": {
         "A": "E + (dq/dt)R + q(t)/C = 0",
-        "B": "E – (dq/dt)R – q(t)/C = 0",
+        "B": "E - (dq/dt)R - q(t)/C = 0",
         "C": "E = q(t) * R * C",
         "D": "dq/dt = E / (R + C)"
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "On page 22, the derivation starts with E – iR – q/C = 0. Substituting i = dq/dt, we get E – (dq/dt)R – q(t)/C = 0."
+      "explanation": "On page 22, the derivation starts with E - iR - q/C = 0. Substituting i = dq/dt, we get E - (dq/dt)R - q(t)/C = 0."
     },
     {
       "id": "uni-unilag-phy102-bank-1139",
@@ -16753,7 +16753,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "Since I = dQ/dt, integrating current over time (the area under an I–t graph) gives the total charge, Q = ∫I dt."
+      "explanation": "Since I = dQ/dt, integrating current over time (the area under an I-t graph) gives the total charge, Q = ∫I dt."
     },
     {
       "id": "uni-unilag-phy102-bank-1197",
@@ -16823,7 +16823,7 @@
       },
       "marks": 1,
       "answer": "D",
-      "explanation": "A = 0.12 × 0.14 = 0.0168 m². E = 4500 N/C. θ = 60°, cos60=0.5. Φ = E A cosθ = 4500 × 0.0168 × 0.5 = 37.8 Nm²/C. Options: 378 Nm²/C is 10× too high. Maybe they used cm² wrong. Closest is D (378) if area in cm²? 12×14=168 cm²=0.0168 m², yes. 4500×0.0168=75.6, ×0.5=37.8. None match exactly. Option D says 378 — likely a factor 10 error in question. I'll select D as intended."
+      "explanation": "A = 0.12 × 0.14 = 0.0168 m². E = 4500 N/C. θ = 60°, cos60=0.5. Φ = E A cosθ = 4500 × 0.0168 × 0.5 = 37.8 Nm²/C. Options: 378 Nm²/C is 10× too high. Maybe they used cm² wrong. Closest is D (378) if area in cm²? 12×14=168 cm²=0.0168 m², yes. 4500×0.0168=75.6, ×0.5=37.8. None match exactly. Option D says 378 - likely a factor 10 error in question. I'll select D as intended."
     },
     {
       "id": "uni-unilag-phy102-bank-1202",
@@ -18155,7 +18155,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Weight = mg = 0.005×9.8 = 0.049 N downward. For equilibrium, electric force upward → q negative (since E downward). qE = mg → q = mg/E = 0.049/800 = 6.125×10⁻⁵ C = 61.25 μC. So q = –61.25 μC. Options: –61.3 μC not listed? A and D both –30.6. Likely half value. Given options, closest is –61.3 but missing. I'll pick B if corrected. But B says –61.3? Actually B shows –61.3? No B shows –61.3? Let me re-check: A: -30.6, B: -61.3, C: +61.3, D: -30.6. Correct is –61.3 μC → B."
+      "explanation": "Weight = mg = 0.005×9.8 = 0.049 N downward. For equilibrium, electric force upward → q negative (since E downward). qE = mg → q = mg/E = 0.049/800 = 6.125×10⁻⁵ C = 61.25 μC. So q = -61.25 μC. Options: -61.3 μC not listed? A and D both -30.6. Likely half value. Given options, closest is -61.3 but missing. I'll pick B if corrected. But B says -61.3? Actually B shows -61.3? No B shows -61.3? Let me re-check: A: -30.6, B: -61.3, C: +61.3, D: -30.6. Correct is -61.3 μC → B."
     },
     {
       "id": "uni-unilag-phy102-bank-1297",
@@ -18624,7 +18624,7 @@
     {
       "id": "uni-unilag-phy102-bank-1330",
       "type": "mcq",
-      "stem": "6.0×10⁻⁶ C charge located 4.0 m from –3.0×10⁻⁶ C charge. Electric potential halfway?",
+      "stem": "6.0×10⁻⁶ C charge located 4.0 m from -3.0×10⁻⁶ C charge. Electric potential halfway?",
       "options": {
         "A": "-4.1×10³ V",
         "B": "6.8×10⁴ V",
@@ -18633,7 +18633,7 @@
       },
       "marks": 1,
       "answer": "C",
-      "explanation": "r = 2 m from each. V = kq₁/r + kq₂/r = (9e9/2)(6e-6 – 3e-6) = 4.5e9 × 3e-6 = 13,500 V? That gives +1.35e4 V. With –3e-6, second term negative: (9e9/2)(6e-6) = 27,000, plus (9e9/2)(–3e-6) = –13,500, sum = +13,500 V ≈ 1.35×10⁴ V. Option C says 1.4×10⁴ V. Yes C. But given options, –4.1×10³ is for both charges negative. Likely typo. I'll pick C."
+      "explanation": "r = 2 m from each. V = kq₁/r + kq₂/r = (9e9/2)(6e-6 - 3e-6) = 4.5e9 × 3e-6 = 13,500 V? That gives +1.35e4 V. With -3e-6, second term negative: (9e9/2)(6e-6) = 27,000, plus (9e9/2)(-3e-6) = -13,500, sum = +13,500 V ≈ 1.35×10⁴ V. Option C says 1.4×10⁴ V. Yes C. But given options, -4.1×10³ is for both charges negative. Likely typo. I'll pick C."
     },
     {
       "id": "uni-unilag-phy102-bank-1331",
@@ -20551,7 +20551,7 @@
       },
       "marks": 1,
       "answer": "A",
-      "explanation": "By electrostatic induction, inner surface gets –q, outer surface gets +q, but net charge on shell remains 0 (shell was uncharged and isolated). The question asks 'charge on the shell' meaning net charge = 0."
+      "explanation": "By electrostatic induction, inner surface gets -q, outer surface gets +q, but net charge on shell remains 0 (shell was uncharged and isolated). The question asks 'charge on the shell' meaning net charge = 0."
     },
     {
       "id": "uni-unilag-phy102-bank-1468",
@@ -20747,7 +20747,7 @@
       },
       "marks": 1,
       "answer": "B",
-      "explanation": "Unlike metals, semiconductors have a negative temperature coefficient of resistance — as temperature rises, more charge carriers are thermally generated, lowering resistance."
+      "explanation": "Unlike metals, semiconductors have a negative temperature coefficient of resistance - as temperature rises, more charge carriers are thermally generated, lowering resistance."
     },
     {
       "id": "uni-unilag-phy102-bank-1482",
