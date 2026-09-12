@@ -51,6 +51,10 @@ interface Options {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?: unknown;
   auth?: boolean;
+  /** Swallow the 401 (throw it) instead of bouncing the whole page to
+   *  /login. Content endpoints with a local fallback (question bundles)
+   *  must never kick a student out of what they were doing. */
+  noRedirect?: boolean;
 }
 
 export async function api<T>(path: string, opts: Options = {}): Promise<T> {
@@ -67,7 +71,7 @@ export async function api<T>(path: string, opts: Options = {}): Promise<T> {
     body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
   });
 
-  if (res.status === 401 && opts.auth !== false) {
+  if (res.status === 401 && opts.auth !== false && !opts.noRedirect) {
     clearSession();
     if (typeof window !== 'undefined') {
       const loginPath = `${BASE_PATH}/login`;

@@ -1,6 +1,6 @@
 'use client';
 
-import type { CSSProperties, ReactNode } from 'react';
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { API_BASE } from './api';
 
 /* ------------------------------------------------------------------ */
@@ -190,12 +190,213 @@ export function latexToText(src: string): string {
   return out;
 }
 
-/** Convert \( … \) and $$ … $$ spans in a text run into LaTeX-converted text. */
-function convertMath(text: string): string {
-  return text
-    .replace(/\\\(([^]*?)\\\)/g, (_, body: string) => latexToText(body))
-    .replace(/\$\$?([^]*?)\$\$?/g, (_, body: string) => latexToText(body))
-    .replace(/\\\[((?:.|\n)+?)\\\]/g, (_, body: string) => latexToText(body));
+/* ------------------------------------------------------------------ */
+/* KaTeX maths (the real typesetter, CDN-loaded with a graceful        */
+/* unicode fallback for offline revision)                              */
+/* ------------------------------------------------------------------ */
+
+interface KatexLike {
+  render(tex: string, el: HTMLElement, opts?: Record<string, unknown>): void;
+}
+
+declare global {
+  interface Window {
+    katex?: KatexLike;
+  }
+}
+
+let katexWaiter: Promise<boolean> | null = null;
+
+/** Resolves true once window.katex exists (layout loads it with defer),
+ *  false after a 6s grace period (offline plane revision keeps the
+ *  unicode approximation). One poller serves every maths span. */
+function katexReady(): Promise<boolean> {
+  if (typeof window === 'undefined') return Promise.resolve(false);
+  if (window.katex) return Promise.resolve(true);
+  if (!katexWaiter) {
+    katexWaiter = new Promise((resolve) => {
+      const started = Date.now();
+      const iv = window.setInterval(() => {
+        if (window.katex) {
+          window.clearInterval(iv);
+          resolve(true);
+        } else if (Date.now() - started > 6000) {
+          window.clearInterval(iv);
+          resolve(false);
+        }
+      }, 120);
+    });
+  }
+  return katexWaiter;
+}
+
+/** One maths span: paints the unicode approximation instantly, then
+ *  swaps in KaTeX's typeset output when the library arrives. KaTeX
+ *  writes into its OWN target node — React keeps the fallback in a
+ *  sibling, so the two never fight over the same children. */
+function MathSpan({ tex, display, approx }: { tex: string; display: boolean; approx: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [typeset, setTypeset] = useState(false);
+
+  useEffect(() => {
+    let alive = true;
+    setTypeset(false);
+    katexReady().then((ok) => {
+      if (!alive || !ok || !ref.current || !window.katex) return;
+      try {
+        window.katex.render(tex, ref.current, {
+          throwOnError: false,
+          displayMode: display,
+          strict: false,
+          trust: false,
+          output: 'html',
+        });
+        setTypeset(true);
+      } catch {
+        /* broken KaTeX (old browser): the approximation stays */
+      }
+    });
+    return () => {
+      alive = false;
+    };
+  }, [tex, display]);
+
+  return (
+    <span
+      className={display ? 'katex-host my-1.5 block overflow-x-auto overflow-y-hidden' : 'katex-host'}
+      data-tex={tex.slice(0, 200)}
+    >
+      <span ref={ref} className="katex-target" />
+      {!typeset && <span className="katex-approx">{approx}</span>}
+    </span>
+  );
+}
+
+/**
+ * A run of ≥2 backslashes followed by letters is double-escaping from an
+ * upstream archive dump ("\\begin" for "\begin"), never valid LaTeX (a
+ * real row-break "\\" is followed by space, another backslash or the end).
+ * Shave one backslash off such runs so the typesetter sees sane input.
+ */
+export function normalizeLatexEscapes(text: string): string {
+  if (!text.includes('\\')) return text;
+  return text.replace(/\\{2,}(?=[a-zA-Z])/g, (run) => run.slice(1));
+}
+
+/** KaTeX-supported environments a bare (unwrapped) occurrence of should
+ *  still be treated as maths. `tabular`/`longtable` are text environments
+ *  KaTeX cannot typeset — they keep the approximation path. */
+const MATH_ENVS = new Set([
+  'array', 'align', 'align*', 'aligned', 'alignat', 'alignat*', 'gather', 'gather*',
+  'gathered', 'cases', 'dcases', 'rcases', 'matrix', 'pmatrix', 'bmatrix', 'Bmatrix',
+  'vmatrix', 'Vmatrix', 'smallmatrix', 'split', 'multline', 'multline*', 'equation',
+  'equation*', 'eqnarray', 'eqnarray*', 'subarray',
+]);
+
+interface MathSeg {
+  kind: 'text' | 'math';
+  body: string;
+  display: boolean;
+}
+
+/**
+ * Split a text run into maths and non-maths segments. Recognises
+ * \( … \), \[ … \], $$ … $$, single $ … $ (only when the body carries a
+ * LaTeX command/arrow so "costs $5 and $7" stays plain text) and bare
+ * \begin{env}…\end{env} blocks the archives ship without delimiters.
+ */
+export function splitMathSegments(input: string): MathSeg[] {
+  const segs: MathSeg[] = [];
+  let text = '';
+  const flush = () => {
+    if (text) {
+      segs.push({ kind: 'text', body: text, display: false });
+      text = '';
+    }
+  };
+  let i = 0;
+  while (i < input.length) {
+    const ch = input[i];
+    // \( … \) — the banks' dominant inline form
+    if (ch === '\\' && input[i + 1] === '(') {
+      const end = input.indexOf('\\)', i + 2);
+      if (end >= 0) {
+        flush();
+        segs.push({ kind: 'math', body: input.slice(i + 2, end), display: false });
+        i = end + 2;
+        continue;
+      }
+    }
+    // \[ … \] display maths
+    if (ch === '\\' && input[i + 1] === '[') {
+      const end = input.indexOf('\\]', i + 2);
+      if (end >= 0) {
+        flush();
+        segs.push({ kind: 'math', body: input.slice(i + 2, end), display: true });
+        i = end + 2;
+        continue;
+      }
+    }
+    // $$ … $$
+    if (ch === '$' && input[i + 1] === '$') {
+      const end = input.indexOf('$$', i + 2);
+      if (end > i + 2) {
+        flush();
+        segs.push({ kind: 'math', body: input.slice(i + 2, end), display: true });
+        i = end + 2;
+        continue;
+      }
+    }
+    // $ … $ (maths-looking bodies only — prose dollar amounts stay prose)
+    if (ch === '$') {
+      const end = input.indexOf('$', i + 1);
+      if (end > i + 1) {
+        const body = input.slice(i + 1, end);
+        if (/\\[a-zA-Z]+|\^|_|=/.test(body)) {
+          flush();
+          segs.push({ kind: 'math', body, display: false });
+          i = end + 1;
+          continue;
+        }
+      }
+    }
+    // bare \begin{env} … \end{env} (KaTeX needs the whole environment)
+    if (ch === '\\' && input.startsWith('\\begin{', i)) {
+      const m = /^\\begin\{([a-zA-Z*]+)\}/.exec(input.slice(i));
+      if (m && MATH_ENVS.has(m[1])) {
+        const endToken = `\\end{${m[1]}}`;
+        const end = input.indexOf(endToken, i + m[0].length);
+        if (end >= 0) {
+          flush();
+          segs.push({
+            kind: 'math',
+            body: input.slice(i, end + endToken.length),
+            display: true,
+          });
+          i = end + endToken.length;
+          continue;
+        }
+      }
+    }
+    text += ch;
+    i += 1;
+  }
+  flush();
+  return segs;
+}
+
+function pushText(ctx: Ctx, raw: string) {
+  const text = decodeEntities(normalizeLatexEscapes(raw));
+  for (const seg of splitMathSegments(text)) {
+    if (seg.kind === 'math') {
+      const approx = latexToText(seg.body);
+      ctx.nodes.push(
+        <MathSpan key={ctx.key++} tex={seg.body} display={seg.display} approx={approx} />,
+      );
+    } else if (seg.body) {
+      ctx.nodes.push(seg.body);
+    }
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -245,12 +446,6 @@ const KEEP_TAGS = new Set([
 interface Ctx {
   nodes: ReactNode[];
   key: number;
-}
-
-function pushText(ctx: Ctx, raw: string) {
-  const text = convertMath(decodeEntities(raw));
-  if (!text) return;
-  ctx.nodes.push(text);
 }
 
 function styleFor(tag: string): CSSProperties | undefined {

@@ -372,7 +372,10 @@ export async function fetchBundleByCode(code: string): Promise<Bundle> {
     return local;
   } catch {
     try {
-      const bundle = await api<Bundle>(`/bundles/${code}`);
+      // noRedirect: a stale session must never bounce a paper load to
+      // /login — the client compose above already served the common
+      // path, this is only the cold fallback.
+      const bundle = await api<Bundle>(`/bundles/${code}`, { noRedirect: true });
       void idbSetBundle(key, bundle);
       return bundle;
     } catch (err) {
