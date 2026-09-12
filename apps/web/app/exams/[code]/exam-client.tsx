@@ -9,6 +9,7 @@ import {
   fetchBundle,
   fetchBundleByCode,
   fetchManifest,
+  gradeLocally,
   isComposedPaperCode,
   isMockPaperCode,
   migrateBundleCache,
@@ -49,6 +50,8 @@ interface ResultPayload {
   score: number;
   total: number;
   breakdown: TopicRow[];
+  /** true when graded on-device (offline / signed-out fallback). */
+  local?: boolean;
 }
 
 interface AttemptSummary {
@@ -287,19 +290,32 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   const submit = useCallback(async () => {
     if (!attempt || submittedRef.current) return;
     submittedRef.current = true;
+    const localAttempt = attempt.attemptId.startsWith('local-');
     // Fire-and-forget telemetry (ROADMAP #6): the server re-computes the
     // same pure signal from the raw latencies and logs the sitting.
-    void api('/me/sessions', {
-      method: 'POST',
-      body: {
-        attemptId: attempt.attemptId,
-        code: attempt.code,
-        startedAt: attempt.startedAt,
-        durationMs: Math.round(Date.now() - startedAtRef.current - pausedMsRef.current),
-        latenciesMs: [...latenciesRef.current],
-      },
-    }).catch(() => {});
+    if (!localAttempt) {
+      void api('/me/sessions', {
+        method: 'POST',
+        body: {
+          attemptId: attempt.attemptId,
+          code: attempt.code,
+          startedAt: attempt.startedAt,
+          durationMs: Math.round(Date.now() - startedAtRef.current - pausedMsRef.current),
+          latenciesMs: [...latenciesRef.current],
+        },
+      }).catch(() => {});
+    }
     setPhase('grading');
+    if (localAttempt) {
+      // On-device sitting: grade in the browser from the merged answers.
+      // The paper set is identical to the server's composition (same
+      // deterministic walk), so the score matches the hall's arithmetic.
+      await new Promise((r) => setTimeout(r, 350)); // let the grading state land
+      setResult(gradeLocally(bundle!, answers));
+      clearActiveExam();
+      setPhase('graded');
+      return;
+    }
     try {
       const payload = {
         answers: Object.entries(answers).map(([questionId, selected]) => ({
@@ -332,11 +348,24 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       throw new Error('Grading is taking unusually long.');
     } catch (err) {
       // Closed elsewhere (e.g. resubmit guard): the pause is dead too.
-      if (err instanceof ApiError && err.code === 'already_submitted') clearActiveExam();
+      if (err instanceof ApiError && err.code === 'already_submitted') {
+        clearActiveExam();
+        setError(err instanceof Error ? err.message : 'Submission failed');
+        setPhase('error');
+        return;
+      }
+      // Network died between picking and submitting — grade on-device
+      // rather than throwing the sitting away. Same paper, same answers.
+      if (bundle && bundle.questions.some((q) => q.answer)) {
+        setResult(gradeLocally(bundle, answers));
+        clearActiveExam();
+        setPhase('graded');
+        return;
+      }
       setError(err instanceof Error ? err.message : 'Submission failed');
       setPhase('error');
     }
-  }, [attempt, answers]);
+  }, [attempt, answers, bundle]);
 
   // countdown
   useEffect(() => {
@@ -382,14 +411,33 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
       // Daily sprints pin the server's seeded order and mocks keep the
       // composed paper order, so neither takes the adaptive walk.
       const wantsAdaptive = adaptive && !daily && !examMode;
-      const res = await api<AttemptResponse>('/attempts', {
-        method: 'POST',
-        body: {
+      let res: AttemptResponse;
+      try {
+        res = await api<AttemptResponse>('/attempts', {
+          method: 'POST',
+          body: {
+            code: bundle.code,
+            ...(daily ? { daily: true } : {}),
+            ...(wantsAdaptive ? { adaptive: true } : {}),
+          },
+        });
+      } catch (serverErr) {
+        // Server unreachable or the student is signed out (GitHub Pages
+        // static deploys, API cold starts): practise fully on-device.
+        // The paper is identical (composed from the same banks); grading
+        // happens in the browser from the merged answers.
+        if (daily) throw serverErr; // the daily sprint is server-born
+        res = {
+          attemptId: `local-${Date.now().toString(36)}`,
           code: bundle.code,
-          ...(daily ? { daily: true } : {}),
-          ...(wantsAdaptive ? { adaptive: true } : {}),
-        },
-      });
+          status: 'local',
+          startedAt: new Date().toISOString(),
+          durationMinutes: bundle.durationMinutes ?? null,
+          questionCount: bundle.questionCount,
+          adaptive: false,
+          order: null,
+        };
+      }
       setAttempt(res);
       setSmartApplied(false);
       // The server walked the pack weak-topic-first (ROADMAP #5):

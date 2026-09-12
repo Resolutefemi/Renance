@@ -153,22 +153,13 @@ export default function SettingsPage() {
           </div>
         </section>
 
-        {/* Data & offline ------------------------------------------------- */}
+        {/* Data & storage -------------------------------------------------- */}
         <section className="mt-4 overflow-hidden rounded-[12px] bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
           <div className="flex items-center gap-3 border-b border-outline-variant/50 px-5 py-4">
-            <span className="material-symbols-outlined text-on-surface-variant">wifi_off</span>
+            <span className="material-symbols-outlined text-on-surface-variant">storage</span>
             <h2 className="text-[18px] font-semibold tracking-[-0.01em] text-on-surface">
-              Data &amp; Offline
+              Data &amp; Storage
             </h2>
-          </div>
-          <div className="flex items-center gap-3 border-b border-outline-variant/50 px-5 py-4">
-            <div className="flex-1">
-              <p className="text-[15px] font-semibold text-on-surface">Offline Mode</p>
-              <p className="text-[13px] text-on-surface-variant">
-                Download assets for offline use
-              </p>
-            </div>
-            <span className="material-symbols-outlined text-outline">chevron_right</span>
           </div>
           <button
             type="button"
@@ -182,8 +173,8 @@ export default function SettingsPage() {
               <p className="text-[15px] font-semibold text-on-surface">Clear Cache</p>
               <p className="text-[13px] text-on-surface-variant">
                 {cleared
-                  ? 'Cached packs cleared, re-sync to restore.'
-                  : 'Frees space used by downloaded packs'}
+                  ? 'Cached question banks cleared, they reload on next open.'
+                  : 'Frees space used by cached question banks'}
               </p>
             </div>
           </button>

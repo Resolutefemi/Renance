@@ -627,7 +627,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
           <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
           <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
-          <LauncherTile icon="download" label="Downloads" href="/downloads" />
+          <LauncherTile icon="menu_book" label="Lessons" href="/lessons" />
           <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
         </div>
       </section>
@@ -642,12 +642,10 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
   // the home grids, so only the occasional tools remain in here.
   const items = [
     { icon: 'notifications', label: 'Notifications', href: '/notifications' },
-    { icon: 'download', label: 'Downloads', href: '/downloads' },
     { icon: 'military_tech', label: 'Badges', href: '/progress' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },
     { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
-    { icon: 'wifi_off', label: 'Offline Share', href: '/offline-share' },
     { icon: 'menu_book', label: 'Subjects', href: '/subjects' },
     { icon: 'person', label: 'Profile', href: '/profile' },
     { icon: 'settings', label: 'Settings', href: '/settings' },
