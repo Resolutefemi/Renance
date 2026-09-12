@@ -127,13 +127,29 @@ func packRelPath(code string) string {
         }
         if rest, ok := strings.CutPrefix(c, "uni-"); ok {
                 rest = strings.TrimSuffix(rest, "-bank")
-                // course codes look like bio101 — but the school slug may
-                // itself carry dashes, so split at the LAST dash.
+                // Per-school Post-UTME prep banks: <school>-pq-<subject>.
+                if school, subject, found := strings.Cut(rest, "-pq-"); found && school != "" && subject != "" {
+                        return "POST_UTME/" + school + "/" + subject + ".json"
+                }
+                // Course banks: <school>-<course>. The school slug may carry
+                // dashes (mountain-top), so prefer the last-dash split when
+                // the tail is a course code (bio101); wordy course names
+                // (financial-sector-and-eco) split at the first dash.
+                school, course := "", ""
                 if i := strings.LastIndex(rest, "-"); i > 0 {
-                        school, course := rest[:i], rest[i+1:]
-                        if isCourseCode(course) {
-                                return "All_tertiary_Q/" + school + "/" + strings.ToUpper(course) + ".json"
+                        school, course = rest[:i], rest[i+1:]
+                }
+                if !isCourseCode(course) {
+                        if j := strings.Index(rest, "-"); j > 0 {
+                                school, course = rest[:j], rest[j+1:]
                         }
+                }
+                if school != "" && course != "" {
+                        name := course
+                        if isCourseCode(course) {
+                                name = strings.ToUpper(course)
+                        }
+                        return "All_tertiary_Q/" + school + "/" + name + ".json"
                 }
         }
         if strings.Contains(c, "-post-utme") {

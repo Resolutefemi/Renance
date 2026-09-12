@@ -49,9 +49,11 @@ INDEX_NAME = "index.json"  # code → relative path map, read by the API loader
 def bundle_relpath(code: str) -> str:
     """Where a bundle with this code lives under data/questions/ (posix rel).
 
-    Grouped layout — one folder per exam body, per-school tertiary folders:
+    Grouped layout — one folder per exam body, per-school folders for
+    tertiary and post-UTME banks:
       waec-<subject>[-bank|-theory]    → WAEC/<subject>[…].json
       jamb-… / neco-…                  → JAMB/…  NECO/…
+      uni-<school>-pq-<subject>-bank   → POST_UTME/<school>/<subject>.json
       uni-<school>-<course>[-bank]     → All_tertiary_Q/<school>/<COURSE>.json
       <school>[-x]-post-utme[-<y>]…    → POST_UTME/<school[-x][-<y>]>.json
     Anything else stays flat (<code>.json): composed papers never hit disk
@@ -68,9 +70,22 @@ def bundle_relpath(code: str) -> str:
         stem = c[4:]
         if stem.endswith("-bank"):
             stem = stem[: -len("-bank")]
+        # Per-school Post-UTME prep banks: uni-<school>-pq-<subject>-bank
+        if "-pq-" in stem:
+            school, _, subject = stem.partition("-pq-")
+            if school and subject:
+                return f"POST_UTME/{school}/{subject}.json"
+        # Course banks: uni-<school>-<course>-bank. The school slug may carry
+        # dashes (mountain-top), so prefer the last-dash split when the tail
+        # is a course code (bio101); wordy course names (financial-sector-
+        # and-eco) split at the first dash instead.
         school, _, course = stem.rpartition("-")
-        if school and re.fullmatch(r"[a-z]{2,}\d+", course, re.IGNORECASE):
-            return f"{TERTIARY_DIR}/{school}/{course.upper()}.json"
+        if not (school and re.fullmatch(r"[a-z]{2,}\d+", course, re.IGNORECASE)):
+            first, _, rest = stem.partition("-")
+            school, course = first, rest
+        if school and course:
+            name = course.upper() if re.fullmatch(r"[a-z]{2,}\d+", course, re.IGNORECASE) else course
+            return f"{TERTIARY_DIR}/{school}/{name}.json"
     if "-post-utme" in c:
         stem = re.sub(r"-bank$", "", c).replace("-post-utme", "", 1)
         return f"POST_UTME/{stem}.json"
