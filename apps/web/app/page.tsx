@@ -48,9 +48,9 @@ const FEATURES = [
     body: 'Renance notices when your answer pace collapses and nudges you to take five, because tired practice teaches the wrong lessons.',
   },
   {
-    icon: 'cloud_off',
-    title: 'Offline-first, everywhere',
-    body: 'Download packs, decks and lessons once; practise on the bus or in the hostel with zero data. Progress syncs when you reconnect.',
+    icon: 'bolt',
+    title: 'Instant practice, anywhere',
+    body: 'Every past-question bank ships with the site, so a paper opens the moment you tap it. Answers and worked solutions grade right on your device, even on a weak network.',
   },
 ];
 

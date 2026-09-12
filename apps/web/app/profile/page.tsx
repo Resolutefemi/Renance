@@ -327,7 +327,6 @@ export default function ProfilePage() {
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             <MenuLink icon="auto_stories" tint="text-accent-ink" label="My Packs" href="/packs" />
             <MenuDivider />
-            <MenuLink icon="download" tint="text-accent-ink" label="Downloads" href="/downloads" />
             <MenuDivider />
             <MenuLink icon="workspace_premium" tint="text-accent-ink" label="Certificates" href="/certificates" />
           </section>

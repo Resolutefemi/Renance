@@ -134,15 +134,6 @@ export default function SideNav() {
             )}
           </Link>
           <Link
-            href="/downloads"
-            title={open ? undefined : 'Downloads'}
-            aria-current={pathname === '/downloads' ? 'page' : undefined}
-            className={rowCls(pathname === '/downloads')}
-          >
-            <span className="material-symbols-outlined text-[20px]">download</span>
-            {open && <span className="flex-1">Downloads</span>}
-          </Link>
-          <Link
             href="/settings"
             title={open ? undefined : 'Settings'}
             aria-current={pathname === '/settings' ? 'page' : undefined}

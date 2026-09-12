@@ -2,6 +2,7 @@
 
 import { api } from './api';
 import { idbGetBundle, idbSetBundle, migrateLocalStorageBundles } from './bundle-store';
+import { composePaper, parsePaperCode, segmentSubjects } from './paper-compose';
 
 export interface ExamMeta {
   code: string;
@@ -41,6 +42,15 @@ export interface BundleQuestion {
   /** Shared comprehension text the question belongs to (per-question so
    *  any member of the group can render it). */
   passage?: string;
+  /** Correct option letter — the founder merged the old answer-keys into
+   *  the bundles, and the static export ships them so papers grade
+   *  on-device (offline, signed-out, API cold starts). */
+  answer?: string;
+  /** Worked solution shown after grading. */
+  explanation?: string;
+  /** Optional per-question media merged from the old keys. */
+  video?: string;
+  answer_image?: string;
 }
 
 export interface BundleSection {
@@ -351,14 +361,129 @@ export async function fetchBundleByCode(code: string): Promise<Bundle> {
   const key = `renance.bundle.${code}`;
   const cached = (await idbGetBundle(key)) as Bundle | null;
   const fallback = cached && cached.questions ? cached : null;
+  // Compose CLIENT-SIDE first: the paper is a pure function of its code,
+  // so the shipped banks rebuild it byte-identically without a Render
+  // cold start or a session (the old flow 401'd signed-out students and
+  // stalled every pick/mock on the sleeping API). The API stays as the
+  // fallback when the client cannot resolve a bank.
   try {
-    const bundle = await api<Bundle>(`/bundles/${code}`);
-    void idbSetBundle(key, bundle);
-    return bundle;
-  } catch (err) {
-    if (fallback) return fallback; // offline: resume from the cached paper
-    throw err;
+    const local = await composeFromCode(code);
+    void idbSetBundle(key, local);
+    return local;
+  } catch {
+    try {
+      const bundle = await api<Bundle>(`/bundles/${code}`);
+      void idbSetBundle(key, bundle);
+      return bundle;
+    } catch (err) {
+      if (fallback) return fallback; // offline: resume from the cached paper
+      throw err;
+    }
   }
+}
+
+/**
+ * Resolve a composed paper code entirely from the statically shipped
+ * library (lib/paper-compose.ts mirrors the server's deterministic
+ * compose engine 1:1). Throws when the code cannot be resolved
+ * client-side — callers fall back to the API.
+ */
+export async function composeFromCode(code: string): Promise<Bundle> {
+  const spec = parsePaperCode(code);
+  if (!spec) throw new Error(`not a composed paper code: ${code}`);
+  const manifest = await fetchManifest();
+  const byCode = new Map(manifest.exams.map((e) => [e.code, e]));
+
+  const bankCache = new Map<string, Promise<Bundle | null>>();
+  const resolveBank = async (slug: string): Promise<Bundle | null> => {
+    const bankCode = `${spec.body}-${slug}-bank`;
+    if (!bankCache.has(bankCode)) {
+      const exam = byCode.get(bankCode);
+      bankCache.set(
+        bankCode,
+        exam ? fetchBundle(exam).catch(() => null) : Promise.resolve(null),
+      );
+    }
+    return bankCache.get(bankCode)!;
+  };
+
+  // Multi-word subject slugs re-join from the dash tokens, exactly like
+  // the server's segmentSlugs: build the slug dictionary from every
+  // body's bank list in the manifest.
+  if (spec.family === 'mock' || spec.family === 'custom') {
+    const dict = new Set<string>();
+    for (const e of manifest.exams) {
+      const m = e.code.match(/^(jamb|waec|neco)-(.+)-bank$/);
+      if (m) dict.add(m[2]);
+    }
+    spec.subjects = segmentSubjects(spec.subjects.join('-').split('-'), dict);
+    if (!spec.subjects.length) throw new Error(`subject list does not segment: ${code}`);
+  }
+
+  return composePaper(
+    code,
+    spec,
+    resolveBank,
+    async () => {
+      if (spec.family !== 'pick') return null;
+      const base = byCode.get(spec.base);
+      return base ? fetchBundle(base) : null;
+    },
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Local grading (offline / signed-out fallback)                       */
+/* ------------------------------------------------------------------ */
+
+export interface LocalTopicRow {
+  topic: string;
+  correct: number;
+  total: number;
+}
+
+export interface LocalResult {
+  score: number;
+  total: number;
+  breakdown: LocalTopicRow[];
+  local: true;
+}
+
+/**
+ * Grade a paper in the browser from the bundle's merged answers
+ * (founder directive: the answers ride in the question JSON). Mirrors
+ * the server's result shape: score/total plus a per-topic breakdown,
+ * questions without a topic bucketed under "General". An item is
+ * correct when the picked letter matches the answer letter; theory and
+ * unsubmitted items simply score 0, exactly like the hall.
+ */
+export function gradeLocally(
+  bundle: Bundle,
+  answers: Record<string, string>,
+): LocalResult {
+  const byTopic = new Map<string, { correct: number; total: number }>();
+  let score = 0;
+  let total = 0;
+  for (const q of bundle.questions) {
+    const topic = q.topic || 'General';
+    const row = byTopic.get(topic) ?? { correct: 0, total: 0 };
+    row.total += 1;
+    total += 1;
+    const picked = answers[q.id];
+    if (q.answer && picked && picked.toUpperCase() === q.answer.toUpperCase()) {
+      score += 1;
+      row.correct += 1;
+    }
+    byTopic.set(topic, row);
+  }
+  return {
+    score,
+    total,
+    breakdown: [...byTopic.entries()]
+      .map(([topic, r]) => ({ topic, correct: r.correct, total: r.total }))
+      .sort((a, b) => a.topic.localeCompare(b.topic)),
+    local: true,
+  };
 }
 
 /* ------------------------------------------------------------------ */

@@ -25,11 +25,11 @@ const QA: Array<{ q: string; a: string }> = [
   },
   {
     q: 'How does grading work?',
-    a: 'When you submit a paper, the Renance API grades it on the server with the same answer keys used to publish the questions, no browser tricks, no self-marking. Results, streaks, XP and badges follow immediately, and wrong topics enter your spaced-repetition queue automatically.',
+    a: 'Every question now carries its own answer and worked solution, so your paper is marked the instant you submit, right on your device. When you are signed in, the same attempt is also scored on the server with the same keys, feeding your streaks, XP, badges and spaced-repetition queue.',
   },
   {
     q: 'Can I study offline?',
-    a: 'Yes. The mobile app downloads question packs, flashcard decks and lessons to your device, so you can practise and read on the bus or in a hostel with no data. Progress syncs when you reconnect.',
+    a: 'Yes. The whole question library ships with the site itself, and papers you have opened before stay cached on your device, so practice and marking keep working through network drops. Your results are ready and waiting the moment connectivity returns.',
   },
   {
     q: 'What exams does Renance cover?',

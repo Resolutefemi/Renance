@@ -7,8 +7,13 @@ tier) cold-starts. So the web build ships every manifest pack as a
 static JSON file under apps/web/public/bundles/ plus the manifest
 itself, and the client reads them same-origin first, API second.
 
-Doctrine (ADR-0003) is preserved: answer material is stripped from
-everything student-visible, recursively, before it lands in the export.
+Founder directive 2026-09 (supersedes the export-side ADR-0003 strip):
+the answers and explanations now LIVE in the question JSON, and the
+static export ships them so the browser can grade papers on-device —
+signed-out students, offline sittings and API cold starts included.
+Raw key-side shapes (answers dumps, correct_letter maps, ...) are still
+stripped recursively; only the per-question `answer` / `explanation` /
+`video` / `answer_image` fields survive.
 
 Usage:  python3 scripts/web_bundles.py
 """
@@ -23,13 +28,15 @@ REPO = Path(__file__).resolve().parents[1]
 DATA = REPO / "data"
 OUT = REPO / "apps" / "web" / "public" / "bundles"
 
-# Mirrors internal/cbtdata/cbtdata.go forbiddenKeys — anything here must
-# never reach a student-visible bundle.
+# Raw key-side shapes that must never reach a student-visible bundle,
+# even though each question now carries its own `answer` / `explanation`
+# (the server-side API still sanitises those per-question fields for its
+# own responses; the static export is the offline grading source).
 FORBIDDEN = {
-    "answer", "answers", "answer_key", "answerkey",
+    "answers", "answer_key", "answerkey",
     "correct", "correct_answer", "correctletter", "correct_letter",
     "correctoption", "correct_option",
-    "explanation", "explanations", "iscorrect", "is_correct",
+    "explanations", "iscorrect", "is_correct",
 }
 
 
