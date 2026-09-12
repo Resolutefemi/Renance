@@ -1,59 +1,154 @@
 'use client';
 
 /**
- * Question Pack, the small launcher behind the packs.
- *
- * The founder pulled the big pack cards off the home page and off the
- * Exams flow ("trash"), so the packs live behind one small Question
- * Pack icon for now. This page is that home: a compact, scannable
- * list of every pack in the manifest with a one-tap route into the
- * Practice Settings flow (/exams/practice?pack=code).
+ * Question Pack, the small launcher behind the packs — focus-aware
+ * (founder directive, 2026-09): a student sees THEIR exam's packs, not
+ * the whole archive. The WAEC candidate's bank is the WAEC shelf, the
+ * university student lands on their own school's courses, and the
+ * JAMBite sees the UTME shelf. Learning focus lives on the Profile
+ * screen and the packs page follows it.
  */
 
 import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { LogoActivityIndicator } from '@/components/renance-logo';
 import { fetchManifest, type ExamMeta } from '@/lib/exams';
+import { api } from '@/lib/api';
+import { SCHOOLS, findSchoolByName, storedSchoolSlug, type School } from '@/lib/university';
+
+interface MeResponse {
+  user: { id: string; username: string; profileCompleted: boolean };
+  profile: { exams: string[]; institution?: string } | null;
+}
+
+interface PackGroup {
+  key: string;
+  label: string;
+  packs: ExamMeta[];
+}
+
+function focusOf(profile: MeResponse['profile']): string | null {
+  const exam = profile?.exams?.[0];
+  if (!exam) return null;
+  if (/jamb/i.test(exam)) return 'JAMB';
+  if (/waec/i.test(exam)) return 'WAEC';
+  if (/neco/i.test(exam)) return 'NECO';
+  if (/university/i.test(exam)) return 'University Modules';
+  return exam;
+}
+
+/** School slug encoded in a university pack code (uni-<school>-…, <school>-post-utme…). */
+function schoolSlugOf(code: string): string | null {
+  if (code.startsWith('uni-')) {
+    const stem = code.slice(4).replace(/-bank$/, '');
+    const dash = stem.indexOf('-');
+    return dash > 0 ? stem.slice(0, dash) : stem || null;
+  }
+  if (code.includes('-post-utme')) {
+    return code.split('-post-utme')[0] || null;
+  }
+  return null;
+}
 
 export default function PacksPage() {
   const [exams, setExams] = useState<ExamMeta[] | null>(null);
+  const [focus, setFocus] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     let alive = true;
-    fetchManifest()
-      .then((m) => {
-        if (alive) setExams(m.exams);
-      })
-      .catch(() => {
+    (async () => {
+      try {
+        const [manifest, me] = await Promise.all([
+          fetchManifest(),
+          api<MeResponse>('/me').catch(() => null),
+        ]);
+        if (!alive) return;
+        setExams(manifest.exams);
+        setFocus(focusOf(me?.profile ?? null));
+      } catch {
         if (alive) setFailed(true);
-      });
+      }
+    })();
     return () => {
       alive = false;
     };
   }, []);
 
-  // Group the manifest by exam body (manifest order preserved inside each
-  // group): JAMB mocks + banks, the WAEC banks, then everything else.
-  const groups = useMemo(() => {
-    if (!exams) return [];
-    const order: string[] = [];
-    const byBody = new Map<string, ExamMeta[]>();
-    for (const e of exams) {
-      const body = e.body ?? 'University Modules';
-      if (!byBody.has(body)) {
-        byBody.set(body, []);
-        order.push(body);
+  // The student's school for university desks: stored pick → profile
+  // institution match (same resolution the dashboard uses).
+  const [uniSchool, setUniSchool] = useState<School | null>(null);
+  useEffect(() => {
+    if (focus !== 'University Modules') return;
+    let alive = true;
+    (async () => {
+      const slug = storedSchoolSlug();
+      if (slug) {
+        const hit = SCHOOLS.find((s) => s.slug === slug);
+        if (hit && alive) {
+          setUniSchool(hit);
+          return;
+        }
       }
-      byBody.get(body)!.push(e);
+      try {
+        const me = await api<MeResponse>('/me');
+        const matched = me.profile?.institution ? findSchoolByName(me.profile.institution) : null;
+        if (alive) setUniSchool(matched);
+      } catch {
+        /* anonymous: no school pin */
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [focus, exams]);
+
+  const groups = useMemo<PackGroup[]>(() => {
+    if (!exams) return [];
+    const isUni = focus === 'University Modules';
+    const bodyOf = (e: ExamMeta) => e.body ?? 'University Modules';
+    const pool = focus ? exams.filter((e) => bodyOf(e) === focus) : exams;
+
+    if (!isUni) {
+      // One shelf: the focus body's packs, manifest order preserved.
+      if (!pool.length) return [];
+      return [{ key: focus ?? 'all', label: focus ?? 'All packs', packs: pool }];
     }
-    const rank = (b: string) => (b === 'JAMB' ? 0 : b === 'WAEC' ? 1 : b === 'NECO' ? 2 : 3);
-    return order
-      .map((body) => ({ body, packs: byBody.get(body)! }))
-      .sort((a, b) => rank(a.body) - rank(b.body));
-  }, [exams]);
+
+    // University: group by school, the student's school pinned first.
+    const bySchool = new Map<string, ExamMeta[]>();
+    for (const e of pool) {
+      const slug = schoolSlugOf(e.code) ?? 'other';
+      if (!bySchool.has(slug)) bySchool.set(slug, []);
+      bySchool.get(slug)!.push(e);
+    }
+    const order = [...bySchool.keys()].sort((a, b) => a.localeCompare(b));
+    if (uniSchool) {
+      const i = order.indexOf(uniSchool.slug);
+      if (i > 0) {
+        order.splice(i, 1);
+        order.unshift(uniSchool.slug);
+      }
+    }
+    return order.map((slug) => {
+      const school = SCHOOLS.find((s) => s.slug === slug);
+      return {
+        key: slug,
+        label: school ? `${school.name} (${school.short})` : slug,
+        packs: bySchool.get(slug)!,
+      };
+    });
+  }, [exams, focus, uniSchool]);
+
+  const focusLabel =
+    focus === 'University Modules'
+      ? uniSchool
+        ? `${uniSchool.name} (${uniSchool.short})`
+        : 'your university'
+      : focus;
 
   return (
     <main className="min-h-dvh bg-surface pb-28 md:pb-16 md:pl-60">
@@ -64,8 +159,18 @@ export default function PacksPage() {
           Question Pack
         </h1>
         <p className="mt-1 text-[15px] font-medium text-on-surface-variant">
-          Every past question pack on this device, ready to practice.
+          {focus
+            ? `Your ${focusLabel} past questions, ready to practice.`
+            : 'Every past question pack on this device, ready to practice.'}
         </p>
+        {focus && (
+          <p className="mt-1 text-[13px] text-on-surface-variant">
+            Following your learning focus ·{' '}
+            <Link href="/profile" className="font-semibold text-primary hover:underline">
+              change focus in Profile
+            </Link>
+          </p>
+        )}
 
         {failed && (
           <p className="mt-6 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
@@ -85,16 +190,22 @@ export default function PacksPage() {
           </p>
         )}
 
-        {exams && exams.length > 0 && (
+        {exams && groups.length === 0 && focus && (
+          <p className="mt-8 rounded-xl bg-card p-4 text-center text-[15px] text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            No {focusLabel} packs are on this device yet.
+          </p>
+        )}
+
+        {groups.length > 0 && (
           <div className="mt-6 flex flex-col gap-6">
             {groups.map((group) => (
-              <section key={group.body}>
+              <section key={group.key}>
                 <div className="flex items-center justify-between gap-2">
-                  <h2 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
-                    {group.body} · {group.packs.reduce((n, p) => n + p.questionCount, 0)} questions
+                  <h2 className="truncate font-mono text-xs uppercase tracking-widest text-on-surface-variant">
+                    {group.label} · {group.packs.reduce((n, p) => n + p.questionCount, 0)} questions
                   </h2>
                   {/* Each body's customise desk — compose a paper from its banks. */}
-                  {group.body === 'JAMB' && (
+                  {focus === 'JAMB' && (
                     <a
                       href="/exams/setup"
                       className="flex shrink-0 items-center gap-1 rounded-full bg-surface-container px-2.5 py-1 text-[11px] font-semibold text-on-surface transition hover:bg-surface-container-high"
@@ -103,9 +214,9 @@ export default function PacksPage() {
                       Customise
                     </a>
                   )}
-                  {(group.body === 'WAEC' || group.body === 'NECO') && (
+                  {(focus === 'WAEC' || focus === 'NECO') && (
                     <a
-                      href={`/exams/setup?body=${group.body.toLowerCase()}`}
+                      href={`/exams/setup?body=${focus.toLowerCase()}`}
                       className="flex shrink-0 items-center gap-1 rounded-full bg-surface-container px-2.5 py-1 text-[11px] font-semibold text-on-surface transition hover:bg-surface-container-high"
                     >
                       <span className="material-symbols-outlined text-[14px]">tune</span>

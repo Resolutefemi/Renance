@@ -70,6 +70,39 @@ function daysToTarget(year?: number): number | null {
   return Math.max(0, Math.floor((new Date(year, 4, 1).getTime() - Date.now()) / 86_400_000));
 }
 
+/** Manifest body name for the student's learning focus (daily rotation pool). */
+function focusBodyOf(exams?: string[]): string {
+  const exam = exams?.[0] ?? 'JAMB';
+  if (/waec/i.test(exam)) return 'WAEC';
+  if (/neco/i.test(exam)) return 'NECO';
+  if (/university/i.test(exam)) return 'University Modules';
+  return 'JAMB';
+}
+
+/**
+ * The packs this student's desk actually serves: the focus body's
+ * shelf; university students get their own school's banks (stored pick
+ * → institution match), falling back to the body shelf when unknown.
+ */
+function deskExams(
+  exams: ExamMeta[],
+  focusExam?: string,
+  institution?: string,
+): ExamMeta[] {
+  const body = focusBodyOf(focusExam ? [focusExam] : undefined);
+  if (body !== 'University Modules') {
+    return exams.filter((e) => (e.body ?? 'University Modules') === body);
+  }
+  const slug = storedSchoolSlug() ?? (institution ? findSchoolByName(institution)?.slug : null);
+  if (slug) {
+    const own = exams.filter(
+      (e) => e.code.startsWith(`uni-${slug}-`) || e.code.startsWith(`${slug}-post-utme`),
+    );
+    if (own.length > 0) return own;
+  }
+  return exams.filter((e) => (e.body ?? 'University Modules') === body);
+}
+
 export default function DashboardPage() {
   const router = useRouter();
   const [me, setMe] = useState<MeResponse | null>(null);
@@ -127,7 +160,11 @@ export default function DashboardPage() {
         api<{ attempts: AttemptRow[] }>('/me/attempts')
           .then((a) => alive && setAttempts(a.attempts))
           .catch(() => {});
-        api<DailyTileInfo>('/daily/jamb')
+        // The daily challenge follows the student's exam body — a WAEC
+        // candidate sprints on WAEC banks, a university student on their
+        // courses, exactly like the rest of the desk.
+        const body = focusBodyOf(meRes.profile?.exams);
+        api<DailyTileInfo>(`/daily/${encodeURIComponent(body)}`)
           .then((d) => alive && setDaily(d))
           .catch(() => {}); // tile falls back to the setup screen
         if (!meRes.profile?.completed) {
@@ -156,7 +193,12 @@ export default function DashboardPage() {
       migrateBundleCache();
       const manifest = await fetchManifest();
       setExams(manifest.exams);
-      await Promise.all([pollSyncJob(), prefetchAll(manifest)]);
+      // Offline prefetch follows the student's desk, not the whole
+      // archive: a WAEC candidate caches the WAEC shelf, a university
+      // student their school's banks. 632 packs would drown a phone's
+      // storage AND its connection pool.
+      const focusExams = deskExams(manifest.exams, me?.profile?.exams?.[0], me?.profile?.institution);
+      await Promise.all([pollSyncJob(), prefetchAll({ ...manifest, exams: focusExams })]);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Sync failed');
     }
@@ -383,7 +425,7 @@ export default function DashboardPage() {
                 icon="event_repeat"
                 label="Daily Challenge"
                 amber
-                href={daily ? examHref(daily.code, { daily: '1' }) : '/exams/setup'}
+                href={daily ? examHref(daily.code, { daily: '1' }) : setupHref}
               />
               <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
               <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
@@ -563,7 +605,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           <h3 className="text-sm text-on-surface-variant">Study</h3>
           <div className="mt-3 grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="assignment" label="Courses" href={`/university/${slug}`} />
-            <LauncherTile icon="fact_check" label="Quizzes" href="/packs" />
+            <LauncherTile icon="fact_check" label="Quizzes" href={`/university/${slug}`} />
             <LauncherTile icon="rate_review" label="Review" href="/review" />
             <LauncherTile icon="import_contacts" label="Notes" href="/lessons" />
           </div>
