@@ -99,6 +99,7 @@ type Library struct {
         mu           sync.RWMutex
         manifest     Manifest
         bundles      map[string]*Bundle
+        bundleIndex  map[string]string
         syllabi      map[string]*Syllabus
         decks        map[string]*Deck
         deckOrder    []string
@@ -106,6 +107,38 @@ type Library struct {
         lessonOrder  []string
         scholarships []Scholarship
         paths        []CareerPath
+}
+
+// loadBundleIndex reads dataDir/questions/index.json — the code →
+// slash-relative-path map tools/cbt-build/build.py writes beside the
+// manifest. It lets banks live in grouped subfolders (WAEC/mathematics.json,
+// All_tertiary_Q/futa/BIO101.json, POST_UTME/…) while their codes stay
+// unchanged everywhere (manifest, URLs, composite-paper grammar). A missing
+// or corrupt index returns nil and resolution falls back to the flat
+// dataDir/questions/<code>.json layout.
+func loadBundleIndex(dataDir string) map[string]string {
+        raw, err := os.ReadFile(filepath.Join(dataDir, "questions", "index.json"))
+        if err != nil {
+                return nil
+        }
+        var idx map[string]string
+        if json.Unmarshal(raw, &idx) != nil {
+                return nil
+        }
+        return idx
+}
+
+// bundlePath resolves a bundle code to its file under dataDir/questions,
+// index first, flat layout as the fallback. Index entries containing ".."
+// are refused — the index is committed content, but paths from it must
+// never escape the questions dir.
+func bundlePath(dataDir, code string, index map[string]string) string {
+        if index != nil {
+                if rel, ok := index[code]; ok && rel != "" && !strings.Contains(rel, "..") {
+                        return filepath.Join(dataDir, "questions", filepath.FromSlash(rel))
+                }
+        }
+        return filepath.Join(dataDir, "questions", code+".json")
 }
 
 // Load reads dataDir/manifest.json and verifies every referenced bundle.
@@ -119,8 +152,9 @@ func Load(dataDir string) (*Library, error) {
                 return nil, fmt.Errorf("cbtdata: parse manifest: %w", err)
         }
         lib := &Library{manifest: m, bundles: map[string]*Bundle{}, decks: map[string]*Deck{}, lessons: map[string]*Lesson{}}
+        lib.bundleIndex = loadBundleIndex(dataDir)
         for _, ex := range m.Exams {
-                path := filepath.Join(dataDir, "questions", ex.Code+".json")
+                path := bundlePath(dataDir, ex.Code, lib.bundleIndex)
                 bundleRaw, err := os.ReadFile(path)
                 if err != nil {
                         return nil, fmt.Errorf("cbtdata: read bundle %s: %w", ex.Code, err)

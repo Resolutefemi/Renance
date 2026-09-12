@@ -141,3 +141,46 @@ func TestFindDataDir(t *testing.T) {
 		t.Fatalf("expected empty, got %q", got)
 	}
 }
+
+func TestLoadResolvesThroughIndex(t *testing.T) {
+	dir := t.TempDir()
+	// Grouped layout: the bank lives renamed inside WAEC/, its code unchanged.
+	raw, _ := json.Marshal(validBundle())
+	sum := sha256.Sum256(raw)
+	manifest := Manifest{Version: "test", Exams: []ExamMeta{{
+		Code: "test-bank", Title: "Test Bank", QuestionCount: 1,
+		BundleSHA256: hex.EncodeToString(sum[:]),
+		SizeBytes:    int64(len(raw)),
+	}}}
+	mRaw, _ := json.Marshal(manifest)
+	if err := os.WriteFile(filepath.Join(dir, "manifest.json"), mRaw, 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.MkdirAll(filepath.Join(dir, "questions", "WAEC"), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(dir, "questions", "WAEC", "math.json"), raw, 0o644); err != nil {
+		t.Fatal(err)
+	}
+	idxRaw, _ := json.Marshal(map[string]string{"test-bank": "WAEC/math.json"})
+	if err := os.WriteFile(filepath.Join(dir, "questions", "index.json"), idxRaw, 0o644); err != nil {
+		t.Fatal(err)
+	}
+	lib, err := Load(dir)
+	if err != nil {
+		t.Fatalf("load via index: %v", err)
+	}
+	if b, ok := lib.Bundle("test-bank"); !ok || b.QuestionCount != 1 {
+		t.Fatalf("bundle wrong: %+v ok=%v", b, ok)
+	}
+
+	// A ".." escape in the index must be refused, not followed: resolution
+	// falls back to the flat layout, which misses here and fails the boot.
+	evil, _ := json.Marshal(map[string]string{"test-bank": "../secrets/answers.json"})
+	if err := os.WriteFile(filepath.Join(dir, "questions", "index.json"), evil, 0o644); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := Load(dir); err == nil || !strings.Contains(err.Error(), "read bundle") {
+		t.Fatalf("want flat-fallback read failure for .. path, got %v", err)
+	}
+}
