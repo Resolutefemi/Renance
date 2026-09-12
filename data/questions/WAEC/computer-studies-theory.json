@@ -10,420 +10,480 @@
       "type": "theory",
       "stem": "(a) What are \"Reports\" in a database system?\n(b) List four (4) ways in which Reports can be viewed in database management system.\n(c) Outline the steps to prints a Report in MS Access.",
       "marks": 1,
-      "year": 2021
+      "year": 2021,
+      "explanation": "(a) A report is a database object that is caused to present information in database for the purpose of displaying or distributing a summary of data. OR Reports offer a way to extract and present a specific subset of information from a large database. OR Reports allow the user to organize and present your data in a reader-friendly manner, visually appealing format. OR Reports present data from tables and also from queries. OR A database report is the formatted result of database queries and contains useful data for decision-making and analysis. (b) Reports can be viewed through; (i) Design view (ii) Report view (iii) Layout (iv) Print preview (c) Steps to print a Report; - Right-click on the report name on the navigation pane - click print preview - click print/CTRL + P - click OK OR - Select the report on the navigation pane and click - click Print preview - click Print/CTRL + P - click OK"
     },
     {
       "id": "waec-computer-studies-theory-0002",
       "type": "theory",
       "stem": "Perform the following conversions in the stated number bases;\n(a) AB1\\(_{16}\\) to Octal system\n(b) 1110111.101\\(_2\\) to Denary system \n(c) 507\\(_2\\) to Binary system.",
       "marks": 1,
-      "year": 2021
+      "year": 2021,
+      "explanation": "(a) ABI\\(_{Hex}\\) to octal A=1010 B=1011 1=0001 -------- Step 1 = 101010110001\\(_2\\) = 101=5 010=2 110=6 001=1 ---------- Step 2 =5261\\(_{octal}\\) ------ Step 3 = AB1\\(_{16}\\) = Ax16\\(^2\\) + Bx16\\(^1\\) + 1x16\\(^0\\) = 10 X 16\\(_2\\) + 11 X 16\\(_1\\) + 1 X 16\\(_0\\) = 2560 + 176 + 1 = 2737\\(_{10}\\) It has to be converted to octal 8 2737 8 342 R1 8 42 R6 8 5 R2 0 R5 = 5261 (b) 1110111.101\\(_2\\) to Denary 64=1 32=1 16=1 8=0 4=1 2=1 1=1 64+32+16+0+4+2+1 =96+16+7 =96+23 =119 2nd step fractional part -1 -2 -3 .1 0 1 =1x2\\(^{-1}\\) + 0x2\\(^{-2}\\) + 1x2\\(^{-3}\\) = \\(\\frac{1}{2^1}\\) + \\(\\frac{0}{2^2}\\) + \\(\\frac{1}{2^3}\\) = \\(\\frac{1}{4}\\) + 0 + \\(\\frac{1}{8}\\) = \\(\\frac{5}{8}\\) = 0.625 : 1110111.101\\(_2\\) = 119.625 (c) 507\\(_{octal}\\) to Binary 5=101 0=000 9=111 =101000111\\(_2\\) OR 507\\(_8\\) to decimal =5x8\\(^2\\) + 0x8\\(^1\\) + 7x8\\(^0\\) = 5x64+0+7 =327\\(_{10}\\) Conversion to binary 327\\(_{10}\\) to binary 2 327 2 163 R1 2 81 R1 2 40 R1 2 20 R0 2 10 R0 2 5 R0 2 2 R1 2 1 R0 0 R1 =101000111\\(_2\\)"
     },
     {
       "id": "waec-computer-studies-theory-0003",
       "type": "theory",
       "stem": "(a)(i) What is Universal Serial Bus (USB)?\n(ii) State two benefits of using USB connection between a computer and another device.\n(b) In Table 1, three storage devices are described, Use it to answer questions 3(b)(i) and 3(b)(ii).\n(i) In column 2, name the storage device being described in column 1.\n(ii) Show the category of storage device being described in column 1 by ticking in any of the column 3, 4 or 5\n\n \n \n SN\n 1\n 2\n 3\n 4\n 5\n \n \n  \n Description of Storage Device\n Name of Storage Device\n Category of Storage Device\n \n \n  \n  \n  \n Primary\n Secondary\n Offline\n \n \n 1\n Magnetic storage medium which is composed of a thin flexible disk sealed in a square plastic carrier.\n  \n  \n  \n  \n \n \n 2\n Optical media - which uses one spiral track.Red lasers are used to read and write data on the media surface and it makes use of dual-layering technology to increase the storage capacity to over 1 GB.\n  \n  \n  \n  \n \n \n 3\n Non-volatile memory chip which contents cannot be altered. It is often used to store the start-up routines in a computer (e.g the BIOS).",
       "marks": 1,
-      "year": 2021
+      "year": 2021,
+      "explanation": "(a) Universal Serial Bus (USB); (i) Universal Serial Bus is the most popular connection used to connect a computer to devices such as digital camera, printers, scanners, external hard drives among others. OR USB is a cross platform technology that is supported by most of the major operating system. OR Universal Serial Bus is a plug and play interface that allows a computer to communicate with peripherals or/and other devices. OR A hardware interface that supports connection of varieties of peripherals to computers. USB is used to attach keyboards, mice, printers, external storage and mobile devices to the computer. It is also used for charging portable devices. USB provides both data transmission and low voltage (5V) power over a single cable. OR Universal Serial Bus is an industry standard that establishes specifications for cables, connectors and protocols for communication, connection and power supply between computers, peripherals and other computers. (ii) Benefits of USB; Used to charge gadgets - It supports transfer of data - It provides low voltage (5V) power over a single -External power is not needed and it has low power consumption -USB has a protocol that notifies transmitter to retransmit the data incase of errors - The USB driver makes sure that error free communication takes place -It uses plug and play technology -The driver of the connected devices is automatically loaded to configure the plugged in device. -Devices are automatically detected and configured when initially attached -It supports multiple data transmission speeds -It is supported by many operating systems -It is faster in transmission when compared to wireless connection -It supports multiple connection. (b) SN 1 2 3 4 5 Description of Storage Device Name of Storage Device Category of Storage Device Primary Secondary Offline 1 Magnetic storage medium which is composed of a thin flexible disk sealed in a square plastic carrier. Hard disk Correct 2 Optical media - which uses one spiral track.Red lasers are used to read and write data on the media surface and it makes use of dual-layering technology to increase the storage capacity to over 1 GB. DVD Correct 3 Non-volatile memory chip which contents cannot be altered. It is often used to store the start-up routines in a computer (e.g the BIOS). ROM Correct"
     },
     {
       "id": "waec-computer-studies-theory-0004",
       "type": "theory",
       "stem": "(a)(i) Define computer graphics.\n(ii) List two applications of computer graphics in advertising.\n(b) Give one use of the following computer graphics application tools;\n(i) Interactive Fill Tool (ii) Texture Fill Tool (iii) Envelops Tool (iv) Extrude Tool \n(c) Name one Fill Tool in computer graphic application which is needed to (i) create a background that is faded from light blue to white (ii) fill an object with two colours that blend from one to another.",
       "marks": 1,
-      "year": 2021
+      "year": 2021,
+      "explanation": "(a) Computer graphics; (i) Computer graphics are pictures and images/films created using computers. It refers to computer generated image data created with help from specialized graphical hardware and software. OR Computer Graphics is the creation of pictures/ímages/films with the help of a computer OR Computer graphics is the creation, manipulation and storage of geometric objects (modeling) and their images (rendering) OR Computer graphics is an art of drawing pictures, lines, charts and other graphical images with the help of installed specialized programs on a computer/applications on a computer. OR Computer graphics are made up of number of pixels which are the smallest graphical picture or unit represented on the computer screen. OR Computer graphics refer to the representation and manipulation of image data by a computer screen. OR Computer graphics is the various technologies used to create and manipulate images in form of pixel drawn on the computer/methods for digitally synthesizing and manipulating visual content, (ii) Specific application areas of graphics in advertising; (1) Animation/Motion pictures (2) Business card (3) Branding (4) Billboards (5) Flex creation (6) Posters (7) Modelling/Design (8) Digital marketing (9) Pitching for project (10) Print media ads (11) Tv commercials (12) Banner (13) Logo design (14) Letter-head (15) Presentation (16) Postcards (17) Info graphics (18) Brochure (19) Vehicle wraps (20) Signature and trade show display (21) Email marketing templates (b) Computer graphic application tools; (i) Interactive fill tool is used to create a fill dynamically by using markers in the drawing window and property bar to change the angle, midpoint and colour of an object/image. OR Interactive fill tool allows you to add the same fills to objects as the normal fill tool, but in an interactive way by setting the interactive properties. This is especially useful for fountain fills. OR Interactive fill tool is used to apply two colour effect on items. OR Interactive fill tool is used to apply fountain fills (gradients) (ii) Texture fill is used to apply preset texture fills to objects in order to create the illusion of variety of textures such as water, clouds and stone. OR Texture fill is used to give an object natural appearance OR Texture fill is used to apply fractal fill. (iii) Envelop tool lets you shape an object by dragging the nodes or the points around the envelop. OR Envelop tool is used to change the shape of an object by applying and dragging the nodes of an envelop. OR Envelop tool allows the user to distort the shape of an object or group of objects. (iv) Extrude tool lets the user apply the illusion of depth to objects. OR Extrude tool is used to project surfaces from an object to give it a 3-dimensional shadow/appearance OR Extrude tool is used to a apply a 3D effect to objects in order to create the illusion of depth. OR Extrude tool is used to apply 3D modelling. OR Extrude tool is used to duplicate properties such as points, lines and polygon. (c) Tools that are used to create a background that is faded from light blue to white; (i) Create background faded from light blue to white; (a) Interactive tool (b) Fountain fill tool (c) Transparency tool (ii) Fill an object with two colours that blend form one to another; (a) Interactive tool (b) Fountain fill tool (c) Two colour pattern fill"
     },
     {
       "id": "waec-computer-studies-theory-0005",
       "type": "theory",
       "stem": "(a) Match each type of ICT in Table 1 with its relevant 1.\n\n \n \n \n ICT Type\n \n \n communication sector.\n \n \n \n \n Satellite communication\n \n \n Radio\n \n \n \n \n Broadcasting\n \n \n Internet\n \n \n \n \n Data network\n \n \n GSM\n \n \n \n \n Telecommunication\n \n video conferencing\n \n \n\n(b) List three computing devices that belong to each of (i) 19th; and (ii) 20th century periods.",
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "explanation": "ICT Type communication sector. Satellite communication video conferencing Broadcasting Radio Data network Internet Telecommunication GSM (b)(i) 19th century- Abacus, Napier bones, Slide rule, Pascal calculator, Leibnitz multiplier, Jacquard loom, Difference Engine, Analytical Engine, Hollerith's tabulating machine, Burrough's adding machine,Themonic value, colossus. (ii) 20th century- Hervard Mark 1 Computer, ABC computer, Colossus, ENIAC Electronic Numerical Integrator Analyzer and Computer, EDVAC - Electronic Discrete Variable, Automatic Computer, EDSAC-Electronic Delay Storage Automatic Calculator, UNIVAC - Universal Automatic Computer."
     },
     {
       "id": "waec-computer-studies-theory-0006",
       "type": "theory",
       "stem": "A palindrome is a word which can be written in reversed order and it retains its meaning and spelling,Examples are lawal,ada,abba,etc\nWrite a simple QBASIC instruction that will accept a word from the keyboard and check if it is a palindrome or not. The palindrome must display a message showing if the word is palindrome or not.",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "CLS INPUT-ENTERANY:\";S$ For l =LEN(S$) TO 1STEP-1 B$=MID$(S$,L,1) W$=W$+B$ Next l IF S$=W$ THEN PRINT \" it is palindrome\" ELSE PRINT \"It is not palindrome END IF END"
     },
     {
       "id": "waec-computer-studies-theory-0007",
       "type": "theory",
       "stem": "a - A principal asked the secretary to typeset a document containing some confidential information in Microsoft Word. The principal wants the document to be typed in such a way that when it is opened, the confidential information will be hidden from other users.\n\nHighlight the steps the secretary would take to hide the confidential information in the document.\n \nb - A principal asked the secretary to typeset a document containing some confidential information in Microsoft Word. The principal wants the document to be typed in such a way that when it is opened, the confidential information will be hidden from other users.\n\nOutline the steps the principal would take to display the hidden text in 3(a) for viewing.",
       "marks": 1,
-      "year": 2023
+      "year": 2023,
+      "explanation": "a - Select the text that you want to hide. - On the Home tab, in the Font group, click the Font Dialog Box Launcher. - In the Font dialog box, under Effects, select the Hidden check box. - Click OK. b - Open the document that contains the hidden text. - On the Home tab, in the Paragraph group, click the Show/Hide button. The Show/Hide button will display a dotted line under any hidden text in the document. The hidden text will also be visible. - To select the hidden text, click on it. The hidden text will be highlighted. - To unhide the hidden text, select it and uncheck the Hidden checkbox in the Font dialog box. The hidden text will now be visible"
     },
     {
       "id": "waec-computer-studies-theory-0008",
       "type": "theory",
       "stem": "a(i) What is data cable?\n\n(ii) List two types of data cable.\n\n(iii) Explain how bus speed can affect the speed of data.\n(b) In the context of data conversion, explain the following terms:\n\n(i) register; (i) address.",
       "marks": 1,
-      "year": 2024
+      "year": 2024,
+      "explanation": "a(i) Data cable is a type of cable used to transmit data between devices such as computers, servers and peripherals. (i) I. coaxial cables II. Fibre optic cables III. Twisted pair cable (iii) A higher bus speed allows for faster data transfer between the processor and the RAM, lower latency and higher throughput allowing more data to be transmitted simultaneously and at faster speed. b(i) Register: This is a high-speed temporary storage device built into a computer's processor that temporarily holds data being processed or converted. ii) Address: This is a unique location or identifier where data is stored or retrieved. They serve as pointers to access and manipulate data during conversion."
     },
     {
       "id": "waec-computer-studies-theory-0009",
       "type": "theory",
       "stem": "(a) Explain the following computer terms\n\n(i) fle; (ii) record; (ii) field\n(b) In a school registry, computer system is used to store students details.\n\n(i) In addition to name and address fields in a student's record, list three other fields that may be included.\n\n(i) Outline the steps involved in editing the field of a student's record.\n\n(iii) Name two database applications that can be used for creating the record in 3b(i).",
       "marks": 1,
-      "year": 2024
+      "year": 2024,
+      "explanation": "(i) File: This is a collection of related data (records) stored together on a computer. (ii) Record: This is a single entry or row in a file, containing a set of related data. It is the collection of fields that describes a specific entity. (ii) Field: This is a single piece of data within a record representing a specific attribute or characteristic. It is a column in a spreadsheet. b(i) Other fields that may be included in student's record are: I. Student ID II. Date of birth II. Gender IV. Email V. Phone number VI. Parent/Guardian Name VII. Class (ii) Steps involved in editing the field of student's record are: I. Search for the student's record using a unique identifier such as the student ID. II. Identify the specific field to be edited and select it. II. Make your adjustments and saved changes made to the record."
     },
     {
       "id": "waec-computer-studies-theory-0010",
       "type": "theory",
       "stem": "(i)Explain a logic truth table\n\n(ii) Name two types of logic gate.\n\n(ii) Using the two named logic gates in 4a(ii), complete the truth table in Table 1.\nTable 1\n\n \n \n  X\n  Y\n  Z = X ? Y \n  Z = X ? Y \n \n \n  0\n  0\n  \n  \n \n \n  0\n  1\n  \n  \n \n \n  1\n  0\n  \n  \n \n \n  1\n  1\n  \n  \n \n \n\n \n(b) Explain the term comparator as a logic device.",
       "marks": 1,
-      "year": 2024
+      "year": 2024,
+      "explanation": "a(i)Logic truth table is a mathematical table used to evaluate the truth value of logical statements or arguments. It displays logical operations on input signals in table format. (ii) Types of logic gate are: I. OR gate II. AND gate III. NOT gate IV. NOR gate V. NAND gate VI. XOR gate XII. EXNOR gate (iii) X Y Z = X + Y (OR) Z = X - Y (AND) 0 0 0 0 0 1 1 0 1 0 1 0 1 1 1 1 (b) Explanations of the term comparator as a logic device are: * A comparator is a logic device that compares two input values (X and Y) and produces an output based on their relative values. It is basically a digital circuit that determines whether one value is greater than, less than or equal to another. The output is I if the condition is met and O if not. Comparators are commonly used in digital systems for data comparison, error detection, sorting and searching, digital arithmetic circuits, etc."
     },
     {
       "id": "waec-computer-studies-theory-0011",
       "type": "theory",
       "stem": "(a) Give two differences between a compiler and an interpreter in Table 2.\n\nTable 2\n\n \n \n  Compiler \n \n  Interpreter\n \n \n \n  \n  \n \n \n\n(b) State one advantage of coding in:\n\n(i) high level programming language;\n\n(i) low level programming language.\n(c) Outline two characteristics of a good program.",
       "marks": 1,
-      "year": 2024
+      "year": 2024,
+      "explanation": "(a) Computer Interpreter Intermediate object code is generated No intermediate object code is generated Takes the entire program at once Translate sources program line by line Comparatively faster in execution Slower in execution Error detection is difficult Comparatively easy More memory requirement Requires less memory (b) Advantages of coding in high level programming language are: (i) I. Provides higher level of abstraction; allows programmes to focus on the logic and functionality of their programs rather than hardware or complex low-level operations. II. Easy to code, debug and maintain. (ii) Advantages of coding in low level programming language are: I. Faster execution times I. Greater control over hardware resources (c) Characteristics of a good program I. Correctness: a good program must produce the desired output for a given input. II. Maintainability: Must be easy to modify, update and debug III. Readability: Must be clear, concise and understandable. IV. Reliability: Must consistently perform correctly under various conditions. V. Efficiency: Must use system resources (time, memory, etc.) optimally. VI. Portability: Must be able to run on different platforms with minimal modifications."
     },
     {
       "id": "waec-computer-studies-theory-0012",
       "type": "theory",
       "stem": "3a (i) Define Information and Communication Technology.\n \n3a (ii) State three uses of Information and Communication Technology in the banking sector.\n \n3b (i) State the full meaning of LAN.\n \n3b (ii) State the full meaning of GPS.\n \n3b (iii) State the full meaning of IP.",
       "marks": 1,
-      "year": 2025
+      "year": 2025,
+      "explanation": "3a (i) Information and Communication Technology (ICT) is defined as any product that will store, retrieve, manipulate, transmit or receive information electronically in a digital form. ICT is concerned with the way these different uses can work with each other. 3a (ii) ATM: Automated Teller Machine is a computerized telecommunications device that enables the clients of a financial institution to perform financial transactions without the need for a cashier, human clerk or bank teller. Teleconferencing: Through video, computer or audio, bankers/ bank officials are grouped for interaction from different locations. Financial businesses are also discussed through this means. Internals Network: LAN (Local Area Network) helps bankers to share hardware facilities and have access to common data programs. Mobile Phones: Phones help bankers to receive and make calls within and across geographical areas. It also gives access to the Internet, emails, text, MMS, business applications, among others 3b (i) LAN - Local Area Network 3b (ii) GPS - Global Positioning System. 3b (iii) IP - Internet Protocol"
     },
     {
       "id": "waec-computer-studies-theory-0013",
       "type": "theory",
       "stem": "4(a)  List three criteria that are used in classifying files.\n \n4(b) State two advantages and two disadvantages of computer files.\n \n4b(ii) State three methods of file security.",
       "marks": 1,
-      "year": 2025
+      "year": 2025,
+      "explanation": "4(a) Nature of content of file. - Organization method. - Storage medium. 4b(ii) Advantages of Computer Files - Fast to access - More secure - More reliable - Less laborious Disadvantages of Computer Files - Irregular power supply - Data redundancy - Expensive to set up - Cannot guarantee queries - Can be destroyed by a virus. 4b (ii) COMPUTER ETHICS AND HUMAN ISSUES: SECURITY AND ETHICS - Use of back-ups - Password - Use of antivirus - Proper labeling of storage devices."
     },
     {
       "id": "waec-computer-studies-theory-0014",
       "type": "theory",
       "stem": "5(a) Define Programming Language.\n \n5b(ii) Write this mathematical expression in BASIC notation: x(w + y)2\n \n5b(iii) Write this mathematical expression in BASIC notation: ab ÷ cd\n \n5b(iii) Write this mathematical expression in BASIC notation: p = 2 (l+b).\n \n5(c) Write a simple BASIC program to calculate the area (A) of a rectangle with length (1) and breadth (b).\n \n5(d) List two levels of programming language.",
       "marks": 1,
-      "year": 2025
+      "year": 2025,
+      "explanation": "5(a) Programming Language is a formal language for communicating with a computer without the ambiguity of human language. A programming language has to be executed by a computer, or the design of the language degenerates into a futile intellectual exercise. 5b(i) x(w+y)2=X*(W+Y)^2 5b(ii) ab/cd =A*B / C*D 5b(iii) p = 2(l+b) = 2 * (L + B) 5(c) 10 REM CALCULATE AREA OF A RECTANGLE 20 INPUT \"LENGTH\" 1 30 INPUT \"BREADTH\" b 40 LET A = L * B 50 PRINT \"AREA\" A 60 END 5(d) - Low-level language. - High-level language."
     },
     {
       "id": "waec-computer-studies-theory-0015",
       "type": "theory",
       "stem": "(a) List: (i) three application areas of a word processing program;\n(ii) three types of data item.\n(b) identify program; the four data types available in Table 2.\nTable 2\n\n \n \n \n Student I.D.\n \n Name\n Date of Birth\n Score in Computer Studies\n \n Gender\n \n \n \n \n A 00022\n \n Odi, G. A\n 13/10/97\n 38\n M\n \n \n \n C 00021\n \n Zakari, M.\n 15/05/98\n 71\n M\n \n \n \n B 00023\n \n Ngozi Tella\n 16/09/96\n 62\n F",
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "explanation": "(a)(i) Office, business (memos, letters and letter head, legal copies, reference documents) education, home, Iterature and publication. (ii) roll number, age, name, date of birth, gender, identity number. (b) Student identity number - Column 1 Name - Column 2 Date of birth (DOB) - Column 3 Gender - Column 5"
     },
     {
       "id": "waec-computer-studies-theory-0016",
       "type": "theory",
       "stem": "(a) (i) Define Information and Communication Technology. (ii) State three uses of Information and Communication Technology in the banking sector.\n(b) State the full meaning of the following: i) LAN; (ii) GPS; (iii) IP",
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "explanation": "(a)i) Information and Communication Techonology (ICT) is defined as any product th at will store, retrieve, manipulate, transmit or receive information electronically in a digital form. ICT is concerned with the way these different uses can work with each other. (ii) ATM: Automated Teller machine is a computerised telecommunications device that enable the clients of a financial institution to perform financial transactions Without the need for a cashier, human clerk or bank teller. - Teleconferencing: Through video, computer oraudio, bankers or bank officials are grouped for interaction from different location. Financial businesses are also discussed through this means. - Internals Network: LAN (Local Area Network) helps bankers to share hardware facilities and have access to commom data types or programmes. - Mobile phones: Phones help bankers to receive and make calls within and across geographical areas. It also gives access to emails, text, MMs, internet access, business applications among others. (b) LAN - Local Area Network. GPS - Global Positioning System. IP - Internet Protocol."
     },
     {
       "id": "waec-computer-studies-theory-0017",
       "type": "theory",
       "stem": "(a) List three criteria that are used in classifying file.\n (b) State: (i) two advantages and two disadvantages of computer files; (ii) three methods of file security.",
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "explanation": "(i) Nature of content in a file (ii) Organisation method (iii) Storage medium. (b)(i) Advantages of Computer Files: - Fast to access. - More secured. - Less laborious. Moore reliable - Neatly modified. Disadvantages of computer files: Irregular power supply.- Data redundancy. Expensive to set up. - Cannot generate queries. Can corrupted or destroyed by virus, Hacker can take advantage of the file. (ii) Use of back-ups. Use of anti-virus. Password. Proper label of storage devices."
     },
     {
       "id": "waec-computer-studies-theory-0018",
       "type": "theory",
       "stem": "(a) Define programming language.\n(b) Write the 5 following mathematical expressions in BASIC notation:\n(i) x (w + y)\\(^2\\) (ii) ab/cd  (ii) p = 2 (1+b).\n(c) Write a simple BASIC program to calculate the area (A) of a rectangle with length (l) and breath (b).\n(d) List two levels of programming language.",
       "marks": 1,
-      "year": 2014
+      "year": 2014,
+      "explanation": "(a) A programming language is a formal language for communicating with a computer without the ambiguity Of human language. A programming language has to be executed by a computer or design of the language degenerates in a futile intellectual exercise. (b) (i) x(w +y)\\(^2\\) = x * (W+ Y)^2 (ii) ab/cd = A * B/C * D (ii) P= 2(l + b) = P =2 * (L + B) (C) 10 REM CALCULATE AREA OF A RECTANGLE 20 INPUT LENGTH\", L 30 INPUT BREADTH\", B 40 LET A= L * B 50 PRINT \"AREA\", A 60 END (d) Low level language e.g machine language and Assembly language. - High level language eg Algebraic formula Type processing and String and list process ing."
     },
     {
       "id": "waec-computer-studies-theory-0019",
       "type": "theory",
       "stem": "Write a QBASIC program to grade any score entered from the keyboard as either \"Poor\" for a score that is below 50% or \"Satisfactory\" for a score that is equal to or above 50%. The program execution should stop as soon as a score that is less than zero is entered.",
       "marks": 1,
-      "year": 2021
+      "year": 2021,
+      "explanation": "Qbasic Program to grade entered scores 10 REM program to grade entered scores 20 CLS 30 Score = 0 40 DO UNTIL score < 0 50 INPUT \"Enter a score:\"; Score 60 IF Score <50 THEN 70 PRINT \"Poor\" 80 ELSE 90 PRINT \"Satisfactory\" 100 END IF 110 LOOP 120 END OR REM PROGRAM TO GRADE ENTERED SCORES REM USING SELECT CASE...END STRUCTURE CLS DIM SCORE AS INTEGER DO UNTIL Score < 0 INPUT \"Enter a score:\";Score SELECT CASE (SCORE) CASE 50 to 100 PRINT \"SATISFACTORY\" CASE 1 TO 49 PRINT \"POOR\" END SELECT LOOP END OR REM PROGRAM FOR \"GRADING SYSTEM\" CLS Score = 0 DO UNTIL Score > = 0 INPUT Score SELECT CASE (SCORE) IF Score > = 0 THEN IF Score < 50 THEN PRINT \"poor\" ELSE IF Score > = 50 THEN PRINT \"satisfactory\" END IF END IF LOOP END OR DIM SCORE AS INTEGAR SCORE = 0 DO WHILE Score > = 0 INPUT \"Enter a score:\"; Score SELECT CASE (Score) CASE 50 TO 100 PRINT \"SATISFACTORY\" CASE 0 TO 49 PRINT \"POOR\" END SELECT LOOP END OR REM PROGRAM FOR \"GRADING SYSTEM\" CLS Score = 0 DO while score > = 0 INPUT Score IF Score > = 0 THEN IF Score < 50 THEN PRINT \"poor\" ELSE IF Score .> = 50 THEN PRINT \"satisfactory\" END IF END IF LOOP END"
     },
     {
       "id": "waec-computer-studies-theory-0020",
       "type": "theory",
       "stem": "(a) Define the term operating system. (b) State two functions of an operating system. (c) List two types of: (i) application software (ii) translators\n(d) You were asked as a school prefect to compile the personal data of final year students in your school. State two software that could be used to perform the task.",
       "marks": 1,
-      "year": 2015
+      "year": 2015,
+      "explanation": "(a) An operating system is a software program that manages the hardware and software resources of a computer. (b) Controlling input and output controlling program execution. (C) (i) Standard application software e.g Word processing, Spreadsheet, Customized application software e g payroll system, billing system. (ii) Compilers and Interpreters (d (1) Microsoft word (2) Microsoft Access"
     },
     {
       "id": "waec-computer-studies-theory-0021",
       "type": "theory",
       "stem": "(a) What is a computer file?\n(b) State two features each of: (i) transaction file (ii) reference file.\n(c) List two: (i) effects of file insecurity (ii) methods of securing files.",
       "marks": 1,
-      "year": 2015
+      "year": 2015,
+      "explanation": "(a) Is a block of arbitrary information or resource tor Storing information which is available to a computer program and is usually base on some kind of durable storage. (b)(i) (1) contains details of all transactions that may occur in the last period (2) once the data has been processed, it can be discarded (3) contains temporary collection of data (4) the records may not be in any order at all. (ii) Stores data needed for reference purposes. It's fairly permanent in nature. (c) (i) Data loss and Overwriting (ii) Data backup and Anti-virus."
     },
     {
       "id": "waec-computer-studies-theory-0022",
       "type": "theory",
       "stem": "(a) Define the term system development cycle. (b) List four stages involved in system development cycle (c) State four qualities of a good program.",
       "marks": 1,
-      "year": 2015
+      "year": 2015,
+      "explanation": "(a) Is an organizational process of developing and maintaining systems. (b) (i) Preliminary study (ii) Feasibility study (ii) Detailed system study (iv) System analysis (c) (i) Accuracy (ii) Simplicity (ii) Testability (iv) Efficiency."
     },
     {
       "id": "waec-computer-studies-theory-0023",
       "type": "theory",
       "stem": "(a) List the two main constituents of a computer (b) State four characteristics of a computer.\n(c) In a tabular form, categorize each of the following statements into either data or information: (i) It is no significant alone by itself; (ii) It is significant by itself\n(iii) It is obtained through observations and recordings (iv) It is obtained through analysis.",
       "marks": 1,
-      "year": 2015
+      "year": 2015,
+      "explanation": "(a) Hardware and Software (b) (i) Speed (ii) Accuracy (ii) Storage (iv) Versatility (C) Data Information 1) It is not significant alone by itself It is significant by itself 2) It is obtained through observations and recordings It is obtained through analysis"
     },
     {
       "id": "waec-computer-studies-theory-0024",
       "type": "theory",
       "stem": "(a) Define algorithm. (b) State three characteristics of an algorithm. (c) Write an algorithm for finding the average of numbers, when the sum of the numbers is given.",
       "marks": 1,
-      "year": 2015
+      "year": 2015,
+      "explanation": "(a) Is a set of rules and sequential steps that define how a particular problem can be solved in a finite and ordered sequence (b) (i) Input (ii) Output (ii) Effectiveness BEGIN (c) Step i: Let the sum of the six be X Step ii: Input the sum of the six numbers X Step iii: Average =X/6 Step iv: Print Average. END OR BEGIN Step 1: Let the sum of the six numbers = X Step 2: Input the sum of the six numbers X Step 3: Average X/6 Step 4: Print Average. END."
     },
     {
       "id": "waec-computer-studies-theory-0025",
       "type": "theory",
       "stem": "(a) (i) What is a network cable?\n(ii) State three types of cable used in networking\n(b) Write the acronym VSAT in full.\n(C) (i) Distinguish between an e-mail address and a website address.\n(ii) List examples of each of: (1) e-mail address (2) website address",
       "marks": 1,
-      "year": 2016
+      "year": 2016,
+      "explanation": "(a) What is a network cable? A network cable is an aggregate of thin lined wires fused together for the purpose of conveying signals between nodes, or A network cable is a hardware device used to connect or link two or more computers together in order to share resources like printers, scanners or application software, etc.(i) Types of cables used in computer networking: Co- axial cable, Twisted pair cable, Telephone cable, Null modem cable, Ethernet crossover cable and Fibre optic cable. (b) The acronym VSAT means: Very Small Aperture Terminal (C)(i) An e-mail address identifies an e-mail box on a network where electronic messages are sent and received; while a website address is a reference to a resources that specifies the location of a document or resources on a computer network. OR An e-mail ad- dress usually contains the symbol which is never a part of a website while a web address begins with either 'www.or https:// (i) Examples of e-mail address: exams@waec.edu.ng; bofe82@yahoo.com; queen@gmail.com. Examples of website: www.waec.edu.ng www.waeconline.org; www.google.com"
     },
     {
       "id": "waec-computer-studies-theory-0026",
       "type": "theory",
       "stem": "(a) (i) Define computer virus.\n(i) List three types of computer network security breach.\n(b) State five sources of computer network security breach.",
       "marks": 1,
-      "year": 2016
+      "year": 2016,
+      "explanation": "Computer virus is a malicious program which replicates itself and causes damage to the resources in the computer, OR Computer virus is a malware that when executed, replicates itself and infects other programs by modifying them. (i) Rootkit virus Polymorphic virus and Directory virus (b) Denial of service, Spoofing attack, Tampering at tack, privilege escalation, Eaves dropping, Downloading of files from un-trusted websites, Deliberate divulgence of company's information, Virus, Worms and Trojan horses."
     },
     {
       "id": "waec-computer-studies-theory-0027",
       "type": "theory",
       "stem": "(a) Convert the following numbers to be stated bases:\n(i) 125.625, to binary\n(ii) 111011.10011, to octal\n(b) Given that X = 11011011 and Y= 11101101,\n(i) construct the truth table for X, Y Z;\n(ii) draw the logic gate of X, Y = Z\n(iii) state the value of Z.",
       "marks": 1,
-      "year": 2016
+      "year": 2016,
+      "explanation": "(a)) 125.625, to binary 2 125 R 2 62 1 2 31 0 2 15 1 2 7 1 2 3 1 2 1 1 2 0 1 Therefore, 125= 111110 Hence, 125.625 = 1111101.101, 2nd step: 125 to binary First method: (0.625) = 625/1000 = 25/40 = 5/8 Hence, 5/8 = (4+1)/ 8 = 4/8 + 1/8 = 1/2 + 1/8 1 X 2\\(^{-1}\\) + 0 X 2 \\(^{-2}\\) + 1 x 2\\(^{-3}\\) = 0.101\\(_{2}\\) Therefore, 0.625 = 0.101\\(_{2}\\), Second method: 0.625*2 = 1.25 Fraction part 1.23 Carry1 0.25 * 2 =0.5 Fraction part 0.5 Carry 0 0.5 * 2 = 1.00 Fraction part 1.00 Cary 1 0.625 = 0.101\\(_{-2}\\), Therefore, (i) 111011.10011, to octal 111\\(_2\\) = 7\\(_8\\) 011\\(_2\\) = 3\\(_8\\) 100\\(_2\\) = 4\\(_8\\) 110\\(_2\\) = 6\\(_8\\) 111011.10011\\(_2\\) = 73.46\\(_8\\) bi X = 11011011, Y = 11101101 X Y Z = X.Y 1 1 1 1 1 1 0 1 0 1 0 0 1 1 1 0 1 0 1 0 0 1 1 1 bii is shown above. biii Z = 11001001"
     },
     {
       "id": "waec-computer-studies-theory-0028",
       "type": "theory",
       "stem": "(a) An electronic book is made up of 500 pages and there are 16 lines of 24,000 bits line on each page.\nComplete the space it will occupy on a computer in megabytes.\n (b) Give an example of auxiliary storage.\n(c) In the table below:\n(i) List the two main types of computer software.\n(ii) Give two examples under each in 4(c)i)\n\n \n \n main type \n example\n \n \n i\n A\n \n \n  \n B\n \n \n ii\n A\n\n B",
       "marks": 1,
-      "year": 2016
+      "year": 2016,
+      "explanation": "a) First method 4. Total number of pages = 50 Total number of lines per page = 16 Total number of bits per line = 24,000 bits Total number of bits in a byte: 8 bits = 1 byte On each page, there are: 2400 x 16 bytes = 48,000 bytes/page For 500 pages, there are: 48,000 x 500 bytes Conversion to Kilobyte = 24000000/1024 = 23437.5KB Conversion to Megabyte = 23437.5/1024 = 22.89MB The space occupied in megabyte is 22.89 Second method: Total number of pages = 500 Total number of lines per page = 16 Total number of bits per lines = 24,000 bits Total number of bits in a byte: 8 bits = 1 byte A line in bytes = 24000/8 = 3000 bytes 16 lines = 16 x 3000 bytes = 48000 bytes 1 page in kilobytes = 48000/1024 = 46.875KB Total space occupied = 500 x 46.875KB = 23437.5KB Since 1024KB = 1MB Then total space Occupied in Megabyte 23437.5KB /1024 = 22.8882MB (b) Auxiliary Storage Hard disk / Hard drive, Compact Disc (CD), Digital Versatile Disc (DVD), Magnetic Tape, Floppy Disk/ Diskette, Pen Drive Flash Drive, Blue ray disk, Memory card or SD-card, Zip drive, Sim card. (c)(i) Two main types of computer software System Software, Application Software. (ii) Examples of System Software 1. Operating system: MS windows, Linux, Unix, Mac OSX, DOs, IOS, Novel. 2. Utility software: Virus scanner/ Anti-virus, Disk fragmenter, System monitor, File manager, Device driver, Disk cleaner. 3. Linker. 4. Language translator:Assembler, Interpreter and Complier Examples of Application Software 1. Specialized software: Application Payroll Program Education Management Software, Accounting Soft- ware, Statistical Software, Web Design Software (e.g Facebook, Skype), etc. 2. Application packages: Microsoft office suite, Word processing, Graphics software, Game software, Database software, Spreadsheet software, Steam software (game), etc."
     },
     {
       "id": "waec-computer-studies-theory-0029",
       "type": "theory",
       "stem": "(a) State two BASIC programming keywords.\n(b) Write the following equations in BASIC format:\n(i) I = PRT/100: (ii) Y= AX\\(_2\\) +BX+C; (iii) Y= MX + C\n(c) Write a BASIC program that accepts mass and volume of a liquid as input from the User.\nThe program should compute.and display the density of the liquid. Density = mass volume",
       "marks": 1,
-      "year": 2016
+      "year": 2016,
+      "explanation": "(a) BASIC programming keywords: REM, LET, END, CLS, INPUT, IF, NEXT, DATS, GOSUB, RETURN, DIM, STOP, GOTO, READ etc. (b)(i) I = P*R*T/100 (ii) Y =A\"X ^2 +B X+C OR Y = A*X * X + B* X + C (ii) Y = M * X +C (c) A Sample BASIC Program 10 CLS 20 REM BASIC program to calculate density of a liquid 30 INPUT \"Enter the mass of a liquid. MASS 40 REM Computation of values begins 50 LET DENSITY = MASS/VOLUME 60 PRINT \"The density of a liquid\": DENSITY 70 END/STOP 10 CLS 20 REM BASIC program to calculate density of a liquid 30 INPUT \"MASS\"; M 40 INPUT \"VOLUME\"; V 50 LET DENSITY = M/V50 60 PRINT\"DENSITY =\" DENSITY 70 END"
     },
     {
       "id": "waec-computer-studies-theory-0030",
       "type": "theory",
       "stem": "(a) What are input devices?\n(b) list two input devices\n\n(c) State two uses of logic gates\n\n(d) Draw and label the logic gate symbol for;\n\n(i) OR gate (ii) AND gate",
       "marks": 1,
-      "year": 2017
+      "year": 2017,
+      "explanation": "a) Input devices are peripherals/ hardware / devices Connected to the computer that are used to send data I information/ signals/ commands to the computer system. OR Input devices are peripherals / hardware/devices that allow users to interact with/control the computer sys- tem/computer / digital electronics machine. (b) Examples of input devices (i) Keyboard / MIDI keyboard (ii) Light pen / pen-input (ii) Mouse (iv) Joystick (V) Scanner (vi) Cameras/Digital camera/Webcam (vii) Microphone (Viii) Card reader (ix) Fingerprint scanner/ Reader (x) Trackball (x) Magnetic-stripe reader (xi) Bar code reader (xi) Touch pads (xiv) Electronics whiteboard (xv) Optical Mark Recognition (OMR) (xvi) Optical Character Recognition (OCR) (xvii) Magnetic Ink Character Reader (MICR) (xvili) Magnetic tape drive (xix) Punch card reader (xx) Game pad. (c) Uses of Logic Gates (i) It is the building blocks of digital electronic (i) It is used in.constructing alarms (iii) It is used as a decision making tool (iv) It is used in push-button lock circuit (v) It is used for traffic light controller (vi) It is used in light activated burglar (vii) It is used in safety thermostat, an automatic water ing system (viii) It is used in the Arithmetic and Logic Unit (ALU) (ix) It is used to build digital and complex integrated circuits (x) It is used in error checking in FM transmission. (d)) OR LOGIC GATE"
     },
     {
       "id": "waec-computer-studies-theory-0031",
       "type": "theory",
       "stem": "State one difference between star and bus topologies\n(b) List four common network devices.\n\n(c) Write the acronyms below in full\nHTML, HTTP, ISP, SMTP.",
       "marks": 1,
-      "year": 2017
+      "year": 2017,
+      "explanation": "a Differences between bus and star topologies BUS TOPOLOGY STAR TOPOLOGY Computers are connected with each other by wire (which serves as a backbone) in an approximately strait manner Every computer is connected with the host computer using a separate cable or wireless connection If one computer in the network is damaged, the whole network stops working If one computer in the network is damaged, the network continues to function It makes use of terminator at both ends of the backbone It does not use terminator. The connection does not involve hub, Media Access Unit (MAU), concentrator, switch and access point The connection can be hub, MAU, concentrator, switch and access point based network. It requires less cable length. It requires more cable length. It's difficult to identify faults It is easy to identify and remove faults (ie fault tolerance) Simple physical network can be created. A bit complex to create. It works best with a limited number It works effectively with large number of computers It is more economical. It is more expensive. (b) Examples of Network Devices: (i) Hub (ii) Modem (iii) Router (iv) Gateway (v) Switch (vi) Bridge (vii) Repeater (viii) Network Interface Card (NIC) (ix) Multiplexer (x) ISDN terminal adapter (xi) Wireless access point (xii) Media converter. (c) (i) HTML-Hypertext Markup Language (ii) HTTP - Hypertext Transfer Protocol (iii) ISP- Internet Service Provider (iv) SMTP - Simple Mail Transfer Protocol"
     },
     {
       "id": "waec-computer-studies-theory-0032",
       "type": "theory",
       "stem": "(a) Match each of the following computing devices.\n\n \n \n \n COMPUTER DEVICES\n \n \n USES\n \n \n \n \n  EDVAC\n \n \n Electronic general-purpose computer programmed to perform complex sequences of operation.\n \n \n \n \n   ENIAC\n \n \n  Electronic digital stored-program computer intended for the bureau of census and later for presidential election.\n \n \n \n \n UNIVAC\n \n \n Electronic computer, binary in nature with automatic addition, subtraction multiplication and programmed division.",
       "marks": 1,
-      "year": 2017
+      "year": 2017,
+      "explanation": "COMPUTER DEVICES USES ENIAC Electronic general-purpose computer programmed to perform complex sequences of operation. UNIVAC Electronic digital stored-program computer intended for the bureau of census and later for presidential election. EDVAC Electronic computer, binary in nature with automatic addition, subtraction multiplication and programmed division. (b) (i) Types of Registers in the Control Unit - Memory Data Register (MDR) Current Instruction Register (CIR) -Sequence Control Register (SCR) (ii) Types of Registers in the Microprocessor. -Temporary register - Permanent register - Program counter register - Address register - Instruction register -Index register - Stack Pointer Register (SPR) Condition code register - Accumulator register - Interrupt control register - Flag register."
     },
     {
       "id": "waec-computer-studies-theory-0033",
       "type": "theory",
       "stem": "(a) In a tabular form, state two differences between random access memory and read only memory\n(b) State four characteristics of windows operating system environment.\n(c) list two examples of utility programs",
       "marks": 1,
-      "year": 2017
+      "year": 2017,
+      "explanation": "a) DIFFERENCES BETWEEN RAM AND ROM S/N RANDOM ACCESS MEMORY(RAM) READ ONLY MEMORY(ROM) Volatile Non-volatile Content of RAM can be read, changed or added or added Content of ROM can only be read but cannot be changed RAM chips are relatively expensive ROM chips are relatively less expensive RAM stores all the applications and data when the computer is running ROM chips are fast RAM chips are bigger in size Storage capacity of ROM installed in a computer is much lesser Processor can directly access the content of RAM ROM usually stores instructions that are required for starting (booting) the computer RAM chips are slow ROM chips are smaller in size Content of ROM are usually first transferred to RAM and then accessed by processor. This is done in order to be able to access RAM is often installed with large storage ROM content at a faster speed (b) CHARACTERISTICS OF WINDOWS OPERATING SYSTEM (i) It is a multi-tasking environment (ii) It is a user-friendly environment (ii) It has usual interactive capabilities (iv) It has object linking and embodiments (v) It has icons which represents commands (Vi) Windows enhances easy file transfer (vii) Ease of access of files, folders, etc. (Viii) lt has good security (password/encryption) features (ix)Windows operating system promotes system upgrade (x) It enables easy searching/organising of files and folders (xi) System activities can be monitored easily (xii) Default setting can be adjusted/ customised (xiii) Windows promotes remote desktop connected by entering the IP address of the other computer (xiv) Time sharing (xv) Abstraction (xvi) Memory management (xvii) Multi-user environment (c) EXAMPLES OF UTILITY PROGRAMS (i) Editor (ii) Disk defragmenter (iii) Registry cleaner (iv) Device drivers (v) Backup software (vi) Anti-virus (vii) Disk clean-up (viii) Scan disk (Viii) Firmware"
     },
     {
       "id": "waec-computer-studies-theory-0034",
       "type": "theory",
       "stem": "(a) Convert 1011011\\(_2\\) to its hexadecimal equivalent \n(b) State one difference a hacker and a scammer\n\n(c) identify the parts labeled A, B, C and D on the keyboard shown below",
       "marks": 1,
-      "year": 2017
+      "year": 2017,
+      "explanation": "(a) First method First converting 1011011, Base ten: 1011011\\(_2\\) = 1x2\\(^6\\) +Ox2\\(^5\\) + 1x2\\(^4\\) + 1x2\\(^\\3) + Ox2\\(^2\\) + 1x2\\(^1\\) +1x2\\(^0\\) = 1x64 + 0x32 + 1x16 + 1x8 + 0x4 + 1x2 + 1x1 = 64+0+ 16 + 8 + 0+ 2+1 = 91 Then converting 91, to Hexadecimal → 5B\\(_{16}\\) (b) A hacker is a person who gains unauthorised account witt the Final answer: Ccess aim of stealing or altering data or naving otherhe intentions. aving other to computer systems through user's account witSs Dad A scammer is a person who gains unauthorisert cess to user's account by sending unwanted or in propriate electronic mail to multiple recepientedp ac ted or in with the intention to deceive. OR chni- Hackers are programmers who have backend tech eak cal knowledge of any software and uses such to bra into commputer systems of unsuspecting client. 9 A scammer ensures that his victim remotely gain an cess to his computer and then uses the confidenco tricks to later defraud the unsuspecting client for tech. nical support ac OR TUR Hackers are also called black hats or crackers with malicious intentions, to steal, exploit, and sell data A scammer makes use of Windows tools and Sys- tem directories as tools for their malicious activities Elderly people, illiterate computer users and free-soft ware patronise are mostly victims of scammers."
     },
     {
       "id": "waec-computer-studies-theory-0035",
       "type": "theory",
       "stem": "(a)i) Define the term computer system.\n(i) List the major components of the computer system and give one example of each.\n(b)(i) List two activities involved in transferring data into information. (i) Write the following acronyms in full:\n(1) EDSAC (11) EDVAC",
       "marks": 1,
-      "year": 2018
+      "year": 2018,
+      "explanation": "(a)) Computer system is defined as an electronic gadget (component / part/ device/ machine) which accepts/ accesses data, stores data, manipulates data and produces output using step-by-step instructions. OR Computer system is a machine / device that has the hardware, software and user working together for data processing activities thereby producing the output (ii) COMPONENTS OF COMPUTER SYSTEM EXAMPLES System Unit CPU/Processor/system clock, Memory, Power Supply, Cooling fan Motherboard and its components (e.g ports, expansion slots) Connectors/Data cables, Add-on cards (VGA, Sound card, NIc), Hard drive, Floppy drive, CD drive and Zip drive Peripherals Keyboard/MDI/keyboard, Mouse, Monitor Hard drive disk Floppy drive Application Software General purpose applications: Word processing. Spreadsheet, Database, Desktop publishing, Graphics, Presentation, Web design Special purpose applications: (User application) Accounting. Payroll package, Educational software, Simulation software, Business information system software, Entertainment software, Multimedia software, Enterprise infrastructure software. Media development sot ware, Product Engineering software. System Software Operating system. Utility software Translator OR COMPONENTS OF COMPUTER SYSTEM EXAMPLES HARDWARE CPU Processor / System clock Memory Power Supply Motherboards and its components (e g ports, expansion Connectors/Data cables slots) Add-on cards (VGA, Sound card, NIC), Keyboard/MDI/ keyboard/Mouse, Joystick. Scanner, Microphones Monitor, Speaker, Printer, Plotter Hard drive, Flash drive/ External hard drives/Media card reader. SOFTWARE General purpose applications : Word processing, Spreadsheet, Database, Desktop publish Graphics, Presentation. Web design. Special purpose applications: Accounting. Payroll package, Educational software Simulation software, Business information system software Entertainment software. Multimedia software, Enterprise infrastructure software, Media development software, Production Engineering software Operating system (e g. any o/s), Utility software (e.g. any utility software) Translators (e.g. Compiler) (b)(i) Activities involved in transferring data into information: Data capturing / collection/ collection / gathering/ receiving. Classification/Sorting. Coding. Summarizing. Input Data processing / Calculating / editing manipulation. Validation. Translating. (ii) (i) EDSAC: Electronic Delay Storage Automatic Calculator/ Computer. (ii) EDVAC: Electronic Discrete variable Automatic Computer."
     },
     {
       "id": "waec-computer-studies-theory-0036",
       "type": "theory",
       "stem": "(a) What is a register?\n(b) List two types of register.\n(c) State three functions of registers.\n(d) Outline three differences between a register and main memory.",
       "marks": 1,
-      "year": 2018
+      "year": 2018,
+      "explanation": "(a) A register is a small holding area on the processor chip that works much like random access memory, register holds program counters, data, instructions, and addresses that the arithmetic logic unit is currently processing. OR A processor register (CPU register) is one of small set of data holding places that are part of the computer processor OR OR A register may hold an instruction, a storage address or any kind of data (such as a bit sequence or individual characters). OR Register is a special high speed storage area within the CPU. AIl data must be represented in the register before it can be processed. (b) Types of registers: Memory Address Register Memory Buffer Register. Input/Output Register. Input/Output Buffer Register. Program Counter. Instruction Register/Current Instruction Register Accumulator Register. Flag Register. Data Register. Memory data register. Index register. Stack pointer register (SPR). Condition code register. Interrupt control register. Temporary register. Permanent register. (c) Functions of registers: Holds the address of memory where CPU wants to read or writ data. Hold the contents of data/instruction read from or written in memory. Used to specify the address of a particular I / O device. Used for exchanging data between the l/O module and the processor. Used to store the address of the next instruction to fetch for execution. It stores current instruction being executed or coded. It allows the bits of its content to be moved to left or right (shift register). It holds the memory addresses of data and instruction during execution phase. It is used to store the result produced by the system. It acts as a hardware element which holds a number that can be added to/subtracted from address portion of computer instruction. It is used to temporarily store data being transmitted to/from peripheral devices. (d) Differences between Register and Main Memory Register Main Memory Loads/holds the instructions that the CPU needs. Holds the instructions and data that the currently executing program in the CPU requires. Holds the small amounts of data Memory of the computer around 32 bits to 64 bits Memory ranges from gigabytes to terabytes CPU operates on the register at a faster rate Examples are accumulator, program counter, instruction register, etc. CPU operates on the memory at a slower rate e.g Random Access Memory Some registers are located internally to the CPU. There are usually few registers on a processor Located externally to the CPU There are lot more registers in RAM Registers in the CPU hold the data is Currently working on the processor RAM holds program instruction and data that program requires."
     },
     {
       "id": "waec-computer-studies-theory-0037",
       "type": "theory",
       "stem": "(a) What is: (i) an array; (ii) a syntax error?\n(b) Write QBASIC program that will input multiples of Three between 1 and 20 into a one-dimensional array and display the output on the screen.\n(c) Convert D5FA,, to binary.",
       "marks": 1,
-      "year": 2018
+      "year": 2018,
+      "explanation": "(a)(i) An array is a collection of elements of the same type stored in a single variable. OR An array is a data structure with homogeneous element. OR An array is a row of values, a column of values or a combination of rows and columns of values. OR An array is a data structure consisting of a collection of elements (values or variables) each identified by at least an array index or key. (i) A syntax error is an error resulting from violation of grammatical rules of a language. OR A syntax error is an error from non compliance with the grammar of a language (b) 10 DIM M (7) 20 PRINT \"MULTIPLE OF 3\" 30 FOR I = 1 TO 6 40 M() = 3 *I 50 PRINT M(I) 60 NEXT I 70 END OR 10 FOR I = 1 TO 6 20 M(I) =3 *I 30 PRINT M(I) 40 NEXT I (c) Converting D5 FA\\(_{16}\\) to binary D = 1101 5 = 0101 F = 1111 A = 1010 D5FA\\(_{16}\\) = 1101010111111010\\(_{2}\\)"
     },
     {
       "id": "waec-computer-studies-theory-0038",
       "type": "theory",
       "stem": "(a) Define logic gate.\n(b) Give one example each of: (i) standard logic gate; (ii) alternative logic gate.\n(c) Using P and Q as inputs and R as output:\n(i) draw the logic symbol for an XOR logic gate: (ii) construct the truth table for XOR logic gate.\n(d) List two uses of a logic gate.",
       "marks": 1,
-      "year": 2018
+      "year": 2018,
+      "explanation": "(a) Logic gate is an elementary building block of a digital circuit with the two binary conditions, i.e.; low (0) or high (1) which is a representation of different voltage levels. OR Logic gate is a logical circuit in digital devices with one or more inputs but only one output channel. (b)(i) AND logic gate, OR logic gate and NOT logic gate. (ii) NAND logic gate, XNOR logic gate, NOR logic gate and XOR logic gate. (ci) see the diagram above. XOR Logic gate symbol. (ii) Truth Table for XOR logic gate INPUT OUTPUT p Q R 0 0 0 0 1 1 1 0 1 1 1 0 (d) Uses of Logic Gate: Logic gates are used as building blocks of digital electronic hardware Logic gates are used in the construction of simple comparator. Logic gates are used for decision making. It is used in constructing alarms. It is used in push-button lock circuit. It is used in traffic light controller. It is used in light-activated burglar. It is used in safety thermostat, an automatic watering system. It is used in the Arithmetic and Logic Unit (ALU). It is used in error checking in FM transmission. It is used in Micro-controller circuits."
     },
     {
       "id": "waec-computer-studies-theory-0039",
       "type": "theory",
       "stem": "(a)i) What is booting?\n(i) State two differences between the types of booting.\n(b) What is peripheral?\n(c) Give one example each of (i) input device; (ii) output device; (iii) storage devices (iv) a component found inside the system unit.",
       "marks": 1,
-      "year": 2018
+      "year": 2018,
+      "explanation": "Booting is startup sequence that starts the operating system of a computer when it is turned/ switched on using the start button. OR Booting is the initial set of operations that computer perform when it is switched/turned on using the start button. (i) Differences between the types of booting: COLD BOOTING WARM BOOTING CPU stops running CPU continues running Power supply and motherboard resources stop walking Power supply and mother board resources do not shut down Memory and BIOS are reset Memory and BIOS are not reset Computer shuts down completely Computer does not shut down completely The computer system may not necessarily have program error before It is necessary when a program encounters an error from which it is not recover Use of power switch is involved this done when the system It involves shortcut keys, e.g. (CTRL + ALT+ DEL) It is done when the system is already off. It is done when the system is already on. (b) A peripheral is an external/physical/hardware/device that provides input or output for the computer. It can be felt, touched or seen. (c) Examples of given devices Devices Examples Input Device Card reader Finger print scanner/Reader Trackball Magnetic-stripe reader Video capture hardware Bar code reader Touch pads Electronics whiteboard Optical Mark Recognition (OMR) Optical Character Recognition (OCR) Touch screen, Remote control, Digítaliser Magnetic Ink Character Reader (MICR) Magnetic tape drive . Punch card Reader Game pad Output Device Monitor Speaker Printer Projector/Multimedia projector Plotter Storage Device Hard Disk/Hard Drive Compact Disc Digital Versatile Disc Flash Memory/Memory card Floppy Disk External hard disk/drive Flash drive/disk/Pen drive Drobo Punched tape or perforated Magnetic tape RAM Magnetic strip Tape cassette Zip diskette. SIM card A component found inside the system unit Power Supply Unit, Cooling fan Expansion slots ROM"
     },
     {
       "id": "waec-computer-studies-theory-0040",
       "type": "theory",
       "stem": "(a) i() What is firewall? (ii) List two methods used in protecting the computer system.\n(b) Explain the following stages of the System Development Life Cycle: (i) feasibility study; (ii) design; (iii) maintenance.",
       "marks": 1,
-      "year": 2019
+      "year": 2019,
+      "explanation": "(a)(i) Firewall: This is a network security system that monitors and controls all the incoming and outgoing network traffic based on advanced and a defined set of protocol/security rule OR A firewall is a software or hardware used to maintain the security of a private network and stop malicious traffic from getting to a user's computer; it further prevents connection to unwanted sites and sending data without authorization. (ii) Methods Used in Protecting the Computer System: - Use of antivirus. - Regular maintenance. -Use of certificates. - Update the operating system.- Physical protection. - Defragmentation.- Download files from trusted sites. - Use firewall.-Authentication/password/biometric. - Encryption of files/folders.- Use of license software. - Limit use of external storage devices. (b)(i) Feasibility Study Stage: This is a stage in System Development Life Cycle (SDLC) that determines it the set goals of the plan can be accomplished and information is gathered to identify what is needed to achieve the goal. OR This is a stage that involves drawing up the terms of reference, state the objectives and scope of the project, how long it should take and how the result should be achieved and presented. OR This is a stage a survey/preliminary study/analysis/evaluation is carried out to investigate whether the proposed project is plausible and it involves schedule-driven budget, personnel, legal implication and benefit. Afterwards feasibility report is generated. (ii) Design Stage: This is the most crucial phase in the development of a system. At this stage, the logical design is caried out and converted into physical system design. The programming language, the hardware and software platform in which the new system will run are also decided. Data structure, control process, equipment source, documentation, workload and limitation of the system, interface, training, procedures of using the system, taking backups and sta ffing requiremenis are decided at this stage. OR At this stage desire features and operations are decided in detail. These include screen layout, business rules, process diagrams, pseudocode/flowchart/algorithm and other documentations. OR The stage specifies how the system will accomplish the objectives set ahead. It consists of design activities which proauce system specifications satisfying the functional requirements developed in the system analysis stage. (ii) Maintenance Stage: This is the stage in which errors in the system are eliminated. In a new systen must meet the scope of any future enhancement, funçtionality and any other feature to cope with late needs. OR At this stage, the system, is assessed/evaluated to ensure it does not become obsolete. changes are made to initial system. OR This stage involves monitoring, evaluating users feedback modifying of system to make desirable and necessary improvements."
     },
     {
       "id": "waec-computer-studies-theory-0041",
       "type": "theory",
       "stem": "(a) A musician intends to record music on a storage medium. List four ways that the music file can organized in the storage medium.\n(b) State two basic operations on computer file. (c) Explain the following computer terms: (i) file (ii) re cord",
       "marks": 1,
-      "year": 2019
+      "year": 2019,
+      "explanation": "(a) Ways Music File can be organized in the Storage Medium: (i) Random/Direct accessing (ii) Sequential accessing or in sequence. (iii) Serial accessing/in series. (iv) Indexed. - Sequential accessing (v) Indexed. (b) Basic Operations in Computer File: -file naming: - file creation; file deletion: -file retrieval; - fie copying:- file renaming:- search; overwriting a file; - updating a file; - opening a file; - closing a Tile, -view file property; - view earlier version of file, view content of file; - insert; - move; - export, - load, read,-so append; - truncate; - locate; write;-replace; share. (c)(i) Computer File: It is a collection or group of digital /electronics records stored in a computer/storage device. For example, excel file, Corel Draw file, database file, image file, video file, audio Tile, graphics file text file and Power Point file. OR Computer file is a smallest meaningful unit of data representation within a computer. For example, excel file, Corel Draw file, database file, image file, video file, audio file, graphics file, text file and Power Point file. (ii) Record: A record is a collection/group of logically related fields/attributes/data items which together can be treated as a unit that describes an entity in a computer. For example, student's record, staff/personnel records, health record, birth record and death record. OR A record describes an entity and it runs from left to right in a database table. For example, student's record, staff/personnel record, health record, birth record and death record."
     },
     {
       "id": "waec-computer-studies-theory-0042",
       "type": "theory",
       "stem": "(a) Explain the following terms: (i) storage device; (ii) virtual memory.\n(b) Two storage devices have capacities 2KB and 2MB respectively. (i) Calculate the number of bits that each of 2KB and 2MB can hold. 2 KB: 2 MB\n(i) Putting the two storage together, calculate the total capacity in bytes.",
       "marks": 1,
-      "year": 2019
+      "year": 2019,
+      "explanation": "a)(i) Storage Device: It is a piece of computer equipment/device/hardware/peripheral which can hold or store data/information. It can also be used to transfer data. OR Storage device can either be external/internal device used to hold/store data/information, for example, magnetic disk, diskette, flash drive, hard drive. DVD and VCD. OR Storage device is a digital medium/piece of computer equipment/device/hardware capable of storing/holding data/information either temporarily or permanently. (i) Virtual Memory: This is the type of memory which allows a programmer to make a memory device behave as itf it has unlimited storage capacity. This supposed 'extra' memory is stored on secondary storage. OR Virtual memory is a technique by which additional memory is created on hard disc to compliment the activity of computer real memory. OR It is temporary.storage used by a computer to run programs that need more memory than it has. OR It is a memory management technique that provides an idealized abstraction of the storage resources that are actually available. OR It is a given machine which creates the illusion to users of a very large memory. OR It is a memory management capability of an operating system that uses hardware and software to allow a computer to compensate for physical memory shortages by temporarily transferring data from random access memory (RAM) to dick storage. (b)(i) Calculating Number of Bits Held by Each Device: 2KB (ii) Calculation of Total Capacity: 1 Kilobyte = 1024 bytes 1 byte = 8 bits 2 kilobytes = 2 x 1024 x 8 → 16384 bits 2MB 1 Megabyte = 1024 kilobytes 1 kilobyte = 1024 bytes 2 kilobytes = 2 x 1024 x 8 1 byte = 8 bits Therefore, 2MB = 2 x 1024 x 1024 x 8 = 16777216 bits To add 2MB and 2KB together, 2Mb = 2 x 1024 x 1024 bytes = 2097152 bytes 2KB = 2 x 1024 bytes = 2048 bytes Total in bytes = 2097152+ 2048 bytes = 2,099,200 bytes"
     },
     {
       "id": "waec-computer-studies-theory-0043",
       "type": "theory",
       "stem": "(a)(i) Define the term encryption. (ii) Tick two authentication techniques involved in security measure from Table 1.\nTable 1\n  (ii) Outline two features of data encryption. (b) While exchanging data with a friend through your mobile phone, you observed that it took a longer time than usual. Outline four factors that may be responsible for the delay in the data transfer.\n\n \n \n \n TECHNIQUE\n \n \n TICK()\n \n \n \n \n Firewall\n \n  \n \n \n \n Biometric\n \n  \n \n \n \n Password\n \n  \n \n \n \n Intranet",
       "marks": 1,
-      "year": 2019
+      "year": 2019,
+      "explanation": "(a)(i) Encryption: This is the conversion of electronic data into another form which cannot be easily understood by anyone else except authorized parties. OR Encryption is the process of using an algorithm to transform/convert information to make it unreadable for unauthorized users. OR Encryption is the process of transforming data into unintelligible form in such a way that the original data either cannot be obtained or can be obtained only by using a decryption process. (ii) Table: TECHNIQUE TICK() Firewall Biometric Password Intranet (b) Factors Responsible for the Delay in Data Transfer: (i) Network traffic (ii) Bandwidth (iii) Size of data (iv) Cell reception (V) Baud rate (vi) Distance between the phones (vi) Alignment of the phones (vii) Attenuation (ix) Types of application in use on both phones (x) Limited storage capacity (xi) Virus attack or infection (xii) Ram capacity (xiii) Network signal strength. (iii) Features of Data Encryption: (a) Data is encoded. (b) It prevents virus. (c) A key is needed to decrypt data. (d) it involves the use of algorithm. (e) It makes computer access difficult. (f) Only authorized users can understand the data."
     },
     {
       "id": "waec-computer-studies-theory-0044",
       "type": "theory",
       "stem": "Mention two graphic applications used in editing photographs\n (b) List four steps to take to insert the edited photographs into multimedia application\n(C) Menton one multimedia element that could be included in presentation other than graphics and texts \n(d) List three multimedia hardware for developing and displaying presentation.",
       "marks": 1,
-      "year": 2020
+      "year": 2020,
+      "explanation": "(a) Graphic applications to edit photographs Paint Adobe Photoshop Photo Photo Plus Corel Paint Corel Draw Print Artist Quark Express Page Maker Microsoft Publisher Picasa GIMP Puzap Serit Affinity Photo PixIr editor Snappa Portrait Pro Fotor Inkscape DixO PhotoLab 3 Snapseed VSCO AfTerlight Adobe Lightroom Skylum Luminar ON1 Photo RAW Corel Paintshop Pro Steps to insert the edited photographs into multimedia application Click \"Insert\" on the menu bar (ribbon button) Locate \"Photo album\" and click on it Select the edited photograph from the dialog box Click \"create\" OR Click where to insert the photograph on the slide On the drop down click on the \"Picture Click on \"from file\" to browse for the edited photographs Click on \"insert\" after selecting the edited photographs OR Click where to insert the photograph on the slide Click \"insert\" from the menu bar Click \"Picture\" to browse for the edited photographs Click \"Insert\" after the edited photographs have been selected OR Select the slide to insert the photographs Click on the \"picture placeholder Browse and select the edited photographs from the dialogue box Click \"Insert\" Select the slide to insert the edited photographs. Locate where the edited photographs are saved. Copy/Drag the edited photographs Paste/Drop it on the slide (c) Multimedia elements that could be included in presentation other than graphics and text Audio / Music/ Sound/ Voice Animation Full-motion Picture (Video) Chart Table (d) Multimedia hardware for developing and displaying presentation Monitor Screen White board Computer System (System Unit CD/DVD ROM, Mouse, Graphics card, Sound Card and other computer peripheral)/Laptop Voice/Sound recorder Speaker Projector Storage Devices (Pen drive/Flash drive, Hard disk, Floppy diskette, Magnetic Strip, Blu-ray disc, CD/DVD disc and any other storage devices). Smart Phone Camcorder Camera/video Camera"
     },
     {
       "id": "waec-computer-studies-theory-0045",
       "type": "theory",
       "stem": "(a) (i) What is video conferencing? (ii) Mention four essential items to a video conference.\n(III) Give two examples of other hardware components essential to video conference\n(b) Give two examples of data cables.",
       "marks": 1,
-      "year": 2020
+      "year": 2020,
+      "explanation": "(a)(i) Video conferencing is a system that allows people to have conversations and meetings with other people in different locations without leaving their offices. OR Video Conferencing is a live visual connection/a visual communication session between two or more users/people residing in separate locations featuring audio and video content transmission in real time. OR Video Conferencing is conducting a meeting between two or more participants at different sites/ locations by using Computer network to transmit audio and video data. OR Video Conferencing is an online meeting that takes place between users from different locations by connecting different devices with embedded webcams. (ii) Items essential to a video conference: ITEMS SELECTED: A tracker ball Codec Broadband A telephone MODEM/Router Magnetic Tape drive Webcam Dot Matrix Printer to (iii) Other hardware components essential to video conferencing: Microphone Headphones/Headsets/Earpiece Speakers Computer System/laptop Smart Television Monitor Interactive board Smart phone (b) Data cables: Printer cable USB cables Monitor cables Serial cables/SATA cable Network Cables (Coaxial, Optical fibre, Twisted pair, RJ 45) VGA HDMI PATA cable IDE/EIDE cable"
     },
     {
       "id": "waec-computer-studies-theory-0046",
       "type": "theory",
       "stem": "(a) Explain home page.\n (b)(i) Mention two reasons why computers are connected. (ii) Mention two reasons why computers are not connected.\n(c) List four additional items needed to send an email.",
       "marks": 1,
-      "year": 2020
+      "year": 2020,
+      "explanation": "(a) Home page refers to the initial or starting point or default or start up or main webpage of a website, sometimes called front page. It Is the page that automatically loads when a web browser is launched. OR Home page is the introductory page of a website typically serving as a table of contents for the site. OR Home page is the name of the main page of a website where visitors can find hyperlinks to other pages on the site. (b)(i) Reasons for connecting computers: Sharing of hardware resources Sharing of software resources Sharing of data/files/information Reducing cost of operation All computers can access the Internet through one connection point Parental control More business opportunity Advertisement of Products Social networking Research purpose Enhance learning Improve access to technical support Ease of making online transactions More visibility Exchange of ideas Access to cloud computing and cloud storge Access to online education Endless access to information Easy and effective communication Selling of Product online Work from home Access to global workforce (ii) Reasons for not connecting the computer: Virus would be easily spread among the computers All the computers become susceptible hackers. Intrusion of privacy Identity theft Hacking Exam Malpractice Hearing loss Neck strain Online gambling Depression can set in Worm attack Internet addiction Time wasting and distraction Display of violent images Cyber bullying Cyber crime/Internet fraud Phishing Trolls or abusive people Weight gain/loss Cyber relationship addiction Online computer/gaming addiction Stalkers Social isolation Sleep deprivation Relationship stress Cyber sex addiction (c) Four additional items needed to send email: Modem/Router, Network cable; Browser ISP to provide Internet access/internet connection Email software/server to create/send and receive emails Email address to send/receive emails"
     },
     {
       "id": "waec-computer-studies-theory-0047",
       "type": "theory",
       "stem": "(a) Supply the names of the inventors of the following devices:\n \n\n \n \n \n DEVICE\n \n \n NAME OF INVENTOR\n \n \n \n \n Analytical Engine\n \n  \n \n \n \n Mechanical Digital Calculator\n \n  \n \n \n \n Slide Rule\n \n  \n \n \n \n Punched Card\n \n  \n \n \n\n(b)(i) What are input devices? (ii) List four input devices",
       "marks": 1,
-      "year": 2020
+      "year": 2020,
+      "explanation": "DEVICE NAME OF INVENTOR Analytical Engine Charles Babbage Mechanical Digital Calculator Blaise Pascal Slide Rule William Oughtred Punched Card Herman Hollerith (b)(i) Input devices are peripherals/ hardware/devices Connected to the computer that are used to send data / information / signals / commands to the computer system, OR Input devices are peripherals/ hardware/ devices that allow users to interact with / control the computer system/computer/digital electronics machine. (ii) - Keyboard/MIDI keyboard; - Light pen/pen input, Mouse, - Joystick; - Scanner,- Cameras -Digital camera/Webcam; Microphone: Card reader; Fingerprint scanner/Reader: -Trackball."
     },
     {
       "id": "waec-computer-studies-theory-0048",
       "type": "theory",
       "stem": "(a) Explain two differences between an Algorithm and a Flowchart.\n(b) List three examples of utility programs.\n(c) Draw a flowchart of the stops to be used in updating a customer's balance.",
       "marks": 1,
-      "year": 2020
+      "year": 2020,
+      "explanation": "(a) Algorithm is a process or set of rules or step-by-step method to be followed in problem-solving operations while flowchart is a diagrammatic/graphical representation of an algorithm. Flow chart Algorithm Block by block information diagram representing Step by step instruction representing the process the data flow. It is a pictorial representation of a process. It is step wise analysis of the work to be done. Solution is shown in graphical format. Solution is shown in non-computer language like English. Easy to show branching and looping Difficult to show branching and looping. Flowchart for big problem is impractical Algorithm can be written for any problem. Symbols and shapes are used. Texts are used. (b) Examples of utility programs (i) Editor (ii) Disk defragmenter (iii) Registry cleaner (iv) Device drivers (v) Backup software (vi) Anti-virus (vi) Disk clean-up (vii) Scan disk (ix) Firmware (C) The flowchart of steps to update customer's balance"
     },
     {
       "id": "waec-computer-studies-theory-0049",
       "type": "theory",
       "stem": "[a] Define the term output device.\n[b] Give the two types of printers.\n[c]  [i] Construct a truth table for an AND gate with two input signals.\n     [ii] State the output of an OR gate with the signals 0 and 1.\n[d]  list two types of an logic gate that gives an output of 1 when all of its input signals are 1.",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "[a] An output device is any piece of computer hardware equipment or peripheral that converts information into a human-perceptible form or machine-readable form for use with other non-computerized equipment. It can be text, graphics, audio, or video. This piece of equipment hardware which gives us the result of the entered input, once it is processed. [b] Two types of printers are: (i) Impact Printer and (ii)Non Impact printer [c] i A truth table for an AND gate with two input signals Inputs output A B C 0 0 0 0 1 1 1 0 0 1 1 1 [c] iii The output of an OR gate with the input signals 0 and 1 is 1. [d] 1: AND gate 2: OR gate"
     },
     {
       "id": "waec-computer-studies-theory-0050",
       "type": "theory",
       "stem": "2(a) Use appropriate labelled diagrams to illustrate the following network topologies.\n\n   i Startopology (ii) bustopology (iii) ring topology.\n(b) State one advantage of: i Star topology ii Bus topology.\n(c) Give one disadvantage of: (i) Bus topology: (i)Ring topology.",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "[i] star topology ii bus topology iii ring topology (b)Advantages of: (i) Star topology: (a) It is very reliable: if one cable or device fails, all the other devices on the network will still work. (b) New devices can be added easily yo the network without affecting other devices on the network. (ii) Bus topology: (a) It is cheap and easy to install, it doesnt require much cable. (b) Easy to expand by joining the two cables together. (c) Disadvantages of: (i) Bus topology (a)Troubleshooting becomes difficult if the whole network goes down. (b) Additional devices slow down the network. (ii) Ring topology (a) Due to the Uni-directional Ring, a data packet (token) must have to pass through all the nodes. If one work station shuts down, it affects whole network or if a node goes down entire network goes down. (b) It is slower in performance as compared to the bus topology."
     },
     {
       "id": "waec-computer-studies-theory-0051",
       "type": "theory",
       "stem": "3(a) Table 1 shows the actions perfomed by a company on its stored files.\nTick the actions that will ensure that the files are kept confidential and secured\n\n \n \n S/N\n ACTIONS\n TICK\n \n \n 1\n use of anti virus\n  \n \n \n 2\n use of backup\n  \n \n \n 3\n use of biometrics\n  \n \n \n 4\n use of folder\n  \n \n \n 5\n use of manual file\n  \n \n \n 6\n use of password\n  \n \n \n\n(b) list two disadvantages of computer files as compared to manual files.\n(c)(i) define charts as its relates to Ms Excel\n     (ii)  give two types of charts in Ms Excel",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "(a) Actions that will ensure that the files are kept confidential and secured are ticked. S/N ACTIONS TICK 1 use of anti virus → 2 use of back up → 3 use of biometrics → 4 use of folder 5 use of manual file 6 use of password → b[i]it is more expensive to setup compared to manual files , [ii] when there is no power ,computer files cannot be accessed. [iii] it is vulnerable to computer virus/hackers c[i]In Microsoft excel a chart is often called a graph , it is a visual representation of data from a worksheet that can bring more understanding to the data than just looking at the numbers, A Chart is a powerful tool that allows you to visually display in graphic form. [ii] Types of charts in Ms excel: bar,column,pie,line, area,doughnut,scatter,surface,or Radar charts."
     },
     {
       "id": "waec-computer-studies-theory-0052",
       "type": "theory",
       "stem": "4[a][i] What is slide master in power point presentation\n      [ii] outline the steps to rename the slide master in ms power point\n     [b] explain the following features in Ms power point;   \n       [i] handout master\n       [ii] notes master",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "[a][i] In Microsoft power point,the slide master is the top slide that controls all information about the theme,layout,background,color,fonts and positioning of all sides. Using the slide master is an easy way to adjust the look of an existing theme or make changes to all slides in your presentation. [ii] The steps to rename the Slide master is Ms Power point: On the view menu, select master- slide master in the slide thumbnails on the left, select the layout you want to rename. On the slide master tab, click rename. in the rename layout box,type a new name and then click rename. b[i] Handout Master Handout master is used to edit the appearance of presentation handouts ,including the layout,headers and footers and background changes made to the handout master appear on all pages of the printed handout . [ii] Notes Master The notes master in ms powerpoint is a feature that allows you to control the settings of the notes section of power point. it allows you to change layouts,font size,font type,style.and much more, To enable the Notes master in power point click on \"view ribbon\" and then on\" notes master\""
     },
     {
       "id": "waec-computer-studies-theory-0053",
       "type": "theory",
       "stem": "A supermarket listed ten items on sale.\n\nUse Microsoft Excel application to create an inventory for the supermarket.\n\n(a) Type in the following headings from cell A1 to F1 respectively.\n\nSN, Goods Cost Price, Selling Price, Gain/Loss and Target.\n(b) Populate the table by supplying ten different items sold in a supermarket. In column A, fill in the numbers 1 to 10 from cells A2 to A11. Similarly, list the ten items from cells B2 to B11. Supply Cost Price and Selling Price from cell B2 to B11. Supply Cost Price and Selling Price from cells C2 to C11 and D2 to D11 respectively. Note that it is possible to have some selling prices lower than the cost price. Create borders around the table.\n(c) Use formula or function to calculate; (i) the gain (if the selling price is higher than the cost price) or the loss (if the cost price is higher than the selling price) of each item from cells E2 to E11 \n\n(ii) 110% of the cost price of each item from cells F2 to F11.\n(d) Determine whether target is met or not by typing \"target met\" or \"target not met\" in cells H2 to H11 for each item.\n\nNote that target is met when the selling price is 110% of the cost price or more otherwise target is not met.\n(e) Insert a footer and type in your full name  and index number.\n(f) Save your work in the folder created on the desktop using your full name as th file name.\n(g) Print your work showing formulas and functions and submit to the supervisor.",
       "marks": 1,
-      "year": 2021
+      "year": 2021,
+      "explanation": "S/N Goods Cost Price Selling Price Gain/Loss Target Target met/Target not met 1 Rice 21000 24500 =Sum(D1-D2) =110/100*C2 Target met 2 Beans 7800 7500 =Sum(D3-D3) =110/100*C3 Target not met 3 Garri 4300 4800 =SUM(D4-C4) =110/100*C4 Target met 4 Elubo 6730 8920 =SUM(D5-C5) =110/100*C5 Target met 5 Wheat 11710 11650 =SUM(D6-C6) =110/100*C6 Target not met 6 Sugar 5250 6750 =SUM(D7-C7) =110/100*C7 Target 7 Poundo Yam 1250 2110 =SUM(D8-C8) =110/100*C8 Target met 8 Semovita 4500 5200 =SUM(D9-C9) =110/100*C9 Target met 9 Milo 1500 1450 =SUM(D10-C10) =110/100*C10 Target not met 10 Milk 1670 1680 =SUM(D11-C11) =110/100*C11 Target met"
     },
     {
       "id": "waec-computer-studies-theory-0054",
       "type": "theory",
       "stem": "(a) Using the star shape tool in CorelDraw, draw a 30 pts star of diameter 18 cm and fill it with grey colour.\n(b) Use sharpness tool to adjust the corner sharpness of the star by 25 pts.\n(c) Place three circles; circle 1, circle 2 and circle 3 with diameters 10 am, 7.6 cm and 5.4 cm respectively inside the star.\n(d) Use Text tool to type ARISE AND SHINE and place it in-between circle 2 and 3.\n(e) Fill cicle2 with lemon colour and circle 3 with white colour.\n(f) Place five stars inside circle 3.\n(g) Group your drawing.\n(h) Type in your full name as a footer.\n(i) Save and print your work.\n(j) Submit your printout to the supervisor.",
       "marks": 1,
-      "year": 2021
+      "year": 2021,
+      "explanation": "."
     },
     {
       "id": "waec-computer-studies-theory-0055",
       "type": "theory",
       "stem": "Using a word processing package, create a college timetable format titled \"COLLEGE TIME TABLE\" for 7 subjects (English, Maths, Biology, Chemistry, Physics, Civic Education, and Computer Studies), for 5 days with a minimum of 45 minutes duration. Lunchtime is 40 minutes, and lessons in the college have a minimum of 5 periods/week.\n(a) Format the  \"COLLEGE TIME TABLE\" using the following:\n\n(i) The title of the table should be aligned center, bold, and underlined;\n\n(ii) Use table design style of any type\n\n(iii) Days of the week should be bold\n\n(b) Save your work with your full name in the folder created.\n\n(c) print and submit your work",
       "marks": 1,
-      "year": 2017
+      "year": 2017,
+      "explanation": "TIME 8:00 - 8:45 8:45 - 9:30 9:30 - 10:15 10:15 - 11:00 11:00 - 11:40 11:40 - 12:25 12:25 -1:10 1:10- 1:55 DAYS MONDAY SUBJECTS ENG.LANGUAGE MATHEMATICS BIOLOGY CHEMISTRY LUNCHTIME PHYSICS CIVIC EDU COMP.SCIENCE TUESDAY SUBJECTS CHEMISTRY PHYSICS COMP.SCIENCE CIVIC.EDU ENG.LANGUAGE BIOLOGY MATHEMATICS WEDNESDAY SUBJECTS MATHEMATICS BIOLOGY ENG.LANGUAGE PHYSICS CIVIC EDU COMP.SCIENCE CHEMISTRY THURSDAY SUBJECTS COMP. SCIENCE CHEMISTRY PHYSICS MATHEMATICS BIOLOGY ENG.LANGUAGE CIVIC EDU FRIDAY SUBJECTS BIOLOGY CIVIC EDU MATHEMATICS ENG.LANGUAGE PHYSICS CHEMISTRY COMP.SCIENCE"
     },
     {
       "id": "waec-computer-studies-theory-0056",
       "type": "theory",
       "stem": "1(a) The table below shows the scores of six students in computer studies at Top Hill High School. Use the font Times New Roman with size 12 pt in spreadsheet application to prepare the information given in the table.\n\n \n \n Student I. D\n 1st\n\n Term\n 2nd\n\n Term\n 3rd\n\n Term\n 1st term\n\n W/score\n 2nd term\n\n W/score\n 3rd term\n\n W/score\n Total\n\n W/score\n \n \n \n \n THHS2015040\n 69\n 56\n 74\n  \n  \n  \n  \n \n \n THHS2015032\n 77\n 82\n 90\n  \n  \n  \n  \n \n \n THHS2015025\n 67\n 55\n 48\n  \n  \n  \n  \n \n \n THHS2015067\n 56\n 87\n 68\n  \n  \n  \n  \n \n \n THHS2015055\n 54\n 59\n 70\n  \n  \n  \n  \n \n \n THHS2015043\n 63\n 48\n 64\n  \n  \n  \n  \n \n \n\n \nInsert b:\n(i) new column with the heading \"Name\" between the first and second columns;\n(ii) title \"Students' Scores in Computer Studies\" above the table.\n(c) Beginning from the first cell under column heading \"Name\" to the sixth cell, type the following: Adedigba Eze, Balango Ngozi, Agbelero Cynthia, Okeowo Sulkite, Okonia Ifedola, and Umaru Edonk.\n(d) If \"W/score\" stands for weighted score, calculate:\n(i) weighted score for each term given that weighted score comprises 20%, 30%, and 50% of raw scores for first, second, and third terms respectively;\n(ii) total weighted score for the three terms.\n(e) Insert your full name and index number as a footer.\n(f) Save with your index number in the folder created.\n(g) Print and submit to the supervisor",
       "marks": 1,
-      "year": 2018
+      "year": 2018,
+      "explanation": ".."
     },
     {
       "id": "waec-computer-studies-theory-0057",
       "type": "theory",
       "stem": "Use a spreadsheet application to do the following. (a) In cell A1, type \"My One Week Expenses On Five items\".\n(b) In row 2, type column-by-column the following: \"ITEM\", 1ST DAY, \"2ND DAY, \"3RD  DAY\", *4TH DAY, \"5THDAY\", \"6TH DAY\" and \"7TH DAY\".\n(c) In column A, starting from A3 to A7, List the items you spent money on.\n(d) Enter the amount spent on each item for each day in their respective columns.\nNote: select your own items and the amount spent.\n(e) In cells 12 and A8. type \"TOTAL N\".\n(f) Using formula/function compute the total expenses for each day and for each item.\n(g) Create borders around the table.\n(h) Insert a footer and type in your full name and index number. (i) Below the table, type in the formula that was used:\n(i) in cell 18: (ii) for summing from B3 to H3.\nNote: Enclose your formula in quotes ave your work with your full name in the folder created on the desktop.\n(k) Print your work and submit to the supervisor.",
       "marks": 1,
-      "year": 2019
+      "year": 2019,
+      "explanation": "(i) \"= sum (B3:H3)\"OR Ä!B3 + C3 + D3 + E3 + F3 + G3 + H3\" (ii) Ä! Sum (B3:B7)\" OR Ä!B3 + B4 + B5 + B6 + B7"
     },
     {
       "id": "waec-computer-studies-theory-0058",
       "type": "theory",
       "stem": "use microsoft power point application to create the presentation on the topic computer systems\n[a]    use title slide and type  computer systems with font type arial black and size 44 points\n[b]     use title and content layout slide and type the following passage with font type:\n            [i] title in algerian and size 40 points ;\n            [ii] content in times new roman and size 30 points.\npassage: Definition of computer\nA computer is a device that accepts information in the form of digitized data and manipulates it for some results based on a program or sequence of instructions on how the data is to be processed\n[c]   Insert next slide and type the following using the same font type and size as in (b)\nCLASSIFICATION OF COMPUTERS\ni By type, ii  By Size: iii By Purpose: iv By Generation.\n[d] insert next slide and type the following using the same font type and size in 1b\nCLASSIFICATION BY TYPE\nDigital Computer, Analogue Computer, Hybrid Computer. (Note: use bullet list for the items)\n(e) Insert next slide and type the following using the same font type and size as in 1 (b).Mini\n\nComputer, Mainframe Computer, (Note: use a different list type for the Micro Computer, Super Computer items)\nCLASSIFICATION BY GENERATION\n\nFirst Generation eg UNIVAC\n\nSecond Generation eg HAVARD MARKII\n\nThird Generation eg IBM 360\n\nFourth Generation eg Microcomputer (Note: use a different list type for the items)\n(g) Using Footer tool, insert your full name and index number with font size of 14 points and bold.\n\n(h) Save your work in the folder created on the desktop using your full name as the file name.\n\n        [i]  Print your work and submit to the supervisor.",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "."
     },
     {
       "id": "waec-computer-studies-theory-0059",
       "type": "theory",
       "stem": "2. Daniel James and three of his friends came up with the idea of starting a travel agency for college students in Nigeria. They invested sixty thousand naira each and started their dream company, SUMMER BREAK\n\nTRAVELS INC.\n\nAs sales continued to grow, the management of Summer Break Travels Inc. realised they need a better tracking system for First Quarter\n\nSales.\n\nPrepare a First Quarter Sales Worksheet that shows the sales for the first quarter using the details in the table  below\n \n                                                                                               Markerting outlets[#]\n\n \n \n location[vacation place]\n mail\n campus\n telephone\n internet\n \n \n bar beach\n 5,297.23\n 3,871.35\n 4,720.45\n 2,998.65\n \n \n trans amusement park ibadan\n 2,823.23\n 4,840.53\n 2,703.56\n 4,911.16\n \n \n agodi gardens\n 6,256.25\n 7,256.12\n 2,436.86\n 7,709.32\n \n \n obudu park calabar\n 2,856.15\n 437.20\n 4,997.60\n 1,201.45\n \n \n total\n  \n  \n  \n  \n \n \n\n \n[a]   (a) Using function or fomula, compute the total:\n\n         [i] sales at each marketing outlet; (ii)\n\n         [ii] amount of money made for each vacation place. (Note: create another column \"total\")\n         \n(b)     Format the table using the instruction below: ) the title \"Summer Break  Travels, Inc.\n          First Quarter Sales\" should be Bold and in Upper Case;\n         (ii) fill the table with white background 1 darker-25\"\n[c]      Create two charts for the first quarter sales: )\n            [i] a pie chart stating the most effective sales method;\n            [ii] a bar chart stating the most popular vacation place.\n\n[d]        Type in the formula used in calculating total for each location below your table\n            (enclosed in\"\")\n[e]        Save, print out your work and submit to the supervisor.",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "Table 1 markerting outlets [#] location mail campus telephone internet total bar beach lagos 5,297.23 3,871.35 4,720.45 2,998.65 16,887.68 trans amusement park ibadan 2,823.23 4,840.53 2,703.56 4,911.16 15,278.48 agodi gardens 6,256.25 7,256.12 2,436.86 7,709.32 23,657.55 obudu park calabar 2,856.15 437.20 4,997.60 1,201.45 9,492.40 total 17,232.86 16,405.20 14,857.47 16,820.58 =SUM[B4:B7] =SUM[B4:E4] SUMMER BREAK TRAVELS ,INC FIRST QUARTER SALES see photo above(bar chart) Markerting outlets[#] Bar beach lagos trans amusement park ibadan Agodi gardens obudu park calabar Markerting outlets [n] mail location[vacation place] see photo above(pie chart)"
     },
     {
       "id": "waec-computer-studies-theory-0060",
       "type": "theory",
       "stem": "(a) Create a;\n(i) database and save as WASSCE in the folder on the desktop.\n\n(i) table with headings as shown in Table 2 (11 rows).\n\n   \n    Define the fields appropriately. Save the table as the customers.\n    Set CustomlD as primary key\n\n \n \n Custom ID\n first name \n last name \n telephone\n address\n \n \n  \n  \n  \n  \n  \n \n \n  \n  \n  \n  \n  \n \n \n\n \n[iii] form from the customers and save as REFORM\n [b] Enter ten records of your choice using the\n\nForm created in (a)(ii).\n\n(c) Write a query to retrieve the First Name and Telephone.\n\n(d) Design a report using (c).\n\n(e) Insert a footer and type in your full name",
       "marks": 1,
-      "year": 2022
+      "year": 2022,
+      "explanation": "REFORM CUSTOM ID 1 first name Racheal last name Adeyemi Telephone 08065487942 address 1,iju road CUSTOM ID 2 first name joy last name oku telephone 08055565559 address 10,ajangbadi close Custom ID 3 first name chibuzor last name racheal telephone 07066669899 address 32,fatai alinco way Custom ID 4 first name samad last name malim telephone 08059888889 address victoria island CUSTOM ID 5 first name kate last name peace telephone 09055445668 address 5,magodo estate CUSTOM ID 6 first name halima last name abubakar telephone 08165663228 address 13,obawole street CUSTOM ID 7 first name philip last name peace telephone 08012223221 address 76,Ifako ijaiye CUSTOM ID 8 first name philip last name peace telephone 08012223221 address 76, agbado ijaiye CUSTOM ID 9 first name zainab last name effiong telephone 081444499999 address 23,alimosho CUSTOM ID 10 first name chisom last name emmanuel telephone 07055555595 address 24, ifako agege first name telephone racheal 08065487942 joy 08055565559 chibuzor 07066666689 samad 08059888889 kate 09055445668 halima 08165663228 philip 080122222321 stephen 081444999999 zainab 070987223333 chisom 070555555559 custom id first name last name telephone address 1 racheal adeyemi 08065487942 1, iju road 2 joy oku 08055565559 10, ajangbadi close 3 chiibuzor racheal 07066666689 32,fatai alinco way 4 samad malim 08059888889 victoria island 5 kate peace 09055445668 5, magodo estate 6 halima abubakar 08165663228 13,obawole street 7 philip peace 08012222232 76,agbado ijaye 8 stephen effiong 08144499999 23,alimosho 9 zainab ajayi 07098722333 26, aim saliu 10 chisom emmanuel 07055555555 24, ifako agege"
     }
   ],
   "category": "secondary",

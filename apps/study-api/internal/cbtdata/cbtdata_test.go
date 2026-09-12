@@ -4,7 +4,6 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"encoding/json"
-	"errors"
 	"os"
 	"path/filepath"
 	"strings"
@@ -61,38 +60,43 @@ func TestLoadOK(t *testing.T) {
 	}
 }
 
-func TestLoadRejectsAnswerLeak(t *testing.T) {
-	cases := map[string]map[string]any{
-		"top-level answer": {
-			"code": "test-bank", "title": "T", "version": 1, "questionCount": 1, "totalMarks": 1,
-			"questions": []any{map[string]any{
-				"id": "q1", "type": "mcq", "stem": "s", "marks": 1, "answer": "B",
-				"options": map[string]string{"A": "3", "B": "4"},
-			}},
-		},
-		"nested correct_letter": {
-			"code": "test-bank", "title": "T", "version": 1, "questionCount": 1, "totalMarks": 1,
-			"questions": []any{map[string]any{
-				"id": "q1", "type": "mcq", "stem": "s", "marks": 1,
-				"options": map[string]string{"A": "3", "B": "4"},
-				"meta":    map[string]any{"correct_letter": "A"},
-			}},
-		},
-		"explanation": {
-			"code": "test-bank", "title": "T", "version": 1, "questionCount": 1, "totalMarks": 1,
-			"questions": []any{map[string]any{
-				"id": "q1", "type": "mcq", "stem": "s", "marks": 1,
-				"options":     map[string]string{"A": "3", "B": "4"},
-				"explanation": "because",
-			}},
-		},
+func TestLoadHarvestsAnswersAndSanitizes(t *testing.T) {
+	// Founder directive (2026-09): the bank file CARRIES its answers;
+	// Load harvests them into the server-only key map and the served
+	// bundle must come out sanitized.
+	b := validBundle()
+	b["questions"] = []any{map[string]any{
+		"id":          "q1",
+		"type":        "mcq",
+		"stem":        "s",
+		"marks":       1,
+		"answer":      "B",
+		"explanation": "because two is two",
+		"options":     map[string]string{"A": "3", "B": "4"},
+	}}
+	dir := writeLib(t, b)
+	lib, err := Load(dir)
+	if err != nil {
+		t.Fatalf("load with embedded answers: %v", err)
 	}
-	for name, b := range cases {
-		dir := writeLib(t, b)
-		_, err := Load(dir)
-		if !errors.Is(err, ErrAnswerLeak) {
-			t.Fatalf("%s: want ErrAnswerLeak, got %v", name, err)
-		}
+	served, ok := lib.Bundle("test-bank")
+	if !ok {
+		t.Fatal("bundle missing")
+	}
+	q := served.Questions[0]
+	if q.Answer != "" || q.Explanation != "" || q.AnswerImage != "" || q.Video != "" {
+		t.Fatalf("answer material leaked into served bundle: %+v", q)
+	}
+	keys, ok := lib.KeysFor("test-bank")
+	if !ok {
+		t.Fatal("harvested key missing")
+	}
+	k := keys["q1"]
+	if k.Letter != "B" || k.Explanation != "because two is two" {
+		t.Fatalf("harvested key wrong: %+v", k)
+	}
+	if all := lib.AllKeys(); len(all) != 1 || len(all["test-bank"]) != 1 {
+		t.Fatalf("AllKeys wrong: %+v", all)
 	}
 }
 

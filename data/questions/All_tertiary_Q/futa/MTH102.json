@@ -1,1 +1,291 @@
-{"code":"uni-futa-mth102-bank","title":"FUTA MTH 102 | Course Question Bank","version":1,"questionCount":20,"totalMarks":20,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-mth102-0001","type":"mcq","stem":"What is the limit of (x^2 - 1)/(x - 1) as x approaches 1?","options":{"A":"2","B":"1","C":"0","D":"Undefined"},"marks":1},{"id":"uni-futa-mth102-0002","type":"mcq","stem":"What is the derivative of sin(x) with respect to x?","options":{"A":"cos(x)","B":"-cos(x)","C":"sin(x)","D":"-sin(x)"},"marks":1},{"id":"uni-futa-mth102-0003","type":"mcq","stem":"If y = e^(2x), what is dy/dx?","options":{"A":"2e^(2x)","B":"e^(2x)","C":"2e^x","D":"0.5e^(2x)"},"marks":1},{"id":"uni-futa-mth102-0004","type":"mcq","stem":"What is the indefinite integral of x^2 dx?","options":{"A":"(x^3)/3 + C","B":"2x + C","C":"(x^3)/2 + C","D":"(x^2)/2 + C"},"marks":1},{"id":"uni-futa-mth102-0005","type":"mcq","stem":"The derivative of ln(x) with respect to x is ________.","options":{"A":"1/x","B":"e^x","C":"x","D":"ln(x)"},"marks":1},{"id":"uni-futa-mth102-0006","type":"mcq","stem":"What is the value of the integral of cos(x) dx from 0 to pi/2?","options":{"A":"1","B":"0","C":"-1","D":"pi/2"},"marks":1},{"id":"uni-futa-mth102-0007","type":"mcq","stem":"In vector algebra, the dot product of two perpendicular vectors is equal to ________.","options":{"A":"0","B":"1","C":"Their magnitudes multiplied","D":"-1"},"marks":1},{"id":"uni-futa-mth102-0008","type":"mcq","stem":"What is the magnitude of the vector v = 3i + 4j?","options":{"A":"5","B":"7","C":"25","D":"sqrt(7)"},"marks":1},{"id":"uni-futa-mth102-0009","type":"mcq","stem":"If A is a 2x2 matrix with elements [[1, 2], [3, 4]], what is the determinant of A?","options":{"A":"-2","B":"2","C":"10","D":"-10"},"marks":1},{"id":"uni-futa-mth102-0010","type":"mcq","stem":"What is the transpose of a row vector?","options":{"A":"A column vector","B":"A row vector","C":"A square matrix","D":"A zero vector"},"marks":1},{"id":"uni-futa-mth102-0011","type":"mcq","stem":"What is the value of i^2 in complex numbers?","options":{"A":"-1","B":"1","C":"sqrt(-1)","D":"0"},"marks":1},{"id":"uni-futa-mth102-0012","type":"mcq","stem":"The conjugate of the complex number z = 3 + 4i is ________.","options":{"A":"3 - 4i","B":"-3 + 4i","C":"-3 - 4i","D":"3 + 4i"},"marks":1},{"id":"uni-futa-mth102-0013","type":"mcq","stem":"What is the modulus of the complex number z = 1 + i?","options":{"A":"sqrt(2)","B":"2","C":"1","D":"0"},"marks":1},{"id":"uni-futa-mth102-0014","type":"mcq","stem":"If a matrix A has an inverse, its determinant must be ________.","options":{"A":"Non-zero","B":"Zero","C":"1","D":"Negative"},"marks":1},{"id":"uni-futa-mth102-0015","type":"mcq","stem":"What is the derivative of a constant value?","options":{"A":"0","B":"1","C":"The constant itself","D":"Undefined"},"marks":1},{"id":"uni-futa-mth102-0016","type":"mcq","stem":"Find the derivative of 3x^2 + 5x - 7.","options":{"A":"6x + 5","B":"6x - 7","C":"3x + 5","D":"6x^2 + 5"},"marks":1},{"id":"uni-futa-mth102-0017","type":"mcq","stem":"What is the integral of 1/x dx?","options":{"A":"ln|x| + C","B":"-1/x^2 + C","C":"x^0 + C","D":"e^x + C"},"marks":1},{"id":"uni-futa-mth102-0018","type":"mcq","stem":"What is the cross product of a vector with itself?","options":{"A":"The zero vector","B":"1","C":"The vector itself","D":"A scalar"},"marks":1},{"id":"uni-futa-mth102-0019","type":"mcq","stem":"The identity matrix under multiplication is represented by a diagonal matrix with which elements on the main diagonal?","options":{"A":"1","B":"0","C":"-1","D":"Any real number"},"marks":1},{"id":"uni-futa-mth102-0020","type":"mcq","stem":"In complex numbers, Euler's formula states that e^(iθ) = ________.","options":{"A":"cos(θ) + i sin(θ)","B":"sin(θ) + i cos(θ)","C":"cos(θ) - i sin(θ)","D":"1"},"marks":1}]}
+{
+  "code": "uni-futa-mth102-bank",
+  "title": "FUTA MTH 102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 20,
+  "totalMarks": 20,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-mth102-0001",
+      "type": "mcq",
+      "stem": "What is the limit of (x^2 - 1)/(x - 1) as x approaches 1?",
+      "options": {
+        "A": "2",
+        "B": "1",
+        "C": "0",
+        "D": "Undefined"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Factoring (x^2 - 1) gives (x - 1)(x + 1). Canceling (x - 1) leaves (x + 1). As x approaches 1, 1 + 1 = 2."
+    },
+    {
+      "id": "uni-futa-mth102-0002",
+      "type": "mcq",
+      "stem": "What is the derivative of sin(x) with respect to x?",
+      "options": {
+        "A": "cos(x)",
+        "B": "-cos(x)",
+        "C": "sin(x)",
+        "D": "-sin(x)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "By standard differentiation rules, d/dx[sin(x)] = cos(x)."
+    },
+    {
+      "id": "uni-futa-mth102-0003",
+      "type": "mcq",
+      "stem": "If y = e^(2x), what is dy/dx?",
+      "options": {
+        "A": "2e^(2x)",
+        "B": "e^(2x)",
+        "C": "2e^x",
+        "D": "0.5e^(2x)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using the chain rule, the derivative of e^(u) is e^(u) * du/dx, giving 2e^(2x)."
+    },
+    {
+      "id": "uni-futa-mth102-0004",
+      "type": "mcq",
+      "stem": "What is the indefinite integral of x^2 dx?",
+      "options": {
+        "A": "(x^3)/3 + C",
+        "B": "2x + C",
+        "C": "(x^3)/2 + C",
+        "D": "(x^2)/2 + C"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Using the power rule for integration, ∫x^n dx = (x^(n+1))/(n+1) + C, so for n = 2, we get (x^3)/3 + C."
+    },
+    {
+      "id": "uni-futa-mth102-0005",
+      "type": "mcq",
+      "stem": "The derivative of ln(x) with respect to x is ________.",
+      "options": {
+        "A": "1/x",
+        "B": "e^x",
+        "C": "x",
+        "D": "ln(x)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "By definition, the rate of change of the natural logarithm of x is 1/x for all x > 0."
+    },
+    {
+      "id": "uni-futa-mth102-0006",
+      "type": "mcq",
+      "stem": "What is the value of the integral of cos(x) dx from 0 to pi/2?",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "-1",
+        "D": "pi/2"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The integral of cos(x) is sin(x). Evaluating from 0 to pi/2: sin(pi/2) - sin(0) = 1 - 0 = 1."
+    },
+    {
+      "id": "uni-futa-mth102-0007",
+      "type": "mcq",
+      "stem": "In vector algebra, the dot product of two perpendicular vectors is equal to ________.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "Their magnitudes multiplied",
+        "D": "-1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The dot product is defined as A · B = |A||B|cos(θ). Since the vectors are perpendicular, θ = 90° and cos(90°) = 0, so the product is 0."
+    },
+    {
+      "id": "uni-futa-mth102-0008",
+      "type": "mcq",
+      "stem": "What is the magnitude of the vector v = 3i + 4j?",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "25",
+        "D": "sqrt(7)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The magnitude is found using the Pythagorean formula: sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5."
+    },
+    {
+      "id": "uni-futa-mth102-0009",
+      "type": "mcq",
+      "stem": "If A is a 2x2 matrix with elements [[1, 2], [3, 4]], what is the determinant of A?",
+      "options": {
+        "A": "-2",
+        "B": "2",
+        "C": "10",
+        "D": "-10"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The determinant of a 2x2 matrix [[a, b], [c, d]] is ad - bc. Thus, (1*4) - (2*3) = 4 - 6 = -2."
+    },
+    {
+      "id": "uni-futa-mth102-0010",
+      "type": "mcq",
+      "stem": "What is the transpose of a row vector?",
+      "options": {
+        "A": "A column vector",
+        "B": "A row vector",
+        "C": "A square matrix",
+        "D": "A zero vector"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Transposing interchanges rows and columns, turning a 1xn row vector into an nx1 column vector."
+    },
+    {
+      "id": "uni-futa-mth102-0011",
+      "type": "mcq",
+      "stem": "What is the value of i^2 in complex numbers?",
+      "options": {
+        "A": "-1",
+        "B": "1",
+        "C": "sqrt(-1)",
+        "D": "0"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The imaginary unit i is defined as sqrt(-1), which directly implies that i^2 = -1."
+    },
+    {
+      "id": "uni-futa-mth102-0012",
+      "type": "mcq",
+      "stem": "The conjugate of the complex number z = 3 + 4i is ________.",
+      "options": {
+        "A": "3 - 4i",
+        "B": "-3 + 4i",
+        "C": "-3 - 4i",
+        "D": "3 + 4i"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The complex conjugate of a complex number a + bi is obtained by reversing the sign of the imaginary part, giving a - bi."
+    },
+    {
+      "id": "uni-futa-mth102-0013",
+      "type": "mcq",
+      "stem": "What is the modulus of the complex number z = 1 + i?",
+      "options": {
+        "A": "sqrt(2)",
+        "B": "2",
+        "C": "1",
+        "D": "0"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The modulus is defined as |z| = sqrt(a^2 + b^2). For 1 + i, it is sqrt(1^2 + 1^2) = sqrt(2)."
+    },
+    {
+      "id": "uni-futa-mth102-0014",
+      "type": "mcq",
+      "stem": "If a matrix A has an inverse, its determinant must be ________.",
+      "options": {
+        "A": "Non-zero",
+        "B": "Zero",
+        "C": "1",
+        "D": "Negative"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A matrix is invertible (non-singular) if and only if its determinant is not equal to zero."
+    },
+    {
+      "id": "uni-futa-mth102-0015",
+      "type": "mcq",
+      "stem": "What is the derivative of a constant value?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "The constant itself",
+        "D": "Undefined"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "A constant does not change, so its rate of change (derivative) is zero."
+    },
+    {
+      "id": "uni-futa-mth102-0016",
+      "type": "mcq",
+      "stem": "Find the derivative of 3x^2 + 5x - 7.",
+      "options": {
+        "A": "6x + 5",
+        "B": "6x - 7",
+        "C": "3x + 5",
+        "D": "6x^2 + 5"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Differentiating term by term: d/dx[3x^2] = 6x, d/dx[5x] = 5, and d/dx[-7] = 0."
+    },
+    {
+      "id": "uni-futa-mth102-0017",
+      "type": "mcq",
+      "stem": "What is the integral of 1/x dx?",
+      "options": {
+        "A": "ln|x| + C",
+        "B": "-1/x^2 + C",
+        "C": "x^0 + C",
+        "D": "e^x + C"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The antiderivative of 1/x is the natural logarithm of the absolute value of x."
+    },
+    {
+      "id": "uni-futa-mth102-0018",
+      "type": "mcq",
+      "stem": "What is the cross product of a vector with itself?",
+      "options": {
+        "A": "The zero vector",
+        "B": "1",
+        "C": "The vector itself",
+        "D": "A scalar"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The cross product magnitude is |A||B|sin(θ). Since a vector is parallel to itself, θ = 0° and sin(0) = 0, giving the zero vector."
+    },
+    {
+      "id": "uni-futa-mth102-0019",
+      "type": "mcq",
+      "stem": "The identity matrix under multiplication is represented by a diagonal matrix with which elements on the main diagonal?",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "-1",
+        "D": "Any real number"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The identity matrix has 1s along the main diagonal and 0s elsewhere."
+    },
+    {
+      "id": "uni-futa-mth102-0020",
+      "type": "mcq",
+      "stem": "In complex numbers, Euler's formula states that e^(iθ) = ________.",
+      "options": {
+        "A": "cos(θ) + i sin(θ)",
+        "B": "sin(θ) + i cos(θ)",
+        "C": "cos(θ) - i sin(θ)",
+        "D": "1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Euler's formula establishes the fundamental relationship between trigonometric functions and complex exponential functions."
+    }
+  ]
+}

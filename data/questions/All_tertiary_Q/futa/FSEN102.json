@@ -1,1 +1,3119 @@
-{"code":"uni-futa-fsen102-bank","title":"FUTA FSEN 102 | Course Question Bank","version":1,"questionCount":222,"totalMarks":222,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-fsen102-0001","type":"mcq","stem":"The Intel 8086 microprocessor is a ___-bit processor.","options":{"A":"8-bit","B":"16-bit","C":"32-bit","D":"64-bit"},"marks":1},{"id":"uni-futa-fsen102-0002","type":"mcq","stem":"How many address lines does the 8086 have?","options":{"A":"16","B":"20","C":"24","D":"32"},"marks":1},{"id":"uni-futa-fsen102-0003","type":"mcq","stem":"The maximum memory the 8086 can address is:","options":{"A":"64 KB","B":"256 KB","C":"1 MB","D":"4 MB"},"marks":1},{"id":"uni-futa-fsen102-0004","type":"mcq","stem":"The 8086 operates in which mode by default?","options":{"A":"Protected mode","B":"Real mode","C":"Virtual mode","D":"Long mode"},"marks":1},{"id":"uni-futa-fsen102-0005","type":"mcq","stem":"How many general-purpose registers does the 8086 have?","options":{"A":"4","B":"8","C":"14","D":"16"},"marks":1},{"id":"uni-futa-fsen102-0006","type":"mcq","stem":"The 8086 pipeline has how many stages?","options":{"A":"2","B":"4","C":"6","D":"8"},"marks":1},{"id":"uni-futa-fsen102-0007","type":"mcq","stem":"The BIU (Bus Interface Unit) is responsible for:","options":{"A":"Executing arithmetic operations","B":"Fetching instructions and data from memory","C":"Managing interrupts","D":"Controlling the stack"},"marks":1},{"id":"uni-futa-fsen102-0008","type":"mcq","stem":"The EU (Execution Unit) is responsible for:","options":{"A":"Fetching instructions","B":"Executing instructions","C":"Calculating physical addresses","D":"Managing the prefetch queue"},"marks":1},{"id":"uni-futa-fsen102-0009","type":"mcq","stem":"The prefetch queue in the 8086 can hold how many bytes?","options":{"A":"4 bytes","B":"6 bytes","C":"8 bytes","D":"16 bytes"},"marks":1},{"id":"uni-futa-fsen102-0010","type":"mcq","stem":"The clock frequency of the original 8086 was:","options":{"A":"4.77 MHz","B":"8 MHz","C":"16 MHz","D":"33 MHz"},"marks":1},{"id":"uni-futa-fsen102-0011","type":"mcq","stem":"The 8086 has how many pins in its package?","options":{"A":"40","B":"44","C":"68","D":"100"},"marks":1},{"id":"uni-futa-fsen102-0012","type":"mcq","stem":"Which signal indicates whether the 8086 is in minimum or maximum mode?","options":{"A":"MN/MX","B":"CLK","C":"RESET","D":"READY"},"marks":1},{"id":"uni-futa-fsen102-0013","type":"mcq","stem":"In minimum mode, the 8086 generates its own ___ signals.","options":{"A":"Interrupt acknowledge","B":"Bus control","C":"Both A and B","D":"None"},"marks":1},{"id":"uni-futa-fsen102-0014","type":"mcq","stem":"In maximum mode, a ___ is needed to generate bus control signals.","options":{"A":"Coprocessor","B":"Bus controller (8288)","C":"DMA controller","D":"Interrupt controller"},"marks":1},{"id":"uni-futa-fsen102-0015","type":"mcq","stem":"The physical address in the 8086 is calculated as:","options":{"A":"Segment × 16 + Offset","B":"Segment + Offset","C":"Segment × 10 + Offset","D":"CS × 16 + IP"},"marks":1},{"id":"uni-futa-fsen102-0016","type":"mcq","stem":"The 8086 uses which memory segmentation scheme?","options":{"A":"Flat memory model","B":"Segmented memory model","C":"Paged memory model","D":"Virtual memory model"},"marks":1},{"id":"uni-futa-fsen102-0017","type":"mcq","stem":"Each segment in the 8086 can be up to how large?","options":{"A":"16 KB","B":"32 KB","C":"64 KB","D":"128 KB"},"marks":1},{"id":"uni-futa-fsen102-0018","type":"mcq","stem":"The Instruction Pointer (IP) is how many bits wide?","options":{"A":"8 bits","B":"16 bits","C":"20 bits","D":"32 bits"},"marks":1},{"id":"uni-futa-fsen102-0019","type":"mcq","stem":"The FLAGS register in the 8086 is how many bits wide?","options":{"A":"8 bits","B":"16 bits","C":"20 bits","D":"32 bits"},"marks":1},{"id":"uni-futa-fsen102-0020","type":"mcq","stem":"Which flag is set when the result of an operation is zero?","options":{"A":"CF (Carry Flag)","B":"ZF (Zero Flag)","C":"SF (Sign Flag)","D":"OF (Overflow Flag)"},"marks":1},{"id":"uni-futa-fsen102-0021","type":"mcq","stem":"Which flag indicates a borrow occurred in subtraction?","options":{"A":"ZF","B":"CF","C":"OF","D":"PF"},"marks":1},{"id":"uni-futa-fsen102-0022","type":"mcq","stem":"Which flag indicates signed overflow?","options":{"A":"CF","B":"OF","C":"ZF","D":"AF"},"marks":1},{"id":"uni-futa-fsen102-0023","type":"mcq","stem":"Which flag indicates the sign of the result (bit 15)?","options":{"A":"CF","B":"ZF","C":"SF","D":"PF"},"marks":1},{"id":"uni-futa-fsen102-0024","type":"mcq","stem":"The Auxiliary Carry Flag (AF) is used for:","options":{"A":"Signed arithmetic","B":"BCD arithmetic","C":"Floating-point","D":"String operations"},"marks":1},{"id":"uni-futa-fsen102-0025","type":"mcq","stem":"The Parity Flag (PF) is set when:","options":{"A":"Result is even","B":"Result has even number of 1s","C":"Result is positive","D":"Result is odd"},"marks":1},{"id":"uni-futa-fsen102-0026","type":"mcq","stem":"The Trap Flag (TF) is used for:","options":{"A":"Interrupt handling","B":"Single-stepping (debugging)","C":"String operations","D":"Direction control"},"marks":1},{"id":"uni-futa-fsen102-0027","type":"mcq","stem":"The Interrupt Flag (IF) controls:","options":{"A":"Hardware interrupts (INTR)","B":"Software interrupts","C":"Exceptions","D":"All interrupts"},"marks":1},{"id":"uni-futa-fsen102-0028","type":"mcq","stem":"The Direction Flag (DF) affects which instructions?","options":{"A":"Arithmetic","B":"String instructions (MOVS, STOS, etc.)","C":"Jump instructions","D":"Stack operations"},"marks":1},{"id":"uni-futa-fsen102-0029","type":"mcq","stem":"How many interrupt types can the 8086 handle?","options":{"A":"128","B":"256","C":"512","D":"1024"},"marks":1},{"id":"uni-futa-fsen102-0030","type":"mcq","stem":"The Interrupt Vector Table (IVT) is located at:","options":{"A":"0000:0000","B":"FFFF:0000","C":"0000:FFFF","D":"F000:0000"},"marks":1},{"id":"uni-futa-fsen102-0031","type":"mcq","stem":"Each entry in the IVT is how many bytes?","options":{"A":"2 bytes","B":"4 bytes","C":"8 bytes","D":"16 bytes"},"marks":1},{"id":"uni-futa-fsen102-0032","type":"mcq","stem":"The non-maskable interrupt (NMI) pin on the 8086 is:","options":{"A":"INTR","B":"NMI","C":"INTA","D":"RESET"},"marks":1},{"id":"uni-futa-fsen102-0033","type":"mcq","stem":"The 8086 can access I/O ports using which instructions?","options":{"A":"MOV and XCHG","B":"IN and OUT","C":"LOAD and STORE","D":"PUSH and POP"},"marks":1},{"id":"uni-futa-fsen102-0034","type":"mcq","stem":"The stack in the 8086 grows in which direction?","options":{"A":"Upward (toward higher addresses)","B":"Downward (toward lower addresses)","C":"Both directions","D":"Fixed size"},"marks":1},{"id":"uni-futa-fsen102-0035","type":"mcq","stem":"The Stack Pointer (SP) register contains:","options":{"A":"The base of the stack","B":"The top of the stack (offset within SS)","C":"The stack segment","D":"The stack size"},"marks":1},{"id":"uni-futa-fsen102-0036","type":"mcq","stem":"What is the size of each entry pushed onto the 8086 stack?","options":{"A":"1 byte","B":"2 bytes (one word)","C":"4 bytes","D":"Variable"},"marks":1},{"id":"uni-futa-fsen102-0037","type":"mcq","stem":"The BP (Base Pointer) register is typically used for:","options":{"A":"String operations","B":"Accessing parameters on the stack","C":"Counting loops","D":"I/O operations"},"marks":1},{"id":"uni-futa-fsen102-0038","type":"mcq","stem":"Which register is the accumulator in the 8086?","options":{"A":"BX","B":"AX","C":"CX","D":"DX"},"marks":1},{"id":"uni-futa-fsen102-0039","type":"mcq","stem":"The AX register can be accessed as two 8-bit registers:","options":{"A":"AH and AL","B":"BH and BL","C":"CH and CL","D":"DH and DL"},"marks":1},{"id":"uni-futa-fsen102-0040","type":"mcq","stem":"The BX register is typically used as:","options":{"A":"Accumulator","B":"Base register for memory addressing","C":"Counter","D":"I/O port address"},"marks":1},{"id":"uni-futa-fsen102-0041","type":"mcq","stem":"The CX register is typically used as:","options":{"A":"Accumulator","B":"Base pointer","C":"Counter for loop and string operations","D":"Data register"},"marks":1},{"id":"uni-futa-fsen102-0042","type":"mcq","stem":"The DX register is used in:","options":{"A":"Multiplication and division (high word)","B":"String operations","C":"Interrupt handling","D":"Stack operations"},"marks":1},{"id":"uni-futa-fsen102-0043","type":"mcq","stem":"The SI (Source Index) register is used in:","options":{"A":"Stack operations","B":"String source addressing","C":"I/O operations","D":"Interrupt handling"},"marks":1},{"id":"uni-futa-fsen102-0044","type":"mcq","stem":"The DI (Destination Index) register is used in:","options":{"A":"Stack operations","B":"String destination addressing","C":"Code segment addressing","D":"Flag operations"},"marks":1},{"id":"uni-futa-fsen102-0045","type":"mcq","stem":"Which segment register is used for code?","options":{"A":"DS","B":"SS","C":"CS","D":"ES"},"marks":1},{"id":"uni-futa-fsen102-0046","type":"mcq","stem":"Which segment register is used for data by default?","options":{"A":"CS","B":"DS","C":"SS","D":"ES"},"marks":1},{"id":"uni-futa-fsen102-0047","type":"mcq","stem":"Which segment register is used for the stack?","options":{"A":"CS","B":"DS","C":"SS","D":"ES"},"marks":1},{"id":"uni-futa-fsen102-0048","type":"mcq","stem":"Which segment register is used for string destination operations?","options":{"A":"CS","B":"DS","C":"SS","D":"ES"},"marks":1},{"id":"uni-futa-fsen102-0049","type":"mcq","stem":"Which register holds the offset of the next instruction to execute?","options":{"A":"SP","B":"BP","C":"IP","D":"SI"},"marks":1},{"id":"uni-futa-fsen102-0050","type":"mcq","stem":"How do you access the lower 8 bits of the CX register?","options":{"A":"CH","B":"CL","C":"CX","D":"CX_L"},"marks":1},{"id":"uni-futa-fsen102-0051","type":"mcq","stem":"Which register is used as the counter in the LOOP instruction?","options":{"A":"AX","B":"BX","C":"CX","D":"DX"},"marks":1},{"id":"uni-futa-fsen102-0052","type":"mcq","stem":"In MUL instruction, the result of multiplying AX by a 16-bit operand is stored in:","options":{"A":"AX only","B":"DX:AX","C":"CX:BX","D":"BX:AX"},"marks":1},{"id":"uni-futa-fsen102-0053","type":"mcq","stem":"In DIV instruction, dividing DX:AX by a 16-bit operand stores the quotient in:","options":{"A":"DX","B":"AX","C":"BX","D":"CX"},"marks":1},{"id":"uni-futa-fsen102-0054","type":"mcq","stem":"Which register pair is used for 32-bit multiplication result?","options":{"A":"BX:CX","B":"DX:AX","C":"DS:SI","D":"CS:IP"},"marks":1},{"id":"uni-futa-fsen102-0055","type":"mcq","stem":"The CL register is used as the count in which instructions?","options":{"A":"LOOP and REP","B":"SHL, SHR, ROL, ROR","C":"MOV and XCHG","D":"PUSH and POP"},"marks":1},{"id":"uni-futa-fsen102-0056","type":"mcq","stem":"What is the size of each general-purpose register (AX, BX, CX, DX) in the 8086?","options":{"A":"8 bits","B":"16 bits","C":"32 bits","D":"64 bits"},"marks":1},{"id":"uni-futa-fsen102-0057","type":"mcq","stem":"Which registers can be split into high and low 8-bit parts?","options":{"A":"SI and DI","B":"AX, BX, CX, DX","C":"SP and BP","D":"CS and DS"},"marks":1},{"id":"uni-futa-fsen102-0058","type":"mcq","stem":"Which register cannot be used as a memory pointer in the 8086?","options":{"A":"BX","B":"BP","C":"SI","D":"CX"},"marks":1},{"id":"uni-futa-fsen102-0059","type":"mcq","stem":"When using [BP] as a memory pointer, the default segment is:","options":{"A":"DS","B":"SS","C":"CS","D":"ES"},"marks":1},{"id":"uni-futa-fsen102-0060","type":"mcq","stem":"When using [BX] as a memory pointer, the default segment is:","options":{"A":"DS","B":"SS","C":"CS","D":"ES"},"marks":1},{"id":"uni-futa-fsen102-0061","type":"mcq","stem":"The segment override prefix allows you to:","options":{"A":"Change the default segment for one instruction","B":"Disable interrupts","C":"Switch to protected mode","D":"Change the clock speed"},"marks":1},{"id":"uni-futa-fsen102-0062","type":"mcq","stem":"Which register is used for I/O port addressing when the port number > 255?","options":{"A":"AX","B":"BX","C":"DX","D":"CX"},"marks":1},{"id":"uni-futa-fsen102-0063","type":"mcq","stem":"The MOV instruction can transfer data between:","options":{"A":"Register to register only","B":"Memory to register and vice versa","C":"Immediate to register/memory","D":"All of the above"},"marks":1},{"id":"uni-futa-fsen102-0064","type":"mcq","stem":"Which instruction cannot move data directly from memory to memory?","options":{"A":"MOV","B":"PUSH","C":"POP","D":"XCHG"},"marks":1},{"id":"uni-futa-fsen102-0065","type":"mcq","stem":"The XCHG instruction swaps the contents of:","options":{"A":"Two registers","B":"A register and memory","C":"Both A and B","D":"Two memory locations"},"marks":1},{"id":"uni-futa-fsen102-0066","type":"mcq","stem":"The LEA instruction is used to:","options":{"A":"Load data from memory","B":"Load the effective address (offset) into a register","C":"Load a segment register","D":"Load the flags"},"marks":1},{"id":"uni-futa-fsen102-0067","type":"mcq","stem":"LEA BX, [SI+5] is equivalent to:","options":{"A":"MOV BX, [SI+5]","B":"MOV BX, SI","C":"MOV BX, SI; ADD BX, 5","D":"ADD BX, SI, 5"},"marks":1},{"id":"uni-futa-fsen102-0068","type":"mcq","stem":"The PUSH instruction does what to SP?","options":{"A":"Increments SP by 2","B":"Decrements SP by 2","C":"Does not change SP","D":"Sets SP to 0"},"marks":1},{"id":"uni-futa-fsen102-0069","type":"mcq","stem":"The POP instruction does what to SP?","options":{"A":"Decrements SP by 2","B":"Increments SP by 2","C":"Sets SP to 0","D":"Does not change SP"},"marks":1},{"id":"uni-futa-fsen102-0070","type":"mcq","stem":"How many addressing modes does the 8086 support?","options":{"A":"4","B":"6","C":"8","D":"12"},"marks":1},{"id":"uni-futa-fsen102-0071","type":"mcq","stem":"In immediate addressing, the operand is:","options":{"A":"In a register","B":"In memory","C":"Part of the instruction itself","D":"On the stack"},"marks":1},{"id":"uni-futa-fsen102-0072","type":"mcq","stem":"In register addressing, the operand is:","options":{"A":"In memory","B":"In a register","C":"Part of the instruction","D":"In an I/O port"},"marks":1},{"id":"uni-futa-fsen102-0073","type":"mcq","stem":"In direct addressing, the memory address is:","options":{"A":"In a register","B":"Specified directly in the instruction","C":"Calculated from a base","D":"On the stack"},"marks":1},{"id":"uni-futa-fsen102-0074","type":"mcq","stem":"In register indirect addressing, the memory address is:","options":{"A":"Specified directly","B":"Held in a register (BX, BP, SI, or DI)","C":"Calculated from IP","D":"On the stack"},"marks":1},{"id":"uni-futa-fsen102-0075","type":"mcq","stem":"Which registers can be used for register indirect addressing?","options":{"A":"AX, BX, CX, DX","B":"BX, BP, SI, DI","C":"SP, BP, SI, DI","D":"CS, DS, SS, ES"},"marks":1},{"id":"uni-futa-fsen102-0076","type":"mcq","stem":"In based addressing, the effective address is calculated as:","options":{"A":"BX + displacement","B":"SI + displacement","C":"IP + displacement","D":"SP + displacement"},"marks":1},{"id":"uni-futa-fsen102-0077","type":"mcq","stem":"In indexed addressing, the effective address is calculated as:","options":{"A":"BX + displacement","B":"SI or DI + displacement","C":"CX + displacement","D":"DX + displacement"},"marks":1},{"id":"uni-futa-fsen102-0078","type":"mcq","stem":"In based indexed addressing, the effective address is:","options":{"A":"BX + SI","B":"BX + SI + displacement","C":"BP + DI","D":"All of the above"},"marks":1},{"id":"uni-futa-fsen102-0079","type":"mcq","stem":"MOV AX, [BX+SI+8] is an example of:","options":{"A":"Direct addressing","B":"Based indexed with displacement","C":"Register addressing","D":"Immediate addressing"},"marks":1},{"id":"uni-futa-fsen102-0080","type":"mcq","stem":"MOV AX, [1234h] is an example of:","options":{"A":"Immediate addressing","B":"Direct addressing","C":"Register indirect","D":"Based addressing"},"marks":1},{"id":"uni-futa-fsen102-0081","type":"mcq","stem":"MOV AX, 1234h is an example of:","options":{"A":"Immediate addressing","B":"Direct addressing","C":"Register addressing","D":"Register indirect"},"marks":1},{"id":"uni-futa-fsen102-0082","type":"mcq","stem":"MOV AX, BX is an example of:","options":{"A":"Immediate addressing","B":"Register addressing","C":"Direct addressing","D":"Register indirect"},"marks":1},{"id":"uni-futa-fsen102-0083","type":"mcq","stem":"MOV AX, [BX] is an example of:","options":{"A":"Direct addressing","B":"Register indirect addressing","C":"Based addressing","D":"Indexed addressing"},"marks":1},{"id":"uni-futa-fsen102-0084","type":"mcq","stem":"What is the difference between MOV AX, 1234h and MOV AX, [1234h]?","options":{"A":"No difference","B":"First loads the value 1234h; second loads data from memory address 1234h","C":"First loads from memory; second loads immediate","D":"Both are invalid"},"marks":1},{"id":"uni-futa-fsen102-0085","type":"mcq","stem":"The displacement in based addressing can be:","options":{"A":"8-bit only","B":"16-bit only","C":"8-bit or 16-bit","D":"32-bit"},"marks":1},{"id":"uni-futa-fsen102-0086","type":"mcq","stem":"Which addressing mode is most useful for accessing array elements?","options":{"A":"Direct","B":"Register indirect","C":"Indexed","D":"Immediate"},"marks":1},{"id":"uni-futa-fsen102-0087","type":"mcq","stem":"Which addressing mode is most useful for accessing structure fields?","options":{"A":"Indexed","B":"Based","C":"Immediate","D":"Register"},"marks":1},{"id":"uni-futa-fsen102-0088","type":"mcq","stem":"The effective address in MOV AX, [BP+6] is:","options":{"A":"BP + 6, relative to DS","B":"BP + 6, relative to SS","C":"BP + 6, relative to CS","D":"BP + 6, relative to ES"},"marks":1},{"id":"uni-futa-fsen102-0089","type":"mcq","stem":"The effective address in MOV AX, [BX+6] is:","options":{"A":"BX + 6, relative to SS","B":"BX + 6, relative to DS","C":"BX + 6, relative to CS","D":"BX + 6, relative to ES"},"marks":1},{"id":"uni-futa-fsen102-0090","type":"mcq","stem":"To override the default segment for [BX], you would use:","options":{"A":"ES: [BX]","B":"CS: [BX]","C":"SS: [BX]","D":"Any of the above"},"marks":1},{"id":"uni-futa-fsen102-0091","type":"mcq","stem":"Which is NOT a valid 8086 addressing mode combination?","options":{"A":"[BX+SI]","B":"[AX+BX]","C":"[BP+DI]","D":"[BX+DI+10]"},"marks":1},{"id":"uni-futa-fsen102-0092","type":"mcq","stem":"The physical address for CS:IP = 1000:2000 is:","options":{"A":"3000h","B":"12000h","C":"10000h","D":"22000h"},"marks":1},{"id":"uni-futa-fsen102-0093","type":"mcq","stem":"If DS = 2000h and BX = 0100h, the physical address of [BX] is:","options":{"A":"2010h","B":"20100h","C":"21000h","D":"20001h"},"marks":1},{"id":"uni-futa-fsen102-0094","type":"mcq","stem":"Two different segment:offset pairs can point to the same physical address. This is called:","options":{"A":"Address aliasing","B":"Segment overlap","C":"Address wrapping","D":"Logical address equivalence"},"marks":1},{"id":"uni-futa-fsen102-0095","type":"mcq","stem":"The ADD instruction affects which flags?","options":{"A":"CF, ZF, SF, OF, AF, PF","B":"Only CF and ZF","C":"Only IF and TF","D":"No flags"},"marks":1},{"id":"uni-futa-fsen102-0096","type":"mcq","stem":"The SUB instruction affects which flags?","options":{"A":"Same as ADD","B":"Only CF and ZF","C":"Only SF and OF","D":"No flags"},"marks":1},{"id":"uni-futa-fsen102-0097","type":"mcq","stem":"The INC instruction affects which flags?","options":{"A":"All flags including CF","B":"All flags except CF","C":"Only ZF and SF","D":"No flags"},"marks":1},{"id":"uni-futa-fsen102-0098","type":"mcq","stem":"The DEC instruction affects which flags?","options":{"A":"All flags including CF","B":"All flags except CF","C":"Only ZF","D":"No flags"},"marks":1},{"id":"uni-futa-fsen102-0099","type":"mcq","stem":"The CMP instruction does what?","options":{"A":"Adds two operands","B":"Subtracts operands and sets flags but discards result","C":"Multiplies operands","D":"Swaps operands"},"marks":1},{"id":"uni-futa-fsen102-0100","type":"mcq","stem":"After CMP AX, BX, if ZF=1, it means:","options":{"A":"AX > BX","B":"AX < BX","C":"AX = BX","D":"AX and BX are both zero"},"marks":1},{"id":"uni-futa-fsen102-0101","type":"mcq","stem":"After CMP AX, BX, if CF=1 (unsigned), it means:","options":{"A":"AX > BX","B":"AX < BX","C":"AX = BX","D":"Overflow occurred"},"marks":1},{"id":"uni-futa-fsen102-0102","type":"mcq","stem":"The JMP instruction is:","options":{"A":"Conditional","B":"Unconditional","C":"Both","D":"Neither"},"marks":1},{"id":"uni-futa-fsen102-0103","type":"mcq","stem":"How many conditional jump instructions does the 8086 have?","options":{"A":"8","B":"16","C":"18","D":"24"},"marks":1},{"id":"uni-futa-fsen102-0104","type":"mcq","stem":"JE (Jump if Equal) is the same as:","options":{"A":"JZ","B":"JNE","C":"JG","D":"JL"},"marks":1},{"id":"uni-futa-fsen102-0105","type":"mcq","stem":"JNE (Jump if Not Equal) is the same as:","options":{"A":"JZ","B":"JNZ","C":"JC","D":"JNC"},"marks":1},{"id":"uni-futa-fsen102-0106","type":"mcq","stem":"JA (Jump if Above) checks which flags (unsigned)?","options":{"A":"CF=0 and ZF=0","B":"CF=1","C":"ZF=1","D":"SF≠OF"},"marks":1},{"id":"uni-futa-fsen102-0107","type":"mcq","stem":"JG (Jump if Greater) checks which flags (signed)?","options":{"A":"ZF=0 and SF=OF","B":"CF=0","C":"ZF=1","D":"SF≠OF"},"marks":1},{"id":"uni-futa-fsen102-0108","type":"mcq","stem":"The LOOP instruction does what?","options":{"A":"Decrements CX and jumps if CX≠0","B":"Increments CX and jumps","C":"Jumps unconditionally","D":"Does not affect CX"},"marks":1},{"id":"uni-futa-fsen102-0109","type":"mcq","stem":"LOOPE (Loop if Equal) decrements CX and jumps if:","options":{"A":"CX≠0 only","B":"CX≠0 and ZF=1","C":"CX≠0 and ZF=0","D":"ZF=1 only"},"marks":1},{"id":"uni-futa-fsen102-0110","type":"mcq","stem":"LOOPNE (Loop if Not Equal) decrements CX and jumps if:","options":{"A":"CX≠0 only","B":"CX≠0 and ZF=1","C":"CX≠0 and ZF=0","D":"ZF=0 only"},"marks":1},{"id":"uni-futa-fsen102-0111","type":"mcq","stem":"The MUL instruction performs ___ multiplication.","options":{"A":"Signed","B":"Unsigned","C":"Both","D":"Floating-point"},"marks":1},{"id":"uni-futa-fsen102-0112","type":"mcq","stem":"The IMUL instruction performs ___ multiplication.","options":{"A":"Signed","B":"Unsigned","C":"Both","D":"Floating-point"},"marks":1},{"id":"uni-futa-fsen102-0113","type":"mcq","stem":"MUL BL multiplies AL by BL and stores the result in:","options":{"A":"AL","B":"AX","C":"DX:AX","D":"BL"},"marks":1},{"id":"uni-futa-fsen102-0114","type":"mcq","stem":"MUL BX multiplies AX by BX and stores the result in:","options":{"A":"AX","B":"BX","C":"DX:AX","D":"CX:BX"},"marks":1},{"id":"uni-futa-fsen102-0115","type":"mcq","stem":"DIV BL divides AX by BL and stores the quotient in:","options":{"A":"AL","B":"AH","C":"AX","D":"BL"},"marks":1},{"id":"uni-futa-fsen102-0116","type":"mcq","stem":"DIV BX divides DX:AX by BX and stores the quotient in:","options":{"A":"AX (quotient), DX (remainder)","B":"DX (quotient), AX (remainder)","C":"BX (quotient), CX (remainder)","D":"AX only"},"marks":1},{"id":"uni-futa-fsen102-0117","type":"mcq","stem":"The CBW instruction does what?","options":{"A":"Converts byte to word (sign-extends AL to AX)","B":"Converts word to byte","C":"Clears AX","D":"Swaps AH and AL"},"marks":1},{"id":"uni-futa-fsen102-0118","type":"mcq","stem":"The CWD instruction does what?","options":{"A":"Converts word to doubleword (sign-extends AX to DX:AX)","B":"Converts doubleword to word","C":"Clears DX","D":"Swaps AX and DX"},"marks":1},{"id":"uni-futa-fsen102-0119","type":"mcq","stem":"The NEG instruction does what?","options":{"A":"Makes the operand zero","B":"Computes two's complement (0 - operand)","C":"Sets all bits to 1","D":"Reverses bit order"},"marks":1},{"id":"uni-futa-fsen102-0120","type":"mcq","stem":"The NOT instruction does what?","options":{"A":"Computes two's complement","B":"Computes one's complement (flips all bits)","C":"Sets operand to 0","D":"Sets operand to 1"},"marks":1},{"id":"uni-futa-fsen102-0121","type":"mcq","stem":"Which logic instruction does NOT affect flags?","options":{"A":"AND","B":"OR","C":"XOR","D":"NOT"},"marks":1},{"id":"uni-futa-fsen102-0122","type":"mcq","stem":"AND AX, 000Fh does what?","options":{"A":"Clears all bits except the lower 4","B":"Sets all bits to 1","C":"Inverts all bits","D":"Adds 0Fh to AX"},"marks":1},{"id":"uni-futa-fsen102-0123","type":"mcq","stem":"OR AX, 00FFh does what?","options":{"A":"Clears the lower 8 bits","B":"Sets all bits in the lower byte to 1","C":"Inverts the lower byte","D":"Shifts AX right by 8"},"marks":1},{"id":"uni-futa-fsen102-0124","type":"mcq","stem":"XOR AX, AX does what?","options":{"A":"Sets AX to 0","B":"Sets AX to FFFFh","C":"Inverts AX","D":"Adds AX to itself"},"marks":1},{"id":"uni-futa-fsen102-0125","type":"mcq","stem":"TEST AX, 0001h does what?","options":{"A":"Sets AX to 1","B":"Performs AND but discards result (only sets flags)","C":"Adds 1 to AX","D":"Shifts AX right by 1"},"marks":1},{"id":"uni-futa-fsen102-0126","type":"mcq","stem":"SHL AX, 1 does what?","options":{"A":"Shifts AX left by 1 bit (multiply by 2)","B":"Shifts AX right by 1","C":"Rotates AX left","D":"Divides AX by 2"},"marks":1},{"id":"uni-futa-fsen102-0127","type":"mcq","stem":"SHR AX, 1 does what?","options":{"A":"Shifts AX right by 1 bit (unsigned divide by 2)","B":"Shifts AX left by 1","C":"Rotates AX right","D":"Multiplies AX by 2"},"marks":1},{"id":"uni-futa-fsen102-0128","type":"mcq","stem":"SAR AX, 1 does what?","options":{"A":"Unsigned divide by 2","B":"Signed divide by 2 (preserves sign bit)","C":"Logical shift left","D":"Rotate right"},"marks":1},{"id":"uni-futa-fsen102-0129","type":"mcq","stem":"ROL AX, 1 does what?","options":{"A":"Rotates AX left by 1 (MSB goes to LSB and CF)","B":"Shifts left","C":"Rotates through carry","D":"Does nothing"},"marks":1},{"id":"uni-futa-fsen102-0130","type":"mcq","stem":"ROR AX, 1 does what?","options":{"A":"Rotates AX right by 1 (LSB goes to MSB and CF)","B":"Shifts right","C":"Rotates through carry","D":"Does nothing"},"marks":1},{"id":"uni-futa-fsen102-0131","type":"mcq","stem":"RCL AX, 1 does what?","options":{"A":"Rotates left through carry (9-bit rotation)","B":"Rotates left without carry","C":"Shifts left through carry","D":"Does nothing"},"marks":1},{"id":"uni-futa-fsen102-0132","type":"mcq","stem":"RCR AX, 1 does what?","options":{"A":"Rotates right through carry","B":"Rotates right without carry","C":"Shifts right through carry","D":"Does nothing"},"marks":1},{"id":"uni-futa-fsen102-0133","type":"mcq","stem":"PUSHF pushes which register onto the stack?","options":{"A":"AX","B":"FLAGS","C":"IP","D":"CS"},"marks":1},{"id":"uni-futa-fsen102-0134","type":"mcq","stem":"POPF does what?","options":{"A":"Pops AX from stack","B":"Pops FLAGS from stack into the FLAGS register","C":"Pops IP from stack","D":"Pops CS from stack"},"marks":1},{"id":"uni-futa-fsen102-0135","type":"mcq","stem":"The CALL instruction does what?","options":{"A":"Jumps to a subroutine and pushes the return address","B":"Only jumps","C":"Pushes flags","D":"Pops the stack"},"marks":1},{"id":"uni-futa-fsen102-0136","type":"mcq","stem":"The RET instruction does what?","options":{"A":"Pushes the return address","B":"Pops the return address from stack into CS:IP","C":"Clears the stack","D":"Does nothing"},"marks":1},{"id":"uni-futa-fsen102-0137","type":"mcq","stem":"A near CALL pushes how many bytes?","options":{"A":"1 byte","B":"2 bytes (IP only)","C":"4 bytes (CS:IP)","D":"8 bytes"},"marks":1},{"id":"uni-futa-fsen102-0138","type":"mcq","stem":"A far CALL pushes how many bytes?","options":{"A":"2 bytes","B":"4 bytes (CS and IP)","C":"6 bytes","D":"8 bytes"},"marks":1},{"id":"uni-futa-fsen102-0139","type":"mcq","stem":"RET 4 does what?","options":{"A":"Returns and pops 4 extra bytes from stack","B":"Returns 4 times","C":"Returns to address 4","D":"Does nothing special"},"marks":1},{"id":"uni-futa-fsen102-0140","type":"mcq","stem":"INT 21h is commonly used for:","options":{"A":"Arithmetic","B":"DOS function calls","C":"Hardware interrupts","D":"Stack operations"},"marks":1},{"id":"uni-futa-fsen102-0141","type":"mcq","stem":"Which INT 21h function displays a string?","options":{"A":"AH=01h","B":"AH=09h","C":"AH=4Ch","D":"AH=00h"},"marks":1},{"id":"uni-futa-fsen102-0142","type":"mcq","stem":"Which INT 21h function terminates a program?","options":{"A":"AH=01h","B":"AH=09h","C":"AH=4Ch","D":"AH=0Ah"},"marks":1},{"id":"uni-futa-fsen102-0143","type":"mcq","stem":"Which INT 21h function reads a character from keyboard?","options":{"A":"AH=01h","B":"AH=02h","C":"AH=09h","D":"AH=4Ch"},"marks":1},{"id":"uni-futa-fsen102-0144","type":"mcq","stem":"Which INT 21h function displays a single character?","options":{"A":"AH=01h","B":"AH=02h","C":"AH=09h","D":"AH=0Ah"},"marks":1},{"id":"uni-futa-fsen102-0145","type":"mcq","stem":"In INT 21h AH=09h, the string must be terminated by:","options":{"A":"Null byte (00h)","B":"Dollar sign ($)","C":"Newline (0Ah)","D":"Zero (0)"},"marks":1},{"id":"uni-futa-fsen102-0146","type":"mcq","stem":"IRET (Interrupt Return) pops how many items from the stack?","options":{"A":"1 (IP only)","B":"2 (IP and CS)","C":"3 (IP, CS, and FLAGS)","D":"4 items"},"marks":1},{"id":"uni-futa-fsen102-0147","type":"mcq","stem":"The STI instruction does what?","options":{"A":"Disables interrupts (clears IF)","B":"Enables interrupts (sets IF)","C":"Sends an interrupt","D":"Clears the stack"},"marks":1},{"id":"uni-futa-fsen102-0148","type":"mcq","stem":"The CLI instruction does what?","options":{"A":"Enables interrupts","B":"Disables interrupts (clears IF)","C":"Triggers an interrupt","D":"Clears flags"},"marks":1},{"id":"uni-futa-fsen102-0149","type":"mcq","stem":"The CLC instruction does what?","options":{"A":"Sets CF","B":"Clears CF (Carry Flag)","C":"Clears all flags","D":"Sets all flags"},"marks":1},{"id":"uni-futa-fsen102-0150","type":"mcq","stem":"The STC instruction does what?","options":{"A":"Clears CF","B":"Sets CF (Carry Flag = 1)","C":"Sets all flags","D":"Clears ZF"},"marks":1},{"id":"uni-futa-fsen102-0151","type":"mcq","stem":"The CMC instruction does what?","options":{"A":"Clears CF","B":"Sets CF","C":"Complements (inverts) CF","D":"Does nothing to CF"},"marks":1},{"id":"uni-futa-fsen102-0152","type":"mcq","stem":"LAHF and SAHF transfer flags between:","options":{"A":"AX and FLAGS","B":"AH and lower byte of FLAGS","C":"AL and FLAGS","D":"DX and FLAGS"},"marks":1},{"id":"uni-futa-fsen102-0153","type":"mcq","stem":"MOVSB copies a byte from:","options":{"A":"DS:SI to ES:DI","B":"ES:DI to DS:SI","C":"CS:IP to DS:SI","D":"SS:SP to DS:SI"},"marks":1},{"id":"uni-futa-fsen102-0154","type":"mcq","stem":"MOVSW copies how many bytes?","options":{"A":"1 byte","B":"2 bytes (one word)","C":"4 bytes","D":"Variable"},"marks":1},{"id":"uni-futa-fsen102-0155","type":"mcq","stem":"When DF=0, string instructions auto-___ SI and DI.","options":{"A":"Decrement","B":"Increment","C":"Do not change","D":"Set to zero"},"marks":1},{"id":"uni-futa-fsen102-0156","type":"mcq","stem":"When DF=1, string instructions auto-___ SI and DI.","options":{"A":"Increment","B":"Decrement","C":"Do not change","D":"Set to zero"},"marks":1},{"id":"uni-futa-fsen102-0157","type":"mcq","stem":"The CLD instruction does what?","options":{"A":"Sets DF (backward)","B":"Clears DF (forward)","C":"Does nothing","D":"Clears all flags"},"marks":1},{"id":"uni-futa-fsen102-0158","type":"mcq","stem":"The STD instruction does what?","options":{"A":"Clears DF","B":"Sets DF (backward direction)","C":"Does nothing","D":"Sets all flags"},"marks":1},{"id":"uni-futa-fsen102-0159","type":"mcq","stem":"The REP prefix repeats a string instruction:","options":{"A":"Once","B":"Until CX=0","C":"Until ZF=1","D":"Until DF=0"},"marks":1},{"id":"uni-futa-fsen102-0160","type":"mcq","stem":"REPE (or REPZ) repeats while:","options":{"A":"CX≠0 and ZF=1","B":"CX≠0 and ZF=0","C":"CX=0","D":"ZF=1 only"},"marks":1},{"id":"uni-futa-fsen102-0161","type":"mcq","stem":"REPNE (or REPNZ) repeats while:","options":{"A":"CX≠0 and ZF=1","B":"CX≠0 and ZF=0","C":"CX=0","D":"ZF=0 only"},"marks":1},{"id":"uni-futa-fsen102-0162","type":"mcq","stem":"CMPSB compares:","options":{"A":"Byte at DS:SI with byte at ES:DI","B":"AX with BX","C":"Two registers","D":"Two immediate values"},"marks":1},{"id":"uni-futa-fsen102-0163","type":"mcq","stem":"SCASB scans a string by comparing:","options":{"A":"AL with byte at ES:DI","B":"AX with ES:DI","C":"BL with DS:SI","D":"AL with DS:SI"},"marks":1},{"id":"uni-futa-fsen102-0164","type":"mcq","stem":"LODSB loads a byte from:","options":{"A":"ES:DI into AL","B":"DS:SI into AL","C":"Stack into AL","D":"I/O port into AL"},"marks":1},{"id":"uni-futa-fsen102-0165","type":"mcq","stem":"STOSB stores a byte from:","options":{"A":"AL to ES:DI","B":"AL to DS:SI","C":"AL to SS:SP","D":"AL to CS:IP"},"marks":1},{"id":"uni-futa-fsen102-0166","type":"mcq","stem":"To copy a 100-byte string, you would use:","options":{"A":"REP MOVSB with CX=100","B":"LOOP MOVSB","C":"100 MOVSB instructions","D":"REP with AX=100"},"marks":1},{"id":"uni-futa-fsen102-0167","type":"mcq","stem":"To fill 50 bytes of memory with 0, you would use:","options":{"A":"REP STOSB with CX=50, AL=0","B":"REP MOVSB","C":"LOOP with MOV","D":"REP LODSB"},"marks":1},{"id":"uni-futa-fsen102-0168","type":"mcq","stem":"REPNE SCASB is typically used for:","options":{"A":"String copy","B":"Searching for a character in a string","C":"String comparison","D":"Filling memory"},"marks":1},{"id":"uni-futa-fsen102-0169","type":"mcq","stem":"After REPNE SCASB finds a match, DI points to:","options":{"A":"The matching byte","B":"One byte after the match","C":"The start of the string","D":"The end of the string"},"marks":1},{"id":"uni-futa-fsen102-0170","type":"mcq","stem":"MOVSB adjusts SI and DI by:","options":{"A":"1 (when DF=0)","B":"2 (when DF=0)","C":"4","D":"Depends on operand size"},"marks":1},{"id":"uni-futa-fsen102-0171","type":"mcq","stem":"MOVSW adjusts SI and DI by:","options":{"A":"1","B":"2 (when DF=0)","C":"4","D":"8"},"marks":1},{"id":"uni-futa-fsen102-0172","type":"mcq","stem":"Before using string instructions, what must be set up?","options":{"A":"Only DS","B":"DS and ES (for MOVSB/CMPSB)","C":"CS and SS","D":"Only ES"},"marks":1},{"id":"uni-futa-fsen102-0173","type":"mcq","stem":"In 8086 assembly, comments start with:","options":{"A":"//","B":"#","C":";","D":"--"},"marks":1},{"id":"uni-futa-fsen102-0174","type":"mcq","stem":"A program that prints 'Hello World' uses which DOS interrupt?","options":{"A":"INT 10h","B":"INT 21h with AH=09h","C":"INT 20h","D":"INT 16h"},"marks":1},{"id":"uni-futa-fsen102-0175","type":"mcq","stem":"The .MODEL directive specifies:","options":{"A":"The processor type","B":"The memory model (small, medium, large, etc.)","C":"The assembler version","D":"The output format"},"marks":1},{"id":"uni-futa-fsen102-0176","type":"mcq","stem":"The .DATA segment directive defines:","options":{"A":"The code segment","B":"The data segment (variables)","C":"The stack segment","D":"The extra segment"},"marks":1},{"id":"uni-futa-fsen102-0177","type":"mcq","stem":"The .CODE segment directive defines:","options":{"A":"The data segment","B":"The code segment (instructions)","C":"The stack segment","D":"The extra segment"},"marks":1},{"id":"uni-futa-fsen102-0178","type":"mcq","stem":"The .STACK directive reserves:","options":{"A":"Code space","B":"Stack space (e.g., .STACK 100h reserves 256 bytes)","C":"Data space","D":"I/O space"},"marks":1},{"id":"uni-futa-fsen102-0179","type":"mcq","stem":"To declare a byte variable named 'count' with value 5:","options":{"A":"count DB 5","B":"count DW 5","C":"count DD 5","D":"count BYTE 5"},"marks":1},{"id":"uni-futa-fsen102-0180","type":"mcq","stem":"To declare a word variable named 'total' with value 1000:","options":{"A":"total DB 1000","B":"total DW 1000","C":"total DD 1000","D":"total WORD 1000"},"marks":1},{"id":"uni-futa-fsen102-0181","type":"mcq","stem":"To declare a string 'Hello' in data:","options":{"A":"msg DB 'Hello'","B":"msg DW 'Hello'","C":"msg DD 'Hello'","D":"msg BYTE 'Hello'"},"marks":1},{"id":"uni-futa-fsen102-0182","type":"mcq","stem":"To declare a string 'Hello$' for DOS printing:","options":{"A":"msg DB 'Hello$'","B":"msg DB 'Hello', '$'","C":"Both A and B","D":"msg DW 'Hello$'"},"marks":1},{"id":"uni-futa-fsen102-0183","type":"mcq","stem":"The EQU directive is used to:","options":{"A":"Define variables","B":"Define constants (symbolic names)","C":"Reserve memory","D":"End the program"},"marks":1},{"id":"uni-futa-fsen102-0184","type":"mcq","stem":"DUP is used to:","options":{"A":"Duplicate instructions","B":"Allocate repeated storage (e.g., array DB 10 DUP(0))","C":"Duplicate registers","D":"End the program"},"marks":1},{"id":"uni-futa-fsen102-0185","type":"mcq","stem":"The END directive marks:","options":{"A":"The end of a loop","B":"The end of the source file (and optionally the entry point)","C":"The end of a procedure","D":"The end of data"},"marks":1},{"id":"uni-futa-fsen102-0186","type":"mcq","stem":"The PROC and ENDP directives define:","options":{"A":"Data segments","B":"A procedure (subroutine)","C":"The stack","D":"The code segment"},"marks":1},{"id":"uni-futa-fsen102-0187","type":"mcq","stem":"Which directive marks a procedure as far (inter-segment)?","options":{"A":"PROC FAR","B":"FAR PROC","C":"PROC DISTANT","D":"EXTERNAL PROC"},"marks":1},{"id":"uni-futa-fsen102-0188","type":"mcq","stem":"To read a character from keyboard without echo, use INT 21h with:","options":{"A":"AH=01h (with echo)","B":"AH=08h (no echo)","C":"AH=0Ah (buffered input)","D":"AH=07h (no echo, no check)"},"marks":1},{"id":"uni-futa-fsen102-0189","type":"mcq","stem":"INT 21h AH=0Ah is used for:","options":{"A":"Printing a string","B":"Buffered keyboard input (reading a string)","C":"Displaying a character","D":"Exiting"},"marks":1},{"id":"uni-futa-fsen102-0190","type":"mcq","stem":"The LABEL directive is used to:","options":{"A":"Define a jump target without allocating memory","B":"Allocate variables","C":"Define procedures","D":"End the program"},"marks":1},{"id":"uni-futa-fsen102-0191","type":"mcq","stem":"ORG 100h is used in:","options":{"A":"EXE programs","B":"COM programs (to set the origin to 100h)","C":"Device drivers","D":"Boot sectors"},"marks":1},{"id":"uni-futa-fsen102-0192","type":"mcq","stem":"In a COM program, how many segments are there?","options":{"A":"Separate code and data segments","B":"One segment (code, data, and stack share the same segment)","C":"Two segments","D":"Four segments"},"marks":1},{"id":"uni-futa-fsen102-0193","type":"mcq","stem":"The ASSUME directive tells the assembler:","options":{"A":"Which segment registers point to which segments","B":"The program size","C":"The stack size","D":"The entry point"},"marks":1},{"id":"uni-futa-fsen102-0194","type":"mcq","stem":"Which assembler is commonly used for 8086 assembly?","options":{"A":"NASM","B":"MASM (Microsoft Macro Assembler)","C":"GAS","D":"FASM"},"marks":1},{"id":"uni-futa-fsen102-0195","type":"mcq","stem":"The OFFSET operator returns:","options":{"A":"The segment address","B":"The offset (physical address within a segment) of a variable","C":"The size of a variable","D":"The value of a variable"},"marks":1},{"id":"uni-futa-fsen102-0196","type":"mcq","stem":"The PTR operator is used to:","options":{"A":"Override the type/size of an operand","B":"Get a pointer","C":"Print a value","D":"Push data"},"marks":1},{"id":"uni-futa-fsen102-0197","type":"mcq","stem":"MOV [BX], 5 is ambiguous because:","options":{"A":"BX cannot address memory","B":"The assembler doesn't know if 5 is a byte or word","C":"5 is too large","D":"BX is not initialized"},"marks":1},{"id":"uni-futa-fsen102-0198","type":"mcq","stem":"What is the result of XOR AX, AX?","options":{"A":"AX = FFFFh","B":"AX = 0000h","C":"AX = 0001h","D":"AX is unchanged"},"marks":1},{"id":"uni-futa-fsen102-0199","type":"mcq","stem":"Which instruction is used to multiply AX by 10 efficiently?","options":{"A":"MUL 10","B":"SHL AX, 1; MOV BX, AX; SHL AX, 2; ADD AX, BX","C":"ADD AX, 10","D":"MOV BX, 10; MUL BX"},"marks":1},{"id":"uni-futa-fsen102-0200","type":"mcq","stem":"The AAA instruction is used after:","options":{"A":"Binary addition","B":"ASCII addition (BCD adjustment)","C":"Multiplication","D":"Subtraction"},"marks":1},{"id":"uni-futa-fsen102-0201","type":"mcq","stem":"The DAA instruction is used after:","options":{"A":"ASCII addition","B":"Packed BCD addition","C":"Subtraction","D":"Multiplication"},"marks":1},{"id":"uni-futa-fsen102-0202","type":"mcq","stem":"The AAM instruction does what?","options":{"A":"Adjusts after multiplication (unpacked BCD)","B":"Adjusts after addition","C":"Adjusts after division","D":"Adjusts after subtraction"},"marks":1},{"id":"uni-futa-fsen102-0203","type":"mcq","stem":"XLAT is used for:","options":{"A":"Translation (table lookup)","B":"Multiplication","C":"String operations","D":"I/O operations"},"marks":1},{"id":"uni-futa-fsen102-0204","type":"mcq","stem":"ENTER and LEAVE instructions are available on which processor?","options":{"A":"8086","B":"80186","C":"80286 and later","D":"80386 and later"},"marks":1},{"id":"uni-futa-fsen102-0205","type":"mcq","stem":"The BSWAP instruction (byte swap) is available on:","options":{"A":"8086","B":"80286","C":"80486 and later","D":"Pentium and later"},"marks":1},{"id":"uni-futa-fsen102-0206","type":"mcq","stem":"What is the maximum signed value a 16-bit register can hold?","options":{"A":"32767","B":"65535","C":"65536","D":"127"},"marks":1},{"id":"uni-futa-fsen102-0207","type":"mcq","stem":"What is the maximum unsigned value a 16-bit register can hold?","options":{"A":"32767","B":"65535","C":"65536","D":"255"},"marks":1},{"id":"uni-futa-fsen102-0208","type":"mcq","stem":"Overflow (OF) is set when:","options":{"A":"Unsigned result exceeds range","B":"Signed result exceeds range","C":"Carry occurs","D":"Result is zero"},"marks":1},{"id":"uni-futa-fsen102-0209","type":"mcq","stem":"Carry (CF) is set when:","options":{"A":"Signed overflow","B":"Unsigned result exceeds range (carry/borrow)","C":"Result is zero","D":"Result is negative"},"marks":1},{"id":"uni-futa-fsen102-0210","type":"mcq","stem":"JC (Jump if Carry) jumps when:","options":{"A":"CF=0","B":"CF=1","C":"ZF=1","D":"OF=1"},"marks":1},{"id":"uni-futa-fsen102-0211","type":"mcq","stem":"JNC (Jump if Not Carry) jumps when:","options":{"A":"CF=1","B":"CF=0","C":"ZF=0","D":"OF=0"},"marks":1},{"id":"uni-futa-fsen102-0212","type":"mcq","stem":"JO (Jump if Overflow) jumps when:","options":{"A":"CF=1","B":"OF=1","C":"ZF=1","D":"SF=1"},"marks":1},{"id":"uni-futa-fsen102-0213","type":"mcq","stem":"JS (Jump if Sign) jumps when:","options":{"A":"SF=1 (result is negative)","B":"SF=0","C":"CF=1","D":"OF=1"},"marks":1},{"id":"uni-futa-fsen102-0214","type":"mcq","stem":"JNS (Jump if Not Sign) jumps when:","options":{"A":"SF=1","B":"SF=0 (result is positive)","C":"CF=0","D":"ZF=0"},"marks":1},{"id":"uni-futa-fsen102-0215","type":"mcq","stem":"JP (Jump if Parity) jumps when:","options":{"A":"PF=1 (even parity)","B":"PF=0","C":"CF=1","D":"ZF=1"},"marks":1},{"id":"uni-futa-fsen102-0216","type":"mcq","stem":"JNP (Jump if Not Parity) jumps when:","options":{"A":"PF=1","B":"PF=0 (odd parity)","C":"CF=0","D":"ZF=0"},"marks":1},{"id":"uni-futa-fsen102-0217","type":"mcq","stem":"JCXZ jumps when:","options":{"A":"CX=0","B":"CX≠0","C":"ZF=1","D":"CF=1"},"marks":1},{"id":"uni-futa-fsen102-0218","type":"mcq","stem":"The 8086 has a ___-bit external data bus.","options":{"A":"8","B":"16","C":"32","D":"64"},"marks":1},{"id":"uni-futa-fsen102-0219","type":"mcq","stem":"The 8088 differs from the 8086 in that it has:","options":{"A":"A 16-bit data bus","B":"An 8-bit external data bus","C":"More registers","D":"A different instruction set"},"marks":1},{"id":"uni-futa-fsen102-0220","type":"mcq","stem":"The 8086 can access how many I/O ports?","options":{"A":"256","B":"1024","C":"65536","D":"Unlimited"},"marks":1},{"id":"uni-futa-fsen102-0221","type":"mcq","stem":"The READY pin on the 8086 is used to:","options":{"A":"Reset the processor","B":"Wait for slow memory/devices","C":"Trigger an interrupt","D":"Enable the coprocessor"},"marks":1},{"id":"uni-futa-fsen102-0222","type":"mcq","stem":"The RESET pin on the 8086 does what?","options":{"A":"Restarts the processor (CS=FFFFh, IP=0000h)","B":"Clears memory","C":"Enables interrupts","D":"Stops the clock"},"marks":1}]}
+{
+  "code": "uni-futa-fsen102-bank",
+  "title": "FUTA FSEN 102 | Course Question Bank",
+  "version": 1,
+  "questionCount": 222,
+  "totalMarks": 222,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-fsen102-0001",
+      "type": "mcq",
+      "stem": "The Intel 8086 microprocessor is a ___-bit processor.",
+      "options": {
+        "A": "8-bit",
+        "B": "16-bit",
+        "C": "32-bit",
+        "D": "64-bit"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 8086 has a 16-bit data bus and 16-bit internal registers."
+    },
+    {
+      "id": "uni-futa-fsen102-0002",
+      "type": "mcq",
+      "stem": "How many address lines does the 8086 have?",
+      "options": {
+        "A": "16",
+        "B": "20",
+        "C": "24",
+        "D": "32"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "20 address lines allow the 8086 to address 1 MB of memory (2^20 = 1,048,576 bytes)."
+    },
+    {
+      "id": "uni-futa-fsen102-0003",
+      "type": "mcq",
+      "stem": "The maximum memory the 8086 can address is:",
+      "options": {
+        "A": "64 KB",
+        "B": "256 KB",
+        "C": "1 MB",
+        "D": "4 MB"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "With 20 address lines, the 8086 can address 2^20 = 1,048,576 bytes = 1 MB."
+    },
+    {
+      "id": "uni-futa-fsen102-0004",
+      "type": "mcq",
+      "stem": "The 8086 operates in which mode by default?",
+      "options": {
+        "A": "Protected mode",
+        "B": "Real mode",
+        "C": "Virtual mode",
+        "D": "Long mode"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 8086 operates only in Real mode, where addresses map directly to physical memory."
+    },
+    {
+      "id": "uni-futa-fsen102-0005",
+      "type": "mcq",
+      "stem": "How many general-purpose registers does the 8086 have?",
+      "options": {
+        "A": "4",
+        "B": "8",
+        "C": "14",
+        "D": "16"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 8086 has 14 registers: AX, BX, CX, DX, SI, DI, BP, SP, CS, DS, SS, ES, IP, and FLAGS."
+    },
+    {
+      "id": "uni-futa-fsen102-0006",
+      "type": "mcq",
+      "stem": "The 8086 pipeline has how many stages?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The 8086 has a 2-stage pipeline: Bus Interface Unit (BIU) and Execution Unit (EU)."
+    },
+    {
+      "id": "uni-futa-fsen102-0007",
+      "type": "mcq",
+      "stem": "The BIU (Bus Interface Unit) is responsible for:",
+      "options": {
+        "A": "Executing arithmetic operations",
+        "B": "Fetching instructions and data from memory",
+        "C": "Managing interrupts",
+        "D": "Controlling the stack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The BIU handles all bus operations: instruction fetching, reading/writing data, and address generation."
+    },
+    {
+      "id": "uni-futa-fsen102-0008",
+      "type": "mcq",
+      "stem": "The EU (Execution Unit) is responsible for:",
+      "options": {
+        "A": "Fetching instructions",
+        "B": "Executing instructions",
+        "C": "Calculating physical addresses",
+        "D": "Managing the prefetch queue"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The EU decodes and executes instructions, performing arithmetic and logic operations."
+    },
+    {
+      "id": "uni-futa-fsen102-0009",
+      "type": "mcq",
+      "stem": "The prefetch queue in the 8086 can hold how many bytes?",
+      "options": {
+        "A": "4 bytes",
+        "B": "6 bytes",
+        "C": "8 bytes",
+        "D": "16 bytes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The BIU prefetches up to 6 bytes of instruction stream into the prefetch queue."
+    },
+    {
+      "id": "uni-futa-fsen102-0010",
+      "type": "mcq",
+      "stem": "The clock frequency of the original 8086 was:",
+      "options": {
+        "A": "4.77 MHz",
+        "B": "8 MHz",
+        "C": "16 MHz",
+        "D": "33 MHz"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The original 8086 ran at 4.77 MHz, later versions reached 8 MHz and 10 MHz."
+    },
+    {
+      "id": "uni-futa-fsen102-0011",
+      "type": "mcq",
+      "stem": "The 8086 has how many pins in its package?",
+      "options": {
+        "A": "40",
+        "B": "44",
+        "C": "68",
+        "D": "100"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The 8086 comes in a 40-pin DIP (Dual In-line Package)."
+    },
+    {
+      "id": "uni-futa-fsen102-0012",
+      "type": "mcq",
+      "stem": "Which signal indicates whether the 8086 is in minimum or maximum mode?",
+      "options": {
+        "A": "MN/MX",
+        "B": "CLK",
+        "C": "RESET",
+        "D": "READY"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "When MN/MX is tied high, the 8086 operates in minimum mode; when low, maximum mode."
+    },
+    {
+      "id": "uni-futa-fsen102-0013",
+      "type": "mcq",
+      "stem": "In minimum mode, the 8086 generates its own ___ signals.",
+      "options": {
+        "A": "Interrupt acknowledge",
+        "B": "Bus control",
+        "C": "Both A and B",
+        "D": "None"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In minimum mode, the 8086 generates bus control signals directly (ALE, DEN, DT/R, etc.)."
+    },
+    {
+      "id": "uni-futa-fsen102-0014",
+      "type": "mcq",
+      "stem": "In maximum mode, a ___ is needed to generate bus control signals.",
+      "options": {
+        "A": "Coprocessor",
+        "B": "Bus controller (8288)",
+        "C": "DMA controller",
+        "D": "Interrupt controller"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "In maximum mode, the 8288 bus controller generates control signals from the 8086's status lines."
+    },
+    {
+      "id": "uni-futa-fsen102-0015",
+      "type": "mcq",
+      "stem": "The physical address in the 8086 is calculated as:",
+      "options": {
+        "A": "Segment × 16 + Offset",
+        "B": "Segment + Offset",
+        "C": "Segment × 10 + Offset",
+        "D": "CS × 16 + IP"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Physical Address = Segment Register × 16 (shifted left by 4) + Offset."
+    },
+    {
+      "id": "uni-futa-fsen102-0016",
+      "type": "mcq",
+      "stem": "The 8086 uses which memory segmentation scheme?",
+      "options": {
+        "A": "Flat memory model",
+        "B": "Segmented memory model",
+        "C": "Paged memory model",
+        "D": "Virtual memory model"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 8086 uses segmented memory, dividing memory into 64 KB segments addressed by segment:offset pairs."
+    },
+    {
+      "id": "uni-futa-fsen102-0017",
+      "type": "mcq",
+      "stem": "Each segment in the 8086 can be up to how large?",
+      "options": {
+        "A": "16 KB",
+        "B": "32 KB",
+        "C": "64 KB",
+        "D": "128 KB"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Since offsets are 16 bits, each segment can address up to 2^16 = 64 KB."
+    },
+    {
+      "id": "uni-futa-fsen102-0018",
+      "type": "mcq",
+      "stem": "The Instruction Pointer (IP) is how many bits wide?",
+      "options": {
+        "A": "8 bits",
+        "B": "16 bits",
+        "C": "20 bits",
+        "D": "32 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IP is a 16-bit register that holds the offset of the next instruction within the code segment."
+    },
+    {
+      "id": "uni-futa-fsen102-0019",
+      "type": "mcq",
+      "stem": "The FLAGS register in the 8086 is how many bits wide?",
+      "options": {
+        "A": "8 bits",
+        "B": "16 bits",
+        "C": "20 bits",
+        "D": "32 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The FLAGS register is 16 bits, containing 9 status and control flags."
+    },
+    {
+      "id": "uni-futa-fsen102-0020",
+      "type": "mcq",
+      "stem": "Which flag is set when the result of an operation is zero?",
+      "options": {
+        "A": "CF (Carry Flag)",
+        "B": "ZF (Zero Flag)",
+        "C": "SF (Sign Flag)",
+        "D": "OF (Overflow Flag)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ZF=1 when the result of an operation is exactly zero."
+    },
+    {
+      "id": "uni-futa-fsen102-0021",
+      "type": "mcq",
+      "stem": "Which flag indicates a borrow occurred in subtraction?",
+      "options": {
+        "A": "ZF",
+        "B": "CF",
+        "C": "OF",
+        "D": "PF"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Carry Flag (CF) is set when a borrow occurs during subtraction or a carry occurs during addition."
+    },
+    {
+      "id": "uni-futa-fsen102-0022",
+      "type": "mcq",
+      "stem": "Which flag indicates signed overflow?",
+      "options": {
+        "A": "CF",
+        "B": "OF",
+        "C": "ZF",
+        "D": "AF"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The Overflow Flag (OF) is set when the result of a signed operation is too large to fit."
+    },
+    {
+      "id": "uni-futa-fsen102-0023",
+      "type": "mcq",
+      "stem": "Which flag indicates the sign of the result (bit 15)?",
+      "options": {
+        "A": "CF",
+        "B": "ZF",
+        "C": "SF",
+        "D": "PF"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Sign Flag (SF) mirrors the most significant bit of the result (0=positive, 1=negative)."
+    },
+    {
+      "id": "uni-futa-fsen102-0024",
+      "type": "mcq",
+      "stem": "The Auxiliary Carry Flag (AF) is used for:",
+      "options": {
+        "A": "Signed arithmetic",
+        "B": "BCD arithmetic",
+        "C": "Floating-point",
+        "D": "String operations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AF indicates a carry from bit 3 to bit 4, used in BCD (Binary Coded Decimal) adjustments."
+    },
+    {
+      "id": "uni-futa-fsen102-0025",
+      "type": "mcq",
+      "stem": "The Parity Flag (PF) is set when:",
+      "options": {
+        "A": "Result is even",
+        "B": "Result has even number of 1s",
+        "C": "Result is positive",
+        "D": "Result is odd"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PF=1 when the low 8 bits of the result contain an even number of 1-bits."
+    },
+    {
+      "id": "uni-futa-fsen102-0026",
+      "type": "mcq",
+      "stem": "The Trap Flag (TF) is used for:",
+      "options": {
+        "A": "Interrupt handling",
+        "B": "Single-stepping (debugging)",
+        "C": "String operations",
+        "D": "Direction control"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When TF=1, the 8086 generates an interrupt after each instruction (single-step mode)."
+    },
+    {
+      "id": "uni-futa-fsen102-0027",
+      "type": "mcq",
+      "stem": "The Interrupt Flag (IF) controls:",
+      "options": {
+        "A": "Hardware interrupts (INTR)",
+        "B": "Software interrupts",
+        "C": "Exceptions",
+        "D": "All interrupts"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "When IF=1, maskable hardware interrupts are acknowledged; when IF=0, they are masked."
+    },
+    {
+      "id": "uni-futa-fsen102-0028",
+      "type": "mcq",
+      "stem": "The Direction Flag (DF) affects which instructions?",
+      "options": {
+        "A": "Arithmetic",
+        "B": "String instructions (MOVS, STOS, etc.)",
+        "C": "Jump instructions",
+        "D": "Stack operations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DF=0 means string operations auto-increment SI/DI; DF=1 means auto-decrement."
+    },
+    {
+      "id": "uni-futa-fsen102-0029",
+      "type": "mcq",
+      "stem": "How many interrupt types can the 8086 handle?",
+      "options": {
+        "A": "128",
+        "B": "256",
+        "C": "512",
+        "D": "1024"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 8086 supports 256 interrupt types (0-255), each with a 4-byte vector in the IVT."
+    },
+    {
+      "id": "uni-futa-fsen102-0030",
+      "type": "mcq",
+      "stem": "The Interrupt Vector Table (IVT) is located at:",
+      "options": {
+        "A": "0000:0000",
+        "B": "FFFF:0000",
+        "C": "0000:FFFF",
+        "D": "F000:0000"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The IVT starts at physical address 00000h and occupies the first 1024 bytes of memory."
+    },
+    {
+      "id": "uni-futa-fsen102-0031",
+      "type": "mcq",
+      "stem": "Each entry in the IVT is how many bytes?",
+      "options": {
+        "A": "2 bytes",
+        "B": "4 bytes",
+        "C": "8 bytes",
+        "D": "16 bytes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Each interrupt vector is 4 bytes: 2 bytes for IP (offset) + 2 bytes for CS (segment)."
+    },
+    {
+      "id": "uni-futa-fsen102-0032",
+      "type": "mcq",
+      "stem": "The non-maskable interrupt (NMI) pin on the 8086 is:",
+      "options": {
+        "A": "INTR",
+        "B": "NMI",
+        "C": "INTA",
+        "D": "RESET"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "NMI is a non-maskable interrupt that cannot be disabled by software (IF flag doesn't affect it)."
+    },
+    {
+      "id": "uni-futa-fsen102-0033",
+      "type": "mcq",
+      "stem": "The 8086 can access I/O ports using which instructions?",
+      "options": {
+        "A": "MOV and XCHG",
+        "B": "IN and OUT",
+        "C": "LOAD and STORE",
+        "D": "PUSH and POP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "IN reads from an I/O port; OUT writes to an I/O port. I/O addresses are 16-bit (up to 64K ports)."
+    },
+    {
+      "id": "uni-futa-fsen102-0034",
+      "type": "mcq",
+      "stem": "The stack in the 8086 grows in which direction?",
+      "options": {
+        "A": "Upward (toward higher addresses)",
+        "B": "Downward (toward lower addresses)",
+        "C": "Both directions",
+        "D": "Fixed size"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The stack grows downward — PUSH decrements SP by 2, POP increments SP by 2."
+    },
+    {
+      "id": "uni-futa-fsen102-0035",
+      "type": "mcq",
+      "stem": "The Stack Pointer (SP) register contains:",
+      "options": {
+        "A": "The base of the stack",
+        "B": "The top of the stack (offset within SS)",
+        "C": "The stack segment",
+        "D": "The stack size"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SP holds the offset of the current top of the stack within the Stack Segment (SS)."
+    },
+    {
+      "id": "uni-futa-fsen102-0036",
+      "type": "mcq",
+      "stem": "What is the size of each entry pushed onto the 8086 stack?",
+      "options": {
+        "A": "1 byte",
+        "B": "2 bytes (one word)",
+        "C": "4 bytes",
+        "D": "Variable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 8086 PUSH and POP instructions always operate on 16-bit (2-byte) words."
+    },
+    {
+      "id": "uni-futa-fsen102-0037",
+      "type": "mcq",
+      "stem": "The BP (Base Pointer) register is typically used for:",
+      "options": {
+        "A": "String operations",
+        "B": "Accessing parameters on the stack",
+        "C": "Counting loops",
+        "D": "I/O operations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BP is used as a base register to access data and parameters in the stack segment."
+    },
+    {
+      "id": "uni-futa-fsen102-0038",
+      "type": "mcq",
+      "stem": "Which register is the accumulator in the 8086?",
+      "options": {
+        "A": "BX",
+        "B": "AX",
+        "C": "CX",
+        "D": "DX"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AX is the primary accumulator, used in multiplication, division, I/O, and most data transfer operations."
+    },
+    {
+      "id": "uni-futa-fsen102-0039",
+      "type": "mcq",
+      "stem": "The AX register can be accessed as two 8-bit registers:",
+      "options": {
+        "A": "AH and AL",
+        "B": "BH and BL",
+        "C": "CH and CL",
+        "D": "DH and DL"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "AX = AH (high byte) + AL (low byte). Similarly, BX=BH:BL, CX=CH:CL, DX=DH:DL."
+    },
+    {
+      "id": "uni-futa-fsen102-0040",
+      "type": "mcq",
+      "stem": "The BX register is typically used as:",
+      "options": {
+        "A": "Accumulator",
+        "B": "Base register for memory addressing",
+        "C": "Counter",
+        "D": "I/O port address"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BX is the only general-purpose register that can be used as a memory pointer in addressing modes like [BX]."
+    },
+    {
+      "id": "uni-futa-fsen102-0041",
+      "type": "mcq",
+      "stem": "The CX register is typically used as:",
+      "options": {
+        "A": "Accumulator",
+        "B": "Base pointer",
+        "C": "Counter for loop and string operations",
+        "D": "Data register"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CX is used as the counter in LOOP instructions and string operations (REP prefix)."
+    },
+    {
+      "id": "uni-futa-fsen102-0042",
+      "type": "mcq",
+      "stem": "The DX register is used in:",
+      "options": {
+        "A": "Multiplication and division (high word)",
+        "B": "String operations",
+        "C": "Interrupt handling",
+        "D": "Stack operations"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "DX holds the high 16 bits of the 32-bit result in MUL/DIV operations, and the I/O port address in IN/OUT when DX is used."
+    },
+    {
+      "id": "uni-futa-fsen102-0043",
+      "type": "mcq",
+      "stem": "The SI (Source Index) register is used in:",
+      "options": {
+        "A": "Stack operations",
+        "B": "String source addressing",
+        "C": "I/O operations",
+        "D": "Interrupt handling"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SI points to the source operand in string operations (e.g., MOVSB copies from DS:SI to ES:DI)."
+    },
+    {
+      "id": "uni-futa-fsen102-0044",
+      "type": "mcq",
+      "stem": "The DI (Destination Index) register is used in:",
+      "options": {
+        "A": "Stack operations",
+        "B": "String destination addressing",
+        "C": "Code segment addressing",
+        "D": "Flag operations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DI points to the destination in string operations, always relative to the ES (Extra Segment)."
+    },
+    {
+      "id": "uni-futa-fsen102-0045",
+      "type": "mcq",
+      "stem": "Which segment register is used for code?",
+      "options": {
+        "A": "DS",
+        "B": "SS",
+        "C": "CS",
+        "D": "ES"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CS (Code Segment) defines the segment containing the currently executing code. CS:IP points to the next instruction."
+    },
+    {
+      "id": "uni-futa-fsen102-0046",
+      "type": "mcq",
+      "stem": "Which segment register is used for data by default?",
+      "options": {
+        "A": "CS",
+        "B": "DS",
+        "C": "SS",
+        "D": "ES"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DS (Data Segment) is the default segment for data memory accesses like MOV AX, [BX]."
+    },
+    {
+      "id": "uni-futa-fsen102-0047",
+      "type": "mcq",
+      "stem": "Which segment register is used for the stack?",
+      "options": {
+        "A": "CS",
+        "B": "DS",
+        "C": "SS",
+        "D": "ES"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "SS (Stack Segment) defines the segment containing the stack. SS:SP points to the top of the stack."
+    },
+    {
+      "id": "uni-futa-fsen102-0048",
+      "type": "mcq",
+      "stem": "Which segment register is used for string destination operations?",
+      "options": {
+        "A": "CS",
+        "B": "DS",
+        "C": "SS",
+        "D": "ES"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "ES (Extra Segment) is used as the segment for DI in string operations (e.g., MOVSB writes to ES:DI)."
+    },
+    {
+      "id": "uni-futa-fsen102-0049",
+      "type": "mcq",
+      "stem": "Which register holds the offset of the next instruction to execute?",
+      "options": {
+        "A": "SP",
+        "B": "BP",
+        "C": "IP",
+        "D": "SI"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The Instruction Pointer (IP) holds the offset of the next instruction within CS."
+    },
+    {
+      "id": "uni-futa-fsen102-0050",
+      "type": "mcq",
+      "stem": "How do you access the lower 8 bits of the CX register?",
+      "options": {
+        "A": "CH",
+        "B": "CL",
+        "C": "CX",
+        "D": "CX_L"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CL is the low byte of CX. CH is the high byte."
+    },
+    {
+      "id": "uni-futa-fsen102-0051",
+      "type": "mcq",
+      "stem": "Which register is used as the counter in the LOOP instruction?",
+      "options": {
+        "A": "AX",
+        "B": "BX",
+        "C": "CX",
+        "D": "DX"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "LOOP decrements CX and jumps if CX is not zero."
+    },
+    {
+      "id": "uni-futa-fsen102-0052",
+      "type": "mcq",
+      "stem": "In MUL instruction, the result of multiplying AX by a 16-bit operand is stored in:",
+      "options": {
+        "A": "AX only",
+        "B": "DX:AX",
+        "C": "CX:BX",
+        "D": "BX:AX"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "16-bit multiplication produces a 32-bit result in DX:AX (DX = high word, AX = low word)."
+    },
+    {
+      "id": "uni-futa-fsen102-0053",
+      "type": "mcq",
+      "stem": "In DIV instruction, dividing DX:AX by a 16-bit operand stores the quotient in:",
+      "options": {
+        "A": "DX",
+        "B": "AX",
+        "C": "BX",
+        "D": "CX"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The quotient goes in AX and the remainder goes in DX for 16-bit division."
+    },
+    {
+      "id": "uni-futa-fsen102-0054",
+      "type": "mcq",
+      "stem": "Which register pair is used for 32-bit multiplication result?",
+      "options": {
+        "A": "BX:CX",
+        "B": "DX:AX",
+        "C": "DS:SI",
+        "D": "CS:IP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When multiplying two 16-bit values, the 32-bit product is stored in DX:AX."
+    },
+    {
+      "id": "uni-futa-fsen102-0055",
+      "type": "mcq",
+      "stem": "The CL register is used as the count in which instructions?",
+      "options": {
+        "A": "LOOP and REP",
+        "B": "SHL, SHR, ROL, ROR",
+        "C": "MOV and XCHG",
+        "D": "PUSH and POP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Shift and rotate instructions use CL as the count when the count is variable (e.g., SHL AX, CL)."
+    },
+    {
+      "id": "uni-futa-fsen102-0056",
+      "type": "mcq",
+      "stem": "What is the size of each general-purpose register (AX, BX, CX, DX) in the 8086?",
+      "options": {
+        "A": "8 bits",
+        "B": "16 bits",
+        "C": "32 bits",
+        "D": "64 bits"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Each general-purpose register is 16 bits, but AX/BX/CX/DX can be accessed as two 8-bit halves."
+    },
+    {
+      "id": "uni-futa-fsen102-0057",
+      "type": "mcq",
+      "stem": "Which registers can be split into high and low 8-bit parts?",
+      "options": {
+        "A": "SI and DI",
+        "B": "AX, BX, CX, DX",
+        "C": "SP and BP",
+        "D": "CS and DS"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Only AX, BX, CX, and DX can be accessed as byte pairs (e.g., AH/AL, BH/BL, CH/CL, DH/DL)."
+    },
+    {
+      "id": "uni-futa-fsen102-0058",
+      "type": "mcq",
+      "stem": "Which register cannot be used as a memory pointer in the 8086?",
+      "options": {
+        "A": "BX",
+        "B": "BP",
+        "C": "SI",
+        "D": "CX"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Only BX, BP, SI, and DI can be used in memory addressing modes. CX cannot point to memory."
+    },
+    {
+      "id": "uni-futa-fsen102-0059",
+      "type": "mcq",
+      "stem": "When using [BP] as a memory pointer, the default segment is:",
+      "options": {
+        "A": "DS",
+        "B": "SS",
+        "C": "CS",
+        "D": "ES"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BP defaults to the Stack Segment (SS), unlike BX which defaults to DS."
+    },
+    {
+      "id": "uni-futa-fsen102-0060",
+      "type": "mcq",
+      "stem": "When using [BX] as a memory pointer, the default segment is:",
+      "options": {
+        "A": "DS",
+        "B": "SS",
+        "C": "CS",
+        "D": "ES"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "BX defaults to the Data Segment (DS) for memory accesses."
+    },
+    {
+      "id": "uni-futa-fsen102-0061",
+      "type": "mcq",
+      "stem": "The segment override prefix allows you to:",
+      "options": {
+        "A": "Change the default segment for one instruction",
+        "B": "Disable interrupts",
+        "C": "Switch to protected mode",
+        "D": "Change the clock speed"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Prefixes like ES:, SS:, CS: override the default segment for a single memory operand."
+    },
+    {
+      "id": "uni-futa-fsen102-0062",
+      "type": "mcq",
+      "stem": "Which register is used for I/O port addressing when the port number > 255?",
+      "options": {
+        "A": "AX",
+        "B": "BX",
+        "C": "DX",
+        "D": "CX"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "For ports 256-65535, the port number is loaded into DX: IN AX, DX or OUT DX, AX."
+    },
+    {
+      "id": "uni-futa-fsen102-0063",
+      "type": "mcq",
+      "stem": "The MOV instruction can transfer data between:",
+      "options": {
+        "A": "Register to register only",
+        "B": "Memory to register and vice versa",
+        "C": "Immediate to register/memory",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "MOV supports reg↔reg, mem↔reg, immediate→reg/mem, but NOT mem↔mem directly."
+    },
+    {
+      "id": "uni-futa-fsen102-0064",
+      "type": "mcq",
+      "stem": "Which instruction cannot move data directly from memory to memory?",
+      "options": {
+        "A": "MOV",
+        "B": "PUSH",
+        "C": "POP",
+        "D": "XCHG"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "MOV does not support memory-to-memory transfer. You must go through a register (MOV AX, [SI]; MOV [DI], AX)."
+    },
+    {
+      "id": "uni-futa-fsen102-0065",
+      "type": "mcq",
+      "stem": "The XCHG instruction swaps the contents of:",
+      "options": {
+        "A": "Two registers",
+        "B": "A register and memory",
+        "C": "Both A and B",
+        "D": "Two memory locations"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "XCHG can swap register↔register or register↔memory, but NOT memory↔memory."
+    },
+    {
+      "id": "uni-futa-fsen102-0066",
+      "type": "mcq",
+      "stem": "The LEA instruction is used to:",
+      "options": {
+        "A": "Load data from memory",
+        "B": "Load the effective address (offset) into a register",
+        "C": "Load a segment register",
+        "D": "Load the flags"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LEA calculates the offset of a memory operand and stores it in a register without accessing memory."
+    },
+    {
+      "id": "uni-futa-fsen102-0067",
+      "type": "mcq",
+      "stem": "LEA BX, [SI+5] is equivalent to:",
+      "options": {
+        "A": "MOV BX, [SI+5]",
+        "B": "MOV BX, SI",
+        "C": "MOV BX, SI; ADD BX, 5",
+        "D": "ADD BX, SI, 5"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "LEA loads the computed address (SI+5), not the data at that address."
+    },
+    {
+      "id": "uni-futa-fsen102-0068",
+      "type": "mcq",
+      "stem": "The PUSH instruction does what to SP?",
+      "options": {
+        "A": "Increments SP by 2",
+        "B": "Decrements SP by 2",
+        "C": "Does not change SP",
+        "D": "Sets SP to 0"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PUSH first decrements SP by 2, then stores the word at SS:SP."
+    },
+    {
+      "id": "uni-futa-fsen102-0069",
+      "type": "mcq",
+      "stem": "The POP instruction does what to SP?",
+      "options": {
+        "A": "Decrements SP by 2",
+        "B": "Increments SP by 2",
+        "C": "Sets SP to 0",
+        "D": "Does not change SP"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "POP first reads the word at SS:SP, then increments SP by 2."
+    },
+    {
+      "id": "uni-futa-fsen102-0070",
+      "type": "mcq",
+      "stem": "How many addressing modes does the 8086 support?",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "12"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 8086 has 8 addressing modes: register, immediate, direct, register indirect, based, indexed, based indexed, and based indexed with displacement."
+    },
+    {
+      "id": "uni-futa-fsen102-0071",
+      "type": "mcq",
+      "stem": "In immediate addressing, the operand is:",
+      "options": {
+        "A": "In a register",
+        "B": "In memory",
+        "C": "Part of the instruction itself",
+        "D": "On the stack"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Immediate addressing embeds the value directly in the instruction (e.g., MOV AX, 1234h)."
+    },
+    {
+      "id": "uni-futa-fsen102-0072",
+      "type": "mcq",
+      "stem": "In register addressing, the operand is:",
+      "options": {
+        "A": "In memory",
+        "B": "In a register",
+        "C": "Part of the instruction",
+        "D": "In an I/O port"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Register addressing uses a register as the operand (e.g., MOV AX, BX)."
+    },
+    {
+      "id": "uni-futa-fsen102-0073",
+      "type": "mcq",
+      "stem": "In direct addressing, the memory address is:",
+      "options": {
+        "A": "In a register",
+        "B": "Specified directly in the instruction",
+        "C": "Calculated from a base",
+        "D": "On the stack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Direct addressing includes the offset directly (e.g., MOV AX, [1234h])."
+    },
+    {
+      "id": "uni-futa-fsen102-0074",
+      "type": "mcq",
+      "stem": "In register indirect addressing, the memory address is:",
+      "options": {
+        "A": "Specified directly",
+        "B": "Held in a register (BX, BP, SI, or DI)",
+        "C": "Calculated from IP",
+        "D": "On the stack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Register indirect uses a register as a pointer: MOV AX, [BX]. Only BX, BP, SI, DI can be used."
+    },
+    {
+      "id": "uni-futa-fsen102-0075",
+      "type": "mcq",
+      "stem": "Which registers can be used for register indirect addressing?",
+      "options": {
+        "A": "AX, BX, CX, DX",
+        "B": "BX, BP, SI, DI",
+        "C": "SP, BP, SI, DI",
+        "D": "CS, DS, SS, ES"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Only BX, BP, SI, and DI can hold memory addresses for indirect addressing."
+    },
+    {
+      "id": "uni-futa-fsen102-0076",
+      "type": "mcq",
+      "stem": "In based addressing, the effective address is calculated as:",
+      "options": {
+        "A": "BX + displacement",
+        "B": "SI + displacement",
+        "C": "IP + displacement",
+        "D": "SP + displacement"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Based addressing uses BX or BP plus an 8-bit or 16-bit displacement: MOV AX, [BX+8]."
+    },
+    {
+      "id": "uni-futa-fsen102-0077",
+      "type": "mcq",
+      "stem": "In indexed addressing, the effective address is calculated as:",
+      "options": {
+        "A": "BX + displacement",
+        "B": "SI or DI + displacement",
+        "C": "CX + displacement",
+        "D": "DX + displacement"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Indexed addressing uses SI or DI plus a displacement: MOV AX, [SI+10]."
+    },
+    {
+      "id": "uni-futa-fsen102-0078",
+      "type": "mcq",
+      "stem": "In based indexed addressing, the effective address is:",
+      "options": {
+        "A": "BX + SI",
+        "B": "BX + SI + displacement",
+        "C": "BP + DI",
+        "D": "All of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Based indexed can be BX+SI, BX+DI, BP+SI, BP+DI, optionally with a displacement."
+    },
+    {
+      "id": "uni-futa-fsen102-0079",
+      "type": "mcq",
+      "stem": "MOV AX, [BX+SI+8] is an example of:",
+      "options": {
+        "A": "Direct addressing",
+        "B": "Based indexed with displacement",
+        "C": "Register addressing",
+        "D": "Immediate addressing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "This uses a base register (BX), an index register (SI), and a displacement (8)."
+    },
+    {
+      "id": "uni-futa-fsen102-0080",
+      "type": "mcq",
+      "stem": "MOV AX, [1234h] is an example of:",
+      "options": {
+        "A": "Immediate addressing",
+        "B": "Direct addressing",
+        "C": "Register indirect",
+        "D": "Based addressing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The memory offset (1234h) is specified directly in the instruction."
+    },
+    {
+      "id": "uni-futa-fsen102-0081",
+      "type": "mcq",
+      "stem": "MOV AX, 1234h is an example of:",
+      "options": {
+        "A": "Immediate addressing",
+        "B": "Direct addressing",
+        "C": "Register addressing",
+        "D": "Register indirect"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "1234h is the value itself (immediate), not a memory address. Note: no brackets."
+    },
+    {
+      "id": "uni-futa-fsen102-0082",
+      "type": "mcq",
+      "stem": "MOV AX, BX is an example of:",
+      "options": {
+        "A": "Immediate addressing",
+        "B": "Register addressing",
+        "C": "Direct addressing",
+        "D": "Register indirect"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Both operands are registers — no memory or immediate value involved."
+    },
+    {
+      "id": "uni-futa-fsen102-0083",
+      "type": "mcq",
+      "stem": "MOV AX, [BX] is an example of:",
+      "options": {
+        "A": "Direct addressing",
+        "B": "Register indirect addressing",
+        "C": "Based addressing",
+        "D": "Indexed addressing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BX holds the memory address; the brackets [ ] indicate memory access."
+    },
+    {
+      "id": "uni-futa-fsen102-0084",
+      "type": "mcq",
+      "stem": "What is the difference between MOV AX, 1234h and MOV AX, [1234h]?",
+      "options": {
+        "A": "No difference",
+        "B": "First loads the value 1234h; second loads data from memory address 1234h",
+        "C": "First loads from memory; second loads immediate",
+        "D": "Both are invalid"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Brackets [ ] indicate memory access. Without brackets, the value is immediate."
+    },
+    {
+      "id": "uni-futa-fsen102-0085",
+      "type": "mcq",
+      "stem": "The displacement in based addressing can be:",
+      "options": {
+        "A": "8-bit only",
+        "B": "16-bit only",
+        "C": "8-bit or 16-bit",
+        "D": "32-bit"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 8086 supports both 8-bit (signed) and 16-bit displacements in based/indexed addressing."
+    },
+    {
+      "id": "uni-futa-fsen102-0086",
+      "type": "mcq",
+      "stem": "Which addressing mode is most useful for accessing array elements?",
+      "options": {
+        "A": "Direct",
+        "B": "Register indirect",
+        "C": "Indexed",
+        "D": "Immediate"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Indexed addressing (using SI or DI) is ideal for arrays — increment SI/DI to access successive elements."
+    },
+    {
+      "id": "uni-futa-fsen102-0087",
+      "type": "mcq",
+      "stem": "Which addressing mode is most useful for accessing structure fields?",
+      "options": {
+        "A": "Indexed",
+        "B": "Based",
+        "C": "Immediate",
+        "D": "Register"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Based addressing (using BX or BP + displacement) is ideal for accessing fields at fixed offsets from a base address."
+    },
+    {
+      "id": "uni-futa-fsen102-0088",
+      "type": "mcq",
+      "stem": "The effective address in MOV AX, [BP+6] is:",
+      "options": {
+        "A": "BP + 6, relative to DS",
+        "B": "BP + 6, relative to SS",
+        "C": "BP + 6, relative to CS",
+        "D": "BP + 6, relative to ES"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BP defaults to SS (Stack Segment), so [BP+6] accesses SS:BP+6."
+    },
+    {
+      "id": "uni-futa-fsen102-0089",
+      "type": "mcq",
+      "stem": "The effective address in MOV AX, [BX+6] is:",
+      "options": {
+        "A": "BX + 6, relative to SS",
+        "B": "BX + 6, relative to DS",
+        "C": "BX + 6, relative to CS",
+        "D": "BX + 6, relative to ES"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "BX defaults to DS (Data Segment), so [BX+6] accesses DS:BX+6."
+    },
+    {
+      "id": "uni-futa-fsen102-0090",
+      "type": "mcq",
+      "stem": "To override the default segment for [BX], you would use:",
+      "options": {
+        "A": "ES: [BX]",
+        "B": "CS: [BX]",
+        "C": "SS: [BX]",
+        "D": "Any of the above"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "Segment override prefixes (ES:, CS:, SS:) can change the default segment for any memory operand."
+    },
+    {
+      "id": "uni-futa-fsen102-0091",
+      "type": "mcq",
+      "stem": "Which is NOT a valid 8086 addressing mode combination?",
+      "options": {
+        "A": "[BX+SI]",
+        "B": "[AX+BX]",
+        "C": "[BP+DI]",
+        "D": "[BX+DI+10]"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AX cannot be used as a base or index register in memory addressing. Only BX, BP, SI, DI are valid."
+    },
+    {
+      "id": "uni-futa-fsen102-0092",
+      "type": "mcq",
+      "stem": "The physical address for CS:IP = 1000:2000 is:",
+      "options": {
+        "A": "3000h",
+        "B": "12000h",
+        "C": "10000h",
+        "D": "22000h"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Physical = CS×16 + IP = 1000h×10h + 2000h = 10000h + 2000h = 12000h."
+    },
+    {
+      "id": "uni-futa-fsen102-0093",
+      "type": "mcq",
+      "stem": "If DS = 2000h and BX = 0100h, the physical address of [BX] is:",
+      "options": {
+        "A": "2010h",
+        "B": "20100h",
+        "C": "21000h",
+        "D": "20001h"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Physical = DS×16 + BX = 2000h×10h + 0100h = 20000h + 0100h = 20100h."
+    },
+    {
+      "id": "uni-futa-fsen102-0094",
+      "type": "mcq",
+      "stem": "Two different segment:offset pairs can point to the same physical address. This is called:",
+      "options": {
+        "A": "Address aliasing",
+        "B": "Segment overlap",
+        "C": "Address wrapping",
+        "D": "Logical address equivalence"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Since segment×16 + offset can produce the same physical address from different segment:offset pairs."
+    },
+    {
+      "id": "uni-futa-fsen102-0095",
+      "type": "mcq",
+      "stem": "The ADD instruction affects which flags?",
+      "options": {
+        "A": "CF, ZF, SF, OF, AF, PF",
+        "B": "Only CF and ZF",
+        "C": "Only IF and TF",
+        "D": "No flags"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ADD affects all arithmetic flags: Carry, Zero, Sign, Overflow, Auxiliary Carry, and Parity."
+    },
+    {
+      "id": "uni-futa-fsen102-0096",
+      "type": "mcq",
+      "stem": "The SUB instruction affects which flags?",
+      "options": {
+        "A": "Same as ADD",
+        "B": "Only CF and ZF",
+        "C": "Only SF and OF",
+        "D": "No flags"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SUB affects the same flags as ADD: CF, ZF, SF, OF, AF, PF."
+    },
+    {
+      "id": "uni-futa-fsen102-0097",
+      "type": "mcq",
+      "stem": "The INC instruction affects which flags?",
+      "options": {
+        "A": "All flags including CF",
+        "B": "All flags except CF",
+        "C": "Only ZF and SF",
+        "D": "No flags"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "INC does not affect CF (Carry Flag) — this allows using INC in loop counters without disturbing carry state."
+    },
+    {
+      "id": "uni-futa-fsen102-0098",
+      "type": "mcq",
+      "stem": "The DEC instruction affects which flags?",
+      "options": {
+        "A": "All flags including CF",
+        "B": "All flags except CF",
+        "C": "Only ZF",
+        "D": "No flags"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Like INC, DEC does not affect CF."
+    },
+    {
+      "id": "uni-futa-fsen102-0099",
+      "type": "mcq",
+      "stem": "The CMP instruction does what?",
+      "options": {
+        "A": "Adds two operands",
+        "B": "Subtracts operands and sets flags but discards result",
+        "C": "Multiplies operands",
+        "D": "Swaps operands"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CMP performs subtraction to set flags for conditional jumps, without modifying the operands."
+    },
+    {
+      "id": "uni-futa-fsen102-0100",
+      "type": "mcq",
+      "stem": "After CMP AX, BX, if ZF=1, it means:",
+      "options": {
+        "A": "AX > BX",
+        "B": "AX < BX",
+        "C": "AX = BX",
+        "D": "AX and BX are both zero"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ZF=1 means the subtraction result was zero, so AX equals BX."
+    },
+    {
+      "id": "uni-futa-fsen102-0101",
+      "type": "mcq",
+      "stem": "After CMP AX, BX, if CF=1 (unsigned), it means:",
+      "options": {
+        "A": "AX > BX",
+        "B": "AX < BX",
+        "C": "AX = BX",
+        "D": "Overflow occurred"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CF=1 means a borrow was needed, so AX (minuend) is less than BX (subtrahend)."
+    },
+    {
+      "id": "uni-futa-fsen102-0102",
+      "type": "mcq",
+      "stem": "The JMP instruction is:",
+      "options": {
+        "A": "Conditional",
+        "B": "Unconditional",
+        "C": "Both",
+        "D": "Neither"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "JMP always transfers control to the target address, regardless of flags."
+    },
+    {
+      "id": "uni-futa-fsen102-0103",
+      "type": "mcq",
+      "stem": "How many conditional jump instructions does the 8086 have?",
+      "options": {
+        "A": "8",
+        "B": "16",
+        "C": "18",
+        "D": "24"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "The 8086 has 18 conditional jump instructions (JE, JNE, JG, JL, JGE, JLE, JA, JB, JAE, JBE, etc.)."
+    },
+    {
+      "id": "uni-futa-fsen102-0104",
+      "type": "mcq",
+      "stem": "JE (Jump if Equal) is the same as:",
+      "options": {
+        "A": "JZ",
+        "B": "JNE",
+        "C": "JG",
+        "D": "JL"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "JE and JZ are identical — both jump when ZF=1."
+    },
+    {
+      "id": "uni-futa-fsen102-0105",
+      "type": "mcq",
+      "stem": "JNE (Jump if Not Equal) is the same as:",
+      "options": {
+        "A": "JZ",
+        "B": "JNZ",
+        "C": "JC",
+        "D": "JNC"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "JNE and JNZ are identical — both jump when ZF=0."
+    },
+    {
+      "id": "uni-futa-fsen102-0106",
+      "type": "mcq",
+      "stem": "JA (Jump if Above) checks which flags (unsigned)?",
+      "options": {
+        "A": "CF=0 and ZF=0",
+        "B": "CF=1",
+        "C": "ZF=1",
+        "D": "SF≠OF"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "JA jumps when the destination is above the source (unsigned): no carry AND not equal."
+    },
+    {
+      "id": "uni-futa-fsen102-0107",
+      "type": "mcq",
+      "stem": "JG (Jump if Greater) checks which flags (signed)?",
+      "options": {
+        "A": "ZF=0 and SF=OF",
+        "B": "CF=0",
+        "C": "ZF=1",
+        "D": "SF≠OF"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "JG jumps for signed greater-than: not equal AND sign flag equals overflow flag."
+    },
+    {
+      "id": "uni-futa-fsen102-0108",
+      "type": "mcq",
+      "stem": "The LOOP instruction does what?",
+      "options": {
+        "A": "Decrements CX and jumps if CX≠0",
+        "B": "Increments CX and jumps",
+        "C": "Jumps unconditionally",
+        "D": "Does not affect CX"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "LOOP = DEC CX; JNZ target. It decrements CX and jumps if CX is not yet zero."
+    },
+    {
+      "id": "uni-futa-fsen102-0109",
+      "type": "mcq",
+      "stem": "LOOPE (Loop if Equal) decrements CX and jumps if:",
+      "options": {
+        "A": "CX≠0 only",
+        "B": "CX≠0 and ZF=1",
+        "C": "CX≠0 and ZF=0",
+        "D": "ZF=1 only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LOOPE (also LOOPZ) continues the loop if CX is not zero AND ZF=1 (equal/zero condition)."
+    },
+    {
+      "id": "uni-futa-fsen102-0110",
+      "type": "mcq",
+      "stem": "LOOPNE (Loop if Not Equal) decrements CX and jumps if:",
+      "options": {
+        "A": "CX≠0 only",
+        "B": "CX≠0 and ZF=1",
+        "C": "CX≠0 and ZF=0",
+        "D": "ZF=0 only"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "LOOPNE (also LOOPNZ) continues if CX is not zero AND ZF=0 (not equal/non-zero condition)."
+    },
+    {
+      "id": "uni-futa-fsen102-0111",
+      "type": "mcq",
+      "stem": "The MUL instruction performs ___ multiplication.",
+      "options": {
+        "A": "Signed",
+        "B": "Unsigned",
+        "C": "Both",
+        "D": "Floating-point"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MUL performs unsigned multiplication. IMUL performs signed multiplication."
+    },
+    {
+      "id": "uni-futa-fsen102-0112",
+      "type": "mcq",
+      "stem": "The IMUL instruction performs ___ multiplication.",
+      "options": {
+        "A": "Signed",
+        "B": "Unsigned",
+        "C": "Both",
+        "D": "Floating-point"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "IMUL performs signed (two's complement) multiplication."
+    },
+    {
+      "id": "uni-futa-fsen102-0113",
+      "type": "mcq",
+      "stem": "MUL BL multiplies AL by BL and stores the result in:",
+      "options": {
+        "A": "AL",
+        "B": "AX",
+        "C": "DX:AX",
+        "D": "BL"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "8-bit multiplication: AL × operand → AX (16-bit result)."
+    },
+    {
+      "id": "uni-futa-fsen102-0114",
+      "type": "mcq",
+      "stem": "MUL BX multiplies AX by BX and stores the result in:",
+      "options": {
+        "A": "AX",
+        "B": "BX",
+        "C": "DX:AX",
+        "D": "CX:BX"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "16-bit multiplication: AX × operand → DX:AX (32-bit result)."
+    },
+    {
+      "id": "uni-futa-fsen102-0115",
+      "type": "mcq",
+      "stem": "DIV BL divides AX by BL and stores the quotient in:",
+      "options": {
+        "A": "AL",
+        "B": "AH",
+        "C": "AX",
+        "D": "BL"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "8-bit division: AX / operand → quotient in AL, remainder in AH."
+    },
+    {
+      "id": "uni-futa-fsen102-0116",
+      "type": "mcq",
+      "stem": "DIV BX divides DX:AX by BX and stores the quotient in:",
+      "options": {
+        "A": "AX (quotient), DX (remainder)",
+        "B": "DX (quotient), AX (remainder)",
+        "C": "BX (quotient), CX (remainder)",
+        "D": "AX only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "16-bit division: DX:AX / operand → quotient in AX, remainder in DX."
+    },
+    {
+      "id": "uni-futa-fsen102-0117",
+      "type": "mcq",
+      "stem": "The CBW instruction does what?",
+      "options": {
+        "A": "Converts byte to word (sign-extends AL to AX)",
+        "B": "Converts word to byte",
+        "C": "Clears AX",
+        "D": "Swaps AH and AL"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CBW (Convert Byte to Word) sign-extends AL into AX: if AL is negative (bit 7=1), AH=FFh; otherwise AH=00h."
+    },
+    {
+      "id": "uni-futa-fsen102-0118",
+      "type": "mcq",
+      "stem": "The CWD instruction does what?",
+      "options": {
+        "A": "Converts word to doubleword (sign-extends AX to DX:AX)",
+        "B": "Converts doubleword to word",
+        "C": "Clears DX",
+        "D": "Swaps AX and DX"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CWD (Convert Word to Doubleword) sign-extends AX into DX:AX for 32-bit division."
+    },
+    {
+      "id": "uni-futa-fsen102-0119",
+      "type": "mcq",
+      "stem": "The NEG instruction does what?",
+      "options": {
+        "A": "Makes the operand zero",
+        "B": "Computes two's complement (0 - operand)",
+        "C": "Sets all bits to 1",
+        "D": "Reverses bit order"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "NEG negates the operand by subtracting it from zero (equivalent to NOT + INC)."
+    },
+    {
+      "id": "uni-futa-fsen102-0120",
+      "type": "mcq",
+      "stem": "The NOT instruction does what?",
+      "options": {
+        "A": "Computes two's complement",
+        "B": "Computes one's complement (flips all bits)",
+        "C": "Sets operand to 0",
+        "D": "Sets operand to 1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "NOT flips every bit (0→1, 1→0). It does NOT affect any flags."
+    },
+    {
+      "id": "uni-futa-fsen102-0121",
+      "type": "mcq",
+      "stem": "Which logic instruction does NOT affect flags?",
+      "options": {
+        "A": "AND",
+        "B": "OR",
+        "C": "XOR",
+        "D": "NOT"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "NOT is the only logic instruction that does not modify any flags. AND, OR, XOR all clear CF and OF."
+    },
+    {
+      "id": "uni-futa-fsen102-0122",
+      "type": "mcq",
+      "stem": "AND AX, 000Fh does what?",
+      "options": {
+        "A": "Clears all bits except the lower 4",
+        "B": "Sets all bits to 1",
+        "C": "Inverts all bits",
+        "D": "Adds 0Fh to AX"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ANDing with 000Fh masks (preserves) only the lower 4 bits of AX."
+    },
+    {
+      "id": "uni-futa-fsen102-0123",
+      "type": "mcq",
+      "stem": "OR AX, 00FFh does what?",
+      "options": {
+        "A": "Clears the lower 8 bits",
+        "B": "Sets all bits in the lower byte to 1",
+        "C": "Inverts the lower byte",
+        "D": "Shifts AX right by 8"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "ORing with 00FFh sets (forces to 1) all bits in the lower byte (AL)."
+    },
+    {
+      "id": "uni-futa-fsen102-0124",
+      "type": "mcq",
+      "stem": "XOR AX, AX does what?",
+      "options": {
+        "A": "Sets AX to 0",
+        "B": "Sets AX to FFFFh",
+        "C": "Inverts AX",
+        "D": "Adds AX to itself"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "XORing a register with itself always produces 0. This is a common way to clear a register."
+    },
+    {
+      "id": "uni-futa-fsen102-0125",
+      "type": "mcq",
+      "stem": "TEST AX, 0001h does what?",
+      "options": {
+        "A": "Sets AX to 1",
+        "B": "Performs AND but discards result (only sets flags)",
+        "C": "Adds 1 to AX",
+        "D": "Shifts AX right by 1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "TEST is like AND but does not store the result — it only sets flags for conditional jumps."
+    },
+    {
+      "id": "uni-futa-fsen102-0126",
+      "type": "mcq",
+      "stem": "SHL AX, 1 does what?",
+      "options": {
+        "A": "Shifts AX left by 1 bit (multiply by 2)",
+        "B": "Shifts AX right by 1",
+        "C": "Rotates AX left",
+        "D": "Divides AX by 2"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SHL (Shift Logical Left) by 1 is equivalent to multiplying by 2. The MSB goes into CF."
+    },
+    {
+      "id": "uni-futa-fsen102-0127",
+      "type": "mcq",
+      "stem": "SHR AX, 1 does what?",
+      "options": {
+        "A": "Shifts AX right by 1 bit (unsigned divide by 2)",
+        "B": "Shifts AX left by 1",
+        "C": "Rotates AX right",
+        "D": "Multiplies AX by 2"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SHR (Shift Logical Right) by 1 is equivalent to unsigned division by 2. The LSB goes into CF."
+    },
+    {
+      "id": "uni-futa-fsen102-0128",
+      "type": "mcq",
+      "stem": "SAR AX, 1 does what?",
+      "options": {
+        "A": "Unsigned divide by 2",
+        "B": "Signed divide by 2 (preserves sign bit)",
+        "C": "Logical shift left",
+        "D": "Rotate right"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "SAR (Shift Arithmetic Right) preserves the sign bit (MSB) while shifting right, performing signed division by 2."
+    },
+    {
+      "id": "uni-futa-fsen102-0129",
+      "type": "mcq",
+      "stem": "ROL AX, 1 does what?",
+      "options": {
+        "A": "Rotates AX left by 1 (MSB goes to LSB and CF)",
+        "B": "Shifts left",
+        "C": "Rotates through carry",
+        "D": "Does nothing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ROL (Rotate Left) moves each bit left, and the MSB wraps around to both the LSB and the Carry Flag."
+    },
+    {
+      "id": "uni-futa-fsen102-0130",
+      "type": "mcq",
+      "stem": "ROR AX, 1 does what?",
+      "options": {
+        "A": "Rotates AX right by 1 (LSB goes to MSB and CF)",
+        "B": "Shifts right",
+        "C": "Rotates through carry",
+        "D": "Does nothing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ROR (Rotate Right) moves each bit right, and the LSB wraps around to both the MSB and the Carry Flag."
+    },
+    {
+      "id": "uni-futa-fsen102-0131",
+      "type": "mcq",
+      "stem": "RCL AX, 1 does what?",
+      "options": {
+        "A": "Rotates left through carry (9-bit rotation)",
+        "B": "Rotates left without carry",
+        "C": "Shifts left through carry",
+        "D": "Does nothing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "RCL (Rotate through Carry Left) treats CF as bit 16 — the MSB goes into CF, and old CF goes into LSB."
+    },
+    {
+      "id": "uni-futa-fsen102-0132",
+      "type": "mcq",
+      "stem": "RCR AX, 1 does what?",
+      "options": {
+        "A": "Rotates right through carry",
+        "B": "Rotates right without carry",
+        "C": "Shifts right through carry",
+        "D": "Does nothing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "RCR (Rotate through Carry Right) treats CF as bit 16 — the LSB goes into CF, and old CF goes into MSB."
+    },
+    {
+      "id": "uni-futa-fsen102-0133",
+      "type": "mcq",
+      "stem": "PUSHF pushes which register onto the stack?",
+      "options": {
+        "A": "AX",
+        "B": "FLAGS",
+        "C": "IP",
+        "D": "CS"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PUSHF pushes the 16-bit FLAGS register onto the stack."
+    },
+    {
+      "id": "uni-futa-fsen102-0134",
+      "type": "mcq",
+      "stem": "POPF does what?",
+      "options": {
+        "A": "Pops AX from stack",
+        "B": "Pops FLAGS from stack into the FLAGS register",
+        "C": "Pops IP from stack",
+        "D": "Pops CS from stack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "POPF pops the top of the stack into the FLAGS register, restoring saved flags."
+    },
+    {
+      "id": "uni-futa-fsen102-0135",
+      "type": "mcq",
+      "stem": "The CALL instruction does what?",
+      "options": {
+        "A": "Jumps to a subroutine and pushes the return address",
+        "B": "Only jumps",
+        "C": "Pushes flags",
+        "D": "Pops the stack"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CALL pushes CS:IP (return address) onto the stack, then jumps to the subroutine."
+    },
+    {
+      "id": "uni-futa-fsen102-0136",
+      "type": "mcq",
+      "stem": "The RET instruction does what?",
+      "options": {
+        "A": "Pushes the return address",
+        "B": "Pops the return address from stack into CS:IP",
+        "C": "Clears the stack",
+        "D": "Does nothing"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "RET pops the saved return address from the stack back into IP (and CS for far returns)."
+    },
+    {
+      "id": "uni-futa-fsen102-0137",
+      "type": "mcq",
+      "stem": "A near CALL pushes how many bytes?",
+      "options": {
+        "A": "1 byte",
+        "B": "2 bytes (IP only)",
+        "C": "4 bytes (CS:IP)",
+        "D": "8 bytes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A near call (same segment) pushes only IP (2 bytes). A far call pushes CS:IP (4 bytes)."
+    },
+    {
+      "id": "uni-futa-fsen102-0138",
+      "type": "mcq",
+      "stem": "A far CALL pushes how many bytes?",
+      "options": {
+        "A": "2 bytes",
+        "B": "4 bytes (CS and IP)",
+        "C": "6 bytes",
+        "D": "8 bytes"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "A far call (different segment) pushes both CS (2 bytes) and IP (2 bytes) = 4 bytes total."
+    },
+    {
+      "id": "uni-futa-fsen102-0139",
+      "type": "mcq",
+      "stem": "RET 4 does what?",
+      "options": {
+        "A": "Returns and pops 4 extra bytes from stack",
+        "B": "Returns 4 times",
+        "C": "Returns to address 4",
+        "D": "Does nothing special"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "RET n returns and then adds n to SP, removing n bytes of parameters from the stack (cdecl cleanup)."
+    },
+    {
+      "id": "uni-futa-fsen102-0140",
+      "type": "mcq",
+      "stem": "INT 21h is commonly used for:",
+      "options": {
+        "A": "Arithmetic",
+        "B": "DOS function calls",
+        "C": "Hardware interrupts",
+        "D": "Stack operations"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "INT 21h is the DOS API interrupt — AH specifies the function number (e.g., AH=09h for print string, AH=4Ch for exit)."
+    },
+    {
+      "id": "uni-futa-fsen102-0141",
+      "type": "mcq",
+      "stem": "Which INT 21h function displays a string?",
+      "options": {
+        "A": "AH=01h",
+        "B": "AH=09h",
+        "C": "AH=4Ch",
+        "D": "AH=00h"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AH=09h displays a '$'-terminated string pointed to by DS:DX."
+    },
+    {
+      "id": "uni-futa-fsen102-0142",
+      "type": "mcq",
+      "stem": "Which INT 21h function terminates a program?",
+      "options": {
+        "A": "AH=01h",
+        "B": "AH=09h",
+        "C": "AH=4Ch",
+        "D": "AH=0Ah"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "AH=4Ch exits the program, with AL containing the return code."
+    },
+    {
+      "id": "uni-futa-fsen102-0143",
+      "type": "mcq",
+      "stem": "Which INT 21h function reads a character from keyboard?",
+      "options": {
+        "A": "AH=01h",
+        "B": "AH=02h",
+        "C": "AH=09h",
+        "D": "AH=4Ch"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "AH=01h reads a character from standard input, echoes it, and returns it in AL."
+    },
+    {
+      "id": "uni-futa-fsen102-0144",
+      "type": "mcq",
+      "stem": "Which INT 21h function displays a single character?",
+      "options": {
+        "A": "AH=01h",
+        "B": "AH=02h",
+        "C": "AH=09h",
+        "D": "AH=0Ah"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AH=02h displays the character in DL to standard output."
+    },
+    {
+      "id": "uni-futa-fsen102-0145",
+      "type": "mcq",
+      "stem": "In INT 21h AH=09h, the string must be terminated by:",
+      "options": {
+        "A": "Null byte (00h)",
+        "B": "Dollar sign ($)",
+        "C": "Newline (0Ah)",
+        "D": "Zero (0)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DOS function 09h requires the string to end with '$' (24h)."
+    },
+    {
+      "id": "uni-futa-fsen102-0146",
+      "type": "mcq",
+      "stem": "IRET (Interrupt Return) pops how many items from the stack?",
+      "options": {
+        "A": "1 (IP only)",
+        "B": "2 (IP and CS)",
+        "C": "3 (IP, CS, and FLAGS)",
+        "D": "4 items"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "IRET pops IP, CS, and FLAGS from the stack — used to return from interrupt handlers."
+    },
+    {
+      "id": "uni-futa-fsen102-0147",
+      "type": "mcq",
+      "stem": "The STI instruction does what?",
+      "options": {
+        "A": "Disables interrupts (clears IF)",
+        "B": "Enables interrupts (sets IF)",
+        "C": "Sends an interrupt",
+        "D": "Clears the stack"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "STI sets the Interrupt Flag (IF=1), enabling maskable hardware interrupts."
+    },
+    {
+      "id": "uni-futa-fsen102-0148",
+      "type": "mcq",
+      "stem": "The CLI instruction does what?",
+      "options": {
+        "A": "Enables interrupts",
+        "B": "Disables interrupts (clears IF)",
+        "C": "Triggers an interrupt",
+        "D": "Clears flags"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CLI clears the Interrupt Flag (IF=0), disabling maskable hardware interrupts."
+    },
+    {
+      "id": "uni-futa-fsen102-0149",
+      "type": "mcq",
+      "stem": "The CLC instruction does what?",
+      "options": {
+        "A": "Sets CF",
+        "B": "Clears CF (Carry Flag)",
+        "C": "Clears all flags",
+        "D": "Sets all flags"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CLC explicitly clears the Carry Flag (CF=0)."
+    },
+    {
+      "id": "uni-futa-fsen102-0150",
+      "type": "mcq",
+      "stem": "The STC instruction does what?",
+      "options": {
+        "A": "Clears CF",
+        "B": "Sets CF (Carry Flag = 1)",
+        "C": "Sets all flags",
+        "D": "Clears ZF"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "STC explicitly sets the Carry Flag (CF=1)."
+    },
+    {
+      "id": "uni-futa-fsen102-0151",
+      "type": "mcq",
+      "stem": "The CMC instruction does what?",
+      "options": {
+        "A": "Clears CF",
+        "B": "Sets CF",
+        "C": "Complements (inverts) CF",
+        "D": "Does nothing to CF"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "CMC (Complement Carry Flag) flips CF: if CF=0, it becomes 1, and vice versa."
+    },
+    {
+      "id": "uni-futa-fsen102-0152",
+      "type": "mcq",
+      "stem": "LAHF and SAHF transfer flags between:",
+      "options": {
+        "A": "AX and FLAGS",
+        "B": "AH and lower byte of FLAGS",
+        "C": "AL and FLAGS",
+        "D": "DX and FLAGS"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LAHF loads the lower 8 bits of FLAGS into AH; SAHF stores AH into the lower 8 bits of FLAGS."
+    },
+    {
+      "id": "uni-futa-fsen102-0153",
+      "type": "mcq",
+      "stem": "MOVSB copies a byte from:",
+      "options": {
+        "A": "DS:SI to ES:DI",
+        "B": "ES:DI to DS:SI",
+        "C": "CS:IP to DS:SI",
+        "D": "SS:SP to DS:SI"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "MOVSB copies one byte from DS:SI to ES:DI, then auto-increments (or decrements) SI and DI."
+    },
+    {
+      "id": "uni-futa-fsen102-0154",
+      "type": "mcq",
+      "stem": "MOVSW copies how many bytes?",
+      "options": {
+        "A": "1 byte",
+        "B": "2 bytes (one word)",
+        "C": "4 bytes",
+        "D": "Variable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MOVSW copies a 16-bit word from DS:SI to ES:DI."
+    },
+    {
+      "id": "uni-futa-fsen102-0155",
+      "type": "mcq",
+      "stem": "When DF=0, string instructions auto-___ SI and DI.",
+      "options": {
+        "A": "Decrement",
+        "B": "Increment",
+        "C": "Do not change",
+        "D": "Set to zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DF=0 (cleared by CLD) means forward direction — SI and DI increment after each string operation."
+    },
+    {
+      "id": "uni-futa-fsen102-0156",
+      "type": "mcq",
+      "stem": "When DF=1, string instructions auto-___ SI and DI.",
+      "options": {
+        "A": "Increment",
+        "B": "Decrement",
+        "C": "Do not change",
+        "D": "Set to zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DF=1 (set by STD) means backward direction — SI and DI decrement after each string operation."
+    },
+    {
+      "id": "uni-futa-fsen102-0157",
+      "type": "mcq",
+      "stem": "The CLD instruction does what?",
+      "options": {
+        "A": "Sets DF (backward)",
+        "B": "Clears DF (forward)",
+        "C": "Does nothing",
+        "D": "Clears all flags"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CLD clears the Direction Flag, making string operations auto-increment SI/DI."
+    },
+    {
+      "id": "uni-futa-fsen102-0158",
+      "type": "mcq",
+      "stem": "The STD instruction does what?",
+      "options": {
+        "A": "Clears DF",
+        "B": "Sets DF (backward direction)",
+        "C": "Does nothing",
+        "D": "Sets all flags"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "STD sets the Direction Flag, making string operations auto-decrement SI/DI."
+    },
+    {
+      "id": "uni-futa-fsen102-0159",
+      "type": "mcq",
+      "stem": "The REP prefix repeats a string instruction:",
+      "options": {
+        "A": "Once",
+        "B": "Until CX=0",
+        "C": "Until ZF=1",
+        "D": "Until DF=0"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "REP repeats the string instruction, decrementing CX each time, until CX becomes 0."
+    },
+    {
+      "id": "uni-futa-fsen102-0160",
+      "type": "mcq",
+      "stem": "REPE (or REPZ) repeats while:",
+      "options": {
+        "A": "CX≠0 and ZF=1",
+        "B": "CX≠0 and ZF=0",
+        "C": "CX=0",
+        "D": "ZF=1 only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "REPE repeats while CX is not zero AND ZF=1 (equal condition). Used with CMPSB/SCASB."
+    },
+    {
+      "id": "uni-futa-fsen102-0161",
+      "type": "mcq",
+      "stem": "REPNE (or REPNZ) repeats while:",
+      "options": {
+        "A": "CX≠0 and ZF=1",
+        "B": "CX≠0 and ZF=0",
+        "C": "CX=0",
+        "D": "ZF=0 only"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "REPNE repeats while CX is not zero AND ZF=0 (not equal condition)."
+    },
+    {
+      "id": "uni-futa-fsen102-0162",
+      "type": "mcq",
+      "stem": "CMPSB compares:",
+      "options": {
+        "A": "Byte at DS:SI with byte at ES:DI",
+        "B": "AX with BX",
+        "C": "Two registers",
+        "D": "Two immediate values"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "CMPSB subtracts ES:DI from DS:SI (byte comparison) and sets flags, then auto-adjusts SI and DI."
+    },
+    {
+      "id": "uni-futa-fsen102-0163",
+      "type": "mcq",
+      "stem": "SCASB scans a string by comparing:",
+      "options": {
+        "A": "AL with byte at ES:DI",
+        "B": "AX with ES:DI",
+        "C": "BL with DS:SI",
+        "D": "AL with DS:SI"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "SCASB compares AL with the byte at ES:DI and sets flags, then auto-adjusts DI."
+    },
+    {
+      "id": "uni-futa-fsen102-0164",
+      "type": "mcq",
+      "stem": "LODSB loads a byte from:",
+      "options": {
+        "A": "ES:DI into AL",
+        "B": "DS:SI into AL",
+        "C": "Stack into AL",
+        "D": "I/O port into AL"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "LODSB loads the byte at DS:SI into AL, then auto-adjusts SI."
+    },
+    {
+      "id": "uni-futa-fsen102-0165",
+      "type": "mcq",
+      "stem": "STOSB stores a byte from:",
+      "options": {
+        "A": "AL to ES:DI",
+        "B": "AL to DS:SI",
+        "C": "AL to SS:SP",
+        "D": "AL to CS:IP"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "STOSB stores AL at ES:DI, then auto-adjusts DI. Useful for filling memory."
+    },
+    {
+      "id": "uni-futa-fsen102-0166",
+      "type": "mcq",
+      "stem": "To copy a 100-byte string, you would use:",
+      "options": {
+        "A": "REP MOVSB with CX=100",
+        "B": "LOOP MOVSB",
+        "C": "100 MOVSB instructions",
+        "D": "REP with AX=100"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Set CX=100, use REP MOVSB to copy 100 bytes from DS:SI to ES:DI."
+    },
+    {
+      "id": "uni-futa-fsen102-0167",
+      "type": "mcq",
+      "stem": "To fill 50 bytes of memory with 0, you would use:",
+      "options": {
+        "A": "REP STOSB with CX=50, AL=0",
+        "B": "REP MOVSB",
+        "C": "LOOP with MOV",
+        "D": "REP LODSB"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Set AL=0, CX=50, then REP STOSB fills 50 bytes at ES:DI with zeros."
+    },
+    {
+      "id": "uni-futa-fsen102-0168",
+      "type": "mcq",
+      "stem": "REPNE SCASB is typically used for:",
+      "options": {
+        "A": "String copy",
+        "B": "Searching for a character in a string",
+        "C": "String comparison",
+        "D": "Filling memory"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "REPNE SCASB repeats until AL matches a byte in the string (ZF=1) or CX=0 — finding a character."
+    },
+    {
+      "id": "uni-futa-fsen102-0169",
+      "type": "mcq",
+      "stem": "After REPNE SCASB finds a match, DI points to:",
+      "options": {
+        "A": "The matching byte",
+        "B": "One byte after the match",
+        "C": "The start of the string",
+        "D": "The end of the string"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DI was auto-incremented after the comparison, so it points to the byte AFTER the match."
+    },
+    {
+      "id": "uni-futa-fsen102-0170",
+      "type": "mcq",
+      "stem": "MOVSB adjusts SI and DI by:",
+      "options": {
+        "A": "1 (when DF=0)",
+        "B": "2 (when DF=0)",
+        "C": "4",
+        "D": "Depends on operand size"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "MOVSB (byte) adjusts by 1; MOVSW (word) adjusts by 2. Direction depends on DF."
+    },
+    {
+      "id": "uni-futa-fsen102-0171",
+      "type": "mcq",
+      "stem": "MOVSW adjusts SI and DI by:",
+      "options": {
+        "A": "1",
+        "B": "2 (when DF=0)",
+        "C": "4",
+        "D": "8"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MOVSW copies a word (2 bytes), so SI and DI are adjusted by 2."
+    },
+    {
+      "id": "uni-futa-fsen102-0172",
+      "type": "mcq",
+      "stem": "Before using string instructions, what must be set up?",
+      "options": {
+        "A": "Only DS",
+        "B": "DS and ES (for MOVSB/CMPSB)",
+        "C": "CS and SS",
+        "D": "Only ES"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "String instructions use DS:SI as source and ES:DI as destination, so both must be initialized."
+    },
+    {
+      "id": "uni-futa-fsen102-0173",
+      "type": "mcq",
+      "stem": "In 8086 assembly, comments start with:",
+      "options": {
+        "A": "//",
+        "B": "#",
+        "C": ";",
+        "D": "--"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Assembly language comments use semicolon (;). Everything after ; on a line is ignored."
+    },
+    {
+      "id": "uni-futa-fsen102-0174",
+      "type": "mcq",
+      "stem": "A program that prints 'Hello World' uses which DOS interrupt?",
+      "options": {
+        "A": "INT 10h",
+        "B": "INT 21h with AH=09h",
+        "C": "INT 20h",
+        "D": "INT 16h"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AH=09h with DS:DX pointing to a '$'-terminated string prints text via DOS."
+    },
+    {
+      "id": "uni-futa-fsen102-0175",
+      "type": "mcq",
+      "stem": "The .MODEL directive specifies:",
+      "options": {
+        "A": "The processor type",
+        "B": "The memory model (small, medium, large, etc.)",
+        "C": "The assembler version",
+        "D": "The output format"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": ".MODEL SMALL means one code segment and one data segment (most common for simple programs)."
+    },
+    {
+      "id": "uni-futa-fsen102-0176",
+      "type": "mcq",
+      "stem": "The .DATA segment directive defines:",
+      "options": {
+        "A": "The code segment",
+        "B": "The data segment (variables)",
+        "C": "The stack segment",
+        "D": "The extra segment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": ".DATA marks the beginning of the data segment where variables are declared."
+    },
+    {
+      "id": "uni-futa-fsen102-0177",
+      "type": "mcq",
+      "stem": "The .CODE segment directive defines:",
+      "options": {
+        "A": "The data segment",
+        "B": "The code segment (instructions)",
+        "C": "The stack segment",
+        "D": "The extra segment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": ".CODE marks the beginning of the code segment where the program instructions go."
+    },
+    {
+      "id": "uni-futa-fsen102-0178",
+      "type": "mcq",
+      "stem": "The .STACK directive reserves:",
+      "options": {
+        "A": "Code space",
+        "B": "Stack space (e.g., .STACK 100h reserves 256 bytes)",
+        "C": "Data space",
+        "D": "I/O space"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": ".STACK 100h allocates 256 bytes for the stack segment."
+    },
+    {
+      "id": "uni-futa-fsen102-0179",
+      "type": "mcq",
+      "stem": "To declare a byte variable named 'count' with value 5:",
+      "options": {
+        "A": "count DB 5",
+        "B": "count DW 5",
+        "C": "count DD 5",
+        "D": "count BYTE 5"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "DB (Define Byte) allocates 1 byte. DW = Define Word (2 bytes), DD = Define Doubleword (4 bytes)."
+    },
+    {
+      "id": "uni-futa-fsen102-0180",
+      "type": "mcq",
+      "stem": "To declare a word variable named 'total' with value 1000:",
+      "options": {
+        "A": "total DB 1000",
+        "B": "total DW 1000",
+        "C": "total DD 1000",
+        "D": "total WORD 1000"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DW (Define Word) allocates 2 bytes, suitable for values up to 65535."
+    },
+    {
+      "id": "uni-futa-fsen102-0181",
+      "type": "mcq",
+      "stem": "To declare a string 'Hello' in data:",
+      "options": {
+        "A": "msg DB 'Hello'",
+        "B": "msg DW 'Hello'",
+        "C": "msg DD 'Hello'",
+        "D": "msg BYTE 'Hello'"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "DB is used for byte arrays, including strings. Each character occupies one byte."
+    },
+    {
+      "id": "uni-futa-fsen102-0182",
+      "type": "mcq",
+      "stem": "To declare a string 'Hello$' for DOS printing:",
+      "options": {
+        "A": "msg DB 'Hello$'",
+        "B": "msg DB 'Hello', '$'",
+        "C": "Both A and B",
+        "D": "msg DW 'Hello$'"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "Both work: 'Hello$' includes the $ in the string, or 'Hello', '$' appends it as a separate byte."
+    },
+    {
+      "id": "uni-futa-fsen102-0183",
+      "type": "mcq",
+      "stem": "The EQU directive is used to:",
+      "options": {
+        "A": "Define variables",
+        "B": "Define constants (symbolic names)",
+        "C": "Reserve memory",
+        "D": "End the program"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "EQU assigns a constant value to a name: e.g., PI EQU 314."
+    },
+    {
+      "id": "uni-futa-fsen102-0184",
+      "type": "mcq",
+      "stem": "DUP is used to:",
+      "options": {
+        "A": "Duplicate instructions",
+        "B": "Allocate repeated storage (e.g., array DB 10 DUP(0))",
+        "C": "Duplicate registers",
+        "D": "End the program"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DUP allocates multiple identical values: 10 DUP(0) creates 10 bytes of zeros."
+    },
+    {
+      "id": "uni-futa-fsen102-0185",
+      "type": "mcq",
+      "stem": "The END directive marks:",
+      "options": {
+        "A": "The end of a loop",
+        "B": "The end of the source file (and optionally the entry point)",
+        "C": "The end of a procedure",
+        "D": "The end of data"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "END marks the end of the program and can specify the entry point: END label."
+    },
+    {
+      "id": "uni-futa-fsen102-0186",
+      "type": "mcq",
+      "stem": "The PROC and ENDP directives define:",
+      "options": {
+        "A": "Data segments",
+        "B": "A procedure (subroutine)",
+        "C": "The stack",
+        "D": "The code segment"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "PROC starts a procedure, ENDP ends it. NEAR or FAR specifies the call type."
+    },
+    {
+      "id": "uni-futa-fsen102-0187",
+      "type": "mcq",
+      "stem": "Which directive marks a procedure as far (inter-segment)?",
+      "options": {
+        "A": "PROC FAR",
+        "B": "FAR PROC",
+        "C": "PROC DISTANT",
+        "D": "EXTERNAL PROC"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "name PROC FAR declares a far procedure that can be called from other segments."
+    },
+    {
+      "id": "uni-futa-fsen102-0188",
+      "type": "mcq",
+      "stem": "To read a character from keyboard without echo, use INT 21h with:",
+      "options": {
+        "A": "AH=01h (with echo)",
+        "B": "AH=08h (no echo)",
+        "C": "AH=0Ah (buffered input)",
+        "D": "AH=07h (no echo, no check)"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AH=08h reads a character without echoing it. AH=07h also doesn't echo and doesn't check Ctrl-Break."
+    },
+    {
+      "id": "uni-futa-fsen102-0189",
+      "type": "mcq",
+      "stem": "INT 21h AH=0Ah is used for:",
+      "options": {
+        "A": "Printing a string",
+        "B": "Buffered keyboard input (reading a string)",
+        "C": "Displaying a character",
+        "D": "Exiting"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AH=0Ah reads a string into a buffer pointed to by DS:DX. The buffer's first byte specifies max length."
+    },
+    {
+      "id": "uni-futa-fsen102-0190",
+      "type": "mcq",
+      "stem": "The LABEL directive is used to:",
+      "options": {
+        "A": "Define a jump target without allocating memory",
+        "B": "Allocate variables",
+        "C": "Define procedures",
+        "D": "End the program"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "LABEL assigns a name and type to the current location without allocating any storage."
+    },
+    {
+      "id": "uni-futa-fsen102-0191",
+      "type": "mcq",
+      "stem": "ORG 100h is used in:",
+      "options": {
+        "A": "EXE programs",
+        "B": "COM programs (to set the origin to 100h)",
+        "C": "Device drivers",
+        "D": "Boot sectors"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "COM programs start at offset 100h (PSP occupies 0-FFh). ORG 100h sets the assembler origin accordingly."
+    },
+    {
+      "id": "uni-futa-fsen102-0192",
+      "type": "mcq",
+      "stem": "In a COM program, how many segments are there?",
+      "options": {
+        "A": "Separate code and data segments",
+        "B": "One segment (code, data, and stack share the same segment)",
+        "C": "Two segments",
+        "D": "Four segments"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "COM programs use a single 64KB segment for code, data, and stack — CS=DS=SS."
+    },
+    {
+      "id": "uni-futa-fsen102-0193",
+      "type": "mcq",
+      "stem": "The ASSUME directive tells the assembler:",
+      "options": {
+        "A": "Which segment registers point to which segments",
+        "B": "The program size",
+        "C": "The stack size",
+        "D": "The entry point"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "ASSUME CS:CODE, DS:DATA tells the assembler which segment registers will be used for which segments."
+    },
+    {
+      "id": "uni-futa-fsen102-0194",
+      "type": "mcq",
+      "stem": "Which assembler is commonly used for 8086 assembly?",
+      "options": {
+        "A": "NASM",
+        "B": "MASM (Microsoft Macro Assembler)",
+        "C": "GAS",
+        "D": "FASM"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "MASM is the most common assembler for 8086 in academic settings. NASM and TASM are also popular."
+    },
+    {
+      "id": "uni-futa-fsen102-0195",
+      "type": "mcq",
+      "stem": "The OFFSET operator returns:",
+      "options": {
+        "A": "The segment address",
+        "B": "The offset (physical address within a segment) of a variable",
+        "C": "The size of a variable",
+        "D": "The value of a variable"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "OFFSET msg gives the offset of msg within its segment. Equivalent to LEA AX, msg."
+    },
+    {
+      "id": "uni-futa-fsen102-0196",
+      "type": "mcq",
+      "stem": "The PTR operator is used to:",
+      "options": {
+        "A": "Override the type/size of an operand",
+        "B": "Get a pointer",
+        "C": "Print a value",
+        "D": "Push data"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "PTR overrides type: WORD PTR [BX] treats [BX] as a word, BYTE PTR [BX] as a byte."
+    },
+    {
+      "id": "uni-futa-fsen102-0197",
+      "type": "mcq",
+      "stem": "MOV [BX], 5 is ambiguous because:",
+      "options": {
+        "A": "BX cannot address memory",
+        "B": "The assembler doesn't know if 5 is a byte or word",
+        "C": "5 is too large",
+        "D": "BX is not initialized"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Use MOV WORD PTR [BX], 5 or MOV BYTE PTR [BX], 5 to specify the size."
+    },
+    {
+      "id": "uni-futa-fsen102-0198",
+      "type": "mcq",
+      "stem": "What is the result of XOR AX, AX?",
+      "options": {
+        "A": "AX = FFFFh",
+        "B": "AX = 0000h",
+        "C": "AX = 0001h",
+        "D": "AX is unchanged"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "XORing a value with itself always produces 0. This is faster and shorter than MOV AX, 0."
+    },
+    {
+      "id": "uni-futa-fsen102-0199",
+      "type": "mcq",
+      "stem": "Which instruction is used to multiply AX by 10 efficiently?",
+      "options": {
+        "A": "MUL 10",
+        "B": "SHL AX, 1; MOV BX, AX; SHL AX, 2; ADD AX, BX",
+        "C": "ADD AX, 10",
+        "D": "MOV BX, 10; MUL BX"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "10× = 2× + 8×. SHL by 1 = ×2, save in BX. SHL by 2 more = ×8. Add BX (×2) = ×10. Faster than MUL."
+    },
+    {
+      "id": "uni-futa-fsen102-0200",
+      "type": "mcq",
+      "stem": "The AAA instruction is used after:",
+      "options": {
+        "A": "Binary addition",
+        "B": "ASCII addition (BCD adjustment)",
+        "C": "Multiplication",
+        "D": "Subtraction"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "AAA (ASCII Adjust after Addition) corrects the result of adding two ASCII/BBCD digits in AL."
+    },
+    {
+      "id": "uni-futa-fsen102-0201",
+      "type": "mcq",
+      "stem": "The DAA instruction is used after:",
+      "options": {
+        "A": "ASCII addition",
+        "B": "Packed BCD addition",
+        "C": "Subtraction",
+        "D": "Multiplication"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "DAA (Decimal Adjust after Addition) corrects AL after adding two packed BCD numbers."
+    },
+    {
+      "id": "uni-futa-fsen102-0202",
+      "type": "mcq",
+      "stem": "The AAM instruction does what?",
+      "options": {
+        "A": "Adjusts after multiplication (unpacked BCD)",
+        "B": "Adjusts after addition",
+        "C": "Adjusts after division",
+        "D": "Adjusts after subtraction"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "AAM (ASCII Adjust after Multiplication) converts the binary product in AX to unpacked BCD in AH and AL."
+    },
+    {
+      "id": "uni-futa-fsen102-0203",
+      "type": "mcq",
+      "stem": "XLAT is used for:",
+      "options": {
+        "A": "Translation (table lookup)",
+        "B": "Multiplication",
+        "C": "String operations",
+        "D": "I/O operations"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "XLAT uses AL as an index into a 256-byte table at DS:BX, replacing AL with the byte at DS:BX+AL."
+    },
+    {
+      "id": "uni-futa-fsen102-0204",
+      "type": "mcq",
+      "stem": "ENTER and LEAVE instructions are available on which processor?",
+      "options": {
+        "A": "8086",
+        "B": "80186",
+        "C": "80286 and later",
+        "D": "80386 and later"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "ENTER and LEAVE are stack frame instructions introduced in the 80286, not available on the 8086."
+    },
+    {
+      "id": "uni-futa-fsen102-0205",
+      "type": "mcq",
+      "stem": "The BSWAP instruction (byte swap) is available on:",
+      "options": {
+        "A": "8086",
+        "B": "80286",
+        "C": "80486 and later",
+        "D": "Pentium and later"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "BSWAP reverses byte order in a 32-bit register — introduced in the 80486."
+    },
+    {
+      "id": "uni-futa-fsen102-0206",
+      "type": "mcq",
+      "stem": "What is the maximum signed value a 16-bit register can hold?",
+      "options": {
+        "A": "32767",
+        "B": "65535",
+        "C": "65536",
+        "D": "127"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Signed 16-bit range: -32768 to +32767 (2^15 - 1 = 32767)."
+    },
+    {
+      "id": "uni-futa-fsen102-0207",
+      "type": "mcq",
+      "stem": "What is the maximum unsigned value a 16-bit register can hold?",
+      "options": {
+        "A": "32767",
+        "B": "65535",
+        "C": "65536",
+        "D": "255"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "Unsigned 16-bit range: 0 to 65535 (2^16 - 1 = 65535)."
+    },
+    {
+      "id": "uni-futa-fsen102-0208",
+      "type": "mcq",
+      "stem": "Overflow (OF) is set when:",
+      "options": {
+        "A": "Unsigned result exceeds range",
+        "B": "Signed result exceeds range",
+        "C": "Carry occurs",
+        "D": "Result is zero"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "OF detects signed overflow — when the result of a signed operation is too large/small for the operand size."
+    },
+    {
+      "id": "uni-futa-fsen102-0209",
+      "type": "mcq",
+      "stem": "Carry (CF) is set when:",
+      "options": {
+        "A": "Signed overflow",
+        "B": "Unsigned result exceeds range (carry/borrow)",
+        "C": "Result is zero",
+        "D": "Result is negative"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "CF detects unsigned overflow — carry out of the MSB during addition, or borrow during subtraction."
+    },
+    {
+      "id": "uni-futa-fsen102-0210",
+      "type": "mcq",
+      "stem": "JC (Jump if Carry) jumps when:",
+      "options": {
+        "A": "CF=0",
+        "B": "CF=1",
+        "C": "ZF=1",
+        "D": "OF=1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "JC jumps when the Carry Flag is set (CF=1). Same as JB (Jump if Below) for unsigned comparisons."
+    },
+    {
+      "id": "uni-futa-fsen102-0211",
+      "type": "mcq",
+      "stem": "JNC (Jump if Not Carry) jumps when:",
+      "options": {
+        "A": "CF=1",
+        "B": "CF=0",
+        "C": "ZF=0",
+        "D": "OF=0"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "JNC jumps when CF=0. Same as JAE (Jump if Above or Equal) for unsigned comparisons."
+    },
+    {
+      "id": "uni-futa-fsen102-0212",
+      "type": "mcq",
+      "stem": "JO (Jump if Overflow) jumps when:",
+      "options": {
+        "A": "CF=1",
+        "B": "OF=1",
+        "C": "ZF=1",
+        "D": "SF=1"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "JO jumps when the Overflow Flag is set, indicating a signed arithmetic overflow."
+    },
+    {
+      "id": "uni-futa-fsen102-0213",
+      "type": "mcq",
+      "stem": "JS (Jump if Sign) jumps when:",
+      "options": {
+        "A": "SF=1 (result is negative)",
+        "B": "SF=0",
+        "C": "CF=1",
+        "D": "OF=1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "JS jumps when the Sign Flag is set, meaning the result of the last operation was negative."
+    },
+    {
+      "id": "uni-futa-fsen102-0214",
+      "type": "mcq",
+      "stem": "JNS (Jump if Not Sign) jumps when:",
+      "options": {
+        "A": "SF=1",
+        "B": "SF=0 (result is positive)",
+        "C": "CF=0",
+        "D": "ZF=0"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "JNS jumps when SF=0, meaning the result was non-negative (positive or zero)."
+    },
+    {
+      "id": "uni-futa-fsen102-0215",
+      "type": "mcq",
+      "stem": "JP (Jump if Parity) jumps when:",
+      "options": {
+        "A": "PF=1 (even parity)",
+        "B": "PF=0",
+        "C": "CF=1",
+        "D": "ZF=1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "JP (or JPE) jumps when the Parity Flag is 1 (even number of 1-bits in the low byte)."
+    },
+    {
+      "id": "uni-futa-fsen102-0216",
+      "type": "mcq",
+      "stem": "JNP (Jump if Not Parity) jumps when:",
+      "options": {
+        "A": "PF=1",
+        "B": "PF=0 (odd parity)",
+        "C": "CF=0",
+        "D": "ZF=0"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "JNP (or JPO) jumps when PF=0 (odd number of 1-bits in the low byte)."
+    },
+    {
+      "id": "uni-futa-fsen102-0217",
+      "type": "mcq",
+      "stem": "JCXZ jumps when:",
+      "options": {
+        "A": "CX=0",
+        "B": "CX≠0",
+        "C": "ZF=1",
+        "D": "CF=1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "JCXZ (Jump if CX is Zero) is used to skip loops when the initial count is zero."
+    },
+    {
+      "id": "uni-futa-fsen102-0218",
+      "type": "mcq",
+      "stem": "The 8086 has a ___-bit external data bus.",
+      "options": {
+        "A": "8",
+        "B": "16",
+        "C": "32",
+        "D": "64"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 8086 has a 16-bit external data bus. The 8088 has an 8-bit data bus (used in the original IBM PC)."
+    },
+    {
+      "id": "uni-futa-fsen102-0219",
+      "type": "mcq",
+      "stem": "The 8088 differs from the 8086 in that it has:",
+      "options": {
+        "A": "A 16-bit data bus",
+        "B": "An 8-bit external data bus",
+        "C": "More registers",
+        "D": "A different instruction set"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "The 8088 is identical to the 8086 internally but has an 8-bit external data bus, making it cheaper to interface."
+    },
+    {
+      "id": "uni-futa-fsen102-0220",
+      "type": "mcq",
+      "stem": "The 8086 can access how many I/O ports?",
+      "options": {
+        "A": "256",
+        "B": "1024",
+        "C": "65536",
+        "D": "Unlimited"
+      },
+      "marks": 1,
+      "answer": "C",
+      "explanation": "I/O addresses are 16-bit, allowing 2^16 = 65,536 I/O ports (0000h to FFFFh)."
+    },
+    {
+      "id": "uni-futa-fsen102-0221",
+      "type": "mcq",
+      "stem": "The READY pin on the 8086 is used to:",
+      "options": {
+        "A": "Reset the processor",
+        "B": "Wait for slow memory/devices",
+        "C": "Trigger an interrupt",
+        "D": "Enable the coprocessor"
+      },
+      "marks": 1,
+      "answer": "B",
+      "explanation": "When READY=0, the 8086 inserts wait states to accommodate slow memory or I/O devices."
+    },
+    {
+      "id": "uni-futa-fsen102-0222",
+      "type": "mcq",
+      "stem": "The RESET pin on the 8086 does what?",
+      "options": {
+        "A": "Restarts the processor (CS=FFFFh, IP=0000h)",
+        "B": "Clears memory",
+        "C": "Enables interrupts",
+        "D": "Stops the clock"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "On RESET, the 8086 sets CS=FFFFh, IP=0000h, DS=0000h, SS=0000h, ES=0000h, and clears the FLAGS. The first instruction is fetched from FFFF0h."
+    }
+  ]
+}

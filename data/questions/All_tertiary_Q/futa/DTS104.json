@@ -1,1 +1,1411 @@
-{"code":"uni-futa-dts104-bank","title":"FUTA DTS 104 | Course Question Bank","version":1,"questionCount":100,"totalMarks":100,"body":"University Modules","category":"university","questions":[{"id":"uni-futa-dts104-0001","type":"mcq","stem":"[x for x in nums if x > 0] is similar to:","options":{"A":"filter() with a lambda","B":"map() with a lambda","C":"sort()","D":"len()"},"marks":1},{"id":"uni-futa-dts104-0002","type":"mcq","stem":"list.extend(other) does what?","options":{"A":"Appends all elements from other to the list","B":"Removes all elements","C":"Sorts the list","D":"Returns the maximum"},"marks":1},{"id":"uni-futa-dts104-0003","type":"mcq","stem":"The assignment operator in Python is:","options":{"A":"=","B":"==","C":":=","D":"=>"},"marks":1},{"id":"uni-futa-dts104-0004","type":"mcq","stem":"A function in Python is defined using:","options":{"A":"def","B":"function","C":"func","D":"define"},"marks":1},{"id":"uni-futa-dts104-0005","type":"mcq","stem":"Function arguments in Python are passed:","options":{"A":"By assignment (objects are passed by reference)","B":"By value only","C":"By pointer only","D":"By copy"},"marks":1},{"id":"uni-futa-dts104-0006","type":"mcq","stem":"Trying to use an integer larger than the maximum results in:","options":{"A":"An OverflowError","B":"Silent truncation","C":"Automatic conversion to float","D":"A SyntaxError"},"marks":1},{"id":"uni-futa-dts104-0007","type":"mcq","stem":"The logical AND operator in Python is:","options":{"A":"and","B":"&&","C":"&","D":"AND"},"marks":1},{"id":"uni-futa-dts104-0008","type":"mcq","stem":"Dictionaries are created using:","options":{"A":"Curly braces { }","B":"Square brackets [ ]","C":"Parentheses ( )","D":"Angle brackets < >"},"marks":1},{"id":"uni-futa-dts104-0009","type":"mcq","stem":"[1, 2, 3, 4, 5][::-1] returns:","options":{"A":"[5, 4, 3, 2, 1]","B":"[1, 2, 3, 4, 5]","C":"[1, 3, 5]","D":"[5, 4, 3]"},"marks":1},{"id":"uni-futa-dts104-0010","type":"mcq","stem":"An else clause in Python ends with:","options":{"A":"A colon (:)","B":"A semicolon (;)","C":"A period (.)","D":"A comma (,)"},"marks":1},{"id":"uni-futa-dts104-0011","type":"mcq","stem":"To create an empty list, use:","options":{"A":"[]","B":"()","C":"{}","D":"list"},"marks":1},{"id":"uni-futa-dts104-0012","type":"mcq","stem":"Raw strings in Python are prefixed with:","options":{"A":"r","B":"raw","C":"R","D":"Both r and R"},"marks":1},{"id":"uni-futa-dts104-0013","type":"mcq","stem":"Which method splits a string into a list?","options":{"A":".split()","B":".divide()","C":".separate()","D":".break()"},"marks":1},{"id":"uni-futa-dts104-0014","type":"mcq","stem":"To import only specific names from a module, use:","options":{"A":"from module import name","B":"import module.name","C":"use module.name","D":"include module.name"},"marks":1},{"id":"uni-futa-dts104-0015","type":"mcq","stem":"range(2, 8) produces:","options":{"A":"[2, 3, 4, 5, 6, 7]","B":"[2, 3, 4, 5, 6, 7, 8]","C":"[0, 1, 2, 3, 4, 5, 6, 7]","D":"[8]"},"marks":1},{"id":"uni-futa-dts104-0016","type":"mcq","stem":"List concatenation uses:","options":{"A":"The + operator","B":"The & operator","C":"The . operator","D":"The append() method only"},"marks":1},{"id":"uni-futa-dts104-0017","type":"mcq","stem":"Default argument values are specified using:","options":{"A":"= in the function definition","B":": in the function definition","C":"-> in the function definition","D":"default keyword"},"marks":1},{"id":"uni-futa-dts104-0018","type":"mcq","stem":"To open a file for writing, use:","options":{"A":"open('file.txt', 'w')","B":"open('file.txt', 'r')","C":"open('file.txt', 'a')","D":"write('file.txt')"},"marks":1},{"id":"uni-futa-dts104-0019","type":"mcq","stem":"In Python, truth values are represented by:","options":{"A":"True and False (capitalised)","B":"true and false (lowercase)","C":"1 and 0 only","D":"YES and NO"},"marks":1},{"id":"uni-futa-dts104-0020","type":"mcq","stem":"Triple-quoted strings allow:","options":{"A":"Text to span multiple lines","B":"Only single-line text","C":"Numeric data only","D":"Comments only"},"marks":1},{"id":"uni-futa-dts104-0021","type":"mcq","stem":"String concatenation in Python uses:","options":{"A":"The + operator","B":"The & operator","C":"The . operator","D":"The concat() function"},"marks":1},{"id":"uni-futa-dts104-0022","type":"mcq","stem":"Within each indented block, you must be:","options":{"A":"Consistent in the amount of indentation","B":"Random with indentation","C":"Use only tabs","D":"Use only spaces of any size"},"marks":1},{"id":"uni-futa-dts104-0023","type":"mcq","stem":"To open a file for reading, use:","options":{"A":"open('file.txt', 'r')","B":"read('file.txt')","C":"file('file.txt')","D":"input('file.txt')"},"marks":1},{"id":"uni-futa-dts104-0024","type":"mcq","stem":"Python statements do NOT need to end with:","options":{"A":"A special character — newline ends a statement","B":"A semicolon","C":"A period","D":"A colon"},"marks":1},{"id":"uni-futa-dts104-0025","type":"mcq","stem":"A function with no return statement returns:","options":{"A":"None","B":"0","C":"An empty string","D":"An error"},"marks":1},{"id":"uni-futa-dts104-0026","type":"mcq","stem":"The fastest way to print a value in Python is with:","options":{"A":"The print command","B":"The echo command","C":"The display command","D":"The output command"},"marks":1},{"id":"uni-futa-dts104-0027","type":"mcq","stem":"list.insert(i, x) does what?","options":{"A":"Inserts x at index i","B":"Removes element at index i","C":"Sorts the list","D":"Returns element at index i"},"marks":1},{"id":"uni-futa-dts104-0028","type":"mcq","stem":"A class in Python is defined using:","options":{"A":"class","B":"Class","C":"struct","D":"object"},"marks":1},{"id":"uni-futa-dts104-0029","type":"mcq","stem":"Python will NOT automatically convert numbers from one type to another, but provides:","options":{"A":"Functions for explicit conversion","B":"No way to convert","C":"Only automatic conversion","D":"A special operator for conversion"},"marks":1},{"id":"uni-futa-dts104-0030","type":"mcq","stem":"The .readlines() method returns:","options":{"A":"A list of all lines in the file","B":"A single line","C":"A single character","D":"The file size in bytes"},"marks":1},{"id":"uni-futa-dts104-0031","type":"mcq","stem":"The name 'Python' is derived from:","options":{"A":"Guido van Rossum's favorite TV show, 'Monty Python's Flying Circus'","B":"The python snake species","C":"An acronym for 'PYthon High-level Object-oriented Tool'","D":"A Greek mythological figure"},"marks":1},{"id":"uni-futa-dts104-0032","type":"mcq","stem":"Standard input in Python is accessed via:","options":{"A":"sys.stdin","B":"input.stdin","C":"read.stdin","D":"stdin"},"marks":1},{"id":"uni-futa-dts104-0033","type":"mcq","stem":"The escape character in Python strings is:","options":{"A":"Backslash \\","B":"Forward slash /","C":"Ampersand &","D":"Pipe |"},"marks":1},{"id":"uni-futa-dts104-0034","type":"mcq","stem":"Functions in Python can return:","options":{"A":"Multiple values (as a tuple)","B":"Only one value","C":"Only integers","D":"Only strings"},"marks":1},{"id":"uni-futa-dts104-0035","type":"mcq","stem":"To execute a file inside an interactive Python session, use:","options":{"A":"execfile(\"myprog.py\")","B":"run(\"myprog.py\")","C":"execute myprog.py","D":"import myprog"},"marks":1},{"id":"uni-futa-dts104-0036","type":"mcq","stem":"A Python tuple is:","options":{"A":"An immutable sequence","B":"A mutable sequence","C":"A type of dictionary","D":"A type of string"},"marks":1},{"id":"uni-futa-dts104-0037","type":"mcq","stem":"List elements in Python:","options":{"A":"Need not be of the same type","B":"Must all be integers","C":"Must all be strings","D":"Must all be the same type"},"marks":1},{"id":"uni-futa-dts104-0038","type":"mcq","stem":"The sys module provides access to:","options":{"A":"System-specific parameters and functions (stdin, stdout, argv)","B":"Mathematical functions","C":"String operations","D":"File I/O"},"marks":1},{"id":"uni-futa-dts104-0039","type":"mcq","stem":"len('hello') returns:","options":{"A":"5","B":"4","C":"6","D":"0"},"marks":1},{"id":"uni-futa-dts104-0040","type":"mcq","stem":"A Python dictionary is:","options":{"A":"A collection indexed by immutable keys (e.g., strings)","B":"A collection indexed by integers only","C":"A type of list","D":"A type of tuple"},"marks":1},{"id":"uni-futa-dts104-0041","type":"mcq","stem":"The 'in' operator for lists checks:","options":{"A":"Whether an element is in the list","B":"The list length","C":"The list type","D":"The list index"},"marks":1},{"id":"uni-futa-dts104-0042","type":"mcq","stem":"String formatting in Python uses the:","options":{"A":"Percent operator (%) overloaded for strings","B":"format() function only","C":"concat() function","D":"+ operator only"},"marks":1},{"id":"uni-futa-dts104-0043","type":"mcq","stem":"Chained assignment like 'a = b = c = 0':","options":{"A":"Sets all three variables to 0","B":"Is a syntax error","C":"Sets only a to 0","D":"Sets only c to 0"},"marks":1},{"id":"uni-futa-dts104-0044","type":"mcq","stem":"Python is available on:","options":{"A":"A wide variety of platforms","B":"Only Windows","C":"Only Linux","D":"Only macOS"},"marks":1},{"id":"uni-futa-dts104-0045","type":"mcq","stem":"The print command adds what at the end by default?","options":{"A":"A newline","B":"A space","C":"A tab","D":"Nothing"},"marks":1},{"id":"uni-futa-dts104-0046","type":"mcq","stem":"Python's small, clean syntax reflects its heritage as a language:","options":{"A":"Designed to be easy for beginners yet powerful for advanced users","B":"Designed for experts only","C":"Designed for embedded systems only","D":"Designed to replace C++"},"marks":1},{"id":"uni-futa-dts104-0047","type":"mcq","stem":"Which is TRUE about Python?","options":{"A":"Its core language is very small and easy to master","B":"It has a huge core language that is hard to learn","C":"It cannot be used for internet tasks","D":"It only runs on Windows"},"marks":1},{"id":"uni-futa-dts104-0048","type":"mcq","stem":"Hexadecimal constants in Python are prefixed with:","options":{"A":"0x","B":"0h","C":"hex","D":"#"},"marks":1},{"id":"uni-futa-dts104-0049","type":"mcq","stem":"Python supports how many types of numeric objects?","options":{"A":"Four: integers, long integers, floating point, complex","B":"Two: int and float","C":"Three: int, float, string","D":"One: number"},"marks":1},{"id":"uni-futa-dts104-0050","type":"mcq","stem":"On most computers, ordinary integers have a range of approximately:","options":{"A":"-2 billion to +2 billion","B":"-128 to 127","C":"-32k to +32k","D":"Unlimited"},"marks":1},{"id":"uni-futa-dts104-0051","type":"mcq","stem":"range(0, 10, 2) produces:","options":{"A":"[0, 2, 4, 6, 8]","B":"[0, 2, 4, 6, 8, 10]","C":"[2, 4, 6, 8, 10]","D":"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"},"marks":1},{"id":"uni-futa-dts104-0052","type":"mcq","stem":"list.pop() without an argument does what?","options":{"A":"Removes and returns the last element","B":"Removes the first element","C":"Sorts the list","D":"Returns the list length"},"marks":1},{"id":"uni-futa-dts104-0053","type":"mcq","stem":"To create an instance of a class, use:","options":{"A":"ClassName()","B":"new ClassName()","C":"create ClassName()","D":"make ClassName()"},"marks":1},{"id":"uni-futa-dts104-0054","type":"mcq","stem":"The map() function:","options":{"A":"Applies a function to each element of a list","B":"Maps keys to values in a dict","C":"Sorts a list","D":"Reverses a list"},"marks":1},{"id":"uni-futa-dts104-0055","type":"mcq","stem":"Python ignores spaces between list entries, and you can span multiple lines by:","options":{"A":"Hitting return after any comma","B":"Using a backslash","C":"Using a semicolon","D":"Using a plus sign"},"marks":1},{"id":"uni-futa-dts104-0056","type":"mcq","stem":"To use a module in Python, use:","options":{"A":"import","B":"include","C":"use","D":"require"},"marks":1},{"id":"uni-futa-dts104-0057","type":"mcq","stem":"Python is described as a true:","options":{"A":"Object-oriented language","B":"Procedural-only language","C":"Functional-only language","D":"Machine language"},"marks":1},{"id":"uni-futa-dts104-0058","type":"mcq","stem":"In '%s has %d dollars' % ('Phil', 100), the placeholders are filled:","options":{"A":"In order: 'Phil' → %s, 100 → %d","B":"In reverse order","C":"Randomly","D":"Only the first placeholder is filled"},"marks":1},{"id":"uni-futa-dts104-0059","type":"mcq","stem":"To access an attribute of an object, use:","options":{"A":"Dot notation (obj.attr)","B":"Arrow notation (obj->attr)","C":"Bracket notation (obj[attr])","D":"Colon notation (obj:attr)"},"marks":1},{"id":"uni-futa-dts104-0060","type":"mcq","stem":"The .write(s) method on a file object:","options":{"A":"Writes string s to the file","B":"Reads from the file","C":"Closes the file","D":"Returns the file size"},"marks":1},{"id":"uni-futa-dts104-0061","type":"mcq","stem":"Long integers in Python are:","options":{"A":"Arbitrary precision — as many digits as you can type","B":"Limited to 64 bits","C":"Limited to 32 bits","D":"Always floating point"},"marks":1},{"id":"uni-futa-dts104-0062","type":"mcq","stem":"To convert a number to a string, use:","options":{"A":"str()","B":"string()","C":"toStr()","D":"text()"},"marks":1},{"id":"uni-futa-dts104-0063","type":"mcq","stem":"Negative indices in Python strings:","options":{"A":"Count from the end (-1 is last character)","B":"Are invalid","C":"Start at 0","D":"Are reserved for special characters"},"marks":1},{"id":"uni-futa-dts104-0064","type":"mcq","stem":"The lambda keyword creates:","options":{"A":"An anonymous (inline) function","B":"A named function","C":"A class","D":"A module"},"marks":1},{"id":"uni-futa-dts104-0065","type":"mcq","stem":"Lists in Python are created using:","options":{"A":"Square brackets [ ]","B":"Parentheses ( )","C":"Curly braces { }","D":"Angle brackets < >"},"marks":1},{"id":"uni-futa-dts104-0066","type":"mcq","stem":"[1, 2, 3, 4, 5][1:4] returns:","options":{"A":"[2, 3, 4]","B":"[1, 2, 3]","C":"[2, 3, 4, 5]","D":"[1, 2, 3, 4]"},"marks":1},{"id":"uni-futa-dts104-0067","type":"mcq","stem":"The while loop continues as long as:","options":{"A":"Its condition is True","B":"Its condition is False","C":"A counter reaches 0","D":"A file is open"},"marks":1},{"id":"uni-futa-dts104-0068","type":"mcq","stem":"String repetition in Python uses:","options":{"A":"The * operator","B":"The × operator","C":"The rep() function","D":"The ** operator"},"marks":1},{"id":"uni-futa-dts104-0069","type":"mcq","stem":"A list comprehension like [x*2 for x in lst] is similar to:","options":{"A":"map() with a lambda","B":"filter()","C":"sort()","D":"reverse()"},"marks":1},{"id":"uni-futa-dts104-0070","type":"mcq","stem":"To continue a Python statement on the next line, use:","options":{"A":"A backslash (\\) at the end of the line","B":"A semicolon","C":"An ampersand (&)","D":"A forward slash (/)"},"marks":1},{"id":"uni-futa-dts104-0071","type":"mcq","stem":"There is even a Python interpreter written entirely in:","options":{"A":"Java","B":"C#","C":"Ruby","D":"Go"},"marks":1},{"id":"uni-futa-dts104-0072","type":"mcq","stem":"The logical OR operator in Python is:","options":{"A":"or","B":"||","C":"|","D":"OR"},"marks":1},{"id":"uni-futa-dts104-0073","type":"mcq","stem":"The slice s[1:4] returns:","options":{"A":"Characters at indices 1, 2, 3 (4 is exclusive)","B":"Characters at indices 1, 2, 3, 4","C":"Characters at indices 0, 1, 2, 3","D":"Just index 1"},"marks":1},{"id":"uni-futa-dts104-0074","type":"mcq","stem":"Long integers in Python are entered by following an integer with:","options":{"A":"The letter L (e.g., 27L)","B":"The letter D","C":"The letter N","D":"No special suffix"},"marks":1},{"id":"uni-futa-dts104-0075","type":"mcq","stem":"To specify a floating point number, include:","options":{"A":"A decimal point or use exponential notation","B":"Only digits","C":"Only the letter f","D":"A dollar sign"},"marks":1},{"id":"uni-futa-dts104-0076","type":"mcq","stem":"The .readline() method on a file object:","options":{"A":"Returns the next line of the file","B":"Returns all lines at once","C":"Returns the file size","D":"Closes the file"},"marks":1},{"id":"uni-futa-dts104-0077","type":"mcq","stem":"List repetition uses:","options":{"A":"The * operator","B":"The ** operator","C":"The rep() function","D":"The times() method"},"marks":1},{"id":"uni-futa-dts104-0078","type":"mcq","stem":"Tuples are created using:","options":{"A":"Parentheses ( )","B":"Square brackets [ ]","C":"Curly braces { }","D":"Angle brackets < >"},"marks":1},{"id":"uni-futa-dts104-0079","type":"mcq","stem":"Python uses indentation to:","options":{"A":"Indicate loops and blocks instead of curly braces or keywords","B":"Improve readability only","C":"Mark comments","D":"Terminate statements"},"marks":1},{"id":"uni-futa-dts104-0080","type":"mcq","stem":"len([1, 2, 3, 4, 5]) returns:","options":{"A":"5","B":"4","C":"6","D":"0"},"marks":1},{"id":"uni-futa-dts104-0081","type":"mcq","stem":"To convert a string '42' to an integer, use:","options":{"A":"int('42')","B":"integer('42')","C":"toInt('42')","D":"convert('42')"},"marks":1},{"id":"uni-futa-dts104-0082","type":"mcq","stem":"An if statement in Python ends with:","options":{"A":"A colon (:)","B":"A semicolon (;)","C":"A period (.)","D":"Nothing special"},"marks":1},{"id":"uni-futa-dts104-0083","type":"mcq","stem":"Inheritance in Python is specified by:","options":{"A":"class Child(Parent):","B":"class Child : Parent","C":"class Child extends Parent","D":"class Child inherits Parent"},"marks":1},{"id":"uni-futa-dts104-0084","type":"mcq","stem":"The logical NOT operator in Python is:","options":{"A":"not","B":"!","C":"~","D":"NOT"},"marks":1},{"id":"uni-futa-dts104-0085","type":"mcq","stem":"Octal constants in Python are prefixed with:","options":{"A":"0 (leading zero)","B":"0o","C":"oct","D":"0c"},"marks":1},{"id":"uni-futa-dts104-0086","type":"mcq","stem":"The first parameter of instance methods in Python is conventionally:","options":{"A":"self","B":"this","C":"me","D":"instance"},"marks":1},{"id":"uni-futa-dts104-0087","type":"mcq","stem":"In Python, 1e3 represents:","options":{"A":"1000.0 (floating point)","B":"1000 (integer)","C":"1 times 3","D":"An error"},"marks":1},{"id":"uni-futa-dts104-0088","type":"mcq","stem":"Python uses indentation to signal:","options":{"A":"The beginning and end of statement blocks","B":"Comments","C":"String boundaries","D":"Variable types"},"marks":1},{"id":"uni-futa-dts104-0089","type":"mcq","stem":"An exception in Python is handled using:","options":{"A":"try/except blocks","B":"catch/throw blocks","C":"handle/raise blocks","D":"error/rescue blocks"},"marks":1},{"id":"uni-futa-dts104-0090","type":"mcq","stem":"Comments in Python begin with:","options":{"A":"#","B":"//","C":"/*","D":"--"},"marks":1},{"id":"uni-futa-dts104-0091","type":"mcq","stem":"The for loop in Python iterates over:","options":{"A":"Elements of a sequence (list, tuple, string, range)","B":"Only integer counters","C":"Only files","D":"Only dictionaries"},"marks":1},{"id":"uni-futa-dts104-0092","type":"mcq","stem":"list.append(x) does what?","options":{"A":"Adds x to the end of the list","B":"Removes x from the list","C":"Sorts the list","D":"Returns the list length"},"marks":1},{"id":"uni-futa-dts104-0093","type":"mcq","stem":"The constructor method in a Python class is:","options":{"A":"__init__","B":"constructor","C":"init","D":"__new__"},"marks":1},{"id":"uni-futa-dts104-0094","type":"mcq","stem":"range(5) produces:","options":{"A":"[0, 1, 2, 3, 4]","B":"[1, 2, 3, 4, 5]","C":"[0, 1, 2, 3, 4, 5]","D":"[5]"},"marks":1},{"id":"uni-futa-dts104-0095","type":"mcq","stem":"To make a Python file executable on UNIX, use:","options":{"A":"chmod +x myprogram.py","B":"execute myprogram.py","C":"run myprogram.py","D":"python -e myprogram.py"},"marks":1},{"id":"uni-futa-dts104-0096","type":"mcq","stem":"Strings in Python are:","options":{"A":"A collection of characters stored together to represent text","B":"A collection of numbers","C":"A type of function","D":"A type of loop"},"marks":1},{"id":"uni-futa-dts104-0097","type":"mcq","stem":"Single and double quotes in Python:","options":{"A":"Have the same meaning","B":"Have different meanings","C":"Cannot be mixed","D":"Are reserved for special strings"},"marks":1},{"id":"uni-futa-dts104-0098","type":"mcq","stem":"Python is an excellent choice as a:","options":{"A":"First programming language","B":"Operating system","C":"Database engine","D":"Hardware driver"},"marks":1},{"id":"uni-futa-dts104-0099","type":"mcq","stem":"Python string indexing is:","options":{"A":"0-based (first character is index 0)","B":"1-based (first character is index 1)","C":"-1-based","D":"Arbitrary"},"marks":1},{"id":"uni-futa-dts104-0100","type":"mcq","stem":"To raise an exception manually, use:","options":{"A":"raise","B":"throw","C":"error","D":"panic"},"marks":1}]}
+{
+  "code": "uni-futa-dts104-bank",
+  "title": "FUTA DTS 104 | Course Question Bank",
+  "version": 1,
+  "questionCount": 100,
+  "totalMarks": 100,
+  "body": "University Modules",
+  "category": "university",
+  "questions": [
+    {
+      "id": "uni-futa-dts104-0001",
+      "type": "mcq",
+      "stem": "[x for x in nums if x > 0] is similar to:",
+      "options": {
+        "A": "filter() with a lambda",
+        "B": "map() with a lambda",
+        "C": "sort()",
+        "D": "len()"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "The if clause filters, like filter(lambda x: x>0, nums)."
+    },
+    {
+      "id": "uni-futa-dts104-0002",
+      "type": "mcq",
+      "stem": "list.extend(other) does what?",
+      "options": {
+        "A": "Appends all elements from other to the list",
+        "B": "Removes all elements",
+        "C": "Sorts the list",
+        "D": "Returns the maximum"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "extend() appends multiple elements from another iterable."
+    },
+    {
+      "id": "uni-futa-dts104-0003",
+      "type": "mcq",
+      "stem": "The assignment operator in Python is:",
+      "options": {
+        "A": "=",
+        "B": "==",
+        "C": ":=",
+        "D": "=>"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "= assigns a value to a variable; == tests equality."
+    },
+    {
+      "id": "uni-futa-dts104-0004",
+      "type": "mcq",
+      "stem": "A function in Python is defined using:",
+      "options": {
+        "A": "def",
+        "B": "function",
+        "C": "func",
+        "D": "define"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "def function_name(parameters): defines a function."
+    },
+    {
+      "id": "uni-futa-dts104-0005",
+      "type": "mcq",
+      "stem": "Function arguments in Python are passed:",
+      "options": {
+        "A": "By assignment (objects are passed by reference)",
+        "B": "By value only",
+        "C": "By pointer only",
+        "D": "By copy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python passes object references; mutable objects can be modified in-place."
+    },
+    {
+      "id": "uni-futa-dts104-0006",
+      "type": "mcq",
+      "stem": "Trying to use an integer larger than the maximum results in:",
+      "options": {
+        "A": "An OverflowError",
+        "B": "Silent truncation",
+        "C": "Automatic conversion to float",
+        "D": "A SyntaxError"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Exceeding integer range raises OverflowError."
+    },
+    {
+      "id": "uni-futa-dts104-0007",
+      "type": "mcq",
+      "stem": "The logical AND operator in Python is:",
+      "options": {
+        "A": "and",
+        "B": "&&",
+        "C": "&",
+        "D": "AND"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python uses 'and', 'or', 'not' (keyword operators, not symbols)."
+    },
+    {
+      "id": "uni-futa-dts104-0008",
+      "type": "mcq",
+      "stem": "Dictionaries are created using:",
+      "options": {
+        "A": "Curly braces { }",
+        "B": "Square brackets [ ]",
+        "C": "Parentheses ( )",
+        "D": "Angle brackets < >"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "{'name': 'Phil', 'age': 30} creates a dictionary."
+    },
+    {
+      "id": "uni-futa-dts104-0009",
+      "type": "mcq",
+      "stem": "[1, 2, 3, 4, 5][::-1] returns:",
+      "options": {
+        "A": "[5, 4, 3, 2, 1]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[1, 3, 5]",
+        "D": "[5, 4, 3]"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Slice [::-1] reverses the list."
+    },
+    {
+      "id": "uni-futa-dts104-0010",
+      "type": "mcq",
+      "stem": "An else clause in Python ends with:",
+      "options": {
+        "A": "A colon (:)",
+        "B": "A semicolon (;)",
+        "C": "A period (.)",
+        "D": "A comma (,)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "else: — colon introduces the indented block."
+    },
+    {
+      "id": "uni-futa-dts104-0011",
+      "type": "mcq",
+      "stem": "To create an empty list, use:",
+      "options": {
+        "A": "[]",
+        "B": "()",
+        "C": "{}",
+        "D": "list"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Empty square brackets create an empty list."
+    },
+    {
+      "id": "uni-futa-dts104-0012",
+      "type": "mcq",
+      "stem": "Raw strings in Python are prefixed with:",
+      "options": {
+        "A": "r",
+        "B": "raw",
+        "C": "R",
+        "D": "Both r and R"
+      },
+      "marks": 1,
+      "answer": "D",
+      "explanation": "r'...' or R'...' treats backslashes as literal characters."
+    },
+    {
+      "id": "uni-futa-dts104-0013",
+      "type": "mcq",
+      "stem": "Which method splits a string into a list?",
+      "options": {
+        "A": ".split()",
+        "B": ".divide()",
+        "C": ".separate()",
+        "D": ".break()"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'a,b,c'.split(',') returns ['a', 'b', 'c']."
+    },
+    {
+      "id": "uni-futa-dts104-0014",
+      "type": "mcq",
+      "stem": "To import only specific names from a module, use:",
+      "options": {
+        "A": "from module import name",
+        "B": "import module.name",
+        "C": "use module.name",
+        "D": "include module.name"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "from math import sqrt lets you call sqrt() directly."
+    },
+    {
+      "id": "uni-futa-dts104-0015",
+      "type": "mcq",
+      "stem": "range(2, 8) produces:",
+      "options": {
+        "A": "[2, 3, 4, 5, 6, 7]",
+        "B": "[2, 3, 4, 5, 6, 7, 8]",
+        "C": "[0, 1, 2, 3, 4, 5, 6, 7]",
+        "D": "[8]"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "range(start, stop) goes from start to stop-1."
+    },
+    {
+      "id": "uni-futa-dts104-0016",
+      "type": "mcq",
+      "stem": "List concatenation uses:",
+      "options": {
+        "A": "The + operator",
+        "B": "The & operator",
+        "C": "The . operator",
+        "D": "The append() method only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "[1, 2] + [3, 4] returns [1, 2, 3, 4]."
+    },
+    {
+      "id": "uni-futa-dts104-0017",
+      "type": "mcq",
+      "stem": "Default argument values are specified using:",
+      "options": {
+        "A": "= in the function definition",
+        "B": ": in the function definition",
+        "C": "-> in the function definition",
+        "D": "default keyword"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "def f(x, y=10): — y defaults to 10 if not provided."
+    },
+    {
+      "id": "uni-futa-dts104-0018",
+      "type": "mcq",
+      "stem": "To open a file for writing, use:",
+      "options": {
+        "A": "open('file.txt', 'w')",
+        "B": "open('file.txt', 'r')",
+        "C": "open('file.txt', 'a')",
+        "D": "write('file.txt')"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Mode 'w' opens for writing (overwrites existing content); 'a' appends."
+    },
+    {
+      "id": "uni-futa-dts104-0019",
+      "type": "mcq",
+      "stem": "In Python, truth values are represented by:",
+      "options": {
+        "A": "True and False (capitalised)",
+        "B": "true and false (lowercase)",
+        "C": "1 and 0 only",
+        "D": "YES and NO"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python booleans are True and False (capitalised)."
+    },
+    {
+      "id": "uni-futa-dts104-0020",
+      "type": "mcq",
+      "stem": "Triple-quoted strings allow:",
+      "options": {
+        "A": "Text to span multiple lines",
+        "B": "Only single-line text",
+        "C": "Numeric data only",
+        "D": "Comments only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Triple quotes (''' or \"\"\") let strings span as many lines as needed."
+    },
+    {
+      "id": "uni-futa-dts104-0021",
+      "type": "mcq",
+      "stem": "String concatenation in Python uses:",
+      "options": {
+        "A": "The + operator",
+        "B": "The & operator",
+        "C": "The . operator",
+        "D": "The concat() function"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "+ joins strings: 'a' + 'b' = 'ab'."
+    },
+    {
+      "id": "uni-futa-dts104-0022",
+      "type": "mcq",
+      "stem": "Within each indented block, you must be:",
+      "options": {
+        "A": "Consistent in the amount of indentation",
+        "B": "Random with indentation",
+        "C": "Use only tabs",
+        "D": "Use only spaces of any size"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Inconsistent indentation raises IndentationError."
+    },
+    {
+      "id": "uni-futa-dts104-0023",
+      "type": "mcq",
+      "stem": "To open a file for reading, use:",
+      "options": {
+        "A": "open('file.txt', 'r')",
+        "B": "read('file.txt')",
+        "C": "file('file.txt')",
+        "D": "input('file.txt')"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "open() with mode 'r' opens for reading (default mode)."
+    },
+    {
+      "id": "uni-futa-dts104-0024",
+      "type": "mcq",
+      "stem": "Python statements do NOT need to end with:",
+      "options": {
+        "A": "A special character — newline ends a statement",
+        "B": "A semicolon",
+        "C": "A period",
+        "D": "A colon"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python uses newline (Return) to mark end of a statement; no terminator like ; needed."
+    },
+    {
+      "id": "uni-futa-dts104-0025",
+      "type": "mcq",
+      "stem": "A function with no return statement returns:",
+      "options": {
+        "A": "None",
+        "B": "0",
+        "C": "An empty string",
+        "D": "An error"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Functions without explicit return return None."
+    },
+    {
+      "id": "uni-futa-dts104-0026",
+      "type": "mcq",
+      "stem": "The fastest way to print a value in Python is with:",
+      "options": {
+        "A": "The print command",
+        "B": "The echo command",
+        "C": "The display command",
+        "D": "The output command"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "print(x) displays the value of x with a newline at the end."
+    },
+    {
+      "id": "uni-futa-dts104-0027",
+      "type": "mcq",
+      "stem": "list.insert(i, x) does what?",
+      "options": {
+        "A": "Inserts x at index i",
+        "B": "Removes element at index i",
+        "C": "Sorts the list",
+        "D": "Returns element at index i"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "insert(i, x) places x at position i, shifting later elements right."
+    },
+    {
+      "id": "uni-futa-dts104-0028",
+      "type": "mcq",
+      "stem": "A class in Python is defined using:",
+      "options": {
+        "A": "class",
+        "B": "Class",
+        "C": "struct",
+        "D": "object"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "class MyClass: defines a new class."
+    },
+    {
+      "id": "uni-futa-dts104-0029",
+      "type": "mcq",
+      "stem": "Python will NOT automatically convert numbers from one type to another, but provides:",
+      "options": {
+        "A": "Functions for explicit conversion",
+        "B": "No way to convert",
+        "C": "Only automatic conversion",
+        "D": "A special operator for conversion"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Use int(), float(), long(), complex() for explicit conversion."
+    },
+    {
+      "id": "uni-futa-dts104-0030",
+      "type": "mcq",
+      "stem": "The .readlines() method returns:",
+      "options": {
+        "A": "A list of all lines in the file",
+        "B": "A single line",
+        "C": "A single character",
+        "D": "The file size in bytes"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "readlines() reads the entire file into a list of lines."
+    },
+    {
+      "id": "uni-futa-dts104-0031",
+      "type": "mcq",
+      "stem": "The name 'Python' is derived from:",
+      "options": {
+        "A": "Guido van Rossum's favorite TV show, 'Monty Python's Flying Circus'",
+        "B": "The python snake species",
+        "C": "An acronym for 'PYthon High-level Object-oriented Tool'",
+        "D": "A Greek mythological figure"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Despite snake imagery, the name comes from Monty Python's Flying Circus."
+    },
+    {
+      "id": "uni-futa-dts104-0032",
+      "type": "mcq",
+      "stem": "Standard input in Python is accessed via:",
+      "options": {
+        "A": "sys.stdin",
+        "B": "input.stdin",
+        "C": "read.stdin",
+        "D": "stdin"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "sys.stdin is the standard input stream; sys.stdout is standard output."
+    },
+    {
+      "id": "uni-futa-dts104-0033",
+      "type": "mcq",
+      "stem": "The escape character in Python strings is:",
+      "options": {
+        "A": "Backslash \\",
+        "B": "Forward slash /",
+        "C": "Ampersand &",
+        "D": "Pipe |"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "\\n is newline, \\t is tab, \\\\ is a literal backslash."
+    },
+    {
+      "id": "uni-futa-dts104-0034",
+      "type": "mcq",
+      "stem": "Functions in Python can return:",
+      "options": {
+        "A": "Multiple values (as a tuple)",
+        "B": "Only one value",
+        "C": "Only integers",
+        "D": "Only strings"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "return a, b, c returns a tuple of three values."
+    },
+    {
+      "id": "uni-futa-dts104-0035",
+      "type": "mcq",
+      "stem": "To execute a file inside an interactive Python session, use:",
+      "options": {
+        "A": "execfile(\"myprog.py\")",
+        "B": "run(\"myprog.py\")",
+        "C": "execute myprog.py",
+        "D": "import myprog"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "execfile() runs the contents of a file in the current interactive session."
+    },
+    {
+      "id": "uni-futa-dts104-0036",
+      "type": "mcq",
+      "stem": "A Python tuple is:",
+      "options": {
+        "A": "An immutable sequence",
+        "B": "A mutable sequence",
+        "C": "A type of dictionary",
+        "D": "A type of string"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Tuples are like lists but cannot be modified after creation."
+    },
+    {
+      "id": "uni-futa-dts104-0037",
+      "type": "mcq",
+      "stem": "List elements in Python:",
+      "options": {
+        "A": "Need not be of the same type",
+        "B": "Must all be integers",
+        "C": "Must all be strings",
+        "D": "Must all be the same type"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Lists are heterogeneous: [1, 'a', [2, 3], 4.5] is valid."
+    },
+    {
+      "id": "uni-futa-dts104-0038",
+      "type": "mcq",
+      "stem": "The sys module provides access to:",
+      "options": {
+        "A": "System-specific parameters and functions (stdin, stdout, argv)",
+        "B": "Mathematical functions",
+        "C": "String operations",
+        "D": "File I/O"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "sys.stdin, sys.stdout, sys.argv are commonly used sys members."
+    },
+    {
+      "id": "uni-futa-dts104-0039",
+      "type": "mcq",
+      "stem": "len('hello') returns:",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "6",
+        "D": "0"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "len() returns the number of characters; 'hello' has 5."
+    },
+    {
+      "id": "uni-futa-dts104-0040",
+      "type": "mcq",
+      "stem": "A Python dictionary is:",
+      "options": {
+        "A": "A collection indexed by immutable keys (e.g., strings)",
+        "B": "A collection indexed by integers only",
+        "C": "A type of list",
+        "D": "A type of tuple"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Dictionaries use keys (strings, tuples) instead of integer indices."
+    },
+    {
+      "id": "uni-futa-dts104-0041",
+      "type": "mcq",
+      "stem": "The 'in' operator for lists checks:",
+      "options": {
+        "A": "Whether an element is in the list",
+        "B": "The list length",
+        "C": "The list type",
+        "D": "The list index"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "3 in [1, 2, 3] returns True."
+    },
+    {
+      "id": "uni-futa-dts104-0042",
+      "type": "mcq",
+      "stem": "String formatting in Python uses the:",
+      "options": {
+        "A": "Percent operator (%) overloaded for strings",
+        "B": "format() function only",
+        "C": "concat() function",
+        "D": "+ operator only"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "'Value: %d' % 42 produces 'Value: 42'. Python 3 also supports str.format() and f-strings."
+    },
+    {
+      "id": "uni-futa-dts104-0043",
+      "type": "mcq",
+      "stem": "Chained assignment like 'a = b = c = 0':",
+      "options": {
+        "A": "Sets all three variables to 0",
+        "B": "Is a syntax error",
+        "C": "Sets only a to 0",
+        "D": "Sets only c to 0"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Chained assignment assigns the same value to multiple variables."
+    },
+    {
+      "id": "uni-futa-dts104-0044",
+      "type": "mcq",
+      "stem": "Python is available on:",
+      "options": {
+        "A": "A wide variety of platforms",
+        "B": "Only Windows",
+        "C": "Only Linux",
+        "D": "Only macOS"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python runs on Windows, Linux, macOS, and many other platforms."
+    },
+    {
+      "id": "uni-futa-dts104-0045",
+      "type": "mcq",
+      "stem": "The print command adds what at the end by default?",
+      "options": {
+        "A": "A newline",
+        "B": "A space",
+        "C": "A tab",
+        "D": "Nothing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "print adds \\n at the end; suppress with a trailing comma (Python 2) or end='' (Python 3)."
+    },
+    {
+      "id": "uni-futa-dts104-0046",
+      "type": "mcq",
+      "stem": "Python's small, clean syntax reflects its heritage as a language:",
+      "options": {
+        "A": "Designed to be easy for beginners yet powerful for advanced users",
+        "B": "Designed for experts only",
+        "C": "Designed for embedded systems only",
+        "D": "Designed to replace C++"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python's design philosophy prioritises both learnability and power."
+    },
+    {
+      "id": "uni-futa-dts104-0047",
+      "type": "mcq",
+      "stem": "Which is TRUE about Python?",
+      "options": {
+        "A": "Its core language is very small and easy to master",
+        "B": "It has a huge core language that is hard to learn",
+        "C": "It cannot be used for internet tasks",
+        "D": "It only runs on Windows"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python's core is small; modules extend it for virtually limitless tasks."
+    },
+    {
+      "id": "uni-futa-dts104-0048",
+      "type": "mcq",
+      "stem": "Hexadecimal constants in Python are prefixed with:",
+      "options": {
+        "A": "0x",
+        "B": "0h",
+        "C": "hex",
+        "D": "#"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "0xFF is hexadecimal 255."
+    },
+    {
+      "id": "uni-futa-dts104-0049",
+      "type": "mcq",
+      "stem": "Python supports how many types of numeric objects?",
+      "options": {
+        "A": "Four: integers, long integers, floating point, complex",
+        "B": "Two: int and float",
+        "C": "Three: int, float, string",
+        "D": "One: number"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python's numeric types: int, long, float, complex."
+    },
+    {
+      "id": "uni-futa-dts104-0050",
+      "type": "mcq",
+      "stem": "On most computers, ordinary integers have a range of approximately:",
+      "options": {
+        "A": "-2 billion to +2 billion",
+        "B": "-128 to 127",
+        "C": "-32k to +32k",
+        "D": "Unlimited"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "32-bit integers range from about -2.1 billion to +2.1 billion."
+    },
+    {
+      "id": "uni-futa-dts104-0051",
+      "type": "mcq",
+      "stem": "range(0, 10, 2) produces:",
+      "options": {
+        "A": "[0, 2, 4, 6, 8]",
+        "B": "[0, 2, 4, 6, 8, 10]",
+        "C": "[2, 4, 6, 8, 10]",
+        "D": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "range(start, stop, step) — 0, 2, 4, 6, 8 (10 exclusive)."
+    },
+    {
+      "id": "uni-futa-dts104-0052",
+      "type": "mcq",
+      "stem": "list.pop() without an argument does what?",
+      "options": {
+        "A": "Removes and returns the last element",
+        "B": "Removes the first element",
+        "C": "Sorts the list",
+        "D": "Returns the list length"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "pop() removes and returns the last element; pop(i) removes element at index i."
+    },
+    {
+      "id": "uni-futa-dts104-0053",
+      "type": "mcq",
+      "stem": "To create an instance of a class, use:",
+      "options": {
+        "A": "ClassName()",
+        "B": "new ClassName()",
+        "C": "create ClassName()",
+        "D": "make ClassName()"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Calling the class like a function creates a new instance."
+    },
+    {
+      "id": "uni-futa-dts104-0054",
+      "type": "mcq",
+      "stem": "The map() function:",
+      "options": {
+        "A": "Applies a function to each element of a list",
+        "B": "Maps keys to values in a dict",
+        "C": "Sorts a list",
+        "D": "Reverses a list"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "map(f, lst) returns [f(x) for x in lst]."
+    },
+    {
+      "id": "uni-futa-dts104-0055",
+      "type": "mcq",
+      "stem": "Python ignores spaces between list entries, and you can span multiple lines by:",
+      "options": {
+        "A": "Hitting return after any comma",
+        "B": "Using a backslash",
+        "C": "Using a semicolon",
+        "D": "Using a plus sign"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "List continuations work after commas without any special character."
+    },
+    {
+      "id": "uni-futa-dts104-0056",
+      "type": "mcq",
+      "stem": "To use a module in Python, use:",
+      "options": {
+        "A": "import",
+        "B": "include",
+        "C": "use",
+        "D": "require"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "import math makes the math module available."
+    },
+    {
+      "id": "uni-futa-dts104-0057",
+      "type": "mcq",
+      "stem": "Python is described as a true:",
+      "options": {
+        "A": "Object-oriented language",
+        "B": "Procedural-only language",
+        "C": "Functional-only language",
+        "D": "Machine language"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python is a true OO language, but also supports procedural and functional styles."
+    },
+    {
+      "id": "uni-futa-dts104-0058",
+      "type": "mcq",
+      "stem": "In '%s has %d dollars' % ('Phil', 100), the placeholders are filled:",
+      "options": {
+        "A": "In order: 'Phil' → %s, 100 → %d",
+        "B": "In reverse order",
+        "C": "Randomly",
+        "D": "Only the first placeholder is filled"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Placeholders are filled in the order they appear, matched to tuple elements."
+    },
+    {
+      "id": "uni-futa-dts104-0059",
+      "type": "mcq",
+      "stem": "To access an attribute of an object, use:",
+      "options": {
+        "A": "Dot notation (obj.attr)",
+        "B": "Arrow notation (obj->attr)",
+        "C": "Bracket notation (obj[attr])",
+        "D": "Colon notation (obj:attr)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "obj.name accesses the name attribute; obj.method() calls the method."
+    },
+    {
+      "id": "uni-futa-dts104-0060",
+      "type": "mcq",
+      "stem": "The .write(s) method on a file object:",
+      "options": {
+        "A": "Writes string s to the file",
+        "B": "Reads from the file",
+        "C": "Closes the file",
+        "D": "Returns the file size"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "write(s) writes the string s to the open file."
+    },
+    {
+      "id": "uni-futa-dts104-0061",
+      "type": "mcq",
+      "stem": "Long integers in Python are:",
+      "options": {
+        "A": "Arbitrary precision — as many digits as you can type",
+        "B": "Limited to 64 bits",
+        "C": "Limited to 32 bits",
+        "D": "Always floating point"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python long integers have arbitrary precision."
+    },
+    {
+      "id": "uni-futa-dts104-0062",
+      "type": "mcq",
+      "stem": "To convert a number to a string, use:",
+      "options": {
+        "A": "str()",
+        "B": "string()",
+        "C": "toStr()",
+        "D": "text()"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "str(42) returns '42'."
+    },
+    {
+      "id": "uni-futa-dts104-0063",
+      "type": "mcq",
+      "stem": "Negative indices in Python strings:",
+      "options": {
+        "A": "Count from the end (-1 is last character)",
+        "B": "Are invalid",
+        "C": "Start at 0",
+        "D": "Are reserved for special characters"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "s[-1] is the last character, s[-2] is second-to-last, etc."
+    },
+    {
+      "id": "uni-futa-dts104-0064",
+      "type": "mcq",
+      "stem": "The lambda keyword creates:",
+      "options": {
+        "A": "An anonymous (inline) function",
+        "B": "A named function",
+        "C": "A class",
+        "D": "A module"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "lambda x: x*2 creates an inline function."
+    },
+    {
+      "id": "uni-futa-dts104-0065",
+      "type": "mcq",
+      "stem": "Lists in Python are created using:",
+      "options": {
+        "A": "Square brackets [ ]",
+        "B": "Parentheses ( )",
+        "C": "Curly braces { }",
+        "D": "Angle brackets < >"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "[1, 2, 3] creates a list."
+    },
+    {
+      "id": "uni-futa-dts104-0066",
+      "type": "mcq",
+      "stem": "[1, 2, 3, 4, 5][1:4] returns:",
+      "options": {
+        "A": "[2, 3, 4]",
+        "B": "[1, 2, 3]",
+        "C": "[2, 3, 4, 5]",
+        "D": "[1, 2, 3, 4]"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Slice [1:4] includes indices 1, 2, 3 (4 is exclusive)."
+    },
+    {
+      "id": "uni-futa-dts104-0067",
+      "type": "mcq",
+      "stem": "The while loop continues as long as:",
+      "options": {
+        "A": "Its condition is True",
+        "B": "Its condition is False",
+        "C": "A counter reaches 0",
+        "D": "A file is open"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "while condition: repeats the block while condition evaluates to True."
+    },
+    {
+      "id": "uni-futa-dts104-0068",
+      "type": "mcq",
+      "stem": "String repetition in Python uses:",
+      "options": {
+        "A": "The * operator",
+        "B": "The × operator",
+        "C": "The rep() function",
+        "D": "The ** operator"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "* repeats: 'ab' * 3 = 'ababab'."
+    },
+    {
+      "id": "uni-futa-dts104-0069",
+      "type": "mcq",
+      "stem": "A list comprehension like [x*2 for x in lst] is similar to:",
+      "options": {
+        "A": "map() with a lambda",
+        "B": "filter()",
+        "C": "sort()",
+        "D": "reverse()"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "List comprehensions often replace map/filter with lambda."
+    },
+    {
+      "id": "uni-futa-dts104-0070",
+      "type": "mcq",
+      "stem": "To continue a Python statement on the next line, use:",
+      "options": {
+        "A": "A backslash (\\) at the end of the line",
+        "B": "A semicolon",
+        "C": "An ampersand (&)",
+        "D": "A forward slash (/)"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Backslash at line end tells Python the statement continues on the next line."
+    },
+    {
+      "id": "uni-futa-dts104-0071",
+      "type": "mcq",
+      "stem": "There is even a Python interpreter written entirely in:",
+      "options": {
+        "A": "Java",
+        "B": "C#",
+        "C": "Ruby",
+        "D": "Go"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Jython is a Python interpreter written in Java, enhancing Python's internet capabilities."
+    },
+    {
+      "id": "uni-futa-dts104-0072",
+      "type": "mcq",
+      "stem": "The logical OR operator in Python is:",
+      "options": {
+        "A": "or",
+        "B": "||",
+        "C": "|",
+        "D": "OR"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python uses 'or' for logical OR."
+    },
+    {
+      "id": "uni-futa-dts104-0073",
+      "type": "mcq",
+      "stem": "The slice s[1:4] returns:",
+      "options": {
+        "A": "Characters at indices 1, 2, 3 (4 is exclusive)",
+        "B": "Characters at indices 1, 2, 3, 4",
+        "C": "Characters at indices 0, 1, 2, 3",
+        "D": "Just index 1"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python slicing is half-open: [start:stop] includes start, excludes stop."
+    },
+    {
+      "id": "uni-futa-dts104-0074",
+      "type": "mcq",
+      "stem": "Long integers in Python are entered by following an integer with:",
+      "options": {
+        "A": "The letter L (e.g., 27L)",
+        "B": "The letter D",
+        "C": "The letter N",
+        "D": "No special suffix"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "27L is a long integer; uppercase L is preferred because lowercase l looks like 1."
+    },
+    {
+      "id": "uni-futa-dts104-0075",
+      "type": "mcq",
+      "stem": "To specify a floating point number, include:",
+      "options": {
+        "A": "A decimal point or use exponential notation",
+        "B": "Only digits",
+        "C": "Only the letter f",
+        "D": "A dollar sign"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "1.0 and 1e3 are both floats; 1 is an int."
+    },
+    {
+      "id": "uni-futa-dts104-0076",
+      "type": "mcq",
+      "stem": "The .readline() method on a file object:",
+      "options": {
+        "A": "Returns the next line of the file",
+        "B": "Returns all lines at once",
+        "C": "Returns the file size",
+        "D": "Closes the file"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "readline() returns one line at a time; readlines() returns all lines as a list."
+    },
+    {
+      "id": "uni-futa-dts104-0077",
+      "type": "mcq",
+      "stem": "List repetition uses:",
+      "options": {
+        "A": "The * operator",
+        "B": "The ** operator",
+        "C": "The rep() function",
+        "D": "The times() method"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "[0] * 3 returns [0, 0, 0]."
+    },
+    {
+      "id": "uni-futa-dts104-0078",
+      "type": "mcq",
+      "stem": "Tuples are created using:",
+      "options": {
+        "A": "Parentheses ( )",
+        "B": "Square brackets [ ]",
+        "C": "Curly braces { }",
+        "D": "Angle brackets < >"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "(1, 2, 3) creates a tuple."
+    },
+    {
+      "id": "uni-futa-dts104-0079",
+      "type": "mcq",
+      "stem": "Python uses indentation to:",
+      "options": {
+        "A": "Indicate loops and blocks instead of curly braces or keywords",
+        "B": "Improve readability only",
+        "C": "Mark comments",
+        "D": "Terminate statements"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python uses indentation (whitespace) as a structural element, unlike C/Java which use { }."
+    },
+    {
+      "id": "uni-futa-dts104-0080",
+      "type": "mcq",
+      "stem": "len([1, 2, 3, 4, 5]) returns:",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "6",
+        "D": "0"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "len() returns the number of top-level elements."
+    },
+    {
+      "id": "uni-futa-dts104-0081",
+      "type": "mcq",
+      "stem": "To convert a string '42' to an integer, use:",
+      "options": {
+        "A": "int('42')",
+        "B": "integer('42')",
+        "C": "toInt('42')",
+        "D": "convert('42')"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "int() converts a string or float to an integer."
+    },
+    {
+      "id": "uni-futa-dts104-0082",
+      "type": "mcq",
+      "stem": "An if statement in Python ends with:",
+      "options": {
+        "A": "A colon (:)",
+        "B": "A semicolon (;)",
+        "C": "A period (.)",
+        "D": "Nothing special"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "if condition: — colon introduces the indented block."
+    },
+    {
+      "id": "uni-futa-dts104-0083",
+      "type": "mcq",
+      "stem": "Inheritance in Python is specified by:",
+      "options": {
+        "A": "class Child(Parent):",
+        "B": "class Child : Parent",
+        "C": "class Child extends Parent",
+        "D": "class Child inherits Parent"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Parent class is listed in parentheses after the class name."
+    },
+    {
+      "id": "uni-futa-dts104-0084",
+      "type": "mcq",
+      "stem": "The logical NOT operator in Python is:",
+      "options": {
+        "A": "not",
+        "B": "!",
+        "C": "~",
+        "D": "NOT"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python uses 'not' for logical negation."
+    },
+    {
+      "id": "uni-futa-dts104-0085",
+      "type": "mcq",
+      "stem": "Octal constants in Python are prefixed with:",
+      "options": {
+        "A": "0 (leading zero)",
+        "B": "0o",
+        "C": "oct",
+        "D": "0c"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "0777 is octal (note: Python 3 uses 0o777, but the source notes mention leading 0)."
+    },
+    {
+      "id": "uni-futa-dts104-0086",
+      "type": "mcq",
+      "stem": "The first parameter of instance methods in Python is conventionally:",
+      "options": {
+        "A": "self",
+        "B": "this",
+        "C": "me",
+        "D": "instance"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "self refers to the instance; it's passed automatically when calling obj.method()."
+    },
+    {
+      "id": "uni-futa-dts104-0087",
+      "type": "mcq",
+      "stem": "In Python, 1e3 represents:",
+      "options": {
+        "A": "1000.0 (floating point)",
+        "B": "1000 (integer)",
+        "C": "1 times 3",
+        "D": "An error"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Exponential notation always produces a float, even without a decimal point."
+    },
+    {
+      "id": "uni-futa-dts104-0088",
+      "type": "mcq",
+      "stem": "Python uses indentation to signal:",
+      "options": {
+        "A": "The beginning and end of statement blocks",
+        "B": "Comments",
+        "C": "String boundaries",
+        "D": "Variable types"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Indentation groups statements into blocks for loops, conditionals, functions."
+    },
+    {
+      "id": "uni-futa-dts104-0089",
+      "type": "mcq",
+      "stem": "An exception in Python is handled using:",
+      "options": {
+        "A": "try/except blocks",
+        "B": "catch/throw blocks",
+        "C": "handle/raise blocks",
+        "D": "error/rescue blocks"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "try: runs code; except: catches exceptions."
+    },
+    {
+      "id": "uni-futa-dts104-0090",
+      "type": "mcq",
+      "stem": "Comments in Python begin with:",
+      "options": {
+        "A": "#",
+        "B": "//",
+        "C": "/*",
+        "D": "--"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python uses # for single-line comments."
+    },
+    {
+      "id": "uni-futa-dts104-0091",
+      "type": "mcq",
+      "stem": "The for loop in Python iterates over:",
+      "options": {
+        "A": "Elements of a sequence (list, tuple, string, range)",
+        "B": "Only integer counters",
+        "C": "Only files",
+        "D": "Only dictionaries"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "for x in sequence: iterates over each element."
+    },
+    {
+      "id": "uni-futa-dts104-0092",
+      "type": "mcq",
+      "stem": "list.append(x) does what?",
+      "options": {
+        "A": "Adds x to the end of the list",
+        "B": "Removes x from the list",
+        "C": "Sorts the list",
+        "D": "Returns the list length"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "append() adds a single element to the end."
+    },
+    {
+      "id": "uni-futa-dts104-0093",
+      "type": "mcq",
+      "stem": "The constructor method in a Python class is:",
+      "options": {
+        "A": "__init__",
+        "B": "constructor",
+        "C": "init",
+        "D": "__new__"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "__init__ is called when an instance is created."
+    },
+    {
+      "id": "uni-futa-dts104-0094",
+      "type": "mcq",
+      "stem": "range(5) produces:",
+      "options": {
+        "A": "[0, 1, 2, 3, 4]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[0, 1, 2, 3, 4, 5]",
+        "D": "[5]"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "range(n) produces 0 to n-1 inclusive."
+    },
+    {
+      "id": "uni-futa-dts104-0095",
+      "type": "mcq",
+      "stem": "To make a Python file executable on UNIX, use:",
+      "options": {
+        "A": "chmod +x myprogram.py",
+        "B": "execute myprogram.py",
+        "C": "run myprogram.py",
+        "D": "python -e myprogram.py"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "chmod +x makes the file executable; then you can run it by typing its name."
+    },
+    {
+      "id": "uni-futa-dts104-0096",
+      "type": "mcq",
+      "stem": "Strings in Python are:",
+      "options": {
+        "A": "A collection of characters stored together to represent text",
+        "B": "A collection of numbers",
+        "C": "A type of function",
+        "D": "A type of loop"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Strings store arbitrary text inside a Python program."
+    },
+    {
+      "id": "uni-futa-dts104-0097",
+      "type": "mcq",
+      "stem": "Single and double quotes in Python:",
+      "options": {
+        "A": "Have the same meaning",
+        "B": "Have different meanings",
+        "C": "Cannot be mixed",
+        "D": "Are reserved for special strings"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Both ' and \" produce equivalent strings; choice is stylistic."
+    },
+    {
+      "id": "uni-futa-dts104-0098",
+      "type": "mcq",
+      "stem": "Python is an excellent choice as a:",
+      "options": {
+        "A": "First programming language",
+        "B": "Operating system",
+        "C": "Database engine",
+        "D": "Hardware driver"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python was designed to be easy for beginners yet powerful enough for advanced users."
+    },
+    {
+      "id": "uni-futa-dts104-0099",
+      "type": "mcq",
+      "stem": "Python string indexing is:",
+      "options": {
+        "A": "0-based (first character is index 0)",
+        "B": "1-based (first character is index 1)",
+        "C": "-1-based",
+        "D": "Arbitrary"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "Python uses 0-based indexing; s[0] is the first character."
+    },
+    {
+      "id": "uni-futa-dts104-0100",
+      "type": "mcq",
+      "stem": "To raise an exception manually, use:",
+      "options": {
+        "A": "raise",
+        "B": "throw",
+        "C": "error",
+        "D": "panic"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "raise ValueError('invalid') raises a ValueError."
+    }
+  ]
+}
