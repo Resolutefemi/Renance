@@ -2,8 +2,8 @@
  "code": "uni-unilag-chm102-bank",
  "title": "UNILAG CHM 102 | Course Question Bank",
  "version": 1,
- "questionCount": 1938,
- "totalMarks": 1938,
+ "questionCount": 1940,
+ "totalMarks": 1940,
  "questions": [
   {
    "id": "uni-unilag-chm102-bank-0001",
@@ -27135,6 +27135,36 @@
    "marks": 1,
    "answer": "C",
    "explanation": "The longest chain containing the triple bond has 4 carbons (but-), with the triple bond starting at carbon 1, hence 1-butyne."
+  },
+  {
+   "id": "uni-unilag-chm102-bank-1939",
+   "type": "mcq",
+   "stem": "What is the IUPAC name for HC≡C-CH2-CH3?",
+   "options": {
+    "A": "1-Butyne",
+    "B": "2-Butyne",
+    "C": "But-1-yne",
+    "D": "Both A and C",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Both 1-butyne and but-1-yne are acceptable IUPAC names. The number can be placed before the root or after 'but'."
+  },
+  {
+   "id": "uni-unilag-chm102-bank-1940",
+   "type": "mcq",
+   "stem": "Mutarotation is a term related to",
+   "options": {
+    "A": "Interconversion of anomers",
+    "B": "Relationship of D- and L- families",
+    "C": "Hydrolysis of sucrose",
+    "D": "Number of monosaccharides in a carbohydrate",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mutarotation is the interconversion of anomers (α and β forms) of a sugar in solution, which is observed as a change in optical rotation."
   }
  ],
  "category": "university",

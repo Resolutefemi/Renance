@@ -11,7 +11,7 @@
    "icon": "calculate",
    "bank": "uni-bowen-pq-accounting-bank",
    "questionCount": 211,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-biology",
@@ -21,7 +21,7 @@
    "icon": "biotech",
    "bank": "uni-bowen-pq-biology-bank",
    "questionCount": 186,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-chemistry",
@@ -31,7 +31,7 @@
    "icon": "experiment",
    "bank": "uni-bowen-pq-chemistry-bank",
    "questionCount": 197,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-commerce",
@@ -41,7 +41,7 @@
    "icon": "storefront",
    "bank": "uni-bowen-pq-commerce-bank",
    "questionCount": 217,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-crs",
@@ -51,7 +51,7 @@
    "icon": "auto_stories",
    "bank": "uni-bowen-pq-crs-bank",
    "questionCount": 196,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-economics",
@@ -61,7 +61,7 @@
    "icon": "trending_up",
    "bank": "uni-bowen-pq-economics-bank",
    "questionCount": 208,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-english",
@@ -71,7 +71,7 @@
    "icon": "translate",
    "bank": "uni-bowen-pq-english-bank",
    "questionCount": 180,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-geography",
@@ -81,7 +81,7 @@
    "icon": "public",
    "bank": "uni-bowen-pq-geography-bank",
    "questionCount": 215,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-government",
@@ -91,7 +91,7 @@
    "icon": "account_balance",
    "bank": "uni-bowen-pq-government-bank",
    "questionCount": 220,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-irs",
@@ -101,7 +101,7 @@
    "icon": "menu_book",
    "bank": "uni-bowen-pq-irs-bank",
    "questionCount": 206,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-literature",
@@ -111,7 +111,7 @@
    "icon": "menu_book",
    "bank": "uni-bowen-pq-literature-bank",
    "questionCount": 125,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-mathematics",
@@ -121,7 +121,7 @@
    "icon": "functions",
    "bank": "uni-bowen-pq-mathematics-bank",
    "questionCount": 207,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   },
   {
    "slug": "pq-physics",
@@ -131,7 +131,27 @@
    "icon": "science",
    "bank": "uni-bowen-pq-physics-bank",
    "questionCount": 217,
-   "pdf": null
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
+  },
+  {
+   "slug": "pq-general-paper",
+   "code": "Post-UTME General-Paper",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "menu_book",
+   "bank": "uni-bowen-pq-general-paper-bank",
+   "questionCount": 13,
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
+  },
+  {
+   "slug": "pq-history",
+   "code": "Post-UTME History",
+   "title": "Post-UTME Preparation",
+   "semester": null,
+   "icon": "history_edu",
+   "bank": "uni-bowen-pq-history-bank",
+   "questionCount": 6,
+   "pdf": "/pdfs/bowen/bowen-university-past-questions.pdf"
   }
  ]
 }

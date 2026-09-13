@@ -1,0 +1,131 @@
+{
+ "code": "uni-unilag-chemistry-bank",
+ "title": null,
+ "version": 1,
+ "questionCount": 8,
+ "totalMarks": 8,
+ "questions": [
+  {
+   "id": "uni-unilag-chemistry-bank-0001",
+   "type": "mcq",
+   "stem": "What is the IUPAC name for the ester CH3CH2COOCH2CH3?",
+   "options": {
+    "A": "ethyl propanoate",
+    "B": "propyl ethanoate",
+    "C": "ethyl acetate",
+    "D": "ethoxypropanone",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Esters are named as alkyl alkanoates; the group attached to the oxygen atom is the alkyl group ('ethyl') and the carboxylic acid component provides the alkanoate name ('propanoate')."
+  },
+  {
+   "id": "uni-unilag-chemistry-bank-0002",
+   "type": "mcq",
+   "stem": "What is the systematic IUPAC name for the coordination complex [Pt(NH3)4Cl2]Cl2?",
+   "options": {
+    "A": "tetraamminedichloroplatinum(IV) chloride",
+    "B": "tetraamminedichloroplatinum(II) dichloride",
+    "C": "dichlorotetraammineplatinum(IV) chloride",
+    "D": "tetraamminedichloroplatinate(IV) chloride",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ligands are named alphabetically ('ammine' before 'dichlorido' or 'dichloro'), followed by the metal and its oxidation state (IV), ending with the counterion 'chloride'."
+  },
+  {
+   "id": "uni-unilag-chemistry-bank-0003",
+   "type": "mcq",
+   "stem": "According to IUPAC nomenclature rules, what is the systematic name for (CH3)2CH-CH(NH2)-CH2-COOH?",
+   "options": {
+    "A": "3-amino-4-methylpentanoic acid",
+    "B": "3-amino-4,4-dimethylbutanoic acid",
+    "C": "2-amino-4-methylpentanoic acid",
+    "D": "3-amino-1-hydroxy-4-methylpentan-1-one",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Carboxylic acids take principal functional group priority (C1 at -COOH). The longest continuous carbon chain containing the principal group has 5 carbons, with an amino group at C3 and a methyl group at C4."
+  },
+  {
+   "id": "uni-unilag-chemistry-bank-0004",
+   "type": "mcq",
+   "stem": "What is the correct IUPAC name for a saturated bicyclic alkane with two bridgehead carbons connected by bridges of length 3, 2, and 1 carbon atom(s)?",
+   "options": {
+    "A": "bicyclo[3.2.1]octane",
+    "B": "bicyclo[3.2.1]heptane",
+    "C": "bicyclo[2.2.1]octane",
+    "D": "bicyclo[3.2.0]heptane",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bicyclo alkane notation lists bridge lengths in descending order inside brackets [3.2.1]. The total carbon count is the sum of bridge carbons plus the two bridgehead carbons (3 + 2 + 1 + 2 = 8), giving 'octane'."
+  },
+  {
+   "id": "uni-unilag-chemistry-bank-0005",
+   "type": "mcq",
+   "stem": "What is the systematic IUPAC name for the coordination complex salt K3[Fe(CN)6]?",
+   "options": {
+    "A": "potassium hexacyanidoferrate(III)",
+    "B": "potassium hexacyanidoiron(III)",
+    "C": "tripotassium hexacyanidoferrate(III)",
+    "D": "potassium hexacyanidoferrate(II)",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The cation (potassium) is named first without prefixes. The anionic complex adopts the '-ate' suffix with the Latin root for iron ('ferrate') and the oxidation state of Fe is +3."
+  },
+  {
+   "id": "uni-unilag-chemistry-bank-0006",
+   "type": "mcq",
+   "stem": "Which of the following is the correct IUPAC systematic name for the aromatic derivative commonly known as p-hydroxybenzoic acid?",
+   "options": {
+    "A": "4-hydroxybenzoic acid",
+    "B": "4-carboxyphenol",
+    "C": "1-carboxy-4-hydroxybenzene",
+    "D": "4-hydroxyphenylmethanoic acid",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The carboxylic acid group (-COOH) higher priority than the hydroxyl group (-OH), making benzoic acid the parent structure with a hydroxy substituent at position 4."
+  },
+  {
+   "id": "uni-unilag-chemistry-bank-0007",
+   "type": "mcq",
+   "stem": "What is the correct IUPAC name for a spiro hydrocarbon composed of a 4-membered ring and a 5-membered ring sharing a single common carbon atom?",
+   "options": {
+    "A": "spiro[3.4]octane",
+    "B": "spiro[4.3]octane",
+    "C": "spiro[3.4]heptane",
+    "D": "bicyclo[3.4]octane",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Spiro compounds are named with the prefix 'spiro' followed by the number of non-spiro carbons in each ring in ascending order in brackets [3.4]. The total number of carbons is 3 + 4 + 1 = 8 ('octane')."
+  },
+  {
+   "id": "uni-unilag-chemistry-bank-0008",
+   "type": "mcq",
+   "stem": "What is the systematic IUPAC name for HC≡C-CH2-CH=CH2?",
+   "options": {
+    "A": "pent-1-en-4-yne",
+    "B": "pent-4-en-1-yne",
+    "C": "pent-1-yn-4-ene",
+    "D": "pent-4-yn-1-ene",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "When a choice exists between assigning identical locant sets (1,4 vs 4,1) to double and triple bonds, IUPAC rules grant the lower locant to the double bond, making it pent-1-en-4-yne."
+  }
+ ],
+ "category": "university",
+ "body": "University Modules"
+}

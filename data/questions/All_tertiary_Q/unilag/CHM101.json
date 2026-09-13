@@ -2,8 +2,8 @@
  "code": "uni-unilag-chm101-bank",
  "title": "UNILAG CHM 101 | Course Question Bank",
  "version": 1,
- "questionCount": 1438,
- "totalMarks": 1438,
+ "questionCount": 1446,
+ "totalMarks": 1446,
  "questions": [
   {
    "id": "uni-unilag-chm101-bank-0001",
@@ -20138,6 +20138,126 @@
    "marks": 1,
    "answer": "C",
    "explanation": "A lead-acid battery is a secondary cell, meaning its electrochemical reaction is reversible and it can be recharged. Dry cells and mercury cells are primary (non-rechargeable) cells."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1439",
+   "type": "mcq",
+   "stem": "Which is true for an exergonic process?",
+   "options": {
+    "A": "ΔG > 0",
+    "B": "ΔH > 0",
+    "C": "ΔG < 0",
+    "D": "ΔS < 0",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The term 'exergonic' specifically refers to a process that releases free energy. This means the Gibbs free energy change (ΔG) is negative."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1440",
+   "type": "mcq",
+   "stem": "The specific heat of the metal calculated is __________ J/g·°C.",
+   "options": {
+    "A": "2.19",
+    "B": "0.46",
+    "C": "0.89",
+    "D": "1.23",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "From a typical calorimetry problem: heat lost by hot metal = heat gained by water. Solving gives a value around 2.19 J/g°C for the unknown metal."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1441",
+   "type": "mcq",
+   "stem": "Why do gases show unique properties that distinguish them from solids and liquids?",
+   "options": {
+    "A": "Because they are heavier",
+    "B": "Because their particles are far apart and in constant random motion",
+    "C": "Because they have fixed shape",
+    "D": "Because they cannot move",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Gases are composed of particles that are far apart and in constant random motion. Because of this, gases show unique properties that distinguish them from solids and liquids."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1442",
+   "type": "mcq",
+   "stem": "What is the change in internal energy, ΔU, of a system that releases 20.4 kJ of heat and does 4.2 kJ of work on the surroundings?",
+   "options": {
+    "A": "-24.6 kJ",
+    "B": "24.6 kJ",
+    "C": "16.2 kJ",
+    "D": "-16.2 kJ",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "ΔU = q + w. q = -20.4 kJ (released, so negative), w = -4.2 kJ (work done by system on surroundings, so negative). ΔU = -20.4 + (-4.2) = -24.6 kJ."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1443",
+   "type": "mcq",
+   "stem": "In stoichiometry, a mole ratio is derived from:",
+   "options": {
+    "A": "Subscripts of formulas",
+    "B": "Coefficients of balanced equations",
+    "C": "Mass of reactants",
+    "D": "Chemical properties",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The coefficients in a balanced chemical equation represent the relative number of moles of each substance involved in the reaction. These coefficients are used to form the mole ratios for stoichiometric calculations."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1444",
+   "type": "mcq",
+   "stem": "What is ΔG_f° for elements in their standard states?",
+   "options": {
+    "A": "ΔG_f° = 0 for elements in their standard states",
+    "B": "Always positive",
+    "C": "Always negative",
+    "D": "Varies with temperature",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "For elements in their standard states, ΔG_f° = 0."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1445",
+   "type": "mcq",
+   "stem": "Calculate ΔU for a system undergoing an endothermic process where 15.6 kJ of heat flows and 1.4 kJ of work is done on the system.",
+   "options": {
+    "A": "14.2 kJ",
+    "B": "17.0 kJ",
+    "C": "-14.2 kJ",
+    "D": "-17.0 kJ",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "ΔU = q + w. Endothermic means q = +15.6 kJ. Work done on the system means w = +1.4 kJ. ΔU = 15.6 + 1.4 = 17.0 kJ."
+  },
+  {
+   "id": "uni-unilag-chm101-bank-1446",
+   "type": "mcq",
+   "stem": "The success of science is not that of a particular method but more of attitude in the following order",
+   "options": {
+    "A": "inquiry, experimentation, observation, theory, law.",
+    "B": "inquiry, observation, hypothesis, theory",
+    "C": "inquiry, experimentation, humility before the facts",
+    "D": "inquiry, observation, experimentation, humility before the facts",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The success of science is often attributed to a combination of curiosity (inquiry), careful observation, systematic experimentation, and a willingness to accept findings even if they contradict prior beliefs (humility before the facts)."
   }
  ],
  "category": "university",
