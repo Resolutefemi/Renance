@@ -2,8 +2,8 @@
  "code": "uni-unilag-phy101-bank",
  "title": "UNILAG PHY 101 | Course Question Bank",
  "version": 1,
- "questionCount": 1209,
- "totalMarks": 1209,
+ "questionCount": 1212,
+ "totalMarks": 1212,
  "questions": [
   {
    "id": "uni-unilag-phy101-bank-0001",
@@ -16992,6 +16992,51 @@
    "marks": 1,
    "answer": "A",
    "explanation": "An inelastic collision is one where kinetic energy is not conserved."
+  },
+  {
+   "id": "uni-unilag-phy101-bank-1210",
+   "type": "mcq",
+   "stem": "Which of the following statements is true for an object undergoing constant acceleration motion in a straight line?",
+   "options": {
+    "A": "Its velocity remains constant.",
+    "B": "Its acceleration changes at a constant rate.",
+    "C": "Its instantaneous acceleration is always equal to its average acceleration.",
+    "D": "Its position varies linearly with time.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "By definition, constant acceleration means the acceleration does not change. Therefore, the acceleration at any instant (instantaneous acceleration) is the same as the acceleration over any time interval (average acceleration)."
+  },
+  {
+   "id": "uni-unilag-phy101-bank-1211",
+   "type": "mcq",
+   "stem": "A ball of mass 1.0 kg drops from a height of 2.5 m and rebounds to a height of 2.3 m. What is the energy lost during the collision with the ground?",
+   "options": {
+    "A": "0.2 J",
+    "B": "1.96 J",
+    "C": "19.6 J",
+    "D": "4.8 J",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The energy lost is the difference in potential energy between the initial and final heights. ΔPE = mg(y₁ - y₂) = 1.0 kg × 9.8 m/s² × (2.5 m - 2.3 m) = 9.8 × 0.2 = 1.96 J. This energy is dissipated as heat and sound during the inelastic collision."
+  },
+  {
+   "id": "uni-unilag-phy101-bank-1212",
+   "type": "mcq",
+   "stem": "<p>The bulk modulus of elasticity of water is 2.1&times;10^9 N/m&sup2; and its mass density is 1000 kg/m&sup3;. Calculate the speed of sound waves in water.</p>",
+   "options": {
+    "A": "1449 m/s",
+    "B": "1040 m/s",
+    "C": "1428 m/s",
+    "D": "1320 m/s",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "<p>Speed of sound in water = &radic;(Bulk modulus / density) = &radic;(2.1&times;10^9 / 1000) &asymp; 1449.1m/s.</p>"
   }
  ],
  "category": "university",

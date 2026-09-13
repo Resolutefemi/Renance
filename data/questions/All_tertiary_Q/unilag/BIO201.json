@@ -1,0 +1,761 @@
+{
+ "code": "uni-unilag-bio201-bank",
+ "title": null,
+ "version": 1,
+ "questionCount": 50,
+ "totalMarks": 50,
+ "questions": [
+  {
+   "id": "uni-unilag-bio201-bank-0001",
+   "type": "mcq",
+   "stem": "Which pre-analytical factor is a leading cause of erroneous biomarker measurements in clinical pathology laboratories?",
+   "options": {
+    "A": "Improper specimen tube collection, delay in centrifugation, or incorrect storage temperature",
+    "B": "Use of monoclonal instead of polyclonal secondary antibodies",
+    "C": "Sub-optimal laser alignment within flow cytometers",
+    "D": "Statistical failure to achieve a 1:1 allocation ratio in parallel arms",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Pre-analytical variables—including transport delay, heat exposure, and anti-coagulant mismatch—account for the majority of clinical laboratory testing errors."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0002",
+   "type": "mcq",
+   "stem": "If a diagnostic test has a sensitivity of 90% and specificity of 80%, what is its false negative rate?",
+   "options": {
+    "A": "10%",
+    "B": "20%",
+    "C": "90%",
+    "D": "70%",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "False Negative Rate = 1 - Sensitivity = 1 - 0.90 = 0.10 (or 10%)."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0003",
+   "type": "mcq",
+   "stem": "What is a false positive result?",
+   "options": {
+    "A": "Test indicates condition present when it is absent",
+    "B": "Test indicates condition absent when it is present",
+    "C": "Test fails to produce readable output signal",
+    "D": "Control sample exceeds calibration boundary",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A false positive occurs when an assay incorrectly signals presence of the target."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0004",
+   "type": "mcq",
+   "stem": "Assuming two independent parallel diagnostic tests have specificities of Sp1 and Sp2, what is the combined specificity (Sp_total)?",
+   "options": {
+    "A": "Sp_total = Sp1 * Sp2",
+    "B": "Sp_total = 1 - [(1 - Sp1) * (1 - Sp2)]",
+    "C": "Sp_total = (Sp1 + Sp2) / 2",
+    "D": "Sp_total = Sp1 + Sp2",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "To correctly identify a non-diseased individual in parallel testing, both tests must yield negative results simultaneously, making combined specificity Sp1 * Sp2."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0005",
+   "type": "mcq",
+   "stem": "Which molecular diagnostic method permits simultaneous quantification of thousands of gene transcripts in tissue biopsy parallel arms?",
+   "options": {
+    "A": "RNA Sequencing (RNA-Seq)",
+    "B": "Western Blotting",
+    "C": "Northern Blotting",
+    "D": "Sanger Sequencing",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "RNA-Seq uses high-throughput next-generation sequencing to quantify genome-wide transcript abundances across biological samples."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0006",
+   "type": "mcq",
+   "stem": "What is the primary risk avoided by using a parallel design instead of a crossover design?",
+   "options": {
+    "A": "Carryover effects",
+    "B": "Sample size requirements",
+    "C": "Baseline measurements",
+    "D": "Randomization bias",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Parallel designs avoid carryover effects because subjects do not receive consecutive treatments."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0007",
+   "type": "mcq",
+   "stem": "In a parallel diagnostic study design, what is the primary advantage of assigning participants to separate treatment or diagnostic arms compared to a crossover design?",
+   "options": {
+    "A": "Elimination of carryover effects between interventions",
+    "B": "Reduction of the required total sample size",
+    "C": "Elimination of inter-individual variability",
+    "D": "Guarantee of absolute blinding of participants",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Parallel study designs evaluate independent groups concurrently, preventing residual carryover effects from a prior test or treatment that can occur in crossover studies."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0008",
+   "type": "mcq",
+   "stem": "What does the Diagnostic Odds Ratio (DOR) quantify?",
+   "options": {
+    "A": "The odds of a positive test in a diseased individual relative to the odds of a positive test in a non-diseased individual",
+    "B": "The ratio of sample size between control and intervention parallel arms",
+    "C": "The proportion of overall diagnostic costs saved by point-of-care testing",
+    "D": "The likelihood that a trial will suffer from spectrum bias",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "DOR is a single indicator of test performance calculated as (TP/FN) / (FP/TN), combining sensitivity and specificity independent of prevalence."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0009",
+   "type": "mcq",
+   "stem": "Spectrum bias in diagnostic research refers to which methodological issue?",
+   "options": {
+    "A": "Evaluating the test in a sample that does not reflect the full severity range of the clinical target population",
+    "B": "Using light spectroscopy equipment that is improperly calibrated",
+    "C": "Failing to randomize participants into equal parallel arms",
+    "D": "Misclassifying reference standard results due to poor sample storage",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Spectrum bias arises when the study population features a different spectrum of disease severity or mild cases compared to the intended clinical population."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0010",
+   "type": "mcq",
+   "stem": "What is a false negative result?",
+   "options": {
+    "A": "Test indicates condition absent when it is present",
+    "B": "Test indicates condition present when it is absent",
+    "C": "Negative control shows unexpected signal",
+    "D": "Reagents degrade before assay completion",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A false negative occurs when the test fails to detect an actual target condition."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0011",
+   "type": "mcq",
+   "stem": "What is the key distinction between analytical sensitivity and clinical sensitivity?",
+   "options": {
+    "A": "Analytical sensitivity is the lowest detectable concentration of an analyte; clinical sensitivity is the ability to identify diseased patients",
+    "B": "Analytical sensitivity applies only to tissue samples; clinical sensitivity applies to serum samples",
+    "C": "Analytical sensitivity measures false positives; clinical sensitivity measures false negatives",
+    "D": "There is no functional distinction between the two terms in diagnostic science",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Analytical sensitivity refers to the assay's limit of detection, whereas clinical sensitivity measures the performance of the test in detecting patient disease."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0012",
+   "type": "mcq",
+   "stem": "What does a high signal-to-noise ratio (S/N) indicate in biological assays?",
+   "options": {
+    "A": "Strong clear assay signal relative to background noise",
+    "B": "High degree of background interference",
+    "C": "Low analytical sensitivity",
+    "D": "Poor reproducibility between replicate wells",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A high S/N ratio demonstrates that true target signal easily exceeds background baseline noise."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0013",
+   "type": "mcq",
+   "stem": "In flow cytometry diagnostic panels run in parallel, what process corrects for spectral overlap between adjacent fluorophores?",
+   "options": {
+    "A": "Fluorescence compensation",
+    "B": "Isoelectric focusing",
+    "C": "Enzymatic digestion",
+    "D": "Isothermal amplification",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Fluorescence compensation mathematically removes signal overlap caused by emission spectra spilling into adjacent optical channels."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0014",
+   "type": "mcq",
+   "stem": "In parallel diagnostic studies, what is the effect of running two independent diagnostic tests simultaneously in a 'parallel testing strategy'?",
+   "options": {
+    "A": "Increases overall diagnostic sensitivity",
+    "B": "Increases overall diagnostic specificity",
+    "C": "Decreases overall positive predictive value to zero",
+    "D": "Eliminates all false positive results",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In parallel testing, an individual is considered positive if either test is positive, maximizing combined sensitivity at the expense of specificity."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0015",
+   "type": "mcq",
+   "stem": "Why is standard curve calibration performed in quantitative diagnostic assays?",
+   "options": {
+    "A": "To relate unknown sample signals to known analyte concentrations",
+    "B": "To eliminate the need for negative controls",
+    "C": "To double the sensitivity of the detection reagent",
+    "D": "To equalize sample volumes across microplates",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Standard curves map measured raw signals to known reference standard concentrations."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0016",
+   "type": "mcq",
+   "stem": "What is the primary drawback of parallel study designs compared to crossover designs?",
+   "options": {
+    "A": "Requires a larger total sample size",
+    "B": "Susceptible to carryover contamination",
+    "C": "Takes longer per participant session",
+    "D": "Cannot utilize blinding protocols",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Because subjects are not their own controls, parallel studies require more subjects to reach equivalent statistical power."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0017",
+   "type": "mcq",
+   "stem": "In a parallel study design, how are experimental subjects assigned to study arms?",
+   "options": {
+    "A": "They are assigned to one arm for the entire duration",
+    "B": "They switch arms after a washout period",
+    "C": "They rotate arms sequentially every week",
+    "D": "They choose their preferred treatment arm",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Parallel designs keep participants in a single assigned treatment group throughout the study."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0018",
+   "type": "mcq",
+   "stem": "In a diagnostic evaluation study, what is the purpose of comparing an 'index test' against a 'reference standard'?",
+   "options": {
+    "A": "To establish the diagnostic accuracy of the new test against the best available truth",
+    "B": "To increase the overall prevalence of the target disease in the cohort",
+    "C": "To eliminate the need for statistical power calculations",
+    "D": "To ensure all participants receive identical treatment therapies",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The reference standard serves as the benchmark of true disease status to evaluate the relative accuracy of the novel index test."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0019",
+   "type": "mcq",
+   "stem": "Which principle dictates that all participants in a parallel trial should be analyzed within the groups to which they were originally allocated, regardless of protocol deviations?",
+   "options": {
+    "A": "Intention-to-treat (ITT) principle",
+    "B": "Per-protocol (PP) analysis",
+    "C": "As-treated analysis",
+    "D": "Subgroup stratification",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Intention-to-treat preserves the benefits of initial random allocation, minimizing selection bias and avoiding optimistic overestimation of efficacy."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0020",
+   "type": "mcq",
+   "stem": "In a parallel diagnostic trial, what primary challenge arises when the reference standard ('gold standard') is imperfect?",
+   "options": {
+    "A": "True positive index test results may be misclassified as false positives, underestimating test performance.",
+    "B": "The index test sensitivity automatically reaches 100% mathematical limit.",
+    "C": "Negative predictive values become completely independent of target disease prevalence.",
+    "D": "Assay incubation times must be increased to achieve thermodynamic equilibrium.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "If the reference standard itself makes diagnostic errors, a accurate index test will be wrongly penalized for disagreeing with incorrect reference outputs."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0021",
+   "type": "mcq",
+   "stem": "What main trade-off occurs when executing diagnostic assays in a parallel configuration?",
+   "options": {
+    "A": "Overall specificity decreases, leading to an increase in false-positive results.",
+    "B": "Overall sensitivity decreases, leading to missed biological targets.",
+    "C": "The negative predictive value drops to zero.",
+    "D": "Assay processing time doubles relative to serial testing.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Because any positive result triggers a positive classification, parallel testing increases the likelihood of false positives, reducing overall specificity."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0022",
+   "type": "mcq",
+   "stem": "In parallel tissue histopathology processing, what is the main purpose of formal fixation (e.g., neutral buffered formalin)?",
+   "options": {
+    "A": "To cross-link cellular proteins and preserve tissue architecture against autolysis and degradation.",
+    "B": "To selectively solubilize cellular membranes for total DNA extraction.",
+    "C": "To stain cellular nuclei with dark blue hematoxylin dye.",
+    "D": "To digest background collagen matrix prior to antibody hybridization.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Fixation immobilizes proteins and cellular structures, maintaining native morphology for accurate microscopic diagnostic evaluation."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0023",
+   "type": "mcq",
+   "stem": "Which statistical test compares paired categorical outcomes from the same diagnostic samples?",
+   "options": {
+    "A": "McNemar test",
+    "B": "Independent t-test",
+    "C": "One-way ANOVA",
+    "D": "Pearson correlation coefficient",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "McNemar test is used for paired nominal diagnostic data."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0024",
+   "type": "mcq",
+   "stem": "Which type of control sample contains a known concentration of target analyte and is processed alongside unknown patient samples to verify assay calibration?",
+   "options": {
+    "A": "Quality Control (QC) standard",
+    "B": "No-template control (NTC)",
+    "C": "Isotype control",
+    "D": "Blank reagent matrix",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "QC standards with pre-determined analyte concentrations are routinely assayed in parallel to ensure instrument calibration and accuracy."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0025",
+   "type": "mcq",
+   "stem": "When plotting a diagnostic ROC curve, what line represents a completely uninformative test?",
+   "options": {
+    "A": "A 45-degree diagonal line from (0,0) to (1,1)",
+    "B": "A vertical line along the Y-axis at X = 0",
+    "C": "A horizontal line along the top margin at Y = 1",
+    "D": "A parabolic curve opening downward toward the X-axis",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The 45-degree line represents equal rates of true positives and false positives across all cutoffs, denoting zero diagnostic discrimination."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0026",
+   "type": "mcq",
+   "stem": "In a parallel comparative study evaluating two diagnostic kits (Kit A and Kit B), what constitutes verification (work-up) bias?",
+   "options": {
+    "A": "When only samples testing positive on Kit A are sent for verification by the gold standard reference.",
+    "B": "When both positive and negative samples undergo independent gold standard verification.",
+    "C": "When parallel controls exhibit unexpected signal degradation.",
+    "D": "When the study uses non-parametric statistical tests to calculate p-values.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Verification bias occurs when the decision to perform the reference standard depends on the preliminary test outcome, artificially skewing sensitivity/specificity."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0027",
+   "type": "mcq",
+   "stem": "What is the consequence of applying the 'AND rule' (serial rule) instead of the 'OR rule' (parallel rule) to two diagnostic tests?",
+   "options": {
+    "A": "Specificity increases while sensitivity decreases.",
+    "B": "Sensitivity increases while specificity decreases.",
+    "C": "Both sensitivity and specificity increase simultaneously.",
+    "D": "Both positive predictive value and negative predictive value drop to zero.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Requiring both tests to be positive (AND rule) tightens diagnostic criteria, which boosts specificity at the cost of missing true cases (lower sensitivity)."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0028",
+   "type": "mcq",
+   "stem": "Which factor increases statistical power in a parallel study?",
+   "options": {
+    "A": "Increasing sample size",
+    "B": "Increasing measurement noise",
+    "C": "Decreasing significance level alpha to zero",
+    "D": "Reducing treatment arm size",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Larger sample sizes increase statistical power by reducing standard error."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0029",
+   "type": "mcq",
+   "stem": "If a test has high sensitivity, it is best suited for which clinical/biological role?",
+   "options": {
+    "A": "Screening to rule out conditions",
+    "B": "Confirmatory testing to rule in conditions",
+    "C": "Calibrating optical detectors",
+    "D": "Replacing positive controls",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "High sensitivity minimizes false negatives, making it ideal for screening."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0030",
+   "type": "mcq",
+   "stem": "What AUC value indicates a diagnostic test with zero predictive discrimination (chance level)?",
+   "options": {
+    "A": "0.5",
+    "B": "1.0",
+    "C": "0.0",
+    "D": "0.8",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "An AUC of 0.5 corresponds to random chance classification."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0031",
+   "type": "mcq",
+   "stem": "What does the Limit of Detection (LOD) represent?",
+   "options": {
+    "A": "Lowest concentration reliably distinguished from background",
+    "B": "Highest linear range concentration",
+    "C": "Average concentration in non-diseased control samples",
+    "D": "Maximum saturation point of the transducer",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "LOD is the lowest analyte concentration producing a signal distinguishable from blank."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0032",
+   "type": "mcq",
+   "stem": "What type of bias is introduced when only patients with positive index test results are subjected to the confirmatory reference standard?",
+   "options": {
+    "A": "Verification or work-up bias",
+    "B": "Spectrum bias",
+    "C": "Recall bias",
+    "D": "Measurement bias",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Verification (or work-up) bias occurs when the probability of receiving the reference standard depends on the outcome of the index test, skewing sensitivity and specificity."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0033",
+   "type": "mcq",
+   "stem": "Which statistical measure quantifies inter-rater agreement for categorical diagnostic classifications beyond chance?",
+   "options": {
+    "A": "Cohen's kappa coefficient",
+    "B": "Pearson's correlation coefficient",
+    "C": "Student's t-test statistic",
+    "D": "ANOVA F-ratio",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cohen's kappa assesses agreement between two independent evaluators while correcting for the agreement expected by chance alone."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0034",
+   "type": "mcq",
+   "stem": "What is Per-Protocol (PP) analysis?",
+   "options": {
+    "A": "Analyzing only subjects who fully completed trial protocol",
+    "B": "Analyzing all randomized subjects regardless of completion",
+    "C": "Combining parallel arms into a single cohort",
+    "D": "Ignoring control group outcomes completely",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Per-protocol analysis evaluates only compliant subjects who met all study protocol criteria."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0035",
+   "type": "mcq",
+   "stem": "Contrastingly, what is the primary benefit of applying a 'serial testing strategy' (where a second test is performed only if the first is positive)?",
+   "options": {
+    "A": "Increases overall diagnostic specificity",
+    "B": "Increases overall diagnostic sensitivity",
+    "C": "Reduces the reference standard turnaround time",
+    "D": "Eliminates the risk of work-up bias",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Serial testing requires positive results on consecutive tests to confirm disease, reducing false positives and thereby boosting overall specificity."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0036",
+   "type": "mcq",
+   "stem": "In parallel diagnostic studies, what does 'loss to follow-up' cause?",
+   "options": {
+    "A": "Potential attrition bias and reduced statistical power",
+    "B": "Automatic increase in assay specificity",
+    "C": "Elimination of non-specific binding",
+    "D": "Improved baseline group equivalence",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Participant dropouts reduce sample size and introduce attrition bias if non-random."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0037",
+   "type": "mcq",
+   "stem": "In parallel mass spectrometry diagnostic workflows, why are stable isotope-labeled internal standards (SIL-IS) added to samples?",
+   "options": {
+    "A": "They chemical behave identically to target analytes, correcting for ionization suppression and sample extraction losses.",
+    "B": "They permanently quench unwanted matrix background fluorescence.",
+    "C": "They alter the chromatographic retention time of target compounds.",
+    "D": "They act as enzymatic inhibitors to stabilize labile plasma metabolites.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "SIL-IS molecules share physical-chemical properties with the target analyte, providing ideal compensation for recovery losses and matrix effects during LC-MS analysis."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0038",
+   "type": "mcq",
+   "stem": "Which study step is crucial for preventing allocation bias in parallel group diagnostic trials?",
+   "options": {
+    "A": "Concealed random sequence allocation",
+    "B": "Post-hoc subgroup exclusion",
+    "C": "Unblinded data entry by principal investigators",
+    "D": "Replacement of dropouts with non-randomized subjects",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Allocation concealment ensures researchers cannot foresee assignment order, preventing selective enrollment into specific study arms."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0039",
+   "type": "mcq",
+   "stem": "In a parallel laboratory validation study, why are experimental controls run concurrently alongside index test samples?",
+   "options": {
+    "A": "To account for run-to-run microenvironment fluctuations and instrument variability.",
+    "B": "To replace the need for an established external reference standard.",
+    "C": "To artificially increase the analytical specificity of the assay kit.",
+    "D": "To eliminate the statistical requirement for sample size calculation.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Running parallel controls under identical environmental conditions ensures that variations in temperature, reagents, or hardware affect controls and targets equally."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0040",
+   "type": "mcq",
+   "stem": "In a diagnostic parallel design, how is spectrum bias mitigated during sample collection?",
+   "options": {
+    "A": "By recruiting a continuous, representative sample of patients across the full spectrum of mild, moderate, and severe disease presentation.",
+    "B": "By restricting inclusion criteria strictly to advanced, severe clinical cases and healthy young controls.",
+    "C": "By performing assay readouts without calibrating the spectrophotometer.",
+    "D": "By applying serial confirmation tests exclusively to borderline assay readouts.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Spectrum bias occurs if the test is evaluated only on extreme cases; sampling across the full disease spectrum ensures realistic validity."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0041",
+   "type": "mcq",
+   "stem": "Which of the following phenomena is classified as a non-allelic (intergenic) gene interaction?",
+   "options": {
+    "A": "Epistasis",
+    "B": "Incomplete dominance",
+    "C": "Codominance",
+    "D": "Recessive lethal alleles",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Epistasis involves interaction between genes located at separate loci (intergenic), unlike dominance, codominance, and lethal genes which occur between alleles at the same locus."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0042",
+   "type": "mcq",
+   "stem": "When two diagnostic tests are interpreted in parallel, a patient is classified as positive if:",
+   "options": {
+    "A": "Either test produces a positive result.",
+    "B": "Both tests produce positive results simultaneously.",
+    "C": "The second test confirms the positive result of the first test.",
+    "D": "The average numerical readout of both tests exceeds a baseline threshold.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In parallel diagnostic interpretation, a positive result on any single test in the panel qualifies the sample/patient as positive."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0043",
+   "type": "mcq",
+   "stem": "On a Receiver Operating Characteristic (ROC) curve, what is plotted on the Y-axis and X-axis respectively?",
+   "options": {
+    "A": "Y-axis: Sensitivity; X-axis: 1 - Specificity",
+    "B": "Y-axis: Specificity; X-axis: Sensitivity",
+    "C": "Y-axis: Positive Predictive Value; X-axis: Negative Predictive Value",
+    "D": "Y-axis: True Positives; X-axis: True Negatives",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "An ROC curve plots the true positive rate (Sensitivity) against the false positive rate (1 - Specificity) across various cutoff points."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0044",
+   "type": "mcq",
+   "stem": "What is analytical sensitivity?",
+   "options": {
+    "A": "Change in assay response per unit change in analyte concentration",
+    "B": "Proportion of diseased subjects testing positive",
+    "C": "Percentage of true negatives identified by assay",
+    "D": "Signal decay rate over experimental storage time",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Analytical sensitivity refers to the slope of the calibration curve (response signal per unit analyte)."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0045",
+   "type": "mcq",
+   "stem": "In parallel diagnostic studies evaluating novel biomarkers, how is 'clinical utility' distinguished from 'diagnostic accuracy'?",
+   "options": {
+    "A": "Clinical utility measures whether test adoption improves patient outcomes, while diagnostic accuracy measures test precision against a reference",
+    "B": "Clinical utility applies only to laboratory instruments, while diagnostic accuracy applies to physicians",
+    "C": "Clinical utility is measured via ROC curves, while diagnostic accuracy is measured via survival curves",
+    "D": "There is no functional distinction between clinical utility and diagnostic accuracy",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Diagnostic accuracy assesses test agreement with truth; clinical utility evaluates whether implementing the test leads to superior therapeutic decisions and health outcomes."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0046",
+   "type": "mcq",
+   "stem": "In a diagnostic parallel study design, what is the fundamental structural arrangement regarding subject or sample assignment?",
+   "options": {
+    "A": "Subjects or samples are assigned to distinct, independent groups evaluated simultaneously over the same timeframe.",
+    "B": "Subjects serve as their own controls by receiving sequential treatments after a mandatory washout period.",
+    "C": "Samples are tested sequentially only after the results of the initial index test are fully analyzed.",
+    "D": "Groups are evaluated at different historical timepoints using retrospective observational databases.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A parallel study design evaluates separate, concurrent groups simultaneously under uniform conditions, avoiding temporal confounding."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0047",
+   "type": "mcq",
+   "stem": "Which experimental design feature prevents carryover contamination in parallel automated liquid handling systems?",
+   "options": {
+    "A": "Implementing dedicated tip disposal or rigorous multi-step wash cycles between pipetting operations.",
+    "B": "Decreasing the incubation temperature of enzyme reaction mixes to 4 °C.",
+    "C": "Increasing the concentration of standard curve calibrator solutions.",
+    "D": "Running double the volume of biological matrix in index wells.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Automated pipelines prevent sample-to-sample carryover through automated tip changes and thorough fluidic line washing."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0048",
+   "type": "mcq",
+   "stem": "A diagnostic test with a Negative Likelihood Ratio (LR-) close to 0.1 indicates which diagnostic property?",
+   "options": {
+    "A": "A negative test result significantly decreases the post-test probability of disease",
+    "B": "The test has poor utility for ruling out disease",
+    "C": "A positive test result increases post-test probability tenfold",
+    "D": "The test performance is equivalent to random chance",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "An LR- well below 1.0 (such as 0.1) substantially reduces the odds of disease following a negative test result, making it effective for ruling out illness."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0049",
+   "type": "mcq",
+   "stem": "In a double-blind parallel diagnostic trial, who is blinded to group assignments?",
+   "options": {
+    "A": "Both participants and researchers",
+    "B": "Only participants",
+    "C": "Only researchers",
+    "D": "Neither participants nor researchers",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Double-blinding hides group assignment from both subjects and experimental evaluators."
+  },
+  {
+   "id": "uni-unilag-bio201-bank-0050",
+   "type": "mcq",
+   "stem": "In lateral flow diagnostic assays evaluated in parallel setups, what is the role of the internal control line?",
+   "options": {
+    "A": "To confirm that fluid flow and reagent migration operated correctly through the test strip.",
+    "B": "To quantify the exact concentration of target analyte in the applied sample.",
+    "C": "To absorb excess clinical sample and prevent overflow into the readout window.",
+    "D": "To neutralize potential viral pathogens present in biological fluids.",
+    "E": ""
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The control line captures conjugated antibodies regardless of target presence, confirming proper sample capillary flow and functional reagents."
+  }
+ ],
+ "category": "university",
+ "body": "University Modules"
+}

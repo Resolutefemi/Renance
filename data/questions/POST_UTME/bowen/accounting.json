@@ -2,8 +2,8 @@
  "code": "uni-bowen-pq-accounting-bank",
  "title": "BOWEN Post-UTME Accounting | Prep Bank",
  "version": 1,
- "questionCount": 211,
- "totalMarks": 211,
+ "questionCount": 217,
+ "totalMarks": 217,
  "questions": [
   {
    "id": "uni-bowen-pq-accounting-bank-0001",
@@ -2747,8 +2747,87 @@
    },
    "marks": 1,
    "answer": "C"
+  },
+  {
+   "id": "uni-bowen-pq-accounting-bank-0212",
+   "type": "mcq",
+   "stem": "The Accounting Concept which states that every financial expenditure should be Classified in accordance with the income it generates is ...'",
+   "options": {
+    "A": "Income concept",
+    "B": "Periodicity concept",
+    "C": "Matching concept",
+    "D": "Realization concept. Use the following information to answer questions 12-13 Turnover 100,000 Gross Profit 20,000 General Expenses 12,000 Opening Stock 10,000 Closing Stock 7,000 What is the value of purchases?"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "uni-bowen-pq-accounting-bank-0213",
+   "type": "mcq",
+   "stem": "The item recognized in the debtors list at the end of the financial year is",
+   "options": {
+    "A": "Debt owing",
+    "B": "Salaries and Wages",
+    "C": "Miscellaneous",
+    "D": "Stock A trial balance can be thrown off"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-bowen-pq-accounting-bank-0214",
+   "type": "mcq",
+   "stem": "Cash withdrawal from the Bank is",
+   "options": {
+    "A": "Debit transaction to Cash account",
+    "B": "Credit transaction to Cash account",
+    "C": "Debit transaction to Bank account",
+    "D": "Credit transaction to the ledger account"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-bowen-pq-accounting-bank-0215",
+   "type": "mcq",
+   "stem": "Mercy Enterprises is into a new business and has just obtained a loan from the bank to Start the business, what is this fund called? a, Equity capital",
+   "options": {
+    "A": "Equity capital",
+    "B": "Physical capital",
+    "C": "Set-Up capital",
+    "D": "Loan capital"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "uni-bowen-pq-accounting-bank-0216",
+   "type": "mcq",
+   "stem": "A bank statement needs to be reconciled with the cash book because of the following Reasons except ;",
+   "options": {
+    "A": "Vat",
+    "B": "Management fee",
+    "C": "Commission on Internet",
+    "D": "Commission on Turnover (Cot)"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "uni-bowen-pq-accounting-bank-0217",
+   "type": "mcq",
+   "stem": "Stores Issued Voucher (SIV) is issued by the Store keeper for;",
+   "options": {
+    "A": "Goods received to store",
+    "B": "Goods returned from store",
+    "C": "Goods given out of the store",
+    "D": "Goods taken back to the store 27"
+   },
+   "marks": 1,
+   "answer": "C"
   }
  ],
  "category": "university",
- "body": "University Modules"
+ "body": "University Modules",
+ "note": "Merged: Bowen University official screening booklet (bowen.edu.ng); booklet ships no key, answers verified editorially."
 }
