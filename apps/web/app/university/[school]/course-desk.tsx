@@ -26,7 +26,7 @@ export function UniversityCourseDesk({
   const [semester, setSemester] = useState<1 | 2>(1);
 
   const courses = useMemo(
-    () => catalog.courses.filter((c) => c.semester === semester),
+    () => catalog.courses.filter((c) => (c.semester ?? 1) === semester),
     [catalog, semester],
   );
   const live = catalog.courses.filter((c) => c.bank);

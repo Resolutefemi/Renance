@@ -48,7 +48,7 @@ export default async function SchoolPage({
     );
   }
 
-  if (!catalog || catalog.courses.every((c) => !c.bank)) {
+  if (!catalog || catalog.courses.every((c) => !c.bank && !c.pdf)) {
     return (
       <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
         <div className="mx-auto w-full max-w-5xl px-4 py-14 sm:px-6">
