@@ -1,0 +1,1411 @@
+{
+ "code": "jamb-biology-enrich-bank",
+ "title": "JAMB Biology | Enrichment Bank",
+ "version": 1,
+ "questionCount": 100,
+ "totalMarks": 100,
+ "questions": [
+  {
+   "id": "jamb-biology-enrich-0000",
+   "type": "mcq",
+   "stem": "The basic structural and functional unit of life is the",
+   "options": {
+    "A": "cell",
+    "B": "tissue",
+    "C": "organ",
+    "D": "organism"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The cell is the basic unit of structure and function in living organisms."
+  },
+  {
+   "id": "jamb-biology-enrich-0001",
+   "type": "mcq",
+   "stem": "The organelle responsible for aerobic respiration is the",
+   "options": {
+    "A": "ribosome",
+    "B": "mitochondrion",
+    "C": "vacuole",
+    "D": "Golgi body"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mitochondria are the main sites of aerobic respiration."
+  },
+  {
+   "id": "jamb-biology-enrich-0002",
+   "type": "mcq",
+   "stem": "Ribosomes are primarily involved in",
+   "options": {
+    "A": "protein synthesis",
+    "B": "photosynthesis",
+    "C": "fat digestion",
+    "D": "cell movement"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ribosomes synthesize proteins."
+  },
+  {
+   "id": "jamb-biology-enrich-0003",
+   "type": "mcq",
+   "stem": "The selectively permeable boundary of a cell is the",
+   "options": {
+    "A": "cell wall",
+    "B": "cell membrane",
+    "C": "nucleus",
+    "D": "cytoplasm"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The cell membrane regulates movement into and out of the cell."
+  },
+  {
+   "id": "jamb-biology-enrich-0004",
+   "type": "mcq",
+   "stem": "The nucleus contains the cell's",
+   "options": {
+    "A": "digestive enzymes",
+    "B": "genetic material",
+    "C": "cellulose",
+    "D": "bile"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The nucleus contains chromosomes and genetic material."
+  },
+  {
+   "id": "jamb-biology-enrich-0005",
+   "type": "mcq",
+   "stem": "Mitosis normally produces",
+   "options": {
+    "A": "two genetically similar daughter cells",
+    "B": "four genetically different cells",
+    "C": "one gamete",
+    "D": "three cells"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mitosis produces two genetically similar daughter cells."
+  },
+  {
+   "id": "jamb-biology-enrich-0006",
+   "type": "mcq",
+   "stem": "Meiosis is important in the formation of",
+   "options": {
+    "A": "body cells",
+    "B": "gametes",
+    "C": "red blood cells only",
+    "D": "nerve cells"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Meiosis produces haploid gametes."
+  },
+  {
+   "id": "jamb-biology-enrich-0007",
+   "type": "mcq",
+   "stem": "The chromosome number is reduced by half during",
+   "options": {
+    "A": "mitosis",
+    "B": "meiosis",
+    "C": "binary fission only",
+    "D": "growth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Meiosis includes reduction division."
+  },
+  {
+   "id": "jamb-biology-enrich-0008",
+   "type": "mcq",
+   "stem": "DNA replication occurs before cell division during",
+   "options": {
+    "A": "interphase",
+    "B": "cytokinesis only",
+    "C": "telophase only",
+    "D": "fertilization"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "DNA is replicated during interphase before division."
+  },
+  {
+   "id": "jamb-biology-enrich-0009",
+   "type": "mcq",
+   "stem": "Cytokinesis is the division of the",
+   "options": {
+    "A": "nucleus only",
+    "B": "cytoplasm",
+    "C": "DNA molecule",
+    "D": "cell wall only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cytokinesis divides the cytoplasm."
+  },
+  {
+   "id": "jamb-biology-enrich-0010",
+   "type": "mcq",
+   "stem": "The green pigment needed for photosynthesis is",
+   "options": {
+    "A": "haemoglobin",
+    "B": "chlorophyll",
+    "C": "melanin",
+    "D": "keratin"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chlorophyll absorbs light energy for photosynthesis."
+  },
+  {
+   "id": "jamb-biology-enrich-0011",
+   "type": "mcq",
+   "stem": "The raw materials for photosynthesis are mainly",
+   "options": {
+    "A": "oxygen and glucose",
+    "B": "carbon dioxide and water",
+    "C": "nitrogen and oxygen",
+    "D": "protein and fat"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Plants use carbon dioxide and water to make glucose."
+  },
+  {
+   "id": "jamb-biology-enrich-0012",
+   "type": "mcq",
+   "stem": "Stomata mainly regulate",
+   "options": {
+    "A": "gas exchange and water loss",
+    "B": "blood circulation",
+    "C": "seed formation only",
+    "D": "root growth"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Stomata allow gas exchange and regulate transpiration."
+  },
+  {
+   "id": "jamb-biology-enrich-0013",
+   "type": "mcq",
+   "stem": "The tissue that transports water upward in a plant is",
+   "options": {
+    "A": "phloem",
+    "B": "xylem",
+    "C": "epidermis",
+    "D": "cambium"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Xylem conducts water and mineral salts."
+  },
+  {
+   "id": "jamb-biology-enrich-0014",
+   "type": "mcq",
+   "stem": "Food manufactured in leaves is transported mainly by",
+   "options": {
+    "A": "xylem",
+    "B": "phloem",
+    "C": "cortex",
+    "D": "root hairs"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Phloem transports assimilates such as sugars."
+  },
+  {
+   "id": "jamb-biology-enrich-0015",
+   "type": "mcq",
+   "stem": "The male reproductive part of a flower is the",
+   "options": {
+    "A": "carpel",
+    "B": "stamen",
+    "C": "sepal",
+    "D": "ovary"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The stamen is the male reproductive structure."
+  },
+  {
+   "id": "jamb-biology-enrich-0016",
+   "type": "mcq",
+   "stem": "The female reproductive part of a flower is the",
+   "options": {
+    "A": "stamen",
+    "B": "carpel",
+    "C": "anther",
+    "D": "filament"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The carpel is the female reproductive structure."
+  },
+  {
+   "id": "jamb-biology-enrich-0017",
+   "type": "mcq",
+   "stem": "Pollen grains are produced in the",
+   "options": {
+    "A": "stigma",
+    "B": "anther",
+    "C": "ovary",
+    "D": "style"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The anther produces pollen."
+  },
+  {
+   "id": "jamb-biology-enrich-0018",
+   "type": "mcq",
+   "stem": "Fertilization in flowering plants involves fusion of",
+   "options": {
+    "A": "two pollen grains",
+    "B": "male and female gametes",
+    "C": "two ovaries",
+    "D": "two leaves"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fertilization is the fusion of male and female gametes."
+  },
+  {
+   "id": "jamb-biology-enrich-0019",
+   "type": "mcq",
+   "stem": "After fertilization, the ovule develops into a",
+   "options": {
+    "A": "fruit",
+    "B": "seed",
+    "C": "leaf",
+    "D": "root"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The fertilized ovule develops into a seed."
+  },
+  {
+   "id": "jamb-biology-enrich-0020",
+   "type": "mcq",
+   "stem": "Digestion of starch begins in the",
+   "options": {
+    "A": "mouth",
+    "B": "stomach",
+    "C": "large intestine",
+    "D": "liver"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Salivary amylase begins starch digestion in the mouth."
+  },
+  {
+   "id": "jamb-biology-enrich-0021",
+   "type": "mcq",
+   "stem": "The enzyme that digests proteins in the stomach is",
+   "options": {
+    "A": "amylase",
+    "B": "pepsin",
+    "C": "lipase",
+    "D": "maltase"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Pepsin digests proteins in the stomach."
+  },
+  {
+   "id": "jamb-biology-enrich-0022",
+   "type": "mcq",
+   "stem": "Most absorption of digested nutrients occurs in the",
+   "options": {
+    "A": "small intestine",
+    "B": "large intestine",
+    "C": "stomach",
+    "D": "oesophagus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The small intestine has villi specialized for absorption."
+  },
+  {
+   "id": "jamb-biology-enrich-0023",
+   "type": "mcq",
+   "stem": "Bile is produced by the",
+   "options": {
+    "A": "pancreas",
+    "B": "liver",
+    "C": "stomach",
+    "D": "kidney"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The liver produces bile."
+  },
+  {
+   "id": "jamb-biology-enrich-0024",
+   "type": "mcq",
+   "stem": "The main function of bile in digestion is to",
+   "options": {
+    "A": "digest protein",
+    "B": "emulsify fats",
+    "C": "convert glucose to starch",
+    "D": "digest cellulose"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bile emulsifies fats, increasing surface area for lipase."
+  },
+  {
+   "id": "jamb-biology-enrich-0025",
+   "type": "mcq",
+   "stem": "The main site of aerobic respiration in a cell is the",
+   "options": {
+    "A": "nucleus",
+    "B": "mitochondrion",
+    "C": "ribosome",
+    "D": "vacuole"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mitochondria are major sites of aerobic respiration."
+  },
+  {
+   "id": "jamb-biology-enrich-0026",
+   "type": "mcq",
+   "stem": "Aerobic respiration requires",
+   "options": {
+    "A": "oxygen",
+    "B": "nitrogen",
+    "C": "carbon dioxide",
+    "D": "methane"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Aerobic respiration uses oxygen."
+  },
+  {
+   "id": "jamb-biology-enrich-0027",
+   "type": "mcq",
+   "stem": "The main products of aerobic respiration are",
+   "options": {
+    "A": "glucose and oxygen",
+    "B": "carbon dioxide, water and energy",
+    "C": "protein and fat",
+    "D": "starch and oxygen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Aerobic respiration releases energy and produces CO2 and water."
+  },
+  {
+   "id": "jamb-biology-enrich-0028",
+   "type": "mcq",
+   "stem": "Anaerobic respiration in human muscles may produce",
+   "options": {
+    "A": "lactic acid",
+    "B": "ethanol only",
+    "C": "oxygen",
+    "D": "starch"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Lactic acid can accumulate during anaerobic respiration in muscles."
+  },
+  {
+   "id": "jamb-biology-enrich-0029",
+   "type": "mcq",
+   "stem": "Energy from respiration is stored mainly in",
+   "options": {
+    "A": "ATP",
+    "B": "DNA",
+    "C": "cellulose",
+    "D": "bile"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "ATP is the main immediate energy carrier in cells."
+  },
+  {
+   "id": "jamb-biology-enrich-0030",
+   "type": "mcq",
+   "stem": "The liquid part of blood is called",
+   "options": {
+    "A": "plasma",
+    "B": "platelet",
+    "C": "lymphocyte",
+    "D": "haemoglobin"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Plasma is the fluid component of blood."
+  },
+  {
+   "id": "jamb-biology-enrich-0031",
+   "type": "mcq",
+   "stem": "Red blood cells mainly transport",
+   "options": {
+    "A": "oxygen",
+    "B": "urea",
+    "C": "bile",
+    "D": "hormones only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Haemoglobin in red blood cells carries oxygen."
+  },
+  {
+   "id": "jamb-biology-enrich-0032",
+   "type": "mcq",
+   "stem": "Platelets are important for",
+   "options": {
+    "A": "blood clotting",
+    "B": "oxygen transport",
+    "C": "digestion",
+    "D": "photosynthesis"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Platelets help form blood clots."
+  },
+  {
+   "id": "jamb-biology-enrich-0033",
+   "type": "mcq",
+   "stem": "The artery carrying blood from the heart to the lungs is the",
+   "options": {
+    "A": "pulmonary artery",
+    "B": "pulmonary vein",
+    "C": "aorta",
+    "D": "vena cava"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The pulmonary artery carries deoxygenated blood to the lungs."
+  },
+  {
+   "id": "jamb-biology-enrich-0034",
+   "type": "mcq",
+   "stem": "The largest artery in the body is the",
+   "options": {
+    "A": "aorta",
+    "B": "vena cava",
+    "C": "pulmonary vein",
+    "D": "renal vein"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The aorta is the body's largest artery."
+  },
+  {
+   "id": "jamb-biology-enrich-0035",
+   "type": "mcq",
+   "stem": "The main nitrogenous waste excreted by humans is",
+   "options": {
+    "A": "urea",
+    "B": "glucose",
+    "C": "starch",
+    "D": "oxygen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Humans convert excess nitrogen to urea."
+  },
+  {
+   "id": "jamb-biology-enrich-0036",
+   "type": "mcq",
+   "stem": "The functional unit of the kidney is the",
+   "options": {
+    "A": "nephron",
+    "B": "alveolus",
+    "C": "villus",
+    "D": "neuron"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The nephron performs filtration and other kidney functions."
+  },
+  {
+   "id": "jamb-biology-enrich-0037",
+   "type": "mcq",
+   "stem": "Ultrafiltration occurs mainly in the",
+   "options": {
+    "A": "glomerulus",
+    "B": "ureter",
+    "C": "bladder",
+    "D": "collecting duct only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Blood is filtered through the glomerulus."
+  },
+  {
+   "id": "jamb-biology-enrich-0038",
+   "type": "mcq",
+   "stem": "Urine is stored temporarily in the",
+   "options": {
+    "A": "kidney",
+    "B": "bladder",
+    "C": "urethra",
+    "D": "liver"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The urinary bladder stores urine."
+  },
+  {
+   "id": "jamb-biology-enrich-0039",
+   "type": "mcq",
+   "stem": "The hormone that increases water reabsorption in the kidney is",
+   "options": {
+    "A": "ADH",
+    "B": "insulin",
+    "C": "thyroxine",
+    "D": "adrenaline"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "ADH promotes water reabsorption in kidney tubules."
+  },
+  {
+   "id": "jamb-biology-enrich-0040",
+   "type": "mcq",
+   "stem": "Homeostasis is the maintenance of a",
+   "options": {
+    "A": "stable internal environment",
+    "B": "constant body size",
+    "C": "fixed external temperature",
+    "D": "single body cell"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Homeostasis maintains internal conditions within suitable limits."
+  },
+  {
+   "id": "jamb-biology-enrich-0041",
+   "type": "mcq",
+   "stem": "The hormone that lowers blood glucose concentration is",
+   "options": {
+    "A": "insulin",
+    "B": "glucagon",
+    "C": "adrenaline",
+    "D": "thyroxine"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Insulin promotes glucose uptake and storage."
+  },
+  {
+   "id": "jamb-biology-enrich-0042",
+   "type": "mcq",
+   "stem": "When body temperature rises, sweating helps to",
+   "options": {
+    "A": "increase heat loss",
+    "B": "increase heat production",
+    "C": "stop evaporation",
+    "D": "increase blood glucose"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Sweating allows evaporative cooling."
+  },
+  {
+   "id": "jamb-biology-enrich-0043",
+   "type": "mcq",
+   "stem": "Negative feedback generally",
+   "options": {
+    "A": "counteracts a change",
+    "B": "amplifies every change",
+    "C": "stops all hormones",
+    "D": "causes cell death"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Negative feedback opposes deviations from a set point."
+  },
+  {
+   "id": "jamb-biology-enrich-0044",
+   "type": "mcq",
+   "stem": "The hypothalamus helps regulate",
+   "options": {
+    "A": "body temperature",
+    "B": "bone length only",
+    "C": "blood type",
+    "D": "eye colour"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The hypothalamus is important in temperature regulation."
+  },
+  {
+   "id": "jamb-biology-enrich-0045",
+   "type": "mcq",
+   "stem": "The basic functional unit of the nervous system is the",
+   "options": {
+    "A": "neuron",
+    "B": "nephron",
+    "C": "alveolus",
+    "D": "platelet"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Neurons transmit nerve impulses."
+  },
+  {
+   "id": "jamb-biology-enrich-0046",
+   "type": "mcq",
+   "stem": "The central nervous system consists of the",
+   "options": {
+    "A": "brain and spinal cord",
+    "B": "heart and lungs",
+    "C": "kidneys and bladder",
+    "D": "eyes and ears"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The CNS comprises the brain and spinal cord."
+  },
+  {
+   "id": "jamb-biology-enrich-0047",
+   "type": "mcq",
+   "stem": "A reflex action is usually",
+   "options": {
+    "A": "rapid and automatic",
+    "B": "slow and voluntary",
+    "C": "always learned",
+    "D": "controlled only by hormones"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Reflexes provide rapid automatic responses."
+  },
+  {
+   "id": "jamb-biology-enrich-0048",
+   "type": "mcq",
+   "stem": "The gap between two neurons is called a",
+   "options": {
+    "A": "synapse",
+    "B": "villus",
+    "C": "glomerulus",
+    "D": "alveolus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A synapse is the junction between neurons."
+  },
+  {
+   "id": "jamb-biology-enrich-0049",
+   "type": "mcq",
+   "stem": "The cerebrum is strongly associated with",
+   "options": {
+    "A": "conscious thought",
+    "B": "balance only",
+    "C": "urine formation",
+    "D": "blood clotting"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The cerebrum is involved in conscious activities and higher mental functions."
+  },
+  {
+   "id": "jamb-biology-enrich-0050",
+   "type": "mcq",
+   "stem": "The gland that produces insulin is the",
+   "options": {
+    "A": "pancreas",
+    "B": "thyroid",
+    "C": "pituitary",
+    "D": "adrenal"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The pancreas contains islets that secrete insulin."
+  },
+  {
+   "id": "jamb-biology-enrich-0051",
+   "type": "mcq",
+   "stem": "Thyroxine is produced by the",
+   "options": {
+    "A": "thyroid gland",
+    "B": "pancreas",
+    "C": "pituitary",
+    "D": "ovary"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The thyroid gland produces thyroxine."
+  },
+  {
+   "id": "jamb-biology-enrich-0052",
+   "type": "mcq",
+   "stem": "The pituitary gland is often called the",
+   "options": {
+    "A": "master gland",
+    "B": "digestive gland",
+    "C": "blood gland",
+    "D": "exocrine gland only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "It regulates several other endocrine glands."
+  },
+  {
+   "id": "jamb-biology-enrich-0053",
+   "type": "mcq",
+   "stem": "Adrenaline is secreted by the",
+   "options": {
+    "A": "adrenal glands",
+    "B": "thyroid",
+    "C": "pancreas",
+    "D": "kidneys only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The adrenal glands produce adrenaline."
+  },
+  {
+   "id": "jamb-biology-enrich-0054",
+   "type": "mcq",
+   "stem": "Hormones are chemical messengers transported mainly through the",
+   "options": {
+    "A": "blood",
+    "B": "xylem",
+    "C": "stomach",
+    "D": "airways"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Endocrine hormones are released into the bloodstream."
+  },
+  {
+   "id": "jamb-biology-enrich-0055",
+   "type": "mcq",
+   "stem": "The male gamete in humans is the",
+   "options": {
+    "A": "sperm",
+    "B": "ovum",
+    "C": "zygote",
+    "D": "embryo"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Sperm is the male gamete."
+  },
+  {
+   "id": "jamb-biology-enrich-0056",
+   "type": "mcq",
+   "stem": "The female gamete in humans is the",
+   "options": {
+    "A": "ovum",
+    "B": "sperm",
+    "C": "zygote",
+    "D": "placenta"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The ovum is the female gamete."
+  },
+  {
+   "id": "jamb-biology-enrich-0057",
+   "type": "mcq",
+   "stem": "Fertilization in humans normally occurs in the",
+   "options": {
+    "A": "fallopian tube",
+    "B": "uterus",
+    "C": "vagina",
+    "D": "ovary"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Fertilization usually occurs in the oviduct."
+  },
+  {
+   "id": "jamb-biology-enrich-0058",
+   "type": "mcq",
+   "stem": "The organ in which the fetus develops is the",
+   "options": {
+    "A": "uterus",
+    "B": "ovary",
+    "C": "kidney",
+    "D": "stomach"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The fetus develops in the uterus."
+  },
+  {
+   "id": "jamb-biology-enrich-0059",
+   "type": "mcq",
+   "stem": "The placenta mainly permits exchange between",
+   "options": {
+    "A": "mother and fetus",
+    "B": "two kidneys",
+    "C": "two ovaries",
+    "D": "lungs and stomach"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The placenta facilitates exchange of nutrients, gases and wastes."
+  },
+  {
+   "id": "jamb-biology-enrich-0060",
+   "type": "mcq",
+   "stem": "The basic unit of heredity is the",
+   "options": {
+    "A": "gene",
+    "B": "cell wall",
+    "C": "enzyme",
+    "D": "tissue"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Genes carry hereditary information."
+  },
+  {
+   "id": "jamb-biology-enrich-0061",
+   "type": "mcq",
+   "stem": "Alternative forms of a gene are called",
+   "options": {
+    "A": "alleles",
+    "B": "chromatids",
+    "C": "enzymes",
+    "D": "gametes"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Alleles are alternative forms of a gene."
+  },
+  {
+   "id": "jamb-biology-enrich-0062",
+   "type": "mcq",
+   "stem": "An organism with two identical alleles is",
+   "options": {
+    "A": "homozygous",
+    "B": "heterozygous",
+    "C": "haploid only",
+    "D": "mutant always"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Homozygous means having identical alleles."
+  },
+  {
+   "id": "jamb-biology-enrich-0063",
+   "type": "mcq",
+   "stem": "An organism with two different alleles is",
+   "options": {
+    "A": "heterozygous",
+    "B": "homozygous",
+    "C": "diploid only",
+    "D": "recessive only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Heterozygous means having different alleles."
+  },
+  {
+   "id": "jamb-biology-enrich-0064",
+   "type": "mcq",
+   "stem": "A recessive trait is expressed in a simple dominant-recessive system when the genotype is",
+   "options": {
+    "A": "homozygous recessive",
+    "B": "heterozygous",
+    "C": "homozygous dominant",
+    "D": "always haploid"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A recessive phenotype generally requires two recessive alleles."
+  },
+  {
+   "id": "jamb-biology-enrich-0065",
+   "type": "mcq",
+   "stem": "Natural selection was strongly associated with",
+   "options": {
+    "A": "Charles Darwin",
+    "B": "Gregor Mendel",
+    "C": "Robert Hooke",
+    "D": "Louis Pasteur"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Darwin developed the theory of evolution by natural selection."
+  },
+  {
+   "id": "jamb-biology-enrich-0066",
+   "type": "mcq",
+   "stem": "Variation in a population can result from",
+   "options": {
+    "A": "mutation and recombination",
+    "B": "digestion only",
+    "C": "breathing only",
+    "D": "blood clotting"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mutation and genetic recombination generate variation."
+  },
+  {
+   "id": "jamb-biology-enrich-0067",
+   "type": "mcq",
+   "stem": "An adaptation is a feature that",
+   "options": {
+    "A": "improves survival or reproduction",
+    "B": "always causes disease",
+    "C": "prevents reproduction",
+    "D": "is never inherited"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Adaptations can improve fitness in a particular environment."
+  },
+  {
+   "id": "jamb-biology-enrich-0068",
+   "type": "mcq",
+   "stem": "Fossils provide evidence about",
+   "options": {
+    "A": "past life",
+    "B": "future weather only",
+    "C": "blood pressure",
+    "D": "current digestion"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Fossils preserve evidence of ancient organisms."
+  },
+  {
+   "id": "jamb-biology-enrich-0069",
+   "type": "mcq",
+   "stem": "Evolution refers to change in inherited characteristics of",
+   "options": {
+    "A": "populations over generations",
+    "B": "one organism in one day",
+    "C": "soil only",
+    "D": "weather only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Evolution occurs across generations in populations."
+  },
+  {
+   "id": "jamb-biology-enrich-0070",
+   "type": "mcq",
+   "stem": "The study of relationships between organisms and their environment is",
+   "options": {
+    "A": "ecology",
+    "B": "anatomy",
+    "C": "histology",
+    "D": "genetics only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ecology studies organisms and their interactions with the environment."
+  },
+  {
+   "id": "jamb-biology-enrich-0071",
+   "type": "mcq",
+   "stem": "A group of organisms of the same species in an area is a",
+   "options": {
+    "A": "population",
+    "B": "community",
+    "C": "ecosystem",
+    "D": "biosphere"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A population consists of members of one species in an area."
+  },
+  {
+   "id": "jamb-biology-enrich-0072",
+   "type": "mcq",
+   "stem": "Different populations living together form a",
+   "options": {
+    "A": "community",
+    "B": "species",
+    "C": "gene",
+    "D": "cell"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A community contains interacting populations."
+  },
+  {
+   "id": "jamb-biology-enrich-0073",
+   "type": "mcq",
+   "stem": "A community plus its physical environment forms an",
+   "options": {
+    "A": "ecosystem",
+    "B": "organ",
+    "C": "organism",
+    "D": "allele"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "An ecosystem includes biotic and abiotic components."
+  },
+  {
+   "id": "jamb-biology-enrich-0074",
+   "type": "mcq",
+   "stem": "Green plants are usually",
+   "options": {
+    "A": "producers",
+    "B": "primary consumers",
+    "C": "decomposers",
+    "D": "parasites only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Plants produce organic food by photosynthesis."
+  },
+  {
+   "id": "jamb-biology-enrich-0075",
+   "type": "mcq",
+   "stem": "The first trophic level is usually occupied by",
+   "options": {
+    "A": "producers",
+    "B": "secondary consumers",
+    "C": "decomposers only",
+    "D": "carnivores"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Producers form the first trophic level."
+  },
+  {
+   "id": "jamb-biology-enrich-0076",
+   "type": "mcq",
+   "stem": "A herbivore is a",
+   "options": {
+    "A": "primary consumer",
+    "B": "producer",
+    "C": "decomposer",
+    "D": "secondary consumer only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Herbivores feed directly on producers."
+  },
+  {
+   "id": "jamb-biology-enrich-0077",
+   "type": "mcq",
+   "stem": "Energy generally flows through an ecosystem from",
+   "options": {
+    "A": "sun to producers to consumers",
+    "B": "consumers to sun",
+    "C": "decomposers to sun",
+    "D": "soil to moon"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Solar energy enters through producers and passes along food chains."
+  },
+  {
+   "id": "jamb-biology-enrich-0078",
+   "type": "mcq",
+   "stem": "A food web consists of",
+   "options": {
+    "A": "interconnected food chains",
+    "B": "one organism only",
+    "C": "one trophic level",
+    "D": "only decomposers"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A food web links multiple food chains."
+  },
+  {
+   "id": "jamb-biology-enrich-0079",
+   "type": "mcq",
+   "stem": "Decomposers include many",
+   "options": {
+    "A": "bacteria and fungi",
+    "B": "birds only",
+    "C": "reptiles only",
+    "D": "green plants"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bacteria and fungi commonly decompose dead organic matter."
+  },
+  {
+   "id": "jamb-biology-enrich-0080",
+   "type": "mcq",
+   "stem": "Population density is the number of individuals per",
+   "options": {
+    "A": "unit area or volume",
+    "B": "whole continent only",
+    "C": "organism",
+    "D": "food chain"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Density expresses population size relative to area or volume."
+  },
+  {
+   "id": "jamb-biology-enrich-0081",
+   "type": "mcq",
+   "stem": "A factor that limits population size is a",
+   "options": {
+    "A": "limiting factor",
+    "B": "gene only",
+    "C": "chromosome",
+    "D": "gamete"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Limiting factors restrict population growth."
+  },
+  {
+   "id": "jamb-biology-enrich-0082",
+   "type": "mcq",
+   "stem": "Competition occurs when organisms require the same",
+   "options": {
+    "A": "limited resource",
+    "B": "DNA sequence only",
+    "C": "blood group",
+    "D": "cell organelle"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Competition occurs when resources are limited."
+  },
+  {
+   "id": "jamb-biology-enrich-0083",
+   "type": "mcq",
+   "stem": "Predation is an interaction in which one organism",
+   "options": {
+    "A": "kills and eats another",
+    "B": "pollinates itself",
+    "C": "produces oxygen",
+    "D": "forms a cell wall"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A predator captures and consumes prey."
+  },
+  {
+   "id": "jamb-biology-enrich-0084",
+   "type": "mcq",
+   "stem": "Carrying capacity is the maximum population an environment can",
+   "options": {
+    "A": "sustain over time",
+    "B": "produce instantly",
+    "C": "eliminate immediately",
+    "D": "clone"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Carrying capacity reflects available resources and conditions."
+  },
+  {
+   "id": "jamb-biology-enrich-0085",
+   "type": "mcq",
+   "stem": "A bacterium is a",
+   "options": {
+    "A": "prokaryote",
+    "B": "virus",
+    "C": "fungus only",
+    "D": "plant cell"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bacteria are prokaryotic organisms."
+  },
+  {
+   "id": "jamb-biology-enrich-0086",
+   "type": "mcq",
+   "stem": "Viruses can reproduce only",
+   "options": {
+    "A": "inside suitable living cells",
+    "B": "in distilled water",
+    "C": "on rocks",
+    "D": "without host cells"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Viruses require host cells for replication."
+  },
+  {
+   "id": "jamb-biology-enrich-0087",
+   "type": "mcq",
+   "stem": "Malaria is caused by a",
+   "options": {
+    "A": "Plasmodium",
+    "B": "bacterium",
+    "C": "fungus",
+    "D": "virus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Plasmodium parasites cause malaria."
+  },
+  {
+   "id": "jamb-biology-enrich-0088",
+   "type": "mcq",
+   "stem": "The mosquito that transmits malaria is the female",
+   "options": {
+    "A": "Anopheles",
+    "B": "Aedes only",
+    "C": "Culex only",
+    "D": "housefly"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Female Anopheles mosquitoes transmit malaria parasites."
+  },
+  {
+   "id": "jamb-biology-enrich-0089",
+   "type": "mcq",
+   "stem": "Vaccination helps the body develop",
+   "options": {
+    "A": "immunity",
+    "B": "dehydration",
+    "C": "anaemia",
+    "D": "digestion"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Vaccines stimulate immune memory and protection."
+  },
+  {
+   "id": "jamb-biology-enrich-0090",
+   "type": "mcq",
+   "stem": "The scientific naming system using two names is",
+   "options": {
+    "A": "binomial nomenclature",
+    "B": "binary fission",
+    "C": "natural selection",
+    "D": "taxonomy only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Binomial nomenclature uses genus and species names."
+  },
+  {
+   "id": "jamb-biology-enrich-0091",
+   "type": "mcq",
+   "stem": "The broadest commonly used taxonomic rank among these is",
+   "options": {
+    "A": "kingdom",
+    "B": "species",
+    "C": "genus",
+    "D": "family"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Kingdom is broader than family, genus and species."
+  },
+  {
+   "id": "jamb-biology-enrich-0092",
+   "type": "mcq",
+   "stem": "Humans belong to the kingdom",
+   "options": {
+    "A": "Animalia",
+    "B": "Plantae",
+    "C": "Fungi",
+    "D": "Protista"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Humans are animals."
+  },
+  {
+   "id": "jamb-biology-enrich-0093",
+   "type": "mcq",
+   "stem": "Mushrooms belong mainly to the kingdom",
+   "options": {
+    "A": "Fungi",
+    "B": "Animalia",
+    "C": "Plantae",
+    "D": "Monera"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mushrooms are fungi."
+  },
+  {
+   "id": "jamb-biology-enrich-0094",
+   "type": "mcq",
+   "stem": "Flowering plants are commonly grouped as",
+   "options": {
+    "A": "angiosperms",
+    "B": "mammals",
+    "C": "arthropods",
+    "D": "annelids"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Angiosperms are flowering plants."
+  },
+  {
+   "id": "jamb-biology-enrich-0095",
+   "type": "mcq",
+   "stem": "Water enters roots mainly through",
+   "options": {
+    "A": "root hairs",
+    "B": "flowers",
+    "C": "fruits",
+    "D": "stomata"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Root hairs provide a large surface for water absorption."
+  },
+  {
+   "id": "jamb-biology-enrich-0096",
+   "type": "mcq",
+   "stem": "The upward movement of water in xylem is aided by",
+   "options": {
+    "A": "transpiration pull",
+    "B": "digestion",
+    "C": "photosynthesis only",
+    "D": "blood pressure"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Transpiration creates a pull that helps move water upward."
+  },
+  {
+   "id": "jamb-biology-enrich-0097",
+   "type": "mcq",
+   "stem": "Transpiration is the loss of water vapour mainly from",
+   "options": {
+    "A": "leaves",
+    "B": "roots only",
+    "C": "seeds only",
+    "D": "fruits only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Most transpiration occurs through leaf stomata."
+  },
+  {
+   "id": "jamb-biology-enrich-0098",
+   "type": "mcq",
+   "stem": "Phloem transports mainly",
+   "options": {
+    "A": "organic solutes such as sugars",
+    "B": "water only",
+    "C": "oxygen only",
+    "D": "urea only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Phloem translocates sugars and other organic nutrients."
+  },
+  {
+   "id": "jamb-biology-enrich-0099",
+   "type": "mcq",
+   "stem": "Translocation refers to movement of",
+   "options": {
+    "A": "organic food through phloem",
+    "B": "water through xylem only",
+    "C": "air through lungs",
+    "D": "blood through arteries"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Translocation is movement of assimilates in phloem."
+  }
+ ],
+ "category": "secondary",
+ "body": "JAMB"
+}

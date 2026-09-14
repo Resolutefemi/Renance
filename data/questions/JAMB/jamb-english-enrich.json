@@ -1,0 +1,6498 @@
+{
+ "code": "jamb-english-enrich-bank",
+ "title": "JAMB English | Enrichment Bank",
+ "version": 1,
+ "questionCount": 499,
+ "totalMarks": 499,
+ "questions": [
+  {
+   "id": "jamb-english-enrich-0000",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “abundant”.",
+   "options": {
+    "A": "scarce",
+    "B": "plentiful",
+    "C": "tiny",
+    "D": "empty"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0001",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “arduous”.",
+   "options": {
+    "A": "easy",
+    "B": "difficult",
+    "C": "brief",
+    "D": "pleasant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0002",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “benevolent”.",
+   "options": {
+    "A": "cruel",
+    "B": "kind",
+    "C": "noisy",
+    "D": "careless"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0003",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “candid”.",
+   "options": {
+    "A": "secretive",
+    "B": "frank",
+    "C": "hostile",
+    "D": "timid"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0004",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “deteriorate”.",
+   "options": {
+    "A": "improve",
+    "B": "worsen",
+    "C": "decorate",
+    "D": "repeat"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0005",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “diligent”.",
+   "options": {
+    "A": "lazy",
+    "B": "hardworking",
+    "C": "careless",
+    "D": "weak"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0006",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “eminent”.",
+   "options": {
+    "A": "unknown",
+    "B": "famous",
+    "C": "ordinary",
+    "D": "junior"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0007",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “frugal”.",
+   "options": {
+    "A": "wasteful",
+    "B": "economical",
+    "C": "reckless",
+    "D": "lavish"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0008",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “hostile”.",
+   "options": {
+    "A": "friendly",
+    "B": "unfriendly",
+    "C": "helpful",
+    "D": "calm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0009",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “impartial”.",
+   "options": {
+    "A": "biased",
+    "B": "fair",
+    "C": "angry",
+    "D": "uncertain"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0010",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “obsolete”.",
+   "options": {
+    "A": "modern",
+    "B": "outdated",
+    "C": "useful",
+    "D": "recent"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0011",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “plausible”.",
+   "options": {
+    "A": "impossible",
+    "B": "believable",
+    "C": "absurd",
+    "D": "false"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0012",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “prudent”.",
+   "options": {
+    "A": "foolish",
+    "B": "wise",
+    "C": "careless",
+    "D": "hasty"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0013",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “reluctant”.",
+   "options": {
+    "A": "eager",
+    "B": "unwilling",
+    "C": "ready",
+    "D": "joyful"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0014",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “vital”.",
+   "options": {
+    "A": "unnecessary",
+    "B": "essential",
+    "C": "minor",
+    "D": "optional"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0015",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “vivid”.",
+   "options": {
+    "A": "dull",
+    "B": "clear",
+    "C": "hidden",
+    "D": "weak"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0016",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “concise”.",
+   "options": {
+    "A": "lengthy",
+    "B": "brief",
+    "C": "confusing",
+    "D": "slow"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0017",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “lavish”.",
+   "options": {
+    "A": "stingy",
+    "B": "generous",
+    "C": "mean",
+    "D": "poor"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0018",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “meticulous”.",
+   "options": {
+    "A": "careless",
+    "B": "careful",
+    "C": "quick",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0019",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “novice”.",
+   "options": {
+    "A": "expert",
+    "B": "beginner",
+    "C": "leader",
+    "D": "teacher"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0020",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “ancient”.",
+   "options": {
+    "A": "modern",
+    "B": "ancient",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0021",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “ancient”.",
+   "options": {
+    "A": "modern",
+    "B": "ancient",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0022",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “ancient”?",
+   "options": {
+    "A": "modern",
+    "B": "ancient",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0023",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “artificial”.",
+   "options": {
+    "A": "natural",
+    "B": "artificial",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0024",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “artificial”.",
+   "options": {
+    "A": "natural",
+    "B": "artificial",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0025",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “artificial”?",
+   "options": {
+    "A": "natural",
+    "B": "artificial",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0026",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “bold”.",
+   "options": {
+    "A": "timid",
+    "B": "bold",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0027",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “bold”.",
+   "options": {
+    "A": "timid",
+    "B": "bold",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0028",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “bold”?",
+   "options": {
+    "A": "timid",
+    "B": "bold",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0029",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “complex”.",
+   "options": {
+    "A": "simple",
+    "B": "complex",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0030",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “complex”.",
+   "options": {
+    "A": "simple",
+    "B": "complex",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0031",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “complex”?",
+   "options": {
+    "A": "simple",
+    "B": "complex",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0032",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “diminish”.",
+   "options": {
+    "A": "increase",
+    "B": "diminish",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0033",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “diminish”.",
+   "options": {
+    "A": "increase",
+    "B": "diminish",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0034",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “diminish”?",
+   "options": {
+    "A": "increase",
+    "B": "diminish",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0035",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “expand”.",
+   "options": {
+    "A": "contract",
+    "B": "expand",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0036",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “expand”.",
+   "options": {
+    "A": "contract",
+    "B": "expand",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0037",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “expand”?",
+   "options": {
+    "A": "contract",
+    "B": "expand",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0038",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “genuine”.",
+   "options": {
+    "A": "fake",
+    "B": "genuine",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0039",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “genuine”.",
+   "options": {
+    "A": "fake",
+    "B": "genuine",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0040",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “genuine”?",
+   "options": {
+    "A": "fake",
+    "B": "genuine",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0041",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “humble”.",
+   "options": {
+    "A": "proud",
+    "B": "humble",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0042",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “humble”.",
+   "options": {
+    "A": "proud",
+    "B": "humble",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0043",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “humble”?",
+   "options": {
+    "A": "proud",
+    "B": "humble",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0044",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “inferior”.",
+   "options": {
+    "A": "superior",
+    "B": "inferior",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0045",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “inferior”.",
+   "options": {
+    "A": "superior",
+    "B": "inferior",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0046",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “inferior”?",
+   "options": {
+    "A": "superior",
+    "B": "inferior",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0047",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “joyful”.",
+   "options": {
+    "A": "sad",
+    "B": "joyful",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0048",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “joyful”.",
+   "options": {
+    "A": "sad",
+    "B": "joyful",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0049",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “joyful”?",
+   "options": {
+    "A": "sad",
+    "B": "joyful",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0050",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “kind”.",
+   "options": {
+    "A": "cruel",
+    "B": "kind",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0051",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “kind”.",
+   "options": {
+    "A": "cruel",
+    "B": "kind",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0052",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “kind”?",
+   "options": {
+    "A": "cruel",
+    "B": "kind",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0053",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “maximum”.",
+   "options": {
+    "A": "minimum",
+    "B": "maximum",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0054",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “maximum”.",
+   "options": {
+    "A": "minimum",
+    "B": "maximum",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0055",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “maximum”?",
+   "options": {
+    "A": "minimum",
+    "B": "maximum",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0056",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “permanent”.",
+   "options": {
+    "A": "temporary",
+    "B": "permanent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0057",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “permanent”.",
+   "options": {
+    "A": "temporary",
+    "B": "permanent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0058",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “permanent”?",
+   "options": {
+    "A": "temporary",
+    "B": "permanent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0059",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “scarce”.",
+   "options": {
+    "A": "abundant",
+    "B": "scarce",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0060",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “scarce”.",
+   "options": {
+    "A": "abundant",
+    "B": "scarce",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0061",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “scarce”?",
+   "options": {
+    "A": "abundant",
+    "B": "scarce",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0062",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “transparent”.",
+   "options": {
+    "A": "opaque",
+    "B": "transparent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0063",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “transparent”.",
+   "options": {
+    "A": "opaque",
+    "B": "transparent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0064",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “transparent”?",
+   "options": {
+    "A": "opaque",
+    "B": "transparent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0065",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “victory”.",
+   "options": {
+    "A": "defeat",
+    "B": "victory",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0066",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “victory”.",
+   "options": {
+    "A": "defeat",
+    "B": "victory",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0067",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “victory”?",
+   "options": {
+    "A": "defeat",
+    "B": "victory",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0068",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “weary”.",
+   "options": {
+    "A": "energetic",
+    "B": "weary",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0069",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “weary”.",
+   "options": {
+    "A": "energetic",
+    "B": "weary",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0070",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “weary”?",
+   "options": {
+    "A": "energetic",
+    "B": "weary",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0071",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “frequent”.",
+   "options": {
+    "A": "rare",
+    "B": "frequent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0072",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “frequent”.",
+   "options": {
+    "A": "rare",
+    "B": "frequent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0073",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “frequent”?",
+   "options": {
+    "A": "rare",
+    "B": "frequent",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0074",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “optimistic”.",
+   "options": {
+    "A": "pessimistic",
+    "B": "optimistic",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0075",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “optimistic”.",
+   "options": {
+    "A": "pessimistic",
+    "B": "optimistic",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0076",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “optimistic”?",
+   "options": {
+    "A": "pessimistic",
+    "B": "optimistic",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0077",
+   "type": "mcq",
+   "stem": "Choose the word opposite in meaning to “rigid”.",
+   "options": {
+    "A": "flexible",
+    "B": "rigid",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0078",
+   "type": "mcq",
+   "stem": "Choose the word most nearly opposite in meaning to “rigid”.",
+   "options": {
+    "A": "flexible",
+    "B": "rigid",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0079",
+   "type": "mcq",
+   "stem": "Which word is opposite in meaning to “rigid”?",
+   "options": {
+    "A": "flexible",
+    "B": "rigid",
+    "C": "similar",
+    "D": "related"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0080",
+   "type": "mcq",
+   "stem": "She ___ to school every morning.",
+   "options": {
+    "A": "go",
+    "B": "goes",
+    "C": "going",
+    "D": "gone"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0081",
+   "type": "mcq",
+   "stem": "Neither the teacher nor the students ___ late.",
+   "options": {
+    "A": "was",
+    "B": "is",
+    "C": "were",
+    "D": "be"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0082",
+   "type": "mcq",
+   "stem": "If I ___ enough money, I would travel abroad.",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0083",
+   "type": "mcq",
+   "stem": "By this time tomorrow, they ___ the work.",
+   "options": {
+    "A": "finish",
+    "B": "finished",
+    "C": "will have finished",
+    "D": "have finished"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0084",
+   "type": "mcq",
+   "stem": "He has lived here ___ 2019.",
+   "options": {
+    "A": "for",
+    "B": "since",
+    "C": "during",
+    "D": "from"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0085",
+   "type": "mcq",
+   "stem": "The boys ___ football when it started raining.",
+   "options": {
+    "A": "play",
+    "B": "played",
+    "C": "were playing",
+    "D": "are playing"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0086",
+   "type": "mcq",
+   "stem": "She is ___ than her sister.",
+   "options": {
+    "A": "tall",
+    "B": "taller",
+    "C": "tallest",
+    "D": "more tall"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0087",
+   "type": "mcq",
+   "stem": "I prefer tea ___ coffee.",
+   "options": {
+    "A": "than",
+    "B": "to",
+    "C": "from",
+    "D": "over"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0088",
+   "type": "mcq",
+   "stem": "The news ___ surprising.",
+   "options": {
+    "A": "were",
+    "B": "are",
+    "C": "was",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0089",
+   "type": "mcq",
+   "stem": "Each of the candidates ___ a number.",
+   "options": {
+    "A": "have",
+    "B": "has",
+    "C": "having",
+    "D": "are"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0090",
+   "type": "mcq",
+   "stem": "He insisted ___ paying the bill.",
+   "options": {
+    "A": "on",
+    "B": "in",
+    "C": "at",
+    "D": "for"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0091",
+   "type": "mcq",
+   "stem": "The book belongs ___ me.",
+   "options": {
+    "A": "with",
+    "B": "for",
+    "C": "to",
+    "D": "by"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0092",
+   "type": "mcq",
+   "stem": "She arrived ___ the airport before noon.",
+   "options": {
+    "A": "at",
+    "B": "in",
+    "C": "on",
+    "D": "to"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0093",
+   "type": "mcq",
+   "stem": "We have been waiting ___ two hours.",
+   "options": {
+    "A": "since",
+    "B": "for",
+    "C": "by",
+    "D": "from"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0094",
+   "type": "mcq",
+   "stem": "He is good ___ mathematics.",
+   "options": {
+    "A": "in",
+    "B": "on",
+    "C": "at",
+    "D": "with"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0095",
+   "type": "mcq",
+   "stem": "The children enjoyed ___.",
+   "options": {
+    "A": "them",
+    "B": "themselves",
+    "C": "theirself",
+    "D": "their"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0096",
+   "type": "mcq",
+   "stem": "I saw the man ___ car was stolen.",
+   "options": {
+    "A": "who",
+    "B": "whose",
+    "C": "whom",
+    "D": "which"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0097",
+   "type": "mcq",
+   "stem": "This is the house ___ I was born.",
+   "options": {
+    "A": "which",
+    "B": "where",
+    "C": "who",
+    "D": "whose"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0098",
+   "type": "mcq",
+   "stem": "She asked me ___ I was coming.",
+   "options": {
+    "A": "that",
+    "B": "whether",
+    "C": "what",
+    "D": "which"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0099",
+   "type": "mcq",
+   "stem": "Hardly had he arrived ___ the meeting began.",
+   "options": {
+    "A": "than",
+    "B": "when",
+    "C": "then",
+    "D": "while"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0100",
+   "type": "mcq",
+   "stem": "Choose the correct option: The committee ___ divided in its opinion.",
+   "options": {
+    "A": "is",
+    "B": "are",
+    "C": "were",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0101",
+   "type": "mcq",
+   "stem": "Choose the correct option: My family ___ visiting us this weekend.",
+   "options": {
+    "A": "is",
+    "B": "are",
+    "C": "were",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0102",
+   "type": "mcq",
+   "stem": "Choose the correct option: Ten kilometres ___ a long distance to walk.",
+   "options": {
+    "A": "are",
+    "B": "were",
+    "C": "is",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0103",
+   "type": "mcq",
+   "stem": "Choose the correct option: The scissors ___ on the table.",
+   "options": {
+    "A": "is",
+    "B": "was",
+    "C": "are",
+    "D": "has"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0104",
+   "type": "mcq",
+   "stem": "Choose the correct option: Mathematics ___ my favourite subject.",
+   "options": {
+    "A": "are",
+    "B": "were",
+    "C": "is",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0105",
+   "type": "mcq",
+   "stem": "Choose the correct option: A pair of shoes ___ under the bed.",
+   "options": {
+    "A": "are",
+    "B": "were",
+    "C": "is",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0106",
+   "type": "mcq",
+   "stem": "Choose the correct option: The police ___ investigating the case.",
+   "options": {
+    "A": "is",
+    "B": "was",
+    "C": "are",
+    "D": "has"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0107",
+   "type": "mcq",
+   "stem": "Choose the correct option: Bread and butter ___ his usual breakfast.",
+   "options": {
+    "A": "are",
+    "B": "were",
+    "C": "is",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0108",
+   "type": "mcq",
+   "stem": "Choose the correct option: Neither of the answers ___ correct.",
+   "options": {
+    "A": "are",
+    "B": "were",
+    "C": "is",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0109",
+   "type": "mcq",
+   "stem": "Choose the correct option: The number of students ___ increasing.",
+   "options": {
+    "A": "are",
+    "B": "were",
+    "C": "is",
+    "D": "have"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0110",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: The principal ___ the students to remain calm.",
+   "options": {
+    "A": "advised",
+    "B": "advice",
+    "C": "advise",
+    "D": "advising"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0111",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: Please ___ me on what to do.",
+   "options": {
+    "A": "advice",
+    "B": "advise",
+    "C": "advised",
+    "D": "adviser"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0112",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: The new policy will ___ everyone.",
+   "options": {
+    "A": "affect",
+    "B": "effect",
+    "C": "effects",
+    "D": "affected"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0113",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: The medicine had a positive ___.",
+   "options": {
+    "A": "affect",
+    "B": "effect",
+    "C": "affects",
+    "D": "affecting"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0114",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: The teacher asked us to ___ the passage.",
+   "options": {
+    "A": "summarise",
+    "B": "summary",
+    "C": "summarised",
+    "D": "summarising"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0115",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: The boy gave a brief ___.",
+   "options": {
+    "A": "explain",
+    "B": "explanation",
+    "C": "explaining",
+    "D": "explained"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0116",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: We need to ___ the problem carefully.",
+   "options": {
+    "A": "analyze",
+    "B": "analysis",
+    "C": "analysed",
+    "D": "analytical"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0117",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: Her ___ of the event was accurate.",
+   "options": {
+    "A": "describe",
+    "B": "description",
+    "C": "described",
+    "D": "descriptive"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0118",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: The witness gave a ___ account.",
+   "options": {
+    "A": "credible",
+    "B": "credibility",
+    "C": "credibly",
+    "D": "credit"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0119",
+   "type": "mcq",
+   "stem": "Choose the correct word to complete the sentence: The manager made a ___ decision.",
+   "options": {
+    "A": "wisely",
+    "B": "wise",
+    "C": "wisdom",
+    "D": "wiser"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0121",
+   "type": "mcq",
+   "stem": "What does “to spill the beans” means to mean?",
+   "options": {
+    "A": "keep a secret",
+    "B": "reveal a secret",
+    "C": "cook food",
+    "D": "waste time"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0122",
+   "type": "mcq",
+   "stem": "What does “to hit the nail on the head” means to mean?",
+   "options": {
+    "A": "miss the point",
+    "B": "say exactly the right thing",
+    "C": "work with tools",
+    "D": "make a mistake"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0123",
+   "type": "mcq",
+   "stem": "What does “once in a blue moon” means mean?",
+   "options": {
+    "A": "very often",
+    "B": "rarely",
+    "C": "every night",
+    "D": "immediately"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0124",
+   "type": "mcq",
+   "stem": "What does “a blessing in disguise” refers to mean?",
+   "options": {
+    "A": "an obvious success",
+    "B": "something that seems bad but turns out good",
+    "C": "a hidden person",
+    "D": "a religious ceremony"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0125",
+   "type": "mcq",
+   "stem": "What does “to be in hot water” means to mean?",
+   "options": {
+    "A": "be swimming",
+    "B": "be in trouble",
+    "C": "be very happy",
+    "D": "be thirsty"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0126",
+   "type": "mcq",
+   "stem": "What does “break the ice” means to mean?",
+   "options": {
+    "A": "destroy something",
+    "B": "start a friendly conversation",
+    "C": "cause an argument",
+    "D": "be silent"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0127",
+   "type": "mcq",
+   "stem": "What does “under the weather” means mean?",
+   "options": {
+    "A": "outside in rain",
+    "B": "feeling unwell",
+    "C": "working hard",
+    "D": "travelling"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0128",
+   "type": "mcq",
+   "stem": "What does “cost an arm and a leg” means mean?",
+   "options": {
+    "A": "be cheap",
+    "B": "be very expensive",
+    "C": "be dangerous",
+    "D": "be free"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0129",
+   "type": "mcq",
+   "stem": "What does “the ball is in your court” means mean?",
+   "options": {
+    "A": "you have the next responsibility",
+    "B": "you are playing tennis",
+    "C": "you have lost",
+    "D": "you should leave"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0130",
+   "type": "mcq",
+   "stem": "What does “pull someone’s leg” means mean?",
+   "options": {
+    "A": "help someone walk",
+    "B": "joke with someone",
+    "C": "injure someone",
+    "D": "follow someone"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0131",
+   "type": "mcq",
+   "stem": "“The wind whispered through the trees” is",
+   "options": {
+    "A": "simile",
+    "B": "personification",
+    "C": "hyperbole",
+    "D": "pun"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0132",
+   "type": "mcq",
+   "stem": "“He is as brave as a lion” is",
+   "options": {
+    "A": "metaphor",
+    "B": "simile",
+    "C": "irony",
+    "D": "alliteration"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0133",
+   "type": "mcq",
+   "stem": "“The classroom was a zoo” is",
+   "options": {
+    "A": "metaphor",
+    "B": "simile",
+    "C": "pun",
+    "D": "euphemism"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0134",
+   "type": "mcq",
+   "stem": "“I have told you a thousand times” is",
+   "options": {
+    "A": "hyperbole",
+    "B": "simile",
+    "C": "personification",
+    "D": "oxymoron"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0135",
+   "type": "mcq",
+   "stem": "“Peter Piper picked peppers” illustrates",
+   "options": {
+    "A": "alliteration",
+    "B": "metaphor",
+    "C": "irony",
+    "D": "paradox"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0136",
+   "type": "mcq",
+   "stem": "“The sweet sorrow of parting” contains",
+   "options": {
+    "A": "oxymoron",
+    "B": "simile",
+    "C": "pun",
+    "D": "apostrophe"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0137",
+   "type": "mcq",
+   "stem": "“O Death, where is thy sting?” is an example of",
+   "options": {
+    "A": "apostrophe",
+    "B": "alliteration",
+    "C": "simile",
+    "D": "metonymy"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0138",
+   "type": "mcq",
+   "stem": "“The crown announced a new policy” uses",
+   "options": {
+    "A": "metonymy",
+    "B": "simile",
+    "C": "hyperbole",
+    "D": "onomatopoeia"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0139",
+   "type": "mcq",
+   "stem": "“Buzz” is an example of",
+   "options": {
+    "A": "onomatopoeia",
+    "B": "metaphor",
+    "C": "irony",
+    "D": "personification"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0140",
+   "type": "mcq",
+   "stem": "A statement that means the opposite of what is said, often humorously, is",
+   "options": {
+    "A": "irony",
+    "B": "simile",
+    "C": "alliteration",
+    "D": "euphemism"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0141",
+   "type": "mcq",
+   "stem": "Which word is a noun in “The farmer works hard”?",
+   "options": {
+    "A": "farmer",
+    "B": "works",
+    "C": "hard",
+    "D": "the"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0142",
+   "type": "mcq",
+   "stem": "Which word is an adverb in “She sang beautifully”?",
+   "options": {
+    "A": "she",
+    "B": "sang",
+    "C": "beautifully",
+    "D": "song"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0143",
+   "type": "mcq",
+   "stem": "Which word is a conjunction in “John and Mary arrived”?",
+   "options": {
+    "A": "John",
+    "B": "and",
+    "C": "Mary",
+    "D": "arrived"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0144",
+   "type": "mcq",
+   "stem": "Which word is a preposition in “The book is on the table”?",
+   "options": {
+    "A": "book",
+    "B": "is",
+    "C": "on",
+    "D": "table"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0145",
+   "type": "mcq",
+   "stem": "Which word is a pronoun in “They visited us”?",
+   "options": {
+    "A": "visited",
+    "B": "they",
+    "C": "us",
+    "D": "both B and C"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-english-enrich-0146",
+   "type": "mcq",
+   "stem": "Which word is an adjective in “It was a difficult task”?",
+   "options": {
+    "A": "was",
+    "B": "difficult",
+    "C": "task",
+    "D": "it"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0147",
+   "type": "mcq",
+   "stem": "Which word is an interjection in “Oh! I forgot”?",
+   "options": {
+    "A": "forgot",
+    "B": "I",
+    "C": "Oh",
+    "D": "the"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0148",
+   "type": "mcq",
+   "stem": "Which word is a verb in “The baby cried loudly”?",
+   "options": {
+    "A": "baby",
+    "B": "cried",
+    "C": "loudly",
+    "D": "the"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0149",
+   "type": "mcq",
+   "stem": "Which word is an article in “A boy entered”?",
+   "options": {
+    "A": "boy",
+    "B": "entered",
+    "C": "A",
+    "D": "none"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-english-enrich-0150",
+   "type": "mcq",
+   "stem": "Which word is a determiner in “Those books are mine”?",
+   "options": {
+    "A": "books",
+    "B": "those",
+    "C": "mine",
+    "D": "are"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0151",
+   "type": "mcq",
+   "stem": "Choose the passive form of “The boy kicked the ball.”",
+   "options": {
+    "A": "The ball was kicked by the boy.",
+    "B": "The ball kicked the boy.",
+    "C": "The boy was kicked by the ball.",
+    "D": "The ball is kicking the boy."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0152",
+   "type": "mcq",
+   "stem": "Choose the indirect form of “She said, “I am tired.””",
+   "options": {
+    "A": "She said that she was tired.",
+    "B": "She said that I am tired.",
+    "C": "She says she was tired.",
+    "D": "She said she is tired."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0153",
+   "type": "mcq",
+   "stem": "Choose the negative form of “Everyone attended.”",
+   "options": {
+    "A": "No one attended.",
+    "B": "Nobody did not attend.",
+    "C": "Everyone did not attend.",
+    "D": "Anyone attended."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0154",
+   "type": "mcq",
+   "stem": "Choose the interrogative form of “He is coming.”",
+   "options": {
+    "A": "Is he coming?",
+    "B": "He is coming?",
+    "C": "Coming he is?",
+    "D": "Does he coming?"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0155",
+   "type": "mcq",
+   "stem": "Choose the comparative form of “This is the most interesting book.”",
+   "options": {
+    "A": "This book is more interesting than the others.",
+    "B": "This book is interestingest.",
+    "C": "This book is most interesting than others.",
+    "D": "This book is more most interesting."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0156",
+   "type": "mcq",
+   "stem": "Choose the word nearest in meaning to “rapid”.",
+   "options": {
+    "A": "reject",
+    "B": "receive",
+    "C": "admit",
+    "D": "allow"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0157",
+   "type": "mcq",
+   "stem": "The word nearest in meaning to “rapid” is",
+   "options": {
+    "A": "slow",
+    "B": "swift",
+    "C": "weak",
+    "D": "late"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0158",
+   "type": "mcq",
+   "stem": "Choose the correct option: He arrived ___ time for the examination.",
+   "options": {
+    "A": "in",
+    "B": "on",
+    "C": "at",
+    "D": "by"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0159",
+   "type": "mcq",
+   "stem": "Choose the correct option: She has ___ her assignment.",
+   "options": {
+    "A": "complete",
+    "B": "completed",
+    "C": "completing",
+    "D": "completion"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0160",
+   "type": "mcq",
+   "stem": "Which word is correctly spelt?",
+   "options": {
+    "A": "committee",
+    "B": "commitee",
+    "C": "comittee",
+    "D": "committe"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0161",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang.",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0162",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”.",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0163",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”.",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0164",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated?",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0165",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling.",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0166",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang.",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0167",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”.",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0168",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”.",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0169",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated?",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0170",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling.",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0171",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang.",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0172",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”.",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0173",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”.",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0174",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated?",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0175",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling.",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0176",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 177)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0177",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 178)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0178",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 179)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0179",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 180)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0180",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 181)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0181",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 182)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0182",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 183)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0183",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 184)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0184",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 185)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0185",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 186)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0186",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 187)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0187",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 188)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0188",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 189)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0189",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 190)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0190",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 191)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0191",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 192)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0192",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 193)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0193",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 194)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0194",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 195)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0195",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 196)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0196",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 197)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0197",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 198)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0198",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 199)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0199",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 200)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0200",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 201)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0201",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 202)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0202",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 203)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0203",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 204)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0204",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 205)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0205",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 206)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0206",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 207)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0207",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 208)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0208",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 209)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0209",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 210)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0210",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 211)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0211",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 212)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0212",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 213)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0213",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 214)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0214",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 215)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0215",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 216)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0216",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 217)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0217",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 218)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0218",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 219)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0219",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 220)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0220",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 221)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0221",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 222)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0222",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 223)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0223",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 224)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0224",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 225)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0225",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 226)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0226",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 227)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0227",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 228)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0228",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 229)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0229",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 230)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0230",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 231)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0231",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 232)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0232",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 233)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0233",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 234)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0234",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 235)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0235",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 236)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0236",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 237)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0237",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 238)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0238",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 239)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0239",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 240)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0240",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 241)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0241",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 242)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0242",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 243)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0243",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 244)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0244",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 245)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0245",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 246)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0246",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 247)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0247",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 248)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0248",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 249)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0249",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 250)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0250",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 251)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0251",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 252)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0252",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 253)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0253",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 254)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0254",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 255)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0255",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 256)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0256",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 257)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0257",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 258)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0258",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 259)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0259",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 260)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0260",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 261)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0261",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 262)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0262",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 263)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0263",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 264)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0264",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 265)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0265",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 266)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0266",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 267)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0267",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 268)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0268",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 269)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0269",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 270)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0270",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 271)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0271",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 272)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0272",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 273)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0273",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 274)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0274",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 275)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0275",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 276)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0276",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 277)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0277",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 278)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0278",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 279)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0279",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 280)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0280",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 281)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0281",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 282)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0282",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 283)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0283",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 284)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0284",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 285)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0285",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 286)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0286",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 287)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0287",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 288)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0288",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 289)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0289",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 290)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0290",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 291)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0291",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 292)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0292",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 293)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0293",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 294)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0294",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 295)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0295",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 296)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0296",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 297)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0297",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 298)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0298",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 299)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0299",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 300)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0300",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 301)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0301",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 302)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0302",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 303)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0303",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 304)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0304",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 305)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0305",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 306)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0306",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 307)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0307",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 308)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0308",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 309)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0309",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 310)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0310",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 311)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0311",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 312)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0312",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 313)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0313",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 314)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0314",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 315)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0315",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 316)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0316",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 317)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0317",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 318)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0318",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 319)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0319",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 320)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0320",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 321)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0321",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 322)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0322",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 323)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0323",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 324)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0324",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 325)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0325",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 326)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0326",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 327)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0327",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 328)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0328",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 329)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0329",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 330)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0330",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 331)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0331",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 332)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0332",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 333)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0333",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 334)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0334",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 335)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0335",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 336)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0336",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 337)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0337",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 338)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0338",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 339)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0339",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 340)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0340",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 341)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0341",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 342)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0342",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 343)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0343",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 344)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0344",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 345)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0345",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 346)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0346",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 347)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0347",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 348)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0348",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 349)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0349",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 350)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0350",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 351)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0351",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 352)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0352",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 353)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0353",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 354)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0354",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 355)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0355",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 356)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0356",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 357)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0357",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 358)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0358",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 359)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0359",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 360)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0360",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 361)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0361",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 362)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0362",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 363)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0363",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 364)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0364",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 365)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0365",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 366)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0366",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 367)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0367",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 368)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0368",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 369)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0369",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 370)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0370",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 371)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0371",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 372)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0372",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 373)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0373",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 374)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0374",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 375)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0375",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 376)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0376",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 377)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0377",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 378)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0378",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 379)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0379",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 380)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0380",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 381)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0381",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 382)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0382",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 383)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0383",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 384)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0384",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 385)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0385",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 386)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0386",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 387)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0387",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 388)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0388",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 389)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0389",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 390)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0390",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 391)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0391",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 392)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0392",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 393)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0393",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 394)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0394",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 395)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0395",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 396)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0396",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 397)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0397",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 398)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0398",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 399)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0399",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 400)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0400",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 401)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0401",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 402)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0402",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 403)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0403",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 404)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0404",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 405)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0405",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 406)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0406",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 407)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0407",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 408)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0408",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 409)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0409",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 410)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0410",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 411)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0411",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 412)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0412",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 413)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0413",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 414)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0414",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 415)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0415",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 416)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0416",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 417)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0417",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 418)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0418",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 419)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0419",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 420)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0420",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 421)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0421",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 422)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0422",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 423)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0423",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 424)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0424",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 425)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0425",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 426)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0426",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 427)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0427",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 428)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0428",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 429)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0429",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 430)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0430",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 431)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0431",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 432)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0432",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 433)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0433",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 434)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0434",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 435)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0435",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 436)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0436",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 437)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0437",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 438)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0438",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 439)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0439",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 440)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0440",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 441)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0441",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 442)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0442",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 443)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0443",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 444)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0444",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 445)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0445",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 446)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0446",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 447)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0447",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 448)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0448",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 449)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0449",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 450)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0450",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 451)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0451",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 452)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0452",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 453)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0453",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 454)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0454",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 455)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0455",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 456)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0456",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 457)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0457",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 458)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0458",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 459)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0459",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 460)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0460",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 461)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0461",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 462)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0462",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 463)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0463",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 464)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0464",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 465)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0465",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 466)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0466",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 467)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0467",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 468)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0468",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 469)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0469",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 470)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0470",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 471)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0471",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 472)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0472",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 473)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0473",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 474)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0474",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 475)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0475",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 476)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0476",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 477)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0477",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 478)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0478",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 479)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0479",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 480)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0480",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 481)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0481",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 482)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0482",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 483)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0483",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 484)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0484",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 485)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0485",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct spelling. (Item 486)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0486",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 487)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0487",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word closest in meaning to “precise”. (Item 488)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0488",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the word opposite in meaning to “hostile”. (Item 489)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0489",
+   "type": "mcq",
+   "stem": "Choose the best answer: Which sentence is correctly punctuated? (Item 490)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0490",
+   "type": "mcq",
+   "stem": "Choose the best answer: Choose the correct spelling. (Item 491)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0491",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct option: the students ___ completed the exercise before the bell rang. (Item 492)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0492",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word closest in meaning to “precise”. (Item 493)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0493",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the word opposite in meaning to “hostile”. (Item 494)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0494",
+   "type": "mcq",
+   "stem": "In the sentence below, which sentence is correctly punctuated? (Item 495)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0495",
+   "type": "mcq",
+   "stem": "In the sentence below, choose the correct spelling. (Item 496)",
+   "options": {
+    "A": "government",
+    "B": "goverment",
+    "C": "governement",
+    "D": "govvernment"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0496",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the correct option: The students ___ completed the exercise before the bell rang. (Item 497)",
+   "options": {
+    "A": "have",
+    "B": "had",
+    "C": "has",
+    "D": "having"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0497",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word closest in meaning to “precise”. (Item 498)",
+   "options": {
+    "A": "exact",
+    "B": "careless",
+    "C": "vague",
+    "D": "rough"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-english-enrich-0498",
+   "type": "mcq",
+   "stem": "Select the correct answer: Choose the word opposite in meaning to “hostile”. (Item 499)",
+   "options": {
+    "A": "angry",
+    "B": "friendly",
+    "C": "violent",
+    "D": "distant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-english-enrich-0499",
+   "type": "mcq",
+   "stem": "Select the correct answer: Which sentence is correctly punctuated? (Item 500)",
+   "options": {
+    "A": "“Come here,” she said.",
+    "B": "“Come here” she said.",
+    "C": "Come here,” she said.",
+    "D": "“Come here”, she said."
+   },
+   "marks": 1,
+   "answer": "A"
+  }
+ ],
+ "category": "secondary",
+ "body": "JAMB"
+}

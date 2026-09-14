@@ -1,0 +1,1509 @@
+{
+ "code": "waec-chemistry-sun-bank",
+ "title": "WAEC Server | SSCE Bank",
+ "version": 1,
+ "questionCount": 107,
+ "totalMarks": 107,
+ "questions": [
+  {
+   "id": "waec-server-scripts-chemistry-sun-0000",
+   "type": "mcq",
+   "stem": "What is the SI unit of the amount of substance?",
+   "options": {
+    "A": "Gram",
+    "B": "Mole",
+    "C": "Kilogram",
+    "D": "Liter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The SI unit for the amount of substance is the mole, which measures the number of particles."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0001",
+   "type": "mcq",
+   "stem": "Which subatomic particle has a negative charge?",
+   "options": {
+    "A": "Proton",
+    "B": "Neutron",
+    "C": "Electron",
+    "D": "Nucleus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Electrons carry a negative charge, while protons are positive and neutrons are neutral."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0002",
+   "type": "mcq",
+   "stem": "What is the atomic number of an element with 11 protons and 12 neutrons?",
+   "options": {
+    "A": "11",
+    "B": "12",
+    "C": "23",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The atomic number is equal to the number of protons, which is 11."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0003",
+   "type": "mcq",
+   "stem": "Which gas is known as the laughing gas?",
+   "options": {
+    "A": "Carbon dioxide",
+    "B": "Nitrous oxide",
+    "C": "Nitrogen",
+    "D": "Oxygen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nitrous oxide (N₂O) is commonly called laughing gas due to its euphoric effects."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0004",
+   "type": "mcq",
+   "stem": "What type of bond is formed by the sharing of electrons between atoms?",
+   "options": {
+    "A": "Ionic bond",
+    "B": "Covalent bond",
+    "C": "Metallic bond",
+    "D": "Hydrogen bond"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A covalent bond involves the sharing of electrons between non-metal atoms."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0005",
+   "type": "mcq",
+   "stem": "What is the chemical formula for water?",
+   "options": {
+    "A": "H₂O",
+    "B": "CO₂",
+    "C": "HCl",
+    "D": "NaCl"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for water is H₂O, indicating two hydrogen atoms and one oxygen atom."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0006",
+   "type": "mcq",
+   "stem": "Which of the following is a noble gas?",
+   "options": {
+    "A": "Nitrogen",
+    "B": "Helium",
+    "C": "Oxygen",
+    "D": "Chlorine"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Helium is a noble gas, characterized by a complete valence electron shell."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0007",
+   "type": "mcq",
+   "stem": "What is the pH of a neutral solution at 25°C?",
+   "options": {
+    "A": "0",
+    "B": "7",
+    "C": "14",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A neutral solution has a pH of 7 at 25°C, indicating equal concentrations of H⁺ and OH⁻ ions."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0008",
+   "type": "mcq",
+   "stem": "Which element is the most electronegative?",
+   "options": {
+    "A": "Oxygen",
+    "B": "Fluorine",
+    "C": "Chlorine",
+    "D": "Nitrogen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fluorine is the most electronegative element on the periodic table."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0009",
+   "type": "mcq",
+   "stem": "What is the mass of one mole of carbon-12?",
+   "options": {
+    "A": "12 g",
+    "B": "1 g",
+    "C": "6 g",
+    "D": "24 g"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "One mole of carbon-12 has a mass of 12 grams, equal to its molar mass."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0010",
+   "type": "mcq",
+   "stem": "Which of the following is a physical change?",
+   "options": {
+    "A": "Burning wood",
+    "B": "Rusting iron",
+    "C": "Melting ice",
+    "D": "Cooking an egg"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Melting ice is a physical change as it involves a change in state without altering the chemical composition."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0011",
+   "type": "mcq",
+   "stem": "What is the formula for sulfuric acid?",
+   "options": {
+    "A": "HCl",
+    "B": "H₂SO₄",
+    "C": "HNO₃",
+    "D": "H₂CO₃"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for sulfuric acid is H₂SO₄."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0012",
+   "type": "mcq",
+   "stem": "Which type of reaction releases energy?",
+   "options": {
+    "A": "Endothermic",
+    "B": "Exothermic",
+    "C": "Neutralization",
+    "D": "Decomposition"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Exothermic reactions release energy, usually in the form of heat."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0013",
+   "type": "mcq",
+   "stem": "What is the main component of natural gas?",
+   "options": {
+    "A": "Ethane",
+    "B": "Methane",
+    "C": "Propane",
+    "D": "Butane"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Methane (CH₄) is the primary component of natural gas."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0014",
+   "type": "mcq",
+   "stem": "Which gas is essential for respiration in humans?",
+   "options": {
+    "A": "Carbon dioxide",
+    "B": "Nitrogen",
+    "C": "Oxygen",
+    "D": "Argon"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Oxygen is required for cellular respiration in humans."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0015",
+   "type": "mcq",
+   "stem": "What is the oxidation state of hydrogen in water (H₂O)?",
+   "options": {
+    "A": "-1",
+    "B": "+1",
+    "C": "0",
+    "D": "+2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "In water, hydrogen has an oxidation state of +1, as oxygen is more electronegative."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0016",
+   "type": "mcq",
+   "stem": "Which of the following is a greenhouse gas?",
+   "options": {
+    "A": "Nitrogen",
+    "B": "Carbon dioxide",
+    "C": "Oxygen",
+    "D": "Argon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Carbon dioxide is a greenhouse gas that traps heat in the atmosphere."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0017",
+   "type": "mcq",
+   "stem": "What is the molar mass of water (H₂O)?",
+   "options": {
+    "A": "18 g/mol",
+    "B": "16 g/mol",
+    "C": "20 g/mol",
+    "D": "14 g/mol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Molar mass of H₂O = (2 × 1) + 16 = 18 g/mol."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0018",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of acids?",
+   "options": {
+    "A": "Turn blue litmus red",
+    "B": "Turn red litmus blue",
+    "C": "Neutral pH",
+    "D": "Produce OH⁻ ions"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Acids turn blue litmus paper red due to their acidic nature."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0019",
+   "type": "mcq",
+   "stem": "What is the chemical symbol for gold?",
+   "options": {
+    "A": "Ag",
+    "B": "Au",
+    "C": "Fe",
+    "D": "Cu"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical symbol for gold is Au, derived from its Latin name 'aurum'."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0020",
+   "type": "mcq",
+   "stem": "Which type of bond exists in a sodium chloride crystal?",
+   "options": {
+    "A": "Covalent",
+    "B": "Ionic",
+    "C": "Metallic",
+    "D": "Hydrogen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sodium chloride forms an ionic bond due to the transfer of electrons between sodium and chlorine."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0021",
+   "type": "mcq",
+   "stem": "What is the product of a neutralization reaction between an acid and a base?",
+   "options": {
+    "A": "Salt and water",
+    "B": "Salt and oxygen",
+    "C": "Water and carbon dioxide",
+    "D": "Salt and hydrogen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A neutralization reaction produces a salt and water."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0022",
+   "type": "mcq",
+   "stem": "Which of the following is an allotrope of carbon?",
+   "options": {
+    "A": "Graphite",
+    "B": "Iron",
+    "C": "Sulfur",
+    "D": "Nitrogen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Graphite is an allotrope of carbon, along with diamond and fullerenes."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0023",
+   "type": "mcq",
+   "stem": "What is the formula for ammonia?",
+   "options": {
+    "A": "NH₃",
+    "B": "NO₂",
+    "C": "N₂O",
+    "D": "NH₄"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for ammonia is NH₃."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0024",
+   "type": "mcq",
+   "stem": "Which of the following is a non-metal?",
+   "options": {
+    "A": "Sodium",
+    "B": "Sulfur",
+    "C": "Iron",
+    "D": "Copper"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sulfur is a non-metal, while sodium, iron, and copper are metals."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0025",
+   "type": "mcq",
+   "stem": "What is the process of separating a solid from a liquid by passing through a porous material called?",
+   "options": {
+    "A": "Distillation",
+    "B": "Filtration",
+    "C": "Evaporation",
+    "D": "Sublimation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Filtration separates a solid from a liquid using a porous material like filter paper."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0026",
+   "type": "mcq",
+   "stem": "Which gas is used in balloons to make them float?",
+   "options": {
+    "A": "Oxygen",
+    "B": "Helium",
+    "C": "Carbon dioxide",
+    "D": "Nitrogen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Helium is lighter than air, causing balloons to float."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0027",
+   "type": "mcq",
+   "stem": "What is the number of electrons in the outermost shell of a chlorine atom?",
+   "options": {
+    "A": "1",
+    "B": "7",
+    "C": "2",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chlorine has 7 electrons in its outermost shell (group 17)."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0028",
+   "type": "mcq",
+   "stem": "Which of the following is an example of an organic compound?",
+   "options": {
+    "A": "Sodium chloride",
+    "B": "Methane",
+    "C": "Water",
+    "D": "Carbon dioxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Methane (CH₄) is an organic compound containing carbon and hydrogen."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0029",
+   "type": "mcq",
+   "stem": "What is the percentage composition of oxygen in water (H₂O)?",
+   "options": {
+    "A": "88.9%",
+    "B": "11.1%",
+    "C": "50%",
+    "D": "75%"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Molar mass of H₂O = 18 g/mol. Oxygen = 16 g/mol. Percentage = (16/18) × 100 = 88.9%."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0030",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of metals?",
+   "options": {
+    "A": "Brittle",
+    "B": "Good conductor of electricity",
+    "C": "Low melting point",
+    "D": "Dull appearance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Metals are good conductors of electricity due to free electrons."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0031",
+   "type": "mcq",
+   "stem": "What is the chemical formula for sodium hydroxide?",
+   "options": {
+    "A": "NaCl",
+    "B": "NaOH",
+    "C": "Na₂CO₃",
+    "D": "NaHCO₃"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for sodium hydroxide is NaOH."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0032",
+   "type": "mcq",
+   "stem": "Which type of reaction involves the combination of two or more substances to form one product?",
+   "options": {
+    "A": "Decomposition",
+    "B": "Synthesis",
+    "C": "Displacement",
+    "D": "Combustion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A synthesis reaction combines reactants to form a single product."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0033",
+   "type": "mcq",
+   "stem": "What is the main source of energy in the Haber process?",
+   "options": {
+    "A": "Solar energy",
+    "B": "Heat energy",
+    "C": "Electrical energy",
+    "D": "Nuclear energy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Haber process uses heat energy to produce ammonia under high pressure."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0034",
+   "type": "mcq",
+   "stem": "Which of the following is a halogen?",
+   "options": {
+    "A": "Sodium",
+    "B": "Chlorine",
+    "C": "Magnesium",
+    "D": "Potassium"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chlorine is a halogen, belonging to group 17 of the periodic table."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0035",
+   "type": "mcq",
+   "stem": "What is the process of separating components of a liquid mixture based on boiling points?",
+   "options": {
+    "A": "Filtration",
+    "B": "Distillation",
+    "C": "Evaporation",
+    "D": "Crystallization"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Distillation separates liquids based on differences in their boiling points."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0036",
+   "type": "mcq",
+   "stem": "Which of the following is a product of complete combustion of hydrocarbons?",
+   "options": {
+    "A": "Carbon monoxide",
+    "B": "Carbon dioxide",
+    "C": "Soot",
+    "D": "Sulfur dioxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Complete combustion of hydrocarbons produces carbon dioxide and water."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0037",
+   "type": "mcq",
+   "stem": "What is the oxidation state of oxygen in hydrogen peroxide (H₂O₂)?",
+   "options": {
+    "A": "-2",
+    "B": "-1",
+    "C": "0",
+    "D": "+1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "In hydrogen peroxide, oxygen has an oxidation state of -1, unlike -2 in most compounds."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0038",
+   "type": "mcq",
+   "stem": "Which of the following is a renewable source of energy?",
+   "options": {
+    "A": "Coal",
+    "B": "Natural gas",
+    "C": "Biogas",
+    "D": "Petroleum"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Biogas is renewable, produced from organic matter like waste."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0039",
+   "type": "mcq",
+   "stem": "What is the chemical formula for calcium carbonate?",
+   "options": {
+    "A": "CaCO₃",
+    "B": "CaCl₂",
+    "C": "CaSO₄",
+    "D": "Ca(OH)₂"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for calcium carbonate is CaCO₃."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0040",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of bases?",
+   "options": {
+    "A": "Turn red litmus blue",
+    "B": "Turn blue litmus red",
+    "C": "Produce H⁺ ions",
+    "D": "Sour taste"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bases turn red litmus paper blue due to their alkaline nature."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0041",
+   "type": "mcq",
+   "stem": "What is the molar mass of sodium chloride (NaCl)?",
+   "options": {
+    "A": "58.5 g/mol",
+    "B": "35.5 g/mol",
+    "C": "23 g/mol",
+    "D": "40 g/mol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Molar mass of NaCl = 23 (Na) + 35.5 (Cl) = 58.5 g/mol."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0042",
+   "type": "mcq",
+   "stem": "Which of the following is an example of a homogeneous mixture?",
+   "options": {
+    "A": "Sand and water",
+    "B": "Salt solution",
+    "C": "Oil and water",
+    "D": "Soil"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A salt solution is a homogeneous mixture with uniform composition."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0043",
+   "type": "mcq",
+   "stem": "What is the name of the process where a solid turns directly into a gas?",
+   "options": {
+    "A": "Melting",
+    "B": "Sublimation",
+    "C": "Evaporation",
+    "D": "Condensation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sublimation is the direct transition of a solid to a gas without passing through the liquid state."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0044",
+   "type": "mcq",
+   "stem": "Which of the following is a transition metal?",
+   "options": {
+    "A": "Sodium",
+    "B": "Iron",
+    "C": "Potassium",
+    "D": "Calcium"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Iron is a transition metal, located in the d-block of the periodic table."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0045",
+   "type": "mcq",
+   "stem": "What is the chemical formula for ethanol?",
+   "options": {
+    "A": "C₂H₅OH",
+    "B": "CH₃OH",
+    "C": "C₃H₇OH",
+    "D": "C₂H₄"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for ethanol is C₂H₅OH."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0046",
+   "type": "mcq",
+   "stem": "Which of the following is a property of ionic compounds?",
+   "options": {
+    "A": "Low melting point",
+    "B": "High melting point",
+    "C": "Malleable",
+    "D": "Non-conductive in solid state"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ionic compounds have high melting points due to strong ionic bonds."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0047",
+   "type": "mcq",
+   "stem": "What is the name of the gas that makes up about 78% of Earth’s atmosphere?",
+   "options": {
+    "A": "Oxygen",
+    "B": "Nitrogen",
+    "C": "Carbon dioxide",
+    "D": "Argon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nitrogen constitutes approximately 78% of Earth’s atmosphere."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0048",
+   "type": "mcq",
+   "stem": "Which of the following is a catalyst in the Haber process?",
+   "options": {
+    "A": "Iron",
+    "B": "Copper",
+    "C": "Zinc",
+    "D": "Silver"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Iron is used as a catalyst in the Haber process to produce ammonia."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0049",
+   "type": "mcq",
+   "stem": "What is the empirical formula of a compound with a molecular formula of C₆H₁₂O₆?",
+   "options": {
+    "A": "C₃H₆O₃",
+    "B": "CH₂O",
+    "C": "C₂H₄O₂",
+    "D": "C₆H₁₂O₆"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The empirical formula is the simplest ratio: C₆H₁₂O₆ ÷ 6 = CH₂O."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0050",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of alkanes?",
+   "options": {
+    "A": "Unsaturated",
+    "B": "Single bonds only",
+    "C": "Contain double bonds",
+    "D": "Highly reactive"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Alkanes are saturated hydrocarbons with single bonds only."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0051",
+   "type": "mcq",
+   "stem": "What is the name of the process used to extract metals from their ores?",
+   "options": {
+    "A": "Electrolysis",
+    "B": "Smelting",
+    "C": "Distillation",
+    "D": "Filtration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Smelting is the process of extracting metals from their ores by heating."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0052",
+   "type": "mcq",
+   "stem": "Which of the following is a strong acid?",
+   "options": {
+    "A": "Acetic acid",
+    "B": "Hydrochloric acid",
+    "C": "Carbonic acid",
+    "D": "Citric acid"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Hydrochloric acid is a strong acid as it completely dissociates in water."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0053",
+   "type": "mcq",
+   "stem": "What is the chemical formula for carbon monoxide?",
+   "options": {
+    "A": "CO",
+    "B": "CO₂",
+    "C": "C₂O",
+    "D": "CH₄"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for carbon monoxide is CO."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0054",
+   "type": "mcq",
+   "stem": "Which of the following is a polymer?",
+   "options": {
+    "A": "Glucose",
+    "B": "Polythene",
+    "C": "Ethanol",
+    "D": "Methane"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Polythene is a polymer made from repeating ethylene units."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0055",
+   "type": "mcq",
+   "stem": "What is the pH of a solution with a hydrogen ion concentration of 10⁻³ M?",
+   "options": {
+    "A": "3",
+    "B": "7",
+    "C": "10",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "pH = -log[H⁺] = -log(10⁻³) = 3."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0056",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of alkenes?",
+   "options": {
+    "A": "Single bonds only",
+    "B": "Double bonds",
+    "C": "Triple bonds",
+    "D": "No bonds"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Alkenes are unsaturated hydrocarbons with at least one double bond."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0057",
+   "type": "mcq",
+   "stem": "What is the name of the process where a liquid turns into a gas at its surface?",
+   "options": {
+    "A": "Sublimation",
+    "B": "Evaporation",
+    "C": "Condensation",
+    "D": "Boiling"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Evaporation is the process where a liquid turns into a gas at its surface."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0058",
+   "type": "mcq",
+   "stem": "Which element is used in thermometers due to its low melting point?",
+   "options": {
+    "A": "Iron",
+    "B": "Mercury",
+    "C": "Copper",
+    "D": "Zinc"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mercury is used in thermometers due to its low melting point and thermal expansion."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0059",
+   "type": "mcq",
+   "stem": "What is the chemical formula for hydrochloric acid?",
+   "options": {
+    "A": "H₂SO₄",
+    "B": "HCl",
+    "C": "HNO₃",
+    "D": "H₂CO₃"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for hydrochloric acid is HCl."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0060",
+   "type": "mcq",
+   "stem": "Which of the following is a property of covalent compounds?",
+   "options": {
+    "A": "High melting point",
+    "B": "Conduct electricity in solid state",
+    "C": "Low melting point",
+    "D": "Form crystals"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Covalent compounds typically have low melting points due to weak intermolecular forces."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0061",
+   "type": "mcq",
+   "stem": "What is the number of protons in an oxygen atom?",
+   "options": {
+    "A": "8",
+    "B": "16",
+    "C": "6",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The atomic number of oxygen is 8, indicating 8 protons."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0062",
+   "type": "mcq",
+   "stem": "Which of the following is a product of the electrolysis of sodium chloride solution?",
+   "options": {
+    "A": "Oxygen",
+    "B": "Chlorine",
+    "C": "Nitrogen",
+    "D": "Carbon dioxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Electrolysis of sodium chloride solution produces chlorine gas at the anode."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0063",
+   "type": "mcq",
+   "stem": "What is the chemical formula for methane?",
+   "options": {
+    "A": "CH₄",
+    "B": "C₂H₆",
+    "C": "C₃H₈",
+    "D": "C₄H₁₀"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for methane is CH₄."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0064",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a catalyst?",
+   "options": {
+    "A": "Consumed in reaction",
+    "B": "Increases reaction rate",
+    "C": "Changes the products",
+    "D": "Decreases energy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A catalyst increases the rate of a reaction without being consumed."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0065",
+   "type": "mcq",
+   "stem": "What is the name of the process used to purify copper?",
+   "options": {
+    "A": "Smelting",
+    "B": "Electrolysis",
+    "C": "Distillation",
+    "D": "Filtration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Electrolysis is used to purify copper by electrorefining."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0066",
+   "type": "mcq",
+   "stem": "Which of the following is a weak acid?",
+   "options": {
+    "A": "Hydrochloric acid",
+    "B": "Acetic acid",
+    "C": "Sulfuric acid",
+    "D": "Nitric acid"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acetic acid is a weak acid as it partially dissociates in water."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0067",
+   "type": "mcq",
+   "stem": "What is the chemical formula for sodium carbonate?",
+   "options": {
+    "A": "NaCl",
+    "B": "Na₂CO₃",
+    "C": "NaOH",
+    "D": "NaHCO₃"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for sodium carbonate is Na₂CO₃."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0068",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of alkynes?",
+   "options": {
+    "A": "Single bonds only",
+    "B": "Double bonds",
+    "C": "Triple bonds",
+    "D": "No bonds"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Alkynes are unsaturated hydrocarbons with at least one triple bond."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0069",
+   "type": "mcq",
+   "stem": "What is the name of the gas used in fire extinguishers?",
+   "options": {
+    "A": "Oxygen",
+    "B": "Carbon dioxide",
+    "C": "Nitrogen",
+    "D": "Helium"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Carbon dioxide is used in fire extinguishers to displace oxygen and extinguish fires."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0070",
+   "type": "mcq",
+   "stem": "Which of the following is a property of acids?",
+   "options": {
+    "A": "Slippery feel",
+    "B": "Bitter taste",
+    "C": "Sour taste",
+    "D": "Turn red litmus blue"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Acids have a sour taste and turn blue litmus red."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0071",
+   "type": "mcq",
+   "stem": "What is the molar mass of oxygen gas (O₂)?",
+   "options": {
+    "A": "16 g/mol",
+    "B": "32 g/mol",
+    "C": "8 g/mol",
+    "D": "24 g/mol"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Molar mass of O₂ = 2 × 16 = 32 g/mol."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0072",
+   "type": "mcq",
+   "stem": "Which of the following is an example of a heterogeneous mixture?",
+   "options": {
+    "A": "Salt solution",
+    "B": "Air",
+    "C": "Sand and water",
+    "D": "Sugar syrup"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Sand and water form a heterogeneous mixture with non-uniform composition."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0073",
+   "type": "mcq",
+   "stem": "What is the name of the process where a gas turns directly into a solid?",
+   "options": {
+    "A": "Sublimation",
+    "B": "Deposition",
+    "C": "Evaporation",
+    "D": "Condensation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Deposition is the direct transition of a gas to a solid."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0074",
+   "type": "mcq",
+   "stem": "Which element is used in batteries due to its reactivity?",
+   "options": {
+    "A": "Iron",
+    "B": "Lithium",
+    "C": "Copper",
+    "D": "Zinc"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Lithium is used in batteries due to its high reactivity and lightweight properties."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0075",
+   "type": "mcq",
+   "stem": "What is the chemical formula for nitric acid?",
+   "options": {
+    "A": "HNO₃",
+    "B": "H₂SO₄",
+    "C": "HCl",
+    "D": "H₂CO₃"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for nitric acid is HNO₃."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0076",
+   "type": "mcq",
+   "stem": "Which of the following is a property of metallic bonding?",
+   "options": {
+    "A": "Low conductivity",
+    "B": "Brittle structure",
+    "C": "Delocalized electrons",
+    "D": "Low melting point"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Metallic bonding involves delocalized electrons, enabling conductivity."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0077",
+   "type": "mcq",
+   "stem": "What is the number of neutrons in a carbon-14 atom?",
+   "options": {
+    "A": "6",
+    "B": "8",
+    "C": "7",
+    "D": "14"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Carbon-14 has 6 protons and a mass number of 14, so neutrons = 14 - 6 = 8."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0078",
+   "type": "mcq",
+   "stem": "Which of the following is a product of the electrolysis of water?",
+   "options": {
+    "A": "Carbon dioxide",
+    "B": "Oxygen",
+    "C": "Nitrogen",
+    "D": "Sulfur dioxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Electrolysis of water produces oxygen at the anode and hydrogen at the cathode."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0079",
+   "type": "mcq",
+   "stem": "What is the chemical formula for ethane?",
+   "options": {
+    "A": "CH₄",
+    "B": "C₂H₆",
+    "C": "C₃H₈",
+    "D": "C₂H₄"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for ethane is C₂H₆."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0080",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a reversible reaction?",
+   "options": {
+    "A": "Proceeds only in one direction",
+    "B": "Reaches equilibrium",
+    "C": "Produces no products",
+    "D": "Is always exothermic"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A reversible reaction reaches equilibrium where forward and reverse reactions occur at equal rates."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0081",
+   "type": "mcq",
+   "stem": "What is the name of the process used to separate crude oil into fractions?",
+   "options": {
+    "A": "Filtration",
+    "B": "Fractional distillation",
+    "C": "Evaporation",
+    "D": "Crystallization"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fractional distillation separates crude oil based on different boiling points of its components."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0082",
+   "type": "mcq",
+   "stem": "Which of the following is a strong base?",
+   "options": {
+    "A": "Ammonium hydroxide",
+    "B": "Sodium hydroxide",
+    "C": "Calcium carbonate",
+    "D": "Ammonia"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sodium hydroxide is a strong base as it completely dissociates in water."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0083",
+   "type": "mcq",
+   "stem": "What is the chemical formula for potassium hydroxide?",
+   "options": {
+    "A": "KCl",
+    "B": "KOH",
+    "C": "K₂CO₃",
+    "D": "KHCO₃"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for potassium hydroxide is KOH."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0084",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of aromatic hydrocarbons?",
+   "options": {
+    "A": "Single bonds only",
+    "B": "Contain a benzene ring",
+    "C": "Highly saturated",
+    "D": "No carbon atoms"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Aromatic hydrocarbons, like benzene, contain a benzene ring structure."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0085",
+   "type": "mcq",
+   "stem": "What is the name of the gas used in welding?",
+   "options": {
+    "A": "Oxygen",
+    "B": "Acetylene",
+    "C": "Nitrogen",
+    "D": "Carbon dioxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acetylene is used in welding due to its high flame temperature."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0086",
+   "type": "mcq",
+   "stem": "Which of the following is a property of bases?",
+   "options": {
+    "A": "Sour taste",
+    "B": "Slippery feel",
+    "C": "Turn red litmus blue",
+    "D": "Produce H⁺ ions"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bases have a slippery feel and turn red litmus blue."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0087",
+   "type": "mcq",
+   "stem": "What is the molar mass of carbon dioxide (CO₂)?",
+   "options": {
+    "A": "44 g/mol",
+    "B": "32 g/mol",
+    "C": "28 g/mol",
+    "D": "16 g/mol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Molar mass of CO₂ = 12 (C) + 2 × 16 (O) = 44 g/mol."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0088",
+   "type": "mcq",
+   "stem": "Which of the following is an example of a suspension?",
+   "options": {
+    "A": "Salt solution",
+    "B": "Milk",
+    "C": "Sugar syrup",
+    "D": "Air"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Milk is a suspension with visible particles dispersed in a liquid."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0089",
+   "type": "mcq",
+   "stem": "What is the name of the process where a solid dissolves in a liquid to form a solution?",
+   "options": {
+    "A": "Sublimation",
+    "B": "Dissolution",
+    "C": "Evaporation",
+    "D": "Condensation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Dissolution is the process where a solid dissolves in a liquid to form a solution."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0090",
+   "type": "mcq",
+   "stem": "Which element is used in fluorescent lamps?",
+   "options": {
+    "A": "Neon",
+    "B": "Mercury",
+    "C": "Argon",
+    "D": "Krypton"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mercury vapor is used in fluorescent lamps to produce ultraviolet light."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0091",
+   "type": "mcq",
+   "stem": "What is the chemical formula for ammonium chloride?",
+   "options": {
+    "A": "NH₄Cl",
+    "B": "NH₃",
+    "C": "NH₄OH",
+    "D": "NCl₃"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The chemical formula for ammonium chloride is NH₄Cl."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0092",
+   "type": "mcq",
+   "stem": "Which of the following is a property of gases?",
+   "options": {
+    "A": "Fixed shape",
+    "B": "Fixed volume",
+    "C": "High compressibility",
+    "D": "High density"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Gases have high compressibility due to large spaces between particles."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0093",
+   "type": "mcq",
+   "stem": "What is the number of electrons in a sodium ion (Na⁺)?",
+   "options": {
+    "A": "11",
+    "B": "10",
+    "C": "12",
+    "D": "13"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A sodium atom has 11 electrons; Na⁺ loses one electron, leaving 10."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0094",
+   "type": "mcq",
+   "stem": "Which of the following is a product of fermentation of glucose?",
+   "options": {
+    "A": "Carbon dioxide",
+    "B": "Oxygen",
+    "C": "Nitrogen",
+    "D": "Sulfur dioxide"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Fermentation of glucose produces ethanol and carbon dioxide."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0095",
+   "type": "mcq",
+   "stem": "What is the chemical formula for propene?",
+   "options": {
+    "A": "C₃H₈",
+    "B": "C₃H₆",
+    "C": "C₂H₄",
+    "D": "C₄H₁₀"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for propene, an alkene, is C₃H₆."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0096",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a redox reaction?",
+   "options": {
+    "A": "No electron transfer",
+    "B": "Electron transfer occurs",
+    "C": "Produces only water",
+    "D": "Involves only acids"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A redox reaction involves the transfer of electrons between species."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0097",
+   "type": "mcq",
+   "stem": "What is the name of the process used to produce aluminum from its ore?",
+   "options": {
+    "A": "Smelting",
+    "B": "Electrolysis",
+    "C": "Distillation",
+    "D": "Filtration"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Electrolysis is used to extract aluminum from bauxite in the Hall-Héroult process."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0098",
+   "type": "mcq",
+   "stem": "Which of the following is a weak base?",
+   "options": {
+    "A": "Sodium hydroxide",
+    "B": "Ammonia",
+    "C": "Potassium hydroxide",
+    "D": "Calcium hydroxide"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ammonia is a weak base as it partially dissociates in water."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0099",
+   "type": "mcq",
+   "stem": "What is the chemical formula for sodium bicarbonate?",
+   "options": {
+    "A": "Na₂CO₃",
+    "B": "NaHCO₃",
+    "C": "NaCl",
+    "D": "NaOH"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The chemical formula for sodium bicarbonate is NaHCO₃."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0100",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of alcohols?",
+   "options": {
+    "A": "Contain a carboxyl group",
+    "B": "Contain a hydroxyl group",
+    "C": "Contain a triple bond",
+    "D": "Are inorganic"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Alcohols have a hydroxyl group (-OH) bonded to a carbon atom."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0101",
+   "type": "mcq",
+   "stem": "What is the name of the gas used in neon lights?",
+   "options": {
+    "A": "Helium",
+    "B": "Neon",
+    "C": "Argon",
+    "D": "Krypton"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Neon gas is used in neon lights to produce a red-orange glow."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0102",
+   "type": "mcq",
+   "stem": "Which of the following is a property of acids?",
+   "options": {
+    "A": "Bitter taste",
+    "B": "Produce OH⁻ ions",
+    "C": "Conduct electricity in solution",
+    "D": "Slippery feel"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Acids conduct electricity in solution due to the presence of H⁺ ions."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0103",
+   "type": "mcq",
+   "stem": "What is the molar mass of sulfuric acid (H₂SO₄)?",
+   "options": {
+    "A": "98 g/mol",
+    "B": "64 g/mol",
+    "C": "80 g/mol",
+    "D": "32 g/mol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Molar mass of H₂SO₄ = (2 × 1) + 32 + (4 × 16) = 98 g/mol."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0104",
+   "type": "mcq",
+   "stem": "Which of the following is an example of a colloid?",
+   "options": {
+    "A": "Salt solution",
+    "B": "Milk",
+    "C": "Sugar syrup",
+    "D": "Pure water"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Milk is a colloid with dispersed fat particles in water."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0105",
+   "type": "mcq",
+   "stem": "What is the name of the process where a liquid turns into a solid?",
+   "options": {
+    "A": "Sublimation",
+    "B": "Freezing",
+    "C": "Evaporation",
+    "D": "Condensation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Freezing is the process where a liquid turns into a solid."
+  },
+  {
+   "id": "waec-server-scripts-chemistry-sun-0106",
+   "type": "mcq",
+   "stem": "Which element is used in nuclear reactors as a fuel?",
+   "options": {
+    "A": "Iron",
+    "B": "Uranium",
+    "C": "Copper",
+    "D": "Zinc"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Uranium is used as a fuel in nuclear reactors due to its fissionable properties."
+  }
+ ],
+ "category": "secondary",
+ "body": "WAEC"
+}
