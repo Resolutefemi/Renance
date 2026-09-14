@@ -1,0 +1,1411 @@
+{
+ "code": "jamb-chemistry-enrich-bank",
+ "title": "JAMB Chemistry | Enrichment Bank",
+ "version": 1,
+ "questionCount": 100,
+ "totalMarks": 100,
+ "questions": [
+  {
+   "id": "jamb-chemistry-enrich-0000",
+   "type": "mcq",
+   "stem": "The number of protons in an atom is its",
+   "options": {
+    "A": "mass number",
+    "B": "atomic number",
+    "C": "neutron number",
+    "D": "nucleon number"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The atomic number equals the number of protons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0001",
+   "type": "mcq",
+   "stem": "An electron has a charge of",
+   "options": {
+    "A": "+1",
+    "B": "0",
+    "C": "-1",
+    "D": "+2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "An electron carries one negative elementary charge."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0002",
+   "type": "mcq",
+   "stem": "The particles found in the nucleus are",
+   "options": {
+    "A": "protons and electrons",
+    "B": "neutrons and electrons",
+    "C": "protons and neutrons",
+    "D": "electrons only"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The nucleus contains protons and neutrons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0003",
+   "type": "mcq",
+   "stem": "Isotopes are atoms of the same element with different numbers of",
+   "options": {
+    "A": "protons",
+    "B": "electrons only",
+    "C": "neutrons",
+    "D": "nuclei"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Isotopes have the same proton number but different neutron numbers."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0004",
+   "type": "mcq",
+   "stem": "The mass number of an atom is the total number of",
+   "options": {
+    "A": "protons and neutrons",
+    "B": "protons and electrons",
+    "C": "neutrons and electrons",
+    "D": "electrons"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mass number is protons plus neutrons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0005",
+   "type": "mcq",
+   "stem": "Elements in Group 1 are known as",
+   "options": {
+    "A": "halogens",
+    "B": "noble gases",
+    "C": "alkali metals",
+    "D": "transition metals"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Group 1 elements are alkali metals."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0006",
+   "type": "mcq",
+   "stem": "The elements in Group 17 are called",
+   "options": {
+    "A": "alkaline earth metals",
+    "B": "halogens",
+    "C": "lanthanides",
+    "D": "noble gases"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Group 17 elements are halogens."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0007",
+   "type": "mcq",
+   "stem": "Across a period, atomic radius generally",
+   "options": {
+    "A": "increases",
+    "B": "decreases",
+    "C": "remains constant",
+    "D": "becomes zero"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Atomic radius generally decreases across a period."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0008",
+   "type": "mcq",
+   "stem": "Noble gases are relatively unreactive because they have",
+   "options": {
+    "A": "one proton",
+    "B": "a complete valence shell",
+    "C": "no electrons",
+    "D": "low mass numbers"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Their outer electron shells are complete."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0009",
+   "type": "mcq",
+   "stem": "The most metallic element among the following is",
+   "options": {
+    "A": "Na",
+    "B": "Cl",
+    "C": "O",
+    "D": "F"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Sodium is a Group 1 metal."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0010",
+   "type": "mcq",
+   "stem": "A bond formed by transfer of electrons is",
+   "options": {
+    "A": "covalent",
+    "B": "metallic",
+    "C": "ionic",
+    "D": "hydrogen"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Ionic bonding involves electron transfer."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0011",
+   "type": "mcq",
+   "stem": "A covalent bond involves",
+   "options": {
+    "A": "sharing of electron pairs",
+    "B": "transfer of protons",
+    "C": "loss of neutrons",
+    "D": "sharing of nuclei"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Covalent bonds form when atoms share electron pairs."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0012",
+   "type": "mcq",
+   "stem": "The bond in NaCl is mainly",
+   "options": {
+    "A": "ionic",
+    "B": "covalent",
+    "C": "metallic",
+    "D": "hydrogen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "NaCl consists of oppositely charged ions."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0013",
+   "type": "mcq",
+   "stem": "A coordinate bond is formed when",
+   "options": {
+    "A": "each atom supplies one electron",
+    "B": "one atom supplies both bonding electrons",
+    "C": "neutrons are shared",
+    "D": "protons are transferred"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Both bonding electrons come from one atom."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0014",
+   "type": "mcq",
+   "stem": "Metallic bonding involves positive metal ions surrounded by",
+   "options": {
+    "A": "fixed protons",
+    "B": "delocalized electrons",
+    "C": "neutrons",
+    "D": "molecules"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Metallic bonding involves delocalized electrons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0015",
+   "type": "mcq",
+   "stem": "One mole contains approximately",
+   "options": {
+    "A": "6.02×10^23 particles",
+    "B": "3.01×10^8 particles",
+    "C": "9.81 particles",
+    "D": "1.60×10^-19 particles"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Avogadro's constant is about 6.02×10^23 mol^-1."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0016",
+   "type": "mcq",
+   "stem": "The molar mass of H2O is approximately",
+   "options": {
+    "A": "10 g mol^-1",
+    "B": "18 g mol^-1",
+    "C": "20 g mol^-1",
+    "D": "36 g mol^-1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "2(1)+16 = 18 g mol^-1."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0017",
+   "type": "mcq",
+   "stem": "The relative molecular mass of CO2 is",
+   "options": {
+    "A": "28",
+    "B": "32",
+    "C": "44",
+    "D": "46"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "12 + 2(16) = 44."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0018",
+   "type": "mcq",
+   "stem": "How many moles are in 18 g of water?",
+   "options": {
+    "A": "0.5",
+    "B": "1.0",
+    "C": "2.0",
+    "D": "18"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "18 g is one mole of water."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0019",
+   "type": "mcq",
+   "stem": "The empirical formula shows the",
+   "options": {
+    "A": "actual number of atoms only",
+    "B": "simplest whole-number ratio of atoms",
+    "C": "molecular mass",
+    "D": "number of isotopes"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "It gives the simplest whole-number ratio."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0020",
+   "type": "mcq",
+   "stem": "In a balanced chemical equation, coefficients represent",
+   "options": {
+    "A": "atomic numbers",
+    "B": "mole ratios",
+    "C": "densities",
+    "D": "temperatures"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Coefficients give mole ratios."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0021",
+   "type": "mcq",
+   "stem": "If 2 mol H2 react with 1 mol O2, the amount of H2O formed is",
+   "options": {
+    "A": "1 mol",
+    "B": "2 mol",
+    "C": "3 mol",
+    "D": "4 mol"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "2H2 + O2 → 2H2O."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0022",
+   "type": "mcq",
+   "stem": "The reactant that is completely consumed first is the",
+   "options": {
+    "A": "excess reagent",
+    "B": "limiting reagent",
+    "C": "catalyst",
+    "D": "solvent"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The limiting reagent determines maximum product."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0023",
+   "type": "mcq",
+   "stem": "Percentage yield is calculated from actual yield divided by",
+   "options": {
+    "A": "molar mass",
+    "B": "theoretical yield",
+    "C": "density",
+    "D": "volume"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Percentage yield = actual/theoretical × 100."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0024",
+   "type": "mcq",
+   "stem": "A catalyst affects the rate of reaction but is",
+   "options": {
+    "A": "completely consumed",
+    "B": "not consumed overall",
+    "C": "always a reactant",
+    "D": "always a product"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A catalyst is regenerated overall."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0025",
+   "type": "mcq",
+   "stem": "At constant temperature, pressure of a fixed mass of gas is inversely proportional to",
+   "options": {
+    "A": "volume",
+    "B": "mass",
+    "C": "density",
+    "D": "temperature"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Boyle's law relates pressure inversely to volume."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0026",
+   "type": "mcq",
+   "stem": "Charles' law relates volume to",
+   "options": {
+    "A": "temperature at constant pressure",
+    "B": "mass at constant volume",
+    "C": "pressure at constant temperature",
+    "D": "density"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Volume is proportional to absolute temperature at constant pressure."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0027",
+   "type": "mcq",
+   "stem": "The SI unit of pressure is",
+   "options": {
+    "A": "joule",
+    "B": "pascal",
+    "C": "newton",
+    "D": "watt"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Pressure is measured in pascals."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0028",
+   "type": "mcq",
+   "stem": "At constant volume, pressure of a gas increases when its absolute temperature",
+   "options": {
+    "A": "decreases",
+    "B": "increases",
+    "C": "becomes zero",
+    "D": "is unchanged"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Pressure is proportional to Kelvin temperature."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0029",
+   "type": "mcq",
+   "stem": "The Kelvin temperature corresponding to 27°C is approximately",
+   "options": {
+    "A": "246 K",
+    "B": "273 K",
+    "C": "300 K",
+    "D": "327 K"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "27 + 273 = 300 K."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0030",
+   "type": "mcq",
+   "stem": "A substance that produces H+ ions in aqueous solution is a(n)",
+   "options": {
+    "A": "acid",
+    "B": "alkali",
+    "C": "salt",
+    "D": "oxide"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Arrhenius acids produce H+ in water."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0031",
+   "type": "mcq",
+   "stem": "A soluble base is called an",
+   "options": {
+    "A": "acid",
+    "B": "alkali",
+    "C": "salt",
+    "D": "indicator"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An alkali is a soluble base."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0032",
+   "type": "mcq",
+   "stem": "A neutral solution at 25°C has pH",
+   "options": {
+    "A": "0",
+    "B": "5",
+    "C": "7",
+    "D": "14"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Neutral water has pH 7."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0033",
+   "type": "mcq",
+   "stem": "A salt is commonly formed in an acid-base",
+   "options": {
+    "A": "combustion",
+    "B": "neutralization",
+    "C": "polymerization",
+    "D": "cracking"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Neutralization produces salt and water."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0034",
+   "type": "mcq",
+   "stem": "Which is a strong acid?",
+   "options": {
+    "A": "HCl",
+    "B": "CH3COOH",
+    "C": "H2CO3",
+    "D": "NH3"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "HCl is a strong acid."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0035",
+   "type": "mcq",
+   "stem": "Oxidation is commonly defined as",
+   "options": {
+    "A": "gain of electrons",
+    "B": "loss of electrons",
+    "C": "gain of neutrons",
+    "D": "loss of protons"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Oxidation is loss of electrons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0036",
+   "type": "mcq",
+   "stem": "Reduction is",
+   "options": {
+    "A": "loss of electrons",
+    "B": "gain of electrons",
+    "C": "loss of oxygen only",
+    "D": "gain of protons only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Reduction is gain of electrons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0037",
+   "type": "mcq",
+   "stem": "The oxidizing agent is the species that is",
+   "options": {
+    "A": "oxidized",
+    "B": "reduced",
+    "C": "always a metal",
+    "D": "always a gas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The oxidizing agent accepts electrons and is reduced."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0038",
+   "type": "mcq",
+   "stem": "In a redox reaction, electrons are",
+   "options": {
+    "A": "created",
+    "B": "destroyed",
+    "C": "transferred",
+    "D": "converted into protons"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Redox reactions involve electron transfer."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0039",
+   "type": "mcq",
+   "stem": "The oxidation number of oxygen in most compounds is",
+   "options": {
+    "A": "+2",
+    "B": "0",
+    "C": "-1",
+    "D": "-2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Oxygen is usually −2."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0040",
+   "type": "mcq",
+   "stem": "Electrolysis is the use of electricity to cause a",
+   "options": {
+    "A": "spontaneous reaction only",
+    "B": "chemical change",
+    "C": "nuclear reaction",
+    "D": "change in mass only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Electrolysis uses electrical energy to drive change."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0041",
+   "type": "mcq",
+   "stem": "Cations move toward the",
+   "options": {
+    "A": "anode",
+    "B": "cathode",
+    "C": "salt bridge only",
+    "D": "electrolyte surface"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Positive ions move toward the negative cathode."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0042",
+   "type": "mcq",
+   "stem": "Anions move toward the",
+   "options": {
+    "A": "cathode",
+    "B": "anode",
+    "C": "battery terminal only",
+    "D": "neutral electrode"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Negative ions move toward the positive anode."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0043",
+   "type": "mcq",
+   "stem": "In an electrolytic cell, oxidation occurs at the",
+   "options": {
+    "A": "cathode",
+    "B": "anode",
+    "C": "salt bridge",
+    "D": "electrolyte"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Oxidation occurs at the anode."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0044",
+   "type": "mcq",
+   "stem": "The electrode where reduction occurs is the",
+   "options": {
+    "A": "anode",
+    "B": "cathode",
+    "C": "wire",
+    "D": "salt bridge"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Reduction occurs at the cathode."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0045",
+   "type": "mcq",
+   "stem": "Organic chemistry mainly studies compounds of",
+   "options": {
+    "A": "sodium",
+    "B": "carbon",
+    "C": "calcium",
+    "D": "iron"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Organic chemistry mainly concerns carbon compounds."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0046",
+   "type": "mcq",
+   "stem": "The functional group of alcohols is",
+   "options": {
+    "A": "-COOH",
+    "B": "-OH",
+    "C": "-CHO",
+    "D": "-NH2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Alcohols contain hydroxyl, –OH."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0047",
+   "type": "mcq",
+   "stem": "The general formula of alkanes is",
+   "options": {
+    "A": "CnH2n",
+    "B": "CnH2n+2",
+    "C": "CnH2n-2",
+    "D": "CnHn"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Acyclic alkanes follow CnH2n+2."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0048",
+   "type": "mcq",
+   "stem": "Ethene is an example of an",
+   "options": {
+    "A": "alkane",
+    "B": "alkene",
+    "C": "alkyne",
+    "D": "alcohol"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ethene contains a C=C double bond."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0049",
+   "type": "mcq",
+   "stem": "The simplest alkane is",
+   "options": {
+    "A": "ethane",
+    "B": "methane",
+    "C": "propane",
+    "D": "butane"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Methane is CH4."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0050",
+   "type": "mcq",
+   "stem": "A hydrocarbon contains only",
+   "options": {
+    "A": "C and H",
+    "B": "C and O",
+    "C": "H and O",
+    "D": "N and H"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hydrocarbons contain only carbon and hydrogen."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0051",
+   "type": "mcq",
+   "stem": "Benzene is an example of an",
+   "options": {
+    "A": "aromatic hydrocarbon",
+    "B": "alkane",
+    "C": "alkyne",
+    "D": "alcohol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Benzene is aromatic."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0052",
+   "type": "mcq",
+   "stem": "An alkyne contains at least one",
+   "options": {
+    "A": "C-C single bond only",
+    "B": "C=C double bond",
+    "C": "C≡C triple bond",
+    "D": "C-O bond"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Alkynes contain a carbon-carbon triple bond."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0053",
+   "type": "mcq",
+   "stem": "Cracking is used to convert",
+   "options": {
+    "A": "smaller molecules to larger ones",
+    "B": "large hydrocarbons to smaller useful molecules",
+    "C": "alkanes to salts",
+    "D": "water to hydrogen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cracking breaks large hydrocarbons into smaller molecules."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0054",
+   "type": "mcq",
+   "stem": "Complete combustion of a hydrocarbon produces",
+   "options": {
+    "A": "CO and H2",
+    "B": "CO2 and H2O",
+    "C": "C and H2",
+    "D": "CH4 and O2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Complete combustion forms CO2 and water."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0055",
+   "type": "mcq",
+   "stem": "The functional group of carboxylic acids is",
+   "options": {
+    "A": "-OH",
+    "B": "-COOH",
+    "C": "-COO-",
+    "D": "-NH2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Carboxylic acids contain –COOH."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0056",
+   "type": "mcq",
+   "stem": "Ethanoic acid reacts with ethanol to form an",
+   "options": {
+    "A": "amide",
+    "B": "ester",
+    "C": "alkene",
+    "D": "ether"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Esterification forms an ester and water."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0057",
+   "type": "mcq",
+   "stem": "Aldehydes contain the functional group",
+   "options": {
+    "A": "-CHO",
+    "B": "-COOH",
+    "C": "-OH",
+    "D": "-NH2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The aldehyde group is –CHO."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0058",
+   "type": "mcq",
+   "stem": "Amines are characterized by the presence of",
+   "options": {
+    "A": "nitrogen",
+    "B": "chlorine only",
+    "C": "sulfur only",
+    "D": "phosphorus only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Amines are nitrogen-containing organic compounds."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0059",
+   "type": "mcq",
+   "stem": "Esterification generally requires an acid catalyst such as",
+   "options": {
+    "A": "H2SO4",
+    "B": "NaCl",
+    "C": "KOH",
+    "D": "CaCO3"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Concentrated sulfuric acid is commonly used as catalyst."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0060",
+   "type": "mcq",
+   "stem": "An exothermic reaction",
+   "options": {
+    "A": "absorbs heat",
+    "B": "releases heat",
+    "C": "has no energy change",
+    "D": "always freezes water"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Exothermic reactions release heat."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0061",
+   "type": "mcq",
+   "stem": "An endothermic reaction",
+   "options": {
+    "A": "releases heat",
+    "B": "absorbs heat",
+    "C": "cannot occur",
+    "D": "always forms gas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Endothermic reactions absorb heat."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0062",
+   "type": "mcq",
+   "stem": "The SI unit of energy is",
+   "options": {
+    "A": "pascal",
+    "B": "joule",
+    "C": "mole",
+    "D": "ampere"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Energy is measured in joules."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0063",
+   "type": "mcq",
+   "stem": "Bond breaking generally",
+   "options": {
+    "A": "releases energy",
+    "B": "requires energy",
+    "C": "has no energy change",
+    "D": "creates neutrons"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Energy is required to break bonds."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0064",
+   "type": "mcq",
+   "stem": "A reaction with negative enthalpy change is",
+   "options": {
+    "A": "endothermic",
+    "B": "exothermic",
+    "C": "neutral",
+    "D": "impossible"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Negative ΔH indicates heat release."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0065",
+   "type": "mcq",
+   "stem": "At dynamic equilibrium, forward and reverse reaction rates are",
+   "options": {
+    "A": "zero",
+    "B": "equal",
+    "C": "always increasing",
+    "D": "unrelated"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "At equilibrium the rates are equal."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0066",
+   "type": "mcq",
+   "stem": "A catalyst at equilibrium",
+   "options": {
+    "A": "changes equilibrium constant",
+    "B": "speeds both directions similarly",
+    "C": "stops the reverse reaction",
+    "D": "changes products"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A catalyst speeds both directions without changing K."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0067",
+   "type": "mcq",
+   "stem": "Increasing reactant concentration generally shifts equilibrium toward",
+   "options": {
+    "A": "reactants",
+    "B": "products",
+    "C": "the catalyst",
+    "D": "no species"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The system tends to consume added reactant."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0068",
+   "type": "mcq",
+   "stem": "Le Chatelier's principle predicts how equilibrium responds to",
+   "options": {
+    "A": "a disturbance",
+    "B": "atomic mass only",
+    "C": "color only",
+    "D": "radioactivity only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "It describes response to changes in equilibrium conditions."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0069",
+   "type": "mcq",
+   "stem": "For an exothermic forward reaction, increasing temperature generally shifts equilibrium toward",
+   "options": {
+    "A": "products",
+    "B": "reactants",
+    "C": "the catalyst",
+    "D": "neither"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Heat behaves as a product for an exothermic forward reaction."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0070",
+   "type": "mcq",
+   "stem": "Increasing temperature generally makes a reaction",
+   "options": {
+    "A": "slower",
+    "B": "faster",
+    "C": "impossible",
+    "D": "unchanged always"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Higher temperature generally increases effective collisions."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0071",
+   "type": "mcq",
+   "stem": "A catalyst increases reaction rate by providing",
+   "options": {
+    "A": "a higher activation energy",
+    "B": "an alternative lower-energy pathway",
+    "C": "more products at equilibrium",
+    "D": "more reactants"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Catalysts provide a lower activation-energy pathway."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0072",
+   "type": "mcq",
+   "stem": "Increasing surface area of a solid reactant generally",
+   "options": {
+    "A": "decreases rate",
+    "B": "increases rate",
+    "C": "stops reaction",
+    "D": "changes atomic number"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "More surface area provides more collision sites."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0073",
+   "type": "mcq",
+   "stem": "Concentration affects reaction rate mainly by changing",
+   "options": {
+    "A": "collision frequency",
+    "B": "atomic mass",
+    "C": "nuclear charge",
+    "D": "boiling point only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Higher concentration generally increases collision frequency."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0074",
+   "type": "mcq",
+   "stem": "Activation energy is the minimum energy needed for",
+   "options": {
+    "A": "effective reaction",
+    "B": "melting only",
+    "C": "evaporation only",
+    "D": "ionization of every atom"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Reacting particles need enough energy to overcome the barrier."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0075",
+   "type": "mcq",
+   "stem": "A saturated solution contains",
+   "options": {
+    "A": "no solute",
+    "B": "the maximum dissolved solute at a given condition",
+    "C": "only solvent",
+    "D": "only gas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "It contains the maximum solute under stated conditions."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0076",
+   "type": "mcq",
+   "stem": "Most solid solutes become more soluble in water when temperature",
+   "options": {
+    "A": "increases",
+    "B": "decreases",
+    "C": "is zero",
+    "D": "is irrelevant"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Many solids become more soluble as temperature rises."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0077",
+   "type": "mcq",
+   "stem": "A substance that dissolves in a solvent is the",
+   "options": {
+    "A": "solute",
+    "B": "solution",
+    "C": "precipitate",
+    "D": "residue"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The solute is dissolved by the solvent."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0078",
+   "type": "mcq",
+   "stem": "The liquid that dissolves a solute is the",
+   "options": {
+    "A": "solute",
+    "B": "solvent",
+    "C": "precipitate",
+    "D": "crystal"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The solvent is the dissolving medium."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0079",
+   "type": "mcq",
+   "stem": "A precipitate is",
+   "options": {
+    "A": "a soluble gas",
+    "B": "an insoluble solid formed from solution",
+    "C": "a solvent",
+    "D": "a catalyst"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A precipitate is an insoluble solid formed in solution."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0080",
+   "type": "mcq",
+   "stem": "Filtration separates an insoluble solid from a",
+   "options": {
+    "A": "gas",
+    "B": "liquid",
+    "C": "pure element",
+    "D": "solution of gases"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Filtration separates insoluble solids from liquids."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0081",
+   "type": "mcq",
+   "stem": "Distillation separates substances mainly using differences in",
+   "options": {
+    "A": "atomic number",
+    "B": "boiling point",
+    "C": "color",
+    "D": "magnetism"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Distillation uses differences in boiling points."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0082",
+   "type": "mcq",
+   "stem": "Chromatography can be used to separate",
+   "options": {
+    "A": "components of a mixture",
+    "B": "protons",
+    "C": "neutrons",
+    "D": "single atoms"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Chromatography separates components by differential movement."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0083",
+   "type": "mcq",
+   "stem": "A separating funnel is useful for",
+   "options": {
+    "A": "miscible liquids",
+    "B": "immiscible liquids",
+    "C": "solids only",
+    "D": "gases only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "It separates immiscible liquid layers."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0084",
+   "type": "mcq",
+   "stem": "Sublimation can separate a sublimable solid from a",
+   "options": {
+    "A": "non-sublimable solid",
+    "B": "liquid only",
+    "C": "gas only",
+    "D": "metal only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The sublimable component changes directly to gas."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0085",
+   "type": "mcq",
+   "stem": "The major component of dry air is",
+   "options": {
+    "A": "oxygen",
+    "B": "nitrogen",
+    "C": "carbon dioxide",
+    "D": "hydrogen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nitrogen is about 78% of dry air."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0086",
+   "type": "mcq",
+   "stem": "The gas required for aerobic respiration is",
+   "options": {
+    "A": "nitrogen",
+    "B": "oxygen",
+    "C": "carbon dioxide",
+    "D": "helium"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Aerobic respiration uses oxygen."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0087",
+   "type": "mcq",
+   "stem": "Hard water commonly contains dissolved ions of",
+   "options": {
+    "A": "Na and K only",
+    "B": "Ca and Mg",
+    "C": "Cl and F only",
+    "D": "H and O only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ca2+ and Mg2+ cause most water hardness."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0088",
+   "type": "mcq",
+   "stem": "Temporary hardness is commonly associated with",
+   "options": {
+    "A": "hydrogen carbonates",
+    "B": "chlorides only",
+    "C": "nitrates only",
+    "D": "sulfates only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hydrogen carbonates cause temporary hardness."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0089",
+   "type": "mcq",
+   "stem": "Chlorination of water is mainly used for",
+   "options": {
+    "A": "coloring",
+    "B": "disinfection",
+    "C": "increasing hardness",
+    "D": "removing all salts"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chlorine disinfects water."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0090",
+   "type": "mcq",
+   "stem": "The gas most associated with the greenhouse effect among these is",
+   "options": {
+    "A": "CO2",
+    "B": "O2",
+    "C": "N2",
+    "D": "Ar"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "CO2 is an important greenhouse gas."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0091",
+   "type": "mcq",
+   "stem": "Acid rain is mainly associated with oxides of",
+   "options": {
+    "A": "sulfur and nitrogen",
+    "B": "sodium and calcium",
+    "C": "hydrogen and helium",
+    "D": "carbon only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Sulfur and nitrogen oxides contribute to acid rain."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0092",
+   "type": "mcq",
+   "stem": "Ozone in the stratosphere helps protect Earth from",
+   "options": {
+    "A": "infrared only",
+    "B": "ultraviolet radiation",
+    "C": "sound waves",
+    "D": "visible light only"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ozone absorbs harmful ultraviolet radiation."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0093",
+   "type": "mcq",
+   "stem": "A major source of carbon monoxide is",
+   "options": {
+    "A": "complete combustion",
+    "B": "incomplete combustion",
+    "C": "photosynthesis",
+    "D": "distillation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Incomplete combustion can produce CO."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0094",
+   "type": "mcq",
+   "stem": "Biodegradable waste can be broken down by",
+   "options": {
+    "A": "microorganisms",
+    "B": "neutrons",
+    "C": "metals only",
+    "D": "radio waves"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Microorganisms decompose biodegradable materials."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0095",
+   "type": "mcq",
+   "stem": "Radioactivity is the spontaneous emission of radiation from an",
+   "options": {
+    "A": "unstable nucleus",
+    "B": "ordinary molecule",
+    "C": "electron shell only",
+    "D": "ion only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Radioactivity originates from unstable atomic nuclei."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0096",
+   "type": "mcq",
+   "stem": "An alpha particle is essentially a",
+   "options": {
+    "A": "helium nucleus",
+    "B": "proton only",
+    "C": "electron",
+    "D": "neutron"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "An alpha particle contains two protons and two neutrons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0097",
+   "type": "mcq",
+   "stem": "A beta-minus particle is a high-speed",
+   "options": {
+    "A": "electron",
+    "B": "proton",
+    "C": "helium nucleus",
+    "D": "neutron"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Beta-minus radiation consists of high-energy electrons."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0098",
+   "type": "mcq",
+   "stem": "Gamma radiation is a form of",
+   "options": {
+    "A": "electromagnetic radiation",
+    "B": "sound",
+    "C": "matter wave only",
+    "D": "chemical bond"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Gamma rays are high-energy electromagnetic radiation."
+  },
+  {
+   "id": "jamb-chemistry-enrich-0099",
+   "type": "mcq",
+   "stem": "The half-life of a radioactive substance is the time required for",
+   "options": {
+    "A": "all nuclei to decay",
+    "B": "half the radioactive nuclei to decay",
+    "C": "the mass to double",
+    "D": "temperature to halve"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Half-life is the time for half the original radioactive nuclei to decay."
+  }
+ ],
+ "category": "secondary",
+ "body": "JAMB"
+}

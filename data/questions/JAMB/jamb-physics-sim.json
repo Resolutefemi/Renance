@@ -1,0 +1,5315 @@
+{
+ "code": "jamb-physics-sim-bank",
+ "title": "JAMB Physics | Simulator Bank",
+ "version": 1,
+ "questionCount": 408,
+ "totalMarks": 408,
+ "questions": [
+  {
+   "id": "jamb-sim-physics-sim-0000",
+   "type": "mcq",
+   "stem": "The latent heat of fusion of ice is 80cal g-1. How much heat is required to change 10g of ice at QoC into water at the same temperature?",
+   "options": {
+    "A": "80 cal",
+    "B": "10 cal",
+    "C": "8 cal",
+    "D": "800 cal"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0001",
+   "type": "mcq",
+   "stem": "A gas at pressure PN-m-2 and temperature 27oC is heated to 77oC at constant volume. The new pressure is",
+   "options": {
+    "A": "0.85 PN-m-2",
+    "B": "0.86 PN-m-2",
+    "C": "1.16 PN-m-2",
+    "D": "1.18 PN-m-2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0002",
+   "type": "mcq",
+   "stem": "The following are some units i. Ns ii. Mm iii. Nm-2 iv. JoK-1. What are the units of latent heat?",
+   "options": {
+    "A": "i",
+    "B": "ii",
+    "C": "iii",
+    "D": "iv"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0003",
+   "type": "mcq",
+   "stem": "A temperature 20oC is the same as",
+   "options": {
+    "A": "36oF",
+    "B": "60oF",
+    "C": "11.1oF",
+    "D": "43.1oF"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0004",
+   "type": "mcq",
+   "stem": "Fig 12 above shows the velocity time graph of a car which starts from rest and is accelerated uniformly at the rate of 3m sec-2 for 5 seconds. It attains a velocity which is maintained for a minute, The car is then brought to rest by a uniform retardation after another 3 seconds. calculate the total distance covered",
+   "options": {
+    "A": "900m",
+    "B": "1920m",
+    "C": "960m",
+    "D": "860m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0005",
+   "type": "mcq",
+   "stem": "For the wave motion represented above, the wavelength is given by",
+   "options": {
+    "A": "p",
+    "B": "q",
+    "C": "r",
+    "D": "s"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0006",
+   "type": "mcq",
+   "stem": "Fig 10 above shows a see-saw which is perfectly in balance, the weighs of the people sitting on it are 50kg, xkg and 15kg as shown, the sit at distances of 1.5, 1.5 and 2m from the pivot respectively. The vale of X is",
+   "options": {
+    "A": "30",
+    "B": "35",
+    "C": "70",
+    "D": "24.25"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0007",
+   "type": "mcq",
+   "stem": "In a resonance tube experiment, which is illustrated above, the velocity of sound in air is 327.68m/s, the frequency of the turning fork used is therefore",
+   "options": {
+    "A": "128HZ",
+    "B": "256HZ",
+    "C": "512HZ",
+    "D": "768HZ"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0008",
+   "type": "mcq",
+   "stem": "A body is released from rest and allowed to fall freely from a given height under gravity. The kinetic energy at its half-way point is",
+   "options": {
+    "A": "a little above half of its initial energy",
+    "B": "a little below half of its initial energy",
+    "C": "a half of its initioal energy",
+    "D": "a little above its initial energy"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0009",
+   "type": "mcq",
+   "stem": "If the wavelength of a wave travelling with a velocity of 360ms-1 is 60cm, the period of the wave is",
+   "options": {
+    "A": "6s",
+    "B": "3.6s",
+    "C": "0.17s",
+    "D": "0.61s"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0010",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0011",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0012",
+   "type": "mcq",
+   "stem": "A milliameter of resistance 5\\(\\Omega\\) and full scale deflection of 5m A is to used to measure a potential difference of 50 V. The resistance of the multiplier should be",
+   "options": {
+    "A": "95\\(\\Omega\\)",
+    "B": "110\\(\\Omega\\)",
+    "C": "595\\(\\Omega\\)",
+    "D": "995\\(\\Omega\\)"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0013",
+   "type": "mcq",
+   "stem": "The name given to the characteristics behaviour of substances which set their length perpendicular to a strong magnetic field instead of in line with it is",
+   "options": {
+    "A": "magnetization",
+    "B": "paramagnetism",
+    "C": "diamagnetism",
+    "D": "demagnetism"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0014",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0015",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0016",
+   "type": "mcq",
+   "stem": "The wave motion above has a frequency",
+   "options": {
+    "A": "0.1Hz",
+    "B": "0.2Hz",
+    "C": "5Hz",
+    "D": "10Hz"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0017",
+   "type": "mcq",
+   "stem": "A body of mass 6kg rests on an inclined plane. The normal reaction is R and the limiting frictional force is F as shown in the image above. if F = 30N, and g = 10ms2 then the angle of inclination \\( \\theta \\) is",
+   "options": {
+    "A": "\\( 15^{\\circ} \\)",
+    "B": "\\( 30^{\\circ} \\)",
+    "C": "\\( 45^{\\circ} \\)",
+    "D": "\\( 60^{\\circ} \\)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0018",
+   "type": "mcq",
+   "stem": "The relationship between the period T and the length T of a smile pendulum is T = 2\\( \\pi \\) \\( ( \\frac{I}{g}) ^{ \\frac{1}{2} } \\). From experiment data of T and I, one can obtain the following graphs, i. T vs.I ii. T vs I2 iii. T2 vs. I iv. T vs \\( \\sqrt{I} \\) v. logT vs logI. Which of the following graphs, are linear?",
+   "options": {
+    "A": "all",
+    "B": "only i and ii",
+    "C": "only iii and iv",
+    "D": "iii,iv and v"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0019",
+   "type": "mcq",
+   "stem": "Change of state is accompanied by change of",
+   "options": {
+    "A": "temperature",
+    "B": "volume",
+    "C": "heat content",
+    "D": "temperatureb and volume"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0020",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0021",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0022",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0023",
+   "type": "mcq",
+   "stem": "In a radioactive series: \\( ^{235} _{92}L \\to ^{235} _{93}M \\to ^{235} _{90}N \\to ^{235} _{90}\\phi \\) The particles emitted are respectively",
+   "options": {
+    "A": "\\( \\beta \\beta \\alpha \\)",
+    "B": "\\( \\alpha \\gamma \\beta \\)",
+    "C": "\\( \\gamma \\alpha \\beta \\)",
+    "D": "\\( \\alpha \\alpha \\beta \\)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0024",
+   "type": "mcq",
+   "stem": "A hot metal ball is suspended in the open air. As it cools it loses heat by",
+   "options": {
+    "A": "conduction only",
+    "B": "convection only",
+    "C": "radiation only",
+    "D": "conduction and convection"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0025",
+   "type": "mcq",
+   "stem": "If the refractive index of a medium is V2, what is the critical angle?",
+   "options": {
+    "A": "45o",
+    "B": "50o12'",
+    "C": "56o25'",
+    "D": "75o"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0026",
+   "type": "mcq",
+   "stem": "An incident ray XY makes an angle of 15\\( ^{\\circ} \\) with a fixed line AY which is normal to surface of a plane mirror if the mirrow is turned as indicated by the arrow through \\( 40^{\\circ} \\), what angle will the reflected ray make with AY?",
+   "options": {
+    "A": "\\( 25^{\\circ} \\)",
+    "B": "\\( 40^{\\circ} \\)",
+    "C": "\\( 15^{\\circ} \\)",
+    "D": "\\( 55^{\\circ} \\)"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0027",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0028",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0029",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0030",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0031",
+   "type": "mcq",
+   "stem": "The range of wavelengths of the visible spectrum is 400nm-700nm. The wavelength of gamma rays is",
+   "options": {
+    "A": "550nm",
+    "B": "shorter than 400nm",
+    "C": "shorter than 700nm but longer than 400nm",
+    "D": "longer than 700nm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0032",
+   "type": "mcq",
+   "stem": "Which of the following may be used to determine relative humidity in a physics laboratory? I. Manometer II. Wet-and-dry bulb hygrometer III. Hair hygrometer IV. A hydrometer.",
+   "options": {
+    "A": "III only",
+    "B": "I only",
+    "C": "II only",
+    "D": "II and III only"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0033",
+   "type": "mcq",
+   "stem": "In a resonance tube experiment, a tube of fixedlength in closed at one end and several turningforks of increasing frequency used to obtainresonance at the open end. If the turning fork withthe lowest frequency which gave resonance had a frequency ƒ1 and the next turning fork to giveresonance had a frequency ƒ2, find the ratio ƒ2/ ƒ1.",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "1/2",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0034",
+   "type": "mcq",
+   "stem": "Four resistors R1, R2, R3 and R4 are connected in series as shown above, V1, V2, V3 are voltmeters connected as indicated above. Which of the following relations is correct??",
+   "options": {
+    "A": "V1 = V3 =V2/2",
+    "B": "V1 = 2V2 = V3",
+    "C": "V1=1/2V3 =V3",
+    "D": "V2 - V1 = V3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0035",
+   "type": "mcq",
+   "stem": "The linear expansivity of brass is 2 x 10-5oC-1. If the volume of a piece of brass is 10cm3 at 0oC, what will be its volume at 100oC?",
+   "options": {
+    "A": "10.02cm3",
+    "B": "10.04cm3",
+    "C": "10.06cm3",
+    "D": "10.20cm3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0036",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0037",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0038",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0039",
+   "type": "mcq",
+   "stem": "A coin is placed at the bottom of a cube of glass tern thick. If the refractive index of the glass is \\(\\mu\\), how high does the coin appear to be raised to an observer looking perpendicularly into the glass?",
+   "options": {
+    "A": "\\(\\frac{1}{t - \\mu}\\)",
+    "B": "\\(\\frac{t(\\mu - I)}{\\mu}\\)",
+    "C": "t (1 + \\(\\frac{1}{\\mu}\\))",
+    "D": "-\\(\\mu\\)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0040",
+   "type": "mcq",
+   "stem": "Of two identical tuning forks with natural frequency 256Hz, one is loaded so that 4 beats per second are heard when they are sounded together. What is the frequency of the loaded tuning fork?",
+   "options": {
+    "A": "260Hz",
+    "B": "252Hz",
+    "C": "248Hz",
+    "D": "264Hz"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0041",
+   "type": "mcq",
+   "stem": "For which of the underlisted quantities is the derived unit ML2T2 correct? i. momentum of a force ii. work iii. acceleration",
+   "options": {
+    "A": "i only",
+    "B": "ii only",
+    "C": "iii only",
+    "D": "i and ii"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0042",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0043",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0044",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0045",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0046",
+   "type": "mcq",
+   "stem": "The range of wavelengths of the visible spectrum is 400nm-700nm. The wavelength of gamma rays is",
+   "options": {
+    "A": "550nm",
+    "B": "shorter than 400nm",
+    "C": "shorter than 700nm but longer than 400nm",
+    "D": "longer than 700nm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0047",
+   "type": "mcq",
+   "stem": "Water shows anomalous behaviour",
+   "options": {
+    "A": "below 0oC",
+    "B": "between 0oC and 4oC",
+    "C": "at exactly 4oC",
+    "D": "between 4oC and 100oC"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0048",
+   "type": "mcq",
+   "stem": "A thin aluminum plate has a surface area of 1500m at 20oC. What will be its surface area when it is cooled to -20oC? (Take the linear expansivity of aluminum to be 2.5 x 10-5k-1).",
+   "options": {
+    "A": "1.503m2",
+    "B": "1.500m2",
+    "C": "1.498m2",
+    "D": "1.497m2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0049",
+   "type": "mcq",
+   "stem": "Two liquids, P at a temperature of 20oC and Q at a temperature of 80oC have specific heat capacities of 1.0Jkg-1oC-1 and 1.5J kg-1oC-1respectively. if equal masses of P and Q are mixed in a lagged calorimeter, then the equilibrium temperature is",
+   "options": {
+    "A": "44oC",
+    "B": "50oC",
+    "C": "56oC",
+    "D": "60oC"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0050",
+   "type": "mcq",
+   "stem": "A uniform meter rule QR is balanced on a knife edge which is 55cm from R, when a mass of 10g is hung at P as shown above, the mass of the meter rule is (Note that QP is 10cm)",
+   "options": {
+    "A": "550g",
+    "B": "350g",
+    "C": "70g",
+    "D": "35g"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0051",
+   "type": "mcq",
+   "stem": "In fig 9 the value of R is",
+   "options": {
+    "A": "3Ω",
+    "B": "4Ω",
+    "C": "5Ω",
+    "D": "6Ω"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0052",
+   "type": "mcq",
+   "stem": "The wavelength of ultraviolet radiation is 400nm. If the speed of light in air is 3 x 108ms-1, then the frequency of the ultraviolet radiation is",
+   "options": {
+    "A": "1.3 x 1015Hz",
+    "B": "7.5 x 105Hz",
+    "C": "1.2 x 1011Hz",
+    "D": "7.5 x 1014Hz"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0053",
+   "type": "mcq",
+   "stem": "When two objects P and Q are supplied with the same quantity of heat, the temperature change in P is observed to be twice that of Q. The ratio of the specific heat capacity of P to Q is",
+   "options": {
+    "A": "1 : 4",
+    "B": "4 : 1",
+    "C": "1 : 1",
+    "D": "2 : 1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0054",
+   "type": "mcq",
+   "stem": "The expansion of solids can be considered a disadvantage in the",
+   "options": {
+    "A": "balance wheel of a watch",
+    "B": "fitting of wheels on rims",
+    "C": "fire alarm",
+    "D": "thermostat"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0055",
+   "type": "mcq",
+   "stem": "Two objects, one having three times the mass of the other, are dropped at the same time from a tall building. When they are above the ground, the two objects will have the same",
+   "options": {
+    "A": "Momentum",
+    "B": "Kinetic energy",
+    "C": "Potential energy",
+    "D": "Acceleration"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0056",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0057",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0058",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0059",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0060",
+   "type": "mcq",
+   "stem": "In the figure above, M and N are insulated metal spheres in contact. A negatively charged ebonite rod P is I brought near M. When M and N are Separated and the rod is taken away, which of the following statements is correct",
+   "options": {
+    "A": "both M and N have acquired negative charges",
+    "B": "both M and N have acquired positive charges",
+    "C": "M has acquired negative charge and N positive charge",
+    "D": "N has acquired negative charge and M positive charge"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0061",
+   "type": "mcq",
+   "stem": "The fig above shows two connected bodies of masses M1 and M2 in equilibrium under gravity. The tension in the upper string is",
+   "options": {
+    "A": "(m1-m2)g",
+    "B": "m1g",
+    "C": "m2g",
+    "D": "(m1+m2)g"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0062",
+   "type": "mcq",
+   "stem": "A 50kg block is dropped from a point 10cm above as shown in the fig above. if the force constant of the spring is 4.0 x 104Nm-1, find the maximum compression of the spring [g = 10ms-2]",
+   "options": {
+    "A": "1.25m",
+    "B": "0.50m",
+    "C": "0.25m",
+    "D": "0.05m"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0063",
+   "type": "mcq",
+   "stem": "The fig above represents the main sequence of energy conversion at Kainji dam. What is the efficiency of the system?",
+   "options": {
+    "A": "Q1/Q2",
+    "B": "E/Q1",
+    "C": "E/(Q1-Q2)",
+    "D": "E/(Q1-Q2)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0064",
+   "type": "mcq",
+   "stem": "When a transformer has more secondary windings than primary windings, it",
+   "options": {
+    "A": "has a smaller secondary current",
+    "B": "has a greater power output",
+    "C": "is a step-down transformer",
+    "D": "increases the total energy output"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0065",
+   "type": "mcq",
+   "stem": "Calculate the amount of heat required to convert 2kg of ice at 2oC to water at 0oC. [specific heat capacity of ice = 2090Jkg-1oC-1, specific latent heat of fusion of ice = 333kJkg-1]",
+   "options": {
+    "A": "666J",
+    "B": "8360J",
+    "C": "666 000J",
+    "D": "674 360J"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0066",
+   "type": "mcq",
+   "stem": "The mechanical advantage (MA) of an inclined plane depends on",
+   "options": {
+    "A": "its length",
+    "B": "its height",
+    "C": "the product of its length and height",
+    "D": "the ratio of its length to its height"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0067",
+   "type": "mcq",
+   "stem": "The length of a side of a metallic cube at 20oC is 5.0cm. Given that the linear expansivity of the metal is 4.0 x 10-5k-1, find the volume of the cube at 120oC .",
+   "options": {
+    "A": "126.50cm3",
+    "B": "126.25cm3",
+    "C": "126.00cm3",
+    "D": "125.00cm3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0068",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0069",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0070",
+   "type": "mcq",
+   "stem": "The figure above shows two waveforms X and Y. If the frequency of X is 30Hz what is the frequency of Y",
+   "options": {
+    "A": "12Hz",
+    "B": "19Hz",
+    "C": "60Hz",
+    "D": "75Hz"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0071",
+   "type": "mcq",
+   "stem": "In the figure above, what is the angle of reflection of the ray of light at mirror M?",
+   "options": {
+    "A": "\\( 90^{\\circ} \\)",
+    "B": "\\( 60^{\\circ} \\)",
+    "C": "\\( 45^{\\circ} \\)",
+    "D": "\\( 30^{\\circ} \\)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0072",
+   "type": "mcq",
+   "stem": "E, F and G are yellow, red and cyan transparent light filters respectively. The color of a white opaque object when viewed through the arrangement of the filters above is",
+   "options": {
+    "A": "yellow",
+    "B": "red",
+    "C": "black",
+    "D": "blue"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0073",
+   "type": "mcq",
+   "stem": "The figure above shows displacement-time graphs for three different motions. which of the following statements is correct",
+   "options": {
+    "A": "graph 2 corresponds to the highest velocity",
+    "B": "graph 1 corresponds to zero gravity",
+    "C": "graph 3 corresponds to a particle moving in the negative x direction",
+    "D": "graph 2 corresponds to a particle moving in the positive x direction"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0074",
+   "type": "mcq",
+   "stem": "The figure above shows three different ways of hanging a heavy picture from a hook. the tension in the string will be",
+   "options": {
+    "A": "Greatest in X",
+    "B": "Greatest in Y",
+    "C": "Greatest in Z",
+    "D": "Same in each one"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0075",
+   "type": "mcq",
+   "stem": "The speed of sound in air at sea-level is 340ms-1 while that of light is 300 000kms-1. How far (to the nearest meter) from the center of a thunderstorm is an observer who hears a thunder 2s after a lightening flash?",
+   "options": {
+    "A": "170ms-1",
+    "B": "340ms-1",
+    "C": "600ms-1",
+    "D": "680ms-1"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0076",
+   "type": "mcq",
+   "stem": "To obtain a magnification of 2.5, how far should an object be placed from the pole of a thin converging lens of focal length 10.20m?",
+   "options": {
+    "A": "0.13m",
+    "B": "0.25m",
+    "C": "0.28m",
+    "D": "0.50m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0077",
+   "type": "mcq",
+   "stem": "A body whose mass is 2kg and has a volume of 500cm just floats when completely immersed in a liquid. Calculate the density of the liquid",
+   "options": {
+    "A": "4.0 x 102kgm-3",
+    "B": "4.0 x 103kgm-3",
+    "C": "1.0 x 103kgm-3",
+    "D": "1.0 x 106kgm-3"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0078",
+   "type": "mcq",
+   "stem": "A particle starts from rest and moves with a constant acceleration of 0.5ms-2. The distance covered by the particle in 10s is",
+   "options": {
+    "A": "2.5m",
+    "B": "5.0m",
+    "C": "25.0m",
+    "D": "50.0m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0079",
+   "type": "mcq",
+   "stem": "Which of the following are the correct SI units of the quantities indicated? i.N(Force) II. Mn-1 (Torque) iii. watt(Power) iv. kgms-2",
+   "options": {
+    "A": "i and ii only",
+    "B": "i, ii and iii only",
+    "C": "i, ii, and iv only",
+    "D": "i and iii only"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0080",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0081",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0082",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0083",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0084",
+   "type": "mcq",
+   "stem": "The range of wavelengths of the visible spectrum is 400nm-700nm. The wavelength of gamma rays is",
+   "options": {
+    "A": "550nm",
+    "B": "shorter than 400nm",
+    "C": "shorter than 700nm but longer than 400nm",
+    "D": "longer than 700nm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0085",
+   "type": "mcq",
+   "stem": "The figure above shows a conductor PQ carrying a current I in the direction shown. At a particular position near the conductor is a compass needle K. Neglecting the earth's magnetic field, the compass needle will",
+   "options": {
+    "A": "settle in any direction",
+    "B": "settle in a fixed direction only if the conductor PQ is a magnetic material",
+    "C": "settle in a fixed direction WHETHER the conductor PQ is a magnetic material OR NOT",
+    "D": "be stationary"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0086",
+   "type": "mcq",
+   "stem": "The figure above shows a uniform circular object, center R and diameter PS. A circular section 6 and Diameter PR is cut from it. if PQRS is a straight line, where is center of gravity of the figure",
+   "options": {
+    "A": "Q",
+    "B": "R",
+    "C": "A point between P and R",
+    "D": "A point between R and S"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0087",
+   "type": "mcq",
+   "stem": "In the figure above W1 = 200g, and W2 =450g . Calculate the extension of the spring per unit load? [g = 10ms-2]",
+   "options": {
+    "A": "6.0 x 10-5mN-1",
+    "B": "2.5 x 10-4mN-1",
+    "C": "6.0 x 10 -3mN-1",
+    "D": "2.5 x 10 -2mN-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0088",
+   "type": "mcq",
+   "stem": "An object is placed at 5.6 x 10-4m in front of a converging lens of focal length 1.0 x 10-nm. The image formed is",
+   "options": {
+    "A": "Real, Erect and magnified",
+    "B": "Virtual, erect and magnified",
+    "C": "Real, inverted and magnified",
+    "D": "Virtual, erect and diminished"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0089",
+   "type": "mcq",
+   "stem": "Which of the following pairs is NOT part of the electromagnetic spectrum? i. Radio waves. ii. Beta rays. iii. Gamma rays. iv. Alpha rays",
+   "options": {
+    "A": "i and ii",
+    "B": "iii and iv",
+    "C": "i and ii",
+    "D": "ii and iv"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0090",
+   "type": "mcq",
+   "stem": "When the tension in a sonometer wire is doubled, the ratio of the new frequency to the initial frequency is",
+   "options": {
+    "A": "\\(\\frac{1}{\\sqrt2}\\)",
+    "B": "\\(\\frac{1}{2}\\)",
+    "C": "\\(\\sqrt2\\)",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0091",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0092",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0093",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0094",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0095",
+   "type": "mcq",
+   "stem": "The range of wavelengths of the visible spectrum is 400nm-700nm. The wavelength of gamma rays is",
+   "options": {
+    "A": "550nm",
+    "B": "shorter than 400nm",
+    "C": "shorter than 700nm but longer than 400nm",
+    "D": "longer than 700nm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0096",
+   "type": "mcq",
+   "stem": "What is the reading of the vernier scale above?",
+   "options": {
+    "A": "1.88cm",
+    "B": "1.80cm",
+    "C": "1.28cm",
+    "D": "1.97cm"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0097",
+   "type": "mcq",
+   "stem": "A boy looks at the image of an object in a plane mirror. He observes two images, a main bright one and the other faint. The observed images result from",
+   "options": {
+    "A": "reflection only",
+    "B": "refraction only",
+    "C": "diffraction and interference",
+    "D": "reflection and refraction"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0098",
+   "type": "mcq",
+   "stem": "Which of the following statements? i. land and sea breezes are natural convection currents. ii. convection may occur in liquids or gasses but not in solids. iii. the vacuum in a thermos flask prevents heat loss due to convection only.",
+   "options": {
+    "A": "i and ii only",
+    "B": "i and iii only",
+    "C": "i and iii only",
+    "D": "i, ii, and iii"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0099",
+   "type": "mcq",
+   "stem": "A light wave of frequency 5 x 1014Hz moves through water which has a refractive index of \\(\\frac{4}{3}\\). Calculate the wavelength in water if the velocity of light in air is 3 x 108ms-1",
+   "options": {
+    "A": "4.5 x 10-7m",
+    "B": "6.0 x 10-7m",
+    "C": "1.7 x 106m",
+    "D": "2.2 x 106m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0100",
+   "type": "mcq",
+   "stem": "A car moving with a speed of 90kmh-1 was brought uniformly to rest by the application of the brakes in 10s. How far did the car travel after the brakes were applied?",
+   "options": {
+    "A": "125m",
+    "B": "150m",
+    "C": "250m",
+    "D": "15km"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0101",
+   "type": "mcq",
+   "stem": "A particle of mass M which is at rest splits up into two. If the mass and velocity of one of the particles are m and v respectively, calculate the velocity of the second particle",
+   "options": {
+    "A": "\\(\\frac{mv}{M}\\)",
+    "B": "\\(\\frac{Mv}{M - m}\\)",
+    "C": "\\(\\frac{mv}{M + m}\\)",
+    "D": "\\(\\frac{mv}{M - m}\\)"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0102",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0103",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0104",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0105",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0106",
+   "type": "mcq",
+   "stem": "The internal resistance of each of the cells E1 and E2 Shown in the figure above is 2 Ohm. Calculate the total current in the circuit",
+   "options": {
+    "A": "0.80A",
+    "B": "0.50A",
+    "C": "0.40A",
+    "D": "0.004A"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0107",
+   "type": "mcq",
+   "stem": "which of the following statements are TRUE of isotopes? i. isotopes of an element have the same chemical properties because they have the same number of electrons. ii. isotopes of elements are normally separated using physical properties. iii. isotopes of an element have the same number of protons in their nuclei.",
+   "options": {
+    "A": "i and ii only",
+    "B": "i and iii only",
+    "C": "ii and iii only",
+    "D": "i, ii, and iii"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0108",
+   "type": "mcq",
+   "stem": "What is the difference in the amount of heat given out by 4kg of steam and 4kg of water when both are cooled from 100oC to 80oC? [the specific latent heat of steam is 2,260,000Jkg-1, specific heat capacity of water is 4200Jkg-1K-1]",
+   "options": {
+    "A": "4200J",
+    "B": "2,260,OOOJ",
+    "C": "9,040,000J",
+    "D": "9,380,000J"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0109",
+   "type": "mcq",
+   "stem": "A capacitor of 10µF is connected across a cell of 12 volts as shown above, calculate the energy stored in the capacitor",
+   "options": {
+    "A": "7.2 x 10-4J",
+    "B": "1.4 x 10-3J",
+    "C": "1.4 x 10-3J",
+    "D": "1.2 x 10-2J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0110",
+   "type": "mcq",
+   "stem": "The figure above shows the heights of two liquids X and Y when some air is sucked out of the apparatus through the pump P. The diameter of the table in X is twice That of the Tube In Y. What is the relative density of the liquid X with respect to liquid Y",
+   "options": {
+    "A": "1/3",
+    "B": "2/3",
+    "C": "3",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0111",
+   "type": "mcq",
+   "stem": "The speed of light in air is 3 x 108ms-1. What is the speed in glass with a refractive index of 1.50?",
+   "options": {
+    "A": "1.5 x 108ms-1",
+    "B": "3.0 x 108ms-1",
+    "C": "2.0 x 108ms-1",
+    "D": "6.0 x 108ms-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0112",
+   "type": "mcq",
+   "stem": "A concave mirror has a radius of curvature of 36cm. At what distance from the mirror should an object be placed to give a real image three times the size of the object?",
+   "options": {
+    "A": "12cm",
+    "B": "24cm",
+    "C": "48cm",
+    "D": "108cm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0113",
+   "type": "mcq",
+   "stem": "A bridge made of steel is 600m long. What is the daily variation in its length if the night-time and daytime temperatures are 10oC and 35oC respectively. The linear expansivity of steel is 0.000012C-1",
+   "options": {
+    "A": "0.18cm",
+    "B": "1.80cm",
+    "C": "18.00cm",
+    "D": "1800cm"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0114",
+   "type": "mcq",
+   "stem": "A body starts from rest and moves with uniform acceleration of 6ms-2. What distance does it cover in the third seconds",
+   "options": {
+    "A": "15m",
+    "B": "18m",
+    "C": "27m",
+    "D": "30m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0115",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0116",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0117",
+   "type": "mcq",
+   "stem": "The current I in the fig above is",
+   "options": {
+    "A": "4.00A",
+    "B": "1.30A",
+    "C": "0.80A",
+    "D": "0.75A"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0118",
+   "type": "mcq",
+   "stem": "In the figure above,A lever of length 200m is used to lift a load of mass 180kg. The pivot at P is 20m from the load. what minimum force F must be applied at the end of the lever [g = 10ms-2]",
+   "options": {
+    "A": "9N",
+    "B": "18N",
+    "C": "20N",
+    "D": "200N"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0119",
+   "type": "mcq",
+   "stem": "200g of water at 90oC is mixed with 100g of water at 30oC. What is the final temperature?",
+   "options": {
+    "A": "50oC",
+    "B": "60oC",
+    "C": "70oC",
+    "D": "80oC"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0120",
+   "type": "mcq",
+   "stem": "Determine the distance between the consecutive antinodes XX if the wavelength is 66cm",
+   "options": {
+    "A": "15cm",
+    "B": "30cm",
+    "C": "60cm",
+    "D": "120cm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0121",
+   "type": "mcq",
+   "stem": "Radio waves emitted from an antenna are picked up by a radar after reflection from an aircraft in 4 x 10-3S. How far is the aircraft from the antenna? [c = 3 x 108ms-1 ]",
+   "options": {
+    "A": "6.0 x 102ms-1",
+    "B": "1.2 x 103km",
+    "C": "3.0 x 103km",
+    "D": "6.0 x 10 5km"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0122",
+   "type": "mcq",
+   "stem": "A weightless vessel of dimensions 4m x 3m x 2m is filled with a liquid of density 1000kgm-3 and sealed. What is the maximum pressure this container can exert on a flat surface? [g = 10ms-2]",
+   "options": {
+    "A": "9 x 104NM-2",
+    "B": "4 x 104NM-2",
+    "C": "3 x 104NM-2",
+    "D": "2 x 104NM-2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0123",
+   "type": "mcq",
+   "stem": "A metal rod 800mm long is heated from 10oC to 95oC. If it expands by 1.36mm, the linear expansivity of the metal is",
+   "options": {
+    "A": "2.0 x 102K-1",
+    "B": "2.0 x 102K-1",
+    "C": "5.0 x 10-3K-1",
+    "D": "2.0 x 10-5K-1"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0124",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0125",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0126",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0127",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0128",
+   "type": "mcq",
+   "stem": "The range of wavelengths of the visible spectrum is 400nm-700nm. The wavelength of gamma rays is",
+   "options": {
+    "A": "550nm",
+    "B": "shorter than 400nm",
+    "C": "shorter than 700nm but longer than 400nm",
+    "D": "longer than 700nm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0129",
+   "type": "mcq",
+   "stem": "In the figure above if the atmospheric pressure is 760mm, the pressure of the chamber G is",
+   "options": {
+    "A": "660mm",
+    "B": "690mm",
+    "C": "830mm",
+    "D": "860mm"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0130",
+   "type": "mcq",
+   "stem": "In the figure above, XY is of length 1m, The value of R at balance point Z is",
+   "options": {
+    "A": "3.0Ω",
+    "B": "13.3Ω",
+    "C": "15.0Ω",
+    "D": "30.0Ω"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0131",
+   "type": "mcq",
+   "stem": "What is the reading of the vernier calipers shown above?",
+   "options": {
+    "A": "1.79cm",
+    "B": "1.73cm",
+    "C": "1.39cm",
+    "D": "1.34cm"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0132",
+   "type": "mcq",
+   "stem": "The figure above shows a uniform wood of weight 200N and length 50m. It is pivoted at one end and suspended by a cord at the other end at an angle of 30 degrees to the wood. Calculate the tension in the cord if the wood is horizontal.",
+   "options": {
+    "A": "10N",
+    "B": "20N",
+    "C": "100N",
+    "D": "200N"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0133",
+   "type": "mcq",
+   "stem": "Light of frequency 6.0 x 1014 Hz travelling in air is transmitted through glass or refractive index 1.5. Calculate the frequency of the light in the glass",
+   "options": {
+    "A": "4.0 x 1014Hz",
+    "B": "6.0 x 1014Hz",
+    "C": "7.5 x 1014Hz",
+    "D": "9.0 x 1014Hz"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0134",
+   "type": "mcq",
+   "stem": "When 100g of liquids L1 at 78oC was mixed with Xg of liquid L2 at 50oC, the final temperature was 60oC. Given that the specific heat capacity of L2is half that of L1, find x",
+   "options": {
+    "A": "50g",
+    "B": "100g",
+    "C": "150g",
+    "D": "200g"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0135",
+   "type": "mcq",
+   "stem": "If it takes 5.0 hrs to drain a container of 540.0cm3 of water, what is the flow rate of water from the container in kg-1? [Density of water = 1000kgm-3]",
+   "options": {
+    "A": "32.5kg-1 s",
+    "B": "31.5kg-1 s",
+    "C": "30.8kg-1 s",
+    "D": "30.0kg-1 s"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0136",
+   "type": "mcq",
+   "stem": "A boat travels due east at a speed 40ms-1s across a river flow due south at 30ms-1s. What is the resultant speed of the boat?",
+   "options": {
+    "A": "1.3ms-1",
+    "B": "10.0ms-1",
+    "C": "50.0ms-1",
+    "D": "70.0ms-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0137",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0138",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0139",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0140",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0141",
+   "type": "mcq",
+   "stem": "The range of wavelengths of the visible spectrum is 400nm-700nm. The wavelength of gamma rays is",
+   "options": {
+    "A": "550nm",
+    "B": "shorter than 400nm",
+    "C": "shorter than 700nm but longer than 400nm",
+    "D": "longer than 700nm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0142",
+   "type": "mcq",
+   "stem": "The figure above shows two similar bulbs X and Y connected to suitable power supply with F as an appropriate fuse rating, if the filament of X breaks then the",
+   "options": {
+    "A": "Brightness Of Y will reduce",
+    "B": "Brightness Of Y will remain constant",
+    "C": "Brightness Of Y will increase",
+    "D": "fuse F will blow"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0143",
+   "type": "mcq",
+   "stem": "In the above fig, PQ and R are vectors, which of the following options, gives a correct relationship between the vectors",
+   "options": {
+    "A": "P = Q + R",
+    "B": "P = Q - R",
+    "C": "P = R - Q",
+    "D": "P + Q + R = O"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0144",
+   "type": "mcq",
+   "stem": "A rectangular metal block of volume 10-6m3 at 273k is heated to 573k. If its coefficient of linear expansion is 1.2 x 10-5k-1, the percentage change of it volume is",
+   "options": {
+    "A": "1.5%",
+    "B": "1.1%",
+    "C": "0.4%",
+    "D": "0.1%"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0145",
+   "type": "mcq",
+   "stem": "The length of a displaced pendulum ball which passes its lowest point twice every seconds is [g = 10m-2]",
+   "options": {
+    "A": "0.25 m",
+    "B": "0.45 m",
+    "C": "0.58m",
+    "D": "1.00m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0146",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0147",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0148",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0149",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0150",
+   "type": "mcq",
+   "stem": "The figure above shows a block of mass m sliding down a rough inclined plane QP at angle \\( \\theta \\) . The forces acting on the block along QP are",
+   "options": {
+    "A": "mg sinθ and the normal reaction",
+    "B": "mg sinθ and the force of friction",
+    "C": "mg sinθ and the normal reaction",
+    "D": "mg cosθ and the normal reaction"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0151",
+   "type": "mcq",
+   "stem": "If 8 x 10-2J of work is required to move 100\\(\\mu\\)C of charge from a point X to a point Y in an electrical circuit, the potential difference between X and Y is",
+   "options": {
+    "A": "4.0 x 102 v",
+    "B": "4.0 x 104 v",
+    "C": "8.0 x 102 v",
+    "D": "8.0 x 102 v"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0152",
+   "type": "mcq",
+   "stem": "Ripples on water and light waves are similar because both",
+   "options": {
+    "A": "have the same frequency",
+    "B": "can be refracted and diffracted",
+    "C": "are longitudinal waves",
+    "D": "have the same velocity"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0153",
+   "type": "mcq",
+   "stem": "The length of mercury thread when it is at 0oC, 100oC and at an unknown temperature \\(\\theta\\) is 25mm, 225mm and 175mm respectively. The value of \\(\\theta\\) is",
+   "options": {
+    "A": "85.0oC",
+    "B": "80.0oC",
+    "C": "75.0oC",
+    "D": "70.0oC"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0154",
+   "type": "mcq",
+   "stem": "An object of mass 100g projected vertically upwards from the ground level has a velocity of 20ms-1 at a height of 10m. calculate its initial kinetic energy at the ground level.[g = 10ms-2, neglect air resistance]",
+   "options": {
+    "A": "10 J",
+    "B": "20 J",
+    "C": "30 J",
+    "D": "50 J"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0155",
+   "type": "mcq",
+   "stem": "An electric water pump rate 1.5 kW, lifts 200kg of water through a vertical height of 6 meters in seconds. What is the efficiency of the pump? [g = 10ms-2, neglecting air resistance]",
+   "options": {
+    "A": "90.0%",
+    "B": "85.0%",
+    "C": "80.0%",
+    "D": "65.0%"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0156",
+   "type": "mcq",
+   "stem": "The distance xm travelled by a particle in time t seconds is described by the equation x = 10 + 12t2, Find the average speed of the particle between the time interval t = 2s and t = 5s",
+   "options": {
+    "A": "60 ms-1",
+    "B": "72 ms-1",
+    "C": "84 ms-1",
+    "D": "108 ms-1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0157",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0158",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0159",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0160",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0161",
+   "type": "mcq",
+   "stem": "A body on the ground is acted on by a force of 10N at a point P as shown in the fig above. What force is needed to stop the body from moving eastwards",
+   "options": {
+    "A": "5N in the direction of east",
+    "B": "5N in the diretion of west",
+    "C": "5V3N in the direction of west",
+    "D": "10N in the southwest direction"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0162",
+   "type": "mcq",
+   "stem": "A parallel plate capacitor has a common plate area of 5 x 10-8m2 and plate separation of 2 x 103m, Assuming free space, What is the capacitance? [\\(\\varepsilon\\)o = 9.0 X 10-12C2N-1m-2]",
+   "options": {
+    "A": "2.25 x 10-17F",
+    "B": "4.50 x 10-17F",
+    "C": "2.25 x 10-16F",
+    "D": "4.50 x 10-16F"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0163",
+   "type": "mcq",
+   "stem": "The force of repulsion between two point positive charges 5\\(\\mu\\)C and 8\\(\\mu\\)C separated at a distance of 0.02 map art is. [\\(\\frac{1}{4{\\pi}{\\varepsilon}_o}\\) = 9 x 109Nm2C-2]",
+   "options": {
+    "A": "1.8 x 10-10N",
+    "B": "9.0 x 10-8N",
+    "C": "9.0 x 102N",
+    "D": "4.5 x 103N"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0164",
+   "type": "mcq",
+   "stem": "The most suitable type of mirror used for the construction of the search light is the",
+   "options": {
+    "A": "concave mirror",
+    "B": "convex mirror",
+    "C": "spherical mirror",
+    "D": "parabolic mirror"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0165",
+   "type": "mcq",
+   "stem": "A man wears convex lens glasses of focal length 40cm in order to correct his eye defect. instead of the optimum 25cm, his least distance of distinct vision is",
+   "options": {
+    "A": "14cm",
+    "B": "28cm",
+    "C": "75cm",
+    "D": "150cm"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0166",
+   "type": "mcq",
+   "stem": "A 500W heater is used to heat 0.6kg of water from 25oC to 100oC in t2 seconds. If another 1000W heater is used to heat 0.2kg of water from 10oC to 100oC in t, seconds, find \\(\\frac {t_1}{t_2}\\)",
+   "options": {
+    "A": "50",
+    "B": "5",
+    "C": "5/4",
+    "D": "1/5"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0167",
+   "type": "mcq",
+   "stem": "A ball is moving at 18ms-1 in a direction inclined at 60o to the horizontal. The horizontal component to its velocity is",
+   "options": {
+    "A": "9√3ms-1 ·",
+    "B": "6√3ms-1 ·",
+    "C": "8√3ms-1 ·",
+    "D": "9ms-1 ·"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0168",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0169",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0170",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0171",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0172",
+   "type": "mcq",
+   "stem": "The figure above represents a frictionless pulley system in which a weight W is in equilibrium with a weight of 40N. Find the value of W.",
+   "options": {
+    "A": "13.3N",
+    "B": "20.0N",
+    "C": "40.0N",
+    "D": "80.0N"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0173",
+   "type": "mcq",
+   "stem": "What is the speed of a particle of mass 10-27kg whose wavelength is 10-8m.[h = 6.63 x 10-34Js]",
+   "options": {
+    "A": "6.63ms-1",
+    "B": "66.30ms-1",
+    "C": "663.00ms-1",
+    "D": "6630.00ms-1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0174",
+   "type": "mcq",
+   "stem": "The equation of a wave travelling along the positive x-direction is given by; Y = 0.25 x 10-3 sin (500t - 0.025x). Determine the angular frequency of the wave motion.",
+   "options": {
+    "A": "0.25 x 10-3rad s-1",
+    "B": "0.25 x 10-1rad s-1",
+    "C": "5.00 x 102rad s-1",
+    "D": "2.50 x 103rad s-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0175",
+   "type": "mcq",
+   "stem": "If a sound wave goes from a cold air region to a hot air region, its wavelength will",
+   "options": {
+    "A": "increase",
+    "B": "decrease",
+    "C": "decrease then increase",
+    "D": "remain constant"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0176",
+   "type": "mcq",
+   "stem": "A man stands 4m in front of a plane mirror. If the mirror is moved 1m towards the man, the distance between him and his new image is",
+   "options": {
+    "A": "3m",
+    "B": "5m",
+    "C": "6m",
+    "D": "10m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0177",
+   "type": "mcq",
+   "stem": "Calculate the mass of ice that would melt when 2kg of copper is quickly transferred from boiling water to a block of ice without heat loss; Specific heat capacity of copper = 400JKg-1K-1 Latent heat of fusion of ice = 3.3 x 105JKg-1",
+   "options": {
+    "A": "8/33kg",
+    "B": "33/80kg",
+    "C": "80/33kg",
+    "D": "33/8kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0178",
+   "type": "mcq",
+   "stem": "If the stress on a wire is 107NM-2 and the wire is stretched from its original length of 10.00 cm to 10.05 cm. The young's modulus of the wire is",
+   "options": {
+    "A": "5 . 0 x 104 Nm-2",
+    "B": "5 . 0 x 105 Nm-2",
+    "C": "2 . 0 x 108 Nm-2",
+    "D": "2 . 0 x 109 Nm-2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0179",
+   "type": "mcq",
+   "stem": "The inner diameter of a test tube can be measured accurately using a",
+   "options": {
+    "A": "micrometer screw guage",
+    "B": "pair of dividers",
+    "C": "metre rule",
+    "D": "pair of vernier calipers"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0180",
+   "type": "mcq",
+   "stem": "Particles of mass 10-2kg is fixed to the tip of a fan blade which rotates with angular velocity of 100rad-1. If the radius of the blade is 0.2m, the centripetal force is",
+   "options": {
+    "A": "2 N",
+    "B": "20 N",
+    "C": "200 N",
+    "D": "400 N"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0181",
+   "type": "mcq",
+   "stem": "a lead bullet of mass 0.05kg is fired with a velocity of 200ms-1 into a lead block of mass 0.95kg. Given that the lead block can move freely, the final kinetic energy after impact is",
+   "options": {
+    "A": "50 J",
+    "B": "100 J",
+    "C": "150 J",
+    "D": "200 J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0182",
+   "type": "mcq",
+   "stem": "The velocity y of a particle in a time t is given by the equation Y = 10 + 2t2 Find the instantaneous acceleration after 5 seconds",
+   "options": {
+    "A": "60 ms-2",
+    "B": "20 ms-2",
+    "C": "15 ms-2",
+    "D": "10 ms-2"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0183",
+   "type": "mcq",
+   "stem": "A sonometer wire is vibrating at frequency fo. If the tension in the wire is doubted while the length and the mass per unit length are kept constant, the new frequency of vibration is",
+   "options": {
+    "A": "fo/2",
+    "B": "2fo",
+    "C": "fo/√2",
+    "D": "fo√2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0184",
+   "type": "mcq",
+   "stem": "If the frequency of an emitted x-ray is 1.6 x 1016Hz, the accelerating potential is? [e = 1.6 x 10-19C, h = 6.63 x 10-34Js]",
+   "options": {
+    "A": "6630.0V",
+    "B": "663.0V",
+    "C": "66.3V",
+    "D": "6.6V"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0185",
+   "type": "mcq",
+   "stem": "If the fraction of the atoms of a radioactive material left after 120years is 1/64, what is the half-life of the material?",
+   "options": {
+    "A": "24 years",
+    "B": "20 years",
+    "C": "10 years",
+    "D": "2 years"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0186",
+   "type": "mcq",
+   "stem": "In a thermonuclear reaction, the total initial mass is 5.02 x 10-27kg and the total final mass is 0.01 x 10-27kg. The energy released in the process is [c = 3.0 x 108ms-1]",
+   "options": {
+    "A": "9.0 x 10-13J",
+    "B": "9.0 x 10-12J",
+    "C": "9.0 x 10-11J",
+    "D": "9.0 x 10-10J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0187",
+   "type": "mcq",
+   "stem": "Dry Day 1 - 30°C | Day 2 - 29°C | Day 3 - 25°CWet Day 1 - 22°C | Day 2 - 22°C | Day 3 - 21°CThe reading above are for three consecutive days from a wet and dry bulb hygrometer. It can be concluded that the relative humidity for the three days",
+   "options": {
+    "A": "decreased steadily",
+    "B": "remained unchanged",
+    "C": "increased steadily",
+    "D": "was least on Day 1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0188",
+   "type": "mcq",
+   "stem": "Total internal reflection occurs when light moves from",
+   "options": {
+    "A": "a dense medium to a less dense medium",
+    "B": "air to water",
+    "C": "water to glass",
+    "D": "a less dense to a dense medium"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0189",
+   "type": "mcq",
+   "stem": "I. Coherence II. Same frequency III. Same wavelength IV. Same IntensityWhich of the conditions above are necessary to produce interference fringes?",
+   "options": {
+    "A": "I and III",
+    "B": "I, II and IV",
+    "C": "I, II and III",
+    "D": "II and III"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0190",
+   "type": "mcq",
+   "stem": "At a fixed point below a liquid surface, the pressure downwards is P1 and pressure upwards is P2. It can be deduced that",
+   "options": {
+    "A": "P1 > P2",
+    "B": "P1 ≥ P2",
+    "C": "P1< P2",
+    "D": "P1 = P2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0191",
+   "type": "mcq",
+   "stem": "A stream is flowing at 0.75ms-1 and a boat heading perpendicular for the stream landed at the opposite bank at an angle of 30°. Calculate the velocity of the boat.",
+   "options": {
+    "A": "1.50ms-1",
+    "B": "1.00ms-1",
+    "C": "0.86ms-1",
+    "D": "0.65ms-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0192",
+   "type": "mcq",
+   "stem": "A rope is being used to pull a mass of 10kg vertically upward. Determine the tension in the rope if, starting from rest, the mass acquires a velocity of 4ms-1 in 8s [g = 10ms-2]",
+   "options": {
+    "A": "5N",
+    "B": "50N",
+    "C": "95N",
+    "D": "105N"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0193",
+   "type": "mcq",
+   "stem": "A bread toaster uses a current of 4A when plugged in a 24oV line. it takes 1 minute to toast slices of bread. what is the energy consumed by the toaster",
+   "options": {
+    "A": "5.76 x 104J",
+    "B": "1.60 x 104J",
+    "C": "3.60 x 103J",
+    "D": "1.60 x 102J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0194",
+   "type": "mcq",
+   "stem": "A capacitor of 20 x 10-12F and an inductor are joined in series. The value of the inductance that will give the circuit a resonance frequency of 200kHz is",
+   "options": {
+    "A": "I/16 H",
+    "B": "I/8 H",
+    "C": "I/64 H",
+    "D": "I/32 H"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0195",
+   "type": "mcq",
+   "stem": "the ratio of electrostatic force FE to gravitational force FG between two protons each of charge e and mass m, at a distance d is",
+   "options": {
+    "A": "e/4πԐoGm",
+    "B": "e2/Gm2",
+    "C": "Gm2/4πԐoe2",
+    "D": "e2/4πԐoeGm2"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0196",
+   "type": "mcq",
+   "stem": "A student is at a height 4m above the ground during a thunderstorm. Give that the potential difference between the thundercloud and the ground is 107v, the electric field created by the storm is",
+   "options": {
+    "A": "2.0 * 106 NC -1",
+    "B": "2. 5 * 106 NC -1",
+    "C": "1.0 * 107 NC -1",
+    "D": "4.0 * 107 NC -1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0197",
+   "type": "mcq",
+   "stem": "A gas with initial volume of 2 X 10-6m3 is allowed to expand to six times its initial value at constant pressure of 2 x 105Nm-2. The work done is",
+   "options": {
+    "A": "2.0J",
+    "B": "4. 0 J",
+    "C": "12.0 J",
+    "D": "2.4 J"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0198",
+   "type": "mcq",
+   "stem": "The pressure of a given mass of a gas changes from 200Nm-2 to 120Nm-2 while the temperature drops from 127°C to -73°C. The ratio of the final volume to the initial volume is",
+   "options": {
+    "A": "2 : 5",
+    "B": "5 : 4",
+    "C": "5 : 2",
+    "D": "4 : 5"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0199",
+   "type": "mcq",
+   "stem": "I. The earth is not spherical but elliptical in shape II. Variation in latitude and longitude III. Rotation of the earth on its axis IV. Variation in the density of the earthOn which combination of the above does the weight of an object vary on the earth's surface?",
+   "options": {
+    "A": "I, II, III and IV",
+    "B": "II, III and IV only",
+    "C": "I, II and III only",
+    "D": "I and II only"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0200",
+   "type": "mcq",
+   "stem": "At what frequency would a capacitor of 2.5μF Used in radio circuit have a resistance of 250Ω",
+   "options": {
+    "A": "π/800 Hz",
+    "B": "800/π Hz",
+    "C": "200π Hz",
+    "D": "2000π Hz"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0201",
+   "type": "mcq",
+   "stem": "23 Na + X → 20 F + 4 He 11 9 2 What particle is X in the reaction above?",
+   "options": {
+    "A": "Alpha",
+    "B": "Beta",
+    "C": "Neurons",
+    "D": "Gamma"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0202",
+   "type": "mcq",
+   "stem": "The hydrostatic blood pressure difference between the head and the feet of a boy standing straight is 1.65 x 104 Nm-2. Find the height of the boy.",
+   "options": {
+    "A": "0.5 m",
+    "B": "0.6 m",
+    "C": "1.5 m",
+    "D": "2.0 m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0203",
+   "type": "mcq",
+   "stem": "Given that young's modulus for aluminium is 7.0 x 1010Nm-2 and density is 2.7 x 103kgm-3 find the speed of the sound produced if a solid bar is struck at one end with a hammer",
+   "options": {
+    "A": "5.1 x 103ms-1",
+    "B": "4.2 x 103ms-1",
+    "C": "3.6 x 103ms-1",
+    "D": "2.8 x 103ms-1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0204",
+   "type": "mcq",
+   "stem": "If 1.2 x 106J of heat energy is given off in 1 sec from a vessel maintained at a temperature gradient of 30Km-1, the surface area of the vessel is",
+   "options": {
+    "A": "1.0 x 102m2",
+    "B": "9. 0 x 102m2",
+    "C": "1.0 x 103m2",
+    "D": "9.0 x 104m2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0205",
+   "type": "mcq",
+   "stem": "T(oC) 0 5 10 15 20 40 60 S.V.P (mmHg) 4.58 6.51 8.94 12.67 17.50 55.10 149.00 The table above shows the saturation vapour pressure against temperature in a certain town. If the vapour pressure in this town at 20oC is 10mmHg, what is the relative humidity?",
+   "options": {
+    "A": "170.0%",
+    "B": "57.0%",
+    "C": "17.5%",
+    "D": "10.0%"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0206",
+   "type": "mcq",
+   "stem": "The stylus of a phonograph record exerts a force of 7.7 x 10-2N on a groove of radius 10-5m. Compute the pressure exerted by the stylus on the groove",
+   "options": {
+    "A": "2.45 x 108 Nm-2",
+    "B": "3.45 x 108 Nm-2",
+    "C": "4.90 x 108 Nm-2",
+    "D": "2.42 x 108 Nm-2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0207",
+   "type": "mcq",
+   "stem": "The change in volume when 450kg of ice is completely melted is [density of ice = 900 kgm-3, density of water = 100 kgm-3]",
+   "options": {
+    "A": "0.50m3",
+    "B": "0.45m3",
+    "C": "0.05m3",
+    "D": "4.50m3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0208",
+   "type": "mcq",
+   "stem": "If the angle between two vector P and Q is Oo, the vectors are said to",
+   "options": {
+    "A": "intersect at the angle 45o",
+    "B": "intersect at the angle 60o",
+    "C": "be parallel",
+    "D": "be perpendicular"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0209",
+   "type": "mcq",
+   "stem": "Electrical appliances at home are normally earthed so that",
+   "options": {
+    "A": "the appliances are maintained at a lower p.d than the earth",
+    "B": "both the a.c and d.c sources can be used",
+    "C": "a person touching the appliances is safe from electric shock",
+    "D": "the appliances are maintained at a higher p.d than the earth"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0210",
+   "type": "mcq",
+   "stem": "The binding energy of helium 4 He is 2 [atomic mass of proton = 1.00783U, Atomic mass of neutron = 1.00867U]",
+   "options": {
+    "A": "4.033U",
+    "B": "2.017U",
+    "C": "0.033U",
+    "D": "0.330U"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0211",
+   "type": "mcq",
+   "stem": "A radioisotope has a decay constant of 10-7s-1. The average life of the radioisotope is",
+   "options": {
+    "A": "1.00 x 107s",
+    "B": "6.93 x 108s",
+    "C": "1.00 x 10-7s",
+    "D": "6.93 x 107s"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0212",
+   "type": "mcq",
+   "stem": "Am elastic material has a length of 36cm when a load of 40N is hung on it and a length of 45cm when a load of 60N is hung on it. The original length of the string is",
+   "options": {
+    "A": "12cm",
+    "B": "20cm",
+    "C": "18cm",
+    "D": "15cm"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0213",
+   "type": "mcq",
+   "stem": "\\(^{235} _{92}U + ^1 _0n → ^{144} _{56}Ba + ^{90} _{36}Kr +2X \\) In the reaction above, X is",
+   "options": {
+    "A": "electron",
+    "B": "proton",
+    "C": "neutrino",
+    "D": "neutron"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0214",
+   "type": "mcq",
+   "stem": "The resistance of a pieces of wire of lenght 20m are crossed-sectional area 8 x 10 6m2is? [Resistivity of the wire = 4 x 10-7 Ω m]",
+   "options": {
+    "A": "5.0 Ω",
+    "B": "0.5 Ω",
+    "C": "10.0 Ω",
+    "D": "1.0 Ω"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0215",
+   "type": "mcq",
+   "stem": "I. reproducibility II. SensibilityIII. High terminal capacityiv. High accuracy The quantities of a good thermometer include?",
+   "options": {
+    "A": "I, II and IV only",
+    "B": "I, III and IV only",
+    "C": "I, II and III only",
+    "D": "II, III and IV only"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0216",
+   "type": "mcq",
+   "stem": "I. MeltingII. Boiling III. RefractionIV. ConductionWhich combination of the above is evident of the molecular nature of matter?",
+   "options": {
+    "A": "II , III and IV only",
+    "B": "I ,II and IV only",
+    "C": "I , III and IV only",
+    "D": "I , II and III only"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0217",
+   "type": "mcq",
+   "stem": "A body of mass 36kg falls through a viscous liquid which offers a drag force of 260N on the body. The upthrust on the body at terminal velocity is? [g = 10ms2]",
+   "options": {
+    "A": "100N",
+    "B": "620N",
+    "C": "50N",
+    "D": "310N"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0218",
+   "type": "mcq",
+   "stem": "An object is projected for the hieght of 80 m above the ground with a velocity of 40ms-1 at the angle of 30° to the horizontal. The time of flight",
+   "options": {
+    "A": "8 s",
+    "B": "4 s",
+    "C": "16 s",
+    "D": "10 s"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0219",
+   "type": "mcq",
+   "stem": "a proton moving with a speed of 1.0 x 106ms-1 through a magnetic field of 1.0T experiences a magnetic force of magnitude 8.0 x 10-14 N. The angle between the proton''s velocity and the field is",
+   "options": {
+    "A": "60°",
+    "B": "90°",
+    "C": "30°",
+    "D": "45°"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0220",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0221",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0222",
+   "type": "mcq",
+   "stem": "An engine of a car of power 80 kW moves on a rough road with a velocity of 32 ms-1. The forces required to bring it to rest is",
+   "options": {
+    "A": "2.56 x 106N",
+    "B": "2.50 x 106N",
+    "C": "2.80 x 103N",
+    "D": "2.50 x 103N"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0223",
+   "type": "mcq",
+   "stem": "A progressive wave equation is represented by y = a sin (150 πt - πt/4). if the phase difference of a progressive wave is 45o, the value of x in the equation is",
+   "options": {
+    "A": "3 cm",
+    "B": "4 cm",
+    "C": "1 cm",
+    "D": "2 cm"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0224",
+   "type": "mcq",
+   "stem": "A submarine is observed to rise from a real depth off 80 m to 60 m in water. calculate the change in apparent depth. [Refraction index of water (4)/3]",
+   "options": {
+    "A": "45 m",
+    "B": "80 m",
+    "C": "15 m",
+    "D": "60 m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0225",
+   "type": "mcq",
+   "stem": "If the radius of the earth is 6.4 x 106m, the escape velocity of a satellite from the earth is? [g = 10 ms-2]",
+   "options": {
+    "A": "1.13 x 104 ms-1",
+    "B": "9.00 x 103 ms-1",
+    "C": "8.00 x 103 ms-1",
+    "D": "1.27 x 104 ms-1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0226",
+   "type": "mcq",
+   "stem": "A cell of internal resistance r is connected to an external resistor R. The conductor for maximum power transfer is?",
+   "options": {
+    "A": "R < r",
+    "B": "R = r",
+    "C": "R = 2r",
+    "D": "R > r"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0227",
+   "type": "mcq",
+   "stem": "If the capacitance of an capacitor is C = (εA)/d, which of the following parameters is varied when a variable capacitors is used for tuning radio sets?",
+   "options": {
+    "A": "constant (ε) and area",
+    "B": "area and distance.",
+    "C": "constant (ε) only",
+    "D": "distance only"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0228",
+   "type": "mcq",
+   "stem": "A 40KW electric cable was uses to transmit electricity through a resistor of resistance 2.00Ω at 800V. The power loss as internal energy is",
+   "options": {
+    "A": "4.0 x 102W",
+    "B": "5.0 x 102W",
+    "C": "4.0 x 103W",
+    "D": "5.0 x 103W"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0229",
+   "type": "mcq",
+   "stem": "8cm2 surface of the copper cathode of a voltameter is to be coated with 10-6m thick copper of density 9 x 103kgm-3. How long will the process run with 10A constant current? [3.3 x 10-7kgC-1]",
+   "options": {
+    "A": "5.4 min",
+    "B": "10.8 min",
+    "C": "15.0 min",
+    "D": "20.0 min"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0230",
+   "type": "mcq",
+   "stem": "During the nuclear reaction described by 235 W → 235 X→ 231 Y 92 93 91 The particles emitted are respectively",
+   "options": {
+    "A": "α and α",
+    "B": "α and β",
+    "C": "β and β",
+    "D": "β and α"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0231",
+   "type": "mcq",
+   "stem": "A blacksmith heated a metal whose cubic expansivity is 6.3 x 10-6K-1. The areal expansivity is",
+   "options": {
+    "A": "2.0 x 10-6K-1",
+    "B": "2.1 x 10-6K-1",
+    "C": "4.2 x 10-6K-1",
+    "D": "6.3 x 10-6K-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0232",
+   "type": "mcq",
+   "stem": "The ratio of the coefficient of linear expansion of two metals ∝1/∝2 is 3:4. If, when heated through the same temperature change, the ratio of the increase in length of the two metals, e1/e2 is 1:2, the ratio of the original lengths l1/l2 is",
+   "options": {
+    "A": "8/3",
+    "B": "3/2",
+    "C": "2/3",
+    "D": "3/8"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0233",
+   "type": "mcq",
+   "stem": "A 120 V, 60 W lamp is to be operated on 220 V a.c. the supply mains. calculate the values of non-inductive resistance that would be required to ensure that the lamp is run on current value.",
+   "options": {
+    "A": "100 Ω",
+    "B": "200 Ω",
+    "C": "300 Ω",
+    "D": "500 Ω"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0234",
+   "type": "mcq",
+   "stem": "A radioactive substance has a half-life of 20 days what fraction the original radiation nuclei will remain after 80 days?",
+   "options": {
+    "A": "(1)/32",
+    "B": "(1)/16",
+    "C": "(1)/ 8",
+    "D": "(1)/4"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0235",
+   "type": "mcq",
+   "stem": "The energy E of a photon and it's wavelength are related by Eλ = X. the numerical value of X is? [h = 6.63 x 10-34js, c = 3 x 108 ms-1]",
+   "options": {
+    "A": "6.6 X 10-28",
+    "B": "1.99 X 10-27",
+    "C": "6.60 x 10-26",
+    "D": "1.99 x 10-25"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0236",
+   "type": "mcq",
+   "stem": "If two charged plates are maintained at a potential difference of 3 kv, the work done in taking a charge of 600 µC across the field is?",
+   "options": {
+    "A": "0.8 J",
+    "B": "1.8 J",
+    "C": "9.0 J",
+    "D": "18.0 J"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0237",
+   "type": "mcq",
+   "stem": "A 40 kW electric cable is used to transmit electricity through a resistor of resistance 2.0Ω at 800 V. The power loss as internal energy is?",
+   "options": {
+    "A": "4.0 x 102W",
+    "B": "5.0 x 102W",
+    "C": "4.0 x 103W",
+    "D": "5.0 x 103W"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0238",
+   "type": "mcq",
+   "stem": "The instrument that measures both a.c and d.c is?",
+   "options": {
+    "A": "a current balance",
+    "B": "a moving current ammeter",
+    "C": "a moving iron ammeter",
+    "D": "an inverter"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0239",
+   "type": "mcq",
+   "stem": "A glass plate 0.9cm thick has a reflective index of 1.50. how long does it take for a pulse of light to pass through the plate? [c = 3.0 x 8 ms-1]",
+   "options": {
+    "A": "4.5 x 10-11s",
+    "B": "4.5 x 10-10s",
+    "C": "4 .5 x 10-12 s",
+    "D": "3.0 x 10-10s"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0240",
+   "type": "mcq",
+   "stem": "Two spheres of masses 5.0 kg and 10.0 kg are 0.3 m apart. Calculate the force of attraction between them? [G = 6.67 X 10-11 Nm2 Kg2]",
+   "options": {
+    "A": "3.50 x 10-10N",
+    "B": "3.71 x 10-8 N",
+    "C": "3.57 x 10-2N",
+    "D": "4.00 x 102N"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0241",
+   "type": "mcq",
+   "stem": "If electron are accelerated from rest through a potential difference of 10kv, what is the wavelength of the associated electron [m = 9.1 x 10-31kg, e = 1.6 x 10-19C, h = 6.6 x 10-34js]",
+   "options": {
+    "A": "1.22 x 10-11m",
+    "B": "3.87 x 10-10m",
+    "C": "2.27 x 1011m",
+    "D": "2.27 x 1014m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0242",
+   "type": "mcq",
+   "stem": "14 N + 4 He → 17 O + X 7 2 8 In the equation above, the particles X is",
+   "options": {
+    "A": "a proton",
+    "B": "a neutron",
+    "C": "an α - particle",
+    "D": "a β - particle"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0243",
+   "type": "mcq",
+   "stem": "The above figure shows the motion of a progressive wave along a string. The particle motion of the medium is in direction",
+   "options": {
+    "A": "parallel to OX",
+    "B": "parallel to OY",
+    "C": "60o to OX",
+    "D": "60v to OY"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0244",
+   "type": "mcq",
+   "stem": "If a convex lens of focal length 12cm is used to produce a real image four times the size of the object, how far from the lens must the object be placed?",
+   "options": {
+    "A": "10 cm",
+    "B": "15 cm",
+    "C": "20 cm",
+    "D": "25 cm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0245",
+   "type": "mcq",
+   "stem": "The dimension of electromotive force are `",
+   "options": {
+    "A": "ML2T-3I-1",
+    "B": "ML2T-3I-2",
+    "C": "M2LT-2I-1",
+    "D": "M2L2T-1I-1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0246",
+   "type": "mcq",
+   "stem": "An object 4 cm high is placed 15 cm from a concave mirror of focal length 5 cm. The size of the image is",
+   "options": {
+    "A": "2 cm",
+    "B": "3 cm",
+    "C": "4 cm",
+    "D": "5 cm"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0247",
+   "type": "mcq",
+   "stem": "I. for current amplification.II. for voltage stabilization. III. for power amplification.IV. as a switch.which of the above are the uses of transistor?",
+   "options": {
+    "A": "I,II,III and IV",
+    "B": "I,III, and IV only",
+    "C": "I, II and III only",
+    "D": "I,II and IV only"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0248",
+   "type": "mcq",
+   "stem": "Caesium has a work function of 3 x 10-19J. the maximum energy of liberated electrons when it is illuminated by light of frequency 6.7 x 1014HZ is? [h = 6.6 x 1010-34Js]",
+   "options": {
+    "A": "1.42 x 10-19J",
+    "B": "3.00 x 10-19J",
+    "C": "4.42 x 1010-19J",
+    "D": "7.42 x 10-19J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0249",
+   "type": "mcq",
+   "stem": "When a pure semiconductor is heated, its resistance",
+   "options": {
+    "A": "increases",
+    "B": "decreases",
+    "C": "remains the same",
+    "D": "increases and then decreases"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0250",
+   "type": "mcq",
+   "stem": "An observer with normal eyes views an object with magnifying glass of focal length 5 cm. the angular magnification is? [least distance of distinct vision D = 25 cm]",
+   "options": {
+    "A": "-6",
+    "B": "-5",
+    "C": "5",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0251",
+   "type": "mcq",
+   "stem": "An electric generator has e.m.f. of 240 V and an internal resistance of 1Ω if the current supplied by the generatoris 20A when the terminal voltage is 220 V, find the ratio of the power supplied to the power dissipated?",
+   "options": {
+    "A": "11:1",
+    "B": "1:11",
+    "C": "12:11",
+    "D": "11:12"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0252",
+   "type": "mcq",
+   "stem": "I. Total internal reflection of light. II. Conservation of light energy. III. Relative motion of the earth, sun and moon. IV. Rectilinear propation of light. Which of the above is a phenomenon of total solar eclipse?",
+   "options": {
+    "A": "I and IV only",
+    "B": "II and IV only",
+    "C": "I and III only",
+    "D": "III and IV only"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0253",
+   "type": "mcq",
+   "stem": "In a good thermos flask, the main cause of heat loss is?",
+   "options": {
+    "A": "conduction through the cork",
+    "B": "the plastic base of the thermos flask",
+    "C": "the silvered walls and shiny metals",
+    "D": "the outer cover or jacker"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0254",
+   "type": "mcq",
+   "stem": "When cold water is poured on a can containing hot water, the can collapses because the",
+   "options": {
+    "A": "steam condeses and occupies the partial vacuum in the can",
+    "B": "external air pressure counter balances the pressure within the can",
+    "C": "steam expands to occupy the vacuum remaining in the can",
+    "D": "external pressure becomes greater than the pressure within the can."
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0255",
+   "type": "mcq",
+   "stem": "An empty density bottle weighs 2 N. if its weighs 5 N when filled with water and 4 N when filled with olive oil, the relative density of olive oil is",
+   "options": {
+    "A": "(1)/3",
+    "B": "(2)/3",
+    "C": "(1)/5",
+    "D": "(2)/5"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0256",
+   "type": "mcq",
+   "stem": "A motorcycle of mass 100kg moves round in a circle of radius 10m with a velocity of 5 ms-1. find the coefficient of friction between the road and the tyres.",
+   "options": {
+    "A": "25.00",
+    "B": "2.50",
+    "C": "0.50",
+    "D": "0.25"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0257",
+   "type": "mcq",
+   "stem": "A spring of force constant 500 NM-1 is compressed such that its length shortens by 5cm. The energy stored in the spring is?",
+   "options": {
+    "A": "0.625 J",
+    "B": "6.250 J",
+    "C": "62.500 J",
+    "D": "625.000 J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0258",
+   "type": "mcq",
+   "stem": "If a wheel 1.2 m in diameter rotates at one revolation per second, calculate the velocity of the wheel.",
+   "options": {
+    "A": "3.6 ms-1",
+    "B": "3.77 ms-1",
+    "C": "4.0 ms-1",
+    "D": "7.5 ms-1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0259",
+   "type": "mcq",
+   "stem": "I. All the three forces must be concurrent. II. The upward force is equal to the downward force. III. The algebraic sum of the moment about any point must be zero.which of the above conditions must hold for a body acted upon by a system of three coplanar forces equilibrium?",
+   "options": {
+    "A": "I and II only",
+    "B": "I and III only",
+    "C": "II and III only",
+    "D": "I, II and III"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0260",
+   "type": "mcq",
+   "stem": "What is the frquency of vibration if the balance wheel of a wrist watch makes 90 revolutions in 25 s?",
+   "options": {
+    "A": "0.01 Hz",
+    "B": "0.04 Hz",
+    "C": "2.27 Hz",
+    "D": "3.60 Hz"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0261",
+   "type": "mcq",
+   "stem": "A binary operation \\(\\otimes\\) defined on the set of integers is such that m \\(\\otimes\\) n = m + n + mn for all integers m and n. Find the inverse of -5 under this operation, if the identity element is 0",
+   "options": {
+    "A": "\\(\\frac{-5}{4}\\)",
+    "B": "\\(\\frac{-5}{6}\\)",
+    "C": "o",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0262",
+   "type": "mcq",
+   "stem": "If a light wave has a wavelength of 500nm in air what is the frequency of the wave? [c = 3 x 108 ms-1]",
+   "options": {
+    "A": "3.0 x 1014 Hz",
+    "B": "6.0 x 1014 Hz",
+    "C": "6.0 x 1012 Hz",
+    "D": "2.5 x 1014 Hz"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0263",
+   "type": "mcq",
+   "stem": "An air craft attempt too fly due north at 100 kmh-1. If the wind blows against it from east to west at 60 kmh-1, its resultant velocity is",
+   "options": {
+    "A": "117 kmh-1, N31oE",
+    "B": "127 kmh-1, N31oE",
+    "C": "117 kmh-1, N31oW",
+    "D": "127 kmh-1, N31oW"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0264",
+   "type": "mcq",
+   "stem": "A car accelerate uniformly from rest at 4 ms-2. How far will it travel in the fifth complete second?",
+   "options": {
+    "A": "100 m",
+    "B": "50m",
+    "C": "32 m",
+    "D": "18 m"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0265",
+   "type": "mcq",
+   "stem": "A body of mass 12kg traveling at 4.2ms-1 collides with a second body of mass 18kg at rest. Calculate their common velocity if the two bodies coalesce after collision",
+   "options": {
+    "A": "1.5 ms-1",
+    "B": "1.4 ms-1",
+    "C": "2.1 ms-1",
+    "D": "1.7 ms-1"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0266",
+   "type": "mcq",
+   "stem": "The terminal velocity of a ball-bearing falling through a viscous fluid reached when the",
+   "options": {
+    "A": "upthrust is equal to the weight of the ball",
+    "B": "ball accelerate uniformly",
+    "C": "upthrustis equal to the velocity of the ball",
+    "D": "velocity is uniform"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0267",
+   "type": "mcq",
+   "stem": "The pressure of two moles of an ideal gas at a temperature of 27oC and volume 10-2m3 is [R = 8.313 J mol-1K-1]",
+   "options": {
+    "A": "4.99 x 105 Nm-2",
+    "B": "9.80 x 103 Nm-2",
+    "C": "4.98 x 103 Nm-2",
+    "D": "9.80 x 105 Nm-2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0268",
+   "type": "mcq",
+   "stem": "The value of x, y and z respectively in the expression MxLyTz for the universal gravitational constant G are",
+   "options": {
+    "A": "2, -3, -2",
+    "B": "-1, 3, -2",
+    "C": "-1, 2, -3",
+    "D": "-2, -1, 3"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0269",
+   "type": "mcq",
+   "stem": "When a pentavalent impurity is added to a pure semiconductor, it becomes",
+   "options": {
+    "A": "a p-type semiconductor",
+    "B": "an n-type semiconductor",
+    "C": "an insulator",
+    "D": "an intrinsic semi-conductor"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0270",
+   "type": "mcq",
+   "stem": "Cancerous cells can be destroyed by",
+   "options": {
+    "A": "ultraviolet rays",
+    "B": "alpha particules",
+    "C": "x - rays",
+    "D": "infrared rays"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0271",
+   "type": "mcq",
+   "stem": "If the decay constant of a radioactive substance is 0.231s1, the half-life is?",
+   "options": {
+    "A": "3.00 s",
+    "B": "0.12 s",
+    "C": "0.33 s",
+    "D": "1.50 s"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0272",
+   "type": "mcq",
+   "stem": "A piece of radioactive material contains 1020 atoms. If the half life of the material is 20 seconds, the number of disintegration in the first second is",
+   "options": {
+    "A": "3.47 x 1018",
+    "B": "6.93 x 10 20",
+    "C": "3.47 x 1020",
+    "D": "6.93 x 1018"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0273",
+   "type": "mcq",
+   "stem": "Thermionic emission is the process whereby",
+   "options": {
+    "A": "β - rays are produced",
+    "B": "holes are produced",
+    "C": "x - rays are produced",
+    "D": "electrons leave a hot element"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0274",
+   "type": "mcq",
+   "stem": "The ability of the human eye to focus object on the retina is referred to as the power of",
+   "options": {
+    "A": "interference",
+    "B": "diffraction",
+    "C": "accomodation",
+    "D": "superposition"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0275",
+   "type": "mcq",
+   "stem": "If negative charges are induced on an electroscope and a positively charged rod is brought near the cap of the electroscope, the leaves will",
+   "options": {
+    "A": "close up",
+    "B": "become positively charged",
+    "C": "become negatively charged",
+    "D": "open further"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0276",
+   "type": "mcq",
+   "stem": "I. Moon. II. Sun. III.street light. IV. stars. Which of these above is a natural source of light?",
+   "options": {
+    "A": "II, III, and IV only",
+    "B": "I, II and III only",
+    "C": "III and IV only",
+    "D": "II and IV only"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0277",
+   "type": "mcq",
+   "stem": "If the refractive index of crown glass is 1.51, its critical angel is.",
+   "options": {
+    "A": "48.6°",
+    "B": "22.5°",
+    "C": "41.5°",
+    "D": "45.0°"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0278",
+   "type": "mcq",
+   "stem": "A heating coil rated 1000 W is used to boil off completely 2 kg of boiling water. the time required to boil of the water is_______[Special latent heat of Vaporization of water = 2.3 x 106 Jkg-1]",
+   "options": {
+    "A": "1.15 x 104s",
+    "B": "1.15 x 103s",
+    "C": "4.6 x 104s",
+    "D": "4.6 x 103s"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0279",
+   "type": "mcq",
+   "stem": "It is observed that water will wet a clean glass because the",
+   "options": {
+    "A": "cohesion of water to glass is stronger than the cohesion of water molecules",
+    "B": "adhesion of water molecules is weaker than the cohesion of water to glass",
+    "C": "cohesion of water to glass is weaker than the cohesion of water molecules",
+    "D": "adhesion of water molecules is stronger than the cohesion of water molecules"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0280",
+   "type": "mcq",
+   "stem": "A man standing 2 m from a charcoal fire is warmed mainly by",
+   "options": {
+    "A": "convection",
+    "B": "radiation",
+    "C": "refraction",
+    "D": "conduction"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0281",
+   "type": "mcq",
+   "stem": "Metal cables are used as telephone wires because",
+   "options": {
+    "A": "they are cheap",
+    "B": "they are sourced locally",
+    "C": "the speed of sound in them is very low",
+    "D": "the speed of sound in them is very high"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0282",
+   "type": "mcq",
+   "stem": "The thermometer whose reading is indicated by a change in colour of its thermometric property is the?",
+   "options": {
+    "A": "bi-metalic strip thermometer",
+    "B": "thermocouple",
+    "C": "platinium resistance thermometer",
+    "D": "optical pyrometer"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0283",
+   "type": "mcq",
+   "stem": "An electric heater rated 220v, 1000 w is immersed into a bucket full of water, calculate the mass of water if the temperature changes from 30°c to 100°c and the current flows for 300seconds.[specific heat capacity of water = 4200 jkg-1 K-1]",
+   "options": {
+    "A": "4.28 kg",
+    "B": "42.86 kg",
+    "C": "1.02 kg",
+    "D": "7.14 kg"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0284",
+   "type": "mcq",
+   "stem": "If the pressure of the vapour on top of an enclosed liquid is equal to the atmospheric pressure, what will be the temperature of the liquid enclosed?",
+   "options": {
+    "A": "room temperature",
+    "B": "boiling point",
+    "C": "freezing point",
+    "D": "standard temperature"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0285",
+   "type": "mcq",
+   "stem": "If a cage containing a truck of coal weighing 750 kg is raised to a height of 90 m in a minute, what is the total power expended? [g = 10 ms2]",
+   "options": {
+    "A": "11.50 kw",
+    "B": "12.60 kw",
+    "C": "11.25 kw",
+    "D": "12.10 kw"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0286",
+   "type": "mcq",
+   "stem": "An object of mass 80 kg is pulled on a horizontal rough ground by a force of 500 N. Find the coefficient of static friction. [g = 10 ms-2]",
+   "options": {
+    "A": "0.8",
+    "B": "0.4",
+    "C": "1.0",
+    "D": "0.6"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0287",
+   "type": "mcq",
+   "stem": "If a heavy barrel is rolled up a plane inclined at 30° to the horizontal. its velocity ratio will be",
+   "options": {
+    "A": "3.0",
+    "B": "3.1",
+    "C": "3.2",
+    "D": "2.0"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0288",
+   "type": "mcq",
+   "stem": "A bullet fired vertically from upward from a gun held 2.0 m above the ground reaches its maximum height in 4.0s. calculate its initial velocity. [g = 10ms-2]",
+   "options": {
+    "A": "10 ms-1",
+    "B": "8 ms-1",
+    "C": "40 ms-1",
+    "D": "20 ms-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0289",
+   "type": "mcq",
+   "stem": "An object is weighted at different locations on the earth. What will be the right observation?",
+   "options": {
+    "A": "Both the mass and weight are constant",
+    "B": "Both the mass and weight vary",
+    "C": "the mass is constant while the weight varies",
+    "D": "the weight is constant while the mass varies"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0290",
+   "type": "mcq",
+   "stem": "In Faradays law of electrolysis, a graph of the mass deposited against the quantity of electricity is plotted. The slope of the graph gives",
+   "options": {
+    "A": "the energy released",
+    "B": "the electrochemical equivalent",
+    "C": "the current flowing",
+    "D": "the charge released"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0291",
+   "type": "mcq",
+   "stem": "Three capacitors of capacitance 2μF, 4μFand 8μF are connected in parallel and a P.D of 6V is maintained across each capacitor, the total energy stored is",
+   "options": {
+    "A": "2.52 x 10-6J",
+    "B": "6.90 x 10-6J",
+    "C": "2.52 x 10-4J",
+    "D": "6.90 x 10-4J"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0292",
+   "type": "mcq",
+   "stem": "Transistors are used for the",
+   "options": {
+    "A": "rectification of signals",
+    "B": "conversion of a.c to d.c",
+    "C": "amplification of signals",
+    "D": "conversion of d.c to a.c"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0293",
+   "type": "mcq",
+   "stem": "When a positively charged rod is brought nearer the cap of a positively charged electroscope, the leaves divergence will",
+   "options": {
+    "A": "be induced",
+    "B": "converge",
+    "C": "diverge",
+    "D": "remain constant"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0294",
+   "type": "mcq",
+   "stem": "Power supply is transmitted at a very high voltage and low current in order to",
+   "options": {
+    "A": "make pass through the trasformers",
+    "B": "increase the power supply",
+    "C": "make it travel fast",
+    "D": "prevent overheating of the coil"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0295",
+   "type": "mcq",
+   "stem": "A galvanometer with full-scale deflection of 10 mA is to be converted to a voltmeter with full-scale deflection of 5v. the resistance of the galvanometer is",
+   "options": {
+    "A": "1Ω",
+    "B": "2Ω",
+    "C": "5Ω",
+    "D": "10Ω"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0296",
+   "type": "mcq",
+   "stem": "In alternating current circuit at resonance, the angel of lead or lag is",
+   "options": {
+    "A": "π°",
+    "B": "(π)/2°",
+    "C": "(π)/3°",
+    "D": "0°"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0297",
+   "type": "mcq",
+   "stem": "An object is embedded in a block of ice, 10 cm below the plane surface. if the refractive index of the ice is 1.50, the apparent depth below the surface is",
+   "options": {
+    "A": "2.50 cm",
+    "B": "6.67 cm",
+    "C": "7.50 cm",
+    "D": "7.63 cm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0298",
+   "type": "mcq",
+   "stem": "The wavelength of a wave traveling with a velocity of 420 ms-1 is 42 m. what is its period?",
+   "options": {
+    "A": "1.2 s",
+    "B": "1.0 s",
+    "C": "0.5 s",
+    "D": "0.1 s"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0299",
+   "type": "mcq",
+   "stem": "During a thunderstorm, the sound is heard over a long time. this phenomenon is referred to as",
+   "options": {
+    "A": "diffraction of sound",
+    "B": "refraction of sound",
+    "C": "superposition",
+    "D": "reveraberation"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0300",
+   "type": "mcq",
+   "stem": "In comparing the camera and the human eye, the film of the camera function as the",
+   "options": {
+    "A": "retina",
+    "B": "iris",
+    "C": "cornea",
+    "D": "pupil"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0301",
+   "type": "mcq",
+   "stem": "The pressure of one mole of an ideal gas of volume 10-2 m3 at a temperature of 27°c is [molar gas constant = 8.3 J mol-1 k-1]",
+   "options": {
+    "A": "2.49 x 104 Nm-2",
+    "B": "2.24 x 104 Nm-2",
+    "C": "2.49 x 105 Nm-1",
+    "D": "2.24 x 105 Nm-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0302",
+   "type": "mcq",
+   "stem": "The accurate measurement of the relative density of a substance in its powdered form is done with a beam balance and",
+   "options": {
+    "A": "a density bottle",
+    "B": "an eureka can",
+    "C": "a pipette",
+    "D": "a burette"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0303",
+   "type": "mcq",
+   "stem": "A hydrometer is an instrument used in measuring",
+   "options": {
+    "A": "vapour pressure of a fluid",
+    "B": "density of liquid",
+    "C": "relative humidity of a liquid",
+    "D": "relative density of a liquid"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0304",
+   "type": "mcq",
+   "stem": "One special advantage of alcohol over mercury as a thermometric liquid is its",
+   "options": {
+    "A": "low density",
+    "B": "low freezing point",
+    "C": "high specific",
+    "D": "low boiling point"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0305",
+   "type": "mcq",
+   "stem": "The density of a certain oil on frying becomes 0.4 kgm-3 with the volume of 20m3. what will be its initial volume when its initial density is 0.8 kgm-3 assuming no loss of oil due to spillage?",
+   "options": {
+    "A": "12 kgm-3",
+    "B": "10 kgm-3",
+    "C": "8 kgm-3",
+    "D": "5 kgm-3"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0306",
+   "type": "mcq",
+   "stem": "Heat is radiated by hot objects in the form",
+   "options": {
+    "A": "x-rays",
+    "B": "light energy",
+    "C": "infrared rays",
+    "D": "solar energy"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0307",
+   "type": "mcq",
+   "stem": "A car moves with an initial velocity of 25 ms-1 and reaches a velocity of 45 ms-1 in 10s. what is the acceleration of the car?",
+   "options": {
+    "A": "2 ms-2",
+    "B": "5 ms-2",
+    "C": "20 ms-2",
+    "D": "25 ms-2"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0308",
+   "type": "mcq",
+   "stem": "The surfaces of conveyor belts are made rough so as to",
+   "options": {
+    "A": "protect them while carrying loads",
+    "B": "prevent the loads from slipping",
+    "C": "enable them to carry more load",
+    "D": "make them stronger"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0309",
+   "type": "mcq",
+   "stem": "Two cars moving in the same direction have speeds of 100 kmh-1 and 130 kmh-1 what is the velocity of the faster car as measured by an observer in the slower car?",
+   "options": {
+    "A": "30 kmh-1",
+    "B": "130 kmh-1",
+    "C": "200 kmh",
+    "D": "230 kmh-1"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0310",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0311",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0312",
+   "type": "mcq",
+   "stem": "A length of wire has a frequency of 255Hz when stretched by a force of b225N. If the fore increased to 324N, what is the new frequency of vibration",
+   "options": {
+    "A": "306 Hz",
+    "B": "512 Hz",
+    "C": "488 Hz",
+    "D": "356 Hz"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0313",
+   "type": "mcq",
+   "stem": "The correct expression for the potential at a point distance r from a charge q in an electric field is",
+   "options": {
+    "A": "_q2 4πεor2",
+    "B": "_q2 4πεor",
+    "C": "_q 4πεor2",
+    "D": "_q 4πεor"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0314",
+   "type": "mcq",
+   "stem": "A cannon is fired from town X,after how long is the sound heard at a town Y 4.95 km away? [velocity of sound in the air = 330 ms-1]",
+   "options": {
+    "A": "30 s",
+    "B": "10 s",
+    "C": "10 s",
+    "D": "15 s"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0315",
+   "type": "mcq",
+   "stem": "A copper wire was subjected to a tensile stress of 7.7 x 107 x 10 Nm-2. calculate strain of the wire. [young modules = 1.1 x 1011 Nm-2]",
+   "options": {
+    "A": "2. 0 x 10-5",
+    "B": "7.0 x 10-3",
+    "C": "7.0 x 10-4",
+    "D": "2.2 x 10-4"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0316",
+   "type": "mcq",
+   "stem": "Two balls X and Y weighing 5 g and 50 kg respectively were throne up vertically at the same time with a velocity of 100 ms1 .How will their positions be one second later?",
+   "options": {
+    "A": "X and Y will be 500 m from each other",
+    "B": "Y will be 500 m ahead of X",
+    "C": "X will be 500 m ahead of Y",
+    "D": "X and Y both be 500 m from the poin of throw"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0317",
+   "type": "mcq",
+   "stem": "1kg of boiling water at 100°C is poured into an aluminium hot water bottle at 16°C. The temperature of the water quickly falls to 96°C. Assuming that there is no loss of heat, the mass of the bottle is",
+   "options": {
+    "A": "0.25kg",
+    "B": "0.5kg",
+    "C": "0.05kg",
+    "D": "0.75kg."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0318",
+   "type": "mcq",
+   "stem": "A simple pendulum of length 0.4m has a period 2s. What is the period of a similar pendulum of length 0.8m at the same place?",
+   "options": {
+    "A": "2√2s",
+    "B": "√2s",
+    "C": "8s",
+    "D": "4s"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0319",
+   "type": "mcq",
+   "stem": "Calculate the apparent weight loss of a man weighing 70kg in an elevator moving downwards with an acceleration of 1.5ms-2.",
+   "options": {
+    "A": "105N",
+    "B": "686N",
+    "C": "595N",
+    "D": "581N"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0320",
+   "type": "mcq",
+   "stem": "A piece of cork floats in a liquid. What fraction its volume will be immersed in the liquid? [density of the cork = 0.25 × 103kgm-3, Density of the liquid = 1.25 × 103kgm-3]",
+   "options": {
+    "A": "0.2",
+    "B": "0.1",
+    "C": "0.8",
+    "D": "0.5"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0321",
+   "type": "mcq",
+   "stem": "An object is moving with a velocity of 5ms-1. At what height must a similar body be situated to have a potential energy equal in value with the kinetic energy of the moving body? [g ≈ 10ms-2]",
+   "options": {
+    "A": "1.3m",
+    "B": "25.0m",
+    "C": "1.0m",
+    "D": "20.0m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0322",
+   "type": "mcq",
+   "stem": "Calculate the work done, when a force of 20N stretches a spring by 50mm.",
+   "options": {
+    "A": "0.5 J",
+    "B": "2.5 J",
+    "C": "1.5 J",
+    "D": "2.0 J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0323",
+   "type": "mcq",
+   "stem": "At what depth below the sea-level would one experience a change of pressure equal to one atmosphere?",
+   "options": {
+    "A": "10.0 m",
+    "B": "1.0 m",
+    "C": "100.0 m",
+    "D": "0.1 m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0324",
+   "type": "mcq",
+   "stem": "What volume of alcohol will have the same mass as 4.2m3 of petrol? [Density of alcohol = 8.4 × 102kgm-3, Density of petrol = 7.2 × 102 kgm-3]",
+   "options": {
+    "A": "3.6 m3",
+    "B": "1.4 m3",
+    "C": "0.8 m3",
+    "D": "4.9 m3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0325",
+   "type": "mcq",
+   "stem": "Calculate the length which corresponds to a temperature of 20°C if the ice and steam points of an ungraduated thermometer are 400 mm apart",
+   "options": {
+    "A": "60mm",
+    "B": "30mm",
+    "C": "20mm",
+    "D": "80mm"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0326",
+   "type": "mcq",
+   "stem": "A wire of length 100.0m at 300C has a linear expansivity of 2 × 10-5K-1. Calculate the length of the wire at a temperature of -100C",
+   "options": {
+    "A": "99.92m",
+    "B": "100.08m",
+    "C": "100.04m",
+    "D": "99.96m"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0327",
+   "type": "mcq",
+   "stem": "A gas at a pressure of 105Nm-2 expands from 0.6m3 to 1.2m3 at constant temperature, the work done is",
+   "options": {
+    "A": "6.0 × 10\\(^4\\)J",
+    "B": "7.0 × 10\\(^7\\)J",
+    "C": "6.0 × 10\\(^6\\)J",
+    "D": "6.0 × 10\\(^5\\)J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0328",
+   "type": "mcq",
+   "stem": "Foods cook quicker in salt water than in pure water because of the effect of",
+   "options": {
+    "A": "Dissolved substances on the boiling point",
+    "B": "Salt on thermal the conductivity of water",
+    "C": "Atmosphere pressure on the boiling point",
+    "D": "Food nutrients on the thermal energy"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0329",
+   "type": "mcq",
+   "stem": "Steam from boiling water cause more damage on the skin does boiling water because",
+   "options": {
+    "A": "The steam is at a higher temperature than the water",
+    "B": "Steam brings heat more easily by convection.",
+    "C": "Water has a high specific heat",
+    "D": "Steam has latent heat of fusion"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0330",
+   "type": "mcq",
+   "stem": "What will happen to the boiling point of pure water when it is heated in a place 30m below the sea level?",
+   "options": {
+    "A": "It will be more than 100°C",
+    "B": "It will be fluctuating",
+    "C": "It will be less than 100°C",
+    "D": "It will still be at 100°C"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0331",
+   "type": "mcq",
+   "stem": "A transverse wave and a longitudinal wave traveling in the same direction in a medium differ essentially in their",
+   "options": {
+    "A": "direction of vibration of the particles of the medium",
+    "B": "period of vibration of the particles of the medium",
+    "C": "frequency",
+    "D": "amplitude"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0332",
+   "type": "mcq",
+   "stem": "What is the velocity of sound at 100oC if the velocity of sound at 0oC is 340ms-1?",
+   "options": {
+    "A": "497ms-1",
+    "B": "440ms-1",
+    "C": "397ms-1",
+    "D": "240ms-1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0333",
+   "type": "mcq",
+   "stem": "A ray of light passing through the centre of curvature of a concave mirror is reflected by the mirror at",
+   "options": {
+    "A": "0°",
+    "B": "180°",
+    "C": "45°",
+    "D": "90°"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0334",
+   "type": "mcq",
+   "stem": "If the linear magnification of the objective and eyepiece are 4 and 7 respectively, calculate the angular magnification of the microscope",
+   "options": {
+    "A": "28",
+    "B": "2",
+    "C": "3",
+    "D": "11"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0335",
+   "type": "mcq",
+   "stem": "Calculate the force acting on an electron of charge 1.5 × 10-19C placed in an electric field of intensity 105Vm-1.",
+   "options": {
+    "A": "1.5 × 10-14N",
+    "B": "1.5 × 10-11N",
+    "C": "1.5 × 10-12N",
+    "D": "1.5 × 10-13N"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0336",
+   "type": "mcq",
+   "stem": "A cell of emf 1.5V is connected in series with a 1Ω resistor and a current of 0.3A flows through the resistor. Find the internal resistance of the cell.",
+   "options": {
+    "A": "3.0 Ω",
+    "B": "1.0 Ω",
+    "C": "4.0 Ω",
+    "D": "1.5 Ω"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0337",
+   "type": "mcq",
+   "stem": "Which of the following obeys ohms law?",
+   "options": {
+    "A": "Metals",
+    "B": "Glectrolytes",
+    "C": "Glass",
+    "D": "Diode"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0338",
+   "type": "mcq",
+   "stem": "A house has ten 40W and five 100W bulbs. How much will it cost the owner of the house to keep them lit for 10 hours if the cost of a unit is ₦5?",
+   "options": {
+    "A": "₦50",
+    "B": "₦90",
+    "C": "₦20",
+    "D": "₦45"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0339",
+   "type": "mcq",
+   "stem": "An electric device is rated 2000W, 250V. Calculate the maximum current it can take.",
+   "options": {
+    "A": "7A",
+    "B": "6A",
+    "C": "8A",
+    "D": "9A"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0340",
+   "type": "mcq",
+   "stem": "When a charge moves through an electronic circuit in the direction of an electric force, it",
+   "options": {
+    "A": "loses potential energy and gains kinetic energy",
+    "B": "gains potential energy and loses kinetic energy",
+    "C": "gains both potential and kinetic energy",
+    "D": "loses both potential and kinetic energy"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0341",
+   "type": "mcq",
+   "stem": "Calculate the energy of the third level of an atom if the ground state energy is -24.8eV",
+   "options": {
+    "A": "-2.75eV",
+    "B": "-8.20eV",
+    "C": "-9.20eV",
+    "D": "-1.75eV"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0342",
+   "type": "mcq",
+   "stem": "In photo-emission, the number of photoelectrons ejected per second depends on the",
+   "options": {
+    "A": "Intensity of the beam",
+    "B": "Frequency of the beam",
+    "C": "Work function of the metal",
+    "D": "Threshold frequency of the metal"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0343",
+   "type": "mcq",
+   "stem": "In photo-emission, the number of photo-electrons ejected per second depends on the",
+   "options": {
+    "A": "frequency of the beam",
+    "B": "work function of the metal",
+    "C": "threshold frequency of the metal",
+    "D": "intensity of the beam"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0344",
+   "type": "mcq",
+   "stem": "A ray of light passing through the centre of curvature of a concave mirror is reflected by the mirror at",
+   "options": {
+    "A": "0o",
+    "B": "45o",
+    "C": "90o",
+    "D": "180o"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0345",
+   "type": "mcq",
+   "stem": "Food cook quicker in salt water than in pure water because of the effect of",
+   "options": {
+    "A": "dissolved substances on the boiling point",
+    "B": "atmospheric pressure on the boiling point",
+    "C": "food nutrients on the thermal energy",
+    "D": "salts on the thermal conductivity of water"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0346",
+   "type": "mcq",
+   "stem": "At what depth below the sea-level would one experience a change of pressure equal to one atmosphere? Density of sea water = 1013kg-3, one atmosphere = 0.01 x 105Nm-2, g = 10ms-2",
+   "options": {
+    "A": "0.1m",
+    "B": "1.0m",
+    "C": "10.0m",
+    "D": "100.0m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0347",
+   "type": "mcq",
+   "stem": "What volume of alcohol will have same mass as 4.2m-3 of petrol? Density of alcohol = 8.4 x 102kgm-3, density of petrol =7.2x103kgm-3",
+   "options": {
+    "A": "0.8m3",
+    "B": "1.4m3",
+    "C": "3.6m3",
+    "D": "49.m3"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0348",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0349",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0350",
+   "type": "mcq",
+   "stem": "A glass bottle of initial volume 2 x 104 cm3 is heated from 20oC to 50oC. If the linear expansivity of glass is 9 x 106K-1, the volume of the bottle at 50oC is",
+   "options": {
+    "A": "20016.2cm3",
+    "B": "20005.4cm3",
+    "C": "20008.1cm3",
+    "D": "20013.5cm3"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0351",
+   "type": "mcq",
+   "stem": "What charge is stored in a 0.1F capacitor when a 10V supply is connected across it?",
+   "options": {
+    "A": "1C",
+    "B": "5C",
+    "C": "4C",
+    "D": "2C"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0352",
+   "type": "mcq",
+   "stem": "If a metal wire 4m long and cross-sectional area 0.8 mm2 has a resistance of 60, find the resistivity of the wire",
+   "options": {
+    "A": "5.3x10-7",
+    "B": "3.0x10-5",
+    "C": "1.2x10-6",
+    "D": "3.2x10-6"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0353",
+   "type": "mcq",
+   "stem": "A boy receives the echo of his clap reflected by a nearby hill 0.8s later. How far is he from the hill?",
+   "options": {
+    "A": "528m",
+    "B": "66m",
+    "C": "136m",
+    "D": "264m"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0354",
+   "type": "mcq",
+   "stem": "The quantity of heat needed to raise the temperature of a body by 1K is the body's",
+   "options": {
+    "A": "Heat capacity",
+    "B": "Internal energy",
+    "C": "Specific heat capacity",
+    "D": "Latent heat of fusion"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0355",
+   "type": "mcq",
+   "stem": "An object of mass 20kg is released from a height of 10m above the ground level. The kinetic energy of the object just before it hits the ground is",
+   "options": {
+    "A": "200J",
+    "B": "4000J",
+    "C": "2000J",
+    "D": "500J"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0356",
+   "type": "mcq",
+   "stem": "A machine whose efficiency is 75% is used to lift a load of 1000N. Calculate the effort put in to the machine if it has a Velocity ratio of 4.",
+   "options": {
+    "A": "343.32N",
+    "B": "233.33N",
+    "C": "333.33N",
+    "D": "334.33N"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0357",
+   "type": "mcq",
+   "stem": "I Electrical potential, II Torque, III Kinetic Energy, IV Momentum. Which of the quantities listed are vectors?",
+   "options": {
+    "A": "II and IV",
+    "B": "I and II",
+    "C": "I and III",
+    "D": "II and III"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0358",
+   "type": "mcq",
+   "stem": "An object of weight 80kg on earth is taken to a planet where acceleration due to gravity is one-third of its value on earth. The weight of the object on the planet is",
+   "options": {
+    "A": "48N",
+    "B": "12N",
+    "C": "27N",
+    "D": "36N"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0359",
+   "type": "mcq",
+   "stem": "The energy of a photon having a wavelength of 10-10m is",
+   "options": {
+    "A": "2.0 × 10-15J",
+    "B": "1.7 × 10-12J",
+    "C": "1.7 × 10-13J",
+    "D": "2.0 × 10-12J"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0360",
+   "type": "mcq",
+   "stem": "When a ball rolls on a smooth level ground, the motion of its centre is",
+   "options": {
+    "A": "translational",
+    "B": "random",
+    "C": "oscillatory",
+    "D": "rotational"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0361",
+   "type": "mcq",
+   "stem": "In photoelectric effect, electrons will leave the metal surface and be projected, when illuminated by light of appropriate frequency if the photon energy is",
+   "options": {
+    "A": "greater than the work function",
+    "B": "less than the work function",
+    "C": "equal to the work function",
+    "D": "equal to the maximum kinetic energy of the electrons."
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0362",
+   "type": "mcq",
+   "stem": "The electrochemical equivalent of a metal is 0.126 × 10-6 kg/C. The mass of the metal that a current of 5A will deposit from a suitable bath in 1 hour is",
+   "options": {
+    "A": "0.378 × 10-3kg",
+    "B": "0.227 × 10-3kg",
+    "C": "2.268 × 10-3kg",
+    "D": "0.0378 × 10-3kg"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0363",
+   "type": "mcq",
+   "stem": "The range of wavelengths of the visible spectrum is 400nm-700nm. The wavelength of gamma rays is",
+   "options": {
+    "A": "550nm",
+    "B": "shorter than 400nm",
+    "C": "shorter than 700nm but longer than 400nm",
+    "D": "longer than 700nm"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0364",
+   "type": "mcq",
+   "stem": "In which of the following device in the expansion of solid is a disadvantages?I. Simple pendulum II. Fire alarms III. Thermostat IV. Bimetallic thermometer",
+   "options": {
+    "A": "III only",
+    "B": "II & III only",
+    "C": "I only",
+    "D": "II, III & IV only"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0365",
+   "type": "mcq",
+   "stem": "In an inelastic collisionI. Energy is conversed II. Energy is decreased III. Energy is increased IV. Linear momentum conversed",
+   "options": {
+    "A": "I only",
+    "B": "II and IV only",
+    "C": "II only",
+    "D": "III only"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0366",
+   "type": "mcq",
+   "stem": "Which of the following option is right if an object fall freely to the ground?1. The total energy is Kinetic 2. The ratio of potential energy to kinetic energy is constant 3. The sum of potential and kinetic is constant",
+   "options": {
+    "A": "1 only",
+    "B": "2 only",
+    "C": "3 only",
+    "D": "1 and 2 only"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0367",
+   "type": "mcq",
+   "stem": "Heat transfer by convection will take place is one the following substance.",
+   "options": {
+    "A": "Stone",
+    "B": "Wood",
+    "C": "Mercury",
+    "D": "Water"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0368",
+   "type": "mcq",
+   "stem": "Transformers are designed so that energy losses are reduced to a minimum. This is achieved through those process.I. Using a soft iron ore II. Laminating the iron core to reduce energy loses due to eddy current III. Designing an efficient iron core",
+   "options": {
+    "A": "I & II only",
+    "B": "II only",
+    "C": "I, II, & III only",
+    "D": "III only"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0369",
+   "type": "mcq",
+   "stem": "A radioactive source emits X–rays of very short wavelength (10 -13m ) what is the frequently of these rays?",
+   "options": {
+    "A": "2 × 1018HZ",
+    "B": "3 × 10 19HZ",
+    "C": "3 × 1021HZ",
+    "D": "3 × 10-19HZ"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0370",
+   "type": "mcq",
+   "stem": "The strength of an electromagnet increase with",
+   "options": {
+    "A": "Increase in the number of turn of the coil",
+    "B": "Decrease in current with the coil",
+    "C": "Increase in the distance between the pole",
+    "D": "Increase in current without the coil"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0371",
+   "type": "mcq",
+   "stem": "A platinum resistance thermometer wire has a resistance of 70hms at 0°Cand 7.5 Ohms at 100°C. Calculate the temperature of the wire when the resistance is 7.2 Ohms",
+   "options": {
+    "A": "15°C",
+    "B": "40°C",
+    "C": "20°C",
+    "D": "10°C"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0372",
+   "type": "mcq",
+   "stem": "Which of the following will increases the boiling point of water?I. Taking it to a high altitude II. Dissolving a salt into it III. Heating it in a sealed flask IV. Increasing the rate of heat supply.",
+   "options": {
+    "A": "I only",
+    "B": "III & IV only",
+    "C": "II & III only",
+    "D": "II only"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0373",
+   "type": "mcq",
+   "stem": "What is the magnitude of the couple which acts on a rotating circular disc of radius 2m, if a constant tangential force of 2N is responsible for the rotation.",
+   "options": {
+    "A": "15Nm",
+    "B": "25Nm",
+    "C": "3Nm",
+    "D": "4Nm"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0374",
+   "type": "mcq",
+   "stem": "If an object which mass is 3kg moves in a circular path of a radius 0.7m, record a speed at 2m/s what is the result of the angular velocity?",
+   "options": {
+    "A": "4 rads–1",
+    "B": "1rads–1–1",
+    "C": "3–1rads–1",
+    "D": "4rads–1–1"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0375",
+   "type": "mcq",
+   "stem": "The symbol −10X used to represent which of the particles?",
+   "options": {
+    "A": "Proton",
+    "B": "Neutron",
+    "C": "Electrons",
+    "D": "Atoms"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0376",
+   "type": "mcq",
+   "stem": "Heat losses to the surrounding is possible through the following except",
+   "options": {
+    "A": "Conduction",
+    "B": "Convection",
+    "C": "Radiation",
+    "D": "Expansion"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0377",
+   "type": "mcq",
+   "stem": "At 35°C and 5 atmospheres pressure the density of a gas is 0. 600g per liter. What is the density at 7 atmospheric pressure and 350°C.",
+   "options": {
+    "A": "0.27g / liters",
+    "B": "0.25g / liters",
+    "C": "17g / liters",
+    "D": "0.15g / liters"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0378",
+   "type": "mcq",
+   "stem": "Calculate the inductance of a coil of resistance 30\\(\\Omega\\) connected to a 100V a.c source if the coil draws an r.m.s current of 2A",
+   "options": {
+    "A": "0.60H",
+    "B": "2.50H",
+    "C": "1.25H",
+    "D": "0.04H"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0379",
+   "type": "mcq",
+   "stem": "An electron in a hydrogen atom makes a transition from the ground level to the third level. If the energy at the ground level,calculate the energy at the third level. [h = 6.6 x 10-34Js; f = 1015Hz]",
+   "options": {
+    "A": "1.41eV",
+    "B": "1.71eV",
+    "C": "1.61eV",
+    "D": "1.51eV"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0380",
+   "type": "mcq",
+   "stem": "A satellite revolving around the earth is kept on its orbit by",
+   "options": {
+    "A": "Centripetal forces only",
+    "B": "Centripetal and frictional forces",
+    "C": "Centrifugal forces only",
+    "D": "Centripetal and centrifugal forces"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0381",
+   "type": "mcq",
+   "stem": "A radioactive isotope has a decay constant of 10-6s-1. Calculate its half - life?",
+   "options": {
+    "A": "5.93 x 106s",
+    "B": "6.93 x 107s",
+    "C": "6.93 x 109s",
+    "D": "5.93 x 107s"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0382",
+   "type": "mcq",
+   "stem": "When two mirrors are placed at an angle of 900 to each other, how many images will be formed when an object is placed in front of the mirrors",
+   "options": {
+    "A": "5",
+    "B": "4",
+    "C": "3",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0383",
+   "type": "mcq",
+   "stem": "Calculate the angle of minimum deviation of a 60o prism of a refractive index [sin-10.75 = 49o]",
+   "options": {
+    "A": "38.00o",
+    "B": "19.47o",
+    "C": "16.25o",
+    "D": "49o"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0384",
+   "type": "mcq",
+   "stem": "What is the cost of running seven 40 W lamps and five 80 W la mps for 12 hours of the electrical energy cost N7.00kWk?",
+   "options": {
+    "A": "N80.00",
+    "B": "N45.36",
+    "C": "N65.00",
+    "D": "N57.12"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0385",
+   "type": "mcq",
+   "stem": "Which of the following surfaces will absorbs radiant heat energy heat?",
+   "options": {
+    "A": "white",
+    "B": "red",
+    "C": "black",
+    "D": "blue"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0386",
+   "type": "mcq",
+   "stem": "The instrument to measure the relative density of light is",
+   "options": {
+    "A": "thermometer",
+    "B": "hydrometer",
+    "C": "spring balance",
+    "D": "beaker"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0387",
+   "type": "mcq",
+   "stem": "A constant force of %n acts for a % seconds on a mass of 5kg initially at rest. Calculate the final momentum",
+   "options": {
+    "A": "125kgms−1",
+    "B": "25kgms−1",
+    "C": "15kgms−1",
+    "D": "0kgms−1"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0388",
+   "type": "mcq",
+   "stem": "A radio station broadcast at a frequency of 600KHZ. If the speed of light in air is 3 × 108ms\\(^{−1}\\). Calculate the wavelength of the radio wave",
+   "options": {
+    "A": "2.20 × 10\\(^3\\)m",
+    "B": "5.0 × 10\\(^2\\)m",
+    "C": "5.0 × 10\\(^5\\)m",
+    "D": "11.8 × 10\\(^{11}\\)m"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0389",
+   "type": "mcq",
+   "stem": "Calculate the light of the image formed by a pinhole camera of length 12cm used to photograph an object 60cm away from the hole and 70cm high",
+   "options": {
+    "A": "10 cm",
+    "B": "16 cm",
+    "C": "5 cm",
+    "D": "14 cm"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0390",
+   "type": "mcq",
+   "stem": "The thermal expansion of a solid is an advantage in",
+   "options": {
+    "A": "Balance wheel of a watch",
+    "B": "Construction of steel rail lines",
+    "C": "Construction of large steel bridges",
+    "D": "Fitting of tyres on wheels"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0391",
+   "type": "mcq",
+   "stem": "Under which of the following conditions is work done?",
+   "options": {
+    "A": "A man supports a heavy food above his head with his hands",
+    "B": "A boy climbs onto a table",
+    "C": "A man pushes unto a table",
+    "D": "A woman holds a pot of water"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0392",
+   "type": "mcq",
+   "stem": "Calculate the specific latent heat of vaporization of steam of 1.13 x 106J pf heat energy is required to convert 15kg of it to water.",
+   "options": {
+    "A": "7.53 x 105 Jkg\\(^{-1}\\)",
+    "B": "7.53 x 10-2Jkg\\(^{-1}\\)",
+    "C": "7.53 x 104Jkg\\(^{-1}\\)",
+    "D": "7.53 x 10-3Jkg\\(^{-1}\\)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0393",
+   "type": "mcq",
+   "stem": "A cell of internal resistance 2 π supplies current to a 6 π resistor. The efficiency of the cell is",
+   "options": {
+    "A": "12.0%",
+    "B": "25.0%",
+    "C": "33.3%",
+    "D": "75.0%"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0394",
+   "type": "mcq",
+   "stem": "Calculate the upthrust on an object of volume 50cm3 which is immersed in liquid of density 103kgm-3 [g = 10ms-2]",
+   "options": {
+    "A": "0.8N",
+    "B": "2.5N",
+    "C": "0.5N",
+    "D": "1.0N"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0395",
+   "type": "mcq",
+   "stem": "A man walks 1km due east and then 1 km due north. His displacement is",
+   "options": {
+    "A": "√2km N 45°E",
+    "B": "1km N 30°E",
+    "C": "1km N 15°E",
+    "D": "√2km N 60°E"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0396",
+   "type": "mcq",
+   "stem": "The density of 400cm3 of palm oil was 0.9gcm-3 before frying. If the density of the oil was 0.6gcm-3 after frying, assuming no loss of oil due to spilling, its new volume was?",
+   "options": {
+    "A": "1360cm\\(^3\\)",
+    "B": "600cm\\(^3\\)",
+    "C": "240cm\\(^3\\)",
+    "D": "8000m\\(^3\\)"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0397",
+   "type": "mcq",
+   "stem": "What type of reaction is represented by the following scheme? \\(_{1} ^{2} X\\) + \\(_{1} ^{2} Y\\) -----> \\(_{2} ^{3} Z\\) + \\(_{1} ^{0} n\\) + energy",
+   "options": {
+    "A": "fusion reaction",
+    "B": "fission reaction",
+    "C": "Chain reaction",
+    "D": "radioactive decay"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0398",
+   "type": "mcq",
+   "stem": "A body of mass 100g moving with a velocity if 10ms-1 collides with a wall. If after collision it moves with a velocity of 2.0ms−1 in the opposite direction, calculate the change in momentum.",
+   "options": {
+    "A": "0.8Ns",
+    "B": "1.2Ns",
+    "C": "12.0Ns",
+    "D": "80.0Ns"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0399",
+   "type": "mcq",
+   "stem": "A 20kg mass is to be pulled up a slope inclined at 300 to the horizontal. If efficiency of the plane is 75%. The force required to pull the load up the plane is J [g=10ms\\(^{− 2}\\)]",
+   "options": {
+    "A": "87N",
+    "B": "73.5N",
+    "C": "133.3N",
+    "D": "533.2N"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0400",
+   "type": "mcq",
+   "stem": "A beam of light is incident from air to water at an angle of 300. Find the angle of refraction if the refractive index of water is 4/3",
+   "options": {
+    "A": "15\\(^o\\)",
+    "B": "18\\(^o\\)",
+    "C": "22\\(^o\\)",
+    "D": "24\\(^o\\)"
+   },
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0401",
+   "type": "mcq",
+   "stem": "What flows to the earth by connecting the conductor to the earth?",
+   "options": {
+    "A": "Electrons",
+    "B": "Ion",
+    "C": "Neutron",
+    "D": "Proton"
+   },
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0402",
+   "type": "mcq",
+   "stem": "The limiting frictional force between two surface depends on I. the normal reaction between the surfaces II. the area of surface in contact III. the relative velocity between the surfaces IV. the nature of the surface",
+   "options": {
+    "A": "I only",
+    "B": "I and IV only",
+    "C": "II only",
+    "D": "III only"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0403",
+   "type": "mcq",
+   "stem": "A metal rod has a length of 100cm at 200\\(^oC\\). At what temperature will its length be 99.4cm. If the linear expansivity of the material of the rod is 2 \\(\\times\\) 10\\(^{-5}C^{-1}\\)",
+   "options": {
+    "A": "200\\(^o\\)C",
+    "B": "300\\(^o\\)C",
+    "C": "100\\(^o\\)C",
+    "D": "-100\\(^o\\)C"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0404",
+   "type": "mcq",
+   "stem": "When the temperature of a liquid is increased, its surface tension",
+   "options": {
+    "A": "increases",
+    "B": "decreases",
+    "C": "remain constant",
+    "D": "increases then decreases"
+   },
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0405",
+   "type": "mcq",
+   "stem": "When the downward current flows in a straight vertical conductor, the direction of its magnetic field at a point due north of the wire is",
+   "options": {
+    "A": "Upward",
+    "B": "North",
+    "C": "South",
+    "D": "West"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0406",
+   "type": "mcq",
+   "stem": "The limiting frictional force between two surfaces depends on I. the normal reaction between the surfaces II. the area of surface in contact III. the relative velocity between the surfaces IV. the nature of the surfaces",
+   "options": {
+    "A": "I only",
+    "B": "II only",
+    "C": "III only",
+    "D": "I and IV only"
+   },
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jamb-sim-physics-sim-0407",
+   "type": "mcq",
+   "stem": "When a girl moves towards a plane mirror at a speed of 4.0m/s, the distance between the girl and her image reduces a speed of",
+   "options": {
+    "A": "2 m/s",
+    "B": "4 m/s",
+    "C": "8 m/s",
+    "D": "12 m/s"
+   },
+   "marks": 1,
+   "answer": "C"
+  }
+ ],
+ "category": "secondary",
+ "body": "JAMB"
+}

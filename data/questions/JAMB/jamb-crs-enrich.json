@@ -1,0 +1,6941 @@
+{
+ "code": "jamb-crs-enrich-bank",
+ "title": "JAMB Crs | Enrichment Bank",
+ "version": 1,
+ "questionCount": 495,
+ "totalMarks": 495,
+ "questions": [
+  {
+   "id": "jamb-crs-enrich-0000",
+   "type": "mcq",
+   "stem": "Who built the ark at God's command?",
+   "options": {
+    "A": "Noah",
+    "B": "Abraham",
+    "C": "Moses",
+    "D": "Joshua"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Noah. Reference: Genesis 6–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0001",
+   "type": "mcq",
+   "stem": "Which person built the ark at God's command?",
+   "options": {
+    "A": "Abraham",
+    "B": "Moses",
+    "C": "Joshua",
+    "D": "Noah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Noah. Reference: Genesis 6–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0002",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who built the ark at God's command?",
+   "options": {
+    "A": "Moses",
+    "B": "Joshua",
+    "C": "Noah",
+    "D": "Abraham"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Noah. Reference: Genesis 6–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0003",
+   "type": "mcq",
+   "stem": "According to the biblical account, who built the ark at God's command?",
+   "options": {
+    "A": "Joshua",
+    "B": "Noah",
+    "C": "Abraham",
+    "D": "Moses"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Noah. Reference: Genesis 6–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0004",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who built the ark at God's command?",
+   "options": {
+    "A": "Noah",
+    "B": "Abraham",
+    "C": "Moses",
+    "D": "Joshua"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Noah. Reference: Genesis 6–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0005",
+   "type": "mcq",
+   "stem": "What was the sign of God's covenant with Noah?",
+   "options": {
+    "A": "Circumcision",
+    "B": "The Sabbath",
+    "C": "The Passover",
+    "D": "The rainbow"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The rainbow. Reference: Genesis 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0006",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was the sign of God's covenant with Noah?",
+   "options": {
+    "A": "The Sabbath",
+    "B": "The Passover",
+    "C": "The rainbow",
+    "D": "Circumcision"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The rainbow. Reference: Genesis 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0007",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was the sign of God's covenant with Noah?",
+   "options": {
+    "A": "The Passover",
+    "B": "The rainbow",
+    "C": "Circumcision",
+    "D": "The Sabbath"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The rainbow. Reference: Genesis 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0008",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was the sign of God's covenant with Noah?",
+   "options": {
+    "A": "The rainbow",
+    "B": "Circumcision",
+    "C": "The Sabbath",
+    "D": "The Passover"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The rainbow. Reference: Genesis 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0009",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was the sign of God's covenant with Noah?",
+   "options": {
+    "A": "Circumcision",
+    "B": "The Sabbath",
+    "C": "The Passover",
+    "D": "The rainbow"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The rainbow. Reference: Genesis 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0010",
+   "type": "mcq",
+   "stem": "Who was called by God to leave his country and family?",
+   "options": {
+    "A": "Jacob",
+    "B": "Joseph",
+    "C": "Abraham",
+    "D": "Isaac"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Abraham. Reference: Genesis 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0011",
+   "type": "mcq",
+   "stem": "Which person was called by God to leave his country and family?",
+   "options": {
+    "A": "Joseph",
+    "B": "Abraham",
+    "C": "Isaac",
+    "D": "Jacob"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Abraham. Reference: Genesis 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0012",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was called by God to leave his country and family?",
+   "options": {
+    "A": "Abraham",
+    "B": "Isaac",
+    "C": "Jacob",
+    "D": "Joseph"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Abraham. Reference: Genesis 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0013",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was called by God to leave his country and family?",
+   "options": {
+    "A": "Isaac",
+    "B": "Jacob",
+    "C": "Joseph",
+    "D": "Abraham"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Abraham. Reference: Genesis 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0014",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was called by God to leave his country and family?",
+   "options": {
+    "A": "Jacob",
+    "B": "Joseph",
+    "C": "Abraham",
+    "D": "Isaac"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Abraham. Reference: Genesis 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0015",
+   "type": "mcq",
+   "stem": "What was Abraham's wife called?",
+   "options": {
+    "A": "Leah",
+    "B": "Sarah",
+    "C": "Rebekah",
+    "D": "Rachel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sarah. Reference: Genesis 17–18."
+  },
+  {
+   "id": "jamb-crs-enrich-0016",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was Abraham's wife called?",
+   "options": {
+    "A": "Sarah",
+    "B": "Rebekah",
+    "C": "Rachel",
+    "D": "Leah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Sarah. Reference: Genesis 17–18."
+  },
+  {
+   "id": "jamb-crs-enrich-0017",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was Abraham's wife called?",
+   "options": {
+    "A": "Rebekah",
+    "B": "Rachel",
+    "C": "Leah",
+    "D": "Sarah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Sarah. Reference: Genesis 17–18."
+  },
+  {
+   "id": "jamb-crs-enrich-0018",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was Abraham's wife called?",
+   "options": {
+    "A": "Rachel",
+    "B": "Leah",
+    "C": "Sarah",
+    "D": "Rebekah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Sarah. Reference: Genesis 17–18."
+  },
+  {
+   "id": "jamb-crs-enrich-0019",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was Abraham's wife called?",
+   "options": {
+    "A": "Leah",
+    "B": "Sarah",
+    "C": "Rebekah",
+    "D": "Rachel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Sarah. Reference: Genesis 17–18."
+  },
+  {
+   "id": "jamb-crs-enrich-0020",
+   "type": "mcq",
+   "stem": "Who was Abraham's son by Sarah?",
+   "options": {
+    "A": "Isaac",
+    "B": "Ishmael",
+    "C": "Esau",
+    "D": "Jacob"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Isaac. Reference: Genesis 21."
+  },
+  {
+   "id": "jamb-crs-enrich-0021",
+   "type": "mcq",
+   "stem": "Which person was Abraham's son by Sarah?",
+   "options": {
+    "A": "Ishmael",
+    "B": "Esau",
+    "C": "Jacob",
+    "D": "Isaac"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Isaac. Reference: Genesis 21."
+  },
+  {
+   "id": "jamb-crs-enrich-0022",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Abraham's son by Sarah?",
+   "options": {
+    "A": "Esau",
+    "B": "Jacob",
+    "C": "Isaac",
+    "D": "Ishmael"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Isaac. Reference: Genesis 21."
+  },
+  {
+   "id": "jamb-crs-enrich-0023",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Abraham's son by Sarah?",
+   "options": {
+    "A": "Jacob",
+    "B": "Isaac",
+    "C": "Ishmael",
+    "D": "Esau"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Isaac. Reference: Genesis 21."
+  },
+  {
+   "id": "jamb-crs-enrich-0024",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Abraham's son by Sarah?",
+   "options": {
+    "A": "Isaac",
+    "B": "Ishmael",
+    "C": "Esau",
+    "D": "Jacob"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Isaac. Reference: Genesis 21."
+  },
+  {
+   "id": "jamb-crs-enrich-0026",
+   "type": "mcq",
+   "stem": "Which person was Isaac's wife?",
+   "options": {
+    "A": "Rachel",
+    "B": "Ruth",
+    "C": "Rebekah",
+    "D": "Sarah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Rebekah. Reference: Genesis 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0027",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Isaac's wife?",
+   "options": {
+    "A": "Ruth",
+    "B": "Rebekah",
+    "C": "Sarah",
+    "D": "Rachel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Rebekah. Reference: Genesis 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0028",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Isaac's wife?",
+   "options": {
+    "A": "Rebekah",
+    "B": "Sarah",
+    "C": "Rachel",
+    "D": "Ruth"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Rebekah. Reference: Genesis 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0029",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Isaac's wife?",
+   "options": {
+    "A": "Sarah",
+    "B": "Rachel",
+    "C": "Ruth",
+    "D": "Rebekah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Rebekah. Reference: Genesis 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0030",
+   "type": "mcq",
+   "stem": "Who were the twin sons of Isaac?",
+   "options": {
+    "A": "Moses and Aaron",
+    "B": "Peter and Andrew",
+    "C": "Esau and Jacob",
+    "D": "Cain and Abel"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Esau and Jacob. Reference: Genesis 25."
+  },
+  {
+   "id": "jamb-crs-enrich-0031",
+   "type": "mcq",
+   "stem": "Which person were the twin sons of Isaac?",
+   "options": {
+    "A": "Peter and Andrew",
+    "B": "Esau and Jacob",
+    "C": "Cain and Abel",
+    "D": "Moses and Aaron"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Esau and Jacob. Reference: Genesis 25."
+  },
+  {
+   "id": "jamb-crs-enrich-0032",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who were the twin sons of Isaac?",
+   "options": {
+    "A": "Esau and Jacob",
+    "B": "Cain and Abel",
+    "C": "Moses and Aaron",
+    "D": "Peter and Andrew"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Esau and Jacob. Reference: Genesis 25."
+  },
+  {
+   "id": "jamb-crs-enrich-0033",
+   "type": "mcq",
+   "stem": "According to the biblical account, who were the twin sons of Isaac?",
+   "options": {
+    "A": "Cain and Abel",
+    "B": "Moses and Aaron",
+    "C": "Peter and Andrew",
+    "D": "Esau and Jacob"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Esau and Jacob. Reference: Genesis 25."
+  },
+  {
+   "id": "jamb-crs-enrich-0034",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who were the twin sons of Isaac?",
+   "options": {
+    "A": "Moses and Aaron",
+    "B": "Peter and Andrew",
+    "C": "Esau and Jacob",
+    "D": "Cain and Abel"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Esau and Jacob. Reference: Genesis 25."
+  },
+  {
+   "id": "jamb-crs-enrich-0035",
+   "type": "mcq",
+   "stem": "What new name was given to Jacob?",
+   "options": {
+    "A": "Benjamin",
+    "B": "Israel",
+    "C": "Judah",
+    "D": "Edom"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Israel. Reference: Genesis 32."
+  },
+  {
+   "id": "jamb-crs-enrich-0036",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What new name was given to Jacob?",
+   "options": {
+    "A": "Israel",
+    "B": "Judah",
+    "C": "Edom",
+    "D": "Benjamin"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Israel. Reference: Genesis 32."
+  },
+  {
+   "id": "jamb-crs-enrich-0037",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What new name was given to Jacob?",
+   "options": {
+    "A": "Judah",
+    "B": "Edom",
+    "C": "Benjamin",
+    "D": "Israel"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Israel. Reference: Genesis 32."
+  },
+  {
+   "id": "jamb-crs-enrich-0038",
+   "type": "mcq",
+   "stem": "According to the biblical account, what new name was given to Jacob?",
+   "options": {
+    "A": "Edom",
+    "B": "Benjamin",
+    "C": "Israel",
+    "D": "Judah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Israel. Reference: Genesis 32."
+  },
+  {
+   "id": "jamb-crs-enrich-0039",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What new name was given to Jacob?",
+   "options": {
+    "A": "Benjamin",
+    "B": "Israel",
+    "C": "Judah",
+    "D": "Edom"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Israel. Reference: Genesis 32."
+  },
+  {
+   "id": "jamb-crs-enrich-0040",
+   "type": "mcq",
+   "stem": "Who was sold into Egypt by his brothers?",
+   "options": {
+    "A": "Joseph",
+    "B": "Benjamin",
+    "C": "Moses",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Joseph. Reference: Genesis 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0041",
+   "type": "mcq",
+   "stem": "Which person was sold into Egypt by his brothers?",
+   "options": {
+    "A": "Benjamin",
+    "B": "Moses",
+    "C": "Samuel",
+    "D": "Joseph"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Joseph. Reference: Genesis 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0042",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was sold into Egypt by his brothers?",
+   "options": {
+    "A": "Moses",
+    "B": "Samuel",
+    "C": "Joseph",
+    "D": "Benjamin"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Joseph. Reference: Genesis 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0043",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was sold into Egypt by his brothers?",
+   "options": {
+    "A": "Samuel",
+    "B": "Joseph",
+    "C": "Benjamin",
+    "D": "Moses"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Joseph. Reference: Genesis 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0044",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was sold into Egypt by his brothers?",
+   "options": {
+    "A": "Joseph",
+    "B": "Benjamin",
+    "C": "Moses",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Joseph. Reference: Genesis 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0045",
+   "type": "mcq",
+   "stem": "What did Joseph interpret for Pharaoh?",
+   "options": {
+    "A": "Laws",
+    "B": "Songs",
+    "C": "Military maps",
+    "D": "Dreams"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Dreams. Reference: Genesis 41."
+  },
+  {
+   "id": "jamb-crs-enrich-0046",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What did Joseph interpret for Pharaoh?",
+   "options": {
+    "A": "Songs",
+    "B": "Military maps",
+    "C": "Dreams",
+    "D": "Laws"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Dreams. Reference: Genesis 41."
+  },
+  {
+   "id": "jamb-crs-enrich-0047",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What did Joseph interpret for Pharaoh?",
+   "options": {
+    "A": "Military maps",
+    "B": "Dreams",
+    "C": "Laws",
+    "D": "Songs"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Dreams. Reference: Genesis 41."
+  },
+  {
+   "id": "jamb-crs-enrich-0048",
+   "type": "mcq",
+   "stem": "According to the biblical account, what did Joseph interpret for Pharaoh?",
+   "options": {
+    "A": "Dreams",
+    "B": "Laws",
+    "C": "Songs",
+    "D": "Military maps"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Dreams. Reference: Genesis 41."
+  },
+  {
+   "id": "jamb-crs-enrich-0049",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What did Joseph interpret for Pharaoh?",
+   "options": {
+    "A": "Laws",
+    "B": "Songs",
+    "C": "Military maps",
+    "D": "Dreams"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Dreams. Reference: Genesis 41."
+  },
+  {
+   "id": "jamb-crs-enrich-0050",
+   "type": "mcq",
+   "stem": "Who led the Israelites out of Egypt?",
+   "options": {
+    "A": "Aaron",
+    "B": "Samuel",
+    "C": "Moses",
+    "D": "Joshua"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Moses. Reference: Exodus 3–14."
+  },
+  {
+   "id": "jamb-crs-enrich-0051",
+   "type": "mcq",
+   "stem": "Which person led the Israelites out of Egypt?",
+   "options": {
+    "A": "Samuel",
+    "B": "Moses",
+    "C": "Joshua",
+    "D": "Aaron"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Moses. Reference: Exodus 3–14."
+  },
+  {
+   "id": "jamb-crs-enrich-0052",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who led the Israelites out of Egypt?",
+   "options": {
+    "A": "Moses",
+    "B": "Joshua",
+    "C": "Aaron",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Moses. Reference: Exodus 3–14."
+  },
+  {
+   "id": "jamb-crs-enrich-0053",
+   "type": "mcq",
+   "stem": "According to the biblical account, who led the Israelites out of Egypt?",
+   "options": {
+    "A": "Joshua",
+    "B": "Aaron",
+    "C": "Samuel",
+    "D": "Moses"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Moses. Reference: Exodus 3–14."
+  },
+  {
+   "id": "jamb-crs-enrich-0054",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who led the Israelites out of Egypt?",
+   "options": {
+    "A": "Aaron",
+    "B": "Samuel",
+    "C": "Moses",
+    "D": "Joshua"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Moses. Reference: Exodus 3–14."
+  },
+  {
+   "id": "jamb-crs-enrich-0055",
+   "type": "mcq",
+   "stem": "What was Moses' brother called?",
+   "options": {
+    "A": "Gershom",
+    "B": "Aaron",
+    "C": "Caleb",
+    "D": "Eleazar"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Aaron. Reference: Exodus 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0056",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was Moses' brother called?",
+   "options": {
+    "A": "Aaron",
+    "B": "Caleb",
+    "C": "Eleazar",
+    "D": "Gershom"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Aaron. Reference: Exodus 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0057",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was Moses' brother called?",
+   "options": {
+    "A": "Caleb",
+    "B": "Eleazar",
+    "C": "Gershom",
+    "D": "Aaron"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Aaron. Reference: Exodus 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0058",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was Moses' brother called?",
+   "options": {
+    "A": "Eleazar",
+    "B": "Gershom",
+    "C": "Aaron",
+    "D": "Caleb"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Aaron. Reference: Exodus 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0059",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was Moses' brother called?",
+   "options": {
+    "A": "Gershom",
+    "B": "Aaron",
+    "C": "Caleb",
+    "D": "Eleazar"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Aaron. Reference: Exodus 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0060",
+   "type": "mcq",
+   "stem": "Where did Moses receive the Ten Commandments?",
+   "options": {
+    "A": "Mount Sinai",
+    "B": "Mount Carmel",
+    "C": "Mount Zion",
+    "D": "Mount Olivet"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mount Sinai. Reference: Exodus 19–20."
+  },
+  {
+   "id": "jamb-crs-enrich-0061",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Where did Moses receive the Ten Commandments?",
+   "options": {
+    "A": "Mount Carmel",
+    "B": "Mount Zion",
+    "C": "Mount Olivet",
+    "D": "Mount Sinai"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mount Sinai. Reference: Exodus 19–20."
+  },
+  {
+   "id": "jamb-crs-enrich-0062",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Where did Moses receive the Ten Commandments?",
+   "options": {
+    "A": "Mount Zion",
+    "B": "Mount Olivet",
+    "C": "Mount Sinai",
+    "D": "Mount Carmel"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Mount Sinai. Reference: Exodus 19–20."
+  },
+  {
+   "id": "jamb-crs-enrich-0063",
+   "type": "mcq",
+   "stem": "According to the biblical account, where did Moses receive the Ten Commandments?",
+   "options": {
+    "A": "Mount Olivet",
+    "B": "Mount Sinai",
+    "C": "Mount Carmel",
+    "D": "Mount Zion"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mount Sinai. Reference: Exodus 19–20."
+  },
+  {
+   "id": "jamb-crs-enrich-0064",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Where did Moses receive the Ten Commandments?",
+   "options": {
+    "A": "Mount Sinai",
+    "B": "Mount Carmel",
+    "C": "Mount Zion",
+    "D": "Mount Olivet"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mount Sinai. Reference: Exodus 19–20."
+  },
+  {
+   "id": "jamb-crs-enrich-0065",
+   "type": "mcq",
+   "stem": "What sea did the Israelites cross during the Exodus?",
+   "options": {
+    "A": "Dead Sea",
+    "B": "Mediterranean Sea",
+    "C": "Sea of Galilee",
+    "D": "Red Sea"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Red Sea. Reference: Exodus 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0066",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What sea did the Israelites cross during the Exodus?",
+   "options": {
+    "A": "Mediterranean Sea",
+    "B": "Sea of Galilee",
+    "C": "Red Sea",
+    "D": "Dead Sea"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Red Sea. Reference: Exodus 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0067",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What sea did the Israelites cross during the Exodus?",
+   "options": {
+    "A": "Sea of Galilee",
+    "B": "Red Sea",
+    "C": "Dead Sea",
+    "D": "Mediterranean Sea"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Red Sea. Reference: Exodus 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0068",
+   "type": "mcq",
+   "stem": "According to the biblical account, what sea did the Israelites cross during the Exodus?",
+   "options": {
+    "A": "Red Sea",
+    "B": "Dead Sea",
+    "C": "Mediterranean Sea",
+    "D": "Sea of Galilee"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Red Sea. Reference: Exodus 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0069",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What sea did the Israelites cross during the Exodus?",
+   "options": {
+    "A": "Dead Sea",
+    "B": "Mediterranean Sea",
+    "C": "Sea of Galilee",
+    "D": "Red Sea"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Red Sea. Reference: Exodus 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0070",
+   "type": "mcq",
+   "stem": "What food did God provide for Israel in the wilderness?",
+   "options": {
+    "A": "Olives",
+    "B": "Fish",
+    "C": "Manna",
+    "D": "Grapes"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Manna. Reference: Exodus 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0071",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What food did God provide for Israel in the wilderness?",
+   "options": {
+    "A": "Fish",
+    "B": "Manna",
+    "C": "Grapes",
+    "D": "Olives"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Manna. Reference: Exodus 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0072",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What food did God provide for Israel in the wilderness?",
+   "options": {
+    "A": "Manna",
+    "B": "Grapes",
+    "C": "Olives",
+    "D": "Fish"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Manna. Reference: Exodus 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0073",
+   "type": "mcq",
+   "stem": "According to the biblical account, what food did God provide for Israel in the wilderness?",
+   "options": {
+    "A": "Grapes",
+    "B": "Olives",
+    "C": "Fish",
+    "D": "Manna"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Manna. Reference: Exodus 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0074",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What food did God provide for Israel in the wilderness?",
+   "options": {
+    "A": "Olives",
+    "B": "Fish",
+    "C": "Manna",
+    "D": "Grapes"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Manna. Reference: Exodus 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0075",
+   "type": "mcq",
+   "stem": "Who succeeded Moses as leader of Israel?",
+   "options": {
+    "A": "Samuel",
+    "B": "Joshua",
+    "C": "Caleb",
+    "D": "Aaron"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Joshua. Reference: Joshua 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0076",
+   "type": "mcq",
+   "stem": "Which person succeeded Moses as leader of Israel?",
+   "options": {
+    "A": "Joshua",
+    "B": "Caleb",
+    "C": "Aaron",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Joshua. Reference: Joshua 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0077",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who succeeded Moses as leader of Israel?",
+   "options": {
+    "A": "Caleb",
+    "B": "Aaron",
+    "C": "Samuel",
+    "D": "Joshua"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Joshua. Reference: Joshua 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0078",
+   "type": "mcq",
+   "stem": "According to the biblical account, who succeeded Moses as leader of Israel?",
+   "options": {
+    "A": "Aaron",
+    "B": "Samuel",
+    "C": "Joshua",
+    "D": "Caleb"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Joshua. Reference: Joshua 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0079",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who succeeded Moses as leader of Israel?",
+   "options": {
+    "A": "Samuel",
+    "B": "Joshua",
+    "C": "Caleb",
+    "D": "Aaron"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Joshua. Reference: Joshua 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0080",
+   "type": "mcq",
+   "stem": "What city fell after Israel marched around it?",
+   "options": {
+    "A": "Jericho",
+    "B": "Jerusalem",
+    "C": "Samaria",
+    "D": "Bethlehem"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Jericho. Reference: Joshua 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0081",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What city fell after Israel marched around it?",
+   "options": {
+    "A": "Jerusalem",
+    "B": "Samaria",
+    "C": "Bethlehem",
+    "D": "Jericho"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Jericho. Reference: Joshua 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0082",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What city fell after Israel marched around it?",
+   "options": {
+    "A": "Samaria",
+    "B": "Bethlehem",
+    "C": "Jericho",
+    "D": "Jerusalem"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Jericho. Reference: Joshua 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0083",
+   "type": "mcq",
+   "stem": "According to the biblical account, what city fell after Israel marched around it?",
+   "options": {
+    "A": "Bethlehem",
+    "B": "Jericho",
+    "C": "Jerusalem",
+    "D": "Samaria"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jericho. Reference: Joshua 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0084",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What city fell after Israel marched around it?",
+   "options": {
+    "A": "Jericho",
+    "B": "Jerusalem",
+    "C": "Samaria",
+    "D": "Bethlehem"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Jericho. Reference: Joshua 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0085",
+   "type": "mcq",
+   "stem": "Who was the woman judge of Israel?",
+   "options": {
+    "A": "Ruth",
+    "B": "Hannah",
+    "C": "Esther",
+    "D": "Deborah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Deborah. Reference: Judges 4–5."
+  },
+  {
+   "id": "jamb-crs-enrich-0086",
+   "type": "mcq",
+   "stem": "Which person was the woman judge of Israel?",
+   "options": {
+    "A": "Hannah",
+    "B": "Esther",
+    "C": "Deborah",
+    "D": "Ruth"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Deborah. Reference: Judges 4–5."
+  },
+  {
+   "id": "jamb-crs-enrich-0087",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the woman judge of Israel?",
+   "options": {
+    "A": "Esther",
+    "B": "Deborah",
+    "C": "Ruth",
+    "D": "Hannah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Deborah. Reference: Judges 4–5."
+  },
+  {
+   "id": "jamb-crs-enrich-0088",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the woman judge of Israel?",
+   "options": {
+    "A": "Deborah",
+    "B": "Ruth",
+    "C": "Hannah",
+    "D": "Esther"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Deborah. Reference: Judges 4–5."
+  },
+  {
+   "id": "jamb-crs-enrich-0089",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the woman judge of Israel?",
+   "options": {
+    "A": "Ruth",
+    "B": "Hannah",
+    "C": "Esther",
+    "D": "Deborah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Deborah. Reference: Judges 4–5."
+  },
+  {
+   "id": "jamb-crs-enrich-0090",
+   "type": "mcq",
+   "stem": "Who defeated the Midianites with a small army?",
+   "options": {
+    "A": "Jephthah",
+    "B": "Saul",
+    "C": "Gideon",
+    "D": "Samson"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Gideon. Reference: Judges 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0091",
+   "type": "mcq",
+   "stem": "Which person defeated the Midianites with a small army?",
+   "options": {
+    "A": "Saul",
+    "B": "Gideon",
+    "C": "Samson",
+    "D": "Jephthah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Gideon. Reference: Judges 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0092",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who defeated the Midianites with a small army?",
+   "options": {
+    "A": "Gideon",
+    "B": "Samson",
+    "C": "Jephthah",
+    "D": "Saul"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Gideon. Reference: Judges 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0093",
+   "type": "mcq",
+   "stem": "According to the biblical account, who defeated the Midianites with a small army?",
+   "options": {
+    "A": "Samson",
+    "B": "Jephthah",
+    "C": "Saul",
+    "D": "Gideon"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Gideon. Reference: Judges 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0094",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who defeated the Midianites with a small army?",
+   "options": {
+    "A": "Jephthah",
+    "B": "Saul",
+    "C": "Gideon",
+    "D": "Samson"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Gideon. Reference: Judges 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0095",
+   "type": "mcq",
+   "stem": "What was Samson's strength associated with?",
+   "options": {
+    "A": "His wealth",
+    "B": "His uncut hair",
+    "C": "His sword",
+    "D": "His crown"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "His uncut hair. Reference: Judges 13–16."
+  },
+  {
+   "id": "jamb-crs-enrich-0096",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was Samson's strength associated with?",
+   "options": {
+    "A": "His uncut hair",
+    "B": "His sword",
+    "C": "His crown",
+    "D": "His wealth"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "His uncut hair. Reference: Judges 13–16."
+  },
+  {
+   "id": "jamb-crs-enrich-0097",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was Samson's strength associated with?",
+   "options": {
+    "A": "His sword",
+    "B": "His crown",
+    "C": "His wealth",
+    "D": "His uncut hair"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "His uncut hair. Reference: Judges 13–16."
+  },
+  {
+   "id": "jamb-crs-enrich-0098",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was Samson's strength associated with?",
+   "options": {
+    "A": "His crown",
+    "B": "His wealth",
+    "C": "His uncut hair",
+    "D": "His sword"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "His uncut hair. Reference: Judges 13–16."
+  },
+  {
+   "id": "jamb-crs-enrich-0099",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was Samson's strength associated with?",
+   "options": {
+    "A": "His wealth",
+    "B": "His uncut hair",
+    "C": "His sword",
+    "D": "His crown"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "His uncut hair. Reference: Judges 13–16."
+  },
+  {
+   "id": "jamb-crs-enrich-0100",
+   "type": "mcq",
+   "stem": "Who was Samson's Philistine lover who betrayed him?",
+   "options": {
+    "A": "Delilah",
+    "B": "Rahab",
+    "C": "Jezebel",
+    "D": "Michal"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Delilah. Reference: Judges 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0101",
+   "type": "mcq",
+   "stem": "Which person was Samson's Philistine lover who betrayed him?",
+   "options": {
+    "A": "Rahab",
+    "B": "Jezebel",
+    "C": "Michal",
+    "D": "Delilah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Delilah. Reference: Judges 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0102",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Samson's Philistine lover who betrayed him?",
+   "options": {
+    "A": "Jezebel",
+    "B": "Michal",
+    "C": "Delilah",
+    "D": "Rahab"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Delilah. Reference: Judges 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0103",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Samson's Philistine lover who betrayed him?",
+   "options": {
+    "A": "Michal",
+    "B": "Delilah",
+    "C": "Rahab",
+    "D": "Jezebel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Delilah. Reference: Judges 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0104",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Samson's Philistine lover who betrayed him?",
+   "options": {
+    "A": "Delilah",
+    "B": "Rahab",
+    "C": "Jezebel",
+    "D": "Michal"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Delilah. Reference: Judges 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0106",
+   "type": "mcq",
+   "stem": "Which person was Ruth's mother-in-law?",
+   "options": {
+    "A": "Miriam",
+    "B": "Elizabeth",
+    "C": "Naomi",
+    "D": "Hannah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Naomi. Reference: Ruth 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0107",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Ruth's mother-in-law?",
+   "options": {
+    "A": "Elizabeth",
+    "B": "Naomi",
+    "C": "Hannah",
+    "D": "Miriam"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Naomi. Reference: Ruth 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0108",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Ruth's mother-in-law?",
+   "options": {
+    "A": "Naomi",
+    "B": "Hannah",
+    "C": "Miriam",
+    "D": "Elizabeth"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Naomi. Reference: Ruth 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0109",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Ruth's mother-in-law?",
+   "options": {
+    "A": "Hannah",
+    "B": "Miriam",
+    "C": "Elizabeth",
+    "D": "Naomi"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Naomi. Reference: Ruth 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0110",
+   "type": "mcq",
+   "stem": "Who married Ruth?",
+   "options": {
+    "A": "Elimelech",
+    "B": "Obed",
+    "C": "Boaz",
+    "D": "Jesse"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Boaz. Reference: Ruth 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0111",
+   "type": "mcq",
+   "stem": "Which person married Ruth?",
+   "options": {
+    "A": "Obed",
+    "B": "Boaz",
+    "C": "Jesse",
+    "D": "Elimelech"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Boaz. Reference: Ruth 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0112",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who married Ruth?",
+   "options": {
+    "A": "Boaz",
+    "B": "Jesse",
+    "C": "Elimelech",
+    "D": "Obed"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Boaz. Reference: Ruth 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0113",
+   "type": "mcq",
+   "stem": "According to the biblical account, who married Ruth?",
+   "options": {
+    "A": "Jesse",
+    "B": "Elimelech",
+    "C": "Obed",
+    "D": "Boaz"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Boaz. Reference: Ruth 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0114",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who married Ruth?",
+   "options": {
+    "A": "Elimelech",
+    "B": "Obed",
+    "C": "Boaz",
+    "D": "Jesse"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Boaz. Reference: Ruth 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0115",
+   "type": "mcq",
+   "stem": "Who was Samuel's mother?",
+   "options": {
+    "A": "Miriam",
+    "B": "Hannah",
+    "C": "Peninnah",
+    "D": "Naomi"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Hannah. Reference: 1 Samuel 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0116",
+   "type": "mcq",
+   "stem": "Which person was Samuel's mother?",
+   "options": {
+    "A": "Hannah",
+    "B": "Peninnah",
+    "C": "Naomi",
+    "D": "Miriam"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hannah. Reference: 1 Samuel 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0117",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Samuel's mother?",
+   "options": {
+    "A": "Peninnah",
+    "B": "Naomi",
+    "C": "Miriam",
+    "D": "Hannah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Hannah. Reference: 1 Samuel 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0118",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Samuel's mother?",
+   "options": {
+    "A": "Naomi",
+    "B": "Miriam",
+    "C": "Hannah",
+    "D": "Peninnah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Hannah. Reference: 1 Samuel 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0119",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Samuel's mother?",
+   "options": {
+    "A": "Miriam",
+    "B": "Hannah",
+    "C": "Peninnah",
+    "D": "Naomi"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Hannah. Reference: 1 Samuel 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0120",
+   "type": "mcq",
+   "stem": "Who was Israel's first king?",
+   "options": {
+    "A": "Saul",
+    "B": "David",
+    "C": "Solomon",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Saul. Reference: 1 Samuel 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0121",
+   "type": "mcq",
+   "stem": "Which person was Israel's first king?",
+   "options": {
+    "A": "David",
+    "B": "Solomon",
+    "C": "Samuel",
+    "D": "Saul"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Saul. Reference: 1 Samuel 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0122",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Israel's first king?",
+   "options": {
+    "A": "Solomon",
+    "B": "Samuel",
+    "C": "Saul",
+    "D": "David"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Saul. Reference: 1 Samuel 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0123",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Israel's first king?",
+   "options": {
+    "A": "Samuel",
+    "B": "Saul",
+    "C": "David",
+    "D": "Solomon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Saul. Reference: 1 Samuel 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0124",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Israel's first king?",
+   "options": {
+    "A": "Saul",
+    "B": "David",
+    "C": "Solomon",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Saul. Reference: 1 Samuel 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0125",
+   "type": "mcq",
+   "stem": "Who defeated Goliath?",
+   "options": {
+    "A": "Saul",
+    "B": "Jonathan",
+    "C": "Abner",
+    "D": "David"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "David. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0126",
+   "type": "mcq",
+   "stem": "Which person defeated Goliath?",
+   "options": {
+    "A": "Jonathan",
+    "B": "Abner",
+    "C": "David",
+    "D": "Saul"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "David. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0127",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who defeated Goliath?",
+   "options": {
+    "A": "Abner",
+    "B": "David",
+    "C": "Saul",
+    "D": "Jonathan"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "David. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0128",
+   "type": "mcq",
+   "stem": "According to the biblical account, who defeated Goliath?",
+   "options": {
+    "A": "David",
+    "B": "Saul",
+    "C": "Jonathan",
+    "D": "Abner"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "David. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0129",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who defeated Goliath?",
+   "options": {
+    "A": "Saul",
+    "B": "Jonathan",
+    "C": "Abner",
+    "D": "David"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "David. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0130",
+   "type": "mcq",
+   "stem": "What weapon did David use against Goliath?",
+   "options": {
+    "A": "A sword",
+    "B": "A bow",
+    "C": "A sling and a stone",
+    "D": "A spear"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A sling and a stone. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0131",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What weapon did David use against Goliath?",
+   "options": {
+    "A": "A bow",
+    "B": "A sling and a stone",
+    "C": "A spear",
+    "D": "A sword"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A sling and a stone. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0132",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What weapon did David use against Goliath?",
+   "options": {
+    "A": "A sling and a stone",
+    "B": "A spear",
+    "C": "A sword",
+    "D": "A bow"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A sling and a stone. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0133",
+   "type": "mcq",
+   "stem": "According to the biblical account, what weapon did David use against Goliath?",
+   "options": {
+    "A": "A spear",
+    "B": "A sword",
+    "C": "A bow",
+    "D": "A sling and a stone"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "A sling and a stone. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0134",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What weapon did David use against Goliath?",
+   "options": {
+    "A": "A sword",
+    "B": "A bow",
+    "C": "A sling and a stone",
+    "D": "A spear"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A sling and a stone. Reference: 1 Samuel 17."
+  },
+  {
+   "id": "jamb-crs-enrich-0135",
+   "type": "mcq",
+   "stem": "Who was David's close friend and Saul's son?",
+   "options": {
+    "A": "Nathan",
+    "B": "Jonathan",
+    "C": "Absalom",
+    "D": "Joab"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jonathan. Reference: 1 Samuel 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0136",
+   "type": "mcq",
+   "stem": "Which person was David's close friend and Saul's son?",
+   "options": {
+    "A": "Jonathan",
+    "B": "Absalom",
+    "C": "Joab",
+    "D": "Nathan"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Jonathan. Reference: 1 Samuel 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0137",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was David's close friend and Saul's son?",
+   "options": {
+    "A": "Absalom",
+    "B": "Joab",
+    "C": "Nathan",
+    "D": "Jonathan"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Jonathan. Reference: 1 Samuel 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0138",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was David's close friend and Saul's son?",
+   "options": {
+    "A": "Joab",
+    "B": "Nathan",
+    "C": "Jonathan",
+    "D": "Absalom"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Jonathan. Reference: 1 Samuel 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0139",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was David's close friend and Saul's son?",
+   "options": {
+    "A": "Nathan",
+    "B": "Jonathan",
+    "C": "Absalom",
+    "D": "Joab"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jonathan. Reference: 1 Samuel 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0140",
+   "type": "mcq",
+   "stem": "Who became king after David?",
+   "options": {
+    "A": "Solomon",
+    "B": "Rehoboam",
+    "C": "Saul",
+    "D": "Jeroboam"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Solomon. Reference: 1 Kings 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0141",
+   "type": "mcq",
+   "stem": "Which person became king after David?",
+   "options": {
+    "A": "Rehoboam",
+    "B": "Saul",
+    "C": "Jeroboam",
+    "D": "Solomon"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Solomon. Reference: 1 Kings 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0142",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who became king after David?",
+   "options": {
+    "A": "Saul",
+    "B": "Jeroboam",
+    "C": "Solomon",
+    "D": "Rehoboam"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Solomon. Reference: 1 Kings 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0143",
+   "type": "mcq",
+   "stem": "According to the biblical account, who became king after David?",
+   "options": {
+    "A": "Jeroboam",
+    "B": "Solomon",
+    "C": "Rehoboam",
+    "D": "Saul"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Solomon. Reference: 1 Kings 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0144",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who became king after David?",
+   "options": {
+    "A": "Solomon",
+    "B": "Rehoboam",
+    "C": "Saul",
+    "D": "Jeroboam"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Solomon. Reference: 1 Kings 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0145",
+   "type": "mcq",
+   "stem": "What did Solomon ask God for?",
+   "options": {
+    "A": "Wealth",
+    "B": "Long life",
+    "C": "Military power",
+    "D": "Wisdom"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Wisdom. Reference: 1 Kings 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0146",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What did Solomon ask God for?",
+   "options": {
+    "A": "Long life",
+    "B": "Military power",
+    "C": "Wisdom",
+    "D": "Wealth"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Wisdom. Reference: 1 Kings 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0147",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What did Solomon ask God for?",
+   "options": {
+    "A": "Military power",
+    "B": "Wisdom",
+    "C": "Wealth",
+    "D": "Long life"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Wisdom. Reference: 1 Kings 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0148",
+   "type": "mcq",
+   "stem": "According to the biblical account, what did Solomon ask God for?",
+   "options": {
+    "A": "Wisdom",
+    "B": "Wealth",
+    "C": "Long life",
+    "D": "Military power"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Wisdom. Reference: 1 Kings 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0149",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What did Solomon ask God for?",
+   "options": {
+    "A": "Wealth",
+    "B": "Long life",
+    "C": "Military power",
+    "D": "Wisdom"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Wisdom. Reference: 1 Kings 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0151",
+   "type": "mcq",
+   "stem": "Which person built the first temple in Jerusalem?",
+   "options": {
+    "A": "Hezekiah",
+    "B": "Solomon",
+    "C": "David",
+    "D": "Saul"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Solomon. Reference: 1 Kings 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0152",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who built the first temple in Jerusalem?",
+   "options": {
+    "A": "Solomon",
+    "B": "David",
+    "C": "Saul",
+    "D": "Hezekiah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Solomon. Reference: 1 Kings 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0153",
+   "type": "mcq",
+   "stem": "According to the biblical account, who built the first temple in Jerusalem?",
+   "options": {
+    "A": "David",
+    "B": "Saul",
+    "C": "Hezekiah",
+    "D": "Solomon"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Solomon. Reference: 1 Kings 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0154",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who built the first temple in Jerusalem?",
+   "options": {
+    "A": "Saul",
+    "B": "Hezekiah",
+    "C": "Solomon",
+    "D": "David"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Solomon. Reference: 1 Kings 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0155",
+   "type": "mcq",
+   "stem": "Who challenged the prophets of Baal on Mount Carmel?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Elijah",
+    "C": "Elisha",
+    "D": "Isaiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Elijah. Reference: 1 Kings 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0156",
+   "type": "mcq",
+   "stem": "Which person challenged the prophets of Baal on Mount Carmel?",
+   "options": {
+    "A": "Elijah",
+    "B": "Elisha",
+    "C": "Isaiah",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Elijah. Reference: 1 Kings 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0157",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who challenged the prophets of Baal on Mount Carmel?",
+   "options": {
+    "A": "Elisha",
+    "B": "Isaiah",
+    "C": "Jeremiah",
+    "D": "Elijah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Elijah. Reference: 1 Kings 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0158",
+   "type": "mcq",
+   "stem": "According to the biblical account, who challenged the prophets of Baal on Mount Carmel?",
+   "options": {
+    "A": "Isaiah",
+    "B": "Jeremiah",
+    "C": "Elijah",
+    "D": "Elisha"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Elijah. Reference: 1 Kings 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0159",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who challenged the prophets of Baal on Mount Carmel?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Elijah",
+    "C": "Elisha",
+    "D": "Isaiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Elijah. Reference: 1 Kings 18."
+  },
+  {
+   "id": "jamb-crs-enrich-0160",
+   "type": "mcq",
+   "stem": "Who was Elijah's successor?",
+   "options": {
+    "A": "Elisha",
+    "B": "Isaiah",
+    "C": "Samuel",
+    "D": "Amos"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Elisha. Reference: 2 Kings 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0161",
+   "type": "mcq",
+   "stem": "Which person was Elijah's successor?",
+   "options": {
+    "A": "Isaiah",
+    "B": "Samuel",
+    "C": "Amos",
+    "D": "Elisha"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Elisha. Reference: 2 Kings 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0162",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Elijah's successor?",
+   "options": {
+    "A": "Samuel",
+    "B": "Amos",
+    "C": "Elisha",
+    "D": "Isaiah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Elisha. Reference: 2 Kings 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0163",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Elijah's successor?",
+   "options": {
+    "A": "Amos",
+    "B": "Elisha",
+    "C": "Isaiah",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Elisha. Reference: 2 Kings 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0164",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Elijah's successor?",
+   "options": {
+    "A": "Elisha",
+    "B": "Isaiah",
+    "C": "Samuel",
+    "D": "Amos"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Elisha. Reference: 2 Kings 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0165",
+   "type": "mcq",
+   "stem": "Which prophet confronted David over his sin with Bathsheba?",
+   "options": {
+    "A": "Elijah",
+    "B": "Gad",
+    "C": "Samuel",
+    "D": "Nathan"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nathan. Reference: 2 Samuel 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0166",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which prophet confronted David over his sin with Bathsheba?",
+   "options": {
+    "A": "Gad",
+    "B": "Samuel",
+    "C": "Nathan",
+    "D": "Elijah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Nathan. Reference: 2 Samuel 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0167",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which prophet confronted David over his sin with Bathsheba?",
+   "options": {
+    "A": "Samuel",
+    "B": "Nathan",
+    "C": "Elijah",
+    "D": "Gad"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nathan. Reference: 2 Samuel 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0168",
+   "type": "mcq",
+   "stem": "According to the biblical account, which prophet confronted David over his sin with Bathsheba?",
+   "options": {
+    "A": "Nathan",
+    "B": "Elijah",
+    "C": "Gad",
+    "D": "Samuel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Nathan. Reference: 2 Samuel 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0169",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which prophet confronted David over his sin with Bathsheba?",
+   "options": {
+    "A": "Elijah",
+    "B": "Gad",
+    "C": "Samuel",
+    "D": "Nathan"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nathan. Reference: 2 Samuel 12."
+  },
+  {
+   "id": "jamb-crs-enrich-0170",
+   "type": "mcq",
+   "stem": "Who was David's son who rebelled against him?",
+   "options": {
+    "A": "Solomon",
+    "B": "Amnon",
+    "C": "Absalom",
+    "D": "Jonathan"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Absalom. Reference: 2 Samuel 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0171",
+   "type": "mcq",
+   "stem": "Which person was David's son who rebelled against him?",
+   "options": {
+    "A": "Amnon",
+    "B": "Absalom",
+    "C": "Jonathan",
+    "D": "Solomon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Absalom. Reference: 2 Samuel 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0172",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was David's son who rebelled against him?",
+   "options": {
+    "A": "Absalom",
+    "B": "Jonathan",
+    "C": "Solomon",
+    "D": "Amnon"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Absalom. Reference: 2 Samuel 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0173",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was David's son who rebelled against him?",
+   "options": {
+    "A": "Jonathan",
+    "B": "Solomon",
+    "C": "Amnon",
+    "D": "Absalom"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Absalom. Reference: 2 Samuel 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0174",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was David's son who rebelled against him?",
+   "options": {
+    "A": "Solomon",
+    "B": "Amnon",
+    "C": "Absalom",
+    "D": "Jonathan"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Absalom. Reference: 2 Samuel 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0175",
+   "type": "mcq",
+   "stem": "Which king asked for healing and received fifteen additional years?",
+   "options": {
+    "A": "Manasseh",
+    "B": "Hezekiah",
+    "C": "Josiah",
+    "D": "Ahab"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Hezekiah. Reference: 2 Kings 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0176",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which king asked for healing and received fifteen additional years?",
+   "options": {
+    "A": "Hezekiah",
+    "B": "Josiah",
+    "C": "Ahab",
+    "D": "Manasseh"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Hezekiah. Reference: 2 Kings 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0177",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which king asked for healing and received fifteen additional years?",
+   "options": {
+    "A": "Josiah",
+    "B": "Ahab",
+    "C": "Manasseh",
+    "D": "Hezekiah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Hezekiah. Reference: 2 Kings 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0178",
+   "type": "mcq",
+   "stem": "According to the biblical account, which king asked for healing and received fifteen additional years?",
+   "options": {
+    "A": "Ahab",
+    "B": "Manasseh",
+    "C": "Hezekiah",
+    "D": "Josiah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Hezekiah. Reference: 2 Kings 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0179",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which king asked for healing and received fifteen additional years?",
+   "options": {
+    "A": "Manasseh",
+    "B": "Hezekiah",
+    "C": "Josiah",
+    "D": "Ahab"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Hezekiah. Reference: 2 Kings 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0180",
+   "type": "mcq",
+   "stem": "Which prophet was swallowed by a great fish?",
+   "options": {
+    "A": "Jonah",
+    "B": "Amos",
+    "C": "Hosea",
+    "D": "Micah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Jonah. Reference: Jonah 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0181",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which prophet was swallowed by a great fish?",
+   "options": {
+    "A": "Amos",
+    "B": "Hosea",
+    "C": "Micah",
+    "D": "Jonah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Jonah. Reference: Jonah 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0182",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which prophet was swallowed by a great fish?",
+   "options": {
+    "A": "Hosea",
+    "B": "Micah",
+    "C": "Jonah",
+    "D": "Amos"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Jonah. Reference: Jonah 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0183",
+   "type": "mcq",
+   "stem": "According to the biblical account, which prophet was swallowed by a great fish?",
+   "options": {
+    "A": "Micah",
+    "B": "Jonah",
+    "C": "Amos",
+    "D": "Hosea"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jonah. Reference: Jonah 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0184",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which prophet was swallowed by a great fish?",
+   "options": {
+    "A": "Jonah",
+    "B": "Amos",
+    "C": "Hosea",
+    "D": "Micah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Jonah. Reference: Jonah 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0185",
+   "type": "mcq",
+   "stem": "What was Jonah sent to preach to?",
+   "options": {
+    "A": "Babylon",
+    "B": "Jerusalem",
+    "C": "Samaria",
+    "D": "Nineveh"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nineveh. Reference: Jonah 1–3."
+  },
+  {
+   "id": "jamb-crs-enrich-0186",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was Jonah sent to preach to?",
+   "options": {
+    "A": "Jerusalem",
+    "B": "Samaria",
+    "C": "Nineveh",
+    "D": "Babylon"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Nineveh. Reference: Jonah 1–3."
+  },
+  {
+   "id": "jamb-crs-enrich-0187",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was Jonah sent to preach to?",
+   "options": {
+    "A": "Samaria",
+    "B": "Nineveh",
+    "C": "Babylon",
+    "D": "Jerusalem"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nineveh. Reference: Jonah 1–3."
+  },
+  {
+   "id": "jamb-crs-enrich-0188",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was Jonah sent to preach to?",
+   "options": {
+    "A": "Nineveh",
+    "B": "Babylon",
+    "C": "Jerusalem",
+    "D": "Samaria"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Nineveh. Reference: Jonah 1–3."
+  },
+  {
+   "id": "jamb-crs-enrich-0189",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was Jonah sent to preach to?",
+   "options": {
+    "A": "Babylon",
+    "B": "Jerusalem",
+    "C": "Samaria",
+    "D": "Nineveh"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nineveh. Reference: Jonah 1–3."
+  },
+  {
+   "id": "jamb-crs-enrich-0190",
+   "type": "mcq",
+   "stem": "Which prophet spoke of a coming ruler from Bethlehem?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Ezekiel",
+    "C": "Micah",
+    "D": "Isaiah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Micah. Reference: Micah 5:2."
+  },
+  {
+   "id": "jamb-crs-enrich-0191",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which prophet spoke of a coming ruler from Bethlehem?",
+   "options": {
+    "A": "Ezekiel",
+    "B": "Micah",
+    "C": "Isaiah",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Micah. Reference: Micah 5:2."
+  },
+  {
+   "id": "jamb-crs-enrich-0192",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which prophet spoke of a coming ruler from Bethlehem?",
+   "options": {
+    "A": "Micah",
+    "B": "Isaiah",
+    "C": "Jeremiah",
+    "D": "Ezekiel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Micah. Reference: Micah 5:2."
+  },
+  {
+   "id": "jamb-crs-enrich-0193",
+   "type": "mcq",
+   "stem": "According to the biblical account, which prophet spoke of a coming ruler from Bethlehem?",
+   "options": {
+    "A": "Isaiah",
+    "B": "Jeremiah",
+    "C": "Ezekiel",
+    "D": "Micah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Micah. Reference: Micah 5:2."
+  },
+  {
+   "id": "jamb-crs-enrich-0194",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which prophet spoke of a coming ruler from Bethlehem?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Ezekiel",
+    "C": "Micah",
+    "D": "Isaiah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Micah. Reference: Micah 5:2."
+  },
+  {
+   "id": "jamb-crs-enrich-0195",
+   "type": "mcq",
+   "stem": "Which prophet saw a vision of dry bones?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Ezekiel",
+    "C": "Isaiah",
+    "D": "Daniel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ezekiel. Reference: Ezekiel 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0196",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which prophet saw a vision of dry bones?",
+   "options": {
+    "A": "Ezekiel",
+    "B": "Isaiah",
+    "C": "Daniel",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ezekiel. Reference: Ezekiel 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0197",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which prophet saw a vision of dry bones?",
+   "options": {
+    "A": "Isaiah",
+    "B": "Daniel",
+    "C": "Jeremiah",
+    "D": "Ezekiel"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Ezekiel. Reference: Ezekiel 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0198",
+   "type": "mcq",
+   "stem": "According to the biblical account, which prophet saw a vision of dry bones?",
+   "options": {
+    "A": "Daniel",
+    "B": "Jeremiah",
+    "C": "Ezekiel",
+    "D": "Isaiah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Ezekiel. Reference: Ezekiel 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0199",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which prophet saw a vision of dry bones?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Ezekiel",
+    "C": "Isaiah",
+    "D": "Daniel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ezekiel. Reference: Ezekiel 37."
+  },
+  {
+   "id": "jamb-crs-enrich-0200",
+   "type": "mcq",
+   "stem": "Who interpreted dreams in Babylon and served under foreign kings?",
+   "options": {
+    "A": "Daniel",
+    "B": "Nehemiah",
+    "C": "Ezra",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Daniel. Reference: Daniel 1–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0201",
+   "type": "mcq",
+   "stem": "Which person interpreted dreams in Babylon and served under foreign kings?",
+   "options": {
+    "A": "Nehemiah",
+    "B": "Ezra",
+    "C": "Jeremiah",
+    "D": "Daniel"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Daniel. Reference: Daniel 1–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0202",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who interpreted dreams in Babylon and served under foreign kings?",
+   "options": {
+    "A": "Ezra",
+    "B": "Jeremiah",
+    "C": "Daniel",
+    "D": "Nehemiah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Daniel. Reference: Daniel 1–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0203",
+   "type": "mcq",
+   "stem": "According to the biblical account, who interpreted dreams in Babylon and served under foreign kings?",
+   "options": {
+    "A": "Jeremiah",
+    "B": "Daniel",
+    "C": "Nehemiah",
+    "D": "Ezra"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Daniel. Reference: Daniel 1–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0204",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who interpreted dreams in Babylon and served under foreign kings?",
+   "options": {
+    "A": "Daniel",
+    "B": "Nehemiah",
+    "C": "Ezra",
+    "D": "Jeremiah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Daniel. Reference: Daniel 1–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0205",
+   "type": "mcq",
+   "stem": "Who were Daniel's three friends delivered from the fiery furnace?",
+   "options": {
+    "A": "Peter, James and John",
+    "B": "Cain, Abel and Seth",
+    "C": "Paul, Silas and Barnabas",
+    "D": "Shadrach, Meshach and Abednego"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Shadrach, Meshach and Abednego. Reference: Daniel 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0206",
+   "type": "mcq",
+   "stem": "Which person were Daniel's three friends delivered from the fiery furnace?",
+   "options": {
+    "A": "Cain, Abel and Seth",
+    "B": "Paul, Silas and Barnabas",
+    "C": "Shadrach, Meshach and Abednego",
+    "D": "Peter, James and John"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Shadrach, Meshach and Abednego. Reference: Daniel 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0207",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who were Daniel's three friends delivered from the fiery furnace?",
+   "options": {
+    "A": "Paul, Silas and Barnabas",
+    "B": "Shadrach, Meshach and Abednego",
+    "C": "Peter, James and John",
+    "D": "Cain, Abel and Seth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Shadrach, Meshach and Abednego. Reference: Daniel 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0208",
+   "type": "mcq",
+   "stem": "According to the biblical account, who were Daniel's three friends delivered from the fiery furnace?",
+   "options": {
+    "A": "Shadrach, Meshach and Abednego",
+    "B": "Peter, James and John",
+    "C": "Cain, Abel and Seth",
+    "D": "Paul, Silas and Barnabas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Shadrach, Meshach and Abednego. Reference: Daniel 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0209",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who were Daniel's three friends delivered from the fiery furnace?",
+   "options": {
+    "A": "Peter, James and John",
+    "B": "Cain, Abel and Seth",
+    "C": "Paul, Silas and Barnabas",
+    "D": "Shadrach, Meshach and Abednego"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Shadrach, Meshach and Abednego. Reference: Daniel 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0210",
+   "type": "mcq",
+   "stem": "Who was thrown into the lions' den?",
+   "options": {
+    "A": "Joseph",
+    "B": "Elijah",
+    "C": "Daniel",
+    "D": "David"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Daniel. Reference: Daniel 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0211",
+   "type": "mcq",
+   "stem": "Which person was thrown into the lions' den?",
+   "options": {
+    "A": "Elijah",
+    "B": "Daniel",
+    "C": "David",
+    "D": "Joseph"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Daniel. Reference: Daniel 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0212",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was thrown into the lions' den?",
+   "options": {
+    "A": "Daniel",
+    "B": "David",
+    "C": "Joseph",
+    "D": "Elijah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Daniel. Reference: Daniel 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0213",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was thrown into the lions' den?",
+   "options": {
+    "A": "David",
+    "B": "Joseph",
+    "C": "Elijah",
+    "D": "Daniel"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Daniel. Reference: Daniel 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0214",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was thrown into the lions' den?",
+   "options": {
+    "A": "Joseph",
+    "B": "Elijah",
+    "C": "Daniel",
+    "D": "David"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Daniel. Reference: Daniel 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0215",
+   "type": "mcq",
+   "stem": "Who rebuilt the walls of Jerusalem after the exile?",
+   "options": {
+    "A": "Daniel",
+    "B": "Nehemiah",
+    "C": "Ezra",
+    "D": "Zerubbabel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nehemiah. Reference: Nehemiah 2–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0216",
+   "type": "mcq",
+   "stem": "Which person rebuilt the walls of Jerusalem after the exile?",
+   "options": {
+    "A": "Nehemiah",
+    "B": "Ezra",
+    "C": "Zerubbabel",
+    "D": "Daniel"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Nehemiah. Reference: Nehemiah 2–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0217",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who rebuilt the walls of Jerusalem after the exile?",
+   "options": {
+    "A": "Ezra",
+    "B": "Zerubbabel",
+    "C": "Daniel",
+    "D": "Nehemiah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nehemiah. Reference: Nehemiah 2–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0218",
+   "type": "mcq",
+   "stem": "According to the biblical account, who rebuilt the walls of Jerusalem after the exile?",
+   "options": {
+    "A": "Zerubbabel",
+    "B": "Daniel",
+    "C": "Nehemiah",
+    "D": "Ezra"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Nehemiah. Reference: Nehemiah 2–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0219",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who rebuilt the walls of Jerusalem after the exile?",
+   "options": {
+    "A": "Daniel",
+    "B": "Nehemiah",
+    "C": "Ezra",
+    "D": "Zerubbabel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nehemiah. Reference: Nehemiah 2–6."
+  },
+  {
+   "id": "jamb-crs-enrich-0220",
+   "type": "mcq",
+   "stem": "Who was the Jewish queen who helped save her people?",
+   "options": {
+    "A": "Esther",
+    "B": "Ruth",
+    "C": "Deborah",
+    "D": "Miriam"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Esther. Reference: Esther 4–8."
+  },
+  {
+   "id": "jamb-crs-enrich-0221",
+   "type": "mcq",
+   "stem": "Which person was the Jewish queen who helped save her people?",
+   "options": {
+    "A": "Ruth",
+    "B": "Deborah",
+    "C": "Miriam",
+    "D": "Esther"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Esther. Reference: Esther 4–8."
+  },
+  {
+   "id": "jamb-crs-enrich-0222",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the Jewish queen who helped save her people?",
+   "options": {
+    "A": "Deborah",
+    "B": "Miriam",
+    "C": "Esther",
+    "D": "Ruth"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Esther. Reference: Esther 4–8."
+  },
+  {
+   "id": "jamb-crs-enrich-0223",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the Jewish queen who helped save her people?",
+   "options": {
+    "A": "Miriam",
+    "B": "Esther",
+    "C": "Ruth",
+    "D": "Deborah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Esther. Reference: Esther 4–8."
+  },
+  {
+   "id": "jamb-crs-enrich-0224",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the Jewish queen who helped save her people?",
+   "options": {
+    "A": "Esther",
+    "B": "Ruth",
+    "C": "Deborah",
+    "D": "Miriam"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Esther. Reference: Esther 4–8."
+  },
+  {
+   "id": "jamb-crs-enrich-0225",
+   "type": "mcq",
+   "stem": "Who was Esther's cousin and guardian?",
+   "options": {
+    "A": "Haman",
+    "B": "Ezra",
+    "C": "Nehemiah",
+    "D": "Mordecai"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mordecai. Reference: Esther 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0226",
+   "type": "mcq",
+   "stem": "Which person was Esther's cousin and guardian?",
+   "options": {
+    "A": "Ezra",
+    "B": "Nehemiah",
+    "C": "Mordecai",
+    "D": "Haman"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Mordecai. Reference: Esther 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0227",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Esther's cousin and guardian?",
+   "options": {
+    "A": "Nehemiah",
+    "B": "Mordecai",
+    "C": "Haman",
+    "D": "Ezra"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mordecai. Reference: Esther 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0228",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Esther's cousin and guardian?",
+   "options": {
+    "A": "Mordecai",
+    "B": "Haman",
+    "C": "Ezra",
+    "D": "Nehemiah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mordecai. Reference: Esther 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0229",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Esther's cousin and guardian?",
+   "options": {
+    "A": "Haman",
+    "B": "Ezra",
+    "C": "Nehemiah",
+    "D": "Mordecai"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mordecai. Reference: Esther 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0230",
+   "type": "mcq",
+   "stem": "What was the name of the adversary who plotted against the Jews in Esther?",
+   "options": {
+    "A": "Cyrus",
+    "B": "Darius",
+    "C": "Haman",
+    "D": "Mordecai"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Haman. Reference: Esther 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0231",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was the name of the adversary who plotted against the Jews in Esther?",
+   "options": {
+    "A": "Darius",
+    "B": "Haman",
+    "C": "Mordecai",
+    "D": "Cyrus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Haman. Reference: Esther 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0232",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was the name of the adversary who plotted against the Jews in Esther?",
+   "options": {
+    "A": "Haman",
+    "B": "Mordecai",
+    "C": "Cyrus",
+    "D": "Darius"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Haman. Reference: Esther 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0233",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was the name of the adversary who plotted against the Jews in Esther?",
+   "options": {
+    "A": "Mordecai",
+    "B": "Cyrus",
+    "C": "Darius",
+    "D": "Haman"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Haman. Reference: Esther 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0234",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was the name of the adversary who plotted against the Jews in Esther?",
+   "options": {
+    "A": "Cyrus",
+    "B": "Darius",
+    "C": "Haman",
+    "D": "Mordecai"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Haman. Reference: Esther 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0235",
+   "type": "mcq",
+   "stem": "What is the first book of the Bible?",
+   "options": {
+    "A": "Psalms",
+    "B": "Genesis",
+    "C": "Exodus",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0236",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What is the first book of the Bible?",
+   "options": {
+    "A": "Genesis",
+    "B": "Exodus",
+    "C": "Matthew",
+    "D": "Psalms"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Genesis. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0237",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What is the first book of the Bible?",
+   "options": {
+    "A": "Exodus",
+    "B": "Matthew",
+    "C": "Psalms",
+    "D": "Genesis"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Genesis. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0238",
+   "type": "mcq",
+   "stem": "According to the biblical account, what is the first book of the Bible?",
+   "options": {
+    "A": "Matthew",
+    "B": "Psalms",
+    "C": "Genesis",
+    "D": "Exodus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Genesis. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0239",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What is the first book of the Bible?",
+   "options": {
+    "A": "Psalms",
+    "B": "Genesis",
+    "C": "Exodus",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Genesis. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0240",
+   "type": "mcq",
+   "stem": "What is the last book of the Old Testament in the Christian Bible?",
+   "options": {
+    "A": "Malachi",
+    "B": "Zechariah",
+    "C": "Isaiah",
+    "D": "Micah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Malachi. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0241",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What is the last book of the Old Testament in the Christian Bible?",
+   "options": {
+    "A": "Zechariah",
+    "B": "Isaiah",
+    "C": "Micah",
+    "D": "Malachi"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Malachi. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0242",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What is the last book of the Old Testament in the Christian Bible?",
+   "options": {
+    "A": "Isaiah",
+    "B": "Micah",
+    "C": "Malachi",
+    "D": "Zechariah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Malachi. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0243",
+   "type": "mcq",
+   "stem": "According to the biblical account, what is the last book of the Old Testament in the Christian Bible?",
+   "options": {
+    "A": "Micah",
+    "B": "Malachi",
+    "C": "Zechariah",
+    "D": "Isaiah"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Malachi. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0244",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What is the last book of the Old Testament in the Christian Bible?",
+   "options": {
+    "A": "Malachi",
+    "B": "Zechariah",
+    "C": "Isaiah",
+    "D": "Micah"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Malachi. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0245",
+   "type": "mcq",
+   "stem": "What is the first Gospel in the New Testament?",
+   "options": {
+    "A": "Mark",
+    "B": "Luke",
+    "C": "John",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Matthew. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0246",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What is the first Gospel in the New Testament?",
+   "options": {
+    "A": "Luke",
+    "B": "John",
+    "C": "Matthew",
+    "D": "Mark"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Matthew. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0247",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What is the first Gospel in the New Testament?",
+   "options": {
+    "A": "John",
+    "B": "Matthew",
+    "C": "Mark",
+    "D": "Luke"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0248",
+   "type": "mcq",
+   "stem": "According to the biblical account, what is the first Gospel in the New Testament?",
+   "options": {
+    "A": "Matthew",
+    "B": "Mark",
+    "C": "Luke",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Matthew. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0249",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What is the first Gospel in the New Testament?",
+   "options": {
+    "A": "Mark",
+    "B": "Luke",
+    "C": "John",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Matthew. Reference: Bible order."
+  },
+  {
+   "id": "jamb-crs-enrich-0250",
+   "type": "mcq",
+   "stem": "What is the shortest Gospel?",
+   "options": {
+    "A": "Luke",
+    "B": "John",
+    "C": "Mark",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Mark. Reference: Gospel comparison."
+  },
+  {
+   "id": "jamb-crs-enrich-0251",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What is the shortest Gospel?",
+   "options": {
+    "A": "John",
+    "B": "Mark",
+    "C": "Matthew",
+    "D": "Luke"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mark. Reference: Gospel comparison."
+  },
+  {
+   "id": "jamb-crs-enrich-0252",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What is the shortest Gospel?",
+   "options": {
+    "A": "Mark",
+    "B": "Matthew",
+    "C": "Luke",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mark. Reference: Gospel comparison."
+  },
+  {
+   "id": "jamb-crs-enrich-0253",
+   "type": "mcq",
+   "stem": "According to the biblical account, what is the shortest Gospel?",
+   "options": {
+    "A": "Matthew",
+    "B": "Luke",
+    "C": "John",
+    "D": "Mark"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mark. Reference: Gospel comparison."
+  },
+  {
+   "id": "jamb-crs-enrich-0254",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What is the shortest Gospel?",
+   "options": {
+    "A": "Luke",
+    "B": "John",
+    "C": "Mark",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Mark. Reference: Gospel comparison."
+  },
+  {
+   "id": "jamb-crs-enrich-0255",
+   "type": "mcq",
+   "stem": "Who was the mother of Jesus?",
+   "options": {
+    "A": "Anna",
+    "B": "Mary",
+    "C": "Martha",
+    "D": "Elizabeth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mary. Reference: Matthew 1; Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0256",
+   "type": "mcq",
+   "stem": "Which person was the mother of Jesus?",
+   "options": {
+    "A": "Mary",
+    "B": "Martha",
+    "C": "Elizabeth",
+    "D": "Anna"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Mary. Reference: Matthew 1; Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0257",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the mother of Jesus?",
+   "options": {
+    "A": "Martha",
+    "B": "Elizabeth",
+    "C": "Anna",
+    "D": "Mary"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mary. Reference: Matthew 1; Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0258",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the mother of Jesus?",
+   "options": {
+    "A": "Elizabeth",
+    "B": "Anna",
+    "C": "Mary",
+    "D": "Martha"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Mary. Reference: Matthew 1; Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0259",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the mother of Jesus?",
+   "options": {
+    "A": "Anna",
+    "B": "Mary",
+    "C": "Martha",
+    "D": "Elizabeth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Mary. Reference: Matthew 1; Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0260",
+   "type": "mcq",
+   "stem": "Who was Jesus' earthly legal father?",
+   "options": {
+    "A": "Joseph",
+    "B": "Zechariah",
+    "C": "Joachim",
+    "D": "Simeon"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Joseph. Reference: Matthew 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0261",
+   "type": "mcq",
+   "stem": "Which person was Jesus' earthly legal father?",
+   "options": {
+    "A": "Zechariah",
+    "B": "Joachim",
+    "C": "Simeon",
+    "D": "Joseph"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Joseph. Reference: Matthew 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0262",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Jesus' earthly legal father?",
+   "options": {
+    "A": "Joachim",
+    "B": "Simeon",
+    "C": "Joseph",
+    "D": "Zechariah"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Joseph. Reference: Matthew 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0263",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Jesus' earthly legal father?",
+   "options": {
+    "A": "Simeon",
+    "B": "Joseph",
+    "C": "Zechariah",
+    "D": "Joachim"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Joseph. Reference: Matthew 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0264",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Jesus' earthly legal father?",
+   "options": {
+    "A": "Joseph",
+    "B": "Zechariah",
+    "C": "Joachim",
+    "D": "Simeon"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Joseph. Reference: Matthew 1–2."
+  },
+  {
+   "id": "jamb-crs-enrich-0265",
+   "type": "mcq",
+   "stem": "Where was Jesus born?",
+   "options": {
+    "A": "Nazareth",
+    "B": "Jerusalem",
+    "C": "Capernaum",
+    "D": "Bethlehem"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Bethlehem. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0266",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Where was Jesus born?",
+   "options": {
+    "A": "Jerusalem",
+    "B": "Capernaum",
+    "C": "Bethlehem",
+    "D": "Nazareth"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Bethlehem. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0267",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Where was Jesus born?",
+   "options": {
+    "A": "Capernaum",
+    "B": "Bethlehem",
+    "C": "Nazareth",
+    "D": "Jerusalem"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bethlehem. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0268",
+   "type": "mcq",
+   "stem": "According to the biblical account, where was Jesus born?",
+   "options": {
+    "A": "Bethlehem",
+    "B": "Nazareth",
+    "C": "Jerusalem",
+    "D": "Capernaum"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bethlehem. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0269",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Where was Jesus born?",
+   "options": {
+    "A": "Nazareth",
+    "B": "Jerusalem",
+    "C": "Capernaum",
+    "D": "Bethlehem"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Bethlehem. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0270",
+   "type": "mcq",
+   "stem": "Where did Jesus grow up?",
+   "options": {
+    "A": "Jericho",
+    "B": "Bethany",
+    "C": "Nazareth",
+    "D": "Bethlehem"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Nazareth. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0271",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Where did Jesus grow up?",
+   "options": {
+    "A": "Bethany",
+    "B": "Nazareth",
+    "C": "Bethlehem",
+    "D": "Jericho"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nazareth. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0272",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Where did Jesus grow up?",
+   "options": {
+    "A": "Nazareth",
+    "B": "Bethlehem",
+    "C": "Jericho",
+    "D": "Bethany"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Nazareth. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0273",
+   "type": "mcq",
+   "stem": "According to the biblical account, where did Jesus grow up?",
+   "options": {
+    "A": "Bethlehem",
+    "B": "Jericho",
+    "C": "Bethany",
+    "D": "Nazareth"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nazareth. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0274",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Where did Jesus grow up?",
+   "options": {
+    "A": "Jericho",
+    "B": "Bethany",
+    "C": "Nazareth",
+    "D": "Bethlehem"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Nazareth. Reference: Matthew 2; Luke 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0275",
+   "type": "mcq",
+   "stem": "Who announced Jesus' birth to Mary?",
+   "options": {
+    "A": "Peter",
+    "B": "The angel Gabriel",
+    "C": "The angel Michael",
+    "D": "John the Baptist"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The angel Gabriel. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0276",
+   "type": "mcq",
+   "stem": "Which person announced Jesus' birth to Mary?",
+   "options": {
+    "A": "The angel Gabriel",
+    "B": "The angel Michael",
+    "C": "John the Baptist",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The angel Gabriel. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0277",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who announced Jesus' birth to Mary?",
+   "options": {
+    "A": "The angel Michael",
+    "B": "John the Baptist",
+    "C": "Peter",
+    "D": "The angel Gabriel"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The angel Gabriel. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0278",
+   "type": "mcq",
+   "stem": "According to the biblical account, who announced Jesus' birth to Mary?",
+   "options": {
+    "A": "John the Baptist",
+    "B": "Peter",
+    "C": "The angel Gabriel",
+    "D": "The angel Michael"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The angel Gabriel. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0279",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who announced Jesus' birth to Mary?",
+   "options": {
+    "A": "Peter",
+    "B": "The angel Gabriel",
+    "C": "The angel Michael",
+    "D": "John the Baptist"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The angel Gabriel. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0280",
+   "type": "mcq",
+   "stem": "Who was the father of John the Baptist?",
+   "options": {
+    "A": "Zechariah",
+    "B": "Joseph",
+    "C": "Simeon",
+    "D": "Jairus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Zechariah. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0281",
+   "type": "mcq",
+   "stem": "Which person was the father of John the Baptist?",
+   "options": {
+    "A": "Joseph",
+    "B": "Simeon",
+    "C": "Jairus",
+    "D": "Zechariah"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Zechariah. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0282",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the father of John the Baptist?",
+   "options": {
+    "A": "Simeon",
+    "B": "Jairus",
+    "C": "Zechariah",
+    "D": "Joseph"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Zechariah. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0283",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the father of John the Baptist?",
+   "options": {
+    "A": "Jairus",
+    "B": "Zechariah",
+    "C": "Joseph",
+    "D": "Simeon"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Zechariah. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0284",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the father of John the Baptist?",
+   "options": {
+    "A": "Zechariah",
+    "B": "Joseph",
+    "C": "Simeon",
+    "D": "Jairus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Zechariah. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0285",
+   "type": "mcq",
+   "stem": "Who was John the Baptist's mother?",
+   "options": {
+    "A": "Mary",
+    "B": "Martha",
+    "C": "Anna",
+    "D": "Elizabeth"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Elizabeth. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0286",
+   "type": "mcq",
+   "stem": "Which person was John the Baptist's mother?",
+   "options": {
+    "A": "Martha",
+    "B": "Anna",
+    "C": "Elizabeth",
+    "D": "Mary"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Elizabeth. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0287",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was John the Baptist's mother?",
+   "options": {
+    "A": "Anna",
+    "B": "Elizabeth",
+    "C": "Mary",
+    "D": "Martha"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Elizabeth. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0288",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was John the Baptist's mother?",
+   "options": {
+    "A": "Elizabeth",
+    "B": "Mary",
+    "C": "Martha",
+    "D": "Anna"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Elizabeth. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0289",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was John the Baptist's mother?",
+   "options": {
+    "A": "Mary",
+    "B": "Martha",
+    "C": "Anna",
+    "D": "Elizabeth"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Elizabeth. Reference: Luke 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0290",
+   "type": "mcq",
+   "stem": "Who baptized Jesus?",
+   "options": {
+    "A": "James",
+    "B": "Andrew",
+    "C": "John the Baptist",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "John the Baptist. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0291",
+   "type": "mcq",
+   "stem": "Which person baptized Jesus?",
+   "options": {
+    "A": "Andrew",
+    "B": "John the Baptist",
+    "C": "Peter",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John the Baptist. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0292",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who baptized Jesus?",
+   "options": {
+    "A": "John the Baptist",
+    "B": "Peter",
+    "C": "James",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "John the Baptist. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0293",
+   "type": "mcq",
+   "stem": "According to the biblical account, who baptized Jesus?",
+   "options": {
+    "A": "Peter",
+    "B": "James",
+    "C": "Andrew",
+    "D": "John the Baptist"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "John the Baptist. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0294",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who baptized Jesus?",
+   "options": {
+    "A": "James",
+    "B": "Andrew",
+    "C": "John the Baptist",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "John the Baptist. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0295",
+   "type": "mcq",
+   "stem": "Where was Jesus baptized?",
+   "options": {
+    "A": "Sea of Galilee",
+    "B": "Jordan River",
+    "C": "Nile River",
+    "D": "Euphrates River"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jordan River. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0296",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Where was Jesus baptized?",
+   "options": {
+    "A": "Jordan River",
+    "B": "Nile River",
+    "C": "Euphrates River",
+    "D": "Sea of Galilee"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Jordan River. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0297",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Where was Jesus baptized?",
+   "options": {
+    "A": "Nile River",
+    "B": "Euphrates River",
+    "C": "Sea of Galilee",
+    "D": "Jordan River"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Jordan River. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0298",
+   "type": "mcq",
+   "stem": "According to the biblical account, where was Jesus baptized?",
+   "options": {
+    "A": "Euphrates River",
+    "B": "Sea of Galilee",
+    "C": "Jordan River",
+    "D": "Nile River"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Jordan River. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0299",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Where was Jesus baptized?",
+   "options": {
+    "A": "Sea of Galilee",
+    "B": "Jordan River",
+    "C": "Nile River",
+    "D": "Euphrates River"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Jordan River. Reference: Matthew 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0300",
+   "type": "mcq",
+   "stem": "How long did Jesus fast in the wilderness?",
+   "options": {
+    "A": "Forty days",
+    "B": "Seven days",
+    "C": "Thirty days",
+    "D": "Seventy days"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Forty days. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0301",
+   "type": "mcq",
+   "stem": "Which statement answers this question: How long did Jesus fast in the wilderness?",
+   "options": {
+    "A": "Seven days",
+    "B": "Thirty days",
+    "C": "Seventy days",
+    "D": "Forty days"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Forty days. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0302",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? How long did Jesus fast in the wilderness?",
+   "options": {
+    "A": "Thirty days",
+    "B": "Seventy days",
+    "C": "Forty days",
+    "D": "Seven days"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Forty days. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0303",
+   "type": "mcq",
+   "stem": "According to the biblical account, how long did Jesus fast in the wilderness?",
+   "options": {
+    "A": "Seventy days",
+    "B": "Forty days",
+    "C": "Seven days",
+    "D": "Thirty days"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Forty days. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0304",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? How long did Jesus fast in the wilderness?",
+   "options": {
+    "A": "Forty days",
+    "B": "Seven days",
+    "C": "Thirty days",
+    "D": "Seventy days"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Forty days. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0305",
+   "type": "mcq",
+   "stem": "Who tempted Jesus in the wilderness?",
+   "options": {
+    "A": "Herod",
+    "B": "Pilate",
+    "C": "Caiaphas",
+    "D": "The devil"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The devil. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0306",
+   "type": "mcq",
+   "stem": "Which person tempted Jesus in the wilderness?",
+   "options": {
+    "A": "Pilate",
+    "B": "Caiaphas",
+    "C": "The devil",
+    "D": "Herod"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The devil. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0307",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who tempted Jesus in the wilderness?",
+   "options": {
+    "A": "Caiaphas",
+    "B": "The devil",
+    "C": "Herod",
+    "D": "Pilate"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The devil. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0308",
+   "type": "mcq",
+   "stem": "According to the biblical account, who tempted Jesus in the wilderness?",
+   "options": {
+    "A": "The devil",
+    "B": "Herod",
+    "C": "Pilate",
+    "D": "Caiaphas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The devil. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0309",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who tempted Jesus in the wilderness?",
+   "options": {
+    "A": "Herod",
+    "B": "Pilate",
+    "C": "Caiaphas",
+    "D": "The devil"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The devil. Reference: Matthew 4."
+  },
+  {
+   "id": "jamb-crs-enrich-0310",
+   "type": "mcq",
+   "stem": "How many apostles did Jesus choose?",
+   "options": {
+    "A": "Ten",
+    "B": "Seventy",
+    "C": "Twelve",
+    "D": "Seven"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Twelve. Reference: Mark 3; Luke 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0311",
+   "type": "mcq",
+   "stem": "Which statement answers this question: How many apostles did Jesus choose?",
+   "options": {
+    "A": "Seventy",
+    "B": "Twelve",
+    "C": "Seven",
+    "D": "Ten"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Twelve. Reference: Mark 3; Luke 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0312",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? How many apostles did Jesus choose?",
+   "options": {
+    "A": "Twelve",
+    "B": "Seven",
+    "C": "Ten",
+    "D": "Seventy"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Twelve. Reference: Mark 3; Luke 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0313",
+   "type": "mcq",
+   "stem": "According to the biblical account, how many apostles did Jesus choose?",
+   "options": {
+    "A": "Seven",
+    "B": "Ten",
+    "C": "Seventy",
+    "D": "Twelve"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Twelve. Reference: Mark 3; Luke 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0314",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? How many apostles did Jesus choose?",
+   "options": {
+    "A": "Ten",
+    "B": "Seventy",
+    "C": "Twelve",
+    "D": "Seven"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Twelve. Reference: Mark 3; Luke 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0315",
+   "type": "mcq",
+   "stem": "Which disciple betrayed Jesus?",
+   "options": {
+    "A": "Matthew",
+    "B": "Judas Iscariot",
+    "C": "Peter",
+    "D": "Thomas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Judas Iscariot. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0316",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which disciple betrayed Jesus?",
+   "options": {
+    "A": "Judas Iscariot",
+    "B": "Peter",
+    "C": "Thomas",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Judas Iscariot. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0317",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which disciple betrayed Jesus?",
+   "options": {
+    "A": "Peter",
+    "B": "Thomas",
+    "C": "Matthew",
+    "D": "Judas Iscariot"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Judas Iscariot. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0318",
+   "type": "mcq",
+   "stem": "According to the biblical account, which disciple betrayed Jesus?",
+   "options": {
+    "A": "Thomas",
+    "B": "Matthew",
+    "C": "Judas Iscariot",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Judas Iscariot. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0319",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which disciple betrayed Jesus?",
+   "options": {
+    "A": "Matthew",
+    "B": "Judas Iscariot",
+    "C": "Peter",
+    "D": "Thomas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Judas Iscariot. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0320",
+   "type": "mcq",
+   "stem": "Which disciple denied Jesus three times?",
+   "options": {
+    "A": "Peter",
+    "B": "John",
+    "C": "James",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Peter. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0321",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which disciple denied Jesus three times?",
+   "options": {
+    "A": "John",
+    "B": "James",
+    "C": "Andrew",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Peter. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0322",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which disciple denied Jesus three times?",
+   "options": {
+    "A": "James",
+    "B": "Andrew",
+    "C": "Peter",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Peter. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0323",
+   "type": "mcq",
+   "stem": "According to the biblical account, which disciple denied Jesus three times?",
+   "options": {
+    "A": "Andrew",
+    "B": "Peter",
+    "C": "John",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Peter. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0324",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which disciple denied Jesus three times?",
+   "options": {
+    "A": "Peter",
+    "B": "John",
+    "C": "James",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Peter. Reference: Matthew 26."
+  },
+  {
+   "id": "jamb-crs-enrich-0325",
+   "type": "mcq",
+   "stem": "Who was the Roman governor who presided over Jesus' trial?",
+   "options": {
+    "A": "Herod Antipas",
+    "B": "Felix",
+    "C": "Festus",
+    "D": "Pontius Pilate"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Pontius Pilate. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0326",
+   "type": "mcq",
+   "stem": "Which person was the Roman governor who presided over Jesus' trial?",
+   "options": {
+    "A": "Felix",
+    "B": "Festus",
+    "C": "Pontius Pilate",
+    "D": "Herod Antipas"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Pontius Pilate. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0327",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the Roman governor who presided over Jesus' trial?",
+   "options": {
+    "A": "Festus",
+    "B": "Pontius Pilate",
+    "C": "Herod Antipas",
+    "D": "Felix"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Pontius Pilate. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0328",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the Roman governor who presided over Jesus' trial?",
+   "options": {
+    "A": "Pontius Pilate",
+    "B": "Herod Antipas",
+    "C": "Felix",
+    "D": "Festus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Pontius Pilate. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0329",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the Roman governor who presided over Jesus' trial?",
+   "options": {
+    "A": "Herod Antipas",
+    "B": "Felix",
+    "C": "Festus",
+    "D": "Pontius Pilate"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Pontius Pilate. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0331",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Where was Jesus crucified?",
+   "options": {
+    "A": "Jericho",
+    "B": "Golgotha",
+    "C": "Bethany",
+    "D": "Nazareth"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Golgotha. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0332",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Where was Jesus crucified?",
+   "options": {
+    "A": "Golgotha",
+    "B": "Bethany",
+    "C": "Nazareth",
+    "D": "Jericho"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Golgotha. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0333",
+   "type": "mcq",
+   "stem": "According to the biblical account, where was Jesus crucified?",
+   "options": {
+    "A": "Bethany",
+    "B": "Nazareth",
+    "C": "Jericho",
+    "D": "Golgotha"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Golgotha. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0334",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Where was Jesus crucified?",
+   "options": {
+    "A": "Nazareth",
+    "B": "Jericho",
+    "C": "Golgotha",
+    "D": "Bethany"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Golgotha. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0335",
+   "type": "mcq",
+   "stem": "On what day did Jesus rise from the dead?",
+   "options": {
+    "A": "The tenth day",
+    "B": "The third day",
+    "C": "The second day",
+    "D": "The seventh day"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The third day. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0336",
+   "type": "mcq",
+   "stem": "Which statement answers this question: On what day did Jesus rise from the dead?",
+   "options": {
+    "A": "The third day",
+    "B": "The second day",
+    "C": "The seventh day",
+    "D": "The tenth day"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The third day. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0337",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? On what day did Jesus rise from the dead?",
+   "options": {
+    "A": "The second day",
+    "B": "The seventh day",
+    "C": "The tenth day",
+    "D": "The third day"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The third day. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0338",
+   "type": "mcq",
+   "stem": "According to the biblical account, on what day did Jesus rise from the dead?",
+   "options": {
+    "A": "The seventh day",
+    "B": "The tenth day",
+    "C": "The third day",
+    "D": "The second day"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The third day. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0339",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? On what day did Jesus rise from the dead?",
+   "options": {
+    "A": "The tenth day",
+    "B": "The third day",
+    "C": "The second day",
+    "D": "The seventh day"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The third day. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0340",
+   "type": "mcq",
+   "stem": "Who first announced the empty tomb to the disciples?",
+   "options": {
+    "A": "Women who came to the tomb",
+    "B": "Pilate",
+    "C": "The chief priest",
+    "D": "The Roman governor"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Women who came to the tomb. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0341",
+   "type": "mcq",
+   "stem": "Which person first announced the empty tomb to the disciples?",
+   "options": {
+    "A": "Pilate",
+    "B": "The chief priest",
+    "C": "The Roman governor",
+    "D": "Women who came to the tomb"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Women who came to the tomb. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0342",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who first announced the empty tomb to the disciples?",
+   "options": {
+    "A": "The chief priest",
+    "B": "The Roman governor",
+    "C": "Women who came to the tomb",
+    "D": "Pilate"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Women who came to the tomb. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0343",
+   "type": "mcq",
+   "stem": "According to the biblical account, who first announced the empty tomb to the disciples?",
+   "options": {
+    "A": "The Roman governor",
+    "B": "Women who came to the tomb",
+    "C": "Pilate",
+    "D": "The chief priest"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Women who came to the tomb. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0344",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who first announced the empty tomb to the disciples?",
+   "options": {
+    "A": "Women who came to the tomb",
+    "B": "Pilate",
+    "C": "The chief priest",
+    "D": "The Roman governor"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Women who came to the tomb. Reference: Matthew 28; Luke 24."
+  },
+  {
+   "id": "jamb-crs-enrich-0345",
+   "type": "mcq",
+   "stem": "What was Jesus' first recorded miracle in John's Gospel?",
+   "options": {
+    "A": "Healing a blind man",
+    "B": "Walking on water",
+    "C": "Raising Lazarus",
+    "D": "Turning water into wine"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Turning water into wine. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0346",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was Jesus' first recorded miracle in John's Gospel?",
+   "options": {
+    "A": "Walking on water",
+    "B": "Raising Lazarus",
+    "C": "Turning water into wine",
+    "D": "Healing a blind man"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Turning water into wine. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0347",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was Jesus' first recorded miracle in John's Gospel?",
+   "options": {
+    "A": "Raising Lazarus",
+    "B": "Turning water into wine",
+    "C": "Healing a blind man",
+    "D": "Walking on water"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Turning water into wine. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0348",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was Jesus' first recorded miracle in John's Gospel?",
+   "options": {
+    "A": "Turning water into wine",
+    "B": "Healing a blind man",
+    "C": "Walking on water",
+    "D": "Raising Lazarus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Turning water into wine. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0349",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was Jesus' first recorded miracle in John's Gospel?",
+   "options": {
+    "A": "Healing a blind man",
+    "B": "Walking on water",
+    "C": "Raising Lazarus",
+    "D": "Turning water into wine"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Turning water into wine. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0350",
+   "type": "mcq",
+   "stem": "Where did Jesus turn water into wine?",
+   "options": {
+    "A": "Jericho",
+    "B": "Nazareth",
+    "C": "Cana",
+    "D": "Bethany"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cana. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0351",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Where did Jesus turn water into wine?",
+   "options": {
+    "A": "Nazareth",
+    "B": "Cana",
+    "C": "Bethany",
+    "D": "Jericho"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cana. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0352",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Where did Jesus turn water into wine?",
+   "options": {
+    "A": "Cana",
+    "B": "Bethany",
+    "C": "Jericho",
+    "D": "Nazareth"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cana. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0353",
+   "type": "mcq",
+   "stem": "According to the biblical account, where did Jesus turn water into wine?",
+   "options": {
+    "A": "Bethany",
+    "B": "Jericho",
+    "C": "Nazareth",
+    "D": "Cana"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Cana. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0354",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Where did Jesus turn water into wine?",
+   "options": {
+    "A": "Jericho",
+    "B": "Nazareth",
+    "C": "Cana",
+    "D": "Bethany"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cana. Reference: John 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0355",
+   "type": "mcq",
+   "stem": "Who did Jesus raise from the dead after four days?",
+   "options": {
+    "A": "Dorcas",
+    "B": "Lazarus",
+    "C": "Jairus",
+    "D": "Stephen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Lazarus. Reference: John 11."
+  },
+  {
+   "id": "jamb-crs-enrich-0356",
+   "type": "mcq",
+   "stem": "Which person did Jesus raise from the dead after four days?",
+   "options": {
+    "A": "Lazarus",
+    "B": "Jairus",
+    "C": "Stephen",
+    "D": "Dorcas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Lazarus. Reference: John 11."
+  },
+  {
+   "id": "jamb-crs-enrich-0357",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who did Jesus raise from the dead after four days?",
+   "options": {
+    "A": "Jairus",
+    "B": "Stephen",
+    "C": "Dorcas",
+    "D": "Lazarus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Lazarus. Reference: John 11."
+  },
+  {
+   "id": "jamb-crs-enrich-0358",
+   "type": "mcq",
+   "stem": "According to the biblical account, who did Jesus raise from the dead after four days?",
+   "options": {
+    "A": "Stephen",
+    "B": "Dorcas",
+    "C": "Lazarus",
+    "D": "Jairus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Lazarus. Reference: John 11."
+  },
+  {
+   "id": "jamb-crs-enrich-0359",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who did Jesus raise from the dead after four days?",
+   "options": {
+    "A": "Dorcas",
+    "B": "Lazarus",
+    "C": "Jairus",
+    "D": "Stephen"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Lazarus. Reference: John 11."
+  },
+  {
+   "id": "jamb-crs-enrich-0360",
+   "type": "mcq",
+   "stem": "Which Gospel contains the parable of the Good Samaritan?",
+   "options": {
+    "A": "Luke",
+    "B": "Matthew",
+    "C": "Mark",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Luke. Reference: Luke 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0361",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which Gospel contains the parable of the Good Samaritan?",
+   "options": {
+    "A": "Matthew",
+    "B": "Mark",
+    "C": "John",
+    "D": "Luke"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Luke. Reference: Luke 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0362",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which Gospel contains the parable of the Good Samaritan?",
+   "options": {
+    "A": "Mark",
+    "B": "John",
+    "C": "Luke",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Luke. Reference: Luke 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0363",
+   "type": "mcq",
+   "stem": "According to the biblical account, which Gospel contains the parable of the Good Samaritan?",
+   "options": {
+    "A": "John",
+    "B": "Luke",
+    "C": "Matthew",
+    "D": "Mark"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke. Reference: Luke 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0364",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which Gospel contains the parable of the Good Samaritan?",
+   "options": {
+    "A": "Luke",
+    "B": "Matthew",
+    "C": "Mark",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Luke. Reference: Luke 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0365",
+   "type": "mcq",
+   "stem": "Which Gospel contains the parable of the Prodigal Son?",
+   "options": {
+    "A": "Matthew",
+    "B": "Mark",
+    "C": "John",
+    "D": "Luke"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Luke. Reference: Luke 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0366",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which Gospel contains the parable of the Prodigal Son?",
+   "options": {
+    "A": "Mark",
+    "B": "John",
+    "C": "Luke",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Luke. Reference: Luke 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0367",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which Gospel contains the parable of the Prodigal Son?",
+   "options": {
+    "A": "John",
+    "B": "Luke",
+    "C": "Matthew",
+    "D": "Mark"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Luke. Reference: Luke 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0368",
+   "type": "mcq",
+   "stem": "According to the biblical account, which Gospel contains the parable of the Prodigal Son?",
+   "options": {
+    "A": "Luke",
+    "B": "Matthew",
+    "C": "Mark",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Luke. Reference: Luke 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0369",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which Gospel contains the parable of the Prodigal Son?",
+   "options": {
+    "A": "Matthew",
+    "B": "Mark",
+    "C": "John",
+    "D": "Luke"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Luke. Reference: Luke 15."
+  },
+  {
+   "id": "jamb-crs-enrich-0370",
+   "type": "mcq",
+   "stem": "What did Jesus say is the greatest commandment?",
+   "options": {
+    "A": "Avoid strangers",
+    "B": "Seek political power",
+    "C": "Love God with all your heart, soul and mind",
+    "D": "Keep all wealth"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Love God with all your heart, soul and mind. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0371",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What did Jesus say is the greatest commandment?",
+   "options": {
+    "A": "Seek political power",
+    "B": "Love God with all your heart, soul and mind",
+    "C": "Keep all wealth",
+    "D": "Avoid strangers"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Love God with all your heart, soul and mind. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0372",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What did Jesus say is the greatest commandment?",
+   "options": {
+    "A": "Love God with all your heart, soul and mind",
+    "B": "Keep all wealth",
+    "C": "Avoid strangers",
+    "D": "Seek political power"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Love God with all your heart, soul and mind. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0373",
+   "type": "mcq",
+   "stem": "According to the biblical account, what did Jesus say is the greatest commandment?",
+   "options": {
+    "A": "Keep all wealth",
+    "B": "Avoid strangers",
+    "C": "Seek political power",
+    "D": "Love God with all your heart, soul and mind"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Love God with all your heart, soul and mind. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0374",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What did Jesus say is the greatest commandment?",
+   "options": {
+    "A": "Avoid strangers",
+    "B": "Seek political power",
+    "C": "Love God with all your heart, soul and mind",
+    "D": "Keep all wealth"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Love God with all your heart, soul and mind. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0375",
+   "type": "mcq",
+   "stem": "What is the second great commandment according to Jesus?",
+   "options": {
+    "A": "Avoid all sinners",
+    "B": "Love your neighbour as yourself",
+    "C": "Obey the Roman governor",
+    "D": "Build a temple"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Love your neighbour as yourself. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0376",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What is the second great commandment according to Jesus?",
+   "options": {
+    "A": "Love your neighbour as yourself",
+    "B": "Obey the Roman governor",
+    "C": "Build a temple",
+    "D": "Avoid all sinners"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Love your neighbour as yourself. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0377",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What is the second great commandment according to Jesus?",
+   "options": {
+    "A": "Obey the Roman governor",
+    "B": "Build a temple",
+    "C": "Avoid all sinners",
+    "D": "Love your neighbour as yourself"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Love your neighbour as yourself. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0378",
+   "type": "mcq",
+   "stem": "According to the biblical account, what is the second great commandment according to Jesus?",
+   "options": {
+    "A": "Build a temple",
+    "B": "Avoid all sinners",
+    "C": "Love your neighbour as yourself",
+    "D": "Obey the Roman governor"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Love your neighbour as yourself. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0379",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What is the second great commandment according to Jesus?",
+   "options": {
+    "A": "Avoid all sinners",
+    "B": "Love your neighbour as yourself",
+    "C": "Obey the Roman governor",
+    "D": "Build a temple"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Love your neighbour as yourself. Reference: Matthew 22."
+  },
+  {
+   "id": "jamb-crs-enrich-0380",
+   "type": "mcq",
+   "stem": "Which prayer did Jesus teach his disciples?",
+   "options": {
+    "A": "The Lord's Prayer",
+    "B": "The Prayer of Jabez",
+    "C": "Hannah's Prayer",
+    "D": "Solomon's Prayer"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The Lord's Prayer. Reference: Matthew 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0381",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which prayer did Jesus teach his disciples?",
+   "options": {
+    "A": "The Prayer of Jabez",
+    "B": "Hannah's Prayer",
+    "C": "Solomon's Prayer",
+    "D": "The Lord's Prayer"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The Lord's Prayer. Reference: Matthew 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0382",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which prayer did Jesus teach his disciples?",
+   "options": {
+    "A": "Hannah's Prayer",
+    "B": "Solomon's Prayer",
+    "C": "The Lord's Prayer",
+    "D": "The Prayer of Jabez"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The Lord's Prayer. Reference: Matthew 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0383",
+   "type": "mcq",
+   "stem": "According to the biblical account, which prayer did Jesus teach his disciples?",
+   "options": {
+    "A": "Solomon's Prayer",
+    "B": "The Lord's Prayer",
+    "C": "The Prayer of Jabez",
+    "D": "Hannah's Prayer"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Lord's Prayer. Reference: Matthew 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0384",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which prayer did Jesus teach his disciples?",
+   "options": {
+    "A": "The Lord's Prayer",
+    "B": "The Prayer of Jabez",
+    "C": "Hannah's Prayer",
+    "D": "Solomon's Prayer"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The Lord's Prayer. Reference: Matthew 6."
+  },
+  {
+   "id": "jamb-crs-enrich-0385",
+   "type": "mcq",
+   "stem": "Which Beatitude promises comfort to those who mourn?",
+   "options": {
+    "A": "Blessed are the rich",
+    "B": "Blessed are the powerful",
+    "C": "Blessed are the rulers",
+    "D": "Blessed are those who mourn"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Blessed are those who mourn. Reference: Matthew 5."
+  },
+  {
+   "id": "jamb-crs-enrich-0386",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which Beatitude promises comfort to those who mourn?",
+   "options": {
+    "A": "Blessed are the powerful",
+    "B": "Blessed are the rulers",
+    "C": "Blessed are those who mourn",
+    "D": "Blessed are the rich"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Blessed are those who mourn. Reference: Matthew 5."
+  },
+  {
+   "id": "jamb-crs-enrich-0387",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which Beatitude promises comfort to those who mourn?",
+   "options": {
+    "A": "Blessed are the rulers",
+    "B": "Blessed are those who mourn",
+    "C": "Blessed are the rich",
+    "D": "Blessed are the powerful"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Blessed are those who mourn. Reference: Matthew 5."
+  },
+  {
+   "id": "jamb-crs-enrich-0388",
+   "type": "mcq",
+   "stem": "According to the biblical account, which Beatitude promises comfort to those who mourn?",
+   "options": {
+    "A": "Blessed are those who mourn",
+    "B": "Blessed are the rich",
+    "C": "Blessed are the powerful",
+    "D": "Blessed are the rulers"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Blessed are those who mourn. Reference: Matthew 5."
+  },
+  {
+   "id": "jamb-crs-enrich-0389",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which Beatitude promises comfort to those who mourn?",
+   "options": {
+    "A": "Blessed are the rich",
+    "B": "Blessed are the powerful",
+    "C": "Blessed are the rulers",
+    "D": "Blessed are those who mourn"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Blessed are those who mourn. Reference: Matthew 5."
+  },
+  {
+   "id": "jamb-crs-enrich-0390",
+   "type": "mcq",
+   "stem": "What did Jesus use to feed five thousand men?",
+   "options": {
+    "A": "Two loaves and five fish",
+    "B": "Ten loaves and ten fish",
+    "C": "Five loaves and two fish",
+    "D": "Seven loaves and one fish"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Five loaves and two fish. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0391",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What did Jesus use to feed five thousand men?",
+   "options": {
+    "A": "Ten loaves and ten fish",
+    "B": "Five loaves and two fish",
+    "C": "Seven loaves and one fish",
+    "D": "Two loaves and five fish"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Five loaves and two fish. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0392",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What did Jesus use to feed five thousand men?",
+   "options": {
+    "A": "Five loaves and two fish",
+    "B": "Seven loaves and one fish",
+    "C": "Two loaves and five fish",
+    "D": "Ten loaves and ten fish"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Five loaves and two fish. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0393",
+   "type": "mcq",
+   "stem": "According to the biblical account, what did Jesus use to feed five thousand men?",
+   "options": {
+    "A": "Seven loaves and one fish",
+    "B": "Two loaves and five fish",
+    "C": "Ten loaves and ten fish",
+    "D": "Five loaves and two fish"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Five loaves and two fish. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0394",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What did Jesus use to feed five thousand men?",
+   "options": {
+    "A": "Two loaves and five fish",
+    "B": "Ten loaves and ten fish",
+    "C": "Five loaves and two fish",
+    "D": "Seven loaves and one fish"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Five loaves and two fish. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0395",
+   "type": "mcq",
+   "stem": "Which disciple walked on water toward Jesus?",
+   "options": {
+    "A": "Thomas",
+    "B": "Peter",
+    "C": "John",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Peter. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0396",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which disciple walked on water toward Jesus?",
+   "options": {
+    "A": "Peter",
+    "B": "John",
+    "C": "James",
+    "D": "Thomas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Peter. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0397",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which disciple walked on water toward Jesus?",
+   "options": {
+    "A": "John",
+    "B": "James",
+    "C": "Thomas",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Peter. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0398",
+   "type": "mcq",
+   "stem": "According to the biblical account, which disciple walked on water toward Jesus?",
+   "options": {
+    "A": "James",
+    "B": "Thomas",
+    "C": "Peter",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Peter. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0399",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which disciple walked on water toward Jesus?",
+   "options": {
+    "A": "Thomas",
+    "B": "Peter",
+    "C": "John",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Peter. Reference: Matthew 14."
+  },
+  {
+   "id": "jamb-crs-enrich-0400",
+   "type": "mcq",
+   "stem": "Who doubted Jesus' resurrection until seeing his wounds?",
+   "options": {
+    "A": "Thomas",
+    "B": "Peter",
+    "C": "Andrew",
+    "D": "Philip"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Thomas. Reference: John 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0401",
+   "type": "mcq",
+   "stem": "Which person doubted Jesus' resurrection until seeing his wounds?",
+   "options": {
+    "A": "Peter",
+    "B": "Andrew",
+    "C": "Philip",
+    "D": "Thomas"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Thomas. Reference: John 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0402",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who doubted Jesus' resurrection until seeing his wounds?",
+   "options": {
+    "A": "Andrew",
+    "B": "Philip",
+    "C": "Thomas",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Thomas. Reference: John 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0403",
+   "type": "mcq",
+   "stem": "According to the biblical account, who doubted Jesus' resurrection until seeing his wounds?",
+   "options": {
+    "A": "Philip",
+    "B": "Thomas",
+    "C": "Peter",
+    "D": "Andrew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Thomas. Reference: John 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0404",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who doubted Jesus' resurrection until seeing his wounds?",
+   "options": {
+    "A": "Thomas",
+    "B": "Peter",
+    "C": "Andrew",
+    "D": "Philip"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Thomas. Reference: John 20."
+  },
+  {
+   "id": "jamb-crs-enrich-0405",
+   "type": "mcq",
+   "stem": "Which disciple was called the beloved disciple in John?",
+   "options": {
+    "A": "Peter",
+    "B": "Matthew",
+    "C": "Judas",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "John. Reference: John 13–21."
+  },
+  {
+   "id": "jamb-crs-enrich-0406",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Which disciple was called the beloved disciple in John?",
+   "options": {
+    "A": "Matthew",
+    "B": "Judas",
+    "C": "John",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "John. Reference: John 13–21."
+  },
+  {
+   "id": "jamb-crs-enrich-0407",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Which disciple was called the beloved disciple in John?",
+   "options": {
+    "A": "Judas",
+    "B": "John",
+    "C": "Peter",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "John. Reference: John 13–21."
+  },
+  {
+   "id": "jamb-crs-enrich-0408",
+   "type": "mcq",
+   "stem": "According to the biblical account, which disciple was called the beloved disciple in John?",
+   "options": {
+    "A": "John",
+    "B": "Peter",
+    "C": "Matthew",
+    "D": "Judas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "John. Reference: John 13–21."
+  },
+  {
+   "id": "jamb-crs-enrich-0409",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Which disciple was called the beloved disciple in John?",
+   "options": {
+    "A": "Peter",
+    "B": "Matthew",
+    "C": "Judas",
+    "D": "John"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "John. Reference: John 13–21."
+  },
+  {
+   "id": "jamb-crs-enrich-0410",
+   "type": "mcq",
+   "stem": "Who was the tax collector who became a disciple of Jesus?",
+   "options": {
+    "A": "Nicodemus",
+    "B": "Simon",
+    "C": "Matthew",
+    "D": "Zacchaeus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Matthew. Reference: Matthew 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0411",
+   "type": "mcq",
+   "stem": "Which person was the tax collector who became a disciple of Jesus?",
+   "options": {
+    "A": "Simon",
+    "B": "Matthew",
+    "C": "Zacchaeus",
+    "D": "Nicodemus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthew. Reference: Matthew 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0412",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the tax collector who became a disciple of Jesus?",
+   "options": {
+    "A": "Matthew",
+    "B": "Zacchaeus",
+    "C": "Nicodemus",
+    "D": "Simon"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Matthew. Reference: Matthew 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0413",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the tax collector who became a disciple of Jesus?",
+   "options": {
+    "A": "Zacchaeus",
+    "B": "Nicodemus",
+    "C": "Simon",
+    "D": "Matthew"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Matthew. Reference: Matthew 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0414",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the tax collector who became a disciple of Jesus?",
+   "options": {
+    "A": "Nicodemus",
+    "B": "Simon",
+    "C": "Matthew",
+    "D": "Zacchaeus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Matthew. Reference: Matthew 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0416",
+   "type": "mcq",
+   "stem": "Which person climbed a sycamore tree to see Jesus?",
+   "options": {
+    "A": "Zacchaeus",
+    "B": "Bartimaeus",
+    "C": "Jairus",
+    "D": "Nicodemus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Zacchaeus. Reference: Luke 19."
+  },
+  {
+   "id": "jamb-crs-enrich-0417",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who climbed a sycamore tree to see Jesus?",
+   "options": {
+    "A": "Bartimaeus",
+    "B": "Jairus",
+    "C": "Nicodemus",
+    "D": "Zacchaeus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Zacchaeus. Reference: Luke 19."
+  },
+  {
+   "id": "jamb-crs-enrich-0418",
+   "type": "mcq",
+   "stem": "According to the biblical account, who climbed a sycamore tree to see Jesus?",
+   "options": {
+    "A": "Jairus",
+    "B": "Nicodemus",
+    "C": "Zacchaeus",
+    "D": "Bartimaeus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Zacchaeus. Reference: Luke 19."
+  },
+  {
+   "id": "jamb-crs-enrich-0419",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who climbed a sycamore tree to see Jesus?",
+   "options": {
+    "A": "Nicodemus",
+    "B": "Zacchaeus",
+    "C": "Bartimaeus",
+    "D": "Jairus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Zacchaeus. Reference: Luke 19."
+  },
+  {
+   "id": "jamb-crs-enrich-0420",
+   "type": "mcq",
+   "stem": "Who was the blind man Jesus healed near Jericho?",
+   "options": {
+    "A": "Bartimaeus",
+    "B": "Lazarus",
+    "C": "Zacchaeus",
+    "D": "Jairus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bartimaeus. Reference: Mark 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0421",
+   "type": "mcq",
+   "stem": "Which person was the blind man Jesus healed near Jericho?",
+   "options": {
+    "A": "Lazarus",
+    "B": "Zacchaeus",
+    "C": "Jairus",
+    "D": "Bartimaeus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Bartimaeus. Reference: Mark 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0422",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the blind man Jesus healed near Jericho?",
+   "options": {
+    "A": "Zacchaeus",
+    "B": "Jairus",
+    "C": "Bartimaeus",
+    "D": "Lazarus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Bartimaeus. Reference: Mark 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0423",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the blind man Jesus healed near Jericho?",
+   "options": {
+    "A": "Jairus",
+    "B": "Bartimaeus",
+    "C": "Lazarus",
+    "D": "Zacchaeus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Bartimaeus. Reference: Mark 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0424",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the blind man Jesus healed near Jericho?",
+   "options": {
+    "A": "Bartimaeus",
+    "B": "Lazarus",
+    "C": "Zacchaeus",
+    "D": "Jairus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Bartimaeus. Reference: Mark 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0425",
+   "type": "mcq",
+   "stem": "Who visited Jesus at night to discuss spiritual rebirth?",
+   "options": {
+    "A": "Zacchaeus",
+    "B": "Joseph of Arimathea",
+    "C": "Jairus",
+    "D": "Nicodemus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nicodemus. Reference: John 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0426",
+   "type": "mcq",
+   "stem": "Which person visited Jesus at night to discuss spiritual rebirth?",
+   "options": {
+    "A": "Joseph of Arimathea",
+    "B": "Jairus",
+    "C": "Nicodemus",
+    "D": "Zacchaeus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Nicodemus. Reference: John 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0427",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who visited Jesus at night to discuss spiritual rebirth?",
+   "options": {
+    "A": "Jairus",
+    "B": "Nicodemus",
+    "C": "Zacchaeus",
+    "D": "Joseph of Arimathea"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Nicodemus. Reference: John 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0428",
+   "type": "mcq",
+   "stem": "According to the biblical account, who visited Jesus at night to discuss spiritual rebirth?",
+   "options": {
+    "A": "Nicodemus",
+    "B": "Zacchaeus",
+    "C": "Joseph of Arimathea",
+    "D": "Jairus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Nicodemus. Reference: John 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0429",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who visited Jesus at night to discuss spiritual rebirth?",
+   "options": {
+    "A": "Zacchaeus",
+    "B": "Joseph of Arimathea",
+    "C": "Jairus",
+    "D": "Nicodemus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Nicodemus. Reference: John 3."
+  },
+  {
+   "id": "jamb-crs-enrich-0430",
+   "type": "mcq",
+   "stem": "Who helped carry Jesus' cross?",
+   "options": {
+    "A": "Joseph of Arimathea",
+    "B": "Barabbas",
+    "C": "Simon of Cyrene",
+    "D": "Simon Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Simon of Cyrene. Reference: Luke 23."
+  },
+  {
+   "id": "jamb-crs-enrich-0431",
+   "type": "mcq",
+   "stem": "Which person helped carry Jesus' cross?",
+   "options": {
+    "A": "Barabbas",
+    "B": "Simon of Cyrene",
+    "C": "Simon Peter",
+    "D": "Joseph of Arimathea"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Simon of Cyrene. Reference: Luke 23."
+  },
+  {
+   "id": "jamb-crs-enrich-0432",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who helped carry Jesus' cross?",
+   "options": {
+    "A": "Simon of Cyrene",
+    "B": "Simon Peter",
+    "C": "Joseph of Arimathea",
+    "D": "Barabbas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Simon of Cyrene. Reference: Luke 23."
+  },
+  {
+   "id": "jamb-crs-enrich-0433",
+   "type": "mcq",
+   "stem": "According to the biblical account, who helped carry Jesus' cross?",
+   "options": {
+    "A": "Simon Peter",
+    "B": "Joseph of Arimathea",
+    "C": "Barabbas",
+    "D": "Simon of Cyrene"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Simon of Cyrene. Reference: Luke 23."
+  },
+  {
+   "id": "jamb-crs-enrich-0434",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who helped carry Jesus' cross?",
+   "options": {
+    "A": "Joseph of Arimathea",
+    "B": "Barabbas",
+    "C": "Simon of Cyrene",
+    "D": "Simon Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Simon of Cyrene. Reference: Luke 23."
+  },
+  {
+   "id": "jamb-crs-enrich-0435",
+   "type": "mcq",
+   "stem": "Who provided the tomb in which Jesus was buried?",
+   "options": {
+    "A": "Pilate",
+    "B": "Joseph of Arimathea",
+    "C": "Nicodemus",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Joseph of Arimathea. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0436",
+   "type": "mcq",
+   "stem": "Which person provided the tomb in which Jesus was buried?",
+   "options": {
+    "A": "Joseph of Arimathea",
+    "B": "Nicodemus",
+    "C": "Peter",
+    "D": "Pilate"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Joseph of Arimathea. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0437",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who provided the tomb in which Jesus was buried?",
+   "options": {
+    "A": "Nicodemus",
+    "B": "Peter",
+    "C": "Pilate",
+    "D": "Joseph of Arimathea"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Joseph of Arimathea. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0438",
+   "type": "mcq",
+   "stem": "According to the biblical account, who provided the tomb in which Jesus was buried?",
+   "options": {
+    "A": "Peter",
+    "B": "Pilate",
+    "C": "Joseph of Arimathea",
+    "D": "Nicodemus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Joseph of Arimathea. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0439",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who provided the tomb in which Jesus was buried?",
+   "options": {
+    "A": "Pilate",
+    "B": "Joseph of Arimathea",
+    "C": "Nicodemus",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Joseph of Arimathea. Reference: Matthew 27."
+  },
+  {
+   "id": "jamb-crs-enrich-0440",
+   "type": "mcq",
+   "stem": "Who replaced Judas among the apostles?",
+   "options": {
+    "A": "Matthias",
+    "B": "Paul",
+    "C": "Barnabas",
+    "D": "Silas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Matthias. Reference: Acts 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0441",
+   "type": "mcq",
+   "stem": "Which person replaced Judas among the apostles?",
+   "options": {
+    "A": "Paul",
+    "B": "Barnabas",
+    "C": "Silas",
+    "D": "Matthias"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Matthias. Reference: Acts 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0442",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who replaced Judas among the apostles?",
+   "options": {
+    "A": "Barnabas",
+    "B": "Silas",
+    "C": "Matthias",
+    "D": "Paul"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Matthias. Reference: Acts 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0443",
+   "type": "mcq",
+   "stem": "According to the biblical account, who replaced Judas among the apostles?",
+   "options": {
+    "A": "Silas",
+    "B": "Matthias",
+    "C": "Paul",
+    "D": "Barnabas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Matthias. Reference: Acts 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0444",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who replaced Judas among the apostles?",
+   "options": {
+    "A": "Matthias",
+    "B": "Paul",
+    "C": "Barnabas",
+    "D": "Silas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Matthias. Reference: Acts 1."
+  },
+  {
+   "id": "jamb-crs-enrich-0445",
+   "type": "mcq",
+   "stem": "What happened to Jesus' disciples at Pentecost?",
+   "options": {
+    "A": "They crossed the Red Sea",
+    "B": "They built the temple",
+    "C": "They returned to Egypt",
+    "D": "They received the Holy Spirit"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "They received the Holy Spirit. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0446",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What happened to Jesus' disciples at Pentecost?",
+   "options": {
+    "A": "They built the temple",
+    "B": "They returned to Egypt",
+    "C": "They received the Holy Spirit",
+    "D": "They crossed the Red Sea"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "They received the Holy Spirit. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0447",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What happened to Jesus' disciples at Pentecost?",
+   "options": {
+    "A": "They returned to Egypt",
+    "B": "They received the Holy Spirit",
+    "C": "They crossed the Red Sea",
+    "D": "They built the temple"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "They received the Holy Spirit. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0448",
+   "type": "mcq",
+   "stem": "According to the biblical account, what happened to Jesus' disciples at Pentecost?",
+   "options": {
+    "A": "They received the Holy Spirit",
+    "B": "They crossed the Red Sea",
+    "C": "They built the temple",
+    "D": "They returned to Egypt"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "They received the Holy Spirit. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0449",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What happened to Jesus' disciples at Pentecost?",
+   "options": {
+    "A": "They crossed the Red Sea",
+    "B": "They built the temple",
+    "C": "They returned to Egypt",
+    "D": "They received the Holy Spirit"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "They received the Holy Spirit. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0450",
+   "type": "mcq",
+   "stem": "Who preached the major sermon on Pentecost?",
+   "options": {
+    "A": "James",
+    "B": "Stephen",
+    "C": "Peter",
+    "D": "Paul"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Peter. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0451",
+   "type": "mcq",
+   "stem": "Which person preached the major sermon on Pentecost?",
+   "options": {
+    "A": "Stephen",
+    "B": "Peter",
+    "C": "Paul",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Peter. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0452",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who preached the major sermon on Pentecost?",
+   "options": {
+    "A": "Peter",
+    "B": "Paul",
+    "C": "James",
+    "D": "Stephen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Peter. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0453",
+   "type": "mcq",
+   "stem": "According to the biblical account, who preached the major sermon on Pentecost?",
+   "options": {
+    "A": "Paul",
+    "B": "James",
+    "C": "Stephen",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Peter. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0454",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who preached the major sermon on Pentecost?",
+   "options": {
+    "A": "James",
+    "B": "Stephen",
+    "C": "Peter",
+    "D": "Paul"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Peter. Reference: Acts 2."
+  },
+  {
+   "id": "jamb-crs-enrich-0455",
+   "type": "mcq",
+   "stem": "Who was the first Christian martyr recorded in Acts?",
+   "options": {
+    "A": "Barnabas",
+    "B": "Stephen",
+    "C": "James",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Stephen. Reference: Acts 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0456",
+   "type": "mcq",
+   "stem": "Which person was the first Christian martyr recorded in Acts?",
+   "options": {
+    "A": "Stephen",
+    "B": "James",
+    "C": "Peter",
+    "D": "Barnabas"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Stephen. Reference: Acts 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0457",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the first Christian martyr recorded in Acts?",
+   "options": {
+    "A": "James",
+    "B": "Peter",
+    "C": "Barnabas",
+    "D": "Stephen"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Stephen. Reference: Acts 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0458",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the first Christian martyr recorded in Acts?",
+   "options": {
+    "A": "Peter",
+    "B": "Barnabas",
+    "C": "Stephen",
+    "D": "James"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Stephen. Reference: Acts 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0459",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the first Christian martyr recorded in Acts?",
+   "options": {
+    "A": "Barnabas",
+    "B": "Stephen",
+    "C": "James",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Stephen. Reference: Acts 7."
+  },
+  {
+   "id": "jamb-crs-enrich-0460",
+   "type": "mcq",
+   "stem": "Who approved of Stephen's execution before his conversion?",
+   "options": {
+    "A": "Saul",
+    "B": "Peter",
+    "C": "Barnabas",
+    "D": "Philip"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Saul. Reference: Acts 7–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0461",
+   "type": "mcq",
+   "stem": "Which person approved of Stephen's execution before his conversion?",
+   "options": {
+    "A": "Peter",
+    "B": "Barnabas",
+    "C": "Philip",
+    "D": "Saul"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Saul. Reference: Acts 7–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0462",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who approved of Stephen's execution before his conversion?",
+   "options": {
+    "A": "Barnabas",
+    "B": "Philip",
+    "C": "Saul",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Saul. Reference: Acts 7–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0463",
+   "type": "mcq",
+   "stem": "According to the biblical account, who approved of Stephen's execution before his conversion?",
+   "options": {
+    "A": "Philip",
+    "B": "Saul",
+    "C": "Peter",
+    "D": "Barnabas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Saul. Reference: Acts 7–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0464",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who approved of Stephen's execution before his conversion?",
+   "options": {
+    "A": "Saul",
+    "B": "Peter",
+    "C": "Barnabas",
+    "D": "Philip"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Saul. Reference: Acts 7–9."
+  },
+  {
+   "id": "jamb-crs-enrich-0465",
+   "type": "mcq",
+   "stem": "What was Saul's name after his conversion commonly given in Acts?",
+   "options": {
+    "A": "Peter",
+    "B": "Silas",
+    "C": "Stephen",
+    "D": "Paul"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Paul. Reference: Acts 13 onward."
+  },
+  {
+   "id": "jamb-crs-enrich-0466",
+   "type": "mcq",
+   "stem": "Which statement answers this question: What was Saul's name after his conversion commonly given in Acts?",
+   "options": {
+    "A": "Silas",
+    "B": "Stephen",
+    "C": "Paul",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Paul. Reference: Acts 13 onward."
+  },
+  {
+   "id": "jamb-crs-enrich-0467",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? What was Saul's name after his conversion commonly given in Acts?",
+   "options": {
+    "A": "Stephen",
+    "B": "Paul",
+    "C": "Peter",
+    "D": "Silas"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Paul. Reference: Acts 13 onward."
+  },
+  {
+   "id": "jamb-crs-enrich-0468",
+   "type": "mcq",
+   "stem": "According to the biblical account, what was Saul's name after his conversion commonly given in Acts?",
+   "options": {
+    "A": "Paul",
+    "B": "Peter",
+    "C": "Silas",
+    "D": "Stephen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Paul. Reference: Acts 13 onward."
+  },
+  {
+   "id": "jamb-crs-enrich-0469",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? What was Saul's name after his conversion commonly given in Acts?",
+   "options": {
+    "A": "Peter",
+    "B": "Silas",
+    "C": "Stephen",
+    "D": "Paul"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Paul. Reference: Acts 13 onward."
+  },
+  {
+   "id": "jamb-crs-enrich-0470",
+   "type": "mcq",
+   "stem": "Where did Saul encounter the risen Christ?",
+   "options": {
+    "A": "In Jerusalem temple",
+    "B": "At Bethlehem",
+    "C": "On the road to Damascus",
+    "D": "At Mount Sinai"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "On the road to Damascus. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0471",
+   "type": "mcq",
+   "stem": "Which statement answers this question: Where did Saul encounter the risen Christ?",
+   "options": {
+    "A": "At Bethlehem",
+    "B": "On the road to Damascus",
+    "C": "At Mount Sinai",
+    "D": "In Jerusalem temple"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "On the road to Damascus. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0472",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Where did Saul encounter the risen Christ?",
+   "options": {
+    "A": "On the road to Damascus",
+    "B": "At Mount Sinai",
+    "C": "In Jerusalem temple",
+    "D": "At Bethlehem"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "On the road to Damascus. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0473",
+   "type": "mcq",
+   "stem": "According to the biblical account, where did Saul encounter the risen Christ?",
+   "options": {
+    "A": "At Mount Sinai",
+    "B": "In Jerusalem temple",
+    "C": "At Bethlehem",
+    "D": "On the road to Damascus"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "On the road to Damascus. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0474",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Where did Saul encounter the risen Christ?",
+   "options": {
+    "A": "In Jerusalem temple",
+    "B": "At Bethlehem",
+    "C": "On the road to Damascus",
+    "D": "At Mount Sinai"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "On the road to Damascus. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0475",
+   "type": "mcq",
+   "stem": "Who baptized Saul after his conversion?",
+   "options": {
+    "A": "Philip",
+    "B": "Ananias",
+    "C": "Barnabas",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ananias. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0476",
+   "type": "mcq",
+   "stem": "Which person baptized Saul after his conversion?",
+   "options": {
+    "A": "Ananias",
+    "B": "Barnabas",
+    "C": "Peter",
+    "D": "Philip"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ananias. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0477",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who baptized Saul after his conversion?",
+   "options": {
+    "A": "Barnabas",
+    "B": "Peter",
+    "C": "Philip",
+    "D": "Ananias"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Ananias. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0478",
+   "type": "mcq",
+   "stem": "According to the biblical account, who baptized Saul after his conversion?",
+   "options": {
+    "A": "Peter",
+    "B": "Philip",
+    "C": "Ananias",
+    "D": "Barnabas"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Ananias. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0479",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who baptized Saul after his conversion?",
+   "options": {
+    "A": "Philip",
+    "B": "Ananias",
+    "C": "Barnabas",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ananias. Reference: Acts 9."
+  },
+  {
+   "id": "jamb-crs-enrich-0480",
+   "type": "mcq",
+   "stem": "Who was the first Gentile convert prominently described in Acts?",
+   "options": {
+    "A": "Cornelius",
+    "B": "Lydia",
+    "C": "Sergius Paulus",
+    "D": "The Ethiopian official"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cornelius. Reference: Acts 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0481",
+   "type": "mcq",
+   "stem": "Which person was the first Gentile convert prominently described in Acts?",
+   "options": {
+    "A": "Lydia",
+    "B": "Sergius Paulus",
+    "C": "The Ethiopian official",
+    "D": "Cornelius"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Cornelius. Reference: Acts 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0482",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was the first Gentile convert prominently described in Acts?",
+   "options": {
+    "A": "Sergius Paulus",
+    "B": "The Ethiopian official",
+    "C": "Cornelius",
+    "D": "Lydia"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cornelius. Reference: Acts 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0483",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was the first Gentile convert prominently described in Acts?",
+   "options": {
+    "A": "The Ethiopian official",
+    "B": "Cornelius",
+    "C": "Lydia",
+    "D": "Sergius Paulus"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cornelius. Reference: Acts 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0484",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was the first Gentile convert prominently described in Acts?",
+   "options": {
+    "A": "Cornelius",
+    "B": "Lydia",
+    "C": "Sergius Paulus",
+    "D": "The Ethiopian official"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Cornelius. Reference: Acts 10."
+  },
+  {
+   "id": "jamb-crs-enrich-0485",
+   "type": "mcq",
+   "stem": "Who explained the Scriptures to the Ethiopian official?",
+   "options": {
+    "A": "Peter",
+    "B": "Paul",
+    "C": "Stephen",
+    "D": "Philip"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Philip. Reference: Acts 8."
+  },
+  {
+   "id": "jamb-crs-enrich-0486",
+   "type": "mcq",
+   "stem": "Which person explained the Scriptures to the Ethiopian official?",
+   "options": {
+    "A": "Paul",
+    "B": "Stephen",
+    "C": "Philip",
+    "D": "Peter"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Philip. Reference: Acts 8."
+  },
+  {
+   "id": "jamb-crs-enrich-0487",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who explained the Scriptures to the Ethiopian official?",
+   "options": {
+    "A": "Stephen",
+    "B": "Philip",
+    "C": "Peter",
+    "D": "Paul"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Philip. Reference: Acts 8."
+  },
+  {
+   "id": "jamb-crs-enrich-0488",
+   "type": "mcq",
+   "stem": "According to the biblical account, who explained the Scriptures to the Ethiopian official?",
+   "options": {
+    "A": "Philip",
+    "B": "Peter",
+    "C": "Paul",
+    "D": "Stephen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Philip. Reference: Acts 8."
+  },
+  {
+   "id": "jamb-crs-enrich-0489",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who explained the Scriptures to the Ethiopian official?",
+   "options": {
+    "A": "Peter",
+    "B": "Paul",
+    "C": "Stephen",
+    "D": "Philip"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Philip. Reference: Acts 8."
+  },
+  {
+   "id": "jamb-crs-enrich-0490",
+   "type": "mcq",
+   "stem": "Who was Paul's missionary companion from Cyprus?",
+   "options": {
+    "A": "Timothy",
+    "B": "Titus",
+    "C": "Barnabas",
+    "D": "Silas"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Barnabas. Reference: Acts 13."
+  },
+  {
+   "id": "jamb-crs-enrich-0491",
+   "type": "mcq",
+   "stem": "Which person was Paul's missionary companion from Cyprus?",
+   "options": {
+    "A": "Titus",
+    "B": "Barnabas",
+    "C": "Silas",
+    "D": "Timothy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Barnabas. Reference: Acts 13."
+  },
+  {
+   "id": "jamb-crs-enrich-0492",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who was Paul's missionary companion from Cyprus?",
+   "options": {
+    "A": "Barnabas",
+    "B": "Silas",
+    "C": "Timothy",
+    "D": "Titus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Barnabas. Reference: Acts 13."
+  },
+  {
+   "id": "jamb-crs-enrich-0493",
+   "type": "mcq",
+   "stem": "According to the biblical account, who was Paul's missionary companion from Cyprus?",
+   "options": {
+    "A": "Silas",
+    "B": "Timothy",
+    "C": "Titus",
+    "D": "Barnabas"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Barnabas. Reference: Acts 13."
+  },
+  {
+   "id": "jamb-crs-enrich-0494",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who was Paul's missionary companion from Cyprus?",
+   "options": {
+    "A": "Timothy",
+    "B": "Titus",
+    "C": "Barnabas",
+    "D": "Silas"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Barnabas. Reference: Acts 13."
+  },
+  {
+   "id": "jamb-crs-enrich-0495",
+   "type": "mcq",
+   "stem": "Who joined Paul and Silas and later became a close co-worker?",
+   "options": {
+    "A": "Titus",
+    "B": "Timothy",
+    "C": "Moses",
+    "D": "Apollos"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Timothy. Reference: Acts 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0496",
+   "type": "mcq",
+   "stem": "Which person joined Paul and Silas and later became a close co-worker?",
+   "options": {
+    "A": "Timothy",
+    "B": "Moses",
+    "C": "Apollos",
+    "D": "Titus"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Timothy. Reference: Acts 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0497",
+   "type": "mcq",
+   "stem": "Which of the following correctly identifies the answer to this question? Who joined Paul and Silas and later became a close co-worker?",
+   "options": {
+    "A": "Moses",
+    "B": "Apollos",
+    "C": "Titus",
+    "D": "Timothy"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Timothy. Reference: Acts 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0498",
+   "type": "mcq",
+   "stem": "According to the biblical account, who joined Paul and Silas and later became a close co-worker?",
+   "options": {
+    "A": "Apollos",
+    "B": "Titus",
+    "C": "Timothy",
+    "D": "Moses"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Timothy. Reference: Acts 16."
+  },
+  {
+   "id": "jamb-crs-enrich-0499",
+   "type": "mcq",
+   "stem": "The correct answer to the following CRS question is which? Who joined Paul and Silas and later became a close co-worker?",
+   "options": {
+    "A": "Titus",
+    "B": "Timothy",
+    "C": "Moses",
+    "D": "Apollos"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Timothy. Reference: Acts 16."
+  }
+ ],
+ "category": "secondary",
+ "body": "JAMB"
+}

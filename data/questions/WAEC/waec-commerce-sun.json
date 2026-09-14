@@ -1,0 +1,1327 @@
+{
+ "code": "waec-commerce-sun-bank",
+ "title": "WAEC Server | SSCE Bank",
+ "version": 1,
+ "questionCount": 94,
+ "totalMarks": 94,
+ "questions": [
+  {
+   "id": "waec-server-scripts-commerce-sun-0000",
+   "type": "mcq",
+   "stem": "What is the primary objective of a business organization?",
+   "options": {
+    "A": "Charity",
+    "B": "Profit maximization",
+    "C": "Employee welfare",
+    "D": "Community service"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The primary objective of most business organizations is to maximize profit."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0001",
+   "type": "mcq",
+   "stem": "Which of the following is a feature of a sole proprietorship?",
+   "options": {
+    "A": "Limited liability",
+    "B": "Single ownership",
+    "C": "Public ownership",
+    "D": "Government control"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A sole proprietorship is characterized by single ownership with full control by one person."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0002",
+   "type": "mcq",
+   "stem": "What is the term for the buying and selling of goods and services?",
+   "options": {
+    "A": "Production",
+    "B": "Trade",
+    "C": "Distribution",
+    "D": "Consumption"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Trade involves the exchange of goods and services between buyers and sellers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0003",
+   "type": "mcq",
+   "stem": "Which document is issued by a seller to indicate the amount owed by a buyer?",
+   "options": {
+    "A": "Receipt",
+    "B": "Invoice",
+    "C": "Cheque",
+    "D": "Voucher"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An invoice is a document issued by a seller to a buyer indicating the amount owed."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0004",
+   "type": "mcq",
+   "stem": "What is the term for the process of promoting and selling products or services?",
+   "options": {
+    "A": "Production",
+    "B": "Marketing",
+    "C": "Distribution",
+    "D": "Finance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Marketing involves activities to promote and sell products or services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0005",
+   "type": "mcq",
+   "stem": "Which of the following is a type of insurance that covers loss of goods at sea?",
+   "options": {
+    "A": "Life insurance",
+    "B": "Marine insurance",
+    "C": "Fire insurance",
+    "D": "Health insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Marine insurance covers the loss or damage of goods during sea transport."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0006",
+   "type": "mcq",
+   "stem": "What is the term for a business owned by two or more individuals?",
+   "options": {
+    "A": "Sole proprietorship",
+    "B": "Partnership",
+    "C": "Corporation",
+    "D": "Cooperative"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A partnership is a business owned and managed by two or more individuals."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0007",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a commercial bank?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Provide loans",
+    "C": "Control money supply",
+    "D": "Set fiscal policy"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Commercial banks provide loans to individuals and businesses."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0008",
+   "type": "mcq",
+   "stem": "What is the term for the physical movement of goods from one place to another?",
+   "options": {
+    "A": "Marketing",
+    "B": "Transportation",
+    "C": "Warehousing",
+    "D": "Production"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Transportation involves the physical movement of goods from one location to another."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0009",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a public limited company?",
+   "options": {
+    "A": "Unlimited liability",
+    "B": "Shares traded publicly",
+    "C": "Single ownership",
+    "D": "Government control"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A public limited company has shares that are traded on a stock exchange."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0010",
+   "type": "mcq",
+   "stem": "What is the term for the money invested in a business by its owners?",
+   "options": {
+    "A": "Revenue",
+    "B": "Capital",
+    "C": "Profit",
+    "D": "Loan"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Capital is the money or resources invested by owners to start or run a business."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0011",
+   "type": "mcq",
+   "stem": "Which of the following is a type of retail trade?",
+   "options": {
+    "A": "Wholesale trade",
+    "B": "Department store",
+    "C": "Import trade",
+    "D": "Export trade"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A department store is a form of retail trade selling directly to consumers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0012",
+   "type": "mcq",
+   "stem": "What is the term for the document that outlines the objectives of a company?",
+   "options": {
+    "A": "Prospectus",
+    "B": "Memorandum of Association",
+    "C": "Articles of Association",
+    "D": "Certificate of Incorporation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Memorandum of Association outlines the objectives and scope of a company."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0013",
+   "type": "mcq",
+   "stem": "Which of the following is an example of an auxiliary to trade?",
+   "options": {
+    "A": "Manufacturing",
+    "B": "Advertising",
+    "C": "Mining",
+    "D": "Farming"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Advertising is an auxiliary to trade as it supports the promotion of goods and services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0014",
+   "type": "mcq",
+   "stem": "What is the term for a person who buys goods for personal use?",
+   "options": {
+    "A": "Wholesaler",
+    "B": "Consumer",
+    "C": "Retailer",
+    "D": "Distributor"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A consumer purchases goods or services for personal use."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0015",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a stock exchange?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Facilitate trading of securities",
+    "C": "Provide loans",
+    "D": "Insure goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A stock exchange facilitates the buying and selling of securities like shares."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0016",
+   "type": "mcq",
+   "stem": "What is the term for the process of storing goods until they are needed?",
+   "options": {
+    "A": "Transportation",
+    "B": "Warehousing",
+    "C": "Marketing",
+    "D": "Production"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Warehousing involves storing goods to ensure availability when needed."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0017",
+   "type": "mcq",
+   "stem": "Which of the following is a type of cooperative society?",
+   "options": {
+    "A": "Public limited company",
+    "B": "Consumer cooperative",
+    "C": "Sole proprietorship",
+    "D": "Partnership"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A consumer cooperative is a type of cooperative society that provides goods to its members."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0018",
+   "type": "mcq",
+   "stem": "What is the term for a tax imposed on imported goods?",
+   "options": {
+    "A": "Excise duty",
+    "B": "Customs duty",
+    "C": "Sales tax",
+    "D": "Income tax"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Customs duty is a tax levied on goods imported into a country."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0019",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a private limited company?",
+   "options": {
+    "A": "Shares traded publicly",
+    "B": "Limited liability",
+    "C": "Unlimited liability",
+    "D": "Single ownership"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A private limited company has limited liability, protecting shareholders’ personal assets."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0020",
+   "type": "mcq",
+   "stem": "What is the term for a written promise to pay a sum of money at a future date?",
+   "options": {
+    "A": "Cheque",
+    "B": "Bill of exchange",
+    "C": "Receipt",
+    "D": "Invoice"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A bill of exchange is a written promise to pay a specified amount at a future date."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0022",
+   "type": "mcq",
+   "stem": "What is the term for the person who sells goods in small quantities to consumers?",
+   "options": {
+    "A": "Wholesaler",
+    "B": "Retailer",
+    "C": "Manufacturer",
+    "D": "Distributor"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A retailer sells goods in small quantities directly to consumers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0023",
+   "type": "mcq",
+   "stem": "Which of the following is a type of credit sale?",
+   "options": {
+    "A": "Cash on delivery",
+    "B": "Hire purchase",
+    "C": "Barter trade",
+    "D": "Prepaid purchase"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Hire purchase is a credit sale where payment is made in installments."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0024",
+   "type": "mcq",
+   "stem": "What is the term for the process of transferring ownership of goods from seller to buyer?",
+   "options": {
+    "A": "Warehousing",
+    "B": "Sale",
+    "C": "Production",
+    "D": "Distribution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A sale involves transferring ownership of goods from the seller to the buyer."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0025",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a central bank?",
+   "options": {
+    "A": "Provide loans to individuals",
+    "B": "Issue currency",
+    "C": "Sell insurance",
+    "D": "Trade securities"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The central bank is responsible for issuing currency and controlling monetary policy."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0026",
+   "type": "mcq",
+   "stem": "What is the term for goods purchased for resale or business use?",
+   "options": {
+    "A": "Consumer goods",
+    "B": "Capital goods",
+    "C": "Durable goods",
+    "D": "Non-durable goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Capital goods are purchased for use in production or for resale in business."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0027",
+   "type": "mcq",
+   "stem": "Which of the following is a type of foreign trade?",
+   "options": {
+    "A": "Retail trade",
+    "B": "Import trade",
+    "C": "Wholesale trade",
+    "D": "Barter trade"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Import trade involves purchasing goods from foreign countries."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0028",
+   "type": "mcq",
+   "stem": "What is the term for a document that shows the financial position of a business at a given time?",
+   "options": {
+    "A": "Profit and loss account",
+    "B": "Balance sheet",
+    "C": "Cash flow statement",
+    "D": "Income statement"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A balance sheet shows a business’s financial position at a specific point in time."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0029",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a cooperative society?",
+   "options": {
+    "A": "Profit maximization",
+    "B": "Democratic control",
+    "C": "Limited liability",
+    "D": "Public share trading"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cooperative societies are characterized by democratic control by their members."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0030",
+   "type": "mcq",
+   "stem": "What is the term for the person who acts as an intermediary between a buyer and a seller?",
+   "options": {
+    "A": "Consumer",
+    "B": "Broker",
+    "C": "Retailer",
+    "D": "Manufacturer"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A broker facilitates transactions between buyers and sellers for a commission."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0032",
+   "type": "mcq",
+   "stem": "What is the term for the process of exchanging goods without using money?",
+   "options": {
+    "A": "Credit trade",
+    "B": "Barter trade",
+    "C": "Cash trade",
+    "D": "Export trade"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Barter trade involves the direct exchange of goods or services without money."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0034",
+   "type": "mcq",
+   "stem": "What is the term for the money paid to shareholders from a company’s profits?",
+   "options": {
+    "A": "Interest",
+    "B": "Dividend",
+    "C": "Wages",
+    "D": "Rent"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Dividends are payments made to shareholders from a company’s profits."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0035",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the capital market?",
+   "options": {
+    "A": "Provide short-term loans",
+    "B": "Facilitate long-term financing",
+    "C": "Issue currency",
+    "D": "Insure goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The capital market facilitates long-term financing through securities like stocks and bonds."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0036",
+   "type": "mcq",
+   "stem": "What is the term for the person who undertakes the risk of starting a business?",
+   "options": {
+    "A": "Employee",
+    "B": "Entrepreneur",
+    "C": "Consumer",
+    "D": "Retailer"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An entrepreneur takes the risk of starting and managing a business."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0037",
+   "type": "mcq",
+   "stem": "Which of the following is a type of wholesale trade?",
+   "options": {
+    "A": "Chain store",
+    "B": "Cash and carry",
+    "C": "Department store",
+    "D": "Supermarket"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cash and carry is a type of wholesale trade selling in bulk to retailers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0038",
+   "type": "mcq",
+   "stem": "What is the term for a document that confirms payment has been made?",
+   "options": {
+    "A": "Invoice",
+    "B": "Receipt",
+    "C": "Cheque",
+    "D": "Bill of exchange"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A receipt is a document issued to confirm that payment has been received."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0040",
+   "type": "mcq",
+   "stem": "What is the term for the person who sells goods on behalf of another for a commission?",
+   "options": {
+    "A": "Broker",
+    "B": "Agent",
+    "C": "Retailer",
+    "D": "Wholesaler"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An agent sells goods on behalf of a principal and earns a commission."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0041",
+   "type": "mcq",
+   "stem": "Which of the following is a type of fire insurance?",
+   "options": {
+    "A": "Cargo insurance",
+    "B": "Consequential loss insurance",
+    "C": "Hull insurance",
+    "D": "Life insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Consequential loss insurance covers losses due to fire interrupting business operations."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0042",
+   "type": "mcq",
+   "stem": "What is the term for the total value of goods and services sold by a business?",
+   "options": {
+    "A": "Profit",
+    "B": "Revenue",
+    "C": "Capital",
+    "D": "Cost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Revenue is the total income from sales of goods or services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0043",
+   "type": "mcq",
+   "stem": "Which of the following is a function of the money market?",
+   "options": {
+    "A": "Provide long-term loans",
+    "B": "Facilitate short-term financing",
+    "C": "Issue shares",
+    "D": "Insure goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The money market facilitates short-term financing through instruments like treasury bills."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0044",
+   "type": "mcq",
+   "stem": "What is the term for the person who buys goods in bulk for resale?",
+   "options": {
+    "A": "Consumer",
+    "B": "Wholesaler",
+    "C": "Retailer",
+    "D": "Manufacturer"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A wholesaler purchases goods in bulk and sells them to retailers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0045",
+   "type": "mcq",
+   "stem": "Which of the following is a type of export trade?",
+   "options": {
+    "A": "Retail trade",
+    "B": "Entrepot trade",
+    "C": "Wholesale trade",
+    "D": "Barter trade"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Entrepot trade involves importing goods to re-export them."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0046",
+   "type": "mcq",
+   "stem": "What is the term for the document that specifies the rules governing a company’s operations?",
+   "options": {
+    "A": "Memorandum of Association",
+    "B": "Articles of Association",
+    "C": "Prospectus",
+    "D": "Certificate of Incorporation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Articles of Association outline the internal rules of a company."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0047",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a sole trader?",
+   "options": {
+    "A": "Limited liability",
+    "B": "Unlimited liability",
+    "C": "Public share trading",
+    "D": "Government ownership"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A sole trader has unlimited liability, meaning personal assets are at risk."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0048",
+   "type": "mcq",
+   "stem": "What is the term for the process of moving goods from producer to consumer?",
+   "options": {
+    "A": "Production",
+    "B": "Distribution",
+    "C": "Marketing",
+    "D": "Warehousing"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Distribution involves moving goods from producers to consumers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0049",
+   "type": "mcq",
+   "stem": "Which of the following is a type of life insurance?",
+   "options": {
+    "A": "Whole life assurance",
+    "B": "Fire insurance",
+    "C": "Marine insurance",
+    "D": "Cargo insurance"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Whole life assurance is a type of life insurance that covers the insured for their entire life."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0050",
+   "type": "mcq",
+   "stem": "What is the term for the excess of income over expenditure in a business?",
+   "options": {
+    "A": "Loss",
+    "B": "Profit",
+    "C": "Revenue",
+    "D": "Capital"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Profit is the excess of income over expenditure in a business."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0051",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a clearing house?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Settle transactions between banks",
+    "C": "Provide loans",
+    "D": "Insure goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A clearing house settles transactions, such as cheques, between banks."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0052",
+   "type": "mcq",
+   "stem": "What is the term for a business owned by its customers or workers?",
+   "options": {
+    "A": "Partnership",
+    "B": "Cooperative society",
+    "C": "Public limited company",
+    "D": "Sole proprietorship"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A cooperative society is owned and operated by its members, such as customers or workers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0053",
+   "type": "mcq",
+   "stem": "Which of the following is a type of indirect tax?",
+   "options": {
+    "A": "Income tax",
+    "B": "Value-added tax",
+    "C": "Property tax",
+    "D": "Corporate tax"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Value-added tax is an indirect tax levied on goods and services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0054",
+   "type": "mcq",
+   "stem": "What is the term for a written order to a bank to pay a specified amount?",
+   "options": {
+    "A": "Receipt",
+    "B": "Cheque",
+    "C": "Invoice",
+    "D": "Bill of exchange"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A cheque is a written order to a bank to pay a specified amount from an account."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0055",
+   "type": "mcq",
+   "stem": "Which of the following is a function of branding?",
+   "options": {
+    "A": "Transport goods",
+    "B": "Create product identity",
+    "C": "Store goods",
+    "D": "Produce goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Branding creates a unique identity for a product to distinguish it in the market."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0056",
+   "type": "mcq",
+   "stem": "What is the term for the person who transports goods for a fee?",
+   "options": {
+    "A": "Broker",
+    "B": "Carrier",
+    "C": "Retailer",
+    "D": "Wholesaler"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A carrier transports goods for a fee, such as a shipping company."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0057",
+   "type": "mcq",
+   "stem": "Which of the following is a type of health insurance?",
+   "options": {
+    "A": "Cargo insurance",
+    "B": "Medical insurance",
+    "C": "Hull insurance",
+    "D": "Fire insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Medical insurance covers healthcare costs for individuals."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0058",
+   "type": "mcq",
+   "stem": "What is the term for the total cost of producing goods or services?",
+   "options": {
+    "A": "Revenue",
+    "B": "Profit",
+    "C": "Expenditure",
+    "D": "Capital"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Expenditure is the total cost incurred in producing goods or services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0059",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a trade association?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Promote members’ interests",
+    "C": "Provide loans",
+    "D": "Insure goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A trade association promotes the interests of its members in a specific industry."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0060",
+   "type": "mcq",
+   "stem": "What is the term for a business that provides services rather than goods?",
+   "options": {
+    "A": "Manufacturing",
+    "B": "Service industry",
+    "C": "Extractive industry",
+    "D": "Construction"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A service industry provides intangible services rather than physical goods."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0061",
+   "type": "mcq",
+   "stem": "Which of the following is a type of home trade?",
+   "options": {
+    "A": "Import trade",
+    "B": "Retail trade",
+    "C": "Export trade",
+    "D": "Entrepot trade"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Retail trade is a type of home trade conducted within a country."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0062",
+   "type": "mcq",
+   "stem": "What is the term for a document that grants legal permission to start a company?",
+   "options": {
+    "A": "Prospectus",
+    "B": "Certificate of Incorporation",
+    "C": "Memorandum of Association",
+    "D": "Articles of Association"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Certificate of Incorporation is a legal document that permits a company to operate."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0063",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a partnership?",
+   "options": {
+    "A": "Limited liability",
+    "B": "Shared responsibility",
+    "C": "Public share trading",
+    "D": "Single ownership"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A partnership involves shared responsibility among partners for business operations."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0064",
+   "type": "mcq",
+   "stem": "What is the term for the process of dividing a market into distinct groups of buyers?",
+   "options": {
+    "A": "Branding",
+    "B": "Market segmentation",
+    "C": "Advertising",
+    "D": "Distribution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Market segmentation divides a market into groups with similar characteristics."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0065",
+   "type": "mcq",
+   "stem": "Which of the following is a type of accident insurance?",
+   "options": {
+    "A": "Fire insurance",
+    "B": "Personal accident insurance",
+    "C": "Marine insurance",
+    "D": "Life insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Personal accident insurance covers injuries or death due to accidents."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0066",
+   "type": "mcq",
+   "stem": "What is the term for the money borrowed by a business from a bank?",
+   "options": {
+    "A": "Capital",
+    "B": "Loan",
+    "C": "Revenue",
+    "D": "Profit"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A loan is money borrowed from a bank to be repaid with interest."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0067",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a chamber of commerce?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Promote trade and industry",
+    "C": "Provide loans",
+    "D": "Insure goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A chamber of commerce promotes trade and industry in a specific region."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0068",
+   "type": "mcq",
+   "stem": "What is the term for a business that extracts natural resources?",
+   "options": {
+    "A": "Service industry",
+    "B": "Extractive industry",
+    "C": "Manufacturing",
+    "D": "Construction"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An extractive industry involves extracting natural resources like minerals or oil."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0069",
+   "type": "mcq",
+   "stem": "Which of the following is a type of international trade?",
+   "options": {
+    "A": "Retail trade",
+    "B": "Export trade",
+    "C": "Wholesale trade",
+    "D": "Barter trade"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Export trade involves selling goods to foreign countries."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0070",
+   "type": "mcq",
+   "stem": "What is the term for a document that shows a business’s profit or loss over a period?",
+   "options": {
+    "A": "Balance sheet",
+    "B": "Profit and loss account",
+    "C": "Cash flow statement",
+    "D": "Trial balance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A profit and loss account shows the profit or loss of a business over a period."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0071",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a public corporation?",
+   "options": {
+    "A": "Private ownership",
+    "B": "Government ownership",
+    "C": "Unlimited liability",
+    "D": "Single ownership"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A public corporation is owned and controlled by the government."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0072",
+   "type": "mcq",
+   "stem": "What is the term for the process of attracting customers through product promotion?",
+   "options": {
+    "A": "Production",
+    "B": "Advertising",
+    "C": "Distribution",
+    "D": "Warehousing"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Advertising promotes products to attract customers and increase sales."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0073",
+   "type": "mcq",
+   "stem": "Which of the following is a type of fidelity guarantee insurance?",
+   "options": {
+    "A": "Fire insurance",
+    "B": "Employee dishonesty insurance",
+    "C": "Marine insurance",
+    "D": "Life insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Fidelity guarantee insurance covers losses due to employee dishonesty."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0074",
+   "type": "mcq",
+   "stem": "What is the term for the money received from selling goods or services?",
+   "options": {
+    "A": "Profit",
+    "B": "Revenue",
+    "C": "Capital",
+    "D": "Cost"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Revenue is the money received from the sale of goods or services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0075",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a merchant bank?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Provide corporate finance",
+    "C": "Sell insurance",
+    "D": "Transport goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Merchant banks provide corporate finance services like loans and advisory."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0076",
+   "type": "mcq",
+   "stem": "What is the term for a business that produces goods from raw materials?",
+   "options": {
+    "A": "Service industry",
+    "B": "Manufacturing",
+    "C": "Extractive industry",
+    "D": "Construction"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Manufacturing involves producing goods from raw materials."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0077",
+   "type": "mcq",
+   "stem": "Which of the following is a type of retail trade?",
+   "options": {
+    "A": "Supermarket",
+    "B": "Cash and carry",
+    "C": "Import trade",
+    "D": "Export trade"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A supermarket is a type of retail trade selling directly to consumers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0078",
+   "type": "mcq",
+   "stem": "What is the term for a document inviting the public to buy shares in a company?",
+   "options": {
+    "A": "Memorandum of Association",
+    "B": "Prospectus",
+    "C": "Articles of Association",
+    "D": "Certificate of Incorporation"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A prospectus invites the public to purchase shares in a company."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0079",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a joint-stock company?",
+   "options": {
+    "A": "Unlimited liability",
+    "B": "Limited liability",
+    "C": "Single ownership",
+    "D": "Government control"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A joint-stock company has limited liability for its shareholders."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0080",
+   "type": "mcq",
+   "stem": "What is the term for the process of determining the price of a product?",
+   "options": {
+    "A": "Branding",
+    "B": "Pricing",
+    "C": "Advertising",
+    "D": "Distribution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Pricing involves setting the monetary value of a product or service."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0081",
+   "type": "mcq",
+   "stem": "Which of the following is a type of motor insurance?",
+   "options": {
+    "A": "Fire insurance",
+    "B": "Third-party insurance",
+    "C": "Marine insurance",
+    "D": "Life insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Third-party insurance covers damages caused by the insured vehicle to others."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0082",
+   "type": "mcq",
+   "stem": "What is the term for the excess of expenditure over income in a business?",
+   "options": {
+    "A": "Profit",
+    "B": "Loss",
+    "C": "Revenue",
+    "D": "Capital"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A loss occurs when a business’s expenditure exceeds its income."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0083",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a development bank?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Provide long-term loans",
+    "C": "Sell insurance",
+    "D": "Transport goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Development banks provide long-term loans for economic development projects."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0084",
+   "type": "mcq",
+   "stem": "What is the term for a business that builds infrastructure like roads and bridges?",
+   "options": {
+    "A": "Service industry",
+    "B": "Extractive industry",
+    "C": "Construction",
+    "D": "Manufacturing"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The construction industry builds infrastructure such as roads and bridges."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0085",
+   "type": "mcq",
+   "stem": "Which of the following is a type of foreign trade?",
+   "options": {
+    "A": "Retail trade",
+    "B": "Import trade",
+    "C": "Wholesale trade",
+    "D": "Barter trade"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Import trade involves purchasing goods from foreign countries."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0086",
+   "type": "mcq",
+   "stem": "What is the term for a document that records all financial transactions of a business?",
+   "options": {
+    "A": "Balance sheet",
+    "B": "Ledger",
+    "C": "Profit and loss account",
+    "D": "Cash flow statement"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A ledger records all financial transactions of a business."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0087",
+   "type": "mcq",
+   "stem": "Which of the following is a characteristic of a sole proprietorship?",
+   "options": {
+    "A": "Limited liability",
+    "B": "Single ownership",
+    "C": "Public share trading",
+    "D": "Government ownership"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A sole proprietorship is owned and managed by a single individual."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0088",
+   "type": "mcq",
+   "stem": "What is the term for the process of creating a unique image for a product?",
+   "options": {
+    "A": "Pricing",
+    "B": "Branding",
+    "C": "Advertising",
+    "D": "Distribution"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Branding creates a unique image and identity for a product in the market."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0089",
+   "type": "mcq",
+   "stem": "Which of the following is a type of burglary insurance?",
+   "options": {
+    "A": "Fire insurance",
+    "B": "Theft insurance",
+    "C": "Marine insurance",
+    "D": "Life insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Theft insurance covers losses due to burglary or theft."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0090",
+   "type": "mcq",
+   "stem": "What is the term for the money used to start or expand a business?",
+   "options": {
+    "A": "Revenue",
+    "B": "Capital",
+    "C": "Profit",
+    "D": "Loss"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Capital is the money used to start or expand a business."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0091",
+   "type": "mcq",
+   "stem": "Which of the following is a function of a trade union?",
+   "options": {
+    "A": "Issue currency",
+    "B": "Protect workers’ rights",
+    "C": "Provide loans",
+    "D": "Insure goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A trade union protects and promotes the rights of workers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0092",
+   "type": "mcq",
+   "stem": "What is the term for a business that provides financial services?",
+   "options": {
+    "A": "Manufacturing",
+    "B": "Service industry",
+    "C": "Extractive industry",
+    "D": "Construction"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The service industry includes businesses that provide financial services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0093",
+   "type": "mcq",
+   "stem": "Which of the following is a type of wholesale trade?",
+   "options": {
+    "A": "Supermarket",
+    "B": "General wholesaler",
+    "C": "Department store",
+    "D": "Chain store"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A general wholesaler buys in bulk and sells to retailers."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0094",
+   "type": "mcq",
+   "stem": "What is the term for a document that shows the amount paid for goods?",
+   "options": {
+    "A": "Invoice",
+    "B": "Receipt",
+    "C": "Cheque",
+    "D": "Bill of exchange"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A receipt confirms the amount paid for goods or services."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0095",
+   "type": "mcq",
+   "stem": "Which of the following is a function of packaging?",
+   "options": {
+    "A": "Transport goods",
+    "B": "Protect products",
+    "C": "Produce goods",
+    "D": "Store goods"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Packaging protects products during transportation and storage."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0096",
+   "type": "mcq",
+   "stem": "What is the term for the person who negotiates contracts on behalf of another?",
+   "options": {
+    "A": "Retailer",
+    "B": "Agent",
+    "C": "Wholesaler",
+    "D": "Consumer"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An agent negotiates contracts or transactions on behalf of a principal."
+  },
+  {
+   "id": "waec-server-scripts-commerce-sun-0097",
+   "type": "mcq",
+   "stem": "Which of the following is a type of liability insurance?",
+   "options": {
+    "A": "Fire insurance",
+    "B": "Public liability insurance",
+    "C": "Marine insurance",
+    "D": "Life insurance"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Public liability insurance covers damages caused to third parties."
+  }
+ ],
+ "category": "secondary",
+ "body": "WAEC"
+}
