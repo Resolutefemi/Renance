@@ -1,0 +1,352 @@
+{
+ "national": {
+  "name": "National BECE",
+  "administering_body": {
+   "name": "NECO (National Examinations Council)",
+   "confirmed": true,
+   "note": "NECO runs the BECE for Federal Unity Colleges, armed forces schools and other federal institutions; states run their own BECE for their public schools."
+  },
+  "certification": "BECE certificate \u2014 transit from JSS3 to SS1; to write the BECE is to finish junior secondary."
+ },
+ "states": {
+  "Abia": {
+   "administering_body": {
+    "name": "Abia State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Adamawa": {
+   "administering_body": {
+    "name": "Adamawa State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Akwa Ibom": {
+   "administering_body": {
+    "name": "Akwa Ibom State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Anambra": {
+   "administering_body": {
+    "name": "Anambra State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Bauchi": {
+   "administering_body": {
+    "name": "Bauchi State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Bayelsa": {
+   "administering_body": {
+    "name": "Bayelsa State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Benue": {
+   "administering_body": {
+    "name": "Benue State Education Quality Assurance and Examinations Board (BEQAEB)",
+    "confirmed": true,
+    "note": "BEQAEB announced 2026 BECE registration extension (Information Officer: Jeffrey Adzam)."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Borno": {
+   "administering_body": {
+    "name": "Borno State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Cross River": {
+   "administering_body": {
+    "name": "Cross River State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Delta": {
+   "administering_body": {
+    "name": "Delta State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Ebonyi": {
+   "administering_body": {
+    "name": "Ebonyi State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Edo": {
+   "administering_body": {
+    "name": "Edo State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Ekiti": {
+   "administering_body": {
+    "name": "Ekiti State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Enugu": {
+   "administering_body": {
+    "name": "Enugu State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "FCT Abuja": {
+   "administering_body": {
+    "name": "FCT Abuja State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Gombe": {
+   "administering_body": {
+    "name": "Gombe State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Imo": {
+   "administering_body": {
+    "name": "Imo State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Jigawa": {
+   "administering_body": {
+    "name": "Jigawa State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Kaduna": {
+   "administering_body": {
+    "name": "Kaduna State Schools Quality Assurance Authority (KSSQAA)",
+    "confirmed": true,
+    "note": "KSSQAA also runs BAICE, QE and SAIQE. 2026 BECE Hybrid CBT pilot Phase II + optional mock CBT (9 May 2026) at listed centres (ZEDA Zaria, Beijing Int'l School Kawo, Essence Int'l School, Queen Amina College, St. Thaddeus Academy Zangon Kataf). Same certification as paper track."
+   },
+   "cbt_status": "HYBRID CBT \u2014 Phase II pilot 2026 (state-wide move to computer-based BECE)",
+   "public_pq_sources": []
+  },
+  "Kano": {
+   "administering_body": {
+    "name": "Kano State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Katsina": {
+   "administering_body": {
+    "name": "Katsina State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Kebbi": {
+   "administering_body": {
+    "name": "Kebbi State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Kogi": {
+   "administering_body": {
+    "name": "Kogi State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Kwara": {
+   "administering_body": {
+    "name": "Kwara State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Lagos": {
+   "administering_body": {
+    "name": "Lagos State Examinations Board (LASEB)",
+    "confirmed": true,
+    "note": "Colloquially 'Junior WAEC' in Lagos. Board publishes timetables; past papers not published free."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Nasarawa": {
+   "administering_body": {
+    "name": "Nasarawa State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Niger": {
+   "administering_body": {
+    "name": "Niger State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Ogun": {
+   "administering_body": {
+    "name": "Ogun State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Ondo": {
+   "administering_body": {
+    "name": "Ondo State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Osun": {
+   "administering_body": {
+    "name": "Osun State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Oyo": {
+   "administering_body": {
+    "name": "Oyo State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Plateau": {
+   "administering_body": {
+    "name": "Plateau State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Rivers": {
+   "administering_body": {
+    "name": "Rivers State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Sokoto": {
+   "administering_body": {
+    "name": "Sokoto State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Taraba": {
+   "administering_body": {
+    "name": "Taraba State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Yobe": {
+   "administering_body": {
+    "name": "Yobe State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  },
+  "Zamfara": {
+   "administering_body": {
+    "name": "Zamfara State Ministry of Education \u2014 BECE examinations division (expected pattern)",
+    "confirmed": false,
+    "note": "State Ministries of Education run BECE through an examinations division/board; exact board name to confirm in the state sweep."
+   },
+   "cbt_status": "paper (no CBT signal found)",
+   "public_pq_sources": []
+  }
+ },
+ "source_intel": {
+  "flashlearners.com": "BECE hub: national BECE English/Maths samples (keys partial), Lagos/Kaduna/Benue BECE news 2026, junior-WAEC syllabus",
+  "becepastquestions.com": "tips blog only \u2014 no question banks",
+  "stoplearn.com": "1 forum stub \u2014 no banks",
+  "search_backend": "z-ai web_search quota-limited (429) during session; per-state sweep resumable via scripts/research/legacyGabriel/bece_state_sweep.py"
+ }
+}
