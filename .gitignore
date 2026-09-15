@@ -44,6 +44,11 @@ apps/study-api/bin/
 data/src/real/
 data/src/mock/
 
+# Server-only sealed-key output of tools/cbt-build (keys live inside the
+# question banks + the API's in-memory cache; this folder is a build
+# artifact, never tracked).
+data/answer-keys/
+
 # theme-flip golden renders (regenerable via --update-goldens)
 apps/mobile/test/goldens/
 arena-e2e
