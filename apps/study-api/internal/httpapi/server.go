@@ -166,6 +166,7 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /tutor/status", s.auth(s.handleTutorStatus))
         mux.HandleFunc("POST /ai/generate", s.auth(s.handleAIGenerate))
         mux.HandleFunc("GET /internal/review/tick", s.handleReviewTick)
+        mux.HandleFunc("GET /internal/dbstats", s.auth(s.handleDBStats)) // TEMPORARY diag — remove
         mux.HandleFunc("PUT /me/profile", s.auth(s.handleUpdateProfile))
         mux.HandleFunc("GET /manifest", s.auth(s.handleManifest))
         mux.HandleFunc("GET /bundles/{code}", s.auth(s.handleBundle))
