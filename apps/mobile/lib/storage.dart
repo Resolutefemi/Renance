@@ -22,6 +22,7 @@ class SessionStore {
   final SharedPreferences _prefs;
   static const _kToken = 'renance.token';
   static const _kUser = 'renance.user';
+  static const _kIntroSeen = 'renance.introSeen';
 
   String? get token => _prefs.getString(_kToken);
 
@@ -44,6 +45,13 @@ class SessionStore {
     await _prefs.remove(_kToken);
     await _prefs.remove(_kUser);
   }
+
+  /// Whether the cinematic splash has played on a previous launch.
+  /// First launch gets the full brand sequence; later launches get a
+  /// snappier cut (ROADMAP: "first open ≠ second open").
+  bool get introSeen => _prefs.getBool(_kIntroSeen) ?? false;
+
+  Future<void> markIntroSeen() => _prefs.setBool(_kIntroSeen, true);
 }
 
 // ------------------------------------------------------------- submissions
@@ -67,13 +75,13 @@ class PendingSubmission {
   final DateTime createdAt;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-    'id': id,
-    'code': code,
-    'attemptId': attemptId,
-    'answers': answers,
-    'durationMs': durationMs,
-    'createdAt': createdAt.millisecondsSinceEpoch,
-  };
+        'id': id,
+        'code': code,
+        'attemptId': attemptId,
+        'answers': answers,
+        'durationMs': durationMs,
+        'createdAt': createdAt.millisecondsSinceEpoch,
+      };
 
   factory PendingSubmission.fromJson(Map<String, dynamic> j) =>
       PendingSubmission(
@@ -107,22 +115,22 @@ class PendingCardGrade {
   final DateTime createdAt;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-    'id': id,
-    'cardId': cardId,
-    'deckCode': deckCode,
-    'grade': grade,
-    'createdAt': createdAt.millisecondsSinceEpoch,
-  };
+        'id': id,
+        'cardId': cardId,
+        'deckCode': deckCode,
+        'grade': grade,
+        'createdAt': createdAt.millisecondsSinceEpoch,
+      };
 
   factory PendingCardGrade.fromJson(Map<String, dynamic> j) => PendingCardGrade(
-    id: (j['id'] ?? '') as String,
-    cardId: (j['cardId'] ?? '') as String,
-    deckCode: (j['deckCode'] ?? '') as String,
-    grade: (j['grade'] ?? '') as String,
-    createdAt: DateTime.fromMillisecondsSinceEpoch(
-      (j['createdAt'] ?? 0) as int,
-    ),
-  );
+        id: (j['id'] ?? '') as String,
+        cardId: (j['cardId'] ?? '') as String,
+        deckCode: (j['deckCode'] ?? '') as String,
+        grade: (j['grade'] ?? '') as String,
+        createdAt: DateTime.fromMillisecondsSinceEpoch(
+          (j['createdAt'] ?? 0) as int,
+        ),
+      );
 }
 
 // --------------------------------------------------------------- pack store
@@ -225,10 +233,10 @@ class DbPackStore implements PackStore {
   ];
 
   static Future<Database> _defaultOpen() async => openDatabase(
-    p.join(await getDatabasesPath(), 'renance.db'),
-    version: 3,
-    onCreate: (db, version) async {
-      await db.execute('''
+        p.join(await getDatabasesPath(), 'renance.db'),
+        version: 3,
+        onCreate: (db, version) async {
+          await db.execute('''
             CREATE TABLE packs (
               code TEXT PRIMARY KEY,
               sha TEXT NOT NULL,
@@ -236,41 +244,44 @@ class DbPackStore implements PackStore {
               json TEXT NOT NULL,
               downloaded_at INTEGER NOT NULL
             )''');
-      await db.execute('''
+          await db.execute('''
             CREATE TABLE pending_submissions (
               attempt_id TEXT PRIMARY KEY,
               code TEXT NOT NULL,
               payload TEXT NOT NULL,
               created_at INTEGER NOT NULL
             )''');
-      for (final ddl in _cardTables) {
-        await db.execute(ddl);
-      }
-    },
-    onUpgrade: (db, oldVersion, newVersion) async {
-      if (oldVersion < 2) {
-        for (final ddl in _cardTables) {
-          await db.execute(ddl);
-        }
-      }
-      if (oldVersion < 3) {
-        for (final ddl in _lessonTables) {
-          await db.execute(ddl);
-        }
-      }
-    },
-  );
+          for (final ddl in _cardTables) {
+            await db.execute(ddl);
+          }
+        },
+        onUpgrade: (db, oldVersion, newVersion) async {
+          if (oldVersion < 2) {
+            for (final ddl in _cardTables) {
+              await db.execute(ddl);
+            }
+          }
+          if (oldVersion < 3) {
+            for (final ddl in _lessonTables) {
+              await db.execute(ddl);
+            }
+          }
+        },
+      );
 
   @override
   Future<void> savePack(Bundle bundle, String sha) async {
     final db = await _open();
-    await db.insert('packs', <String, Object?>{
-      'code': bundle.code,
-      'sha': sha,
-      'title': bundle.title,
-      'json': jsonEncode(bundle.toJson()),
-      'downloaded_at': DateTime.now().millisecondsSinceEpoch,
-    }, conflictAlgorithm: ConflictAlgorithm.replace);
+    await db.insert(
+        'packs',
+        <String, Object?>{
+          'code': bundle.code,
+          'sha': sha,
+          'title': bundle.title,
+          'json': jsonEncode(bundle.toJson()),
+          'downloaded_at': DateTime.now().millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
@@ -344,12 +355,15 @@ class DbPackStore implements PackStore {
   @override
   Future<void> queueSubmission(PendingSubmission submission) async {
     final db = await _open();
-    await db.insert('pending_submissions', <String, Object?>{
-      'attempt_id': submission.attemptId,
-      'code': submission.code,
-      'payload': jsonEncode(submission.toJson()),
-      'created_at': submission.createdAt.millisecondsSinceEpoch,
-    }, conflictAlgorithm: ConflictAlgorithm.replace);
+    await db.insert(
+        'pending_submissions',
+        <String, Object?>{
+          'attempt_id': submission.attemptId,
+          'code': submission.code,
+          'payload': jsonEncode(submission.toJson()),
+          'created_at': submission.createdAt.millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
@@ -385,11 +399,14 @@ class DbPackStore implements PackStore {
     final batch = db.batch();
     final now = DateTime.now().millisecondsSinceEpoch;
     for (final d in decks) {
-      batch.insert('flashcard_decks', <String, Object?>{
-        'code': d.code,
-        'json': jsonEncode(d.toJson()),
-        'updated_at': now,
-      }, conflictAlgorithm: ConflictAlgorithm.replace);
+      batch.insert(
+          'flashcard_decks',
+          <String, Object?>{
+            'code': d.code,
+            'json': jsonEncode(d.toJson()),
+            'updated_at': now,
+          },
+          conflictAlgorithm: ConflictAlgorithm.replace);
     }
     await batch.commit(noResult: true);
   }
@@ -410,11 +427,14 @@ class DbPackStore implements PackStore {
   @override
   Future<void> saveDeck(FlashcardDeck deck) async {
     final db = await _open();
-    await db.insert('flashcard_decks', <String, Object?>{
-      'code': deck.code,
-      'json': jsonEncode(deck.toJson()),
-      'updated_at': DateTime.now().millisecondsSinceEpoch,
-    }, conflictAlgorithm: ConflictAlgorithm.replace);
+    await db.insert(
+        'flashcard_decks',
+        <String, Object?>{
+          'code': deck.code,
+          'json': jsonEncode(deck.toJson()),
+          'updated_at': DateTime.now().millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
@@ -443,11 +463,14 @@ class DbPackStore implements PackStore {
     final batch = db.batch();
     final now = DateTime.now().millisecondsSinceEpoch;
     for (final r in rows) {
-      batch.insert('card_progress_cache', <String, Object?>{
-        'card_id': r.cardId,
-        'payload': jsonEncode(r.toJson()),
-        'updated_at': now,
-      }, conflictAlgorithm: ConflictAlgorithm.replace);
+      batch.insert(
+          'card_progress_cache',
+          <String, Object?>{
+            'card_id': r.cardId,
+            'payload': jsonEncode(r.toJson()),
+            'updated_at': now,
+          },
+          conflictAlgorithm: ConflictAlgorithm.replace);
     }
     await batch.commit(noResult: true);
   }
@@ -469,12 +492,15 @@ class DbPackStore implements PackStore {
   @override
   Future<void> queueCardGrade(PendingCardGrade grade) async {
     final db = await _open();
-    await db.insert('pending_card_grades', <String, Object?>{
-      'id': grade.id,
-      'card_id': grade.cardId,
-      'payload': jsonEncode(grade.toJson()),
-      'created_at': grade.createdAt.millisecondsSinceEpoch,
-    }, conflictAlgorithm: ConflictAlgorithm.replace);
+    await db.insert(
+        'pending_card_grades',
+        <String, Object?>{
+          'id': grade.id,
+          'card_id': grade.cardId,
+          'payload': jsonEncode(grade.toJson()),
+          'created_at': grade.createdAt.millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
@@ -511,11 +537,14 @@ class DbPackStore implements PackStore {
     final now = DateTime.now().millisecondsSinceEpoch;
     final batch = db.batch();
     for (final l in lessons) {
-      batch.insert('lessons', <String, Object?>{
-        'slug': l.slug,
-        'json': jsonEncode(l.toJson()),
-        'updated_at': now,
-      }, conflictAlgorithm: ConflictAlgorithm.replace);
+      batch.insert(
+          'lessons',
+          <String, Object?>{
+            'slug': l.slug,
+            'json': jsonEncode(l.toJson()),
+            'updated_at': now,
+          },
+          conflictAlgorithm: ConflictAlgorithm.replace);
     }
     await batch.commit(noResult: true);
   }
@@ -546,11 +575,14 @@ class DbPackStore implements PackStore {
   @override
   Future<void> saveLesson(Lesson lesson) async {
     final db = await _open();
-    await db.insert('lessons', <String, Object?>{
-      'slug': lesson.slug,
-      'json': jsonEncode(lesson.toJson()),
-      'updated_at': DateTime.now().millisecondsSinceEpoch,
-    }, conflictAlgorithm: ConflictAlgorithm.replace);
+    await db.insert(
+        'lessons',
+        <String, Object?>{
+          'slug': lesson.slug,
+          'json': jsonEncode(lesson.toJson()),
+          'updated_at': DateTime.now().millisecondsSinceEpoch,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
   @override
@@ -595,8 +627,8 @@ class MemoryPackStore implements PackStore {
 
   @override
   Future<Map<String, int>> packSizes() async => <String, int>{
-    for (final e in _packs.entries) e.key: e.value.title.length * 128,
-  };
+        for (final e in _packs.entries) e.key: e.value.title.length * 128,
+      };
 
   @override
   Future<void> removePack(String code) async => _packs.remove(code);

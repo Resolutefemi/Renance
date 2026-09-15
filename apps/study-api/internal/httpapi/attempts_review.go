@@ -83,11 +83,9 @@ func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusInternalServerError, "internal", "pack no longer available")
                 return
         }
-        keys, err := s.store.KeysForBank(r.Context(), attempt.Code)
-        if err != nil {
-                s.log.Error("key lookup failed", "err", err)
-                fail(w, http.StatusInternalServerError, "internal", "could not load answer key")
-                return
+        keys, keyed := s.keys.Get(attempt.Code)
+        if !keyed {
+                keys = map[string]store.KeyEntry{} // bank unkeyed: nothing to review
         }
         picks, err := s.store.AnswersForAttempt(r.Context(), attempt.ID)
         if err != nil {

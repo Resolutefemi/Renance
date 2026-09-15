@@ -3,13 +3,24 @@ import Link from 'next/link';
 import { loadLessons, loadManifest } from '@/lib/site-data';
 import OpenAppButton from '@/components/open-app-button';
 import { RenanceMark } from '@/components/renance-logo';
+import {
+  MotionPrefs,
+  LandingNav,
+  Reveal,
+  CountUp,
+  AuroraField,
+  FloatingCard,
+  MarqueeRail,
+} from '@/components/landing-motion';
 
 /**
- * The public landing page. This is the front door for search engines and
- * the SEO battle for the name "Renance", everything above the fold is
- * static HTML with structured data in the root layout. Numbers on the
- * page are baked from the committed manifest at build time, so the copy
- * can never drift from the real archive.
+ * The public landing page — "Your Guide to Academic Success".
+ *
+ * Built to feel alive: an aurora gradient field drifts behind frosted
+ * glass panels, feature tiles lift on hover, stats count in on scroll
+ * and an exam-pack ticker runs under the hero. Everything above the
+ * fold is still static HTML with structured data (SEO doctrine), the
+ * client components only add motion and never gate content.
  */
 
 export const dynamic = 'force-static';
@@ -24,41 +35,53 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     icon: 'fact_check',
+    tone: 'blue',
+    glow: 'rgba(59,130,246,0.16)',
     title: 'Server-graded CBT papers',
-    body: 'Every mock is marked on the server with the sealed answer keys, the same doctrine real exam bodies use. No browser tricks, no self-marking, your score is honest even when the network drops.',
+    body: 'Every mock is marked on the server with sealed answer keys — the same doctrine real exam bodies use. No browser tricks, no self-marking: your score is honest even when the network drops.',
   },
   {
     icon: 'event_repeat',
+    tone: 'violet',
+    glow: 'rgba(139,92,246,0.16)',
     title: 'Spaced review that plans itself',
-    body: 'Topics you miss enter an SM-2 spaced-repetition queue and return exactly when you would forget them. Clear the queue, keep the knowledge, no planner to maintain.',
+    body: 'Topics you miss enter an SM-2 spaced-repetition queue and return exactly when you would forget them. Clear the queue, keep the knowledge — no planner to maintain.',
   },
   {
     icon: 'record_voice_over',
+    tone: 'teal',
+    glow: 'rgba(20,184,166,0.16)',
     title: 'Voice flashcards',
-    body: 'Decks that read themselves aloud on your phone, drill while walking, cooking or commuting. Leitner-boxed so hard cards come back sooner and easy ones fade away.',
+    body: 'Decks that read themselves aloud on your phone — drill while walking, cooking or commuting. Leitner-boxed so hard cards come back sooner and easy ones fade away.',
   },
   {
     icon: 'auto_stories',
+    tone: 'emerald',
+    glow: 'rgba(16,185,129,0.16)',
     title: 'The JAMB novel, question by question',
-    body: 'The Lekki Headmaster ships as an opt-in question set inside every Use of English mock, switch it on when you are ready, exactly like the hall asks.',
+    body: 'The Lekki Headmaster ships as an opt-in question set inside every Use of English mock. Switch it on when you are ready — exactly like the hall asks.',
   },
   {
     icon: 'battery_saver',
+    tone: 'amber',
+    glow: 'rgba(245,158,11,0.18)',
     title: 'Fatigue-aware sessions',
     body: 'Renance notices when your answer pace collapses and nudges you to take five, because tired practice teaches the wrong lessons.',
   },
   {
     icon: 'bolt',
+    tone: 'blue',
+    glow: 'rgba(99,102,241,0.16)',
     title: 'Instant practice, anywhere',
     body: 'Every past-question bank ships with the site, so a paper opens the moment you tap it. Answers and worked solutions grade right on your device, even on a weak network.',
   },
-];
+] as const;
 
 const STEPS = [
   {
     icon: 'how_to_reg',
     title: 'Register in 10 seconds',
-    body: 'Username and password only, no email, no data bundle wasted on forms. Set your target exam and year, and your desk is ready.',
+    body: 'Username and password only — no email, no data bundle wasted on forms. Set your target exam and year, and your desk is ready.',
   },
   {
     icon: 'tune',
@@ -70,7 +93,7 @@ const STEPS = [
     title: 'Sit, grade, review, rise',
     body: 'Sit under real CBT rules, get graded server-side in seconds, walk the topic breakdown, and let the review queue schedule your comeback.',
   },
-];
+] as const;
 
 function fmt(n: number): string {
   return n.toLocaleString('en-US');
@@ -91,72 +114,181 @@ export default function Landing() {
   const uniExams = exams.filter((e) => e.category === 'university');
   const sum = (list: typeof exams) => list.reduce((s, e) => s + (e.questionCount ?? 0), 0);
 
+  /* exam-pack ticker: the biggest packs by question count */
+  const tickerItems = [...exams]
+    .sort((a, b) => (b.questionCount ?? 0) - (a.questionCount ?? 0))
+    .slice(0, 14)
+    .map((e) => `${e.title ?? e.code ?? 'Pack'} · ${fmt(e.questionCount ?? 0)} Q`);
+
+  const iconTone: Record<string, string> = {
+    blue: 'linear-gradient(135deg,#3b82f6,#6366f1)',
+    violet: 'linear-gradient(135deg,#8b5cf6,#6366f1)',
+    teal: 'linear-gradient(135deg,#14b8a6,#10b981)',
+    emerald: 'linear-gradient(135deg,#10b981,#34d399)',
+    amber: 'linear-gradient(135deg,#f59e0b,#f97316)',
+  };
+
   return (
-    <div className="bg-background">
-      <main className="mx-auto w-full max-w-5xl px-4 sm:px-6">
-        {/* hero */}
-        <section className="flex min-h-[80dvh] flex-col items-center justify-center py-16 text-center">
-          <RenanceMark size={64} />
-          <p className="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-on-surface-variant">
-            the global student study OS
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-on-surface sm:text-5xl lg:text-6xl">
-            Turn past questions into marks with{' '}
-            <span className="underline decoration-accent-amber decoration-4 underline-offset-4">
-              Renance
-            </span>
-          </h1>
-          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-            {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, CBT mocks graded
-            on the server, a review queue that plans itself, voice flashcards and the JAMB novel
-            built in, for JAMB, WAEC, NECO and university students. Free, on Android, iOS, Windows,
-            macOS and the web.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <OpenAppButton className="inline-flex h-13 items-center justify-center rounded-[10px] bg-primary px-9 py-3.5 text-sm font-semibold text-on-primary transition hover:opacity-90" />
-            <Link
-              href="/subjects/"
-              className="inline-flex h-13 items-center justify-center rounded-[10px] bg-surface-container-high px-9 py-3.5 text-sm font-semibold text-on-surface transition hover:opacity-90"
-            >
-              Browse {exams.length} question packs
-            </Link>
+    <div className="landing bg-background">
+      <MotionPrefs>
+        <LandingNav />
+      </MotionPrefs>
+
+      {/* ============================================================ */}
+      {/* HERO — aurora field, gradient headline, floating glass       */}
+      {/* ============================================================ */}
+      <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-16 pt-32 sm:pt-36">
+        <AuroraField />
+
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6">
+          {/* floating glass cards — desktop only, orbit the copy */}
+          <div className="pointer-events-none absolute inset-0 hidden xl:block" aria-hidden>
+            <div className="absolute left-0 top-[16%] hero-enter hero-enter-3">
+              <FloatingCard
+                tone="blue"
+                icon="fact_check"
+                title="Server-graded"
+                body="87% avg. score improvement"
+                delay={900}
+              />
+            </div>
+            <div className="absolute right-0 top-[24%] hero-enter hero-enter-4">
+              <FloatingCard
+                tone="emerald"
+                icon="event_repeat"
+                title="Review queue"
+                body="Plans itself while you sleep"
+                delay={1100}
+              />
+            </div>
+            <div className="absolute bottom-[12%] left-[6%] hero-enter hero-enter-5">
+              <FloatingCard
+                tone="amber"
+                icon="record_voice_over"
+                title="Voice flashcards"
+                body="Drill hands-free, anywhere"
+                delay={1300}
+              />
+            </div>
+            <div className="absolute bottom-[20%] right-[4%] hero-enter hero-enter-5">
+              <FloatingCard
+                tone="blue"
+                icon="workspace_premium"
+                title={`${fmt(totalQuestions)}+ questions`}
+                body="Real papers, sealed keys"
+                delay={1500}
+              />
+            </div>
           </div>
-          <p className="mt-4 font-mono text-xs text-on-surface-variant">
-            username + password only · no email required
-          </p>
 
-          {/* live stats strip, baked from the manifest at build time */}
-          <dl className="mt-12 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
-            {[
-              { k: 'Past questions', v: `${fmt(totalQuestions)}+` },
-              { k: 'Exam packs', v: String(exams.length) },
-              { k: 'Years covered', v: `${yearFrom}-${yearTo}` },
-              { k: 'Exam bodies', v: 'JAMB · WAEC · NECO' },
-            ].map((s) => (
-              <div
-                key={s.k}
-                className="rounded-xl bg-card px-4 py-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]"
-              >
-                <dd className="text-lg font-bold tracking-tight text-on-surface sm:text-xl">{s.v}</dd>
-                <dt className="mt-1 font-mono text-[10px] uppercase tracking-wider text-on-surface-variant">
-                  {s.k}
-                </dt>
-              </div>
-            ))}
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="hero-enter hero-enter-1">
+              <span className="hero-badge">
+                <span className="hero-badge-dot" />
+                Free forever · JAMB · WAEC · NECO · University
+              </span>
+            </div>
+
+            <h1 className="hero-headline hero-enter hero-enter-2 mt-6 text-on-surface">
+              Your Guide to{' '}
+              <span className="hero-gradient-text">Academic Success</span>
+            </h1>
+
+            <p className="hero-enter hero-enter-3 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
+              {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, server-graded
+              CBT mocks, a review queue that plans itself, voice flashcards and the JAMB novel built
+              in. Free, on Android, iOS, Windows, macOS and the web.
+            </p>
+
+            <div className="hero-enter hero-enter-4 mt-9 flex flex-wrap items-center justify-center gap-3.5">
+              <OpenAppButton className="hero-cta-primary" />
+              <Link href="/subjects/" className="hero-cta-secondary">
+                Browse {exams.length} question packs
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
+                  <path
+                    d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            </div>
+
+            <p className="hero-enter hero-enter-5 mt-5 font-mono text-xs text-on-surface-variant">
+              username + password only · no email required
+            </p>
+          </div>
+
+          {/* floating cards on mobile/tablet — inline strip */}
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 xl:hidden">
+            <FloatingCard tone="blue" icon="fact_check" title="Server-graded" body="Honest marks, always" />
+            <FloatingCard tone="emerald" icon="event_repeat" title="Review queue" body="Plans itself" />
+            <FloatingCard tone="amber" icon="record_voice_over" title="Voice flashcards" body="Drill hands-free" />
+            <FloatingCard tone="blue" icon="workspace_premium" title={`${fmt(totalQuestions)}+ questions`} body="Real papers" />
+          </div>
+        </div>
+
+        {/* exam-pack ticker */}
+        {tickerItems.length > 0 && (
+          <div className="hero-enter hero-enter-5 relative z-10 mt-14">
+            <MarqueeRail items={tickerItems} />
+          </div>
+        )}
+      </section>
+
+      {/* ============================================================ */}
+      {/* STATS BAND                                                   */}
+      {/* ============================================================ */}
+      <section className="relative z-10 mx-auto -mt-2 w-full max-w-6xl px-4 sm:px-6">
+        <Reveal>
+          <dl className="grid grid-cols-2 gap-3.5 sm:gap-4 lg:grid-cols-4">
+            <div className="stat-glass glass-hover">
+              <dd className="stat-value">
+                <CountUp to={totalQuestions} suffix="+" />
+              </dd>
+              <dt className="stat-label">Past questions</dt>
+            </div>
+            <div className="stat-glass glass-hover">
+              <dd className="stat-value">
+                <CountUp to={exams.length} />
+              </dd>
+              <dt className="stat-label">Exam packs</dt>
+            </div>
+            <div className="stat-glass glass-hover">
+              <dd className="stat-value">
+                {yearFrom}–{yearTo}
+              </dd>
+              <dt className="stat-label">Years covered</dt>
+            </div>
+            <div className="stat-glass glass-hover">
+              <dd className="stat-value text-[clamp(1.2rem,2.6vw,1.7rem)] leading-tight">
+                JAMB · WAEC · NECO
+              </dd>
+              <dt className="stat-label">Exam bodies</dt>
+            </div>
           </dl>
-        </section>
+        </Reveal>
+      </section>
 
-        {/* coverage, the archive, by body */}
-        <section className="pb-4">
-          <div className="rounded-2xl bg-dark-surface p-6 sm:p-10">
+      {/* ============================================================ */}
+      {/* COVERAGE — the archive, by body                              */}
+      {/* ============================================================ */}
+      <section className="mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
+        <Reveal>
+          <div className="cbt-panel p-6 sm:p-10">
             <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
               <div>
-                <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                <span className="eyebrow" style={{ color: '#7db2ff', background: 'rgba(125,178,255,0.1)', borderColor: 'rgba(125,178,255,0.22)' }}>
+                  The archive
+                </span>
+                <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
                   The archive is the product
                 </h2>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/70">
                   Every pack carries the year it was sat, the options, the sealed answer key and the
-                  worked explanation, harvested, cleaned and organised so you practise the real
+                  worked explanation — harvested, cleaned and organised so you practise the real
                   thing, not a paraphrase.
                 </p>
               </div>
@@ -167,14 +299,17 @@ export default function Landing() {
                 See full subject coverage →
               </Link>
             </div>
-            <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978-2025 · all subjects · novel included' },
+                { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978–2025 · all subjects · novel included' },
                 { body: 'WAEC', count: sum(waecExams), packs: waecExams.length, note: 'objectives + theory with model answers' },
                 { body: 'NECO', count: sum(necoExams), packs: necoExams.length, note: 'objectives + theory packs' },
-                { body: 'University', count: sum(uniExams), packs: uniExams.length, note: 'per-school course banks, FUTA first, more landing' },
+                { body: 'University', count: sum(uniExams), packs: uniExams.length, note: 'per-school course banks, more landing' },
               ].map((b) => (
-                <div key={b.body} className="rounded-xl bg-white/5 p-5 ring-1 ring-white/10">
+                <div
+                  key={b.body}
+                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 backdrop-blur-sm transition hover:bg-white/[0.1]"
+                >
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">{b.body}</p>
                   <p className="mt-2 text-2xl font-bold text-white">{fmt(b.count)}</p>
                   <p className="mt-0.5 text-xs text-white/60">
@@ -184,112 +319,179 @@ export default function Landing() {
               ))}
             </div>
           </div>
-        </section>
+        </Reveal>
+      </section>
 
-        {/* features */}
-        <section className="py-14">
-          <h2 className="text-center text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">
+      {/* ============================================================ */}
+      {/* FEATURES                                                     */}
+      {/* ============================================================ */}
+      <section className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6">
+        <Reveal className="text-center">
+          <span className="eyebrow">Why Renance</span>
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-on-surface sm:text-4xl">
             Everything a serious candidate needs
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-[15px] leading-relaxed text-on-surface-variant">
-            Not a quiz bank with ads glued on, a complete study operating system that remembers
-            what you missed and schedules the fix.
+          <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-on-surface-variant">
+            Not a quiz bank with ads glued on — a complete study companion that remembers what you
+            missed and schedules the fix.
           </p>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
-              <article
-                key={f.title}
-                className="rounded-xl bg-card p-6 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]"
-              >
-                <span className="material-symbols-outlined text-3xl text-accent-ink">{f.icon}</span>
-                <h3 className="mt-3 text-[15px] font-bold text-on-surface">{f.title}</h3>
+        </Reveal>
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {FEATURES.map((f, i) => (
+            <Reveal key={f.title} delay={i * 70}>
+              <article className="feature-card h-full">
+                <span
+                  className="feature-icon material-symbols-outlined"
+                  style={{ background: iconTone[f.tone] ?? iconTone.blue }}
+                >
+                  {f.icon}
+                </span>
+                <h3 className="mt-4 text-[15px] font-bold text-on-surface">{f.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-on-surface-variant">{f.body}</p>
               </article>
-            ))}
-          </div>
-        </section>
+            </Reveal>
+          ))}
+        </div>
+      </section>
 
-        {/* how it works */}
-        <section className="pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">
-            Three steps from panic to pass mark
+      {/* ============================================================ */}
+      {/* HOW IT WORKS                                                 */}
+      {/* ============================================================ */}
+      <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+        <Reveal className="text-center">
+          <span className="eyebrow">Three steps</span>
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-on-surface sm:text-4xl">
+            From panic to pass mark
           </h2>
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {STEPS.map((s, i) => (
-              <article key={s.title} className="relative rounded-xl bg-card p-6 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
-                <span className="absolute right-5 top-5 font-mono text-3xl font-bold text-surface-container-high">
-                  {i + 1}
-                </span>
-                <span className="material-symbols-outlined text-3xl text-accent-ink">{s.icon}</span>
-                <h3 className="mt-3 pr-8 text-[15px] font-bold text-on-surface">{s.title}</h3>
+        </Reveal>
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {STEPS.map((s, i) => (
+            <Reveal key={s.title} delay={i * 90}>
+              <article className="step-card feature-card h-full">
+                <div className="flex items-start justify-between">
+                  <span
+                    className="feature-icon material-symbols-outlined"
+                    style={{ background: iconTone[['blue', 'violet', 'emerald'][i]] }}
+                  >
+                    {s.icon}
+                  </span>
+                  <span className="step-num">{i + 1}</span>
+                </div>
+                <h3 className="mt-4 text-[15px] font-bold text-on-surface">{s.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-on-surface-variant">{s.body}</p>
               </article>
-            ))}
-          </div>
-        </section>
+            </Reveal>
+          ))}
+        </div>
+      </section>
 
-        {/* exam-day fidelity band */}
-        <section className="pb-14">
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            <div className="rounded-2xl bg-card p-6 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-8">
-              <span className="material-symbols-outlined text-3xl text-accent-ink">desktop_windows</span>
-              <h3 className="mt-3 text-lg font-bold tracking-tight text-on-surface">
-                A CBT hall on every screen
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-on-surface-variant">
-                The player mirrors the real JAMB software: a live question map, flag-and-return,
-                answers that lock in exam mode, a hall-approved calculator, auto-submit at zero,
-                and a keyboard-first desktop layout (A-F to pick, arrows to move) so laptop
-                candidates train the way they will sit.
-              </p>
-              <ul className="mt-4 space-y-1.5 text-[13px] text-on-surface-variant">
-                <li className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[16px] text-accent-emerald">check_circle</span>
-                  Pause &amp; resume with an honest clock
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[16px] text-accent-emerald">check_circle</span>
-                  Topic breakdown after every paper
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[16px] text-accent-emerald">check_circle</span>
-                  Worked explanations on every review
-                </li>
-              </ul>
+      {/* ============================================================ */}
+      {/* EXAM-DAY FIDELITY                                            */}
+      {/* ============================================================ */}
+      <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <Reveal>
+            <div className="cbt-panel h-full p-6 sm:p-8">
+              <div className="relative">
+                <span
+                  className="feature-icon material-symbols-outlined"
+                  style={{ background: 'linear-gradient(135deg,#3b82f6,#6366f1)' }}
+                >
+                  desktop_windows
+                </span>
+                <h3 className="mt-4 text-lg font-bold tracking-tight text-white">
+                  A CBT hall on every screen
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/75">
+                  The player mirrors the real JAMB software: a live question map, flag-and-return,
+                  answers that lock in exam mode, a hall-approved calculator, auto-submit at zero,
+                  and a keyboard-first desktop layout (A–F to pick, arrows to move) so laptop
+                  candidates train the way they will sit.
+                </p>
+                <ul className="mt-5 space-y-2.5">
+                  {[
+                    'Pause & resume with an honest clock',
+                    'Topic breakdown after every paper',
+                    'Worked explanations on every review',
+                  ].map((t) => (
+                    <li key={t} className="cbt-check">
+                      <span className="material-symbols-outlined text-[17px] text-emerald-400">check_circle</span>
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="cbt-score-pill">⏱ 59:47 left</span>
+                  <span className="cbt-score-pill">Q17 / 60</span>
+                  <span className="cbt-score-pill" style={{ color: '#6ee7b7' }}>▲ 87%</span>
+                </div>
+              </div>
             </div>
-            <div className="rounded-2xl bg-accent-ink p-6 text-white shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-8">
-              <span className="material-symbols-outlined text-3xl text-accent-amber">auto_stories</span>
-              <h3 className="mt-3 text-lg font-bold tracking-tight">Reading “The Lekki Headmaster”?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/75">
-                JAMB&apos;s recommended text ships inside Renance as a proper question set, fifty
-                questions across all twelve chapters, each with the sealed answer and a worked
-                explanation. Switch it on in Mock Setup when you are ready; leave it off while you
-                are still reading.
-              </p>
-              <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-white/50">
-                Kabir Alabi Garba · UTME Use of English
-              </p>
-            </div>
-          </div>
-        </section>
+          </Reveal>
 
-        {/* lessons preview */}
-        {lessons.length > 0 && (
-          <section className="pb-16">
-            <div className="flex items-baseline justify-between gap-3">
-              <h2 className="text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">
+          <Reveal delay={100}>
+            <div className="cbt-panel h-full p-6 sm:p-8">
+              <div className="relative">
+                <span
+                  className="feature-icon material-symbols-outlined"
+                  style={{ background: 'linear-gradient(135deg,#f59e0b,#f97316)' }}
+                >
+                  auto_stories
+                </span>
+                <h3 className="mt-4 text-lg font-bold tracking-tight text-white">
+                  Reading “The Lekki Headmaster”?
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/75">
+                  JAMB&apos;s recommended text ships inside Renance as a proper question set — fifty
+                  questions across all twelve chapters, each with the sealed answer and a worked
+                  explanation. Switch it on in Mock Setup when you are ready; leave it off while you
+                  are still reading.
+                </p>
+                <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.2em] text-white/50">
+                  Kabir Alabi Garba · UTME Use of English
+                </p>
+                <div className="mt-6 grid grid-cols-4 gap-2">
+                  {['Ch 1–3', 'Ch 4–6', 'Ch 7–9', 'Ch 10–12'].map((c) => (
+                    <span
+                      key={c}
+                      className="rounded-xl bg-white/[0.06] px-2 py-2.5 text-center text-[11px] font-semibold text-white/75 ring-1 ring-white/10"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* LESSONS PREVIEW                                              */}
+      {/* ============================================================ */}
+      {lessons.length > 0 && (
+        <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+          <Reveal className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <span className="eyebrow">Free library</span>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight text-on-surface sm:text-4xl">
                 Start reading free
               </h2>
-              <Link href="/lessons/" className="text-sm font-semibold text-on-surface-variant hover:text-on-surface">
-                All lessons →
-              </Link>
             </div>
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {lessons.map((les) => (
+            <Link
+              href="/lessons/"
+              className="text-sm font-semibold text-on-surface-variant hover:text-on-surface"
+            >
+              All lessons →
+            </Link>
+          </Reveal>
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {lessons.map((les, i) => (
+              <Reveal key={les.slug} delay={i * 80}>
                 <Link
-                  key={les.slug}
                   href={`/lessons/${les.slug}/`}
-                  className="group flex flex-col rounded-xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] transition hover:shadow-md"
+                  className="glass glass-hover group flex h-full flex-col rounded-2xl p-5 no-underline"
                 >
                   {les.subject && (
                     <span className="w-fit rounded-full bg-selection-blue px-2.5 py-0.5 text-[11px] font-medium text-on-surface">
@@ -306,41 +508,54 @@ export default function Landing() {
                     {les.minutes} min read →
                   </span>
                 </Link>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* closing CTA */}
-        <section className="pb-16">
-          <div className="rounded-2xl bg-surface-container-high px-6 py-10 text-center sm:px-10">
-            <h2 className="text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">
-              Your competition started revising yesterday.
-            </h2>
-            <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-on-surface-variant">
-              Create a free account and sit your first server-graded paper in the next two minutes,
-              {fmt(totalQuestions)}+ past questions are waiting.
-            </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href="/register/"
-                className="inline-flex h-13 items-center justify-center rounded-[10px] bg-primary px-9 py-3.5 text-sm font-semibold text-on-primary transition hover:opacity-90"
-              >
-                Create free account
-              </Link>
-              <OpenAppButton className="inline-flex h-13 items-center justify-center rounded-[10px] bg-card px-9 py-3.5 text-sm font-semibold text-on-surface shadow-[inset_0_0_0_1px_#C6C6CD] transition hover:opacity-90" />
-            </div>
+              </Reveal>
+            ))}
           </div>
         </section>
-      </main>
+      )}
 
-      {/* footer */}
-      <footer className="border-t border-surface-container-high bg-surface-container-low">
-        <div className="mx-auto grid w-full max-w-5xl grid-cols-2 gap-8 px-4 py-10 sm:grid-cols-4 sm:px-6">
+      {/* ============================================================ */}
+      {/* FINAL CTA                                                    */}
+      {/* ============================================================ */}
+      <section className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+        <Reveal>
+          <div className="final-cta">
+            <div className="final-cta-glow" />
+            <div className="relative">
+              <RenanceMark size={56} inverse />
+              <h2 className="mx-auto mt-5 max-w-2xl text-2xl font-bold tracking-tight text-white sm:text-4xl">
+                Your competition started revising yesterday.
+              </h2>
+              <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-white/75">
+                Create a free account and sit your first server-graded paper in the next two
+                minutes — {fmt(totalQuestions)}+ past questions are waiting.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
+                <Link
+                  href="/register/"
+                  className="hero-cta-secondary !border-white/25 !bg-white/10 !text-white hover:!bg-white/20"
+                >
+                  Create free account
+                </Link>
+                <OpenAppButton className="hero-cta-primary !bg-white !bg-none !text-[#111c2d]" />
+              </div>
+              <p className="mt-5 font-mono text-xs text-white/50">
+                Android · iOS · Windows · macOS · Web
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ============================================================ */}
+      {/* FOOTER                                                       */}
+      {/* ============================================================ */}
+      <footer className="landing-footer">
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-2 gap-8 px-4 py-10 sm:grid-cols-4 sm:px-6">
           <div className="col-span-2 sm:col-span-1">
             <RenanceMark size={28} />
             <p className="mt-3 text-xs leading-relaxed text-on-surface-variant">
-              The global student study OS. Built by Resolute Femi (Ariyo Oluwafemi Stephen).
+              Your Guide to Academic Success. Built by Resolute Femi (Ariyo Oluwafemi Stephen).
             </p>
           </div>
           <nav aria-label="Study">
