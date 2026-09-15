@@ -29,6 +29,7 @@ class ExamScreen extends StatefulWidget {
     required this.exam,
     this.durationOverrideMinutes,
     this.untimed = false,
+    this.shuffleQuestions = false,
   });
 
   final ExamMeta exam;
@@ -37,6 +38,10 @@ class ExamScreen extends StatefulWidget {
   /// timer replaces the pack duration; untimed runs a count-up clock.
   final int? durationOverrideMinutes;
   final bool untimed;
+
+  /// Practice Settings' shuffle toggle: re-orders the loaded questions
+  /// on-device. Grading is per-question-id, so order is free.
+  final bool shuffleQuestions;
 
   @override
   State<ExamScreen> createState() => _ExamScreenState();
@@ -52,6 +57,7 @@ class _ExamScreenState extends State<ExamScreen> {
             widget.exam,
             durationOverrideMinutes: widget.durationOverrideMinutes,
             untimed: widget.untimed,
+            shuffleQuestions: widget.shuffleQuestions,
           );
     });
   }

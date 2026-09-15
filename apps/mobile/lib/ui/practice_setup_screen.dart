@@ -1,15 +1,18 @@
 /// Practice Settings, the Stitch practice_mode_setup_light screen, 1:1.
 ///
 /// "Configure your JAMB practice session." The Past Question Year grid
-/// (2024 / 2023 / 2022 / Random), the Question Count stepper with the
+/// (the pack's own years / Random), the Question Count stepper with the
 /// big stat and the 10 / 20 / 40 / 50 presets, the Timer grid (No
-/// timer / 15m / 30m / 60m), the Shuffle Questions / Shuffle Options /
-/// Show Answer Instantly toggle rows and the sticky Start Practice
-/// button. Pops with a PracticeSetupResult so the caller can run the
-/// pack with the chosen overrides.
+/// timer / 15m / 30m / 60m), the Shuffle Questions toggle row and the
+/// sticky Start Practice button. Pops with a PracticeSetupResult the
+/// caller turns into a REAL jamb-pick-… practice code (year pin +
+/// subset size) or a straight full-pack open — the year and count are
+/// no longer decorative.
 library;
 
 import 'package:flutter/material.dart';
+
+import '../models.dart';
 import 'theme.dart';
 
 /// What Start Practice hands back to the caller.
@@ -19,38 +22,47 @@ class PracticeSetupResult {
     required this.questionCount,
     required this.timerMinutes,
     required this.shuffleQuestions,
-    required this.shuffleOptions,
-    required this.showAnswerInstantly,
   });
 
-  final String year; // 2024 | 2023 | 2022 | Random
+  /// Pinned exam year, or null for Random.
+  final int? year;
   final int questionCount;
 
   /// null = the "No timer" option.
   final int? timerMinutes;
   final bool shuffleQuestions;
-  final bool shuffleOptions;
-  final bool showAnswerInstantly;
 }
 
 class PracticeSetupScreen extends StatefulWidget {
-  const PracticeSetupScreen({super.key});
+  const PracticeSetupScreen({super.key, this.exam});
+
+  /// The pack being practised; its real exam years drive the year chips
+  /// when the manifest carries them.
+  final ExamMeta? exam;
 
   @override
   State<PracticeSetupScreen> createState() => _PracticeSetupScreenState();
 }
 
 class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
-  String _year = '2024';
+  static const List<int?> _timers = <int?>[null, 15, 30, 60];
+  static const List<int> _presets = <int>[10, 20, 40, 50];
+
+  int? _year; // null = Random
   int _count = 40;
   int? _timerMinutes = 60;
   bool _shuffleQuestions = true;
-  bool _shuffleOptions = true;
-  bool _showAnswerInstantly = false;
 
-  static const List<String> _years = <String>['2024', '2023', '2022', 'Random'];
-  static const List<int?> _timers = <int?>[null, 15, 30, 60];
-  static const List<int> _presets = <int>[10, 20, 40, 50];
+  /// The pack's own exam years (newest 3) plus Random; falls back to the
+  /// static recent years when the manifest carries no year list.
+  late final List<int?> _yearChoices = <int?>[
+    ...(() {
+      final List<int> ys = (widget.exam?.years ?? const <int>[]).toList()
+        ..sort((int a, int b) => b.compareTo(a));
+      return ys.length >= 3 ? ys.take(3).toList() : (ys.isNotEmpty ? ys : <int>[2024, 2023, 2022]);
+    })(),
+    null,
+  ];
 
   void _finish() {
     Navigator.of(context).pop(PracticeSetupResult(
@@ -58,8 +70,6 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
       questionCount: _count,
       timerMinutes: _timerMinutes,
       shuffleQuestions: _shuffleQuestions,
-      shuffleOptions: _shuffleOptions,
-      showAnswerInstantly: _showAnswerInstantly,
     ));
   }
 
@@ -127,9 +137,9 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                                   crossAxisSpacing: 12,
                                   childAspectRatio: cols == 4 ? 2.6 : 2.9,
                                   children: <Widget>[
-                                    for (final String y in _years)
+                                    for (final int? y in _yearChoices)
                                       _GridChoice(
-                                        label: y,
+                                        label: y == null ? 'Random' : '$y',
                                         selected: _year == y,
                                         onTap: () =>
                                             setState(() => _year = y),
@@ -268,20 +278,6 @@ class _PracticeSetupScreenState extends State<PracticeSetupScreen> {
                               first: true,
                               onChanged: (bool v) =>
                                   setState(() => _shuffleQuestions = v),
-                            ),
-                            _ToggleRow(
-                              icon: Icons.format_list_bulleted,
-                              label: 'Shuffle Options',
-                              value: _shuffleOptions,
-                              onChanged: (bool v) =>
-                                  setState(() => _shuffleOptions = v),
-                            ),
-                            _ToggleRow(
-                              icon: Icons.bolt,
-                              label: 'Show Answer Instantly',
-                              value: _showAnswerInstantly,
-                              onChanged: (bool v) => setState(
-                                  () => _showAnswerInstantly = v),
                             ),
                           ],
                         ),

@@ -11,7 +11,6 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
-import 'certificate_wallet_screen.dart';
 import 'downloads_screen.dart';
 import 'focus_sheet.dart';
 import 'home_screen.dart' show AvatarCircle;
@@ -197,15 +196,6 @@ class ProfileScreen extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
                   builder: (_) => const DownloadsScreen()));
-            },
-          ),
-          _MenuItem(
-            icon: Icons.workspace_premium,
-            tint: context.ink,
-            label: 'Certificates',
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute<void>(
-                  builder: (_) => const CertificateWalletScreen()));
             },
           ),
         ]),

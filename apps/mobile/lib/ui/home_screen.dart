@@ -31,9 +31,8 @@ import 'exam_mode_setup_screen.dart';
 import 'library_screen.dart';
 import 'gamification_hub_screen.dart';
 import 'onboarding_sheet.dart';
-import 'progress_dashboard_screen.dart';
+import 'gpa_screen.dart';
 import 'profile_screen.dart';
-import 'progress_screen.dart';
 import 'renance_logo.dart';
 import 'review_screen.dart';
 import 'syllabus_screen.dart';
@@ -123,6 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ExamMeta exam, {
     int? durationOverrideMinutes,
     bool untimed = false,
+    bool shuffleQuestions = false,
   }) {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
@@ -130,6 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
           exam: exam,
           durationOverrideMinutes: durationOverrideMinutes,
           untimed: untimed,
+          shuffleQuestions: shuffleQuestions,
         ),
       ),
     );
@@ -160,7 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       LibraryScreen(onOpenExam: _openExam),
       const ReviewScreen(),
-      const ProgressScreen(),
+      const GpaScreen(embedded: true),
       ProfileScreen(
         onGoTab: (int t) => setState(() => _tab = t),
         onFocusChanged: () async {
@@ -273,7 +274,7 @@ class _WideRail extends StatelessWidget {
     (Icons.home_outlined, Icons.home, 'Home'),
     (Icons.edit_note, Icons.edit_note, 'Practice'),
     (Icons.history_edu, Icons.history_edu, 'Review'),
-    (Icons.leaderboard_outlined, Icons.leaderboard, 'Progress'),
+    (Icons.calculate_outlined, Icons.calculate, 'GPA'),
     (Icons.person_outline, Icons.person, 'Profile'),
   ];
 
@@ -650,7 +651,7 @@ class HomeNav extends StatelessWidget {
     (Icons.home_outlined, Icons.home, 'Home'),
     (Icons.edit_note, Icons.edit_note, 'Practice'),
     (Icons.history_edu, Icons.history_edu, 'Review'),
-    (Icons.leaderboard_outlined, Icons.leaderboard, 'Progress'),
+    (Icons.calculate_outlined, Icons.calculate, 'GPA'),
     (Icons.person_outline, Icons.person, 'Profile'),
   ];
 
@@ -769,7 +770,12 @@ class _LauncherTab extends StatelessWidget {
   final StudentController student;
   final SyncController sync;
   final bool firstSyncUnderway;
-  final void Function(BuildContext, ExamMeta) onOpenExam;
+  final void Function(
+    BuildContext context,
+    ExamMeta exam, {
+    int? durationOverrideMinutes,
+    bool untimed,
+  }) onOpenExam;
   final ValueChanged<int> onGoTab;
   final VoidCallback onOnboarding;
 
@@ -794,9 +800,38 @@ class _LauncherTab extends StatelessWidget {
           _HeroCard(
             student: student,
             onContinue: () {
-              final syncExams = sync.exams;
-              if (syncExams.isNotEmpty) {
-                onOpenExam(context, syncExams.first);
+              // Continue the student's most recent sitting when there is
+              // one; otherwise route by focus — JAMBites land in the mock
+              // composer, university students in the library. Never the
+              // old "first manifest pack" shortcut that always opened
+              // the accounting bank.
+              final List<AttemptRow> recent = student.attempts;
+              if (recent.isNotEmpty) {
+                final String code = recent.first.code;
+                ExamMeta? match;
+                for (final ExamMeta e in sync.exams) {
+                  if (e.code == code) {
+                    match = e;
+                    break;
+                  }
+                }
+                if (match != null) {
+                  onOpenExam(context, match);
+                  return;
+                }
+              }
+              if (student.isTertiaryFocus) {
+                onGoTab(1); // library: university packs
+              } else if (student.isJambFocus) {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => ExamModeSetupScreen(
+                      exams: sync.exams,
+                      downloaded: student.downloaded,
+                      onBegin: onOpenExam,
+                    ),
+                  ),
+                );
               } else {
                 onGoTab(1); // library
               }
@@ -1651,41 +1686,6 @@ Future<void> showMoreSheet(
                       },
                     ),
                     _MoreTile(
-                      icon: Icons.workspace_premium,
-                      label: 'Certificates',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                              'The certificate wallet is designed, it lands with the exam board.',
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.cases,
-                      label: 'Career Bridge',
-                      soon: true,
-                      soonColor: context.ink,
-                      onTap: () {},
-                    ),
-                    _MoreTile(
-                      icon: Icons.groups,
-                      label: 'Patron Portal',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                              'Patron portal opens once sponsor accounts go live.',
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
                       icon: Icons.emoji_events,
                       label: 'Awards Hub',
                       onTap: () {
@@ -1693,18 +1693,6 @@ Future<void> showMoreSheet(
                         Navigator.of(context).push(
                           MaterialPageRoute<void>(
                             builder: (_) => const GamificationHubScreen(),
-                          ),
-                        );
-                      },
-                    ),
-                    _MoreTile(
-                      icon: Icons.insights,
-                      label: 'Progress Report',
-                      onTap: () {
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const ProgressDashboardScreen(),
                           ),
                         );
                       },
@@ -1724,9 +1712,14 @@ Future<void> showMoreSheet(
                     _MoreTile(
                       icon: Icons.smart_toy,
                       label: 'AI Generator',
-                      soon: true,
-                      soonColor: context.ink,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const AiGeneratorScreen(),
+                          ),
+                        );
+                      },
                     ),
                     _MoreTile(
                       icon: Icons.settings,
@@ -1819,15 +1812,11 @@ class _MoreTile extends StatelessWidget {
     required this.icon,
     required this.label,
     required this.onTap,
-    this.soon = false,
-    this.soonColor,
   });
 
   final IconData icon;
   final String label;
   final VoidCallback onTap;
-  final bool soon;
-  final Color? soonColor;
 
   @override
   Widget build(BuildContext context) {
@@ -1869,39 +1858,13 @@ class _MoreTile extends StatelessWidget {
       ),
     );
 
-    return Stack(
-      clipBehavior: Clip.none,
-      children: <Widget>[
-        Opacity(
-          opacity: soon ? 0.4 : 1,
-          child: InkWell(
-            onTap: soon ? null : onTap,
-            borderRadius: BorderRadius.circular(12),
-            child: tile,
-          ),
-        ),
-        if (soon)
-          Positioned(
-            top: -4,
-            right: -4,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-              decoration: BoxDecoration(
-                color: soonColor ?? context.ink,
-                borderRadius: BorderRadius.circular(999),
-              ),
-              child: const Text(
-                'Soon',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 9,
-                  fontWeight: FontWeight.w500,
-                  fontFamily: 'JetBrainsMono',
-                ),
-              ),
-            ),
-          ),
-      ],
+    return Opacity(
+      opacity: 1,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(12),
+        child: tile,
+      ),
     );
   }
 }

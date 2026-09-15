@@ -13,11 +13,12 @@ import 'package:flutter/material.dart';
 import '../controllers.dart';
 import 'arena_lobby_screen.dart';
 import 'flashcards_screen.dart';
+import 'gpa_screen.dart';
 import 'home_screen.dart' show LauncherTile;
-import 'lessons_screen.dart';
 import 'syllabus_screen.dart';
 import 'theme.dart';
 import 'tutor_screen.dart';
+import 'university_screens.dart';
 
 class UniversityHomeTab extends StatelessWidget {
   const UniversityHomeTab({
@@ -31,9 +32,43 @@ class UniversityHomeTab extends StatelessWidget {
   final SyncController sync;
   final ValueChanged<int> onGoTab;
 
+  /// The student's institution resolved to a banked school slug, when
+  /// the profile text matches one of the 34 shipped schools.
+  String? get _schoolSlug {
+    final String institution =
+        student.me?.profile?.institution.trim().toLowerCase() ?? '';
+    if (institution.isEmpty) return null;
+    for (final MapEntry<String, (String, String)> e
+        in kUniversitySchools.entries) {
+      final (String short, String full) = e.value;
+      if (institution == e.key ||
+          institution == short.toLowerCase() ||
+          institution.contains(full.toLowerCase()) ||
+          full.toLowerCase().contains(institution)) {
+        return e.key;
+      }
+    }
+    return null;
+  }
+
+  void _openDesk(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => UniversityPickerScreen(exams: sync.exams),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final bool syncing = sync.isSyncing;
+    final Map<String, List<UniCourse>> schools = universityCourses(sync.exams);
+    final String? slug = _schoolSlug;
+    final List<UniCourse> schoolCourses =
+        slug != null ? (schools[slug] ?? const <UniCourse>[]) : const <UniCourse>[];
+    final (String short, String full) = slug != null
+        ? (kUniversitySchools[slug]!.$1, kUniversitySchools[slug]!.$2)
+        : ('University Desk', '${schools.length} banked schools');
 
     return RefreshIndicator(
       onRefresh: student.refresh,
@@ -46,12 +81,15 @@ class UniversityHomeTab extends StatelessWidget {
           24,
         ),
         children: <Widget>[
-          // Active course hero card --------------------------------------
-          _CourseHeroCard(syncing: syncing, onResume: () {
-            Navigator.of(context).push(
-              MaterialPageRoute<void>(builder: (_) => const LessonsScreen()),
-            );
-          }),
+          // School hero card ----------------------------------------------
+          _SchoolHeroCard(
+            syncing: syncing,
+            title: short,
+            subtitle: full,
+            schoolCount: schools.length,
+            courseCount: schoolCourses.length,
+            onOpen: () => _openDesk(context),
+          ),
           // Course chips row ----------------------------------------------
           const SizedBox(height: 16),
           Row(
@@ -59,17 +97,13 @@ class UniversityHomeTab extends StatelessWidget {
             children: <Widget>[
               Text('Active Courses', style: RenanceText.sectionTitle.copyWith(fontSize: 16)),
               TextButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(builder: (_) => const SyllabusScreen()),
-                  );
-                },
+                onPressed: () => _openDesk(context),
                 style: TextButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
                   minimumSize: Size.zero,
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
-                child: Text('View all',
+                child: Text('All schools',
                     style: RenanceText.caption.copyWith(
                         fontSize: 13, color: context.textSecondary)),
               ),
@@ -78,19 +112,29 @@ class UniversityHomeTab extends StatelessWidget {
           const SizedBox(height: 10),
           SizedBox(
             height: 36,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
-              children: <Widget>[
-                _CourseChip('COS101', false),
-                const SizedBox(width: 8),
-                _CourseChip('MTH102', false),
-                const SizedBox(width: 8),
-                _CourseChip('PHY101', true),
-                const SizedBox(width: 8),
-                _CourseChip('GST101', false),
-              ],
-            ),
+            child: schoolCourses.isEmpty
+                ? ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      for (final String s in schools.keys.take(6))
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: _CourseChip(
+                              (kUniversitySchools[s] ?? (s.toUpperCase(), s)).$1,
+                              false),
+                        ),
+                    ],
+                  )
+                : ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      for (final UniCourse c in schoolCourses.take(6))
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: _CourseChip(c.label, false),
+                        ),
+                    ],
+                  ),
           ),
           // Practice grid ---------------------------------------------------
           const SizedBox(height: 16),
@@ -157,8 +201,11 @@ class UniversityHomeTab extends StatelessWidget {
               Expanded(
                 child: LauncherTile(
                   icon: Icons.timeline,
-                  label: 'CGPA',
-                  onTap: () => onGoTab(3),
+                  label: 'GPA',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                        builder: (_) => const GpaScreen()),
+                  ),
                 ),
               ),
               Expanded(
@@ -201,11 +248,25 @@ class UniversityHomeTab extends StatelessWidget {
 
 // ----------------------------------------------------------------- hero
 
-class _CourseHeroCard extends StatelessWidget {
-  const _CourseHeroCard({required this.syncing, required this.onResume});
+/// The school hero card: the student's banked school (or the desk
+/// invite), live pack counts and the desk CTA. Replaces the old static
+/// COS101 mock.
+class _SchoolHeroCard extends StatelessWidget {
+  const _SchoolHeroCard({
+    required this.syncing,
+    required this.title,
+    required this.subtitle,
+    required this.schoolCount,
+    required this.courseCount,
+    required this.onOpen,
+  });
 
   final bool syncing;
-  final VoidCallback onResume;
+  final String title;
+  final String subtitle;
+  final int schoolCount;
+  final int courseCount;
+  final VoidCallback onOpen;
 
   @override
   Widget build(BuildContext context) {
@@ -230,7 +291,7 @@ class _CourseHeroCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'IN PROGRESS',
+                'YOUR SCHOOL',
                 style: RenanceText.labelMono.copyWith(
                   fontSize: 11,
                   letterSpacing: 1.6,
@@ -263,11 +324,13 @@ class _CourseHeroCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          Text('COS101',
+          Text(title,
               style: RenanceText.displayMd.copyWith(color: context.onHeroCard)),
           const SizedBox(height: 2),
           Text(
-            'Introduction to Computing',
+            subtitle,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
             style: RenanceText.bodyMedium.copyWith(color: context.heroMuted),
           ),
           const SizedBox(height: 16),
@@ -275,10 +338,13 @@ class _CourseHeroCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Text('Semester Progress',
+              Text('Course banks',
                   style: RenanceText.caption.copyWith(
                       fontSize: 13, color: context.heroMuted)),
-              Text('Week 6 of 12',
+              Text(
+                  courseCount > 0
+                      ? '$courseCount courses ready'
+                      : '$schoolCount schools available',
                   style: RenanceText.labelMono.copyWith(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
@@ -289,7 +355,9 @@ class _CourseHeroCard extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(999),
             child: LinearProgressIndicator(
-              value: 0.5,
+              value: courseCount > 0
+                  ? (courseCount / (courseCount + 12)).clamp(0.0, 1.0)
+                  : 0.25,
               minHeight: 8,
               backgroundColor: context.heroTrack,
               valueColor: AlwaysStoppedAnimation<Color>(
@@ -302,7 +370,7 @@ class _CourseHeroCard extends StatelessWidget {
             height: 52,
             width: double.infinity,
             child: FilledButton.icon(
-              onPressed: onResume,
+              onPressed: onOpen,
               style: FilledButton.styleFrom(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -312,10 +380,12 @@ class _CourseHeroCard extends StatelessWidget {
                 foregroundColor:
                     context.darkChrome ? RenanceColors.ink : null,
               ),
-              icon: const Icon(Icons.play_circle, size: 20),
-              label: const Text(
-                'Resume lecture notes',
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+              icon: const Icon(Icons.school, size: 20),
+              label: Text(
+                courseCount > 0
+                    ? 'Open your school desk'
+                    : 'Pick your school',
+                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
               ),
             ),
           ),

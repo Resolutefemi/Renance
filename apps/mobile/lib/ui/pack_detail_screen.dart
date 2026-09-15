@@ -14,6 +14,7 @@ import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import '../papers.dart';
 import '../storage.dart';
 import 'practice_setup_screen.dart';
 import 'theme.dart';
@@ -28,12 +29,14 @@ class PackDetailScreen extends StatefulWidget {
   final ExamMeta exam;
 
   /// Start hands over to the shell's exam opener, carrying the Practice
-  /// Settings overrides (chosen timer or the untimed count-up mode).
+  /// Settings overrides (chosen timer or the untimed count-up mode) and
+  /// the question-shuffle flag.
   final void Function(
     BuildContext context,
     ExamMeta exam, {
     int? durationOverrideMinutes,
     bool untimed,
+    bool shuffleQuestions,
   }) onStart;
 
   @override
@@ -79,18 +82,34 @@ class _PackDetailScreenState extends State<PackDetailScreen> {
 
   /// The Stitch flow: the pack's Start button opens Practice Settings
   /// (year, count, timer, toggles); Start Practice then launches the
-  /// player with those overrides. Dismissing settings keeps the pack.
+  /// player with those overrides. A year pin or a smaller count composes
+  /// a real jamb-pick-… practice subset (the server carves and grades
+  /// it); "full pack, no pin" keeps the direct offline-friendly path.
   Future<void> _startWithSettings(ExamMeta exam) async {
     final PracticeSetupResult? cfg = await Navigator.of(context)
         .push<PracticeSetupResult>(MaterialPageRoute<PracticeSetupResult>(
-      builder: (_) => const PracticeSetupScreen(),
+      builder: (_) => PracticeSetupScreen(exam: exam),
     ));
     if (cfg == null || !mounted) return;
+    final bool fullPack =
+        cfg.year == null && cfg.questionCount >= exam.questionCount;
+    final ExamMeta target = fullPack
+        ? exam
+        : pickExamMeta(
+            buildPickCode(
+              exam.code,
+              count: cfg.questionCount,
+              year: cfg.year,
+            ),
+            exam,
+            count: cfg.questionCount,
+          );
     widget.onStart(
       context,
-      exam,
+      target,
       durationOverrideMinutes: cfg.timerMinutes,
       untimed: cfg.timerMinutes == null,
+      shuffleQuestions: cfg.shuffleQuestions,
     );
   }
 
