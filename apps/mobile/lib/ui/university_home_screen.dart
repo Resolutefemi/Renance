@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import '../controllers.dart';
 import 'arena_lobby_screen.dart';
 import 'flashcards_screen.dart';
+import 'gamification_hub_screen.dart';
 import 'gpa_screen.dart';
 import 'home_screen.dart' show LauncherTile;
 import 'syllabus_screen.dart';
@@ -213,7 +214,11 @@ class UniversityHomeTab extends StatelessWidget {
                   icon: Icons.military_tech,
                   iconColor: RenanceColors.amber,
                   label: 'Badges',
-                  onTap: () => onGoTab(3),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const GamificationHubScreen(),
+                    ),
+                  ),
                 ),
               ),
               Expanded(

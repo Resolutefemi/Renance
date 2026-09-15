@@ -136,7 +136,7 @@ export function refreshNotifications(input: NotificationInput) {
       `You scored ${pct}% on your last paper. ${pct >= 75 ? 'Strong work, keep the streak honest.' : pct >= 50 ? 'Review the misses to push past 75%.' : 'Your review queue now carries the weak items.'}`,
       'fact_check',
       'violet',
-      '/progress-report',
+      '/review',
       input.lastGrade.at,
     );
   }

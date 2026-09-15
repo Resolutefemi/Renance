@@ -31,7 +31,6 @@ import 'exam_mode_setup_screen.dart';
 import 'library_screen.dart';
 import 'gamification_hub_screen.dart';
 import 'onboarding_sheet.dart';
-import 'gpa_screen.dart';
 import 'profile_screen.dart';
 import 'renance_logo.dart';
 import 'review_screen.dart';
@@ -161,7 +160,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       LibraryScreen(onOpenExam: _openExam),
       const ReviewScreen(),
-      const GpaScreen(embedded: true),
       ProfileScreen(
         onGoTab: (int t) => setState(() => _tab = t),
         onFocusChanged: () async {
@@ -191,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
             streak: student.gamification?.state.currentStreak ?? 0,
             name: student.me?.profile?.fullName ?? '',
             onBrand: () => setState(() => _tab = 0),
-            onAvatar: () => setState(() => _tab = 4),
+            onAvatar: () => setState(() => _tab = 3),
             onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
             onSearch: () => Navigator.of(context).push<void>(
               MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
@@ -274,7 +272,6 @@ class _WideRail extends StatelessWidget {
     (Icons.home_outlined, Icons.home, 'Home'),
     (Icons.edit_note, Icons.edit_note, 'Practice'),
     (Icons.history_edu, Icons.history_edu, 'Review'),
-    (Icons.calculate_outlined, Icons.calculate, 'GPA'),
     (Icons.person_outline, Icons.person, 'Profile'),
   ];
 
@@ -651,7 +648,6 @@ class HomeNav extends StatelessWidget {
     (Icons.home_outlined, Icons.home, 'Home'),
     (Icons.edit_note, Icons.edit_note, 'Practice'),
     (Icons.history_edu, Icons.history_edu, 'Review'),
-    (Icons.calculate_outlined, Icons.calculate, 'GPA'),
     (Icons.person_outline, Icons.person, 'Profile'),
   ];
 
@@ -929,7 +925,11 @@ class _LauncherTab extends StatelessWidget {
                 child: LauncherTile(
                   icon: Icons.trending_up,
                   label: 'Progress',
-                  onTap: () => onGoTab(3),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const GamificationHubScreen(),
+                    ),
+                  ),
                 ),
               ),
               Expanded(
@@ -937,7 +937,11 @@ class _LauncherTab extends StatelessWidget {
                   icon: Icons.military_tech,
                   iconColor: RenanceColors.amber,
                   label: 'Badges',
-                  onTap: () => onGoTab(3),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const GamificationHubScreen(),
+                    ),
+                  ),
                 ),
               ),
               Expanded(
