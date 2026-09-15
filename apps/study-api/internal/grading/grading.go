@@ -201,7 +201,8 @@ func Score(bundle *cbtdata.Bundle, key map[string]store.KeyEntry, answers []stor
         return &store.Result{Score: score, Total: total, Breakdown: breakdown}
 }
 
-// StaticKeyCache is the boot-time snapshot of study.answer_keys.
+// StaticKeyCache is the boot-time snapshot of the sealed answer keys,
+// built from the content library (questions carry their own keys).
 type StaticKeyCache struct {
         mu   sync.RWMutex
         keys map[string]map[string]store.KeyEntry
