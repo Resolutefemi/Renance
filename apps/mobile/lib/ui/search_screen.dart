@@ -226,12 +226,14 @@ class _SearchScreenState extends State<SearchScreen> {
               ExamMeta meta, {
               int? durationOverrideMinutes,
               bool untimed = false,
+              bool shuffleQuestions = false,
             }) {
               Navigator.of(ctx).push<void>(MaterialPageRoute<void>(
                 builder: (_) => ExamScreen(
                   exam: meta,
                   durationOverrideMinutes: durationOverrideMinutes,
                   untimed: untimed,
+                  shuffleQuestions: shuffleQuestions,
                 ),
               ));
             },

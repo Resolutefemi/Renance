@@ -4,12 +4,14 @@
 library;
 
 import 'dart:async';
+import 'dart:math' show Random;
 
 import 'package:flutter/foundation.dart';
 
 import 'api_client.dart';
 import 'audio_summary.dart';
 import 'models.dart';
+import 'papers.dart' show isComposedPaperCode;
 import 'storage.dart';
 import 'tts.dart';
 
@@ -36,6 +38,12 @@ class SyncController extends ChangeNotifier {
   int pendingCount = 0;
 
   bool get isSyncing => phase == SyncPhase.syncing;
+
+  /// The exam bodies present in the synced manifest (JAMB | WAEC | NECO
+  /// | University Modules), insertion-stable — the library shelf chips'
+  /// data.
+  Set<String> get shelfBodies =>
+      exams.map((ExamMeta e) => e.body).where((String b) => b.isNotEmpty).toSet();
 
   /// Let UI surfaces (e.g. /me failures) route errors through the
   /// controller instead of poking notifyListeners from outside.
@@ -85,8 +93,14 @@ class SyncController extends ChangeNotifier {
   }
 
   /// Need-based filter (founder rule: the app downloads what the student
-  /// is studying for). Falls back to everything when nothing matches ,
+  /// is studying for). Falls back to everything when nothing matches,
   /// an empty library helps nobody.
+  ///
+  /// University Modules is the one exception: 500+ course banks would
+  /// blast a fresh install with hundreds of megabytes, so nothing
+  /// auto-downloads — the school desk fetches each course on demand
+  /// (founder directive: per-school folders stay server-side until a
+  /// student actually opens them).
   List<ExamMeta> _neededFor(List<String> profileExams) {
     if (profileExams.isEmpty) return exams;
     final wanted = exams
@@ -96,7 +110,13 @@ class SyncController extends ChangeNotifier {
               profileExams.contains(e.category),
         )
         .toList(growable: false);
-    return wanted.isEmpty ? exams : wanted;
+    if (wanted.isEmpty) return exams;
+    // University-only profiles sync nothing up front; every university
+    // pack downloads from its desk tile instead.
+    if (profileExams.length == 1 && profileExams.first == 'University Modules') {
+      return <ExamMeta>[];
+    }
+    return wanted.where((e) => e.body != 'University Modules').toList();
   }
 
   /// Download a single pack on demand (e.g. tapping a not-yet-offline card).
@@ -225,6 +245,7 @@ class ExamController extends ChangeNotifier {
     ExamMeta examMeta, {
     int? durationOverrideMinutes,
     bool untimed = false,
+    bool shuffleQuestions = false,
   }) async {
     meta = examMeta;
     this.durationOverrideMinutes = durationOverrideMinutes;
@@ -234,7 +255,12 @@ class ExamController extends ChangeNotifier {
     error = null;
     result = null;
     notifyListeners();
-    final cached = await _store.loadPack(examMeta.code, examMeta.bundleSha256);
+    final bool composed = isComposedPaperCode(examMeta.code);
+    Bundle? cached = await _store.loadPack(examMeta.code, examMeta.bundleSha256);
+    // Composed papers (mock/custom/pick) cache by CODE alone — their
+    // bundleSha256 is empty, so the code-keyed lookup is the offline
+    // resume path for every paper the student has already started.
+    cached ??= composed ? await _store.loadPackByCode(examMeta.code) : null;
     if (cached != null) {
       bundle = cached;
     } else {
@@ -247,12 +273,19 @@ class ExamController extends ChangeNotifier {
         phase = ExamPhase.error;
         notifyListeners();
         return;
-      } on NetworkException catch (e) {
-        error = e.message;
+      } on NetworkException {
+        error = composed
+            ? 'Composed papers need one online load — reconnect and tap '
+                'again, the paper then stays on the device.'
+            : 'No connection. Download the pack once and it plays fully '
+                'offline.';
         phase = ExamPhase.error;
         notifyListeners();
         return;
       }
+    }
+    if (shuffleQuestions && bundle!.questions.length > 1) {
+      bundle = bundle!.reordered(Random().nextDouble);
     }
     index = 0;
     answers.clear();

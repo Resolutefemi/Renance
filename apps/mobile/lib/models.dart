@@ -87,6 +87,7 @@ class ExamMeta {
     this.category = '',
     this.body = '',
     this.sizeBytes = 0,
+    this.years = const <int>[],
   });
 
   final String code;
@@ -99,6 +100,10 @@ class ExamMeta {
   final String bundleSha256;
   final int sizeBytes;
 
+  /// Exam years present in the pack (sorted), the practice year chips'
+  /// data. Empty when the manifest carries none.
+  final List<int> years;
+
   factory ExamMeta.fromJson(Map<String, dynamic> j) => ExamMeta(
     code: (j['code'] ?? '') as String,
     title: (j['title'] ?? j['code'] ?? '') as String,
@@ -109,6 +114,9 @@ class ExamMeta {
     body: (j['body'] ?? '') as String,
     bundleSha256: (j['bundleSha256'] ?? '') as String,
     sizeBytes: (j['sizeBytes'] ?? 0) as int,
+    years: ((j['years'] as List<dynamic>?) ?? const <dynamic>[])
+        .map((dynamic y) => (y as num).toInt())
+        .toList(),
   );
 }
 
@@ -235,6 +243,32 @@ class Bundle {
       category: category,
       body: body,
       questions: ordered,
+    );
+  }
+
+  /// A copy of this pack with its questions shuffled by [rng]
+  /// (Fisher-Yates). Practice Settings' shuffle toggle uses it; grading
+  /// keys by question id, so display order is free. The cached pack
+  /// itself is never mutated.
+  Bundle reordered(double Function() rng) {
+    final List<BundleQuestion> shuffled = List<BundleQuestion>.of(questions);
+    for (int i = shuffled.length - 1; i > 0; i--) {
+      int j = (rng() * (i + 1)).floor();
+      if (j > i) j = i;
+      final BundleQuestion tmp = shuffled[i];
+      shuffled[i] = shuffled[j];
+      shuffled[j] = tmp;
+    }
+    return Bundle(
+      code: code,
+      title: title,
+      version: version,
+      questionCount: questionCount,
+      totalMarks: totalMarks,
+      durationMinutes: durationMinutes,
+      category: category,
+      body: body,
+      questions: shuffled,
     );
   }
 
@@ -1455,6 +1489,77 @@ class CareerData {
         .toList(),
     paths: ((j['paths'] ?? const <dynamic>[]) as List<dynamic>)
         .map((dynamic e) => CareerPath.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+  );
+}
+
+// ---------------------------------------------------------------- leaderboard
+
+/// One ranked line of a leaderboard board (GET /leaderboard/xp or
+/// /leaderboard/arena). The two boards share a shape; only some fields
+/// apply per board, so everything is optional.
+class BoardEntry {
+  const BoardEntry({
+    required this.rank,
+    required this.username,
+    this.xp = 0,
+    this.bestStreak = 0,
+    this.currentStreak = 0,
+    this.attempts = 0,
+    this.wins = 0,
+    this.matches = 0,
+    this.points = 0,
+    this.correct = 0,
+  });
+
+  final int rank;
+  final String username;
+  final int xp;
+  final int bestStreak;
+  final int currentStreak;
+  final int attempts;
+  final int wins;
+  final int matches;
+  final int points;
+  final int correct;
+
+  factory BoardEntry.fromJson(Map<String, dynamic> j) => BoardEntry(
+    rank: (j['rank'] ?? 0) as int,
+    username: (j['username'] ?? '') as String,
+    xp: (j['xp'] ?? 0) as int,
+    bestStreak: (j['bestStreak'] ?? 0) as int,
+    currentStreak: (j['currentStreak'] ?? 0) as int,
+    attempts: (j['attempts'] ?? 0) as int,
+    wins: (j['wins'] ?? 0) as int,
+    matches: (j['matches'] ?? 0) as int,
+    points: (j['points'] ?? 0) as int,
+    correct: (j['correct'] ?? 0) as int,
+  );
+}
+
+/// One leaderboard response: the ranked rows plus the caller's own row
+/// ("me"), which is null when they have not earned a rank yet.
+class LeaderboardData {
+  const LeaderboardData({
+    required this.board,
+    required this.period,
+    required this.entries,
+    this.me,
+  });
+
+  final String board; // xp | arena
+  final String period; // all | week
+  final BoardEntry? me;
+  final List<BoardEntry> entries;
+
+  factory LeaderboardData.fromJson(Map<String, dynamic> j) => LeaderboardData(
+    board: (j['board'] ?? '') as String,
+    period: (j['period'] ?? '') as String,
+    me: j['me'] == null
+        ? null
+        : BoardEntry.fromJson((j['me'] as Map).cast<String, dynamic>()),
+    entries: ((j['entries'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => BoardEntry.fromJson((e as Map).cast<String, dynamic>()))
         .toList(),
   );
 }

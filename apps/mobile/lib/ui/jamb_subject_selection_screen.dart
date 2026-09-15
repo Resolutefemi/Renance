@@ -1,216 +1,94 @@
-/// Subject Selection, the Stitch jamb_subject_selection_light screen,
-/// 1:1.
+/// Subject Selection, the Stitch jamb_subject_selection_light screen —
+/// now driven by the REAL bank slugs.
 ///
-/// The JAMB Requirements card (uppercase caption, the emerald Selected
-/// 2/4 counter, the English mandatory pill and the progress rail), the
-/// Available Subjects list with syllabus-coverage bar glyphs, mandatory
-/// Use of English locked on, the 4-subject cap with dimmed leftovers,
-/// and the Start Mock Exam button that arms only at 4/4.
-/// Pops with the chosen subject-id set so the setup screen can show it.
+/// The catalogue mirrors lib/papers.dart's kUtmeElectives (one entry per
+/// JAMB past-question bank), filtered down to the slugs the live
+/// manifest actually ships. English stays mandatory for the Standard
+/// UTME Mock (English + up to 3 electives); Custom Practice lets the
+/// candidate take any 1-4 subjects, English optional.
+///
+/// The old hardcoded ids ("math") that never matched the server's bank
+/// slugs are gone — selections now compose real papers 1:1.
 library;
 
 import 'package:flutter/material.dart';
+
+import '../papers.dart';
 import 'theme.dart';
 
-class JambSubjectSelectionScreen extends StatefulWidget {
-  const JambSubjectSelectionScreen({super.key, this.initial});
+/// One selectable subject row.
+class _PickableSubject {
+  const _PickableSubject(this.slug, this.name, this.icon);
+  final String slug;
+  final String name;
+  final IconData icon;
+}
 
-  /// Previously chosen ids (the setup screen passes its own set).
+IconData _iconFor(String slug) => switch (slug) {
+      'english' => Icons.menu_book,
+      'mathematics' => Icons.calculate,
+      'physics' => Icons.psychology,
+      'chemistry' => Icons.science,
+      'biology' => Icons.biotech,
+      'literature' => Icons.auto_stories,
+      'crs' => Icons.church,
+      'irs' => Icons.mosque,
+      'agricultural-science' => Icons.agriculture,
+      'commerce' => Icons.storefront,
+      'accounting' => Icons.receipt_long,
+      'computer-studies' => Icons.computer,
+      'civic-education' => Icons.gavel,
+      'economics' => Icons.trending_up,
+      'government' => Icons.account_balance,
+      'geography' => Icons.public,
+      'history' => Icons.history_edu,
+      'french' => Icons.translate,
+      'arabic' => Icons.language,
+      'hausa' => Icons.record_voice_over,
+      'igbo' => Icons.record_voice_over,
+      'yoruba' => Icons.record_voice_over,
+      'music' => Icons.music_note,
+      'fine-arts' => Icons.palette,
+      'home-economics' => Icons.home,
+      'physical-education' => Icons.sports_soccer,
+      _ => Icons.book,
+    };
+
+/// English first, then the electives in catalogue order.
+List<_PickableSubject> _catalogue(Set<String> available) {
+  final List<_PickableSubject> list = <_PickableSubject>[
+    const _PickableSubject('english', 'Use of English', Icons.menu_book),
+  ];
+  for (final (String slug, String name) in kUtmeElectives) {
+    if (available.isEmpty || available.contains(slug)) {
+      list.add(_PickableSubject(slug, name, _iconFor(slug)));
+    }
+  }
+  return list;
+}
+
+class JambSubjectSelectionScreen extends StatefulWidget {
+  const JambSubjectSelectionScreen({
+    super.key,
+    this.initial,
+    this.mandatoryEnglish = true,
+    this.availableSlugs = const <String>[],
+  });
+
+  /// Slug set already picked on the setup screen.
   final Set<String>? initial;
+
+  /// Standard UTME Mock pins English; Custom Practice lets it go.
+  final bool mandatoryEnglish;
+
+  /// Bank slugs the manifest actually ships (empty = every catalogue
+  /// subject shows).
+  final List<String> availableSlugs;
 
   @override
   State<JambSubjectSelectionScreen> createState() =>
       _JambSubjectSelectionScreenState();
 }
-
-class _SelectionSubject {
-  const _SelectionSubject({
-    required this.id,
-    required this.name,
-    required this.icon,
-    required this.covered,
-    required this.total,
-    this.amberBar = false,
-    this.mandatory = false,
-  });
-
-  final String id;
-  final String name;
-  final IconData icon;
-
-  /// Covered / total mini-bar glyph and the "65% Syllabus" caption.
-  final int covered;
-  final int total;
-  final bool amberBar;
-  final bool mandatory;
-}
-
-const List<_SelectionSubject> _kSelectionSubjects = <_SelectionSubject>[
-  _SelectionSubject(
-    id: 'english',
-    name: 'Use of English',
-    icon: Icons.menu_book,
-    covered: 3,
-    total: 3,
-    mandatory: true,
-  ),
-  _SelectionSubject(
-    id: 'math',
-    name: 'Mathematics',
-    icon: Icons.calculate,
-    covered: 2,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'physics',
-    name: 'Physics',
-    icon: Icons.psychology,
-    covered: 3,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'chemistry',
-    name: 'Chemistry',
-    icon: Icons.science,
-    covered: 1,
-    total: 3,
-    amberBar: true,
-  ),
-  _SelectionSubject(
-    id: 'biology',
-    name: 'Biology',
-    icon: Icons.biotech,
-    covered: 0,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'literature',
-    name: 'Literature in English',
-    icon: Icons.auto_stories,
-    covered: 2,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'crs',
-    name: 'Christian Religious Studies',
-    icon: Icons.church,
-    covered: 2,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'irs',
-    name: 'Islamic Religious Studies',
-    icon: Icons.mosque,
-    covered: 2,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'agricultural-science',
-    name: 'Agricultural Science',
-    icon: Icons.agriculture,
-    covered: 1,
-    total: 3,
-    amberBar: true,
-  ),
-  _SelectionSubject(
-    id: 'commerce',
-    name: 'Commerce',
-    icon: Icons.storefront,
-    covered: 2,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'accounting',
-    name: 'Principles of Accounts',
-    icon: Icons.receipt_long,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'computer-studies',
-    name: 'Computer Studies',
-    icon: Icons.computer,
-    covered: 3,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'civic-education',
-    name: 'Civic Education',
-    icon: Icons.gavel,
-    covered: 2,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'history',
-    name: 'History',
-    icon: Icons.history_edu,
-    covered: 2,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'french',
-    name: 'French',
-    icon: Icons.translate,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'arabic',
-    name: 'Arabic',
-    icon: Icons.language,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'hausa',
-    name: 'Hausa',
-    icon: Icons.record_voice_over,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'igbo',
-    name: 'Igbo',
-    icon: Icons.record_voice_over,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'yoruba',
-    name: 'Yoruba',
-    icon: Icons.record_voice_over,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'music',
-    name: 'Music',
-    icon: Icons.music_note,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'fine-arts',
-    name: 'Fine Arts',
-    icon: Icons.palette,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'home-economics',
-    name: 'Home Economics',
-    icon: Icons.home,
-    covered: 1,
-    total: 3,
-  ),
-  _SelectionSubject(
-    id: 'physical-education',
-    name: 'Physical Education',
-    icon: Icons.sports_soccer,
-    covered: 1,
-    total: 3,
-  ),
-];
 
 class _JambSubjectSelectionScreenState
     extends State<JambSubjectSelectionScreen> {
@@ -218,33 +96,49 @@ class _JambSubjectSelectionScreenState
 
   late final Set<String> _selected =
       widget.initial == null || widget.initial!.isEmpty
-          ? <String>{'english', 'physics'} // the Stitch initial state
+          ? <String>{'english', 'mathematics', 'physics', 'biology'}
           : Set<String>.of(widget.initial!);
+
+  String _query = '';
+
+  late final List<_PickableSubject> _subjects =
+      _catalogue(widget.availableSlugs.toSet());
+
+  int get _minimum => widget.mandatoryEnglish ? 2 : 1;
 
   bool selected(String id) => _selected.contains(id);
 
-  void _toggle(String id) {
-    final _SelectionSubject s =
-        _kSelectionSubjects.firstWhere((_SelectionSubject s) => s.id == id);
-    if (s.mandatory) return; // English mandatory (design + JAMB rules)
+  void _toggle(String slug) {
+    if (widget.mandatoryEnglish && slug == 'english') {
+      return; // English is pinned for the standard mock
+    }
     setState(() {
-      if (selected(id)) {
-        _selected.remove(id);
+      if (selected(slug)) {
+        if (_selected.length > _minimum) _selected.remove(slug);
       } else if (_selected.length < _maxSelections) {
-        _selected.add(id);
+        _selected.add(slug);
       }
     });
   }
 
-  void _start() {
-    if (_selected.length != _maxSelections) return;
+  void _confirm() {
+    if (_selected.length < _minimum) return;
     Navigator.of(context).pop(Set<String>.of(_selected));
   }
 
   @override
   Widget build(BuildContext context) {
-    final bool full = _selected.length == _maxSelections;
+    final bool full = _selected.length >= _maxSelections;
+    final bool valid = _selected.length >= _minimum;
     final double progress = _selected.length / _maxSelections;
+    final String query = _query.trim().toLowerCase();
+    final List<_PickableSubject> visible = query.isEmpty
+        ? _subjects
+        : _subjects
+            .where((_PickableSubject s) =>
+                s.name.toLowerCase().contains(query) ||
+                s.slug.contains(query))
+            .toList();
 
     return Scaffold(
       backgroundColor: context.cardLowest,
@@ -273,7 +167,7 @@ class _JambSubjectSelectionScreenState
                   child: ListView(
                     padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
                     children: <Widget>[
-                      // JAMB Requirements card --------------------------
+                      // Requirements card --------------------------------
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
@@ -291,8 +185,7 @@ class _JambSubjectSelectionScreenState
                           children: <Widget>[
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.end,
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 Expanded(
                                   child: Column(
@@ -301,10 +194,8 @@ class _JambSubjectSelectionScreenState
                                     children: <Widget>[
                                       Text(
                                         'JAMB REQUIREMENTS',
-                                        style: RenanceText.overline.copyWith(
-                                          color:
-                                              context.textSecondary,
-                                        ),
+                                        style: RenanceText.overline
+                                            .copyWith(color: context.textSecondary),
                                       ),
                                       const SizedBox(height: 4),
                                       Text.rich(
@@ -335,8 +226,7 @@ class _JambSubjectSelectionScreenState
                                       horizontal: 12, vertical: 4),
                                   decoration: BoxDecoration(
                                     color: context.surfaceVariant,
-                                    borderRadius:
-                                        BorderRadius.circular(999),
+                                    borderRadius: BorderRadius.circular(999),
                                   ),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -345,7 +235,10 @@ class _JambSubjectSelectionScreenState
                                           size: 14,
                                           color: context.textSecondary),
                                       const SizedBox(width: 6),
-                                      Text('English mandatory',
+                                      Text(
+                                          widget.mandatoryEnglish
+                                              ? 'English mandatory'
+                                              : '1 - 4 subjects',
                                           style: RenanceText.labelMono
                                               .copyWith(
                                                   fontSize: 11,
@@ -368,7 +261,7 @@ class _JambSubjectSelectionScreenState
                                       child: const SizedBox.expand(),
                                     ),
                                     FractionallySizedBox(
-                                      widthFactor: progress,
+                                      widthFactor: progress.clamp(0.0, 1.0),
                                       child: ColoredBox(
                                         color: full
                                             ? context.ink
@@ -381,6 +274,24 @@ class _JambSubjectSelectionScreenState
                               ),
                             ),
                           ],
+                        ),
+                      ),
+                      // Search -------------------------------------------
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16),
+                        child: TextField(
+                          onChanged: (String v) => setState(() => _query = v),
+                          decoration: InputDecoration(
+                            hintText: 'Search subjects',
+                            prefixIcon: const Icon(Icons.search, size: 20),
+                            isDense: true,
+                            filled: true,
+                            fillColor: context.card,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                              borderSide: BorderSide.none,
+                            ),
+                          ),
                         ),
                       ),
                       // Available Subjects header ------------------------
@@ -398,22 +309,42 @@ class _JambSubjectSelectionScreenState
                         ),
                       ),
                       // Subject rows -------------------------------------
-                      for (final _SelectionSubject s in _kSelectionSubjects)
+                      if (visible.isEmpty)
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 12),
-                          child: _SubjectTile(
-                            subject: s,
-                            selected: selected(s.id),
-                            dimmed:
-                                !selected(s.id) && full && !s.mandatory,
-                            onTap: () => _toggle(s.id),
+                          padding: const EdgeInsets.symmetric(vertical: 32),
+                          child: Center(
+                            child: Text('No subject matches "$_query"',
+                                style: RenanceText.bodySecondary.copyWith(
+                                    color: context.textSecondary)),
                           ),
-                        ),
+                        )
+                      else
+                        for (final _PickableSubject s in visible)
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 12),
+                            child: _SubjectTile(
+                              subject: s,
+                              selected: selected(s.slug),
+                              mandatory:
+                                  widget.mandatoryEnglish && s.slug == 'english',
+                              dimmed: !selected(s.slug) &&
+                                  full &&
+                                  !(widget.mandatoryEnglish &&
+                                      s.slug == 'english'),
+                              onTap: () => _toggle(s.slug),
+                            ),
+                          ),
                     ],
                   ),
                 ),
-                // Sticky Start Mock Exam --------------------------------
-                _StartBar(enabled: full, onStart: _start),
+                // Sticky confirm bar ------------------------------------
+                _StartBar(
+                  enabled: valid,
+                  onStart: _confirm,
+                  label: widget.mandatoryEnglish
+                      ? 'Confirm Subjects'
+                      : 'Confirm Subjects',
+                ),
               ],
             ),
           ),
@@ -440,41 +371,40 @@ class _RoundBack extends StatelessWidget {
         child: SizedBox(
           width: 40,
           height: 40,
-          child: Icon(Icons.arrow_back,
-              size: 20, color: context.ink),
+          child: Icon(Icons.arrow_back, size: 20, color: context.ink),
         ),
       ),
     );
   }
 }
 
-/// One subject row: 48px icon tile, name, syllabus mini-bars, and the
-/// right-side check circle. Selected = surface-container bg with the
-/// emerald 2px border; mandatory English uses the black primary style.
+/// One subject row: 48px icon tile, name, and the right-side check
+/// circle. Selected = surface-container bg with the emerald 2px border;
+/// mandatory English uses the black primary style.
 class _SubjectTile extends StatelessWidget {
   const _SubjectTile({
     required this.subject,
     required this.selected,
+    required this.mandatory,
     required this.dimmed,
     required this.onTap,
   });
 
-  final _SelectionSubject subject;
+  final _PickableSubject subject;
   final bool selected;
+  final bool mandatory;
   final bool dimmed;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    final bool mandatory = subject.mandatory;
     final Color tileColor = mandatory
         ? context.ink
         : selected
             ? RenanceColors.emerald
             : context.surfaceContainer;
-    final Color tileIconColor = (mandatory || selected)
-        ? Colors.white
-        : context.textSecondary;
+    final Color tileIconColor =
+        (mandatory || selected) ? Colors.white : context.textSecondary;
     final Color borderColor = mandatory
         ? context.ink
         : selected
@@ -484,9 +414,7 @@ class _SubjectTile extends StatelessWidget {
     return Opacity(
       opacity: dimmed ? 0.5 : 1,
       child: Material(
-        color: selected || mandatory
-            ? context.surfaceContainer
-            : context.card,
+        color: selected || mandatory ? context.surfaceContainer : context.card,
         borderRadius: BorderRadius.circular(12),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -507,8 +435,7 @@ class _SubjectTile extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   alignment: Alignment.center,
-                  child:
-                      Icon(subject.icon, size: 24, color: tileIconColor),
+                  child: Icon(subject.icon, size: 24, color: tileIconColor),
                 ),
                 const SizedBox(width: 16),
                 Expanded(
@@ -519,9 +446,9 @@ class _SubjectTile extends StatelessWidget {
                           style: RenanceText.bodyMedium.copyWith(
                               fontSize: 16, color: context.ink)),
                       const SizedBox(height: 2),
-                      Row(
-                        children: <Widget>[
-                          if (mandatory) ...<Widget>[
+                      if (mandatory)
+                        Row(
+                          children: <Widget>[
                             Container(
                               width: 6,
                               height: 6,
@@ -534,37 +461,12 @@ class _SubjectTile extends StatelessWidget {
                             Text('Mandatory',
                                 style: RenanceText.caption.copyWith(
                                     color: context.textSecondary)),
-                          ] else ...<Widget>[
-                            for (int i = 0; i < subject.total; i++)
-                              Container(
-                                width: 6,
-                                height: 12,
-                                margin: const EdgeInsets.only(right: 2),
-                                decoration: BoxDecoration(
-                                  color: i < subject.covered
-                                      ? (subject.amberBar
-                                          ? RenanceColors.amber
-                                          : RenanceColors.emerald)
-                                      : context.surfaceVariant,
-                                  borderRadius: BorderRadius.circular(1),
-                                ),
-                              ),
-                            const SizedBox(width: 6),
-                            Text(
-                              '${(subject.covered / subject.total * 100).round()}% Syllabus',
-                              style: RenanceText.caption.copyWith(
-                                  color: context.textSecondary),
-                            ),
                           ],
-                        ],
-                      ),
+                        ),
                     ],
                   ),
                 ),
-                _CheckCircle(
-                  filled: selected || mandatory,
-                  black: mandatory,
-                ),
+                _CheckCircle(filled: selected || mandatory, black: mandatory),
               ],
             ),
           ),
@@ -598,19 +500,19 @@ class _CheckCircle extends StatelessWidget {
       ),
       alignment: Alignment.center,
       child: filled
-          ? const Icon(Icons.check,
-              size: 14, color: Colors.white)
+          ? const Icon(Icons.check, size: 14, color: Colors.white)
           : const SizedBox.shrink(),
     );
   }
 }
 
-/// Sticky Start Mock Exam: 40% opacity until exactly 4 subjects are on.
+/// Sticky confirm bar: 40% opacity until the selection is valid.
 class _StartBar extends StatelessWidget {
-  const _StartBar({required this.enabled, required this.onStart});
+  const _StartBar({required this.enabled, required this.onStart, required this.label});
 
   final bool enabled;
   final VoidCallback onStart;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
@@ -661,7 +563,7 @@ class _StartBar extends StatelessWidget {
                   children: <Widget>[
                     const Icon(Icons.rocket_launch, size: 20),
                     const SizedBox(width: 8),
-                    Text('Start Mock Exam',
+                    Text(label,
                         style: RenanceText.bodyMedium
                             .copyWith(color: context.onInverseChip)),
                   ],

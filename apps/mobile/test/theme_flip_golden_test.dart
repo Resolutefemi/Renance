@@ -28,7 +28,6 @@ import 'package:renance/ui/arena_match_screen.dart';
 import 'package:renance/ui/auth_screens.dart';
 import 'package:renance/ui/badge_detail_screen.dart';
 import 'package:renance/ui/career_bridge_screen.dart';
-import 'package:renance/ui/certificate_wallet_screen.dart';
 import 'package:renance/ui/downloads_screen.dart';
 import 'package:renance/ui/exam_mode_setup_screen.dart';
 import 'package:renance/ui/exam_screen.dart' show ExamScreen;
@@ -46,7 +45,6 @@ import 'package:renance/ui/pack_detail_screen.dart';
 import 'package:renance/ui/patron_portal_screen.dart';
 import 'package:renance/ui/practice_setup_screen.dart';
 import 'package:renance/ui/profile_screen.dart';
-import 'package:renance/ui/progress_screen.dart';
 import 'package:renance/ui/review_screen.dart';
 import 'package:renance/ui/search_screen.dart';
 import 'package:renance/ui/settings_screen.dart';
@@ -352,7 +350,9 @@ WidgetBuilder screenFor(String name) {
     case 'library':
       return (_) => LibraryScreen(
             onOpenExam: (BuildContext c, ExamMeta e,
-                {int? durationOverrideMinutes, bool untimed = false}) {},
+                {int? durationOverrideMinutes,
+                bool untimed = false,
+                bool shuffleQuestions = false}) {},
           );
     case 'review':
       return (_) => const ReviewScreen();
@@ -372,7 +372,8 @@ WidgetBuilder screenFor(String name) {
       return (_) => ExamModeSetupScreen(
             exams: const <ExamMeta>[kDemoExam],
             downloaded: const <String>{'jamb-biology-bank'},
-            onBegin: (BuildContext c, ExamMeta e) {},
+            onBegin: (BuildContext c, ExamMeta e,
+                {int? durationOverrideMinutes, bool untimed = false}) {},
           );
     case 'jamb_subjects':
       return (_) => const JambSubjectSelectionScreen();
@@ -382,7 +383,9 @@ WidgetBuilder screenFor(String name) {
       return (_) => PackDetailScreen(
             exam: kDemoExam,
             onStart: (BuildContext c, ExamMeta e,
-                {int? durationOverrideMinutes, bool untimed = false}) {},
+                {int? durationOverrideMinutes,
+                bool untimed = false,
+                bool shuffleQuestions = false}) {},
           );
     case 'badge_detail':
       return (_) => BadgeDetailScreen(
@@ -401,8 +404,6 @@ WidgetBuilder screenFor(String name) {
           );
     case 'gamification_hub':
       return (_) => const GamificationHubScreen();
-    case 'progress':
-      return (_) => const ProgressScreen();
     case 'study_plan':
       return (_) => const StudyPlanScreen();
     case 'syllabus':
@@ -428,8 +429,6 @@ WidgetBuilder screenFor(String name) {
       return (_) => const AiGeneratorScreen();
     case 'patron_portal':
       return (_) => const PatronPortalScreen();
-    case 'certificate_wallet':
-      return (_) => const CertificateWalletScreen();
     case 'onboarding':
       return (_) => const Scaffold(body: OnboardingSheet());
     case 'exam_player':
@@ -452,7 +451,6 @@ WidgetBuilder screenFor(String name) {
 const Set<String> kTabScreens = <String>{
   'library',
   'review',
-  'progress',
   'university_home',
   'profile',
 };
@@ -524,7 +522,6 @@ const List<String> kScreens = <String>[
   'pack_detail',
   'badge_detail',
   'gamification_hub',
-  'progress',
   'study_plan',
   'syllabus',
   'tutor',
@@ -537,7 +534,6 @@ const List<String> kScreens = <String>[
   'offline_share',
   'ai_generator',
   'patron_portal',
-  'certificate_wallet',
   'onboarding',
   'exam_player',
   'fatigue_nudge',

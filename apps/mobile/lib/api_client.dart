@@ -432,4 +432,24 @@ class ApiClient {
         )
         .toList();
   }
+
+  // -------------------------------------------------------------- leaderboard
+
+  /// The all-time XP board (GET /leaderboard/xp). The caller's own row
+  /// rides along as "me" even outside the top 25.
+  Future<LeaderboardData> leaderboardXp() async {
+    final data =
+        await _send('GET', '/leaderboard/xp') as Map<dynamic, dynamic>;
+    return LeaderboardData.fromJson(data.cast<String, dynamic>());
+  }
+
+  /// The arena standings (GET /leaderboard/arena); [period] is
+  /// "week" (default) or "all".
+  Future<LeaderboardData> leaderboardArena({String period = 'week'}) async {
+    final data = await _send(
+      'GET',
+      '/leaderboard/arena?period=$period',
+    ) as Map<dynamic, dynamic>;
+    return LeaderboardData.fromJson(data.cast<String, dynamic>());
+  }
 }

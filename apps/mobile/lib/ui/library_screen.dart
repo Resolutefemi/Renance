@@ -23,6 +23,7 @@ class LibraryScreen extends StatefulWidget {
     ExamMeta, {
     int? durationOverrideMinutes,
     bool untimed,
+    bool shuffleQuestions,
   }) onOpenExam;
 
   @override
@@ -33,6 +34,15 @@ enum _LibraryFilter { all, downloaded, inProgress, completed }
 
 class _LibraryScreenState extends State<LibraryScreen> {
   _LibraryFilter _filter = _LibraryFilter.all;
+
+  /// Body shelf shown ("JAMB" | "WAEC" | "NECO" | "University Modules").
+  /// null = the student's own exam body — the default, so a JAMBite's
+  /// library no longer lists all 664 manifest packs including every
+  /// university course bank.
+  String? _bodyFilter;
+
+  List<String> _shelves(List<String> bodies, String ownBody) =>
+      <String>[if (ownBody.isNotEmpty) ownBody, ...bodies.where((String b) => b != ownBody)];
 
   IconData _iconFor(ExamMeta exam) {
     final String t = '${exam.title} ${exam.category}'.toLowerCase();
@@ -52,15 +62,22 @@ class _LibraryScreenState extends State<LibraryScreen> {
 
     final List<ExamMeta> exams = sync.exams;
     final Set<String> downloaded = student.downloaded;
+    final String ownBody = student.me?.profile?.exams.isNotEmpty ?? false
+        ? student.me!.profile!.exams.first
+        : '';
+    final String shelf = _bodyFilter ?? ownBody;
 
-    bool matches(ExamMeta e) => switch (_filter) {
-          _LibraryFilter.all => true,
-          _LibraryFilter.downloaded => downloaded.contains(e.code),
-          _LibraryFilter.inProgress =>
-            sync.isSyncing && !downloaded.contains(e.code),
-          _LibraryFilter.completed => student.attempts
-              .any((AttemptRow a) => a.isGraded && a.code == e.code),
-        };
+    bool matches(ExamMeta e) {
+      if (shelf.isNotEmpty && e.body != shelf) return false;
+      return switch (_filter) {
+            _LibraryFilter.all => true,
+            _LibraryFilter.downloaded => downloaded.contains(e.code),
+            _LibraryFilter.inProgress =>
+              sync.isSyncing && !downloaded.contains(e.code),
+            _LibraryFilter.completed => student.attempts
+                .any((AttemptRow a) => a.isGraded && a.code == e.code),
+          };
+    }
     final List<ExamMeta> visible =
         exams.where(matches).toList(growable: false);
 
@@ -76,7 +93,33 @@ class _LibraryScreenState extends State<LibraryScreen> {
         padding: EdgeInsets.fromLTRB(
             16, MediaQuery.paddingOf(context).top + 64 + 8, 16, 24),
         children: <Widget>[
+          // Body shelves ---------------------------------------------------
+          SizedBox(
+            height: 36,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              children: <Widget>[
+                for (final String shelfId
+                    in _shelves(sync.shelfBodies.toList(), ownBody)) ...<Widget>[
+                  _Chip(
+                    switch (shelfId) {
+                      'JAMB' => 'JAMB',
+                      'WAEC' => 'WASSCE',
+                      'NECO' => 'NECO',
+                      'University Modules' => 'University',
+                      _ => shelfId,
+                    },
+                    shelf == shelfId,
+                    () => setState(() => _bodyFilter = shelfId),
+                  ),
+                  const SizedBox(width: 8),
+                ],
+              ],
+            ),
+          ),
           // Filter chips ---------------------------------------------------
+          const SizedBox(height: 8),
           SizedBox(
             height: 36,
             child: ListView(

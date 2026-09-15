@@ -13,6 +13,7 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import 'badge_detail_screen.dart';
+import 'leaderboard_screen.dart';
 import 'notifications_screen.dart';
 import 'theme.dart';
 
@@ -102,6 +103,54 @@ class GamificationHubScreen extends StatelessWidget {
             // Streak hero card ---------------------------------------------
             const SizedBox(height: 8),
             _StreakHero(state: state),
+            // Leaderboard entry ---------------------------------------------
+            const SizedBox(height: 16),
+            Material(
+              color: context.card,
+              borderRadius: BorderRadius.circular(12),
+              clipBehavior: Clip.antiAlias,
+              child: InkWell(
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                      builder: (_) => const LeaderboardScreen()),
+                ),
+                child: Container(
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: context.outlineVariant.withValues(alpha: 0.4)),
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: context.selectionBlue.withValues(alpha: 0.2),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        alignment: Alignment.center,
+                        child: const Icon(Icons.emoji_events_outlined, size: 22),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text('Leaderboard', style: RenanceText.bodyMedium),
+                            Text('XP and Arena standings — see where you rank',
+                                style: RenanceText.caption.copyWith(
+                                    fontSize: 12,
+                                    color: context.textSecondary)),
+                          ],
+                        ),
+                      ),
+                      const Icon(Icons.chevron_right, size: 20),
+                    ],
+                  ),
+                ),
+              ),
+            ),
             // Level card ----------------------------------------------------
             const SizedBox(height: 16),
             _LevelCard(state: state),
