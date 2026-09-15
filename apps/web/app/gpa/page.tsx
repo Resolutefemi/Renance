@@ -9,6 +9,8 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
+import { useTertiaryFocus } from '@/lib/use-focus';
+import Link from 'next/link';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
@@ -67,6 +69,9 @@ export default function GpaPage() {
   const [prevCgpa, setPrevCgpa] = useState('');
   const [prevUnits, setPrevUnits] = useState('');
   const [loaded, setLoaded] = useState(false);
+  // Tertiary-only guard (founder call): JAMB / WAEC / NECO students get
+  // a clear note instead of the calculator, even on a direct URL visit.
+  const focus = useTertiaryFocus();
 
   // Load the saved sheet once (guard JSON parse — private mode, old shapes).
   useEffect(() => {
@@ -137,6 +142,31 @@ export default function GpaPage() {
       classOf: classify(allCgpa),
     };
   }, [rows, prevCgpa, prevUnits]);
+
+  if (focus === 'secondary') {
+    return (
+      <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
+        <PageBar title="GPA Calculator" />
+        <div className="mx-auto flex w-full max-w-md flex-col items-center px-4 pt-24 text-center">
+          <span className="material-symbols-outlined text-4xl text-on-surface-variant">school</span>
+          <h1 className="mt-4 text-lg font-semibold text-on-surface">
+            The GPA calculator lives on the University desk
+          </h1>
+          <p className="mt-2 text-sm text-on-surface-variant">
+            It is a tertiary tool: semester GPAs and a cumulative CGPA on
+            the 5.0 scale. Your JAMB / WAEC / NECO desk keeps the exam
+            practice tools instead.
+          </p>
+          <Link
+            href="/dashboard"
+            className="mt-6 flex h-11 items-center justify-center rounded-[10px] bg-primary px-6 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98]"
+          >
+            Back to your desk
+          </Link>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">

@@ -13,6 +13,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { subscribeNotifications, unreadCount } from '@/lib/notifications';
+import { useTertiaryFocus } from '@/lib/use-focus';
 
 const RAIL_KEY = 'renance.rail.v1';
 
@@ -20,12 +21,13 @@ const TABS = [
   { icon: 'home', label: 'Home', href: '/dashboard', match: '/dashboard' },
   { icon: 'edit_note', label: 'Practice', href: '/packs', match: null },
   { icon: 'history_edu', label: 'Review', href: '/review', match: '/review' },
-  { icon: 'calculate', label: 'GPA', href: '/gpa', match: '/gpa' },
+  { icon: 'calculate', label: 'GPA', href: '/gpa', match: '/gpa', tertiary: true },
   { icon: 'person', label: 'Profile', href: '/profile', match: '/profile' },
 ] as const;
 
 export default function SideNav() {
   const pathname = usePathname();
+  const focus = useTertiaryFocus();
   const [unread, setUnread] = useState(0);
   // Server render matches the default (open) rail; the stored pick is
   // applied after mount so hydration stays clean.
@@ -92,7 +94,7 @@ export default function SideNav() {
 
       {/* Primary destinations */}
       <div className={`flex flex-1 flex-col ${open ? 'gap-1 overflow-y-auto p-3' : 'gap-2 p-2'}`}>
-        {TABS.map((tab) => {
+        {TABS.filter((tab) => !('tertiary' in tab && tab.tertiary) || focus === 'tertiary').map((tab) => {
           const active = tab.match != null && pathname === tab.match;
           return (
             <Link

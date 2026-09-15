@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { api, ApiError } from '@/lib/api';
 import { getToken, setStoredUser } from '@/lib/session';
+import { focusFromExams, setFocus } from '@/lib/focus';
 import { examHref, fetchManifest, migrateBundleCache, prefetchAll, type ExamMeta } from '@/lib/exams';
 import { type ReviewSummary } from '@/lib/review';
 import { RenanceMark } from '@/components/renance-logo';
@@ -153,6 +154,8 @@ export default function DashboardPage() {
         const meRes = await api<MeResponse>('/me');
         if (!alive) return;
         setMe(meRes);
+        // Record the desk focus so the navs / /gpa can scope themselves.
+        setFocus(focusFromExams(meRes.profile?.exams));
         api<GamificationResponse>('/me/gamification')
           .then((g) => alive && setStreak(g.state.currentStreak))
           .catch(() => {});
@@ -473,8 +476,8 @@ export default function DashboardPage() {
             <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
               <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
-              <LauncherTile icon="calculate" label="GPA" href="/gpa" />
-              <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
+              <LauncherTile icon="download" label="Downloads" href="/downloads" />
+              <LauncherTile icon="category" label="Subjects" href="/subjects" />
             </div>
           </section>
         </div>
@@ -495,7 +498,7 @@ export default function DashboardPage() {
         {/* Recent activity ------------------------------------------------ */}
         {recent && (
           <Link
-            href={recent.status === 'in_progress' ? examHref(recent.code, { resume: '1' }) : '/progress-report'}
+            href={recent.status === 'in_progress' ? examHref(recent.code, { resume: '1' }) : '/review'}
             className="mt-6 mb-4 flex items-center gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition-colors hover:bg-surface-container-lowest"
           >
             <div
@@ -660,7 +663,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
       <section className="mt-4">
         <h3 className="text-sm text-on-surface-variant">Tools</h3>
         <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-          <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
+          <LauncherTile icon="download" label="Downloads" href="/downloads" />
           <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
           <LauncherTile icon="menu_book" label="Lessons" href="/lessons" />
           <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
@@ -673,9 +676,9 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
 function MoreSheet({ onClose }: { onClose: () => void }) {
   // The rest of the drawer, by design: the daily drivers (Exams, Packs,
   // Review, Flashcards, Arena, Daily, Leaderboard, Study Plan, Lessons,
-  // GPA, Progress Report, Syllabus) live on the home grids, so only the
-  // occasional tools remain in here. Progress and Certificates were cut
-  // (founder call) — GPA calculator now lives at /gpa.
+  // Syllabus) live on the home grids, so only the occasional tools
+  // remain in here. Progress and Certificates were cut (founder call);
+  // the GPA calculator lives on the University desk only.
   const items = [
     { icon: 'notifications', label: 'Notifications', href: '/notifications' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },

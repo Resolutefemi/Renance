@@ -13,6 +13,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { api, API_BASE } from '@/lib/api';
 import { clearSession, getToken } from '@/lib/session';
+import { focusFromExams, setFocus } from '@/lib/focus';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
@@ -87,6 +88,7 @@ export default function ProfilePage() {
         setMe(res);
         const first = res.profile?.exams?.[0] ?? '';
         setExam(first);
+        setFocus(focusFromExams(res.profile?.exams));
         setYear(res.profile?.targetYear ?? null);
       })
       .catch(() => {});
@@ -127,6 +129,7 @@ export default function ProfilePage() {
         },
       });
       setMe((prev) => (prev ? { ...prev, profile: res.profile } : prev));
+      setFocus(focusFromExams(res.profile?.exams));
       setBusy(false);
       setEditing(false);
       // Packs for the new focus sync in the background; best effort.
