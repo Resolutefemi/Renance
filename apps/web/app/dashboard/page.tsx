@@ -473,8 +473,8 @@ export default function DashboardPage() {
             <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
               <LauncherTile icon="style" label="Flashcards" href="/flashcards" />
-              <LauncherTile icon="trending_up" label="Progress" href="/progress" />
-              <LauncherTile icon="workspace_premium" label="Certificates" href="/certificates" />
+              <LauncherTile icon="calculate" label="GPA" href="/gpa" />
+              <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
             </div>
           </section>
         </div>
@@ -483,7 +483,6 @@ export default function DashboardPage() {
         <section className="mt-4">
           <h3 className="text-sm text-on-surface-variant">Tools</h3>
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="insights" label="Progress Report" href="/progress-report" />
             <LauncherTile icon="menu_book" label="Syllabus Map" href="/syllabus" />
             <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
             <LauncherTile icon="more_horiz" label="More" muted onMore={() => setMoreOpen(true)} />
@@ -496,7 +495,7 @@ export default function DashboardPage() {
         {/* Recent activity ------------------------------------------------ */}
         {recent && (
           <Link
-            href={recent.status === 'in_progress' ? examHref(recent.code, { resume: '1' }) : '/progress'}
+            href={recent.status === 'in_progress' ? examHref(recent.code, { resume: '1' }) : '/progress-report'}
             className="mt-6 mb-4 flex items-center gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition-colors hover:bg-surface-container-lowest"
           >
             <div
@@ -649,7 +648,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         <section className="mt-4 lg:mt-2">
           <h3 className="text-sm text-on-surface-variant">Grow</h3>
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
-            <LauncherTile icon="calculate" label="CGPA" href="/progress" />
+            <LauncherTile icon="calculate" label="CGPA" href="/gpa" />
             <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
             <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
             <LauncherTile icon="psychology" label="Flashcards" href="/flashcards" />
@@ -674,11 +673,11 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
 function MoreSheet({ onClose }: { onClose: () => void }) {
   // The rest of the drawer, by design: the daily drivers (Exams, Packs,
   // Review, Flashcards, Arena, Daily, Leaderboard, Study Plan, Lessons,
-  // Progress, Badges, Certificates, Progress Report, Syllabus) live on
-  // the home grids, so only the occasional tools remain in here.
+  // GPA, Progress Report, Syllabus) live on the home grids, so only the
+  // occasional tools remain in here. Progress and Certificates were cut
+  // (founder call) — GPA calculator now lives at /gpa.
   const items = [
     { icon: 'notifications', label: 'Notifications', href: '/notifications' },
-    { icon: 'military_tech', label: 'Badges', href: '/progress' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },
     { icon: 'volunteer_activism', label: 'Patron Portal', href: '/patron' },
