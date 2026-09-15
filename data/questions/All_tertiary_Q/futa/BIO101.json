@@ -2,8 +2,8 @@
   "code": "uni-futa-bio101-bank",
   "title": "FUTA BIO 101 | Course Question Bank",
   "version": 1,
-  "questionCount": 302,
-  "totalMarks": 302,
+  "questionCount": 351,
+  "totalMarks": 351,
   "body": "University Modules",
   "category": "university",
   "questions": [
@@ -4234,6 +4234,741 @@
       "marks": 1,
       "answer": "B",
       "explanation": "Cancer involves unregulated cell proliferation where cells ignore normal growth signals and may invade other tissues (metastasize)."
+    },
+    {
+      "id": "uni-futa-bio101-0303",
+      "type": "mcq",
+      "stem": "Which of the following correctly fills the blanks in the hierarchy of life from smallest to largest: Subatomic particles, Atoms, Molecules, _______, _______, Tissues, Organs, Organ Systems, Organism?",
+      "options": {
+        "A": "Organelles, Cells",
+        "B": "Cells, Organelles",
+        "C": "Populations, Communities",
+        "D": "Ecosystems, Biomes"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0304",
+      "type": "mcq",
+      "stem": "According to the Cell Theory, all living things are composed of what?",
+      "options": {
+        "A": "Cells",
+        "B": "Tissues",
+        "C": "Organs",
+        "D": "Organ Systems"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0305",
+      "type": "mcq",
+      "stem": "The Cell Theory states that cells are the basic unit of what?",
+      "options": {
+        "A": "Life and function in living things",
+        "B": "Biological organization",
+        "C": "Reproduction in organisms",
+        "D": "Genetic inheritance"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0306",
+      "type": "mcq",
+      "stem": "According to the Cell Theory, where do new cells come from?",
+      "options": {
+        "A": "Existing cells",
+        "B": "Spontaneous generation",
+        "C": "Non-living matter",
+        "D": "Chemical reactions"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0307",
+      "type": "mcq",
+      "stem": "What are the two main types of cells?",
+      "options": {
+        "A": "Prokaryotic and Eukaryotic",
+        "B": "Plant and Animal",
+        "C": "Unicellular and Multicellular",
+        "D": "Somatic and Gamete"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0308",
+      "type": "mcq",
+      "stem": "What defining feature do prokaryotic cells lack?",
+      "options": {
+        "A": "Nucleus",
+        "B": "Cell membrane",
+        "C": "Cytoplasm",
+        "D": "Ribosomes"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0309",
+      "type": "mcq",
+      "stem": "Prokaryotic cells lack which of the following?",
+      "options": {
+        "A": "Membrane bound organelles",
+        "B": "Ribosomes",
+        "C": "Cell wall",
+        "D": "Genetic material"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0310",
+      "type": "mcq",
+      "stem": "Which of the following is an example of a prokaryotic organism?",
+      "options": {
+        "A": "Bacteria",
+        "B": "Animal cell",
+        "C": "Plant cell",
+        "D": "Fungi"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0311",
+      "type": "mcq",
+      "stem": "What defining feature do eukaryotic cells possess?",
+      "options": {
+        "A": "Nucleus",
+        "B": "Naked DNA",
+        "C": "Absence of organelles",
+        "D": "Simple structure"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0312",
+      "type": "mcq",
+      "stem": "What type of organelles are characteristic of eukaryotic cells?",
+      "options": {
+        "A": "Membrane-bound organelles",
+        "B": "Non-membrane-bound ribosomes only",
+        "C": "Only a cell wall",
+        "D": "Only cytoplasm"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0313",
+      "type": "mcq",
+      "stem": "Which of the following are examples of eukaryotic organisms mentioned in the text?",
+      "options": {
+        "A": "Animals and Plants",
+        "B": "Bacteria and Archaea",
+        "C": "Viruses and Viroids",
+        "D": "Blue-green algae and Mycoplasma"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0314",
+      "type": "mcq",
+      "stem": "What is the main function of a cell as described in the text?",
+      "options": {
+        "A": "To make proteins",
+        "B": "To store genetic material",
+        "C": "To transport nutrients",
+        "D": "To provide structural support"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0315",
+      "type": "mcq",
+      "stem": "Cells are often called what due to their role in producing various substances?",
+      "options": {
+        "A": "Factories",
+        "B": "Libraries",
+        "C": "Powerhouses",
+        "D": "Control centers"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0316",
+      "type": "mcq",
+      "stem": "What are the specialized structures within a cell that perform specific functions called?",
+      "options": {
+        "A": "Organelles",
+        "B": "Molecules",
+        "C": "Tissues",
+        "D": "Organ systems"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0317",
+      "type": "mcq",
+      "stem": "The cytoplasm is the part of the cell located between which two main structures?",
+      "options": {
+        "A": "Nucleus and Cell Membrane",
+        "B": "Cell wall and Vacuole",
+        "C": "Mitochondria and Chloroplast",
+        "D": "Ribosome and Endoplasmic Reticulum"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0318",
+      "type": "mcq",
+      "stem": "The cytoplasm is described as a _______ substance that holds the other organelles.",
+      "options": {
+        "A": "Jelly-like",
+        "B": "Solid",
+        "C": "Gaseous",
+        "D": "Crystalline"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0319",
+      "type": "mcq",
+      "stem": "The cell membrane is also known by what other name?",
+      "options": {
+        "A": "Plasma membrane",
+        "B": "Cell wall",
+        "C": "Nuclear envelope",
+        "D": "Cytosol"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0320",
+      "type": "mcq",
+      "stem": "What is the primary function of the cell membrane?",
+      "options": {
+        "A": "Controls what goes in and out of the cell",
+        "B": "Stores genetic material",
+        "C": "Produces energy",
+        "D": "Provides rigid support"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0321",
+      "type": "mcq",
+      "stem": "What essential cellular component is contained within the nucleus?",
+      "options": {
+        "A": "Genetic material",
+        "B": "Ribosomes",
+        "C": "Mitochondria",
+        "D": "Lysosomes"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0322",
+      "type": "mcq",
+      "stem": "What molecule found in the nucleus provides instructions for making proteins?",
+      "options": {
+        "A": "DNA",
+        "B": "RNA",
+        "C": "ATP",
+        "D": "Lipids"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0323",
+      "type": "mcq",
+      "stem": "What is the primary function of ribosomes?",
+      "options": {
+        "A": "Proteins are made",
+        "B": "Energy is produced",
+        "C": "Waste is broken down",
+        "D": "Genetic material is stored"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0324",
+      "type": "mcq",
+      "stem": "Where can ribosomes be found within a cell?",
+      "options": {
+        "A": "Attached to the Endoplasmic Reticulum or free in the cytoplasm",
+        "B": "Inside the nucleus only",
+        "C": "Within mitochondria only",
+        "D": "Embedded in the cell membrane"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0325",
+      "type": "mcq",
+      "stem": "What are the two types of Endoplasmic Reticulum (ER)?",
+      "options": {
+        "A": "Rough ER and Smooth ER",
+        "B": "Golgi ER and Lysosomal ER",
+        "C": "Nuclear ER and Cytoplasmic ER",
+        "D": "Inner ER and Outer ER"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0326",
+      "type": "mcq",
+      "stem": "The Endoplasmic Reticulum (ER) is typically located around which organelle?",
+      "options": {
+        "A": "Nucleus",
+        "B": "Mitochondria",
+        "C": "Golgi apparatus",
+        "D": "Vacuole"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0327",
+      "type": "mcq",
+      "stem": "Why is the Rough ER given its name?",
+      "options": {
+        "A": "It has ribosomes attached to its outer membrane",
+        "B": "It has a rigid, uneven structure",
+        "C": "It is involved in rough protein synthesis",
+        "D": "It contains abrasive enzymes"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0328",
+      "type": "mcq",
+      "stem": "What happens to proteins made by ribosomes once they enter the Rough ER?",
+      "options": {
+        "A": "They are modified and folded",
+        "B": "They are immediately secreted from the cell",
+        "C": "They are broken down for energy",
+        "D": "They are stored indefinitely"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0329",
+      "type": "mcq",
+      "stem": "What distinguishes Smooth ER from Rough ER in terms of structure?",
+      "options": {
+        "A": "Smooth ER lacks ribosomes attached to its outer membrane",
+        "B": "Smooth ER has a more complex folded structure",
+        "C": "Smooth ER is always found closer to the nucleus",
+        "D": "Smooth ER is only found in plant cells"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0330",
+      "type": "mcq",
+      "stem": "Which of the following processes occurs in the Smooth ER?",
+      "options": {
+        "A": "Lipid synthesis and detoxification",
+        "B": "Protein synthesis and modification",
+        "C": "Waste breakdown and recycling",
+        "D": "Energy production and storage"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0331",
+      "type": "mcq",
+      "stem": "After proteins are modified in the ER, they move to the Golgi apparatus in what type of membrane-bound structures?",
+      "options": {
+        "A": "Vesicles",
+        "B": "Vacuoles",
+        "C": "Ribosomes",
+        "D": "Lysosomes"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0332",
+      "type": "mcq",
+      "stem": "What are the primary functions of the Golgi apparatus regarding proteins from the ER?",
+      "options": {
+        "A": "Modify, sort, and package them",
+        "B": "Synthesize, store, and break them down",
+        "C": "Transport, energize, and protect them",
+        "D": "Destroy, filter, and recycle them"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0333",
+      "type": "mcq",
+      "stem": "Which sequence correctly describes the path a protein takes from its synthesis to its secretion from the cell?",
+      "options": {
+        "A": "Ribosomes → ER → Golgi apparatus → Vesicles → Cell membrane",
+        "B": "Nucleus → Ribosomes → ER → Golgi apparatus → Cell membrane",
+        "C": "ER → Ribosomes → Golgi apparatus → Vesicles → Cell membrane",
+        "D": "Golgi apparatus → ER → Ribosomes → Vesicles → Cell membrane"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0334",
+      "type": "mcq",
+      "stem": "Lysosomes are organelles filled with enzymes that break down what types of substances?",
+      "options": {
+        "A": "Lipids, carbohydrates, and proteins",
+        "B": "DNA, RNA, and ATP",
+        "C": "Water, salts, and sugars",
+        "D": "Hormones, vitamins, and minerals"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0335",
+      "type": "mcq",
+      "stem": "Due to their function in removing waste and breaking down old organelles, lysosomes are often referred to as the cell's:",
+      "options": {
+        "A": "Cleanup crew",
+        "B": "Power plant",
+        "C": "Command center",
+        "D": "Delivery service"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0336",
+      "type": "mcq",
+      "stem": "Which of the following materials are typically stored by vacuoles in a cell?",
+      "options": {
+        "A": "Water, salts, proteins, and carbohydrates",
+        "B": "Lipids, DNA, and RNA",
+        "C": "Enzymes, hormones, and neurotransmitters",
+        "D": "Waste products, toxins, and pollutants"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0337",
+      "type": "mcq",
+      "stem": "Mitochondria are responsible for converting energy from food into what usable form of energy?",
+      "options": {
+        "A": "Chemical energy (ATP)",
+        "B": "Light energy",
+        "C": "Mechanical energy",
+        "D": "Heat energy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0338",
+      "type": "mcq",
+      "stem": "What is the process called by which mitochondria convert energy from food into usable energy?",
+      "options": {
+        "A": "Cellular respiration",
+        "B": "Photosynthesis",
+        "C": "Fermentation",
+        "D": "Glycolysis"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0339",
+      "type": "mcq",
+      "stem": "Cilia and Flagella are described as what type of appendages that extend from the surface of cells?",
+      "options": {
+        "A": "Hair-like",
+        "B": "Root-like",
+        "C": "Branching",
+        "D": "Leaf-like"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0340",
+      "type": "mcq",
+      "stem": "How are cilia distinguished from flagella based on their number?",
+      "options": {
+        "A": "Cilia are numerous, while flagella are few or singular",
+        "B": "Cilia are single, while flagella are numerous",
+        "C": "Cilia are only found on prokaryotes, flagella on eukaryotes",
+        "D": "Cilia are for movement, flagella are for sensing"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0341",
+      "type": "mcq",
+      "stem": "What is the primary function of cilia and flagella?",
+      "options": {
+        "A": "To move liquid past the surface of the cell or to enable cell movement",
+        "B": "To absorb nutrients from the environment",
+        "C": "To protect the cell from external damage",
+        "D": "To provide structural support to the cell"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0342",
+      "type": "mcq",
+      "stem": "What is the cytoskeleton primarily responsible for in a cell?",
+      "options": {
+        "A": "Maintaining cell shape",
+        "B": "Storing genetic information",
+        "C": "Producing energy",
+        "D": "Breaking down waste"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0343",
+      "type": "mcq",
+      "stem": "What cellular process do centrioles assist with?",
+      "options": {
+        "A": "Cell division",
+        "B": "Protein synthesis",
+        "C": "Photosynthesis",
+        "D": "Lipid metabolism"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0344",
+      "type": "mcq",
+      "stem": "Centrioles are exclusively found in which type of cells?",
+      "options": {
+        "A": "Animal cells",
+        "B": "Plant cells",
+        "C": "Prokaryotic cells",
+        "D": "Fungal cells"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0345",
+      "type": "mcq",
+      "stem": "Which three organelles are typically found in plant cells but not in animal cells, according to the text?",
+      "options": {
+        "A": "Chloroplasts, Cell Wall, Central Water Vacuole",
+        "B": "Mitochondria, Nucleus, Ribosomes",
+        "C": "Endoplasmic Reticulum, Golgi Apparatus, Lysosomes",
+        "D": "Cilia, Flagella, Centrioles"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0346",
+      "type": "mcq",
+      "stem": "What vital process occurs in the chloroplasts?",
+      "options": {
+        "A": "Photosynthesis",
+        "B": "Cellular respiration",
+        "C": "Protein synthesis",
+        "D": "Lipid breakdown"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0347",
+      "type": "mcq",
+      "stem": "During photosynthesis in chloroplasts, what type of energy is converted into chemical energy (glucose)?",
+      "options": {
+        "A": "Light energy",
+        "B": "Heat energy",
+        "C": "Mechanical energy",
+        "D": "Electrical energy"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0348",
+      "type": "mcq",
+      "stem": "Where is the cell wall located in plant cells relative to the cell membrane?",
+      "options": {
+        "A": "Outside",
+        "B": "Inside",
+        "C": "Integrated within",
+        "D": "Absent"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0349",
+      "type": "mcq",
+      "stem": "What are the primary functions of the cell wall in plant cells?",
+      "options": {
+        "A": "Provides support and protection",
+        "B": "Controls what enters and leaves the cell",
+        "C": "Produces energy through photosynthesis",
+        "D": "Stores water and nutrients"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0350",
+      "type": "mcq",
+      "stem": "What is the primary function of the large central water vacuole in plant cells?",
+      "options": {
+        "A": "Stores water",
+        "B": "Synthesizes proteins",
+        "C": "Produces ATP",
+        "D": "Digests waste"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
+    },
+    {
+      "id": "uni-futa-bio101-0351",
+      "type": "mcq",
+      "stem": "The central water vacuole helps maintain what type of pressure, which aids in supporting the plant?",
+      "options": {
+        "A": "Turgor pressure",
+        "B": "Osmotic pressure",
+        "C": "Blood pressure",
+        "D": "Atmospheric pressure"
+      },
+      "marks": 1,
+      "answer": "A",
+      "explanation": "",
+      "source": "legacybygabriel ExamSphere (publication E8AjFPRcHljKquTfEBv8)"
     }
   ]
 }
