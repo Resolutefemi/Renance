@@ -103,12 +103,9 @@ func (s *Server) ensurePaper(ctx context.Context, code string) (*cbtdata.Bundle,
                 }
         }
 
-        // Persist first (best-effort: the in-memory cache below already
-        // covers the running process; the seed covers a restart mid-paper),
-        // then publish the key atomically enough for every reader.
-        if _, err := s.store.SeedKeys(ctx, code, keys); err != nil {
-                s.log.Error("composed paper: seed keys", "code", code, "err", err)
-        }
+        // Publish the key in-memory only (database persistence removed —
+        // composed-paper keys are rebuilt from the content library on
+        // restart if a re-composition is needed).
         if putter, ok := s.keys.(interface {
                 Put(code string, keys map[string]store.KeyEntry)
         }); ok {

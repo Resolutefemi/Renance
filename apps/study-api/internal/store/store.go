@@ -316,48 +316,10 @@ type KeyEntry struct {
         Video string
 }
 
-// AllKeys loads every key row, grouped by bank code. Grading cache boot.
-func (s *Store) AllKeys(ctx context.Context) (map[string]map[string]KeyEntry, error) {
-        rows, err := s.Pool.Query(ctx, `SELECT code, question_id, letter FROM study.answer_keys`)
-        if err != nil {
-                return nil, fmt.Errorf("store: all keys: %w", err)
-        }
-        defer rows.Close()
-        out := map[string]map[string]KeyEntry{}
-        for rows.Next() {
-                var code, qid, letter string
-                if err := rows.Scan(&code, &qid, &letter); err != nil {
-                        return nil, fmt.Errorf("store: scan key: %w", err)
-                }
-                if out[code] == nil {
-                        out[code] = map[string]KeyEntry{}
-                }
-                out[code][qid] = KeyEntry{Letter: letter}
-        }
-        return out, rows.Err()
-}
-
-// SeedKeys upserts a full key set for one bank (content pipeline bootstrapping).
-func (s *Store) SeedKeys(ctx context.Context, code string, keys map[string]KeyEntry) (int, error) {
-        b := &pgx.Batch{}
-        for qid, k := range keys {
-                b.Queue(`
-                        INSERT INTO study.answer_keys (code, question_id, letter, explanation, answer_image, video)
-                        VALUES ($1, $2, $3, $4, $5, $6)
-                        ON CONFLICT (code, question_id) DO UPDATE
-                        SET letter = EXCLUDED.letter, explanation = EXCLUDED.explanation,
-                            answer_image = EXCLUDED.answer_image, video = EXCLUDED.video`,
-                        code, qid, k.Letter, k.Explanation, k.AnswerImage, k.Video)
-        }
-        br := s.Pool.SendBatch(ctx, b)
-        defer br.Close()
-        for range keys {
-                if _, err := br.Exec(); err != nil {
-                        return 0, fmt.Errorf("store: seed key: %w", err)
-                }
-        }
-        return len(keys), nil
-}
+// Sealed answer keys are served from the in-memory grading cache
+// (built from the content library at boot). The database no longer
+// stores key rows — this closes the repeated-reseed bloat path that
+// once pushed study.answer_keys past 100 MB.
 
 // -------------------------------------------------------------- attempts
 
@@ -593,27 +555,6 @@ func (s *Store) AttemptsByUser(ctx context.Context, userID string, limit int) ([
                         return nil, fmt.Errorf("store: scan attempt row: %w", err)
                 }
                 out = append(out, r)
-        }
-        return out, rows.Err()
-}
-
-// KeysForBank loads the sealed key rows of one pack. Used by the answer
-// review route: keys stay server-side; only post-grade explanations leave.
-func (s *Store) KeysForBank(ctx context.Context, code string) (map[string]KeyEntry, error) {
-        rows, err := s.Pool.Query(ctx, `
-                SELECT question_id, letter, explanation, answer_image, video
-                FROM study.answer_keys WHERE code = $1`, code)
-        if err != nil {
-                return nil, fmt.Errorf("store: keys for bank: %w", err)
-        }
-        defer rows.Close()
-        out := map[string]KeyEntry{}
-        for rows.Next() {
-                var qid, letter, explanation, answerImage, video string
-                if err := rows.Scan(&qid, &letter, &explanation, &answerImage, &video); err != nil {
-                        return nil, fmt.Errorf("store: scan key: %w", err)
-                }
-                out[qid] = KeyEntry{Letter: letter, Explanation: explanation, AnswerImage: answerImage, Video: video}
         }
         return out, rows.Err()
 }
