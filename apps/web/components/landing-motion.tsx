@@ -216,9 +216,9 @@ export function AuroraField() {
 
 /* ------------------------------------------------------------------ */
 /* LandingNav — the floating glass navbar.                             */
-/* Transparent over the hero, snaps to a frosted pill once the page    */
-/* scrolls; hides on scroll-down, returns on scroll-up (iOS Safari     */
-/* behaviour). Mobile collapses into a glass sheet.                    */
+/* Stable: always pinned, never hides. Transparent over the hero, it   */
+/* snaps to a frosted pill once the page scrolls. Mobile collapses     */
+/* into a glass sheet.                                                 */
 /* ------------------------------------------------------------------ */
 
 const NAV_LINKS = [
@@ -231,17 +231,10 @@ const NAV_LINKS = [
 
 export function LandingNav() {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
-  const lastY = useRef(0);
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 24);
-      setHidden(y > 140 && y > lastY.current);
-      lastY.current = y;
-    };
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -250,7 +243,7 @@ export function LandingNav() {
   const close = useCallback(() => setOpen(false), []);
 
   return (
-    <header className={`landing-nav ${scrolled ? 'is-scrolled' : ''} ${hidden ? 'is-hidden' : ''}`}>
+    <header className={`landing-nav ${scrolled ? 'is-scrolled' : ''}`}>
       <nav className="landing-nav-pill" aria-label="Primary">
         <Link href="/" className="landing-nav-brand" onClick={close}>
           <RenanceMark size={30} />
