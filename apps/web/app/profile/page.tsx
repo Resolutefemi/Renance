@@ -327,8 +327,7 @@ export default function ProfilePage() {
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             <MenuLink icon="auto_stories" tint="text-accent-ink" label="My Packs" href="/packs" />
             <MenuDivider />
-            <MenuDivider />
-            <MenuLink icon="workspace_premium" tint="text-accent-ink" label="Certificates" href="/certificates" />
+            <MenuLink icon="calculate" tint="text-accent-ink" label="GPA Calculator" href="/gpa" />
           </section>
 
           {/* Menu group: system -------------------------------------------- */}

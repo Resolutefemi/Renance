@@ -20,7 +20,7 @@ const TABS = [
   { icon: 'home', label: 'Home', href: '/dashboard', match: '/dashboard' },
   { icon: 'edit_note', label: 'Practice', href: '/packs', match: null },
   { icon: 'history_edu', label: 'Review', href: '/review', match: '/review' },
-  { icon: 'leaderboard', label: 'Progress', href: '/progress', match: '/progress' },
+  { icon: 'calculate', label: 'GPA', href: '/gpa', match: '/gpa' },
   { icon: 'person', label: 'Profile', href: '/profile', match: '/profile' },
 ] as const;
 
