@@ -14,12 +14,15 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
+import '../api_client.dart';
 import 'ai_generator_screen.dart';
 import 'arena_lobby_screen.dart';
 import 'career_bridge_screen.dart';
 import 'offline_share_screen.dart';
 import 'patron_portal_screen.dart';
 import 'downloads_screen.dart';
+import 'leaderboard_screen.dart';
+import 'study_resources_screen.dart';
 import 'study_plan_screen.dart';
 import 'flashcards_screen.dart';
 import 'lessons_screen.dart';
@@ -289,14 +292,14 @@ class _WideRail extends StatelessWidget {
               width: 36,
               height: 36,
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: context.inverseChip,
                 borderRadius: BorderRadius.circular(9),
               ),
               alignment: Alignment.center,
-              child: const Text(
+              child: Text(
                 'R',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: context.onInverseChip,
                   fontWeight: FontWeight.w700,
                   fontSize: 18,
                 ),
@@ -485,7 +488,8 @@ class _Tappable extends StatelessWidget {
   }
 }
 
-/// Black rounded square with the white R, matches the web header.
+/// Black rounded square with the white R (the student's colour when a
+/// seed is live), matches the web header.
 class _BrandMark extends StatelessWidget {
   const _BrandMark();
 
@@ -498,14 +502,14 @@ class _BrandMark extends StatelessWidget {
           width: 32,
           height: 32,
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: context.inverseChip,
             borderRadius: BorderRadius.circular(8),
           ),
           alignment: Alignment.center,
-          child: const Text(
+          child: Text(
             'R',
             style: TextStyle(
-              color: Colors.white,
+              color: context.onInverseChip,
               fontWeight: FontWeight.w700,
               fontSize: 17,
             ),
@@ -775,6 +779,59 @@ class _LauncherTab extends StatelessWidget {
   final ValueChanged<int> onGoTab;
   final VoidCallback onOnboarding;
 
+  /// The Compete desk's Daily Challenge: resolves today's rotating
+  /// paper for the student's focus body (GET /daily/{body}) and opens
+  /// it in the player — the same sprint the web dashboard deep-links.
+  Future<void> _openDaily(BuildContext context) async {
+    final ApiClient api = context.read<ApiClient>();
+    final StudentController student = context.read<StudentController>();
+    final String body = switch (student.me?.profile?.exams.firstOrNull) {
+      'WAEC' => 'WAEC',
+      'NECO' => 'NECO',
+      'University Modules' => 'University Modules',
+      _ => 'JAMB',
+    };
+    final DailyInfo daily;
+    try {
+      daily = await api.daily(body);
+    } on ApiException catch (e) {
+      if (!context.mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('No daily challenge: ${e.message}')),
+      );
+      return;
+    } on NetworkException catch (e) {
+      if (!context.mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(e.message)),
+      );
+      return;
+    }
+    // Prefer the manifest meta (sha + title) when the rotating code is
+    // registered; otherwise an empty sha fetches the bundle live.
+    ExamMeta meta = ExamMeta(
+      code: daily.code,
+      title: 'Daily Challenge · ${daily.day}',
+      questionCount: daily.questionCount,
+      totalMarks: daily.questionCount,
+      bundleSha256: '',
+      durationMinutes: 10,
+      body: daily.body,
+    );
+    for (final ExamMeta e in sync.exams) {
+      if (e.code == daily.code) {
+        meta = e;
+        break;
+      }
+    }
+    if (!context.mounted) return;
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => ExamScreen(exam: meta),
+      ),
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -845,7 +902,9 @@ class _LauncherTab extends StatelessWidget {
             const SizedBox(height: 12),
             _FatigueBanner(state: student.fatigue!),
           ],
-          // Practice grid -------------------------------------------------
+          // Launcher grids — 1:1 with the up-to-date web desk: Practice /
+          // Compete / Learn / Tools, the daily drivers on the grid, the
+          // rest in More. -------------------------------------------------
           const SizedBox(height: 8),
           Text(
             'Practice',
@@ -889,11 +948,102 @@ class _LauncherTab extends StatelessWidget {
               ),
               Expanded(
                 child: LauncherTile(
+                  icon: Icons.local_library,
+                  label: 'Study',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const StudyResourcesScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
                   icon: Icons.history,
                   label: 'Review Due',
                   badge: student.dueTopics > 0 ? '${student.dueTopics}' : null,
                   badgeColor: RenanceColors.emerald,
                   onTap: () => onGoTab(2),
+                ),
+              ),
+            ],
+          ),
+          // Compete ---------------------------------------------------------
+          const SizedBox(height: 16),
+          Text(
+            'Compete',
+            style: RenanceText.sectionTitle.copyWith(
+              color: context.textSecondary,
+              fontSize: 14,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.sports_esports,
+                  label: 'Arena',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const ArenaLobbyScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.event_repeat,
+                  iconColor: RenanceColors.amber,
+                  label: 'Daily Challenge',
+                  onTap: () => _openDaily(context),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.leaderboard,
+                  label: 'Leaderboard',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const LeaderboardScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.event_note,
+                  label: 'Study Plan',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const StudyPlanScreen(),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          // Learn -----------------------------------------------------------
+          const SizedBox(height: 16),
+          Text(
+            'Learn',
+            style: RenanceText.sectionTitle.copyWith(
+              color: context.textSecondary,
+              fontSize: 14,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.auto_stories,
+                  label: 'Notes',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const LessonsScreen(),
+                    ),
+                  ),
                 ),
               ),
               Expanded(
@@ -907,12 +1057,30 @@ class _LauncherTab extends StatelessWidget {
                   ),
                 ),
               ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.download,
+                  label: 'Downloads',
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => const DownloadsScreen(),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: LauncherTile(
+                  icon: Icons.category,
+                  label: 'Subjects',
+                  onTap: () => onGoTab(1),
+                ),
+              ),
             ],
           ),
-          // Grow grid -----------------------------------------------------
+          // Tools -----------------------------------------------------------
           const SizedBox(height: 16),
           Text(
-            'Grow',
+            'Tools',
             style: RenanceText.sectionTitle.copyWith(
               color: context.textSecondary,
               fontSize: 14,
@@ -923,23 +1091,11 @@ class _LauncherTab extends StatelessWidget {
             children: <Widget>[
               Expanded(
                 child: LauncherTile(
-                  icon: Icons.trending_up,
-                  label: 'Progress',
+                  icon: Icons.menu_book,
+                  label: 'Syllabus Map',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const GamificationHubScreen(),
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: LauncherTile(
-                  icon: Icons.military_tech,
-                  iconColor: RenanceColors.amber,
-                  label: 'Badges',
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (_) => const GamificationHubScreen(),
+                      builder: (_) => const SyllabusScreen(),
                     ),
                   ),
                 ),
@@ -1018,7 +1174,6 @@ class _HeroCard extends StatelessWidget {
     final int coverage = student.coveragePct;
     return Container(
       margin: const EdgeInsets.only(top: 4),
-      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         // Light: white card. Mixed: the dark hero band. Dark: darkCard.
         color: context.heroCard,
@@ -1031,36 +1186,48 @@ class _HeroCard extends StatelessWidget {
           ),
         ],
       ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(12),
-        child: Stack(
-          children: <Widget>[
-            // decorative blobs
-            Positioned(
-              top: -64,
-              right: -42,
-              child: Container(
-                width: 128,
-                height: 128,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.black.withValues(alpha: 0.05),
-                ),
+      // Founder bugfix: the corner blobs — not the TEXT — get clipped.
+      // The old wrapper clipped the whole stack, so the ClipRRect arc
+      // sliced the tail of NEXT TARGET / COUNTDOWN. The blobs now live
+      // in their own clipped layer; the content is never touched.
+      child: Stack(
+        children: <Widget>[
+          Positioned.fill(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    top: -64,
+                    right: -42,
+                    child: Container(
+                      width: 128,
+                      height: 128,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: context.onHeroCard.withValues(alpha: 0.05),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: -48,
+                    left: -32,
+                    child: Container(
+                      width: 96,
+                      height: 96,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: context.onHeroCard.withValues(alpha: 0.05),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            Positioned(
-              bottom: -48,
-              left: -32,
-              child: Container(
-                width: 96,
-                height: 96,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: context.ink.withValues(alpha: 0.05),
-                ),
-              ),
-            ),
-            Column(
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Row(
@@ -1082,6 +1249,7 @@ class _HeroCard extends StatelessWidget {
                         ],
                       ),
                     ),
+                    const SizedBox(width: 12),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
@@ -1130,9 +1298,7 @@ class _HeroCard extends StatelessWidget {
                     minHeight: 8,
                     backgroundColor: context.heroTrack,
                     valueColor: AlwaysStoppedAnimation<Color>(
-                      context.onHeroCard == RenanceColors.darkTextPrimary
-                          ? Colors.white
-                          : Colors.black,
+                      context.heroCta,
                     ),
                   ),
                 ),
@@ -1142,17 +1308,15 @@ class _HeroCard extends StatelessWidget {
                   width: double.infinity,
                   child: FilledButton.icon(
                     onPressed: onContinue,
-                    // White button on the dark hero in mixed/dark tiers,
-                    // the black primary button on light.
+                    // The hero CTA is context.heroCta in every tier —
+                    // black on light, white on dark chrome, and the
+                    // student's seed colour whenever one is live.
                     style: FilledButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      backgroundColor: context.darkChrome
-                          ? Colors.white
-                          : null,
-                      foregroundColor:
-                          context.darkChrome ? RenanceColors.ink : null,
+                      backgroundColor: context.heroCta,
+                      foregroundColor: context.onHeroCta,
                     ),
                     icon: const Icon(Icons.play_arrow, size: 20),
                     label: const Text(
@@ -1166,8 +1330,8 @@ class _HeroCard extends StatelessWidget {
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -1202,7 +1366,7 @@ class LauncherTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final BoxDecoration box = highlight
         ? BoxDecoration(
-            color: context.ink,
+            color: context.inverseChip,
             borderRadius: BorderRadius.circular(18),
             boxShadow: const <BoxShadow>[
               BoxShadow(
@@ -1330,12 +1494,17 @@ class _RecentActivityCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final int? pct = attempt.pct;
-    final String verdict = switch (pct) {
-      null => 'Not marked yet',
-      < 50 => 'Focus needed',
-      < 75 => 'Keep pushing',
-      _ => 'Strong work',
-    };
+    // Web parity: an in-progress paper shows the pause treatment and
+    // "your seat is saved" copy; graded papers show Score + verdict.
+    final bool inProgress = attempt.status == 'in_progress';
+    final String verdict = inProgress
+        ? 'Paused paper, your seat is saved, continue anytime'
+        : switch (pct) {
+            null => 'Not marked yet',
+            < 50 => 'Score: $pct% · Focus needed',
+            < 75 => 'Score: $pct% · Keep pushing',
+            _ => 'Score: $pct% · Strong work',
+          };
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(12),
@@ -1359,12 +1528,14 @@ class _RecentActivityCard extends StatelessWidget {
               height: 40,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: context.errorContainer,
+                color: inProgress
+                    ? RenanceColors.amber.withValues(alpha: 0.15)
+                    : context.errorContainer,
               ),
               child: Icon(
-                Icons.science,
+                inProgress ? Icons.pause_circle : Icons.science,
                 size: 20,
-                color: context.error,
+                color: inProgress ? RenanceColors.amber : context.error,
               ),
             ),
             const SizedBox(width: 12),
@@ -1380,7 +1551,7 @@ class _RecentActivityCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    pct == null ? verdict : 'Score: $pct% • $verdict',
+                    verdict,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: RenanceText.caption.copyWith(color: context.textSecondary),

@@ -13,6 +13,7 @@ import '../models.dart';
 import '../storage.dart';
 import 'downloads_screen.dart';
 import 'focus_sheet.dart';
+import 'gpa_screen.dart';
 import 'home_screen.dart' show AvatarCircle;
 import 'settings_screen.dart';
 import 'theme.dart';
@@ -181,7 +182,9 @@ class ProfileScreen extends StatelessWidget {
           },
         ),
         const SizedBox(height: 16),
-        // Menu group: content --------------------------------------------
+        // Menu group: content — 1:1 with the up-to-date web profile
+        // (My Packs, GPA Calculator; Downloads stays as the mobile
+        // affordance for the on-device pack library) ----------------------
         _MenuGroup(items: <_MenuItem>[
           _MenuItem(
             icon: Icons.auto_stories,
@@ -196,6 +199,15 @@ class ProfileScreen extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
                   builder: (_) => const DownloadsScreen()));
+            },
+          ),
+          _MenuItem(
+            icon: Icons.calculate,
+            tint: context.ink,
+            label: 'GPA Calculator',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const GpaScreen()));
             },
           ),
         ]),

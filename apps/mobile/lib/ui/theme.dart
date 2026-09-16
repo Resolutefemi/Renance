@@ -12,6 +12,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'seed_palette.dart';
+
+export 'seed_palette.dart'
+    show SeedPalette, kSeedPresets, hexToHsl, hslToHex, normalizeHex;
+
 class RenanceColors {
   // Light tier
   static const Color background = Color(0xFFF9F9FF);
@@ -52,7 +57,10 @@ class RenanceColors {
 }
 
 /// The full-dark ThemeData (Settings → Appearance → Dark).
-ThemeData buildRenanceDarkTheme() {
+/// [seed] re-tints the theme-level colors (buttons, fields, app bars)
+/// to match the Chrome-style seed palette the screens resolve through
+/// the context getters.
+ThemeData buildRenanceDarkTheme({SeedPalette? seed}) {
   const scheme = ColorScheme.dark(
     primary: Colors.white,
     onPrimary: RenanceColors.darkPage,
@@ -76,8 +84,15 @@ ThemeData buildRenanceDarkTheme() {
 
   final base = ThemeData(
     useMaterial3: true,
-    colorScheme: scheme,
-    scaffoldBackgroundColor: RenanceColors.darkPage,
+    colorScheme: scheme.copyWith(
+      primary: seed?.primary ?? scheme.primary,
+      onPrimary: seed?.onPrimary ?? scheme.onPrimary,
+      secondaryContainer: seed?.secondaryContainer ?? scheme.secondaryContainer,
+      outline: seed?.outline ?? scheme.outline,
+      outlineVariant: seed?.outlineVariant ?? scheme.outlineVariant,
+      surfaceContainerHighest: seed?.cardHigh ?? scheme.surfaceContainerHighest,
+    ),
+    scaffoldBackgroundColor: seed?.pageBg ?? RenanceColors.darkPage,
   );
 
   // The light tier applies the brand text theme; the dark tier must do
@@ -89,12 +104,12 @@ ThemeData buildRenanceDarkTheme() {
       bodyColor: RenanceColors.darkTextPrimary,
       displayColor: RenanceColors.darkTextPrimary,
     ),
-    appBarTheme: const AppBarTheme(
-      backgroundColor: RenanceColors.darkPage,
+    appBarTheme: AppBarTheme(
+      backgroundColor: seed?.pageBg ?? RenanceColors.darkPage,
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       centerTitle: false,
-      titleTextStyle: TextStyle(
+      titleTextStyle: const TextStyle(
         color: RenanceColors.darkTextPrimary,
         fontSize: 18,
         fontWeight: FontWeight.w600,
@@ -112,7 +127,7 @@ ThemeData buildRenanceDarkTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: RenanceColors.darkCard,
+      fillColor: seed?.card ?? RenanceColors.darkCard,
       hintStyle: const TextStyle(color: RenanceColors.darkTextSecondary),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       border: OutlineInputBorder(
@@ -135,8 +150,8 @@ ThemeData buildRenanceDarkTheme() {
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
-        backgroundColor: Colors.white,
-        foregroundColor: RenanceColors.darkPage,
+        backgroundColor: seed?.primary ?? Colors.white,
+        foregroundColor: seed?.onPrimary ?? RenanceColors.darkPage,
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         // styleFrom textStyle replaces labelLarge wholesale, so the family
@@ -251,7 +266,7 @@ class RenanceText {
   );
 }
 
-ThemeData buildRenanceTheme() {
+ThemeData buildRenanceTheme({SeedPalette? seed}) {
   final scheme = ColorScheme.light(
     primary: Colors.black,
     onPrimary: Colors.white,
@@ -275,8 +290,16 @@ ThemeData buildRenanceTheme() {
 
   final base = ThemeData(
     useMaterial3: true,
-    colorScheme: scheme,
-    scaffoldBackgroundColor: RenanceColors.background,
+    colorScheme: scheme.copyWith(
+      primary: seed?.primary ?? scheme.primary,
+      onPrimary: seed?.onPrimary ?? scheme.onPrimary,
+      secondaryContainer: seed?.secondaryContainer ?? scheme.secondaryContainer,
+      onSecondaryContainer: seed?.ink ?? scheme.onSecondaryContainer,
+      outline: seed?.outlineDark ?? scheme.outline,
+      outlineVariant: seed?.outlineVariant ?? scheme.outlineVariant,
+      surfaceContainerHighest: seed?.cardHigh ?? scheme.surfaceContainerHighest,
+    ),
+    scaffoldBackgroundColor: seed?.pageBg ?? RenanceColors.background,
   );
 
   return base.copyWith(
@@ -285,12 +308,12 @@ ThemeData buildRenanceTheme() {
       bodyColor: RenanceColors.ink,
       displayColor: RenanceColors.ink,
     ),
-    appBarTheme: const AppBarTheme(
-      backgroundColor: RenanceColors.background,
+    appBarTheme: AppBarTheme(
+      backgroundColor: seed?.pageBg ?? RenanceColors.background,
       surfaceTintColor: Colors.transparent,
       elevation: 0,
       centerTitle: false,
-      titleTextStyle: TextStyle(
+      titleTextStyle: const TextStyle(
         color: RenanceColors.ink,
         fontSize: 18,
         fontWeight: FontWeight.w600,
@@ -309,7 +332,7 @@ ThemeData buildRenanceTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: RenanceColors.surfaceContainerLow,
+      fillColor: seed?.cardLow ?? RenanceColors.surfaceContainerLow,
       hintStyle: const TextStyle(color: RenanceColors.outline),
       contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       border: OutlineInputBorder(
@@ -331,8 +354,8 @@ ThemeData buildRenanceTheme() {
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.white,
+        backgroundColor: seed?.primary ?? Colors.black,
+        foregroundColor: seed?.onPrimary ?? Colors.white,
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         textStyle: const TextStyle(
@@ -341,23 +364,23 @@ ThemeData buildRenanceTheme() {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        foregroundColor: RenanceColors.ink,
-        side: const BorderSide(color: RenanceColors.outlineLight),
+        foregroundColor: seed?.ink ?? RenanceColors.ink,
+        side: BorderSide(color: seed?.outlineVariant ?? RenanceColors.outlineLight),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       ),
     ),
     chipTheme: ChipThemeData(
-      backgroundColor: RenanceColors.surfaceContainerLow,
-      selectedColor: RenanceColors.selectionBlue,
-      side: const BorderSide(color: RenanceColors.outlineLight),
+      backgroundColor: seed?.cardLow ?? RenanceColors.surfaceContainerLow,
+      selectedColor: seed?.selectionBlue ?? RenanceColors.selectionBlue,
+      side: BorderSide(color: seed?.outlineVariant ?? RenanceColors.outlineLight),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      labelStyle: const TextStyle(
-          fontFamily: 'Inter', color: RenanceColors.ink, fontSize: 13),
+      labelStyle: TextStyle(
+          fontFamily: 'Inter', color: seed?.ink ?? RenanceColors.ink, fontSize: 13),
     ),
-    snackBarTheme: const SnackBarThemeData(
-      backgroundColor: RenanceColors.ink,
-      contentTextStyle: TextStyle(color: Colors.white),
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: seed?.accentInk ?? RenanceColors.ink,
+      contentTextStyle: TextStyle(color: seed?.onPrimary ?? Colors.white),
       behavior: SnackBarBehavior.floating,
     ),
   );
@@ -368,7 +391,8 @@ ThemeData buildRenanceTheme() {
 /// screens use (chrome-level dark, light body).
 enum RenanceThemeMode { light, mixed, dark }
 
-/// Persists the Appearance choice and exposes it to MaterialApp.
+/// Persists the Appearance choice + the Chrome-style seed colour and
+/// exposes both to MaterialApp.
 class ThemeController extends ChangeNotifier {
   ThemeController({required SharedPreferences prefs}) : _prefs = prefs {
     final raw = prefs.getString(_kKey);
@@ -377,18 +401,46 @@ class ThemeController extends ChangeNotifier {
       'mixed' => RenanceThemeMode.mixed,
       _ => RenanceThemeMode.light,
     };
+    _seed = prefs.getString(_kSeedKey);
   }
 
   static const _kKey = 'renance.theme';
+  static const _kSeedKey = 'renance.seed';
 
   final SharedPreferences _prefs;
   RenanceThemeMode _mode = RenanceThemeMode.light;
+  String? _seed;
 
   /// Exposed so Settings can persist its own preferences on the same
   /// SharedPreferences instance.
   SharedPreferences get prefs => _prefs;
 
   RenanceThemeMode get mode => _mode;
+
+  /// The stored seed hex (null = the classic ink & paper look).
+  String? get seed => _seed;
+
+  /// The palette for the CURRENT tier, or null when no seed is set.
+  SeedPalette? get palette =>
+      _seed == null ? null : SeedPalette.from(_seed!, _mode);
+
+  /// The seed palette for any tier (settings preview / MaterialApp).
+  SeedPalette? paletteFor(RenanceThemeMode mode) =>
+      _seed == null ? null : SeedPalette.from(_seed!, mode);
+
+  /// Chrome-appearance theming: set (or clear) the seed colour and
+  /// re-tint every screen. Same localStorage key as the website so the
+  /// choice reads identically on both surfaces.
+  Future<void> setSeed(String? hex) async {
+    final String? next = hex == null ? null : normalizeHex(hex);
+    _seed = next;
+    if (next == null) {
+      await _prefs.remove(_kSeedKey);
+    } else {
+      await _prefs.setString(_kSeedKey, next);
+    }
+    notifyListeners();
+  }
 
   ThemeMode get materialMode => switch (_mode) {
         RenanceThemeMode.dark => ThemeMode.dark,
@@ -410,26 +462,35 @@ class ThemeController extends ChangeNotifier {
 // Mode scope + theme-aware tokens
 // ---------------------------------------------------------------------
 
-/// Exposes the active Appearance tier to every screen so surfaces can
-/// resolve their colors per tier without touching ThemeController.
+/// Exposes the active Appearance tier + the optional seed palette to
+/// every screen so surfaces can resolve their colors per tier without
+/// touching ThemeController.
 class RenanceModeScope extends InheritedWidget {
   const RenanceModeScope({
     super.key,
     required this.mode,
+    this.palette,
     required super.child,
   });
 
   final RenanceThemeMode mode;
 
+  /// Non-null when a seed colour is live: every getter below resolves
+  /// from here first, so one seed repaints the whole app (the web's
+  /// CSS custom properties, translated to Flutter).
+  final SeedPalette? palette;
+
+  static RenanceModeScope? maybeOf(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<RenanceModeScope>();
+  }
+
   static RenanceThemeMode of(BuildContext context) {
-    final RenanceModeScope? scope =
-        context.dependOnInheritedWidgetOfExactType<RenanceModeScope>();
-    return scope?.mode ?? RenanceThemeMode.light;
+    return maybeOf(context)?.mode ?? RenanceThemeMode.light;
   }
 
   @override
   bool updateShouldNotify(RenanceModeScope oldWidget) =>
-      oldWidget.mode != mode;
+      oldWidget.mode != mode || oldWidget.palette != palette;
 }
 
 /// Theme-aware design tokens. Every screen resolves colors through
@@ -442,86 +503,96 @@ class RenanceModeScope extends InheritedWidget {
 ///  * Dark   — #111C2D page throughout, #1C2638 cards, #F0F3FF text.
 extension RenanceScheme on BuildContext {
   RenanceThemeMode get renanceMode => RenanceModeScope.of(this);
+  SeedPalette? get _pal => RenanceModeScope.maybeOf(this)?.palette;
   bool get isDarkTier => renanceMode == RenanceThemeMode.dark;
   bool get isMixedTier => renanceMode == RenanceThemeMode.mixed;
 
   /// Surfaces that carry the dark chrome in mixed AND full dark.
   bool get darkChrome => isDarkTier || isMixedTier;
 
+  /// The student's colour when a seed is live: black in stock light,
+  /// white in stock dark, the tinted primary everywhere when seeded.
+  Color get primary => _pal?.primary ?? (isDarkTier ? RenanceColors.darkTextPrimary : Colors.black);
+  Color get onPrimary => _pal?.onPrimary ?? (isDarkTier ? RenanceColors.darkPage : Colors.white);
+
   // Page ground ------------------------------------------------------
-  Color get pageBg =>
-      isDarkTier ? RenanceColors.darkPage : RenanceColors.background;
+  Color get pageBg => _pal?.pageBg ??
+      (isDarkTier ? RenanceColors.darkPage : RenanceColors.background);
 
   // Cards --------------------------------------------------------------
-  Color get card =>
-      isDarkTier ? RenanceColors.darkCard : RenanceColors.card;
-  Color get cardLowest => isDarkTier
+  Color get card => _pal?.card ??
+      (isDarkTier ? RenanceColors.darkCard : RenanceColors.card);
+  Color get cardLowest => _pal?.cardLowest ?? (isDarkTier
       ? RenanceColors.darkCard
-      : RenanceColors.surfaceContainerLowest;
-  Color get cardLow => isDarkTier
+      : RenanceColors.surfaceContainerLowest);
+  Color get cardLow => _pal?.cardLow ?? (isDarkTier
       ? RenanceColors.darkSurface
-      : RenanceColors.surfaceContainerLow;
-  Color get cardHigh => isDarkTier
+      : RenanceColors.surfaceContainerLow);
+  Color get cardHigh => _pal?.cardHigh ?? (isDarkTier
       ? RenanceColors.darkSurfaceLow
-      : RenanceColors.surfaceContainerHigh;
-  Color get cardHighest => isDarkTier
+      : RenanceColors.surfaceContainerHigh);
+  Color get cardHighest => _pal?.cardHighest ?? (isDarkTier
       ? RenanceColors.darkSurfaceLow
-      : RenanceColors.surfaceVariant;
-  Color get surfaceContainer => isDarkTier
+      : RenanceColors.surfaceVariant);
+  Color get surfaceContainer => _pal?.surfaceContainer ?? (isDarkTier
       ? RenanceColors.darkCard
-      : RenanceColors.surfaceContainer;
-  Color get surfaceVariant => isDarkTier
+      : RenanceColors.surfaceContainer);
+  Color get surfaceVariant => _pal?.surfaceVariant ?? (isDarkTier
       ? RenanceColors.darkSurfaceLow
-      : RenanceColors.surfaceVariant;
-  Color get selectionBlue => isDarkTier
+      : RenanceColors.surfaceVariant);
+  Color get selectionBlue => _pal?.selectionBlue ?? (isDarkTier
       ? RenanceColors.darkSurfaceLow
-      : RenanceColors.selectionBlue;
-  Color get secondaryContainer => isDarkTier
+      : RenanceColors.selectionBlue);
+  Color get secondaryContainer => _pal?.secondaryContainer ?? (isDarkTier
       ? RenanceColors.darkSurface
-      : RenanceColors.secondaryContainer;
+      : RenanceColors.secondaryContainer);
 
   // Hero / chrome: the big dark surface (same ink ground in every tier,
   // per the light, mixed and full-dark home designs).
   Color get heroGround => RenanceColors.darkPage;
-  Color get heroCard => isDarkTier
+  Color get heroCard => _pal?.heroCard ?? (isDarkTier
       ? RenanceColors.darkCard
-      : (isMixedTier ? RenanceColors.darkPage : RenanceColors.card);
-  Color get onHeroCard => isDarkTier
+      : (isMixedTier ? RenanceColors.darkPage : RenanceColors.card));
+  Color get onHeroCard => _pal?.onHeroCard ?? (isDarkTier
       ? RenanceColors.darkTextPrimary
-      : (isMixedTier ? Colors.white : RenanceColors.ink);
-  Color get heroMuted => isDarkTier
+      : (isMixedTier ? Colors.white : RenanceColors.ink));
+  Color get heroMuted => _pal?.heroMuted ?? (isDarkTier
       ? RenanceColors.darkTextSecondary
-      : (isMixedTier ? const Color(0xFFB9C2D4) : RenanceColors.textSecondary);
-  Color get heroTrack => isDarkTier || isMixedTier
+      : (isMixedTier ? const Color(0xFFB9C2D4) : RenanceColors.textSecondary));
+  Color get heroTrack => _pal?.heroTrack ?? (isDarkTier || isMixedTier
       ? RenanceColors.darkSurfaceLow
-      : RenanceColors.surfaceVariant;
+      : RenanceColors.surfaceVariant);
+
+  /// The hero progress fill / solid hero CTA — the web's bg-hero-cta.
+  Color get heroCta => _pal?.heroCta ?? (darkChrome ? Colors.white : Colors.black);
+  Color get onHeroCta => _pal?.onHeroCta ?? (darkChrome ? RenanceColors.ink : Colors.white);
 
   // Ink / text ---------------------------------------------------------
-  Color get ink =>
-      isDarkTier ? RenanceColors.darkTextPrimary : RenanceColors.ink;
-  Color get textSecondary => isDarkTier
+  Color get ink => _pal?.ink ??
+      (isDarkTier ? RenanceColors.darkTextPrimary : RenanceColors.ink);
+  Color get textSecondary => _pal?.textSecondary ?? (isDarkTier
       ? RenanceColors.darkTextSecondary
-      : RenanceColors.textSecondary;
-  Color get secondary => isDarkTier
+      : RenanceColors.textSecondary);
+  Color get secondary => _pal?.secondary ?? (isDarkTier
       ? RenanceColors.darkTextSecondary
-      : RenanceColors.secondary;
-  Color get textMuted =>
-      isDarkTier ? RenanceColors.darkMuted : RenanceColors.outline;
+      : RenanceColors.secondary);
+  Color get textMuted => _pal?.textMuted ??
+      (isDarkTier ? RenanceColors.darkMuted : RenanceColors.outline);
 
   // Outlines -----------------------------------------------------------
-  Color get outline =>
-      isDarkTier ? RenanceColors.darkTextSecondary : RenanceColors.outline;
-  Color get outlineDark => isDarkTier
+  Color get outline => _pal?.outline ??
+      (isDarkTier ? RenanceColors.darkTextSecondary : RenanceColors.outline);
+  Color get outlineDark => _pal?.outlineDark ?? (isDarkTier
       ? RenanceColors.darkTextSecondary
-      : RenanceColors.outlineDark;
-  Color get outlineLight => isDarkTier
+      : RenanceColors.outlineDark);
+  Color get outlineLight => _pal?.outlineLight ?? (isDarkTier
       ? RenanceColors.darkOutline
-      : RenanceColors.outlineLight;
-  Color get outlineVariant => isDarkTier
+      : RenanceColors.outlineLight);
+  Color get outlineVariant => _pal?.outlineVariant ?? (isDarkTier
       ? RenanceColors.darkOutline
-      : RenanceColors.outlineVariant;
+      : RenanceColors.outlineVariant);
 
-  // Errors -------------------------------------------------------------
+  // Errors (never seeded — the palette keeps signals honest) -------------
   Color get error =>
       isDarkTier ? RenanceColors.darkError : RenanceColors.error;
   Color get errorContainer => isDarkTier
@@ -532,10 +603,11 @@ extension RenanceScheme on BuildContext {
       : RenanceColors.onDarkErrorContainer;
 
   // The "ink bubble" treatment (level bubbles, Lvl chips, solid CTAs):
-  // a black chip in light, a white chip in dark, each with its own
-  // on-color so the label never disappears with the ground.
+  // the web's bg-accent-ink chip — #111C2D in both stock tiers, the
+  // seed's dark accent ink when one is live. The on-color stays light
+  // so labels never disappear with the ground.
   Color get inverseChip =>
-      isDarkTier ? RenanceColors.darkTextPrimary : RenanceColors.ink;
+      _pal?.accentInk ?? RenanceColors.ink;
   Color get onInverseChip =>
-      isDarkTier ? RenanceColors.darkPage : Colors.white;
+      _pal?.onPrimary ?? Colors.white;
 }

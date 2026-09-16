@@ -20,26 +20,47 @@ class ArenaLobbyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.pageBg,
+      // Founder rule: the back bar is STICKY — it stays put while the
+      // lobby scrolls beneath it, exactly like the web's PageBar.
       body: SafeArea(
+        bottom: false,
         child: Center(
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 560),
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
+            child: Column(
               children: <Widget>[
-                // back bar ------------------------------------------------
-                Row(
-                  children: <Widget>[
-                    IconButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                      color: context.ink,
+                // back bar (fixed) ---------------------------------------
+                Container(
+                  decoration: BoxDecoration(
+                    color: context.pageBg,
+                    border: Border(
+                      bottom: BorderSide(
+                        color: context.outlineVariant.withValues(alpha: 0.4),
+                      ),
                     ),
-                    const SizedBox(width: 4),
-                    const Text('Arena', style: RenanceText.sectionTitle),
-                  ],
+                  ),
+                  padding: const EdgeInsets.only(left: 8, right: 16),
+                  child: SizedBox(
+                    height: 52,
+                    child: Row(
+                      children: <Widget>[
+                        IconButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+                          color: context.ink,
+                          tooltip: 'Back',
+                        ),
+                        const SizedBox(width: 4),
+                        const Text('Arena', style: RenanceText.sectionTitle),
+                      ],
+                    ),
+                  ),
                 ),
-                const SizedBox(height: 16),
+                // scrolling lobby ----------------------------------------
+                Expanded(
+                  child: ListView(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
+                    children: <Widget>[
                 // dark hero -----------------------------------------------
                 Container(
                   padding: const EdgeInsets.all(24),
@@ -231,6 +252,9 @@ class ArenaLobbyScreen extends StatelessWidget {
                           name: 'You',
                           points: '1,820',
                           you: true),
+                    ],
+                  ),
+                ),
                     ],
                   ),
                 ),

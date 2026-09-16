@@ -64,12 +64,39 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     return '$bytes B';
   }
 
+  /// The codes belonging to the student's focus body (the desk the
+  /// silent sync fills), for the honest meter above.
+  Set<String> _deskCodes(SyncController sync, String focusBody) {
+    if (focusBody.isEmpty) {
+      return sync.exams.map((ExamMeta e) => e.code).toSet();
+    }
+    return sync.exams
+        .where((ExamMeta e) => e.body == focusBody || e.category == focusBody)
+        .map((ExamMeta e) => e.code)
+        .toSet();
+  }
+
   @override
   Widget build(BuildContext context) {
     final StudentController student = context.watch<StudentController>();
+    final SyncController sync = context.watch<SyncController>();
     final Set<String> downloaded = student.downloaded;
     final int totalBytes =
         _sizes.values.fold(0, (int sum, int b) => sum + b);
+    // The honest meter: the share of this desk's packs that actually
+    // lives on the device (never the old hardcoded 8%).
+    final String focusBody = student.me?.profile?.exams.firstOrNull ?? '';
+    final int deskTotal = focusBody.isEmpty
+        ? sync.exams.length
+        : sync.exams
+            .where((ExamMeta e) =>
+                e.body == focusBody || e.category == focusBody)
+            .length;
+    final int deskDownloaded =
+        downloaded.where((String c) => _deskCodes(sync, focusBody).contains(c)).length;
+    final double meter = deskTotal == 0
+        ? 0
+        : (deskDownloaded / deskTotal).clamp(0.0, 1.0);
 
     return Scaffold(
       backgroundColor: context.pageBg,
@@ -108,7 +135,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(999),
                   child: LinearProgressIndicator(
-                    value: totalBytes == 0 ? 0 : 0.08,
+                    value: meter,
                     minHeight: 10,
                     backgroundColor: context.surfaceContainer,
                     valueColor: AlwaysStoppedAnimation<Color>(
@@ -118,9 +145,9 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                 SizedBox(height: 8),
                 Row(
                   children: <Widget>[
-                    Container(width: 8, height: 8, decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.black)),
+                    Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: context.ink)),
                     SizedBox(width: 6),
-                    Text('Offline Packs', style: RenanceText.caption.copyWith(color: context.textSecondary)),
+                    Text('Downloaded ($deskDownloaded of $deskTotal desk packs)', style: RenanceText.caption.copyWith(color: context.textSecondary)),
                     SizedBox(width: 16),
                     Container(width: 8, height: 8, decoration: BoxDecoration(shape: BoxShape.circle, color: context.surfaceContainer)),
                     const SizedBox(width: 6),
