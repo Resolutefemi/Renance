@@ -193,7 +193,7 @@ body {
 .renance-rise { animation: renance-rise 0.45s ease-out both; }
 
 /* ------------------------------------------------------------------ */
-/* Gamification hub accents (design/stitch screen library tokens)      */
+/* Gamification hub accents (gamification hub accent tokens)      */
 /* ------------------------------------------------------------------ */
 @theme {
   --color-accent-amber: #f59e0b;

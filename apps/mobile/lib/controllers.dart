@@ -54,7 +54,10 @@ class SyncController extends ChangeNotifier {
   }
 
   /// Fetch the manifest and download every pack the student needs but
-  /// does not yet hold (or holds under an older sha).
+  /// does not yet hold (or holds under an older sha). Each pack gets a
+  /// retry with a short backoff; one flaky pack never abandons the rest
+  /// of the sync — the failure list only surfaces when packs actually
+  /// failed, and a later bootstrap silently fills the holes.
   Future<void> bootstrap({List<String> profileExams = const <String>[]}) async {
     phase = SyncPhase.syncing;
     message = 'Contacting Renance servers…';
@@ -69,19 +72,52 @@ class SyncController extends ChangeNotifier {
           .where((e) => !have.contains(e.code))
           .toList(growable: false);
       total = missing.length;
+      int failed = 0;
       for (final exam in missing) {
-        message = 'Downloading ${exam.title}…';
+        message = 'Downloading ${exam.title}… ($done/$total)';
         notifyListeners();
-        final bundle = await _api.bundle(exam.code);
-        await _store.savePack(bundle, exam.bundleSha256);
-        done += 1;
+        bool saved = false;
+        // Two passes per pack: an instant retry catches the common
+        // mobile-network stall that kills the first attempt.
+        for (var attempt = 0; attempt < 2 && !saved; attempt++) {
+          if (attempt > 0) {
+            await Future<void>.delayed(const Duration(seconds: 2));
+            message = 'Retrying ${exam.title}…';
+            notifyListeners();
+          }
+          try {
+            final bundle = await _api.bundle(exam.code);
+            await _store.savePack(bundle, exam.bundleSha256);
+            saved = true;
+          } on ApiException {
+            // Permanent server decisions (404/409) will not heal —
+            // retrying only burns the student's data.
+            break;
+          } on NetworkException {
+            // Transient: fall through to the retry pass.
+          }
+        }
+        if (saved) {
+          done += 1;
+        } else {
+          failed += 1;
+        }
         notifyListeners();
       }
       await refreshPendingCount();
-      phase = SyncPhase.ready;
-      message = total == 0
-          ? '${exams.length} packs available · ${have.length} on device'
-          : 'Synced $done/$total packs';
+      if (failed > 0 && done == 0) {
+        phase = SyncPhase.error;
+        message =
+            '$failed packs could not download, check your connection and '
+            'retry — the rest of the app works offline.';
+      } else {
+        phase = SyncPhase.ready;
+        message = total == 0
+            ? '${exams.length} packs available · ${have.length} on device'
+            : failed > 0
+                ? 'Synced $done/$total packs, $failed to retry later'
+                : 'Synced $done/$total packs';
+      }
     } on ApiException catch (e) {
       phase = SyncPhase.error;
       message = e.message;

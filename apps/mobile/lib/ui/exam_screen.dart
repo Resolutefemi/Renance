@@ -68,17 +68,23 @@ class _ExamScreenState extends State<ExamScreen> {
   @override
   Widget build(BuildContext context) {
     final ExamController c = context.watch<ExamController>();
+    // Playing phase owns its chrome: the sticky light exam header
+    // (leave · title · calculator · clock · map) replaces the default
+    // AppBar, exactly like the web player.
+    final bool inPlay = c.phase == ExamPhase.playing;
     return Scaffold(
       backgroundColor: context.cardLowest,
-      appBar: AppBar(
-        backgroundColor: context.cardLowest,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, size: 22),
-          onPressed: () => Navigator.of(context).maybePop(),
-        ),
-        title: const Text('Active Quiz', style: RenanceText.sectionTitle),
-        titleSpacing: 0,
-      ),
+      appBar: inPlay
+          ? null
+          : AppBar(
+              backgroundColor: context.cardLowest,
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back, size: 22),
+                onPressed: () => Navigator.of(context).maybePop(),
+              ),
+              title: const Text('Active Quiz', style: RenanceText.sectionTitle),
+              titleSpacing: 0,
+            ),
       body: switch (c.phase) {
         ExamPhase.loading => const Center(
             child: LogoActivityIndicator(label: 'Opening pack…'),
@@ -89,7 +95,10 @@ class _ExamScreenState extends State<ExamScreen> {
             reasons: c.signal.reasons,
             onTakeBreak: c.takeBreak,
             onKeepGoing: c.keepGoing,
-            child: _Player(controller: c, mmss: _mmss),
+            child: SafeArea(
+              bottom: false,
+              child: _Player(controller: c, mmss: _mmss),
+            ),
           ),
         ExamPhase.grading => Center(
             child: Column(
@@ -257,119 +266,214 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
 
 // ------------------------------------------------------------------ player
 
-/// Dark exam header (Sticky): assignment icon + Q counter, the emerald
-/// timer pill on the dark chip, and the 4px progress rail.
+/// Sticky light exam chrome — leave · title · calculator · clock · map,
+/// with the answered progress rail (primary → emerald gradient), 1:1
+/// with the up-to-date web player header.
 class _ExamHeader extends StatelessWidget {
   const _ExamHeader({
     required this.controller,
     required this.mmss,
     required this.onOpenNavigator,
+    required this.onOpenCalculator,
   });
 
   final ExamController controller;
   final String Function(int) mmss;
   final VoidCallback onOpenNavigator;
+  final VoidCallback onOpenCalculator;
+
+  Future<void> _confirmLeave(BuildContext context) async {
+    final bool? leave = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext dialogContext) => AlertDialog(
+        title: const Text('Leave the paper?'),
+        content: const Text(
+            'Leaving mid-paper keeps your seat — the clock keeps running, '
+            'exactly like the hall.'),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('Keep working'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('Leave'),
+          ),
+        ],
+      ),
+    );
+    if (leave == true && context.mounted) {
+      Navigator.of(context).pop();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final Bundle? bundle = controller.bundle;
     if (bundle == null) return const SizedBox.shrink();
-    final double progress =
-        bundle.questionCount == 0 ? 0 : controller.index / bundle.questionCount;
+    final double progress = bundle.questionCount == 0
+        ? 0
+        : controller.answeredCount / bundle.questionCount;
+    final bool breaking = controller.breakSecondsLeft > 0;
+    final int? remaining =
+        controller.untimed ? null : controller.secondsRemaining;
 
     return Container(
-      color: RenanceColors.darkSurface,
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        color: context.pageBg.withValues(alpha: 0.96),
+        border: Border(
+          bottom: BorderSide(
+            color: context.outlineVariant.withValues(alpha: 0.4),
+          ),
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              InkWell(
-                onTap: onOpenNavigator,
-                borderRadius: BorderRadius.circular(6),
-                child: Padding(
-                  padding: const EdgeInsets.all(4),
-                  child: Icon(Icons.grid_view_outlined,
-                      size: 18,
-                      color: RenanceColors.darkTextPrimary.withValues(alpha: 0.7)),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 6, 8, 6),
+            child: Row(
+              children: <Widget>[
+                // leave ---------------------------------------------------
+                IconButton(
+                  onPressed: () => _confirmLeave(context),
+                  icon: const Icon(Icons.arrow_back, size: 22),
+                  color: context.ink,
+                  tooltip: 'Leave exam',
                 ),
-              ),
-              const SizedBox(width: 4),
-              Icon(Icons.assignment,
-                  size: 18, color: RenanceColors.darkTextPrimary.withValues(alpha: 0.7)),
-              const SizedBox(width: 6),
-              Text(
-                'Q${controller.index + 1} / ${bundle.questionCount}',
-                style: RenanceText.labelMono.copyWith(
-                    fontSize: 14, color: RenanceColors.darkTextPrimary),
-              ),
-              const Spacer(),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(
-                  color: RenanceColors.darkSurfaceLow,
+                // title ----------------------------------------------------
+                Expanded(
+                  child: Text(
+                    bundle.title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: RenanceText.caption.copyWith(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: context.textSecondary,
+                    ),
+                  ),
+                ),
+                // calculator pill ------------------------------------------
+                InkWell(
+                  onTap: onOpenCalculator,
                   borderRadius: BorderRadius.circular(999),
+                  child: Container(
+                    height: 40,
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    decoration: BoxDecoration(
+                      color: context.inverseChip,
+                      borderRadius: BorderRadius.circular(999),
+                    ),
+                    child: Icon(Icons.calculate,
+                        size: 19, color: context.onInverseChip),
+                  ),
                 ),
-                child: Builder(
-                  builder: (BuildContext pillContext) {
-                    final bool breaking = controller.breakSecondsLeft > 0;
-                    final Color pillColor = breaking
-                        ? context.ink
-                        : RenanceColors.emerald;
-                    return Row(
-                      children: <Widget>[
-                        Icon(
-                          breaking
-                              ? Icons.self_improvement
-                              : Icons.timer,
-                          size: 16,
-                          color: pillColor,
+                const SizedBox(width: 6),
+                // clock box -------------------------------------------------
+                Builder(
+                  builder: (BuildContext boxContext) {
+                    final Color border;
+                    final Color bg;
+                    final Color fg;
+                    if (breaking) {
+                      border = boxContext.ink;
+                      bg = Colors.transparent;
+                      fg = boxContext.ink;
+                    } else if (remaining != null && remaining < 60) {
+                      border = boxContext.error;
+                      bg = boxContext.errorContainer;
+                      fg = boxContext.error;
+                    } else if (remaining != null && remaining < 300) {
+                      border = RenanceColors.amber;
+                      bg = RenanceColors.amber.withValues(alpha: 0.10);
+                      fg = boxContext.ink;
+                    } else {
+                      border = boxContext.outlineVariant;
+                      bg = boxContext.card;
+                      fg = boxContext.ink;
+                    }
+                    return Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 8),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: border),
+                        color: bg,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Text(
+                        breaking
+                            ? 'break ${mmss(controller.breakSecondsLeft)}'
+                            : remaining != null
+                                ? mmss(remaining)
+                                : mmss(controller.elapsedSeconds),
+                        style: RenanceText.labelMono.copyWith(
+                          fontSize: 14,
+                          color: fg,
+                          fontFeatures: const <FontFeature>[
+                            FontFeature.tabularFigures()
+                          ],
                         ),
-                        const SizedBox(width: 4),
-                        Text(
-                          breaking
-                              ? mmss(controller.breakSecondsLeft)
-                              : controller.untimed
-                                  ? mmss(controller.elapsedSeconds)
-                                  : mmss(controller.secondsRemaining),
-                          style: RenanceText.labelMono.copyWith(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: pillColor,
-                            fontFeatures: const <FontFeature>[
-                              FontFeature.tabularFigures()
-                            ],
-                          ),
-                        ),
-                      ],
+                      ),
                     );
                   },
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(999),
-            child: LinearProgressIndicator(
-              value: progress,
-              minHeight: 4,
-              backgroundColor: RenanceColors.darkSurfaceLow,
-              valueColor: const AlwaysStoppedAnimation<Color>(
-                  RenanceColors.darkTextPrimary),
+                const SizedBox(width: 6),
+                // question map ---------------------------------------------
+                InkWell(
+                  onTap: onOpenNavigator,
+                  borderRadius: BorderRadius.circular(999),
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: context.card,
+                      shape: BoxShape.circle,
+                      boxShadow: const <BoxShadow>[
+                        BoxShadow(
+                            color: Color(0x14141C2D),
+                            blurRadius: 3,
+                            offset: Offset(0, 1)),
+                      ],
+                    ),
+                    child: Icon(Icons.grid_view,
+                        size: 22, color: context.ink),
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 4),
+          // answered progress rail ----------------------------------------
+          Container(
+            height: 4,
+            width: double.infinity,
+            color: context.surfaceVariant.withValues(alpha: 0.5),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: FractionallySizedBox(
+                widthFactor: progress.clamp(0.0, 1.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: <Color>[context.primary, RenanceColors.emerald],
+                    ),
+                    borderRadius: const BorderRadius.horizontal(
+                      right: Radius.circular(999),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 }
 
-/// The playing state: dark header, white question card, option stack,
-/// Flag | Skip | Next bottom bar.
+/// The playing state: sticky light chrome, white question card with the
+/// Q-number bubble + flag pill, option stack, and the Prev | answered |
+/// Next/Submit action bar — 1:1 with the up-to-date web player.
 class _Player extends StatelessWidget {
   const _Player({required this.controller, required this.mmss});
 
@@ -422,8 +526,18 @@ class _Player extends StatelessWidget {
     );
   }
 
+  void _openCalculator(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (BuildContext sheetContext) => const RenanceCalculatorSheet(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final ExamController controller = this.controller;
     final Bundle? bundle = controller.bundle;
     final BundleQuestion? question = controller.current;
     if (bundle == null || question == null) {
@@ -432,6 +546,8 @@ class _Player extends StatelessWidget {
     final bool flagged = controller.flags.contains(question.id);
     final bool last = controller.index == bundle.questionCount - 1;
     final int unanswered = bundle.questionCount - controller.answeredCount;
+    final bool canSubmit =
+        last || controller.answeredCount == bundle.questionCount;
 
     return Column(
       children: <Widget>[
@@ -439,6 +555,7 @@ class _Player extends StatelessWidget {
           controller: controller,
           mmss: mmss,
           onOpenNavigator: () => _openNavigator(context, controller),
+          onOpenCalculator: () => _openCalculator(context),
         ),
         // Scrollable question area ----------------------------------------
         Expanded(
@@ -461,21 +578,102 @@ class _Player extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    if (question.topic.isNotEmpty) ...<Widget>[
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8, vertical: 2),
-                        decoration: BoxDecoration(
-                          color: context.cardLow,
+                    // Card header: Q-number bubble + of-N/topic + flag pill
+                    // (the flag moved here from the bottom bar, web parity).
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          width: 36,
+                          height: 36,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: context.primary,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            '${controller.index + 1}',
+                            style: RenanceText.labelMono.copyWith(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700,
+                              color: context.onPrimary,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'of ${bundle.questionCount}',
+                                style: RenanceText.labelMono.copyWith(
+                                  fontSize: 10,
+                                  color: context.textMuted,
+                                ),
+                              ),
+                              if (question.topic.isNotEmpty)
+                                Text(
+                                  question.topic +
+                                      (question.year > 0
+                                          ? '  ${question.year}'
+                                          : ''),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: RenanceText.caption.copyWith(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w500,
+                                    color: context.textSecondary,
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => controller.toggleFlag(question.id),
                           borderRadius: BorderRadius.circular(999),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 6),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(999),
+                              border: Border.all(
+                                color: flagged
+                                    ? RenanceColors.amber
+                                    : context.outlineVariant,
+                              ),
+                              color: flagged
+                                  ? RenanceColors.amber.withValues(alpha: 0.15)
+                                  : Colors.transparent,
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                Icon(
+                                  flagged ? Icons.flag : Icons.flag_outlined,
+                                  size: 14,
+                                  color: flagged
+                                      ? RenanceColors.amber
+                                      : context.textSecondary,
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  flagged ? 'flagged' : 'flag',
+                                  style: RenanceText.caption.copyWith(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w600,
+                                    color: flagged
+                                        ? context.ink
+                                        : context.textSecondary,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                        child: Text(
-                          question.topic,
-                          style: RenanceText.labelMono.copyWith(fontSize: 11),
-                        ),
-                      ),
-                      const SizedBox(height: 12),
-                    ],
+                      ],
+                    ),
+                    const SizedBox(height: 16),
                     if (question.passage.isNotEmpty) ...<Widget>[
                       Container(
                         margin: const EdgeInsets.only(bottom: 12),
@@ -550,112 +748,98 @@ class _Player extends StatelessWidget {
             ],
           ),
         ),
-        // Bottom bar --------------------------------------------------------
+        // Sticky action bar -------------------------------------------------
         Container(
           decoration: BoxDecoration(
-            color: Colors.white,
-            boxShadow: <BoxShadow>[
-              BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.05),
-                  blurRadius: 12,
-                  offset: const Offset(0, -1)),
-            ],
+            color: context.pageBg,
+            border: Border(
+              top: BorderSide(
+                color: context.outlineVariant.withValues(alpha: 0.4),
+              ),
+            ),
           ),
           child: SafeArea(
-            minimum: const EdgeInsets.all(16),
+            minimum: const EdgeInsets.fromLTRB(16, 10, 16, 10),
             child: Row(
               children: <Widget>[
-                Expanded(
-                  flex: 1,
-                  child: SizedBox(
-                    height: 52,
-                    child: OutlinedButton(
-                      onPressed: () => controller.toggleFlag(question.id),
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(
-                          color: flagged
-                              ? RenanceColors.amber
-                              : context.outlineLight,
-                          width: flagged ? 1.6 : 1,
-                        ),
-                        backgroundColor: flagged
-                            ? context.cardHigh
-                            : Colors.transparent,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            flagged ? Icons.flag : Icons.flag_outlined,
-                            size: 20,
-                            color: flagged
-                                ? RenanceColors.amber
-                                : context.ink,
-                          ),
-                          SizedBox(width: 8),
-                          Text('Flag',
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600)),
-                        ],
-                      ),
-                    ),
+                // ← Prev -------------------------------------------------
+                OutlinedButton(
+                  onPressed:
+                      controller.index == 0 ? null : () => controller.previous(),
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(color: context.outlineVariant),
+                    backgroundColor: context.card,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 18, vertical: 12),
                   ),
-                ),
-                SizedBox(width: 8),
-                Expanded(
-                  flex: 1,
-                  child: SizedBox(
-                    height: 52,
-                    child: OutlinedButton(
-                      onPressed: controller.next,
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(
-                            color: context.outlineLight),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      child: const Text('Skip',
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Icon(Icons.arrow_back, size: 16),
+                      SizedBox(width: 6),
+                      Text('Prev',
                           style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.w600)),
-                    ),
+                              fontSize: 14, fontWeight: FontWeight.w500)),
+                    ],
                   ),
                 ),
-                const SizedBox(width: 8),
+                const SizedBox(width: 12),
+                // answered counter ---------------------------------------
                 Expanded(
-                  flex: 2,
-                  child: SizedBox(
-                    height: 52,
-                    child: FilledButton(
-                      onPressed: () {
-                        if (last || unanswered == 0) {
-                          _confirmSubmit(context, controller, unanswered);
-                        } else {
-                          controller.next();
-                        }
-                      },
-                      style: FilledButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(last ? 'Submit paper' : 'Next',
-                              style: const TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600)),
-                          if (!last) ...<Widget>[
-                            const SizedBox(width: 6),
-                            const Icon(Icons.arrow_forward, size: 20),
-                          ],
-                        ],
-                      ),
+                  child: Text(
+                    '${controller.answeredCount}/${bundle.questionCount} answered',
+                    textAlign: TextAlign.center,
+                    style: RenanceText.labelMono.copyWith(
+                      fontSize: 11,
+                      color: context.textSecondary,
                     ),
                   ),
                 ),
+                const SizedBox(width: 12),
+                // Next → / Submit paper ----------------------------------
+                if (!canSubmit)
+                  FilledButton(
+                    onPressed: () => controller.next(),
+                    style: FilledButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 22, vertical: 12),
+                      backgroundColor: context.inverseChip,
+                      foregroundColor: context.onInverseChip,
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Text('Next',
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w600)),
+                        SizedBox(width: 6),
+                        Icon(Icons.arrow_forward, size: 16),
+                      ],
+                    ),
+                  )
+                else
+                  FilledButton(
+                    onPressed: () {
+                      if (unanswered > 0) {
+                        _confirmSubmit(context, controller, unanswered);
+                      } else {
+                        controller.submit();
+                      }
+                    },
+                    style: FilledButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 22, vertical: 12),
+                    ),
+                    child: const Text('Submit paper',
+                        style: TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w600)),
+                  ),
               ],
             ),
           ),
@@ -665,8 +849,9 @@ class _Player extends StatelessWidget {
   }
 }
 
-/// Option row: 40px letter box; selected = blue card + black ring + black
-/// letter box + semibold text (Stitch selectOption state machine).
+/// Option row: letter chip + stem; selected = selection-blue card with
+/// the primary ring and the primary letter chip (Stitch selectOption
+/// state machine, the student's colour when a seed is live).
 class _OptionTile extends StatelessWidget {
   const _OptionTile({
     required this.letter,
@@ -689,12 +874,12 @@ class _OptionTile extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: selected
-              ? context.selectionBlue
+              ? context.selectionBlue.withValues(alpha: 0.6)
               : context.card,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: selected ? Colors.black : Colors.transparent,
-            width: 2,
+            color: selected ? context.primary : context.outlineVariant,
+            width: selected ? 2 : 1,
           ),
           boxShadow: selected
               ? const <BoxShadow>[]
@@ -708,20 +893,22 @@ class _OptionTile extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Container(
-              width: 40,
-              height: 40,
+              width: 28,
+              height: 28,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: selected
-                    ? Colors.black
-                    : context.surfaceContainer,
+                color: selected ? context.primary : context.card,
                 borderRadius: BorderRadius.circular(8),
+                border: Border.all(
+                  color: selected ? context.primary : context.outlineLight,
+                ),
               ),
               child: Text(
                 letter,
                 style: RenanceText.labelMono.copyWith(
-                  fontSize: 16,
-                  color: selected ? Colors.white : context.ink,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: selected ? context.onPrimary : context.textSecondary,
                 ),
               ),
             ),
@@ -2105,6 +2292,341 @@ class _ErrorView extends StatelessWidget {
               child: const Text('Back'),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+// ------------------------------------------------------------- calculator
+
+/// The on-screen calculator every JAMB CBT hall puts next to the clock —
+/// the Flutter port of the web's calculator.tsx: immediate-execution
+/// arithmetic with one memory register, digits, the four operations,
+/// percent, square root, sign flip and the MRC / M+ / M- row. Never eval:
+/// the chain is a tiny accumulator state machine.
+class RenanceCalculatorSheet extends StatefulWidget {
+  const RenanceCalculatorSheet({super.key});
+
+  @override
+  State<RenanceCalculatorSheet> createState() => _RenanceCalculatorSheetState();
+}
+
+class _RenanceCalculatorSheetState extends State<RenanceCalculatorSheet> {
+  String _display = '0';
+  double _mem = 0;
+  double? _acc; // accumulator (lhs)
+  String? _op; // pending operation: + - × ÷
+  bool _fresh = true; // next digit starts a new entry
+  String? _lastOp; // for repeated "="
+  double? _lastArg;
+
+  double get _current => double.tryParse(_display) ?? 0;
+
+  double _tidy(double n) => n.isFinite ? double.parse(n.toStringAsPrecision(12)) : n;
+
+  String _format(double n) {
+    if (n.isNaN || n.isInfinite) return 'Error';
+    if (n != 0 && n.abs() < 1e-9) return n.toStringAsExponential(4);
+    if (n.abs() >= 1e12) return n.toStringAsExponential(6);
+    final String s = _tidy(n).toString();
+    return s.length > 14 ? _tidy(n).toStringAsPrecision(10) : s;
+  }
+
+  void _show(double n) {
+    setState(() {
+      _display = _format(n);
+      _fresh = false;
+    });
+  }
+
+  void _digit(String d) {
+    setState(() {
+      if (_fresh || _display == '0') {
+        _display = d == '.' ? '0.' : d;
+        _fresh = false;
+        return;
+      }
+      if (d == '.' && _display.contains('.')) return;
+      if (_display.length >= 14) return;
+      _display += d;
+    });
+  }
+
+  void _applyOp(String op, double lhs, double rhs) {
+    switch (op) {
+      case '+':
+        return _show(_tidy(lhs + rhs));
+      case '-':
+        return _show(_tidy(lhs - rhs));
+      case '×':
+        return _show(_tidy(lhs * rhs));
+      case '÷':
+        if (rhs == 0) {
+          setState(() {
+            _display = 'Error';
+            _fresh = true;
+            _acc = null;
+            _op = null;
+          });
+          return;
+        }
+        return _show(_tidy(lhs / rhs));
+    }
+  }
+
+  void _setOp(String op) {
+    setState(() {
+      if (_op != null && !_fresh) {
+        _applyOp(_op!, _acc ?? 0, _current);
+        _acc = double.tryParse(_display) ?? 0;
+      } else {
+        _acc = _current;
+      }
+      _op = op;
+      _fresh = true;
+    });
+  }
+
+  void _equals() {
+    setState(() {
+      if (_op != null && !_fresh) {
+        _lastOp = _op;
+        _lastArg = _current;
+        _applyOp(_op!, _acc ?? 0, _current);
+        _op = null;
+        _acc = null;
+        _fresh = true;
+      } else if (_lastOp != null && _lastArg != null) {
+        _applyOp(_lastOp!, _current, _lastArg!);
+      }
+    });
+  }
+
+  void _percent() {
+    final double v = _current;
+    _show(_op == null || _acc == null ? v / 100 : (_acc ?? 0) * v / 100);
+    setState(() => _fresh = true);
+  }
+
+  void _sqrt() {
+    final double v = _current;
+    if (v < 0) {
+      setState(() {
+        _display = 'Error';
+        _fresh = true;
+      });
+      return;
+    }
+    _show(_tidy(math.sqrt(v)));
+  }
+
+  void _sign() {
+    if (_display == '0' || _display == 'Error') return;
+    _show(-_current);
+  }
+
+  void _clear() {
+    setState(() {
+      _display = '0';
+      _acc = null;
+      _op = null;
+      _fresh = true;
+      _lastOp = null;
+      _lastArg = null;
+    });
+  }
+
+  void _mPlus() {
+    setState(() {
+      _mem += _current;
+      _fresh = true;
+    });
+  }
+
+  void _mMinus() {
+    setState(() {
+      _mem -= _current;
+      _fresh = true;
+    });
+  }
+
+  void _mrc() {
+    setState(() {
+      if (_fresh) {
+        _mem = 0;
+      } else {
+        _display = _format(_mem);
+        _fresh = true;
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    const List<List<String>> rows = <List<String>>[
+      <String>['MRC', 'M+', 'M-', '÷'],
+      <String>['7', '8', '9', '×'],
+      <String>['4', '5', '6', '-'],
+      <String>['1', '2', '3', '+'],
+      <String>['0', '.', '%', '='],
+    ];
+
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: context.card,
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Text('Calculator',
+                        style: RenanceText.sectionTitle),
+                  ),
+                  IconButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    icon: const Icon(Icons.close, size: 20),
+                    color: context.textSecondary,
+                    tooltip: 'Close',
+                  ),
+                ],
+              ),
+              Container(
+                width: double.infinity,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                decoration: BoxDecoration(
+                  color: context.cardLow,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  _display,
+                  textAlign: TextAlign.right,
+                  style: RenanceText.labelMono.copyWith(
+                    fontSize: 28,
+                    color: context.ink,
+                    fontFeatures: const <FontFeature>[
+                      FontFeature.tabularFigures()
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              for (final List<String> row in rows) ...<Widget>[
+                Row(
+                  children: <Widget>[
+                    for (final String key in row)
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(4),
+                          child: _CalcKey(
+                            label: key,
+                            filled: key == '=' ||
+                                key == '+' ||
+                                key == '-' ||
+                                key == '×' ||
+                                key == '÷',
+                            onTap: () => _press(key),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+              ],
+              const SizedBox(height: 8),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: _CalcKey(
+                        label: '√', onTap: _sqrt),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: _CalcKey(
+                        label: '±', onTap: _sign),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: _CalcKey(
+                        label: 'C',
+                        onTap: _clear),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _press(String key) {
+    switch (key) {
+      case 'MRC':
+        return _mrc();
+      case 'M+':
+        return _mPlus();
+      case 'M-':
+        return _mMinus();
+      case '+':
+      case '-':
+      case '×':
+      case '÷':
+        return _setOp(key);
+      case '=':
+        return _equals();
+      case '%':
+        return _percent();
+      case 'C':
+        return _clear();
+      case '√':
+        return _sqrt();
+      case '±':
+        return _sign();
+      default:
+        if (key == '.' || int.tryParse(key) != null) return _digit(key);
+    }
+  }
+}
+
+/// One calculator key: ink-filled for operators, card for digits.
+class _CalcKey extends StatelessWidget {
+  const _CalcKey({
+    required this.label,
+    required this.onTap,
+    this.filled = false,
+  });
+
+  final String label;
+  final VoidCallback onTap;
+  final bool filled;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: filled ? context.inverseChip : context.cardLow,
+      borderRadius: BorderRadius.circular(10),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(10),
+        child: SizedBox(
+          height: 52,
+          child: Center(
+            child: Text(
+              label,
+              style: RenanceText.bodyMedium.copyWith(
+                fontSize: 17,
+                color: filled ? context.onInverseChip : context.ink,
+              ),
+            ),
+          ),
         ),
       ),
     );

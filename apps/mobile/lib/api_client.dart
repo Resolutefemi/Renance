@@ -60,6 +60,7 @@ class ApiClient {
     String path, {
     Object? body,
     bool auth = true,
+    Duration timeout = const Duration(seconds: 20),
   }) async {
     final uri = Uri.parse('$_base$path');
     final http.Response res;
@@ -70,7 +71,7 @@ class ApiClient {
               ..headers.addAll(_headers())
               ..body = body == null ? '' : jsonEncode(body),
           )
-          .timeout(const Duration(seconds: 20));
+          .timeout(timeout);
       res = await http.Response.fromStream(streamed);
     } on SocketException catch (e) {
       throw NetworkException('No connection to Renance servers (${e.message})');
@@ -184,8 +185,25 @@ class ApiClient {
   }
 
   Future<Bundle> bundle(String code) async {
-    final data = await _send('GET', '/bundles/$code') as Map<dynamic, dynamic>;
+    // Multi-megabyte question banks over a Nigerian mobile connection
+    // blow way past the 20s RPC budget — pack downloads get a patient
+    // 120s window so 'download not working' stops being a timeout.
+    final data = await _send(
+      'GET',
+      '/bundles/$code',
+      timeout: const Duration(seconds: 120),
+    ) as Map<dynamic, dynamic>;
     return Bundle.fromJson(data.cast<String, dynamic>());
+  }
+
+  /// Today's daily challenge for one exam body (GET /daily/{body}).
+  /// Returns the paper code + day; the tile opens it like any exam.
+  Future<DailyInfo> daily(String body) async {
+    final data = await _send(
+      'GET',
+      '/daily/${Uri.encodeComponent(body)}',
+    ) as Map<dynamic, dynamic>;
+    return DailyInfo.fromJson(data.cast<String, dynamic>());
   }
 
   // -------------------------------------------------------------- attempts

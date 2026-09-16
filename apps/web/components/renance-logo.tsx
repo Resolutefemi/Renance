@@ -8,7 +8,7 @@
  * processing states.", Bybit-style brand transition.)
  *
  * The mark itself is the official Stitch brand sheet extraction
- * (design/stitch/screen.png, R cut out with a transparent background by
+ * (the founder's mark, R cut out with a transparent background by
  * scripts/make_brand.py). Two tones ship: the ink navy original for light
  * surfaces and a white cut for dark containers (`inverse`).
  *

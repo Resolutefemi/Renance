@@ -71,34 +71,42 @@ class RenanceApp extends StatelessWidget {
       ],
       child: AnimatedBuilder(
         animation: theme,
-        builder: (BuildContext context, Widget? _) => MaterialApp(
-          title: 'Renance',
-          debugShowCheckedModeBanner: false,
-          theme: buildRenanceTheme(),
-          darkTheme: buildRenanceDarkTheme(),
-          themeMode: theme.materialMode,
-          builder: (BuildContext context, Widget? child) =>
-              RenanceModeScope(
-                mode: theme.mode,
-                child: child ?? const SizedBox.shrink(),
-              ),
-          initialRoute: '/',
-          routes: <String, WidgetBuilder>{
-            '/': (_) => const SplashScreen(),
-            '/login': (_) => const LoginScreen(),
-            '/register': (_) => const RegisterScreen(),
-            '/home': (_) => const HomeScreen(),
-          },
-          onGenerateRoute: (RouteSettings settings) {
-            if (settings.name == '/exam') {
-              final ExamMeta exam = settings.arguments! as ExamMeta;
-              return MaterialPageRoute<void>(
-                builder: (_) => ExamScreen(exam: exam),
-              );
-            }
-            return null;
-          },
-        ),
+        builder: (BuildContext context, Widget? _) {
+          // The Chrome-style seed palette (Settings → Seed Color),
+          // resolved for the active tier and handed to both the
+          // MaterialApp themes and the mode scope, so one seed repaints
+          // every screen — the web's CSS custom properties in Flutter.
+          final SeedPalette? palette = theme.palette;
+          return MaterialApp(
+            title: 'Renance',
+            debugShowCheckedModeBanner: false,
+            theme: buildRenanceTheme(seed: palette),
+            darkTheme: buildRenanceDarkTheme(seed: palette),
+            themeMode: theme.materialMode,
+            builder: (BuildContext context, Widget? child) =>
+                RenanceModeScope(
+                  mode: theme.mode,
+                  palette: palette,
+                  child: child ?? const SizedBox.shrink(),
+                ),
+            initialRoute: '/',
+            routes: <String, WidgetBuilder>{
+              '/': (_) => const SplashScreen(),
+              '/login': (_) => const LoginScreen(),
+              '/register': (_) => const RegisterScreen(),
+              '/home': (_) => const HomeScreen(),
+            },
+            onGenerateRoute: (RouteSettings settings) {
+              if (settings.name == '/exam') {
+                final ExamMeta exam = settings.arguments! as ExamMeta;
+                return MaterialPageRoute<void>(
+                  builder: (_) => ExamScreen(exam: exam),
+                );
+              }
+              return null;
+            },
+          );
+        },
       ),
     );
   }

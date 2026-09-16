@@ -133,6 +133,40 @@ class Manifest {
   );
 }
 
+/// Today's daily challenge (GET /daily/{body}): the paper code + day.
+/// The tile opens the code like any exam; the bundle endpoint serves
+/// the rotating bank.
+class DailyInfo {
+  const DailyInfo({
+    required this.body,
+    required this.code,
+    required this.day,
+    this.questionCount = 0,
+    this.score,
+    this.total,
+  });
+
+  final String body;
+  final String code;
+  final String day;
+  final int questionCount;
+  final int? score;
+  final int? total;
+
+  factory DailyInfo.fromJson(Map<String, dynamic> j) {
+    final Map<dynamic, dynamic>? my =
+        (j['myResult'] as Map<dynamic, dynamic>?);
+    return DailyInfo(
+      body: (j['body'] ?? '') as String,
+      code: (j['code'] ?? '') as String,
+      day: (j['day'] ?? '') as String,
+      questionCount: (j['questionCount'] ?? 0) as int,
+      score: my == null ? null : (my['score'] ?? 0) as int,
+      total: my == null ? null : (my['total'] ?? 0) as int,
+    );
+  }
+}
+
 class BundleQuestion {
   const BundleQuestion({
     required this.id,
