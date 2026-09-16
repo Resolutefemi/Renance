@@ -261,6 +261,7 @@ class ExamController extends ChangeNotifier {
   final Set<String> visited = <String>{};
 
   String? _attemptId;
+
   int? _durationMs;
   DateTime _startedAt = DateTime.now();
   Timer? _timer;

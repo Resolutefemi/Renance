@@ -24,6 +24,10 @@ class SessionStore {
   static const _kUser = 'renance.user';
   static const _kIntroSeen = 'renance.introSeen';
 
+  /// Exposed so feature stores (saved questions, update stamps) can
+  /// persist on the same SharedPreferences instance the shell owns.
+  SharedPreferences get prefs => _prefs;
+
   String? get token => _prefs.getString(_kToken);
 
   AppUser? get user {

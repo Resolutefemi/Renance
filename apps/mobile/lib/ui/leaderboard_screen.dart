@@ -1,7 +1,12 @@
-/// Leaderboard, the web /leaderboard boards on the app: XP (all-time)
-/// and Arena (weekly) tabs, real server data, the caller's own row rides
-/// along as "You" even outside the top 25. Same rank-row language as the
-/// Arena lobby's Global Rank board.
+/// Leaderboard — the Myschool ranking cut the founder asked to copy.
+///
+/// Sticky back bar with the centred title, the board tabs as a white
+/// pill riding a track (Myschool's Challenge/JAMB/WAEC/NECO/CBT row —
+/// Renance's real boards are XP and Arena), and the ranking as cards:
+/// #1 rides a gold gradient, #2 silver, #3 bronze, the rest plain white
+/// cards. Each card: medal, avatar, username, the big score at the
+/// right and the honest stat chips (streaks, correct, papers) beneath —
+/// Renance's answer to "Myschool Point 76.67 from 1 CBT".
 library;
 
 import 'package:flutter/material.dart';
@@ -72,12 +77,12 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
 
     return Scaffold(
       backgroundColor: context.pageBg,
-      // Sticky back bar — same fixed header language as the Arena lobby.
       body: SafeArea(
         bottom: false,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            // Sticky back bar, centred title — the school app's header.
             Container(
               decoration: BoxDecoration(
                 color: context.pageBg,
@@ -89,46 +94,87 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
               ),
               padding: const EdgeInsets.only(left: 8, right: 16),
               child: SizedBox(
-                height: 52,
+                height: 56,
                 child: Row(
                   children: <Widget>[
-                    IconButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new, size: 20),
-                      color: context.ink,
-                      tooltip: 'Back',
+                    InkWell(
+                      onTap: () => Navigator.of(context).pop(),
+                      customBorder: const CircleBorder(),
+                      child: Container(
+                        width: 42,
+                        height: 42,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: context.outlineVariant),
+                          color: context.card,
+                        ),
+                        child:
+                            Icon(Icons.arrow_back, size: 19, color: context.ink),
+                      ),
                     ),
-                    const SizedBox(width: 4),
-                    const Text('Leaderboard', style: RenanceText.sectionTitle),
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Leaderboard',
+                        textAlign: TextAlign.center,
+                        style: RenanceText.sectionTitle,
+                      ),
+                    ),
+                    const SizedBox(width: 92),
                   ],
                 ),
               ),
             ),
+            // Board tabs: white pill on a track, Myschool's segmented row.
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-              child: Row(
-                children: <Widget>[
-                  for (final (int i, String label) in const <(int, String)>[
-                    (0, 'XP'),
-                    (1, 'Arena'),
-                  ])
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: ChoiceChip(
-                        label: Text(label),
-                        selected: _arena == (i == 1),
-                        onSelected: (_) {
-                          setState(() => _arena = i == 1);
-                        },
-                        labelStyle: RenanceText.bodyMedium.copyWith(
-                          color: _arena == (i == 1)
-                              ? context.ink
-                              : context.textSecondary,
-                          fontSize: 13,
+              padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
+              child: Container(
+                padding: const EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  color: context.cardLow,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    for (final (int i, String label) in const <(int, String)>[
+                      (0, 'XP'),
+                      (1, 'Arena'),
+                    ])
+                      GestureDetector(
+                        onTap: () => setState(() => _arena = i == 1),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 180),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 22, vertical: 9),
+                          decoration: BoxDecoration(
+                            color: _arena == (i == 1)
+                                ? context.cardLowest
+                                : Colors.transparent,
+                            borderRadius: BorderRadius.circular(999),
+                            boxShadow: _arena == (i == 1)
+                                ? const <BoxShadow>[
+                                    BoxShadow(
+                                      color: Color(0x14141C2D),
+                                      blurRadius: 4,
+                                      offset: Offset(0, 1),
+                                    ),
+                                  ]
+                                : null,
+                          ),
+                          child: Text(
+                            label,
+                            style: RenanceText.bodyMedium.copyWith(
+                              fontSize: 14,
+                              color: _arena == (i == 1)
+                                  ? context.ink
+                                  : context.textSecondary,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                ],
+                  ],
+                ),
               ),
             ),
             Expanded(
@@ -164,10 +210,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                         )
                       : _BoardList(
                           board: board,
+                          arena: _arena,
                           fmt: _fmt,
-                          valueFor: (BoardEntry e) => _arena
-                              ? _fmt(e.points)
-                              : _fmt(e.xp),
                         ),
             ),
           ],
@@ -177,18 +221,18 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
   }
 }
 
-/// The rank rows. "You" gets the ink bar + highlighted row, same as the
-/// Arena lobby's board.
+/// The ranking cards: gold / silver / bronze for the podium, white
+/// cards below, the caller's own row ringed in ink when it rides along.
 class _BoardList extends StatelessWidget {
   const _BoardList({
     required this.board,
+    required this.arena,
     required this.fmt,
-    required this.valueFor,
   });
 
   final LeaderboardData? board;
+  final bool arena;
   final String Function(int) fmt;
-  final String Function(BoardEntry) valueFor;
 
   @override
   Widget build(BuildContext context) {
@@ -216,98 +260,243 @@ class _BoardList extends StatelessWidget {
     }
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
+      padding: const EdgeInsets.fromLTRB(16, 18, 16, 32),
       children: <Widget>[
-        Container(
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(
-            color: context.card,
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: const <BoxShadow>[
-              BoxShadow(
-                  color: Color(0x14141C2D),
-                  blurRadius: 6,
-                  offset: Offset(0, 2)),
-            ],
-          ),
-          child: Column(
-            children: <Widget>[
-              for (var i = 0; i < rows.length; i++) ...<Widget>[
-                if (i > 0) Divider(height: 1, color: context.outlineLight),
-                _RankRow(
-                  entry: rows[i],
-                  value: valueFor(rows[i]),
-                  you: meRank != null && rows[i].rank == meRank,
-                ),
-              ],
-            ],
-          ),
+        Text(
+          arena ? 'Arena Ranking' : 'XP Ranking',
+          style: RenanceText.displayMd.copyWith(fontSize: 21),
         ),
+        const SizedBox(height: 14),
+        for (var i = 0; i < rows.length; i++)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: _RankCard(
+              entry: rows[i],
+              value: arena ? fmt(rows[i].points) : fmt(rows[i].xp),
+              arena: arena,
+              you: meRank != null && rows[i].rank == meRank,
+            ),
+          ),
       ],
     );
   }
 }
 
-class _RankRow extends StatelessWidget {
-  const _RankRow({required this.entry, required this.value, this.you = false});
+class _RankCard extends StatelessWidget {
+  const _RankCard({
+    required this.entry,
+    required this.value,
+    required this.arena,
+    required this.you,
+  });
 
   final BoardEntry entry;
   final String value;
+  final bool arena;
   final bool you;
+
+  static const Color _gold = Color(0xFFF7CE55);
+  static const Color _silver = Color(0xFFD9DEE7);
+  static const Color _bronze = Color(0xFFE4C3A0);
 
   @override
   Widget build(BuildContext context) {
-    final String initial = entry.username.isEmpty
-        ? 'R'
-        : entry.username[0].toUpperCase();
+    final int rank = entry.rank;
+    final Color tint = rank == 1
+        ? _gold
+        : rank == 2
+            ? _silver
+            : rank == 3
+                ? _bronze
+                : Colors.transparent;
+    final Color valueColor = rank == 1
+        ? const Color(0xFF8A6A00)
+        : rank == 2
+            ? const Color(0xFF4A5568)
+            : rank == 3
+                ? const Color(0xFF7A5230)
+                : context.ink;
+
     return Container(
-      color: you
-          ? (context.isDarkTier
-              ? RenanceColors.darkSurfaceLow
-              : const Color(0xFFEEF1FB))
-          : null,
-      child: Row(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: rank <= 3 ? tint.withValues(alpha: 0.34) : context.card,
+        borderRadius: BorderRadius.circular(16),
+        border: you
+            ? Border.all(color: context.ink, width: 1.6)
+            : Border.all(
+                color: context.outlineVariant.withValues(alpha: 0.4)),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+            color: Color(0x0F141C2D),
+            blurRadius: 4,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          if (you)
-            Container(width: 4, height: 64, color: context.ink),
-          SizedBox(
-            width: you ? 44 : 48,
-            child: Text('${entry.rank}',
-                textAlign: TextAlign.center,
-                style: RenanceText.bodyBase.copyWith(fontSize: 16)),
-          ),
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: you ? Colors.white : context.cardHigh,
-              shape: BoxShape.circle,
-            ),
-            alignment: Alignment.center,
-            child: you
-                ? Image.asset('assets/brand/renance_mark.png')
-                : Text(initial,
-                    style: RenanceText.bodyMedium.copyWith(fontSize: 15)),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Text(
-              you ? 'You' : entry.username,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: RenanceText.bodyMedium.copyWith(fontSize: 16),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: Text(
-              value,
-              style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-                color: you ? context.ink : RenanceColors.emerald,
+          Row(
+            children: <Widget>[
+              // Medal / rank badge.
+              Container(
+                width: 38,
+                height: 38,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: rank <= 3 ? Colors.white : context.cardLow,
+                  border: rank <= 3
+                      ? null
+                      : Border.all(color: context.outlineVariant),
+                  boxShadow: rank <= 3
+                      ? const <BoxShadow>[
+                          BoxShadow(
+                            color: Color(0x22141C2D),
+                            blurRadius: 4,
+                            offset: Offset(0, 1),
+                          ),
+                        ]
+                      : null,
+                ),
+                child: rank == 1
+                    ? const Icon(Icons.emoji_events, size: 20, color: Color(0xFFB7791F))
+                    : Text(
+                        '$rank',
+                        style: RenanceText.bodyMedium.copyWith(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w700,
+                          color: rank <= 3 ? valueColor : context.ink,
+                        ),
+                      ),
               ),
+              const SizedBox(width: 10),
+              // Avatar initial.
+              Container(
+                width: 40,
+                height: 40,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: you ? context.inverseChip : context.cardLow,
+                ),
+                child: you
+                    ? Text(
+                        'R',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16,
+                          color: context.onInverseChip,
+                        ),
+                      )
+                    : Text(
+                        (entry.username.isEmpty
+                                ? 'R'
+                                : entry.username[0])
+                            .toUpperCase(),
+                        style: RenanceText.bodyMedium.copyWith(
+                          fontSize: 15,
+                          color: context.ink,
+                        ),
+                      ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  you ? 'You' : entry.username,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: RenanceText.bodyMedium.copyWith(fontSize: 16),
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    'Renance ${arena ? 'Points' : 'XP'}',
+                    style: RenanceText.caption.copyWith(
+                      fontSize: 12,
+                      color: context.textSecondary,
+                    ),
+                  ),
+                  Text(
+                    value,
+                    style: RenanceText.statNumber.copyWith(
+                      fontSize: 22,
+                      color: valueColor,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          // The honest stat chips, Myschool's "Best Score / Time Adv" row.
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: <Widget>[
+              _StatChip(
+                icon: Icons.local_fire_department,
+                label: 'Best Streak',
+                value: '${entry.bestStreak}',
+              ),
+              _StatChip(
+                icon: Icons.check_circle_outline,
+                label: 'Correct',
+                value: '${entry.correct}',
+              ),
+              _StatChip(
+                icon: Icons.history_edu,
+                label: arena ? 'Matches' : 'Papers',
+                value: '${arena ? entry.matches : entry.attempts}',
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _StatChip extends StatelessWidget {
+  const _StatChip({
+    required this.icon,
+    required this.label,
+    required this.value,
+  });
+
+  final IconData icon;
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      decoration: BoxDecoration(
+        color: context.cardLowest,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Icon(icon, size: 13, color: context.textSecondary),
+          const SizedBox(width: 5),
+          Text(
+            label,
+            style: RenanceText.caption.copyWith(
+              fontSize: 12,
+              color: context.textSecondary,
+            ),
+          ),
+          const SizedBox(width: 5),
+          Text(
+            value,
+            style: RenanceText.labelMono.copyWith(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ],

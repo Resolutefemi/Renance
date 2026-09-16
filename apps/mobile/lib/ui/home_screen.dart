@@ -17,12 +17,14 @@ import '../storage.dart';
 import '../api_client.dart';
 import 'ai_generator_screen.dart';
 import 'arena_lobby_screen.dart';
+import 'account_screens.dart';
 import 'career_bridge_screen.dart';
 import 'offline_share_screen.dart';
 import 'patron_portal_screen.dart';
 import 'downloads_screen.dart';
 import 'leaderboard_screen.dart';
 import 'study_resources_screen.dart';
+import 'study_setup_screen.dart';
 import 'study_plan_screen.dart';
 import 'flashcards_screen.dart';
 import 'lessons_screen.dart';
@@ -192,7 +194,10 @@ class _HomeScreenState extends State<HomeScreen> {
             streak: student.gamification?.state.currentStreak ?? 0,
             name: student.me?.profile?.fullName ?? '',
             onBrand: () => setState(() => _tab = 0),
-            onAvatar: () => setState(() => _tab = 3),
+            onAvatar: () => showAccountSheet(
+              context,
+              onGoTab: (int t) => setState(() => _tab = t),
+            ),
             onBackPressed: _tab == 0 ? null : () => setState(() => _tab = 0),
             onSearch: () => Navigator.of(context).push<void>(
               MaterialPageRoute<void>(builder: (_) => const SearchScreen()),
@@ -205,6 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             alert: student.dueTopics > 0,
+            alertCount: student.dueTopics,
           ),
         ),
       ],
@@ -406,6 +412,7 @@ class HomeHeader extends StatelessWidget {
     this.onSearch,
     this.onNotifications,
     this.alert = false,
+    this.alertCount = 0,
   });
 
   final int streak;
@@ -418,6 +425,9 @@ class HomeHeader extends StatelessWidget {
 
   /// Emerald dot on the bell when something needs attention (review due).
   final bool alert;
+
+  /// The numeric badge the school app paints on its bell ("53").
+  final int alertCount;
 
   @override
   Widget build(BuildContext context) {
@@ -452,6 +462,7 @@ class HomeHeader extends StatelessWidget {
                   icon: Icons.notifications_none,
                   onTap: onNotifications,
                   alert: alert,
+                  badge: alertCount > 0 ? '$alertCount' : null,
                 ),
               ],
               const SizedBox(width: 6),
@@ -523,17 +534,21 @@ class _BrandMark extends StatelessWidget {
 }
 
 /// One round icon button in the header (search, bell) with the optional
-/// emerald attention dot.
+/// numeric badge (the school app's bell count) or emerald dot.
 class _HeaderIcon extends StatelessWidget {
   const _HeaderIcon({
     required this.icon,
     required this.onTap,
     this.alert = false,
+    this.badge,
   });
 
   final IconData icon;
   final VoidCallback? onTap;
   final bool alert;
+
+  /// Numeric badge text; overrides the plain dot when present.
+  final String? badge;
 
   @override
   Widget build(BuildContext context) {
@@ -549,7 +564,33 @@ class _HeaderIcon extends StatelessWidget {
               ? 'Search'
               : 'Notifications',
         ),
-        if (alert)
+        if (badge != null)
+          Positioned(
+            top: 2,
+            right: 2,
+            child: Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+              decoration: BoxDecoration(
+                color: context.error,
+                borderRadius: BorderRadius.circular(999),
+                border: Border.all(color: context.cardLowest, width: 1.4),
+              ),
+              constraints:
+                  const BoxConstraints(minWidth: 17, minHeight: 15),
+              child: Text(
+                badge!,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 9.5,
+                  fontWeight: FontWeight.w700,
+                  height: 1.1,
+                ),
+              ),
+            ),
+          )
+        else if (alert)
           const Positioned(
             top: 6,
             right: 6,
@@ -952,7 +993,9 @@ class _LauncherTab extends StatelessWidget {
                   label: 'Study',
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (_) => const StudyResourcesScreen(),
+                      builder: (_) => StudySetupScreen(
+                        onOpenExam: onOpenExam,
+                      ),
                     ),
                   ),
                 ),
@@ -1770,6 +1813,18 @@ Future<void> showMoreSheet(
                         Navigator.of(context).push(
                           MaterialPageRoute<void>(
                             builder: (_) => const DownloadsScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    _MoreTile(
+                      icon: Icons.collections_bookmark_outlined,
+                      label: 'Study Shelf',
+                      onTap: () {
+                        Navigator.of(sheetContext).pop();
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => const StudyResourcesScreen(),
                           ),
                         );
                       },
