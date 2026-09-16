@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-hormones-homeostasis-bank",
+ "title": "UNEB UACE - Hormones Homeostasis",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0001",
+   "type": "mcq",
+   "stem": "Homeostasis maintains a constant:",
+   "marks": 1,
+   "options": {
+    "A": "External environment",
+    "B": "Internal environment",
+    "C": "Blood cell count",
+    "D": "Body mass"
+   },
+   "answer": "Internal environment"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0002",
+   "type": "mcq",
+   "stem": "Negative feedback in homeostasis means:",
+   "marks": 1,
+   "options": {
+    "A": "The response makes the deviation worse",
+    "B": "Corrections are never made",
+    "C": "The response opposes the change and returns conditions to normal",
+    "D": "Feedback is always negative"
+   },
+   "answer": "The response opposes the change and returns conditions to normal"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0003",
+   "type": "mcq",
+   "stem": "In hot conditions, blood vessels in the skin:",
+   "marks": 1,
+   "options": {
+    "A": "Constrict",
+    "B": "Dilate (vasodilation)",
+    "C": "Close completely",
+    "D": "Produce more blood"
+   },
+   "answer": "Dilate (vasodilation)"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0004",
+   "type": "mcq",
+   "stem": "Insulin is produced by:",
+   "marks": 1,
+   "options": {
+    "A": "The liver",
+    "B": "α-cells of the pancreas",
+    "C": "β-cells of the pancreas",
+    "D": "The kidneys"
+   },
+   "answer": "β-cells of the pancreas"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0005",
+   "type": "mcq",
+   "stem": "Insulin causes blood glucose to:",
+   "marks": 1,
+   "options": {
+    "A": "Rise",
+    "B": "Fall",
+    "C": "Stay the same",
+    "D": "Convert to protein"
+   },
+   "answer": "Fall"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0006",
+   "type": "mcq",
+   "stem": "Glucagon is secreted when blood glucose is:",
+   "marks": 1,
+   "options": {
+    "A": "High",
+    "B": "Normal",
+    "C": "Low",
+    "D": "After eating"
+   },
+   "answer": "Low"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0007",
+   "type": "mcq",
+   "stem": "Type 1 diabetes is caused by:",
+   "marks": 1,
+   "options": {
+    "A": "Too much insulin",
+    "B": "Insulin resistance",
+    "C": "Autoimmune destruction of β-cells — no insulin produced",
+    "D": "Eating too much sugar"
+   },
+   "answer": "Autoimmune destruction of β-cells — no insulin produced"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0008",
+   "type": "mcq",
+   "stem": "Shivering in cold conditions generates heat by:",
+   "marks": 1,
+   "options": {
+    "A": "Chemical reactions in the liver",
+    "B": "Rapid involuntary muscle contractions",
+    "C": "Increased blood flow to skin",
+    "D": "Reduced metabolic rate"
+   },
+   "answer": "Rapid involuntary muscle contractions"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0009",
+   "type": "mcq",
+   "stem": "Glycogenesis is:",
+   "marks": 1,
+   "options": {
+    "A": "Glucose→glycogen (storage in liver)",
+    "B": "Glycogen→glucose (release)",
+    "C": "Protein→glucose",
+    "D": "Fat→glucose"
+   },
+   "answer": "Glucose→glucose (storage in liver)"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0010",
+   "type": "mcq",
+   "stem": "Why is tight blood glucose control important?",
+   "marks": 1,
+   "options": {
+    "A": "Glucose tastes sweet",
+    "B": "Enzymes only work properly within a narrow glucose range",
+    "C": "Blood needs exactly 80mg/100mL to be red",
+    "D": "It affects eye colour"
+   },
+   "answer": "Enzymes only work properly within a narrow glucose range"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0011",
+   "type": "mcq",
+   "stem": "What is the basic unit of life?",
+   "marks": 1,
+   "options": {
+    "A": "The cell",
+    "B": "The atom",
+    "C": "The molecule",
+    "D": "The nucleus"
+   },
+   "answer": "The cell"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0012",
+   "type": "mcq",
+   "stem": "Which organelle is responsible for energy production in cells?",
+   "marks": 1,
+   "options": {
+    "A": "Mitochondria",
+    "B": "Nucleus",
+    "C": "Ribosome",
+    "D": "Vacuole"
+   },
+   "answer": "Mitochondria"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0013",
+   "type": "mcq",
+   "stem": "What is photosynthesis?",
+   "marks": 1,
+   "options": {
+    "A": "The process by which plants make food using sunlight",
+    "B": "The breakdown of glucose for energy",
+    "C": "The absorption of minerals from soil",
+    "D": "Cell division in plants"
+   },
+   "answer": "The process by which plants make food using sunlight"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0014",
+   "type": "mcq",
+   "stem": "What is osmosis?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of water from high to low water potential through a semi-permeable membrane",
+    "B": "Movement of glucose into cells",
+    "C": "Active transport of ions",
+    "D": "Evaporation of water from leaves"
+   },
+   "answer": "Movement of water from high to low water potential through a semi-permeable membrane"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0015",
+   "type": "mcq",
+   "stem": "What molecule carries genetic information?",
+   "marks": 1,
+   "options": {
+    "A": "DNA (Deoxyribonucleic acid)",
+    "B": "RNA",
+    "C": "ATP",
+    "D": "Protein"
+   },
+   "answer": "DNA (Deoxyribonucleic acid)"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0016",
+   "type": "mcq",
+   "stem": "What is the function of chloroplasts?",
+   "marks": 1,
+   "options": {
+    "A": "Site of photosynthesis",
+    "B": "Site of respiration",
+    "C": "Protein synthesis",
+    "D": "Cell division"
+   },
+   "answer": "Site of photosynthesis"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0017",
+   "type": "mcq",
+   "stem": "In genetics, what is a dominant allele?",
+   "marks": 1,
+   "options": {
+    "A": "One that is expressed even when only one copy is present",
+    "B": "One that is only expressed when two copies are present",
+    "C": "A mutated allele",
+    "D": "Always harmful"
+   },
+   "answer": "One that is expressed even when only one copy is present"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0018",
+   "type": "mcq",
+   "stem": "What is diffusion?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of particles from high to low concentration without energy",
+    "B": "Movement against a concentration gradient",
+    "C": "Movement of water only",
+    "D": "Requires energy (ATP)"
+   },
+   "answer": "Movement of particles from high to low concentration without energy"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0019",
+   "type": "mcq",
+   "stem": "Which blood component carries oxygen?",
+   "marks": 1,
+   "options": {
+    "A": "Red blood cells (haemoglobin)",
+    "B": "White blood cells",
+    "C": "Platelets",
+    "D": "Plasma"
+   },
+   "answer": "Red blood cells (haemoglobin)"
+  },
+  {
+   "id": "uneb_uace-hormones-homeostasis-bank-0020",
+   "type": "mcq",
+   "stem": "What is the role of the nucleus?",
+   "marks": 1,
+   "options": {
+    "A": "Controls cell activities and contains DNA",
+    "B": "Produces energy (ATP)",
+    "C": "Makes proteins",
+    "D": "Stores water"
+   },
+   "answer": "Controls cell activities and contains DNA"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Hormones Homeostasis"
+}

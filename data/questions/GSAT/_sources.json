@@ -1,0 +1,98 @@
+{
+ "exam": "GSAT",
+ "region": "Taiwan",
+ "slug": "GSAT",
+ "question_banks": 8,
+ "github_sources": [
+  {
+   "repo": "pikomonde/fam100bot",
+   "url": "https://github.com/pikomonde/fam100bot/blob/44f4b587fe935679f8ee7a529978ece2938639aa/fambot/list_questions.go",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "DuCJ-creator/DuCJ-creator.github.io",
+   "url": "https://github.com/DuCJ-creator/DuCJ-creator.github.io/blob/b1b3e1c7bc840cf90146777b9d3055783069f23c/GSAT vocab fixed option quiz.csv",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "JacobLinCool/any-to-bench",
+   "url": "https://github.com/JacobLinCool/any-to-bench/blob/172a42a6b2717eed03768d30386c0b467a62e92a/PRODUCT.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "ibisbill/Transferability-of-LLM-Reasoning",
+   "url": "https://github.com/ibisbill/Transferability-of-LLM-Reasoning/blob/c25e134c6bbe5273fde315223739cb62d307e06a/eval/lm-evaluation-harness/lm_eval/tasks/tmlu/default/_generate_configs.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Laravel-Lang/lang",
+   "url": "https://github.com/Laravel-Lang/lang/blob/b15ba95800ce9ad2ba24e1edc802ecf9738f7a87/locales/tk/json.json",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "NVlabs/hymba",
+   "url": "https://github.com/NVlabs/hymba/blob/df5b2a95b9905534eb162305a5414bc43e37e84b/lm-evaluation-harness/lm_eval/tasks/tmlu/default/_generate_configs.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "andre-fuchs/kerning-pairs",
+   "url": "https://github.com/andre-fuchs/kerning-pairs/blob/b7a0e29ed81a8edee7b4b6cb1935ebf7d29ca611/text/de/grouped-284.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "jwliao1209/TWLLM-Tutor",
+   "url": "https://github.com/jwliao1209/TWLLM-Tutor/blob/84dbb8103a2dd01d0c8c9014d9185bebcd26ab61/README.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Free ACCUPLACER Practice Resources - College Board",
+   "url": "https://accuplacer.collegeboard.org",
+   "class": "official"
+  },
+  {
+   "title": "GSAT Practice Test 2026 General Scholastic Ability Test  - YouTube",
+   "url": "https://www.youtube.com/watch?v=Q5yG7yCkN7g&vl=en",
+   "class": "site"
+  },
+  {
+   "title": "HiSET® Practice Tests | Free, Paid & Official Test Prep",
+   "url": "https://hiset.org",
+   "class": "site"
+  },
+  {
+   "title": "Free ACT Practice Tests and Prep",
+   "url": "https://www.act.org",
+   "class": "site"
+  },
+  {
+   "title": "SAT Sample Questions - Free SAT Pop Quiz",
+   "url": "https://www.kaptest.com",
+   "class": "site"
+  },
+  {
+   "title": "Free SAT Practice Test and Score Report",
+   "url": "https://sat.magoosh.com",
+   "class": "site"
+  },
+  {
+   "title": "Free ACCUPLACER Practice Test 2026",
+   "url": "https://www.mometrix.com",
+   "class": "site"
+  },
+  {
+   "title": "GSAT 2026: General Scholastic Ability Test University Exam Tips All",
+   "url": "https://www.youtube.com/watch?v=VNSiYEk23bI",
+   "class": "site"
+  }
+ ]
+}

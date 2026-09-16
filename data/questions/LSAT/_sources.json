@@ -1,0 +1,98 @@
+{
+ "exam": "LSAT",
+ "region": "USA / Canada / International",
+ "slug": "LSAT",
+ "question_banks": 1,
+ "github_sources": [
+  {
+   "repo": "davisjaj-sketch/lsat-qbank",
+   "url": "https://github.com/davisjaj-sketch/lsat-qbank",
+   "stars": 0,
+   "desc": "Interactive LSAT question bank and quizzer."
+  },
+  {
+   "repo": "benthomas66/argument-recipes",
+   "url": "https://github.com/benthomas66/argument-recipes",
+   "stars": 0,
+   "desc": "Taxonomy, AI-assisted 200-item question bank, and diagnostic engine for analyzing performance on LSAT-style Logical Reasoning questions."
+  },
+  {
+   "repo": "rigelhope/testprep",
+   "url": "https://github.com/rigelhope/testprep",
+   "stars": 8,
+   "desc": "web app that uses question banks for multiple-choice-question (MCQ) self-testing (as with e.g. MCAT, LSAT, USMLE)."
+  },
+  {
+   "repo": "tech234a/annotation-urls",
+   "url": "https://github.com/tech234a/annotation-urls/blob/5c0300471b87c6a5f3dd8883484f8155b5ff33d7/I3_urls.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "hyunjun/bookmarks",
+   "url": "https://github.com/hyunjun/bookmarks/blob/33b0a2d0807e5c9065cbefd2acf717cfdc4729a5/linux.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "mikhailvs/cerno",
+   "url": "https://github.com/mikhailvs/cerno/blob/87b0fdd858d758cf914d84b29578ba3f9f489368/DESIGN.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "thedudebro11/LSAT-Forge",
+   "url": "https://github.com/thedudebro11/LSAT-Forge/blob/24e98b1676bbd72afd3d8aa79b155a5dab2b94b5/BUILD.MD",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "bharathgs/Awesome-pytorch-list",
+   "url": "https://github.com/bharathgs/Awesome-pytorch-list/blob/8b9be0839f420b663adb7025281d908d6fba0996/README.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Free LSAT Practice Questions with detailed Explanations",
+   "url": "https://www.manhattanreview.com",
+   "class": "site"
+  },
+  {
+   "title": "Official LSAT Practice Tests",
+   "url": "https://www.lawhub.org",
+   "class": "site"
+  },
+  {
+   "title": "Free LSAT Practice Questions and Pop Quiz",
+   "url": "https://www.kaptest.com",
+   "class": "site"
+  },
+  {
+   "title": "80+ Free LSAT Resources",
+   "url": "https://oaa.rice.edu",
+   "class": "edu"
+  },
+  {
+   "title": "Practice LSAT® Question of the Day",
+   "url": "https://blueprintprep.com",
+   "class": "site"
+  },
+  {
+   "title": "Free LSAT Practice Test 2026 | Logical Reasoning &",
+   "url": "https://www.mometrix.com",
+   "class": "site"
+  },
+  {
+   "title": "LSAT Prep Library: Official Practice Tests — LawHub",
+   "url": "https://app.lawhub.org",
+   "class": "site"
+  },
+  {
+   "title": "Official LSAT Practice Tests",
+   "url": "https://www.lsac.org",
+   "class": "site"
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "code": "kcpe-bio-bank",
+ "title": "KCPE -  Bio",
+ "version": 1,
+ "questionCount": 6,
+ "totalMarks": 6,
+ "questions": [
+  {
+   "id": "kcpe-bio-bank-0001",
+   "type": "theory",
+   "stem": "Name one difference between plant and animal cells.",
+   "marks": 1,
+   "answer": "Plant cells have cell walls, chloroplasts, and large vacuoles while animal cells do not."
+  },
+  {
+   "id": "kcpe-bio-bank-0002",
+   "type": "theory",
+   "stem": "Write the word equation for photosynthesis.",
+   "marks": 1,
+   "answer": "Carbon dioxide + water → glucose + oxygen"
+  },
+  {
+   "id": "kcpe-bio-bank-0003",
+   "type": "theory",
+   "stem": "Why are mitochondria important for cell function?",
+   "marks": 1,
+   "answer": "Mitochondria produce ATP, the energy currency of the cell, through cellular respiration."
+  },
+  {
+   "id": "kcpe-bio-bank-0004",
+   "type": "theory",
+   "stem": "What is the function of ribosomes in a cell?",
+   "marks": 1,
+   "answer": "Ribosomes synthesize proteins by reading mRNA and assembling amino acids."
+  },
+  {
+   "id": "kcpe-bio-bank-0005",
+   "type": "theory",
+   "stem": "Explain the difference between diffusion and active transport.",
+   "marks": 1,
+   "answer": "Diffusion is passive movement of substances from high to low concentration, while active transport requires energy to move substances against the concentration gradient."
+  },
+  {
+   "id": "kcpe-bio-bank-0006",
+   "type": "theory",
+   "stem": "Describe the structure of DNA.",
+   "marks": 1,
+   "answer": "DNA is a double helix structure consisting of two strands of nucleotides connected by hydrogen bonds between complementary base pairs (A-T, C-G)."
+  }
+ ],
+ "category": "KCPE",
+ "body": " Bio"
+}

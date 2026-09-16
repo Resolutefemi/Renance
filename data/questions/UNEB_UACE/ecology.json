@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-ecology-bank",
+ "title": "UNEB UACE - Ecology",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-ecology-bank-0001",
+   "type": "mcq",
+   "stem": "A community in ecology is",
+   "marks": 1,
+   "options": {
+    "A": "one species only",
+    "B": "all living organisms in an area",
+    "C": "living + non-living environment",
+    "D": "a single population"
+   },
+   "answer": "all living organisms in an area"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0002",
+   "type": "mcq",
+   "stem": "An ecological niche refers to",
+   "marks": 1,
+   "options": {
+    "A": "the habitat of an organism",
+    "B": "the role/function of species in ecosystem including what it eats and does",
+    "C": "the physical area",
+    "D": "nesting site only"
+   },
+   "answer": "the role/function of species in ecosystem including what it eats and does"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0003",
+   "type": "mcq",
+   "stem": "Abiotic factors in an ecosystem are",
+   "marks": 1,
+   "options": {
+    "A": "predators and prey",
+    "B": "non-living physical/chemical factors like temperature, pH, light",
+    "C": "all living organisms",
+    "D": "only soil nutrients"
+   },
+   "answer": "non-living physical/chemical factors like temperature, pH, light"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0004",
+   "type": "mcq",
+   "stem": "Biodiversity is important because",
+   "marks": 1,
+   "options": {
+    "A": "it makes counting easier",
+    "B": "it provides ecosystem stability, food, medicines, resources",
+    "C": "it reduces competition",
+    "D": "all organisms are alike"
+   },
+   "answer": "it provides ecosystem stability, food, medicines, resources"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0005",
+   "type": "mcq",
+   "stem": "Quadrats are used to sample",
+   "marks": 1,
+   "options": {
+    "A": "fast-moving animals",
+    "B": "fish in rivers",
+    "C": "stationary organisms like plants or slow invertebrates",
+    "D": "birds"
+   },
+   "answer": "stationary organisms like plants or slow invertebrates"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0006",
+   "type": "mcq",
+   "stem": "Mark-recapture estimates population size. Formula: N = M×C/R where M=marked, C=captured second time, R=recaptured marked. If M=50, C=80, R=20, N =",
+   "marks": 1,
+   "options": {
+    "A": "200",
+    "B": "150",
+    "C": "400",
+    "D": "100"
+   },
+   "answer": "200"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0007",
+   "type": "mcq",
+   "stem": "A keystone species is one that",
+   "marks": 1,
+   "options": {
+    "A": "is most numerous",
+    "B": "has a disproportionately large effect on ecosystem relative to its abundance",
+    "C": "is endangered",
+    "D": "is at top of food chain"
+   },
+   "answer": "has a disproportionately large effect on ecosystem relative to its abundance"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0008",
+   "type": "mcq",
+   "stem": "Biome is",
+   "marks": 1,
+   "options": {
+    "A": "same as ecosystem",
+    "B": "large-scale terrestrial/aquatic zone with characteristic climate and organisms",
+    "C": "a specific lake",
+    "D": "a single country"
+   },
+   "answer": "large-scale terrestrial/aquatic zone with characteristic climate and organisms"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0009",
+   "type": "mcq",
+   "stem": "Primary succession begins on",
+   "marks": 1,
+   "options": {
+    "A": "bare rock or new land",
+    "B": "existing soil",
+    "C": "flooded land",
+    "D": "burned area"
+   },
+   "answer": "bare rock or new land"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0010",
+   "type": "mcq",
+   "stem": "Transect sampling is best for studying",
+   "marks": 1,
+   "options": {
+    "A": "random distribution",
+    "B": "population size only",
+    "C": "zonation/gradual change across an area",
+    "D": "individual organisms"
+   },
+   "answer": "zonation/gradual change across an area"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0011",
+   "type": "mcq",
+   "stem": "What is the basic unit of life?",
+   "marks": 1,
+   "options": {
+    "A": "The cell",
+    "B": "The atom",
+    "C": "The molecule",
+    "D": "The nucleus"
+   },
+   "answer": "The cell"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0012",
+   "type": "mcq",
+   "stem": "Which organelle is responsible for energy production in cells?",
+   "marks": 1,
+   "options": {
+    "A": "Mitochondria",
+    "B": "Nucleus",
+    "C": "Ribosome",
+    "D": "Vacuole"
+   },
+   "answer": "Mitochondria"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0013",
+   "type": "mcq",
+   "stem": "What is photosynthesis?",
+   "marks": 1,
+   "options": {
+    "A": "The process by which plants make food using sunlight",
+    "B": "The breakdown of glucose for energy",
+    "C": "The absorption of minerals from soil",
+    "D": "Cell division in plants"
+   },
+   "answer": "The process by which plants make food using sunlight"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0014",
+   "type": "mcq",
+   "stem": "What is osmosis?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of water from high to low water potential through a semi-permeable membrane",
+    "B": "Movement of glucose into cells",
+    "C": "Active transport of ions",
+    "D": "Evaporation of water from leaves"
+   },
+   "answer": "Movement of water from high to low water potential through a semi-permeable membrane"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0015",
+   "type": "mcq",
+   "stem": "What molecule carries genetic information?",
+   "marks": 1,
+   "options": {
+    "A": "DNA (Deoxyribonucleic acid)",
+    "B": "RNA",
+    "C": "ATP",
+    "D": "Protein"
+   },
+   "answer": "DNA (Deoxyribonucleic acid)"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0016",
+   "type": "mcq",
+   "stem": "What is the function of chloroplasts?",
+   "marks": 1,
+   "options": {
+    "A": "Site of photosynthesis",
+    "B": "Site of respiration",
+    "C": "Protein synthesis",
+    "D": "Cell division"
+   },
+   "answer": "Site of photosynthesis"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0017",
+   "type": "mcq",
+   "stem": "In genetics, what is a dominant allele?",
+   "marks": 1,
+   "options": {
+    "A": "One that is expressed even when only one copy is present",
+    "B": "One that is only expressed when two copies are present",
+    "C": "A mutated allele",
+    "D": "Always harmful"
+   },
+   "answer": "One that is expressed even when only one copy is present"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0018",
+   "type": "mcq",
+   "stem": "What is diffusion?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of particles from high to low concentration without energy",
+    "B": "Movement against a concentration gradient",
+    "C": "Movement of water only",
+    "D": "Requires energy (ATP)"
+   },
+   "answer": "Movement of particles from high to low concentration without energy"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0019",
+   "type": "mcq",
+   "stem": "Which blood component carries oxygen?",
+   "marks": 1,
+   "options": {
+    "A": "Red blood cells (haemoglobin)",
+    "B": "White blood cells",
+    "C": "Platelets",
+    "D": "Plasma"
+   },
+   "answer": "Red blood cells (haemoglobin)"
+  },
+  {
+   "id": "uneb_uace-ecology-bank-0020",
+   "type": "mcq",
+   "stem": "What is the role of the nucleus?",
+   "marks": 1,
+   "options": {
+    "A": "Controls cell activities and contains DNA",
+    "B": "Produces energy (ATP)",
+    "C": "Makes proteins",
+    "D": "Stores water"
+   },
+   "answer": "Controls cell activities and contains DNA"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Ecology"
+}

@@ -1,0 +1,879 @@
+{
+ "code": "gaokao-chemistry-mcqs-bank",
+ "title": "Gaokao -  Chemistry Mcqs",
+ "version": 1,
+ "questionCount": 124,
+ "totalMarks": 124,
+ "questions": [
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0001",
+   "type": "theory",
+   "stem": "1. （3 分）下列反应中, 可用离子方程式 $\\mathrm{H}^{+}+\\mathrm{OH}^{-}=\\mathrm{H}_{2} \\mathrm{O}$ 表示的是（ ）\nA. $\\mathrm{NH}_{4} \\mathrm{Cl}+\\mathrm{NaOH} \\stackrel{\\triangle}{=} \\mathrm{NaCl}+\\mathrm{NH}_{3} \\uparrow+\\mathrm{H}_{2} \\mathrm{O}$\nB. $\\mathrm{Mg}(\\mathrm{OH})_{2}+2 \\mathrm{HCl}=\\mathrm{MgCl}_{2}+2 \\mathrm{H}_{2} \\mathrm{O}$\nC. $\\mathrm{NaOH}+\\mathrm{NaHCO}_{3}=\\mathrm{Na}_{2} \\mathrm{CO}_{3}+\\mathrm{H}_{2} \\mathrm{O}$\nD. $\\mathrm{NaOH}+\\mathrm{HNO}_{3}=\\mathrm{NaNO}_{3}+\\mathrm{H}_{2} \\mathrm{O}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0002",
+   "type": "theory",
+   "stem": "2.（3 分）下面均是正丁烷与氧气反应的热化学方程式 $\\left(25^{\\circ}, 101 \\mathrm{kPa} ）:\\right.$\n\n(1) $\\mathrm{C}_{4} \\mathrm{H}_{10}(\\mathrm{~g})+\\frac{13}{2} \\mathrm{O}_{2}(\\mathrm{~g})=4 \\mathrm{CO}_{2}(\\mathrm{~g})+5 \\mathrm{H}_{2} \\mathrm{O}$ (1) $\\triangle \\mathrm{H}=-2878 \\mathrm{~kJ} / \\mathrm{mol}$\n\n(2) $\\mathrm{C}_{4} \\mathrm{H}_{10}(\\mathrm{~g})+\\frac{13}{2} \\mathrm{O}_{2}(\\mathrm{~g})=4 \\mathrm{CO}_{2}(\\mathrm{~g})+5 \\mathrm{H}_{2} \\mathrm{O}(\\mathrm{g}) \\triangle \\mathrm{H}=-2658 \\mathrm{~kJ} / \\mathrm{mol}$\n\n(3) $\\mathrm{C}_{4} \\mathrm{H}_{10}(\\mathrm{~g})+\\frac{9}{2} \\mathrm{O}_{2}(\\mathrm{~g})=4 \\mathrm{CO}(\\mathrm{g})+5 \\mathrm{H}_{2} \\mathrm{O}$ (1) $\\triangle \\mathrm{H}=-1746 \\mathrm{~kJ} / \\mathrm{mol}$\n\n(4) $\\mathrm{C}_{4} \\mathrm{H}_{10}(\\mathrm{~g})+\\frac{9}{2} \\mathrm{O}_{2}(\\mathrm{~g})=4 \\mathrm{CO}(\\mathrm{g})+5 \\mathrm{H}_{2} \\mathrm{O}(\\mathrm{g}) \\triangle \\mathrm{H}=-1526 \\mathrm{~kJ} / \\mathrm{mol}$\n\n由此判断，正丁烷的燃烧热是（ $）$\nA. $-2878 \\mathrm{~kJ} / \\mathrm{mol}$\nB. $-2658 \\mathrm{~kJ} / \\mathrm{mol}$\nC. $-1746 \\mathrm{~kJ} / \\mathrm{mol}$\nD. $-1526 \\mathrm{~kJ} / \\mathrm{mol}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0003",
+   "type": "theory",
+   "stem": "3. （3 分）在相同条件下, 下列说法错误的是（）\nA. 氯气在饱和食盐水中的溶解度小于在纯水中的溶解度\nB. 碘在碘化钾溶液中的溶解度大于在纯水中的溶解度\nC. 醋酸在醋酸钠溶液中电离的程度大于在纯水中电离的程度\nD. 工业上生产硫酸的过程中使用过量的空气可提高 $\\mathrm{SO}_{2}$ 的利用率",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0004",
+   "type": "theory",
+   "stem": "5. （3 分) 若 $\\left(\\mathrm{NH}_{4}\\right){ }_{2} \\mathrm{SO}_{4}$ 在强热时分解的产物是 $\\mathrm{SO}_{2} 、 \\mathrm{~N}_{2} 、 \\mathrm{NH}_{3}$ 和 $\\mathrm{H}_{2} \\mathrm{O}$, 则该 反应中化合价发生变化和末发生变化的 $\\mathrm{N}$ 原子数之比为（）\nA. $1: 4$\nB. $1: 2$\nC. $2: 1$\nD. $4: 1$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0005",
+   "type": "theory",
+   "stem": "6. (3 分) 在一定温度、压强下, 向 $100 \\mathrm{mLCH}_{4}$ 和 $\\mathrm{Ar}$ 的混合气体中通入 $400 \\mathrm{mLO}_{2}$ , 点燃使其完全燃烧, 最后在相同条件下得到干燥气体 $460 \\mathrm{~mL}$, 则反应前混 合气体中 $\\mathrm{CH}_{4}$ 和 $\\mathrm{Ar}$ 物质的量之比是 ( $)$\nA. $1: 4$\nB. $1: 3$\nC. $1: 2$\nD. $1: 1$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0006",
+   "type": "theory",
+   "stem": "7. （3 分）短周期元素 $\\mathrm{W} 、 \\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 的原子序数依次增大，且 $\\mathrm{W} 、 \\mathrm{X} 、 \\mathrm{Y}^{+} 、 \\mathrm{Z}$ 的最外层电子数与其电子层数的比值依次为 $2 、 3 、 4 、 2$ (不考虑零族元素). 下列关于这些元素的叙述错误的是（）\nA. $X$ 和其他三种元素均可形成至少 2 种二元化合物\nB. $\\mathrm{W}$ 和 $\\mathrm{X} 、 \\mathrm{Z}$ 两种元素分别形成的二元化合物中, 均有直线形分子\nC. $\\mathrm{W} 、 \\mathrm{X}$ 和 $\\mathrm{Y}$ 三种元素可以形成碱性化合物\nD. Z 和其他三种元素形成的二元化合物, 其水溶液均呈酸性",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0007",
+   "type": "theory",
+   "stem": "1. 下列叙述正确的是（）\nA. $1.00 \\mathrm{molNaCl}$ 中含有 $6.02 \\times 10^{23}$ 个 $\\mathrm{NaCl}$ 分子\nB. $1.00 \\mathrm{molNaCl}$ 中, 所有 $\\mathrm{Na}^{+}$的最外层电子总数为 $8 \\times 6.02 \\times 10^{23}$\nC. 欲配置 $1.00 \\mathrm{~L}, 1.00 \\mathrm{~mol} . \\mathrm{L}^{-1}$ 的 $\\mathrm{NaCl}$ 溶液, 可将 $58.5 \\mathrm{gNaCl}$ 溶于 $1.00 \\mathrm{~L}$ 水中\nD. 电解 $58.5 \\mathrm{~g}$ 熔融的 $\\mathrm{NaCl}$, 能产生 $22.4 \\mathrm{~L}$ 氯气（标准状况）、23.0g 金属钠",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0008",
+   "type": "theory",
+   "stem": "2. 分子式为 $\\mathrm{C}_{5} \\mathrm{H}_{11} \\mathrm{Cl}$ 的同分异构体共有（不考虑立体异构）（）\nA. 6 种\nB. 7 种\nC. 8 种\nD. 9 种",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0009",
+   "type": "theory",
+   "stem": "3. 下列反应中，属于取代反应的是（）\n\n(1) $\\mathrm{CH}_{3} \\mathrm{CH}=\\mathrm{CH}_{2}+\\mathrm{Br}_{2} \\stackrel{\\mathrm{CCl}_{4}^{\\longrightarrow}}{\\longrightarrow} \\mathrm{CH}_{3} \\mathrm{CHBrCH}_{2} \\mathrm{Br}$\n\n(2) $\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{OH} \\stackrel{\\text { 棪 } \\mathrm{H}_{2} \\mathrm{SO}_{4}}{\\triangle} \\mathrm{CH}_{2}=\\mathrm{CH}_{2}+\\mathrm{H}_{2} \\mathrm{O}$\n\n(3) $\\mathrm{CH}_{3} \\mathrm{COOH}+\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{OH} \\stackrel{\\text { 棪. } \\mathrm{H}_{2} \\mathrm{SO}_{4}}{\\mathrm{~A}} \\mathrm{CH}_{3} \\mathrm{COOCH}_{2} \\mathrm{CH}_{3}+\\mathrm{H}_{2} \\mathrm{O}$\n\n![](https://cdn.mathpix.com/cropped/2023_03_05_b6a30ae2ca4c230a7a82g-01.jpg?height=100&width=619&top_left_y=1441&top_left_x=296)\nA. (1)(2)\nB. (3) (4)\nC. (1)(3)\nD. (2)",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0010",
+   "type": "theory",
+   "stem": "5. 铁铂蓄电池又称爱迪生电池, 放电时的总反应为: $\\mathrm{Fe}^{+} \\mathrm{Ni}_{2} \\mathrm{O}_{3}+3 \\mathrm{H}_{2} \\mathrm{O}=\\mathrm{Fe}(\\mathrm{OH})$ ${ }_{2}+2 \\mathrm{Ni}(\\mathrm{OH})_{2}$ 下列有关该电池的说法不正确的是（ $)$\nA. 电池的电解液为碱性溶液, 正极为 $\\mathrm{Ni}_{2} \\mathrm{O}_{3}$ 、负极为 $\\mathrm{Fe}$\nB. 电池放电时, 负极反应为 $\\mathrm{Fe}+2 \\mathrm{OH}^{-}-2 \\mathrm{e}^{-}=\\mathrm{Fe}(\\mathrm{OH})_{2}$\nC. 电池充电过程中, 阴极附近溶液的碱性减弱\nD. 电池充电时, 阳极反应为 $2 \\mathrm{Ni}(\\mathrm{OH}){ }_{2}+2 \\mathrm{OH}^{-}-2 \\mathrm{e}^{-}=\\mathrm{Ni}_{2} \\mathrm{O}_{3}+3 \\mathrm{H}_{2} \\mathrm{O}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0011",
+   "type": "theory",
+   "stem": "6. 能正确表示下列反应的离子方程式为（ ） \nA. 硫化亚铁溶于稀硝酸中: $\\mathrm{FeS}+2 \\mathrm{H}^{+}=\\mathrm{Fe}^{2+}+\\mathrm{H}_{2} \\mathrm{~S} \\uparrow$\nB. $\\mathrm{NH}_{4} \\mathrm{HCO}_{3}$ 溶于过量的 $\\mathrm{NaOH}$ 溶液中: $\\mathrm{HCO}_{3}{ }^{-}+\\mathrm{OH}^{-}=\\mathrm{CO}_{3}{ }^{2-}+\\mathrm{H}_{2} \\mathrm{O}$\nC. 少量 $\\mathrm{SO}_{2}$ 通入苯酚钠溶液中: $\\mathrm{C}_{6} \\mathrm{H}_{5} \\mathrm{O}^{-}+\\mathrm{SO}_{2}+\\mathrm{H}_{2} \\mathrm{O}=\\mathrm{C}_{6} \\mathrm{H}_{5} \\mathrm{OH}+\\mathrm{HSO}_{3}$\nD. 大理石溶于醋酸中: $\\mathrm{CaCO}_{3}+2 \\mathrm{CH}_{3} \\mathrm{COOH}=\\mathrm{Ca}^{2+}+2 \\mathrm{CH}_{3} \\mathrm{COO}^{-}+\\mathrm{CO}_{2} \\uparrow+\\mathrm{H}_{2} \\mathrm{O}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0012",
+   "type": "theory",
+   "stem": "7. 短周期元素 $W 、 X 、 Y$ 和 $Z$ 的原子序数依次增大. 元素 $W$ 是制备一种高效电 池的重要材料, $X$ 原子的最外层电子数是内层电子数的 2 倍, 元素 $Y$ 是地壳中 含量最丰富的金属元素, $\\mathrm{Z}$ 原子的最外层电子数是其电子层数的 2 倍. 下列说 法错误的是 ( $)$\nA. 元素 W、X的氯化物中, 各原子均满足 8 电子的稳定结构\nB. 元素 $X$ 与氢形成的原子比为 1: 1 的化合物有很多种\nC. 元素 $Y$ 的单质与氢氧化钠溶液或盐酸反应均有氢气生成\nD. 元素 $Z$ 可与元素 $X$ 形成共价化合物 $X Z_{2}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0013",
+   "type": "theory",
+   "stem": "1.（6 分）下列叙述中正确的是（）\nA. 液溴易挥发, 在存放液溴的试剂瓶中应加水封\nB. 能使润湿的淀粉 $\\mathrm{KI}$ 试纸变成蓝色的物质一定是 $\\mathrm{Cl}_{2}$\nC. 某溶液中加入 $\\mathrm{CCl}_{4}, \\mathrm{CCl}_{4}$ 层显紫色, 证明原溶液中存在 $\\mathrm{I}^{-}$\nD. 某溶液中加入 $\\mathrm{BaCl}_{2}$ 溶液, 产生不溶于稀硝酸的白色沉淀, 该溶液一定含 有 $\\mathrm{Ag}^{+}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0014",
+   "type": "theory",
+   "stem": "2.（6 分）下列说法正确的是（）\nA. 医用酒精的浓度通常是 $95 \\%$\nB. 单质硅是将太阳能转化为电能的常用材料\nC. 淀粉、纤维素和油脂都属于天然高分子化合物\nD. 合成纤维和光导纤维都是新型无机非金属材料",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0015",
+   "type": "theory",
+   "stem": "3. （6 分）用 $\\mathrm{N}_{\\mathrm{A}}$ 表示阿伏加德罗常数的值, 下列叙述中不正确的是（）\nA. 分子总数为 $\\mathrm{N}_{\\mathrm{A}}$ 的 $\\mathrm{NO}_{2}$ 和 $\\mathrm{CO}_{2}$ 混合气体中含有的氧原子数为 $2 \\mathrm{~N}_{\\mathrm{A}}$\nB. $28 \\mathrm{~g}$ 乙烯和环丁烷 $\\left(\\mathrm{C}_{4} \\mathrm{H}_{8}\\right)$ 的混合气体中含有的碳原子数为 $2 \\mathrm{~N}_{\\mathrm{A}}$\nC. 常温常压下, $92 \\mathrm{~g}$ 的 $\\mathrm{NO}_{2}$ 和 $\\mathrm{N}_{2} \\mathrm{O}_{4}$ 混合气体含有的原子数为 $6 \\mathrm{~N}_{\\mathrm{A}}$\nD. 常温常压下, $22.4 \\mathrm{~L}$ 氯气与足量的镁粉充分反应, 转移的电子数为 $2 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0016",
+   "type": "theory",
+   "stem": "4. (6 分) 分子式为 $\\mathrm{C}_{5} \\mathrm{H}_{12} \\mathrm{O}$ 且可与金属钠反应放出氢气的有机物有（不考虑立 体异构）（）\nA. 5 种\nB. 6 种\nC. 7 种\nD. 8 种",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0017",
+   "type": "theory",
+   "stem": "5. (6 分) 已知温度 $\\mathrm{T}$ 时水的离子积常数为 $\\mathrm{K}_{\\mathrm{W}}$, 该温度下, 将浓度为 $\\mathrm{a} m o l \\cdot \\mathrm{L}^{-1}$ 的一元酸 $\\mathrm{HA}$ 与 $\\mathrm{b} \\mathrm{mol} \\cdot \\mathrm{L}^{-1}$ 一元碱 $\\mathrm{BOH}$ 等体积混合, 可判定该溶液呈中性的 依据是（）\nA. $a=b$\nB. 混合溶液的 $\\mathrm{pH}=7$\nC. 混合溶液中, $\\mathrm{c}\\left(\\mathrm{H}^{+}\\right)=\\sqrt{\\mathrm{K}_{\\mathrm{W}}} \\mathrm{mol} \\cdot \\mathrm{L}^{-1}$ \nD. 混合溶液中, $\\mathrm{c}\\left(\\mathrm{H}^{+}\\right)+\\mathrm{c}\\left(\\mathrm{B}^{+}\\right)=\\mathrm{c}\\left(\\mathrm{OH}^{-}\\right)+\\mathrm{c}\\left(\\mathrm{A}^{-}\\right)$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0018",
+   "type": "theory",
+   "stem": "6. （6 分）分析下表中各项的排布规律, 按此规律排布第 26 项应为（ ）\n\n\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\n\\hline 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\\\\n\\hline $\\mathrm{C}_{2} \\mathrm{H}_{4}$ & $\\mathrm{C}_{2} \\mathrm{H}_{6}$ & $\\mathrm{C}_{2} \\mathrm{H}_{6} \\mathrm{O}$ & $\\mathrm{C}_{2} \\mathrm{H}_{6} \\mathrm{O}_{2}$ & $\\mathrm{C}_{3} \\mathrm{H}_{6}$ & $\\mathrm{C}_{3} \\mathrm{H}_{8}$ & $\\mathrm{C}_{3} \\mathrm{H}_{8} \\mathrm{O}$ & $\\mathrm{C}_{3} \\mathrm{H}_{8} \\mathrm{O}_{2}$ & $\\mathrm{C}_{4} \\mathrm{H}_{8}$ & $\\mathrm{C}_{4} \\mathrm{H}_{10}$ \\\\\n\\hline\n\\end{tabular}\nA. $\\mathrm{C}_{7} \\mathrm{H}_{16}$\nB. $\\mathrm{C}_{7} \\mathrm{H}_{14} \\mathrm{O}_{2}$\nC. $\\mathrm{C}_{8} \\mathrm{H}_{18}$\nD. $\\mathrm{C}_{8} \\mathrm{H}_{18} \\mathrm{O}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0019",
+   "type": "theory",
+   "stem": "7. （6 分) 短周期元素 $\\mathrm{W} 、 \\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 的原子序数依次增大，其中 $\\mathrm{W}$ 的阴离子 的核外电子数与 $\\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 原子的核外内层电子数相同. $\\mathrm{X}$ 的一种核素在考古 时常用来鉴定一些文物的年代, 工业上采用液态空气分馏方法来生产 $\\mathrm{Y}$ 的单 质，而 $\\mathrm{Z}$ 不能形成双原子分子. 根据以上叙述，下列说法中正确的是（）\nA. 上述四种元素的原子半径大小为 $\\mathrm{W}<\\mathrm{X}<\\mathrm{Y}<\\mathrm{Z}$\nB. $W 、 X 、 Y 、 Z$ 原子的核外最外层电子数的总和为 20\nC. $\\mathrm{W}$ 与 $\\mathrm{Y}$ 可形成既含极性共价键又含非极性共价键的化合物\nD. 由 $\\mathrm{W}$ 与 $\\mathrm{X}$ 组成的化合物的沸点总低于由 $\\mathrm{W}$ 与 $\\mathrm{Y}$ 组成的化合物的沸点",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0020",
+   "type": "theory",
+   "stem": "1. （6 分) 化学无处不在, 与化学有关的说法不正确的是（）\nA. 侯氏制碱法的工艺过程中应用了物质溶解度的差异\nB. 可用蘸浓盐酸的棉棒检验输送氨气的管道是否漏气\nC. 碘是人体必需微量元素, 所以要多吃富含高碘酸的食物\nD. 黑火药由硫磺、硝石、木炭三种物质按一定比例混合制成",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0021",
+   "type": "theory",
+   "stem": "3. （6 分) 短周期元素 $\\mathrm{W} 、 \\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 的原子序数依次增大, 其简单离子都能破 坏水的电离平衡的是（）\nA. $\\mathrm{W}^{2-} 、 \\mathrm{X}^{+}$\nB. $\\mathrm{X}^{+} 、 \\mathrm{Y}^{3+}$\nC. $\\mathrm{Y}^{3+} 、 \\mathrm{Z}^{2-}$\nD. $\\mathrm{X}^{+} 、 \\mathrm{Z}^{2-}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0022",
+   "type": "theory",
+   "stem": "4. (6 分) 银制器皿日久表面会逐渐变黑, 这是生成了 $\\mathrm{Ag}_{2} \\mathrm{~S}$ 的缘故. 根据电化 学原理可进行如下处理: 在铝质容器中加入食盐溶液, 再将变黑的银器浸入 该溶液中，一段时间后发现黑色会裉去. 下列说法正确的是（）\nA. 处理过程中银器一直保持恒重\nB. 银器为正极, $\\mathrm{Ag}_{2} \\mathrm{~S}$ 被还原生成单质银\nC. 该过程中总反应为 $2 \\mathrm{Al}+3 \\mathrm{Ag}_{2} \\mathrm{~S}=6 \\mathrm{Ag}+\\mathrm{Al}_{2} \\mathrm{~S}_{3}$\nD. 黑色褪去的原因是黑色 $\\mathrm{Ag}_{2} \\mathrm{~S}$ 转化为白色 $\\mathrm{AgCl}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0023",
+   "type": "theory",
+   "stem": "7. （6 分) 下列实验中, 所采取的分离方法与对应原理都正确的是（）\n\n\\begin{tabular}{|c|c|c|c|}\n\\hline 选项 & 目的 & 分离方法 & 原理 \\\\\n\\hline $\\mathrm{A}$ & 分离溶于水中的碘 & 乙醇萃取 & 碘在乙醇中的溶解度较大 \\\\\n\\hline $\\mathrm{B}$ & 分离乙酸乙酯和乙醇 & 分液 & 乙酸乙酯和乙醇的密度不同 \\\\\n\\hline $\\mathrm{C}$ & 除去 $\\mathrm{KNO}_{3}$ 固体中混杂的 $\\mathrm{NaCl}$ & 重结晶 & $\\mathrm{NaCl}$ 在水中的溶解度很大 \\\\\n\\hline $\\mathrm{D}$ & 除去丁醇中的乙醚 & 蒸馏 & 丁醇与乙醚的沸点相差较大 \\\\\n\\hline\n\\end{tabular}\nA. $\\mathrm{A}$\nB. $B$\nC. $\\mathrm{C}$\nD. D",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0024",
+   "type": "theory",
+   "stem": "2.（6 分）下列叙述中, 错误的是（）\nA. 苯与浓硝酸、浓硫酸共热并保持 $55 \\sim 60^{\\circ} \\mathrm{C}$ 反应生成硝基苯\nB. 苯乙烯在合适条件下催化加氢可生成乙基环己烷\nC. 乙烯和溴的四氯化碳溶液反应生成 $1,2-$ 二溴乙烷\nD. 甲苯与氯气在光照下反应主要生成 $2,4-$ 二氯甲苯",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0025",
+   "type": "theory",
+   "stem": "3. (6 分) $\\mathrm{N}_{\\mathrm{A}}$ 为阿伏加德罗常数的值。下列叙述正确的是（）\nA. $1.0 \\mathrm{~L} 1.0 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1}$ 的 $\\mathrm{NaAlO}_{2}$ 水溶液中含有的氧原子数为 $2 \\mathrm{~N}_{\\mathrm{A}} \\square$\nB. $12 \\mathrm{~g}$ 石墨烯（单层石墨）中含有六元环的个数为 $0.5 \\mathrm{~N}_{\\mathrm{A}} \\square$\nC. $25^{\\circ} \\mathrm{C}$ 时 $\\mathrm{pH}=13$ 的 $\\mathrm{NaOH}$ 溶液中含有 $\\mathrm{OH}^{-}$的数目为 $0.1 \\mathrm{~N}_{\\mathrm{A}} \\square$\nD. $1 \\mathrm{~mol}$ 的羟基与 $1 \\mathrm{~mol}$ 的氢氧根离子所含电子数均为 $9 \\mathrm{~N}_{\\mathrm{A}} \\square$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0026",
+   "type": "theory",
+   "stem": "6. （6 分) 在 $1200^{\\circ} \\mathrm{C}$ 时, 天然气脱硫工艺中会发生下列反应:\n\n$\\mathrm{H}_{2} \\mathrm{~S}(\\mathrm{~g})+\\frac{3}{2} \\mathrm{O}_{2}(\\mathrm{~g})=\\mathrm{SO}_{2}(\\mathrm{~g})+\\mathrm{H}_{2} \\mathrm{O}(\\mathrm{g}) \\triangle \\mathrm{H}_{1}$\n\n$2 \\mathrm{H}_{2} \\mathrm{~S}(\\mathrm{~g})+\\mathrm{SO}_{2}(\\mathrm{~g})=\\frac{3}{2} \\mathrm{~S}_{2}(\\mathrm{~g})+2 \\mathrm{H}_{2} \\mathrm{O}(\\mathrm{g}) \\triangle \\mathrm{H}_{2}$\n\n$\\mathrm{H}_{2} \\mathrm{~S}(\\mathrm{~g})+\\frac{1}{2} \\mathrm{O}_{2}(\\mathrm{~g})=\\mathrm{S}(\\mathrm{g})+\\mathrm{H}_{2} \\mathrm{O}(\\mathrm{g}) \\triangle \\mathrm{H}_{3}$\n\n$2 \\mathrm{~S}(\\mathrm{~g})=\\mathrm{S}_{2}(\\mathrm{~g}) \\triangle \\mathrm{H}_{4}$\n\n则 $\\triangle \\mathrm{H}_{4}$ 的正确表达式为（ $(\\quad)$\nA. $\\triangle \\mathrm{H}_{4}=\\frac{2}{3}\\left(\\triangle \\mathrm{H}_{1}+\\triangle \\mathrm{H}_{2}-3 \\triangle \\mathrm{H}_{3}\\right)$\nB. $\\triangle \\mathrm{H}_{4}=\\frac{2}{3}\\left(3 \\triangle \\mathrm{H}_{3}-\\triangle \\mathrm{H}_{1}-\\triangle \\mathrm{H}_{2}\\right)$\nC. $\\triangle \\mathrm{H}_{4}=\\frac{3}{2}\\left(\\triangle \\mathrm{H}_{1}+\\triangle \\mathrm{H}_{2}-3 \\triangle \\mathrm{H}_{3}\\right)$\nD. $\\triangle \\mathrm{H}_{4}=\\frac{3}{2}\\left(\\triangle \\mathrm{H}_{1}-\\triangle \\mathrm{H}_{2}-3 \\triangle \\mathrm{H}_{3}\\right)$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0027",
+   "type": "theory",
+   "stem": "7. （6 分) 室温时, $\\mathrm{M}(\\mathrm{OH})_{2}(\\mathrm{~s}) \\rightleftharpoons \\mathrm{M}^{2+}(\\mathrm{aq})+2 \\mathrm{OH}^{-}(\\mathrm{aq}) \\mathrm{K}_{\\mathrm{sp}}=\\mathrm{a}, \\mathrm{c}\\left(\\mathrm{M}^{2+}\\right)$ $=\\mathrm{b} \\mathrm{mol} \\cdot \\mathrm{L}^{-1}$ 时, 溶液的 $\\mathrm{pH}$ 等于 $(\\quad)$\nA. $\\frac{1}{2} \\lg \\left(\\frac{b}{a}\\right)$\nB. $\\frac{1}{2} \\lg \\left(\\frac{a}{b}\\right)$\nC. $14+\\frac{1}{2} \\lg \\left(\\frac{\\mathrm{a}}{\\mathrm{b}}\\right)$\nD. $14+\\frac{1}{2} \\lg \\left(\\frac{b}{a}\\right)$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0028",
+   "type": "theory",
+   "stem": "1. （6 分) 下列化合物中同分异构体数目最少的是（ ）\nA. 戊烷\nB. 戊醇\nC. 戊烯\nD. 乙酸乙酯",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0029",
+   "type": "theory",
+   "stem": "2. (6 分) 化学与社会、生活密切相关, 对下列现象或事实的解释正确的是 $(\\quad)$\n\n\\begin{tabular}{|c|c|c|}\n\\hline 选项 & 现象或事实 & 解释 \\\\\n\\hline A & 用热的烧碱溶液洗去油污 & $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 可直接和油污反应 \\\\\n\\hline B & 漂白粉在空气中久置变质 & $\\begin{array}{l}\\text { 漂白粉中的 } \\mathrm{CaCl}_{2} \\text { 与空气中的 } \\\\\n\\qquad \\mathrm{CO}_{2} \\text { 反应生成 } \\mathrm{CaCO}_{3}\\end{array}$ \\\\\n\\hline C & $\\begin{array}{c}\\text { 施肥时, 草木灰（有效成分为 } \\mathrm{K}_{2} \\mathrm{CO}_{3} \\text { ）不 } \\\\\n\\text { 能与 } \\mathrm{NH}_{4} \\mathrm{Cl} \\text { 混合使用 }\\end{array}$ & $\\begin{array}{l}\\mathrm{K}_{2} \\mathrm{CO}_{3} \\text { 与 } \\mathrm{NH}_{4} \\mathrm{Cl} \\text { 反应生成氨气 } \\\\\n\\text { 会降低肥效 }\\end{array}$ \\\\\n\\hline D & $\\mathrm{FeCl}_{3}$ 溶液可用于铜质印刷线路板制作 & $\\begin{array}{c}\\mathrm{FeCl}_{3} \\text { 能从含有 } \\mathrm{Cu}^{2+} \\text { 的溶液中置 } \\\\\n\\text { 换出铜 }\\end{array}$ \\\\\n\\hline\n\\end{tabular}\nA. A\nB. $B$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0030",
+   "type": "theory",
+   "stem": "3. (6 分) 已知分解 $1 \\mathrm{~mol} \\mathrm{H}_{2} \\mathrm{O}_{2}$ 放出热量 $98 \\mathrm{~kJ}$, 在含少量 $\\mathrm{I}^{-}$的溶液中, $\\mathrm{H}_{2} \\mathrm{O}_{2}$ 分 解的机理为:\n\n$\\mathrm{H}_{2} \\mathrm{O}_{2}+\\mathrm{I}^{-} \\rightarrow \\mathrm{H}_{2} \\mathrm{O}+\\mathrm{IO}^{-} \\quad$ 慢\n\n$\\mathrm{H}_{2} \\mathrm{O}_{2}+\\mathrm{IO}^{-} \\rightarrow \\mathrm{H}_{2} \\mathrm{O}+\\mathrm{O}_{2}+\\mathrm{I}^{-} \\quad$ 快\n\n下列有关该反应的说法正确的是（）\nA. 反应速率与 $\\mathrm{I}^{-}$的浓度有关\nB. $\\mathrm{IO}^{-}$也是该反应的催化剂\nC. 反应活化能等于 $98 \\mathrm{~kJ} \\cdot \\mathrm{mol}^{-1}$\nD. $\\mathrm{v}\\left(\\mathrm{H}_{2} \\mathrm{O}_{2}\\right)=\\mathrm{v}\\left(\\mathrm{H}_{2} \\mathrm{O}\\right)=\\mathrm{v}\\left(\\mathrm{O}_{2}\\right)$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0031",
+   "type": "theory",
+   "stem": "4. (6 分) $\\mathrm{X}, \\mathrm{Y}, \\mathrm{Z}$ 均为短周期元素, $\\mathrm{X}, \\mathrm{Y}$ 处于同一周期, $\\mathrm{X}, \\mathrm{Z}$ 的最低价离 子分别为 $\\mathrm{X}^{2-}$ 和 $\\mathrm{Z}^{-}, \\mathrm{Y}^{+}$和 $\\mathrm{Z}^{-}$具有相同的电子层结构。下列说法正确的是（ )\nA. 原子最外层电子数: $\\mathrm{X}>\\mathrm{Y}>\\mathrm{Z}$\nB. 单质沸点: $\\mathrm{X}>\\mathrm{Y}>\\mathrm{Z}$\nC. 离子半径: $\\mathrm{X}^{2-}>\\mathrm{Y}^{+}>\\mathrm{Z}$\nD. 原子序数: $\\mathrm{X}>\\mathrm{Y}>\\mathrm{Z}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0032",
+   "type": "theory",
+   "stem": "6.（6 分）下列有关仪器使用方法或实验操作正确的是（（）\nA. 洗净的锥形瓶和容量瓶可以放进烘箱烘干\nB. 酸式滴定管装标准溶液前, 必须先用该溶液润洗\nC. 酸碱滴定实验中, 用待滴定溶液润洗雉形瓶以减小实验误差\nD. 用容量瓶配溶液时, 若加水超过刻度线, 立即用滴管吸出多余液体",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0033",
+   "type": "theory",
+   "stem": "1. （6 分）下列过程没有发生化学反应的是（）\nA. 用活性炭去除冰箱中的异味\nB. 用热碱水清除炊具上残留的油污\nC. 用浸泡过高锰酸钾溶液的硅藻土保鲜水果\nD. 用含硅胶、铁粉的透气小袋与食品一起密封包装",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0034",
+   "type": "theory",
+   "stem": "2.（6 分）四联苯\nA. 3 种\nB. 4 种\nC. 5 种\nD. 6 种",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0035",
+   "type": "theory",
+   "stem": "3. (6 分）下列反应中, 反应后固体物质增重的是（ ）\nA. 氢气通过灼热的 $\\mathrm{CuO}$ 粉末\nB. 二氧化碳通过 $\\mathrm{Na}_{2} \\mathrm{O}_{2}$ 粉末\nC. 铝与 $\\mathrm{Fe}_{2} \\mathrm{O}_{3}$ 发生铝热反应\nD. 将锌粒投入 $\\mathrm{Cu}\\left(\\mathrm{NO}_{3}\\right)_{2}$ 溶液",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0036",
+   "type": "theory",
+   "stem": "5. （6 分）一定温度下, 下列溶液的离子浓度关系式正确的是（））\nA. $\\mathrm{pH}=5$ 的 $\\mathrm{H}_{2} \\mathrm{~S}$ 溶液中, $\\mathrm{c}\\left(\\mathrm{H}^{+}\\right)=\\mathrm{c}\\left(\\mathrm{HS}^{-}\\right)=1 \\times 10^{-5} \\mathrm{~mol}^{-} \\mathrm{L}^{-1}$\nB. $\\mathrm{pH}=\\mathrm{a}$ 的氨水溶液, 稀释 10 倍后, 其 $\\mathrm{pH}=\\mathrm{b}$, 则 $\\mathrm{a}=\\mathrm{b}+1$\nC. $\\mathrm{pH}=2$ 的 $\\mathrm{H}_{2} \\mathrm{C}_{2} \\mathrm{O}_{4}$ 溶液与 $\\mathrm{pH}=12$ 的 $\\mathrm{NaOH}$ 溶液任意比例混合: $\\mathrm{c}\\left(\\mathrm{Na}^{+}\\right)+\\mathrm{c}($ $\\left.\\mathrm{H}^{+}\\right)=\\mathrm{c}\\left(\\mathrm{OH}^{-}\\right)+\\mathrm{c}\\left(\\mathrm{HC}_{2} \\mathrm{O}_{4}^{-}\\right)$\n\nD. $\\mathrm{pH}$ 相同的(1) $\\mathrm{CH}_{3} \\mathrm{COONa}^{2}\\left(\\mathrm{NaHCO}_{3}(3) \\mathrm{NaClO}\\right.$ 三种溶液的 $\\mathrm{c}\\left(\\mathrm{Na}^{+}\\right):$(1) $>$(2) $>$ (3)",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0037",
+   "type": "theory",
+   "stem": "7. （6 分) 室温下将 $1 \\mathrm{~mol}$ 的 $\\left.\\mathrm{CuSO}_{4} \\cdot 5 \\mathrm{H}_{2} \\mathrm{O} （ \\mathrm{~s}\\right)$ 溶于水会使溶液温度降低, 热效 应为 $\\triangle \\mathrm{H} 1$, 将 $1 \\mathrm{~mol}$ 的 $\\mathrm{CuSO}_{4}(\\mathrm{~s})$ 溶于水会使溶液温度升高, 热效应为 $\\triangle \\mathrm{H}_{2}$; $\\mathrm{CuSO}_{4} \\cdot 5 \\mathrm{H}_{2} \\mathrm{O}$ 受热分解的化学方程式为: $\\mathrm{CuSO}_{4} \\cdot 5 \\mathrm{H}_{2} \\mathrm{O}(\\mathrm{s})=\\mathrm{CuSO}_{4}(\\mathrm{~s})$ $+5 \\mathrm{H}_{2} \\mathrm{O}$ （1），热效应为 $\\triangle \\mathrm{H}_{3}$. 则下列判断正确的是（ $）$\nA. $\\triangle \\mathrm{H}_{2}>\\triangle \\mathrm{H}_{3}$\nB. $\\triangle \\mathrm{H}_{1}>\\triangle \\mathrm{H}_{3}$\nC. $\\triangle \\mathrm{H}_{1}=\\triangle \\mathrm{H}_{2}+\\triangle \\mathrm{H}_{3}$\nD. $\\triangle \\mathrm{H}_{1}+\\Delta \\mathrm{H}_{2}>\\Delta \\mathrm{H}_{3}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0038",
+   "type": "theory",
+   "stem": "1. （6 分) 我国清代《本草纲目拾遗》中记叙无机药物 335 种, 其中“强水”条 目下写道: “性最烈, 能蚀五金...其水甚强, 五金八石皆能穿第, 惟玻璃可盛 。”这里的“强水”是指（ $\\quad$ )\nA. 氨水\nB. 硝酸\nC. 醋\nD. 卤水",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0039",
+   "type": "theory",
+   "stem": "2. (6 分) $\\mathrm{N}_{\\mathrm{A}}$ 为阿伏伽德罗常数的值。下列说法正确的是（）\nA. $18 \\mathrm{gD}_{2} \\mathrm{O}$ 和 $18 \\mathrm{gH}_{2} \\mathrm{O}$ 中含有的质子数均为 $10 \\mathrm{~N}_{\\mathrm{A}}$\nB. $2 \\mathrm{~L} 0.5 \\mathrm{~mol} / \\mathrm{L}$ 亚硫酸溶液中含有的 $\\mathrm{H}^{+}$个数为 $2 \\mathrm{~N}_{\\mathrm{A}}$\nC. 过氧化钠与水反应时, 生成 $0.1 \\mathrm{~mol}$ 氧气转移的电子数为 $0.2 \\mathrm{~N}_{\\mathrm{A}}$\nD. 密闭容器中 $2 \\mathrm{molNO}$ 与 $1 \\mathrm{molO}_{2}$ 充分反应, 产物的分子数为 $2 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0040",
+   "type": "theory",
+   "stem": "4. （6 分）下列实验中, 对应的现象以及结论都正确且两者具有因果关系的是（\n\n\\begin{tabular}{|c|c|c|c|}\n\\hline & 实验 & 现象 & 结论 \\\\\n\\hline A & $\\begin{array}{c}\\text { 将硝酸加入过量铁粉中, 充分反应后 } \\\\\n\\text { 滴加 KSCN 溶液 }\\end{array}$ & $\\begin{array}{l}\\text { 有气体生成, 溶液 } \\\\\n\\text { 成血红色 }\\end{array}$ & $\\begin{array}{l}\\text { 稀硝酸将 } \\mathrm{Fe} \\text { 氧化为 } \\\\\n\\mathrm{Fe}^{3+}\\end{array}$ \\\\\n\\hline B & $\\begin{array}{l}\\text { 将铜粉加入 } 1.0 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\text { 的 } \\mathrm{Fe}_{2}\\left(\\mathrm{SO}_{4}\\right) \\\\\n{ }_{3} \\text { 溶液中 }\\end{array}$ & $\\begin{array}{l}\\text { 溶液变蓝, 有黑色 } \\\\\n\\text { 固体出现 }\\end{array}$ & 金属 $\\mathrm{Fe}$ 比 $\\mathrm{Cu}$ 活泼 \\\\\n\\hline C & $\\begin{array}{c}\\text { 用坩埚钳夹住用砂纸仔细打磨过的 } \\\\\n\\text { 铝箭在酒精灯上加热 }\\end{array}$ & $\\begin{array}{l}\\text { 熔化后的液态铝滴 } \\\\\n\\text { 落下来 }\\end{array}$ & $\\begin{array}{l}\\text { 金属铝的熔点比较 } \\\\\n\\text { 低 }\\end{array}$ \\\\\n\\hline D & 将 $0.1 \\mathrm{~mol}^{-\\mathrm{L}^{-}} 1 \\mathrm{MgSO}_{4}$ 溶液滳入 & 先有白色沉淀生成 & $\\mathrm{Cu}(\\mathrm{OH})_{2}$ 的溶度积 \\\\\n\\hline\n\\end{tabular}\n\n\n\n\\begin{tabular}{|l|l|l|l|}\n\\hline $\\mathrm{NaOH}$ 溶液中至不在有沉淀产生, & $\\begin{array}{l}\\text { 后 变 为浅 蓝色 } \\\\\n\\text { 再滴加 } 0.1 \\mathrm{moleL}^{-1} \\mathrm{CuSO}_{4} \\text { 溶液 }\\end{array}$ & $\\begin{array}{l}\\text { 沉淀 }\\end{array}$ & 小g $(\\mathrm{OH})_{2}$ 的 \\\\\n\\hline\n\\end{tabular}\nA. $\\mathrm{A}$\nB. $B$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0041",
+   "type": "theory",
+   "stem": "6. （6 分) $\\mathrm{W} 、 \\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 均为的短周期主族元素, 原子序数依次增加, 且原子 核外 $\\mathrm{L}$ 电子层的电子数分别为 $0 、 5 、 8 、 8$, 它们的最外层电子数之和为 18 . 下列说法正确的是（）\nA. 单质的沸点: $W>X$\nB. 阴离子的还原性: $W>Z$\nC. 氧化物的水化物的酸性: $\\mathrm{Y}<\\mathrm{Z}$\nD. $\\mathrm{X}$ 与 $\\mathrm{Y}$ 不能存在于同一离子化合物中",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0042",
+   "type": "theory",
+   "stem": "1. （6 分) 食品干燥剂应无毒、无味、无腐蚀性及环境友好. 下列说法错误的 是 $(\\quad)$\nA. 硅胶可用作食品干燥剂\nB. $\\mathrm{P}_{2} \\mathrm{O}_{5}$ 不可用作食品干燥剂\nC. 六水合氯化䥻可用作食品干燥剂\nD. 加工后具有吸水性的植物纤维可用作食品干燥剂",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0043",
+   "type": "theory",
+   "stem": "2. (6 分) 某羧酸酯的分子式为 $\\mathrm{C}_{18} \\mathrm{H}_{26} \\mathrm{O}_{5}, 1 \\mathrm{~mol}$ 该酯完全水解可得到 $1 \\mathrm{~mol}$ 羧 酸和 $2 \\mathrm{~mol}$ 乙醇，该垟酸的分子式为（）\nA. $\\mathrm{C}_{14} \\mathrm{H}_{18} \\mathrm{O}_{5}$\nB. $\\mathrm{C}_{14} \\mathrm{H}_{16} \\mathrm{O}_{4}$\nC. $\\mathrm{C}_{16} \\mathrm{H}_{22} \\mathrm{O}_{5}$\nD. $\\mathrm{C}_{16} \\mathrm{H}_{20} \\mathrm{O}_{5}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0044",
+   "type": "theory",
+   "stem": "3. （6 分) 原子序数依次增大的元素 $a 、 b 、 c 、 d$, 它们的最外层电子数分别为 1 、6、7、1. $\\mathrm{a}^{-}$的电子层结构与氦相同, $\\mathrm{b}$ 和 $\\mathrm{c}$ 的次外层有 8 个电子, $\\mathrm{c}^{-}$和 $\\mathrm{d}^{+}$ 的电子层结构相同. 下列叙述错误的是（）\nA. $\\mathrm{a}$ 和其他 3 种元素均能形成共价化合物\nB. 元素的非金属性次序为 $\\mathrm{c}>\\mathrm{b}>\\mathrm{a}$\nC. $\\mathrm{d}$ 和其他 3 种元素均能形成离子化合物\nD. 元素 $a 、 b 、 c$ 各自最高和最低化合价的代数和分别为 $0 、 4 、 6$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0045",
+   "type": "theory",
+   "stem": "4. （6 分) $\\mathrm{N}_{\\mathrm{A}}$ 代表阿伏加德罗常数的值. 下列叙述正确的是（））\nA. $60 \\mathrm{~g}$ 丙醇中存在的共价键总数为 $10 \\mathrm{~N}_{\\mathrm{A}}$\nB. $1 \\mathrm{~L} 0.1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1}$ 的 $\\mathrm{NaHCO}_{3}$ 溶液中 $\\mathrm{HCO}_{3}{ }^{-}$和 $\\mathrm{CO}_{3}{ }^{2-}$ 离子数之和为 $0.1 \\mathrm{~N}_{\\mathrm{A}}$\nC. 钠在空气中燃烧可生成多种氧化物. $23 \\mathrm{~g}$ 钠充分燃烧时转移电子数为 $1 \\mathrm{~N}_{\\mathrm{A}}$\nD. $235 \\mathrm{~g}$ 核素 ${ }_{92}{ }^{235} \\mathrm{U}$ 发生裂变反应: ${ }_{92}{ }^{235} \\mathrm{U}+{ }_{0}{ }^{1}$ 裂变 ${ }_{\\rightarrow}^{90}{ }^{90} \\mathrm{Sr}+{ }_{54}{ }^{136} \\mathrm{Xe}+10_{0}{ }^{1} \\mathrm{n}$ 净产生\n\n的中子 $\\left({ }_{0}^{1} \\mathrm{n}\\right)$ 数为 $10 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0046",
+   "type": "theory",
+   "stem": "5. (6 分) 分子式为 $\\mathrm{C}_{5} \\mathrm{H}_{10} \\mathrm{O}_{2}$ 且可与碳酸氢钠溶液反应放出气体的有机化合物 有 $(\\quad)$\nA. 3 种\nB. 4 种\nC. 5 种\nD. 6 种",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0047",
+   "type": "theory",
+   "stem": "1. （6 分）化学与生活密切相关, 下列有关说法错误的是（）\nA. 用灼烧的方法可以区分蚕丝和人造纤维\nB. 食用油反复加热会产生稠环芳香烃等有害物质\nC. 加热能杀死流感病毒是因为蛋白质受热变性\nD. 医用消毒酒精中乙醇的浓度为 $95 \\%$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0048",
+   "type": "theory",
+   "stem": "2. (6 分) 设 $\\mathrm{N}_{\\mathrm{A}}$ 为阿伏加德罗常数值. 下列有关叙述正确的是（）\nA. $14 \\mathrm{~g}$ 乙烯和丙烯混合气体中的氢原子数为 $2 \\mathrm{~N}_{\\mathrm{A}}$\nB. $1 \\mathrm{~mol} \\mathrm{~N}_{2}$ 与 $4 \\mathrm{~mol} \\mathrm{H}_{2}$ 反应生成的 $\\mathrm{NH}_{3}$ 分子数为 $2 \\mathrm{~N}_{\\mathrm{A}}$\nC. $1 \\mathrm{~mol} \\mathrm{Fe}$ 溶于过量硝酸, 电子转移数为 $2 \\mathrm{~N}_{\\mathrm{A}}$\nD. 标准状况下, $2.24 \\mathrm{~L} \\mathrm{CCl}_{4}$ 含有的共价键数为 $0.4 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0049",
+   "type": "theory",
+   "stem": "3. （6 分）下列关于有机化合物的说法正确的是（ ）\nA. 2- 甲基丁烷也称异丁烷\nB. 由乙烯生成乙醇属于加成反应\nC. $\\mathrm{C}_{4} \\mathrm{H}_{9} \\mathrm{Cl}$ 有 3 种同分异构体\nD. 油脂和蛋白质都属于高分子化合物",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0050",
+   "type": "theory",
+   "stem": "4.（6 分）下列实验操作能达到实验目的是（）\nA. 用长颈漏斗分离出乙酸与乙醇反应的产物\nB. 用向上排空气法收集铜粉与稀硝酸反应产生的 NO\nC. 配制氯化铁溶液时, 将氯化铁溶解在较浓的盐酸中再加水稀释\nD. 将 $\\mathrm{Cl}_{2}$ 与 $\\mathrm{HCl}$ 混合气体通过饱和食盐水可得到纯净的 $\\mathrm{Cl}_{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0051",
+   "type": "theory",
+   "stem": "1.（6 分）下列关于燃料的说法错误的是（）\nA. 燃料燃烧产物 $\\mathrm{CO}_{2}$ 是温室气体之一\nB. 化石燃料完全燃烧不会造成大气污染\nC. 以液化石油气代替燃油可减少大气污染\nD. 燃料不完全燃烧排放的 $C O$ 是大气污染物之一",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0052",
+   "type": "theory",
+   "stem": "2.（6 分）下列各组中的物质均能发生加成反应的是（）\nA. 乙烯和乙醇\nB. 苯和氯乙烯\nC. 乙酸和溴乙烷\nD. 丙烯和丙烷",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0053",
+   "type": "theory",
+   "stem": "3. (6 分) $a 、 b 、 c 、 d$ 为短周期元素, $a$ 的原子中只有 1 个电子, $b^{2-}$ 和 $c^{+}$的电 子层结构相同， $\\mathrm{d}$ 与 $\\mathrm{b}$ 同族. 下列叙述错误的是（）\nA. $\\mathrm{a}$ 与其他三种元素形成的二元化合物中其化合价均为 +1\nB. $b$ 与其他三种元素均可形成至少两种二元化合物\nC. $\\mathrm{c}$ 的原子半径是这些元素中最大的\nD. $\\mathrm{d}$ 与 a 形成的化合物的溶液呈弱酸性",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0054",
+   "type": "theory",
+   "stem": "4. （6 分）分子式为 $\\mathrm{C}_{4} \\mathrm{H}_{8} \\mathrm{Cl}_{2}$ 的有机物共有（不含立体异构）（）\nA. 7 种\nB. 8 种\nC. 9 种\nD. 10 种",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0055",
+   "type": "theory",
+   "stem": "5. (6 分) $\\mathrm{Mg}-\\mathrm{AgCl}$ 电池是一种以海水为电解质溶液的水激活电池。下列叙述 错误的是 ( $)$\nA. 负极反应式为 $\\mathrm{Mg}-2 \\mathrm{e}^{-}=\\mathrm{Mg}^{2+}$\nB. 正极反应式为 $\\mathrm{Ag}^{+}+\\mathrm{e}^{-}=\\mathrm{Ag}$\nC. 电池放电时 $\\mathrm{Cl}^{-}$由正极向负极迁移\nD. 负极会发生副反应 $\\mathrm{Mg}+2 \\mathrm{H}_{2} \\mathrm{O}=\\mathrm{Mg}(\\mathrm{OH})_{2}+\\mathrm{H}_{2} \\uparrow$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0056",
+   "type": "theory",
+   "stem": "6. （6 分) 某白色粉末由两种物质组成, 为鉴别其成分进行如下实验:\n\n(1)取少量样品加入足量水仍有部分固体末溶解: 再加入足量稀盐酸, 有气泡产生 ，固体全部溶解; (2)取少量样品加入足量稀硫酸有气泡产生, 振荡后仍有固体存在.\n\n该白色粉末可能为（ $)$\nA. $\\mathrm{NaHCO}_{3} 、 \\mathrm{Al}(\\mathrm{OH})_{3}$\nB. $\\mathrm{AgCl} 、 \\mathrm{NaHCO}_{3}$\nC. $\\mathrm{Na}_{2} \\mathrm{SO}_{3} 、 \\mathrm{BaCO}_{3}$\nD. $\\mathrm{Na}_{2} \\mathrm{CO}_{3} 、 \\mathrm{CuSO}_{4}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0057",
+   "type": "theory",
+   "stem": "7.（6 分）下列实验操作能达到实验目的是（）\n\n\\begin{tabular}{|c|c|c|}\n\\hline & 实验目的 & 实验操作 \\\\\n\\hline A. & 制备 $\\mathrm{Fe}(\\mathrm{OH})_{3}$ 胶体 & 将 $\\mathrm{NaOH}$ 浓溶液滴加到饱和 $\\mathrm{FeCl}_{3}$ 溶液中 \\\\\n\\hline B. & 由 $\\mathrm{MgCl}_{2}$ 溶液制备无水 & 将 $\\mathrm{MgCl}_{2}$ 溶液加热蒸干 \\\\\n$\\mathrm{MgCl}_{2}$ & 除去 $\\mathrm{Cu}$ 粉中混有的 $\\mathrm{CuO}$ & 加入稀硝酸溶液，过滤、洗涤、干燥 \\\\\n\\hline C. & 比较水与乙醇中氢的活泼性 & 分别将少量钠投入到盛有水和乙醇的烧杯中 \\\\\n\\hline D.\n\\end{tabular}\nA. $A$\nB. $B$\nC. C\nD. D",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0058",
+   "type": "theory",
+   "stem": "1. (3 分) 化学在生活中有着广泛的应用, 下列对应关系错误的是（）\n\n\\begin{tabular}{|c|c|c|}\n\\hline 选项 & 化学性质 & 实际应用 \\\\\n\\hline $\\mathrm{A}$ & $\\mathrm{ClO}_{2}$ 具有强氧化性 & 自来水消毒杀菌 \\\\\n\\hline $\\mathrm{B}$ & $\\mathrm{SO}_{2}$ 具有还原性 & 用作漂白剂 \\\\\n\\hline $\\mathrm{C}$ & $\\mathrm{NaHCO}$ 受热易分解并且生成气体 & 焙制糕点 \\\\\n\\hline $\\mathrm{D}$ & $\\mathrm{Al}(\\mathrm{OH})_{3}$ 分解吸收大量热量并有 $\\mathrm{H}_{2} \\mathrm{O}$ \\\\\n生成\n\\end{tabular}\nA. $\\mathrm{A}$\nB. $B$\nC. $\\mathrm{C}$\nD. D",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0059",
+   "type": "theory",
+   "stem": "2. (3 分) 下列说法错误的是 ( )\nA. 乙烷光照下能与浓盐酸发生取代反应\nB. 乙烯可以用作生产食品包装材料的原料\nC. 乙醇室温下在水中的溶解度大于溴乙烷\nD. 乙酸和甲酸甲酯互为同分异构体",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0060",
+   "type": "theory",
+   "stem": "3. (3 分) 下列有关实验的操作正确的是（）\n\n\\begin{tabular}{|c|c|c|}\n\\hline & 实验 & 操作 \\\\\n\\hline A & $\\begin{array}{l}\\text { 除去 } \\mathrm{NaHCO}_{3} \\text { 固体 中混有的 } \\\\\n\\mathrm{NH}_{4} \\mathrm{Cl}\\end{array}$ & 直接将固体加热 \\\\\n\\hline B & $\\begin{array}{c}\\text { 实验室收集 } \\mathrm{Cu} \\text { 与稀硝酸反应成 } \\\\\n\\text { 的 } \\mathrm{NO}\\end{array}$ & 向上排空气法收集 \\\\\n\\hline C & 检验乙酸具有酸性 & $\\begin{array}{l}\\text { 配制乙酸溶液, 滴加 } \\mathrm{NaHCO}_{3} \\text { 溶液有气 } \\\\\n\\text { 泡产生 }\\end{array}$ \\\\\n\\hline D & 测定某稀硫酸的浓度 & $\\begin{array}{l}\\text { 取 } 20.00 \\mathrm{ml} \\text { 该稀硫酸于干净的雉形㔙 } \\\\\n\\quad \\text { 中, 用 } \\\\\n0.1000 \\mathrm{~mol} / \\mathrm{L} \\text { 的 } \\mathrm{NaOH} \\text { 标准液进行滴定 }\\end{array}$ \\\\\n\\hline\n\\end{tabular}\nA. $A$\nB. $B$\nC. $\\mathrm{C}$\nD. D",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0061",
+   "type": "theory",
+   "stem": "5. (3 分) 锌 - 空气燃料电池可用作电动车动力电源, 电池的电解质溶液为 $\\mathrm{KOH}$ 溶液, 反应为 $2 \\mathrm{Zn}+\\mathrm{O}_{2}+4 \\mathrm{OH}^{-}+2 \\mathrm{H}_{2} \\mathrm{O}=2 \\mathrm{Zn}(\\mathrm{OH}) 4^{2-}$. 下列说法正确的是\nA. 充电时, 电解质溶液中 $\\mathrm{K}^{+}$向阳极移动\nB. 充电时, 电解质溶液中 $\\mathrm{c}\\left(\\mathrm{OH}^{-}\\right)$逐渐减小\nC. 放电时, 负极反应为: $\\mathrm{Zn}+4 \\mathrm{OH}^{-}-2 \\mathrm{e}^{-}=\\mathrm{Zn}(\\mathrm{OH}) 4^{2-}$\nD. 放电时, 电路中通过 $2 \\mathrm{~mol}$ 电子, 消耗氧气 $22.4 \\mathrm{~L}$ (标准状况)",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0062",
+   "type": "theory",
+   "stem": "6. (3 分) 四种短周期主族元素 $W 、 X 、 Y 、 Z$ 的原子序数依次增大, $W 、 X$ 的简 单离子具有相同电子层结构, $\\mathrm{X}$ 的原子半径是短周期主族元素原子中最大的, $W$ 与 $Y$ 同族, $Z$ 与 $X$ 形成的离子化合物的水溶液呈中性. 下列说法正确的是\nA. $W$ 与 $X$ 形成的化合物溶于水后溶液呈碱性\nB. 简单离子半径: $\\mathrm{W}<\\mathrm{X}<\\mathrm{Z}$\nC. 气态氢化物的热稳定性: $W<Y$ \nD. 最高价氧化物的水化物的酸性: $Y>Z$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0063",
+   "type": "theory",
+   "stem": "1.（6 分）下列生活用品中主要由合成纤维制造的是（）\nA. 尼龙绳\nB. 宣纸\nC. 羊绒衫\nD. 棉祇衣",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0064",
+   "type": "theory",
+   "stem": "2. （6 分) 《本草衍义》中对精制砒霜过程有如下叙述: “取砒之法, 将生砒就 置火上, 以器覆之, 令砒烟上飞着覆器, 遂凝结累然下垂如乳, 尖长者为胜, 平短者次之。”文中涉及的操作方法是（）\nA. 蒸馏\nB. 升华\nC. 干馏\nD. 萃取",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0065",
+   "type": "theory",
+   "stem": "3.（6 分）已知\n\n(b)\n\n![](https://cdn.mathpix.com/cropped/2023_03_05_375fa149c0ee65c4a57eg-01.jpg?height=160&width=154&top_left_y=1042&top_left_x=745)\n\n$(\\mathrm{d})$\n![](https://cdn.mathpix.com/cropped/2023_03_05_375fa149c0ee65c4a57eg-01.jpg?height=170&width=402&top_left_y=1032&top_left_x=1014)\n\n的分子式均为 $\\mathrm{C}_{6} \\mathrm{H}_{6}$, 下列说法正确的是（ $\\quad$ )\nA. $\\mathrm{b}$ 的同分异构体只有 $\\mathrm{d}$ 和 $\\mathrm{p}$ 两种\nB. 它们的二氯代物均只有三种\nC. 它们均可与酸性高锰酸钾溶液反应\nD. 只有 $\\mathrm{b}$ 的所有原子处于同一平面",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0066",
+   "type": "theory",
+   "stem": "6. （6 分) 短周期主族元素 $\\mathrm{W} 、 \\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 的原子序数依次增大， $\\mathrm{W}$ 的简单氢化 物可用作制冷剂, $\\mathrm{Y}$ 的原子半径是所有短周期主族元素中最大的。由 $X 、 Y$ 和 $\\mathrm{Z}$ 三种元素形成的一种盐溶于水后, 加入稀盐酸, 有黄色沉淀析出, 同时 有刺激性气体产生。下列说法不正确的是（）\nA. $\\mathrm{X}$ 的简单氢化物的热稳定性比 $\\mathrm{W}$ 强\nB. $\\mathrm{Y}$ 与 $\\mathrm{X}$ 的简单离子的具有相同的电子层结构\nC. $\\mathrm{Y}$ 与 $\\mathrm{Z}$ 形成的化合物的水溶液可使蓝色石芯试纸变红\nD. $\\mathrm{Z}$ 与 $\\mathrm{X}$ 属于同一主族, 与 $\\mathrm{Y}$ 属于同一周期",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0067",
+   "type": "theory",
+   "stem": "1.（6 分）下列说法错误的是（）\nA. 糖类化合物也可称为碳水化合物\nB. 维生素 $\\mathrm{D}$ 可促进人体对䥻的吸收\nC. 蛋白质是仅由碳、氢、氧元素组成的物质\nD. 硒是人体必需的微量元素，但不宜摄入过多",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0068",
+   "type": "theory",
+   "stem": "2. (6 分) 阿伏加德罗常数的值为 $\\mathrm{N}_{\\mathrm{A}}$. 下列说法正确的是（）\nA. $1 \\mathrm{~L} 0.1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\mathrm{NH}_{4} \\mathrm{Cl}$ 溶液中, $\\mathrm{NH}_{4}{ }^{+}$的数量为 $0.1 \\mathrm{~N}_{\\mathrm{A}}$\nB. $2.4 \\mathrm{gMg}$ 与 $\\mathrm{H}_{2} \\mathrm{SO}_{4}$ 完全反应, 转移的电子数为 $0.1 \\mathrm{~N}_{\\mathrm{A}}$\nC. 标准状况下, $2.24 \\mathrm{LN}_{2}$ 和 $\\mathrm{O}_{2}$ 的混合气体中分子数为 $0.2 \\mathrm{~N}_{\\mathrm{A}}$\nD. $0.1 \\mathrm{~mol} \\mathrm{H}_{2}$ 和 $0.1 \\mathrm{~mol} \\mathrm{I}$ 于密闭容器中充分反应后, 其分子总数为 $0.2 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0069",
+   "type": "theory",
+   "stem": "3. (6 分) $a 、 b 、 c 、 d$ 为原子序数依次增大的短周期主族元素, $a$ 原子核外电子 总数与 $\\mathrm{b}$ 原子次外层的电子数相同; $\\mathrm{c}$ 所在周期数与族数相同; $\\mathrm{d}$ 与 $\\mathrm{a}$ 同族, 下列叙述正确的是（）\nA. 原子半径: $d>c>b>a$\nB. 4 种元素中 $\\mathrm{b}$ 的金属性最强\nC. $\\mathrm{c}$ 的氧化物的水化物是强碱\nD. $\\mathrm{d}$ 单质的氧化性比 $\\mathrm{a}$ 单质的氧化性强",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0070",
+   "type": "theory",
+   "stem": "4. （6 分) 下列由实验得出的结论正确的是（）\n\n\\begin{tabular}{|c|c|c|}\n\\hline & 实验 & 结论 \\\\\n\\hline A. & $\\begin{array}{l}\\text { 将乙烯通入溴的四氯化碳溶液, 溶液最终 } \\\\\n\\text { 变为无色透明 }\\end{array}$ & $\\begin{array}{c}\\text { 生成的 1，2- 二溴乙烷无色、可 } \\\\\n\\text { 溶于四氯化碳 }\\end{array}$ \\\\\n\\hline B. & $\\begin{array}{l}\\text { 乙醇和水都可与金属钠反应产生可燃性气 } \\\\\n\\text { 体 }\\end{array}$ & $\\begin{array}{c}\\text { 乙醇分子中的氢与水分子中的 } \\\\\n\\text { 氢具有相同的活性 }\\end{array}$ \\\\\n\\hline C. & 用乙酸浸泡水壶中的水垢, 可将其清除 & 乙酸的酸性小于碳酸的酸性 \\\\\n\\hline D. & 甲烷与氯气在光照下反应后的混合气体能 & 生成的氯甲烷具有酸性 \\\\\n\\hline\n\\end{tabular}\n\n使湿润的石蕊试纸变红\nA. $\\mathrm{A}$\nB. $B$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0071",
+   "type": "theory",
+   "stem": "2 \\text { 滳相同浓度的 } \\mathrm{NaCl} \\text { 和 } \\\\\n\\mathrm{Nal} \\text { 溶液 }\\end{array}$ & $\\begin{array}{l}\\text { 一只试管中产生黄色沉 } \\\\\n\\text { 淀，另一支中无明显 } \\\\\n\\text { 现象 }\\end{array}$ & $\\mathrm{K}_{\\mathrm{sp}}(\\mathrm{Agl})<\\mathrm{K}_{\\mathrm{sp}}(\\mathrm{AgCl}$ \\\\\n\\hline\n\\end{tabular}\nA. $\\mathrm{A}$\nB. $B$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0072",
+   "type": "theory",
+   "stem": "1. (6 分) 化学与生活密切相关。下列说法错误的是（）\nA. PM2.5 是指粒径不大于 $2.5 \\mu \\mathrm{m}$ 的可吸人悬浮颗粒物\nB. 绿色化学要求从源头上消除或减少生产活动对环境的污染\nC. 燃煤中加人 $\\mathrm{CaO}$ 可以减少酸雨的形成及温室气体的排放\nD. 天然气和液化石油气是我国目前推广使用的清洁燃料",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0073",
+   "type": "theory",
+   "stem": "2. (6 分) 下列说法正确的是（）\nA. 植物油氢化过程中发生了加成反应\nB. 淀粉和纤维素互为同分异构体\nC. 环己烷与苯可用酸性 $\\mathrm{KMnO}_{4}$ 溶液鉴别\nD. 水可以用来分离溴苯和苯的混合物",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0074",
+   "type": "theory",
+   "stem": "3. (6 分) 下列实验操作规范且能达到目的是（）\n\n\\begin{tabular}{|c|c|c|}\n\\hline & 目的 & 操作 \\\\\n\\hline\n\\end{tabular}\n\n\n\n\\begin{tabular}{|c|c|c|}\n\\hline A. & 取 $20.00 \\mathrm{~mL}$ 盐酸 & $\\begin{array}{l}\\text { 在 } 50 \\mathrm{~mL} \\text { 酸式滴定管中装人盐酸, 调整初始读数为 } \\\\\n\\quad 30.00 \\mathrm{~mL} \\text { 后, 将剩余盐酸放人雉形瓶 }\\end{array}$ \\\\\n\\hline B. & $\\begin{array}{c}\\text { 清洗碘升华实验所 } \\\\\n\\text { 用试管 }\\end{array}$ & 先用酒精清洗，再用水清洗 \\\\\n\\hline $\\mathrm{C}$ & 测定醋酸钠溶液 $\\mathrm{pH}$ & 用玻璃棒蘸取溶液, 点在湿润的 $\\mathrm{pH}$ 试纸上 \\\\\n\\hline D. & $\\begin{array}{c}\\text { 配制浓度 为 } 0.010 \\\\\n\\mathrm{~mol} / \\mathrm{L} \\text { 的 } \\mathrm{KMnO}_{4} \\\\\n\\text { 溶液 }\\end{array}$ & $\\begin{array}{l}\\text { 称取 } \\mathrm{KMnO}_{4} \\text { 固体 } 0.158 \\mathrm{~g} \\text {, 放人 } 100 \\mathrm{~mL} \\text { 容量瓶中, } \\\\\n\\text { 加水溶解并稀释至刻度 }\\end{array}$ \\\\\n\\hline\n\\end{tabular}\nA. $\\mathrm{A}$\nB. $B$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0075",
+   "type": "theory",
+   "stem": "4. (6 分) $\\mathrm{N}_{\\mathrm{A}}$ 为阿伏加德罗常数的值. 下列说法正确的是 （）\nA. $0.1 \\mathrm{~mol}$ 的 ${ }^{11} \\mathrm{~B}$ 中, 含有 $0.6 \\mathrm{~N}_{\\mathrm{A}}$ 个中子\nB. $\\mathrm{pH}=1$ 的 $\\mathrm{H}_{3} \\mathrm{PO}_{4}$ 溶液中, 今含有 $0.1 \\mathrm{~N}_{\\mathrm{A}}$ 个 $\\mathrm{H}^{+}$\nC. $2.24 \\mathrm{~L}$ (标准状况) 苯在 $\\mathrm{O}_{2}$ 中完全燃烧, 得到 $0.6 \\mathrm{~N}_{\\mathrm{A}}$ 个 $\\mathrm{CO}_{2}$ 分子\nD. 密闭容器中 $1 \\mathrm{~mol} \\mathrm{PCl}_{3}$ 与 $1 \\mathrm{~mol} \\mathrm{Cl}_{2}$ 反应制备 $\\mathrm{PCl}_{5}(\\mathrm{~g})$ ， 增加 $2 \\mathrm{~N}_{\\mathrm{A}}$ 个 $\\mathrm{P}-$ $\\mathrm{Cl}$ 键",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0076",
+   "type": "theory",
+   "stem": "6. (6 分) 短周期元素 $W 、 X 、 Y$ 和 $\\mathrm{Z}$ 在周期表中的相对位置如表所示, 这四 种元素原子的最外电子数之和为 21 . 下列关系正确的是 (） \n\n\\begin{tabular}{|c|c|c|c|c|}\n\\hline & & $W$ & $X$ & \\\\\n\\hline $\\mathrm{Y}$ & & & & $Z$ \\\\\n\\hline\n\\end{tabular}\nA. 氢化物沸点: $\\mathrm{W}<\\mathrm{Z}$\nB. 氧化物对应水化物的酸性: $\\mathrm{Y}>\\mathrm{W}$\nC. 化合物熔点: $\\mathrm{Y}_{2} \\mathrm{X}_{3}<\\mathrm{YZ}_{3}$\nD. 简单离子的半径: $\\mathrm{Y}<\\mathrm{X}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0077",
+   "type": "theory",
+   "stem": "1. (6 分) 磷酸亚铁锂 $\\left(\\mathrm{LiFePO}_{4}\\right)$ 电池是新能源汽车的动力电池之一, 采用湿 法冶金工艺回收废旧磷酸亚铁锂电池正极片中的金属, 其流程如下:\n\n![](https://cdn.mathpix.com/cropped/2023_03_05_f21c25e2b97999d253c1g-01.jpg?height=203&width=1670&top_left_y=607&top_left_x=296)\n下列叙述错误的是（ $)$\nA. 合理处理废旧电池有利于保护环境和资源再利用\nB. 从“正极片”中可回收的金属元素有 $\\mathrm{Al} 、 \\mathrm{Fe} 、 \\mathrm{Li}$\nC. “沉淀”反应的金属离子为 $\\mathrm{Fe}^{3+}$\nD. 上述流程中可用硫酸钠代替碳酸钠",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0078",
+   "type": "theory",
+   "stem": "2.（6 分）下列说法错误的是（）\nA. 蔗糖、果糖和麦芽糖均为双糖\nB. 酶是一类具有高选择催化性能的蛋白质\nC. 植物油含不饱和脂肪酸酯, 能使 $\\mathrm{Br}_{2} / \\mathrm{CCl}_{4}$ 褪色\nD. 淀粉和纤维素水解的最终产物均为葡萄糖",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0079",
+   "type": "theory",
+   "stem": "3. （6 分）在生成和纯化乙酸乙酯的实验过程中, 下列操作末涉及的是（）\n\n![](https://cdn.mathpix.com/cropped/2023_03_05_f21c25e2b97999d253c1g-01.jpg?height=474&width=437&top_left_y=1716&top_left_x=293)\n\nA.\n\n![](https://cdn.mathpix.com/cropped/2023_03_05_f21c25e2b97999d253c1g-01.jpg?height=314&width=300&top_left_y=1873&top_left_x=821)\n\nB.\n\n![](https://cdn.mathpix.com/cropped/2023_03_05_f21c25e2b97999d253c1g-01.jpg?height=468&width=165&top_left_y=1719&top_left_x=1208)\n\nC.\n\n![](https://cdn.mathpix.com/cropped/2023_03_05_f21c25e2b97999d253c1g-01.jpg?height=268&width=274&top_left_y=1922&top_left_x=1482)\n\nD.",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0080",
+   "type": "theory",
+   "stem": "4. （6 分) $\\mathrm{N}_{\\mathrm{A}}$ 是阿伏加德罗常数的值, 下列说法正确的是（ ）\nA. $16.25 \\mathrm{gFeCl}_{3}$, 水解形成的 $\\mathrm{Fe}(\\mathrm{OH})_{3}$ 为胶体粒子数为 $0.1 \\mathrm{~N}_{\\mathrm{A}}$\nB. $22.4 \\mathrm{~L}$ (标准状况) 氩气含有的质子数为 $18 \\mathrm{~N}_{\\mathrm{A}}$\nC. $92.0 \\mathrm{~g}$ 甘油 (丙三醇) 中含有羟基数为 $1.0 \\mathrm{~N}_{\\mathrm{A}}$ \nD. $1.0 \\mathrm{molCH}_{4}$ 与 $\\mathrm{Cl}_{2}$ 在光照下生成 $\\mathrm{CH}_{3} \\mathrm{Cl}$ 的分子数为 $1.0 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0081",
+   "type": "theory",
+   "stem": "5. (6 分) 环之间共用一个碳原子的化合物称为螺环化合物, 螺 $(2,2 ）$ 戊烷（ $D$ ) 是最简单的一种, 下列关于该化合物的说法错误的是（）\nA. 与环戊烯互为同分异构体B. 二氯化物超过两种\nC. 所有碳原子均处同一平面 D. 生成 $1 \\mathrm{molC}_{5} \\mathrm{H}_{12}$, 至少需要 $2 \\mathrm{molH}_{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0082",
+   "type": "theory",
+   "stem": "6. （6 分）主族元素 $W 、 X 、 Y 、 Z$ 的原子序数依次增加, 且均不大于 20. W、X $、 Z$ 最外层电子数之和为 $10 ; W$ 与 $\\mathrm{Y}$ 同族; $W$ 与 $Z$ 形成的化合物可与浓硫酸 反应，其生成物可腐蚀玻璃。下列说法正确的是（ ）\nA. 常温常压下 $X$ 的单质为气态\nB. $Z$ 的氢化物为离子化合物\nC. $Y$ 和 $Z$ 形成的化合物的水溶液呈碱性\nD. $W$ 与 $Y$ 具有相同的最高化合价",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0083",
+   "type": "theory",
+   "stem": "5. （6 分) $\\mathrm{N}_{\\mathrm{A}}$ 代表阿伏加德罗常数的值, 下列说法正确的是（）\nA. 常温常压下, $124 \\mathrm{gP}_{4}$ 中所含 $\\mathrm{P}-\\mathrm{P}$ 键数目为 $4 \\mathrm{~N}_{\\mathrm{A}}$\nB. $100 \\mathrm{~mL} 1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\mathrm{FeCl}_{3}$ 溶液中所含 $\\mathrm{Fe}^{3+}$ 的数目为 $0.1 \\mathrm{~N}_{\\mathrm{A}}$\nC. 标准状况下, $11.2 \\mathrm{~L}$ 甲烷和乙烯混合物中含氢原子数目为 $2 \\mathrm{~N}_{\\mathrm{A}}$\nD. 密闭容器中, $2 \\mathrm{~mol} \\mathrm{SO}_{2}$ 和 $1 \\mathrm{molO}_{2}$ 催化反应后分子总数为 $2 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0084",
+   "type": "theory",
+   "stem": "6.（6 分）我国科学家研发了一种室温下“可呼吸”的 $\\mathrm{Na}-\\mathrm{CO}_{2}$ 二次电池, 将 $\\mathrm{NaClO}_{4}$ 溶于有机溶剂作为电解液。钠和负载碳纳米管的铂网分别作为电极材 料, 电池的总反应为: $3 \\mathrm{CO}_{2}+4 \\mathrm{Na} \\rightleftharpoons 2 \\mathrm{Na}_{2} \\mathrm{CO}_{3}+\\mathrm{C}$, 下列说法错误的是（ ） \n\n![](https://cdn.mathpix.com/cropped/2023_03_10_5a44e0f58578b3d27240g-03.jpg?height=486&width=768&top_left_y=274&top_left_x=313)\nA. 放电时, $\\mathrm{ClO}_{4}^{-}$向负极移动\nB. 充电时释放 $\\mathrm{CO}_{2}$, 放电时吸收 $\\mathrm{CO}_{2}$\nC. 放电时, 正极反应为: $3 \\mathrm{CO}_{2}+4 \\mathrm{e}^{-}=2 \\mathrm{CO}_{3}{ }^{2-}+\\mathrm{C}$\nD. 充电时, 正极反应为: $\\mathrm{Na}^{+}+\\mathrm{e}^{-}=\\mathrm{Na}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0085",
+   "type": "theory",
+   "stem": "7. （6 分）下列实验过程可以达到实验目的是（）\n\n\\begin{tabular}{|c|c|c|}\n\\hline 编号 & 实验目的 & 实验过程 \\\\\n\\hline A & $\\begin{array}{l}\\text { 配制 } 0.4000 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\text { 的 } \\\\\n\\mathrm{NaOH} \\text { 溶液 }\\end{array}$ & $\\begin{array}{c}\\text { 称取 4.0g 固体 } \\mathrm{NaOH} \\text { 于烧杯中, 加入少量蒸馏 } \\\\\n\\text { 水溶解, 转移至 } 250 \\mathrm{~mL} \\text { 容量瓶中定容 }\\end{array}$ \\\\\n\\hline B & 探究维生素 C 的还原性 & $\\begin{array}{c}\\text { 向盛有 } 2 \\mathrm{~mL} \\text { 黄色氯化铁溶液的试管中滴加浓 } \\\\\n\\text { 的维生素 C 溶液, 观察颜色变化 }\\end{array}$ \\\\\n\\hline C & 制取并纯化氢气 & $\\begin{array}{l}\\text { 向稀盐酸中加入锌粒, 将生成的气体依次通过 } \\\\\n\\mathrm{NaOH} \\text { 溶液、浓硫酸和 } \\mathrm{KMnO}_{4} \\text { 溶液 }\\end{array}$ \\\\\n\\hline D & $\\begin{array}{l}\\text { 探究浓度对反应速率的 } \\\\\n\\text { 影响 }\\end{array}$ & $\\begin{array}{r}\\text { 向 } 2 \\text { 支盛有 } 5 \\mathrm{~mL} \\text { 不同浓度 } \\mathrm{NaHSO}_{3} \\text { 溶液的试管 } \\\\\n\\text { 中同时加入 } 2 \\mathrm{~mL}^{2} \\% \\mathrm{H}_{2} \\mathrm{O}_{2} \\text { 溶液, 观察实验现象 }\\end{array}$ \\\\\n\\hline\n\\end{tabular}\nA. A\nB. $B$\nC. $\\mathrm{C}$\nD. D",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0086",
+   "type": "theory",
+   "stem": "1. (6 分) 化学与生活密切相关。下列说法错误的是（）\nA. 泡沬灭火器可用于一般的起火，也适用于电器起火\nB．疫苗一般应冷藏存放，以避免蛋白质变性\nC. 家庭装修时用水性漆替代传统的油性漆，有利于健康及环境\nD. 电热水器用镁棒防止内胆腐蚀, 原理是牺牲阳极的阴极保护法",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0087",
+   "type": "theory",
+   "stem": "2. (6 分) 下列叙述正确的是 ( )\nA. $24 \\mathrm{~g}$ 镁与 $27 \\mathrm{~g}$ 铝中, 含有相同的质子数\nB. 同等质量的氧气和臭氧中, 电子数相同\nC. $1 \\mathrm{~mol}$ 重水与 $1 \\mathrm{~mol}$ 水中, 中子数比为 $2: 1$\nD. $1 \\mathrm{~mol}$ 乙烷和 $1 \\mathrm{~mol}$ 乙烯中, 化学键数相同",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0088",
+   "type": "theory",
+   "stem": "4. (6 分) 下列实验操作不当的是 ( )\nA. 用稀硫酸和锌粒制取 $\\mathrm{H}_{2}$ 时, 加几滴 $\\mathrm{CuSO}_{4}$ 溶液以加快反应速率\nB. 用标准 $\\mathrm{HCl}$ 溶液滴定 $\\mathrm{NaHCO}_{3}$ 溶液来测定其浓度，选择酚唒为指示剂 \nC. 用铂丝蘸取某碱金属的盐溶液灼烧, 火焰呈黄色, 证明其中含有 $\\mathrm{Na}^{+}$\nD. 常压蒸馏时, 加人液体的体积不超过圆底烧瓶容积的三分之二",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0089",
+   "type": "theory",
+   "stem": "7. (6 分) $\\mathrm{W} 、 \\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 均为短周期元素且原子序数依次增大, 元素 $\\mathrm{X}$ 和 $\\mathrm{Z}$ 同 族。盐 YZW 与浓盐酸反应, 有黄绿色气体产生, 此气体同冷烧碱溶液作用, 可得到含 $Y Z W$ 的溶液。下列说法正确的是（）\nA. 原子半径大小为 $\\mathrm{W}<\\mathrm{X}<\\mathrm{Y}<\\mathrm{Z}$\nB. $\\mathrm{X}$ 的氢化物水溶液酸性强于 $\\mathrm{Z}$ 的\nC. $\\mathrm{Y}_{2} \\mathrm{~W}_{2}$ 与 $\\mathrm{ZW}_{2}$ 均含有非极性共价键\nD. 标准状况下 $\\mathrm{W}$ 的单质状态与 $\\mathrm{X}$ 的相同",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0090",
+   "type": "theory",
+   "stem": "1. (6 分) 陶瓷是火与土的结晶, 是中华文明的象征之一, 其形成、性质与化学有着密切的 关系。下列说法错误的是（）\nA.“雨过天晴云破处”所描述的瓷器青色，来自氧化铁\nB. 闻名世界的秦兵马俑是陶制品，由黏土经高温烧结而成\nC. 陶瓷是应用较早的人造材料，主要化学成分是硅酸盐\nD. 陶瓷化学性质稳定，具有耐酸碱侵蚀、抗氧化等优点",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0091",
+   "type": "theory",
+   "stem": "2. ( 6 分 ) 关于化合物 2 - 苯基丙烯 ( ) 下列说法正确的是 $(\\quad)$\nA. 不能使稀高锰酸钾溶液褪色\nB. 可以发生加成聚合反应\nC. 分子中所有原子共平面\nD. 易溶于水及甲苯",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0092",
+   "type": "theory",
+   "stem": "1. (6 分) “春蚕到死丝方尽, 蜡炬成灰泪始干” 是唐代诗人李商隐的著名诗句。下列关于 该诗句中所涉及物质的说法错误的是（）\nA. 蚕丝的主要成分是蛋白质\nB. 蚕丝属于天然高分子材料\nC. “蜡炬成灰”过程中发生了氧化反应\nD. 古代的蜡是高级脂肪酸脂，属于高分子聚合物",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0093",
+   "type": "theory",
+   "stem": "2. (6 分) 已知 $\\mathrm{N}_{\\mathrm{A}}$ 是阿伏加德罗常数的值，下列说法错误的是（）\nA. $3 \\mathrm{~g}^{3} \\mathrm{He}$ 含有的中子数为 $1 \\mathrm{~N}_{\\mathrm{A}}$\nB. $1 \\mathrm{~L} 0.1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1}$ 磷酸钠溶液含有的 $\\mathrm{PO}_{4}{ }^{-}$数目为 $0.1 \\mathrm{~N}_{\\mathrm{A}}$\nC. $1 \\mathrm{molK}_{2} \\mathrm{Cr}_{2} \\mathrm{O}_{7}$ 被还原为 $\\mathrm{Cr}^{3+}$ 转移的电子数为 $6 \\mathrm{~N}_{\\mathrm{A}}$\nD. $48 \\mathrm{~g}$ 正丁烷和 $10 \\mathrm{~g}$ 异丁烷的混合物中共价键数目为 $13 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0094",
+   "type": "theory",
+   "stem": "4. ( 6 分) 下列实验现象与实验操作不相匹配的是 $(\\quad)$\n\n\\begin{tabular}{|c|c|}\n\\hline 实验操作 & 实验现象 \\\\\n\\hline $\\begin{array}{l}\\mathrm{A} \\text { 向盛有高锰酸钾酸性溶液的试管中通人足量的乙烯 } \\\\\n\\text { 后静置 }\\end{array}$ & $\\begin{array}{l}\\text { 溶液的紫色逐渐褪去，静置后溶液 } \\\\\n\\text { 分层 }\\end{array}$ \\\\\n\\hline $\\mathrm{B}$ 将镁条点燃后迅速伸人集满 $\\mathrm{CO}_{2}$ 的集气瓶 & $\\begin{array}{l}\\text { 集气瓶中产生浓烟并有黑色颗粒 } \\\\\n\\text { 产生 }\\end{array}$ \\\\\n\\hline $\\mathrm{C}$ 向盛有饱和硫代硫酸钠溶液的试管中滴加稀盐酸 & $\\begin{array}{l}\\text { 有刺激性气味气体产生，溶液变浑 } \\\\\n\\text { 浊 }\\end{array}$ \\\\\n\\hline $\\begin{array}{c}\\mathrm{D} \\text { 向盛有 } \\mathrm{FeCl}_{3} \\text { 溶液的试管中加过量铁粉, 充分振荡 } \\\\\n\\text { 后加 } 1 \\text { 滴 } \\mathrm{KSCN} \\text { 溶液 }\\end{array}$ & $\\begin{array}{l}\\text { 黄色逐渐消失 }, \\text { 加 KSCN 后溶液颜 } \\\\\n\\text { 色不变 }\\end{array}$ \\\\\n\\hline\n\\end{tabular}\nA. A\nB. $\\mathrm{B}$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0095",
+   "type": "theory",
+   "stem": "5. (6 分 ) 下列化学方程式中, 不能正确表达反应颜色变化的是（）\nA. 向 $\\mathrm{CuSO}_{4}$ 溶液中加人足量 $\\mathrm{Zn}$ 粉，溶液蓝色消失 $\\mathrm{Zn}+\\mathrm{CuSO}_{4}=\\mathrm{Cu}+\\mathrm{ZnSO}_{4}$\nB. 澄清的石灰水久置后出现白色固体 $\\mathrm{Ca}(\\mathrm{OH}){ }_{2}+\\mathrm{CO}_{2}=\\mathrm{CaCO}_{3} \\downarrow+\\mathrm{H}_{2} \\mathrm{O}$\nC. $\\mathrm{Na}_{2} \\mathrm{O}_{2}$ 在空气中放置后由淡黄色变为白色 $2 \\mathrm{Na}_{2} \\mathrm{O}_{2}=2 \\mathrm{Na}_{2} \\mathrm{O}+\\mathrm{O}_{2} \\uparrow$\nD. 向 $\\mathrm{Mg}(\\mathrm{OH})_{2}$ 悬浊液中滴加足量 $\\mathrm{FeCl}_{3}$ 溶液出现红褐色沉淀 $3 \\mathrm{Mg}(\\mathrm{OH})_{2}+2 \\mathrm{FeCl}_{3}=$ $2 \\mathrm{Fe}(\\mathrm{OH})_{3}+3 \\mathrm{MgCl}_{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0096",
+   "type": "theory",
+   "stem": "1. (6 分) 化学与生活密切相关。下列叙述错误的是（）\nA. 高纯硅可用于制作光感电池\nB. 铝合金大量用于高铁建设\nC. 活性炭具有除异味和杀䒩作用\nD. 碘酒可用于皮肤外用消毒",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0097",
+   "type": "theory",
+   "stem": "2.（6 分）下列化合物的分子中，所有原子可能共平面的是（）\nA. 甲苯\nB. 乙烷\nC. 丙炔\nD. 1，3-丁二烯",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0098",
+   "type": "theory",
+   "stem": "3. (6 分) $\\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 均为短周期主族元素, 它们原子的最外层电子数之和是 10. $\\mathrm{X}$ 与 $\\mathrm{Z}$ 同 族, $\\mathrm{Y}$ 最外层电子数等于 $\\mathrm{X}$ 次外层电子数, 且 $\\mathrm{Y}$ 原子半径大于 $\\mathrm{Z}$. 下列叙述正确的是 $(\\quad)$\nA. 熔点: $X$ 的氧化物比 $Y$ 的氧化物高\nB. 热稳定性： $\\mathrm{X}$ 的氢化物大于 $\\mathrm{Z}$ 的氢化物\nC. $\\mathrm{X}$ 与 $\\mathrm{Z}$ 可形成离子化合物 $\\mathrm{ZX}$\nD. $\\mathrm{Y}$ 的单质与 $\\mathrm{Z}$ 的单质均能溶于浓硝酸",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0099",
+   "type": "theory",
+   "stem": "5. (6 分) 设 $\\mathrm{N}_{\\mathrm{A}}$ 为阿伏加德罗常数值。关于常温下 $\\mathrm{pH}=2$ 的 $\\mathrm{H}_{3} \\mathrm{PO}_{4}$ 溶液, 下列说法正确的 是 $(\\quad)$\nA. 每升溶液中的 $\\mathrm{H}^{+}$数目为 $0.02 \\mathrm{~N}_{\\mathrm{A}}$\nB. $\\mathrm{c}\\left(\\mathrm{H}^{+}\\right)=\\mathrm{c}\\left(\\mathrm{H}_{2} \\mathrm{PO}_{4}^{-}\\right)+2 \\mathrm{c}\\left(\\mathrm{HPO}_{4}{ }^{--}\\right)+3 \\mathrm{c}\\left(\\mathrm{PO}_{4}{ }^{3-}\\right)+\\mathrm{c}\\left(\\mathrm{OH}^{-}\\right)$\nC. 加水稀释使电离度增大, 溶液 $\\mathrm{pH}$ 减小\nD. 加人 $\\mathrm{NaH}_{2} \\mathrm{PO}_{4}$ 固体，溶液酸性增强",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0100",
+   "type": "theory",
+   "stem": "6. ( 6 分 ) 下列实验不能达到目的是 ( ）\n\n\\begin{tabular}{|c|l|l|}\n\\hline 选项 & \\multicolumn{1}{|c|}{ 目的 } & \\multicolumn{1}{|c|}{ 实验 } \\\\\n\\hline A. & 制取较高浓度的次氯酸溶液 & 将 $\\mathrm{Cl}_{2}$ 通人碳酸钠溶液中 \\\\\n\\hline B. & 加快氧气的生成速率 & 在过氧化氢溶液中加人少量 $\\mathrm{MnO}_{2}$ \\\\\n\\hline C. & 除去乙酸乙酯中的少量乙酸 & 加人饱和碳酸钠溶液洗涤、分液 \\\\\n\\hline D. & 制备少量二氧化硫气体 & 向饱和亚硫酸钠溶液中滴加浓硫酸 \\\\\n\\hline\n\\end{tabular}\nA. A\nB. $B$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0101",
+   "type": "theory",
+   "stem": "1. (6 分) 国家卫健委公布的新型冠状病毒肺炎诊疗方案指出, 乙醚、 $75 \\%$ 乙醇、含氯消毒 剂、过氧乙酸 $\\left(\\mathrm{CH}_{3} \\mathrm{COOOH}\\right)$ 、氯仿等均可有效灭活病毒。对于上述化学药品, 下列说 法错误的是 ( $\\quad)$\nA. $\\mathrm{CH}_{3} \\mathrm{CH}_{2} \\mathrm{OH}$ 能与水互溶\nB. $\\mathrm{NaClO}$ 通过氧化灭活病毒\nC. 过氧乙酸相对分子质量为 76\nD. 氯仿的化学名称是四氯化碳",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0102",
+   "type": "theory",
+   "stem": "2. (6 分) 紫花前胡醇 ( 提高人体免疫力。有关该化合物, 下列叙述错误的是（）\nA. 分子式为 $\\mathrm{C}_{14} \\mathrm{H}_{14} \\mathrm{O}_{4}$\nB. 不能使酸性重铬酸钾溶液变色 \nC. 能够发生水解反应\nD. 能够发生消去反应生成双键",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0103",
+   "type": "theory",
+   "stem": "3. (6 分）下列气体去除杂质的方法中，不能实现目的的是（）\n\n\\begin{tabular}{|c|c|c|}\n\\hline & 气体 (杂质 $)$ & 方法 \\\\\n\\hline A. & $\\mathrm{SO}_{2}\\left(\\mathrm{H}_{2} \\mathrm{~S}\\right)$ & $\\begin{array}{c}\\text { 通过酸性高锰 } \\\\\n\\text { 酸钾溶液 }\\end{array}$ \\\\\n\\hline B. & $\\mathrm{Cl}_{2}(\\mathrm{HCl})$ & $\\begin{array}{c}\\text { 通过饱和的食 } \\\\\n\\text { 盐水 }\\end{array}$ \\\\\n\\hline C. & $\\mathrm{N}_{2}\\left(\\mathrm{O}_{2}\\right)$ & $\\begin{array}{c}\\text { 通过灼热的铜 } \\\\\n\\text { 丝网 }\\end{array}$ \\\\\n\\hline D. & $\\mathrm{NO}\\left(\\mathrm{NO}_{2}\\right)$ & $\\begin{array}{c}\\text { 通过氢氧化钠 } \\\\\n\\text { 溶液 }\\end{array}$ \\\\\n\\hline\n\\end{tabular}\nA. A\nB. $\\mathrm{B}$\nC. $\\mathrm{C}$\nD. $\\mathrm{D}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0104",
+   "type": "theory",
+   "stem": "5. ( 6 分 ) 1934 年约里奥 - 居里夫妇在核反应中用a粒子 ( 即氦核 ${ }_{2}^{4} \\mathrm{He}$ ) 轰击金属原子 $\\underset{Z}{W} \\mathrm{X}$, 得到核素 ${ }_{\\mathrm{Z}+2}^{30} \\mathrm{Y}$, 开创了人造放射性核素的先河: ${ }_{\\mathrm{Z}} \\mathrm{X}+{ }_{2}^{4} \\mathrm{He} \\rightarrow \\underset{\\mathrm{Z}+2}{30} \\mathrm{Y}+{ }_{0}^{1} \\mathrm{n}$ 其中元素 $\\mathrm{X} 、 \\mathrm{Y}$ 的 最外层电子数之和为 8 . 下列叙述正确的是 $(\\quad)$\nA. ${ }_{Z}^{Z} \\mathrm{X}$ 的相对原子质量为 26\nB. $X 、 Y$ 均可形成三氯化物\nC. $\\mathrm{X}$ 的原子半径小于 $\\mathrm{Y}$ 的\nD. $\\mathrm{Y}$ 仅有一种含氧酸",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0105",
+   "type": "theory",
+   "stem": "1. ( 6 分) 北宋沈括《梦溪笔谈》中记载: “信州铅山有苦泉, 流以为涧。挹其水熬之则成 胆矾，享胆矾则成铜。熬胆矾铁釜, 久之亦化为铜”。下列有关叙述错误的是（）\nA. 胆矾的化学式为 $\\mathrm{CuSO}_{4}$\nB. 胆矾可作为湿法冶铜的原料\nC. “焦之则成胆矾” 是浓缩结晶过程\nD. “熬胆矶铁釜，久之亦化为铜”是发生了置换反应",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0106",
+   "type": "theory",
+   "stem": "2. (6 分) 某白色固体混合物由 $\\mathrm{NaCl} 、 \\mathrm{KCl} 、 \\mathrm{MgSO}_{4} 、 \\mathrm{CaCO}_{3}$ 中的两种组成, 进行如下实验: (1)混合物溶于水, 得到澄清透明溶液; (2)做焰色反应, 通过钴玻璃可观察到紫色; (3)向 溶液中加碱，产生白色沉淀。根据实验现象可判断其组成为（）\nA. $\\mathrm{KCl} 、 \\mathrm{NaCl}$\nB. $\\mathrm{KCl} 、 \\mathrm{MgSO}_{4}$\nC. $\\mathrm{KCl} 、 \\mathrm{CaCO}_{3}$\nD. $\\mathrm{MgSO}_{4} 、 \\mathrm{NaCl}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0107",
+   "type": "theory",
+   "stem": "1. (6 分) 宋代《千里江山图 ) 描绘了山清水秀的美丽景色, 历经千年色彩依然, 其中绿色 来自孔雀石颜料（主要成分\n\n为 $\\left.\\mathrm{Cu}(\\mathrm{OH}){ }_{2} \\cdot \\mathrm{CuCO}_{3}\\right)$, 青色来自蓝铜矿颜料 (主要成分为 $\\left.\\mathrm{Cu}(\\mathrm{OH}) 2 \\cdot 2 \\mathrm{CuCO}_{3}\\right)$ 。下列 说法错误的是 $(\\quad)$\nA. 保存《千里江山图》需控制温度和湿度\nB. 孔雀石、蓝铜矿颜料不易被空气氧化\nC. 孔雀石、蓝铜矿颜料耐酸耐碱\nD. $\\mathrm{Cu}\\left(\\mathrm{OH}_{2}\\right) \\cdot \\mathrm{CuCO}_{3}$ 中铜的质量分数高于 $\\mathrm{Cu}\\left(\\mathrm{OH}_{2}\\right) \\cdot 2 \\mathrm{CuCO}_{3}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0108",
+   "type": "theory",
+   "stem": "3. (6 分) $\\mathrm{N}_{\\mathrm{A}}$ 是阿伏加德罗常数的值。下列说法正确的是（）\nA. $22.4 \\mathrm{~L}$ (标准状况）氮气中含有 $7 \\mathrm{~N}_{\\mathrm{A}}$ 个中子\nB. $1 \\mathrm{~mol}$ 重水比 $1 \\mathrm{~mol}$ 水多 $\\mathrm{N}_{\\mathrm{A}}$ 个质子\nC. $12 \\mathrm{~g}$ 石墨烯和 $12 \\mathrm{~g}$ 金刚石均含有 $\\mathrm{N}_{\\mathrm{A}}$ 个碳原子 D. $1 \\mathrm{~L} 1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\mathrm{NaCl}$ 溶液含有 $28 \\mathrm{~N}_{\\mathrm{A}}$ 个电子",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0109",
+   "type": "theory",
+   "stem": "5.（6 分）对于下列实验，能正确描述其反应的离子方程式是（）\nA. 用 $\\mathrm{Na}_{2} \\mathrm{SO}_{3}$ 溶液吸收少量 $\\mathrm{Cl}_{2}: 3 \\mathrm{SO}_{3}{ }^{-}+\\mathrm{Cl}_{2}+\\mathrm{H}_{2} \\mathrm{O}=2 \\mathrm{HSO}_{3}{ }^{-}+2 \\mathrm{Cl}^{-}+\\mathrm{SO}_{4}{ }^{2}$\nB. 向 $\\mathrm{CaCl}_{2}$ 溶液中通人 $\\mathrm{CO}_{2}: \\mathrm{Ca}^{2+}+\\mathrm{H}_{2} \\mathrm{O}+\\mathrm{CO}_{2}=\\mathrm{CaCO}_{3} \\downarrow+2 \\mathrm{H}^{+}$\nC. 向 $\\mathrm{H}_{2} \\mathrm{O}_{2}$ 溶液中滴加少量 $\\mathrm{FeCl}_{3}: 2 \\mathrm{Fe}^{3+}+\\mathrm{H}_{2} \\mathrm{O}_{2}=\\mathrm{O}_{2} \\uparrow+2 \\mathrm{H}^{+}+2 \\mathrm{Fe}^{2+}$\nD. 同浓度同体积 $\\mathrm{NH}_{4} \\mathrm{HSO}_{4}$ 溶液与 $\\mathrm{NaOH}$ 溶液混合: $\\mathrm{NH}_{4}{ }^{+}+\\mathrm{OH}^{-}=\\mathrm{NH}_{3} \\cdot \\mathrm{H}_{2} \\mathrm{O}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0110",
+   "type": "theory",
+   "stem": "7. ( 6 分) $W 、 X 、 Y 、 Z$ 为原子序数依次增大的短周期元素, 四种元素的核外电子总数满足 $\\mathrm{X}+\\mathrm{Y}=\\mathrm{W}+\\mathrm{Z}$; 化合物 $\\mathrm{XW}_{3}$\n\n与 WZ 相遇会产生白烟。下列叙述正确的是（）\nA. 非金属性: $\\mathrm{W}>\\mathrm{X}>\\mathrm{Y}>\\mathrm{Z}$\nB. 原子半径: $\\mathrm{Z}>\\mathrm{Y}>\\mathrm{X}>\\mathrm{W}$\nC. 元素 $\\mathrm{X}$ 的含氧酸均为强酸\nD. $Y$ 的氧化物水化物为强碱",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0111",
+   "type": "theory",
+   "stem": "1. 我国提出争取在 2030 年前实现碳达峰, 2060 年实现碳中和, 这对于改善环境, 实现绿 色发展至关重要。碳中和是指 $\\mathrm{CO}_{2}$ 的排放总量和减少总量相当。下列措施中能促进碳中和 最直接有效的是\nA. 将重质油裂解为轻质油作为燃料\nB. 大规模开采可燃冰作为清洁燃料\nC. 通过清洁煤技术减少煤燃烧污染\nD. 研发催化剂将 $\\mathrm{CO}_{2}$ 还原为甲醇",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0112",
+   "type": "theory",
+   "stem": "3. 下列过程中的化学反应, 相应的离子方程式正确的是\nA. 用碳酸钠溶液处理水垢中的硫酸铂: $\\mathrm{CO}_{3}^{2-}+\\mathrm{CaSO}_{4}=\\mathrm{CaCO}_{3}+\\mathrm{SO}_{4}^{2-}$\nB. 过量铁粉加人稀硝酸中: $\\mathrm{Fe}+4 \\mathrm{H}^{+}+\\mathrm{NO}_{3}^{-}=\\mathrm{Fe}^{3+}+\\mathrm{NO} \\uparrow+2 \\mathrm{H}_{2} \\mathrm{O}$\nC. 硫酸铝溶液中滴加少量氢氧化钾溶液: $\\mathrm{Al}^{3+}+4 \\mathrm{OH}^{-}=\\mathrm{AlO}_{2}^{-}+2 \\mathrm{H}_{2} \\mathrm{O}$\nD. 氯化铜溶液中通人硫化氢: $\\mathrm{Cu}^{2+}+\\mathrm{S}^{2-}=\\mathrm{CuS} \\downarrow$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0113",
+   "type": "theory",
+   "stem": "5. 我国嫦娥五号探测器带回 $1.731 \\mathrm{~kg}$ 的月球土壤, 经分析发现其构成与地球士壤类似土壤 中含有的短周期元素 $W 、 X 、 Y 、 Z$, 原子序数依次增大, 最外层电子数之和为 $15, X 、 Y$ 、 $\\mathrm{Z}$ 为同周期相邻元素, 且均不与 $\\mathrm{W}$ 同族, 下列结论正确的是\nA. 原子半径大小顺序为 $\\mathrm{W}>\\mathrm{X}>\\mathrm{Y}>\\mathrm{Z}$\nB. 化合物 XW 中的化学键为离子键\nC. $\\mathrm{Y}$ 单质的导电性能弱于 $\\mathrm{Z}$ 单质的\nD. $\\mathrm{Z}$ 的氧化物的水化物的酸性强于碳酸",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0114",
+   "type": "theory",
+   "stem": "1. 化学与人体健康及环境保护息息相关。下列叙述正确的是\nA. 食品加工时不可添加任何防腐剂\nB. 掩埋废旧电池不会造成环境污染\nC. 天然气不完全燃烧会产生有毒气体\nD. 使用含磷洗涤剂不会造成水体污染",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0115",
+   "type": "theory",
+   "stem": "3. 实验室制备下列气体的方法可行的是\n\n\\begin{tabular}{|l|l|l|}\n\\hline & 气体 & 方法 \\\\\n\\hline $\\mathrm{A}$ & 氨气 & 加热氯化铵固体 \\\\\n\\hline $\\mathrm{B}$ & 二氧化氮 & 将铝片加到冷浓硝酸中 \\\\\n\\hline $\\mathrm{C}$ & 硫化氢 & 向硫化钠固体滴加浓硫酸 \\\\\n\\hline $\\mathrm{D}$ & 氧气 & 加热氯酸钾和二氧化锰的混合物 \\\\\n\\hline\n\\end{tabular}\nA. A\nB. B\nC. C\nD. D",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0116",
+   "type": "theory",
+   "stem": "5. $W 、 X 、 Y 、 Z$ 为原子序数依次增大的短周期主族元素, $\\mathrm{Z}$ 的最外层电子数是 $\\mathrm{W}$ 和 $X$ 的最外层电子数之和, 也是 $\\mathrm{Y}$ 的最外层电子数的 2 倍。 $\\mathrm{W}$ 和 $\\mathrm{X}$ 的单质常温下均为气体。下列叙述正确的是\nA. 原子半径: $\\mathrm{Z}>\\mathrm{Y}>\\mathrm{X}>\\mathrm{W}$\nB. $\\mathrm{W}$ 与 $\\mathrm{X}$ 只能形成一种化合物\nC. $Y$ 的氧化物为碱性氧化物, 不与强碱反应 \n\nD. $\\mathrm{W} 、 \\mathrm{X}$ 和 $\\mathrm{Z}$ 可形成既含有离子键又含有共价键的化合物}",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0117",
+   "type": "theory",
+   "stem": "7. 生活中处处有化学, 下列叙述正确的是\nA. HB 铅笔芯的成分为二氧化铅\nB. 碳酸氢钠可做食品膨松剂\nC. 青铜和黄铜是不同结构的单质铜\nD. 焰火中红色来源于钠盐灼烧",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0118",
+   "type": "theory",
+   "stem": "9. 某白色粉末样品, 可能含有 $\\mathrm{Na}_{2} \\mathrm{SO}_{4} 、 \\mathrm{Na}_{2} \\mathrm{SO}_{3} 、 \\mathrm{Na}_{2} \\mathrm{~S}_{2} \\mathrm{O}_{3}$ 和 $\\mathrm{Na}_{2} \\mathrm{CO}_{3}$ 。取少量样品进 行如下实验:\n\n(1)溶于水, 得到无色透明溶液\n\n(2)向(1)的溶液中滴加过量稀盐酸, 溶液变浑浊, 有刺激性气体逸出。离心分离。\n\n(3)取(2)的上层清液, 向其中滴加 $\\mathrm{BaCl}_{2}$ 溶液有沉淀生成。\n\n该样品中确定存在的是\nA. $\\mathrm{Na}_{2} \\mathrm{SO}_{4}, \\mathrm{Na}_{2} \\mathrm{~S}_{2} \\mathrm{O}_{3}$\nB. $\\mathrm{Na}_{2} \\mathrm{SO}_{3}, \\mathrm{Na}_{2} \\mathrm{~S}_{2} \\mathrm{O}_{3}$\nC. $\\mathrm{Na}_{2} \\mathrm{SO}_{4}, \\mathrm{Na}_{2} \\mathrm{CO}_{53}$\nD.\n\n$\\mathrm{DNa}_{2} \\mathrm{SO}_{3}, \\mathrm{Na}_{2} \\mathrm{CO}_{3}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0119",
+   "type": "theory",
+   "stem": "10. 由实验操作和现象, 可得出相应正确结论的是\n\n\\begin{tabular}{|l|l|l|l|}\n\\hline & 实验操作 & 现象 & 结论 \\\\\n\\hline $\\mathrm{A}$ & $\\begin{array}{l}\\text { 向 } \\mathrm{NaBr} \\text { 溶液中滴加过量氯水, 再加入淀粉 } \\\\\n\\mathrm{KI} \\text { 溶液 }\\end{array}$ & 先变橙色, 后变蓝色 & 氧化性: \\\\\n$\\mathrm{Cl}_{2}>\\mathrm{Br}_{2}>\\mathrm{I}_{2}$ \\\\\n\\hline $\\mathrm{B}$ & $\\begin{array}{l}\\text { 向蔗糖溶液中滴加稀硫酸, 水浴加热, 加 } \\\\\n\\text { 人新制的 } \\mathrm{Cu}(\\mathrm{OH})_{2} \\text { 悬浊液 }\\end{array}$ & 无砖红色沉淀 & 蔗糖末发生水解 \\\\\n\\hline & 石蜡油加强热, 将产生的气体通人 $\\mathrm{Br}_{2}$ 的 & 溶液红棕色变无色 \\\\\n$\\mathrm{C}$ & $\\mathrm{CCl}_{4}$ 溶液 & 化中含有不饱和 \\\\\n\\hline\n\\end{tabular}\n\n\n\n\\begin{tabular}{|l|l|l|l|}\n\\hline $\\mathrm{D}$ & 加热试管中的聚氯乙烯薄膜碎片 & 试管口润湿的蓝色 & 氯乙烯加聚是可逆 \\\\\n\\hline\n\\end{tabular}\nA. A\nB. B\nC. C\nD. D",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0120",
+   "type": "theory",
+   "stem": "1. 化学与生活密切相关。下列叙述正确的是\nA. 漂白粉与盐酸可混合使用以提高消毒效果\nB. 温室气体是形成酸雨的主要物质\nC. 棉花、麻和蚕丝均为碳水化合物\nD. 干冰可用在舞台上制造“云雾”",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0121",
+   "type": "theory",
+   "stem": "3. 能正确表示下列反应的离子方程式为\n\nA. 硫化钠溶液和硝酸混合: $\\mathrm{S}^{2-+}+2 \\mathrm{H}^{+}=\\mathrm{H}_{2} \\mathrm{~S} \\uparrow$\n\nB. 明矾溶液与过量氨水湿合: $\\mathrm{Al}^{3+}+4 \\mathrm{NH}_{3}+2 \\mathrm{H}_{2} \\mathrm{O}=\\mathrm{AlO}_{2}^{-}+4 \\mathrm{NH}_{4}^{+}$\n\nC. 硅酸钠溶液中通人二氧化碳: $\\mathrm{SiO}_{3}^{2-}+\\mathrm{CO}_{2}+\\mathrm{H}_{2} \\mathrm{O}=\\mathrm{HSiO}_{3}^{-}+\\mathrm{HCO}_{3}^{-}$\n\nD. 将等物质的量浓度的 $\\mathrm{Ba}(\\mathrm{OH})_{2}$ 和 $\\mathrm{NH}_{4} \\mathrm{HSO}_{4}$ 溶液以体积比 $1: 2$ 混合:\n\n$\\mathrm{Ba}^{2+}+2 \\mathrm{OH}^{-}+2 \\mathrm{H}^{+}+\\mathrm{SO}_{4}^{2-}=\\mathrm{BaSO}_{4} \\downarrow+2 \\mathrm{H}_{2} \\mathrm{O}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0122",
+   "type": "theory",
+   "stem": "5. $\\mathrm{N}_{\\mathrm{A}}$ 为阿伏加德罗常数的值, 下列说法正确的是\nA. $25^{\\circ} \\mathrm{C}, 101 \\mathrm{kPa}$ 下, $28 \\mathrm{~L}$ 氢气中质子的数目为 $2.5 \\mathrm{~N}_{\\mathrm{A}}$\nB. $2.0 \\mathrm{~L} 1.0 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\mathrm{AlCl}_{3}$ 溶液中, $\\mathrm{Al}^{3+}$ 的数目为 $2.0 \\mathrm{~N}_{\\mathrm{A}}$\nC. $0.20 \\mathrm{~mol}$ 苯甲酸完全燃烧, 生成 $\\mathrm{CO}_{2}$ 的数目为 $1.4 \\mathrm{~N}_{\\mathrm{A}}$ \nD. 电解熔融 $\\mathrm{CuCl}_{2}$, 阴极增重 $6.4 \\mathrm{~g}$, 外电路中通过电子的数目为 $0.10 \\mathrm{~N}_{\\mathrm{A}}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0123",
+   "type": "theory",
+   "stem": "6. $Q 、 X 、 Y 、 Z$ 是原子序数依次增大的短周期主族元素, 其最外层电子数之和为 19 。 $\\mathrm{Q} \\mathrm{X} 、 \\mathrm{Y} 、 \\mathrm{Z}$ 位于不 同周期, $\\mathrm{X} 、 \\mathrm{Y}$ 相邻, $\\mathrm{Y}$ 原子最外层电子数是 $\\mathrm{Q}$ 原子内层电子数的 2 倍。下列说法正确的是\nA. 非金属性: $\\mathrm{X}>\\mathrm{Q}$\nB. 单质的熔点: $X>Y$\nC. 简单氢化物的佛点: $Z>Q$\nD. 最高价含氧酸的酸性: $\\mathrm{Z}>\\mathrm{Y}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-chemistry-mcqs-bank-0124",
+   "type": "theory",
+   "stem": "7. 根据实验目的, 下列实验及现象、结论都正确的是\n\n\\begin{tabular}{|c|c|c|c|}\n\\hline $\\begin{array}{l}\\text { 选 } \\\\\n\\text { 项 }\\end{array}$ & 实验目的 & 实验及现象 & 结论 \\\\\n\\hline A & $\\begin{array}{l}\\text { 比较 } \\mathrm{CH}_{3} \\mathrm{COO}^{-} \\text {和 } \\mathrm{HCO}_{3}^{-} \\\\\n\\text {的水解常数 }\\end{array}$ & $\\begin{array}{l}\\text { 分别测浓度均为 } 0.1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\text { 的 } \\\\\n\\mathrm{CH}_{3} \\mathrm{COONH}_{4} \\text { 和 } \\mathrm{NaHCO}_{3} \\text { 溶液的 } \\mathrm{pH} \\text {, 后 } \\\\\n\\text { 者大于前者 }\\end{array}$ & $\\mathrm{K}_{\\mathrm{h}}\\left(\\mathrm{CH}_{3} \\mathrm{COO}^{-}\\right)<\\mathrm{K}_{\\mathrm{h}}(\\mathrm{HCO}$ \\\\\n\\hline B & $\\begin{array}{l}\\text { 检验铁锈中是否含有二价 } \\\\\n\\text { 铁 }\\end{array}$ & $\\begin{array}{l}\\text { 将铁锈落于浓盐酸, 滴人 } \\mathrm{KMnO}_{4} \\text { 溶液, 紫 } \\\\\n\\text { 色褪去 }\\end{array}$ & 铁绣中含有二价铁 \\\\\n\\hline $\\mathrm{C}$ & $\\begin{array}{l}\\text { 探究氢离子浓度对 } \\\\\n\\mathrm{CrO}_{4}^{2-} 、 \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-} \\text { 相互转化 } \\\\\n\\text { 的影响 }\\end{array}$ & $\\begin{array}{l}\\text { 向 } \\mathrm{K}_{2} \\mathrm{CrO}_{4} \\text { 溶液中缓慢滴加硫酸, 黄色变为 } \\\\\n\\text { 橙红色 }\\end{array}$ & $\\begin{array}{l}\\text { 增大氢离子浓度, 转化平衡 } \\\\\n\\text { 向生成 } \\mathrm{Cr}_{2} \\mathrm{O}_{7}^{2-} \\text { 的方向移动 }\\end{array}$ \\\\\n\\hline D & 检验乙醇中是否含有水 & 向乙醇中加人一小粒金属钠, 产生无色气体 & 乙醇中含有水 \\\\\n\\hline\n\\end{tabular}\nA. A\nB. B\nC. C\nD. D",
+   "marks": 1,
+   "answer": "['C']"
+  }
+ ],
+ "category": "Gaokao",
+ "body": " Chemistry Mcqs"
+}

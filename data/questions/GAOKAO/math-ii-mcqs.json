@@ -1,0 +1,1537 @@
+{
+ "code": "gaokao-math-ii-mcqs-bank",
+ "title": "Gaokao -  Math Ii Mcqs",
+ "version": 1,
+ "questionCount": 218,
+ "totalMarks": 218,
+ "questions": [
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0001",
+   "type": "theory",
+   "stem": "1. （5 分) 已知集合 $A=\\{x|| x \\mid \\leqslant 2, x \\in R\\}, B=\\{x \\mid \\sqrt{x} \\leqslant 4, x \\in Z\\}$, 则 $A \\cap B=(\\quad)$\nA. $(0,2)$\nB. $[0,2]$\nC. $\\{0,2\\}$\nD. $\\{0,1,2\\}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0002",
+   "type": "theory",
+   "stem": "2. （5 分) 平面向量 $\\vec{a}, \\vec{b}$, 已知 $\\vec{a}=(4,3), 2 \\vec{a}+\\vec{b}=， 3,18 ＼mathrm{~, ~ 则 ~} \\vec{a}, \\vec{b}$ 夹角 的余弦值等于 ( $)$\nA. $\\frac{8}{65}$\nB. $-\\frac{8}{65}$\nC. $\\frac{16}{65}$\nD. $-\\frac{16}{65}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0003",
+   "type": "theory",
+   "stem": "3. (5 分) 已知复数 $Z=\\frac{\\sqrt{3}+i}{(1-\\sqrt{3} i)^{2}}$, 则 $|z|=(\\quad)$\nA. $\\frac{1}{4}$\nB. $\\frac{1}{2}$\nC. 1\nD. 2",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0004",
+   "type": "theory",
+   "stem": "4. (5 分) 曲线 $y=x^{3}-2 x+1$ 在点 $(1,0)$ 处的切线方程为（ $)$\nA. $y=x-1$\nB. $y=-x+1$\nC. $y=2 x-2$\nD. $y=-2 x+2$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0005",
+   "type": "theory",
+   "stem": "5. (5 分) 中心在原点, 焦点在 $\\mathrm{x}$ 轴上的双曲线的一条渐近线经过点 $(4,2)$, 则它的离心率为 $(\\quad)$\nA. $\\sqrt{6}$\nB. $\\sqrt{5}$\nC. $\\frac{\\sqrt{6}}{2}$\nD. $\\frac{\\sqrt{5}}{2}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0006",
+   "type": "theory",
+   "stem": "7. （5 分) 设长方体的长、宽、高分别为 $2 a 、 a 、 a$, 其顶点都在一个球面上, 则该球的表面积为 $(\\quad)$\nA. $3 \\pi a^{2}$\nB. $6 \\pi a^{2}$\nC. $12 \\pi a^{2}$\nD. $24 \\pi a^{2}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0007",
+   "type": "theory",
+   "stem": "9. （5 分）设偶函数 $f(x)$ 满足 $f(x)=2^{x}-4(x \\geqslant 0)$, 则 $\\{x \\mid f(x-2)>0\\}=($ )\nA. $\\{x \\mid x<-2$ 或 $x>4\\}$\nB. $\\{x \\mid x<0$ 或 $x>4\\}$\nC. $\\{x \\mid x<0$ 或 $x>6\\}$\nD. $\\{x \\mid x<-2$ 或 $x>2\\}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0008",
+   "type": "theory",
+   "stem": "10. (5 分) 若 $\\cos \\alpha=-\\frac{4}{5}, \\alpha$ 是第三象限的角, 则 $\\sin \\left(\\alpha+\\frac{\\pi}{4}\\right)=(\\quad)$\nA. $-\\frac{7 \\sqrt{2}}{10}$\nB. $\\frac{7 \\sqrt{2}}{10}$\nC. $\\frac{\\sqrt{2}}{10}$\nD. $\\frac{\\sqrt{2}}{10}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0009",
+   "type": "theory",
+   "stem": "1. （5 分）已知集合 $M=\\{0,1 ， 2 ， 3 ， 4\\}, N=\\{1,3 ， 5\\}, P=M \\cap N$, 则 $P$ 的子 集共有 $(\\quad)$\nA. 2 个\nB. 4 个\nC. 6 个\nD. 8 个",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0010",
+   "type": "theory",
+   "stem": "2. (5 分) 复数 $\\frac{5 i}{1-2 i}=(\\quad)$\nA. $2-\\mathrm{i}$\nB. $1-2 \\mathrm{i}$\nC. $-2+i$\nD. $-1+2 i$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0011",
+   "type": "theory",
+   "stem": "3. （5 分) 下列函数中, 既是偶函数又在 $(0,+\\infty)$ 上单调递增的函数是 $(\\quad)$\nA. $y=2 x^{3}$\nB. $y=|x|+1$\nC. $y=-x^{2}+4$\nD. $y=2^{-|x|}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0012",
+   "type": "theory",
+   "stem": "4. (5 分) 椭圆 $\\frac{x^{2}}{16}+\\frac{y^{2}}{8}=1$ 的离心率为（）\nA. $\\frac{1}{3}$\nB. $\\frac{1}{2}$\nC. $\\frac{\\sqrt{3}}{3}$\nD. $\\frac{\\sqrt{2}}{2}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0013",
+   "type": "theory",
+   "stem": "6. （5 分) 有 3 个兴趣小组, 甲、乙两位同学各自参加其中一个小组, 每位同 学参加各个小组的可能性相同, 则这两位同学参加同一个兴趣小组的概率为 ( )\nA. $\\frac{1}{3}$\nB. $\\frac{1}{2}$\nC. $\\frac{2}{3}$\nD. $\\frac{3}{4}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0014",
+   "type": "theory",
+   "stem": "7. (5 分) 已知角 $\\theta$ 的顶点与原点重合, 始边与 $\\mathrm{x}$ 轴的正半轴重合, 终边在直 线 $y=2 x$ 上, 则 $\\cos 2 \\theta=(\\quad)$\nA. $-\\frac{4}{5}$\nB. $-\\frac{3}{5}$\nC. $\\frac{3}{5}$\nD. $\\frac{4}{5}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0015",
+   "type": "theory",
+   "stem": "10. (5 分) 在下列区间中, 函数 $f(x)=e^{x}+4 x-3$ 的零点所在的区间为 $(\\quad)$\nA. $\\left(\\frac{1}{4}, \\frac{1}{2}\\right)$\nB. $\\left(-\\frac{1}{4}, 0\\right)$\nC. $\\left(0, \\frac{1}{4}\\right)$\nD. $\\left(\\frac{1}{2}, \\frac{3}{4}\\right)$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0016",
+   "type": "theory",
+   "stem": "1. （5 分）已知集合 $A=\\left\\{x \\mid x^{2}-x-2<0\\right\\}, B=\\{x \\mid-1<x<1\\}$, 则（）\nA. $A \\subsetneq B$\nB. $\\mathrm{B} \\subsetneq \\mathrm{A}$\nC. $A=B$\nD. $A \\cap B=\\varnothing$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0017",
+   "type": "theory",
+   "stem": "2. (5 分) 复数 $z=\\frac{-3+i}{2+i}$ 的共轭复数是（ ）\nA. $2+i$\nB. $2-\\mathrm{i}$\nC. $-1+i$\nD. $-1-i$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0018",
+   "type": "theory",
+   "stem": "8. (5 分) 平面 $\\alpha$ 截球 $\\mathrm{O}$ 的球面所得圆的半径为 1 , 球心 $\\mathrm{O}$ 到平面 $\\alpha$ 的距离为 $\\sqrt{2}$ , 则此球的体积为 ( )\nA. $\\sqrt{6} \\pi$\nB. $4 \\sqrt{3} \\pi$\nC. $4 \\sqrt{6} \\pi$\nD. $6 \\sqrt{3} \\pi$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0019",
+   "type": "theory",
+   "stem": "10. (5 分) 等轴双曲线 $C$ 的中心在原点, 焦点在 $x$ 轴上, $C$ 与抛物线 $y^{2}=16 x$ 的 准线交于点 $A$ 和点 $B,|A B|=4 \\sqrt{3}$, 则 $C$ 的实轴长为（）\nA. $\\sqrt{2}$\nB. $2 \\sqrt{2}$\nC. 4\nD. 8",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0020",
+   "type": "theory",
+   "stem": "12. (5 分) 数列 $\\left\\{a_{n}\\right\\}$ 满足 $a_{n+1}+(-1){ }^{n} a_{n}=2 n-1$, 则 $\\left\\{a_{n}\\right\\}$ 的前 60 项和为 ( )\nA. 3690\nB. 3660\nC. 1845\nD. 1830",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0021",
+   "type": "theory",
+   "stem": "1. (5 分) 已知集合 $A=\\{1,2,3,4\\}, B=\\left\\{x \\mid x=n^{2}, n \\in A\\right\\}$, 则 $A \\cap B=(\\quad)$\nA. $\\{1,4\\}$\nB. $\\{2,3\\}$\nC. $\\{9,16\\}$\nD. $\\{1,2\\}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0022",
+   "type": "theory",
+   "stem": "2. (5 分) $\\frac{1+2 i}{(1-i)^{2}}=(\\quad)$\nA. $-1-\\frac{1}{2} \\mathrm{i}$\nB. $-1+\\frac{1}{2} \\mathrm{i}$\nC. $1+\\frac{1}{2} \\mathrm{i}$\nD. $1-\\frac{1}{2} \\mathrm{i}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0023",
+   "type": "theory",
+   "stem": "3. ( 5 分) 从 $1,2,3,4$ 中任取 2 个不同的数, 则取出的 2 个数之差的绝对值 为 2 的概率是 ( $)$\nA. $\\frac{1}{2}$\nB. $\\frac{1}{3}$\nC. $\\frac{1}{4}$\nD. $\\frac{1}{6}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0024",
+   "type": "theory",
+   "stem": "4. (5 分) 已知双曲线 $c: \\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的离心率为 $\\frac{\\sqrt{5}}{2}$, 则 $c$ 的渐 近线方程为 ( )\nA. $y= \\pm \\frac{1}{4} x$\nB. $y= \\pm \\frac{1}{3} x$\nC. $y= \\pm x$\nD. $y= \\pm \\frac{1}{2} x$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0025",
+   "type": "theory",
+   "stem": "5. (5 分) 已知命题 $p: \\forall x \\in R, 2^{x}<3^{x}$; 命题 $q: \\exists x \\in R, x^{3}=1-x^{2}$, 则下列命题 中为真命题的是 ( )\nA. $p \\wedge q$\nB. $\\neg p \\wedge q$\nC. $p \\wedge \\neg q$\nD. $\\neg p \\wedge \\neg q$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0026",
+   "type": "theory",
+   "stem": "6. (5 分) 设首项为 1 , 公比为 $\\frac{2}{3}$ 的等比数列 $\\left\\{a_{n}\\right\\}$ 的前 $n$ 项和为 $S_{n}$, 则 ( )\nA. $S_{n}=2 a_{n}-1$\nB. $S_{n}=3 a_{n}-2$\nC. $S_{n}=4-3 a_{n}$\nD. $S_{n}=3-2 a_{n}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0027",
+   "type": "theory",
+   "stem": "10. (5 分) 已知锐角 $\\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c, 23 \\cos ^{2} A+\\cos 2 A=0$ , $a=7, c=6$, 则 $b=(\\quad)$\nA. 10\nB. 9\nC. 8\nD. 5",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0028",
+   "type": "theory",
+   "stem": "1. (5 分) 已知集合 $M=\\{x \\mid-3<x<1, x \\in R\\}, N=\\{-3,-2,-1,0,1\\}$, 则 $M \\cap N=(\\quad)$\nA. $\\{-2,-1,0,1\\}$\nB. $\\{-3,-2,-1,0\\}$\nC. $\\{-2,-1,0\\}$\nD. $\\{-3,-2,-1\\}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0029",
+   "type": "theory",
+   "stem": "2. (5 分) $\\left|\\frac{2}{1+i}\\right|=(\\quad)$\nA. $2 \\sqrt{2}$\nB. 2\nC. $\\sqrt{2}$\nD. 1",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0030",
+   "type": "theory",
+   "stem": "4. (5 分) $\\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$, 已知 $b=2, B=\\frac{\\pi}{6}, C=$ $\\frac{\\pi}{4}$, 则 $\\triangle A B C$ 的面积为 $(\\quad)$\nA. $2 \\sqrt{3}+2$\nB. $\\sqrt{3}+1$\nC. $2 \\sqrt{3}-2$\nD. $\\sqrt{3}-1$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0031",
+   "type": "theory",
+   "stem": "5. (5 分) 设椭圆 C: $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的左、右焦点分别为 $F_{1} 、 F_{2}, P$ 是 C 上的点 $P F_{2} \\perp F_{1} F_{2}, \\angle P F_{1} F_{2}=30^{\\circ}$, 则 $C$ 的离心率为 $(\\quad)$\nA. $\\frac{\\sqrt{6}}{6}$\nB. $\\frac{1}{3}$\nC. $\\frac{1}{2}$\nD. $\\frac{\\sqrt{3}}{3}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0032",
+   "type": "theory",
+   "stem": "6. (5 分) 已知 $\\sin 2 \\alpha=\\frac{2}{3}$, 则 $\\cos ^{2}\\left(\\alpha+\\frac{\\pi}{4}\\right)=(\\quad)$\nA. $\\frac{1}{6}$\nB. $\\frac{1}{3}$\nC. $\\frac{1}{2}$\nD. $\\frac{2}{3}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0033",
+   "type": "theory",
+   "stem": "8. （5 分） 设 $a=\\log _{3} 2, b=\\log _{5} 2, c=\\log _{2} 3$, 则（ $）$\nA. $a>c>b$\nB. $b>c>a$\nC. $c>a>b$\nD. $c>b>a$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0034",
+   "type": "theory",
+   "stem": "12. （5 分）若存在正数 $x$ 使 $2^{x}(x-a)<1$ 成立, 则 $a$ 的取值范围是（ $)$\nA. $(-\\infty,+\\infty)$\nB. $(-2,+\\infty)$\nC. $(0,+\\infty)$\nD. $(-1,+\\infty)$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0035",
+   "type": "theory",
+   "stem": "1. （5 分）已知集合 $M=\\{x \\mid-1<x<3\\}, N=\\{x \\mid-2<x<1\\}$, 则 $M \\cap N=(\\quad)$\nA. $(-2,1)$\nB. $(-1,1)$\nC. $(1,3)$\nD. $(-2,3)$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0036",
+   "type": "theory",
+   "stem": "2. (5 分) 若 $\\tan \\alpha>0$, 则 $(\\quad)$\nA. $\\sin \\alpha>0$\nB. $\\cos \\alpha>0$\nC. $\\sin 2 \\alpha>0$\nD. $\\cos 2 \\alpha>0$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0037",
+   "type": "theory",
+   "stem": "3. （5 分) 设 $z=\\frac{1}{1+i}+i, \\quad$ 则 $|z|=(\\quad)$\nA. $\\frac{1}{2}$\nB. $\\frac{\\sqrt{2}}{2}$\nC. $\\frac{\\sqrt{3}}{2}$\nD. 2",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0038",
+   "type": "theory",
+   "stem": "4. (5 分）已知双曲线 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{3}=1(a>0)$ 的离心率为 2 , 则实数 $a=(\\quad)$\nA. 2\nB. $\\frac{\\sqrt{6}}{2}$\nC. $\\frac{\\sqrt{5}}{2}$\nD. 1",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0039",
+   "type": "theory",
+   "stem": "5. （5 分) 设函数 $f(x), g(x)$ 的定义域都为 $R$, 且 $f(x)$ 是奇函数, $g(x)$ 是偶函数，则下列结论正确的是（）\nA. $f(x) \\bullet g(x)$ 是偶函数\nB. $|f(x)| \\bullet g(x)$ 是奇函数\nC. $f(x) \\bullet|g(x)|$ 是奇函数\nD. $|f(x) \\bullet g(x)|$ 是奇函数",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0040",
+   "type": "theory",
+   "stem": "10. （5 分) 已知抛物线 $C: y^{2}=x$ 的焦点为 $F, A\\left(x_{0}, y_{0}\\right)$ 是 $C$ 上一点, $A F=\\left|\\frac{5}{4} x_{0}\\right|$ , 则 $x_{0}=(\\quad)$\nA. 1\nB. 2\nC. 4\nD. 8",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0041",
+   "type": "theory",
+   "stem": "12. (5 分) 已知函数 $f(x)=a x^{3}-3 x^{2}+1$, 若 $f(x)$ 存在唯一的零点 $x_{0}$, 且 $x_{0}>$ 0, 则实数 $\\mathrm{a}$ 的取值范围是（ $)$\nA. $(1,+\\infty)$\nB. $(2,+\\infty)$\nC. $(-\\infty,-1)$\nD. $(-\\infty,-2)$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0042",
+   "type": "theory",
+   "stem": "1. （5 分) 已知集合 $A=\\{-2,0,2\\}, B=\\left\\{x \\mid x^{2}-x-2=0\\right\\}$, 则 $A \\cap B=(\\quad)$\nA. $\\varnothing$\nB. $\\{2\\}$\nC. $\\{0\\}$\nD. $\\{-2\\}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0043",
+   "type": "theory",
+   "stem": "2. $(5$ 分 $) \\frac{1+3 i}{1-i}=(\\quad)$\nA. $1+2 \\mathrm{i}$\nB. $-1+2 i$\nC. $1-2 i$\nD. $-1-2 i$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0044",
+   "type": "theory",
+   "stem": "3. （5 分) 函数 $f(x)$ 在 $x=x_{0}$ 处导数存在, 若 $p: f^{\\prime}\\left(x_{0}\\right)=0: q: x=x_{0}$ 是 $f(x)$ 的极值点, 则 ( )\nA. $p$ 是 $q$ 的充分必要条件\nB. $p$ 是 $q$ 的充分条件，但不是 $q$ 的必要条件\nC. $p$ 是 $q$ 的必要条件, 但不是 $q$ 的充分条件\nD. $p$ 既不是 $q$ 的充分条件, 也不是 $q$ 的必要条件",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0045",
+   "type": "theory",
+   "stem": "4. （5 分）设向量 $\\vec{a}, \\vec{b}$ 满足 $|\\vec{a}+\\vec{b}|=\\sqrt{10},|\\vec{a}-\\vec{b}|=\\sqrt{6}$, 则 $\\vec{a} \\bullet \\vec{b}=(\\quad)$\nA. 1\nB. 2\nC. 3\nD. 5",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0046",
+   "type": "theory",
+   "stem": "5. (5 分) 等差数列 $\\left\\{a_{n}\\right\\}$ 的公差为 2 , 若 $a_{2}, a_{4}, a_{8}$ 成等比数列, 则 $\\left\\{a_{n}\\right\\}$ 的前 $n$ 项和 $S_{n}=(\\quad)$\nA. $n(n+1)$\nB. $n(n-1)$\nC. $\\frac{\\mathrm{n}(\\mathrm{n}+1)}{2}$\nD. $\\frac{n(n-1)}{2}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0047",
+   "type": "theory",
+   "stem": "7. (5 分) 正三棱柱 $A B C-A_{1} B_{1} C_{1}$ 的底面边长为 2 , 侧棱长为 $\\sqrt{3}, D$ 为 $B C$ 中点, 则三棱雉 $A-B_{1} D C_{1}$ 的体积为 ( $)$\nA. 3\nB. $\\frac{3}{2}$\nC. 1\nD. $\\frac{\\sqrt{3}}{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0048",
+   "type": "theory",
+   "stem": "10. (5 分) 设 $F$ 为抛物线 $C: y^{2}=3 x$ 的焦点, 过 $F$ 且倾斜角为 $30^{\\circ}$ 的直线交于 $C$ 于 $A, B$ 两点, 则 $|A B|=$\nA. $\\frac{\\sqrt{30}}{3}$\nB. 6\nC. 12\nD. $7 \\sqrt{3}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0049",
+   "type": "theory",
+   "stem": "11. （5 分) 若函数 $f(x)=k x-\\ln x$ 在区间 $(1,+\\infty)$ 单调递增, 则 $k$ 的取值范 围是 $(\\quad)$\nA. $(-\\infty,-2]$\nB. $(-\\infty,-1]$\nC. $[2,+\\infty)$\nD. $[1,+\\infty)$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0050",
+   "type": "theory",
+   "stem": "1. （5 分) 已知集合 $A=\\{x \\mid x=3 n+2, n \\in N\\}, B=\\{6,8,10,12,14\\}$, 则集合 $A \\cap$ $B$ 中元素的个数为 $(\\quad)$\nA. 5\nB. 4\nC. 3\nD. 2",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0051",
+   "type": "theory",
+   "stem": "2. (5 分) 已知点 $A(0,1), B(3,2)$, 向量 $\\overrightarrow{\\mathrm{AC}}=(-4,-3)$, 则向量 $\\overrightarrow{\\mathrm{BC}}=$\nA. $(-7,-4)$\nB. $(7,4)$\nC. $(-1,4)$\nD. $(1,4)$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0052",
+   "type": "theory",
+   "stem": "3. （5 分）已知复数 $z$ 满足 $(z-1) i=1+i$, 则 $z=(\\quad)$\nA. $-2-\\mathrm{i}$\nB. $-2+i$\nC. 2- $i$\nD. $2+i$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0053",
+   "type": "theory",
+   "stem": "4. (5 分) 如果 3 个正整数可作为一个直角三角形三条边的边长, 则称这 3 个 数为一组勾股数. 从 $1,2,3,4,5$ 中任取 3 个不同的数, 则这 3 个数构成 一组勾股数的概率为 ( $)$\nA. $\\frac{3}{10}$\nB. $\\frac{1}{5}$\nC. $\\frac{1}{10}$\nD. $\\frac{1}{20}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0054",
+   "type": "theory",
+   "stem": "5. (5 分) 已知椭圆 $E$ 的中心在坐标原点, 离心率为 $\\frac{1}{2}, E$ 的右焦点与抛物线 $C$ : $y^{2}=8 x$ 的焦点重合, $A, B$ 是 $C$ 的准线与 $E$ 的两个交点, 则 $|A B|=(\\quad)$\nA. 3\nB. 6\nC. 9\nD. 12",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0055",
+   "type": "theory",
+   "stem": "7. (5 分) 已知 $\\left\\{a_{n}\\right\\}$ 是公差为 1 的等差数列, $S_{n}$ 为 $\\left\\{a_{n}\\right\\}$ 的前 $n$ 项和, 若 $S_{8}=4 S_{4}$, 则 $\\mathrm{a}_{10}=(\\quad)$\nA. $\\frac{17}{2}$\nB. $\\frac{19}{2}$\nC. 10\nD. 12",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0056",
+   "type": "theory",
+   "stem": "10. (5 分) 已知函数 $f(x)=\\left\\{\\begin{array}{l}2^{x-1}-2, x \\leqslant 1 \\\\ -\\log _{2}(x+1), x>1\\end{array}\\right.$, 且 $f(a)=-3$, 则 $f(6-a$ )$=(\\quad)$\nA. $-\\frac{7}{4}$\nB. $-\\frac{5}{4}$\nC. $-\\frac{3}{4}$\nD. $-\\frac{1}{4}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0057",
+   "type": "theory",
+   "stem": "1. （5 分）已知集合 $A=\\{x \\mid-1<x<2\\}, B=\\{x \\mid 0<x<3\\}$, 则 $A \\cup B=(\\quad)$\nA. $(-1,3)$\nB. $(-1,0)$\nC. $(0,2)$\nD. $(2,3)$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0058",
+   "type": "theory",
+   "stem": "2. (5 分) 若为 $a$ 实数, 且 $\\frac{2+a i}{1+i}=3+i$, 则 $a=(\\quad)$\nA. -4\nB. -3\nC. 3\nD. 4",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0059",
+   "type": "theory",
+   "stem": "4. (5 分) $\\vec{a}=(1,-1), \\vec{b}=(-1,2)$ 则 $(2 \\vec{a}+\\vec{b}) \\cdot \\vec{a}=(\\quad)$\nA. -1\nB. 0\nC. 1\nD. 2",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0060",
+   "type": "theory",
+   "stem": "5. (5 分) 已知 $S_{n}$ 是等差数列 $\\left\\{a_{n}\\right\\}$ 的前 $n$ 项和, 若 $a_{1}+a_{3}+a_{5}=3$, 则 $S_{5}=(\\quad)$\nA. 5\nB. 7\nC. 9\nD. 11",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0061",
+   "type": "theory",
+   "stem": "7. (5 分) 已知三点 $A(1,0), B(0, \\sqrt{3}), C(2, \\sqrt{3})$ 则 $\\triangle A B C$ 外接圆的 圆心到原点的距离为 ( )\nA. $\\frac{5}{3}$\nB. $\\frac{\\sqrt{21}}{3}$\nC. $\\frac{2 \\sqrt{5}}{3}$\nD. $\\frac{4}{3}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0062",
+   "type": "theory",
+   "stem": "9. (5 分) 已知等比数列 $\\left\\{a_{n}\\right\\}$ 满足 $\\left.a_{1}=\\frac{1}{4}, a_{3} a_{5}=4 （ a_{4}-1\\right)$, 则 $a_{2}=(\\quad)$\nA. 2\nB. 1\nC. $\\frac{1}{2}$\nD. $\\frac{1}{8}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0063",
+   "type": "theory",
+   "stem": "12. (5 分) 设函数 $f(x)=\\ln (1+|x|)-\\frac{1}{1+x^{2}}$, 则使得 $f(x)>f(2 x-1)$ 成 立的 $\\mathrm{x}$ 的取值范围是 ( $)$\nA. $\\left(-\\infty, \\frac{1}{3}\\right) \\cup(1,+\\infty)$\nB. $\\left(\\frac{1}{3}, 1\\right)$\nC. $\\left(-\\frac{1}{3}, \\frac{1}{3}\\right)$\nD. $\\left(-\\infty,-\\frac{1}{3},\\right) \\cup\\left(\\frac{1}{3},+\\infty\\right)$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0064",
+   "type": "theory",
+   "stem": "1. （5 分）设集合 $A=\\{1,3,5,7\\}, B=\\{x \\mid 2 \\leqslant x \\leqslant 5\\}$, 则 $A \\cap B=(\\quad)$\nA. $\\{1,3\\}$\nB. $\\{3,5\\}$\nC. $\\{5,7\\}$\nD. $\\{1,7\\}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0065",
+   "type": "theory",
+   "stem": "2. （5 分）设 $(1+2 i)(a+i)$ 的实部与虚部相等, 其中 $a$ 为实数, 则 $a$ 等于 $(\\quad)$\nA. -3\nB. -2\nC. 2\nD. 3",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0066",
+   "type": "theory",
+   "stem": "3. (5 分) 为美化环境, 从红、黄、白、紫 4 种颜色的花中任选 2 种花种在一 个花坛中, 余下的 2 种花种在另一个花坛中, 则红色和紫色的花不在同一花 坛的概率是 $(\\quad)$\nA. $\\frac{1}{3}$\nB. $\\frac{1}{2}$\nC. $\\frac{2}{3}$\nD. $\\frac{5}{6}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0067",
+   "type": "theory",
+   "stem": "4. (5 分) $\\triangle A B C$ 的内角 $A 、 B 、 C$ 的对边分别为 $a 、 b 、 c$. 已知 $a=\\sqrt{5}, c=2, \\cos A=$ $\\frac{2}{3}$, 则 $b=(\\quad)$\nA. $\\sqrt{2}$\nB. $\\sqrt{3}$\nC. 2\nD. 3",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0068",
+   "type": "theory",
+   "stem": "5. (5 分) 直线 I 经过椭圆的一个顶点和一个焦点, 若椭圆中心到 I 的距离为其 短轴长的 $\\frac{1}{4}$, 则该椭圆的离心率为（）\nA. $\\frac{1}{3}$\nB. $\\frac{1}{2}$\nC. $\\frac{2}{3}$\nD. $\\frac{3}{4}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0069",
+   "type": "theory",
+   "stem": "8. （5 分） 若 $a>b>0,0<c<1$, 则（ $)$\nA. $\\log _{a} c<\\log _{b} c$\nB. $\\log _{c} a<\\log _{c} b$\nC. $a^{c}<b^{c}$\nD. $c^{a}>c^{b}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0070",
+   "type": "theory",
+   "stem": "12. (5 分) 若函数 $f(x)=x-\\frac{1}{3} \\sin 2 x+a \\sin x$ 在 $(-\\infty,+\\infty)$ 单调递增, 则 $a$ 的 取值范围是 $(\\quad)$\nA. $[-1,1]$\nB. $\\left[-1, \\frac{1}{3}\\right]$\nC. $\\left[-\\frac{1}{3}, \\frac{1}{3}\\right]$\nD. $\\left[-1,-\\frac{1}{3}\\right]$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0071",
+   "type": "theory",
+   "stem": "1. （5 分）已知集合 $A=\\{1,2,3\\}, B=\\left\\{x \\mid x^{2}<9\\right\\}$, 则 $A \\cap B=（ \\quad ）$\nA. $\\{-2,-1,0,1,2,3\\}$\nB. $\\{-2,-1,0,1,2\\}$\nC. $\\{1,2,3\\}$\nD. $\\{1,2\\}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0072",
+   "type": "theory",
+   "stem": "2. （5 分）设复数 $z$ 满足 $z+i=3-i$, 则 $\\bar{z}=(\\quad)$\nA. $-1+2 i$\nB. $1-2 i$\nC. $3+2 i$\nD. $3-2 i$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0073",
+   "type": "theory",
+   "stem": "4. （5 分）体积为 8 的正方体的顶点都在同一球面上, 则该球面的表面积为（\nA. $12 \\pi$\nB. $\\frac{32}{3} \\pi$\nC. $8 \\pi$\nD. $4 \\pi$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0074",
+   "type": "theory",
+   "stem": "5. (5 分) 设 $F$ 为抛物线 $C: y^{2}=4 x$ 的焦点, 曲线 $y=\\frac{k}{x}(k>0)$ 与 $C$ 交于点 $P, P F$ $\\perp x$ 轴, 则 $k=(\\quad)$\nA. $\\frac{1}{2}$\nB. 1\nC. $\\frac{3}{2}$\nD. 2",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0075",
+   "type": "theory",
+   "stem": "6. (5 分) 圆 $x^{2}+y^{2}-2 x-8 y+13=0$ 的圆心到直线 $a x+y-1=0$ 的距离为 1 , 则 $a=($\nA. $-\\frac{4}{3}$\nB. $-\\frac{3}{4}$\nC. $\\sqrt{3}$\nD. 2",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0076",
+   "type": "theory",
+   "stem": "8. (5 分) 某路口人行横道的信号灯为红灯和绿灯交替出现, 红灯持续时间为 40 秒. 若一名行人来到该路口遇到红灯, 则至少需要等待 15 秒才出现绿灯的概 率为 $(\\quad)$\nA. $\\frac{7}{10}$\nB. $\\frac{5}{8}$\nC. $\\frac{3}{8}$\nD. $\\frac{3}{10}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0077",
+   "type": "theory",
+   "stem": "10. （5 分) 下列函数中, 其定义域和值域分别与函数 $y=10^{\\lg x}$ 的定义域和值域相 同的是 ( )\nA. $y=x$\nB. $y=\\lg x$\nC. $y=2^{x}$\nD. $y=\\frac{1}{\\sqrt{x}}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0078",
+   "type": "theory",
+   "stem": "11. (5 分) 函数 $\\mathrm{f}(\\mathrm{x})=\\cos 2 x+6 \\cos \\left(\\frac{\\pi}{2}-\\mathrm{x}\\right)$ 的最大值为 ( )\nA. 4\nB. 5\nC. 6\nD. 7",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0079",
+   "type": "theory",
+   "stem": "1. (5 分) 设集合 $A=\\{0,2,4,6,8,10\\}, B=\\{4,8\\}$, 则 $C_{A} B=(）$\nA. $\\{4,8\\}$\nB. $\\{0,2,6\\}$\nC. $\\{0,2,6,10\\}$ D. $\\{0,2,4,6,8,10\\}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0080",
+   "type": "theory",
+   "stem": "2. (5 分) 若 $z=4+3 i$ ，则 $\\frac{\\bar{z}}{|z|}=(\\quad)$\nA. 1\nB. -1\nC. $\\frac{4}{5}+\\frac{3}{5} i$\nD. $\\frac{4}{5}-\\frac{3}{5} i$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0081",
+   "type": "theory",
+   "stem": "3. (5 分) 已知向量 $\\overrightarrow{\\mathrm{BA}}=\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right), \\overrightarrow{\\mathrm{BC}}=\\left(\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$, 则 $\\angle \\mathrm{ABC}=(\\quad)$\nA. $30^{\\circ}$\nB. $45^{\\circ}$\nC. $60^{\\circ}$\nD. $120^{\\circ}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0082",
+   "type": "theory",
+   "stem": "5. (5 分) 小敏打开计算机时，忘记了开机密码的前两位，只记得第一位是 M, I, $\\mathrm{N}$ 中的一个字母, 第二位是 $1,2,3,4,5$ 中的一个数字, 则小敏输人一 次密码能够成功开机的概率是（）\nA. $\\frac{8}{15}$\nB. $\\frac{1}{8}$\nC. $\\frac{1}{15}$\nD. $\\frac{1}{30}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0083",
+   "type": "theory",
+   "stem": "6. (5 分) 若 $\\tan \\theta=\\frac{1}{3}$, 则 $\\cos 2 \\theta=(\\quad)$\nA. $-\\frac{4}{5}$\nB. $-\\frac{1}{5}$\nC. $\\frac{1}{5}$\nD. $\\frac{4}{5}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0084",
+   "type": "theory",
+   "stem": "7. (5 分) 已知 $a=2^{\\frac{4}{3}}, b=3^{\\frac{2}{3}}, c=25^{\\frac{1}{3}}$, 则 ( )\nA. $b<a<c$\nB. $a<b<c$\nC. $b<c<a$\nD. $c<a<b$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0085",
+   "type": "theory",
+   "stem": "9. (5 分) 在 $\\triangle A B C$ 中, $B=\\frac{\\pi}{4}, B C$ 边上的高等于 $\\frac{1}{3} B C$, 则 $\\sin A=(\\quad)$ \nA. $\\frac{3}{10}$\nB. $\\frac{\\sqrt{10}}{10}$\nC. $\\frac{\\sqrt{5}}{5}$\nD. $\\frac{3 \\sqrt{10}}{10}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0086",
+   "type": "theory",
+   "stem": "11. (5 分) 在封闭的直三棱柱 $A B C-\\mathrm{A}_{1} B_{1} C_{1}$ 内有一个体积为 $\\mathrm{V}$ 的球, 若 $A B \\perp$ $\\mathrm{BC}, \\mathrm{AB}=6, \\mathrm{BC}=8, A A_{1}=3$, 则 $V$ 的最大值是 $(\\quad)$\nA. $4 \\pi$\nB. $\\frac{9 \\pi}{2}$\nC. $6 \\pi$\nD. $\\frac{32 \\pi}{3}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0087",
+   "type": "theory",
+   "stem": "12. (5 分) 已知 $O$ 为坐标原点, $F$ 是椭圆 $C: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1 \\quad(a>b>0)$ 的左焦点, $A, B$ 分别为 $C$ 的左, 右顶点. $P$ 为 $C$ 上一点, 且 $P F \\perp x$ 轴, 过点 $A$ 的直线 $I$ 与线段 $P F$ 交于点 $M$, 与 $y$ 轴交于点 $E$. 若直线 $B M$ 经过 $O E$ 的中点, 则 $C$ 的离心率为 $(\\quad)$\nA. $\\frac{1}{3}$\nB. $\\frac{1}{2}$\nC. $\\frac{2}{3}$\nD. $\\frac{3}{4}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0088",
+   "type": "theory",
+   "stem": "1. （5 分）已知集合 $A=\\{x \\mid x<2\\}, B=\\{x \\mid 3-2 x>0\\}$, 则（）\nA. $A \\cap B=\\left\\{x \\mid x<\\frac{3}{2}\\right\\}$\nB. $A \\cap B=\\varnothing$\nC. $A \\cup B=\\left\\{\\mathbf{x} \\mid \\mathbf{x}<\\frac{3}{2}\\right\\}$\nD. $A \\cup B=R$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0089",
+   "type": "theory",
+   "stem": "2. (5 分) 为评估一种农作物的种植效果, 选了 $\\mathrm{n}$ 块地作试验田. 这 $\\mathrm{n}$ 块地的 亩产量 (单位: $\\mathrm{kg}$ ) 分别是 $x_{1}, x_{2}, \\ldots, x_{n}$, 下面给出的指标中可以用来评估 这种农作物亩产量稳定程度的是（ $)$\nA. $\\mathrm{x}_{1}, \\mathrm{x}_{2}, \\ldots, \\mathrm{x}_{\\mathrm{n}}$ 的平均数\nB. $x_{1}, x_{2}, \\ldots, x_{n}$ 的标准差\nC. $\\mathrm{x}_{1}, \\mathrm{x}_{2}, \\ldots, \\mathrm{x}_{\\mathrm{n}}$ 的最大值\nD. $x_{1}, x_{2}, \\ldots, x_{n}$ 的中位数",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0090",
+   "type": "theory",
+   "stem": "3. (5 分) 下列各式的运算结果为纯虚数的是（ ）\nA. $i(1+i)^{2}$\nB. $i^{2}(1-i)$\nC. $(1+\\mathrm{i})^{2}$\nD. $i(1+i)$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0091",
+   "type": "theory",
+   "stem": "11. (5 分) $\\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$, 已知 $\\sin B+\\sin A$ ( $\\sin C-\\cos C)=0, a=2, \\quad c=\\sqrt{2}$, 则 $C=(\\quad)$\nA. $\\frac{\\pi}{12}$\nB. $\\frac{\\pi}{6}$\nC. $\\frac{\\pi}{4}$\nD. $\\frac{\\pi}{3}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0092",
+   "type": "theory",
+   "stem": "1. （5 分） 设集合 $A=\\{1,2,3\\}, B=\\{2,3,4\\}$, 则 $A \\cup B=（ ）$\nA. $\\{1,2,3,4\\}$\nB. $\\{1,2,3\\}$\nC. $\\{2,3,4\\}$\nD. $\\{1,3,4\\}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0093",
+   "type": "theory",
+   "stem": "2. $(5$ 分 $)(1+i)(2+i)=(\\quad)$\nA. $1-\\mathrm{i}$\nB. $1+3 i$\nC. $3+i$\nD. $3+3 i$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0094",
+   "type": "theory",
+   "stem": "3. (5 分) 函数 $f(x)=\\sin \\left(2 x+\\frac{\\pi}{3}\\right)$ 的最小正周期为（ $)$\nA. $4 \\pi$\nB. $2 \\pi$\nC. $\\pi$\nD. $\\frac{\\pi}{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0095",
+   "type": "theory",
+   "stem": "4. (5 分) 设非零向量 $\\vec{a}, \\vec{b}$ 满足 $|\\vec{a}+\\vec{b}|=|\\vec{a}-\\vec{b}|$ 则（）\nA. $\\vec{a} \\perp \\vec{b}$\nB. $|\\overrightarrow{\\mathrm{a}}|=|\\overrightarrow{\\mathrm{b}}|$\nC. $\\vec{a} / / \\vec{b}$\nD. $|\\vec{a}|>|\\vec{b}|$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0096",
+   "type": "theory",
+   "stem": "5.（5 分）若 $a>1$, 则双曲线 $\\frac{x^{2}}{a^{2}}-y^{2}=1$ 的离心率的取值范围是（ ）\nA. $(\\sqrt{2},+\\infty)$\nB. $(\\sqrt{2}, 2)$\nC. $(1, \\sqrt{2})$\nD. $(1,2)$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0097",
+   "type": "theory",
+   "stem": "8. （5 分）函数 $f(x)=\\ln \\left(x^{2}-2 x-8 ）\\right.$ 的单调递增区间是（ $)$\nA. $(-\\infty,-2)$\nB. $(-\\infty,-1)$\nC. $(1,+\\infty)$\nD. $(4,+\\infty)$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0098",
+   "type": "theory",
+   "stem": "9. （5 分）甲、乙、丙、丁四位同学一起去问老师询问成语竞赛的成绩. 老师 说: 你们四人中有 2 位优秀, 2 位良好, 我现在给甲看乙、丙的成绩, 给乙看 丙的成绩, 给丁看甲的成绩. 看后甲对大家说：我还是不知道我的成绩. 根 据以上信息，则（）\nA. 乙可以知道四人的成绩\nB. 丁可以知道四人的成绩\nC. 乙、丁可以知道对方的成绩\nD. 乙、丁可以知道自己的成绩",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0099",
+   "type": "theory",
+   "stem": "11. (5 分) 从分别写有 $1,2,3,4,5$ 的 5 张卡片中随机抽取 1 张, 放回后再 随机抽取 1 张, 则抽得的第一张卡片上的数大于第二张卡片上的数的概率为（\nA. $\\frac{1}{10}$\nB. $\\frac{1}{5}$\nC. $\\frac{3}{10}$\nD. $\\frac{2}{5}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0100",
+   "type": "theory",
+   "stem": "12. (5 分) 过抛物线 $C: y^{2}=4 x$ 的焦点 $F$, 且斜率为 $\\sqrt{3}$ 的直线交 $C$ 于点 $M(M$ 在 $x$ 轴上方), 1 为 $C$ 的准线, 点 $N$ 在 $I$ 上, 且 $M N \\perp 1$, 则 $M$ 到直线 $N F$ 的距 离为 $(\\quad)$\nA. $\\sqrt{5}$\nB. $2 \\sqrt{2}$\nC. $2 \\sqrt{3}$\nD. $3 \\sqrt{3}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0101",
+   "type": "theory",
+   "stem": "1. (5 分) 已知集合 $A=\\{1,2,3,4\\}, B=\\{2,4,6,8\\}$, 则 $A \\cap B$ 中元素的个 数为 ( )\nA. 1\nB. 2\nC. 3\nD. 4",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0102",
+   "type": "theory",
+   "stem": "2. (5 分) 复平面内表示复数 $\\mathrm{z}=\\mathrm{i}(-2+\\mathrm{i})$ 的点位于 $(\\quad)$\nA. 第一象限\nB. 第二象限\nC. 第三象限\nD. 第四象限",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0103",
+   "type": "theory",
+   "stem": "4. (5 分) 已知 $\\sin a-\\cos a=\\frac{4}{3}$, 则 $\\sin 2 a=(\\quad)$\nA. $-\\frac{7}{9}$\nB. $-\\frac{2}{9}$\nC. $\\frac{2}{9}$\nD. $\\frac{7}{9}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0104",
+   "type": "theory",
+   "stem": "6. (5 分) 函数 $f(x)=\\frac{1}{5} \\sin \\left(x+\\frac{\\pi}{3}\\right)+\\cos \\left(x-\\frac{\\pi}{6}\\right)$ 的最大值为 $($ )\nA. $\\frac{6}{5}$\nB. 1\nC. $\\frac{3}{5}$\nD. $\\frac{1}{5}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0105",
+   "type": "theory",
+   "stem": "11. (5 分) 已知椭圆 C: $\\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的左、右顶点分别为 $A_{1}, A_{2}$, 且以线段 $A_{1} A_{2}$ 为直径的圆与直线 $b x-a y+2 a b=0$ 相切, 则 $C$ 的离心率为\nA. $\\frac{\\sqrt{6}}{3}$\nB. $\\frac{\\sqrt{3}}{3}$\nC. $\\frac{\\sqrt{2}}{3}$\nD. $\\frac{1}{3}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0106",
+   "type": "theory",
+   "stem": "12. (5 分) 已知函数 $f(x)=x^{2}-2 x+a\\left(e^{x-1}+e^{-x+1}\\right)$ 有唯一零点, 则 $a=(\\quad)$\nA. $-\\frac{1}{2}$\nB. $\\frac{1}{3}$\nC. $\\frac{1}{2}$\nD. 1\n\n\\section{",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0107",
+   "type": "theory",
+   "stem": "1. （5 分）已知集合 $A=\\{0,2\\}, B=\\{-2,-1,0,1,2\\}$, 则 $A \\cap B=(）$\nA. $\\{0,2\\}$\nB. $\\{1,2\\}$\nC. $\\{0\\}$\nD. $\\{-2,-1,0,1,2\\}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0108",
+   "type": "theory",
+   "stem": "2. （5 分）设 $z=\\frac{1-i}{1+i}+2 i$, 则 $|z|=(\\quad)$\nA. 0\nB. $\\frac{1}{2}$\nC. 1\nD. $\\sqrt{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0109",
+   "type": "theory",
+   "stem": "4. (5 分) 已知椭圆 $C: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{4}=1$ 的一个焦点为 $(2,0)$, 则 $C$ 的离心率为 ( )\nA. $\\frac{1}{3}$\nB. $\\frac{1}{2}$\nC. $\\frac{\\sqrt{2}}{2}$\nD. $\\frac{2 \\sqrt{2}}{3}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0110",
+   "type": "theory",
+   "stem": "5. (5 分) 已知圆柱的上、下底面的中心分别为 $\\mathrm{O}_{1}, \\mathrm{O}_{2}$, 过直线 $\\mathrm{O}_{1} \\mathrm{O}_{2}$ 的平面截 该圆柱所得的截面是面积为 8 的正方形，则该圆柱的表面积为（） \nA. $12 \\sqrt{2} \\pi$\nB. $12 \\pi$\nC. $8 \\sqrt{2} \\pi$\nD. $10 \\pi$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0111",
+   "type": "theory",
+   "stem": "6. （5 分) 设函数 $f(x)=x^{3}+(a-1) x^{2}+a x$. 若 $f(x)$ 为奇函数, 则曲线 $y=f($ $x)$ 在点 $(0,0)$ 处的切线方程为 $(\\quad)$\nA. $y=-2 x$\nB. $y=-x$\nC. $y=2 x$\nD. $y=x$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0112",
+   "type": "theory",
+   "stem": "7. (5 分) 在 $\\triangle A B C$ 中, $A D$ 为 $B C$ 边上的中线, $E$ 为 $A D$ 的中点, 则 $\\overrightarrow{E B}=(\\quad)$\nA. $\\frac{3}{4} \\overrightarrow{\\mathrm{AB}}-\\frac{1}{4} \\overrightarrow{\\mathrm{AC}}$\nB. $\\frac{1}{4} \\overrightarrow{\\mathrm{AB}}-\\frac{3}{4} \\overrightarrow{\\mathrm{AC}}$\nC. $\\frac{3}{4} \\overrightarrow{\\mathrm{AB}}+\\frac{1}{4} \\overrightarrow{\\mathrm{AC}}$\nD. $\\frac{1}{4} \\overrightarrow{\\mathrm{AB}}+\\frac{3}{4} \\overrightarrow{\\mathrm{AC}}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0113",
+   "type": "theory",
+   "stem": "8. （5 分）已知函数 $f(x)=2 \\cos ^{2} x-\\sin ^{2} x+2$, 则 $(\\quad)$\nA. $f(x)$ 的最小正周期为 $\\pi$, 最大值为 3\nB. $f(x)$ 的最小正周期为 $\\pi$, 最大值为 4\nC. $f(x)$ 的最小正周期为 $2 \\pi$, 最大值为 3\nD. $f(x)$ 的最小正周期为 $2 \\pi$, 最大值为 4",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0114",
+   "type": "theory",
+   "stem": "11. (5 分) 已知角 $\\alpha$ 的顶点为坐标原点, 始边与 $\\mathrm{x}$ 轴的非负半轴重合, 终边上 有两点 $A(1, a), B(2, b)$, 且 $\\cos 2 \\alpha=\\frac{2}{3}$, 则 $|a-b|=(\\quad)$\nA. $\\frac{1}{5}$\nB. $\\frac{\\sqrt{5}}{5}$\nC. $\\frac{2 \\sqrt{5}}{5}$\nD. 1",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0115",
+   "type": "theory",
+   "stem": "1. $(5$ 分 $) i(2+3 i)=(\\quad)$\nA. $3-2 i$\nB. $3+2 i$\nC. $-3-2 i$\nD. $-3+2 i$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0116",
+   "type": "theory",
+   "stem": "2. （5 分）已知集合 $A=\\{1,3,5,7\\}, B=\\{2,3,4,5\\}$, 则 $A \\cap B=(\\quad)$\nA. $\\{3\\}$\nB. $\\{5\\}$\nC. $\\{3,5\\}$\nD. $\\{1,2,3,4,5,7\\}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0117",
+   "type": "theory",
+   "stem": "4. (5 分) 已知向量 $\\vec{a}, \\vec{b}$ 满足 $|\\vec{a}|=1, \\vec{a} \\cdot \\vec{b}=-1$, 则 $\\vec{a} \\cdot(2 \\vec{a}-\\vec{b})=(\\quad)$\nA. 4\nB. 3\nC. 2\nD. 0",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0118",
+   "type": "theory",
+   "stem": "5. (5 分) 从 2 名男同学和 3 名女同学中任选 2 人参加社区服务, 则选中的 2 人都是女同学的概率为 $(\\quad)$\nA. 0.6\nB. 0.5\nC. 0.4\nD. 0.3",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0119",
+   "type": "theory",
+   "stem": "6. (5 分) 双曲线 $\\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的离心率为 $\\sqrt{3}$, 则其渐近线方程为 \nA. $y= \\pm \\sqrt{2} x$\nB. $y= \\pm \\sqrt{3} x$\nC. $y= \\pm \\frac{\\sqrt{2}}{2} x$\nD. $y= \\pm \\frac{\\sqrt{3}}{2} x$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0120",
+   "type": "theory",
+   "stem": "7. (5 分) 在 $\\triangle A B C$ 中, $\\cos \\frac{C}{2}=\\frac{\\sqrt{5}}{5}, B C=1, A C=5$, 则 $A B=（ ）$\nA. $4 \\sqrt{2}$\nB. $\\sqrt{30}$\nC. $\\sqrt{29}$\nD. $2 \\sqrt{5}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0121",
+   "type": "theory",
+   "stem": "10. （5 分）若 $f(x)=\\cos x-\\sin x$ 在 $[0, a]$ 是减函数, 则 $a$ 的最大值是 $(\\quad)$\nA. $\\frac{\\pi}{4}$\nB. $\\frac{\\pi}{2}$\nC. $\\frac{3 \\pi}{4}$\nD. $\\pi$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0122",
+   "type": "theory",
+   "stem": "12. (5 分) 已知 $f(x)$ 是定义域为 $(-\\infty,+\\infty)$ 的奇函数, 满足 $f(1-x)=f($ $1+x)$, 若 $f(1)=2$, 则 $f(1)+f(2)+f(3)+\\ldots+f(50)=(\\quad)$\nA. -50\nB. 0\nC. 2\nD. 50",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0123",
+   "type": "theory",
+   "stem": "1. (5 分) 已知集合 $A=\\{x \\mid x-1 \\geqslant 0\\}, B=\\{0,1,2\\}$, 则 $A \\cap B=(\\quad)$\nA. $\\{0\\}$\nB. $\\{1\\}$\nC. $\\{1,2\\}$\nD. $\\{0,1,2\\}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0124",
+   "type": "theory",
+   "stem": "2. $(5$ 分 $)(1+i)(2-i)=(\\quad)$\nA. $-3-i$\nB. $-3+i$\nC. $3-i$\nD. $3+i$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0125",
+   "type": "theory",
+   "stem": "4. (5 分) 若 $\\sin a=\\frac{1}{3}$, 则 $\\cos 2 a=(\\quad)$\nA. $\\frac{8}{9}$\nB. $\\frac{7}{9}$\nC. $-\\frac{7}{9}$\nD. $-\\frac{8}{9}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0126",
+   "type": "theory",
+   "stem": "5. (5 分) 若某群体中的成员只用现金支付的概率为 0.45 , 既用现金支付也用非 现金支付的概率为 0.15 , 则不用现金支付的概率为 $($ )\nA. 0.3\nB. 0.4\nC. 0.6\nD. 0.7",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0127",
+   "type": "theory",
+   "stem": "6. (5 分) 函数 $\\mathrm{f}(\\mathrm{x})=\\frac{\\tan x}{1+\\tan ^{2} \\mathrm{x}}$ 的最小正周期为 $(\\quad)$\nA. $\\frac{\\pi}{4}$\nB. $\\frac{\\pi}{2}$\nC. $\\pi$\nD. $2 \\pi$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0128",
+   "type": "theory",
+   "stem": "7. (5 分) 下列函数中, 其图象与函数 $y=\\ln x$ 的图象关于直线 $\\mathrm{x}=1$ 对称的是 ( )\nA. $y=\\ln (1-x)$\nB. $y=\\ln (2-x)$\nC. $y=\\ln (1+x)$\nD. $y=\\ln (2+x)$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0129",
+   "type": "theory",
+   "stem": "8. (5 分) 直线 $x+y+2=0$ 分别与 $x$ 轴, $y$ 轴交于 $A, B$ 两点, 点 $P$ 在圆 $(x-2)$ ${ }^{2}+y^{2}=2$ 上，则 $\\triangle A B P$ 面积的取值范围是（）\nA. $[2,6]$\nB. $[4,8]$\nC. $[\\sqrt{2}, 3 \\sqrt{2}]$\nD. $[2 \\sqrt{2}, 3 \\sqrt{2}]$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0130",
+   "type": "theory",
+   "stem": "10. (5 分) 已知双曲线 $C: \\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的离心率为 $\\sqrt{2}$, 则点 $(4$,\n\n0) 到 C 的渐近线的距离为 $(\\quad)$\nA. $\\sqrt{2}$\nB. 2\nC. $\\frac{3 \\sqrt{2}}{2}$\nD. $2 \\sqrt{2}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0131",
+   "type": "theory",
+   "stem": "11. (5 分) $\\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, C$. 若 $\\triangle A B C$ 的面积 为 $\\frac{a^{2}+b^{2}-c^{2}}{4}$, 则 $C=(\\quad)$ \nA. $\\frac{\\pi}{2}$\nB. $\\frac{\\pi}{3}$\nC. $\\frac{\\pi}{4}$\nD. $\\frac{\\pi}{6}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0132",
+   "type": "theory",
+   "stem": "1. 设 $z=\\frac{3-\\mathrm{i}}{1+2 \\mathrm{i}}$, 则 $|z|=$\nA. 2\nB. $\\sqrt{3}$\nC. $\\sqrt{2}$\nD. 1",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0133",
+   "type": "theory",
+   "stem": "2. 已知集合 $U=\\{1,2,3,4,5,6,7\\}, A=\\{2,3,4,5\\}, B=\\{2,3,6,7\\}$, 则 $B \\cap C_{U} A$\nA. $\\{1,6\\}$\nB. $\\{1,7\\}$\nC. $\\{6,7\\}$\nD. $\\{1,6,7\\}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0134",
+   "type": "theory",
+   "stem": "3.已知 $a=\\log _{2} 0.2, b=2^{0.2}, c=0.2^{0.3}$ ，则\nA. $a<b<c$\nB. $a<c<b$\nC. $c<a<b$\nD.\n\n$b<c<a$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0135",
+   "type": "theory",
+   "stem": "6. 某学校为了解 1000 名新生的身体素质, 将这些学生编号为 $1,2, \\cdots, 1000$, 从这些新 生中用系统抽样方法等距抽取 100 名学生进行体质测验, 若 46 号学生被抽到, 则下面 4 名 学生中被抽到的是\nA. 8 号学生\nB. 200 号学生\nC. 616 号学生\nD. 815 号\n\n学生",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0136",
+   "type": "theory",
+   "stem": "7.tan $255^{\\circ}=$\nA. $-2-\\sqrt{3}$\nB. $-2+\\sqrt{3}$\nC. $2-\\sqrt{3}$\nD. $2+\\sqrt{3}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0137",
+   "type": "theory",
+   "stem": "8.已知非零向量 $\\boldsymbol{a}, \\boldsymbol{b}$ 满足 $|a|=2|b|$, 且 $(\\boldsymbol{a}-\\boldsymbol{b}) \\perp \\boldsymbol{b}$, 则 $\\boldsymbol{a}$ 与 $\\boldsymbol{b}$ 的夹角为\nA. $\\frac{\\pi}{6}$\nB. $\\frac{\\pi}{3}$\nC. $\\frac{2 \\pi}{3}$\nD. $\\frac{5 \\pi}{6}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0138",
+   "type": "theory",
+   "stem": "10. 双曲线 $C: \\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的 一条渐近线的倾斜角为 $130^{\\circ}$, 则 $\\mathrm{C}$ 的离心率为\nA. $2 \\sin 40^{\\circ}$\nB. $2 \\cos 40^{\\circ}$\nC. $\\frac{1}{\\sin 50^{\\circ}}$\nD.\n\n$\\frac{1}{\\cos 50^{\\circ}}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0139",
+   "type": "theory",
+   "stem": "11. $\\triangle A B C$ 的内角 $A, B, C$ 的对边分别为 $a, b, c$, 已知 $a \\sin A-b \\sin B=4 c \\sin C, \\cos A=-\\frac{1}{4}$, 则 $\\frac{b}{c}=$\nA. 6\nB. 5\nC. 4\nD. 3",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0140",
+   "type": "theory",
+   "stem": "1.已知集合 $A=\\{x \\mid x>-1\\}, B=\\{x \\mid x<2\\}$, 则 $A \\cap B=$\nA. $(-1,+\\infty)$\nB. $(-\\infty, 2)$\nC. $(-1,2)$\nD. $\\varnothing$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0141",
+   "type": "theory",
+   "stem": "2. 设 $z=\\mathrm{i}(2+\\mathrm{i})$ ，则 $\\bar{z}=$\nA. $1+2 \\mathrm{i}$\nB. $-1+2 \\mathrm{i}$\nC. $1-2 \\mathrm{i}$\nD. $-1-2 \\mathrm{i}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0142",
+   "type": "theory",
+   "stem": "3.已知向量 $\\boldsymbol{a}=(2,3), \\boldsymbol{b}=(3,2)$, 则 $|\\boldsymbol{a}-\\boldsymbol{b}|=$\nA. $\\sqrt{2}$\nB. 2\nC. $5 \\sqrt{2}$\nD. 50",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0143",
+   "type": "theory",
+   "stem": "4. 生物实验室有 5 只兔子, 其中只有 3 只测量过某项指标, 若从这 5 只兔子中随机取出 3 只, 则恰有 2 只测量过该指标的概率为\nA. $\\frac{2}{3}$\nB. $\\frac{3}{5}$\nC. $\\frac{2}{5}$\nD. $\\frac{1}{5}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0144",
+   "type": "theory",
+   "stem": "5. 在 “一带一路” 知识测验后, 甲、乙、丙三人对成绩进行预测.\n\n甲: 我的成绩比乙高.\n\n乙: 丙的成绩比我和甲的都高.\n\n丙: 我的成绩比乙高.\n\n成绩公布后, 三人成绩互不相同且只有一个人预测正确，那么三人按成绩由高到低的次 序为\nA. 甲、乙、丙\nB. 乙、甲、丙\nC. 丙、乙、甲\nD. 甲、丙、乙",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0145",
+   "type": "theory",
+   "stem": "6. 设 $f(x)$ 为奇函数, 且当 $x \\geq 0$ 时, $f(x)=e^{x}-1$, 则当 $x<0$ 时, $f(x)=$\nA. $e^{-x}-1$\nB. $\\mathrm{e}^{-x}+1$\nC. $-\\mathrm{e}^{-x}-1$\nD. $-\\mathrm{e}^{-x}+1$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0146",
+   "type": "theory",
+   "stem": "7. 设 $\\alpha, \\beta$ 为两个平面, 则 $\\alpha / / \\beta$ 的充要条件是\nA. $\\alpha$ 内有无数条直线与 $\\beta$ 平行\nB. $\\alpha$ 内有两条相交直线与 $\\beta$ 平行\nC. $\\alpha, \\beta$ 平行于同一条直线\nD. $\\alpha, \\beta$ 垂直于同一平面",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0147",
+   "type": "theory",
+   "stem": "8. 若 $x_{1}=\\frac{\\pi}{4}, x_{2}=\\frac{3 \\pi}{4}$ 是函数 $f(x)=\\sin \\omega x(\\omega>0)$ 两个相邻的极值点, 则 $\\omega=$\nA. 2\nB. $\\frac{3}{2}$\nC. 1\nD. $\\frac{1}{2}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0148",
+   "type": "theory",
+   "stem": "9. 若抛物线 $y^{2}=2 p x \\quad(p>0)$ 的焦点是椭圆 $\\frac{x^{2}}{3 p}+\\frac{y^{2}}{p}=1$ 的一个焦点, 则 $p=$\nA. 2\nB. 3\nC. 4\nD. 8",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0149",
+   "type": "theory",
+   "stem": "10.曲线 $y=2 \\sin x+\\cos x$ 在点 $(\\pi,-1)$ 处的切线方程为\nA. $x-y-\\pi-1=0$\nB. $2 x-y-2 \\pi-1=0$\nC. $2 x+y-2 \\pi+1=0$\nD. $x+y-\\pi+1=0$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0150",
+   "type": "theory",
+   "stem": "11.已知 $a \\in\\left(0, \\frac{\\pi}{2}\\right), 2 \\sin 2 \\alpha=\\cos 2 \\alpha+1$, 则 $\\sin \\alpha=$\nA. $\\frac{1}{5}$\nB. $\\frac{\\sqrt{5}}{5}$ \nC. $\\frac{\\sqrt{3}}{3}$\nD. $\\frac{2 \\sqrt{5}}{5}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0151",
+   "type": "theory",
+   "stem": "1.已知集合 $A=\\{-1,0,1,2\\}, B=\\left\\{x \\mid x^{2} \\leq 1\\right\\}$, 则 $A \\cap B=(\\quad)$\nA. $\\{-1,0,1\\}$\nB. $\\{0,1\\}$\nC. $\\{-1,1\\}$\nD.\n\n$\\{0,1,2\\}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0152",
+   "type": "theory",
+   "stem": "2. 若 $z(1+\\mathrm{i})=2 \\mathrm{i}$ ，则 $z=(\\quad)$\nA. $-1-\\mathrm{i}$\nB. $-1+\\mathrm{i}$\nC. $1-\\mathrm{i}$\nD. $1+\\mathrm{i}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0153",
+   "type": "theory",
+   "stem": "3.两位男同学和两位女同学随机排成一列, 则两位女同学相邻的概率是（）\nA. $\\frac{1}{6}$\nB. $\\frac{1}{4}$\nC. $\\frac{1}{3}$\nD. $\\frac{1}{2}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0154",
+   "type": "theory",
+   "stem": "4. 《西游记》《三国演义》《水淓传》和《红楼梦》是中国古典文学瑰宝, 并称为中国古典小 说四大名著.某中学为了解本校学生阅读四大名著的情况, 随机调查了 100 学生, 其中阅读 过《西游记》或《红楼梦》的学生共有 90 位, 阅读过《红楼梦》的学生共有 80 位, 阅读过 《西游记》且阅读过《红楼梦》的学生共有 60 位, 则该校阅读过《西游记》的学生人数与 该校学生总数比值的估计值为（）\nA. 0.5\nB. 0.6\nC. 0.7\nD. 0.8",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0155",
+   "type": "theory",
+   "stem": "5. 函数 $f(x)=2 \\sin x-\\sin 2 x$ 在 $[0,2 \\pi]$ 的零点个数为 $(\\quad)$\nA. 2\nB. 3\nC. 4\nD. 5",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0156",
+   "type": "theory",
+   "stem": "6. 已知各项均为正数的等比数列 $\\left\\{a_{n}\\right\\}$ 的前 4 项和为 15 , 且 $a_{5}=3 a_{3}+4 a_{1}$, 则 $a_{3}=(\\quad)$\nA. 16\nB. 8\nC. 4\nD. 2",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0157",
+   "type": "theory",
+   "stem": "7. 已知曲线 $y=a \\mathrm{e}^{x}+x \\ln x$ 在点 $(1, a e)$ 处的切线方程为 $y=2 x+b$, 则 ( )\nA. $a=e, b=-1$\nB. $a=e, b=1$\nC. $a=e^{-1}, b=1$\nD. $a=e^{-1}, b=-1$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0158",
+   "type": "theory",
+   "stem": "10.已知 $F$ 是双曲线 $C: \\frac{x^{2}}{4}-\\frac{y^{2}}{5}=1$ 的一个焦点, 点 $P$ 在 $C$ 上, $O$ 为坐标原点, 若 $|O P|=|O F|$, 则 $\\triangle O P F$ 的面积为 $($ ） \nA. $\\frac{3}{2}$\nB. $\\frac{5}{2}$\nC. $\\frac{7}{2}$\nD. $\\frac{9}{2}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0159",
+   "type": "theory",
+   "stem": "12. 设 $f(x)$ 是定义域为 $R$ 的偶函数, 且在 $(0,+\\infty)$ 单调递减, 则 $(\\quad)$\nA. $f\\left(\\log _{5} \\frac{1}{4}\\right)>f\\left(2^{-\\frac{3}{2}}\\right)>f\\left(2^{-\\frac{2}{3}}\\right)$\nB. $f\\left(\\log _{8} \\frac{1}{4}\\right)>f\\left(2^{-\\frac{2}{3}}\\right)>f\\left(2^{-\\frac{3}{2}}\\right)$\nC. $f\\left(2^{-\\frac{3}{2}}\\right)>f\\left(2^{-\\frac{2}{3}}\\right)>f\\left(\\log _{5} \\frac{1}{4}\\right)$\nD. $f\\left(2^{-\\frac{2}{3}}\\right)>f\\left(2^{-\\frac{3}{2}}\\right)>f\\left(\\log _{5} \\frac{1}{4}\\right)$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0160",
+   "type": "theory",
+   "stem": "1.已知集合 $A=\\{1,2,3,5,7,11\\}, B=\\{x \\mid 3<x<15\\}$, 则 $A \\cap B$ 中元素的个数为（）\nA. 2\nB. 3\nC. 4\nD. 5",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0161",
+   "type": "theory",
+   "stem": "2. 若 $\\bar{z}(1+i)=1-i$, 则 $z=(\\quad)$\nA. $1-i$\nB. $1+i$\nC. $-i$\nD. $i$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0162",
+   "type": "theory",
+   "stem": "3. 设一组样本数据 $x_{1}, x_{2}, \\ldots, x_{n}$ 的方差为 0.01 , 则数据 $10 x_{1}, 10 x_{2}, \\ldots, 10 x_{n}$ 的方差为 $($ )\nA. 0.01\nB. 0.1\nC. 1\nD. 10",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0163",
+   "type": "theory",
+   "stem": "4.Logistic 模型是常用数学模型之一, 可应用于流行病学领城. 有学者根据公布数据建立了某 地区新冠肺炎累计确诊病例数 $I(t)\\left(t\\right.$ 的单位: 天)的 Logistic 模型: $I(t)=\\frac{K}{1+\\mathrm{e}^{-0.23(t-53)}}$, 其中 $K$ 为最大确诊病例数. 当 $I\\left(t^{*}\\right)=0.95 K$ 时，标志着已初步遏制疫情, 则 $t^{*}$ 约为 $(\\quad) \\quad(\\ln 19 \\approx 3)$\nA. 60\nB. 63\nC. 66\nD. 69",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0164",
+   "type": "theory",
+   "stem": "5. 已知 $\\sin \\theta+\\sin \\left(\\theta+\\frac{\\pi}{3}\\right)=1$, 则 $\\sin \\left(\\theta+\\frac{\\pi}{6}\\right)=(\\quad)$ \nA. $\\frac{1}{2}$\nB. $\\frac{\\sqrt{3}}{3}$\nC. $\\frac{2}{3}$\nD. $\\frac{\\sqrt{2}}{2}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0165",
+   "type": "theory",
+   "stem": "7. 设 $O$ 为坐标原点, 直线 $x=2$ 与抛物线 $C: y^{2}=2 p x(p>0)$ 交于 $D, E$ 两点, 若 $O D \\perp O E$, 则 $C$ 的焦点坐标为 $(\\quad)$\nA. $\\left(\\frac{1}{4}, 0\\right)$\nB. $\\left(\\frac{1}{2}, 0\\right)$\nC. $(1,0)$\nD. $(2,0)$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0166",
+   "type": "theory",
+   "stem": "8.点 $(0,-1)$ 到直线 $y=k(x+1)$ 距离的最大值为 $(\\quad)$\nA. 1\nB. $\\sqrt{2}$\nC. $\\sqrt{3}$\nD. 2",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0167",
+   "type": "theory",
+   "stem": "10. 设 $a=\\log _{3} 2, b=\\log _{5} 3, c=\\frac{2}{3}$, 则 $(\\quad)$\nA. $a<c<b$\nB. $a<b<c$\nC. $b<c<a$\nD. $c<a<b$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0168",
+   "type": "theory",
+   "stem": "11. 在 $\\triangle A B C$ 中, $\\cos C=\\frac{2}{3}, A C=4, B C=3$, 则 $\\tan B=(\\quad)$ \nA. $\\sqrt{5}$\nB. $2 \\sqrt{5}$\nC. $4 \\sqrt{5}$\nD. $8 \\sqrt{5}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0169",
+   "type": "theory",
+   "stem": "12. 已知函数 $f(x)=\\sin x+\\frac{1}{\\sin x}$, 则 $(\\quad)$\nA. $f(x)$ 的最小值为 2\nB. $f(x)$ 的图像关于 $y$ 轴对称\nC. $f(x)$ 的图像关于直线 $x=\\pi$ 对称\nD. $f(x)$ 的图像关于直线 $x=\\frac{\\pi}{2}$ 对称",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0170",
+   "type": "theory",
+   "stem": "1. 已知集合 $A=\\left\\{x \\mid x^{2}-3 x-4<0\\right\\}, B=\\{-4,1,3,5\\}$, 则 $\\left.A \\cap B=（ \\quad\\right)$\nA. $\\{-4,1\\}$\nB. $\\{1,5\\}$\nC. $\\{3,5\\}$\nD. $\\{1,3\\}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0171",
+   "type": "theory",
+   "stem": "2. 若 $z=1+2 i+i^{3}$ ，则 $|z|=(\\quad)$\nA. 0\nB. 1\nC. $\\sqrt{2}$\nD. 2",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0172",
+   "type": "theory",
+   "stem": "6. 已知圆 $x^{2}+y^{2}-6 x=0$, 过点 $(1,2)$ 的直线被该圆所截得的弦的长度的最小值为 ( ) \nA. 1\nB. 2\nC. 3\nD. 4",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0173",
+   "type": "theory",
+   "stem": "8. 设 $a \\log _{3} 4=2$ ，则 $4^{-a}=(\\quad)$\nA. $\\frac{1}{16}$\nB. $\\frac{1}{9}$\nC. $\\frac{1}{8}$\nD. $\\frac{1}{6}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0174",
+   "type": "theory",
+   "stem": "10. 设 $\\left\\{a_{n}\\right\\}$ 是等比数列, 且 $a_{1}+a_{2}+a_{3}=1, a_{2}+a_{3}+a_{4}=2$, 则 $a_{6}+a_{7}+a_{8}=(\\quad)$\nA. 12\nB. 24\nC. 30\nD. 32",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0175",
+   "type": "theory",
+   "stem": "11. 设 $F_{1}, F_{2}$ 是双曲线 $C: x^{2}-\\frac{y^{2}}{3}=1$ 的两个焦点, $O$ 为坐标原点, 点 $P$ 在 $C$ 上且 $|O P|=2$, 则 $\\triangle P F_{1} F_{2}$ 的面积为 ( )\nA. $\\frac{7}{2}$\nB. 3\nC. $\\frac{5}{2}$\nD. 2",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0176",
+   "type": "theory",
+   "stem": "1.已知集合 $A=\\{x|| x \\mid<3, x \\in Z\\}, B=\\{x|| x \\mid>1, x \\in Z\\}$, 则 $A \\cap B=(\\quad)$\nA. $\\varnothing$\nB. $\\{-3,-2,2,3)$\nC. $\\{-2,0,2\\}$\nD. $\\{-2,2\\}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0177",
+   "type": "theory",
+   "stem": "2. $(1-\\mathrm{i})^{4}=(\\quad)$\nA. -4\nB. 4\nC. $-4 i$\nD. $4 i$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0178",
+   "type": "theory",
+   "stem": "4.在新冠肺炎疫情防控期间，某超市开通网上销售业务，每天能完成1200份订单的\n\n配货, 由于订单量大幅增加, 导致订单积压.为解决困难, 许多志愿者踊跃报名参加配货工作.已知该超市 某日积压 500 份订单末配货, 预计第二天的新订单超过 1600 份的概率为 0.05 , 志愿者每人每天能完成 50 份订 单的配货, 为使第二天完成积压订单及当日订单的配货的概率不小于 0.95 , 则至少需要志愿者（）\nA. 10 名\nB. 18 名\nC. 24名\nD. 32 名",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0179",
+   "type": "theory",
+   "stem": "5.已知单位向量 $\\boldsymbol{a}, \\boldsymbol{b}$ 的夹角为 $60^{\\circ}$, 则在下列向量中, 与 $\\boldsymbol{b}$ 垂直的是（）\nA. $\\boldsymbol{a}+2 \\boldsymbol{b}$\nB. $2 \\boldsymbol{a}+\\boldsymbol{b}$\nC. $\\boldsymbol{a}-2 \\boldsymbol{b}$\nD. $2 \\boldsymbol{a}-\\boldsymbol{b}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0180",
+   "type": "theory",
+   "stem": "6. 记 $S_{n}$ 为等比数列 $\\left\\{a_{n}\\right\\}$ 的前 $n$ 项和. 若 $a_{5}-a_{3}=12, a_{6}-a_{4}=24$, 则 $\\frac{S_{n}}{a_{n}}=(\\quad)$\nA. $2^{n}-1$\nB. $2-2^{1-n}$\nC. $2-2^{n-1}$\nD. $2^{1-n}-1$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0181",
+   "type": "theory",
+   "stem": "8. 若过点 $(2,1)$ 的圆与两坐标轴都相切, 则圆心到直线 $2 x-y-3=0$ 的距离为 ( )\nA. $\\frac{\\sqrt{5}}{5}$\nB. $\\frac{2 \\sqrt{5}}{5}$\nC. $\\frac{3 \\sqrt{5}}{5}$\nD. $\\frac{4 \\sqrt{5}}{5}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0182",
+   "type": "theory",
+   "stem": "9. 设 $O$ 为坐标原点, 直线 $x=a$ 与双曲线 $C: \\frac{x^{2}}{a^{2}}-\\frac{y^{2}}{b^{2}}=1(a>0, b>0)$ 的两条渐近线分别交于 $D, E$ 两点, 若 $\\square O D E$ 的面积为 8 , 则 $C$ 的焦距的最小值为 ( )\nA. 4\nB. 8\nC. 16\nD. 32",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0183",
+   "type": "theory",
+   "stem": "10. 设函数 $f(x)=x^{3}-\\frac{1}{x^{3}}$, 则 $f(x)(\\quad)$\nA. 是奇函数, 且在 $(0,+\\infty)$ 单调递增\nB. 是奇函数, 且在 $(0,+\\infty)$ 单调递减\nC. 是偶函数, 且在 $(0,+\\infty)$ 单调递增\nD. 是偶函数, 且在 $(0,+\\infty)$ 单调递减",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0184",
+   "type": "theory",
+   "stem": "11.已知 $\\triangle A B C$ 是面积为 $\\frac{9 \\sqrt{3}}{4}$\n\n的等边三角形, 且其顶点都在球 $O$ 的球面上. 若球 $O$ 的表面积为 $16 \\pi$, 则 $O$ 到平面 $A B C$ 的距离为（）\nA. $\\sqrt{3}$\nB. $\\frac{3}{2}$\nC. 1\nD. $\\frac{\\sqrt{3}}{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0185",
+   "type": "theory",
+   "stem": "12. 若 $2^{x}-2^{y}<3^{-x}-3^{-y}$ ，则 $(\\quad)$\nA. $\\ln (y-x+1)>0$\nB. $\\ln (y-x+1)<0$\nC. $\\ln |x-y|>0$\nD. $\\ln |x-y|<0$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0186",
+   "type": "theory",
+   "stem": "1. 设集合 $M=\\{1,3,5,7,9\\}, N=\\{x \\mid 2 x>7\\}$, 则 $M \\cap N=(\\quad)$\nA. $\\{7,9\\}$\nB. $\\{5,7,9\\}$\nC. $\\{3,5,7,9\\}$\nD. $\\{1,3,5,7,9\\}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0187",
+   "type": "theory",
+   "stem": "3. 已知 $(1-i)^{2} z=3+2 i$, 则 $z=(\\quad)$\nA. $-1-\\frac{3}{2} i$\nB. $-1+\\frac{3}{2} i$\nC. $-\\frac{3}{2}+i$\nD. $-\\frac{3}{2}-i$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0188",
+   "type": "theory",
+   "stem": "4. 下列函数中是增函数的为 $(\\quad ）$\nA. $f(x)=-x$\nB. $f(x)=\\left(\\frac{2}{3}\\right)^{x}$\nC. $f(x)=x^{2}$\nD. $f(x)=\\sqrt[3]{x}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0189",
+   "type": "theory",
+   "stem": "5. 点 $(3,0)$ 到双曲线 $\\frac{x^{2}}{16}-\\frac{y^{2}}{9}=1$ 的一条渐近线的距离为 $(\\quad)$\nA. $\\frac{9}{5}$\nB. $\\frac{8}{5}$\nC. $\\frac{6}{5}$\nD. $\\frac{4}{5}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0190",
+   "type": "theory",
+   "stem": "6. 青少年视力是社会普遍关注的问题, 视力情况可借助视力表测量. 通常用五分记录法和小数记录法记录 视力数据, 五分记录法的数据 $L$ 和小数记录表的数据 $V$ 的满足 $L=5+\\lg V$. 已知某同学视力的五分记录法 的数据为 4.9 , 则其视力的小数记录法的数据为 $(\\quad) \\quad(\\sqrt[10]{10} \\approx 1.259)$\nA. 1.5\nB. 1.2\nC. 0.8\nD. 0.6",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0191",
+   "type": "theory",
+   "stem": "8. 在 $\\triangle A B C$ 中, 已知 $B=120^{\\circ}, A C=\\sqrt{19}, A B=2$, 则 $B C=(\\quad)$\nA. 1\nB. $\\sqrt{2}$\nC. $\\sqrt{5}$\nD. 3",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0192",
+   "type": "theory",
+   "stem": "9. 记 $S_{n}$ 为等比数列 $\\left\\{a_{n}\\right\\}$ 的前 $n$ 项和. 若 $S_{2}=4, S_{4}=6$, 则 $S_{6}=(\\quad)$\nA. 7\nB. 8\nC. 9\nD. 10",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0193",
+   "type": "theory",
+   "stem": "10. 将 3 个 1 和 2 个 0 随机排成一行, 则 2 个 0 不相邻的概率为 $($ ）\nA. 0.3\nB. 0.5\nC. 0.6\nD. 0.8",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0194",
+   "type": "theory",
+   "stem": "11. 若 $a \\in\\left(0, \\frac{\\pi}{2}\\right), \\tan 2 a=\\frac{\\cos a}{2-\\sin a}$, 则 $\\tan a=(\\quad)$\nA. $\\frac{\\sqrt{15}}{15}$\nB. $\\frac{\\sqrt{5}}{5}$\nC. $\\frac{\\sqrt{5}}{3}$\nD. $\\frac{\\sqrt{15}}{3}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0195",
+   "type": "theory",
+   "stem": "12. 设 $f(x)$ 是定义域为 $\\boldsymbol{R}$ 的奇函数, 且 $f(1+x)=f(-x)$. 若 $f\\left(-\\frac{1}{3}\\right)=\\frac{1}{3}$, 则 $f\\left(\\frac{5}{3}\\right)=(\\quad)$\nA. $-\\frac{5}{3}$\nB. $-\\frac{1}{3}$\nC. $\\frac{1}{3}$\nD. $\\frac{5}{3}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0196",
+   "type": "theory",
+   "stem": "3.已知命题 $p: \\exists x \\in R, \\sin x<1$; 命题 $q: \\forall x \\in R, e^{|x|} \\geq 1$, 则下列命题中为真命题的是 ( )\nA. $p \\wedge q$\nB. $\\neg p \\wedge q$\nC. $p \\wedge \\neg q$\nD. $\\neg(p \\vee q)$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0197",
+   "type": "theory",
+   "stem": "4.函数 $f(x)=\\sin \\frac{x}{3}+\\cos \\frac{x}{3}$ 的最小正周期和最大值分别是 $(\\quad)$\n\nA. $3 \\pi$ 和 $\\sqrt{2}$\n\nB. $3 \\pi$ 和 2\n\nC. $6 \\pi$ 和 $\\sqrt{2}$\n\nD. $6 \\pi$ 和 2",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0198",
+   "type": "theory",
+   "stem": "6. $\\cos ^{2} \\frac{\\pi}{12}-\\cos ^{2} \\frac{5 \\pi}{12}=(\\quad)$\n\nA. $\\frac{1}{2}$\n\nB. $\\frac{\\sqrt{3}}{3}$\n\nC. $\\frac{\\sqrt{2}}{2}$\n\nD. $\\frac{\\sqrt{3}}{2}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0199",
+   "type": "theory",
+   "stem": "7. 在区间 $\\left(0, \\frac{1}{2}\\right)$ 随机取 1 个数, 则取到的数小于 $\\frac{1}{3}$ 的概率为 $(\\quad)$\n\nA. $\\frac{3}{4}$\n\nB. $\\frac{2}{3}$\n\nC. $\\frac{1}{3}$\n\nD. $\\frac{1}{6}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0200",
+   "type": "theory",
+   "stem": "8. 下列函数中最小值为 4 的是（ ）\n\nA. $y=x^{2}+2 x+4$\n\nB. $y=|\\sin x|+\\frac{4}{|\\sin x|}$\n\nC. $y=2^{x}+2^{2-x}$\n\nD. $y=\\ln x+\\frac{4}{\\ln x}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0201",
+   "type": "theory",
+   "stem": "9. 设函数 $f(x)=\\frac{1-x}{1+x}$, 则下列函数中为奇函数的是 $(\\quad)$\nA. $f(x-1)-1$ \nB. $f(x-1)+1$\nC. $f(x+1)-1$\nD. $f(x+1)+1$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0202",
+   "type": "theory",
+   "stem": "11. 设 $B$ 是椭圆 $C: \\frac{x^{2}}{5}+y^{2}=1$ 的上顶点, 点 $P$ 在 $C$ 上, 则 $|P B|$ 的最大值为\nA. $\\frac{5}{2}$\nB. $\\sqrt{6}$\nC. $\\sqrt{5}$\nD. 2",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0203",
+   "type": "theory",
+   "stem": "12. 设 $a \\neq 0$, 若 $x=a$ 为函数 $f(x)=a(x-a)^{2}(x-b)$ 的极大值点, 则\nA. $a<b$\nB. $a>b$\nC. $a b<a^{2}$\nD. $a b>a^{2}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0204",
+   "type": "theory",
+   "stem": "1. 集合 $M=\\{2,4,6,8,10\\}, N=\\{x \\mid-1<x<6\\}$, 则 $M \\cap N=()$\nA. $\\{2,4\\}$\nB. $\\{2,4,6\\}$\nC. $\\{2,4,6,8\\}$\nD.\n\n$\\{2,4,6,8,10\\}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0205",
+   "type": "theory",
+   "stem": "2. 设 $(1+2 \\mathrm{i}) a+b=2 \\mathrm{i}$, 其中 $a, b$ 为实数, 则（)\nA. $a=1, b=-1$\nB. $a=1, b=1$\nC. $a=-1, b=1$\nD.\n\n$a=-1, b=-1$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0206",
+   "type": "theory",
+   "stem": "3. 已知向量 $\\vec{a}=(2,1), \\vec{b}=(-2,4)$, 则 ||$^{\\prime} a-b \\mid$ ()\nA. 2\nB. 3\nC. 4\nD. 5",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0207",
+   "type": "theory",
+   "stem": "4. 分别统计了甲、乙两位同学 16 周的各周课外体育运动时长 (单位: $\\mathrm{h}$ ), 得如下茎叶图:\n\n\\begin{tabular}{|c|c|c|}\n\\hline 甲 & & 乙 \\\\\n\\hline 61 & 5. & . \\\\\n\\hline 8530 & 6. & 3 \\\\\n\\hline 7532 & 7. & 46 \\\\\n\\hline 6421 & 8. & 12256666 \\\\\n\\hline \\multirow[t]{2}{*}{42} & 9. & 0238 \\\\\n\\hline & 10. & 1 \\\\\n\\hline\n\\end{tabular}\n\n则下列结论中错误的是 ()\nA. 甲同学周课外体育运动时长的样本中位数为 7.4\nB. 乙同学周课外体育运动时长的样本平均数大于 8\nC. 甲同学周课外体育运动时长大于 8 的概率的估计值大于 0.4\nD. 乙同学周课外体育运动时长大于 8 的概率的估计值大于 0.6",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0208",
+   "type": "theory",
+   "stem": "6. 设 $F$ 为抛物线 $C: y^{2}=4 x$ 的焦点, 点 $A$ 在 $C$ 上, 点 $B(3,0)$, 若 $|A F|=|B F|$, 则 $|A B|=$ () \nA. 2\nB. $2 \\sqrt{2}$\nC. 3\nD. $3 \\sqrt{2}$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0209",
+   "type": "theory",
+   "stem": "10. 已知等比数列 $\\left\\{a_{n}\\right\\}$ 的前 3 项和为 $168, a_{2}-a_{5}=42$, 则 $a_{6}=()$\nA. 14\nB. 12\nC. 6\nD. 3",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0210",
+   "type": "theory",
+   "stem": "11. 函数 $f(x)=\\cos x+(x+1) \\sin x+1$ 在区间 $[0,2 \\pi]$ 的最小值、最大值分别为 ()\nA. $-\\frac{\\pi}{2}, \\frac{\\pi}{2}$\nB. $-\\frac{3 \\pi}{2}, \\frac{\\pi}{2}$\nC. $-\\frac{\\pi}{2}, \\frac{\\pi}{2}+2$\nD. $-\\frac{3 \\pi}{2}, \\frac{\\pi}{2}+2$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0211",
+   "type": "theory",
+   "stem": "12. 已知球 $O$ 的半径为 1 , 四棱雉的顶点为 $O$, 底面的四个顶点均在球 $O$ 的球面上, 则当该 四棱雉的体积最大时，其高为（)\nA. $\\frac{1}{3}$\nB. $\\frac{1}{2}$\nC. $\\frac{\\sqrt{3}}{3}$\nD. $\\frac{\\sqrt{2}}{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0212",
+   "type": "theory",
+   "stem": "1. 设集合 $A=\\{-2,-1,0,1,2\\}, B=\\left\\{x \\mid 0 \\leq x<\\frac{5}{2}\\right\\}$, 则 $A \\cap B=()$\nA. $\\{0,1,2\\}$\nB. $\\{-2,-1,0\\}$\nC. $\\{0,1\\}$\nD. $\\{1,2\\}$",
+   "marks": 1,
+   "answer": "['A']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0213",
+   "type": "theory",
+   "stem": "3. 若 $z=1+\\mathrm{i}$. 则 $|\\mathrm{i} z+3 \\bar{z}|=()$\nA. $4 \\sqrt{5}$\nB. $4 \\sqrt{2}$\nC. $2 \\sqrt{5}$\nD. $2 \\sqrt{2}$",
+   "marks": 1,
+   "answer": "['D']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0214",
+   "type": "theory",
+   "stem": "5. 将函数 $f(x)=\\sin \\left(\\omega x+\\frac{\\pi}{3}\\right)(\\omega>0)$ 的图像向左平移 $\\frac{\\pi}{2}$ 个单位长度后得到曲线 $C$, 若 $C$ 关于 $y$ 轴对称，则 $\\omega$ 的最小值是（)\nA. $\\frac{1}{6}$\nB. $\\frac{1}{4}$\nC. $\\frac{1}{3}$\nD. $\\frac{1}{2}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0215",
+   "type": "theory",
+   "stem": "6. 从分别写有 $1,2,3,4,5,6$ 的 6 张卡片中无放回随机抽取 2 张, 则抽到的 2 张卡片上 的数字之积是 4 的倍数的概率为 ()\nA. $\\frac{1}{5}$\nB. $\\frac{1}{3}$\nC. $\\frac{2}{5}$\nD. $\\frac{2}{3}$",
+   "marks": 1,
+   "answer": "['C']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0216",
+   "type": "theory",
+   "stem": "8. 当 $x=1$ 时, 函数 $f(x)=a \\ln x+\\frac{b}{x}$ 取得最大值 -2 , 则 $f^{\\prime}(2)=()$\nA. -1\nB. $-\\frac{1}{2}$\nC. $\\frac{1}{2}$\nD. 1",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0217",
+   "type": "theory",
+   "stem": "11. 已知椭圆 $C: \\frac{x^{2}}{a^{2}}+\\frac{y^{2}}{b^{2}}=1(a>b>0)$ 的离心率为 $\\frac{1}{3}, A_{1}, A_{2}$ 分别为 $C$ 的左、右顶点, $B$ 为 $C$ 的上顶点. 若 $\\overrightarrow{B A_{1}} \\cdot \\overrightarrow{B A_{2}}=-1$, 则 $C$ 的方程为 ()\nA. $\\frac{x^{2}}{18}+\\frac{y^{2}}{16}=1$\nB. $\\frac{x^{2}}{9}+\\frac{y^{2}}{8}=1$\nC. $\\frac{x^{2}}{3}+\\frac{y^{2}}{2}=1$\nD.\n\n$$\n\\frac{x^{2}}{2}+y^{2}=1\n$$",
+   "marks": 1,
+   "answer": "['B']"
+  },
+  {
+   "id": "gaokao-math-ii-mcqs-bank-0218",
+   "type": "theory",
+   "stem": "12. 已知 $9^{m}=10, a=10^{m}-11, b=8^{m}-9$, 则 ()\nA. $a>0>b$\nB. $a>b>0$\nC. $b>a>0$\nD. $b>0>a$",
+   "marks": 1,
+   "answer": "['A']"
+  }
+ ],
+ "category": "Gaokao",
+ "body": " Math Ii Mcqs"
+}

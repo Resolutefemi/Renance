@@ -1,0 +1,1298 @@
+{
+ "code": "cissp-security-risk-mgmt-bank",
+ "title": "CISSP -  Security Risk Mgmt",
+ "version": 1,
+ "questionCount": 99,
+ "totalMarks": 99,
+ "questions": [
+  {
+   "id": "cissp-security-risk-mgmt-bank-0001",
+   "type": "mcq",
+   "stem": "Alyssa is responsible for her organization's security awareness program. She is concerned that changes in technology may make the content outdated. What control can she put in place to protect against this risk?",
+   "marks": 1,
+   "options": {
+    "A": "Gamification",
+    "B": "Computer-based training",
+    "C": "Content reviews",
+    "D": "Live training"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0002",
+   "type": "mcq",
+   "stem": "Gavin is creating a report for management on the results of his most recent risk assessment. In his report, he would like to identify the remaining level of risk to the organization after adopting security controls. What term best describes this current level of risk?",
+   "marks": 1,
+   "options": {
+    "A": "Inherent risk",
+    "B": "Residual risk",
+    "C": "Control risk",
+    "D": "Mitigated risk"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0003",
+   "type": "mcq",
+   "stem": "Francine is a security specialist for an online service provider in the United States. She recently received a claim from a copyright holder that a user is storing information on her service that violates the third party's copyright. What law governs the actions that Francine must take?",
+   "marks": 1,
+   "options": {
+    "A": "Copyright Act",
+    "B": "Lanham Act",
+    "C": "Digital Millennium Copyright Act",
+    "D": "Gramm-Leach-Bliley Act"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0004",
+   "type": "mcq",
+   "stem": "FlyAway Travel has offices in both the European Union (EU) and the United States and transfers personal information between those offices regularly. They have recently received a request from an EU customer requesting that their account be terminated. Under the General Data Protection Regulation (GDPR), which requirement for processing personal information states that individuals may request that their data no longer be disseminated or processed?",
+   "marks": 1,
+   "options": {
+    "A": "The right to access",
+    "B": "Privacy by Design",
+    "C": "The right to erasure",
+    "D": "The right of data portability"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0005",
+   "type": "mcq",
+   "stem": "After conducting a qualitative risk assessment of her organization, Sally recommends purchasing cybersecurity breach insurance. What type of risk response behavior is she recommending?",
+   "marks": 1,
+   "options": {
+    "A": "Accept",
+    "B": "Transfer",
+    "C": "Reduce",
+    "D": "Reject"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0006",
+   "type": "mcq",
+   "stem": "Which one of the following elements of information is NOT considered personally identifiable information that would trigger most United States state data breach laws?",
+   "marks": 1,
+   "options": {
+    "A": "Student identification number",
+    "B": "Social Security number",
+    "C": "Driver's license number",
+    "D": "Credit card number"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0007",
+   "type": "mcq",
+   "stem": "Renee is purchasing a new software product and is working with the vendor on the negotiation of a license agreement that will specify customized terms of use and a discounted price. What type of agreement would normally be used to document the results of this negotiation?",
+   "marks": 1,
+   "options": {
+    "A": "Perpetual license",
+    "B": "Subscription license",
+    "C": "Enterprise license agreement",
+    "D": "End-user license agreement"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0008",
+   "type": "mcq",
+   "stem": "Henry recently assisted one of his co-workers in preparing for the CISSP® exam. During this process, Henry disclosed confidential information about the content of the exam, in violation of Canon IV of the Code of Ethics: 'Advance and protect the profession.' Who may bring ethics charges against Henry for this violation?",
+   "marks": 1,
+   "options": {
+    "A": "Anyone may bring charges.",
+    "B": "Any certified or licensed professional may bring charges.",
+    "C": "Only Henry's employer may bring charges.",
+    "D": "Only the affected employee may bring charges."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0009",
+   "type": "mcq",
+   "stem": "Wanda is working with one of her organization's European Union business partners to facilitate the exchange of customer information. Wanda's organization is located in the United States. What would be the BEST method for Wanda to use to ensure GDPR compliance?",
+   "marks": 1,
+   "options": {
+    "A": "Binding corporate rules",
+    "B": "Privacy Shield",
+    "C": "Standard contractual clauses",
+    "D": "Safe harbor"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0010",
+   "type": "mcq",
+   "stem": "Yolanda is the chief privacy officer for a financial institution and is researching privacy requirements related to customer checking accounts. Which one of the following laws is MOST likely to apply to this situation?",
+   "marks": 1,
+   "options": {
+    "A": "GLBA",
+    "B": "SOX",
+    "C": "HIPAA",
+    "D": "FERPA"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0011",
+   "type": "mcq",
+   "stem": "Tim's organization recently received a contract to conduct sponsored research as a government contractor. What law now likely applies to the information systems involved in this contract?",
+   "marks": 1,
+   "options": {
+    "A": "FISMA",
+    "B": "PCI DSS",
+    "C": "HIPAA",
+    "D": "GISRA"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0012",
+   "type": "mcq",
+   "stem": "Chris is advising travelers from his organization who will be visiting many different countries overseas. He is concerned about compliance with export control laws. Which of the following technologies is MOST likely to trigger these regulations?",
+   "marks": 1,
+   "options": {
+    "A": "Memory chips",
+    "B": "Office productivity applications",
+    "C": "Hard drives",
+    "D": "Encryption software"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0013",
+   "type": "mcq",
+   "stem": "Bobbi is investigating a security incident and discovers that an attacker began with a normal user account but managed to exploit a system vulnerability to provide that account with administrative rights. What type of attack took place under the STRIDE threat model?",
+   "marks": 1,
+   "options": {
+    "A": "Spoofing",
+    "B": "Repudiation",
+    "C": "Tampering",
+    "D": "Elevation of privilege"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0014",
+   "type": "mcq",
+   "stem": "You are completing your business continuity planning effort and have decided that you want to accept one of the risks. What should you do NEXT?",
+   "marks": 1,
+   "options": {
+    "A": "Implement new security controls to reduce the risk level.",
+    "B": "Design a disaster recovery plan.",
+    "C": "Repeat the business impact assessment.",
+    "D": "Document your decision-making process."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0015",
+   "type": "mcq",
+   "stem": "Tony is developing a business continuity plan and is having difficulty prioritizing resources because of the difficulty of combining information about tangible and intangible assets. What would be the MOST effective risk assessment approach for him to use?",
+   "marks": 1,
+   "options": {
+    "A": "Quantitative risk assessment",
+    "B": "Qualitative risk assessment",
+    "C": "Neither quantitative nor qualitative risk assessment",
+    "D": "Combination of quantitative and qualitative risk assessment"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0016",
+   "type": "mcq",
+   "stem": "Vincent believes that a former employee took trade secret information from his firm and brought it with him to a competitor. He wants to pursue legal action. Under what law could he pursue charges?",
+   "marks": 1,
+   "options": {
+    "A": "Copyright law",
+    "B": "Lanham Act",
+    "C": "Glass-Steagall Act",
+    "D": "Economic Espionage Act"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0017",
+   "type": "mcq",
+   "stem": "Which one of the following principles imposes a standard of care upon an individual that is broad and equivalent to what one would expect from a reasonable person under the circumstances?",
+   "marks": 1,
+   "options": {
+    "A": "Due diligence",
+    "B": "Separation of duties",
+    "C": "Due care",
+    "D": "Least privilege"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0018",
+   "type": "mcq",
+   "stem": "Brenda's organization recently completed the acquisition of a competitor firm. Which one of the following tasks would be LEAST likely to be part of the organizational processes addressed during the acquisition?",
+   "marks": 1,
+   "options": {
+    "A": "Consolidation of security functions",
+    "B": "Integration of security tools",
+    "C": "Protection of intellectual property",
+    "D": "Documentation of security policies"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0019",
+   "type": "mcq",
+   "stem": "Kelly believes that an employee engaged in the unauthorized use of computing resources for a side business. After consulting with management, she decides to launch an administrative investigation. What is the burden of proof that she must meet in this investigation?",
+   "marks": 1,
+   "options": {
+    "A": "Preponderance of the evidence.",
+    "B": "Beyond a reasonable doubt.",
+    "C": "Beyond the shadow of a doubt.",
+    "D": "There is no standard."
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0020",
+   "type": "mcq",
+   "stem": "Keenan Systems recently developed a new manufacturing process for microprocessors. The company wants to license the technology to other companies for use but wants to prevent unauthorized use of the technology. What type of intellectual property protection is BEST suited for this situation?",
+   "marks": 1,
+   "options": {
+    "A": "Patent",
+    "B": "Trade secret",
+    "C": "Copyright",
+    "D": "Trademark"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0021",
+   "type": "mcq",
+   "stem": "Which one of the following actions might be taken as part of a business continuity plan (BCP)? (As opposed to disaster recovery.)",
+   "marks": 1,
+   "options": {
+    "A": "Restoring from backup tapes",
+    "B": "Implementing RAID",
+    "C": "Relocating to a cold site",
+    "D": "Restarting business operations"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0022",
+   "type": "mcq",
+   "stem": "When developing a business impact analysis, the team should first create a list of assets. What should happen NEXT?",
+   "marks": 1,
+   "options": {
+    "A": "Identify vulnerabilities in each asset.",
+    "B": "Determine the risks facing the asset.",
+    "C": "Develop a value for each asset.",
+    "D": "Identify threats facing each asset."
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0023",
+   "type": "mcq",
+   "stem": "Mike recently implemented an intrusion prevention system designed to block common network attacks from affecting his organization. What type of risk management strategy is Mike pursuing?",
+   "marks": 1,
+   "options": {
+    "A": "Risk acceptance",
+    "B": "Risk avoidance",
+    "C": "Risk mitigation",
+    "D": "Risk transference"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0024",
+   "type": "mcq",
+   "stem": "Laura has been asked to perform a security controls assessment (SCA). What type of organization is she MOST likely in?",
+   "marks": 1,
+   "options": {
+    "A": "Higher education",
+    "B": "Banking",
+    "C": "Government",
+    "D": "Healthcare"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0025",
+   "type": "mcq",
+   "stem": "Carl is a federal agent investigating a computer crime case. He identified an attacker who engaged in illegal conduct and wants to pursue a case against that individual that will lead to imprisonment. What standard of proof must Carl meet?",
+   "marks": 1,
+   "options": {
+    "A": "Beyond the shadow of a doubt",
+    "B": "Preponderance of the evidence",
+    "C": "Beyond a reasonable doubt",
+    "D": "Majority of the evidence"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0026",
+   "type": "mcq",
+   "stem": "ISC2 uses its logo to represent itself online and in a variety of forums. What type of intellectual property protection can it use to protect its rights in this logo?",
+   "marks": 1,
+   "options": {
+    "A": "Copyright",
+    "B": "Patent",
+    "C": "Trade secret",
+    "D": "Trademark"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0027",
+   "type": "mcq",
+   "stem": "Mary is helping a computer user who sees a ransomware message appear on his computer screen stating that his personal files are encrypted and demanding payment. What type of attack has occurred?",
+   "marks": 1,
+   "options": {
+    "A": "Availability",
+    "B": "Confidentiality",
+    "C": "Disclosure",
+    "D": "Distributed"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0028",
+   "type": "mcq",
+   "stem": "Which one of the following organizations would NOT be automatically subject to the privacy and security requirements of HIPAA if they engage in electronic transactions?",
+   "marks": 1,
+   "options": {
+    "A": "Healthcare provider",
+    "B": "Health and fitness application developer",
+    "C": "Health information clearinghouse",
+    "D": "Health insurance plan"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0029",
+   "type": "mcq",
+   "stem": "John's network begins to experience symptoms of slowness. Upon investigation, he realizes that the network is being bombarded with TCP SYN packets and believes that his organization is the victim of a denial-of-service attack. What principle of information security is being violated?",
+   "marks": 1,
+   "options": {
+    "A": "Availability",
+    "B": "Integrity",
+    "C": "Confidentiality",
+    "D": "Denial"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0030",
+   "type": "mcq",
+   "stem": "Renee is designing a long-term security plan for her organization and has a three- to five-year planning horizon. Her PRIMARY goal is to align the security function with the broader plans and objectives of the business. What type of plan is she developing?",
+   "marks": 1,
+   "options": {
+    "A": "Operational",
+    "B": "Tactical",
+    "C": "Summary",
+    "D": "Strategic"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0031",
+   "type": "mcq",
+   "stem": "Gina is working to protect a logo that her company will use for a new product they are launching. She has questions about the intellectual property protection process for this logo. What U.S. government agency would be best able to answer her questions?",
+   "marks": 1,
+   "options": {
+    "A": "USPTO",
+    "B": "Library of Congress",
+    "C": "NSA",
+    "D": "NIST"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0032",
+   "type": "mcq",
+   "stem": "The Acme Widgets Company is putting new controls in place for its accounting department. Management is concerned that a rogue accountant may be able to create a new false vendor and then issue checks to that vendor as payment for services that were never rendered. What security control can BEST help prevent this situation?",
+   "marks": 1,
+   "options": {
+    "A": "Mandatory vacation",
+    "B": "Segregation of duties",
+    "C": "Defense in depth",
+    "D": "Job rotation"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0033",
+   "type": "mcq",
+   "stem": "Which one of the following categories of organizations is MOST likely to be covered by the provisions of FISMA?",
+   "marks": 1,
+   "options": {
+    "A": "Banks",
+    "B": "Defense contractors",
+    "C": "School districts",
+    "D": "Hospitals"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0034",
+   "type": "mcq",
+   "stem": "Robert is responsible for securing systems used to process credit card information. What security control framework should guide his actions?",
+   "marks": 1,
+   "options": {
+    "A": "HIPAA",
+    "B": "PCI DSS",
+    "C": "SOX",
+    "D": "GLBA"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0035",
+   "type": "mcq",
+   "stem": "Which one of the following individuals is normally responsible for fulfilling the operational data protection responsibilities delegated by senior management, such as validating data integrity, testing backups, and managing security policies?",
+   "marks": 1,
+   "options": {
+    "A": "Data custodian",
+    "B": "Data owner",
+    "C": "User",
+    "D": "Auditor"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0036",
+   "type": "mcq",
+   "stem": "Alan works for an e-commerce company that recently had some content stolen by another website and republished without permission. What type of intellectual property protection would BEST preserve Alan's company's rights?",
+   "marks": 1,
+   "options": {
+    "A": "Trade secret",
+    "B": "Copyright",
+    "C": "Trademark",
+    "D": "Patent"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0037",
+   "type": "mcq",
+   "stem": "Florian receives a flyer from a U.S. federal government agency announcing that a new administrative law will affect his business operations. Where should he go to find the text of the law?",
+   "marks": 1,
+   "options": {
+    "A": "U.S. Code",
+    "B": "Supreme Court rulings",
+    "C": "Code of Federal Regulations",
+    "D": "Compendium of Laws"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0038",
+   "type": "mcq",
+   "stem": "Tom enables an application firewall provided by his cloud infrastructure as a service provider that is designed to block many types of application attacks. When viewed from a risk management perspective, what metric is Tom attempting to lower by implementing this countermeasure?",
+   "marks": 1,
+   "options": {
+    "A": "Impact",
+    "B": "RPO",
+    "C": "MTO",
+    "D": "Likelihood"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0039",
+   "type": "mcq",
+   "stem": "Which one of the following individuals would be the MOST effective organizational owner for an information security program?",
+   "marks": 1,
+   "options": {
+    "A": "CISSP-certified analyst",
+    "B": "Chief information officer (CIO)",
+    "C": "Manager of network security",
+    "D": "President and CEO"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0040",
+   "type": "mcq",
+   "stem": "What important function do senior managers normally fill on a business continuity planning team?",
+   "marks": 1,
+   "options": {
+    "A": "Arbitrating disputes about criticality",
+    "B": "Evaluating the legal environment",
+    "C": "Training staff",
+    "D": "Designing failure controls"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0041",
+   "type": "mcq",
+   "stem": "You are the CISO for a major hospital system and are preparing to sign a contract with a software-as-a-service (SaaS) email vendor. You want to perform a control assessment to ensure that its business continuity planning measures are reasonable. What type of audit might you request to meet this goal?",
+   "marks": 1,
+   "options": {
+    "A": "SOC 1",
+    "B": "FISMA",
+    "C": "PCI DSS",
+    "D": "SOC 2"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0042",
+   "type": "mcq",
+   "stem": "Gary is analyzing a security incident and, during his investigation, encounters a user who denies having performed an action that Gary believes he did perform. What type of threat has taken place under the STRIDE model?",
+   "marks": 1,
+   "options": {
+    "A": "Repudiation",
+    "B": "Information disclosure",
+    "C": "Tampering",
+    "D": "Elevation of privilege"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0043",
+   "type": "mcq",
+   "stem": "Beth is the security administrator for a public school district. She is implementing a new student information system and is testing the code to ensure that students are not able to alter their own grades. What principle of information security is Beth enforcing?",
+   "marks": 1,
+   "options": {
+    "A": "Integrity",
+    "B": "Availability",
+    "C": "Confidentiality",
+    "D": "Denial"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0044",
+   "type": "mcq",
+   "stem": "Which one of the following issues is NOT normally addressed in a service-level agreement (SLA)?",
+   "marks": 1,
+   "options": {
+    "A": "Confidentiality of customer information",
+    "B": "Failover time",
+    "C": "Uptime",
+    "D": "Maximum consecutive downtime"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0045",
+   "type": "mcq",
+   "stem": "Joan is seeking to protect a piece of computer software that she developed under intellectual property law. Which one of the following avenues of protection would NOT normally apply to a piece of software?",
+   "marks": 1,
+   "options": {
+    "A": "Trademark",
+    "B": "Copyright",
+    "C": "Patent",
+    "D": "Trade secret"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0046",
+   "type": "mcq",
+   "stem": "SCENARIO — Juniper Content: Users in two offices would like to access each other's file servers over the internet. What control would provide confidentiality for those communications?",
+   "marks": 1,
+   "options": {
+    "A": "Digital signatures",
+    "B": "Virtual private network",
+    "C": "Virtual LAN",
+    "D": "Digital content management"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0047",
+   "type": "mcq",
+   "stem": "SCENARIO — Juniper Content: You are concerned about the availability of data stored on each office's server and would like to add technology that would enable continued access to files even if a hard drive fails. What control allows you to add robustness without adding additional servers?",
+   "marks": 1,
+   "options": {
+    "A": "Server clustering",
+    "B": "Load balancing",
+    "C": "RAID",
+    "D": "Scheduled backups"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0048",
+   "type": "mcq",
+   "stem": "SCENARIO — Juniper Content: There are historical records stored on the server that should never be modified. You would like to add an integrity control that allows you to verify on a periodic basis that the files were not modified. What control can you add?",
+   "marks": 1,
+   "options": {
+    "A": "Hashing",
+    "B": "ACLs",
+    "C": "Read-only attributes",
+    "D": "Firewalls"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0049",
+   "type": "mcq",
+   "stem": "Beth is a human resources specialist preparing to assist in the termination of an employee. Which of the following is NOT typically part of a termination process?",
+   "marks": 1,
+   "options": {
+    "A": "An exit interview",
+    "B": "Recovery of organizational property",
+    "C": "Account termination",
+    "D": "Signing a noncompete agreement (NCA)"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0050",
+   "type": "mcq",
+   "stem": "Frances is reviewing her organization's business continuity plan documentation for completeness. Which one of the following is NOT normally included in business continuity plan documentation?",
+   "marks": 1,
+   "options": {
+    "A": "Statement of accounts",
+    "B": "Statement of importance",
+    "C": "Statement of priorities",
+    "D": "Statement of organizational responsibility"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0051",
+   "type": "mcq",
+   "stem": "An accounting employee at Doolittle Industries was recently arrested for participation in an embezzlement scheme. The employee transferred money to a personal account and then shifted funds around between other accounts every day to disguise the fraud for months. Which one of the following controls might have BEST allowed the earlier detection of this fraud?",
+   "marks": 1,
+   "options": {
+    "A": "Separation of duties",
+    "B": "Least privilege",
+    "C": "Defense in depth",
+    "D": "Mandatory vacation"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0052",
+   "type": "mcq",
+   "stem": "Jeff would like to adopt an industry-standard approach for assessing the processes his organization uses to manage risk. What maturity model would be MOST appropriate for his use?",
+   "marks": 1,
+   "options": {
+    "A": "CMM",
+    "B": "SW-CMM",
+    "C": "RMM",
+    "D": "COBIT"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0053",
+   "type": "mcq",
+   "stem": "Chris' organization recently suffered an attack that rendered their website inaccessible to paying customers for several hours. Which information security goal was MOST directly impacted?",
+   "marks": 1,
+   "options": {
+    "A": "Confidentiality",
+    "B": "Integrity",
+    "C": "Availability",
+    "D": "Denial"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0054",
+   "type": "mcq",
+   "stem": "Yolanda is writing a document that will provide configuration information regarding the minimum level of security that every system in the organization must meet. What type of document is she preparing?",
+   "marks": 1,
+   "options": {
+    "A": "Policy",
+    "B": "Baseline",
+    "C": "Guideline",
+    "D": "Procedure"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0055",
+   "type": "mcq",
+   "stem": "Who should receive initial business continuity plan training in an organization?",
+   "marks": 1,
+   "options": {
+    "A": "Senior executives",
+    "B": "Those with specific business continuity roles",
+    "C": "Everyone in the organization",
+    "D": "First responders"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0056",
+   "type": "mcq",
+   "stem": "James is conducting a risk assessment for his organization and is attempting to assign an asset value to the servers in his data center. The organization's primary concern is ensuring that it has sufficient funds available to rebuild the data center if it is damaged or destroyed. Which one of the following asset valuation methods would be MOST appropriate?",
+   "marks": 1,
+   "options": {
+    "A": "Purchase cost",
+    "B": "Depreciated cost",
+    "C": "Replacement cost",
+    "D": "Opportunity cost"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0057",
+   "type": "mcq",
+   "stem": "Roger's organization suffered a breach of customer credit card records. Under the terms of PCI DSS, what organization may choose to pursue an investigation of this matter?",
+   "marks": 1,
+   "options": {
+    "A": "FBI",
+    "B": "Local law enforcement",
+    "C": "Bank",
+    "D": "PCI SSC"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0058",
+   "type": "mcq",
+   "stem": "Rick recently engaged critical employees in each of his organization's business units to ask for their assistance with his security awareness program. They will be responsible for sharing security messages with their peers and answering questions about cybersecurity matters. What term BEST describes this relationship?",
+   "marks": 1,
+   "options": {
+    "A": "Security champion",
+    "B": "Security expert",
+    "C": "Gamification",
+    "D": "Peer review"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0059",
+   "type": "mcq",
+   "stem": "Frank discovers a keylogger hidden on the laptop of his company's chief executive officer. What information security principle is the keylogger MOST likely designed to disrupt?",
+   "marks": 1,
+   "options": {
+    "A": "Confidentiality",
+    "B": "Integrity",
+    "C": "Availability",
+    "D": "Denial"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0060",
+   "type": "mcq",
+   "stem": "Elise is helping her organization prepare to evaluate and adopt a new cloud-based human resource management (HRM) system vendor. What would be the MOST appropriate minimum security standard for her to require of possible vendors?",
+   "marks": 1,
+   "options": {
+    "A": "Compliance with all laws and regulations",
+    "B": "Handling information in the same manner her organization would",
+    "C": "Elimination of all identified security risks",
+    "D": "Compliance with the vendor's own policies"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0061",
+   "type": "mcq",
+   "stem": "The NIST risk management framework includes the steps: Prepare, Categorize, Select, Implement, Assess, Authorize, and Monitor. Which step is focused on evaluating whether controls are functioning as intended before system authorization?",
+   "marks": 1,
+   "options": {
+    "A": "Assess security controls",
+    "B": "Determine control gaps",
+    "C": "Remediate control gaps",
+    "D": "Evaluate user activity"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0062",
+   "type": "mcq",
+   "stem": "HAL Systems recently decided to stop offering public NTP services because of a fear that its NTP servers would be used in amplification DDoS attacks. What type of risk management strategy did HAL pursue with respect to its NTP services?",
+   "marks": 1,
+   "options": {
+    "A": "Risk mitigation",
+    "B": "Risk acceptance",
+    "C": "Risk transference",
+    "D": "Risk avoidance"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0063",
+   "type": "mcq",
+   "stem": "Susan is working with the management team in her company to classify data in an attempt to apply extra security controls that will limit the likelihood of a data disclosure breach. What principle of information security is Susan trying to enforce?",
+   "marks": 1,
+   "options": {
+    "A": "Availability",
+    "B": "Denial",
+    "C": "Confidentiality",
+    "D": "Integrity"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0064",
+   "type": "mcq",
+   "stem": "Which one of the following components should be included in an organization's emergency response guidelines?",
+   "marks": 1,
+   "options": {
+    "A": "List of individuals who should be notified of an emergency incident",
+    "B": "Long-term business continuity protocols",
+    "C": "Activation procedures for the organization's cold sites",
+    "D": "Contact information for ordering equipment"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0065",
+   "type": "mcq",
+   "stem": "Chas recently completed the development of his organization's business continuity plan (BCP). Who is the ideal person to approve an organization's business continuity plan?",
+   "marks": 1,
+   "options": {
+    "A": "Chief information officer",
+    "B": "Chief executive officer",
+    "C": "Chief information security officer",
+    "D": "Chief operating officer"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0066",
+   "type": "mcq",
+   "stem": "Which one of the following actions is NOT normally part of the project scope and planning phase of business continuity planning?",
+   "marks": 1,
+   "options": {
+    "A": "Structured analysis of the organization",
+    "B": "Review of the legal and regulatory landscape",
+    "C": "Creation of a BCP team",
+    "D": "Documentation of the plan"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0067",
+   "type": "mcq",
+   "stem": "Gary is implementing a new website architecture that uses multiple small web servers behind a load balancer. What principle of information security is Gary seeking to enforce?",
+   "marks": 1,
+   "options": {
+    "A": "Denial",
+    "B": "Confidentiality",
+    "C": "Integrity",
+    "D": "Availability"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0068",
+   "type": "mcq",
+   "stem": "Becka recently signed a contract with an alternate data processing facility that will provide her company with space in the event of a disaster. The facility includes HVAC, power, and communications circuits but no hardware. What type of facility is Becka using?",
+   "marks": 1,
+   "options": {
+    "A": "Cold site",
+    "B": "Warm site",
+    "C": "Hot site",
+    "D": "Mobile site"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0069",
+   "type": "mcq",
+   "stem": "Greg's company recently experienced a significant data breach involving the personal data of many of their customers. The company operates only in the United States and has facilities in several different states. Which breach laws should they review to ensure appropriate action?",
+   "marks": 1,
+   "options": {
+    "A": "The breach laws in the state where they are headquartered along with federal breach laws.",
+    "B": "The breach laws of states they do business in or where their customers reside along with federal breach laws.",
+    "C": "Only federal breach laws.",
+    "D": "Breach laws only cover government agencies, not private businesses."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0070",
+   "type": "mcq",
+   "stem": "Ben is seeking a control objective framework that is widely accepted around the world and focuses specifically on information security controls. Which one of the following frameworks would BEST meet his needs?",
+   "marks": 1,
+   "options": {
+    "A": "ITIL",
+    "B": "ISO 27002",
+    "C": "CMM",
+    "D": "PMBOK Guide"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0071",
+   "type": "mcq",
+   "stem": "Matt works for a telecommunications firm and was approached by a federal agent seeking assistance with wiretapping one of Matt's clients pursuant to a search warrant. Which one of the following laws requires that communications service providers cooperate with law enforcement requests?",
+   "marks": 1,
+   "options": {
+    "A": "ECPA",
+    "B": "CALEA",
+    "C": "Privacy Act",
+    "D": "HITECH Act"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0072",
+   "type": "mcq",
+   "stem": "Every year, Gary receives privacy notices in the mail from financial institutions where he has accounts. What law requires the institutions to send Gary these notices?",
+   "marks": 1,
+   "options": {
+    "A": "FERPA",
+    "B": "GLBA",
+    "C": "HIPAA",
+    "D": "HITECH"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0073",
+   "type": "mcq",
+   "stem": "Which one of the following agreements typically requires that a vendor not disclose confidential information learned during the scope of an engagement?",
+   "marks": 1,
+   "options": {
+    "A": "NCA",
+    "B": "SLA",
+    "C": "NDA",
+    "D": "RTO"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0074",
+   "type": "mcq",
+   "stem": "The ISC2 Code of Ethics applies to all CISSP holders. Which of the following is NOT one of the four mandatory canons of the code?",
+   "marks": 1,
+   "options": {
+    "A": "Protect society, the common good, the necessary public trust and confidence, and the infrastructure.",
+    "B": "Disclose breaches of privacy, trust, and ethics.",
+    "C": "Provide diligent and competent service to the principals.",
+    "D": "Advance and protect the profession."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0075",
+   "type": "mcq",
+   "stem": "Which one of the following stakeholders is NOT typically included on a business continuity planning team?",
+   "marks": 1,
+   "options": {
+    "A": "Core business function leaders",
+    "B": "Information technology staff",
+    "C": "CEO",
+    "D": "Support departments"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0076",
+   "type": "mcq",
+   "stem": "Ben is designing a messaging system for a bank and would like to include a feature that allows the recipient of a message to prove to a third party that the message did indeed come from the purported originator. What goal is Ben trying to achieve?",
+   "marks": 1,
+   "options": {
+    "A": "Authentication",
+    "B": "Authorization",
+    "C": "Integrity",
+    "D": "Nonrepudiation"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0077",
+   "type": "mcq",
+   "stem": "What principle of information security states that an organization should implement overlapping security controls whenever possible?",
+   "marks": 1,
+   "options": {
+    "A": "Least privilege",
+    "B": "Separation of duties",
+    "C": "Defense in depth",
+    "D": "Security through obscurity"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0078",
+   "type": "mcq",
+   "stem": "Ben is responsible for the security of payment card information stored in a database. Policy directs that he remove the information from the database, but he cannot do this for operational reasons. He obtained an exception to policy and is seeking an appropriate compensating control to mitigate the risk. What would be his BEST option?",
+   "marks": 1,
+   "options": {
+    "A": "Purchasing insurance",
+    "B": "Encrypting the database contents",
+    "C": "Removing the data",
+    "D": "Objecting to the exception"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0079",
+   "type": "mcq",
+   "stem": "The Domer Industries risk assessment team recently conducted a qualitative risk assessment and developed a risk matrix. The Y-axis is Probability (higher = top) and the X-axis is Impact (higher = right). Quadrant I = top-right, Quadrant II = top-left, Quadrant III = bottom-left, Quadrant IV = bottom-right. Which quadrant contains the risks that require the MOST immediate attention?",
+   "marks": 1,
+   "options": {
+    "A": "I",
+    "B": "II",
+    "C": "III",
+    "D": "IV"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0080",
+   "type": "mcq",
+   "stem": "Tom is planning to terminate an employee this afternoon for fraud and expects that the meeting will be somewhat hostile. He is coordinating the meeting with human resources and wants to protect the company against damage. Which one of the following steps is MOST important to coordinate in time with the termination meeting?",
+   "marks": 1,
+   "options": {
+    "A": "Informing other employees of the termination",
+    "B": "Retrieving the employee's photo ID",
+    "C": "Calculating the final paycheck",
+    "D": "Revoking electronic access rights"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0081",
+   "type": "mcq",
+   "stem": "Rolando is a risk manager with a large-scale enterprise. The firm recently evaluated the risk of California mudslides on its operations in the region and determined that the cost of responding outweighed the benefits of any controls it could implement. The company chose to take no action at this time. What risk management strategy did Rolando's organization pursue?",
+   "marks": 1,
+   "options": {
+    "A": "Risk avoidance",
+    "B": "Risk mitigation",
+    "C": "Risk transference",
+    "D": "Risk acceptance"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0082",
+   "type": "mcq",
+   "stem": "Helen is the owner of a U.S. website that provides information for middle and high school students preparing for exams. She is writing the site's privacy policy and would like to ensure that it complies with the provisions of the Children's Online Privacy Protection Act (COPPA). What is the cutoff age below which parents must give consent in advance of the collection of personal information from their children under COPPA?",
+   "marks": 1,
+   "options": {
+    "A": "13",
+    "B": "15",
+    "C": "17",
+    "D": "18"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0083",
+   "type": "mcq",
+   "stem": "Tom is considering locating a business in the downtown area of a city. He consults the FEMA flood plain map and determines that the area he is considering lies within a 100-year flood plain. What is the annualized rate of occurrence (ARO) of a flood in this area?",
+   "marks": 1,
+   "options": {
+    "A": "100",
+    "B": "1",
+    "C": "0.1",
+    "D": "0.01"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0084",
+   "type": "mcq",
+   "stem": "You discover that a user on your network has been using the Wireshark protocol analyzer for illicit purposes, monitoring network communications without authorization. What pillar of information security has MOST likely been violated?",
+   "marks": 1,
+   "options": {
+    "A": "Integrity",
+    "B": "Denial",
+    "C": "Availability",
+    "D": "Confidentiality"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0085",
+   "type": "mcq",
+   "stem": "Alan is performing threat modeling and decides that it would be useful to decompose the system into core elements including trust boundaries, data flow paths, input points, privileged operations, and details about security controls. What tool is he using?",
+   "marks": 1,
+   "options": {
+    "A": "Vulnerability assessment",
+    "B": "Fuzzing",
+    "C": "Reduction analysis",
+    "D": "Data modeling"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0086",
+   "type": "mcq",
+   "stem": "Shahla is reviewing the privacy laws that apply to a new enterprise that her company will be launching in South Africa. This is the company's first expansion into that country, and the enterprise will involve handling the personal information of residents of South Africa. What law will likely affect this operation?",
+   "marks": 1,
+   "options": {
+    "A": "PIPL",
+    "B": "PCI DSS",
+    "C": "PIPEDA",
+    "D": "POPIA"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0087",
+   "type": "mcq",
+   "stem": "Which type of business impact assessment tool is MOST appropriate when attempting to evaluate the impact of a failure on customer confidence?",
+   "marks": 1,
+   "options": {
+    "A": "Quantitative",
+    "B": "Qualitative",
+    "C": "Annualized loss expectancy",
+    "D": "Reduction"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0088",
+   "type": "mcq",
+   "stem": "Ryan is a security risk analyst for an insurance company. He is currently examining a scenario in which a malicious hacker might use a SQL injection attack to deface a web server due to a missing patch in the company's web application. In this scenario, what is the threat?",
+   "marks": 1,
+   "options": {
+    "A": "Unpatched web application",
+    "B": "Web defacement",
+    "C": "Malicious hacker",
+    "D": "Operating system"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0089",
+   "type": "mcq",
+   "stem": "SCENARIO — Atwood Landing: Rebuilding and reconfiguring the data center would cost $10 million. A typical tornado would cause approximately $5 million of damage to the facility. What is the exposure factor (EF) for the effect of a tornado on Atwood Landing's data center?",
+   "marks": 1,
+   "options": {
+    "A": "10%",
+    "B": "25%",
+    "C": "50%",
+    "D": "75%"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0090",
+   "type": "mcq",
+   "stem": "SCENARIO — Atwood Landing: The data center is in an area where a tornado is expected once every 200 years. What is the annualized rate of occurrence (ARO) for a tornado at Atwood Landing's data center?",
+   "marks": 1,
+   "options": {
+    "A": "0.0025",
+    "B": "0.005",
+    "C": "0.01",
+    "D": "0.015"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0091",
+   "type": "mcq",
+   "stem": "SCENARIO — Atwood Landing: The data center replacement cost is $10 million, the exposure factor (EF) for a tornado is 50%, and the annualized rate of occurrence (ARO) is 0.005. What is the annualized loss expectancy (ALE) for a tornado at Atwood Landing's data center?",
+   "marks": 1,
+   "options": {
+    "A": "$25,000",
+    "B": "$50,000",
+    "C": "$250,000",
+    "D": "$500,000"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0092",
+   "type": "mcq",
+   "stem": "John is analyzing an attack against his company in which the attacker found comments embedded in HTML code that provided the clues needed to exploit a software vulnerability. Using the STRIDE model, what type of attack did he uncover?",
+   "marks": 1,
+   "options": {
+    "A": "Spoofing",
+    "B": "Repudiation",
+    "C": "Information disclosure",
+    "D": "Elevation of privilege"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0093",
+   "type": "mcq",
+   "stem": "Chris is worried that the laptops that his organization has recently acquired were modified by a third party to include keyloggers before they were delivered. Where should he focus his efforts to prevent this?",
+   "marks": 1,
+   "options": {
+    "A": "His supply chain",
+    "B": "His vendor contracts",
+    "C": "His post-purchase build process",
+    "D": "The original equipment manufacturer (OEM)"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0094",
+   "type": "mcq",
+   "stem": "In her role as a developer for an online bank, Lisa is required to submit her code for testing and review. After it passes through this process and is approved, another employee moves the code to the production environment. What security management process does this describe?",
+   "marks": 1,
+   "options": {
+    "A": "Regression testing",
+    "B": "Code review",
+    "C": "Change management",
+    "D": "Fuzz testing"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0095",
+   "type": "mcq",
+   "stem": "After completing the first year of his security awareness program, Charles reviews the data about how many staff completed training compared to how many were assigned the training, to determine whether he hit the 95% completion rate he was aiming for. What is this type of measure called?",
+   "marks": 1,
+   "options": {
+    "A": "A KPI",
+    "B": "A metric",
+    "C": "An awareness control",
+    "D": "A return on investment rate"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0096",
+   "type": "mcq",
+   "stem": "Which of the following is NOT typically included in a prehire screening process?",
+   "marks": 1,
+   "options": {
+    "A": "A drug test",
+    "B": "A background check",
+    "C": "Social media review",
+    "D": "Fitness evaluation"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0097",
+   "type": "mcq",
+   "stem": "You are completing a review of the controls used to protect a media storage facility and would like to properly categorize each control in place. A fence is installed around the facility. Which of the following control categories does a fence NOT represent?",
+   "marks": 1,
+   "options": {
+    "A": "Physical",
+    "B": "Detection",
+    "C": "Deterrent",
+    "D": "Preventive"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0098",
+   "type": "mcq",
+   "stem": "Ryan is a CISSP-certified cybersecurity professional working in a nonprofit organization. Which of the following correctly describes the ethical obligations that apply to his work?",
+   "marks": 1,
+   "options": {
+    "A": "ISC2 Code of Ethics and his organizational code of ethics",
+    "B": "ISC2 Code of Ethics and the federal code of ethics",
+    "C": "The federal code of ethics and RFC 1087",
+    "D": "RFC 1087 and his organizational code of ethics"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-risk-mgmt-bank-0099",
+   "type": "mcq",
+   "stem": "Which of the following scenarios is BEST classified as a supply chain risk?",
+   "marks": 1,
+   "options": {
+    "A": "An adversary hacks into a web server run by the organization in an IaaS environment.",
+    "B": "An adversary conducts a denial-of-service attack using a botnet against the organization.",
+    "C": "An adversary uses social engineering to compromise an employee of a SaaS vendor to gain access to customer accounts.",
+    "D": "An adversary exploits a known vulnerability in the organization's own perimeter firewall."
+   },
+   "answer": "C"
+  }
+ ],
+ "category": "CISSP",
+ "body": " Security Risk Mgmt"
+}

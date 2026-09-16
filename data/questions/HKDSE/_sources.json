@@ -1,0 +1,98 @@
+{
+ "exam": "HKDSE",
+ "region": "Hong Kong",
+ "slug": "HKDSE",
+ "question_banks": 0,
+ "github_sources": [
+  {
+   "repo": "funglan/biology-question-bank",
+   "url": "https://github.com/funglan/biology-question-bank",
+   "stars": 1,
+   "desc": "Mr Chan Biology Question Bank — a static HKDSE Biology past-paper question bank."
+  },
+  {
+   "repo": "keithwong101200-hash/kwmath.github.io",
+   "url": "https://github.com/keithwong101200-hash/kwmath.github.io",
+   "stars": 0,
+   "desc": "📘 KW MATH | DSE Math Past Paper Video Solution Portal. An interactive, mobile-responsive web app designed for HKDSE students to instantly look up past paper que"
+  },
+  {
+   "repo": "brianarebrian-art/DSE-LEVEL-UP-BY-CLAUDE-CODE",
+   "url": "https://github.com/brianarebrian-art/DSE-LEVEL-UP-BY-CLAUDE-CODE/blob/3e4ba138dbdd58a96f10b1cf7489bef8e68c13dc/scripts/gen-questions.mts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "sissitang/Acid-rain",
+   "url": "https://github.com/sissitang/Acid-rain/blob/70e2dbdda7e637625b6875c40302070bf0b820d2/src/questions.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "SISUBEN/DSE-ICT-Master",
+   "url": "https://github.com/SISUBEN/DSE-ICT-Master/blob/5135b1df1a3510bb84188fe4ae2f8347e70428dc/data/elective_questions.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "szehenry/COMP3122_GP_Group5",
+   "url": "https://github.com/szehenry/COMP3122_GP_Group5/blob/680b9502e41c97c7a0e56c9cff78efe87f414688/dse_app/components/sections/practice-questions-section.tsx",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "chengwaikeung/dse-pastpaper",
+   "url": "https://github.com/chengwaikeung/dse-pastpaper/blob/bdadfaac8a5f6e96d8d66d2e71917f725d62f377/data/questions.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Oscarngxd/Question-Bank",
+   "url": "https://github.com/Oscarngxd/Question-Bank/blob/2cb008fffe31c10d22e475f8ceb1f3cbe9977907/server/routes/questions.js",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "HKDSE Past Paper | PDF - Scribd",
+   "url": "https://www.scribd.com/document/538010990/HKDSE-Past-paper",
+   "class": "site+pdf"
+  },
+  {
+   "title": "HKDSE Past Papers 2012-2025 - HKDSE Web",
+   "url": "https://dse.rioho.dev/past-papers",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Past Paper資源包（CE+AL+DSE詳盡版） | GETUTOR 香港導師總會",
+   "url": "https://www.getutor.com.hk/en/54883",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Free Online DSE Practice and Preparation Tests",
+   "url": "https://www.tcyonline.com",
+   "class": "site"
+  },
+  {
+   "title": "DSE and CE Exam Practice Questions | PDF",
+   "url": "https://www.scribd.com",
+   "class": "site"
+  },
+  {
+   "title": "DSE Past Paper English 英文試題庫",
+   "url": "https://dse247.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "DSE English past paper questions sorted by types.pdf - S6",
+   "url": "https://www.coursehero.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Hong Kong Examinations and Assessment Authority - Sample Papers",
+   "url": "https://www.hkeaa.edu.hk/en/hkdse/assessment/sample_practice_paper",
+   "class": "site"
+  }
+ ]
+}

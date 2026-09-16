@@ -1,0 +1,98 @@
+{
+ "exam": "Ylioppilastutkinto",
+ "region": "Finland",
+ "slug": "YLIOPPILASTUTKINTO",
+ "question_banks": 1,
+ "github_sources": [
+  {
+   "repo": "belljars/digi-opo",
+   "url": "https://github.com/belljars/digi-opo/blob/45bc312e919894892049927b6536dd663c677622/src/data/opintopolkuQuiz.json",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "AnasHimmi/MissingDataRanking",
+   "url": "https://github.com/AnasHimmi/MissingDataRanking/blob/45ed75719cf9d44b75805bc7045e8e257bd55104/data_generation/data/MT/WMT16/system-outputs/newstest2016/fi-en/newstest2016.uedin-syntax.4411.fi-en",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Opetushallitus/ataru",
+   "url": "https://github.com/Opetushallitus/ataru/blob/9d8a4d27167b9e335b5a8315ac6f71629af1e730/src/cljs/ataru/hakija/subs.cljs",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Opetushallitus/haku",
+   "url": "https://github.com/Opetushallitus/haku/blob/28aae1dd874614eb64070821999e60332b3c717b/hakemus-api/src/main/java/fi/vm/sade/haku/virkailija/lomakkeenhallinta/hakulomakepohja/phase/hakutoiveet/HakutoiveetPhase.java",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "digabi/exam-engine",
+   "url": "https://github.com/digabi/exam-engine/blob/002b06bddaf63cf2aa908e49c4890f527b6b71f1/README.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "NatLibFi/Finto-data",
+   "url": "https://github.com/NatLibFi/Finto-data/blob/01f5f1ede0e5fd9a1591300ab646e6e7b101613b/vocabularies/ptvl/ptvl.ttl",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "chanberg/atmt",
+   "url": "https://github.com/chanberg/atmt/blob/bffc74fe31c51c5665a3007dbc730c12c1c18e35/indomain/prepared_data/dict.en",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Opetushallitus/koski",
+   "url": "https://github.com/Opetushallitus/koski/blob/9ad7cf8c6fec6166af35ff6d0354bfcdfa83519f/documentation/tietokantaskeemat/koski/constraints.html",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Matriculation examination | JYU Online Courses",
+   "url": "https://onlinecourses.jyu.fi",
+   "class": "site"
+  },
+  {
+   "title": "Tests in the Examination | The Matriculation",
+   "url": "https://www.ylioppilastutkinto.fi",
+   "class": "site"
+  },
+  {
+   "title": "Matriculation exam (Finland)",
+   "url": "https://en.wikipedia.org",
+   "class": "site"
+  },
+  {
+   "title": "The Finnish Computerized Matriculation Exam System",
+   "url": "https://mikkorahikka.blog",
+   "class": "site"
+  },
+  {
+   "title": "THE FINNISH MATRICULATION EXAMINATION",
+   "url": "http://sepie.es",
+   "class": "site"
+  },
+  {
+   "title": "Geography tests in the Finnish Matriculation Examination",
+   "url": "https://oulurepo.oulu.fi",
+   "class": "site"
+  },
+  {
+   "title": "Finland Entrance Exam Sample Questions | PDF",
+   "url": "https://www.scribd.com",
+   "class": "site"
+  },
+  {
+   "title": "Prepare & Ace Matriculation Exam (Finland) Test",
+   "url": "https://www.asksia.ai",
+   "class": "site"
+  }
+ ]
+}

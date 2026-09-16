@@ -1,0 +1,98 @@
+{
+ "exam": "USMLE",
+ "region": "USA",
+ "slug": "USMLE",
+ "question_banks": 0,
+ "github_sources": [
+  {
+   "repo": "thomaswebster-source/USMLE-question-bank",
+   "url": "https://github.com/thomaswebster-source/USMLE-question-bank",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Boards420/new-claude",
+   "url": "https://github.com/Boards420/new-claude",
+   "stars": 0,
+   "desc": "Question Bank USMLE Step 2 CK"
+  },
+  {
+   "repo": "KhaledMD4321/mnestic",
+   "url": "https://github.com/KhaledMD4321/mnestic",
+   "stars": 0,
+   "desc": "Link your question bank to your AnKing Anki cards — resource overlays on every question, one-click cards, weak-area breakdowns, and a study tracker."
+  },
+  {
+   "repo": "agrimsingh/DQC-Whatsapp-question-archive",
+   "url": "https://github.com/agrimsingh/DQC-Whatsapp-question-archive/blob/07f88e6aa8b88bc6a5dad81f2d14a42dade40dc5/questions.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "neelanqj/USMLE-Sapphire-Question-Bank",
+   "url": "https://github.com/neelanqj/USMLE-Sapphire-Question-Bank",
+   "stars": 3,
+   "desc": "A PHP based question bank created with KnockoutJs and a MySQL back-end. Made possibly 5 years ago (2011)."
+  },
+  {
+   "repo": "Misshhhy/pulseprepAI-",
+   "url": "https://github.com/Misshhhy/pulseprepAI-",
+   "stars": 0,
+   "desc": "Medical students preparing for high-stakes examinations like USMLE, PLAB, and OSCE clinical rotations face an overwhelming volume of complex material. Tradition"
+  },
+  {
+   "repo": "rigelhope/testprep",
+   "url": "https://github.com/rigelhope/testprep",
+   "stars": 8,
+   "desc": "web app that uses question banks for multiple-choice-question (MCQ) self-testing (as with e.g. MCAT, LSAT, USMLE)."
+  },
+  {
+   "repo": "taesiri/ArXivQA",
+   "url": "https://github.com/taesiri/ArXivQA/blob/685715c76c5ef33348706f03b3c94132585bc08a/papers/2402.18060.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Free USMLE Step 1 Questions & Practice Tests",
+   "url": "https://www.kaptest.com",
+   "class": "site"
+  },
+  {
+   "title": "Free USMLE® Practice Questions",
+   "url": "https://www.lecturio.com",
+   "class": "site"
+  },
+  {
+   "title": "Free USMLE Step 1 Sample Questions",
+   "url": "https://truelearn.com",
+   "class": "site"
+  },
+  {
+   "title": "Free USMLE Step 1 Question Bank",
+   "url": "https://medall.org",
+   "class": "site"
+  },
+  {
+   "title": "USMLE Step 1 Practice Questions & Exams",
+   "url": "https://medical.uworld.com",
+   "class": "site"
+  },
+  {
+   "title": "MCASOM: USMLE Prep Steps 1 & 2: Online Q-Banks",
+   "url": "https://libraryguides.mayo.edu",
+   "class": "edu"
+  },
+  {
+   "title": "Step 2 CK Sample Test Questions",
+   "url": "https://www.usmle.org",
+   "class": "site"
+  },
+  {
+   "title": "USMLE Sample Questions with Answers",
+   "url": "https://medical.uworld.com",
+   "class": "site"
+  }
+ ]
+}

@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-gaseous-exchange-bank",
+ "title": "UNEB UACE - Gaseous Exchange",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0001",
+   "type": "mcq",
+   "stem": "Gaseous exchange in humans occurs in the:",
+   "marks": 1,
+   "options": {
+    "A": "Trachea",
+    "B": "Bronchi",
+    "C": "Alveoli",
+    "D": "Nose"
+   },
+   "answer": "Alveoli"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0002",
+   "type": "mcq",
+   "stem": "Oxygen moves into blood from alveoli by:",
+   "marks": 1,
+   "options": {
+    "A": "Active transport",
+    "B": "Osmosis",
+    "C": "Diffusion",
+    "D": "Filtration"
+   },
+   "answer": "Diffusion"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0003",
+   "type": "mcq",
+   "stem": "Compared to inhaled air, exhaled air has:",
+   "marks": 1,
+   "options": {
+    "A": "More O₂, less CO₂",
+    "B": "Less O₂, more CO₂",
+    "C": "Same O₂, more CO₂",
+    "D": "Less of both gases"
+   },
+   "answer": "Less O₂, more CO₂"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0004",
+   "type": "mcq",
+   "stem": "Which feature of alveoli is NOT an adaptation for gaseous exchange?",
+   "marks": 1,
+   "options": {
+    "A": "Thin walls",
+    "B": "Large surface area",
+    "C": "Thick muscular walls",
+    "D": "Moist lining"
+   },
+   "answer": "Thick muscular walls"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0005",
+   "type": "mcq",
+   "stem": "The percentage of CO₂ in exhaled air is approximately:",
+   "marks": 1,
+   "options": {
+    "A": "0.04%",
+    "B": "1%",
+    "C": "4%",
+    "D": "21%"
+   },
+   "answer": "4%"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0006",
+   "type": "mcq",
+   "stem": "The trachea is kept open by:",
+   "marks": 1,
+   "options": {
+    "A": "Smooth muscle only",
+    "B": "Rings of cartilage",
+    "C": "Rib cage",
+    "D": "Diaphragm"
+   },
+   "answer": "Rings of cartilage"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0007",
+   "type": "mcq",
+   "stem": "CO₂ moves from blood to alveolar air because:",
+   "marks": 1,
+   "options": {
+    "A": "Blood has less CO₂ than alveolar air",
+    "B": "Blood has more CO₂ than alveolar air",
+    "C": "Active transport pumps it out",
+    "D": "Lungs squeeze blood"
+   },
+   "answer": "Blood has more CO₂ than alveolar air"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0008",
+   "type": "mcq",
+   "stem": "Why must alveolar surfaces be moist?",
+   "marks": 1,
+   "options": {
+    "A": "To keep them from burning",
+    "B": "Gases must dissolve in water before diffusing across",
+    "C": "To increase blood flow",
+    "D": "To prevent infection"
+   },
+   "answer": "Gases must dissolve in water before diffusing across"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0009",
+   "type": "mcq",
+   "stem": "The large surface area of alveoli is due to:",
+   "marks": 1,
+   "options": {
+    "A": "Large single air sac",
+    "B": "Millions of tiny alveoli",
+    "C": "Thick walls",
+    "D": "Many bronchi"
+   },
+   "answer": "Millions of tiny alveoli"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0010",
+   "type": "mcq",
+   "stem": "Nitrogen in inhaled and exhaled air is:",
+   "marks": 1,
+   "options": {
+    "A": "Increased after breathing",
+    "B": "Decreased after breathing",
+    "C": "Approximately the same (78%)",
+    "D": "Completely used up"
+   },
+   "answer": "Approximately the same (78%)"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0011",
+   "type": "mcq",
+   "stem": "The order of structures air passes through is:",
+   "marks": 1,
+   "options": {
+    "A": "Trachea→bronchus→alveoli→bronchiole",
+    "B": "Nose→trachea→bronchi→bronchioles→alveoli",
+    "C": "Bronchi→trachea→alveoli",
+    "D": "Alveoli→bronchioles→trachea→nose"
+   },
+   "answer": "Nose→trachea→bronchi→bronchioles→alveoli"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0012",
+   "type": "mcq",
+   "stem": "Blood capillaries around alveoli are important because:",
+   "marks": 1,
+   "options": {
+    "A": "They warm the air",
+    "B": "They provide short diffusion path and carry O₂ away quickly",
+    "C": "They produce CO₂",
+    "D": "They prevent infections"
+   },
+   "answer": "They provide short diffusion path and carry O₂ away quickly"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0013",
+   "type": "mcq",
+   "stem": "Gas exchange depends on:",
+   "marks": 1,
+   "options": {
+    "A": "Breathing rate only",
+    "B": "Concentration gradients of gases",
+    "C": "Blood pressure only",
+    "D": "Lung size only"
+   },
+   "answer": "Concentration gradients of gases"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0014",
+   "type": "mcq",
+   "stem": "During exercise, breathing rate increases because:",
+   "marks": 1,
+   "options": {
+    "A": "Lungs get bigger",
+    "B": "More O₂ is needed and more CO₂ must be removed",
+    "C": "Less CO₂ is produced",
+    "D": "Blood becomes thicker"
+   },
+   "answer": "More O₂ is needed and more CO₂ must be removed"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0015",
+   "type": "mcq",
+   "stem": "Emphysema (a lung disease) destroys alveolar walls. This reduces:",
+   "marks": 1,
+   "options": {
+    "A": "Blood flow",
+    "B": "Number of bronchi",
+    "C": "Surface area for gaseous exchange",
+    "D": "Breathing rate"
+   },
+   "answer": "Surface area for gaseous exchange"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0016",
+   "type": "mcq",
+   "stem": "Which gas diffuses from alveoli into blood?",
+   "marks": 1,
+   "options": {
+    "A": "CO₂",
+    "B": "N₂",
+    "C": "O₂",
+    "D": "Water vapour"
+   },
+   "answer": "O₂"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0017",
+   "type": "mcq",
+   "stem": "The thin wall of alveoli is approximately:",
+   "marks": 1,
+   "options": {
+    "A": "Many cells thick",
+    "B": "Two cells thick",
+    "C": "One cell thick",
+    "D": "No cells — just membrane"
+   },
+   "answer": "One cell thick"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0018",
+   "type": "mcq",
+   "stem": "Diaphragm and intercostal muscles are used for:",
+   "marks": 1,
+   "options": {
+    "A": "Gaseous exchange itself",
+    "B": "Breathing movements to ventilate lungs",
+    "C": "Making oxygen",
+    "D": "Filtering blood"
+   },
+   "answer": "Breathing movements to ventilate lungs"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0019",
+   "type": "mcq",
+   "stem": "Which breath test detects CO₂ in exhaled air?",
+   "marks": 1,
+   "options": {
+    "A": "Litmus test",
+    "B": "Lime water turns milky",
+    "C": "Universal indicator",
+    "D": "Benedict's test"
+   },
+   "answer": "Lime water turns milky"
+  },
+  {
+   "id": "uneb_uace-gaseous-exchange-bank-0020",
+   "type": "mcq",
+   "stem": "The main purpose of gaseous exchange is to:",
+   "marks": 1,
+   "options": {
+    "A": "Produce glucose",
+    "B": "Supply O₂ for respiration and remove CO₂",
+    "C": "Pump blood",
+    "D": "Digest food"
+   },
+   "answer": "Supply O₂ for respiration and remove CO₂"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Gaseous Exchange"
+}

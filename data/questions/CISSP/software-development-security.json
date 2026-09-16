@@ -1,0 +1,1181 @@
+{
+ "code": "cissp-software-development-security-bank",
+ "title": "CISSP -  Software Development Security",
+ "version": 1,
+ "questionCount": 90,
+ "totalMarks": 90,
+ "questions": [
+  {
+   "id": "cissp-software-development-security-bank-0001",
+   "type": "mcq",
+   "stem": "Susan provides a public RESTful API for her organization's data but wants to limit its use to trusted partners. She intends to use API keys. What other recommendation would you give Susan to limit the potential abuse of the service?",
+   "marks": 1,
+   "options": {
+    "A": "Limit request rates",
+    "B": "Force HTTP-only requests",
+    "C": "Avoid tokens due to bandwidth constraints",
+    "D": "Blacklist HTTP methods such as GET, POST, and PUT"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0002",
+   "type": "mcq",
+   "stem": "Darren is conducting a threat-hunting exercise and would like to look for botnet indicators of compromise. Which of the following are common ways that attackers leverage botnets? (Select all that apply.)",
+   "marks": 1,
+   "options": {
+    "A": "Mining cryptocurrency",
+    "B": "Conducting brute-force attacks",
+    "C": "Scanning for vulnerable systems",
+    "D": "Conducting man-in-the-middle attacks"
+   },
+   "answer": "A, B, C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0003",
+   "type": "mcq",
+   "stem": "Which one of the following statements is not true about code review?",
+   "marks": 1,
+   "options": {
+    "A": "Code review should be a peer-driven process that includes multiple developers",
+    "B": "Code review may be automated",
+    "C": "Code review occurs during the design phase",
+    "D": "Code reviewers may expect to review several hundred lines of code per hour"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0004",
+   "type": "mcq",
+   "stem": "Kathleen is reviewing the Ruby code shown here. What security technique is this code using? [Ruby prepared statement INSERT]",
+   "marks": 1,
+   "options": {
+    "A": "Parameterization",
+    "B": "Typecasting",
+    "C": "Gem cutting",
+    "D": "Stored procedures"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0005",
+   "type": "mcq",
+   "stem": "Jaime is a technical support analyst and is asked to visit a user whose computer is displaying the error message shown here. What state has this computer entered? [Blue Screen of Death PAGE_FAULT_IN_NONPAGED_AREA]",
+   "marks": 1,
+   "options": {
+    "A": "Fail open",
+    "B": "Irrecoverable error",
+    "C": "Memory exhaustion",
+    "D": "Fail secure"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0006",
+   "type": "mcq",
+   "stem": "Jessica is reviewing her organization's change management process and would like to verify that changes to software include acceptance testing. Which process is responsible for achieving this goal?",
+   "marks": 1,
+   "options": {
+    "A": "Request control",
+    "B": "Change control",
+    "C": "Release control",
+    "D": "Configuration control"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0007",
+   "type": "mcq",
+   "stem": "Ashley is investigating an attack that compromised an account of one of her users. In the attack, the attacker forced the submission of an authenticated request to a third-party site by exploiting trust relationships in the user's browser. What type of attack most likely took place?",
+   "marks": 1,
+   "options": {
+    "A": "XSS",
+    "B": "CSRF",
+    "C": "SQL injection",
+    "D": "Session hijacking"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0008",
+   "type": "mcq",
+   "stem": "Arnold is creating a new software package and is making use of the OpenSSL library. What term best describes the library he is using?",
+   "marks": 1,
+   "options": {
+    "A": "Open source",
+    "B": "COTS",
+    "C": "Third-party",
+    "D": "Managed"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0009",
+   "type": "mcq",
+   "stem": "Joshua is developing a software threat modeling program for his organization. Which of the following are appropriate goals for the program? (Select all that apply.)",
+   "marks": 1,
+   "options": {
+    "A": "To reduce the number of security-related design flaws",
+    "B": "To reduce the number of security-related coding flaws",
+    "C": "To reduce the severity of non-security-related flaws",
+    "D": "To reduce the number of threat vectors"
+   },
+   "answer": "A, B, C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0010",
+   "type": "mcq",
+   "stem": "In the diagram shown here, which is an example of a method? [UML Account class: Balance, Owner attrs; AddFunds, RemoveFunds methods]",
+   "marks": 1,
+   "options": {
+    "A": "Account",
+    "B": "Owner",
+    "C": "AddFunds",
+    "D": "Balance"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0011",
+   "type": "mcq",
+   "stem": "Wanda is reviewing the application development documentation used by her organization and finds the life-cycle illustration shown here. What application development method is her organization using? [RAD: Requirements Planning → User Design → Construction → Cutover]",
+   "marks": 1,
+   "options": {
+    "A": "Waterfall",
+    "B": "Spiral",
+    "C": "Agile",
+    "D": "RAD"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0012",
+   "type": "mcq",
+   "stem": "Which one of the following testing methodologies typically works without access to source code?",
+   "marks": 1,
+   "options": {
+    "A": "Dynamic testing",
+    "B": "Static testing",
+    "C": "White-box testing",
+    "D": "Code review"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0013",
+   "type": "mcq",
+   "stem": "Lucca is analyzing a web application that his organization acquired from a third-party vendor. Lucca determined that the application contains a flaw that causes users who are logged in to be able to take actions they should not be able to in their role. What type of security vulnerability should this be classified as?",
+   "marks": 1,
+   "options": {
+    "A": "Data validation",
+    "B": "Session management",
+    "C": "Authorization",
+    "D": "Error handling"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0014",
+   "type": "mcq",
+   "stem": "Bobby is investigating how an authorized database user is gaining access to information outside his normal clearance level. Bobby believes that the user is making use of a type of function that summarizes data. What term describes this type of function?",
+   "marks": 1,
+   "options": {
+    "A": "Inference",
+    "B": "Polymorphic",
+    "C": "Aggregate",
+    "D": "Modular"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0015",
+   "type": "mcq",
+   "stem": "Taylor would like to better protect the applications developed by her organization against buffer overflow attacks. Which of the following controls would best provide this protection?",
+   "marks": 1,
+   "options": {
+    "A": "Encryption",
+    "B": "Input validation",
+    "C": "Firewall",
+    "D": "Intrusion prevention system"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0016",
+   "type": "mcq",
+   "stem": "Kayla recently completed a thorough risk analysis and mitigation review of the software developed by her team and identified three persistent issues: Cross-site scripting, SQL injection, Buffer overflows. What is the most significant deficiency in her team's work identified by these issues?",
+   "marks": 1,
+   "options": {
+    "A": "Lack of API security",
+    "B": "Improper error handling",
+    "C": "Improper or missing input validation",
+    "D": "Source code design issues"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0017",
+   "type": "mcq",
+   "stem": "[Robert SW-CMM scenario.] What phase of the SW-CMM should Robert report as the current status of Acme Widgets? [No formal processes]",
+   "marks": 1,
+   "options": {
+    "A": "Defined",
+    "B": "Repeatable",
+    "C": "Initial",
+    "D": "Managed"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0018",
+   "type": "mcq",
+   "stem": "[Robert SW-CMM scenario.] Robert is working with Acme Widgets on a strategy to advance their software development practices. What SW-CMM stage should be their next target milestone?",
+   "marks": 1,
+   "options": {
+    "A": "Defined",
+    "B": "Repeatable",
+    "C": "Initial",
+    "D": "Managed"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0019",
+   "type": "mcq",
+   "stem": "[Robert SW-CMM scenario.] What phase of the SW-CMM should Robert report as the current status of Beta Particles? [Formal processes, no quantitative mgmt]",
+   "marks": 1,
+   "options": {
+    "A": "Defined",
+    "B": "Repeatable",
+    "C": "Optimizing",
+    "D": "Managed"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0020",
+   "type": "mcq",
+   "stem": "[Robert SW-CMM scenario.] Robert is also working with Beta Particles on a strategy to advance their software development practices. What SW-CMM stage should be their next target milestone?",
+   "marks": 1,
+   "options": {
+    "A": "Defined",
+    "B": "Repeatable",
+    "C": "Optimizing",
+    "D": "Managed"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0021",
+   "type": "mcq",
+   "stem": "Which one of the following database keys is used to enforce referential integrity relationships between tables?",
+   "marks": 1,
+   "options": {
+    "A": "Primary key",
+    "B": "Candidate key",
+    "C": "Foreign key",
+    "D": "Master key"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0022",
+   "type": "mcq",
+   "stem": "Brynn believes that a system in her organization may have been compromised by a macro virus. Which one of the following files is most likely to be the culprit?",
+   "marks": 1,
+   "options": {
+    "A": "projections.doc",
+    "B": "command.com",
+    "C": "command.exe",
+    "D": "loopmaster.exe"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0023",
+   "type": "mcq",
+   "stem": "Victor created a database table that contains information on his organization's employees. The table contains the employee's user ID, three different telephone number fields (home, work, and mobile), the employee's office location, and the employee's job title. There are 16 records in the table. What is the degree of this table?",
+   "marks": 1,
+   "options": {
+    "A": "3",
+    "B": "4",
+    "C": "6",
+    "D": "16"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0024",
+   "type": "mcq",
+   "stem": "Carrie is analyzing the application logs for her web-based application and comes across the following string: ../../../../../../../../../../etc/passwd. What type of attack was likely attempted against Carrie's application?",
+   "marks": 1,
+   "options": {
+    "A": "Command injection",
+    "B": "Session hijacking",
+    "C": "Directory traversal",
+    "D": "Brute-force"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0025",
+   "type": "mcq",
+   "stem": "When should a design review take place when following an SDLC approach to software development?",
+   "marks": 1,
+   "options": {
+    "A": "After the code review",
+    "B": "After user acceptance testing",
+    "C": "After the development of functional requirements",
+    "D": "After the completion of unit testing"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0026",
+   "type": "mcq",
+   "stem": "Tracy is preparing to apply a patch to her organization's enterprise resource planning system. She is concerned that the patch may introduce flaws that did not exist in prior versions, so she plans to conduct a test that will compare previous responses to input with those produced by the newly patched application. What type of testing is Tracy planning?",
+   "marks": 1,
+   "options": {
+    "A": "Unit testing",
+    "B": "Acceptance testing",
+    "C": "Regression testing",
+    "D": "Vulnerability testing"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0027",
+   "type": "mcq",
+   "stem": "What term is used to describe the level of confidence that software is free from vulnerabilities, either intentionally designed into the software or accidentally inserted at any time during its life cycle, and that the software functions in the intended manner?",
+   "marks": 1,
+   "options": {
+    "A": "Validation",
+    "B": "Accreditation",
+    "C": "Confidence interval",
+    "D": "Assurance"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0028",
+   "type": "mcq",
+   "stem": "Victor recently took a new position at an online dating website and is responsible for leading a team of developers. He realized quickly that the developers are having issues with production code because they are working on different projects that result in conflicting modifications to the production code. What process should Victor invest in improving?",
+   "marks": 1,
+   "options": {
+    "A": "Request control",
+    "B": "Release control",
+    "C": "Change control",
+    "D": "Configuration control"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0029",
+   "type": "mcq",
+   "stem": "Tom is assessing security risks related to a database he manages. Examining user access controls, he determines that users have access to individual records in a table that match their clearances, but if they pull multiple records, that collection of facts has a higher classification than the classification of any of those facts standing alone and exceeds the permitted access. What type of issue has Tom identified?",
+   "marks": 1,
+   "options": {
+    "A": "Inference",
+    "B": "SQL injection",
+    "C": "Multilevel security",
+    "D": "Aggregation"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0030",
+   "type": "mcq",
+   "stem": "Ron leads a team of software developers who find themselves often re-creating code that performs common functions. What software development tool could he use to best address this situation?",
+   "marks": 1,
+   "options": {
+    "A": "Code repositories",
+    "B": "Code libraries",
+    "C": "IDEs",
+    "D": "DAST"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0031",
+   "type": "mcq",
+   "stem": "Vivian would like to hire a software tester to come in and evaluate a new web application from a user's perspective. Which of the following tests best simulates that perspective?",
+   "marks": 1,
+   "options": {
+    "A": "Black box",
+    "B": "Gray box",
+    "C": "Blue box",
+    "D": "White box"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0032",
+   "type": "mcq",
+   "stem": "Referring to the database transaction shown here, what would happen if no account exists in the Accounts table with account number 1001? [BEGIN TRANSACTION; UPDATE accounts SET balance = balance + 250 WHERE account_number = 1001; UPDATE accounts SET balance = balance - 250 WHERE account_number = 2002; COMMIT TRANSACTION]",
+   "marks": 1,
+   "options": {
+    "A": "The database would create a new account with this account number and give it a $250 balance",
+    "B": "The database would ignore that command and still reduce the balance of the second account by $250",
+    "C": "The database would roll back the transaction, ignoring the results of both commands",
+    "D": "The database would generate an error message"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0033",
+   "type": "mcq",
+   "stem": "Brandon is a software developer seeking to integrate his software with a popular social media site. The site provides him with software libraries that he can use to better integrate his code as well as other tools that make his work easier. What term best describes the service he is using?",
+   "marks": 1,
+   "options": {
+    "A": "SDK",
+    "B": "DLP",
+    "C": "IDE",
+    "D": "API"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0034",
+   "type": "mcq",
+   "stem": "Kim is troubleshooting an application firewall that serves as a supplement to the organization's network and host firewalls and intrusion prevention system, providing added protection against web-based attacks. The issue the organization is experiencing is that the firewall technology suffers somewhat frequent restarts that render it unavailable for 10 minutes at a time. What configuration might Kim consider to maintain availability during that period at the lowest cost to the company?",
+   "marks": 1,
+   "options": {
+    "A": "High availability cluster",
+    "B": "Failover device",
+    "C": "Fail open",
+    "D": "Redundant disks"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0035",
+   "type": "mcq",
+   "stem": "What type of security issue arises when an attacker can deduce a more sensitive piece of information by analyzing several pieces of information classified at a lower level?",
+   "marks": 1,
+   "options": {
+    "A": "SQL injection",
+    "B": "Multilevel security",
+    "C": "Parameterization",
+    "D": "Inference"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0036",
+   "type": "mcq",
+   "stem": "Greg is battling a malware outbreak in his organization. He used specialized malware analysis tools to capture samples of the malware from three different systems and noticed that the code is changing slightly from infection to infection. Greg believes that this is the reason that antivirus software is having a tough time defeating the outbreak. What type of malware should Greg suspect is responsible for this security incident?",
+   "marks": 1,
+   "options": {
+    "A": "Stealth virus",
+    "B": "Polymorphic virus",
+    "C": "Multipartite virus",
+    "D": "Encrypted virus"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0037",
+   "type": "mcq",
+   "stem": "[Linda XSS scenario: <script>alert('Alert');</script>] What vulnerability definitely exists on Linda's message board?",
+   "marks": 1,
+   "options": {
+    "A": "Cross-site scripting",
+    "B": "Cross-site request forgery",
+    "C": "SQL injection",
+    "D": "Improper authentication"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0038",
+   "type": "mcq",
+   "stem": "[Linda XSS scenario] What was the likely motivation of the user who posted the message on the forum containing this code?",
+   "marks": 1,
+   "options": {
+    "A": "Reconnaissance",
+    "B": "Theft of sensitive information",
+    "C": "Credential stealing",
+    "D": "Social engineering"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0039",
+   "type": "mcq",
+   "stem": "[Linda XSS scenario] Linda communicates with the vendor and determines that no patch is available to correct this vulnerability. Which one of the following devices would best help her defend the application against further attack?",
+   "marks": 1,
+   "options": {
+    "A": "VPN",
+    "B": "WAF",
+    "C": "DLP",
+    "D": "IDS"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0040",
+   "type": "mcq",
+   "stem": "[Linda XSS scenario] In further discussions with the vendor, Linda finds that they are willing to correct the issue but do not know how to update their software. What technique would be most effective in mitigating the vulnerability of the application to this type of attack?",
+   "marks": 1,
+   "options": {
+    "A": "Bounds checking",
+    "B": "Peer review",
+    "C": "Input validation",
+    "D": "OS patching"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0041",
+   "type": "mcq",
+   "stem": "Hannah is a software developer working on creating statistical software using the R programming language. She uses the RStudio tool, shown here, to assist her in writing this code. What term best describes this tool? [RStudio IDE screenshot]",
+   "marks": 1,
+   "options": {
+    "A": "SDK",
+    "B": "IDE",
+    "C": "API",
+    "D": "DLP"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0042",
+   "type": "mcq",
+   "stem": "Which of the following configurations within the Scaled Agile Framework (SAFe) is specifically designed to support enterprises in building and maintaining large integrated solutions with the collaboration of hundreds of practitioners?",
+   "marks": 1,
+   "options": {
+    "A": "Large Solution SAFe",
+    "B": "Portfolio SAFe",
+    "C": "Essential SAFe",
+    "D": "Full SAFe"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0043",
+   "type": "mcq",
+   "stem": "Alan is deploying Java code to a variety of machines in his environment and must install the JVM on those machines first. What term best describes the JVM in this case?",
+   "marks": 1,
+   "options": {
+    "A": "Repository",
+    "B": "Change manager",
+    "C": "Runtime",
+    "D": "Sandbox"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0044",
+   "type": "mcq",
+   "stem": "Christine is nearing the final stages of testing a new software package. Which one of the following types of software testing usually occurs last and is executed against test scenarios?",
+   "marks": 1,
+   "options": {
+    "A": "Unit testing",
+    "B": "Integration testing",
+    "C": "User acceptance testing",
+    "D": "System testing"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0045",
+   "type": "mcq",
+   "stem": "Alexis' organization recently moved to a CI/CD approach for software development where they intend to speed up the deployment of code supporting their website. What is the most reasonable frequency that they can expect to achieve using this type of approach?",
+   "marks": 1,
+   "options": {
+    "A": "Monthly deployments",
+    "B": "Weekly deployments",
+    "C": "Daily deployments",
+    "D": "Hundreds of daily deployments"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0046",
+   "type": "mcq",
+   "stem": "Amber is conducting a threat intelligence project and would like to find a source of information on threats to her organization's web applications. Which of the following organizations is widely considered as the definitive source for information on web-based attack vectors?",
+   "marks": 1,
+   "options": {
+    "A": "ISC2",
+    "B": "ISACA",
+    "C": "OWASP",
+    "D": "Mozilla Foundation"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0047",
+   "type": "mcq",
+   "stem": "Chris is a software developer, and he is actively writing code for an application. What phase of the Agile process is he in?",
+   "marks": 1,
+   "options": {
+    "A": "Planning",
+    "B": "Sprints",
+    "C": "Deployment",
+    "D": "Testing"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0048",
+   "type": "mcq",
+   "stem": "Alyssa's team recently implemented a new system that gathers information from a variety of different log sources, analyzes that information, and then triggers automated playbooks in response to security events. What term best describes this technology?",
+   "marks": 1,
+   "options": {
+    "A": "SIEM",
+    "B": "Log repositories",
+    "C": "IPS",
+    "D": "SOAR"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0049",
+   "type": "mcq",
+   "stem": "Chris is reviewing the code of an open-source application that he is planning to use in his organization. He finds the code excerpt shown here: int myarray[10]; myarray[10] = 8; What type of attack is taking place?",
+   "marks": 1,
+   "options": {
+    "A": "Mismatched data types",
+    "B": "Overflow",
+    "C": "SQL injection",
+    "D": "Covert channel"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0050",
+   "type": "mcq",
+   "stem": "Which one of the following database issues occurs when one transaction writes a value to the database that overwrites a value that was needed by transactions with earlier precedence?",
+   "marks": 1,
+   "options": {
+    "A": "Dirty read",
+    "B": "Incorrect summary",
+    "C": "Lost update",
+    "D": "SQL injection"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0051",
+   "type": "mcq",
+   "stem": "Belinda would like to better protect users of her organization's web application from cookie-stealing attacks. Which one of the following is the most effective control against this type of session hijacking attack?",
+   "marks": 1,
+   "options": {
+    "A": "TLS",
+    "B": "Complex session cookies",
+    "C": "SSL",
+    "D": "Expiring cookies frequently"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0052",
+   "type": "mcq",
+   "stem": "In a software configuration management program, what is the primary role of the CAB?",
+   "marks": 1,
+   "options": {
+    "A": "Approve the credentials of developers",
+    "B": "Facilitate lessons learned sessions",
+    "C": "Review and approve/reject code changes",
+    "D": "Prioritize software development efforts"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0053",
+   "type": "mcq",
+   "stem": "Which one of the following tools is commonly used by software developers to interact with and manage code that is stored in code repositories?",
+   "marks": 1,
+   "options": {
+    "A": "grep",
+    "B": "git",
+    "C": "lsof",
+    "D": "gcc"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0054",
+   "type": "mcq",
+   "stem": "While evaluating a potential security incident, Harry comes across a log entry from a web server request showing that a user entered the following input into a form field: CARROT'&1=1;-- What type of attack was attempted?",
+   "marks": 1,
+   "options": {
+    "A": "Buffer overflow",
+    "B": "Cross-site scripting",
+    "C": "SQL injection",
+    "D": "Cross-site request forgery"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0055",
+   "type": "mcq",
+   "stem": "Which one of the following is not an effective control against SQL injection attacks?",
+   "marks": 1,
+   "options": {
+    "A": "Escaping",
+    "B": "Client-side input validation",
+    "C": "Parameterization",
+    "D": "Limiting database permissions"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0056",
+   "type": "mcq",
+   "stem": "Jason is reviewing the documentation for a software development project and comes across the diagram shown here. What type of diagram is he examining? [PERT chart: nodes 10→20/30, etc.]",
+   "marks": 1,
+   "options": {
+    "A": "WBS chart",
+    "B": "PERT chart",
+    "C": "Gantt chart",
+    "D": "Wireframe diagram"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0057",
+   "type": "mcq",
+   "stem": "In what software testing technique does the evaluator retest a large number of scenarios each time that the software changes to verify that the results are consistent with a standard baseline?",
+   "marks": 1,
+   "options": {
+    "A": "Orthogonal array testing",
+    "B": "Pattern testing",
+    "C": "Matrix testing",
+    "D": "Regression testing"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0058",
+   "type": "mcq",
+   "stem": "Haley is reviewing code created by her organization for its possible exposure to web application vulnerabilities. Which one of the following conditions may make an application most vulnerable to a cross-site scripting (XSS) attack?",
+   "marks": 1,
+   "options": {
+    "A": "Input validation",
+    "B": "Reflected input",
+    "C": "Unpatched server",
+    "D": "Promiscuous firewall rules"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0059",
+   "type": "mcq",
+   "stem": "Roger is conducting a software test for a tax preparation application developed by his company. End users will access the application over the web, but Roger is conducting his test on the back end, evaluating the source code on the web server. What type of test is Roger conducting?",
+   "marks": 1,
+   "options": {
+    "A": "White box",
+    "B": "Gray box",
+    "C": "Blue box",
+    "D": "Black box"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0060",
+   "type": "mcq",
+   "stem": "Which of the following statements is true about heuristic-based antimalware software?",
+   "marks": 1,
+   "options": {
+    "A": "It has a lower false positive rate than signature detection",
+    "B": "It requires frequent definition updates to detect new malware",
+    "C": "It has a higher likelihood of detecting zero-day exploits than signature detection",
+    "D": "It monitors systems for files with content known to be viruses"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0061",
+   "type": "mcq",
+   "stem": "Martin is inspecting a system where the user reported unusual activity, including disk activity when the system is idle and abnormal CPU and network usage. He suspects that the machine is infected by a virus, but scans come up clean. What malware technique might be in use here that would explain the clean scan results?",
+   "marks": 1,
+   "options": {
+    "A": "File infector virus",
+    "B": "MBR virus",
+    "C": "Service injection virus",
+    "D": "Stealth virus"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0062",
+   "type": "mcq",
+   "stem": "Tomas discovers a line in his application log that appears to correspond with an attempt to conduct a directory traversal attack. He believes the attack was conducted using URL encoding. The line reads as follows: %252E%252E%252F%252E%252E%252Fetc/passwd What character is represented by the %252E value?",
+   "marks": 1,
+   "options": {
+    "A": ".",
+    "B": ",",
+    "C": ";",
+    "D": "/"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0063",
+   "type": "mcq",
+   "stem": "An attacker posted a message to a public discussion forum that contains an embedded malicious script that is not displayed to the user but executes on the user's system when read. What type of attack is this?",
+   "marks": 1,
+   "options": {
+    "A": "Persistent XSRF",
+    "B": "Nonpersistent XSRF",
+    "C": "Persistent XSS",
+    "D": "Nonpersistent XSS"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0064",
+   "type": "mcq",
+   "stem": "Which one of the following is not a principle of the Agile software development process?",
+   "marks": 1,
+   "options": {
+    "A": "Welcome changing requirements, even late in the development process",
+    "B": "Maximizing the amount of work not done is essential",
+    "C": "Clear documentation is the primary measure of progress",
+    "D": "Build projects around motivated individuals"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0065",
+   "type": "mcq",
+   "stem": "Gavin is an internal auditor tasked with examining the change management practices of his organization. He would like to review a series of changes made to a software package to determine whether they were properly documented. Where should he turn for a description of each proposed change?",
+   "marks": 1,
+   "options": {
+    "A": "CAB",
+    "B": "RFC",
+    "C": "SOAR",
+    "D": "SIEM"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0066",
+   "type": "mcq",
+   "stem": "Neal is working with a DynamoDB database. The database is not structured like a relational database but allows Neal to store data using a key-value store. What type of database is DynamoDB?",
+   "marks": 1,
+   "options": {
+    "A": "Relational database",
+    "B": "Graph database",
+    "C": "Hierarchical database",
+    "D": "NoSQL database"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0067",
+   "type": "mcq",
+   "stem": "In the transaction shown here, what would happen if the database failed in between the first and second update statements? [BEGIN TRANSACTION; UPDATE +250 acct 1001; UPDATE -250 acct 2002; COMMIT]",
+   "marks": 1,
+   "options": {
+    "A": "The database would credit the first account with $250 in funds but then not reduce the balance of the second account",
+    "B": "The database would ignore the first command and only reduce the balance of the second account by $250",
+    "C": "The database would roll back the transaction, ignoring the results of both commands",
+    "D": "The database would successfully execute both commands"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0068",
+   "type": "mcq",
+   "stem": "Tareck's organization makes use of a significant amount of COTS software. He recently discovered a significant buffer overflow vulnerability in the code of a COTS software package that is crucial to his business. What is the most likely way that Tareck can get this corrected?",
+   "marks": 1,
+   "options": {
+    "A": "Work with his software development team to modify the code",
+    "B": "Notify the vendor and request a patch",
+    "C": "Deploy an intrusion prevention system",
+    "D": "Update firewall rules"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0069",
+   "type": "mcq",
+   "stem": "Which one of the following statements is true about software testing?",
+   "marks": 1,
+   "options": {
+    "A": "Static testing works on runtime environments",
+    "B": "Static testing performs code analysis",
+    "C": "Dynamic testing uses automated tools, but static testing does not",
+    "D": "Static testing is a more important testing technique than dynamic testing"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0070",
+   "type": "mcq",
+   "stem": "Lucas runs the accounting systems for his company. The morning after an essential employee was fired, systems began mysteriously losing information. Lucas suspects that the fired employee tampered with the systems prior to his departure. What type of attack should Lucas suspect?",
+   "marks": 1,
+   "options": {
+    "A": "Privilege escalation",
+    "B": "SQL injection",
+    "C": "Logic bomb",
+    "D": "Remote code execution"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0071",
+   "type": "mcq",
+   "stem": "Which one of the following principles would not be favored in an Agile approach to software development?",
+   "marks": 1,
+   "options": {
+    "A": "Processes and tools over individuals and interactions",
+    "B": "Working software over comprehensive documentation",
+    "C": "Customer collaboration over contract negotiations",
+    "D": "Responding to change over following a plan"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0072",
+   "type": "mcq",
+   "stem": "What technique do API developers most commonly use to limit access to an API to authorized individuals and applications?",
+   "marks": 1,
+   "options": {
+    "A": "Encryption",
+    "B": "Input validation",
+    "C": "API keys",
+    "D": "IP filters"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0073",
+   "type": "mcq",
+   "stem": "Reggie recently received a letter from his company's internal auditors scheduling the kickoff meeting for an assessment of his group. Which of the following should Reggie not expect to learn during that meeting?",
+   "marks": 1,
+   "options": {
+    "A": "Scope of the audit",
+    "B": "Purpose of the audit",
+    "C": "Expected timeframe",
+    "D": "Expected findings"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0074",
+   "type": "mcq",
+   "stem": "Which one of the following is the proper order of steps in the waterfall model of software development?",
+   "marks": 1,
+   "options": {
+    "A": "Requirements, Design, Testing, Coding, Maintenance",
+    "B": "Requirements, Design, Coding, Testing, Maintenance",
+    "C": "Design, Requirements, Coding, Testing, Maintenance",
+    "D": "Design, Requirements, Testing, Coding, Maintenance"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0075",
+   "type": "mcq",
+   "stem": "Renee is a software developer who writes code in Node.js for her organization. The company is considering moving from a self-hosted Node.js environment to one where Renee will run her code on application servers managed by a cloud vendor. What type of cloud solution is Renee's company considering?",
+   "marks": 1,
+   "options": {
+    "A": "IaaS",
+    "B": "CaaS",
+    "C": "PaaS",
+    "D": "SaaS"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0076",
+   "type": "mcq",
+   "stem": "Tom is writing a software program that calculates the sales tax for online orders placed from various jurisdictions. The application includes a user-defined field that allows the entry of the total sale amount. Tom would like to ensure that the data entered in this field is a properly formatted dollar amount. What technique should he use?",
+   "marks": 1,
+   "options": {
+    "A": "Limit check",
+    "B": "Fail open",
+    "C": "Fail secure",
+    "D": "Input validation"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0077",
+   "type": "mcq",
+   "stem": "Brian is helping implement a new software testing methodology for his organization and would like to review the completeness of his toolkit. Which of the following would be considered dynamic application security testing (DAST) tools? (Select all that apply.)",
+   "marks": 1,
+   "options": {
+    "A": "Code review",
+    "B": "Fuzzing",
+    "C": "Static analysis",
+    "D": "Web application vulnerability scanning"
+   },
+   "answer": "B, D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0078",
+   "type": "mcq",
+   "stem": "What approach to technology management integrates the three components of technology management shown in this illustration? [Venn: Software Dev, QA, Ops]",
+   "marks": 1,
+   "options": {
+    "A": "Agile",
+    "B": "Lean",
+    "C": "DevOps",
+    "D": "ITIL"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0079",
+   "type": "mcq",
+   "stem": "Olivia is conducting a risk analysis of a web application that her organization obtained from a third party and is concerned that it might contain vulnerabilities. Which one of the following activities might she take to best mitigate the risk?",
+   "marks": 1,
+   "options": {
+    "A": "Deploy a WAF",
+    "B": "Implement strong encryption",
+    "C": "Purchase an insurance policy",
+    "D": "Discontinue use of the software"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0080",
+   "type": "mcq",
+   "stem": "Which one of the following database concurrency issues occurs when one transaction reads information that was written to a database by a second transaction that never committed?",
+   "marks": 1,
+   "options": {
+    "A": "Lost update",
+    "B": "SQL injection",
+    "C": "Incorrect summary",
+    "D": "Dirty read"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0081",
+   "type": "mcq",
+   "stem": "What software development concept was pioneered by the Defense Department in the 1990s as an effort to bring together diverse product development teams?",
+   "marks": 1,
+   "options": {
+    "A": "Integrated product team",
+    "B": "Agile methodology",
+    "C": "Scrum approach",
+    "D": "User stories"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0082",
+   "type": "mcq",
+   "stem": "Frank is working to select a new cloud service that will provide block storage for a server being built by his team. What category of cloud service is Frank planning to use?",
+   "marks": 1,
+   "options": {
+    "A": "SaaS",
+    "B": "IaaS",
+    "C": "FaaS",
+    "D": "PaaS"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0083",
+   "type": "mcq",
+   "stem": "Nathan recently completed a software development project where he integrated the organization's network operations stack with their development processes. As a result, developers can modify firewall rules from their code on an as-needed basis. What term best describes this ability?",
+   "marks": 1,
+   "options": {
+    "A": "Agile",
+    "B": "IaC",
+    "C": "SDS",
+    "D": "DevOps"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0084",
+   "type": "mcq",
+   "stem": "TJ is inspecting a system where the user reported a strange error message and the inability to access files. He sees the window shown here. What type of malware should TJ suspect? [CryptoLocker ransomware screenshot]",
+   "marks": 1,
+   "options": {
+    "A": "Service injection",
+    "B": "Encrypted virus",
+    "C": "SQL injection",
+    "D": "Ransomware"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0085",
+   "type": "mcq",
+   "stem": "At which level of the Software Capability Maturity Model (SW-CMM) does an organization introduce basic life-cycle management processes?",
+   "marks": 1,
+   "options": {
+    "A": "Initial",
+    "B": "Repeatable",
+    "C": "Defined",
+    "D": "Managed"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0086",
+   "type": "mcq",
+   "stem": "Which one of the following types of artificial intelligence attempts to use complex computations to replicate the partial function of the human mind?",
+   "marks": 1,
+   "options": {
+    "A": "Decision support systems",
+    "B": "Expert systems",
+    "C": "Knowledge bank",
+    "D": "Neural networks"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0087",
+   "type": "mcq",
+   "stem": "Charles is developing a mission-critical application that has a direct impact on human safety. Time and cost are less important than correctly functioning software. Which of the following software development methodologies should he choose given these requirements?",
+   "marks": 1,
+   "options": {
+    "A": "Agile",
+    "B": "DevOps",
+    "C": "Spiral",
+    "D": "Waterfall"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0088",
+   "type": "mcq",
+   "stem": "Which one of the following approaches to failure management is the most conservative from a security perspective?",
+   "marks": 1,
+   "options": {
+    "A": "Fail open",
+    "B": "Fail mitigation",
+    "C": "Fail clear",
+    "D": "Fail closed"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0089",
+   "type": "mcq",
+   "stem": "What software development model is shown here? [Spiral model diagram]",
+   "marks": 1,
+   "options": {
+    "A": "Waterfall",
+    "B": "Agile",
+    "C": "Lean",
+    "D": "Spiral"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-software-development-security-bank-0090",
+   "type": "mcq",
+   "stem": "Mark is considering replacing his organization's customer relationship management (CRM) solution with a new product that is available in the cloud. This new solution is completely managed by the vendor, and Mark's company will not have to write any code or manage any physical resources. What type of cloud solution is Mark considering?",
+   "marks": 1,
+   "options": {
+    "A": "IaaS",
+    "B": "CaaS",
+    "C": "PaaS",
+    "D": "SaaS"
+   },
+   "answer": "D"
+  }
+ ],
+ "category": "CISSP",
+ "body": " Software Development Security"
+}

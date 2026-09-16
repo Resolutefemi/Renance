@@ -1,0 +1,299 @@
+{
+ "code": "exame_nacional-questions-sample-bank",
+ "title": "Exame Nacional - Questions Sample",
+ "version": 1,
+ "questionCount": 24,
+ "totalMarks": 24,
+ "questions": [
+  {
+   "id": "exame_nacional-questions-sample-bank-0001",
+   "type": "mcq",
+   "stem": "João da Silva foi denunciado por homicídio qualificado por motivo fútil. Nos debates orais ocorridos na primeira fase do procedimento de júri, a Defesa alegou que João agira em estrito cumprimento de dever legal, postulando sua absolvição sumária. Ao proferir sua decisão, o juiz rejeitou a tese de estrito cumprimento de dever legale o pedido de absolvição sumária, e pronunciou João por homicídio simples, afastando a qualificadora contida na denúncia. A decisão de pronúncia foi confirmada pelo Tribunal de Justiça, operando-se a preclusão.Considerando tal narrativa, assinale a afirmativa correta.",
+   "marks": 1,
+   "options": {
+    "A": "Nos debates orais perante os jurados, o promotor de justiça não poderá sustentar a qualificadora de motivo fútil, mas a defesa poderá alegar a tese de estrito cumprimento de dever legal.",
+    "B": "Nos debates orais perante os jurados, o promotor de justiça poderá sustentar a qualificadora de motivo fútil e a defesa poderá alegar a tese de estrito cumprimento de dever legal.",
+    "C": "Nos debates orais perante os jurados, o promotor de justiça não poderá sustentar a qualificadora de motivo fútil e a defesa não poderá alegar a tese de estrito cumprimento de dever legal.",
+    "D": "Nos debates orais perante os jurados, o promotor de justiça poderá sustentar a qualificadora de motivo fútil, mas a defesa não poderá alegar a tese de estrito cumprimento de dever legal."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0002",
+   "type": "mcq",
+   "stem": "Assinale a alternativa correta à luz da doutrina referente ao Tribunal do Júri.",
+   "marks": 1,
+   "options": {
+    "A": "São princípios que informam o Tribunal do Júri: a plenitude de defesa, o sigilo das votações, a soberania dos veredictos e a competência exclusiva para julgamento dos crimes dolosos contra a vida.",
+    "B": "A natureza jurídica da sentença de pronúncia (em que o magistrado se convence da existência material do fato criminoso e de indícios suficientes de autoria) é de decisão interlocutória mista não terminativa.",
+    "C": "O rito das ações de competência do Tribunal do Júri se desenvolve em duas fases: judicium causae e judicium accusacionis. O judicium accusacionis se inicia com a intimação das partes para indicação das provas que pretendem produzir e tem fim com o trânsito em julgado da decisão do Tribunal do Júri.",
+    "D": "Alcançada a etapa decisória do sumário da culpa, o juiz poderá exarar quatro espécies de decisão, a saber: pronúncia, impronúncia, absolvição sumária e condenação."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0003",
+   "type": "mcq",
+   "stem": "Fabrício, com dolo de matar, realiza vários disparos de arma de fogo em direção a Cristiano. Dois projéteis de arma de fogo atingem o peito da vítima, que vem a falecer. Fabrício foge para não ser preso em flagrante. Os fatos ocorreram no final de uma tarde de domingo, diante de várias testemunhas. O inquérito policial foi instaurado, e Fabrício foi indiciado pelo homicídio de Cristiano. Os autos são remetidos ao Ministério Público, que denuncia Fabrício. O processo tem seu curso regular e as testemunhas confirmam que Fabrício foi o autor do disparo. Após a apresentação dos memoriais, os autos são remetidos para conclusão, a fim de que seja exarada a sentença, sendo certo que o juiz está convencido de que há indícios de autoria em desfavor de Fabrício e prova da materialidade de crime doloso contra a vida. Diante do caso narrado, assinale a alternativa correta acerca da sentença a ser proferida pelo juiz na primeira fase do procedimento do Júri.",
+   "marks": 1,
+   "options": {
+    "A": "O juiz deve impronunciar Fabrício pelo crime de homicídio, diante dos indícios de autoria e prova da materialidade, que indicam a prática de crime doloso contra a vida.",
+    "B": "O juiz deve pronunciar Fabrício, remetendo os autos ao Juízo comum, diante dos indícios de autoria e prova da materialidade, que indicam a prática de crime doloso contra a vida.",
+    "C": "O juiz deve pronunciar Fabrício, submetendo-o ao plenário do Júri, diante dos indícios de autoria e prova da materialidade, que indicam a prática de crime doloso contra a vida.",
+    "D": "O juiz deve pronunciar Fabrício, submetendo-o ao plenário do Júri mediante desclassificação do crime comum para crime doloso contra a vida, diante dos indícios de autoria e prova da materialidade, que indicam a prática de crime doloso contra a vida."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0004",
+   "type": "mcq",
+   "stem": "João está sendo processado por um crime doloso contra a vida e, após o oferecimento das alegações finais, o magistrado impronuncia o réu. Assinale a alternativa que apresenta a situação em que seria possível processar João novamente pelo mesmo fato delituoso.",
+   "marks": 1,
+   "options": {
+    "A": "Desde que haja novas provas e não tenha ocorrido qualquer causa extintiva de punibilidade, pois a decisão de impronúncia não transita em julgado.",
+    "B": "A justiça já se manifestou em relação ao processo de João, tendo a decisão do magistrado transitado em julgado.",
+    "C": "Ninguém pode ser processado duas vezes pelo mesmo fato (non bis in idem ).",
+    "D": "A sentença de impronúncia é uma decisão interlocutória mista não terminativa."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0005",
+   "type": "mcq",
+   "stem": "Victória e Bernadete entram em luta corporal em razão da disputa por um namorado, vindo Victória a desferir uma facada no pé da rival, que sofreu lesões graves. Bernadete compareceu em sede policial, narrou o ocorrido e disse ter intenção de ver a agente responsabilizada criminalmente. Em razão dos fatos, Victória é denunciada e pronunciada pela prática do crime de tentativa de homicídio. Em sessão plenária do Tribunal do Júri, os jurados entendem, no momento de responder aos quesitos, que Victória foi autora da facada, mas que não houve dolo de matar.Diante da desclassificação, será competente para julgamento do crime residual, bem como da avaliação do cabimento dos institutos despenalizadores,",
+   "marks": 1,
+   "options": {
+    "A": "o Juiz Presidente do Tribunal do Júri.",
+    "B": "o corpo de jurados, que decidiu pela desclassificação.",
+    "C": "o Juiz Criminal da Comarca, a partir de livre distribuição.",
+    "D": "o Juiz em atuação perante o Juizado Especial Criminal da Comarca em que ocorreram os fatos."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0006",
+   "type": "mcq",
+   "stem": "Quanto ao julgamento pelo Tribunal do Júri, assinale a afirmativa incorreta.",
+   "marks": 1,
+   "options": {
+    "A": "As partes não poderão fazer referência, em plenário, à decisão de pronúncia, às decisões posteriores que julgaram admissível a acusação ou à determinação do uso de algemas como argumento de autoridade que beneficiem ou prejudiquem o acusado.",
+    "B": "Durante o julgamento, não será permitida a leitura de documento ou a exibição de objeto que não tiver sido juntado aos autos com a antecedência mínima de três dias úteis, dando-se ciência à outra parte.",
+    "C": "Durante os debates em Plenário, os jurados poderão solicitar ao orador, por intermédio do juiz-presidente do Tribunal do Júri, que esclareça algum fato por ele alegado em sua tese.",
+    "D": "Se a verificação de qualquer fato, reconhecida como essencial para o julgamento da causa, não puder ser realizada imediatamente, o juiz-presidente determinará que o Conselho de Sentença se recolha à sala secreta, ordenando a realização das diligências entendidas necessárias."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0007",
+   "type": "mcq",
+   "stem": "Mateus foi denunciado pela prática de um crime de homicídio qualificado, sendo narrado na denúncia que a motivação do crime seria guerra entre facções do tráfico. Cinco dias antes do julgamento em plenário, o Ministério Público junta ao processo a Folha de Antecedentes Criminais (FAC) do acusado, conforme requerido quando da manifestação em diligências, em que, de fato, constavam anotações referentes a processos pela prática do crime da Lei de Drogas.Apenas três dias úteis antes do julgamento, a defesa de Mateus vem a tomar conhecimento da juntada da FAC. No dia do julgamento, após a manifestação oral da defesa em plenário, indagado pelo juiz presidente sobre o interesse em se manifestar em réplica, o promotor de justiça afirma negativamente, reiterando aos jurados que as provas estão muito claras e que o réu deve ser condenado, não havendo necessidade de maiores explanações. Posteriormente, o juiz presidente nega à defesa o direito de tréplica. Mateus é condenado.Diante da situação narrada, o(a) advogado(a) de Mateus, em sede de apelação, deverá buscar",
+   "marks": 1,
+   "options": {
+    "A": "a nulidade do julgamento, pois foi juntada documentação sem a antecedência necessária exigida pela lei.",
+    "B": "o afastamento da qualificadora pelo Tribunal, pois foi juntada documentação que influenciou seu reconhecimento sem a antecedência necessária exigida pela lei.",
+    "C": "a nulidade do julgamento, pois o direito de tréplica da defesa independe da réplica do Ministério Público.",
+    "D": "a nulidade do julgamento, pois houve réplica por parte do Ministério Público, de modo que deveria ser deferido à defesa o direito de tréplica."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0008",
+   "type": "mcq",
+   "stem": "Um povo entre duas tiranias Pelo alto, a população do leste de Alepo, na Síria, foi castigada por bombas de barril lançadas por helicópteros e aviões do regime de Bashar Assad e por caças russos. Ao explodirem, esses artefatos espalham rolamentos, pregos e pedaços de metal ao redor, destruindo prédios e perfurando pessoas. Na noite de 17 de agosto, o menino Omran Daqneesh, de 4 anos, estava dormindo com os irmãos de 1, 6 e 10 anos quando uma bomba caiu sobre sua casa. As imagens do vídeo que mostram Omran coberto de poeira e sangue dentro de uma ambulância chocaram o mundo pelo contraste entre inocência e brutalidade. Seu irmão mais velho morreu no hospital. Em terra, os moradores eram acossados pelos grupos extremistas ligados à Al Qaeda, que criaram tribunais para aplicar a lei islâmica. As mulheres foram obrigadas a usar o véu. Quem reclamava do fechamento das rádios ou das escolas ou tentava fugir era preso, torturado e até assassinado. Com a coalizão liderada pelos EUA bombardeando os terroristas do Estado Islâmico em outras cidades, a Rússia e o Irã ficaram livres para ajudar Assad a retomar territórios ocupados por outros grupos armados, o que deixou a guerra ainda mais sangrenta. Duzentos mil sírios somaram-se aos 4,5 milhões que já haviam deixado o país nos anos anteriores. O fluxo de refugiados para a Europa caiu de 1 milhão em 2015 para 300.000 neste ano, em parte devido às barreiras físicas erguidas nas fronteiras e às restrições para aceitação de asilo. O drama da maioria dos sírios que fogem da tirania de Assad e dos rebeldes acabou represado nos campos lamacentos da Turquia.(Veja, 28 de dezembro de 2016.)Em “Duzentos mil sírios somaram-se aos 4,5 milhões que já haviam deixado o país nos anos anteriores.” (3º§) na expressão destacada o verbo haver possui características equivalentes quanto a sua aplicação e formação também vistas na forma destacada em:",
+   "marks": 1,
+   "options": {
+    "A": "De súbito foram rodeados por todas aquelas pessoas.",
+    "B": "Tratava-se de dois oradores conceituados da instituição.",
+    "C": "Deve haver alguns neste lugar que querem expressar suas opiniões.",
+    "D": "Soube que aqueles homens tinham viajado tanto quanto “Phileas Fogg”."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0009",
+   "type": "mcq",
+   "stem": "O mundo e os refugiados[...] Na discussão dos extremos no século 21 cabe um paralelismo com os do século 20. Lembro, assim, a análise de Hannah Arendt a respeito daqueles que na Europa pós-1ª Guerra Mundial se viram, por obra dos totalitarismos, expulsos da trindade Estado-povo-território, tornaram-se indesejáveis não documentados em quase todos os lugares e tidos como descartáveis – ponto de partida dos campos de refugiados, facilitadores dos campos de concentração.Foi a reação diplomática a essas catástrofes que levou à “ideia a realizar”, que está na origem da ONU, de institucionalizar uma comunidade internacional atenta aos direitos fundamentais e à dignidade do ser humano. Partiu-se conceitualmente do pressuposto kantiano de um direito à hospitalidade universal, lastreado na hipótese de que a violação do direito num ponto da Terra seria efetivamente sentida em todos os demais. É esta, a “ideia a realizar” de uma comunidade internacional tuteladora do direito à hospitalidade universal, que está hoje em questão de maneira dramática.Na perspectiva do efeito destrutivo atual dos extremos, cabe sublinhar a trágica precariedade que assola a vida de pessoas nas regiões do que pode ser qualificado de o arco da crise. No Oriente Médio e em partes da África há Estados falidos (como o Iraque e a Líbia), Estados em estado pré-falimentar, conflitos e guerras civis que se prolongam com intervenções extrarregionais, como a que desagrega a Síria, a precariedade e artificialidade de fronteiras interestatais, que instigam conflitos étnicos e religiosos. Tudo isso, em conjunto, vem catalisando a existência dessa enorme população de excluídos do mundo comum, refugiados que fogem do arco da crise, sem encontrar destino e acolhida.O número de pessoas que buscam asilo, estão internamente deslocadas nos seus países ou são refugiadas por obra de guerras e perseguições, se elevou de 59.6 milhões em 2014 para 65.3 milhões de pessoas no final de 2015. Isso significa que uma em cada 113 pessoas da população mundial está fora do mundo comum e não tem acesso ao direito à hospitalidade universal. Cerca de 51% de refugiados do mundo são crianças, muitas separadas dos pais e viajando sozinhas à procura de destino. A situação da Síria, a do Sudão do Sul, a do Iêmen, do Burundi, da República Centro- -Africana são forças alimentadoras desse fluxo de pessoas de países de baixa renda que enfrentam essa dura realidade.O limbo em que se encontram os excluídos do mundo comum, mais tenebroso que os círculos do inferno de Dante, é, na perspectiva de uma razão abrangente da humanidade, a mais grave tensão difusa que permeia a vida internacional.(Celso Lafer, 17 Julho 2016. Disponível em: http://opiniao.estadao.com.br/noticias/geral,o-mundo-e-os-refugiados,10000063317. Acesso em: janeiro de 2017. Adaptado.)De acordo com a norma-padrão da língua portuguesa, quanto às estruturas linguísticas do período “O número de pessoas que buscam asilo, estão internamente deslocadas nos seus países ou são refugiadas por obra de guerras e perseguições, se elevou de 59.6 milhões em 2014 para 65.3 milhões de pessoas no final de 2015.” (4º§), analise as afirmativas a seguir.I. A forma do reflexivo “se” foi empregada para exprimir a reciprocidade da ação, indicando que tal ação é mútua entre mais de dois indivíduos.II. A expressão “estão deslocadas” é uma referência ao termo “número” cujo sentido coletivo permite que a concordância seja estabelecida no plural.III. Ao verbo “buscar”, no trecho destacado, faculta-se a variação quanto ao número – singular ou plural – de acordo com a concordância estabelecida.Está(ão) correta(s) apenas a(s) afirmativa(s)",
+   "marks": 1,
+   "options": {
+    "A": "I.",
+    "B": "III.",
+    "C": "I e II.",
+    "D": "II e III."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0010",
+   "type": "mcq",
+   "stem": "Analise a figura a seguir.A soma dos números que preenchem os 4 quadrinhos em branco é:",
+   "marks": 1,
+   "options": {
+    "A": "133",
+    "B": "134",
+    "C": "135",
+    "D": "136"
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0011",
+   "type": "mcq",
+   "stem": "No estoque de uma loja de eletrodomésticos encontram-se três tipos de ventiladores: de mesa, de teto e de parede. No total são 60 unidades, de forma que: o número de ventiladores de teto corresponde a três quartos do número de ventiladores de mesa e há 10 ventiladores de parede a mais que os de teto. Se forem acrescentados nesse estoque 9 ventiladores de parede e retirados um terço dos ventiladores de teto e metade dos ventiladores de mesa, quantos ventiladores o estoque passará a conter?",
+   "marks": 1,
+   "options": {
+    "A": "51",
+    "B": "52",
+    "C": "54",
+    "D": "55"
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0012",
+   "type": "mcq",
+   "stem": "Sobre o conceito de deficiência, à luz da Lei Brasileira de Inclusão, é correto afirmar que:",
+   "marks": 1,
+   "options": {
+    "A": "o conceito de deficiência é apenas social, de modo que não se leva em conta as condições individuais das pessoas, mas somente as barreiras que possam obstruir sua plena e efetiva participação na sociedade, em igualdade de condições com as demais pessoas.",
+    "B": "o conceito de deficiência é biopsicossocial, pois abrange o impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, em interação com uma ou mais barreiras, bem como a avaliação da participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.",
+    "C": "o conceito de deficiência poderá ser biopsicossocial ou médico, a depender do tipo de deficiência de cada pessoa.",
+    "D": "o conceito de deficiência não leva em conta o aspecto físico, restringindo-se somente ao conceito mental, intelectual ou sensorial."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0013",
+   "type": "mcq",
+   "stem": "Embora já consagrado no direito brasileiro, o instituto da desconsideração da personalidade jurídica passou a receber o devido tratamento processual a partir das previsões contidas na Lei Federal nº 13.105/15. Considerando as novas regras trazidas pelo Código de Processo Civil de 2015, assinale a alternativa correta.",
+   "marks": 1,
+   "options": {
+    "A": "A desconsideração da personalidade jurídica pode ser determinada ex officio pelo órgão julgador, não dependendo de pedido da parte ou do Ministério Público.",
+    "B": "Não obstante ser exemplo de intervenção de terceiro, admite-se a instauração do incidente de desconsideração da personalidade jurídica no âmbito dos Juizados Especiais Cíveis.",
+    "C": "Para não causar embaraços à instrução processual, o incidente de desconsideração da personalidade jurídica será admitido até a fase de saneamento e organização do processo.",
+    "D": "Admite-se o pedido de desconsideração da personalidade jurídica formulado na petição inicial, hipótese em que será instaurado o incidente perante o mesmo juízo competente para o conhecimento da ação principal."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0014",
+   "type": "mcq",
+   "stem": "Dentre as diversas alterações promovidas pelo Novo Código de Processo Civil de 2015 (Lei Federal nº 13.105), merece destaque a regulamentação do benefício da gratuidade de justiça. Sobre o tema proposto, analise as afirmativas a seguir.I. A gratuidade de justiça poderá ser concedida à pessoa natural ou jurídica, nacional ou estrangeira, que comprove insuficiência de recursos para pagar as custas, as despesas processuais e os honorários advocatícios, na forma da lei.II. A depender do caso concreto, o juiz poderá conceder ao requerente o parcelamento das despesas processuais que o beneficiário tiver que antecipar no curso do procedimento.III. A concessão da gratuidade de justiça afasta a responsabilidade do beneficiário pelas despesas processuais e pelos honorários advocatícios decorrentes de sua sucumbência.Estão corretas as afirmativas",
+   "marks": 1,
+   "options": {
+    "A": "I, II e III.",
+    "B": "I e II, apenas.",
+    "C": "I e III, apenas.",
+    "D": "II e III, apenas."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0015",
+   "type": "mcq",
+   "stem": "Diante das inovações trazidas pela Lei Federal nº 13.105/15, se ficar provado, durante o curso de um processo judicial, o abuso do direito de defesa por parte do réu, poderá ser adotada a seguinte providência pelo juiz da causa:",
+   "marks": 1,
+   "options": {
+    "A": "O réu que proceda com abuso do direito de defesa será equiparado ao revel. Assim, presumir-se-ão verdadeiras as alegações de fato formuladas pelo autor e o juiz julgará antecipadamente o pedido, proferindo sentença com resolução do mérito.",
+    "B": "Independentemente da demonstração de perigo de dano ou de risco ao resultado útil do processo, poderá conceder tutela de evidência amparando o pleito do autor da causa. Idêntica solução deve ser adotada se presente o manifesto caráter protelatório da parte.",
+    "C": "O abuso de direito de defesa configura ato atentatório à dignidade da justiça, não sendo passível de enfrentamento pela via da tutela provisória. Deve o juiz, neste caso, aplicar ao responsável multa de até vinte por cento do valor da causa, de acordo com a gravidade da conduta.",
+    "D": "Será concedida a tutela antecipada em caráter antecedente, ainda que não haja demonstração de perigo de dano ou de risco ao resultado útil do processo. Contra tal decisão interlocutória poderá ser interposto, no prazo de quinze dias, o recurso de agravo de instrumento."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0016",
+   "type": "mcq",
+   "stem": "Sobre aplicação da pena, assinale a alternativa INCORRETA.",
+   "marks": 1,
+   "options": {
+    "A": "O desconhecimento da lei é uma causa atenuante.",
+    "B": "A incidência da circunstância atenuante não pode conduzir à redução da pena abaixo do mínimo legal.",
+    "C": "É circunstância que sempre atenua a pena ter o agente cometido o crime em estado de embriaguez preordenada.",
+    "D": "No concurso de agravantes e atenuantes, a pena deve aproximar-se do limite indicado pelas circunstâncias preponderantes, entendendo-se como tais as que resultam dos motivos determinantes do crime, da personalidade do agente e da reincidência."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0017",
+   "type": "mcq",
+   "stem": "“‘Fulano de Tal’ foi preso em flagrante delito por crime afeto à justiça comum estadual. Comunicado da prisão, o juiz de direito converteu a prisão em flagrante em prisão preventiva. Nesta hipótese, o inquérito policial deverá ser concluído em ____ dias, a partir da _____________.” Assinale a alternativa que completa correta e sequencialmente a afirmativa anterior.",
+   "marks": 1,
+   "options": {
+    "A": "10 / prisão",
+    "B": "15 / prisão",
+    "C": "10 / instauração",
+    "D": "15 / instauração"
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0018",
+   "type": "mcq",
+   "stem": "Sobre os temas queixa, perdão e renúncia, assinale a alternativa INCORRETA.",
+   "marks": 1,
+   "options": {
+    "A": "A renúncia ao exercício do direito de queixa, em relação a um dos autores do crime, a todos se estenderá.",
+    "B": "O perdão concedido a um dos querelados aproveitará a todos, produzindo efeito em relação ao que o recusar.",
+    "C": "A queixa contra qualquer dos autores do crime obrigará ao processo de todos, e o Ministério Público velará pela sua indivisibilidade.",
+    "D": "A queixa, ainda quando a ação penal for privativa do ofendido, poderá ser aditada pelo Ministério Público, a quem caberá intervir em todos os termos subsequentes do processo."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0019",
+   "type": "mcq",
+   "stem": "Amália Silva propôs ação indenizatória, sem a presença de advogado, para defesa de seus interesses perante a 2ª Vara do Juizado Especial Cível da Comarca de Taubaté/SP, atribuindo à causa o valor de R$ 10.000,00. O magistrado julgou totalmente improcedentes os pedidos formulados na petição inicial, motivo pelo qual Amália interpôs o recurso competente para reverter referida decisão. Contudo, o recurso apresentado por Amália teve seu seguimento denegado, sob o fundamento de irregularidade de representação, tendo em vista que o apelo não foi assinado por advogado. Considerando a situação hipotética é correto afirmar:",
+   "marks": 1,
+   "options": {
+    "A": "A decisão que denegou seguimento ao recurso de Amália está incorreta, pois é lícito às partes o comparecimento pessoal ao Juizado Especial, sem a necessidade de representação por advogado.",
+    "B": "Amália não poderia propor ação judicial perante o Juizado Especial e tampouco interpor recursos, tendo em vista que a postulação em órgão do Poder Judiciário constitui atividade privativa de advogado.",
+    "C": "Amália poderia propor ação judicial sem a presença de advogado, por tratar-se de causa de até 20 salários mínimos, mas não poderia interpor recurso, tendo em vista a obrigatoriedade de advogado.",
+    "D": "Amália poderia propor ação judicial perante o juizado especial cível, sem a presença de advogado, independentemente do valor da causa, por tratar-se de exceção à capacidade postulatória privativa de advogado."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0020",
+   "type": "mcq",
+   "stem": "Determinado projeto de lei complementar, de iniciativa do Senado Federal, foi devidamente discutido, votado e aprovado. Após, foi revisto e discutido pela outra Casa, tendo sido aprovado o projeto foi enviado para à sanção. Diante o exposto, caso considere o projeto no todo ou em parte inconstitucional, o Presidente da República poderá:",
+   "marks": 1,
+   "options": {
+    "A": "Se o Presidente da República considerar o projeto, no todo ou em parte, inconstitucional ou contrário ao interesse público, vetá-lo-á total ou parcialmente, no prazo de dez dias úteis, contados da data do recebimento, e comunicará, dentro de setenta e duas horas, ao Presidente do Senado Federal os motivos do veto;",
+    "B": "Se o Presidente da República considerar o projeto, no todo ou em parte, inconstitucional ou contrário ao interesse público, deverá envia-lo para o Supremo Tribunal Federal realizar o controle preventivo;",
+    "C": "Se o Presidente da República considerar o projeto, no todo ou em parte, inconstitucional ou contrário ao interesse público, vetá-lo-á total ou parcialmente, no prazo de quinze dias úteis, contados da data do recebimento, e comunicará, dentro de quarenta e oito horas, ao Presidente do Senado Federal os motivos do veto;",
+    "D": "Se o Presidente da República considerar o projeto, no todo ou em parte, inconstitucional ou contrário ao interesse público, deverá envia-lo para o Supremo Tribunal Federal realizar o controle repressivo."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0021",
+   "type": "mcq",
+   "stem": "Caio é advogado de uma Organização da Sociedade Civil de Interesse Público (OSCIP), regularmente constituída, que cuida da defesa do meio ambiente. Caio deve aconselhar que a OSCIP:",
+   "marks": 1,
+   "options": {
+    "A": "Siga o estabelecido no Contrato de Gestão, e que tenha em sua estrutura interna Conselho de Administração e Diretoria, com participação de integrantes do Poder Público.",
+    "B": "Siga o estabelecido no Contrato de Gestão, e que tenha em sua estrutura interna Conselho de Administração e Conselho Fiscal, sem participação de integrantes do Poder Público.",
+    "C": "Siga o estabelecido no Termo de Parceria e que tenha em sua estrutura interna Conselho de Administração, com a participação de integrantes do Poder Público.",
+    "D": "Siga o estabelecido no Termo de Parceria e tenha em sua estrutura interna Conselho Fiscal, não se exigindo a participação de representantes do Poder Público em qualquer órgão da entidade."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0022",
+   "type": "mcq",
+   "stem": "Fernando prometeu transferir a propriedade de uma coisa certa a Bruno, no entanto, antes da transferência, sem culpa sua, o bem se deteriorou.Segundo o Código Civil, ao caso de Alessandro aplica-se o seguinte regime jurídico:",
+   "marks": 1,
+   "options": {
+    "A": "a obrigação fica resolvida, com a devolução de valores eventualmente pagos.",
+    "B": "a obrigação subsiste, com a entrega da coisa no estado em que se encontra.",
+    "C": "a obrigação poderá ser resolvida, com a devolução de valores eventualmente pagos, ou subsistir, com a entrega da coisa no estado em que se encontra e abatimento no preço proporcional à deterioração, cabendo ao credor a escolha de uma dentre as duas soluções.",
+    "D": "a obrigação subsiste, com a entrega da coisa no estado em que se encontra e abatimento no preço proporcional à deterioração."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0023",
+   "type": "mcq",
+   "stem": "Sávio B. Chalita organiza a atividade de modas e confecções na área digital no exercício de seu mandato como Deputado Federal pela Estado do Amazonas sendo importante ressaltar que a legislação empresarial entende que no exercício da empresa",
+   "marks": 1,
+   "options": {
+    "A": "O sócio incapaz pode exercer a administração da sociedade.",
+    "B": "Poderá o incapaz continuar a empresa antes exercida quando capaz.",
+    "C": "A continuidade do exercício empresarial do incapaz prescinde de autorização judicial.",
+    "D": "Se exercer atividade de empresário, mesmo legalmente impedido, responderá pelas obrigações contraídas."
+   }
+  },
+  {
+   "id": "exame_nacional-questions-sample-bank-0024",
+   "type": "mcq",
+   "stem": "A empresa Roupas e Artigos Esportivos LTDA firmou acordo coletivo, no qual consta uma cláusula prevendo que todos seus empregados podem adquirir as mercadorias produzidas a preço de custo. Rafael, Ana e Marcos, empregados desta empresa, pretendiam comprar camisetas e bermudas conforme estipulado no acordo coletivo, mas o empregador exigiu que eles pagassem também o valor da margem mínima de lucro do comércio local. Diante do ocorrido, assinale a alternativa que contempla a ação que, de acordo com a CLT, deverá ser ajuizada pelos empregados para fazerem prevalecer o seu direito.",
+   "marks": 1,
+   "options": {
+    "A": "Execução de Título Extrajudicial.",
+    "B": "Mandado de Segurança.",
+    "C": "Ação de Cumprimento.",
+    "D": "Ação Monitória."
+   }
+  }
+ ],
+ "category": "Exame Nacional",
+ "body": "Questions Sample"
+}

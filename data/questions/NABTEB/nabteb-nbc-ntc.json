@@ -1,0 +1,414 @@
+{
+ "code": "nabteb-nabteb-nbc-ntc-bank",
+ "title": "NABTEB NBC/NTC - Nabteb Nbc/Ntc",
+ "version": 1,
+ "questionCount": 31,
+ "totalMarks": 31,
+ "questions": [
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0001",
+   "type": "mcq",
+   "stem": "Which of the following best describes the principle of 'acting in the client's best interest'?",
+   "marks": 1,
+   "options": {
+    "A": "Maximizing the advisor's commission while meeting minimum requirements",
+    "B": "Putting the client's interests ahead of the advisor's own interests",
+    "C": "Selling products that are suitable regardless of cost",
+    "D": "Meeting regulatory requirements without exceeding them"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0002",
+   "type": "mcq",
+   "stem": "Confidentiality in the advisor-client relationship means that client information:",
+   "marks": 1,
+   "options": {
+    "A": "Can be shared with colleagues for educational purposes",
+    "B": "Must never be disclosed under any circumstances",
+    "C": "Should only be disclosed with client consent or when legally required",
+    "D": "Can be used for marketing purposes if anonymized"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0003",
+   "type": "mcq",
+   "stem": "A conflict of interest arises when:",
+   "marks": 1,
+   "options": {
+    "A": "An advisor earns commission on products sold",
+    "B": "An advisor's personal interests may interfere with acting in the client's best interest",
+    "C": "A client disagrees with the advisor's recommendation",
+    "D": "An advisor works for multiple employers"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0004",
+   "type": "mcq",
+   "stem": "When an advisor discovers they have made an error that negatively affects a client, they should:",
+   "marks": 1,
+   "options": {
+    "A": "Wait to see if the client notices the error",
+    "B": "Immediately disclose the error to the client and take corrective action",
+    "C": "Correct the error without informing the client",
+    "D": "Consult with compliance before taking any action"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0005",
+   "type": "mcq",
+   "stem": "The 'know your client' (KYC) rule primarily requires advisors to:",
+   "marks": 1,
+   "options": {
+    "A": "Verify the client's identity to prevent money laundering",
+    "B": "Understand the client's financial situation, needs, and risk tolerance",
+    "C": "Maintain regular contact with all clients",
+    "D": "Document all client communications"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0006",
+   "type": "mcq",
+   "stem": "Suitability in retirement planning means:",
+   "marks": 1,
+   "options": {
+    "A": "Recommending only low-risk investments to retirees",
+    "B": "Ensuring recommendations align with the client's circumstances and objectives",
+    "C": "Selecting the products with the highest returns",
+    "D": "Choosing investments that match the advisor's risk tolerance"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0007",
+   "type": "mcq",
+   "stem": "An advisor who holds themselves out as a specialist in retirement planning:",
+   "marks": 1,
+   "options": {
+    "A": "Must have at least 10 years of experience",
+    "B": "Should possess appropriate credentials and maintain competence in the area",
+    "C": "Can use any title they choose",
+    "D": "Is not subject to additional ethical obligations"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0008",
+   "type": "mcq",
+   "stem": "When providing retirement income projections, an advisor should:",
+   "marks": 1,
+   "options": {
+    "A": "Use optimistic assumptions to motivate clients",
+    "B": "Use conservative, realistic assumptions and clearly disclose them",
+    "C": "Guarantee minimum returns based on historical averages",
+    "D": "Avoid making any projections to limit liability"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0009",
+   "type": "mcq",
+   "stem": "An advisor receives a referral fee from an insurance company for recommending their products. The advisor:",
+   "marks": 1,
+   "options": {
+    "A": "Can accept the fee without disclosure if it doesn't affect recommendations",
+    "B": "Must disclose the referral arrangement to clients",
+    "C": "Cannot accept referral fees under any circumstances",
+    "D": "Only needs to disclose if the client specifically asks"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0010",
+   "type": "mcq",
+   "stem": "When a client makes a decision that the advisor believes is not in their best interest, the advisor should:",
+   "marks": 1,
+   "options": {
+    "A": "Refuse to implement the client's decision",
+    "B": "Document the discussion and implement the decision if it's legal and within the client's rights",
+    "C": "Implement the decision without discussion to respect the client's autonomy",
+    "D": "Report the client to regulatory authorities"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0011",
+   "type": "mcq",
+   "stem": "Professional indemnity insurance (errors and omissions insurance) is important because it:",
+   "marks": 1,
+   "options": {
+    "A": "Eliminates the need for careful documentation",
+    "B": "Protects advisors from regulatory investigations",
+    "C": "Provides financial protection if a client suffers losses due to advisor errors",
+    "D": "Allows advisors to take greater risks with client investments"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0012",
+   "type": "mcq",
+   "stem": "The primary purpose of the CIFP Code of Ethics is to:",
+   "marks": 1,
+   "options": {
+    "A": "Increase the profitability of financial planning practices",
+    "B": "Protect the public and maintain the profession's integrity",
+    "C": "Minimize legal liability for advisors",
+    "D": "Create barriers to entry for new advisors"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0013",
+   "type": "mcq",
+   "stem": "An advisor discovers that a colleague is engaging in unethical behavior. The advisor should:",
+   "marks": 1,
+   "options": {
+    "A": "Ignore it if it doesn't directly affect their own clients",
+    "B": "Report the behavior to the appropriate authorities or regulatory bodies",
+    "C": "Confront the colleague privately but take no further action",
+    "D": "Wait until multiple complaints accumulate before reporting"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0014",
+   "type": "mcq",
+   "stem": "Continuing education requirements for retirement professionals primarily serve to:",
+   "marks": 1,
+   "options": {
+    "A": "Generate revenue for professional organizations",
+    "B": "Ensure advisors maintain current knowledge and competence",
+    "C": "Create networking opportunities",
+    "D": "Justify higher fees to clients"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0015",
+   "type": "mcq",
+   "stem": "When communicating with clients, an advisor should:",
+   "marks": 1,
+   "options": {
+    "A": "Use technical jargon to demonstrate expertise",
+    "B": "Communicate in clear language appropriate to the client's level of understanding",
+    "C": "Focus only on positive aspects to maintain client confidence",
+    "D": "Avoid discussing risks to prevent client anxiety"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0016",
+   "type": "mcq",
+   "stem": "The 'prudent investor rule' requires retirement advisors to:",
+   "marks": 1,
+   "options": {
+    "A": "Invest only in guaranteed products for clients over age 65",
+    "B": "Exercise the care, skill, and diligence that a prudent person would use",
+    "C": "Achieve returns that exceed market benchmarks",
+    "D": "Avoid all investments with any element of risk"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0017",
+   "type": "mcq",
+   "stem": "A life annuity provides income payments that:",
+   "marks": 1,
+   "options": {
+    "A": "Continue for a specified number of years regardless of survival",
+    "B": "Continue for the lifetime of the annuitant",
+    "C": "Can be withdrawn as a lump sum at any time",
+    "D": "Are guaranteed by the federal government"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0018",
+   "type": "mcq",
+   "stem": "The primary advantage of a term-certain annuity over a life annuity is:",
+   "marks": 1,
+   "options": {
+    "A": "Higher monthly payments",
+    "B": "Guaranteed payment period regardless of survival",
+    "C": "Better inflation protection",
+    "D": "Lower tax liability"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0019",
+   "type": "mcq",
+   "stem": "A Guaranteed Investment Certificate (GIC) is best described as:",
+   "marks": 1,
+   "options": {
+    "A": "A deposit product offering guaranteed interest for a fixed term",
+    "B": "An insurance product providing lifetime income",
+    "C": "An equity investment with principal protection",
+    "D": "A government bond issued by the Bank of Canada"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0020",
+   "type": "mcq",
+   "stem": "Segregated funds differ from mutual funds primarily in that segregated funds:",
+   "marks": 1,
+   "options": {
+    "A": "Always have higher returns",
+    "B": "Provide maturity and death benefit guarantees",
+    "C": "Have no management fees",
+    "D": "Cannot be held in registered accounts"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0021",
+   "type": "mcq",
+   "stem": "The Canada Deposit Insurance Corporation (CDIC) insures eligible deposits up to:",
+   "marks": 1,
+   "options": {
+    "A": "$50,000 per depositor per member institution",
+    "B": "$100,000 per depositor per member institution",
+    "C": "$250,000 per depositor per member institution",
+    "D": "$500,000 per depositor per member institution"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0022",
+   "type": "mcq",
+   "stem": "A prescribed annuity offers tax advantages because:",
+   "marks": 1,
+   "options": {
+    "A": "Payments are entirely tax-free",
+    "B": "The taxable portion is level throughout the annuity's life",
+    "C": "It can be held in an RRSP",
+    "D": "Capital gains treatment applies to all payments"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0023",
+   "type": "mcq",
+   "stem": "A variable annuity differs from a fixed annuity in that:",
+   "marks": 1,
+   "options": {
+    "A": "Payments are not guaranteed and fluctuate based on investment performance",
+    "B": "It cannot be held in registered plans",
+    "C": "It has no death benefit",
+    "D": "It is not offered by insurance companies"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0024",
+   "type": "mcq",
+   "stem": "Bonds are subject to interest rate risk, meaning that:",
+   "marks": 1,
+   "options": {
+    "A": "Bond issuers may default on interest payments",
+    "B": "Bond prices fall when interest rates rise",
+    "C": "Interest payments may be taxed at higher rates",
+    "D": "Bonds cannot be sold before maturity"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0025",
+   "type": "mcq",
+   "stem": "The primary purpose of holding fixed income investments in a retirement portfolio is to:",
+   "marks": 1,
+   "options": {
+    "A": "Maximize long-term capital growth",
+    "B": "Provide stability and regular income",
+    "C": "Achieve tax-free returns",
+    "D": "Protect against inflation"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0026",
+   "type": "mcq",
+   "stem": "Real Return Bonds (RRBs) are designed to protect investors against:",
+   "marks": 1,
+   "options": {
+    "A": "Stock market volatility",
+    "B": "Credit risk",
+    "C": "Inflation risk",
+    "D": "Currency risk"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0027",
+   "type": "mcq",
+   "stem": "A laddered bond portfolio involves:",
+   "marks": 1,
+   "options": {
+    "A": "Buying bonds with staggered maturity dates",
+    "B": "Investing equal amounts in stocks and bonds",
+    "C": "Reinvesting all interest payments",
+    "D": "Selling bonds before maturity to realize gains"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0028",
+   "type": "mcq",
+   "stem": "The cash surrender value of a permanent life insurance policy:",
+   "marks": 1,
+   "options": {
+    "A": "Equals the death benefit",
+    "B": "Is the amount available if the policy is cancelled",
+    "C": "Is guaranteed to equal premiums paid",
+    "D": "Cannot be accessed during the policyholder's lifetime"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0029",
+   "type": "mcq",
+   "stem": "A reverse mortgage allows homeowners aged 55+ to:",
+   "marks": 1,
+   "options": {
+    "A": "Borrow against home equity without selling the home",
+    "B": "Refinance their existing mortgage at a lower rate",
+    "C": "Receive government grants for home renovations",
+    "D": "Transfer their home to beneficiaries tax-free"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0030",
+   "type": "mcq",
+   "stem": "Systematic Withdrawal Plans (SWPs) from investment accounts:",
+   "marks": 1,
+   "options": {
+    "A": "Guarantee a specific income for life",
+    "B": "Provide regular withdrawals that may deplete capital",
+    "C": "Are only available within RRSPs",
+    "D": "Must withdraw the same dollar amount each period"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "nabteb-nabteb-nbc-ntc-bank-0031",
+   "type": "mcq",
+   "stem": "The primary advantage of a joint and survivor annuity is:",
+   "marks": 1,
+   "options": {
+    "A": "Higher initial payment amounts",
+    "B": "Payments continue to the surviving spouse after the first death",
+    "C": "Better tax treatment of payments",
+    "D": "Full capital is returned to the estate"
+   },
+   "answer": "B"
+  }
+ ],
+ "category": "NABTEB NBC/NTC",
+ "body": "Nabteb Nbc/Ntc"
+}

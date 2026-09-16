@@ -1,0 +1,93 @@
+{
+ "exam": "KCSE",
+ "region": "Kenya",
+ "slug": "KCSE",
+ "question_banks": 5,
+ "github_sources": [
+  {
+   "repo": "error302/zerohero",
+   "url": "https://github.com/error302/zerohero/blob/0dbefa0c6f2be031e35dc151e7b65d71edcd92cf/prisma/seed-questions.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "oukoalfred11-ai/smartious-lms",
+   "url": "https://github.com/oukoalfred11-ai/smartious-lms/blob/0df3820ca7563325fc13702a632e611b6cfc96ae/backend/src/routes/questions.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "PapaDanico/Njia",
+   "url": "https://github.com/PapaDanico/Njia/blob/ba43ab2e0068886fed7783fd3a8d0f9768d53f52/data/questions.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "PurityKyalo/StudyBuddyKE",
+   "url": "https://github.com/PurityKyalo/StudyBuddyKE",
+   "stars": 0,
+   "desc": "StudyBuddy KE is a free, student-friendly web app designed to help Kenyan high school students prepare for the KCSE. It offers quick practice quizzes, past pape"
+  },
+  {
+   "repo": "cyrus-trixie/Custom-Exam-Top-Page",
+   "url": "https://github.com/cyrus-trixie/Custom-Exam-Top-Page/blob/df24667078ae996d9a72e94949bd3976bd51046c/exam.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "TechWithMonda/jibu-ai",
+   "url": "https://github.com/TechWithMonda/jibu-ai",
+   "stars": 0,
+   "desc": "Jibu AI is an intelligent, student-first platform that helps learners in Kenya revise for KCSE and KCPE exams with ease, confidence, and clarity.  Built with cu"
+  },
+  {
+   "repo": "Ronykipkemboi/rony-prep",
+   "url": "https://github.com/Ronykipkemboi/rony-prep/blob/3ccbbd38e9976401f40683d3824bcf4cdb748d5c/DOCUMENTATION.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "rosstpark/oootraooleadfrbyk",
+   "url": "https://github.com/rosstpark/oootraooleadfrbyk/blob/0b200fc97c079deb6142e408809b7208d2846988/kata/758.txt",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "KCSE Past Papers for Android - Download",
+   "url": "https://kcse-past-papers.en.softonic.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Free KNEC KCSE Past Papers",
+   "url": "https://www.advance-africa.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Past Papers KE - Apps on Google Play",
+   "url": "https://play.google.com/store/apps/details?id=com.gochi.kcsepastpapers&hl=en_US",
+   "class": "site+pdf"
+  },
+  {
+   "title": "K.C.S.E PAST PAPERS 1996 - 2024",
+   "url": "https://teacher.co.ke",
+   "class": "site+pdf"
+  },
+  {
+   "title": "KCSE 2024 Past Papers Questions and Answers - Exams",
+   "url": "https://www.easyelimu.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "KNEC Past Papers",
+   "url": "https://www.shulefiti.co.ke",
+   "class": "site+pdf"
+  },
+  {
+   "title": "KCSE REVISION EDUCATION MATERIALS » KCSE REVISION",
+   "url": "https://kcserevision.com",
+   "class": "site"
+  }
+ ]
+}

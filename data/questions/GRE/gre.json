@@ -1,0 +1,89 @@
+{
+ "code": "gre-gre-bank",
+ "title": "GRE - Gre",
+ "version": 1,
+ "questionCount": 6,
+ "totalMarks": 6,
+ "questions": [
+  {
+   "id": "gre-gre-bank-0001",
+   "type": "mcq",
+   "stem": "What is the name of the community college?",
+   "marks": 1,
+   "options": {
+    "A": "Greendale",
+    "B": "City College",
+    "C": "Riverside",
+    "D": "Hawthorne"
+   },
+   "answer": "0"
+  },
+  {
+   "id": "gre-gre-bank-0002",
+   "type": "mcq",
+   "stem": "Who is the former lawyer in the study group?",
+   "marks": 1,
+   "options": {
+    "A": "Abed",
+    "B": "Jeff Winger",
+    "C": "Troy",
+    "D": "Pierce"
+   },
+   "answer": "1"
+  },
+  {
+   "id": "gre-gre-bank-0003",
+   "type": "mcq",
+   "stem": "What is Troy and Abed's famous catchphrase?",
+   "marks": 1,
+   "options": {
+    "A": "Cool cool cool",
+    "B": "Pop Pop!",
+    "C": "Streets ahead",
+    "D": "Troy and Abed in the Morning!"
+   },
+   "answer": "3"
+  },
+  {
+   "id": "gre-gre-bank-0004",
+   "type": "mcq",
+   "stem": "What is Annie Edison's last name?",
+   "marks": 1,
+   "options": {
+    "A": "Edison",
+    "B": "Bennett",
+    "C": "Hawthorne",
+    "D": "Winger"
+   },
+   "answer": "0"
+  },
+  {
+   "id": "gre-gre-bank-0005",
+   "type": "mcq",
+   "stem": "What is the name of the study group?",
+   "marks": 1,
+   "options": {
+    "A": "The Greendale Seven",
+    "B": "The Breakfast Club",
+    "C": "The Save Greendale Committee",
+    "D": "The Study Group"
+   },
+   "answer": "3"
+  },
+  {
+   "id": "gre-gre-bank-0006",
+   "type": "mcq",
+   "stem": "Who is the Dean of Greendale Community College?",
+   "marks": 1,
+   "options": {
+    "A": "Craig Pelton",
+    "B": "Pelton Craig",
+    "C": "Dustin Pelton",
+    "D": "Robert Pelton"
+   },
+   "answer": "0"
+  }
+ ],
+ "category": "GRE",
+ "body": "Gre"
+}

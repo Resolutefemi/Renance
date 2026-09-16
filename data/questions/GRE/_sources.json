@@ -1,0 +1,98 @@
+{
+ "exam": "GRE",
+ "region": "USA / International",
+ "slug": "GRE",
+ "question_banks": 1,
+ "github_sources": [
+  {
+   "repo": "NightlyTwo58/P11_GRE",
+   "url": "https://github.com/NightlyTwo58/P11_GRE",
+   "stars": 1,
+   "desc": "A smart AI-enabled GRE practice website. Generate infinite practice questions with full suite of filtering, statistics, and question bank management."
+  },
+  {
+   "repo": "lbcty56/GRE-Quiz-App-Python-",
+   "url": "https://github.com/lbcty56/GRE-Quiz-App-Python-",
+   "stars": 1,
+   "desc": "An OOP-based GRE Quant practice quiz CLI built in Python. Features 5 adaptive difficulty levels, weighted scoring, and detailed performance reports by topic and"
+  },
+  {
+   "repo": "sumanth-kumar-meesala/greenroom",
+   "url": "https://github.com/sumanth-kumar-meesala/greenroom",
+   "stars": 0,
+   "desc": "Local-first interview prep: track companies, roles and rounds, then generate grounded question banks with the Claude CLI."
+  },
+  {
+   "repo": "hemanth-ks97/GreAwa_TaskGenerator",
+   "url": "https://github.com/hemanth-ks97/GreAwa_TaskGenerator",
+   "stars": 0,
+   "desc": "Scrapes the official GRE Analytical Writing question bank and stores it on a local database. The final application would present the user with one issue task an"
+  },
+  {
+   "repo": "alessiman/greendale-trivia",
+   "url": "https://github.com/alessiman/greendale-trivia",
+   "stars": 0,
+   "desc": "JSON question bank for Community TV show trivia game"
+  },
+  {
+   "repo": "abhinav-rmesh/GRE_Prep",
+   "url": "https://github.com/abhinav-rmesh/GRE_Prep",
+   "stars": 0,
+   "desc": "Built a responsive, cross-browser compatible web application enabling the students to prepare for their GRE exams by providing them exams analogous to the GRE f"
+  },
+  {
+   "repo": "cob1989/GResearch-Interview",
+   "url": "https://github.com/cob1989/GResearch-Interview",
+   "stars": 0,
+   "desc": "Question bank"
+  },
+  {
+   "repo": "costinEEST/almanacs",
+   "url": "https://github.com/costinEEST/almanacs/blob/fff2d151fde840dd9e79ead21d74889ebf59bf7f/cs.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Project1000-GRE-practice-test.pdf",
+   "url": "https://www.worldwisetutoring.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Free GRE Practice Questions",
+   "url": "https://www.kaptest.com",
+   "class": "site"
+  },
+  {
+   "title": "GRE Mini Quiz",
+   "url": "https://www.ets.org",
+   "class": "site"
+  },
+  {
+   "title": "GRE Practice Questions",
+   "url": "https://www.princetonreview.com",
+   "class": "site"
+  },
+  {
+   "title": "Free GRE Practice Questions with detailed Explanations",
+   "url": "https://www.manhattanreview.com",
+   "class": "site"
+  },
+  {
+   "title": "Free Official GRE Sample Questions, with Answers",
+   "url": "https://menlocoaching.com",
+   "class": "site"
+  },
+  {
+   "title": "Free GRE Practice Test 2026 | Verbal & Quant Prep",
+   "url": "https://www.mometrix.com",
+   "class": "site"
+  },
+  {
+   "title": "Free GRE Practice Questions",
+   "url": "https://www.manhattanreview.com",
+   "class": "site"
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "code": "ylioppilastutkinto-opintopolkuquiz-bank",
+ "title": "Ylioppilastutkinto - Opintopolkuquiz",
+ "version": 1,
+ "questionCount": 10,
+ "totalMarks": 10,
+ "questions": [
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0001",
+   "type": "mcq",
+   "stem": "Kuinka selkeä käsitys sinulla on tulevasta alasta tai ammatista?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q1_a', 'text': 'En vielä tiedä lainkaan.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "B": "{'id': 'q1_b', 'text': 'Minulla on muutama vaihtoehto mielessä.', 'score': {'tuva': 1, 'lukio': 1, 'amis': 0}}",
+    "C": "{'id': 'q1_c', 'text': 'Suunta on melko selkeä.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}",
+    "D": "{'id': 'q1_d', 'text': 'Tiedän tarkasti mihin ammattiin tähtään.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0002",
+   "type": "mcq",
+   "stem": "Millainen oppiminen tuntuu luontevimmalta?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q2_a', 'text': 'Tekemällä ja kokeilemalla käytännössä.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "B": "{'id': 'q2_b', 'text': 'Lukeminen, kirjoittaminen ja teoria.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "C": "{'id': 'q2_c', 'text': 'Sekä teoriaa että käytäntöä, tarvitsen vielä kokeilua.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "D": "{'id': 'q2_d', 'text': 'Ryhmä- ja projektityö.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0003",
+   "type": "mcq",
+   "stem": "Miten suhtaudut kokeisiin ja tenteihin?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q3_a', 'text': 'Ne sopivat minulle hyvin.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "B": "{'id': 'q3_b', 'text': 'Mieluummin näytöt ja käytännön tehtävät.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "C": "{'id': 'q3_c', 'text': 'Tarvitsen lisää harjoittelua ja tukea.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "D": "{'id': 'q3_d', 'text': 'Sekoitus on minulle ok.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0004",
+   "type": "mcq",
+   "stem": "Mikä tavoite tuntuu tärkeimmältä seuraavien 2–3 vuoden aikana?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q4_a', 'text': 'Ylioppilastutkinto.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "B": "{'id': 'q4_b', 'text': 'Ammatti ja työelämään siirtyminen.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "C": "{'id': 'q4_c', 'text': 'Aikaa ja tukea suunnan löytämiseen.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "D": "{'id': 'q4_d', 'text': 'Haluan pitää vaihtoehdot auki.', 'score': {'tuva': 1, 'lukio': 1, 'amis': 0}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0005",
+   "type": "mcq",
+   "stem": "Millainen koulupäivä motivoi sinua eniten?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q5_a', 'text': 'Pitkät teoriatunnit ja itsenäinen työ.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "B": "{'id': 'q5_b', 'text': 'Työpajat, harjoittelu ja konkreettiset tehtävät.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "C": "{'id': 'q5_c', 'text': 'Lyhyet ja vaihtelevat jaksot.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "D": "{'id': 'q5_d', 'text': 'Projektit ja ryhmätyö.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0006",
+   "type": "mcq",
+   "stem": "Kuinka tärkeää on päästä nopeasti työelämään?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q6_a', 'text': 'Erittäin tärkeää.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "B": "{'id': 'q6_b', 'text': 'Melko tärkeää.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}",
+    "C": "{'id': 'q6_c', 'text': 'Ei ole kiire.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "D": "{'id': 'q6_d', 'text': 'En osaa sanoa.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0007",
+   "type": "mcq",
+   "stem": "Miten koet opiskelun tuen tarpeen?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q7_a', 'text': 'Tarvitsen ohjausta ja tukea säännöllisesti.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "B": "{'id': 'q7_b', 'text': 'Pärjään hyvin itsenäisesti.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "C": "{'id': 'q7_c', 'text': 'Pärjään parhaiten, kun saan tehdä käytännössä.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "D": "{'id': 'q7_d', 'text': 'Tarvitsen tukea välillä, mutta en aina.', 'score': {'tuva': 1, 'lukio': 1, 'amis': 0}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0008",
+   "type": "mcq",
+   "stem": "Missä ympäristössä viihdyt parhaiten?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q8_a', 'text': 'Luokassa ja luennoilla.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "B": "{'id': 'q8_b', 'text': 'Työpaikalla tai harjoittelussa.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "C": "{'id': 'q8_c', 'text': 'Haluan kokeilla erilaisia ympäristöjä.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "D": "{'id': 'q8_d', 'text': 'Projektitiimeissä.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0009",
+   "type": "mcq",
+   "stem": "Mikä kuulostaa sinulle tällä hetkellä tärkeimmältä?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q9_a', 'text': 'Laaja yleissivistys.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "B": "{'id': 'q9_b', 'text': 'Kädentaidot ja käytännön osaaminen.', 'score': {'tuva': 0, 'lukio': 0, 'amis': 2}}",
+    "C": "{'id': 'q9_c', 'text': 'Opiskelutaidot ja suunnan selkiytyminen.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "D": "{'id': 'q9_d', 'text': 'Verkostot ja työelämäkontaktit.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}"
+   }
+  },
+  {
+   "id": "ylioppilastutkinto-opintopolkuquiz-bank-0010",
+   "type": "mcq",
+   "stem": "Miten koet matematiikan ja kielten opiskelun?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'q10_a', 'text': 'Pidän niistä ja ne sujuvat hyvin.', 'score': {'tuva': 0, 'lukio': 2, 'amis': 0}}",
+    "B": "{'id': 'q10_b', 'text': 'Ne ovat ok, mutta eivät pääasia.', 'score': {'tuva': 0, 'lukio': 1, 'amis': 1}}",
+    "C": "{'id': 'q10_c', 'text': 'Ne ovat haastavia ja kaipaan tukea.', 'score': {'tuva': 2, 'lukio': 0, 'amis': 0}}",
+    "D": "{'id': 'q10_d', 'text': 'En osaa sanoa.', 'score': {'tuva': 1, 'lukio': 0, 'amis': 1}}"
+   }
+  }
+ ],
+ "category": "Ylioppilastutkinto",
+ "body": "Opintopolkuquiz"
+}

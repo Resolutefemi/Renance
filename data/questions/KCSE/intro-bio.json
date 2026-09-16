@@ -1,0 +1,76 @@
+{
+ "code": "kcse-intro-bio-bank",
+ "title": "KCSE - Intro Bio",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "kcse-intro-bio-bank-0001",
+   "type": "mcq",
+   "stem": "Which of the following is an example of heterotrophic nutrition?",
+   "marks": 1,
+   "options": {
+    "A": "A plant making food through photosynthesis",
+    "B": "A fungus absorbing nutrients from dead matter",
+    "C": "A bacterium producing its own food using sunlight",
+    "D": "An alga producing oxygen in water"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "kcse-intro-bio-bank-0002",
+   "type": "mcq",
+   "stem": "The removal of waste products and toxic substances from an organism is called:",
+   "marks": 1,
+   "options": {
+    "A": "Nutrition",
+    "B": "Respiration",
+    "C": "Excretion",
+    "D": "Reproduction"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "kcse-intro-bio-bank-0003",
+   "type": "mcq",
+   "stem": "Which branch of biology would you study to understand the behavior of elephants in the wild?",
+   "marks": 1,
+   "options": {
+    "A": "Botany",
+    "B": "Microbiology",
+    "C": "Zoology",
+    "D": "Anatomy"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "kcse-intro-bio-bank-0004",
+   "type": "mcq",
+   "stem": "Which apparatus is most suitable for measuring exactly 25.0 cm³ of a liquid?",
+   "marks": 1,
+   "options": {
+    "A": "Beaker",
+    "B": "Test tube",
+    "C": "Graduated cylinder",
+    "D": "Watch glass"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "kcse-intro-bio-bank-0005",
+   "type": "mcq",
+   "stem": "Which of the following characteristics is demonstrated when a mimosa plant's leaves fold up when touched?",
+   "marks": 1,
+   "options": {
+    "A": "Nutrition",
+    "B": "Respiration",
+    "C": "Sensitivity",
+    "D": "Excretion"
+   },
+   "answer": "C"
+  }
+ ],
+ "category": "KCSE",
+ "body": "Intro Bio"
+}

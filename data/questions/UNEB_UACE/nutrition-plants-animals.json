@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-nutrition-plants-animals-bank",
+ "title": "UNEB UACE - Nutrition Plants Animals",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0001",
+   "type": "mcq",
+   "stem": "Photosynthesis takes place in:",
+   "marks": 1,
+   "options": {
+    "A": "Mitochondria",
+    "B": "Ribosomes",
+    "C": "Chloroplasts",
+    "D": "Nucleus"
+   },
+   "answer": "Chloroplasts"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0002",
+   "type": "mcq",
+   "stem": "The green pigment that absorbs light for photosynthesis is:",
+   "marks": 1,
+   "options": {
+    "A": "Haemoglobin",
+    "B": "Auxin",
+    "C": "Chlorophyll",
+    "D": "Carotene"
+   },
+   "answer": "Chlorophyll"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0003",
+   "type": "mcq",
+   "stem": "Which gas is a RAW MATERIAL for photosynthesis?",
+   "marks": 1,
+   "options": {
+    "A": "Oxygen",
+    "B": "Nitrogen",
+    "C": "Carbon dioxide",
+    "D": "Hydrogen"
+   },
+   "answer": "Carbon dioxide"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0004",
+   "type": "mcq",
+   "stem": "Water enters the leaf for photosynthesis via:",
+   "marks": 1,
+   "options": {
+    "A": "Stomata",
+    "B": "Phloem",
+    "C": "Xylem vessels",
+    "D": "Root hairs directly to leaves"
+   },
+   "answer": "Xylem vessels"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0005",
+   "type": "mcq",
+   "stem": "A plant with nitrate deficiency shows:",
+   "marks": 1,
+   "options": {
+    "A": "Purple leaves",
+    "B": "Yellow leaves and stunted growth",
+    "C": "No flowers",
+    "D": "White spots"
+   },
+   "answer": "Yellow leaves and stunted growth"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0006",
+   "type": "mcq",
+   "stem": "The product of photosynthesis used as energy source is:",
+   "marks": 1,
+   "options": {
+    "A": "Oxygen",
+    "B": "Glucose",
+    "C": "Starch",
+    "D": "CO₂"
+   },
+   "answer": "Glucose"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0007",
+   "type": "mcq",
+   "stem": "Variegated (green and white) leaves only show starch in:",
+   "marks": 1,
+   "options": {
+    "A": "White areas",
+    "B": "Green areas",
+    "C": "Both areas equally",
+    "D": "Neither area"
+   },
+   "answer": "Green areas"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0008",
+   "type": "mcq",
+   "stem": "Magnesium deficiency in plants causes:",
+   "marks": 1,
+   "options": {
+    "A": "Root rot",
+    "B": "Yellow leaves (needed for chlorophyll)",
+    "C": "Wilting stems",
+    "D": "Brown spots"
+   },
+   "answer": "Yellow leaves (needed for chlorophyll)"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0009",
+   "type": "mcq",
+   "stem": "Autotrophs are organisms that:",
+   "marks": 1,
+   "options": {
+    "A": "Feed on other organisms",
+    "B": "Make their own food using light or chemical energy",
+    "C": "Only eat plants",
+    "D": "Decompose dead matter"
+   },
+   "answer": "Make their own food using light or chemical energy"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0010",
+   "type": "mcq",
+   "stem": "In the starch test, ethanol is used to:",
+   "marks": 1,
+   "options": {
+    "A": "Kill the leaf",
+    "B": "Remove chlorophyll so iodine colour is visible",
+    "C": "Add starch",
+    "D": "Test for glucose"
+   },
+   "answer": "Remove chlorophyll so iodine colour is visible"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0011",
+   "type": "mcq",
+   "stem": "Oxygen produced in photosynthesis comes from the splitting of:",
+   "marks": 1,
+   "options": {
+    "A": "CO₂",
+    "B": "Glucose",
+    "C": "Water (H₂O)",
+    "D": "Chlorophyll"
+   },
+   "answer": "Water (H₂O)"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0012",
+   "type": "mcq",
+   "stem": "Rate of photosynthesis increases with:",
+   "marks": 1,
+   "options": {
+    "A": "Decreasing light",
+    "B": "Increasing CO₂ concentration (up to a point)",
+    "C": "Increasing temperature beyond 40°C",
+    "D": "Less water"
+   },
+   "answer": "Increasing CO₂ concentration (up to a point)"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0013",
+   "type": "mcq",
+   "stem": "Plants store excess glucose as:",
+   "marks": 1,
+   "options": {
+    "A": "Glycogen",
+    "B": "Fat",
+    "C": "Starch",
+    "D": "Cellulose only"
+   },
+   "answer": "Starch"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0014",
+   "type": "mcq",
+   "stem": "A leaf destarched by keeping in dark for 48 hours is used to ensure:",
+   "marks": 1,
+   "options": {
+    "A": "No oxygen in leaf",
+    "B": "Any starch found must have been made in the experiment",
+    "C": "Leaf stays alive",
+    "D": "Chlorophyll stays green"
+   },
+   "answer": "Any starch found must have been made in the experiment"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0015",
+   "type": "mcq",
+   "stem": "Phosphates from soil are needed by plants for:",
+   "marks": 1,
+   "options": {
+    "A": "Photosynthesis only",
+    "B": "Cell wall structure only",
+    "C": "Making ATP and DNA",
+    "D": "Making chlorophyll"
+   },
+   "answer": "Making ATP and DNA"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0016",
+   "type": "mcq",
+   "stem": "The compensation point is when:",
+   "marks": 1,
+   "options": {
+    "A": "Plant only photosynthesises",
+    "B": "Rate of photosynthesis equals rate of respiration",
+    "C": "Plant only respires",
+    "D": "CO₂ equals O₂ in the air"
+   },
+   "answer": "Rate of photosynthesis equals rate of respiration"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0017",
+   "type": "mcq",
+   "stem": "Carbon dioxide enters leaves mainly through:",
+   "marks": 1,
+   "options": {
+    "A": "Root hairs",
+    "B": "Lenticels in bark",
+    "C": "Stomata on leaf surface",
+    "D": "Xylem vessels"
+   },
+   "answer": "Stomata on leaf surface"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0018",
+   "type": "mcq",
+   "stem": "Which of these is NOT needed for photosynthesis?",
+   "marks": 1,
+   "options": {
+    "A": "Light",
+    "B": "CO₂",
+    "C": "O₂",
+    "D": "Water"
+   },
+   "answer": "O₂"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0019",
+   "type": "mcq",
+   "stem": "A plant in bright light absorbs more CO₂ than it releases. This means:",
+   "marks": 1,
+   "options": {
+    "A": "It only photosynthesises",
+    "B": "Photosynthesis rate > respiration rate",
+    "C": "Respiration rate > photosynthesis rate",
+    "D": "No respiration occurs"
+   },
+   "answer": "Photosynthesis rate > respiration rate"
+  },
+  {
+   "id": "uneb_uace-nutrition-plants-animals-bank-0020",
+   "type": "mcq",
+   "stem": "Heterotrophs differ from autotrophs because heterotrophs:",
+   "marks": 1,
+   "options": {
+    "A": "Can make food from sunlight",
+    "B": "Must obtain organic food by eating other organisms",
+    "C": "Never respire",
+    "D": "Do not contain cells"
+   },
+   "answer": "Must obtain organic food by eating other organisms"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Nutrition Plants Animals"
+}

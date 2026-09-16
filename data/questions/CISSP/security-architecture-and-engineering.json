@@ -1,0 +1,1207 @@
+{
+ "code": "cissp-security-architecture-and-engineering-bank",
+ "title": "CISSP -  Security Architecture And Engineering",
+ "version": 1,
+ "questionCount": 92,
+ "totalMarks": 92,
+ "questions": [
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0001",
+   "type": "mcq",
+   "stem": "Matthew is the security administrator for a consulting firm and must enforce access controls that restrict users' access based upon their previous activity. For example, once a consultant accesses data belonging to Acme Cola, a consulting client, they may no longer access data belonging to any of Acme's competitors. What security model BEST fits Matthew's needs?",
+   "marks": 1,
+   "options": {
+    "A": "Clark-Wilson",
+    "B": "Biba",
+    "C": "Bell-LaPadula",
+    "D": "Brewer-Nash"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0002",
+   "type": "mcq",
+   "stem": "A temperature-vs-time graph shows the four stages of a fire: Stage 1: Incipient (air ionization), Stage 2: Smoke, Stage 3: Flame, Stage 4: Heat. What is the EARLIEST stage of a fire where it is possible to use detection technology to identify it?",
+   "marks": 1,
+   "options": {
+    "A": "Incipient",
+    "B": "Smoke",
+    "C": "Flame",
+    "D": "Heat"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0003",
+   "type": "mcq",
+   "stem": "Ralph is designing a physical security infrastructure for a new computing facility that will remain largely unstaffed. He plans to implement motion detectors in the facility but would also like to include a secondary verification control for physical presence. Which ONE of the following would BEST meet his needs?",
+   "marks": 1,
+   "options": {
+    "A": "CCTV",
+    "B": "IPS",
+    "C": "Turnstiles",
+    "D": "Faraday cages"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0004",
+   "type": "mcq",
+   "stem": "Harry would like to retrieve a lost encryption key from a database that uses m of n control, with m = 4 and n = 8. What is the minimum number of escrow agents required to retrieve the key?",
+   "marks": 1,
+   "options": {
+    "A": "2",
+    "B": "4",
+    "C": "8",
+    "D": "12"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0005",
+   "type": "mcq",
+   "stem": "Fran's company is considering purchasing a web-based email service from a vendor and eliminating its own email server environment as a cost-saving measure. What type of cloud computing environment is Fran's company considering?",
+   "marks": 1,
+   "options": {
+    "A": "SaaS",
+    "B": "IaaS",
+    "C": "CaaS",
+    "D": "PaaS"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0006",
+   "type": "mcq",
+   "stem": "Bob is a security administrator with the U.S. federal government and wants to choose a digital signature approach that is an approved part of the federal Digital Signature Standard under FIPS 186-5. Which ONE of the following encryption algorithms is NOT an acceptable choice for use in digital signatures?",
+   "marks": 1,
+   "options": {
+    "A": "EdDSA",
+    "B": "HAVAL",
+    "C": "RSA",
+    "D": "ECDSA"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0007",
+   "type": "mcq",
+   "stem": "Harry would like to access a document owned by Sally and stored on a file server. Applying the subject/object model to this scenario, who or what is the subject of the resource request?",
+   "marks": 1,
+   "options": {
+    "A": "Harry",
+    "B": "Sally",
+    "C": "Server",
+    "D": "Document"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0008",
+   "type": "mcq",
+   "stem": "Michael is responsible for forensic investigations and is investigating a medium-severity security incident that involved the defacement of a corporate website. The web server ran on a virtualization platform, and the marketing team would like to get the website up and running as quickly as possible. What would be the MOST reasonable next step for Michael to take?",
+   "marks": 1,
+   "options": {
+    "A": "Keep the website offline until the investigation is complete",
+    "B": "Take the virtualization platform offline as evidence",
+    "C": "Take a snapshot of the compromised system and use that for the investigation",
+    "D": "Ignore the incident and focus on quickly restoring the website"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0009",
+   "type": "mcq",
+   "stem": "Helen is a software engineer and is developing code that she would like to restrict to running within an isolated sandbox for security purposes. What software development technique is Helen using?",
+   "marks": 1,
+   "options": {
+    "A": "Bounds",
+    "B": "Input validation",
+    "C": "Confinement",
+    "D": "TCB"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0010",
+   "type": "mcq",
+   "stem": "What concept describes the degree of confidence that an organization has that its controls satisfy security requirements?",
+   "marks": 1,
+   "options": {
+    "A": "Trust",
+    "B": "Credentialing",
+    "C": "Verification",
+    "D": "Assurance"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0011",
+   "type": "mcq",
+   "stem": "What type of security vulnerability are developers MOST likely to introduce into code when they seek to facilitate their own access, for testing purposes, to software they developed?",
+   "marks": 1,
+   "options": {
+    "A": "Maintenance hook",
+    "B": "Cross-site scripting",
+    "C": "SQL injection",
+    "D": "Buffer overflow"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0012",
+   "type": "mcq",
+   "stem": "Sally has a Secret security clearance and attempts to read a data file classified at Confidential. The Biba integrity model blocks her read request (diagram: Sally [Secret] → blocked Read Request → Data File [Confidential]). What principle of the Biba model is being enforced?",
+   "marks": 1,
+   "options": {
+    "A": "Simple Security Property",
+    "B": "Simple Integrity Property",
+    "C": "*-Security Property",
+    "D": "*-Integrity Property"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0013",
+   "type": "mcq",
+   "stem": "Tom is responsible for maintaining the security of systems used to control industrial processes located within a power plant. What term is used to describe these systems?",
+   "marks": 1,
+   "options": {
+    "A": "POWER",
+    "B": "SCADA",
+    "C": "HAVAL",
+    "D": "COBOL"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0014",
+   "type": "mcq",
+   "stem": "Sonia recently removed an encrypted hard drive from a laptop and moved it to a new device because of a hardware failure. She is having difficulty accessing encrypted content on the drive despite knowing the user's password. What hardware security feature is likely causing this problem?",
+   "marks": 1,
+   "options": {
+    "A": "TCB",
+    "B": "TPM",
+    "C": "NIACAP",
+    "D": "RSA"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0015",
+   "type": "mcq",
+   "stem": "Chris wants to verify that a software package he downloaded matches the original version. What hashing tool should he use if he believes that technically sophisticated attackers may have replaced the software package with a version containing a backdoor? (Note: For questions 16–19, Alice and Bob use an asymmetric cryptosystem with certificates from a mutually trusted CA.)",
+   "marks": 1,
+   "options": {
+    "A": "MD5",
+    "B": "3DES",
+    "C": "SHA1",
+    "D": "SHA 256"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0016",
+   "type": "mcq",
+   "stem": "[Scenario: Alice and Bob use an asymmetric cryptosystem; they exchanged keys via digital certificates from a mutually trusted CA.] If Alice wants to send Bob a message that is encrypted for confidentiality, what key does she use to encrypt the message?",
+   "marks": 1,
+   "options": {
+    "A": "Alice's public key",
+    "B": "Alice's private key",
+    "C": "Bob's public key",
+    "D": "Bob's private key"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0017",
+   "type": "mcq",
+   "stem": "What name is given to the random value added to a password in an attempt to defeat rainbow table attacks?",
+   "marks": 1,
+   "options": {
+    "A": "Hash",
+    "B": "Salt",
+    "C": "Extender",
+    "D": "Rebar"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0018",
+   "type": "mcq",
+   "stem": "Which ONE of the following is NOT an attribute of a typical hashing algorithm?",
+   "marks": 1,
+   "options": {
+    "A": "They require a cryptographic key",
+    "B": "They are irreversible",
+    "C": "It is very difficult to find two messages with the same hash value",
+    "D": "They take variable-length input"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0019",
+   "type": "mcq",
+   "stem": "What type of fire suppression system fills with water after a valve opens when the initial stages of a fire are detected and then requires a sprinkler head heat activation before dispensing water?",
+   "marks": 1,
+   "options": {
+    "A": "Wet pipe",
+    "B": "Dry pipe",
+    "C": "Deluge",
+    "D": "Preaction"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0020",
+   "type": "mcq",
+   "stem": "Susan would like to configure IPsec in a manner that provides confidentiality for the content of packets. What component of IPsec provides this capability?",
+   "marks": 1,
+   "options": {
+    "A": "AH",
+    "B": "ESP",
+    "C": "IKE",
+    "D": "ISAKMP"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0021",
+   "type": "mcq",
+   "stem": "Which ONE of the following cryptographic goals protects against the risks posed when a device is lost or stolen?",
+   "marks": 1,
+   "options": {
+    "A": "Nonrepudiation",
+    "B": "Authentication",
+    "C": "Integrity",
+    "D": "Confidentiality"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0022",
+   "type": "mcq",
+   "stem": "Joanna wants to review the status of the industrial control systems her organization uses for building control. What type of systems should she inquire about access to?",
+   "marks": 1,
+   "options": {
+    "A": "SCADA",
+    "B": "DSS",
+    "C": "BAS",
+    "D": "ICS-CSS"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0023",
+   "type": "mcq",
+   "stem": "Harry has a Secret security clearance and attempts to write to a data file classified at Confidential. The Bell-LaPadula model blocks his write request (diagram: Harry [Secret] → blocked Write Request → Data File [Confidential]). What principle of the Bell-LaPadula model blocked this request?",
+   "marks": 1,
+   "options": {
+    "A": "Simple Security Property",
+    "B": "Simple Integrity Property",
+    "C": "*-Security Property",
+    "D": "Discretionary Security Property"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0024",
+   "type": "mcq",
+   "stem": "Florian and Tobias would like to begin communicating using a symmetric cryptosystem, but they have no prearranged secret and are not able to meet in person to exchange keys. What algorithm can they use to securely exchange the secret key?",
+   "marks": 1,
+   "options": {
+    "A": "IDEA",
+    "B": "Diffie-Hellman",
+    "C": "RSA",
+    "D": "MD5"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0025",
+   "type": "mcq",
+   "stem": "Carl's organization recently underwent a user access review. At the conclusion of the review, the auditors noted several cases of privilege creep. What security principle was violated?",
+   "marks": 1,
+   "options": {
+    "A": "Fail securely",
+    "B": "Keep it simple and secure",
+    "C": "Trust but verify",
+    "D": "Least privilege"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0026",
+   "type": "mcq",
+   "stem": "Matt's organization recently adopted a zero trust network architecture. Under this approach, which ONE of the following criteria would be LEAST appropriate to use when granting a subject access to resources?",
+   "marks": 1,
+   "options": {
+    "A": "Password",
+    "B": "Two-factor authentication",
+    "C": "IP address",
+    "D": "Biometric scan"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0027",
+   "type": "mcq",
+   "stem": "Colin is the chief privacy officer for a nonprofit organization assisting with a transition to a Privacy by Design approach. Under this approach, which is NOT one of the Privacy by Design principles?",
+   "marks": 1,
+   "options": {
+    "A": "Proactive, not reactive",
+    "B": "Privacy as the default setting",
+    "C": "End-to-end security",
+    "D": "Defense in depth"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0028",
+   "type": "mcq",
+   "stem": "What cryptographic principle stands behind the idea that cryptographic algorithms should be open to public inspection?",
+   "marks": 1,
+   "options": {
+    "A": "Security through obscurity",
+    "B": "Kerckhoffs' principle",
+    "C": "Defense in depth",
+    "D": "Heisenburg principle"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0029",
+   "type": "mcq",
+   "stem": "Ryan is developing a physical access plan for his organization's data center. A diagram of the building shows an arrow pointing to a small structure at the entrance gate between two sets of doors. What is the name of this control?",
+   "marks": 1,
+   "options": {
+    "A": "Access control vestibule",
+    "B": "Turnstile",
+    "C": "Intrusion prevention system",
+    "D": "Portal"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0030",
+   "type": "mcq",
+   "stem": "Which ONE of the following does NOT describe a standard physical security requirement for wiring closets?",
+   "marks": 1,
+   "options": {
+    "A": "Place only in areas monitored by security guards",
+    "B": "Do not store flammable items in the closet",
+    "C": "Use sensors on doors to log entries",
+    "D": "Perform regular inspections of the closet"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0031",
+   "type": "mcq",
+   "stem": "Sally has a Secret security clearance and attempts to write to a data file classified Top Secret. The Biba integrity model blocks her write request (diagram: Sally [Secret] → blocked Write Request → Data File [Top Secret]). What principle is preventing her from writing to the file?",
+   "marks": 1,
+   "options": {
+    "A": "Simple Security Property",
+    "B": "Simple Integrity Property",
+    "C": "*-Security Property",
+    "D": "*-Integrity Property"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0032",
+   "type": "mcq",
+   "stem": "Lana recently implemented a new process in her organization where managers who are responsible for granting users access to a system are NOT permitted to participate in access reviews. What principle is she enforcing?",
+   "marks": 1,
+   "options": {
+    "A": "Two-person control",
+    "B": "Least privilege",
+    "C": "Privilege creep",
+    "D": "Segregation of duties"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0033",
+   "type": "mcq",
+   "stem": "Which ONE of the following statements about system development is NOT correct?",
+   "marks": 1,
+   "options": {
+    "A": "Systems should be designed to operate in a secure manner if the user performs no other configuration",
+    "B": "Systems should be designed to fall back to a secure state if they experience an error",
+    "C": "Systems should be designed to incorporate security as a design feature",
+    "D": "Systems should NOT be designed in a manner that keeps their functionality as simple as possible"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0034",
+   "type": "mcq",
+   "stem": "Alan is reviewing a system that has been assigned the EAL1 evaluation assurance level under the Common Criteria. What is the degree of assurance that he may have about the system?",
+   "marks": 1,
+   "options": {
+    "A": "It has been functionally tested",
+    "B": "It has been structurally tested",
+    "C": "It has been formally verified, designed, and tested",
+    "D": "It has been methodically designed, tested, and reviewed"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0035",
+   "type": "mcq",
+   "stem": "Jake works for a research organization seeking to deploy a grid computing system that will perform cycle scavenging on user workstations. What is the MOST significant risk associated with this operation?",
+   "marks": 1,
+   "options": {
+    "A": "Data confidentiality",
+    "B": "Isolation breach",
+    "C": "Data integrity",
+    "D": "Data availability"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0036",
+   "type": "mcq",
+   "stem": "Eimear's software development team uses an approach that creates many discrete software objects and then binds them together using APIs. What term BEST describes this architecture?",
+   "marks": 1,
+   "options": {
+    "A": "Microservices",
+    "B": "Function-as-a-service",
+    "C": "Containerization",
+    "D": "Virtualization"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0037",
+   "type": "mcq",
+   "stem": "Adam recently configured permissions on an NTFS filesystem to describe the access that different users may have to a file by listing each user individually. What did Adam create?",
+   "marks": 1,
+   "options": {
+    "A": "An access control list",
+    "B": "An access control entry",
+    "C": "Role-based access control",
+    "D": "Mandatory access control"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0038",
+   "type": "mcq",
+   "stem": "Betty is concerned about the use of buffer overflow attacks against a custom application developed for use in her organization. What security control would provide the STRONGEST defense against these attacks?",
+   "marks": 1,
+   "options": {
+    "A": "Firewall",
+    "B": "Intrusion detection system",
+    "C": "Parameter checking",
+    "D": "Vulnerability scanning"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0039",
+   "type": "mcq",
+   "stem": "Which ONE of the following combinations of controls BEST embodies the defense-in-depth principle?",
+   "marks": 1,
+   "options": {
+    "A": "Encryption of email and network intrusion detection",
+    "B": "Cloud access security brokers (CASBs) and security awareness training",
+    "C": "Data loss prevention and multifactor authentication",
+    "D": "Network firewall and host firewall"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0040",
+   "type": "mcq",
+   "stem": "James is working with a Department of Defense system that is authorized to simultaneously handle information classified at the Secret and Top Secret levels. What type of system is he using?",
+   "marks": 1,
+   "options": {
+    "A": "Single state",
+    "B": "Unclassified",
+    "C": "Compartmented",
+    "D": "Multistate"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0041",
+   "type": "mcq",
+   "stem": "Kyle is being granted access to a military computer system that uses System High mode. What is NOT true about Kyle's security clearance requirements?",
+   "marks": 1,
+   "options": {
+    "A": "Kyle must have a clearance for the highest level of classification processed by the system, regardless of his access",
+    "B": "Kyle must have access approval for all information processed by the system",
+    "C": "Kyle must have a valid need to know for all information processed by the system",
+    "D": "Kyle must have a valid security clearance"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0042",
+   "type": "mcq",
+   "stem": "Gary intercepts a communication and suspects secret messages are being exchanged. The communication appears to be a photograph of a seashore with people and a ship (an ordinary-looking image). What type of technique may the individuals use to hide messages inside this image?",
+   "marks": 1,
+   "options": {
+    "A": "Visual cryptography",
+    "B": "Steganography",
+    "C": "Cryptographic hashing",
+    "D": "Transport layer security"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0043",
+   "type": "mcq",
+   "stem": "Philip is developing a new security tool to be used by individuals in many different subsidiaries of his organization. He chooses to use Docker to deploy the tool to simplify configuration. What term BEST describes this approach?",
+   "marks": 1,
+   "options": {
+    "A": "Virtualization",
+    "B": "Abstraction",
+    "C": "Simplification",
+    "D": "Containerization"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0044",
+   "type": "mcq",
+   "stem": "A diagram shows four concentric circles labeled Ring 0 (center), Ring 1, Ring 2, and Ring 3 (outermost) representing the ring protection model. What ring contains the operating system's kernel?",
+   "marks": 1,
+   "options": {
+    "A": "Ring 0",
+    "B": "Ring 1",
+    "C": "Ring 2",
+    "D": "Ring 3"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0045",
+   "type": "mcq",
+   "stem": "In an infrastructure-as-a-service environment where a vendor supplies a customer with access to storage services, who is normally responsible for removing sensitive data from drives that are taken out of service?",
+   "marks": 1,
+   "options": {
+    "A": "Customer's security team",
+    "B": "Customer's storage team",
+    "C": "Customer's vendor management team",
+    "D": "Vendor"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0046",
+   "type": "mcq",
+   "stem": "During a system audit, Casey notices that the private key for her organization's web server has been stored in a public Amazon S3 storage bucket for more than a year. Which ONE of the following actions should she take FIRST?",
+   "marks": 1,
+   "options": {
+    "A": "Remove the key from the bucket",
+    "B": "Notify all customers that their data may have been exposed",
+    "C": "Request a new certificate using a new key",
+    "D": "Nothing, because the private key should be accessible for validation"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0047",
+   "type": "mcq",
+   "stem": "Which ONE of the following systems assurance processes provides an independent third-party evaluation of a system's controls that may be trusted by many different organizations?",
+   "marks": 1,
+   "options": {
+    "A": "Certification",
+    "B": "Definition",
+    "C": "Verification",
+    "D": "Accreditation"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0048",
+   "type": "mcq",
+   "stem": "Darcy's organization is deploying serverless computing technology. In a serverless model, who is normally responsible for configuring operating system security controls?",
+   "marks": 1,
+   "options": {
+    "A": "Software developer",
+    "B": "Cybersecurity professional",
+    "C": "Cloud architect",
+    "D": "Vendor"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0049",
+   "type": "mcq",
+   "stem": "Harold is assessing the susceptibility of his environment to hardware failures and would like to identify the expected lifetime of a piece of hardware. What measure should he use for this?",
+   "marks": 1,
+   "options": {
+    "A": "MTTR",
+    "B": "MTTF",
+    "C": "RTO",
+    "D": "MTO"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0050",
+   "type": "mcq",
+   "stem": "Chris is designing a cryptographic system for a company with 1,000 employees using an asymmetric encryption system, set up so that any pair of arbitrary users may communicate privately. How many total keys will they need?",
+   "marks": 1,
+   "options": {
+    "A": "500",
+    "B": "1,000",
+    "C": "2,000",
+    "D": "499,500"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0051",
+   "type": "mcq",
+   "stem": "Gary is concerned about applying consistent security settings to the many mobile devices used throughout his organization. What technology would BEST assist with this challenge?",
+   "marks": 1,
+   "options": {
+    "A": "MDM",
+    "B": "IPS",
+    "C": "IDS",
+    "D": "SIEM"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0052",
+   "type": "mcq",
+   "stem": "Alice sent a message to Bob. Bob would like to demonstrate to Charlie that the message he received definitely came from Alice. What goal of cryptography is Bob attempting to achieve?",
+   "marks": 1,
+   "options": {
+    "A": "Authentication",
+    "B": "Confidentiality",
+    "C": "Nonrepudiation",
+    "D": "Integrity"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0053",
+   "type": "mcq",
+   "stem": "Rhonda is considering new identification cards for physical access control. She comes across a military card showing a photo, name, rank, and expiration date with a visible embedded chip beneath a flag logo. What type of card is this?",
+   "marks": 1,
+   "options": {
+    "A": "Smart card",
+    "B": "Proximity card",
+    "C": "Magnetic stripe card",
+    "D": "Phase three card"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0054",
+   "type": "mcq",
+   "stem": "Gordon is concerned that hackers may be able to use the Van Eck radiation phenomenon to remotely read the contents of computer monitors in a restricted work area. What technology would protect against this type of attack?",
+   "marks": 1,
+   "options": {
+    "A": "TCSEC",
+    "B": "SCSI",
+    "C": "GHOST",
+    "D": "TEMPEST"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0055",
+   "type": "mcq",
+   "stem": "Jorge believes that an attacker has obtained the hash of the Kerberos service account from one of his organization's Active Directory servers. What type of attack would this enable?",
+   "marks": 1,
+   "options": {
+    "A": "Golden ticket",
+    "B": "Kerberoasting",
+    "C": "Pass the ticket",
+    "D": "Brute force"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0056",
+   "type": "mcq",
+   "stem": "Sherry conducted an inventory of the cryptographic technologies in use within her organization and found the following in use: MD5, AES, PGP, and WPA3. Which ONE of these technologies should she replace because it is no longer considered secure?",
+   "marks": 1,
+   "options": {
+    "A": "MD5",
+    "B": "AES",
+    "C": "PGP",
+    "D": "WPA3"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0057",
+   "type": "mcq",
+   "stem": "Robert is investigating a security breach and discovers the Mimikatz tool installed on a system in his environment. What type of attack has likely taken place?",
+   "marks": 1,
+   "options": {
+    "A": "Password cracking",
+    "B": "Pass the hash",
+    "C": "MAC spoofing",
+    "D": "ARP poisoning"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0058",
+   "type": "mcq",
+   "stem": "Tom is a cryptanalyst working on breaking a cryptographic algorithm's secret key. He has a copy of an intercepted encrypted message and also a copy of its decrypted plaintext. He wants to use both to retrieve the secret key. What type of attack is Tom engaging in?",
+   "marks": 1,
+   "options": {
+    "A": "Chosen ciphertext",
+    "B": "Chosen plaintext",
+    "C": "Known plaintext",
+    "D": "Brute force"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0059",
+   "type": "mcq",
+   "stem": "A hacker violated the integrity of data in James's company by waiting until James verified the integrity of a file using a hash value and then modifying the file between the time James verified the integrity and read the contents of the file. What type of attack took place?",
+   "marks": 1,
+   "options": {
+    "A": "Social engineering",
+    "B": "TOCTOU",
+    "C": "Data diddling",
+    "D": "Parameter checking"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0060",
+   "type": "mcq",
+   "stem": "Carl is deploying video sensors in remote locations and, because of connectivity limitations, would like to perform as much image processing and computation as possible on the device itself before sending results to the cloud. What computing model would BEST meet his needs?",
+   "marks": 1,
+   "options": {
+    "A": "Serverless computing",
+    "B": "Edge computing",
+    "C": "IaaS computing",
+    "D": "SaaS computing"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0061",
+   "type": "mcq",
+   "stem": "What action can you take to prevent accidental data disclosure due to wear leveling on an SSD device before reusing the drive?",
+   "marks": 1,
+   "options": {
+    "A": "Reformatting",
+    "B": "Disk encryption",
+    "C": "Degaussing",
+    "D": "Physical destruction"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0062",
+   "type": "mcq",
+   "stem": "A shipping clerk at Johnson Widgets pulled all individual sales records for a quarter from the database and totaled them to determine total sales volume — information classified as a competitive secret. What type of attack occurred?",
+   "marks": 1,
+   "options": {
+    "A": "Social engineering",
+    "B": "Inference",
+    "C": "Aggregation",
+    "D": "Data diddling"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0063",
+   "type": "mcq",
+   "stem": "What physical security control broadcasts false emanations constantly to mask the presence of true electromagnetic emanations from computing equipment?",
+   "marks": 1,
+   "options": {
+    "A": "Faraday cage",
+    "B": "Copper-infused windows",
+    "C": "Shielded cabling",
+    "D": "White noise"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0064",
+   "type": "mcq",
+   "stem": "In a software-as-a-service cloud computing environment, who is normally responsible for ensuring that appropriate firewall controls are in place to protect the application?",
+   "marks": 1,
+   "options": {
+    "A": "Customer's security team",
+    "B": "Vendor",
+    "C": "Customer's networking team",
+    "D": "Customer's infrastructure management team"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0065",
+   "type": "mcq",
+   "stem": "Alice has read permissions on an object, and she would like Bob to have those same rights. Which ONE of the rules in the Take-Grant protection model would allow her to complete this operation?",
+   "marks": 1,
+   "options": {
+    "A": "Create rule",
+    "B": "Remove rule",
+    "C": "Grant rule",
+    "D": "Take rule"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0066",
+   "type": "mcq",
+   "stem": "Charles securely wipes a compromised machine, reinstalls the OS from original media, fully patches it, and applies security templates before reconnecting to the network. Almost immediately, it reconnects to the same botnet. Where should Charles look for the malware causing this behavior?",
+   "marks": 1,
+   "options": {
+    "A": "The operating system partition",
+    "B": "The system BIOS or firmware",
+    "C": "The system memory",
+    "D": "The installation media"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0067",
+   "type": "mcq",
+   "stem": "Lauren implements ASLR to help prevent system compromises. What technique has she used to protect her system?",
+   "marks": 1,
+   "options": {
+    "A": "Encryption",
+    "B": "Mandatory access control",
+    "C": "Memory address randomization",
+    "D": "Discretionary access control"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0068",
+   "type": "mcq",
+   "stem": "Alan intercepts an encrypted message and performs frequency analysis, noting that the frequency of letters in the message closely matches the distribution of letters in the English language. What type of cipher was MOST likely used to create this message?",
+   "marks": 1,
+   "options": {
+    "A": "Substitution cipher",
+    "B": "AES",
+    "C": "Transposition cipher",
+    "D": "3DES"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0069",
+   "type": "mcq",
+   "stem": "In a zero trust network architecture, what component is responsible for making policy decisions based upon rules and external data sources?",
+   "marks": 1,
+   "options": {
+    "A": "Policy engine",
+    "B": "Policy administrator",
+    "C": "Policy enforcement point",
+    "D": "Subject"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0070",
+   "type": "mcq",
+   "stem": "Grace would like to implement application control technology in her organization. Users often need to install new applications for research and testing but she wants to block known malicious software. What type of application control would be MOST appropriate?",
+   "marks": 1,
+   "options": {
+    "A": "Blacklisting",
+    "B": "Graylisting",
+    "C": "Whitelisting",
+    "D": "Bluelisting"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0071",
+   "type": "mcq",
+   "stem": "Warren is designing a physical intrusion detection system for a sensitive media storage facility and wants to include technology that issues an alert if the communications lines for the alarm system are unexpectedly cut. What technology would meet this requirement?",
+   "marks": 1,
+   "options": {
+    "A": "Heartbeat sensor",
+    "B": "Emanation security",
+    "C": "Motion detector",
+    "D": "Faraday cage"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0072",
+   "type": "mcq",
+   "stem": "John and Gary are negotiating a business transaction, and John must demonstrate to Gary that he has access to a system. A diagram shows a person entering a circular path with two routes separated by a wall with a door, illustrating the 'magic door' scenario. What technique is John using?",
+   "marks": 1,
+   "options": {
+    "A": "Split-knowledge proof",
+    "B": "Zero-knowledge proof",
+    "C": "Logical proof",
+    "D": "Mathematical proof"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0073",
+   "type": "mcq",
+   "stem": "After scanning his wireless network, Mike finds an original iPad running a massively out-of-date version of iOS that cannot be updated to a current secure version. What would be the BEST option for handling this device?",
+   "marks": 1,
+   "options": {
+    "A": "Retire or replace the device",
+    "B": "Isolate the device on a dedicated wireless network",
+    "C": "Install a firewall on the tablet",
+    "D": "Reinstall the OS"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0074",
+   "type": "mcq",
+   "stem": "Tonya believes that an attacker eavesdropped on legitimate HTTPS communications by first engaging in a DNS poisoning attack. After conducting DNS poisoning, what technique would an attacker MOST likely use to conduct this eavesdropping?",
+   "marks": 1,
+   "options": {
+    "A": "Man-in-the-middle",
+    "B": "Brute-force",
+    "C": "Timing",
+    "D": "Meet-in-the-middle"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0075",
+   "type": "mcq",
+   "stem": "Howard is choosing a cryptographic algorithm for his organization and would like to choose an algorithm that supports the creation of digital signatures. Which ONE of the following algorithms would meet his requirement?",
+   "marks": 1,
+   "options": {
+    "A": "RSA",
+    "B": "3DES",
+    "C": "AES",
+    "D": "Blowfish"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0076",
+   "type": "mcq",
+   "stem": "Laura is responsible for securing her company's web-based applications and wants to conduct an educational program for developers on common web application security vulnerabilities. Where can she turn for a concise listing of the MOST common web application issues?",
+   "marks": 1,
+   "options": {
+    "A": "CVE",
+    "B": "NSA",
+    "C": "OWASP",
+    "D": "CSA"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0077",
+   "type": "mcq",
+   "stem": "The Bell-LaPadula and Biba models implement state machines in a fashion that uses what specific state machine model?",
+   "marks": 1,
+   "options": {
+    "A": "Information flow",
+    "B": "Noninterference",
+    "C": "Cascading",
+    "D": "Feedback"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0078",
+   "type": "mcq",
+   "stem": "During a third-party vulnerability scan, Danielle's employer discovered that embedded systems managing their new buildings have a severe remote access vulnerability. The manufacturer has gone out of business with no patch available. What should Danielle MOST reasonably recommend?",
+   "marks": 1,
+   "options": {
+    "A": "Identify a replacement device model and replace every device",
+    "B": "Turn off all of the devices",
+    "C": "Move the devices to a secure and isolated network segment",
+    "D": "Reverse engineer the devices and build an in-house patch"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0079",
+   "type": "mcq",
+   "stem": "What type of motion detector senses changes in the electromagnetic fields in monitored areas?",
+   "marks": 1,
+   "options": {
+    "A": "Infrared",
+    "B": "Wave pattern",
+    "C": "Capacitance",
+    "D": "Photoelectric"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0080",
+   "type": "mcq",
+   "stem": "Mike has been tasked with preventing an outbreak of malware like Mirai, a botnet that targeted IP-based cameras and routers. What type of systems should be protected in his organization?",
+   "marks": 1,
+   "options": {
+    "A": "Servers",
+    "B": "SCADA",
+    "C": "Mobile devices",
+    "D": "Internet of Things (IoT) devices"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0081",
+   "type": "mcq",
+   "stem": "Which ONE of the following statements is correct about the Biba model of access control?",
+   "marks": 1,
+   "options": {
+    "A": "It addresses confidentiality and integrity",
+    "B": "It addresses integrity and availability",
+    "C": "It prevents covert channel attacks",
+    "D": "It focuses on protecting objects from integrity threats"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0082",
+   "type": "mcq",
+   "stem": "In Transport Layer Security, what type of key is used to encrypt the actual content of communications between a web server and a client?",
+   "marks": 1,
+   "options": {
+    "A": "Ephemeral session key",
+    "B": "Client's public key",
+    "C": "Server's public key",
+    "D": "Server's private key"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0083",
+   "type": "mcq",
+   "stem": "Beth would like to include technology in a secure area of her data center to protect against unwanted electromagnetic emanations. What technology would BEST assist her with this goal?",
+   "marks": 1,
+   "options": {
+    "A": "Heartbeat sensor",
+    "B": "Faraday cage",
+    "C": "Piggybacking",
+    "D": "WPA2"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0084",
+   "type": "mcq",
+   "stem": "In a virtualized computing environment, what component is responsible for enforcing separation between guest machines?",
+   "marks": 1,
+   "options": {
+    "A": "Guest operating system",
+    "B": "Hypervisor",
+    "C": "Kernel",
+    "D": "Protection manager"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0085",
+   "type": "mcq",
+   "stem": "Rick is an application developer who works primarily in Python. He recently decided to evaluate a new service where he provides his Python code to a vendor who then executes it on their server environment. What type of cloud computing environment is this service?",
+   "marks": 1,
+   "options": {
+    "A": "SaaS",
+    "B": "PaaS",
+    "C": "IaaS",
+    "D": "CaaS"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0086",
+   "type": "mcq",
+   "stem": "A component failure in the primary HVAC system leads to a high temperature alarm in Kim's data center. After resolving the issue, what should Kim consider to BEST prevent future issues like this?",
+   "marks": 1,
+   "options": {
+    "A": "A closed loop chiller",
+    "B": "Redundant cooling systems",
+    "C": "Swamp coolers",
+    "D": "Relocating the data center to a colder climate"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0087",
+   "type": "mcq",
+   "stem": "Tommy is planning to implement a power conditioning UPS for a rack of servers. Which ONE of the following conditions will the UPS be UNABLE to protect against if it persists for an extended period of time?",
+   "marks": 1,
+   "options": {
+    "A": "Fault",
+    "B": "Blackout",
+    "C": "Sag",
+    "D": "Noise"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0088",
+   "type": "mcq",
+   "stem": "Which ONE of the following humidity values is within the acceptable range for a data center operation?",
+   "marks": 1,
+   "options": {
+    "A": "0%",
+    "B": "10%",
+    "C": "15%",
+    "D": "40%"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0089",
+   "type": "mcq",
+   "stem": "Kristen's organization suffered a ransomware infection. Which ONE of the following statements about paying the ransom is NOT correct?",
+   "marks": 1,
+   "options": {
+    "A": "Payment of the ransom may be illegal",
+    "B": "Payment of the ransom may result in further demands for payments",
+    "C": "Payment of the ransom guarantees access to the decryption key",
+    "D": "Payment of the ransom may cause a data breach"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0090",
+   "type": "mcq",
+   "stem": "Alex's employer creates most of their work output as PDF files. Alex is concerned about limiting the audience for the PDF files to those individuals who have paid for them. What technology can he use to MOST effectively control the access to and distribution of these files?",
+   "marks": 1,
+   "options": {
+    "A": "EDM",
+    "B": "Encryption",
+    "C": "Digital signatures",
+    "D": "DRM"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0091",
+   "type": "mcq",
+   "stem": "As part of his team's forensic investigation process, Matt signs out drives and other evidence from an evidence storage facility before working with them. What type of documentation is he creating?",
+   "marks": 1,
+   "options": {
+    "A": "Criminal",
+    "B": "Chain of custody",
+    "C": "Civil",
+    "D": "CYA"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-security-architecture-and-engineering-bank-0092",
+   "type": "mcq",
+   "stem": "Todd believes that a digital certificate used by his organization has been compromised, and he wants to add it to the certificate revocation list (CRL). What element of the certificate goes on the CRL?",
+   "marks": 1,
+   "options": {
+    "A": "Serial number",
+    "B": "Public key",
+    "C": "Subject name",
+    "D": "Expiration date"
+   },
+   "answer": "A"
+  }
+ ],
+ "category": "CISSP",
+ "body": " Security Architecture And Engineering"
+}

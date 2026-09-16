@@ -1,0 +1,76 @@
+{
+ "code": "kcse-decimals-bank",
+ "title": "KCSE - Decimals",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "kcse-decimals-bank-0001",
+   "type": "mcq",
+   "stem": "What is the value of digit 7 in the number 45.372?",
+   "marks": 1,
+   "options": {
+    "A": "7",
+    "B": "0.7",
+    "C": "0.07",
+    "D": "0.007"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "kcse-decimals-bank-0002",
+   "type": "mcq",
+   "stem": "Add 12.34 and 5.678.",
+   "marks": 1,
+   "options": {
+    "A": "17.018",
+    "B": "18.018",
+    "C": "18.108",
+    "D": "17.108"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "kcse-decimals-bank-0003",
+   "type": "mcq",
+   "stem": "Multiply 2.5 by 1.2.",
+   "marks": 1,
+   "options": {
+    "A": "3.0",
+    "B": "3.5",
+    "C": "2.5",
+    "D": "30.0"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "kcse-decimals-bank-0004",
+   "type": "mcq",
+   "stem": "Convert 0.875 to a percentage.",
+   "marks": 1,
+   "options": {
+    "A": "0.875%",
+    "B": "8.75%",
+    "C": "87.5%",
+    "D": "875%"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "kcse-decimals-bank-0005",
+   "type": "mcq",
+   "stem": "What is 60% as a decimal?",
+   "marks": 1,
+   "options": {
+    "A": "0.06",
+    "B": "0.6",
+    "C": "6.0",
+    "D": "60.0"
+   },
+   "answer": "B"
+  }
+ ],
+ "category": "KCSE",
+ "body": "Decimals"
+}

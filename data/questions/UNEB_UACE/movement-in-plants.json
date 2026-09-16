@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-movement-in-plants-bank",
+ "title": "UNEB UACE - Movement In Plants",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0001",
+   "type": "mcq",
+   "stem": "Phototropism is a plant's growth response to:",
+   "marks": 1,
+   "options": {
+    "A": "Gravity",
+    "B": "Water",
+    "C": "Light",
+    "D": "Touch"
+   },
+   "answer": "Light"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0002",
+   "type": "mcq",
+   "stem": "A shoot growing towards light is showing:",
+   "marks": 1,
+   "options": {
+    "A": "Negative phototropism",
+    "B": "Positive gravitropism",
+    "C": "Positive phototropism",
+    "D": "Negative gravitropism"
+   },
+   "answer": "Positive phototropism"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0003",
+   "type": "mcq",
+   "stem": "Roots show positive gravitropism because they grow:",
+   "marks": 1,
+   "options": {
+    "A": "Towards light",
+    "B": "Away from water",
+    "C": "Downward (towards gravity)",
+    "D": "Away from soil"
+   },
+   "answer": "Downward (towards gravity)"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0004",
+   "type": "mcq",
+   "stem": "Auxin (IAA) causes plant cells to:",
+   "marks": 1,
+   "options": {
+    "A": "Divide faster",
+    "B": "Elongate (grow longer)",
+    "C": "Shrink",
+    "D": "Die"
+   },
+   "answer": "Elongate (grow longer)"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0005",
+   "type": "mcq",
+   "stem": "In a shoot exposed to light from one side, where does auxin accumulate?",
+   "marks": 1,
+   "options": {
+    "A": "Lit side",
+    "B": "Tip only",
+    "C": "Shaded side",
+    "D": "Roots"
+   },
+   "answer": "Shaded side"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0006",
+   "type": "mcq",
+   "stem": "Pea tendrils wrapping around a trellis is an example of:",
+   "marks": 1,
+   "options": {
+    "A": "Phototropism",
+    "B": "Gravitropism",
+    "C": "Thigmotropism",
+    "D": "Hydrotropism"
+   },
+   "answer": "Thigmotropism"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0007",
+   "type": "mcq",
+   "stem": "Which part of the shoot detects the direction of light?",
+   "marks": 1,
+   "options": {
+    "A": "Leaves",
+    "B": "Root tip",
+    "C": "Shoot tip (apical meristem)",
+    "D": "Stem base"
+   },
+   "answer": "Shoot tip (apical meristem)"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0008",
+   "type": "mcq",
+   "stem": "In roots, high concentration of auxin:",
+   "marks": 1,
+   "options": {
+    "A": "Promotes growth",
+    "B": "Inhibits growth",
+    "C": "Has no effect",
+    "D": "Causes flowering"
+   },
+   "answer": "Inhibits growth"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0009",
+   "type": "mcq",
+   "stem": "Hydrotropism is growth towards:",
+   "marks": 1,
+   "options": {
+    "A": "Light",
+    "B": "Gravity",
+    "C": "Water",
+    "D": "Chemicals"
+   },
+   "answer": "Water"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0010",
+   "type": "mcq",
+   "stem": "A seedling is placed on its side in the dark. After a few days the shoot will grow:",
+   "marks": 1,
+   "options": {
+    "A": "Downward",
+    "B": "Straight (no change)",
+    "C": "Upward",
+    "D": "Sideways"
+   },
+   "answer": "Upward"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0011",
+   "type": "mcq",
+   "stem": "Tropisms are described as positive when growth is:",
+   "marks": 1,
+   "options": {
+    "A": "Away from the stimulus",
+    "B": "Towards the stimulus",
+    "C": "Perpendicular to the stimulus",
+    "D": "Random"
+   },
+   "answer": "Towards the stimulus"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0012",
+   "type": "mcq",
+   "stem": "Auxins are produced mainly in the:",
+   "marks": 1,
+   "options": {
+    "A": "Roots",
+    "B": "Shoot tip and young leaves",
+    "C": "Old leaves",
+    "D": "Flowers only"
+   },
+   "answer": "Shoot tip and young leaves"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0013",
+   "type": "mcq",
+   "stem": "If the tip of a shoot is covered with a light-proof cap, the shoot:",
+   "marks": 1,
+   "options": {
+    "A": "Bends towards light",
+    "B": "Does not respond to light (grows straight)",
+    "C": "Dies immediately",
+    "D": "Grows faster"
+   },
+   "answer": "Does not respond to light (grows straight)"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0014",
+   "type": "mcq",
+   "stem": "Nastic movements differ from tropisms because they:",
+   "marks": 1,
+   "options": {
+    "A": "Are faster",
+    "B": "Are not directional (direction not determined by stimulus direction)",
+    "C": "Only occur in roots",
+    "D": "Require light"
+   },
+   "answer": "Are not directional (direction not determined by stimulus direction)"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0015",
+   "type": "mcq",
+   "stem": "Pollen tube growing towards the ovule through the style is:",
+   "marks": 1,
+   "options": {
+    "A": "Phototropism",
+    "B": "Gravitropism",
+    "C": "Thigmotropism",
+    "D": "Chemotropism"
+   },
+   "answer": "Chemotropism"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0016",
+   "type": "mcq",
+   "stem": "The experiment that proved auxin was responsible for phototropism was done by:",
+   "marks": 1,
+   "options": {
+    "A": "Darwin",
+    "B": "Pasteur",
+    "C": "Boysen-Jensen",
+    "D": "Mendel"
+   },
+   "answer": "Boysen-Jensen"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0017",
+   "type": "mcq",
+   "stem": "Shoot showing negative gravitropism grows:",
+   "marks": 1,
+   "options": {
+    "A": "Downward",
+    "B": "Upward (away from gravity)",
+    "C": "Sideways",
+    "D": "In circles"
+   },
+   "answer": "Upward (away from gravity)"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0018",
+   "type": "mcq",
+   "stem": "In commercial fruit production, synthetic auxins are used to:",
+   "marks": 1,
+   "options": {
+    "A": "Only kill weeds",
+    "B": "Set fruit without pollination and prevent premature fruit drop",
+    "C": "Speed up germination",
+    "D": "Increase leaf size"
+   },
+   "answer": "Set fruit without pollination and prevent premature fruit drop"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0019",
+   "type": "mcq",
+   "stem": "Root growing towards a water source is:",
+   "marks": 1,
+   "options": {
+    "A": "Negative hydrotropism",
+    "B": "Positive hydrotropism",
+    "C": "Positive phototropism",
+    "D": "Negative gravitropism"
+   },
+   "answer": "Positive hydrotropism"
+  },
+  {
+   "id": "uneb_uace-movement-in-plants-bank-0020",
+   "type": "mcq",
+   "stem": "Tropisms are important to plants because they:",
+   "marks": 1,
+   "options": {
+    "A": "Make plants look attractive",
+    "B": "Allow plants to optimise light capture, water absorption and anchorage without moving",
+    "C": "Allow plants to escape predators",
+    "D": "Help plants reproduce sexually"
+   },
+   "answer": "Allow plants to optimise light capture, water absorption and anchorage without moving"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Movement In Plants"
+}

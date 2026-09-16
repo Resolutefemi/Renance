@@ -1,0 +1,98 @@
+{
+ "exam": "CISSP",
+ "region": "International / Global",
+ "slug": "CISSP",
+ "question_banks": 9,
+ "github_sources": [
+  {
+   "repo": "qashsolutions/cissp",
+   "url": "https://github.com/qashsolutions/cissp",
+   "stars": 0,
+   "desc": "cissp question bank"
+  },
+  {
+   "repo": "sayre4ux/quizer",
+   "url": "https://github.com/sayre4ux/quizer",
+   "stars": 0,
+   "desc": "Local-first, offline-capable PWA for drilling exam question banks (CISSP and beyond). No backend, no account — import any bank, study, track mastery."
+  },
+  {
+   "repo": "thchewningcofc/quizforge",
+   "url": "https://github.com/thchewningcofc/quizforge",
+   "stars": 0,
+   "desc": "QuizForge is a fully client-side, single-file HTML application (v1.0, March 2026) that converts PDF study materials into interactive multiple-choice quizzes. Th"
+  },
+  {
+   "repo": "redhat1032/secure-software-design-guide",
+   "url": "https://github.com/redhat1032/secure-software-design-guide/blob/008b5bff479ee7c14fa99d9282d439268bcb1732/Practice_Questions.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "shreyas-sriram/security-engineer-job-search",
+   "url": "https://github.com/shreyas-sriram/security-engineer-job-search/blob/571b30866d7608b706a7ce84b32a15377b455320/questions/questions.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "nbavaro1/CISSP-QUIZ",
+   "url": "https://github.com/nbavaro1/CISSP-QUIZ/blob/a3a834d2d2687cab5db15bc6f0c537a2587d4fe9/questionsCISSP.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "ashok5141/Application-Security-Cheatsheet",
+   "url": "https://github.com/ashok5141/Application-Security-Cheatsheet/blob/8096370a6cd46cb664d1fd02ef9ecc7f0a328aff/Questions.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "tanjiti/sec_profile",
+   "url": "https://github.com/tanjiti/sec_profile/blob/0275ce0334254705742d90d796e16b8b4702eb52/README_202411.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "CISSP Practice Exam – FREE 20 Questions and Answers",
+   "url": "https://blog.masterofproject.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "CISSP Exam Practice Questions Domain 1 to 4.pdf",
+   "url": "https://www.slideshare.net",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Test Your CISSP Knowledge | ISC2 Practice Quiz",
+   "url": "https://cloud.connect.isc2.org",
+   "class": "site"
+  },
+  {
+   "title": "CISSP Practice Questions: Expert Guide to Exam Success",
+   "url": "https://destcert.com",
+   "class": "site"
+  },
+  {
+   "title": "CISSP Practice Questions Exam Cram",
+   "url": "https://ptgmedia.pearsoncmg.com",
+   "class": "site"
+  },
+  {
+   "title": "Free Practice CISSP Quiz",
+   "url": "https://cissprep.net",
+   "class": "site"
+  },
+  {
+   "title": "Free CISSP & Certified in Cybersecurity Practice Question",
+   "url": "https://thorteaches.com",
+   "class": "site"
+  },
+  {
+   "title": "CISSP Exam - Free Actual Q&As, Page 1",
+   "url": "https://www.examtopics.com",
+   "class": "site"
+  }
+ ]
+}

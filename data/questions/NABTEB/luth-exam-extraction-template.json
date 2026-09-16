@@ -1,0 +1,89 @@
+{
+ "code": "nabteb-luth-exam-extraction-template-bank",
+ "title": "NABTEB NBC/NTC - Luth Exam Extraction Template",
+ "version": 1,
+ "questionCount": 6,
+ "totalMarks": 6,
+ "questions": [
+  {
+   "id": "nabteb-luth-exam-extraction-template-bank-0001",
+   "type": "mcq",
+   "stem": "What is the primary role of hemoglobin in the blood?",
+   "marks": 1,
+   "options": {
+    "A": "Oxygen transport and carbon dioxide transport",
+    "B": "Antibody production",
+    "C": "Blood clotting",
+    "D": "Nutrient storage"
+   },
+   "answer": "Oxygen transport and carbon dioxide transport"
+  },
+  {
+   "id": "nabteb-luth-exam-extraction-template-bank-0002",
+   "type": "mcq",
+   "stem": "Which of the following is NOT a function of the liver?",
+   "marks": 1,
+   "options": {
+    "A": "Production of bile",
+    "B": "Detoxification of drugs",
+    "C": "Regulation of blood glucose",
+    "D": "Production of insulin"
+   },
+   "answer": "Production of insulin"
+  },
+  {
+   "id": "nabteb-luth-exam-extraction-template-bank-0003",
+   "type": "mcq",
+   "stem": "What is the normal pH range of human blood?",
+   "marks": 1,
+   "options": {
+    "A": "6.8 - 7.0",
+    "B": "7.35 - 7.45",
+    "C": "7.5 - 7.8",
+    "D": "8.0 - 8.5"
+   },
+   "answer": "7.35 - 7.45"
+  },
+  {
+   "id": "nabteb-luth-exam-extraction-template-bank-0004",
+   "type": "mcq",
+   "stem": "Which type of white blood cell is primarily responsible for allergic and parasitic responses?",
+   "marks": 1,
+   "options": {
+    "A": "Neutrophils",
+    "B": "Eosinophils",
+    "C": "Basophils",
+    "D": "Lymphocytes"
+   },
+   "answer": "Eosinophils"
+  },
+  {
+   "id": "nabteb-luth-exam-extraction-template-bank-0005",
+   "type": "mcq",
+   "stem": "What is the mechanism of action of ACE inhibitors?",
+   "marks": 1,
+   "options": {
+    "A": "Block calcium channels",
+    "B": "Inhibit angiotensin-converting enzyme",
+    "C": "Block beta-adrenergic receptors",
+    "D": "Inhibit monoamine oxidase"
+   },
+   "answer": "Inhibit angiotensin-converting enzyme"
+  },
+  {
+   "id": "nabteb-luth-exam-extraction-template-bank-0006",
+   "type": "mcq",
+   "stem": "Which of the following is a water-soluble vitamin?",
+   "marks": 1,
+   "options": {
+    "A": "Vitamin A",
+    "B": "Vitamin D",
+    "C": "Vitamin B12",
+    "D": "Vitamin E"
+   },
+   "answer": "Vitamin B12"
+  }
+ ],
+ "category": "NABTEB NBC/NTC",
+ "body": "Luth Exam Extraction Template"
+}

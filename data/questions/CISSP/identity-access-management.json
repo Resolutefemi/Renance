@@ -1,0 +1,1181 @@
+{
+ "code": "cissp-identity-access-management-bank",
+ "title": "CISSP -  Identity Access Management",
+ "version": 1,
+ "questionCount": 90,
+ "totalMarks": 90,
+ "questions": [
+  {
+   "id": "cissp-identity-access-management-bank-0001",
+   "type": "mcq",
+   "stem": "Henry uses his organizationally provided credentials to log into his workstation and is then able to use services across the organization and in the cloud. What identity solution has his organization implemented?",
+   "marks": 1,
+   "options": {
+    "A": "An access control list",
+    "B": "Single sign-on",
+    "C": "Multifactor authentication",
+    "D": "Role-based access control"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0002",
+   "type": "mcq",
+   "stem": "Jim's organization-wide implementation of IDaaS offers broad support for cloud-based applications. Jim's company does not have internal identity management staff and does not use centralized identity services. Instead, they rely upon Active Directory for AAA services. Which of the following options should Jim recommend to BEST handle the company's on-site identity needs?",
+   "marks": 1,
+   "options": {
+    "A": "Integrate on-site systems using OAuth",
+    "B": "Use an on-premises third-party identity service",
+    "C": "Integrate on-site systems using SAML",
+    "D": "Design an internal solution to handle the organization's unique needs"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0003",
+   "type": "mcq",
+   "stem": "What role does a policy enforcement point play in a zero trust environment?",
+   "marks": 1,
+   "options": {
+    "A": "It makes decisions for the policy engine",
+    "B": "It is the workstation or mobile device used by the end user",
+    "C": "It deploys role-based access controls based on local policy",
+    "D": "It receives authorization requests and sends them to the policy decision point"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0004",
+   "type": "mcq",
+   "stem": "Voice pattern recognition is what type of authentication factor?",
+   "marks": 1,
+   "options": {
+    "A": "Something you know",
+    "B": "Something you have",
+    "C": "Something you are",
+    "D": "Somewhere you are"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0005",
+   "type": "mcq",
+   "stem": "If Susan's organization requires her to log in with her username, a PIN, a password, and a retina scan, how many distinct authentication factor types has she used?",
+   "marks": 1,
+   "options": {
+    "A": "One",
+    "B": "Two",
+    "C": "Three",
+    "D": "Four"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0006",
+   "type": "mcq",
+   "stem": "Charles wants to deploy a credential management system (CMS). He wants to keep the keys as secure as possible. Which of the following is the BEST design option for his CMS implementation?",
+   "marks": 1,
+   "options": {
+    "A": "Use AES-256 instead of 3DES",
+    "B": "Use long keys",
+    "C": "Use an HSM",
+    "D": "Change passphrases regularly"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0007",
+   "type": "mcq",
+   "stem": "Brian is a researcher at a major university. As part of his research, he logs into a computing cluster hosted at another institution using his own university's credentials. Once logged in, he is able to access the cluster and use resources based on his role in a research project, as well as using resources and services in his home organization. What has Brian's home university implemented to make this happen?",
+   "marks": 1,
+   "options": {
+    "A": "Domain stacking",
+    "B": "Federated identity management",
+    "C": "Domain nesting",
+    "D": "Hybrid login"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0008",
+   "type": "mcq",
+   "stem": "When Sally attempts to authenticate to her organization's services, she knows that the organization uses a mobile device management tool to check her location and whether she's logging in from her company-issued mobile device. What type of authentication is this?",
+   "marks": 1,
+   "options": {
+    "A": "Context-aware",
+    "B": "Knowledge-based",
+    "C": "Identity factoring",
+    "D": "Zero trust"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0009",
+   "type": "mcq",
+   "stem": "What major issue often results from decentralized access control?",
+   "marks": 1,
+   "options": {
+    "A": "Access outages may occur",
+    "B": "Control is not consistent",
+    "C": "Control is too granular",
+    "D": "Training costs are high"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0010",
+   "type": "mcq",
+   "stem": "Callback to a landline phone number is an example of what type of factor?",
+   "marks": 1,
+   "options": {
+    "A": "Something you know",
+    "B": "Somewhere you are",
+    "C": "Something you have",
+    "D": "Something you are"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0011",
+   "type": "mcq",
+   "stem": "What common behavior drives the NIST recommendation that passwords should not expire?",
+   "marks": 1,
+   "options": {
+    "A": "Attackers would not have enough time to compromise passwords if they expired",
+    "B": "Users often make minimal changes to passwords to handle change requirements",
+    "C": "Password expiration leads to too little support overhead",
+    "D": "Re-hashing passwords when changes are required is computationally intensive"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0012",
+   "type": "mcq",
+   "stem": "What three functions make up the AAA model?",
+   "marks": 1,
+   "options": {
+    "A": "Access control, authentication, and authorization",
+    "B": "Access, administration, and authorization",
+    "C": "Authentication, authorization, and accounting",
+    "D": "Accounting, auditing, and assessment"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0013",
+   "type": "mcq",
+   "stem": "What directory-based technology underlies Microsoft Active Directory single sign-on?",
+   "marks": 1,
+   "options": {
+    "A": "LDAP",
+    "B": "zero trust",
+    "C": "Shibboleth",
+    "D": "RADIUS"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0014",
+   "type": "mcq",
+   "stem": "Sameer's organization needs to perform identity proofing for new customers. What type of authentication is BEST suited to identity proofing in this scenario?",
+   "marks": 1,
+   "options": {
+    "A": "Cognitive passwords",
+    "B": "Knowledge-based authentication",
+    "C": "Palm scans",
+    "D": "USB tokens"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0015",
+   "type": "mcq",
+   "stem": "What type of access controls allow the owner of a file to grant other users access to it using an access control list?",
+   "marks": 1,
+   "options": {
+    "A": "Role-based",
+    "B": "Nondiscretionary",
+    "C": "Rule-based",
+    "D": "Discretionary"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0016",
+   "type": "mcq",
+   "stem": "Alex's job requires him to see protected health information (PHI) to ensure proper treatment of patients. His access to their medical records does not provide access to patient addresses or billing information. What access control concept BEST describes this control?",
+   "marks": 1,
+   "options": {
+    "A": "Separation of duties",
+    "B": "Constrained interfaces",
+    "C": "Context-dependent control",
+    "D": "Need to know"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0017",
+   "type": "mcq",
+   "stem": "[Password policy scenario.] Ifemoa wants to ensure that users in her organization cannot change their password to a previously used password. What setting should she configure?",
+   "marks": 1,
+   "options": {
+    "A": "Password length",
+    "B": "Maximum password age",
+    "C": "An MFA requirement",
+    "D": "Password history"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0018",
+   "type": "mcq",
+   "stem": "[Password policy scenario.] With a password history set, Ifeoma wants to prevent users from resetting their password multiple times to allow them to return to their original password. What setting should she apply?",
+   "marks": 1,
+   "options": {
+    "A": "A password complexity requirement",
+    "B": "A maximum password age",
+    "C": "A minimum password age",
+    "D": "A password length requirement"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0019",
+   "type": "mcq",
+   "stem": "[Password policy scenario.] With her organization's password behavior under control, Ifeoma wants to ensure that a lost password will not result in easy compromise of her company's accounts. Which of the following controls provides the BEST protection against password loss or exposure-related compromise?",
+   "marks": 1,
+   "options": {
+    "A": "MFA",
+    "B": "SSO",
+    "C": "Federation",
+    "D": "Password rotation"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0020",
+   "type": "mcq",
+   "stem": "Jacob is planning his organization's biometric authentication system and is considering retina scans. What concern may be raised about retina scans by others in his organization?",
+   "marks": 1,
+   "options": {
+    "A": "Retina scans can reveal information about medical conditions",
+    "B": "Retina scans are painful because they require a puff of air in the user's eye",
+    "C": "Retina scanners are the most expensive type of biometric device",
+    "D": "Retina scanners have a high false positive rate and will cause support issues"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0021",
+   "type": "mcq",
+   "stem": "Mandatory access control is based on what type of model?",
+   "marks": 1,
+   "options": {
+    "A": "Discretionary",
+    "B": "Group-based",
+    "C": "Lattice-based",
+    "D": "Rule-based"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0022",
+   "type": "mcq",
+   "stem": "Greg wants to control access to iPads used throughout his organization as point-of-sale terminals. Which of the following methods should he use to allow logical access control for the devices in a shared environment?",
+   "marks": 1,
+   "options": {
+    "A": "Use a shared PIN for all point-of-sale terminals to make them easier to use",
+    "B": "Use OAuth to allow cloud logins for each user",
+    "C": "Issue a unique PIN to each user for the iPad they are issued",
+    "D": "Use Active Directory and user accounts for logins to the iPads using the AD user ID and password"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0023",
+   "type": "mcq",
+   "stem": "What is the BEST way to provide accountability for the use of identities?",
+   "marks": 1,
+   "options": {
+    "A": "Logging",
+    "B": "Authorization",
+    "C": "Digital signatures",
+    "D": "Type 1 authentication"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0024",
+   "type": "mcq",
+   "stem": "Jim has worked in human relations, payroll, and customer service roles in his company over the past few years. What type of process should his company perform to ensure that he has appropriate rights?",
+   "marks": 1,
+   "options": {
+    "A": "Re-provisioning",
+    "B": "Account review",
+    "C": "Privilege creep",
+    "D": "Account revocation"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0025",
+   "type": "mcq",
+   "stem": "Biba is what type of access control model?",
+   "marks": 1,
+   "options": {
+    "A": "MAC",
+    "B": "DAC",
+    "C": "Role BAC",
+    "D": "ABAC"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0026",
+   "type": "mcq",
+   "stem": "Which of the following is a client-server protocol designed to allow network access servers to authenticate remote users by sending access request messages to a central server?",
+   "marks": 1,
+   "options": {
+    "A": "Kerberos",
+    "B": "EAP",
+    "C": "RADIUS",
+    "D": "OAuth"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0027",
+   "type": "mcq",
+   "stem": "Henry is working with a web application development team on their authentication and authorization process for his company's new application. The team wants to make session IDs as secure as possible. Which of the following is NOT a best practice that Henry should recommend?",
+   "marks": 1,
+   "options": {
+    "A": "The session ID token should be predictable",
+    "B": "The session ID should have at least 64 bits of entropy",
+    "C": "The session length should be at least 128 bits",
+    "D": "The session ID should be meaningless"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0028",
+   "type": "mcq",
+   "stem": "Angela uses her smartphone's built-in biometric authentication and an application provided by her employer to log into her account. What type of authentication has she used?",
+   "marks": 1,
+   "options": {
+    "A": "Extended",
+    "B": "Passwordless",
+    "C": "Alternative",
+    "D": "SPOT"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0029",
+   "type": "mcq",
+   "stem": "What type of access control BEST describes NAC's posture assessment capability?",
+   "marks": 1,
+   "options": {
+    "A": "A mandatory access control",
+    "B": "A risk-based access control",
+    "C": "A discretionary access control",
+    "D": "A role-based access control"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0030",
+   "type": "mcq",
+   "stem": "When an application or system allows a logged-in user to perform specific actions, it is an example of what?",
+   "marks": 1,
+   "options": {
+    "A": "Roles",
+    "B": "Group management",
+    "C": "Logins",
+    "D": "Authorization"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0031",
+   "type": "mcq",
+   "stem": "Alex has been employed by his company for more than a decade and has held a number of positions in the company. During an audit, it is discovered that he has access to shared folders and applications because of his former roles. What issue has Alex's company encountered?",
+   "marks": 1,
+   "options": {
+    "A": "Excessive provisioning",
+    "B": "Unauthorized access",
+    "C": "Privilege creep",
+    "D": "Account review"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0032",
+   "type": "mcq",
+   "stem": "Geoff wants to prevent privilege escalation attacks in his organization. Which of the following practices is MOST likely to prevent horizontal privilege escalation?",
+   "marks": 1,
+   "options": {
+    "A": "Multifactor authentication",
+    "B": "Limiting permissions for groups and accounts",
+    "C": "Disabling unused ports and services",
+    "D": "Sanitizing user inputs to applications"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0033",
+   "type": "mcq",
+   "stem": "Jim's Microsoft Exchange environment includes servers that are located in local data centers at multiple business offices around the world as well as an Office 365 deployment for employees who are not located at one of those offices. Identities are created and used in both environments and will work in both. What type of federated system is Jim running?",
+   "marks": 1,
+   "options": {
+    "A": "A primary cloud system",
+    "B": "A primary on-premises system",
+    "C": "A hybrid system",
+    "D": "A multitenant system"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0034",
+   "type": "mcq",
+   "stem": "What type of access control scheme is shown in the following table? (Highly Sensitive: Red/Blue/Green; Confidential: Purple/Orange/Yellow; Internal Use: Black/Gray/White; Public: Clear/Clear/Clear)",
+   "marks": 1,
+   "options": {
+    "A": "RBAC",
+    "B": "DAC",
+    "C": "MAC",
+    "D": "TBAC"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0035",
+   "type": "mcq",
+   "stem": "Michelle's company is creating a new division by splitting the marketing and communications departments into two separate groups. She wants to create roles that provide access to resources used by each group. What should she do to maintain the appropriate security and rights for each group?",
+   "marks": 1,
+   "options": {
+    "A": "Put both the marketing and communications teams into the existing group because they will have similar access requirements",
+    "B": "Keep the marketing team in the existing group and create a new communications group based on their specific needs",
+    "C": "Keep the communications' team in the existing group and create a new marketing group based on their specific needs",
+    "D": "Create two new groups, assess which rights they need to perform their roles, and then add additional rights if required"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0036",
+   "type": "mcq",
+   "stem": "When a subject claims an identity, what process is occurring?",
+   "marks": 1,
+   "options": {
+    "A": "Login",
+    "B": "Identification",
+    "C": "Authorization",
+    "D": "Token presentation"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0037",
+   "type": "mcq",
+   "stem": "Which of the following is a common account setting for a service account?",
+   "marks": 1,
+   "options": {
+    "A": "Disable password expiration",
+    "B": "Set maximum password age to 90 days",
+    "C": "Set minimum password age to 1 day",
+    "D": "Disable complexity requirements"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0038",
+   "type": "mcq",
+   "stem": "Susan's organization is updating its password policy and wants to use the STRONGEST possible passwords. What password requirement will have the HIGHEST impact in preventing brute-force attacks?",
+   "marks": 1,
+   "options": {
+    "A": "Change the maximum age from 1 year to 180 days",
+    "B": "Increase the minimum password length from 8 characters to 16 characters",
+    "C": "Increase the password complexity so that at least three character classes (such as uppercase, lowercase, numbers, and symbols) are required",
+    "D": "Retain a password history of at least four passwords to prevent reuse"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0039",
+   "type": "mcq",
+   "stem": "Alaina is performing a regularly scheduled review for service accounts. Which of the following events should she be MOST concerned about?",
+   "marks": 1,
+   "options": {
+    "A": "An interactive login for the service account",
+    "B": "A password change for the service account",
+    "C": "Limitations placed on the service account's rights",
+    "D": "Local use of the service account"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0040",
+   "type": "mcq",
+   "stem": "When might an organization using biometrics choose to allow a higher FRR instead of a higher FAR?",
+   "marks": 1,
+   "options": {
+    "A": "When security is more important than usability",
+    "B": "When false rejection is not a concern due to data quality",
+    "C": "When the CER of the system is not known",
+    "D": "When the CER of the system is very high"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0041",
+   "type": "mcq",
+   "stem": "After recent reports of undesired access to workstations after hours, Derek has been asked to find a way to ensure that maintenance staff cannot log into workstations in business offices. The maintenance staff members do have systems in their break rooms and their offices for the organization, which they still need access to. What should Derek do to meet this need?",
+   "marks": 1,
+   "options": {
+    "A": "Require multifactor authentication and allow only office staff to have multifactor tokens",
+    "B": "Use rule-based access control to prevent logins after hours in the business area",
+    "C": "Use role-based access control by setting up a group that contains all maintenance staff and then give that group rights to log into only the designated workstations",
+    "D": "Use geofencing to only allow logins in maintenance areas"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0042",
+   "type": "mcq",
+   "stem": "[Web session management scenario.] Nick wants to do session management for his web application. Which of the following are common web application session management techniques or methods? (Reframed: Which ONE is NOT?)",
+   "marks": 1,
+   "options": {
+    "A": "IP tracking",
+    "B": "Cookies",
+    "C": "URL rewriting",
+    "D": "TLS tokens"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0043",
+   "type": "mcq",
+   "stem": "[SAML scenario: Alex is in charge of SAML integration with a major third-party partner. Diagram: Home Org IDP ↔ User Browser ↔ Third-Party Service (steps 1-7).] Alex is concerned about eavesdropping on the SAML traffic and also wants to ensure that forged assertions will not be successful. What should he do to prevent these potential attacks?",
+   "marks": 1,
+   "options": {
+    "A": "Use SAML's secure mode to provide secure authentication",
+    "B": "Implement TLS using a strong cipher suite, which will protect against both types of attacks",
+    "C": "Implement TLS using a strong cipher suite and use digital signatures",
+    "D": "Implement TLS using a strong cipher suite and message hashing"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0044",
+   "type": "mcq",
+   "stem": "Susan has been asked to recommend whether her organization should use a MAC scheme or a DAC scheme. If flexibility and scalability are important requirements for implementing access controls, which scheme should she recommend and why?",
+   "marks": 1,
+   "options": {
+    "A": "MAC, because it provides greater scalability and flexibility because you can simply add more labels as needed",
+    "B": "DAC, because allowing individual administrators to make choices about the objects they control provides scalability and flexibility",
+    "C": "MAC, because compartmentalization is well suited to flexibility and adding compartments will allow it to scale well",
+    "D": "DAC, because a central decision process allows quick responses and will provide scalability by reducing the number of decisions required and flexibility by moving those decisions to a central authority"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0045",
+   "type": "mcq",
+   "stem": "Which of the following tools is NOT typically used to verify that a provisioning process was followed in a way that ensures that the organization's security policy is being followed?",
+   "marks": 1,
+   "options": {
+    "A": "Log review",
+    "B": "Manual review of permissions",
+    "C": "Signature-based detection",
+    "D": "Review the audit trail"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0046",
+   "type": "mcq",
+   "stem": "Jessica wants to adopt an open standard to provide authentication, authorization, and attribute information as part of her cloud identity federation efforts. What standard should she adopt to leverage the flexibility of XML as part of her efforts?",
+   "marks": 1,
+   "options": {
+    "A": "SAML",
+    "B": "SOAP",
+    "C": "OAuth",
+    "D": "OpenID Connect"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0047",
+   "type": "mcq",
+   "stem": "During a penetration test, Chris recovers a file containing hashed passwords for the system he is attempting to access. What type of attack is MOST likely to succeed against the hashed passwords?",
+   "marks": 1,
+   "options": {
+    "A": "A brute-force attack",
+    "B": "A pass-the-hash attack",
+    "C": "A rainbow table attack",
+    "D": "A salt recovery attack"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0048",
+   "type": "mcq",
+   "stem": "Google's identity integration with a variety of organizations and applications across domains is an example of which of the following?",
+   "marks": 1,
+   "options": {
+    "A": "PKI",
+    "B": "Federation",
+    "C": "Single sign-on",
+    "D": "Provisioning"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0049",
+   "type": "mcq",
+   "stem": "Amanda starts at her new job and finds that she has access to a variety of systems that she does not need to accomplish her job. What problem has she encountered?",
+   "marks": 1,
+   "options": {
+    "A": "Privilege creep",
+    "B": "Rights collision",
+    "C": "Least privilege",
+    "D": "Excessive privileges"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0050",
+   "type": "mcq",
+   "stem": "When Chris verifies an individual's identity and adds a unique identifier like a user ID to an identity system, what process has occurred?",
+   "marks": 1,
+   "options": {
+    "A": "Identity proofing",
+    "B": "Registration",
+    "C": "Directory management",
+    "D": "Session management"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0051",
+   "type": "mcq",
+   "stem": "Selah wants to provide accountability for actions performed via her organization's main line-of-business application. What controls are MOST frequently used to provide accountability in a situation like this? (Reframed: Which ONE is NOT?)",
+   "marks": 1,
+   "options": {
+    "A": "Enable audit logging",
+    "B": "Provide every staff member with a unique account and enable multifactor authentication",
+    "C": "Enable time- and location-based login requirements",
+    "D": "Provide every staff member with a unique account and require a self-selected password"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0052",
+   "type": "mcq",
+   "stem": "Charles wants to provide authorization services as part of his web application. What standard should he use if he wants to integrate easily with other web identity providers?",
+   "marks": 1,
+   "options": {
+    "A": "OpenID",
+    "B": "TACACS+",
+    "C": "RADIUS",
+    "D": "OAuth"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0053",
+   "type": "mcq",
+   "stem": "The company that Cameron works for uses a system that allows users to request privileged access to systems when necessary. Cameron requests access, and the request is pre-approved due to his role. He is then able to access the system to perform the task. Once he is done, the rights are removed. What type of system is he using?",
+   "marks": 1,
+   "options": {
+    "A": "Zero trust",
+    "B": "Federated identity management",
+    "C": "Single sign-on",
+    "D": "Just-in-time access"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0054",
+   "type": "mcq",
+   "stem": "Elle is responsible for building a banking website. She needs proof of the identity of the users who register for the site. How should she validate user identities?",
+   "marks": 1,
+   "options": {
+    "A": "Require users to create unique questions that only they will know",
+    "B": "Require new users to bring their driver's license or passport in person to the bank",
+    "C": "Use information that both the bank and the user have such as questions pulled from their credit report",
+    "D": "Call the user on their registered phone number to verify that they are who they claim to be"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0055",
+   "type": "mcq",
+   "stem": "Susan's organization is part of a federation that allows users from multiple organizations to access resources and services at other federated sites. When Susan wants to use a service at a partner site, which identity provider is used?",
+   "marks": 1,
+   "options": {
+    "A": "Susan's home organization's identity provider",
+    "B": "The service provider's identity provider",
+    "C": "Both their identity provider and the service provider's identity provider",
+    "D": "The service provider creates a new identity"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0056",
+   "type": "mcq",
+   "stem": "A new customer at a bank that uses fingerprint scanners to authenticate its users is surprised when he scans his fingerprint and is logged into another customer's account. What type of biometric factor error occurred?",
+   "marks": 1,
+   "options": {
+    "A": "A registration error",
+    "B": "A Type 1 error",
+    "C": "A Type 2 error",
+    "D": "A time of use, method of use error"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0057",
+   "type": "mcq",
+   "stem": "What type of access control is typically used by firewalls?",
+   "marks": 1,
+   "options": {
+    "A": "Discretionary access controls",
+    "B": "Rule-based access controls",
+    "C": "Task-based access control",
+    "D": "Mandatory access controls"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0058",
+   "type": "mcq",
+   "stem": "When you input a user ID and password, you are performing what important identity and access management activity?",
+   "marks": 1,
+   "options": {
+    "A": "Authorization",
+    "B": "Validation",
+    "C": "Authentication",
+    "D": "Login"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0059",
+   "type": "mcq",
+   "stem": "Kathleen works for a data center hosting facility that provides physical data center space for individuals and organizations. Until recently, each client was given a magnetic-strip-based keycard to access the section of the facility where their servers are located, and they were also given a key to access the cage or rack where their servers reside. In the past month, a number of servers have been stolen, but the logs for the passcards show only valid IDs. What is Kathleen's BEST option to make sure that the users of the passcards are who they are supposed to be?",
+   "marks": 1,
+   "options": {
+    "A": "Add a reader that requires a PIN for passcard users",
+    "B": "Add a camera system to the facility to observe who is accessing servers",
+    "C": "Add a biometric factor",
+    "D": "Replace the magnetic stripe keycards with smartcards"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0060",
+   "type": "mcq",
+   "stem": "Theresa wants to allow her staff to securely store and manage passwords for systems including service accounts and other rarely used administrative credentials. What type of tool should she implement to enable this?",
+   "marks": 1,
+   "options": {
+    "A": "Single sign-on",
+    "B": "A federated identity system",
+    "C": "A password vault",
+    "D": "A multifactor authentication system"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0061",
+   "type": "mcq",
+   "stem": "Olivia wants to limit the commands that a user can run via sudo to limit the potential for privilege escalation attacks. What Linux file should she modify to allow this?",
+   "marks": 1,
+   "options": {
+    "A": "The bash .bin configuration file",
+    "B": "The sudoers file",
+    "C": "The bash .allowed configuration file",
+    "D": "The sudont file"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0062",
+   "type": "mcq",
+   "stem": "Which objects and subjects have a label in a MAC model?",
+   "marks": 1,
+   "options": {
+    "A": "Objects and subjects that are classified as Confidential, Secret, or Top Secret have a label",
+    "B": "All objects have a label, and all subjects have a compartment",
+    "C": "All objects and subjects have a label",
+    "D": "All subjects have a label and all objects have a compartment"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0063",
+   "type": "mcq",
+   "stem": "[OAuth scenario: Chris is integrating Google accounts for e-commerce site. Diagram: Client → E-commerce App → Google (OAuth flow steps 1-6).] When the e-commerce application creates an account for a Google user, where should that user's password be stored?",
+   "marks": 1,
+   "options": {
+    "A": "The password is stored in the e-commerce application's database",
+    "B": "The password is stored in memory on the e-commerce application's server",
+    "C": "The password is stored in Google's account management system",
+    "D": "The password is never stored; instead, a salted hash is stored in Google's account management system"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0064",
+   "type": "mcq",
+   "stem": "Questions like “What is your pet's name?” are examples of what type of identity proofing?",
+   "marks": 1,
+   "options": {
+    "A": "Knowledge-based authentication",
+    "B": "Dynamic knowledge-based authentication",
+    "C": "Out-of-band identity proofing",
+    "D": "A Type 3 authentication factor"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0065",
+   "type": "mcq",
+   "stem": "Madhuri creates a table that includes assigned privileges, objects, and subjects to manage access control for the systems she is responsible for. Each time a subject attempts to access an object, the systems check the table to ensure that the subject has the appropriate rights to the object. What type of access control system is Madhuri using?",
+   "marks": 1,
+   "options": {
+    "A": "A capability table",
+    "B": "An access control list",
+    "C": "An access control matrix",
+    "D": "A subject/object rights management system"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0066",
+   "type": "mcq",
+   "stem": "During a review of support tickets, Ben's organization discovered that password changes accounted for more than a quarter of its help desk's cases. Which of the following options would be MOST likely to decrease that number significantly?",
+   "marks": 1,
+   "options": {
+    "A": "Two-factor authentication",
+    "B": "Biometric authentication",
+    "C": "Self-service password reset",
+    "D": "Passphrases"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0067",
+   "type": "mcq",
+   "stem": "Brian's large organization has used RADIUS for AAA services for its network devices for years and has recently become aware of security issues with the unencrypted information transferred during authentication. How should Brian implement encryption for RADIUS?",
+   "marks": 1,
+   "options": {
+    "A": "Use the built-in encryption in RADIUS",
+    "B": "Implement RADIUS over its native UDP using TLS for protection",
+    "C": "Implement RADIUS over TCP using TLS for protection",
+    "D": "Use an AES256 pre-shared cipher between devices"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0068",
+   "type": "mcq",
+   "stem": "Jim wants to allow cloud-based applications to act on his behalf to access information from other sites. Which of the following tools can allow that?",
+   "marks": 1,
+   "options": {
+    "A": "Kerberos",
+    "B": "OAuth",
+    "C": "OpenID",
+    "D": "LDAP"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0069",
+   "type": "mcq",
+   "stem": "Ben's organization has had an issue with unauthorized access to applications and workstations during the lunch hour when employees aren't at their desk. What are the BEST types of session management solutions for Ben to recommend to help prevent this type of access?",
+   "marks": 1,
+   "options": {
+    "A": "Use session IDs for all access and verify system IP addresses of all workstations",
+    "B": "Set session timeouts for applications and use password-protected screensavers with inactivity timeouts on workstations",
+    "C": "Use session IDs for all applications, and use password-protected screensavers with inactivity timeouts on workstations",
+    "D": "Set session timeouts for applications and verify system IP addresses of all workstations"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0070",
+   "type": "mcq",
+   "stem": "[Hybrid federation diagram: Laptop → On-premises Data Center (Authentication) ↔ Trust relationship ↔ Cloud Service Provider (Service Access).] What type of authentication scenario is shown in the diagram?",
+   "marks": 1,
+   "options": {
+    "A": "Hybrid federation",
+    "B": "On-premise federation",
+    "C": "Cloud federation",
+    "D": "Kerberos federation"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0071",
+   "type": "mcq",
+   "stem": "Chris wants to control access to his facility while still identifying individuals. He also wants to ensure that the individuals are the people who are being admitted without significant ongoing costs. Which solutions from the following options would meet all of these requirements? (Reframed: Which ONE would NOT?)",
+   "marks": 1,
+   "options": {
+    "A": "Security guards and photo identification badges",
+    "B": "RFID badges and readers with PIN pads",
+    "C": "Magstripe badges and readers with PIN pads",
+    "D": "Security guards and magstripe readers"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0072",
+   "type": "mcq",
+   "stem": "A device like Yubikey or Titan Security Key is what type of Type 2 authentication factor?",
+   "marks": 1,
+   "options": {
+    "A": "A token",
+    "B": "A biometric identifier",
+    "C": "A smart card",
+    "D": "A PIV"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0073",
+   "type": "mcq",
+   "stem": "What authentication technology can be paired with OAuth to perform identity verification and obtain user profile information using a RESTful API?",
+   "marks": 1,
+   "options": {
+    "A": "SAML",
+    "B": "Shibboleth",
+    "C": "OpenID Connect",
+    "D": "Higgins"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0074",
+   "type": "mcq",
+   "stem": "Jim wants to implement an access control scheme that will ensure that users cannot delegate access. He also wants to enforce access control at the operating system level. What access control mechanism BEST fits these requirements?",
+   "marks": 1,
+   "options": {
+    "A": "Role-based access control",
+    "B": "Discretionary access control",
+    "C": "Mandatory access control",
+    "D": "Attribute-based access control"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0075",
+   "type": "mcq",
+   "stem": "Jesse wants to access a resource protected by a zero trust solution. What component of the system will he connect through to conduct a transaction?",
+   "marks": 1,
+   "options": {
+    "A": "The constrained interface",
+    "B": "The policy engine",
+    "C": "The policy decision point",
+    "D": "A policy enforcement point"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0076",
+   "type": "mcq",
+   "stem": "Ben uses a software-based token that changes its code every minute. What type of token is he using?",
+   "marks": 1,
+   "options": {
+    "A": "Asynchronous",
+    "B": "Smart card",
+    "C": "Synchronous",
+    "D": "Static"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0077",
+   "type": "mcq",
+   "stem": "Which of the following is NOT a commonly used single sign-on solution for internal networks?",
+   "marks": 1,
+   "options": {
+    "A": "Kerberos",
+    "B": "SENTRY",
+    "C": "RADIUS",
+    "D": "TACACS+"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0078",
+   "type": "mcq",
+   "stem": "Michelle works for a financial services company and wants to register customers for her web application. What type of authentication mechanism could she use for the initial login if she wants to quickly and automatically verify that the person is who they claim to be without having a previous relationship with them?",
+   "marks": 1,
+   "options": {
+    "A": "Request their Social Security number",
+    "B": "Use knowledge-based authentication",
+    "C": "Perform manual identity verification",
+    "D": "Use a biometric factor"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0079",
+   "type": "mcq",
+   "stem": "Megan's company wants to use Google accounts to allow users to quickly adopt their web application. What common cloud federation technologies will Megan need to implement? (Reframed: Which ONE is NOT needed?)",
+   "marks": 1,
+   "options": {
+    "A": "Kerberos",
+    "B": "OpenID",
+    "C": "OAuth",
+    "D": "RADIUS"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0080",
+   "type": "mcq",
+   "stem": "Session ID length and session ID entropy are both important to prevent what type of attack?",
+   "marks": 1,
+   "options": {
+    "A": "Denial of service",
+    "B": "Cookie theft",
+    "C": "Session guessing",
+    "D": "Man-in-the-middle attacks"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0081",
+   "type": "mcq",
+   "stem": "Naomi's organization employs an access control system that evaluates the security readiness of a device before granting network access. The system checks whether the device is fully patched, if the latest antimalware scans are clean, and if the firewall is active. If there are potential issues that may indicate a compromise, she is not permitted to connect and must contact support. What type of access control scheme BEST describes this type of process?",
+   "marks": 1,
+   "options": {
+    "A": "MAC",
+    "B": "Rule-based access control",
+    "C": "Role-based access control",
+    "D": "Risk-based access control"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0082",
+   "type": "mcq",
+   "stem": "Isabelle wants to prevent privilege escalation attacks via her organization's service accounts. Which of the following security practices is BEST suited to this?",
+   "marks": 1,
+   "options": {
+    "A": "Remove unnecessary rights",
+    "B": "Disable interactive login for service accounts",
+    "C": "Limit when accounts can log in",
+    "D": "Use meaningless or randomized names for service accounts"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0083",
+   "type": "mcq",
+   "stem": "[NIST Zero Trust diagram: Control Plane (Policy Engine + Policy Administrator) and Data Plane (Subject → PEP → Resource).] In the NIST zero trust model, what component includes the Policy Engine and the Policy Administrator as shown here?",
+   "marks": 1,
+   "options": {
+    "A": "The control plane module",
+    "B": "The policy decision point",
+    "C": "The enterprise management console",
+    "D": "The zero trust engine"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0084",
+   "type": "mcq",
+   "stem": "Jim's organization has joined a federation and has begun to allow users from other organizations in the federation to use their services. What services will the members of other organizations be able to use?",
+   "marks": 1,
+   "options": {
+    "A": "All of the services provided by Jim's company",
+    "B": "Only the services their own organization provides",
+    "C": "Services that Jim's company grants access to on a per-user or per-organization basis",
+    "D": "Only services that they pay for that Jim's company provides"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0085",
+   "type": "mcq",
+   "stem": "Kristen wants to control access to an application in her organization based on a combination of staff member's job titles, the permissions each group of titles need for the application, and the time of day and location. What type of control scheme should she select?",
+   "marks": 1,
+   "options": {
+    "A": "ABAC",
+    "B": "DAC",
+    "C": "MAC",
+    "D": "Role BAC"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0086",
+   "type": "mcq",
+   "stem": "When Alex sets the permissions shown here as one of many users on a Linux server, what type of access control model is he leveraging? (Linux 'ls -la' output showing owner/group/other permissions for 'alex.txt')",
+   "marks": 1,
+   "options": {
+    "A": "Role-based access control",
+    "B": "Rule-based access control",
+    "C": "Mandatory access control (MAC)",
+    "D": "Discretionary access control (DAC)"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0087",
+   "type": "mcq",
+   "stem": "Joanna leads her organization's identity management team and wants to ensure that roles are properly updated when staff members change to new positions. What issue should she focus on for those staff members to avoid future issues with role definition?",
+   "marks": 1,
+   "options": {
+    "A": "Registration",
+    "B": "Privilege creep",
+    "C": "Deprovisioning",
+    "D": "Accountability"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0088",
+   "type": "mcq",
+   "stem": "What type of authorization mechanism is shown in the following chart? (Group | Privileges table: System admins - Superuser/domain admin; App admins - Sudo on app servers; etc.)",
+   "marks": 1,
+   "options": {
+    "A": "RBAC",
+    "B": "ABAC",
+    "C": "MAC",
+    "D": "DAC"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0089",
+   "type": "mcq",
+   "stem": "Samantha wants to log all sudo activity under individual user accounts. What FIRST step should she take to ensure that she captures privileged use like this?",
+   "marks": 1,
+   "options": {
+    "A": "Prevent the use of sudo su -",
+    "B": "Add all users to the sudoers file",
+    "C": "Remove all users from the sudoers file",
+    "D": "Disable sudo"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "cissp-identity-access-management-bank-0090",
+   "type": "mcq",
+   "stem": "Brian wants to explain the benefits of an on-premises federation approach for identity to his organization's leadership. Which of the following is NOT a common benefit of a federated identity system?",
+   "marks": 1,
+   "options": {
+    "A": "Ease of account management",
+    "B": "Single sign-on",
+    "C": "Prevention of brute-force attacks",
+    "D": "Increased productivity"
+   },
+   "answer": "C"
+  }
+ ],
+ "category": "CISSP",
+ "body": " Identity Access Management"
+}

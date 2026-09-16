@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-biotechnology-bank",
+ "title": "UNEB UACE - Biotechnology",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-biotechnology-bank-0001",
+   "type": "mcq",
+   "stem": "Fermentation by yeast produces:",
+   "marks": 1,
+   "options": {
+    "A": "CO₂ only",
+    "B": "Ethanol and CO₂",
+    "C": "Glucose and O₂",
+    "D": "Lactic acid only"
+   },
+   "answer": "Ethanol and CO₂"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0002",
+   "type": "mcq",
+   "stem": "Yoghurt is made by bacterial fermentation of milk. The product is:",
+   "marks": 1,
+   "options": {
+    "A": "Ethanol",
+    "B": "Citric acid",
+    "C": "Lactic acid",
+    "D": "Carbon dioxide"
+   },
+   "answer": "Lactic acid"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0003",
+   "type": "mcq",
+   "stem": "Human insulin for diabetics is now produced using:",
+   "marks": 1,
+   "options": {
+    "A": "Pigs only",
+    "B": "Horses",
+    "C": "Genetically engineered bacteria",
+    "D": "Chemical synthesis only"
+   },
+   "answer": "Genetically engineered bacteria"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0004",
+   "type": "mcq",
+   "stem": "Amylase enzyme breaks down:",
+   "marks": 1,
+   "options": {
+    "A": "Proteins",
+    "B": "Fats",
+    "C": "Starch",
+    "D": "DNA"
+   },
+   "answer": "Starch"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0005",
+   "type": "mcq",
+   "stem": "An advantage of using enzymes in biological washing powders is:",
+   "marks": 1,
+   "options": {
+    "A": "Work at high temperature",
+    "B": "Work at lower temperatures, saving energy",
+    "C": "Only remove colours",
+    "D": "Replace all washing chemicals"
+   },
+   "answer": "Work at lower temperatures, saving energy"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0006",
+   "type": "mcq",
+   "stem": "What is a transgenic organism?",
+   "marks": 1,
+   "options": {
+    "A": "An organism from two countries",
+    "B": "An organism with a gene from another species",
+    "C": "An organism without DNA",
+    "D": "An extinct organism"
+   },
+   "answer": "An organism with a gene from another species"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0007",
+   "type": "mcq",
+   "stem": "Penicillin antibiotic is produced by:",
+   "marks": 1,
+   "options": {
+    "A": "Yeast",
+    "B": "A mould (Penicillium fungus)",
+    "C": "Bacteria",
+    "D": "Plants"
+   },
+   "answer": "A mould (Penicillium fungus)"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0008",
+   "type": "mcq",
+   "stem": "Cloning produces organisms that are:",
+   "marks": 1,
+   "options": {
+    "A": "Genetically different from parent",
+    "B": "Genetically identical to parent",
+    "C": "Sexually reproduced",
+    "D": "Always larger than parent"
+   },
+   "answer": "Genetically identical to parent"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0009",
+   "type": "mcq",
+   "stem": "Fermentation must be anaerobic (no oxygen) for yeast to produce:",
+   "marks": 1,
+   "options": {
+    "A": "More CO₂",
+    "B": "Ethanol",
+    "C": "Glucose",
+    "D": "Water only"
+   },
+   "answer": "Ethanol"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0010",
+   "type": "mcq",
+   "stem": "Lactase enzyme is used to produce:",
+   "marks": 1,
+   "options": {
+    "A": "Cheese",
+    "B": "Lactose-free milk",
+    "C": "Yoghurt",
+    "D": "Butter"
+   },
+   "answer": "Lactose-free milk"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0011",
+   "type": "mcq",
+   "stem": "A concern about GM crops is:",
+   "marks": 1,
+   "options": {
+    "A": "They grow too slowly",
+    "B": "Possible unintended effects on ecosystems and non-target organisms",
+    "C": "They are always smaller",
+    "D": "They require more water"
+   },
+   "answer": "Possible unintended effects on ecosystems and non-target organisms"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0012",
+   "type": "mcq",
+   "stem": "Selective breeding differs from genetic engineering because selective breeding:",
+   "marks": 1,
+   "options": {
+    "A": "Is faster",
+    "B": "Only uses natural reproduction and selection over generations",
+    "C": "Uses DNA directly",
+    "D": "Creates transgenic organisms"
+   },
+   "answer": "Only uses natural reproduction and selection over generations"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0013",
+   "type": "mcq",
+   "stem": "In bread making, yeast produces CO₂ which:",
+   "marks": 1,
+   "options": {
+    "A": "Adds flavour",
+    "B": "Makes bread rise (leavening)",
+    "C": "Kills bacteria",
+    "D": "Produces the brown crust"
+   },
+   "answer": "Makes bread rise (leavening)"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0014",
+   "type": "mcq",
+   "stem": "Pectinase is used in juice production to:",
+   "marks": 1,
+   "options": {
+    "A": "Add flavour",
+    "B": "Clarify juice by breaking down cloudy pectin",
+    "C": "Add vitamin C",
+    "D": "Increase sugar content"
+   },
+   "answer": "Clarify juice by breaking down cloudy pectin"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0015",
+   "type": "mcq",
+   "stem": "Biofuels produced by fermentation use:",
+   "marks": 1,
+   "options": {
+    "A": "Crude oil",
+    "B": "Sugarcane and corn (crops)",
+    "C": "Natural gas",
+    "D": "Coal"
+   },
+   "answer": "Sugarcane and corn (crops)"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0016",
+   "type": "mcq",
+   "stem": "Temperature of 37°C is ideal for most fermentation because:",
+   "marks": 1,
+   "options": {
+    "A": "Yeast dies at lower temperatures",
+    "B": "Optimal for enzyme activity without denaturation",
+    "C": "Steam is produced",
+    "D": "No other reason"
+   },
+   "answer": "Optimal for enzyme activity without denaturation"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0017",
+   "type": "mcq",
+   "stem": "Which enzyme would you use to remove a grass protein stain from clothes?",
+   "marks": 1,
+   "options": {
+    "A": "Amylase",
+    "B": "Lipase",
+    "C": "Protease",
+    "D": "Lactase"
+   },
+   "answer": "Protease"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0018",
+   "type": "mcq",
+   "stem": "Dolly the sheep was a famous example of:",
+   "marks": 1,
+   "options": {
+    "A": "Selective breeding",
+    "B": "Natural mutation",
+    "C": "Cloning from adult somatic cell",
+    "D": "Genetic engineering"
+   },
+   "answer": "Cloning from adult somatic cell"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0019",
+   "type": "mcq",
+   "stem": "Cheese production relies on:",
+   "marks": 1,
+   "options": {
+    "A": "Yeast only",
+    "B": "Bacteria producing lactic acid and rennet-like enzymes",
+    "C": "Chemical preservatives",
+    "D": "Heating alone"
+   },
+   "answer": "Bacteria producing lactic acid and rennet-like enzymes"
+  },
+  {
+   "id": "uneb_uace-biotechnology-bank-0020",
+   "type": "mcq",
+   "stem": "The main advantage of using microorganisms to produce medicines is:",
+   "marks": 1,
+   "options": {
+    "A": "They are decorative",
+    "B": "Large-scale production of identical human proteins (e.g. insulin) without animal welfare concerns",
+    "C": "They are always cheaper",
+    "D": "No safety testing needed"
+   },
+   "answer": "Large-scale production of identical human proteins (e.g. insulin) without animal welfare concerns"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Biotechnology"
+}

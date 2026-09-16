@@ -1,0 +1,98 @@
+{
+ "exam": "IELTS",
+ "region": "International / Global",
+ "slug": "IELTS",
+ "question_banks": 0,
+ "github_sources": [
+  {
+   "repo": "hwttop5/ielts-reading-past-papers",
+   "url": "https://github.com/hwttop5/ielts-reading-past-papers",
+   "stars": 45,
+   "desc": "一个面向雅思阅读备考的 Web 应用，民间题库与 AI 助教助力高效备考。|  A web app for IELTS Reading prep, built around a community question bank and an AI coach. "
+  },
+  {
+   "repo": "FONG-JHIH/IELTS-Speaking-Question-Bank-Data-Mining-and-Keyword-Visualization-Analysis",
+   "url": "https://github.com/FONG-JHIH/IELTS-Speaking-Question-Bank-Data-Mining-and-Keyword-Visualization-Analysis",
+   "stars": 1,
+   "desc": "Project Overview This project analyzes the common English keywords from the IELTS SPEAK document \"【完整版口语题库-题目版】2024年9-12月口语题库-新.pdf\". Using stopword filtering a"
+  },
+  {
+   "repo": "HowarYe/HRU-IELTS-QuestionBank",
+   "url": "https://github.com/HowarYe/HRU-IELTS-QuestionBank",
+   "stars": 0,
+   "desc": "Offline IELTS speaking question bank - 122 topic cards, fully offline static web app"
+  },
+  {
+   "repo": "yeetest/ielts-question-bank-test",
+   "url": "https://github.com/yeetest/ielts-question-bank-test",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "sajalbd89-beep/ielts-question-bank-gemeni",
+   "url": "https://github.com/sajalbd89-beep/ielts-question-bank-gemeni",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "wwlwong/phase-2-project-ielts-question-bank",
+   "url": "https://github.com/wwlwong/phase-2-project-ielts-question-bank",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "lilialla/bandwise",
+   "url": "https://github.com/lilialla/bandwise",
+   "stars": 3,
+   "desc": "Bandwise — IELTS Coach for Claude Code. 10 skills covering writing/listening/reading/speaking + mock, vocab, question-bank, planner & progress dashboard. Eviden"
+  },
+  {
+   "repo": "Richard-LLLL/dr-ielts",
+   "url": "https://github.com/Richard-LLLL/dr-ielts",
+   "stars": 2,
+   "desc": "Dr. IELTS — Multi-Agent AI IELTS Coach. LangGraph + dual-layer memory, 12 agents, 5-tier training, Cambridge 9-21 question bank."
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Free IELTS Practice and Sample Tests",
+   "url": "https://takeielts.britishcouncil.org",
+   "class": "site"
+  },
+  {
+   "title": "IELTS Academic Practice Test (with Free PDF Answers)",
+   "url": "https://ielts.idp.com",
+   "class": "site"
+  },
+  {
+   "title": "IELTS Practice Test Samples PDF",
+   "url": "https://www.scribd.com",
+   "class": "site"
+  },
+  {
+   "title": "IELTS Past Papers and Question Bank",
+   "url": "https://studymind.co.uk",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Free IELTS Online Test - IELTS Practice Test 2026",
+   "url": "https://www.bestmytest.com",
+   "class": "site"
+  },
+  {
+   "title": "IELTS Sample Papers PDF: Free Download & Practice Tests",
+   "url": "https://www.shiksha.com",
+   "class": "site"
+  },
+  {
+   "title": "IELTS sample test questions and practice papers",
+   "url": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions",
+   "class": "site"
+  },
+  {
+   "title": "Free IELTS Online Test - IELTS Practice Test 2026 - BestMyTest",
+   "url": "https://www.bestmytest.com/ielts/test",
+   "class": "site"
+  }
+ ]
+}

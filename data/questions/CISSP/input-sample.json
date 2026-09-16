@@ -1,0 +1,46 @@
+{
+ "code": "cissp-input-sample-bank",
+ "title": "CISSP - Input Sample",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "cissp-input-sample-bank-0001",
+   "type": "theory",
+   "stem": "What is the capital of France?",
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "cissp-input-sample-bank-0002",
+   "type": "theory",
+   "stem": "Which planet is known as the Red Planet?",
+   "marks": 1,
+   "answer": "Mars"
+  },
+  {
+   "id": "cissp-input-sample-bank-0003",
+   "type": "theory",
+   "stem": "How many bits are in a byte?",
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "cissp-input-sample-bank-0004",
+   "type": "theory",
+   "stem": "Which of these are prime numbers?",
+   "marks": 1,
+   "answer": "A, C"
+  },
+  {
+   "id": "cissp-input-sample-bank-0005",
+   "type": "theory",
+   "stem": "At sea level water boils at what temperature?",
+   "marks": 1,
+   "answer": "2"
+  }
+ ],
+ "category": "CISSP",
+ "body": "Input Sample"
+}

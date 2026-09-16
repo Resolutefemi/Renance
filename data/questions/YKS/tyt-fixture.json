@@ -1,0 +1,93 @@
+{
+ "code": "yks-tyt-fixture-bank",
+ "title": "YKS - Tyt Fixture",
+ "version": 1,
+ "questionCount": 6,
+ "totalMarks": 6,
+ "questions": [
+  {
+   "id": "yks-tyt-fixture-bank-0001",
+   "type": "mcq",
+   "stem": "Birebir aynı şık defekti test edilir mi?",
+   "marks": 1,
+   "options": {
+    "A": "alfa",
+    "B": "beta",
+    "C": "alfa",
+    "D": "gama",
+    "E": "delta"
+   },
+   "answer": "1"
+  },
+  {
+   "id": "yks-tyt-fixture-bank-0002",
+   "type": "mcq",
+   "stem": "Answer indeksi aralık dışı defekti?",
+   "marks": 1,
+   "options": {
+    "A": "a",
+    "B": "b",
+    "C": "c",
+    "D": "d",
+    "E": "e"
+   },
+   "answer": "9"
+  },
+  {
+   "id": "yks-tyt-fixture-bank-0003",
+   "type": "mcq",
+   "stem": "Beşten az şık defekti?",
+   "marks": 1,
+   "options": {
+    "A": "a",
+    "B": "b",
+    "C": "c"
+   },
+   "answer": "0"
+  },
+  {
+   "id": "yks-tyt-fixture-bank-0004",
+   "type": "mcq",
+   "stem": "Encoding mojibake Ã¼ defekti test edilir mi?",
+   "marks": 1,
+   "options": {
+    "A": "a",
+    "B": "b",
+    "C": "c",
+    "D": "d",
+    "E": "e"
+   },
+   "answer": "0"
+  },
+  {
+   "id": "yks-tyt-fixture-bank-0005",
+   "type": "mcq",
+   "stem": "Boş şık defekti?",
+   "marks": 1,
+   "options": {
+    "A": "a",
+    "B": "",
+    "C": "c",
+    "D": "d",
+    "E": "e"
+   },
+   "answer": "0"
+  },
+  {
+   "id": "yks-tyt-fixture-bank-0006",
+   "type": "mcq",
+   "stem": "Solution-answer sayısal tutarsızlık (WARN) testi?",
+   "marks": 1,
+   "options": {
+    "A": "10",
+    "B": "20",
+    "C": "30",
+    "D": "40",
+    "E": "50"
+   },
+   "answer": "0"
+  }
+ ],
+ "category": "YKS",
+ "body": "Tyt Fixture"
+}
