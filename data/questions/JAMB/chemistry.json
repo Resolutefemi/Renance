@@ -2,8 +2,8 @@
  "code": "jamb-chemistry-bank",
  "title": "JAMB Chemistry | Past Questions Bank",
  "version": 3,
- "questionCount": 2749,
- "totalMarks": 2749,
+ "questionCount": 2873,
+ "totalMarks": 2873,
  "questions": [
   {
    "id": "jamb-chemistry-bank-0006",
@@ -39925,6 +39925,1813 @@
    "answer": "B",
    "explanation": "<p>40H &minus; 4e &rarr; 2H2O + O2is the reaction of sun at the anode in the electrolysis of CuSO4 (g) using platinum particles. Option A,C,D are not formed as a result of the equation</p>",
    "video": "https://www.youtube.com/embed/r_6-B1KGcdg?start=843"
+  },
+  {
+   "id": "jamb-chemistry-bank-2791",
+   "type": "mcq",
+   "stem": "A charge in the temperature of a saturated solution disturbs the equilibrium between the",
+   "options": {
+    "A": "Dissolved solute and the solvent",
+    "B": "Solvent and the undissolved solute",
+    "C": "Dissolved solute and the undissolved solute",
+    "D": "Dissolved solute and the solution"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2792",
+   "type": "mcq",
+   "stem": "The diagram above. Y is",
+   "options": {
+    "A": "fused CaO",
+    "B": "H₂O",
+    "C": "NaOH",
+    "D": "Concentrated H₂SO₄"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "In the diagram, Y is the conical flask containing the drying agent through which the gas passes before collection. Concentrated H₂SO₄ is the standard drying agent used to dry acidic or neutral gases in laboratory gas preparation. Z is the thistle funnel for adding acid, and X is the water trough for collection by downward displacement of water.",
+   "year": 2017,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1777637355/ALOC-Questions/Chemistry/UTME/2017/Chemistry_2017_Q30-31_gkt7yx.png"
+  },
+  {
+   "id": "jamb-chemistry-bank-2793",
+   "type": "mcq",
+   "stem": "Which of the following mixtures of gases is likely to burn in flame",
+   "options": {
+    "A": "Neon and hydrogen",
+    "B": "Nitrogen and helium",
+    "C": "Helium and neon",
+    "D": "Neon and nitrogen"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2794",
+   "type": "mcq",
+   "stem": "What volume (dm³) of water will be added to 10dm³ of 2.0 mol/dm³ HCl acid solution to give a final solution of 0.5 mol/dm³?",
+   "options": {
+    "A": "30",
+    "B": "40",
+    "C": "20",
+    "D": "50"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Using the dilution formula: C₁V₁ = C₂V₂. C₁ = 2.0 mol/dm³; V₁ = 10 dm³; C₂ = 0.5 mol/dm³. V₂ = (2.0 × 10) ÷ 0.5 = 40 dm³. Volume of water added = V₂ − V₁ = 40 − 10 = 30 dm³.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2795",
+   "type": "mcq",
+   "stem": "The carbon atoms in ethane are",
+   "options": {
+    "A": "sp² hybridized",
+    "B": "sp³ hybridized",
+    "C": "sp⁴ hybridized",
+    "D": "sp hybridized"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ethane (CH₃-CH₃) contains only C-C and C-H single bonds. Each carbon forms 4 single bonds using sp³ hybridization (one s orbital + three p orbitals combine to form 4 equivalent sp³ hybrid orbitals arranged tetrahedrally). sp² is for alkenes; sp is for alkynes; sp⁴ does not exist.",
+   "year": 2017
+  },
+  {
+   "id": "jamb-chemistry-bank-2796",
+   "type": "mcq",
+   "stem": "PCl₅(g) = PCl₃(g) + Cl₂(g). In the reaction above, a decrease in pressure will",
+   "options": {
+    "A": "Decelerate the reaction",
+    "B": "Increase yield of PCl₃",
+    "C": "Increase the yield of PCl₅",
+    "D": "Accurate the reaction"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "By Le Chatelier's principle, decreasing pressure favours the side with more moles of gas. The left side has 1 mole of gas and the right side has 2 moles (PCl₃ + Cl₂). A decrease in pressure therefore shifts equilibrium to the right, increasing the yield of PCl₃ and Cl₂.",
+   "year": 2015
+  },
+  {
+   "id": "jamb-chemistry-bank-2797",
+   "type": "mcq",
+   "stem": "If the volume of a given mass of a gas at 0°C is 29.5cm³. What will be the volume of the gas at 15°C, given that the pressure remains constant?",
+   "options": {
+    "A": "31.6",
+    "B": "62.2",
+    "C": "32.7",
+    "D": "31.1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Using Charles's Law: V₁/T₁ = V₂/T₂ at constant pressure. T₁ = 0°C = 273 K; V₁ = 29.5 cm³; T₂ = 15°C = 288 K. V₂ = 29.5 × 288 ÷ 273 = 31.12 ≈ 31.1 cm³.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2798",
+   "type": "mcq",
+   "stem": "How many bonding pairs are present in carbon(iv)oxide?",
+   "options": {
+    "A": "4",
+    "B": "3",
+    "C": "2",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Carbon(IV) oxide is CO₂, with the structure O=C=O. Each C=O double bond consists of 2 bonding pairs (one sigma bond and one pi bond). With two C=O double bonds, the total number of bonding pairs = 2 × 2 = 4. There are no lone pairs on carbon and 2 lone pairs on each oxygen, but these are not bonding pairs.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2799",
+   "type": "mcq",
+   "stem": "The intermediate product formed when ethanol is progressively oxidized to ethanoic acid with potassium heptaoxodichromate(VI) is",
+   "options": {
+    "A": "Ethanol",
+    "B": "Methanol",
+    "C": "Butanal",
+    "D": "Propanal"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2002
+  },
+  {
+   "id": "jamb-chemistry-bank-2800",
+   "type": "mcq",
+   "stem": "The diagram represents",
+   "options": {
+    "A": "A spontaneous reaction",
+    "B": "An exothermic reaction",
+    "C": "A non-spontaneous reaction",
+    "D": "An endothermic reaction"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "In the diagram, the reactants are at a higher potential energy level than the products, meaning energy is released during the reaction. This is the profile of an exothermic reaction (ΔH < 0). The activated complex at the peak represents the transition state. An endothermic reaction would show products at a higher energy level than reactants.",
+   "year": 2016,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1777636389/ALOC-Questions/Chemistry/UTME/2016/Chemistry_2016_Q46_ayhbpf.png"
+  },
+  {
+   "id": "jamb-chemistry-bank-2801",
+   "type": "mcq",
+   "stem": "A gas X diffuses twice as fast as gas Y under the same conditions. If the relative molecular mass of X is 28. Calculate the relative molecular mass of Y",
+   "options": {
+    "A": "120",
+    "B": "14",
+    "C": "56",
+    "D": "112"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2002
+  },
+  {
+   "id": "jamb-chemistry-bank-2802",
+   "type": "mcq",
+   "stem": "Pollution of underground water by metal ions is very likely in a soil that has high",
+   "options": {
+    "A": "Acidity",
+    "B": "Alkalinity",
+    "C": "Chloride content",
+    "D": "Nitrate content"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2803",
+   "type": "mcq",
+   "stem": "The IUPAC name of the compound CF₃CHBrCl is",
+   "options": {
+    "A": "2-chloro-2-bromo-1,1,1-trifluoroethane",
+    "B": "2-bromo-2-chloro-1,1,1-trifluoroethane",
+    "C": "1-bromo-1-chloro-2,2,2-trifluoroethane",
+    "D": "1,1,1-trifluoro-2-bromo-2-chloroethane"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In CF₃CHBrCl: C1 carries the three F atoms, C2 carries Br, Cl, and H. Numbering to give lowest locants: C1 = CF₃ (F gets positions 1,1,1), C2 = CHBrCl (Br and Cl at position 2). Substituents listed alphabetically: bromo before chloro before fluoro. IUPAC name: 1-bromo-1-chloro-2,2,2-trifluoroethane.",
+   "year": 2019
+  },
+  {
+   "id": "jamb-chemistry-bank-2804",
+   "type": "mcq",
+   "stem": "Zn + 2HCl → ZnCl₂ + H₂. What happens to zinc in the above reaction?",
+   "options": {
+    "A": "oxidized",
+    "B": "a reactant",
+    "C": "reduced",
+    "D": "a metal"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In this reaction, zinc (Zn) goes from an oxidation state of 0 in the element to +2 in ZnCl₂. A loss of electrons and an increase in oxidation number constitutes oxidation. Zinc is therefore oxidised. Hydrogen simultaneously goes from +1 in HCl to 0 in H₂ gas, meaning hydrogen is reduced. Zinc is the reducing agent.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2805",
+   "type": "mcq",
+   "stem": "Phosphorous is stored under water to precvent it from",
+   "options": {
+    "A": "Dehydrating",
+    "B": "Becoming inert",
+    "C": "Smelling",
+    "D": "Catching fire"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2806",
+   "type": "mcq",
+   "stem": "A compound contains 31.91% potassium, 28.93% chlorine and the rest oxygen. What is the chemical formular of the compound",
+   "options": {
+    "A": "KCLO3",
+    "B": "KCLO4",
+    "C": "KCLO",
+    "D": "KCLO2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2002
+  },
+  {
+   "id": "jamb-chemistry-bank-2807",
+   "type": "mcq",
+   "stem": "The dehydration of CH₃CH₂CH₂CH₂OH will give?",
+   "options": {
+    "A": "HC≡CCH₂CH₃",
+    "B": "CH₂=CCH₂CH₃",
+    "C": "CH₃C≡CCH₃",
+    "D": "CH₃CH=CHCH₃"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Dehydration of an alcohol removes water (H₂O) to form an alkene. CH₃CH₂CH₂CH₂OH (butan-1-ol) loses -OH and an adjacent -H to form a C=C double bond. The major product by Zaitsev's rule is the more substituted alkene: CH₃CH=CHCH₃ (but-2-ene). The double bond forms between C2 and C3, giving the more stable internal alkene.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2808",
+   "type": "mcq",
+   "stem": "How many isomers has the organic compound represented by the formula C₃H₈O?",
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "C₃H₈O can be alcohols or ethers. Alcohols: propan-1-ol (CH₃CH₂CH₂OH), propan-2-ol (CH₃CHOHCH₃). Ether: methoxyethane (CH₃OCH₂CH₃). These give 3 structural isomers in total for C₃H₈O.",
+   "year": 2024
+  },
+  {
+   "id": "jamb-chemistry-bank-2809",
+   "type": "mcq",
+   "stem": "What volume of 0.5 M H₂SO₄ will exactly neutralize 20 cm³ of 0.1 M NaOH solution?",
+   "options": {
+    "A": "2.0 cm³",
+    "B": "5.0 cm³",
+    "C": "6.8 cm³",
+    "D": "8.3 cm³"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Reaction: H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. Moles of NaOH = 0.1 × 20/1000 = 0.002 mol. Moles of H₂SO₄ required = 0.002/2 = 0.001 mol. Volume of H₂SO₄ = 0.001/0.5 = 0.002 dm³ = 2.0 cm³.",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2810",
+   "type": "mcq",
+   "stem": "The number of isomers formed by C₆H₁₄ is",
+   "options": {
+    "A": "4",
+    "B": "5",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Alkanes exhibit structural isomerism due to different arrangements of carbon atoms. For hexane (C₆H₁₄), the isomers are: n-hexane (straight chain) 2-methylpentane (one methyl group on carbon 2) 3-methylpentane (one methyl group on carbon 3) 2,2-dimethylbutane (two methyl groups on carbon 2) 2,3-dimethylbutane (two methyl groups on carbons 2 and 3) There are 5 structural isomers of hexane. The number of isomers formed by C₆H₁₄ is 5.",
+   "year": 2015
+  },
+  {
+   "id": "jamb-chemistry-bank-2811",
+   "type": "mcq",
+   "stem": "Deliquenscent substances are used for",
+   "options": {
+    "A": "Cooling",
+    "B": "Wetting",
+    "C": "Melting",
+    "D": "Drying"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2812",
+   "type": "mcq",
+   "stem": "When cathode rays are detected onto the electrode of an electrometer, the instrument becomes",
+   "options": {
+    "A": "Negatively charged",
+    "B": "Positively charged",
+    "C": "Neutral",
+    "D": "Bipolar"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2813",
+   "type": "mcq",
+   "stem": "P₁V₁ = P₂V₂ supports?",
+   "options": {
+    "A": "Charles's law",
+    "B": "Boyle's law",
+    "C": "Graham's law",
+    "D": "Avogadro's law"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "P₁V₁ = P₂V₂ is the mathematical expression of Boyle's Law, which states that at constant temperature, the pressure of a fixed mass of gas is inversely proportional to its volume.",
+   "year": 2015
+  },
+  {
+   "id": "jamb-chemistry-bank-2814",
+   "type": "mcq",
+   "stem": "In the preparation of oxygen by heating KCIO3 in the presence of MnC2, only moderate hear is needed because the catalyst acts by",
+   "options": {
+    "A": "Increasing the surface area of the reactant",
+    "B": "Increasing the rate of the reaction",
+    "C": "Lowering the energy barrier of the reaction",
+    "D": "Lowering the pressure of the reaction"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2010
+  },
+  {
+   "id": "jamb-chemistry-bank-2815",
+   "type": "mcq",
+   "stem": "A compound gives an orange red colour to a non luminous flame. This compound is likely to contain",
+   "options": {
+    "A": "Ca2+",
+    "B": "Fe3+",
+    "C": "Fe2+",
+    "D": "Na+"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2010
+  },
+  {
+   "id": "jamb-chemistry-bank-2816",
+   "type": "mcq",
+   "stem": "NH4CI(g) ⇌ NH3(g) + HCI(g) The reaction above can only attain equilibrium if",
+   "options": {
+    "A": "It is in a closed system",
+    "B": "It is in an open system",
+    "C": "One of the products is removed",
+    "D": "A gaseous reactant is added"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2005
+  },
+  {
+   "id": "jamb-chemistry-bank-2817",
+   "type": "mcq",
+   "stem": "The reactions below represent neutralization reactions. In which of them is the value of ΔH highest? A. CH₃CH₂COOH + KOH → CH₃CH₂COOK + H₂O B. NH₄OH + HCl → NH₄Cl + H₂O C. NaOH + HCl → NaCl + H₂O D. CH₃COOH + NaOH → CH₃COONa + H₂O",
+   "options": {
+    "A": "CH₃CH₂COOH + KOH → CH₃CH₂COOK + H₂O",
+    "B": "NH₄OH + HCl → NH₄Cl + H₂O",
+    "C": "NaOH + HCl → NaCl + H₂O",
+    "D": "CH₃COOH + NaOH → CH₃COONa + H₂O"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The enthalpy of neutralization is highest when both the acid and base are strong. The neutralization of a strong acid (HCl) with a strong base (NaOH) involves the simple combination of H⁺ and OH⁻ ions: H⁺ + OH⁻ → H₂O, releasing approximately −57.3 kJ/mol. Reactions involving weak acids or weak bases release less energy because energy is partly used to ionise the weak electrolyte. NaOH + HCl gives the highest ΔH in magnitude.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2818",
+   "type": "mcq",
+   "stem": "The idea of planetary electrons was that of",
+   "options": {
+    "A": "Bohr",
+    "B": "Thompson",
+    "C": "Rutherford",
+    "D": "Dalton"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2819",
+   "type": "mcq",
+   "stem": "The most suitable metal that can be used as a lightening conductor is",
+   "options": {
+    "A": "Aluminium",
+    "B": "Iron",
+    "C": "Copper",
+    "D": "Silver"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2005
+  },
+  {
+   "id": "jamb-chemistry-bank-2820",
+   "type": "mcq",
+   "stem": "2H₂ + O₂ → 2H₂O. From the equation above, calculate the volume of unreacted oxygen gas if a mixture of 50cm³ of hydrogen and 75cm³ of oxygen are involved.",
+   "options": {
+    "A": "85cm³",
+    "B": "50cm³",
+    "C": "125cm³",
+    "D": "55cm³"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "From the equation: 2 volumes H₂ react with 1 volume O₂. Volume of O₂ needed to react with 50cm³ H₂ = 50/2 = 25cm³. Volume of O₂ available = 75cm³. Volume of O₂ unreacted = 75 − 25 = 50cm³.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2821",
+   "type": "mcq",
+   "stem": "The property of chlorine which causes hydrogen chloride to be more ionic than the chlorine molecule is its",
+   "options": {
+    "A": "Electrovalency",
+    "B": "Electron affinity",
+    "C": "Electropositivity",
+    "D": "Electronegativity"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2822",
+   "type": "mcq",
+   "stem": "A few drops of conc HCl are added to about 10cm³ of a solution of pH 3.4. The pH of the resulting mixture is?",
+   "options": {
+    "A": "less than 3.4",
+    "B": "greater than 3.4",
+    "C": "unaltered",
+    "D": "the same as that of the pure water"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "pH 3.4 means the solution is already acidic. Adding concentrated HCl (a strong acid) increases the concentration of H⁺ ions in the solution. A higher H⁺ concentration means a lower pH. Therefore the resulting pH will be less than 3.4.",
+   "year": 2020
+  },
+  {
+   "id": "jamb-chemistry-bank-2823",
+   "type": "mcq",
+   "stem": "The following non-metals form acidic oxides with oxygen except?",
+   "options": {
+    "A": "phosphorus",
+    "B": "sulphur",
+    "C": "carbon",
+    "D": "chlorine"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Most non-metals form acidic oxides. Phosphorus forms P₂O₅, sulphur forms SO₂ and SO₃, and carbon forms CO₂, all of which are acidic oxides that dissolve in water to form acids. Chlorine oxides (such as Cl₂O and Cl₂O₇) do exist, but chlorine does not directly and simply react with oxygen to form a stable acidic oxide under normal conditions.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2824",
+   "type": "mcq",
+   "stem": "A gas when mixed with oxygen, it produces a very hot and easily controllable flame. What is the name of the flame and where is it used?",
+   "options": {
+    "A": "Acetylene flame; miners' lamp",
+    "B": "Oxy-ethylene; hunters' torch",
+    "C": "Oxy-ethylene flame; miners' lamp",
+    "D": "Oxy-ethylene flame; cutting and welding metals"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Ethyne (acetylene, C₂H₂) mixed with oxygen produces the oxyacetylene (oxy-ethylene) flame, which burns at over 3000°C. This extremely hot flame is easily controllable and is used industrially for cutting and welding metals. It is not used in miners' lamps or hunters' torches.",
+   "year": 2024
+  },
+  {
+   "id": "jamb-chemistry-bank-2825",
+   "type": "mcq",
+   "stem": "n monosaccharide ⇌ (P/Q) polysaccharide + n water. In the process above, P and Q respectively represent",
+   "options": {
+    "A": "Condensation and hydrolysis",
+    "B": "Fermentation and condensation",
+    "C": "Polymerization and hydrolysis",
+    "D": "Polymerization and condensation"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In the forward direction (monosaccharides → polysaccharide + water), water is eliminated - this is condensation polymerization. In the reverse direction (polysaccharide + water → monosaccharides), the polymer is broken down by water - this is hydrolysis. Therefore P = condensation and Q = hydrolysis.",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2826",
+   "type": "mcq",
+   "stem": "Give the common name for the following compound (CH₃)₂ CH CH₂ -Br",
+   "options": {
+    "A": "Isobutyl bromide",
+    "B": "Methyl bromide",
+    "C": "Propyl bromide",
+    "D": "Butyl bromide"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The compound (CH₃)₂CHCH₂Br has an isobutyl group (a branched four-carbon group) attached to bromine. The isobutyl group is derived from isobutane (2-methylpropane) by removing a hydrogen from the terminal carbon. The common name of the compound is therefore isobutyl bromide.",
+   "year": 2021
+  },
+  {
+   "id": "jamb-chemistry-bank-2827",
+   "type": "mcq",
+   "stem": "In order to electroplate a spoon with silver, the arrangement of the electrolytic cell is?",
+   "options": {
+    "A": "the anode is a silver rod and the cathode is the spoon",
+    "B": "the anode is the spoon and the cathode is a silver rod",
+    "C": "the electrolyte is silver trioxonitrate(v) solution and the cathode is a silver rod",
+    "D": "the electrolyte is silver trioxonitrate(v) solution and the anode is the spoon"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In electroplating, the object to be plated (the spoon) is the cathode, where silver ions are deposited as silver metal. The anode is a rod of pure silver, which dissolves to replenish the silver ions in solution. The electrolyte is silver trioxonitrate(V) solution. The correct arrangement is: silver rod as anode, spoon as cathode, silver nitrate as electrolyte.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2828",
+   "type": "mcq",
+   "stem": "The relative atomic mass of a naturally occurring lithium consisting of 90% ⁷₃Li and 10% ⁶₃Li is",
+   "options": {
+    "A": "6.2",
+    "B": "6.8",
+    "C": "7.1",
+    "D": "6.9"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Relative atomic mass = (90/100 × 7) + (10/100 × 6) = 6.3 + 0.6 = 6.9.",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2829",
+   "type": "mcq",
+   "stem": "Which of these compounds is a normal salt",
+   "options": {
+    "A": "NaHS",
+    "B": "NaSO4",
+    "C": "NaHCO3",
+    "D": "Na2CO3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2830",
+   "type": "mcq",
+   "stem": "The compound CH₃CH(NH₂)CH₂CH₂CH₃ is an example of a",
+   "options": {
+    "A": "primary amine",
+    "B": "tertiary amine",
+    "C": "quaternary amine",
+    "D": "secondary amine"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In CH₃CH(NH₂)CH₂CH₂CH₃, the nitrogen atom of the -NH₂ group is bonded to only one carbon atom. A primary amine has nitrogen attached to exactly one carbon, so this compound is a primary amine.",
+   "year": 2025
+  },
+  {
+   "id": "jamb-chemistry-bank-2831",
+   "type": "mcq",
+   "stem": "What is the pH of 0.001 mol dm⁻³ solution of sodium hydroxide?",
+   "options": {
+    "A": "1400%",
+    "B": "1300%",
+    "C": "1200%",
+    "D": "1100%"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "NaOH is a strong base: [OH⁻] = 0.001 = 10⁻³ mol dm⁻³. pOH = -log(10⁻³) = 3. pH = 14 - pOH = 14 - 3 = 11.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-chemistry-bank-2832",
+   "type": "mcq",
+   "stem": "Electronic configuration of element 13 in the subsidiary energy level is",
+   "options": {
+    "A": "1s²2s²2p⁶3s²3p¹",
+    "B": "1s²2s²2p⁴3p¹3s¹",
+    "C": "1s²2s²2p⁶3s²3p³",
+    "D": "1s¹2s²2p⁶3s²3p⁴"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Element 13 is Aluminium (Al) with 13 electrons. Filling in order: 1s²2s²2p⁶3s²3p¹. Total: 2 + 2 + 6 + 2 + 1 = 13 electrons. This matches option A.",
+   "year": 2015
+  },
+  {
+   "id": "jamb-chemistry-bank-2833",
+   "type": "mcq",
+   "stem": "What is the mass percentage of carbon (C) in methane (CH₄)? (The molar mass of carbon is approximately 12 g/mol.)",
+   "options": {
+    "A": "25%",
+    "B": "12%",
+    "C": "75%",
+    "D": "50%"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Molar mass of CH₄ = 12 + (4 × 1) = 16 g/mol. Mass percentage of C = (mass of C ÷ molar mass of CH₄) × 100 = (12 ÷ 16) × 100 = 75%.",
+   "year": 2023
+  },
+  {
+   "id": "jamb-chemistry-bank-2834",
+   "type": "mcq",
+   "stem": "Elements X and Y have electronic configurations 1s²2s²2p⁴ and 1s²2s²2p⁶3s²3p¹ respectively. When they combine, the formula of the compound formed is",
+   "options": {
+    "A": "XY",
+    "B": "X₂Y",
+    "C": "Y₂X₃",
+    "D": "X₂Y₃"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "X (1s²2s²2p⁴) is oxygen (6 valence electrons, forms O²⁻). Y (1s²2s²2p⁶3s²3p¹) is aluminium (3 valence electrons, forms Al³⁺). To balance charges: 2Al³⁺ + 3O²⁻ → Al₂O₃. In the formula Y₂X₃: Y = Al, X = O, giving Al₂O₃. The formula is Y₂X₃.",
+   "year": 2019
+  },
+  {
+   "id": "jamb-chemistry-bank-2835",
+   "type": "mcq",
+   "stem": "If the solubility of KNO₃ at 30°C is 3.10 mol/dm³, a solution containing 303g/dm³ KNO₃ is likely to be",
+   "options": {
+    "A": "saturated",
+    "B": "unsaturated",
+    "C": "supersaturated",
+    "D": "at saturation point"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Molar mass of KNO₃ = 39 + 14 + 48 = 101 g/mol. Concentration of the solution = 303 ÷ 101 = 3.0 mol/dm³. The solubility at 30°C is 3.10 mol/dm³. Since 3.0 mol/dm³ is less than the solubility limit, the solution is unsaturated.",
+   "year": 2024
+  },
+  {
+   "id": "jamb-chemistry-bank-2836",
+   "type": "mcq",
+   "stem": "What is the molar mass of water (H₂O)?",
+   "options": {
+    "A": "18 g/mol",
+    "B": "22 g/mol",
+    "C": "16 g/mol",
+    "D": "12 g/mol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Molar mass of H₂O = (2 × atomic mass of H) + (atomic mass of O) = (2 × 1) + 16 = 18 g/mol. This means one mole of water molecules has a mass of 18 grams.",
+   "year": 2023
+  },
+  {
+   "id": "jamb-chemistry-bank-2837",
+   "type": "mcq",
+   "stem": "The number of electronic shells contained in an atom with electron configuration 1s²2s²2p⁶3s²3p⁶4s² is",
+   "options": {
+    "A": "3",
+    "B": "2",
+    "C": "4",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The electron configuration 1s²2s²2p⁶3s²3p⁶4s² corresponds to shells n=1, n=2, n=3, and n=4. Counting the principal quantum numbers occupied: shell 1 (1s), shell 2 (2s, 2p), shell 3 (3s, 3p), and shell 4 (4s) - giving 4 electronic shells. This is Calcium (Z=20).",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2838",
+   "type": "mcq",
+   "stem": "The mass of silver deposited when a current of 10A is passed through a solution of silver salt for 4830s is [Ag = 108, F = 96500 Cmol-1]",
+   "options": {
+    "A": "108.0g",
+    "B": "54.0g",
+    "C": "27.0g",
+    "D": "13.5g"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2839",
+   "type": "mcq",
+   "stem": "In the troposphere, the two types of pollutants are?",
+   "options": {
+    "A": "Gaseous and particulate pollutants",
+    "B": "Carbon and metallic pollutants",
+    "C": "Natural and man-made pollutants",
+    "D": "Sulphuric and nitrogenous pollutants"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Tropospheric pollutants are classified into two main types: gaseous pollutants (such as CO, SO₂, NO₂, and hydrocarbons) and particulate pollutants (such as dust, smoke, soot, and aerosols). This classification is based on the physical state of the pollutant, which determines how it disperses and causes harm in the atmosphere.",
+   "year": 2021
+  },
+  {
+   "id": "jamb-chemistry-bank-2840",
+   "type": "mcq",
+   "stem": "The compound that is used as an anaesthetic is",
+   "options": {
+    "A": "CHCI3",
+    "B": "CH2C2",
+    "C": "CH3CI",
+    "D": "CCI4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2010
+  },
+  {
+   "id": "jamb-chemistry-bank-2841",
+   "type": "mcq",
+   "stem": "The reaction above is",
+   "options": {
+    "A": "Carboxylation",
+    "B": "Decarboxylation",
+    "C": "Acidification",
+    "D": "Esterification"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2842",
+   "type": "mcq",
+   "stem": "The empirical mass of C₆H₁₂O₆ is [H = 1, C = 12, O = 16]",
+   "options": {
+    "A": "90",
+    "B": "180",
+    "C": "45",
+    "D": "30"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The empirical formula is found by simplifying the ratio C:H:O = 6:12:6 = 1:2:1, giving CH₂O. Empirical mass = 12 + 2(1) + 16 = 30 g/mol.",
+   "year": 2025
+  },
+  {
+   "id": "jamb-chemistry-bank-2843",
+   "type": "mcq",
+   "stem": "2H2 + O2 → 2H2O ΔH = -571Kj In equation above, how much heat will be liberated if 12.0g of hydrogen is burnt in excess oxygen?",
+   "options": {
+    "A": "-1713kJ",
+    "B": "+1142kJ",
+    "C": "-571kJ",
+    "D": "-1142kJ"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2005
+  },
+  {
+   "id": "jamb-chemistry-bank-2844",
+   "type": "mcq",
+   "stem": "The table shows the compositions of the atmosphere of planet X: CO₂ = 4%, N₂ = 72%, O₂ = 24%. Which of these gases are present in higher percentages on earth?",
+   "options": {
+    "A": "CO₂ and O₂",
+    "B": "N₂ and CO₂",
+    "C": "CO₂, O₂ and N₂",
+    "D": "O₂ and N₂"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "On earth: N₂ ≈ 78%, O₂ ≈ 21%, CO₂ ≈ 0.04%. On planet X: CO₂ = 4%, N₂ = 72%, O₂ = 24%. Comparing each gas: CO₂ on planet X (4%) is far higher than on earth (0.04%). O₂ on planet X (24%) is higher than on earth (21%). N₂ on earth (78%) is higher than on planet X (72%). The gases present in higher percentages on planet X compared to earth are CO₂ and O₂.",
+   "year": 2022,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1777639629/ALOC-Questions/Chemistry/UTME/2022/Chemistry_2022_Q39_dvzam2.png"
+  },
+  {
+   "id": "jamb-chemistry-bank-2845",
+   "type": "mcq",
+   "stem": "The produce of the combustion of candle wax are",
+   "options": {
+    "A": "Carbon(IV) oxide and water",
+    "B": "Oxygen and water",
+    "C": "Hydrogen and water",
+    "D": "Carbon(II)oxide an d water"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2846",
+   "type": "mcq",
+   "stem": "The droplets of water observed around a bottle of milk taken out of though refrigerator is due to the fact that the",
+   "options": {
+    "A": "Temperature of the milk drops as it loses heat into the surroundings",
+    "B": "Saturated vapour pressure of the milk is equal to the atmospheric pressure",
+    "C": "Water vapour in the air around loses some of its energy to the bottle",
+    "D": "Water vapour in the air around the bottle gains some energy from the bottle"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2010
+  },
+  {
+   "id": "jamb-chemistry-bank-2847",
+   "type": "mcq",
+   "stem": "Carbon exists naturally in the combined state as",
+   "options": {
+    "A": "Diamond",
+    "B": "Coal",
+    "C": "Wood",
+    "D": "Graphite"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2848",
+   "type": "mcq",
+   "stem": "8g of CH₄ occupies 11.2 dm³ at S.T.P. What volume would 22g of CH₃CH₂CH₃ occupy under the same condition?",
+   "options": {
+    "A": "3.7dm³",
+    "B": "11.2dm³",
+    "C": "22.4dm³",
+    "D": "33dm³"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Molar mass of CH₄ = 16 g/mol. 8g of CH₄ = 8/16 = 0.5 mol, occupying 11.2 dm³ → 1 mol occupies 22.4 dm³ at STP. Molar mass of CH₃CH₂CH₃ (propane) = 44 g/mol. Moles of propane = 22/44 = 0.5 mol. Volume = 0.5 × 22.4 = 11.2 dm³.",
+   "year": 2020
+  },
+  {
+   "id": "jamb-chemistry-bank-2849",
+   "type": "mcq",
+   "stem": "The periodic classification is an arrangement of the elements in order of their",
+   "options": {
+    "A": "atomic weights",
+    "B": "isotopic weights",
+    "C": "molecular weights",
+    "D": "atomic numbers"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The modern periodic table (based on Moseley's work) arranges elements in order of increasing atomic number (number of protons). Earlier versions (Mendeleev's) used atomic mass, but the modern classification is based strictly on atomic number, which determines the chemical properties of elements.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-chemistry-bank-2850",
+   "type": "mcq",
+   "stem": "In the laboratory preparation of chlorine from concentrated hydrochloric acid in the presence of potassium tetraoxomanganate (VII), the product is dried by passing it through",
+   "options": {
+    "A": "Concentrated tetraoxosulphate (VI) acid",
+    "B": "Anhydrous calcium chloride",
+    "C": "Calcium oxide",
+    "D": "Sodium hydroxide"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Chlorine gas is dried by passing it through concentrated H₂SO₄ (tetraoxosulphate VI acid). Anhydrous CaCl₂ reacts with Cl₂; CaO and NaOH are alkaline and would absorb the acidic chlorine gas. Concentrated H₂SO₄ is an effective drying agent that does not react with Cl₂.",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2851",
+   "type": "mcq",
+   "stem": "An isotope has an atomic number of 15 and a mass number of 31. The number of protons it contains is",
+   "options": {
+    "A": "16",
+    "B": "15",
+    "C": "31",
+    "D": "46"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The atomic number of an element equals the number of protons in its nucleus. Since the atomic number is 15, the atom contains 15 protons. The number of neutrons = mass number − atomic number = 31 − 15 = 16.",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2852",
+   "type": "mcq",
+   "stem": "The table shows formulae of some ions (Cations: Al³⁺, Ca²⁺, Cu²⁺, Fe³⁺, K⁺; Anions: Br⁻, CO₃²⁻, NO₃⁻, S²⁻, SO₄²⁻). In which of these compounds is the formula not correct?",
+   "options": {
+    "A": "Aluminiumtetraoxosulphate(VI), Al₂(SO₄)₃",
+    "B": "Calciumtrioxonitrate(V), Ca(NO₃)₂",
+    "C": "Iron(III)bromide, Fe₃Br",
+    "D": "Potassiumsulphide, K₂S"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Iron(III) has a charge of 3+ and bromide has a charge of 1−. To balance: 1 Fe³⁺ needs 3 Br⁻, giving FeBr₃ as the correct formula. Fe₃Br shown in option C is incorrect. Al₂(SO₄)₃ is correct (2×3+ = 3×2−). Ca(NO₃)₂ is correct (1×2+ = 2×1−). K₂S is correct (2×1+ = 1×2−).",
+   "year": 2024,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1777640437/ALOC-Questions/Chemistry/UTME/2024/Chemistry_2024_Q21_zbpbek.jpg"
+  },
+  {
+   "id": "jamb-chemistry-bank-2853",
+   "type": "mcq",
+   "stem": "3Cu + pHNO3 → 3Cu(NO3)2 + 4H2O + xNO In the equation above, the values of p and x respectively are",
+   "options": {
+    "A": "1 and 3",
+    "B": "2 and 3",
+    "C": "6 and 2",
+    "D": "8 and 2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2854",
+   "type": "mcq",
+   "stem": "When sugar is dissolved in tea, the reaction is always accompanied by",
+   "options": {
+    "A": "Positive entropy change",
+    "B": "Negative entropy change",
+    "C": "No entropy change",
+    "D": "A minimum entropy change"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2855",
+   "type": "mcq",
+   "stem": "Cu₂S(s) + O₂(g) = 2Cu(s) + SO₂(g). In the above reaction, the oxidation number of Cu changes from ___ to ___?",
+   "options": {
+    "A": "+1 to 0",
+    "B": "0 to +2",
+    "C": "+2 to +1",
+    "D": "0 to +1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "In Cu₂S, copper has oxidation number +1 (since S is -2 and there are 2 Cu atoms: 2x + (-2) = 0, x = +1). In the product Cu(s), copper is in its elemental state with oxidation number 0. Therefore Cu changes from +1 to 0 (reduction).",
+   "year": 2015
+  },
+  {
+   "id": "jamb-chemistry-bank-2856",
+   "type": "mcq",
+   "stem": "When pure aluminum metal is heated to red hot in the presence of nitrogen gas, the compound formed is",
+   "options": {
+    "A": "AI2N",
+    "B": "AIN",
+    "C": "AI2N2",
+    "D": "AI2N3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2005
+  },
+  {
+   "id": "jamb-chemistry-bank-2857",
+   "type": "mcq",
+   "stem": "What volume of oxygen will remain after reacting 8 cm³ of hydrogen gas with 20 cm³ of oxygen gas?",
+   "options": {
+    "A": "10 cm³",
+    "B": "12 cm³",
+    "C": "14 cm³",
+    "D": "16 cm³"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Reaction: 2H₂ + O₂ → 2H₂O. Molar ratio H₂:O₂ = 2:1. O₂ required to react with 8 cm³ H₂ = 8/2 = 4 cm³. O₂ remaining = 20 - 4 = 16 cm³.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-chemistry-bank-2858",
+   "type": "mcq",
+   "stem": "If 0.75 mole of cyclopropane and 0.66 mole of oxygen are mixed in a vessel with a total pressure of 0.7 atmosphere. What is the partial pressure of oxygen in the mixture",
+   "options": {
+    "A": "0.55 atmosphere",
+    "B": "0.44 atmosphere",
+    "C": "0.33 atmosphere",
+    "D": "0.22 atmosphere"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2002
+  },
+  {
+   "id": "jamb-chemistry-bank-2859",
+   "type": "mcq",
+   "stem": "H2(g) + Br2(g) → 2BHr(g) The reaction above is carried out at 250C. If Δ H is kJ mol-1 and Δ S is -106J mol-1K-1 the reaction will",
+   "options": {
+    "A": "Proceed spontaneously at lower temperatures",
+    "B": "Not proceed spontaneously at the given temperature",
+    "C": "Proceed spontaneously at the given temperature",
+    "D": "[proceed in the reverse direction at the given temperature"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2860",
+   "type": "mcq",
+   "stem": "I. H = 1s1 II. O = 1s22s22p4 III. N = 1s22s22p3 IV. Zn = 1s22s22p63s23p64s23d10 From the above, which of the following pairs is likely to be paramagnetic?",
+   "options": {
+    "A": "I and II",
+    "B": "I and III",
+    "C": "I and IV",
+    "D": "III and IV"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2861",
+   "type": "mcq",
+   "stem": "An oxide X02 has a vapour density of 32. What is the atomic mass of X [O = 16]",
+   "options": {
+    "A": "32",
+    "B": "20",
+    "C": "14",
+    "D": "12"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2862",
+   "type": "mcq",
+   "stem": "Ca(OH)₂(s) + 2NH₄Cl(s) → CaCl₂(s) + 2H₂O(l) + X. In the reaction above, X is",
+   "options": {
+    "A": "NO₂",
+    "B": "NH₃",
+    "C": "N₂O",
+    "D": "NO₂"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "This is the laboratory preparation of ammonia by heating calcium hydroxide with ammonium chloride. The products are calcium chloride, water, and ammonia gas (NH₃). X = 2NH₃. The reaction: Ca(OH)₂ + 2NH₄Cl → CaCl₂ + 2H₂O + 2NH₃↑.",
+   "year": 2017
+  },
+  {
+   "id": "jamb-chemistry-bank-2863",
+   "type": "mcq",
+   "stem": "If a solution contains 4.8g of Tetraoxosulphate (VI) acid. Calculate the amount of copper(II) oxide that will react with it [CU = 64, O = 16, S = 32, H = 1]",
+   "options": {
+    "A": "0.8g",
+    "B": "4.0g",
+    "C": "40.0g",
+    "D": "80.0g"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2864",
+   "type": "mcq",
+   "stem": "3CU(s) + 8HNO3(aq) → 3Cu(NO3)2(aq) + 4H2O(I) + 2NO(g) In the equation above, copper is",
+   "options": {
+    "A": "An electron acceptor",
+    "B": "A base",
+    "C": "An oxidizing agent",
+    "D": "A reducing agent"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2865",
+   "type": "mcq",
+   "stem": "What is the concentration of a solution containing 2 g of NaOH in 100 cm³ of solution? [Na = 23, O = 16, H = 1]",
+   "options": {
+    "A": "0.40 mol dm⁻³",
+    "B": "0.50 mol dm⁻³",
+    "C": "0.05 mol dm⁻³",
+    "D": "0.30 mol dm⁻³"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Molar mass of NaOH = 23 + 16 + 1 = 40 g mol⁻¹. Moles of NaOH = 2/40 = 0.05 mol. Volume = 100 cm³ = 0.1 dm³. Concentration = 0.05/0.1 = 0.50 mol dm⁻³.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-chemistry-bank-2866",
+   "type": "mcq",
+   "stem": "Na₂X ⇌ 2Na⁺ + X²⁻. The bond between Na and X is likely to be",
+   "options": {
+    "A": "covalent",
+    "B": "dative",
+    "C": "ionic",
+    "D": "metallic"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The equation shows Na₂X dissociating into 2Na⁺ cations and X²⁻ anion in solution. The formation of oppositely charged ions (Na⁺ and X²⁻) upon dissociation is characteristic of ionic compounds. Ionic bonding results from the electrostatic attraction between positively and negatively charged ions formed by electron transfer from the metal (Na) to the non-metal (X).",
+   "year": 2024
+  },
+  {
+   "id": "jamb-chemistry-bank-2867",
+   "type": "mcq",
+   "stem": "25cm3 of a gas X contains Zmolecules at 150C and 75mmHg. How many molecules will 25cmm3 of another gas Y contain at the same temperature and pressure",
+   "options": {
+    "A": "2Y",
+    "B": "2Z",
+    "C": "Z",
+    "D": "Y"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2868",
+   "type": "mcq",
+   "stem": "An organic compound which decolourises bromine water is likely to be?",
+   "options": {
+    "A": "C₃H₈",
+    "B": "C₂H₆",
+    "C": "C₄H₁₀",
+    "D": "C₂H₄"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Bromine water is decolourised by compounds containing a C=C double bond (alkenes) or C≡C triple bond (alkynes) through addition reactions. C₂H₄ is ethene, an alkene with a double bond: C₂H₄ + Br₂ → C₂H₄Br₂ (colourless). C₃H₈, C₂H₆, and C₄H₁₀ are all alkanes, which do not react with bromine water under normal conditions.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2869",
+   "type": "mcq",
+   "stem": "Calculate the amount in moles of a gas which occupies 10.5 dm³ at 6 atm and 30°C [R = 0.082 atm dm³ K⁻¹ mol⁻¹]",
+   "options": {
+    "A": "2.536",
+    "B": "1.623",
+    "C": "4.736",
+    "D": "0.394"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Using the ideal gas equation PV = nRT. T = 30 + 273 = 303 K. n = PV/RT = (6 × 10.5)/(0.082 × 303) = 63/24.846 = 2.536 mol.",
+   "year": 2017
+  },
+  {
+   "id": "jamb-chemistry-bank-2870",
+   "type": "mcq",
+   "stem": "Forms a layer of oxide on the metal If the heat of combustion of hydrogen is -285.8kJ. what is the heat of formation of water",
+   "options": {
+    "A": "-285.8Kj",
+    "B": "-571.6kJ",
+    "C": "+571kJ",
+    "D": "+285.8kJ"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2871",
+   "type": "mcq",
+   "stem": "By what amount must the temperature of 200 cm³ of nitrogen at 27°C be increased to double the pressure if the final volume is 150 cm³? (Assume ideality)",
+   "options": {
+    "A": "150°C",
+    "B": "177°C",
+    "C": "75°C",
+    "D": "120°C"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Using the general gas law: P₁V₁/T₁ = P₂V₂/T₂. T₁ = 27 + 273 = 300 K, V₁ = 200 cm³, P₂ = 2P₁, V₂ = 150 cm³. T₂ = T₁ × (P₂ × V₂)/(P₁ × V₁) = 300 × (2 × 150)/200 = 300 × 1.5 = 450 K. Increase in temperature = 450 - 300 = 150 K = 150°C.",
+   "year": 2019
+  },
+  {
+   "id": "jamb-chemistry-bank-2872",
+   "type": "mcq",
+   "stem": "In the industrial production of H₂ from water gas, the CO₂ produced along with the H₂ is removed by",
+   "options": {
+    "A": "Washing under pressure",
+    "B": "Drying over phosphorus (V) oxide",
+    "C": "Passing the mixture through limewater",
+    "D": "Using ammoniacal copper (I) chloride"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Water gas shift reaction: CO + H₂O → CO₂ + H₂ This produces hydrogen but also carbon dioxide as a byproduct. CO₂ removal method: In industrial hydrogen production from water gas, CO₂ is removed by washing under pressure, where the gas mixture is passed through water under high pressure to dissolve and remove the carbon dioxide.",
+   "year": 2015
+  },
+  {
+   "id": "jamb-chemistry-bank-2873",
+   "type": "mcq",
+   "stem": "In the laboratory preparation of oxygen using potassium trioxochlorate(V), tetraoxomanganate(VII) is usually not recommended in modern laboratory because",
+   "options": {
+    "A": "it forms explosive mixture with carbonaceous materials",
+    "B": "it is explosive",
+    "C": "it reacts with the catalyst",
+    "D": "it is hazardous"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Potassium trioxochlorate(V) (KClO₃) is a strong oxidizing agent. When mixed with carbonaceous or organic materials (such as rubber, grease, or carbon), it can form highly explosive mixtures. This safety hazard is the specific reason it is no longer recommended for routine laboratory use.",
+   "year": 2025
+  },
+  {
+   "id": "jamb-chemistry-bank-2874",
+   "type": "mcq",
+   "stem": "220g of carbon dioxide contains how many moles?",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Molar mass of CO₂ = 12 + (16 × 2) = 44 g/mol. Moles = mass ÷ molar mass = 220 ÷ 44 = 5 moles.",
+   "year": 2021
+  },
+  {
+   "id": "jamb-chemistry-bank-2875",
+   "type": "mcq",
+   "stem": "NH₃(g) + HCl(s) → NH₄Cl(s). The entropy change in the system above is",
+   "options": {
+    "A": "positive",
+    "B": "zero",
+    "C": "negative",
+    "D": "intermediate"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In this reaction, a gas (NH₃) and a solid (HCl) combine to form a solid (NH₄Cl). The disappearance of the gaseous phase results in a large decrease in disorder. Since the number of gaseous moles decreases from 1 to 0, entropy decreases, giving a negative entropy change (ΔS < 0).",
+   "year": 2015
+  },
+  {
+   "id": "jamb-chemistry-bank-2876",
+   "type": "mcq",
+   "stem": "N2O4(g) ⇌ 2NO2(g)",
+   "options": {
+    "A": "A constant volume",
+    "B": "An increase in pressure",
+    "C": "A decrease in pressure",
+    "D": "A decrease in volume"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2877",
+   "type": "mcq",
+   "stem": "In the electrolysis of brine using neutral electrodes, which ion is discharged at the anode?",
+   "options": {
+    "A": "2H⁺",
+    "B": "Na⁺",
+    "C": "Cl⁻",
+    "D": "OH⁻"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "At the anode, oxidation occurs. Both Cl⁻ and OH⁻ ions are present, but Cl⁻ is selectively discharged due to its higher concentration in brine: 2Cl⁻ → Cl₂ + 2e⁻. Na⁺ and H⁺ are discharged at the cathode, not the anode.",
+   "year": 2025
+  },
+  {
+   "id": "jamb-chemistry-bank-2878",
+   "type": "mcq",
+   "stem": "N₂O₄(aq) ⇌ 2NO₂(g), ΔH = +ve. In the reaction above, an increase in temperature will",
+   "options": {
+    "A": "Increase the reactant production",
+    "B": "Increase the value of the equilibrium constant",
+    "C": "Shift the equilibrium to the left",
+    "D": "Decrease the value of the equilibrium constant"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Since ΔH is positive (endothermic), the forward reaction absorbs heat. By Le Chatelier's principle, increasing temperature favours the endothermic (forward) direction, shifting equilibrium to the right and producing more NO₂. This increases the equilibrium constant K, since K increases with temperature for endothermic reactions.",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2879",
+   "type": "mcq",
+   "stem": "When 10g of sodium hydroxide is dissolved in 1000cm3 of water, the solution formed is approximately [Na = 23, H = 1, O = 16]",
+   "options": {
+    "A": "0.01 mol dm-3",
+    "B": "0.10 mol dm-3",
+    "C": "0.25 mol dm-3",
+    "D": "0.50 mol dm-3"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2880",
+   "type": "mcq",
+   "stem": "2C2H2(g) + 5O2(g) 4CO2(g) + 2H2O(g) In the reaction, the mass of carbon (IV) oxide produced on burning 78g of ethyne is [C = 12, O = 16, H = 1]",
+   "options": {
+    "A": "39",
+    "B": "352g",
+    "C": "264g",
+    "D": "156g"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2881",
+   "type": "mcq",
+   "stem": "The gas that gives brown colouration in brown ring test",
+   "options": {
+    "A": "Co2",
+    "B": "NO2",
+    "C": "NO",
+    "D": "CO"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2002
+  },
+  {
+   "id": "jamb-chemistry-bank-2882",
+   "type": "mcq",
+   "stem": "The IUPAC name for CH₃CH₂COOCH₂CH₃ is",
+   "options": {
+    "A": "methylpropanoate",
+    "B": "ethylethanoate",
+    "C": "ethylpropanoate",
+    "D": "methylethanoate"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "CH₃CH₂COOCH₂CH₃ is an ester. The acid part is CH₃CH₂COO- (propanoic acid, 3 carbons), and the alcohol part is -CH₂CH₃ (ethyl group, 2 carbons). IUPAC name: ethyl propanoate. The alcohol portion names the ester first (ethyl), followed by the acid portion (-anoate): ethylpropanoate.",
+   "year": 2019
+  },
+  {
+   "id": "jamb-chemistry-bank-2883",
+   "type": "mcq",
+   "stem": "The heaviest isotope of hydrogen is",
+   "options": {
+    "A": "Deuterium",
+    "B": "Protium",
+    "C": "Tritium",
+    "D": "Positron"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Hydrogen has three naturally occurring isotopes: Protium (¹H) with mass number 1 (no neutrons), Deuterium (²H) with mass number 2 (1 neutron), and Tritium (³H) with mass number 3 (2 neutrons). Tritium is the heaviest isotope of hydrogen. Positron is not an isotope of hydrogen - it is an antiparticle of the electron.",
+   "year": 2024
+  },
+  {
+   "id": "jamb-chemistry-bank-2884",
+   "type": "mcq",
+   "stem": "What is the percentage by mass of oxygen in Al2(SO4)3.2H2O",
+   "options": {
+    "A": "14.29%",
+    "B": "25.39%",
+    "C": "50.79%",
+    "D": "59.25%"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2885",
+   "type": "mcq",
+   "stem": "The pollutant usually present in a city which generates its electricity from coal?",
+   "options": {
+    "A": "fog",
+    "B": "carbon(ii)oxide",
+    "C": "smog",
+    "D": "sulphur(iv)oxide"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Coal contains significant amounts of sulphur. When coal is burned to generate electricity, sulphur is oxidised to sulphur(IV) oxide (SO₂). SO₂ is the primary pollutant associated with coal-burning power stations. It causes acid rain and respiratory problems. Smog results from photochemical reactions, and CO is produced from incomplete combustion rather than coal-burning power stations specifically.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2886",
+   "type": "mcq",
+   "stem": "2SO2(g) + O2(g) ⇌ 2SO3(g) The equilibrium constant for the reaction above is increased by [ΔH = -189kJ mol -1]",
+   "options": {
+    "A": "Increasing the temperature of the system",
+    "B": "Increasing the pressure of the system",
+    "C": "The addition of a catalyst to the system",
+    "D": "Increasing the surface area of the vessel"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2887",
+   "type": "mcq",
+   "stem": "The gas that is the most dangerous pollutant to humans is",
+   "options": {
+    "A": "Carbon(IV) oxide",
+    "B": "Nitrogen (II)oxide",
+    "C": "Hydrogen sulphide",
+    "D": "Sulphur(IV) oxide"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2005
+  },
+  {
+   "id": "jamb-chemistry-bank-2888",
+   "type": "mcq",
+   "stem": "The oxidation number of iodine in KIO₃ is",
+   "options": {
+    "A": "7",
+    "B": "3",
+    "C": "5",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In KIO₃: K = +1, O = -2. Let I = x. +1 + x + 3(-2) = 0 → 1 + x - 6 = 0 → x = +5. The oxidation number of iodine in KIO₃ is +5.",
+   "year": 2017
+  },
+  {
+   "id": "jamb-chemistry-bank-2889",
+   "type": "mcq",
+   "stem": "An organic functional group which can likely decolourise ammoniacal silver nitrate is?",
+   "options": {
+    "A": "alkene",
+    "B": "alkane",
+    "C": "alkyne",
+    "D": "alkanol"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Ammoniacal silver nitrate (Tollens' reagent) is used to test for terminal alkynes (those with a C≡C-H bond). Terminal alkynes react with ammoniacal silver nitrate to form a white precipitate of silver acetylide, effectively decolourising the reagent. Alkanes are unreactive, alkenes do not react with Tollens' reagent, and alkanols do not produce this reaction.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2890",
+   "type": "mcq",
+   "stem": "An organic compound which liberates carbon(iv)oxide from trioxocarbonate(iv) solution is likely to be?",
+   "options": {
+    "A": "C₂H₅OH",
+    "B": "C₃H₄",
+    "C": "C₆H₆",
+    "D": "CH₃COOH"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "A compound that liberates CO₂ from a carbonate (trioxocarbonate) solution must be an acid stronger than carbonic acid. Ethanoic acid (CH₃COOH) reacts with sodium carbonate: 2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂. Ethanol, propyne, and benzene are not acidic enough to displace CO₂ from carbonate solutions.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2891",
+   "type": "mcq",
+   "stem": "Which of he following pairs of substances will react further with oxygen to form a higher oxide",
+   "options": {
+    "A": "SO2 and NO",
+    "B": "CO2 and H2O",
+    "C": "CO and CO2",
+    "D": "NO and H2O"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2892",
+   "type": "mcq",
+   "stem": "MnO₄⁻(aq) + Y + 5Fe²⁺(aq) → Mn²⁺(aq) + 5Fe³⁺(aq) + 4H₂O(l). In the equation above, Y is",
+   "options": {
+    "A": "10H⁺(aq)",
+    "B": "5H⁺(aq)",
+    "C": "8H⁺(aq)",
+    "D": "4H⁺(aq)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Balancing the half-equation for MnO₄⁻ in acidic solution: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O. The 8H⁺ ions are needed to balance the 4 oxygen atoms from MnO₄⁻ (each O needs 2H⁺ to form H₂O), and to balance the overall charge. Therefore Y = 8H⁺(aq).",
+   "year": 2016
+  },
+  {
+   "id": "jamb-chemistry-bank-2893",
+   "type": "mcq",
+   "stem": "Which of the followinig respresents hybridization in ethyne?",
+   "options": {
+    "A": "Sp2",
+    "B": "Sp2d",
+    "C": "Sp3",
+    "D": "sp"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2894",
+   "type": "mcq",
+   "stem": "Balance the following redox reaction: Fe₂O₃ + CO → Fe + CO₂",
+   "options": {
+    "A": "Fe₂O₃ + CO → 2Fe + 2CO₂",
+    "B": "2Fe₂O₃ + 3CO → 4Fe + 3CO₂",
+    "C": "Fe₂O₃ + 2CO → 2Fe + 2CO₂",
+    "D": "Fe₂O₃ + 3CO → 2Fe + 3CO₂"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Balancing Fe₂O₃ + CO → Fe + CO₂. Fe: 2 on left, so 2Fe on right. O: Fe₂O₃ has 3 oxygen atoms. Each CO takes 1 oxygen to become CO₂, so 3CO are needed to remove all 3 oxygens: Fe₂O₃ + 3CO → 2Fe + 3CO₂. Check: Fe: 2=2; O: 3+3=6 on left, 6 on right; C: 3=3. Balanced.",
+   "year": 2023
+  },
+  {
+   "id": "jamb-chemistry-bank-2895",
+   "type": "mcq",
+   "stem": "In which of the following reactions can the oxidation number of nitrogen be said to have increased",
+   "options": {
+    "A": "FeSO4(aq) + NO(g) → Fe(NO)SO4(S)",
+    "B": "2NO(g) + O2(g) → 2NO2(g)",
+    "C": "NO(g) + CI2(g) → NOCI2(l)",
+    "D": "NO(g) + Br2(l) → NOBr2(l)"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2005
+  },
+  {
+   "id": "jamb-chemistry-bank-2896",
+   "type": "mcq",
+   "stem": "The boiling of fat and aqueous caustic soda is referred as",
+   "options": {
+    "A": "Saponification",
+    "B": "Esterification",
+    "C": "Acidification",
+    "D": "Hydrolysis"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2002
+  },
+  {
+   "id": "jamb-chemistry-bank-2897",
+   "type": "mcq",
+   "stem": "NH3(g) + HCI(g) → NH4CI(s) The entropy change in the system is",
+   "options": {
+    "A": "Negative",
+    "B": "Indeterminate",
+    "C": "Positive",
+    "D": "Zero"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2898",
+   "type": "mcq",
+   "stem": "Hydrogen can be displaced form a hot alkaline solution by",
+   "options": {
+    "A": "Fe",
+    "B": "Cu",
+    "C": "Ca",
+    "D": "Sn"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2899",
+   "type": "mcq",
+   "stem": "the principal constituent of natural gas is methane",
+   "options": {
+    "A": "ethane",
+    "B": "propane",
+    "C": "butane",
+    "D": "butane"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2003
+  },
+  {
+   "id": "jamb-chemistry-bank-2900",
+   "type": "mcq",
+   "stem": "A rock sample was added to cold dilute HNMO3. The gas evolved was passed into a solution of acidified K2Cr2O7 and the solution turned green. The rock sample contains",
+   "options": {
+    "A": "NO3-",
+    "B": "Cl-",
+    "C": "SO42-",
+    "D": "SO32-"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2002
+  },
+  {
+   "id": "jamb-chemistry-bank-2901",
+   "type": "mcq",
+   "stem": "(I) 3CuO(s) + 2NH₃(g) → 3Cu(s) + 3H₂O(l) + N₂(g) (II) 2NH₃(g) + 3Cl₂(g) → 6HCl(g) + N₂(g) (III) 4NH₃(g) + 3O₂(g) → 6H₂O(l) + N₂(g) The reactions represented by the equations above demonstrate the",
+   "options": {
+    "A": "basic properties of ammonia",
+    "B": "acidic properties of ammonia",
+    "C": "reducing properties of ammonia",
+    "D": "oxidizing properties of ammonia"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In all three reactions, nitrogen in NH₃ is oxidized from -3 to 0 (in N₂). In reaction I, NH₃ reduces CuO to Cu. In reaction II, NH₃ reduces Cl₂ (Cl goes from 0 to -1 in HCl). In reaction III, NH₃ is oxidized by O₂. In every case, NH₃ is the reducing agent - demonstrating the reducing properties of ammonia.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-chemistry-bank-2902",
+   "type": "mcq",
+   "stem": "2KClO₃(s) → 2KCl(s) + 3O₂(g). The importance of the catalyst in the reaction above is that",
+   "options": {
+    "A": "heating may not be required before the reaction takes place",
+    "B": "the reaction is controllable even at a high temperature",
+    "C": "the reaction produces large quantity of oxygen",
+    "D": "the reaction takes place more rapidly at a lower temperature"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "MnO₂ catalyst lowers the activation energy of the decomposition of KClO₃. This means the reaction proceeds more rapidly at a lower temperature than it would without the catalyst. The catalyst does not change the amount of O₂ produced (yield), only the rate and the temperature at which the reaction becomes feasible.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-chemistry-bank-2903",
+   "type": "mcq",
+   "stem": "A given amount of gas occupies 10.0 dm³ at 4 atm and 273°C. The number of moles of the gas present is? [Molar volume of gas at s.t.p = 22.4 dm³]",
+   "options": {
+    "A": "0.89 mol",
+    "B": "1.90 mol",
+    "C": "3.80 mol",
+    "D": "5.70 mol"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "First convert to STP using combined gas law: V(STP) = P₁V₁T₂/(T₁P₂) = (4 × 10 × 273)/(546 × 1) = 20.0 dm³. Note: T₁ = 273°C + 273 = 546 K, T₂ = 273 K (STP). Moles = 20.0/22.4 = 0.89 mol.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-chemistry-bank-2904",
+   "type": "mcq",
+   "stem": "In the electrolysis of CuSO4(aq) using platinum electrodes, the reaction at the anode is",
+   "options": {
+    "A": "4H+ + 4e- → 2H2",
+    "B": "2OH + 2OH- → 2H2O + O2",
+    "C": "2OH- - 2e- → 2OH",
+    "D": "4OH- - 4e- → 2H2O + O2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2905",
+   "type": "mcq",
+   "stem": "The IUPAC nomencalatyre of the compound LiAIH4 is",
+   "options": {
+    "A": "Aluminium tetrahydrido lithium",
+    "B": "Tetrahydrido lithium aluminate (III)",
+    "C": "Lithium aluminium hydride",
+    "D": "Lithium tetrahydridoaluminate (III)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2010
+  },
+  {
+   "id": "jamb-chemistry-bank-2906",
+   "type": "mcq",
+   "stem": "Milikan's contribution to the development of atomic theory is the determination of",
+   "options": {
+    "A": "Charge on electron",
+    "B": "Positive rays",
+    "C": "Charge to amss ratio",
+    "D": "Cathode rays"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2001
+  },
+  {
+   "id": "jamb-chemistry-bank-2907",
+   "type": "mcq",
+   "stem": "The characteristic colour of the flame shown when a copper salt moistened with concentrated hydrochloric acid on platinum is put on a bunzen burner is",
+   "options": {
+    "A": "Green",
+    "B": "Lilac",
+    "C": "Yellow",
+    "D": "Brick-red"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2908",
+   "type": "mcq",
+   "stem": "The enzyme responsible for converting sucrose into two simple isomeric sugars is",
+   "options": {
+    "A": "Invertase",
+    "B": "Amylase",
+    "C": "Lactose",
+    "D": "Maltase"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2005
+  },
+  {
+   "id": "jamb-chemistry-bank-2909",
+   "type": "mcq",
+   "stem": "Which of the following acts as both a reducing and an oxidizing agent",
+   "options": {
+    "A": "H2",
+    "B": "SO2",
+    "C": "H2S",
+    "D": "CO2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2004
+  },
+  {
+   "id": "jamb-chemistry-bank-2910",
+   "type": "mcq",
+   "stem": "Water has the ability to dissolve almost all substances because its molecule has a structure with",
+   "options": {
+    "A": "One positive end and one neutral end",
+    "B": "Two positive ends",
+    "C": "One positive end and one negative end",
+    "D": "Two negative ends"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2006
+  },
+  {
+   "id": "jamb-chemistry-bank-2911",
+   "type": "mcq",
+   "stem": "The heat required to raise the temperature of a body by 1K is called?",
+   "options": {
+    "A": "Specific heat",
+    "B": "Thermal capacity",
+    "C": "Water equivalent",
+    "D": "None of the above"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Thermal capacity (also called heat capacity) is the amount of heat energy required to raise the temperature of a given body (object) by 1 Kelvin (or 1°C). It depends on the mass and nature of the substance. Specific heat capacity is heat required per unit mass per degree temperature rise, which is different from thermal capacity.",
+   "year": 2021
+  },
+  {
+   "id": "jamb-chemistry-bank-2912",
+   "type": "mcq",
+   "stem": "H⁺ + OH⁻ → H₂O. The equation above illustrates?",
+   "options": {
+    "A": "precipitation",
+    "B": "hydration",
+    "C": "hydrolysis",
+    "D": "neutralization"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The equation H⁺ + OH⁻ → H₂O represents the ionic equation for neutralization, which is the reaction between an acid (providing H⁺) and a base (providing OH⁻) to form water. This is the net ionic equation for all strong acid-strong base neutralization reactions.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-chemistry-bank-2913",
+   "type": "mcq",
+   "stem": "Two hydrocarbons X and Y were treated with bromine water. Decolorized the solution and Y did not. Which class of compound does Y belong",
+   "options": {
+    "A": "Alkynes",
+    "B": "Alkenes",
+    "C": "Alkanes",
+    "D": "Benzene"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2010
+  },
+  {
+   "id": "jamb-chemistry-bank-2914",
+   "type": "mcq",
+   "stem": "According to Charles's law, the volume of a gas becomes zero at",
+   "options": {
+    "A": "-100°C",
+    "B": "-273°C",
+    "C": "-373°C",
+    "D": "0°C"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Charles's Law states that volume is directly proportional to absolute temperature (V ∝ T in Kelvin). Extrapolating the V-T graph to V = 0 gives T = 0 K, which corresponds to -273°C (absolute zero). At this theoretical temperature, the volume of an ideal gas would be zero.",
+   "year": 2017
   }
  ],
  "body": "JAMB",

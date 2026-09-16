@@ -1,0 +1,25 @@
+{
+ "exam": "NEET",
+ "region": "India",
+ "status": "harvested (2021 paper)",
+ "source": "byjus.com NEET 2021 question paper (AGAJHA-English-M4.pdf) + official NTA final answer key (M4.pdf)",
+ "method": "pdfplumber column-aware extraction; NTA key token-pair parsing (scripts/research/neet2021_parse.py)",
+ "banks": {
+  "neet-physics-bank": 49,
+  "neet-chemistry-bank": 50,
+  "neet-botany-bank": 49,
+  "neet-zoology-bank": 50
+ },
+ "total_questions": 198,
+ "year_coverage": [
+  2021
+ ],
+ "files": {
+  "physics": "NEET/physics.json",
+  "chemistry": "NEET/chemistry.json",
+  "botany": "NEET/botany.json",
+  "zoology": "NEET/zoology.json"
+ },
+ "notes": "Subscripts/superscripts flattened by PDF extraction (e.g. Cp-Cv). Stems referencing figures kept without the figure (15). Existing neet-neet-bank (50q, mixed subjects) predates this harvest.",
+ "other_years": "byjus.com/neet/neet-question-paper/ hosts 2016-2023 papers + NTA keys as PDFs \u2014 same pipeline applies"
+}

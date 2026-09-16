@@ -1,0 +1,794 @@
+{
+ "code": "gcse-combined-science-bank",
+ "title": "GCSE Combined Science | Exam-Style Questions Bank (BBC Bitesize)",
+ "version": 1,
+ "questionCount": 56,
+ "totalMarks": 56,
+ "questions": [
+  {
+   "stem": "The image above shows the thinking distance and the braking distance for a car stopping from a speed of 60 mph (around 27 m/s). Which of these factors would affect the thinking distance?",
+   "options": {
+    "A": "The condition of the car's tyres, and the condition of the car's brakes",
+    "B": "The driver's reaction time, and the condition of the car's tyres",
+    "C": "The driver's reaction time, and the speed of the car",
+    "D": "The speed of the car, and the condition of the car's tyres and brakes"
+   },
+   "id": "gcse-combined-science-bank-0001",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The thinking distance is the distance travelled by the car between the driver seeing a hazard and applying the brakes. The thinking distance is affected by the driver's reaction time, so it is increased if the driver is tired or if their reactions are affected by alcohol or drugs. The thinking distance is also affected by the speed of the car - the faster the car is moving, the further it will travel during the driver's reaction time. The condition of the car's tyres and brakes do not affect the thinking distance - they only affect the braking distance - because thinking distance only includes"
+  },
+  {
+   "stem": "The graph shows the motion of a car, from the point a driver sees a hazard to the point the car stops moving. How far does the car travel before applying the brakes?",
+   "options": {
+    "A": "3 m",
+    "B": "6 m",
+    "C": "12 m",
+    "D": "18 m"
+   },
+   "id": "gcse-combined-science-bank-0002",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The distance travelled by the car between seeing the hazard and applying the brakes is called the thinking distance. During this time, the car is travelling at a constant speed - because the driver has not yet pressed the brake pedal. The thinking distance can be found by calculating the area under the relevant section of the velocity-time graph (in this case, the first 0.75 seconds of the motion shown by the graph), which forms a rectangle. Area of rectangular section = width × height Area of rectangular section = 0.75 × 8 Area of rectangular section = 6 m"
+  },
+  {
+   "stem": "The graph shows the motion of a car, from the point a driver sees a hazard to the point the car stops moving. How far does the car travel after applying the brakes?",
+   "options": {
+    "A": "6 m",
+    "B": "9 m",
+    "C": "12 m",
+    "D": "18 m"
+   },
+   "id": "gcse-combined-science-bank-0003",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The distance travelled by the car after the driver applies the brakes is called the braking distance. During this time, the car is decelerating - so its speed is changing. The braking distance can be found by calculating the area under the relevant section of the velocity-time graph (in this case, the last 1.5 seconds of the motion shown by the graph), which forms a triangle. Area of triangular section = ½ × base × height Area of triangular section = 0.5 × 1.5 × 8 Area of triangular section = 6 m"
+  },
+  {
+   "stem": "How many neutrons does an atom of uranium-235 contain?",
+   "options": {
+    "A": "92",
+    "B": "143",
+    "C": "235",
+    "D": "327"
+   },
+   "id": "gcse-combined-science-bank-0004",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Uranium-235 has a mass number of 235, so there are 235 protons and neutrons altogether. It has an atomic number of 92, so 92 of these are protons. The number of neutrons is calculated by subtracting the atomic number from the mass number: Number of neutrons = 235 - 92 = 143"
+  },
+  {
+   "stem": "The vehicle in the diagram above has a thrust force (produced by the engine) of 1000 N acting forwards, and resistive forces (caused by friction and air resistance) of 600 N acting backwards. Calculate the resultant force on the vehicle.",
+   "options": {
+    "A": "1600 N backwards",
+    "B": "1600 N forwards",
+    "C": "400 N backwards",
+    "D": "400 N forwards"
+   },
+   "id": "gcse-combined-science-bank-0005",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "To find the resultant force, all the forces acting on an object are combined, to give a single force. Because the force acting forwards is larger, the resultant force will be in the forward direction. The size of the resultant force is found by subtracting the backwards force(s) from the forwards force(s): Resultant force = 1000 - 600 = 400 N So the resultant force is 400 N, in the forwards direction."
+  },
+  {
+   "stem": "The vehicle in the diagram above has a mass of 2500 kg. Calculate its acceleration.",
+   "options": {
+    "A": "0.04 m/s²",
+    "B": "0.16 m/s²",
+    "C": "25 m/s²",
+    "D": "62.5 m/s²"
+   },
+   "id": "gcse-combined-science-bank-0006",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Before calculating the acceleration, the two forces acting on the vehicle must be combined into a single resultant force, by subtracting the total forces acting backwards from the total forces acting forwards: Resultant force = 1000 - 600 = 400 N The acceleration of the vehicle can be calculated by rearranging the equation to make a (acceleration) the subject, and then substituting the correct values of force and mass: a = F ÷ m a = 400 ÷ 2500 a = 0.16 m/s2"
+  },
+  {
+   "stem": "The circuit contains a copper rod, which is placed between the poles of a magnet. When the switch is closed, the copper rod experiences a force. In which direction does the force act?",
+   "options": {
+    "A": "Upwards",
+    "B": "Downwards",
+    "C": "To the left",
+    "D": "To the right"
+   },
+   "id": "gcse-combined-science-bank-0007",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The direction of the force acting on a current-carrying conductor in a magnetic field can be found using Fleming's Left Hand rule: The forefinger should point to the right, in the direction of the magnetic field (from North to South) The second finger should point out of the screen (towards you) in the direction of the current (from positive to negative) The thumb should now be pointing upwards, showing the direction of the force acting on the copper rod"
+  },
+  {
+   "stem": "The boat in the diagram has a mass of 800 kg and is moving at a speed of 4 m/s",
+   "options": {
+    "A": "1600 J",
+    "B": "3200 J",
+    "C": "6400 J",
+    "D": "12,800 J"
+   },
+   "id": "gcse-combined-science-bank-0008",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The energy in the kinetic store can be calculated by substituting the values for mass and speed into the equation for work done. Ek = ½ × m × v2 Ek = 0.5 × 800 × 42 Ek = 0.5 × 800 × 16 Ek = 6400 J"
+  },
+  {
+   "stem": "The boat in the diagram transfers 5000 J of energy from the chemical store of its fuel, causing the boat's store of (useful) kinetic energy to increase by 3000 J - while the remaining 2000 J is dissipated as (wasted) heat. Calculate the efficiency of this process, and give your answer as a percentage.",
+   "options": {
+    "A": "100 %",
+    "B": "67 %",
+    "C": "60 %",
+    "D": "40 %"
+   },
+   "id": "gcse-combined-science-bank-0009",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The useful energy is 3000 J and the total energy is 5000 J. So efficiency is calculated as: 3000 ÷ 5000 = 0.6 The percentage efficiency is calculated as: 0.6 × 100 = 60% Option 1 is incorrect because this would mean all energy transferred was useful and none was wasted (as heat, light or sound). Option 2 is incorrect because the 3000 is not two thirds of 5000. Option 4 is incorrect because this is the percentage efficiency of wasted energy."
+  },
+  {
+   "stem": "The graph shows how the temperature of some ice changes when it is heated at a constant rate by an electric heater. Why does the temperature not change while the ice is melting?",
+   "options": {
+    "A": "Because the energy supplied is being used to break the bonds between particles",
+    "B": "Because the energy supplied is being used to make new bonds between particles",
+    "C": "Because the energy supplied is causing the particles to vibrate more",
+    "D": "Because the electric heater has been switched off"
+   },
+   "id": "gcse-combined-science-bank-0010",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Heating the solid ice causes its temperature to increase, so the particles vibrate more. Once the ice reaches its melting point of 0 °C, the temperature stops increasing - even though it is still being heated. During the melting process (changing state from a solid to a liquid), the energy supplied by the heater is used to break the bonds between the particles. Once these bonds have been broken, the particles are no longer fixed in place, in neat, ordered rows. They can move freely from their fixed positions - so the substance has become a liquid."
+  },
+  {
+   "stem": "Ideas about atomic structure were developed by scientists using experimental evidence. Alpha particles were aimed at a thin sheet of gold foil.",
+   "options": {
+    "A": "A few of the alpha particles bounced back towards the source of alpha particles",
+    "B": "Most of the alpha particles passed straight through the gold",
+    "C": "Where the alpha particles hit the fluorescent screen they caused it to glow",
+    "D": "A few of the alpha particles passed through the gold foil but changed direction slightly"
+   },
+   "id": "gcse-combined-science-bank-0011",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The observation that most alpha particles passed through the gold foil without being affected by it, allowed Rutherford to conclude that atoms are mostly empty space. The observation that a few alpha particles bounced back is explained by the fact that almost all the mass of each atom is concentrated in its nucleus. The observation that some alpha particles were deflected slightly as they passed through the gold foil is explained by the fact that the nucleus has a positive charge. The fact that the screen glowed when it was hit by alpha particles enabled the scientists to see where the alpha p"
+  },
+  {
+   "stem": "Which of the following best explains why alloys are harder and stronger than pure metal elements?",
+   "options": {
+    "A": "Different sized atoms in the structure disrupt the layers and prevent them sliding over each other",
+    "B": "There are more delocalised electrons in an alloy so the metallic bonding is stronger",
+    "C": "The ions are smaller in an alloy so the electrostatic forces between the ions and the delocalised electrons are stronger",
+    "D": "In an alloy there are very strong intermolecular forces which require a lot of energy to break"
+   },
+   "id": "gcse-combined-science-bank-0012",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Alloys are mixtures made from a metal element and at least one other element. Usually, alloys are mixtures of two or more metals. A pure metal will normally have a regular arrangement of atoms in layers, which can slide over each other when the metal is reshaped. The structure of an alloy contains atoms of different sizes, which prevent layers of atoms sliding and makes them stronger and harder. Alloys do not necessarily contain more delocalised electrons than a pure metal element. Alloys do not necessarily contain smaller ions, and there is no definite way to be able to estimate the strength "
+  },
+  {
+   "stem": "In an investigation about mass changes during a reaction, students measured the mass of some pieces of magnesium before and after it had reacted with oxygen to make magnesium oxide. Their results are shown in the table.",
+   "options": {
+    "A": "0.11 g",
+    "B": "0.13 g",
+    "C": "0.09 g",
+    "D": "0.10 g"
+   },
+   "id": "gcse-combined-science-bank-0013",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "To correctly calculate a mean value in this science experiment, any anomalies must first be ignored. An anomaly is a measurement which is very far away from the values of the other measurements taken under the same circumstances. In the data set for when 0.06 g of magnesium was used, we can see that 0.22 is very different from the other three values (0.10, 0.10 and 0.09) so we ignore 0.22 when calculating the mean. The question asked us to give our answer to two decimal places, and when you round 0.0966666667 to 2 decimal places, you get 0.10 If the anomalous value had not been ignored, calcul"
+  },
+  {
+   "stem": "Four metals (J, K, L and M) were investigated to determine their order of reactivity. Solutions of their nitrate salts were also used: J nitrate, K nitrate, L nitrate and M nitrate. Each metal was added to separate samples of the four solutions and the observations were recorded in the table.",
+   "options": {
+    "A": "J > K > L > M",
+    "B": "K > M > J > L",
+    "C": "K > J > M > L",
+    "D": "L > M > J > K"
+   },
+   "id": "gcse-combined-science-bank-0014",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Looking down the column for metal K, we can see that it has displaced the other three metals, so it must be more reactive than all the other metals. It must therefore come first in the reactivity series. Looking down the columns in the table we can see there are two reactions in the first column, for metal J. The second column (metal K) has three reactions, and so on. Then you can therefore simply order the metals in order of the number of reactions they took part in: K > J > M > L"
+  },
+  {
+   "stem": "Which of the following statements about the extraction of aluminium using electrolysis is false?",
+   "options": {
+    "A": "The electrolyte is aluminium oxide dissolved in molten cryolite",
+    "B": "The graphite anodes burn away in the oxygen produced during the reaction",
+    "C": "Oxygen is produced at the cathode",
+    "D": "Aluminium is produced at the negative electrode"
+   },
+   "id": "gcse-combined-science-bank-0015",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Oxygenis produced at theanodes during electrolysis. This is because oxide ions(O2-) are negatively charged, so they are attracted to the positive electrode, which is called the anode. The production of oxygen, at high temperatures, at the anodes which are made from graphite (a form of carbon), means that the anodes slowly burn away during the reaction. The aluminium ions are positively charged (like all metal ions) so they are attracted to the negative electrode, which is called the cathode. In order for the aluminium oxide to be broken down by electrolysis into aluminium and oxygen, it must e"
+  },
+  {
+   "stem": "Look at the table of data for the temperature changes during some chemical reactions.",
+   "options": {
+    "A": "Citric acid + sodium hydrogencarbonate",
+    "B": "Magnesium + hydrochloric acid",
+    "C": "Sulfuric acid + sodium hydroxide",
+    "D": "Copper sulfate + zinc"
+   },
+   "id": "gcse-combined-science-bank-0016",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The endothermic reaction is the one between citric acid and sodium hydrogencarbonate because this is the only reaction that has a decrease in the temperature of the reaction mixture. The other three reactions cause an increase in the temperature of the mixture because they are releasing thermal energy to the surroundings, and this includes the water in the solutions, the thermometer, etc."
+  },
+  {
+   "stem": "Which of the following statements is the best explanation of why great care must be taken to prevent a fire in a factory that handles flammable powders?",
+   "options": {
+    "A": "Powders heat up very quickly, so the particles have lots of energy causing collisions to be more successful",
+    "B": "Powders act as catalysts, so they speed up chemical reactions like combustion",
+    "C": "Powders have more reactant particles per unit volume, so successful collisions are more frequent",
+    "D": "Powders have a very large surface area to volume ratio which means that successful collisions are more frequent"
+   },
+   "id": "gcse-combined-science-bank-0017",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Reactions involving powders are very fast because a powder has a very large surface area to volume ratio - much larger than lumps of the same substance. This means that successful collisions are more frequent. However, powders do not have more reactant particles per unit volume. That would be a good description of a concentrated solution or a high pressure gas. Powders do not heat up significantly more quickly than other substances. Some catalysts are powders, but powders are not necessarily catalysts. A catalyst is a chemical which speeds up a reaction without being used up or chemically chan"
+  },
+  {
+   "stem": "What does the highlighted symbol in the middle of this chemical equation mean?",
+   "options": {
+    "A": "The reaction has finished",
+    "B": "There are equal volumes of products and reactants",
+    "C": "The reaction is reversible",
+    "D": "The reaction is impossible"
+   },
+   "id": "gcse-combined-science-bank-0018",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The double headed arrow shows that the reaction is reversible. A and B will react together to produce C and D. But C and D will react together to produce A and B. There is no symbol to show that a reaction has finished, or that it is impossible. If a reversible reaction occurs in a sealed container (a 'closed system') then eventually a situation called 'dynamic equilibrium' will occur when the rate of the forwards reaction is equal to the rate of the reverse reaction. But even then there is no guarantee that the reaction will have an equal volume of products and reactants."
+  },
+  {
+   "stem": "Which answer correctly represents the balanced equation for the complete combustion of propane?",
+   "options": {
+    "A": "C₃H₈ + O₂ → CO₂ + H₂O",
+    "B": "C₃H₈ + 7O₂ → 3CO₂ + 8H₂O",
+    "C": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+    "D": "C₄H₁₀ + 4½O₂ → 4CO + 5H₂O"
+   },
+   "id": "gcse-combined-science-bank-0019",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The correct formula for propane is C3H8. This can be deduced by using a mnemonic to help to remember the names of the first four alkanes: monkeys eat peanut butter (methane, ethane, propane, butane) so propane must have three carbon atoms in each molecule. The alkanes all follow the general formula CnH2n+2 During complete combustion of a hydrocarbon, the products are carbon dioxide and water, and when the equation is correctly balanced it is: C₃H₈ + 5O₂ →3CO₂ + 4H₂OC4H10 is the formula for butane."
+  },
+  {
+   "stem": "Carbon dioxide is a greenhouse gas which is produced when many fuels are burned to release energy.",
+   "options": {
+    "A": "Insert a burning splint; positive result is that the splint goes out",
+    "B": "Insert a glowing splint; positive result is that the splint relights",
+    "C": "Insert a damp piece of litmus paper; positive result is the paper bleaches white",
+    "D": "Bubble the gas through limewater; positive result is that the limewater turns milky"
+   },
+   "id": "gcse-combined-science-bank-0020",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "When carbon dioxide is bubbled through limewater, a chemical reaction occurs which turns the limewater milky (cloudy). A positive test for carbon dioxide is that it puts out a burning splint, but many gases will do this (e.g. nitrogen, argon, helium) so it is not the correct positive test for carbon dioxide. If you insert a glowing splint into a gas and the splint relights, that is a positive result for oxygen. If you insert a damp piece of litmus paper into a gas and it is bleached white, that it is a positive test for chlorine."
+  },
+  {
+   "stem": "Potassium is a metal element in group 1 of the periodic table. Which statement about potassium is correct?",
+   "options": {
+    "A": "Potassium is more reactive than sodium because it loses an electron from a shell which is further from the nucleus",
+    "B": "When potassium is added to water, it produces an acidic solution with a pH of 1",
+    "C": "Potassium reacts with oxygen to make an oxide with the formula KO₂",
+    "D": "When potassium is added to water it sinks and makes bubbles of oxygen gas"
+   },
+   "id": "gcse-combined-science-bank-0021",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Potassium is more reactive than sodium because the reactivity increases as you go down group 1. The reason for this is that metals always react by losing electrons. The larger the atom (like potassium compared with sodium) the further away the outer electron is from the nucleus, so it is held less strongly and lost more easily. The elements in group 1 are called the alkali metals because they react with water to make alkaline solutions with high pH values, not acidic solutions. When potassium reacts with oxygen it makes potassium oxide which has a formula of K2O When potassium reacts with wate"
+  },
+  {
+   "stem": "What is represented by this diagram?",
+   "options": {
+    "A": "A polymer",
+    "B": "A giant covalent structure",
+    "C": "A metallic structure",
+    "D": "A small molecule with covalent bonding"
+   },
+   "id": "gcse-combined-science-bank-0022",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Covalent bonding is when non-metal atoms share electrons to fill their outer shells. These atoms usually form small molecules, as shown in the original diagram. Polymers are very long chain-like molecules which are made from repeating units. Normally, we just draw one of the repeating units and use brackets to show that it is repeating. Giant covalent structures are made from non-metal atoms which are sharing electrons, but they involve billions and billions of atoms. Metallic bonding involves metal atoms losing their outer electrons which become delocalised to glue the positive ions together."
+  },
+  {
+   "stem": "A student wants to evaporate a solution of copper sulfate to obtain 8 g of copper sulfate crystals. The concentration of the solution is 25 g/dm3",
+   "options": {
+    "A": "3125 cm³",
+    "B": "0.32 cm³",
+    "C": "200 cm³",
+    "D": "320 cm³"
+   },
+   "id": "gcse-combined-science-bank-0023",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "To calculate the volume of a solution, you need to rearrange the equation for concentration. The rearranged equation shows that to calculate the volume, you must divide the mass by the concentration: 8 ÷ 25 = 0.32 dm3 To convert dm3into cm3 you must multiply by 1000, giving the answer of 320 cm3 If you divide the numbers the wrong way round and then multiply by 1000, you would get the incorrect answer 3125 If you divide the numbers the correct way, but forget to multiply by 1000, you get the incorrect answer 0.32 If you multiplied 8 and 25, you would get the incorrect answer of 200"
+  },
+  {
+   "stem": "A student investigated the electrolysis of aqueous solutions using inert electrodes. Which of the following is a valid hypothesis for this investigation?",
+   "options": {
+    "A": "When electrolysing solutions containing copper, a red-brown metal will form at the cathode because copper is less reactive than hydrogen",
+    "B": "Wear safety spectacles or goggles",
+    "C": "Set up apparatus, pour 50 cm³ of the solution into the beaker, and turn on power supply",
+    "D": "\"The investigation could have been improved if we had used more concentrated solutions\""
+   },
+   "id": "gcse-combined-science-bank-0024",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A hypothesis is a prediction which is backed up by a scientific explanation. It does not need to be correct, but in this case it was. The prediction is that copper will form at the cathode, and the explanation is based on copper being less reactive than hydrogen. Wearing eye protection is part of the risk assessment in this investigation. Descriptions of the steps to be followed are part of the method. Statements about improvements that could be made to the investigation are part of the evaluation."
+  },
+  {
+   "stem": "What kind of reaction is represented by this energy profile?",
+   "options": {
+    "A": "Combustion reaction",
+    "B": "Reversible reaction",
+    "C": "Exothermic reaction",
+    "D": "Endothermic reaction"
+   },
+   "id": "gcse-combined-science-bank-0025",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "This reaction profile shows an endothermicreaction because the overall change in energy is positive (upwards) and because the energy of the products is higher than the energy of the reactants. Combustion reactions are an example of exothermic reactions. Exothermic reactions have energy profiles where the overall energy change is negative (downwards) and the line representing the energy of the products is lower than the line representing the reactants because the chemicals have lost energy in the reaction. You cannot tell from a reaction profile if the reaction is reversible or not."
+  },
+  {
+   "stem": "Hydrated copper sulfate can be heated to turn it into anhydrous copper sulfate, as shown in the equation. Which statement about the reversible reaction between anhydrous copper sulfate and water is true?",
+   "options": {
+    "A": "The reverse reaction is exothermic",
+    "B": "When water is added to blue hydrated copper sulfate a colour change occurs",
+    "C": "Hydrated copper sulfate can be used as a test for water",
+    "D": "The forward reaction is a displacement reaction"
+   },
+   "id": "gcse-combined-science-bank-0026",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The information given in the question tells us that the forwards reaction is endothermic because the blue hydrated copper sulfate must be heated to convert it to white anhydrous copper sulfate. In a reversible reaction like this one, if the forwards reaction is endothermic, the reverse reaction must be exothermic. If water is added to white copper sulfate it turns blue, and this can be used as a test for water, as shown in the picture. However, if water is added to blue copper sulfate, it simply dissolves with no colour change. Neither the forwards nor the reverse reactions are displacement re"
+  },
+  {
+   "stem": "Factional distillation of crude oil produces mixtures of hydrocarbons called fractions. The bar chart shows the supply and demand for different fractions. Which statement is correct?",
+   "options": {
+    "A": "The supply of kerosene is less than the demand for it",
+    "B": "Bitumen is used as a fuel for aeroplanes",
+    "C": "Cracking could be used to convert heavy fuel oil into petrol in order to match supply and demand",
+    "D": "There is a shortage of petrol by approximately 25 cubic metres"
+   },
+   "id": "gcse-combined-science-bank-0027",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cracking is a process which breaks down longer and less useful hydrocarbon molecules into shorter and more useful hydrocarbonmolecules usually under high temperatures and using a catalyst. For heavy fuel oil there is a surplus because the amount obtained from crude oil (the supply) is much greater than the demand for it. But there is a shortage of petrol, so cracking can be used to turn heavy fuel oil into petrol. The graph shows that for kerosene, the supply is slightly greater than the demand for it. Bitumen is a very viscous (thick) substance which is used to make roads (it is called tar) a"
+  },
+  {
+   "stem": "A student did some tests on a sample of water to determine if it was pure. Her observations are shown in the table. Which of the tests shows that the sample is not pure.",
+   "options": {
+    "A": "Test 1",
+    "B": "Test 2",
+    "C": "Test 3",
+    "D": "Test 4"
+   },
+   "id": "gcse-combined-science-bank-0028",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The results from Test 3 show that the sample of water is not pure. Heating a sample of water until it has completely evaporated will leave behind any dissolved solid solutes. A pure sample of water will not leave behind any solid residue. Measuring the boiling point or melting point of a substance can also be used to find out if it is pure. The melting point of pure water is 0 oC and the boiling point of pure water is 100 oC, so Tests 1 and 4 do not provide any evidence that the sample might be impure. Any impurities present do not seem to be affecting its boiling point in a significant way wh"
+  },
+  {
+   "stem": "Since the Earth was formed, there have been many changes to the composition of the atmosphere. One major change has been a decrease in the amount of carbon dioxide. Which of the following processes caused the amount of carbon dioxide to decrease?",
+   "options": {
+    "A": "Formation of fossil fuels",
+    "B": "Respiration of living organisms",
+    "C": "Volcanic activity",
+    "D": "Deforestation"
+   },
+   "id": "gcse-combined-science-bank-0029",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The amount of carbon dioxide was initially high in the Earth's early atmosphere due to volcanic activity. But the carbon dioxide dissolved in the oceans and was absorbed through photosynthesis. Much of this carbon was later trapped when fossil fuels formed from the remains of dead organisms. When respiration occurs in the cells of living things, it produces carbon dioxide. It does not absorb or decrease the amount of carbon dioxide in the atmosphere. Volcanic activity tends to release carbon dioxide and other gases, not absorb them. Deforestation increases the amount of carbon dioxide in the a"
+  },
+  {
+   "stem": "Which of the following processes is a stage in the processing of waste water (i.e. sewage) before it can be safely released into rivers?",
+   "options": {
+    "A": "Neutralisation",
+    "B": "Anaerobic digestion of sludge",
+    "C": "Distillation",
+    "D": "Adding chlorine to kill microbes"
+   },
+   "id": "gcse-combined-science-bank-0030",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The stages involved in treating waste water are as follows. 1. Screening and grit removal 2. Sedimentation to produce sewage sludge and effluent 3. Anaerobic digestion of sewage sludge 4. Aerobic biological treatment of effluent to make it safe to release into rivers Neutralisation is not generally needed during waste water treatment because the pH of waste water is not generally acidic or alkaline. Distillation would use up a lot of energy and it is not a process used in processing waste water in the UK. Chlorine is added to drinking water to kill microbes before it is provided to customers' "
+  },
+  {
+   "stem": "Study Figure 1, which shows visitors to a resort over one year.",
+   "options": {
+    "A": "February",
+    "B": "July",
+    "C": "August",
+    "D": "November"
+   },
+   "id": "gcse-combined-science-bank-0031",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "August had the highest number of visitors. Bar charts needs to be read carefully to avoid mistakes. On a bar chart, longer bars show a greater number of something. The axis labels help us to remember this."
+  },
+  {
+   "stem": "Study Figure 2, which is a pie chart showing how students travel to school.",
+   "options": {
+    "A": "Bus",
+    "B": "Car",
+    "C": "Walking",
+    "D": "Taxi"
+   },
+   "id": "gcse-combined-science-bank-0032",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The third most popular mode of transport shown in Figure 2 is walk. Larger segments in pie charts show higher values. Traveling by bus is the largest segment, then car, the third largest segment is walking. This pie chart also gives percentages, so we can see that bus has a higher percentage than any other mode of transport."
+  },
+  {
+   "stem": "Figure 3 shows the ages of people in a sweet shop.",
+   "options": {
+    "A": "8",
+    "B": "15",
+    "C": "16.6",
+    "D": "38"
+   },
+   "id": "gcse-combined-science-bank-0033",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The median (or middle value) is 15 The median is calculated by ordering values in numerical order and looking for the middle number."
+  },
+  {
+   "stem": "Study Figure 4, which is an Ordnance Survey map with northings and eastings lines.",
+   "options": {
+    "A": "67,52",
+    "B": "52,67",
+    "C": "53,67",
+    "D": "53,68"
+   },
+   "id": "gcse-combined-science-bank-0034",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A is located in grid square 52,67. Grid references always use the value in the bottom left of the square. A 4-figure grid reference should only contain 4 numbers. The eastings (the numbers along the bottom of the map) are given first. The northings (the numbers up the side of the map) are given second."
+  },
+  {
+   "stem": "Study Figure 5, which shows a sketch map.",
+   "options": {
+    "A": "North",
+    "B": "South",
+    "C": "East",
+    "D": "West"
+   },
+   "id": "gcse-combined-science-bank-0035",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The lake lies to the east of the farmhouse. This question asked the direction from the farmhouse and not to the farmhouse. It can be easy to get the 'from' and 'to' mixed up."
+  },
+  {
+   "stem": "Study Figure 6, which shows a contour map with two walking routes leading to the top of the hill.",
+   "options": {
+    "A": "A is a longer route",
+    "B": "B does not reach the highest point of the hill",
+    "C": "A is steeper",
+    "D": "A is less steep"
+   },
+   "id": "gcse-combined-science-bank-0036",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A is a steeper route to the top of the hill. The contour lines for line A are closer together. This means the hill increases in height over a short distance."
+  },
+  {
+   "stem": "Study Figure 7, a scatter graph showing adult literacy and GDP per person ($) for selected countries.",
+   "options": {
+    "A": "Positive correlation",
+    "B": "Negative correlation",
+    "C": "No correlation",
+    "D": "Neutral correlation"
+   },
+   "id": "gcse-combined-science-bank-0037",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Figure 7 shows a positive correlation. As one value increases, the other also increases. In this example, the higher the GDP, the higher the percentage of adult literacy. A negative correlation occurs when one value decreases as the other increases. A line of best fit indicates that there is a correlation."
+  },
+  {
+   "stem": "Students are carrying out a questionnaire in their local area. They will give the questionnaire to every tenth person that walks past.",
+   "options": {
+    "A": "Random sampling",
+    "B": "Systematic sampling",
+    "C": "Stratified sampling",
+    "D": "Stratified random sampling"
+   },
+   "id": "gcse-combined-science-bank-0038",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The students are using systematic sampling. This means data is being collected in an ordered, or regular way. Stratified sampling is collecting data from using categories. In this case, that might be different age groups.Random sampling is asking people at random."
+  },
+  {
+   "stem": "Study Figure 8, which shows climate data for Manaus in the Amazon rainforest.",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "27",
+    "D": "28"
+   },
+   "id": "gcse-combined-science-bank-0039",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The range in temperature in Manaus is 1 degree. This means that the temperature is constant throughout the year. Range is calculated by subtracting the lower number in a dataset from the higher number. 28 minus 27 is equal to 1"
+  },
+  {
+   "stem": "Some year 11 students are counting how many people enter a shopping centre over the course of an hour.",
+   "options": {
+    "A": "Primary qualitative",
+    "B": "Secondary quantitative",
+    "C": "Secondary qualitative",
+    "D": "Primary quantitative"
+   },
+   "id": "gcse-combined-science-bank-0040",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The students are collecting primary quantitative data. Primary data is information that you collect yourself. Quantitative data is collecting numerical data, rather than other data, such as words or pictures."
+  },
+  {
+   "stem": "The diagram shows a UK mains plug, used to connect electrical appliances to mains electrical supplies. Which features of a plug help to protect the user?",
+   "options": {
+    "A": "The earth wire and the fuse",
+    "B": "The neutral wire and the fuse",
+    "C": "The earth wire and the neutral wire",
+    "D": "The live wire and the fuse"
+   },
+   "id": "gcse-combined-science-bank-0041",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The earth wire and fuse are two features of a plug that help to protect the user. The fuse is a thin piece of wire, which melts if the current becomes too large. If an appliance develops a fault, which causes the current to increase above its normal value, the fuse heats up and melts - breaking the circuit and protecting the user. The earth wire is a copper wire, coated in striped plastic, that provides a path for current to flow from the metal case of the device to the ground if there is a fault. Options 2 and 3 are incorrect because the neutral wire is not a safety feature. Option 4 is incor"
+  },
+  {
+   "stem": "What is the potential difference and frequency of UK mains electricity?",
+   "options": {
+    "A": "The potential difference is 50 V and the frequency is 230 Hz",
+    "B": "The potential difference is 230 V and the frequency is 50 Hz",
+    "C": "The potential difference is 120 V and the frequency is 100 Hz",
+    "D": "The potential difference is 13 A and the frequency is 50 Hz"
+   },
+   "id": "gcse-combined-science-bank-0042",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "UK mains electricity is supplied at a potential difference of 230 V, not 50 V, and a frequency of 50 Hz, not 230 Hz."
+  },
+  {
+   "stem": "The national grid connects power stations to homes and workplaces all around the country. Why are step-up transformers used, before transmitting electricity through the transmission lines?",
+   "options": {
+    "A": "To decrease the potential difference and decrease the current, so less energy is lost through heating",
+    "B": "To decrease the potential difference and decrease the current, so it is less dangerous",
+    "C": "To decrease the potential difference and increase the current, so less energy is lost through heating",
+    "D": "To increase the potential difference and decrease the current, so less energy is lost through heating"
+   },
+   "id": "gcse-combined-science-bank-0043",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Step-up transformers are used to increase the potential difference and reduce the current. Current has a heating effect, so reducing the current causes less energy to be lost through heating of the transmission wires. Option 1 is incorrect because the p.d. increases, instead of decreasing. Option 2 is incorrect because the p.d. increases, instead of decreasing. The current decreases, which reduces the amount of energy lost through heating of the transmission wires - but does not make it less dangerous. Option 3 is incorrect because the p.d. increases, instead of decreasing, and the current dec"
+  },
+  {
+   "stem": "The diagram shows a step-down transformer. The p.d. across the primary coil is 230 V, the current through the primary coil is 2.4 A, and the p.d. across the secondary coil is 115 V. What is the current through the secondary coil?",
+   "options": {
+    "A": "0.83 A",
+    "B": "1.2 A",
+    "C": "4.8 A",
+    "D": "2.4 A"
+   },
+   "id": "gcse-combined-science-bank-0044",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The current through the secondary coil can be calculated by rearranging the equation to make Is(output current) the subject, and then substituting the correct values into the formula:Option 1 is incorrect because the equation has been rearranged incorrectly. Option 2 is incorrect because the values of p.d. have been mixed up when substituting the values into the formula. Option 4 is incorrect because the equation has been rearranged incorrectly."
+  },
+  {
+   "stem": "50 kg of ice is removed from an industrial freezer. The ice is initially at a temperature of -40 °C and is heated at a constant rate. When the ice reaches 0 °C it starts to melt, and the temperature stops increasing - even though it is still being heated. Given that the specific latent heat of fusion of water is 334,000 J/kg, calculate the energy required to melt the ice.",
+   "options": {
+    "A": "6680 J",
+    "B": "13,360,000 J",
+    "C": "16,700,000,000 J",
+    "D": "16,700,000 J"
+   },
+   "id": "gcse-combined-science-bank-0045",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The energy required to change the state of the ice can be calculated by substituting the correct values of mass and specific latent heat into the equation: E = m × L E = 50 × 334,000 E = 16,700,000 J Option 1 is incorrect because the specific latent heat has been divided by the mass, instead of being multiplied by the mass. Option 2 is incorrect because the specific latent heat has been multiplied by the initial temperature, instead of being multiplied by the mass. Option 3 is incorrect because the mass has been converted from kilograms to grams. The S.I. units of mass are kilograms, so there "
+  },
+  {
+   "stem": "Uranium-238 decays by emitting an alpha particle. Which of the equations above shows the correct decay equation for uranium-238?",
+   "options": {
+    "A": "Equation A",
+    "B": "Equation B",
+    "C": "Equation C",
+    "D": "Equation D"
+   },
+   "id": "gcse-combined-science-bank-0046",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "An alpha particle is a helium nucleus, containing 2 protons and 2 neutrons, and has an atomic number of 2 and a mass number of 4. When the parent nucleus (uranium-238) emits an alpha particle the atomic number decreases by two, and the mass number decreases by 4. This means the daughter nucleus (one of the products of the decay) will be thorium-234, with an atomic number of 90 and a mass number of 234. The rules to find the atomic number and mass number of the daughter nucleus produced during alpha decay are: •The mass number decreases by 4 • The atomic number decreases by 2 Option A is incorr"
+  },
+  {
+   "stem": "Carbon-14 decays by emitting a beta particle. Which of the equations above shows the correct decay equation for carbon-14?",
+   "options": {
+    "A": "Equation A",
+    "B": "Equation B",
+    "C": "Equation C",
+    "D": "Equation D"
+   },
+   "id": "gcse-combined-science-bank-0047",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A beta particle is a high-speed electron, ejected from the nucleus of an unstable atom when it undergoes beta decay. When the parent nucleus (carbon-14) emits a beta particle, one of the neutrons in the nucleus turns into a proton - so the mass number stays the same, and the atomic number increases by 1. This means the daughter nucleus (one of the products of the decay) will be nitrogen-14, with an atomic number of 7 and a mass number of 14. The rules to find the atomic number and mass number of the daughter nucleus produced during beta decay are: • The mass number stays the same • The atomic "
+  },
+  {
+   "stem": "A motorcycle accelerates from 10 m/s to 20 m/s at a rate of 2.5 m/s². Calculate the distance travelled by the motorcycle while it is accelerating.",
+   "options": {
+    "A": "2 m",
+    "B": "60 m",
+    "C": "295 m",
+    "D": "1500 m"
+   },
+   "id": "gcse-combined-science-bank-0048",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The distance travelled can be calculated by rearranging the equation to make s (distance travelled) the subject, and then substituting the correct values into the formula, as shown in the image above. Option 1 is incorrect because the initial velocity and final velocity have not been squared. Option 3 is incorrect because the equation has been rearranged incorrectly. Option 4 is incorrect because the equation has been rearranged incorrectly."
+  },
+  {
+   "stem": "The graph shows how the activity of a sample of radioactive material changes over time. What is the half-life of the sample?",
+   "options": {
+    "A": "1 day",
+    "B": "2 days",
+    "C": "5 days",
+    "D": "10 days"
+   },
+   "id": "gcse-combined-science-bank-0049",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The half-life of a radioactive material is the time taken for the activity to decrease to half its initial value. The initial activity is 80 Bq, so the half-life can be determined by finding the time taken for the activity to decrease to 40 Bq, as shown on the graph. Note that the half-life could also be determined by finding the time taken for the activity to decrease from 40 Bq to 20 Bq (also shown on the graph), or between any other appropriate pair of values. Option 1 is incorrect, because the activity only decreases to around 50 Bq after 1 day. Option 3 is incorrect, because the activity "
+  },
+  {
+   "stem": "The diagram shows a diagram of a sound wave travelling through the air. What is the frequency of the sound wave?",
+   "options": {
+    "A": "0.25 Hz",
+    "B": "0.5 Hz",
+    "C": "250 Hz",
+    "D": "500 Hz"
+   },
+   "id": "gcse-combined-science-bank-0050",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "In order to determine the frequency, the period of the wave must first be found from the diagram. This is the time taken for a complete oscillation, which is 4 ms (0.004 s), as shown in the image above. The frequency can be calculated by rearranging the equation to make f (frequency) the subject, and then substituting the correct value of period into the formula: f = 1 ÷ T f = 1 ÷ 0.004 f = 250 Hz Option 1 is incorrect because the period has not been converted into milliseconds, before substituting the value into the formula. Option 2 is incorrect because the period has not been determined cor"
+  },
+  {
+   "stem": "This graph shows how the rate of transpiration in a green plant varies according to the surrounding temperature. Look at the graph and decide which of the statements below is best supported by it.",
+   "options": {
+    "A": "The higher the temperature the greater the rate of transpiration",
+    "B": "The rate of transpiration is not affected by temperature",
+    "C": "The rate of transpiration is constant up to a certain temperature. Above this temperature, the higher the temperature the greater the rate of transpiration",
+    "D": "As the temperature increases, the rate of transpiration increases up to a certain temperature. Above this temperature, the rate of transpiration is constant"
+   },
+   "id": "gcse-combined-science-bank-0051",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The initial slope of the graph shows that at lower temperatures, the rate of transpiration increases as the temperature increases. However, the line then levels out showing that above a certain temperature, further increases of temperature do not have an effect on the rate of transpiration."
+  },
+  {
+   "stem": "Vaccination involves introducing a vaccine into the body. Which of these describes what the vaccine is made from?",
+   "options": {
+    "A": "An active pathogen",
+    "B": "Dead or inactive forms of the pathogen",
+    "C": "White blood cells",
+    "D": "Antibodies"
+   },
+   "id": "gcse-combined-science-bank-0052",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Vaccination involves introducing dead or inactive forms of the pathogen into the body so that the white blood cells are stimulated into producing antibodies. If an active form of the pathogen then enters the body, the white blood cells are able to respond quickly producing antibodies, destroying the pathogen before it causes disease."
+  },
+  {
+   "stem": "Humans react to changes in their surroundings. Which sequence of events correctly describes the body's response?",
+   "options": {
+    "A": "Stimulus → response → receptor → coordinator → effector",
+    "B": "Stimulus → receptor → coordinator → effector → response",
+    "C": "Stimulus → receptor → response → coordinator → effector",
+    "D": "Stimulus → receptor → effector → response → coordinator"
+   },
+   "id": "gcse-combined-science-bank-0053",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "A stimulus is detected by the receptor which sends a message to the coordinator (the central nervous system). A message is then sent to an effector which causes a response. For example if you were cold, the stimulus would be a low temperature, detected by receptors in the skin. This information is sent to the CNS which instructs your muscles, the effectors, to respond by shivering."
+  },
+  {
+   "stem": "Hydrochloric acid can be used to neutralise sodium hydroxide. As a result, sodium chloride is formed. Which other product is produced?",
+   "options": {
+    "A": "Carbon dioxide",
+    "B": "Water",
+    "C": "Hydrogen",
+    "D": "Chlorine"
+   },
+   "id": "gcse-combined-science-bank-0054",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The sodium ions combine with the chloride ions to form sodium chloride, which leaves hydrogen ions (from the hydrochloric acid) and hydroxide ions (from the sodium hydroxide). These combine to form water."
+  },
+  {
+   "stem": "A beaker of water is heated so that its temperature increases from 15 oC to 50 oC. If the mass of water is 200 g and the specific heat capacity of water is 4200 J/kg oC, how much thermal energy has been supplied to the water?",
+   "options": {
+    "A": "29,400 J",
+    "B": "42,000 J",
+    "C": "29,400,000 J",
+    "D": "42,000,000 J"
+   },
+   "id": "gcse-combined-science-bank-0055",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Firstly, convert the mass (200 g) into standard units (0.2 kg) Then, calculate the change in temperature (50 oC - 15 oC = 35 oC) Then calculate the answer using the equation: E= m × C × ∆θ E= 0.2 × 4200 × 35 E= 29,400 J"
+  },
+  {
+   "stem": "Select the type of electromagnetic radiation which has a frequency lower than that of visible light, but greater than that of microwaves.",
+   "options": {
+    "A": "Radio waves",
+    "B": "Infrared",
+    "C": "Ultraviolet",
+    "D": "Gamma rays"
+   },
+   "id": "gcse-combined-science-bank-0056",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B"
+  }
+ ],
+ "body": "GCSE",
+ "category": "secondary"
+}

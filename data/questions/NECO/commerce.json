@@ -2,8 +2,8 @@
  "code": "neco-commerce-bank",
  "title": "NECO Commerce | Past Questions Bank",
  "version": 1,
- "questionCount": 380,
- "totalMarks": 380,
+ "questionCount": 395,
+ "totalMarks": 395,
  "questions": [
   {
    "id": "neco-commerce-bank-0001",
@@ -5661,6 +5661,216 @@
    "marks": 1,
    "year": 2000,
    "answer": "A"
+  },
+  {
+   "id": "neco-commerce-bank-0381",
+   "type": "mcq",
+   "stem": "Calculate the current assets.",
+   "options": {
+    "A": "15,000",
+    "B": "20,000",
+    "C": "30,000",
+    "D": "45,000"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0382",
+   "type": "mcq",
+   "stem": "Calculate the net profit.",
+   "options": {
+    "A": "30,000",
+    "B": "33,000",
+    "C": "38,000",
+    "D": "40,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0383",
+   "type": "mcq",
+   "stem": "Which of the following does NOT appear on a cheque on presentation for payment?",
+   "options": {
+    "A": "Amount in words and figures",
+    "B": "Date of withdrawal",
+    "C": "Name of the cashier",
+    "D": "Name of the payee"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0384",
+   "type": "mcq",
+   "stem": "The transfer of enterprises from private to state ownership for economic or social reasons is referred to as",
+   "options": {
+    "A": "commercialization",
+    "B": "indigenization",
+    "C": "industrialization",
+    "D": "naturalization"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0385",
+   "type": "mcq",
+   "stem": "In the marketing mix, place refers to",
+   "options": {
+    "A": "channel of distribution",
+    "B": "location of the factory",
+    "C": "the market place",
+    "D": "where the product is located"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0386",
+   "type": "mcq",
+   "stem": "Obtaining feedback on the quality and performance of competing products of different manufacturers, explains the retailer's function of",
+   "options": {
+    "A": "after sales service",
+    "B": "granting to credits to consumers",
+    "C": "market research",
+    "D": "stocking variety of goods"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0387",
+   "type": "mcq",
+   "stem": "The durable capital of an enterprise which is used continuously for further production is called ___ capital.",
+   "options": {
+    "A": "called up",
+    "B": "circulating",
+    "C": "fixed",
+    "D": "liquid"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0388",
+   "type": "mcq",
+   "stem": "The use of middlemen by manufacturers become necessary where the goods",
+   "options": {
+    "A": "are of low rate of turnover",
+    "B": "are susceptible to faking or adulteration",
+    "C": "involved are branded",
+    "D": "produced are in large quantities"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0389",
+   "type": "mcq",
+   "stem": "Which of the following is NOT a characteristic of labour? It is",
+   "options": {
+    "A": "fixed in supply",
+    "B": "geographically mobile",
+    "C": "man made",
+    "D": "perishable in nature"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0390",
+   "type": "mcq",
+   "stem": "Which of the following is NOT a reason for government's ownership of Nigerian Ports Authority (NPA)?",
+   "options": {
+    "A": "Avoiding wasteful competition and duplication",
+    "B": "Generating revenue",
+    "C": "High capital requirement",
+    "D": "Making profit"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0391",
+   "type": "mcq",
+   "stem": "The pricing policy adopted by firms selling to wealthy people is",
+   "options": {
+    "A": "market penetration",
+    "B": "market skimming",
+    "C": "pricing above the market",
+    "D": "pricing with the market"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0392",
+   "type": "mcq",
+   "stem": "Instrument used in place of legal tender but not freely acceptable are called ___ money.",
+   "options": {
+    "A": "bank",
+    "B": "commodity",
+    "C": "gold - backed",
+    "D": "representative"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0393",
+   "type": "mcq",
+   "stem": "Commercialization is good for the Nigerian economy because it",
+   "options": {
+    "A": "creates room for competition",
+    "B": "increases the cost of living",
+    "C": "leads to the reduction of workforce",
+    "D": "leads to uneven distribution of wealth"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0394",
+   "type": "mcq",
+   "stem": "Those engaged in extraction, manufacturing, and construction occupations are called ___ workers.",
+   "options": {
+    "A": "commercial",
+    "B": "direct",
+    "C": "indirect",
+    "D": "industrial"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
+  },
+  {
+   "id": "neco-commerce-bank-0395",
+   "type": "mcq",
+   "stem": "The total assets of a business less current liabilities refers to _____ capital.",
+   "options": {
+    "A": "authorized",
+    "B": "called up",
+    "C": "employed",
+    "D": "owned"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2013
   }
  ],
  "category": "secondary",

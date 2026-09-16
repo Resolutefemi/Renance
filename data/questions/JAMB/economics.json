@@ -2,8 +2,8 @@
  "code": "jamb-economics-bank",
  "title": "JAMB Economics | Past Questions Bank",
  "version": 3,
- "questionCount": 2700,
- "totalMarks": 2700,
+ "questionCount": 2713,
+ "totalMarks": 2713,
  "questions": [
   {
    "id": "jamb-economics-bank-0001",
@@ -38771,6 +38771,188 @@
    "year": 2014,
    "image": "/qimages/67324bf74c30f1902acb.jpg",
    "answer": "D"
+  },
+  {
+   "id": "jamb-economics-bank-2707",
+   "type": "mcq",
+   "stem": "If government expenditure exceeds revenue, this results in",
+   "options": {
+    "A": "balanced budget",
+    "B": "national debt",
+    "C": "budget deficit",
+    "D": "budget surplus"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2708",
+   "type": "mcq",
+   "stem": "Which of the following can be deduced from law of variable proportions when total output is rising?",
+   "options": {
+    "A": "MP is greater than AP",
+    "B": "MP is less than AP",
+    "C": "MP is equal to AP",
+    "D": "MP is equal to zero"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2709",
+   "type": "mcq",
+   "stem": "Price elasticity of demand is expressed as",
+   "options": {
+    "A": "percentage change in price percentage change in quantity demanded",
+    "B": "percentage change in quantity demanded percentage change in Income",
+    "C": "percentage change in Income percentage change in quantity demanded",
+    "D": "percentage change in quantity demande percentage change in price"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2710",
+   "type": "mcq",
+   "stem": "If X = 6 and N = 6, determine the value of Efx.",
+   "options": {
+    "A": "36",
+    "B": "12",
+    "C": "1",
+    "D": "72"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2010
+  },
+  {
+   "id": "jamb-economics-bank-2711",
+   "type": "mcq",
+   "stem": "An excess demand for beans will result from",
+   "options": {
+    "A": "an increase in the price of beans",
+    "B": "a decrease in the price of beans",
+    "C": "an increase in the supply of beans",
+    "D": "a decrease in the supply of beans"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2010
+  },
+  {
+   "id": "jamb-economics-bank-2712",
+   "type": "mcq",
+   "stem": "In the long run, one of the characteristics of monopolistic competitive firms is that the",
+   "options": {
+    "A": "make abnormal profits",
+    "B": "suffer losses",
+    "C": "make normal profits",
+    "D": "collude with each other"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2713",
+   "type": "mcq",
+   "stem": "In the circular flow of income, an increase in saving causes",
+   "options": {
+    "A": "an increase in imports",
+    "B": "a decrease in the income stream",
+    "C": "an increase in household consumption",
+    "D": "a decrease in exports"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2714",
+   "type": "mcq",
+   "stem": "Industries for consumer goods are concentrated in urban centres as result of",
+   "options": {
+    "A": "large market",
+    "B": "power supply",
+    "C": "government policy",
+    "D": "weather conditions"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2715",
+   "type": "mcq",
+   "stem": "Dumping in international trade means selling a good at a",
+   "options": {
+    "A": "higher price at home than abroad",
+    "B": "lower price at home than abroad",
+    "C": "price that equates marginal cost with marginal revenue",
+    "D": "price above marginal cost abroad"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2716",
+   "type": "mcq",
+   "stem": "Guided deregulation as currently practiced in Nigeria implies that",
+   "options": {
+    "A": "market forces determine interest and exchange rates",
+    "B": "government alone determines interest and exchange rates",
+    "C": "market forces and government determine interest and exchange rates",
+    "D": "exchange rate is regulated while interest rate is fixed"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2717",
+   "type": "mcq",
+   "stem": "The Basic Needs Approach to development is directed a",
+   "options": {
+    "A": "poverty alleviation",
+    "B": "provision of educational infrastructure",
+    "C": "provision of health services",
+    "D": "improvement in worker's income"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2009
+  },
+  {
+   "id": "jamb-economics-bank-2718",
+   "type": "mcq",
+   "stem": "The rising portion of the long - run average cost curve of a",
+   "options": {
+    "A": "firm is an indication that it is experiencing increasing efficiency",
+    "B": "diseconomies of scale",
+    "C": "economics of scale",
+    "D": "increasing marginal returns"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2010
+  },
+  {
+   "id": "jamb-economics-bank-2719",
+   "type": "mcq",
+   "stem": "A firm enjoying economics of scale is said to be",
+   "options": {
+    "A": "reducing average cost as production increases",
+    "B": "maximizing profits as production increases",
+    "C": "benefiting from the activities of other firms",
+    "D": "having an upward - sloping average cost curve"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2010
   }
  ],
  "body": "JAMB",
