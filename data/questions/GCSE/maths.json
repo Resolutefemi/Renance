@@ -1,0 +1,557 @@
+{
+ "code": "gcse-maths-bank",
+ "title": "GCSE Mathematics | Exam-Style Questions Bank (BBC Bitesize)",
+ "version": 1,
+ "questionCount": 39,
+ "totalMarks": 39,
+ "questions": [
+  {
+   "stem": "Select the value of the digit 6 in the number 31.564",
+   "options": {
+    "A": "6⁄10",
+    "B": "6⁄100",
+    "C": "6⁄1000",
+    "D": "64⁄1"
+   },
+   "id": "gcse-maths-bank-0001",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The digit 6 is in the hundredths position, so its value is 6⁄100 or 0.06"
+  },
+  {
+   "stem": "Write 16 × 28 as a single power of 2",
+   "options": {
+    "A": "2",
+    "B": "2¹²",
+    "C": "2⁴",
+    "D": "2²"
+   },
+   "id": "gcse-maths-bank-0002",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "16 × 2⁸ = 2¹² To write 16 × 2⁸ as a single power of 2, 16 must be written as a power of 2 16 = 2⁴, so 16 × 2⁸ = 2⁴ × 2⁸ = 2¹² Remember that to multiply together two numbers in index form, where the base (2 here) is the same, the powers are added."
+  },
+  {
+   "stem": "Solve 2𝒙 - 1 = 13",
+   "options": {
+    "A": "𝒙 = 7.5",
+    "B": "𝒙 = 6",
+    "C": "𝒙 = 7",
+    "D": "𝒙 = 6.5"
+   },
+   "id": "gcse-maths-bank-0003",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The correct answer is 𝒙 = 7 Add 1 to both sides to find out the value of 2𝒙 Divide both sides by 2 to find out the value of 𝒙 2𝒙 ÷ 2 = 𝒙 14 ÷ 2 = 7 𝒙 = 7 Remember to check your answer in the original equation."
+  },
+  {
+   "stem": "Tony's Taxis calculates the cost of a journey using the graph shown.",
+   "options": {
+    "A": "A journey of 6 miles costs £5",
+    "B": "A journey costing £3 is 2 miles long",
+    "C": "A journey of 8 miles costs £7",
+    "D": "A journey costing £8 is 12 miles long"
+   },
+   "id": "gcse-maths-bank-0004",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "From the graph, a journey of 8 miles costs £6, not £7. To find out how much a journey of 8 miles costs, start at 8 on the horizontal axis, as this is the axis for distance and go up vertically until you reach the line. From the line, read horizontally until you get to the axis for the cost. A journey of 8 miles costs £6"
+  },
+  {
+   "stem": "The ratio of sheep to cows in a field is 3 : 2The farmer adds one more cow to the field which makes the total number of animals in the field 26What is the ratio of sheep to cows in the field after the new cow joins the animals in the field?",
+   "options": {
+    "A": "1 : 1",
+    "B": "11 : 15",
+    "C": "15 : 11",
+    "D": "There is not enough information given"
+   },
+   "id": "gcse-maths-bank-0005",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The number of animals before the new cow joined was 25 If 25 is shared in the ratio 3 : 2 there are a total of 5 parts in the ratio, each part is 25 ÷ 5 There are 3 × 5 sheep and 2 × 5 cows giving 15 sheep and 10 cows. After the new cow has joined there are 15 sheep and 11 cows so the ratio of sheep to cows is 15 : 11 Remember that the order of a ratio is important."
+  },
+  {
+   "stem": "This recipe makes 2 servings of savoury pancakes. Baris wants to make 5 servings of savoury pancakes.",
+   "options": {
+    "A": "25 × 5",
+    "B": "25⁄2 × 2",
+    "C": "2⁄25 × 5",
+    "D": "25⁄2 × 5"
+   },
+   "id": "gcse-maths-bank-0006",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "25g of butter makes 2 servings, so each pancake needs 25⁄2 g of butter. For 5 servings the calculation is 25⁄2 × 5"
+  },
+  {
+   "stem": "ADB and CD are straight lines. Angle CDB is 2 × angle ADC. Work out the size of angle ADC.",
+   "options": {
+    "A": "120°",
+    "B": "60°",
+    "C": "240°",
+    "D": "80°"
+   },
+   "id": "gcse-maths-bank-0007",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Angle CDB is 2 times angle ADC. Angles on a line add up to 180 degrees. Because of the 2:1 ratio of angles CDB and ADC, the 180 degrees must be split into 3 to work out each part. Angle ADC is 180 divided by 3, 180⁄3 = 60 Angle ADC is 60 degrees."
+  },
+  {
+   "stem": "The area of this right-angled triangle is 12 cm2",
+   "options": {
+    "A": "2 cm",
+    "B": "36 cm",
+    "C": "4 cm",
+    "D": "72 cm"
+   },
+   "id": "gcse-maths-bank-0008",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The height is 4 cm. The area of a triangle is ½ × base × height, where the base and the height are at right angles to each other. So ½ x 6 × height = 12 6 × height = 24, the height is 4 cm."
+  },
+  {
+   "stem": "An athletics club has 150 members. Use the frequency tree to work out the probability that a member of the club chosen at random is over 18",
+   "options": {
+    "A": "45⁄150",
+    "B": "105⁄150",
+    "C": "3⁄10",
+    "D": "7⁄10"
+   },
+   "id": "gcse-maths-bank-0009",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The total number of members over 18 is 20 + 25 = 45 So, the probability that a member of the club chosen at random is over 18 is 45⁄150 This could be simplified to 3⁄10"
+  },
+  {
+   "stem": "4 numbers have a mean of 20",
+   "options": {
+    "A": "20",
+    "B": "5",
+    "C": "80",
+    "D": "24"
+   },
+   "id": "gcse-maths-bank-0010",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The mean of a set of numbers is the sum of the set of numbers, divided by the number of numbers in the set. If 4 numbers have a mean of 20, the sum of the numbers divided by 4 is 20 The total of the 4 numbers is 20 × 4 which is 80"
+  },
+  {
+   "stem": "Work out 0∙006 ÷ 0∙02",
+   "options": {
+    "A": "0∙3",
+    "B": "0∙03",
+    "C": "0∙00003",
+    "D": "0∙0003"
+   },
+   "id": "gcse-maths-bank-0011",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "0.006 ÷ 0.02 is equivalent to 0.6 ÷ 2 0.6 ÷ 2 = 0.3"
+  },
+  {
+   "stem": "Work out 7⁄9 - 2⁄5",
+   "options": {
+    "A": "A: 5⁄4",
+    "B": "D: 14⁄45",
+    "C": "C: 17⁄45",
+    "D": "B: 4⁄45"
+   },
+   "id": "gcse-maths-bank-0012",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Create a common denominator by looking for the lowest common multiple of 9 and 5, this is 45 Create equivalent fractions using 45 as the new common denominator. 7⁄9 = 35⁄45 and 2⁄5 = 18⁄45 35⁄45 - 18⁄45 = 17⁄45"
+  },
+  {
+   "stem": "Work out 51 000 000 ÷ 300",
+   "options": {
+    "A": "17 × 10⁸",
+    "B": "17 × 10⁴",
+    "C": "1∙7 × 10⁵",
+    "D": "1∙7 × 10⁹"
+   },
+   "id": "gcse-maths-bank-0013",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "51 000 000 ÷ 300 = 17 0000, 17 0000 in standard form is 1∙7 × 10⁵ Alternatively, change the numbers to standard form first then divide. 51 000 000 = 5∙1 × 10⁷, 300 = 3 × 10² 5∙1 × 10⁷ ÷ 3 × 10² = 1∙7 × 10⁵ Remember that to write a number in standard form, it is written as a number greater than or equal to 1 and less than 10, multiplied by a power of 10 When dividing numbers in index form with the same base (10 here) subtract the powers."
+  },
+  {
+   "stem": "To solve this pair of simultaneous equations algebraically, what do you need to do to eliminate y?",
+   "options": {
+    "A": "Subtract the first equation from the second equation",
+    "B": "Multiply the first equation by 3",
+    "C": "Add the two equations",
+    "D": "Subtract the second equation from the first equation"
+   },
+   "id": "gcse-maths-bank-0014",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Adding the equations, 𝑥 + 3𝑥 = 4𝑥, y + (-y) = 0, 7 + 9 = 16 𝑥 + y = 7 + 3𝑥 - y = 9 gives the equation 4𝑥 = 16 y has been eliminated which means the equation can be solved for 𝑥. 4𝑥 = 16, so 𝑥 = 4 𝑥 = 4 and 𝑥 + y = 7 so y = 3 The solution is 𝑥 = 4, y = 3 If the first equation is multiplied by 3, the equations could then be subtracted which would eliminate 𝑥."
+  },
+  {
+   "stem": "Solve 6𝑥 + 3 = 17 - 𝑥",
+   "options": {
+    "A": "𝑥 = 5",
+    "B": "𝑥 = 4",
+    "C": "𝑥 = 2",
+    "D": "𝑥 = 7"
+   },
+   "id": "gcse-maths-bank-0015",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "6𝑥 + 3 = 17 - 𝑥 Add 𝑥 to both sides: 7𝑥 + 3 = 17 Then subtract 3 from both sides: 7𝑥 = 14 Divide both sides by 7: 𝑥 = 2 To check, substitute the answer of 2 back into the original equation: 6 x 2 + 3 = 17 - 2, 15 = 15, 𝑥 = 2 is the solution to 6𝑥 + 3 = 17 - 𝑥"
+  },
+  {
+   "stem": "In a field, the number of sheep : number of cows = 5 : 6",
+   "options": {
+    "A": "108",
+    "B": "95",
+    "C": "113",
+    "D": "110"
+   },
+   "id": "gcse-maths-bank-0016",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The bar model illustrates the problem. The ratio of sheep to cows is 5 : 6 There are 5 parts for the sheep and 6 for the cows. There are 114 cows, so each part is 114 ÷ 6 = 19 The number of sheep is 19 × 5 = 95"
+  },
+  {
+   "stem": "A model house is built to a scale of 1 : 6",
+   "options": {
+    "A": "12.4 cm",
+    "B": "34 cm",
+    "C": "12240 mm",
+    "D": "34 mm"
+   },
+   "id": "gcse-maths-bank-0017",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The height of the door in the model house is 2040 ÷ 6 in mm which is 340 mm. There are 10 mm in 1 cm, so in cm this measurement is 34 cm."
+  },
+  {
+   "stem": "Work out the vector that translates shape Q to shape P.",
+   "options": {
+    "A": "A",
+    "B": "D",
+    "C": "C",
+    "D": "B"
+   },
+   "id": "gcse-maths-bank-0018",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Work out how to get from the points on the shape Q to the points on shape P. For each point move 4 units to the left (-4) then down 3 (-3). Count carefully. Translation vectors are used to show movements. The first number in the vector shows movement horizontally. A positive value means a movement to the right and a negative value means a movement to the left."
+  },
+  {
+   "stem": "In a bag there are only red, blue and black counters. When a counter is picked at random out of the bag the probability of getting a red counter is 1⁄8 and the probability of getting a blue counter is 1⁄4",
+   "options": {
+    "A": "D: 10⁄12",
+    "B": "B: 5⁄8",
+    "C": "C: 1⁄4",
+    "D": "A: 3⁄8"
+   },
+   "id": "gcse-maths-bank-0019",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The sum of all the possible outcomes is 1 The probability of picking a red or a blue counter is: 1⁄8 + 1⁄4 = 3⁄8 The only other outcome is to pick a black counter, so the probability is 1 - 3⁄8 = 5⁄8"
+  },
+  {
+   "stem": "In a bag there are only green, blue and yellow counters. When a counter is picked at random out of the bag the probability of picking a green counter is 1⁄5, the probability of picking a blue counter is 2⁄5",
+   "options": {
+    "A": "10",
+    "B": "6",
+    "C": "3",
+    "D": "15"
+   },
+   "id": "gcse-maths-bank-0020",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "6 of the counters in the bag are blue and this is 2⁄5 of the number of counters in the bag. If 6 counters is 2⁄5 of the total then 1⁄5 of the total is 3 counters. There are 15 counters in the bag. The probability of picking a green counter is 1⁄5 The probability of picking a blue counter is 2⁄5, so the probability of picking a green or a blue counter is 1⁄5 + 2⁄5 = 3⁄5 This means the probability of picking a yellow counter is 1 - 3⁄5 = 2⁄5 2⁄5 of the 15 counters are yellow so 6 of the 15 counters are yellow."
+  },
+  {
+   "stem": "Find an expression for the nᵗʰ term of this sequence.",
+   "options": {
+    "A": "Add 7 to get the next term",
+    "B": "7n - 2",
+    "C": "7n + 2",
+    "D": "5n + 7"
+   },
+   "id": "gcse-maths-bank-0021",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The nᵗʰ term is 7n - 2 The sequence is going up in 7s, so it is related to the 7 times table. The numbers in the sequence are 2 less that the 7 times table, so the nᵗʰ term is 7n - 2 For example, to find the 3ʳᵈ term, substitute n for 3:"
+  },
+  {
+   "stem": "Which function is this a possible sketch graph for?",
+   "options": {
+    "A": "y = x²",
+    "B": "y = x − 2",
+    "C": "y = x³ − 2",
+    "D": "y = x² − 2"
+   },
+   "id": "gcse-maths-bank-0022",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The sketch graph could be for the function y = 𝑥² - 2 Graphs with an 𝑥² term are symmetrical about the y axis. Compare the graph of y = 𝑥² with the graph of y = 𝑥² - 2 For y = 𝑥² - 2 when 𝑥= 0, y = 0² - 2 = 0 - 2 = -2, so the point (0, -2) is on the graph. y = 𝑥 - 2 is a straight line and y = 𝑥³ - 2 is a curve which does not have reflective symmetry across the 𝑥 axis."
+  },
+  {
+   "stem": "Callum makes a lemon drink by mixing 1 part of lemon squash with 7 parts of water. He uses 400 millilitres of lemon squash.",
+   "options": {
+    "A": "3",
+    "B": "2",
+    "C": "1",
+    "D": "4"
+   },
+   "id": "gcse-maths-bank-0023",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "1 part lemon squash is 400 ml and 7 parts water is 7 × 400 ml = 2800 ml Total amount of drink: 400 + 2800 = 3200 ml 1000 ml = 1 litre Callum can fill 3 bottles and will have 200 ml left over."
+  },
+  {
+   "stem": "Sundip is making a crumble and uses these ingredients for the crumble topping:",
+   "options": {
+    "A": "225 g of flour and 150 g of unsalted butter",
+    "B": "240 g of flour and 160 g of unsalted butter",
+    "C": "210 g of flour and 140 g of unsalted butter",
+    "D": "265 g of flour and 165 g of unsalted butter"
+   },
+   "id": "gcse-maths-bank-0024",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "To keep the ingredients in the correct proportion Sundip needs to use 240 g of flour and 160 g of unsalted butter. He only has 140 g of brown sugar and the recipe states 175 g so he has 140⁄175 of the stated amount in the recipe. 140⁄175 is equivalent to 4⁄5 He should use 4⁄5 of 300 g of flour and 4⁄5 of 200 g of unsalted butter. 4⁄5 of 300 is 240 and 4⁄5 of 200 is 160"
+  },
+  {
+   "stem": "A bag has 91 counters that are red, blue or green. One seventh of the counters are red. The ratio of blue counters to green counters is 1 : 2",
+   "options": {
+    "A": "78",
+    "B": "26",
+    "C": "13",
+    "D": "52"
+   },
+   "id": "gcse-maths-bank-0025",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "There are 52 green counters. One seventh of the 91 counters are red so 91 ÷ 7 = 13 of the counters are red. There are 91 − 13 = 78 remaining counters. The 78 counters are blue and green in the ratio 1 : 2 The ratio has three parts so each part is 78 ÷ 3 = 26, there are 2 parts green so there are 2 × 26 = 52 green counters."
+  },
+  {
+   "stem": "Calculate the area of the trapezium.",
+   "options": {
+    "A": "12 cm²",
+    "B": "91 cm²",
+    "C": "20 cm²",
+    "D": "16 cm²"
+   },
+   "id": "gcse-maths-bank-0026",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The area of the trapezium is 12 cm² Make sure all the units in the calculation are the same. 60 mm = 6 cm To find the area of a trapezium add up the two parallel sides (2 + 6) and multiply by the distance between them (3) then divide by 2 ((2 + 6) × 3) ÷ 2 = 12 Make sure you use the correct distance between the parallel sides (3). The units are cm² because this is an area."
+  },
+  {
+   "stem": "Use this Venn diagram to decide which one of the following statements is incorrect.",
+   "options": {
+    "A": "A ∪ B = {10, 15, 24, 3, 7, 9, 20, 14, 26}",
+    "B": "A' = {2, 5, 14, 26}",
+    "C": "A ∩ B = {3, 7, 9, 20}",
+    "D": "A ∪ B' = {10, 15, 24, 2, 5}"
+   },
+   "id": "gcse-maths-bank-0027",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "A ∪ B' = {10, 15, 24, 25} is not correct. A ∪ B' means the elements of set A or the elements not in set B, A ∪ B' = {10, 15, 24, 3, 7, 9, 20, 2, 5} Remember that A ∩ B is the intersection of the sets, the elements in both sets A and B. B' means the elements not in set B, the ' symbol is used for not."
+  },
+  {
+   "stem": "13, ?, 15, 4The median of this set of numbers is 9",
+   "options": {
+    "A": "5",
+    "B": "13",
+    "C": "9",
+    "D": "4"
+   },
+   "id": "gcse-maths-bank-0028",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "To find the median for a set of numbers, put the numbers in ascending order to find the middle number. If there is an even number of numbers as there are here (4 numbers) the median is the average of the two middle numbers. The average of the missing number and 13 is 9 The missing number and 13 must add up to 18 because 18 ÷ 2 = 9, so the missing number is 5"
+  },
+  {
+   "stem": "The product of prime factors for 24 is: 2 × 2 × 2 × 3",
+   "options": {
+    "A": "The highest common factor is 12 and the lowest common multiple is 2160",
+    "B": "The highest common factor is 8 and the lowest common multiple is 4320",
+    "C": "The highest common factor is 3 and the lowest common multiple is 360",
+    "D": "The highest common factor is 12 and the lowest common multiple is 360"
+   },
+   "id": "gcse-maths-bank-0029",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The highest common factor (HCF) is 12 and the lowest common multiple (LCM) is 360 Looking at the product of prime factors for 24 and 180, 2 × 2 × 3 is common to both, 2 × 2 × 3 = 12. The HCF is 12, 12 is the highest number that divides into 24 and 180 Venn Diagrams help to show the connection between the prime factors and the HCF and LCM. The prime factors are written in the appropriate regions; the HCF is found by multiplying the numbers in the intersection of the two sets 2 × 2 × 3 (12) The LCM is the union of the two sets and is found by multiplying together the numbers from all three secti"
+  },
+  {
+   "stem": "Calculate 2506 × 159",
+   "options": {
+    "A": "400 000",
+    "B": "398 454",
+    "C": "300 000",
+    "D": "4"
+   },
+   "id": "gcse-maths-bank-0030",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "2506 × 159 = 398 454 398 454 to 1 significant figure = 400 000 Remember that the number must be the correct size, 4 needs to be in the hundred thousands place value column."
+  },
+  {
+   "stem": "£600 is invested at an interest rate of 3 % per year. What interest is paid after one year?",
+   "options": {
+    "A": "£1800",
+    "B": "£180",
+    "C": "£18",
+    "D": "£618"
+   },
+   "id": "gcse-maths-bank-0031",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The interest paid on £600 invested at an interest rate of 3 % is £18 3 % of 600 = 3⁄100 × 600 = 18, the interest paid is £18 Read the question carefully. Sometimes you could be asked for the value of the investment, here the question asks for the interest."
+  },
+  {
+   "stem": "Rearrange the formula v² = u² + 2 as to make a the subject.",
+   "options": {
+    "A": "D",
+    "B": "C",
+    "C": "B",
+    "D": "A"
+   },
+   "id": "gcse-maths-bank-0032",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "v² = u² + 2as, subtract u² from both sides to give v² - u² = 2as so: 2as = v² - u² a = (v² - u²) ÷ 2s"
+  },
+  {
+   "stem": "Expand the expression (𝑥 + 3)(𝑥 - 2)",
+   "options": {
+    "A": "𝑥² - 𝑥 - 5",
+    "B": "𝑥² - 𝑥 - 6",
+    "C": "𝑥² + 𝑥 - 5",
+    "D": "𝑥² + 𝑥 - 6"
+   },
+   "id": "gcse-maths-bank-0033",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "(𝑥 + 3)(𝑥 - 2) = 𝑥² + 𝑥 - 6 Multiply each term in the second bracket by 𝑥, 𝑥 × 𝑥 = 𝑥² 𝑥 × (-2) = -2𝑥 Multiply each term in the second bracket by 3: 3 × 𝑥 = 3𝑥, 3 × (-2) = -6 Simplify x² + 3𝑥 - 2𝑥 - 6 by combining the like terms in 𝑥: 𝑥² + 3𝑥 - 2𝑥 - 6 = 𝑥² + 𝑥 - 6"
+  },
+  {
+   "stem": "P is the point with coordinates (1,1)",
+   "options": {
+    "A": "(5,3)",
+    "B": "(4,2.5)",
+    "C": "(1,3)",
+    "D": "(3,1)"
+   },
+   "id": "gcse-maths-bank-0034",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Point Q has coordinates (5,3) PQ : QR = 2:1 means that the distance from P to Q is twice the distance of Q to R. The ratio 2:1 has 3 parts, the change in the 𝑥 coordinates from P to R is 7 − 1 = 6 If 6 is shared in the ratio 2 : 1, each part of the ratio is 6 ÷ 3 = 2 The change in the y coordinates from P to R is 4 − 1 = 3 If 3 is shared in the ratio 2 : 1, each part of the ratio is 3 ÷ 3 = 1 The diagram can be helpful to locate point Q The 𝑥 coordinate of P is 1 so the 𝑥 coordinate of Q is 1 + 2 × 2 = 5"
+  },
+  {
+   "stem": "Work out the total surface area of the solid cylinder, give your answer in terms of π",
+   "options": {
+    "A": "145π cm²",
+    "B": "170π cm²",
+    "C": "300π cm²",
+    "D": "60 + 100π cm²"
+   },
+   "id": "gcse-maths-bank-0035",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The total surface area is made up of the area of the two circular ends and the area of the curved surface. The total area of the two circular ends = 2 × π × r² = 2 × 5²× π = 2 × 25π = 50π cm² The curved surface is a rectangle whose dimensions are the height 12cm and the length of the circumference 2π × 5 (2πr) = 10π The area of the curved surface is 12 × 10π = 120π cm² The total surface area = 50π + 120π = 170π cm² Don't confuse the surface area with the volume which is πr²h (π × 25 × 12 = 300π cm²)"
+  },
+  {
+   "stem": "Work out the surface area of this cuboid.",
+   "options": {
+    "A": "146 cm²",
+    "B": "92 cm²",
+    "C": "180 cm²",
+    "D": "90 cm²"
+   },
+   "id": "gcse-maths-bank-0036",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The surface area of the cuboid is 146 cm² The surface area of a cuboid is calculated by adding together the areas of the six faces. There are three different size faces 2 × 5, 9 × 5, and 9 × 2 There are two of each different size face. The surface area of the cuboid = 2(2 × 5 + 9 × 5 + 9 × 2) = 2(10 + 45 + 18) = 146 cm² Be careful not to confuse surface area with volume, the volume of this cuboid is 2 × 5 × 9 = 90 cm³"
+  },
+  {
+   "stem": "Kieran collected some results on the number of tracks on some albums.",
+   "options": {
+    "A": "12",
+    "B": "7",
+    "C": "11",
+    "D": "8"
+   },
+   "id": "gcse-maths-bank-0037",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The median is 11 tracks. From the table, the total number of albums is 1 + 5 + 3 + 3 + 1 + 1 = 14 The table is already in order, as there are 14 items of data the median is between the 7ᵗʰ and 8ᵗʰ items of data. Look at the frequency column to work out which class includes the 7ᵗʰ and 8ᵗʰ items of data. The cumulative frequency column is a running total of the frequency; for example there are 6 items of data in the first two classes. The cumulative frequency passes the 7ᵗʰ and 8ᵗʰ results in the third row of the table, so the median is in that class. The median is 11 tracks."
+  },
+  {
+   "stem": "A rectangle has one side 14.3 cm long and another side 22.0 cm long, each measurement being correct to the nearest mm.",
+   "options": {
+    "A": "72.4 cm ≤ t < 72.8 cm",
+    "B": "36.2 cm ≤ t < 36.4 cm",
+    "C": "72.2 cm ≤ t < 72.4 cm",
+    "D": "72.5 cm ≤ t < 72.9 cm"
+   },
+   "id": "gcse-maths-bank-0038",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The perimeter is greater than or equal to 724 mm (72.4 cm) and less than 728mm (72.8 cm). Use lower and upper bounds to calculate the possible perimeter. 14.3 cm = 143 mm, 143 mm has a lower bound of 142.5 mm because 142.5 mm is the smallest length that would round up to 143 mm. 22.0 cm = 220 mm, 220 mm has a lower bound of 219.5 mm because 219.5 mm is the smallest length that would round up to 220 mm. The lower bound for the perimeter is 142.5 × 2 + 219.5 × 2 = 724 mm. 14.3 cm = 143 mm, 143 mm has an upper bound of 143.5 mm because any number under 143.5 mm would round down to 143 mm. 22.0 cm"
+  },
+  {
+   "stem": "A is the point (8,2) and B is the point (12,4).",
+   "options": {
+    "A": "y = 1⁄2𝑥 + 2",
+    "B": "y = -1⁄2𝑥 + 6",
+    "C": "y = 2𝑥 − 14",
+    "D": "y = 1⁄2𝑥 − 2"
+   },
+   "id": "gcse-maths-bank-0039",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The equation of the line is y = 1⁄2𝑥 - 2 Work out the gradient of the line, this is 2⁄4 which is equivalent to 1⁄2 Use the equation of a straight line, y = m𝑥 + c where m is the gradient. y = 1⁄2𝑥 + c. (8, 2) is on the line, substitute 𝑥 = 8 and y = 2 into y = 1⁄2𝑥 + c 2 = 1⁄2× 8 + c, 2 = 4 + c, so c = 2 - 4 = -2"
+  }
+ ],
+ "body": "GCSE",
+ "category": "secondary"
+}

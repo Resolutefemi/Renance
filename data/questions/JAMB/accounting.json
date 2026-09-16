@@ -2,8 +2,8 @@
  "code": "jamb-accounting-bank",
  "title": "JAMB Principles of Accounts | Past Questions Bank",
  "version": 1,
- "questionCount": 1591,
- "totalMarks": 1591,
+ "questionCount": 1687,
+ "totalMarks": 1687,
  "questions": [
   {
    "id": "jamb-accounting-bank-0001",
@@ -22478,6 +22478,1436 @@
    "year": 2014,
    "image": "/qimages/fcd71e2a4f618f8cf8de.jpg",
    "answer": "C"
+  },
+  {
+   "id": "jamb-accounting-bank-1598",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 12 and 13.</b> Motor Vehicle Account as at 31st December 2001. Debit: Jan. 1, cost ................₦1950 000 Dec.31, Addition ............ ₦400 000 Credit: Jan. 1, Depreciation ........₦1360 000 June 30, Sales proceeds...... ₦700 000 The vehicle sold was purchase on January 1, 1998 at a cost of ₦1,000 000 and had depreciation at 25% on cost. What is the actual profit or loss arising from the vehicle disposed of?",
+   "options": {
+    "A": "₦250 000 loss",
+    "B": "₦50 000 loss",
+    "C": "₦450 000 profit",
+    "D": "₦575 000 profit"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Step 1: Calculate total depreciation from purchase to sale date From January 1, 1998 to June 30, 2001 = 3.5 years Annual depreciation = 25% × ₦1,000,000 = ₦250,000 Total depreciation = ₦250,000 × 3.5 years = ₦875,000 Step 2: Calculate Net Book Value at disposal date Net Book Value = Cost - Accumulated Depreciation Net Book Value = ₦1,000,000 - ₦875,000 = ₦125,000 Step 3: Calculate Profit/Loss on disposal Profit/Loss = Sale Proceeds - Net Book Value Profit/Loss = ₦700,000 - ₦125,000 = ₦575,000",
+   "year": 2003
+  },
+  {
+   "id": "jamb-accounting-bank-1599",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 17 and 18</b> Given Information: Opening balance: ₦10,640 Purchases: ₦26,912 Returns inwards: ₦492 Returns outwards: ₦810 Cash discount received: ₦1,348 Cash discount allowed: ₦1,560 Cash paid to suppliers: ₦20,808 At the year-end, the purchases ledger showed a debit balance of: ₦108 The balancing figure in the purchases ledger control account is",
+   "options": {
+    "A": "₦15,828",
+    "B": "₦15,720",
+    "C": "₦14,940",
+    "D": "₦14,478"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Purchases Ledger Control Account Debit side (from previous calculation): Cash paid to suppliers = ₦20,808 Returns outwards = ₦810 Discount received = ₦1,348 Closing debit balance = ₦108 Total debit side = ₦23,074 Credit side: Opening balance (credit) = ₦10,640 Purchases = ₦26,912 Total credit side = ₦10,640 + ₦26,912 = ₦37,552 Balancing figure (Closing credit balance) = ₦37,552 − ₦23,074 = ₦14,478",
+   "year": 2004
+  },
+  {
+   "id": "jamb-accounting-bank-1600",
+   "type": "mcq",
+   "stem": "Abba offers 5% cash discount on goods worth ₦10 000, The discount allowed account is to be?",
+   "options": {
+    "A": "debited with ₦10 000",
+    "B": "credited with ₦10 000",
+    "C": "debited with ₦500",
+    "D": "credited with ₦500"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "When Abba offers a 5% cash discount on goods worth ₦10,000: Calculate the discount: Discount = 5% × ₦10,000 = ₦500 Accounting treatment: When a business gives a discount to customers, it's an expense for the business. Rule for expenses: Expenses are always debited \"Discount Allowed\" is an expense account Therefore: The Discount Allowed Account should be debited with ₦500",
+   "year": 2008
+  },
+  {
+   "id": "jamb-accounting-bank-1601",
+   "type": "mcq",
+   "stem": "Given: Club ₦150 Cash sales ₦4,850 Club debtors at close ₦900 Cash received from debtors ₦550 What is the amount of club sales?",
+   "options": {
+    "A": "₦6,150",
+    "B": "₦4,850",
+    "C": "₦4,650",
+    "D": "₦1,300"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "To find the total club sales, Calculate both cash sales and credit sales. Given information: Club debtors at opening: ₦150 Cash sales: ₦4,850 Club debtors at close: ₦900 Cash received from debtors: ₦550 Step 1: Calculate credit sales using debtors control account Opening debtors + Credit sales - Cash received = Closing debtors ₦150 + Credit sales - ₦550 = ₦900 Credit sales = ₦900 - ₦150 + ₦550 Credit sales = ₦1,300 Step 2: Calculate total club sales Total club sales = Cash sales + Credit sales Total club sales = ₦4,850 + ₦1,300 = ₦6,150",
+   "year": 1999
+  },
+  {
+   "id": "jamb-accounting-bank-1602",
+   "type": "mcq",
+   "stem": "Ojo, Sam and Ade are in partnership sharing profit in the ratio 4:3:1 respectively. From their books for the year ended, interest on drawings and capital is allowed at 5% respectively, and profit for the year amounted to ₦4,950. Given that Ojo has capital of ₦5,000, Sam has capital of ₦4,000, and Ade has capital of ₦6,000, what is the interest on capital for Ade?",
+   "options": {
+    "A": "₦250",
+    "B": "₦200",
+    "C": "₦300",
+    "D": "₦400"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Interest on Capital for Ade = Capital Balance × Interest Rate Interest on Capital for Ade = ₦6,000 × 5% = ₦300",
+   "year": 2019
+  },
+  {
+   "id": "jamb-accounting-bank-1603",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer question 21 and 22.</b> Adex Ltd. issues stock to its retail branches at cost price. The following particulars relate to Ede branch. Stock at branch 1st January at cost............₦400 Goods sent to branch at cost...................₦8000 Returns to head ...............................₦340 Cash sales ....................................₦9160 Stock at branch 31st December at cost..........₦720 Calculate the cost of goods credited to the head office trading account?",
+   "options": {
+    "A": "₦7660",
+    "B": "₦7500",
+    "C": "₦7340",
+    "D": "₦7200"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Cost of goods sold = Opening stock + Goods sent to branch − Returns to head office − Closing stock = ₦400 + ₦8,000 − ₦340 − ₦720 = ₦7,340",
+   "year": 2002
+  },
+  {
+   "id": "jamb-accounting-bank-1604",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 40 and 41.</b> Purchases: Date: January 2nd, Qty (units): 500, Rate (₦): 25, Total (₦): 12,500 Date: March 7th, Qty (units): 250, Rate (₦): 28, Total (₦): 7,000 Issues were made as follow: Date: January 9th, Qty (units): 300 Date: February 14th, Qty (units): 200 Date: March 11th, Qty (units): 200 The value of closing stock as at February 14th by simple average method is?",
+   "options": {
+    "A": "₦6,625",
+    "B": "₦2,500",
+    "C": "₦4,100",
+    "D": "₦2,700."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Step 1: Calculate simple average cost Average cost = (₦25 + ₦28) ÷ 2 = ₦26.50 per unit Step 2: Determine remaining units as at February 14th Total purchased: 500 + 250 = 750 units Total issued by Feb 14th: 300 + 200 = 500 units Remaining: 750 - 500 = 250 units Step 3: Calculate closing stock value Closing stock = 250 units × ₦26.50 = ₦6,625",
+   "year": 2002
+  },
+  {
+   "id": "jamb-accounting-bank-1605",
+   "type": "mcq",
+   "stem": "What will be the equity of the business?",
+   "options": {
+    "A": "N 12,800",
+    "B": "N 4,900",
+    "C": "N 8,200",
+    "D": "N 9,500."
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2007
+  },
+  {
+   "id": "jamb-accounting-bank-1606",
+   "type": "mcq",
+   "stem": "A Trading account for the year ended 31st December 2009 shows the following information: Opening Stock: ₦32,000 Purchases: ₦40,000 Carriage inwards: ₦1,000 Less Returns: ₦2,000 Sales: ₦48,000 Less Returns: ₦2,000 Closing Stock: ₦9,000 Calculate: What is the cost of goods available for sale?",
+   "options": {
+    "A": "₦20,500",
+    "B": "₦71,000",
+    "C": "₦28,000",
+    "D": "₦27,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Calculate Cost of Goods Available Cost of Goods Available = Opening Stock + Net Purchases + Carriage Inwards = ₦32,000 + ₦39,000 + ₦1,000 = ₦71,000",
+   "year": 2018
+  },
+  {
+   "id": "jamb-accounting-bank-1607",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 15 and 16.</b> The gross profit ratio for the company is 25%. The closing stock for this company is",
+   "options": {
+    "A": "₦72,000",
+    "B": "₦45,000",
+    "C": "₦42,500",
+    "D": "₦31,250"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Step 1: Calculate Gross Profit Gross Profit = 25% × ₦157,000 = ₦39,250 Step 2: Calculate Cost of Sales Cost of Sales = Net Sales - Gross Profit Cost of Sales = ₦157,000 - ₦39,250 = ₦117,750 Step 3: Calculate Closing Stock using Cost of Sales Formula Cost of Sales = Opening Stock + Net Purchases - Closing Stock ₦117,750 = ₦45,000 + ₦104,000 - Closing Stock ₦117,750 = ₦149,000 - Closing Stock Closing Stock = ₦149,000 - ₦117,750 Closing Stock = ₦31,250",
+   "year": 2002,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756665371/ALOC-Questions/Accounting/UTME/2002/Accounting_JAMB_2002_Q15-16_nkt1he.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1608",
+   "type": "mcq",
+   "stem": "A company's inventory records show the following information for the year: Opening stock on January 1st was ₦2,000, purchases during the year totaled ₦4,000, carriage inwards was ₦500, sales amounted to ₦9,000, and carriage outwards was ₦500. Based on this information, what is the value of the Gross profit?",
+   "options": {
+    "A": "₦9,000",
+    "B": "₦2,500",
+    "C": "₦3,000",
+    "D": "₦1,500"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "COGS = 2,000 + 4,000 + 500 = ₦6,500 Gross Profit = Sales − COGS = 9,000 − 6,500 = ₦2,500",
+   "year": 2017
+  },
+  {
+   "id": "jamb-accounting-bank-1609",
+   "type": "mcq",
+   "stem": "Faruk and Osawe are in partnership sharing profits and losses in the ratio of 3:7. Faruk isto receive a salary of ₦9,000. In one accounting period, the business recorded a loss of ₦1,500 (before deduction of Faruk's salary). The appropriate distribution of the net loss would be",
+   "options": {
+    "A": "Faruk,(₦450);Osawe,(₦1,050)",
+    "B": "Faruk,(₦3,150); Osawe (₦7,350),",
+    "C": "Faruk,(₦2,250);Osawe,(₦5,250),",
+    "D": "Faruk, (₦8,550);Osawe,(₦1,050)"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Step 1: Adjust loss for Faruk's salary Loss before salary = ₦1,500 Faruk's salary = ₦9,000 Since salary is treated as an appropriation before profit is shared, the total loss to be shared becomes: {Net loss} = ₦1,500 + ₦9,000 = ₦10,500 Step 2: Share the net loss in the ratio 3:7 Total ratio = 3 + 7 = 10 Faruk: {3}/{10} × ₦10,500 = ₦3,150$ Osawe: {7}/{10} × ₦10,500 = ₦7,350$ Step 3: Net effect Faruk does not receive the salary because the firm made a loss; the loss including salary is allocated.",
+   "year": 1997
+  },
+  {
+   "id": "jamb-accounting-bank-1610",
+   "type": "mcq",
+   "stem": "Use the information below to answer the question that follows, A machine bought for N35,000 was estimated to have a life span of 5years with a scrap value of N9,000. The yearly depreciation using the straight line method would be?",
+   "options": {
+    "A": "₦5,200",
+    "B": "₦6,500",
+    "C": "₦8,800",
+    "D": "₦4,400"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "You take the cost (₦35,000), subtract the scrap value (₦9,000) to get ₦26,000, then divide by the useful life of 5 years: So the annual depreciation is ₦5,200.",
+   "year": 2016
+  },
+  {
+   "id": "jamb-accounting-bank-1611",
+   "type": "mcq",
+   "stem": "Discounts granted to branch customers are treated as a debit to branch",
+   "options": {
+    "A": "stock account and a credit to branch debtors' account",
+    "B": "discount account and a credit to branch bank account",
+    "C": "stock account and a credit to branch bank account",
+    "D": "discount account and a credit to branch debtors' account"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2004
+  },
+  {
+   "id": "jamb-accounting-bank-1612",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 45 and 46</b> The value of the owner's equity is",
+   "options": {
+    "A": "₦400,000",
+    "B": "₦900,000",
+    "C": "₦957,000",
+    "D": "₦1,357,000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Calculate Owner's Equity: Owner's Equity = Share Capital + Reserves Owner's Equity = Issued shares + Capital reserves + Revenue reserves Owner's Equity = ₦500,000 + ₦250,000 + ₦207,000 Owner's Equity = ₦957,000",
+   "year": 2004,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756662647/ALOC-Questions/Accounting/UTME/2004/Accounting_JAMB_2004_Q45-46_utzntz.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1613",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 28 and 29</b> Maro Merchant Bank Plc is to issue 500,000 ordinary shares of 50k each at ₦ 3,000 per share. Applications were received for 1,550,000 shares fully paid, 1,250,000 shares are to be issued on a pro rata basis and excess subscriptions were dishonored and refunds made The refund due to an application for 25,000 shares is",
+   "options": {
+    "A": "₦45,000",
+    "B": "₦30,000",
+    "C": "₦7,500",
+    "D": "₦5,000"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Applications were received for 1,550,000 shares, but only applications for 1,250,000 shares are considered for pro rata allotment. The applications for the remaining 300,000 shares are dishonored and fully refunded. The 500,000 shares are issued on a pro rata basis to the considered applications (for 1,250,000 shares). The allotment ratio is 500,000 / 1,250,000 = 0.4 (or 2/5), meaning each applicant receives 40% of the shares they applied for. For an application of 25,000 shares (assumed to be part of the considered group): Shares allotted = 0.4 × 25,000 = 10,000 shares. Shares not allotted = ",
+   "year": 2000
+  },
+  {
+   "id": "jamb-accounting-bank-1614",
+   "type": "mcq",
+   "stem": "Nasara Manufacturing Plc has three direct labour employees that work 40 hours each a week for 50 weeks a year. Factory overhead costs of ₦60,000 is distributed on the basis of direct labour hours. Compute the overhead rate?",
+   "options": {
+    "A": "₦12 per hour",
+    "B": "₦16 per hour",
+    "C": "₦10 per hour",
+    "D": "₦15 per hour"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Step 1: Total direct labour hours Each worker: 40 hours/week × 50 weeks/year = 2,000 hours/year 3 workers: 2,000 × 3 = 6,000 hours/year Step 2: Overhead rate Overhead rate = Total factory overhead ÷ Total direct labour hours = ₦60,000 ÷ 6,000 hours = ₦10 per hour",
+   "year": 2002
+  },
+  {
+   "id": "jamb-accounting-bank-1615",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 39 to 40</b> Jide and Haruna contribute ₦12000 each as capital and share profit equally. Jide draws ₦1500 and Haruna ₦1700 half-yearly. The profit for the year is ₦10000. Jide receives a salary of ₦2000. The balances of current accounts of Jide and Haruna are respectively?",
+   "options": {
+    "A": "₦6000 and ₦5000",
+    "B": "₦3000 and ₦3400",
+    "C": "₦4000 and ₦4000",
+    "D": "₦3000 and ₦600"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Step 1: Add items that increase the current account Items that increase the current account: Share of profit Salary (for Jide) We already found: Total profit available for appropriation = ₦8,000 They share profit equally = ₦4,000 each For Jide: Salary = ₦2,000 Share of profit = ₦4,000 Increase = ₦2,000 + ₦4,000 = ₦6,000 For Haruna: Share of profit = ₦4,000 Increase = ₦4,000 Step 2: Deduct drawings Drawings are given half-yearly: For Jide: ₦1,500 × 2 = ₦3,000 For Haruna: ₦1,700 × 2 = ₦3,400 Step 3: Calculate closing balances Jide: ₦6,000 − ₦3,000 = ₦3,000 Haruna: ₦4,000 − ₦3,400 = ₦600 Answer:₦",
+   "year": 2005
+  },
+  {
+   "id": "jamb-accounting-bank-1616",
+   "type": "mcq",
+   "stem": "In partnership account, conversion of non-cash assets into cash is referred to as",
+   "options": {
+    "A": "realization",
+    "B": "disposal",
+    "C": "dissolution",
+    "D": "revaluation"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1617",
+   "type": "mcq",
+   "stem": "Determine the gross profit",
+   "options": {
+    "A": "N 49,000",
+    "B": "N 48,000",
+    "C": "N 31,000",
+    "D": "N30,000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1618",
+   "type": "mcq",
+   "stem": "Alaka who owed Saka N15, 000, settled his deb after- deducting cash discount of 10%. To record the discount in the book of Saka, debit",
+   "options": {
+    "A": "Saka's account and credit discount received account",
+    "B": "Alaka's account and credit discount received account",
+    "C": "discount received account andcredit Alaka's account",
+    "D": "discount allowed account and credit Alaka's account."
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2016
+  },
+  {
+   "id": "jamb-accounting-bank-1619",
+   "type": "mcq",
+   "stem": "Based on the final accounts of Wazobi Ventures for the year ended 30th June, 1998, where sales were ₦233,000 and cost of goods sold was ₦170,000, with overhead expenses including admin expenses of ₦16,800, selling expenses of ₦15,000, and other overhead expenses of ₦6,200, resulting in a net profit of ₦25,000, what is the gross profit as a percentage of sales?",
+   "options": {
+    "A": "2.70%",
+    "B": "0.27%",
+    "C": "27.00%",
+    "D": "29.80%"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "To find the gross profit as a percentage of sales: First, calculate gross profit: Gross Profit = Sales - Cost of Goods Sold Gross Profit = ₦233,000 - ₦170,000 = ₦63,000 Then, calculate the percentage: Gross Profit Percentage = (Gross Profit ÷ Sales) × 100 Gross Profit Percentage = (₦63,000 ÷ ₦233,000) × 100 = 27.04% Therefore, the gross profit as a percentage of sales is approximately 27%.",
+   "year": 2019
+  },
+  {
+   "id": "jamb-accounting-bank-1620",
+   "type": "mcq",
+   "stem": "Purchases of raw materials amount to N 81 000, direct labour is N 38 000 and factory overhead N 29 000. Calculate the prime cost.",
+   "options": {
+    "A": "N 176,000",
+    "B": "N 170,000",
+    "C": "N 167,000",
+    "D": "N 156,000."
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2007
+  },
+  {
+   "id": "jamb-accounting-bank-1621",
+   "type": "mcq",
+   "stem": "From the following information: Stock on Jan 1 is ₦2,600, Purchases amount to ₦4,000, Carriage inwards is ₦500, Sales total ₦9,000, and Carriage outwards is ₦500. Determine the net profit.",
+   "options": {
+    "A": "₦4,000",
+    "B": "₦4,500",
+    "C": "₦5,000",
+    "D": "₦1,400"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "COGS = Opening Stock + Purchases + Carriage Inwards = ₦2,600 + ₦4,000 + ₦500 = ₦7,100 Gross Profit = Sales - COGS = ₦9,000 - ₦7,100 = ₦1,900 Net Profit = Gross Profit - Carriage Outwards = ₦1,900 - ₦500 = ₦1,400",
+   "year": 2023
+  },
+  {
+   "id": "jamb-accounting-bank-1622",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer question 33 and 34</b> Maimalari Ltd had (i) Earning per share 47k (ii) Dividend per share 30k (iii) Par value of each share ₦1.20 (iv) Market price per share ₦1.50 The company's earning yield is?",
+   "options": {
+    "A": "20.00%",
+    "B": "25.00%",
+    "C": "31.33%",
+    "D": "39.17%"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The earnings yield is calculated as: Earnings Yield = Earnings per Share/Market Price per Share × 100% Given: Earnings per share (EPS) = ₦0.47 Market price per share = ₦1.50 Earnings Yield = 0.47/1.50 × 100% ≈ 31.33%",
+   "year": 2000
+  },
+  {
+   "id": "jamb-accounting-bank-1623",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 17 and 18.</b> The value of x is",
+   "options": {
+    "A": "₦560.00",
+    "B": "₦5.00",
+    "C": "₦5.50",
+    "D": "₦6.00"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "To find x, Calculate the balance after Jan. 15: Stock movements: Jan. 1: 100 units (₦500.00) Jan. 5: +50 units (₦300.00) = 150 units total Jan. 7: -40 units (₦240.00) = 110 units remaining Jan. 10: +50 units (₦200.00) = 160 units total Jan. 15: -50 units (₦200.00) = 110 units remaining Remaining stock composition: 100 units at ₦5.00 = ₦500.00 10 units at ₦6.00 = ₦60.00 Total = 110 units worth ₦560.00 Therefore, x = ₦560.00",
+   "year": 2001,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756665949/ALOC-Questions/Accounting/UTME/2001/Accounting_JAMB_2001_Q17-18_tvdlto.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1624",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 17 to 18.</b> Aug. 1 Received 20 units at ₦60 each Aug. 6 Received 20 units at ₦68 each Aug. 10 Issued 16 units Aug. 20 Received 40 units at ₦80 each Aug. 31 Issued 48 units Using the FIFO method, what is the value of the closing stock?",
+   "options": {
+    "A": "₦1280",
+    "B": "₦1184",
+    "C": "₦1024",
+    "D": "₦960"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Step 1: After Aug. 1 Stock: 20 units @ ₦60 Step 2: After Aug. 6 Stock: 20 units @ ₦60 20 units @ ₦68 Step 3: Aug. 10 issue (16 units) - FIFO means take oldest stock first Take 16 from the 20 units @ ₦60 → leaves 4 units @ ₦60 Remaining from Aug. 6: 20 units @ ₦68 Stock after issue: 4 units @ ₦60 20 units @ ₦68 Step 4: Aug. 20 receive 40 units @ ₦80 Stock now: 4 units @ ₦60 20 units @ ₦68 40 units @ ₦80 Step 5: Aug. 31 issue (48 units) - FIFO Take 4 from ₦60 batch → 0 left Take 20 from ₦68 batch → 0 left Need 48 - 4 - 20 = 24 units from ₦80 batch → leaves 16 units @ ₦80 Step 6: Closing stock 16",
+   "year": 2008
+  },
+  {
+   "id": "jamb-accounting-bank-1625",
+   "type": "mcq",
+   "stem": "Find the fixed assets",
+   "options": {
+    "A": "I, II and V",
+    "B": "I, II and IV",
+    "C": "I, II and III",
+    "D": "Ill, IV and V"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1626",
+   "type": "mcq",
+   "stem": "Using the straight-line method, the depreciation of the asset in the first year was",
+   "options": {
+    "A": "N 210 m",
+    "B": "N 343m",
+    "C": "N 105m",
+    "D": "N 270m."
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2007
+  },
+  {
+   "id": "jamb-accounting-bank-1627",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 15 and 16</b> What is the capital employed?",
+   "options": {
+    "A": "₦25,690",
+    "B": "₦43052",
+    "C": "₦43 044",
+    "D": "₦38600"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Capital Employed = Fixed Assets + Working Capital or alternatively: Capital Employed = Total Assets - Current Liabilities From the given information: Fixed Assets: Land and building: ₦8,470 Furniture and fittings: ₦5,120 Motor Vehicles: ₦3,462 Total Fixed Assets = ₦17,052 Current Assets: Closing Stock: ₦3,000 Debtors: ₦11,474 Cash: ₦1,518 Total Current Assets = ₦15,992 Current Liabilities: Creditors: ₦7,354 Calculation: Method 1: Capital Employed = Total Assets - Current Liabilities Total Assets = Fixed Assets + Current Assets = ₦17,052 + ₦15,992 = ₦33,044 Capital Employed = ₦33,044 - ₦7,354 =",
+   "year": 2003,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756663151/ALOC-Questions/Accounting/UTME/2003/Accounting_JAMB_2003_Q15-16_s3clfz.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1628",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 28 and 29.</b> <b>It is the tradition of the club to write off an amount equal to 25% of the subscriptions received as other expenses.</b> What is the amount to be written off as other expenses?",
+   "options": {
+    "A": "₦4,500",
+    "B": "₦6,000",
+    "C": "₦4,000",
+    "D": "₦5,000."
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given Information: Subscriptions received: ₦20,000 Club tradition: Write off 25% of subscriptions received as other expenses Calculation: Amount to be written off as other expenses = 25% of subscriptions received = 25% × ₦20,000 = 0.25 × ₦20,000 = ₦5,000",
+   "year": 2002,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756665518/ALOC-Questions/Accounting/UTME/2002/Accounting_JAMB_2002_Q28-29_mt0snk.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1629",
+   "type": "mcq",
+   "stem": "What is the accumulated fund?",
+   "options": {
+    "A": "23,700",
+    "B": "27,750",
+    "C": "29,650",
+    "D": "51,650"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1630",
+   "type": "mcq",
+   "stem": "The share premium account would be",
+   "options": {
+    "A": "credited with application and allotment N 187,500",
+    "B": "debited with application and allotment N 375,000",
+    "C": "credited with application and allotment N 375,000",
+    "D": "debited with application and allotment N 187,500"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1631",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 18 and 19</b> Using the periodic simple average method, the cost per unit is",
+   "options": {
+    "A": "₦2.50",
+    "B": "₦3.25",
+    "C": "₦2.25",
+    "D": "₦1.25"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Periodic Simple Average Method: This method calculates the average of all the different purchase prices, regardless of the quantities purchased at each price. Calculation: Simple Average = Sum of all purchase prices ÷ Number of different prices Simple Average = (₦1.00 + ₦2.00 + ₦3.00 + ₦4.00) ÷ 4 Simple Average = ₦10.00 ÷ 4 Simple Average = ₦2.50 per unit",
+   "year": 2003,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756663211/ALOC-Questions/Accounting/UTME/2003/Accounting_JAMB_2003_Q18-19_t9cj1m.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1632",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 14 and 15</b> Palaju Enterprises had fixed assets costing ₦900,000 with provision for depreciation of ₦150,000 were disposed of during the period. Fixed assets of ₦100,000 were added during the year. Provision for depreciation was ₦350,000 at the beginning of the year and ₦300,000 at the end of the year. The depreciation expenses charged for the year is?",
+   "options": {
+    "A": "₦450,000",
+    "B": "₦250,000",
+    "C": "₦150,000",
+    "D": ". ₦100,000"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Provision for Depreciation Account: Opening balance: ₦350,000 Less: Provision on disposed assets: (₦150,000) Add: Current year depreciation: ? Closing balance: ₦300,000 Calculation: ₦350,000 - ₦150,000 + Current year depreciation = ₦300,000 ₦200,000 + Current year depreciation = ₦300,000 Current year depreciation = ₦300,000 - ₦200,000 = ₦100,000 Therefore, the depreciation expense charged for the year is ₦100,000.",
+   "year": 2001
+  },
+  {
+   "id": "jamb-accounting-bank-1633",
+   "type": "mcq",
+   "stem": "From the following information: Plant and Machinery is valued at ₦190,000, Motor Vehicle at ₦170,000, Stock at ₦60,000, Current Liabilities amount to ₦50,000, and Purchase consideration is ₦400,000. What is the goodwill?",
+   "options": {
+    "A": "₦110,000",
+    "B": "₦30,000",
+    "C": "₦90,000",
+    "D": "₦80,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Net assets = ₦190,000 + ₦170,000 + ₦60,000 - ₦50,000 = ₦370,000 Goodwill = ₦400,000 - ₦370,000 = ₦30,000",
+   "year": 2023
+  },
+  {
+   "id": "jamb-accounting-bank-1634",
+   "type": "mcq",
+   "stem": "Capital ₦39,000, Long Term Loan ₦15,000, Creditors ₦9,000, Accrued wages ₦5,000 totaling ₦68,000 on one side, and Land ₦20,000, Building ₦30,000, Stock ₦40,000, Debtors ₦6,000, Cash ₦8,000 totaling ₦68,000 on the other side, use the information above to answer the question: The acid test ratio in the company is ________.",
+   "options": {
+    "A": "1:1",
+    "B": "2:3",
+    "C": "1:2",
+    "D": "3:2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The acid test ratio (quick ratio) measures a company's ability to pay short-term debts using liquid assets. Formula: Acid Test Ratio = (Current Assets - Stock) ÷ Current Liabilities Calculation: Current Assets = Stock + Debtors + Cash = ₦40,000 + ₦6,000 + ₦8,000 = ₦54,000 Quick Assets = Current Assets - Stock = ₦54,000 - ₦40,000 = ₦14,000 Current Liabilities = Creditors + Accrued wages = ₦9,000 + ₦5,000 = ₦14,000 Acid Test Ratio = ₦14,000 ÷ ₦14,000 = 1:1 This means the company has exactly enough liquid assets to cover its current liabilities.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-accounting-bank-1635",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 29 to 30</b> subscription.....................₦5420 Canopy rent......................₦400 Wages............................₦1100 Post-ages........................₦300 loss from bar....................₦160 Purchases of new furniture.......₦120 Premises.........................₦4000 Furniture at the beginning.......₦1120 Determine the accumulated fund value?",
+   "options": {
+    "A": "₦9360",
+    "B": "₦5,380",
+    "C": "₦4200",
+    "D": "₦3000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Compute the accumulated fund as all assets less liabilities. No liabilities were given, so add up cash and assets: Cash (closing, from receipts & payments) = ₦140 Furniture: opening ₦1,120 + purchase of new furniture ₦120 = ₦1,240 Premises = ₦4,000 Total accumulated fund = 140 + 1,240 + 4,000 = ₦5,380",
+   "year": 2005
+  },
+  {
+   "id": "jamb-accounting-bank-1636",
+   "type": "mcq",
+   "stem": "Emeka Enterprises Statement of Affairs at start Assets: Cash: ₦70,000 Inventory: ₦58,000 Machines: ₦100,000 Liabilities: Creditors: ₦85,000 Bank Loan: ₦60,000 What is the capital at start?",
+   "options": {
+    "A": "₦53000",
+    "B": "₦63000",
+    "C": "₦73000",
+    "D": "₦83000"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Assets: Cash: ₦70,000 Inventory: ₦58,000 Machines: ₦100,000 Total Assets = ₦70,000 + ₦58,000 + ₦100,000 = ₦228,000 Liabilities: Creditors: ₦85,000 Bank Loan: ₦60,000 Total Liabilities = ₦85,000 + ₦60,000 = ₦145,000 Calculation: Capital at start = Total Assets - Total Liabilities Capital at start = ₦228,000 - ₦145,000 = ₦83,000",
+   "year": 2003
+  },
+  {
+   "id": "jamb-accounting-bank-1637",
+   "type": "mcq",
+   "stem": "In the balance sheet of a not-for-profit-making organization, subscription paid in advance is regarded as a",
+   "options": {
+    "A": "current asset",
+    "B": "current liability",
+    "C": "capital",
+    "D": "reserve"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2004
+  },
+  {
+   "id": "jamb-accounting-bank-1638",
+   "type": "mcq",
+   "stem": "Given: Rates paid during the year amounted to ₦2,250 at ₦125 per month and 1,035 was paid for electricity in the same period at ₦115 per month. Determine the amount of prepaid rates?",
+   "options": {
+    "A": "₦345",
+    "B": "₦750",
+    "C": "₦1,380",
+    "D": "₦1,500"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Step 1: Find how many months the rates payment covers Rates paid = ₦2,250 Rate per month = ₦125 Months covered = ₦2,250 ÷ ₦125 = 18 months Step 2: Determine months prepaid If the accounting period is 12 months, then: Prepaid months = 18 − 12 = 6 months Step 3: Value of prepaid rates Prepaid amount = 6 months × ₦125 = ₦750",
+   "year": 2004
+  },
+  {
+   "id": "jamb-accounting-bank-1639",
+   "type": "mcq",
+   "stem": "Using the information provided: capital opening balance ₦307,000, closing balance ₦342,000, net profit for the period ₦121,600, purchases ₦706,000, carriage inwards ₦17,500, cost of goods sold ₦740,700, total selling, general and administration expenses ₦526,000, discount received ₦9,650, and opening stock ₦98,800, calculate the closing stock for the period.",
+   "options": {
+    "A": "₦69,300",
+    "B": "₦81,600",
+    "C": "₦81,300",
+    "D": "₦106,400"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "To calculate closing stock, use the cost of goods sold formula and rearrange: Cost of Goods Sold = Opening Stock + Purchases + Carriage Inwards - Closing Stock Rearranging to find closing stock: Closing Stock = Opening Stock + Purchases + Carriage Inwards - Cost of Goods Sold Closing Stock = ₦98,800 + ₦706,000 + ₦17,500 - ₦740,700 Closing Stock = ₦822,300 - ₦740,700 = ₦81,600 Therefore, the closing stock for the period is ₦81,600.",
+   "year": 2020
+  },
+  {
+   "id": "jamb-accounting-bank-1640",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 28 and 29</b> Subscription received during the year ₦30,000 Subscription owed last year ₦4,000 Subscription received for next year ₦6,000 What is the subscription to be charged to income and expenditure account?",
+   "options": {
+    "A": "₦28,000",
+    "B": "₦34,000",
+    "C": "₦30,000",
+    "D": "₦20,000"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Income = Received during year + Opening arrears − Advance for next year Substituting the numbers: Income = ₦30,000 + ₦4,000 − ₦6,000 = ₦28,000",
+   "year": 2001
+  },
+  {
+   "id": "jamb-accounting-bank-1641",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 47 and 48.</b> The business was acquired on 1st April, 2002 at a purchase consideration of ₦120 000 by SOZ. All assets and liabilities were taken over except the cash. To open the new firm's bank account, additional ₦20,000 was paid into the bank. The goodwill on purchase is?",
+   "options": {
+    "A": "₦90,000",
+    "B": "₦30,000",
+    "C": "₦19,000",
+    "D": "₦18,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Step 1: Calculate Net Assets Acquired Assets taken over (excluding cash): Land and buildings: ₦50,000 Furniture: ₦10,000 Stock: ₦30,000 Debtors: ₦30,000 Total Assets = ₦120,000 Liabilities taken over: Creditors: ₦30,000 Net Assets Acquired = ₦120,000 - ₦30,000 = ₦90,000 Step 2: Calculate Goodwill Goodwill = Purchase Consideration - Net Assets Acquired Goodwill = ₦120,000 - ₦90,000 = ₦30,000",
+   "year": 2003,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756663292/ALOC-Questions/Accounting/UTME/2003/Accounting_JAMB_2003_Q47-48_i1is6p.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1642",
+   "type": "mcq",
+   "stem": "Zakari started a business on January 2000. He bought a shop costing N 54,000 and stock worth N 7,600. Profit for the year amounted to N 22,100. His closing capital was N 73,800. Zakari's personal drawings amounted to",
+   "options": {
+    "A": "N 2,300",
+    "B": "N9,900",
+    "C": "N 17,100",
+    "D": "N 19,500"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2004
+  },
+  {
+   "id": "jamb-accounting-bank-1643",
+   "type": "mcq",
+   "stem": "Given: ...............................Jan.2003.........Dec. 2003 Provision for bad debt........₦1000 Debtors..........................................₦20000 Bad debt to be written off.......................₦2000 The provision for bad debt stands at 10% of debtors. How much is to be charged to profit and loss account as provision for bad debt?",
+   "options": {
+    "A": "₦800",
+    "B": "₦1000",
+    "C": "₦1800",
+    "D": "₦2000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Workings: Required provision = 10% of ₦20,000 = ₦2,000 Existing provision = ₦1,000 Amount to charge to P&L as provision = ₦2,000 − ₦1,000 = ₦1,000 (Notice the ₦2,000 bad debt to be written off is a separate bad debt expense, not the provision movement asked for.)",
+   "year": 2005
+  },
+  {
+   "id": "jamb-accounting-bank-1644",
+   "type": "mcq",
+   "stem": "Didi Ltd offered 10,000 ordinary shares of ₦1.50 each at a discount of 2% which were fully subscribed. With regard to the offer above?",
+   "options": {
+    "A": "shares are never offered at a discount; the offer is invalid",
+    "B": "the value of shares in the capital account will be lowered by 2%",
+    "C": "the company incurs a loss to the tune of 2% of the offer",
+    "D": "each of the subscribers loses 2% of investment"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The shares have a nominal value of ₦1.50, so on 10,000 shares the full par amount would be ₦15,000. At a 2% discount, subscribers actually pay only 98% of par, i.e. ₦1.50 × 0.98 = ₦1.47 per share, so total cash received is ₦14,700. The \"missing\" ₦300 (₂₀₀₀ × ₦0.03) is debited to a \"Discount on Issue of Shares\" account, effectively a capital loss to the company. Thus the company forgoes 2% of the issue price, incurring that amount as a loss on the share issue.",
+   "year": 2000
+  },
+  {
+   "id": "jamb-accounting-bank-1645",
+   "type": "mcq",
+   "stem": "Mamsa Nigeria Limited issued 20,000 ordinary shares of ₦1.50 per share on 2nd July 2002. 15,000 ordinary shares were fully subscribed for and their monies received as below: On application ₦0.40, On allotment ₦0.20, First call (including premium of ₦0.50) ₦0.70. What is the balance of the ordinary share capital account after the first call was received?",
+   "options": {
+    "A": "₦12,000",
+    "B": "₦24,000",
+    "C": "₦10,500",
+    "D": "₦1,950"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Shares subscribed = 15,000 Nominal value per share = ₦1.00 (with ₦0.50 premium) Calls on capital per share: Application: ₦0.40 Allotment: ₦0.20 First call (capital element): ₦0.70 − ₦0.50 premium = ₦0.20 Total called on capital per share = ₦0.40 + ₦0.20 + ₦0.20 = ₦0.80 Total credited to Ordinary Share Capital = 15,000 × ₦0.80 = ₦12,000.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-accounting-bank-1646",
+   "type": "mcq",
+   "stem": "Given the following ledger balances, what is the total amount on the credit side of the trial balance? Bank overdraft: ₦2,000 Cash: ₦2,000 Furniture: ₦4,000",
+   "options": {
+    "A": "₦4000",
+    "B": "₦6000",
+    "C": "₦2000",
+    "D": "₦8000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Only the bank overdraft is a credit balance, so the total on the credit side of the trial balance is ₦2,000.",
+   "year": 2021
+  },
+  {
+   "id": "jamb-accounting-bank-1647",
+   "type": "mcq",
+   "stem": "Sule and Ahmed are in partnership sharing profit and losses equally. If Khadija is admitted as a new partner to take 1/5 th as her share. What is the new profit or loss sharing?",
+   "options": {
+    "A": "Sule1/3, Ahmed1/3, Khadija 1/3",
+    "B": "Sule1/3, Ahmed1/3, Khadija 1/3",
+    "C": "Sule1/5, Ahmed1/5, Khadija3/5",
+    "D": "Sule2/5, Ahmed2/5, Khadija1/5"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The new partners' profit‐sharing becomes: Khadija takes 1/5 The remaining 4/5, is shared equally between Sule and Ahmed, so each gets 4/5 × 1/2 = 2/5. New ratio: Sule: 2/5 Ahmed: 2/5 Khadija: 1/5",
+   "year": 2022
+  },
+  {
+   "id": "jamb-accounting-bank-1648",
+   "type": "mcq",
+   "stem": "Receipts and payments account is a summary of the",
+   "options": {
+    "A": "budget",
+    "B": "trading account",
+    "C": "cash book",
+    "D": "profit and loss account"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1649",
+   "type": "mcq",
+   "stem": "A business has the following information for a trading period: Stock Jan 1 ₦2600, Purchases ₦4000, Carriage inwards ₦500, Sales ₦9000, Carriage outwards ₦500. Determine the net profit.",
+   "options": {
+    "A": "₦4,000",
+    "B": "₦4,500",
+    "C": ". ₦5,000",
+    "D": "₦1,400"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Cost of goods sold = Opening stock + Purchases + Carriage inwards = ₦2,600 + ₦4,000 + ₦500 = ₦7,100 Gross profit = Sales − Cost of goods sold = ₦9,000 − ₦7,100 = ₦1,900 Net profit = Gross profit − Carriage outwards = ₦1,900 − ₦500 = ₦1,400.",
+   "year": 2017
+  },
+  {
+   "id": "jamb-accounting-bank-1650",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer question 49 to 50.</b> Goods worth ₦300 was transferred from department Q to P Similarly, P's total expenses for the period was ₦200 Department P's net profit was",
+   "options": {
+    "A": "₦5 200",
+    "B": "₦3000",
+    "C": "₦2800",
+    "D": "₦2 500"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given (Dept P): Opening stock = ₦2,000 Purchases = ₦2,500 Closing stock = ₦1,500 Sales = ₦6,000 Expenses (P) = ₦200 (Transfer from Q to P is irrelevant to P's net profit here) Step 1: Cost of goods sold (COGS) COGS = Opening + Purchases − Closing = 2,000 + 2,500 − 1,500 = ₦3,000 Step 2: Gross profit Gross profit = Sales − COGS = 6,000 − 3,000 = ₦3,000 Step 3: Net profit (after expenses) Net profit = Gross profit − Expenses = 3,000 − 200 = ₦2,800",
+   "year": 2008,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756660755/ALOC-Questions/Accounting/UTME/2008/Accounting_JAMB_2008_Q49-50_IMAGES_fkpuzh.jpg"
+  },
+  {
+   "id": "jamb-accounting-bank-1651",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 39 and 40</b> Determine the owners equity",
+   "options": {
+    "A": "₦200,000",
+    "B": "₦215,000",
+    "C": "₦275,000",
+    "D": "₦755,000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "If Total Assets = ₦755,000 And Total Liabilities = ₦200,000 + ₦87,000 + ₦100,000 = ₦387,000 Then Owners' Equity = ₦755,000 - ₦387,000 = ₦368,000 But based on the equity section shown: Owners' Equity = ₦200,000 + ₦15,000 + ₦60,000 = ₦275,000 The answer is C. ₦275,000.RetryClaude can make mistakes. Please double-check responses.",
+   "year": 1999,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756668418/ALOC-Questions/Accounting/UTME/1999/Accounting_JAMB_1999_Q39-40_i72dvt.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1652",
+   "type": "mcq",
+   "stem": "The amount to be charged to the profit and loss account is",
+   "options": {
+    "A": "N 30,000",
+    "B": "N25,000",
+    "C": "N 5 ,000",
+    "D": "N20,000."
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2007
+  },
+  {
+   "id": "jamb-accounting-bank-1653",
+   "type": "mcq",
+   "stem": "The correct closing balance for Musa's current account is",
+   "options": {
+    "A": "₦20,000 credit",
+    "B": "₦16,600 credit",
+    "C": "₦16,600 debit",
+    "D": "₦1,800 credit"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "To find the correct closing balance for Musa's current account, properly arrange the account with debits on the left and credits on the right. Musa's Current Account (Corrected): Debit Side (Left): Drawings: ₦8,800 Balance c/d (if credit balance): ? Credit Side (Right): Balance b/d: ₦1,800 Interest on capital: ₦800 Share of profit: ₦26,200 Calculation: Total credits = ₦1,800 + ₦800 + ₦26,200 = ₦28,800 Less: Drawings = ₦8,800 Net credit balance = ₦28,800 - ₦8,800 = ₦20,000 Wait, let me recalculate more carefully: Credit side total: ₦1,800 + ₦800 + ₦26,200 = ₦28,800 Debit side: Drawings ₦8,800 B",
+   "year": 1997,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756672047/ALOC-Questions/Accounting/UTME/1997/Accounting_JAMB_1997_Q37-38_sdjnqq.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1654",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 39 and 40</b> The quick ratio is",
+   "options": {
+    "A": "0.65:1",
+    "B": "0.91 : 1",
+    "C": "0.95 : 1",
+    "D": "1.53 :1."
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "From the Balance Sheet: Current Assets: Debtors: ₦90,000 Other current assets: ₦60,000 Stock: ₦28,000 Bank: ₦100,000 Quick Assets (Current Assets minus Stock): Debtors: ₦90,000 Other current assets: ₦60,000 Bank: ₦100,000 Total Quick Assets = ₦90,000 + ₦60,000 + ₦100,000 = ₦250,000 Current Liabilities: Creditors: ₦200,000 Provision: ₦87,000 Other current liabilities: ₦100,000 Total Current Liabilities = ₦200,000 + ₦87,000 + ₦100,000 = ₦387,000 Quick Ratio Calculation: Quick Ratio = Quick Assets ÷ Current Liabilities Quick Ratio = ₦250,000 ÷ ₦387,000 = 0.646:1 Therefore, the quick ratio is appr",
+   "year": 1999,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756668418/ALOC-Questions/Accounting/UTME/1999/Accounting_JAMB_1999_Q39-40_i72dvt.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1655",
+   "type": "mcq",
+   "stem": "Using the information provided: total current assets ₦2,000, total fixed assets ₦4,000, current liabilities ₦1,200, drawings ₦200, and long term loan ₦2,000, What is the net working capital?",
+   "options": {
+    "A": "₦1,800",
+    "B": "₦800",
+    "C": "₦2,600",
+    "D": "₦600"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Current Assets−Current Liabilities=₦2,000−₦1,200=₦800",
+   "year": 2020
+  },
+  {
+   "id": "jamb-accounting-bank-1656",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 28 and 29</b> On January 1,2000, a club's assets and liabilities were as follows: Club house...................₦8,000 Subscription.................₦300 Cash.........................₦1,000 Wages owed...................₦100 The club has 50 members and annual subscription is ₦100 per member. Subscription received is ₦4,000 and this includes 1999 arrears of ₦200. In the balance sheet, the subscription in arrears will be?",
+   "options": {
+    "A": "₦200",
+    "B": "₦300",
+    "C": "₦1,200",
+    "D": "₦1,300"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Step 1: Calculate total subscription due for the year 2000 Total subscription due = 50 members × ₦100 per member Total subscription due = ₦5,000 Step 2: Calculate subscription received for 2000 only Subscription received for 2000 = Total received - 1999 arrears Subscription received for 2000 = ₦4,000 - ₦200 Subscription received for 2000 = ₦3,800 Step 3: Calculate subscription in arrears at end of 2000 Subscription in arrears = Total due for 2000 - Amount received for 2000 Subscription in arrears = ₦5,000 - ₦3,800 Subscription in arrears = ₦1,200",
+   "year": 2004
+  },
+  {
+   "id": "jamb-accounting-bank-1657",
+   "type": "mcq",
+   "stem": "Buhari and Osinbajo entered into a partnership in which Buhari contributed a capital of ₦40,000 and is entitled to a salary allowance of ₦10,000, while Osinbajo contributed ₦70,000 of capital and is entitled to a salary allowance of ₦15,000. Both partners earn interest on their capital at 5% per annum, and any remaining profit or loss is to be shared between them in the ratio of 40 : 60 (Buhari : Osinbajo). For the year ended, the business realized a net profit of ₦80,000, and during the year Buhari withdrew ₦80,000 while Osinbajo withdrew ₦12,000. What is Osinbajo share of profit?",
+   "options": {
+    "A": "₦19, 800",
+    "B": "₦49, 500",
+    "C": "₦48, 000",
+    "D": "₦29, 700"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "To calculate Osinbajo's share of profit: Deduct salary allowances: ₦80,000 - (₦10,000 + ₦15,000) = ₦55,000 Deduct interest on capital: Buhari: 5% of ₦40,000 = ₦2,000 Osinbajo: 5% of ₦70,000 = ₦3,500 Total interest = ₦5,500 ⇒ ₦55,000 - ₦5,500 = ₦49,500 Apply profit-sharing ratio: Osinbajo's share = 60% of ₦49,500 = ₦29,700 Therefore, Osinbajo's share of the profit for the year is ₦29,700.",
+   "year": 2015
+  },
+  {
+   "id": "jamb-accounting-bank-1658",
+   "type": "mcq",
+   "stem": "What is the net profit?",
+   "options": {
+    "A": "N 46,000",
+    "B": "N 45,000",
+    "C": "N 28,000",
+    "D": "N 27,000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1659",
+   "type": "mcq",
+   "stem": "Balance as per cash book 2, 970 Bank Charges 220 ;Unpresented cheques 3, 950; Uncredited cheques 4,178 ; Direct debit by bank 1, 000 . Determine the balance as per bank Statement",
+   "options": {
+    "A": "N1,978",
+    "B": "N1,962",
+    "C": "N1,522",
+    "D": "N2,522"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2016
+  },
+  {
+   "id": "jamb-accounting-bank-1660",
+   "type": "mcq",
+   "stem": "Given: I. The consolidated revenue fund balance b/d = ₦650,000 II. Issues from contingency fund amounted to = ₦240,000 III. Amount transferred to contingency fund is = ₦210,000 What is the consolidated revenue fund balance?",
+   "options": {
+    "A": "₦1,100,000",
+    "B": "₦680,000",
+    "C": "₦440,000",
+    "D": "₦410,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "To find: Consolidated revenue fund balance Step 1: Start with opening balance Opening balance = ₦650,000 Step 2: Account for contingency fund transactions Issues from contingency fund (₦240,000) - This increases the consolidated revenue fund Amount transferred to contingency fund (₦210,000) - This decreases the consolidated revenue fund Step 3: Calculate the consolidated revenue fund balance Consolidated revenue fund balance = Opening balance + Issues from contingency fund - Transfers to contingency fund Consolidated revenue fund balance = ₦650,000 + ₦240,000 - ₦210,000 Consolidated revenue fu",
+   "year": 2003
+  },
+  {
+   "id": "jamb-accounting-bank-1661",
+   "type": "mcq",
+   "stem": "Sule and Ahmad are in partnership sharing profits and losses equally. If Khadija is admitted as a new partner to take 1/5 th as her share, what is the new profit or loss sharing ratio?",
+   "options": {
+    "A": "Sule1/3 , Ahmad 1/3 and Khadija 1/3",
+    "B": "Sule1/5, Ahmad 1/5 and Khadija 3/5",
+    "C": "Sule2/5, Ahmad2/5 and Khadija 1/5",
+    "D": "Sule ,2/5, Ahmad and 1/5 Khadija 2/5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1662",
+   "type": "mcq",
+   "stem": "Given the following manufacturing information: stock of finished goods on January 1st was ₦50,640 and on December 31st was ₦71,380; stock of raw materials on January 1st was ₦32,160 and on December 31st was ₦29,640; purchase of raw materials was ₦145,000; manufacturing wages were ₦52,000; depreciation on factory equipment was ₦16,500; direct expenses were ₦12,500; factory fuel cost ₦7,000; and carriage inwards on raw materials was ₦7,000, What is the Total Prime Cost?",
+   "options": {
+    "A": "₦220,480",
+    "B": "₦219,020",
+    "C": "₦200,480",
+    "D": "₦190,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Total Prime Cost: Prime Cost = Cost of Raw Materials Consumed + Manufacturing Wages + Direct Expenses Prime Cost = ₦154,520 + ₦52,000 + ₦12,500 = ₦219,020",
+   "year": 2019
+  },
+  {
+   "id": "jamb-accounting-bank-1663",
+   "type": "mcq",
+   "stem": "Musa, a prepaid customer of XYZ and KLM, bought N1500 recharge card from XYZ and N2000 recharge card from KLM for business calls. The entry to record these transaction is debit",
+   "options": {
+    "A": "telephone N 3,500, credit XYZ and KLM N 3,500",
+    "B": "telephone N 3,500. credit cash N 3,500",
+    "C": "sundries N 3,500, credit KLM N 3,500",
+    "D": "sundries N 3.500, credit telephone N3,500"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1664",
+   "type": "mcq",
+   "stem": "If a promoter pays a lawyer ₦5,000 for services rendered in preparing a Memorandum of Incorporation, the journal entry is to debit?",
+   "options": {
+    "A": "preliminary expenses, credit cash accounts",
+    "B": "promoter, credit creditors' accounts",
+    "C": "lawyer's credit cash accounts",
+    "D": "cash , credit incorporation accounts"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Dr. Preliminary Expenses ₦5,000 Cr. Cash ₦5,000 So you debit Preliminary Expenses and credit Cash",
+   "year": 1999
+  },
+  {
+   "id": "jamb-accounting-bank-1665",
+   "type": "mcq",
+   "stem": "A company has two departments X and Y. Y transferred goods to X at a profit margin of 25%. ₦10,000 worth of goods was not sold at the end of the accounting period. How much is the unrealized profit?",
+   "options": {
+    "A": "₦2,000",
+    "B": "₦2,500",
+    "C": "₦12,000",
+    "D": "₦12,500"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Since goods were transferred at a 25% markup on cost, the transfer (invoice) price is 125% of cost. For unsold stock valued at ₦10,000 (transfer price), the cost component is ₦10,000 ÷ 1.25 = ₦8,000, so the unrealized profit embedded in closing stock is ₦10,000 − ₦8,000 = ₦2,000.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-accounting-bank-1666",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer question 39 and 40</b> Rakya and Joy are in partnership and agreed that 5% interest per annum is to be charged on drawings. The drawing made by both partners in one year were: Rakiya, ₦200 on March 31 and ₦300 on September 30, Joy, ₦100 on April 1 and ₦240 on July 1 Assuming that Rakiya was not credited with any income during the period, what is her closing current account balance?",
+   "options": {
+    "A": "₦340,000 credit",
+    "B": "₦349,75 debit",
+    "C": "₦500.00 credit",
+    "D": "₦ 511.25 debit"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Rakiya's current account (assuming an opening zero balance and no income credits) will show: Drawings: ₦200 + ₦300 = ₦500 Interest on drawings @ 5% ₦200 on March 31 ⇒ 9 months' interest = 200×0.05×9/12 = ₦7.50 ₦300 on September 30 ⇒ 3 months' interest = 300×0.05×3/12 = ₦3.75 Total interest = ₦7.50 + ₦3.75 = ₦11.25 So the account is debited with ₦500 (drawings) + ₦11.25 (interest) = ₦511.25.",
+   "year": 2000
+  },
+  {
+   "id": "jamb-accounting-bank-1667",
+   "type": "mcq",
+   "stem": "Use the information below to answer questions 19 and 20 Purchases ledger opening balance ₦4,000 Sales ledger opening balance ₦6,000 Credit purchases during the year ₦25,000 Discounts allowed ₦1,000 Returns inwards ₦2,000 Credit sales during the year ₦10,000 Returns outwards ₦6,000 Calculate the sales ledger balance?",
+   "options": {
+    "A": "₦3,000",
+    "B": "₦6,000",
+    "C": "₦10,000",
+    "D": "₦13,000"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "To calculate the Sales Ledger balance, we track all amounts owed by customers (debtors). The Sales Ledger includes: Opening balance (debtors): ₦6,000 Add: Credit sales during the year: ₦10,000 Less: Returns inwards (sales returns): ₦2,000 Less: Discounts allowed: ₦1,000 ₦ow calculate: Sales Ledger Closing Balance = 6,000 + 10,000 − 2,000 − 1,000 = ₦13,000",
+   "year": 2001
+  },
+  {
+   "id": "jamb-accounting-bank-1668",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 18 and 19.</b> Stock of raw materials (1st January) ₦3000 Direct wages ₦2500 Direct expenses ₦1000 Factory overheads ₦2000 Cost of raw materials used ₦5500 Stock of finished goods (31st December) ₦2000 The cost of goods manufactured is?",
+   "options": {
+    "A": "₦11000",
+    "B": "₦12000",
+    "C": "₦14000",
+    "D": "₦9000"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Formula for Cost of Goods Manufactured: Cost of Goods Manufactured = Direct Materials Used + Direct Labor + Direct Expenses + Factory Overheads Calculation: Direct materials used: ₦5,500 (given) Direct labor (wages): ₦2,500 Direct expenses: ₦1,000 Factory overheads: ₦2,000 Cost of Goods Manufactured = ₦5,500 + ₦2,500 + ₦1,000 + ₦2,000 Cost of Goods Manufactured = ₦11,000",
+   "year": 2002
+  },
+  {
+   "id": "jamb-accounting-bank-1669",
+   "type": "mcq",
+   "stem": "What are the current liabilities?",
+   "options": {
+    "A": "I and II",
+    "B": "IV and V",
+    "C": "Ill and V",
+    "D": "II and IV"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1670",
+   "type": "mcq",
+   "stem": "Use the information to answer the questions Rakiya and joy are in a partnership and agreed that 5% interest per annum is to be charged on drawings. The drawing made by both partners in one year were: Rakiya, ₦200 on March 31 and ₦300 on September 30. Joy, ₦100 on April 1 and ₦240 on July 1. The interest on Joy's drawing is___________",
+   "options": {
+    "A": "₦11.25",
+    "B": "₦500.00",
+    "C": "₦9.75.",
+    "D": "₦340.00"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The interest on Joy's drawings is ₦9.75, calculated as follows: ₦100 drawn on April 1 for 9 months: ₦100 × 5% × 9/12 = ₦3.75 ₦240 drawn on July 1 for 6 months: ₦240 × 5% × 6/12 = ₦6.00 Total interest = ₦3.75 + ₦6.00 = ₦9.75.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-accounting-bank-1671",
+   "type": "mcq",
+   "stem": "Given: Club trading profit ₦12,000 Members' subscription ₦15,000 Profit on sale of fixed assets ₦2,500 Loss on sale of investments ₦1,000 Wages ₦16,500 Other expenses ₦10,000 Determine the club's excess of income over expenditure?",
+   "options": {
+    "A": "₦500",
+    "B": "₦1,500",
+    "C": "₦2,000",
+    "D": "₦2,500"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "To find the excess of income over expenditure, Prepare an Income and Expenditure Account: INCOME: Club trading profit: ₦12,000 Members' subscription: ₦15,000 Profit on sale of fixed assets: ₦2,500 Total Income: ₦29,500 EXPENDITURE: Loss on sale of investments: ₦1,000 Wages: ₦16,500 Other expenses: ₦10,000 Total Expenditure: ₦27,500 Excess of Income over Expenditure: = Total Income - Total Expenditure = ₦29,500 - ₦27,500 = ₦2,000 Therefore, the club's excess of income over expenditure is ₦2,000.",
+   "year": 2001
+  },
+  {
+   "id": "jamb-accounting-bank-1672",
+   "type": "mcq",
+   "stem": "What is the total debit for the trial balance?",
+   "options": {
+    "A": "N 4 690 000",
+    "B": "N 2 620 000",
+    "C": "N 2 520 000",
+    "D": "N 1 565 000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1673",
+   "type": "mcq",
+   "stem": "In a cash book, the opening balance was ₦7,600, closing balance ₦9,200 and the total cash received during the period was ₦18,000. What was the amount of cash paid out during the period?",
+   "options": {
+    "A": "₦8,900",
+    "B": "₦9,800",
+    "C": "₦14,600",
+    "D": "₦16,400"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "sing the cash book equation: Opening balance + Receipts − Payments = Closing balance Rearrange for payments: Payments = Opening + Receipts − Closing = ₦7,600 + ₦18,000 − ₦9,200 = ₦16,400",
+   "year": 1999
+  },
+  {
+   "id": "jamb-accounting-bank-1674",
+   "type": "mcq",
+   "stem": "The gross profit on manufacture is",
+   "options": {
+    "A": "N 6,120",
+    "B": "N 6,100",
+    "C": "N 5,100",
+    "D": "N 5,000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2016
+  },
+  {
+   "id": "jamb-accounting-bank-1675",
+   "type": "mcq",
+   "stem": "As part of the initial investment, a partner contributes office equipment that originally cost ₦20,000 and on which provision for depreciation of ₦12,500 had been recorded. If the partners agree on a valuation of ₦9,000 for the equipment, what amount should be debited to the office equipment account?",
+   "options": {
+    "A": "₦7,500",
+    "B": "₦9,000",
+    "C": "₦12,500",
+    "D": "₦20,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "When a partner contributes assets to a partnership, the assets should be recorded at their agreed valuation, not their original cost or book value. Given information: Original cost of equipment: ₦20,000 Accumulated depreciation: ₦12,500 Book value: ₦20,000 - ₦12,500 = ₦7,500 Agreed valuation by partners: ₦9,000 Key principle: In partnership accounting, contributed assets are recorded at their fair value as agreed by the partners, regardless of the contributor's original cost or book value.",
+   "year": 1999
+  },
+  {
+   "id": "jamb-accounting-bank-1676",
+   "type": "mcq",
+   "stem": "I. Facilitating the preparation of final accounts II. Making the existence of error easy to detect III. Checking the accuracy of postings periodically. From the above, which of the following are among the uses of control accounts?",
+   "options": {
+    "A": "I, II and III",
+    "B": "I and III",
+    "C": "II and III",
+    "D": "I and II."
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2007
+  },
+  {
+   "id": "jamb-accounting-bank-1677",
+   "type": "mcq",
+   "stem": "Given: Capital: G...........₦5,000 T...........₦8,000 Drawings: G...........₦2,000 T...........₦1,000 Interest on capital..10% Interest on Drawings..5% Find the interest on drawings of G?",
+   "options": {
+    "A": "₦50",
+    "B": "₦100",
+    "C": "₦200",
+    "D": "₦250"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Calculation: Interest on drawings for G = Drawings × Interest rate Interest on drawings for G = ₦2,000 × 5% Interest on drawings for G = ₦2,000 × 0.05 Interest on drawings for G = ₦100",
+   "year": 2008
+  },
+  {
+   "id": "jamb-accounting-bank-1678",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 14 and 15</b> What is the value of raw materials issued on May 17th based ion the LIFO method?",
+   "options": {
+    "A": "₦60",
+    "B": "₦61",
+    "C": "₦62",
+    "D": "₦64"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Working (LIFO): On May 17, the latest stock available is 50 units @ ₦3.20 (from May 10). Issue 20 units from this latest batch: 20 × ₦3.20 = ₦64.",
+   "year": 2004,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756662538/ALOC-Questions/Accounting/UTME/2004/Accounting_JAMB_2004_Q14-15_u5ld3i.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1679",
+   "type": "mcq",
+   "stem": "Given: Sales Ledger Control Account (Extracts) Balance b/f ₦10,600 Total cash payments by debtors ₦32,275 Total credit sales ₦59,193 Discount received ₦9,700 Balance c/f ₦20,751 Discount allowed ₦2,890 Determine the sales returns?",
+   "options": {
+    "A": "₦24,577",
+    "B": "₦13,877",
+    "C": "₦7,067",
+    "D": "₦2,890"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "To find sales returns, Balance the Sales Ledger Control Account. Debit Side (What increases debtors): Balance b/f: ₦10,600 Credit sales: ₦59,193 Total debits: ₦69,793 Credit Side (What decreases debtors): Cash payments: ₦32,275 Discount allowed: ₦2,890 Sales returns: ? (let's call this X) Balance c/f: ₦20,751 For the account to balance: Total Debits = Total Credits ₦69,793 = ₦32,275 + ₦2,890 + X + ₦20,751 ₦69,793 = ₦55,916 + X X = ₦69,793 - ₦55,916 = ₦13,877 The answer is B. ₦13,877.",
+   "year": 2000
+  },
+  {
+   "id": "jamb-accounting-bank-1680",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 41 and 42</b> Given the following information: Authorized capital of ₦100,000 ordinary shares of ₦1 each, issued and fully paid 50,000 ordinary shares of ₦1 each amounting to ₦50,000, 10,000 8% preference shares of ₦1 each, reserves ₦10,000, creditors ₦25,000, debtors ₦13,000, and cash in hand ₦5,000. Calculate the shareholder'sfund.",
+   "options": {
+    "A": "₦70,000.",
+    "B": "₦75,000",
+    "C": "₦85,000",
+    "D": "₦185,000"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Shareholders' fund represents the total equity belonging to shareholders, which includes share capital and reserves. Shareholders' Fund consists of: Ordinary share capital (issued and fully paid): ₦50,000 8% preference shares: ₦10,000 Reserves: ₦10,000 Total Shareholders' Fund = ₦50,000 + ₦10,000 + ₦10,000 = ₦70,000 Therefore, the shareholders' fund is ₦70,000.",
+   "year": 2001
+  },
+  {
+   "id": "jamb-accounting-bank-1681",
+   "type": "mcq",
+   "stem": "Depreciation on a particular piece of machinery was ₦2,700 during the fifth year of its service life and ₦4,050 during the sixth year. The logical explanation for this is that?",
+   "options": {
+    "A": "an addition was made to the asset during the sixth year",
+    "B": "the estimate of salvage value on this equipment was decreased",
+    "C": "a unit-of-output method of depreciation was used during the sixth year",
+    "D": "the estimate remaining service life of the assets was increased at the beginning of the sixth year"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The increase in depreciation from ₦2,700 in year 5 to ₦4,050 in year 6 most logically reflects a usage-based depreciation method, where charges vary with units of output or activity. Under the units-of-output method, if the machine was used more heavily in its sixth year than in its fifth, the depreciation expense would rise accordingly.",
+   "year": 1999
+  },
+  {
+   "id": "jamb-accounting-bank-1682",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 15 and 16</b> Cost of raw materials consumed ₦300,600, carriage inwards ₦6,700, returns of raw materials ₦10,800, closing stock of raw materials ₦100,250, raw materials purchased during the year ₦350,000, manufacturing wages ₦27,000, and lighting, power, insurance and rent in relation to the factory are apportioned 1/3, 2/5, 1/6 and 1/7 with totals ₦30,000, ₦75,000, ₦36,000 and ₦56,000 respectively. What is the cost of the opening raw materials?",
+   "options": {
+    "A": "₦ 418,350",
+    "B": "₦404,950",
+    "C": "₦54,950",
+    "D": "₦398,250"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Raw Materials Consumed = Opening Stock + Purchases + Carriage Inwards - Returns - Closing Stock Rearranging to find Opening Stock: Opening Stock = Raw Materials Consumed + Closing Stock + Returns - Purchases - Carriage Inwards Substituting the values: Opening Stock = ₦300,600 + ₦100,250 + ₦10,800 - ₦350,000 - ₦6,700 Opening Stock = ₦411,650 - ₦356,700 = ₦54,950",
+   "year": 2000
+  },
+  {
+   "id": "jamb-accounting-bank-1683",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 9 and 10</b> The Assets and liabilities of Udo Co.ltd. as at 31st December, 2000. Creditors ₦50,000 Debtors ₦46,000 Loan ₦100,000 Stock ₦20,000 Motor vehicle ₦120,000 Building ₦70,000 Accrued wages 30,000 Bank ₦25 ,000 The value of capital invested by the owners is?",
+   "options": {
+    "A": "₦110,000",
+    "B": "₦105,000",
+    "C": "₦101,000",
+    "D": "₦100,000"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Total assets = ₦46,000 + ₦20,000 + ₦120,000 + ₦70,000 + ₦25,000 = ₦281,000 Total liabilities = ₦50,000 + ₦100,000 + ₦30,000 = ₦180,000 Capital = Assets − Liabilities = ₦281,000 − ₦180,000 = ₦101,000",
+   "year": 2002
+  },
+  {
+   "id": "jamb-accounting-bank-1684",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 25 to 26</b> Direct labour...................₦50 000 Beginning work-in-progress......₦4 000 Raw materials used..............₦18 000 Indirect labour.................₦4 000 Ending finished goods...........₦16 000 Ending work-in-progress.........₦9 000 Factory supplies used...........₦7 000 Selling expenses................₦25 000 Beginning finished goods........₦21 000 Other factory overheads.........₦19 000 What is the cost of goods manufactured?",
+   "options": {
+    "A": "₦117 000",
+    "B": "₦104 000",
+    "C": "₦97 000",
+    "D": "₦93 000"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Direct materials used = ₦18,000 Direct labour = ₦50,000 Manufacturing overheads = Indirect labour ₦4,000 + Factory supplies ₦7,000 + Other factory overheads ₦19,000 = ₦30,000 Total manufacturing costs = 18,000 + 50,000 + 30,000 = ₦98,000 Add: Beginning WIP = ₦4,000 → ₦102,000 Less: Ending WIP = ₦9,000 → ₦93,000 (Cost of goods manufactured)",
+   "year": 2005
+  },
+  {
+   "id": "jamb-accounting-bank-1685",
+   "type": "mcq",
+   "stem": "Given: Cash purchases ..............................₦25000 Trading creditors............................₦45000 Opening balance of trade creditors...........₦35000 Calculate the purchases for the period?",
+   "options": {
+    "A": "₦80,000",
+    "B": "₦35,000",
+    "C": "₦105,000",
+    "D": "₦70,000"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Increase in trade creditors = ₦45,000 − ₦35,000 45,000 − 35,000 = 10,000 Purchases = Cash purchases + Increase in creditors (i.e. net credit purchases) = ₦25,000 + ₦10,000 = ₦35,000",
+   "year": 2002
+  },
+  {
+   "id": "jamb-accounting-bank-1686",
+   "type": "mcq",
+   "stem": "<b>Use the information below to answer questions 15 and 16.</b> The gross profit ratio for the company is 25%. If the total expenses is ₦20,845, what will be the net profit for the company during the month?",
+   "options": {
+    "A": "₦19,149",
+    "B": "₦16,168",
+    "C": "₦21,655",
+    "D": "₦18,405"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Step 1: Calculate Gross Profit Gross profit ratio = (Gross Profit ÷ Net Sales) × 100% 25% = (Gross Profit ÷ ₦157,000) × 100% Gross Profit = 25% × ₦157,000 Gross Profit = 0.25 × ₦157,000 = ₦39,250 Step 2: Calculate Net Profit Net Profit = Gross Profit - Total Expenses Net Profit = ₦39,250 - ₦20,845 Net Profit = ₦18,405 Answer: ₦18,405",
+   "year": 2002,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756665371/ALOC-Questions/Accounting/UTME/2002/Accounting_JAMB_2002_Q15-16_nkt1he.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1687",
+   "type": "mcq",
+   "stem": "The correct closing balance of Lawal's current account is",
+   "options": {
+    "A": "₦8,000 credit.",
+    "B": "₦ 14,740 debit",
+    "C": "₦ 14,740credit",
+    "D": "₦ 540 credit"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Lawal's Current Account (Corrected): Credit Side (Right): Balance b/d: ₦540 Interest on capital: ₦360 Share of profit: ₦13,100 Total Credits: ₦14,000 Debit Side (Left): Drawings: ₦6,000 Calculation: Closing balance = Total Credits - Drawings Closing balance = ₦14,000 - ₦6,000 = ₦8,000 credit Since the credits exceed the debits, Lawal has a credit balance of ₦8,000.",
+   "year": 1997,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1756672047/ALOC-Questions/Accounting/UTME/1997/Accounting_JAMB_1997_Q37-38_sdjnqq.png"
+  },
+  {
+   "id": "jamb-accounting-bank-1688",
+   "type": "mcq",
+   "stem": "A company has 5% debentures worth ₦500 000 ordinary share capital ₦ 2 000 000, and preference shares ₦1500 000. if the company made a profit of ₦ 1 000 000, the debenture interest would amount to",
+   "options": {
+    "A": "₦ 1 000 000",
+    "B": "₦ 500 000",
+    "C": "₦ 50 000",
+    "D": "₦ 25 000"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The debenture interest is calculated on the value of the debentures: Debenture interest = 5% × ₦500,000 = ₦25,000",
+   "year": 1997
+  },
+  {
+   "id": "jamb-accounting-bank-1689",
+   "type": "mcq",
+   "stem": "Given that 1/3 of the ₦6000 stock held by a branch is purchased from outsiders. If goods are invoiced to branch at 25% on cost, the provision for unrealized profit is?",
+   "options": {
+    "A": "₦1000.00",
+    "B": "₦333.33",
+    "C": "₦666.66",
+    "D": "₦800.00"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Step 1: Stock purchased from head office Total stock = ₦6,000 1/3 purchased from outsiders → 2/3 purchased from head office. From head office = (2/3) × ₦6,000 = ₦4,000. Step 2: Find loading (profit) included Goods invoiced at 25% on cost means the profit margin is 25% of cost. Profit fraction on selling price = 25 / (100 + 25) = 25/125 = 1/5. So, unrealised profit in goods from head office = ₦4,000 × (1/5) = ₦800.",
+   "year": 2002
+  },
+  {
+   "id": "jamb-accounting-bank-1690",
+   "type": "mcq",
+   "stem": "Adex Ltd. issues stock to its retail branches at cost price. The following particulars relate to Ede branch: Stock at branch 1st January at cost ₦400, Goods sent to branch at cost ₦8000, Returns to head office ₦340, Cash sales ₦9160, Stock at branch 31st December at cost ₦720. Use the information to answer the question. calculate the gross profit",
+   "options": {
+    "A": "₦1870",
+    "B": "₦1530",
+    "C": "₦1640",
+    "D": "₦1820"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Gross Profit = Sales - Cost of Goods Sold….. Cost of Goods Sold = Opening Stock + Goods Sent - Returns - Closing Stock = ₦400 + ₦8,000 - ₦340 - ₦720 = ₦7,340…. Gross Profit = Sales - Cost of Goods Sold = ₦9,160 - ₦7,340 = ₦1,820 The branch made a gross profit of ₦1,820 for the period.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-accounting-bank-1691",
+   "type": "mcq",
+   "stem": "What is the net working capital?",
+   "options": {
+    "A": "N 2,600",
+    "B": "N1,800",
+    "C": "N 800",
+    "D": "N 600"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2009
+  },
+  {
+   "id": "jamb-accounting-bank-1692",
+   "type": "mcq",
+   "stem": "Chibuike bought 36 notebooks at ₦10 each from John and was given a trade discount of 5%. In addition, he was offered 1% cash discount which he took advantage of. How much did Chibuike pay?",
+   "options": {
+    "A": "₦338.58",
+    "B": "₦342.00",
+    "C": "₦345.42",
+    "D": "₦360,00"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "To find how much Chibuike paid, Calculate the price after applying both the trade discount and cash discount. Given information: 36 notebooks at ₦10 each Trade discount: 5% Cash discount: 1% (taken) Step 1: Calculate gross amount Gross amount = 36 × ₦10 = ₦360 Step 2: Apply trade discount Trade discount = ₦360 × 5% = ₦18 Amount after trade discount = ₦360 - ₦18 = ₦342 Step 3: Apply cash discount Cash discount = ₦342 × 1% = ₦3.42 Final amount paid = ₦342 - ₦3.42 = ₦338.58 Verification: Gross: ₦360 Less trade discount (5%): ₦18 Net: ₦342 Less cash discount (1%): ₦3.42 Amount paid: ₦338.58",
+   "year": 1999
+  },
+  {
+   "id": "jamb-accounting-bank-1693",
+   "type": "mcq",
+   "stem": "Clifford pays rent of N200 per month for premises. He paid N 2,800 within the year, Compute the prepayment.",
+   "options": {
+    "A": "N300",
+    "B": "N400",
+    "C": "N660",
+    "D": "N200"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2016
   }
  ],
  "category": "secondary",

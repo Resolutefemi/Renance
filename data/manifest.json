@@ -1,12 +1,78 @@
 {
-  "generatedAt": "2026-09-15T01:25:00+00:00",
+  "generatedAt": "2026-09-16T00:00:00+00:00",
   "version": "era2-g1",
   "exams": [
     {
+      "code": "gcse-biology-bank",
+      "title": "GCSE Biology | Exam-Style Questions Bank (BBC Bitesize)",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "secondary",
+      "body": "GCSE",
+      "years": [],
+      "bundleSha256": "05c60227646750d1f885c197213b784ba9a41598aed7a36d51295888f3e6de71",
+      "sizeBytes": 48885
+    },
+    {
+      "code": "gcse-chemistry-bank",
+      "title": "GCSE Chemistry | Exam-Style Questions Bank (BBC Bitesize)",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "secondary",
+      "body": "GCSE",
+      "years": [],
+      "bundleSha256": "7cbd87474248d2391f73c1f1c37fd6ac6622e95f1708617f525a676ef57c2201",
+      "sizeBytes": 41955
+    },
+    {
+      "code": "gcse-combined-science-bank",
+      "title": "GCSE Combined Science | Exam-Style Questions Bank (BBC Bitesize)",
+      "questionCount": 56,
+      "totalMarks": 56,
+      "category": "secondary",
+      "body": "GCSE",
+      "years": [],
+      "bundleSha256": "095873c87f58af282505e2fd8459cd4b7beb37d52765e08cf927bbe0e6d911f0",
+      "sizeBytes": 51397
+    },
+    {
+      "code": "gcse-geography-bank",
+      "title": "GCSE Geography | Exam-Style Questions Bank (BBC Bitesize)",
+      "questionCount": 40,
+      "totalMarks": 40,
+      "category": "secondary",
+      "body": "GCSE",
+      "years": [],
+      "bundleSha256": "f18b919a59f3125d1f24b3c10a12338434fbfbf7438f6558ceb74adb00233d57",
+      "sizeBytes": 28409
+    },
+    {
+      "code": "gcse-maths-bank",
+      "title": "GCSE Mathematics | Exam-Style Questions Bank (BBC Bitesize)",
+      "questionCount": 39,
+      "totalMarks": 39,
+      "category": "secondary",
+      "body": "GCSE",
+      "years": [],
+      "bundleSha256": "4357db2cb0b9efc3b9fdf8c9649eceb26340ca1a6926be4f05b167b9818a5555",
+      "sizeBytes": 25055
+    },
+    {
+      "code": "gcse-physics-bank",
+      "title": "GCSE Physics | Exam-Style Questions Bank (BBC Bitesize)",
+      "questionCount": 40,
+      "totalMarks": 40,
+      "category": "secondary",
+      "body": "GCSE",
+      "years": [],
+      "bundleSha256": "ce145a50126d020afb3c705faa8b2693ced6a3d5bb4c7a0cf0a7a8afae0f876d",
+      "sizeBytes": 32536
+    },
+    {
       "code": "jamb-accounting-bank",
       "title": "JAMB Principles of Accounts | Past Questions Bank",
-      "questionCount": 1591,
-      "totalMarks": 1591,
+      "questionCount": 1687,
+      "totalMarks": 1687,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -37,12 +103,23 @@
         2019,
         2020,
         2021,
+        2022,
         2023,
         2024,
         2025
       ],
-      "bundleSha256": "fabaa3d89c18a8c24c17b11ee62fe0fdcea26da8c189c7a0578a8bbc4156ae9f",
-      "sizeBytes": 728101
+      "bundleSha256": "2c0e0c73686af592f04a12e80ffe2d77fd2dd1837de6cb2e282aa2bb85fbe325",
+      "sizeBytes": 803330
+    },
+    {
+      "code": "jamb-accounting-enrich-bank",
+      "title": "JAMB Accounting | Enrichment Bank",
+      "questionCount": 500,
+      "totalMarks": 500,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "0556fca5b5ba319798fda013bc2950fccdefe2521ce2b7f319d8c79c63c1971c",
+      "sizeBytes": 247754
     },
     {
       "code": "jamb-agricultural-science-bank",
@@ -81,8 +158,8 @@
     {
       "code": "jamb-biology-bank",
       "title": "JAMB Biology | Past Questions Bank",
-      "questionCount": 2577,
-      "totalMarks": 2577,
+      "questionCount": 2688,
+      "totalMarks": 2688,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -134,8 +211,28 @@
         2024,
         2025
       ],
-      "bundleSha256": "a8294206134448e568f8d8401dfc1647c88a1f77c9f4fe87800cca0664e11e72",
-      "sizeBytes": 1095461
+      "bundleSha256": "2a18c1597c24ea31f77f35659629674ace05a55243fdbe6dfc12062b3f97a24c",
+      "sizeBytes": 1132990
+    },
+    {
+      "code": "jamb-biology-enrich-bank",
+      "title": "JAMB Biology | Enrichment Bank",
+      "questionCount": 100,
+      "totalMarks": 100,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "f9790bea7df226187f026ef651f47ae4c25c3bf6a4a4732bd394673548ab2164",
+      "sizeBytes": 34206
+    },
+    {
+      "code": "jamb-biology-sim-bank",
+      "title": "JAMB Biology | Simulator Bank",
+      "questionCount": 198,
+      "totalMarks": 198,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "d2bbba157cf458834d2a389e6a5f0375276a08f62f46db763a3f64e0612bc1bb",
+      "sizeBytes": 60749
     },
     {
       "code": "jamb-biology-theory-bank",
@@ -153,8 +250,8 @@
     {
       "code": "jamb-chemistry-bank",
       "title": "JAMB Chemistry | Past Questions Bank",
-      "questionCount": 2749,
-      "totalMarks": 2749,
+      "questionCount": 2873,
+      "totalMarks": 2873,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -206,8 +303,28 @@
         2024,
         2025
       ],
-      "bundleSha256": "0f88177d3adf4c34428ed99039e17136aa16056318a92d67e4bbb9edabb01fe0",
-      "sizeBytes": 1224887
+      "bundleSha256": "65d63b585071a3b445c91526a0290bf96586d11f276cd120fd19dd205c490f7a",
+      "sizeBytes": 1288199
+    },
+    {
+      "code": "jamb-chemistry-enrich-bank",
+      "title": "JAMB Chemistry | Enrichment Bank",
+      "questionCount": 100,
+      "totalMarks": 100,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "13e59a8da29c9151c3764b79d597fd2c9513dea60c35a012001ce5e1838448fb",
+      "sizeBytes": 33998
+    },
+    {
+      "code": "jamb-chemistry-sim-bank",
+      "title": "JAMB Chemistry | Simulator Bank",
+      "questionCount": 492,
+      "totalMarks": 492,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "909c042c5d412fe348315181243b028e46cdf93d67eb046cffba56d064b28822",
+      "sizeBytes": 170757
     },
     {
       "code": "jamb-civic-education-bank",
@@ -222,8 +339,8 @@
     {
       "code": "jamb-commerce-bank",
       "title": "JAMB Commerce | Past Questions Bank",
-      "questionCount": 1707,
-      "totalMarks": 1707,
+      "questionCount": 1776,
+      "totalMarks": 1776,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -259,8 +376,18 @@
         2024,
         2025
       ],
-      "bundleSha256": "952c25fed5bf2ae4374089808437d10d2265d9259fe9ed1cc472e7f110bce4ba",
-      "sizeBytes": 794257
+      "bundleSha256": "e92afde94f693d1b8ad95299fa286de459e79add3ece06ad7a07a6efa79bfb30",
+      "sizeBytes": 819507
+    },
+    {
+      "code": "jamb-commerce-enrich-bank",
+      "title": "JAMB Commerce | Enrichment Bank",
+      "questionCount": 500,
+      "totalMarks": 500,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "e69904ba7a074cd1019d7a785b1155a02469053fc3870980b7f0998d084651c9",
+      "sizeBytes": 240962
     },
     {
       "code": "jamb-computer-studies-bank",
@@ -280,8 +407,8 @@
     {
       "code": "jamb-crs-bank",
       "title": "JAMB Christian Religious Studies | Past Questions Bank",
-      "questionCount": 2445,
-      "totalMarks": 2445,
+      "questionCount": 2497,
+      "totalMarks": 2497,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -332,12 +459,548 @@
         2023,
         2025
       ],
-      "bundleSha256": "388363045aa489c04bfbe65416424b33b483b6e95d0399439b582f7f187621c0",
-      "sizeBytes": 968482
+      "bundleSha256": "94a73b46d9d686866e7de94b858b3d6d70397ee05ccdc3617efc7c66852c6c1d",
+      "sizeBytes": 988803
+    },
+    {
+      "code": "jamb-crs-enrich-bank",
+      "title": "JAMB Crs | Enrichment Bank",
+      "questionCount": 495,
+      "totalMarks": 495,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "4fe7808addf27c537915839cab213972e66415062e59f886c60cbd35a375e006",
+      "sizeBytes": 173779
     },
     {
       "code": "jamb-economics-bank",
       "title": "JAMB Economics | Past Questions Bank",
+      "questionCount": 2713,
+      "totalMarks": 2713,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "c38e7661d0f7f3e33cfacd955d0a8cece5001c831bb60d9079b8a857a4877b07",
+      "sizeBytes": 1186013
+    },
+    {
+      "code": "jamb-economics-enrich-bank",
+      "title": "JAMB Economics | Enrichment Bank",
+      "questionCount": 499,
+      "totalMarks": 499,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "0acd018aaa594443a9f396b1e0815aa4dafcade2b46d3b400e7ede1c0e9a8f2b",
+      "sizeBytes": 204240
+    },
+    {
+      "code": "jamb-english-bank",
+      "title": "JAMB Use of English | Past Questions Bank",
+      "questionCount": 5697,
+      "totalMarks": 5697,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "d2e56c626aa19eb24689ff42b73c7a560422e122f859725f61acfe610d99266c",
+      "sizeBytes": 3094745
+    },
+    {
+      "code": "jamb-english-enrich-bank",
+      "title": "JAMB English | Enrichment Bank",
+      "questionCount": 499,
+      "totalMarks": 499,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "681363973e6b5295e61a1f0d99252b08aa61f5518116a1bf3626b079e912eccf",
+      "sizeBytes": 148939
+    },
+    {
+      "code": "jamb-english-sim-bank",
+      "title": "JAMB English | Simulator Bank",
+      "questionCount": 169,
+      "totalMarks": 169,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "0de6518e32096ff9533c146bd35a52898cb096a8c62882a4c469b2ccd9356293",
+      "sizeBytes": 60684
+    },
+    {
+      "code": "jamb-fine-arts-bank",
+      "title": "JAMB Fine Arts | Past Questions Bank",
+      "questionCount": 120,
+      "totalMarks": 120,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        2018,
+        2025
+      ],
+      "bundleSha256": "2377f1778d86be4744f67dc99843c2217273278a95cbae4a494fad1a12f915e5",
+      "sizeBytes": 42354
+    },
+    {
+      "code": "jamb-french-bank",
+      "title": "JAMB French | Past Questions Bank",
+      "questionCount": 258,
+      "totalMarks": 258,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        2009,
+        2010,
+        2011,
+        2012,
+        2024,
+        2025
+      ],
+      "bundleSha256": "59a257fbb000c30f35efc5e8f9f35b1f531cd9364096f2ddb7d7b28c6c46a782",
+      "sizeBytes": 80906
+    },
+    {
+      "code": "jamb-geography-bank",
+      "title": "JAMB Geography | Past Questions Bank",
+      "questionCount": 2458,
+      "totalMarks": 2458,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "9c27c34cbd80021372501e265919982cb7c4a49be6a9beb6ef69b39dadec769c",
+      "sizeBytes": 916985
+    },
+    {
+      "code": "jamb-geography-enrich-bank",
+      "title": "JAMB Geography | Enrichment Bank",
+      "questionCount": 500,
+      "totalMarks": 500,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "e329d9c4bef4706e134ffffecb9cdcd477698db15d588efbe21f38d44d688b82",
+      "sizeBytes": 209730
+    },
+    {
+      "code": "jamb-government-bank",
+      "title": "JAMB Government | Past Questions Bank",
+      "questionCount": 2458,
+      "totalMarks": 2458,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "eb1548e989c49328a84ddf4e91084fe406bc1f0f22c451df91bf94f2c924781b",
+      "sizeBytes": 1060571
+    },
+    {
+      "code": "jamb-government-enrich-bank",
+      "title": "JAMB Government | Enrichment Bank",
+      "questionCount": 99,
+      "totalMarks": 99,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "ea8b57627a1a31baf4b022f004bf047f136f7052cdd9741802fc6c8a0155d21b",
+      "sizeBytes": 36378
+    },
+    {
+      "code": "jamb-hausa-bank",
+      "title": "JAMB Hausa | Past Questions Bank",
+      "questionCount": 385,
+      "totalMarks": 385,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "922041b7fb92f905e2d512b96499ba7b272b7fb8c1519a7211736b216039beef",
+      "sizeBytes": 155728
+    },
+    {
+      "code": "jamb-history-bank",
+      "title": "JAMB History | Past Questions Bank",
+      "questionCount": 751,
+      "totalMarks": 751,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        2002,
+        2008,
+        2010,
+        2012,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "f851d28abc5c7e7a3f7b6094006867cac93434cb89c05545a1fde14116b9f036",
+      "sizeBytes": 405468
+    },
+    {
+      "code": "jamb-history-enrich-bank",
+      "title": "JAMB History | Enrichment Bank",
+      "questionCount": 500,
+      "totalMarks": 500,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "8173ba00d3bf5098243d536f576dabdbf570e6390f0b8bea970a4693725295a1",
+      "sizeBytes": 221993
+    },
+    {
+      "code": "jamb-home-economics-bank",
+      "title": "JAMB Home Economics | Past Questions Bank",
+      "questionCount": 384,
+      "totalMarks": 384,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "d5686b8196aea2f1b08c5b28c01f2510ade5b89ad9729b42c286a6786428ec7c",
+      "sizeBytes": 126733
+    },
+    {
+      "code": "jamb-igbo-bank",
+      "title": "JAMB Igbo | Past Questions Bank",
+      "questionCount": 273,
+      "totalMarks": 273,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "2778a7350d77155b3e5b12efdaac59f86760102677bf4729d25ffc207e219b97",
+      "sizeBytes": 94167
+    },
+    {
+      "code": "jamb-insurance-bank",
+      "title": "JAMB Insurance | Past Questions Bank",
+      "questionCount": 174,
+      "totalMarks": 174,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bundleSha256": "62c42ddc173acb25b3b5dc62f6bb0a4f905f5f444f14dcff962ba5e97b298fb7",
+      "sizeBytes": 56522
+    },
+    {
+      "code": "jamb-irs-bank",
+      "title": "JAMB Islamic Religious Studies | Past Questions Bank",
+      "questionCount": 545,
+      "totalMarks": 545,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        1991,
+        1992,
+        1993,
+        1995,
+        2001,
+        2002,
+        2003,
+        2007,
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "bundleSha256": "ba92c9f595a383eb6207ca2ced523cac5529bf861a8b931129feb224ff6a7690",
+      "sizeBytes": 297850
+    },
+    {
+      "code": "jamb-literature-bank",
+      "title": "JAMB Literature in English | Past Questions Bank",
+      "questionCount": 2548,
+      "totalMarks": 2548,
+      "category": "secondary",
+      "body": "JAMB",
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983,
+        1984,
+        1985,
+        1986,
+        1987,
+        1988,
+        1989,
+        1990,
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "bundleSha256": "ed45fbc8df9e98a98a856c7a61fb95c2d4899bbf57bc8d7f90f6ee6bda773457",
+      "sizeBytes": 1170752
+    },
+    {
+      "code": "jamb-literature-enrich-bank",
+      "title": "JAMB Literature | Enrichment Bank",
+      "questionCount": 100,
+      "totalMarks": 100,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "9e4b9e79a78af828552584d7a96feef4a212aae8f5e03e7ea727bdcd2a10e240",
+      "sizeBytes": 33047
+    },
+    {
+      "code": "jamb-mathematics-bank",
+      "title": "JAMB Mathematics | Past Questions Bank",
       "questionCount": 2700,
       "totalMarks": 2700,
       "category": "secondary",
@@ -391,445 +1054,18 @@
         2024,
         2025
       ],
-      "bundleSha256": "d90a948f5189a9f33880ebee2ee8fcde0c58e188d69c52e488717211719bb1b4",
-      "sizeBytes": 1181025
+      "bundleSha256": "e660524ea3f32bf2c1a3983fdc43eb3ab681248887d1ed9a18ed3f36becc5f44",
+      "sizeBytes": 1178095
     },
     {
-      "code": "jamb-english-bank",
-      "title": "JAMB Use of English | Past Questions Bank",
-      "questionCount": 5395,
-      "totalMarks": 5395,
+      "code": "jamb-mathematics-enrich-bank",
+      "title": "JAMB Mathematics | Enrichment Bank",
+      "questionCount": 500,
+      "totalMarks": 500,
       "category": "secondary",
       "body": "JAMB",
-      "years": [
-        1978,
-        1979,
-        1980,
-        1981,
-        1982,
-        1983,
-        1984,
-        1985,
-        1986,
-        1987,
-        1988,
-        1989,
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1996,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "8d27bf14e7349e346e97328e7771fbfc6c3c7f17159c10d3cae2467248333bd0",
-      "sizeBytes": 2981442
-    },
-    {
-      "code": "jamb-fine-arts-bank",
-      "title": "JAMB Fine Arts | Past Questions Bank",
-      "questionCount": 120,
-      "totalMarks": 120,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        2018,
-        2025
-      ],
-      "bundleSha256": "2377f1778d86be4744f67dc99843c2217273278a95cbae4a494fad1a12f915e5",
-      "sizeBytes": 42354
-    },
-    {
-      "code": "jamb-french-bank",
-      "title": "JAMB French | Past Questions Bank",
-      "questionCount": 258,
-      "totalMarks": 258,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        2009,
-        2010,
-        2011,
-        2012,
-        2024,
-        2025
-      ],
-      "bundleSha256": "59a257fbb000c30f35efc5e8f9f35b1f531cd9364096f2ddb7d7b28c6c46a782",
-      "sizeBytes": 80906
-    },
-    {
-      "code": "jamb-geography-bank",
-      "title": "JAMB Geography | Past Questions Bank",
-      "questionCount": 2385,
-      "totalMarks": 2385,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        1978,
-        1979,
-        1980,
-        1981,
-        1982,
-        1983,
-        1984,
-        1985,
-        1986,
-        1987,
-        1988,
-        1989,
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "3025d833e13d39e72f70bf8329a3f3a64121b4fddc68d199c0a5a95bab380c4f",
-      "sizeBytes": 889987
-    },
-    {
-      "code": "jamb-government-bank",
-      "title": "JAMB Government | Past Questions Bank",
-      "questionCount": 2416,
-      "totalMarks": 2416,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        1978,
-        1979,
-        1980,
-        1981,
-        1982,
-        1983,
-        1984,
-        1985,
-        1986,
-        1987,
-        1988,
-        1989,
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "18a2a415f2ed3760d284948ef1637a0c6c26e0ba04e755339e914bba44854619",
-      "sizeBytes": 1151852
-    },
-    {
-      "code": "jamb-hausa-bank",
-      "title": "JAMB Hausa | Past Questions Bank",
-      "questionCount": 385,
-      "totalMarks": 385,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "922041b7fb92f905e2d512b96499ba7b272b7fb8c1519a7211736b216039beef",
-      "sizeBytes": 155728
-    },
-    {
-      "code": "jamb-history-bank",
-      "title": "JAMB History | Past Questions Bank",
-      "questionCount": 751,
-      "totalMarks": 751,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        2002,
-        2008,
-        2010,
-        2012,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "f851d28abc5c7e7a3f7b6094006867cac93434cb89c05545a1fde14116b9f036",
-      "sizeBytes": 405468
-    },
-    {
-      "code": "jamb-home-economics-bank",
-      "title": "JAMB Home Economics | Past Questions Bank",
-      "questionCount": 384,
-      "totalMarks": 384,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "d5686b8196aea2f1b08c5b28c01f2510ade5b89ad9729b42c286a6786428ec7c",
-      "sizeBytes": 126733
-    },
-    {
-      "code": "jamb-igbo-bank",
-      "title": "JAMB Igbo | Past Questions Bank",
-      "questionCount": 273,
-      "totalMarks": 273,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "2778a7350d77155b3e5b12efdaac59f86760102677bf4729d25ffc207e219b97",
-      "sizeBytes": 94167
-    },
-    {
-      "code": "jamb-irs-bank",
-      "title": "JAMB Islamic Religious Studies | Past Questions Bank",
-      "questionCount": 545,
-      "totalMarks": 545,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        1991,
-        1992,
-        1993,
-        1995,
-        2001,
-        2002,
-        2003,
-        2007,
-        2008,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015
-      ],
-      "bundleSha256": "ba92c9f595a383eb6207ca2ced523cac5529bf861a8b931129feb224ff6a7690",
-      "sizeBytes": 297850
-    },
-    {
-      "code": "jamb-literature-bank",
-      "title": "JAMB Literature in English | Past Questions Bank",
-      "questionCount": 2363,
-      "totalMarks": 2363,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        1978,
-        1979,
-        1980,
-        1981,
-        1982,
-        1983,
-        1984,
-        1985,
-        1986,
-        1987,
-        1988,
-        1989,
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "68875a01e60134394bde5b89baef854c6e06c48c470cb3d3f1ff427e5d01af2b",
-      "sizeBytes": 1214695
-    },
-    {
-      "code": "jamb-mathematics-bank",
-      "title": "JAMB Mathematics | Past Questions Bank",
-      "questionCount": 2524,
-      "totalMarks": 2524,
-      "category": "secondary",
-      "body": "JAMB",
-      "years": [
-        1978,
-        1979,
-        1980,
-        1981,
-        1982,
-        1983,
-        1984,
-        1985,
-        1986,
-        1987,
-        1988,
-        1989,
-        1990,
-        1991,
-        1992,
-        1993,
-        1994,
-        1995,
-        1997,
-        1998,
-        1999,
-        2000,
-        2001,
-        2002,
-        2003,
-        2004,
-        2005,
-        2006,
-        2007,
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "bundleSha256": "230663f4c7e1d0fb38dcca0fc9cf7a27c6e5aa68508f568e926588b4ef11125a",
-      "sizeBytes": 1084655
+      "bundleSha256": "f437e5c5270cf35fb33348329b919e5d9bf4ae54bac06b4c750cee14593c0ba9",
+      "sizeBytes": 125594
     },
     {
       "code": "jamb-music-bank",
@@ -864,8 +1100,8 @@
     {
       "code": "jamb-physics-bank",
       "title": "JAMB Physics | Past Questions Bank",
-      "questionCount": 2761,
-      "totalMarks": 2761,
+      "questionCount": 2830,
+      "totalMarks": 2830,
       "category": "secondary",
       "body": "JAMB",
       "years": [
@@ -917,8 +1153,28 @@
         2024,
         2025
       ],
-      "bundleSha256": "4b8090c67856ea070d0aa6f315dab5e8747ac91a0043ed478e9369d4b85dced2",
-      "sizeBytes": 1190758
+      "bundleSha256": "99856e37833295c465f21ba780fd5571b838efe878a8246afefec2e4a1e8e6b0",
+      "sizeBytes": 1249864
+    },
+    {
+      "code": "jamb-physics-enrich-bank",
+      "title": "JAMB Physics | Enrichment Bank",
+      "questionCount": 499,
+      "totalMarks": 499,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "23fddfa44b4e249fd95e647081aeba149f21a18ea1a09e3e3f01b5dd2cd6d521",
+      "sizeBytes": 141857
+    },
+    {
+      "code": "jamb-physics-sim-bank",
+      "title": "JAMB Physics | Simulator Bank",
+      "questionCount": 408,
+      "totalMarks": 408,
+      "category": "secondary",
+      "body": "JAMB",
+      "bundleSha256": "d62d6ddc1ccb1a46a943cead978001236efa7e5ab87c5e0372d1933ed4321f1e",
+      "sizeBytes": 148502
     },
     {
       "code": "jamb-physics-theory-bank",
@@ -983,10 +1239,25 @@
       "sizeBytes": 70420
     },
     {
+      "code": "neco-civic-education-bank",
+      "title": "NECO Civic Education | Past Questions Bank",
+      "questionCount": 94,
+      "totalMarks": 94,
+      "category": "secondary",
+      "body": "NECO",
+      "years": [
+        2012,
+        2013,
+        2014
+      ],
+      "bundleSha256": "774bba5cd005b7fe36d4d91b37d63f7c45509016aeeb074509b6d6a1234f689f",
+      "sizeBytes": 34726
+    },
+    {
       "code": "neco-commerce-bank",
       "title": "NECO Commerce | Past Questions Bank",
-      "questionCount": 380,
-      "totalMarks": 380,
+      "questionCount": 395,
+      "totalMarks": 395,
       "category": "secondary",
       "body": "NECO",
       "years": [
@@ -997,10 +1268,11 @@
         2004,
         2005,
         2007,
-        2009
+        2009,
+        2013
       ],
-      "bundleSha256": "869e9f516e33a9b760cb64cab2ed93d178b01c61abfde66042a9a3bb03749991",
-      "sizeBytes": 143715
+      "bundleSha256": "fe1ddca937179974006851301245d0af679db1ccd053e1fc20f5bff3b86e8df8",
+      "sizeBytes": 148861
     },
     {
       "code": "neco-computer-studies-bank",
@@ -1068,8 +1340,8 @@
     {
       "code": "neco-government-bank",
       "title": "NECO Government | Past Questions Bank",
-      "questionCount": 295,
-      "totalMarks": 295,
+      "questionCount": 299,
+      "totalMarks": 299,
       "category": "secondary",
       "body": "NECO",
       "years": [
@@ -1078,10 +1350,11 @@
         2003,
         2004,
         2005,
-        2009
+        2009,
+        2013
       ],
-      "bundleSha256": "7dcf85a5ab3eac4d64404f68063970353206a8c4edacc577021443d16d7d9242",
-      "sizeBytes": 124840
+      "bundleSha256": "784c6af52afa30e5e78eb235e8841bbd8f7fc28c57123690246b1a3ed60cb2ed",
+      "sizeBytes": 112189
     },
     {
       "code": "neco-mathematics-bank",
@@ -1119,6 +1392,140 @@
       ],
       "bundleSha256": "601f51fb8b26fc807a6f5a433c586a98e0388fade064bc40f1cf946c6025e376",
       "sizeBytes": 149130
+    },
+    {
+      "code": "neet-botany-bank",
+      "title": "NEET Botany | Previous Year Bank 2021 (Official NTA Key)",
+      "questionCount": 49,
+      "totalMarks": 196,
+      "category": "secondary",
+      "body": "NEET",
+      "years": [
+        2021
+      ],
+      "bundleSha256": "74759bd01e65a1f6384fbad3a2b8c81f83cd2fbc77a49e7d14811c2910a9788c",
+      "sizeBytes": 21198
+    },
+    {
+      "code": "neet-chemistry-bank",
+      "title": "NEET Chemistry | Previous Year Bank 2021 (Official NTA Key)",
+      "questionCount": 50,
+      "totalMarks": 200,
+      "category": "secondary",
+      "body": "NEET",
+      "years": [
+        2021
+      ],
+      "bundleSha256": "4eb4d5602287c36dfe789e2882ce748591c105302c0da7e84909f9aeec95134c",
+      "sizeBytes": 20910
+    },
+    {
+      "code": "neet-physics-bank",
+      "title": "NEET Physics | Previous Year Bank 2021 (Official NTA Key)",
+      "questionCount": 49,
+      "totalMarks": 196,
+      "category": "secondary",
+      "body": "NEET",
+      "years": [
+        2021
+      ],
+      "bundleSha256": "d150e56f56a658cff0410a29e019e0a93fbc06c4f8884ef9d5b319533403a43d",
+      "sizeBytes": 23531
+    },
+    {
+      "code": "neet-zoology-bank",
+      "title": "NEET Zoology | Previous Year Bank 2021 (Official NTA Key)",
+      "questionCount": 50,
+      "totalMarks": 200,
+      "category": "secondary",
+      "body": "NEET",
+      "years": [
+        2021
+      ],
+      "bundleSha256": "c321e862992d8a4d7ebac929184b98d8c96a9c0bbb30c1e9969bea7ff229a01c",
+      "sizeBytes": 23061
+    },
+    {
+      "code": "post_utme-accounting-questions-bank",
+      "title": "Post-UTME Accounting | Practice Bank",
+      "questionCount": 12,
+      "totalMarks": 12,
+      "category": "secondary",
+      "body": "POST-UTME",
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013
+      ],
+      "bundleSha256": "56bf477c1e96ca6afe9b78cce61f6c0ad6347c1538d97dd0985071d9edd0f5e8",
+      "sizeBytes": 4946
+    },
+    {
+      "code": "post_utme-geography-questions-bank",
+      "title": "Post-UTME Geography | Practice Bank",
+      "questionCount": 142,
+      "totalMarks": 142,
+      "category": "secondary",
+      "body": "POST-UTME",
+      "years": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014
+      ],
+      "bundleSha256": "9c28bd136cfd7d7afc21f26265e9989c092c651299b9d354de7d762a5adccda2",
+      "sizeBytes": 49290
+    },
+    {
+      "code": "post_utme-history-questions-bank",
+      "title": "Post-UTME History | Practice Bank",
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "secondary",
+      "body": "POST-UTME",
+      "years": [
+        2013
+      ],
+      "bundleSha256": "d96c59f822e1f87801528549d9057a0c6914a16fde094b8b7d587e5a0baed243",
+      "sizeBytes": 16708
+    },
+    {
+      "code": "post_utme-irs-questions-bank",
+      "title": "Post-UTME Irs | Practice Bank",
+      "questionCount": 30,
+      "totalMarks": 30,
+      "category": "secondary",
+      "body": "POST-UTME",
+      "years": [
+        2012
+      ],
+      "bundleSha256": "dc423c71650d90ea4154f9bd73660abfcdcb9ed2aeb1cb2035708e8de3793135",
+      "sizeBytes": 10007
+    },
+    {
+      "code": "post_utme-literature-questions-bank",
+      "title": "Post-UTME Literature | Practice Bank",
+      "questionCount": 65,
+      "totalMarks": 65,
+      "category": "secondary",
+      "body": "POST-UTME",
+      "years": [
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2012,
+        2013
+      ],
+      "bundleSha256": "fd8b8ecdcd4ee32aaa5d8782a89db51567774e086d4276c1a932049a3d0c0d68",
+      "sizeBytes": 23559
     },
     {
       "code": "uni-aaua-cos101-bank",
@@ -1901,6 +2308,16 @@
       "sizeBytes": 88443
     },
     {
+      "code": "uni-bowen-pq-general-paper-bank",
+      "title": null,
+      "questionCount": 13,
+      "totalMarks": 13,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "243308d3160533aaaad94cb974b3552f8c14e007f3ddea3d3f071b3853f17c33",
+      "sizeBytes": 4466
+    },
+    {
       "code": "uni-bowen-pq-geography-bank",
       "title": "BOWEN Post-UTME Geography | Prep Bank",
       "questionCount": 215,
@@ -1919,6 +2336,16 @@
       "body": "University Modules",
       "bundleSha256": "973edd2f064c74add34823ed5444719fbc5804454b581b515767fd1be81781f3",
       "sizeBytes": 147612
+    },
+    {
+      "code": "uni-bowen-pq-history-bank",
+      "title": null,
+      "questionCount": 6,
+      "totalMarks": 6,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "79119d0f7a05a3710b7aee5dc5b0a2c18bf5cb0e33cd5492880a1c7e7cbc6826",
+      "sizeBytes": 2649
     },
     {
       "code": "uni-bowen-pq-irs-bank",
@@ -5603,6 +6030,16 @@
       "sizeBytes": 40595
     },
     {
+      "code": "uni-unilag-bio201-bank",
+      "title": null,
+      "questionCount": 50,
+      "totalMarks": 50,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "08f6e75fe57d990d57210aa4c2eea854bbce8f7ec35b74c34057f1ecbee05f51",
+      "sizeBytes": 32695
+    },
+    {
       "code": "uni-unilag-bme102-bank",
       "title": "UNILAG BME 102 | Course Question Bank",
       "questionCount": 178,
@@ -5621,6 +6058,16 @@
       "body": "University Modules",
       "bundleSha256": "e6eac29b06221352580388d60f2d19790ce3c21f07179d186551a2746917afb5",
       "sizeBytes": 392333
+    },
+    {
+      "code": "uni-unilag-chemistry-bank",
+      "title": null,
+      "questionCount": 8,
+      "totalMarks": 8,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "9d1b4c971fbd51119d24fc4f247bb013dc318311d78ee21515a3cd24685a6cd0",
+      "sizeBytes": 5051
     },
     {
       "code": "uni-unilag-chm101-bank",
@@ -5931,6 +6378,16 @@
       "body": "University Modules",
       "bundleSha256": "848be273a9a7d49188f68865f853a430644d8cb048b37bfa4252752bd0a9bc31",
       "sizeBytes": 382540
+    },
+    {
+      "code": "uni-unilorin-cbt-eng-bank",
+      "title": "UNILORIN CBT English Grammar | Practice Bank",
+      "questionCount": 1384,
+      "totalMarks": 1384,
+      "category": "university",
+      "body": "University Modules",
+      "bundleSha256": "34d8a2496aee27c800ce21637540aeb0ce563e2a50d4945196771c7933602862",
+      "sizeBytes": 406814
     },
     {
       "code": "uni-unilorin-pq-accounting-bank",
@@ -6585,8 +7042,8 @@
     {
       "code": "waec-accounting-bank",
       "title": "WAEC Principles of Accounts | Past Questions Bank",
-      "questionCount": 1709,
-      "totalMarks": 1709,
+      "questionCount": 1761,
+      "totalMarks": 1761,
       "category": "secondary",
       "body": "WAEC",
       "years": [
@@ -6627,8 +7084,8 @@
         2023,
         2024
       ],
-      "bundleSha256": "b9287bba71206a8235d4cfbd5754c519fa1dbe8ac2423853f3e05e730e27b632",
-      "sizeBytes": 776274
+      "bundleSha256": "e1d2ec4515d9da49643e2bfdd5f27f383ca6818b088bfd0d513b73add321320a",
+      "sizeBytes": 793043
     },
     {
       "code": "waec-accounting-theory-bank",
@@ -6844,6 +7301,16 @@
       "sizeBytes": 717486
     },
     {
+      "code": "waec-biology-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 96,
+      "totalMarks": 96,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "606bf057ee7905ed1cc44352565b45b049cd6cdebe2ad8b38199d26aa83c0a4f",
+      "sizeBytes": 38228
+    },
+    {
       "code": "waec-biology-theory-bank",
       "title": "WAEC Biology | Theory & Model Answers",
       "questionCount": 265,
@@ -6999,6 +7466,16 @@
       "sizeBytes": 617261
     },
     {
+      "code": "waec-chemistry-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 107,
+      "totalMarks": 107,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "a8994fd920136db10dd2c43a0c29e00f64d499430705930d462e2dcf398f8246",
+      "sizeBytes": 40840
+    },
+    {
       "code": "waec-chemistry-theory-bank",
       "title": "WAEC Chemistry | Theory & Model Answers",
       "questionCount": 375,
@@ -7050,11 +7527,14 @@
     {
       "code": "waec-civic-education-bank",
       "title": "WAEC Civic Education | Past Questions Bank",
-      "questionCount": 551,
-      "totalMarks": 551,
+      "questionCount": 708,
+      "totalMarks": 708,
       "category": "secondary",
       "body": "WAEC",
       "years": [
+        2011,
+        2012,
+        2013,
         2014,
         2015,
         2016,
@@ -7068,8 +7548,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "d4dd12f86c1da2a0664febd135008d0d7092b8cf361957ad670915c4bbeb45d9",
-      "sizeBytes": 246679
+      "bundleSha256": "1db58d073f2fddd2222deaa44410d642d672b9e34de241063d04ca1aaf737aa0",
+      "sizeBytes": 303216
     },
     {
       "code": "waec-civic-education-theory-bank",
@@ -7096,10 +7576,20 @@
       "sizeBytes": 174164
     },
     {
+      "code": "waec-civic-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 87,
+      "totalMarks": 87,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "7d7b6d7b8d19e7ae0010a307453b40b5a33305de439d571b7082151d6bf04501",
+      "sizeBytes": 36610
+    },
+    {
       "code": "waec-commerce-bank",
       "title": "WAEC Commerce | Past Questions Bank",
-      "questionCount": 2124,
-      "totalMarks": 2124,
+      "questionCount": 2156,
+      "totalMarks": 2156,
       "category": "secondary",
       "body": "WAEC",
       "years": [
@@ -7141,8 +7631,18 @@
         2024,
         2025
       ],
-      "bundleSha256": "11dbac2d2117de15dbf49a78bb65d0ac093a2bce02b51afc95346be441976faa",
-      "sizeBytes": 765030
+      "bundleSha256": "7be7750503076241ea909ba63eaaa1f15df6ca6b35622dadd4fc62050134b583",
+      "sizeBytes": 775799
+    },
+    {
+      "code": "waec-commerce-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 94,
+      "totalMarks": 94,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "bca25aae31eb5281b83c3d9a06fa4552f9a08083f52f91d0cbe948a7b203902f",
+      "sizeBytes": 38851
     },
     {
       "code": "waec-commerce-theory-bank",
@@ -7244,8 +7744,8 @@
     {
       "code": "waec-crs-bank",
       "title": "WAEC Christian Religious Studies | Past Questions Bank",
-      "questionCount": 1751,
-      "totalMarks": 1751,
+      "questionCount": 1780,
+      "totalMarks": 1780,
       "category": "secondary",
       "body": "WAEC",
       "years": [
@@ -7288,8 +7788,18 @@
         2024,
         2025
       ],
-      "bundleSha256": "79d16771d7755427c23e4640267ef570f415feab0acc76951fbb84811dbd9139",
-      "sizeBytes": 765607
+      "bundleSha256": "2e16426b0dd11979ce887c9eb67299f5cc6d3ab65e3ba039b7dd8ff208d338c9",
+      "sizeBytes": 697186
+    },
+    {
+      "code": "waec-crs-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 91,
+      "totalMarks": 91,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "4ddfe8d408cb54347823cade717554233f86691b8efb22fe8f1ab167c83489ed",
+      "sizeBytes": 33914
     },
     {
       "code": "waec-crs-theory-bank",
@@ -7390,8 +7900,8 @@
     {
       "code": "waec-economics-bank",
       "title": "WAEC Economics | Past Questions Bank",
-      "questionCount": 1681,
-      "totalMarks": 1681,
+      "questionCount": 1771,
+      "totalMarks": 1771,
       "category": "secondary",
       "body": "WAEC",
       "years": [
@@ -7434,8 +7944,18 @@
         2024,
         2025
       ],
-      "bundleSha256": "a09a5d1edbb362c6b3c7ea8912bb1feffadf0acb9b3fe587740e38c64dd8f42d",
-      "sizeBytes": 645453
+      "bundleSha256": "f9d7dd82242d43e9c9d8fc0ff854b4e6f56bb2b035ae957d71a7c245fb556501",
+      "sizeBytes": 677986
+    },
+    {
+      "code": "waec-economics-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 97,
+      "totalMarks": 97,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "ce960a03c70a09576923f887dfd6ffd66ffff1f275235ab7c9de95cb7045e4fb",
+      "sizeBytes": 40832
     },
     {
       "code": "waec-economics-theory-bank",
@@ -7546,6 +8066,16 @@
       "body": "WAEC",
       "bundleSha256": "17d8a405b0b51c097872146595f8886fd7388bb3705744b4183ddc47f61beabb",
       "sizeBytes": 95731
+    },
+    {
+      "code": "waec-english-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 123,
+      "totalMarks": 123,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "9c257dbadf8ce836d1f34b1144341e247b6013f28e5d7d6cb9bac193d4e2e3b7",
+      "sizeBytes": 45084
     },
     {
       "code": "waec-english-theory-bank",
@@ -7763,8 +8293,8 @@
     {
       "code": "waec-government-bank",
       "title": "WAEC Government | Past Questions Bank",
-      "questionCount": 1938,
-      "totalMarks": 1938,
+      "questionCount": 1990,
+      "totalMarks": 1990,
       "category": "secondary",
       "body": "WAEC",
       "years": [
@@ -7807,8 +8337,18 @@
         2024,
         2025
       ],
-      "bundleSha256": "f7cc2b028972d6c48880690260745796acb8cc4bccb11b8fee73f1ed5b3c71a6",
-      "sizeBytes": 838467
+      "bundleSha256": "dbe86ccc6713cf75c5d1fc197f8e97483b9a832ea5f2b2cd4451a2ecc5075a92",
+      "sizeBytes": 770282
+    },
+    {
+      "code": "waec-government-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 90,
+      "totalMarks": 90,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "6ab3c0def3d26d4b37168708396cbeeb09954ab972942f8e8ba5be51c85526f3",
+      "sizeBytes": 35891
     },
     {
       "code": "waec-government-theory-bank",
@@ -7876,17 +8416,19 @@
     {
       "code": "waec-insurance-bank",
       "title": "WAEC Insurance | Past Questions Bank",
-      "questionCount": 142,
-      "totalMarks": 142,
+      "questionCount": 242,
+      "totalMarks": 242,
       "category": "secondary",
       "body": "WAEC",
       "years": [
+        2014,
+        2015,
         2016,
         2017,
         2018
       ],
-      "bundleSha256": "84bc3af7fdb53d7504eeb38e09b102a16b6c74a721fe1755f3555b4b2f31316d",
-      "sizeBytes": 60961
+      "bundleSha256": "4d15f639ed9b43ce882a9a9ad0577f11e8f341056f5a58071a3c08dbe2ce99c6",
+      "sizeBytes": 90746
     },
     {
       "code": "waec-insurance-theory-bank",
@@ -7956,8 +8498,8 @@
     {
       "code": "waec-literature-bank",
       "title": "WAEC Literature in English | Past Questions Bank",
-      "questionCount": 1433,
-      "totalMarks": 1433,
+      "questionCount": 1469,
+      "totalMarks": 1469,
       "category": "secondary",
       "body": "WAEC",
       "years": [
@@ -7990,8 +8532,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "f74471c5b1d5aa121b5d84237178dd2c03911e460ba8461d96455a9740ecf486",
-      "sizeBytes": 839414
+      "bundleSha256": "45e6450ac484fe89c1ab44f102f03cad6ba6eeb44f216f620808e7dd7709ea4b",
+      "sizeBytes": 849964
     },
     {
       "code": "waec-literature-theory-bank",
@@ -8171,6 +8713,16 @@
       "sizeBytes": 441460
     },
     {
+      "code": "waec-maths-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 223,
+      "totalMarks": 223,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "a36919dd7459216275b1066ba0f196a1c8b4fe784b6abc03c544a82f7d221b53",
+      "sizeBytes": 73144
+    },
+    {
       "code": "waec-office-practice-bank",
       "title": "WAEC Office Practice | Past Questions Bank",
       "questionCount": 186,
@@ -8250,6 +8802,16 @@
       ],
       "bundleSha256": "19a9b40714a5be1559a799f26807c560a729550e22d10f856d8fbda170ba620b",
       "sizeBytes": 749219
+    },
+    {
+      "code": "waec-physics-sun-bank",
+      "title": "WAEC Server | SSCE Bank",
+      "questionCount": 94,
+      "totalMarks": 94,
+      "category": "secondary",
+      "body": "WAEC",
+      "bundleSha256": "c89cd9f1ea8003e7d9e053dd5651753b1a2dd2c2fc8a19e3959039a6cc14a9a6",
+      "sizeBytes": 35459
     },
     {
       "code": "waec-physics-theory-bank",
@@ -8348,326 +8910,6 @@
       ],
       "bundleSha256": "aa93d2d11bd7bc509f77825caf616fa6879b4d4aa03914008b6197e50dc09dbc",
       "sizeBytes": 164015
-    },
-    {
-      "code": "uni-bowen-pq-general-paper-bank",
-      "title": null,
-      "questionCount": 13,
-      "totalMarks": 13,
-      "category": "university",
-      "body": "University Modules",
-      "bundleSha256": "243308d3160533aaaad94cb974b3552f8c14e007f3ddea3d3f071b3853f17c33",
-      "sizeBytes": 4466
-    },
-    {
-      "code": "uni-bowen-pq-history-bank",
-      "title": null,
-      "questionCount": 6,
-      "totalMarks": 6,
-      "category": "university",
-      "body": "University Modules",
-      "bundleSha256": "79119d0f7a05a3710b7aee5dc5b0a2c18bf5cb0e33cd5492880a1c7e7cbc6826",
-      "sizeBytes": 2649
-    },
-    {
-      "code": "uni-unilag-bio201-bank",
-      "title": null,
-      "questionCount": 50,
-      "totalMarks": 50,
-      "category": "university",
-      "body": "University Modules",
-      "bundleSha256": "08f6e75fe57d990d57210aa4c2eea854bbce8f7ec35b74c34057f1ecbee05f51",
-      "sizeBytes": 32695
-    },
-    {
-      "code": "uni-unilag-chemistry-bank",
-      "title": null,
-      "questionCount": 8,
-      "totalMarks": 8,
-      "category": "university",
-      "body": "University Modules",
-      "bundleSha256": "9d1b4c971fbd51119d24fc4f247bb013dc318311d78ee21515a3cd24685a6cd0",
-      "sizeBytes": 5051
-    },
-    {
-      "code": "jamb-accounting-enrich-bank",
-      "title": "JAMB Accounting | Enrichment Bank",
-      "questionCount": 500,
-      "totalMarks": 500,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "0556fca5b5ba319798fda013bc2950fccdefe2521ce2b7f319d8c79c63c1971c",
-      "sizeBytes": 247754
-    },
-    {
-      "code": "jamb-biology-enrich-bank",
-      "title": "JAMB Biology | Enrichment Bank",
-      "questionCount": 100,
-      "totalMarks": 100,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "f9790bea7df226187f026ef651f47ae4c25c3bf6a4a4732bd394673548ab2164",
-      "sizeBytes": 34206
-    },
-    {
-      "code": "jamb-biology-sim-bank",
-      "title": "JAMB Biology | Simulator Bank",
-      "questionCount": 198,
-      "totalMarks": 198,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "d2bbba157cf458834d2a389e6a5f0375276a08f62f46db763a3f64e0612bc1bb",
-      "sizeBytes": 60749
-    },
-    {
-      "code": "jamb-chemistry-enrich-bank",
-      "title": "JAMB Chemistry | Enrichment Bank",
-      "questionCount": 100,
-      "totalMarks": 100,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "13e59a8da29c9151c3764b79d597fd2c9513dea60c35a012001ce5e1838448fb",
-      "sizeBytes": 33998
-    },
-    {
-      "code": "jamb-chemistry-sim-bank",
-      "title": "JAMB Chemistry | Simulator Bank",
-      "questionCount": 492,
-      "totalMarks": 492,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "909c042c5d412fe348315181243b028e46cdf93d67eb046cffba56d064b28822",
-      "sizeBytes": 170757
-    },
-    {
-      "code": "jamb-commerce-enrich-bank",
-      "title": "JAMB Commerce | Enrichment Bank",
-      "questionCount": 500,
-      "totalMarks": 500,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "e69904ba7a074cd1019d7a785b1155a02469053fc3870980b7f0998d084651c9",
-      "sizeBytes": 240962
-    },
-    {
-      "code": "jamb-crs-enrich-bank",
-      "title": "JAMB Crs | Enrichment Bank",
-      "questionCount": 495,
-      "totalMarks": 495,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "4fe7808addf27c537915839cab213972e66415062e59f886c60cbd35a375e006",
-      "sizeBytes": 173779
-    },
-    {
-      "code": "jamb-economics-enrich-bank",
-      "title": "JAMB Economics | Enrichment Bank",
-      "questionCount": 499,
-      "totalMarks": 499,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "0acd018aaa594443a9f396b1e0815aa4dafcade2b46d3b400e7ede1c0e9a8f2b",
-      "sizeBytes": 204240
-    },
-    {
-      "code": "jamb-english-enrich-bank",
-      "title": "JAMB English | Enrichment Bank",
-      "questionCount": 499,
-      "totalMarks": 499,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "681363973e6b5295e61a1f0d99252b08aa61f5518116a1bf3626b079e912eccf",
-      "sizeBytes": 148939
-    },
-    {
-      "code": "jamb-english-sim-bank",
-      "title": "JAMB English | Simulator Bank",
-      "questionCount": 169,
-      "totalMarks": 169,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "0de6518e32096ff9533c146bd35a52898cb096a8c62882a4c469b2ccd9356293",
-      "sizeBytes": 60684
-    },
-    {
-      "code": "jamb-geography-enrich-bank",
-      "title": "JAMB Geography | Enrichment Bank",
-      "questionCount": 500,
-      "totalMarks": 500,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "e329d9c4bef4706e134ffffecb9cdcd477698db15d588efbe21f38d44d688b82",
-      "sizeBytes": 209730
-    },
-    {
-      "code": "jamb-government-enrich-bank",
-      "title": "JAMB Government | Enrichment Bank",
-      "questionCount": 99,
-      "totalMarks": 99,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "ea8b57627a1a31baf4b022f004bf047f136f7052cdd9741802fc6c8a0155d21b",
-      "sizeBytes": 36378
-    },
-    {
-      "code": "jamb-history-enrich-bank",
-      "title": "JAMB History | Enrichment Bank",
-      "questionCount": 500,
-      "totalMarks": 500,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "8173ba00d3bf5098243d536f576dabdbf570e6390f0b8bea970a4693725295a1",
-      "sizeBytes": 221993
-    },
-    {
-      "code": "jamb-literature-enrich-bank",
-      "title": "JAMB Literature | Enrichment Bank",
-      "questionCount": 100,
-      "totalMarks": 100,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "9e4b9e79a78af828552584d7a96feef4a212aae8f5e03e7ea727bdcd2a10e240",
-      "sizeBytes": 33047
-    },
-    {
-      "code": "jamb-mathematics-enrich-bank",
-      "title": "JAMB Mathematics | Enrichment Bank",
-      "questionCount": 500,
-      "totalMarks": 500,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "f437e5c5270cf35fb33348329b919e5d9bf4ae54bac06b4c750cee14593c0ba9",
-      "sizeBytes": 125594
-    },
-    {
-      "code": "jamb-physics-enrich-bank",
-      "title": "JAMB Physics | Enrichment Bank",
-      "questionCount": 499,
-      "totalMarks": 499,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "23fddfa44b4e249fd95e647081aeba149f21a18ea1a09e3e3f01b5dd2cd6d521",
-      "sizeBytes": 141857
-    },
-    {
-      "code": "jamb-physics-sim-bank",
-      "title": "JAMB Physics | Simulator Bank",
-      "questionCount": 408,
-      "totalMarks": 408,
-      "category": "secondary",
-      "body": "JAMB",
-      "bundleSha256": "d62d6ddc1ccb1a46a943cead978001236efa7e5ab87c5e0372d1933ed4321f1e",
-      "sizeBytes": 148502
-    },
-    {
-      "code": "uni-unilorin-cbt-eng-bank",
-      "title": "UNILORIN CBT English Grammar | Practice Bank",
-      "questionCount": 1384,
-      "totalMarks": 1384,
-      "category": "university",
-      "body": "University Modules",
-      "bundleSha256": "34d8a2496aee27c800ce21637540aeb0ce563e2a50d4945196771c7933602862",
-      "sizeBytes": 406814
-    },
-    {
-      "code": "waec-biology-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 96,
-      "totalMarks": 96,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "606bf057ee7905ed1cc44352565b45b049cd6cdebe2ad8b38199d26aa83c0a4f",
-      "sizeBytes": 38228
-    },
-    {
-      "code": "waec-chemistry-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 107,
-      "totalMarks": 107,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "a8994fd920136db10dd2c43a0c29e00f64d499430705930d462e2dcf398f8246",
-      "sizeBytes": 40840
-    },
-    {
-      "code": "waec-civic-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 87,
-      "totalMarks": 87,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "7d7b6d7b8d19e7ae0010a307453b40b5a33305de439d571b7082151d6bf04501",
-      "sizeBytes": 36610
-    },
-    {
-      "code": "waec-commerce-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 94,
-      "totalMarks": 94,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "bca25aae31eb5281b83c3d9a06fa4552f9a08083f52f91d0cbe948a7b203902f",
-      "sizeBytes": 38851
-    },
-    {
-      "code": "waec-crs-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 91,
-      "totalMarks": 91,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "4ddfe8d408cb54347823cade717554233f86691b8efb22fe8f1ab167c83489ed",
-      "sizeBytes": 33914
-    },
-    {
-      "code": "waec-economics-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 97,
-      "totalMarks": 97,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "ce960a03c70a09576923f887dfd6ffd66ffff1f275235ab7c9de95cb7045e4fb",
-      "sizeBytes": 40832
-    },
-    {
-      "code": "waec-english-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 123,
-      "totalMarks": 123,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "9c257dbadf8ce836d1f34b1144341e247b6013f28e5d7d6cb9bac193d4e2e3b7",
-      "sizeBytes": 45084
-    },
-    {
-      "code": "waec-government-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 90,
-      "totalMarks": 90,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "6ab3c0def3d26d4b37168708396cbeeb09954ab972942f8e8ba5be51c85526f3",
-      "sizeBytes": 35891
-    },
-    {
-      "code": "waec-maths-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 223,
-      "totalMarks": 223,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "a36919dd7459216275b1066ba0f196a1c8b4fe784b6abc03c544a82f7d221b53",
-      "sizeBytes": 73144
-    },
-    {
-      "code": "waec-physics-sun-bank",
-      "title": "WAEC Server | SSCE Bank",
-      "questionCount": 94,
-      "totalMarks": 94,
-      "category": "secondary",
-      "body": "WAEC",
-      "bundleSha256": "c89cd9f1ea8003e7d9e053dd5651753b1a2dd2c2fc8a19e3959039a6cc14a9a6",
-      "sizeBytes": 35459
     }
   ]
 }

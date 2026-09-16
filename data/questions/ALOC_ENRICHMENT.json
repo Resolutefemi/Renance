@@ -1,0 +1,12 @@
+{
+ "source": "ALOC v2 API (questions.aloc.com.ng) \u2014 free token, 17 subjects, ~6k questions",
+ "token_account": "renance.study@proton.me (AccessToken in scripts/research/aloc_harvest.py)",
+ "harvest": "5,252 raw rows -> scripts/research/aloc_harvest.jsonl (kept out of repo)",
+ "enrichment_applied": {
+  "JAMB": "utme/model/catch-all rows merged into 12 subject banks (+1,416 deduped) + new insurance.json (174)",
+  "WAEC": "wassce rows merged into 8 subject banks (+548 deduped)",
+  "NECO": "neco rows merged into commerce/government (+19) + new civic-education.json (94)",
+  "POST_UTME": "post-utme rows -> NEW accounting/geography/history/irs/literature-questions.json (+313); crs/economics/government/maths/physics files left untouched (phase-1 excluded them from the manifest \u2014 their answers are numeric, not letters)"
+ },
+ "notes": "All merged rows deduped against existing stems; answers inline (sanitized at boot)."
+}

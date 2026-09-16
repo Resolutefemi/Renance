@@ -1,0 +1,42 @@
+{
+ "exam": "GCSE",
+ "region": "United Kingdom",
+ "status": "harvested",
+ "source": "BBC Bitesize \u2014 Exam-Style Questions series (Riddle.com interactive quizzes)",
+ "method": "headless-browser quiz play-through; correct answers + explanations revealed by platform",
+ "banks": {
+  "gcse-biology-bank": 50,
+  "gcse-chemistry-bank": 50,
+  "gcse-combined-science-bank": 56,
+  "gcse-geography-bank": 40,
+  "gcse-maths-bank": 39,
+  "gcse-physics-bank": 40
+ },
+ "total_questions": 275,
+ "files": {
+  "biology": "GCSE/biology.json",
+  "chemistry": "GCSE/chemistry.json",
+  "physics": "GCSE/physics.json",
+  "combined-science": "GCSE/combined-science.json",
+  "maths": "GCSE/maths.json",
+  "geography": "GCSE/geography.json"
+ },
+ "skipped": "9 SELECT-ALL-THAT-APPLY (multi-answer) questions \u2014 single-answer MCQ format only",
+ "notes": "Diagrams referenced via absolute cdn.riddle.com URLs in the image field. Answers are inline (answer/explanation fields); the API sanitizes them at boot.",
+ "subjects_not_yet_available": [
+  "English Language",
+  "English Literature",
+  "History",
+  "Religious Studies",
+  "Computer Science",
+  "Business",
+  "French",
+  "Spanish",
+  "German",
+  "Art and Design",
+  "Design and Technology",
+  "Drama",
+  "Music",
+  "Physical Education"
+ ]
+}

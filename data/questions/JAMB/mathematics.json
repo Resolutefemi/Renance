@@ -2,8 +2,8 @@
  "code": "jamb-mathematics-bank",
  "title": "JAMB Mathematics | Past Questions Bank",
  "version": 3,
- "questionCount": 2524,
- "totalMarks": 2524,
+ "questionCount": 2700,
+ "totalMarks": 2700,
  "questions": [
   {
    "id": "jamb-mathematics-bank-0001",
@@ -36637,6 +36637,2661 @@
    "answer": "C",
    "explanation": "tan x = \\(\\frac{2}{3}\\)(given), is illustrated in a right-angled \\(\\Delta\\)<br>\r\n<br>\r\nthus m<sup>2</sup> = 2<sup>2</sup> + 3<sup>2</sup> <br>\r\n<br>\r\n= 4 + 9 = 13<br>\r\n<br>\r\nm = \\(\\sqrt{13}\\)<br>\r\n<br>\r\nHence, 2sin x = 2 x \\(\\frac{2}{m}\\)<br>\r\n<br>\r\n2 x\\(\\frac{2}{\\sqrt{13}}\\)<br>\r\n<br>\r\n= \\(\\frac{4}{\\sqrt{13}}\\)<br>\r\n<br>\r\n= \\(\\frac{4}{\\sqrt{13}} = \\frac{\\sqrt{13}}{\\sqrt{13}}\\)<br>\r\n<br>\r\n= \\(\\frac{4\\sqrt{13}}{13}\\)",
    "video": "https://www.youtube.com/embed/6Xz0FfFNJbs?start=1938"
+  },
+  {
+   "id": "jamb-mathematics-bank-2796",
+   "type": "mcq",
+   "stem": "What is the locus of points equidistant from the lines ax + bc + c = 0?",
+   "options": {
+    "A": "A line bx - ay +q = 0",
+    "B": "A line ax - ay +q = 0",
+    "C": "A line bx + ay +q = 0",
+    "D": "A line bx + ay +q = 0"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Locus of point equidistant from a given straight is the perpendicular bisector of the straight line ∴Gradient of the line ax + by + c = 0 implies by = -ax - c y = -a/bx - c the gradient (m) = a/b ∴Gradient of the perpendicular (m) = b/a If P(x,y) is the point intersection of the two lines equation of the perpendicular becomes y - y1 = m(x - x1) y - y1 = b/a(x - x1) ay - ay1 = bx - bx1 ay - bx + bx1 - ay1 = 0 ay - bx + b(x1 - y1) = 0 implies ay - bx + q",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2797",
+   "type": "mcq",
+   "stem": "In a class of 40 students, 32 offer mathematics, 24 offer Physics, and 4 offer neither Mathematics nor Physics. How many offer both Mat ematics and Physics?",
+   "options": {
+    "A": "20",
+    "B": "16",
+    "C": "8",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Using a venn diagram, let x = number who offer both Maths and Physics. So that (32-x) offer Maths and another (24-x) offer Physics. (32-x) + (24-x) + (x) + (4 who offer neither) = 40 => 60 - x = 40 => -x = -20 Therefore x = 20.",
+   "year": 2003
+  },
+  {
+   "id": "jamb-mathematics-bank-2798",
+   "type": "mcq",
+   "stem": "The venn diagram shows the number of students offering Music and History in a class of 80 students. If a student is picked at random from the class, what is the probability that he offers Music only?",
+   "options": {
+    "A": "0.25",
+    "B": "0.38",
+    "C": "0.50",
+    "D": "0.13"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "80 = (30 - x) + x + 40 - x + 20 80 = 90 - x, x = 90 - 80 = 10 N (music only) = 30 - x = 30 - 10 = 20 P (music only) = 20/80 = 1/4 = 0.25",
+   "year": 2002,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710698340/ALOC-Questions/Mathematics/2002/math_2000_q48_escfln.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2799",
+   "type": "mcq",
+   "stem": "Find dy/dx, if y = 2/3 x<sup>3</sup> - 4/x",
+   "options": {
+    "A": "3x<sup>2</sup> - 4/x",
+    "B": "2x<sup>2</sup> +4/x2",
+    "C": "3x<sup>2</sup> + 4/x2",
+    "D": "2x<sup>2</sup> - 4/x"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "y = 2/3x<sup>3</sup> - 4/x dy/dx = 2x<sup>2</sup> - (-4)x<sup>−2<sup> = 2x<sup>2</sup> + 4/x<sup>2</sup>",
+   "year": 2016
+  },
+  {
+   "id": "jamb-mathematics-bank-2800",
+   "type": "mcq",
+   "stem": "Factorize completely 81a<sup>4</sup> - 16b<sup>4</sup>",
+   "options": {
+    "A": "(3a + 2b)(2a - 3b)(9a<sup>2</sup> + 4b<sup>2</sup>)",
+    "B": "(3a - 2b)(2a - 3b)(4a<sup>2</sup> - 9b<sup>2</sup>)",
+    "C": "(3a - 2b)(3a + 2b)(9a<sup>2</sup> + 4b<sup>2</sup>)",
+    "D": "(6a - 2b)(8a - 3b)(4a<sup>3</sup> - 9b<sup>2</sup>)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "81a<sup>4</sup> - 16b<sup>4</sup> = (9a<sup>2</sup>)<sup>2</sup> - (4b<sup>2</sup>)<sup>2</sup> = (9a<sup>2</sup> + 4b<sup>2</sup>)(9a<sup>2</sup> - 4b<sup>2</sup>) N:B 9a<sup>2</sup> - 4b<sup>2</sup> = (3a - 2b)(3a+ 2b)",
+   "year": 2021
+  },
+  {
+   "id": "jamb-mathematics-bank-2801",
+   "type": "mcq",
+   "stem": "The probabilities that a man and his wife live for 80 years are 2/3 and 3/5 respectively. Find the probability that at least one of them will live up to 80 years",
+   "options": {
+    "A": "2/15",
+    "B": "3/15",
+    "C": "7/15",
+    "D": "13/15"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Man lives = 2/3 not live = 1/3 Wife lives = 3/5 not live = 2/5 P(at least one lives to 80 years) = P(man lives to 80 not woman) + P(woman lives to 80 and not man) + P(both live to 80) P=(2/3 × 2/5) + (2/5 × 1/3) + (2/3 × 3/5) = 4/15 + 3/15 + 6/15 = 13/15",
+   "year": 2012
+  },
+  {
+   "id": "jamb-mathematics-bank-2802",
+   "type": "mcq",
+   "stem": "Given that p = 1 + √2 and q = 1 - √2, evaluate (p<sup>2</sup> - q<sup>2</sup> /2pq)",
+   "options": {
+    "A": "2(2+√2)",
+    "B": "-2(2+√2)",
+    "C": "2√2",
+    "D": "-2√2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2001
+  },
+  {
+   "id": "jamb-mathematics-bank-2803",
+   "type": "mcq",
+   "stem": "If P = {1,2,3,4,5} and P ∪ Q = {1,2,3,4,5,6,7}, list the elements in Q",
+   "options": {
+    "A": "{6}",
+    "B": "{7}",
+    "C": "{6,7}",
+    "D": "{5,6}"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Q = (P ∪ Q) - P {6,7}",
+   "year": 2014
+  },
+  {
+   "id": "jamb-mathematics-bank-2804",
+   "type": "mcq",
+   "stem": "In the diagram above, PQR is a circle centre O. If < QPR is x°, find < QRP.",
+   "options": {
+    "A": "x°",
+    "B": "(90 - x)°",
+    "C": "(90 + x)°",
+    "D": "(180 - x)°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "< PQR = 90° (angle in a semi-circle) < QRP = (90 - x)°",
+   "year": 2012,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716130441/ALOC-Questions/Mathematics/2012/2012_MATH_JAMB_Q42_omnqe2.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2805",
+   "type": "mcq",
+   "stem": "Simplify (√6+2)<sup>2</sup> −(√6−2)<sup>2</sup>",
+   "options": {
+    "A": "2√6",
+    "B": "4√6",
+    "C": "8√6",
+    "D": "16√6"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "√6+2)<sup>2</sup> −(√6−2)<sup>2</sup> = [(√6+2)+(√6 − 2)][(√6 + 2) − (√6 − 2)] = (√6 + 2 + √6 − 2)(√6 + 2− √6 + 2)] = (2√6)(4) = 8√6",
+   "year": 2012
+  },
+  {
+   "id": "jamb-mathematics-bank-2806",
+   "type": "mcq",
+   "stem": "From the diagram above, find the bearing of R and S",
+   "options": {
+    "A": "226°",
+    "B": "224°",
+    "C": "136°",
+    "D": "134°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The diagram x = 44o (alternate ∠s) the bearing of R from S = 180 + x = 180 + 44 = 224°",
+   "year": 2005,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710702612/ALOC-Questions/Mathematics/2005/math_2005_q49_kb66c4.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2807",
+   "type": "mcq",
+   "stem": "Determine the value of ∫<supb>0</sub><sup>(π/2)</sup>(-2cosx)dx",
+   "options": {
+    "A": "(π/2)",
+    "B": "-1/2",
+    "C": "-3",
+    "D": "-3/2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "∫<sub>0</sub><sup>(π/2)</sup>(-2cosx)dx=[-2sinx+c]<sub>0</sub><sup>(π/2)</sup>=(-2sin π/2 + c + 2sin0 - c) = -2sin90 + c + 2sin0 - c.= -2(1) + 2(0) = -2",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2808",
+   "type": "mcq",
+   "stem": "Evaluate ∫_<sub>1</sub><sup>3</sup>(X<sup>2</sup>-1)dx",
+   "options": {
+    "A": "2/3",
+    "B": "-2/3",
+    "C": "-6(2/3)",
+    "D": "6(2/3)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "∫<sub>1</sub><sup>3</sup>(X<sup>2</sup>-1)dx =〖[1/3 x<sup>2</sup>-x]〗<sub>1</sub><sup>3</sup>=(9-3)-(1/3-1)=6-(-2/3)=6+2/3 = 6 (2/3)",
+   "year": 2004
+  },
+  {
+   "id": "jamb-mathematics-bank-2809",
+   "type": "mcq",
+   "stem": "Make Q the subject of formula when L = 4/3 M√PQ",
+   "options": {
+    "A": "(9L<sup>2</sup>)/(16M<sup>2</sup> P)",
+    "B": "3L/(4M√P)",
+    "C": "√3L/4MP",
+    "D": "(3L<sup>2</sup>)/(16M<sup>2</sup> ) P"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "L=4/3 M√PQ=3/4M×L=√PQ=〖(3L/4M)〗<sup>2</sup>=(√PQ )<sup>2</sup>=(9L<sup>2</sup>)/(16M<sup>2</sup> )=PQ=Q=(9L<sup>2</sup>)/(16M<sup>2</sup> P)",
+   "year": 2008
+  },
+  {
+   "id": "jamb-mathematics-bank-2810",
+   "type": "mcq",
+   "stem": "Make q the subject of the formula in the equation mn/a<sup>2</sup>− pq/b<sup>2</sup> = 1",
+   "options": {
+    "A": "q=(b<sup>2</sup> (mn-a<sup>2</sup>))/(a<sup>2</sup> p)",
+    "B": "q=(m<sup>2</sup> n-a<sup>2</sup>)/p<sup>2</sup>",
+    "C": "q=(mn-2b<sup>2</sup>)/a<sup>2</sup>"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "(mn)/a<sup>2</sup> − (pq)/b<sup>2</sup> = 1 (mn)/a<sup>2</sup> − 1 = (pq)/b<sup>2</sup> (mn)−a<sup>2</sup>/a<sup>2</sup>=pq/b<sup>2</sup> pq = b<sup>2</sup>(mn−a<sup>2</sup>)/a<sup>2</sup> q = b<sup>2</sup>(mn−a<sup>2</sup>)a<sup>2</sup>p",
+   "year": 2019
+  },
+  {
+   "id": "jamb-mathematics-bank-2811",
+   "type": "mcq",
+   "stem": "if (x - 1), (x + 1) and (x - 2) are factors of the polynomial ax<sup>3</sup> + bx<sup>2</sup> + cx - 1, find a, b, c in that order.",
+   "options": {
+    "A": "-1/2, 1., 1/2",
+    "B": "1/2, 1, 1/2",
+    "C": "1/2, 1, -1/2",
+    "D": "1/2, -1, 1/2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "This is a polynomial of the 3rd order, thus x should have three answers. Use the factors given to get values of x as 1, -1 and -2. Form three equations, and carry out elimination and subsequent substitution to get a = -1/2, b = 1, and c = 1/2",
+   "year": 2000
+  },
+  {
+   "id": "jamb-mathematics-bank-2812",
+   "type": "mcq",
+   "stem": "The volume of a hemispherical bowl is 718(2/3) . Find its radius .",
+   "options": {
+    "A": "4.0 cm",
+    "B": "5.6 cm",
+    "C": "7.0 cm",
+    "D": "3.8 cm"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Volume of bow 2/3 πr<sup>2</sup> 718 2/3=2/3 πr<sup>2</sup> 2156/3=2/3×22/7×r<sup>3</sup> ∴ r<sup>3</sup>=(2156×3×7)/(3×2×22) r<sup>3</sup>=343 r=∛343. r=7.0cm",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2813",
+   "type": "mcq",
+   "stem": "If y = x sinx, find dy/dx",
+   "options": {
+    "A": "sin x - x cosx",
+    "B": "sinx + x cosx",
+    "C": "sinx - cosx",
+    "D": "sinx + cosx"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "If y = x sinx, then Let u = x and v = sinx du/dx = 1 and dv/dx = cosx Hence by the product rule, dy/dx = v (du/dx) + u(dv/dx) = (sin x) x 1 + x cosx = sinx + x cosx",
+   "year": 2010
+  },
+  {
+   "id": "jamb-mathematics-bank-2814",
+   "type": "mcq",
+   "stem": "Add 1101<sub>2</sub> ,10111<sub>2</sub> and 111<sub>2</sub>",
+   "options": {
+    "A": "111011<sub>2</sub>",
+    "B": "110110<sub>2</sub>",
+    "C": "101011<sub>2</sub>",
+    "D": "101010<sub>2</sub>"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "1101<sub>2</sub> + 10111<sub>2</sub> + 111<sub>2</sub> = 101011",
+   "year": 2008
+  },
+  {
+   "id": "jamb-mathematics-bank-2815",
+   "type": "mcq",
+   "stem": "Find dy/dx. If y = 3x<sup>3</sup> + 2x<sup>2</sup> + 3x + 1",
+   "options": {
+    "A": "9x<sup>2</sup> + 4x + 3",
+    "B": "9x<sup>2</sup> - 4x - 3",
+    "C": "9x<sup>2</sup> + 4x - 3",
+    "D": "9x<sup>2</sup> - 4x + 3"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "y = 3x<sup>3</sup> + 2x<sup>2</sup> + 3x + 1 dy/dx = 9x<sup>2</sup> + 4x + 3",
+   "year": 2016
+  },
+  {
+   "id": "jamb-mathematics-bank-2816",
+   "type": "mcq",
+   "stem": "A trader realizes 10x - x<sup>2</sup> naira profit from the sale of x bags on corn. How many bags will give him the desired profit?",
+   "options": {
+    "A": "4",
+    "B": "5",
+    "C": "6",
+    "D": "7"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "y = 10x - x<sup>2</sup> dy/dx = 10 - 2x As dy/dx = 0, 10 - 2x = 0 2x = 10 x = 5",
+   "year": 2000
+  },
+  {
+   "id": "jamb-mathematics-bank-2817",
+   "type": "mcq",
+   "stem": "Evaluate <sup>n</sup><sup>2 </sup> + <sup>1</sup>C<sub>(n+5)</sub> if n = 3",
+   "options": {
+    "A": "55",
+    "B": "45",
+    "C": "35",
+    "D": "25"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "<sup>3</sup><sup>2 </sup> + <sup>1</sup>C<sub>(3+5)</sub> <sup>9+1</sup>C<sub>3+5</sub> <sup>10</sup>C<sub>8</sub> = 10!/(8!2!) (10∗9∗8!)/(8!2!)= (10∗9)/2 = 45",
+   "year": 2022
+  },
+  {
+   "id": "jamb-mathematics-bank-2818",
+   "type": "mcq",
+   "stem": "Evaluate <sup>n+1</sup>C<sub>n-2</sub> If n =15",
+   "options": {
+    "A": "3630",
+    "B": "3360",
+    "C": "1120",
+    "D": "560"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "n+1(n−2)/(n+1)! (n+1)+(n−2)!(n−2)!/(n+1)! (n+1)(n+1−1)(n+1−2)(n+1−3)/!3!(n−2)! (n+1)(n)(n−1)(n−2)/!3!(n−2)! (n+1)(n)(n−1/)3! Since n = 15 (15+1)(15)(15−1)/3! 16×15×14/3×2×1 = 560",
+   "year": 2012
+  },
+  {
+   "id": "jamb-mathematics-bank-2819",
+   "type": "mcq",
+   "stem": "Factorize x<sup>2</sup> + 9x + 20",
+   "options": {
+    "A": "(x − 5)<sup>2</sup>",
+    "B": "(x + 5)(x + 4)",
+    "C": "(x - 5)(x + 3)",
+    "D": "(x + 3)<sup>2</sup>"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "x<sup>2</sup>+9x+20 Find the two numbers whose product is 20 and its sum is 9} 5x × 4x = 20x<sup>2</sup> 5x + 4x = 9x (x<sup>2</sup>+5x) + (4x+20) x(x+5)+4(x+5)=(x+5)(x+4)",
+   "year": 2015
+  },
+  {
+   "id": "jamb-mathematics-bank-2820",
+   "type": "mcq",
+   "stem": "A binary operation ⊗ is defined by m ⊗ n = mn + m − n on the set of real numbers, for all m, n ∈ R. Find the value of 3 ⊗ (2⊗ 4).",
+   "options": {
+    "A": "6",
+    "B": "25",
+    "C": "15",
+    "D": "18"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "m ⊗ n = mn + m − n 3 ⊗ (2 ⊗ 4) 2 ⊗ 4 = 2(4) + 2 - 4 = 6 3 otimes 6 = 3(6) + 3 - 6 = 15",
+   "year": 2019
+  },
+  {
+   "id": "jamb-mathematics-bank-2821",
+   "type": "mcq",
+   "stem": "If tanθ=3/4, find the value of sinθ + cosθ .",
+   "options": {
+    "A": "1(1/3)",
+    "B": "1(2/3)",
+    "C": "1(3/5)",
+    "D": "1(2/5)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "tan θ = opp/adj = 3/4 hyp<sup>2</sup>=opp<sup>2</sup> + adj<sup>2</sup> hyp= √(3<sup>2</sup> + 4<sup>2</sup>) = 5 sinθ = 3/5; cosθ = 4/5 sinθ + cosθ = 3/5 + 4/5 = 7/5 = 1(2/5)",
+   "year": 2013
+  },
+  {
+   "id": "jamb-mathematics-bank-2822",
+   "type": "mcq",
+   "stem": "Find the value of (tan60°-tan30°)/(tan60°+tan 30° )",
+   "options": {
+    "A": "4/√3",
+    "B": "2/√3",
+    "C": "1",
+    "D": "1/2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "(tan〖60〗°-tan〖30〗°)/(tan〖60〗°+tan〖30〗° )=(√3-1/√3)/(√3+1/√3)=((√3 √3-1)/√3)÷((√3 √3+1)/√3)=((3-1))/((3+1))=2/4=1/2",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2823",
+   "type": "mcq",
+   "stem": "The marks scored by 30 students in a Mathematics test are recorded in the table below: What is the total number of marks scored by the children?",
+   "options": {
+    "A": "82",
+    "B": "15",
+    "C": "63",
+    "D": "75"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2019,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1724006858/ALOC-Questions/Mathematics/2019/MATH_JAMB_2019_Q20_r3zmlm.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2824",
+   "type": "mcq",
+   "stem": "A binary operation ⊕ on real numbers is defined by x ⊕ y = xy + x + y for two real numbers x and y. Find the value of 3 ⊕ -2/3 .",
+   "options": {
+    "A": "- 1/2",
+    "B": "1/3",
+    "C": "-1",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "N + Y = XY + X + Y 3 + -2/3 = 3(- 2/3) + 3 + (- 2/3) = -2 + 3 -2/3 = 1−2/1−3 = 1/3",
+   "year": 2011
+  },
+  {
+   "id": "jamb-mathematics-bank-2825",
+   "type": "mcq",
+   "stem": "A matrix P is such that P<sup>T</sup>= p, where P<sup>T</sup> is the transpose of P, if b = 1, then P is",
+   "options": {
+    "A": "(0, 1) (1, 0)",
+    "B": "(0, 1) (-1, 0)",
+    "C": "(0, 1) (1, 1)",
+    "D": "(1, 1) (-1,0)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2000,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710692182/ALOC-Questions/Mathematics/2000/question-48_dp4ky2.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2826",
+   "type": "mcq",
+   "stem": "If the 2nd term of a G.P is 8/9 and the 6th term is 4(1/2) . Find the common ratio.",
+   "options": {
+    "A": "2",
+    "B": "3/2",
+    "C": "2/3",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "T<sub>2</sub = 8/9, T<sub>6</sub> = 4(1/2) ar = 8/9 ar<sup>5</sup> = 9/2 ar/ar<sup>5</sup> = 8/9 x 2/9 1/r<sup>4</sup> = 16/81 r = 4√(18/16) = 3/2",
+   "year": 2016
+  },
+  {
+   "id": "jamb-mathematics-bank-2827",
+   "type": "mcq",
+   "stem": "If m = 3, p = -3, q = 7 and r = 5/2, evaluate m(p+q+r)",
+   "options": {
+    "A": "19.50",
+    "B": "19.15",
+    "C": "18.95",
+    "D": "18.05"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "m = 3, p = -3, q = 7 and r = 5/2 m(p+q+r) = 3(-3 + 7 + 5/2) = 3(4 + 5/2) = 3(4 + 21/2) = 3 * 61/2 = 3 * 13/2 = 39/2 = 19.50",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2828",
+   "type": "mcq",
+   "stem": "The model height and range of heights 1.35, 1.25, 1.35, 1.40, 1.35, 1.50, 1.35, 1.50, and 1.20 are m and r respectively. Find m+2r.",
+   "options": {
+    "A": "1.35",
+    "B": "1.65",
+    "C": "1.95",
+    "D": "3.00"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "1.35, 1.25, 1.35, 1.40, 1.35, 1.50, 1.35, 1.50, and 1.20 Modal height = 1.35 Range (r) = 1.50 - 1.20 = 0.30 ∴m + 2r = 1.35 + 2(0.30) = 1.35 + 0.60 = 1.95",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2829",
+   "type": "mcq",
+   "stem": "Evaluate 1.25×0.025/0.05 , correct to 1 decimal place",
+   "options": {
+    "A": "0.6",
+    "B": "6.2",
+    "C": "6.3",
+    "D": "0.5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "1.25 × 0.025/0.05 =125×10<sup>−2</sup> × 25 × 10<sup>−3</sup>/5× 10<sup>−2</sup> = 125 x 5 x 10<sup>−3</sup> = 625 x 0.001 = 0.625 = 0.6 Approx to 1 d.p.",
+   "year": 2013
+  },
+  {
+   "id": "jamb-mathematics-bank-2830",
+   "type": "mcq",
+   "stem": "If the diagram is the graph of y = x<sup>2</sup>, the shaded area is",
+   "options": {
+    "A": "64 square units",
+    "B": "126/4 square units",
+    "C": "32 square units",
+    "D": "64/3 square units"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2000,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710692111/ALOC-Questions/Mathematics/2000/question-44_oul7ru.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2831",
+   "type": "mcq",
+   "stem": "If y = 23<sub>five</sub> + 101<sub>three</sub> , find y, leaving your answer in base two",
+   "options": {
+    "A": "1110",
+    "B": "10111",
+    "C": "11101",
+    "D": "111100"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "y = 23<sub>five</sub> + 101<sub>three</sub> 23<sub>five</sub> = 2 × 5<sup>1</sup> + 3 × 5<sup>0</sup> = 13<sub>ten</sub> 101<sub>three</sub> = 1×3<sup>2</sup> + 0 × 3<sup>1</sup> + 1 × 3<sup>0</sup> = 10<sub>ten</sub> y<sub>ten</sub> = 13<sub>ten</sub> + 10<sub>ten</sub> = 23<sub>ten</sub> = 10111<sub>two</sub>",
+   "year": 2018
+  },
+  {
+   "id": "jamb-mathematics-bank-2832",
+   "type": "mcq",
+   "stem": "Find the equation of the line through the points (-2, 1) and (-1/2, 4)",
+   "options": {
+    "A": "y = 2x - 3",
+    "B": "y = 2x + 5",
+    "C": "y = 3x - 2",
+    "D": "y = 2x + 1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "y − y<sub>1</sub>/x−x<sub>1</sub> = y<sub>2</sub> − y<sub>1</sub>/x<sub>2</sub> − x<sub>1</sub> y−1/(x−−2) = 4−1/(−1/2 + 2) = y − 1/x + 2 = 3/(3/2) y = 2x + 5",
+   "year": 2012
+  },
+  {
+   "id": "jamb-mathematics-bank-2833",
+   "type": "mcq",
+   "stem": "The nth term of the sequence 3/2, 3, 7, 16, 35, 74 ..... Is",
+   "options": {
+    "A": "5 . 2<sup>n-2</sup> - n",
+    "B": "5 . 2<sup>n-2</sup> - (n+1) / 2",
+    "C": "3 . 2<sup>n-2</sup>",
+    "D": "3/2 n"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "3/2, 3, 7, 16, 35, 74, .... Using the method of substitution When n = 1, 5 . 2<sup>n-2</sup> - 1 = 5 . 2<sup>1-2</sup> - 1 = 5 x 2<sup>-1</sup> - 1 = 5 x 1/2 - 1 = 5/2 - 1 = 3/2 When n = 1, 5 . 2<sup>n-2</sup> - n = 5 . 2<sup>2-2</sup> - 2 = 5 x 2<sup>0</sup> - 2 = 5 x 1 - 2 = 3 When n = 3, 5 . 2<sup>n-2</sup> - n = 5 . 2<sup>3-2</sup> - 3 = 5 x 21 - 3 = 5 x 2 - 3 = 10 -3 = 7 When n = 4, 5 . 2<sup>n-2</sup> - n = 5 . 2<sup>4-2</sup> - 4 = 5 x 2<sup>2</sup> - 4 = 5 x 4 - 4 = 20 - 4 = 16 When n = 5, 5 . 2<sup>n-2</sup> - n = 5 . 2<sup>5-2</sup> - 5 = 5 x 2<sup>3</sup> - 5 = 5 x 8 - 5 = 40 - 5 = ",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2834",
+   "type": "mcq",
+   "stem": "Find the gradient of the line joining the points (3, 2) and (1, 4)",
+   "options": {
+    "A": "3/2",
+    "B": "2/1",
+    "C": "-1",
+    "D": "3/2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Gradient of line joining points (3, 2), (1, 4) Gradient = Change in Y/Change in X = y<sub>2</sub> −Y<sub>1</sub>/ x<sub>2</sub> −x<sub>1</sub> (X<sub>1</sub> , Y<sub>1</sub> ) = (3, 2) (X<sub>2</sub> , Y<sub>2</sub> ) = (1, 4) Gradient = (4−2)/(1+3) = 2/−2 = −1",
+   "year": 2017
+  },
+  {
+   "id": "jamb-mathematics-bank-2835",
+   "type": "mcq",
+   "stem": "Find the value of x at the minimum point of the curve y = x<sup>3</sup> + x<sup>2</sup> - x + 1",
+   "options": {
+    "A": "1/3",
+    "B": "1/3",
+    "C": "1",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "y = x<sup>3</sup> + x<sup>2</sup> - x + 1 dy/dx = d(x<sup>3</sup>)/dx + d(x<sup>2</sup>)/dx - d(x)/dx + d(1)/dx dy/dx = 3x<sup>2</sup> + 2x - 1 = 0 dy/dx = 3x<sup>2</sup> + 2x - 1 At the maximum point dy/dx = 0 3x<sup>2</sup> + 2x - 1 = 0 (3x<sup>2</sup> + 3x) - (x - 1) = 0 3x(x + 1) -1(x + 1) = 0 (3x - 1)(x + 1) = 0 therefore x = 1/3 or -1 For the maximum point d<sup>2</sup>y/dx<sup>2</sup> < 0 d<sup>2</sup>y/dx<sup>2</sup> 6x + 2 when x = 1/3 dx<sup>2</sup>/dx<sup>2</sup> = 6(1/3) + 2 = 2 + 2 = 4 d<sup>2</sup>y/dx<sup>2</sup>, > o which is the minimum point when x = -1 d<sup>2</sup>y/dx<sup>",
+   "year": 2011
+  },
+  {
+   "id": "jamb-mathematics-bank-2836",
+   "type": "mcq",
+   "stem": "Simplify 7 1/12-4( 3/4+2 1/2",
+   "options": {
+    "A": "4",
+    "B": "4(1/6",
+    "C": "4(5/6)",
+    "D": "5(1/6)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "7 (1/12) -4( 3/4) + 2( 1/2) =5((1-9+6)/12). 5((-2)/12 ) = 4((12-2)/12) (carry one from 5 and call it 12) 4(10/12) = 4(5/6)",
+   "year": 2009
+  },
+  {
+   "id": "jamb-mathematics-bank-2837",
+   "type": "mcq",
+   "stem": "p = [(Q(R - T)/(15))]<sup>1/3</sup>",
+   "options": {
+    "A": "T = (R+P3)/15Q",
+    "B": "T = (R-15P<sup>3</sup>)/Q",
+    "C": "T = R - (15P<sup>3</sup>)/Q",
+    "D": "T = (15R+Q)/P<sup>3</sup>"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "P = (Q(R−T)/15)<sup>(1/3)</sup> take cube of both sides P<sup>3</sup>=Q(R−T)/15 cross multiply 15P<sup>3</sup>=Q(R−T) 15P<sup>3</sup>/Q = R - T T = R - 15P<sup>3</sup>/Q",
+   "year": 2018
+  },
+  {
+   "id": "jamb-mathematics-bank-2838",
+   "type": "mcq",
+   "stem": "Solve the quadratic inequalities x<sup>2</sup> - 5x + 6 ≥ 0",
+   "options": {
+    "A": "x ≤ 2, x ≥ 3",
+    "B": "x ≤ 3, x ≥ 2",
+    "C": "x ≤ -2, x ≥ -3",
+    "D": "x ≤-3, x ≥ 2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "x<sup>2</sup> - 5x + 6 = 0 (X-2)(X-3) = 0 X-2 = 0 implies X = 2 X-3 = 0 implies X = 3 − x ≤ 2, x ≥ 3",
+   "year": 2008,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715545860/ALOC-Questions/Mathematics/2008/MATH_2008_Q18_SOLUTION_qtwz0u.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2839",
+   "type": "mcq",
+   "stem": "If x = {n<sup>2</sup>+1:n is a positive integer and 1 ≤ n ≤ 5}, Y = {5n:n is a positive integer and 1 ≤ n ≤ 5}, find x ∩ y.",
+   "options": {
+    "A": "{5,10}",
+    "B": "{5, 10, 15}",
+    "C": "{2, 5, 10}",
+    "D": "{5, 10, 15, 20}"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "X = {n<sup>2</sup> +1:n is a positive integer and 1 ≤ n ≤ 5} Implies X = {2, 5, 10, 17, 26} i.e. put n= 1, 2, 3, 4 and 5 Y = {5n:n is a positive integer and 1 ≤ n ≤ 5} Put X = 1, 2, 3, 4, and 5 Y = {5, 10, 15, 20, 25} X ∩ Y = {2, 5, 10, 17, 26} ∩ {5, 10, 15, 20, 25} = {5, 10}",
+   "year": 2009
+  },
+  {
+   "id": "jamb-mathematics-bank-2840",
+   "type": "mcq",
+   "stem": "Calculate 243<sub>six</sub> - 243<sub>five</sub> expressing your answer in base 10",
+   "options": {
+    "A": "0",
+    "B": "1",
+    "C": "26",
+    "D": "46"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Since they are of different base, convert to base 10 243<sub>six</sub> = (2 x 62) + (4 x 61) + (3 x 60) = 72 + 24 + 3 = 99 base 10 243<sub>six</sub> = 2 x 52 + 4 x 51 +3 x 50 50 + 20 + 3 = 73 base 10 Subtracting them, 99 - 73 = 26",
+   "year": 2018
+  },
+  {
+   "id": "jamb-mathematics-bank-2841",
+   "type": "mcq",
+   "stem": "Evaluate ∫sin2xdx",
+   "options": {
+    "A": "cos 2x + k",
+    "B": "1/2cos 2x + k",
+    "C": "−1/2 cos 2x + k",
+    "D": "-cos 2x + k"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "∫sin2xdx =1/2(−cos2x) + k −1/2cos2x + k",
+   "year": 2014
+  },
+  {
+   "id": "jamb-mathematics-bank-2842",
+   "type": "mcq",
+   "stem": "If P = [] evaluate x if |P| = -10",
+   "options": {
+    "A": "-5",
+    "B": "-2",
+    "C": "2",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "(x+3)(x-1) - {(x+1)(x+2)} = -10 x<sup>2</sup> - x + 3x - 3 - {x2 + 2x + x + 2} = -10 x<sup>2</sup> + 2x - 3 - {x<sup>2</sup> + 3x + 2} = -10 -x - 5 = -10 -5 + 10 = x 5 = x ∴x = 5",
+   "year": 2009,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715547077/ALOC-Questions/Mathematics/2009/MATH_2009_Q21_ozlhdt.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2843",
+   "type": "mcq",
+   "stem": "Solve the inequality -6(x + 3) ≤ 4(x - 2)",
+   "options": {
+    "A": "x ≤ 2",
+    "B": "x ≥ -1",
+    "C": "x ≥ -2",
+    "D": "x ≤ -1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "-6(x + 3) ≤ 4(x - 2) -6(x +3) ≤ 4(x - 2) -6x -18 ≤ 4x - 8 -18 + 8 ≤ 4x +6x -10 ≤ 10x 10x ≥ -10 x ≥ -1",
+   "year": 2011
+  },
+  {
+   "id": "jamb-mathematics-bank-2844",
+   "type": "mcq",
+   "stem": "Triangle SPT is the solution of the linear inequalitie",
+   "options": {
+    "A": "2y - x - 2 ≤ 0, y + 2x + 2 ≥ 0, x ≥ 0",
+    "B": "2y - x - 2 ≥ 0, y + 2x + 2 ≤ 0, -2 ≥ x ≥ -1",
+    "C": "-2 ≥ x ≥ 2, y ≤ 0, y + 2x + 2 ≥ 0, x ≥ 0",
+    "D": "2y - x - 2 ≥ 0, y + 2x + 2 ≥ 0, y ≤ 0, x ≥ 0"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2001,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710696775/ALOC-Questions/Mathematics/2001/JAMB_2001_Q_45_t5nxmr.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2845",
+   "type": "mcq",
+   "stem": "Simplify (5+√7)/(3+√7)",
+   "options": {
+    "A": "17-√7",
+    "B": "4-√7",
+    "C": "15+√7",
+    "D": "7-√7"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "(5+√7)/(3+√7) = (5+√7)/(3+√7) × (3-√7)/(3-√7) = ((5+√7)(3-√7))/(3<sup>2</sup>-√7<sup>2</sup> ) = (15-5√7+3√7-7)/(9-7) = (8-2√7)/2. Factorize then divide by 2. =(2(4-√7)/2 = 4-√7",
+   "year": 2009
+  },
+  {
+   "id": "jamb-mathematics-bank-2846",
+   "type": "mcq",
+   "stem": "Given an isosceles triangle with length of 2 equal sides t units and opposite side √3t units with angle θ. Find the value of the angle θ opposite to the √3t units.",
+   "options": {
+    "A": "100°",
+    "B": "120°",
+    "C": "30°",
+    "D": "60°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Cos θ° = t<sup>2</sup> + t<sup>2</sup> -(√3t)<sup>2</sup> 2 x t x t = 2t<sup>2</sup> - 3t<sup>2</sup> 2t<sup>2</sup> = -t<sup>2</sup>/2t<sup>2</sup> = -1/2 Thus θ = cos<sup>-1</sup> (-0.5) = 120°",
+   "year": 2001
+  },
+  {
+   "id": "jamb-mathematics-bank-2847",
+   "type": "mcq",
+   "stem": "The solution of the quadratic inequality (x<sup>3</sup> + x - 12) ≥ 0 is",
+   "options": {
+    "A": "x ≥ -3 or x ≤ 4",
+    "B": "x ≥ 3 or x ≥ -4",
+    "C": "x ≤ 3 or x v -4",
+    "D": "x ≥ 3 or x ≤ -4"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "(x<sup>3</sup> + x - 12) ≥ 0 (x + 4)(x - 3) ≥ 0 Either x + 4 ≥ 0 implies x ≥ -4 Or x - 3 ≥ 0 implies x ≥ 3 ∴ x ≥ 3 or x ≥ -4",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2848",
+   "type": "mcq",
+   "stem": "For what of n is <sup>n+1</sup> C<sub>3</sub> = 4(<sup> n</sup>C<sub>3</sub>)?",
+   "options": {
+    "A": "6",
+    "B": "5",
+    "C": "4",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "<sup>n+1</sup>C<sub>3</sub = 4 (<sup> n</sup> C<sub>3</sub>)frac(n+1)!(n+1-3)!3!=4(n!/((n-3)!3!))frac(n+1)n!(n-2)(n-3)!=4(n!/(n-3!))\"\\=\" (n+1)/(n-2)=4/1 \"\\n\"+1=4(n-2)\"\\n\"+1=4n-8\"\\-\" 3n=-9frac-9-3\"\\n\"=3",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2849",
+   "type": "mcq",
+   "stem": "Factorize completely ac - 2bc - a + 4b<sup>2</sup>",
+   "options": {
+    "A": "(a - 2b)(c - a - 2b)",
+    "B": "(a - 2b)(c + a +2b)",
+    "C": "(a - 2b)(c - a + 2b)",
+    "D": "(a - 2b)(c + a - 2b)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "ac - 2bc - a<sup>2</sup> + 4b<sup>2</sup> ac - 2bc - (a<sup>2</sup> - 4b<sup>2</sup>) ac - 2bc - (a<sup>2</sup> -(2b)<sup>2</sup>) c(a - 2b) - {(a - 2b)(a + 2b)} (a - 2b)(c - (a + 2b)) (a - 2b)(c - a - 2b)",
+   "year": 2004
+  },
+  {
+   "id": "jamb-mathematics-bank-2850",
+   "type": "mcq",
+   "stem": "If log<sub>10</sub> 2 = 0.3010 and log<sub>10</sub> 3 = 0.4771, eventually without using the logarithm tables, log<sub>10</sub> 4.5",
+   "options": {
+    "A": "0.3010",
+    "B": "0.4771",
+    "C": "0.6532",
+    "D": "0.9542"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "log<sub>10</sub> 2 = 0.3010 and log<sub>10</sub> 3 = 04771 log<sub>10</sub> 4.5 = log<sub>10</sub> ((3 × 3)/2) log<sub>10</sub> 3 + log<sub>10</sub> 3 - log<sub>10</sub> 2 = 0.4471 + 0.771 - 0.3010 = 0.6532"
+  },
+  {
+   "id": "jamb-mathematics-bank-2851",
+   "type": "mcq",
+   "stem": "In the diagram above ∠ OPQ is",
+   "options": {
+    "A": "90°",
+    "B": "53°",
+    "C": "36°",
+    "D": "26°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "a = a(base ∠ s of Iss Δ) − a+a+74 = 180 2a + 74 = 180 2a = 180-74 2a = 106 a = 53 −∠ OPQ = 53°",
+   "year": 2008,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715545897/ALOC-Questions/Mathematics/2008/MATH_2008_Q24_fuxeah.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2852",
+   "type": "mcq",
+   "stem": "Simplify (〖25〗<sup>2/3</sup>)÷〖25〗<sup>(1/6)</sup>)/((1/5 )<sup>(7/6)</sup>÷(1/5 )<sp>(1/6)</sup> )",
+   "options": {
+    "A": "25",
+    "B": "1",
+    "C": "1/5",
+    "D": "1/25"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "(〖25〗<sup>2/3</sup>)÷〖25〗<sup>(1/6)</sup>)/((1/5 )<sup>(7/6)</sup>÷(1/5 )<sp>(1/6)</sup> ) =〖25〗<sup>(2/3-1/6)</sup>/((1/5 )<sup>(7/6-1/6)</sup> ) = 〖25〗<sup>(1/2)/((1/5)) = 5 / 1/5 = 25",
+   "year": 2018
+  },
+  {
+   "id": "jamb-mathematics-bank-2853",
+   "type": "mcq",
+   "stem": "Find the range of values of x for which 3x - 7 ≤ 0 and x + 5 > 0?",
+   "options": {
+    "A": "-5 < x < 7/3",
+    "B": "-5 ≤ x ≤ 7/3",
+    "C": "-5 < x ≤ 7/3",
+    "D": "-5 ≤ x < 7/3"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "3x - 7 ≤ 0 and x + 5 > 0 3x ≤ 7 and x > -5 x ≤ 7/3 ∴ Range -5 < x ≤ 7/3",
+   "year": 2009
+  },
+  {
+   "id": "jamb-mathematics-bank-2854",
+   "type": "mcq",
+   "stem": "Make S the subject of the relation p = s + (sm<sup>2</sup>)/nr",
+   "options": {
+    "A": "s = nrpn/r+m<sup>2</sup>",
+    "B": "s = nr + m<sup>2</sup> /mrp",
+    "C": "s = nrp/mr + m<sup>2</sup>",
+    "D": "s = nrp/nr + m<sup>2</sup>"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "p = s + sm<sup>2</sup> /nr p = s + ( 1 + m<sup>2</sup> nr) p = s (1 + nr+m<sup>2</sup>/ nr) nr × p = s (nr + m<sup>2</sup> ) s = nrp/nr+m<sup>2</sup>",
+   "year": 2017
+  },
+  {
+   "id": "jamb-mathematics-bank-2855",
+   "type": "mcq",
+   "stem": "What is the integral value of x which satisfy the inequality -1 < 3 -2x ≤ 5?",
+   "options": {
+    "A": "-1. 0, 1, 2",
+    "B": "-2, 1, 0 , -1",
+    "C": "0, 1, 2",
+    "D": "-1, 0, 1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "-1 < 3 -2x and 3 - 2x ≤ 5 2x < 3 + 1 and -2x ≤ 5 - 3 2x < 4 and -2x ≤ 2 x < 2 and x ≥ 2/-2 = x ≥ -1 If -1 ≤ x < 2 it implies that x = -1, 0, 1",
+   "year": 2004
+  },
+  {
+   "id": "jamb-mathematics-bank-2856",
+   "type": "mcq",
+   "stem": "A binary operation θ defined on the set of real number is such that xθy = xy/6 for all x, y ∈ R. Find the inverse of 20 under this operation when the identity element is 6",
+   "options": {
+    "A": "1/12",
+    "B": "10/3",
+    "C": "1/20",
+    "D": "9/5"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "X ⊕ y = xy/6 = xe/6 = x Xe = 6x e = 6 X ⊕ y = xx<sup>1</sup>/6 where x<sup>1</sup> = 20 Xx20/6 = 6 X = 36/20 X = 9/5",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2857",
+   "type": "mcq",
+   "stem": "Find the derivative of y=sin<sup>2</sup>(5x) with respect to x.",
+   "options": {
+    "A": "10 sin 5x cos 5x",
+    "B": "5 sin5x cos 5x",
+    "C": "2 sin 5x cos 5x",
+    "D": "15 sin 5x cos 5x"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "y=sin<sup>2</sup>(5x) Let u = sin 5x du/dx=5cos5x ∴y=u<sup>2</sup> d/ydu=2u dy/dx=2u. 5 cos 5x = 10u cos 5x = 10 sin 5x cos 5x",
+   "year": 2002
+  },
+  {
+   "id": "jamb-mathematics-bank-2858",
+   "type": "mcq",
+   "stem": "If 55<sub>x</sub> + 52<sub>x</sub> = 77<sub>10</sub> find X",
+   "options": {
+    "A": "5",
+    "B": "6",
+    "C": "7",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "5 × x<sup>1</sup> + 5 × x<sup>0</sup> + 5 × x<sup>1</sup> + 2 × x<sup>0</sup> = 77. (change all to base 10) 5x + 5 + 5x + 2 = 77 10x + 7 = 77 10x = 77-7 10x = 70 x = 70/10 x = 7",
+   "year": 2009
+  },
+  {
+   "id": "jamb-mathematics-bank-2859",
+   "type": "mcq",
+   "stem": "For what range of values of x is 1/2x + 1/4 > 1/3x + 1/2?",
+   "options": {
+    "A": "x < 3/2",
+    "B": "x > 3/2",
+    "C": "x < -3/2",
+    "D": "x > -3/2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1/2x + 1/4 > 1/3x + 1/2 Multiply through by through by the LCM of 2, 3 and 4 12 x 1/2x + 12 x 1/4 > 12 x 1/3x + 12 x 1/2 6x + 3 > 4x + 6 6x - 4x > 6 - 3 2x > 3 2x/2 > 3/2 x > 3/2",
+   "year": 2010
+  },
+  {
+   "id": "jamb-mathematics-bank-2860",
+   "type": "mcq",
+   "stem": "The table above represents the outcome of throwing a die 100 times. What is the probability of obtaining at least a 4?",
+   "options": {
+    "A": "1/5",
+    "B": "1/2",
+    "C": "2/5",
+    "D": "3/4"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Let E demote the event of obtaining at least a 4 Then n(E) = 16 + 10 + 14 = 40 Hence, prob (E) = n€/n(S) =40/100 = 2/5",
+   "year": 2014,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1725206703/ALOC-Questions/Mathematics/2014/MATH_JAMB_2014_Q41_robr9k.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2861",
+   "type": "mcq",
+   "stem": "In the diagram above, PQ = 4cm and TS = 6cm. If the area of parallelogram PQTU is 32cm<sup>2</sup>, find the area of trapezium PQRU",
+   "options": {
+    "A": "24 cm<sup>2</sup>",
+    "B": "48 cm<sup>2</sup>",
+    "C": "60 cm<sup>2</sup>",
+    "D": "72 cm<sup>2</sup>"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2004,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710701126/ALOC-Questions/Mathematics/2004/math_2004_q48_pxbs9z.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2862",
+   "type": "mcq",
+   "stem": "Find the equation of the tangent at the point (2, 0) to the curve y = x<sup>2</sup> - 2x",
+   "options": {
+    "A": "y = 2x - 4",
+    "B": "y = 2x + 4",
+    "C": "y = 2x - 2",
+    "D": "y = 2x + 2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The gradient to the curve is found by differentiating the curve equation with respect to x So dy/dx 2x - 2 The gradient of the curve is the same with that of the tangent. At point (2, 0) dy/dx = 2(2) - 2 = 4 - 2 = 2 The equation of the tangent is given by (y - y1) dy/dx (x - x1) At point (x1, y1) = (2, 0) y - 0 = 2(x - 2) y = 2x - 4",
+   "year": 2018
+  },
+  {
+   "id": "jamb-mathematics-bank-2863",
+   "type": "mcq",
+   "stem": "Some white balls put in a basket containing twelve red balls and sixteen black balls. If the probability of picking a white balls from the baskets is 3/7, how many white balls were introduced?",
+   "options": {
+    "A": "12",
+    "B": "21",
+    "C": "28",
+    "D": "32"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Number of white balls = x Number of red balls = 12 Number of black balls = 16 Total number of balls = 28 + x P(white balls) = 3/7 But P(white balls) = x/(28+x)=3/7=x/(28+x) 3(28+x)=7x84+3x=7x7x-3x=844x=84x=21",
+   "year": 2004
+  },
+  {
+   "id": "jamb-mathematics-bank-2864",
+   "type": "mcq",
+   "stem": "Differentiate (x<sup>2</sup> - 1/x)<sup>2</sup> with respect to x",
+   "options": {
+    "A": "4x<sup>2</sup> - 4x - 2/x",
+    "B": "4x<sup>2</sup> - 2 + 2/x3",
+    "C": "4x<sup>2</sup> - 2 - 2/x3",
+    "D": "4x<sup>2</sup> - 3x + 2/x"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "y = (x<sup>2</sup> - 1/x)<sup>2</sup> y = (x<sup>2</sup> - 1/x)(x<sup>2</sup> - 1/x) y = x<sup>4</sup> - x - x + 1/x<sup>2</sup> y = x<sup>4</sup> - 2x + 1/x<sup>2</sup> y= x<sup>4</sup> - 2x + x<sup>-2</sup> dy/dx = 4x<sup>2</sup> - 2 - 2x<sup>-3</sup> = 4x<sup>2</sup> - 2 - 2/x<sup>3</sup>",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2865",
+   "type": "mcq",
+   "stem": "Factorize: 16x<sup>4</sup>−y<sup>4</sup>",
+   "options": {
+    "A": "(2x−y)(2x+y)(4x<sup>2</sup>+y<sup>2</sup>)",
+    "B": "(2x+y)(2x+y)(4x<sup>2</sup>+y<sup>2</sup>)",
+    "C": "(2x−y)(2x−y)(4x<sup>2</sup>+y<sup>2</sup>)",
+    "D": "(2x−y)(2x+y)(4x<sup>2</sup>−y<sup>2</sup>)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "16x<sup>4</sup> − y<sup>4</sup> = 2<sup>4</sup>x<sup>4</sup> − y<sup>4</sup> = (2x)<sup>4</sup> − y<sup>4</sup> = ((2x)<sup>2</sup>)<sup>2</sup> − (y<sup>2</sup>)<sup>2</sup> Using a<sup>2</sup> − b<sup>2</sup> = (a - b)(a + b) identity = ((2x)<sup>2</sup>−y<sup>2</sup>)((2x)<sup>2</sup>+y<sup>2</sup>) Using the identity one more time = (2x − y)(2x + y)((2x)<sup>2</sup> + y<sup>2</sup>) ∴ (2x − y)(2x + y)(4x<sup>2</sup> + y<sup>2</sup>)",
+   "year": 2023
+  },
+  {
+   "id": "jamb-mathematics-bank-2866",
+   "type": "mcq",
+   "stem": "Find the range of the value of x satisfying the inequalities 5 + x ≤ 8 and 13 + x ≥ 7",
+   "options": {
+    "A": "-3 ≤ x ≤ 3",
+    "B": "3 ≤ x ≤ 6",
+    "C": "-6 ≤ x ≤ 3",
+    "D": "-6 ≤ x ≤ -3"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "5 + x ≤ 8 and 13 + x ≥ 7 5 + x ≤ 8 X ≤ 8 - 5 X ≤ 3 And 13 + x ≥ 7 X ≥ 7 - 15 X ≥ -7 Combining the two together -6 ≤ x ≤ 3",
+   "year": 2003
+  },
+  {
+   "id": "jamb-mathematics-bank-2867",
+   "type": "mcq",
+   "stem": "The locus of a dog tethered to a pole with a rope of 4m is a",
+   "options": {
+    "A": "semi-circle with diameter 4m",
+    "B": "semi-circle with radius 4m",
+    "C": "circle with diameter 4m",
+    "D": "circle with radius 4m"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2014
+  },
+  {
+   "id": "jamb-mathematics-bank-2868",
+   "type": "mcq",
+   "stem": "A predator moves in a circle of radius √2 centre (0,0), while a prey moves along the line y = x. If 0 ≤ x ≤ 2, at which point(s) will they meet?",
+   "options": {
+    "A": "(1,1) only",
+    "B": "(1,1) and (1,2)",
+    "C": "(0,0) and (1,1)",
+    "D": "(√2,√2) only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "x<sup>2</sup> + y<sup>2</sup> = (√2)<sup>2</sup> x<sup>2</sup> + y</sup> = 2 but y = x Thus; x<sup>2</sup> + x<sup>2</sup> = 2 2x<sup>2</sup> = 2 x<sup>2</sup> = + or - 1 But x<sup>2</sup> + y<sup>2</sup> = 2 1<sup>2</sup>+ y<sup>2</sup> = 2 1 + y<sup>2</sup> = 2 y<sup>2</sup> = 2 - 1 y<sup>2</sup> = 1 y = + or - 1 Thus point (x,y) = (1,1) only.",
+   "year": 2000
+  },
+  {
+   "id": "jamb-mathematics-bank-2869",
+   "type": "mcq",
+   "stem": "How many terms of the series 3, -6, +12, - 24, + ..... are needed to make a total of 1-2<sup>8</sup>?",
+   "options": {
+    "A": "12",
+    "B": "10",
+    "C": "9",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "3, -6, +12, -24 a = 3, r = -2 8n=a(1−r<sup>n</sup>)/1−r. ∴1−2<sup>8</sup>=3(1−(−2<sup>n-1</sup>))/1−(−2). 1−2<sup>8</sup>=3(1−(−2<sup>n-1</sup>))/3 1-2<sup>8</sup> = 1-(-2)n-1 -22<sup>8</sup> = -2<sup>n-1</sup> 8 = n-1 n = 9",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2870",
+   "type": "mcq",
+   "stem": "If y varies directly as √n and y = 4 when n = 4, find y when n = 1(7/9)",
+   "options": {
+    "A": "√17",
+    "B": "4/3",
+    "C": "8/3",
+    "D": "2/3"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "y ∝√n y = k√n when y = 4, n = 4 4 = k√4 4 = 2k k = 2 Therefore, y = 2√n y = 2√(16/9) y = 2(4/3) y = 8/3",
+   "year": 2012
+  },
+  {
+   "id": "jamb-mathematics-bank-2871",
+   "type": "mcq",
+   "stem": "Simplify 1 - (1/7 x 3(1/2) ÷ 3/4",
+   "options": {
+    "A": "2",
+    "B": "1/3",
+    "C": "1",
+    "D": "2/3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "1 - (1/7 x 3(1/2) ÷ 3/4 1 - (1/7 x 7/2) x 4/3 1 - 1/2 x 4/3 1 - 2/3 = 1/3",
+   "year": 2016
+  },
+  {
+   "id": "jamb-mathematics-bank-2872",
+   "type": "mcq",
+   "stem": "Given the quadrilateral RSTO inscribed in the circle with O as centre. Find the size angle x and given RST = 60°",
+   "options": {
+    "A": "100o",
+    "B": "140°",
+    "C": "120°",
+    "D": "10°"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "If RST = 60° RXT = 2 × RST (angle at the centre twice angle at the circumference) RXT = 2 × 60 = 120°",
+   "year": 2017,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1724005763/ALOC-Questions/Mathematics/2017/MATH_JAMB_2017_Q13_ynoyk0.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2873",
+   "type": "mcq",
+   "stem": "The graph shows the cumulative frequency of the distribution of masses of fertilizer for 48 workers in one institution. Which of the following gives the inter-quartile range?",
+   "options": {
+    "A": "1/2(Q<sub>3</sub> - Q<sub>1</sub>",
+    "B": "(Q<sub>3</sub> - Q<sub>2</sub>",
+    "C": "(Q<sub>3</sub> - Q<sub>2</sub>",
+    "D": "(Q<sub>3</sub> - Q<sub>1</sub>"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2001,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710696947/ALOC-Questions/Mathematics/2001/JAMB_2001_Q_49_eg0oqp.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2874",
+   "type": "mcq",
+   "stem": "Simplify (25)<sup>-1/2 </sup>x (27)<sup>1/3</sup>+ (121)<sup>-1/2</sup> x (625)<sup>-1/4</sup>",
+   "options": {
+    "A": "34/55",
+    "B": "9/11",
+    "C": "14/5",
+    "D": "3/275"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "25)<sup>-1/2</sup> x (27)<sup>-1/3</sup> + (121)<sup>-1/2</sup> x (625)<sup>2</sup>-1/4 5<sup>2x-1/2</sup> x 3<sup>3x1/3</sup> + 11<sup>2x-1/2</sup> x 5<sup>4x-1/4</sup> 5<sup>-1</sup> x 3<sup>1</sup> x 11<sup>-1</sup> x 5<sup>-1</sup> 1/5 x 3/1 + 1/11 x 1/5 3/5 + 1/5 = (33+1)/55 =34/55",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2875",
+   "type": "mcq",
+   "stem": "Evaluate 5<sup>-3log5</sup><sup>2</sup> x 2<sup>2log2</sup><sup>3</sup>",
+   "options": {
+    "A": "8",
+    "B": "1(1/8)",
+    "C": "2/5",
+    "D": "1/8"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "5<sup>-3log5</sup><sup>2</sup> x 2<sup>2log2</sup><sup>3</sup> i Let -3log5<sup>2</sup> = p => log5<sup>2</sup><sup>-3</sup> = p ∴2<sup>-3</sup> = 5<sup>-p</sup> ∴5<sup>-3log5</sup><sup>2</sup> = 5log5<sup>2</sup><sup>-3</sup> = 5<sup>-p</sup> ii 2<sup>2</sup> 2<sup>2log2</sup><sup>3</sup> = q => log532 = q ∴3<sup>2</sup> = 2<sup>q</sup> ∴2<sup>2</sup> 2<sup>2log2</sup><sup>3</sup> = 2<sup>q</sup> = 3<sup>2</sup> = 9 i x ii = 2<sup>-3</sup> x 9 = (1/2)<sup>3</sup> x 9 = 1/8 x 9 = 9/8 = 1(1/8)",
+   "year": 2000
+  },
+  {
+   "id": "jamb-mathematics-bank-2876",
+   "type": "mcq",
+   "stem": "In triangle PQR, q = 8 cm, r = 6 cm and cos P = 1/12 Calculate the value of",
+   "options": {
+    "A": "√108 cm",
+    "B": "9 cm",
+    "C": "√92 cm",
+    "D": "10 cm"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Using the cosine rule, we have p<sup>2</sup> = q<sup>2</sup> + r<sup>2</sup> − 2qrcosP p<sup>2</sup> = 8<sup>2</sup> + 6<sup>2</sup> − 2(8)(6)(1/12) = 64 + 36 − 8 p<sup>2</sup> = 92∴ p = √9cm",
+   "year": 2013
+  },
+  {
+   "id": "jamb-mathematics-bank-2877",
+   "type": "mcq",
+   "stem": "Simplify [1÷(x<sup>2</sup> + 3x + 2)]+[1 ÷ (x<sup>2</sup> + 5x + 6)]",
+   "options": {
+    "A": "2/(x+1)<sup>2</sup>",
+    "B": "2/(x+1)(x+2)",
+    "C": "2(x+1)(x+2)",
+    "D": "2(x+1)(x+3)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "[1÷(x<sup>2</sup> + 3x +2)] + [1 ÷ (x<sup>2</sup> + 5x + 6)] = 1 ÷ (x<sup>2</sup> + 3x + 2) + [1 ÷ (x<sup>2</sup> + 5x + 6)] = [1 ÷ ((x<sup>2</sup> + x) + (2x + 2))] + [1 ÷ ((x<sup>2</sup> + 3x) + (2x + 6))] = [1 ÷ (x(x + 2) + 2(x +1))] + [1 ÷ (x(x + 3) +2(x + 3) )] = [1 ÷ (x + 1)(x + 2)] + [1 ÷ ((x + 3) + (x + 2))] =((x + 3) + (x + 1)) ÷ (x + 1)(x + 2)(x + 3) Using the L.C.M =((x + x + 3 + 1)) ÷ (x + 1)(x + 2)(x + 3) =(2x+4)/(x+1)(x+2)(x+3) =2(x+2)/(x+1)(x+2)(x+3) = 2/(x+1)(x+3)",
+   "year": 2015
+  },
+  {
+   "id": "jamb-mathematics-bank-2878",
+   "type": "mcq",
+   "stem": "The value x in the figure given is",
+   "options": {
+    "A": "110°",
+    "B": "100°",
+    "C": "70°",
+    "D": "130°"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Sum of the angles in a triangle = 180° 180° - x + 60 + 70 = 180 130° - x = 180° - 180° = 0° x = 130°",
+   "year": 2013,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716131414/ALOC-Questions/Mathematics/2013/2013_MATH_JAMB_Q34_sbzuwd.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2879",
+   "type": "mcq",
+   "stem": "The table above show the marks obtained in a given test. How many student took the test?",
+   "options": {
+    "A": "16",
+    "B": "13",
+    "C": "20",
+    "D": "15"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "∑f = 2 + 2 + 8 + 4 + 4 = 20",
+   "year": 2010,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716128485/ALOC-Questions/Mathematics/2010/MATH_2010_Q19_dg19qk.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2880",
+   "type": "mcq",
+   "stem": "An arc subtends an angle of 50o at the center of circle of radius 6cm. Calculate the area of the sector formed",
+   "options": {
+    "A": "100/7",
+    "B": "80/7",
+    "C": "110/7",
+    "D": "90/7"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Area of a sector = θ/360 x πr<sup>2</sup> = 50/360 x 22/7 x 36/1 = 110/7",
+   "year": 2010
+  },
+  {
+   "id": "jamb-mathematics-bank-2881",
+   "type": "mcq",
+   "stem": "If tan θ = 4/3, calculate sin<sup>2</sup> θ - cos<sup>2</sup> θ.",
+   "options": {
+    "A": "16/25",
+    "B": "24/25",
+    "C": "7/25",
+    "D": "9/25"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "tan θ = opposite/adjacent = 4/3 Hyp<sup>2</sup> = 4<sup>2</sup> + 3<sup>2</sup> Hyp = 5. sin θ = 4/5; cos θ = 3/5 sin<sup>2</sup>θ − cos<sup>2</sup>θ = 16/25 −9/25 = 7/25",
+   "year": 2002
+  },
+  {
+   "id": "jamb-mathematics-bank-2882",
+   "type": "mcq",
+   "stem": "Solve the following quadratic inequality: x<sup>2</sup> − x - 4 ≤ 2",
+   "options": {
+    "A": "−3 < x < 2",
+    "B": "−2 ≤ x ≤ 3",
+    "C": "x ≤ −2, x ≤ 3",
+    "D": "−2 < x < 3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "x<sup>2</sup> − x − 4 ≤ 2 Subtract two from both sides to rewrite it in the quadratic standard form: = x<sup>2</sup> − x −4 −2 ≤ 2 −2 = x<sup>2</sup> − x − 6 ≤ 0 Now set it = 0 and factor and solve like normal. = x<sup>2</sup> − x - 6 =0 = (x − 3)(x + 2) = 0 x + 2 = 0 or x - 3 = 0 x = -2 or x = 3 So the two zeros are -2 and 3, and will mark the boundaries of our answer interval. To find out if the interval is between -2 and 3, or on either side, we simply take a test point between -2 and 3 (for instance, x = 0) and evaluate the original inequality. = x<sup>2</sup> − x − 4 ≤ 2 = (0)<sup>2</sup>",
+   "year": 2023
+  },
+  {
+   "id": "jamb-mathematics-bank-2883",
+   "type": "mcq",
+   "stem": "In diagram above, QR//TU, < PQR = 80° and < PSU = 95°. Calculate < SUT.",
+   "options": {
+    "A": "15°",
+    "B": "25°",
+    "C": "30°",
+    "D": "80°"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "< PQR = < PTU = 80° < TSU = 85° x = 180° - (80° + 85°) = 15°",
+   "year": 2012,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716130406/ALOC-Questions/Mathematics/2012/2012_MATH_JAMB_Q41_pd4u9c.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2884",
+   "type": "mcq",
+   "stem": "The table above show the marks obtained in a given test. Find the mean mark",
+   "options": {
+    "A": "3.1",
+    "B": "3.0",
+    "C": "3.2",
+    "D": "3.3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Mean=∑fx∑f = 66/20 = 3.3",
+   "year": 2010,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716128511/ALOC-Questions/Mathematics/2010/MATH_2010_Q20_odkimk.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2885",
+   "type": "mcq",
+   "stem": "Find the values of x for which (x+2)/4 - (2x−3)/3 < 4",
+   "options": {
+    "A": "x < 8",
+    "B": "x > -6",
+    "C": "x < 4",
+    "D": "x > -3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "(x+2)/4 - (2x−3)/3 < 4 (3(x+2)−4(2x−3))/12 < 4 3x + 6 − 8x + 12 < 48 18 − 5x < 48 ⟹ −5x < 30 ∴ x > − 6",
+   "year": 2018
+  },
+  {
+   "id": "jamb-mathematics-bank-2886",
+   "type": "mcq",
+   "stem": "In a class of 150 students, the sector in a pie chart representing the students offering physics has angle 12°. How many students are offering physics?",
+   "options": {
+    "A": "18",
+    "B": "15",
+    "C": "10",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "No of students offering physics are 12/360 x 150 = 5"
+  },
+  {
+   "id": "jamb-mathematics-bank-2887",
+   "type": "mcq",
+   "stem": "Evaluate ∫<sup>2</sup><sub>0</sub>(x<sup>3</sup>+x<sup>2</sup>)dx.",
+   "options": {
+    "A": "4(5/6)",
+    "B": "6(2/3)",
+    "C": "1(5/6)",
+    "D": "2(5/6)"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "∫<sup>2</sup>, <sub>0</sub>(x<sup>3</sup> + x<sup>2</sup>)dx = ∫<sup>2</sup>, <sub>0</sub>(x<sup>4</sup>/4+x<sup>3</sup>/3) = (2<sup>4</sup>/4+2<sup>3</sup>/3) - (0<sup>4</sup>/4+0<sup>3</sup>/3) = (16/4+8/3) - 0 = 80/12=20/3 or 6(2/3)",
+   "year": 2010
+  },
+  {
+   "id": "jamb-mathematics-bank-2888",
+   "type": "mcq",
+   "stem": "Solve the inequalities for which (x + 4)/(3) - (x -3)/(2) < 4",
+   "options": {
+    "A": "x < 7",
+    "B": "x > -7",
+    "C": "x < -7",
+    "D": "x > 7"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "(x+4)/3-(x-3)/2<4 ((2(x+4))-(3(x-3)))/6<4 2(x+4) - 3(x-3) < 4 x 6 2x + 8 - 3x+9 < 24 -x + 17 < 24 -x < 24 - 17 -x < 7 X > -7 2(x+4) - 3(x-3) < 4 x 6 2x + 8 - 3x+9 < 24 -x + 17 < 24 -x < 24 - 17 -x < 7 X > -7",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2889",
+   "type": "mcq",
+   "stem": "from the table above, if the pass mark is 5, how many students failed the test?",
+   "options": {
+    "A": "6",
+    "B": "2",
+    "C": "7",
+    "D": "9"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2010,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716128453/ALOC-Questions/Mathematics/2010/MATH_2010_Q18_xbacd9.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2890",
+   "type": "mcq",
+   "stem": "Rationalize (√2+√3)/(√2-√3)",
+   "options": {
+    "A": "−5−2√6",
+    "B": "−5 + 3√2",
+    "C": "5 − 2√3",
+    "D": "5 + 2√6"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "(√2+√3)/(√2-√3) = ((√2+√3)/(√2-√3))((√2+√3)/(√2+√3)) = (2+√6+√6+3)/(2-√6+√6-3) = 5 + 2√6/−1 = = −5 − 2√6",
+   "year": 2019
+  },
+  {
+   "id": "jamb-mathematics-bank-2891",
+   "type": "mcq",
+   "stem": "Simplify 4√27 + 5√12 − 3√75",
+   "options": {
+    "A": "7",
+    "B": "-7",
+    "C": "-7√3",
+    "D": "7√3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "4√27 + 5√12 − 3√75 = 4√3 × 9 + 5√3 × 4 − 3√3 × 25 = 4 × 3√3 + 5 × 2√3 − 3 × 5√3 = 12√3 + 10√3 − 15√3 = (12 + 10 − 15)√3 = 7√3",
+   "year": 2017
+  },
+  {
+   "id": "jamb-mathematics-bank-2892",
+   "type": "mcq",
+   "stem": "What is the probability that an integer x (1≤x≤25) chosen at random is divisible by both 2 and 3?",
+   "options": {
+    "A": "1/25",
+    "B": "1/5",
+    "C": "4/25",
+    "D": "3/4"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "(1 ≤ x ≤ 25) = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25} Number N of x divisible by both 2 and 3 is 4. n(ε) = 25 = N/n(ε) = 4/25",
+   "year": 2013
+  },
+  {
+   "id": "jamb-mathematics-bank-2893",
+   "type": "mcq",
+   "stem": "Evaluate (6/0.32÷2/0.084 )<sup>(-1)</sup> correct to 1 decimal place.",
+   "options": {
+    "A": "1.3",
+    "B": "2.5",
+    "C": "4.6",
+    "D": "3.2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "(6/0.32 ÷ 2/0.084)<sup>−1</sup> = (600/32 ÷ 2000/84)<sup>−1</sup> = (600/32×84/2000)<sup>−1</sup> = (63/80)<sup>−1</sup> = 80/63 = 1.3 (to 1 decimal place)",
+   "year": 2019
+  },
+  {
+   "id": "jamb-mathematics-bank-2894",
+   "type": "mcq",
+   "stem": "Find the maximum value of y in the equation y = 1 - 2x - 3x<sup>2</sup>",
+   "options": {
+    "A": "5/4",
+    "B": "5/3",
+    "C": "3/4",
+    "D": "4/3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Tn=a+(n−1)d (nth term of an AP). T9=5T5 a+8d=5(a+4d)⟹a+8d=5a+20d 5a−a+20d−8d=0⟹4a+12d=0 a+3d=0",
+   "year": 2002
+  },
+  {
+   "id": "jamb-mathematics-bank-2895",
+   "type": "mcq",
+   "stem": "Simplify 3/5÷(2/7×4/3÷4/9)",
+   "options": {
+    "A": "4/5",
+    "B": "7/10",
+    "C": "6/6",
+    "D": "21/6"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "3/5÷(2/7×4/3÷4/9)=3/5÷(2/7×4/3×9/4)=3/5÷6/7=3/5×7/6=7/10",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2896",
+   "type": "mcq",
+   "stem": "If 321<sub>4</sub> is divided by 23<sub>4</sub> and leaves a remainder r, what is the value of r?",
+   "options": {
+    "A": "zero",
+    "B": "1",
+    "C": "2",
+    "D": "3"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "〖321〗<sub>4</sub>/〖23<sub>4</sub> =((3×4<sup>2</sup>)+(2×4<sup>1</sup>)+(1×4<sup>0</sup>))/((2×4<sup>0</sup>)+(3×4<sup>0</sup>))=(3×16+2×4+1×1)/(2×4+3×1)=(48+8+1)/(8+3)=57/11=5 remainder 2 ∴ r=2<sub>10</sub> Now convert 2<sub>10</sub> to base 4. 4/2=2. 4/0=0 or 2 ∴ r = 2",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2897",
+   "type": "mcq",
+   "stem": "The table above shows the frequency distribution of marks obtained by a group of students. If the total mark is 48, find the value of y.",
+   "options": {
+    "A": "6",
+    "B": "8",
+    "C": "7",
+    "D": "5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "(2 x 4) + (3 x 4) + (4 x y) = 48 8 + 12 + 4y = 48 4y = 48 - 20 4y/4 = 28/4 y = 7",
+   "year": 2016,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1724003093/ALOC-Questions/Mathematics/2016/MATH_JAMB_2016_Q19_gwzbht.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2898",
+   "type": "mcq",
+   "stem": "In the diagram above, if ∠RPS = 50°, ∠RPQ = 30° and PQ = QR, find the value of ∠PRS.",
+   "options": {
+    "A": "80°",
+    "B": "70°",
+    "C": "60°",
+    "D": "50°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Δ PQR is isosceles ∴∠PRQ = 30° Also in Δ PQR ^Q = 180 -(30 + 30) = 120° PQRS is a cyclic quad ∴^S + ^Q = 180(opp ∠s of a cyclic quad) S + 120 = 180 S = 60° In ΔPSR x + 50 + 60 = 180(sum of ∠s of a Δ) x + 110 = 180 x = 180 - 110 x = 70°",
+   "year": 2000,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710691373/ALOC-Questions/Mathematics/2000/question-40_dk16ta.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2899",
+   "type": "mcq",
+   "stem": "Integrate ∫<sub>(-1)</sub><sup>2</sup>(2x<sup>2</sup> + x)dx",
+   "options": {
+    "A": "4(1/2)",
+    "B": "3(1/2)",
+    "C": "7(1/2)",
+    "D": "5(1/24)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "∫<sub>(-1)</sub><sup>2</sup>(2x<sup>2</sup> + x)dx = [(2x<sup>(2+1)</sup>)/3+x<sup>(1+1)</sup>/2 ]<sub>(-1)</sub><sup>2</sup> = [(2x<sup>3</sup>)/3 + x<sup>2</sup>/2 ]<sub>(-1)</sub><sup>2</sup> = ((2(2)<sup>3</sup> )/3+2<sup>2</sup> 2 ) -((2(-1)<sup>3</sup> )/3+((-1)+M31<sup>2</sup> )/2) = (16/3+2)-((-2)/3+1/2) = 22/3-(-1/6) = 22/3 + 1/6 = 7(1/2)",
+   "year": 2019
+  },
+  {
+   "id": "jamb-mathematics-bank-2900",
+   "type": "mcq",
+   "stem": "Given m = N√(SL/T) make T the subject of the formula",
+   "options": {
+    "A": "NSL/M",
+    "B": "N<sup>2</sup>SL/M<sup>2</sup>",
+    "C": "N<sup>2</sup>SLM",
+    "D": "NSL/M<sup>2</sup>"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "M = N√(SL/T), make T subject of formula square both sides M<sup>2</sup> = (N<sup>2</sup>SL)/T TM<sup>2</sup> = N<sup>2</sup>SL T = (N<sup>2</sup>SL)/M<sup>2</sup>",
+   "year": 2017
+  },
+  {
+   "id": "jamb-mathematics-bank-2901",
+   "type": "mcq",
+   "stem": "Simplify ((√12-√3))/((√12+√3))",
+   "options": {
+    "A": "zero",
+    "B": "1/3",
+    "C": "3/5",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "((√12-√3))/((√12+√3))=(√(4×3)-√3)/(√(4×3)+√3)=(2√3-√3)/(2√3+√3)=√3/(3√3)=1/3",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2902",
+   "type": "mcq",
+   "stem": "If y = 4x<sup>3</sup> - 2x<sup>2</sup> + x, find δy/δx",
+   "options": {
+    "A": "8x<sup>2</sup> - 2x + 1",
+    "B": "8x<sup>2</sup> - 4x + 1",
+    "C": "12x<sup>2</sup> - 2x + 1",
+    "D": "12x<sup>2</sup> - 4x + 1"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "If y = 4x<sup>3</sup> - 2x<sup>2</sup> + x, then; δy/δx = 3(4x<sup>2</sup>) - 2(2x) + 1 = 12x<sup>2</sup> - 4x + 1",
+   "year": 2014
+  },
+  {
+   "id": "jamb-mathematics-bank-2903",
+   "type": "mcq",
+   "stem": "If 9x<sup>2</sup> + 6xy + 4y<sup>2</sup> is a factor of 27x<sup>3</sup> - 8y<sup>3</sup> , find the other factor.",
+   "options": {
+    "A": "2y + 3x",
+    "B": "2y - 3x",
+    "C": "3x + 2y",
+    "D": "3x - 2y"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "27x<sup>3</sup> - 8y<sup>3</sup> = (3x - 2y)3 But 9x<sup>2</sup> + 6xy + 4y<sup>2</sup> = (3x +2y)2 So, 27x<sup>3</sup> - 8y<sup>3</sup> = (3x - 2y)(3x - 2y)<sup>2</sup> Hence the other factor is 3x - 2y",
+   "year": 2010
+  },
+  {
+   "id": "jamb-mathematics-bank-2904",
+   "type": "mcq",
+   "stem": "If the gradient of the curve y = 2kx<sup>2</sup> + x + 1 at x = 1 is 9, find k.",
+   "options": {
+    "A": "4",
+    "B": "3",
+    "C": "2",
+    "D": "1"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "y = 2kx<sup>2</sup> + x + 1 Gradient function dy/dx = 4kx + 1 at dy/dx = 9, => 9 = 4kx + 1 => 8 = 4kx, and k = 8/4x. At x = 1, k = 8/4 = 2",
+   "year": 2001
+  },
+  {
+   "id": "jamb-mathematics-bank-2905",
+   "type": "mcq",
+   "stem": "IN the diagram above, POQ is a diameter of the circle PQRS. If ∠PSR = 145°, find xo",
+   "options": {
+    "A": "55°",
+    "B": "45°",
+    "C": "35°",
+    "D": "25°"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "∠PSQ = 90° (∠ in semi circle) ∠PSQ + ∠QSR = 145o 90 + ∠QSR = 145 ∠QSR = 145 - 90 ∠QSR = 55° BUt x° = ∠QSR (∠s in the same segment) ∴xo = 55°",
+   "year": 2006,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715542755/ALOC-Questions/Mathematics/2006/MATH_JAMB_2006_Q34_rdbaiq.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2906",
+   "type": "mcq",
+   "stem": "Factorize 4x<sup>2</sup> - 9y<sup>2</sup> + 20x + 25",
+   "options": {
+    "A": "(2x -3y + 5)(2x - 3y - 5)",
+    "B": "(2x - 3y)(2x + 3y)",
+    "C": "(2x - 3y +5)(2x + 3y + 5)",
+    "D": "(2x + 5)(2x - 9y +5)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given: 4x<sup>2</sup> - 9y<sup>2</sup> + 20x + 25 Collect like terms: 4x<sup>2</sup> + 20x + 25 - 9y<sup>2</sup> (2x + 5)(2x + 5) - 9y<sup>2</sup> (2x + 5)<sup>2</sup> - (3y)<sup>2</sup> (2x - 3y +5)(2x + 3y + 5)",
+   "year": 2001
+  },
+  {
+   "id": "jamb-mathematics-bank-2907",
+   "type": "mcq",
+   "stem": "If X = {n<sup>2</sup> + 1:n = 0,2,3} and Y = {n+1:n=2,3,5}, find X∩Y.",
+   "options": {
+    "A": "{1,3}",
+    "B": "{5,10}",
+    "C": "0",
+    "D": "{4,6}"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "X = {1,5,10} Y = {3,4,6} X∩Y = ∅",
+   "year": 2008
+  },
+  {
+   "id": "jamb-mathematics-bank-2908",
+   "type": "mcq",
+   "stem": "If the area of ΔPQR above is 12√3 cm2, find the value of q?",
+   "options": {
+    "A": "6 cm",
+    "B": "7 cm",
+    "C": "8 cm",
+    "D": "5 cm"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Area of a triangle = 1/2 ab Sinθ 12√3 = 1/2 x 8 x q sin 60 12√3 = 4 x q x √3/2 12√3 = 2q√3 q =12√3/2√3 q = 6",
+   "year": 2010,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716128351/ALOC-Questions/Mathematics/2010/MATH_2010_Q15_ofvhf9.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2909",
+   "type": "mcq",
+   "stem": "Simplify 213<sub>4</sub> x 23<sub>4</sub>",
+   "options": {
+    "A": "10311<sub>4</sub>",
+    "B": "10321<sub>4</sub>",
+    "C": "12231<sub>4</sub>",
+    "D": "13211<sub>4</sub>"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "You can either multiply directly in base 4 or you can decide to convert to base 10 and do the multiplication and re-convert.",
+   "year": 2003
+  },
+  {
+   "id": "jamb-mathematics-bank-2910",
+   "type": "mcq",
+   "stem": "A sector of a circle has an area of 55 cm<sup>2</sup> . If the radius of the circle is 10 cm, calculate the angle of the sector [π = 22/7]",
+   "options": {
+    "A": "45°",
+    "B": "63°",
+    "C": "75°",
+    "D": "90°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "θ/360×πr<sup>2</sup>. 55=θ/360×22/7×(10×10)/1. θ=(360×55×7)/(22×10×10). θ = 63°",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2911",
+   "type": "mcq",
+   "stem": "The graph above is represented by",
+   "options": {
+    "A": "y = x<sup>3</sup> - 3x - 2",
+    "B": "y = x<sup>3</sup> + 2x<sup>2</sup> - x - 2",
+    "C": "y = x<sup>3</sup> - 4x<sup>2</sup> + 5x - 2",
+    "D": "y = x<sup>3</sup> - 4x + 2"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "x = -2, x = -1 and x = 1 then the factors; x+2, x+1 and x-1 Product of the factors; (x+2)(x+1)(x-1) = y = (x + 2)(x<sup>2</sup> - x + x - 1) = y = (x+2)(x<sup>2</sup>-1) x<sup>3</sup> - x + 2x<sup>2</sup> - 2 = y x<sup>3</sup> + 2x<sup>2</sup> - x - 2 = y",
+   "year": 2007,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715545028/ALOC-Questions/Mathematics/2007/JAMB_2007_Q15_njbcs6.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2912",
+   "type": "mcq",
+   "stem": "Find the derivative of the function y = 2x<sup>2</sup>(2x - 1) at the point x = -1?",
+   "options": {
+    "A": "18",
+    "B": "16",
+    "C": "-4",
+    "D": "-6"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "y = 2x<sup>2</sup>(2x - 1) y = 4x<sup>3</sup> - 2x<sup>2</sup> dy/dx = 12x<sup>2</sup> - 4x at x = -1 dy/dx = 12(-1)<sup>2</sup> - 4(-1) = 12 + 4 = 16",
+   "year": 2021
+  },
+  {
+   "id": "jamb-mathematics-bank-2913",
+   "type": "mcq",
+   "stem": "Calculate the length of an arc of a circle diameter 14 cm, which subtends an angle of 90° at the center of the circle",
+   "options": {
+    "A": "7π/2 cm",
+    "B": "7π cm",
+    "C": "14π cm",
+    "D": "7π/4 cm"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2914",
+   "type": "mcq",
+   "stem": "Evaluate ((〖81〗<sup>(3/4)</sup> -〖27〗<sup>(1/3)</sup>)))/(3×2^3 )",
+   "options": {
+    "A": "3",
+    "B": "1",
+    "C": "1/3",
+    "D": "1/8"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "(81<sup>(3/4)</sup> - 27<sup>(1/3)</sup>)/(3×2<sup>3</sup> )=((3<sup>(3-3/4)</sup>-33<sup>(3-3/4)</sup>))/(3×2<sup>3</sup> )=(3<sup>3</sup> -3)/(3 ×8) = (27 - 3 ) / 24 = 24/24 = 1",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2915",
+   "type": "mcq",
+   "stem": "If x + y = 90 simplify (sinx+siny)<sup>2</sup> −2sinxsiny",
+   "options": {
+    "A": "1",
+    "B": "0",
+    "C": "2",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given: x + y=90°...(1) (sinx + siny)<sup>2</sup> −2sinxsiny = sin<sup>2</sup> x + sin<sup>2</sup> y + 2sinxsiny − 2sinxsiny = sin<sup>2</sup> x + sin<sup>2</sup> y...(2) Recall: sinx = cos(90−x)...(a) From (1), y = 90−x...(b) Putting (a) and (b) in (2), we have sin<sup>2</sup> x + sin<sup>2</sup> y ≡ cos<sup>2</sup> (90−x) + sin<sup>2</sup> (90−x) = 1",
+   "year": 2015
+  },
+  {
+   "id": "jamb-mathematics-bank-2916",
+   "type": "mcq",
+   "stem": "The maximum value of the function f(x) = 2 + x - x<sup>2</sup> is",
+   "options": {
+    "A": "9/4",
+    "B": "7/4",
+    "C": "3/2",
+    "D": "1/2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "f(x) = 2 + x - x<sup>2</sup> dy/dx = 1-2x As dy/dx = 0 1-2x = 0 2x = 1 x = 1/2 At x = 1/2 f(x) = 2 + x - x<sup>2</sup> = 2 + 1/2 -(1/2)<sup>2</sup> = 2 + 1/2 - 1/4 = (8+2-1) / 4 = 9/4",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2917",
+   "type": "mcq",
+   "stem": "The diagram above is the graph of the function f(x). Determined the range of values of x for which f(x) ≤ 0",
+   "options": {
+    "A": "x ≤ 2",
+    "B": "0 ≤ x ≤ 2",
+    "C": "-2 ≤ x ≤ 0, x ≥ 2",
+    "D": "x ≤ -2, 0 ≤ x ≤ 2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The graph of the function f(x) is a curve that starts at (-2,0) and ends at (2,0) with a peak at (0,1). The range of values of x for which f(x) ≥ 0 is the interval where the graph of the function is above or touches the x-axis. From the given graph, we can see that this interval is [-2, 2]. Therefore, the correct answer is -2 ≤ x ≤ 0, x ≥ 2",
+   "year": 2005,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710702037/ALOC-Questions/Mathematics/2005/math_2005_q15_h5gfn6.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2918",
+   "type": "mcq",
+   "stem": "Evaluate ∫sec<sup>2</sup>θ dθ?",
+   "options": {
+    "A": "sec θ tan θ + k",
+    "B": "tan θ + k",
+    "C": "2sec θ + k",
+    "D": "sec θ + k"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "∫sec2θ dθ = ∫ 1/cos2 dθ ∫(cos)-2 dθ, let u = cos θ ∴∫u-2 = 1/u + c ∫cos θ = sin θ + c ∫sec-2θ = 1/u sin θ + c = (sinθ / cosθ) + c = Tan θ + c",
+   "year": 2009
+  },
+  {
+   "id": "jamb-mathematics-bank-2919",
+   "type": "mcq",
+   "stem": "Find the area bounded by the curves y = 4 - x<sup>2</sup> and y = 2x + 1",
+   "options": {
+    "A": "20(1/3) sq. units",
+    "B": "20(2/3) sq. units",
+    "C": "10(2/3) sq. units",
+    "D": "10(1/3) sq. units"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Hint: y = 4 - x<sup>2</sup> and y = 2x + 1 => 4 - x<sup>2</sup> = 2x + 1 => x<sup>2</sup> + 2x - 3 = 0 (x+3)(x-1) = 0 thus x = -3 or x = 1. Integrating x<sup>2</sup> + 2x - 3 from (-3, to 1) w.r.t x will give 31/3 = 10(1/3)",
+   "year": 2001
+  },
+  {
+   "id": "jamb-mathematics-bank-2920",
+   "type": "mcq",
+   "stem": "(0.00256×0.0064)/(0.025 × 0.08)",
+   "options": {
+    "A": "8.8 x 10<sup>-1</sup>",
+    "B": "8.8 x 10<sup>-2</sup>",
+    "C": "8.2 x 10<sup>-3</sup>",
+    "D": "8.8 x 10<sup>3</sup>"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2018
+  },
+  {
+   "id": "jamb-mathematics-bank-2921",
+   "type": "mcq",
+   "stem": "Find the value of α<sup>2</sup> + β<sup>2</sup> if α + β = 2 and the distance between points (1, α) and (β, 1)is 3 units",
+   "options": {
+    "A": "14",
+    "B": "3",
+    "C": "5",
+    "D": "11"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "PQ = √((β−1)<sup>2</sup>+(1−α)<sup>2</sup>). 3=√((β<sup>2</sup>−2β<sup>2</sup>+1+1−2α+α<sup>2</sup>)). 3=√((α<sup>2</sup>+β<sup>2</sup>−2α+2β+2)). 3=√((α<sup>2</sup>+β<sup>2</sup>−2(α+β)+2)). 3=√((α<sup>2</sup>+β<sup>2</sup>−2∗2+2)). 3=√((α<sup>2</sup>+β<sup>2</sup>−2)). 9=(α<sup>2</sup>+β<sup>2</sup>−2). α<sup>2</sup>+β<sup>2</sup>=9+2. α<sup>2</sup>+β<sup>2</sup>=11.",
+   "year": 2004
+  },
+  {
+   "id": "jamb-mathematics-bank-2922",
+   "type": "mcq",
+   "stem": "In a class of 60 students, 30 offers physics and 40 offers chemistry. If a students is picked at random from the class, what is the probability that the student offer both physics and Chemistry?",
+   "options": {
+    "A": "1/2",
+    "B": "1/6",
+    "C": "1/4",
+    "D": "1/3"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "60 = 30 - x + x + 40 - x 60 = 70 - x x = 10 n(P∩C)=10 Prob(P∩C)=10/60=1/6",
+   "year": 2011,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716129944/ALOC-Questions/Mathematics/2011/JAMB_MATH_2011_Q49_SOLUTION_dbv0wq.png"
+  },
+  {
+   "id": "jamb-mathematics-bank-2923",
+   "type": "mcq",
+   "stem": "In the diagram above, PST is a straight line, PQ = QS = RS. If ∠RST = 72°, find x",
+   "options": {
+    "A": "36°",
+    "B": "18°",
+    "C": "72°",
+    "D": "24°"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "In Δ PQS, ∠PSQ = X(base ∠s of isoc Δ PQS) In Δ QRS, ∠RQS = ∠PSQ + X(Extr ∠ = sum of two intr. opp ∠s) ∴ ∠RQS = X + X = 2X Also ∠QRS = 2X(base ∠s of isoc Δ QRS in Δ PRS, 72 = ∠RPS + ∠PRS(Extr, ∠ = sum of two intr. opp ∠s) ∴ 72 = x + 2x 72 = 3x x = 72/3 x = 24°",
+   "year": 2002,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710697968/ALOC-Questions/Mathematics/2002/math_2000_q43_ugfbxx.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2924",
+   "type": "mcq",
+   "stem": "The histogram above shows the distribution of passengers in taxis of a certain motor park. How many taxis have more than 4 passengers",
+   "options": {
+    "A": "16",
+    "B": "17",
+    "C": "14",
+    "D": "15"
+   },
+   "marks": 1,
+   "answer": "B",
+   "year": 2001,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710696703/ALOC-Questions/Mathematics/2001/JAMB_2001_Q_43_ohk92h.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2925",
+   "type": "mcq",
+   "stem": "If ∣∣∣−x−1124∣∣∣=−12 , find x.",
+   "options": {
+    "A": "-6",
+    "B": "-2",
+    "C": "3",
+    "D": "6"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "-4x - (-1)12 = -12 -4x + 12 = -12 -4x = -12 - 12 -4x = - 24 x = 6",
+   "year": 2014,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1724001964/ALOC-Questions/Mathematics/2014/MATH_JAMB_2014_Q21_csqcpp.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2926",
+   "type": "mcq",
+   "stem": "Evaluate ∫ (cos4x + sin3x)dx",
+   "options": {
+    "A": "sin4x - cos3x + k",
+    "B": "sin4x + cos3x + k",
+    "C": "1/4 sin4x - 1/3cos3x + k",
+    "D": "1/4sin4x + 1/3 cos3x + k"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "∫(cos4x+sin3x)dx = 1/4sin4x − 1/3cos3x+k",
+   "year": 2016
+  },
+  {
+   "id": "jamb-mathematics-bank-2927",
+   "type": "mcq",
+   "stem": "Find the integral values of x and y satisfying the inequality 3y + 5x( less than equal to) 15, given that y > 0, y < 3 and x > 0.",
+   "options": {
+    "A": "(1,1), (1,2), (1,3)",
+    "B": "(1,1), (2,1), (1,3)",
+    "C": "(1,1), (3,1), (2,2)",
+    "D": "(1,1), (1,2), (2,1)"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Hint: Sketch the inequality graph for the 3 conditions given and read out your points from the co-ordinates.",
+   "year": 2001
+  },
+  {
+   "id": "jamb-mathematics-bank-2928",
+   "type": "mcq",
+   "stem": "If −2x<sup></sup> +6x<sup>2</sup> +17x - 21 is divided by (x+1), then the remainder is",
+   "options": {
+    "A": "32",
+    "B": "30",
+    "C": "-30",
+    "D": "-32"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Let p(x)=−2x<sup>3</sup> + 6x<sup>2</sup> + 17x − 21 Using the remainder theorem Let x + 1 = 0 ∴ x = −1 Since, (x+1) divides p(x), then, remainder will be p(-1) ⇒ p(-1) = -2(-1)<sup>3</sup> +6(−1)<sup>2</sup> + 17(-1) - 21 ∴ p(-1) = -30",
+   "year": 2023
+  },
+  {
+   "id": "jamb-mathematics-bank-2929",
+   "type": "mcq",
+   "stem": "Three teachers shared a packet of chalk. The first teacher got 2/5 of the chalk and the second teacher received 2/15 of the remainder. What fraction the the third teacher receive?",
+   "options": {
+    "A": "8/15",
+    "B": "11/25",
+    "C": "12/25",
+    "D": "13/25"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "First teacher received 2/5 ∴Remainder =1−2/5=3/5 2nd teacher received; 2/15 of 3/5 = 2/15 × 3/5 = 2/25 3rd teacher will receive; 1−2/5 - 2/25 = (25−10−2)/15 = 13/25",
+   "year": 2004
+  },
+  {
+   "id": "jamb-mathematics-bank-2930",
+   "type": "mcq",
+   "stem": "Evaluate ∫<sub>0</sub><sup>π/2</sup> sin xdx",
+   "options": {
+    "A": "2",
+    "B": "-1",
+    "C": "1",
+    "D": "-2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Evaluate ∫<sub>0</sub><sup>π/2</sup> sin xdx = -cosx|π/2 = -(cos<sup>π/2</sup> - cos0) = -(0-1) = 1",
+   "year": 2016
+  },
+  {
+   "id": "jamb-mathematics-bank-2931",
+   "type": "mcq",
+   "stem": "Evaluate (1/2 - 1/4 - 1/8 - 1/16 + ...) - 1",
+   "options": {
+    "A": "2/3",
+    "B": "zero",
+    "C": "-2/3",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "S = a/(1+r), where a = 1/2, r = 1/2. S = 1/2 3/2 = 1/2 x 3/2 = 1/3. 1/3 - 1 = -2/3",
+   "year": 2000
+  },
+  {
+   "id": "jamb-mathematics-bank-2932",
+   "type": "mcq",
+   "stem": "If two graphs y = px<sup>2</sup>+ q and y = 2x<sup>2</sup> -1 intersect at x = 2, find the value of p in terms q.",
+   "options": {
+    "A": "(q-8)/7",
+    "B": "(7-q)/4",
+    "C": "(8-q)/2",
+    "D": "(7-q)/8"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Y = px <sup>2</sup> + q/5 = 2x<sup>2</sup> - 1 Right arrow px<sup>2</sup> + q = 2x<sup>2</sup> - 1\\px<sup>2</sup> = 2x<sup>2</sup> - 1 - q\\p = (2x<sup>2</sup> - q - 1) / x<sup>2</sup> \\ Atx = 2\\p = [(2(2<sup>2</sup>) - 1 - q)]/ 2<sup>2</sup> \\ p = [(8 - 1- q)]/ 4 \\ = ( 7 - q ) / 4",
+   "year": 2001
+  },
+  {
+   "id": "jamb-mathematics-bank-2933",
+   "type": "mcq",
+   "stem": "Find the variance",
+   "options": {
+    "A": "3.42",
+    "B": "4.69",
+    "C": "4.85",
+    "D": "3.72"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Variance = ∑f(x−x¯)/∑f = 170.888/46 = 3.72",
+   "year": 2019,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1724006808/ALOC-Questions/Mathematics/2019/MATH_JAMB_2019_Q15_cfctff.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2934",
+   "type": "mcq",
+   "stem": "ake r subject of the formula given that x/r+a = a/r",
+   "options": {
+    "A": "a<sub>2</sub>/(x−a)",
+    "B": "a<sub>2</sub>/(x+a)",
+    "C": "a/(x - a)",
+    "D": "a/(x + a)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "x/r+a = a/r ⟹ rx = ar + a<sub>2</sub> rx − ra = a<sub>2</sub> ⟹ r = a<sub>2</sub>/ (x−a)",
+   "year": 2002
+  },
+  {
+   "id": "jamb-mathematics-bank-2935",
+   "type": "mcq",
+   "stem": "The ratio of the length of two similar rectangular blocks is 2 : 3. If the volume of the larger block is 351 cm<sup>3</sup> , then the volume of the other block is?",
+   "options": {
+    "A": "234.00 cm<sup>3</sup>",
+    "B": "526.50 cm<sup>3</sup>",
+    "C": "166.00 cm<sup>3</sup>",
+    "D": "687cm<sup>3</sup>"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Let x represent total vol. 2 : 3 = 2 + 3 = 5 3/5x = 351 x = (351 × 5)/3 = 585 Volume of smaller block = 2/5 x 585 = 234.00 cm<sup>3</sup>",
+   "year": 2021
+  },
+  {
+   "id": "jamb-mathematics-bank-2936",
+   "type": "mcq",
+   "stem": "The table above gives the frequency distribution of marks obtained by a group of students in a test. If the total mark scored is 200, calculate the value of y",
+   "options": {
+    "A": "15",
+    "B": "13",
+    "C": "11",
+    "D": "8"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Total mark scored = 200 âˆ´200 = 15 + 4y - 4 + 5y + 54 + 28 + 8 200 = 9y + 101 200 - 101 = 9y 99 = 9y âˆ´y = 11",
+   "year": 2007,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715544983/ALOC-Questions/Mathematics/2007/JAMB_2007_Q8_npkacb.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2937",
+   "type": "mcq",
+   "stem": "A trader bought goats for ₦4,000 each. He sold them for ₦18,000 at a loss of . How many goats did he buy?",
+   "options": {
+    "A": "60",
+    "B": "50",
+    "C": "45",
+    "D": "36"
+   },
+   "marks": 1,
+   "answer": "A",
+   "year": 2008
+  },
+  {
+   "id": "jamb-mathematics-bank-2938",
+   "type": "mcq",
+   "stem": "If Q is a factor of 18 and T is prime numbers between 2 and 18. What is Q∩T?",
+   "options": {
+    "A": "(2,3)",
+    "B": "(2,3,18)",
+    "C": "(2,3,9)",
+    "D": "(2,3,6)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Q = {1,2,3,6,9,18}, T ={2,3,5,7,11,13,17} Q∩T = {2,3}",
+   "year": 2016
+  },
+  {
+   "id": "jamb-mathematics-bank-2939",
+   "type": "mcq",
+   "stem": "What is the solution of x−5/x+3 <−1?",
+   "options": {
+    "A": "=-3 < x < 1",
+    "B": "x < -3 or x > 1",
+    "C": "-3 < x < 5",
+    "D": "x < -3 or x > 5"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Consider the range -3 < x < -1 = { -2, -1, 0}, for instance When x = -2, (−2−5)/(−2 + 3) < −1 −7/1 < −1 When x = -1, (−1−5)/(−1+3) <−1 −6/2 < −1 = -3 < -1 When x = 0, (0−5)/(0 + 3) < −1 −5/3 < −1 Hence -3 < x < 1",
+   "year": 2014
+  },
+  {
+   "id": "jamb-mathematics-bank-2940",
+   "type": "mcq",
+   "stem": "XYZ is a circle enter o and a radius 7cm. Find the area of the shaded region. θ = 45 x 2 = 90",
+   "options": {
+    "A": "84cm<sup>2</sup>",
+    "B": "B 77cm<sup>2</sup>",
+    "C": "38cm<sup>2</sup>",
+    "D": "14cm<sup>2</sup>"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "θ = 45 x 2 (∠ at center twice ∠ at θ) θ = 90 Area of sector = θ/360 x πr<sup>2</sup> = 90/360 x 22/7 x 7 x 7 = 77/2cm<sup>2</sup> Area of triangle = 1/2 ab sin θ = 1/2 x 7 x 7 sin 90 = 1/2 x 7 x 7 x 1 = 49/2 Area of shaded region = 77/2 - 49/2 1 1 2 = 28/2 = 14cm<sup>2</sup>",
+   "year": 2003,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710699665/ALOC-Questions/Mathematics/2003/math_2003_q41_hvzhnt.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2941",
+   "type": "mcq",
+   "stem": "Convert 112<sub>6</sub> to a number in base three",
+   "options": {
+    "A": "2211",
+    "B": "2121",
+    "C": "1212",
+    "D": "1122"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "First, convert to base 10 112<sub>6</sub> = (1 x 6<sup>2</sup>) + (1 x 6<sup>1</sup>) + (2 x 6<sup>0</sup>) = 36 + 6 + 2 = 44<sup>10</sup>) Ans = 1122 = D",
+   "year": 2012
+  },
+  {
+   "id": "jamb-mathematics-bank-2942",
+   "type": "mcq",
+   "stem": "Evaluate (81/16)<sup>−1/4</sup> × 2<sup>−1</sup>",
+   "options": {
+    "A": "1/3",
+    "B": "3",
+    "C": "6",
+    "D": "1/6"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "〖(81/16)〗<sup>(-1)/4)</sup> × 2<sup>-1</sup> =1 /〖(81/16)〗<sup>(1/4)</sup>^(1/4) × 1/2=〖(16/81)〗<sup>1/4</sup> × 1/2=〖(2/3)〗<sup>(4×1/4)</sup>= 2/3 × 1/2 = 1/3",
+   "year": 2010
+  },
+  {
+   "id": "jamb-mathematics-bank-2943",
+   "type": "mcq",
+   "stem": "P varies jointly as m and u, and varies inversely as q. Given that p = 4, m = 3 and u = 2 and q = 1, find the value of p when m = 6, u = 4 and q = 8/5",
+   "options": {
+    "A": "12(8/5)",
+    "B": "15",
+    "C": "10",
+    "D": "28(8/5)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "P ∝ mu, p ∝1/q p = muk ................ (1) p = 1/qk... (2) Combining (1) and (2), we get P = (mu/q)k 4 = (m × u/1)k giving k = 4/6 = 2/3 So, P = mu/q × 2/3 =(2mu/3q) Hence, P = (2 × 6 × 4)/(3 ×8/5) P = (2 × 6 × 4 × 5/3 × 8) p = 10",
+   "year": 2013
+  },
+  {
+   "id": "jamb-mathematics-bank-2944",
+   "type": "mcq",
+   "stem": "If x is inversely proportional to y and x = 2(1/2) when y = 2, find x if y = 4",
+   "options": {
+    "A": "4",
+    "B": "5",
+    "C": "1(1/4)",
+    "D": "2(1/4)"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "x α 1/y .........(1) x = k x 1/y .........(2) When x = 2(1/2) = 5/2, y = 2 (2) becomes 5/2 = k x 1/2 giving k = 5 from (2), x = 5/y so when y =4, x = 5/y = 1(1/4)",
+   "year": 2010
+  },
+  {
+   "id": "jamb-mathematics-bank-2945",
+   "type": "mcq",
+   "stem": "Evaluate ∫<sub>0</sub>, <sup>(π/2</sup>sin2xdx",
+   "options": {
+    "A": "1",
+    "B": "Zero",
+    "C": "-1/2",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "∫<sub>0</sub><sup>(π/2</sup>sin2xdxx = [-1/2cos 2x + C]<sup>(π/2</sup, <sub>0</sub> =[-1/2 cos 2 * π/2 + C] - [-1/2 cos 2 * 0] = [-1/2 cos π] - [-1/2 cos 0] = [-1/2x - 1] - [-1/2 * 1] = 1/2 -(-1/2) = 1/2 + 1/2 = 1",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2946",
+   "type": "mcq",
+   "stem": "If π/≤ 2π, find the maximum value of f(θ) = 4/6 + 2 cos θ",
+   "options": {
+    "A": "1",
+    "B": "1/2",
+    "C": "4",
+    "D": "2/3"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2003,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1710699755/ALOC-Questions/Mathematics/2003/math_2003_q49_t4ucuu.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2947",
+   "type": "mcq",
+   "stem": "Evaluate the following limit: lim <sub>(x→2)</sub> (x<sup>2</sup> + 4x − 12)/(x<sup>2</sup> − 2x)",
+   "options": {
+    "A": "4",
+    "B": "8",
+    "C": "0",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "lim <sub>(x→2)</sub> x<sup>2</sup> + 4x − 12)/(x<sup>2</sup> −2x) = lim <sub>(x→2)</sub> ((x−2)(x+6))/(x(x − 2)) lim<sub>x→2 x+6/x</sub> 2 + 6/2 = 8/2 = 4",
+   "year": 2023
+  },
+  {
+   "id": "jamb-mathematics-bank-2948",
+   "type": "mcq",
+   "stem": "Find the x and z intercepts of the graph of 3x - z ≤ 9",
+   "options": {
+    "A": "(3, -9)",
+    "B": "(-3, 9)",
+    "C": "(-3, -9)",
+    "D": "(-3, 0)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Starting from 3x − z ≤ 9 x = 0, substitute the value of x (i.e. x = 0) into the equation 3x − z ≤ 9 3(0) − z ≤ 9 z ≤ − 9 If z = 0 Then, 3x − 0 ≤ 9 3x ≤ 9 x ≤ 3 Intercept of x and z i.e (x,z) = (3, -9)",
+   "year": 2015
+  },
+  {
+   "id": "jamb-mathematics-bank-2949",
+   "type": "mcq",
+   "stem": "( −2 2 1 3 ) ( p r q s ) = ( 1 0 0 1 ) . What is the value of r?",
+   "options": {
+    "A": "-1/8",
+    "B": "3/8",
+    "C": "5/8",
+    "D": "1/4"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "-2p + r = 1.......(i) 2p + 3r = 0.......(ii) r - 1 + 2p ........(iii) 2p + 3(1 + 2p) = 0 2p + 3(1 + 2p) = 0 2p + 3 + 6p = 0 3 - 8p = 0 → 8p = 3 p = 3/8 6 = 1 - 2 (3/8) = 1 - 6/8 8−6/8 = 2/8 = 1/4",
+   "year": 2008,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715546423/ALOC-Questions/Mathematics/2008/MATH_2008_Q47_nqccri.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2950",
+   "type": "mcq",
+   "stem": "The area of an ellipse is 132cm2.The length of its major axis is 14cm.Find the length of it minor axis",
+   "options": {
+    "A": "10.5cm",
+    "B": "5cm",
+    "C": "10cm",
+    "D": "3cm"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2015
+  },
+  {
+   "id": "jamb-mathematics-bank-2951",
+   "type": "mcq",
+   "stem": "Evaluate 1 - (1/5 x 2/3) + ( 5 + 2/3)",
+   "options": {
+    "A": "4",
+    "B": "3",
+    "C": "2(2/3)",
+    "D": "98/15"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2017
+  },
+  {
+   "id": "jamb-mathematics-bank-2952",
+   "type": "mcq",
+   "stem": "The angle of a sector of a circle radius 10.5 cm is 48o . Calculate the perimeter of the sector.",
+   "options": {
+    "A": "25.4 cm",
+    "B": "25.4 cm",
+    "C": "25.6 cm",
+    "D": "29.8 cm"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The lenght of Arc AB = Q/360 2πr = 48/360 x 22/27 x 10.5 = 48/360 x 22/27 x 21/2= (4 × 22 × 3)/30 × 88/10 = 8.8cm Perimeter = 8.8 + 2r = 8.8 + 2r = 8.8 + 2(10.5) = 8.8 + 21 = 29.8 cm"
+  },
+  {
+   "id": "jamb-mathematics-bank-2953",
+   "type": "mcq",
+   "stem": "Given: U = {Even numbers between 0 and 30} P = {Multiples of 6 between 0 and 30} Q = {Multiples of 4 between 0 and 30} Find (P∪Q)<sup>c</sup>",
+   "options": {
+    "A": "{2, 10, 14, 22, 26}",
+    "B": "{0, 10, 14, 22, 26}",
+    "C": "{2,4, 14, 18, 26}",
+    "D": "{0, 2, 6, 22, 26}"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "U = {2,4,6,8,10,12,14,16,18,20,22,24,26,28,30} P = {6,12,18,24,30} Q = {4,8,12,16,20,24,28} P∪Q = {4,6,8,12,16,18,20,24,28,30} (P∪Q)c = {2,10,14,22,26}",
+   "year": 2003
+  },
+  {
+   "id": "jamb-mathematics-bank-2954",
+   "type": "mcq",
+   "stem": "Find the remainder when 3x<sup>3</sup> + 5x<sup>2</sup> - 11x + 4 is divided by x + 3",
+   "options": {
+    "A": "-4",
+    "B": "4",
+    "C": "1",
+    "D": "-1"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "x = -3 substitute x = -3 in 3x<sup>3</sup> + 5x<sup>2</sup> - 11x + 4 3(-3)<sup>3</sup> + 5(-3)<sup>2</sup> - 11(-3) + 4 -81 + 45 + 33 + 4 -81 + 82 = 1",
+   "year": 2004
+  },
+  {
+   "id": "jamb-mathematics-bank-2955",
+   "type": "mcq",
+   "stem": "Find the range of values of x for which (x+2)/4−2x−3/3 < 4",
+   "options": {
+    "A": "x > -6",
+    "B": "x > -3",
+    "C": "x < 8",
+    "D": "x < 4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "x+2/4 − 2x−3/3 < 4 3(x+2)−4(2x−3)/12 < 4 3x + 6 − 8x + 12 < 48 18 − 5 x< 48 ⟹ −5 x < 48 − 18 −5x < 30 ⟹ x > −6",
+   "year": 2002
+  },
+  {
+   "id": "jamb-mathematics-bank-2956",
+   "type": "mcq",
+   "stem": "Evaluate ∫<sub>-4</sub> <sup>0</sup>(1-2x)dx",
+   "options": {
+    "A": "-16",
+    "B": "-20",
+    "C": "20",
+    "D": "10"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "∫<sub>-4</sub> <sup>0</sup>(1-2x)dx=[x-x<sup>2</sup> ]<sub>-4</sub><sup>0</sup> \"\\=\" (0-0+C)-(-4(-4)<sup>2</sup>+C)=C-(-4-16+C)=C-(-20+C)=C+20-C=20",
+   "year": 2006
+  },
+  {
+   "id": "jamb-mathematics-bank-2957",
+   "type": "mcq",
+   "stem": "A chord of a circle subtends an angle of 60° at the length of a circle of radius 14 cm. Find the length of the chord",
+   "options": {
+    "A": "7 cm",
+    "B": "14 cm",
+    "C": "21 cm",
+    "D": "28 cm"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Chord Length (L) = 2×Radius×(sin(angle/2)) = 2×14×(sin60/2) = 28×(sin30) = 28×1/2 = 14cm",
+   "year": 2005
+  },
+  {
+   "id": "jamb-mathematics-bank-2958",
+   "type": "mcq",
+   "stem": "P, Q and R are subsets of the universal set U. The Venn diagram showing the relationship (P∩Q)∪R is",
+   "options": {
+    "A": "1",
+    "B": "2",
+    "C": "3",
+    "D": "4"
+   },
+   "marks": 1,
+   "answer": "C",
+   "year": 2013,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1716131538/ALOC-Questions/Mathematics/2013/JAMB_MATH_2013_Q48_ka7ezx.png"
+  },
+  {
+   "id": "jamb-mathematics-bank-2959",
+   "type": "mcq",
+   "stem": "If gt<sup>2</sup> - k - w = 0, make g the subject of the formula",
+   "options": {
+    "A": "k+w/t<sup>2</sup>",
+    "B": "k-w/t<sup>2</sup>",
+    "C": "k+w/t",
+    "D": "k-w/t"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "gt<sup>2</sup> - k - w = 0 gt<sup>2</sup> = k + w g = k + w/t<sup>2</sup>",
+   "year": 2014
+  },
+  {
+   "id": "jamb-mathematics-bank-2960",
+   "type": "mcq",
+   "stem": "Mr Adu spends his annual salary on food(f), rent(r), car maintenance, gift+B10s(g), savings(s) and some B28miscellaneous (m) as indicate in the table below: If the above information is represented on a pie chart. What angle represents his spending on food?",
+   "options": {
+    "A": "108.5",
+    "B": "100.8",
+    "C": "98.8",
+    "D": "120.5"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "28∗360/100 = 100.8°",
+   "year": 2022,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1724007442/ALOC-Questions/Mathematics/2022/JAMB_MATH_2022_Q9_tovtlt.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2961",
+   "type": "mcq",
+   "stem": "If x<sub>10</sub> = 1214<sub>5</sub> find x",
+   "options": {
+    "A": "124",
+    "B": "121",
+    "C": "184",
+    "D": "180"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "x<sub>10</sub> = 1214<sub>5</sub> = x x<sub>10</sub> = 1 x 5<sup>3</sup> + 2 x 5<sup>2</sup> + 1 * 5<sup>1</sup> + 4 x 5<sup>0</sup> = 1 x 125 + 2 x 25 + 1 x 5 + 4 x 1 = 125 + 50 + 5 + 4 = 184",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2962",
+   "type": "mcq",
+   "stem": "In a right angled triangle, if tan θ = 3/4. What is cosθ - sinθ?",
+   "options": {
+    "A": "2/3",
+    "B": "3/5",
+    "C": "1/5",
+    "D": "4/5"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "tanθ = 3/4 from Pythagoras tippet, the hypotenus is T i.e. 3, 4, 5. then sin θ = 3/5 and cosθ = 4/5 cosθ - sinθ 4/5 - 3/5 = 1/5",
+   "year": 2011
+  },
+  {
+   "id": "jamb-mathematics-bank-2963",
+   "type": "mcq",
+   "stem": "Solve the inequality: -7 ≤ 9 - 8x < 16 - x",
+   "options": {
+    "A": "-1 ≤ x ≤ 2",
+    "B": "-1 ≤ x < 2",
+    "C": "-1 < x < 2",
+    "D": "-1 < x ≤ 2"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "-7 ≤ 9 - 8x < 16 - x -7 ≤ 9 - 8x and 9 - 8x < 16 - x -7 - 9 ≤ -8x and -8x + x < 16 - 9 -16 ≤ -8x and -7x < 7 ∴ x ≤ 2 and -1 < x -1 < x ≤ 2.",
+   "year": 2019
+  },
+  {
+   "id": "jamb-mathematics-bank-2964",
+   "type": "mcq",
+   "stem": "The equivalent of (10110.011)<sub>2</sub> in base 10 is?",
+   "options": {
+    "A": "26.325",
+    "B": "24.372",
+    "C": "42.443",
+    "D": "22.375"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Using the expansion method on (10110.011)<sub>2</sub> (1 * 2<sup>4</sup>) + (0 * 2<sup>3</sup>) + (1 * 2<sup>2</sup>) + (1 * 2<sup>1</sup>) (0 * 2<sup>0</sup>) + (0 * 2<sup>-1</sup>) + (1 * 2<sup>-2</sup>) + (1 2<sup>-3</sup>) (1*16) + 0 (1*4) + (1*2) + 0 + 0 + (1*1/4) + (1*1/8) 16 + 4 + 2 + (0.25 + 0.125) 22 + 0.375 (10110.011)<sub>2</sub> = 22.375<sub>10</sub>",
+   "year": 2022
+  },
+  {
+   "id": "jamb-mathematics-bank-2965",
+   "type": "mcq",
+   "stem": "The bar chart above shows the number of times the word a, and , in, it, the , to appear in a paragraph in a book. What is the ratio of the least frequent word?",
+   "options": {
+    "A": "1/4",
+    "B": "1/3",
+    "C": "2/3",
+    "D": "3/4"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Ratio of least to most = 3:12 = 3/12 = 1/4",
+   "year": 2008,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1715546269/ALOC-Questions/Mathematics/2008/MATH_2008_Q37_rkcwin.jpg"
+  },
+  {
+   "id": "jamb-mathematics-bank-2966",
+   "type": "mcq",
+   "stem": "Factorize completely X<sup>2</sup> +2XY+Y<sup>2</sup> +3X+3Y-18",
+   "options": {
+    "A": "(x + y + 6)(x + y -3)",
+    "B": "(x - y - 6)(x - y + 3)",
+    "C": "(x - y + 6)(x - y - 3)",
+    "D": "(x + y - 6)(x + y + 3)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "x<sup>2</sup> +2xy + y<sup>2</sup> + 3x + 3y − 18 x<sup>2</sup> +2xy + 3x + y<sup>2</sup> + 3y − 18 x<sup>2</sup> + 2xy − 3x +6x + y<sup>2</sup> −3y +6y−18 x<sup>2</sup> + 2xy − 3x + y<sup>2</sup> − 3y + 6x +6y − 18 x<sup>2</sup> +xy − 3x + xy + y<sup>2</sup> − 3y +6x + 6y − 18 x(x + y - 3) + y(x + y - 3) + 6(x + y - 3) = (x + y - 3)(x + y + 6) = (x + y + 6)(x + y -3)",
+   "year": 2017
+  },
+  {
+   "id": "jamb-mathematics-bank-2967",
+   "type": "mcq",
+   "stem": "Find ∫(x<sup>2</sup> + 3x − 5)dx",
+   "options": {
+    "A": "x3/3 - 3x2/2 - 5x + k",
+    "B": "x3/3 - 3x2/2 + 5x + k",
+    "C": "x3/3 + 3x2/2 - 5x + k",
+    "D": "x3/3 + 3x2/2 + 5x + k"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "∫x<sup>n</sup>dx = x<sub>n+1</sub>/n+1 ∫dx = x + k where k is constant ∫(x<sup>2</sup> + 3x − 5)dx ∫x<sup>2</sup> dx + ∫3xdx − ∫5dx (2<sub>2</sub> + 1)/(2 + 1) + 3x<sup>1+1</sup>/(1+1) − 5x + k x<sub>3</sub>/3 + 3x<sub>2</sub>/2 − 5x + k",
+   "year": 2017
+  },
+  {
+   "id": "jamb-mathematics-bank-2968",
+   "type": "mcq",
+   "stem": "Evaluate: 0.21×0.072×0.00054/0.006×1.68×0.063",
+   "options": {
+    "A": "0.01286",
+    "B": "0.01285",
+    "C": "0.1286",
+    "D": "0.1285"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "0.21×0.072×0.00054/0.006×1.68×0.063 = 9×10<sup>−10</sup>/7×10<sup>−8</sup> = 1.2857 × 10<sup>-2</sup> = 0.012857 ≊ 0.01286 (to 4 s.f)",
+   "year": 2002
+  },
+  {
+   "id": "jamb-mathematics-bank-2969",
+   "type": "mcq",
+   "stem": "Integrate (x<sup>2</sup>-√x)/x with respect to x",
+   "options": {
+    "A": "x<sup>2</sup>/2-2√x+K",
+    "B": "(2(x<sup>2</sup>-x))/3x+K",
+    "C": "x<sup>2</sup>/2-√x+K",
+    "D": "((x<sup>2</sup>-x))/3x+K"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "∫(x<sup>2</sup>-√x)/x=∫x<sup>2</sup>/x-x^(1/2)/x∫x-x^((-1)/2)=(1/2)x<sup>2</sup>-x<sup>1/2</sup>/(1/2)+K=x<sup>2</sup>/2-2x<sup>1/2</sup>+K=x<sup>2</sup>/2-2√x+K",
+   "year": 2007
+  },
+  {
+   "id": "jamb-mathematics-bank-2970",
+   "type": "mcq",
+   "stem": "Simplify (0.0839 × 6.381)/5.44 to 2 significant figures.",
+   "options": {
+    "A": "0.2809",
+    "B": "2.51",
+    "C": "3.5",
+    "D": "0.098"
+   },
+   "marks": 1,
+   "answer": "D",
+   "year": 2019
+  },
+  {
+   "id": "jamb-mathematics-bank-2971",
+   "type": "mcq",
+   "stem": "Factorize completely 4abx - 2axy -12b<sup>2</sup>x + 6bxy",
+   "options": {
+    "A": "2x(a - 3b)(2b - y)",
+    "B": "2x(3b - a)(2b - y)",
+    "C": "2x(a - 3b)(y - 2b)",
+    "D": "2x(2b - a)(3b - y)"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "4abx - 2axy - 12b2x + 6bxy = (4abx - 2axy) - (12b2x - 6bxy) = 2ax(2b - y) -6bx(2b - y) = (2ax - 6bx)(2b - y) = 2x(a - 3b)(2b - y)",
+   "year": 2003
   }
  ],
  "body": "JAMB",

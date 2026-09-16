@@ -1,0 +1,572 @@
+{
+ "code": "gcse-physics-bank",
+ "title": "GCSE Physics | Exam-Style Questions Bank (BBC Bitesize)",
+ "version": 1,
+ "questionCount": 40,
+ "totalMarks": 40,
+ "questions": [
+  {
+   "stem": "An atom of fluorine is represented in the diagram. What is the correct electron configuration for a fluorine atom?",
+   "options": {
+    "A": "8, 1",
+    "B": "2, 8, 8, 1",
+    "C": "2, 7",
+    "D": "2, 5, 2"
+   },
+   "id": "gcse-physics-bank-0001",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The correct electron configuration for a fluorine atom is 2,7 because every fluorine atom has nine electrons (as shown by the atomic number in the diagram). The first electron shell (energy level) can only hold two electrons, so the remaining seven electrons go into the second shell. Fluorine is in group 7 of the periodic table. Like all elements in group 7, its atoms each have 7 electrons in their outer shell. Electron configurations which have more than two electrons in the first shell are impossible. The electron configuration 2, 8, 8, 1 is for an atom which has 19 electrons in total. That "
+  },
+  {
+   "stem": "Which answer correctly identifies the substance and the type of bonding shown in the diagram?",
+   "options": {
+    "A": "Diamond - giant covalent structure",
+    "B": "Oxygen - small molecule covalent",
+    "C": "Sodium chloride - ionic",
+    "D": "Graphite - giant covalent structure",
+    "E": "Magnesium - metallic structure"
+   },
+   "id": "gcse-physics-bank-0002",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The diagram shows the giant covalent structure of graphite. Each carbon atom is bonded to three other carbon atoms by sharing electrons. There are weak forces between the layers, shown by the dotted lines. Diamond is another form of carbon, but each carbon atom is covalently bonded to four other carbon atoms. The structure of diamond is not in layers. Oxygen is made from small molecules and has the formula O2 which shows that there would be two atoms covalently bonded together in each molecule. Sodium chloride is an ionic compound, so it has a giant lattice structure made of oppositely charged"
+  },
+  {
+   "stem": "In which reaction would you expect to see an increase in mass during the experiment?",
+   "options": {
+    "A": "2Mg(s) + O₂(g) → 2MgO(s)",
+    "B": "CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H2O(l) + CO₂(g)",
+    "C": "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)",
+    "D": "2H₂O₂(aq) → 2H₂O(l) + O₂(g)"
+   },
+   "id": "gcse-physics-bank-0003",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The reaction between magnesium and oxygen will result in the magnesium gaining mass from the oxygen atoms which were in the air. When a gas is on the left of the equation and there are no gases on the right, the mass will usually increase. The reaction of calcium carbonate with hydrochloric acid will cause a decrease in mass because one of the products is a gas (carbon dioxide) and this will escape. The reaction of hydrochloric acid (HCl) with sodium hydroxide (NaOH) will not have any change in mass because there are no gaseous reactants or products. The decomposition of hydrogen peroxide will"
+  },
+  {
+   "stem": "Which statement about acids and alkalis is true?",
+   "options": {
+    "A": "Acidic solutions are made when metal oxides dissolve in water",
+    "B": "Acids have a pH of 7 or higher",
+    "C": "Acidic solutions contain lots of hydrogen ions and alkaline solutions contain lots of hydroxide ions",
+    "D": "Alkalis are made from insoluble bases mixed with water"
+   },
+   "id": "gcse-physics-bank-0004",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Acidic solutions contain lots of positively charged hydrogen ions, which helps to explain why they produce hydrogen gas if they react with a metal. Alkaline solutions contain lots of hydroxide ions. Acidic solutions are made when non-metal oxides dissolve in water. For example, sulfur dioxide dissolves to make a type of sulfuric acid. Acids have a pH of less than 7 on the pH scale. The lower the pH, the more acidic an acid is. Alkalis can be made by dissolving a solublebase into water."
+  },
+  {
+   "stem": "Which of the following is an example of a useful endothermic reaction?",
+   "options": {
+    "A": "A single use chemical ice pack for treating sports injuries",
+    "B": "A handwarmer",
+    "C": "A self-heating can containing food or drink",
+    "D": "Burning methane in a Bunsen burner"
+   },
+   "id": "gcse-physics-bank-0005",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Endothermic reactions absorb energy from the surroundings, so they often feel cold to the touch as the temperature of the surroundings decreases. A single use ice pack uses an endothermic reaction. Handwarmers, self-heating cans and combustion reactions all release energy into the surroundings, causing the temperature to increase, so they are all examples of exothermic reactions."
+  },
+  {
+   "stem": "The effect of temperature on the rate of a chemical reaction, that produces a cloudy solution, can be investigated using the method shown in the diagram.",
+   "options": {
+    "A": "Repeat each experiment five times, ignore any anomalous results and calculate a mean value for each temperature",
+    "B": "Use a greater volume of each reactant so that the mixture was deeper in the conical flask",
+    "C": "Shine a light through the liquid and use a light meter connected to a datalogger to stop the timer when the mixture has gone cloudy"
+   },
+   "id": "gcse-physics-bank-0006",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Using an electronic timer which is stopped by a light sensor would give more accurate results because it wouldn't be relying on a human to judge when the mixture has gone cloudy. Accurate results are close to the true value. Repeating an experiment, ignoring anomalies and calculating a mean is a way of reducing the effect of random errors, and checking that your results are repeatable. Using a greater volume of reactant would not affect the accuracy of the results."
+  },
+  {
+   "stem": "Crude oil is separated into useful fractions by fractional distillation. Why does heavy fuel oil condense near the bottom of the tower?",
+   "options": {
+    "A": "It has the highest viscosity so it is the slowest flowing liquid fraction",
+    "B": "It is the least flammable of the fractions",
+    "C": "It is present in the greatest proportion in crude oil",
+    "D": "It is made from very large molecules which have strong intermolecular forces, so its boiling point is high"
+   },
+   "id": "gcse-physics-bank-0007",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Heavy crude oil contains very large molecules, so the attractive forces between the molecules are strong, requiring a lot of energy to overcome them during boiling. This means that its boiling point is high, so it condenses near the bottom of the column where the temperature is high."
+  },
+  {
+   "stem": "Which of the following is not a formulation?",
+   "options": {
+    "A": "Sea water",
+    "B": "Moisturiser",
+    "C": "Diesel",
+    "D": "Steel",
+    "E": "Paint"
+   },
+   "id": "gcse-physics-bank-0008",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "A formulation is a mixture that has been designed as a useful product. Sea water occurs naturally, so it has not been designed by anyone. Moisturisers, fuels, paints, medicines and alloys (like steel) are all examples of mixtures that have been designed by scientists by mixing the components in carefully measured quantities to ensure that the formulation has the required properties."
+  },
+  {
+   "stem": "Which of the following is a greenhouse gas?",
+   "options": {
+    "A": "Nitrogen",
+    "B": "Oxygen",
+    "C": "Argon",
+    "D": "Methane"
+   },
+   "id": "gcse-physics-bank-0009",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Greenhouse gases in the Earth's atmosphere absorb infrared radiation emitted by the Earth and keep the atmosphere warm. The three main greenhouse gases are carbon dioxide, methane and water vapour. Methane is released by cattle farming and growing rice in paddy fields. Nitrogen, oxygen and argon are all present in the atmosphere, but none of them are greenhouse gases."
+  },
+  {
+   "stem": "The table shows some information from a life cycle assessment for plastic cups and paper cups. Which of the statements below is correct?",
+   "options": {
+    "A": "Making 1000 paper cups uses 67% more energy than making 1000 plastic cups",
+    "B": "Paper cups are made from a finite resource",
+    "C": "Five times more water is needed to make 1000 paper cups than 1000 plastic cups",
+    "D": "Recycling paper cups is easier than recycling plastic cups"
+   },
+   "id": "gcse-physics-bank-0010",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "The difference between 300 MJ and 500 MJ is 200 MJ. To express 200 as a percentage of 300, we would divide 200 by 300 and then multiply the answer by 100. This gives the answer 67%. Making 1000 paper cups uses 67% more energy than making 1000 plastic cups. To calculate a percentage increase, you need to express the difference between the two values as a percentage of the lower amount. Paper is made from wood which is a renewable resource. Crude oil is a finite resource because it is being used up more quickly than it can be replenished. Making paper cups uses four times more water than making "
+  },
+  {
+   "stem": "The circuit above contains a battery, lamp, variable resistor, ammeter and voltmeter. Choose the correct statement to describe how the ammeter and voltmeter are connected.",
+   "options": {
+    "A": "Both the ammeter and voltmeter are connected in series",
+    "B": "The ammeter is connected in series and the voltmeter is connected in parallel",
+    "C": "Both the ammeter and voltmeter are connected in parallel",
+    "D": "The voltmeter is connected in series and the ammeter is connected in parallel"
+   },
+   "id": "gcse-physics-bank-0011",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Ammeters measure the current flowing through the circuit, and they are connected in series - in the same loop as all the other components. Voltmeters measure the potential difference between two points in a circuit, and they are connected in parallel - on their own separate loop or branch of the circuit. Option 1 is incorrect because voltmeters must be connected in parallel. Option 3 is incorrect because ammeters must be connected in series. Option 4 is incorrect because ammeters must be connected in series and voltmeters must be connected in parallel."
+  },
+  {
+   "stem": "The reading on the ammeter is 240 mA. What is this current in amps?",
+   "options": {
+    "A": "0.24 A",
+    "B": "24 A",
+    "C": "0.024 A",
+    "D": "240,000 A"
+   },
+   "id": "gcse-physics-bank-0012",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "One milliamp (1 mA) is one thousandth of an amp, which is a very small current. This means there are one thousand milliamps in one amp, so the current will be smaller when expressed in amps. To convert it from milliamps to amps, divide the value by the conversion factor of 1000. Therefore, the current in amps = 240 mA ÷ 1000 = 0.24 A Option 2 is incorrect because the current in mA has been divided by 10, instead of 1000 Option 3 is incorrect because the current in mA has been divided by 10000, instead of 1000 Option 4 is incorrect because the current in mA has been multiplied by 1000, instead "
+  },
+  {
+   "stem": "What would happen to the size of the current and the brightness of the lamp if the resistance of the variable resistor was increased?",
+   "options": {
+    "A": "The current would increase and the lamp would get brighter",
+    "B": "The current would decrease and the lamp would get brighter",
+    "C": "The current would decrease and the lamp would get dimmer",
+    "D": "The current would increase and the lamp would get dimmer"
+   },
+   "id": "gcse-physics-bank-0013",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Increasing the resistance in the circuit will reduce the current, causing the lamp to become dimmer. This means the variable resistor can be adjusted to change the brightness of the lamp - like a dimmer switch can be used to control the brightness of the lights in a building. Option 1 is incorrect because increasing the resistance would decrease the current, not increase it. This would cause the lamp to become dimmer, not brighter. Option 2 is incorrect because the current decreasing would cause the lamp to become dimmer, not brighter. Option 4 is incorrect because increasing the resistance wo"
+  },
+  {
+   "stem": "The image above shows a transverse wave. What is the amplitude of the wave?",
+   "options": {
+    "A": "0.6 m",
+    "B": "0.25 m",
+    "C": "0.125 m",
+    "D": "0.3 m"
+   },
+   "id": "gcse-physics-bank-0014",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The amplitude of the wave is the distance from a peak or trough to the rest position (the horizontal line, midway between the peaks and troughs). The diagram shows that the difference between the highest point on the wave (a peak) and the lowest point on the wave (a trough) is 0.6 m, so the amplitude is half this amount: 0.3 m. Option 1 is incorrect because it gives the difference between the height of the peaks and troughs. The amplitude of a wave is measured from the rest position to the peak, so is half of this value - 0.3 m. Option 3 is incorrect because it gives the distance from a peak t"
+  },
+  {
+   "stem": "What is the wavelength of the transverse wave above?",
+   "options": {
+    "A": "0.25 m",
+    "B": "0.5 m",
+    "C": "0.6 m",
+    "D": "0.75 m"
+   },
+   "id": "gcse-physics-bank-0015",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "This can be measured between any two adjacent peaks or troughs. The second peak in the diagram is at 0.25 m and the third peak is at 0.5 m, so the wavelength is the difference between these distances: Wavelength = 0.5 - 0.25 = 0.25 m Option 2 is incorrect because it gives the distance covered by two complete wave cycles - so this number needs to be halved to give the wavelength. Option 3 is incorrect because it gives the difference between the height of the peaks and troughs. The amplitude of a wave is measured from the rest position to the peak, so is half of this value - 0.3 m. Option 4 is i"
+  },
+  {
+   "stem": "The circuit above contains a cell, ammeter and voltmeter. Which other component is shown?",
+   "options": {
+    "A": "A motor",
+    "B": "A light-emitting diode (LED)",
+    "C": "A thermistor",
+    "D": "A resistor"
+   },
+   "id": "gcse-physics-bank-0016",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "The other component in the circuit is a resistor, and the symbol used to represent this component is a rectangle."
+  },
+  {
+   "stem": "The lamp in the circuit below has a resistance of 20 Ω, and the voltmeter shows that there is a potential difference of 4.2 V across it.",
+   "options": {
+    "A": "15.8 A",
+    "B": "0.21 A",
+    "C": "84 A",
+    "D": "24.2 A"
+   },
+   "id": "gcse-physics-bank-0017",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The current flowing through the circuit can be calculated by rearranging the equation to make I (current) the subject, and then substituting the correct values of resistance and potential difference into the formula: I = V ÷ R I = 4.2 ÷ 20 I = 0.21 A Option 1 is incorrect because the potential difference has been subtracted from the resistance, instead of divided by the resistance. Option 3 is incorrect because the potential difference has been multiplied by the resistance, instead of divided by the resistance. Option 4 is incorrect because the potential difference has been added to the resist"
+  },
+  {
+   "stem": "The diagram shows the nuclear model of the atom. What does label B show?",
+   "options": {
+    "A": "The nucleus",
+    "B": "An electron",
+    "C": "A neutron",
+    "D": "An electron shell"
+   },
+   "id": "gcse-physics-bank-0018",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The nucleus is in the centre of the atom, and it contains protons and neutrons. The electrons orbit in \"shells\" around the nucleus. The blue circles represent neutrons, as shown by the labels. Option 1 is incorrect because the central part of the atom, indicated by label A, shows the nucleus. Option 2 is incorrect because the small red circles, indicated by label C, represent electrons. The blue circles, indicated by label B, represent neutrons. Option 4 is incorrect because elctron shells are represented by the large black rings surrounding the nucleus and only contain electrons."
+  },
+  {
+   "stem": "The diagram shows the nuclear model of the atom. How can you tell this is a neutral atom, and not an ion?",
+   "options": {
+    "A": "It has equal numbers of protons and neutrons",
+    "B": "It has equal numbers of neutrons and electrons",
+    "C": "It has equal numbers of protons and electrons",
+    "D": "It has equal numbers of protons, neutrons and electrons"
+   },
+   "id": "gcse-physics-bank-0019",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Neutral atoms contain equal numbers of positively charged protons and negatively charged electrons. This means the charges cancel out and the atom has no overall charge - it is electrically neutral. Option 1 is incorrect because neutrons do not have a charge, so do not cancel out the charge of the protons. Option 2 is incorrect because neutrons do not have a charge, so do not cancel out the charge of the electrons. Option 4 is incorrect because neutrons do not have a charge. The number of protons and electrons must be equal, so the charges cancel out, in a neutral atom."
+  },
+  {
+   "stem": "The graph shows the journey of a student walking to a physics lesson. Identify all the sections of the graph in which the student is stationary.",
+   "options": {
+    "A": "Section B",
+    "B": "Sections B and D",
+    "C": "Section D",
+    "D": "Sections A and C"
+   },
+   "id": "gcse-physics-bank-0020",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "In sections B and D, the distance is not changing - so the student is stationary. The sloped sections of the line show that the distance is changing - so the student is moving in sections A and C. Option 1 is incorrect because the student is also stationary in section D. Option 3 is incorrect because the student is also stationary in section B. Option 4 is incorrect because the student is moving in sections A and C - they are stationary in sections B and D."
+  },
+  {
+   "stem": "Figure 1 shows the population pyramid for the United Kingdom (UK) in 2018.",
+   "options": {
+    "A": "There are more people below the age of 10",
+    "B": "There are more people over the age of 75",
+    "C": "There are more people aged 80 than people aged 70",
+    "D": "There are more women than men over the age of 90"
+   },
+   "id": "gcse-physics-bank-0021",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "In 2018, there were more women than men over the age of 90 Men are shown on the left and women are shown on the right. The age ranges go from the youngest age groups at the bottom to the oldest age groups at the top. The very top bar, which shows 90+ years, has more women than men."
+  },
+  {
+   "stem": "Study the image above, which shows push and pull factors for migration.",
+   "options": {
+    "A": "Negative things about the place a migrant is leaving",
+    "B": "Positive things about the place a migrant is travelling to",
+    "C": "Barriers that make it more difficult for people to migrate",
+    "D": "Support that people receive to help them to migrate"
+   },
+   "id": "gcse-physics-bank-0022",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Pull factors are positive things that attract migrants. Examples are greater security, a more pleasant environment or better job opportunities."
+  },
+  {
+   "stem": "The image above shows ten of the largest cities in the world for the year 2022.",
+   "options": {
+    "A": "They are mostly to the west of the Prime Meridian",
+    "B": "They are mostly all inland",
+    "C": "They are mostly all close to the coast",
+    "D": "They are mostly in the Southern Hemisphere"
+   },
+   "id": "gcse-physics-bank-0023",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Many of the world's largest cities are close to the coast. In the past, many cities grew in coastal locations as they were accessible. In modern times, coastal locations are still important for trade. Most of the cities in the image are to the east of the Prime Meridian, which runs through Greenwich in London. Only Jakarta lies to the south of the Equator."
+  },
+  {
+   "stem": "What is rural to urban migration?",
+   "options": {
+    "A": "People moving across borders between countries",
+    "B": "People moving from the countryside to the city",
+    "C": "People moving from the city to the countryside",
+    "D": "People being forced to leave their homes"
+   },
+   "id": "gcse-physics-bank-0024",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Rural to urban migration takes place when people move from the countryside to the city. This can increase the population of urban areas. In some countries, rural to urban migration leads to the growth of informal settlements."
+  },
+  {
+   "stem": "Figure 4 shows some of the UK's cities.",
+   "options": {
+    "A": "There are more cities in Northern Ireland than Scotland",
+    "B": "There are more cities in England than Wales",
+    "C": "Most UK cities are coastal",
+    "D": "There are more cities in the North than the South"
+   },
+   "id": "gcse-physics-bank-0025",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "There are more cities in England than Wales. Welsh cities include Cardiff and Swansea. Scottish cities include Glasgow and Aberdeen. Belfast is a city in Northern Ireland."
+  },
+  {
+   "stem": "Cities in developing or emerging countries can offer many opportunities for the people who live in them.",
+   "options": {
+    "A": "Better healthcare",
+    "B": "Higher wages",
+    "C": "Better living conditions",
+    "D": "Access to an education"
+   },
+   "id": "gcse-physics-bank-0026",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "One economic opportunity of living in cities in developing or emerging countries is the chance to earn higher wages. Economic opportunities are those that make people wealthier. Better healthcare and living conditions, and access to an education are social opportunities."
+  },
+  {
+   "stem": "Study Figure 5, which shows an informal settlement in Brazil.",
+   "options": {
+    "A": "Overcrowding",
+    "B": "Disease",
+    "C": "Lack of jobs",
+    "D": "Crime"
+   },
+   "id": "gcse-physics-bank-0027",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "One challenge of living in informal settlements like those shown in Figure 5 is overcrowding. Disease, lack of jobs and crime may also be challenges, but they are not shown in Figure 5."
+  },
+  {
+   "stem": "Figure 6 shows a photograph of BedZED eco-village in Surrey. Eco-villages are sustainable settlements.",
+   "options": {
+    "A": "Good public transport facilities",
+    "B": "Extra car parking spaces",
+    "C": "Paved driveways for every home",
+    "D": "Making sure that schools and workplaces are far away from homes"
+   },
+   "id": "gcse-physics-bank-0028",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Good public transport is one feature of a sustainable settlement. This means that fewer people will drive cars. Sustainable cities also have amenities, such as schools and workplaces, within walking distance."
+  },
+  {
+   "stem": "Figure 7 shows surgeons performing an operation in a hospital.",
+   "options": {
+    "A": "Primary",
+    "B": "Secondary",
+    "C": "Tertiary",
+    "D": "Quaternary"
+   },
+   "id": "gcse-physics-bank-0029",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Surgeons work in the tertiary sector of industry. Tertiary jobs involve the selling of services and skills. Other examples of tertiary jobs include teachers and hairdressers."
+  },
+  {
+   "stem": "Study Figure 8, which shows the UK's employment structure from Pre- to Post-industrial times. Employment structure is the percentage of people employed in each type of job.",
+   "options": {
+    "A": "Primary",
+    "B": "Secondary",
+    "C": "Tertiary",
+    "D": "Quaternary"
+   },
+   "id": "gcse-physics-bank-0030",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Primary employment has decreased the most between Pre- and Post-industrial times. During pre-industrial times, 70 per cent of all workers were employed in primary jobs. In post-industrial times only 10 per cent of people work in primary jobs. Primary jobs include farming, quarrying and forestry. Much of this work is now carried out using machinery."
+  },
+  {
+   "stem": "The diagram above shows the carbon cycle. Select the statement below which is supported by this diagram.",
+   "options": {
+    "A": "Photosynthesis releases carbon dioxide to the atmosphere",
+    "B": "Respiration helps to remove carbon from the atmosphere",
+    "C": "When organisms die they take in carbon from the atmosphere",
+    "D": "Transportation and factory emissions release carbon into the atmosphere"
+   },
+   "id": "gcse-physics-bank-0031",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Transportation and factory emissions release carbon into the atmosphere when fossil fuels are burnt. Photosynthesis uses carbon dioxide, removing it from the atmosphere, whereas carbon dioxide is produced by respiration, releasing it back into the atmosphere. Dead organisms contain carbon but it is mainly trapped in the ground; some is released into the atmosphere as the organisms decompose."
+  },
+  {
+   "stem": "Communities of organisms are affected by both biotic and abiotic factors. Select which one of these is a biotic factor.",
+   "options": {
+    "A": "Intensity of light",
+    "B": "Arrival of new predators",
+    "C": "Soil pH",
+    "D": "Moisture levels"
+   },
+   "id": "gcse-physics-bank-0032",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Biotic factors are living factors - the only living factor in the list above is a predator. Abiotic factors are non-living factors such as light intensity, soil pH and moisture levels."
+  },
+  {
+   "stem": "When a person exercises, a number of things change in their body. Select which one of these remains unaffected by exercise.",
+   "options": {
+    "A": "Heart rate",
+    "B": "Volume of blood",
+    "C": "Depth of breathing",
+    "D": "Breathing rate"
+   },
+   "id": "gcse-physics-bank-0033",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The volume of blood in the body does not change during exercise. When a person exercises the body needs more oxygen so they breathe deeper (inhale a greater volume of air per breath), and more rapidly. This adds oxygen more rapidly to the bloodstream. Their heart beats faster, so the blood transports the oxygen to cells at a greater rate."
+  },
+  {
+   "stem": "Which of these is a test for oxygen gas?",
+   "options": {
+    "A": "The gas will relight a glowing splint",
+    "B": "The gas will burn with a squeaky pop",
+    "C": "The gas will turn lime water milky",
+    "D": "The gas bleaches litmus paper, turning it white"
+   },
+   "id": "gcse-physics-bank-0034",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Oxygen will cause a glowing splint to relight. It is hydrogen that burns with a squeaky pop, and chlorine that bleaches litmus paper white. When bubbling carbon dioxide through lime water, the lime water will turn milky."
+  },
+  {
+   "stem": "An experiment is set up to separate a mixture of two different coloured liquids using chromatography. The liquids are dissolved in a solvent which rises up the chromatography paper. In 30 minutes the solvent rises 10cm, liquid A rises 6 cm and liquid B rises 5 cm. The Rf value is the ratio of the distance travelled by the substance to the distance travelled by the solvent.Which of these is the correct Rf value for liquid A?",
+   "options": {
+    "A": "0.50",
+    "B": "0.60",
+    "C": "0.83",
+    "D": "1.66"
+   },
+   "id": "gcse-physics-bank-0035",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "The Rf value is calculated from: Rf = Distance moved by the substance ÷ distance moved by the solventSo, for liquid A: Rf = 6 ÷ 10 Rf = 0.6"
+  },
+  {
+   "stem": "Select which one of the following is true about the complete combustion of a hydrocarbon.",
+   "options": {
+    "A": "Energy is absorbed",
+    "B": "Carbon dioxide is one of the reactants",
+    "C": "Carbon dioxide and water are the products",
+    "D": "Water is one of the reactants"
+   },
+   "id": "gcse-physics-bank-0036",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "When a hydrocarbon is burnt, the products are carbon dioxide and water. The reaction is exothermic, and so energy is released to the surroundings in this reaction."
+  },
+  {
+   "stem": "A catalyst is used to alter the rate of a reaction without being used up itself. Select which one of these statements is true.",
+   "options": {
+    "A": "Using a catalyst has no effect on the activation energy required for the reaction to occur",
+    "B": "Using a catalyst increases the activation energy required for the reaction to occur",
+    "C": "Using a catalyst reduces the activation energy required for the reaction to occur",
+    "D": "Using a catalyst increases the energy released in the reaction"
+   },
+   "id": "gcse-physics-bank-0037",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "C",
+   "explanation": "A catalyst makes the reaction work faster by reducing the activation energy required for the reaction. This is because a greater proportion of collisions between reacting molecules are 'successful'."
+  },
+  {
+   "stem": "A football is kicked by a goalkeeper and rises high in its flight before returning to the ground. The ball has a mass of 0.4 kg and the maximum height it reaches is 25 m. Calculate the gravitational potential energy of the ball at the highest point. g = 10 N/kg.Use the formula:Gravitational potential energy = mass × gravitational field strength × height",
+   "options": {
+    "A": "1 J",
+    "B": "4 J",
+    "C": "10 J",
+    "D": "100 J"
+   },
+   "id": "gcse-physics-bank-0038",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Ep = m × g × h Ep = 0.4 × 10 × 250 Ep = 100 J"
+  },
+  {
+   "stem": "A potential difference is applied across a resistor, to cause a current to flow through it. If the potential difference is doubled, which one of the following statements is true?",
+   "options": {
+    "A": "The current flowing through the resistor is halved",
+    "B": "The current flowing through the resistor is doubled",
+    "C": "The current flowing through the resistor remains the same",
+    "D": "The resistance of the resistor is doubled"
+   },
+   "id": "gcse-physics-bank-0039",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Using the equation V = I x R, we can see that, if R is constant, V is directly proportional to I. Therefore if the potential difference is doubled then the current will double as well. We know this even though we haven't been told the actual values for any of the variables."
+  },
+  {
+   "stem": "Below are four variables which can all be measured. Select the one that is a vector quantity",
+   "options": {
+    "A": "Temperature",
+    "B": "Force",
+    "C": "Mass",
+    "D": "Energy"
+   },
+   "id": "gcse-physics-bank-0040",
+   "type": "mcq",
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Vector quantities have direction as well as magnitude. Force has direction as well as magnitude so it is a vector. When a force is described, its direction should be included as well as its size (magnitude). Temperature, mass and energy only have a magnitude, and so are scalar quantities."
+  }
+ ],
+ "body": "GCSE",
+ "category": "secondary"
+}

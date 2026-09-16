@@ -2,8 +2,8 @@
  "code": "jamb-physics-bank",
  "title": "JAMB Physics | Past Questions Bank",
  "version": 3,
- "questionCount": 2761,
- "totalMarks": 2761,
+ "questionCount": 2830,
+ "totalMarks": 2830,
  "questions": [
   {
    "id": "jamb-physics-bank-0061",
@@ -39803,6 +39803,1045 @@
    "answer": "C",
    "explanation": "<p>M= 3kg, r = 0.7m, v = 2m/s<br />\r\n<br />\r\nv = wr<br />\r\n<br />\r\nw = angular velocity<br />\r\n<br />\r\nr = radius in an tangential circular<br />\r\n<br />\r\nv = speed of an object<br />\r\n<br />\r\nW = V/&delta; = 2/ 0.7 = 2.85<br />\r\n<br />\r\nW = 2.853rads&ndash;1 (total interest whole number)<br />\r\n<br />\r\nW = &amp;approx.; 3rads&ndash;1Angular velocity (w) = 3rads&ndash;1</p>",
    "video": "https://www.youtube.com/embed/jbvvzEdo49I?start=1227"
+  },
+  {
+   "id": "jamb-physics-bank-2837",
+   "type": "mcq",
+   "stem": "The quantity of heat energy required to melt completely 1 kg of ice at -30 °C is [latent heat of fusion = 3.5 × 10⁵ J kg⁻¹, specific heat capacity of ice = 2.1 × 10³ J kg⁻¹ K⁻¹]",
+   "options": {
+    "A": "4.13 × 10⁶ J",
+    "B": "4.13 × 10⁵ J",
+    "C": "3.56 × 10⁴ J",
+    "D": "3.56 × 10² J"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Mass of ice, m = 1 kg Initial temperature of ice = -30 °C Final temperature of ice = 0 °C (melting point) Temperature change, Δθ = 30 °C = 30 K (since a change of 1 °C = 1 K) Specific heat capacity of ice, cᵢ = 2.1 × 10³ J kg⁻¹ K⁻¹ Latent heat of fusion of ice, L = 3.5 × 10⁵ J kg⁻¹ Solution: Step 1: Heat to raise temperature of ice from -30 °C to 0 °C Q₁ = m × cᵢ × Δθ Q₁ = 1 kg × (2.1 × 10³ J kg⁻¹ K⁻¹) × 30 K Q₁ = 2.1 × 10³ × 30 = 63 000 J = 6.3 × 10⁴ J Step 2: Heat to melt ice at 0 °C Q₂ = m × L Q₂ = 1 kg × (3.5 × 10⁵ J kg⁻¹) = 3.5 × 10⁵ J Step 3: Total heat required Q = Q₁",
+   "year": 2012
+  },
+  {
+   "id": "jamb-physics-bank-2838",
+   "type": "mcq",
+   "stem": "The equation of a wave traveling along the positive x-direction is given by: y = 0.25 × 10⁻³ sin(500t - 0.025x). Determine the angular velocity of the wave motion.",
+   "options": {
+    "A": "0.25 × 10⁻³ rad s⁻¹",
+    "B": "0.25 × 10⁻¹ rad s⁻¹",
+    "C": "5.00 × 10² rad s⁻¹",
+    "D": "2.50 × 10³ rad s⁻¹"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given wave equation: y = 0.25 × 10⁻³ sin(500t - 0.025x) Standard form of wave equation: y = A sin(ωt - kx) where: A = amplitude ω = angular velocity (angular frequency) k = wave number t = time x = position Comparing the given equation with standard form: y = 0.25 × 10⁻³ sin(500t - 0.025x) y = A sin(ωt - kx) Identifying parameters: Amplitude (A) = 0.25 × 10⁻³ m Angular velocity (ω) = 500 rad/s Wave number (k) = 0.025 rad/m Converting to scientific notation: ω = 500 rad/s = 5.00 × 10² rad s⁻¹",
+   "year": 2021
+  },
+  {
+   "id": "jamb-physics-bank-2839",
+   "type": "mcq",
+   "stem": "A train has an initial velocity of 44 m/s and an acceleration of -4 m/s². Calculate its velocity after 10 seconds.",
+   "options": {
+    "A": "10 m/s",
+    "B": "6 m/s",
+    "C": "8 m/s",
+    "D": "4 m/s"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Initial velocity, u = 44 m/s Acceleration, a = -4 m/s² Time, t = 10 s Formula: v = u + a * t Calculation: v = 44 + (-4) * 10 v = 44 - 40 v = 4 m/s",
+   "year": 2019
+  },
+  {
+   "id": "jamb-physics-bank-2840",
+   "type": "mcq",
+   "stem": "Two long parallel wires X and Y carry currents 3A and 5A each. If the force experienced by unit length is 5 × 10⁻⁵N, the force per unit length experienced by wire Y is",
+   "options": {
+    "A": "3 × 10⁻⁵ N/m",
+    "B": "3 × 10⁻⁶ N/m",
+    "C": "5 × 10⁵ N/m",
+    "D": "5 × 10⁻⁵ N/m"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Force per unit length experienced = 5 × 10⁻⁵ N/m Since the forces are equal and opposite (Newton's Third Law): Force per unit length on wire X = 5 × 10⁻⁵ N/m Force per unit length on wire Y = 5 × 10⁻⁵ N/m",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2841",
+   "type": "mcq",
+   "stem": "A gas at a pressure of 10⁵ Nm⁻² expands from 0.6 m³ to 1.2 m³ at constant temperature, the work done is",
+   "options": {
+    "A": "7.0 × 10⁶ J",
+    "B": "6.0 × 10⁶ J",
+    "C": "6.0 × 10⁵ J",
+    "D": "6.0 × 10⁴ J"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Initial pressure (P₁) = 10⁵ N/m² = 10⁵ Pa Initial volume (V₁) = 0.6 m³ Final volume (V₂) = 1.2 m³ Temperature = constant (isothermal process) Work done (W) = ? W = P₁ × ΔV = 10⁵ × 0.6 = 6.0 × 10⁴ J",
+   "year": 2013
+  },
+  {
+   "id": "jamb-physics-bank-2842",
+   "type": "mcq",
+   "stem": "118.8 cm² surface of the copper cathode of a voltameter is to be coated with 10⁻⁶ m thick copper of density 9 × 10³ kg m⁻³. How long will the process run with 10 A constant current? [3.3 × 10⁻⁷ kg C⁻¹]",
+   "options": {
+    "A": "0.54 min",
+    "B": "10.8 min",
+    "C": "15.0 min",
+    "D": "20.0 min"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Surface area (A) = 118.8 cm² = 118.8 × 10⁻⁴ m² = 0.01188 m² Thickness (t) = 10⁻⁶ m Density of copper (ρ) = 9 × 10³ kg/m³ Current (I) = 10 A Electrochemical equivalent (Z) = 3.3 × 10⁻⁷ kg/C Time = ? Step 1: Calculate volume of copper to be deposited Volume = Area × Thickness V = 0.01188 × 10⁻⁶ V = 1.188 × 10⁻⁸ m³ Step 2: Calculate mass of copper required Mass = Density × Volume m = ρV m = 9 × 10³ × 1.188 × 10⁻⁸ m = 10.692 × 10⁻⁵ m = 1.0692 × 10⁻⁴ kg Step 3: Use Faraday's law of electrolysis Mass deposited: m = ZIt Rearranging for time: t = m/(ZI) Substituting values: t = (1.0",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2843",
+   "type": "mcq",
+   "stem": "If the frequency of an emitted x-ray is 1.6 × 10¹⁶ Hz, the accelerating potential is? [e = 1.6 × 10⁻¹⁹ C, h = 6.63 × 10⁻³⁴ Js]",
+   "options": {
+    "A": "6630.0V",
+    "B": "663.0V",
+    "C": "66.3V",
+    "D": "6.6V"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Frequency of x-ray (f) = 1.6 × 10¹⁶ Hz Planck's constant (h) = 6.63 × 10⁻³⁴ Js Charge of electron (e) = 1.6 × 10⁻¹⁹ C Accelerating potential (V) = ? Principle: When electrons are accelerated through a potential V, they gain kinetic energy that is converted to x-ray photon energy: Energy of electron = Energy of x-ray photon eV = hf Rearranging to find V: V = hf/e Substituting values: V = (6.63 × 10⁻³⁴ × 1.6 × 10¹⁶) / (1.6 × 10⁻¹⁹) V = (6.63 × 1.6 × 10⁻³⁴⁺¹⁶) / (1.6 × 10⁻¹⁹) V = (10.608 × 10⁻¹⁸) / (1.6 × 10⁻¹⁹) V = (10.608 / 1.6) × 10⁻¹⁸⁺¹⁹ V = 6.63 × 10¹ V = 66.3 V",
+   "year": 2021
+  },
+  {
+   "id": "jamb-physics-bank-2844",
+   "type": "mcq",
+   "stem": "In the figure above, the work done by the force of 100N inclined at an angle of 60° to the object dragged horizontally to a distance of 8m is",
+   "options": {
+    "A": "800J",
+    "B": "600J",
+    "C": "100J",
+    "D": "400J"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Applied force, F = 100 N Angle with horizontal, θ = 60° Horizontal displacement, d = 8 m Solution: Step 1: Formula for work done Work done: W = F × d × cos θ Where: F = applied force d = displacement θ = angle between force and displacement Step 2: Identify horizontal component of force Since the object moves horizontally, only the horizontal component of the force does work: Horizontal component = F cos θ = 100 cos 60° Step 3: Calculate cos 60° cos 60° = 0.5 Step 4: Calculate work done W = F × d × cos θ W = 100 × 8 × cos 60° W = 100 × 8 × 0.5 W = 800 × 0.5 W = 400 J",
+   "year": 2005,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1774296737/ALOC-Questions/Physics/2005/PHYSICS_2005_Q_37_jm6nny.png"
+  },
+  {
+   "id": "jamb-physics-bank-2845",
+   "type": "mcq",
+   "stem": "Calculate the specific latent heat of vaporization of steam if 1.13 × 10⁶ J of heat energy is required to convert 15kg of steam to water.",
+   "options": {
+    "A": "7.53 × 10⁵ Jkg⁻¹",
+    "B": "7.53 × 10⁻² Jkg⁻¹",
+    "C": "7.53 × 10⁴ Jkg⁻¹",
+    "D": "7.53 × 10⁻³ Jkg⁻¹"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Heat energy (Q) = 1.13 × 10⁶ J Mass of steam (m) = 15 kg Specific latent heat of vaporization (L) = ? Formula: Q = mL Rearranging to find L: L = Q/m Substituting values: L = (1.13 × 10⁶)/15 L = 0.0753 × 10⁶ L = 7.53 × 10⁴ J/kg",
+   "year": 2017
+  },
+  {
+   "id": "jamb-physics-bank-2846",
+   "type": "mcq",
+   "stem": "How much joules of heat are given out when a piece of iron, of mass 60g and specific heat capacity 460JKg⁻¹K⁻¹, cools from 75ºC to 35ºC",
+   "options": {
+    "A": "1000J",
+    "B": "1050J",
+    "C": "1067J",
+    "D": "1104J"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Mass, m = 60 g = 0.06 kg Specific heat capacity, c = 460 J/(kg·K) Initial temperature, T₁ = 75°C Final temperature, T₂ = 35°C Heat given out, Q = ? Solution: Step 1: Calculate temperature change ΔT = T₁ - T₂ ΔT = 75 - 35 ΔT = 40°C = 40 K Step 2: Apply heat energy formula Q = mcΔT Step 3: Substitute the known values Q = 0.06 × 460 × 40 Step 4: Calculate heat given out Q = 0.06 × 460 × 40 Q = 27.6 × 40 Q = 1104 J",
+   "year": 2024
+  },
+  {
+   "id": "jamb-physics-bank-2847",
+   "type": "mcq",
+   "stem": "What type of reaction is represented by the following scheme? ²¹X + ²¹Y → ³²Z + ¹⁰n + energy",
+   "options": {
+    "A": "Fusion reaction",
+    "B": "Fission reaction",
+    "C": "Chain reaction",
+    "D": "Radioactive decay"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Analyzing the reaction: Reactants: Two light nuclei: ²¹X and ²¹Y Products: One heavier nucleus: ³²Z Neutrons: ¹⁰n Energy released Characteristics observed: Two lighter nuclei combine to form a heavier nucleus Energy is released Mass numbers: 21 + 21 ≈ 32 + 10 (conserved) This is a fusion reaction where two light nuclei (²¹X and ²¹Y) combine to form a heavier nucleus (³²Z) with the release of neutrons and energy.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-physics-bank-2848",
+   "type": "mcq",
+   "stem": "A car moves with an initial velocity of 25 ms⁻¹ and reaches a velocity of 45 ms⁻¹ in 10s. What is the acceleration of the car?",
+   "options": {
+    "A": "2 ms⁻²",
+    "B": "5 ms⁻²",
+    "C": "20 ms⁻²",
+    "D": "25 ms⁻²"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Initial velocity (u) = 25 m/s Final velocity (v) = 45 m/s Time (t) = 10 s Acceleration (a) = ? Formula for acceleration: a = (v - u)/t Substituting values: a = (45 - 25)/10 a = 20/10 a = 2 m/s²",
+   "year": 2010
+  },
+  {
+   "id": "jamb-physics-bank-2849",
+   "type": "mcq",
+   "stem": "5 X 10⁻³kg of liquid at its boiling point is evaporated in 20s by the heat generated by a resistor of 2Ω when a current of 10A is used. The specific latent heat of vaporization of the liquid is",
+   "options": {
+    "A": "8.0 x 10⁴Jkg⁻¹",
+    "B": "8.0 x 10⁵Jkg⁻¹",
+    "C": "8.0 x 10⁶Jkg⁻¹",
+    "D": "8.0 x 10⁷Jkg⁻¹"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Mass of liquid, m = 5 × 10⁻³ kg Time, t = 20 s Resistance, R = 2 Ω Current, I = 10 A Specific latent heat of vaporization, L = ? Solution: Step 1: Calculate heat generated by resistor Heat generated by electrical resistance: Q = I²Rt Q = (10)² × 2 × 20 Q = 100 × 2 × 20 Q = 4000 J Step 2: Apply latent heat formula Heat required for vaporization: Q = mL L = Q/m Step 3: Substitute values L = 4000/(5 × 10⁻³) L = 4000/0.005 L = 800,000 J/kg L = 8.0 × 10⁵ J/kg",
+   "year": 2024
+  },
+  {
+   "id": "jamb-physics-bank-2850",
+   "type": "mcq",
+   "stem": "A boy standing some distance from the foot of a tall cliff claps his hands and hears an echo 0.5s later. If the speed of sound is 340ms⁻¹, how far is he from the cliff?",
+   "options": {
+    "A": "680m",
+    "B": "170m",
+    "C": "34m",
+    "D": "85m"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Time for echo = 0.5 s Speed of sound (v) = 340 m/s Distance to cliff = ? Understanding echo: Sound travels from boy to cliff and back to boy Total distance = 2 × distance to cliff Time given is for the round trip Step 1: Calculate total distance traveled by sound Total distance = Speed × Time Total distance = 340 × 0.5 Total distance = 170 m Step 2: Calculate distance to cliff Since sound travels to the cliff and back: Distance to cliff = Total distance / 2 Distance to cliff = 170 / 2 Distance to cliff = 85 m",
+   "year": 2021
+  },
+  {
+   "id": "jamb-physics-bank-2851",
+   "type": "mcq",
+   "stem": "In an experiment in which molten naphthalene is allowed to cool, the cooling curve in the figure was obtained. The temperature 80°C is known as the",
+   "options": {
+    "A": "Cooling temperature",
+    "B": "Boiling point",
+    "C": "Melting point",
+    "D": "Vaporization point"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Understanding the cooling curve: From the graph: Temperature starts at ~100°C Drops rapidly to ~80°C Remains constant at 80°C for several minutes (flat horizontal section) Then continues dropping below 80°C What happens at the flat section: The horizontal plateau at 80°C indicates a phase change is occurring: Temperature remains constant while naphthalene changes from liquid to solid During solidification, latent heat is released This heat release keeps temperature constant until all liquid has solidified Identifying the temperature: The temperature at which a substance changes from liquid to ",
+   "year": 2020,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1765612725/ALOC-Questions/Physics/2020/PHYSICS_2020_Q_34_giruq4.jpg"
+  },
+  {
+   "id": "jamb-physics-bank-2852",
+   "type": "mcq",
+   "stem": "Which of the statements about machines are true? I. Work done by load is always less than the work done by effort. II. All machines are made of levers, pulleys, screws and gear wheels. III. A fishing rod is a machine. IV. Effort is always larger than load.",
+   "options": {
+    "A": "II and III",
+    "B": "III and IV",
+    "C": "I and III",
+    "D": "II and IV"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "I. Work done by load is always less than the work done by effort. This statement is generally true for all machines because some of the work done by the effort is used to overcome friction and other resistive forces in the machine. III. A fishing rod is a machine. This statement is true as a fishing rod is a simple machine that uses a lever to catch fish.",
+   "year": 2006
+  },
+  {
+   "id": "jamb-physics-bank-2853",
+   "type": "mcq",
+   "stem": "The quantities of a good thermometer include? I. Reproducibility II. Sensibility (sensitivity) III. High thermal capacity IV. High accuracy",
+   "options": {
+    "A": "I, II and IV only",
+    "B": "I, III and IV only",
+    "C": "I, II and III only",
+    "D": "II, III and IV only"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "I. Reproducibility: A good thermometer should give consistent readings under the same conditions II. Sensibility (sensitivity): A good thermometer should detect small temperature changes IV. High accuracy: A good thermometer should give readings close to the true value.",
+   "year": 2005
+  },
+  {
+   "id": "jamb-physics-bank-2854",
+   "type": "mcq",
+   "stem": "A car accelerates uniformly from rest at 4 m s⁻². How far will it travel in the fifth complete second?",
+   "options": {
+    "A": "100 m",
+    "B": "50 m",
+    "C": "32 m",
+    "D": "18 m"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Initial velocity, u = 0 m s⁻¹ Acceleration, a = 4 m s⁻² Time interval: the fifth complete second means from t = 4 s to t = 5 s. Solution: Step 1: Formula for distance in a particular second The distance travelled in the n‑th second is given by: sₙ = u + (a/2)(2n - 1) Step 2: Substitute values Here n = 5, u = 0, a = 4 m s⁻² s₅ = 0 + (4/2) × (2×5 - 1) = 2 × (10 - 1) = 2 × 9 = 18 m Step 3: Alternative method (check) Distance in first 4 s: s₄ = ½ × 4 × 4² = ½ × 4 × 16 = 32 m Distance in first 5 s: s₅ = ½ × 4 × 5² = ½ × 4 × 25 = 50 m Distance in 5th second = s₅ - s₄ = 50 m - 32 m",
+   "year": 2009
+  },
+  {
+   "id": "jamb-physics-bank-2855",
+   "type": "mcq",
+   "stem": "A reservoir 500 m deep is filled with a fluid of density 850 kgm⁻³. If the atmospheric pressure is 1.05 × 10⁵ Nm⁻², the pressure at the bottom of the reservoir is. [g = 10ms⁻²]",
+   "options": {
+    "A": "4.72 × 10⁶ Nm⁻²",
+    "B": "4.36 × 10⁶ Nm⁻²",
+    "C": "4.28 × 10⁶ Nm⁻²",
+    "D": "4.25 × 10⁶ Nm⁻²"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Depth (h) = 500 m Density of fluid (ρ) = 850 kg/m³ Atmospheric pressure (P₀) = 1.05 × 10⁵ N/m² g = 10 m/s² Pressure at bottom (P) = ? Formula for pressure at depth: P = P₀ + ρgh where: P₀ = atmospheric pressure ρgh = pressure due to fluid column Step 1: Calculate pressure due to fluid column ρgh = 850 × 10 × 500 ρgh = 850 × 5000 ρgh = 4,250,000 N/m² ρgh = 4.25 × 10⁶ N/m² Step 2: Calculate total pressure at bottom P = P₀ + ρgh P = 1.05 × 10⁵ + 4.25 × 10⁶ P = 0.105 × 10⁶ + 4.25 × 10⁶ P = 4.355 × 10⁶ N/m² P ≈ 4.36 × 10⁶ N/m²",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2856",
+   "type": "mcq",
+   "stem": "The amount of energy released when 0.5 kg of uranium is burnt completely is [c = 3 × 10⁸ m/s]",
+   "options": {
+    "A": "1.5 × 10⁸ J",
+    "B": "4.5 × 10⁸ J",
+    "C": "1.5 × 10¹⁶ J",
+    "D": "4.5 × 10¹⁶ J"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Mass of uranium, m = 0.5 kg Speed of light, c = 3 × 10⁸ m/s Step 1: Mass‑energy equivalence formula E = m c² Step 2: Substitute values E = 0.5 kg × (3 × 10⁸ m/s)² = 0.5 kg × 9 × 10¹⁶ m²/s² = 4.5 × 10¹⁶ J",
+   "year": 2005
+  },
+  {
+   "id": "jamb-physics-bank-2857",
+   "type": "mcq",
+   "stem": "An engine of a car of power 80 kW moves on a rough road with a velocity of 32 m/s. The force required to bring it to rest is?",
+   "options": {
+    "A": "2.56 × 10⁶ N",
+    "B": "2.50 × 10⁶ N",
+    "C": "2.80 × 10³ N",
+    "D": "2.50 × 10³ N"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Power P = 80 kW = 80 000 W Velocity v = 32 m s⁻¹ Solution: Step 1: Relationship between power, force, and velocity At constant velocity, the engine's power equals the product of the driving force and velocity: P = F × v Step 2: Solve for the force F = P / v = 80 000 W / 32 m s⁻¹ = 2 500 N Step 3: Express in scientific notation 2 500 N = 2.50 × 10³ N",
+   "year": 2006
+  },
+  {
+   "id": "jamb-physics-bank-2858",
+   "type": "mcq",
+   "stem": "If the radius of the Earth is 6.4 × 10⁶ m, the escape velocity of a satellite from the Earth is? [g = 10 m s⁻²]",
+   "options": {
+    "A": "1.13 × 10⁴ m s⁻¹",
+    "B": "9.00 × 10³ m s⁻¹",
+    "C": "8.00 × 10³ m s⁻¹",
+    "D": "1.27 × 10⁴ m s⁻¹"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Earth's radius, R = 6.4 × 10⁶ m Acceleration due to gravity at Earth's surface, g = 10 m s⁻² Solution: Step 1: Formula for escape velocity Escape velocity, v_esc = √(2gR) Step 2: Substitute values 2gR = 2 × 10 m s⁻² × 6.4 × 10⁶ m = 1.28 × 10⁸ m² s⁻² Step 3: Take square root v_esc = √(1.28 × 10⁸) = √1.28 × 10⁴ √1.28 ≈ 1.13137, so v_esc ≈ 1.13137 × 10⁴ m s⁻¹ ≈ 1.13 × 10⁴ m s⁻¹",
+   "year": 2006
+  },
+  {
+   "id": "jamb-physics-bank-2859",
+   "type": "mcq",
+   "stem": "If the volume of a gas is recorded as 76cm³ at a temperature of 27°C with a pressure of 800mmHg. What will be the volume of the gas at S.T.P?",
+   "options": {
+    "A": "36.2cm³",
+    "B": "25.7cm³",
+    "C": "72.8cm³",
+    "D": "24.3cm³"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Initial volume (V₁) = 76 cm³ Initial temperature (T₁) = 27°C = 27 + 273 = 300 K Initial pressure (P₁) = 800 mmHg Final conditions: S.T.P (Standard Temperature and Pressure) Final temperature (T₂) = 0°C = 273 K Final pressure (P₂) = 760 mmHg Final volume (V₂) = ? Using Combined Gas Law: (P₁V₁)/T₁ = (P₂V₂)/T₂ Rearranging to find V₂: V₂ = (P₁V₁T₂)/(T₁P₂) Substituting values: V₂ = (800 × 76 × 273)/(300 × 760) V₂ = (16,588,800)/(228,000) V₂ = 72.76 cm³ V₂ ≈ 72.8 cm³ Answer: C. 72.8 cm³",
+   "year": 2015
+  },
+  {
+   "id": "jamb-physics-bank-2860",
+   "type": "mcq",
+   "stem": "A load is pulled at a uniform speed along a horizontal floor by a rope at 45° to the floor. If the force in the rope is 1500N, what is the frictional force on the load?",
+   "options": {
+    "A": "1524N",
+    "B": "1350N",
+    "C": "1260N",
+    "D": "1061N"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Force in rope (F) = 1500 N Angle to floor (θ) = 45° Load moves at uniform speed (constant velocity) Frictional force = ? Key principle: Since the load moves at uniform speed, the net force is zero (equilibrium). This means: Horizontal component of applied force = Frictional force Step 1: Resolve the rope force into components Horizontal component: F_horizontal = F cos θ F_horizontal = 1500 × cos 45° F_horizontal = 1500 × (1/√2) F_horizontal = 1500 × 0.7071 F_horizontal = 1060.7 N F_horizontal ≈ 1061 N Vertical component: F_vertical = F sin θ F_vertical = 1500 × sin 45° F_ver",
+   "year": 2012
+  },
+  {
+   "id": "jamb-physics-bank-2861",
+   "type": "mcq",
+   "stem": "The pressure of two moles of an ideal gas at a temperature of 27 °C and volume 10⁻² m³ is? [R = 8.313 J mol⁻¹ K⁻¹]",
+   "options": {
+    "A": "4.99 × 10⁵ N m⁻²",
+    "B": "9.80 × 10³ N m⁻²",
+    "C": "4.98 × 10³ N m⁻²",
+    "D": "9.80 × 10⁵ N m⁻²"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Number of moles, n = 2 mol Temperature, T = 27 °C = 27 + 273 = 300 K Volume, V = 10⁻² m³ Gas constant, R = 8.313 J mol⁻¹ K⁻¹ Solution: Step 1: Ideal gas equation PV = nRT Step 2: Rearrange for pressure P P = nRT / V Step 3: Substitute values P = (2 × 8.313 × 300) / 10⁻² Step 4: Calculate numerator 2 × 8.313 = 16.626 16.626 × 300 = 4987.8 Step 5: Divide by volume 4987.8 / 10⁻² = 4987.8 × 100 = 498780 N m⁻² Step 6: Express in scientific notation 498780 = 4.9878 × 10⁵ ≈ 4.99 × 10⁵ N m⁻²",
+   "year": 2009
+  },
+  {
+   "id": "jamb-physics-bank-2862",
+   "type": "mcq",
+   "stem": "Calculate the angle of minimum deviation of a 60° prism of refractive index 1.5 [sin⁻¹(0.75) = 49°]",
+   "options": {
+    "A": "38°",
+    "B": "19.47°",
+    "C": "16.25°",
+    "D": "49°"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Prism angle (A) = 60° Refractive index (n) = 1.5 sin⁻¹(0.75) = 49° Minimum deviation (δₘ) = ? Formula for minimum deviation: n = sin[(A + δₘ)/2] / sin(A/2) Rearranging: sin[(A + δₘ)/2] = n × sin(A/2) Substituting values: sin[(60° + δₘ)/2] = 1.5 × sin(60°/2) sin[(60° + δₘ)/2] = 1.5 × sin(30°) sin[(60° + δₘ)/2] = 1.5 × 0.5 sin[(60° + δₘ)/2] = 0.75 Using the given information: (60° + δₘ)/2 = sin⁻¹(0.75) = 49° Solving for δₘ: 60° + δₘ = 2 × 49° 60° + δₘ = 98° δₘ = 98° - 60° δₘ = 38°",
+   "year": 2017
+  },
+  {
+   "id": "jamb-physics-bank-2863",
+   "type": "mcq",
+   "stem": "If the threshold frequency for tungsten is 1.3 × 10¹⁵ Hz, what is its work function? [h = 6.6 × 10⁻³⁴ Js]",
+   "options": {
+    "A": "8.58 × 10⁻¹⁹ J",
+    "B": "8.50 × 10⁻¹⁵ J",
+    "C": "8.58 × 10⁻¹⁷ J",
+    "D": "8.85 × 10⁻¹⁸ J"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Threshold frequency (f₀) = 1.3 × 10¹⁵ Hz Planck's constant (h) = 6.6 × 10⁻³⁴ Js Work function (φ or W) = ? Understanding work function: The work function is the minimum energy required to remove an electron from the surface of a material. Formula: Work function = Planck's constant × Threshold frequency φ = hf₀ Substituting values: φ = 6.6 × 10⁻³⁴ × 1.3 × 10¹⁵ φ = 8.58 × 10⁻³⁴⁺¹⁵ φ = 8.58 × 10⁻¹⁹ J",
+   "year": 2011
+  },
+  {
+   "id": "jamb-physics-bank-2864",
+   "type": "mcq",
+   "stem": "A boy drags a bag of rice along a smooth horizontal floor with a force of 2 N applied at an angle of 60° to the floor. The work done after a distance of 3 m is?",
+   "options": {
+    "A": "3 J",
+    "B": "4 J",
+    "C": "5 J",
+    "D": "6 J"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Force F = 2 N Angle θ = 60° Displacement s = 3 m Floor is smooth (no friction) Solution: Step 1: Work done formula Work done W = F × s × cosθ Step 2: Substitute values W = 2 N × 3 m × cos60° Step 3: Calculate cos60° = 0.5 W = 2 × 3 × 0.5 = 3 J",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2865",
+   "type": "mcq",
+   "stem": "How much net work is required to accelerate a 1200 kg car from 10ms⁻¹ to 15ms⁻¹",
+   "options": {
+    "A": "1.95×10⁵ J",
+    "B": "1.35×10⁴ J",
+    "C": "7.5×10⁴ J",
+    "D": "6.0×10⁴ J"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Mass, m = 1200 kg Initial velocity, u = 10 m/s Final velocity, v = 15 m/s Net work required, W = ? Solution: Using the work-energy theorem: W = ΔKE = KE_final - KE_initial W = ½mv² - ½mu² Step 1: Calculate initial kinetic energy KE_initial = ½mu² KE_initial = ½ × 1200 × (10)² KE_initial = 600 × 100 KE_initial = 60,000 J Step 2: Calculate final kinetic energy KE_final = ½mv² KE_final = ½ × 1200 × (15)² KE_final = 600 × 225 KE_final = 135,000 J Step 3: Calculate net work done W = KE_final - KE_initial W = 135,000 - 60,000 W = 75,000 J W = 7.5 × 10⁴ J",
+   "year": 2023
+  },
+  {
+   "id": "jamb-physics-bank-2866",
+   "type": "mcq",
+   "stem": "A car of mass 1500 kg goes round a circular curve of radius 50m at a speed of 40 ms⁻¹. The magnitude of the centripetal force on the car is?",
+   "options": {
+    "A": "4.8 × 10⁴ N",
+    "B": "4.8 × 10³ N",
+    "C": "1.2 × 10³ N",
+    "D": "1.2 × 10² N"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Mass (m) = 1500 kg Radius (r) = 50 m Speed (v) = 40 m/s Centripetal force (F) = ? Formula for centripetal force: F = mv²/r Substituting values: F = (1500 × 40²)/50 F = (1500 × 1600)/50 F = 2,400,000/50 F = 48,000 N F = 4.8 × 10⁴ N",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2867",
+   "type": "mcq",
+   "stem": "n the diagram above, if the south-poles of two magnets strokes steel bar, the polarities at T and V will respectively be",
+   "options": {
+    "A": "south and north",
+    "B": "north and south",
+    "C": "north and north",
+    "D": "south and south"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "IN magnetisation by stroking, the last touched has a pole opposite to that of the magnet used. Therefore, the poles T and V are N and N respectively",
+   "year": 2010,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1774435732/ALOC-Questions/Physics/2010/PHYSICS_2010_Q_45_qbcc73.png"
+  },
+  {
+   "id": "jamb-physics-bank-2868",
+   "type": "mcq",
+   "stem": "Calculate the gravitation force of attraction between two planets of 10²⁴ kg and 10²⁷kg separated by a distance of 10²⁰ meters",
+   "options": {
+    "A": "6.67N",
+    "B": "6.56N",
+    "C": "7.5N",
+    "D": "8.6N"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Mass of first planet (m₁) = 10²⁴ kg Mass of second planet (m₂) = 10²⁷ kg Distance between planets (r) = 10²⁰ meters Gravitational constant (G) = 6.67 × 10⁻¹¹ Nm²/kg² Formula for Gravitational Force: F = G(m₁m₂)/r² Substituting values: F = (6.67 × 10⁻¹¹ × 10²⁴ × 10²⁷)/(10²⁰)² F = (6.67 × 10⁻¹¹ × 10⁵¹)/(10⁴⁰) F = (6.67 × 10⁴⁰)/(10⁴⁰) F = 6.67 N Answer: A. 6.67N",
+   "year": 2015
+  },
+  {
+   "id": "jamb-physics-bank-2869",
+   "type": "mcq",
+   "stem": "A given mass of gas has a pressure of 80 Nm⁻² at a temperature of 47°C. If the temperature is reduced to 27°C with volume remaining constant, the new pressure is?",
+   "options": {
+    "A": "46.0 Nm⁻²",
+    "B": "75.0 Nm⁻²",
+    "C": "80.0 Nm⁻²",
+    "D": "85.3 Nm⁻²"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Initial pressure (P₁) = 80 Nm⁻² Initial temperature (T₁) = 47°C = 47 + 273 = 320 K Final temperature (T₂) = 27°C = 27 + 273 = 300 K Volume constant Final pressure (P₂) = ? Using Gay-Lussac's Law (Pressure Law): At constant volume: P₁/T₁ = P₂/T₂ Rearranging to find P₂: P₂ = P₁ × (T₂/T₁) Substituting values: P₂ = 80 × (300/320) P₂ = 80 × 0.9375 P₂ = 75 Nm⁻² Explanation: When temperature decreases at constant volume, pressure decreases proportionally because the average kinetic energy of gas molecules decreases, resulting in fewer and less forceful collisions with the container",
+   "year": 2021
+  },
+  {
+   "id": "jamb-physics-bank-2870",
+   "type": "mcq",
+   "stem": "The density of a certain oil on frying becomes 0.4 kgm⁻³ with the volume of 20m³. What will be its initial volume when its initial density is 0.8 kgm⁻³ assuming no loss of oil due to spillage?",
+   "options": {
+    "A": "12 m³",
+    "B": "10 m³",
+    "C": "8 m³",
+    "D": "5 m³"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Initial density (ρ₁) = 0.8 kg/m³ Final density (ρ₂) = 0.4 kg/m³ Final volume (V₂) = 20 m³ Initial volume (V₁) = ? No loss of oil (mass conserved) Key principle: Mass remains constant (no spillage) m₁ = m₂ Using density formula: m = ρV Step 1: Set up equation ρ₁V₁ = ρ₂V₂ Step 2: Solve for initial volume V₁ = (ρ₂V₂)/ρ₁ Substituting values: V₁ = (0.4 × 20)/0.8 V₁ = 8/0.8 V₁ = 10 m³",
+   "year": 2010
+  },
+  {
+   "id": "jamb-physics-bank-2871",
+   "type": "mcq",
+   "stem": "An aircraft attempts to fly due north at 100 km h⁻¹. If the wind blows against it from east to west at 60 km h⁻¹, its resultant velocity is?",
+   "options": {
+    "A": "117 km h⁻¹, N31°E",
+    "B": "127 km h⁻¹, N31°E",
+    "C": "117 km h⁻¹, N31°W",
+    "D": "127 km h⁻¹, N31°W"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Velocity of aircraft relative to air, vₐ = 100 km h⁻¹ due north Velocity of wind, v_w = 60 km h⁻¹ from east to west (i.e., towards west) Solution: Step 1: Represent velocities as vectors Let north be positive y‑direction and east be positive x‑direction. vₐ = (0, 100) km h⁻¹ v_w = (−60, 0) km h⁻¹ (since it blows towards west) Step 2: Resultant velocity Resultant v = vₐ + v_w = (−60, 100) km h⁻¹ Step 3: Calculate magnitude |v| = √[(−60)² + (100)²] = √(3600 + 10000) = √13600 ≈ 116.62 km h⁻¹ ≈ 117 km h⁻¹ Step 4: Calculate direction The angle θ from north towards west is given b",
+   "year": 2009
+  },
+  {
+   "id": "jamb-physics-bank-2872",
+   "type": "mcq",
+   "stem": "If a body of mass 5kg is thrown vertically upwards with velocity u, at what height will the potential energy equal to the kinetic energy?",
+   "options": {
+    "A": "h = u²/g",
+    "B": "h = u²/4g",
+    "C": "h = (2u)²/g",
+    "D": "h = u²/2g"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Mass (m) = 5 kg Initial velocity = u Height where PE = KE → h = ? Setting up energy equations: Total mechanical energy at launch: E_total = ½mu² (all kinetic, PE = 0 at ground) At height h: KE = ½mv² PE = mgh Using conservation of energy: KE + PE = ½mu² ½mv² + mgh = ½mu² Condition: PE = KE Let PE = KE = X Therefore: X + X = ½mu² 2X = ½mu² X = ¼mu² Since PE = X: mgh = ¼mu² Dividing both sides by m: gh = u²/4 Solving for h: h = u²/4g",
+   "year": 2008
+  },
+  {
+   "id": "jamb-physics-bank-2873",
+   "type": "mcq",
+   "stem": "A man of mass 50kg ascends a flight of stairs 5m high in 5 seconds. If acceleration due to gravity is 10ms⁻², the power expended is",
+   "options": {
+    "A": "100W",
+    "B": "200W",
+    "C": "400W",
+    "D": "500W"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Mass (m) = 50 kg Height (h) = 5 m Time (t) = 5 seconds Acceleration due to gravity (g) = 10 m/s² Power (P) = ? Step 1: Calculate work done against gravity Work = Force × Distance Work = Weight × Height Work = mgh Work = 50 × 10 × 5 Work = 2500 J Step 2: Calculate power Power = Work/Time P = 2500/5 P = 500 W",
+   "year": 2017
+  },
+  {
+   "id": "jamb-physics-bank-2874",
+   "type": "mcq",
+   "stem": "The binding energy of helium ⁴₂He is [atomic mass of proton = 1.00783U, atomic mass of neutron = 1.00867U]",
+   "options": {
+    "A": "4.033U",
+    "B": "2.017U",
+    "C": "0.033U",
+    "D": "0.330U"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Helium-4 nucleus: ⁴₂He Atomic mass of proton, mₚ = 1.00783 U Atomic mass of neutron, mₙ = 1.00867 U Atomic mass of ⁴₂He = 4.00260 U (standard value) Solution: Step 1: Determine composition of ⁴₂He nucleus ⁴₂He contains: Number of protons, Z = 2 Number of neutrons, N = 4 - 2 = 2 Step 2: Calculate total mass of separated nucleons Total mass = (2 × mₚ) + (2 × mₙ) Total mass = (2 × 1.00783) + (2 × 1.00867) Total mass = 2.01566 + 2.01734 Total mass = 4.03300 U Step 3: Calculate mass defect (Δm) Δm = Total mass of nucleons - Actual mass of nucleus Δm = 4.03300 - 4.00260 Δm = 0.030",
+   "year": 2004
+  },
+  {
+   "id": "jamb-physics-bank-2875",
+   "type": "mcq",
+   "stem": "If a cage containing a truck of coal weighing 750 kg is raised to a height of 90 m in a minute, what is the total power expended? [g = 10 m s⁻²]",
+   "options": {
+    "A": "11.50 kW",
+    "B": "12.60 kW",
+    "C": "12.60 kW",
+    "D": "12.10 kW"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Mass m = 750 kg Height h = 90 m Time t = 1 min = 60 s Acceleration due to gravity g = 10 m s⁻² Solution: Step 1: Work done against gravity Work = m × g × h = 750 kg × 10 m s⁻² × 90 m = 675 000 J Step 2: Power expended Power = Work / time = 675 000 J / 60 s = 11 250 W = 11.25 kW",
+   "year": 2009
+  },
+  {
+   "id": "jamb-physics-bank-2876",
+   "type": "mcq",
+   "stem": "Calculate the temperature of 6 moles of an ideal gas at a pressure of 7.6 × 10⁶ Nm⁻² with a volume of 10⁻³ m³. [R = 8.3 J mol⁻¹ K⁻¹]",
+   "options": {
+    "A": "201°C",
+    "B": "126°C",
+    "C": "153°C",
+    "D": "185°C"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Number of moles (n) = 6 moles Pressure (P) = 7.6 × 10⁶ Nm⁻² Volume (V) = 10⁻³ m³ Gas constant (R) = 8.3 J mol⁻¹ K⁻¹ Using the Ideal Gas Equation: PV = nRT Rearranging to find T: T = PV/(nR) Substituting values: T = (7.6 × 10⁶ × 10⁻³)/(6 × 8.3) T = 7,600/49.8 T = 152.6°C ≈ 153°C",
+   "year": 2016
+  },
+  {
+   "id": "jamb-physics-bank-2877",
+   "type": "mcq",
+   "stem": "If a light wave has a wavelength of 500nm in air, what is the frequency of the wave? [c = 3 × 10⁸ ms⁻¹]",
+   "options": {
+    "A": "3.0 × 10¹⁴ Hz",
+    "B": "6.0 × 10¹⁴ Hz",
+    "C": "6.0 × 10¹² Hz",
+    "D": "2.5 × 10¹⁴ Hz"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Wavelength (λ) = 500 nm = 500 × 10⁻⁹ m = 5 × 10⁻⁷ m Speed of light (c) = 3 × 10⁸ m/s Frequency (f) = ? Formula for wave equation: c = fλ Rearranging for frequency: f = c/λ Substituting values: f = (3 × 10⁸)/(5 × 10⁻⁷) f = (3/5) × 10⁸⁺⁷ f = 0.6 × 10¹⁵ f = 6.0 × 10¹⁴ Hz",
+   "year": 2009
+  },
+  {
+   "id": "jamb-physics-bank-2878",
+   "type": "mcq",
+   "stem": "The instantaneous value of the induced e.m.f as a function of time is ε = ε₀ sin ωt where ε₀ is the peak value of the e.m.f. The instantaneous value of the e.m.f., one quarter of the period is",
+   "options": {
+    "A": "0.00",
+    "B": "ε₀/4",
+    "C": "ε₀/2",
+    "D": "ε₀"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: ε = ε₀ sin(ωt) Period T = 2π/ω Time t = T/4 Solution: Step 1: Find ωt at t = T/4 ωt = ω × (T/4) = ω × (2π/(4ω)) = π/2 Step 2: Evaluate sin(π/2) sin(π/2) = 1 Step 3: Substitute into equation ε = ε₀ × 1 = ε₀",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2879",
+   "type": "mcq",
+   "stem": "A photon of wavelength 6.0 × 10⁻⁷ m behaves like a particle of a certain mass. The value of that mass is [h = 6.63 × 10⁻³⁴ Js, c = 3.0 × 10⁸ ms⁻¹]",
+   "options": {
+    "A": "3.7 × 10⁻³⁶ kg",
+    "B": "2.2 × 10⁻³⁵ kg",
+    "C": "1.1 × 10⁻³⁵ kg",
+    "D": "2.2 × 10⁻⁷ kg"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Wavelength (λ) = 6.0 × 10⁻⁷ m Planck's constant (h) = 6.63 × 10⁻³⁴ Js Speed of light (c) = 3.0 × 10⁸ m/s Effective mass (m) = ? Understanding photon mass: Although photons have zero rest mass, they have an effective relativistic mass associated with their energy. Step 1: Calculate photon energy E = hf = hc/λ E = (6.63 × 10⁻³⁴ × 3.0 × 10⁸)/(6.0 × 10⁻⁷) E = (19.89 × 10⁻²⁶)/(6.0 × 10⁻⁷) E = 3.315 × 10⁻¹⁹ J Step 2: Calculate effective mass using E = mc² m = E/c² m = (3.315 × 10⁻¹⁹)/(3.0 × 10⁸)² m = (3.315 × 10⁻¹⁹)/(9.0 × 10¹⁶) m = 0.368 × 10⁻³⁵ m = 3.68 × 10⁻³⁶ kg m ≈ 3.7 × 10⁻³",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2880",
+   "type": "mcq",
+   "stem": "Calculate the heat energy required to vaporize 50g of water initially at 80°C if the specific heat capacity of water is 4.2 Jg⁻¹K⁻¹ (specific latent heat of vaporization of water is 2260 Jg⁻¹)",
+   "options": {
+    "A": "530,000 J",
+    "B": "23,200 J",
+    "C": "17,200 J",
+    "D": "130,000 J"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Mass (m) = 50 g Initial temperature = 80°C Specific heat capacity (c) = 4.23 J/(g·K) Specific latent heat of vaporization (L) = 2260 J/g Two-stage process: Stage 1: Heat water from 80°C to 100°C (boiling point) Q₁ = mcΔT Q₁ = 50 × 4.23 × (100 - 80) Q₁ = 50 × 4.23 × 20 Q₁ = 4,230 J Stage 2: Vaporize water at 100°C Q₂ = mL Q₂ = 50 × 2260 Q₂ = 113,000 J Total heat required: H = Q₁ + Q₂ H = 4,230 + 113,000 H = 117,230 J However, based on the provided explanation which uses ΔT = 80°C: Alternative calculation: H = m[cΔT + L] H = 50[4.23 × 80 + 2260] H = 50[338.4 + 2260] H = 50 × 2",
+   "year": 2021
+  },
+  {
+   "id": "jamb-physics-bank-2881",
+   "type": "mcq",
+   "stem": "A 2kg block is pulled along a horizontal frictionless surface by a constant horizontal force of 10N. If the block starts from rest, what is its velocity after 5 seconds?",
+   "options": {
+    "A": "5 m/s",
+    "B": "10 m/s",
+    "C": "15 m/s",
+    "D": "25 m/s"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Mass (m) = 2 kg Applied force (F) = 10 N Initial velocity (u) = 0 m/s (starts from rest) Time (t) = 5 seconds Final velocity (v) = ? Step 1: Calculate acceleration using Newton's Second Law F = ma a = F/m Substituting values: a = 10/2 a = 5 m/s² Step 2: Calculate final velocity using equation of motion v = u + at Substituting values: v = 0 + (5 × 5) v = 0 + 25 v = 25 m/s",
+   "year": 2020
+  },
+  {
+   "id": "jamb-physics-bank-2882",
+   "type": "mcq",
+   "stem": "The ratio of the coefficient of linear expansion of two metals ∝₁/∝₂ is 3:4. If, when heated through the same temperature change, the ratio of the increase in length of the two metals, e₁/e₂ is 1:2, the ratio of the original lengths l₁/l₂ is",
+   "options": {
+    "A": "8/3",
+    "B": "3/2",
+    "C": "2/3",
+    "D": "3/8"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: α₁ / α₂ = 3/4 ΔL₁ / ΔL₂ = 1/2 Temperature change ΔT is the same for both. Solution: Step 1: Linear expansion formula For each metal: ΔL = α L ΔT Step 2: Ratio of expansions ΔL₁ / ΔL₂ = (α₁ L₁ ΔT) / (α₂ L₂ ΔT) = (α₁/α₂) × (L₁/L₂) Step 3: Substitute known ratios 1/2 = (3/4) × (L₁/L₂) Step 4: Solve for L₁/L₂ L₁/L₂ = (1/2) ÷ (3/4) = (1/2) × (4/3) = 4/6 = 2/3",
+   "year": 2007
+  },
+  {
+   "id": "jamb-physics-bank-2883",
+   "type": "mcq",
+   "stem": "A piece of radioactive material contains 10²⁰ atoms. If the half‑life of the material is 20 seconds, the number of disintegrations in the first second is?",
+   "options": {
+    "A": "3.47 × 10¹⁸",
+    "B": "6.93 × 10²⁰",
+    "C": "3.47 × 10²⁰",
+    "D": "6.93 × 10¹⁸"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Initial number of atoms, N₀ = 10²⁰ Half‑life, T = 20 s Solution: Step 1: Calculate decay constant λ = ln 2 / T = 0.693 / 20 = 0.03465 s⁻¹ Step 2: Initial activity Activity A₀ = λ N₀ = 0.03465 × 10²⁰ = 3.465 × 10¹⁸ s⁻¹ Step 3: Number of disintegrations in first second Since the time interval (1 s) is much smaller than the half‑life, the activity remains nearly constant. Thus, the number of disintegrations ≈ A₀ × 1 s = 3.465 × 10¹⁸.",
+   "year": 2009
+  },
+  {
+   "id": "jamb-physics-bank-2884",
+   "type": "mcq",
+   "stem": "The energy of light of frequency 2.0 x 10¹⁵Hz is (h = 6.63 x 10⁻³⁴Js)",
+   "options": {
+    "A": ". 3.33 x 10⁻¹⁸J",
+    "B": "1.33 x 10⁻¹⁸J",
+    "C": "1.33 x 10⁻¹⁹J",
+    "D": "3.33 x 10⁻¹⁹J"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Frequency, f = 2.0 × 10¹⁵ Hz Planck's constant, h = 6.63 × 10⁻³⁴ J·s Energy, E = ? Solution: Step 1: Apply Planck's equation The energy of a photon: E = hf Step 2: Substitute the known values E = 6.63 × 10⁻³⁴ × 2.0 × 10¹⁵ Step 3: Calculate the energy E = (6.63 × 2.0) × (10⁻³⁴ × 10¹⁵) E = 13.26 × 10⁻¹⁹ E = 1.326 × 10⁻¹⁸ J E ≈ 1.33 × 10⁻¹⁸ J",
+   "year": 2024
+  },
+  {
+   "id": "jamb-physics-bank-2885",
+   "type": "mcq",
+   "stem": "The density of 400cm³ of palm oil was 0.9gcm⁻³ before frying. If the density of the oil was 0.6gcm⁻³ after frying, assuming no loss of oil due to spilling, its new volume was?",
+   "options": {
+    "A": "1360cm³",
+    "B": "600cm³",
+    "C": "240cm³",
+    "D": "8000m³"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Initial volume (V₁) = 400 cm³ Initial density (ρ₁) = 0.9 g/cm³ Final density (ρ₂) = 0.6 g/cm³ No loss of oil (mass remains constant) Final volume (V₂) = ? Step 1: Calculate mass of oil Mass = Density × Volume Mass = 0.9 × 400 Mass = 360 g Step 2: Calculate new volume Since mass remains constant: Mass = ρ₂ × V₂ 360 = 0.6 × V₂ Solving for V₂: V₂ = 360/0.6 V₂ = 600 cm³ Explanation: When oil is heated, it expands, causing density to decrease. Since mass is conserved, the volume must increase to accommodate the lower density.",
+   "year": 2018
+  },
+  {
+   "id": "jamb-physics-bank-2886",
+   "type": "mcq",
+   "stem": "A cannon is fired from town X, after how long is the sound heard at a town Y 4.95 km away? [velocity of sound in the air = 330 ms⁻¹]",
+   "options": {
+    "A": "30 s",
+    "B": "10 s",
+    "C": "15 s",
+    "D": "20 s"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Distance (d) = 4.95 km = 4950 m Velocity of sound (v) = 330 m/s Time (t) = ? Formula: Time = Distance/Velocity t = d/v Substituting values: t = 4950/330 t = 15 s",
+   "year": 2011
+  },
+  {
+   "id": "jamb-physics-bank-2887",
+   "type": "mcq",
+   "stem": "Two balls X and Y weighing 5 g and 50 kg respectively were thrown up vertically at the same time with a velocity of 100 ms⁻¹. How will their positions be one second later?",
+   "options": {
+    "A": "X and Y will be 500 m from each other",
+    "B": "Y will be 500 m ahead of X",
+    "C": "X will be 500 m ahead of Y",
+    "D": "X and Y both be 500 m from the point of throw"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Using v² = u² - 2gs at maximum height (v = 0): 0 = 100² - 2(10)s s = 10,000/20 = 500 m",
+   "year": 2011
+  },
+  {
+   "id": "jamb-physics-bank-2888",
+   "type": "mcq",
+   "stem": "A motorcycle of mass 100kg moves round in a circle of radius 10m with a velocity of 5 ms⁻¹. Find the coefficient of friction between the road and the tyres.",
+   "options": {
+    "A": "25",
+    "B": "2.5",
+    "C": "0.5",
+    "D": "0.25"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Mass (m) = 100 kg Radius (r) = 10 m Velocity (v) = 5 m/s g = 10 m/s² Coefficient of friction (μ) = ? Understanding the physics: For a motorcycle moving in a circle on a flat road: Centripetal force is provided by friction between tyres and road Friction force = Centripetal force Setting up equation: Friction force = Centripetal force μmg = mv²/r Cancelling mass (m) from both sides: μg = v²/r Solving for μ: μ = v²/(rg) Substituting values: μ = (5)²/(10 × 10) μ = 25/100 μ = 0.25",
+   "year": 2008
+  },
+  {
+   "id": "jamb-physics-bank-2889",
+   "type": "mcq",
+   "stem": "Consider the wave equation y = 5mm sin[1cm⁻¹x - 60s⁻¹t]. The wave number is?",
+   "options": {
+    "A": "0.1 cm⁻¹",
+    "B": "10 cm⁻¹",
+    "C": "1.0 cm⁻¹",
+    "D": "2 cm⁻¹"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given wave equation: y = 5 mm sin[1 cm⁻¹x - 60 s⁻¹t] Standard form of wave equation: y = A sin(kx - ωt) where: A = amplitude k = wave number ω = angular frequency x = position t = time Comparing given equation with standard form: y = 5 mm sin[1 cm⁻¹x - 60 s⁻¹t] y = A sin(kx - ωt) Identifying parameters: Amplitude (A) = 5 mm Wave number (k) = 1 cm⁻¹ Angular frequency (ω) = 60 s⁻¹ The coefficient of x in the wave equation is the wave number.",
+   "year": 2022
+  },
+  {
+   "id": "jamb-physics-bank-2890",
+   "type": "mcq",
+   "stem": "The stress experienced by a wire of diameter yπm loaded by a weight y²N is",
+   "options": {
+    "A": "πNm⁻²",
+    "B": "2πNm⁻²",
+    "C": "4πNm⁻²",
+    "D": "8πNm⁻²"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Diameter of wire, d = yπ m Load (weight), F = y² N Stress, σ = ? Solution: If d = y/π m, then r = y/(2π) m A = πr² = π[y/(2π)]² = π × y²/(4π²) = y²/(4π) m² σ = F/A = y²÷[y²/(4π)] = y² × 4π/y² = 4π Nm⁻129",
+   "year": 2024
+  },
+  {
+   "id": "jamb-physics-bank-2891",
+   "type": "mcq",
+   "stem": "In the diagram above, which of the following velocity-time graphs shows uniform acceleration of a body from rest?",
+   "options": {
+    "A": "C",
+    "B": "D",
+    "C": "B",
+    "D": "A"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Understanding uniform acceleration from rest: \"From rest\" means initial velocity = 0 (starts at origin) \"Uniform acceleration\" means constant acceleration (velocity increases at a steady rate) A velocity-time graph with uniform acceleration is a straight line starting from the origin Analyzing the graphs: Graph A: Curved line - represents non-uniform (changing) acceleration ✗ Graph B: Straight line starting from origin - represents uniform acceleration from rest ✓ Graph C: Curved line (steep then flattening) - represents decreasing acceleration ✗ Graph D: Curved line - represents non-uniform a",
+   "year": 2016,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1765610227/ALOC-Questions/Physics/2016/2016_PHYSICS_Q_43_d6dmau.jpg"
+  },
+  {
+   "id": "jamb-physics-bank-2892",
+   "type": "mcq",
+   "stem": "A ray of light traveling from air into glass is incident at an angle of 60° to the normal. If the refractive index of the glass is 1.5, calculate the angle of refraction in the glass.",
+   "options": {
+    "A": "30.7°",
+    "B": "35.3°",
+    "C": "40.5°",
+    "D": "45.0°"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Angle of incidence (i) = 60° Refractive index of air (n₁) = 1.0 Refractive index of glass (n₂) = 1.5 Angle of refraction (r) = ? Using Snell's Law: n₁ sin i = n₂ sin r Rearranging for sin r: sin r = (n₁ sin i)/n₂ Substituting values: sin r = (1.0 × sin 60°)/1.5 sin r = (1.0 × 0.866)/1.5 sin r = 0.866/1.5 sin r = 0.577 Finding angle r: r = sin⁻¹(0.577) r = 35.3°",
+   "year": 2008
+  },
+  {
+   "id": "jamb-physics-bank-2893",
+   "type": "mcq",
+   "stem": "The refractive index of a liquid is 1.5. If the velocity of light in vacuum is 3.0 × 10⁸ ms⁻¹, the velocity of light in the liquid is",
+   "options": {
+    "A": "1.5 × 10⁸ ms⁻¹",
+    "B": "2.0 × 10⁸ ms⁻¹",
+    "C": "3.0 × 10⁸ ms⁻¹",
+    "D": "4.5 × 10⁸ ms⁻¹"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Refractive index (n) = 1.5 Velocity of light in vacuum (c) = 3.0 × 10⁸ m/s Velocity of light in liquid (v) = ? Formula for refractive index: n = c/v where: n = refractive index c = speed of light in vacuum v = speed of light in the medium Rearranging to find v: v = c/n Substituting values: v = (3.0 × 10⁸)/1.5 v = 2.0 × 10⁸ m/s",
+   "year": 2020
+  },
+  {
+   "id": "jamb-physics-bank-2894",
+   "type": "mcq",
+   "stem": "A man swung an object of mass 2 kg in a circular path with a rope 1.2 m long. If the object was swung at 120 rev/min, find the tension in the rope.",
+   "options": {
+    "A": "400",
+    "B": "288",
+    "C": "240",
+    "D": "379"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Mass, m = 2 kg Radius (rope length), r = 1.2 m Frequency, f = 120 rev/min Tension, T = ? Solution: Step 1: Convert frequency to rev/s f = 120 rev/min = 120/60 rev/s f = 2 rev/s = 2 Hz Step 2: Calculate angular velocity ω = 2πf ω = 2 × π × 2 ω = 4π rad/s ω = 12.566 rad/s Step 3: Calculate centripetal force (tension) For horizontal circular motion, tension provides the centripetal force: T = mω²r T = 2 × (12.566)² × 1.2 T = 2 × 157.914 × 1.2 T = 2 × 189.497 T = 378.99 N T ≈ 379 N",
+   "year": 2023
+  },
+  {
+   "id": "jamb-physics-bank-2895",
+   "type": "mcq",
+   "stem": "A stone is thrown vertically upward with an initial velocity of 30 m/s from the top of a building. If the stone takes 8 seconds to reach the ground, what is the height of the building? [Take g = 10 m/s²]",
+   "options": {
+    "A": "80 m",
+    "B": "100 m",
+    "C": "120 m",
+    "D": "160 m"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Initial velocity (u) = 30 m/s (upward, positive) Time to reach ground (t) = 8 seconds Acceleration due to gravity (g) = -10 m/s² (downward, negative) Height of building (h) = ? Using equation of motion: s = ut + ½at² where s is the displacement from starting point (negative when below starting point) Step 1: Calculate displacement Since the stone ends up below the starting point (at ground level): s = ut + ½gt² s = 30(8) + ½(-10)(8)² s = 240 + ½(-10)(64) s = 240 - 320 s = -80 m Step 2: Interpret the result The negative sign indicates the stone is 80 m below the starting poin"
+  },
+  {
+   "id": "jamb-physics-bank-2896",
+   "type": "mcq",
+   "stem": "The symbol ₋₁⁰X used to represent which of the particles?",
+   "options": {
+    "A": "Proton",
+    "B": "Neutron",
+    "C": "Electrons",
+    "D": "Atoms"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "The symbol ₋₁⁰X shows: 0 (top) = mass number (electrons have negligible mass) -1 (bottom) = charge (electrons are negatively charged) Answer: C. Electrons Electrons have zero mass and a charge of -1, which matches the symbol ₋₁⁰X.",
+   "year": 2015
+  },
+  {
+   "id": "jamb-physics-bank-2897",
+   "type": "mcq",
+   "stem": "A metal rod has a length of 100cm at 200°C. At what temperature will its length be 99.4cm, if the linear expansivity of the material of the rod is 2 × 10⁻⁵ °C⁻¹?",
+   "options": {
+    "A": "200°C",
+    "B": "300°C",
+    "C": "100°C",
+    "D": "-100°C"
+   },
+   "marks": 1,
+   "answer": "D",
+   "explanation": "Given information: Length at 200°C (L₁) = 100 cm Final length (L₂) = 99.4 cm Linear expansivity (α) = 2 × 10⁻⁵ °C⁻¹ Initial temperature (T₁) = 200°C Final temperature (T₂) = ? Formula for linear expansion: L₂ = L₁[1 + α(T₂ - T₁)] Substituting values: 99.4 = 100[1 + 2 × 10⁻⁵(T₂ - 200)] Dividing both sides by 100: 0.994 = 1 + 2 × 10⁻⁵(T₂ - 200) Rearranging: 0.994 - 1 = 2 × 10⁻⁵(T₂ - 200) -0.006 = 2 × 10⁻⁵(T₂ - 200) Solving for (T₂ - 200): (T₂ - 200) = -0.006 / (2 × 10⁻⁵) (T₂ - 200) = -0.006 / 0.00002 (T₂ - 200) = -300 Therefore: T₂ = -300 + 200 T₂ = -100°C",
+   "year": 2019
+  },
+  {
+   "id": "jamb-physics-bank-2898",
+   "type": "mcq",
+   "stem": "The value of R required to make the galvanometer measure voltage up to 40V in the diagram above is?",
+   "options": {
+    "A": "1885Ω",
+    "B": "1990Ω",
+    "C": "1995Ω",
+    "D": "1100Ω"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Maximum current through galvanometer, I = 20 mA = 0.020 A Internal resistance of galvanometer, r = 10 Ω Maximum voltage to be measured, V = 40 V Multiplier resistance, R = ? Solution: Step 1: Understand the circuit The multiplier resistance R is connected in series with the galvanometer to extend its voltage range. The same current flows through both R and the galvanometer. Step 2: Apply voltage division Total voltage = Voltage across R + Voltage across galvanometer V = IR + Ir Step 3: Substitute the known values 40 = 0.020 × R + 0.020 × 10 40 = 0.020R + 0.2 Step 4: Solve fo",
+   "year": 2024,
+   "image": "https://res.cloudinary.com/aloc-ng/image/upload/v1765615477/ALOC-Questions/Physics/2024/Physics_2024_Q13_p2yj5a.png"
+  },
+  {
+   "id": "jamb-physics-bank-2899",
+   "type": "mcq",
+   "stem": "A car starts from rest and moves with a uniform acceleration of 30ms⁻² for 20s. Calculate the distance covered at the end of the motion",
+   "options": {
+    "A": "6km",
+    "B": "12km",
+    "C": "18km",
+    "D": "24km"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Initial velocity (u) = 0 m/s (starts from rest) Acceleration (a) = 30 m/s² Time (t) = 20 s Distance (s) = ? Using equation of motion: s = ut + ½at² Substituting values: s = 0(20) + ½(30)(20)² s = 0 + ½(30)(400) s = ½ × 12,000 s = 6,000 m s = 6 km",
+   "year": 2012
+  },
+  {
+   "id": "jamb-physics-bank-2900",
+   "type": "mcq",
+   "stem": "A travelling wave of amplitude 0.80 m has a frequency of 16 Hz and a wave speed of 20 ms⁻¹. Calculate the wave number of the wave.",
+   "options": {
+    "A": "3",
+    "B": "4",
+    "C": "5",
+    "D": "2"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Amplitude, A = 0.80 m Frequency, f = 16 Hz Wave speed, v = 20 m/s Wave number, k = ? Solution: Step 1: Calculate wavelength Using the wave equation: v = fλ λ = v/f λ = 20/16 λ = 1.25 m Step 2: Calculate wave number Wave number is defined as: k = 2π/λ k = 2π/1.25 k = 2 × 3.142/1.25 k = 6.284/1.25 k = 5.03 rad/m k ≈ 5 rad/m",
+   "year": 2023
+  },
+  {
+   "id": "jamb-physics-bank-2901",
+   "type": "mcq",
+   "stem": "A progressive wave equation is represented by y = a sin(150πt - (π/4)x). If the phase difference of the wave is 45°, the value of x in the equation is?",
+   "options": {
+    "A": "3 cm",
+    "B": "4 cm",
+    "C": "1 cm",
+    "D": "2 cm"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Wave equation: y = a sin(150πt - (π/4)x) Phase difference Δφ = 45° = π/4 rad Solution: Step 1: Identify the wave number Comparing with standard form y = a sin(ωt - kx): Wave number k = π/4 Step 2: Phase difference formula For a progressive wave, phase difference Δφ = kΔx Here Δx is the distance x we want to find. Step 3: Substitute values π/4 = (π/4) * x Step 4: Solve for x x = (π/4) / (π/4) = 1",
+   "year": 2006
+  },
+  {
+   "id": "jamb-physics-bank-2902",
+   "type": "mcq",
+   "stem": "Heat is supplied uniformly at the rate of 100W to 1.0 × 10⁻² kg of a liquid for 20 seconds. If the temperature of the liquid rises by 5°C, then the specific heat capacity of the liquid is",
+   "options": {
+    "A": "2.0 × 10² Jkg⁻¹K⁻¹",
+    "B": "2.0 × 10² Jkg⁻¹",
+    "C": "4.0 × 10⁴ Jkg⁻¹K⁻¹",
+    "D": "4.0 × 10⁴ Jkg⁻¹"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Given information: Power (P) = 100 W Mass (m) = 1.0 × 10⁻² kg = 0.01 kg Time (t) = 20 seconds Temperature rise (ΔT) = 5°C = 5 K Specific heat capacity (c) = ? Step 1: Calculate total heat energy supplied Energy = Power × Time Q = P × t Q = 100 × 20 Q = 2000 J Step 2: Use heat capacity formula Q = mcΔT Rearranging to find c: c = Q/(mΔT) Substituting values: c = 2000/(0.01 × 5) c = 2000/0.05 c = 40,000 J/(kg·K) c = 4.0 × 10⁴ Jkg⁻¹K⁻¹",
+   "year": 2020
+  },
+  {
+   "id": "jamb-physics-bank-2903",
+   "type": "mcq",
+   "stem": "A wire of length 2.0 m and cross-sectional area 2.0 × 10⁻⁶ m² is stretched by 1.0 mm when a load of 100 N is applied. Calculate the Young's modulus of the material.",
+   "options": {
+    "A": "1.0 × 10¹¹ Nm⁻²",
+    "B": "2.0 × 10¹¹ Nm⁻²",
+    "C": "5.0 × 10¹⁰ Nm⁻²",
+    "D": "1.0 × 10¹⁰ Nm⁻²"
+   },
+   "marks": 1,
+   "answer": "A",
+   "explanation": "Given information: Original length (L) = 2.0 m Cross-sectional area (A) = 2.0 × 10⁻⁶ m² Extension (ΔL) = 1.0 mm = 1.0 × 10⁻³ m Applied force (F) = 100 N Young's modulus (E) = ? Formula for Young's modulus: E = (Stress)/(Strain) E = (F/A)/(ΔL/L) E = FL/(AΔL) Step 1: Calculate stress Stress = F/A Stress = 100/(2.0 × 10⁻⁶) Stress = 5.0 × 10⁷ Nm⁻² Step 2: Calculate strain Strain = ΔL/L Strain = (1.0 × 10⁻³)/2.0 Strain = 5.0 × 10⁻⁴ Step 3: Calculate Young's modulus E = Stress/Strain E = (5.0 × 10⁷)/(5.0 × 10⁻⁴) E = 1.0 × 10¹¹ Nm⁻²",
+   "year": 2010
+  },
+  {
+   "id": "jamb-physics-bank-2904",
+   "type": "mcq",
+   "stem": "If the angle between two vectors P and Q is 0°, the vectors are said to",
+   "options": {
+    "A": "intersect at the angle 45°",
+    "B": "intersect at the angle 60°",
+    "C": "be parallel",
+    "D": "be perpendicular"
+   },
+   "marks": 1,
+   "answer": "C",
+   "explanation": "Vector relationship: When the angle between two vectors is 0°, both vectors point in the same direction.",
+   "year": 2004
+  },
+  {
+   "id": "jamb-physics-bank-2905",
+   "type": "mcq",
+   "stem": "A car accelerates uniformly from rest to a velocity of 30 m/s in 6 seconds. Calculate the acceleration of the car.",
+   "options": {
+    "A": "3 m/s²",
+    "B": "5 m/s²",
+    "C": "6 m/s²",
+    "D": "10 m/s²"
+   },
+   "marks": 1,
+   "answer": "B",
+   "explanation": "Given information: Initial velocity (u) = 0 m/s (starts from rest) Final velocity (v) = 30 m/s Time (t) = 6 seconds Acceleration (a) = ? Using the equation of motion: v = u + at Rearranging to find acceleration: a = (v - u)/t Substituting values: a = (30 - 0)/6 a = 30/6 a = 5 m/s²",
+   "year": 2017
   }
  ],
  "body": "JAMB",
