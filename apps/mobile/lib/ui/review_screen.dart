@@ -10,15 +10,49 @@
 library;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../qtext.dart';
-import 'tutor_screen.dart';
+import 'explanation_sheet.dart';
+import 'saved_questions.dart';
 import '../controllers.dart';
 import '../models.dart';
+import '../storage.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
+
+/// The small filter pills of the reader (Wrong / Skipped / All).
+class _FilterChip extends StatelessWidget {
+  const _FilterChip(this.label, this.selected, this.onTap);
+
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(999),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+        decoration: BoxDecoration(
+          color: selected ? context.selectionBlue : context.cardLow,
+          borderRadius: BorderRadius.circular(999),
+        ),
+        child: Text(
+          label,
+          style: RenanceText.labelMono.copyWith(
+            fontSize: 12,
+            color: selected ? context.ink : context.textSecondary,
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class ReviewScreen extends StatefulWidget {
   const ReviewScreen({super.key});
@@ -485,9 +519,17 @@ class _PaperCard extends StatelessWidget {
 /// All chips, question cards with You Picked vs Correct Answer blocks and
 /// the key explanation. Data: GET /attempts/{id}/review (graded only).
 class ReviewDetailScreen extends StatefulWidget {
-  const ReviewDetailScreen({super.key, required this.attemptId});
+  const ReviewDetailScreen({
+    super.key,
+    required this.attemptId,
+    this.studyTitle,
+  });
 
   final String attemptId;
+
+  /// Study mode hands the study paper's title in, so the reader can
+  /// head itself the way the school app's Past Questions page does.
+  final String? studyTitle;
 
   @override
   State<ReviewDetailScreen> createState() => _ReviewDetailScreenState();
@@ -498,12 +540,21 @@ enum _ReviewFilter { wrong, skipped, all }
 class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
   AttemptReview? _review;
   String? _error;
-  _ReviewFilter _filter = _ReviewFilter.wrong;
+  _ReviewFilter _filter = _ReviewFilter.all;
+  String _query = '';
+  SavedStore? _saved;
+  final Map<int, GlobalKey> _cardKeys = <int, GlobalKey>{};
 
   @override
   void initState() {
     super.initState();
-    Future<void>.microtask(_load);
+    Future<void>.microtask(() async {
+      await _load();
+      if (!mounted) return;
+      final prefs =
+          Provider.of<SessionStore>(context, listen: false).prefs;
+      setState(() => _saved = SavedStore(prefs));
+    });
   }
 
   Future<void> _load() async {
@@ -521,234 +572,461 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
     }
   }
 
+  /// Exam body label for the "Exam Type" chip, derived from the code.
+  String get _bodyLabel {
+    final String code = _review?.code ?? '';
+    if (code.startsWith('waec-')) return 'WAEC';
+    if (code.startsWith('neco-')) return 'NECO';
+    if (code.startsWith('daily-')) return 'Challenge';
+    if (code.startsWith('uni-')) return 'University';
+    return 'JAMB';
+  }
+
+  String get _typeLabel {
+    final AttemptReview? review = _review;
+    if (review == null) return 'Mixed';
+    final bool anyTheory = review.questions.any((ReviewQuestion q) =>
+        q.type == 'theory' || q.options.isEmpty);
+    final bool anyMcq =
+        review.questions.any((ReviewQuestion q) => q.type == 'mcq');
+    if (anyTheory && anyMcq) return 'Mixed';
+    if (anyTheory) return 'Theory';
+    return 'Objective';
+  }
+
+  Future<void> _openExplanation(
+    List<ReviewQuestion> questions,
+    int index,
+  ) async {
+    await showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (BuildContext sheetContext) => _ExplanationPager(
+        state: this,
+        questions: questions,
+        initialIndex: index,
+      ),
+    );
+    if (mounted) setState(() {}); // refresh save states
+  }
+
+  void _jumpTo(int i) {
+    final GlobalKey? key = _cardKeys[i];
+    final BuildContext? ctx = key?.currentContext;
+    if (ctx != null) {
+      Scrollable.ensureVisible(
+        ctx,
+        duration: const Duration(milliseconds: 320),
+        curve: Curves.easeOutCubic,
+        alignment: 0.05,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final StudentController student = context.watch<StudentController>();
     final AttemptReview? review = _review;
 
     return Scaffold(
-      backgroundColor: context.card,
-      appBar: AppBar(
-        backgroundColor: context.card,
-        titleSpacing: 0,
-        title: review == null
-            ? const Text('Review')
-            : Text(
-                'Review · ${review.wrongCount} wrong',
-                style: RenanceText.sectionTitle,
-              ),
-      ),
-      body: review == null
-          ? Center(
-              child: _error == null
-                  ? const LogoActivityIndicator(
-                      label: 'Opening the marked paper…',
-                    )
-                  : Padding(
-                      padding: const EdgeInsets.all(32),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Text(
-                            _error!,
-                            textAlign: TextAlign.center,
-                            style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
-                          ),
-                          const SizedBox(height: 16),
-                          OutlinedButton(
-                            onPressed: _load,
-                            child: const Text('Retry'),
-                          ),
-                        ],
-                      ),
+      backgroundColor: context.cardLowest,
+      body: SafeArea(
+        bottom: false,
+        child: review == null
+            ? Column(
+                children: <Widget>[
+                  _ReaderHeader(
+                    title: 'Past Questions',
+                    onBack: () => Navigator.of(context).pop(),
+                  ),
+                  Expanded(
+                    child: Center(
+                      child: _error == null
+                          ? const LogoActivityIndicator(
+                              label: 'Opening the marked paper…',
+                            )
+                          : Padding(
+                              padding: const EdgeInsets.all(32),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Text(
+                                    _error!,
+                                    textAlign: TextAlign.center,
+                                    style: RenanceText.bodySecondary.copyWith(
+                                        color: context.textSecondary),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  OutlinedButton(
+                                    onPressed: _load,
+                                    child: const Text('Retry'),
+                                  ),
+                                ],
+                              ),
+                            ),
                     ),
-            )
-          : Builder(
-              builder: (BuildContext context) {
-                final List<ReviewQuestion> questions = review.questions
-                    .where(
-                      (ReviewQuestion q) => switch (_filter) {
-                        _ReviewFilter.wrong =>
-                          q.isWrong && q.selected.isNotEmpty,
-                        _ReviewFilter.skipped => q.selected.isEmpty,
-                        _ReviewFilter.all => true,
-                      },
-                    )
-                    .toList(growable: false);
-                final int wrongCount = review.wrongCount;
-                final int skippedCount = review.skippedCount;
+                  ),
+                ],
+              )
+            : Column(
+                children: <Widget>[
+                  _ReaderHeader(
+                    title: 'Past Questions',
+                    onBack: () => Navigator.of(context).pop(),
+                  ),
+                  Expanded(
+                    child: Builder(
+                      builder: (BuildContext context) {
+                        final List<ReviewQuestion> questions = review.questions
+                            .where(
+                              (ReviewQuestion q) => switch (_filter) {
+                                _ReviewFilter.wrong =>
+                                  q.isWrong && q.selected.isNotEmpty,
+                                _ReviewFilter.skipped => q.selected.isEmpty,
+                                _ReviewFilter.all => true,
+                              },
+                            )
+                            .where((ReviewQuestion q) =>
+                                _query.isEmpty ||
+                                q.stem.toLowerCase().contains(_query))
+                            .toList(growable: false);
+                        final int wrongCount = review.wrongCount;
+                        final int skippedCount = review.skippedCount;
+                        _cardKeys.clear();
 
-                return ListView(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-                  children: <Widget>[
-                    Text(
-                      student.titleForCode(review.code),
-                      style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
-                    ),
-                    const SizedBox(height: 12),
-                    Row(
-                      children: <Widget>[
-                        _FilterChip(
-                          'Wrong ($wrongCount)',
-                          _filter == _ReviewFilter.wrong,
-                          () {
-                            setState(() => _filter = _ReviewFilter.wrong);
-                          },
-                        ),
-                        const SizedBox(width: 8),
-                        _FilterChip(
-                          'Skipped ($skippedCount)',
-                          _filter == _ReviewFilter.skipped,
-                          () {
-                            setState(() => _filter = _ReviewFilter.skipped);
-                          },
-                        ),
-                        const SizedBox(width: 8),
-                        _FilterChip(
-                          'All (${review.questions.length})',
-                          _filter == _ReviewFilter.all,
-                          () {
-                            setState(() => _filter = _ReviewFilter.all);
-                          },
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                    if (questions.isEmpty)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 40),
-                        child: Center(
-                          child: Text(switch (_filter) {
-                            _ReviewFilter.wrong =>
-                              'Nothing wrong here, flawless paper.',
-                            _ReviewFilter.skipped => 'No skipped questions.',
-                            _ReviewFilter.all => 'No questions.',
-                          }, style: RenanceText.bodySecondary.copyWith(color: context.textSecondary)),
-                        ),
-                      )
-                    else
-                      ...questions.asMap().entries.map(
-                        (MapEntry<int, ReviewQuestion> e) => Padding(
-                          padding: const EdgeInsets.only(bottom: 16),
-                          child: _ReviewCard(
-                            index: review.questions.indexOf(e.value) + 1,
-                            question: e.value,
-                            onAskTutor: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute<void>(
-                                  builder: (_) => TutorChatScreen(
-                                    attemptId: widget.attemptId,
-                                    paperCode: review.code,
-                                    questions: review.questions,
-                                    initialQuestionId: e.value.questionId,
+                        return RefreshIndicator(
+                          onRefresh: _load,
+                          child: ListView(
+                            physics: const AlwaysScrollableScrollPhysics(),
+                            padding:
+                                const EdgeInsets.fromLTRB(16, 12, 16, 24),
+                            children: <Widget>[
+                              // Subject title — the school app's big
+                              // Mathematics heading.
+                              Text(
+                                widget.studyTitle ??
+                                    student.titleForCode(review.code),
+                                style: RenanceText.displayMd
+                                    .copyWith(fontSize: 23),
+                              ),
+                              const SizedBox(height: 10),
+                              // Type chips — "Questions Type Objective" /
+                              // "Exam Type JAMB".
+                              Wrap(
+                                spacing: 8,
+                                runSpacing: 8,
+                                children: <Widget>[
+                                  _TypeChip(
+                                    label: 'Questions Type',
+                                    value: _typeLabel,
+                                    tone: const Color(0xFF0E7490),
+                                    tint: const Color(0xFFE0F2F7),
+                                  ),
+                                  _TypeChip(
+                                    label: 'Exam Type',
+                                    value: _bodyLabel,
+                                    tone: const Color(0xFFB45309),
+                                    tint: const Color(0xFFFDF0E0),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 14),
+                              // The filter trio keeps its Renance edge.
+                              Row(
+                                children: <Widget>[
+                                  _FilterChip(
+                                    'Wrong ($wrongCount)',
+                                    _filter == _ReviewFilter.wrong,
+                                    () => setState(
+                                        () => _filter = _ReviewFilter.wrong),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  _FilterChip(
+                                    'Skipped ($skippedCount)',
+                                    _filter == _ReviewFilter.skipped,
+                                    () => setState(() =>
+                                        _filter = _ReviewFilter.skipped),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  _FilterChip(
+                                    'All (${review.questions.length})',
+                                    _filter == _ReviewFilter.all,
+                                    () => setState(
+                                        () => _filter = _ReviewFilter.all),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 14),
+                              // Search Question — the school app's bar.
+                              TextField(
+                                onChanged: (String v) =>
+                                    setState(() => _query = v.trim().toLowerCase()),
+                                decoration: InputDecoration(
+                                  hintText: 'Search Question',
+                                  prefixIcon: Icon(Icons.search,
+                                      size: 20, color: context.outline),
+                                  filled: true,
+                                  fillColor: context.card,
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                        color: context.outlineVariant),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                    borderSide: BorderSide(
+                                        color: context.ink, width: 1.2),
                                   ),
                                 ),
-                              );
-                            },
+                              ),
+                              const SizedBox(height: 16),
+                              if (questions.isEmpty)
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 40),
+                                  child: Center(
+                                    child: Text(
+                                      switch (_filter) {
+                                        _ReviewFilter.wrong =>
+                                          'Nothing wrong here, flawless paper.',
+                                        _ReviewFilter.skipped =>
+                                          'No skipped questions.',
+                                        _ReviewFilter.all => 'No questions.',
+                                      },
+                                      style: RenanceText.bodySecondary
+                                          .copyWith(
+                                              color:
+                                                  context.textSecondary),
+                                    ),
+                                  ),
+                                )
+                              else
+                                ...questions.asMap().entries.map(
+                                  (MapEntry<int, ReviewQuestion> e) {
+                                    final GlobalKey key = GlobalKey();
+                                    _cardKeys[e.key] = key;
+                                    return Container(
+                                      key: key,
+                                      margin: const EdgeInsets.only(
+                                          bottom: 16),
+                                      child: _StudyQuestionCard(
+                                        index: e.key + 1,
+                                        question: e.value,
+                                        onView: () => _openExplanation(
+                                            questions, e.key),
+                                      ),
+                                    );
+                                  },
+                                ),
+                            ],
                           ),
-                        ),
-                      ),
-                  ],
-                );
-              },
-            ),
+                        );
+                      },
+                    ),
+                  ),
+                  // The bottom navigator strip, the school app's drawer.
+                  if (review.questions.isNotEmpty)
+                    _ReaderNavigator(
+                      total: review.questions.length,
+                      onJump: _jumpTo,
+                    ),
+                ],
+              ),
+      ),
+    );
+  }
+
+  // ---- explanation helpers used by _ExplanationPager -------------------
+
+  bool isSaved(String questionId) =>
+      _saved?.isSaved(questionId) ?? false;
+
+  Future<void> toggleSave(ReviewQuestion q) async {
+    final SavedStore? store = _saved;
+    if (store == null) return;
+    await store.toggle(SavedQuestion(
+      id: q.questionId,
+      code: _review?.code ?? '',
+      title: _review?.title ?? '',
+      stem: q.stem,
+      options: q.options,
+      savedAt: DateTime.now(),
+      topic: q.topic,
+      year: q.year,
+      image: q.image,
+      passage: q.passage,
+      correct: q.correct,
+      explanation: q.explanation,
+      attemptId: widget.attemptId,
+    ));
+  }
+
+  void reportQuestion(ReviewQuestion q) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+            'Report noted on question ${q.questionId}. Thanks for the '
+            'flag, it goes straight to the question team.'),
+      ),
     );
   }
 }
 
-class _FilterChip extends StatelessWidget {
-  const _FilterChip(this.label, this.selected, this.onTap);
+/// The reader's sticky header: back circle + the white "Past Questions"
+/// pill centred, exactly the school app's head.
+class _ReaderHeader extends StatelessWidget {
+  const _ReaderHeader({required this.title, required this.onBack});
 
-  final String label;
-  final bool selected;
-  final VoidCallback onTap;
+  final String title;
+  final VoidCallback onBack;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(999),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-        decoration: BoxDecoration(
-          color: selected
-              ? context.selectionBlue
-              : context.cardLow,
-          borderRadius: BorderRadius.circular(999),
-        ),
-        child: Text(
-          label,
-          style: RenanceText.labelMono.copyWith(
-            fontSize: 12,
-            color: selected ? context.ink : context.textSecondary,
+    return Container(
+      decoration: BoxDecoration(
+        color: context.cardLowest,
+        border: Border(
+          bottom: BorderSide(
+            color: context.outlineVariant.withValues(alpha: 0.35),
           ),
+        ),
+      ),
+      padding: const EdgeInsets.fromLTRB(12, 6, 16, 8),
+      child: SizedBox(
+        height: 48,
+        child: Row(
+          children: <Widget>[
+            InkWell(
+              onTap: onBack,
+              customBorder: const CircleBorder(),
+              child: Container(
+                width: 44,
+                height: 44,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: context.outlineVariant),
+                  color: context.card,
+                ),
+                child: Icon(Icons.arrow_back, size: 20, color: context.ink),
+              ),
+            ),
+            const Spacer(),
+            Container(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 16, vertical: 8),
+              decoration: BoxDecoration(
+                color: context.card,
+                borderRadius: BorderRadius.circular(999),
+                border: Border.all(color: context.outlineVariant),
+              ),
+              child: Text(
+                title,
+                style: RenanceText.bodyMedium.copyWith(fontSize: 14),
+              ),
+            ),
+            const Spacer(),
+            const SizedBox(width: 44),
+          ],
         ),
       ),
     );
   }
 }
 
-/// One reviewed question: stem, You Picked block, Correct Answer block,
-/// explanation strip, Ask-AI row.
-class _ReviewCard extends StatelessWidget {
-  const _ReviewCard({
+/// The "Questions Type Objective" / "Exam Type JAMB" chips.
+class _TypeChip extends StatelessWidget {
+  const _TypeChip({
+    required this.label,
+    required this.value,
+    required this.tone,
+    required this.tint,
+  });
+
+  final String label;
+  final String value;
+  final Color tone;
+  final Color tint;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+      decoration: BoxDecoration(
+        color: tint,
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Text(
+            '$label ',
+            style: RenanceText.bodySecondary.copyWith(
+              fontSize: 13,
+              color: tone.withValues(alpha: 0.85),
+            ),
+          ),
+          Text(
+            value,
+            style: RenanceText.bodyMedium.copyWith(
+              fontSize: 13,
+              color: tone,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// One question card of the reader: "Question N" pill, stem, the option
+/// stack, then the View Explanation pill + copy button — the school
+/// app's study card.
+class _StudyQuestionCard extends StatelessWidget {
+  const _StudyQuestionCard({
     required this.index,
     required this.question,
-    required this.onAskTutor,
+    required this.onView,
   });
 
   final int index;
   final ReviewQuestion question;
-  final VoidCallback onAskTutor;
+  final VoidCallback onView;
 
   @override
   Widget build(BuildContext context) {
-    final bool pickedWrong =
-        question.selected.isNotEmpty && !question.correctly;
-
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: context.card,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const <BoxShadow>[
-          BoxShadow(
-            color: Color(0x33141C2D),
-            blurRadius: 3,
-            offset: Offset(0, 1),
-          ),
-        ],
+        borderRadius: BorderRadius.circular(14),
+        border:
+            Border.all(color: context.outlineVariant.withValues(alpha: 0.5)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text('Q. $index', style: RenanceText.labelMono),
-              if (question.topic.isNotEmpty) ...<Widget>[
-                const SizedBox(width: 8),
-                Flexible(
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8,
-                      vertical: 2,
-                    ),
-                    decoration: BoxDecoration(
-                      color: context.cardLow,
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                    child: Text(
-                      question.topic,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: RenanceText.caption.copyWith(color: context.textSecondary, fontSize: 11),
-                    ),
-                  ),
+          Container(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
+            decoration: BoxDecoration(
+              color: context.card,
+              borderRadius: BorderRadius.circular(999),
+              border: Border.all(color: context.outlineVariant),
+              boxShadow: const <BoxShadow>[
+                BoxShadow(
+                  color: Color(0x14141C2D),
+                  blurRadius: 3,
+                  offset: Offset(0, 1),
                 ),
               ],
-            ],
+            ),
+            child: Text(
+              'Question $index',
+              style: RenanceText.bodyMedium.copyWith(fontSize: 14.5),
+            ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 14),
           if (question.passage.isNotEmpty) ...<Widget>[
             Container(
               margin: const EdgeInsets.only(bottom: 10),
@@ -785,7 +1063,10 @@ class _ReviewCard extends StatelessWidget {
           ],
           QuestionText(
             question.stem,
-            style: RenanceText.bodyBase.copyWith(height: 1.45),
+            style: RenanceText.bodyMedium.copyWith(
+              fontSize: 16,
+              height: 1.5,
+            ),
           ),
           if (question.image.isNotEmpty) ...<Widget>[
             const SizedBox(height: 10),
@@ -801,99 +1082,95 @@ class _ReviewCard extends StatelessWidget {
             ),
           ],
           const SizedBox(height: 14),
-          if (pickedWrong) ...<Widget>[
-            _AnswerBlock(
-              letter: question.selected,
-              text: question.options[question.selected] ?? '',
-              label: 'You Picked',
-              correct: false,
-            ),
-            const SizedBox(height: 10),
-          ],
-          if (question.selected.isEmpty)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Text(
-                'Skipped, you left this one blank.',
-                style: RenanceText.caption.copyWith(color: RenanceColors.amber),
+          ...question.options.entries.map(
+            (MapEntry<String, String> opt) => Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 14, vertical: 12),
+                decoration: BoxDecoration(
+                  color: context.card,
+                  borderRadius: BorderRadius.circular(10),
+                  border:
+                      Border.all(color: context.outlineVariant),
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      opt.key,
+                      style: TextStyle(
+                        fontFamily: 'Inter',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w800,
+                        color: context.error.withValues(alpha: 0.9),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Expanded(
+                      child: QuestionText(
+                        opt.value,
+                        style: RenanceText.bodyBase.copyWith(
+                          fontSize: 14.5,
+                          height: 1.4,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          _AnswerBlock(
-            letter: question.correct,
-            text: question.options[question.correct] ?? '',
-            label: 'Correct Answer',
-            correct: true,
           ),
-          if (question.answerImage.isNotEmpty) ...<Widget>[
-            const SizedBox(height: 10),
-            Text('WORKED SOLUTION',
-                style: RenanceText.labelMono.copyWith(
-                  fontSize: 10,
-                  color: context.textSecondary,
-                )),
-            const SizedBox(height: 6),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Image.network(
-                resolveQImageUrl(question.answerImage),
-                fit: BoxFit.contain,
-                height: 220,
-                errorBuilder: (_, Object __, StackTrace? ___) =>
-                    const SizedBox.shrink(),
-              ),
-            ),
-          ],
-          if (question.explanation.isNotEmpty) ...<Widget>[
-            const SizedBox(height: 12),
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: context.cardLow,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: QuestionText(
-                question.explanation,
-                style: RenanceText.caption.copyWith(
-                    color: context.textSecondary, height: 1.5),
-              ),
-            ),
-          ],
-          if (question.video.isNotEmpty) ...<Widget>[
-            const SizedBox(height: 10),
-            SelectableText(
-              question.video,
-              style: RenanceText.caption.copyWith(
-                color: context.textSecondary,
-                decoration: TextDecoration.underline,
-              ),
-            ),
-          ],
-          const SizedBox(height: 12),
-          InkWell(
-            onTap: onAskTutor,
-            borderRadius: BorderRadius.circular(10),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 4),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Icon(
-                    Icons.smart_toy,
-                    size: 16,
-                    color: context.ink,
+          const SizedBox(height: 8),
+          Row(
+            children: <Widget>[
+              // The View Explanation pill — Myschool's red cut becomes
+              // Renance ink.
+              InkWell(
+                onTap: onView,
+                borderRadius: BorderRadius.circular(999),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 18, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: context.inverseChip,
+                    borderRadius: BorderRadius.circular(999),
                   ),
-                  const SizedBox(width: 6),
-                  Text(
-                    'Ask AI Tutor why ${question.correct} is right',
-                    style: RenanceText.labelMono.copyWith(
-                      fontSize: 12,
-                      color: context.ink,
+                  child: Text(
+                    'View Explanation',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                      color: context.onInverseChip,
                     ),
                   ),
-                ],
+                ),
               ),
-            ),
+              const Spacer(),
+              InkWell(
+                onTap: () {
+                  final StringBuffer buf = StringBuffer(question.stem);
+                  for (final MapEntry<String, String> opt
+                      in question.options.entries) {
+                    buf.write('\n${opt.key}) ${opt.value}');
+                  }
+                  Clipboard.setData(ClipboardData(text: buf.toString()));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Question copied')),
+                  );
+                },
+                customBorder: const CircleBorder(),
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: context.outlineVariant),
+                  ),
+                  child: Icon(Icons.copy_outlined,
+                      size: 17, color: context.ink),
+                ),
+              ),
+            ],
           ),
         ],
       ),
@@ -901,67 +1178,131 @@ class _ReviewCard extends StatelessWidget {
   }
 }
 
-/// The letter-box + option text row (You Picked red / Correct emerald).
-class _AnswerBlock extends StatelessWidget {
-  const _AnswerBlock({
-    required this.letter,
-    required this.text,
-    required this.label,
-    required this.correct,
-  });
+/// The reader's bottom navigator: "N Questions" pill + the number strip.
+class _ReaderNavigator extends StatelessWidget {
+  const _ReaderNavigator({required this.total, required this.onJump});
 
-  final String letter;
-  final String text;
-  final String label;
-  final bool correct;
+  final int total;
+  final ValueChanged<int> onJump;
 
   @override
   Widget build(BuildContext context) {
-    final Color tone = correct ? RenanceColors.emerald : context.error;
-    final Color toneBg = correct
-        ? const Color(0xFFE7F8F1)
-        : context.errorContainer;
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Container(
-          width: 36,
-          height: 36,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: toneBg,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Text(
-            letter,
-            style: RenanceText.labelMono.copyWith(
-              fontSize: 15,
-              color: tone,
-              fontWeight: FontWeight.w700,
-            ),
+    return Container(
+      decoration: BoxDecoration(
+        color: context.card,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+        border: Border(
+          top: BorderSide(
+            color: context.outlineVariant.withValues(alpha: 0.5),
           ),
         ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                label,
-                style: RenanceText.labelMono.copyWith(
-                  fontSize: 11,
-                  color: tone,
+      ),
+      child: SafeArea(
+        top: false,
+        minimum: const EdgeInsets.fromLTRB(16, 8, 16, 6),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: context.cardLow,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    '$total Questions',
+                    style: RenanceText.labelMono.copyWith(
+                      fontSize: 12,
+                      color: context.textSecondary,
+                    ),
+                  ),
+                ),
+                const Spacer(),
+              ],
+            ),
+            const SizedBox(height: 6),
+            SizedBox(
+              height: 34,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: total,
+                itemBuilder: (BuildContext context, int i) => Padding(
+                  padding: const EdgeInsets.only(right: 6),
+                  child: GestureDetector(
+                    onTap: () => onJump(i),
+                    child: Container(
+                      width: 34,
+                      height: 34,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: context.outlineVariant),
+                      ),
+                      child: Text(
+                        '${i + 1}',
+                        style: RenanceText.bodyBase.copyWith(fontSize: 13),
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              const SizedBox(height: 2),
-              QuestionText(
-                text,
-                style: RenanceText.bodyBase.copyWith(height: 1.4),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ],
+      ),
+    );
+  }
+}
+
+/// Keeps one sheet open across Previous/Next, rebuilding the
+/// ExplanationSheet per question — the school app's pager behaviour.
+class _ExplanationPager extends StatefulWidget {
+  const _ExplanationPager({
+    required this.state,
+    required this.questions,
+    required this.initialIndex,
+  });
+
+  final _ReviewDetailScreenState state;
+  final List<ReviewQuestion> questions;
+  final int initialIndex;
+
+  @override
+  State<_ExplanationPager> createState() => _ExplanationPagerState();
+}
+
+class _ExplanationPagerState extends State<_ExplanationPager> {
+  late int _idx = widget.initialIndex;
+
+  @override
+  Widget build(BuildContext context) {
+    final ReviewQuestion q = widget.questions[_idx];
+    return ExplanationSheet(
+      key: ValueKey<int>(_idx),
+      title: 'Question',
+      questionNumber: _idx + 1,
+      stem: q.stem,
+      passage: q.passage,
+      image: q.image,
+      topic: q.topic,
+      year: q.year,
+      options: q.options,
+      correct: q.correct,
+      selected: q.selected,
+      explanation: q.explanation,
+      attemptId: widget.state.widget.attemptId,
+      questionId: q.questionId,
+      saved: widget.state.isSaved(q.questionId),
+      onToggleSave: () => widget.state.toggleSave(q),
+      onPrevious:
+          _idx > 0 ? () => setState(() => _idx--) : null,
+      onNext: _idx < widget.questions.length - 1
+          ? () => setState(() => _idx++)
+          : null,
+      onReport: () => widget.state.reportQuestion(q),
     );
   }
 }

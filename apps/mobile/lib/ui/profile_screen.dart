@@ -15,6 +15,8 @@ import 'downloads_screen.dart';
 import 'focus_sheet.dart';
 import 'gpa_screen.dart';
 import 'home_screen.dart' show AvatarCircle;
+import 'performance_screen.dart';
+import 'saved_questions.dart';
 import 'settings_screen.dart';
 import 'theme.dart';
 
@@ -186,6 +188,24 @@ class ProfileScreen extends StatelessWidget {
         // (My Packs, GPA Calculator; Downloads stays as the mobile
         // affordance for the on-device pack library) ----------------------
         _MenuGroup(items: <_MenuItem>[
+          _MenuItem(
+            icon: Icons.insights,
+            tint: context.ink,
+            label: 'Performance Analysis',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const PerformanceScreen()));
+            },
+          ),
+          _MenuItem(
+            icon: Icons.bookmark_border,
+            tint: context.ink,
+            label: 'Saved Questions',
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                  builder: (_) => const SavedQuestionsScreen()));
+            },
+          ),
           _MenuItem(
             icon: Icons.auto_stories,
             tint: context.ink,

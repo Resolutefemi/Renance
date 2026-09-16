@@ -267,7 +267,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ListTile(
               contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               title: const Text('Version', style: RenanceText.bodyBase),
-              trailing: Text('2.4.1',
+              trailing: Text('2.5.0',
                   style: RenanceText.labelMono.copyWith(fontSize: 12)),
             ),
           ]),

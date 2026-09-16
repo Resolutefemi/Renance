@@ -12,10 +12,12 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../controllers.dart';
 import '../models.dart';
+import '../papers.dart';
 import '../qtext.dart';
 import 'fatigue_nudge.dart';
 import 'review_screen.dart' show ReviewDetailScreen;
@@ -30,6 +32,7 @@ class ExamScreen extends StatefulWidget {
     this.durationOverrideMinutes,
     this.untimed = false,
     this.shuffleQuestions = false,
+    this.studyMode = false,
   });
 
   final ExamMeta exam;
@@ -42,6 +45,11 @@ class ExamScreen extends StatefulWidget {
   /// Practice Settings' shuffle toggle: re-orders the loaded questions
   /// on-device. Grading is per-question-id, so order is free.
   final bool shuffleQuestions;
+
+  /// Study Past Questions mode (the school app's study cut): the paper
+  /// plays untimed and, once graded, lands straight in the Past
+  /// Questions reader with the explanations unlocked.
+  final bool studyMode;
 
   @override
   State<ExamScreen> createState() => _ExamScreenState();
@@ -56,7 +64,7 @@ class _ExamScreenState extends State<ExamScreen> {
       context.read<ExamController>().load(
             widget.exam,
             durationOverrideMinutes: widget.durationOverrideMinutes,
-            untimed: widget.untimed,
+            untimed: widget.untimed || widget.studyMode,
             shuffleQuestions: widget.shuffleQuestions,
           );
     });
@@ -65,12 +73,32 @@ class _ExamScreenState extends State<ExamScreen> {
   String _mmss(int s) =>
       '${(s ~/ 60).toString().padLeft(2, '0')}:${(s % 60).toString().padLeft(2, '0')}';
 
+  String _hhmmss(int s) =>
+      '${(s ~/ 3600).toString().padLeft(2, '0')} : '
+      '${((s % 3600) ~/ 60).toString().padLeft(2, '0')} : '
+      '${(s % 60).toString().padLeft(2, '0')}';
+
   @override
   Widget build(BuildContext context) {
     final ExamController c = context.watch<ExamController>();
-    // Playing phase owns its chrome: the sticky light exam header
-    // (leave · title · calculator · clock · map) replaces the default
-    // AppBar, exactly like the web player.
+    // Study mode: the graded paper lands in the Past Questions reader.
+    if (widget.studyMode && c.phase == ExamPhase.graded) {
+      final String? attemptId = c.attemptId;
+      if (attemptId != null) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (!mounted) return;
+          Navigator.of(context).pushReplacement(MaterialPageRoute<void>(
+            builder: (_) => ReviewDetailScreen(
+              attemptId: attemptId,
+              studyTitle: widget.exam.title,
+            ),
+          ));
+        });
+      }
+    }
+    // Playing phase owns its chrome: the Myschool-cut CBT header
+    // (title · copy · calculator / big clock · Quit · Submit) replaces
+    // the default AppBar.
     final bool inPlay = c.phase == ExamPhase.playing;
     return Scaffold(
       backgroundColor: context.cardLowest,
@@ -82,14 +110,16 @@ class _ExamScreenState extends State<ExamScreen> {
                 icon: const Icon(Icons.arrow_back, size: 22),
                 onPressed: () => Navigator.of(context).maybePop(),
               ),
-              title: const Text('Active Quiz', style: RenanceText.sectionTitle),
+              title: Text(
+                  widget.studyMode ? 'Study Past Questions' : 'Active Quiz',
+                  style: RenanceText.sectionTitle),
               titleSpacing: 0,
             ),
       body: switch (c.phase) {
         ExamPhase.loading => const Center(
             child: LogoActivityIndicator(label: 'Opening pack…'),
           ),
-        ExamPhase.intro => _Intro(controller: c),
+        ExamPhase.intro => _Intro(controller: c, studyMode: widget.studyMode),
         ExamPhase.playing => FatigueNudgeOverlay(
             visible: c.nudgeVisible,
             reasons: c.signal.reasons,
@@ -97,7 +127,12 @@ class _ExamScreenState extends State<ExamScreen> {
             onKeepGoing: c.keepGoing,
             child: SafeArea(
               bottom: false,
-              child: _Player(controller: c, mmss: _mmss),
+              child: _Player(
+                controller: c,
+                mmss: _mmss,
+                hhmmss: _hhmmss,
+                studyMode: widget.studyMode,
+              ),
             ),
           ),
         ExamPhase.grading => Center(
@@ -118,7 +153,9 @@ class _ExamScreenState extends State<ExamScreen> {
             ),
           ),
         ExamPhase.queued => _Queued(),
-        ExamPhase.graded => _Result(controller: c),
+        ExamPhase.graded => widget.studyMode && c.attemptId != null
+            ? const SizedBox.shrink() // redirecting to the reader
+            : _Result(controller: c),
         ExamPhase.error => _ErrorView(controller: c),
       },
     );
@@ -127,9 +164,94 @@ class _ExamScreenState extends State<ExamScreen> {
 
 // ------------------------------------------------------------------- intro
 
+/// The exam instructions page — the school app's "CBT Exam
+/// Instructions" cut: the dark simulator banner, the instruction list,
+/// then the Summary block (Subjects / Test Mode / Exam Year cards) and
+/// the Proceed-to-Test action with the Edit Selections link.
 class _Intro extends StatelessWidget {
-  const _Intro({required this.controller});
+  const _Intro({required this.controller, required this.studyMode});
+
   final ExamController controller;
+  final bool studyMode;
+
+  /// Per-subject counts for the standard UTME mock — English 60 and 40
+  /// per elective, the canonical compose the server also uses. Custom
+  /// papers show the honest "≈ split across N subjects" instead.
+  List<(String, int)> _subjectRows(Bundle bundle) {
+    final String code = bundle.code;
+    if (code.startsWith('jamb-mock-')) {
+      final String body = code.substring('jamb-mock-'.length);
+      final int tilde = body.indexOf('~');
+      final String subjectPart =
+          tilde > 0 ? body.substring(0, tilde) : body;
+      final List<String> slugs = subjectPart.split('-');
+      final int? enOverride = _intParam(code, 'enN');
+      final int? totalOverride = _intParam(code, 'n');
+      if (totalOverride == null) {
+        return <(String, int)>[
+          (
+            slugs.first,
+            enOverride ?? 60,
+          ),
+          for (final String s in slugs.skip(1)) (s, 40),
+        ];
+      }
+    }
+    // Custom/pick: split the total evenly across the code's subjects.
+    final String prefix = code.startsWith('jamb-custom-')
+        ? 'jamb-custom-'
+        : code.startsWith('waec-custom-')
+            ? 'waec-custom-'
+            : code.startsWith('neco-custom-')
+                ? 'neco-custom-'
+                : code.startsWith('jamb-pick-')
+                    ? 'jamb-pick-'
+                    : '';
+    if (prefix.isEmpty) return <(String, int)>[];
+    final String body = code.substring(prefix.length);
+    final int tilde = body.indexOf('~');
+    final String subjectPart = tilde > 0 ? body.substring(0, tilde) : body;
+    final List<String> slugs = subjectPart.split('-');
+    final int? n = _intParam(code, 'n');
+    final int total = n ?? bundle.questionCount;
+    final int each = slugs.isEmpty ? total : total ~/ slugs.length;
+    return <(String, int)>[for (final String s in slugs) (s, each)];
+  }
+
+  int? _intParam(String code, String key) {
+    final RegExp re = RegExp('$key=(\\d+)');
+    return int.tryParse(re.firstMatch(code)?.group(1) ?? '');
+  }
+
+  String? _yearParam(String code) {
+    final RegExp re = RegExp('(?:^|[~.])y=([\\d;r]+)');
+    return re.firstMatch(code)?.group(1);
+  }
+
+  Future<void> _confirmLeave(BuildContext context) async {
+    final bool? leave = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext dialogContext) => AlertDialog(
+        title: const Text('Leave the paper?'),
+        content: const Text(
+            'Leave now and nothing is submitted — you keep your seat in '
+            'the paper list.'),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: const Text('Stay'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: const Text('Leave'),
+          ),
+        ],
+      ),
+    );
+    if (leave == true && context.mounted) {
+      Navigator.of(context).pop();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -137,77 +259,368 @@ class _Intro extends StatelessWidget {
     if (bundle == null) {
       return const Center(child: LogoActivityIndicator(label: 'Loading…'));
     }
-    return Center(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          children: <Widget>[
-            const RenanceMark(size: 64),
-            const SizedBox(height: 16),
-            Text(
-              bundle.title,
-              textAlign: TextAlign.center,
-              style: RenanceText.displayMd,
-            ),
-            const SizedBox(height: 8),
-            Text(
-              '${bundle.questionCount} questions · '
-              '${bundle.durationMinutes ?? 30} minutes · '
-              '${bundle.totalMarks} marks',
-              style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
-            ),
-            const SizedBox(height: 24),
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const <Widget>[
-                    _Rule('Timer starts the moment you begin'),
-                    _Rule('Auto-submits when time runs out'),
-                    _Rule('Works offline, submissions sync when you reconnect'),
-                    _Rule('Grading happens server-side, keys stay sealed'),
+    final List<(String, int)> subjectRows = _subjectRows(bundle);
+    final bool untimed = controller.untimed;
+    final int minutes = controller.durationOverrideMinutes ??
+        bundle.durationMinutes ??
+        30;
+    final String? yearsRaw = _yearParam(bundle.code);
+
+    return Column(
+      children: <Widget>[
+        // Back bar — every page gets a back button (founder rule).
+        Padding(
+          padding: const EdgeInsets.fromLTRB(12, 8, 16, 0),
+          child: Row(
+            children: <Widget>[
+              InkWell(
+                onTap: () => _confirmLeave(context),
+                customBorder: const CircleBorder(),
+                child: Container(
+                  width: 44,
+                  height: 44,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: context.outlineVariant),
+                    color: context.card,
+                  ),
+                  child:
+                      Icon(Icons.arrow_back, size: 20, color: context.ink),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+            children: <Widget>[
+              // Simulator banner — the school app's cream banner with
+              // the abstract shapes, Renance's ink ground.
+              Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 20, vertical: 22),
+                decoration: BoxDecoration(
+                  color: context.inverseChip,
+                  borderRadius: BorderRadius.circular(14),
+                ),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(
+                        studyMode
+                            ? 'Past Questions Study'
+                            : 'JAMB CBT  Simulator',
+                        style: RenanceText.sectionTitle.copyWith(
+                          fontSize: 19,
+                          color: context.onInverseChip,
+                        ),
+                      ),
+                    ),
+                    // The abstract corner shapes, quiet white.
+                    SizedBox(
+                      width: 74,
+                      height: 40,
+                      child: CustomPaint(
+                        painter: _BannerShapes(
+                          color: context.onInverseChip
+                              .withValues(alpha: 0.35),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 16),
-            _SmartOrderToggle(controller: controller),
-            const SizedBox(height: 16),
-            FilledButton(
-              onPressed: () => controller.begin(),
-              child: const Text('Begin'),
-            ),
-          ],
+              const SizedBox(height: 22),
+              // CBT Exam Instructions ------------------------------
+              Row(
+                children: <Widget>[
+                  Container(
+                    width: 34,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: context.inverseChip,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Icon(Icons.fact_check,
+                        size: 18, color: context.onInverseChip),
+                  ),
+                  const SizedBox(width: 10),
+                  Text('CBT Exam Instructions',
+                      style: RenanceText.displayMd.copyWith(fontSize: 21)),
+                ],
+              ),
+              const SizedBox(height: 12),
+              _Instruction(
+                  'Questions will appear one at a time.'),
+              _Instruction(
+                  "You're free to move to any question using the "
+                  'question navigation at the bottom of your exam '
+                  'environment.'),
+              _Instruction(
+                  "After answering a question, click 'Next' to proceed "
+                  'to the next one.'),
+              _Instruction(
+                  "When you finish all the questions, click 'Submit'."),
+              _Instruction(
+                  'If you wish to exit before completing the test, click '
+                  '"Quit" to exit the test environment and forfeit your '
+                  'exam progress.'),
+              _Instruction(
+                  'A simple calculator has also been provided at the top '
+                  'of your screen so feel free to use it as applicable.'),
+              _Instruction(
+                  'Keep an eye on your countdown time. If you run out of '
+                  'time, your answers will be automatically submitted, '
+                  'and your performance summary will be displayed.'),
+              const SizedBox(height: 20),
+              // Summary ----------------------------------------------
+              Text('Summary', style: RenanceText.displayMd.copyWith(fontSize: 21)),
+              const SizedBox(height: 12),
+              if (subjectRows.isNotEmpty)
+                _SummaryCard(
+                  icon: Icons.menu_book,
+                  iconBg: RenanceColors.emerald,
+                  title: 'Subjects',
+                  caption:
+                      'You have selected, and will be examined on the '
+                      'following subjects.',
+                  child: Column(
+                    children: <Widget>[
+                      for (final (String slug, int count) in subjectRows)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                child: Text(
+                                  subjectName(slug),
+                                  style: RenanceText.bodyMedium
+                                      .copyWith(fontSize: 15.5),
+                                ),
+                              ),
+                              Text(
+                                '$count Questions',
+                                style: RenanceText.bodyBase.copyWith(
+                                  fontSize: 14.5,
+                                  color: context.textSecondary,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                    ],
+                  ),
+                )
+              else
+                _SummaryCard(
+                  icon: Icons.menu_book,
+                  iconBg: RenanceColors.emerald,
+                  title: 'Subjects',
+                  caption: null,
+                  child: Text(
+                    '${bundle.title} · ${bundle.questionCount} questions',
+                    style: RenanceText.bodyMedium.copyWith(fontSize: 15.5),
+                  ),
+                ),
+              const SizedBox(height: 12),
+              _SummaryCard(
+                icon: Icons.access_time_filled,
+                iconBg: const Color(0xFF2563EB),
+                title: 'Test Mode',
+                caption: null,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(
+                        untimed
+                            ? 'Study Mode — Untimed'
+                            : 'Full Test Mode',
+                        style: RenanceText.bodyMedium.copyWith(
+                            fontSize: 15.5),
+                      ),
+                    ),
+                    if (!untimed) ...<Widget>[
+                      Text(
+                        '$minutes',
+                        style: RenanceText.statNumber.copyWith(
+                            fontSize: 24),
+                      ),
+                      const SizedBox(width: 5),
+                      Text(
+                        'Minutes',
+                        style: RenanceText.caption.copyWith(
+                            color: context.textSecondary),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+              const SizedBox(height: 12),
+              _SummaryCard(
+                icon: Icons.calendar_month,
+                iconBg: RenanceColors.amber,
+                title: 'Exam Year',
+                caption: null,
+                child: Text(
+                  yearsRaw == null
+                      ? 'All years'
+                      : yearsRaw.replaceAll(';', ', '),
+                  style: RenanceText.bodyMedium.copyWith(fontSize: 15.5),
+                ),
+              ),
+              const SizedBox(height: 16),
+              // Smart order keeps its Renance edge, quietly.
+              _SmartOrderToggle(controller: controller),
+              const SizedBox(height: 16),
+              // Proceed to Test ------------------------------------
+              SizedBox(
+                height: 54,
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () => controller.begin(),
+                  style: FilledButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    backgroundColor: context.inverseChip,
+                    foregroundColor: context.onInverseChip,
+                  ),
+                  child: Text(
+                    studyMode ? 'Start Study' : 'Proceed to Test',
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.w700),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 6),
+              Center(
+                child: TextButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text(
+                    'Edit Selections',
+                    style: TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w700,
+                      color: context.error,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/// One numbered-free instruction line, the school app's plain list.
+class _Instruction extends StatelessWidget {
+  const _Instruction(this.text);
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Text(
+        text,
+        style: RenanceText.bodyBase.copyWith(
+          fontSize: 15,
+          height: 1.5,
         ),
       ),
     );
   }
 }
 
-class _Rule extends StatelessWidget {
-  const _Rule(this.text);
-  final String text;
+/// The Summary block card: coloured icon bubble + title (+ caption) +
+/// the child rows, the light tint the school app uses.
+class _SummaryCard extends StatelessWidget {
+  const _SummaryCard({
+    required this.icon,
+    required this.iconBg,
+    required this.title,
+    required this.child,
+    this.caption,
+  });
+
+  final IconData icon;
+  final Color iconBg;
+  final String title;
+  final String? caption;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 3),
-      child: Row(
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: context.cardLow.withValues(alpha: 0.55),
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          const Icon(Icons.check_circle_outline,
-              size: 15, color: RenanceColors.emerald),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              text,
-              style: RenanceText.caption.copyWith(color: context.textSecondary, height: 1.4),
-            ),
+          Row(
+            children: <Widget>[
+              Container(
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                  color: iconBg,
+                  borderRadius: BorderRadius.circular(9),
+                ),
+                child: Icon(icon, size: 17, color: Colors.white),
+              ),
+              const SizedBox(width: 10),
+              Text(title,
+                  style: RenanceText.bodyMedium.copyWith(fontSize: 16)),
+            ],
           ),
+          if (caption != null) ...<Widget>[
+            const SizedBox(height: 8),
+            Text(
+              caption!,
+              style: RenanceText.bodySecondary.copyWith(
+                fontSize: 14,
+                color: context.textSecondary,
+                height: 1.45,
+              ),
+            ),
+          ],
+          const SizedBox(height: 12),
+          child,
         ],
       ),
     );
   }
+}
+
+/// The banner's abstract corner shapes.
+class _BannerShapes extends CustomPainter {
+  const _BannerShapes({required this.color});
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final Paint paint = Paint()..color = color;
+    final Path tri = Path()
+      ..moveTo(size.width * 0.15, size.height)
+      ..lineTo(size.width * 0.45, size.height * 0.25)
+      ..lineTo(size.width * 0.68, size.height)
+      ..close();
+    canvas.drawPath(tri, paint);
+    canvas.drawCircle(
+        Offset(size.width * 0.82, size.height * 0.28), 9, paint);
+    canvas.drawRect(
+        Rect.fromLTWH(size.width * 0.02, size.height * 0.1, 14, 14), paint);
+  }
+
+  @override
+  bool shouldRepaint(_BannerShapes oldDelegate) =>
+      oldDelegate.color != color;
 }
 
 /// Smart Order (ROADMAP #5): begin the paper weak-topic-first, ranked
@@ -266,30 +679,34 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
 
 // ------------------------------------------------------------------ player
 
-/// Sticky light exam chrome — leave · title · calculator · clock · map,
-/// with the answered progress rail (primary → emerald gradient), 1:1
-/// with the up-to-date web player header.
+/// The Myschool-cut CBT chrome: title + copy + calculator circles on
+/// the first row, the big tri-part clock with the Quit / Submit pair on
+/// the second, then the subject strip for multi-subject papers. Every
+/// colour stays in the founder's white & black defaults; the clock
+/// leans emerald → amber → red purely as the honest urgency code.
 class _ExamHeader extends StatelessWidget {
   const _ExamHeader({
     required this.controller,
     required this.mmss,
-    required this.onOpenNavigator,
+    required this.hhmmss,
     required this.onOpenCalculator,
+    required this.studyMode,
   });
 
   final ExamController controller;
   final String Function(int) mmss;
-  final VoidCallback onOpenNavigator;
+  final String Function(int) hhmmss;
   final VoidCallback onOpenCalculator;
+  final bool studyMode;
 
-  Future<void> _confirmLeave(BuildContext context) async {
-    final bool? leave = await showDialog<bool>(
+  Future<void> _confirmQuit(BuildContext context) async {
+    final bool? quit = await showDialog<bool>(
       context: context,
       builder: (BuildContext dialogContext) => AlertDialog(
-        title: const Text('Leave the paper?'),
+        title: const Text('Quit the paper?'),
         content: const Text(
-            'Leaving mid-paper keeps your seat — the clock keeps running, '
-            'exactly like the hall.'),
+            'Quitting exits the test environment and forfeits your exam '
+            'progress.'),
         actions: <Widget>[
           TextButton(
             onPressed: () => Navigator.of(dialogContext).pop(false),
@@ -297,172 +714,157 @@ class _ExamHeader extends StatelessWidget {
           ),
           FilledButton(
             onPressed: () => Navigator.of(dialogContext).pop(true),
-            child: const Text('Leave'),
+            child: const Text('Quit'),
           ),
         ],
       ),
     );
-    if (leave == true && context.mounted) {
+    if (quit == true && context.mounted) {
       Navigator.of(context).pop();
     }
+  }
+
+  void _copyQuestion(BuildContext context) {
+    final BundleQuestion? q = controller.current;
+    if (q == null) return;
+    final StringBuffer buf = StringBuffer(q.stem);
+    for (final MapEntry<String, String> opt in q.options.entries) {
+      buf.write('\n${opt.key}) ${opt.value}');
+    }
+    Clipboard.setData(ClipboardData(text: buf.toString()));
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Question copied')),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     final Bundle? bundle = controller.bundle;
     if (bundle == null) return const SizedBox.shrink();
-    final double progress = bundle.questionCount == 0
-        ? 0
-        : controller.answeredCount / bundle.questionCount;
     final bool breaking = controller.breakSecondsLeft > 0;
     final int? remaining =
         controller.untimed ? null : controller.secondsRemaining;
 
+    final Color clockColor;
+    if (breaking) {
+      clockColor = context.ink;
+    } else if (remaining != null && remaining < 60) {
+      clockColor = context.error;
+    } else if (remaining != null && remaining < 300) {
+      clockColor = RenanceColors.amber;
+    } else {
+      clockColor = const Color(0xFF0E9F6E); // the school app's clock green
+    }
+
     return Container(
       decoration: BoxDecoration(
-        color: context.pageBg.withValues(alpha: 0.96),
+        color: context.cardLowest,
         border: Border(
           bottom: BorderSide(
-            color: context.outlineVariant.withValues(alpha: 0.4),
+            color: context.outlineVariant.withValues(alpha: 0.45),
           ),
         ),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.fromLTRB(8, 6, 8, 6),
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
             child: Row(
               children: <Widget>[
-                // leave ---------------------------------------------------
-                IconButton(
-                  onPressed: () => _confirmLeave(context),
-                  icon: const Icon(Icons.arrow_back, size: 22),
-                  color: context.ink,
-                  tooltip: 'Leave exam',
-                ),
-                // title ----------------------------------------------------
                 Expanded(
                   child: Text(
-                    bundle.title,
+                    '${bundle.title}'
+                    '${controller.untimed ? ' (Study Mode)' : ' (Full Test Mode)'}',
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: RenanceText.caption.copyWith(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: context.textSecondary,
+                    style: RenanceText.bodyMedium.copyWith(
+                      fontSize: 15.5,
                     ),
                   ),
                 ),
-                // calculator pill ------------------------------------------
-                InkWell(
+                const SizedBox(width: 8),
+                // copy circle
+                _RoundIcon(
+                  icon: Icons.copy_outlined,
+                  onTap: () => _copyQuestion(context),
+                ),
+                const SizedBox(width: 8),
+                // calculator circle
+                _RoundIcon(
+                  icon: Icons.calculate_outlined,
                   onTap: onOpenCalculator,
-                  borderRadius: BorderRadius.circular(999),
-                  child: Container(
-                    height: 40,
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    decoration: BoxDecoration(
-                      color: context.inverseChip,
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                    child: Icon(Icons.calculate,
-                        size: 19, color: context.onInverseChip),
-                  ),
-                ),
-                const SizedBox(width: 6),
-                // clock box -------------------------------------------------
-                Builder(
-                  builder: (BuildContext boxContext) {
-                    final Color border;
-                    final Color bg;
-                    final Color fg;
-                    if (breaking) {
-                      border = boxContext.ink;
-                      bg = Colors.transparent;
-                      fg = boxContext.ink;
-                    } else if (remaining != null && remaining < 60) {
-                      border = boxContext.error;
-                      bg = boxContext.errorContainer;
-                      fg = boxContext.error;
-                    } else if (remaining != null && remaining < 300) {
-                      border = RenanceColors.amber;
-                      bg = RenanceColors.amber.withValues(alpha: 0.10);
-                      fg = boxContext.ink;
-                    } else {
-                      border = boxContext.outlineVariant;
-                      bg = boxContext.card;
-                      fg = boxContext.ink;
-                    }
-                    return Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 8),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: border),
-                        color: bg,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Text(
-                        breaking
-                            ? 'break ${mmss(controller.breakSecondsLeft)}'
-                            : remaining != null
-                                ? mmss(remaining)
-                                : mmss(controller.elapsedSeconds),
-                        style: RenanceText.labelMono.copyWith(
-                          fontSize: 14,
-                          color: fg,
-                          fontFeatures: const <FontFeature>[
-                            FontFeature.tabularFigures()
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(width: 6),
-                // question map ---------------------------------------------
-                InkWell(
-                  onTap: onOpenNavigator,
-                  borderRadius: BorderRadius.circular(999),
-                  child: Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: context.card,
-                      shape: BoxShape.circle,
-                      boxShadow: const <BoxShadow>[
-                        BoxShadow(
-                            color: Color(0x14141C2D),
-                            blurRadius: 3,
-                            offset: Offset(0, 1)),
-                      ],
-                    ),
-                    child: Icon(Icons.grid_view,
-                        size: 22, color: context.ink),
-                  ),
                 ),
               ],
             ),
           ),
-          // answered progress rail ----------------------------------------
-          Container(
-            height: 4,
-            width: double.infinity,
-            color: context.surfaceVariant.withValues(alpha: 0.5),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: FractionallySizedBox(
-                widthFactor: progress.clamp(0.0, 1.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: <Color>[context.primary, RenanceColors.emerald],
-                    ),
-                    borderRadius: const BorderRadius.horizontal(
-                      right: Radius.circular(999),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+            child: Row(
+              children: <Widget>[
+                // the big tri-part clock
+                Expanded(
+                  child: Text(
+                    breaking
+                        ? 'BREAK ${mmss(controller.breakSecondsLeft)}'
+                        : controller.untimed
+                            ? mmss(controller.elapsedSeconds)
+                            : hhmmss(remaining ?? 0),
+                    style: TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 27,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 1.5,
+                      color: clockColor,
+                      fontFeatures: const <FontFeature>[
+                        FontFeature.tabularFigures(),
+                      ],
                     ),
                   ),
                 ),
-              ),
+                // Quit
+                InkWell(
+                  onTap: () => _confirmQuit(context),
+                  borderRadius: BorderRadius.circular(999),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 18, vertical: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(999),
+                      border: Border.all(color: context.error),
+                    ),
+                    child: Text(
+                      'Quit',
+                      style: TextStyle(
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w700,
+                        color: context.error,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                // Submit
+                InkWell(
+                  onTap: () => _Player.maybeSubmit(context, controller),
+                  borderRadius: BorderRadius.circular(999),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 18, vertical: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(999),
+                      color: context.inverseChip,
+                    ),
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                        fontSize: 14.5,
+                        fontWeight: FontWeight.w700,
+                        color: context.onInverseChip,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -471,16 +873,153 @@ class _ExamHeader extends StatelessWidget {
   }
 }
 
-/// The playing state: sticky light chrome, white question card with the
-/// Q-number bubble + flag pill, option stack, and the Prev | answered |
-/// Next/Submit action bar — 1:1 with the up-to-date web player.
+/// One outlined circle icon button of the CBT header row.
+class _RoundIcon extends StatelessWidget {
+  const _RoundIcon({required this.icon, required this.onTap});
+
+  final IconData icon;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      customBorder: const CircleBorder(),
+      child: Container(
+        width: 42,
+        height: 42,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(color: context.outlineVariant),
+          color: context.card,
+        ),
+        child: Icon(icon, size: 19, color: context.ink),
+      ),
+    );
+  }
+}
+
+/// The subject strip: for the standard UTME mock the canonical sections
+/// (Use of English first, 40-question electives after) become tappable
+/// chips that jump to each subject's first question — the school app's
+/// subject navigation, honestly derived from the paper code. Custom
+/// multi-subject papers list their subjects read-only, because their
+/// per-subject boundaries are not derivable.
+class _SubjectStrip extends StatelessWidget {
+  const _SubjectStrip({required this.controller});
+
+  final ExamController controller;
+
+  List<(String, int)> _sections(Bundle bundle) {
+    final String code = bundle.code;
+    if (!code.startsWith('jamb-mock-')) return const <(String, int)>[];
+    final String body = code.substring('jamb-mock-'.length);
+    final int tilde = body.indexOf('~');
+    final String subjectPart = tilde > 0 ? body.substring(0, tilde) : body;
+    final List<String> slugs = subjectPart.split('-');
+    final RegExp enRe = RegExp('enN=(\\d+)');
+    final int english =
+        int.tryParse(enRe.firstMatch(code)?.group(1) ?? '') ?? 60;
+    final List<(String, int)> out = <(String, int)>[];
+    int at = 0;
+    for (var i = 0; i < slugs.length; i++) {
+      out.add((slugs[i], at));
+      at += i == 0 ? english : 40;
+    }
+    return out;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final Bundle? bundle = controller.bundle;
+    if (bundle == null) return const SizedBox.shrink();
+    final List<(String, int)> sections = _sections(bundle);
+    if (sections.length < 2) return const SizedBox.shrink();
+
+    int activeIdx = 0;
+    for (var i = 0; i < sections.length; i++) {
+      if (controller.index >= sections[i].$2) activeIdx = i;
+    }
+
+    return Container(
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            color: context.outlineVariant.withValues(alpha: 0.45),
+          ),
+        ),
+      ),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        clipBehavior: Clip.none,
+        child: Row(
+          children: <Widget>[
+            for (var i = 0; i < sections.length; i++) ...<Widget>[
+              GestureDetector(
+                onTap: () => controller.goTo(sections[i].$2),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 16, vertical: 9),
+                  decoration: BoxDecoration(
+                    color: i == activeIdx
+                        ? context.isDarkTier
+                            ? context.cardHigh
+                            : const Color(0xFFFDEBE7)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    subjectName(sections[i].$1),
+                    style: RenanceText.bodyMedium.copyWith(
+                      fontSize: 14.5,
+                      color:
+                          i == activeIdx ? context.ink : context.textSecondary,
+                    ),
+                  ),
+                ),
+              ),
+              if (i < sections.length - 1) const SizedBox(width: 4),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The playing state — the school app's CBT body: the white question
+/// card with the "Question N" pill, the radio-circle option stack, the
+/// Previous | Next bar, and the persistent bottom navigator
+/// ("N Questions" pill + the jump strip) that expands into the full
+/// question grid.
 class _Player extends StatelessWidget {
-  const _Player({required this.controller, required this.mmss});
+  const _Player({
+    required this.controller,
+    required this.mmss,
+    required this.hhmmss,
+    required this.studyMode,
+  });
 
   final ExamController controller;
   final String Function(int) mmss;
+  final String Function(int) hhmmss;
+  final bool studyMode;
 
-  void _confirmSubmit(
+  /// The Submit affordance shared by the header pill and the bottom
+  /// bar: confirm when anything is unanswered, then grade.
+  static void maybeSubmit(BuildContext context, ExamController controller) {
+    final Bundle? bundle = controller.bundle;
+    if (bundle == null) return;
+    final int unanswered = bundle.questionCount - controller.answeredCount;
+    if (unanswered > 0) {
+      _confirmSubmit(context, controller, unanswered);
+    } else {
+      controller.submit();
+    }
+  }
+
+  static void _confirmSubmit(
     BuildContext context,
     ExamController controller,
     int unanswered,
@@ -545,90 +1084,63 @@ class _Player extends StatelessWidget {
     }
     final bool flagged = controller.flags.contains(question.id);
     final bool last = controller.index == bundle.questionCount - 1;
-    final int unanswered = bundle.questionCount - controller.answeredCount;
-    final bool canSubmit =
-        last || controller.answeredCount == bundle.questionCount;
 
     return Column(
       children: <Widget>[
         _ExamHeader(
           controller: controller,
           mmss: mmss,
-          onOpenNavigator: () => _openNavigator(context, controller),
+          hhmmss: hhmmss,
           onOpenCalculator: () => _openCalculator(context),
+          studyMode: studyMode,
         ),
-        // Scrollable question area ----------------------------------------
+        _SubjectStrip(controller: controller),
+        // Scrollable question area ---------------------------------------
         Expanded(
           child: ListView(
             padding: const EdgeInsets.all(16),
             children: <Widget>[
-              // Question card
+              // Question card --------------------------------------------
               Container(
-                padding: const EdgeInsets.all(24),
+                padding: const EdgeInsets.all(18),
                 decoration: BoxDecoration(
                   color: context.card,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: const <BoxShadow>[
-                    BoxShadow(
-                        color: Color(0x33141C2D),
-                        blurRadius: 3,
-                        offset: Offset(0, 1)),
-                  ],
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(
+                    color: context.outlineVariant.withValues(alpha: 0.5),
+                  ),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    // Card header: Q-number bubble + of-N/topic + flag pill
-                    // (the flag moved here from the bottom bar, web parity).
+                    // "Question N" pill — the school app's badge, ink cut.
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
-                          width: 36,
-                          height: 36,
-                          alignment: Alignment.center,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 14, vertical: 7),
                           decoration: BoxDecoration(
-                            color: context.primary,
-                            borderRadius: BorderRadius.circular(12),
+                            color: context.card,
+                            borderRadius: BorderRadius.circular(999),
+                            border:
+                                Border.all(color: context.outlineVariant),
+                            boxShadow: const <BoxShadow>[
+                              BoxShadow(
+                                color: Color(0x14141C2D),
+                                blurRadius: 3,
+                                offset: Offset(0, 1),
+                              ),
+                            ],
                           ),
                           child: Text(
-                            '${controller.index + 1}',
-                            style: RenanceText.labelMono.copyWith(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700,
-                              color: context.onPrimary,
+                            'Question ${controller.index + 1}',
+                            style: RenanceText.bodyMedium.copyWith(
+                              fontSize: 14.5,
                             ),
                           ),
                         ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                'of ${bundle.questionCount}',
-                                style: RenanceText.labelMono.copyWith(
-                                  fontSize: 10,
-                                  color: context.textMuted,
-                                ),
-                              ),
-                              if (question.topic.isNotEmpty)
-                                Text(
-                                  question.topic +
-                                      (question.year > 0
-                                          ? '  ${question.year}'
-                                          : ''),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: RenanceText.caption.copyWith(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w500,
-                                    color: context.textSecondary,
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ),
+                        const Spacer(),
+                        // flag pill keeps its Renance place.
                         InkWell(
                           onTap: () => controller.toggleFlag(question.id),
                           borderRadius: BorderRadius.circular(999),
@@ -643,14 +1155,17 @@ class _Player extends StatelessWidget {
                                     : context.outlineVariant,
                               ),
                               color: flagged
-                                  ? RenanceColors.amber.withValues(alpha: 0.15)
+                                  ? RenanceColors.amber
+                                      .withValues(alpha: 0.15)
                                   : Colors.transparent,
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Icon(
-                                  flagged ? Icons.flag : Icons.flag_outlined,
+                                  flagged
+                                      ? Icons.flag
+                                      : Icons.flag_outlined,
                                   size: 14,
                                   color: flagged
                                       ? RenanceColors.amber
@@ -682,7 +1197,8 @@ class _Player extends StatelessWidget {
                           color: context.cardLow.withValues(alpha: 0.5),
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                            color: context.outlineVariant.withValues(alpha: 0.3),
+                            color:
+                                context.outlineVariant.withValues(alpha: 0.3),
                           ),
                         ),
                         constraints: const BoxConstraints(maxHeight: 220),
@@ -710,10 +1226,9 @@ class _Player extends StatelessWidget {
                     ],
                     QuestionText(
                       question.stem,
-                      style: RenanceText.displayMd.copyWith(
-                        fontSize: 20,
-                        height: 28 / 20,
-                        fontWeight: FontWeight.w700,
+                      style: RenanceText.bodyMedium.copyWith(
+                        fontSize: 16.5,
+                        height: 26 / 16.5,
                       ),
                     ),
                     if (question.image.isNotEmpty) ...<Widget>[
@@ -732,11 +1247,11 @@ class _Player extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 24),
-              // Options stack
+              const SizedBox(height: 18),
+              // Options stack — radio-circle grammar.
               ...question.options.entries.map(
                 (MapEntry<String, String> opt) => Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
+                  padding: const EdgeInsets.only(bottom: 10),
                   child: _OptionTile(
                     letter: opt.key,
                     text: opt.value,
@@ -745,13 +1260,14 @@ class _Player extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 8),
             ],
           ),
         ),
         // Sticky action bar -------------------------------------------------
         Container(
           decoration: BoxDecoration(
-            color: context.pageBg,
+            color: context.cardLowest,
             border: Border(
               top: BorderSide(
                 color: context.outlineVariant.withValues(alpha: 0.4),
@@ -759,10 +1275,11 @@ class _Player extends StatelessWidget {
             ),
           ),
           child: SafeArea(
-            minimum: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+            top: false,
+            minimum: const EdgeInsets.fromLTRB(16, 10, 16, 4),
             child: Row(
               children: <Widget>[
-                // ← Prev -------------------------------------------------
+                // ← Previous -------------------------------------------
                 OutlinedButton(
                   onPressed:
                       controller.index == 0 ? null : () => controller.previous(),
@@ -770,81 +1287,222 @@ class _Player extends StatelessWidget {
                     side: BorderSide(color: context.outlineVariant),
                     backgroundColor: context.card,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
+                        borderRadius: BorderRadius.circular(999)),
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 18, vertical: 12),
+                        horizontal: 20, vertical: 12),
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Icon(Icons.arrow_back, size: 16),
-                      SizedBox(width: 6),
-                      Text('Prev',
+                      Icon(Icons.chevron_left,
+                          size: 18,
+                          color: controller.index == 0
+                              ? context.outlineLight
+                              : context.ink),
+                      const SizedBox(width: 4),
+                      Text('Previous',
                           style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500)),
+                              fontSize: 14.5,
+                              fontWeight: FontWeight.w600,
+                              color: controller.index == 0
+                                  ? context.outlineLight
+                                  : context.ink)),
                     ],
                   ),
                 ),
-                const SizedBox(width: 12),
-                // answered counter ---------------------------------------
-                Expanded(
-                  child: Text(
-                    '${controller.answeredCount}/${bundle.questionCount} answered',
-                    textAlign: TextAlign.center,
-                    style: RenanceText.labelMono.copyWith(
-                      fontSize: 11,
-                      color: context.textSecondary,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 12),
-                // Next → / Submit paper ----------------------------------
-                if (!canSubmit)
-                  FilledButton(
+                const Spacer(),
+                // Next → / Submit ---------------------------------------
+                if (!last)
+                  OutlinedButton(
                     onPressed: () => controller.next(),
-                    style: FilledButton.styleFrom(
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(color: context.outlineVariant),
+                      backgroundColor: context.card,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                          borderRadius: BorderRadius.circular(999)),
                       padding: const EdgeInsets.symmetric(
                           horizontal: 22, vertical: 12),
-                      backgroundColor: context.inverseChip,
-                      foregroundColor: context.onInverseChip,
                     ),
-                    child: const Row(
+                    child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         Text('Next',
                             style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.w600)),
-                        SizedBox(width: 6),
-                        Icon(Icons.arrow_forward, size: 16),
+                                fontSize: 14.5,
+                                fontWeight: FontWeight.w700,
+                                color: context.error)),
+                        const SizedBox(width: 4),
+                        Icon(Icons.chevron_right,
+                            size: 18, color: context.error),
                       ],
                     ),
                   )
                 else
                   FilledButton(
-                    onPressed: () {
-                      if (unanswered > 0) {
-                        _confirmSubmit(context, controller, unanswered);
-                      } else {
-                        controller.submit();
-                      }
-                    },
+                    onPressed: () =>
+                        _Player.maybeSubmit(context, controller),
                     style: FilledButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+                          borderRadius: BorderRadius.circular(999)),
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 22, vertical: 12),
+                          horizontal: 24, vertical: 12),
+                      backgroundColor: context.inverseChip,
+                      foregroundColor: context.onInverseChip,
                     ),
-                    child: const Text('Submit paper',
+                    child: const Text('Submit',
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w600)),
+                            fontSize: 14.5,
+                            fontWeight: FontWeight.w700)),
                   ),
               ],
             ),
           ),
         ),
+        // Persistent bottom navigator — the school app's drawer strip.
+        _BottomNavigator(
+          controller: controller,
+          onExpand: () => _openNavigator(context, controller),
+        ),
       ],
+    );
+  }
+}
+
+/// The persistent bottom navigator: "N Questions" pill + the jump strip
+/// + the expand chevron, Myschool's collapsed drawer.
+class _BottomNavigator extends StatelessWidget {
+  const _BottomNavigator({required this.controller, required this.onExpand});
+
+  final ExamController controller;
+  final VoidCallback onExpand;
+
+  @override
+  Widget build(BuildContext context) {
+    final Bundle? bundle = controller.bundle;
+    if (bundle == null) return const SizedBox.shrink();
+    final int n = bundle.questionCount;
+
+    return Container(
+      decoration: BoxDecoration(
+        color: context.card,
+        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+        border: Border(
+          top: BorderSide(
+            color: context.outlineVariant.withValues(alpha: 0.5),
+          ),
+        ),
+      ),
+      child: SafeArea(
+        top: false,
+        minimum: const EdgeInsets.fromLTRB(16, 8, 16, 6),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: context.cardLow,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
+                    '$n Questions',
+                    style: RenanceText.labelMono.copyWith(
+                      fontSize: 12,
+                      color: context.textSecondary,
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                GestureDetector(
+                  onTap: onExpand,
+                  child: Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: Icon(Icons.keyboard_arrow_up,
+                        size: 22, color: context.textSecondary),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 6),
+            SizedBox(
+              height: 34,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: n,
+                itemBuilder: (BuildContext context, int i) {
+                  final String id = bundle.questions[i].id;
+                  final bool answered = controller.answers.containsKey(id);
+                  final bool current = controller.index == i;
+                  final bool flaggedNow = controller.flags.contains(id);
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: _MiniNumber(
+                      n: i + 1,
+                      answered: answered,
+                      current: current,
+                      flagged: flaggedNow,
+                      onTap: () => controller.goTo(i),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// One mini number tile of the strip: ink fill when answered, ring when
+/// current, amber dot when flagged.
+class _MiniNumber extends StatelessWidget {
+  const _MiniNumber({
+    required this.n,
+    required this.answered,
+    required this.current,
+    required this.flagged,
+    required this.onTap,
+  });
+
+  final int n;
+  final bool answered;
+  final bool current;
+  final bool flagged;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 34,
+        height: 34,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: answered ? context.inverseChip : context.card,
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: current
+                ? context.ink
+                : answered
+                    ? context.inverseChip
+                    : context.outlineVariant,
+            width: current ? 2 : 1,
+          ),
+        ),
+        child: Text(
+          '$n',
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.w600,
+            color: answered ? context.onInverseChip : context.textSecondary,
+          ),
+        ),
+      ),
     );
   }
 }
@@ -852,6 +1510,9 @@ class _Player extends StatelessWidget {
 /// Option row: letter chip + stem; selected = selection-blue card with
 /// the primary ring and the primary letter chip (Stitch selectOption
 /// state machine, the student's colour when a seed is live).
+/// Option row — the school app's radio-circle grammar: the circle
+/// radio (hollow → ink-filled when picked), the letter, the text. The
+/// student's colour rides the ring whenever a seed is live.
 class _OptionTile extends StatelessWidget {
   const _OptionTile({
     required this.letter,
@@ -869,47 +1530,42 @@ class _OptionTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(12),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         decoration: BoxDecoration(
           color: selected
-              ? context.selectionBlue.withValues(alpha: 0.6)
+              ? context.selectionBlue.withValues(alpha: 0.45)
               : context.card,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: selected ? context.primary : context.outlineVariant,
-            width: selected ? 2 : 1,
+            width: selected ? 1.6 : 1,
           ),
-          boxShadow: selected
-              ? const <BoxShadow>[]
-              : const <BoxShadow>[
-                  BoxShadow(
-                      color: Color(0x33141C2D),
-                      blurRadius: 3,
-                      offset: Offset(0, 1)),
-                ],
         ),
         child: Row(
           children: <Widget>[
+            // The radio circle.
             Container(
-              width: 28,
-              height: 28,
-              alignment: Alignment.center,
+              width: 24,
+              height: 24,
               decoration: BoxDecoration(
+                shape: BoxShape.circle,
                 color: selected ? context.primary : context.card,
-                borderRadius: BorderRadius.circular(8),
                 border: Border.all(
-                  color: selected ? context.primary : context.outlineLight,
+                  color: selected ? context.primary : context.outlineDark,
+                  width: selected ? 7 : 1.6,
                 ),
               ),
-              child: Text(
-                letter,
-                style: RenanceText.labelMono.copyWith(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                  color: selected ? context.onPrimary : context.textSecondary,
-                ),
+            ),
+            const SizedBox(width: 14),
+            Text(
+              letter,
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 15.5,
+                fontWeight: FontWeight.w800,
+                color: context.error.withValues(alpha: 0.9),
               ),
             ),
             const SizedBox(width: 16),
@@ -918,6 +1574,7 @@ class _OptionTile extends StatelessWidget {
                 text,
                 style: RenanceText.bodyBase.copyWith(
                   fontWeight: selected ? FontWeight.w600 : FontWeight.w400,
+                  fontSize: 15,
                   height: 1.4,
                 ),
               ),
