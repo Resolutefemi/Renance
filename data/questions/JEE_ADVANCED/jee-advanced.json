@@ -1,0 +1,347 @@
+{
+ "code": "jee_advanced-jee-advanced-bank",
+ "title": "JEE Advanced - Jee Advanced",
+ "version": 1,
+ "questionCount": 48,
+ "totalMarks": 48,
+ "questions": [
+  {
+   "id": "jee_advanced-jee-advanced-bank-0001",
+   "type": "theory",
+   "stem": "Let $x_0$ be the real number such that $e^{x_0} + x_0 = 0$. For a given real number, define $$g(x) = \\frac{3xe^x + 3x - \\alpha e^x - \\alpha x}{3(e^x + 1)}$$ for all real numbers x. Then which one of the following statements is TRUE?",
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0002",
+   "type": "theory",
+   "stem": "Let $\\mathbb{R}$ denote the set of all real numbers. Then the area of the region $$\\lbrace (x, y) \\in \\mathbb{R} \\times \\mathbb{R} : x > 0, y > 1/x , 5x - 4y - 1 > 0, 4x + 4y - 17 < 0 \\rbrace$$ is",
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0003",
+   "type": "theory",
+   "stem": "The total number of real solutions of the equation $$\\theta = \\tan^{-1}(2 \\tan \\theta ) - \\frac{1}{2} \\sin^{-1} \\left( \\frac{6\\tan\\theta}{9 + \\tan^2 \\theta}\\right)$$ is (Here, the inverse trigonometric functions $\\sin^{-1}x$ and $\\tan^{-1}x$ assume values in $\\left[ -\\frac{\\pi}{2}, \\frac{\\pi}{2} \\right]$ and $\\left( -\\frac{\\pi}{2}, \\frac{\\pi}{2} \\right)$, respectively.)",
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0004",
+   "type": "theory",
+   "stem": "Let S denote the locus of the point of intersection of the pair of lines $4x - 3y = 12\\alpha$, $4\\alpha x + 3\\alpha y = 12$ , where $\\alpha$ varies over the set of non-zero real numbers. Let T be the tangent to S passing through the points (p, 0) and (0, q), q > 0, and parallel to the line $4x - \\frac{3}{\\sqrt{2}}y  = 0$ . Then the value of pq is",
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0005",
+   "type": "theory",
+   "stem": "Let $I = \\begin{bmatrix}1 & 0 \\\\\\ 0 & 1\\end{bmatrix}$ and $P = \\begin{bmatrix}2 & 0 \\\\\\ 0 & 3\\end{bmatrix}$. Let $Q = \\begin{bmatrix}x & y \\\\\\ z & 4\\end{bmatrix}$ for some non-zero real numbers x, y, and z, for which there is a $2 \\times 2$ matrix R with all entries being non-zero real numbers, such that $QR = RP$. Then which of the following statements is (are) TRUE?",
+   "marks": 1,
+   "answer": "AB"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0006",
+   "type": "theory",
+   "stem": "Let S denote the locus of the mid-points of those chords of the parabola $y^2 = x$ , such that the area of the region enclosed between the parabola and the chord is 4/3. Let R denote the region lying in the first quadrant, enclosed by the parabola $y^2 = x$, the curve S, and the lines x = 1 and x = 4 . Then which of the following statements is (are) TRUE?",
+   "marks": 1,
+   "answer": "AC"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0007",
+   "type": "theory",
+   "stem": "Let $P(x_1, y_1)$ and $Q(x_2, y_2)$ be two distinct points on the ellipse $$\\frac{x^2}{9} + \\frac{y^2}{4} = 1$$ such that $y_1 > 0$, and $y_2 > 0$. Let C denote the circle $x^2 + y^2 = 9$, and M be the point (3, 0). Suppose the line $x = x_1$ intersects C at R, and the line $x = x_2$ intersects C at S, such that the y-coordinates of R and S are positive. Let $\\angle ROM = \\frac{\\pi}{6}$ and $\\angle SOM = \\frac{\\pi}{3}$ , where O denotes the origin (0, 0). Let |XY| denote the length of the line segment XY . Then which of the following statements is (are) TRUE?",
+   "marks": 1,
+   "answer": "AC"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0008",
+   "type": "theory",
+   "stem": "Let $\\mathbb{R}$ denote the set of all real numbers. Let $f: \\mathbb{R} \\to \\mathbb{R}$ be defined by $$f(x) = \\begin{cases} \\frac{6x+sinx}{2x+sinx} & x \\neq 0, \\\\\\ 7/3 & x = 0. \\end{cases}$$ Then which of the following statements is (are) TRUE?",
+   "marks": 1,
+   "answer": "BCD"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0009",
+   "type": "theory",
+   "stem": "Let $y(x)$ be the solution of the differential equation $$x^2 \\frac{dy}{dx} + xy = x^2 + y^2, \\  x > \\frac{1}{e}$$ satisfying y(1) = 0.  Then the value of $2 \\frac{(y(e))^2}{y(e^2)}$ is ___________.",
+   "marks": 1,
+   "answer": "[0.7,0.8]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0010",
+   "type": "theory",
+   "stem": "Let $a_0, a_1, ... , a_{23}$ be real numbers such that $$\\left(1 + \\frac{2}{5} x\\right)^{23} = \\sum_{i=0}^{23} a_ix^i $$ for every real number x. Let $a_r$ be the largest among the numbers $a_j$ for $0 \\le j \\le 23$. Then the value of r is ___________.",
+   "marks": 1,
+   "answer": "6"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0011",
+   "type": "theory",
+   "stem": "A factory has a total of three manufacturing units, M1, M2, and M3, which produce bulbs independent of each other. The units M1, M2, and M3 produce bulbs in the proportions of 2:2:1, respectively. It is known that 20% of the bulbs produced in the factory are defective. It is also known that, of all the bulbs produced by M1, 15% are defective. Suppose that, if a randomly chosen bulb produced in the factory is found to be defective, the probability that it was produced by M2 is 2/5. If a bulb is chosen randomly from the bulbs produced by M3, then the probability that it is defective is ___________.",
+   "marks": 1,
+   "answer": "[0.27,0.33]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0012",
+   "type": "theory",
+   "stem": "Consider the vectors x = i + 2j + 3k, y = 2i + 3j + k, and z = 3i + j + 2k. For two distinct positive real numbers $\\alpha$ and $\\beta$, define $X = \\alpha x + \\beta y - z$ , $Y = \\alpha y + \\beta z - x$, and $Z = \\alpha z + \\beta x - y$ . If the vectors X, Y, and Z lie in a plane, then the value of $\\alpha + \\beta - 3$ is_____________.",
+   "marks": 1,
+   "answer": "-2"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0013",
+   "type": "theory",
+   "stem": "For a non-zero complex number z, let arg(z) denote the principal argument of z, with $-\\pi < \\arg(z) < \\pi$ . Let $\\omega$ be the cube root of unity for which $0 < \\arg(\\omega) < \\pi$. Let $$ \\alpha = \\arg \\left( \\sum_{n=1}^{2025} (-\\omega)^n \\right)$$ Then the value of $\\frac{3\\alpha}{\\pi}$ is ________________.",
+   "marks": 1,
+   "answer": "-2"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0014",
+   "type": "theory",
+   "stem": "Let $\\mathbb{R}$ denote the set of all real numbers. Let $f: \\mathbb{R} \\to \\mathbb{R}$ and $g: \\mathbb{R} \\to (0, 4)$ be functions defined by $f(x) = \\log_e(x^2 + 2x + 4)$, and $g(x) = \\frac{4}{1 + e^{-2x}}$ . Define the composite function $f \\circ g^{-1}$ by $(f \\circ g^{-1})(x)$ = $f(g^{-1}(x))$, where $g^{-1}$ is the inverse of the function g. Then the value of the derivative of the composite function $f \\circ g^{-1}$ at x = 2 is ______________.",
+   "marks": 1,
+   "answer": "[0.2,0.3]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0015",
+   "type": "theory",
+   "stem": "Let $$\\alpha = \\frac{1}{\\sin 60^\\circ \\sin 61^\\circ} + \\frac{1}{\\sin 62^\\circ \\sin 63^\\circ} + \\cdots + \\frac{1}{\\sin 118^\\circ \\sin 119^\\circ}. $$ Then the value of  $$\\left( \\frac{\\text{cosec } 1^\\circ}{\\alpha} \\right)^2$$ is ______________.",
+   "marks": 1,
+   "answer": "3"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0016",
+   "type": "theory",
+   "stem": "If $$\\alpha = \\int_{\\frac{1}{2}}^{2} \\frac{\\tan^{-1} x}{2x^2 - 3x + 2} dx$$ Then the value of $$\\sqrt{7} \\tan\\left( \\frac{2\\alpha \\sqrt{7}}{\\pi} \\right)$$ is ______________. (Here, the inverse trigonometric function $\\tan^{-1} x$ assumes values in $\\left( -\\frac{\\pi}{2}, \\frac{\\pi}{2} \\right)$.)",
+   "marks": 1,
+   "answer": "21"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0017",
+   "type": "theory",
+   "stem": "A temperature difference can generate e.m.f. in some materials. Let $S$ be the e.m.f. produced per unit temperature difference between the ends of a wire, $\\sigma$ the electrical conductivity and $\\kappa$ the thermal conductivity of the material of the wire. Taking $M, L, T, I$ and $K$ as dimensions of mass, length, time, current and temperature, respectively, the dimensional formula of the quantity $Z = \\frac{S^2 \\sigma}{\\kappa}$ is:",
+   "marks": 1,
+   "answer": "B"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0018",
+   "type": "theory",
+   "stem": "Two co-axial conducting cylinders of same length l with radii $\\sqrt{2}R$ and 2R are kept, as shown in Fig. 1. The charge on the inner cylinder is Q and the outer cylinder is grounded. The annular region between the cylinders is filled with a material of dielectric constant $\\kappa = 5$. Consider an imaginary plane of the same length l at a distance R from the common axis of the cylinders. This plane is parallel to the axis of the cylinders. The cross-sectional view of this arrangement is shown in Fig. 2. Ignoring edge effects, the flux of the electric field through the plane is ($\\epsilon_0$ is the permittivity of free space):![](images/jeea25_p2_physics_q2_1.png)",
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0019",
+   "type": "theory",
+   "stem": "As shown in the figures, a uniform rod OO' of length l is hinged at the point O and held in place vertically between two walls using two massless springs of same spring constant. The springs are connected at the midpoint and at the top-end (O') of the rod, as shown in Fig. 1 and the rod is made to oscillate by a small angular displacement. The frequency of oscillation of the rod is f_1. On the other hand, if both the springs are connected at the midpoint of the rod, as shown in Fig. 2 and the rod is made to oscillate by a small angular displacement, then the frequency of oscillation is f_2. Ignoring gravity and assuming motion only in the plane of the diagram, the value of f_1/f_2 is:![](images/jeea25_p2_physics_q3_2.png)",
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0020",
+   "type": "theory",
+   "stem": "Consider a star of mass $m_2$ kg revolving in a circular orbit around another star of mass $m_1$ kg with $m1 \\gg m2$. The heavier star slowly acquires mass from the lighter star at a constant rate of $\\gamma$ kg/s. In this transfer process, there is no other loss of mass. If the separation between the centers of the stars is r, then its relative rate of change $\\frac{1}{r} \\frac{dr}{dt})$ (in $s^{-1}$) is given by:",
+   "marks": 1,
+   "answer": "BONUS"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0021",
+   "type": "theory",
+   "stem": "A positive point charge of $10^{-8}$ C is kept at a distance of 20 cm from the center of a neutral conducting sphere of radius 10 cm. The sphere is then grounded and the charge on the sphere is measured. The grounding is then removed and subsequently the point charge is moved by a distance of 10 cm further away from the center of the sphere along the radial direction. Taking = $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9\\  Nm^2/C^2$ (where $\\epsilon_0$ is the permittivity of free space), which of the following statements is/are correct:",
+   "marks": 1,
+   "answer": "ABC"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0022",
+   "type": "theory",
+   "stem": "Two identical concave mirrors each of focal length f are facing each other as shown in the schematic diagram. The focal length f is much larger than the size of the mirrors. A glass slab of thickness t and refractive index $n_0$ is kept equidistant from the mirrors and perpendicular to their common principal axis. A monochromatic point light source S is embedded at the center of the slab on the principal axis, as shown in the schematic diagram. For the image to be formed on S itself, which of the following distances between the two mirrors is/are correct:![](images/jeea25_p2_physics_q6_3.png)",
+   "marks": 1,
+   "answer": "AB"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0023",
+   "type": "theory",
+   "stem": "Six infinitely large and thin non-conducting sheets are fixed in configurations I and II. As shown in the figure, the sheets carry uniform surface charge densities which are indicated in terms of $\\sigma_0$. The separation between any two consecutive sheets is 1 micrometre. The various regions between the sheets are denoted as 1, 2, 3, 4 and 5. If $\\sigma_0= 9\\ \\mu C/m^2$, then which of the following statements is/are correct: (Take permittivity of free space $\\epsilon_0 = 9 \\times 10^{-12} F/m$)![](images/jeea25_p2_physics_q7_4.png)",
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0024",
+   "type": "theory",
+   "stem": "The efficiency of a Carnot engine operating with a hot reservoir kept at a temperature of 1000 K is 0.4. It extracts 150 J of heat per cycle from the hot reservoir. The work extracted from this engine is being fully used to run a heat pump which has a coefficient of performance 10. The hot reservoir of the heat pump is at a temperature of 300 K. Which of the following statements is/are correct:",
+   "marks": 1,
+   "answer": "ABC"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0025",
+   "type": "theory",
+   "stem": "A conducting solid sphere of radius R and mass M carries a charge Q. The sphere is rotating about an axis passing through its center with a uniform angular speed $\\omega$. The ratio of the magnitudes of the magnetic dipole moment to the angular momentum about the same axis is given as $\\alpha \\frac{Q}{2M}$. The value of $\\alpha$ is ___",
+   "marks": 1,
+   "answer": "[1.65,1.67]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0026",
+   "type": "theory",
+   "stem": "A hydrogen atom, initially at rest in its ground state, absorbs a photon of frequency $\\nu_1$ and ejects the electron with a kinetic energy of 10 eV. The electron then combines with a positron at rest to form a positronium atom in its ground state and simultaneously emits a photon of frequency $\\nu_2$. The center of mass of the resulting positronium atom moves with a kinetic energy of 5 eV. It is given that positron has the same mass as that of electron and the positronium atom can be considered as a Bohr atom, in which the electron and the positron orbit around their center of mass. Considering no other energy loss during the whole process, the difference between the two photon energies (in eV) is ___",
+   "marks": 1,
+   "answer": "[11.7,11.9]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0027",
+   "type": "theory",
+   "stem": "An ideal monatomic gas of n moles is taken through a cycle WXYZW consisting of consecutive adiabatic and isobaric quasi-static processes, as shown in the schematic V-T diagram. The volume of the gas at W, X and Y points are, 64 cm^3, 125 cm^3 and 250 cm^3, respectively. If the absolute temperature of the gas T at the point W is such that nRT = 1 J (R is the universal gas constant), then the amount of heat absorbed (in J) by the gas along the path XY is ___![](images/jeea25_p2_physics_q11_5.png)",
+   "marks": 1,
+   "answer": "1.6"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0028",
+   "type": "theory",
+   "stem": "A geostationary satellite above the equator is orbiting around the earth at a fixed distance $r_1$ from the center of the earth. A second satellite is orbiting in the equatorial plane in the opposite direction to the earths rotation, at a distance $r_2$ from the center of the earth, such that $r_1 = 1.21 r_2$. The time period of the second satellite as measured from the geostationary satellite is $\\frac{24}{p}$ hours. The value of p is ___",
+   "marks": 1,
+   "answer": "[2.3,2.4]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0029",
+   "type": "theory",
+   "stem": "The left and right compartments of a thermally isolated container of length L are separated by a thermally conducting, movable piston of area A. The left and right compartments are filled with 3/2 and 1 moles of an ideal gas, respectively. In the left compartment the piston is attached by a spring with spring constant k and natural length 2L/5. In thermodynamic equilibrium, the piston is at a distance L/2 from the left and right edges of the container as shown in the figure. Under the above conditions, if the pressure in the right compartment is $P = \\alpha kL/A$ , then the value of $\\alpha$ is ____![](images/jeea25_p2_physics_q13_6.png)",
+   "marks": 1,
+   "answer": "0.2"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0030",
+   "type": "theory",
+   "stem": "In a Young's double slit experiment, a combination of two glass wedges A and B, having refractive indices 1.7 and 1.5, respectively, are placed in front of the slits, as shown in the figure. The separation between the slits is d = 2 mm and the shortest distance between the slits and the screen is D = 2 m. Thickness of the combination of the wedges is t = 12 um. The value of l as shown in the figure is 1 mm. Neglect any refraction effect at the slanted interface of the wedges. Due to the combination of the wedges, the central maximum shifts (in mm) with respect to O by ____![](images/jeea25_p2_physics_q14_7.png)",
+   "marks": 1,
+   "answer": "1.2"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0031",
+   "type": "theory",
+   "stem": "A projectile of mass 200 g is launched in a viscous medium at an angle $60^{\\circ}$ with the horizontal, with an initial velocity of 270 m/s. It experiences a viscous drag force $\\vec{F} = -c\\vec{v}$ where the drag coefficient c = 0.1 kg/s and $\\vec{v}$ is the instantaneous velocity of the projectile. The projectile hits a vertical wall after 2 s. Taking e = 2.7, the horizontal distance of the wall from the point of projection (in m) is ____",
+   "marks": 1,
+   "answer": "[167,171]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0032",
+   "type": "theory",
+   "stem": "An audio transmitter (T) and a receiver (R) are hung vertically from two identical massless strings of length 8 m with their pivots well separated along the X axis. They are pulled from the equilibrium position in opposite directions along the X axis by a small angular amplitude $\\theta_0 = \\cos^{-1}(0.9)$ and released simultaneously. If the natural frequency of the transmitter is 660 Hz and the speed of sound in air is 330 m/s, the maximum variation in the frequency (in Hz) as measured by the receiver (Take the acceleration due to gravity g = 10 m/s^2) is ___![](images/jeea25_p2_physics_q16_8.png)",
+   "marks": 1,
+   "answer": "[26,33]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0033",
+   "type": "theory",
+   "stem": "During sodium nitroprusside test of sulphide ion in an aqueous solution, one of the ligands coordinated to the metal ion is converted to",
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0034",
+   "type": "theory",
+   "stem": "The complete hydrolysis of $\\ce{ICl}$, $\\ce{ClF3}$ and $\\ce{BrF5}$, respectively, gives",
+   "marks": 1,
+   "answer": "A"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0035",
+   "type": "theory",
+   "stem": "Monocyclic compounds P, Q, R and S are the major products formed in the reaction sequences given below. The product having the highest number of unsaturated carbon atom(s) is![](images/jeea25_p2_chemistry_q3_9.png)",
+   "marks": 1,
+   "answer": "D"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0036",
+   "type": "theory",
+   "stem": "The correct reaction/reaction sequence that would produce a dicarboxylic acid as the major product is",
+   "marks": 1,
+   "answer": "C"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0037",
+   "type": "theory",
+   "stem": "The correct statement(s) about intermolecular forces is(are)",
+   "marks": 1,
+   "answer": "CD"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0038",
+   "type": "theory",
+   "stem": "The compound(s) with P-H single bond(s) is(are)",
+   "marks": 1,
+   "answer": "BD"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0039",
+   "type": "theory",
+   "stem": "For the reaction sequence given below, the correct statement(s) is(are)![](images/jeea25_p2_chemistry_q7_14.png)",
+   "marks": 1,
+   "answer": "AC"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0040",
+   "type": "theory",
+   "stem": "For the reaction sequence given below, the correct statement(s) is(are)![](images/jeea25_p2_chemistry_q8_15.png)",
+   "marks": 1,
+   "answer": "BC"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0041",
+   "type": "theory",
+   "stem": "The density (in g/cm^3) of the metal which forms a cubic close packed (ccp) lattice with an axial distance (edge length) equal to 400 pm is ______. Use: Atomic mass of metal = 105.6 amu and Avogadro's constant = $6 \\times 10^{23}$ /mol",
+   "marks": 1,
+   "answer": "[10.85,11.1]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0042",
+   "type": "theory",
+   "stem": "The solubility of barium iodate in an aqueous solution prepared by mixing 200 mL of 0.010 M barium nitrate with 100 mL of 0.10 M sodium iodate is $X \\times 10^{-6}$ mol dm. The value of X is ______. Use: Solubility product constant ($K_{sp}$) of barium iodate = $1.58 \\times 10^{-9}$",
+   "marks": 1,
+   "answer": "[3.85,4.15]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0043",
+   "type": "theory",
+   "stem": "Adsorption of phenol from its aqueous solution on to fly ash obeys Freundlich isotherm. At a given temperature, from 10 mg/g and 16 mg/g aqueous phenol solutions, the concentrations of adsorbed phenol are measured to be 4 mg/g and 10 mg/g respectively. At this temperature, the concentration (in mg/g) of adsorbed phenol from 20 mg/g aqueous solution of phenol will be ______. Use: $\\log_{10} 2 = 0.3$",
+   "marks": 1,
+   "answer": "[15.5,16.5]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0044",
+   "type": "theory",
+   "stem": "Consider a reaction $A + R \\to \\text{Product}$. The rate of this reaction is measured to be k[A][R]. At the start of the reaction, the concentration of R, $[R]_0$, is 10-times the concentration of A, $[A]_0$. The reaction can be considered to be a pseudo first order reaction with assumption that $k[R] = k'$ is constant. Due to this assumption, the relative error (in %) in the rate when this reaction is 40 % complete, is ______. [k and k' represent corresponding rate constants]",
+   "marks": 1,
+   "answer": "[4,4.25]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0045",
+   "type": "theory",
+   "stem": "At 300 K, an ideal dilute solution of a macromolecule exerts osmotic pressure that is expressed in terms of the height (h) of the solution (density = 1.00 g/cm^3) where h is equal to 2.00 cm. If the concentration of the dilute solution of the macromolecule is 2.00 g/dm^3, the molar mass of the macromolecule is calculated to be $X \\times 10^4$ g/mol. The value of X is ______. Use: Universal gas constant (R) = 8.3 J/K mol and acceleration due to gravity (g) = 10 m/s^2",
+   "marks": 1,
+   "answer": "[2.4,2.55]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0046",
+   "type": "theory",
+   "stem": "An electrochemical cell is fueled by the combustion of butane at 1 bar and 298 K. Its cell potential is $X/F \\times 10^3$ volts, where F is the Faraday constant. The value of X is ______. Use: Standard Gibbs energies of formation at 298 K are: G(CO2) = -394 kJ/mol; G(Water) = -237 kJ/mol; G(Butane) = -18 kJ/mol",
+   "marks": 1,
+   "answer": "[105.4,105.6]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0047",
+   "type": "theory",
+   "stem": "The sum of the spin only magnetic moment values (in B.M.) of $\\ce{[Mn(Br)6]^3-}$ and $\\ce{[Mn(CN)6]^3-}$ is _____.",
+   "marks": 1,
+   "answer": "[7.5,7.8]"
+  },
+  {
+   "id": "jee_advanced-jee-advanced-bank-0048",
+   "type": "theory",
+   "stem": "A linear octasaccharide (molar mass = 1024 g/mol) on complete hydrolysis produces three monosaccharides: ribose, 2-deoxyribose and glucose. The amount of 2-deoxyribose formed is 58.26 % (w/w) of the total amount of the monosaccharides produced in the hydrolyzed products. The number of ribose unit(s) present in one molecule of octasaccharide is ______. Use: Molar mass (in g/mol): ribose = 150, 2-deoxyribose = 134, glucose = 180; Atomic mass (in amu): H = 1, O = 16",
+   "marks": 1,
+   "answer": "2"
+  }
+ ],
+ "category": "JEE Advanced",
+ "body": "Jee Advanced"
+}

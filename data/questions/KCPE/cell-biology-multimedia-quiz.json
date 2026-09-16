@@ -1,0 +1,75 @@
+{
+ "code": "kcpe-cell-biology-multimedia-quiz-bank",
+ "title": "KCPE - Cell Biology Multimedia Quiz",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "kcpe-cell-biology-multimedia-quiz-bank-0001",
+   "type": "mcq",
+   "stem": "Watch this ecosystem video, listen to the audio explanation, and study the food web diagram. What is the role of decomposers?",
+   "marks": 1,
+   "options": {
+    "A": "{'option_letter': 'A', 'option_text': 'Produce energy', 'option_image': 'https://example.com/images/producer_plants.jpg', 'is_correct': False}",
+    "B": "{'option_letter': 'B', 'option_text': 'Break down dead organisms', 'option_image': 'https://example.com/images/decomposer_bacteria.jpg', 'is_correct': True}",
+    "C": "{'option_letter': 'C', 'option_text': 'Create food', 'option_image': 'https://example.com/images/food_chain.jpg', 'is_correct': False}",
+    "D": "{'option_letter': 'D', 'option_text': 'Store water', 'option_image': 'https://example.com/images/water_storage.jpg', 'is_correct': False}"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "kcpe-cell-biology-multimedia-quiz-bank-0002",
+   "type": "mcq",
+   "stem": "Examine these fossil images and watch the evolution timeline video. What evidence supports evolutionary theory?",
+   "marks": 1,
+   "options": {
+    "A": "{'option_letter': 'A', 'option_text': 'Fossil record', 'option_image': 'https://example.com/images/fossil_layers.jpg', 'is_correct': True}",
+    "B": "{'option_letter': 'B', 'option_text': 'DNA similarities', 'option_image': 'https://example.com/images/dna_comparison.jpg', 'is_correct': True}",
+    "C": "{'option_letter': 'C', 'option_text': 'Geological formations', 'option_image': 'https://example.com/images/geological_layers.jpg', 'is_correct': False}",
+    "D": "{'option_letter': 'D', 'option_text': 'Comparative anatomy', 'option_image': 'https://example.com/images/homologous_structures.jpg', 'is_correct': True}"
+   }
+  },
+  {
+   "id": "kcpe-cell-biology-multimedia-quiz-bank-0003",
+   "type": "mcq",
+   "stem": "Watch this CRISPR video and study the gene editing diagram. What is the main advantage of CRISPR technology?",
+   "marks": 1,
+   "options": {
+    "A": "{'option_letter': 'A', 'option_text': 'Creates new genes', 'option_image': 'https://example.com/images/gene_creation.jpg', 'is_correct': False}",
+    "B": "{'option_letter': 'B', 'option_text': 'Precise gene editing', 'option_image': 'https://example.com/images/crispr_precision.jpg', 'is_correct': True}",
+    "C": "{'option_letter': 'C', 'option_text': 'Clones organisms', 'option_image': 'https://example.com/images/cloning_process.jpg', 'is_correct': False}",
+    "D": "{'option_letter': 'D', 'option_text': 'Sequences DNA', 'option_image': 'https://example.com/images/dna_sequencing.jpg', 'is_correct': False}"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "kcpe-cell-biology-multimedia-quiz-bank-0004",
+   "type": "mcq",
+   "stem": "Study this immune response animation and listen to the explanation. Which cells are responsible for antibody production?",
+   "marks": 1,
+   "options": {
+    "A": "{'option_letter': 'A', 'option_text': 'T Cells', 'option_image': 'https://example.com/images/t_cells.jpg', 'is_correct': False}",
+    "B": "{'option_letter': 'B', 'option_text': 'B Cells', 'option_image': 'https://example.com/images/b_cell_antibody.jpg', 'is_correct': True}",
+    "C": "{'option_letter': 'C', 'option_text': 'Macrophages', 'option_image': 'https://example.com/images/macrophages.jpg', 'is_correct': False}",
+    "D": "{'option_letter': 'D', 'option_text': 'Red Blood Cells', 'option_image': 'https://example.com/images/red_blood_cells.jpg', 'is_correct': False}"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "kcpe-cell-biology-multimedia-quiz-bank-0005",
+   "type": "mcq",
+   "stem": "Watch this neural transmission video and examine the synapse diagram. What chemical is released at the synapse?",
+   "marks": 1,
+   "options": {
+    "A": "{'option_letter': 'A', 'option_text': 'Insulin', 'option_image': 'https://example.com/images/insulin_molecule.jpg', 'is_correct': False}",
+    "B": "{'option_letter': 'B', 'option_text': 'Neurotransmitters', 'option_image': 'https://example.com/images/neurotransmitter_molecules.jpg', 'is_correct': True}",
+    "C": "{'option_letter': 'C', 'option_text': 'Hormones', 'option_image': 'https://example.com/images/hormone_molecules.jpg', 'is_correct': False}",
+    "D": "{'option_letter': 'D', 'option_text': 'Enzymes', 'option_image': 'https://example.com/images/enzyme_molecules.jpg', 'is_correct': False}"
+   },
+   "answer": "B"
+  }
+ ],
+ "category": "KCPE",
+ "body": "Cell Biology Multimedia Quiz"
+}

@@ -1,0 +1,98 @@
+{
+ "exam": "YKS",
+ "region": "Turkey",
+ "slug": "YKS",
+ "question_banks": 1,
+ "github_sources": [
+  {
+   "repo": "sbenli10/exam_ai_app",
+   "url": "https://github.com/sbenli10/exam_ai_app/blob/d853c24de1da564c253a5841742aac4187742a29/docs/question_generation_pipeline.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "turer73/bilge-arena",
+   "url": "https://github.com/turer73/bilge-arena/blob/030c01a3a62efbed8c35a30602220deac253967f/src/lib/question-audit/question-source.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "HuseyinAts/kiro2",
+   "url": "https://github.com/HuseyinAts/kiro2/blob/35020b85e0424a38d3201945fd9b360339ce92a9/backend/init_db.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "tech234a/annotation-urls",
+   "url": "https://github.com/tech234a/annotation-urls/blob/5c0300471b87c6a5f3dd8883484f8155b5ff33d7/RI_urls.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "atakanunver/yenifarabi",
+   "url": "https://github.com/atakanunver/yenifarabi/blob/6c69e395c331f61301bbdb223a81ab2f4320c713/client/CLAUDE.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "ufuayk/my-stars",
+   "url": "https://github.com/ufuayk/my-stars/blob/e3df9aebffd4ad376bd232d040437c65dc28cd17/topics.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "cirosantilli/expired-domain-names-by-day-2020",
+   "url": "https://github.com/cirosantilli/expired-domain-names-by-day-2020/blob/b25dbd97f52600063d217ad953f7a0f8f8fab9a2/04/15/06",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "tuncaymstfa12/bitirme",
+   "url": "https://github.com/tuncaymstfa12/bitirme/blob/da0162cb88dd89f9f1e87389b69e042a075a1570/src/ui/adminImport.js",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "YKS Deneme Sınavı Serisi / YKS Practice Tests",
+   "url": "https://edurev.in",
+   "class": "site"
+  },
+  {
+   "title": "2018-2024-YDT-Cikmis-Sorular.pdf",
+   "url": "https://www.sanalkursum.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Çıkmış Sorular YKS, KPSS, ALES - Apps on Google Play",
+   "url": "https://play.google.com/store/apps/details?id=com.yunussimsiki.yks_sorulari",
+   "class": "site"
+  },
+  {
+   "title": "Yks Soruları: TYT AYT - Apps on Google Play",
+   "url": "https://play.google.com/store/apps/details?id=com.yigitavsar.yks&hl=en_US",
+   "class": "site"
+  },
+  {
+   "title": "YÖS Exam Sample Questions 2020 | PDF",
+   "url": "https://www.scribd.com",
+   "class": "site"
+  },
+  {
+   "title": "2018-2024 YKS - YDT Çıkmış Sorular ve Cevapları Dünya Dil",
+   "url": "https://dunyadilveakademi.com",
+   "class": "site"
+  },
+  {
+   "title": "Tyt Ayt Tüm Dersler Test Çöz - Apps on Google Play",
+   "url": "https://play.google.com/store/apps/details?id=com.tytayt_testler.konuanlatimi&hl=en_US",
+   "class": "site"
+  },
+  {
+   "title": "University entrance exam questions in Türkiye : r/mathematics - Reddit",
+   "url": "https://www.reddit.com/r/mathematics/comments/1t87j7q/university_entrance_exam_questions_in_t%C3%BCrkiye",
+   "class": "site"
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "exam": "Gaokao",
+ "region": "China",
+ "slug": "GAOKAO",
+ "question_banks": 17,
+ "github_sources": [
+  {
+   "repo": "shuangzhebai/gaokao-analyzer",
+   "url": "https://github.com/shuangzhebai/gaokao-analyzer",
+   "stars": 2,
+   "desc": "Gaokao Analyzer - Open source psychological measurement engine + intelligent test paper generation platform. IRT 3PL/GPCM/GRM, question classification, quality "
+  },
+  {
+   "repo": "likaku/gaokao-math-quant",
+   "url": "https://github.com/likaku/gaokao-math-quant/blob/bb4bcfae5094ac03b45e9dc6057a93cfc1577c3b/extract_questions.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Alibaba-NLP/LaRA",
+   "url": "https://github.com/Alibaba-NLP/LaRA/blob/c17155376f4e708bce3c1659facd19886d75a5eb/datasets/32k/paper/32k_paper_14.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "davidlizhicheng/8021-edu.ms1001.com",
+   "url": "https://github.com/davidlizhicheng/8021-edu.ms1001.com/blob/f46a4ad5f1edda005240ffe11e67cee11eb7eeec/gaokao_rag.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "OpenLMLab/GAOKAO-Bench",
+   "url": "https://github.com/OpenLMLab/GAOKAO-Bench/blob/6dbb24f8d8439041e5431c4c184a582182a6ce9c/README_EN.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "luxilai/motivation1",
+   "url": "https://github.com/luxilai/motivation1/blob/9964ae75c8ee09cded199237b404062cfeb13b01/run_deepseek_gaokao.py",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "taesiri/ArXivQA",
+   "url": "https://github.com/taesiri/ArXivQA/blob/685715c76c5ef33348706f03b3c94132585bc08a/papers/2402.15745.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "jeinlee1991/chinese-llm-benchmark",
+   "url": "https://github.com/jeinlee1991/chinese-llm-benchmark/blob/2a571964d9042028220cbb946d5a5ae2fb132129/GitHub热门评测repo.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Gaokao Practice Test 2026 China's National College  - YouTube",
+   "url": "https://www.youtube.com/watch?v=9ZmK58pgjV8&vl=en",
+   "class": "site"
+  },
+  {
+   "title": "GAOKAO CHINA EXAM Past Questions - YouTube",
+   "url": "https://www.youtube.com/playlist?list=PLYrtVi_mzfHHo9sgTc-EZ-yjvdLg1ZLwy",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Can you crack this gaokao quiz?",
+   "url": "https://show.chinadaily.com.cn",
+   "class": "site"
+  },
+  {
+   "title": "Challenging Gaokao Math Sample Questions | PDF - Scribd",
+   "url": "https://www.scribd.com/document/723322461/gaokao-mathematics-questions",
+   "class": "site"
+  },
+  {
+   "title": "Take the Gaokao - Bloomberg.com",
+   "url": "https://www.bloomberg.com/graphics/2015-gaokao-quiz",
+   "class": "site"
+  },
+  {
+   "title": "Gaokao Exam Question Papers PDF: NCEE Previous Year Solved",
+   "url": "https://testmocks.com/exams/ncee-gaokao",
+   "class": "site"
+  },
+  {
+   "title": "[PDF] One-shot Learning for Question-Answering in Gaokao History",
+   "url": "https://aclanthology.org/C18-1038.pdf",
+   "class": "site"
+  },
+  {
+   "title": "What Is The Gaokao? (Plus 7 Sample Exam Questions And Their",
+   "url": "https://corp.tutorocean.com/previous-gaokao-exam-math-questions-and-solutions",
+   "class": "site"
+  }
+ ]
+}

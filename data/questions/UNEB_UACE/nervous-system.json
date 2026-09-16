@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-nervous-system-bank",
+ "title": "UNEB UACE - Nervous System",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-nervous-system-bank-0001",
+   "type": "mcq",
+   "stem": "The CNS consists of",
+   "marks": 1,
+   "options": {
+    "A": "brain and spinal cord",
+    "B": "brain and nerves",
+    "C": "spinal cord and peripheral nerves",
+    "D": "brain only"
+   },
+   "answer": "brain and spinal cord"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0002",
+   "type": "mcq",
+   "stem": "Reflex arcs bypass the brain to be",
+   "marks": 1,
+   "options": {
+    "A": "slower",
+    "B": "faster — allows rapid response without conscious thought",
+    "C": "more accurate",
+    "D": "less effective"
+   },
+   "answer": "faster — allows rapid response without conscious thought"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0003",
+   "type": "mcq",
+   "stem": "Myelin sheath speeds nerve impulse because",
+   "marks": 1,
+   "options": {
+    "A": "it is thick",
+    "B": "it insulates axon, forcing impulse to jump between Nodes of Ranvier (saltatory conduction)",
+    "C": "it is fatty",
+    "D": "it contains Na⁺"
+   },
+   "answer": "it insulates axon, forcing impulse to jump between Nodes of Ranvier (saltatory conduction)"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0004",
+   "type": "mcq",
+   "stem": "Sensory neuron carries impulses",
+   "marks": 1,
+   "options": {
+    "A": "from brain to muscle",
+    "B": "from receptor/sense organ to CNS",
+    "C": "from CNS to effector",
+    "D": "between neurons in brain"
+   },
+   "answer": "from receptor/sense organ to CNS"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0005",
+   "type": "mcq",
+   "stem": "Cerebellum's main function is",
+   "marks": 1,
+   "options": {
+    "A": "thinking and memory",
+    "B": "vision processing",
+    "C": "balance and coordination of movement",
+    "D": "breathing control"
+   },
+   "answer": "balance and coordination of movement"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0006",
+   "type": "mcq",
+   "stem": "Medulla oblongata controls",
+   "marks": 1,
+   "options": {
+    "A": "voluntary movement",
+    "B": "language",
+    "C": "heartbeat, breathing and other autonomic functions",
+    "D": "vision"
+   },
+   "answer": "heartbeat, breathing and other autonomic functions"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0007",
+   "type": "mcq",
+   "stem": "In a reflex arc, order is",
+   "marks": 1,
+   "options": {
+    "A": "receptor→motor→relay→sensory→effector",
+    "B": "receptor→sensory→relay→motor→effector",
+    "C": "brain→sensory→motor→effector",
+    "D": "effector→receptor→brain"
+   },
+   "answer": "receptor→sensory→relay→motor→effector"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0008",
+   "type": "mcq",
+   "stem": "Dendrites receive signals; axons",
+   "marks": 1,
+   "options": {
+    "A": "receive signals too",
+    "B": "transmit impulse away from cell body to next neuron or effector",
+    "C": "store neurotransmitters",
+    "D": "form myelin"
+   },
+   "answer": "transmit impulse away from cell body to next neuron or effector"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0009",
+   "type": "mcq",
+   "stem": "Multiple sclerosis is caused by",
+   "marks": 1,
+   "options": {
+    "A": "neurotransmitter deficiency",
+    "B": "immune system attacking myelin sheath, slowing nerve conduction",
+    "C": "brain tumor",
+    "D": "low blood sugar"
+   },
+   "answer": "immune system attacking myelin sheath, slowing nerve conduction"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0010",
+   "type": "mcq",
+   "stem": "Refractory period after nerve impulse means",
+   "marks": 1,
+   "options": {
+    "A": "neuron fires continuously",
+    "B": "neuron cannot fire again immediately (Na⁺/K⁺ balance being restored)",
+    "C": "neuron dies",
+    "D": "synapse is blocked"
+   },
+   "answer": "neuron cannot fire again immediately (Na⁺/K⁺ balance being restored)"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0011",
+   "type": "mcq",
+   "stem": "What is the basic unit of life?",
+   "marks": 1,
+   "options": {
+    "A": "The cell",
+    "B": "The atom",
+    "C": "The molecule",
+    "D": "The nucleus"
+   },
+   "answer": "The cell"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0012",
+   "type": "mcq",
+   "stem": "Which organelle is responsible for energy production in cells?",
+   "marks": 1,
+   "options": {
+    "A": "Mitochondria",
+    "B": "Nucleus",
+    "C": "Ribosome",
+    "D": "Vacuole"
+   },
+   "answer": "Mitochondria"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0013",
+   "type": "mcq",
+   "stem": "What is photosynthesis?",
+   "marks": 1,
+   "options": {
+    "A": "The process by which plants make food using sunlight",
+    "B": "The breakdown of glucose for energy",
+    "C": "The absorption of minerals from soil",
+    "D": "Cell division in plants"
+   },
+   "answer": "The process by which plants make food using sunlight"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0014",
+   "type": "mcq",
+   "stem": "What is osmosis?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of water from high to low water potential through a semi-permeable membrane",
+    "B": "Movement of glucose into cells",
+    "C": "Active transport of ions",
+    "D": "Evaporation of water from leaves"
+   },
+   "answer": "Movement of water from high to low water potential through a semi-permeable membrane"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0015",
+   "type": "mcq",
+   "stem": "What molecule carries genetic information?",
+   "marks": 1,
+   "options": {
+    "A": "DNA (Deoxyribonucleic acid)",
+    "B": "RNA",
+    "C": "ATP",
+    "D": "Protein"
+   },
+   "answer": "DNA (Deoxyribonucleic acid)"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0016",
+   "type": "mcq",
+   "stem": "What is the function of chloroplasts?",
+   "marks": 1,
+   "options": {
+    "A": "Site of photosynthesis",
+    "B": "Site of respiration",
+    "C": "Protein synthesis",
+    "D": "Cell division"
+   },
+   "answer": "Site of photosynthesis"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0017",
+   "type": "mcq",
+   "stem": "In genetics, what is a dominant allele?",
+   "marks": 1,
+   "options": {
+    "A": "One that is expressed even when only one copy is present",
+    "B": "One that is only expressed when two copies are present",
+    "C": "A mutated allele",
+    "D": "Always harmful"
+   },
+   "answer": "One that is expressed even when only one copy is present"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0018",
+   "type": "mcq",
+   "stem": "What is diffusion?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of particles from high to low concentration without energy",
+    "B": "Movement against a concentration gradient",
+    "C": "Movement of water only",
+    "D": "Requires energy (ATP)"
+   },
+   "answer": "Movement of particles from high to low concentration without energy"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0019",
+   "type": "mcq",
+   "stem": "Which blood component carries oxygen?",
+   "marks": 1,
+   "options": {
+    "A": "Red blood cells (haemoglobin)",
+    "B": "White blood cells",
+    "C": "Platelets",
+    "D": "Plasma"
+   },
+   "answer": "Red blood cells (haemoglobin)"
+  },
+  {
+   "id": "uneb_uace-nervous-system-bank-0020",
+   "type": "mcq",
+   "stem": "What is the role of the nucleus?",
+   "marks": 1,
+   "options": {
+    "A": "Controls cell activities and contains DNA",
+    "B": "Produces energy (ATP)",
+    "C": "Makes proteins",
+    "D": "Stores water"
+   },
+   "answer": "Controls cell activities and contains DNA"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Nervous System"
+}

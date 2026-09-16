@@ -1,0 +1,98 @@
+{
+ "exam": "Exame Nacional",
+ "region": "Portugal",
+ "slug": "EXAME_NACIONAL",
+ "question_banks": 2,
+ "github_sources": [
+  {
+   "repo": "alfredopache/AGORAEDU",
+   "url": "https://github.com/alfredopache/AGORAEDU/blob/1e94273f0e2062263b9ef9523e5589eafe7b06bb/scripts/seed-exam-questions.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "MatheusGino71/TreinadorDeQuest-es",
+   "url": "https://github.com/MatheusGino71/TreinadorDeQuest-es/blob/884bd937b012751037c6d0bc2ecc8c46b6d36a8e/clean_questions.ts",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "forkaizen2023-sys/ccse-test-practica",
+   "url": "https://github.com/forkaizen2023-sys/ccse-test-practica/blob/880b55027334a2e5a80c4d77d688e2dbd89a2faa/questions-additional.js",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "legalize-dev/legalize-pt",
+   "url": "https://github.com/legalize-dev/legalize-pt/blob/34cdb236fe46eaad9d198023a27e1a46fb1fe909/pt/2011/DRE-2011-20-145238.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "tech234a/annotation-urls",
+   "url": "https://github.com/tech234a/annotation-urls/blob/5c0300471b87c6a5f3dd8883484f8155b5ff33d7/-O_urls.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "andre-fuchs/kerning-pairs",
+   "url": "https://github.com/andre-fuchs/kerning-pairs/blob/b7a0e29ed81a8edee7b4b6cb1935ebf7d29ca611/text/pt/grouped-56.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "ajdavidl/Portuguese-NLP",
+   "url": "https://github.com/ajdavidl/Portuguese-NLP/blob/c290b6c9a76b4af9248e802a2d80822c32ae486f/README.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "myglobalhealthonline/global-health-website",
+   "url": "https://github.com/myglobalhealthonline/global-health-website/blob/ad934d882a923910d61bbbfb78b2da4e427491c7/seo/portugal/content-briefs/21-saude-homem.md",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Cambridge International A Level Portuguese (9718)",
+   "url": "https://www.cambridgeinternational.org",
+   "class": "official"
+  },
+  {
+   "title": "Edexcel GCSE Portuguese: Past Papers",
+   "url": "https://www.savemyexams.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Past exam papers - Pearson qualifications",
+   "url": "https://qualifications.pearson.com",
+   "class": "official"
+  },
+  {
+   "title": "Portuguese 9718 AS and A Level Past Papers | CAIE",
+   "url": "https://pastpapers.papacambridge.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "Free Online Practice Tests",
+   "url": "https://www.kaptest.com",
+   "class": "site"
+  },
+  {
+   "title": "Free Sample Questions - Choose a Test",
+   "url": "https://www.testprep-online.com",
+   "class": "site"
+  },
+  {
+   "title": "Free Practice Tests",
+   "url": "https://www.tests.com",
+   "class": "site"
+  },
+  {
+   "title": "Free CIPLE Practice Test — Test Your A2 Portuguese Level",
+   "url": "https://ciple.org",
+   "class": "site"
+  }
+ ]
+}

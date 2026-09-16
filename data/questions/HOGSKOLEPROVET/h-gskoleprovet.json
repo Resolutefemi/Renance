@@ -1,0 +1,179 @@
+{
+ "code": "hogskoleprovet-h-gskoleprovet-bank",
+ "title": "Högskoleprovet - Högskoleprovet",
+ "version": 1,
+ "questionCount": 24,
+ "totalMarks": 24,
+ "questions": [
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0001",
+   "type": "theory",
+   "stem": "Analysera känslan i följande recension och avgör om den är positiv, negativ eller neutral. Motivera kort. Recension: \"Maten var god men servicen var långsam och lokalen kändes sliten.\"",
+   "marks": 1,
+   "answer": "Känslan i recensionen är blandad. Den positiva aspekten är att maten var god, medan den negativa aspekten är att servicen var långsam och lokalen kändes sliten."
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0002",
+   "type": "theory",
+   "stem": "Är följande kundkommentar positiv eller negativ? Förklara varför. \"Jag hade höga förväntningar men blev tyvärr besviken på kvaliteten.\"",
+   "marks": 1,
+   "answer": "Den här kundkommentaren är negativ. Kunderna uttrycker sina förväntningar och förklarar att de blev besvikna. Det tyder på att de inte var nöjda med produkten eller tjänsten."
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0003",
+   "type": "theory",
+   "stem": "Vilken känsla uttrycker denna tweet, och hur säker är du? \"Äntligen fredag! Helgen kan inte komma snabbt nog.\"",
+   "marks": 1,
+   "answer": "Denna tweet uttrycker glädje och spänning över kommande helg. Språket är positivt och antyder en känsla av förväntan och upphetsning inför helgen. Jag är ganska säker på denna bedömning eftersom språk"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0004",
+   "type": "theory",
+   "stem": "Vilka är Sveriges tre största sjöar till ytan, i storleksordning?",
+   "marks": 1,
+   "answer": "Vänern, Vättern och Mälaren."
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0005",
+   "type": "theory",
+   "stem": "Förklara kortfattat hur det svenska riksdagsvalet fungerar och vad fyraprocentsspärren innebär.",
+   "marks": 1,
+   "answer": "Det svenska riksdagsvalet är ett allmänt, likvärdigt, hemligt och fritt val som avgörs vartannat år. I valet väljer vi våra riksdagsledamöter, som sedan väljer ut en statsminister. I riksdagen sitter "
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0006",
+   "type": "theory",
+   "stem": "Vem var Selma Lagerlöf och varför är hon viktig i svensk litteraturhistoria?",
+   "marks": 1,
+   "answer": "Selma Lagerlöf var en svensk författare och skribent som var känd för sin novell \"Nils Holgerssons underbara resa genom Sverige\". Hon var den första kvinnan att vinna Nobelpriset i litteratur, vilket "
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0007",
+   "type": "theory",
+   "stem": "En affär säljer äpplen för 12 kronor styck. Om du köper 7 äpplen och betalar med en hundralapp, hur mycket får du tillbaka? Visa uträkningen.",
+   "marks": 1,
+   "answer": "För att lösa detta problem behöver vi först räkna ut hur mycket de 7 äpplena kostar. Varje äpple kostar 12 kronor, så vi multiplicerar antalet äpplen med priset per äpple:\n\n7 äpplen * 12 kronor/äpple "
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0008",
+   "type": "theory",
+   "stem": "Anna är dubbelt så gammal som Erik. Om fem år är deras sammanlagda ålder 40 år. Hur gamla är de nu? Resonera steg för steg.",
+   "marks": 1,
+   "answer": "## Steg 1: Definiera variabler för annas och eriks ålder\nLåt A vara annas nuvarande ålder och E vara eriks nuvarande ålder.\n\n## Steg 2: Skapa en ekvation baserat på den första informationen\nEftersom A"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0009",
+   "type": "theory",
+   "stem": "Om alla katter är däggdjur och vissa däggdjur kan simma, kan man då dra slutsatsen att vissa katter kan simma? Förklara logiken.",
+   "marks": 1,
+   "answer": "## Steg 1: Förstå de givna påståendena\nVi har två påståenden: \"Alla katter är däggdjur\" och \"Vissa däggdjur kan simma\".\n\n## Steg 2: Analysera logiken bakom påståendena\nDet första påståendet, \"Alla kat"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0010",
+   "type": "theory",
+   "stem": "Sammanfatta följande text i en mening: \"Klimatförändringarna påverkar redan Sverige genom mildare vintrar, ökad nederbörd och stigande havsnivåer. Forskare varnar för att vissa arter kan försvinna medan nya etablerar sig, vilket förändrar de svenska ekosystemen i grunden.\"",
+   "marks": 1,
+   "answer": "Klimatförändringarna påverkar Sverige genom mildare vintrar, ökad nederbörd och stigande havsnivåer, vilket kan leda till att vissa arter försvinner och nya etablerar sig, vilket förändrar ekosystemen"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0011",
+   "type": "theory",
+   "stem": "Ge en kort sammanfattning (max tre meningar) av vad nyheten handlar om: \"Regeringen presenterade idag en ny satsning på järnvägsunderhåll. Satsningen omfattar tio miljarder kronor över fyra år och syftar till att minska förseningarna i tågtrafiken. Oppositionen menar att beloppet är otillräckligt.\"",
+   "marks": 1,
+   "answer": "Regeringen har satt av tio miljarder kronor för att minska förseningarna i tågtrafiken. Men oppositionen menar att det inte är tillräckligt."
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0012",
+   "type": "theory",
+   "stem": "Rätta eventuella grammatik- och stavfel i meningen och förklara vad du ändrade: \"Han gick till affären för att köpa mjölk men han glömde sin plånbok hemma så han kunde inte handlade något.\"",
+   "marks": 1,
+   "answer": "Meningen innehåller ett stavfel och ett grammatikfel. Det korrekta ordet är \"handla\" istället för \"handlade\". Meningsstrukturen är också något förvirrande. För att göra meningen tydligare och mer gram"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0013",
+   "type": "theory",
+   "stem": "Är följande mening grammatiskt korrekt svenska? Om inte, skriv den korrekt: \"De hade redan ätit middag när vi kom fram till restaurangen.\"",
+   "marks": 1,
+   "answer": "Ja, den är korrekt."
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0014",
+   "type": "theory",
+   "stem": "Förklara skillnaden mellan \"de\" och \"dem\" och ge ett exempel på korrekt användning av vardera.",
+   "marks": 1,
+   "answer": "\"De\" och \"dem\" är två olika former av den pronomen \"de\", som används för att peka på plurala objekt eller personer. Skillnaden mellan dem är att \"de\" används för att peka på objekt eller personer som "
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0015",
+   "type": "theory",
+   "stem": "Skriv en punktlista med exakt fyra tips för att sova bättre. Varje punkt ska vara högst tio ord lång.",
+   "marks": 1,
+   "answer": "- Se till att du har en bekväm säng och madrass.\n- Undvik att dricka alkohol och kaffe senare på dagen.\n- Gör en avslappnande aktivitet innan du lägger dig.\n- Se till att sovrummet är mörkt och tyst."
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0016",
+   "type": "theory",
+   "stem": "Skriv ett formellt mejl på svenska till en hyresvärd där du anmäler en trasig diskmaskin och ber om reparation. Håll det under 80 ord.",
+   "marks": 1,
+   "answer": "Kära [hyresvärdens namn],\n\nJag skriver för att anmäla att diskmaskinen i vårt lägenhet är trasig. Den fungerar inte längre och behöver repareras så snart som möjligt.\n\nVänligen be om reparation och hå"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0017",
+   "type": "theory",
+   "stem": "Lista fem svenska städer i bokstavsordning, en per rad, utan någon annan text.",
+   "marks": 1,
+   "answer": "Göteborg\nHalmstad\nJönköping\nKarlstad\nLund"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0018",
+   "type": "theory",
+   "stem": "Det regnar ute och du ska cykla till jobbet. Vad bör du tänka på? Ge tre praktiska råd.",
+   "marks": 1,
+   "answer": "1. Se till att ha en regnjacka och regnbyxor på dig. Det är viktigt att hålla dig torr under regnet för att undvika att bli sjuk.\n2. Använd en regnjacka och regnbyxor som är skräddarsydda för cykling."
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0019",
+   "type": "theory",
+   "stem": "Varför är det en dålig idé att lämna mjölk framme på köksbänken över natten?",
+   "marks": 1,
+   "answer": "Det är en dålig idé att lämna mjölk framme på köksbänken över natten eftersom bakterier kan växa i mjölken och göra den oegentlig. Mjölk är ett mättat medium för bakteriell tillväxt, så om den inte la"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0020",
+   "type": "theory",
+   "stem": "En vän säger att hen känner sig stressad inför ett jobbintervju imorgon. Vad kan du säga för att hjälpa och lugna?",
+   "marks": 1,
+   "answer": "Det är helt normalt att känna stress inför en viktig händelse som ett jobbintervju. Det är en naturlig reaktion som visar att du tar det seriöst. Här är några tips för att hjälpa och lugna din vän:\n\n1"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0021",
+   "type": "theory",
+   "stem": "Skriv en kort dikt på fyra rader om den svenska hösten.",
+   "marks": 1,
+   "answer": "Guldröda löv i vinden\nSpelar sånger av den gamla skogen\nMellan dem skymtar röda äpplen\nDär de mognar i den svala skogen"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0022",
+   "type": "theory",
+   "stem": "Hitta på en kort berättelse (cirka 100 ord) om en räv som hittar en försvunnen vante i skogen.",
+   "marks": 1,
+   "answer": "En kall kväll i skogen hittade en räv en försvunnen vante. Den var så stor att den tycktes kunna passa en hund. Råven såg på den och tänkte att det var en gåva från naturen. Den tog upp vanten och bör"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0023",
+   "type": "theory",
+   "stem": "Förklara för ett barn varför himlen är blå, på enkel svenska.",
+   "marks": 1,
+   "answer": "Himlen ser blå ut på grund av ett fenomen som kallas Rayleighspridning. När solljus passerar genom atmosfären, sprids det av molekyler av luft. Ljus som är längre våglängd, som rött och gult, sprids m"
+  },
+  {
+   "id": "hogskoleprovet-h-gskoleprovet-bank-0024",
+   "type": "theory",
+   "stem": "Vad är meningen med livet? Svara reflekterande i några meningar.",
+   "marks": 1,
+   "answer": "Meningen med livet är en fråga som människor har tänkt på i århundraden. Det finns många olika svar på denna fråga, beroende på den enskildes värderingar, erfarenheter och syn på världen. För vissa ka"
+  }
+ ],
+ "category": "Högskoleprovet",
+ "body": "Högskoleprovet"
+}

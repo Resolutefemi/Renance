@@ -1,0 +1,271 @@
+{
+ "code": "uneb_uace-excretion-bank",
+ "title": "UNEB UACE - Excretion",
+ "version": 1,
+ "questionCount": 20,
+ "totalMarks": 20,
+ "questions": [
+  {
+   "id": "uneb_uace-excretion-bank-0001",
+   "type": "mcq",
+   "stem": "Excretion specifically means",
+   "marks": 1,
+   "options": {
+    "A": "eliminating undigested food (faeces)",
+    "B": "removing metabolic waste products produced by chemical reactions in cells",
+    "C": "urinating",
+    "D": "sweating only"
+   },
+   "answer": "removing metabolic waste products produced by chemical reactions in cells"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0002",
+   "type": "mcq",
+   "stem": "Urea is produced in the liver by",
+   "marks": 1,
+   "options": {
+    "A": "filtration",
+    "B": "deamination of excess amino acids (NH₃+CO₂→urea)",
+    "C": "glycolysis",
+    "D": "respiration"
+   },
+   "answer": "deamination of excess amino acids (NH₃+CO₂→urea)"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0003",
+   "type": "mcq",
+   "stem": "Filtration in the kidney occurs at the",
+   "marks": 1,
+   "options": {
+    "A": "loop of Henle",
+    "B": "proximal convoluted tubule",
+    "C": "glomerulus / Bowman's capsule",
+    "D": "collecting duct"
+   },
+   "answer": "glomerulus / Bowman's capsule"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0004",
+   "type": "mcq",
+   "stem": "Which molecules are NOT filtered at glomerulus?",
+   "marks": 1,
+   "options": {
+    "A": "glucose",
+    "B": "urea",
+    "C": "plasma proteins and blood cells (too large)",
+    "D": "water"
+   },
+   "answer": "plasma proteins and blood cells (too large)"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0005",
+   "type": "mcq",
+   "stem": "Selective reabsorption in the proximal tubule returns glucose to blood by",
+   "marks": 1,
+   "options": {
+    "A": "passive diffusion only",
+    "B": "active transport (requires energy/ATP)",
+    "C": "osmosis",
+    "D": "filtration"
+   },
+   "answer": "active transport (requires energy/ATP)"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0006",
+   "type": "mcq",
+   "stem": "ADH (antidiuretic hormone) acts on",
+   "marks": 1,
+   "options": {
+    "A": "glomerulus",
+    "B": "proximal tubule",
+    "C": "collecting duct and distal tubule — increases water reabsorption",
+    "D": "Bowman's capsule"
+   },
+   "answer": "collecting duct and distal tubule — increases water reabsorption"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0007",
+   "type": "mcq",
+   "stem": "On a hot day with heavy sweating, what happens to ADH secretion?",
+   "marks": 1,
+   "options": {
+    "A": "ADH decreases",
+    "B": "ADH increases (dehydration detected → conserve water)",
+    "C": "ADH stays constant",
+    "D": "ADH stops"
+   },
+   "answer": "ADH increases (dehydration detected → conserve water)"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0008",
+   "type": "mcq",
+   "stem": "Loop of Henle's main function is",
+   "marks": 1,
+   "options": {
+    "A": "glucose reabsorption",
+    "B": "creating osmotic gradient in medulla enabling production of concentrated urine",
+    "C": "filtration",
+    "D": "secretion of urea"
+   },
+   "answer": "creating osmotic gradient in medulla enabling production of concentrated urine"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0009",
+   "type": "mcq",
+   "stem": "Kidney failure is treated by",
+   "marks": 1,
+   "options": {
+    "A": "more water",
+    "B": "dialysis (filters blood artificially) or kidney transplant",
+    "C": "insulin",
+    "D": "antibiotics"
+   },
+   "answer": "dialysis (filters blood artificially) or kidney transplant"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0010",
+   "type": "mcq",
+   "stem": "Which substance in urine indicates diabetes mellitus (Type 1)?",
+   "marks": 1,
+   "options": {
+    "A": "Protein",
+    "B": "Glucose (not normally present — only if blood glucose exceeds renal threshold)",
+    "C": "Urea",
+    "D": "Creatinine"
+   },
+   "answer": "Glucose (not normally present — only if blood glucose exceeds renal threshold)"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0011",
+   "type": "mcq",
+   "stem": "What is the basic unit of life?",
+   "marks": 1,
+   "options": {
+    "A": "The cell",
+    "B": "The atom",
+    "C": "The molecule",
+    "D": "The nucleus"
+   },
+   "answer": "The cell"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0012",
+   "type": "mcq",
+   "stem": "Which organelle is responsible for energy production in cells?",
+   "marks": 1,
+   "options": {
+    "A": "Mitochondria",
+    "B": "Nucleus",
+    "C": "Ribosome",
+    "D": "Vacuole"
+   },
+   "answer": "Mitochondria"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0013",
+   "type": "mcq",
+   "stem": "What is photosynthesis?",
+   "marks": 1,
+   "options": {
+    "A": "The process by which plants make food using sunlight",
+    "B": "The breakdown of glucose for energy",
+    "C": "The absorption of minerals from soil",
+    "D": "Cell division in plants"
+   },
+   "answer": "The process by which plants make food using sunlight"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0014",
+   "type": "mcq",
+   "stem": "What is osmosis?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of water from high to low water potential through a semi-permeable membrane",
+    "B": "Movement of glucose into cells",
+    "C": "Active transport of ions",
+    "D": "Evaporation of water from leaves"
+   },
+   "answer": "Movement of water from high to low water potential through a semi-permeable membrane"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0015",
+   "type": "mcq",
+   "stem": "What molecule carries genetic information?",
+   "marks": 1,
+   "options": {
+    "A": "DNA (Deoxyribonucleic acid)",
+    "B": "RNA",
+    "C": "ATP",
+    "D": "Protein"
+   },
+   "answer": "DNA (Deoxyribonucleic acid)"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0016",
+   "type": "mcq",
+   "stem": "What is the function of chloroplasts?",
+   "marks": 1,
+   "options": {
+    "A": "Site of photosynthesis",
+    "B": "Site of respiration",
+    "C": "Protein synthesis",
+    "D": "Cell division"
+   },
+   "answer": "Site of photosynthesis"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0017",
+   "type": "mcq",
+   "stem": "In genetics, what is a dominant allele?",
+   "marks": 1,
+   "options": {
+    "A": "One that is expressed even when only one copy is present",
+    "B": "One that is only expressed when two copies are present",
+    "C": "A mutated allele",
+    "D": "Always harmful"
+   },
+   "answer": "One that is expressed even when only one copy is present"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0018",
+   "type": "mcq",
+   "stem": "What is diffusion?",
+   "marks": 1,
+   "options": {
+    "A": "Movement of particles from high to low concentration without energy",
+    "B": "Movement against a concentration gradient",
+    "C": "Movement of water only",
+    "D": "Requires energy (ATP)"
+   },
+   "answer": "Movement of particles from high to low concentration without energy"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0019",
+   "type": "mcq",
+   "stem": "Which blood component carries oxygen?",
+   "marks": 1,
+   "options": {
+    "A": "Red blood cells (haemoglobin)",
+    "B": "White blood cells",
+    "C": "Platelets",
+    "D": "Plasma"
+   },
+   "answer": "Red blood cells (haemoglobin)"
+  },
+  {
+   "id": "uneb_uace-excretion-bank-0020",
+   "type": "mcq",
+   "stem": "What is the role of the nucleus?",
+   "marks": 1,
+   "options": {
+    "A": "Controls cell activities and contains DNA",
+    "B": "Produces energy (ATP)",
+    "C": "Makes proteins",
+    "D": "Stores water"
+   },
+   "answer": "Controls cell activities and contains DNA"
+  }
+ ],
+ "category": "UNEB UACE",
+ "body": "Excretion"
+}

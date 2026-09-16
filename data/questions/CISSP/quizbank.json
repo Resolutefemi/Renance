@@ -1,0 +1,71 @@
+{
+ "code": "cissp-quizbank-bank",
+ "title": "CISSP - Quizbank",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "cissp-quizbank-bank-0001",
+   "type": "mcq",
+   "stem": "In the network topology shown, which device sits at the marked point?",
+   "marks": 1,
+   "options": {
+    "A": "{'label': 'A', 'text': 'Router'}",
+    "B": "{'label': 'B', 'text': 'Firewall'}",
+    "C": "{'label': 'C', 'text': 'Switch'}"
+   },
+   "answer": "['B']"
+  },
+  {
+   "id": "cissp-quizbank-bank-0002",
+   "type": "mcq",
+   "stem": "What does TLS provide?",
+   "marks": 1,
+   "options": {
+    "A": "{'label': 'A', 'text': 'Encryption in transit'}",
+    "B": "{'label': 'B', 'text': 'Disk encryption'}",
+    "C": "{'label': 'C', 'text': 'Password hashing'}"
+   },
+   "answer": "['A']"
+  },
+  {
+   "id": "cissp-quizbank-bank-0003",
+   "type": "mcq",
+   "stem": "Which port does HTTPS use by default?",
+   "marks": 1,
+   "options": {
+    "A": "{'label': 'A', 'text': '80'}",
+    "B": "{'label': 'B', 'text': '443'}",
+    "C": "{'label': 'C', 'text': '22'}"
+   },
+   "answer": "['B']"
+  },
+  {
+   "id": "cissp-quizbank-bank-0004",
+   "type": "mcq",
+   "stem": "A VPN primarily protects data by…",
+   "marks": 1,
+   "options": {
+    "A": "{'label': 'A', 'text': 'Compressing it'}",
+    "B": "{'label': 'B', 'text': 'Tunneling it through an encrypted channel'}",
+    "C": "{'label': 'C', 'text': 'Caching it locally'}"
+   },
+   "answer": "['B']"
+  },
+  {
+   "id": "cissp-quizbank-bank-0005",
+   "type": "mcq",
+   "stem": "Which is a symmetric cipher?",
+   "marks": 1,
+   "options": {
+    "A": "{'label': 'A', 'text': 'AES'}",
+    "B": "{'label': 'B', 'text': 'RSA'}",
+    "C": "{'label': 'C', 'text': 'ECDSA'}"
+   },
+   "answer": "['A']"
+  }
+ ],
+ "category": "CISSP",
+ "body": "Quizbank"
+}

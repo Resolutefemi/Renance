@@ -1,0 +1,347 @@
+{
+ "code": "gmat-content-bank",
+ "title": "GMAT - Content",
+ "version": 1,
+ "questionCount": 24,
+ "totalMarks": 24,
+ "questions": [
+  {
+   "id": "gmat-content-bank-0001",
+   "type": "mcq",
+   "stem": "How many integer values of \\(x\\) satisfy the inequality \\(|x - 3| < 5\\)?",
+   "marks": 1,
+   "options": {
+    "A": "7",
+    "B": "8",
+    "C": "9",
+    "D": "10",
+    "E": "11"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "gmat-content-bank-0002",
+   "type": "mcq",
+   "stem": "A tip jar contains only $1 tokens and $2 tokens. There are 30 tokens in the jar with a\ncombined value of $47. How many $2 tokens are in the jar?",
+   "marks": 1,
+   "options": {
+    "A": "9",
+    "B": "13",
+    "C": "15",
+    "D": "17",
+    "E": "21"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "gmat-content-bank-0003",
+   "type": "mcq",
+   "stem": "If \\(x^2 - 5x + 6 = 0\\), what is the sum of all possible values of \\(x\\)?",
+   "marks": 1,
+   "options": {
+    "A": "1",
+    "B": "5",
+    "C": "6",
+    "D": "-5",
+    "E": "13"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "gmat-content-bank-0004",
+   "type": "mcq",
+   "stem": "If \\(\\tfrac{1}{3}\\) of a number is 12, what is \\(\\tfrac{3}{4}\\) of that number?",
+   "marks": 1,
+   "options": {
+    "A": "16",
+    "B": "24",
+    "C": "27",
+    "D": "36",
+    "E": "48"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "gmat-content-bank-0005",
+   "type": "mcq",
+   "stem": "The price of a jacket is first increased by 25%, and then the new, higher price is decreased\nby 20%. The final price is what percent of the original price?",
+   "marks": 1,
+   "options": {
+    "A": "95% of the original",
+    "B": "100% of the original",
+    "C": "104% of the original",
+    "D": "105% of the original",
+    "E": "125% of the original"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "gmat-content-bank-0006",
+   "type": "mcq",
+   "stem": "A bag contains 3 red marbles and 2 blue marbles. Two marbles are drawn at random, one after\nthe other, **without replacement**. What is the probability that both marbles are red?",
+   "marks": 1,
+   "options": {
+    "A": "3/10",
+    "B": "9/25",
+    "C": "2/5",
+    "D": "1/2",
+    "E": "3/5"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "gmat-content-bank-0007",
+   "type": "mcq",
+   "stem": "How many positive divisors does 72 have?",
+   "marks": 1,
+   "options": {
+    "A": "6",
+    "B": "8",
+    "C": "10",
+    "D": "12",
+    "E": "14"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "gmat-content-bank-0008",
+   "type": "mcq",
+   "stem": "In a class, 10 students scored an average (arithmetic mean) of 80 on a test, and the other 15\nstudents scored an average of 90. What is the average score of all 25 students?",
+   "marks": 1,
+   "options": {
+    "A": "84",
+    "B": "85",
+    "C": "86",
+    "D": "87",
+    "E": "88"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "gmat-content-bank-0009",
+   "type": "mcq",
+   "stem": "For the set \\(\\{4, 7, 9, 10, 90\\}\\), by how much does the mean exceed the median?",
+   "marks": 1,
+   "options": {
+    "A": "6",
+    "B": "9",
+    "C": "15",
+    "D": "24",
+    "E": "66"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "gmat-content-bank-0010",
+   "type": "mcq",
+   "stem": "The six numbers \\(3,\\ 5,\\ 8,\\ 12,\\ 15,\\ x\\) have a median of 10. What is the least possible value\nof \\(x\\)?",
+   "marks": 1,
+   "options": {
+    "A": "8",
+    "B": "10",
+    "C": "12",
+    "D": "15",
+    "E": "17"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "gmat-content-bank-0011",
+   "type": "mcq",
+   "stem": "The average (arithmetic mean) of a set of 6 numbers is 22. When a seventh number is added to the set,\nthe average becomes 25. What is the seventh number?",
+   "marks": 1,
+   "options": {
+    "A": "25",
+    "B": "28",
+    "C": "31",
+    "D": "43",
+    "E": "47"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "gmat-content-bank-0012",
+   "type": "mcq",
+   "stem": "Each set below contains five numbers. Which set has the **greatest** standard deviation?\n\n- **A.** \\(\\{2, 4, 6, 8, 10\\}\\)\n- **B.** \\(\\{102, 104, 106, 108, 110\\}\\)\n- **C.** \\(\\{6, 6, 6, 6, 6\\}\\)\n- **D.** \\(\\{1, 5, 6, 7, 11\\}\\)\n- **E.** \\(\\{5, 6, 6, 6, 7\\}\\)",
+   "marks": 1,
+   "options": {
+    "A": "{2, 4, 6, 8, 10}",
+    "B": "{102, 104, 106, 108, 110}",
+    "C": "{6, 6, 6, 6, 6}",
+    "D": "{1, 5, 6, 7, 11}",
+    "E": "{5, 6, 6, 6, 7}"
+   },
+   "answer": "D"
+  },
+  {
+   "id": "gmat-content-bank-0013",
+   "type": "mcq",
+   "stem": "A set of numbers has a standard deviation of 6. If 10 is added to every number in the set, what is the\nstandard deviation of the resulting set?",
+   "marks": 1,
+   "options": {
+    "A": "6",
+    "B": "10",
+    "C": "16",
+    "D": "60",
+    "E": "Cannot be determined from the information given"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "gmat-content-bank-0014",
+   "type": "mcq",
+   "stem": "In a class of 30 students, 18 study French and 15 study Spanish. If 5 students study neither\nlanguage, how many students study both French and Spanish?",
+   "marks": 1,
+   "options": {
+    "A": "3",
+    "B": "5",
+    "C": "8",
+    "D": "10",
+    "E": "12"
+   },
+   "answer": "C"
+  },
+  {
+   "id": "gmat-content-bank-0015",
+   "type": "mcq",
+   "stem": "A car travels from town A to town B at an average speed of 60 mph, and then returns along the\nsame road at an average speed of 40 mph. What is the car's average speed for the entire round\ntrip?",
+   "marks": 1,
+   "options": {
+    "A": "45 mph",
+    "B": "48 mph",
+    "C": "50 mph",
+    "D": "52 mph",
+    "E": "55 mph"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "gmat-content-bank-0016",
+   "type": "mcq",
+   "stem": "Machine A can fill a production order in 4 hours, and Machine B can fill the same order in 6\nhours. Working together at their constant rates, how long will they take to fill one order?",
+   "marks": 1,
+   "options": {
+    "A": "2 hours",
+    "B": "2 hours 24 minutes",
+    "C": "2 hours 30 minutes",
+    "D": "5 hours",
+    "E": "10 hours"
+   },
+   "answer": "B"
+  },
+  {
+   "id": "gmat-content-bank-0017",
+   "type": "mcq",
+   "stem": "The new tax on sugary drinks will not reduce obesity. People who want sugary drinks will simply\nbuy them in neighboring counties that impose no such tax. Indeed, a similar tax in another region\nled to a sharp rise in cross-border shopping with no measurable drop in obesity.\n\nWhich of the following is the main conclusion of the argument?",
+   "marks": 1,
+   "options": {
+    "A": "The new tax on sugary drinks will not reduce obesity.",
+    "B": "People who want sugary drinks will simply buy them in neighboring counties.",
+    "C": "A similar tax in another region led to a rise in cross-border shopping.",
+    "D": "Neighboring counties do not impose a tax on sugary drinks.",
+    "E": "Obesity is a problem that taxation is unable to solve."
+   },
+   "answer": "A"
+  },
+  {
+   "id": "gmat-content-bank-0018",
+   "type": "mcq",
+   "stem": "TransitCo argues that converting one of Main Street's three car lanes into a dedicated bus lane\nwill reduce the average commuting time for **everyone** who travels on Main Street, because\nbuses in the new lane will move faster than they do today.\n\nThe argument above depends on assuming which of the following?",
+   "marks": 1,
+   "options": {
+    "A": "Buses currently travel more slowly on Main Street than private cars do.",
+    "B": "The commuting time saved by bus riders will not be outweighed by additional time lost by drivers in the remaining, more crowded car lanes.",
+    "C": "A majority of the people who travel on Main Street currently ride the bus.",
+    "D": "The new dedicated lane will be used exclusively by buses and by no other vehicles.",
+    "E": "Commute times on streets other than Main Street will be unaffected by the change."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "gmat-content-bank-0019",
+   "type": "mcq",
+   "stem": "The city's new anti-theft policy must be working. In the year since it took effect, the number\nof thefts **reported to police** fell by 15%.\n\nThe argument is most vulnerable to criticism on the grounds that it",
+   "marks": 1,
+   "options": {
+    "A": "overlooks the possibility that the decline in reported thefts reflects a drop in reporting rather than a drop in thefts actually committed.",
+    "B": "provides no evidence that theft is a more serious problem than other crimes in the city.",
+    "C": "assumes that the anti-theft policy was intended to affect only theft and no other crime.",
+    "D": "relies on data from a single year, which may be too short a period to judge a trend.",
+    "E": "fails to specify exactly which acts the city classifies as theft."
+   },
+   "answer": "A"
+  },
+  {
+   "id": "gmat-content-bank-0020",
+   "type": "mcq",
+   "stem": "Every item in the store that is on sale is from last season's collection. None of the items in\nthe store's front window display is from last season's collection.\n\nIf the statements above are true, which of the following must also be true?",
+   "marks": 1,
+   "options": {
+    "A": "None of the items in the front window display is on sale.",
+    "B": "Every item that is not on sale is in the front window display.",
+    "C": "All of last season's items are on sale.",
+    "D": "Some items from last season's collection are in the front window display.",
+    "E": "Every item that is on sale is in the front window display."
+   },
+   "answer": "A"
+  },
+  {
+   "id": "gmat-content-bank-0021",
+   "type": "mcq",
+   "stem": "SunFit installed standing desks throughout its office. Over the following six months, the\nnumber of employees reporting back pain fell by 30% compared with the previous six months. This\nshows that standing desks reduce back pain.\n\nWhich of the following, if true, most seriously **weakens** the argument?",
+   "marks": 1,
+   "options": {
+    "A": "Standing desks are considerably more expensive to purchase than traditional sitting desks.",
+    "B": "During the six months after the desks were installed, several long-serving employees who had chronic back pain retired and were replaced by younger new hires.",
+    "C": "A majority of SunFit's employees said they preferred the new standing desks to their old ones.",
+    "D": "At a nearby company that did not install standing desks, reported back pain was unchanged over the same six months.",
+    "E": "Back pain is among the most common reasons for missed workdays in office jobs."
+   },
+   "answer": "B"
+  },
+  {
+   "id": "gmat-content-bank-0022",
+   "type": "mcq",
+   "stem": "*Read the passage and answer the question that follows.*\n\n> Monarch butterflies migrate thousands of miles to the same overwintering sites, yet no\n> individual makes the round trip twice: the monarchs that return in spring are several\n> generations removed from those that departed. This rules out learning the route from\n> experience. Instead, monarchs rely on a \"time-compensated sun compass.\" Cells in their\n> antennae track the time of day and adjust the insect's reading of the sun's position\n> accordingly, so it can hold a constant southward bearing even as the sun moves across the\n> sky. When researchers coated the antennae to block light from reaching them, the butterflies\n> could still detect the sun but could no longer keep a steady heading.\n\nAccording to the passage, the monarchs' antennae are necessary for",
+   "marks": 1,
+   "options": {
+    "A": "maintaining a steady directional heading as the sun moves across the sky",
+    "B": "sensing whether sunlight is present at all",
+    "C": "learning the migration route from an earlier generation",
+    "D": "completing the entire round-trip migration within one generation",
+    "E": "increasing the total distance the butterflies are able to travel"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "gmat-content-bank-0023",
+   "type": "mcq",
+   "stem": "*Read the passage and answer the question that follows.*\n\n> For much of the twentieth century, planners treated traffic congestion as a simple engineering\n> problem: build more road capacity, and jams would ease. Yet cities that widened their highways\n> often found that congestion returned to its former levels within a few years. The now widely\n> accepted explanation is \"induced demand\": adding capacity lowers the effective cost of\n> driving, which encourages more trips, longer commutes, and development farther from the\n> center, until the new lanes fill up. Some planners therefore argue that pricing road use,\n> rather than expanding it, is the only durable way to manage congestion. Critics respond that\n> road pricing can fall hardest on lower-income drivers — a concern that has slowed its adoption\n> despite its theoretical appeal.\n\nThe primary purpose of the passage is to",
+   "marks": 1,
+   "options": {
+    "A": "explain a phenomenon that undermines a once-standard approach to a problem, and note the debate it has prompted",
+    "B": "argue that road pricing is the only acceptable solution to traffic congestion",
+    "C": "describe the engineering methods used to widen urban highways",
+    "D": "compare the severity of traffic congestion across several major cities",
+    "E": "trace the development of economic thought over the past two centuries"
+   },
+   "answer": "A"
+  },
+  {
+   "id": "gmat-content-bank-0024",
+   "type": "mcq",
+   "stem": "*Read the passage and answer the question that follows.*\n\n> Proponents of \"brain-training\" apps claim that a few minutes of daily puzzles can raise general\n> intelligence. The evidence, however, is thin. Studies typically show that players get better at\n> the specific games they practice, but this improvement rarely transfers to unrelated tasks —\n> the supposed point of the exercise. This is not to say the apps are worthless: many people find\n> them enjoyable, and enjoyment has its own value. But anyone hoping to sharpen their reasoning\n> would be wise to treat the grander promises with caution.\n\nThe author's attitude toward brain-training apps is best described as",
+   "marks": 1,
+   "options": {
+    "A": "skeptical of the broad claims made for the apps, but not dismissive of them entirely",
+    "B": "enthusiastic about the proven cognitive benefits of the apps",
+    "C": "completely dismissive of any value the apps might have",
+    "D": "neutral, presenting both sides without offering any judgment",
+    "E": "alarmed by the risks the apps pose to their users"
+   },
+   "answer": "A"
+  }
+ ],
+ "category": "GMAT",
+ "body": "Content"
+}

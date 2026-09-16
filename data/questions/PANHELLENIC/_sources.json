@@ -1,0 +1,98 @@
+{
+ "exam": "Panhellenic Exams",
+ "region": "Greece",
+ "slug": "PANHELLENIC",
+ "question_banks": 1,
+ "github_sources": [
+  {
+   "repo": "tusharkurne99/NewBombayTimes",
+   "url": "https://github.com/tusharkurne99/NewBombayTimes/blob/9ea1606d44f1938bd586a7e7844eccff43b91122/data/wordbanks/midi_crossword_word_bank.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "Helsinki-NLP/Contributed-MT-leaderboard",
+   "url": "https://github.com/Helsinki-NLP/Contributed-MT-leaderboard/blob/7a30c79f0f624be153185b16de04f0203d87d722/models/facebook/nllb-200-54.5B/flores200-devtest.ewe-eng.output",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "aLehav/Olami",
+   "url": "https://github.com/aLehav/Olami/blob/e6c577e9b1e74aa8d7ba395e9b25150d6df2e479/journal_data/txt/UMich/2012_09_25.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "aoadenus/Humanities-CLEP-app",
+   "url": "https://github.com/aoadenus/Humanities-CLEP-app/blob/463035cb86a9ec58c995332dc91239c3d7f7cdeb/chapter1_all_sections_canonical.md",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "timoschick/form-context-model",
+   "url": "https://github.com/timoschick/form-context-model/blob/4e7c3222491b6c09687d58bc0e00c2406952f0e0/crw-dev/context/respectively.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "sktsherlock/TAG-Benchmark",
+   "url": "https://github.com/sktsherlock/TAG-Benchmark/blob/9553c4e4a4bb9787e5c9d5622190b4730fdc4733/data/webkb/Texas/Texas.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "WSU-4110/WarriorSocial",
+   "url": "https://github.com/WSU-4110/WarriorSocial/blob/acf00be6e68e7d66e2684380f2386f10ea0f4bd2/app/src/main/assets/orginfo.txt",
+   "stars": 0,
+   "desc": ""
+  },
+  {
+   "repo": "MayasGhantous/NLI_NLP_project",
+   "url": "https://github.com/MayasGhantous/NLI_NLP_project/blob/094c0667bbfee5f78b73045bb27a94f522c314fe/europe_data/reddit.Greece.txt.tok.clean/Thodor2s/chunk27",
+   "stars": 0,
+   "desc": ""
+  }
+ ],
+ "web_sources": [
+  {
+   "title": "Free Preparation Materials - Center for the Greek Language",
+   "url": "https://www.hau.gr",
+   "class": "site"
+  },
+  {
+   "title": "Ancient Greece Test Questions and Answers | PDF | Athena",
+   "url": "https://www.scribd.com",
+   "class": "site+pdf"
+  },
+  {
+   "title": "GRE Mini Quiz - ETS",
+   "url": "https://www.ets.org/gre/gre-mini-quiz.html",
+   "class": "site"
+  },
+  {
+   "title": "Free Practice Tests",
+   "url": "https://www.tests.com/Free-Practice-Tests?srsltid=AU7gw4Wml7_TOb7OoSTUKiTR048yX4DK3u7X48_XP62CE5c46AkK71mI",
+   "class": "site"
+  },
+  {
+   "title": "Free Preparation Materials - Center for the Greek Language - hau.gr",
+   "url": "https://www.hau.gr/en-us/exams/support/individuals/center-for-the-greek-language/free-preparation-material",
+   "class": "site"
+  },
+  {
+   "title": "Free Grammar Practice Test from Tests.com",
+   "url": "https://www.tests.com/practice/grammar-test?srsltid=AU7gw4UanwrbaMZdrWgOV1YvM76H1Am1LtwoZY5eF9LzODiY3fVCjWBB",
+   "class": "site"
+  },
+  {
+   "title": "Panhellenic Exams",
+   "url": "http://keepcalmandteachenglish.blogspot.com",
+   "class": "site"
+  },
+  {
+   "title": "Greek University Entrance Exams - Omilo",
+   "url": "https://omilo.com",
+   "class": "site"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "code": "delf_dalf-exam-bank",
+ "title": "DELF / DALF - Exam",
+ "version": 1,
+ "questionCount": 5,
+ "totalMarks": 5,
+ "questions": [
+  {
+   "id": "delf_dalf-exam-bank-0001",
+   "type": "mcq",
+   "stem": "Qu'est-ce que notre époque semble avoir perdu, selon l'orateur ?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'a', 'text': \"La foi en l'avenir\"}",
+    "B": "{'id': 'b', 'text': 'Le goût du passé'}",
+    "C": "{'id': 'c', 'text': \"La mémoire de l'histoire\"}"
+   },
+   "answer": "['a']"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0002",
+   "type": "mcq",
+   "stem": "Quelle promesse beaucoup n'entendent-ils plus ?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'a', 'text': \"Que demain sera meilleur qu'aujourd'hui\"}",
+    "B": "{'id': 'b', 'text': 'Que le travail paie toujours'}",
+    "C": "{'id': 'c', 'text': 'Que la science a réponse à tout'}"
+   },
+   "answer": "['a']"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0003",
+   "type": "mcq",
+   "stem": "Pourquoi l'orateur refuse-t-il le pessimisme ?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'a', 'text': 'Parce que le pessimisme est une prophétie qui se réalise'}",
+    "B": "{'id': 'b', 'text': \"Parce qu'il est interdit d'en parler\"}",
+    "C": "{'id': 'c', 'text': \"Parce qu'il est devenu trop rare\"}"
+   },
+   "answer": "['a']"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0004",
+   "type": "mcq",
+   "stem": "Quelle est, selon lui, l'utilité de l'utopie ?",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'a', 'text': 'Elle est une boussole qui indique une direction'}",
+    "B": "{'id': 'b', 'text': 'Elle est un plan à appliquer tel quel'}",
+    "C": "{'id': 'c', 'text': 'Elle est une simple distraction'}"
+   },
+   "answer": "['a']"
+  },
+  {
+   "id": "delf_dalf-exam-bank-0005",
+   "type": "mcq",
+   "stem": "Selon lui, espérer, c'est…",
+   "marks": 1,
+   "options": {
+    "A": "{'id': 'a', 'text': 'la condition de toute action'}",
+    "B": "{'id': 'b', 'text': 'une forme de naïveté'}",
+    "C": "{'id': 'c', 'text': 'une perte de temps'}"
+   },
+   "answer": "['a']"
+  }
+ ],
+ "category": "DELF / DALF",
+ "body": "Exam"
+}
