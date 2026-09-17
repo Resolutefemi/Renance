@@ -12,6 +12,7 @@ import '../config.dart';
 import '../models.dart';
 import '../controllers.dart';
 import '../storage.dart';
+import 'google_logo.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
 
@@ -147,7 +148,7 @@ class _GoogleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return OutlinedButton.icon(
       onPressed: onPressed,
-      icon: const Icon(Icons.language, size: 18),
+      icon: const GoogleLogo(size: 18),
       label: const Text('Continue with Google'),
     );
   }

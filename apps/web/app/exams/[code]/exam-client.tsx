@@ -588,9 +588,27 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     nudgeDismissedRef.current = true;
   };
 
+  /** The two-step hand-in: every submit route (S key, Enter at the end,
+   *  either on-screen Submit button) opens the same confirm dialog —
+   *  Y then confirms it. */
+  const requestSubmit = () => {
+    if (!bundle) return;
+    const left = bundle.questionCount - answeredCount;
+    setConfirm({
+      title: 'Submit paper?',
+      body:
+        left > 0
+          ? `${left} question(s) unanswered, they will be marked wrong.`
+          : `All ${bundle.questionCount} answered, ready to hand in.`,
+      confirmLabel: 'Submit',
+      onConfirm: () => void submit(),
+    });
+  };
+
   /* ------------------------------------------------------------ */
   /* Keyboard controls (desktop CBT, like the real JAMB hall):      */
   /*   A-F / 1-6 pick an option · ←/→ move · F flag · Enter next.   */
+  /*   S submit · Y confirm submit.                                 */
   /* Suspended while any overlay (navigator, calculator, break,     */
   /* fatigue nudge) is open or while typing in a theory textarea.   */
   /* ------------------------------------------------------------- */
@@ -604,6 +622,20 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         return;
       }
       const key = e.key;
+      // The confirm dialog owns the keys while it is up: Y (or Enter)
+      // confirms, Esc backs out, everything else is held so nothing
+      // moves behind the dialog.
+      if (confirm) {
+        e.preventDefault();
+        if (key === 'y' || key === 'Y' || key === 'Enter') {
+          const action = confirm.onConfirm;
+          setConfirm(null);
+          action();
+        } else if (key === 'Escape') {
+          setConfirm(null);
+        }
+        return;
+      }
       if (question.type !== 'theory') {
         // A-F by letter, 1-6 by position
         const upper = key.length === 1 ? key.toUpperCase() : '';
@@ -641,23 +673,20 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         setCalcOpen(true);
         return;
       }
+      if (key === 's' || key === 'S') {
+        // S opens the submit hand-in from anywhere in the paper — the
+        // on-screen Submit buttons route through the same dialog.
+        e.preventDefault();
+        requestSubmit();
+        return;
+      }
       if (key === 'Enter') {
-        // Enter advances; when the walk is done it opens the submit
+        // Enter advances; at the end of the walk it opens the submit
         // confirm exactly like the on-screen button.
         e.preventDefault();
         const answered = Object.keys(answers).length;
         if (current === bundle.questionCount - 1 || answered === bundle.questionCount) {
-          const left = bundle.questionCount - answered;
-          if (left > 0) {
-            setConfirm({
-              title: 'Submit paper?',
-              body: `${left} question(s) unanswered, they will be marked wrong.`,
-              confirmLabel: 'Submit',
-              onConfirm: () => void submit(),
-            });
-            return;
-          }
-          void submit();
+          requestSubmit();
         } else if (current < bundle.questionCount - 1) {
           goTo(current + 1);
         }
@@ -666,7 +695,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, bundle, question, current, navOpen, calcOpen, breakLeft, nudgeVisible, answers]);
+  }, [phase, bundle, question, current, navOpen, calcOpen, breakLeft, nudgeVisible, answers, confirm]);
 
 
   /* ------------------------------------------------------------- views */
@@ -836,6 +865,8 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">←→</span> move
             <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">F</span> flag
             <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">Enter</span> next / submit
+            <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">S</span> submit
+            <span className="rounded border border-outline-variant bg-card px-1.5 py-0.5 font-mono">Y</span> confirm submit
           </div>
           {/* Daily: show today's seated score + board link once played */}
           {daily && daily.myResult && (
@@ -1398,19 +1429,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               Quit
             </button>
             <button
-              onClick={() => {
-                const left = bundle.questionCount - answeredCount;
-                if (left > 0) {
-                  setConfirm({
-                    title: 'Submit paper?',
-                    body: `${left} question(s) unanswered, they will be marked wrong.`,
-                    confirmLabel: 'Submit',
-                    onConfirm: () => void submit(),
-                  });
-                } else {
-                  void submit();
-                }
-              }}
+              onClick={requestSubmit}
               className="shrink-0 rounded-full bg-accent-ink px-[18px] py-2.5 text-[14.5px] font-bold text-white transition hover:opacity-90 active:scale-[0.97]"
             >
               Submit
@@ -1613,19 +1632,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             </button>
             {current === bundle.questionCount - 1 || answeredCount === bundle.questionCount ? (
               <button
-                onClick={() => {
-                  const left = bundle.questionCount - answeredCount;
-                  if (left > 0) {
-                    setConfirm({
-                      title: 'Submit paper?',
-                      body: `${left} question(s) unanswered, they will be marked wrong.`,
-                      confirmLabel: 'Submit',
-                      onConfirm: () => void submit(),
-                    });
-                  } else {
-                    void submit();
-                  }
-                }}
+                onClick={requestSubmit}
                 className="flex h-[46px] shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-4 text-[14.5px] font-bold text-error transition hover:bg-error-container/30"
               >
                 Submit
@@ -1849,6 +1856,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 {confirm.confirmLabel}
               </button>
             </div>
+            <p className="mt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-outline">
+              Y confirm · Esc dismiss
+            </p>
           </div>
         </div>
       )}
