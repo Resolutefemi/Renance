@@ -58,7 +58,7 @@ func (s *Server) handleAIGenerate(w http.ResponseWriter, r *http.Request) {
 	}
 	if !s.limiter.allow("ai:user:" + uid) {
 		w.Header().Set("Retry-After", "15")
-		fail(w, http.StatusTooManyRequests, "rate_limited", "AI cooling down — retry in a few seconds")
+		fail(w, http.StatusTooManyRequests, "rate_limited", "AI cooling down, retry in a few seconds")
 		return
 	}
 	if s.tutor == nil || s.tutor.Provider == nil {
@@ -116,14 +116,14 @@ func (s *Server) handleAIGenerate(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		s.log.Error("ai generate", "err", err)
 		fail(w, http.StatusBadGateway, "ai_failed",
-			"The AI provider could not generate questions right now — try again shortly")
+			"The AI provider could not generate questions right now, try again shortly")
 		return
 	}
 	questions, err := parseAIBatch(out, topics, difficulty)
 	if err != nil {
 		s.log.Error("ai generate parse", "err", err, "raw", truncateForLog(out))
 		fail(w, http.StatusBadGateway, "ai_failed",
-			"The AI reply was not usable — try again, maybe with a tighter topic")
+			"The AI reply was not usable, try again, maybe with a tighter topic")
 		return
 	}
 	writeJSON(w, http.StatusOK, aiGenerateResponse{Questions: questions, Mode: "ai"})

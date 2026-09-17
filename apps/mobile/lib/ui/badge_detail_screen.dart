@@ -422,14 +422,14 @@ class _BadgeDetailScreenState extends State<BadgeDetailScreen>
                           child: TextButton(
                             onPressed: _share,
                             style: TextButton.styleFrom(
-                              backgroundColor: Colors.black,
-                              foregroundColor: Colors.white,
+                              backgroundColor: context.primary,
+                              foregroundColor: context.onPrimary,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
                             ),
                             child: Text('Share Achievement',
                                 style: RenanceText.bodyMedium
-                                    .copyWith(color: Colors.white)),
+                                    .copyWith(color: context.onPrimary)),
                           ),
                         ),
                       ),

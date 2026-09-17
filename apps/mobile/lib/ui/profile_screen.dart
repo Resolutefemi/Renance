@@ -8,6 +8,7 @@ library;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../api_client.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
@@ -19,6 +20,7 @@ import 'performance_screen.dart';
 import 'saved_questions.dart';
 import 'settings_screen.dart';
 import 'theme.dart';
+import 'university_screens.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({
@@ -183,6 +185,10 @@ class ProfileScreen extends StatelessWidget {
             onFocusChanged?.call();
           },
         ),
+        const SizedBox(height: 16),
+        // My school: the ONLY place the picked school changes (founder
+        // rule). Saving stores the pick AND the profile institution.
+        _SchoolCard(onChanged: onFocusChanged),
         const SizedBox(height: 16),
         // Menu group: content — 1:1 with the up-to-date web profile
         // (My Packs, GPA Calculator; Downloads stays as the mobile
@@ -496,6 +502,214 @@ class _MenuGroup extends StatelessWidget {
             ),
           ],
         ],
+      ),
+    );
+  }
+}
+
+/// My school card: shows the picked school (stored pick first, then the
+/// profile institution) and opens the picker sheet. Saving writes both
+/// the stored pick (kSchoolPickKey) and the profile institution, the
+/// founder's only-edit-here rule for school changes.
+class _SchoolCard extends StatelessWidget {
+  const _SchoolCard({this.onChanged});
+
+  final VoidCallback? onChanged;
+
+  Future<void> _pick(BuildContext context) async {
+    final SyncController sync = context.read<SyncController>();
+    final StudentController student = context.read<StudentController>();
+    final ApiClient api = context.read<ApiClient>();
+    final SessionStore session = context.read<SessionStore>();
+
+    final Map<String, List<UniCourse>> schools =
+        universityCourses(sync.exams);
+    // Available = schools with real semester course banks.
+    final List<String> available = schools.keys
+        .where((String s) => schools[s]!.any((UniCourse c) => !c.isPostUtme))
+        .toList()
+      ..sort();
+
+    final String? pickedSlug = await showModalBottomSheet<String>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: context.pageBg,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+      ),
+      builder: (BuildContext sheetContext) => SafeArea(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(sheetContext).size.height * 0.75,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const SizedBox(height: 8),
+              Container(
+                width: 48,
+                height: 6,
+                decoration: BoxDecoration(
+                  color: sheetContext.outlineVariant,
+                  borderRadius: BorderRadius.circular(999),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 16, 24, 4),
+                child: Text('Which school are you in?',
+                    style: RenanceText.displayMd),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 0, 24, 12),
+                child: Text(
+                  '${available.length} schools ship course banks. '
+                  'This pick drives the School Desk.',
+                  style: RenanceText.bodySecondary.copyWith(
+                      color: sheetContext.textSecondary),
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+                  itemCount: available.length,
+                  itemBuilder: (BuildContext context, int i) {
+                    final String slug = available[i];
+                    final (String short, String full) =
+                        kUniversitySchools[slug] ??
+                            (slug.toUpperCase(), slug);
+                    return Card(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      elevation: 0,
+                      color: sheetContext.card,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      child: ListTile(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        leading: Container(
+                          width: 44,
+                          height: 44,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: sheetContext.selectionBlue
+                                .withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            short.length <= 5 ? short : short.substring(0, 4),
+                            style: RenanceText.labelMono.copyWith(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w700,
+                                color: sheetContext.ink),
+                          ),
+                        ),
+                        title: Text(short,
+                            style: RenanceText.bodyMedium
+                                .copyWith(fontWeight: FontWeight.w600)),
+                        subtitle: Text(full,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: RenanceText.caption.copyWith(
+                                color: sheetContext.textSecondary)),
+                        trailing: Icon(Icons.chevron_right,
+                            color: sheetContext.outlineLight),
+                        onTap: () =>
+                            Navigator.of(sheetContext).pop(slug),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (pickedSlug == null) return;
+
+    // Persist: the pick key (same one the website reads) AND the profile
+    // institution, so the server record stays in step.
+    final String fullName = kUniversitySchools[pickedSlug]?.$2 ?? pickedSlug;
+    try {
+      await session.prefs.setString(kSchoolPickKey, pickedSlug);
+      final Profile? p = student.me?.profile;
+      await api.updateProfile(
+        fullName: p?.fullName ?? '',
+        institution: fullName,
+        gradeLevel: p?.gradeLevel ?? 'SS3',
+        exams: p?.exams ?? const <String>['JAMB'],
+        targetYear: p?.targetYear,
+      );
+      await student.refresh();
+      onChanged?.call();
+    } on ApiException {
+      // Network/handler failure: the pick key already stored, the desk
+      // still resolves; the profile record catches up on the next save.
+    } on NetworkException {
+      // Same soft handling: never strand the scholar on a dialog.
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final StudentController student = context.watch<StudentController>();
+    final SyncController sync = context.watch<SyncController>();
+    final Set<String> banked = universityCourses(sync.exams).keys.toSet();
+    final String? stored =
+        context.read<SessionStore>().prefs.getString(kSchoolPickKey);
+    final String current = (stored != null && banked.contains(stored)
+            ? kUniversitySchools[stored]?.$2
+            : null) ??
+        (student.me?.profile?.institution.trim().isNotEmpty == true
+            ? student.me!.profile!.institution
+            : null) ??
+        'Not set yet, tap to pick';
+
+    return Container(
+      decoration: BoxDecoration(
+        color: context.card,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color(0x14141C2D), blurRadius: 3, offset: Offset(0, 1)),
+        ],
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () => _pick(context),
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: <Widget>[
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: context.selectionBlue,
+                ),
+                child: Icon(Icons.account_balance_outlined,
+                    size: 22, color: context.ink),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text('My school', style: RenanceText.bodyMedium),
+                    const SizedBox(height: 2),
+                    Text(current,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: RenanceText.caption
+                            .copyWith(color: context.textSecondary)),
+                  ],
+                ),
+              ),
+              Icon(Icons.edit, size: 20, color: context.outlineLight),
+            ],
+          ),
+        ),
       ),
     );
   }

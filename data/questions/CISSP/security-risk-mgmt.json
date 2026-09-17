@@ -593,7 +593,7 @@
   {
    "id": "cissp-security-risk-mgmt-bank-0046",
    "type": "mcq",
-   "stem": "SCENARIO — Juniper Content: Users in two offices would like to access each other's file servers over the internet. What control would provide confidentiality for those communications?",
+   "stem": "SCENARIO, Juniper Content: Users in two offices would like to access each other's file servers over the internet. What control would provide confidentiality for those communications?",
    "marks": 1,
    "options": {
     "A": "Digital signatures",
@@ -606,7 +606,7 @@
   {
    "id": "cissp-security-risk-mgmt-bank-0047",
    "type": "mcq",
-   "stem": "SCENARIO — Juniper Content: You are concerned about the availability of data stored on each office's server and would like to add technology that would enable continued access to files even if a hard drive fails. What control allows you to add robustness without adding additional servers?",
+   "stem": "SCENARIO, Juniper Content: You are concerned about the availability of data stored on each office's server and would like to add technology that would enable continued access to files even if a hard drive fails. What control allows you to add robustness without adding additional servers?",
    "marks": 1,
    "options": {
     "A": "Server clustering",
@@ -619,7 +619,7 @@
   {
    "id": "cissp-security-risk-mgmt-bank-0048",
    "type": "mcq",
-   "stem": "SCENARIO — Juniper Content: There are historical records stored on the server that should never be modified. You would like to add an integrity control that allows you to verify on a periodic basis that the files were not modified. What control can you add?",
+   "stem": "SCENARIO, Juniper Content: There are historical records stored on the server that should never be modified. You would like to add an integrity control that allows you to verify on a periodic basis that the files were not modified. What control can you add?",
    "marks": 1,
    "options": {
     "A": "Hashing",
@@ -1152,7 +1152,7 @@
   {
    "id": "cissp-security-risk-mgmt-bank-0089",
    "type": "mcq",
-   "stem": "SCENARIO — Atwood Landing: Rebuilding and reconfiguring the data center would cost $10 million. A typical tornado would cause approximately $5 million of damage to the facility. What is the exposure factor (EF) for the effect of a tornado on Atwood Landing's data center?",
+   "stem": "SCENARIO, Atwood Landing: Rebuilding and reconfiguring the data center would cost $10 million. A typical tornado would cause approximately $5 million of damage to the facility. What is the exposure factor (EF) for the effect of a tornado on Atwood Landing's data center?",
    "marks": 1,
    "options": {
     "A": "10%",
@@ -1165,7 +1165,7 @@
   {
    "id": "cissp-security-risk-mgmt-bank-0090",
    "type": "mcq",
-   "stem": "SCENARIO — Atwood Landing: The data center is in an area where a tornado is expected once every 200 years. What is the annualized rate of occurrence (ARO) for a tornado at Atwood Landing's data center?",
+   "stem": "SCENARIO, Atwood Landing: The data center is in an area where a tornado is expected once every 200 years. What is the annualized rate of occurrence (ARO) for a tornado at Atwood Landing's data center?",
    "marks": 1,
    "options": {
     "A": "0.0025",
@@ -1178,7 +1178,7 @@
   {
    "id": "cissp-security-risk-mgmt-bank-0091",
    "type": "mcq",
-   "stem": "SCENARIO — Atwood Landing: The data center replacement cost is $10 million, the exposure factor (EF) for a tornado is 50%, and the annualized rate of occurrence (ARO) is 0.005. What is the annualized loss expectancy (ALE) for a tornado at Atwood Landing's data center?",
+   "stem": "SCENARIO, Atwood Landing: The data center replacement cost is $10 million, the exposure factor (EF) for a tornado is 50%, and the annualized rate of occurrence (ARO) is 0.005. What is the annualized loss expectancy (ALE) for a tornado at Atwood Landing's data center?",
    "marks": 1,
    "options": {
     "A": "$25,000",

@@ -764,7 +764,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             onClick={() =>
               setConfirm({
                 title: 'Leave the paper?',
-                body: 'Leave now and nothing is submitted — you keep your seat in the paper list.',
+                body: 'Leave now and nothing is submitted, you keep your seat in the paper list.',
                 confirmLabel: 'Leave',
                 onConfirm: () => router.push('/dashboard'),
               })
@@ -804,7 +804,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           </div>
 
           {/* Pre-exam instructions, the sheet a candidate reads in the
-              hall before the invigilator says "start" — the school
+              hall before the invigilator says "start", the school
               app's seven-line list, Renance's pause semantics. */}
           <ul className="mt-4 space-y-2.5">
             {[
@@ -812,7 +812,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               "You're free to move to any question using the question navigation at the bottom of your exam environment.",
               "After answering a question, click 'Next' to proceed to the next one.",
               "When you finish all the questions, click 'Submit'.",
-              'If you wish to exit before completing the test, click "Quit" — your paper pauses and you can resume from the dashboard.',
+              'If you wish to exit before completing the test, click "Quit". Your paper pauses and you can resume from the dashboard.',
               'A simple calculator has also been provided at the top of your screen, so feel free to use it as applicable.',
               'Keep an eye on your countdown time. If you run out of time, your answers will be automatically submitted, and your performance summary will be displayed.',
             ].map((line, i) => (
@@ -992,7 +992,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             onClick={() =>
               setConfirm({
                 title: 'Leave the paper?',
-                body: 'Leave now and nothing is submitted — you keep your seat in the paper list.',
+                body: 'Leave now and nothing is submitted, you keep your seat in the paper list.',
                 confirmLabel: 'Leave',
                 onConfirm: () => router.push('/dashboard'),
               })
@@ -1387,7 +1387,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               onClick={() =>
                 setConfirm({
                   title: 'Quit the paper?',
-                  body: 'Quitting leaves the test environment. Your paper pauses — resume it from the dashboard, the clock keeps its honest count.',
+                  body: 'Quitting leaves the test environment. Your paper pauses, resume it from the dashboard, the clock keeps its honest count.',
                   confirmLabel: 'Quit',
                   danger: true,
                   onConfirm: () => router.push('/dashboard'),

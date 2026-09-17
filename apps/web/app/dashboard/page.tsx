@@ -17,6 +17,7 @@ import {
   findSchoolByName,
   liveCourses,
   resolveSchoolSlug,
+  storedPostUtmeSchoolSlug,
   storedSchoolSlug,
 } from '@/lib/university';
 import BottomNav from '@/components/bottom-nav';
@@ -56,14 +57,24 @@ interface DailyTileInfo {
   myResult?: { score: number; total: number } | null;
 }
 
-const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'University Modules'] as const;
+const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'POST-UTME', 'University Modules'] as const;
 const GRADE_LEVELS = ['SS1', 'SS2', 'SS3', '100 Level', '200 Level', '300 Level', '400 Level', 'Postgraduate'];
 const TARGET_YEARS = [2026, 2027, 2028] as const;
+
+/** Display label per profile exam value (the value is the manifest body). */
+const EXAM_LABELS: Record<string, string> = {
+  JAMB: 'JAMB',
+  WAEC: 'WAEC',
+  NECO: 'NECO',
+  'POST-UTME': 'Post UTME',
+  'University Modules': 'School Desk (University)',
+};
 
 const TARGET_LABELS: Record<string, string> = {
   JAMB: 'UTME',
   WAEC: 'WASSCE',
   NECO: 'NECO',
+  'POST-UTME': 'Post UTME',
   'University Modules': 'Semester',
 };
 
@@ -78,6 +89,7 @@ function focusBodyOf(exams?: string[]): string {
   if (/waec/i.test(exam)) return 'WAEC';
   if (/neco/i.test(exam)) return 'NECO';
   if (/university/i.test(exam)) return 'University Modules';
+  if (/post[-_ ]?utme/i.test(exam)) return 'POST-UTME';
   return 'JAMB';
 }
 
@@ -92,6 +104,17 @@ function deskExams(
   institution?: string,
 ): ExamMeta[] {
   const body = focusBodyOf(focusExam ? [focusExam] : undefined);
+  if (body === 'POST-UTME') {
+    // The Post UTME desk: the general practice banks plus the stored
+    // school's own prep banks, never the whole university shelf.
+    const slug = storedPostUtmeSchoolSlug();
+    const general = exams.filter((e) => e.body === 'POST-UTME');
+    if (slug) {
+      const own = exams.filter((e) => e.code.startsWith(`uni-${slug}-pq-`));
+      return [...general, ...own];
+    }
+    return general;
+  }
   if (body !== 'University Modules') {
     return exams.filter((e) => (e.body ?? 'University Modules') === body);
   }
@@ -249,6 +272,7 @@ export default function DashboardPage() {
   const isUniversity = (me?.profile?.exams?.[0] ?? '').includes('University');
   const isWaec = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('WAEC');
   const isNeco = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('NECO');
+  const isPostUtme = (me?.profile?.exams?.[0] ?? '').toUpperCase().includes('POST');
   // Every exam body gets a real customise desk now, JAMB's Mock Setup,
   // the same subject/year/count/timer mode over WAEC/NECO banks, and
   // the university desk's per-school course grid.
@@ -349,36 +373,39 @@ export default function DashboardPage() {
             </div>
             <span className="text-2xl font-bold tracking-tight text-on-surface">Renance</span>
           </Link>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center">
+            {/* The app home header cut: plain round icon buttons (no
+                bordered circles), the streak pill after the bell, then
+                a wider breath before the avatar. */}
             <Link
               href="/search"
               aria-label="Search"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container text-on-surface transition hover:bg-surface-container-high"
+              className="flex h-9 w-9 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container-high"
             >
-              <span className="material-symbols-outlined text-[18px]">search</span>
+              <span className="material-symbols-outlined text-[22px]">search</span>
             </Link>
             <Link
               href="/notifications"
               aria-label={`Notifications${unread ? ` (${unread} unread)` : ''}`}
-              className="relative flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container text-on-surface transition hover:bg-surface-container-high md:hidden"
+              className="relative ml-0.5 flex h-9 w-9 items-center justify-center rounded-full text-on-surface transition hover:bg-surface-container-high md:hidden"
             >
-              <span className="material-symbols-outlined text-[18px]">notifications</span>
+              <span className="material-symbols-outlined text-[22px]">notifications_none</span>
               {unread > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-error px-1 font-mono text-[9px] font-bold text-on-error">
+                <span className="absolute right-1 top-1 flex h-4 min-w-4 items-center justify-center rounded-full border border-surface bg-error px-1 font-mono text-[9px] font-bold text-on-error">
                   {unread > 9 ? '9+' : unread}
                 </span>
               )}
             </Link>
-            <div className="flex items-center gap-1 rounded-full bg-surface-container px-2 py-1">
-              <span className="material-symbols-outlined fill-current text-[20px] text-accent-amber">local_fire_department</span>
-              <span className="font-mono text-[13px] text-on-surface">{streak}</span>
+            <div className="ml-1.5 flex items-center gap-1 rounded-full bg-surface-container px-2 py-1">
+              <span className="material-symbols-outlined text-[19px] text-accent-amber">local_fire_department</span>
+              <span className="font-mono text-[12.5px] text-on-surface">{streak}</span>
             </div>
             <button
               type="button"
               onClick={() => setAccountOpen(true)}
               aria-label="Open account menu"
               title="Account"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-xs font-semibold text-on-surface transition hover:ring-2 hover:ring-primary"
+              className="ml-3 flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-xs font-semibold text-on-surface transition hover:ring-2 hover:ring-primary"
             >
               {(me.profile?.fullName || me.user.username || 'R').slice(0, 1).toUpperCase()}
             </button>
@@ -393,6 +420,8 @@ export default function DashboardPage() {
 
         {isUniversity ? (
           <UniversityHome onMore={() => setMoreOpen(true)} profile={me.profile} />
+        ) : isPostUtme ? (
+          <PostUtmeHome onMore={() => setMoreOpen(true)} />
         ) : (
         <>
         {/* Hero progress card. Uses the hero token scope so Mixed tier
@@ -553,6 +582,114 @@ export default function DashboardPage() {
 /** Small bottom sheet listing the destinations that live beyond the grid. */
 
 /* ----------------------------------------------------------------- */
+/* Post UTME home: the fourth focus entity. Its own desk, its own      */
+/* school pick (a Post UTME candidate targets one school), the school  */
+/* app's Pick School button in the same spot the School Desk has it.   */
+/* ----------------------------------------------------------------- */
+
+function PostUtmeHome({ onMore }: { onMore: () => void }) {
+  const [schoolSlug, setSchoolSlug] = useState<string | null>(null);
+  const [exams, setExams] = useState<ExamMeta[]>([]);
+  useEffect(() => {
+    setSchoolSlug(storedPostUtmeSchoolSlug());
+    let alive = true;
+    fetchManifest()
+      .then((m) => alive && setExams(m.exams))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  const school = SCHOOLS.find((s) => s.slug === schoolSlug) ?? null;
+  const general = exams.filter((e) => e.body === 'POST-UTME');
+  const own = schoolSlug ? exams.filter((e) => e.code.startsWith(`uni-${schoolSlug}-pq-`)) : [];
+  const packs = [...own, ...general];
+
+  return (
+    <>
+      {/* Post UTME hero card ------------------------------------------ */}
+      <section className="relative mt-4 flex flex-col gap-4 overflow-hidden rounded-xl bg-hero p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)] sm:p-6">
+        <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/10" />
+        <div className="relative z-10 flex items-center justify-between gap-4">
+          <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
+            Post UTME Desk
+          </p>
+          <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-1 font-mono text-[11px] text-on-hero">
+            <span className="material-symbols-outlined text-[14px]">school</span>
+            {school?.short ?? 'Post UTME'}
+          </span>
+        </div>
+        <div className="relative z-10">
+          <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">
+            {school?.name ?? 'Pick your school'}
+          </h2>
+          <p className="mt-1 text-[15px] font-semibold text-hero-muted">
+            {own.length > 0
+              ? `${own.length} school prep packs · ${general.length} general banks`
+              : `${general.length} general practice banks · pick a school for its past questions`}
+          </p>
+        </div>
+        <div className="relative z-10 flex flex-col gap-2 sm:flex-row">
+          <Link
+            href="/post-utme"
+            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
+          >
+            <span className="material-symbols-outlined text-[20px]">menu_book</span>
+            {school ? 'Open past questions' : 'Pick School'}
+          </Link>
+        </div>
+      </section>
+
+      {/* Practice grid -------------------------------------------------- */}
+      <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+        <section className="mt-2">
+          <h3 className="text-sm text-on-surface-variant">Practice</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <LauncherTile icon="description" label="Past Questions" href="/post-utme" />
+            <LauncherTile icon="local_library" label="Study" href="/study-past-questions?body=post-utme" />
+            <LauncherTile icon="history" label="Review Due" href="/review" />
+            <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
+          </div>
+        </section>
+        <section className="mt-4 lg:mt-2">
+          <h3 className="text-sm text-on-surface-variant">Compete</h3>
+          <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+            <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
+            <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
+            <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
+            <LauncherTile icon="auto_stories" label="Notes" href="/notes" />
+          </div>
+        </section>
+      </div>
+
+      {/* School prep packs ---------------------------------------------- */}
+      {packs.length > 0 && (
+        <section className="mt-4">
+          <h3 className="text-sm text-on-surface-variant">Post UTME banks</h3>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            {packs.slice(0, 6).map((e) => (
+              <ExamCard key={e.code} exam={e} ready />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Tools ------------------------------------------------------------ */}
+      <section className="mt-4">
+        <h3 className="text-sm text-on-surface-variant">Tools</h3>
+        <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+          <LauncherTile icon="import_contacts" label="Notes" href="/notes" />
+          <LauncherTile icon="download" label="Downloads" href="/downloads" />
+          <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
+          <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
+        </div>
+      </section>
+    </>
+  );
+}
+
+/* ----------------------------------------------------------------- */
 /* University home (university_home_dashboard): tertiary students get  */
 /* a course-based desk with its OWN icon set, Courses where the       */
 /* JAMBite desk says Subjects/Exams, CGPA, Lecture Notes… The desk is  */
@@ -560,7 +697,10 @@ export default function DashboardPage() {
 /* ----------------------------------------------------------------- */
 
 function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Profile | null }) {
-  // The student's school: stored pick → profile institution match → FUTA.
+  // The student's school: stored pick → profile institution match. No
+  // default school: without a pick the desk shows the Pick School button
+  // (founder rule: the school is chosen once, here, and only editable
+  // from the profile afterwards).
   const [schoolSlug, setSchoolSlug] = useState<string | null>(null);
   useEffect(() => {
     const stored = storedSchoolSlug();
@@ -573,10 +713,9 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
   }, [profile]);
 
   const slug = schoolSlug ?? resolveSchoolSlug();
-  const school = SCHOOLS.find((s) => s.slug === slug) ?? null;
+  const school = schoolSlug ? SCHOOLS.find((s) => s.slug === slug) ?? null : null;
   const catalog = clientCatalog(slug);
   const courses = liveCourses(catalog);
-
   return (
     <>
       {/* School hero card ---------------------------------------------- */}
@@ -584,19 +723,19 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
         <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-on-hero/10" />
         <div className="relative z-10 flex items-center justify-between gap-4">
           <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
-            University Desk
+            School Desk
           </p>
           <span className="flex items-center gap-1 rounded-full bg-dark-text-primary/15 px-2 py-1 font-mono text-[11px] text-on-hero">
             <span className="material-symbols-outlined text-[14px]">school</span>
-            {school?.short ?? 'FUTA'}
+            {school?.short ?? 'School'}
           </span>
         </div>
         <div className="relative z-10">
           <h2 className="text-2xl font-bold tracking-tight text-on-hero sm:text-3xl">
-            {school?.name ?? 'Your school'}
+            {school?.name ?? 'Pick your school'}
           </h2>
           <p className="mt-1 text-[15px] font-semibold text-hero-muted">
-            {catalog
+            {catalog && schoolSlug
               ? `${courses.length} courses · ${courses.reduce((n, c) => n + c.questionCount, 0).toLocaleString()} questions`
               : 'Course content lands as it is harvested'}
           </p>
@@ -607,14 +746,7 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
             className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-hero-cta text-[15px] font-semibold text-on-hero-cta shadow-md transition-transform active:scale-[0.98]"
           >
             <span className="material-symbols-outlined text-[20px]">menu_book</span>
-            Open courses
-          </Link>
-          <Link
-            href="/university"
-            className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-on-hero/15 text-[15px] font-semibold text-on-hero transition-transform active:scale-[0.98]"
-          >
-            <span className="material-symbols-outlined text-[20px]">swap_horiz</span>
-            Change school
+            {schoolSlug ? 'Open courses' : 'Pick School'}
           </Link>
         </div>
       </section>
@@ -856,9 +988,10 @@ function ProfileModal({
 }) {
   // The handle arrives seeded from the email (or legacy signup); the scholar
   // confirms or renames it right here, alongside the exams/class questions.
+  // No school question here (founder rule): the school is picked on the
+  // School Desk home after signup, or edited in the profile later.
   const [handle, setHandle] = useState(username ?? '');
   const [fullName, setFullName] = useState('');
-  const [institution, setInstitution] = useState('');
   const [gradeLevel, setGradeLevel] = useState('SS3');
   const [targetYear, setTargetYear] = useState<number | null>(null);
   const [selected, setSelected] = useState<string[]>([]);
@@ -871,10 +1004,9 @@ function ProfileModal({
     () =>
       handleOk &&
       fullName.trim().length >= 2 &&
-      institution.trim().length >= 2 &&
       selected.length >= 1 &&
       targetYear != null,
-    [handleOk, fullName, institution, selected, targetYear],
+    [handleOk, fullName, selected, targetYear],
   );
 
   async function onSubmit(e: FormEvent) {
@@ -888,7 +1020,7 @@ function ProfileModal({
         body: {
           username: handle.trim(),
           fullName: fullName.trim(),
-          institution: institution.trim(),
+          institution: '',
           gradeLevel,
           exams: selected,
           targetYear,
@@ -963,7 +1095,7 @@ function ProfileModal({
                     >
                       <span className="material-symbols-outlined text-[20px]">school</span>
                     </div>
-                    <span className="flex-1 text-sm font-semibold text-on-surface">{exam}</span>
+                    <span className="flex-1 text-sm font-semibold text-on-surface">{EXAM_LABELS[exam] ?? exam}</span>
                     {active && <span className="material-symbols-outlined text-primary">check_circle</span>}
                   </button>
                 );
@@ -1000,25 +1132,6 @@ function ProfileModal({
               required
               className="w-full rounded-lg bg-surface-container px-4 py-2.5 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
             />
-          </label>
-
-          <label className="block">
-            <span className="mb-1.5 block text-sm text-on-surface-variant">Target institution</span>
-            <input
-              value={institution}
-              onChange={(e) => setInstitution(e.target.value)}
-              placeholder="e.g. Federal University of Technology, Akure"
-              required
-              list="institutions"
-              className="w-full rounded-lg bg-surface-container px-4 py-2.5 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <datalist id="institutions">
-              {SCHOOLS.filter((s) => s.live || s.type === 'university')
-                .slice(0, 200)
-                .map((s) => (
-                  <option key={s.slug} value={s.name} />
-                ))}
-            </datalist>
           </label>
 
           <label className="block">

@@ -200,7 +200,7 @@ export default function PerformancePage() {
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-hero-muted">General Overview</p>
           <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
             <Stat label="Papers graded" value={windowed.length.toLocaleString()} />
-            <Stat label="Average score" value={avgPct == null ? '—' : `${avgPct}%`} />
+            <Stat label="Average score" value={avgPct == null ? '-' : `${avgPct}%`} />
             <Stat label="Best streak" value={`${gam?.state.bestStreak ?? 0}d`} />
             <Stat label="Total XP" value={(gam?.state.totalXp ?? 0).toLocaleString()} />
           </div>
@@ -237,7 +237,7 @@ export default function PerformancePage() {
         <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {byBody.length === 0 && (
             <p className="rounded-xl bg-card p-5 text-sm text-on-surface-variant sm:col-span-2">
-              No graded papers in this window yet — sit a mock and your numbers land here.
+              No graded papers in this window yet, sit a mock and your numbers land here.
             </p>
           )}
           {byBody.map((row) => (

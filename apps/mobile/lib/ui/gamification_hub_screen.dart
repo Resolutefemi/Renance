@@ -495,8 +495,7 @@ class _LevelCard extends StatelessWidget {
               value: state.levelProgress.clamp(0.0, 1.0),
               minHeight: 8,
               backgroundColor: context.cardHigh,
-              valueColor:
-                  const AlwaysStoppedAnimation<Color>(Colors.black),
+              valueColor: AlwaysStoppedAnimation<Color>(context.primary),
             ),
           ),
         ],

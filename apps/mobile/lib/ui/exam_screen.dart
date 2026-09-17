@@ -98,11 +98,14 @@ class _ExamScreenState extends State<ExamScreen> {
     }
     // Playing phase owns its chrome: the Myschool-cut CBT header
     // (title · copy · calculator / big clock · Quit · Submit) replaces
-    // the default AppBar.
+    // the default AppBar. The instructions page does the same: its own
+    // back bar rides inside the intro body, so the scaffold AppBar stays
+    // hidden there too (two stacked bars read as a bug on the intro).
     final bool inPlay = c.phase == ExamPhase.playing;
+    final bool inIntro = c.phase == ExamPhase.intro;
     return Scaffold(
       backgroundColor: context.cardLowest,
-      appBar: inPlay
+      appBar: (inPlay || inIntro)
           ? null
           : AppBar(
               backgroundColor: context.cardLowest,
@@ -119,7 +122,10 @@ class _ExamScreenState extends State<ExamScreen> {
         ExamPhase.loading => const Center(
             child: LogoActivityIndicator(label: 'Opening pack…'),
           ),
-        ExamPhase.intro => _Intro(controller: c, studyMode: widget.studyMode),
+        // No scaffold AppBar on the intro: SafeArea keeps the back bar
+        // clear of the status bar instead.
+        ExamPhase.intro =>
+          SafeArea(child: _Intro(controller: c, studyMode: widget.studyMode)),
         ExamPhase.playing => FatigueNudgeOverlay(
             visible: c.nudgeVisible,
             reasons: c.signal.reasons,
@@ -1836,9 +1842,9 @@ class _NavTile extends StatelessWidget {
       border = Border.all(color: context.cardLow, width: 1);
     }
     if (answered) {
-      fill = Colors.black;
-      fg = Colors.white;
-      border = Border.all(color: Colors.black, width: 1);
+      fill = context.primary;
+      fg = context.onPrimary;
+      border = Border.all(color: context.primary, width: 1);
     }
     if (flagged) {
       border = Border.all(color: RenanceColors.amber, width: 2);
@@ -1900,7 +1906,7 @@ class _NavLegendItem extends StatelessWidget {
       case _NavLegendState.answered:
         swatch = Container(
             decoration: BoxDecoration(
-          color: Colors.black,
+          color: context.primary,
           borderRadius: BorderRadius.circular(3),
         ));
       case _NavLegendState.flagged:

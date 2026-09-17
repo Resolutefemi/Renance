@@ -13,6 +13,7 @@ import type { School, SchoolCatalog, UniversityCourse } from './university-data'
  */
 
 const SCHOOL_KEY = 'renance.uni.school.v1';
+const POST_UTME_SCHOOL_KEY = 'renance.postutme.school.v1';
 
 export type { School, UniversityCourse };
 
@@ -142,6 +143,29 @@ export function resolveSchoolSlug(): string {
   const stored = storedSchoolSlug();
   if (stored && SCHOOLS.some((s) => s.slug === stored)) return stored;
   return LIVE_SCHOOLS[0]?.slug ?? 'futa';
+}
+
+/* ------------------------------------------------------------------ */
+/* Post UTME desk school pick: a separate pick from the School Desk    */
+/* one, because a Post UTME candidate targets one school's prep banks. */
+/* ------------------------------------------------------------------ */
+
+/** The school the student picked for the Post UTME desk, or null. */
+export function storedPostUtmeSchoolSlug(): string | null {
+  try {
+    const slug = window.localStorage.getItem(POST_UTME_SCHOOL_KEY);
+    return slug && SCHOOLS.some((s) => s.slug === slug) ? slug : null;
+  } catch {
+    return null;
+  }
+}
+
+export function storePostUtmeSchoolSlug(slug: string): void {
+  try {
+    window.localStorage.setItem(POST_UTME_SCHOOL_KEY, slug);
+  } catch {
+    /* private mode: the desk still works, it just re-asks */
+  }
 }
 
 /**href for a school's desk. */

@@ -119,7 +119,7 @@ export default function UpdateQuestionsPage() {
       setLastUpdate(new Date(stamp).toLocaleString());
       setSummary(`${done} of ${fresh.length} packs refreshed on this device.`);
     } catch {
-      setError('The update hit a network wall. Your downloaded packs are untouched — try again.');
+      setError('The update hit a network wall. Your downloaded packs are untouched, try again.');
     } finally {
       setUpdating(false);
       setProgress(null);
@@ -145,7 +145,7 @@ export default function UpdateQuestionsPage() {
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-4 sm:px-6">
         <p className="text-[14px] leading-relaxed text-on-surface-variant">
-          Tick the exam bodies to refresh, then run the update — the latest questions, answers, explanations and
+          Tick the exam bodies to refresh, then run the update, the latest questions, answers, explanations and
           corrections download onto this device.
         </p>
         {lastUpdate && (

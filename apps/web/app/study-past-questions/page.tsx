@@ -4,10 +4,8 @@
  * Study Past Questions — the school app's study setup, Renance cut.
  *
  * The Study tile on the desk lands here. Per focus (JAMB / WAEC / NECO
- * / University Modules) the page carries:
+ * / Post UTME / School Desk) the page carries:
  *   · the tinted header band (back circle, title, the green book seal)
- *   · the Questions / Videos pill toggle (Videos is honest: the lesson
- *     library is where walkthroughs live today)
  *   · the green Update Questions banner → /update-questions
  *   · the full picker form — Subject, Examination Type, Year, Question
  *     type, Topic — and Start Study
@@ -21,18 +19,26 @@ import { Suspense, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { fetchBankBundle, fetchManifest, migrateBundleCache, subjectName, type ExamMeta } from '@/lib/exams';
-import { SCHOOLS, clientCatalog, liveCourses, resolveSchoolSlug, storedSchoolSlug } from '@/lib/university';
+import {
+  SCHOOLS,
+  clientCatalog,
+  liveCourses,
+  resolveSchoolSlug,
+  storedPostUtmeSchoolSlug,
+  storedSchoolSlug,
+} from '@/lib/university';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 
-type Body = 'jamb' | 'waec' | 'neco' | 'university';
+type Body = 'jamb' | 'waec' | 'neco' | 'post-utme' | 'university';
 type Qt = 'all' | 'objective' | 'theory';
 
 const BODY_LABEL: Record<Body, string> = {
   jamb: 'JAMB',
   waec: 'WAEC',
   neco: 'NECO',
-  university: 'University Modules',
+  'post-utme': 'Post UTME',
+  university: 'School Desk (University)',
 };
 
 interface SubjectRow {
@@ -59,10 +65,9 @@ function StudySetupInner() {
   // default is JAMB, the desk's opening hand.
   const focusParam = params.get('body');
 
-  const [videos, setVideos] = useState(false);
   const [body, setBody] = useState<Body>(() => {
     const b = focusParam;
-    if (b === 'waec' || b === 'neco' || b === 'university') return b;
+    if (b === 'waec' || b === 'neco' || b === 'university' || b === 'post-utme') return b;
     return 'jamb';
   });
 
@@ -90,11 +95,17 @@ function StudySetupInner() {
     };
   }, []);
 
-  // The school pick (tertiary): stored → bundled default (FUTA).
+  // The school pick (tertiary): stored → bundled default (FUTA). The
+  // Post UTME desk keeps its own pick, separate from the School Desk's.
   useEffect(() => {
-    if (body !== 'university') return;
-    const stored = storedSchoolSlug();
-    setSchoolSlug(stored ?? resolveSchoolSlug());
+    if (body === 'university') {
+      const stored = storedSchoolSlug();
+      setSchoolSlug(stored ?? resolveSchoolSlug());
+      return;
+    }
+    if (body === 'post-utme') {
+      setSchoolSlug(storedPostUtmeSchoolSlug());
+    }
   }, [body]);
 
   /** Subjects available for the chosen focus, from the real manifest. */
@@ -109,6 +120,36 @@ function StudySetupInner() {
         count: c.questionCount,
         years: [],
       }));
+    }
+    if (body === 'post-utme') {
+      // The picked school's own prep banks first, then the general
+      // practice banks, every one of them a real manifest pack.
+      const rows: SubjectRow[] = [];
+      if (schoolSlug) {
+        for (const e of exams) {
+          const match = new RegExp(`^uni-${schoolSlug}-pq-(.+)-bank$`).exec(e.code);
+          if (!match) continue;
+          rows.push({
+            id: e.code,
+            name: subjectName(match[1]),
+            bank: e.code,
+            count: e.questionCount,
+            years: e.years ?? [],
+          });
+        }
+      }
+      for (const e of exams) {
+        const match = /^post_utme-(.+)-questions-bank$/.exec(e.code);
+        if (!match) continue;
+        rows.push({
+          id: e.code,
+          name: subjectName(match[1]),
+          bank: e.code,
+          count: e.questionCount,
+          years: e.years ?? [],
+        });
+      }
+      return rows;
     }
     const hit = new RegExp(`^${body}-(.+)-bank$`);
     const rows: SubjectRow[] = [];
@@ -170,6 +211,17 @@ function StudySetupInner() {
     return row ? [...row.years].sort((a, b) => b - a) : [];
   }, [subjects, subject]);
 
+  /** Schools with banked Post-UTME prep packs, for the inline picker. */
+  const pqSchools = useMemo(() => {
+    if (!exams) return [];
+    const slugs = new Set<string>();
+    for (const e of exams) {
+      const m = /^uni-([a-z0-9-]+)-pq-/.exec(e.code);
+      if (m) slugs.add(m[1]);
+    }
+    return SCHOOLS.filter((s) => slugs.has(s.slug));
+  }, [exams]);
+
   function startStudy() {
     if (!subject) return;
     setStarting(true);
@@ -183,6 +235,7 @@ function StudySetupInner() {
     if (qt !== 'all') query.set('qt', qt);
     if (topic) query.set('topic', topic);
     if (body === 'university' && schoolSlug) query.set('school', schoolSlug);
+    if (body === 'post-utme' && schoolSlug) query.set('school', schoolSlug);
     router.push(`/study-past-questions/reader?${query.toString()}`);
   }
 
@@ -213,42 +266,7 @@ function StudySetupInner() {
       </div>
 
       <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-4 sm:px-6">
-        {/* ---- Questions / Videos pill toggle ----------------------- */}
-        <div className="inline-flex rounded-full bg-surface-container p-1">
-          {(['Questions', 'Videos'] as const).map((label) => {
-            const active = label === 'Videos' ? videos : !videos;
-            return (
-              <button
-                key={label}
-                onClick={() => setVideos(label === 'Videos')}
-                className={`rounded-full px-5 py-2 text-[13.5px] font-semibold transition ${
-                  active ? 'bg-card text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.12)]' : 'text-on-surface-variant'
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
-
-        {videos ? (
-          /* Honest Videos panel: walkthroughs live in the lesson library. */
-          <div className="mt-4 flex flex-col items-center rounded-[14px] border border-outline-variant/50 bg-card p-[18px] text-center">
-            <span className="material-symbols-outlined text-[40px] text-outline">smart_display</span>
-            <p className="mt-2.5 text-[15px] font-medium text-on-surface">Video lessons live in Lessons for now</p>
-            <p className="mt-1.5 text-[13px] leading-relaxed text-on-surface-variant">
-              The lesson library carries the walkthroughs that exist today. Open it below.
-            </p>
-            <Link
-              href="/lessons"
-              className="mt-3 flex h-11 items-center rounded-full border border-outline-variant bg-card px-5 text-[14px] font-semibold text-on-surface transition hover:bg-surface-container-low"
-            >
-              Open Lessons
-            </Link>
-          </div>
-        ) : (
-          <>
-            {/* ---- green Update Questions banner -------------------- */}
+        {/* ---- green Update Questions banner -------------------- */}
             <Link
               href="/update-questions"
               className="mt-4 flex items-center gap-3 rounded-[14px] border border-accent-emerald/35 bg-accent-emerald/10 p-3.5 transition hover:bg-accent-emerald/15"
@@ -289,6 +307,23 @@ function StudySetupInner() {
                   >
                     {!schoolSlug && <option value="">Select School</option>}
                     {SCHOOLS.map((s) => (
+                      <option key={s.slug} value={s.slug}>
+                        {s.name}
+                      </option>
+                    ))}
+                  </select>
+                </Field>
+              )}
+
+              {body === 'post-utme' && (
+                <Field label="School">
+                  <select
+                    value={schoolSlug ?? ''}
+                    onChange={(e) => setSchoolSlug(e.target.value || null)}
+                    className={selectCls}
+                  >
+                    <option value="">General practice (all schools)</option>
+                    {pqSchools.map((s) => (
                       <option key={s.slug} value={s.slug}>
                         {s.name}
                       </option>
@@ -378,8 +413,6 @@ function StudySetupInner() {
               </span>
               <span className="material-symbols-outlined text-[18px] text-outline">chevron_right</span>
             </Link>
-          </>
-        )}
       </div>
 
       <SideNav />

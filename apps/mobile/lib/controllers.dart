@@ -623,6 +623,11 @@ class StudentController extends ChangeNotifier {
   bool get isTertiaryFocus =>
       (me?.profile?.exams.firstOrNull ?? '').contains('University');
 
+  /// Post UTME candidates get their own desk, the fourth focus entity
+  /// beside JAMB / WAEC / NECO / School Desk (founder directive).
+  bool get isPostUtmeFocus =>
+      (me?.profile?.exams.firstOrNull ?? '').toUpperCase().contains('POST');
+
   String get targetTitle {
     final p = me?.profile;
     if (p == null || p.exams.isEmpty) return 'Set your target';
@@ -631,6 +636,7 @@ class StudentController extends ChangeNotifier {
       'JAMB' => 'UTME',
       'WAEC' => 'WASSCE',
       'NECO' => 'NECO',
+      'POST-UTME' => 'Post UTME',
       'University Modules' => 'Semester',
       _ => exam,
     };

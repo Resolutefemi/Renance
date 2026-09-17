@@ -15,7 +15,7 @@
     "B": "{'id': 'b', 'text': 'summarise the plot, name the author, thank the publisher'}",
     "C": "{'id': 'c', 'text': 'describe the weather in detail'}"
    },
-   "answer": "Happer, planter, promettre — three jobs, often in one sentence."
+   "answer": "Happer, planter, promettre, three jobs, often in one sentence."
   },
   {
    "id": "delf_dalf-exercises-bank-0002",
@@ -23,7 +23,7 @@
    "stem": "Proust's seven-word opening proves that a hook…",
    "marks": 1,
    "options": {
-    "A": "{'id': 'a', 'text': 'can be a question the sentence refuses to answer — no explosion needed'}",
+    "A": "{'id': 'a', 'text': 'can be a question the sentence refuses to answer, no explosion needed'}",
     "B": "{'id': 'b', 'text': 'must start with an action scene'}",
     "C": "{'id': 'c', 'text': 'needs at least a paragraph'}"
    },
@@ -39,7 +39,7 @@
     "B": "{'id': 'b', 'text': 'total chaos from the first line'}",
     "C": "{'id': 'c', 'text': 'a list of all future plot twists'}"
    },
-   "answer": "Maupassant's clerk's wife « souffre » of her modest home — the necklace tragedy coiled in one verb."
+   "answer": "Maupassant's clerk's wife « souffre » of her modest home, the necklace tragedy coiled in one verb."
   },
   {
    "id": "delf_dalf-exercises-bank-0004",
@@ -47,7 +47,7 @@
    "stem": "Listen to this incipit. Which technique is doing the work?",
    "marks": 1,
    "options": {
-    "A": "{'id': 'a', 'text': 'The hidden clue — one broken habit promising the stability will crack'}",
+    "A": "{'id': 'a', 'text': 'The hidden clue, one broken habit promising the stability will crack'}",
     "B": "{'id': 'b', 'text': 'A dramatic explosion'}",
     "C": "{'id': 'c', 'text': 'A flashback'}"
    },
@@ -59,7 +59,7 @@
    "stem": "Flaubert dating his opening to the morning of 15 September 1840 shows…",
    "marks": 1,
    "options": {
-    "A": "{'id': 'a', 'text': 'ancrer dans une époque — a precise date welds a destiny to History'}",
+    "A": "{'id': 'a', 'text': 'ancrer dans une époque, a precise date welds a destiny to History'}",
     "B": "{'id': 'b', 'text': 'that novels require footnotes'}",
     "C": "{'id': 'c', 'text': 'that the author lacked imagination'}"
    },

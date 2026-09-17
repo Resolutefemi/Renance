@@ -1,19 +1,22 @@
 'use client';
 
 /**
- * /university, the school gate of the university desk.
- *
- * Every Nigerian tertiary institution lives here (universities,
- * polytechnics, colleges of education). Schools with a live question
- * library open straight into their course desk; the rest show honestly
- * that content is not wrapped yet. One interface, per-school content.
+ * /university, the school gate of the School Desk (the university desk,
+ * renamed). Every Nigerian tertiary institution lives here
+ * (universities, polytechnics, colleges of education). Schools with a
+ * live course library open straight into their course desk; schools
+ * whose only banked past questions are Post-UTME wait in the
+ * unavailable list (their content lives on the Post UTME desk); the
+ * rest show honestly that content is not wrapped yet. One interface,
+ * per-school content.
  */
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
+import { fetchManifest, type ExamMeta } from '@/lib/exams';
 import { SCHOOLS, storeSchoolSlug, type School } from '@/lib/university';
 
 const TYPE_LABELS: Record<School['type'], string> = {
@@ -30,6 +33,27 @@ const TYPE_ICONS: Record<School['type'], string> = {
 
 export default function UniversityPage() {
   const [query, setQuery] = useState('');
+  const [postUtmeOnly, setPostUtmeOnly] = useState<Set<string>>(new Set());
+
+  // Schools whose banked past questions are Post-UTME only (uni-<slug>-pq-*
+  // packs but no course bank): they never pose as School Desk candidates.
+  useEffect(() => {
+    let alive = true;
+    fetchManifest()
+      .then((m) => {
+        if (!alive) return;
+        const pq = new Set<string>();
+        for (const e of m.exams as ExamMeta[]) {
+          const match = /^uni-([a-z0-9-]+)-pq-/.exec(e.code);
+          if (match) pq.add(match[1]);
+        }
+        setPostUtmeOnly(pq);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -44,7 +68,7 @@ export default function UniversityPage() {
 
   return (
     <main className="min-h-dvh bg-surface-container-lowest pb-28 md:pb-16 md:pl-[var(--rail-w)]">
-      <PageBar title="University Desk" backHref="/dashboard" />
+      <PageBar title="School Desk" backHref="/dashboard" />
       <div className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6">
         <div className="flex flex-col gap-1">
           <h2 className="text-2xl font-bold tracking-tight text-on-surface">
@@ -53,7 +77,7 @@ export default function UniversityPage() {
           <p className="text-sm text-on-surface-variant">
             Pick your institution, {SCHOOLS.length} Nigerian universities, polytechnics and
             colleges of education. Your desk wraps each school&apos;s own courses, question banks
-            and PDF materials.
+            and PDF materials. This pick sticks: it can be changed later only from your profile.
           </p>
         </div>
 
@@ -70,7 +94,7 @@ export default function UniversityPage() {
         <ul className="mt-5 grid gap-2 sm:grid-cols-2">
           {results.map((s) => (
             <li key={s.slug}>
-              <SchoolRow school={s} />
+              <SchoolRow school={s} postUtmeOnly={postUtmeOnly.has(s.slug) && !s.live} />
             </li>
           ))}
         </ul>
@@ -84,7 +108,8 @@ export default function UniversityPage() {
         <p className="mt-8 rounded-xl bg-surface-container-low px-4 py-3 text-xs text-on-surface-variant">
           Your school not wrapped yet? The desk ships one interface for every school, question
           banks and course PDFs are added per school as they are harvested. Students of any school
-          can already use the JAMB, WAEC and NECO desks today.
+          can already use the JAMB, WAEC and NECO desks today, and Post-UTME candidates have
+          their own desk with the general practice banks.
         </p>
       </div>
       <SideNav />
@@ -93,7 +118,7 @@ export default function UniversityPage() {
   );
 }
 
-function SchoolRow({ school: s }: { school: School }) {
+function SchoolRow({ school: s, postUtmeOnly }: { school: School; postUtmeOnly: boolean }) {
   const inner = (
     <>
       <div
@@ -113,7 +138,11 @@ function SchoolRow({ school: s }: { school: School }) {
           )}
         </p>
         <p className="truncate text-xs text-on-surface-variant">
-          {TYPE_LABELS[s.type]} · {s.state}
+          {s.live
+            ? `${TYPE_LABELS[s.type]} · ${s.state}`
+            : postUtmeOnly
+              ? 'Post-UTME past questions only · see the Post UTME desk'
+              : `${TYPE_LABELS[s.type]} · ${s.state}`}
         </p>
       </div>
       <span className="material-symbols-outlined text-on-surface-variant">

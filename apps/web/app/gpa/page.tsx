@@ -268,7 +268,7 @@ export default function GpaPage() {
         <section className="mt-6 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
           <h2 className="text-sm font-semibold text-on-surface">Fold in previous sessions</h2>
           <p className="mt-1 text-[13px] text-on-surface-variant">
-            Enter your cumulative record so far — the CGPA above combines this semester with it.
+            Enter your cumulative record so far, the CGPA above combines this semester with it.
           </p>
           <div className="mt-3 grid grid-cols-2 gap-3">
             <label className="flex flex-col gap-1">
@@ -297,7 +297,7 @@ export default function GpaPage() {
             </label>
           </div>
           <p className="mt-3 text-[13px] text-on-surface-variant">
-            Scale: A=5 · B=4 · C=3 · D=2 · E=1 · F=0 — the standard Nigerian university 5.0 scale.
+            Scale: A=5 · B=4 · C=3 · D=2 · E=1 · F=0, the standard Nigerian university 5.0 scale.
             {totalUnits > 0 && (
               <>
                 {' '}

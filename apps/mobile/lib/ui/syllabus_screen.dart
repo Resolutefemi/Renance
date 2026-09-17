@@ -619,16 +619,16 @@ class _BodyPill extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         decoration: BoxDecoration(
-          color: active ? Colors.black : context.card,
+          color: active ? context.primary : context.card,
           borderRadius: BorderRadius.circular(999),
           border: Border.all(
-              color: active ? Colors.black : context.outlineLight),
+              color: active ? context.primary : context.outlineLight),
         ),
         child: Text(
           label,
           style: RenanceText.labelMono.copyWith(
             fontSize: 12,
-            color: active ? Colors.white : context.textSecondary,
+            color: active ? context.onPrimary : context.textSecondary,
           ),
         ),
       ),

@@ -174,8 +174,8 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
                       CircleAvatar(
                         radius: 18,
                         backgroundColor: context.selectionBlue,
-                        child: const Icon(Icons.bolt,
-                            size: 20, color: Colors.black),
+                        child: Icon(Icons.bolt,
+                            size: 20, color: context.ink),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
