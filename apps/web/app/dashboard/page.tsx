@@ -326,9 +326,9 @@ export default function DashboardPage() {
       {needsProfile && (
         <ProfileModal
           username={me.user.username}
-          onDone={(profile) => {
-            setMe({ ...me, profile });
-            setStoredUser({ ...me.user, profileCompleted: true });
+          onDone={(profile, user) => {
+            setMe({ ...me, profile, user: user ?? me.user });
+            setStoredUser({ ...me.user, profileCompleted: true, ...(user ?? {}) });
             setNeedsProfile(false);
             void startSyncFlow();
           }}
@@ -852,8 +852,11 @@ function ProfileModal({
   onDone,
 }: {
   username: string;
-  onDone: (profile: Profile) => void;
+  onDone: (profile: Profile, user?: { id: string; username: string; profileCompleted: boolean }) => void;
 }) {
+  // The handle arrives seeded from the email (or legacy signup); the scholar
+  // confirms or renames it right here, alongside the exams/class questions.
+  const [handle, setHandle] = useState(username ?? '');
   const [fullName, setFullName] = useState('');
   const [institution, setInstitution] = useState('');
   const [gradeLevel, setGradeLevel] = useState('SS3');
@@ -862,13 +865,16 @@ function ProfileModal({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const handleOk = /^[a-z0-9_]{3,24}$/.test(handle);
+  const handleTouched = handle !== (username ?? '');
   const valid = useMemo(
     () =>
+      handleOk &&
       fullName.trim().length >= 2 &&
       institution.trim().length >= 2 &&
       selected.length >= 1 &&
       targetYear != null,
-    [fullName, institution, selected, targetYear],
+    [handleOk, fullName, institution, selected, targetYear],
   );
 
   async function onSubmit(e: FormEvent) {
@@ -877,9 +883,10 @@ function ProfileModal({
     setBusy(true);
     setError(null);
     try {
-      const res = await api<{ profile: Profile }>('/me/profile', {
+      const res = await api<{ profile: Profile; user?: { id: string; username: string; profileCompleted: boolean } }>('/me/profile', {
         method: 'PUT',
         body: {
+          username: handle.trim(),
           fullName: fullName.trim(),
           institution: institution.trim(),
           gradeLevel,
@@ -887,7 +894,7 @@ function ProfileModal({
           targetYear,
         },
       });
-      onDone(res.profile);
+      onDone(res.profile, res.user);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Could not save profile');
       setBusy(false);
@@ -906,12 +913,33 @@ function ProfileModal({
           <div>
             <h2 className="font-semibold text-on-surface">What are you preparing for?</h2>
             <p className="text-xs text-on-surface-variant">
-              Select your target exam to customize your learning OS, @{username}.
+              Pick your username and target exam to customize your learning OS.
             </p>
           </div>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-5">
+          <label className="block">
+            <span className="mb-1.5 block text-sm text-on-surface-variant">Username</span>
+            <div className="relative flex items-center">
+              <span className="pointer-events-none absolute left-4 text-sm text-on-surface-variant">@</span>
+              <input
+                value={handle}
+                onChange={(e) => setHandle(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
+                required
+                minLength={3}
+                maxLength={24}
+                autoComplete="username"
+                placeholder="yourusername"
+                className={`w-full rounded-lg bg-surface-container py-2.5 pl-9 pr-4 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 ${
+                  handleTouched && !handleOk ? 'ring-2 ring-error' : 'focus:ring-primary'
+                }`}
+              />
+            </div>
+            <span className={`mt-1 block text-xs ${handleOk ? 'text-on-surface-variant' : 'text-error'}`}>
+              3-24 characters: lowercase letters, digits, underscores.
+            </span>
+          </label>
           <div>
             <span className="mb-2 block text-sm text-on-surface-variant">Target exam</span>
             <div className="grid gap-2">

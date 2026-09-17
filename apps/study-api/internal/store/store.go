@@ -27,6 +27,9 @@ var migrationsFS embed.FS
 // ErrUniqueUsername is returned when a username collides (case-insensitive).
 var ErrUniqueUsername = errors.New("store: username already taken")
 
+// ErrUniqueEmail is returned when an email collides (case-insensitive).
+var ErrUniqueEmail = errors.New("store: email already registered")
+
 const uniqueViolation = "23505"
 
 type Store struct {
@@ -227,6 +230,108 @@ func (s *Store) UserByUsername(ctx context.Context, username string) (*User, err
                 return nil, fmt.Errorf("store: user by username: %w", err)
         }
         return u, nil
+}
+
+func (s *Store) UserByEmail(ctx context.Context, email string) (*User, error) {
+        u := &User{}
+        err := s.Pool.QueryRow(ctx, `
+                SELECT id, username, password_hash, created_at, google_sub, email
+                FROM study.users WHERE lower(email) = lower($1)`, email,
+        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
+        if errors.Is(err, pgx.ErrNoRows) {
+                return nil, nil
+        }
+        if err != nil {
+                return nil, fmt.Errorf("store: user by email: %w", err)
+        }
+        return u, nil
+}
+
+// seedUsernameFromEmail derives a provisional username from the email local
+// part (resolute.femi@x.com -> resolute_femi), numbered on collision like the
+// Google flow. The scholar replaces it with a real handle in the account
+// setup modal; the seed only guarantees a non-empty, valid, unique value.
+func (s *Store) seedUsernameFromEmail(ctx context.Context, email string) (string, error) {
+        seed := strings.ToLower(strings.SplitN(email, "@", 2)[0])
+        seed = strings.Map(func(r rune) rune {
+                if (r >= 'a' && r <= 'z') || (r >= '0' && r <= '9') || r == '_' {
+                        return r
+                }
+                return '_'
+        }, seed)
+        seed = strings.Trim(seed, "_")
+        if len(seed) < 3 {
+                seed = "student"
+        }
+        if len(seed) > 24 {
+                seed = seed[:24]
+        }
+        for attempt := 0; attempt < 8; attempt++ {
+                candidate := seed
+                if attempt > 0 {
+                        candidate = fmt.Sprintf("%s_%d", seed, attempt+1)
+                        if len(candidate) > 24 {
+                                candidate = candidate[:21] + fmt.Sprintf("_%d", attempt+1)
+                        }
+                }
+                var taken bool
+                if err := s.Pool.QueryRow(ctx,
+                        `SELECT EXISTS (SELECT 1 FROM study.users WHERE lower(username) = lower($1))`,
+                        candidate,
+                ).Scan(&taken); err != nil {
+                        return "", fmt.Errorf("store: seed username check: %w", err)
+                }
+                if !taken {
+                        return candidate, nil
+                }
+        }
+        return "", fmt.Errorf("store: could not derive a free username from %q", email)
+}
+
+// CreateUserEmail registers an email + password scholar. The username starts
+// as an email-derived seed and is renamed in the account-setup modal.
+func (s *Store) CreateUserEmail(ctx context.Context, email, passwordHash string) (*User, error) {
+        seed, err := s.seedUsernameFromEmail(ctx, email)
+        if err != nil {
+                return nil, err
+        }
+        u := &User{Username: seed}
+        err = s.Pool.QueryRow(ctx, `
+                INSERT INTO study.users (username, password_hash, email)
+                VALUES ($1, $2, $3)
+                RETURNING id, created_at`,
+                seed, passwordHash, strings.ToLower(strings.TrimSpace(email)),
+        ).Scan(&u.ID, &u.CreatedAt)
+        if err != nil {
+                var pgErr *pgconn.PgError
+                if errors.As(err, &pgErr) && pgErr.Code == uniqueViolation {
+                        // Disambiguate which unique index fired: the email
+                        // partial index means the address is registered; a
+                        // username race losing the seed pre-check is a rarer,
+                        // retryable conflict surfaced as ErrUniqueUsername.
+                        if pgErr.ConstraintName == "users_email_lower_idx" {
+                                return nil, ErrUniqueEmail
+                        }
+                        return nil, ErrUniqueUsername
+                }
+                return nil, fmt.Errorf("store: create email user: %w", err)
+        }
+        return u, nil
+}
+
+// UpdateUsername renames the scholar once they pick a handle in account
+// setup. Case-insensitive uniqueness is enforced by users_username_lower_idx.
+func (s *Store) UpdateUsername(ctx context.Context, userID, username string) error {
+        _, err := s.Pool.Exec(ctx,
+                `UPDATE study.users SET username = $2 WHERE id = $1`, userID, username)
+        if err != nil {
+                var pgErr *pgconn.PgError
+                if errors.As(err, &pgErr) && pgErr.Code == uniqueViolation {
+                        return ErrUniqueUsername
+                }
+                return fmt.Errorf("store: update username: %w", err)
+        }
+        return nil
 }
 
 func (s *Store) UserByID(ctx context.Context, id string) (*User, error) {

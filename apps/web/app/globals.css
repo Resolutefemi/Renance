@@ -1,6 +1,61 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
+/* Self-hosted fonts — icons and type ship from /public/fonts so the   */
+/* app never depends on fonts.googleapis.com being reachable (when     */
+/* that CDN is blocked/slow, Material Symbols ligatures render as      */
+/* raw text like "brightness_medium" all over the UI).                 */
+/* Relative paths on purpose: Next bundles the files into              */
+/* /_next/static/media/ with the deploy basePath applied, so the same  */
+/* build works on GitHub Pages (/Renance) and Vercel (/).              */
+/* Material Symbols is a SUBSET (only the glyphs Renance ligates);     */
+/* add icons freely, then re-run scripts/subset_material_symbols.py    */
+/* to refresh the font — it shape-verifies every used icon.            */
+/* ------------------------------------------------------------------ */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url('../public/fonts/material-symbols-outlined.subset.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../public/fonts/inter-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../public/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');
+}
+
+/* ------------------------------------------------------------------ */
 /* Renance design system — lifted 1:1 from the founder's auth mockups  */
 /* (upload/test.html + upload/test3.html): blue-tinted Material-3      */
 /* surfaces, ink #111c2d, black primary buttons, Inter type.           */

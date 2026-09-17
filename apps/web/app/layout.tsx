@@ -48,7 +48,7 @@ const renanceJsonLd = {
       operatingSystem: 'Web',
       url: SITE_URL,
       description:
-        'Renance is "Your Guide to Academic Success", a modular education & commerce suite. Students register with username + password only, sync past questions, notes and syllabi to their device, and take server-graded mock CBT exams. Built by Resolute Femi (Ariyo Oluwafemi Stephen).',
+        'Renance is "Your Guide to Academic Success", a modular education & commerce suite. Students register with email + password, sync past questions, notes and syllabi to their device, and take server-graded mock CBT exams. Built by Resolute Femi (Ariyo Oluwafemi Stephen).',
       author: { '@id': 'https://github.com/Resolutefemi#person' },
       creator: { '@id': 'https://github.com/Resolutefemi#person' },
       publisher: { '@id': 'https://github.com/Resolutefemi#person' },
@@ -127,18 +127,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
-        {/* Founder mockups load Inter + JetBrains Mono, kept as runtime
-            links so `next build` stays hermetic (no font fetch at build). */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
-          rel="stylesheet"
-        />
+        {/* Fonts (Inter, JetBrains Mono, Material Symbols) are SELF-HOSTED
+            from /public/fonts via @font-face in globals.css — no Google CDN.
+            When fonts.googleapis.com was unreachable the icon ligatures used
+            to render as raw text ("brightness_medium") across the UI. */}
         {/* KaTeX renders the banks' LaTeX (array environments, fractions,
             greek letters) as real typeset maths. CSS+JS ride the same CDN
             as the fonts; when they are unreachable (offline revision) the

@@ -7,15 +7,18 @@ import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { setSession } from '@/lib/session';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
-import { PersonIcon, LockIcon, EyeIcon } from '@/components/icons';
+import { MailIcon, LockIcon, EyeIcon } from '@/components/icons';
 
 export default function RegisterPage() {
   const router = useRouter();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+
+  const mismatch = confirmPassword.length > 0 && password !== confirmPassword;
 
   useEffect(() => {
     document.title = 'Create your account · Renance';
@@ -41,11 +44,15 @@ export default function RegisterPage() {
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     setError(null);
+    if (password !== confirmPassword) {
+      setError('Passwords do not match.');
+      return;
+    }
     setBusy(true);
     try {
       const res = await api<{ token: string; user: { id: string; username: string; profileCompleted: boolean } }>(
         '/auth/register',
-        { method: 'POST', body: { username, password }, auth: false },
+        { method: 'POST', body: { email, password }, auth: false },
       );
       setSession(res.token, res.user);
       router.replace('/dashboard');
@@ -73,19 +80,20 @@ export default function RegisterPage() {
 
         <form onSubmit={onSubmit} className="flex flex-col gap-4">
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="username" className="text-sm text-on-surface">
-              Username
+            <label htmlFor="email" className="text-sm text-on-surface">
+              Email address
             </label>
             <div className="group relative flex items-center">
-              <PersonIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
+              <MailIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
               <input
-                id="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                autoComplete="username"
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
                 required
-                minLength={3}
-                placeholder="yourusername"
+                maxLength={254}
+                placeholder="you@example.com"
                 className="h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -118,8 +126,30 @@ export default function RegisterPage() {
               </button>
             </div>
             <p className="text-xs text-on-surface-variant">
-              Just a username and password, we ask for details after you&apos;re in.
+              At least 8 characters. We ask for the rest after you&apos;re in.
             </p>
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="confirm-password" className="text-sm text-on-surface">
+              Confirm password
+            </label>
+            <div className="group relative flex items-center">
+              <LockIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
+              <input
+                id="confirm-password"
+                type={showPassword ? 'text' : 'password'}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                autoComplete="new-password"
+                required
+                placeholder="••••••••"
+                className={`h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 ${
+                  mismatch ? 'ring-2 ring-error' : 'focus:ring-primary'
+                }`}
+              />
+            </div>
+            {mismatch && <p className="text-xs text-error">Passwords do not match.</p>}
           </div>
 
           {error && (
@@ -131,7 +161,7 @@ export default function RegisterPage() {
           {/* Mockup: black pill button, press scale */}
           <button
             type="submit"
-            disabled={busy}
+            disabled={busy || mismatch}
             className="mt-1 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-on-primary transition-all hover:opacity-90 hover:shadow-md active:scale-[0.98] disabled:opacity-60"
           >
             {busy ? (

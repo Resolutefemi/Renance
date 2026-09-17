@@ -1,90 +1,119 @@
 package httpapi
 
 import (
-	"net/http"
-	"strings"
+        "errors"
+        "net/http"
+        "strings"
 
-	"renance.dev/study-api/internal/store"
+        "renance.dev/study-api/internal/store"
 )
 
 type profileRequest struct {
-	FullName    string   `json:"fullName"`
-	Institution string   `json:"institution"`
-	GradeLevel  string   `json:"gradeLevel"`
-	Exams       []string `json:"exams"`
-	TargetYear  *int     `json:"targetYear"`
+        Username    string   `json:"username"`
+        FullName    string   `json:"fullName"`
+        Institution string   `json:"institution"`
+        GradeLevel  string   `json:"gradeLevel"`
+        Exams       []string `json:"exams"`
+        TargetYear  *int     `json:"targetYear"`
 }
 
 // handleUpdateProfile is the contextual profile modal target: full name,
 // target institution, grade level, active examinations. Completion kicks
 // the silent background asset sync.
 func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
-	uid, err := userIDFrom(r)
-	if err != nil {
-		fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
-		return
-	}
-	var req profileRequest
-	if !decodeJSON(w, r, &req) {
-		return
-	}
-	req.FullName = strings.TrimSpace(req.FullName)
-	req.Institution = strings.TrimSpace(req.Institution)
-	req.GradeLevel = strings.TrimSpace(req.GradeLevel)
+        uid, err := userIDFrom(r)
+        if err != nil {
+                fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
+                return
+        }
+        var req profileRequest
+        if !decodeJSON(w, r, &req) {
+                return
+        }
+        req.Username = strings.ToLower(strings.TrimSpace(req.Username))
+        req.FullName = strings.TrimSpace(req.FullName)
+        req.Institution = strings.TrimSpace(req.Institution)
+        req.GradeLevel = strings.TrimSpace(req.GradeLevel)
 
-	if len(req.FullName) < 2 || len(req.FullName) > 120 {
-		fail(w, http.StatusBadRequest, "invalid_fullName", "full name must be 2-120 characters")
-		return
-	}
-	if len(req.Institution) < 2 || len(req.Institution) > 160 {
-		fail(w, http.StatusBadRequest, "invalid_institution", "institution must be 2-160 characters")
-		return
-	}
-	if len(req.GradeLevel) > 60 {
-		fail(w, http.StatusBadRequest, "invalid_gradeLevel", "grade level must be at most 60 characters")
-		return
-	}
-	if len(req.Exams) == 0 || len(req.Exams) > 4 {
-		fail(w, http.StatusBadRequest, "invalid_exams", "select between 1 and 4 active examinations")
-		return
-	}
-	if req.TargetYear != nil && (*req.TargetYear < 2000 || *req.TargetYear > 2100) {
-		fail(w, http.StatusBadRequest, "invalid_targetYear", "target year must be between 2000 and 2100")
-		return
-	}
-	seen := map[string]struct{}{}
-	for _, e := range req.Exams {
-		if _, dup := seen[e]; dup {
-			fail(w, http.StatusBadRequest, "invalid_exams", "duplicate examination: "+e)
-			return
-		}
-		seen[e] = struct{}{}
-		if _, ok := s.allowed[e]; !ok {
-			fail(w, http.StatusBadRequest, "invalid_exams",
-				"examinations must be chosen from: JAMB, WAEC, NECO, University Modules")
-			return
-		}
-	}
+        // The web account-setup modal asks for the handle right here (email
+        // registers a provisional seed). Empty username = legacy clients that
+        // never send it — leave the existing handle untouched.
+        if req.Username != "" {
+                if !usernameRE.MatchString(req.Username) {
+                        fail(w, http.StatusBadRequest, "invalid_username",
+                                "username must be 3-24 chars: lowercase letters, digits, underscores")
+                        return
+                }
+                if err := s.store.UpdateUsername(r.Context(), uid, req.Username); err != nil {
+                        if errors.Is(err, store.ErrUniqueUsername) {
+                                fail(w, http.StatusConflict, "username_taken", "that username is already taken")
+                                return
+                        }
+                        s.log.Error("username update failed", "err", err)
+                        fail(w, http.StatusInternalServerError, "internal", "could not save profile")
+                        return
+                }
+        }
 
-	profile, err := s.store.UpsertProfile(r.Context(), uid, &store.Profile{
-		FullName:    req.FullName,
-		Institution: req.Institution,
-		GradeLevel:  req.GradeLevel,
-		Exams:       req.Exams,
-		TargetYear:  req.TargetYear,
-		Completed:   true,
-	})
-	if err != nil {
-		s.log.Error("profile upsert failed", "err", err)
-		fail(w, http.StatusInternalServerError, "internal", "could not save profile")
-		return
-	}
+        if len(req.FullName) < 2 || len(req.FullName) > 120 {
+                fail(w, http.StatusBadRequest, "invalid_fullName", "full name must be 2-120 characters")
+                return
+        }
+        if len(req.Institution) < 2 || len(req.Institution) > 160 {
+                fail(w, http.StatusBadRequest, "invalid_institution", "institution must be 2-160 characters")
+                return
+        }
+        if len(req.GradeLevel) > 60 {
+                fail(w, http.StatusBadRequest, "invalid_gradeLevel", "grade level must be at most 60 characters")
+                return
+        }
+        if len(req.Exams) == 0 || len(req.Exams) > 4 {
+                fail(w, http.StatusBadRequest, "invalid_exams", "select between 1 and 4 active examinations")
+                return
+        }
+        if req.TargetYear != nil && (*req.TargetYear < 2000 || *req.TargetYear > 2100) {
+                fail(w, http.StatusBadRequest, "invalid_targetYear", "target year must be between 2000 and 2100")
+                return
+        }
+        seen := map[string]struct{}{}
+        for _, e := range req.Exams {
+                if _, dup := seen[e]; dup {
+                        fail(w, http.StatusBadRequest, "invalid_exams", "duplicate examination: "+e)
+                        return
+                }
+                seen[e] = struct{}{}
+                if _, ok := s.allowed[e]; !ok {
+                        fail(w, http.StatusBadRequest, "invalid_exams",
+                                "examinations must be chosen from: JAMB, WAEC, NECO, University Modules")
+                        return
+                }
+        }
 
-	// Silent background asset sync starts the moment preferences land.
-	s.syncer.Kick(uid)
+        profile, err := s.store.UpsertProfile(r.Context(), uid, &store.Profile{
+                FullName:    req.FullName,
+                Institution: req.Institution,
+                GradeLevel:  req.GradeLevel,
+                Exams:       req.Exams,
+                TargetYear:  req.TargetYear,
+                Completed:   true,
+        })
+        if err != nil {
+                s.log.Error("profile upsert failed", "err", err)
+                fail(w, http.StatusInternalServerError, "internal", "could not save profile")
+                return
+        }
 
-	writeJSON(w, http.StatusOK, map[string]any{
-		"profile": profile,
-		"sync":    "kicked",
-	})
+        // Silent background asset sync starts the moment preferences land.
+        s.syncer.Kick(uid)
+
+        resp := map[string]any{
+                "profile": profile,
+                "sync":    "kicked",
+        }
+        // Echo the (possibly renamed) identity back so clients refresh the
+        // stored session user without a second round-trip.
+        if req.Username != "" {
+                resp["user"] = userPayload{ID: uid, Username: req.Username, ProfileCompleted: true}
+        }
+        writeJSON(w, http.StatusOK, resp)
 }

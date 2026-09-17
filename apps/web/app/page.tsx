@@ -208,10 +208,6 @@ export default function Landing() {
                 </svg>
               </Link>
             </div>
-
-            <p className="hero-enter hero-enter-4 mt-5 font-mono text-xs text-on-surface-variant">
-              username + password only · no email required
-            </p>
           </div>
 
           {/* floating cards on mobile/tablet — inline strip */}
