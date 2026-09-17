@@ -43,7 +43,7 @@ export function UniversityCourseDesk({
           <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-on-hero/10" />
           <p className="relative z-10 font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-hero-muted">
             {school.type === 'university'
-              ? 'University Desk'
+              ? 'School Desk'
               : school.type === 'polytechnic'
                 ? 'Polytechnic Desk'
                 : 'College of Education Desk'}

@@ -27,7 +27,6 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
   String? _targetExam; // server value
   int? _targetYear;
   String _fullName = '';
-  String _institution = '';
   String _gradeLevel = 'SS3';
   bool _busy = false;
   String? _error;
@@ -52,8 +51,14 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
       server: 'NECO',
     ),
     _TargetOption(
+      icon: Icons.fact_check,
+      title: 'Post UTME',
+      subtitle: 'School screening past questions',
+      server: 'POST-UTME',
+    ),
+    _TargetOption(
       icon: Icons.account_balance,
-      title: 'University course',
+      title: 'School Desk (University)',
       subtitle: 'Undergraduate semester exams',
       server: 'University Modules',
     ),
@@ -62,9 +67,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
   static const List<int> _years = <int>[2026, 2027, 2028];
 
   bool get _detailsValid =>
-      _fullName.trim().length >= 2 &&
-      _institution.trim().length >= 2 &&
-      _gradeLevel.isNotEmpty;
+      _fullName.trim().length >= 2 && _gradeLevel.isNotEmpty;
 
   Future<void> _submit() async {
     if (_targetExam == null || _targetYear == null) return;
@@ -76,7 +79,10 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
     try {
       await api.updateProfile(
         fullName: _fullName.trim(),
-        institution: _institution.trim(),
+        // No school question at signup (founder rule): the school is
+        // picked on the desk's Pick School button afterwards, and only
+        // the profile edit changes it later.
+        institution: '',
         gradeLevel: _gradeLevel,
         exams: <String>[_targetExam!],
         targetYear: _targetYear,
@@ -198,7 +204,7 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: selected
-                        ? Colors.black
+                        ? context.primary
                         : context.outlineLight,
                     width: selected ? 1.6 : 1,
                   ),
@@ -218,14 +224,14 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                       height: 40,
                       decoration: BoxDecoration(
                         color: selected
-                            ? Colors.black
+                            ? context.primary
                             : context.surfaceContainer,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Icon(t.icon,
                           size: 22,
                           color: selected
-                              ? Colors.white
+                              ? context.onPrimary
                               : context.ink),
                     ),
                     const SizedBox(width: 12),
@@ -243,8 +249,8 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
                       ),
                     ),
                     if (selected)
-                      const Icon(Icons.check_circle,
-                          size: 20, color: Colors.black),
+                      Icon(Icons.check_circle,
+                          size: 20, color: context.primary),
                   ],
                 ),
               ),
@@ -310,16 +316,6 @@ class _OnboardingSheetState extends State<OnboardingSheet> {
             hintText: 'e.g. Ariyo Oluwafemi',
           ),
           onChanged: (String v) => _fullName = v,
-        ),
-        const SizedBox(height: 16),
-        const Text('Institution', style: RenanceText.labelMono),
-        const SizedBox(height: 6),
-        TextField(
-          decoration: const InputDecoration(
-            prefixIcon: Icon(Icons.school_outlined, size: 20),
-            hintText: 'e.g. FUT Akure',
-          ),
-          onChanged: (String v) => _institution = v,
         ),
         const SizedBox(height: 16),
         const Text('Current level', style: RenanceText.labelMono),
@@ -408,7 +404,7 @@ class _YearChip extends StatelessWidget {
               : context.cardLow,
           borderRadius: BorderRadius.circular(999),
           border: Border.all(
-            color: selected ? Colors.black : Colors.transparent,
+            color: selected ? context.primary : Colors.transparent,
             width: 1.4,
           ),
         ),

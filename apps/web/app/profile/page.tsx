@@ -14,6 +14,11 @@ import { useRouter } from 'next/navigation';
 import { api, API_BASE } from '@/lib/api';
 import { clearSession, getToken } from '@/lib/session';
 import { focusFromExams, setFocus } from '@/lib/focus';
+import {
+  SCHOOLS,
+  findSchoolByName,
+  storeSchoolSlug,
+} from '@/lib/university';
 import { LogoActivityIndicator, RenanceMark } from '@/components/renance-logo';
 import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
@@ -42,7 +47,7 @@ interface GameState {
   level: number;
 }
 
-const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'University Modules'] as const;
+const EXAM_OPTIONS = ['JAMB', 'WAEC', 'NECO', 'POST-UTME', 'University Modules'] as const;
 const TARGET_YEARS = [2026, 2027, 2028] as const;
 
 const EXAM_META: Record<string, { title: string; subtitle: string; icon: string }> = {
@@ -53,8 +58,13 @@ const EXAM_META: Record<string, { title: string; subtitle: string; icon: string 
     icon: 'workspace_premium',
   },
   NECO: { title: 'NECO', subtitle: 'National examinations council', icon: 'verified' },
+  'POST-UTME': {
+    title: 'Post UTME',
+    subtitle: 'School screening past questions',
+    icon: 'quiz',
+  },
   'University Modules': {
-    title: 'Tertiary institution',
+    title: 'School Desk',
     subtitle: 'Undergraduate semester exams',
     icon: 'account_balance',
   },
@@ -75,6 +85,12 @@ export default function ProfilePage() {
   const [year, setYear] = useState<number | null>(null);
   const [busy, setBusy] = useState(false);
   const [focusError, setFocusError] = useState<string | null>(null);
+
+  // My school editor state (the ONLY place a picked school changes).
+  const [schoolEditing, setSchoolEditing] = useState(false);
+  const [schoolName, setSchoolName] = useState('');
+  const [schoolBusy, setSchoolBusy] = useState(false);
+  const [schoolError, setSchoolError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!getToken()) {
@@ -145,6 +161,34 @@ export default function ProfilePage() {
     // Respect the Pages base path when redirecting to the sign-in screen.
     const bp = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
     window.location.href = `${bp}/login`;
+  }
+
+  async function saveSchool(e: FormEvent) {
+    e.preventDefault();
+    if (!profile || schoolBusy) return;
+    setSchoolBusy(true);
+    setSchoolError(null);
+    try {
+      const res = await api<{ profile: Profile }>('/me/profile', {
+        method: 'PUT',
+        body: {
+          fullName: profile.fullName,
+          institution: schoolName.trim(),
+          gradeLevel: profile.gradeLevel,
+          exams: profile.exams,
+          targetYear: profile.targetYear ?? null,
+        },
+      });
+      setMe((prev) => (prev ? { ...prev, profile: res.profile } : prev));
+      // Keep the School Desk pick in step with the profile record.
+      const matched = findSchoolByName(schoolName.trim());
+      if (matched) storeSchoolSlug(matched.slug);
+      setSchoolBusy(false);
+      setSchoolEditing(false);
+    } catch (err) {
+      setSchoolError(err instanceof Error ? err.message : 'Could not save school');
+      setSchoolBusy(false);
+    }
   }
 
   if (!me) {
@@ -326,11 +370,89 @@ export default function ProfilePage() {
             )}
           </section>
 
+          {/* My school: the ONLY place the picked school can change ------- */}
+          <section className="overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            {!schoolEditing ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setSchoolName(profile?.institution ?? '');
+                  setSchoolError(null);
+                  setSchoolEditing(true);
+                }}
+                className="flex w-full items-center gap-4 p-4 text-left transition hover:bg-surface-container-high"
+              >
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-selection-blue text-on-surface">
+                  <span className="material-symbols-outlined">account_balance</span>
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-[15px] font-semibold text-on-surface">My school</p>
+                  <p className="truncate text-[13px] text-text-secondary">
+                    {profile?.institution
+                      ? profile.institution
+                      : 'Not set yet. Pick your school here.'}
+                  </p>
+                </div>
+                <span className="material-symbols-outlined text-outline-light">edit</span>
+              </button>
+            ) : (
+              <form onSubmit={saveSchool} className="p-4">
+                <div className="mb-3 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-[20px] text-on-surface">account_balance</span>
+                  <h3 className="text-[15px] font-semibold text-on-surface">Which school are you in?</h3>
+                </div>
+                <p className="mb-4 text-[13px] text-text-secondary">
+                  Your school drives the School Desk content. This is the only place it can
+                  be changed after the first pick.
+                </p>
+                <label className="block">
+                  <span className="mb-1.5 block text-sm text-on-surface-variant">School</span>
+                  <input
+                    value={schoolName}
+                    onChange={(e) => setSchoolName(e.target.value)}
+                    placeholder="e.g. Federal University of Technology, Akure"
+                    list="profile-schools"
+                    className="w-full rounded-lg bg-surface-container px-4 py-2.5 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                  <datalist id="profile-schools">
+                    {SCHOOLS.filter((s) => s.live || s.type === 'university')
+                      .slice(0, 200)
+                      .map((s) => (
+                        <option key={s.slug} value={s.name} />
+                      ))}
+                  </datalist>
+                </label>
+
+                {schoolError && (
+                  <p className="mt-3 rounded-lg bg-error-container px-4 py-3 text-sm text-on-error-container">
+                    {schoolError}
+                  </p>
+                )}
+
+                <div className="mt-4 flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setSchoolEditing(false)}
+                    className="rounded-lg px-4 py-3 text-sm font-medium text-on-surface-variant hover:bg-surface-container"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={schoolBusy}
+                    className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-semibold text-on-primary transition-transform active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {schoolBusy && <RenanceMark size={20} state="busy" />}
+                    {schoolBusy ? 'Saving…' : 'Save school'}
+                  </button>
+                </div>
+              </form>
+            )}
+          </section>
+
           {/* Menu group: content ------------------------------------------- */}
           <section className="flex flex-col overflow-hidden rounded-xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             <MenuLink icon="auto_stories" tint="text-accent-ink" label="My Packs" href="/packs" />
-            <MenuDivider />
-            <MenuLink icon="calculate" tint="text-accent-ink" label="GPA Calculator" href="/gpa" />
           </section>
 
           {/* Menu group: system -------------------------------------------- */}

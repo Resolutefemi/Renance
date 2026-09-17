@@ -1,15 +1,14 @@
 /// Study Past Questions — the school app's study page, Renance edition.
 ///
 /// The tinted header band ("Get all exam questions from 1978 till
-/// date"), the Questions/Videos pill toggle, the green "Update
-/// Questions" banner that opens the Select & Update page, and the
-/// five-pick form — Subject, Examination Type, Examination Year,
-/// Question type, Question Topic — with the big "Start Study" button.
+/// date"), the green "Update Questions" banner that opens the Select &
+/// Update page, and the five-pick form — Subject, Examination Type,
+/// Examination Year, Question type, Question Topic — with the big
+/// "Start Study" button.
 ///
 /// Start Study composes a real custom paper (subject + year + size via
 /// lib/papers.dart) and opens it in study mode: untimed, browsable,
-/// submit-and-reveal. Videos keeps its slot with an honest panel that
-/// hands over to the Notes screen until video lessons ship.
+/// submit-and-reveal.
 library;
 
 import 'package:flutter/material.dart';
@@ -18,9 +17,10 @@ import 'package:provider/provider.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../papers.dart';
+import '../storage.dart';
 import 'exam_mode_setup_screen.dart';
 import 'exam_screen.dart';
-import 'lessons_screen.dart';
+import 'university_screens.dart';
 import 'update_questions_screen.dart';
 import 'theme.dart';
 
@@ -40,7 +40,6 @@ class StudySetupScreen extends StatefulWidget {
 }
 
 class _StudySetupScreenState extends State<StudySetupScreen> {
-  bool _videos = false;
   String _body = 'jamb';
   String _subject = '';
   String _year = 'All'; // All | 2023 | 2022 | ...
@@ -58,6 +57,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
         _body = switch (exam) {
           'WAEC' => 'waec',
           'NECO' => 'neco',
+          'POST-UTME' => 'post-utme',
           'University Modules' => 'university',
           _ => 'jamb',
         };
@@ -75,13 +75,26 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
   String get _bodyLabel => switch (_body) {
         'waec' => 'WAEC',
         'neco' => 'NECO',
+        'post-utme' => 'POST-UTME',
         'university' => 'University Modules',
         _ => 'JAMB',
       };
 
+  /// The Post UTME school pick ( SharedPreferences), when it still has
+  /// banked prep packs.
+  String? get _postUtmeSchoolSlug {
+    final String? slug = context
+        .read<SessionStore>()
+        .prefs
+        .getString(kPostUtmeSchoolPickKey);
+    if (slug == null) return null;
+    return postUtmeCourses(_exams).containsKey(slug) ? slug : null;
+  }
+
   /// Study subjects for the active examination type. Secondary bodies
   /// map their bank slugs; the tertiary body maps the university packs
-  /// (each course pack becomes one studyable "subject").
+  /// (each course pack becomes one studyable "subject"); Post UTME maps
+  /// the picked school's prep packs plus the general practice banks.
   List<String> get _slugs {
     if (_body == 'university') {
       return <String>[
@@ -89,11 +102,24 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
           if (e.body == 'University Modules') e.code,
       ];
     }
+    if (_body == 'post-utme') {
+      final List<String> slugs = <String>[];
+      final String? school = _postUtmeSchoolSlug;
+      if (school != null) {
+        for (final UniCourse c in postUtmeCourses(_exams)[school] ?? const <UniCourse>[]) {
+          slugs.add(c.exam.code);
+        }
+      }
+      for (final ExamMeta e in _exams) {
+        if (e.body == 'POST-UTME') slugs.add(e.code);
+      }
+      return slugs;
+    }
     return bankSlugsFor(_exams, _body);
   }
 
   String _subjectLabel(String slug) {
-    if (_body == 'university') {
+    if (_body == 'university' || _body == 'post-utme') {
       for (final ExamMeta e in _exams) {
         if (e.code == slug) return e.title;
       }
@@ -118,9 +144,9 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
       final int? year = _year == 'All' ? null : int.tryParse(_year);
       final String code;
       final String title;
-      if (_body == 'university') {
-        // Tertiary: carve a study slice from the chosen course pack.
-        // The pick grammar takes count only for uni banks — years stay
+      if (_body == 'university' || _body == 'post-utme') {
+        // Tertiary + Post UTME: carve a study slice from the chosen pack.
+        // The pick grammar takes count only for these banks — years stay
         // a secondary-body feature.
         code = buildPickCode(_subject, count: 60);
         title = '${_subjectLabel(_subject)} · Study';
@@ -228,72 +254,8 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
                 children: <Widget>[
-                  // ---- Questions / Videos pill toggle ----------------
-                  Container(
-                    padding: const EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      color: context.cardLow,
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        _TogglePill(
-                            label: 'Questions',
-                            active: !_videos,
-                            onTap: () => setState(() => _videos = false)),
-                        _TogglePill(
-                            label: 'Videos',
-                            active: _videos,
-                            onTap: () => setState(() => _videos = true)),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  if (_videos) ...<Widget>[
-                    // Honest Videos panel until lessons ship per-subject.
-                    Container(
-                      padding: const EdgeInsets.all(18),
-                      decoration: BoxDecoration(
-                        color: context.card,
-                        borderRadius: BorderRadius.circular(14),
-                        border: Border.all(
-                            color: context.outlineVariant
-                                .withValues(alpha: 0.5)),
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          Icon(Icons.smart_display_outlined,
-                              size: 40, color: context.outlineLight),
-                          const SizedBox(height: 10),
-                          Text(
-                            'Video lessons live in Notes for now',
-                            textAlign: TextAlign.center,
-                            style: RenanceText.bodyMedium,
-                          ),
-                          const SizedBox(height: 6),
-                          Text(
-                            'The lesson library carries the walkthroughs '
-                            'that exist today. Open it below.',
-                            textAlign: TextAlign.center,
-                            style: RenanceText.caption.copyWith(
-                              color: context.textSecondary,
-                              height: 1.45,
-                            ),
-                          ),
-                          const SizedBox(height: 12),
-                          OutlinedButton(
-                            onPressed: () =>
-                                Navigator.of(context).push(MaterialPageRoute<void>(
-                                    builder: (_) => const LessonsScreen())),
-                            child: const Text('Open Notes'),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ] else ...<Widget>[
-                    // ---- green Update Questions banner ----------------
-                    InkWell(
+                  // ---- green Update Questions banner ----------------
+                  InkWell(
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute<void>(
                             builder: (_) => const UpdateQuestionsScreen()),
@@ -382,23 +344,29 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                     ),
                     _FieldLabel('Examination Type'),
                     _PickerField(
-                      value: _bodyLabel,
+                      value: switch (_bodyLabel) {
+                        'POST-UTME' => 'Post UTME',
+                        'University Modules' => 'School Desk (University)',
+                        _ => _bodyLabel,
+                      },
                       items: const <String>[
                         'JAMB',
                         'WAEC',
                         'NECO',
-                        'University Modules',
+                        'Post UTME',
+                        'School Desk (University)',
                       ],
                       onChanged: (String v) => setState(() {
                         _body = switch (v) {
                           'WAEC' => 'waec',
                           'NECO' => 'neco',
-                          'University Modules' => 'university',
+                          'Post UTME' => 'post-utme',
+                          'School Desk (University)' => 'university',
                           _ => 'jamb',
                         };
                         final List<String> next = _slugs;
                         _subject =
-                            next.contains(_subject) ? _subject : next.first;
+                            next.contains(_subject) ? _subject : next.firstOrNull ?? '';
                       }),
                     ),
                     _FieldLabel('Examination Year'),
@@ -451,7 +419,6 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                       ),
                     ),
                   ],
-                ],
               ),
             ),
           ],
@@ -521,49 +488,6 @@ class _PickerField extends StatelessWidget {
                   if (v != null) onChanged(v);
                 }
               : null,
-        ),
-      ),
-    );
-  }
-}
-
-class _TogglePill extends StatelessWidget {
-  const _TogglePill({
-    required this.label,
-    required this.active,
-    required this.onTap,
-  });
-
-  final String label;
-  final bool active;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 160),
-        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 9),
-        decoration: BoxDecoration(
-          color: active ? context.cardLowest : Colors.transparent,
-          borderRadius: BorderRadius.circular(999),
-          boxShadow: active
-              ? const <BoxShadow>[
-                  BoxShadow(
-                    color: Color(0x14141C2D),
-                    blurRadius: 4,
-                    offset: Offset(0, 1),
-                  ),
-                ]
-              : null,
-        ),
-        child: Text(
-          label,
-          style: RenanceText.bodyMedium.copyWith(
-            fontSize: 14,
-            color: active ? context.ink : context.textSecondary,
-          ),
         ),
       ),
     );

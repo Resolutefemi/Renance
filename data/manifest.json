@@ -9,7 +9,6 @@
       "totalMarks": 50,
       "category": "secondary",
       "body": "GCSE",
-      "years": [],
       "bundleSha256": "05c60227646750d1f885c197213b784ba9a41598aed7a36d51295888f3e6de71",
       "sizeBytes": 48885
     },
@@ -20,7 +19,6 @@
       "totalMarks": 50,
       "category": "secondary",
       "body": "GCSE",
-      "years": [],
       "bundleSha256": "7cbd87474248d2391f73c1f1c37fd6ac6622e95f1708617f525a676ef57c2201",
       "sizeBytes": 41955
     },
@@ -31,7 +29,6 @@
       "totalMarks": 56,
       "category": "secondary",
       "body": "GCSE",
-      "years": [],
       "bundleSha256": "095873c87f58af282505e2fd8459cd4b7beb37d52765e08cf927bbe0e6d911f0",
       "sizeBytes": 51397
     },
@@ -42,7 +39,6 @@
       "totalMarks": 40,
       "category": "secondary",
       "body": "GCSE",
-      "years": [],
       "bundleSha256": "f18b919a59f3125d1f24b3c10a12338434fbfbf7438f6558ceb74adb00233d57",
       "sizeBytes": 28409
     },
@@ -53,7 +49,6 @@
       "totalMarks": 39,
       "category": "secondary",
       "body": "GCSE",
-      "years": [],
       "bundleSha256": "4357db2cb0b9efc3b9fdf8c9649eceb26340ca1a6926be4f05b167b9818a5555",
       "sizeBytes": 25055
     },
@@ -64,7 +59,6 @@
       "totalMarks": 40,
       "category": "secondary",
       "body": "GCSE",
-      "years": [],
       "bundleSha256": "ce145a50126d020afb3c705faa8b2693ced6a3d5bb4c7a0cf0a7a8afae0f876d",
       "sizeBytes": 32536
     },
@@ -323,8 +317,8 @@
       "totalMarks": 492,
       "category": "secondary",
       "body": "JAMB",
-      "bundleSha256": "909c042c5d412fe348315181243b028e46cdf93d67eb046cffba56d064b28822",
-      "sizeBytes": 170757
+      "bundleSha256": "76ba495765944e550cfc76b061d078ee1df8a46edcf0d17b8bfd57a2887bb6f5",
+      "sizeBytes": 170740
     },
     {
       "code": "jamb-civic-education-bank",
@@ -598,8 +592,8 @@
         2024,
         2025
       ],
-      "bundleSha256": "d2e56c626aa19eb24689ff42b73c7a560422e122f859725f61acfe610d99266c",
-      "sizeBytes": 3094745
+      "bundleSha256": "c2c410577f19fe19f468e888607655b3e8df08ea0c9a526884f29c7ff802382f",
+      "sizeBytes": 3094739
     },
     {
       "code": "jamb-english-enrich-bank",
@@ -899,8 +893,8 @@
         4,
         5
       ],
-      "bundleSha256": "62c42ddc173acb25b3b5dc62f6bb0a4f905f5f444f14dcff962ba5e97b298fb7",
-      "sizeBytes": 56522
+      "bundleSha256": "10a35c3f78766c9ab46edadef26c557b7875db63830d7d16a6dc8e3218d9dc84",
+      "sizeBytes": 56521
     },
     {
       "code": "jamb-irs-bank",
@@ -1173,8 +1167,8 @@
       "totalMarks": 408,
       "category": "secondary",
       "body": "JAMB",
-      "bundleSha256": "d62d6ddc1ccb1a46a943cead978001236efa7e5ab87c5e0372d1933ed4321f1e",
-      "sizeBytes": 148502
+      "bundleSha256": "0964a63ae0f1ee8487cd2726c9e6823da200f90a2d5c8dd78abc283111a11ff5",
+      "sizeBytes": 148499
     },
     {
       "code": "jamb-physics-theory-bank",
@@ -1479,8 +1473,8 @@
         2013,
         2014
       ],
-      "bundleSha256": "9c28bd136cfd7d7afc21f26265e9989c092c651299b9d354de7d762a5adccda2",
-      "sizeBytes": 49290
+      "bundleSha256": "80b5c55aff1208144a695843f66aa7c79ca3946f54ddbc7adc75ca1a5147d144",
+      "sizeBytes": 49289
     },
     {
       "code": "post_utme-history-questions-bank",
@@ -2254,8 +2248,8 @@
       "totalMarks": 193,
       "category": "university",
       "body": "University Modules",
-      "bundleSha256": "278e57135a2e1e9a905d58b6d038d4cc67d0945756f3bc21ac75d08bb11ca5e6",
-      "sizeBytes": 78073
+      "bundleSha256": "214311981033ee45832b80bfc5ba16771aa6a334ac8d9508621f6fc6d7adc63d",
+      "sizeBytes": 78035
     },
     {
       "code": "uni-bowen-pq-chemistry-bank",
@@ -2264,8 +2258,8 @@
       "totalMarks": 207,
       "category": "university",
       "body": "University Modules",
-      "bundleSha256": "75b69683254b049ae5c276943e14131a5712256c487a24de20f5bd316a779f8d",
-      "sizeBytes": 78864
+      "bundleSha256": "696ef0a843824519799ce01e6eb2dae95ea97ed9759e42715287598a1b29d01d",
+      "sizeBytes": 78861
     },
     {
       "code": "uni-bowen-pq-commerce-bank",
@@ -2384,8 +2378,8 @@
       "totalMarks": 226,
       "category": "university",
       "body": "University Modules",
-      "bundleSha256": "a3587b90ee2ad77453fe9efbf57c666efdbf97d286c87767231c7a70ce9fc95b",
-      "sizeBytes": 89769
+      "bundleSha256": "fcf669a8f5d201901f5f91f90698382c8897b2fdf1bf2685d286827587199635",
+      "sizeBytes": 89767
     },
     {
       "code": "uni-bsu-pq-accounting-bank",
@@ -6036,8 +6030,8 @@
       "totalMarks": 50,
       "category": "university",
       "body": "University Modules",
-      "bundleSha256": "08f6e75fe57d990d57210aa4c2eea854bbce8f7ec35b74c34057f1ecbee05f51",
-      "sizeBytes": 32695
+      "bundleSha256": "814815553dfd262c2158f3a6f74e8f8a110c6f2e29183b42f570625da98e70e2",
+      "sizeBytes": 32692
     },
     {
       "code": "uni-unilag-bme102-bank",
@@ -6386,8 +6380,8 @@
       "totalMarks": 1384,
       "category": "university",
       "body": "University Modules",
-      "bundleSha256": "34d8a2496aee27c800ce21637540aeb0ce563e2a50d4945196771c7933602862",
-      "sizeBytes": 406814
+      "bundleSha256": "6de753532e75ee48d6807c9a43259fbd0602393776933959456640fa6d86f04c",
+      "sizeBytes": 406801
     },
     {
       "code": "uni-unilorin-pq-accounting-bank",

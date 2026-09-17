@@ -36,6 +36,7 @@ import 'exam_mode_setup_screen.dart';
 import 'library_screen.dart';
 import 'gamification_hub_screen.dart';
 import 'onboarding_sheet.dart';
+import 'post_utme_screens.dart';
 import 'profile_screen.dart';
 import 'renance_logo.dart';
 import 'review_screen.dart';
@@ -148,7 +149,13 @@ class _HomeScreenState extends State<HomeScreen> {
         !_bootstrapped && sync.exams.isEmpty && sync.isSyncing;
 
     final bodies = <Widget>[
-      if (student.isTertiaryFocus)
+      if (student.isPostUtmeFocus)
+        PostUtmeHomeTab(
+          student: student,
+          sync: sync,
+          onGoTab: (int t) => setState(() => _tab = t),
+        )
+      else if (student.isTertiaryFocus)
         UniversityHomeTab(
           student: student,
           sync: sync,
@@ -1146,7 +1153,7 @@ class _LauncherTab extends StatelessWidget {
               Expanded(
                 child: LauncherTile(
                   icon: Icons.smart_toy,
-                  iconColor: Colors.white,
+                  iconColor: context.onInverseChip,
                   highlight: true,
                   label: 'Tutor',
                   onTap: () => Navigator.of(context).push(
@@ -2074,7 +2081,7 @@ class _MoreTile extends StatelessWidget {
               shape: BoxShape.circle,
               color: context.cardLow,
             ),
-            child: Icon(icon, size: 20, color: Colors.black),
+            child: Icon(icon, size: 20, color: context.ink),
           ),
           const SizedBox(height: 4),
           Text(

@@ -41,7 +41,7 @@ func (s *Server) handleAttemptTutor(w http.ResponseWriter, r *http.Request) {
         }
         if !s.limiter.allow("tutor:user:" + uid) {
                 w.Header().Set("Retry-After", "15")
-                fail(w, http.StatusTooManyRequests, "rate_limited", "tutor cooling down — retry in a few seconds")
+                fail(w, http.StatusTooManyRequests, "rate_limited", "tutor cooling down, retry in a few seconds")
                 return
         }
 

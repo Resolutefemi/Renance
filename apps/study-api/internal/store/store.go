@@ -163,6 +163,11 @@ func (s *Store) CreateUser(ctx context.Context, username, passwordHash string) (
 // one on first sign-in. The seed username is derived from the Google email
 // and numbered (alice_2, alice_3, …) on collision. Google-only rows keep an
 // empty password_hash, which can never satisfy a bcrypt comparison.
+//
+// Same-email parity (founder rule): a scholar who registered with email +
+// password and later signs in with Google using the SAME address lands in
+// that same account, the Google identity is linked onto it. The reverse
+// direction lives in CreateUserEmail (password claims a Google-only row).
 func (s *Store) UpsertGoogleUser(ctx context.Context, googleSub, email, seed string) (*User, error) {
         u := &User{}
         err := s.Pool.QueryRow(ctx, `
@@ -174,6 +179,19 @@ func (s *Store) UpsertGoogleUser(ctx context.Context, googleSub, email, seed str
         }
         if !errors.Is(err, pgx.ErrNoRows) {
                 return nil, fmt.Errorf("store: google lookup: %w", err)
+        }
+
+        // No Google-linked row yet: an email-registered account with the
+        // same address must adopt this Google identity instead of
+        // colliding with the email unique index.
+        if email != "" {
+                existing, lookErr := s.UserByEmail(ctx, email)
+                if lookErr != nil {
+                        return nil, fmt.Errorf("store: google email lookup: %w", lookErr)
+                }
+                if existing != nil {
+                        return s.linkGoogleSub(ctx, existing.ID, googleSub, email)
+                }
         }
 
         for attempt := 0; attempt < 8; attempt++ {
@@ -215,6 +233,33 @@ func (s *Store) googleBySub(ctx context.Context, googleSub string) *User {
                 return nil
         }
         return u
+}
+
+// linkGoogleSub attaches a Google identity to an existing (email +
+// password) account, backfilling the email column when the row predates
+// email-first auth. Idempotent: a re-link of the same sub is a no-op.
+func (s *Store) linkGoogleSub(ctx context.Context, userID, googleSub, email string) (*User, error) {
+        u := &User{}
+        err := s.Pool.QueryRow(ctx, `
+                UPDATE study.users
+                SET google_sub = $2,
+                    email = CASE WHEN email IS NULL OR email = '' THEN $3 ELSE email END
+                WHERE id = $1
+                RETURNING id, username, password_hash, created_at, google_sub, email`,
+                userID, googleSub, strings.ToLower(strings.TrimSpace(email)),
+        ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
+        if err != nil {
+                var pgErr *pgconn.PgError
+                if errors.As(err, &pgErr) && pgErr.Code == uniqueViolation {
+                        // Another row already carries this google_sub (a
+                        // concurrent Google sign-in won): return that one.
+                        if linked := s.googleBySub(ctx, googleSub); linked != nil {
+                                return linked, nil
+                        }
+                }
+                return nil, fmt.Errorf("store: link google identity: %w", err)
+        }
+        return u, nil
 }
 
 func (s *Store) UserByUsername(ctx context.Context, username string) (*User, error) {
@@ -290,7 +335,25 @@ func (s *Store) seedUsernameFromEmail(ctx context.Context, email string) (string
 
 // CreateUserEmail registers an email + password scholar. The username starts
 // as an email-derived seed and is renamed in the account-setup modal.
+//
+// Same-email parity (founder rule): when the address already belongs to a
+// Google-only account (empty password_hash, nothing to lose), the signup
+// claims that row by setting the password instead of failing with
+// ErrUniqueEmail, so both sign-in paths share one account.
 func (s *Store) CreateUserEmail(ctx context.Context, email, passwordHash string) (*User, error) {
+        normalized := strings.ToLower(strings.TrimSpace(email))
+        if existing, err := s.UserByEmail(ctx, normalized); err == nil && existing != nil && existing.PasswordHash == "" {
+                u := &User{}
+                err := s.Pool.QueryRow(ctx, `
+                        UPDATE study.users SET password_hash = $2 WHERE id = $1
+                        RETURNING id, username, password_hash, created_at, google_sub, email`,
+                        existing.ID, passwordHash,
+                ).Scan(&u.ID, &u.Username, &u.PasswordHash, &u.CreatedAt, &u.GoogleSub, &u.Email)
+                if err != nil {
+                        return nil, fmt.Errorf("store: claim google-only account: %w", err)
+                }
+                return u, nil
+        }
         seed, err := s.seedUsernameFromEmail(ctx, email)
         if err != nil {
                 return nil, err

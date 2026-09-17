@@ -152,8 +152,8 @@ func Hint(ac AttemptContext, turn int) string {
 			topic + " is actually asking. Now: which option matches THAT sentence exactly?",
 		"Eliminate the wild ones first. Cross out any option that adds a condition the stem never mentions, " +
 			"or drops one it clearly does. Which two survive? Compare only those two.",
-		"Recheck the qualifiers — always, only, most, least, best. Examiners hide the trap in one word. " +
-			picked + " — does it survive those words, or does one of them break it?",
+		"Recheck the qualifiers, always, only, most, least, best. Examiners hide the trap in one word. " +
+			picked + ": does it survive those words, or does one of them break it?",
 		"Match every option against the definition of " + topic + ". The right one states it exactly; " +
 			"the distractors overstate, understate or swap a term. Reset, reread fresh, and commit.",
 	}

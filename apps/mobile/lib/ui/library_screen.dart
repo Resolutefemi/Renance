@@ -177,9 +177,9 @@ class _LibraryScreenState extends State<LibraryScreen> {
                   children: <Widget>[
                     Text('See all',
                         style: RenanceText.labelMono.copyWith(
-                            fontSize: 12, color: Colors.black)),
-                    const Icon(Icons.arrow_forward,
-                        size: 14, color: Colors.black),
+                            fontSize: 12, color: context.ink)),
+                    Icon(Icons.arrow_forward,
+                        size: 14, color: context.ink),
                   ],
                 ),
               ),
@@ -467,7 +467,7 @@ class _PackCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double progress = downloaded ? 1.0 : 0.0;
-    final Color railColor = downloaded ? RenanceColors.emerald : Colors.black;
+    final Color railColor = downloaded ? RenanceColors.emerald : context.ink;
 
     return InkWell(
       onTap: onTap,
@@ -502,10 +502,10 @@ class _PackCard extends StatelessWidget {
                   width: 28,
                   height: 28,
                   child: downloading
-                      ? const Padding(
-                          padding: EdgeInsets.all(6),
+                      ? Padding(
+                          padding: const EdgeInsets.all(6),
                           child: CircularProgressIndicator(
-                              strokeWidth: 2, color: Colors.black),
+                              strokeWidth: 2, color: context.primary),
                         )
                       : downloaded
                           ? Container(

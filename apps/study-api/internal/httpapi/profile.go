@@ -59,8 +59,11 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
                 fail(w, http.StatusBadRequest, "invalid_fullName", "full name must be 2-120 characters")
                 return
         }
-        if len(req.Institution) < 2 || len(req.Institution) > 160 {
-                fail(w, http.StatusBadRequest, "invalid_institution", "institution must be 2-160 characters")
+        // The school no longer sits in the signup questions (founder rule:
+        // it is picked once on the School Desk home, then only editable in
+        // the profile), so the field is optional now.
+        if len(req.Institution) > 160 {
+                fail(w, http.StatusBadRequest, "invalid_institution", "institution must be at most 160 characters")
                 return
         }
         if len(req.GradeLevel) > 60 {
@@ -84,7 +87,7 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
                 seen[e] = struct{}{}
                 if _, ok := s.allowed[e]; !ok {
                         fail(w, http.StatusBadRequest, "invalid_exams",
-                                "examinations must be chosen from: JAMB, WAEC, NECO, University Modules")
+                                "examinations must be chosen from: JAMB, WAEC, NECO, POST-UTME, University Modules")
                         return
                 }
         }

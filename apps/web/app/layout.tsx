@@ -22,7 +22,7 @@ const renanceJsonLd = {
     {
       ...FOUNDER,
       description:
-        'Resolute Femi (full name Ariyo Oluwafemi Stephen) is a Nigerian software engineer and the founder of Renance, "Your Guide to Academic Success" — a modular education & commerce suite. He builds Renance CBT (FUTA CBT practice platform), Renance JAMB CBT, Renance DevTools CLI, Renance Playground, Naija Locator and other web products for Nigerian students and developers.',
+        'Resolute Femi (full name Ariyo Oluwafemi Stephen) is a Nigerian software engineer and the founder of Renance, "Your Guide to Academic Success", a modular education & commerce suite. He builds Renance CBT (FUTA CBT practice platform), Renance JAMB CBT, Renance DevTools CLI, Renance Playground, Naija Locator and other web products for Nigerian students and developers.',
       affiliation: {
         '@type': 'CollegeOrUniversity',
         name: 'Federal University of Technology, Akure (FUTA)',

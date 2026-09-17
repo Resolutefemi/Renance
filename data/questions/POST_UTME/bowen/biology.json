@@ -2469,11 +2469,11 @@
    "type": "mcq",
    "stem": "Which of the following best describes the levels of organization?",
    "options": {
-    "A": "Tissue > Cell — Organ — System",
-    "B": "System — Organ — Tissue — Cell",
-    "C": "Organ — Tissue — Cell — System",
-    "D": "Cell + Tissue — Organ — System",
-    "E": "Cell + Organ — Tissue — System"
+    "A": "Tissue > Cell, Organ, System",
+    "B": "System, Organ, Tissue, Cell",
+    "C": "Organ, Tissue, Cell, System",
+    "D": "Cell + Tissue, Organ, System",
+    "E": "Cell + Organ, Tissue, System"
    },
    "marks": 1,
    "answer": "D"
@@ -2494,7 +2494,7 @@
   {
    "id": "uni-bowen-pq-biology-bank-0192",
    "type": "mcq",
-   "stem": "The food relation from grass — deer > tiger decomposer is called",
+   "stem": "The food relation from grass, deer > tiger decomposer is called",
    "options": {
     "A": "Food web",
     "B": "Food chain",

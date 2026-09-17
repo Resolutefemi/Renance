@@ -236,7 +236,7 @@ export default function ExplanationSheet({
                 {question.explanation?.trim() ? (
                   <QText html={question.explanation} />
                 ) : (
-                  <p>No written explanation ships with this question yet — try the AI explanation below.</p>
+                  <p>No written explanation ships with this question yet, try the AI explanation below.</p>
                 )}
               </div>
             </div>

@@ -1,16 +1,17 @@
 /// University home, the Stitch university_home_dashboard_light screen,
-/// 1:1. Rendered by the shell instead of the JAMB launcher when the
-/// student's learning focus is a tertiary institution: the "In Progress"
-/// course hero card (COS101, semester progress, resume lecture notes),
-/// the Active Courses chips row and the university-flavoured Practice /
-/// Grow grids (Quizzes, Review, Cards, Outline / CGPA, Badges, Tutor,
-/// Arena). The Mock Exam Setup never appears here: it is a JAMBite
-/// product only.
+/// 1:1, renamed the School Desk (founder rename). Rendered by the shell
+/// instead of the JAMB launcher when the student's learning focus is a
+/// tertiary institution: the school hero card (name, course count, the
+/// Pick School button when nothing is picked yet), the Active Courses
+/// chips row and the Practice / Grow grids. The school pick is stored
+/// once (the founder rule): after that only the profile edit changes it.
 library;
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../controllers.dart';
+import '../storage.dart';
 import 'arena_lobby_screen.dart';
 import 'flashcards_screen.dart';
 import 'gamification_hub_screen.dart';
@@ -33,14 +34,23 @@ class UniversityHomeTab extends StatelessWidget {
   final SyncController sync;
   final ValueChanged<int> onGoTab;
 
-  /// The student's institution resolved to a banked school slug, when
-  /// the profile text matches one of the 34 shipped schools.
+  /// The student's school: the stored pick first, then the profile
+  /// institution match against the banked schools. Null = nothing picked
+  /// yet, the desk shows its Pick School button.
   String? get _schoolSlug {
+    final Set<String> banked =
+        universityCourses(sync.exams).keys.toSet();
+    final String? stored = context
+        .read<SessionStore>()
+        .prefs
+        .getString(kSchoolPickKey);
+    if (stored != null && banked.contains(stored)) return stored;
     final String institution =
         student.me?.profile?.institution.trim().toLowerCase() ?? '';
     if (institution.isEmpty) return null;
     for (final MapEntry<String, (String, String)> e
         in kUniversitySchools.entries) {
+      if (!banked.contains(e.key)) continue;
       final (String short, String full) = e.value;
       if (institution == e.key ||
           institution == short.toLowerCase() ||
@@ -69,7 +79,7 @@ class UniversityHomeTab extends StatelessWidget {
         slug != null ? (schools[slug] ?? const <UniCourse>[]) : const <UniCourse>[];
     final (String short, String full) = slug != null
         ? (kUniversitySchools[slug]!.$1, kUniversitySchools[slug]!.$2)
-        : ('University Desk', '${schools.length} banked schools');
+        : ('School Desk', '${schools.length} banked schools');
 
     return RefreshIndicator(
       onRefresh: student.refresh,
@@ -89,6 +99,7 @@ class UniversityHomeTab extends StatelessWidget {
             subtitle: full,
             schoolCount: schools.length,
             courseCount: schoolCourses.length,
+            picked: slug != null,
             onOpen: () => _openDesk(context),
           ),
           // Course chips row ----------------------------------------------
@@ -224,7 +235,7 @@ class UniversityHomeTab extends StatelessWidget {
               Expanded(
                 child: LauncherTile(
                   icon: Icons.smart_toy,
-                  iconColor: Colors.white,
+                  iconColor: context.onInverseChip,
                   highlight: true,
                   label: 'Tutor',
                   onTap: () => Navigator.of(context).push(
@@ -263,6 +274,7 @@ class _SchoolHeroCard extends StatelessWidget {
     required this.subtitle,
     required this.schoolCount,
     required this.courseCount,
+    required this.picked,
     required this.onOpen,
   });
 
@@ -271,6 +283,7 @@ class _SchoolHeroCard extends StatelessWidget {
   final String subtitle;
   final int schoolCount;
   final int courseCount;
+  final bool picked;
   final VoidCallback onOpen;
 
   @override
@@ -295,15 +308,13 @@ class _SchoolHeroCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(
-                'YOUR SCHOOL',
-                style: RenanceText.labelMono.copyWith(
-                  fontSize: 11,
-                  letterSpacing: 1.6,
-                  fontWeight: FontWeight.w700,
-                  color: context.heroMuted,
-                ),
-              ),
+              Text('YOUR SCHOOL',
+                  style: RenanceText.labelMono.copyWith(
+                    fontSize: 11,
+                    letterSpacing: 1.6,
+                    fontWeight: FontWeight.w700,
+                    color: context.heroMuted,
+                  )),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
@@ -365,12 +376,13 @@ class _SchoolHeroCard extends StatelessWidget {
                   : 0.25,
               minHeight: 8,
               backgroundColor: context.heroTrack,
-              valueColor: AlwaysStoppedAnimation<Color>(
-                context.darkChrome ? Colors.white : Colors.black,
-              ),
+              valueColor: AlwaysStoppedAnimation<Color>(context.heroCta),
             ),
           ),
           const SizedBox(height: 16),
+          // The once-only school pick (founder rule): Pick School until
+          // one is stored, Open courses afterwards. No Change School
+          // button; the profile edit is the only way to change it.
           SizedBox(
             height: 52,
             width: double.infinity,
@@ -387,9 +399,7 @@ class _SchoolHeroCard extends StatelessWidget {
               ),
               icon: const Icon(Icons.school, size: 20),
               label: Text(
-                courseCount > 0
-                    ? 'Open your school desk'
-                    : 'Pick your school',
+                slug != null ? 'Open your school desk' : 'Pick School',
                 style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
               ),
             ),

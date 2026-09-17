@@ -13,10 +13,12 @@ library;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../controllers.dart';
 import '../models.dart';
 import '../papers.dart';
+import '../storage.dart';
 import 'exam_screen.dart';
 import 'renance_logo.dart';
 import 'theme.dart';
@@ -45,7 +47,7 @@ const Map<String, (String, String)> kUniversitySchools = <String, (String, Strin
   'lasu': ('LASU', 'Lagos State University'),
   'lautech': ('LAUTECH', 'Ladoke Akintola University of Technology'),
   'leadcity': ('LEADCITY', 'Lead City University'),
-  'mountain': ('MOUNTAIN', 'Mountain University'),
+  'mountain-top': ('MOUNTAIN', 'Mountain University'),
   'noun': ('NOUN', 'National Open University of Nigeria'),
   'oau': ('OAU', 'Obafemi Awolowo University'),
   'rsu': ('RSU', 'Rivers State University'),
@@ -58,6 +60,15 @@ const Map<String, (String, String)> kUniversitySchools = <String, (String, Strin
   'unn': ('UNN', 'University of Nigeria, Nsukka'),
   'veritas': ('VERITAS', 'Veritas University'),
 };
+
+/// SharedPreferences key of the School Desk school pick (the same key the
+/// website uses, so the two surfaces read one choice). The pick is made
+/// ONCE from the desk's Pick School button; afterwards only the profile
+/// edit can change it (founder rule).
+const String kSchoolPickKey = 'renance.uni.school.v1';
+
+/// SharedPreferences key of the Post UTME desk's school pick.
+const String kPostUtmeSchoolPickKey = 'renance.postutme.school.v1';
 
 /// One banked course: the manifest pack plus the parsed display bits.
 class UniCourse {
@@ -104,9 +115,39 @@ Map<String, List<UniCourse>> universityCourses(List<ExamMeta> exams) {
   return schools;
 }
 
+/// The Post UTME shelf: `uni-<school>-pq-<subject>-bank` packs grouped by
+/// school. The Post UTME desk's own entity, separate from the School Desk
+/// course banks (founder rule: Post UTME sits beside JAMB/WAEC/NECO).
+Map<String, List<UniCourse>> postUtmeCourses(List<ExamMeta> exams) {
+  final Map<String, List<UniCourse>> schools = <String, List<UniCourse>>{};
+  for (final ExamMeta e in exams) {
+    final RegExpMatch? m =
+        RegExp(r'^uni-([a-z0-9-]+)-pq-(.+)-bank$').firstMatch(e.code);
+    if (m == null) continue;
+    (schools[m.group(1)!] ??= <UniCourse>[]).add(
+      UniCourse(exam: e, school: m.group(1)!, slug: 'pq-${m.group(2)}'),
+    );
+  }
+  for (final List<UniCourse> list in schools.values) {
+    list.sort((UniCourse a, UniCourse b) => a.slug.compareTo(b.slug));
+  }
+  return schools;
+}
+
+/// The stored School Desk pick, when it is still a banked school.
+String? storedSchoolPick(Set<String> bankedSlugs, SharedPreferences prefs) {
+  final String? slug = prefs.getString(kSchoolPickKey);
+  if (slug != null && bankedSlugs.contains(slug)) return slug;
+  return null;
+}
+
 // ------------------------------------------------------------------ picker
 
 /// School picker: search + the banked schools with live pack counts.
+/// Schools whose only banked past questions are Post-UTME (no course
+/// banks) wait in the unavailable list, their content lives on the Post
+/// UTME desk. Tapping an available school stores the pick (once, the
+/// founder rule) and opens the desk.
 class UniversityPickerScreen extends StatelessWidget {
   const UniversityPickerScreen({super.key, required this.exams});
 
@@ -115,7 +156,17 @@ class UniversityPickerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, List<UniCourse>> schools = universityCourses(exams);
-    final List<String> slugs = schools.keys.toList()..sort();
+    final Map<String, List<UniCourse>> pqSchools = postUtmeCourses(exams);
+    // Available = real semester course banks; Post-UTME-only shelves are
+    // listed unavailable, never as School Desk candidates.
+    final List<String> available = schools.keys
+        .where((String s) => schools[s]!.any((UniCourse c) => !c.isPostUtme))
+        .toList()
+      ..sort();
+    final List<String> postUtmeOnly = pqSchools.keys
+        .where((String s) => !available.contains(s))
+        .toList()
+      ..sort();
 
     return Scaffold(
       backgroundColor: context.pageBg,
@@ -140,73 +191,62 @@ class UniversityPickerScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
-                  child: Text('University Desk',
+                  child: Text('School Desk',
                       style: RenanceText.displayLg),
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
                   child: Text(
-                    '${schools.length} schools ship real course banks. Pick yours to practise quizzes and Post-UTME past questions.',
+                    '${available.length} schools ship real course banks. Pick yours to practise semester quizzes. This pick sticks; it changes later only from your profile.',
                     style: RenanceText.bodyBase
                         .copyWith(color: context.textSecondary),
                   ),
                 ),
                 Expanded(
-                  child: slugs.isEmpty
+                  child: available.isEmpty
                       ? const Center(child: LogoActivityIndicator(label: 'Loading schools…', size: 34))
                       : ListView.builder(
                           padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-                          itemCount: slugs.length,
+                          itemCount: available.length + postUtmeOnly.length,
                           itemBuilder: (BuildContext context, int i) {
-                            final String slug = slugs[i];
+                            if (i < available.length) {
+                              final String slug = available[i];
+                              final (String short, String full) =
+                                  kUniversitySchools[slug] ?? (slug.toUpperCase(), slug);
+                              final List<UniCourse> courses = schools[slug]!
+                                  .where((UniCourse c) => !c.isPostUtme)
+                                  .toList();
+                              return _PickerCard(
+                                slug: slug,
+                                short: short,
+                                full: full,
+                                trailing: '${courses.length} packs',
+                                onTap: () async {
+                                  // The once-only pick (founder rule).
+                                  await context
+                                      .read<SessionStore>()
+                                      .prefs
+                                      .setString(kSchoolPickKey, slug);
+                                  if (!context.mounted) return;
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute<void>(
+                                      builder: (_) => UniversityDeskScreen(
+                                          schoolSlug: slug, courses: courses),
+                                    ),
+                                  );
+                                },
+                              );
+                            }
+                            final String slug = postUtmeOnly[i - available.length];
                             final (String short, String full) =
                                 kUniversitySchools[slug] ?? (slug.toUpperCase(), slug);
-                            final List<UniCourse> courses = schools[slug]!;
-                            return Card(
-                              margin: const EdgeInsets.only(bottom: 10),
-                              elevation: 0,
-                              color: context.card,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12)),
-                              child: ListTile(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12)),
-                                leading: Container(
-                                  width: 44,
-                                  height: 44,
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    color: context.selectionBlue
-                                        .withValues(alpha: 0.15),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Text(
-                                    short.length <= 5 ? short : short.substring(0, 4),
-                                    style: RenanceText.labelMono.copyWith(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w700,
-                                        color: context.ink),
-                                  ),
-                                ),
-                                title: Text(short,
-                                    style: RenanceText.bodyMedium
-                                        .copyWith(fontWeight: FontWeight.w600)),
-                                subtitle: Text(full,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: RenanceText.caption.copyWith(
-                                        color: context.textSecondary)),
-                                trailing: Text('${courses.length} packs',
-                                    style: RenanceText.labelMono.copyWith(
-                                        fontSize: 11,
-                                        color: context.textSecondary)),
-                                onTap: () => Navigator.of(context).push(
-                                  MaterialPageRoute<void>(
-                                    builder: (_) => UniversityDeskScreen(
-                                        schoolSlug: slug, courses: courses),
-                                  ),
-                                ),
-                              ),
+                            return _PickerCard(
+                              slug: slug,
+                              short: short,
+                              full: full,
+                              trailing: 'Post-UTME only',
+                              locked: true,
+                              onTap: null,
                             );
                           },
                         ),
@@ -220,11 +260,74 @@ class UniversityPickerScreen extends StatelessWidget {
   }
 }
 
+class _PickerCard extends StatelessWidget {
+  const _PickerCard({
+    required this.slug,
+    required this.short,
+    required this.full,
+    required this.trailing,
+    required this.onTap,
+    this.locked = false,
+  });
+
+  final String slug;
+  final String short;
+  final String full;
+  final String trailing;
+  final VoidCallback? onTap;
+  final bool locked;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 10),
+      elevation: 0,
+      color: locked ? context.cardLow : context.card,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ListTile(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        onTap: onTap,
+        enabled: onTap != null,
+        leading: Container(
+          width: 44,
+          height: 44,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: locked
+                ? context.surfaceContainer
+                : context.selectionBlue.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Text(
+            short.length <= 5 ? short : short.substring(0, 4),
+            style: RenanceText.labelMono.copyWith(
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+                color: locked ? context.textSecondary : context.ink),
+          ),
+        ),
+        title: Text(short,
+            style: RenanceText.bodyMedium
+                .copyWith(fontWeight: FontWeight.w600)),
+        subtitle: Text(full,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: RenanceText.caption.copyWith(
+                color: context.textSecondary)),
+        trailing: Text(trailing,
+            style: RenanceText.labelMono.copyWith(
+                fontSize: 11,
+                color: context.textSecondary)),
+      ),
+    );
+  }
+}
+
 // ------------------------------------------------------------------ desk
 
-/// One school's course desk: semester course banks plus the Post-UTME
-/// past-question section, each with on-device download state and the
-/// Part/Random practice sheet.
+/// One school's course desk: the semester course banks, each with
+/// on-device download state and the Part/Random practice sheet. (Post-
+/// UTME prep banks moved to their own desk, the founder's fourth focus.)
 class UniversityDeskScreen extends StatefulWidget {
   const UniversityDeskScreen({
     super.key,
@@ -240,11 +343,8 @@ class UniversityDeskScreen extends StatefulWidget {
 }
 
 class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
-  List<UniCourse> get _courses => widget.courses;
-  List<UniCourse> get _semesterCourses =>
-      _courses.where((UniCourse c) => !c.isPostUtme).toList();
-  List<UniCourse> get _postUtmeCourses =>
-      _courses.where((UniCourse c) => c.isPostUtme).toList();
+  List<UniCourse> get _courses =>
+      widget.courses.where((UniCourse c) => !c.isPostUtme).toList();
 
   (String, String) get _schoolNames =>
       kUniversitySchools[widget.schoolSlug] ??
@@ -287,8 +387,7 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
                           style: RenanceText.bodyBase
                               .copyWith(color: context.textSecondary)),
                       const SizedBox(height: 20),
-                      if (_semesterCourses.isEmpty &&
-                          _postUtmeCourses.isEmpty)
+                      if (_courses.isEmpty)
                         Padding(
                           padding: const EdgeInsets.symmetric(vertical: 48),
                           child: Center(
@@ -297,21 +396,9 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
                                 style: RenanceText.bodySecondary),
                           ),
                         ),
-                      if (_semesterCourses.isNotEmpty) ...<Widget>[
+                      if (_courses.isNotEmpty) ...<Widget>[
                         _sectionHeader(context, 'Course Quizzes'),
-                        for (final UniCourse c in _semesterCourses)
-                          _CourseTile(
-                            course: c,
-                            downloaded:
-                                student.downloaded.contains(c.exam.code),
-                            onOpen: () => _openPractice(c),
-                            onDownload: () => sync.downloadExam(c.exam),
-                          ),
-                      ],
-                      if (_postUtmeCourses.isNotEmpty) ...<Widget>[
-                        const SizedBox(height: 20),
-                        _sectionHeader(context, 'Post-UTME Past Questions'),
-                        for (final UniCourse c in _postUtmeCourses)
+                        for (final UniCourse c in _courses)
                           _CourseTile(
                             course: c,
                             downloaded:
@@ -339,15 +426,21 @@ class _UniversityDeskScreenState extends State<UniversityDeskScreen> {
       );
 
   void _openPractice(UniCourse c) {
-    showModalBottomSheet<void>(
-      context: context,
-      backgroundColor: context.card,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      ),
-      builder: (BuildContext sheetContext) => _PracticeSheet(course: c),
-    );
+    showPracticeSheet(context, c);
   }
+}
+
+/// Opens the Part/Random practice sheet for a banked course. Public so
+/// the Post UTME desk reuses the exact same sheet.
+void showPracticeSheet(BuildContext context, UniCourse course) {
+  showModalBottomSheet<void>(
+    context: context,
+    backgroundColor: context.card,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+    ),
+    builder: (BuildContext sheetContext) => _PracticeSheet(course: course),
+  );
 }
 
 /// One course row: icon, label, question count, download state.

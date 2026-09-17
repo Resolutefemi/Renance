@@ -38,28 +38,28 @@ const FEATURES = [
     tone: 'blue',
     glow: 'rgba(59,130,246,0.16)',
     title: 'Server-graded CBT papers',
-    body: 'Every mock is marked on the server with sealed answer keys — the same doctrine real exam bodies use. No browser tricks, no self-marking: your score is honest even when the network drops.',
+    body: 'Every mock is marked on the server with sealed answer keys, the same doctrine real exam bodies use. No browser tricks, no self-marking: your score is honest even when the network drops.',
   },
   {
     icon: 'event_repeat',
     tone: 'violet',
     glow: 'rgba(139,92,246,0.16)',
     title: 'Spaced review that plans itself',
-    body: 'Topics you miss enter an SM-2 spaced-repetition queue and return exactly when you would forget them. Clear the queue, keep the knowledge — no planner to maintain.',
+    body: 'Topics you miss enter an SM-2 spaced-repetition queue and return exactly when you would forget them. Clear the queue, keep the knowledge, no planner to maintain.',
   },
   {
     icon: 'record_voice_over',
     tone: 'teal',
     glow: 'rgba(20,184,166,0.16)',
     title: 'Voice flashcards',
-    body: 'Decks that read themselves aloud on your phone — drill while walking, cooking or commuting. Leitner-boxed so hard cards come back sooner and easy ones fade away.',
+    body: 'Decks that read themselves aloud on your phone, so you can drill while walking, cooking or commuting. Leitner-boxed so hard cards come back sooner and easy ones fade away.',
   },
   {
     icon: 'auto_stories',
     tone: 'emerald',
     glow: 'rgba(16,185,129,0.16)',
     title: 'The JAMB novel, question by question',
-    body: 'The Lekki Headmaster ships as an opt-in question set inside every Use of English mock. Switch it on when you are ready — exactly like the hall asks.',
+    body: 'The Lekki Headmaster ships as an opt-in question set inside every Use of English mock. Switch it on when you are ready, exactly like the hall asks.',
   },
   {
     icon: 'battery_saver',
@@ -81,7 +81,7 @@ const STEPS = [
   {
     icon: 'how_to_reg',
     title: 'Register in 10 seconds',
-    body: 'Username and password only — no email, no data bundle wasted on forms. Set your target exam and year, and your desk is ready.',
+    body: 'Email and password only, no forms to drown in. Set your target exam and year, and your desk is ready.',
   },
   {
     icon: 'tune',
@@ -277,7 +277,7 @@ export default function Landing() {
                 </h2>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/70">
                   Every pack carries the year it was sat, the options, the sealed answer key and the
-                  worked explanation — harvested, cleaned and organised so you practise the real
+                  worked explanation, harvested, cleaned and organised so you practise the real
                   thing, not a paraphrase.
                 </p>
               </div>
@@ -321,7 +321,7 @@ export default function Landing() {
             Everything a serious candidate needs
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-on-surface-variant">
-            Not a quiz bank with ads glued on — a complete study companion that remembers what you
+            Not a quiz bank with ads glued on, but a complete study companion that remembers what you
             missed and schedules the fix.
           </p>
         </Reveal>
@@ -432,7 +432,7 @@ export default function Landing() {
                   Reading “The Lekki Headmaster”?
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/75">
-                  JAMB&apos;s recommended text ships inside Renance as a proper question set — fifty
+                  JAMB&apos;s recommended text ships inside Renance as a proper question set: fifty
                   questions across all twelve chapters, each with the sealed answer and a worked
                   explanation. Switch it on in Mock Setup when you are ready; leave it off while you
                   are still reading.
@@ -517,7 +517,7 @@ export default function Landing() {
               </h2>
               <p className="mx-auto mt-3 max-w-lg text-[15px] leading-relaxed text-white/75">
                 Create a free account and sit your first server-graded paper in the next two
-                minutes — {fmt(totalQuestions)}+ past questions are waiting.
+                minutes, {fmt(totalQuestions)}+ past questions are waiting.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
                 <Link

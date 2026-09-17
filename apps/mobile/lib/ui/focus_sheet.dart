@@ -60,8 +60,14 @@ class _FocusSheetState extends State<FocusSheet> {
       server: 'NECO',
     ),
     _FocusOption(
+      icon: Icons.fact_check,
+      title: 'Post UTME',
+      subtitle: 'School screening past questions',
+      server: 'POST-UTME',
+    ),
+    _FocusOption(
       icon: Icons.account_balance,
-      title: 'Tertiary institution',
+      title: 'School Desk',
       subtitle: 'Undergraduate semester exams',
       server: 'University Modules',
     ),
@@ -220,7 +226,7 @@ class _FocusSheetState extends State<FocusSheet> {
                 selected ? context.selectionBlue : context.card,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: selected ? Colors.black : context.outlineLight,
+              color: selected ? context.primary : context.outlineLight,
               width: selected ? 1.6 : 1,
             ),
             boxShadow: selected
@@ -239,13 +245,13 @@ class _FocusSheetState extends State<FocusSheet> {
                 height: 44,
                 decoration: BoxDecoration(
                   color: selected
-                      ? Colors.black
+                      ? context.primary
                       : context.cardLow,
                   shape: BoxShape.circle,
                 ),
                 child: Icon(t.icon,
                     size: 22,
-                    color: selected ? Colors.white : context.ink),
+                    color: selected ? context.onPrimary : context.ink),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -261,8 +267,8 @@ class _FocusSheetState extends State<FocusSheet> {
                 ),
               ),
               if (selected)
-                const Icon(Icons.check_circle,
-                    size: 20, color: Colors.black),
+                Icon(Icons.check_circle,
+                    size: 20, color: context.primary),
             ],
           ),
         ),
@@ -309,7 +315,7 @@ class _YearChip extends StatelessWidget {
               : context.cardLow,
           borderRadius: BorderRadius.circular(999),
           border: Border.all(
-            color: selected ? Colors.black : Colors.transparent,
+            color: selected ? context.primary : Colors.transparent,
             width: 1.4,
           ),
         ),

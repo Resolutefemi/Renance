@@ -143,11 +143,12 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                         width: 34,
                         height: 34,
                         alignment: Alignment.center,
-                        decoration: const BoxDecoration(
-                            color: Colors.black, shape: BoxShape.circle),
-                        child: const Text('Y',
+                        decoration: BoxDecoration(
+                            color: context.inverseChip,
+                            shape: BoxShape.circle),
+                        child: Text('Y',
                             style: TextStyle(
-                                color: Colors.white,
+                                color: context.onInverseChip,
                                 fontSize: 13,
                                 fontWeight: FontWeight.w700)),
                       ),
@@ -305,7 +306,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                     alignment: Alignment.center,
                                     decoration: BoxDecoration(
                                       color: mine
-                                          ? Colors.black
+                                          ? context.primary
                                           : context.cardLow,
                                       shape: BoxShape.circle,
                                     ),
@@ -315,7 +316,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                           fontSize: 14,
                                           fontWeight: FontWeight.w700,
                                           color: mine
-                                              ? Colors.white
+                                              ? context.onPrimary
                                               : context.ink),
                                     ),
                                   ),
@@ -334,12 +335,12 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                       width: 28,
                                       height: 28,
                                       alignment: Alignment.center,
-                                      decoration: const BoxDecoration(
-                                          color: Colors.black,
+                                      decoration: BoxDecoration(
+                                          color: context.primary,
                                           shape: BoxShape.circle),
-                                      child: const Text('Y',
+                                      child: Text('Y',
                                           style: TextStyle(
-                                              color: Colors.white,
+                                              color: context.onPrimary,
                                               fontSize: 11,
                                               fontWeight: FontWeight.w700)),
                                     ),

@@ -91,7 +91,7 @@ func NewServer(cfg *config.Config, log *slog.Logger, st *store.Store, lib *cbtda
         s := &Server{
                 cfg: cfg, log: log, store: st, lib: lib, engine: eng, syncer: sync, keys: keys,
                 allowed: map[string]struct{}{
-                        "JAMB": {}, "WAEC": {}, "NECO": {}, "University Modules": {},
+                        "JAMB": {}, "WAEC": {}, "NECO": {}, "POST-UTME": {}, "University Modules": {},
                 },
         }
         // Google sign-in is OPTIONAL per deployment: unset GOOGLE_CLIENT_ID

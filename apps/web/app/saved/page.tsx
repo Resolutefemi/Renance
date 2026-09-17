@@ -101,8 +101,8 @@ export default function SavedQuestionsPage() {
               {search ? 'Nothing matches that search.' : 'No saved questions yet.'}
             </p>
             <p className="mt-1.5 text-[13px] leading-relaxed text-on-surface-variant">
-              Tap <span className="font-semibold text-on-surface">Save</span> on any explanation sheet — or the
-              bookmark in the Past-Questions reader — and the question lands here.
+              Tap <span className="font-semibold text-on-surface">Save</span> on any explanation sheet, or the
+              bookmark in the Past-Questions reader, and the question lands here.
             </p>
             <Link
               href="/study-past-questions"
