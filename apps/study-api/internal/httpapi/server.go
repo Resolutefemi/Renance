@@ -3,8 +3,8 @@
 // Routes (all JSON):
 //
 //      GET    /healthz
-//      POST   /auth/register          {username, password}   ← THE ONLY FIELDS
-//      POST   /auth/login             {username, password}
+//      POST   /auth/register          {email, password} (web) or {username, password} (legacy mobile)
+//      POST   /auth/login             {email, password} or {username, password}
 //      GET    /me
 //      GET    /me/attempts           -> paper history (newest first)
 //      GET    /me/gamification     -> streaks, XP, badges (zero state on first launch)

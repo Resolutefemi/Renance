@@ -7,11 +7,11 @@ import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { setSession } from '@/lib/session';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
-import { PersonIcon, LockIcon, ArrowIcon, EyeIcon } from '@/components/icons';
+import { MailIcon, LockIcon, ArrowIcon, EyeIcon } from '@/components/icons';
 
 export default function LoginPage() {
   const router = useRouter();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -41,7 +41,7 @@ export default function LoginPage() {
     try {
       const res = await api<{ token: string; user: { id: string; username: string; profileCompleted: boolean } }>(
         '/auth/login',
-        { method: 'POST', body: { username, password }, auth: false },
+        { method: 'POST', body: { email, password }, auth: false },
       );
       setSession(res.token, res.user);
       router.replace('/dashboard');
@@ -73,18 +73,19 @@ export default function LoginPage() {
           className="flex w-full flex-col gap-4 rounded-xl bg-surface-container-lowest p-6 shadow-sm"
         >
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="username" className="text-sm text-on-surface-variant">
-              Username
+            <label htmlFor="email" className="text-sm text-on-surface-variant">
+              Email address
             </label>
             <div className="group relative flex items-center">
-              <PersonIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
+              <MailIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
               <input
-                id="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                autoComplete="username"
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
                 required
-                placeholder="yourusername"
+                placeholder="you@example.com"
                 className="h-12 w-full rounded-lg bg-surface-container-low pl-11 pr-3 text-sm text-on-surface transition-all placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
