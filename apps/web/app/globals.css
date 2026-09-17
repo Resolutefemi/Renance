@@ -559,31 +559,20 @@ html[data-rail='collapsed'] {
   100% { background-position: 220% 50%; }
 }
 
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.45rem 1rem 0.45rem 0.6rem;
-  border-radius: 9999px;
-  background: var(--glass-bg);
-  -webkit-backdrop-filter: blur(18px) saturate(1.7);
-  backdrop-filter: blur(18px) saturate(1.7);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 24px -12px rgba(17, 28, 45, 0.2);
-  font-size: 0.8rem; font-weight: 600; color: var(--ink);
+/* The explanation sheet's gradient section label (blue → violet), the
+   web cut of the app's ShaderMask text. */
+.explanation-gradient-label {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
-.hero-badge-dot {
-  position: relative;
-  width: 0.5rem; height: 0.5rem; border-radius: 9999px;
-  background: var(--pop-emerald);
-}
-.hero-badge-dot::after {
-  content: ''; position: absolute; inset: -4px;
-  border-radius: 9999px;
-  border: 1.5px solid var(--pop-emerald);
-  animation: badge-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-@keyframes badge-ping {
-  0% { transform: scale(0.6); opacity: 1; }
-  80%, 100% { transform: scale(1.7); opacity: 0; }
+
+/* Material Symbols' FILL axis: solid glyph on demand (Tailwind's
+   fill-current only touches SVG, not the variable font). */
+.icon-fill {
+  font-variation-settings: 'FILL' 1;
 }
 
 .hero-cta-primary {

@@ -92,6 +92,23 @@ async function fetchStatic<T>(path: string): Promise<T> {
 }
 
 /**
+ * Fetch a raw bank pack by its manifest code (`waec-biology-bank`,
+ * `uni-futa-cos101`, …), static shelf first, API second. The Study
+ * surfaces read banks directly — no compose machinery, no session —
+ * so the reader works signed-out and offline exactly like practice.
+ */
+export async function fetchBankBundle(code: string): Promise<Bundle> {
+  const manifest = await fetchManifest().catch(() => null);
+  const exam = manifest?.exams.find((e) => e.code === code);
+  if (exam) return fetchBundle(exam);
+  try {
+    return await fetchStatic<Bundle>(`/bundles/${code}.json`);
+  } catch {
+    return api<Bundle>(`/bundles/${code}`, { noRedirect: true });
+  }
+}
+
+/**
  * Cache keys live under the renance.bundle.* namespace in IndexedDB
  * (the old localStorage namespace, migrated once at boot). Bundles are
  * multi-megabyte JSON, localStorage blew the ~5MB origin quota on the
