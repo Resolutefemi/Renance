@@ -23,6 +23,7 @@ import PageBar from '@/components/page-bar';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import { apiImg, QText } from '@/lib/qtext';
+import ExplanationSheet, { type ExplanationData } from '@/components/explanation-sheet';
 
 interface ReviewQuestion {
   questionId: string;
@@ -80,6 +81,9 @@ function ReviewInner() {
   const [review, setReview] = useState<ReviewPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState<Filter>('wrong');
+  // The Myschool explanation sheet rides on the visible list: the
+  // pager keeps one sheet open across questions.
+  const [sheetIdx, setSheetIdx] = useState<number | null>(null);
 
   useEffect(() => {
     if (!attemptId) return;
@@ -274,11 +278,52 @@ function ReviewInner() {
                   Watch the worked video
                 </a>
               )}
+              {/* View Explanation — the school app's card footer button;
+                  it opens the full explanation sheet at this card. */}
+              <button
+                onClick={() => setSheetIdx(review.questions.indexOf(q))}
+                className="mt-3.5 flex h-11 w-full items-center justify-center gap-2 rounded-[10px] bg-accent-ink text-[13.5px] font-bold text-white transition hover:opacity-90 active:scale-[0.99]"
+              >
+                <span className="material-symbols-outlined text-[17px]">auto_stories</span>
+                View Explanation
+              </button>
             </article>
           );
         })}
       </div>
       </div>
+
+      {/* the explanation sheet — Save, correct-option check, Report,
+          Prev/Next and Get Renance's AI Explanation, Myschool's exact
+          positions, anchored to the graded attempt for the AI pill */}
+      {sheetIdx != null && review.questions[sheetIdx] && (
+        <ExplanationSheet
+          open
+          onClose={() => setSheetIdx(null)}
+          attemptId={review.attemptId}
+          number={sheetIdx + 1}
+          question={
+            {
+              questionId: review.questions[sheetIdx].questionId,
+              code: review.code,
+              title: review.title || review.code,
+              stem: review.questions[sheetIdx].stem,
+              passage: review.questions[sheetIdx].passage,
+              image: review.questions[sheetIdx].image,
+              options: review.questions[sheetIdx].options ?? {},
+              correct: review.questions[sheetIdx].correct,
+              selected: review.questions[sheetIdx].selected ?? '',
+              explanation: review.questions[sheetIdx].explanation,
+              topic: review.questions[sheetIdx].topic,
+              year: review.questions[sheetIdx].year,
+            } satisfies ExplanationData
+          }
+          onPrevious={sheetIdx > 0 ? () => setSheetIdx(sheetIdx - 1) : undefined}
+          onNext={
+            sheetIdx < review.questions.length - 1 ? () => setSheetIdx(sheetIdx + 1) : undefined
+          }
+        />
+      )}
       <SideNav />
       <BottomNav />
     </main>

@@ -21,6 +21,7 @@ import {
 } from '@/lib/university';
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
+import AccountSheet from '@/components/account-sheet';
 
 interface Profile {
   fullName: string;
@@ -116,6 +117,9 @@ export default function DashboardPage() {
   const [bootNonce, setBootNonce] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [moreOpen, setMoreOpen] = useState(false);
+  // The Myschool-cut account sheet: the header avatar (top-RHS) opens
+  // the identity + menu sheet instead of jumping straight to /profile.
+  const [accountOpen, setAccountOpen] = useState(false);
   // Today's daily challenge (JAMB desk): the tile deep-links into the
   // sprint, or into the setup when the API has no challenge for us.
   const [daily, setDaily] = useState<DailyTileInfo | null>(null);
@@ -369,14 +373,15 @@ export default function DashboardPage() {
               <span className="material-symbols-outlined fill-current text-[20px] text-accent-amber">local_fire_department</span>
               <span className="font-mono text-[13px] text-on-surface">{streak}</span>
             </div>
-            <Link
-              href="/profile"
-              aria-label="Your profile"
-              title="Your profile"
+            <button
+              type="button"
+              onClick={() => setAccountOpen(true)}
+              aria-label="Open account menu"
+              title="Account"
               className="flex h-8 w-8 items-center justify-center rounded-full border border-outline-light bg-surface-container-high text-xs font-semibold text-on-surface transition hover:ring-2 hover:ring-primary"
             >
               {(me.profile?.fullName || me.user.username || 'R').slice(0, 1).toUpperCase()}
-            </Link>
+            </button>
           </div>
         </div>
       </header>
@@ -451,7 +456,7 @@ export default function DashboardPage() {
             <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
               <LauncherTile icon="description" label="Exams" href={setupHref} />
               <LauncherTile icon="inventory_2" label="Question Pack" href="/packs" />
-              <LauncherTile icon="local_library" label="Study" href="/study" />
+              <LauncherTile icon="local_library" label="Study" href="/study-past-questions" />
               <LauncherTile icon="history" label="Review Due" badge={reviewDueCount > 0 ? reviewDueCount : undefined} href="/review" />
             </div>
           </section>
@@ -534,6 +539,10 @@ export default function DashboardPage() {
       {/* More sheet: only the less-used tools live here now, everything a
           student touches daily sits on the home grid (more_features_sheet_light). */}
       {moreOpen && <MoreSheet onClose={() => setMoreOpen(false)} />}
+
+      {/* The account sheet rides on every desk: identity + menu at the
+          top-RHS, the school app's way. */}
+      <AccountSheet open={accountOpen} onClose={() => setAccountOpen(false)} />
 
       <SideNav />
       <BottomNav />
@@ -644,8 +653,8 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
           <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
             <LauncherTile icon="assignment" label="Courses" href={`/university/${slug}`} />
             <LauncherTile icon="fact_check" label="Quizzes" href={`/university/${slug}`} />
+            <LauncherTile icon="local_library" label="Study" href="/study-past-questions" />
             <LauncherTile icon="rate_review" label="Review" href="/review" />
-            <LauncherTile icon="import_contacts" label="Notes" href="/notes" />
           </div>
         </section>
         <section className="mt-4 lg:mt-2">
@@ -663,9 +672,9 @@ function UniversityHome({ onMore, profile }: { onMore: () => void; profile?: Pro
       <section className="mt-4">
         <h3 className="text-sm text-on-surface-variant">Tools</h3>
         <div className="mt-3 launcher-grid grid grid-cols-4 gap-3 sm:max-w-md lg:max-w-none">
+          <LauncherTile icon="import_contacts" label="Notes" href="/notes" />
           <LauncherTile icon="download" label="Downloads" href="/downloads" />
           <LauncherTile icon="smart_toy" label="Tutor" inverse href="/review" />
-          <LauncherTile icon="menu_book" label="Lessons" href="/lessons" />
           <LauncherTile icon="more_horiz" label="More" muted onMore={onMore} />
         </div>
       </section>
@@ -680,6 +689,10 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
   // remain in here. Progress and Certificates were cut (founder call);
   // the GPA calculator lives on the University desk only.
   const items = [
+    { icon: 'insights', label: 'Performance Analysis', href: '/performance' },
+    { icon: 'bookmark', label: 'Saved Questions', href: '/saved' },
+    { icon: 'sync', label: 'Update Questions', href: '/update-questions' },
+    { icon: 'auto_stories', label: 'Study Resources', href: '/study' },
     { icon: 'notifications', label: 'Notifications', href: '/notifications' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
     { icon: 'auto_awesome', label: 'AI Generator', href: '/ai-generator' },

@@ -182,25 +182,18 @@ export default function Landing() {
           </div>
 
           <div className="mx-auto max-w-3xl text-center">
-            <div className="hero-enter hero-enter-1">
-              <span className="hero-badge">
-                <span className="hero-badge-dot" />
-                Free forever · JAMB · WAEC · NECO · University
-              </span>
-            </div>
-
-            <h1 className="hero-headline hero-enter hero-enter-2 mt-6 text-on-surface">
+            <h1 className="hero-headline hero-enter hero-enter-1 text-on-surface">
               Your Guide to{' '}
               <span className="hero-gradient-text">Academic Success</span>
             </h1>
 
-            <p className="hero-enter hero-enter-3 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
+            <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
               {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, server-graded
               CBT mocks, a review queue that plans itself, voice flashcards and the JAMB novel built
               in. Free, on Android, iOS, Windows, macOS and the web.
             </p>
 
-            <div className="hero-enter hero-enter-4 mt-9 flex flex-wrap items-center justify-center gap-3.5">
+            <div className="hero-enter hero-enter-3 mt-9 flex flex-wrap items-center justify-center gap-3.5">
               <OpenAppButton className="hero-cta-primary" />
               <Link href="/subjects/" className="hero-cta-secondary">
                 Browse {exams.length} question packs
@@ -216,7 +209,7 @@ export default function Landing() {
               </Link>
             </div>
 
-            <p className="hero-enter hero-enter-5 mt-5 font-mono text-xs text-on-surface-variant">
+            <p className="hero-enter hero-enter-4 mt-5 font-mono text-xs text-on-surface-variant">
               username + password only · no email required
             </p>
           </div>

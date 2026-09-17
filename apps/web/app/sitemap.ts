@@ -19,6 +19,7 @@ const PUBLIC_ROUTES: Array<{ path: string; priority: number; freq: 'daily' | 'we
   { path: '/lessons/', priority: 0.9, freq: 'daily' },
   { path: '/subjects/', priority: 0.9, freq: 'weekly' },
   { path: '/university/', priority: 0.9, freq: 'weekly' },
+  { path: '/study-past-questions/', priority: 0.8, freq: 'weekly' },
   { path: '/career-bridge/', priority: 0.8, freq: 'weekly' },
   { path: '/faq/', priority: 0.7, freq: 'monthly' },
   { path: '/login/', priority: 0.4, freq: 'monthly' },
