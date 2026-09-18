@@ -142,6 +142,7 @@ class _ExamScreenState extends State<ExamScreen> {
                 controller: c,
                 mmss: _mmss,
                 hhmmss: _hhmmss,
+                daily: widget.daily,
               ),
             ),
           ),
@@ -781,7 +782,7 @@ class _ExamHeader extends StatelessWidget {
           // LHS — the quiz name, never the subject receipt.
           Expanded(
             child: Text(
-              widget.daily ? 'Daily Quiz' : bundle.title,
+              daily ? 'Daily Quiz' : bundle.title,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: RenanceText.bodyMedium.copyWith(
@@ -1053,11 +1054,15 @@ class _Player extends StatelessWidget {
     required this.controller,
     required this.mmss,
     required this.hhmmss,
+    this.daily = false,
   });
 
   final ExamController controller;
   final String Function(int) mmss;
   final String Function(int) hhmmss;
+
+  /// Threads the Daily Challenge sprint flag down to the exam header.
+  final bool daily;
 
   /// The Submit affordance shared by the header pill and the bottom
   /// bar: confirm when anything is unanswered, then grade.
@@ -1159,7 +1164,7 @@ class _Player extends StatelessWidget {
           controller: controller,
           mmss: mmss,
           hhmmss: hhmmss,
-          daily: widget.daily,
+          daily: daily,
         ),
         _SubjectStrip(controller: controller),
         // Scrollable question area ---------------------------------------
