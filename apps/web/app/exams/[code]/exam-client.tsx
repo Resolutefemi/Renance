@@ -161,9 +161,10 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   const [paused, setPaused] = useState<ActiveExam | null>(null);
   // Daily challenge (?daily=1): today's sprint description from the API.
   const [daily, setDaily] = useState<DailyInfo | null>(null);
-  // Composite UTME mocks run in exam mode: answers lock once picked
-  // (the same rule as the real CBT hall and jamb-cbt-web's exam mode).
-  // Custom/pick papers compose server-side but play in practice mode.
+  // Composite UTME mocks run in exam mode (full CBT chrome, no smart
+  // walk); answers stay editable there too — the founder pulled the
+  // lock, options are changeable on every quiz page. Custom/pick
+  // papers compose server-side but play in practice mode.
   const examMode = isMockPaperCode(code);
   const [calcOpen, setCalcOpen] = useState(false);
   // The manifest feeds the instructions page's Summary (per-subject
@@ -565,10 +566,10 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     return `${h}:${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
   };
 
-  /** Records an answer: latency telemetry + fatigue assessment first. */
+  /** Records an answer: latency telemetry + fatigue assessment first.
+   *  Answers stay editable everywhere — CBT hall or practice, a picked
+   *  option can always be swapped for another before Submit. */
   const pick = (questionId: string, letter: string) => {
-    // Exam mode (UTME mock): the hall rule, a pick is final.
-    if (examMode && answers[questionId]) return;
     if (!answers[questionId] && letter !== '') {
       const latencies = [...latenciesRef.current, Date.now() - shownAtRef.current];
       latenciesRef.current = latencies;
@@ -878,12 +879,6 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               </li>
             ))}
           </ul>
-          {examMode && (
-            <p className="mt-3 rounded-xl bg-accent-ink/5 px-4 py-2.5 text-[12.5px] text-on-surface-variant">
-              <span className="font-semibold text-on-surface">Exam mode:</span> a picked answer locks instantly,
-              exactly like the CBT hall.
-            </p>
-          )}
           <p className="mt-4 border-t border-outline-variant/50 pt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">
             keyboard · desktop
           </p>
@@ -977,7 +972,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 <p className="text-[15px] font-bold text-on-surface">Test Mode</p>
                 <p className="text-[12px] text-on-surface-variant">
                   {examMode
-                    ? 'Full test mode: answers lock once picked, the clock auto-submits at zero.'
+                    ? 'Full test mode: the clock auto-submits at zero, answers stay editable.'
                     : timerOverride != null
                       ? `Practice mode: ${timerOverride} minutes on the clock, answers stay editable.`
                       : bundle.durationMinutes != null
@@ -1450,44 +1445,70 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           {/* The subject being attempted — one slim strip UNDER the
               command bar, full papers only (JAMB mock + composed combos).
               It carries the current subject's name, its answered count
-              and a hairline progress bar; the command bar itself stays
-              short. Single-subject quizzes keep no strip at all. */}
+              and a hairline progress bar. < > sit at the strip's two
+              ends and jump straight to the previous / next subject, so
+              a student can start the paper with any subject they like.
+              The command bar itself stays short. Single-subject quizzes
+              keep no strip at all. */}
           {bundle.sections && bundle.sections.length > 1 && (() => {
+            const sections = bundle.sections;
+            const starts: number[] = [];
             let walk = 0;
-            for (const sec of bundle.sections) {
-              const start = walk;
+            let secIdx = 0;
+            sections.forEach((sec, i) => {
+              starts.push(walk);
+              if (current >= walk) secIdx = i;
               walk += sec.questionIds.length;
-              if (current < start + sec.questionIds.length) {
-                const answered = sec.questionIds.filter((id) => answers[id]).length;
-                const total = sec.questionIds.length;
-                const pct = total ? Math.round((answered / total) * 100) : 0;
-                return (
-                  <div className="border-t border-outline-variant/25 bg-surface-container-lowest/60">
-                    <div className="mx-auto w-full px-4 sm:px-6 md:px-8">
-                      <div className="flex items-center gap-2.5 py-1.5">
-                        <span className="material-symbols-outlined shrink-0 text-[15px] text-primary">subject</span>
-                        <span className="shrink-0 text-[12.5px] font-semibold text-on-surface">
-                          {subjectName(sec.subject)}
-                        </span>
-                        <span className="shrink-0 font-mono text-[10.5px] text-outline">
-                          {answered}/{total}
-                        </span>
-                        <span className="h-[3px] min-w-8 flex-1 overflow-hidden rounded-full bg-surface-container-high">
-                          <span
-                            className="block h-full rounded-full bg-primary transition-[width] duration-300"
-                            style={{ width: `${pct}%` }}
-                          />
-                        </span>
-                        <span className="shrink-0 font-mono text-[10.5px] text-outline">
-                          Q{current - start + 1}/{total}
-                        </span>
-                      </div>
-                    </div>
+            });
+            const sec = sections[secIdx];
+            const start = starts[secIdx];
+            const answered = sec.questionIds.filter((id) => answers[id]).length;
+            const total = sec.questionIds.length;
+            const pct = total ? Math.round((answered / total) * 100) : 0;
+            const chev =
+              'flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface transition hover:bg-surface-container-low disabled:opacity-35 active:scale-[0.95]';
+            return (
+              <div className="border-t border-outline-variant/25 bg-surface-container-lowest/60">
+                <div className="mx-auto w-full px-4 sm:px-6 md:px-8">
+                  <div className="flex items-center gap-2 py-1.5">
+                    <button
+                      onClick={() => goTo(starts[secIdx - 1])}
+                      disabled={secIdx === 0}
+                      aria-label="Previous subject"
+                      title="Previous subject"
+                      className={chev}
+                    >
+                      <span className="material-symbols-outlined text-[16px]">chevron_left</span>
+                    </button>
+                    <span className="material-symbols-outlined shrink-0 text-[15px] text-primary">subject</span>
+                    <span className="shrink-0 text-[12.5px] font-semibold text-on-surface">
+                      {subjectName(sec.subject)}
+                    </span>
+                    <span className="shrink-0 font-mono text-[10.5px] text-outline">
+                      {answered}/{total}
+                    </span>
+                    <span className="h-[3px] min-w-8 flex-1 overflow-hidden rounded-full bg-surface-container-high">
+                      <span
+                        className="block h-full rounded-full bg-primary transition-[width] duration-300"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </span>
+                    <span className="shrink-0 font-mono text-[10.5px] text-outline">
+                      Q{current - start + 1}/{total}
+                    </span>
+                    <button
+                      onClick={() => goTo(starts[secIdx + 1])}
+                      disabled={secIdx === sections.length - 1}
+                      aria-label="Next subject"
+                      title="Next subject"
+                      className={chev}
+                    >
+                      <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+                    </button>
                   </div>
-                );
-              }
-            }
-            return null;
+                </div>
+              </div>
+            );
           })()}
         </div>
       </header>
@@ -1612,18 +1633,14 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           <div className="mt-6 space-y-2.5">
             {Object.entries(question.options ?? {}).map(([letter, text]) => {
               const selected = answers[question.id] === letter;
-              const locked = examMode && Boolean(answers[question.id]) && !selected;
               return (
                 <button
                   key={letter}
                   onClick={() => pick(question.id, letter)}
-                  disabled={locked}
                   className={`flex w-full items-start gap-3.5 rounded-[12px] border px-4 py-3.5 text-left text-sm transition ${
                     selected
                       ? 'border-primary border-[1.6px] bg-selection-blue/45'
-                      : locked
-                        ? 'border-transparent bg-surface-container-low/40 opacity-55'
-                        : 'border-outline-variant bg-card hover:border-outline hover:shadow-sm active:scale-[0.995]'
+                      : 'border-outline-variant bg-card hover:border-outline hover:shadow-sm active:scale-[0.995]'
                   }`}
                 >
                   {/* the radio circle — hollow, ink-filled when picked */}
@@ -1638,21 +1655,10 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                   <span className="flex-1 min-w-0 pt-[1px] text-[15px] leading-snug text-on-surface">
                     <QText html={text} />
                   </span>
-                  {selected && examMode && (
-                    <span className="material-symbols-outlined fill-current text-[16px] text-primary" title="Locked in exam mode">
-                      lock
-                    </span>
-                  )}
                 </button>
               );
             })}
           </div>
-          )}
-          {examMode && answers[question.id] && (
-            <p className="mt-3 flex items-center gap-1.5 text-[11px] text-on-surface-variant">
-              <span className="material-symbols-outlined text-[14px]">lock</span>
-              Exam mode, this answer is locked, exactly like the hall.
-            </p>
           )}
         </div>
       </div>
@@ -1672,7 +1678,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             </button>
             <button
               onClick={() => setNavOpen(true)}
-              className="flex h-9 min-w-0 shrink justify-center gap-1.5 rounded-full bg-primary px-3 text-[12.5px] font-bold text-on-primary shadow-sm transition active:scale-[0.97] md:min-w-[92px] md:shrink-0 md:px-3.5"
+              className="flex h-9 min-w-0 shrink items-center justify-center gap-1.5 rounded-full bg-primary px-3 text-[12.5px] font-bold leading-none text-on-primary shadow-sm transition active:scale-[0.97] md:min-w-[92px] md:shrink-0 md:px-3.5"
               aria-label="Open the question navigator"
             >
               {answeredCount}/{bundle.questionCount}
@@ -1900,7 +1906,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                   action();
                 }}
                 className={`rounded-full px-5 py-2.5 text-[14px] font-bold transition active:scale-[0.97] ${
-                  confirm.danger ? 'bg-error text-on-error-container' : 'bg-primary text-on-primary'
+                  confirm.danger ? 'bg-error text-white' : 'bg-primary text-on-primary'
                 }`}
               >
                 {confirm.confirmLabel}
