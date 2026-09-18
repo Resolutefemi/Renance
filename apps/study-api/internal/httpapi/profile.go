@@ -120,3 +120,37 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
         }
         writeJSON(w, http.StatusOK, resp)
 }
+
+// dailySubjectsRequest is the daily CBT combination picker's payload.
+type dailySubjectsRequest struct {
+        Subjects []string `json:"subjects"`
+}
+
+// handleSetDailySubjects stores the caller's daily subject combination
+// (the first daily tap asks for it; every daily sprint afterwards draws
+// only these subjects). A light endpoint on purpose: the daily picker
+// can run before the full profile modal ever opens, so it must not be
+// forced to echo the whole profile back.
+func (s *Server) handleSetDailySubjects(w http.ResponseWriter, r *http.Request) {
+        uid, err := userIDFrom(r)
+        if err != nil {
+                fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
+                return
+        }
+        var req dailySubjectsRequest
+        if !decodeJSON(w, r, &req) {
+                return
+        }
+        subjects := dailySubjects(req.Subjects)
+        if len(subjects) == 0 {
+                fail(w, http.StatusBadRequest, "invalid_subjects",
+                        "pick at least one subject (slug shapes: letters, digits, dashes)")
+                return
+        }
+        if err := s.store.SetDailySubjects(r.Context(), uid, subjects); err != nil {
+                s.log.Error("daily subjects save failed", "err", err)
+                fail(w, http.StatusInternalServerError, "internal", "could not save the subject combination")
+                return
+        }
+        writeJSON(w, http.StatusOK, map[string]any{"subjects": subjects})
+}

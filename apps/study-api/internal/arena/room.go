@@ -197,3 +197,112 @@ func (h *Hub) JoinRoom(p *Player, code string) {
 
 	h.startMatch(host, p, bucket)
 }
+
+// Challenge invites a specific online student to a duel: the challenger
+// auto-hosts a room scoped to [body] and the target receives a live
+// invite frame carrying the code. Accepting is the ordinary join path
+// (the room's code IS the handshake), so declining is just ignoring it
+// and the RoomTTL janitor logic cleans up behind everyone.
+//
+// Deliverable contract:
+//   - challenger gets "challenge_sent" (with the code to share as a
+//     fallback over any channel) or a typed error
+//   - target gets "challenge" {opponent, code, body} while online
+//
+// A target who is mid-match cannot be invited; a target who is queued
+// or hosting CAN be — their client decides whether to surface the
+// invite, and joining auto-cancels their own lobby through the
+// ordinary JoinRoom guards.
+func (h *Hub) Challenge(p *Player, targetUserID, body string) {
+	body = strings.TrimSpace(body)
+	if body != "" {
+		if _, ok := allowedBodies[body]; !ok {
+			p.Send(Outbound{Type: OutError, ErrCode: ErrUnknownBody, ErrMsg: "unknown exam body " + body})
+			return
+		}
+	}
+	bucket := body
+	if bucket == "" {
+		bucket = anyBucket
+	}
+
+	h.mu.Lock()
+	switch {
+	case h.stopped:
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutError, ErrCode: ErrShuttingDown, ErrMsg: "arena is shutting down"})
+		return
+	case p.match != nil:
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutError, ErrCode: ErrInMatch, ErrMsg: "finish your live match first"})
+		return
+	case p.inBag:
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutError, ErrCode: ErrAlreadyQueued, ErrMsg: "leave the matchmaking queue first (cancel)"})
+		return
+	case p.hosting != nil:
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutError, ErrCode: ErrAlreadyHost, ErrMsg: "cancel your room before challenging again"})
+		return
+	}
+	target, ok := h.players[targetUserID]
+	if !ok || target == p || target.IsBot {
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutError, ErrCode: ErrUnknownPlayer, ErrMsg: "that student is not in the arena right now"})
+		return
+	}
+	if target.match != nil {
+		h.mu.Unlock()
+		p.Send(Outbound{Type: OutError, ErrCode: ErrInMatch, ErrMsg: target.Username + " is already in a live match"})
+		return
+	}
+	targetUsername := target.Username
+	code, err := h.newRoomCodeLocked()
+	if err != nil {
+		h.mu.Unlock()
+		h.log.Error("arena: room code allocation failed", "err", err)
+		p.Send(Outbound{Type: OutError, ErrCode: ErrRoomUnavailable, ErrMsg: "could not allocate a room code, try again"})
+		return
+	}
+	r := &room{code: code, bucket: bucket, host: p, expiresAt: h.clock.Now().Add(h.cfg.RoomTTL)}
+	h.rooms[code] = r
+	p.hosting = r
+	h.mu.Unlock()
+
+	p.Send(Outbound{Type: OutChallengeSent, Code: code, Body: body, Opponent: targetUsername})
+	target.Send(Outbound{Type: OutChallenge, Code: code, Body: body, Opponent: p.Username})
+}
+
+// OnlinePlayer is one live human presence in the arena (the
+// "active players" list behind GET /arena/players).
+type OnlinePlayer struct {
+	UserID   string `json:"userId"`
+	Username string `json:"username"`
+}
+
+// OnlinePlayers lists every attached human who is idle enough to duel:
+// connected, not mid-match, not already waiting in a queue or lobby.
+// The HTTP layer enriches the rows with each student's Ren Points.
+func (h *Hub) OnlinePlayers() []OnlinePlayer {
+	h.mu.Lock()
+	defer h.mu.Unlock()
+	out := make([]OnlinePlayer, 0, len(h.players))
+	for _, p := range h.players {
+		if p.IsBot || p.match != nil || p.inBag || p.hosting != nil {
+			continue
+		}
+		out = append(out, OnlinePlayer{UserID: p.UserID, Username: p.Username})
+	}
+	sortOnline(out)
+	return out
+}
+
+// sortOnline orders the presence list by username so the lobby list is
+// stable between polls.
+func sortOnline(s []OnlinePlayer) {
+	for i := 1; i < len(s); i++ {
+		for j := i; j > 0 && s[j].Username < s[j-1].Username; j-- {
+			s[j], s[j-1] = s[j-1], s[j]
+		}
+	}
+}

@@ -419,6 +419,7 @@ type Profile struct {
         Institution string    `json:"institution"`
         GradeLevel  string    `json:"gradeLevel"`
         Exams       []string  `json:"exams"`
+        Subjects    []string  `json:"subjects"`
         TargetYear  *int      `json:"targetYear,omitempty"`
         Completed   bool      `json:"completed"`
         UpdatedAt   time.Time `json:"-"`
@@ -429,37 +430,45 @@ func (s *Store) UpsertProfile(ctx context.Context, userID string, p *Profile) (*
         if err != nil {
                 return nil, fmt.Errorf("store: marshal exams: %w", err)
         }
+        subjectsJSON, err := json.Marshal(p.Subjects)
+        if err != nil {
+                return nil, fmt.Errorf("store: marshal subjects: %w", err)
+        }
         out := &Profile{}
         err = s.Pool.QueryRow(ctx, `
-                INSERT INTO study.profiles (user_id, full_name, institution, grade_level, exams, target_year, completed, updated_at)
-                VALUES ($1, $2, $3, $4, $5::jsonb, $6, true, now())
+                INSERT INTO study.profiles (user_id, full_name, institution, grade_level, exams, subjects, target_year, completed, updated_at)
+                VALUES ($1, $2, $3, $4, $5::jsonb, $6::jsonb, $7, true, now())
                 ON CONFLICT (user_id) DO UPDATE
                 SET full_name   = EXCLUDED.full_name,
                     institution = EXCLUDED.institution,
                     grade_level = EXCLUDED.grade_level,
                     exams       = EXCLUDED.exams,
+                    subjects    = EXCLUDED.subjects,
                     target_year = EXCLUDED.target_year,
                     completed   = true,
                     updated_at  = now()
-                RETURNING full_name, institution, grade_level, exams, target_year, completed, updated_at`,
-                userID, p.FullName, p.Institution, p.GradeLevel, string(examsJSON), p.TargetYear,
-        ).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &out.TargetYear, &out.Completed, &out.UpdatedAt)
+                RETURNING full_name, institution, grade_level, exams, subjects, target_year, completed, updated_at`,
+                userID, p.FullName, p.Institution, p.GradeLevel, string(examsJSON), string(subjectsJSON), p.TargetYear,
+        ).Scan(&out.FullName, &out.Institution, &out.GradeLevel, &examsJSON, &subjectsJSON, &out.TargetYear, &out.Completed, &out.UpdatedAt)
         if err != nil {
                 return nil, fmt.Errorf("store: upsert profile: %w", err)
         }
         if err := json.Unmarshal(examsJSON, &out.Exams); err != nil {
                 return nil, fmt.Errorf("store: unmarshal exams: %w", err)
         }
+        if err := json.Unmarshal(subjectsJSON, &out.Subjects); err != nil {
+                return nil, fmt.Errorf("store: unmarshal subjects: %w", err)
+        }
         return out, nil
 }
 
 func (s *Store) ProfileByUser(ctx context.Context, userID string) (*Profile, error) {
-        var examsJSON []byte
+        var examsJSON, subjectsJSON []byte
         p := &Profile{}
         err := s.Pool.QueryRow(ctx, `
-                SELECT full_name, institution, grade_level, exams, target_year, completed, updated_at
+                SELECT full_name, institution, grade_level, exams, subjects, target_year, completed, updated_at
                 FROM study.profiles WHERE user_id = $1`, userID,
-        ).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &p.TargetYear, &p.Completed, &p.UpdatedAt)
+        ).Scan(&p.FullName, &p.Institution, &p.GradeLevel, &examsJSON, &subjectsJSON, &p.TargetYear, &p.Completed, &p.UpdatedAt)
         if errors.Is(err, pgx.ErrNoRows) {
                 return nil, nil
         }
@@ -469,7 +478,38 @@ func (s *Store) ProfileByUser(ctx context.Context, userID string) (*Profile, err
         if err := json.Unmarshal(examsJSON, &p.Exams); err != nil {
                 return nil, fmt.Errorf("store: unmarshal exams: %w", err)
         }
+        if err := json.Unmarshal(subjectsJSON, &p.Subjects); err != nil {
+                return nil, fmt.Errorf("store: unmarshal subjects: %w", err)
+        }
         return p, nil
+}
+
+// SetDailySubjects stores ONLY the daily subject combination, leaving
+// the rest of the profile row untouched. A missing profile row seeds a
+// minimal one (the daily picker can run before account setup finishes;
+// the profile modal later fills the rest through UpsertProfile).
+func (s *Store) SetDailySubjects(ctx context.Context, userID string, subjects []string) error {
+        subjectsJSON, err := json.Marshal(subjects)
+        if err != nil {
+                return fmt.Errorf("store: marshal subjects: %w", err)
+        }
+        tag, err := s.Pool.Exec(ctx, `
+                UPDATE study.profiles SET subjects = $2::jsonb, updated_at = now() WHERE user_id = $1`,
+                userID, string(subjectsJSON))
+        if err != nil {
+                return fmt.Errorf("store: set daily subjects: %w", err)
+        }
+        if tag.RowsAffected() == 1 {
+                return nil
+        }
+        _, err = s.Pool.Exec(ctx, `
+                INSERT INTO study.profiles (user_id, full_name, institution, grade_level, exams, subjects, completed, updated_at)
+                VALUES ($1, '', '', '', '[]'::jsonb, $2::jsonb, false, now())`,
+                userID, string(subjectsJSON))
+        if err != nil {
+                return fmt.Errorf("store: seed profile subjects: %w", err)
+        }
+        return nil
 }
 
 // ---------------------------------------------------------- answer keys

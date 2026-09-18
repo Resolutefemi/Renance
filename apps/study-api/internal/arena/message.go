@@ -11,16 +11,17 @@ package arena
 
 // Inbound is one client → arena message (JSON on the socket).
 type Inbound struct {
-        Type   string `json:"type"`             // "queue" | "cancel" | "answer" | "host" | "join"
-        Body   string `json:"body,omitempty"`   // queue/host: JAMB | WAEC | NECO | University Modules | "" = any
+        Type   string `json:"type"`             // "queue" | "cancel" | "answer" | "host" | "join" | "challenge"
+        Body   string `json:"body,omitempty"`   // queue/host/challenge: JAMB | WAEC | NECO | POST-UTME | University Modules | "" = any
         Index  int    `json:"index,omitempty"`  // answer: 0-based question index
         Letter string `json:"letter,omitempty"` // answer: chosen option letter
         Code   string `json:"code,omitempty"`   // join: the private room code
+        Target string `json:"target,omitempty"` // challenge: the invited student's userID
 }
 
 // Outbound is one arena → client message (JSON on the socket).
 type Outbound struct {
-        Type string `json:"type"` // queued | hosted | cancelled | matched | question | result | over | error
+        Type string `json:"type"` // queued | hosted | cancelled | challenge | challenge_sent | matched | question | result | over | error
 
         // matched / over
         MatchID   string         `json:"matchId,omitempty"`
@@ -58,23 +59,26 @@ type QView struct {
 
 // Inbound message type constants.
 const (
-        InQueue  = "queue"
-        InCancel = "cancel"
-        InAnswer = "answer"
-        InHost   = "host"
-        InJoin   = "join"
+        InQueue     = "queue"
+        InCancel    = "cancel"
+        InAnswer    = "answer"
+        InHost      = "host"
+        InJoin      = "join"
+        InChallenge = "challenge"
 )
 
 // Outbound message type constants.
 const (
-        OutQueued    = "queued"
-        OutHosted    = "hosted"
-        OutCancelled = "cancelled"
-        OutMatched   = "matched"
-        OutQuestion  = "question"
-        OutResult    = "result"
-        OutOver      = "over"
-        OutError     = "error"
+        OutQueued        = "queued"
+        OutHosted        = "hosted"
+        OutCancelled     = "cancelled"
+        OutChallenge     = "challenge"     // live invite: you are challenged
+        OutChallengeSent = "challenge_sent" // your invite is on its way
+        OutMatched       = "matched"
+        OutQuestion      = "question"
+        OutResult        = "result"
+        OutOver          = "over"
+        OutError         = "error"
 )
 
 // Error codes carried on OutErrCode.
@@ -84,6 +88,7 @@ const (
         ErrNoPack          = "no_pack_available"
         ErrUnknownBody     = "unknown_body"
         ErrUnknownRoom     = "unknown_room"
+        ErrUnknownPlayer   = "unknown_player"
         ErrAlreadyHost     = "already_hosting"
         ErrRoomUnavailable = "room_unavailable"
         ErrLate            = "late_answer"
