@@ -53,11 +53,13 @@ One-time enablement if Pages has never been used on the repo:
 The `web-deploy` workflow then publishes the static export on the next
 push (or re-run it from the Actions tab).
 
-**Android app (APK):** open the repo's **Actions** tab → pick the latest
-**mobile-apk (Android)** run → under **Artifacts** download
-**renance-android-apk** → sideload it on the phone (allow installs from
-that source). Pushing a tag like `v0.1.0` additionally attaches the APK
-to a GitHub Release.
+**Android app (APK):** download the latest build directly —
+https://github.com/Resolutefemi/Renance/releases/latest/download/app-release.apk —
+then sideload it on the phone (allow installs from that source). Prefer
+GitHub's UI? Open the repo's **Releases** page → **Latest Android build**
+→ download `app-release.apk`. The Actions tab also publishes the APK as
+the **renance-android-apk** artifact on every run, and pushing a tag like
+`v0.1.0` additionally attaches the APK to a tagged GitHub Release.
 
 **Pointing both clients at a live API:** the website and APK read the API
 address from the repo variable `PUBLIC_API_BASE`
