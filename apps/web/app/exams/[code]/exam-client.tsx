@@ -209,14 +209,33 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           dailyInfo = await api<DailyInfo>('/daily/jamb');
           if (!alive) return;
           if (dailyInfo.code !== code) {
-            router.replace(examHref(dailyInfo.code, { daily: '1' }));
-            return;
+            // A paused seat from earlier today (dashboard resume) must
+            // keep ITS paper — borrow the daily head for the title and
+            // load the bundle straight by code; any other entry jumps to
+            // today's sprint as before.
+            const snapNow = loadActiveExam();
+            if (searchParams.get('resume') === '1' && snapNow && snapNow.code === code) {
+              b = await fetchBundleByCode(code);
+              if (b.durationMinutes == null) setUntimed(true);
+            } else {
+              router.replace(examHref(dailyInfo.code, { daily: '1' }));
+              return;
+            }
+          } else {
+            const manifest = await fetchManifest();
+            const exam = manifest.exams.find((e) => e.code === code);
+            if (exam) {
+              meta = exam;
+              b = await fetchBundle(exam);
+            } else if (isComposedPaperCode(code)) {
+              // The founder-rule combination rides a composed paper that
+              // never appears in the manifest — compose it on demand.
+              b = await fetchBundleByCode(code);
+              if (b.durationMinutes == null) setUntimed(true);
+            } else {
+              throw new Error("Today's challenge pack is missing");
+            }
           }
-          const manifest = await fetchManifest();
-          const exam = manifest.exams.find((e) => e.code === code);
-          if (!exam) throw new Error("Today's challenge pack is missing");
-          meta = exam;
-          b = await fetchBundle(exam);
         } else if (isComposedPaperCode(code)) {
           // mock / custom / pick papers compose server-side on demand
           b = await fetchBundleByCode(code);
@@ -314,7 +333,10 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
     saveActiveExam({
       attemptId: attempt.attemptId,
       code: attempt.code,
-      title: bundle?.title ?? attempt.code,
+      // The daily sprint keeps its head: the paused seat reopens under
+      // "Daily Quiz", never the composed paper's plumbing label.
+      title: daily ? 'Daily Quiz' : bundle?.title ?? attempt.code,
+      daily: daily ? true : undefined,
       questionCount: bundle?.questionCount ?? 0,
       startedAt: startedAtRef.current,
       pausedMs: pausedMsRef.current,
@@ -1362,51 +1384,21 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         onKeepGoing={keepGoing}
       />
       <main className="min-h-dvh bg-gradient-to-b from-selection-blue/60 via-background to-background">
-      {/* CBT command bar — ONE row on every screen: the quiz name on the
-          LHS, the per-subject progress chips mid-deck (PC only; phones
-          reach them through the navigator), and the clock with Quit /
-          Submit riding right behind it on the RHS. Copy + calculator
+      {/* CBT command bar — ONE row on every screen, spanning the deck:
+          the quiz name pinned to the LHS edge, the clock with Quit /
+          Submit pinned to the RHS edge. Nothing floats mid-bar — the
+          subject being attempted lives in the slim strip UNDER this bar
+          (full papers only), never in the bar itself. Copy + calculator
           live in the question card, next to the question they act on. */}
       <header className="sticky top-0 z-40 border-b border-outline-variant/45 bg-surface-container-lowest/95 backdrop-blur-xl">
-        <div className="mx-auto w-full max-w-2xl px-4 sm:px-6">
+        <div className="mx-auto w-full max-w-2xl px-4 sm:px-6 md:max-w-none md:px-8">
           <div className="flex items-center gap-2.5 py-2.5">
-            {/* LHS — the quiz name */}
-            <h1 className="min-w-0 flex-1 truncate text-[14.5px] font-semibold text-on-surface md:max-w-[230px] md:flex-none">
+            {/* LHS — the quiz name, pinned to the screen's left edge */}
+            <h1 className="min-w-0 flex-1 truncate text-[14.5px] font-semibold text-on-surface">
               {paperTitle}
             </h1>
-            {/* middle — subject progress chips (composite papers, PC) */}
-            {bundle.sections && bundle.sections.length > 1 && (
-            <div className="no-scrollbar hidden min-w-0 flex-1 items-center justify-center gap-1 overflow-x-auto md:flex">
-              {(() => {
-                let index = 0;
-                return bundle.sections.map((sec) => {
-                  const startIndex = index;
-                  index += sec.questionIds.length;
-                  const answered = sec.questionIds.filter((id) => answers[id]).length;
-                  const active =
-                    current >= startIndex && current < startIndex + sec.questionIds.length;
-                  return (
-                    <button
-                      key={sec.subject}
-                      type="button"
-                      onClick={() => goTo(startIndex)}
-                      className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] transition ${
-                        active
-                          ? 'bg-[#FDEBE7] font-semibold text-on-surface dark:bg-surface-container-high'
-                          : 'text-on-surface-variant hover:bg-surface-container-low'
-                      }`}
-                    >
-                      {subjectName(sec.subject)}
-                      <span className={`font-mono text-[10px] ${active ? 'text-on-surface-variant' : 'text-outline'}`}>
-                        {answered}/{sec.questionIds.length}
-                      </span>
-                    </button>
-                  );
-                });
-              })()}
-            </div>
-            )}
-            {/* RHS — clock first, Quit + Submit right behind it */}
+            {/* RHS — clock first, Quit + Submit right behind it, pinned
+                to the screen's right edge */}
             <div className="ml-auto flex shrink-0 items-center gap-2 md:gap-2.5">
               {(() => {
                 const breaking = breakLeft > 0;
@@ -1455,6 +1447,48 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               </button>
             </div>
           </div>
+          {/* The subject being attempted — one slim strip UNDER the
+              command bar, full papers only (JAMB mock + composed combos).
+              It carries the current subject's name, its answered count
+              and a hairline progress bar; the command bar itself stays
+              short. Single-subject quizzes keep no strip at all. */}
+          {bundle.sections && bundle.sections.length > 1 && (() => {
+            let walk = 0;
+            for (const sec of bundle.sections) {
+              const start = walk;
+              walk += sec.questionIds.length;
+              if (current < start + sec.questionIds.length) {
+                const answered = sec.questionIds.filter((id) => answers[id]).length;
+                const total = sec.questionIds.length;
+                const pct = total ? Math.round((answered / total) * 100) : 0;
+                return (
+                  <div className="border-t border-outline-variant/25 bg-surface-container-lowest/60">
+                    <div className="mx-auto w-full px-4 sm:px-6 md:px-8">
+                      <div className="flex items-center gap-2.5 py-1.5">
+                        <span className="material-symbols-outlined shrink-0 text-[15px] text-primary">subject</span>
+                        <span className="shrink-0 text-[12.5px] font-semibold text-on-surface">
+                          {subjectName(sec.subject)}
+                        </span>
+                        <span className="shrink-0 font-mono text-[10.5px] text-outline">
+                          {answered}/{total}
+                        </span>
+                        <span className="h-[3px] min-w-8 flex-1 overflow-hidden rounded-full bg-surface-container-high">
+                          <span
+                            className="block h-full rounded-full bg-primary transition-[width] duration-300"
+                            style={{ width: `${pct}%` }}
+                          />
+                        </span>
+                        <span className="shrink-0 font-mono text-[10.5px] text-outline">
+                          Q{current - start + 1}/{total}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+            }
+            return null;
+          })()}
         </div>
       </header>
 
@@ -1502,16 +1536,18 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             </button>
             <button
               onClick={() => setFlags((f) => ({ ...f, [question.id]: !f[question.id] }))}
-              className={`flex shrink-0 items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] transition ${
+              aria-label={flags[question.id] ? 'Unflag question' : 'Flag question'}
+              title="Flag for review"
+              className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition md:h-auto md:w-auto md:gap-1 md:px-2.5 md:py-1 md:text-[11px] ${
                 flags[question.id]
                   ? 'border-accent-amber bg-accent-amber/15 text-accent-ink'
-                  : 'border-outline-variant text-on-surface-variant hover:border-outline'
+                  : 'border-outline-variant bg-card text-on-surface-variant hover:border-outline'
               }`}
             >
-              <span className={`material-symbols-outlined text-[14px] ${flags[question.id] ? 'fill-current text-accent-amber' : ''}`}>
+              <span className={`material-symbols-outlined text-[15px] md:text-[14px] ${flags[question.id] ? 'fill-current text-accent-amber' : ''}`}>
                 flag
               </span>
-              {flags[question.id] ? 'flagged' : 'flag'}
+              <span className="hidden md:inline">{flags[question.id] ? 'flagged' : 'flag'}</span>
             </button>
             </div>
           </div>
@@ -1625,27 +1661,28 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           ← Previous | the "N Questions" pill + the jump strip | Next →. */}
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-outline-variant/40 bg-surface-container-lowest/95 pb-[max(env(safe-area-inset-bottom),6px)] backdrop-blur-xl">
         <div className="mx-auto w-full max-w-2xl px-4 pt-2.5 sm:px-6">
-          <div className="flex items-center justify-between gap-2.5">
+          <div className="flex items-center justify-between gap-2 md:gap-2.5">
             <button
               onClick={() => goTo(Math.max(0, current - 1))}
               disabled={current === 0}
-              className="flex h-[46px] shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-4 text-[14.5px] font-semibold text-on-surface transition hover:bg-surface-container-low disabled:opacity-40"
+              className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-3 text-[14px] font-semibold text-on-surface transition hover:bg-surface-container-low disabled:opacity-40 md:h-[46px] md:px-4 md:text-[14.5px]"
             >
               <span className="material-symbols-outlined text-[18px]">chevron_left</span>
               Previous
             </button>
             <button
               onClick={() => setNavOpen(true)}
-              className="flex h-9 min-w-[92px] shrink-0 items-center justify-center gap-1.5 rounded-full bg-primary px-3.5 text-[12.5px] font-bold text-on-primary shadow-sm transition active:scale-[0.97]"
+              className="flex h-9 min-w-0 shrink justify-center gap-1.5 rounded-full bg-primary px-3 text-[12.5px] font-bold text-on-primary shadow-sm transition active:scale-[0.97] md:min-w-[92px] md:shrink-0 md:px-3.5"
               aria-label="Open the question navigator"
             >
-              {answeredCount}/{bundle.questionCount} · Questions
+              {answeredCount}/{bundle.questionCount}
+              <span className="hidden md:inline">&nbsp;· Questions</span>
               <span className="material-symbols-outlined text-[15px]">expand_less</span>
             </button>
             {current === bundle.questionCount - 1 || answeredCount === bundle.questionCount ? (
               <button
                 onClick={requestSubmit}
-                className="flex h-[46px] shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-4 text-[14.5px] font-bold text-error transition hover:bg-error-container/30"
+                className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-3 text-[14px] font-bold text-error transition hover:bg-error-container/30 md:h-[46px] md:px-4 md:text-[14.5px]"
               >
                 Submit
                 <span className="material-symbols-outlined text-[18px]">chevron_right</span>
@@ -1653,7 +1690,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             ) : (
               <button
                 onClick={() => goTo(Math.min(bundle.questionCount - 1, current + 1))}
-                className="flex h-[46px] shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-4 text-[14.5px] font-bold text-error transition hover:bg-error-container/20"
+                className="flex h-11 shrink-0 items-center gap-0.5 rounded-full border border-outline-variant bg-card px-3 text-[14px] font-bold text-error transition hover:bg-error-container/20 md:h-[46px] md:px-4 md:text-[14.5px]"
               >
                 Next
                 <span className="material-symbols-outlined text-[18px]">chevron_right</span>
@@ -1663,7 +1700,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           {/* the jump strip: mini number circles, answered = ink fill,
               current = ring — a PHONE affordance (the finger-tap map);
               the PC keeps the deck clean and uses the Questions sheet */}
-          <div className="no-scrollbar mt-2 flex items-center gap-1.5 overflow-x-auto pb-2 md:hidden">
+          <div className="no-scrollbar mt-1.5 flex items-center gap-1.5 overflow-x-auto pb-1.5 md:hidden">
             {navIndices.slice(0, 150).map(({ q, i }) => {
               const answered = navIsAnswered(q.id);
               const flagged = navIsFlagged(q.id);
@@ -1672,7 +1709,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                   key={q.id}
                   onClick={() => goTo(i)}
                   aria-label={`Go to question ${i + 1}`}
-                  className={`relative flex h-[34px] w-[34px] shrink-0 items-center justify-center rounded-full border text-[12.5px] font-semibold transition ${
+                  className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-[12.5px] font-semibold transition ${
                     answered
                       ? 'border-accent-ink bg-accent-ink text-white'
                       : 'border-outline-variant/70 bg-card text-on-surface-variant'

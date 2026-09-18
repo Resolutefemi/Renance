@@ -33,6 +33,7 @@ class ExamScreen extends StatefulWidget {
     this.untimed = false,
     this.shuffleQuestions = false,
     this.studyMode = false,
+    this.daily = false,
   });
 
   final ExamMeta exam;
@@ -50,6 +51,10 @@ class ExamScreen extends StatefulWidget {
   /// plays untimed and, once graded, lands straight in the Past
   /// Questions reader with the explanations unlocked.
   final bool studyMode;
+
+  /// The Daily Challenge sprint: every head reads "Daily Quiz" — the
+  /// composed paper's plumbing label never leaks into the chrome.
+  final bool daily;
 
   @override
   State<ExamScreen> createState() => _ExamScreenState();
@@ -125,7 +130,7 @@ class _ExamScreenState extends State<ExamScreen> {
         // No scaffold AppBar on the intro: SafeArea keeps the back bar
         // clear of the status bar instead.
         ExamPhase.intro =>
-          SafeArea(child: _Intro(controller: c, studyMode: widget.studyMode)),
+          SafeArea(child: _Intro(controller: c, studyMode: widget.studyMode, daily: widget.daily)),
         ExamPhase.playing => FatigueNudgeOverlay(
             visible: c.nudgeVisible,
             reasons: c.signal.reasons,
@@ -174,10 +179,18 @@ class _ExamScreenState extends State<ExamScreen> {
 /// then the Summary block (Subjects / Test Mode / Exam Year cards) and
 /// the Proceed-to-Test action with the Edit Selections link.
 class _Intro extends StatelessWidget {
-  const _Intro({required this.controller, required this.studyMode});
+  const _Intro({
+    required this.controller,
+    required this.studyMode,
+    this.daily = false,
+  });
 
   final ExamController controller;
   final bool studyMode;
+
+  /// The Daily Challenge sprint: the intro's subject card reads
+  /// "Daily Quiz", never the composed paper's plumbing label.
+  final bool daily;
 
   /// Per-subject counts for the standard UTME mock — English 60 and 40
   /// per elective, the canonical compose the server also uses. Custom
@@ -424,7 +437,7 @@ class _Intro extends StatelessWidget {
                   title: 'Subjects',
                   caption: null,
                   child: Text(
-                    '${bundle.title} · ${bundle.questionCount} questions',
+                    '${daily ? 'Daily Quiz' : bundle.title} · ${bundle.questionCount} questions',
                     style: RenanceText.bodyMedium.copyWith(fontSize: 15.5),
                   ),
                 ),
@@ -694,11 +707,16 @@ class _ExamHeader extends StatelessWidget {
     required this.controller,
     required this.mmss,
     required this.hhmmss,
+    this.daily = false,
   });
 
   final ExamController controller;
   final String Function(int) mmss;
   final String Function(int) hhmmss;
+
+  /// The Daily Challenge sprint: the chrome head reads "Daily Quiz",
+  /// never the composed paper's plumbing label.
+  final bool daily;
 
   Future<void> _confirmQuit(BuildContext context) async {
     final bool? quit = await showDialog<bool>(
@@ -759,7 +777,7 @@ class _ExamHeader extends StatelessWidget {
           // LHS — the quiz name, never the subject receipt.
           Expanded(
             child: Text(
-              bundle.title,
+              widget.daily ? 'Daily Quiz' : bundle.title,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: RenanceText.bodyMedium.copyWith(
@@ -1063,6 +1081,7 @@ class _Player extends StatelessWidget {
           controller: controller,
           mmss: mmss,
           hhmmss: hhmmss,
+          daily: widget.daily,
         ),
         _SubjectStrip(controller: controller),
         // Scrollable question area ---------------------------------------
@@ -1088,7 +1107,7 @@ class _Player extends StatelessWidget {
                       children: <Widget>[
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 14, vertical: 7),
+                              horizontal: 10, vertical: 7),
                           decoration: BoxDecoration(
                             color: context.card,
                             borderRadius: BorderRadius.circular(999),
@@ -1110,27 +1129,29 @@ class _Player extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
-                        // copy + calculator: they act on THIS question,
-                        // so they ride the card, not the command bar.
+                        // copy + calculator + flag: they act on THIS
+                        // question, so they ride the card — three equal
+                        // round icons that always fit the row, never
+                        // shoved out of the card edge on small phones.
                         _CardRoundIcon(
                           icon: Icons.copy_outlined,
                           onTap: () => _copyQuestion(context),
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(width: 6),
                         _CardRoundIcon(
                           icon: Icons.calculate_outlined,
                           onTap: () => _openCalculator(context),
                         ),
-                        const SizedBox(width: 8),
-                        // flag pill keeps its Renance place.
+                        const SizedBox(width: 6),
+                        // flag round icon: amber fill ring when flagged.
                         InkWell(
                           onTap: () => controller.toggleFlag(question.id),
-                          borderRadius: BorderRadius.circular(999),
+                          customBorder: const CircleBorder(),
                           child: Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 6),
+                            width: 34,
+                            height: 34,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(999),
+                              shape: BoxShape.circle,
                               border: Border.all(
                                 color: flagged
                                     ? RenanceColors.amber
@@ -1139,32 +1160,16 @@ class _Player extends StatelessWidget {
                               color: flagged
                                   ? RenanceColors.amber
                                       .withValues(alpha: 0.15)
-                                  : Colors.transparent,
+                                  : context.card,
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: <Widget>[
-                                Icon(
-                                  flagged
-                                      ? Icons.flag
-                                      : Icons.flag_outlined,
-                                  size: 14,
-                                  color: flagged
-                                      ? RenanceColors.amber
-                                      : context.textSecondary,
-                                ),
-                                const SizedBox(width: 4),
-                                Text(
-                                  flagged ? 'flagged' : 'flag',
-                                  style: RenanceText.caption.copyWith(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w600,
-                                    color: flagged
-                                        ? context.ink
-                                        : context.textSecondary,
-                                  ),
-                                ),
-                              ],
+                            child: Icon(
+                              flagged
+                                  ? Icons.flag
+                                  : Icons.flag_outlined,
+                              size: 16,
+                              color: flagged
+                                  ? RenanceColors.amber
+                                  : context.textSecondary,
                             ),
                           ),
                         ),

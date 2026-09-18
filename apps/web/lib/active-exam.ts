@@ -28,6 +28,9 @@ export interface ActiveExam {
   untimed: boolean;
   /** Practice Settings timer override in minutes (?timer=15|30|60) */
   timerMinutes: number | null;
+  /** The daily challenge sprint (?daily=1): resume links re-attach the
+      flag so the seat always reopens under the "Daily Quiz" head. */
+  daily?: boolean;
   savedAt: number;
 }
 

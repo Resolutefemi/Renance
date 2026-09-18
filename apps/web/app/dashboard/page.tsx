@@ -51,6 +51,9 @@ interface AttemptRow {
   score?: number;
   total?: number;
   submittedAt?: string;
+  /** Server attempts carry the daily marker (dailyDay set) so the
+      recent card reopens the sprint under "Daily Quiz". */
+  dailyDay?: string;
 }
 
 interface DailyTileInfo {
@@ -466,7 +469,14 @@ export default function DashboardPage() {
               otherwise the desk offers a way in, never a fake resume. */}
           {activeExam ? (
             <Link
-              href={examHref(activeExam.code, { resume: '1' })}
+              href={examHref(activeExam.code, {
+                resume: '1',
+                // The daily sprint's paused seat keeps its "Daily Quiz"
+                // head — the flag rides the snapshot, so the exam page
+                // refetches the daily context instead of falling back to
+                // the composed paper's plumbing label.
+                daily: activeExam.daily ? '1' : undefined,
+              })}
               className="relative z-10 flex h-[52px] items-center justify-center gap-2 rounded-lg bg-hero-cta text-[15px] font-semibold text-on-hero-cta transition-transform active:scale-[0.98]"
             >
               <span className="material-symbols-outlined text-[20px]">play_arrow</span>
@@ -545,7 +555,11 @@ export default function DashboardPage() {
         {/* Recent activity ------------------------------------------------ */}
         {recent && (
           <Link
-            href={recent.status === 'in_progress' ? examHref(recent.code, { resume: '1' }) : '/review'}
+            href={
+              recent.status === 'in_progress'
+                ? examHref(recent.code, { resume: '1', daily: recent.dailyDay ? '1' : undefined })
+                : '/review'
+            }
             className="mt-6 mb-4 flex items-center gap-3 rounded-xl bg-card p-4 shadow-[0_1px_3px_0_rgba(20,28,45,0.08)] transition-colors hover:bg-surface-container-lowest"
           >
             <div
