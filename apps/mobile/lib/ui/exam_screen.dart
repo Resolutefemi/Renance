@@ -733,6 +733,10 @@ class _ExamHeader extends StatelessWidget {
           ),
           FilledButton(
             onPressed: () => Navigator.of(dialogContext).pop(true),
+            style: FilledButton.styleFrom(
+              backgroundColor: context.error,
+              foregroundColor: Colors.white,
+            ),
             child: const Text('Quit'),
           ),
         ],
@@ -877,11 +881,14 @@ class _CardRoundIcon extends StatelessWidget {
 }
 
 /// The subject strip: for the standard UTME mock the canonical sections
-/// (Use of English first, 40-question electives after) become tappable
-/// chips that jump to each subject's first question — the school app's
-/// subject navigation, honestly derived from the paper code. Custom
-/// multi-subject papers list their subjects read-only, because their
-/// per-subject boundaries are not derivable.
+/// (Use of English first, 40-question electives after) — one slim row
+/// under the command bar. The current subject's name sits in the
+/// middle with its answered count, progress bar and in-subject
+/// question position; round < > chevrons at the row's two ends jump
+/// straight to the previous / next subject's first question, so a
+/// student can start the paper with any subject they like. Custom
+/// multi-subject papers keep no strip, because their per-subject
+/// boundaries are not derivable.
 class _SubjectStrip extends StatelessWidget {
   const _SubjectStrip({required this.controller});
 
@@ -912,11 +919,22 @@ class _SubjectStrip extends StatelessWidget {
     if (bundle == null) return const SizedBox.shrink();
     final List<(String, int)> sections = _sections(bundle);
     if (sections.length < 2) return const SizedBox.shrink();
+    final int total = bundle.questionCount;
 
     int activeIdx = 0;
     for (var i = 0; i < sections.length; i++) {
       if (controller.index >= sections[i].$2) activeIdx = i;
     }
+    final int start = sections[activeIdx].$2;
+    final int end = activeIdx + 1 < sections.length
+        ? sections[activeIdx + 1].$2
+        : total;
+    final int secTotal = end - start;
+    int answered = 0;
+    for (var i = start; i < end; i++) {
+      if (controller.answers.containsKey(bundle.questions[i].id)) answered++;
+    }
+    final double pct = secTotal > 0 ? answered / secTotal : 0.0;
 
     return Container(
       decoration: BoxDecoration(
@@ -926,39 +944,99 @@ class _SubjectStrip extends StatelessWidget {
           ),
         ),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        clipBehavior: Clip.none,
-        child: Row(
-          children: <Widget>[
-            for (var i = 0; i < sections.length; i++) ...<Widget>[
-              GestureDetector(
-                onTap: () => controller.goTo(sections[i].$2),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 12, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: i == activeIdx
-                        ? context.isDarkTier
-                            ? context.cardHigh
-                            : const Color(0xFFFDEBE7)
-                        : Colors.transparent,
-                    borderRadius: BorderRadius.circular(999),
-                  ),
-                  child: Text(
-                    subjectName(sections[i].$1),
-                    style: RenanceText.bodyMedium.copyWith(
-                      fontSize: 12.5,
-                      color:
-                          i == activeIdx ? context.ink : context.textSecondary,
-                    ),
-                  ),
-                ),
+      padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
+      child: Row(
+        children: <Widget>[
+          // < — jump to the previous subject (dim on the first one).
+          _SubjectChevron(
+            icon: Icons.chevron_left,
+            onTap: activeIdx > 0
+                ? () => controller.goTo(sections[activeIdx - 1].$2)
+                : null,
+          ),
+          const SizedBox(width: 8),
+          Icon(Icons.subject, size: 15, color: context.primary),
+          const SizedBox(width: 6),
+          Expanded(
+            child: Text(
+              subjectName(sections[activeIdx].$1),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: RenanceText.bodyMedium.copyWith(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w600,
+                color: context.ink,
               ),
-              if (i < sections.length - 1) const SizedBox(width: 4),
-            ],
-          ],
+            ),
+          ),
+          const SizedBox(width: 6),
+          Text(
+            '$answered/$secTotal',
+            style: RenanceText.labelMono.copyWith(
+              fontSize: 10.5,
+              color: context.textMuted,
+            ),
+          ),
+          const SizedBox(width: 6),
+          SizedBox(
+            width: 44,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: LinearProgressIndicator(
+                value: pct,
+                minHeight: 3,
+                backgroundColor: context.cardHigh,
+                valueColor: AlwaysStoppedAnimation<Color>(context.primary),
+              ),
+            ),
+          ),
+          const SizedBox(width: 6),
+          Text(
+            'Q${controller.index - start + 1}/$secTotal',
+            style: RenanceText.labelMono.copyWith(
+              fontSize: 10.5,
+              color: context.textMuted,
+            ),
+          ),
+          const SizedBox(width: 8),
+          // > — jump to the next subject (dim on the last one).
+          _SubjectChevron(
+            icon: Icons.chevron_right,
+            onTap: activeIdx < sections.length - 1
+                ? () => controller.goTo(sections[activeIdx + 1].$2)
+                : null,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// One round < / > switcher of the subject strip: jumps to the
+/// previous / next subject's first question; dimmed at the row's ends.
+class _SubjectChevron extends StatelessWidget {
+  const _SubjectChevron({required this.icon, this.onTap});
+
+  final IconData icon;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final bool enabled = onTap != null;
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 30,
+        height: 30,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: context.card,
+          border: Border.all(color: context.outlineVariant),
+        ),
+        child: Icon(
+          icon,
+          size: 17,
+          color: enabled ? context.ink : context.outlineLight,
         ),
       ),
     );
