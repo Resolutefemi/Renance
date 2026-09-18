@@ -47,9 +47,23 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
                 pool := s.dailyPool(bundle.Body)
                 day := todayUTC()
                 want := dailyPack(day, pool)
-                if want.Code != req.Code {
+                wantCode := want.Code
+                if wantCode != req.Code {
+                        // Subject-combination sprint: the caller replayed the
+                        // code GET /daily handed them — a composed <body>-custom
+                        // paper derived from THEIR stored combination. It is
+                        // today's challenge exactly when the code still matches
+                        // what the combination derives to (a combo edited
+                        // mid-flight degrades to a clean 409 and a re-fetch).
+                        if combo := s.callerDailySubjects(r, uid); len(combo) > 0 {
+                                if code, ok := dailyCustomCode(bundle.Body, combo); ok && code == req.Code {
+                                        wantCode = req.Code
+                                }
+                        }
+                }
+                if wantCode != req.Code {
                         fail(w, http.StatusConflict, "daily_mismatch",
-                                "today's "+bundle.Body+" challenge is "+want.Code+", not "+req.Code)
+                                "today's "+bundle.Body+" challenge is "+wantCode+", not "+req.Code)
                         return
                 }
                 order = daily.QuestionIDs(day, bundle.Body, daily.IDs(bundle))
