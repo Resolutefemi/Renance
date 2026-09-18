@@ -350,7 +350,6 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                 Sections:  make([]PaperSection, 0, len(subjects)),
                 Questions: []Question{},
         }
-        titles := make([]string, 0, len(subjects))
         for i, slug := range subjects {
                 bank, ok := banks[slug]
                 if !ok || bank == nil {
@@ -362,7 +361,6 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                 if want := body + "-" + slug + "-bank"; bank.Code != want {
                         return nil, fmt.Errorf("cbtdata: paper %q needs bank %s, got %s", paper.Code, want, bank.Code)
                 }
-                titles = append(titles, SubjectTitle(slug))
                 year := 0
                 if spec.Years != nil && i < len(spec.Years) {
                         year = spec.Years[i]
@@ -428,7 +426,12 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                         label = "Custom Practice"
                 }
         }
-        paper.Title = label + " · " + strings.Join(titles, " + ")
+        // The quiz name only — never "Custom Practice · Biology + Physics
+        // + …". The subject strip in the player chrome (and the navigator
+        // sheet) already carries the per-subject picture; a title that
+        // lists subjects reads like a receipt on every surface that
+        // echoes it (resume cards, attempt history, review heads).
+        paper.Title = label
         if paper.QuestionCount == 0 {
                 return nil, fmt.Errorf("cbtdata: paper %q composed to zero questions", paper.Code)
         }

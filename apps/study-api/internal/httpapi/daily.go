@@ -198,10 +198,13 @@ func (s *Server) handleDaily(w http.ResponseWriter, r *http.Request) {
         }
 
         resp := map[string]any{
-                "day":             day,
-                "body":            body,
-                "code":            bundle.Code,
-                "title":           bundle.Title,
+                "day":   day,
+                "body":  body,
+                "code":  bundle.Code,
+                // The quiz name, not the plumbing: whether today's sprint
+                // rides a composed custom paper or a rotating static pack,
+                // every client head reads "Daily Quiz".
+                "title":           "Daily Quiz",
                 "questionCount":   len(questions),
                 "totalMarks":      marks,
                 "durationMinutes": bundle.DurationMinutes,

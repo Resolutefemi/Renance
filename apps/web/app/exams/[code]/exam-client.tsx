@@ -700,6 +700,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   /* ------------------------------------------------------------- views */
 
+  // The quiz name — never the subject receipt. The daily sprint answers
+  // to "Daily Quiz" (the API now titles it so); everything else keeps
+  // its composed label ("Custom Practice", "UTME Mock", …).
+  const paperTitle = daily?.title ?? bundle?.title ?? meta?.title ?? 'Practice';
+
   if (phase === 'loading') {
     return (
       <Centered>
@@ -813,11 +818,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             <div className="pointer-events-none absolute -bottom-10 right-16 h-24 w-24 rounded-full border-[8px] border-white/5" />
             <div className="pointer-events-none absolute right-2 bottom-6 h-3 w-16 rotate-12 rounded-full bg-white/10" />
             <p className="relative z-10 text-[19px] font-bold tracking-tight">
-              {examMode ? 'JAMB CBT Simulator' : daily ? 'Daily Challenge' : 'Practice Simulator'}
+              {examMode ? 'JAMB CBT Simulator' : daily ? 'Daily Quiz' : 'Practice Simulator'}
             </p>
           </div>
 
-          <h1 className="mt-6 text-xl font-semibold text-on-surface">{bundle.title}</h1>
+          <h1 className="mt-6 text-xl font-semibold text-on-surface">{paperTitle}</h1>
           <p className="mt-1.5 text-sm text-on-surface-variant">
             {bundle.questionCount} questions ·{' '}
             {bundle.durationMinutes != null ? `${bundle.durationMinutes} minutes` : 'untimed'} ·{' '}
@@ -1357,87 +1362,21 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         onKeepGoing={keepGoing}
       />
       <main className="min-h-dvh bg-gradient-to-b from-selection-blue/60 via-background to-background">
-      {/* Myschool-cut CBT chrome: the title row (copy + calculator
-          circles), the big tri-part clock row with the Quit / Submit
-          pair, then the subject strip for multi-subject papers. */}
+      {/* CBT command bar — ONE row on every screen: the quiz name on the
+          LHS, the per-subject progress chips mid-deck (PC only; phones
+          reach them through the navigator), and the clock with Quit /
+          Submit riding right behind it on the RHS. Copy + calculator
+          live in the question card, next to the question they act on. */}
       <header className="sticky top-0 z-40 border-b border-outline-variant/45 bg-surface-container-lowest/95 backdrop-blur-xl">
-        <div className="mx-auto w-full max-w-2xl px-4 pt-2.5 sm:px-6">
-          <div className="flex items-center gap-2">
-            <p className="min-w-0 flex-1 truncate text-[15.5px] font-medium text-on-surface">
-              {bundle.title}
-              <span className="text-on-surface-variant">
-                {' '}
-                {examMode ? '(Full Test Mode)' : daily ? '(Daily Sprint)' : '(Practice Mode)'}
-              </span>
-            </p>
-            <button
-              onClick={() => {
-                const buf = [question?.stem ?? ''];
-                for (const [k, v] of Object.entries(question?.options ?? {})) buf.push(`${k}) ${v}`);
-                void navigator.clipboard?.writeText(buf.join('\n'));
-              }}
-              aria-label="Copy question"
-              title="Copy question"
-              className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface transition hover:bg-surface-container-low"
-            >
-              <span className="material-symbols-outlined text-[19px]">content_copy</span>
-            </button>
-            <button
-              onClick={() => setCalcOpen(true)}
-              aria-label="Open calculator"
-              title="Calculator"
-              className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface transition hover:bg-surface-container-low"
-            >
-              <span className="material-symbols-outlined text-[19px]">calculate</span>
-            </button>
-          </div>
-          <div className="flex items-center gap-2.5 pb-3 pt-2">
-            {(() => {
-              const breaking = breakLeft > 0;
-              const clock = breaking
-                ? `BREAK ${mmss(breakLeft)}`
-                : untimed || remaining === null
-                  ? mmss(remaining ?? 0)
-                  : hhmmss(remaining);
-              const clockTone = breaking
-                ? 'text-on-surface'
-                : remaining !== null && remaining < 60
-                  ? 'text-error'
-                  : remaining !== null && remaining < 300
-                    ? 'text-accent-amber'
-                    : 'text-[#0E9F6E]';
-              return (
-                <p
-                  className={`min-w-0 flex-1 truncate text-[27px] font-extrabold leading-none tracking-[0.04em] tabular-nums ${clockTone}`}
-                >
-                  {clock}
-                </p>
-              );
-            })()}
-            <button
-              onClick={() =>
-                setConfirm({
-                  title: 'Quit the paper?',
-                  body: 'Quitting leaves the test environment. Your paper pauses, resume it from the dashboard, the clock keeps its honest count.',
-                  confirmLabel: 'Quit',
-                  danger: true,
-                  onConfirm: () => router.push('/dashboard'),
-                })
-              }
-              className="shrink-0 rounded-full border border-error px-[18px] py-2.5 text-[14.5px] font-bold text-error transition hover:bg-error-container/40 active:scale-[0.97]"
-            >
-              Quit
-            </button>
-            <button
-              onClick={requestSubmit}
-              className="shrink-0 rounded-full bg-accent-ink px-[18px] py-2.5 text-[14.5px] font-bold text-white transition hover:opacity-90 active:scale-[0.97]"
-            >
-              Submit
-            </button>
-          </div>
-          {/* subject tabs (composite UTME papers) */}
-          {bundle.sections && bundle.sections.length > 1 && (
-            <div className="no-scrollbar -mx-1 flex items-center gap-1 overflow-x-auto pb-2">
+        <div className="mx-auto w-full max-w-2xl px-4 sm:px-6">
+          <div className="flex items-center gap-2.5 py-2.5">
+            {/* LHS — the quiz name */}
+            <h1 className="min-w-0 flex-1 truncate text-[14.5px] font-semibold text-on-surface md:max-w-[230px] md:flex-none">
+              {paperTitle}
+            </h1>
+            {/* middle — subject progress chips (composite papers, PC) */}
+            {bundle.sections && bundle.sections.length > 1 && (
+            <div className="no-scrollbar hidden min-w-0 flex-1 items-center justify-center gap-1 overflow-x-auto md:flex">
               {(() => {
                 let index = 0;
                 return bundle.sections.map((sec) => {
@@ -1451,7 +1390,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                       key={sec.subject}
                       type="button"
                       onClick={() => goTo(startIndex)}
-                      className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-[13.5px] transition ${
+                      className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-[12.5px] transition ${
                         active
                           ? 'bg-[#FDEBE7] font-semibold text-on-surface dark:bg-surface-container-high'
                           : 'text-on-surface-variant hover:bg-surface-container-low'
@@ -1466,7 +1405,56 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 });
               })()}
             </div>
-          )}
+            )}
+            {/* RHS — clock first, Quit + Submit right behind it */}
+            <div className="ml-auto flex shrink-0 items-center gap-2 md:gap-2.5">
+              {(() => {
+                const breaking = breakLeft > 0;
+                const clock = breaking
+                  ? `BREAK ${mmss(breakLeft)}`
+                  : untimed || remaining === null
+                    ? mmss(remaining ?? 0)
+                    : hhmmss(remaining);
+                const clockTone = breaking
+                  ? 'text-on-surface'
+                  : remaining !== null && remaining < 60
+                    ? 'text-error'
+                    : remaining !== null && remaining < 300
+                      ? 'text-accent-amber'
+                      : 'text-[#0E9F6E]';
+                return (
+                  <p
+                    className={`shrink-0 text-[16.5px] font-extrabold leading-none tracking-[0.04em] tabular-nums md:text-[19px] ${clockTone}`}
+                  >
+                    {clock}
+                  </p>
+                );
+              })()}
+              <button
+                onClick={() =>
+                  setConfirm({
+                    title: 'Quit the paper?',
+                    body: 'Quitting leaves the test environment. Your paper pauses, resume it from the dashboard, the clock keeps its honest count.',
+                    confirmLabel: 'Quit',
+                    danger: true,
+                    onConfirm: () => router.push('/dashboard'),
+                  })
+                }
+                aria-label="Quit the paper"
+                title="Quit the paper"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-error text-error transition hover:bg-error-container/40 active:scale-[0.97] md:h-auto md:w-auto md:px-[16px] md:py-2"
+              >
+                <span className="material-symbols-outlined text-[18px] md:hidden">logout</span>
+                <span className="hidden text-[13.5px] font-bold md:inline">Quit</span>
+              </button>
+              <button
+                onClick={requestSubmit}
+                className="shrink-0 rounded-full bg-accent-ink px-3.5 py-[7px] text-[13px] font-bold text-white transition hover:opacity-90 active:scale-[0.97] md:px-[16px] md:py-2 md:text-[14px]"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -1477,10 +1465,11 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         <div className="renance-rise rounded-[14px] border border-outline-variant/50 bg-card p-[18px] shadow-[0_2px_12px_0_rgba(20,28,45,0.10)] sm:p-6">
           <div className="flex items-center justify-between gap-3">
             {/* "Question N" pill — the school app's badge */}
-            <span className="rounded-full border border-outline-variant bg-card px-3.5 py-[7px] text-[14.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
+            <span className="shrink-0 rounded-full border border-outline-variant bg-card px-3.5 py-[7px] text-[14.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
               Question {current + 1}
               <span className="ml-1.5 font-mono text-[11px] text-outline">/ {bundle.questionCount}</span>
             </span>
+            <div className="flex min-w-0 items-center gap-2">
             {question.topic && (
               <span className="hidden min-w-0 truncate rounded-full bg-surface-container-low px-2.5 py-1 text-[11px] text-on-surface-variant sm:block">
                 {question.topic}
@@ -1489,6 +1478,28 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                 ) : null}
               </span>
             )}
+            {/* copy + calculator: they act on THIS question, so they live
+                on the card — keeps the command bar to clock + Quit/Submit */}
+            <button
+              onClick={() => {
+                const buf = [question.stem ?? ''];
+                for (const [k, v] of Object.entries(question.options ?? {})) buf.push(`${k}) ${v}`);
+                void navigator.clipboard?.writeText(buf.join('\n'));
+              }}
+              aria-label="Copy question"
+              title="Copy question"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface-variant transition hover:bg-surface-container-low hover:text-on-surface"
+            >
+              <span className="material-symbols-outlined text-[16px]">content_copy</span>
+            </button>
+            <button
+              onClick={() => setCalcOpen(true)}
+              aria-label="Open calculator"
+              title="Calculator"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface-variant transition hover:bg-surface-container-low hover:text-on-surface"
+            >
+              <span className="material-symbols-outlined text-[16px]">calculate</span>
+            </button>
             <button
               onClick={() => setFlags((f) => ({ ...f, [question.id]: !f[question.id] }))}
               className={`flex shrink-0 items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] transition ${
@@ -1502,6 +1513,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               </span>
               {flags[question.id] ? 'flagged' : 'flag'}
             </button>
+            </div>
           </div>
           {/* Comprehension passage: every group question carries the
               shared text, collapsible so it never eats the screen. */}
@@ -1649,8 +1661,9 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             )}
           </div>
           {/* the jump strip: mini number circles, answered = ink fill,
-              current = ring, the school app's grammar */}
-          <div className="no-scrollbar mt-2 flex items-center gap-1.5 overflow-x-auto pb-2">
+              current = ring — a PHONE affordance (the finger-tap map);
+              the PC keeps the deck clean and uses the Questions sheet */}
+          <div className="no-scrollbar mt-2 flex items-center gap-1.5 overflow-x-auto pb-2 md:hidden">
             {navIndices.slice(0, 150).map(({ q, i }) => {
               const answered = navIsAnswered(q.id);
               const flagged = navIsFlagged(q.id);

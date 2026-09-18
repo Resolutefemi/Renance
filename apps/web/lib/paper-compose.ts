@@ -441,14 +441,12 @@ export async function composePaper(
     questionCount: 0,
     totalMarks: 0,
   };
-  const titles: string[] = [];
   for (let i = 0; i < subjects.length; i++) {
     const slug = subjects[i];
     const bank = await resolveBank(slug);
     if (!bank || bank.code !== `${body}-${slug}-bank`) {
       throw new Error(`paper ${code} needs bank ${body}-${slug}-bank`);
     }
-    titles.push(subjectTitle(slug));
     const year = spec.years.length > i ? spec.years[i] : 0;
     const pool = yearPool(mcqOnly(bank.questions), year);
 
@@ -487,7 +485,9 @@ export async function composePaper(
   if (spec.family === 'custom') {
     label = body === 'waec' ? 'WASSCE Practice' : body === 'neco' ? 'NECO Practice' : 'Custom Practice';
   }
-  paper.title = `${label} · ${titles.join(' + ')}`;
+  // Quiz name only — the subject strip in the player chrome carries the
+  // per-subject picture; the title never reads like a receipt.
+  paper.title = label;
   if (paper.questionCount === 0) throw new Error(`paper ${code} composed to zero questions`);
   return paper;
 }

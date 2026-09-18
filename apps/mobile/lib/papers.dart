@@ -219,7 +219,8 @@ ExamMeta composedExamMeta({
 ExamMeta mockExamMeta(String code, List<String> electives, {int? timerMinutes}) {
   return composedExamMeta(
     code: code,
-    title: 'UTME Mock · ${subjectsLabel(<String>['english', ...electives])}',
+    // Quiz name only — the in-player subject strip carries the subjects.
+    title: 'UTME Mock',
     body: 'JAMB',
     questionCount: 60 + 40 * electives.length,
     durationMinutes: timerMinutes ?? 120,
@@ -236,7 +237,8 @@ ExamMeta customExamMeta(String code, String body, List<String> subjects,
   };
   return composedExamMeta(
     code: code,
-    title: '$label · ${subjectsLabel(subjects)}',
+    // Quiz name only — the in-player subject strip carries the subjects.
+    title: label,
     body: switch (body) {
       'waec' => 'WAEC',
       'neco' => 'NECO',

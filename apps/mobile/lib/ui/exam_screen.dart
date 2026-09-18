@@ -137,7 +137,6 @@ class _ExamScreenState extends State<ExamScreen> {
                 controller: c,
                 mmss: _mmss,
                 hhmmss: _hhmmss,
-                studyMode: widget.studyMode,
               ),
             ),
           ),
@@ -685,25 +684,21 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
 
 // ------------------------------------------------------------------ player
 
-/// The Myschool-cut CBT chrome: title + copy + calculator circles on
-/// the first row, the big tri-part clock with the Quit / Submit pair on
-/// the second, then the subject strip for multi-subject papers. Every
-/// colour stays in the founder's white & black defaults; the clock
-/// leans emerald → amber → red purely as the honest urgency code.
+/// The CBT command bar — ONE row: the quiz name on the left, the clock
+/// with Quit / Submit riding right behind it on the right. Copy +
+/// calculator live on the question card, beside the question they act
+/// on; multi-subject papers keep the slim subject strip beneath. The
+/// clock leans emerald → amber → red as the honest urgency code.
 class _ExamHeader extends StatelessWidget {
   const _ExamHeader({
     required this.controller,
     required this.mmss,
     required this.hhmmss,
-    required this.onOpenCalculator,
-    required this.studyMode,
   });
 
   final ExamController controller;
   final String Function(int) mmss;
   final String Function(int) hhmmss;
-  final VoidCallback onOpenCalculator;
-  final bool studyMode;
 
   Future<void> _confirmQuit(BuildContext context) async {
     final bool? quit = await showDialog<bool>(
@@ -728,19 +723,6 @@ class _ExamHeader extends StatelessWidget {
     if (quit == true && context.mounted) {
       Navigator.of(context).pop();
     }
-  }
-
-  void _copyQuestion(BuildContext context) {
-    final BundleQuestion? q = controller.current;
-    if (q == null) return;
-    final StringBuffer buf = StringBuffer(q.stem);
-    for (final MapEntry<String, String> opt in q.options.entries) {
-      buf.write('\n${opt.key}) ${opt.value}');
-    }
-    Clipboard.setData(ClipboardData(text: buf.toString()));
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Question copied')),
-    );
   }
 
   @override
@@ -771,106 +753,75 @@ class _ExamHeader extends StatelessWidget {
           ),
         ),
       ),
-      child: Column(
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+      child: Row(
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: Text(
-                    '${bundle.title}'
-                    '${controller.untimed ? ' (Study Mode)' : ' (Full Test Mode)'}',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: RenanceText.bodyMedium.copyWith(
-                      fontSize: 15.5,
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                // copy circle
-                _RoundIcon(
-                  icon: Icons.copy_outlined,
-                  onTap: () => _copyQuestion(context),
-                ),
-                const SizedBox(width: 8),
-                // calculator circle
-                _RoundIcon(
-                  icon: Icons.calculate_outlined,
-                  onTap: onOpenCalculator,
-                ),
+          // LHS — the quiz name, never the subject receipt.
+          Expanded(
+            child: Text(
+              bundle.title,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: RenanceText.bodyMedium.copyWith(
+                fontSize: 14.5,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+          const SizedBox(width: 10),
+          // the clock, first citizen of the RHS
+          Text(
+            breaking
+                ? 'BREAK ${mmss(controller.breakSecondsLeft)}'
+                : controller.untimed
+                    ? mmss(controller.elapsedSeconds)
+                    : hhmmss(remaining ?? 0),
+            style: TextStyle(
+              fontFamily: 'Inter',
+              fontSize: 17,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 1.2,
+              color: clockColor,
+              fontFeatures: const <FontFeature>[
+                FontFeature.tabularFigures(),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-            child: Row(
-              children: <Widget>[
-                // the big tri-part clock
-                Expanded(
-                  child: Text(
-                    breaking
-                        ? 'BREAK ${mmss(controller.breakSecondsLeft)}'
-                        : controller.untimed
-                            ? mmss(controller.elapsedSeconds)
-                            : hhmmss(remaining ?? 0),
-                    style: TextStyle(
-                      fontFamily: 'Inter',
-                      fontSize: 27,
-                      fontWeight: FontWeight.w800,
-                      letterSpacing: 1.5,
-                      color: clockColor,
-                      fontFeatures: const <FontFeature>[
-                        FontFeature.tabularFigures(),
-                      ],
-                    ),
-                  ),
+          const SizedBox(width: 12),
+          // Quit — a compact outlined circle; the dialog keeps the
+          // accident away.
+          InkWell(
+            onTap: () => _confirmQuit(context),
+            borderRadius: BorderRadius.circular(999),
+            child: Container(
+              width: 36,
+              height: 36,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: context.error),
+              ),
+              child: Icon(Icons.logout, size: 17, color: context.error),
+            ),
+          ),
+          const SizedBox(width: 8),
+          // Submit — right behind the clock, where the thumb lands.
+          InkWell(
+            onTap: () => _Player.maybeSubmit(context, controller),
+            borderRadius: BorderRadius.circular(999),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(999),
+                color: context.inverseChip,
+              ),
+              child: Text(
+                'Submit',
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                  color: context.onInverseChip,
                 ),
-                // Quit
-                InkWell(
-                  onTap: () => _confirmQuit(context),
-                  borderRadius: BorderRadius.circular(999),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 18, vertical: 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(999),
-                      border: Border.all(color: context.error),
-                    ),
-                    child: Text(
-                      'Quit',
-                      style: TextStyle(
-                        fontSize: 14.5,
-                        fontWeight: FontWeight.w700,
-                        color: context.error,
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 10),
-                // Submit
-                InkWell(
-                  onTap: () => _Player.maybeSubmit(context, controller),
-                  borderRadius: BorderRadius.circular(999),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 18, vertical: 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(999),
-                      color: context.inverseChip,
-                    ),
-                    child: Text(
-                      'Submit',
-                      style: TextStyle(
-                        fontSize: 14.5,
-                        fontWeight: FontWeight.w700,
-                        color: context.onInverseChip,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
         ],
@@ -879,9 +830,11 @@ class _ExamHeader extends StatelessWidget {
   }
 }
 
-/// One outlined circle icon button of the CBT header row.
-class _RoundIcon extends StatelessWidget {
-  const _RoundIcon({required this.icon, required this.onTap});
+/// One small circle icon button of the question card row (copy /
+/// calculator): they act on the current question, so they live on the
+/// card instead of crowding the command bar.
+class _CardRoundIcon extends StatelessWidget {
+  const _CardRoundIcon({required this.icon, required this.onTap});
 
   final IconData icon;
   final VoidCallback onTap;
@@ -892,14 +845,14 @@ class _RoundIcon extends StatelessWidget {
       onTap: onTap,
       customBorder: const CircleBorder(),
       child: Container(
-        width: 42,
-        height: 42,
+        width: 34,
+        height: 34,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: Border.all(color: context.outlineVariant),
           color: context.card,
         ),
-        child: Icon(icon, size: 19, color: context.ink),
+        child: Icon(icon, size: 16, color: context.textSecondary),
       ),
     );
   }
@@ -955,7 +908,7 @@ class _SubjectStrip extends StatelessWidget {
           ),
         ),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         clipBehavior: Clip.none,
@@ -966,7 +919,7 @@ class _SubjectStrip extends StatelessWidget {
                 onTap: () => controller.goTo(sections[i].$2),
                 child: Container(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 16, vertical: 9),
+                      horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
                     color: i == activeIdx
                         ? context.isDarkTier
@@ -978,7 +931,7 @@ class _SubjectStrip extends StatelessWidget {
                   child: Text(
                     subjectName(sections[i].$1),
                     style: RenanceText.bodyMedium.copyWith(
-                      fontSize: 14.5,
+                      fontSize: 12.5,
                       color:
                           i == activeIdx ? context.ink : context.textSecondary,
                     ),
@@ -1004,13 +957,11 @@ class _Player extends StatelessWidget {
     required this.controller,
     required this.mmss,
     required this.hhmmss,
-    required this.studyMode,
   });
 
   final ExamController controller;
   final String Function(int) mmss;
   final String Function(int) hhmmss;
-  final bool studyMode;
 
   /// The Submit affordance shared by the header pill and the bottom
   /// bar: confirm when anything is unanswered, then grade.
@@ -1080,6 +1031,21 @@ class _Player extends StatelessWidget {
     );
   }
 
+  /// Device clipboard copy of the current question (stem + options),
+  /// the study-flow hand-off to an AI chat or a note.
+  void _copyQuestion(BuildContext context) {
+    final BundleQuestion? q = controller.current;
+    if (q == null) return;
+    final StringBuffer buf = StringBuffer(q.stem);
+    for (final MapEntry<String, String> opt in q.options.entries) {
+      buf.write('\n${opt.key}) ${opt.value}');
+    }
+    Clipboard.setData(ClipboardData(text: buf.toString()));
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Question copied')),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final ExamController controller = this.controller;
@@ -1097,8 +1063,6 @@ class _Player extends StatelessWidget {
           controller: controller,
           mmss: mmss,
           hhmmss: hhmmss,
-          onOpenCalculator: () => _openCalculator(context),
-          studyMode: studyMode,
         ),
         _SubjectStrip(controller: controller),
         // Scrollable question area ---------------------------------------
@@ -1146,6 +1110,18 @@ class _Player extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
+                        // copy + calculator: they act on THIS question,
+                        // so they ride the card, not the command bar.
+                        _CardRoundIcon(
+                          icon: Icons.copy_outlined,
+                          onTap: () => _copyQuestion(context),
+                        ),
+                        const SizedBox(width: 8),
+                        _CardRoundIcon(
+                          icon: Icons.calculate_outlined,
+                          onTap: () => _openCalculator(context),
+                        ),
+                        const SizedBox(width: 8),
                         // flag pill keeps its Renance place.
                         InkWell(
                           onTap: () => controller.toggleFlag(question.id),

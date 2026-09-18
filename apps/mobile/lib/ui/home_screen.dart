@@ -931,7 +931,7 @@ class _LauncherTab extends StatelessWidget {
     // registered; otherwise an empty sha fetches the bundle live.
     ExamMeta meta = ExamMeta(
       code: daily.code,
-      title: 'Daily Challenge · ${daily.day}',
+      title: 'Daily Quiz',
       questionCount: daily.questionCount,
       totalMarks: daily.questionCount,
       bundleSha256: '',
