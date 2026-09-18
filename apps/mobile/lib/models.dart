@@ -33,6 +33,7 @@ class Profile {
     required this.gradeLevel,
     required this.exams,
     required this.completed,
+    this.subjects = const <String>[],
     this.targetYear,
   });
 
@@ -42,6 +43,10 @@ class Profile {
   final List<String> exams;
   final bool completed;
 
+  /// The daily CBT subject combination (founder rule: the first daily
+  /// tap asks for it; the sprint then draws only these subjects).
+  final List<String> subjects;
+
   /// Exam year picked at onboarding (drives the hero countdown).
   final int? targetYear;
 
@@ -50,6 +55,9 @@ class Profile {
     institution: (j['institution'] ?? '') as String,
     gradeLevel: (j['gradeLevel'] ?? '') as String,
     exams: ((j['exams'] as List<dynamic>?) ?? const [])
+        .map((e) => e.toString())
+        .toList(),
+    subjects: ((j['subjects'] as List<dynamic>?) ?? const [])
         .map((e) => e.toString())
         .toList(),
     targetYear: j['targetYear'] as int?,
@@ -1595,5 +1603,26 @@ class LeaderboardData {
     entries: ((j['entries'] ?? const <dynamic>[]) as List<dynamic>)
         .map((dynamic e) => BoardEntry.fromJson((e as Map).cast<String, dynamic>()))
         .toList(),
+  );
+}
+
+/// One live presence in the arena (GET /arena/players row): a student
+/// who is connected and idle right now, with their all-time Ren Points
+/// (a win is worth 1 point) so the lobby ranks the active list.
+class ArenaPlayer {
+  const ArenaPlayer({
+    required this.userId,
+    required this.username,
+    required this.renPoints,
+  });
+
+  final String userId;
+  final String username;
+  final int renPoints;
+
+  factory ArenaPlayer.fromJson(Map<String, dynamic> j) => ArenaPlayer(
+    userId: (j['userId'] ?? '') as String,
+    username: (j['username'] ?? '') as String,
+    renPoints: ((j['renPoints'] ?? 0) as num).toInt(),
   );
 }

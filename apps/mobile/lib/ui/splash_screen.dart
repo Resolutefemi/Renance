@@ -28,7 +28,8 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
-  // First open holds the stage a beat longer than later launches.
+  // First open holds the stage a beat longer than later launches (the
+  // entrance animations only; the floor itself lasts twenty seconds).
   late final bool _firstRun = !context.read<SessionStore>().introSeen;
   late final Duration _showtime = _firstRun
       ? const Duration(milliseconds: 3400)
@@ -73,8 +74,11 @@ class _SplashScreenState extends State<SplashScreen>
       Duration(milliseconds: _firstRun ? 1200 : 700),
       () => mounted ? setState(() => _skipVisible = true) : null,
     );
-    _routeTimer =
-        Timer(_showtime + const Duration(milliseconds: 300), _advance);
+    // The founder rule: the initialization page lasts UP TO twenty
+    // seconds before automatically skipping. The entrance animations
+    // finish in a few seconds, the wordmark keeps breathing after, and
+    // the Skip pill is available the whole wait for anyone in a hurry.
+    _routeTimer = Timer(const Duration(seconds: 20), _advance);
   }
 
   @override

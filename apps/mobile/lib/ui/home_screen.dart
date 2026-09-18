@@ -36,6 +36,8 @@ import 'exam_mode_setup_screen.dart';
 import 'library_screen.dart';
 import 'gamification_hub_screen.dart';
 import 'onboarding_sheet.dart';
+import 'daily_subjects_sheet.dart';
+import 'offline_offer_sheet.dart';
 import 'post_utme_screens.dart';
 import 'profile_screen.dart';
 import 'renance_logo.dart';
@@ -101,6 +103,53 @@ class _HomeScreenState extends State<HomeScreen> {
     if (mounted) {
       setState(() => _bootstrapped = true);
     }
+    await _maybeOfferOffline();
+  }
+
+  /// The offline offer (founder rule): after signing up — and any open
+  /// where the shelf is still short — one sheet asks to make Renance
+  /// offline (~120 MB of question packs today). A dismissed offer never
+  /// nags again; Downloads stays the manual path.
+  Future<void> _maybeOfferOffline() async {
+    final SessionStore session = context.read<SessionStore>();
+    final StudentController student = context.read<StudentController>();
+    final SyncController sync = context.read<SyncController>();
+    if (!await shouldOfferOffline(session, student, sync)) return;
+    if (!mounted) return;
+    await showModalBottomSheet<void>(
+      context: context,
+      isDismissible: false,
+      enableDrag: false,
+      backgroundColor: Colors.transparent,
+      builder: (_) => OfflineOfferSheet(onDone: _onOfferDone),
+    );
+  }
+
+  void _onOfferDone() {
+    if (mounted) setState(() {});
+  }
+
+  /// One entry per subject bank of [body] (slug + question count), read
+  /// from the synced manifest codes: jamb-english-bank -> english.
+  List<({String slug, int count})> _dailySubjects(
+    SyncController sync,
+    String body,
+  ) {
+    final RegExp hit = RegExp('^${body.toLowerCase()}-([a-z0-9-]+)-bank\$');
+    final Map<String, int> seen = <String, int>{};
+    for (final ExamMeta e in sync.exams) {
+      final RegExpMatch? m = hit.firstMatch(e.code);
+      if (m == null) continue;
+      final String slug = m.group(1)!;
+      if (slug.endsWith('-enrich')) continue; // enrichment forks ride the base bank
+      seen[slug] = (seen[slug] ?? 0) + e.questionCount;
+    }
+    final List<({String slug, int count})> rows = <({String slug, int count})>[
+      for (final MapEntry<String, int> e in seen.entries)
+        (slug: e.key, count: e.value),
+    ];
+    rows.sort((a, b) => a.slug.compareTo(b.slug));
+    return rows;
   }
 
   void _showOnboarding() {
@@ -839,6 +888,28 @@ class _LauncherTab extends StatelessWidget {
       'University Modules' => 'University Modules',
       _ => 'JAMB',
     };
+    // Founder rule: the first daily tap asks for the subject combination
+    // (bodies with per-subject banks only). The combination is stored on
+    // the profile, and every daily sprint afterwards draws ONLY those
+    // subjects — the server composes the paper, the same one the web
+    // plays.
+    final Profile? dailyProfile = student.me?.profile;
+    if (kComboBodies.contains(body) &&
+        (dailyProfile == null || dailyProfile.subjects.isEmpty)) {
+      final SyncController sync = context.read<SyncController>();
+      final List<({String slug, int count})> rows = _dailySubjects(sync, body);
+      if (!context.mounted) return;
+      final List<String>? picked = await showDailySubjectsSheet(
+        context,
+        api: api,
+        body: body,
+        subjects: rows,
+      );
+      if (picked == null || picked.isEmpty) return; // dismissed, no sprint
+      // The combination now lives on the profile server-side; refresh so
+      // the local copy carries it and the gate never re-asks.
+      await student.refresh();
+    }
     final DailyInfo daily;
     try {
       daily = await api.daily(body);

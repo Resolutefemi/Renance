@@ -196,6 +196,28 @@ class ApiClient {
     return Bundle.fromJson(data.cast<String, dynamic>());
   }
 
+  /// Stores the daily CBT subject combination (PUT /me/daily-subjects).
+  /// The server then composes every daily sprint from exactly these
+  /// subjects, so the app and the web play the same paper.
+  Future<void> setDailySubjects(List<String> subjects) async {
+    await _send(
+      'PUT',
+      '/me/daily-subjects',
+      body: <String, dynamic>{'subjects': subjects},
+    );
+  }
+
+  /// The students currently in the arena (GET /arena/players): idle,
+  /// online, each with their Ren Points. The lobby's Active Now list.
+  Future<List<ArenaPlayer>> arenaPlayers() async {
+    final data = await _send('GET', '/arena/players') as Map<dynamic, dynamic>;
+    final List<dynamic> rows = (data['players'] as List<dynamic>?) ?? const [];
+    return <ArenaPlayer>[
+      for (final row in rows)
+        ArenaPlayer.fromJson((row as Map).cast<String, dynamic>()),
+    ];
+  }
+
   /// Today's daily challenge for one exam body (GET /daily/{body}).
   /// Returns the paper code + day; the tile opens it like any exam.
   Future<DailyInfo> daily(String body) async {

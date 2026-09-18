@@ -342,33 +342,11 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                         }
                       }),
                     ),
-                    _FieldLabel('Examination Type'),
-                    _PickerField(
-                      value: switch (_bodyLabel) {
-                        'POST-UTME' => 'Post UTME',
-                        'University Modules' => 'School Desk (University)',
-                        _ => _bodyLabel,
-                      },
-                      items: const <String>[
-                        'JAMB',
-                        'WAEC',
-                        'NECO',
-                        'Post UTME',
-                        'School Desk (University)',
-                      ],
-                      onChanged: (String v) => setState(() {
-                        _body = switch (v) {
-                          'WAEC' => 'waec',
-                          'NECO' => 'neco',
-                          'Post UTME' => 'post-utme',
-                          'School Desk (University)' => 'university',
-                          _ => 'jamb',
-                        };
-                        final List<String> next = _slugs;
-                        _subject =
-                            next.contains(_subject) ? _subject : next.firstOrNull ?? '';
-                      }),
-                    ),
+                    // Focus IS the exam type (founder rule): the study
+                    // page opens on the student's active focus and never
+                    // offers a switcher — the desk tiles deep-link the
+                    // other foci.
+                    _FocusChip(label: _bodyLabel),
                     _FieldLabel('Examination Year'),
                     _PickerField(
                       value: _year,
@@ -489,6 +467,56 @@ class _PickerField extends StatelessWidget {
                 }
               : null,
         ),
+      ),
+    );
+  }
+}
+
+/// The static focus chip replacing the old Examination Type picker: the
+/// study page IS the focus's study page (founder rule).
+class _FocusChip extends StatelessWidget {
+  const _FocusChip({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 52,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      decoration: BoxDecoration(
+        color: Colors.black.withValues(alpha: 0.04),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        children: <Widget>[
+          const Icon(Icons.bookmark, size: 18, color: Colors.black38),
+          const SizedBox(width: 10),
+          Text(
+            'Focus',
+            style: RenanceText.bodyMedium.copyWith(color: Colors.black45),
+          ),
+          const Spacer(),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: Colors.black,
+              borderRadius: BorderRadius.circular(999),
+            ),
+            child: Text(
+              switch (label) {
+                'POST-UTME' => 'Post UTME',
+                'University Modules' => 'School Desk',
+                _ => label,
+              },
+              style: const TextStyle(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w700,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
