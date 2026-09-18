@@ -1117,7 +1117,7 @@ class _LauncherTab extends StatelessWidget {
                 child: LauncherTile(
                   icon: Icons.event_repeat,
                   iconColor: RenanceColors.amber,
-                  label: 'Daily Challenge',
+                  label: 'Daily Quiz',
                   onTap: () => _openDaily(context),
                 ),
               ),

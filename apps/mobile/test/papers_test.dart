@@ -168,17 +168,15 @@ void main() {
       durationMinutes: 45,
     );
 
-    test('mock meta names the subjects and the official 2-hour window',
+    test('mock meta carries the bare quiz name and the official 2-hour window',
         () {
       final ExamMeta meta = mockExamMeta(
         'jamb-mock-english-biology-physics',
         <String>['biology', 'physics'],
       );
       expect(meta.code, 'jamb-mock-english-biology-physics');
-      expect(
-        meta.title,
-        'UTME Mock · Use of English, Biology, Physics',
-      );
+      // Quiz name only — the player's subject strip carries the subjects.
+      expect(meta.title, 'UTME Mock');
       expect(meta.body, 'JAMB');
       expect(meta.durationMinutes, 120);
       // 60 English + 40 per elective.
@@ -193,7 +191,7 @@ void main() {
         <String>['biology'],
         count: 40,
       );
-      expect(meta.title, 'WASSCE Practice · Biology');
+      expect(meta.title, 'WASSCE Practice');
       expect(meta.body, 'WAEC');
       expect(meta.questionCount, 40);
       expect(meta.durationMinutes, isNull);

@@ -629,8 +629,8 @@ MRES=$(curl -fsS "$BASE/attempts/$MAID" -H "Authorization: Bearer $TOKEN")
 [ "$(printf '%s' "$MRES" | jsonget "d['result']['total']")" = "$MQN" ]
 [ "$(printf '%s' "$MRES" | jsonget "sum(r['total'] for r in d['result']['breakdown'])")" = "$MQN" ]
 
-step "review the mock attempt -> paper title carries the subject mix"
+step "review the mock attempt -> paper title is the bare quiz name"
 MREV=$(curl -fsS "$BASE/attempts/$MAID/review" -H "Authorization: Bearer $TOKEN")
-printf '%s' "$MREV" | jsonget "d['title']" | grep -q "Use of English"
+printf '%s' "$MREV" | jsonget "d['title']" | grep -q "^UTME Mock$"
 
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"
