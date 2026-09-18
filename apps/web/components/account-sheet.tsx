@@ -6,7 +6,7 @@
  * Tapping the dashboard header's avatar (top right-hand side) slides
  * this sheet up: the avatar row (initials circle, full name, @username,
  * the X), then the menu — Dashboard, Performance Analysis, Exam
- * History, Saved Questions, Update Questions, App Settings, and the red
+ * History, Saved Questions, App Settings, and the red
  * Logout row — the way Myschool displays the account at the top-RHS of
  * home, rebuilt in Renance's white & black.
  */
@@ -26,7 +26,6 @@ const ROWS = [
   { icon: 'insights', label: 'Performance Analysis', href: '/performance' },
   { icon: 'history_edu', label: 'Exam History', href: '/review' },
   { icon: 'bookmark', label: 'Saved Questions', href: '/saved' },
-  { icon: 'sync', label: 'Update Questions', href: '/update-questions' },
   { icon: 'settings', label: 'App Settings', href: '/settings' },
 ] as const;
 

@@ -6,7 +6,8 @@
  * The Study tile on the desk lands here. Per focus (JAMB / WAEC / NECO
  * / Post UTME / School Desk) the page carries:
  *   · the tinted header band (back circle, title, the green book seal)
- *   · the green Update Questions banner → /update-questions
+ *   (the Update Questions banner is app-only; the web reads the
+ *    static shelf directly)
  *   · the full picker form — Subject, Examination Type, Year, Question
  *     type, Topic — and Start Study
  *
@@ -70,6 +71,13 @@ function StudySetupInner() {
     if (b === 'waec' || b === 'neco' || b === 'university' || b === 'post-utme') return b;
     return 'jamb';
   });
+
+  // The focus pins the exam type (the desk tiles deep-link ?body=);
+  // the setup page never offers an exam-type switcher.
+  useEffect(() => {
+    const b = focusParam;
+    setBody(b === 'waec' || b === 'neco' || b === 'university' || b === 'post-utme' ? b : 'jamb');
+  }, [focusParam]);
 
   const [exams, setExams] = useState<ExamMeta[] | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -265,39 +273,23 @@ function StudySetupInner() {
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-4 sm:px-6">
-        {/* ---- green Update Questions banner -------------------- */}
-            <Link
-              href="/update-questions"
-              className="mt-4 flex items-center gap-3 rounded-[14px] border border-accent-emerald/35 bg-accent-emerald/10 p-3.5 transition hover:bg-accent-emerald/15"
-            >
-              <span className="flex items-center gap-1 rounded-full bg-surface-container-lowest px-3.5 py-2 text-[13.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
-                Update Questions
-                <span className="material-symbols-outlined text-[17px] text-on-surface">chevron_right</span>
-              </span>
-              <span className="material-symbols-outlined ml-auto text-[18px] text-on-surface-variant">chevron_right</span>
-            </Link>
-            <p className="mt-2 px-1 text-[13px] leading-relaxed text-[#0F766E] dark:text-accent-emerald">
-              Update your questions regularly to download the latest questions, answers, explanations, and
-              corrections.
-            </p>
-
-            {/* ---- the picker form ---------------------------------- */}
+      <div className="mx-auto w-full max-w-2xl px-4 pb-8 pt-4 sm:px-6 lg:max-w-4xl">
+            {/* ---- the picker form (focus IS the exam type: the desk
+                 deep-links ?body=; no exam-type picker here) --------- */}
             <div className="mt-5 space-y-4">
               {loadError && (
                 <p className="rounded-xl bg-error-container px-4 py-3 text-[13px] text-on-error-container">{loadError}</p>
               )}
 
-              <Field label="Examination Type">
-                <select value={body} onChange={(e) => setBody(e.target.value as Body)} className={selectCls}>
-                  {(Object.keys(BODY_LABEL) as Body[]).map((b) => (
-                    <option key={b} value={b}>
-                      {BODY_LABEL[b]}
-                    </option>
-                  ))}
-                </select>
-              </Field>
+              <div className="flex items-center gap-2 rounded-[12px] bg-surface-container-low px-4 py-3">
+                <span className="material-symbols-outlined text-[18px] text-on-surface-variant">bookmark</span>
+                <span className="text-[13px] text-on-surface-variant">Focus</span>
+                <span className="ml-auto rounded-full bg-primary px-3 py-1 text-[12.5px] font-bold text-on-primary">
+                  {BODY_LABEL[body]}
+                </span>
+              </div>
 
+              <div className="grid gap-4 lg:grid-cols-2">
               {body === 'university' && (
                 <Field label="School">
                   <select
@@ -384,6 +376,7 @@ function StudySetupInner() {
                   ))}
                 </select>
               </Field>
+              </div>
             </div>
 
             <button

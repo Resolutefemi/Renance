@@ -157,105 +157,109 @@ function ReaderInner() {
 
   return (
     <main className="min-h-dvh bg-surface pb-40 md:pl-[var(--rail-w)]">
-      {/* ---- header band ------------------------------------------- */}
+      {/* ---- header band: one row on PC, stacked on phones ----------
+           LHS title · middle type chips · RHS search (desktop rule) */}
       <div className="sticky top-0 z-40 border-b border-outline-variant/40 bg-surface/90 backdrop-blur-xl">
-        <div className="mx-auto w-full max-w-2xl px-4 pt-3 sm:px-6">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => router.push('/study-past-questions')}
-              aria-label="Back to study setup"
-              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface transition hover:bg-surface-container-low"
-            >
-              <span className="material-symbols-outlined text-[20px]">arrow_back</span>
-            </button>
-            <div className="min-w-0 flex-1">
-              <h1 className="truncate text-[17px] font-bold tracking-tight text-on-surface">{title}</h1>
-              <p className="text-[12.5px] text-on-surface-variant">
-                {filtered.length.toLocaleString()} of {bundle.questionCount.toLocaleString()} questions
-              </p>
-            </div>
-          </div>
-          {/* type chips — All / Objectives / Theory, the reader's grammar */}
-          <div className="no-scrollbar flex items-center gap-2 overflow-x-auto pb-2.5 pt-2.5">
-            {(
-              [
-                ['all', `All (${bundle.questionCount.toLocaleString()})`],
-                ['objective', 'Objectives'],
-                ['theory', 'Theory'],
-              ] as const
-            ).map(([key, label]) => (
+        <div className="mx-auto w-full max-w-2xl px-4 pt-3 sm:px-6 lg:max-w-4xl">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:gap-5">
+            {/* LHS — back + subject title + live count */}
+            <div className="flex items-center gap-3 lg:max-w-[34%]">
               <button
-                key={key}
-                onClick={() => {
-                  setQtFilter(key);
-                  setLimit(25);
-                }}
-                className={`shrink-0 rounded-full px-4 py-1.5 font-mono text-xs transition ${
-                  qtFilter === key
-                    ? 'bg-selection-blue font-semibold text-on-surface'
-                    : 'bg-surface-container-low text-on-surface-variant hover:text-on-surface'
-                }`}
+                onClick={() => router.push('/study-past-questions')}
+                aria-label="Back to study setup"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-outline-variant bg-card text-on-surface transition hover:bg-surface-container-low"
               >
-                {label}
+                <span className="material-symbols-outlined text-[20px]">arrow_back</span>
               </button>
-            ))}
-            {bankYears.length > 0 && (
-              <select
-                value={yearFilter ?? ''}
+              <div className="min-w-0">
+                <h1 className="truncate text-[17px] font-bold tracking-tight text-on-surface">{title}</h1>
+                <p className="text-[12.5px] text-on-surface-variant">
+                  {filtered.length.toLocaleString()} of {bundle.questionCount.toLocaleString()} questions
+                </p>
+              </div>
+            </div>
+            {/* MIDDLE — type chips + year/topic filters */}
+            <div className="no-scrollbar flex items-center gap-2 overflow-x-auto pb-2.5 pt-2.5 lg:flex-1 lg:justify-center lg:pb-0 lg:pt-0">
+              {(
+                [
+                  ['all', `All (${bundle.questionCount.toLocaleString()})`],
+                  ['objective', 'Objectives'],
+                  ['theory', 'Theory'],
+                ] as const
+              ).map(([key, label]) => (
+                <button
+                  key={key}
+                  onClick={() => {
+                    setQtFilter(key);
+                    setLimit(25);
+                  }}
+                  className={`shrink-0 rounded-full px-4 py-1.5 font-mono text-xs transition ${
+                    qtFilter === key
+                      ? 'bg-selection-blue font-semibold text-on-surface'
+                      : 'bg-surface-container-low text-on-surface-variant hover:text-on-surface'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+              {bankYears.length > 0 && (
+                <select
+                  value={yearFilter ?? ''}
+                  onChange={(e) => {
+                    setYearFilter(e.target.value ? Number(e.target.value) : null);
+                    setLimit(25);
+                  }}
+                  className="h-[34px] shrink-0 rounded-full border border-outline-variant bg-card px-3 text-xs text-on-surface outline-none"
+                  aria-label="Filter by year"
+                >
+                  <option value="">All years</option>
+                  {bankYears.map((y) => (
+                    <option key={y} value={y}>
+                      {y}
+                    </option>
+                  ))}
+                </select>
+              )}
+              {topics.length > 0 && (
+                <select
+                  value={topicFilter}
+                  onChange={(e) => {
+                    setTopicFilter(e.target.value);
+                    setLimit(25);
+                  }}
+                  className="h-[34px] max-w-[180px] shrink-0 rounded-full border border-outline-variant bg-card px-3 text-xs text-on-surface outline-none"
+                  aria-label="Filter by topic"
+                >
+                  <option value="">All topics</option>
+                  {topics.map((t) => (
+                    <option key={t} value={t}>
+                      {t}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </div>
+            {/* RHS — the search field */}
+            <div className="relative pb-3 lg:w-[300px] lg:shrink-0 lg:pb-0">
+              <span className="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">
+                search
+              </span>
+              <input
+                value={search}
                 onChange={(e) => {
-                  setYearFilter(e.target.value ? Number(e.target.value) : null);
+                  setSearch(e.target.value);
                   setLimit(25);
                 }}
-                className="h-[34px] shrink-0 rounded-full border border-outline-variant bg-card px-3 text-xs text-on-surface outline-none"
-                aria-label="Filter by year"
-              >
-                <option value="">All years</option>
-                {bankYears.map((y) => (
-                  <option key={y} value={y}>
-                    {y}
-                  </option>
-                ))}
-              </select>
-            )}
-            {topics.length > 0 && (
-              <select
-                value={topicFilter}
-                onChange={(e) => {
-                  setTopicFilter(e.target.value);
-                  setLimit(25);
-                }}
-                className="h-[34px] max-w-[180px] shrink-0 rounded-full border border-outline-variant bg-card px-3 text-xs text-on-surface outline-none"
-                aria-label="Filter by topic"
-              >
-                <option value="">All topics</option>
-                {topics.map((t) => (
-                  <option key={t} value={t}>
-                    {t}
-                  </option>
-                ))}
-              </select>
-            )}
-          </div>
-          {/* search */}
-          <div className="relative pb-3">
-            <span className="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">
-              search
-            </span>
-            <input
-              value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
-                setLimit(25);
-              }}
-              placeholder="Search the questions…"
-              className="h-10 w-full rounded-full border border-outline-variant bg-card pl-9 pr-3 text-[13.5px] text-on-surface outline-none transition placeholder:text-outline focus:border-primary"
-            />
+                placeholder="Search the questions…"
+                className="h-10 w-full rounded-full border border-outline-variant bg-card pl-9 pr-3 text-[13.5px] text-on-surface outline-none transition placeholder:text-outline focus:border-primary"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       {/* ---- question cards ----------------------------------------- */}
-      <div ref={listTopRef} className="mx-auto w-full max-w-2xl scroll-mt-44 px-4 pt-4 sm:px-6">
+      <div ref={listTopRef} className="mx-auto w-full max-w-2xl scroll-mt-44 px-4 pt-4 sm:px-6 lg:max-w-4xl lg:scroll-mt-24">
         {visible.length === 0 && (
           <p className="rounded-xl bg-card p-6 text-center text-sm text-on-surface-variant shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
             No questions match these filters yet.

@@ -823,7 +823,6 @@ function MoreSheet({ onClose }: { onClose: () => void }) {
   const items = [
     { icon: 'insights', label: 'Performance Analysis', href: '/performance' },
     { icon: 'bookmark', label: 'Saved Questions', href: '/saved' },
-    { icon: 'sync', label: 'Update Questions', href: '/update-questions' },
     { icon: 'auto_stories', label: 'Study Resources', href: '/study' },
     { icon: 'notifications', label: 'Notifications', href: '/notifications' },
     { icon: 'laptop_mac', label: 'Career Bridge', href: '/career-bridge' },
