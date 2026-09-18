@@ -73,7 +73,9 @@ jobs:
         with:
           tag_name: latest
           name: Latest Android build
-          prerelease: true
+          # A full (non-prerelease) release keeps the canonical
+          # /releases/latest/download/app-release.apk URL working.
+          prerelease: false
           files: apps/mobile/build/app/outputs/flutter-apk/app-release.apk
 
       - name: Attach to GitHub Release (tag builds only)
