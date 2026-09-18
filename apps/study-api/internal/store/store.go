@@ -540,8 +540,10 @@ type Attempt struct {
         SubmittedAt *time.Time `json:"submittedAt,omitempty"`
         DurationMs  *int       `json:"-"`
         // DailyDay is set when the attempt is the ROADMAP #20 daily
-        // challenge for that UTC day (NULL for ordinary papers).
-        DailyDay *time.Time `json:"-"`
+        // challenge for that UTC day (NULL for ordinary papers). It
+        // rides the JSON so clients can reopen the sprint under the
+        // "Daily Quiz" head instead of the composed paper's label.
+        DailyDay *time.Time `json:"dailyDay,omitempty"`
 }
 
 type Picked struct {

@@ -947,7 +947,7 @@ class _LauncherTab extends StatelessWidget {
     if (!context.mounted) return;
     Navigator.of(context).push(
       MaterialPageRoute<void>(
-        builder: (_) => ExamScreen(exam: meta),
+        builder: (_) => ExamScreen(exam: meta, daily: true),
       ),
     );
   }
