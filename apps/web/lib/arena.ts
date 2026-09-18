@@ -34,6 +34,18 @@ export type ArenaInbound =
     }
   | { type: 'hosted'; code: string }
   | {
+      type: 'challenge_sent';
+      code: string;
+      body?: string;
+      opponent?: string;
+    }
+  | {
+      type: 'challenge';
+      code: string;
+      body?: string;
+      opponent: string; // the challenger's username
+    }
+  | {
       type: 'question';
       matchId?: string;
       // index 0 is the first question, tolerate older hubs that omit it
@@ -61,7 +73,8 @@ export type ArenaOutbound =
   | { type: 'cancel' }
   | { type: 'answer'; index: number; letter: string }
   | { type: 'host'; body?: string }
-  | { type: 'join'; code: string };
+  | { type: 'join'; code: string }
+  | { type: 'challenge'; target: string; body?: string };
 
 /** http(s):// → ws(s):// for the socket endpoint. */
 export function arenaWsUrl(token: string): string {
