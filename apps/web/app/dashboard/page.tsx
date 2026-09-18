@@ -508,7 +508,7 @@ export default function DashboardPage() {
               <LauncherTile icon="sports_esports" label="Arena" href="/arena" />
               <LauncherTile
                 icon="event_repeat"
-                label="Daily Challenge"
+                label="Daily Quiz"
                 amber
                 href={daily ? examHref(daily.code, { daily: '1' }) : setupHref}
                 onMore={needsCombo ? () => setComboOpen(true) : undefined}
