@@ -20,6 +20,7 @@ import 'package:provider/provider.dart';
 
 import '../api_client.dart';
 import '../arena_client.dart';
+import '../config.dart';
 import '../controllers.dart';
 import '../models.dart';
 import '../storage.dart';
@@ -325,7 +326,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                         ),
                       )
                     else if (_roomCode.isNotEmpty) ...<Widget>[
-                      const Text(
+                      Text(
                         _waitingNote,
                         style: TextStyle(color: Colors.white70, fontSize: 13.5),
                       ),
