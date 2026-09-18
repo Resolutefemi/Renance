@@ -151,9 +151,10 @@ CODE=$(curl -s -o /dev/null -w '%{http_code}' "$BASE/internal/review/tick")
 [ "$CODE" = "404" ]
 
 # --- ROADMAP #4: syllabus map (curriculum tree + mastery overlay) ---
-# Derive the body from the first manifest pack that carries one (banks
-# without a body are skipped) so manifest re-ordering can never break it.
-SYLBODY=$(printf '%s' "$MAN" | jsonget "[e['body'] for e in d['exams'] if e.get('body')][0].lower().replace(' ','-')")
+# The graded probe attempt (jamb-english-bank) seats JAMB review rows, so
+# the tree read here must be the probe bank's own body — not whatever body
+# happens to lead the manifest (retired bodies like gcse would 404).
+SYLBODY=$(printf '%s' "$MAN" | jsonget "[e['body'].lower().replace(' ','-') for e in d['exams'] if e['code'] == 'jamb-english-bank' and e.get('body')][0]")
 step "GET /syllabus/$SYLBODY -> tree with mastery overlay"
 SYL=$(curl -fsS "$BASE/syllabus/$SYLBODY" -H "Authorization: Bearer $TOKEN")
 printf '%s' "$SYL" | jsonget "d['body']" >/dev/null

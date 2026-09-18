@@ -37,7 +37,7 @@ class PostUtmeHomeTab extends StatelessWidget {
   final ValueChanged<int> onGoTab;
 
   /// The stored Post UTME school pick, when it still has banked packs.
-  String? get _schoolSlug {
+  String? _schoolSlug(BuildContext context) {
     final Map<String, List<UniCourse>> pq = postUtmeCourses(sync.exams);
     final String? stored =
         context.read<SessionStore>().prefs.getString(kPostUtmeSchoolPickKey);
@@ -53,7 +53,7 @@ class PostUtmeHomeTab extends StatelessWidget {
       for (final ExamMeta e in sync.exams)
         if (e.body == 'POST-UTME') e,
     ];
-    final String? slug = _schoolSlug;
+    final String? slug = _schoolSlug(context);
     final List<UniCourse> own = slug != null
         ? (pq[slug] ?? const <UniCourse>[])
         : const <UniCourse>[];
