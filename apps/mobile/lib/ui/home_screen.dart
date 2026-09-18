@@ -129,28 +129,6 @@ class _HomeScreenState extends State<HomeScreen> {
     if (mounted) setState(() {});
   }
 
-  /// One entry per subject bank of [body] (slug + question count), read
-  /// from the synced manifest codes: jamb-english-bank -> english.
-  List<({String slug, int count})> _dailySubjects(
-    SyncController sync,
-    String body,
-  ) {
-    final RegExp hit = RegExp('^${body.toLowerCase()}-([a-z0-9-]+)-bank\$');
-    final Map<String, int> seen = <String, int>{};
-    for (final ExamMeta e in sync.exams) {
-      final RegExpMatch? m = hit.firstMatch(e.code);
-      if (m == null) continue;
-      final String slug = m.group(1)!;
-      if (slug.endsWith('-enrich')) continue; // enrichment forks ride the base bank
-      seen[slug] = (seen[slug] ?? 0) + e.questionCount;
-    }
-    final List<({String slug, int count})> rows = <({String slug, int count})>[
-      for (final MapEntry<String, int> e in seen.entries)
-        (slug: e.key, count: e.value),
-    ];
-    rows.sort((a, b) => a.slug.compareTo(b.slug));
-    return rows;
-  }
 
   void _showOnboarding() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
@@ -875,6 +853,29 @@ class _LauncherTab extends StatelessWidget {
   }) onOpenExam;
   final ValueChanged<int> onGoTab;
   final VoidCallback onOnboarding;
+
+  /// One entry per subject bank of [body] (slug + question count), read
+  /// from the synced manifest codes: jamb-english-bank -> english.
+  List<({String slug, int count})> _dailySubjects(
+    SyncController sync,
+    String body,
+  ) {
+    final RegExp hit = RegExp('^${body.toLowerCase()}-([a-z0-9-]+)-bank\$');
+    final Map<String, int> seen = <String, int>{};
+    for (final ExamMeta e in sync.exams) {
+      final RegExpMatch? m = hit.firstMatch(e.code);
+      if (m == null) continue;
+      final String slug = m.group(1)!;
+      if (slug.endsWith('-enrich')) continue; // enrichment forks ride the base bank
+      seen[slug] = (seen[slug] ?? 0) + e.questionCount;
+    }
+    final List<({String slug, int count})> rows = <({String slug, int count})>[
+      for (final MapEntry<String, int> e in seen.entries)
+        (slug: e.key, count: e.value),
+    ];
+    rows.sort((a, b) => a.slug.compareTo(b.slug));
+    return rows;
+  }
 
   /// The Compete desk's Daily Challenge: resolves today's rotating
   /// paper for the student's focus body (GET /daily/{body}) and opens

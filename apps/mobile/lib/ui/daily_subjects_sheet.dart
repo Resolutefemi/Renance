@@ -136,7 +136,7 @@ class _DailySubjectsSheetState extends State<_DailySubjectsSheet> {
                   spacing: 8,
                   runSpacing: 8,
                   children: <Widget>[
-                    for (final (:slug, count:) in widget.subjects)
+                    for (final (:slug, :count) in widget.subjects)
                       _SubjectChip(
                         label: _label(slug),
                         count: count,

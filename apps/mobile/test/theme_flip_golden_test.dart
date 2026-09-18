@@ -25,6 +25,7 @@ import 'package:renance/storage.dart';
 import 'package:renance/ui/ai_generator_screen.dart';
 import 'package:renance/ui/arena_lobby_screen.dart';
 import 'package:renance/ui/arena_match_screen.dart';
+import 'package:renance/arena_client.dart';
 import 'package:renance/ui/auth_screens.dart';
 import 'package:renance/ui/badge_detail_screen.dart';
 import 'package:renance/ui/career_bridge_screen.dart';
@@ -420,7 +421,17 @@ WidgetBuilder screenFor(String name) {
     case 'arena_lobby':
       return (_) => const ArenaLobbyScreen();
     case 'arena_match':
-      return (_) => const ArenaMatchScreen();
+      // The live duel drives off a socket; the harness wires a bare one
+      // (no connect) and renders the waiting state.
+      final ArenaSocket matchSock = ArenaSocket(onFrame: (_) {});
+      return (_) => ArenaMatchScreen(
+        socket: matchSock,
+        onFrames: (_) {},
+        myId: 'tester',
+        opponent: 'Renance Bot',
+        focus: 'JAMB',
+        onOver: () {},
+      );
     case 'career_bridge':
       return (_) => const CareerBridgeScreen();
     case 'offline_share':
@@ -573,9 +584,8 @@ void main() {
             );
           }
           if (name == 'arena_match') {
-            // The lobby countdown schedules a 5s timer; let it fire so the
-            // test ends with no pending timer.
-            await tester.pump(const Duration(seconds: 5));
+            // Let the match screen's 1s clock timer settle before teardown.
+            await tester.pump(const Duration(seconds: 1));
           }
           await tester.pumpWidget(const SizedBox.shrink());
         }

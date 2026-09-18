@@ -375,7 +375,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                     ),
                                   ],
                                 ),
-                              )
+                              ),
                             if (!_over) ...<Widget>[
                               Container(
                                 padding: const EdgeInsets.all(20),
