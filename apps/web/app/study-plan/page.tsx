@@ -46,8 +46,27 @@ interface MeResponse {
 function bodySlugOf(me: MeResponse | null): string {
   const exam = me?.profile?.exams?.[0] ?? '';
   if (exam.includes('WAEC')) return 'waec';
+  if (exam.includes('NECO')) return 'neco';
+  if (/post[-_ ]?utme/i.test(exam)) return 'post-utme';
   if (exam.includes('University')) return 'university-modules';
   return 'jamb';
+}
+
+/** Human focus label for the plan banner. */
+function focusLabelOf(me: MeResponse | null): string {
+  const slug = bodySlugOf(me);
+  switch (slug) {
+    case 'waec':
+      return 'WAEC';
+    case 'neco':
+      return 'NECO';
+    case 'post-utme':
+      return 'Post UTME';
+    case 'university-modules':
+      return 'School Desk';
+    default:
+      return 'JAMB';
+  }
 }
 
 /** The subject that owns the map's weakest topic, null when unmapped. */
@@ -66,6 +85,8 @@ export default function StudyPlanPage() {
   const router = useRouter();
   const [energy, setEnergy] = useState(0);
   const [plan, setPlan] = useState<StudyPlanValues>(STITCH);
+  const [focusSlug, setFocusSlug] = useState<string | null>(null);
+  const [focusLabel, setFocusLabel] = useState('JAMB');
 
   useEffect(() => {
     if (!getToken()) return; // signed out: the design copy stands
@@ -73,6 +94,8 @@ export default function StudyPlanPage() {
     (async () => {
       const me = await api<MeResponse>('/me').catch(() => null);
       if (!alive || !me) return;
+      setFocusSlug(bodySlugOf(me));
+      setFocusLabel(focusLabelOf(me));
       const [review, fatigue, progress, tree] = await Promise.all([
         api<ReviewSummary>('/me/review').catch(() => null),
         api<FatigueState>('/me/fatigue').catch(() => null),
@@ -123,6 +146,15 @@ export default function StudyPlanPage() {
       focus: 'Low focus',
       href: '/flashcards',
     },
+    {
+      icon: 'history_edu',
+      iconBg: 'bg-surface-container-high',
+      iconColor: 'text-accent-ink',
+      title: 'Past Questions Drill',
+      meta: focusLabel,
+      focus: 'Untimed',
+      href: focusSlug ? `/study-past-questions?body=${focusSlug}` : '/study-past-questions',
+    },
   ] as const;
 
   return (
@@ -135,7 +167,7 @@ export default function StudyPlanPage() {
       <section className="mt-4 rounded-2xl bg-card p-5 shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
         <div className="flex items-start justify-between">
           <p className="font-mono text-[11px] uppercase tracking-[1.2px] text-accent-amber">
-            TODAY&apos;S PLAN
+            TODAY&apos;S PLAN{focusSlug ? ` · ${focusLabel.toUpperCase()}` : ''}
           </p>
           <button
             aria-label="Edit plan"

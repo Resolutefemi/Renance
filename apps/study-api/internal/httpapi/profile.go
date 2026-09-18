@@ -1,6 +1,7 @@
 package httpapi
 
 import (
+        "context"
         "errors"
         "net/http"
         "strings"
@@ -14,7 +15,23 @@ type profileRequest struct {
         Institution string   `json:"institution"`
         GradeLevel  string   `json:"gradeLevel"`
         Exams       []string `json:"exams"`
+        Subjects    []string `json:"subjects,omitempty"`
         TargetYear  *int     `json:"targetYear"`
+}
+
+// resolveSubjects keeps the daily subject combination honest across
+// full-profile saves: the profile modal never edits the combination, so
+// a payload that omits it carries the stored one forward instead of
+// wiping it. Clients that DO send subjects (combo editors) win.
+func (s *Server) resolveSubjects(ctx context.Context, uid string, incoming []string) []string {
+        if incoming != nil {
+                return dailySubjects(incoming)
+        }
+        existing, err := s.store.ProfileByUser(ctx, uid)
+        if err != nil || existing == nil {
+                return nil
+        }
+        return existing.Subjects
 }
 
 // handleUpdateProfile is the contextual profile modal target: full name,
@@ -97,6 +114,7 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
                 Institution: req.Institution,
                 GradeLevel:  req.GradeLevel,
                 Exams:       req.Exams,
+                Subjects:    s.resolveSubjects(r.Context(), uid, req.Subjects),
                 TargetYear:  req.TargetYear,
                 Completed:   true,
         })
