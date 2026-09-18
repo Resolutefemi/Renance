@@ -70,8 +70,8 @@ func Load() (*Config, error) {
                 AuthGlobalPerMin: envInt("AUTH_GLOBAL_PER_MIN", 300),
                 TutorPerMin:      envInt("TUTOR_PER_MIN", 12),
 
-                ArenaQuestions:          envInt("ARENA_QUESTIONS", 5),
-                ArenaSecondsPerQuestion: envInt("ARENA_SECONDS_PER_QUESTION", 15),
+                ArenaQuestions:          envInt("ARENA_QUESTIONS", 15), // founder rule: 15-question duels
+                ArenaSecondsPerQuestion: envInt("ARENA_SECONDS_PER_QUESTION", 20), // 15 x 20s = five minutes
                 ArenaIntroSeconds:       envInt("ARENA_INTRO_SECONDS", 3),
                 ArenaBotWaitSeconds:     envInt("ARENA_BOT_WAIT_SECONDS", 20),
                 ArenaBotSkill:           envFloat("ARENA_BOT_SKILL", 0.6),
