@@ -23,12 +23,14 @@ import {
 import BottomNav from '@/components/bottom-nav';
 import SideNav from '@/components/side-nav';
 import AccountSheet from '@/components/account-sheet';
+import DailyComboModal, { COMBO_BODIES } from '@/components/daily-combo-modal';
 
 interface Profile {
   fullName: string;
   institution: string;
   gradeLevel: string;
   exams: string[];
+  subjects?: string[];
   targetYear?: number;
   completed: boolean;
 }
@@ -146,6 +148,12 @@ export default function DashboardPage() {
   // Today's daily challenge (JAMB desk): the tile deep-links into the
   // sprint, or into the setup when the API has no challenge for us.
   const [daily, setDaily] = useState<DailyTileInfo | null>(null);
+  // The founder rule: the first Daily tap asks for the subject
+  // combination (JAMB/WAEC/NECO only); every sprint afterwards draws
+  // only those subjects, server-composed.
+  const [dailyBody, setDailyBody] = useState('JAMB');
+  const [needsCombo, setNeedsCombo] = useState(false);
+  const [comboOpen, setComboOpen] = useState(false);
   // The paper the student paused and left, if any (drives Continue Exam).
   const [activeExam, setActiveExam] = useState<ActiveExam | null>(null);
 
@@ -196,6 +204,10 @@ export default function DashboardPage() {
         // candidate sprints on WAEC banks, a university student on their
         // courses, exactly like the rest of the desk.
         const body = focusBodyOf(meRes.profile?.exams);
+        setDailyBody(body);
+        setNeedsCombo(
+          (COMBO_BODIES as readonly string[]).includes(body) && ((meRes.profile?.subjects?.length ?? 0) === 0),
+        );
         api<DailyTileInfo>(`/daily/${encodeURIComponent(body)}`)
           .then((d) => alive && setDaily(d))
           .catch(() => {}); // tile falls back to the setup screen
@@ -499,6 +511,7 @@ export default function DashboardPage() {
                 label="Daily Challenge"
                 amber
                 href={daily ? examHref(daily.code, { daily: '1' }) : setupHref}
+                onMore={needsCombo ? () => setComboOpen(true) : undefined}
               />
               <LauncherTile icon="leaderboard" label="Leaderboard" href="/leaderboard" />
               <LauncherTile icon="event_note" label="Study Plan" href="/study-plan" />
@@ -575,6 +588,23 @@ export default function DashboardPage() {
 
       <SideNav />
       <BottomNav />
+
+      {/* first-tap daily subject combination (founder rule) */}
+      <DailyComboModal
+        open={comboOpen}
+        body={dailyBody}
+        onClose={() => setComboOpen(false)}
+        onSaved={(subjects) => {
+          setComboOpen(false);
+          setNeedsCombo(false);
+          // The sprint now composes from the saved combination: fetch the
+          // fresh code and walk straight into the hall.
+          api<DailyTileInfo>(`/daily/${encodeURIComponent(dailyBody)}`)
+            .then((d) => router.push(examHref(d.code, { daily: '1' })))
+            .catch(() => router.push(examHref(daily?.code ?? '', { daily: '1' })));
+          void subjects;
+        }}
+      />
     </main>
   );
 }
