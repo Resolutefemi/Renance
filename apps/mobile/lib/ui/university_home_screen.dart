@@ -37,7 +37,7 @@ class UniversityHomeTab extends StatelessWidget {
   /// The student's school: the stored pick first, then the profile
   /// institution match against the banked schools. Null = nothing picked
   /// yet, the desk shows its Pick School button.
-  String? get _schoolSlug {
+  String? _schoolSlug(BuildContext context) {
     final Set<String> banked =
         universityCourses(sync.exams).keys.toSet();
     final String? stored = context
@@ -74,7 +74,7 @@ class UniversityHomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool syncing = sync.isSyncing;
     final Map<String, List<UniCourse>> schools = universityCourses(sync.exams);
-    final String? slug = _schoolSlug;
+    final String? slug = _schoolSlug(context);
     final List<UniCourse> schoolCourses =
         slug != null ? (schools[slug] ?? const <UniCourse>[]) : const <UniCourse>[];
     final (String short, String full) = slug != null
@@ -399,7 +399,7 @@ class _SchoolHeroCard extends StatelessWidget {
               ),
               icon: const Icon(Icons.school, size: 20),
               label: Text(
-                slug != null ? 'Open your school desk' : 'Pick School',
+                picked ? 'Open your school desk' : 'Pick School',
                 style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
               ),
             ),
