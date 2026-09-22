@@ -17,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
+import '../controllers.dart';
 import '../storage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -90,13 +91,32 @@ class _SplashScreenState extends State<SplashScreen>
     super.dispose();
   }
 
-  void _advance() {
+  Future<void> _advance() async {
     if (_leaving || !mounted) return;
     _leaving = true;
     final session = context.read<SessionStore>();
     if (!session.introSeen) session.markIntroSeen();
     final hasToken = (session.token ?? '').isNotEmpty;
-    Navigator.of(context).pushReplacementNamed(hasToken ? '/home' : '/login');
+    if (!hasToken) {
+      Navigator.of(context).pushReplacementNamed('/login');
+      return;
+    }
+    // School staff land straight back in their workspace (syllabus,
+    // scheme of work, notes) when the device remembers a school session.
+    try {
+      final prefs = session.prefs;
+      final schoolSession = SchoolController.rememberedSession(prefs);
+      if (schoolSession != null &&
+          (schoolSession['schoolId'] ?? '').isNotEmpty) {
+        if (!mounted) return;
+        Navigator.of(context).pushReplacementNamed('/school');
+        return;
+      }
+    } catch (_) {
+      // fall through to the student home
+    }
+    if (!mounted) return;
+    Navigator.of(context).pushReplacementNamed('/home');
   }
 
   @override

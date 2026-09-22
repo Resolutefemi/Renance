@@ -4,9 +4,11 @@
 library;
 
 import 'dart:async';
+import 'dart:convert';
 import 'dart:math' show Random;
 
 import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'api_client.dart';
 import 'audio_summary.dart';
@@ -1234,5 +1236,143 @@ class TutorController extends ChangeNotifier {
       error = 'No connection, the tutor needs the server to coach.';
     }
     notifyListeners();
+  }
+}
+
+/// School workspace controller (For Schools): loads the caller's school
+/// memberships, downloads/removes offline school packs (syllabus, scheme
+/// of work, notes) and remembers which school session is active so the
+/// splash can land staff straight in their workspace.
+class SchoolController extends ChangeNotifier {
+  SchoolController({
+    required ApiClient api,
+    required PackStore store,
+    required SessionStore session,
+  })  : _api = api,
+        _store = store,
+        _session = session;
+
+  final ApiClient _api;
+  final PackStore _store;
+  final SessionStore _session;
+
+  /// The caller's active memberships (management + teacher).
+  List<SchoolContextModel> contexts = <SchoolContextModel>[];
+
+  /// Downloaded offline packs by school id.
+  final Map<String, SchoolPack> packs = <String, SchoolPack>{};
+
+  bool loadingContexts = false;
+  final Set<String> _downloading = <String>{};
+  String? lastError;
+
+  bool get isDownloading => _downloading.isNotEmpty;
+  bool isDownloadingSchool(String schoolId) => _downloading.contains(schoolId);
+
+  /// Loads the memberships (empty list = plain student account).
+  Future<void> loadContexts() async {
+    // No session, no school world — keeps stale contexts from leaking
+    // across sign-outs and gives the injected session a real job.
+    if ((_session.token ?? '').isEmpty) {
+      contexts = <SchoolContextModel>[];
+      notifyListeners();
+      return;
+    }
+    loadingContexts = true;
+    lastError = null;
+    notifyListeners();
+    try {
+      contexts = await _api.schoolMe();
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    } finally {
+      loadingContexts = false;
+      notifyListeners();
+    }
+  }
+
+  /// Refreshes the downloaded pack shelf from local storage.
+  Future<void> refreshPacks() async {
+    try {
+      final List<SchoolPack> stored = await _store.loadSchoolPacks();
+      packs
+        ..clear()
+        ..addEntries(stored.map((SchoolPack p) => MapEntry(p.school.id, p)));
+      notifyListeners();
+    } catch (_) {
+      // A missing table (fresh install pre-migration) is fine.
+    }
+  }
+
+  /// Downloads (or refreshes) one school's offline pack. Returns true on
+  /// success. Network-safe: failures surface in lastError, never throw.
+  Future<bool> download(String schoolId) async {
+    if (_downloading.contains(schoolId)) return false;
+    _downloading.add(schoolId);
+    lastError = null;
+    notifyListeners();
+    try {
+      final SchoolPack pack = await _api.schoolPack(schoolId);
+      await _store.saveSchoolPack(pack);
+      packs[schoolId] = pack;
+      return true;
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    } finally {
+      _downloading.remove(schoolId);
+      notifyListeners();
+    }
+    return false;
+  }
+
+  Future<void> remove(String schoolId) async {
+    await _store.removeSchoolPack(schoolId);
+    packs.remove(schoolId);
+    notifyListeners();
+  }
+
+  // ---- active school session (splash routing) -------------------------
+
+  static const String _sessionPrefKey = 'renance.school.session.v1';
+
+  /// Marks the session as a school workspace session.
+  static Future<void> rememberSchoolSession(
+    SharedPreferences prefs,
+    SchoolContextModel ctx,
+  ) async {
+    await prefs.setString(
+      _sessionPrefKey,
+      jsonEncode(<String, String>{
+        'schoolId': ctx.school.id,
+        'schoolName': ctx.school.name,
+        'role': ctx.member.role,
+        'memberId': ctx.member.id,
+        'fullName': ctx.member.fullName,
+      }),
+    );
+  }
+
+  /// Clears the school workspace marker (student login / sign-out).
+  static Future<void> forgetSchoolSession(SharedPreferences prefs) async {
+    await prefs.remove(_sessionPrefKey);
+  }
+
+  /// The remembered school session, if this device last used one.
+  static Map<String, String>? rememberedSession(SharedPreferences prefs) {
+    final String? raw = prefs.getString(_sessionPrefKey);
+    if (raw == null) return null;
+    try {
+      final Map<String, dynamic> j =
+          jsonDecode(raw) as Map<String, dynamic>;
+      return j.map<String, String>(
+        (String k, dynamic v) => MapEntry(k, (v ?? '').toString()),
+      );
+    } on FormatException {
+      return null;
+    }
   }
 }

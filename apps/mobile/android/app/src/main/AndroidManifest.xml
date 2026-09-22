@@ -2,6 +2,19 @@
     <!-- Release APK must reach the study API (debug/profile had this via the
          default Flutter template; the main manifest did not). -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Downloads: connection awareness (Wi-Fi vs mobile data) so the
+         Downloads screen can honour the "Wi-Fi only" preference. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- Storage: Android 11+ apps write offline packs to app-specific
+         directories that need NO runtime grant, but Android 10 and below
+         still use legacy shared storage for shared pack exports. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29"/>
+    <!-- Download progress + sync notifications (Android 13+ runtime). -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <application
         android:label="Renance"
         android:name="${applicationName}"

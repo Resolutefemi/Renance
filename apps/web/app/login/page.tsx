@@ -5,12 +5,15 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ApiError, api, authWithGoogle } from '@/lib/api';
 import { setSession } from '@/lib/session';
+import { chooseSchool, schoolMe } from '@/lib/school';
 import { RenanceMark } from '@/components/renance-logo';
 import { GoogleSignIn } from '@/components/google-signin';
+import { AudienceToggle, type Audience } from '@/components/audience-toggle';
 import { MailIcon, LockIcon, ArrowIcon, EyeIcon } from '@/components/icons';
 
 export default function LoginPage() {
   const router = useRouter();
+  const [audience, setAudience] = useState<Audience>('students');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -44,6 +47,26 @@ export default function LoginPage() {
         { method: 'POST', body: { email, password }, auth: false },
       );
       setSession(res.token, res.user);
+
+      if (audience === 'schools') {
+        // Route school members into the school workspace; everyone else
+        // gets a friendly nudge instead of a dead end.
+        try {
+          const me = await schoolMe();
+          const active = chooseSchool(me.schools ?? []);
+          if (active) {
+            router.replace('/school');
+            return;
+          }
+          setError('This account is not linked to a school. Sign in under For Students, or register the school first.');
+          setBusy(false);
+          return;
+        } catch {
+          setError('Signed in, but the school workspace could not be loaded.');
+          setBusy(false);
+          return;
+        }
+      }
       router.replace('/dashboard');
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Network error, is the study API running?');
@@ -55,7 +78,7 @@ export default function LoginPage() {
     <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-surface-container px-4">
       <div className="flex w-full max-w-sm flex-col items-center">
         {/* Logo block, mockup: logo, h1, subtitle, centered */}
-        <div className="mb-10 flex flex-col items-center">
+        <div className="mb-8 flex flex-col items-center">
           <div className="mb-4">
             <RenanceMark size={64} />
           </div>
@@ -67,6 +90,11 @@ export default function LoginPage() {
           </p>
         </div>
 
+        {/* Audience switch — students by default, schools for management + teachers */}
+        <div className="mb-5 w-full">
+          <AudienceToggle audience={audience} onChange={setAudience} mode="login" />
+        </div>
+
         {/* Card, mockup: surface-container-lowest, rounded-xl, shadow-sm */}
         <form
           onSubmit={onSubmit}
@@ -74,7 +102,7 @@ export default function LoginPage() {
         >
           <div className="flex flex-col gap-1.5">
             <label htmlFor="email" className="text-sm text-on-surface-variant">
-              Email address
+              {audience === 'schools' ? 'School email' : 'Email address'}
             </label>
             <div className="group relative flex items-center">
               <MailIcon className="pointer-events-none absolute left-3 h-5 w-5 text-on-surface-variant transition-colors group-focus-within:text-primary" />
@@ -137,14 +165,14 @@ export default function LoginPage() {
               </>
             ) : (
               <>
-                Sign In
+                {audience === 'schools' ? 'Open School Workspace' : 'Sign In'}
                 <ArrowIcon className="h-5 w-5" />
               </>
             )}
           </button>
 
-          {/* Google sign-in, hidden unless the client ID is baked in */}
-          <GoogleSignIn onCredential={onGoogleCredential} />
+          {/* Google sign-in (students), hidden unless the client ID is baked in */}
+          {audience === 'students' && <GoogleSignIn onCredential={onGoogleCredential} />}
         </form>
 
         <p className="mt-10 text-center text-sm text-on-surface-variant">

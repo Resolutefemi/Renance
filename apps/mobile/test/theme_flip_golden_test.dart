@@ -75,6 +75,7 @@ class MemPackStore extends PackStore {
   List<CardProgress> cardProgress = const <CardProgress>[];
   List<LessonMeta> lessonMetas = const <LessonMeta>[];
   final Map<String, Lesson> lessonBodies = <String, Lesson>{};
+  final Map<String, SchoolPack> schoolPacks = <String, SchoolPack>{};
 
   @override
   Future<void> savePack(Bundle bundle, String sha) async =>
@@ -148,6 +149,23 @@ class MemPackStore extends PackStore {
 
   @override
   Future<Lesson?> loadLesson(String slug) async => lessonBodies[slug];
+
+  @override
+  Future<void> saveSchoolPack(SchoolPack p) async => schoolPacks[p.school.id] = p;
+
+  @override
+  Future<List<SchoolPack>> loadSchoolPacks() async => schoolPacks.values.toList();
+
+  @override
+  Future<void> removeSchoolPack(String schoolId) async => schoolPacks.remove(schoolId);
+
+  @override
+  Future<Map<String, int>> schoolPackSizes() async => <String, int>{
+        for (final e in schoolPacks.entries) e.key: e.value.topicCount * 2048,
+      };
+
+  @override
+  Future<int?> databaseSizeBytes() async => null;
 }
 
 /// Canned API: the endpoints whose shapes we know return demo data,
@@ -318,6 +336,9 @@ class Harness {
       ),
       ChangeNotifierProvider<SyncController>(
         create: (_) => SyncController(api: api, store: store),
+      ),
+      ChangeNotifierProvider<SchoolController>(
+        create: (_) => SchoolController(api: api, store: store, session: session),
       ),
       ChangeNotifierProvider<ExamController>(
         create: (_) => ExamController(api: api, store: store),

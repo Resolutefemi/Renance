@@ -1626,3 +1626,361 @@ class ArenaPlayer {
     renPoints: ((j['renPoints'] ?? 0) as num).toInt(),
   );
 }
+
+// ============================================================================
+// School platform (For Schools): memberships + the read-only offline pack
+// (syllabus, scheme of work, notes). Defensive parsing like every model
+// above — the API is a friend, not a contract.
+// ============================================================================
+
+/// The school itself (school.schools row).
+class SchoolInfo {
+  const SchoolInfo({
+    required this.id,
+    required this.name,
+    required this.schoolType,
+  });
+
+  final String id;
+  final String name;
+  final String schoolType; // primary | secondary | both
+
+  factory SchoolInfo.fromJson(Map<String, dynamic> j) => SchoolInfo(
+    id: (j['id'] ?? '') as String,
+    name: (j['name'] ?? '') as String,
+    schoolType: (j['schoolType'] ?? 'secondary') as String,
+  );
+}
+
+/// The caller's membership of one school (school.members row).
+class SchoolMemberInfo {
+  const SchoolMemberInfo({
+    required this.id,
+    required this.schoolId,
+    required this.role,
+    required this.fullName,
+    this.staffCode = '',
+    this.status = 'active',
+  });
+
+  final String id;
+  final String schoolId;
+  final String role; // management | teacher
+  final String fullName;
+  final String staffCode;
+  final String status;
+
+  bool get isManagement => role == 'management';
+
+  factory SchoolMemberInfo.fromJson(Map<String, dynamic> j) => SchoolMemberInfo(
+    id: (j['id'] ?? '') as String,
+    schoolId: (j['schoolId'] ?? '') as String,
+    role: (j['role'] ?? 'teacher') as String,
+    fullName: (j['fullName'] ?? '') as String,
+    staffCode: (j['staffCode'] ?? '') as String,
+    status: (j['status'] ?? 'active') as String,
+  );
+}
+
+/// One school membership joined with its school (GET /school/me row).
+class SchoolContextModel {
+  const SchoolContextModel({required this.member, required this.school});
+
+  final SchoolMemberInfo member;
+  final SchoolInfo school;
+
+  factory SchoolContextModel.fromJson(Map<String, dynamic> j) =>
+      SchoolContextModel(
+        member: SchoolMemberInfo.fromJson(
+          ((j['member'] ?? const <String, dynamic>{}) as Map)
+              .cast<String, dynamic>(),
+        ),
+        school: SchoolInfo.fromJson(
+          ((j['school'] ?? const <String, dynamic>{}) as Map)
+              .cast<String, dynamic>(),
+        ),
+      );
+}
+
+/// A class of the school (Primary 1 … SSS 3).
+class SchoolClassInfo {
+  const SchoolClassInfo({
+    required this.id,
+    required this.name,
+    required this.level,
+    required this.seq,
+  });
+
+  final String id;
+  final String name;
+  final String level; // primary | junior | senior
+  final int seq;
+
+  factory SchoolClassInfo.fromJson(Map<String, dynamic> j) => SchoolClassInfo(
+    id: (j['id'] ?? '') as String,
+    name: (j['name'] ?? '') as String,
+    level: (j['level'] ?? 'junior') as String,
+    seq: ((j['seq'] ?? 0) as num).toInt(),
+  );
+}
+
+/// One week of the scheme of work.
+class SchemeWeek {
+  const SchemeWeek({
+    required this.week,
+    required this.topic,
+    this.objectives = '',
+    this.activities = '',
+  });
+
+  final int week;
+  final String topic;
+  final String objectives;
+  final String activities;
+
+  factory SchemeWeek.fromJson(dynamic v) {
+    final Map<String, dynamic> j =
+        (v as Map).cast<String, dynamic>();
+    return SchemeWeek(
+      week: ((j['week'] ?? 0) as num).toInt(),
+      topic: (j['topic'] ?? '') as String,
+      objectives: (j['objectives'] ?? '') as String,
+      activities: (j['activities'] ?? '') as String,
+    );
+  }
+}
+
+/// A topic of a term syllabus, carrying the note body.
+class SchoolTopicInfo {
+  const SchoolTopicInfo({
+    required this.id,
+    required this.title,
+    required this.seq,
+    required this.week,
+    required this.content,
+    this.source = '',
+  });
+
+  final String id;
+  final String title;
+  final int seq;
+  final int week;
+  final String content;
+  final String source;
+
+  factory SchoolTopicInfo.fromJson(Map<String, dynamic> j) =>
+      SchoolTopicInfo(
+        id: (j['id'] ?? '') as String,
+        title: (j['title'] ?? '') as String,
+        seq: ((j['seq'] ?? 0) as num).toInt(),
+        week: ((j['week'] ?? 0) as num).toInt(),
+        content: (j['content'] ?? '') as String,
+        source: (j['source'] ?? '') as String,
+      );
+}
+
+/// One term of a class+subject syllabus.
+class SchoolSyllabusTerm {
+  const SchoolSyllabusTerm({
+    required this.id,
+    required this.classId,
+    required this.subjectId,
+    required this.term,
+    required this.session,
+    required this.schemeOfWork,
+    required this.topics,
+  });
+
+  final String id;
+  final String classId;
+  final String subjectId;
+  final int term; // 1..3
+  final String session;
+  final List<SchemeWeek> schemeOfWork;
+  final List<SchoolTopicInfo> topics;
+
+  factory SchoolSyllabusTerm.fromJson(Map<String, dynamic> j) =>
+      SchoolSyllabusTerm(
+        id: (j['id'] ?? '') as String,
+        classId: (j['classId'] ?? '') as String,
+        subjectId: (j['subjectId'] ?? '') as String,
+        term: ((j['term'] ?? 1) as num).toInt(),
+        session: (j['session'] ?? '') as String,
+        schemeOfWork: ((j['schemeOfWork'] ?? const <dynamic>[]) as List<dynamic>)
+            .map(SchemeWeek.fromJson)
+            .toList(),
+        topics: ((j['topics'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) =>
+                SchoolTopicInfo.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}
+
+/// A subject of the school (English Studies, Mathematics, ...).
+class SchoolSubjectInfo {
+  const SchoolSubjectInfo({
+    required this.id,
+    required this.name,
+    required this.code,
+    required this.level,
+    required this.seq,
+  });
+
+  final String id;
+  final String name;
+  final String code;
+  final String level;
+  final int seq;
+
+  factory SchoolSubjectInfo.fromJson(Map<String, dynamic> j) =>
+      SchoolSubjectInfo(
+        id: (j['id'] ?? '') as String,
+        name: (j['name'] ?? '') as String,
+        code: (j['code'] ?? '') as String,
+        level: (j['level'] ?? 'both') as String,
+        seq: ((j['seq'] ?? 0) as num).toInt(),
+      );
+}
+
+/// One class+subject branch of the offline school pack.
+class SchoolPackSyllabus {
+  const SchoolPackSyllabus({
+    required this.classId,
+    required this.className,
+    required this.subjectId,
+    required this.subject,
+    required this.terms,
+  });
+
+  final String classId;
+  final String className;
+  final String subjectId;
+  final String subject;
+  final List<SchoolSyllabusTerm> terms;
+
+  factory SchoolPackSyllabus.fromJson(Map<String, dynamic> j) =>
+      SchoolPackSyllabus(
+        classId: (j['classId'] ?? '') as String,
+        className: (j['className'] ?? '') as String,
+        subjectId: (j['subjectId'] ?? '') as String,
+        subject: (j['subject'] ?? '') as String,
+        terms: ((j['terms'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) =>
+                SchoolSyllabusTerm.fromJson((e as Map).cast<String, dynamic>()))
+            .toList(),
+      );
+}
+
+/// The whole read-only school pack (GET /school/pack/{id}): classes,
+/// subjects and every syllabus with scheme of work + topics + notes.
+/// Stored locally like an exam bundle so school staff get the same
+/// offline guarantee students get.
+class SchoolPack {
+  const SchoolPack({
+    required this.school,
+    required this.version,
+    required this.fetchedAt,
+    required this.classes,
+    required this.subjects,
+    required this.syllabus,
+  });
+
+  final SchoolInfo school;
+  final String version;
+  final String fetchedAt;
+  final List<SchoolClassInfo> classes;
+  final List<SchoolSubjectInfo> subjects;
+  final List<SchoolPackSyllabus> syllabus;
+
+  /// All topics of the pack (count helper for the storage meter).
+  int get topicCount => syllabus.fold<int>(
+        0,
+        (int n, SchoolPackSyllabus s) => n + s.terms.fold<int>(
+              0,
+              (int m, SchoolSyllabusTerm t) => m + t.topics.length,
+            ),
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'school': <String, dynamic>{
+      'id': school.id,
+      'name': school.name,
+      'schoolType': school.schoolType,
+    },
+    'version': version,
+    'fetchedAt': fetchedAt,
+    'classes': classes
+        .map((SchoolClassInfo c) => <String, dynamic>{
+              'id': c.id,
+              'name': c.name,
+              'level': c.level,
+              'seq': c.seq,
+            })
+        .toList(),
+    'subjects': subjects
+        .map((SchoolSubjectInfo s) => <String, dynamic>{
+              'id': s.id,
+              'name': s.name,
+              'code': s.code,
+              'level': s.level,
+              'seq': s.seq,
+            })
+        .toList(),
+    'syllabus': syllabus
+        .map((SchoolPackSyllabus s) => <String, dynamic>{
+              'classId': s.classId,
+              'className': s.className,
+              'subjectId': s.subjectId,
+              'subject': s.subject,
+              'terms': s.terms
+                  .map((SchoolSyllabusTerm t) => <String, dynamic>{
+                        'id': t.id,
+                        'classId': t.classId,
+                        'subjectId': t.subjectId,
+                        'term': t.term,
+                        'session': t.session,
+                        'schemeOfWork': t.schemeOfWork
+                            .map((SchemeWeek w) => <String, dynamic>{
+                                  'week': w.week,
+                                  'topic': w.topic,
+                                  'objectives': w.objectives,
+                                  'activities': w.activities,
+                                })
+                            .toList(),
+                        'topics': t.topics
+                            .map((SchoolTopicInfo tp) => <String, dynamic>{
+                                  'id': tp.id,
+                                  'title': tp.title,
+                                  'seq': tp.seq,
+                                  'week': tp.week,
+                                  'content': tp.content,
+                                  'source': tp.source,
+                                })
+                            .toList(),
+                      })
+                  .toList(),
+            })
+        .toList(),
+  };
+
+  factory SchoolPack.fromJson(Map<String, dynamic> j) => SchoolPack(
+    school: SchoolInfo.fromJson(
+      ((j['school'] ?? const <String, dynamic>{}) as Map)
+          .cast<String, dynamic>(),
+    ),
+    version: (j['version'] ?? '') as String,
+    fetchedAt: (j['fetchedAt'] ?? '') as String,
+    classes: ((j['classes'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            SchoolClassInfo.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+    subjects: ((j['subjects'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            SchoolSubjectInfo.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+    syllabus: ((j['syllabus'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            SchoolPackSyllabus.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+  );
+}
