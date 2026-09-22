@@ -492,4 +492,55 @@ class ApiClient {
     ) as Map<dynamic, dynamic>;
     return LeaderboardData.fromJson(data.cast<String, dynamic>());
   }
+
+  // ------------------------------------------------------- school platform
+
+  /// School sign-up (For Schools): creates the account, the school and
+  /// the management membership, seeds the Nigerian curriculum and
+  /// returns the session token.
+  Future<AuthTokens> schoolRegister({
+    required String schoolName,
+    required String schoolType,
+    required String fullName,
+    required String email,
+    required String password,
+  }) async {
+    final data = await _send(
+      'POST',
+      '/school/auth/register',
+      body: <String, String>{
+        'schoolName': schoolName,
+        'schoolType': schoolType,
+        'fullName': fullName,
+        'email': email,
+        'password': password,
+      },
+      auth: false,
+    ) as Map<dynamic, dynamic>;
+    return AuthTokens(
+      token: (data['token'] ?? '') as String,
+      user: AppUser.fromJson((data['user'] as Map).cast<String, dynamic>()),
+    );
+  }
+
+  /// The caller's school memberships (management + teacher workspaces).
+  Future<List<SchoolContextModel>> schoolMe() async {
+    final data = await _send('GET', '/school/me') as Map<dynamic, dynamic>;
+    return ((data['schools'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            SchoolContextModel.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// The whole read-only school pack: classes, subjects and every
+  /// syllabus with scheme of work + topics + notes. Same 120s patience
+  /// as exam bundles — school packs can be megabytes of notes.
+  Future<SchoolPack> schoolPack(String schoolId) async {
+    final data = await _send(
+      'GET',
+      '/school/pack/$schoolId',
+      timeout: const Duration(seconds: 120),
+    ) as Map<dynamic, dynamic>;
+    return SchoolPack.fromJson(data.cast<String, dynamic>());
+  }
 }

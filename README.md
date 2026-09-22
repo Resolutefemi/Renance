@@ -42,6 +42,40 @@ pnpm web:dev
 Register → complete the profile modal → watch the sync strip fill →
 open a pack and sit the mock. That's the whole loop.
 
+## School platform (For Schools)
+
+Sign-up and login screens open with a **For Students / For Schools**
+switch (students stay the default). Registering a school asks for the
+school name + type (primary, secondary or both), creates the management
+account, and auto-installs the **full Nigerian curriculum** — Primary 1–6,
+JSS 1–3, SSS 1–3 with the NERDC subject list.
+
+- **Management portal (web)**: seed/edit classes + subjects, build term
+  syllabuses with a weekly scheme of work, write the note under every
+  topic (or import legally obtained notes from NERDC/classnotes-style
+  sources), create **teacher accounts**, assign teachers to class+subject
+  pairs, enroll students, and manage results — CA1/CA2 (20 each) + exam
+  (60), positions and class averages on finalize, a 6-digit result-check
+  PIN per student, and a public
+  [result checker](/school/check) (`/school/check`).
+- **Teachers** sign in through For Schools → For Teachers (or the web
+  portal) and get exactly their assigned class+subject: the syllabus,
+  scheme of work and notes, plus the result-filling cells for their
+  subjects. Everything else stays management-only, web-only.
+- **Notes PDF**: every topic downloads as its own print-ready PDF —
+  **black & white only**, one topic per file, never the whole batch.
+- **Mobile app (management + teachers)**: the school workspace carries
+  only syllabus, scheme of work and notes — and the **Downloads screen**
+  now has five desks: **JAMB offline, Post-UTME, WAEC, NECO and Schools**
+  (with a school picker). Any combination downloads in one tap, the
+  storage meter reads real bytes and updates live, and the app now asks
+  for storage/notification permissions and honours a Wi-Fi-only download
+  preference.
+
+Database: the school tables live in the `school` schema
+(`0013_school_platform.sql`) and apply automatically at boot, so
+`DATABASE_URL` stays exactly where it is.
+
 ## View it — no local setup
 
 Both clients ship through GitHub Actions on every push to `main`.

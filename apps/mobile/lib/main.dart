@@ -11,6 +11,7 @@ import 'storage.dart';
 import 'ui/auth_screens.dart';
 import 'ui/exam_screen.dart' show ExamScreen;
 import 'ui/home_screen.dart';
+import 'ui/school_screens.dart' show SchoolHomeScreen;
 import 'ui/splash_screen.dart' show SplashScreen;
 import 'ui/theme.dart';
 
@@ -25,7 +26,15 @@ Future<void> main() async {
   final PackStore store = DbPackStore();
   final ThemeController theme = ThemeController(prefs: prefs);
 
-  runApp(RenanceApp(api: api, session: session, store: store, theme: theme));
+  runApp(
+    RenanceApp(
+      api: api,
+      session: session,
+      store: store,
+      theme: theme,
+      prefs: prefs,
+    ),
+  );
 }
 
 class RenanceApp extends StatelessWidget {
@@ -35,12 +44,14 @@ class RenanceApp extends StatelessWidget {
     required this.session,
     required this.store,
     required this.theme,
+    required this.prefs,
   });
 
   final ApiClient api;
   final SessionStore session;
   final PackStore store;
   final ThemeController theme;
+  final SharedPreferences prefs;
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +66,13 @@ class RenanceApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<SyncController>(
           create: (_) => SyncController(api: api, store: store),
+        ),
+        ChangeNotifierProvider<SchoolController>(
+          create: (_) => SchoolController(
+            api: api,
+            store: store,
+            session: session,
+          ),
         ),
         ChangeNotifierProvider<ExamController>(
           create: (_) => ExamController(api: api, store: store),
@@ -95,6 +113,7 @@ class RenanceApp extends StatelessWidget {
               '/login': (_) => const LoginScreen(),
               '/register': (_) => const RegisterScreen(),
               '/home': (_) => const HomeScreen(),
+              '/school': (_) => const SchoolHomeScreen(),
             },
             onGenerateRoute: (RouteSettings settings) {
               if (settings.name == '/exam') {

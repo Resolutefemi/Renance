@@ -180,6 +180,30 @@ func (s *Server) Handler() http.Handler {
         mux.HandleFunc("GET /attempts/{id}/review", s.auth(s.handleAttemptReview))
         mux.HandleFunc("GET /sync/status", s.auth(s.handleSyncStatus))
 
+        // school platform ---------------------------------------------------
+        mux.HandleFunc("POST /school/auth/register", s.authLimit(s.handleSchoolRegister))
+        mux.HandleFunc("GET /school/check-result", s.handleSchoolCheckResult)
+        mux.HandleFunc("GET /school/curriculum", s.handleSchoolCurriculum)
+        mux.HandleFunc("GET /school/me", s.auth(s.handleSchoolMe))
+        mux.HandleFunc("GET /school/pack/{schoolId}", s.auth(s.handleSchoolPack))
+        mux.HandleFunc("GET /school/classes", s.auth(s.handleSchoolClasses))
+        mux.HandleFunc("GET /school/subjects", s.auth(s.handleSchoolSubjects))
+        mux.HandleFunc("GET /school/class-subjects", s.auth(s.handleSchoolClassSubjects))
+        mux.HandleFunc("GET /school/members", s.auth(s.handleSchoolMembers))
+        mux.HandleFunc("GET /school/assignments", s.auth(s.handleSchoolAssignments))
+        mux.HandleFunc("GET /school/students", s.auth(s.handleSchoolStudents))
+        mux.HandleFunc("GET /school/syllabus", s.auth(s.handleSchoolSyllabus))
+        mux.HandleFunc("GET /school/results", s.auth(s.handleSchoolResults))
+        mux.HandleFunc("GET /school/result-sheet", s.auth(s.handleSchoolResultSheet))
+        mux.HandleFunc("POST /school/seed-curriculum", s.auth(s.handleSchoolSeed))
+        mux.HandleFunc("POST /school/teachers", s.auth(s.handleSchoolCreateTeacher))
+        mux.HandleFunc("POST /school/assignments", s.auth(s.handleSchoolAssignment))
+        mux.HandleFunc("POST /school/students", s.auth(s.handleSchoolCreateStudent))
+        mux.HandleFunc("PUT /school/topic", s.auth(s.handleSchoolUpdateTopic))
+        mux.HandleFunc("PUT /school/scheme", s.auth(s.handleSchoolUpdateScheme))
+        mux.HandleFunc("PUT /school/result-item", s.auth(s.handleSchoolSaveResultItem))
+        mux.HandleFunc("POST /school/finalize", s.auth(s.handleSchoolFinalize))
+
         return s.securityHeaders(s.cors(mux))
 }
 

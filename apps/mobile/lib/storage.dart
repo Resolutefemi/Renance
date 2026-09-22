@@ -7,6 +7,7 @@
 library;
 
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:path/path.dart' as p;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -187,6 +188,22 @@ abstract class PackStore {
   Future<List<LessonMeta>> cachedLessonMetas();
   Future<void> saveLesson(Lesson lesson);
   Future<Lesson?> loadLesson(String slug);
+
+  // ---- school workspace (For Schools): offline syllabus/notes packs ----
+
+  /// Stores/refreshes one school's offline pack.
+  Future<void> saveSchoolPack(SchoolPack pack);
+
+  /// Every downloaded school pack (usually 0..2 per device).
+  Future<List<SchoolPack>> loadSchoolPacks();
+
+  Future<void> removeSchoolPack(String schoolId);
+
+  /// On-device bytes per school pack, for the storage meter.
+  Future<Map<String, int>> schoolPackSizes();
+
+  /// The sqlite database file's real on-disk size, when available.
+  Future<int?> databaseSizeBytes();
 }
 
 /// Production implementation backed by sqflite.
@@ -238,7 +255,7 @@ class DbPackStore implements PackStore {
 
   static Future<Database> _defaultOpen() async => openDatabase(
         p.join(await getDatabasesPath(), 'renance.db'),
-        version: 3,
+        version: 4,
         onCreate: (db, version) async {
           await db.execute('''
             CREATE TABLE packs (
@@ -258,6 +275,9 @@ class DbPackStore implements PackStore {
           for (final ddl in _cardTables) {
             await db.execute(ddl);
           }
+          for (final ddl in _schoolTables) {
+            await db.execute(ddl);
+          }
         },
         onUpgrade: (db, oldVersion, newVersion) async {
           if (oldVersion < 2) {
@@ -270,8 +290,27 @@ class DbPackStore implements PackStore {
               await db.execute(ddl);
             }
           }
+          if (oldVersion < 4) {
+            for (final ddl in _schoolTables) {
+              await db.execute(ddl);
+            }
+          }
         },
       );
+
+  /// School workspace (For Schools): one row per downloaded school pack
+  /// — the whole syllabus/scheme/notes bundle, read-only.
+  static const _schoolTables = [
+    '''
+    CREATE TABLE school_packs (
+      school_id TEXT PRIMARY KEY,
+      school_name TEXT NOT NULL,
+      role TEXT NOT NULL DEFAULT 'teacher',
+      version TEXT NOT NULL DEFAULT '',
+      json TEXT NOT NULL,
+      downloaded_at INTEGER NOT NULL
+    )''',
+  ];
 
   @override
   Future<void> savePack(Bundle bundle, String sha) async {
@@ -339,8 +378,12 @@ class DbPackStore implements PackStore {
   Future<Map<String, int>> packSizes() async {
     final db = await _open();
     final rows = await db.query('packs', columns: <String>['code', 'json']);
+    // Real on-disk bytes: sqlite stores TEXT as UTF-8, so the meter must
+    // measure utf8 length — a Dart .length counts UTF-16 units and
+    // overstates sizes on emoji/unicode-heavy packs.
     return <String, int>{
-      for (final r in rows) r['code']! as String: (r['json']! as String).length,
+      for (final r in rows)
+        r['code']! as String: utf8.encode(r['json']! as String).length,
     };
   }
 
@@ -354,6 +397,70 @@ class DbPackStore implements PackStore {
   Future<void> clearPacks() async {
     final db = await _open();
     await db.delete('packs');
+  }
+
+  @override
+  Future<void> saveSchoolPack(SchoolPack pack) async {
+    final db = await _open();
+    await db.insert(
+      'school_packs',
+      <String, Object?>{
+        'school_id': pack.school.id,
+        'school_name': pack.school.name,
+        'version': pack.version,
+        'json': jsonEncode(pack.toJson()),
+        'downloaded_at': DateTime.now().millisecondsSinceEpoch,
+      },
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  @override
+  Future<List<SchoolPack>> loadSchoolPacks() async {
+    final db = await _open();
+    final rows = await db.query('school_packs', orderBy: 'downloaded_at DESC');
+    final List<SchoolPack> out = <SchoolPack>[];
+    for (final r in rows) {
+      try {
+        out.add(SchoolPack.fromJson(
+          (jsonDecode(r['json']! as String) as Map).cast<String, dynamic>(),
+        ));
+      } on FormatException {
+        continue;
+      }
+    }
+    return out;
+  }
+
+  @override
+  Future<void> removeSchoolPack(String schoolId) async {
+    final db = await _open();
+    await db.delete('school_packs', where: 'school_id = ?', whereArgs: <Object?>[schoolId]);
+  }
+
+  @override
+  Future<Map<String, int>> schoolPackSizes() async {
+    final db = await _open();
+    final rows =
+        await db.query('school_packs', columns: <String>['school_id', 'json']);
+    return <String, int>{
+      for (final r in rows)
+        r['school_id']! as String: utf8.encode(r['json']! as String).length,
+    };
+  }
+
+  @override
+  Future<int?> databaseSizeBytes() async {
+    try {
+      final db = await _open();
+      final path = db.path;
+      if (path.isEmpty) return null;
+      final f = File(path);
+      if (!f.existsSync()) return null;
+      return f.lengthSync();
+    } catch (_) {
+      return null;
+    }
   }
 
   @override
@@ -645,12 +752,34 @@ class MemoryPackStore implements PackStore {
       _pending[submission.id] = submission;
 
   @override
+  Future<void> saveSchoolPack(SchoolPack pack) async =>
+      _schoolPacks[pack.school.id] = pack;
+
+  @override
+  Future<List<SchoolPack>> loadSchoolPacks() async =>
+      _schoolPacks.values.toList();
+
+  @override
+  Future<void> removeSchoolPack(String schoolId) async =>
+      _schoolPacks.remove(schoolId);
+
+  @override
+  Future<Map<String, int>> schoolPackSizes() async => <String, int>{
+        for (final e in _schoolPacks.entries)
+          e.key: e.value.topicCount * 2048,
+      };
+
+  @override
+  Future<int?> databaseSizeBytes() async => null;
+
+  @override
   Future<List<PendingSubmission>> pendingSubmissions() async =>
       _pending.values.toList();
 
   @override
   Future<void> removeSubmission(String id) async => _pending.remove(id);
 
+  final Map<String, SchoolPack> _schoolPacks = <String, SchoolPack>{};
   final Map<String, FlashcardDeck> _decks = <String, FlashcardDeck>{};
   final Map<String, CardProgress> _cardProgress = <String, CardProgress>{};
   final Map<String, PendingCardGrade> _pendingGrades =
