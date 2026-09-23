@@ -35,6 +35,10 @@ into a school.
 | edudelight.com | active (the classnotes alternative) |
 | classnotes.ng | postponed, explicit `--source classnotes` only |
 
+The house exam bank (section 1) is the primary alternative for exam
+questions: original content beats careful copying, and schools own
+what they pour. The harvest feeds notes, not questions.
+
 classnotes.ng was the original source. It is postponed by the founder's
 call until its robots and permissions posture is re-checked; the
 adapter stays in the codebase so the rotation can pick it up again
