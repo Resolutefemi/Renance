@@ -1,6 +1,6 @@
 # Renance Roadmap — Feature Status Map
 
-Last updated: 2026-09-07 (private arena rooms shipped: "host"/"join"
+Last updated: 2026-09-23 (private arena rooms shipped: "host"/"join"
 on the arena socket mint a shareable 6-character room code — the first
 join consumes the room and starts the match, no public queue, no house
 bot, rooms die with the host's session or ARENA_ROOM_TTL_SECONDS.
@@ -96,3 +96,22 @@ need no external services — they ship fastest.
 1. **Session A**: `tools/qbuild` CLI (#1) + gamification (#2) — both pure.
 2. **Session B**: stable keystore + Android OAuth config test with you; spaced repetition (#3) + syllabus mapping (#4).
 3. **Session C**: adaptive UI (#5) + review-queue surfacing; then AI class once a key is chosen (Socratic first).
+
+## School platform — the ops desks
+
+| Milestone | What it means | Status |
+| --- | --- | --- |
+| For Schools accounts | Register/login switch, school + type on signup, management vs teacher roles, assignment boundaries. | **LIVE** |
+| Curriculum + setup | NERDC ladder pre-installed, subject departments (art/science/commercial), class-subject wiring, logo on every printed sheet. | **LIVE** |
+| Syllabus + notes | Term syllabuses, weekly scheme, topic notes, bulk pour with provenance, per-topic black & white PDF. | **LIVE** |
+| Students | Full detail forms per class, per-student subject tracks for SSS, status without history loss. | **LIVE** |
+| Results | CA/exam cells, finalize with positions and averages, 6-digit PINs, public checker, report-card PDF. | **LIVE** |
+| Attendance | Daily roster + classroom kiosk + date-range summary + CSV export. | **LIVE** |
+| Timetable | Weekly grid editor per class with subject picker and break blocks, one-transaction saves. | **LIVE** |
+| Exam bank | Original starter bank per subject per term, school-grown pool, published papers drawing at print time. | **LIVE** |
+| Fees | Kobo-safe ledger, term charges per class or school-wide, receipts, debtors list. | **LIVE** |
+| ID cards | Session cards with school-unique serials, batch issue, revoke/reactivate, printable sheet. | **LIVE** |
+| Staff app offline | School pack in the app: syllabus, scheme, notes, exam bank; five-desk download manager with live storage meter. | **LIVE** |
+| Scheme drafts | One-tap NERDC scheme-of-work drafts into every empty syllabus slot. | **LIVE** |
+| Payments online | Card/USSD fee payment gateway instead of manual receipts. | **NEXT** (needs a PSP decision) |
+| Biometric check-in | Kiosk check-in by face/fingerprint on classroom tablets. | **NEEDS DEP** |
