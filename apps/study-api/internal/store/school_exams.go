@@ -68,8 +68,24 @@ func (s *Store) CountExamQuestions(ctx context.Context, schoolID, subjectID stri
 	return n, nil
 }
 
-// AddExamQuestion inserts one bank question.
+// AddExamQuestion inserts one bank question. A verbatim duplicate for
+// the same subject+term is refused so double-taps never inflate the
+// pool; the existing row's id comes back instead.
 func (s *Store) AddExamQuestion(ctx context.Context, q *SchoolExamQuestion) (*SchoolExamQuestion, error) {
+	var existing string
+	err := s.Pool.QueryRow(ctx, `
+		SELECT id::text FROM school.exam_questions
+		WHERE school_id = $1 AND subject_id = $2 AND term = $3 AND question = $4
+		LIMIT 1`,
+		q.SchoolID, q.SubjectID, q.Term, q.Question,
+	).Scan(&existing)
+	if err == nil {
+		q.ID = existing
+		return q, nil
+	}
+	if !errors.Is(err, pgx.ErrNoRows) {
+		return nil, fmt.Errorf("store: exam dedupe: %w", err)
+	}
 	opts, err := json.Marshal(q.Options)
 	if err != nil {
 		return nil, fmt.Errorf("store: exam options marshal: %w", err)
