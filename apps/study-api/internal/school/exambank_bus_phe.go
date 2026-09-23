@@ -107,3 +107,40 @@ var examBankPHE = []SeedExamQuestion{
 		AnswerIndex: 3,
 		Explanation: "Sharing towels spreads skin and eye infections."},
 }
+
+// Part two expansions.
+var examBankBusinessP2 = []SeedExamQuestion{
+        {SubjectCode: "BUS", Band: "junior", Term: 1,
+                Question:    "A want that a person must have to survive is a:",
+                Options:     [4]string{"Need", "Luxury", "Hobby", "Fashion"},
+                AnswerIndex: 0,
+                Explanation: "Needs are essentials like food, shelter and clothing."},
+        {SubjectCode: "BUS", Band: "junior", Term: 2,
+                Question:    "The department that keeps a business's money records is:",
+                Options:     [4]string{"Accounts", "Transport", "Store", "Security"},
+                AnswerIndex: 0,
+                Explanation: "Accounts tracks income, payments and the books."},
+        {SubjectCode: "BUS", Band: "junior", Term: 3,
+                Question:    "Insurance as an aid to trade mainly protects business against:",
+                Options:     [4]string{"Risks", "Profit", "Advertising", "Growth"},
+                AnswerIndex: 0,
+                Explanation: "Premiums buy protection against fire, theft and loss."},
+}
+
+var examBankPHEP2 = []SeedExamQuestion{
+        {SubjectCode: "PHE", Band: "junior", Term: 1,
+                Question:    "The Olympic motto Faster, Higher, Stronger was updated to add:",
+                Options:     [4]string{"Together", "Louder", "Richer", "Slower"},
+                AnswerIndex: 0,
+                Explanation: "Together joined the motto for the 2021 Games."},
+        {SubjectCode: "PHE", Band: "junior", Term: 2,
+                Question:    "The RICE treatment for a sprain stands for rest, ice, compression and:",
+                Options:     [4]string{"Elevation", "Exercise", "Energy", "Examination"},
+                AnswerIndex: 0,
+                Explanation: "Elevating the limb limits swelling in the first hours."},
+        {SubjectCode: "PHE", Band: "junior", Term: 3,
+                Question:    "A nutrient-rich diet for athletes should include plenty of:",
+                Options:     [4]string{"Carbohydrates and protein", "Sweets", "Fizzy drinks", "Fried snacks"},
+                AnswerIndex: 0,
+                Explanation: "Carbs fuel the work; protein rebuilds the muscle."},
+}
