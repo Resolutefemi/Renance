@@ -236,6 +236,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /school/exams", s.auth(s.handleSchoolExams))
 	mux.HandleFunc("POST /school/exam", s.auth(s.handleSchoolPublishExam))
 	mux.HandleFunc("POST /school/seed-exam-bank", s.auth(s.handleSchoolSeedExamBank))
+	mux.HandleFunc("POST /school/seed-schemes", s.auth(s.handleSchoolSeedSchemes))
 	mux.HandleFunc("GET /school/exam-paper", s.auth(s.handleSchoolExamPaper))
 
 	return s.securityHeaders(s.cors(mux))
