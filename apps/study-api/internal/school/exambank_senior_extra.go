@@ -40,3 +40,20 @@ var examBankCompSci = []SeedExamQuestion{
                 AnswerIndex: 2,
                 Explanation: "Diamonds test a condition and branch on the result."},
 }
+
+        // Second Term
+        {SubjectCode: "FMT", Band: "senior", Term: 2,
+                Question:    "The integral of 2x with respect to x is:",
+                Options:     [4]string{"x squared + c", "2 + c", "x cubed + c", "2x squared + c"},
+                AnswerIndex: 0,
+                Explanation: "Antidifferentiate 2x to get x squared plus the constant."},
+        {SubjectCode: "FMT", Band: "senior", Term: 2,
+                Question:    "The set (A union B) contains elements that are in:",
+                Options:     [4]string{"A only", "B only", "A, B or both", "Neither A nor B"},
+                AnswerIndex: 2,
+                Explanation: "Union collects every element of both sets without duplication."},
+        {SubjectCode: "FMT", Band: "senior", Term: 2,
+                Question:    "If P(A) = 0.4 and A and B are independent with P(B) = 0.5, then P(A and B) is:",
+                Options:     [4]string{"0.9", "0.2", "0.45", "0.1"},
+                AnswerIndex: 1,
+                Explanation: "Independent events multiply: 0.4 x 0.5 = 0.2."},
