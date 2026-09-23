@@ -55,3 +55,22 @@ var examBankSecurity = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Blocked exits turn small emergencies into disasters."},
 }
+
+// Part two: three more per term.
+var examBankSecurityP2 = []SeedExamQuestion{
+        {SubjectCode: "SEC", Band: "junior", Term: 1,
+                Question:    "The security agency that fights economic crimes in Nigeria is:",
+                Options:     [4]string{"EFCC", "FRSC", "NAFDAC", "NSCDC"},
+                AnswerIndex: 0,
+                Explanation: "The Economic and Financial Crimes Commission hunts fraud and graft."},
+        {SubjectCode: "SEC", Band: "junior", Term: 2,
+                Question:    "Posting another person's photos online without consent violates their:",
+                Options:     [4]string{"Privacy", "Homework", "Appetite", "Uniform"},
+                AnswerIndex: 0,
+                Explanation: "Consent is the gate to anyone's image and personal data."},
+        {SubjectCode: "SEC", Band: "junior", Term: 3,
+                Question:    "The safest reaction to a stranger's aggressive demand at the gate is to:",
+                Options:     [4]string{"Fight alone", "Alert others and call for help", "Open the gate", "Argue quietly"},
+                AnswerIndex: 1,
+                Explanation: "Raise the alarm: safety lies in numbers and speed."},
+}
