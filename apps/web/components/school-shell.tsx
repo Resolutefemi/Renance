@@ -11,7 +11,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { getActiveSchool, schoolMe, chooseSchool, clearActiveSchool, fetchSchoolProfile, type ActiveSchool } from '@/lib/school';
+import { getActiveSchool, schoolMe, chooseSchool, switchSchool, clearActiveSchool, fetchSchoolProfile, type ActiveSchool, type SchoolContext } from '@/lib/school';
 
 interface NavItem {
   href: string;
@@ -59,6 +59,7 @@ export function SchoolShell({ children, title }: { children: ReactNode; title: s
   const router = useRouter();
   const pathname = usePathname();
   const [active, setActive] = useState<ActiveSchool | null>(null);
+  const [memberships, setMemberships] = useState<SchoolContext[]>([]);
   const [logoUrl, setLogoUrl] = useState('');
   const [drawer, setDrawer] = useState(false);
   const [state, setState] = useState<'loading' | 'ready' | 'denied'>('loading');
@@ -80,6 +81,7 @@ export function SchoolShell({ children, title }: { children: ReactNode; title: s
           return;
         }
         a = chooseSchool(schools, a?.schoolId) ?? a;
+        if (!cancelled) setMemberships(schools);
       } catch {
         if (!a) {
           // 401s redirect via api(); network errors keep the cached pick.
@@ -199,6 +201,28 @@ export function SchoolShell({ children, title }: { children: ReactNode; title: s
             <span className="block text-xs text-on-surface-variant">{isManagement ? 'Management' : 'Teacher'}</span>
           </span>
         </div>
+        {memberships.length > 1 && (
+          <div className="px-3 pb-2">
+            <label className="school-rail-label" htmlFor="school-switcher">
+              Switch school
+            </label>
+            <select
+              id="school-switcher"
+              value={active.schoolId}
+              onChange={(e) => {
+                const next = switchSchool(memberships, e.target.value);
+                if (next) window.location.reload();
+              }}
+              className="h-9 w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-2 text-sm text-on-surface"
+            >
+              {memberships.map((m) => (
+                <option key={m.school.id} value={m.school.id}>
+                  {m.school.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
         <Link
           href="/dashboard"
           className="school-rail-link no-underline"
