@@ -90,3 +90,50 @@ result sheets.
 ### GET /school/class-subjects?schoolId=
 
 `{ pairs: [{ classId, className, subjectId, subjectName }] }`.
+
+## People: students, teachers, assignments
+
+### POST /school/students
+
+Enrolls a student: `{ classId, fullName, admissionNo, sex, session }`.
+
+### GET /school/students?schoolId=&classId=
+
+Lists students, optionally scoped to a class.
+
+### GET /school/student-detail?schoolId=&studentId=
+
+Full enrollment record: DOB, guardian name and phone, address, photo
+URL, status and the per-student subject offering.
+
+### PUT /school/student
+
+Updates any detail field of one student.
+
+### GET /school/student-subjects?schoolId=&studentId=
+
+The student's subject offering. Empty means "everything the class
+does" (the primary and JSS default).
+
+### PUT /school/student-subjects
+
+Sets the offering: `{ studentId, subjectIds: [] }`. Once set, the
+student's result sheet shows exactly these subjects.
+
+### POST /school/teachers  (MANAGEMENT)
+
+Creates a staff account: `{ fullName, email, password, staffCode }`.
+The new member holds the teacher role and signs in like any user.
+
+### GET /school/members?schoolId=
+
+All staff with their usernames and emails.
+
+### POST /school/assignments
+
+Hands a class+subject to a member: `{ memberId, classId, subjectId,
+remove? }`. Assignments bound what a teacher sees and may edit.
+
+### GET /school/assignments?schoolId=&memberId=
+
+Assignment list with class, subject and member names resolved.
