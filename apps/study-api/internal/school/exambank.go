@@ -39,6 +39,8 @@ func ExamBank() []SeedExamQuestion {
 // package and joins the pour here.
 func init() {
 	extraBanks = append(extraBanks, examBankJuniorP2...)
+	extraBanks = append(extraBanks, examBankSeniorScienceP2...)
+	extraBanks = append(extraBanks, examBankSeniorCoreP2...)
 	extraBanks = append(extraBanks, examBankCivic...)
 	extraBanks = append(extraBanks, examBankCivicP2...)
 	extraBanks = append(extraBanks, examBankSocial...)
