@@ -1,10 +1,10 @@
 package store
 
 import (
-        "context"
-        "errors"
+	"context"
+	"errors"
 
-        "github.com/jackc/pgx/v5"
+	"github.com/jackc/pgx/v5"
 )
 
 // Leaderboards: read-only aggregates over data the product already
@@ -19,33 +19,33 @@ import (
 // ArenaBoardEntry is one ranked line of the arena leaderboard. UserID is
 // internal (json:"-"): the handler uses it to find the caller's row.
 type ArenaBoardEntry struct {
-        UserID   string `json:"-"`
-        Rank     int    `json:"rank"`
-        Username string `json:"username"`
-        Wins     int    `json:"wins"`
-        Matches  int    `json:"matches"`
-        Points   int    `json:"points"`
-        Correct  int    `json:"correct"`
+	UserID   string `json:"-"`
+	Rank     int    `json:"rank"`
+	Username string `json:"username"`
+	Wins     int    `json:"wins"`
+	Matches  int    `json:"matches"`
+	Points   int    `json:"points"`
+	Correct  int    `json:"correct"`
 }
 
 // StudyBoardEntry is one ranked line of the study (XP) leaderboard.
 type StudyBoardEntry struct {
-        UserID        string `json:"-"`
-        Rank          int    `json:"rank"`
-        Username      string `json:"username"`
-        XP            int    `json:"xp"`
-        BestStreak    int    `json:"bestStreak"`
-        CurrentStreak int    `json:"currentStreak"`
-        Attempts      int    `json:"attempts"`
+	UserID        string `json:"-"`
+	Rank          int    `json:"rank"`
+	Username      string `json:"username"`
+	XP            int    `json:"xp"`
+	BestStreak    int    `json:"bestStreak"`
+	CurrentStreak int    `json:"currentStreak"`
+	Attempts      int    `json:"attempts"`
 }
 
 // arenaBoardPeriod maps the API period to the SQL time filter. "week"
 // ranks the last 7 days; "all" ranks forever.
 func arenaBoardPeriod(period string) string {
-        if period == "week" {
-                return `AND m.finished_at >= now() - interval '7 days'`
-        }
-        return ""
+	if period == "week" {
+		return `AND m.finished_at >= now() - interval '7 days'`
+	}
+	return ""
 }
 
 // arenaBoardSelect is the shared aggregate behind the top-25 list and the
@@ -79,37 +79,37 @@ const arenaBoardOrder = `
 // "week" or "all" (the handler validates; anything else means all);
 // body scopes the board to one focus ("" = every focus combined).
 func (s *Store) ArenaLeaderboard(ctx context.Context, period, body string, limit int) ([]ArenaBoardEntry, error) {
-        if limit <= 0 || limit > 100 {
-                limit = 25
-        }
-        rows, err := s.Pool.Query(ctx, arenaBoardSelect+" "+
-                arenaBoardPeriod(period)+" "+
-                arenaBoardOrder+" LIMIT $2", body, limit)
-        if err != nil {
-                return nil, err
-        }
-        defer rows.Close()
+	if limit <= 0 || limit > 100 {
+		limit = 25
+	}
+	rows, err := s.Pool.Query(ctx, arenaBoardSelect+" "+
+		arenaBoardPeriod(period)+" "+
+		arenaBoardOrder+" LIMIT $2", body, limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
 
-        out := make([]ArenaBoardEntry, 0, limit)
-        for rows.Next() {
-                var e ArenaBoardEntry
-                if err := rows.Scan(&e.UserID, &e.Username, &e.Matches, &e.Wins, &e.Points, &e.Correct); err != nil {
-                        return nil, err
-                }
-                out = append(out, e)
-        }
-        return out, rows.Err()
+	out := make([]ArenaBoardEntry, 0, limit)
+	for rows.Next() {
+		var e ArenaBoardEntry
+		if err := rows.Scan(&e.UserID, &e.Username, &e.Matches, &e.Wins, &e.Points, &e.Correct); err != nil {
+			return nil, err
+		}
+		out = append(out, e)
+	}
+	return out, rows.Err()
 }
 
 // ArenaRank returns the caller's row with its absolute rank on the same
 // ordering as ArenaLeaderboard. ok is false when the student has not
 // finished a single arena match in the period yet.
 func (s *Store) ArenaRank(ctx context.Context, userID, period, body string) (ArenaBoardEntry, bool, error) {
-        row := s.Pool.QueryRow(ctx, `
+	row := s.Pool.QueryRow(ctx, `
                 WITH agg AS (
 `+arenaBoardSelect+" "+
-                arenaBoardPeriod(period)+" "+
-                arenaBoardOrder+`
+		arenaBoardPeriod(period)+" "+
+		arenaBoardOrder+`
                 )
                 SELECT user_id, ROW_NUMBER() OVER (ORDER BY wins DESC, matches ASC, username ASC)::int,
                        username, wins, matches, points, correct
@@ -117,25 +117,25 @@ func (s *Store) ArenaRank(ctx context.Context, userID, period, body string) (Are
                 WHERE user_id = $2
         `, body, userID)
 
-        var e ArenaBoardEntry
-        if err := row.Scan(&e.UserID, &e.Rank, &e.Username, &e.Wins, &e.Matches, &e.Points, &e.Correct); err != nil {
-                if errors.Is(err, pgx.ErrNoRows) {
-                        return e, false, nil
-                }
-                return e, false, err
-        }
-        return e, true, nil
+	var e ArenaBoardEntry
+	if err := row.Scan(&e.UserID, &e.Rank, &e.Username, &e.Wins, &e.Matches, &e.Points, &e.Correct); err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return e, false, nil
+		}
+		return e, false, err
+	}
+	return e, true, nil
 }
 
 // ArenaWinsByUser returns each named student's all-time arena win count
 // (their Ren Points), zero for unknown ids. Powers the lobby's
 // "active now" list so presence and standing read off one screen.
 func (s *Store) ArenaWinsByUser(ctx context.Context, userIDs []string) (map[string]int, error) {
-        out := make(map[string]int, len(userIDs))
-        if len(userIDs) == 0 {
-                return out, nil
-        }
-        rows, err := s.Pool.Query(ctx, `
+	out := make(map[string]int, len(userIDs))
+	if len(userIDs) == 0 {
+		return out, nil
+	}
+	rows, err := s.Pool.Query(ctx, `
                 SELECT p.user_id::text, COUNT(*) FILTER (WHERE m.winner_user_id = p.user_id)::int
                 FROM arena.participants p
                 JOIN arena.matches m ON m.id = p.match_id
@@ -143,29 +143,29 @@ func (s *Store) ArenaWinsByUser(ctx context.Context, userIDs []string) (map[stri
                   AND m.status = 'finished'
                   AND p.user_id = ANY($1::uuid[])
                 GROUP BY p.user_id`, userIDs)
-        if err != nil {
-                return nil, err
-        }
-        defer rows.Close()
-        for rows.Next() {
-                var id string
-                var wins int
-                if err := rows.Scan(&id, &wins); err != nil {
-                        return nil, err
-                }
-                out[id] = wins
-        }
-        return out, rows.Err()
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var id string
+		var wins int
+		if err := rows.Scan(&id, &wins); err != nil {
+			return nil, err
+		}
+		out[id] = wins
+	}
+	return out, rows.Err()
 }
 
 // StudyLeaderboard returns the top students by total XP, then best
 // streak. It reads study.streaks, which ApplyGrade upserts on every
 // graded attempt - students appear the moment their first paper grades.
 func (s *Store) StudyLeaderboard(ctx context.Context, limit int) ([]StudyBoardEntry, error) {
-        if limit <= 0 || limit > 100 {
-                limit = 25
-        }
-        rows, err := s.Pool.Query(ctx, `
+	if limit <= 0 || limit > 100 {
+		limit = 25
+	}
+	rows, err := s.Pool.Query(ctx, `
                 SELECT st.user_id::text, u.username,
                        st.total_xp::int, st.best_streak::int, st.current_streak::int, st.attempts_count::int
                 FROM study.streaks st
@@ -173,26 +173,26 @@ func (s *Store) StudyLeaderboard(ctx context.Context, limit int) ([]StudyBoardEn
                 ORDER BY st.total_xp DESC, st.best_streak DESC, st.attempts_count ASC, u.username ASC
                 LIMIT $1
         `, limit)
-        if err != nil {
-                return nil, err
-        }
-        defer rows.Close()
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
 
-        out := make([]StudyBoardEntry, 0, limit)
-        for rows.Next() {
-                var e StudyBoardEntry
-                if err := rows.Scan(&e.UserID, &e.Username, &e.XP, &e.BestStreak, &e.CurrentStreak, &e.Attempts); err != nil {
-                        return nil, err
-                }
-                out = append(out, e)
-        }
-        return out, rows.Err()
+	out := make([]StudyBoardEntry, 0, limit)
+	for rows.Next() {
+		var e StudyBoardEntry
+		if err := rows.Scan(&e.UserID, &e.Username, &e.XP, &e.BestStreak, &e.CurrentStreak, &e.Attempts); err != nil {
+			return nil, err
+		}
+		out = append(out, e)
+	}
+	return out, rows.Err()
 }
 
 // StudyRank returns the caller's row with its absolute XP rank. ok is
 // false when the student has no graded attempts yet.
 func (s *Store) StudyRank(ctx context.Context, userID string) (StudyBoardEntry, bool, error) {
-        row := s.Pool.QueryRow(ctx, `
+	row := s.Pool.QueryRow(ctx, `
                 WITH ranked AS (
                         SELECT st.user_id::text AS user_id, u.username,
                                st.total_xp, st.best_streak, st.current_streak, st.attempts_count,
@@ -206,12 +206,12 @@ func (s *Store) StudyRank(ctx context.Context, userID string) (StudyBoardEntry, 
                 WHERE user_id = $1
         `, userID)
 
-        var e StudyBoardEntry
-        if err := row.Scan(&e.UserID, &e.Rank, &e.Username, &e.XP, &e.BestStreak, &e.CurrentStreak, &e.Attempts); err != nil {
-                if errors.Is(err, pgx.ErrNoRows) {
-                        return e, false, nil
-                }
-                return e, false, err
-        }
-        return e, true, nil
+	var e StudyBoardEntry
+	if err := row.Scan(&e.UserID, &e.Rank, &e.Username, &e.XP, &e.BestStreak, &e.CurrentStreak, &e.Attempts); err != nil {
+		if errors.Is(err, pgx.ErrNoRows) {
+			return e, false, nil
+		}
+		return e, false, err
+	}
+	return e, true, nil
 }
