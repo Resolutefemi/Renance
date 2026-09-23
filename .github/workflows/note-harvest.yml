@@ -1,9 +1,12 @@
 name: note-harvest
 
-# Weekly legal harvest of school note content (classnotes.ng,
-# flashlearners, ...) via scripts/scrape_school_notes.py. New or changed
-# corpus files under data/school-notes/ are committed so the founder can
-# pour them into schools with scripts/pour_school_notes.py.
+# Weekly legal harvest of school note content (flashlearners,
+# edudelight) via scripts/scrape_school_notes.py. classnotes.ng is
+# POSTPONED per the founder - it stays selectable with an explicit
+# --source classnotes but is out of the weekly rotation until its
+# robots/permissions posture is re-checked. New or changed corpus files
+# under data/school-notes/ are committed so the founder can pour them
+# into schools with scripts/pour_school_notes.py.
 
 on:
   schedule:
