@@ -40,3 +40,20 @@ var examBankAccounting = []SeedExamQuestion{
                 AnswerIndex: 1,
                 Explanation: "The purchases day book collects invoices for goods bought on credit."},
 }
+
+        // Second Term
+        {SubjectCode: "COM", Band: "senior", Term: 2,
+                Question:    "A document inviting the public to buy shares in a company is the:",
+                Options:     [4]string{"Invoice", "Prospectus", "Receipt", "Debit note"},
+                AnswerIndex: 1,
+                Explanation: "The prospectus discloses the business to prospective shareholders."},
+        {SubjectCode: "COM", Band: "senior", Term: 2,
+                Question:    "Insurance that spreads risk among many policy holders works on the principle of:",
+                Options:     [4]string{"Profit", "Pooling risks", "Interest", "Barter"},
+                AnswerIndex: 1,
+                Explanation: "Premiums from many cover the losses of a few."},
+        {SubjectCode: "COM", Band: "senior", Term: 2,
+                Question:    "Transport as an aid to trade mainly creates:",
+                Options:     [4]string{"Form utility", "Place utility", "Time utility", "Possession utility"},
+                AnswerIndex: 1,
+                Explanation: "Transport moves goods to where they are wanted."},
