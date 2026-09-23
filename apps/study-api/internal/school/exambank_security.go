@@ -21,3 +21,20 @@ var examBankSecurity = []SeedExamQuestion{
                 AnswerIndex: 1,
                 Explanation: "Children report such approaches to trusted adults immediately."},
 }
+
+        // Second Term
+        {SubjectCode: "SEC", Band: "junior", Term: 2,
+                Question:    "Keeping your online account safe requires a password that is:",
+                Options:     [4]string{"Shared with friends", "Private and hard to guess", "Your birthday", "Written on the board"},
+                AnswerIndex: 1,
+                Explanation: "Passwords stay private, long and unpredictable."},
+        {SubjectCode: "SEC", Band: "junior", Term: 2,
+                Question:    "Which of these is a common cybercrime?",
+                Options:     [4]string{"Typing practice", "Identity theft", "Painting", "Singing"},
+                AnswerIndex: 1,
+                Explanation: "Identity theft steals personal data for fraud."},
+        {SubjectCode: "SEC", Band: "junior", Term: 2,
+                Question:    "Suspicious emails asking for bank details are called:",
+                Options:     [4]string{"Newsletters", "Phishing", "Blogs", "Spam filters"},
+                AnswerIndex: 1,
+                Explanation: "Phishing baits users into handing over sensitive information."},
