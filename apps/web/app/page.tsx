@@ -243,8 +243,9 @@ export default function Landing() {
             <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
               {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, server-graded
               CBT mocks, a review queue that plans itself, voice flashcards and the JAMB novel built
-              in. And for schools: a full portal with syllabuses, notes, attendance and PIN-secured
-              results. Free, on Android, iOS, Windows, macOS and the web.
+              in. And for schools: a full portal with syllabuses, notes, attendance, timetables, an
+              exam question bank, fees, ID cards and PIN-secured results. Free, on Android, iOS,
+              Windows, macOS and the web.
             </p>
 
             <div className="hero-enter hero-enter-3 mt-9 flex flex-wrap items-center justify-center gap-3.5">
