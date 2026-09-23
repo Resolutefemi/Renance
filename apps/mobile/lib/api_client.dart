@@ -186,7 +186,7 @@ class ApiClient {
 
   Future<Bundle> bundle(String code) async {
     // Multi-megabyte question banks over a Nigerian mobile connection
-    // blow way past the 20s RPC budget — pack downloads get a patient
+    // blow way past the 20s RPC budget - pack downloads get a patient
     // 120s window so 'download not working' stops being a timeout.
     final data = await _send(
       'GET',
@@ -534,7 +534,7 @@ class ApiClient {
 
   /// The whole read-only school pack: classes, subjects and every
   /// syllabus with scheme of work + topics + notes. Same 120s patience
-  /// as exam bundles — school packs can be megabytes of notes.
+  /// as exam bundles - school packs can be megabytes of notes.
   Future<SchoolPack> schoolPack(String schoolId) async {
     final data = await _send(
       'GET',

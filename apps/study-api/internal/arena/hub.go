@@ -21,8 +21,8 @@ type Config struct {
 }
 
 // DefaultConfig matches the shipped defaults (ARENA_* env overrides):
-// 15 questions at a 20-second answer window each — a five-minute duel,
-// the founder's arena rule — with the house bot keeping solo queues
+// 15 questions at a 20-second answer window each - a five-minute duel,
+// the founder's arena rule - with the house bot keeping solo queues
 // moving after the wait window.
 func DefaultConfig() Config {
         return Config{

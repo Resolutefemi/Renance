@@ -91,7 +91,7 @@ export default function DailyComboModal({
       <div className="relative max-h-[88dvh] w-full max-w-md overflow-y-auto rounded-t-3xl bg-surface-container-lowest p-6 shadow-2xl sm:rounded-3xl">
         <h3 className="text-lg font-bold tracking-tight text-on-surface">Your Daily subjects</h3>
         <p className="mt-1 text-[13.5px] leading-relaxed text-on-surface-variant">
-          Pick your subject combination once — every daily CBT then shows only these subjects, every day.
+          Pick your subject combination once - every daily CBT then shows only these subjects, every day.
           {body === 'JAMB' && ' Use of English is pre-picked, the hall rule.'}
         </p>
 

@@ -1,9 +1,9 @@
-/// The offline offer — "Make Renance offline" (the founder's cut).
+/// The offline offer - "Make Renance offline" (the founder's cut).
 ///
 /// Shown once after signing up, and to any student who opens the app
 /// with the shelf not fully on the device yet: one sheet that explains
 /// the offline pack (every question pack for your exams, ~120 MB today)
-/// and boots the real download through the SyncController — the same
+/// and boots the real download through the SyncController - the same
 /// bootstrap the shelf runs, with live progress and a dismiss that
 /// never nags again.
 library;
@@ -105,8 +105,8 @@ class OfflineOfferSheet extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              'Download every question pack for your exams once — questions, '
-              'answers and explanations — and Renance works with no data at '
+              'Download every question pack for your exams once - questions, '
+              'answers and explanations - and Renance works with no data at '
               'all. The pack is about 120 MB today and updates in the '
               'background when you open the app on Wi-Fi.',
               style: RenanceText.bodyMedium.copyWith(

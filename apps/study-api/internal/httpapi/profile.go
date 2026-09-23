@@ -54,7 +54,7 @@ func (s *Server) handleUpdateProfile(w http.ResponseWriter, r *http.Request) {
 
         // The web account-setup modal asks for the handle right here (email
         // registers a provisional seed). Empty username = legacy clients that
-        // never send it — leave the existing handle untouched.
+        // never send it - leave the existing handle untouched.
         if req.Username != "" {
                 if !usernameRE.MatchString(req.Username) {
                         fail(w, http.StatusBadRequest, "invalid_username",

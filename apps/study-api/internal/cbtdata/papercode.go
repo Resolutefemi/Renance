@@ -1,6 +1,6 @@
 package cbtdata
 
-// Paper code grammar v2 — deterministic composition, extended.
+// Paper code grammar v2 - deterministic composition, extended.
 //
 // Every composed paper is a pure function of its CODE, so grading,
 // review and resume always rebuild the exact sitting. The 2026 grammar
@@ -12,7 +12,7 @@ package cbtdata
 //      jamb-custom-<slug>-<slug>...~params   custom practice paper
 //                                            (>=1 subject, English optional)
 //      <body>-custom-<slug>...~params        body custom paper, body one of
-//                                            jamb | waec | neco — composes
+//                                            jamb | waec | neco - composes
 //                                            from THAT body's banks only
 //                                            (waec-custom-…, neco-custom-…;
 //                                            y/n/t params only)
@@ -26,19 +26,19 @@ package cbtdata
 //      y     per-subject years, semicolon list aligned with the subjects
 //            ("r" = random); a single value pins every subject; pick codes
 //            carry a single value. Omitted when every entry is random.
-//      from  1-based start index into the pack for CONTIGUOUS slices —
+//      from  1-based start index into the pack for CONTIGUOUS slices -
 //            the university portals' "Part" chunks (Part 2 = from=51.n=50
-//            serves Q51–Q100 in original order). Pick-only: custom/mock
+//            serves Q51-Q100 in original order). Pick-only: custom/mock
 //            codes carrying it are non-canonical and refused. Omitted (=0)
 //            means the seeded shuffle walk.
 //      n     total question count (custom: spread across subjects; pick:
 //            subset size)
 //      enN   mock Use-of-English section size (default 60)
-//      comp  0|1 — include comprehension-passage questions in the English
+//      comp  0|1 - include comprehension-passage questions in the English
 //            section (default 1)
 //      compN how many comprehension questions the English section carries
 //            (default 10, only meaningful when comp=1)
-//      nov   0|1 — include the JAMB novel questions ("The Lekki
+//      nov   0|1 - include the JAMB novel questions ("The Lekki
 //            Headmaster") in the English section (default 0; the
 //            candidate opts in, like the hall's novel ask)
 //      t     timer minutes (mock default 120; custom/pick default 0 = untimed)
@@ -86,7 +86,7 @@ const (
         maxCompN           = 30
         maxTimerMinutes    = 600
         maxPaperQuestions  = 500
-        // from is a 1-based START INDEX, not a count — banks run past
+        // from is a 1-based START INDEX, not a count - banks run past
         // maxPaperQuestions, so the cap follows bank size, not paper size.
         maxPaperFrom       = 100000
         minYear, maxYear   = 1975, 2030
@@ -124,7 +124,7 @@ func IsMockPaperCode(code string) bool {
 }
 
 // customBodyPrefix returns the body slug for a custom-family prefix, or "".
-// A bare prefix ("waec-custom-") is not a paper — the tail must be non-empty.
+// A bare prefix ("waec-custom-") is not a paper - the tail must be non-empty.
 func customBodyPrefix(code string) string {
         for _, p := range []struct {
                 prefix string
@@ -152,7 +152,7 @@ func IsPickPaperCode(code string) bool {
         return strings.HasPrefix(code, pickPaperFamilyPrefix) && len(code) > len(pickPaperFamilyPrefix)
 }
 
-// IsComposedPaperCode reports whether code names ANY composed paper —
+// IsComposedPaperCode reports whether code names ANY composed paper -
 // papers that never appear in the manifest and resolve by code alone.
 func IsComposedPaperCode(code string) bool {
         return IsMockPaperCode(code) || IsCustomPaperCode(code) || IsPickPaperCode(code)
@@ -197,7 +197,7 @@ func ParsePaperCode(code string, dict map[string]struct{}) (*PaperSpec, error) {
                 if err := spec.applyParams(params, false); err != nil {
                         return nil, err
                 }
-                // enN/comp/compN/nov are JAMB English-section controls — the WAEC
+                // enN/comp/compN/nov are JAMB English-section controls - the WAEC
                 // and NECO banks carry no comprehension/novel groups, so those
                 // params have nothing to steer. Refuse them instead of ignoring.
                 if body != BodyJamb && (spec.EnN != 0 || spec.CompN != 0 || !spec.Comp || spec.Novel) {
@@ -225,7 +225,7 @@ func ParsePaperCode(code string, dict map[string]struct{}) (*PaperSpec, error) {
 }
 
 // ParsePaper is the Library convenience wrapper: parse against this
-// library's bank-slug dictionary — every body's slugs, since the code's
+// library's bank-slug dictionary - every body's slugs, since the code's
 // own prefix selects which body's banks it composes from.
 func (l *Library) ParsePaper(code string) (*PaperSpec, error) {
         dict := map[string]struct{}{}
@@ -514,7 +514,7 @@ func (p *PaperSpec) paramsString() string {
         return strings.Join(parts, ".")
 }
 
-// canonicalCheck re-encodes and compares — the server refuses
+// canonicalCheck re-encodes and compares - the server refuses
 // non-canonical codes so every surface builds them through one grammar.
 func (p *PaperSpec) canonicalCheck(code string) error {
         if got := p.Encode(); got != code {

@@ -1,4 +1,4 @@
-/// Subject Selection, the Stitch jamb_subject_selection_light screen —
+/// Subject Selection, the Stitch jamb_subject_selection_light screen -
 /// now driven by the REAL bank slugs.
 ///
 /// The catalogue mirrors lib/papers.dart's kUtmeElectives (one entry per
@@ -8,7 +8,7 @@
 /// candidate take any 1-4 subjects, English optional.
 ///
 /// The old hardcoded ids ("math") that never matched the server's bank
-/// slugs are gone — selections now compose real papers 1:1.
+/// slugs are gone - selections now compose real papers 1:1.
 library;
 
 import 'package:flutter/material.dart';

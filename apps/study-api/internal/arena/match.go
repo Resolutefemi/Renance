@@ -119,7 +119,7 @@ func newLiveMatch(cfg MatchConfig, a, b *Player, clock Clock, rnd *rand.Rand, si
 // rollBotPlan decides, per question, which letter the bot will "pick" by
 // the deadline: the correct one with probability BotSkill, else a wrong
 // one (falls back to the only option when the question has a single
-// choice, in which case it is always correct — nobody's perfect).
+// choice, in which case it is always correct - nobody's perfect).
 func (m *liveMatch) rollBotPlan() []string {
 	plan := make([]string, len(m.cfg.Questions))
 	for i, q := range m.cfg.Questions {
@@ -287,7 +287,7 @@ func (m *liveMatch) finaliseAborted() {
 }
 
 // finalise scores the completed match, persists the outcome, then
-// pushes "over" to humans — history is true the instant they read it.
+// pushes "over" to humans - history is true the instant they read it.
 func (m *liveMatch) finalise(status string) {
 	winner := ""
 	switch {

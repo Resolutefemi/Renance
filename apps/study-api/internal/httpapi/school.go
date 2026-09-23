@@ -78,7 +78,7 @@ type schoolRegisterReq struct {
 	Password   string `json:"password"`
 }
 
-// POST /school/auth/register — school sign-up: creates the account, the
+// POST /school/auth/register - school sign-up: creates the account, the
 // school and the management membership, then seeds the Nigerian
 // curriculum so the portal is never a blank screen.
 func (s *Server) handleSchoolRegister(w http.ResponseWriter, r *http.Request) {
@@ -170,7 +170,7 @@ func errString(err error) string {
 
 // ---------------------------------------------------------------- read side
 
-// GET /school/me — the caller's school memberships (management/teacher).
+// GET /school/me - the caller's school memberships (management/teacher).
 func (s *Server) handleSchoolMe(w http.ResponseWriter, r *http.Request) {
 	uid, err := userIDFrom(r)
 	if err != nil {
@@ -185,7 +185,7 @@ func (s *Server) handleSchoolMe(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"schools": ctxs})
 }
 
-// GET /school/pack/{schoolId} — the read-only offline pack (app).
+// GET /school/pack/{schoolId} - the read-only offline pack (app).
 func (s *Server) handleSchoolPack(w http.ResponseWriter, r *http.Request) {
 	m, _, ok := s.memberAndSchool(w, r, r.PathValue("schoolId"))
 	if !ok {
@@ -292,7 +292,7 @@ func (s *Server) handleSchoolStudents(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"students": students})
 }
 
-// GET /school/syllabus?schoolId=&classId=&subjectId= — all terms+topics.
+// GET /school/syllabus?schoolId=&classId=&subjectId= - all terms+topics.
 func (s *Server) handleSchoolSyllabus(w http.ResponseWriter, r *http.Request) {
 	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
 	if !ok {
@@ -318,7 +318,7 @@ type seedReq struct {
 	SchoolID string `json:"schoolId"`
 }
 
-// POST /school/seed-curriculum — (re)install the Nigerian curriculum.
+// POST /school/seed-curriculum - (re)install the Nigerian curriculum.
 func (s *Server) handleSchoolSeed(w http.ResponseWriter, r *http.Request) {
 	var req seedReq
 	if !decodeJSON(w, r, &req) {
@@ -348,7 +348,7 @@ type teacherReq struct {
 	StaffCode string `json:"staffCode"`
 }
 
-// POST /school/teachers — management creates a teacher account. The
+// POST /school/teachers - management creates a teacher account. The
 // teacher then signs in with the email + password through the normal
 // "For Schools" login and lands in teacher mode.
 func (s *Server) handleSchoolCreateTeacher(w http.ResponseWriter, r *http.Request) {
@@ -407,7 +407,7 @@ type assignmentReq struct {
 	Remove    bool   `json:"remove"`
 }
 
-// POST /school/assignments — grant (or revoke) a teacher's right to fill
+// POST /school/assignments - grant (or revoke) a teacher's right to fill
 // results for one class+subject.
 func (s *Server) handleSchoolAssignment(w http.ResponseWriter, r *http.Request) {
 	var req assignmentReq
@@ -449,7 +449,7 @@ type studentReq struct {
 	Session     string `json:"session"`
 }
 
-// POST /school/students — enroll a student.
+// POST /school/students - enroll a student.
 func (s *Server) handleSchoolCreateStudent(w http.ResponseWriter, r *http.Request) {
 	var req studentReq
 	if !decodeJSON(w, r, &req) {
@@ -489,7 +489,7 @@ type topicReq struct {
 	Week     int    `json:"week"`
 }
 
-// PUT /school/topic — edit a topic's title + note body. Management may
+// PUT /school/topic - edit a topic's title + note body. Management may
 // edit everything; a teacher may edit notes of classes/subjects they are
 // assigned to (their result-filling assignment doubles as content duty).
 func (s *Server) handleSchoolUpdateTopic(w http.ResponseWriter, r *http.Request) {
@@ -502,6 +502,7 @@ func (s *Server) handleSchoolUpdateTopic(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	req.Title = strings.TrimSpace(req.Title)
+	req.Content = normalizeHyphens(req.Content)
 	if req.TopicID == "" || req.Title == "" {
 		fail(w, http.StatusBadRequest, "invalid_body", "topicId and title are required")
 		return
@@ -530,7 +531,7 @@ type schemeReq struct {
 	Scheme     json.RawMessage `json:"scheme"`
 }
 
-// PUT /school/scheme — replace a syllabus's weekly plan.
+// PUT /school/scheme - replace a syllabus's weekly plan.
 func (s *Server) handleSchoolUpdateScheme(w http.ResponseWriter, r *http.Request) {
 	var req schemeReq
 	if !decodeJSON(w, r, &req) {
@@ -552,11 +553,33 @@ func (s *Server) handleSchoolUpdateScheme(w http.ResponseWriter, r *http.Request
 		}
 	}
 	uid, _ := userIDFrom(r)
+	req.Scheme = json.RawMessage(normalizeHyphensInScheme(req.Scheme))
 	if err := s.store.UpdateSchemeOfWork(r.Context(), req.SyllabusID, req.Scheme, uid); err != nil {
 		fail(w, http.StatusInternalServerError, "internal", "could not save the scheme of work")
 		return
 	}
 	writeJSON(w, http.StatusOK, map[string]any{"ok": true})
+}
+
+// normalizeHyphensInScheme enforces the no-long-hyphen rule on every
+// text field of the weekly plan (topic, objectives, activities).
+func normalizeHyphensInScheme(raw json.RawMessage) []byte {
+	var rows []map[string]any
+	if err := json.Unmarshal(raw, &rows); err != nil {
+		return raw
+	}
+	for _, row := range rows {
+		for k, v := range row {
+			if s, ok := v.(string); ok {
+				row[k] = normalizeHyphens(s)
+			}
+		}
+	}
+	out, err := json.Marshal(rows)
+	if err != nil {
+		return raw
+	}
+	return out
 }
 
 type resultItemReq struct {
@@ -571,7 +594,7 @@ type resultItemReq struct {
 	Exam      float64 `json:"exam"`
 }
 
-// PUT /school/result-item — a teacher (assigned) or management fills one
+// PUT /school/result-item - a teacher (assigned) or management fills one
 // subject's scores for one student. CA1/CA2 max 20, exam max 60.
 func (s *Server) handleSchoolSaveResultItem(w http.ResponseWriter, r *http.Request) {
 	var req resultItemReq
@@ -624,7 +647,7 @@ type finalizeReq struct {
 	Session  string `json:"session"`
 }
 
-// POST /school/finalize — compute positions + averages, seal results and
+// POST /school/finalize - compute positions + averages, seal results and
 // mint the per-student result-check PINs.
 func (s *Server) handleSchoolFinalize(w http.ResponseWriter, r *http.Request) {
 	var req finalizeReq
@@ -651,7 +674,7 @@ func (s *Server) handleSchoolFinalize(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"finalized": n})
 }
 
-// GET /school/results?schoolId=&classId=&term=&session= — class grid.
+// GET /school/results?schoolId=&classId=&term=&session= - class grid.
 func (s *Server) handleSchoolResults(w http.ResponseWriter, r *http.Request) {
 	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
 	if !ok {
@@ -700,7 +723,7 @@ func (s *Server) handleSchoolResultSheet(w http.ResponseWriter, r *http.Request)
 	writeJSON(w, http.StatusOK, map[string]any{"result": sheet})
 }
 
-// GET /school/check-result?pin=&term=&session= — PUBLIC result check
+// GET /school/check-result?pin=&term=&session= - PUBLIC result check
 // (the ggportal pattern: the 6-digit PIN is the student's credential).
 func (s *Server) handleSchoolCheckResult(w http.ResponseWriter, r *http.Request) {
 	q := r.URL.Query()
@@ -724,7 +747,7 @@ func (s *Server) handleSchoolCheckResult(w http.ResponseWriter, r *http.Request)
 	writeJSON(w, http.StatusOK, map[string]any{"result": res})
 }
 
-// GET /school/curriculum — the raw seed catalog (for portal pickers).
+// GET /school/curriculum - the raw seed catalog (for portal pickers).
 func (s *Server) handleSchoolCurriculum(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{
 		"classes":  school.Classes,

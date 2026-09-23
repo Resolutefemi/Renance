@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Performance Analysis — the school app's beautiful performance page,
+ * Performance Analysis - the school app's beautiful performance page,
  * Renance cut.
  *
  *   · the General Overview card (papers graded, average score, best

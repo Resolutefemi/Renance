@@ -93,7 +93,7 @@ class RenanceApp extends StatelessWidget {
           // The Chrome-style seed palette (Settings → Seed Color),
           // resolved for the active tier and handed to both the
           // MaterialApp themes and the mode scope, so one seed repaints
-          // every screen — the web's CSS custom properties in Flutter.
+          // every screen - the web's CSS custom properties in Flutter.
           final SeedPalette? palette = theme.palette;
           return MaterialApp(
             title: 'Renance',

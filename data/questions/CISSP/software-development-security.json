@@ -697,7 +697,7 @@
   {
    "id": "cissp-software-development-security-bank-0054",
    "type": "mcq",
-   "stem": "While evaluating a potential security incident, Harry comes across a log entry from a web server request showing that a user entered the following input into a form field: CARROT'&1=1;-- What type of attack was attempted?",
+   "stem": "While evaluating a potential security incident, Harry comes across a log entry from a web server request showing that a user entered the following input into a form field: CARROT'&1=1;- What type of attack was attempted?",
    "marks": 1,
    "options": {
     "A": "Buffer overflow",

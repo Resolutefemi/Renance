@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * The old arena match page. The arena is one surface now — matchmaking,
+ * The old arena match page. The arena is one surface now - matchmaking,
  * invites, challenges and the duel itself all live on /arena over a
  * single socket (a route change mid-match would drop the connection and
  * forfeit the duel). Everyone lands on the floor.

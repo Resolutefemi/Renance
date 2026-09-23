@@ -232,7 +232,7 @@ function katexReady(): Promise<boolean> {
 
 /** One maths span: paints the unicode approximation instantly, then
  *  swaps in KaTeX's typeset output when the library arrives. KaTeX
- *  writes into its OWN target node — React keeps the fallback in a
+ *  writes into its OWN target node - React keeps the fallback in a
  *  sibling, so the two never fight over the same children. */
 function MathSpan({ tex, display, approx }: { tex: string; display: boolean; approx: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -285,7 +285,7 @@ export function normalizeLatexEscapes(text: string): string {
 
 /** KaTeX-supported environments a bare (unwrapped) occurrence of should
  *  still be treated as maths. `tabular`/`longtable` are text environments
- *  KaTeX cannot typeset — they keep the approximation path. */
+ *  KaTeX cannot typeset - they keep the approximation path. */
 const MATH_ENVS = new Set([
   'array', 'align', 'align*', 'aligned', 'alignat', 'alignat*', 'gather', 'gather*',
   'gathered', 'cases', 'dcases', 'rcases', 'matrix', 'pmatrix', 'bmatrix', 'Bmatrix',
@@ -317,7 +317,7 @@ export function splitMathSegments(input: string): MathSeg[] {
   let i = 0;
   while (i < input.length) {
     const ch = input[i];
-    // \( … \) — the banks' dominant inline form
+    // \( … \) - the banks' dominant inline form
     if (ch === '\\' && input[i + 1] === '(') {
       const end = input.indexOf('\\)', i + 2);
       if (end >= 0) {
@@ -347,7 +347,7 @@ export function splitMathSegments(input: string): MathSeg[] {
         continue;
       }
     }
-    // $ … $ (maths-looking bodies only — prose dollar amounts stay prose)
+    // $ … $ (maths-looking bodies only - prose dollar amounts stay prose)
     if (ch === '$') {
       const end = input.indexOf('$', i + 1);
       if (end > i + 1) {

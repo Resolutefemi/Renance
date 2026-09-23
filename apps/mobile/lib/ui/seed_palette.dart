@@ -1,9 +1,9 @@
-/// Renance seed-colour engine — the Dart port of the web's
+/// Renance seed-colour engine - the Dart port of the web's
 /// `apps/web/lib/theme.ts`.
 ///
 /// The founder's Chrome-appearance theming: one seed colour expands into
 /// the full token palette (surfaces, containers, ink, primaries, outlines,
-/// hero chrome) for each appearance tier — Light, Mixed, Dark — and every
+/// hero chrome) for each appearance tier - Light, Mixed, Dark - and every
 /// screen re-tints because they all resolve colours through the
 /// `RenanceScheme` context getters in theme.dart. The maths below is a
 /// 1:1 translation of the web implementation so a seed picked on the
@@ -167,11 +167,11 @@ class SeedPalette {
   final Color primary;
   final Color onPrimary;
 
-  /// The hero/syllabus progress fill — heroCta where the web paints
+  /// The hero/syllabus progress fill - heroCta where the web paints
   /// bg-hero-cta, else the readable inverse of the hero card.
   final Color progressFill;
 
-  /// Expand one seed into the tier's palette — the Dart twin of
+  /// Expand one seed into the tier's palette - the Dart twin of
   /// buildPalette() in apps/web/lib/theme.ts.
   factory SeedPalette.from(String seedHex, RenanceThemeMode mode) {
     final ({double h, double s, double l}) hsl = hexToHsl(seedHex);
@@ -219,7 +219,7 @@ class SeedPalette {
     }
 
     // Light body (also the base of Mixed): the seed tints the neutrals
-    // and drives the primary actions — the "black" becomes the colour.
+    // and drives the primary actions - the "black" becomes the colour.
     final String primaryHex = hslToHex(
       hue,
       sat,

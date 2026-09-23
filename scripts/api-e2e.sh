@@ -633,4 +633,119 @@ step "review the mock attempt -> paper title is the bare quiz name"
 MREV=$(curl -fsS "$BASE/attempts/$MAID/review" -H "Authorization: Bearer $TOKEN")
 printf '%s' "$MREV" | jsonget "d['title']" | grep -q "^UTME Mock$"
 
+# ======================================================================
+# SCHOOL PLATFORM E2E: register -> setup -> students -> attendance ->
+# bulk-notes -> results -> finalize -> PIN check. Proves the new
+# migration + endpoints against the same real Postgres.
+# ======================================================================
+SCHOOLNAME="e2e school $RANDOM"
+SCHOOK="e2e-school-$RANDOM$RANDOM"
+
+step "school: register -> 201 + management membership + curriculum seed"
+SREG=$(curl -fsS -X POST "$BASE/school/auth/register" \
+  -H 'Content-Type: application/json' \
+  -d "{\"schoolName\":\"$SCHOOLNAME\",\"schoolType\":\"both\",\"fullName\":\"E2E Principal\",\"email\":\"$SCHOOK@example.com\",\"password\":\"$PASSWORD\"}")
+STOKEN=$(printf '%s' "$SREG" | jsonget "d['token']")
+[ -n "$STOKEN" ]
+SCHOOLID=$(printf '%s' "$SREG" | jsonget "d['school']['id']")
+SEEDED=$(printf '%s' "$SREG" | jsonget "d['seededClasses']")
+[ "$SEEDED" -ge 12 ]
+
+step "school: profile update stamps a logo data URL"
+LOGO="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+curl -fsS -X PUT "$BASE/school/profile?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"name\":\"$SCHOOLNAME\",\"address\":\"1 E2E Road\",\"logoUrl\":\"$LOGO\"}" \
+  | jsonget "d['school']['logoUrl']" | grep -q "^data:image/png"
+
+step "school: classes + subjects seeded with departments"
+CLASSES=$(curl -fsS "$BASE/school/classes?schoolId=$SCHOOLID" -H "Authorization: Bearer $STOKEN")
+JSS1=$(printf '%s' "$CLASSES" | jsonget "[c['id'] for c in d['classes'] if c['name']=='JSS 1'][0]")
+SSS1=$(printf '%s' "$CLASSES" | jsonget "[c['id'] for c in d['classes'] if c['name']=='SSS 1'][0]")
+SUBS=$(curl -fsS "$BASE/school/subjects?schoolId=$SCHOOLID" -H "Authorization: Bearer $STOKEN")
+PHY=$(printf '%s' "$SUBS" | jsonget "[s['id'] for s in d['subjects'] if s['name']=='Physics'][0]")
+GOV=$(printf '%s' "$SUBS" | jsonget "[s['id'] for s in d['subjects'] if s['name']=='Government'][0]")
+ENG=$(printf '%s' "$SUBS" | jsonget "[s['id'] for s in d['subjects'] if s['name']=='English Language'][0]")
+[ "$(printf '%s' "$SUBS" | jsonget "[s for s in d['subjects'] if s['name']=='Physics'][0]['department']")" = "science" ]
+[ "$(printf '%s' "$SUBS" | jsonget "[s for s in d['subjects'] if s['name']=='Government'][0]['department']")" = "art" ]
+[ "$(printf '%s' "$SUBS" | jsonget "[s for s in d['subjects'] if s['name']=='English Language'][0]['isCore']")" = "True" ]
+
+step "school: enroll two students with full details"
+STUD1=$(curl -fsS -X POST "$BASE/school/students?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"classId\":\"$SSS1\",\"fullName\":\"Ada Obi\",\"admissionNo\":\"SS1-001\",\"sex\":\"F\",\"session\":\"2025/2026\"}" | jsonget "d['student']['id']")
+STUD2=$(curl -fsS -X POST "$BASE/school/students?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"classId\":\"$SSS1\",\"fullName\":\"Bola Ade\",\"admissionNo\":\"SS1-002\",\"sex\":\"M\",\"session\":\"2025/2026\"}" | jsonget "d['student']['id']")
+curl -fsS -X PUT "$BASE/school/student?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"id\":\"$STUD1\",\"fullName\":\"Ada Obi\",\"dob\":\"2010-05-01\",\"guardianName\":\"Mrs Obi\",\"guardianPhone\":\"08030000001\",\"address\":\"12 Ada Street\"}" \
+  | jsonget "d['student']['guardianName']" | grep -q "Obi"
+
+step "school: per-student subject offering (science track)"
+OFFERING=$(printf '%s' "$SUBS" | jsonget "json.dumps([s['id'] for s in d['subjects'] if s['department']=='science' or s['isCore']][:6])")
+curl -fsS -X PUT "$BASE/school/student-subjects?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"studentId\":\"$STUD1\",\"subjectIds\":$OFFERING}" | jsonget "d['ok']" | grep -q "True"
+[ "$(curl -fsS "$BASE/school/student-subjects?schoolId=$SCHOOLID&studentId=$STUD1" -H "Authorization: Bearer $STOKEN" | jsonget "len(d['subjectIds'])")" -ge 1 ]
+
+step "school: attendance day save + summary"
+TODAY=$(date +%F)
+curl -fsS -X POST "$BASE/school/attendance?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"classId\":\"$SSS1\",\"day\":\"$TODAY\",\"entries\":[{\"studentId\":\"$STUD1\",\"status\":\"present\",\"note\":\"\"},{\"studentId\":\"$STUD2\",\"status\":\"late\",\"note\":\"traffic\"}]}" \
+  | jsonget "d['saved']" | grep -q "^2$"
+[ "$(curl -fsS "$BASE/school/attendance?schoolId=$SCHOOLID&classId=$SSS1&day=$TODAY" -H "Authorization: Bearer $STOKEN" | jsonget "len(d['entries'])")" = "2" ]
+curl -fsS "$BASE/school/attendance-summary?schoolId=$SCHOOLID&classId=$SSS1&from=$TODAY&to=$TODAY" \
+  -H "Authorization: Bearer $STOKEN" | jsonget "[r for r in d['summary'] if r['studentId']=='$STUD1'][0]['rate']" | grep -q "^100$"
+
+step "school: bulk-notes pour (long hyphens normalized server-side)"
+BSUB=$(printf '%s' "$SUBS" | jsonget "[s['id'] for s in d['subjects'] if s['name']=='Basic Science'][0]" 2>/dev/null || printf '%s' "$SUBS" | jsonget "[s['id'] for s in d['subjects'] if s['name'].startswith('Basic')][0]")
+python3 - "$BASE" "$STOKEN" "$SCHOOLID" "$JSS1" "$BSUB" << 'PYEOF'
+import json, sys, urllib.request
+base, token, school_id, class_id, subject_id = sys.argv[1:6]
+topics = [
+    {"title": "Living things", "week": 1, "content": "Living things breathe, feed and grow - a simple note.", "source": "e2e"},
+    {"title": "Measurement", "week": 2, "content": "Length - mass - time: the base quantities of science.", "source": "e2e"},
+]
+
+def pour(overwrite):
+    body = json.dumps({
+        "classId": class_id, "subjectId": subject_id, "term": 1, "session": "2025/2026",
+        "overwrite": overwrite, "topics": topics,
+    }).encode()
+    req = urllib.request.Request(base + f"/school/bulk-notes?schoolId={school_id}", data=body, method="POST",
+                                 headers={"Content-Type": "application/json", "Authorization": "Bearer " + token})
+    return json.loads(urllib.request.urlopen(req, timeout=30).read().decode())
+
+res = pour(False)
+assert res["written"] == 2, res
+# re-pour with overwrite=false must not clobber: 0 topics written this call
+res = pour(False)
+assert res["written"] == 0, res
+# overwrite=true replaces: 2 topics written again
+res = pour(True)
+assert res["written"] == 2, res
+print("bulk-notes upsert OK")
+PYEOF
+
+step "school: fill results, finalize, PIN check"
+curl -fsS -X PUT "$BASE/school/result-item?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"studentId\":\"$STUD1\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"ca1\":15,\"ca2\":12,\"exam\":45}" >/dev/null
+curl -fsS -X PUT "$BASE/school/result-item?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"studentId\":\"$STUD2\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"ca1\":10,\"ca2\":10,\"exam\":30}" >/dev/null
+curl -fsS -X POST "$BASE/school/finalize?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"classId\":\"$SSS1\",\"term\":1,\"session\":\"2025/2026\"}" | jsonget "d['finalized']" | grep -q "^2$"
+SHEET=$(curl -fsS "$BASE/school/result-sheet?schoolId=$SCHOOLID&studentId=$STUD1&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN")
+[ "$(printf '%s' "$SHEET" | jsonget "d['result']['status']")" = "finalized" ]
+[ "$(printf '%s' "$SHEET" | jsonget "d['result']['schoolName']")" = "$SCHOOLNAME" ]
+PIN=$(printf '%s' "$SHEET" | jsonget "d['result']['pin']")
+[ ${#PIN} = "6" ]
+CHECK=$(curl -fsS "$BASE/school/check-result?pin=$PIN&term=1&session=2025/2026")
+printf '%s' "$CHECK" | jsonget "d['result']['studentName']" | grep -q "Ada Obi"
+printf '%s' "$CHECK" | jsonget "d['result']['schoolLogoUrl']" | grep -q "^data:image/png"
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"

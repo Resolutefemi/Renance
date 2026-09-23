@@ -1,9 +1,9 @@
-/// Study Past Questions — the school app's study page, Renance edition.
+/// Study Past Questions - the school app's study page, Renance edition.
 ///
 /// The tinted header band ("Get all exam questions from 1978 till
 /// date"), the green "Update Questions" banner that opens the Select &
-/// Update page, and the five-pick form — Subject, Examination Type,
-/// Examination Year, Question type, Question Topic — with the big
+/// Update page, and the five-pick form - Subject, Examination Type,
+/// Examination Year, Question type, Question Topic - with the big
 /// "Start Study" button.
 ///
 /// Start Study composes a real custom paper (subject + year + size via
@@ -146,7 +146,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
       final String title;
       if (_body == 'university' || _body == 'post-utme') {
         // Tertiary + Post UTME: carve a study slice from the chosen pack.
-        // The pick grammar takes count only for these banks — years stay
+        // The pick grammar takes count only for these banks - years stay
         // a secondary-body feature.
         code = buildPickCode(_subject, count: 60);
         title = '${_subjectLabel(_subject)} · Study';
@@ -168,7 +168,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
       );
       if (!mounted) return;
       // Study mode: untimed paper that lands in the Past Questions
-      // reader once graded — the school app's study semantics.
+      // reader once graded - the school app's study semantics.
       Navigator.of(context).push(
         MaterialPageRoute<void>(
           builder: (_) => ExamScreen(exam: meta, studyMode: true),
@@ -344,7 +344,7 @@ class _StudySetupScreenState extends State<StudySetupScreen> {
                     ),
                     // Focus IS the exam type (founder rule): the study
                     // page opens on the student's active focus and never
-                    // offers a switcher — the desk tiles deep-link the
+                    // offers a switcher - the desk tiles deep-link the
                     // other foci.
                     _FocusChip(label: _bodyLabel),
                     _FieldLabel('Examination Year'),

@@ -1,4 +1,4 @@
-/// Mock Exam Setup, the Stitch exam_mode_setup_light screen — now wired
+/// Mock Exam Setup, the Stitch exam_mode_setup_light screen - now wired
 /// to the real composed-paper engine.
 ///
 /// "Configure your testing environment to match official JAMB
@@ -9,8 +9,8 @@
 /// official-timing info notice and the sticky Begin Mock Exam button.
 ///
 /// Begin composes a CANONICAL paper code (lib/papers.dart mirrors the
-/// server grammar) — jamb-mock-… for the standard mock, jamb-custom-…
-/// / waec-custom-… / neco-custom-… for custom practice — so the server
+/// server grammar) - jamb-mock-… for the standard mock, jamb-custom-…
+/// / waec-custom-… / neco-custom-… for custom practice - so the server
 /// serves exactly the subjects, years and size the candidate chose.
 /// The old "first downloaded pack" shortcut that made every Begin open
 /// the same accounting bank is gone.
@@ -505,7 +505,7 @@ class _ExamModeSetupScreenState extends State<ExamModeSetupScreen> {
     );
   }
 
-  /// English first, then the electives alphabetically — the order the
+  /// English first, then the electives alphabetically - the order the
   /// mock lists on screen and in the code.
   List<String> _orderedSelected() {
     final List<String> rest = _selected.where((String s) => s != 'english').toList()

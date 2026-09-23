@@ -1,13 +1,13 @@
 'use client';
 
 /**
- * AccountSheet — the school app's account display, Renance edition.
+ * AccountSheet - the school app's account display, Renance edition.
  *
  * Tapping the dashboard header's avatar (top right-hand side) slides
  * this sheet up: the avatar row (initials circle, full name, @username,
- * the X), then the menu — Dashboard, Performance Analysis, Exam
+ * the X), then the menu - Dashboard, Performance Analysis, Exam
  * History, Saved Questions, App Settings, and the red
- * Logout row — the way Myschool displays the account at the top-RHS of
+ * Logout row - the way Myschool displays the account at the top-RHS of
  * home, rebuilt in Renance's white & black.
  */
 
@@ -82,7 +82,7 @@ export default function AccountSheet({ open, onClose }: { open: boolean; onClose
         {/* drag handle */}
         <div className="mx-auto mt-2.5 h-1 w-10 rounded-full bg-outline-light" />
 
-        {/* identity row — avatar + name + @username + X */}
+        {/* identity row - avatar + name + @username + X */}
         <div className="flex items-center gap-3.5 px-4 pb-3 pt-3.5">
           <span className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-on-primary">
             {name.slice(0, 1).toUpperCase()}
@@ -104,7 +104,7 @@ export default function AccountSheet({ open, onClose }: { open: boolean; onClose
 
         <div className="border-t border-outline-variant/40" />
 
-        {/* menu — Dashboard → Logout, the school app's order */}
+        {/* menu - Dashboard → Logout, the school app's order */}
         <nav className="pb-2" aria-label="Account">
           {ROWS.map((row) => (
             <button

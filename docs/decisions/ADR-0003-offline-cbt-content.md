@@ -6,7 +6,7 @@ Date: 2026-08-27 · Status: ACCEPTED · Owner: @Resolutefemi
 
 Exams must survive Nigerian network reality: students take CBT offline
 (airplane mode, dead zones, exhausted data). Meanwhile exam integrity is the
-product: answer keys must NEVER be extractable from any client — mobile APK,
+product: answer keys must NEVER be extractable from any client - mobile APK,
 browser devtools, or leaked content packs. The founder's existing banks
 (8,600+ questions across 21 JSON files in renancecbt / jamb-cbt-web) all have
 answers embedded, so shipping them as-is would leak every exam.
@@ -18,12 +18,12 @@ online-first and carries the full library for management/authoring.
 ## Decision
 
 1. **Questions never live in Neon. Answer keys live only in Neon. Answer
-   keys never touch any client** (mobile or web — devtools make browsers the
+   keys never touch any client** (mobile or web - devtools make browsers the
    easier inspection target, so the rule applies doubly there).
 2. One bank builds into TWO artifacts (`packages/cbt-content`):
-   - `bundle.json` — questions, options, marks, version fingerprint. Student-
+   - `bundle.json` - questions, options, marks, version fingerprint. Student-
      safe; this is what devices/browsers download.
-   - `key.json` — correct answers + explanations. Server-only; explanations
+   - `key.json` - correct answers + explanations. Server-only; explanations
      deliberately live here because they restate answers and may only be
      revealed after grading.
 3. Grading is **server-side on submission**: devices send responses only;
@@ -47,9 +47,9 @@ online-first and carries the full library for management/authoring.
 - The pipeline normalizes the 6 known legacy bank shapes (bare array /
   {course,questions[]} wrapper / option record a-d or A-D / options array
   with correct flag / answer letter / answers[] text with case variants),
-  strips BOMs, dedupes, and reports drops — evidence-based on the founder's
+  strips BOMs, dedupes, and reports drops - evidence-based on the founder's
   21 real banks.
 - Text questions (CVE105-style accepted-answers arrays) grade as
   case-insensitive trimmed exact match against the accepted list.
 - Neon stays relational-tiny: attempts/responses/scores are the growth data,
-  at kilobytes per exam sitting — years of free-tier runway.
+  at kilobytes per exam sitting - years of free-tier runway.

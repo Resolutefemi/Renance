@@ -5,12 +5,12 @@ keep sessions fast and safe.
 
 ## Session rhythm (~20h/week)
 
-1. `pnpm sync` — local matches GitHub before anything else.
-2. Read `docs/ACTIVE_PHASE.md` — pick ONE task from the current gate list.
+1. `pnpm sync` - local matches GitHub before anything else.
+2. Read `docs/ACTIVE_PHASE.md` - pick ONE task from the current gate list.
 3. Say the scope out loud in the prompt, e.g. "implement verification state
    transitions in core only". Scope discipline beats speed.
 4. Review EVERY generated diff before committing. Run `pnpm typecheck &&
-   pnpm test` — green gates, then commit.
+   pnpm test` - green gates, then commit.
 5. `pnpm sync --push` at the end.
 
 ## Division of labour
@@ -24,7 +24,7 @@ keep sessions fast and safe.
 
 ## Hard safety rules
 
-- Secrets never enter prompts, chats or repos — `.env` is gitignored; keys
+- Secrets never enter prompts, chats or repos - `.env` is gitignored; keys
   live only in `.env` / deploy dashboard.
 - Payments and auth flows get line-by-line human review, always.
 - Migrations are reviewed for destructive ops (`DROP`, `ALTER ... TYPE`)

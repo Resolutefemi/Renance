@@ -162,7 +162,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   // Daily challenge (?daily=1): today's sprint description from the API.
   const [daily, setDaily] = useState<DailyInfo | null>(null);
   // Composite UTME mocks run in exam mode (full CBT chrome, no smart
-  // walk); answers stay editable there too — the founder pulled the
+  // walk); answers stay editable there too - the founder pulled the
   // lock, options are changeable on every quiz page. Custom/pick
   // papers compose server-side but play in practice mode.
   const examMode = isMockPaperCode(code);
@@ -211,7 +211,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           if (!alive) return;
           if (dailyInfo.code !== code) {
             // A paused seat from earlier today (dashboard resume) must
-            // keep ITS paper — borrow the daily head for the title and
+            // keep ITS paper - borrow the daily head for the title and
             // load the bundle straight by code; any other entry jumps to
             // today's sprint as before.
             const snapNow = loadActiveExam();
@@ -230,7 +230,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               b = await fetchBundle(exam);
             } else if (isComposedPaperCode(code)) {
               // The founder-rule combination rides a composed paper that
-              // never appears in the manifest — compose it on demand.
+              // never appears in the manifest - compose it on demand.
               b = await fetchBundleByCode(code);
               if (b.durationMinutes == null) setUntimed(true);
             } else {
@@ -422,7 +422,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         setPhase('error');
         return;
       }
-      // Network died between picking and submitting — grade on-device
+      // Network died between picking and submitting - grade on-device
       // rather than throwing the sitting away. Same paper, same answers.
       if (bundle && bundle.questions.some((q) => q.answer)) {
         setResult(gradeLocally(bundle, answers));
@@ -567,7 +567,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   };
 
   /** Records an answer: latency telemetry + fatigue assessment first.
-   *  Answers stay editable everywhere — CBT hall or practice, a picked
+   *  Answers stay editable everywhere - CBT hall or practice, a picked
    *  option can always be swapped for another before Submit. */
   const pick = (questionId: string, letter: string) => {
     if (!answers[questionId] && letter !== '') {
@@ -612,7 +612,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
   };
 
   /** The two-step hand-in: every submit route (S key, Enter at the end,
-   *  either on-screen Submit button) opens the same confirm dialog —
+   *  either on-screen Submit button) opens the same confirm dialog -
    *  Y then confirms it. */
   const requestSubmit = () => {
     if (!bundle) return;
@@ -697,7 +697,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         return;
       }
       if (key === 's' || key === 'S') {
-        // S opens the submit hand-in from anywhere in the paper — the
+        // S opens the submit hand-in from anywhere in the paper - the
         // on-screen Submit buttons route through the same dialog.
         e.preventDefault();
         requestSubmit();
@@ -723,7 +723,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
   /* ------------------------------------------------------------- views */
 
-  // The quiz name — never the subject receipt. The daily sprint answers
+  // The quiz name - never the subject receipt. The daily sprint answers
   // to "Daily Quiz" (the API now titles it so); everything else keeps
   // its composed label ("Custom Practice", "UTME Mock", …).
   const paperTitle = daily?.title ?? bundle?.title ?? meta?.title ?? 'Practice';
@@ -772,7 +772,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
           )
         : null;
 
-    // Summary subjects — the standard UTME mock's canonical split
+    // Summary subjects - the standard UTME mock's canonical split
     // (English first, 40 per elective), the custom papers' even share,
     // sections when the bundle ships them.
     const subjectRows: Array<{ name: string; count: number }> = (() => {
@@ -815,7 +815,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
 
     return (
       <main className="min-h-dvh bg-surface-container-lowest pb-16">
-        {/* back bar — every page gets a back button (founder rule) */}
+        {/* back bar - every page gets a back button (founder rule) */}
         <div className="mx-auto w-full max-w-2xl px-4 pt-3 sm:px-6">
           <button
             onClick={() =>
@@ -834,7 +834,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         </div>
 
         <div className="renance-rise mx-auto w-full max-w-2xl px-4 pt-2 sm:px-6">
-          {/* simulator banner — the school app's banner with the abstract
+          {/* simulator banner - the school app's banner with the abstract
               corner shapes, Renance's ink ground */}
           <div className="relative overflow-hidden rounded-[14px] bg-accent-ink px-5 py-[22px] text-white">
             <div className="pointer-events-none absolute -right-6 -top-8 h-32 w-32 rounded-full border-[10px] border-white/10" />
@@ -938,7 +938,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             </div>
           )}
 
-          {/* Summary — Subjects / Test Mode / Exam Year cards ---------- */}
+          {/* Summary - Subjects / Test Mode / Exam Year cards ---------- */}
           <h2 className="mt-7 text-[21px] font-bold tracking-tight text-on-surface">Summary</h2>
 
           <div className="mt-3 rounded-[14px] border border-outline-variant/50 bg-card p-4">
@@ -1379,20 +1379,20 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         onKeepGoing={keepGoing}
       />
       <main className="min-h-dvh bg-gradient-to-b from-selection-blue/60 via-background to-background">
-      {/* CBT command bar — ONE row on every screen, spanning the deck:
+      {/* CBT command bar - ONE row on every screen, spanning the deck:
           the quiz name pinned to the LHS edge, the clock with Quit /
-          Submit pinned to the RHS edge. Nothing floats mid-bar — the
+          Submit pinned to the RHS edge. Nothing floats mid-bar - the
           subject being attempted lives in the slim strip UNDER this bar
           (full papers only), never in the bar itself. Copy + calculator
           live in the question card, next to the question they act on. */}
       <header className="sticky top-0 z-40 border-b border-outline-variant/45 bg-surface-container-lowest/95 backdrop-blur-xl">
         <div className="mx-auto w-full max-w-2xl px-4 sm:px-6 md:max-w-none md:px-8">
           <div className="flex items-center gap-2.5 py-2.5">
-            {/* LHS — the quiz name, pinned to the screen's left edge */}
+            {/* LHS - the quiz name, pinned to the screen's left edge */}
             <h1 className="min-w-0 flex-1 truncate text-[14.5px] font-semibold text-on-surface">
               {paperTitle}
             </h1>
-            {/* RHS — clock first, Quit + Submit right behind it, pinned
+            {/* RHS - clock first, Quit + Submit right behind it, pinned
                 to the screen's right edge */}
             <div className="ml-auto flex shrink-0 items-center gap-2 md:gap-2.5">
               {(() => {
@@ -1442,7 +1442,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               </button>
             </div>
           </div>
-          {/* The subject being attempted — one slim strip UNDER the
+          {/* The subject being attempted - one slim strip UNDER the
               command bar, full papers only (JAMB mock + composed combos).
               It carries the current subject's name, its answered count
               and a hairline progress bar. < > sit at the strip's two
@@ -1519,7 +1519,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         {/* question card */}
         <div className="renance-rise rounded-[14px] border border-outline-variant/50 bg-card p-[18px] shadow-[0_2px_12px_0_rgba(20,28,45,0.10)] sm:p-6">
           <div className="flex items-center justify-between gap-3">
-            {/* "Question N" pill — the school app's badge */}
+            {/* "Question N" pill - the school app's badge */}
             <span className="shrink-0 rounded-full border border-outline-variant bg-card px-3.5 py-[7px] text-[14.5px] font-medium text-on-surface shadow-[0_1px_3px_0_rgba(20,28,45,0.08)]">
               Question {current + 1}
               <span className="ml-1.5 font-mono text-[11px] text-outline">/ {bundle.questionCount}</span>
@@ -1534,7 +1534,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
               </span>
             )}
             {/* copy + calculator: they act on THIS question, so they live
-                on the card — keeps the command bar to clock + Quit/Submit */}
+                on the card - keeps the command bar to clock + Quit/Submit */}
             <button
               onClick={() => {
                 const buf = [question.stem ?? ''];
@@ -1643,7 +1643,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
                       : 'border-outline-variant bg-card hover:border-outline hover:shadow-sm active:scale-[0.995]'
                   }`}
                 >
-                  {/* the radio circle — hollow, ink-filled when picked */}
+                  {/* the radio circle - hollow, ink-filled when picked */}
                   <span
                     className={`mt-0.5 h-6 w-6 shrink-0 rounded-full border transition ${
                       selected ? 'border-primary bg-primary' : 'border-outline bg-card'
@@ -1663,7 +1663,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
         </div>
       </div>
 
-      {/* The persistent bottom navigator — the school app's bar:
+      {/* The persistent bottom navigator - the school app's bar:
           ← Previous | the "N Questions" pill + the jump strip | Next →. */}
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-outline-variant/40 bg-surface-container-lowest/95 pb-[max(env(safe-area-inset-bottom),6px)] backdrop-blur-xl">
         <div className="mx-auto w-full max-w-2xl px-4 pt-2.5 sm:px-6">
@@ -1704,7 +1704,7 @@ export default function ExamPage({ code: routeCode }: { code: string }) {
             )}
           </div>
           {/* the jump strip: mini number circles, answered = ink fill,
-              current = ring — a PHONE affordance (the finger-tap map);
+              current = ring - a PHONE affordance (the finger-tap map);
               the PC keeps the deck clean and uses the Questions sheet */}
           <div className="no-scrollbar mt-1.5 flex items-center gap-1.5 overflow-x-auto pb-1.5 md:hidden">
             {navIndices.slice(0, 150).map(({ q, i }) => {

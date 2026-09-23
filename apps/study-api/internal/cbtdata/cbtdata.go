@@ -1,10 +1,10 @@
 // Package cbtdata loads and verifies the CBT content library at boot.
 //
-// Content doctrine (founder directive, 2026-09 — supersedes the old
+// Content doctrine (founder directive, 2026-09 - supersedes the old
 // answer-keys-folder split of ADR-0003):
 //   - every bundle in manifest.json must match its sha256 fingerprint
 //   - each question file carries its own `answer` / `explanation` (and
-//     optional worked-solution image / video) — ONE file per bank
+//     optional worked-solution image / video) - ONE file per bank
 //   - Load() HARVESTS those fields into the server-only key map and
 //     SANITIZES the in-memory bundles, so students are served the same
 //     answer-free papers as before while grading keeps working
@@ -139,7 +139,7 @@ type Library struct {
 	paths        []CareerPath
 }
 
-// loadBundleIndex reads dataDir/questions/index.json — the code →
+// loadBundleIndex reads dataDir/questions/index.json - the code →
 // slash-relative-path map tools/cbt-build/build.py writes beside the
 // manifest. It lets banks live in grouped subfolders (WAEC/mathematics.json,
 // All_tertiary_Q/futa/BIO101.json, POST_UTME/…) while their codes stay
@@ -160,7 +160,7 @@ func loadBundleIndex(dataDir string) map[string]string {
 
 // bundlePath resolves a bundle code to its file under dataDir/questions,
 // index first, flat layout as the fallback. Index entries containing ".."
-// are refused — the index is committed content, but paths from it must
+// are refused - the index is committed content, but paths from it must
 // never escape the questions dir.
 func bundlePath(dataDir, code string, index map[string]string) string {
 	if index != nil {
@@ -191,7 +191,7 @@ func Load(dataDir string) (*Library, error) {
 		}
 		sum := sha256.Sum256(bundleRaw)
 		if got := hex.EncodeToString(sum[:]); got != ex.BundleSHA256 {
-			return nil, fmt.Errorf("cbtdata: sha256 mismatch for %s (manifest %s, file %s) — republish content",
+			return nil, fmt.Errorf("cbtdata: sha256 mismatch for %s (manifest %s, file %s) - republish content",
 				ex.Code, ex.BundleSHA256[:12], got[:12])
 		}
 		var b Bundle
@@ -259,7 +259,7 @@ func (l *Library) KeysFor(code string) (map[string]KeyEntry, bool) {
 	return keys, ok
 }
 
-// AllKeys returns every harvested key map, grouped by bank code — the
+// AllKeys returns every harvested key map, grouped by bank code - the
 // boot-time answer-key seed's source of truth.
 func (l *Library) AllKeys() map[string]map[string]KeyEntry {
 	return l.keys
@@ -284,7 +284,7 @@ func (l *Library) RegisterPaper(b *Bundle) {
 }
 
 // BundlesByBody returns every loaded bundle whose exam body matches
-// (case-insensitive), sorted by code — the daily challenge's rotation
+// (case-insensitive), sorted by code - the daily challenge's rotation
 // pool for that body (ROADMAP #20). The canonical spelling of the body
 // is the first bundle's own Body field.
 func (l *Library) BundlesByBody(body string) []*Bundle {
@@ -298,7 +298,7 @@ func (l *Library) BundlesByBody(body string) []*Bundle {
 		// Composite mock papers carry a body but never join rotation
 		// pools: the daily challenge and the arena draw from the static
 		// library only. Theory packs (self-assessment essays) are
-		// excluded too — a daily sprint must be auto-gradable.
+		// excluded too - a daily sprint must be auto-gradable.
 		if IsMockPaperCode(b.Code) || IsCustomPaperCode(b.Code) || IsPickPaperCode(b.Code) || strings.HasSuffix(b.Code, "-theory") {
 			continue
 		}
@@ -311,7 +311,7 @@ func (l *Library) BundlesByBody(body string) []*Bundle {
 	return out
 }
 
-// Bodies lists the distinct exam bodies across loaded bundles, sorted —
+// Bodies lists the distinct exam bodies across loaded bundles, sorted -
 // the friendly "try one of these" list for an unknown-body request.
 func (l *Library) Bodies() []string {
 	seen := map[string]string{} // lower -> canonical

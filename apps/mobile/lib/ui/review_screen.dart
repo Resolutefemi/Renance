@@ -702,7 +702,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                             padding:
                                 const EdgeInsets.fromLTRB(16, 12, 16, 24),
                             children: <Widget>[
-                              // Subject title — the school app's big
+                              // Subject title - the school app's big
                               // Mathematics heading.
                               Text(
                                 widget.studyTitle ??
@@ -711,7 +711,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                     .copyWith(fontSize: 23),
                               ),
                               const SizedBox(height: 10),
-                              // Type chips — "Questions Type Objective" /
+                              // Type chips - "Questions Type Objective" /
                               // "Exam Type JAMB".
                               Wrap(
                                 spacing: 8,
@@ -758,7 +758,7 @@ class _ReviewDetailScreenState extends State<ReviewDetailScreen> {
                                 ],
                               ),
                               const SizedBox(height: 14),
-                              // Search Question — the school app's bar.
+                              // Search Question - the school app's bar.
                               TextField(
                                 onChanged: (String v) =>
                                     setState(() => _query = v.trim().toLowerCase()),
@@ -980,7 +980,7 @@ class _TypeChip extends StatelessWidget {
 }
 
 /// One question card of the reader: "Question N" pill, stem, the option
-/// stack, then the View Explanation pill + copy button — the school
+/// stack, then the View Explanation pill + copy button - the school
 /// app's study card.
 class _StudyQuestionCard extends StatelessWidget {
   const _StudyQuestionCard({
@@ -1123,7 +1123,7 @@ class _StudyQuestionCard extends StatelessWidget {
           const SizedBox(height: 8),
           Row(
             children: <Widget>[
-              // The View Explanation pill — Myschool's red cut becomes
+              // The View Explanation pill - Myschool's red cut becomes
               // Renance ink.
               InkWell(
                 onTap: onView,
@@ -1258,7 +1258,7 @@ class _ReaderNavigator extends StatelessWidget {
 }
 
 /// Keeps one sheet open across Previous/Next, rebuilding the
-/// ExplanationSheet per question — the school app's pager behaviour.
+/// ExplanationSheet per question - the school app's pager behaviour.
 class _ExplanationPager extends StatefulWidget {
   const _ExplanationPager({
     required this.state,

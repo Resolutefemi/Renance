@@ -1,4 +1,4 @@
-/// Select & Update Questions — the school app's question-update page,
+/// Select & Update Questions - the school app's question-update page,
 /// Renance edition.
 ///
 /// "Select subjects to download or update questions into your app."
@@ -339,7 +339,7 @@ class _UpdateQuestionsScreenState extends State<UpdateQuestionsScreen> {
                           ],
                         ),
             ),
-            // Sticky bottom action — "Update" flipping to "Updating…".
+            // Sticky bottom action - "Update" flipping to "Updating…".
             if (!_loading && _error == null)
               Container(
                 decoration: BoxDecoration(
@@ -429,7 +429,7 @@ class _SubjectUpdateCard extends StatelessWidget {
       ),
       child: Row(
         children: <Widget>[
-          // Dark icon bubble with the subject initial — the school
+          // Dark icon bubble with the subject initial - the school
           // app's maroon bubble, Renance ink.
           Container(
             width: 46,

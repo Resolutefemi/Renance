@@ -6,7 +6,7 @@
 /// timer / 15m / 30m / 60m), the Shuffle Questions toggle row and the
 /// sticky Start Practice button. Pops with a PracticeSetupResult the
 /// caller turns into a REAL jamb-pick-… practice code (year pin +
-/// subset size) or a straight full-pack open — the year and count are
+/// subset size) or a straight full-pack open - the year and count are
 /// no longer decorative.
 library;
 

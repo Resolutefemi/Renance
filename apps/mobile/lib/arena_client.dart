@@ -3,7 +3,7 @@
 /// session: queue / host / join / challenge → matched → question /
 /// result… → over. Frames mirror internal/arena/message.go exactly.
 ///
-/// Transport is dart:io's WebSocket — no new dependency, the same
+/// Transport is dart:io's WebSocket - no new dependency, the same
 /// ?token= contract the web client uses (the hub's CheckOrigin is open
 /// and the token rides the URL).
 library;

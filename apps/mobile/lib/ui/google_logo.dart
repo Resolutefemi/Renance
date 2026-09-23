@@ -1,7 +1,7 @@
 /// The official four-colour Google "G", drawn natively.
 ///
 /// Drawn with a CustomPainter from the standard 48x48 brand geometry so the
-/// auth screens show the real Google mark — no SVG dependency, no asset file,
+/// auth screens show the real Google mark - no SVG dependency, no asset file,
 /// no network fetch. Colours are Google's official brand palette:
 /// blue #4285F4, green #34A853, yellow #FBBC05, red #EA4335.
 library;
@@ -50,7 +50,7 @@ class _GoogleGPainter extends CustomPainter {
 
     final Paint paint = Paint()..style = PaintingStyle.fill;
 
-    // Blue — the G crossbar and right stem.
+    // Blue - the G crossbar and right stem.
     paint.color = const Color(0xFF4285F4);
     canvas.drawPath(path(const <PathCommand>[
       MoveTo(46.98, 24.55),
@@ -64,7 +64,7 @@ class _GoogleGPainter extends CustomPainter {
       CloseTo(),
     ]), paint);
 
-    // Green — the top arc of the G.
+    // Green - the top arc of the G.
     paint.color = const Color(0xFF34A853);
     canvas.drawPath(path(const <PathCommand>[
       MoveTo(24, 9.5),
@@ -77,7 +77,7 @@ class _GoogleGPainter extends CustomPainter {
       CloseTo(),
     ]), paint);
 
-    // Yellow — the left stem of the G.
+    // Yellow - the left stem of the G.
     paint.color = const Color(0xFFFBBC05);
     canvas.drawPath(path(const <PathCommand>[
       MoveTo(10.53, 28.59),
@@ -90,7 +90,7 @@ class _GoogleGPainter extends CustomPainter {
       CloseTo(),
     ]), paint);
 
-    // Red — the bottom arc of the G.
+    // Red - the bottom arc of the G.
     paint.color = const Color(0xFFEA4335);
     canvas.drawPath(path(const <PathCommand>[
       MoveTo(24, 48),

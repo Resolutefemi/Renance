@@ -278,7 +278,7 @@ function ReviewInner() {
                   Watch the worked video
                 </a>
               )}
-              {/* View Explanation — the school app's card footer button;
+              {/* View Explanation - the school app's card footer button;
                   it opens the full explanation sheet at this card. */}
               <button
                 onClick={() => setSheetIdx(review.questions.indexOf(q))}
@@ -293,7 +293,7 @@ function ReviewInner() {
       </div>
       </div>
 
-      {/* the explanation sheet — Save, correct-option check, Report,
+      {/* the explanation sheet - Save, correct-option check, Report,
           Prev/Next and Get Renance's AI Explanation, Myschool's exact
           positions, anchored to the graded attempt for the AI pill */}
       {sheetIdx != null && review.questions[sheetIdx] && (

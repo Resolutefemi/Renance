@@ -5,7 +5,7 @@
 //
 // Doctrine mirrors the grading engine: pure rules are unit-tested with
 // injected clocks and fake peers, zero network in the tests. The radio
-// transport is WebSocket (gorilla), one hub per process — the Redis /
+// transport is WebSocket (gorilla), one hub per process - the Redis /
 // multi-host presence layer is a later slice when scale asks for it.
 package arena
 
@@ -33,7 +33,7 @@ type Outbound struct {
         Questions int            `json:"questionCount,omitempty"`
         Seconds   int            `json:"secondsPerQuestion,omitempty"`
 
-        // question — Index MUST serialize even when 0 (the first question),
+        // question - Index MUST serialize even when 0 (the first question),
         // or clients render "question NaN"; no omitempty here.
         Index    int    `json:"index"`
         Deadline int64  `json:"deadline,omitempty"` // unix seconds, answer cutoff
@@ -49,7 +49,7 @@ type Outbound struct {
 }
 
 // QView is the student-safe view of one match question: no answer key,
-// ever — the same rule the bundle route enforces.
+// ever - the same rule the bundle route enforces.
 type QView struct {
         ID      string            `json:"id"`
         Stem    string            `json:"stem"`

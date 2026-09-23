@@ -1,12 +1,12 @@
 'use client';
 
 /**
- * SavedQuestion store — the web cut of the app's SavedStore (Myschool's
+ * SavedQuestion store - the web cut of the app's SavedStore (Myschool's
  * Save button). A saved question is a full snapshot of what the reader
  * needs to re-display it forever after: stem, options, correct letter,
  * the written explanation and where it came from.
  *
- * Storage is localStorage under `renance.saved.v1` — these are small
+ * Storage is localStorage under `renance.saved.v1` - these are small
  * typed rows (never raw bundles), so the 5 MB origin quota the bundles
  * outgrew is not a concern here. All reads/writes are lazy and
  * try/catch-guarded: private mode just gets an in-memory session store.

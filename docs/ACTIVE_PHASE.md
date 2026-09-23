@@ -1,11 +1,11 @@
-# ACTIVE PHASE — single source of progress
+# ACTIVE PHASE - single source of progress
 
 Update this file at the END of every coding session. Completion gates, not
 dates. Rule: do not open the next gate until this one's exit criteria pass.
 
 ---
 
-## ERA 1 — Thin Core Service (NestJS monolith)   [CLOSED 2026-09-02]
+## ERA 1 - Thin Core Service (NestJS monolith)   [CLOSED 2026-09-02]
 
 Gates 1.1 → 2.0 shipped: auth/JWT, organizations+memberships, RBAC guard
 matrices, verification state machine, ownership transfer, change-password,
@@ -19,7 +19,7 @@ pending extraction. Neon `core.*`/`cbt.*` tables remain in place, untouched.
 
 ---
 
-## ERA 2 — Renance Study OS (Go backend)         [ACTIVE]
+## ERA 2 - Renance Study OS (Go backend)         [ACTIVE]
 
 One repository, one product: the global student study operating system.
 Go service (`apps/study-api`) + Next.js web (`apps/web`) + Flutter shell
@@ -30,13 +30,13 @@ Standing doctrine (carried from ERA 1, still law):
   material; keys are server-only (DB or gitignored `data/answer-keys/`);
   manifest carries sha256 fingerprints; explanations surface only AFTER grading.
 - **DDL**: structure changes land as ordered SQL migrations in
-  `apps/study-api/internal/store/migrations/` — never hand-ALTER prod.
+  `apps/study-api/internal/store/migrations/` - never hand-ALTER prod.
 - **Offline-first**: phones download packs on demand, exam in airplane mode,
   sync + server-side grading when back online. Web loads full packs online.
 - Mock sample questions are committed until the founder uploads the real
   8,679-question banks (G2).
 
-### Gate G1 — Go walking skeleton               [CODE COMPLETE 2026-09-02]
+### Gate G1 - Go walking skeleton               [CODE COMPLETE 2026-09-02]
 - Go 1.27 service `apps/study-api`: stdlib mux (Go 1.22+ routing), pgx/v5
   (simple protocol, pooler-safe), bcrypt cost 12, hand-rolled HS256 JWT (12h).
 - Minimal credential flow: POST /auth/register + /auth/login capture ONLY
@@ -49,7 +49,7 @@ Standing doctrine (carried from ERA 1, still law):
 - Goroutine CBT engine: buffered job channel + worker pool grades attempts
   off-request-path (202 Accepted → poll). Retake allowed, resubmit rejected.
 - Background sync worker: profile completion kicks a per-user goroutine job
-  (study.sync_jobs progress rows) — the web silent-asset-sync pattern.
+  (study.sync_jobs progress rows) - the web silent-asset-sync pattern.
 - Mock packs: 5 banks / 80 questions under `data/`, built by
   `tools/cbt-build/build.py` (ports ERA-1 normalize variants: BOM, 6 bank
   shapes, answer-as-letter|text, options array|record|[{letter,text,correct}]).
@@ -61,14 +61,14 @@ Standing doctrine (carried from ERA 1, still law):
   → bundle doctrine → goroutine grading EXACT score → guards → retake).
 EXIT: green build + green E2E + pushed main.   [EXITED 2026-09-02]
 
-### Gate G2 — Real content ingestion            [PENDING]
+### Gate G2 - Real content ingestion            [PENDING]
 Founder uploads real banks to `data/src/real/` (never committed). cbt-build
 adapters run over all 21 ERA-1-discovered shapes; keys seeded to Neon
 `study.answer_keys`; bundles pushed to R2/CDN with manifest versioning;
 retries + drift report. CLI bulk builder hardening (multi-threaded compile,
-randomize, push — the "CLI-Driven Bulk Test Builder" feature lands here).
+randomize, push - the "CLI-Driven Bulk Test Builder" feature lands here).
 
-### Gate G3 — Flutter mobile shell              [CODE COMPLETE 2026-09-02]
+### Gate G3 - Flutter mobile shell              [CODE COMPLETE 2026-09-02]
 apps/mobile (Flutter 3.47 / Dart 3.13): splash with CustomPainter logomark
 animation → 2-field register/login → non-dismissable profile sheet →
 need-based silent sync (profile exams decide WHAT downloads; sha-pinned
@@ -85,7 +85,7 @@ permission + cleartext allowance the release build was missing.
 EXIT VEHICLE (2026-09-02): `.github/workflows/mobile-apk.yml` builds the
 release APK in CI (analyze → test → `flutter build apk --release` with
 RENANCE_API_BASE dart-define → artifact `renance-android-apk`; `v*` tags
-attach the APK to GitHub Releases) — no local Android SDK needed.
+attach the APK to GitHub Releases) - no local Android SDK needed.
 Remaining: founder sideloads the artifact and validates touch UX.
 WEB (2026-09-02): whole web app restyled to the founder's auth mockups
 (light M3 tokens via Tailwind 4 `@theme`, Inter/JetBrains Mono) and
@@ -93,20 +93,20 @@ converted to a static export; `.github/workflows/web-deploy.yml` publishes
 it to GitHub Pages at https://resolutefemi.github.io/Renance/ with pack
 routes pinned from data/manifest.json at build time.
 
-### Gate G4 — Learning intelligence             [PENDING]
+### Gate G4 - Learning intelligence             [PENDING]
 Attempt event stream (dwell time, hesitation, revision loops) →
 micro-behavioral exam forensics + score prediction; spaced-repetition
 forgetting-curve scheduler for missed questions.
 
-### Gate G5 — AI layer                          [PENDING]
+### Gate G5 - AI layer                          [PENDING]
 Socratic logic guide (no direct answers), dynamic regional analogies engine,
 automated MDX study transformer, vision-based script OCR grader.
 
-### Gate G6 — Live layer                        [PENDING]
+### Gate G6 - Live layer                        [PENDING]
 Goroutine WebSocket multiplayer mock arenas + global leaderboards,
 voice-first hands-free flashcards, in-browser polyglot sandboxes.
 
-### Gate G7 — Ecosystem                         [PENDING]
+### Gate G7 - Ecosystem                         [PENDING]
 Sponsor & guardian read-only ROI portal, gamified deep-work streaks,
 posture/opt-in fatigue monitor, curriculum-to-career bridge,
 syllabus-to-university cross-mapping.
@@ -118,7 +118,7 @@ bandwidth-adaptive ultra-low-bitrate audio summaries.
 
 ### Standing ops notes
 - Go toolchain in paired sandbox: `export PATH=/home/z/go-dist/go/bin:$PATH`.
-- Sandbox DNS allowlist blocks `api.neon.tech` — Neon connection URI must be
+- Sandbox DNS allowlist blocks `api.neon.tech` - Neon connection URI must be
   supplied by founder (Neon console → connection string) or run E2E against
   userspace PostgreSQL locally; the service is DATABASE_URL-agnostic.
 - GitHub PAT rotation due at sprint end (standing security item).

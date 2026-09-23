@@ -154,7 +154,7 @@ func mapToQSpec(m map[string]yaml.Node, idx int) (QSpec, error) {
 		Marks:       1,
 	}
 	if t := strings.ToLower(get("type")); t != "" && t != "mcq" {
-		return qs, fmt.Errorf("question %d: type %q unsupported — qbuild v1 emits MCQ-only packs", idx+1, t)
+		return qs, fmt.Errorf("question %d: type %q unsupported - qbuild v1 emits MCQ-only packs", idx+1, t)
 	}
 	if v := get("marks"); v != "" {
 		fmt.Sscanf(v, "%d", &qs.Marks)

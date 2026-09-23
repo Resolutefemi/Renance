@@ -1,4 +1,4 @@
-/// University desks — the school picker and the per-school course desk,
+/// University desks - the school picker and the per-school course desk,
 /// mirroring the website's `/university`, `/university/<school>` and
 /// `/university/<school>/<course>` experience.
 ///
@@ -7,7 +7,7 @@
 /// groups them by school; the desk lists a school's course banks with
 /// the Post-UTME past questions as their own section, and every course
 /// opens the same practice sheet the web ships: Random Mode (25/50/100
-/// seeded picks) or Part pages (Q1-50, Q51-100, … contiguous slices) —
+/// seeded picks) or Part pages (Q1-50, Q51-100, … contiguous slices) -
 /// both real `jamb-pick-…` papers the server composes and grades.
 library;
 
@@ -513,7 +513,7 @@ class _PracticeSheet extends StatelessWidget {
 
   void _start(BuildContext context, ExamMeta target) {
     // Close the sheet first, then open the player on the SAME root
-    // navigator — re-looking-up from a popped sheet context is unsafe.
+    // navigator - re-looking-up from a popped sheet context is unsafe.
     final NavigatorState nav = Navigator.of(context);
     nav.pop();
     nav.push<void>(

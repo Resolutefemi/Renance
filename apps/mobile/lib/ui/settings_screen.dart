@@ -1,5 +1,5 @@
 /// Settings, the Stitch settings screen with the founder's Appearance
-/// control fully functional — Mode (Light / Mixed / Dark) plus the
+/// control fully functional - Mode (Light / Mixed / Dark) plus the
 /// Chrome-style Seed Colour picker that re-tints every ink surface in
 /// the product (seed_palette.dart, the Dart twin of the web's
 /// lib/theme.ts). Learning: daily goal + study reminder preference.
@@ -277,7 +277,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   }
 }
 
-/// The expandable Seed Color section — the web AppearancePanel's picker,
+/// The expandable Seed Color section - the web AppearancePanel's picker,
 /// 1:1: current-colour row with Reset, ten preset swatches, the 2-D
 /// saturation × brightness field, the rainbow hue rail and the hex box.
 class _SeedPanel extends StatelessWidget {
@@ -633,7 +633,7 @@ class _Swatch extends StatelessWidget {
   }
 }
 
-/// The 2-D saturation (→) × brightness (↑) field with a draggable thumb —
+/// The 2-D saturation (→) × brightness (↑) field with a draggable thumb -
 /// the Chrome colour-picker square.
 class _SaturationField extends StatefulWidget {
   const _SaturationField({
@@ -729,7 +729,7 @@ class _SaturationFieldState extends State<_SaturationField> {
   }
 }
 
-/// The rainbow hue rail with a circular thumb — a one-dimensional drag
+/// The rainbow hue rail with a circular thumb - a one-dimensional drag
 /// surface, same interaction as the Chrome picker.
 class _HueRail extends StatefulWidget {
   const _HueRail({

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Landing motion kit — the lively layer of the public landing page.
+ * Landing motion kit - the lively layer of the public landing page.
  *
  * Every piece degrades gracefully: without JS the content simply renders
  * (reveals default to visible when IO is unavailable), so the page stays
@@ -22,7 +22,7 @@ import Link from 'next/link';
 import { RenanceMark } from '@/components/renance-logo';
 
 /* ------------------------------------------------------------------ */
-/* Reduced motion — one hook every animation consults.                 */
+/* Reduced motion - one hook every animation consults.                 */
 /* ------------------------------------------------------------------ */
 
 const MotionContext = createContext<boolean>(false);
@@ -44,7 +44,7 @@ export function useReducedMotion() {
 }
 
 /* ------------------------------------------------------------------ */
-/* Reveal — scroll-triggered rise-and-fade with optional stagger.      */
+/* Reveal - scroll-triggered rise-and-fade with optional stagger.      */
 /* ------------------------------------------------------------------ */
 
 export function Reveal({
@@ -106,7 +106,7 @@ export function Reveal({
 }
 
 /* ------------------------------------------------------------------ */
-/* CountUp — stat numbers count in when they enter the viewport.       */
+/* CountUp - stat numbers count in when they enter the viewport.       */
 /* ------------------------------------------------------------------ */
 
 export function CountUp({
@@ -167,7 +167,7 @@ export function CountUp({
 }
 
 /* ------------------------------------------------------------------ */
-/* AuroraField — the drifting gradient backdrop behind the hero.       */
+/* AuroraField - the drifting gradient backdrop behind the hero.       */
 /* Pointer tilt makes the whole field lean towards the cursor, the     */
 /* Apple-wallpaper trick that makes glass feel physical.               */
 /* ------------------------------------------------------------------ */
@@ -215,7 +215,7 @@ export function AuroraField() {
 }
 
 /* ------------------------------------------------------------------ */
-/* LandingNav — the floating glass navbar.                             */
+/* LandingNav - the floating glass navbar.                             */
 /* Stable: always pinned, never hides. Transparent over the hero, it   */
 /* snaps to a frosted pill once the page scrolls. Mobile collapses     */
 /* into a glass sheet.                                                 */
@@ -225,7 +225,7 @@ const NAV_LINKS = [
   { href: '/subjects/', label: 'Subjects' },
   { href: '/packs/', label: 'Question packs' },
   { href: '/lessons/', label: 'Lessons' },
-  { href: '/flashcards/', label: 'Flashcards' },
+  { href: '#for-schools', label: 'For Schools' },
   { href: '/faq/', label: 'FAQ' },
 ];
 
@@ -308,7 +308,7 @@ export function LandingNav() {
 }
 
 /* ------------------------------------------------------------------ */
-/* FloatingCards — the three glass tiles orbiting the hero copy.       */
+/* FloatingCards - the three glass tiles orbiting the hero copy.       */
 /* Pure CSS animation; this wrapper only staggers entrance.            */
 /* ------------------------------------------------------------------ */
 
@@ -349,7 +349,7 @@ export function FloatingCard({
 }
 
 /* ------------------------------------------------------------------ */
-/* MarqueeRail — infinite exam-pack ticker (pausable, a11y-safe).      */
+/* MarqueeRail - infinite exam-pack ticker (pausable, a11y-safe).      */
 /* ------------------------------------------------------------------ */
 
 export function MarqueeRail({ items }: { items: string[] }) {

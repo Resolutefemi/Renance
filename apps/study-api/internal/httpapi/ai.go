@@ -9,7 +9,7 @@
 // The generated questions are PRACTICE MATERIAL, not exam banks: they
 // are never scored server-side, never enter the manifest, and carry no
 // user state. The student sees them with the correct answer + worked
-// explanation inline — that is the feature. Generated sets are anchored
+// explanation inline - that is the feature. Generated sets are anchored
 // to Nigerian senior-school / undergraduate syllabi phrasing so they
 // read like the rest of Renance.
 package httpapi
@@ -154,10 +154,10 @@ func aiSystemPrompt(topics []string, difficulty string, count int) string {
 	var b strings.Builder
 	b.WriteString("You are Renance's exam-question writer for Nigerian students (JAMB, WAEC, NECO and university courses). ")
 	b.WriteString("Write exam-standard multiple-choice questions in the style of real Nigerian past questions.\n\n")
-	b.WriteString("OUTPUT FORMAT — return ONLY a JSON array, no prose, no code fences:\n")
+	b.WriteString("OUTPUT FORMAT - return ONLY a JSON array, no prose, no code fences:\n")
 	b.WriteString(`[{"stem":"…","options":{"A":"…","B":"…","C":"…","D":"…"},"answer":"B","explanation":"one or two sentences why"}, …]` + "\n\n")
 	b.WriteString("RULES:\n")
-	b.WriteString("- Exactly 4 options lettered A–D; exactly one is correct.\n")
+	b.WriteString("- Exactly 4 options lettered A-D; exactly one is correct.\n")
 	b.WriteString("- Distractors must be plausible (common misconceptions, near-misses).\n")
 	b.WriteString("- Stems are self-contained: no references to figures, passages or prior questions.\n")
 	b.WriteString("- Explanation teaches the shortest correct path, under 40 words, plain English.\n")

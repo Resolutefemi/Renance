@@ -1,8 +1,8 @@
 /// Splash → route decision, plus the two credential screens.
 ///
 /// Top of every credential screen: the FOR STUDENTS / FOR SCHOOLS
-/// segmented switch. Students is the default — everything Renance has
-/// ever shipped lives on that side — while schools opens the management
+/// segmented switch. Students is the default - everything Renance has
+/// ever shipped lives on that side - while schools opens the management
 /// + teacher world: school sign-up (name + type), and staff sign-in that
 /// lands straight in the school workspace (syllabus, scheme of work,
 /// notes).
@@ -171,7 +171,7 @@ class _PasswordFieldState extends State<_PasswordField> {
 
 /// Google sign-in button, rendered only when GOOGLE_WEB_CLIENT_ID was
 /// baked at build time, mirroring the web app's graceful degradation.
-/// (Students only — school staff sign in with their school email.)
+/// (Students only - school staff sign in with their school email.)
 class _GoogleButton extends StatelessWidget {
   const _GoogleButton({required this.onPressed});
 
@@ -610,7 +610,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           SizedBox(height: 10),
           Text(
             isSchool
-                ? 'The full Nigerian curriculum — classes, subjects, term syllabuses with notes — is installed for you automatically.'
+                ? 'The full Nigerian curriculum - classes, subjects, term syllabuses with notes - is installed for you automatically.'
                 : "We'll ask about your school and exams right after, in one quick modal.",
             textAlign: TextAlign.center,
             style: TextStyle(color: context.outline, fontSize: 12),

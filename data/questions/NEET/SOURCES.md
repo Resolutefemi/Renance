@@ -1,4 +1,4 @@
-# NEET — sources & harvest notes
+# NEET - sources & harvest notes
 
 | Source | Type | Status |
 |---|---|---|

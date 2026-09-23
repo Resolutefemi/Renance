@@ -115,6 +115,6 @@ func TestXPPerCorrectEconomy(t *testing.T) {
 	// The level curve and badge thresholds assume 10 XP/correct:
 	// a perfect 40-question paper = 400 XP (badge xp_500 still out of reach).
 	if XPPerCorrect != 10 {
-		t.Fatalf("XP economy changed to %d — revisit badge thresholds + tests", XPPerCorrect)
+		t.Fatalf("XP economy changed to %d - revisit badge thresholds + tests", XPPerCorrect)
 	}
 }

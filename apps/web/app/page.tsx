@@ -14,7 +14,7 @@ import {
 } from '@/components/landing-motion';
 
 /**
- * The public landing page — "Your Guide to Academic Success".
+ * The public landing page - "Your Guide to Academic Success".
  *
  * Built to feel alive: an aurora gradient field drifts behind frosted
  * glass panels, feature tiles lift on hover, stats count in on scroll
@@ -95,6 +95,40 @@ const STEPS = [
   },
 ] as const;
 
+// The For Schools story: the same platform, wearing the school badge.
+const SCHOOL_FEATURES = [
+  {
+    icon: 'account_balance',
+    title: 'The Nigerian curriculum, pre-installed',
+    body: 'Primary 1 to 6, JSS 1 to 3 and SSS 1 to 3 with the NERDC subject list land in your portal the moment you register. Senior classes compose their subjects from Core, Art, Science and Commercial tracks.',
+  },
+  {
+    icon: 'auto_stories',
+    title: 'Syllabuses, topics and a real note library',
+    body: 'Every term syllabus carries its topics, weekly scheme of work and notes your teachers can edit. Notes come from classnotes.ng and NERDC-sourced material, credited and kept legal, and schools pour in more any time.',
+  },
+  {
+    icon: 'fact_check',
+    title: 'Attendance with a classroom kiosk',
+    body: 'Mark the daily register in seconds, or project the kiosk and let pupils tap themselves present. Every term rolls up into per-student attendance rates.',
+  },
+  {
+    icon: 'workspace_premium',
+    title: 'Results with positions and PIN-secured checking',
+    body: 'Fill CA1, CA2 and exam scores per subject, finalize, and the portal computes positions, grades and class averages. Each student gets a private 6-digit PIN to check their own result.',
+  },
+  {
+    icon: 'co_present',
+    title: 'Teacher accounts with real boundaries',
+    body: 'Create an account per teacher, assign them classes and subjects, and they fill exactly those results cells and teach exactly those notes. Nothing more.',
+  },
+  {
+    icon: 'devices',
+    title: 'Offline app for your staff',
+    body: 'Teachers and management get syllabus, scheme of work and notes on the Renance app, downloadable for offline use in the classroom. Records and results stay on the web.',
+  },
+] as const;
+
 function fmt(n: number): string {
   return n.toLocaleString('en-US');
 }
@@ -135,13 +169,13 @@ export default function Landing() {
       </MotionPrefs>
 
       {/* ============================================================ */}
-      {/* HERO — aurora field, gradient headline, floating glass       */}
+      {/* HERO - aurora field, gradient headline, floating glass       */}
       {/* ============================================================ */}
       <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pb-16 pt-32 sm:pt-36">
         <AuroraField />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6">
-          {/* floating glass cards — desktop only, orbit the copy */}
+          {/* floating glass cards - desktop only, orbit the copy */}
           <div className="pointer-events-none absolute inset-0 hidden xl:block" aria-hidden>
             <div className="absolute left-0 top-[16%] hero-enter hero-enter-3">
               <FloatingCard
@@ -188,9 +222,10 @@ export default function Landing() {
             </h1>
 
             <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-              {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, server-graded
-              CBT mocks, a review queue that plans itself, voice flashcards and the JAMB novel built
-              in. Free, on Android, iOS, Windows, macOS and the web.
+              {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, server-graded CBT
+              mocks, a review queue that plans itself, voice flashcards and the JAMB novel built in.
+              And for schools: a full portal with syllabuses, notes, attendance and PIN-secured
+              results. Free, on Android, iOS, Windows, macOS and the web.
             </p>
 
             <div className="hero-enter hero-enter-3 mt-9 flex flex-wrap items-center justify-center gap-3.5">
@@ -210,7 +245,7 @@ export default function Landing() {
             </div>
           </div>
 
-          {/* floating cards on mobile/tablet — inline strip */}
+          {/* floating cards on mobile/tablet - inline strip */}
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 xl:hidden">
             <FloatingCard tone="blue" icon="fact_check" title="Server-graded" body="Honest marks, always" />
             <FloatingCard tone="emerald" icon="event_repeat" title="Review queue" body="Plans itself" />
@@ -247,7 +282,7 @@ export default function Landing() {
             </div>
             <div className="stat-glass glass-hover">
               <dd className="stat-value">
-                {yearFrom}–{yearTo}
+                {yearFrom}-{yearTo}
               </dd>
               <dt className="stat-label">Years covered</dt>
             </div>
@@ -262,7 +297,7 @@ export default function Landing() {
       </section>
 
       {/* ============================================================ */}
-      {/* COVERAGE — the archive, by body                              */}
+      {/* COVERAGE - the archive, by body                              */}
       {/* ============================================================ */}
       <section className="mx-auto w-full max-w-6xl px-4 pt-20 sm:px-6">
         <Reveal>
@@ -290,7 +325,7 @@ export default function Landing() {
             </div>
             <div className="mt-8 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978–2025 · all subjects · novel included' },
+                { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978-2025 · all subjects · novel included' },
                 { body: 'WAEC', count: sum(waecExams), packs: waecExams.length, note: 'objectives + theory with model answers' },
                 { body: 'NECO', count: sum(necoExams), packs: necoExams.length, note: 'objectives + theory packs' },
                 { body: 'University', count: sum(uniExams), packs: uniExams.length, note: 'per-school course banks, more landing' },
@@ -307,6 +342,72 @@ export default function Landing() {
                 </div>
               ))}
             </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ============================================================ */}
+      {/* FOR SCHOOLS                                                   */}
+      {/* ============================================================ */}
+      <section id="for-schools" className="mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+        <Reveal>
+          <div className="cbt-panel p-6 sm:p-10">
+            <div className="flex flex-col items-start justify-between gap-5 lg:flex-row lg:items-end">
+              <div className="max-w-2xl">
+                <span
+                  className="eyebrow"
+                  style={{ color: '#ffffff', background: 'rgba(255,255,255,0.08)', borderColor: 'rgba(255,255,255,0.2)' }}
+                >
+                  New · For Schools
+                </span>
+                <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-4xl">
+                  Run your school on the same platform
+                </h2>
+                <p className="mt-3 text-[15px] leading-relaxed text-white/75">
+                  Renance is no longer only for candidates. Register your school, install the
+                  Nigerian curriculum in one tap, enroll your students with full details, hand your
+                  teachers their classes, and manage syllabuses, notes, attendance and results from
+                  one desk. Students check their results themselves with a private PIN.
+                </p>
+              </div>
+              <div className="flex shrink-0 flex-wrap gap-3">
+                <Link
+                  href="/register/?audience=school"
+                  className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#111c2d] transition hover:bg-white/90"
+                >
+                  Register your school
+                </Link>
+                <Link
+                  href="/school/check/"
+                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Check a result PIN
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-9 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
+              {SCHOOL_FEATURES.map((f) => (
+                <div
+                  key={f.title}
+                  className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 backdrop-blur-sm transition hover:bg-white/[0.1]"
+                >
+                  <span
+                    className="material-symbols-outlined flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#111c2d]"
+                    aria-hidden
+                  >
+                    {f.icon}
+                  </span>
+                  <h3 className="mt-4 text-[15px] font-bold text-white">{f.title}</h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-white/70">{f.body}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-7 border-t border-white/10 pt-5 text-xs leading-relaxed text-white/50">
+              The school portal is strict black and white on the web. Management runs records and
+              results there; staff carry syllabuses, schemes of work and notes offline in the app.
+            </p>
           </div>
         </Reveal>
       </section>
@@ -395,7 +496,7 @@ export default function Landing() {
                 <p className="mt-2 text-sm leading-relaxed text-white/75">
                   The player mirrors the real JAMB software: a live question map, flag-and-return,
                   answers that lock in exam mode, a hall-approved calculator, auto-submit at zero,
-                  and a keyboard-first desktop layout (A–F to pick, arrows to move) so laptop
+                  and a keyboard-first desktop layout (A-F to pick, arrows to move) so laptop
                   candidates train the way they will sit.
                 </p>
                 <ul className="mt-5 space-y-2.5">
@@ -441,7 +542,7 @@ export default function Landing() {
                   Kabir Alabi Garba · UTME Use of English
                 </p>
                 <div className="mt-6 grid grid-cols-4 gap-2">
-                  {['Ch 1–3', 'Ch 4–6', 'Ch 7–9', 'Ch 10–12'].map((c) => (
+                  {['Ch 1-3', 'Ch 4-6', 'Ch 7-9', 'Ch 10-12'].map((c) => (
                     <span
                       key={c}
                       className="rounded-xl bg-white/[0.06] px-2 py-2.5 text-center text-[11px] font-semibold text-white/75 ring-1 ring-white/10"
@@ -560,7 +661,8 @@ export default function Landing() {
             <h3 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">Product</h3>
             <ul className="mt-3 space-y-2 text-sm text-on-surface">
               <li><Link href="/register/" className="hover:underline">Create account</Link></li>
-              <li><Link href="/login/" className="hover:underline">Sign in</Link></li>
+              <li><Link href="/register/?audience=school" className="hover:underline">Register a school</Link></li>
+              <li><Link href="/school/check/" className="hover:underline">Check a result PIN</Link></li>
               <li><Link href="/exams/setup/" className="hover:underline">Mock exam setup</Link></li>
               <li><Link href="/faq/" className="hover:underline">FAQ</Link></li>
             </ul>

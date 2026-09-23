@@ -1,8 +1,8 @@
-/// Saved Questions — the Myschool bookmark feature, Renance edition.
+/// Saved Questions - the Myschool bookmark feature, Renance edition.
 ///
 /// The bookmark pill in the explanation sheet ("Save") stores the full
 /// question snapshot on-device (SharedPreferences JSON), so a saved
-/// question re-opens offline with its options — and, when it was saved
+/// question re-opens offline with its options - and, when it was saved
 /// from a graded review, its correct option + explanation travel with
 /// it. The Saved Questions screen lists them in Myschool's white-card
 /// language and opens the same reader.
@@ -49,7 +49,7 @@ class SavedQuestion {
   final String image;
   final String passage;
 
-  /// Filled when saved from a graded review — the reader then shows the
+  /// Filled when saved from a graded review - the reader then shows the
   /// correct option + explanation without any network.
   final String correct;
   final String explanation;
@@ -163,7 +163,7 @@ Future<SavedStore> savedStoreOf(BuildContext context) async {
 
 // ----------------------------------------------------------------- screen
 
-/// The Saved Questions screen — Myschool's white-card list, Renance
+/// The Saved Questions screen - Myschool's white-card list, Renance
 /// language: one card per saved question, stem preview + source +
 /// saved-date, tap to open the reader, long-press or trailing button to
 /// remove.
@@ -211,7 +211,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Back bar — every page gets a back button (founder rule).
+            // Back bar - every page gets a back button (founder rule).
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 4, 16, 0),
               child: SizedBox(
@@ -245,7 +245,7 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                 ),
               ),
             ),
-            // Search field — Myschool's "Search Question" bar.
+            // Search field - Myschool's "Search Question" bar.
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
               child: TextField(

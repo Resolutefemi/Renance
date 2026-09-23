@@ -9,7 +9,7 @@ import (
 
 // Private rooms (ROADMAP #14 slice): a student hosts a room, shares the
 // short code with a friend over any channel, and the friend's join starts
-// the match directly — no public queue, no house bot. The room lives in
+// the match directly - no public queue, no house bot. The room lives in
 // the hub's memory exactly like the matchmaking queues: one process, one
 // source of truth; the Redis/multi-host slice moves all of it together.
 //
@@ -47,7 +47,7 @@ type room struct {
 }
 
 // normalizeRoomCode canonicalizes what a client echoes back: trimmed and
-// upper-cased, nothing else — the code never contained separators.
+// upper-cased, nothing else - the code never contained separators.
 func normalizeRoomCode(code string) string {
 	return strings.ToUpper(strings.TrimSpace(code))
 }
@@ -210,7 +210,7 @@ func (h *Hub) JoinRoom(p *Player, code string) {
 //   - target gets "challenge" {opponent, code, body} while online
 //
 // A target who is mid-match cannot be invited; a target who is queued
-// or hosting CAN be — their client decides whether to surface the
+// or hosting CAN be - their client decides whether to surface the
 // invite, and joining auto-cancels their own lobby through the
 // ordinary JoinRoom guards.
 func (h *Hub) Challenge(p *Player, targetUserID, body string) {

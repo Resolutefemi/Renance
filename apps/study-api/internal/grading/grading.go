@@ -117,7 +117,7 @@ func (e *Engine) grade(ctx context.Context, job Job, worker int) {
         // Daily challenge ledger (ROADMAP #20) is best-effort like the rest:
         // the board can miss one seat; a graded paper must never fail for
         // it. Score is already fair (the submit handler pinned answers to
-        // the day's selection), but Total is the PACK's size — the seat
+        // the day's selection), but Total is the PACK's size - the seat
         // records the challenge's real size so "7/10" means 7 of 10. It
         // runs FIRST after the grade so the seat is visible as soon as the
         // attempt reads graded.
@@ -160,7 +160,7 @@ type TopicRow = store.TopicRow
 // Unanswered questions count as wrong; unknown question ids are ignored
 // (the submit handler rejects them, this stays forgiving for forensics).
 // Theory (essay) questions are self-assessed: they never count toward
-// score or total — the model answer unlocks in review instead.
+// score or total - the model answer unlocks in review instead.
 func Score(bundle *cbtdata.Bundle, key map[string]store.KeyEntry, answers []store.Picked) *store.Result {
         picked := make(map[string]string, len(answers))
         for _, a := range answers {

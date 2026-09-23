@@ -8,7 +8,7 @@ import (
 )
 
 // Leaderboards (ROADMAP #14 slice): public standings over data the
-// product already records — arena outcomes and study XP. Both routes are
+// product already records - arena outcomes and study XP. Both routes are
 // auth-gated like the rest of the student surface; the caller's own row
 // rides along as "me" even when it sits outside the top 25, so a student
 // always learns exactly where they stand.
@@ -29,7 +29,7 @@ func boardPeriod(raw string) (string, bool) {
 
 // handleArenaLeaderboard serves GET /leaderboard/arena?period=week|all&body=.
 // body scopes the board to one focus (JAMB, WAEC, NECO, POST-UTME,
-// "University Modules") — each focus ranks on its own ladder; empty
+// "University Modules") - each focus ranks on its own ladder; empty
 // means the combined board.
 func (s *Server) handleArenaLeaderboard(w http.ResponseWriter, r *http.Request) {
         uid, err := userIDFrom(r)
@@ -49,7 +49,7 @@ func (s *Server) handleArenaLeaderboard(w http.ResponseWriter, r *http.Request) 
                 fail(w, http.StatusInternalServerError, "internal", "could not load arena leaderboard")
                 return
         }
-        // The caller may never have queued for the arena yet — that keeps
+        // The caller may never have queued for the arena yet - that keeps
         // "me" null instead of inventing a rank they have not earned.
         var me *store.ArenaBoardEntry
         if row, found, err := s.store.ArenaRank(r.Context(), uid, period, body); err != nil {

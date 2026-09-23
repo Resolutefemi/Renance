@@ -6,7 +6,7 @@ import (
 )
 
 func TestDailyDayParam(t *testing.T) {
-	// Empty means "today" — the caller substitutes; valid per contract.
+	// Empty means "today" - the caller substitutes; valid per contract.
 	if _, ok := dailyDayParam(""); !ok {
 		t.Fatal("empty day must parse (caller substitutes today)")
 	}

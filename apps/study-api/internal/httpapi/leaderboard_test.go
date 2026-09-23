@@ -3,7 +3,7 @@ package httpapi
 import "testing"
 
 // The period parser is the only decision the leaderboard handlers make
-// on their own — the SQL itself is verified by the Postgres E2E in CI
+// on their own - the SQL itself is verified by the Postgres E2E in CI
 // (scripts/api-e2e.sh asserts both boards against a real database).
 // These tests pin the contract: empty/default = week, "all" = all, and
 // anything unknown is rejected so client bugs cannot silently read the

@@ -7,7 +7,7 @@
 /// The DEFAULT is the production study API so a release APK built
 /// without a --dart-define still syncs, logs in and downloads. The old
 /// default (http://10.0.2.2:3990, the Android-emulator alias for
-/// localhost) shipped silent, dead downloads in every release build —
+/// localhost) shipped silent, dead downloads in every release build -
 /// exactly the "app download function not working" report. Local
 /// development passes its own base explicitly.
 const String apiBaseUrl = String.fromEnvironment(

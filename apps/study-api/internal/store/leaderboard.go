@@ -8,7 +8,7 @@ import (
 )
 
 // Leaderboards: read-only aggregates over data the product already
-// writes — arena outcomes (0008) and gamification streaks (0003). No
+// writes - arena outcomes (0008) and gamification streaks (0003). No
 // migration here on purpose: both boards are answerable from existing
 // tables and indexes, and the arena board filters on
 // arena.matches.finished_at which arena_matches_finished_idx covers.
@@ -160,7 +160,7 @@ func (s *Store) ArenaWinsByUser(ctx context.Context, userIDs []string) (map[stri
 
 // StudyLeaderboard returns the top students by total XP, then best
 // streak. It reads study.streaks, which ApplyGrade upserts on every
-// graded attempt — students appear the moment their first paper grades.
+// graded attempt - students appear the moment their first paper grades.
 func (s *Store) StudyLeaderboard(ctx context.Context, limit int) ([]StudyBoardEntry, error) {
         if limit <= 0 || limit > 100 {
                 limit = 25

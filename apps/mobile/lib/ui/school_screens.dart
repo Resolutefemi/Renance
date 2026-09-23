@@ -1,7 +1,7 @@
 /// The school workspace (For Schools) in the app.
 ///
 /// Doctrine: management and teachers get EXACTLY syllabus, scheme of
-/// work and notes here — results, teachers and enrollment stay on the
+/// work and notes here - results, teachers and enrollment stay on the
 /// web. The note reader is deliberately BLACK & WHITE ONLY (ink on
 /// paper), matching the printed PDF handouts the web portal exports.
 library;
@@ -134,7 +134,7 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
 }
 
 /// The read-only school pack browser: class → subject → term → topic →
-/// note. Notes render BLACK ON WHITE regardless of app theme — the
+/// note. Notes render BLACK ON WHITE regardless of app theme - the
 /// print-house look, identical to the PDF handouts.
 class SchoolPackViewerScreen extends StatefulWidget {
   const SchoolPackViewerScreen({super.key, required this.pack, this.embeddedHome = false});
@@ -211,7 +211,7 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(32),
                 child: Text(
-                  'This school has no syllabus content yet — management can build it on the web portal.',
+                  'This school has no syllabus content yet - management can build it on the web portal.',
                   textAlign: TextAlign.center,
                   style: RenanceText.bodyBase.copyWith(color: context.textSecondary),
                 ),
@@ -380,7 +380,7 @@ class _TermCard extends StatelessWidget {
   }
 }
 
-/// The note reader — deliberately BLACK & WHITE ONLY: white paper, black
+/// The note reader - deliberately BLACK & WHITE ONLY: white paper, black
 /// ink, no theme colours. The same look as the printed handout.
 class _NoteReaderScreen extends StatelessWidget {
   const _NoteReaderScreen({
@@ -399,7 +399,7 @@ class _NoteReaderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Paper chrome: pure white ground, pure black ink — in BOTH tiers.
+    // Paper chrome: pure white ground, pure black ink - in BOTH tiers.
     const Color paper = Colors.white;
     const Color ink = Colors.black;
 

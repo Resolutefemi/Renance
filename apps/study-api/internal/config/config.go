@@ -26,7 +26,7 @@ type Config struct {
         // ROADMAP #9 Socratic tutor + AI generator: the provider is
         // Gemini's OpenAI-compatible surface. An empty AIAPIKey keeps
         // hint-only mode for the tutor and the honest "AI is off" state
-        // for the generator — set AI_API_KEY (or GEMINI_API_KEY) in the
+        // for the generator - set AI_API_KEY (or GEMINI_API_KEY) in the
         // deployment env to switch both to AI mode. GitHub push
         // protection (rightly) refuses the key inside this repo, so it
         // can only ever arrive through the environment.

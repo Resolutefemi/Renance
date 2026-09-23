@@ -18,7 +18,7 @@ import (
 var usernameRE = regexp.MustCompile(`^[a-z0-9_]{3,24}$`)
 
 // Practical RFC-ish gate: one @, a dot in the domain, no spaces/controls.
-// Deliverability is not our job — a typo'd address still yields a working
+// Deliverability is not our job - a typo'd address still yields a working
 // account, it just cannot receive mail yet.
 var emailRE = regexp.MustCompile(`^[^\s@]+@[^\s@]+\.[^\s@]{2,}$`)
 

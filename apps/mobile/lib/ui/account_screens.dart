@@ -1,13 +1,13 @@
-/// The account surfaces — the school app's account cut, Renance
+/// The account surfaces - the school app's account cut, Renance
 /// edition.
 ///
-/// AccountSheet: tapping the header avatar slides the bottom sheet up —
-/// avatar, full name, @username, the X — with the menu (Dashboard,
+/// AccountSheet: tapping the header avatar slides the bottom sheet up -
+/// avatar, full name, @username, the X - with the menu (Dashboard,
 /// Performance Analysis, Exam History, Saved Questions, Update
 /// Questions, App Settings, Logout), exactly the way Myschool displays
 /// the account at the top-right of home.
 ///
-/// MyAccountScreen: the full "My Account" page — the white-card rows
+/// MyAccountScreen: the full "My Account" page - the white-card rows
 /// (Performance Analysis, Exam History, Saved Questions, Downloads,
 /// GPA Calculator, App Settings, Help) and the red Logout row, the
 /// school app's My Account list in Renance's black & white.
@@ -76,7 +76,7 @@ class AccountSheet extends StatelessWidget {
                 borderRadius: BorderRadius.circular(999),
               ),
             ),
-            // identity row — avatar + name + @username + X
+            // identity row - avatar + name + @username + X
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
               child: Row(
@@ -242,7 +242,7 @@ class _SheetItem extends StatelessWidget {
 
 // ------------------------------------------------------------ my account
 
-/// The My Account page — the school app's white-card menu list, every
+/// The My Account page - the school app's white-card menu list, every
 /// row routing to a real Renance surface.
 class MyAccountScreen extends StatelessWidget {
   const MyAccountScreen({super.key, this.onGoTab});

@@ -3,7 +3,7 @@ package cbtdata
 // Composite paper composition (mock, custom, pick).
 //
 // A paper is a pure function of its CODE: the client builds a canonical
-// code, the server composes the same paper for that code every time —
+// code, the server composes the same paper for that code every time -
 // on any host, after any restart. That determinism keeps grading,
 // review and resume honest without persisting composite bundles.
 //
@@ -230,7 +230,7 @@ func takeShuffled(pool []Question, take int, rng *uint64) []Question {
 // and rest groups, honouring the comp/compN/nov options. It returns the
 // questions the English section should walk (already capped) or an
 // error when the section would come out empty. Novel questions (when
-// opted in) are seated first, then comprehension, then the rest — the
+// opted in) are seated first, then comprehension, then the rest - the
 // backfill logic still guarantees the section never comes up short.
 func englishSplit(pool []Question, rng *uint64, total int, comp bool, compN int, novel bool) ([]Question, error) {
         var compQ, novelQ, restQ []Question
@@ -264,7 +264,7 @@ func englishSplit(pool []Question, rng *uint64, total int, comp bool, compN int,
                 return nil, fmt.Errorf("english section has no questions")
         }
         // comp=0 with a comprehension-only pool is still answerable from the
-        // rest pool only — surface the shortfall loudly instead.
+        // rest pool only - surface the shortfall loudly instead.
         if !comp && !novel && len(restQ) == 0 {
                 return nil, fmt.Errorf("comprehension excluded but the bank has no other English questions")
         }
@@ -356,7 +356,7 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                         return nil, fmt.Errorf("cbtdata: paper %q needs bank %s-%s-bank, which is not loaded", paper.Code, body, slug)
                 }
                 // Body isolation: a waec-custom paper must be built from waec
-                // shelves only — a slug that happens to exist in another body's
+                // shelves only - a slug that happens to exist in another body's
                 // bank list is not interchangeable.
                 if want := body + "-" + slug + "-bank"; bank.Code != want {
                         return nil, fmt.Errorf("cbtdata: paper %q needs bank %s, got %s", paper.Code, want, bank.Code)
@@ -426,7 +426,7 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
                         label = "Custom Practice"
                 }
         }
-        // The quiz name only — never "Custom Practice · Biology + Physics
+        // The quiz name only - never "Custom Practice · Biology + Physics
         // + …". The subject strip in the player chrome (and the navigator
         // sheet) already carries the per-subject picture; a title that
         // lists subjects reads like a receipt on every surface that
@@ -443,8 +443,8 @@ func ComposePaper(spec *PaperSpec, banks map[string]*Bundle) (*Bundle, error) {
 //
 // A spec without From walks a seeded shuffle of the pool (random mode).
 // A spec with From takes a CONTIGUOUS slice in the pack's original
-// order — the university portals' Part chunks, where Part 2 of a 50-up
-// part means Q51–Q100 exactly as the source course page numbered them.
+// order - the university portals' Part chunks, where Part 2 of a 50-up
+// part means Q51-Q100 exactly as the source course page numbered them.
 func ComposePickPaper(spec *PaperSpec, base *Bundle) (*Bundle, error) {
         if spec.Family != PaperFamilyPick {
                 return nil, fmt.Errorf("cbtdata: ComposePickPaper handles pick only, got %q", spec.Family)
@@ -495,7 +495,7 @@ func ComposePickPaper(spec *PaperSpec, base *Bundle) (*Bundle, error) {
         if year != 0 {
                 paper.Title = fmt.Sprintf("%s · %d Practice", strings.TrimSuffix(base.Title, " Bank"), year)
         } else if spec.From > 0 {
-                paper.Title = fmt.Sprintf("%s · Q%d–Q%d", base.Title, spec.From, spec.From+len(picked)-1)
+                paper.Title = fmt.Sprintf("%s · Q%d-Q%d", base.Title, spec.From, spec.From+len(picked)-1)
         } else {
                 paper.Title = base.Title + " · Practice Set"
         }
