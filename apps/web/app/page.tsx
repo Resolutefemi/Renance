@@ -158,7 +158,9 @@ export default function Landing() {
   const manifest = loadManifest();
   const exams = manifest?.exams ?? [];
   const totalQuestions = exams.reduce((s, e) => s + (e.questionCount ?? 0), 0);
-  const allYears = exams.flatMap((e) => e.years ?? []);
+  // A sane floor guards the headline: bundle metadata has carried
+  // stray small ints before, and "past questions from 1" is silly.
+  const allYears = exams.flatMap((e) => e.years ?? []).filter((y) => y >= 1970 && y <= 2100);
   const yearFrom = allYears.length ? Math.min(...allYears) : 1978;
   const yearTo = allYears.length ? Math.max(...allYears) : new Date().getFullYear();
   const byBody = (body: string) => exams.filter((e) => e.body === body);
