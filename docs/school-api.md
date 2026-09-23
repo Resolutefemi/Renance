@@ -229,3 +229,41 @@ and are stored as integer kobo.
 
 Removes a charge with no receipts. A fee that already has payments
 answers 409 and stays on the ledger.
+
+### POST /school/fee-payment  (MANAGEMENT)
+
+Records one receipt: `{ feeId, studentId, amountNaira, method,
+reference?, paidOn? }`. Method is `cash | transfer | pos | other`.
+
+### GET /school/fee-payments?schoolId=&studentId=&term=&session=
+
+A student's receipts for the term, newest first.
+
+### GET /school/fee-balances?schoolId=&classId=&term=&session=  (MANAGEMENT)
+
+The money position of every active student: charged, paid and
+outstanding, with the last payment date. Scope by class with
+`classId`.
+
+## ID cards
+
+### POST /school/id-card  (MANAGEMENT)
+
+Issues (or re-issues) one card: `{ studentId, session }`. Idempotent
+per student per session; the serial is `REN-<year>-<6 digits>` and
+school-unique.
+
+### POST /school/id-cards  (MANAGEMENT)
+
+Batch issue: every active student in scope (`classId` optional) who
+lacks a card gets one. Response: `{ issued }`.
+
+### GET /school/id-cards?schoolId=&classId=&session=
+
+The card sheet join: card plus student, class, photo, guardian phone
+and school identity, ready to print.
+
+### PUT /school/id-card  (MANAGEMENT)
+
+Flips status: `{ cardId, status: issued | revoked }`. Lost cards are
+revoked, never deleted, so the serial history survives.
