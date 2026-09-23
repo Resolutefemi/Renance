@@ -52,3 +52,41 @@ Returns `{ school }` with name, type, address and logo URL.
 Body `{ name?, address?, logoUrl?, clearLogo? }`. The logo is a small
 data URL or an https URL; it stamps report cards, the portal chrome
 and the ID card sheet.
+
+## Curriculum and classes
+
+### POST /school/seed-curriculum
+
+MANAGEMENT. Installs the NERDC class ladder (Primary 1 to SSS 3) and
+the subject catalog with departments. Idempotent. Response:
+`{ seededClasses, seededSubjects }`.
+
+### GET /school/classes?schoolId=
+
+`{ classes: [{ id, name, level, seq }] }`, level is `primary`,
+`junior` or `senior`.
+
+### GET /school/subjects?schoolId=
+
+`{ subjects: [{ id, name, code, level, seq, department, isCore }] }`.
+`department` is empty for junior/primary subjects and one of
+`art | science | commercial` for the senior band. `isCore` marks the
+subjects every SSS student offers.
+
+### POST /school/subject  (MANAGEMENT)
+
+Adds a custom subject: `{ name, code, level, department, isCore }`.
+
+### PUT /school/subject  (MANAGEMENT)
+
+Edits one: `{ id, name?, code?, department?, isCore? }`.
+
+### POST /school/class-subject  (MANAGEMENT)
+
+Wires a subject to a class: `{ classId, subjectId, remove? }`. The
+pair list feeds the timetable picker, the syllabus desk and the
+result sheets.
+
+### GET /school/class-subjects?schoolId=
+
+`{ pairs: [{ classId, className, subjectId, subjectName }] }`.
