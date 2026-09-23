@@ -137,3 +137,49 @@ remove? }`. Assignments bound what a teacher sees and may edit.
 ### GET /school/assignments?schoolId=&memberId=
 
 Assignment list with class, subject and member names resolved.
+
+## Syllabus, scheme of work and notes
+
+### GET /school/syllabus?schoolId=&classId=&subjectId=
+
+`{ terms: [{ id, term, session, schemeOfWork, topics }] }`. The
+scheme of work is an array of `{ week, topic, objectives?, activities?
+}`; topics carry their note text.
+
+### PUT /school/topic
+
+Edits one topic: `{ topicId, title, content, week }`.
+
+### PUT /school/scheme
+
+Replaces a syllabus's scheme of work: `{ syllabusId, scheme: [...rows]
+}`.
+
+### POST /school/bulk-notes
+
+Pours many topics at once: `{ classId, subjectId, term, session,
+overwrite, topics: [{ title, week, content, source }] }`. Long dashes
+are normalized on the way in. Response: `{ written, received }`.
+
+### POST /school/seed-schemes  (MANAGEMENT)
+
+Drafts the NERDC-aligned weekly scheme into every class+subject+term
+whose scheme is still empty for the session. Response: `{ filled }`.
+Safe to re-run: filled schemes are never touched.
+
+## Attendance
+
+### GET /school/attendance?schoolId=&classId=&day=
+
+The day's register: `{ entries: [{ studentId, status, note }] }`.
+Status is `present | absent | late | excused`.
+
+### POST /school/attendance
+
+Saves a register: `{ classId, day, entries: [...] }`. Upsert-safe: the
+roster and the classroom kiosk can both write.
+
+### GET /school/attendance-summary?schoolId=&classId=&from=&to=
+
+Per-student roll-up over a date range: present, absent, late,
+excused, total and rate.
