@@ -163,16 +163,21 @@ export default function SchoolTimetablePage() {
             {classes.find((c) => c.id === classId)?.name ?? 'Class'} week
             {dirty && <span className="ml-2 text-xs font-normal text-on-surface-variant">unsaved edits</span>}
           </CardTitle>
-          {management && (
-            <div className="flex gap-2">
-              <button onClick={clearWeek} className={btnGhost}>
-                Clear
-              </button>
-              <button onClick={save} disabled={busy || !classId} className={btnPrimary}>
-                Save week
-              </button>
-            </div>
-          )}
+          <div className="flex gap-2">
+            <button onClick={() => window.print()} className={btnGhost} title="Print the week">
+              Print
+            </button>
+            {management && (
+              <>
+                <button onClick={clearWeek} className={btnGhost}>
+                  Clear
+                </button>
+                <button onClick={save} disabled={busy || !classId} className={btnPrimary}>
+                  Save week
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
         <div className="-mx-5 overflow-x-auto px-5 pb-1 sm:mx-0 sm:px-0">
