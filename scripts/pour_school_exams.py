@@ -32,18 +32,32 @@ REPO = Path(__file__).resolve().parents[1]
 BASE = os.environ.get("RENANCE_API_BASE", "https://renance-api.onrender.com").rstrip("/")
 
 
-def call(path: str, method: str = "GET", body: dict | None = None, token: str | None = None):
+def call(path: str, method: str = "GET", body: dict | None = None, token: str | None = None,
+         retries: int = 3):
     req = Request(BASE + path, method=method)
     req.add_header("Content-Type", "application/json")
     if token:
         req.add_header("Authorization", "Bearer " + token)
     data = json.dumps(body).encode() if body is not None else None
-    try:
-        with urlopen(req, data=data, timeout=120) as r:
-            return json.loads(r.read().decode())
-    except HTTPError as e:
-        detail = e.read().decode()[:300]
-        raise SystemExit(f"{method} {path} -> {e.code}: {detail}")
+    last = None
+    for attempt in range(retries):
+        try:
+            with urlopen(req, data=data, timeout=120) as r:
+                return json.loads(r.read().decode())
+        except HTTPError as e:
+            detail = e.read().decode()[:300]
+            if e.code in (502, 503, 504) and attempt < retries - 1:
+                time.sleep(3 * (attempt + 1))
+                last = SystemExit(f"{method} {path} -> {e.code}: {detail}")
+                continue
+            raise SystemExit(f"{method} {path} -> {e.code}: {detail}")
+        except Exception as e:  # noqa: BLE001 - network resets happen
+            if attempt < retries - 1:
+                time.sleep(3 * (attempt + 1))
+                last = SystemExit(f"{method} {path} -> {e}")
+                continue
+            raise SystemExit(f"{method} {path} -> {e}")
+    raise last or SystemExit(f"{method} {path} failed")
 
 
 def main():
