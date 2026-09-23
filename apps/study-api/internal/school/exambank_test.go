@@ -38,7 +38,9 @@ func TestExamBankIntegrity(t *testing.T) {
 			subjects[q.SubjectCode] = map[int]int{}
 		}
 		subjects[q.SubjectCode][q.Term]++
-		for _, bad := range []string{"--", "—", "–"} {
+		// Escape sequences only: the file itself must stay clean of
+		// the dash characters it forbids.
+		for _, bad := range []string{"--", "\u2014", "\u2013", "\u2012", "\u2010", "\u2015"} {
 			if strings.Contains(q.Question, bad) || strings.Contains(q.Explanation, bad) {
 				t.Fatalf("dash rule violated in: %s", q.Question)
 			}
