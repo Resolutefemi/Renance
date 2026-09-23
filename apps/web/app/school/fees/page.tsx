@@ -336,7 +336,7 @@ export default function SchoolFeesPage() {
                   ))}
                 </select>
               </div>
-              <div className="mb-4 grid grid-cols-3 gap-3 text-center">
+              <div className="mb-4 grid grid-cols-1 gap-3 text-center sm:grid-cols-3">
                 <div className="rounded-lg border border-outline-variant p-3">
                   <p className="text-xs uppercase tracking-wide text-on-surface-variant">Charged</p>
                   <p className="text-sm font-bold">{koboText(totals.charged)}</p>
