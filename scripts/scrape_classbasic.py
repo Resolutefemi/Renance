@@ -200,6 +200,15 @@ def canon_term(slug: str) -> int:
     for pat, n in TERM_PATTERNS:
         if re.search(pat, slug):
             return n
+    return 0  # no slug signal; callers infer from the page header
+
+
+def term_from_lines(lines: list[str]) -> int:
+    """Lesson pages print FIRST/SECOND/THIRD TERM in the header block."""
+    head = "\n".join(lines[:18]).lower()
+    for pat, n in TERM_PATTERNS:
+        if re.search(pat + r"\s*term", head):
+            return n
     return 1
 
 
@@ -434,6 +443,8 @@ def run(kinds: list[str], max_pages: int) -> None:
         title, lines = article_after_h1(html)
         if len(lines) < 8:
             continue
+        if term == 0:
+            term = term_from_lines(lines)
         if slug.startswith("scheme-of-work") or "scheme-of-work" in slug:
             weeks = scheme_lines(lines)
             if not weeks:
