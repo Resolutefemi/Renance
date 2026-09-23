@@ -17,5 +17,9 @@
   empty syllabus slot for a session.
 - Offline pack: the staff app's school pack now carries the exam bank
   with a tap-to-reveal reader for classroom oral quizzes.
+- Scheme drafts: one tap drafts the NERDC weekly scheme into every
+  empty syllabus slot; teachers edit the draft, never a blank page.
+- Search everywhere: exam pool and debtor list filter live, and CSV
+  exports carry the attendance file to the office.
 - Content doctrine: classnotes.ng harvest postponed; flashlearners and
   edudelight carry the weekly rotation. See docs/content-sourcing.md.
