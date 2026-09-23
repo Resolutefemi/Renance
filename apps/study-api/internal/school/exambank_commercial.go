@@ -107,3 +107,40 @@ var examBankAccounting = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Prepaid expenses carry benefit into the next period, so they are assets."},
 }
+
+// Part two expansions.
+var examBankCommerceP2 = []SeedExamQuestion{
+        {SubjectCode: "COM", Band: "senior", Term: 1,
+                Question:    "Trade by direct exchange of goods for goods, without money, is:",
+                Options:     [4]string{"Barter", "Retailing", "Wholesale", "Hiring"},
+                AnswerIndex: 0,
+                Explanation: "Barter swaps goods directly and needs a double coincidence of wants."},
+        {SubjectCode: "COM", Band: "senior", Term: 2,
+                Question:    "The channel producer to wholesaler to retailer to consumer is called:",
+                Options:     [4]string{"Direct channel", "Indirect channel", "Reverse channel", "No channel"},
+                AnswerIndex: 1,
+                Explanation: "Middlemen between producer and consumer make the channel indirect."},
+        {SubjectCode: "COM", Band: "senior", Term: 3,
+                Question:    "A document sent to correct an overcharge on an invoice is a:",
+                Options:     [4]string{"Credit note", "Debit note", "Prospectus", "Waybill"},
+                AnswerIndex: 0,
+                Explanation: "Credit notes reduce the buyer's debt to the seller."},
+}
+
+var examBankAccountingP2 = []SeedExamQuestion{
+        {SubjectCode: "FAC", Band: "senior", Term: 1,
+                Question:    "The principal book of account is the:",
+                Options:     [4]string{"Ledger", "Cash book only", "Sales day book", "Petty cash book"},
+                AnswerIndex: 0,
+                Explanation: "All accounts collect in the ledger; day books feed it."},
+        {SubjectCode: "FAC", Band: "senior", Term: 2,
+                Question:    "Returns of goods by a customer are recorded in the:",
+                Options:     [4]string{"Sales returns book", "Purchases book", "Cash book", "Journal proper only"},
+                AnswerIndex: 0,
+                Explanation: "Sales returns (returns inwards) tracks goods sent back."},
+        {SubjectCode: "FAC", Band: "senior", Term: 3,
+                Question:    "The accounting concept that assumes the business will continue operating is:",
+                Options:     [4]string{"Going concern", "Money measurement", "Prudence", "Materiality"},
+                AnswerIndex: 0,
+                Explanation: "Going concern underpins valuing assets for continued use."},
+}
