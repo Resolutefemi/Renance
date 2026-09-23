@@ -55,3 +55,22 @@ var examBankHomeEconomics = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Sitting upright protects the back during long work."},
 }
+
+// Part two: three more per term.
+var examBankHomeEconomicsP2 = []SeedExamQuestion{
+        {SubjectCode: "HEC", Band: "junior", Term: 1,
+                Question:    "Vitamin C is abundant in:",
+                Options:     [4]string{"Citrus fruits", "Red meat", "Butter", "Rice"},
+                AnswerIndex: 0,
+                Explanation: "Oranges and other citrus carry ascorbic acid."},
+        {SubjectCode: "HEC", Band: "junior", Term: 2,
+                Question:    "The correct order for washing up is:",
+                Options:     [4]string{"Glassware, plates, pots", "Pots first", "Whatever is nearest", "Dry first, wash later"},
+                AnswerIndex: 0,
+                Explanation: "Wash the cleanest first so greasy water lasts less."},
+        {SubjectCode: "HEC", Band: "junior", Term: 3,
+                Question:    "Ironing cotton clothing requires a ______ iron than silk.",
+                Options:     [4]string{"Hotter", "Cooler", "Wetter", "Cleaner"},
+                AnswerIndex: 0,
+                Explanation: "Cotton tolerates high heat; silk scorches easily."},
+}
