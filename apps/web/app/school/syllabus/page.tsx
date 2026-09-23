@@ -27,6 +27,8 @@ export default function SchoolSyllabusPage() {
   const [openTerm, setOpenTerm] = useState(1);
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState('');
+  const [session, setSession] = useState('2025/2026');
+  const [seeding, setSeeding] = useState(false);
 
   useEffect(() => {
     const a = getActiveSchool();
