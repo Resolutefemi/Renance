@@ -181,7 +181,7 @@ export default function SchoolTimetablePage() {
         </div>
 
         <div className="-mx-5 overflow-x-auto px-5 pb-1 sm:mx-0 sm:px-0">
-          <table className="w-full min-w-[720px] border-collapse text-sm">
+          <table className="w-full min-w-[720px] border-collapse text-sm" aria-label="Weekly timetable grid">
             <thead>
               <tr>
                 <th className="w-24 border border-outline-variant bg-surface-container px-2 py-2 text-xs uppercase tracking-wide text-on-surface-variant">
