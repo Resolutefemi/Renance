@@ -108,7 +108,7 @@ class _SchoolHomeScreenState extends State<SchoolHomeScreen> {
                 const Icon(Icons.school_outlined, size: 48),
                 const SizedBox(height: 12),
                 Text(
-                  _error ?? 'Download your school pack to browse the syllabus, scheme of work and notes offline.',
+                  _error ?? 'Download your school pack to browse the syllabus, scheme of work, notes and exam bank offline.',
                   textAlign: TextAlign.center,
                   style: RenanceText.bodyBase.copyWith(color: context.textSecondary),
                 ),
