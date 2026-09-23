@@ -36,6 +36,18 @@ const QA: Array<{ q: string; a: string }> = [
     a: 'JAMB, WAEC and NECO syllabus topics plus university course modules. See the subjects page for the full coverage list, which grows with every content release.',
   },
   {
+    q: 'Can my school use Renance?',
+    a: 'Yes. Register through the For Schools switch on the sign-up page and your portal comes with the full Nigerian curriculum pre-installed: syllabuses with weekly schemes of work, topic notes, attendance with a classroom kiosk, results with positions and private check-PINs, plus teacher accounts with real boundaries.',
+  },
+  {
+    q: 'Does the school portal handle fees, ID cards and timetables?',
+    a: 'It does. Management prices term charges per class or school-wide and records cash, transfer or POS receipts against students. Student ID cards carry a school-unique serial, print as a black and white sheet, and a lost card is revoked not deleted. The weekly timetable is a live grid per class with subjects and break blocks.',
+  },
+  {
+    q: 'Where do exam questions for schools come from?',
+    a: 'The platform ships an original, NERDC-aligned starter bank per subject per term that pours into your school in one tap, and your teachers grow it with their own questions. Published papers draw from that pool ready to print. Nothing is copied from third-party sites.',
+  },
+  {
     q: 'What is the review queue?',
     a: 'Every question topic you get wrong is scheduled for spaced repetition using the SM-2 algorithm: it reappears just before you would forget it. Clear the queue daily and retention compounds.',
   },
