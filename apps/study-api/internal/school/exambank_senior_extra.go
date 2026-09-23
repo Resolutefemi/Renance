@@ -107,3 +107,40 @@ var examBankCompSci = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Cloud services keep data on remote servers reachable anywhere."},
 }
+
+// Part two expansions.
+var examBankFurtherMathsP2 = []SeedExamQuestion{
+        {SubjectCode: "FMT", Band: "senior", Term: 1,
+                Question:    "If vector a = (2, 3) and b = (1, -1), then a + b is:",
+                Options:     [4]string{"(3, 2)", "(2, 3)", "(1, 4)", "(3, -2)"},
+                AnswerIndex: 0,
+                Explanation: "Add component-wise: (2+1, 3-1) = (3, 2)."},
+        {SubjectCode: "FMT", Band: "senior", Term: 2,
+                Question:    "The stationary points of a curve occur where the derivative is:",
+                Options:     [4]string{"Maximum", "Zero", "Negative", "Undefined"},
+                AnswerIndex: 1,
+                Explanation: "f'(x) = 0 marks the turning candidates; the second test classifies."},
+        {SubjectCode: "FMT", Band: "senior", Term: 3,
+                Question:    "The argument of the complex number 1 + i is:",
+                Options:     [4]string{"30 degrees", "45 degrees", "60 degrees", "90 degrees"},
+                AnswerIndex: 1,
+                Explanation: "tan(theta) = 1/1, so the argument is 45 degrees."},
+}
+
+var examBankCompSciP2 = []SeedExamQuestion{
+        {SubjectCode: "CSC", Band: "senior", Term: 1,
+                Question:    "Translating a high-level program to machine code before running is:",
+                Options:     [4]string{"Compilation", "Debugging", "Booting", "Rendering"},
+                AnswerIndex: 0,
+                Explanation: "Compilers translate whole programs ahead of execution."},
+        {SubjectCode: "CSC", Band: "senior", Term: 2,
+                Question:    "A loop that runs its body at least once before testing is:",
+                Options:     [4]string{"while loop", "do-while loop", "for-each loop", "if statement"},
+                AnswerIndex: 1,
+                Explanation: "Do-while tests after the body, so it always runs once."},
+        {SubjectCode: "CSC", Band: "senior", Term: 3,
+                Question:    "Which of these best describes an IP address?",
+                Options:     [4]string{"A device's network identifier", "A password", "A screen size", "A file type"},
+                AnswerIndex: 0,
+                Explanation: "IP addresses locate devices on a network."},
+}
