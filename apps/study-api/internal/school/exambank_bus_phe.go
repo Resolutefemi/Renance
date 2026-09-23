@@ -40,3 +40,20 @@ var examBankPHE = []SeedExamQuestion{
                 AnswerIndex: 1,
                 Explanation: "Gradual warm-up raises blood flow and readies muscles."},
 }
+
+        // Second Term
+        {SubjectCode: "BUS", Band: "junior", Term: 2,
+                Question:    "A document showing details of goods sold and their prices is the:",
+                Options:     [4]string{"Invoice", "Passport", "Ledger card", "License"},
+                AnswerIndex: 0,
+                Explanation: "Invoices state quantity, price and terms of a sale."},
+        {SubjectCode: "BUS", Band: "junior", Term: 2,
+                Question:    "The factor of production that organizes the others is:",
+                Options:     [4]string{"Land", "Labour", "Capital", "Entrepreneurship"},
+                AnswerIndex: 3,
+                Explanation: "The entrepreneur bears risk and coordinates the factors."},
+        {SubjectCode: "BUS", Band: "junior", Term: 2,
+                Question:    "Honesty in business builds:",
+                Options:     [4]string{"Losses", "Trust and goodwill", "Debts", "Complaints"},
+                AnswerIndex: 1,
+                Explanation: "Reputation compounds: honest traders keep customers."},
