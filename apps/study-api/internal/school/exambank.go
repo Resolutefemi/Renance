@@ -48,7 +48,6 @@ func init() {
 	extraBanks = append(extraBanks, examBankComputerP2...)
 	extraBanks = append(extraBanks, examBankAgric...)
 	extraBanks = append(extraBanks, examBankAgricP2...)
-	extraBanks = append(extraBanks, examBankAgricP2...)
 	extraBanks = append(extraBanks, examBankCRS...)
 	extraBanks = append(extraBanks, examBankCRSP2...)
 	extraBanks = append(extraBanks, examBankIRS...)
