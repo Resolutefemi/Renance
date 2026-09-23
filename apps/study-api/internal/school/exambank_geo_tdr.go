@@ -107,3 +107,40 @@ var examBankTechDrawing = []SeedExamQuestion{
 		AnswerIndex: 0,
 		Explanation: "Developments let sheet metal workers cut flat shapes that fold up."},
 }
+
+// Part two expansions.
+var examBankGeographyP2 = []SeedExamQuestion{
+        {SubjectCode: "GEO", Band: "senior", Term: 1,
+                Question:    "The surrounding zone from which a city draws its supplies is its:",
+                Options:     [4]string{"Hinterland", "Escarpment", "Watershed", "Floodplain"},
+                AnswerIndex: 0,
+                Explanation: "The hinterland is the economic backcountry of an urban centre."},
+        {SubjectCode: "GEO", Band: "senior", Term: 2,
+                Question:    "Rainfall common in the hot afternoons of the tropics is:",
+                Options:     [4]string{"Convectional rain", "Cyclonic rain", "Relief rain", "Sleet"},
+                AnswerIndex: 0,
+                Explanation: "Surface heating lifts moist air, cooling it into convectional storms."},
+        {SubjectCode: "GEO", Band: "senior", Term: 3,
+                Question:    "Crude oil and coal are grouped as:",
+                Options:     [4]string{"Renewable resources", "Fossil fuels", "Human resources", "Perpetual resources"},
+                AnswerIndex: 1,
+                Explanation: "They formed over geological ages and cannot renew on human timescales."},
+}
+
+var examBankTechDrawingP2 = []SeedExamQuestion{
+        {SubjectCode: "TDR", Band: "senior", Term: 1,
+                Question:    "The paper size A0 relates to A1 by:",
+                Options:     [4]string{"Halving", "Doubling", "Tripling", "No relation"},
+                AnswerIndex: 0,
+                Explanation: "Each A-size halves the previous: A0 folded gives A1."},
+        {SubjectCode: "TDR", Band: "senior", Term: 2,
+                Question:    "A circle appearing as an ellipse in a view means the view is:",
+                Options:     [4]string{"True view", "Oblique to the circle", "A section", "Full size"},
+                AnswerIndex: 1,
+                Explanation: "Circles foreshorten into ellipses when seen at an angle."},
+        {SubjectCode: "TDR", Band: "senior", Term: 3,
+                Question:    "Centre lines in engineering drawing are drawn as:",
+                Options:     [4]string{"Long and short dashes", "Thick continuous", "Wavy freehand", "Dotted dots only"},
+                AnswerIndex: 0,
+                Explanation: "Chain lines (long dash alternating with dot) mark axes and centres."},
+}
