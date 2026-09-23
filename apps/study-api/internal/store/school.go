@@ -1264,7 +1264,7 @@ func (s *Store) BuildSchoolPack(ctx context.Context, schoolID string) (*SchoolPa
 	}
 	pack.ExamBank = bank
 
-	pack.Version = fmt.Sprintf("%d-%s", topicCount, maxUpdated.UTC().Format("20060102150405"))
+	pack.Version = fmt.Sprintf("%d-%d-%s", topicCount, len(pack.ExamBank), maxUpdated.UTC().Format("20060102150405"))
 	pack.FetchedAt = time.Now().UTC().Format(time.RFC3339)
 	return pack, nil
 }
