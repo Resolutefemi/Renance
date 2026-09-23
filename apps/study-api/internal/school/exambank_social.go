@@ -55,3 +55,22 @@ var examBankSocial = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Hausa, Igbo and Yoruba are the three largest groups."},
 }
+
+// Part two: three more per term.
+var examBankSocialP2 = []SeedExamQuestion{
+        {SubjectCode: "SOS", Band: "junior", Term: 1,
+                Question:    "The first school of every child is the:",
+                Options:     [4]string{"Church", "Family", "Market", "Field"},
+                AnswerIndex: 1,
+                Explanation: "The family socializes the child before formal schooling."},
+        {SubjectCode: "SOS", Band: "junior", Term: 2,
+                Question:    "A major effect of drug abuse among youths is:",
+                Options:     [4]string{"Better grades", "Health and behaviour problems", "More sleep", "Stronger eyes"},
+                AnswerIndex: 1,
+                Explanation: "Abuse damages health and destabilizes behaviour."},
+        {SubjectCode: "SOS", Band: "junior", Term: 3,
+                Question:    "The sense of accepting the consequences of one's actions is:",
+                Options:     [4]string{"Responsibility", "Popularity", "Curiosity", "Generosity"},
+                AnswerIndex: 0,
+                Explanation: "Responsibility owns both choices and outcomes."},
+}
