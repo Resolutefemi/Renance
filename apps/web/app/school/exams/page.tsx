@@ -236,9 +236,9 @@ export default function SchoolExamsPage() {
         </p>
       )}
 
-      <div className="mb-5 flex gap-2">
+      <div className="mb-5 flex gap-2" role="tablist" aria-label="Exam sections">
         {(['pool', 'papers'] as const).map((t) => (
-          <button key={t} onClick={() => setTab(t)} className={btnSmall + (tab === t ? ' bg-surface-container-high font-semibold' : '')}>
+          <button key={t} role="tab" aria-selected={tab === t} onClick={() => setTab(t)} className={btnSmall + (tab === t ? ' bg-surface-container-high font-semibold' : '')}>
             {t === 'pool' ? 'Question pool' : 'Published papers'}
           </button>
         ))}
