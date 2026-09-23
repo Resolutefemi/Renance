@@ -22,6 +22,8 @@ var ExamBankBands = []string{"junior", "senior"}
 
 // ExamBank returns every starter question across the bands. The store
 // pour consumes this list.
+var extraBanks []SeedExamQuestion
+
 func ExamBank() []SeedExamQuestion {
 	all := make([]SeedExamQuestion, 0,
 		len(examBankJunior)+len(examBankSeniorScience)+len(examBankSeniorCore))
@@ -29,4 +31,12 @@ func ExamBank() []SeedExamQuestion {
 	all = append(all, examBankSeniorScience...)
 	all = append(all, examBankSeniorCore...)
 	return all
+}
+
+// extraBanks gathers the per-subject starter files added after the
+// first three core files; each lands in its own file under this
+// package and joins the pour here.
+func init() {
+	extraBanks = append(extraBanks, examBankCivic...)
+	extraBanks = append(extraBanks, examBankSocial...)
 }
