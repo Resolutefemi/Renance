@@ -126,6 +126,17 @@ func (s *Store) DeleteFee(ctx context.Context, schoolID, feeID string) (bool, er
 	return tag.RowsAffected() > 0, nil
 }
 
+// StudentBelongsToSchool guards the receipt desk: money is only
+// recorded against a student of the same school.
+func (s *Store) StudentBelongsToSchool(ctx context.Context, schoolID, studentID string) (bool, error) {
+	var ok bool
+	err := s.Pool.QueryRow(ctx,
+		`SELECT EXISTS (SELECT 1 FROM school.students WHERE id = $1 AND school_id = $2)`,
+		studentID, schoolID,
+	).Scan(&ok)
+	return ok, err
+}
+
 // RecordPayment writes one receipt and returns it.
 func (s *Store) RecordPayment(ctx context.Context, p *SchoolFeePayment) (*SchoolFeePayment, error) {
 	err := s.Pool.QueryRow(ctx, `
