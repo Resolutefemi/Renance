@@ -397,3 +397,8 @@ export function todayISO(d = new Date()): string {
   const p = (n: number) => String(n).padStart(2, '0');
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }
+
+// Draft the NERDC scheme of work into every empty syllabus slot of a
+// session. Idempotent: filled schemes stay untouched.
+export const seedSchemes = (schoolId: string, session: string) =>
+  api<{ filled: number }>('/school/seed-schemes', { method: 'POST', body: { schoolId, session } });
