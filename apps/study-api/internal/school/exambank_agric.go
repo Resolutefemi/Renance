@@ -55,3 +55,22 @@ var examBankAgric = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Good storage keeps pests and moisture away from produce."},
 }
+
+// Part two: three more per term.
+var examBankAgricP2 = []SeedExamQuestion{
+        {SubjectCode: "AGR", Band: "junior", Term: 1,
+                Question:    "The rearing of cattle for milk and meat is called:",
+                Options:     [4]string{"Dairy farming", "Fish farming", "Poultry", "Bee-keeping"},
+                AnswerIndex: 0,
+                Explanation: "Dairy farms keep milking cattle for milk products."},
+        {SubjectCode: "AGR", Band: "junior", Term: 2,
+                Question:    "The part of the plant that absorbs water from the soil is the:",
+                Options:     [4]string{"Root", "Leaf", "Flower", "Fruit"},
+                AnswerIndex: 0,
+                Explanation: "Root hairs draw water and dissolved minerals upward."},
+        {SubjectCode: "AGR", Band: "junior", Term: 3,
+                Question:    "Which of these animals is a ruminant?",
+                Options:     [4]string{"Goat", "Dog", "Cat", "Chicken"},
+                AnswerIndex: 0,
+                Explanation: "Ruminants chew cud; goats and cattle do."},
+}
