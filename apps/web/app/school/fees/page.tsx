@@ -58,6 +58,7 @@ export default function SchoolFeesPage() {
   const [payAmount, setPayAmount] = useState('');
   const [payMethod, setPayMethod] = useState('cash');
   const [payRef, setPayRef] = useState('');
+  const [balanceSearch, setBalanceSearch] = useState('');
 
   const loadFees = useCallback(async () => {
     const a = getActiveSchool();
@@ -168,7 +169,11 @@ export default function SchoolFeesPage() {
     }
   }
 
-  const totals = balances.reduce(
+  const visibleBalances = balances.filter((b) =>
+    `${b.studentName} ${b.admissionNo} ${b.className}`.toLowerCase().includes(balanceSearch.toLowerCase()),
+  );
+
+  const totals = visibleBalances.reduce(
     (acc, b) => {
       acc.charged += b.chargedKobo;
       acc.paid += b.paidKobo;
@@ -323,18 +328,27 @@ export default function SchoolFeesPage() {
             <Card className="overflow-hidden">
               <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
                 <CardTitle hint="Every active student, scoped by class when you pick one.">Balances</CardTitle>
-                <select
-                  value={balanceClass}
-                  onChange={(e) => setBalanceClass(e.target.value)}
-                  className={`${selectCls} h-11 w-auto`}
-                >
-                  <option value="">All classes</option>
-                  {classes.map((c) => (
-                    <option key={c.id} value={c.id}>
-                      {c.name}
-                    </option>
-                  ))}
-                </select>
+                <div className="flex gap-2">
+                  <input
+                    value={balanceSearch}
+                    onChange={(e) => setBalanceSearch(e.target.value)}
+                    placeholder="Search name or admission no..."
+                    className={`${inputCls} h-11 w-auto min-w-44`}
+                    aria-label="Search balances"
+                  />
+                  <select
+                    value={balanceClass}
+                    onChange={(e) => setBalanceClass(e.target.value)}
+                    className={`${selectCls} h-11 w-auto`}
+                  >
+                    <option value="">All classes</option>
+                    {classes.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
               <div className="mb-4 grid grid-cols-1 gap-3 text-center sm:grid-cols-3">
                 <div className="rounded-lg border border-outline-variant p-3">
@@ -370,7 +384,7 @@ export default function SchoolFeesPage() {
                         </td>
                       </tr>
                     )}
-                    {balances.map((b) => (
+                    {visibleBalances.map((b) => (
                       <tr key={b.studentId} className="border-b border-outline-variant/60 last:border-0">
                         <td className="py-3 pr-3">
                           <span className="font-medium text-on-surface">{b.studentName}</span>
