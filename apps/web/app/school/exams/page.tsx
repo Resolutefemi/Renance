@@ -28,6 +28,7 @@ import {
   fetchExamQuestions,
   fetchExams,
   publishExam,
+  seedExamBank,
   type ExamQuestion,
   type SchoolExam,
 } from '@/lib/school-exams';
@@ -148,6 +149,22 @@ export default function SchoolExamsPage() {
     }
   }
 
+  async function pourStarter() {
+    const a = getActiveSchool();
+    if (!a) return;
+    setBusy(true);
+    setNotice('');
+    try {
+      const res = await seedExamBank(a.schoolId);
+      setNotice(`Added ${res.added} starter question${res.added === 1 ? '' : 's'} to the bank.`);
+      await loadPool();
+    } catch {
+      setNotice('Could not pour the starter questions.');
+    } finally {
+      setBusy(false);
+    }
+  }
+
   async function submitPublish() {
     const a = getActiveSchool();
     if (!a || !pubClass || !pubSubject) {
@@ -229,19 +246,26 @@ export default function SchoolExamsPage() {
       {tab === 'pool' && (
         <div className="grid gap-5 lg:grid-cols-[1fr_380px]">
           <Card className="overflow-hidden">
-            <div className="mb-4 flex flex-wrap items-end gap-2">
-              <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} className={`${selectCls} h-11 w-auto min-w-44`} aria-label="Subject">
-                <option value="">Subject?</option>
-                {subjects.map((s) => (
-                  <option key={s.id} value={s.id}>{s.name}</option>
-                ))}
-              </select>
-              <select value={band} onChange={(e) => setBand(e.target.value)} className={`${selectCls} h-11 w-auto`} aria-label="Band">
-                <option value="">All bands</option>
-                <option value="primary">Primary</option>
-                <option value="junior">Junior</option>
-                <option value="senior">Senior</option>
-              </select>
+            <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+              <div className="flex flex-wrap items-end gap-2">
+                <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)} className={`${selectCls} h-11 w-auto min-w-44`} aria-label="Subject">
+                  <option value="">Subject?</option>
+                  {subjects.map((s) => (
+                    <option key={s.id} value={s.id}>{s.name}</option>
+                  ))}
+                </select>
+                <select value={band} onChange={(e) => setBand(e.target.value)} className={`${selectCls} h-11 w-auto`} aria-label="Band">
+                  <option value="">All bands</option>
+                  <option value="primary">Primary</option>
+                  <option value="junior">Junior</option>
+                  <option value="senior">Senior</option>
+                </select>
+              </div>
+              {management && (
+                <button onClick={pourStarter} disabled={busy} className={btnSmall}>
+                  Pour starter bank
+                </button>
+              )}
             </div>
             <div className="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
               <table className="w-full min-w-[560px] text-sm">
