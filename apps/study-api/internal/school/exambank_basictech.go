@@ -55,3 +55,22 @@ var examBankBasicTech = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Oil or grease between surfaces lowers friction and wear."},
 }
+
+// Part two: three more per term.
+var examBankBasicTechP2 = []SeedExamQuestion{
+        {SubjectCode: "BTE", Band: "junior", Term: 1,
+                Question:    "The instrument for measuring angles in degrees is the:",
+                Options:     [4]string{"Protractor", "Dividers", "Ruler", "French curve"},
+                AnswerIndex: 0,
+                Explanation: "The protractor's semicircular edge reads angles."},
+        {SubjectCode: "BTE", Band: "junior", Term: 2,
+                Question:    "A pulley with a fixed axle changes mainly the:",
+                Options:     [4]string{"Direction of effort", "Size of the load", "Work done", "Energy created"},
+                AnswerIndex: 0,
+                Explanation: "A single fixed pulley redirects the pull for convenience."},
+        {SubjectCode: "BTE", Band: "junior", Term: 3,
+                Question:    "The first-aid response to a small cut in the workshop is to:",
+                Options:     [4]string{"Clean and cover it", "Ignore it", "Blow on it", "Rub soil on it"},
+                AnswerIndex: 0,
+                Explanation: "Clean, dress and report the injury to the teacher."},
+}
