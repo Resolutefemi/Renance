@@ -1871,6 +1871,68 @@ class SchoolPackSyllabus {
       );
 }
 
+/// One exam-bank question riding in the offline school pack: the pool
+/// mirrors what management poured on the web, tagged per subject and
+/// term so staff can read the bank in the classroom.
+class SchoolPackExamQuestion {
+  const SchoolPackExamQuestion({
+    required this.id,
+    required this.subjectId,
+    required this.subject,
+    required this.band,
+    required this.term,
+    required this.question,
+    required this.options,
+    required this.answerIndex,
+    required this.explanation,
+    required this.marks,
+    required this.source,
+  });
+
+  final String id;
+  final String subjectId;
+  final String subject;
+  final String band;
+  final int term;
+  final String question;
+  final List<String> options;
+  final int answerIndex;
+  final String explanation;
+  final int marks;
+  final String source;
+
+  factory SchoolPackExamQuestion.fromJson(Map<String, dynamic> j) =>
+      SchoolPackExamQuestion(
+        id: (j['id'] ?? '') as String,
+        subjectId: (j['subjectId'] ?? '') as String,
+        subject: (j['subjectName'] ?? '') as String,
+        band: (j['band'] ?? '') as String,
+        term: (j['term'] ?? 1) as int,
+        question: (j['question'] ?? '') as String,
+        options: ((j['options'] ?? const <dynamic>[]) as List<dynamic>)
+            .map((dynamic e) => e.toString())
+            .toList(),
+        answerIndex: (j['answerIndex'] ?? 0) as int,
+        explanation: (j['explanation'] ?? '') as String,
+        marks: (j['marks'] ?? 1) as int,
+        source: (j['source'] ?? '') as String,
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+    'id': id,
+    'subjectId': subjectId,
+    'subjectName': subject,
+    'band': band,
+    'term': term,
+    'question': question,
+    'options': options,
+    'answerIndex': answerIndex,
+    'explanation': explanation,
+    'marks': marks,
+    'source': source,
+  };
+}
+
 /// The whole read-only school pack (GET /school/pack/{id}): classes,
 /// subjects and every syllabus with scheme of work + topics + notes.
 /// Stored locally like an exam bundle so school staff get the same
@@ -1883,6 +1945,7 @@ class SchoolPack {
     required this.classes,
     required this.subjects,
     required this.syllabus,
+    this.examBank = const <SchoolPackExamQuestion>[],
   });
 
   final SchoolInfo school;
@@ -1891,6 +1954,7 @@ class SchoolPack {
   final List<SchoolClassInfo> classes;
   final List<SchoolSubjectInfo> subjects;
   final List<SchoolPackSyllabus> syllabus;
+  final List<SchoolPackExamQuestion> examBank;
 
   /// All topics of the pack (count helper for the storage meter).
   int get topicCount => syllabus.fold<int>(
@@ -1961,6 +2025,9 @@ class SchoolPack {
                   .toList(),
             })
         .toList(),
+    'examBank': examBank
+        .map((SchoolPackExamQuestion q) => q.toJson())
+        .toList(),
   };
 
   factory SchoolPack.fromJson(Map<String, dynamic> j) => SchoolPack(
@@ -1981,6 +2048,10 @@ class SchoolPack {
     syllabus: ((j['syllabus'] ?? const <dynamic>[]) as List<dynamic>)
         .map((dynamic e) =>
             SchoolPackSyllabus.fromJson((e as Map).cast<String, dynamic>()))
+        .toList(),
+    examBank: ((j['examBank'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => SchoolPackExamQuestion.fromJson(
+            (e as Map).cast<String, dynamic>()))
         .toList(),
   );
 }
