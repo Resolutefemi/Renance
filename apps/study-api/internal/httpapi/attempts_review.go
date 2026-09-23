@@ -1,10 +1,10 @@
 package httpapi
 
 import (
-        "net/http"
-        "time"
+	"net/http"
+	"time"
 
-        "renance.dev/study-api/internal/store"
+	"renance.dev/study-api/internal/store"
 )
 
 // handleListAttempts serves GET /me/attempts, the student's paper
@@ -12,21 +12,21 @@ import (
 // the review tab, and every "syllabus completion"-style metric the UI
 // derives from real graded work instead of invented numbers.
 func (s *Server) handleListAttempts(w http.ResponseWriter, r *http.Request) {
-        uid, err := userIDFrom(r)
-        if err != nil {
-                fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
-                return
-        }
-        rows, err := s.store.AttemptsByUser(r.Context(), uid, 50)
-        if err != nil {
-                s.log.Error("attempts list failed", "err", err)
-                fail(w, http.StatusInternalServerError, "internal", "could not load attempt history")
-                return
-        }
-        if rows == nil {
-                rows = []*store.AttemptRow{}
-        }
-        writeJSON(w, http.StatusOK, map[string]any{"attempts": rows})
+	uid, err := userIDFrom(r)
+	if err != nil {
+		fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
+		return
+	}
+	rows, err := s.store.AttemptsByUser(r.Context(), uid, 50)
+	if err != nil {
+		s.log.Error("attempts list failed", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not load attempt history")
+		return
+	}
+	if rows == nil {
+		rows = []*store.AttemptRow{}
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"attempts": rows})
 }
 
 // reviewQuestion is one row of a post-grade answer review: the full
@@ -36,20 +36,20 @@ func (s *Server) handleListAttempts(w http.ResponseWriter, r *http.Request) {
 // image round-trip the diagram material the question/answer refers to;
 // video is an optional walkthrough link.
 type reviewQuestion struct {
-        QuestionID  string            `json:"questionId"`
-        Stem        string            `json:"stem"`
-        Topic       string            `json:"topic,omitempty"`
-        Year        int               `json:"year,omitempty"`
-        Type        string            `json:"type,omitempty"`
-        Options     map[string]string `json:"options,omitempty"`
-        Selected    string            `json:"selected,omitempty"`
-        Correct     string            `json:"correct"`
-        Explanation string            `json:"explanation,omitempty"`
-        Correctly   bool              `json:"correctly"`
-        Image       string            `json:"image,omitempty"`
-        AnswerImage string            `json:"answerImage,omitempty"`
-        Passage     string            `json:"passage,omitempty"`
-        Video       string            `json:"video,omitempty"`
+	QuestionID  string            `json:"questionId"`
+	Stem        string            `json:"stem"`
+	Topic       string            `json:"topic,omitempty"`
+	Year        int               `json:"year,omitempty"`
+	Type        string            `json:"type,omitempty"`
+	Options     map[string]string `json:"options,omitempty"`
+	Selected    string            `json:"selected,omitempty"`
+	Correct     string            `json:"correct"`
+	Explanation string            `json:"explanation,omitempty"`
+	Correctly   bool              `json:"correctly"`
+	Image       string            `json:"image,omitempty"`
+	AnswerImage string            `json:"answerImage,omitempty"`
+	Passage     string            `json:"passage,omitempty"`
+	Video       string            `json:"video,omitempty"`
 }
 
 // handleAttemptReview serves GET /attempts/{id}/review, per-question
@@ -57,97 +57,97 @@ type reviewQuestion struct {
 // is a 409: answer material never leaves while a paper is still open
 // (ADR-0003 doctrine, review edition).
 func (s *Server) handleAttemptReview(w http.ResponseWriter, r *http.Request) {
-        uid, err := userIDFrom(r)
-        if err != nil {
-                fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
-                return
-        }
-        attemptID := r.PathValue("id")
-        attempt, err := s.store.AttemptByID(r.Context(), attemptID, uid)
-        if err != nil {
-                s.log.Error("attempt lookup failed", "err", err)
-                fail(w, http.StatusInternalServerError, "internal", "could not load attempt")
-                return
-        }
-        if attempt == nil || attempt.UserID != uid {
-                fail(w, http.StatusNotFound, "unknown_attempt", "no such attempt")
-                return
-        }
-        if attempt.Status != "graded" {
-                fail(w, http.StatusConflict, "not_graded",
-                        "answers unlock after the attempt is graded (current: "+attempt.Status+")")
-                return
-        }
-        bundle, ok := s.ensurePaperRequest(r, attempt.Code)
-        if !ok {
-                fail(w, http.StatusInternalServerError, "internal", "pack no longer available")
-                return
-        }
-        keys, keyed := s.keys.Get(attempt.Code)
-        if !keyed {
-                keys = map[string]store.KeyEntry{} // bank unkeyed: nothing to review
-        }
-        picks, err := s.store.AnswersForAttempt(r.Context(), attempt.ID)
-        if err != nil {
-                s.log.Error("answers lookup failed", "err", err)
-                fail(w, http.StatusInternalServerError, "internal", "could not load answers")
-                return
-        }
-        chosen := make(map[string]string, len(picks))
-        for _, p := range picks {
-                chosen[p.QuestionID] = p.Selected
-        }
+	uid, err := userIDFrom(r)
+	if err != nil {
+		fail(w, http.StatusUnauthorized, "unauthorized", "missing identity")
+		return
+	}
+	attemptID := r.PathValue("id")
+	attempt, err := s.store.AttemptByID(r.Context(), attemptID, uid)
+	if err != nil {
+		s.log.Error("attempt lookup failed", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not load attempt")
+		return
+	}
+	if attempt == nil || attempt.UserID != uid {
+		fail(w, http.StatusNotFound, "unknown_attempt", "no such attempt")
+		return
+	}
+	if attempt.Status != "graded" {
+		fail(w, http.StatusConflict, "not_graded",
+			"answers unlock after the attempt is graded (current: "+attempt.Status+")")
+		return
+	}
+	bundle, ok := s.ensurePaperRequest(r, attempt.Code)
+	if !ok {
+		fail(w, http.StatusInternalServerError, "internal", "pack no longer available")
+		return
+	}
+	keys, keyed := s.keys.Get(attempt.Code)
+	if !keyed {
+		keys = map[string]store.KeyEntry{} // bank unkeyed: nothing to review
+	}
+	picks, err := s.store.AnswersForAttempt(r.Context(), attempt.ID)
+	if err != nil {
+		s.log.Error("answers lookup failed", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not load answers")
+		return
+	}
+	chosen := make(map[string]string, len(picks))
+	for _, p := range picks {
+		chosen[p.QuestionID] = p.Selected
+	}
 
-        questions := make([]reviewQuestion, 0, len(bundle.Questions))
-        for _, q := range bundle.Questions {
-                key, keyed := keys[q.ID]
-                if !keyed {
-                        continue // text-typed or unkeyed question: nothing to review
-                }
-                rq := reviewQuestion{
-                        QuestionID:  q.ID,
-                        Stem:        q.Stem,
-                        Topic:       q.Topic,
-                        Year:        q.Year,
-                        Type:        q.Type,
-                        Options:     q.Options,
-                        Selected:    chosen[q.ID],
-                        Correct:     key.Letter,
-                        Explanation: key.Explanation,
-                        Image:       q.Image,
-                        AnswerImage: key.AnswerImage,
-                        Passage:     q.Passage,
-                        Video:       key.Video,
-                }
-                if q.Type == "theory" {
-                        // Self-assessed essay: there is no wrong pick, the
-                        // student compares their work with the model answer.
-                        rq.Correctly = false
-                } else {
-                        rq.Correctly = rq.Selected == key.Letter
-                }
-                questions = append(questions, rq)
-        }
+	questions := make([]reviewQuestion, 0, len(bundle.Questions))
+	for _, q := range bundle.Questions {
+		key, keyed := keys[q.ID]
+		if !keyed {
+			continue // text-typed or unkeyed question: nothing to review
+		}
+		rq := reviewQuestion{
+			QuestionID:  q.ID,
+			Stem:        q.Stem,
+			Topic:       q.Topic,
+			Year:        q.Year,
+			Type:        q.Type,
+			Options:     q.Options,
+			Selected:    chosen[q.ID],
+			Correct:     key.Letter,
+			Explanation: key.Explanation,
+			Image:       q.Image,
+			AnswerImage: key.AnswerImage,
+			Passage:     q.Passage,
+			Video:       key.Video,
+		}
+		if q.Type == "theory" {
+			// Self-assessed essay: there is no wrong pick, the
+			// student compares their work with the model answer.
+			rq.Correctly = false
+		} else {
+			rq.Correctly = rq.Selected == key.Letter
+		}
+		questions = append(questions, rq)
+	}
 
-        result, err := s.store.ResultByAttempt(r.Context(), attempt.ID)
-        if err != nil {
-                s.log.Error("result lookup failed", "err", err)
-                fail(w, http.StatusInternalServerError, "internal", "could not load result")
-                return
-        }
+	result, err := s.store.ResultByAttempt(r.Context(), attempt.ID)
+	if err != nil {
+		s.log.Error("result lookup failed", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not load result")
+		return
+	}
 
-        resp := map[string]any{
-                "attemptId": attempt.ID,
-                "code":      attempt.Code,
-                "title":     bundle.Title,
-                "questions": questions,
-        }
-        if attempt.SubmittedAt != nil {
-                resp["submittedAt"] = attempt.SubmittedAt.UTC().Format(time.RFC3339Nano)
-        }
-        if result != nil {
-                resp["score"] = result.Score
-                resp["total"] = result.Total
-        }
-        writeJSON(w, http.StatusOK, resp)
+	resp := map[string]any{
+		"attemptId": attempt.ID,
+		"code":      attempt.Code,
+		"title":     bundle.Title,
+		"questions": questions,
+	}
+	if attempt.SubmittedAt != nil {
+		resp["submittedAt"] = attempt.SubmittedAt.UTC().Format(time.RFC3339Nano)
+	}
+	if result != nil {
+		resp["score"] = result.Score
+		resp["total"] = result.Total
+	}
+	writeJSON(w, http.StatusOK, resp)
 }
