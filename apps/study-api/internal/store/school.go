@@ -1160,12 +1160,13 @@ func (s *Store) CheckResultByPIN(ctx context.Context, pin string, term int, sess
 // (syllabus + scheme of work + notes, read-only). Version is a coarse
 // stamp the app can compare to detect updates.
 type SchoolPack struct {
-	School    School          `json:"school"`
-	Version   string          `json:"version"`
-	Classes   []SchoolClass   `json:"classes"`
-	Subjects  []SchoolSubject `json:"subjects"`
-	Syllabus  []PackSyllabus  `json:"syllabus"`
-	FetchedAt string          `json:"fetchedAt"`
+	School    School               `json:"school"`
+	Version   string               `json:"version"`
+	Classes   []SchoolClass        `json:"classes"`
+	Subjects  []SchoolSubject      `json:"subjects"`
+	Syllabus  []PackSyllabus       `json:"syllabus"`
+	ExamBank  []SchoolExamQuestion `json:"examBank,omitempty"`
+	FetchedAt string               `json:"fetchedAt"`
 }
 
 // PackSyllabus is one class+subject entry of the offline pack.
@@ -1178,6 +1179,24 @@ type PackSyllabus struct {
 }
 
 // BuildSchoolPack assembles the whole read-only pack for a school.
+// poolExamQuestions lists every bank question of a school, light on
+// joins, for the offline pack.
+func (s *Store) poolExamQuestions(ctx context.Context, schoolID string) ([]SchoolExamQuestion, error) {
+	rows, err := s.Pool.Query(ctx, `
+		SELECT q.id, q.school_id::text, q.subject_id::text, COALESCE(su.name, ''),
+		       q.band, q.term, q.session, q.question, q.options, q.answer_index,
+		       q.explanation, q.marks, q.source
+		FROM school.exam_questions q
+		LEFT JOIN school.subjects su ON su.id = q.subject_id
+		WHERE q.school_id = $1
+		ORDER BY su.name, q.term, q.created_at`, schoolID)
+	if err != nil {
+		return nil, fmt.Errorf("store: pack exam pool: %w", err)
+	}
+	defer rows.Close()
+	return scanExamQuestions(rows)
+}
+
 func (s *Store) BuildSchoolPack(ctx context.Context, schoolID string) (*SchoolPack, error) {
 	sc, err := s.SchoolByID(ctx, schoolID)
 	if err != nil || sc == nil {
@@ -1236,6 +1255,15 @@ func (s *Store) BuildSchoolPack(ctx context.Context, schoolID string) (*SchoolPa
 	for _, ps := range pairs {
 		pack.Syllabus = append(pack.Syllabus, *ps)
 	}
+
+	// The exam bank rides along so staff can read the question pool
+	// offline. The paper draw stays a web-side action.
+	bank, err := s.poolExamQuestions(ctx, schoolID)
+	if err != nil {
+		return nil, err
+	}
+	pack.ExamBank = bank
+
 	pack.Version = fmt.Sprintf("%d-%s", topicCount, maxUpdated.UTC().Format("20060102150405"))
 	pack.FetchedAt = time.Now().UTC().Format(time.RFC3339)
 	return pack, nil
