@@ -149,6 +149,7 @@ class SchoolPackViewerScreen extends StatefulWidget {
 class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
   String? _classId;
   String? _subjectId;
+  bool _bankView = false;
 
   @override
   void initState() {
@@ -220,6 +221,24 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
           : ListView(
               padding: const EdgeInsets.all(16),
               children: <Widget>[
+                // Two reading modes: the syllabus tree, or the exam
+                // question bank riding in the pack.
+                if (widget.pack.examBank.isNotEmpty) ...<Widget>[
+                  SegmentedButton<bool>(
+                    segments: const <ButtonSegment<bool>>[
+                      ButtonSegment<bool>(
+                          value: false, icon: Icon(Icons.menu_book_outlined, size: 18), label: Text('Syllabus')),
+                      ButtonSegment<bool>(
+                          value: true, icon: Icon(Icons.quiz_outlined, size: 18), label: Text('Exam bank')),
+                    ],
+                    selected: <bool>{_bankView},
+                    onSelectionChanged: (Set<bool> s) => setState(() => _bankView = s.first),
+                  ),
+                  const SizedBox(height: 16),
+                ],
+                if (_bankView)
+                  ..._bankSection()
+                else ...<Widget>[
                 _dropdown(
                   value: _classId,
                   items: classNames,
@@ -249,9 +268,43 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
                   )
                 else
                   ..._termsInOrder(branch),
+                ],
               ],
             ),
     );
+  }
+
+  /// The offline exam bank: every question in the pack, grouped by
+  /// subject, with the answer reveal kept one tap away so the sheet
+  /// can be used as a quick oral quiz in class.
+  List<Widget> _bankSection() {
+    if (widget.pack.examBank.isEmpty) {
+      return <Widget>[
+        Text(
+          'The exam bank is empty. Management can pour the starter bank on the web portal.',
+          style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
+        ),
+      ];
+    }
+    final Map<String, List<SchoolPackExamQuestion>> bySubject =
+        <String, List<SchoolPackExamQuestion>>{};
+    for (final SchoolPackExamQuestion q in widget.pack.examBank) {
+      (bySubject[q.subject.isEmpty ? 'General' : q.subject] ??= <SchoolPackExamQuestion>[])
+          .add(q);
+    }
+    final List<String> subjects = bySubject.keys.toList()..sort();
+    return <Widget>[
+      for (final String s in subjects) ...<Widget>[
+        Text(
+          s,
+          style: RenanceText.sectionTitle.copyWith(color: context.ink),
+        ),
+        const SizedBox(height: 8),
+        for (final SchoolPackExamQuestion q in bySubject[s]!)
+          _BankQuestionCard(question: q),
+        const SizedBox(height: 14),
+      ],
+    ];
   }
 
   List<Widget> _termsInOrder(SchoolPackSyllabus branch) {
@@ -374,6 +427,98 @@ class _TermCard extends StatelessWidget {
                 ),
               ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// One bank question card: the options stay visible, the correct
+/// answer and explanation reveal on tap, so a teacher can run a quick
+/// oral quiz from the offline pack.
+class _BankQuestionCard extends StatefulWidget {
+  const _BankQuestionCard({required this.question});
+
+  final SchoolPackExamQuestion question;
+
+  @override
+  State<_BankQuestionCard> createState() => _BankQuestionCardState();
+}
+
+class _BankQuestionCardState extends State<_BankQuestionCard> {
+  bool _revealed = false;
+
+  String get _termName {
+    switch (widget.question.term) {
+      case 1:
+        return 'First Term';
+      case 2:
+        return 'Second Term';
+      default:
+        return 'Third Term';
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final SchoolPackExamQuestion q = widget.question;
+    return Card(
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () => setState(() => _revealed = !_revealed),
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                '${q.marks > 1 ? '${q.marks} marks' : '1 mark'} · $_termName${q.band.isEmpty ? '' : ' · ${q.band}'}',
+                style: RenanceText.labelMono.copyWith(color: context.textSecondary, fontSize: 11),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                q.question,
+                style: RenanceText.bodyBase.copyWith(color: context.ink),
+              ),
+              const SizedBox(height: 8),
+              for (int i = 0; i < q.options.length; i++)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 2),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        '${String.fromCharCode(65 + i)}.  ',
+                        style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
+                      ),
+                      Expanded(
+                        child: Text(
+                          q.options[i],
+                          style: RenanceText.bodySecondary.copyWith(
+                            color: _revealed && i == q.answerIndex
+                                ? context.ink
+                                : context.textSecondary,
+                            fontWeight: _revealed && i == q.answerIndex
+                                ? FontWeight.w700
+                                : FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              if (_revealed && q.explanation.isNotEmpty) ...<Widget>[
+                const SizedBox(height: 6),
+                Text(
+                  q.explanation,
+                  style: RenanceText.bodySecondary.copyWith(
+                    color: context.textSecondary,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ],
+            ],
+          ),
         ),
       ),
     );
