@@ -21,3 +21,20 @@ var examBankHomeEconomics = []SeedExamQuestion{
                 AnswerIndex: 1,
                 Explanation: "Amino acids build and repair body tissues."},
 }
+
+        // Second Term
+        {SubjectCode: "HEC", Band: "junior", Term: 2,
+                Question:    "The best method of preserving vegetables for a short period is:",
+                Options:     [4]string{"Refrigeration", "Sun-drying", "Salting", "Canning"},
+                AnswerIndex: 0,
+                Explanation: "Cool temperatures slow spoilage without heavy processing."},
+        {SubjectCode: "HEC", Band: "junior", Term: 2,
+                Question:    "Kitchen hygiene requires washing hands:",
+                Options:     [4]string{"Once a day", "Before and after handling food", "Only after eating", "Never"},
+                AnswerIndex: 1,
+                Explanation: "Clean hands break the chain that carries germs into food."},
+        {SubjectCode: "HEC", Band: "junior", Term: 2,
+                Question:    "Which of these is a correct way to extinguish an oil fire?",
+                Options:     [4]string{"Pour water", "Cover the pot with a lid", "Fan it", "Add more oil"},
+                AnswerIndex: 1,
+                Explanation: "Smothering cuts off oxygen; water spreads burning oil."},
