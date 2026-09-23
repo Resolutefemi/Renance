@@ -54,6 +54,7 @@ export default function SchoolExamsPage() {
   const [band, setBand] = useState('');
   const [questions, setQuestions] = useState<ExamQuestion[]>([]);
   const [qText, setQText] = useState('');
+  const [poolSearch, setPoolSearch] = useState('');
   const [opts, setOpts] = useState(['', '', '', '']);
   const [answer, setAnswer] = useState(0);
   const [expl, setExpl] = useState('');
@@ -267,6 +268,13 @@ export default function SchoolExamsPage() {
                 </button>
               )}
             </div>
+            <input
+              value={poolSearch}
+              onChange={(e) => setPoolSearch(e.target.value)}
+              placeholder="Search the pool..."
+              className={`${inputCls} mb-3`}
+              aria-label="Search questions"
+            />
             <div className="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
               <table className="w-full min-w-[560px] text-sm">
                 <thead>
@@ -277,6 +285,13 @@ export default function SchoolExamsPage() {
                   </tr>
                 </thead>
                 <tbody>
+                  {questions.length > 0 && (
+                    <tr>
+                      <td colSpan={3} className="pb-2 text-xs text-on-surface-variant">
+                        Showing {questions.filter((q) => q.question.toLowerCase().includes(poolSearch.toLowerCase())).length} of {questions.length} questions
+                      </td>
+                    </tr>
+                  )}
                   {questions.length === 0 && (
                     <tr>
                       <td colSpan={3} className="py-6 text-center text-on-surface-variant">
@@ -284,7 +299,9 @@ export default function SchoolExamsPage() {
                       </td>
                     </tr>
                   )}
-                  {questions.map((q) => (
+                  {questions
+                    .filter((q) => q.question.toLowerCase().includes(poolSearch.toLowerCase()))
+                    .map((q) => (
                     <tr key={q.id} className="border-b border-outline-variant/60 last:border-0 align-top">
                       <td className="py-3 pr-3">
                         <span className="font-medium text-on-surface">{q.question}</span>
@@ -300,7 +317,7 @@ export default function SchoolExamsPage() {
                         </td>
                       )}
                     </tr>
-                  ))}
+                    ))}
                 </tbody>
               </table>
             </div>
