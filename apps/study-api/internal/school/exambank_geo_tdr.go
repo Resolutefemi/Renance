@@ -40,3 +40,20 @@ var examBankTechDrawing = []SeedExamQuestion{
                 AnswerIndex: 0,
                 Explanation: "A view plane parallel to the line shows it without foreshortening."},
 }
+
+        // Second Term
+        {SubjectCode: "GEO", Band: "senior", Term: 2,
+                Question:    "Weathering that changes the chemical composition of rocks is:",
+                Options:     [4]string{"Physical weathering", "Chemical weathering", "Erosion", "Mass movement"},
+                AnswerIndex: 1,
+                Explanation: "Chemical weathering alters minerals, as in hydrolysis."},
+        {SubjectCode: "GEO", Band: "senior", Term: 2,
+                Question:    "The local wind that blows from the Sahara towards the Guinea coast is the:",
+                Options:     [4]string{"Harmattan", "Monsoon", "Chinook", "Fohn"},
+                AnswerIndex: 0,
+                Explanation: "The dry, dusty harmattan sweeps southwest each dry season."},
+        {SubjectCode: "GEO", Band: "senior", Term: 2,
+                Question:    "A river's mouth opening into the sea may form a(n):",
+                Options:     [4]string{"Delta", "Gorge", "Waterfall", "Meander"},
+                AnswerIndex: 0,
+                Explanation: "Deposits at the mouth build the fan of a delta."},
