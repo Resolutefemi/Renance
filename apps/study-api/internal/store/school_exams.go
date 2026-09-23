@@ -11,6 +11,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"strings"
 
 	"github.com/jackc/pgx/v5"
 
@@ -317,4 +318,97 @@ func scanExamQuestions(rows pgx.Rows) ([]SchoolExamQuestion, error) {
 		out = append(out, q)
 	}
 	return out, rows.Err()
+}
+
+// SeedSchemes fills empty schemes of work for a session from the
+// NERDC-aligned seed table. Matching runs on subject code so custom
+// subject names still resolve. Rows already present are never touched.
+func (s *Store) SeedSchemes(ctx context.Context, schoolID, session string) (int, error) {
+	if strings.TrimSpace(session) == "" {
+		return 0, errors.New("session is required")
+	}
+	// code -> subject id
+	codeIDs := map[string]string{}
+	rows, err := s.Pool.Query(ctx, `SELECT code, id::text FROM school.subjects WHERE school_id = $1`, schoolID)
+	if err != nil {
+		return 0, fmt.Errorf("store: scheme seed subjects: %w", err)
+	}
+	for rows.Next() {
+		var code, id string
+		if err := rows.Scan(&code, &id); err != nil {
+			rows.Close()
+			return 0, fmt.Errorf("store: scheme seed subjects scan: %w", err)
+		}
+		codeIDs[code] = id
+	}
+	rows.Close()
+	if err := rows.Err(); err != nil {
+		return 0, fmt.Errorf("store: scheme seed subjects rows: %w", err)
+	}
+
+	// Walk every class+subject pair, resolve its subject code, and
+	// draft the scheme wherever a term's scheme is still empty.
+	pairs, err := s.Pool.Query(ctx, `
+		SELECT cs.class_id::text, cs.subject_id::text
+		FROM school.class_subjects cs
+		WHERE cs.school_id = $1`, schoolID)
+	if err != nil {
+		return 0, fmt.Errorf("store: scheme seed pairs: %w", err)
+	}
+	type pair struct{ classID, subjectID string }
+	var plist []pair
+	for pairs.Next() {
+		var pr pair
+		if err := pairs.Scan(&pr.classID, &pr.subjectID); err != nil {
+			pairs.Close()
+			return 0, fmt.Errorf("store: scheme seed pairs scan: %w", err)
+		}
+		plist = append(plist, pr)
+	}
+	pairs.Close()
+	if err := pairs.Err(); err != nil {
+		return 0, fmt.Errorf("store: scheme seed pairs rows: %w", err)
+	}
+
+	idCodes := map[string]string{}
+	for code, id := range codeIDs {
+		idCodes[id] = code
+	}
+
+	filled := 0
+	for _, pr := range plist {
+		code, ok := idCodes[pr.subjectID]
+		if !ok {
+			continue
+		}
+		terms, ok := school.SchemeSeeds[code]
+		if !ok {
+			continue
+		}
+		for term, topics := range terms {
+			syl, err := s.EnsureSyllabus(ctx, schoolID, pr.classID, pr.subjectID, term, session)
+			if err != nil || syl == nil {
+				continue
+			}
+			if len(syl.SchemeOfWork) > 0 && string(syl.SchemeOfWork) != "[]" && string(syl.SchemeOfWork) != "null" {
+				continue
+			}
+			scheme := make([]map[string]any, 0, len(topics))
+			for i, t := range topics {
+				scheme = append(scheme, map[string]any{
+					"week":  i + 1,
+					"topic": t,
+				})
+			}
+			raw, err := json.Marshal(scheme)
+			if err != nil {
+				continue
+			}
+			if err := s.UpdateSchemeOfWork(ctx, syl.ID, raw, ""); err != nil {
+				return filled, fmt.Errorf("store: scheme seed write: %w", err)
+			}
+			filled++
+		}
+	}
+	return filled, nil
 }
