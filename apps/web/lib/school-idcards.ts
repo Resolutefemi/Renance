@@ -42,5 +42,13 @@ export const issueIDCard = (schoolId: string, studentId: string, session: string
     body: { schoolId, studentId, session },
   });
 
+// Batch issue: every active student in scope who lacks a card gets
+// one; the count says how many gaps were filled.
+export const issueIDCards = (schoolId: string, classId: string, session: string) =>
+  api<{ issued: number }>('/school/id-cards', {
+    method: 'POST',
+    body: { schoolId, classId, session },
+  });
+
 export const setCardStatus = (schoolId: string, cardId: string, status: 'issued' | 'revoked') =>
   api<{ ok: boolean }>('/school/id-card', { method: 'PUT', body: { schoolId, cardId, status } });
