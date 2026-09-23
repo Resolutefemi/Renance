@@ -118,6 +118,26 @@ const SCHOOL_FEATURES = [
     body: 'Fill CA1, CA2 and exam scores per subject, finalize, and the portal computes positions, grades and class averages. Each student gets a private 6-digit PIN to check their own result.',
   },
   {
+    icon: 'calendar_month',
+    title: 'Weekly timetable, period by period',
+    body: 'Draw each class week on a live grid: subjects per period, assembly and break blocks, bell times included. Edit on the web and the whole school reads the same grid.',
+  },
+  {
+    icon: 'quiz',
+    title: 'An exam question bank per subject per term',
+    body: 'Original, NERDC-aligned questions pour into your school pool in one tap, and publishing a paper draws from it ready to print. Your teachers keep adding school-written questions.',
+  },
+  {
+    icon: 'badge',
+    title: 'Serial-numbered student ID cards',
+    body: 'Issue every student a card with their photo, class and a school-unique serial, then print the sheet on normal paper. A lost card is revoked, not forgotten.',
+  },
+  {
+    icon: 'payments',
+    title: 'Fees and receipts in one ledger',
+    body: 'Price term charges per class or school-wide, record cash, transfer or POS receipts per student, and read the outstanding balance straight off the debtors list.',
+  },
+  {
     icon: 'co_present',
     title: 'Teacher accounts with real boundaries',
     body: 'Create an account per teacher, assign them classes and subjects, and they fill exactly those results cells and teach exactly those notes. Nothing more.',
@@ -217,14 +237,13 @@ export default function Landing() {
 
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="hero-headline hero-enter hero-enter-1 text-on-surface">
-              Your Guide to{' '}
-              <span className="hero-gradient-text">Academic Success</span>
+              Your Guide to <span className="hero-gradient-text">Academic Success</span>
             </h1>
 
             <p className="hero-enter hero-enter-2 mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-on-surface-variant sm:text-lg">
-              {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, server-graded CBT
-              mocks, a review queue that plans itself, voice flashcards and the JAMB novel built in.
-              And for schools: a full portal with syllabuses, notes, attendance and PIN-secured
+              {fmt(totalQuestions)}+ real past questions from {yearFrom} to {yearTo}, server-graded
+              CBT mocks, a review queue that plans itself, voice flashcards and the JAMB novel built
+              in. And for schools: a full portal with syllabuses, notes, attendance and PIN-secured
               results. Free, on Android, iOS, Windows, macOS and the web.
             </p>
 
@@ -247,10 +266,30 @@ export default function Landing() {
 
           {/* floating cards on mobile/tablet - inline strip */}
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4 xl:hidden">
-            <FloatingCard tone="blue" icon="fact_check" title="Server-graded" body="Honest marks, always" />
-            <FloatingCard tone="emerald" icon="event_repeat" title="Review queue" body="Plans itself" />
-            <FloatingCard tone="amber" icon="record_voice_over" title="Voice flashcards" body="Drill hands-free" />
-            <FloatingCard tone="blue" icon="workspace_premium" title={`${fmt(totalQuestions)}+ questions`} body="Real papers" />
+            <FloatingCard
+              tone="blue"
+              icon="fact_check"
+              title="Server-graded"
+              body="Honest marks, always"
+            />
+            <FloatingCard
+              tone="emerald"
+              icon="event_repeat"
+              title="Review queue"
+              body="Plans itself"
+            />
+            <FloatingCard
+              tone="amber"
+              icon="record_voice_over"
+              title="Voice flashcards"
+              body="Drill hands-free"
+            />
+            <FloatingCard
+              tone="blue"
+              icon="workspace_premium"
+              title={`${fmt(totalQuestions)}+ questions`}
+              body="Real papers"
+            />
           </div>
         </div>
 
@@ -304,7 +343,14 @@ export default function Landing() {
           <div className="cbt-panel p-6 sm:p-10">
             <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
               <div>
-                <span className="eyebrow" style={{ color: '#7db2ff', background: 'rgba(125,178,255,0.1)', borderColor: 'rgba(125,178,255,0.22)' }}>
+                <span
+                  className="eyebrow"
+                  style={{
+                    color: '#7db2ff',
+                    background: 'rgba(125,178,255,0.1)',
+                    borderColor: 'rgba(125,178,255,0.22)',
+                  }}
+                >
                   The archive
                 </span>
                 <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
@@ -325,16 +371,38 @@ export default function Landing() {
             </div>
             <div className="mt-8 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { body: 'JAMB (UTME)', count: sum(jambExams), packs: jambExams.length, note: '1978-2025 · all subjects · novel included' },
-                { body: 'WAEC', count: sum(waecExams), packs: waecExams.length, note: 'objectives + theory with model answers' },
-                { body: 'NECO', count: sum(necoExams), packs: necoExams.length, note: 'objectives + theory packs' },
-                { body: 'University', count: sum(uniExams), packs: uniExams.length, note: 'per-school course banks, more landing' },
+                {
+                  body: 'JAMB (UTME)',
+                  count: sum(jambExams),
+                  packs: jambExams.length,
+                  note: '1978-2025 · all subjects · novel included',
+                },
+                {
+                  body: 'WAEC',
+                  count: sum(waecExams),
+                  packs: waecExams.length,
+                  note: 'objectives + theory with model answers',
+                },
+                {
+                  body: 'NECO',
+                  count: sum(necoExams),
+                  packs: necoExams.length,
+                  note: 'objectives + theory packs',
+                },
+                {
+                  body: 'University',
+                  count: sum(uniExams),
+                  packs: uniExams.length,
+                  note: 'per-school course banks, more landing',
+                },
               ].map((b) => (
                 <div
                   key={b.body}
                   className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 backdrop-blur-sm transition hover:bg-white/[0.1]"
                 >
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">{b.body}</p>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">
+                    {b.body}
+                  </p>
                   <p className="mt-2 text-2xl font-bold text-white">{fmt(b.count)}</p>
                   <p className="mt-0.5 text-xs text-white/60">
                     questions · {b.packs} packs · {b.note}
@@ -356,7 +424,11 @@ export default function Landing() {
               <div className="max-w-2xl">
                 <span
                   className="eyebrow"
-                  style={{ color: '#ffffff', background: 'rgba(255,255,255,0.08)', borderColor: 'rgba(255,255,255,0.2)' }}
+                  style={{
+                    color: '#ffffff',
+                    background: 'rgba(255,255,255,0.08)',
+                    borderColor: 'rgba(255,255,255,0.2)',
+                  }}
                 >
                   New · For Schools
                 </span>
@@ -422,8 +494,8 @@ export default function Landing() {
             Everything a serious candidate needs
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-on-surface-variant">
-            Not a quiz bank with ads glued on, but a complete study companion that remembers what you
-            missed and schedules the fix.
+            Not a quiz bank with ads glued on, but a complete study companion that remembers what
+            you missed and schedules the fix.
           </p>
         </Reveal>
 
@@ -506,7 +578,9 @@ export default function Landing() {
                     'Worked explanations on every review',
                   ].map((t) => (
                     <li key={t} className="cbt-check">
-                      <span className="material-symbols-outlined text-[17px] text-emerald-400">check_circle</span>
+                      <span className="material-symbols-outlined text-[17px] text-emerald-400">
+                        check_circle
+                      </span>
                       {t}
                     </li>
                   ))}
@@ -514,7 +588,9 @@ export default function Landing() {
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="cbt-score-pill">⏱ 59:47 left</span>
                   <span className="cbt-score-pill">Q17 / 60</span>
-                  <span className="cbt-score-pill" style={{ color: '#6ee7b7' }}>▲ 87%</span>
+                  <span className="cbt-score-pill" style={{ color: '#6ee7b7' }}>
+                    ▲ 87%
+                  </span>
                 </div>
               </div>
             </div>
@@ -649,29 +725,87 @@ export default function Landing() {
             </p>
           </div>
           <nav aria-label="Study">
-            <h3 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">Study</h3>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
+              Study
+            </h3>
             <ul className="mt-3 space-y-2 text-sm text-on-surface">
-              <li><Link href="/lessons/" className="hover:underline">Lessons</Link></li>
-              <li><Link href="/subjects/" className="hover:underline">Subjects &amp; syllabus</Link></li>
-              <li><Link href="/flashcards/" className="hover:underline">Flashcards</Link></li>
-              <li><Link href="/packs/" className="hover:underline">Question packs</Link></li>
+              <li>
+                <Link href="/lessons/" className="hover:underline">
+                  Lessons
+                </Link>
+              </li>
+              <li>
+                <Link href="/subjects/" className="hover:underline">
+                  Subjects &amp; syllabus
+                </Link>
+              </li>
+              <li>
+                <Link href="/flashcards/" className="hover:underline">
+                  Flashcards
+                </Link>
+              </li>
+              <li>
+                <Link href="/packs/" className="hover:underline">
+                  Question packs
+                </Link>
+              </li>
             </ul>
           </nav>
           <nav aria-label="Product">
-            <h3 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">Product</h3>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
+              Product
+            </h3>
             <ul className="mt-3 space-y-2 text-sm text-on-surface">
-              <li><Link href="/register/" className="hover:underline">Create account</Link></li>
-              <li><Link href="/register/?audience=school" className="hover:underline">Register a school</Link></li>
-              <li><Link href="/school/check/" className="hover:underline">Check a result PIN</Link></li>
-              <li><Link href="/exams/setup/" className="hover:underline">Mock exam setup</Link></li>
-              <li><Link href="/faq/" className="hover:underline">FAQ</Link></li>
+              <li>
+                <Link href="/register/" className="hover:underline">
+                  Create account
+                </Link>
+              </li>
+              <li>
+                <Link href="/register/?audience=school" className="hover:underline">
+                  Register a school
+                </Link>
+              </li>
+              <li>
+                <Link href="/school/check/" className="hover:underline">
+                  Check a result PIN
+                </Link>
+              </li>
+              <li>
+                <Link href="/exams/setup/" className="hover:underline">
+                  Mock exam setup
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq/" className="hover:underline">
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </nav>
           <nav aria-label="Company">
-            <h3 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">Company</h3>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">
+              Company
+            </h3>
             <ul className="mt-3 space-y-2 text-sm text-on-surface">
-              <li><a href="https://github.com/Resolutefemi/Renance" className="hover:underline" rel="noopener">GitHub</a></li>
-              <li><a href="https://renance-api.onrender.com/healthz" className="hover:underline" rel="noopener">Service status</a></li>
+              <li>
+                <a
+                  href="https://github.com/Resolutefemi/Renance"
+                  className="hover:underline"
+                  rel="noopener"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://renance-api.onrender.com/healthz"
+                  className="hover:underline"
+                  rel="noopener"
+                >
+                  Service status
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
