@@ -55,3 +55,22 @@ var examBankComputer = []SeedExamQuestion{
 		AnswerIndex: 0,
 		Explanation: "Word processors type, edit and format text documents."},
 }
+
+// Part two: three more per term.
+var examBankComputerP2 = []SeedExamQuestion{
+        {SubjectCode: "CMP", Band: "junior", Term: 1,
+                Question:    "Which of these is permanent storage that keeps files when powered off?",
+                Options:     [4]string{"RAM", "Hard disk", "CPU cache", "Registers"},
+                AnswerIndex: 1,
+                Explanation: "Disks are non-volatile; RAM forgets at power loss."},
+        {SubjectCode: "CMP", Band: "junior", Term: 2,
+                Question:    "The small blinking line that shows where typing goes is the:",
+                Options:     [4]string{"Cursor", "Icon", "Folder", "Desktop"},
+                AnswerIndex: 0,
+                Explanation: "The insertion cursor marks your place in the text."},
+        {SubjectCode: "CMP", Band: "junior", Term: 3,
+                Question:    "Sending a message instantly over the internet is:",
+                Options:     [4]string{"Email", "Printing", "Scanning", "Faxing only"},
+                AnswerIndex: 0,
+                Explanation: "Electronic mail travels in seconds across networks."},
+}
