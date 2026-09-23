@@ -226,6 +226,7 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /school/fee-balances", s.auth(s.handleSchoolFeeBalances))
 	mux.HandleFunc("GET /school/id-cards", s.auth(s.handleSchoolIDCards))
 	mux.HandleFunc("POST /school/id-card", s.auth(s.handleSchoolIssueCard))
+	mux.HandleFunc("POST /school/id-cards", s.auth(s.handleSchoolIssueCardsBatch))
 	mux.HandleFunc("PUT /school/id-card", s.auth(s.handleSchoolCardStatus))
 	mux.HandleFunc("GET /school/timetable", s.auth(s.handleSchoolTimetable))
 	mux.HandleFunc("POST /school/timetable", s.auth(s.handleSchoolSaveTimetable))
