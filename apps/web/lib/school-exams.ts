@@ -87,6 +87,11 @@ export const publishExam = (
   },
 ) => api<{ exam: SchoolExam }>('/school/exam', { method: 'POST', body: { schoolId, ...body } });
 
+// Pour the original starter questions into the pool. Idempotent: what
+// is already there stays.
+export const seedExamBank = (schoolId: string) =>
+  api<{ added: number }>('/school/seed-exam-bank', { method: 'POST', body: { schoolId } });
+
 export const fetchExamPaper = (schoolId: string, id: string) =>
   api<{ exam: SchoolExam; questions: ExamQuestion[] }>(
     `/school/exam-paper?schoolId=${encodeURIComponent(schoolId)}&id=${encodeURIComponent(id)}`,
