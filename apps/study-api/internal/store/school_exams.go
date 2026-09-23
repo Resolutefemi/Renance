@@ -13,6 +13,8 @@ import (
 	"fmt"
 
 	"github.com/jackc/pgx/v5"
+
+	"renance.dev/study-api/internal/school"
 )
 
 // SchoolExamQuestion is one bank entry: a multiple-choice question
@@ -231,6 +233,67 @@ func (s *Store) ExamPaper(ctx context.Context, schoolID, examID string) (*School
 		return nil, nil, err
 	}
 	return &e, qs, nil
+}
+
+// SeedExamBank pours the original starter questions into a school's
+// pool. Subject codes resolve against the school's own subjects
+// (installed by the curriculum seed); a question already present, same
+// subject + term + question text, is skipped, so re-seeding is safe.
+func (s *Store) SeedExamBank(ctx context.Context, schoolID string) (int, error) {
+	// Resolve code -> subject id for this school.
+	subjectIDs := map[string]string{}
+	rows, err := s.Pool.Query(ctx, `
+                SELECT code, id::text FROM school.subjects WHERE school_id = $1`, schoolID)
+	if err != nil {
+		return 0, fmt.Errorf("store: seed exam subjects: %w", err)
+	}
+	for rows.Next() {
+		var code, id string
+		if err := rows.Scan(&code, &id); err != nil {
+			rows.Close()
+			return 0, fmt.Errorf("store: seed exam subjects scan: %w", err)
+		}
+		subjectIDs[code] = id
+	}
+	rows.Close()
+	if err := rows.Err(); err != nil {
+		return 0, fmt.Errorf("store: seed exam subjects rows: %w", err)
+	}
+
+	poured := 0
+	for _, q := range school.ExamBank() {
+		subjectID, ok := subjectIDs[q.SubjectCode]
+		if !ok {
+			continue
+		}
+		var exists bool
+		if err := s.Pool.QueryRow(ctx, `
+                        SELECT EXISTS (
+                                SELECT 1 FROM school.exam_questions
+                                WHERE school_id = $1 AND subject_id = $2 AND term = $3 AND question = $4
+                        )`, schoolID, subjectID, q.Term, q.Question,
+		).Scan(&exists); err != nil {
+			return poured, fmt.Errorf("store: seed exam exists: %w", err)
+		}
+		if exists {
+			continue
+		}
+		opts, err := json.Marshal(q.Options)
+		if err != nil {
+			return poured, fmt.Errorf("store: seed exam options: %w", err)
+		}
+		if _, err := s.Pool.Exec(ctx, `
+                        INSERT INTO school.exam_questions
+                              (school_id, subject_id, band, term, session, question, options,
+                               answer_index, explanation, marks, source)
+                        VALUES ($1, $2, $3, $4, '', $5, $6, $7, $8, 1, 'renance-original')`,
+			schoolID, subjectID, q.Band, q.Term, q.Question, opts, q.AnswerIndex, q.Explanation,
+		); err != nil {
+			return poured, fmt.Errorf("store: seed exam insert: %w", err)
+		}
+		poured++
+	}
+	return poured, nil
 }
 
 // scanExamQuestions is the shared row scanner for the bank.
