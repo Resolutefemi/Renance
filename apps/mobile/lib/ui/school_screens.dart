@@ -221,6 +221,18 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
           : ListView(
               padding: const EdgeInsets.all(16),
               children: <Widget>[
+                // Compact stats strip: what the pack carries, so staff
+                // see the size of their offline library at a glance.
+                Row(
+                  children: <Widget>[
+                    _PackStat(label: 'Topics', value: widget.pack.topicCount),
+                    const SizedBox(width: 8),
+                    _PackStat(label: 'Notes subjects', value: _branches.length),
+                    const SizedBox(width: 8),
+                    _PackStat(label: 'Bank Qs', value: widget.pack.examBank.length),
+                  ],
+                ),
+                const SizedBox(height: 12),
                 // Two reading modes: the syllabus tree, or the exam
                 // question bank riding in the pack.
                 if (widget.pack.examBank.isNotEmpty) ...<Widget>[
@@ -426,6 +438,41 @@ class _TermCard extends StatelessWidget {
                   )),
                 ),
               ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// One small stat chip for the pack stats strip.
+class _PackStat extends StatelessWidget {
+  const _PackStat({required this.label, required this.value});
+
+  final String label;
+  final int value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          border: Border.all(color: context.textSecondary.withValues(alpha: 0.25)),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text(
+              '$value',
+              style: RenanceText.sectionTitle.copyWith(color: context.ink),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              label,
+              style: RenanceText.labelMono.copyWith(color: context.textSecondary, fontSize: 10),
+            ),
           ],
         ),
       ),
