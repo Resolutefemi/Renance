@@ -30,6 +30,7 @@ func ExamBank() []SeedExamQuestion {
 	all = append(all, examBankJunior...)
 	all = append(all, examBankSeniorScience...)
 	all = append(all, examBankSeniorCore...)
+	all = append(all, extraBanks...)
 	return all
 }
 
