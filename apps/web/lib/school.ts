@@ -402,3 +402,19 @@ export function todayISO(d = new Date()): string {
 // session. Idempotent: filled schemes stay untouched.
 export const seedSchemes = (schoolId: string, session: string) =>
   api<{ filled: number }>('/school/seed-schemes', { method: 'POST', body: { schoolId, session } });
+
+// Switch the active workspace to another membership. Persists the pick
+// so the next page load lands in the same school.
+export function switchSchool(ctxs: SchoolContext[], schoolId: string): ActiveSchool | null {
+  const pick = ctxs.find((c) => c.school.id === schoolId);
+  if (!pick) return null;
+  const active: ActiveSchool = {
+    schoolId: pick.school.id,
+    schoolName: pick.school.name,
+    role: pick.member.role,
+    memberId: pick.member.id,
+    fullName: pick.member.fullName,
+  };
+  setActiveSchool(active);
+  return active;
+}
