@@ -64,17 +64,33 @@ JSS 1-3, SSS 1-3 with the NERDC subject list.
   subjects. Everything else stays management-only, web-only.
 - **Notes PDF**: every topic downloads as its own print-ready PDF -
   **black & white only**, one topic per file, never the whole batch.
+- **Timetable**: a weekly grid editor per class - subjects per period
+  plus assembly/break blocks, saved as one clean write, readable by
+  every teacher.
+- **Exam question bank**: original NERDC-aligned questions per subject
+  per term (a starter bank pours in one tap), and published papers that
+  draw from the pool ready to print.
+- **Fees**: term charges per class or school-wide, cash/transfer/POS
+  receipts per student, and a live debtors list with outstanding
+  balances in kobo-safe integer math.
+- **ID cards**: serial-numbered student cards (REN-<year>-NNNNNN) with
+  photo and school identity, one tap issues a whole session, and a
+  print-ready black & white card sheet; lost cards are revoked, never
+  deleted.
 - **Mobile app (management + teachers)**: the school workspace carries
-  only syllabus, scheme of work and notes - and the **Downloads screen**
-  now has five desks: **JAMB offline, Post-UTME, WAEC, NECO and Schools**
-  (with a school picker). Any combination downloads in one tap, the
-  storage meter reads real bytes and updates live, and the app now asks
-  for storage/notification permissions and honours a Wi-Fi-only download
-  preference.
+  syllabus, scheme of work, notes **and the exam bank** - and the
+  **Downloads screen** has five desks: **JAMB offline, Post-UTME, WAEC,
+  NECO and Schools** (with a school picker). Any combination downloads
+  in one tap, the storage meter reads real bytes and updates live, and
+  the app asks for storage/notification permissions and honours a
+  Wi-Fi-only download preference.
 
-Database: the school tables live in the `school` schema
-(`0013_school_platform.sql`) and apply automatically at boot, so
-`DATABASE_URL` stays exactly where it is.
+Database: the school tables live in the `school` schema (migrations
+`0013` through `0019` cover the platform, setup layer, fees, ID cards,
+timetable and the exam bank) and apply automatically at boot, so
+`DATABASE_URL` stays exactly where it is. Desk-by-desk walkthroughs
+live in [`docs/guides/`](docs/guides/) and the endpoint reference in
+[`docs/school-api.md`](docs/school-api.md).
 
 ## View it - no local setup
 
