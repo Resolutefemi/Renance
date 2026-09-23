@@ -748,4 +748,80 @@ CHECK=$(curl -fsS "$BASE/school/check-result?pin=$PIN&term=1&session=2025/2026")
 printf '%s' "$CHECK" | jsonget "d['result']['studentName']" | grep -q "Ada Obi"
 printf '%s' "$CHECK" | jsonget "d['result']['schoolLogoUrl']" | grep -q "^data:image/png"
 
+step "school: fees, price a school-wide charge + a class charge"
+curl -fsS -X PUT "$BASE/school/fee?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"\",\"title\":\"School fees\",\"description\":\"Term tuition\",\"amountNaira\":\"15000\",\"term\":1,\"session\":\"2025/2026\"}" \
+  | jsonget "d['fee']['amountKobo']" | grep -q "^1500000$"
+FEE2=$(curl -fsS -X PUT "$BASE/school/fee?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"title\":\"Lab levy\",\"description\":\"\",\"amountNaira\":\"2500.50\",\"term\":1,\"session\":\"2025/2026\"}" \
+  | jsonget "d['fee']['id']")
+[ "$(curl -fsS "$BASE/school/fees?schoolId=$SCHOOLID&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN" | jsonget "len(d['fees'])")" = "2" ]
+
+step "school: fees, receipt recorded and balances sum right"
+curl -fsS -X POST "$BASE/school/fee-payment?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"feeId\":\"$FEE2\",\"studentId\":\"$STUD1\",\"amountNaira\":\"2500.50\",\"method\":\"transfer\",\"reference\":\"E2E-1\"}" \
+  | jsonget "d['payment']['amountKobo']" | grep -q "^250050$"
+BAL=$(curl -fsS "$BASE/school/fee-balances?schoolId=$SCHOOLID&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN")
+[ "$(printf '%s' "$BAL" | jsonget "[b for b in d['balances'] if b['studentId']=='$STUD1'][0]['paidKobo']")" = "250050" ]
+[ "$(printf '%s' "$BAL" | jsonget "[b for b in d['balances'] if b['studentId']=='$STUD1'][0]['outstandingKobo']")" = "1750000" ]
+# a paid fee refuses deletion
+curl -sS -o /dev/null -w '%{http_code}' -X DELETE "$BASE/school/fee?schoolId=$SCHOOLID&id=$FEE2" \
+  -H "Authorization: Bearer $STOKEN" | grep -q "^409$"
+
+step "school: timetable, save a week and read it back"
+curl -fsS -X POST "$BASE/school/timetable?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"slots\":[{\"day\":1,\"period\":1,\"startTime\":\"8:00\",\"endTime\":\"8:40\",\"subjectId\":\"$ENG\",\"label\":\"\"},{\"day\":1,\"period\":2,\"startTime\":\"8:40\",\"endTime\":\"9:20\",\"subjectId\":\"\",\"label\":\"Break\"}]}" \
+  | jsonget "d['saved']" | grep -q "^2$"
+TT=$(curl -fsS "$BASE/school/timetable?schoolId=$SCHOOLID&classId=$SSS1" -H "Authorization: Bearer $STOKEN")
+[ "$(printf '%s' "$TT" | jsonget "len(d['timetable']['slots'])")" = "2" ]
+printf '%s' "$TT" | jsonget "[s for s in d['timetable']['slots'] if s['period']==1][0]['subjectId']" | grep -q "$ENG"
+
+step "school: ID cards, single issue, batch fill, revoke, reactivate"
+CARD=$(curl -fsS -X POST "$BASE/school/id-card?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"studentId\":\"$STUD1\",\"session\":\"2025/2026\"}")
+SERIAL1=$(printf '%s' "$CARD" | jsonget "d['card']['serial']")
+printf '%s' "$SERIAL1" | grep -qE "^REN-[0-9]{4}-[0-9]{6}$"
+# re-issue is idempotent: same serial comes back
+curl -fsS -X POST "$BASE/school/id-card?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"studentId\":\"$STUD1\",\"session\":\"2025/2026\"}" \
+  | jsonget "d['card']['serial']" | grep -q "$SERIAL1"
+# batch fills the other student
+[ "$(curl -fsS -X POST "$BASE/school/id-cards?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"session\":\"2025/2026\"}" | jsonget "d['issued']")" = "1" ]
+CARDID=$(curl -fsS "$BASE/school/id-cards?schoolId=$SCHOOLID&session=2025/2026" -H "Authorization: Bearer $STOKEN" \
+  | jsonget "[c for c in d['cards'] if c['card']['serial']=='$SERIAL1'][0]['card']['id']")
+curl -fsS -X PUT "$BASE/school/id-card?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"cardId\":\"$CARDID\",\"status\":\"revoked\"}" >/dev/null
+curl -fsS "$BASE/school/id-cards?schoolId=$SCHOOLID&session=2025/2026" -H "Authorization: Bearer $STOKEN" \
+  | jsonget "[c for c in d['cards'] if c['card']['serial']=='$SERIAL1'][0]['card']['status']" | grep -q "revoked"
+
+step "school: exam bank, add questions, publish paper, draw it"
+for i in 1 2 3 4 5; do
+curl -fsS -X POST "$BASE/school/exam-question?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"subjectId\":\"$ENG\",\"band\":\"senior\",\"term\":1,\"session\":\"2025/2026\",\"question\":\"E2E question $i: which option is the answer?\",\"options\":[\"Alpha\",\"Beta\",\"Gamma\",\"Delta\"],\"answerIndex\":1,\"explanation\":\"Beta is right.\",\"marks\":1}" >/dev/null
+done
+[ "$(curl -fsS "$BASE/school/exam-questions?schoolId=$SCHOOLID&subjectId=$ENG&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN" | jsonget "len(d['questions'])")" = "5" ]
+EXAM=$(curl -fsS -X POST "$BASE/school/exam?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"title\":\"E2E paper\",\"durationMinutes\":45,\"questionCount\":4}" \
+  | jsonget "d['exam']['id']")
+PAPER=$(curl -fsS "$BASE/school/exam-paper?schoolId=$SCHOOLID&id=$EXAM" -H "Authorization: Bearer $STOKEN")
+[ "$(printf '%s' "$PAPER" | jsonget "len(d['questions'])")" = "4" ]
+printf '%s' "$PAPER" | jsonget "d['exam']['className']" | grep -q "SSS 1"
+# double-dash input is stored clean
+curl -fsS -X POST "$BASE/school/exam-question?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"subjectId\":\"$ENG\",\"band\":\"\",\"term\":1,\"session\":\"2025/2026\",\"question\":\"Dash test -- still clean?\",\"options\":[\"Yes\",\"No\"],\"answerIndex\":0,\"explanation\":\"\",\"marks\":1}" >/dev/null
+curl -fsS "$BASE/school/exam-questions?schoolId=$SCHOOLID&subjectId=$ENG&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN" \
+  | jsonget "[q for q in d['questions'] if 'Dash test' in q['question']][0]['question']" | grep -q "Dash test - still clean?"
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"
