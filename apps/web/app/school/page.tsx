@@ -61,6 +61,7 @@ export default function SchoolOverviewPage() {
         { done: stats.pairs > 0, label: 'Choose the subjects each class offers', href: '/school/setup' },
         { done: stats.students > 0, label: 'Enroll students with full details', href: '/school/students' },
         { done: false, label: 'Create teacher accounts and assign subjects', href: '/school/teachers' },
+        { done: false, label: 'Draw the weekly timetable', href: '/school/timetable' },
         { done: false, label: 'Fill and finalize the first result', href: '/school/results' },
       ]
     : [];
@@ -72,11 +73,16 @@ export default function SchoolOverviewPage() {
         { icon: 'groups', title: 'Students', body: 'Enroll pupils with full details and manage their subjects.', href: '/school/students' },
         { icon: 'workspace_premium', title: 'Results', body: 'Fill CA and exam scores, finalize, issue PINs.', href: '/school/results' },
         { icon: 'co_present', title: 'Teachers & Classes', body: 'Create staff accounts and hand out class subjects.', href: '/school/teachers' },
+        { icon: 'calendar_month', title: 'Timetable', body: 'Draw the weekly grid period by period for every class.', href: '/school/timetable' },
+        { icon: 'quiz', title: 'Exam Bank', body: 'Original questions per subject per term and printable papers.', href: '/school/exams' },
+        { icon: 'payments', title: 'Fees', body: 'Price term charges and record receipts per student.', href: '/school/fees' },
+        { icon: 'badge', title: 'ID Cards', body: 'Issue serial-numbered cards and print the sheet.', href: '/school/idcards' },
         { icon: 'settings', title: 'School Setup', body: 'Logo, address and the subjects every class offers.', href: '/school/setup' },
       ]
     : [
         { icon: 'auto_stories', title: 'My Syllabus & Notes', body: 'The classes and subjects assigned to you.', href: '/school/syllabus' },
         { icon: 'fact_check', title: 'Attendance', body: 'Take the register for a class you cover.', href: '/school/attendance' },
+        { icon: 'calendar_month', title: 'Timetable', body: 'The weekly grid for the classes you cover.', href: '/school/timetable' },
         { icon: 'workspace_premium', title: 'Fill Results', body: 'Your assigned class + subject score cells.', href: '/school/results' },
       ];
 
