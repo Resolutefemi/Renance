@@ -201,6 +201,16 @@ func (s *Server) handleSchoolRecordPayment(w http.ResponseWriter, r *http.Reques
 		fail(w, http.StatusBadRequest, "invalid_method", "method must be cash, transfer, pos or other")
 		return
 	}
+	belongs, err := s.store.StudentBelongsToSchool(r.Context(), m.SchoolID, req.StudentID)
+	if err != nil {
+		s.log.Error("student school check", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not verify the student")
+		return
+	}
+	if !belongs {
+		fail(w, http.StatusBadRequest, "invalid_student", "that student does not belong to this school")
+		return
+	}
 	p := &store.SchoolFeePayment{
 		SchoolID:   m.SchoolID,
 		FeeID:      req.FeeID,
