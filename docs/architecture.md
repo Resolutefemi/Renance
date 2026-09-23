@@ -1,4 +1,4 @@
-# Renance Architecture — Developer Rules
+# Renance Architecture - Developer Rules
 
 Source of truth for how the monorepo is wired. The PRD (v0.4) describes WHAT;
 this file describes HOW the code is organised. When the two disagree after a
@@ -49,4 +49,4 @@ Payments: Paystack → Flutterwave fallback (Phase 3)
 | production | Neon main branch | real users |
 
 Install-size budgets carried from PRD: Android < 55MB, iOS < 65MB,
-Windows < 90MB — enforced by shipping modules on demand.
+Windows < 90MB - enforced by shipping modules on demand.

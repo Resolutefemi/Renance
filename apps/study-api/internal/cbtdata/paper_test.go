@@ -493,7 +493,7 @@ func TestComposePickPaperPartSlices(t *testing.T) {
                 t.Fatalf("cos101 bank too small for slice tests: %d", len(mcq))
         }
 
-        // Part 1: from=1.n=50 serves Q1–Q50 in the bank's ORIGINAL order.
+        // Part 1: from=1.n=50 serves Q1-Q50 in the bank's ORIGINAL order.
         parsed, err := lib.ParsePaper("jamb-pick-uni-futa-cos101-bank~from=1.n=50")
         if err != nil {
                 t.Fatalf("ParsePaper part1: %v", err)
@@ -510,7 +510,7 @@ func TestComposePickPaperPartSlices(t *testing.T) {
         if paper.QuestionCount != 50 {
                 t.Fatalf("part slice n=50 produced %d", paper.QuestionCount)
         }
-        if want := base.Title + " · Q1–Q50"; paper.Title != want {
+        if want := base.Title + " · Q1-Q50"; paper.Title != want {
                 t.Fatalf("part title %q, want %q", paper.Title, want)
         }
 
@@ -744,7 +744,7 @@ func TestBodyCustomPapers(t *testing.T) {
         }
 
         // English in a WAEC paper skips the JAMB comprehension split entirely:
-        // the section is a plain seeded walk over the whole bank — the bank's
+        // the section is a plain seeded walk over the whole bank - the bank's
         // own passage questions ride along (authentic WAEC shape), with no
         // comp/compN steering.
         espec, _ := lib.ParsePaper("waec-custom-english~n=30")

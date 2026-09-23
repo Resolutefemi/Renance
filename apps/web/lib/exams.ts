@@ -42,7 +42,7 @@ export interface BundleQuestion {
   /** Shared comprehension text the question belongs to (per-question so
    *  any member of the group can render it). */
   passage?: string;
-  /** Correct option letter — the founder merged the old answer-keys into
+  /** Correct option letter - the founder merged the old answer-keys into
    *  the bundles, and the static export ships them so papers grade
    *  on-device (offline, signed-out, API cold starts). */
   answer?: string;
@@ -94,7 +94,7 @@ async function fetchStatic<T>(path: string): Promise<T> {
 /**
  * Fetch a raw bank pack by its manifest code (`waec-biology-bank`,
  * `uni-futa-cos101`, …), static shelf first, API second. The Study
- * surfaces read banks directly — no compose machinery, no session —
+ * surfaces read banks directly - no compose machinery, no session -
  * so the reader works signed-out and offline exactly like practice.
  */
 export async function fetchBankBundle(code: string): Promise<Bundle> {
@@ -390,7 +390,7 @@ export async function fetchBundleByCode(code: string): Promise<Bundle> {
   } catch {
     try {
       // noRedirect: a stale session must never bounce a paper load to
-      // /login — the client compose above already served the common
+      // /login - the client compose above already served the common
       // path, this is only the cold fallback.
       const bundle = await api<Bundle>(`/bundles/${code}`, { noRedirect: true });
       void idbSetBundle(key, bundle);
@@ -406,7 +406,7 @@ export async function fetchBundleByCode(code: string): Promise<Bundle> {
  * Resolve a composed paper code entirely from the statically shipped
  * library (lib/paper-compose.ts mirrors the server's deterministic
  * compose engine 1:1). Throws when the code cannot be resolved
- * client-side — callers fall back to the API.
+ * client-side - callers fall back to the API.
  */
 export async function composeFromCode(code: string): Promise<Bundle> {
   const spec = parsePaperCode(code);

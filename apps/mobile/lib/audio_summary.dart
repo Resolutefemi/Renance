@@ -1,6 +1,6 @@
 /// Audio summaries (ROADMAP #11), the on-device TTS slice: a deterministic
 /// spoken script composed from the lesson bundle itself. No provider, no
-/// network, works offline against the cached copy — the same rule as the
+/// network, works offline against the cached copy - the same rule as the
 /// voice flashcards engine: voice is an enhancement, never a requirement.
 ///
 /// The composer is pure Dart so it is unit-testable and mirrored 1:1 by

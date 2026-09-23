@@ -1,15 +1,15 @@
-/// THE ARENA — the app's live floor, the school-app lobby cut with real
+/// THE ARENA - the app's live floor, the school-app lobby cut with real
 /// multiplayer behind it.
 ///
 /// Three ways into a duel (the founder's cut):
-///   · Quick Match   — the focus bucket queue, the house bot keeps it moving
-///   · Host a room   — a short code + shareable invite
-///   · Active Now    — live presence from GET /arena/players, one tap
+///   · Quick Match   - the focus bucket queue, the house bot keeps it moving
+///   · Host a room   - a short code + shareable invite
+///   · Active Now    - live presence from GET /arena/players, one tap
 ///                     challenges a student who is on the floor right now
 ///
 /// Each focus is its own arena (JAMB, WAEC, NECO, Post UTME, Tertiary):
 /// separate queues, separate pack shelves, separate Ren Point ladders.
-/// A duel is 15 questions at a 20-second window each — five minutes —
+/// A duel is 15 questions at a 20-second window each - five minutes -
 /// and every win is worth 1 Ren Point. The whole flow runs on ONE
 /// authenticated WebSocket owned here and handed to ArenaMatchScreen,
 /// so the connection never drops mid-match.
@@ -117,12 +117,12 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
       case 'challenge_sent':
         setState(() {
           _roomCode = (f['code'] as String?) ?? '';
-          _waitingNote = 'Challenge sent — waiting for the answer';
+          _waitingNote = 'Challenge sent - waiting for the answer';
         });
       case 'hosted':
         setState(() {
           _roomCode = (f['code'] as String?) ?? '';
-          _waitingNote = 'Your room is open — share the code';
+          _waitingNote = 'Your room is open - share the code';
         });
       case 'cancelled':
         setState(() {
@@ -319,7 +319,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                             padding: EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             child: Text(
-                              'Arena socket dropped — tap to reconnect',
+                              'Arena socket dropped - tap to reconnect',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
@@ -445,7 +445,7 @@ class _ArenaLobbyScreenState extends State<ArenaLobbyScreen> {
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: const Text(
-                    'Nobody else is in the arena right now — quick match, or '
+                    'Nobody else is in the arena right now - quick match, or '
                     'bring a friend with a room code.',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.black45, fontSize: 13.5),

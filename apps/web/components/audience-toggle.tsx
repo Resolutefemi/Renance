@@ -1,8 +1,8 @@
 'use client';
 
 // The For Students / For Schools segmented control shared by the login
-// and register screens. Students stay the default — everything Renance
-// has shipped so far lives on that side — while schools is the new
+// and register screens. Students stay the default - everything Renance
+// has shipped so far lives on that side - while schools is the new
 // management + teacher world.
 
 import Link from 'next/link';

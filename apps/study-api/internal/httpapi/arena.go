@@ -129,7 +129,7 @@ func (s *Server) handleArenaStatus(w http.ResponseWriter, r *http.Request) {
 }
 
 // handleArenaPlayers serves GET /arena/players: the students currently
-// inside the arena (connected, idle — nobody mid-match or queued), each
+// inside the arena (connected, idle - nobody mid-match or queued), each
 // with their all-time Ren Points (arena wins) so the lobby can rank the
 // "active now" list the same way the board does.
 func (s *Server) handleArenaPlayers(w http.ResponseWriter, r *http.Request) {

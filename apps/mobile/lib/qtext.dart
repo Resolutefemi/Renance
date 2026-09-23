@@ -6,7 +6,7 @@
 ///   3. small HTML fragments from the myschool archive
 ///      (<sub>, <sup>, <br>, <table>, entities).
 ///
-/// The player used to print all three verbatim — the "raw markup in
+/// The player used to print all three verbatim - the "raw markup in
 /// maths questions" bug. This library converts the safe subset into
 /// Flutter inline spans: unknown tags are unwrapped (text kept),
 /// <script>/<style> content is discarded, entities are decoded, and
@@ -148,7 +148,7 @@ String _scripted(String content, bool sub) {
 }
 
 /// Converts a LaTeX inline-math body into plain text with unicode
-/// super/subscripts — enough for MCQ options, no TeX engine involved.
+/// super/subscripts - enough for MCQ options, no TeX engine involved.
 String latexToText(String src) {
   final StringBuffer out = StringBuffer();
   int i = 0;
@@ -218,7 +218,7 @@ String latexToText(String src) {
 /// Converts \( … \), \[ … \] and $$ … $$ spans into converted text.
 String convertMath(String text) {
   // Adjacent raw strings keep every segment from ending on a
-  // backslash (illegal in Dart): r'\\' r'\(' == regex \\ \( — a
+  // backslash (illegal in Dart): r'\\' r'\(' == regex \\ \( - a
   // literal backslash followed by a literal '('.
   final RegExp inlineRe =
       RegExp(r'\\' r'\(' r'([\s\S]*?)' r'\\' r'\)');

@@ -106,8 +106,8 @@ class _HomeScreenState extends State<HomeScreen> {
     await _maybeOfferOffline();
   }
 
-  /// The offline offer (founder rule): after signing up — and any open
-  /// where the shelf is still short — one sheet asks to make Renance
+  /// The offline offer (founder rule): after signing up - and any open
+  /// where the shelf is still short - one sheet asks to make Renance
   /// offline (~120 MB of question packs today). A dismissed offer never
   /// nags again; Downloads stays the manual path.
   Future<void> _maybeOfferOffline() async {
@@ -879,7 +879,7 @@ class _LauncherTab extends StatelessWidget {
 
   /// The Compete desk's Daily Challenge: resolves today's rotating
   /// paper for the student's focus body (GET /daily/{body}) and opens
-  /// it in the player — the same sprint the web dashboard deep-links.
+  /// it in the player - the same sprint the web dashboard deep-links.
   Future<void> _openDaily(BuildContext context) async {
     final ApiClient api = context.read<ApiClient>();
     final StudentController student = context.read<StudentController>();
@@ -892,7 +892,7 @@ class _LauncherTab extends StatelessWidget {
     // Founder rule: the first daily tap asks for the subject combination
     // (bodies with per-subject banks only). The combination is stored on
     // the profile, and every daily sprint afterwards draws ONLY those
-    // subjects — the server composes the paper, the same one the web
+    // subjects - the server composes the paper, the same one the web
     // plays.
     final Profile? dailyProfile = student.me?.profile;
     if (kComboBodies.contains(body) &&
@@ -974,7 +974,7 @@ class _LauncherTab extends StatelessWidget {
             student: student,
             onContinue: () {
               // Continue the student's most recent sitting when there is
-              // one; otherwise route by focus — JAMBites land in the mock
+              // one; otherwise route by focus - JAMBites land in the mock
               // composer, university students in the library. Never the
               // old "first manifest pack" shortcut that always opened
               // the accounting bank.
@@ -1022,7 +1022,7 @@ class _LauncherTab extends StatelessWidget {
             const SizedBox(height: 12),
             _FatigueBanner(state: student.fatigue!),
           ],
-          // Launcher grids — 1:1 with the up-to-date web desk: Practice /
+          // Launcher grids - 1:1 with the up-to-date web desk: Practice /
           // Compete / Learn / Tools, the daily drivers on the grid, the
           // rest in More. -------------------------------------------------
           const SizedBox(height: 8),
@@ -1308,7 +1308,7 @@ class _HeroCard extends StatelessWidget {
           ),
         ],
       ),
-      // Founder bugfix: the corner blobs — not the TEXT — get clipped.
+      // Founder bugfix: the corner blobs - not the TEXT - get clipped.
       // The old wrapper clipped the whole stack, so the ClipRRect arc
       // sliced the tail of NEXT TARGET / COUNTDOWN. The blobs now live
       // in their own clipped layer; the content is never touched.
@@ -1430,7 +1430,7 @@ class _HeroCard extends StatelessWidget {
                   width: double.infinity,
                   child: FilledButton.icon(
                     onPressed: onContinue,
-                    // The hero CTA is context.heroCta in every tier —
+                    // The hero CTA is context.heroCta in every tier -
                     // black on light, white on dark chrome, and the
                     // student's seed colour whenever one is live.
                     style: FilledButton.styleFrom(

@@ -55,7 +55,7 @@ func register(baseURL, username string) string {
 	if out.Token != "" {
 		return out.Token
 	}
-	// 409: user exists from a previous run — log in instead.
+	// 409: user exists from a previous run - log in instead.
 	resp2, err := http.Post(baseURL+"/auth/login", "application/json", bytes.NewReader(body))
 	if err != nil {
 		fatal("login %s: %v", username, err)
@@ -265,7 +265,7 @@ func main() {
 	fmt.Printf("▸ matched on %s (%d questions)\n", ma.Code, ma.Questions)
 
 	oa := playMatch(a, b, ma.Questions)
-	fmt.Printf("▸ match over — winner %q scores %v\n", oa.Winner, oa.Scores)
+	fmt.Printf("▸ match over - winner %q scores %v\n", oa.Winner, oa.Scores)
 
 	fmt.Println("▸ history for both students")
 	expectHistory := func(token, who, matchID string) {
@@ -316,14 +316,14 @@ func main() {
 	fmt.Println("▸ private room: A hosts, stray code rejected, B joins by code")
 	code := hostRoom(a)
 	joinExpectErr(b, "ZZZZZZ", "unknown_room")
-	fmt.Printf("▸ room %s open — stray joins rejected\n", code)
+	fmt.Printf("▸ room %s open - stray joins rejected\n", code)
 	mb2 := joinRoom(b, code) // the join starts the match
 	ma2 := readUntil(a, "matched")
 	if ma2.MatchID == "" || ma2.MatchID != mb2.MatchID {
 		fatal("private match ids differ: %q vs %q", ma2.MatchID, mb2.MatchID)
 	}
 	oa2 := playMatch(a, b, ma2.Questions)
-	fmt.Printf("▸ private match over — winner %q scores %v\n", oa2.Winner, oa2.Scores)
+	fmt.Printf("▸ private match over - winner %q scores %v\n", oa2.Winner, oa2.Scores)
 	expectHistory(tokA, "A(private)", ma2.MatchID)
 	expectHistory(tokB, "B(private)", ma2.MatchID)
 

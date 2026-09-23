@@ -1,19 +1,19 @@
 'use client';
 
 /**
- * Study Past Questions — the school app's study setup, Renance cut.
+ * Study Past Questions - the school app's study setup, Renance cut.
  *
  * The Study tile on the desk lands here. Per focus (JAMB / WAEC / NECO
  * / Post UTME / School Desk) the page carries:
  *   · the tinted header band (back circle, title, the green book seal)
  *   (the Update Questions banner is app-only; the web reads the
  *    static shelf directly)
- *   · the full picker form — Subject, Examination Type, Year, Question
- *     type, Topic — and Start Study
+ *   · the full picker form - Subject, Examination Type, Year, Question
+ *     type, Topic - and Start Study
  *
  * Start Study opens the browsable Past-Questions reader
  * (/study-past-questions/reader): untimed, explanations inlined, no
- * grading ceremony — reading past questions is the point here.
+ * grading ceremony - reading past questions is the point here.
  */
 
 import { Suspense, useEffect, useMemo, useState } from 'react';
@@ -236,7 +236,7 @@ function StudySetupInner() {
     const query = new URLSearchParams();
     query.set('body', body);
     query.set('subject', subject);
-    // The reader fetches the bank pack directly — hand it the code.
+    // The reader fetches the bank pack directly - hand it the code.
     const bank = subjects.find((s) => s.id === subject)?.bank;
     if (bank) query.set('bank', bank);
     if (year) query.set('year', String(year));

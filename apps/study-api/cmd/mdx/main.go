@@ -64,7 +64,7 @@ func run(args []string, stdout, stderr io.Writer) int {
 }
 
 func usage(w io.Writer) {
-	fmt.Fprint(w, `mdx — Renance lesson pipeline (ROADMAP #8)
+	fmt.Fprint(w, `mdx - Renance lesson pipeline (ROADMAP #8)
 
 Usage:
   mdx check  [-src data/src/lessons]          lint lesson sources

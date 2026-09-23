@@ -1,10 +1,10 @@
 /// Arena live duel, now on the REAL multiplayer hub
-/// (apps/study-api/internal/arena) — no local simulation.
+/// (apps/study-api/internal/arena) - no local simulation.
 ///
 /// Frames arrive on the lobby-owned socket (this screen swaps its own
 /// handler in for the duel and restores the owner's on dispose):
 /// question frames carry the deadline, result frames the correct letter
-/// keyed solves, and "over" the authoritative final scores — a win is
+/// keyed solves, and "over" the authoritative final scores - a win is
 /// worth 1 Ren Point on the focus ladder. 15 questions, 20 seconds
 /// each: five minutes on the floor. Founder rule: no purple, the
 /// opponent accent is the gray secondary.
@@ -129,9 +129,9 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
           if (mine != null) _you = mine;
           _rival = theirs;
           _overNote = winner.isEmpty
-              ? 'A draw — the point stays in the house.'
+              ? 'A draw - the point stays in the house.'
               : winner == widget.myId
-                  ? 'You took the duel — +1 Ren Point on the ladder.'
+                  ? 'You took the duel - +1 Ren Point on the ladder.'
                   : '$_opponent took this one. Run it back.';
         });
         widget.onOver();
@@ -232,7 +232,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                       Text('You',
                           style: RenanceText.bodyMedium.copyWith(fontSize: 16)),
                       const Spacer(),
-                      Text('$_you  —  $_rival',
+                      Text('$_you  -  $_rival',
                           style: RenanceText.displayMd.copyWith(fontSize: 21)),
                       const Spacer(),
                       Flexible(
@@ -326,7 +326,7 @@ class _ArenaMatchScreenState extends State<ArenaMatchScreen> {
                                 child: Column(
                                   children: <Widget>[
                                     Text(
-                                      '$_you — $_rival',
+                                      '$_you - $_rival',
                                       style: RenanceText.displayMd
                                           .copyWith(fontSize: 30),
                                     ),

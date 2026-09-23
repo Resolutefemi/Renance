@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * GPA / CGPA calculator — the tool the founder asked for behind every
+ * GPA / CGPA calculator - the tool the founder asked for behind every
  * "calculate" icon. Pure client-side: no account, no API, works offline.
  * Nigerian 5.0 scale (A=5 … F=0), current-semester GPA plus a previous
  * CGPA fold-in, persisted to localStorage so a student can pick up where
@@ -73,7 +73,7 @@ export default function GpaPage() {
   // a clear note instead of the calculator, even on a direct URL visit.
   const focus = useTertiaryFocus();
 
-  // Load the saved sheet once (guard JSON parse — private mode, old shapes).
+  // Load the saved sheet once (guard JSON parse - private mode, old shapes).
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem(STORE_KEY);

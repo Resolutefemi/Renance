@@ -42,7 +42,7 @@ class SyncController extends ChangeNotifier {
   bool get isSyncing => phase == SyncPhase.syncing;
 
   /// The exam bodies present in the synced manifest (JAMB | WAEC | NECO
-  /// | University Modules), insertion-stable — the library shelf chips'
+  /// | University Modules), insertion-stable - the library shelf chips'
   /// data.
   Set<String> get shelfBodies =>
       exams.map((ExamMeta e) => e.body).where((String b) => b.isNotEmpty).toSet();
@@ -58,7 +58,7 @@ class SyncController extends ChangeNotifier {
   /// Fetch the manifest and download every pack the student needs but
   /// does not yet hold (or holds under an older sha). Each pack gets a
   /// retry with a short backoff; one flaky pack never abandons the rest
-  /// of the sync — the failure list only surfaces when packs actually
+  /// of the sync - the failure list only surfaces when packs actually
   /// failed, and a later bootstrap silently fills the holes.
   Future<void> bootstrap({List<String> profileExams = const <String>[]}) async {
     phase = SyncPhase.syncing;
@@ -92,7 +92,7 @@ class SyncController extends ChangeNotifier {
             await _store.savePack(bundle, exam.bundleSha256);
             saved = true;
           } on ApiException {
-            // Permanent server decisions (404/409) will not heal —
+            // Permanent server decisions (404/409) will not heal -
             // retrying only burns the student's data.
             break;
           } on NetworkException {
@@ -111,7 +111,7 @@ class SyncController extends ChangeNotifier {
         phase = SyncPhase.error;
         message =
             '$failed packs could not download, check your connection and '
-            'retry — the rest of the app works offline.';
+            'retry - the rest of the app works offline.';
       } else {
         phase = SyncPhase.ready;
         message = total == 0
@@ -136,7 +136,7 @@ class SyncController extends ChangeNotifier {
   ///
   /// University Modules is the one exception: 500+ course banks would
   /// blast a fresh install with hundreds of megabytes, so nothing
-  /// auto-downloads — the school desk fetches each course on demand
+  /// auto-downloads - the school desk fetches each course on demand
   /// (founder directive: per-school folders stay server-side until a
   /// student actually opens them).
   List<ExamMeta> _neededFor(List<String> profileExams) {
@@ -296,7 +296,7 @@ class ExamController extends ChangeNotifier {
     notifyListeners();
     final bool composed = isComposedPaperCode(examMeta.code);
     Bundle? cached = await _store.loadPack(examMeta.code, examMeta.bundleSha256);
-    // Composed papers (mock/custom/pick) cache by CODE alone — their
+    // Composed papers (mock/custom/pick) cache by CODE alone - their
     // bundleSha256 is empty, so the code-keyed lookup is the offline
     // resume path for every paper the student has already started.
     cached ??= composed ? await _store.loadPackByCode(examMeta.code) : null;
@@ -314,7 +314,7 @@ class ExamController extends ChangeNotifier {
         return;
       } on NetworkException {
         error = composed
-            ? 'Composed papers need one online load — reconnect and tap '
+            ? 'Composed papers need one online load - reconnect and tap '
                 'again, the paper then stays on the device.'
             : 'No connection. Download the pack once and it plays fully '
                 'offline.';
@@ -774,7 +774,7 @@ class StudentController extends ChangeNotifier {
 
 /// Audio summaries (ROADMAP #11): narrates a lesson's spoken summary with
 /// the on-device speech engine, the same engine family as the voice
-/// flashcards. Simple on/off state — the toggle re-taps as stop, and the
+/// flashcards. Simple on/off state - the toggle re-taps as stop, and the
 /// reader screen silences playback when it leaves. The engine is injected
 /// so tests run with a fake and zero platform channels.
 class LessonNarrator extends ChangeNotifier {
@@ -787,7 +787,7 @@ class LessonNarrator extends ChangeNotifier {
 
   /// Whether a summary is (nominally) being narrated right now. On-device
   /// engines expose no completion callback through [SpeechEngine], so a
-  /// finished script keeps this true until the student re-taps — the same
+  /// finished script keeps this true until the student re-taps - the same
   /// honesty trade the flashcard pill makes.
   bool get playing => _slug.isNotEmpty;
 
@@ -1271,7 +1271,7 @@ class SchoolController extends ChangeNotifier {
 
   /// Loads the memberships (empty list = plain student account).
   Future<void> loadContexts() async {
-    // No session, no school world — keeps stale contexts from leaking
+    // No session, no school world - keeps stale contexts from leaking
     // across sign-outs and gives the injected session a real job.
     if ((_session.token ?? '').isEmpty) {
       contexts = <SchoolContextModel>[];

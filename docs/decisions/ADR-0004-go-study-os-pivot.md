@@ -1,4 +1,4 @@
-# ADR-0004: Go Study OS pivot — monolith disbanded, micro-app architecture
+# ADR-0004: Go Study OS pivot - monolith disbanded, micro-app architecture
 
 Date: 2026-09-02 · Status: ACCEPTED · Supersedes: ADR-0001
 
@@ -27,7 +27,7 @@ The founder explicitly chose a Go backend for the study OS.
    not share table models with any vertical. ERA-1 `core.*`/`cbt.*` tables
    stay in place, untouched, owned by the legacy codebase.
 5. Doctrine continuity: ADR-0003's bundle/key/manifest split is the law of
-   the new stack — bundles never carry answer material, keys are
+   the new stack - bundles never carry answer material, keys are
    server-only, manifests carry sha256 fingerprints, mock packs are
    committed until the real banks arrive in G2.
 

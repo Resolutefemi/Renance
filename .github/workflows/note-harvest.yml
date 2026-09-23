@@ -1,0 +1,40 @@
+name: note-harvest
+
+# Weekly legal harvest of school note content (classnotes.ng,
+# flashlearners, ...) via scripts/scrape_school_notes.py. New or changed
+# corpus files under data/school-notes/ are committed so the founder can
+# pour them into schools with scripts/pour_school_notes.py.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # every Monday 06:00 UTC
+  workflow_dispatch: {} # manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Harvest notes (respectful, robots-aware)
+        run: |
+          python3 scripts/scrape_school_notes.py --all --max-pages 300
+
+      - name: Commit new corpus
+        run: |
+          git config user.name "Renance Harvest Bot"
+          git config user.email "ariyooluwafemi487@gmail.com"
+          git add data/school-notes
+          if git diff --cached --quiet; then
+            echo "No new note content this week."
+          else
+            git commit -m "data: weekly school-notes harvest (credited, robots-aware)"
+            git push
+          fi

@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * The Past-Questions reader — the school app's study reading surface,
+ * The Past-Questions reader - the school app's study reading surface,
  * Renance cut.
  *
  * Opens over one bank (the study setup composes the picks), filters
@@ -37,7 +37,7 @@ function ReaderInner() {
   const body = params.get('body') ?? 'jamb';
   const subject = params.get('subject') ?? '';
   // The bank code the setup resolved (`jamb-biology-bank`, a uni course
-  // pack, …) — the reader reads that pack directly.
+  // pack, …) - the reader reads that pack directly.
   const bank = params.get('bank') ?? '';
   const year = params.get('year');
   const qt = params.get('qt') ?? 'all';
@@ -66,7 +66,7 @@ function ReaderInner() {
     // The bank ships statically (scripts/web_bundles.py); a code that
     // misses the static shelf falls back to the API inside
     // fetchBankBundle. Year pins play out as a client-side filter here
-    // — the reader never needs the compose machinery.
+    // - the reader never needs the compose machinery.
     fetchBankBundle(code)
       .then((b) => alive && setBundle(b))
       .catch(() => alive && setError('Could not load this question bank. Update your questions and try again.'));
@@ -162,7 +162,7 @@ function ReaderInner() {
       <div className="sticky top-0 z-40 border-b border-outline-variant/40 bg-surface/90 backdrop-blur-xl">
         <div className="mx-auto w-full max-w-2xl px-4 pt-3 sm:px-6 lg:max-w-4xl">
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-5">
-            {/* LHS — back + subject title + live count */}
+            {/* LHS - back + subject title + live count */}
             <div className="flex items-center gap-3 lg:max-w-[34%]">
               <button
                 onClick={() => router.push('/study-past-questions')}
@@ -178,7 +178,7 @@ function ReaderInner() {
                 </p>
               </div>
             </div>
-            {/* MIDDLE — type chips + year/topic filters */}
+            {/* MIDDLE - type chips + year/topic filters */}
             <div className="no-scrollbar flex items-center gap-2 overflow-x-auto pb-2.5 pt-2.5 lg:flex-1 lg:justify-center lg:pb-0 lg:pt-0">
               {(
                 [
@@ -239,7 +239,7 @@ function ReaderInner() {
                 </select>
               )}
             </div>
-            {/* RHS — the search field */}
+            {/* RHS - the search field */}
             <div className="relative pb-3 lg:w-[300px] lg:shrink-0 lg:pb-0">
               <span className="material-symbols-outlined pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">
                 search

@@ -4,7 +4,7 @@ import "testing"
 
 // The daily subject-combination sprint composes a <body>-custom paper
 // from the student's stored combination. These are the pure rules the
-// handler and the attempt pipeline both lean on — if they drift, the
+// handler and the attempt pipeline both lean on - if they drift, the
 // GET /daily code and the POST /attempts code stop matching and every
 // combo sprint 409s, so they are pinned here.
 func TestDailyCustomCode(t *testing.T) {

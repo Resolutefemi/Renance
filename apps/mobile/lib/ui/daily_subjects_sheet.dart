@@ -3,7 +3,7 @@
 /// The first Daily tap asks for the combination: every subject the
 /// student's focus body banks, multi-pick, at most nine. Saving hits
 /// PUT /me/daily-subjects and the server then composes every daily
-/// sprint from exactly those subjects — the same paper the web plays.
+/// sprint from exactly those subjects - the same paper the web plays.
 library;
 
 import 'package:flutter/material.dart';
@@ -121,7 +121,7 @@ class _DailySubjectsSheetState extends State<_DailySubjectsSheet> {
             ),
             const SizedBox(height: 4),
             Text(
-              'Pick your subject combination once — every daily CBT then '
+              'Pick your subject combination once - every daily CBT then '
               'shows only these subjects, every day.'
               '${widget.body == 'JAMB' ? ' Use of English is pre-picked, the hall rule.' : ''}',
               style: RenanceText.bodyMedium.copyWith(

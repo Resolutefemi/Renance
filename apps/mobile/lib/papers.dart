@@ -1,4 +1,4 @@
-/// Canonical composed-paper codes — the Dart mirror of the server's
+/// Canonical composed-paper codes - the Dart mirror of the server's
 /// papercode.go grammar (apps/study-api/internal/cbtdata/papercode.go)
 /// and the web's exams.ts builders. Every composed paper is a pure
 /// function of its CODE, so the code the app builds IS the paper the
@@ -12,14 +12,14 @@
 ///                                                     carved from a pack
 ///
 /// params are dot-joined key=value pairs in canonical order
-/// y,from,n,enN,comp,compN,nov,t — the server REFUSES non-canonical
+/// y,from,n,enN,comp,compN,nov,t - the server REFUSES non-canonical
 /// codes, so every surface builds them through the builders below.
 library;
 
 import 'models.dart';
 
 /// The subjects a UTME candidate can pick beyond the mandatory Use of
-/// English — mirrors the web's UTME_ELECTIVES, one entry per JAMB bank.
+/// English - mirrors the web's UTME_ELECTIVES, one entry per JAMB bank.
 const List<(String, String)> kUtmeElectives = <(String, String)>[
   ('mathematics', 'Mathematics'),
   ('physics', 'Physics'),
@@ -83,10 +83,10 @@ String _joinParams(List<String> parts) => parts.isEmpty ? '' : '~${parts.join('.
 /// Canonical official-UTME mock code: Use of English first (mandatory),
 /// electives deduped and sorted, at least one elective required.
 ///
-/// [years] aligns with the full subject list — English at index 0, the
+/// [years] aligns with the full subject list - English at index 0, the
 /// sorted electives after (null = random), exactly the web's convention.
 /// [englishSize], [comprehensionCount] and [timer] only emit when they
-/// differ from the server defaults (60 / 10 / 120) — a redundant param
+/// differ from the server defaults (60 / 10 / 120) - a redundant param
 /// breaks the byte-for-byte canonical check.
 String buildMockCode(
   List<String> electives, {
@@ -117,7 +117,7 @@ String buildMockCode(
 
 /// Canonical custom-practice code: subjects deduped and fully sorted
 /// (>= 1), question total spread across them. The [body] pins whose banks
-/// the server composes from; WAEC/NECO papers carry y/n/t only — the
+/// the server composes from; WAEC/NECO papers carry y/n/t only - the
 /// English comprehension/novel controls are JAMB-section features the
 /// server refuses elsewhere.
 String buildCustomCode(
@@ -145,7 +145,7 @@ String buildCustomCode(
 
 /// Canonical practice-subset code: carves [count] questions out of one
 /// static manifest pack (optionally pinned to one [year], optionally a
-/// contiguous [from] slice — the university Part pages serve Q1-50,
+/// contiguous [from] slice - the university Part pages serve Q1-50,
 /// Q51-100, … in original order).
 String buildPickCode(
   String base, {
@@ -219,7 +219,7 @@ ExamMeta composedExamMeta({
 ExamMeta mockExamMeta(String code, List<String> electives, {int? timerMinutes}) {
   return composedExamMeta(
     code: code,
-    // Quiz name only — the in-player subject strip carries the subjects.
+    // Quiz name only - the in-player subject strip carries the subjects.
     title: 'UTME Mock',
     body: 'JAMB',
     questionCount: 60 + 40 * electives.length,
@@ -237,7 +237,7 @@ ExamMeta customExamMeta(String code, String body, List<String> subjects,
   };
   return composedExamMeta(
     code: code,
-    // Quiz name only — the in-player subject strip carries the subjects.
+    // Quiz name only - the in-player subject strip carries the subjects.
     title: label,
     body: switch (body) {
       'waec' => 'WAEC',

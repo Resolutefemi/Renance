@@ -50,7 +50,7 @@ func (s *Server) handleCreateAttempt(w http.ResponseWriter, r *http.Request) {
                 wantCode := want.Code
                 if wantCode != req.Code {
                         // Subject-combination sprint: the caller replayed the
-                        // code GET /daily handed them — a composed <body>-custom
+                        // code GET /daily handed them - a composed <body>-custom
                         // paper derived from THEIR stored combination. It is
                         // today's challenge exactly when the code still matches
                         // what the combination derives to (a combo edited
@@ -180,7 +180,7 @@ func (s *Server) handleSubmitAttempt(w http.ResponseWriter, r *http.Request) {
                 return
         }
         // Daily fairness guard (ROADMAP #20): a daily attempt may only
-        // answer THAT day's seeded selection — every student worldwide
+        // answer THAT day's seeded selection - every student worldwide
         // races over exactly the same 10 questions, so nobody can pad their
         // board score with the pack's remaining questions.
         var dailyAllowed map[string]struct{}

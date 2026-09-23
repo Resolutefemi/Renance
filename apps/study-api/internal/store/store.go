@@ -526,7 +526,7 @@ type KeyEntry struct {
 
 // Sealed answer keys are served from the in-memory grading cache
 // (built from the content library at boot). The database no longer
-// stores key rows — this closes the repeated-reseed bloat path that
+// stores key rows - this closes the repeated-reseed bloat path that
 // once pushed study.answer_keys past 100 MB.
 
 // -------------------------------------------------------------- attempts
@@ -552,7 +552,7 @@ type Picked struct {
 }
 
 // CreateAttempt opens an attempt. order (possibly nil) is the
-// question sequence for this paper — the adaptive weak-topic-first walk
+// question sequence for this paper - the adaptive weak-topic-first walk
 // (ROADMAP #5) or the daily challenge's seeded selection (ROADMAP #20);
 // adaptive records whether the student asked for it, for history and
 // telemetry. dailyDay (possibly nil) marks the attempt as that day's

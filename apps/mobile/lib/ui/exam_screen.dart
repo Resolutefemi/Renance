@@ -52,7 +52,7 @@ class ExamScreen extends StatefulWidget {
   /// Questions reader with the explanations unlocked.
   final bool studyMode;
 
-  /// The Daily Challenge sprint: every head reads "Daily Quiz" — the
+  /// The Daily Challenge sprint: every head reads "Daily Quiz" - the
   /// composed paper's plumbing label never leaks into the chrome.
   final bool daily;
 
@@ -175,7 +175,7 @@ class _ExamScreenState extends State<ExamScreen> {
 
 // ------------------------------------------------------------------- intro
 
-/// The exam instructions page — the school app's "CBT Exam
+/// The exam instructions page - the school app's "CBT Exam
 /// Instructions" cut: the dark simulator banner, the instruction list,
 /// then the Summary block (Subjects / Test Mode / Exam Year cards) and
 /// the Proceed-to-Test action with the Edit Selections link.
@@ -193,7 +193,7 @@ class _Intro extends StatelessWidget {
   /// "Daily Quiz", never the composed paper's plumbing label.
   final bool daily;
 
-  /// Per-subject counts for the standard UTME mock — English 60 and 40
+  /// Per-subject counts for the standard UTME mock - English 60 and 40
   /// per elective, the canonical compose the server also uses. Custom
   /// papers show the honest "≈ split across N subjects" instead.
   List<(String, int)> _subjectRows(Bundle bundle) {
@@ -253,7 +253,7 @@ class _Intro extends StatelessWidget {
       builder: (BuildContext dialogContext) => AlertDialog(
         title: const Text('Leave the paper?'),
         content: const Text(
-            'Leave now and nothing is submitted — you keep your seat in '
+            'Leave now and nothing is submitted - you keep your seat in '
             'the paper list.'),
         actions: <Widget>[
           TextButton(
@@ -287,7 +287,7 @@ class _Intro extends StatelessWidget {
 
     return Column(
       children: <Widget>[
-        // Back bar — every page gets a back button (founder rule).
+        // Back bar - every page gets a back button (founder rule).
         Padding(
           padding: const EdgeInsets.fromLTRB(12, 8, 16, 0),
           child: Row(
@@ -314,7 +314,7 @@ class _Intro extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
             children: <Widget>[
-              // Simulator banner — the school app's cream banner with
+              // Simulator banner - the school app's cream banner with
               // the abstract shapes, Renance's ink ground.
               Container(
                 padding: const EdgeInsets.symmetric(
@@ -453,7 +453,7 @@ class _Intro extends StatelessWidget {
                     Expanded(
                       child: Text(
                         untimed
-                            ? 'Study Mode — Untimed'
+                            ? 'Study Mode - Untimed'
                             : 'Full Test Mode',
                         style: RenanceText.bodyMedium.copyWith(
                             fontSize: 15.5),
@@ -698,7 +698,7 @@ class _SmartOrderToggleState extends State<_SmartOrderToggle> {
 
 // ------------------------------------------------------------------ player
 
-/// The CBT command bar — ONE row: the quiz name on the left, the clock
+/// The CBT command bar - ONE row: the quiz name on the left, the clock
 /// with Quit / Submit riding right behind it on the right. Copy +
 /// calculator live on the question card, beside the question they act
 /// on; multi-subject papers keep the slim subject strip beneath. The
@@ -779,7 +779,7 @@ class _ExamHeader extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
       child: Row(
         children: <Widget>[
-          // LHS — the quiz name, never the subject receipt.
+          // LHS - the quiz name, never the subject receipt.
           Expanded(
             child: Text(
               daily ? 'Daily Quiz' : bundle.title,
@@ -811,7 +811,7 @@ class _ExamHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 12),
-          // Quit — a compact outlined circle; the dialog keeps the
+          // Quit - a compact outlined circle; the dialog keeps the
           // accident away.
           InkWell(
             onTap: () => _confirmQuit(context),
@@ -827,7 +827,7 @@ class _ExamHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          // Submit — right behind the clock, where the thumb lands.
+          // Submit - right behind the clock, where the thumb lands.
           InkWell(
             onTap: () => _Player.maybeSubmit(context, controller),
             borderRadius: BorderRadius.circular(999),
@@ -882,7 +882,7 @@ class _CardRoundIcon extends StatelessWidget {
 }
 
 /// The subject strip: for the standard UTME mock the canonical sections
-/// (Use of English first, 40-question electives after) — one slim row
+/// (Use of English first, 40-question electives after) - one slim row
 /// under the command bar. The current subject's name sits in the
 /// middle with its answered count, progress bar and in-subject
 /// question position; round < > chevrons at the row's two ends jump
@@ -948,7 +948,7 @@ class _SubjectStrip extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
       child: Row(
         children: <Widget>[
-          // < — jump to the previous subject (dim on the first one).
+          // < - jump to the previous subject (dim on the first one).
           _SubjectChevron(
             icon: Icons.chevron_left,
             onTap: activeIdx > 0
@@ -1000,7 +1000,7 @@ class _SubjectStrip extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          // > — jump to the next subject (dim on the last one).
+          // > - jump to the next subject (dim on the last one).
           _SubjectChevron(
             icon: Icons.chevron_right,
             onTap: activeIdx < sections.length - 1
@@ -1044,7 +1044,7 @@ class _SubjectChevron extends StatelessWidget {
   }
 }
 
-/// The playing state — the school app's CBT body: the white question
+/// The playing state - the school app's CBT body: the white question
 /// card with the "Question N" pill, the radio-circle option stack, the
 /// Previous | Next bar, and the persistent bottom navigator
 /// ("N Questions" pill + the jump strip) that expands into the full
@@ -1185,7 +1185,7 @@ class _Player extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    // "Question N" pill — the school app's badge, ink cut.
+                    // "Question N" pill - the school app's badge, ink cut.
                     Row(
                       children: <Widget>[
                         Container(
@@ -1213,7 +1213,7 @@ class _Player extends StatelessWidget {
                         ),
                         const Spacer(),
                         // copy + calculator + flag: they act on THIS
-                        // question, so they ride the card — three equal
+                        // question, so they ride the card - three equal
                         // round icons that always fit the row, never
                         // shoved out of the card edge on small phones.
                         _CardRoundIcon(
@@ -1318,7 +1318,7 @@ class _Player extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 18),
-              // Options stack — radio-circle grammar.
+              // Options stack - radio-circle grammar.
               ...question.options.entries.map(
                 (MapEntry<String, String> opt) => Padding(
                   padding: const EdgeInsets.only(bottom: 10),
@@ -1428,7 +1428,7 @@ class _Player extends StatelessWidget {
             ),
           ),
         ),
-        // Persistent bottom navigator — the school app's drawer strip.
+        // Persistent bottom navigator - the school app's drawer strip.
         _BottomNavigator(
           controller: controller,
           onExpand: () => _openNavigator(context, controller),
@@ -1580,7 +1580,7 @@ class _MiniNumber extends StatelessWidget {
 /// Option row: letter chip + stem; selected = selection-blue card with
 /// the primary ring and the primary letter chip (Stitch selectOption
 /// state machine, the student's colour when a seed is live).
-/// Option row — the school app's radio-circle grammar: the circle
+/// Option row - the school app's radio-circle grammar: the circle
 /// radio (hollow → ink-filled when picked), the letter, the text. The
 /// student's colour rides the ring whenever a seed is live.
 class _OptionTile extends StatelessWidget {
@@ -3027,7 +3027,7 @@ class _ErrorView extends StatelessWidget {
 
 // ------------------------------------------------------------- calculator
 
-/// The on-screen calculator every JAMB CBT hall puts next to the clock —
+/// The on-screen calculator every JAMB CBT hall puts next to the clock -
 /// the Flutter port of the web's calculator.tsx: immediate-execution
 /// arithmetic with one memory register, digits, the four operations,
 /// percent, square root, sign flip and the MRC / M+ / M- row. Never eval:

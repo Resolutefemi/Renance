@@ -1,7 +1,7 @@
 // Package daily is the deterministic heart of the daily challenge
 // (ROADMAP #20): one 10-question sprint per exam body per UTC day.
 //
-// The whole selection is a PURE function of (day, body, library) — no
+// The whole selection is a PURE function of (day, body, library) - no
 // state, no scheduler, no locks. Every student on earth gets the same
 // pack and the same play order for a given day, which is what makes the
 // per-day leaderboard a fair race. The splitmix64 generator is seeded
@@ -21,7 +21,7 @@ import (
 // fewer questions are served whole.
 const Size = 10
 
-// IDs flattens a bundle's question ids in pack order — the natural
+// IDs flattens a bundle's question ids in pack order - the natural
 // order every deterministic shuffle below starts from.
 func IDs(b *cbtdata.Bundle) []string {
 	ids := make([]string, len(b.Questions))
@@ -74,7 +74,7 @@ func newRNG(domain, day, body string) *rng {
 	return &rng{s: binary.BigEndian.Uint64(sum[:8])}
 }
 
-// rng is splitmix64 — 15 lines, fully deterministic, no reliance on
+// rng is splitmix64 - 15 lines, fully deterministic, no reliance on
 // stdlib rand sequences staying put across Go releases.
 type rng struct{ s uint64 }
 
@@ -86,7 +86,7 @@ func (r *rng) next() uint64 {
 	return z ^ (z >> 31)
 }
 
-// intn maps one draw into [0, n) via multiply-high — modulo bias stays
+// intn maps one draw into [0, n) via multiply-high - modulo bias stays
 // below 2^-48, irrelevant for quiz selection.
 func (r *rng) intn(n int) int {
 	if n <= 1 {

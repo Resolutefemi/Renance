@@ -214,7 +214,7 @@ export default function DashboardPage() {
         api<DailyTileInfo>(`/daily/${encodeURIComponent(body)}`)
           .then((d) => alive && setDaily(d))
           .catch(() => {}); // tile falls back to the setup screen
-        // The shelf syncs regardless of onboarding state — a fresh
+        // The shelf syncs regardless of onboarding state - a fresh
         // student finishing the profile sheet must not wait for another
         // manifest round-trip to see packs behind it.
         void startSyncFlow(meRes.profile ?? undefined);
@@ -224,7 +224,7 @@ export default function DashboardPage() {
         }
       } catch (err) {
         // api() redirects on 401 itself; any other failure must never
-        // strand the desk on an eternal spinner — show it and offer a
+        // strand the desk on an eternal spinner - show it and offer a
         // retry (offline morning, asleep API, captive portal).
         if (alive) {
           setBootError(
@@ -472,7 +472,7 @@ export default function DashboardPage() {
               href={examHref(activeExam.code, {
                 resume: '1',
                 // The daily sprint's paused seat keeps its "Daily Quiz"
-                // head — the flag rides the snapshot, so the exam page
+                // head - the flag rides the snapshot, so the exam page
                 // refetches the daily context instead of falling back to
                 // the composed paper's plumbing label.
                 daily: activeExam.daily ? '1' : undefined,

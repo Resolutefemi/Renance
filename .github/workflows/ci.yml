@@ -79,6 +79,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Typecheck
         run: pnpm --filter @renance/web typecheck
+      - name: Content rule (no long hyphens)
+        run: python3 scripts/no_long_hyphen.py --check
       - name: Build (Pages-like static export)
         working-directory: apps/web
         env:

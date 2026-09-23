@@ -346,7 +346,7 @@ func TestBotFillsAfterWaitAndDrawsWhenPerfect(t *testing.T) {
 	if got := h.peer1.ofType(OutResult)[0]; !got.Solved["u1"] {
 		t.Fatalf("human missed an answered question: %+v", got)
 	}
-	// q2: nobody answers; the perfect bot still "picks" at evaluation —
+	// q2: nobody answers; the perfect bot still "picks" at evaluation -
 	// that is the deal with the house opponent: it always shows up.
 	h.clock.advanceUntil(func() bool { return h.peer1.count(OutQuestion) == 2 }, 15*time.Second)
 	h.clock.advanceUntil(func() bool { return h.peer1.count(OutOver) == 1 }, 15*time.Second)

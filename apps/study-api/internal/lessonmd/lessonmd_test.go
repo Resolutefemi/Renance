@@ -7,7 +7,7 @@ import (
 
 const fullSource = `---
 slug: photosynthesis
-title: Photosynthesis — How Plants Make Food
+title: Photosynthesis - How Plants Make Food
 subject: Biology
 body: JAMB
 tags: [plants, energy]
@@ -117,7 +117,7 @@ func TestEncodeJSONDoesNotEscape(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	les.Summary = "The light & dark reactions — exam ready <3"
+	les.Summary = "The light & dark reactions - exam ready <3"
 	raw, err := EncodeJSON(les)
 	if err != nil {
 		t.Fatal(err)
@@ -126,7 +126,7 @@ func TestEncodeJSONDoesNotEscape(t *testing.T) {
 	if strings.Contains(s, "&amp;") || strings.Contains(s, "\\u003c") || strings.Contains(s, "\\u2014") {
 		t.Fatalf("HTML escaping crept in: %s", s)
 	}
-	if !strings.Contains(s, "The light & dark reactions — exam ready <3") {
+	if !strings.Contains(s, "The light & dark reactions - exam ready <3") {
 		t.Fatalf("summary mangled: %s", s)
 	}
 }

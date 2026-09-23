@@ -3,6 +3,7 @@
 import { FormEvent, useState } from 'react';
 import Link from 'next/link';
 import { checkResultByPin, termLabel, type ResultSheet } from '@/lib/school';
+import { downloadReportCardPDF } from '@/lib/report-pdf';
 import { RenanceMark } from '@/components/renance-logo';
 import { ResultSheetView } from '@/components/result-sheet-view';
 
@@ -33,7 +34,7 @@ export default function SchoolCheckPage() {
   }
 
   return (
-    <main className="flex min-h-dvh flex-col items-center bg-surface-container px-4 py-12">
+    <main className="school-bw flex min-h-dvh flex-col items-center bg-surface-container px-4 py-12">
       <div className="w-full max-w-lg">
         <div className="mb-8 flex flex-col items-center text-center">
           <RenanceMark size={48} />
@@ -91,10 +92,32 @@ export default function SchoolCheckPage() {
 
         {sheet && (
           <div className="mt-6 rounded-xl bg-surface-container-lowest p-6 shadow-sm">
-            <h2 className="mb-4 text-lg font-semibold text-on-surface">
-              {sheet.studentName} — {sheet.className}
-            </h2>
+            <div className="mb-4 flex items-center gap-3">
+              {sheet.schoolLogoUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={sheet.schoolLogoUrl}
+                  alt=""
+                  className="h-12 w-12 rounded-lg border border-outline-variant object-cover"
+                />
+              )}
+              <div>
+                <h2 className="text-lg font-semibold leading-tight text-on-surface">
+                  {sheet.studentName} - {sheet.className}
+                </h2>
+                {sheet.schoolName && (
+                  <p className="text-xs text-on-surface-variant">{sheet.schoolName}</p>
+                )}
+              </div>
+            </div>
             <ResultSheetView sheet={sheet} />
+            <button
+              onClick={() => downloadReportCardPDF(sheet).catch(() => undefined)}
+              className="mt-4 flex h-10 w-full items-center justify-center gap-2 rounded-lg border border-outline text-sm text-on-surface hover:bg-surface-container"
+            >
+              <span className="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+              Download report card (PDF)
+            </button>
           </div>
         )}
 

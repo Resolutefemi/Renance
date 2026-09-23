@@ -44,7 +44,7 @@ type bundleJSON struct {
 }
 
 // buildArtifacts renders the pack bytes for a lint-clean Spec. The
-// answer letter and explanation ride INSIDE each question — the API
+// answer letter and explanation ride INSIDE each question - the API
 // harvests them at boot and serves students sanitized papers.
 func buildArtifacts(s *Spec) (pack []byte, err error) {
 	b := bundleJSON{
@@ -96,7 +96,7 @@ func marshalJSON(v any) ([]byte, error) {
 // packRelPath mirrors tools/cbt-build/build.py bundle_relpath: generated
 // packs land in their body/school folder (WAEC/mathematics.json,
 // All_tertiary_Q/futa/BIO101.json, POST_UTME/unilag.json) instead of piling
-// flat in questions/. Codes stay untouched — only the file location.
+// flat in questions/. Codes stay untouched - only the file location.
 func packRelPath(code string) string {
 	c := strings.TrimSpace(code)
 	for _, body := range []string{"jamb", "waec", "neco"} {
@@ -183,7 +183,7 @@ type manifestJSON struct {
 }
 
 // writeManifest rebuilds data/manifest.json over EVERY pack under
-// <outdir>/questions/ (self-healing, subfolder-aware — like cbt-build) and
+// <outdir>/questions/ (self-healing, subfolder-aware - like cbt-build) and
 // refreshes questions/index.json, the code → relative-path map the API
 // loader resolves bundles through. Returns the number of packs fingerprinted.
 func writeManifest(outdir, version string) (int, error) {

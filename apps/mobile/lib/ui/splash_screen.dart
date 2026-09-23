@@ -1,10 +1,10 @@
-/// Renance splash — the initialization loading screen, the Myschool cut.
+/// Renance splash - the initialization loading screen, the Myschool cut.
 ///
 /// Like the school app the founder asked us to mirror: one solid brand
-/// ground (Myschool paints theirs red, Renance paints it BLACK — the
+/// ground (Myschool paints theirs red, Renance paints it BLACK - the
 /// founder's first default), the wordmark sitting large in the middle,
 /// the version stencilled at the bottom. RENANCE is written in WHITE
-/// with a RAINBOW outline riding every letter — the rainbow slowly
+/// with a RAINBOW outline riding every letter - the rainbow slowly
 /// sweeps around the stroke while the mark breathes, then the app
 /// opens. Two cuts: the first open holds a beat longer than later
 /// launches, and a skip pill surfaces after a moment either way.
@@ -233,7 +233,7 @@ class _SplashScreenState extends State<SplashScreen>
   }
 }
 
-/// RENANCE — white letters with a rainbow outline, the Myschool-logo
+/// RENANCE - white letters with a rainbow outline, the Myschool-logo
 /// treatment in Renance colours: the school app paints its wordmark
 /// white-on-red, Renance paints it white-on-black with the full rainbow
 /// riding the stroke. Each letter carries its own hue slice so the

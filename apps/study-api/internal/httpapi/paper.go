@@ -4,9 +4,9 @@ package httpapi
 // carved practice-subset backends.
 //
 // The client POSTs /attempts with a canonical composed code (papercode.go
-// grammar) — jamb-mock-…, jamb-custom-… or jamb-pick-…. The server parses
-// the spec, composes that paper on demand — deterministically from the
-// subject banks or the base pack — registers it in the library, assembles
+// grammar) - jamb-mock-…, jamb-custom-… or jamb-pick-…. The server parses
+// the spec, composes that paper on demand - deterministically from the
+// subject banks or the base pack - registers it in the library, assembles
 // its sealed answer key from the source keys, seeds the key store (so
 // grading survives a restart) and hands the ordinary attempt pipeline a
 // bundle like any static pack. No new storage, no migration, no doctrine
@@ -65,7 +65,7 @@ func (s *Server) ensurePaper(ctx context.Context, code string) (*cbtdata.Bundle,
                         return nil, false
                 }
                 // The sealed key is the union of the banks' keys. A missing bank
-                // key is a content defect — refuse the paper loudly rather than
+                // key is a content defect - refuse the paper loudly rather than
                 // strand an ungradable attempt.
                 keys = map[string]store.KeyEntry{}
                 for _, bank := range banks {
@@ -103,7 +103,7 @@ func (s *Server) ensurePaper(ctx context.Context, code string) (*cbtdata.Bundle,
                 }
         }
 
-        // Publish the key in-memory only (database persistence removed —
+        // Publish the key in-memory only (database persistence removed -
         // composed-paper keys are rebuilt from the content library on
         // restart if a re-composition is needed).
         if putter, ok := s.keys.(interface {

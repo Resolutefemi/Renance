@@ -1,22 +1,22 @@
 'use client';
 
 /**
- * ExplanationSheet — the school app's explanation modal, Renance cut.
+ * ExplanationSheet - the school app's explanation modal, Renance cut.
  *
  * Opened from the Past-Questions readers and the marked-paper review,
  * it carries everything Myschool puts in this surface, in the same
  * positions:
- *   · header  — red X circle · "Explanation · Question N" · the Save pill
- *   · body    — passage, stem, image, then the option stack with the
+ *   · header  - red X circle · "Explanation · Question N" · the Save pill
+ *   · body    - passage, stem, image, then the option stack with the
  *               green check on the correct option and the red X on a
  *               wrong pick, then the Explanation card: the gradient
  *               "Explanation" label + the "Correct Option X" pill and
  *               the written walkthrough
- *   · AI pill — "Get Renance's AI Explanation", floating centred above
+ *   · AI pill - "Get Renance's AI Explanation", floating centred above
  *               the footer exactly where Myschool seats its own pill;
  *               opens the AI sheet (red close, sparkle title, the amber
  *               "AI can make mistakes" notice, the walkthrough)
- *   · footer  — Report (red) on the left, Previous / Next on the right;
+ *   · footer  - Report (red) on the left, Previous / Next on the right;
  *               the pager keeps this one sheet open across questions
  *
  * The sheet is a controlled overlay: the parent owns `index` and simply
@@ -37,7 +37,7 @@ export interface ExplanationData {
   passage?: string;
   image?: string;
   options: Record<string, string>;
-  /** Correct letter — '' when the paper was ungraded (reader without keys). */
+  /** Correct letter - '' when the paper was ungraded (reader without keys). */
   correct: string;
   /** What the student picked, '' when untouched. */
   selected?: string;
@@ -116,7 +116,7 @@ export default function ExplanationSheet({
           <h2 className="min-w-0 flex-1 truncate text-[19px] font-bold tracking-tight text-on-surface">
             Explanation · Question {number}
           </h2>
-          {/* The Save pill — Myschool's bookmark position. */}
+          {/* The Save pill - Myschool's bookmark position. */}
           <button
             onClick={() => {
               setSaved(
@@ -173,7 +173,7 @@ export default function ExplanationSheet({
             </div>
           )}
 
-          {/* options — green check on the correct one, red X on a wrong pick */}
+          {/* options - green check on the correct one, red X on a wrong pick */}
           <div className="mt-4 space-y-2">
             {Object.entries(question.options).map(([letter, text]) => {
               const isCorrect = graded && letter === question.correct;
@@ -218,7 +218,7 @@ export default function ExplanationSheet({
             })}
           </div>
 
-          {/* Explanation card — gradient label + Correct Option pill */}
+          {/* Explanation card - gradient label + Correct Option pill */}
           {graded ? (
             <div className="mt-4 rounded-xl bg-surface-container-low/55 p-3.5">
               <div className="flex items-center justify-between gap-2">
@@ -264,7 +264,7 @@ export default function ExplanationSheet({
             </div>
           )}
           <div className="flex items-center">
-            {/* Report — left seat, the school app's footer grammar */}
+            {/* Report - left seat, the school app's footer grammar */}
             {reportDone ? (
               <span className="flex items-center gap-1.5 text-[13px] font-bold text-accent-emerald">
                 <span className="material-symbols-outlined text-[16px]">check</span>
@@ -341,7 +341,7 @@ export default function ExplanationSheet({
 /* -------------------------------------------------------------- AI sheet */
 
 /**
- * The AI Generated Explanation sheet — the school app's cut: red close,
+ * The AI Generated Explanation sheet - the school app's cut: red close,
  * sparkle title, the amber "AI can make mistakes" notice, then the
  * walkthrough. The server-anchored tutor endpoint is tried first when a
  * graded attempt exists, the deployment's client key second; neither

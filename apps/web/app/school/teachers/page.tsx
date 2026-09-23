@@ -73,7 +73,7 @@ export default function SchoolTeachersPage() {
     <SchoolShell title="Teachers & Classes">
       <SchoolHeading
         title="Teachers & classes"
-        sub="Create a teacher account for each of your staff — they sign in under For Schools → For Teachers. Assign classes + subjects to control who fills which results and who edits which notes."
+        sub="Create a teacher account for each of your staff - they sign in under For Schools → For Teachers. Assign classes + subjects to control who fills which results and who edits which notes."
       />
 
       <div className="grid gap-6 lg:grid-cols-2">
@@ -90,7 +90,7 @@ export default function SchoolTeachersPage() {
               setNotice('');
               try {
                 await createTeacher(a.schoolId, { fullName, email, password, staffCode });
-                setNotice(`Account created for ${fullName}. Share the email + password — they sign in under For Schools.`);
+                setNotice(`Account created for ${fullName}. Share the email + password - they sign in under For Schools.`);
                 setFullName('');
                 setEmail('');
                 setPassword('');
@@ -117,7 +117,7 @@ export default function SchoolTeachersPage() {
           <ul className="mt-2 flex flex-col gap-1 text-sm text-on-surface-variant">
             {management.map((m) => (
               <li key={m.member.id}>
-                {m.member.fullName || m.username} — {m.email}
+                {m.member.fullName || m.username} - {m.email}
               </li>
             ))}
           </ul>
@@ -127,7 +127,7 @@ export default function SchoolTeachersPage() {
         <section className="rounded-xl border border-outline-variant bg-surface-container-lowest p-6">
           <h2 className="text-base font-semibold text-on-surface">Teacher roster</h2>
           {teachers.length === 0 ? (
-            <p className="mt-2 text-sm text-on-surface-variant">No teachers yet — create the first account.</p>
+            <p className="mt-2 text-sm text-on-surface-variant">No teachers yet - create the first account.</p>
           ) : (
             <ul className="mt-3 flex flex-col gap-2">
               {teachers.map((m) => (

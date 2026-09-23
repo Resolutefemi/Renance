@@ -299,7 +299,7 @@ class DbPackStore implements PackStore {
       );
 
   /// School workspace (For Schools): one row per downloaded school pack
-  /// — the whole syllabus/scheme/notes bundle, read-only.
+  /// - the whole syllabus/scheme/notes bundle, read-only.
   static const _schoolTables = [
     '''
     CREATE TABLE school_packs (
@@ -379,7 +379,7 @@ class DbPackStore implements PackStore {
     final db = await _open();
     final rows = await db.query('packs', columns: <String>['code', 'json']);
     // Real on-disk bytes: sqlite stores TEXT as UTF-8, so the meter must
-    // measure utf8 length — a Dart .length counts UTF-16 units and
+    // measure utf8 length - a Dart .length counts UTF-16 units and
     // overstates sizes on emoji/unicode-heavy packs.
     return <String, int>{
       for (final r in rows)

@@ -128,7 +128,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         {/* Fonts (Inter, JetBrains Mono, Material Symbols) are SELF-HOSTED
-            from /public/fonts via @font-face in globals.css — no Google CDN.
+            from /public/fonts via @font-face in globals.css - no Google CDN.
             When fonts.googleapis.com was unreachable the icon ligatures used
             to render as raw text ("brightness_medium") across the UI. */}
         {/* KaTeX renders the banks' LaTeX (array environments, fractions,

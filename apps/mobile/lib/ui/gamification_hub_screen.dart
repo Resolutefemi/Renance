@@ -138,7 +138,7 @@ class GamificationHubScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text('Leaderboard', style: RenanceText.bodyMedium),
-                            Text('XP and Arena standings — see where you rank',
+                            Text('XP and Arena standings - see where you rank',
                                 style: RenanceText.caption.copyWith(
                                     fontSize: 12,
                                     color: context.textSecondary)),

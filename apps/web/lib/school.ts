@@ -13,6 +13,7 @@ export interface SchoolInfo {
   name: string;
   schoolType: 'primary' | 'secondary' | 'both';
   address?: string;
+  logoUrl?: string;
 }
 
 export interface SchoolMemberInfo {
@@ -37,12 +38,16 @@ export interface SchoolClass {
   seq: number;
 }
 
+export type SubjectDepartment = '' | 'art' | 'science' | 'commercial';
+
 export interface SchoolSubject {
   id: string;
   name: string;
   code: string;
   level: string;
   seq: number;
+  department: SubjectDepartment;
+  isCore: boolean;
 }
 
 export interface SchoolTopic {
@@ -78,6 +83,37 @@ export interface SchoolStudent {
   admissionNo: string;
   sex: '' | 'M' | 'F';
   session: string;
+  guardianName?: string;
+  dob?: string;
+}
+
+// The full enrollment record (student detail form).
+export interface StudentDetail extends SchoolStudent {
+  dob: string;
+  guardianName: string;
+  guardianPhone: string;
+  address: string;
+  photoUrl: string;
+  status: 'active' | 'left' | 'graduated';
+  subjects?: string[];
+}
+
+export type AttendanceStatus = 'present' | 'absent' | 'late' | 'excused';
+
+export interface AttendanceEntry {
+  studentId: string;
+  status: AttendanceStatus;
+  note: string;
+}
+
+export interface AttendanceSummaryRow {
+  studentId: string;
+  present: number;
+  absent: number;
+  late: number;
+  excused: number;
+  total: number;
+  rate: number;
 }
 
 export interface AssignmentDetail {
@@ -125,6 +161,8 @@ export interface ResultSheet {
   marksObtainable?: number;
   teacherReport: string;
   principalReport: string;
+  schoolName?: string;
+  schoolLogoUrl?: string;
   items: ResultItem[];
 }
 
@@ -288,4 +326,74 @@ export function checkResultByPin(pin: string, term: number, session: string): Pr
 // Term ordinal -> label, shared by portal + PDF.
 export function termLabel(term: number): string {
   return term === 1 ? 'First Term' : term === 2 ? 'Second Term' : 'Third Term';
+}
+
+// ------------------------------------------------- setup / people / attendance API
+
+export const fetchSchoolProfile = (schoolId: string) =>
+  api<{ school: SchoolInfo & { logoUrl?: string } }>(
+    `/school/profile?schoolId=${encodeURIComponent(schoolId)}`,
+  );
+
+export const updateSchoolProfile = (
+  schoolId: string,
+  body: { name?: string; address?: string; logoUrl?: string; clearLogo?: boolean },
+) => api<{ school: SchoolInfo }>('/school/profile', { method: 'PUT', body: { schoolId, ...body } });
+
+export const createSubject = (
+  schoolId: string,
+  body: { name: string; code: string; level: string; department: SubjectDepartment; isCore: boolean },
+) => api<{ subject: SchoolSubject }>('/school/subject', { method: 'POST', body: { schoolId, ...body } });
+
+export const updateSubject = (
+  schoolId: string,
+  body: { id: string; name?: string; code?: string; department?: SubjectDepartment; isCore?: boolean },
+) => api('/school/subject', { method: 'PUT', body: { schoolId, ...body } });
+
+export const setClassSubject = (schoolId: string, classId: string, subjectId: string, remove: boolean) =>
+  api('/school/class-subject', { method: 'POST', body: { schoolId, classId, subjectId, remove } });
+
+export const fetchStudentDetail = (schoolId: string, studentId: string) =>
+  api<{ student: StudentDetail }>(
+    `/school/student-detail?schoolId=${encodeURIComponent(schoolId)}&studentId=${encodeURIComponent(studentId)}`,
+  );
+
+export const updateStudent = (schoolId: string, student: Partial<StudentDetail> & { id: string }) =>
+  api<{ student: StudentDetail }>('/school/student', { method: 'PUT', body: { schoolId, ...student } });
+
+export const fetchStudentSubjects = (schoolId: string, studentId: string) =>
+  api<{ subjectIds: string[] }>(
+    `/school/student-subjects?schoolId=${encodeURIComponent(schoolId)}&studentId=${encodeURIComponent(studentId)}`,
+  );
+
+export const setStudentSubjects = (schoolId: string, studentId: string, subjectIds: string[]) =>
+  api('/school/student-subjects', { method: 'PUT', body: { schoolId, studentId, subjectIds } });
+
+export const fetchAttendanceDay = (schoolId: string, classId: string, day: string) =>
+  api<{ entries: AttendanceEntry[] }>(
+    `/school/attendance?schoolId=${encodeURIComponent(schoolId)}&classId=${encodeURIComponent(
+      classId,
+    )}&day=${encodeURIComponent(day)}`,
+  );
+
+export const saveAttendance = (schoolId: string, classId: string, day: string, entries: AttendanceEntry[]) =>
+  api<{ saved: number }>('/school/attendance', { method: 'POST', body: { schoolId, classId, day, entries } });
+
+export const fetchAttendanceSummary = (schoolId: string, classId: string, from: string, to: string) =>
+  api<{ summary: AttendanceSummaryRow[] }>(
+    `/school/attendance-summary?schoolId=${encodeURIComponent(schoolId)}&classId=${encodeURIComponent(
+      classId,
+    )}&from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`,
+  );
+
+export const bulkNotes = (
+  schoolId: string,
+  body: { classId: string; subjectId: string; term: number; session: string; overwrite: boolean; topics: { title: string; week: number; content: string; source: string }[] },
+) => api<{ written: number; received: number }>('/school/bulk-notes', { method: 'POST', body: { schoolId, ...body } });
+
+// todayISO returns the local date in the YYYY-MM-DD shape the
+// attendance endpoints expect.
+export function todayISO(d = new Date()): string {
+  const p = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
 }

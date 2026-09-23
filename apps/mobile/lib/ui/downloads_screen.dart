@@ -1,10 +1,10 @@
-/// The Downloads screen — the offline nerve centre.
+/// The Downloads screen - the offline nerve centre.
 ///
 /// Five download desks: JAMB offline, Post-UTME, WAEC, NECO and Schools
 /// (with a school picker for staff). Any combination can be selected and
 /// pulled in one go. The storage meter reads REAL bytes (UTF-8 pack
 /// payloads + the sqlite file itself), refreshes live while downloads
-/// run, and the permissions card surfaces every grant the app needs —
+/// run, and the permissions card surfaces every grant the app needs -
 /// storage, notifications and the Wi-Fi/data connection state.
 library;
 
@@ -181,7 +181,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
   Future<void> _ensurePermissions() async {
     // Notification permission (Android 13+) and legacy storage. App-private
     // pack storage needs no grant on modern Android, but the user asked for
-    // the app to ASK — so the permissions card drives it explicitly.
+    // the app to ASK - so the permissions card drives it explicitly.
     await <Permission>[Permission.notification, Permission.storage].request();
     if (mounted) setState(() {});
   }
@@ -193,7 +193,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     if (_wifiOnly && _connection != ConnectivityResult.wifi) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('Wi-Fi only is on — connect to Wi-Fi or allow mobile data below.'),
+          content: Text('Wi-Fi only is on - connect to Wi-Fi or allow mobile data below.'),
         ),
       );
       return;
@@ -229,7 +229,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          err ?? 'Downloads complete — everything is ready offline.',
+          err ?? 'Downloads complete - everything is ready offline.',
         ),
       ),
     );
@@ -271,7 +271,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           ),
           const SizedBox(height: 4),
           Text(
-            'Select any combination — you can download more than one at a time.',
+            'Select any combination - you can download more than one at a time.',
             style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
           ),
           const SizedBox(height: 10),
@@ -332,7 +332,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           const SizedBox(height: 8),
           if (downloaded.isEmpty)
             Text(
-              'Nothing yet — pick desks above and tap Download.',
+              'Nothing yet - pick desks above and tap Download.',
               style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
             )
           else
@@ -372,7 +372,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
           const SizedBox(height: 8),
           if (school.packs.isEmpty)
             Text(
-              'No school packs yet — staff can download their school\'s syllabus, scheme of work and notes above.',
+              'No school packs yet - staff can download their school\'s syllabus, scheme of work and notes above.',
               style: RenanceText.bodySecondary.copyWith(color: context.textSecondary),
             )
           else
@@ -616,7 +616,7 @@ class _DownloadsScreenState extends State<DownloadsScreen> {
         ),
         subtitle: Text(
           'Connection: ${_connectionLabel(_connection)}'
-          '${isWifi ? ' — great for big packs' : ''}',
+          '${isWifi ? ' - great for big packs' : ''}',
           style: RenanceText.caption.copyWith(color: context.textSecondary),
         ),
         value: _wifiOnly,

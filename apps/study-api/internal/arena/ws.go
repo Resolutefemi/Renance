@@ -18,7 +18,7 @@ const (
 )
 
 // SocketHandler serves one authenticated arena session over WebSocket.
-// The HTTP layer performs JWT auth BEFORE calling Serve — browsers
+// The HTTP layer performs JWT auth BEFORE calling Serve - browsers
 // cannot set headers on a WebSocket, so the access token rides the
 // ?token= query parameter and must never arrive here unverified.
 type SocketHandler struct {

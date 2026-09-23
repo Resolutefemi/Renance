@@ -497,10 +497,10 @@ class RenanceModeScope extends InheritedWidget {
 /// these getters so the Light, Mixed and Full-dark tiers all fall out
 /// of the same markup:
 ///
-///  * Light  — #F9F9FF page, white cards, ink text.
-///  * Mixed  — light page, dark #111C2D hero/chrome (the exam player
+///  * Light  - #F9F9FF page, white cards, ink text.
+///  * Mixed  - light page, dark #111C2D hero/chrome (the exam player
 ///             treatment), light cards everywhere else.
-///  * Dark   — #111C2D page throughout, #1C2638 cards, #F0F3FF text.
+///  * Dark   - #111C2D page throughout, #1C2638 cards, #F0F3FF text.
 extension RenanceScheme on BuildContext {
   RenanceThemeMode get renanceMode => RenanceModeScope.of(this);
   SeedPalette? get _pal => RenanceModeScope.maybeOf(this)?.palette;
@@ -563,7 +563,7 @@ extension RenanceScheme on BuildContext {
       ? RenanceColors.darkSurfaceLow
       : RenanceColors.surfaceVariant);
 
-  /// The hero progress fill / solid hero CTA — the web's bg-hero-cta.
+  /// The hero progress fill / solid hero CTA - the web's bg-hero-cta.
   Color get heroCta => _pal?.heroCta ?? (darkChrome ? Colors.white : Colors.black);
   Color get onHeroCta => _pal?.onHeroCta ?? (darkChrome ? RenanceColors.ink : Colors.white);
 
@@ -592,7 +592,7 @@ extension RenanceScheme on BuildContext {
       ? RenanceColors.darkOutline
       : RenanceColors.outlineVariant);
 
-  // Errors (never seeded — the palette keeps signals honest) -------------
+  // Errors (never seeded - the palette keeps signals honest) -------------
   Color get error =>
       isDarkTier ? RenanceColors.darkError : RenanceColors.error;
   Color get errorContainer => isDarkTier
@@ -603,7 +603,7 @@ extension RenanceScheme on BuildContext {
       : RenanceColors.onDarkErrorContainer;
 
   // The "ink bubble" treatment (level bubbles, Lvl chips, solid CTAs):
-  // the web's bg-accent-ink chip — #111C2D in both stock tiers, the
+  // the web's bg-accent-ink chip - #111C2D in both stock tiers, the
   // seed's dark accent ink when one is live. The on-color stays light
   // so labels never disappear with the ground.
   Color get inverseChip =>

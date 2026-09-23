@@ -97,14 +97,14 @@ func lintSpec(s *Spec, syllabus map[string]struct{}) []Issue {
 			err(where, "difficulty %q must be easy|medium|hard (or empty)", q.Difficulty)
 		}
 		if q.Topic == "" {
-			warn(where, "no topic — results screens group weak topics by it")
+			warn(where, "no topic - results screens group weak topics by it")
 		} else if syllabus != nil {
 			if _, ok := syllabus[q.Topic]; !ok {
 				err(where, "topic %q is not in the %s syllabus tree (data/syllabus/%s.json)", q.Topic, s.Body, cbtdata.Slug(s.Body))
 			}
 		}
 		if q.Explanation == "" {
-			warn(where, "no explanation in the key — review mode is thinner without it")
+			warn(where, "no explanation in the key - review mode is thinner without it")
 		}
 	}
 	return iss

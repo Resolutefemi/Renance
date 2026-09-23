@@ -106,7 +106,7 @@ export default function SchoolSyllabusPage() {
     // Simple scheme editor: one row per week, comma-newline format.
     const text = rows.map((r) => `${r.week}|${r.topic}`).join('\n');
     const next = window.prompt(
-      'Scheme of work — one week per line as: week|topic\n(You can edit freely)',
+      'Scheme of work - one week per line as: week|topic\n(You can edit freely)',
       text || Array.from({ length: 10 }, (_, i) => `${i + 1}|`).join('\n'),
     );
     if (next == null) return;
@@ -139,7 +139,7 @@ export default function SchoolSyllabusPage() {
     <SchoolShell title="Syllabus & Notes">
       <SchoolHeading
         title="Syllabus, scheme of work & notes"
-        sub="Pick a class and subject. Each term holds the weekly scheme, topics and the note under every topic — download any topic's note as a clean black & white PDF."
+        sub="Pick a class and subject. Each term holds the weekly scheme, topics and the note under every topic - download any topic's note as a clean black & white PDF."
       />
 
       <div className="mb-6 grid gap-3 md:grid-cols-2">
@@ -170,7 +170,7 @@ export default function SchoolSyllabusPage() {
       {!loading && terms.length === 0 && (
         <div className="rounded-xl border border-outline-variant bg-surface-container-lowest p-6 text-sm text-on-surface-variant">
           No syllabus terms for this class + subject yet. Open it once from the app or ask management
-          to install the curriculum from the Overview page — the three terms are created automatically.
+          to install the curriculum from the Overview page - the three terms are created automatically.
         </div>
       )}
 
@@ -282,7 +282,7 @@ function TopicCard({
 
       {!editing && (
         <p className="mt-3 whitespace-pre-line text-sm leading-6 text-on-surface-variant">
-          {topic.content || 'No note yet — open Edit note to write one.'}
+          {topic.content || 'No note yet - open Edit note to write one.'}
         </p>
       )}
 

@@ -1,7 +1,7 @@
 'use client';
 
 // Per-topic note PDF, BLACK & WHITE ONLY (house style for school notes:
-// no colours, no fills — just ink on white, print-ready). One topic per
+// no colours, no fills - just ink on white, print-ready). One topic per
 // file, exactly as schools asked: download notes per topic, never all at
 // once.
 
@@ -38,7 +38,7 @@ export function downloadTopicPdf(meta: NotePdfMeta, topic: SchoolTopic): void {
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10.5);
-  const sessionBit = meta.session ? ` — ${meta.session}` : '';
+  const sessionBit = meta.session ? ` - ${meta.session}` : '';
   doc.text(`${meta.className}  ·  ${meta.subject}  ·  ${termLabel(meta.term)}${sessionBit}`, PAGE_W / 2, MARGIN + 7, {
     align: 'center',
   });
@@ -92,7 +92,7 @@ export function downloadTopicPdf(meta: NotePdfMeta, topic: SchoolTopic): void {
     doc.setFontSize(8.5);
     doc.setTextColor(0);
     doc.text(
-      `${meta.schoolName} — ${meta.subject} note (${topic.title})`,
+      `${meta.schoolName} - ${meta.subject} note (${topic.title})`,
       MARGIN,
       PAGE_H - 12,
     );

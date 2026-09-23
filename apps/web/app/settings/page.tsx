@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * Settings — the Stitch settings screen with the founder's Appearance
+ * Settings - the Stitch settings screen with the founder's Appearance
  * control fully functional: Mode (Light / Mixed / Dark) plus the
  * Chrome-style Seed Colour picker that re-tints every ink surface in
  * the product (lib/theme.ts). The choice persists in localStorage and

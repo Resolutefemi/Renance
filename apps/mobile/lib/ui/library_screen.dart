@@ -36,7 +36,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
   _LibraryFilter _filter = _LibraryFilter.all;
 
   /// Body shelf shown ("JAMB" | "WAEC" | "NECO" | "University Modules").
-  /// null = the student's own exam body — the default, so a JAMBite's
+  /// null = the student's own exam body - the default, so a JAMBite's
   /// library no longer lists all 664 manifest packs including every
   /// university course bank.
   String? _bodyFilter;

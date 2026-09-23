@@ -1,4 +1,4 @@
-# GCSE — sources & harvest notes
+# GCSE - sources & harvest notes
 
 | Source | Type | Status |
 |---|---|---|

@@ -90,7 +90,7 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Audience switch — students by default, schools for management + teachers */}
+        {/* Audience switch - students by default, schools for management + teachers */}
         <div className="mb-5 w-full">
           <AudienceToggle audience={audience} onChange={setAudience} mode="login" />
         </div>

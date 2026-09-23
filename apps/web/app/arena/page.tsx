@@ -1,16 +1,16 @@
 'use client';
 
 /**
- * THE ARENA — one surface, one socket, everything live.
+ * THE ARENA - one surface, one socket, everything live.
  *
  * Three ways into a duel (the founder's cut):
- *   · Quick Match        — the per-focus bucket queue (bot keeps it moving)
- *   · Invite / Join code — host a room, share the code or the link
- *   · Active Now         — live presence list; tap Battle to challenge
+ *   · Quick Match        - the per-focus bucket queue (bot keeps it moving)
+ *   · Invite / Join code - host a room, share the code or the link
+ *   · Active Now         - live presence list; tap Battle to challenge
  *
  * Every focus is its own arena: a JAMBite never meets a tertiary
  * student, and each focus ranks on its own ladder. A duel is 15
- * questions at a 20-second window each — five minutes — and every win
+ * questions at a 20-second window each - five minutes - and every win
  * is worth 1 Ren Point. The whole flow (queue, invite, duel, result)
  * runs on one authenticated WebSocket so the connection never drops
  * mid-match; the old /arena/match page redirects here.
@@ -281,7 +281,7 @@ function ArenaInner() {
         <PageBar title="Arena" />
       </div>
 
-      {/* focus tabs — each focus is its own arena */}
+      {/* focus tabs - each focus is its own arena */}
       {inLobby && (
         <div className="mx-auto mt-3 w-full max-w-2xl px-4 sm:px-6 lg:max-w-4xl">
           <div className="no-scrollbar flex items-center gap-2 overflow-x-auto pb-1">
@@ -411,9 +411,9 @@ function ArenaInner() {
             <div className="rounded-xl bg-surface-container-high px-4 py-3 text-center text-[13px] font-medium text-on-surface-variant">
               {phase === 'over'
                 ? winner == null
-                  ? 'A draw — the point stays in the house.'
+                  ? 'A draw - the point stays in the house.'
                   : winner === meId
-                    ? 'You took the duel — +1 Ren Point on the board.'
+                    ? 'You took the duel - +1 Ren Point on the board.'
                     : `${opponent} took this one. Run it back.`
                 : picked
                   ? 'Answer locked in. Next question is loading…'
@@ -464,7 +464,7 @@ function ArenaInner() {
                 <h2 className="mt-3 text-lg font-bold text-on-surface">
                   {phase === 'hosted' ? 'Your room is open' : `Challenge sent to ${opponent || 'your rival'}`}
                 </h2>
-                <p className="mt-1 text-[13.5px] text-on-surface-variant">Share the code — the duel starts the moment they walk in.</p>
+                <p className="mt-1 text-[13.5px] text-on-surface-variant">Share the code - the duel starts the moment they walk in.</p>
                 <p className="mt-4 font-mono text-[34px] font-bold tracking-[0.3em] text-on-surface">{roomCode}</p>
                 {joinLink && (
                   <button
@@ -565,7 +565,7 @@ function ArenaInner() {
           <div className="mt-3 divide-y divide-outline-light overflow-hidden rounded-2xl bg-card shadow-[0_1px_3px_0_rgba(20,28,45,0.20)]">
             {players && players.length === 0 && (
               <p className="px-4 py-5 text-center text-[13.5px] text-on-surface-variant">
-                Nobody else is in the {focusLabel(focus)} arena right now — quick match, or bring a friend with a room code.
+                Nobody else is in the {focusLabel(focus)} arena right now - quick match, or bring a friend with a room code.
               </p>
             )}
             {!players && (
@@ -591,7 +591,7 @@ function ArenaInner() {
             ))}
           </div>
 
-          {/* Focus Rank — the live per-focus board */}
+          {/* Focus Rank - the live per-focus board */}
           <div className="mt-7 flex items-center justify-between">
             <h2 className="text-lg font-bold tracking-tight text-on-surface">{focusLabel(focus)} Rank</h2>
             <div className="flex items-center gap-2">
@@ -614,7 +614,7 @@ function ArenaInner() {
             )}
             {board && board.entries.length === 0 && (
               <p className="px-4 py-5 text-center text-[14px] text-on-surface-variant">
-                No {focusLabel(focus)} duels scored yet — be the first name on the ladder.
+                No {focusLabel(focus)} duels scored yet - be the first name on the ladder.
               </p>
             )}
             {board?.entries.slice(0, 10).map((e) => (

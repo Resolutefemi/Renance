@@ -32,6 +32,17 @@ export default function RegisterPage() {
     document.title = 'Create your account · Renance';
   }, []);
 
+  // Deep link: /register/?audience=school opens the For Schools form
+  // (the landing page "Register your school" button lands here).
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get('audience');
+      if (q === 'school' || q === 'schools') setAudience('schools');
+    } catch {
+      /* private mode: default to students */
+    }
+  }, []);
+
   // Stable identity for the GIS callback, never re-initialize mid-signup.
   const onGoogleCredential = useCallback(
     async (credential: string) => {
@@ -111,7 +122,7 @@ export default function RegisterPage() {
             </h1>
             <p className="mt-1 text-sm text-on-surface-variant">
               {audience === 'schools'
-                ? 'The study OS for your whole school — management, teachers and students.'
+                ? 'The study OS for your whole school - management, teachers and students.'
                 : 'Join the global student study OS.'}
             </p>
           </div>

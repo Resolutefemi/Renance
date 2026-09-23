@@ -1,31 +1,38 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-import { SchoolHeading, SchoolShell, btnGhost, btnPrimary, inputCls, selectCls } from '@/components/school-shell';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { SchoolHeading, SchoolShell, btnGhost, btnPrimary, btnSmall, inputCls, selectCls } from '@/components/school-shell';
 import { ResultSheetView } from '@/components/result-sheet-view';
+import { downloadReportCardPDF } from '@/lib/report-pdf';
 import {
   fetchAssignments,
   fetchClasses,
   fetchResults,
+  fetchStudentSubjects,
+  fetchSubjects,
   finalizeResults,
   getActiveSchool,
   saveResultItem,
+  setStudentSubjects,
   termLabel,
   type ActiveSchool,
   type AssignmentDetail,
-  type ResultItem,
   type ResultSheet,
   type SchoolClass,
+  type SchoolSubject,
 } from '@/lib/school';
 
-// The results workspace (ggportal-style): pick class + term + session,
+// The results workspace (ggportal doctrine): pick class + term + session,
 // fill CA1 (20) / CA2 (20) / Exam (60) per subject per student, finalize
-// to compute positions + averages + PINs, and open per-student report
-// sheets. Teachers can only edit their assigned class+subject cells.
+// to compute positions + averages + PINs, then print the report card
+// (logo stamped, black & white) or export the class broadsheet CSV.
+// Teachers can only edit their assigned class+subject cells. Management
+// can tune what each student offers right here.
 
 export default function SchoolResultsPage() {
   const [active, setActive] = useState<ActiveSchool | null>(null);
   const [classes, setClasses] = useState<SchoolClass[]>([]);
+  const [subjects, setSubjects] = useState<SchoolSubject[]>([]);
   const [classId, setClassId] = useState('');
   const [term, setTerm] = useState(1);
   const [session, setSession] = useState('2025/2026');
@@ -40,11 +47,13 @@ export default function SchoolResultsPage() {
     if (!a) return;
     setActive(a);
     (async () => {
-      const [cls, asg] = await Promise.all([
+      const [cls, subs, asg] = await Promise.all([
         fetchClasses(a.schoolId),
+        fetchSubjects(a.schoolId).catch(() => ({ subjects: [] })),
         fetchAssignments(a.schoolId, a.role === 'teacher' ? a.memberId : ''),
       ]);
       setClasses(cls.classes ?? []);
+      setSubjects((subs as { subjects: SchoolSubject[] }).subjects ?? []);
       setAssignments(asg.assignments ?? []);
       const first = a.role === 'teacher' ? (asg.assignments ?? [])[0]?.classId : (cls.classes ?? [])[0]?.id;
       if (first) setClassId(first);
@@ -71,15 +80,6 @@ export default function SchoolResultsPage() {
     if (!active || active.role === 'management') return true;
     return assignments.some((a) => a.classId === classId && a.subjectId === subjectId);
   };
-
-  const editableSubjects = useCallback(() => {
-    const set = new Map<string, string>();
-    for (const r of grid) for (const it of r.items) set.set(it.subjectId, it.subjectName);
-    if (active?.role === 'teacher') {
-      return [...set.entries()].filter(([sid]) => canEditCell(sid));
-    }
-    return [...set.entries()];
-  }, [grid, active, classId, assignments]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function onCell(studentId: string, subjectId: string, field: 'ca1' | 'ca2' | 'exam', value: number) {
     const a = active;
@@ -132,14 +132,57 @@ export default function SchoolResultsPage() {
     }
   }
 
-  const subjects = editableSubjects();
+  // Columns: the union of subjects across the class for this term, so
+  // mixed-track SSS classes still read as one broadsheet.
+  const subjectCols = useMemo(() => {
+    const set = new Map<string, string>();
+    for (const r of grid) for (const it of r.items) set.set(it.subjectId, it.subjectName);
+    if (set.size === 0) {
+      const cls = classes.find((c) => c.id === classId);
+      for (const s of subjects) if (cls && (s.level === cls.level || s.level === 'both')) set.set(s.id, s.name);
+    }
+    return [...set.entries()];
+  }, [grid, subjects, classes, classId]);
+
+  // Per-student offering editor inside the sheet modal (management only).
   const student = grid.find((r) => r.studentId === openStudent);
+
+  function exportCSV() {
+    const header = ['Student', 'Admission no', ...subjectCols.flatMap(([sid, name]) => [`${name} CA1`, `${name} CA2`, `${name} Exam`, `${name} Total`, `${name} Grade`, `${name} Pos`]), 'Status', 'PIN'];
+    const lines: (string | number)[][] = [header];
+    for (const r of grid) {
+      const row: (string | number)[] = [r.studentName, r.admissionNo ?? ''];
+      for (const [sid] of subjectCols) {
+        const it = r.items.find((x) => x.subjectId === sid);
+        row.push(it?.ca1 ?? '', it?.ca2 ?? '', it?.exam ?? '', it?.total ?? '', it?.grade ?? '', it?.position ?? '');
+      }
+      row.push(r.status, r.pin ?? '');
+      lines.push(row);
+    }
+    const csv = lines
+      .map((row) => row.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+      .join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    const clsName = classes.find((c) => c.id === classId)?.name ?? 'class';
+    a.href = url;
+    a.download = `${clsName.replace(/\s+/g, '-')}-results-${termLabel(term).toLowerCase().replace(' ', '-')}-${session}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
 
   return (
     <SchoolShell title="Results">
       <SchoolHeading
         title="Results"
-        sub="CA1 + CA2 max 20 each, exam max 60. Finalize to compute positions and class averages and to issue each student's result-check PIN."
+        sub="CA1 + CA2 max 20 each, exam max 60. Finalize to compute positions and class averages and to issue each student's result-check PIN. Report cards carry the school logo."
+        actions={
+          <button className={btnGhost} onClick={exportCSV} disabled={grid.length === 0}>
+            <span className="material-symbols-outlined text-[18px]">table_view</span>
+            Export CSV
+          </button>
+        }
       />
 
       <div className="mb-5 grid gap-3 md:grid-cols-4">
@@ -169,14 +212,14 @@ export default function SchoolResultsPage() {
       {!classId ? (
         <p className="text-sm text-on-surface-variant">Pick a class to open its result sheet.</p>
       ) : grid.length === 0 ? (
-        <p className="text-sm text-on-surface-variant">No students in this class yet — enroll them from the Students page.</p>
+        <p className="text-sm text-on-surface-variant">No students in this class yet. Enroll them from the Students page.</p>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-outline-variant bg-surface-container-lowest">
-          <table className="w-full min-w-[720px] text-sm">
+          <table className="w-full min-w-[760px] text-sm">
             <thead>
               <tr className="border-b border-outline-variant text-left text-xs uppercase tracking-wide text-on-surface-variant">
                 <th className="px-4 py-3">Student</th>
-                {subjects.map(([sid, name]) => (
+                {subjectCols.map(([sid, name]) => (
                   <th key={sid} className="px-3 py-3">
                     {name}
                   </th>
@@ -193,7 +236,7 @@ export default function SchoolResultsPage() {
                     <p className="font-medium text-on-surface">{r.studentName}</p>
                     {r.admissionNo && <p className="text-xs text-on-surface-variant">{r.admissionNo}</p>}
                   </td>
-                  {subjects.map(([sid]) => {
+                  {subjectCols.map(([sid]) => {
                     const item = r.items.find((it) => it.subjectId === sid);
                     const editable = canEditCell(sid) && r.status !== 'finalized';
                     return (
@@ -206,16 +249,16 @@ export default function SchoolResultsPage() {
                           </div>
                         ) : (
                           <span className="px-2 text-on-surface-variant">
-                            {item ? `${item.ca1}/${item.ca2}/${item.exam} = ${item.total} (${item.grade})` : '—'}
+                            {item ? `${item.ca1}/${item.ca2}/${item.exam} = ${item.total} (${item.grade})` : '-'}
                           </span>
                         )}
                       </td>
                     );
                   })}
                   <td className="px-4 py-3 text-xs text-on-surface-variant">{r.status}</td>
-                  <td className="px-4 py-3 font-mono text-xs text-on-surface">{r.pin || '—'}</td>
+                  <td className="px-4 py-3 font-mono text-xs text-on-surface">{r.pin || '-'}</td>
                   <td className="px-4 py-3">
-                    <button className={btnGhost + ' !h-9 px-3 text-xs'} onClick={() => setOpenStudent(r.studentId)}>
+                    <button className={btnSmall} onClick={() => setOpenStudent(r.studentId)}>
                       Sheet
                     </button>
                   </td>
@@ -226,22 +269,155 @@ export default function SchoolResultsPage() {
         </div>
       )}
 
-      {student && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/50 p-4 md:p-10">
-          <div className="w-full max-w-3xl rounded-xl bg-surface-container-lowest p-6 shadow-xl">
-            <div className="mb-4 flex items-start justify-between">
-              <h2 className="text-lg font-semibold text-on-surface">
-                Report sheet — {student.studentName}
-              </h2>
-              <button className={btnGhost + ' !h-9 px-3 text-xs'} onClick={() => setOpenStudent(null)}>
-                Close
-              </button>
+      {student && <SheetModal sheet={student} isManagement={active?.role === 'management'} onClose={() => setOpenStudent(null)} onChanged={load} />}
+    </SchoolShell>
+  );
+}
+
+// SheetModal: the report card view + PDF download + (management) the
+// per-student subject offering editor, so scores can be tuned per track
+// without leaving the results desk.
+function SheetModal({
+  sheet,
+  isManagement,
+  onClose,
+  onChanged,
+}: {
+  sheet: ResultSheet;
+  isManagement: boolean;
+  onClose: () => void;
+  onChanged: () => Promise<void>;
+}) {
+  const [offering, setOffering] = useState<string[] | null>(null);
+  const [allSubjects, setAllSubjects] = useState<SchoolSubject[]>([]);
+  const [busy, setBusy] = useState(false);
+  const [notice, setNotice] = useState('');
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    const a = getActiveSchool();
+    if (!a) return;
+    (async () => {
+      const { fetchSubjects } = await import('@/lib/school');
+      const subs = await fetchSubjects(a.schoolId);
+      setAllSubjects(subs.subjects ?? []);
+      if (isManagement) {
+        const res = await fetchStudentSubjects(a.schoolId, sheet.studentId);
+        setOffering(res.subjectIds?.length ? res.subjectIds : null);
+      }
+    })().catch(() => undefined);
+  }, [sheet.studentId, isManagement]);
+
+  const relevant = useMemo(() => {
+    const ids = new Set(sheet.items.map((it) => it.subjectId));
+    return allSubjects.filter((s) => ids.has(s.id) || (offering ?? []).includes(s.id));
+  }, [allSubjects, sheet.items, offering]);
+
+  const buckets = useMemo(() => {
+    const b: Record<string, SchoolSubject[]> = { core: [], art: [], science: [], commercial: [], general: [] };
+    for (const s of relevant) {
+      if (s.isCore) b.core.push(s);
+      else if (s.department) b[s.department].push(s);
+      else b.general.push(s);
+    }
+    return b;
+  }, [relevant]);
+
+  async function saveOffering() {
+    const a = getActiveSchool();
+    if (!a || !offering) return;
+    setSaving(true);
+    setNotice('');
+    try {
+      await setStudentSubjects(a.schoolId, sheet.studentId, offering);
+      await onChanged();
+      setNotice('Subject offering updated.');
+    } catch (err) {
+      setNotice(err instanceof Error ? err.message : 'Could not update the offering.');
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/50 p-4 md:p-10">
+      <div className="school-bw w-full max-w-3xl rounded-xl bg-surface-container-lowest p-6 shadow-xl">
+        <div className="mb-4 flex items-start justify-between gap-4">
+          <div className="flex items-center gap-3">
+            {sheet.schoolLogoUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={sheet.schoolLogoUrl} alt="" className="h-12 w-12 rounded-lg border border-outline-variant object-cover" />
+            )}
+            <div>
+              <h2 className="text-lg font-semibold text-on-surface">Report sheet - {sheet.studentName}</h2>
+              {sheet.schoolName && <p className="text-xs text-on-surface-variant">{sheet.schoolName}</p>}
             </div>
-            <ResultSheetView sheet={student} />
+          </div>
+          <div className="flex gap-2">
+            <button className={btnSmall} onClick={() => downloadReportCardPDF(sheet).catch(() => undefined)}>
+              <span className="material-symbols-outlined text-[15px]">picture_as_pdf</span>
+              PDF
+            </button>
+            <button className={btnSmall} onClick={onClose}>
+              Close
+            </button>
           </div>
         </div>
-      )}
-    </SchoolShell>
+
+        <ResultSheetView sheet={sheet} />
+
+        {isManagement && (
+          <div className="mt-6 border-t border-outline-variant pt-5">
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <h3 className="text-base font-semibold text-on-surface">Subjects this student offers</h3>
+              <button
+                className="text-xs text-on-surface-variant underline"
+                onClick={() => setOffering(offering === null ? sheet.items.map((it) => it.subjectId) : null)}
+              >
+                {offering === null ? 'Customize' : 'Follow the class list'}
+              </button>
+            </div>
+            <p className="mb-3 text-[13px] text-on-surface-variant">
+              Edit while you fill: only the ticked subjects land on this student's report card.
+            </p>
+            {offering !== null && (
+              <>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {(['core', 'art', 'science', 'commercial', 'general'] as const)
+                    .filter((k) => buckets[k].length > 0)
+                    .map((k) => (
+                      <div key={k}>
+                        <p className="mb-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-on-surface-variant">{k}</p>
+                        <div className="flex flex-wrap gap-2">
+                          {buckets[k].map((s) => {
+                            const on = offering.includes(s.id);
+                            return (
+                              <button
+                                key={s.id}
+                                className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
+                                  on ? 'border-primary bg-primary text-on-primary' : 'border-outline-variant text-on-surface hover:bg-surface-container'
+                                }`}
+                                onClick={() => setOffering(on ? offering.filter((x) => x !== s.id) : [...offering, s.id])}
+                              >
+                                {s.name}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ))}
+                </div>
+                <button className={btnPrimary + ' mt-4'} disabled={saving} onClick={saveOffering}>
+                  {saving ? 'Saving…' : 'Save offering'}
+                </button>
+              </>
+            )}
+          </div>
+        )}
+        {notice && <p className="mt-3 text-sm text-on-surface">{notice}</p>}
+        {busy && <p className="mt-2 text-xs text-on-surface-variant">Refreshing…</p>}
+      </div>
+    </div>
   );
 }
 

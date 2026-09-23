@@ -7362,7 +7362,7 @@
    "id": "sat-math-bank-0586",
    "marks": 1,
    "type": "numeric",
-   "stem": "The table summarizes the distribution of age and assigned group for 90 participants in a study. &nbsp; 0 –9 years 10 –19 years 20+ years Total Group A 7 14 9 30 Group B 6 4 20 30 Group C 17 12 1 30 Total 30 30 30 90 One of these participants will be selected at random. What is the probability of selecting a participant from group A, given that the participant is at least 10 years of age? (Express your answer as a decimal or fraction, not as a percent.)",
+   "stem": "The table summarizes the distribution of age and assigned group for 90 participants in a study. &nbsp; 0 -9 years 10 -19 years 20+ years Total Group A 7 14 9 30 Group B 6 4 20 30 Group C 17 12 1 30 Total 30 30 30 90 One of these participants will be selected at random. What is the probability of selecting a participant from group A, given that the participant is at least 10 years of age? (Express your answer as a decimal or fraction, not as a percent.)",
    "answer": ".3833",
    "skill": "Probability and conditional probability"
   },

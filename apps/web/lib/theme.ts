@@ -1,14 +1,14 @@
 'use client';
 
 /**
- * Renance Appearance engine — the Chrome-style colour theming the
+ * Renance Appearance engine - the Chrome-style colour theming the
  * founder asked for ("all the black colours in the website or app can
  * be easily changed to any colour students want, under settings, like
  * Chrome appearance settings").
  *
  * A seed colour is expanded into the full token palette (surfaces,
  * containers, ink, primaries, outlines, hero chrome) for each appearance
- * tier — Light, Mixed, Dark — and written as CSS custom properties on
+ * tier - Light, Mixed, Dark - and written as CSS custom properties on
  * <html>. Every screen already reads the tokens, so one seed repaints
  * the whole product. The computed variables are also persisted
  * (renance.seedVars) so the inline bootstrap in app/layout.tsx can
@@ -145,7 +145,7 @@ export function buildPalette(seedHex: string, mode: ThemeMode): PaletteVars {
   }
 
   // Light body (also the base of Mixed); the seed tints the neutrals and
-  // drives the primary actions — the "black" becomes the student's colour.
+  // drives the primary actions - the "black" becomes the student's colour.
   const primary = hslToHex(hue, sat, Math.min(46, Math.max(30, l0(seedHex) > 55 ? 38 : l0(seedHex) * 0.72)));
   vars['--color-background'] = hslToHex(hue, 46, 98);
   vars['--color-surface'] = vars['--color-background'];

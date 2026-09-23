@@ -77,7 +77,7 @@ func run(args []string) int {
 }
 
 func usage() {
-        fmt.Fprint(os.Stderr, `qbuild — Renance exam pack builder
+        fmt.Fprint(os.Stderr, `qbuild - Renance exam pack builder
 
 Usage:
   qbuild check    -i src.yaml [-i src2.csv ...]           lint sources only

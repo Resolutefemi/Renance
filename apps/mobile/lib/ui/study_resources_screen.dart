@@ -1,4 +1,4 @@
-/// Study, the PDF & resources shelf — the Flutter port of the web's
+/// Study, the PDF & resources shelf - the Flutter port of the web's
 /// /study page, 1:1. Free, legal, downloadable study material for
 /// secondary and university students: official syllabi, open textbooks,
 /// past-question archives and curated open collections. Every link is

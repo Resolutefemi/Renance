@@ -924,3 +924,118 @@ html[data-rail='collapsed'] {
 @media (prefers-reduced-motion: reduce) {
   .hero-enter, .glass-float, .aurora, .hero-gradient-text, .marquee-track, .final-cta-glow, .hero-cta-primary::after { animation: none !important; }
 }
+
+/* ------------------------------------------------------------------ */
+/* School portal scope — strict black & white, always.                 */
+/* The founder rule: the accent / tier switching on the student pages  */
+/* must never leak into school pages. .school-bw pins its own tokens   */
+/* (white paper, black ink, black primary) on top of any data-theme.   */
+/* ------------------------------------------------------------------ */
+.school-bw {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #ededed;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f2f2f2;
+  --color-surface-container-high: #ececec;
+  --color-surface-container-highest: #e6e6e6;
+  --color-surface-variant: #ededed;
+
+  --color-on-background: #0a0a0a;
+  --color-on-surface: #0a0a0a;
+  --color-on-surface-variant: #5c5c5c;
+  --color-on-primary: #ffffff;
+
+  --color-primary: #000000;
+  --color-primary-container: #0a0a0a;
+  --color-secondary: #444444;
+  --color-secondary-container: #ededed;
+  --color-on-secondary-container: #333333;
+
+  --color-outline: #1f1f1f;
+  --color-outline-variant: #dcdcdc;
+  --color-outline-light: #dcdcdc;
+
+  --color-hero: #ffffff;
+  --color-on-hero: #0a0a0a;
+  --color-hero-muted: #5c5c5c;
+  --color-hero-track: #ededed;
+  --color-hero-cta: #000000;
+  --color-on-hero-cta: #ffffff;
+
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+/* Dark tier does not touch the school portal either. */
+[data-theme='dark'] .school-bw {
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-bright: #ffffff;
+  --color-surface-dim: #ededed;
+  --color-surface-container-lowest: #ffffff;
+  --color-card: #ffffff;
+  --color-surface-container-low: #f7f7f7;
+  --color-surface-container: #f2f2f2;
+  --color-surface-container-high: #ececec;
+  --color-surface-container-highest: #e6e6e6;
+  --color-surface-variant: #ededed;
+  --color-on-background: #0a0a0a;
+  --color-on-surface: #0a0a0a;
+  --color-on-surface-variant: #5c5c5c;
+  --color-on-primary: #ffffff;
+  --color-primary: #000000;
+  --color-primary-container: #0a0a0a;
+  --color-secondary: #444444;
+  --color-secondary-container: #ededed;
+  --color-on-secondary-container: #333333;
+  --color-outline: #1f1f1f;
+  --color-outline-variant: #dcdcdc;
+  --color-outline-light: #dcdcdc;
+  color-scheme: light;
+}
+
+/* Sidebar chrome */
+.school-rail-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.school-rail-link:hover { background: #f2f2f2; color: #0a0a0a; }
+.school-rail-link[data-active='true'] {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+.school-rail-link .material-symbols-outlined { font-size: 20px; }
+
+.school-rail-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9a9a;
+  padding: 0 14px;
+  margin: 18px 0 6px;
+}
+
+.school-shell-card {
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 14px;
+}
+
+.school-stat-value { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a; }
+.school-stat-label { font-size: 13px; color: #5c5c5c; margin-top: 2px; }
+
+@media print {
+  .school-no-print { display: none !important; }
+}

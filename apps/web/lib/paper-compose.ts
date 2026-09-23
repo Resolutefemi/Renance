@@ -1,12 +1,12 @@
 /**
- * Client-side composite paper composition — a byte-exact mirror of the
+ * Client-side composite paper composition - a byte-exact mirror of the
  * study API's internal/cbtdata/paper.go + papercode.go.
  *
  * Why: the study API free plan sleeps (~40s cold start) and requires a
  * session for every bundle, so composed papers (mock / custom / pick)
  * made the whole app slow and locked signed-out students out entirely.
  * A paper is a pure function of its CODE, so the client composes the
- * exact same sitting from the statically shipped banks — instantly, and
+ * exact same sitting from the statically shipped banks - instantly, and
  * offline. The API path stays as the fallback.
  *
  * Every detail matters for grading consistency (the server re-composes
@@ -31,7 +31,7 @@ const DEFAULT_MOCK_ENGLISH = 60;
 const DEFAULT_MOCK_TIMER = 120;
 const DEFAULT_PICK_N = 40;
 const DEFAULT_PART_N = 50;
-// Go defaultNovelN — the novel seat count (clamped to the pool).
+// Go defaultNovelN - the novel seat count (clamped to the pool).
 const NOVEL_N = 10;
 
 export interface PaperSpec {
@@ -186,7 +186,7 @@ async function sha256First8BE(s: string): Promise<bigint> {
 }
 
 // paperRNG seeds from "jamb-mock|" + code for EVERY family (the Go name
-// is historical — the server uses it for mock, custom and pick alike).
+// is historical - the server uses it for mock, custom and pick alike).
 function paperSeed(code: string): Promise<bigint> {
   return sha256First8BE('jamb-mock|' + code);
 }
@@ -211,7 +211,7 @@ class Rng {
     return this.state;
   }
   /**
-   * Seeded Fisher-Yates over [0..n) — ported verbatim. NOTE: it always
+   * Seeded Fisher-Yates over [0..n) - ported verbatim. NOTE: it always
    * advances the RNG for the FULL array, even when the caller takes
    * zero rows; the server's sequence depends on that.
    */
@@ -297,7 +297,7 @@ function mockCap(slug: string): number {
   return slug === 'english' ? DEFAULT_MOCK_ENGLISH : 40;
 }
 
-/** English comprehension/novel seating — ported 1:1 from englishSplit. */
+/** English comprehension/novel seating - ported 1:1 from englishSplit. */
 function englishSplit(
   pool: BundleQuestion[],
   rng: Rng,
@@ -401,7 +401,7 @@ export async function composePaper(
     if (year) {
       paper.title = `${base.title.replace(/ Bank$/, '')} · ${year} Practice`;
     } else if (spec.from > 0) {
-      paper.title = `${base.title} · Q${spec.from}–Q${spec.from + picked.length - 1}`;
+      paper.title = `${base.title} · Q${spec.from}-Q${spec.from + picked.length - 1}`;
     } else {
       paper.title = `${base.title} · Practice Set`;
     }
@@ -461,7 +461,7 @@ export async function composePaper(
     const useEnglishSplit = slug === 'english' && body === 'jamb';
     let section: BundleQuestion[];
     if (useEnglishSplit) {
-      // NB: the server passes spec.CompN through UNCHANGED — an absent
+      // NB: the server passes spec.CompN through UNCHANGED - an absent
       // compN param is 0 (no comprehension seated), NOT the documented
       // default of 10 (paper_test.go asserts CompN == 0 canonically).
       section = englishSplit(pool, rng, take, spec.comp, spec.compN, spec.novel);
@@ -485,7 +485,7 @@ export async function composePaper(
   if (spec.family === 'custom') {
     label = body === 'waec' ? 'WASSCE Practice' : body === 'neco' ? 'NECO Practice' : 'Custom Practice';
   }
-  // Quiz name only — the subject strip in the player chrome carries the
+  // Quiz name only - the subject strip in the player chrome carries the
   // per-subject picture; the title never reads like a receipt.
   paper.title = label;
   if (paper.questionCount === 0) throw new Error(`paper ${code} composed to zero questions`);

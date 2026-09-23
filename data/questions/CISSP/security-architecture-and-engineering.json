@@ -190,7 +190,7 @@
   {
    "id": "cissp-security-architecture-and-engineering-bank-0015",
    "type": "mcq",
-   "stem": "Chris wants to verify that a software package he downloaded matches the original version. What hashing tool should he use if he believes that technically sophisticated attackers may have replaced the software package with a version containing a backdoor? (Note: For questions 16–19, Alice and Bob use an asymmetric cryptosystem with certificates from a mutually trusted CA.)",
+   "stem": "Chris wants to verify that a software package he downloaded matches the original version. What hashing tool should he use if he believes that technically sophisticated attackers may have replaced the software package with a version containing a backdoor? (Note: For questions 16-19, Alice and Bob use an asymmetric cryptosystem with certificates from a mutually trusted CA.)",
    "marks": 1,
    "options": {
     "A": "MD5",

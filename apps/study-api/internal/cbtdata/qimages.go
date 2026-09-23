@@ -1,4 +1,4 @@
-// Package cbtdata — embedded question images.
+// Package cbtdata - embedded question images.
 //
 // myschool-sourced past questions reference diagrams (graphs, geometric
 // figures, circuit sketches) by URL. Those images are vendored into this
@@ -44,7 +44,7 @@ func QImageNames() []string {
 }
 
 // safeQImageName rejects anything that is not a plain lowercase
-// hex-ish filename with an image extension — traversal can never reach
+// hex-ish filename with an image extension - traversal can never reach
 // the embed anyway (embed paths cannot escape), this just keeps
 // lookups cheap and predictable.
 func safeQImageName(name string) bool {

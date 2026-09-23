@@ -1,11 +1,11 @@
-/// Performance Analysis — the Myschool page the founder called
+/// Performance Analysis - the Myschool page the founder called
 /// beautiful, rebuilt in Renance's black & white language.
 ///
 /// General Overview card (Total Average Performance + Tests Taken),
 /// the soft-tinted per-exam cards (JAMB green / University orange /
-/// WAEC blue / NECO lime / Challenge teal — the school app's exact
+/// WAEC blue / NECO lime / Challenge teal - the school app's exact
 /// grammar), the Overall Performance section with the time-window
-/// chips and the per-topic score bars, and the Performance Chart — a
+/// chips and the per-topic score bars, and the Performance Chart - a
 /// hand-drawn line chart of the last papers, axis and grid included.
 ///
 /// All data is real: the student's attempt rows, plus the graded
@@ -442,7 +442,7 @@ class _OverallCard extends StatelessWidget {
         children: <Widget>[
           Text('Overall Performance', style: RenanceText.sectionTitle),
           const SizedBox(height: 12),
-          // Window chips — All time / This Week / This Month / This Year.
+          // Window chips - All time / This Week / This Month / This Year.
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             clipBehavior: Clip.none,

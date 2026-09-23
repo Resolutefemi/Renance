@@ -63,7 +63,7 @@ func main() {
         log.Info("database ready (study schema current)")
 
         // The content library is the single source of truth for sealed keys
-        // (founder directive, 2026-09). Keys live in memory only — the
+        // (founder directive, 2026-09). Keys live in memory only - the
         // database no longer stores 84.5k+ key rows, so restarts cannot
         // bloat the database with repeated seed upserts.
         keysRaw := buildKeyCache(lib)

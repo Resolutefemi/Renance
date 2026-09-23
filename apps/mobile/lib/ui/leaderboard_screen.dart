@@ -1,11 +1,11 @@
-/// Leaderboard — the Myschool ranking cut the founder asked to copy.
+/// Leaderboard - the Myschool ranking cut the founder asked to copy.
 ///
 /// Sticky back bar with the centred title, the board tabs as a white
-/// pill riding a track (Myschool's Challenge/JAMB/WAEC/NECO/CBT row —
+/// pill riding a track (Myschool's Challenge/JAMB/WAEC/NECO/CBT row -
 /// Renance's real boards are XP and Arena), and the ranking as cards:
 /// #1 rides a gold gradient, #2 silver, #3 bronze, the rest plain white
 /// cards. Each card: medal, avatar, username, the big score at the
-/// right and the honest stat chips (streaks, correct, papers) beneath —
+/// right and the honest stat chips (streaks, correct, papers) beneath -
 /// Renance's answer to "Myschool Point 76.67 from 1 CBT".
 library;
 
@@ -82,7 +82,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Sticky back bar, centred title — the school app's header.
+            // Sticky back bar, centred title - the school app's header.
             Container(
               decoration: BoxDecoration(
                 color: context.pageBg,

@@ -1,4 +1,4 @@
-/// GPA / CGPA calculator — the app mirror of the website's /gpa tool.
+/// GPA / CGPA calculator - the app mirror of the website's /gpa tool.
 ///
 /// Pure client-side: no account, no API, works offline. Nigerian 5.0
 /// scale (A=5 … F=0), current-semester GPA plus a previous-CGPA fold-in,
@@ -376,7 +376,7 @@ class _GpaScreenState extends State<GpaScreen> {
                                 style: RenanceText.sectionTitle),
                             const SizedBox(height: 4),
                             Text(
-                              'Enter your cumulative record so far — the CGPA above combines this semester with it.',
+                              'Enter your cumulative record so far - the CGPA above combines this semester with it.',
                               style: RenanceText.caption
                                   .copyWith(color: context.textSecondary),
                             ),
@@ -419,7 +419,7 @@ class _GpaScreenState extends State<GpaScreen> {
                             ),
                             const SizedBox(height: 12),
                             Text(
-                              'Scale: A=5 · B=4 · C=3 · D=2 · E=1 · F=0 — the standard Nigerian university 5.0 scale.'
+                              'Scale: A=5 · B=4 · C=3 · D=2 · E=1 · F=0 - the standard Nigerian university 5.0 scale.'
                               '${c.totalUnits > 0 ? ' Cumulative total: ${c.totalUnits} units at ${c.cgpa.toStringAsFixed(2)}.' : ''}',
                               style: RenanceText.caption
                                   .copyWith(color: context.textSecondary),

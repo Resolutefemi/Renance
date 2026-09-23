@@ -190,7 +190,7 @@ class ProfileScreen extends StatelessWidget {
         // rule). Saving stores the pick AND the profile institution.
         _SchoolCard(onChanged: onFocusChanged),
         const SizedBox(height: 16),
-        // Menu group: content — 1:1 with the up-to-date web profile
+        // Menu group: content - 1:1 with the up-to-date web profile
         // (My Packs, GPA Calculator; Downloads stays as the mobile
         // affordance for the on-device pack library) ----------------------
         _MenuGroup(items: <_MenuItem>[

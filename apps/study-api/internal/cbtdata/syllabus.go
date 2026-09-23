@@ -134,7 +134,7 @@ func (l *Library) validateTopics() error {
 				continue // lands in the "General" bucket downstream
 			}
 			if _, ok := set[q.Topic]; !ok {
-				return fmt.Errorf("cbtdata: bundle %s question %s: topic %q is not in the %s syllabus tree (data/syllabus/%s.json) — fix the tag or extend the tree",
+				return fmt.Errorf("cbtdata: bundle %s question %s: topic %q is not in the %s syllabus tree (data/syllabus/%s.json) - fix the tag or extend the tree",
 					ex.Code, q.ID, q.Topic, b.Body, Slug(b.Body))
 			}
 		}

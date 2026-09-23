@@ -84,7 +84,7 @@ func (t *Tutor) Reply(ctx context.Context, ac AttemptContext, msgs []Message) Re
 			return Reply{Text: strings.TrimSpace(out), Mode: ModeAI}
 		}
 		if t.Log != nil {
-			t.Log.Error("tutor provider failed — degrading to hint mode", "err", err)
+			t.Log.Error("tutor provider failed - degrading to hint mode", "err", err)
 		}
 	}
 	return Reply{Text: Hint(ac, turn), Mode: ModeHint}

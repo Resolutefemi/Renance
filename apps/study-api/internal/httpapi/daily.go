@@ -1,6 +1,6 @@
 // Daily challenge (ROADMAP #20): one deterministic 10-question sprint
 // per exam body per UTC day. The selection is a pure function of (day,
-// body, library) — internal/daily — so every student worldwide plays
+// body, library) - internal/daily - so every student worldwide plays
 // the same questions in the same order, which is what makes the
 // per-day board a fair race. The sprint itself flows through the
 // ordinary /attempts pipeline (adaptive, grading, review all apply);
@@ -32,7 +32,7 @@ func dailyDayString(d *time.Time) string {
 
 // parseDay validates the ?day= query on the leaderboard. Empty means
 // "today" (the caller substitutes); anything unparseable is a 400,
-// never a silent fallback — same contract as boardPeriod.
+// never a silent fallback - same contract as boardPeriod.
 func dailyDayParam(raw string) (string, bool) {
         if raw == "" {
                 return "", true
@@ -54,7 +54,7 @@ func (s *Server) dailyPool(rawBody string) []*cbtdata.Bundle {
 
 // dailySubjects sanitises the stored combination: lowercase slug shapes
 // only, deduped, at most 9 (a WAEC wrist's worth). Order is canonical
-// (sorted) — custom paper codes demand it, and a stable order keeps the
+// (sorted) - custom paper codes demand it, and a stable order keeps the
 // composed code (and therefore the whole attempt pipeline) reproducible.
 func dailySubjects(raw []string) []string {
         seen := map[string]struct{}{}
@@ -88,7 +88,7 @@ func dailySubjects(raw []string) []string {
 }
 
 // dailyCustomCode derives the composed-paper code for a subject
-// combination: <body>-custom-<sorted slugs>~n=10.t=15 — a 10-question
+// combination: <body>-custom-<sorted slugs>~n=10.t=15 - a 10-question
 // sprint on a 15-minute clock, composed from that body's own banks by
 // the ordinary custom-paper machinery. ok is false when the body has no
 // custom family (University Modules, POST-UTME) or the combination is
@@ -113,7 +113,7 @@ func dailyCustomCode(canonicalBody string, subjects []string) (string, bool) {
 }
 
 // callerDailySubjects resolves the calling student's stored combination
-// (empty when the profile has none — the daily then stays classic).
+// (empty when the profile has none - the daily then stays classic).
 func (s *Server) callerDailySubjects(r *http.Request, uid string) []string {
         profile, err := s.store.ProfileByUser(r.Context(), uid)
         if err != nil || profile == nil {
@@ -156,7 +156,7 @@ func (s *Server) handleDaily(w http.ResponseWriter, r *http.Request) {
         day := todayUTC()
 
         // Subject combination (founder rule): when the student picked one,
-        // the daily sprint composes ONLY their subjects — a deterministic
+        // the daily sprint composes ONLY their subjects - a deterministic
         // <body>-custom paper seeded by the same compose machinery the
         // custom practice flow uses, so grading/resume/review all see an
         // ordinary bundle. No combination (or a body without per-subject

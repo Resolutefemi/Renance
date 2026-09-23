@@ -1,11 +1,11 @@
 'use client';
 
 /**
- * AppearancePanel — the Stitch "Renance Learning OS" theme screen,
+ * AppearancePanel - the Stitch "Renance Learning OS" theme screen,
  * 1:1 with the founder's mock: a Mode segmented control (Light / Mixed
  * / Dark) and a Seed Colour section. The seed drives a Chrome-style
- * colour picker — a saturation/brightness field, a rainbow hue rail,
- * preset swatches and a hex box — and every black/ink surface in the
+ * colour picker - a saturation/brightness field, a rainbow hue rail,
+ * preset swatches and a hex box - and every black/ink surface in the
  * product re-tints live (lib/theme.ts paints the token palette).
  */
 

@@ -48,8 +48,8 @@ export function ResultSheetView({ sheet }: { sheet: ResultSheet }) {
               <td className="px-2 py-2 text-on-surface">
                 {it.grade} {it.remark && <span className="text-xs text-on-surface-variant">({it.remark})</span>}
               </td>
-              <td className="px-2 py-2 text-on-surface">{it.position || '—'}</td>
-              <td className="px-2 py-2 text-on-surface">{it.classAverage || '—'}</td>
+              <td className="px-2 py-2 text-on-surface">{it.position || '-'}</td>
+              <td className="px-2 py-2 text-on-surface">{it.classAverage || '-'}</td>
             </tr>
           ))}
         </tbody>
@@ -69,7 +69,7 @@ export function ResultSheetView({ sheet }: { sheet: ResultSheet }) {
       )}
       {sheet.pin && (
         <p className="mt-3 text-sm text-on-surface-variant">
-          Result-check PIN: <span className="font-mono font-semibold text-on-surface">{sheet.pin}</span> — students check
+          Result-check PIN: <span className="font-mono font-semibold text-on-surface">{sheet.pin}</span> - students check
           it on the{' '}
           <Link className="text-primary underline" href="/school/check">
             result checker

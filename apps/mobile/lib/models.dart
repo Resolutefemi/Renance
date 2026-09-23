@@ -1630,7 +1630,7 @@ class ArenaPlayer {
 // ============================================================================
 // School platform (For Schools): memberships + the read-only offline pack
 // (syllabus, scheme of work, notes). Defensive parsing like every model
-// above — the API is a friend, not a contract.
+// above - the API is a friend, not a contract.
 // ============================================================================
 
 /// The school itself (school.schools row).

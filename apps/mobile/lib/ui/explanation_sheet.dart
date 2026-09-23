@@ -1,10 +1,10 @@
-/// The explanation sheet — Myschool's explanation modal, Renance edition.
+/// The explanation sheet - Myschool's explanation modal, Renance edition.
 ///
 /// Layout mirrors the school app the founder asked to copy: a rounded
 /// bottom sheet with the red-circle close + "Question N" title + Save
 /// pill, the stem, the option stack with the green check on the correct
 /// option, the "Explanation" section with the "Correct Option C" pill,
-/// the Report link, the Previous/Next pair — and, floating in the same
+/// the Report link, the Previous/Next pair - and, floating in the same
 /// position Myschool puts theirs, the AI pill: "Get Renance's AI
 /// Explanation", which opens the AI Generated Explanation sheet with
 /// the amber can-make-mistakes notice.
@@ -59,7 +59,7 @@ class ExplanationSheet extends StatefulWidget {
   final int year;
   final Map<String, String> options;
 
-  /// The correct option letter ('' when unknown — pre-grade saves).
+  /// The correct option letter ('' when unknown - pre-grade saves).
   final String correct;
 
   /// What the student picked ('' when reviewing an untouched paper).
@@ -156,7 +156,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                         style: RenanceText.sectionTitle.copyWith(fontSize: 19),
                       ),
                     ),
-                    // The Save pill — Myschool's bookmark position.
+                    // The Save pill - Myschool's bookmark position.
                     InkWell(
                       onTap: _toggleSave,
                       borderRadius: BorderRadius.circular(999),
@@ -247,7 +247,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                       ),
                     ],
                     const SizedBox(height: 18),
-                    // Options — green check on the correct one, red X on
+                    // Options - green check on the correct one, red X on
                     // a wrong pick, exactly the school app's grammar.
                     ...widget.options.entries.map<Widget>(
                       (MapEntry<String, String> opt) {
@@ -342,7 +342,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                             if (widget.explanation.trim().isEmpty)
                               Text(
                                 'No written explanation ships with this '
-                                'question yet — try the AI explanation below.',
+                                'question yet - try the AI explanation below.',
                                 style: RenanceText.bodySecondary.copyWith(
                                   fontSize: 13.5,
                                   color: context.textSecondary,
@@ -398,7 +398,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    // The AI pill — the same floating position Myschool
+                    // The AI pill - the same floating position Myschool
                     // puts "Get Myschool's AI Explanation".
                     if (widget.attemptId.isNotEmpty && graded)
                       Align(
@@ -454,7 +454,7 @@ class _ExplanationSheetState extends State<ExplanationSheet> {
                       ),
                     if (widget.attemptId.isNotEmpty && graded)
                       const SizedBox(height: 12),
-                    // Report + Previous/Next — the school app's footer.
+                    // Report + Previous/Next - the school app's footer.
                     Row(
                       children: <Widget>[
                         if (widget.onReport != null)
@@ -601,7 +601,7 @@ class _ReviewOption extends StatelessWidget {
 
 // -------------------------------------------------------------- AI sheet
 
-/// The AI Generated Explanation sheet — Myschool's cut: red close +
+/// The AI Generated Explanation sheet - Myschool's cut: red close +
 /// sparkle title, the amber "AI can make mistakes" notice, the solution
 /// walkthrough, the answer line. Content comes from the graded-attempt
 /// tutor endpoint; while it streams the sheet shows the thinking state.
