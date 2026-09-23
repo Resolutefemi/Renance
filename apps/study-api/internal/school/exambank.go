@@ -39,4 +39,6 @@ func ExamBank() []SeedExamQuestion {
 func init() {
 	extraBanks = append(extraBanks, examBankCivic...)
 	extraBanks = append(extraBanks, examBankSocial...)
+	extraBanks = append(extraBanks, examBankBasicTech...)
+	extraBanks = append(extraBanks, examBankComputer...)
 }
