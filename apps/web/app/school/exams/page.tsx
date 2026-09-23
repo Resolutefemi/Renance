@@ -280,7 +280,7 @@ export default function SchoolExamsPage() {
                 <thead>
                   <tr className="border-b border-outline-variant text-left text-xs uppercase tracking-wide text-on-surface-variant">
                     <th className="py-2 pr-3">Question</th>
-                    <th className="py-2 pr-3 text-right">Answers</th>
+                    <th className="py-2 pr-3 text-right">Answer</th>
                     {management && <th className="py-2" />}
                   </tr>
                 </thead>
@@ -310,7 +310,11 @@ export default function SchoolExamsPage() {
                         </span>
                         {q.explanation && <span className="mt-1 block text-xs italic text-on-surface-variant">{q.explanation}</span>}
                       </td>
-                      <td className="py-3 pr-3 text-right text-xs text-on-surface-variant">{q.options.length}</td>
+                      <td className="py-3 pr-3 text-right text-xs text-on-surface-variant">
+                        {q.answerIndex >= 0
+                          ? `Key: ${LETTERS[q.answerIndex] ?? q.answerIndex + 1}`
+                          : 'Key pending'}
+                      </td>
                       {management && (
                         <td className="py-3 text-right">
                           <button onClick={() => removeQuestion(q.id)} disabled={busy} className={btnSmall}>Drop</button>
