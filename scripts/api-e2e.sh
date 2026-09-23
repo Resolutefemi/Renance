@@ -673,10 +673,10 @@ ENG=$(printf '%s' "$SUBS" | jsonget "[s['id'] for s in d['subjects'] if s['name'
 step "school: enroll two students with full details"
 STUD1=$(curl -fsS -X POST "$BASE/school/students?schoolId=$SCHOOLID" \
   -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
-  -d "{\"classId\":\"$SSS1\",\"fullName\":\"Ada Obi\",\"admissionNo\":\"SS1-001\",\"sex\":\"F\",\"session\":\"2025/2026\"}" | jsonget "d['student']['id']")
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"fullName\":\"Ada Obi\",\"admissionNo\":\"SS1-001\",\"sex\":\"F\",\"session\":\"2025/2026\"}" | jsonget "d['student']['id']")
 STUD2=$(curl -fsS -X POST "$BASE/school/students?schoolId=$SCHOOLID" \
   -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
-  -d "{\"classId\":\"$SSS1\",\"fullName\":\"Bola Ade\",\"admissionNo\":\"SS1-002\",\"sex\":\"M\",\"session\":\"2025/2026\"}" | jsonget "d['student']['id']")
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"fullName\":\"Bola Ade\",\"admissionNo\":\"SS1-002\",\"sex\":\"M\",\"session\":\"2025/2026\"}" | jsonget "d['student']['id']")
 curl -fsS -X PUT "$BASE/school/student?schoolId=$SCHOOLID" \
   -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
   -d "{\"id\":\"$STUD1\",\"fullName\":\"Ada Obi\",\"dob\":\"2010-05-01\",\"guardianName\":\"Mrs Obi\",\"guardianPhone\":\"08030000001\",\"address\":\"12 Ada Street\"}" \
@@ -732,13 +732,13 @@ PYEOF
 step "school: fill results, finalize, PIN check"
 curl -fsS -X PUT "$BASE/school/result-item?schoolId=$SCHOOLID" \
   -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
-  -d "{\"studentId\":\"$STUD1\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"ca1\":15,\"ca2\":12,\"exam\":45}" >/dev/null
+  -d "{\"schoolId\":\"$SCHOOLID\",\"studentId\":\"$STUD1\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"ca1\":15,\"ca2\":12,\"exam\":45}" >/dev/null
 curl -fsS -X PUT "$BASE/school/result-item?schoolId=$SCHOOLID" \
   -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
-  -d "{\"studentId\":\"$STUD2\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"ca1\":10,\"ca2\":10,\"exam\":30}" >/dev/null
+  -d "{\"schoolId\":\"$SCHOOLID\",\"studentId\":\"$STUD2\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"ca1\":10,\"ca2\":10,\"exam\":30}" >/dev/null
 curl -fsS -X POST "$BASE/school/finalize?schoolId=$SCHOOLID" \
   -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
-  -d "{\"classId\":\"$SSS1\",\"term\":1,\"session\":\"2025/2026\"}" | jsonget "d['finalized']" | grep -q "^2$"
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"term\":1,\"session\":\"2025/2026\"}" | jsonget "d['finalized']" | grep -q "^2$"
 SHEET=$(curl -fsS "$BASE/school/result-sheet?schoolId=$SCHOOLID&studentId=$STUD1&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN")
 [ "$(printf '%s' "$SHEET" | jsonget "d['result']['status']")" = "finalized" ]
 [ "$(printf '%s' "$SHEET" | jsonget "d['result']['schoolName']")" = "$SCHOOLNAME" ]
