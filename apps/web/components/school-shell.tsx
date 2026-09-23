@@ -27,6 +27,8 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
     items: [
       { href: '/school/syllabus', label: 'Syllabus & Notes', icon: 'auto_stories' },
       { href: '/school/attendance', label: 'Attendance', icon: 'fact_check' },
+      { href: '/school/timetable', label: 'Timetable', icon: 'calendar_month' },
+      { href: '/school/exams', label: 'Exam Bank', icon: 'quiz' },
     ],
   },
   {
@@ -39,6 +41,13 @@ const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
   {
     label: 'Results',
     items: [{ href: '/school/results', label: 'Results', icon: 'workspace_premium' }],
+  },
+  {
+    label: 'Operations',
+    items: [
+      { href: '/school/fees', label: 'Fees', icon: 'payments' },
+      { href: '/school/idcards', label: 'ID Cards', icon: 'badge', managementOnly: true },
+    ],
   },
   {
     label: 'Administration',
