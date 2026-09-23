@@ -26,6 +26,7 @@ import {
   type SchoolClass,
   type SchoolStudent,
 } from '@/lib/school';
+import { downloadCSV } from '@/lib/school-export';
 
 // Attendance: the daily register. Staff mark the roster (or open the
 // kiosk and let pupils tap themselves in on a classroom screen); the
@@ -224,6 +225,27 @@ export default function SchoolAttendancePage() {
 
       {tab === 'register' ? (
         <Card>
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+            <p className="text-sm text-on-surface-variant">Rates for the selected range.</p>
+            <button
+              onClick={() =>
+                downloadCSV(
+                  `attendance-${from}-to-${to}.csv`,
+                  [
+                    ['Student', 'Present', 'Absent', 'Late', 'Excused', 'Total', 'Rate %'],
+                    ...summary.map((r) => [
+                      students.find((s) => s.id === r.studentId)?.fullName ?? r.studentId,
+                      r.present, r.absent, r.late, r.excused, r.total,
+                      Math.round(r.rate * 100),
+                    ]),
+                  ],
+                )
+              }
+              className={btnSmall}
+            >
+              Export CSV
+            </button>
+          </div>
           <div className="mb-4 grid gap-3 sm:grid-cols-3">
             <select className={selectCls} value={classId} onChange={(e) => setClassId(e.target.value)}>
               {classes.map((c) => (
