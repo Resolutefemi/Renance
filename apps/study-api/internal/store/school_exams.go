@@ -97,7 +97,7 @@ func (s *Store) AddExamQuestion(ctx context.Context, q *SchoolExamQuestion) (*Sc
                 VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
                 RETURNING id, school_id::text`,
 		q.SchoolID, q.SubjectID, q.Band, q.Term, q.Session, q.Question,
-		opts, q.AnswerIndex, q.Explanation, q.Marks, q.Source,
+		string(opts), q.AnswerIndex, q.Explanation, q.Marks, q.Source,
 	).Scan(&q.ID, &q.SchoolID)
 	if err != nil {
 		return nil, fmt.Errorf("store: add exam question: %w", err)
@@ -304,7 +304,7 @@ func (s *Store) SeedExamBank(ctx context.Context, schoolID string) (int, error) 
                               (school_id, subject_id, band, term, session, question, options,
                                answer_index, explanation, marks, source)
                         VALUES ($1, $2, $3, $4, '', $5, $6, $7, $8, 1, 'renance-original')`,
-			schoolID, subjectID, q.Band, q.Term, q.Question, opts, q.AnswerIndex, q.Explanation,
+			schoolID, subjectID, q.Band, q.Term, q.Question, string(opts), q.AnswerIndex, q.Explanation,
 		); err != nil {
 			return poured, fmt.Errorf("store: seed exam insert: %w", err)
 		}
