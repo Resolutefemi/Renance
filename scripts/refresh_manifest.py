@@ -86,7 +86,9 @@ def main() -> int:
         exam["totalMarks"] = bundle.get(
             "totalMarks", sum(int(q.get("marks", 1)) for q in qs)
         )
-        years = sorted({int(q["year"]) for q in qs if q.get("year")})
+        # Only real exam seasons count; stray small ints in bundle
+        # metadata (question numbers mislabeled as years) are dropped.
+        years = sorted({int(q["year"]) for q in qs if q.get("year") and 1970 <= int(q["year"]) <= 2100})
         if years:
             exam["years"] = years
         elif "years" in exam:
