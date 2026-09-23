@@ -267,3 +267,39 @@ and school identity, ready to print.
 
 Flips status: `{ cardId, status: issued | revoked }`. Lost cards are
 revoked, never deleted, so the serial history survives.
+
+## Timetable
+
+### GET /school/timetable?schoolId=&classId=
+
+One class week: `{ timetable: { classId, slots: [...], subjects: [...] } }`.
+Slots carry `day` (1 Monday to 5 Friday), `period`, `startTime`,
+`endTime`, `subjectId` and a free-text `label` for blocks like Break.
+`subjects` is the picker list the class offers.
+
+### POST /school/timetable  (MANAGEMENT)
+
+Replaces the whole week in one transaction: `{ classId, slots: [...] }`.
+Cells with no subject and no label are dropped.
+
+## Exam question bank
+
+### GET /school/exam-questions?schoolId=&subjectId=&term=&session=&band=
+
+Pours one pool (up to 500 questions, oldest first). `band` filters by
+`primary | junior | senior`; empty means all.
+
+### POST /school/exam-question
+
+Adds a question: `{ subjectId, band, term, session, question,
+options[2..6], answerIndex, explanation?, marks? }`. Source is tagged
+`school-original`. Double dashes are stripped.
+
+### DELETE /school/exam-question  (MANAGEMENT)
+
+Drops one question by id.
+
+### POST /school/seed-exam-bank  (MANAGEMENT)
+
+Pours the house starter bank (original questions per subject per
+term) into the pool. Response: `{ added }`; re-runs add nothing.
