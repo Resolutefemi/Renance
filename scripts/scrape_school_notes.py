@@ -300,6 +300,8 @@ def parse_edudelight(html: bytes, url: str):
 def run(source: str, max_pages: int):
     CACHE.mkdir(parents=True, exist_ok=True)
     configs = {
+        # Postponed per the founder: classnotes stays available explicitly
+        # but is out of the weekly rotation.
         "classnotes": {
             "host": "https://www.classnotes.ng",
             "sitemap": ["https://www.classnotes.ng/sitemap_index.xml"],
@@ -311,6 +313,12 @@ def run(source: str, max_pages: int):
             "sitemap": ["https://flashlearners.com/sitemap_index.xml"],
             "lesson": re.compile(r"flashlearners\.com/(jss|sss|primary|basic|english|math|civic|computer|business|social|agricul)"),
             "parser": parse_flashlearners,
+        },
+        "edudelight": {
+            "host": "https://edudelight.com",
+            "sitemap": ["https://edudelight.com/sitemap_index.xml", "https://edudelight.com/wp-sitemap.xml"],
+            "lesson": re.compile(r"edudelight\.com/(jss|sss|primary|basic|lesson|notes|class)"),
+            "parser": parse_edudelight,
         },
     }
     cfg = configs[source]
@@ -375,12 +383,15 @@ def run(source: str, max_pages: int):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--source", choices=["classnotes", "flashlearners"])
-    ap.add_argument("--all", action="store_true")
+    ap.add_argument("--source", choices=["classnotes", "flashlearners", "edudelight"])
+    ap.add_argument("--all", action="store_true", help="the active weekly sources (classnotes is postponed)")
     ap.add_argument("--max-pages", type=int, default=150)
     args = ap.parse_args()
-    sources = ["classnotes", "flashlearners"] if args.all else [args.source]
-    if not sources[0]:
+    # Active rotation: flashlearners + edudelight. classnotes is postponed
+    # until its robots/permissions posture is re-checked; it stays
+    # selectable with an explicit --source classnotes.
+    sources = ["flashlearners", "edudelight"] if args.all else ([args.source] if args.source else [])
+    if not sources:
         ap.error("pick --source or --all")
     for s in sources:
         try:
