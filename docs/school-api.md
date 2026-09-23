@@ -183,3 +183,49 @@ roster and the classroom kiosk can both write.
 
 Per-student roll-up over a date range: present, absent, late,
 excused, total and rate.
+
+## Results
+
+### PUT /school/result-item
+
+Fills one score cell: `{ studentId, classId, subjectId, term, session,
+ca1, ca2, exam }`. The server computes total, grade and remark;
+teachers may only write subjects assigned to them.
+
+### GET /school/results?schoolId=&classId=&term=&session=
+
+The class grid: one result per student with their subject items.
+
+### POST /school/finalize  (MANAGEMENT)
+
+Seals the term: positions, class averages and teacher/principal
+remarks are computed, and each student gets a 6-digit result PIN.
+Response: `{ finalized }`.
+
+### GET /school/result-sheet?schoolId=&studentId=&term=&session=
+
+One report card with the school name and logo stamped.
+
+### GET /school/check-result?pin=&term=&session=
+
+PUBLIC. The PIN checker parents use: returns the finalized report
+card for a PIN, term and session.
+
+## Fees
+
+### GET /school/fees?schoolId=&term=&session=
+
+Priced charges for a term: `{ fees: [{ id, classId, className, title,
+description, amountKobo, term, session, seq }] }`. `classId` empty
+means the charge applies to every class.
+
+### PUT /school/fee  (MANAGEMENT)
+
+Prices or re-prices a charge: `{ classId, title, description,
+amountNaira, term, session, seq? }`. Amounts arrive as naira strings
+and are stored as integer kobo.
+
+### DELETE /school/fee  (MANAGEMENT)
+
+Removes a charge with no receipts. A fee that already has payments
+answers 409 and stays on the ledger.
