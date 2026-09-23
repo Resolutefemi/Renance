@@ -149,6 +149,11 @@ func (s *Server) handleSchoolBulkExamQuestions(w http.ResponseWriter, r *http.Re
                         AnswerIndex int      `json:"answerIndex"`
                         Explanation string   `json:"explanation"`
                         Marks       int      `json:"marks"`
+		// Provenance fields the corpora carry per question; accepted so
+		// a pour can post its rows verbatim. The corpus-level source is
+		// what the bank stores.
+		Source    string `json:"source"`
+		SourceURL string `json:"sourceUrl"`
                 } `json:"questions"`
         }
         if !decodeJSON(w, r, &req) {
