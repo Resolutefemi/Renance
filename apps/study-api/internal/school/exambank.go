@@ -38,6 +38,7 @@ func ExamBank() []SeedExamQuestion {
 // first three core files; each lands in its own file under this
 // package and joins the pour here.
 func init() {
+	extraBanks = append(extraBanks, examBankJuniorP2...)
 	extraBanks = append(extraBanks, examBankCivic...)
 	extraBanks = append(extraBanks, examBankCivicP2...)
 	extraBanks = append(extraBanks, examBankSocial...)
