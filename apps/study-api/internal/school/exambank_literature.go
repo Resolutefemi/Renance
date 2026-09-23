@@ -55,3 +55,22 @@ var examBankLiterature = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Alliteration repeats opening sounds, like wild winds."},
 }
+
+// Part two: three more per term for the pool.
+var examBankLiteratureP2 = []SeedExamQuestion{
+        {SubjectCode: "LIT", Band: "senior", Term: 1,
+                Question:    "The narrator who says I and tells the story from inside it is:",
+                Options:     [4]string{"Third-person omniscient", "First-person narrator", "An invisible author", "A chorus"},
+                AnswerIndex: 1,
+                Explanation: "First-person narration filters every event through one teller."},
+        {SubjectCode: "LIT", Band: "senior", Term: 2,
+                Question:    "A fourteen-line poem with a fixed rhyme scheme is a:",
+                Options:     [4]string{"Sonnet", "Elegy", "Ballad", "Dirge"},
+                AnswerIndex: 0,
+                Explanation: "Sonnets run fourteen lines, Petrarchan or Shakespearean."},
+        {SubjectCode: "LIT", Band: "senior", Term: 3,
+                Question:    "A reference within a text to another well-known work is a(n):",
+                Options:     [4]string{"Allusion", "Illusion", "Anachronism", "Allegory"},
+                AnswerIndex: 0,
+                Explanation: "Allusion borrows the weight of the other text."},
+}
