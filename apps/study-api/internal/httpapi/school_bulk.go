@@ -149,11 +149,11 @@ func (s *Server) handleSchoolBulkExamQuestions(w http.ResponseWriter, r *http.Re
                         AnswerIndex int      `json:"answerIndex"`
                         Explanation string   `json:"explanation"`
                         Marks       int      `json:"marks"`
-		// Provenance fields the corpora carry per question; accepted so
-		// a pour can post its rows verbatim. The corpus-level source is
-		// what the bank stores.
-		Source    string `json:"source"`
-		SourceURL string `json:"sourceUrl"`
+                // Provenance fields the corpora carry per question; accepted so
+                // a pour can post its rows verbatim. The corpus-level source is
+                // what the bank stores.
+                Source    string `json:"source"`
+                SourceURL string `json:"sourceUrl"`
                 } `json:"questions"`
         }
         if !decodeJSON(w, r, &req) {
@@ -188,6 +188,7 @@ func (s *Server) handleSchoolBulkExamQuestions(w http.ResponseWriter, r *http.Re
         }
 
         written := 0
+        lastErr := ""
         for i := range req.Questions {
                 q := &req.Questions[i]
                 q.Question = stripDoubleDashes(strings.TrimSpace(q.Question))
@@ -226,11 +227,20 @@ func (s *Server) handleSchoolBulkExamQuestions(w http.ResponseWriter, r *http.Re
                         Source:      source,
                 }); err != nil {
                         s.log.Error("bulk exam question", "err", err)
+                        if lastErr == "" {
+                                lastErr = err.Error()
+                        }
                         continue
                 }
                 written++
         }
-        writeJSON(w, http.StatusOK, map[string]any{
+        resp := map[string]any{
                 "received": len(req.Questions), "written": written,
-        })
+        }
+        // Surface the first store failure so a pour can debug without
+        // server logs; empty when every row landed.
+        if lastErr != "" {
+                resp["lastError"] = lastErr
+        }
+        writeJSON(w, http.StatusOK, resp)
 }
