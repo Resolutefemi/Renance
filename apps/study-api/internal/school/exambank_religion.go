@@ -148,3 +148,58 @@ var examBankFrench = []SeedExamQuestion{
 		AnswerIndex: 0,
 		Explanation: "Ca va bien answers the health greeting."},
 }
+
+// Part two: three more per term per subject.
+var examBankCRSP2 = []SeedExamQuestion{
+        {SubjectCode: "CRS", Band: "junior", Term: 1,
+                Question:    "The shepherd boy anointed to be king of Israel was:",
+                Options:     [4]string{"David", "Saul", "Solomon", "Samuel"},
+                AnswerIndex: 0,
+                Explanation: "Samuel anointed David while Saul still reigned."},
+        {SubjectCode: "CRS", Band: "junior", Term: 2,
+                Question:    "The wisdom book of the Bible that opens with The fear of the LORD is:",
+                Options:     [4]string{"Proverbs", "Ruth", "Esther", "Jonah"},
+                AnswerIndex: 0,
+                Explanation: "Proverbs anchors wisdom in reverence for God."},
+        {SubjectCode: "CRS", Band: "junior", Term: 3,
+                Question:    "Jesus fed five thousand with five loaves and:",
+                Options:     [4]string{"Two fish", "One lamb", "Seven grapes", "Ten eggs"},
+                AnswerIndex: 0,
+                Explanation: "The feeding miracle used five loaves and two fish."},
+}
+
+var examBankIRSP2 = []SeedExamQuestion{
+        {SubjectCode: "IRS", Band: "junior", Term: 1,
+                Question:    "The Prophet of Islam was born in the city of:",
+                Options:     [4]string{"Mecca", "Medina", "Cairo", "Baghdad"},
+                AnswerIndex: 0,
+                Explanation: "Muhammad was born in Mecca around 570 CE."},
+        {SubjectCode: "IRS", Band: "junior", Term: 2,
+                Question:    "The chapters of the Qur'an are called:",
+                Options:     [4]string{"Surahs", "Hadiths", "Ayats", "Sunnahs"},
+                AnswerIndex: 0,
+                Explanation: "Surahs are the chapters; verses are ayats."},
+        {SubjectCode: "IRS", Band: "junior", Term: 3,
+                Question:    "The command to fast during Ramadan is found in the month's revelation about:",
+                Options:     [4]string{"Guidance", "Trade", "War", "Farming"},
+                AnswerIndex: 0,
+                Explanation: "The fasting verses tie the month to guidance for mankind."},
+}
+
+var examBankFrenchP2 = []SeedExamQuestion{
+        {SubjectCode: "FRE", Band: "junior", Term: 1,
+                Question:    "The French word for thank you is:",
+                Options:     [4]string{"Merci", "Bonjour", "Salut", "Non"},
+                AnswerIndex: 0,
+                Explanation: "Merci is the everyday thank-you."},
+        {SubjectCode: "FRE", Band: "junior", Term: 2,
+                Question:    "Nous means:",
+                Options:     [4]string{"We", "They", "You", "He"},
+                AnswerIndex: 0,
+                Explanation: "Nous is the first-person plural pronoun."},
+        {SubjectCode: "FRE", Band: "junior", Term: 3,
+                Question:    "The colour blanc in English is:",
+                Options:     [4]string{"White", "Black", "Blue", "Green"},
+                AnswerIndex: 0,
+                Explanation: "Blanc is white, as on the Nigerian flag's band."},
+}
