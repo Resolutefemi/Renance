@@ -275,6 +275,28 @@ def parse_flashlearners(html: bytes, url: str):
     }
 
 
+def parse_edudelight(html: bytes, url: str):
+    """edudelight.com lesson notes (WordPress). Same respectful rules as
+    the other adapters: robots.txt is honored upstream in fetch(), every
+    topic keeps its source URL, and the long-hyphen rule applies."""
+    text = html.decode("utf-8", errors="replace")
+    slug, cls, subj, term = slug_fields(url)
+    if not (cls and subj):
+        return None
+    content = entry_content(text)
+    if len(content) < 200:
+        return None
+    return {
+        "class": cls,
+        "subject": subj,
+        "term": term,
+        "title": subj + " - " + cls + " (edudelight)",
+        "content": content[:20000],
+        "source": "edudelight.com",
+        "sourceUrl": url,
+    }
+
+
 def run(source: str, max_pages: int):
     CACHE.mkdir(parents=True, exist_ok=True)
     configs = {
