@@ -55,3 +55,22 @@ var examBankGovernment = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "The Auditor-General checks public accounts for the nation."},
 }
+
+// Part two: three more per term, tagged for the pool draw.
+var examBankGovernmentP2 = []SeedExamQuestion{
+        {SubjectCode: "GOV", Band: "senior", Term: 1,
+                Question:    "Power that the people withdraw through elections is best described as:",
+                Options:     [4]string{"Hereditary power", "Constituent power", "Military power", "Traditional power"},
+                AnswerIndex: 1,
+                Explanation: "Constituent power rests with the electorate who choose and remove."},
+        {SubjectCode: "GOV", Band: "senior", Term: 2,
+                Question:    "A confederation differs from a federation because member states:",
+                Options:     [4]string{"Surrender all powers", "Keep most powers", "Have no laws", "Share one army"},
+                AnswerIndex: 1,
+                Explanation: "Confederal units retain sovereignty; federations share it durably."},
+        {SubjectCode: "GOV", Band: "senior", Term: 3,
+                Question:    "The 1999 constitution of Nigeria was preceded by a transition programme under:",
+                Options:     [4]string{"General Abdulsalami Abubakar", "General Gowon", "Chief Awolowo", "Nnamdi Azikiwe"},
+                AnswerIndex: 0,
+                Explanation: "The 1998-1999 transition under Abdulsalami restored civilian rule."},
+}
