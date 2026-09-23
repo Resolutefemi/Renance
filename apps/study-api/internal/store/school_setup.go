@@ -378,6 +378,9 @@ type BulkTopic struct {
 	Week    int    `json:"week"`
 	Content string `json:"content"`
 	Source  string `json:"source"`
+	// Provenance URL the corpora carry per topic; accepted so a pour
+	// can post its rows verbatim. Stored provenance stays in source.
+	SourceURL string `json:"sourceUrl"`
 }
 
 // BulkUpsertTopics imports a whole topic list into one class+subject+
