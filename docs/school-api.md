@@ -303,3 +303,41 @@ Drops one question by id.
 
 Pours the house starter bank (original questions per subject per
 term) into the pool. Response: `{ added }`; re-runs add nothing.
+
+### GET /school/exams?schoolId=&term=&session=
+
+Published papers for a term: `{ exams: [{ id, classId, className,
+subjectId, subjectName, title, durationMinutes, questionCount,
+status }] }`.
+
+### POST /school/exam  (MANAGEMENT)
+
+Publishes a paper: `{ classId, subjectId, term, session, title?,
+durationMinutes?, questionCount? }`. Republishing the same
+class+subject+term updates the composition.
+
+### GET /school/exam-paper?schoolId=&id=
+
+Draws the paper: `{ exam, questions }`. The draw picks
+`question_count` questions at random from the pool matching the
+class's band, subject and term, so a print run is self-consistent.
+
+## Offline pack
+
+### GET /school/pack/{schoolId}
+
+The whole read-only school pack for the mobile app: school identity,
+classes, subjects, every syllabus with scheme of work + topics +
+notes, and the exam question pool. The version string fingerprints
+topic count and last update so the app can refresh.
+
+## Errors
+
+| Status | Code | Meaning |
+| --- | --- | --- |
+| 400 | missing_params | a required field or query is missing |
+| 401 | unauthorized | no or bad bearer token |
+| 403 | not_a_member | caller is not an active member of the school |
+| 403 | teacher_role | the desk is management-only |
+| 404 | school_not_found | unknown school or id |
+| 409 | has_payments | the fee already has receipts and cannot be deleted |
