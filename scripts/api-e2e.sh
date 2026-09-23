@@ -696,6 +696,12 @@ curl -fsS -X POST "$BASE/school/attendance?schoolId=$SCHOOLID" \
   -d "{\"classId\":\"$SSS1\",\"day\":\"$TODAY\",\"entries\":[{\"studentId\":\"$STUD1\",\"status\":\"present\",\"note\":\"\"},{\"studentId\":\"$STUD2\",\"status\":\"late\",\"note\":\"traffic\"}]}" \
   | jsonget "d['saved']" | grep -q "^2$"
 [ "$(curl -fsS "$BASE/school/attendance?schoolId=$SCHOOLID&classId=$SSS1&day=$TODAY" -H "Authorization: Bearer $STOKEN" | jsonget "len(d['entries'])")" = "2" ]
+# re-marking the same day is an upsert: one student flips to late, count stays 2
+curl -fsS -X POST "$BASE/school/attendance?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"day\":\"$TODAY\",\"entries\":[{\"studentId\":\"$STUD1\",\"status\":\"late\",\"note\":\"traffic\"},{\"studentId\":\"$STUD2\",\"status\":\"present\",\"note\":\"\"}]}" >/dev/null
+curl -fsS "$BASE/school/attendance?schoolId=$SCHOOLID&classId=$SSS1&day=$TODAY" -H "Authorization: Bearer $STOKEN" \
+  | jsonget "[e for e in d['entries'] if e['studentId']=='$STUD1'][0]['status']" | grep -q "late"
 curl -fsS "$BASE/school/attendance-summary?schoolId=$SCHOOLID&classId=$SSS1&from=$TODAY&to=$TODAY" \
   -H "Authorization: Bearer $STOKEN" | jsonget "[r for r in d['summary'] if r['studentId']=='$STUD1'][0]['rate']" | grep -q "^100$"
 
@@ -817,6 +823,13 @@ EXAM=$(curl -fsS -X POST "$BASE/school/exam?schoolId=$SCHOOLID" \
 PAPER=$(curl -fsS "$BASE/school/exam-paper?schoolId=$SCHOOLID&id=$EXAM" -H "Authorization: Bearer $STOKEN")
 [ "$(printf '%s' "$PAPER" | jsonget "len(d['questions'])")" = "4" ]
 printf '%s' "$PAPER" | jsonget "d['exam']['className']" | grep -q "SSS 1"
+# republishing the same class+subject+term updates instead of duplicating
+curl -fsS -X POST "$BASE/school/exam?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"classId\":\"$SSS1\",\"subjectId\":\"$ENG\",\"term\":1,\"session\":\"2025/2026\",\"title\":\"E2E paper v2\",\"durationMinutes\":50,\"questionCount\":3}" >/dev/null
+[ "$(curl -fsS "$BASE/school/exams?schoolId=$SCHOOLID&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN" | jsonget "len(d['exams'])")" = "1" ]
+curl -fsS "$BASE/school/exams?schoolId=$SCHOOLID&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN" \
+  | jsonget "d['exams'][0]['questionCount']" | grep -q "^3$"
 # double-dash input is stored clean
 curl -fsS -X POST "$BASE/school/exam-question?schoolId=$SCHOOLID" \
   -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
