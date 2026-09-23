@@ -824,4 +824,14 @@ curl -fsS -X POST "$BASE/school/exam-question?schoolId=$SCHOOLID" \
 curl -fsS "$BASE/school/exam-questions?schoolId=$SCHOOLID&subjectId=$ENG&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN" \
   | jsonget "[q for q in d['questions'] if 'Dash test' in q['question']][0]['question']" | grep -q "Dash test - still clean?"
 
+step "school: seed schemes drafts NERDC weeks into empty syllabuses"
+# the curriculum was seeded earlier; class+subject pairs exist. The
+# seed creates syllabuses for the session and drafts week topics.
+[ "$(curl -fsS -X POST "$BASE/school/seed-schemes?schoolId=$SCHOOLID" \
+  -H "Authorization: Bearer $STOKEN" -H 'Content-Type: application/json' \
+  -d "{\"schoolId\":\"$SCHOOLID\",\"session\":\"2025/2026\"}" | jsonget "d['filled']")" -ge "1" ]
+# a syllabus now carries a scheme row with week 1
+SYL=$(curl -fsS "$BASE/school/syllabus?schoolId=$SCHOOLID&classId=$SSS1&subjectId=$ENG" -H "Authorization: Bearer $STOKEN")
+printf '%s' "$SYL" | jsonget "d['terms'][0]['schemeOfWork'][0]['topic']" | grep -qE "."
+
 printf 'ALL E2E STEPS GREEN — %s\n' "$BASE"
