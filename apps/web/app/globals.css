@@ -1036,6 +1036,15 @@ html[data-rail='collapsed'] {
 .school-stat-value { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: #0a0a0a; }
 .school-stat-label { font-size: 13px; color: #5c5c5c; margin-top: 2px; }
 
+/* The ID card face prints exactly as drawn: black on white, no browser
+   colour stripping, page margins tight enough for three cards across. */
+.ren-card-face {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
 @media print {
   .school-no-print { display: none !important; }
+  .ren-card-face { break-inside: avoid; page-break-inside: avoid; }
+  @page { margin: 12mm; }
 }
