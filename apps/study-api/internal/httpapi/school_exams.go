@@ -162,6 +162,26 @@ func (s *Server) handleSchoolDeleteExamQuestion(w http.ResponseWriter, r *http.R
 	writeJSON(w, http.StatusOK, map[string]any{"ok": true})
 }
 
+// POST /school/seed-exam-bank?schoolId= - management pours the
+// original starter questions into the pool. Idempotent: questions
+// already present are skipped, so the button can be tapped safely.
+func (s *Server) handleSchoolSeedExamBank(w http.ResponseWriter, r *http.Request) {
+	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
+	if !ok {
+		return
+	}
+	if !s.requireManagement(w, m) {
+		return
+	}
+	poured, err := s.store.SeedExamBank(r.Context(), m.SchoolID)
+	if err != nil {
+		s.log.Error("seed exam bank", "err", err)
+		fail(w, http.StatusInternalServerError, "internal", "could not pour the starter questions")
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"added": poured})
+}
+
 // GET /school/exams?schoolId=&term=&session= lists published papers.
 func (s *Server) handleSchoolExams(w http.ResponseWriter, r *http.Request) {
 	m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
