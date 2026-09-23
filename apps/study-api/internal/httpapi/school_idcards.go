@@ -63,6 +63,38 @@ func (s *Server) handleSchoolIssueCard(w http.ResponseWriter, r *http.Request) {
         writeJSON(w, http.StatusOK, map[string]any{"card": card})
 }
 
+// POST /school/id-cards?schoolId= - batch issue: every active student
+// in scope who lacks a card for the session gets one. Existing cards
+// stay; the count says how many gaps were filled.
+func (s *Server) handleSchoolIssueCardsBatch(w http.ResponseWriter, r *http.Request) {
+        m, _, ok := s.memberAndSchool(w, r, r.URL.Query().Get("schoolId"))
+        if !ok {
+                return
+        }
+        if !s.requireManagement(w, m) {
+                return
+        }
+        var req struct {
+                ClassID string `json:"classId"`
+                Session string `json:"session"`
+        }
+        if !decodeJSON(w, r, &req) {
+                return
+        }
+        req.Session = strings.TrimSpace(req.Session)
+        if req.Session == "" {
+                fail(w, http.StatusBadRequest, "missing_params", "session is required")
+                return
+        }
+        issued, err := s.store.IssueIDCardsBatch(r.Context(), m.SchoolID, strings.TrimSpace(req.ClassID), req.Session, m.UserID)
+        if err != nil {
+                s.log.Error("batch issue cards", "err", err)
+                fail(w, http.StatusInternalServerError, "internal", "could not issue every card")
+                return
+        }
+        writeJSON(w, http.StatusOK, map[string]any{"issued": issued})
+}
+
 // PUT /school/id-card?schoolId - management flips a card's status
 // (issued / revoked) when a card is lost or found again.
 func (s *Server) handleSchoolCardStatus(w http.ResponseWriter, r *http.Request) {
