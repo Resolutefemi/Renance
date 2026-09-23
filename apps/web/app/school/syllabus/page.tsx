@@ -14,6 +14,7 @@ import {
   type SchoolSyllabus,
   type SchoolTopic,
   type SchemeRow,
+  seedSchemes,
 } from '@/lib/school';
 import { downloadTopicPdf } from '@/lib/note-pdf';
 
@@ -135,12 +136,40 @@ export default function SchoolSyllabusPage() {
         }
       : null;
 
+  async function draftSchemes() {
+    const a = getActiveSchool();
+    if (!a) return;
+    setSeeding(true);
+    setNotice('');
+    try {
+      const res = await seedSchemes(a.schoolId, session);
+      setNotice(`Drafted ${res.filled} scheme${res.filled === 1 ? '' : 's'} for ${session}.`);
+    } catch {
+      setNotice('Could not draft the schemes.');
+    } finally {
+      setSeeding(false);
+    }
+  }
+
   return (
     <SchoolShell title="Syllabus & Notes">
       <SchoolHeading
         title="Syllabus, scheme of work & notes"
         sub="Pick a class and subject. Each term holds the weekly scheme, topics and the note under every topic - download any topic's note as a clean black & white PDF."
       />
+
+      <div className="mb-4 flex flex-wrap items-center gap-2">
+        <input
+          value={session}
+          onChange={(e) => setSession(e.target.value)}
+          placeholder="Session (2025/2026)"
+          className={`${inputCls} h-11 w-auto min-w-40`}
+          aria-label="Session"
+        />
+        <button onClick={draftSchemes} disabled={seeding || !active || active.role !== 'management'} className={btnPrimary}>
+          {seeding ? 'Drafting…' : 'Draft empty schemes'}
+        </button>
+      </div>
 
       <div className="mb-6 grid gap-3 md:grid-cols-2">
         <select className={selectCls} value={classId} onChange={(e) => setClassId(e.target.value)}>
