@@ -55,3 +55,22 @@ var examBankCivic = []SeedExamQuestion{
 		AnswerIndex: 1,
 		Explanation: "Integrity means honesty plus consistency between word and action."},
 }
+
+// Part two: three more per term.
+var examBankCivicP2 = []SeedExamQuestion{
+        {SubjectCode: "CIV", Band: "junior", Term: 1,
+                Question:    "The yellow colour on the Nigerian coat of arms represents:",
+                Options:     [4]string{"The nation's flower", "The plains and deserts", "The seas", "The sky"},
+                AnswerIndex: 1,
+                Explanation: "The coat of arms band blends colours of the plains and deserts."},
+        {SubjectCode: "CIV", Band: "junior", Term: 2,
+                Question:    "A responsible parent provides the family with:",
+                Options:     [4]string{"Needs like food and shelter", "Only phones", "Only games", "Nothing"},
+                AnswerIndex: 0,
+                Explanation: "Family welfare begins with meeting basic needs."},
+        {SubjectCode: "CIV", Band: "junior", Term: 3,
+                Question:    "National service that builds unity among graduates is:",
+                Options:     [4]string{"NYSC", "JAMB", "WAEC", "NEPA"},
+                AnswerIndex: 0,
+                Explanation: "The NYSC scheme posts graduates across states to serve."},
+}
