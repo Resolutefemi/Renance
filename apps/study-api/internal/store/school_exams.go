@@ -367,7 +367,8 @@ func (s *Store) SeedSchemes(ctx context.Context, schoolID, session string) (int,
 	pairs, err := s.Pool.Query(ctx, `
 		SELECT cs.class_id::text, cs.subject_id::text
 		FROM school.class_subjects cs
-		WHERE cs.school_id = $1`, schoolID)
+		JOIN school.classes cl ON cl.id = cs.class_id
+		WHERE cl.school_id = $1`, schoolID)
 	if err != nil {
 		return 0, fmt.Errorf("store: scheme seed pairs: %w", err)
 	}
