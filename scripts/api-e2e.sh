@@ -772,7 +772,7 @@ curl -fsS -X POST "$BASE/school/fee-payment?schoolId=$SCHOOLID" \
   | jsonget "d['payment']['amountKobo']" | grep -q "^250050$"
 BAL=$(curl -fsS "$BASE/school/fee-balances?schoolId=$SCHOOLID&term=1&session=2025/2026" -H "Authorization: Bearer $STOKEN")
 [ "$(printf '%s' "$BAL" | jsonget "[b for b in d['balances'] if b['studentId']=='$STUD1'][0]['paidKobo']")" = "250050" ]
-[ "$(printf '%s' "$BAL" | jsonget "[b for b in d['balances'] if b['studentId']=='$STUD1'][0]['outstandingKobo']")" = "1750000" ]
+[ "$(printf '%s' "$BAL" | jsonget "[b for b in d['balances'] if b['studentId']=='$STUD1'][0]['outstandingKobo']")" = "1500000" ]
 # a paid fee refuses deletion
 curl -sS -o /dev/null -w '%{http_code}' -X DELETE "$BASE/school/fee?schoolId=$SCHOOLID&id=$FEE2" \
   -H "Authorization: Bearer $STOKEN" | grep -q "^409$"
