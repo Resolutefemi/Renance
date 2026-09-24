@@ -1,13 +1,17 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "python3 scripts/web_bundles.py && pnpm --filter @renance/web exec next build",
+  "buildCommand": "python3 scripts/web_bundles.py && pnpm --filter @renance/web exec next build && rm -rf apps/web/out/pdfs",
   "outputDirectory": "apps/web/out",
   "trailingSlash": true,
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "https://renance-api.onrender.com/:path*"
+    },
+    {
+      "source": "/pdfs/:path*",
+      "destination": "https://resolutefemi.github.io/Renance/pdfs/:path*"
     }
   ],
   "env": {
