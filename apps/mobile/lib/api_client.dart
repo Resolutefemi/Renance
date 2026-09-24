@@ -543,4 +543,138 @@ class ApiClient {
     ) as Map<dynamic, dynamic>;
     return SchoolPack.fromJson(data.cast<String, dynamic>());
   }
+
+  /// The school's classes (with enrolled counts) for the roster pickers.
+  Future<List<SchoolClassInfo>> schoolClasses(String schoolId) async {
+    final data = await _send(
+      'GET',
+      '/school/classes?schoolId=${Uri.encodeComponent(schoolId)}',
+    ) as Map<dynamic, dynamic>;
+    return ((data['classes'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            SchoolClassInfo.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// The enrolled students of one class (or the whole school). Any staff
+  /// member may read the roster; writes stay management-only.
+  Future<List<SchoolStudentModel>> schoolStudents(
+    String schoolId, {
+    String classId = '',
+  }) async {
+    final data = await _send(
+      'GET',
+      '/school/students?schoolId=${Uri.encodeComponent(schoolId)}'
+      '&classId=${Uri.encodeComponent(classId)}',
+    ) as Map<dynamic, dynamic>;
+    return ((data['students'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) =>
+            SchoolStudentModel.fromJson((e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// Enroll one student with full details (management only).
+  Future<SchoolStudentModel> schoolCreateStudent(
+    String schoolId, {
+    required String classId,
+    required String fullName,
+    required String admissionNo,
+    required String sex,
+    required String session,
+    String dob = '',
+    String guardianName = '',
+    String guardianPhone = '',
+    String address = '',
+  }) async {
+    final data = await _send(
+      'POST',
+      '/school/students?schoolId=${Uri.encodeComponent(schoolId)}',
+      body: <String, dynamic>{
+        'schoolId': schoolId,
+        'classId': classId,
+        'fullName': fullName,
+        'admissionNo': admissionNo,
+        'sex': sex,
+        'session': session,
+        'dob': dob,
+        'guardianName': guardianName,
+        'guardianPhone': guardianPhone,
+        'address': address,
+      },
+    ) as Map<dynamic, dynamic>;
+    return SchoolStudentModel.fromJson(
+        ((data['student'] ?? const <String, dynamic>{}) as Map)
+            .cast<String, dynamic>());
+  }
+
+  /// Edit one student's details (management only).
+  Future<SchoolStudentModel> schoolUpdateStudent(
+    String schoolId,
+    SchoolStudentModel student,
+  ) async {
+    final data = await _send(
+      'PUT',
+      '/school/student?schoolId=${Uri.encodeComponent(schoolId)}',
+      body: student.toJson(),
+    ) as Map<dynamic, dynamic>;
+    return SchoolStudentModel.fromJson(
+        ((data['student'] ?? const <String, dynamic>{}) as Map)
+            .cast<String, dynamic>());
+  }
+
+  /// One day's register for a class: empty list = nothing marked yet.
+  Future<List<AttendanceEntryModel>> attendanceDay(
+    String schoolId,
+    String classId,
+    String day,
+  ) async {
+    final data = await _send(
+      'GET',
+      '/school/attendance?schoolId=${Uri.encodeComponent(schoolId)}'
+      '&classId=${Uri.encodeComponent(classId)}&day=${Uri.encodeComponent(day)}',
+    ) as Map<dynamic, dynamic>;
+    return ((data['entries'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => AttendanceEntryModel.fromJson(
+            (e as Map).cast<String, dynamic>()))
+        .toList();
+  }
+
+  /// Save (or re-mark) a day's register. Management may mark any class;
+  /// a teacher only the classes assigned to them.
+  Future<int> saveAttendance(
+    String schoolId,
+    String classId,
+    String day,
+    List<AttendanceEntryModel> entries,
+  ) async {
+    final data = await _send(
+      'POST',
+      '/school/attendance?schoolId=${Uri.encodeComponent(schoolId)}',
+      body: <String, dynamic>{
+        'classId': classId,
+        'day': day,
+        'entries': entries.map((AttendanceEntryModel e) => e.toJson()).toList(),
+      },
+    ) as Map<dynamic, dynamic>;
+    return (data['saved'] ?? 0) as int;
+  }
+
+  /// Attendance rates per student across a date window.
+  Future<List<AttendanceSummaryRowModel>> attendanceSummary(
+    String schoolId,
+    String classId,
+    String from,
+    String to,
+  ) async {
+    final data = await _send(
+      'GET',
+      '/school/attendance-summary?schoolId=${Uri.encodeComponent(schoolId)}'
+      '&classId=${Uri.encodeComponent(classId)}'
+      '&from=${Uri.encodeComponent(from)}&to=${Uri.encodeComponent(to)}',
+    ) as Map<dynamic, dynamic>;
+    return ((data['summary'] ?? const <dynamic>[]) as List<dynamic>)
+        .map((dynamic e) => AttendanceSummaryRowModel.fromJson(
+            (e as Map).cast<String, dynamic>()))
+        .toList();
+  }
 }
