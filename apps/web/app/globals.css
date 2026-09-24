@@ -826,6 +826,15 @@ html[data-rail='collapsed'] {
   transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .feature-card:hover .feature-icon { transform: scale(1.12) rotate(-6deg); }
+/* Chip tiles that carry BOTH classes: the unlayered ligature rule above
+   sets display:inline-block, which out-ranks any layered Tailwind utility
+   (flex/grid + items/justify-center) and parks the glyph top-left inside
+   its tile. Centering therefore lives here, in a compound rule the
+   utility layer can never out-rank. */
+.chip-icon,
+.chip-icon.material-symbols-outlined {
+  display: grid; place-items: center;
+}
 .feature-icon.material-symbols-outlined {
   font-size: 1.4rem;
   line-height: 1;

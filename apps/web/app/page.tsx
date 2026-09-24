@@ -468,7 +468,7 @@ export default function Landing() {
                   className="rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 backdrop-blur-sm transition hover:bg-white/[0.1]"
                 >
                   <span
-                    className="material-symbols-outlined flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#111c2d]"
+                    className="chip-icon material-symbols-outlined h-10 w-10 rounded-xl bg-white text-[#111c2d]"
                     aria-hidden
                   >
                     {f.icon}
