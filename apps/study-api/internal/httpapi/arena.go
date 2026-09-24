@@ -45,30 +45,36 @@ func (ps *packSource) PickPack(body string) (string, []arena.QView, map[string]s
 	if len(candidates) == 0 {
 		return "", nil, nil, false
 	}
-	pick := candidates[ps.rnd.Intn(len(candidates))]
-	bundle, ok := ps.lib.Bundle(pick.Code)
-	if !ok {
-		return "", nil, nil, false
-	}
-	keymap, hasKey := ps.keys.Get(pick.Code)
-	if !hasKey {
-		return "", nil, nil, false
-	}
-
-	qs := make([]arena.QView, 0, len(bundle.Questions))
-	key := make(map[string]string, len(keymap))
-	for _, q := range bundle.Questions {
-		ke, scored := keymap[q.ID]
-		if !scored || ke.Letter == "" {
-			continue // unscorable question, never enters a live match
+	// A candidate whose key exists but carries no usable letters would
+	// strand the match, so shuffle the pool and keep trying until one
+	// pack yields scorable questions.
+	perm := ps.rnd.Perm(len(candidates))
+	for _, idx := range perm {
+		pick := candidates[idx]
+		bundle, ok := ps.lib.Bundle(pick.Code)
+		if !ok {
+			continue
 		}
-		qs = append(qs, arena.QView{ID: q.ID, Stem: q.Stem, Options: q.Options, Marks: q.Marks})
-		key[q.ID] = ke.Letter
+		keymap, hasKey := ps.keys.Get(pick.Code)
+		if !hasKey {
+			continue
+		}
+		qs := make([]arena.QView, 0, len(bundle.Questions))
+		key := make(map[string]string, len(keymap))
+		for _, q := range bundle.Questions {
+			ke, scored := keymap[q.ID]
+			if !scored || ke.Letter == "" {
+				continue // unscorable question, never enters a live match
+			}
+			qs = append(qs, arena.QView{ID: q.ID, Stem: q.Stem, Options: q.Options, Marks: q.Marks})
+			key[q.ID] = ke.Letter
+		}
+		if len(qs) == 0 {
+			continue
+		}
+		return pick.Code, qs, key, true
 	}
-	if len(qs) == 0 {
-		return "", nil, nil, false
-	}
-	return pick.Code, qs, key, true
+	return "", nil, nil, false
 }
 
 // arenaSink bridges the hub's outcome type into the store's record.
