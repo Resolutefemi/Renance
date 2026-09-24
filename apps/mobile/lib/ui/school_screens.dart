@@ -221,6 +221,11 @@ class _SchoolPackViewerScreenState extends State<SchoolPackViewerScreen> {
           : ListView(
               padding: const EdgeInsets.all(16),
               children: <Widget>[
+                // The staff desk: the live services riding on top of the
+                // offline library. Attendance marks any class a teacher
+                // covers; the enrollment desk is management's to fill.
+                _StaffDeskCard(schoolId: widget.pack.school.id),
+                const SizedBox(height: 12),
                 // Compact stats strip: what the pack carries, so staff
                 // see the size of their offline library at a glance.
                 Row(
@@ -651,6 +656,667 @@ class _NoteReaderScreen extends StatelessWidget {
             style: TextStyle(color: ink.withValues(alpha: 0.6), fontSize: 11),
           ),
         ],
+      ),
+    );
+  }
+}
+
+// ============================================================ attendance
+
+/// The daily register: pick a class, mark every pupil, save. Management
+/// marks any class; a teacher marks the classes assigned to them.
+class SchoolAttendanceScreen extends StatefulWidget {
+  const SchoolAttendanceScreen({super.key, required this.schoolId});
+
+  final String schoolId;
+
+  @override
+  State<SchoolAttendanceScreen> createState() => _SchoolAttendanceScreenState();
+}
+
+class _SchoolAttendanceScreenState extends State<SchoolAttendanceScreen> {
+  String? _classId;
+  DateTime _day = DateTime.now();
+  bool _booted = false;
+
+  String get _dayISO {
+    final String m = _day.month.toString().padLeft(2, '0');
+    final String d = _day.day.toString().padLeft(2, '0');
+    return '${_day.year}-$m-$d';
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _boot());
+  }
+
+  Future<void> _boot() async {
+    final SchoolController school = context.read<SchoolController>();
+    await school.loadRoster(widget.schoolId);
+    if (!mounted) return;
+    if (school.classes.isNotEmpty && _classId == null) {
+      _classId = school.classes.first.id;
+      await school.loadAttendanceDay(widget.schoolId, _classId!, _dayISO);
+    }
+    if (mounted) setState(() => _booted = true);
+  }
+
+  Future<void> _pickDay() async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: _day,
+      firstDate: DateTime.now().subtract(const Duration(days: 120)),
+      lastDate: DateTime.now().add(const Duration(days: 1)),
+    );
+    if (picked == null || !mounted) return;
+    setState(() => _day = picked);
+    final SchoolController school = context.read<SchoolController>();
+    if (_classId != null) {
+      await school.loadAttendanceDay(widget.schoolId, _classId!, _dayISO);
+    }
+  }
+
+  Future<void> _save() async {
+    final SchoolController school = context.read<SchoolController>();
+    final int? saved =
+        await school.saveAttendanceDay(widget.schoolId, _classId ?? '', _dayISO);
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          saved == null
+              ? (school.lastError ?? 'Could not save the register.')
+              : 'Register saved for $saved ${saved == 1 ? 'pupil' : 'pupils'}.',
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final SchoolController school = context.watch<SchoolController>();
+    final List<SchoolStudentModel> roster = school.roster
+        .where((SchoolStudentModel s) => s.status == 'active')
+        .toList(growable: false);
+
+    return Scaffold(
+      backgroundColor: context.pageBg,
+      appBar: AppBar(title: const Text('Daily register')),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: context.ink,
+        foregroundColor: context.pageBg,
+        icon: const Icon(Icons.check),
+        label: const Text('Save register'),
+        onPressed: _classId == null || roster.isEmpty ? null : _save,
+      ),
+      body: _booted && school.rosterLoading
+          ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
+          : ListView(
+              padding: const EdgeInsets.all(16),
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: DropdownButtonFormField<String>(
+                        initialValue: _classId,
+                        decoration: const InputDecoration(
+                          labelText: 'Class',
+                          border: OutlineInputBorder(),
+                          isDense: true,
+                        ),
+                        items: <DropdownMenuItem<String>>[
+                          for (final SchoolClassInfo c in school.classes)
+                            DropdownMenuItem<String>(
+                              value: c.id,
+                              child: Text(c.name),
+                            ),
+                        ],
+                        onChanged: (String? v) async {
+                          setState(() => _classId = v);
+                          if (v != null) {
+                            await school.loadAttendanceDay(
+                                widget.schoolId, v, _dayISO);
+                          }
+                        },
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    OutlinedButton.icon(
+                      icon: const Icon(Icons.calendar_month, size: 18),
+                      label: Text(_dayISO.substring(5)),
+                      onPressed: _pickDay,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                // One tap fills every empty cell: the classic start of
+                // the morning register.
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: TextButton.icon(
+                    icon: const Icon(Icons.done_all, size: 18),
+                    label: const Text('Mark the rest present'),
+                    onPressed: roster.isEmpty
+                        ? null
+                        : () => school.markAllPresent(roster),
+                  ),
+                ),
+                if (school.rosterError != null)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Text(
+                      school.rosterError!,
+                      style: RenanceText.bodySecondary
+                          .copyWith(color: context.error),
+                    ),
+                  ),
+                const SizedBox(height: 4),
+                if (roster.isEmpty && !school.rosterLoading)
+                  Padding(
+                    padding: const EdgeInsets.all(32),
+                    child: Text(
+                      'No active pupils in this class yet. Enroll them under Student details.',
+                      textAlign: TextAlign.center,
+                      style: RenanceText.bodyBase
+                          .copyWith(color: context.textSecondary),
+                    ),
+                  )
+                else
+                  ...<Widget>[
+                    for (final SchoolStudentModel s in roster)
+                      _AttendanceRow(student: s),
+                  ],
+                const SizedBox(height: 80),
+              ],
+            ),
+    );
+  }
+}
+
+/// One pupil on the register: name, admission number and the four-way
+/// mark. Strict black and white: the school desk never takes theme colors.
+class _AttendanceRow extends StatelessWidget {
+  const _AttendanceRow({required this.student});
+
+  final SchoolStudentModel student;
+
+  static const Map<String, String> _labels = <String, String>{
+    'present': 'Present',
+    'late': 'Late',
+    'absent': 'Absent',
+    'excused': 'Excused',
+  };
+
+  @override
+  Widget build(BuildContext context) {
+    final SchoolController school = context.watch<SchoolController>();
+    final AttendanceEntryModel? mark = school.marks[student.id];
+    final String status = mark?.status ?? '';
+
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 4),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Text(
+                    student.fullName,
+                    style: RenanceText.bodyBase
+                        .copyWith(fontWeight: FontWeight.w700),
+                  ),
+                ),
+                Text(
+                  student.admissionNo,
+                  style: RenanceText.bodySecondary,
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
+              children: <Widget>[
+                for (final MapEntry<String, String> e in _labels.entries)
+                  ChoiceChip(
+                    label: Text(e.value),
+                    selected: status == e.key,
+                    onSelected: (_) => context.read<SchoolController>().mark(
+                          student.id,
+                          e.key,
+                          note: mark?.note ?? '',
+                        ),
+                  ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ======================================================== student details
+
+/// The enrollment desk: browse a class roster, add pupils with full
+/// details, edit any field. Writes stay management-only; teachers read.
+class SchoolStudentDetailsScreen extends StatefulWidget {
+  const SchoolStudentDetailsScreen({super.key, required this.schoolId});
+
+  final String schoolId;
+
+  @override
+  State<SchoolStudentDetailsScreen> createState() =>
+      _SchoolStudentDetailsScreenState();
+}
+
+class _SchoolStudentDetailsScreenState
+    extends State<SchoolStudentDetailsScreen> {
+  String? _classId;
+  String _query = '';
+  bool _booted = false;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _boot());
+  }
+
+  Future<void> _boot() async {
+    final SchoolController school = context.read<SchoolController>();
+    await school.loadRoster(widget.schoolId);
+    if (!mounted) return;
+    if (school.classes.isNotEmpty && _classId == null) {
+      _classId = school.classes.first.id;
+      await school.loadRoster(widget.schoolId, classId: _classId!);
+    }
+    if (mounted) setState(() => _booted = true);
+  }
+
+  Future<void> _editStudent(SchoolStudentModel? existing) async {
+    final SchoolController school = context.read<SchoolController>();
+    if (school.classes.isEmpty) return;
+    final SchoolStudentModel? saved = await showModalBottomSheet<
+        SchoolStudentModel>(
+      context: context,
+      isScrollControlled: true,
+      builder: (BuildContext ctx) => _StudentEditorSheet(
+        schoolId: widget.schoolId,
+        classes: school.classes,
+        initialClassId: _classId ?? school.classes.first.id,
+        existing: existing,
+      ),
+    );
+    if (saved != null && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('${saved.fullName} saved.')),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final SchoolController school = context.watch<SchoolController>();
+    final String q = _query.trim().toLowerCase();
+    final List<SchoolStudentModel> roster = school.roster
+        .where((SchoolStudentModel s) =>
+            q.isEmpty ||
+            s.fullName.toLowerCase().contains(q) ||
+            s.admissionNo.toLowerCase().contains(q))
+        .toList(growable: false);
+
+    return Scaffold(
+      backgroundColor: context.pageBg,
+      appBar: AppBar(title: const Text('Student details')),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: context.ink,
+        foregroundColor: context.pageBg,
+        icon: const Icon(Icons.person_add),
+        label: const Text('Add student'),
+        onPressed: () => _editStudent(null),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: <Widget>[
+          DropdownButtonFormField<String>(
+            initialValue: _classId,
+            decoration: const InputDecoration(
+              labelText: 'Class',
+              border: OutlineInputBorder(),
+              isDense: true,
+            ),
+            items: <DropdownMenuItem<String>>[
+              for (final SchoolClassInfo c in school.classes)
+                DropdownMenuItem<String>(value: c.id, child: Text(c.name)),
+            ],
+            onChanged: (String? v) async {
+              setState(() => _classId = v);
+              await school.loadRoster(widget.schoolId, classId: v ?? '');
+            },
+          ),
+          const SizedBox(height: 8),
+          TextField(
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              hintText: 'Search name or admission number',
+              border: OutlineInputBorder(),
+              isDense: true,
+            ),
+            onChanged: (String v) => setState(() => _query = v),
+          ),
+          const SizedBox(height: 8),
+          if (school.rosterError != null)
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Text(
+                school.rosterError!,
+                style: RenanceText.bodySecondary.copyWith(color: context.error),
+              ),
+            ),
+          if (!school.rosterLoading && roster.isEmpty)
+            Padding(
+              padding: const EdgeInsets.all(32),
+              child: Text(
+                _booted
+                    ? 'No student matches. Use Add student to enroll one.'
+                    : 'Loading the roster...',
+                textAlign: TextAlign.center,
+                style: RenanceText.bodyBase
+                    .copyWith(color: context.textSecondary),
+              ),
+            )
+          else
+            ...<Widget>[
+              for (final SchoolStudentModel s in roster)
+                Card(
+                  margin: const EdgeInsets.symmetric(vertical: 4),
+                  child: ListTile(
+                    title: Text(
+                      s.fullName,
+                      style: RenanceText.bodyBase
+                          .copyWith(fontWeight: FontWeight.w700),
+                    ),
+                    subtitle: Text(
+                      '${s.admissionNo} · ${s.sex.isEmpty ? '-' : s.sex}'
+                      '${s.guardianName.isEmpty ? '' : ' · Guardian: ${s.guardianName}'}',
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => _editStudent(s),
+                  ),
+                ),
+            ],
+          const SizedBox(height: 80),
+        ],
+      ),
+    );
+  }
+}
+
+/// The enrollment form sheet. Every field the web portal writes is here:
+/// name, admission number, sex, date of birth and the guardian trio.
+class _StudentEditorSheet extends StatefulWidget {
+  const _StudentEditorSheet({
+    required this.schoolId,
+    required this.classes,
+    required this.initialClassId,
+    this.existing,
+  });
+
+  final String schoolId;
+  final List<SchoolClassInfo> classes;
+  final String initialClassId;
+  final SchoolStudentModel? existing;
+
+  @override
+  State<_StudentEditorSheet> createState() => _StudentEditorSheetState();
+}
+
+class _StudentEditorSheetState extends State<_StudentEditorSheet> {
+  late final TextEditingController _name =
+      TextEditingController(text: widget.existing?.fullName ?? '');
+  late final TextEditingController _admission =
+      TextEditingController(text: widget.existing?.admissionNo ?? '');
+  late final TextEditingController _dob =
+      TextEditingController(text: widget.existing?.dob ?? '');
+  late final TextEditingController _guardianName =
+      TextEditingController(text: widget.existing?.guardianName ?? '');
+  late final TextEditingController _guardianPhone =
+      TextEditingController(text: widget.existing?.guardianPhone ?? '');
+  late final TextEditingController _address =
+      TextEditingController(text: widget.existing?.address ?? '');
+  late String _classId = widget.existing?.classId.isNotEmpty == true
+      ? widget.existing!.classId
+      : widget.initialClassId;
+  late String _sex = widget.existing?.sex ?? 'M';
+  bool _saving = false;
+
+  bool get _isNew => widget.existing == null;
+
+  Future<void> _save() async {
+    final String name = _name.text.trim();
+    final String admission = _admission.text.trim();
+    if (name.isEmpty || admission.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Full name and admission number are required.')),
+      );
+      return;
+    }
+    setState(() => _saving = true);
+    final SchoolController school = context.read<SchoolController>();
+    final SchoolStudentModel? saved = await school.saveStudent(
+      widget.schoolId,
+      isNew: _isNew,
+      session: '2025/2026',
+      student: SchoolStudentModel(
+        id: widget.existing?.id ?? '',
+        fullName: name,
+        admissionNo: admission,
+        classId: _classId,
+        sex: _sex,
+        dob: _dob.text.trim(),
+        guardianName: _guardianName.text.trim(),
+        guardianPhone: _guardianPhone.text.trim(),
+        address: _address.text.trim(),
+      ),
+    );
+    if (!mounted) return;
+    setState(() => _saving = false);
+    if (saved == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+            content: Text(school.lastError ?? 'Could not save the student.')),
+      );
+      return;
+    }
+    Navigator.of(context).pop(saved);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 16,
+        right: 16,
+        top: 16,
+        bottom: MediaQuery.of(context).viewInsets.bottom + 16,
+      ),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              _isNew ? 'Enroll a student' : 'Edit student details',
+              style: RenanceText.bodyBase.copyWith(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: _name,
+              decoration: const InputDecoration(
+                labelText: 'Full name',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _admission,
+              decoration: const InputDecoration(
+                labelText: 'Admission number',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+            const SizedBox(height: 8),
+            DropdownButtonFormField<String>(
+              initialValue: _classId,
+              decoration: const InputDecoration(
+                labelText: 'Class',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+              items: <DropdownMenuItem<String>>[
+                for (final SchoolClassInfo c in widget.classes)
+                  DropdownMenuItem<String>(value: c.id, child: Text(c.name)),
+              ],
+              onChanged: (String? v) => setState(() => _classId = v ?? _classId),
+            ),
+            const SizedBox(height: 8),
+            SegmentedButton<String>(
+              segments: const <ButtonSegment<String>>[
+                ButtonSegment<String>(value: 'M', label: Text('Male')),
+                ButtonSegment<String>(value: 'F', label: Text('Female')),
+              ],
+              selected: <String>{_sex},
+              onSelectionChanged: (Set<String> v) =>
+                  setState(() => _sex = v.first),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _dob,
+              decoration: const InputDecoration(
+                labelText: 'Date of birth (YYYY-MM-DD)',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _guardianName,
+              decoration: const InputDecoration(
+                labelText: 'Guardian name',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _guardianPhone,
+              keyboardType: TextInputType.phone,
+              decoration: const InputDecoration(
+                labelText: 'Guardian phone',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: _address,
+              decoration: const InputDecoration(
+                labelText: 'Home address',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+            const SizedBox(height: 14),
+            FilledButton.icon(
+              icon: _saving
+                  ? const SizedBox(
+                      width: 16,
+                      height: 16,
+                      child: CircularProgressIndicator(strokeWidth: 2),
+                    )
+                  : const Icon(Icons.save_outlined, size: 18),
+              label: Text(_isNew ? 'Enroll student' : 'Save changes'),
+              onPressed: _saving ? null : _save,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+// ============================================================ staff desk
+
+/// The two live desk services a school user opens straight from the
+/// workspace home: the daily register and the enrollment desk.
+class _StaffDeskCard extends StatelessWidget {
+  const _StaffDeskCard({required this.schoolId});
+
+  final String schoolId;
+
+  @override
+  Widget build(BuildContext context) {
+    final SchoolController school = context.watch<SchoolController>();
+    final String role =
+        school.contexts.firstOrNull?.member.role ?? 'teacher';
+    final bool isManagement = role == 'management';
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'Staff desk',
+              style: RenanceText.bodyBase.copyWith(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              isManagement
+                  ? 'Mark the daily register and keep every pupil record current.'
+                  : 'Mark the daily register for the classes you cover.',
+              style: RenanceText.bodySecondary,
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: OutlinedButton.icon(
+                    icon: const Icon(Icons.fact_check_outlined, size: 18),
+                    label: const Text('Attendance'),
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) =>
+                            SchoolAttendanceScreen(schoolId: schoolId),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: OutlinedButton.icon(
+                    icon: const Icon(Icons.badge_outlined, size: 18),
+                    label: const Text('Students'),
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) =>
+                            SchoolStudentDetailsScreen(schoolId: schoolId),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
