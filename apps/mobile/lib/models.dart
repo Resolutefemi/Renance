@@ -2055,3 +2055,116 @@ class SchoolPack {
         .toList(),
   );
 }
+
+/// One enrolled student as the roster endpoints return them. The detail
+/// fields ride the same shape the web portal's enrollment form writes.
+class SchoolStudentModel {
+  const SchoolStudentModel({
+    required this.id,
+    required this.fullName,
+    required this.admissionNo,
+    required this.classId,
+    required this.sex,
+    this.status = 'active',
+    this.dob = '',
+    this.guardianName = '',
+    this.guardianPhone = '',
+    this.address = '',
+  });
+
+  final String id;
+  final String fullName;
+  final String admissionNo;
+  final String classId;
+  final String sex;
+  final String status;
+  final String dob;
+  final String guardianName;
+  final String guardianPhone;
+  final String address;
+
+  factory SchoolStudentModel.fromJson(Map<String, dynamic> j) =>
+      SchoolStudentModel(
+        id: (j['id'] ?? '') as String,
+        fullName: (j['fullName'] ?? '') as String,
+        admissionNo: (j['admissionNo'] ?? '') as String,
+        classId: (j['classId'] ?? '') as String,
+        sex: (j['sex'] ?? '') as String,
+        status: (j['status'] ?? 'active') as String,
+        dob: (j['dob'] ?? '') as String,
+        guardianName: (j['guardianName'] ?? '') as String,
+        guardianPhone: (j['guardianPhone'] ?? '') as String,
+        address: (j['address'] ?? '') as String,
+      );
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'id': id,
+        'fullName': fullName,
+        'admissionNo': admissionNo,
+        'classId': classId,
+        'sex': sex,
+        'status': status,
+        'dob': dob,
+        'guardianName': guardianName,
+        'guardianPhone': guardianPhone,
+        'address': address,
+      };
+}
+
+/// One mark on the daily register: who, what, optional note.
+class AttendanceEntryModel {
+  const AttendanceEntryModel({
+    required this.studentId,
+    required this.status,
+    this.note = '',
+  });
+
+  final String studentId;
+  final String status; // present | late | absent | excused
+  final String note;
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'studentId': studentId,
+        'status': status,
+        'note': note,
+      };
+
+  factory AttendanceEntryModel.fromJson(Map<String, dynamic> j) =>
+      AttendanceEntryModel(
+        studentId: (j['studentId'] ?? '') as String,
+        status: (j['status'] ?? 'present') as String,
+        note: (j['note'] ?? '') as String,
+      );
+}
+
+/// Per-student roll-up the attendance summary endpoint returns.
+class AttendanceSummaryRowModel {
+  const AttendanceSummaryRowModel({
+    required this.studentId,
+    required this.present,
+    required this.absent,
+    required this.late,
+    required this.excused,
+    required this.total,
+    required this.rate,
+  });
+
+  final String studentId;
+  final int present;
+  final int absent;
+  final int late;
+  final int excused;
+  final int total;
+  final num rate;
+
+  factory AttendanceSummaryRowModel.fromJson(Map<String, dynamic> j) =>
+      AttendanceSummaryRowModel(
+        studentId: (j['studentId'] ?? '') as String,
+        present: (j['present'] ?? 0) as int,
+        absent: (j['absent'] ?? 0) as int,
+        late: (j['late'] ?? 0) as int,
+        excused: (j['excused'] ?? 0) as int,
+        total: (j['total'] ?? 0) as int,
+        rate: (j['rate'] ?? 0) as num,
+      );
+}
