@@ -36,9 +36,11 @@
 package httpapi
 
 import (
+        "bytes"
         "context"
         "encoding/json"
         "errors"
+        "io"
         "log/slog"
         "net/http"
         "strings"
@@ -341,6 +343,48 @@ func decodeJSON(w http.ResponseWriter, r *http.Request, dst any) bool {
                 return false
         }
         return true
+}
+
+// decodeSchoolScope strictly parses a school write request and returns the
+// school scope the client attached. The web app carries schoolId in the JSON
+// body while scripts and older links pass it in the query string; both stay
+// valid and the body wins when both are present. The scope key is lifted out
+// of the payload before the strict pass so handlers that do not model it in
+// their request struct still decode cleanly.
+func decodeSchoolScope(w http.ResponseWriter, r *http.Request, dst any) (string, bool) {
+	body, err := io.ReadAll(http.MaxBytesReader(w, r.Body, 1<<20))
+	if err != nil {
+		fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
+		return "", false
+	}
+	var probe map[string]json.RawMessage
+	if json.Unmarshal(body, &probe) != nil {
+		// not a JSON object: nothing to lift, decode the body as-is
+		return r.URL.Query().Get("schoolId"), decodeFrom(w, body, dst)
+	}
+	scope := r.URL.Query().Get("schoolId")
+	if raw, ok := probe["schoolId"]; ok {
+		if v := strings.TrimSpace(string(raw)); v != "" && v != `""` && v != "null" {
+			_ = json.Unmarshal(raw, &scope)
+		}
+		delete(probe, "schoolId")
+		if body, err = json.Marshal(probe); err != nil {
+			fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
+			return "", false
+		}
+	}
+	return scope, decodeFrom(w, body, dst)
+}
+
+// decodeFrom is decodeJSON over an in-memory body (unknown fields rejected).
+func decodeFrom(w http.ResponseWriter, body []byte, dst any) bool {
+	dec := json.NewDecoder(bytes.NewReader(body))
+	dec.DisallowUnknownFields()
+	if err := dec.Decode(dst); err != nil {
+		fail(w, http.StatusBadRequest, "invalid_body", truncateErr(err))
+		return false
+	}
+	return true
 }
 
 func truncateErr(err error) string {
