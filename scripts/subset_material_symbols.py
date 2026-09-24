@@ -24,6 +24,8 @@ NEW_ICONS = [
     # Arena duel mark: was missing from the shipped subset (rendered as
     # raw text and burst out of its chip).
     "swords",
+    # Pacing forensics on the exam review sheet (PR #1 follow-up).
+    "alarm_off", "avg_time",
 ]
 
 
