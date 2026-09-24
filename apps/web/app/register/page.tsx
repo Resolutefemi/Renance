@@ -111,18 +111,23 @@ export default function RegisterPage() {
   const field = 'h-12 w-full rounded-lg bg-surface-container pl-11 pr-3 text-sm text-on-surface transition-colors placeholder:text-outline focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary';
 
   return (
-    <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-surface-container px-4 py-10">
-      <div className="renance-rise flex w-full max-w-sm flex-col rounded-xl bg-surface-container-lowest p-6 shadow-md">
+    // my-auto (not justify-center) keeps the card visually centred while
+    // letting the page grow: on small phones the For Schools form is taller
+    // than the viewport, and justify-center would clip the unreachable top
+    // of the card. Everything wraps: break-words guards the headings even
+    // when Android font scaling inflates the text past the card edge.
+    <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4 py-10">
+      <div className="renance-rise my-auto flex w-full max-w-sm min-w-0 flex-col rounded-xl bg-surface-container-lowest p-6 shadow-md">
         {/* Logo block, mockup: logo, headline, sub */}
-        <div className="mb-5 flex flex-col items-center gap-3 text-center">
+        <div className="mb-5 flex min-w-0 flex-col items-center gap-3 text-center">
           <RenanceMark size={64} />
-          <div>
-            <h1 className="text-2xl font-semibold tracking-tight text-on-surface">
+          <div className="min-w-0">
+            <h1 className="break-words text-2xl font-semibold tracking-tight text-on-surface">
               {audience === 'schools' ? 'Register your school' : 'Create your account'}
             </h1>
-            <p className="mt-1 text-sm text-on-surface-variant">
+            <p className="mt-1 break-words text-sm text-on-surface-variant">
               {audience === 'schools'
-                ? 'The study OS for your whole school - management, teachers and students.'
+                ? 'The study OS for your whole school: management, teachers and students.'
                 : 'Join the global student study OS.'}
             </p>
           </div>
