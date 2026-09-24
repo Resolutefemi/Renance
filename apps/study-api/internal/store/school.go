@@ -717,7 +717,7 @@ func (s *Store) UpdateTopic(ctx context.Context, topicID, title, content string,
 // UpdateSchemeOfWork replaces a syllabus's weekly plan.
 func (s *Store) UpdateSchemeOfWork(ctx context.Context, syllabusID string, scheme json.RawMessage, updatedBy string) error {
 	_, err := s.Pool.Exec(ctx, `
-                UPDATE school.syllabuses SET scheme_of_work = $2, updated_by = $3, updated_at = now()
+                UPDATE school.syllabuses SET scheme_of_work = $2, updated_by = NULLIF($3, '')::uuid, updated_at = now()
                 WHERE id = $1`, syllabusID, scheme, updatedBy)
 	return err
 }
