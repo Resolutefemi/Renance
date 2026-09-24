@@ -1,0 +1,63 @@
+{
+ "class": "Primary 6",
+ "subject": "Information Technology",
+ "term": 1,
+ "session": "",
+ "overwrite": false,
+ "provenance": {
+  "source": "renance-ai-teacher",
+  "method": "lesson notes written from the NERDC 2025 scheme of work outline; every week keeps its scheme topic and bullets as the teaching spine"
+ },
+ "topics": [
+  {
+   "week": 1,
+   "title": "Computer systems review",
+   "content": "Behavioural objectives:\nThe pupils should be able to identify hardware components.\nThe pupils should be able to label the system unit.\n\nIntroduction:\nWe have learned about computers before. Today we will review what makes up a computer.\n\nContent:\nHardware is the physical parts of a computer you can touch. Software is the programs that tell the computer what to do. The system unit is the main box that holds important parts like the CPU and memory. Just like the engine of a car, it is the brain of the computer.\n\nClass activity:\nPupils will draw a computer system and label parts like monitor, keyboard, mouse and system unit.\n\nEvaluation questions:\nWhat is hardware?\nName three hardware components.\nWhat is inside the system unit?\n\nSummary:\nComputer systems have hardware and software working together."
+  },
+  {
+   "week": 2,
+   "title": "Word processing mastery",
+   "content": "Behavioural objectives:\nThe pupils should be able to format a document.\nThe pupils should be able to type an essay with proper structure.\n\nIntroduction:\nWe have used computers to write before. Today we will learn to make our documents look better.\n\nContent:\nWord processing is using software like Microsoft Word to create documents. Formatting means changing how text looks - making it bold, changing size, or adding colors. We can also set margins and line spacing to make our essays easy to read.\n\nClass activity:\nPupils will type a short essay about their favorite Nigerian food and format it with proper headings and spacing.\n\nEvaluation questions:\nWhat is word processing?\nName two formatting options.\nWhy is good formatting important?\n\nSummary:\nGood formatting makes our documents look professional and easy to read."
+  },
+  {
+   "week": 3,
+   "title": "Spreadsheets basics",
+   "content": "Behavioural objectives:\nThe pupils should be able to identify rows, columns and cells.\nThe pupils should be able to create a simple marks sheet.\n\nIntroduction:\nWe use tables to organize information in our daily lives. Spreadsheets help us do this on the computer.\n\nContent:\nA spreadsheet is like a grid with rows (horizontal lines numbered 1,2,3) and columns (vertical lines labeled A,B,C). Where they meet is called a cell. We can put information like numbers or text in cells. A marks sheet helps us record and organize student scores.\n\nClass activity:\nPupils will create a marks sheet for five subjects with columns for names and scores.\n\nEvaluation questions:\nWhat is a row?\nWhat is a cell?\nHow many columns are in column A to E?\n\nSummary:\nSpreadsheets help us organize information in an orderly way."
+  },
+  {
+   "week": 4,
+   "title": "Spreadsheet formulas",
+   "content": "Behavioural objectives:\nThe pupils should be able to use the SUM formula.\nThe pupils should be able to use the AVERAGE formula.\n\nIntroduction:\nWe can make spreadsheets do calculations for us. Today we will learn how.\n\nContent:\nFormulas are instructions that help us calculate automatically. The SUM formula adds numbers together. We write =SUM(A1:A5) to add numbers from cell A1 to A5. The AVERAGE formula finds the middle value. We write =AVERAGE(B1:B5) to find the average of cells B1 to B5.\n\nClass activity:\nPupils will create a class data sheet with student scores and use formulas to find total and average marks.\n\nEvaluation questions:\nWhat does the SUM formula do?\nHow do you write a formula?\nWhat does AVERAGE calculate?\n\nSummary:\nFormulas help us do math quickly and accurately in spreadsheets."
+  },
+  {
+   "week": 5,
+   "title": "Presentations",
+   "content": "Behavioural objectives:\nThe pupils should be able to design slides with text and images.\nThe pupils should be able to present a topic to the class.\n\nIntroduction:\nWe have seen presentations in class. Today we will learn to create our own.\n\nContent:\nPresentation software helps us create slides to share information. We can add text, pictures, and colors to make our slides interesting. A good presentation has a clear topic, not too much text on each slide, and nice pictures that help explain our ideas.\n\nClass activity:\nPupils will create a 3 - slide presentation about Nigerian culture and present it to the class.\n\nEvaluation questions:\nWhat is a presentation?\nName two things you can add to a slide.\nWhy are presentations useful?\n\nSummary:\nPresentations help us share information in a clear and interesting way."
+  },
+  {
+   "week": 6,
+   "title": "Internet research",
+   "content": "Behavioural objectives:\nThe pupils should be able to search for information online.\nThe pupils should be able to cite sources properly.\n\nIntroduction:\nThe internet has lots of information. We will learn to find what we need.\n\nContent:\nInternet research means looking for information online. We use search engines like Google to find answers. When we use information from websites, we must cite our sources by writing where we got the information from. This helps others find the same information and shows we are honest.\n\nClass activity:\nPupils will research information about Nigerian national symbols and create a list with sources.\n\nEvaluation questions:\nWhat is a search engine?\nWhy do we cite sources?\nName one way to find good information online.\n\nSummary:\nGood research helps us learn new things and we must always give credit to our sources."
+  },
+  {
+   "week": 7,
+   "title": "Digital drawing",
+   "content": "Behavioural objectives:\nThe pupils should be able to use drawing tools on a computer.\nThe pupils should be able to design a class poster.\n\nIntroduction:\nWe can draw pictures using computers. Today we will learn how to do this.\n\nContent:\nDigital drawing uses software to create pictures on a computer. We have tools like pencils, brushes, shapes, and colors to make our drawings. A poster is a large picture that shares information or advertises something. Good posters have clear messages and attractive designs.\n\nClass activity:\nPupils will design a class poster about the importance of handwashing using digital drawing tools.\n\nEvaluation questions:\nWhat is digital drawing?\nName two drawing tools.\nWhat makes a good poster?\n\nSummary:\nDigital drawing helps us create beautiful designs on the computer."
+  },
+  {
+   "week": 8,
+   "title": "Typing speed",
+   "content": "Behavioural objectives:\nThe pupils should be able to use home keys properly.\nThe pupils should be able to measure their typing speed.\n\nIntroduction:\nFast typing helps us finish work quickly. We will practice our typing skills.\n\nContent:\nTyping speed is how fast we can type without mistakes. Home keys are ASDF for left hand and JKL; for right hand. We keep our fingers on these keys and move only the needed fingers to type other keys. We measure typing speed in words per minute (WPM).\n\nClass activity:\nPupils will practice typing using home keys and then test their speed by typing a short passage for one minute.\n\nEvaluation questions:\nWhat are home keys?\nHow do we measure typing speed?\nWhy is good typing important?\n\nSummary:\nGood typing skills help us work faster and more efficiently on the computer."
+  },
+  {
+   "week": 9,
+   "title": "Data and charts",
+   "content": "Behavioural objectives:\nThe pupils should be able to create different types of charts.\nThe pupils should be able to turn data into visual charts.\n\nIntroduction:\nNumbers can be hard to understand. Charts help us see information clearly.\n\nContent:\nCharts are pictures that show data in an easy way. Bar charts use bars to compare amounts. Pie charts show parts of a whole. Line charts show how things change over time. We can create charts from data in spreadsheets to make information easier to understand.\n\nClass activity:\nPupils will collect data on favorite fruits in the class and create a pie chart to show the results.\n\nEvaluation questions:\nWhat is a chart?\nName two types of charts.\nWhy are charts useful?\n\nSummary:\nCharts help us understand data quickly by showing it in picture form."
+  },
+  {
+   "week": 10,
+   "title": "Revision and project",
+   "content": "Behavioural objectives:\nThe pupils should be able to show their best documents.\nThe pupils should be able to participate in an ICT exhibition.\n\nIntroduction:\nWe have learned many computer skills. Today we will share our best work.\n\nContent:\nWe will review what we have learned about word processing, spreadsheets, presentations, and internet research. An ICT exhibition is a show where we display our best computer projects to others. We should explain what we did and what we learned when showing our work.\n\nClass activity:\nPupils will prepare their best computer project for display in a class ICT exhibition.\n\nEvaluation questions:\nWhat is an ICT exhibition?\nWhich computer skill do you like most?\nHow do you explain your project to others?\n\nSummary:\nSharing our work helps us learn from each other and celebrate our progress."
+  }
+ ]
+}
