@@ -1335,6 +1335,160 @@ class SchoolController extends ChangeNotifier {
     notifyListeners();
   }
 
+  // ---- live roster + attendance (management + teachers) --------------
+
+  /// The school's classes for the roster pickers.
+  List<SchoolClassInfo> classes = <SchoolClassInfo>[];
+
+  /// The enrolled students of the currently loaded class (or school).
+  List<SchoolStudentModel> roster = <SchoolStudentModel>[];
+
+  /// Today's marks keyed by student id for the register screen.
+  final Map<String, AttendanceEntryModel> marks = <String, AttendanceEntryModel>{};
+
+  /// Per-student attendance rates over the loaded window.
+  List<AttendanceSummaryRowModel> attendanceRows = <AttendanceSummaryRowModel>[];
+
+  bool rosterLoading = false;
+  String? rosterError;
+
+  /// Loads the class list (once per school) and the roster for [classId].
+  Future<void> loadRoster(String schoolId, {String classId = ''}) async {
+    rosterLoading = true;
+    rosterError = null;
+    notifyListeners();
+    try {
+      if (classes.isEmpty) {
+        classes = await _api.schoolClasses(schoolId);
+      }
+      roster = await _api.schoolStudents(schoolId, classId: classId);
+    } on ApiException catch (e) {
+      rosterError = e.message;
+    } on NetworkException catch (e) {
+      rosterError = e.message;
+    } finally {
+      rosterLoading = false;
+      notifyListeners();
+    }
+  }
+
+  /// Creates or edits a student's details. Returns null on failure with
+  /// [lastError] set; otherwise the saved student.
+  Future<SchoolStudentModel?> saveStudent(
+    String schoolId, {
+    required SchoolStudentModel student,
+    required bool isNew,
+    required String session,
+  }) async {
+    lastError = null;
+    try {
+      final SchoolStudentModel saved = isNew
+          ? await _api.schoolCreateStudent(
+              schoolId,
+              classId: student.classId,
+              fullName: student.fullName,
+              admissionNo: student.admissionNo,
+              sex: student.sex,
+              session: session,
+              dob: student.dob,
+              guardianName: student.guardianName,
+              guardianPhone: student.guardianPhone,
+              address: student.address,
+            )
+          : await _api.schoolUpdateStudent(schoolId, student);
+      final int i = roster.indexWhere((SchoolStudentModel s) => s.id == saved.id);
+      if (i >= 0) {
+        roster[i] = saved;
+      } else {
+        roster.add(saved);
+      }
+      notifyListeners();
+      return saved;
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    }
+    notifyListeners();
+    return null;
+  }
+
+  /// Pulls one day's register and seeds [marks] with it.
+  Future<void> loadAttendanceDay(String schoolId, String classId, String day) async {
+    rosterLoading = true;
+    rosterError = null;
+    notifyListeners();
+    try {
+      marks.clear();
+      for (final AttendanceEntryModel e in await _api.attendanceDay(schoolId, classId, day)) {
+        marks[e.studentId] = e;
+      }
+      if (roster.isEmpty || roster.first.classId != classId) {
+        roster = await _api.schoolStudents(schoolId, classId: classId);
+      }
+    } on ApiException catch (e) {
+      rosterError = e.message;
+    } on NetworkException catch (e) {
+      rosterError = e.message;
+    } finally {
+      rosterLoading = false;
+      notifyListeners();
+    }
+  }
+
+  /// Marks one student locally; [saveAttendanceDay] pushes the sheet.
+  void mark(String studentId, String status, {String note = ''}) {
+    marks[studentId] = AttendanceEntryModel(studentId: studentId, status: status, note: note);
+    notifyListeners();
+  }
+
+  /// Fills every empty cell with a mark (the morning 'all present' sweep);
+  /// existing marks stay untouched.
+  void markAllPresent(List<SchoolStudentModel> students) {
+    for (final SchoolStudentModel s in students) {
+      marks.putIfAbsent(
+        s.id,
+        () => AttendanceEntryModel(studentId: s.id, status: 'present'),
+      );
+    }
+    notifyListeners();
+  }
+
+  /// Pushes the whole day's marks. Returns the saved count or null.
+  Future<int?> saveAttendanceDay(String schoolId, String classId, String day) async {
+    lastError = null;
+    final List<AttendanceEntryModel> entries =
+        marks.values.toList(growable: false);
+    if (entries.isEmpty) return 0;
+    try {
+      final int saved = await _api.saveAttendance(schoolId, classId, day, entries);
+      return saved;
+    } on ApiException catch (e) {
+      lastError = e.message;
+    } on NetworkException catch (e) {
+      lastError = e.message;
+    }
+    notifyListeners();
+    return null;
+  }
+
+  /// Loads the per-student rates for a window (inclusive dates).
+  Future<void> loadAttendanceSummary(
+    String schoolId,
+    String classId,
+    String from,
+    String to,
+  ) async {
+    try {
+      attendanceRows = await _api.attendanceSummary(schoolId, classId, from, to);
+    } on ApiException catch (e) {
+      rosterError = e.message;
+    } on NetworkException catch (e) {
+      rosterError = e.message;
+    }
+    notifyListeners();
+  }
+
   // ---- active school session (splash routing) -------------------------
 
   static const String _sessionPrefKey = 'renance.school.session.v1';
