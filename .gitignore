@@ -61,3 +61,8 @@ apps/web/public/bundles/
 
 # school-notes scraper cache (never commit raw crawl output)
 data/school-notes/cache/
+
+# notes writer local state
+scripts/.notes-checkpoint.json
+scripts/.notes-failures.json
+scripts/.commit_notes_batch.sh

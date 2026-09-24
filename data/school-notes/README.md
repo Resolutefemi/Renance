@@ -58,6 +58,33 @@ export RENANCE_SCHOOL_PASSWORD=...
 python3 scripts/pour_school_notes.py data/school-notes/starter/jss1-basic-science-term1.json
 ```
 
+## 3. nerdc-2025/ - lesson notes written from the scheme corpus
+
+One note file for every scheme file in `data/school-schemes/nerdc-2025`,
+covering Nursery 1 to SSS 3 across all three terms. Produced by
+`scripts/generate_school_notes.mjs`: the script hands each scheme outline
+(class, subject, term, weekly topics and content bullets) to the
+classroom writer and stores the note in the same relative path as its
+scheme, so every note traces straight back to its scheme of work.
+
+Each topic keeps the standard Nigerian lesson note frame: behavioural
+objectives, an introduction, the content expanded from the scheme
+bullets with Nigerian everyday examples, a class activity, evaluation
+questions and a summary. Tone follows the level band: nursery notes are
+play way with very short sentences, primary notes stay simple, junior
+and senior secondary notes define, explain, work examples and evaluate
+with WAEC and NECO awareness in the senior band.
+
+Regenerate or extend with:
+
+```bash
+node scripts/generate_school_notes.mjs                  # everything missing
+node scripts/generate_school_notes.mjs --level jss-3    # one level
+```
+
+The writer is resumable (a checkpoint file tracks finished files) and
+enforces the no-long-hyphen rule on every field before writing.
+
 The API enforces the no-long-hyphen rule server-side as well
 (`normalizeHyphens` in school_setup.go), so imported content cannot break
 the founder content rule.
