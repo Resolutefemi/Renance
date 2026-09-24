@@ -75,17 +75,20 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="flex min-h-dvh w-full flex-col items-center justify-center bg-surface-container px-4">
-      <div className="flex w-full max-w-sm flex-col items-center">
+    // my-auto (not justify-center) keeps the block visually centred while
+    // letting the page grow: on small phones the For Schools form is taller
+    // than the viewport, and justify-center would clip the unreachable top.
+    <main className="flex min-h-dvh w-full flex-col items-center bg-surface-container px-4">
+      <div className="my-auto flex w-full max-w-sm min-w-0 flex-col items-center">
         {/* Logo block, mockup: logo, h1, subtitle, centered */}
-        <div className="mb-8 flex flex-col items-center">
+        <div className="mb-8 flex min-w-0 flex-col items-center">
           <div className="mb-4">
             <RenanceMark size={64} />
           </div>
-          <h1 className="text-center text-2xl font-semibold tracking-tight text-on-surface">
+          <h1 className="break-words text-center text-2xl font-semibold tracking-tight text-on-surface">
             Welcome back
           </h1>
-          <p className="mt-1 text-center text-sm text-on-surface-variant">
+          <p className="mt-1 break-words text-center text-sm text-on-surface-variant">
             Sign in to continue to Renance.
           </p>
         </div>
